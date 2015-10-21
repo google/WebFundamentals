@@ -122,7 +122,7 @@ runs. Paul knew the animations were going to be a challenge, which is why he
 came up with [FLIP](http://aerotwist.com/blog/flip-your-animations). Besides 
 that, he went out of his way to ensure that nothing got in the way of touch 
 input or scrolling. Despite the fact that the site isn’t a hugely complex one, 
-he adopted a modified [RAIL methodology](https://developers.google.com/web/fundamentals/performance/rendering/use-the-rail-performance-model?hl=en) 
+he adopted a modified [RAIL methodology](/web/tools/chrome-devtools/profile/evaluate-performance/rail) 
 for the build (he didn’t really need much Idle time), and it helped a bunch!
 
 ## Design

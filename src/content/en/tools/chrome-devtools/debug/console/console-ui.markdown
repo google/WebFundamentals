@@ -110,23 +110,23 @@ The following filter options are available:
   </tr>
   <tr>
     <td>Errors</td>
-    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consoleerrorobject--object-">console.error()</a>.</td>
+    <td>Only show output from <a href="/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-">console.error()</a>.</td>
   </tr>
   <tr>
     <td>Warnings</td>
-    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consolewarnobject--object-">console.warn()</a>.</td>
+    <td>Only show output from <a href="/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-">console.warn()</a>.</td>
   </tr>
   <tr>
     <td>Info</td>
-    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consoleinfoobject--object-">console.info()</a>.</td>
+    <td>Only show output from <a href="/web/tools/chrome-devtools/debug/console/console-reference#consoleinfoobject--object-">console.info()</a>.</td>
   </tr>
   <tr>
     <td>Logs</td>
-    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consolelogobject--object-">console.log()</a>.</td>
+    <td>Only show output from <a href="/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-">console.log()</a>.</td>
   </tr>
   <tr>
     <td>Debug</td>
-    <td>Only show output from <a href="/web/tools/javascript/console/console-reference#consoletimeendlabel">console.timeEnd()</a> and <a href="/web/tools/javascript/console/console-reference#consoledebugobject--object-">console.debug()</a>.</td>
+    <td>Only show output from <a href="/web/tools/chrome-devtools/debug/console/console-reference#consoletimeendlabel">console.timeEnd()</a> and <a href="/web/tools/chrome-devtools/debug/console/console-reference#consoledebugobject--object-">console.debug()</a>.</td>
   </tr>
   </tbody>
 </table>

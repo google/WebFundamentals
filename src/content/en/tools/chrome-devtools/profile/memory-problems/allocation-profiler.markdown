@@ -24,9 +24,9 @@ notes:
 ## How the tool works
 
 The **allocation profiler** combines the detailed snapshot information of the
-[heap profiler](/web/tools/profile-performance/memory-problems/heap-snapshots)
+[heap profiler](/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots)
 with the incremental updating and tracking of the
-[Timeline panel](/web/tools/profile-performance/evaluate-performance/timeline-tool).
+[Timeline panel](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool).
 Similar to these tools, tracking objects’ heap allocation involves starting a recording,
 performing a sequence of actions, then stop the recording for analysis.
 

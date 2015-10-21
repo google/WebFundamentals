@@ -18,10 +18,10 @@ related-guides:
   breakpoints:
     -
       title: "How to Add or Remove Breakpoints"
-      href: https://web-central.appspot.com/web/tools/javascript/breakpoints/add-breakpoints
+      href: tools/chrome-devtools/debug/breakpoints/add-breakpoints
       section:
         title: "Breakpoint on a DOM mutation event"
-        href: https://web-central.appspot.com/web/tools/javascript/breakpoints/add-breakpoints
+        href: tools/chrome-devtools/debug/breakpoints/add-breakpoints
 translation_priority: 0
 key-takeaways:
   dom:
@@ -45,14 +45,14 @@ notes:
 
 ## Inspect page element
 
-[Inspect a page element](/web/tools/iterate/inspect-styles/basics?hl=en#how-to-inspect-a-page) to see it's DOM nodes rendered in the browser:
+[Inspect a page element](/web/tools/chrome-devtools/iterate/inspect-styles/basics?hl=en#how-to-inspect-a-page) to see it's DOM nodes rendered in the browser:
 
 {% animation animations/right-click-inspect-element.mp4 %}
 
 ## Navigate the DOM
 
 Navigate through the DOM structure using either mouse or keyboard.
-See also the complete list of [keyboard shortcuts for the Elements panel](/web/tools/iterate/inspect-styles/shortcuts).
+See also the complete list of [keyboard shortcuts for the Elements panel](/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts).
 
 ### Expand or collapse node
 
@@ -82,7 +82,7 @@ If the entire trail doesn't fit in the status bar, an ellipsis (...) shows where
 
 ## Edit DOM nodes and attributes
 
-To [edit DOM nodes](/web/tools/iterate/inspect-styles/basics#how-to-live-edit-a-dom-node), double-click the DOM node to open the **Element tag** and edit. The closing tag is automatically updated after renaming.
+To [edit DOM nodes](/web/tools/chrome-devtools/iterate/inspect-styles/basics#how-to-live-edit-a-dom-node), double-click the DOM node to open the **Element tag** and edit. The closing tag is automatically updated after renaming.
 
 To edit DOM attributes, double-click on the attribute name or value.
 When edit mode is active,

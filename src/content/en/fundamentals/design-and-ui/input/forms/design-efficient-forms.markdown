@@ -31,7 +31,7 @@ comments:
 
 Make sure your forms have no repeated actions, only as many fields as 
 necessary, and take advantage of 
-[autofill](/web/fundamentals/input/form/label-and-name-inputs.html#use-metadata-to-enable-auto-complete),
+[autofill](/web/fundamentals/design-and-ui/input/forms/label-and-name-inputs.html#use-metadata-to-enable-auto-complete),
 so that users can easily complete forms with pre-populated data.
 
 <figure>

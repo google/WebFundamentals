@@ -122,5 +122,5 @@ read [Rick Byers' tracking doc](https://docs.google.com/document/d/1keeTmtqTEFS6
 
 ## See Also
 
-* [Precision Touch Getures](https://developers.google.com/web/updates/2014/09/Precision-Touch-for-Precise-Gestures?hl=en) 
+* [Precision Touch Getures](/web/updates/2014/09/Precision-Touch-for-Precise-Gestures) 
 * [TouchEvent spec with rotationAngle](http://www.w3.org/TR/2011/WD-touch-events-20110505/#widl-Touch-rotationAngle)

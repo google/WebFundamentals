@@ -62,7 +62,7 @@ on your server. I personally enjoy [GitHub Pages](https://pages.github.com) for
 demo purposes.
 To add HTTPS to your server you'll need to get a TLS certificate and set
 it up. Be sure to check out [Security with HTTPS
-article](https://developers.google.com/web/fundamentals/discovery-and-distribution/security-with-https)
+article](/web/fundamentals/security/)
 for best practices there.
 
 ### User Gesture Required

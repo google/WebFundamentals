@@ -85,7 +85,7 @@ If you have problems finding your device on the **chrome://inspect page**, see t
 
 ### Ready to debug your site in a browser tab!
 
-On your computer, the **chrome://inspect** page displays every connected device, along with its open tabs and debug-enabled [WebViews](/web/tools/setup/remote-debugging/local-server).
+On your computer, the **chrome://inspect** page displays every connected device, along with its open tabs and debug-enabled [WebViews](/web/tools/chrome-devtools/debug/remote-debugging/webviews).
 
 ![The chrome://inspect page.](imgs/chrome-inspect-devices.png)
 
@@ -119,7 +119,7 @@ To debug Safari for iOS, follow these steps:
 Unfortunately there is no way to debug a site on Windows Phone, but you can  
 [emulate a mobile browser on the desktop version of IE
 11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx).
-See also [Mimic Development Site in Production](/web/tools/setup/device-testing/devtools-emulator).
+See also [Emulate beyond Chrome](/web/tools/chrome-devtools/iterate/device-mode/testing-other-browsers).
 
 ## Screencast from Android device to development machine
 

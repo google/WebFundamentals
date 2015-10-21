@@ -46,7 +46,7 @@ breakpoints based on content and maintain the fewest number of breakpoints
 possible.
 
 Let's work through the example we saw at the beginning,
-the [weather forecast]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html).
+the [weather forecast](/web/fundamentals/design-and-ui/responsive/fundamentals/).
 The first step is to make the forecast look good on a small screen.
 
 <figure>

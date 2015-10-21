@@ -303,7 +303,7 @@ console.log('foo ${fn()} bar');
 {% endhighlight %}
 
 You can learn more from [this handy blog post by
-Addy](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings?hl=en).
+Addy](/web/updates/2015/01/ES6-Template-Strings).
 
 ## Shorthand Object Literals
 

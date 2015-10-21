@@ -67,7 +67,7 @@ once for each Service Worker session.
 ## Learn More
 
 * [Push Notifications on the Open
-  Web](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en)
+  Web](/web/updates/2015/03/push-notifications-on-the-open-web)
 * [Google Cloud Messaging](https://developers.google.com/cloud-messaging/)
 * [Best Practices for Push Notifications Permission
   UX](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/edit)

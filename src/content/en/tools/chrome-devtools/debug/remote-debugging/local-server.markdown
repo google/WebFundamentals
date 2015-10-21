@@ -129,7 +129,7 @@ form entry.
 {% ytvideo RKKBIs_3svM %}
 
 BrowserSync is enabled out of the box with [Web Starter
-Kit](https://developers.google.com/web/starter-kit/), so try it out there or
+Kit](/web/tools/starter-kit/), so try it out there or
 check out the gulp file for how to integrate it in your own workflow.
 
 If you aren't using Gulp, head on over to the [BrowserSync
