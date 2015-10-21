@@ -1,8 +1,8 @@
 ---
 layout: updates/post
 title: "Notification requireInteraction &mdash; A smoother notification UX on desktop"
-published_on: 2015-10-15
-updated_on: 2015-10-15
+published_on: 2015-10-16
+updated_on: 2015-10-16
 authors:
   - paulkinlan
 tags:
