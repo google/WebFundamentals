@@ -54,9 +54,14 @@ module VideoWrapper
         iframeSrcUrl += '&amp;' + argument
       end
 
-      out = '<div class="embed">'
-      out += '<iframe src="' + iframeSrcUrl + '" frameborder="0" allowfullscreen=""></iframe>'
-      out += "</div>"
+      #out = '<div class="embed">'
+      #out += '<iframe src="' + iframeSrcUrl + '" frameborder="0" allowfullscreen=""></iframe>'
+      #out += "</div>"
+      out =  '<div class="video-wrapper">'
+      out += '<iframe src="' + iframeSrcUrl + '" class="devsite-embedded-youtube-video" data-video-id="dQw4w9WgXcQ" '
+      out += 'data-autohide="1" data-modestbranding="1" data-controls="2" data-utm-source="crdev-wf" data-showinfo="0" frameborder="0" allowfullscreen>'
+      out += '</iframe>'
+      out += '</div>'
     end
 
   end
