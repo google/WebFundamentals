@@ -18,16 +18,8 @@ module Jekyll
 
   class UpdatesFeedPage < WFFeedPage
 
-    def initialize(site, path, langcode, pages, feedType)
-      if path.nil?
-        dir = File.join('updates')
-      else
-        dir = File.join('updates', path)
-      end
-
+    def initialize(site, dir, langcode, pages, feedType)
       super(site, dir, langcode, pages, feedType)
-
-      self.data = self.data ? self.data : {}
 
       self.data['feed_title'] = 'Web Updates - Google Developers'
       self.data['feed_description'] = 'The latest and freshest updates from the Web teams at Google. Chrome, Tooling and more.'

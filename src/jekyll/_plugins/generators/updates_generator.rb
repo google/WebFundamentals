@@ -68,6 +68,7 @@ module Jekyll
       # Generate the updates for root
       pages = getPages(site, ['updates'])
       generatePaginationPages(site, nil, updateSection, pages, nil)
+      # Root level feeds for updates is generated in build-end-generator
 
       # generate tag pages
       tagsSection = {'id' => 'tags', "pages" => [], "subdirectories" => []}
@@ -82,7 +83,7 @@ module Jekyll
         pages = @tagPageMapping[subdirectory['id']]
         path = subdirectory['id']
         generatePaginationPages(site, path, subdirectory, pages, desiredTagPromotions[subdirectory['id']])
-        generateFeed(site, subdirectory)
+        generateSubdirectoryFeed(site, subdirectory)
       }
 
     end
@@ -121,12 +122,12 @@ module Jekyll
       @tags.uniq!
     end
 
-    def generateFeed(site, subdirectory)
+    def generateSubdirectoryFeed(site, subdirectory)
       path = File.join('updates', subdirectory['id'])
       pages = getPages(site, ['updates', subdirectory['id']])
 
-      site.pages << WFFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_RSS)
-      site.pages << WFFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_ATOM)
+      site.pages << UpdatesFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_RSS)
+      site.pages << UpdatesFeedPage.new(site, path, site.data['curr_lang'], pages, WFFeedPage.FEED_TYPE_ATOM)
     end
 
     def generatePaginationPages(site, path, updateSection, pages, title)
