@@ -36,6 +36,33 @@ if ('requestIdleCallback' in window) {
 }
 {% endhighlight %}
 
+You can also shim its behavior, which requires falling back to `setTimeout`:
+
+{% highlight javascript %}
+
+window.requestIdleCallback =
+  window.requestIdleCallback ||
+  function (cb) {
+    return setTimeout(function () {
+      cb({
+        didTimeout: false,
+        timeRemaining: function () {
+          return Number.MAX_VALUE;
+        }
+      });
+    }, 1);
+  }
+
+window.cancelIdleCallback =
+  window.cancelIdleCallback ||
+  function (id) {
+    clearTimeout(id);
+  }
+
+{% endhighlight %}
+
+Using `setTimeout` isn't great because it doesn't know about idle time like `requestIdleCallback` does, but since you would call your function directly if `requestIdleCallback` wasn't available, you are no worse off shimming in this way. With the shim, should `requestIdleCallback` be available, your calls will be silently redirected, which is great.
+
 For now, though, let’s assume that it exists.
 
 ## Using requestIdleCallback
@@ -249,7 +276,7 @@ All being well we will now see much less jank when appending items to the DOM. E
 ## FAQ
 
 * **Is there a polyfill?**
-    Sadly not. The reason this API exists is because it plugs a very real gap in the web platform. Inferring a lack of activity is difficult, but no JavaScript APIs exist to determine the amount of free time at the end of the frame, so at best you have to make guesses. APIs like `setTimeout`, `setInterval`, or `setImmediate` can be used to schedule work, but they are not timed to avoid user interaction in the way that `requestIdleCallback` is.
+    Sadly not, but [there is a shim](https://gist.github.com/paullewis/55efe5d6f05434a96c36) if you want to have a transparent redirection to `setTimeout`. The reason this API exists is because it plugs a very real gap in the web platform. Inferring a lack of activity is difficult, but no JavaScript APIs exist to determine the amount of free time at the end of the frame, so at best you have to make guesses. APIs like `setTimeout`, `setInterval`, or `setImmediate` can be used to schedule work, but they are not timed to avoid user interaction in the way that `requestIdleCallback` is.
 * **What happens if I overrun the deadline?**
     If `timeRemaining()` returns zero, but you opt to run for longer, you can do so without fear of the browser halting your work. However, the browser gives you the deadline to try and ensure a smooth experience for your users, so unless there’s a very good reason, you should always adhere to the deadline.
 * **Is there maximum value that `timeRemaining()` will return?**
