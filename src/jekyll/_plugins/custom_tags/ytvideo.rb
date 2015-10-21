@@ -49,14 +49,21 @@ module VideoWrapper
       if not context[@videoId].nil?
         @videoId = context[@videoId]
       end
-      iframeSrcUrl = 'https://www.youtube.com/embed/' + @videoId + '?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf';
+      iframeSrcUrl = 'https://www.youtube.com/embed/' + @videoId
+      iframeSrcUrl += '?controls=2&amp;modestbranding=1&amp;showinfo=0'
+      iframeSrcUrl += '&amp;utm-source=crdev-wf';
       @videoArguments.each do |argument|
         iframeSrcUrl += '&amp;' + argument
       end
 
-      out = '<div class="embed">'
-      out += '<iframe src="' + iframeSrcUrl + '" frameborder="0" allowfullscreen=""></iframe>'
-      out += "</div>"
+      out =  '<div class="video-wrapper">'
+      out += '<iframe src="' + iframeSrcUrl +'" '
+      out += 'class="devsite-embedded-youtube-video" allowfullscreen '
+      out += 'data-video-id="' + @videoId +'" '
+      out += 'data-autohide="1" data-modestbranding="1" data-controls="2" '
+      out += 'data-utm-source="crdev-wf" data-showinfo="0" frameborder="0">'
+      out += '</iframe>'
+      out += '</div>'
     end
 
   end
