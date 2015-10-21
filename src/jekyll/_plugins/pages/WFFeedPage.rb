@@ -27,6 +27,10 @@ module Jekyll
       end
 
       super(site, relative_dir, feedFilename, langcode)
+
+      # This will read the liquid file and asign the page the appropriate content
+      self.read_yaml(File.join(site.source, '_layouts'), feedLayout)
+
       self.data = self.data ? self.data : {}
       self.data['feed_icon'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + 'favicon.ico'
       maxNumberOfResults = 25
@@ -63,8 +67,14 @@ module Jekyll
 
       self.data['feed_pages'] = feedPages
 
-      # This will read the liquid file and asign the page the appropriate content
-      self.read_yaml(File.join(site.source, '_layouts'), feedLayout)
+      # This should be overriden
+      self.data['feed_title'] = 'Web - Google Developers'
+      self.data['feed_description'] = 'The latest changes to developers.google.com/web/fundamentals.'
+      self.data['feed_id'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/fundamentals'
+      self.data['feed_link'] = site.config['WFAbsoluteUrl'] + site.config['WFBaseUrl'] + '/fundamentals/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed'
+
+      # The section is used in the UTM_Campaign for tracking
+      self.data['feed_section'] = 'fundamentals'
     end
 
     def WFFeedPage.FEED_TYPE_RSS

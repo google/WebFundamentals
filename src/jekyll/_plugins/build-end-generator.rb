@@ -27,7 +27,7 @@ module Jekyll
 
       generateFeeds(site)
 
-      
+
 
       # This should run as the end of all generators and will give pages a
       # chance to do any final work needed
@@ -163,15 +163,26 @@ module Jekyll
         pagesToInclude = getPages(subdirectory)
 
         sitemapPages = sitemapPages + pagesToInclude
+        site.pages << WFSitemapPage.new(site, sitemapPages)
 
-        site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
-        site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
+        case subdirectory['id']
+        when 'updates'
+          site.pages << UpdatesFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
+          site.pages << UpdatesFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
+        when 'shows'
+          site.pages << ShowsFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
+          site.pages << ShowsFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
+        when 'resources'
+        when 'tools'
+        when 'showcase'
+          # NOOP
+        when 'fundamentals'
+          site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
+          site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_ATOM)
+        else
+          Jekyll.logger.info "Unsure what FeedPage to use for the toplevel \"" + subdirectory['id'] + "\" directory."
+        end
       }
-
-      site.pages << WFFeedPage.new(site, '', site.data['curr_lang'], sitemapPages, WFFeedPage.FEED_TYPE_RSS)
-      site.pages << WFFeedPage.new(site, '', site.data['curr_lang'], sitemapPages, WFFeedPage.FEED_TYPE_ATOM)
-
-      site.pages << WFSitemapPage.new(site, sitemapPages)
     end
 
     def getPages(subdirectory)
