@@ -157,7 +157,7 @@ Use `undebug(fn)` to stop breaking on the function,
 or use the UI to disable all breakpoints.
 
 For more information on breakpoints,
-see [Debug with Breakpoints](/web/tools/javascript/breakpoints).
+see [Debug with Breakpoints](/web/tools/chrome-devtools/debug/breakpoints).
 
 ## dir(object)
 
@@ -175,7 +175,7 @@ and using `dir()` to display the same element:
 ![Logging document.body with and without dir() function](images/dir.png)
 
 For more information,
-see the [`console.dir()`](/web/tools/javascript/console/console-reference#console.dir(object)) entry in the Console API.
+see the [`console.dir()`](/web/tools/chrome-devtools/debug/console/console-reference#console.dir(object)) entry in the Console API.
 
 ## dirxml(object)
 
@@ -325,7 +325,7 @@ Below is sample output after typing a characters in the text field:
 with an optional name.
 `profileEnd()` completes the profile and displays the results
 in the Profile panel.
-(See also [Speed Up JavaScript Execution](/web/tools/profile-performance/rendering-tools/js-execution).)
+(See also [Speed Up JavaScript Execution](/web/tools/chrome-devtools/profile/rendering-tools/js-execution).)
 
 To start profiling:
 

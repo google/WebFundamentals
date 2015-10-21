@@ -26,7 +26,7 @@ key-takeaways:
 
 ## Monitor events
 
-The [monitorEvents()](/web/tools/javascript/command-line/command-line-reference#monitoreventsobject-events)
+The [monitorEvents()](/web/tools/chrome-devtools/debug/command-line/command-line-reference#monitoreventsobject-events)
 method instructs the DevTools to log information on the specified targets.
 
 The first parameter is the object to monitor.
@@ -42,7 +42,7 @@ If the monitored event is a supported *event type*
 that the DevTools maps to a set of standard event names,
 then the method listens to the events for that type.
 
-The [Command Line API](/web/tools/javascript/command-line/command-line-reference) has a full mapping of *event types* to the events they cover.
+The [Command Line API](/web/tools/chrome-devtools/debug/command-line/command-line-reference) has a full mapping of *event types* to the events they cover.
 
 To stop monitoring events,
 call the `unmonitorEvents()` method and give it the object to stop monitoring.
@@ -53,7 +53,7 @@ Stop listening to events on the `body` object:
 
 ## View event listeners registered on objects
 
-The [getEventListeners() API](/web/tools/javascript/command-line/command-line-reference#geteventlistenersobject)
+The [getEventListeners() API](/web/tools/chrome-devtools/debug/command-line/command-line-reference#geteventlistenersobject)
 returns the event listeners registered on the specified object.
 
 The return value is an object that contains an array for each registered event type (`click` or `keydown`, for example).

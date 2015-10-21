@@ -11,17 +11,17 @@ related-guides:
   edit-styles:
     -
       title: "Edit Styles"
-      href: tools/iterate/inspect-styles/edit-styles
+      href: tools/chrome-devtools/iterate/inspect-styles/edit-styles
       section:
         title: "Edit Styles"
-        href: tools/iterate/inspect-styles/edit-styles
+        href: tools/chrome-devtools/iterate/inspect-styles/edit-styles
   edit-dom:
     -
       title: "Edit the DOM"
-      href: tools/iterate/inspect-styles/edit-dom
+      href: tools/chrome-devtools/iterate/inspect-styles/edit-dom
       section:
         title: "Edit the DOM"
-        href: tools/iterate/inspect-styles/edit-dom
+        href: tools/chrome-devtools/iterate/inspect-styles/edit-dom
 translation_priority: 0
 key-takeaways:
   dom-styles:
@@ -57,7 +57,7 @@ There are several ways to inspect an element:
 * Right-click any element on the page the page and select **Inspect Element**.
 * Press <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">C</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">C</kbd> on Mac) to open DevTools in Inspect Element mode, then click on an element.
 * Click the **Inspect Element button** ![Inspect icon](imgs/inspect-icon.png){:.inline} at the top of the DevTools window to go into Inspect Element Mode, then click on an element.
-* Use the `inspect()` method in the console, such as `inspect(document.body)`. See the [Command Line API Reference](/web/tools/javascript/command-line/command-line-reference) for information on using inspect.
+* Use the `inspect()` method in the console, such as `inspect(document.body)`. See the [Command Line API Reference](/web/tools/chrome-devtools/debug/command-line) for information on using inspect.
 
 ### Inspect styles applied to an element
 
@@ -100,7 +100,7 @@ To edit a property name, click on it, edit, and press Tab or Enter: ![Edit prope
 To edit the property's value, click on that value, edit, and press Tab or Enter: ![Edit property value](imgs/image_21.png){:.inline} 
 
 By default, your CSS modifications are not permanent, changes are lost when you reload the page.
-We recommend [setting up persistent authoring](/web/tools/setup/workspace/setup-workflow) so your changes aren't lost.
+We recommend [setting up persistent authoring](/web/tools/setup/setup-workflow) so your changes aren't lost.
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.edit-styles %}
 
@@ -135,7 +135,7 @@ To explore the changes made:
 
 ## Undo changes
 
-If you haven't [set up persistent authoring](/web/tools/setup/workspace/setup-workflow), any time you reload the page, all live-edits are lost.
+If you haven't [set up persistent authoring](/web/tools/setup/setup-workflow), any time you reload the page, all live-edits are lost.
 
 Assuming you've set up persistent authoring, to undo changes:
 

@@ -87,19 +87,19 @@ Depending on the function you selected, you should see something like this:
 
 ### Customize the CPU profiler
 
-Use the [Chrome DevTools Console](/web/tools/javascript/console/console-ui) and [Command Line API](/web/tools/javascript/command-line/)
+Use the [Chrome DevTools Console](/web/tools/chrome-devtools/debug/console/console-ui) and [Command Line API](/web/tools/chrome-devtools/debug/command-line/)
 to customize and control CPU profiles:
 
-* Create profiles from console using [profile() and profileEnd()](/web/tools/javascript/command-line/command-line-reference?hl=en#profilename-and-profileendname).
-* [Group profiles](/web/tools/javascript/command-line/command-line-reference?hl=en#profilename-and-profileendnam) from console by using the same label.
+* Create profiles from console using [profile() and profileEnd()](/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en#profilename-and-profileendname).
+* [Group profiles](/web/tools/chrome-devtools/debug/command-line/command-line-reference?hl=en#profilename-and-profileendnam) from console by using the same label.
 
 ## How to profile JavaScript performance over time
 
 The Flame Chart view provides a visual representation
 of JavaScript processing aggregated _over_time_,
 similar to those found in the
-[Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool) and 
-[Network](/web/tools/profile-performance/network-performance/resource-loading) panels.
+[Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) and 
+[Network](/web/tools/chrome-devtools/profile/network-performance/resource-loading) panels.
 
 ### Read the Flame Chart
 

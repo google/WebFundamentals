@@ -15,69 +15,69 @@ related-guides:
   create-amazing-forms:
     -
       title: Create amazing forms
-      href: fundamentals/input/form/
+      href: fundamentals/design-and-ui/input/forms/
       section:
         id: user-input
         title: "Forms"
-        href: fundamentals/input/form/
+        href: fundamentals/design-and-ui/input/forms/
     -
       title: Label and name inputs correctly
-      href: fundamentals/input/form/label-and-name-inputs
+      href: fundamentals/design-and-ui/input/forms/label-and-name-inputs
       section:
         id: user-input
         title: "Forms"
-        href: fundamentals/input/form/
+        href: fundamentals/design-and-ui/input/forms/
     -
       title: Choose the best input type
-      href: fundamentals/input/form/choose-the-best-input-type
+      href: fundamentals/design-and-ui/input/forms/choose-the-best-input-type
       section:
         id: user-input
         title: "Forms"
-        href: fundamentals/input/form/
+        href: fundamentals/design-and-ui/input/forms/
   video:
     -
       title: Using video effectively
-      href: fundamentals/media/video/
+      href: fundamentals/design-and-ui/media/video/
       section:
         id: introduction-to-media
         title: "Video"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
     -
       title: Change the starting position
-      href: fundamentals/media/video/add-a-video#specify-a-start-and-end-time
+      href: fundamentals/design-and-ui/media/video/add-a-video#specify-a-start-and-end-time
       section:
         id: introduction-to-media
         title: "Video"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
     -
       title: Include a poster image
-      href: fundamentals/media/video/add-a-video#include-a-poster-image
+      href: fundamentals/design-and-ui/media/video/add-a-video#include-a-poster-image
       section:
         id: introduction-to-media
         title: "Video"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
   images:
     -
       title: Using images effectively
-      href: fundamentals/media/images/
+      href: fundamentals/design-and-ui/media/images/
       section:
         id: introduction-to-media
         title: "Images"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
     -
       title:  Correct use of images in markup
-      href: fundamentals/media/images/images-in-markup
+      href: fundamentals/design-and-ui/media/images/images-in-markup
       section:
         id: introduction-to-media
         title: "Images"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
     -
       title: Image optimization
       href: fundamentals/performance/optimizing-content-efficiency/image-optimization
       section:
         id: introduction-to-media
         title: "Images"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
 key-takeaways:
   content-critical:
     - Identify the content you need first.

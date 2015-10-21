@@ -34,7 +34,7 @@ Polymer 0.8 is out in the open and showing great performance boosts with 5x impr
 
 <img src="./images/episode-1-benchmark.svg" alt="Graph show 5x improvement on mobile Safari and 8x improvement on desktop Firefox" />
 
-Checkout the <a href="https://www.polymer-project.org/0.8/">blog post on the release here</a> and <a href="https://developers.google.com/web/shows/polycasts/season-2/first-look-polymer-0.8">learn more in this Polycast</a>.
+Checkout the <a href="https://www.polymer-project.org/0.8/">blog post on the release here</a> and <a href="/web/shows/polycasts/season-2/first-look-polymer-0.8">learn more in this Polycast</a>.
 
 ## Preload Links <span class="lazyweb-title-timestamp">1:05</span>
 

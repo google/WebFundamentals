@@ -13,7 +13,7 @@ updated_on: 2015-05-11
 
 **Push**
 
-* [Push Notifications on the Open Web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web)
+* [Push Notifications on the Open Web](/web/updates/2015/03/push-notifications-on-the-open-web)
 * [Simple Push Demo](https://simple-push-demo.appspot.com/)
 
 **App Install Banners**

@@ -50,7 +50,7 @@ Which outputs the following in the Console:
 
 ### Timers on the Timeline
 
-When a [Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool) recording is taking place during a `time()` operation, it annotates the timeline as well. Use it when you want to trace what your application does and where it comes from.
+When a [Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) recording is taking place during a `time()` operation, it annotates the timeline as well. Use it when you want to trace what your application does and where it comes from.
 
 How an annotation on the timeline looks from `time()`:
 
@@ -60,7 +60,7 @@ How an annotation on the timeline looks from `time()`:
 
 *Note: The `timeStamp()` method only functions while a Timeline recording is in progress.*
 
-The [Timeline panel](/web/tools/profile-performance/evaluate-performance/timeline-tool) provides a complete overview of where the engine spends time.
+The [Timeline panel](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) provides a complete overview of where the engine spends time.
 You can add a mark to the timeline from the console with the [`timeStamp()`](./console-api#consoletimestamplabel). This is a simple way to correlate events in your application with other events.
 
 The `timeStamp()` annotates the Timeline in the following places:

@@ -279,7 +279,7 @@ Given these declarations the browser figures out the required subsets and varian
 
 ### Webfonts and the Critical Rendering Path
 
-Lazy loading of fonts carries an important hidden implication that may delay text rendering: the browser must [construct the render tree](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), which is dependent on the DOM and CSSOM trees, before it will know which font resources it will need to render the text. As a result, font requests are delayed well after other critical resources, and the browser may be blocked from rendering text until the resource is fetched.
+Lazy loading of fonts carries an important hidden implication that may delay text rendering: the browser must [construct the render tree](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), which is dependent on the DOM and CSSOM trees, before it will know which font resources it will need to render the text. As a result, font requests are delayed well after other critical resources, and the browser may be blocked from rendering text until the resource is fetched.
 
 <img src="images/font-crp.png" class="center" alt="Font critical rendering path">
 

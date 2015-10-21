@@ -61,7 +61,7 @@ with users interacting with your site.
 ### Tools
 
 The simplest way to test JavaScript performance is to view Scripting events
-in the [Chrome DevTools Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool).
+in the [Chrome DevTools Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool).
 If any of the scripting events seem suspiciously long,
 enable the JS Stacks at the top of the Timeline tool:
 
@@ -76,7 +76,7 @@ you may need to take the next step beyond a timeline recording,
 and collect a JavaScript CPU profile.
 CPU profiles show where execution time is spent in your page's functions.
 Learn how to create CPU profiles
-in [Speed Up JavaScript Execution](/web/tools/profile-performance/rendering-tools/js-execution).
+in [Speed Up JavaScript Execution](/web/tools/chrome-devtools/profile/rendering-tools/js-execution).
 
 ### Problems
 
@@ -120,7 +120,7 @@ Style changes are costly, especially if those changes affect more than one eleme
 
 ### Tools
 
-Make a recording using the [Chrome DevTools Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool). Recalculate Style events are displayed in purple blocks; check the timeline for large Recalculate Style events:
+Make a recording using the [Chrome DevTools Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool). Recalculate Style events are displayed in purple blocks; check the timeline for large Recalculate Style events:
 
 ![Long running styles](imgs/long-running-style.jpg)
 
@@ -182,7 +182,7 @@ The Chrome DevTools Timeline identifies when your application causes a forced as
 "Layout thrashing" is a repetition of forced synchronous layout conditions. JavaScript writes and then reads from the DOM  multiple times, forcing the browser to re-calculate layout over and over again.
 
 Layout thrashing is easy to spot using a Timeline recording.
-Learn more in [Diagnose Forced Synchronous Layouts](/web/tools/profile-performance/rendering-tools/forced-synchronous-layouts).
+Learn more in [Diagnose Forced Synchronous Layouts](/web/tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts).
 Look for a pattern of multiple forced synchronous warnings:
 
 ![Layout thrashing](imgs/layout-thrashing.png)

@@ -12,10 +12,10 @@ authors:
 translation_priority: 0
 key-takeaways:
   console-write:
-    - "Use <a href='/web/tools/javascript/console/console-reference#consolelogobject--object-'>console.log()</a> for basic logging"
-    - "Use <a href='/web/tools/javascript/console/console-reference#consoleerrorobject--object-'>console.error()</a> and <a href='/web/tools/javascript/console/console-reference#consolewarnobject--object-'>console.warn()</a> for eye-catching stuff"
-    - "Use <a href='/web/tools/javascript/console/console-reference#consolegroupobject-object-'>console.group()</a> and <a href='/web/tools/javascript/console/console-reference#consolegroupend'>console.groupEnd()</a> to group related messages and avoid clutter"
-    - "Use <a href='/web/tools/javascript/console/console-reference#consoleassertexpression-object'>console.assert()</a> to show conditional error messages"
+    - "Use <a href='/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-'>console.log()</a> for basic logging"
+    - "Use <a href='/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-'>console.error()</a> and <a href='/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-'>console.warn()</a> for eye-catching stuff"
+    - "Use <a href='/web/tools/chrome-devtools/debug/console/console-reference#consolegroupobject-object-'>console.group()</a> and <a href='/web/tools/chrome-devtools/debug/console/console-reference#consolegroupend'>console.groupEnd()</a> to group related messages and avoid clutter"
+    - "Use <a href='/web/tools/chrome-devtools/debug/console/console-reference#consoleassertexpression-object'>console.assert()</a> to show conditional error messages"
 ---
 <p class="intro">
   Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
@@ -27,7 +27,7 @@ key-takeaways:
 
 ## Writing to the console
 
-Use the <a href="/web/tools/javascript/console/console-reference#consolelogobject--object-">console.log()</a> method for any basic logging to the console. It takes one or more expressions as parameters and writes their current values to the console, concatenating multiple parameters into a space-delimited line.
+Use the <a href="/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-">console.log()</a> method for any basic logging to the console. It takes one or more expressions as parameters and writes their current values to the console, concatenating multiple parameters into a space-delimited line.
 
 Executing this line of code in your JavaScript:
 
@@ -42,9 +42,9 @@ Will output this in the Console:
 
 ### Group messages together
 
-You can group related output together with the group commands. The [`console.group()`](./console-api#consolegroupobject-object-) command takes a single string parameter to set the name of the group. After calling it in your JavaScript, the console will begin to group all subsequent output together.
+You can group related output together with the group commands. The [`console.group()`](./console-referencs#consolegroupobject-object-) command takes a single string parameter to set the name of the group. After calling it in your JavaScript, the console will begin to group all subsequent output together.
 
-To end the grouping you only need to call [`console.groupEnd()`](./console-api#consolegroupend) when you're done.
+To end the grouping you only need to call [`console.groupEnd()`](./console-reference#consolegroupend) when you're done.
 
 Example input:
 
@@ -92,7 +92,7 @@ And here's the nested groups output in the console:
 
 #### Auto-collapsing groups
 
-When using groups heavily, it can be very useful to not see everything as it happens. For these times you can automatically collapse groups by calling [`console.groupCollapsed()`](./console-api#consolegroupcollapsedobject-object-) instead of `console.group()`:
+When using groups heavily, it can be very useful to not see everything as it happens. For these times you can automatically collapse groups by calling [`console.groupCollapsed()`](./console-reference#consolegroupcollapsedobject-object-) instead of `console.group()`:
 
 {% highlight js %}
 console.groupCollapsed("Authenticating user '%s'", user);
@@ -111,7 +111,7 @@ Errors and warnings act the same way as normal logging. The only difference is `
 
 ### console.error()
 
-The [`console.error()`](./console-api#consoleerrorobject--object-) method displays a red icon along with red message text:
+The [`console.error()`](./console-reference#consoleerrorobject--object-) method displays a red icon along with red message text:
 
 {% highlight js %}
 function connectToServer() {
@@ -126,7 +126,7 @@ turns into
 
 ### console.warn()
 
-The [`console.warn()`](./console-api#consolewarnobject--object-) method displays a yellow warning icon with the message text:
+The [`console.warn()`](./console-reference#consolewarnobject--object-) method displays a yellow warning icon with the message text:
 
 {% highlight js %}
 if(a.childNodes.length < 3 ) {
@@ -140,7 +140,7 @@ turns into
 
 ## Assertions
 
-The [`console.assert()`](./console-api#consoleassertexpression-object) method conditionally displays an error string (its second parameter) only if its first parameter evaluates to `false`.
+The [`console.assert()`](./console-reference#consoleassertexpression-object) method conditionally displays an error string (its second parameter) only if its first parameter evaluates to `false`.
 
 ### A simple assertion and how it displays
 

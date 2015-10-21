@@ -22,7 +22,7 @@ order: 3
         <ul>
           <li>Select <strong>More Tools &gt; Developer Tools</strong> from the Chrome Menu.</li>
           <li>Right-click on a page element and select Inspect</li>
-          <li>Use <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<a href="https://developer.chrome.com/devtools/docs/shortcuts">more shortcuts</a>)</li>
+          <li>Use <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">more shortcuts</a>)</li>
         </ul>
       </div>
     </div>

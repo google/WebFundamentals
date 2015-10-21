@@ -19,7 +19,7 @@ notes:
 
 * Emulate your site across [different screen sizes and resolutions](/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports), including Retina displays.
 * Responsively design by visualizing and [inspecting CSS media queries](/web/tools/chrome-devtools/iterate/device-mode/media-queries).
-* Evaluate your site's performance using the [network emulator](/web/tools/profile-performance/network-performance/network-conditions), without affecting traffic to other tabs.
+* Evaluate your site's performance using the [network emulator](/web/tools/chrome-devtools/profile/network-performance/network-conditions), without affecting traffic to other tabs.
 * Accurately [simulate device input](/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors) for touch events, geolocation, and device orientation
 
 Some of this documentation might be ahead of the stable version of Chrome. Use <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a>.

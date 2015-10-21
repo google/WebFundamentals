@@ -44,7 +44,7 @@ For example, the recording below is of an HTML page being loaded into Chrome. Th
 When you hover over a Timeline record, a pop-up appears with details
 about the associated event. For example, the screenshot below shows
 details for a Finish Loading record associated with an image resource.
-The [Timeline Event Reference](/web/tools/profile-performance/evaluate-performance/performance-reference)
+The [Timeline Event Reference](/web/tools/chrome-devtools/profile/evaluate-performance/performance-reference)
 explains the details that are available for each record type.
 
 ![Pop-up showing event details](imgs/event-details.png)
@@ -66,7 +66,7 @@ The time to render a frame is displayed above of the Records view. If you hover 
 
 ![Frames mode](imgs/frames_mode.png)
 
-You can learn more about how to test and fix rendering problems in [Analyze Runtime Performance](/web/tools/profile-performance/rendering-tools/analyze-runtime).
+You can learn more about how to test and fix rendering problems in [Analyze Runtime Performance](/web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime).
 
 ### Clear or light-gray frames
 
@@ -121,7 +121,7 @@ haven’t been garbage collected).
 ![Memory view](imgs/memory-usage.png)
 
 Memory mode can't show you exactly what is causing a memory leak, but it can help you identify what events in your application may be leading to a memory leak.
-Learn more about memory problems in [Memory Diagnosis](/web/tools/profile-performance/memory-problems/memory-diagnosis).
+Learn more about memory problems in [Memory Diagnosis](/web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis).
 
 ## Make a recording
 
@@ -178,7 +178,7 @@ and a Parse HTML record.
 
 ![Page load recording](imgs/page-load.png)
 
-See the [Timeline event reference](/web/tools/profile-performance/evaluate-performance/performance-reference) for details on each record type.
+See the [Timeline event reference](/web/tools/chrome-devtools/profile/evaluate-performance/performance-reference) for details on each record type.
 
 ## View recording details
 
@@ -187,7 +187,7 @@ the Details pane displays additional information about the event.
 
 ![Event details pane](imgs/frames_mode_event_selected.png)
 
-Certain details are present in events of all types, such as Duration and CPU Time, while some only apply to certain event types. See the [Timeline event reference](/web/tools/profile-performance/evaluate-performance/performance-reference) for details on each record type.
+Certain details are present in events of all types, such as Duration and CPU Time, while some only apply to certain event types. See the [Timeline event reference](/web/tools/chrome-devtools/profile/evaluate-performance/performance-reference) for details on each record type.
 
 When you select a Paint record, DevTools highlights the region of the screen that was updated with a blue semi-transparent rectangle, as shown below.
 

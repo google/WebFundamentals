@@ -25,7 +25,7 @@ address these problems from the Chrome Developer Platform team.
 <img src="{{site.WFBaseUrl}}/shows/imgs/cds/2014/fundamentals-of-web-dev/image00.jpg" alt="Web Fundamentals on a HTML5Rocks" width="498" height="332" style="max-width: 100%; height: auto;" />
 </p>
 
-[Web Fundamentals](https://developers.google.com/web/fundamentals/) is a set of
+[Web Fundamentals](/web/fundamentals/) is a set of
 use case led documentation covering a range of topics. The core goal is get
 developers from little or no knowledge, to implementing best practices as
 quickly as possible.
@@ -45,7 +45,7 @@ Github](https://github.com/Google/WebFundamentals/issues/new?title=Feedback%20fo
 </p>
 
 To help you kick off a new web project we created [Web Starter
-Kit](https://developers.google.com/web/starter-kit/). It has everything you
+Kit](/web/tools/starter-kit/). It has everything you
 need:
 
 * A solid build process
@@ -79,7 +79,7 @@ chances are you'll have some way of quickly getting hold a stock HTML file that
 works well across multiple devices and screen sizes.
 
 In Web Starter Kit we wanted to add in support for any features which blurred
-the lines between the platform and your site, so we've added support for [add to home screen](https://developers.google.com/web/fundamentals/device-access/stickyness/)
+the lines between the platform and your site, so we've added support for [add to home screen](/web/fundamentals/design-and-ui/browser-customization/)
 and splash screens for Android, Windows Phone, iOS and Opera Coast.
 
 <p style="text-align: center;">
@@ -180,5 +180,5 @@ composite layer as well as why they've been promoted.
 ## Learn. Build. Iterate.
 
 These are some of the efforts from the Chrome team to help developers get up to
-speed with web development, so be sure to check out [Web Fundamentals](https://developers.google.com/web/fundamentals/), [Web Starter Kit](https://developers.google.com/web/starter-kit/) and the new features in
-[Chrome DevTools](https://developer.chrome.com/devtools).
+speed with web development, so be sure to check out [Web Fundamentals](/web/fundamentals/), [Web Starter Kit](/web/tools/starter-kit/) and the new features in
+[Chrome DevTools](/web/tools/chrome-devtools).

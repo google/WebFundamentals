@@ -19,7 +19,7 @@ Chrome 42 hit stable this week and with it comes a number of new features. Push 
 
 [https://twitter.com/ChromiumDev/status/590169593110335488](https://twitter.com/ChromiumDev/status/590169593110335488)
 
-[http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web)
+[http://updates.html5rocks.com/2015/03/push-notifications-on-the-open-web](http://updates.html5rocks.com/2015/03/push-notifications-on-the-open-web)
 
 [http://updates.html5rocks.com/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android](http://updates.html5rocks.com/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android)
 

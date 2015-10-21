@@ -47,16 +47,16 @@ showcase:
 related-guides:
 -
     title: "Web App Manifest"
-    href: fundamentals/device-access/stickyness/web-app-manifest.html
+    href: fundamentals/engage-and-retain/simplified-app-installs/
     section:
       id: stickyness
-      title: "Add To Home Screen"
-      href: fundamentals/device-access/stickyness/
+      title: "App Install Banners"
+      href: fundamentals/engage-and-retain/simplified-app-installs/
 -
     title: "Animations"
-    href: fundamentals/look-and-feel/animations/
+    href: fundamentals/design-and-ui/animations/
     section:
       id: animations
       title: "Look and feel"
-      href: fundamentals/look-and-feel/
+      href: fundamentals/design-and-ui/
 ---

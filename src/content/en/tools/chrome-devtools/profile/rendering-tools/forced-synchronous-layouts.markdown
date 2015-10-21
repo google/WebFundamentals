@@ -18,7 +18,7 @@ key-takeaways:
 </p>
 
 Follow this demo to learn how to use the Timeline tool to identify
-[forced synchronous layouts](/web/tools/profile-performance/rendering-tools/analyze-runtime#how-to-identify-layout-bottlenecks)
+[forced synchronous layouts](/web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime#how-to-identify-layout-bottlenecks)
 and apply a fix with DevTools.
 
 The demo animates images using
