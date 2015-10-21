@@ -12,14 +12,14 @@ tags:
   - webfonts
   - tools
 ---
-Chrome DevTools can [now](http://crbug.com/135489) tell you **exactly what typeface is being used to render text**. 
+Chrome DevTools can [now](http://crbug.com/135489) tell you **exactly what typeface is being used to render text**.
 
 Font stacks are a funny thing, more of a suggestion than a demand. Because the family you suggest may not be present, you're letting each user's browser handle the fall-through case, pulling something that will work and using that.
 
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 
-As a developer, you want to know **what font is *actually* being used**.  Here's how it works:    
-![](http://i.imgur.com/DVsqB4V.png)
+As a developer, you want to know **what font is *actually* being used**.  Here's how it works:
+![]({{site.WFBaseUrl}}/updates/images/2013/09/devtools/DVsqB4V.png)
 
 
 Under **Computed Styles**, you'll now see a summary of the typeface(s) used for that element. There's a few things to note here:

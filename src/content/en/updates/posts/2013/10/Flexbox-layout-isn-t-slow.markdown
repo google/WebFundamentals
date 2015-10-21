@@ -12,7 +12,7 @@ tags:
   - layout
   - css
 ---
-**TL;DR:** Old flexbox (display: box) is 2.3x slower than new flexbox (display: flex). 
+**TL;DR:** Old flexbox (display: box) is 2.3x slower than new flexbox (display: flex).
 
 A bit ago, Wilson Page wrote a [great article for Smashing Magazine](http://coding.smashingmagazine.com/2013/05/23/building-the-new-financial-times-web-app/) digging into how they brought the Financial Times webapp to life. In the article, Wilson notes:
 
@@ -41,14 +41,14 @@ To see the difference in numbers, I made a head-to-head comparison of old v new 
 ### Old flexbox: layout costs of _~43.5ms_
 
 <a href="http://codepen.io/paulirish/debug/KHEis"><br />
-<img src="http://codepen.io/paulirish/pen/KHEis/image/small.png"/><br />
+<img src="{{site.WFBaseUrl}}/updates/images/2013/10/flexbox/image-1.png"/><br />
 </a>
 
 
 ### New flexbox: layout costs of _~18.2ms_
 
 <a href="http://codepen.io/paulirish/debug/IanHF"><br />
-<img src="http://codepen.io/paulirish/pen/IanHF/image/small.png"/><br />
+<img src="{{site.WFBaseUrl}}/updates/images/2013/10/flexbox/image-2.png"/><br />
 </a>
 
 **Summary: Old is 2.3x slower than new.**
@@ -64,8 +64,8 @@ To see the difference in numbers, I made a head-to-head comparison of old v new 
 
 ### Remember: Tools, not rules
 
-What’s more important is optimizing what matters. Always use the timeline to identify your bottlenecks before spending time optimizing one sort of operation. 
+What’s more important is optimizing what matters. Always use the timeline to identify your bottlenecks before spending time optimizing one sort of operation.
 
 In fact, we've connected with Wilson and the Financial Times Labs team and, as a result, improved the Chrome DevTools coverage of layout performance tooling. We'll soon be adding the ability to [view the relayout boundary](https://codereview.chromium.org/23201018/) of an element, and Layout events in the timeline are loaded with details of the scope, root, and cost of each layout:
 
-![](http://www.html5rocks.com/en/tutorials/developertools/revolutions2013/forced-sync-layout-popup.png)
+![]({{site.WFBaseUrl}}/updates/images/2013/10/flexbox/forced-sync-layout-popup.png)
