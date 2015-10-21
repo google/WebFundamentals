@@ -69,7 +69,7 @@ img1.addEventListener('error', function() {
 });
 {% endhighlight %}
 
-This doesn't catch images that error'd before we got a chance to listen for them, unfortunately the DOM doesn't give us a way to do that. Also, this is loading one image, things get even more complex if we want to know when a set of images have loaded. 
+This doesn't catch images that error'd before we got a chance to listen for them, unfortunately the DOM doesn't give us a way to do that. Also, this is loading one image, things get even more complex if we want to know when a set of images have loaded.
 
 
 ## Events aren't always the best way
@@ -91,7 +91,7 @@ whenAllTheseHaveLoaded([img1, img2]).callThis(function() {
   // one or more failed
 });
 {% endhighlight %}
- 
+
 This is what promises do, but with better naming. If HTML image elements had a "ready" method that returned a promise, we could do:
 
 
@@ -476,7 +476,7 @@ The flow above is very similar to normal JavaScript try/catch, errors that happe
 
 
 <div style="position: relative; padding-top: 93%;">
-  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden" src="{{page.relative_url}}imgs/promise-flow.svg" frameborder="0" allowtransparency="true"></iframe>
+  <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden" src="imgs/promise-flow.svg" frameborder="0" allowtransparency="true"></iframe>
 </div>
 
 
@@ -598,8 +598,8 @@ document.querySelector('.spinner').style.display = 'none'
 {% endhighlight %}
 
 {% link_sample _code/sync-example.html %}see example{% endlink_sample %}
-That works ({% link_sample _code/sync-example.html %}see example{% endlink_sample %})! 
-But it's sync and locks up the browser while things download. To make this 
+That works ({% link_sample _code/sync-example.html %}see example{% endlink_sample %})!
+But it's sync and locks up the browser while things download. To make this
 work async we use "then" to make things happen one after another.
 
 
@@ -715,7 +715,7 @@ And there we have it ({% link_sample _code/async-example.html %}see example{% en
 
 
 <figure>
-  <img src="{{page.relative_url}}imgs/promise1.gif">
+  <img src="imgs/promise1.gif">
 </figure>
 
 Browsers are pretty good at downloading multiple things at once, so we're losing performance by downloading chapters one after the other. What we want to do is download them all at the same time, then process them when they've all arrived. Thankfully there's an API for this:
@@ -761,7 +761,7 @@ Depending on connection, this can be seconds faster than loading one-by-one ({% 
 
 
 <figure>
-  <img src="{{page.relative_url}}imgs/promise2.gif">
+  <img src="imgs/promise2.gif">
 </figure>
 
 However, we can still improve perceived performance. When chapter one arrives we should add it to the page. This lets the user start reading before the rest of the chapters have arrived. When chapter three arrives, we wouldn't add it to the page because the user may not realise chapter two is missing. When chapter two arrives, we can add chapters two and three, etc etc.
@@ -803,7 +803,7 @@ And there we go ({% link_sample _code/async-best-example.html %}see example{% en
 
 
 <figure>
-  <img src="{{page.relative_url}}imgs/promise3.gif">
+  <img src="imgs/promise3.gif">
 </figure>
 
 In this trivial example, all of the chapters arrive around the same time, but the benefit of displaying one at a time will be exaggerated with more, larger chapters.
@@ -932,7 +932,7 @@ Make a promise that rejects to `obj`. For consistency and debugging (e.g. stack 
 Make a promise that fulfills when every item in the array fulfills, and rejects if (and when) any item rejects. Each array item is passed to `Promise.resolve`, so the array can be a mixture of promise-like objects and other objects. The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.
 
 #### `Promise.race(array);`
-Make a Promise that fulfills as soon as any item fulfills, or rejects as soon as any item rejects, whichever happens first. 
+Make a Promise that fulfills as soon as any item fulfills, or rejects as soon as any item rejects, whichever happens first.
 
 **Note:** I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposite of `Promise.all` that only rejects if all items reject.
 
@@ -962,5 +962,3 @@ Sugar for `promise.then(undefined, onRejected)`
 Many thanks to Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp, Addy Osmani, Arthur Evans, and Yutaka Hirano who proofread this and made corrections/recommendations.
 
 Also, thanks to [Mathias Bynens](http://mathiasbynens.be/) for [updating various parts](https://github.com/html5rocks/www.html5rocks.com/pull/921/files) of the article.
-
-
