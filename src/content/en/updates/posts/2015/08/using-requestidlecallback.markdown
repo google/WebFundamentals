@@ -43,11 +43,12 @@ You can also shim its behavior, which requires falling back to `setTimeout`:
 window.requestIdleCallback =
   window.requestIdleCallback ||
   function (cb) {
+    var start = Date.now();
     return setTimeout(function () {
       cb({
         didTimeout: false,
         timeRemaining: function () {
-          return Number.MAX_VALUE;
+          return Math.max(0, 50 - (Date.now() - start));
         }
       });
     }, 1);
