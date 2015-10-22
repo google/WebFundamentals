@@ -35,7 +35,7 @@
     <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg" />
     <enclosure url="https://storage.googleapis.com/http-203-podcast/episode-1.mp3" length="31517231" type="audio/mpeg"/>
     <guid isPermaLink="false">https://developers.google.com/web/shows/http203/podcast/episode-1.mp3</guid>
-    <pubDate>Mon Sep 21 2015 15:23:55 GMT+0100 (BST)</pubDate>
+    <pubDate>Mon, Sep 21 2015 15:23:55 +0100</pubDate>
     <itunes:duration>00:30:13</itunes:duration>
   </item>
 
