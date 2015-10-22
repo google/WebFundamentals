@@ -36,7 +36,7 @@ For a complete breakdown, check out the [release changelog](https://github.com/g
 [Download the latest release](https://storage.googleapis.com/code.getmdl.io/1.0.4/mdl.zip) with our source code, compiled assets and docs as a ZIP file.
 
 This also contains our Sass sources and Gulpfile for anyone that wants to [build](https://github.com/google/material-design-lite#build) their own version. Don’t forget we’re
-available on [npm](http://npmjs.org/package/material-design-lite) as well.
+available on [npm](https://npmjs.org/package/material-design-lite) as well.
 
 **Material Design Lite CDN**
 

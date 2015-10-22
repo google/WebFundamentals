@@ -33,7 +33,7 @@ full screen width.
 
 Sites using this pattern include:
 
- * [Modernizr](http://modernizr.com/)
+ * [Modernizr](https://modernizr.com/)
  * [Wee Nudge](http://weenudge.com/)
 
 {% include_code src=_code/column-drop.html snippet=cdrop lang=css %}

@@ -46,7 +46,7 @@ using Google AdSense and the Web Starter Kit:
   alt="Sample website with ads on desktop and mobile">
 
 If you're unfamiliar with the Web Start Kit, refer to the
-[Set Up Web Starter Kit]({{site.fundamentals}}/getting-started/web-starter-kit/setting-up) documentation.
+[Set Up Web Starter Kit](/web/fundamentals/getting-started/web-starter-kit/setting-up) documentation.
 
 In order to include ads in your site and get paid, you'll need to follow these simple steps:
 
@@ -86,7 +86,7 @@ ensuring your site looks great on any device.
 If you don't use responsive ad units, you will have to write a lot more code 
 to control how ads appear based on a user's device. Even if you must specify 
 the exact size of your ad units, use responsive ad units in 
-[advanced mode]({{site.fundamentals}}/monetization/ads/customize-ads.html#what-if-responsive-sizing-isnt-enough).
+[advanced mode](/web/fundamentals/discovery-and-monetization/monetization-with-ads/customize-ads#what-if-responsive-sizing-isnt-enough).
 
 To make your code simpler and save you time and effort,
 the responsive ad code automatically adapts the ad unit size to your page layout.

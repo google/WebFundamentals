@@ -28,7 +28,7 @@ You'll also learn the basics of Service Workers.
 ## What you'll need
 
 * Chrome 42 or above
-* A basic understanding of [git](http://git-scm.com/), and [Chrome DevTools](/web/tools/chrome-devtools)
+* A basic understanding of [git](https://git-scm.com/), and [Chrome DevTools](/web/tools/chrome-devtools)
 * Experience of [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/) and [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) would also be useful, but is not crucial
 * The sample code
 * A text editor

@@ -42,7 +42,7 @@ Will output this in the Console:
 
 ### Group messages together
 
-You can group related output together with the group commands. The [`console.group()`](./console-referencs#consolegroupobject-object-) command takes a single string parameter to set the name of the group. After calling it in your JavaScript, the console will begin to group all subsequent output together.
+You can group related output together with the group commands. The [`console.group()`](./console-reference#consolegroupobject-object-) command takes a single string parameter to set the name of the group. After calling it in your JavaScript, the console will begin to group all subsequent output together.
 
 To end the grouping you only need to call [`console.groupEnd()`](./console-reference#consolegroupend) when you're done.
 

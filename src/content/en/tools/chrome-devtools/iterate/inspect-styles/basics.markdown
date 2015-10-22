@@ -129,7 +129,7 @@ To view a history of live-edits made to your page:
 To explore the changes made:
 
 * Expand top-level file names to view the time ![time modification occurred](imgs/image_25.png){:.inline} a modification occurred.
-* Expand second-level items to view a [diff](http://en.wikipedia.org/wiki/Diff) (before and after) corresponding to the modification. A line with a pink background signifies a removal while a line with a green background signifies an addition.
+* Expand second-level items to view a [diff](https://en.wikipedia.org/wiki/Diff) (before and after) corresponding to the modification. A line with a pink background signifies a removal while a line with a green background signifies an addition.
 
 {% animation animations/revisions.mp4 %}
 

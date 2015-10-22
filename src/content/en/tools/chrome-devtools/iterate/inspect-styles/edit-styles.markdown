@@ -41,7 +41,7 @@ You can add or edit styles within the **Styles pane** in the Elements panel in t
 
 ## Edit an existing property name or value
 
-Click on a CSS property name or property value to edit; press Tab or Enter to change the name or value (see also [How to live-edit a style](/web/tools/chrome-devtools/iterate/inspect-styles/basics?hl=en#how-to-live-edit-a-style)).
+Click on a CSS property name or property value to edit; press Tab or Enter to change the name or value (see also [How to live-edit a style](/web/tools/chrome-devtools/iterate/inspect-styles/basics#how-to-live-edit-a-style)).
 
 When editing a numeric CSS property value, increment and decrement numeric CSS property values using the following shortcuts:
 

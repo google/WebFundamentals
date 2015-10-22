@@ -39,7 +39,7 @@ help centers.
 
 There are many ad serving platforms available, and choosing the one that
 is right for you is important. We recommend the
-[Google AdSense platform](http://www.google.com/adsense/start/)
+[Google AdSense platform](https://www.google.com/adsense/start/)
 for most sites; it's free use and available to almost any site. The [DoubleClick platform](https://www.google.com/doubleclick/publishers/)
 is best for sites with their own advertising teams.
 

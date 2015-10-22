@@ -15,7 +15,7 @@ updated_on: 2015-06-15
 [https://github.com/Polymer/polycasts/tree/master/ep18-starter-kit/polymer-starter-kit](https://github.com/Polymer/polycasts/tree/master/ep18-starter-kit/polymer-starter-kit)
 
 ## Polymer Starter Kit
-[https://developers.google.com/web/tools/polymer-starter-kit/index?hl=en](/web/tools/polymer-starter-kit/)
+[https://developers.google.com/web/tools/polymer-starter-kit/](/web/tools/polymer-starter-kit/)
 
 ## Polymer Yeoman Generator
 [https://github.com/yeoman/generator-polymer](https://github.com/yeoman/generator-polymer)

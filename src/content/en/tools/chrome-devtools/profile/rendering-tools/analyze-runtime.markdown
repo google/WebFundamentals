@@ -25,7 +25,7 @@ related-guides:
   javascript:
     -  
       title: "Optimize JavaScript Execution"
-      href: fundamentals/performance/rendering/optimize-javascript-execution?hl=en
+      href: fundamentals/performance/rendering/optimize-javascript-execution
       section:
         title: "Optimize JavaScript Execution"
         href: fundamentals/performance/rendering/optimize-javascript-execution

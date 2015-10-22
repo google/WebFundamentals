@@ -564,7 +564,7 @@ This ended up causing an issue for us during development, when we started using
 traffic was coming from. For example, we [added](https://github.com/GoogleChrome/ioweb2015/blob/28113917b88436dd569c39fd5eef184b6aefdd1c/app/scripts/shed/push-notifications.js#L32)
 the `utm_source=notification` parameter to URLs that were opened when clicking on one of our
 notifications, and used `utm_source=web_app_manifest` in the [`start_url`](https://github.com/GoogleChrome/ioweb2015/blob/0bab714dbb08927f901420fc05b43b9f97f7ddc3/app/templates/manifest.json#L4)
-for our [web app manifest](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en).
+for our [web app manifest](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android).
 URLs which previously matched cached responses were coming up as misses when those parameters
 were appended.
 

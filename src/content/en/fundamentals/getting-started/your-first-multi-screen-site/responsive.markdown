@@ -56,14 +56,14 @@ related-guides:
       section:
         id: images
         title: "Images"
-        href: media/images/
+        href: fundamentals/design-and-ui/media/images
     -
       title: "Use media queries to provide high res images or art direction"
       href: fundamentals/design-and-ui/media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
       section:
         id: images
         title: "Images"
-        href: media/images/
+        href: fundamentals/design-and-ui/media/images
 notes:
   styling:
     - We have assumed a set of styles that include color, padding and font styling that match our brand guidelines.
@@ -201,7 +201,7 @@ where we want to change it.
 
 600px appears to be a good place to create our first breakpoint as it will give us scope
 to reposition elements to make them fit the screen better.  We can do this
-using a technology called [Media Queries]({{site.fundamentals}}/design-and-ui/responsive/fundamentals/use-media-queries).
+using a technology called [Media Queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries).
 
 {% highlight css %}
 @media (min-width: 600px) {

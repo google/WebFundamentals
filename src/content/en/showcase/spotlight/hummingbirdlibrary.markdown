@@ -23,7 +23,7 @@ showcase:
   developer: Leif Thomas
   our_views:
     good: |
-      Anime fans (like me – that view count on the screenshot is real!) have long been obsessed with keeping track of what they watched. Popular sites in this space include AniDB and MyAnimeList, but [Hummingbird](http://hummingbird.me) is the by far best-looking of them all.
+      Anime fans (like me – that view count on the screenshot is real!) have long been obsessed with keeping track of what they watched. Popular sites in this space include AniDB and MyAnimeList, but [Hummingbird](https://hummingbird.me) is the by far best-looking of them all.
 
       Yet, [Hummingbird Library](http://hummingbirdlibrary.com/), which sits on top of the existing Hummingbird API, goes one step further, built from scratch with Angular and Material Design. [Theme color](/web/fundamentals/design-and-ui/browser-customization/theme-color) and [manifest](/web/fundamentals/engage-and-retain/simplified-app-installs) make it look super integrated and installable on the home screen, and the whole experience feels very snappy, focussing on the core functionality of the main site.
     bad: |

@@ -36,8 +36,8 @@ related-guides:
 ## Choose the right format
 
 There are two types of images to consider: [vector
-images](http://en.wikipedia.org/wiki/Vector_graphics) and [raster
-images](http://en.wikipedia.org/wiki/Raster_graphics). For raster images, you
+images](https://en.wikipedia.org/wiki/Vector_graphics) and [raster
+images](https://en.wikipedia.org/wiki/Raster_graphics). For raster images, you
 also need to choose the right compression format, for example: `GIF`, `PNG`, `JPG`.
 
 **Raster images**, like photographs and other images which are represented as a
@@ -50,7 +50,7 @@ to fill in the missing pixels.
 **Vector images**, such as logos and line art are be defined by a set of curves,
 lines, shapes and fill colors. Vector images are created with programs like
 Adobe Illustrator or Inkscape and saved to a vector format like
-[`SVG`](http://css-tricks.com/using-svg/).  Because vector images are built on
+[`SVG`](https://css-tricks.com/using-svg/).  Because vector images are built on
 simple primitives, they can be scaled without any loss in quality without a
 change in file size.
 

@@ -86,7 +86,7 @@ Below is an example source map file:
 
 ## Verify web server can serve Source Maps
 
-Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your Source Maps should be served with a MIME type of `application/json`, but Chrome will actually [accept any content-type](http://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files), for example `application/octet-stream`.
+Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your Source Maps should be served with a MIME type of `application/json`, but Chrome will actually [accept any content-type](https://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files), for example `application/octet-stream`.
 
 ### Bonus: Source mapping via custom header 
 

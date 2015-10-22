@@ -83,7 +83,7 @@ particular item.
 The type of item can be specified using the `itemtype` attribute along with the
 `itemscope`. The value of an `itemtype` can be determined according to the type
 of the content on your webpage. You should be able to find one that is relevant
-in [this page](http://schema.org/docs/full.html).
+in [this page](https://schema.org/docs/full.html).
 
 ### Add `itemprop` to describe each item using schema.org vocaburary
 `itemprop`s define properties for `itemtype`s in the scope. For providing
@@ -101,7 +101,7 @@ snippets and rendering on Google+, read the following documents:
 ### Validate rich snippets
 In order to validate rich snippets on Google+, you can use tools such as:
 
-* [Structured Data Testing Tool](http://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools  
+* [Structured Data Testing Tool](https://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools  
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 

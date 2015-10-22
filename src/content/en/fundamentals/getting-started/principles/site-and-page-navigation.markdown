@@ -17,7 +17,7 @@ Focus your mobile homepage on connecting users to the content they’re looking 
 
 ## 1. Keep calls to action front and center
 
-Make secondary tasks available through [menus]({{site.fundamentals}}/design-and-ui/responsive/) or “below the fold” 
+Make secondary tasks available through [menus](/web/fundamentals/design-and-ui/responsive/) or “below the fold” 
 (the part of the webpage that can’t be seen without scrolling down).
 
 <div class="mdl-grid">

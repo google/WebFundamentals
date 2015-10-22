@@ -134,7 +134,7 @@ splashscreen to the homepage.
 
 Chrome introduced the concept of a theme color for your site in 2014. The theme color
 is a hint from your web page that tells the browser what color to tint
-[UI elements such as the address bar](additional-customizations.html).  
+[UI elements such as the address bar](/web/fundamentals/design-and-ui/browser-customization/).  
 
 
 <figure>

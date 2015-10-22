@@ -53,7 +53,7 @@ on the screen because they will have a smaller surface area than a harder press.
 
 Firstly you need a device that can detect this. A Nexus 10 will work fine. A 
 great example is to look directly at 
-[Rick Byers paint example](http://rbyers.github.io/paint.html). Not to be outdone 
+[Rick Byers paint example](https://rbyers.github.io/paint.html). Not to be outdone 
 though here is a way to use it without canvas.
 
 {% highlight javascript %}

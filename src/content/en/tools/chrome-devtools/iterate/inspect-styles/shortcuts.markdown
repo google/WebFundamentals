@@ -608,7 +608,7 @@ Shortcuts available in the Styles sidebar:
 
 ## Bonus: useful Chrome shortcuts
 
-Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](http://goo.gl/PsTNm) for Windows, Mac, and Linux:
+Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](https://goo.gl/PsTNm) for Windows, Mac, and Linux:
 
 <table class="mdl-data-table">
   <thead>

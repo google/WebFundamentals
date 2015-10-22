@@ -69,7 +69,7 @@ Now you can open a new Chrome for Android tab and view the content of your local
 
 Port forwarding works great when you're developing on `localhost`. But there are cases when you might be using a customized local domain.
 
-For example, suppose you're using a third party JavaScript SDK that only works on whitelisted domains. So you added an entry, such as `127.0.0.1 production.com`, to your [hosts file](http://en.wikipedia.org/wiki/Hosts_(file)). Or maybe you configured a customized domain using virtual hosts on your web server ([MAMP](http://www.mamp.info/en/)).
+For example, suppose you're using a third party JavaScript SDK that only works on whitelisted domains. So you added an entry, such as `127.0.0.1 production.com`, to your [hosts file](https://en.wikipedia.org/wiki/Hosts_(file)). Or maybe you configured a customized domain using virtual hosts on your web server ([MAMP](http://www.mamp.info/en/)).
 
 If you want your phone to reach content on your customized domain, you can use port forwarding in combination with a proxy server. The proxy maps requests from your device to the correct location on the host machine.
 
@@ -135,7 +135,7 @@ check out the gulp file for how to integrate it in your own workflow.
 If you aren't using Gulp, head on over to the [BrowserSync
 site](http://www.browsersync.io/) for alternative approaches to using it.
 
-If interested in running unit tests across browsers/devices, you’ll need a test runner that can run your test suite on these platforms. Some options for this include [Karma](http://karma-runner.github.io/0.12/index.html) and [Yeti](http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/).
+If interested in running unit tests across browsers/devices, you’ll need a test runner that can run your test suite on these platforms. Some options for this include [Karma](https://karma-runner.github.io/0.12/index.html) and [Yeti](http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/).
 
 ### Help, I need lots of devices!
 

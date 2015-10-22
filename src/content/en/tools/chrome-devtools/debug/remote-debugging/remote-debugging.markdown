@@ -35,7 +35,7 @@ To begin remote debugging, you need:
 * A USB cable to connect your Android device.
 * Android 4.0+ and [Chrome for Android](https://play.google.com/store/apps/details?id=com.android.chrome&hl=en).
 
-**Note**: Remote debugging requires your version of desktop Chrome to be newer than the version of Chrome for Android on your device. For best results, use [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) (Mac/Windows) or the Chrome [Dev channel](http://www.chromium.org/getting-involved/dev-channel) release (Linux) on desktop.
+**Note**: Remote debugging requires your version of desktop Chrome to be newer than the version of Chrome for Android on your device. For best results, use [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) (Mac/Windows) or the Chrome [Dev channel](https://www.chromium.org/getting-involved/dev-channel) release (Linux) on desktop.
 
 If at any time you encounter problems with remote debugging, refer to the [Troubleshooting](#troubleshooting) section.
 
@@ -61,7 +61,7 @@ An alert prompts you to allow USB debugging. Tap **OK**.
 
 Connect the Android device to your development machine using a USB cable.
 
-**Note**: If you are developing on **Windows**, install the appropriate USB driver for your device. See [OEM USB Drivers](http://developer.android.com/tools/extras/oem-usb.html) on the Android Developers' site.
+**Note**: If you are developing on **Windows**, install the appropriate USB driver for your device. See [OEM USB Drivers](https://developer.android.com/tools/extras/oem-usb.html) on the Android Developers' site.
 
 Now that you've set up remote debugging and connected your device, you need to discover that device in Chrome.
 
@@ -118,7 +118,7 @@ To debug Safari for iOS, follow these steps:
 
 Unfortunately there is no way to debug a site on Windows Phone, but you can  
 [emulate a mobile browser on the desktop version of IE
-11](http://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx).
+11](https://msdn.microsoft.com/en-us/library/ie/dn255001%28v=vs.85%29.aspx).
 See also [Emulate beyond Chrome](/web/tools/chrome-devtools/iterate/device-mode/testing-other-browsers).
 
 ## Screencast from Android device to development machine
@@ -151,11 +151,11 @@ Other DevTools work with the screencast too. For example, to inspect an element,
 
 ### I can't see my device on the **chrome://inspect page**.
 
-* If you are developing on **Windows**, verify that the appropriate USB driver for your device is installed. See [OEM USB Drivers](http://developer.android.com/tools/extras/oem-usb.html) on the Android Developers' site.
+* If you are developing on **Windows**, verify that the appropriate USB driver for your device is installed. See [OEM USB Drivers](https://developer.android.com/tools/extras/oem-usb.html) on the Android Developers' site.
 * Verify that the device is connected directly to your machine, bypassing any hubs.
 * Verify that **USB debugging** is enabled on your device. Remember to accept the USB debugging permission alerts on your device.
 * On your desktop browser, navigate to **chrome://inspect** and verify that **Discover USB devices** is checked.
-* Remote debugging requires your version of desktop Chrome to be newer than the version of Chrome for Android on your device. Try using [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) (Mac/Windows) or the Chrome [Dev channel](http://www.chromium.org/getting-involved/dev-channel) release (Linux) on desktop.
+* Remote debugging requires your version of desktop Chrome to be newer than the version of Chrome for Android on your device. Try using [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) (Mac/Windows) or the Chrome [Dev channel](https://www.chromium.org/getting-involved/dev-channel) release (Linux) on desktop.
 
 If you still can't see your device, unplug it. On your device, select **Settings > Developer options**. Tap **Revoke USB debugging authorizations**. Then, retry the [device setup and discovery process](#access-site-on-android-device).
 

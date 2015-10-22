@@ -45,15 +45,15 @@ Study participants viewed guest checkouts as “convenient”, “simple”, “
 
 ## 11. Use existing information to maximize convenience
 
-Remember and [pre-fill preferences]({{site.fundamentals}}/design-and-ui/input/forms/label-and-name-inputs) for registered users. Offer familiar, third-party checkout services for new users.
+Remember and [pre-fill preferences](/web/fundamentals/design-and-ui/input/forms/label-and-name-inputs) for registered users. Offer familiar, third-party checkout services for new users.
 
 ## 12. Use click-to-call buttons for complex tasks
 
-On devices with calling capabilities, [click-to-call links]({{site.fundamentals}}/native-hardware/click-to-call/) enable users to make a phone call by simply tapping a link. On most mobile devices the user receives a confirmation before the number is dialed, or a menu is presented asking the user how the number should be handled.
+On devices with calling capabilities, [click-to-call links](/web/fundamentals/native-hardware/click-to-call/) enable users to make a phone call by simply tapping a link. On most mobile devices the user receives a confirmation before the number is dialed, or a menu is presented asking the user how the number should be handled.
 
 ## 13. Make it easy to finish on another device
 
-Users frequently want to finish tasks on other devices. For instance, they might wish to view an item on a larger screen. Or they might get busy and need to finish later. Support these customer journeys by enabling users to [share items on social networks]({{site.fundamentals}}/discovery-and-monetization/social-discovery/), or by letting users email themselves links from directly within the site.
+Users frequently want to finish tasks on other devices. For instance, they might wish to view an item on a larger screen. Or they might get busy and need to finish later. Support these customer journeys by enabling users to [share items on social networks](/web/fundamentals/discovery-and-monetization/social-discovery/), or by letting users email themselves links from directly within the site.
 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">

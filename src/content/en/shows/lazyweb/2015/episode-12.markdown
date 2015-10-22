@@ -55,7 +55,7 @@ For more news on the Web, check out these resources:
 - [Open Web Platform Daily](http://webplatformdaily.org/)
 - [HTML5 Weekly](http://html5weekly.com/)
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+Subscribe to the Google Developers channel at: [https://goo.gl/mQyv5L](https://goo.gl/mQyv5L)
 
 Original music by Terra Monk: [https://goo.gl/aTmVQ4 (free download)](https://goo.gl/aTmVQ4 (free download))
 

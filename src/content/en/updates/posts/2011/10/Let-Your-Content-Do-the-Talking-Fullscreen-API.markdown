@@ -77,4 +77,4 @@ The Fullscreen API is [enabled](http://caniuse.com/#search=fullscreen) by defaul
 
 *Updated 2012-10-11*: to be inline with spec changes. Lowercased the "S" in `requestFullscreen()`  and changed `document.webkitCancelFullScreen()` to `document.webkitExitFullscreen()`. Updated browser compatibility comment.
 
-*Updated 2014-02-11*: to include prefixes for IE, add the standard CSS syntax, and update the browser compatibility comment. Thanks [@dstorey](http://twitter.com/dstorey) and [@patrickkettner](http://twitter.com/patrickkettner).
+*Updated 2014-02-11*: to include prefixes for IE, add the standard CSS syntax, and update the browser compatibility comment. Thanks [@dstorey](https://twitter.com/dstorey) and [@patrickkettner](https://twitter.com/patrickkettner).

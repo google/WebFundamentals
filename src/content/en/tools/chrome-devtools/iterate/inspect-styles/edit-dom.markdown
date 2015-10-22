@@ -45,7 +45,7 @@ notes:
 
 ## Inspect page element
 
-[Inspect a page element](/web/tools/chrome-devtools/iterate/inspect-styles/basics?hl=en#how-to-inspect-a-page) to see it's DOM nodes rendered in the browser:
+[Inspect a page element](/web/tools/chrome-devtools/iterate/inspect-styles/basics#how-to-inspect-a-page) to see it's DOM nodes rendered in the browser:
 
 {% animation animations/right-click-inspect-element.mp4 %}
 
