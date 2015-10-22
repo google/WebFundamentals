@@ -30,7 +30,7 @@ The answer is: absolutely.
 
 Today we’re happy to introduce [PSI](https://github.com/addyosmani/psi/) for Node - a new module that works great with [Gulp](http://gulpjs.com/), [Grunt](http://gruntjs.com/) and other build systems and can connect up to the PageSpeed Insights service and return a detailed report of your web performance. Let’s look at a preview of the type of reporting it enables:
 
-<img src="http://i.imgur.com/1ub50lI.png"/>
+<img src="{{site.WFBaseUrl}}/updates/images/2014/06/webperf/1ub50lI.png"/>
 
 The results above are good for getting a feel for the type of improvements that could be made. For example, a 5.92 for sizing content to viewport means “some” work can still be done whilst a 24 for minimizing render blocking resources may suggest you need to defer loading of JS using the `async` attribute.
 

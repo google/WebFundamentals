@@ -16,7 +16,7 @@ tags:
 
 <p>Custom Filters, or CSS Shaders as they used to be called, allow you to use the power of WebGL's shaders with your DOM content. Since in the current implementation the shaders used are virtually the same as those in WebGL, you need to take a step back and understand some 3D terminology and a little bit of the graphics pipeline.</p>
 
-{% ytvideo WmwZqVFLRoA?feature=player_detailpage %} 
+{% ytvideo WmwZqVFLRoA?feature=player_detailpage %}
 
 <p>I've included a recorded version of a presentation I recently delivered to LondonJS. In the video I step through an overview of the 3D terminology you need to understand, what the different variable types are that you'll encounter, and how you can start playing with Custom Filters today. You should also <a href="http://goo.gl/e3KMp">grab the slides</a> so you can play with the demos yourself.</p>
 
@@ -101,14 +101,14 @@ css_ColorMatrix = mat4(1.0, 0.0, 0.0, 0.0,
 
 <p>In WebGL we take full responsibility for the creation of our mesh's 3D points, but in Custom Filters all you have to do is specify the number of rows and columns that you want and the browser will automatically break down your DOM content into a bunch of triangles:</p>
 
-<p><figure><img src="http://www.html5rocks.com/static/images/updates/custom-filters/rowscols.png" alt="Vertex creation" />
+<p><figure><img src="{{site.WFBaseUrl}}/updates/images/2013/03/custom-filters/rowscols.png" alt="Vertex creation" />
 <figcaption>An image being broken down into rows and columns</figcaption>
 </figure>
 </p>
 
 <p>Each one of those vertices then gets passed through to our vertex shader for manipulation, and that means we can start moving them around in 3D space as we need. It's not long before you can make some pretty crazy effects!</p>
 
-<p><figure><img src="http://www.html5rocks.com/static/images/updates/custom-filters/weird.jpg" alt="An accordion effect" />
+<p><figure><img src="{{site.WFBaseUrl}}/updates/images/2013/03/custom-filters/weird.jpg" alt="An accordion effect" />
 <figcaption>An image being warped by an accordion effect</figcaption>
 </figure></p>
 

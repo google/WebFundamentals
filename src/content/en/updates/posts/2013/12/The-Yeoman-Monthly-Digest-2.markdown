@@ -25,7 +25,7 @@ Fortunately, the community has been working towards speeding up your development
 * Use [grunt-newer](https://github.com/tschaub/grunt-newer) to only run Grunt tasks on files that changed
 * Run tasks concurrently with [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent) so multiple tasks can be run simultaneously
 
-Some other tips: 
+Some other tips:
 
 * Use [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) to load multiple tasks automatically rather than `loadNpmTask`-ing it yourself
 * [Reuse multiple Grunt environments across multiple projects](https://npmjs.org/package/grunt-source)
@@ -76,12 +76,12 @@ http://h3manth.com/new/blog/2013/publish-packages-to-npm-with-yeoman/)
 
 yo [1.0.7-pre](https://npmjs.org/package/yo) is now available for testing on npm and we look forward to talking more about our roadmap for 2014 in the coming weeks. In the mean time, there's lots of **juicy** new updates to both our official generators and those you've been authoring below.
 
-![](http://i.imgur.com/KY2KVeX.jpg)
+![]({{site.WFBaseUrl}}/updates/images/2013/12/yeoman-digest/KY2KVeX.jpg)
 
 ### Official generator updates
 
 * [Backbone](https://github.com/yeoman/generator-backbone/releases/tag/v0.2.2) 0.2.2 released with RequireJS + CoffeeScript support & --appPath option
-* [AngularJS](https://github.com/yeoman/generator-angular/releases) 0.7.1 with support for Angular 1.2.6 and grunt-bower-install 
+* [AngularJS](https://github.com/yeoman/generator-angular/releases) 0.7.1 with support for Angular 1.2.6 and grunt-bower-install
 * [Ember.js](https://github.com/yeoman/generator-ember/releases/tag/v0.8.0) 0.8.0 released. Scaffolding updated to Ember 1.2 syntax, improved CoffeeScript support, templating, REST routes
 * [WebApp](https://github.com/yeoman/generator-webapp/blob/master/changelog.md) 0.4.5 and 0.4.6 including improved HTMLMin, bower install fixes and grunt-bower-install support for CSS dependencies
 * [Polymer](https://github.com/yeoman/generator-polymer/releases/tag/0.0.8) generator 0.0.8 with Web Component concatenization and other updates
@@ -102,7 +102,7 @@ Other official generators including [jQuery](https://github.com/yeoman/generator
 * [Three.js](https://github.com/timmywil/generator-threejs)
 * [React](https://github.com/petehunt/generator-react-quickstart)
 * [Assemble](https://github.com/assemble/generator-assemble)
-* [MarionetteJS](https://github.com/mrichard/generator-marionette) 
+* [MarionetteJS](https://github.com/mrichard/generator-marionette)
 * [MariaJS 2.0](https://github.com/revathskumar/generator-maria/releases/tag/v0.2.0)
 * [Simple webapps](http://jorshasaur.us/simple-web-app-generator-for-yeoman/)
 * [Drupal themes](https://github.com/pixelmord/generator-drupaltheme)

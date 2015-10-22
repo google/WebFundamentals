@@ -13,7 +13,7 @@ tags:
   - yeoman
   - tools
 ---
-Allo! Allo! This past month saw the Yeoman community grow to [472](http://yeoman.io/community-generators.html) generators. We’re excited to see so much passion for project scaffolding and are working on some new features to enable generators to extend and build on top of each other. 
+Allo! Allo! This past month saw the Yeoman community grow to [472](http://yeoman.io/community-generators.html) generators. We’re excited to see so much passion for project scaffolding and are working on some new features to enable generators to extend and build on top of each other.
 
 We’ll talk more about this soon, but for now here’s this month’s round-up of featured articles, generators and team blogs. We hope they’re useful!
 
@@ -31,7 +31,7 @@ We’ll talk more about this soon, but for now here’s this month’s round-up 
 
 Sindre Sorhus also created [envcheck](https://github.com/sindresorhus/envcheck/) - a useful environment checker that will double-check you have everything needed to run Yeoman smoothly.
 
-<img src="http://i.imgur.com/jyAbtYg.png"/>
+<img src="{{site.WFBaseUrl}}/updates/images/2014/02/yeoman-digest/jyAbtYg.png"/>
 
 ## Articles
 
@@ -80,7 +80,7 @@ This month the community have been building full-stack webapps, Hybrid apps and 
 [AngularJS, PhoneGap and my mobile toolset](https://docs.google.com/presentation/d/1vO5NlWGjwUpMYlSSpqFnYYimbKvi1l4f-s7c3sbEZZY/edit#slide=id.g2a3cc7a59_74)
 
 
-## Featured Generators 
+## Featured Generators
 
 This month also saw new generators released for KrakenJS, Meteor, ChaplinJS and a number of other projects. Some of our choice picks:
 
@@ -134,7 +134,7 @@ Finally, updates have also been made to our official [Ember.js](https://github.c
 
 If you’ve written an article, given a talk or created a generator you think would be useful to others, please feel free to share it with us on [Twitter](http://twitter.com/yeoman) or [Google+](https://plus.sandbox.google.com/101063139999404044459/posts). We’re always interested in seeing how our tools are used.
 
-Until the next time we run `yo digest`, happy scaffolding and don't be afraid - Yeoman is here to help, not replace you :D 
+Until the next time we run `yo digest`, happy scaffolding and don't be afraid - Yeoman is here to help, not replace you :D
 
 <blockquote class="twitter-tweet" lang="en"><p>I’m genuinely scared that one day I’m going to be replaced by a <a href="https://twitter.com/yeoman">@yeoman</a> generator.</p>&mdash; I Am Devloper (@iamdevloper) <a href="https://twitter.com/iamdevloper/statuses/431764751610548225">February 7, 2014</a></blockquote>
 

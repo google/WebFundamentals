@@ -17,7 +17,7 @@ tags:
 <p>However, as of <a href="https://play.google.com/store/apps/details?id=com.chrome.beta">Chrome 32 for Android</a>, which is currently in beta, this <strong>delay is gone</strong> for <strong>mobile-optimised</strong> sites, <strong>without removing pinch-zooming</strong>!</p>
 
 
-{% ytvideo AjUpiwvIa5A?rel=0 %} 
+{% ytvideo AjUpiwvIa5A?rel=0 %}
 
 <p>This optimisation applies to any site that uses:</p>
 
@@ -88,7 +88,7 @@ tags:
 
 
 <p class="mob-a11y-screenshots">
-  <a href="http://www.html5rocks.com/static/images/updates/300ms/chrome-a11y.png"><img src="http://www.html5rocks.com/static/images/updates/300ms/chrome-a11y.png" alt="Chrome accessibility settings"></a><a href="http://www.html5rocks.com/static/images/updates/300ms/android-magnification.png"><img src="http://www.html5rocks.com/static/images/updates/300ms/android-magnification.png" alt="Android screen magnification"></a>
+  <a href="{{site.WFBaseUrl}}/updates/images/2013/12/tap-delay/chrome-a11y.png"><img src="{{site.WFBaseUrl}}/updates/images/2013/12/tap-delay/chrome-a11y.png" alt="Chrome accessibility settings"></a><a href="{{site.WFBaseUrl}}/updates/images/2013/12/tap-delay/android-magnification.png"><img src="{{site.WFBaseUrl}}/updates/images/2013/12/tap-delay/android-magnification.png" alt="Android screen magnification"></a>
 </p>
 
 <p>However, we may have missed something, so if you are affected by this change, or know someone who is, let us know in the comments or <a href="https://code.google.com/p/chromium/issues/list">file a ticket</a>.</p>
