@@ -3,8 +3,8 @@ layout: shows/episode
 title: "iron-ajax… wat?!"
 description: "It might seem crazy, but using an element for AJAX is actually pretty great! In this episode I’ll show you how to build a simple GitHub issue fetcher, using primarily HTML. When you combine data providers with the magic of bindings, you can remove most of the JavaScript in your app, and that makes things much easier to maintain!"
 youtubeID: k1eR_3KqJms
-published_on: 2015-11-09
-updated_on: 2015-11-09
+published_on: 2015-09-11
+updated_on: 2015-09-11
 ---
 
 It might seem crazy, but using an element for AJAX is actually pretty great! In this episode I’ll show you how to build a simple GitHub issue fetcher, using primarily HTML. When you combine data providers with the magic of bindings, you can remove most of the JavaScript in your app, and that makes things much easier to maintain!

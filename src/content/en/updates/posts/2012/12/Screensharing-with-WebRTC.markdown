@@ -15,7 +15,7 @@ tags:
 
 <p>Well... here's another first: WebRTC screensharing.</p>
 
-<a href="https://www.youtube.com/watch?v=tD0QtBUZsF4" title="Linked to screencast of WebRTC screensharing in action. Screengrab image shows WebRTC screensharing extension, featuring Jake Archibald, Peter Beverloo, Paul Lewis and Sam Dutton."><img src="http://www.samdutton.com/rtcshare.jpg" alt="Screengrab of WebRTC screensharing extension, featuring Jake Archibald, Peter Beverloo, Paul Lewis and Sam Dutton" style="width: 100%" /></a>
+<a href="https://www.youtube.com/watch?v=tD0QtBUZsF4" title="Linked to screencast of WebRTC screensharing in action. Screengrab image shows WebRTC screensharing extension, featuring Jake Archibald, Peter Beverloo, Paul Lewis and Sam Dutton."><img src="{{site.WFBaseUrl}}/updates/images/2012/12/screensharing/rtcshare.jpg" alt="Screengrab of WebRTC screensharing extension, featuring Jake Archibald, Peter Beverloo, Paul Lewis and Sam Dutton" style="width: 100%" /></a>
 
 <p>Here's a screencast: <a href="https://www.youtube.com/watch?v=tD0QtBUZsF4" title="Video on YouTube: screencast of WebRTC screensharing in action">youtube.com/watch?v=tD0QtBUZsF4</a></p>
 
