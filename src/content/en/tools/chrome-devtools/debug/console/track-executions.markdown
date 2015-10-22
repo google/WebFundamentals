@@ -26,9 +26,9 @@ key-takeaways:
 
 ## Measure execution times
 
-The [`time()`](./console-api#consoletimelabel) method starts a new timer and is very useful to measure how long something took. Pass a string to the method to give the marker a name.
+The [`time()`](./console-reference#consoletimelabel) method starts a new timer and is very useful to measure how long something took. Pass a string to the method to give the marker a name.
 
-When you want to stop the timer, call [`timeEnd()`](./console-api#consoletimeendlabel) and pass it the same string passed to the initializer.
+When you want to stop the timer, call [`timeEnd()`](./console-reference#consoletimeendlabel) and pass it the same string passed to the initializer.
 
 The console then logs the label and time elapsed when the `timeEnd()` method fires.
 
@@ -61,7 +61,7 @@ How an annotation on the timeline looks from `time()`:
 *Note: The `timeStamp()` method only functions while a Timeline recording is in progress.*
 
 The [Timeline panel](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) provides a complete overview of where the engine spends time.
-You can add a mark to the timeline from the console with the [`timeStamp()`](./console-api#consoletimestamplabel). This is a simple way to correlate events in your application with other events.
+You can add a mark to the timeline from the console with the [`timeStamp()`](./console-reference#consoletimestamplabel). This is a simple way to correlate events in your application with other events.
 
 The `timeStamp()` annotates the Timeline in the following places:
 

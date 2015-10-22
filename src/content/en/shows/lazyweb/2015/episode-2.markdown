@@ -33,7 +33,7 @@ Building offline experiences may be getting easier because service workers are c
 
 [http://www.w3.org/TR/service-workers/](http://www.w3.org/TR/service-workers/)
 
-[http://jakearchibald.com/2014/offline-cookbook/](http://jakearchibald.com/2014/offline-cookbook/)
+[https://jakearchibald.com/2014/offline-cookbook/](http://jakearchibald.com/2014/offline-cookbook/)
 
 ## FLEXBOX FOR RWD
 

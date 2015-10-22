@@ -146,8 +146,8 @@ Some recording tips:
 * **Avoid unnecessary actions**. Try to avoid actions (mouse clicks, network loads, etc.) that are extraneous to the activity you want to record and analyze. For example, if you want to record events that occur after you click a Login button, don’t also scroll the page, load an image, and so on.
 *  **Disable the browser cache**. When recording network operations, it’s a good idea to disable the browser’s cache in the DevTools Settings panel.
 * **Disable extensions**. Chrome extensions can add unrelated noise to Timeline recordings of your application. You can do one of the following:
-    * Open a Chrome window in [incognito mode](http://support.google.com/chrome/bin/answer.py?hl=en&answer=95464).
-    * Create a new [Chrome user profile](http://support.google.com/chrome/bin/answer.py?hl=en&answer=142059) for testing.
+    * Open a Chrome window in [incognito mode](https://support.google.com/chrome/answer/95464).
+    * Create a new [Chrome user profile](https://support.google.com/chrome/answer/142059) for testing.
 
 ## Record a page load
 
@@ -168,7 +168,7 @@ to start recording.
 to reload the browser page.
 4.  Stop the recording as soon as the page has finished loading (look for the red event marker).
 
-The Timeline annotates each recording with blue and red lines that indicate, respectively, when the [DOMContentLoaded](http://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) and [load](http://docs.webplatform.org/wiki/dom/events/load) events were dispatched by the browser. The DOMContentLoaded event is fired when all of the page’s DOM content has been loaded and parsed. The load event is fired once all of the document’s resources (images and CSS files, and so forth) have been fully loaded.
+The Timeline annotates each recording with blue and red lines that indicate, respectively, when the [DOMContentLoaded](https://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) and [load](https://docs.webplatform.org/wiki/dom/events/load) events were dispatched by the browser. The DOMContentLoaded event is fired when all of the page’s DOM content has been loaded and parsed. The load event is fired once all of the document’s resources (images and CSS files, and so forth) have been fully loaded.
 
 Your recording should look something like the following example.
 The first record (Send Request) is Chrome's HTTP request for the page,

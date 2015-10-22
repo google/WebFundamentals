@@ -44,7 +44,7 @@ directly JavaScript, including modifying CSS, or applying different CSS rules.
 
 The web already has a very nice way of working with conditional CSS, called
 [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
-Since M46, Chrome in Android supports the [display-mode](http://w3c.github.io/manifest/#the-display-mode-media-feature) media
+Since M46, Chrome in Android supports the [display-mode](https://w3c.github.io/manifest/#the-display-mode-media-feature) media
 query feature, which can be used to find out what the current `display-mode`
 is being used for displaying the app, ie. is it being displayed by a `browser`,
 `standalone` or `fullscreen`. `display-mode` is also supported for standalone Chrome

@@ -21,7 +21,7 @@ One big change we made when we forked from Blink was to add an intents system: e
 
 Then, on our [public mailing list](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/) we announce an [intent to ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/yujPcy889e4).
 
-At [chromestatus.com](http://chromestatus.com) you can see the [features](http://www.chromestatus.com/features) we've worked on, the features we've shipped, and those we're planning to deprecate. You can also check the [Chromium Releases blog](http://googlechromereleases.blogspot.co.uk/), which has links to bugs and to our tracker dashboard.
+At [chromestatus.com](https://chromestatus.com) you can see the [features](https://www.chromestatus.com/features) we've worked on, the features we've shipped, and those we're planning to deprecate. You can also check the [Chromium Releases blog](http://googlechromereleases.blogspot.co.uk/), which has links to bugs and to our tracker dashboard.
 
 Another big change is that we're removing WebKit prefixes. The intent is not to use Blink prefixes, but to have run-time flags (and not just compile-time flags).
 
@@ -41,6 +41,6 @@ So what's new?
 
 We want to know what you have to say!
 
-If you feel C++ in your blood and want to write C++ with us, all of our code is open. You don't have to tell anybody or evangelize to us. You can just simply post a patch or [file a bug](http://crbug.com/new)!
+If you feel C++ in your blood and want to write C++ with us, all of our code is open. You don't have to tell anybody or evangelize to us. You can just simply post a patch or [file a bug](https://crbug.com/new)!
 
 **Slides:** [Blink](https://docs.google.com/a/chromium.org/presentation/d/1E30GMRaN-9Uj54pfjej8STWz5uwI8ZEg3K_t29_DHs4)

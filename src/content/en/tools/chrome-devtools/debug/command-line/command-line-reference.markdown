@@ -74,7 +74,7 @@ while `$1` returns the previously selected one:
 `$(selector)` returns the reference to the first DOM element
 with the specified CSS selector.
 This function is an alias for the
-[document.querySelector()](http://docs.webplatform.org/wiki/css/selectors_api/querySelector) function.
+[document.querySelector()](https://docs.webplatform.org/wiki/css/selectors_api/querySelector) function.
 
 The following example returns a reference
 to the first `<img>` element in the document:
@@ -96,7 +96,7 @@ The following example returns a reference to the currently selected element and 
 `$$(selector)` returns an array of elements
 that match the given CSS selector.
 This command is equivalent to calling
-[document.querySelectorAll()](http://docs.webplatform.org/wiki/css/selectors_api/querySelectorAll).
+[document.querySelectorAll()](https://docs.webplatform.org/wiki/css/selectors_api/querySelectorAll).
 
 The following example uses `$$()` to create an array
 of all `<img>` elements in the current document and

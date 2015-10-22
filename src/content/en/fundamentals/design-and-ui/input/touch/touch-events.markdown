@@ -183,7 +183,7 @@ preventing jank.
 Use `requestAnimationFrame` to change the UI in response to
 an event. This gives you an opportunity to update the UI when the browser is intending to draw a frame and will help you move some work out of your callback.
 
-If you are unfamiliar with request animation frames, you can [learn more here]({{ site.baseurl }}/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes).
+If you are unfamiliar with request animation frames, you can [learn more here](/web/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes).
 
 A typical implementation is to save the `x` and `y` coordinates from the
 start and move events and request an animation frame in the move event

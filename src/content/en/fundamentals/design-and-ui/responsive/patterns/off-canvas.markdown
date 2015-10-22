@@ -33,7 +33,7 @@ Sites using this pattern include:
 
  * [HTML5Rocks
   Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
- * [Google Nexus](http://www.google.com/nexus/)
+ * [Google Nexus](https://www.google.com/nexus/)
  * [Facebook's Mobile Site](https://m.facebook.com/)
 
 {% include_code src=_code/off-canvas.html snippet=ocanvas lang=css %}

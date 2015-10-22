@@ -32,7 +32,7 @@ should be removed from view after a short period of time.
 
 Chrome 47 (beta in October 2015) now supports the `requireInteraction` option and unless explicitly 
 provided *and* set to `true`, this will mean that all notifications on *desktop* will be dismissed after
-approximately [20 seconds](http://crbug.com/530697#c9). The interesting part though is that Chrome has 
+approximately [20 seconds](https://crbug.com/530697#c9). The interesting part though is that Chrome has 
 recently just removed the Notification Center from all desktop platforms (but Chrome OS), this means that 
 minimized notifications are considered to be dismissed and are not accessible in a call to `getNotifications` 
 in a Service Worker.
