@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Interact with BLE devices on the Web"
-description: "A Web API has been added to Chrome OS M45 that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
+description: "A Web API has been added to Chrome OS that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
 featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 published_on: 2015-07-22
 updated_on: 2015-09-10
@@ -36,7 +36,7 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the implementation](https://code.google.com/p/chromium/issues/entry?labels=Cr-Blink-Bluetooth).
 
 Web Bluetooth API is at the time of writing partially implemented in Chrome OS
-M45 behind an experimental flag. Go to `chrome://flags/#enable-web-bluetooth`,
+behind an experimental flag. Go to `chrome://flags/#enable-web-bluetooth`,
 enable the highlighted flag, restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices and
@@ -216,7 +216,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
 
 ## Samples & Demos
 
-The samples below have been tested on Chrome OS M45 with the Web Bluetooth flag
+The samples below have been tested on Chrome OS with the Web Bluetooth flag
 enabled. To enjoy these samples to their fullest, I recommend you install the [BLE Peripheral Simulator Android
 App](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
 which simulates a BLE Peripheral with a Battery Service or a Heart Rate
@@ -263,10 +263,10 @@ peek of what to expect in the coming months:
   platform](https://github.com/WebBluetoothCG/web-bluetooth/issues/127) will be
   added to improve user experience.
 
-At the time of writing, Chrome OS M45 is [the most advanced
+At the time of writing, Chrome OS is [the most advanced
 platform](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md)
-as the low level work has been done already. Android and Mac OS are under
-active development.  Windows 8.1+, Linux, and iOS will be supported as much as
+as the low level work has been done already. Android 6+ and Mac OSX are under
+active development. Windows 8.1+, Linux, and iOS will be supported as much as
 feasible by the platforms.
 
 ## Resources
