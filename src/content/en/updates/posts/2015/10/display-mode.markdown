@@ -13,8 +13,8 @@ description: "Detecting if a web app is launched from the home screen"
 ---
 
 During the past year we have focused on enabling users to build app like experiences
-on the web by making it possible for apps to work offline using [Service Worker](/web/fundamentals/primers/service-workers) and
-to get a presence on the homescreen using the [Web App Manifest](web/fundamentals/engage-and-retain/simplified-app-installs).
+on the web by making it possible for apps to work offline using [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) and
+to get a presence on the homescreen using the [Web App Manifest](/web/fundamentals/engage-and-retain/simplified-app-installs).
 
 Now apps tend to offer different experiences as sites, and developers might want to
 offer different experiences depending on whether the site is viewed in the browser
