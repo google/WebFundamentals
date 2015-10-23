@@ -122,13 +122,16 @@ samchen:
 kenchris:
   name:
     given: Kenneth
-    family: Cristiansen
+    family: Christiansen
   org:
     name: Intel
+    unit: OTC, Web Technology Team
   country: Denmark
   role:
     - author
   twitter: kennethrohde
+  email: kenneth.christiansen@gmail.com
+  google: +KennethRohdeChristiansen
   desciption:
     en: "Kenneth is an Engineer at Intel"
 
