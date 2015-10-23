@@ -60,3 +60,10 @@ compelling content.
 * **26%** is the average increase in spend that occurred by members who visited via push
 * **20%** click through rate from push notifications
 * **72%** more time spent on the site per visit from members who visited via push notifications
+
+### More Information
+
+For more information on Push Notifications on the web check out our resources:
+
+* [Getting Started with your first Push Notifications](/web/fundamentals/getting-started/push-notifications/)
+* [Push and Notifications guide](/web/fundamentals/engage-and-retain/push-notifications/)
