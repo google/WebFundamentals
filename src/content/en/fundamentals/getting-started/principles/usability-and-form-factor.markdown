@@ -30,7 +30,7 @@ Retail customers expect sites to let them [view high resolution closeups](/web/f
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/sw-make-images-expandable-good.png">
-    <figcaption class="wf-figcaption-good">Do: provide easy ways for users to continue browsing or shopping on another device.</figcaption>
+    <figcaption class="wf-figcaption-good">Do: Make product images expandable and easy to see detail.</figcaption>
   </figure>
 </div>
 
