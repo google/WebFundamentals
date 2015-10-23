@@ -33,19 +33,19 @@ As the author of a site there are often times when you don't want a tap gesture
 on certain element to trigger a search. To ensure that Chrome does what you 
 intend, make those elements:
 
-1. Focusable: add a tabindex=-1 property on the element.
+1. Focusable: add a `tabindex=-1` property on the element.
 1. Interactive: Use any of several standard ways to indicate that an element is 
    interactive:
     * Use accessibility markup to indicate the element has a 
-      [w](http://www.w3.org/TR/wai-aria/roles#widget_roles)[i](http://www.w3.org/TR/wai-aria/roles#widget_roles)[dget 
-      role](http://www.w3.org/TR/wai-aria/roles#widget_roles), or [widget 
-      attributes](http://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets). 
+      [w](https://www.w3.org/TR/wai-aria/roles#widget_roles)[i](https://www.w3.org/TR/wai-aria/roles#widget_roles)[dget 
+      role](https://www.w3.org/TR/wai-aria/roles#widget_roles), or [widget 
+      attributes](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_widgets). 
        For example, any element with role=button won't trigger.  Adding 
       accessibility markup has the added benefit that your page will be more 
       readable by visually impaired users.
-    * Any JavaScript click handler that calls preventDefault(), or manipulates 
+    * Any JavaScript click handler that calls `preventDefault()`, or manipulates 
       the DOM or CSS will not trigger Touch-to-Search.
-1. Non-selectable: using -webkit-user-select: none;  Non-selectable text will 
+1. Non-selectable: using `-webkit-user-select: none`;  Non-selectable text will 
    not trigger Touch-to-Search even when using the touch-and-hold gesture.
 
 If Touch to Search does not trigger when or where it _should_ trigger, or 
