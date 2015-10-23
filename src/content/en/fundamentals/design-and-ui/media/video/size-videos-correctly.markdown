@@ -29,11 +29,11 @@ related-guides:
   media:
   -
       title: "Use CSS media queries for responsiveness"
-      href: fundamentals/layouts/rwd-fundamentals/use-media-queries.html
+      href: fundamentals/design-and-ui/responsive/fundamentals/use-media-queries
       section:
         id: rwd-fundamentals
         title: "Responsive Web Design Basics"
-        href: layouts/rwd-fundamentals/
+        href: fundamentals/design-and-ui/responsive/
 ---
 
 <p class="intro">
@@ -77,7 +77,7 @@ and plugins such as [FitVids](//fitvidsjs.com/) make it possible to maintain
 appropriate size and aspect ratio, even for Flash videos from YouTube and
 other sources.
 
-Use [CSS media queries](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend.
+Use [CSS media queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend.
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
 

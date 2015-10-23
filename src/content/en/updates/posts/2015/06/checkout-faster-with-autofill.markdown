@@ -56,7 +56,7 @@ kinds of information where it would not be useful to have the browser remember
 what was submitted previously.
 
 The most common _autocomplete_ attributes are shown in the table below and are
-documented in [Web Fundamentals](https://developers.google.com/web/fundamentals/input/?hl=en).
+documented in [Web Fundamentals](/web/fundamentals/design-and-ui/input/).
 
 ### Common Attributes
 

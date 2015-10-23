@@ -12,7 +12,7 @@ translation_priority: 0
 key-takeaways:
   source-maps:
     - "Use Source Maps to map minified code to source code. You can then read and debug compiled code in its original source."
-    - "Only use <a href='/web/tools/setup/workspace/setup-preprocessors?#supported-preprocessors'>preprocessors capable of producing Source Maps</a>."
+    - "Only use <a href='/web/tools/setup/setup-preprocessors?#supported-preprocessors'>preprocessors capable of producing Source Maps</a>."
     - "Verify that your web server can serve Source Maps."
 notes:
   note-tbd:
@@ -29,11 +29,11 @@ notes:
 
 ## Get started with preprocessors
 
-This article explains how to interact with JavaScript Source Maps in the DevTools Sources Panel. For a first overview of what preprocessors are, how they can help and how Source Maps work, head over to [Set Up CSS & JS Preprocessors](/web/tools/setup/workspace/setup-preprocessors?#debugging-and-editing-preprocessed-content).
+This article explains how to interact with JavaScript Source Maps in the DevTools Sources Panel. For a first overview of what preprocessors are, how they can help and how Source Maps work, head over to [Set Up CSS & JS Preprocessors](/web/tools/setup/setup-preprocessors?#debugging-and-editing-preprocessed-content).
 
 ## Use a supported preprocessor
 
-You need to use a minifier that's capable of creating source maps. For the most popular options, [see our preprocessor support section](/web/tools/setup/workspace/setup-preprocessors?#supported-preprocessors). For an extended view, see the [Source maps: languages, tools and other info](https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info) wiki page.
+You need to use a minifier that's capable of creating source maps. For the most popular options, [see our preprocessor support section](/web/tools/setup/setup-preprocessors?#supported-preprocessors). For an extended view, see the [Source maps: languages, tools and other info](https://github.com/ryanseddon/source-map/wiki/Source-maps:-languages,-tools-and-other-info) wiki page.
 
 The following types of preprocessors are commonly used in combination with Source Maps:
 
@@ -55,7 +55,7 @@ Source Maps are enabled by default (as of Chrome 39), but if you'd like to doubl
 
 ### Debugging with Source Maps
 
-When [debugging your code](/web/tools/javascript/breakpoints/step-code) and Source Maps enabled, Source Maps will show in two places:
+When [debugging your code](/web/tools/chrome-devtools/debug/breakpoints/step-code) and Source Maps enabled, Source Maps will show in two places:
 
 1. In the console (the link to source should be the original file, not the generated one)
 2. When stepping through code (the links in the call stack should open the original source file)

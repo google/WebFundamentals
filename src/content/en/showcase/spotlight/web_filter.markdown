@@ -40,9 +40,9 @@ showcase:
 related-guides:
 -
     title: "Add To Home Screen"
-    href: fundamentals/device-access/stickyness/
+    href: fundamentals/engage-and-retain/simplified-app-installs
     section:
       id: stickyness
       title: "Add To Home Screen"
-      href: fundamentals/device-access/stickyness/
+      href: fundamentals/engage-and-retain/simplified-app-installs
 ---

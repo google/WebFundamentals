@@ -21,7 +21,7 @@ notes:
   Preview styles for targeted screen sizes using Device Mode's Media Query Inspector.
 </p>
 
-[Media queries](/web/fundamentals/layouts/rwd-fundamentals/use-media-queries)
+[Media queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
 are an essential part of responsive web design.
 They let you apply styles to your site based on device characteristics.
 For example,

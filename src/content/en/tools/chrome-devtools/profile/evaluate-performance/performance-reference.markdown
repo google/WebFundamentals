@@ -23,8 +23,8 @@ Certain details are present in events of all types, while some only apply to cer
 
 | Property   |      When is it shown                                                       |
 |----------|:-----------------------------------------------------------------|
-| Aggregated time | For events with [nested events](/web/tools/profile-performance/evaluate-performance/timeline-tool#view-nested-events), the time taken by each category of events.|
-| Call Stack | For events with [child events](/web/tools/profile-performance/evaluate-performance/timeline-tool#view-nested-events), the time taken by each category of events.|
+| Aggregated time | For events with [nested events](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#view-nested-events), the time taken by each category of events.|
+| Call Stack | For events with [child events](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#view-nested-events), the time taken by each category of events.|
 | CPU time | How much CPU time the recorded event took.|
 | Details | Other details about the event.|
 | Duration (at time-stamp) | How long it took the event with all of its children to complete; timestamp is the time at which the event occurred, relative to when the recording started.|
@@ -63,15 +63,15 @@ This section lists events that belong to the Scripting category and their proper
 |Animation Frame Fired| A scheduled animation frame fired, and its callback handler invoked.|
 |Cancel Animation Frame|  A scheduled animation frame was canceled.|
 |GC Event|  Garbage collection occurred.|
-|DOMContentLoaded|  The [DOMContentLoaded](http://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) was fired by the browser. This event is fired when all of the page’s DOM content has been loaded and parsed.|
+|DOMContentLoaded|  The [DOMContentLoaded](https://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) was fired by the browser. This event is fired when all of the page’s DOM content has been loaded and parsed.|
 |Evaluate Script| A script was evaluated.|
 |Event| A JavaScript event ("mousedown", or "key", for example).|
 |Function Call| A top-level JavaScript function call was made (only appears when browser enters JavaScript engine).|
 |Install Timer| A timer was created with [setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setInterval) or [setTimeout()](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout).|
 |Request Animation Frame| A `requestAnimationFrame()` call scheduled a new frame|
 |Remove Timer|  A previously created timer was cleared.|
-|Time|  A script called [console.time()](/web/tools/javascript/console/console-reference#consoletimelabel)|
-|Time End|  A script called [console.timeEnd()](/web/tools/javascript/console/console-reference#consoletimeendlabel)|
+|Time|  A script called [console.time()](/web/tools/chrome-devtools/debug/console/console-reference#consoletimelabel)|
+|Time End|  A script called [console.timeEnd()](/web/tools/chrome-devtools/debug/console/console-reference#consoletimeendlabel)|
 |Timer Fired| A timer fired that was scheduled with `setInterval()` or `setTimeout()`.|
 |XHR Ready State Change|  The ready state of an XMLHTTPRequest changed.|
 |XHR Load|  An `XMLHTTPRequest` finished loading.|

@@ -212,8 +212,8 @@ the more data being transmitted for the request:
 ![Color-coded bars](imgs/color-coded-bars.png)
 
 The waterfall highlights
-[`DOMContentLoaded`](http://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) events with a blue vertical line;
-[`load`](http://docs.webplatform.org/wiki/dom/events/load) events
+[`DOMContentLoaded`](https://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) events with a blue vertical line;
+[`load`](https://docs.webplatform.org/wiki/dom/events/load) events
 with a red vertical line.
 When the engine has completed parsing of the main document,
 the `DOMContentLoaded` event fires.
@@ -523,7 +523,7 @@ Below is an example cURL command line string taken from a XHR request on the Goo
 
 ### Save network data
 
-Save the data from a network recording as a HAR ([HTTP Archive](http://www.softwareishard.com/blog/har-12-spec/)) file, or copy the records as a HAR data structure to your clipboard. A HAR file contains a JSON data structure that describes the network "waterfall". Several [third-party](http://ericduran.github.io/chromeHAR/) [tools](https://code.google.com/p/harviewer/) can reconstruct the network waterfall from the data in the HAR file.
+Save the data from a network recording as a HAR ([HTTP Archive](http://www.softwareishard.com/blog/har-12-spec/)) file, or copy the records as a HAR data structure to your clipboard. A HAR file contains a JSON data structure that describes the network "waterfall". Several [third-party](https://ericduran.github.io/chromeHAR/) [tools](https://code.google.com/p/harviewer/) can reconstruct the network waterfall from the data in the HAR file.
 
 **To save a recording:**
 
@@ -532,7 +532,7 @@ Save the data from a network recording as a HAR ([HTTP Archive](http://www.softw
     * **Copy All as HAR** — Copies the network recording to the system clipboard in the HAR format.
     * **Save as HAR with Content** — Saves all network data to a HAR file along with each page resource. Binary resources, including images, are encoded as Base64-encoded text.
 
-For more information, [Web Performance Power Tool: HTTP Archive (HAR)](http://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/).
+For more information, [Web Performance Power Tool: HTTP Archive (HAR)](https://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/).
 
 ## Customize the Network panel
 
@@ -593,7 +593,7 @@ To learn more optimizing the network performance of your application, see the fo
 
 * Use [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights) to identify performance best practices that can be applied to your site, and [PageSpeed optimization tools](https://developers.google.com/speed/pagespeed/optimization) to automate the process of applying those best practices.
 * [High Performance Networking in Google
-  Chrome](http://www.igvita.com/posa/high-performance-networking-in-google-chrome/) discusses Chrome network internals and how you can take advantage of them to make your site faster.
+  Chrome](https://www.igvita.com/posa/high-performance-networking-in-google-chrome/) discusses Chrome network internals and how you can take advantage of them to make your site faster.
 * [How gzip compression works](https://developers.google.com/speed/articles/gzip) provides a high level overview gzip compression and why it's a good idea.
 * [Web Performance Best Practices](https://developers.google.com/speed/docs/best-practices/rules_intro) provides additional tips for optimizing the network performance of your web page or application.
 

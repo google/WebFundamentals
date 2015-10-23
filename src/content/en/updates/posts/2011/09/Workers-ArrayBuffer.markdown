@@ -10,7 +10,7 @@ tags:
   - binary
   - workers
 ---
-As of <strike>[crbug.com/73313](http://crbug.com/73313)</strike>, Chrome 13 and FF5 support sending an `ArrayBuffer` (or Typed Array) to/from a Web Worker. For example:
+As of <strike>[crbug.com/73313](https://crbug.com/73313)</strike>, Chrome 13 and FF5 support sending an `ArrayBuffer` (or Typed Array) to/from a Web Worker. For example:
 
 *worker.js*
 

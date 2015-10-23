@@ -62,7 +62,7 @@ on your server. I personally enjoy [GitHub Pages](https://pages.github.com) for
 demo purposes.
 To add HTTPS to your server you'll need to get a TLS certificate and set
 it up. Be sure to check out [Security with HTTPS
-article](https://developers.google.com/web/fundamentals/discovery-and-distribution/security-with-https)
+article](/web/fundamentals/security/)
 for best practices there.
 
 ### User Gesture Required
@@ -274,7 +274,7 @@ feasible by the platforms.
 - Web Bluetooth Spec: [https://webbluetoothcg.github.io/web-bluetooth](https://webbluetoothcg.github.io/web-bluetooth)
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5264933985976320](https://www.chromestatus.com/feature/5264933985976320)
 - Spec Issues: [https://github.com/WebBluetoothCG/web-bluetooth/issues](https://github.com/WebBluetoothCG/web-bluetooth/issues)
-- Implementation Bugs: [http://crbug.com/?q=type=Bug%20label:Cr-Blink-Bluetooth](http://crbug.com/?q=type=Bug%20label:Cr-Blink-Bluetooth)
+- Implementation Bugs: [https://crbug.com/?q=type=Bug%20label:Cr-Blink-Bluetooth](http://crbug.com/?q=type=Bug%20label:Cr-Blink-Bluetooth)
 - BLE Peripheral Simulator App: [https://github.com/WebBluetoothCG/ble-test-peripheral-android](https://github.com/WebBluetoothCG/ble-test-peripheral-android)
 - Google+ Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 

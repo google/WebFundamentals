@@ -62,7 +62,7 @@ Clearly, using fonts on the web requires some careful engineering to ensure that
 
 ### Webfont formats
 
-Today there are four font container formats in use on the web: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format), and [WOFF2](http://www.w3.org/TR/WOFF2/). Unfortunately, despite the wide range of choices, there isn't a single universal format that works across all old and new browsers: EOT is [IE only](http://caniuse.com/#feat=eot), TTF has [partial IE support](http://caniuse.com/#search=ttf), WOFF enjoys widest support but is [not available in some older browsers](http://caniuse.com/#feat=woff), and WOFF 2.0 support is a [work in progress for many browsers](http://caniuse.com/#feat=woff2).
+Today there are four font container formats in use on the web: [EOT](https://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](https://en.wikipedia.org/wiki/TrueType), [WOFF](https://en.wikipedia.org/wiki/Web_Open_Font_Format), and [WOFF2](https://www.w3.org/TR/WOFF2/). Unfortunately, despite the wide range of choices, there isn't a single universal format that works across all old and new browsers: EOT is [IE only](http://caniuse.com/#feat=eot), TTF has [partial IE support](http://caniuse.com/#search=ttf), WOFF enjoys widest support but is [not available in some older browsers](http://caniuse.com/#feat=woff), and WOFF 2.0 support is a [work in progress for many browsers](http://caniuse.com/#feat=woff2).
 
 So, where does that leave us? There isn't a single format that works in all browsers, which means that we need to deliver multiple formats to provide a consistent experience:
 
@@ -82,7 +82,7 @@ A font is a collection of glyphs, each of which is a set of paths describing the
 * WOFF has built-in compression - ensure that your WOFF compressor is using optimal compression settings. 
 * WOFF2 uses custom preprocessing and compression algorithms to deliver ~30% filesize reduction over other formats - see [report](http://www.w3.org/TR/WOFF20ER/).
 
-Finally, it is worth noting that some font formats contain additional metadata, such as [font hinting](http://en.wikipedia.org/wiki/Font_hinting) and [kerning](http://en.wikipedia.org/wiki/Kerning) information that may not be necessary on some platforms, which allows for further filesize optimization. Consult your font compressor for available optimization options, and if you take this route, ensure that you have the appropriate infrastructure to test and deliver these optimized fonts to each particular browser - e.g. Google Fonts maintains 30+ optimized variants for each font and automatically detects and delivers the optimal variant for each platform and browser.
+Finally, it is worth noting that some font formats contain additional metadata, such as [font hinting](https://en.wikipedia.org/wiki/Font_hinting) and [kerning](https://en.wikipedia.org/wiki/Kerning) information that may not be necessary on some platforms, which allows for further filesize optimization. Consult your font compressor for available optimization options, and if you take this route, ensure that you have the appropriate infrastructure to test and deliver these optimized fonts to each particular browser - e.g. Google Fonts maintains 30+ optimized variants for each font and automatically detects and delivers the optimal variant for each platform and browser.
 
 {% include shared/remember.liquid title="Note" list=page.notes.zopfli %}
 
@@ -279,7 +279,7 @@ Given these declarations the browser figures out the required subsets and varian
 
 ### Webfonts and the Critical Rendering Path
 
-Lazy loading of fonts carries an important hidden implication that may delay text rendering: the browser must [construct the render tree](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), which is dependent on the DOM and CSSOM trees, before it will know which font resources it will need to render the text. As a result, font requests are delayed well after other critical resources, and the browser may be blocked from rendering text until the resource is fetched.
+Lazy loading of fonts carries an important hidden implication that may delay text rendering: the browser must [construct the render tree](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), which is dependent on the DOM and CSSOM trees, before it will know which font resources it will need to render the text. As a result, font requests are delayed well after other critical resources, and the browser may be blocked from rendering text until the resource is fetched.
 
 <img src="images/font-crp.png" class="center" alt="Font critical rendering path">
 

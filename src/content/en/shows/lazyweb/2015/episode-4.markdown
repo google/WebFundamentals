@@ -64,5 +64,5 @@ Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.
 
 HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/)
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+Subscribe to the Google Developers channel at: [https://goo.gl/mQyv5L](https://goo.gl/mQyv5L)
 

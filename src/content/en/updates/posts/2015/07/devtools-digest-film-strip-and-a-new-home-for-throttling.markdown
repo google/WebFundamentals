@@ -44,7 +44,7 @@ tab.
 In the **Network panel**, click on the little camera icon to enable the 
 capturing of frames, then reload the page to trigger the capture. Other than 
 screenshots captured with other tools like 
-[WebPageTest](http://webpagetest.org), we currently only show frames that 
+[WebPageTest](https://webpagetest.org), we currently only show frames that 
 actually came from a paint.
 
 While double-clicking on one of the frames shows a zoomed view (then use 
@@ -64,7 +64,7 @@ needing to double-click to show a preview, zoomed in frames appear on hover.
 
 As the two are a little out of sync in terms of functionality and UX, we'd like 
 to encourage you to try out the feature(s) and provide any feedback you have 
-through tickets on [crbug.com/new](http://crbug.com/new) or via tweet to 
+through tickets on [crbug.com/new](https://crbug.com/new) or via tweet to 
 [@ChromeDevTools](https://twitter.com/ChromeDevTools).
 
 ### Network Throttling in the Network panel
@@ -100,10 +100,10 @@ icon** when network throttling is enabled.
 
 ### Down and dirty with Chrome DevTools
 
-[![Network throttling in action](/web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/down_and_dirty.png)](http://blittle.github.io/chrome-dev-tools/)
+[![Network throttling in action](/web/updates/images/2015-07-23-devtools-bi-weekly-film-strip-and-a-new-home-for-throttling/down_and_dirty.png)](https://blittle.github.io/chrome-dev-tools/)
 
 [Bret Little](https://twitter.com/little_bret) released this [nice little 
-walkthrough course](http://blittle.github.io/chrome-dev-tools/) that acquaints you with basic DevTools functionality but also 
+walkthrough course](https://blittle.github.io/chrome-dev-tools/) that acquaints you with basic DevTools functionality but also 
 offers a lot of in-depth tips and tricks. Definitely useful info in there, and 
 more DevTools docs never hurt!
 

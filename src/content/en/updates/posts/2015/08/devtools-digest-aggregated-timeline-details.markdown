@@ -50,7 +50,7 @@ previous icon, each docking position features it's own icon.
 
 In addition to docking, we've added quick access file search, shortcuts and help 
 (which leads to [our new 
-homepage](https://developers.google.com/web/tools/chrome-devtools/)).
+homepage](/web/tools/chrome-devtools/)).
 
 ## Discover DevTools through improved tooltips
 
@@ -119,7 +119,7 @@ could extend the color story further.
 
 As always, [let us know what you think via 
 Twitter](https://twitter.com/intent/tweet?text=%40ChromeDevTools) or the 
-comments below, and submit bugs to [crbug.com/new](http://crbug.com/new).
+comments below, and submit bugs to [crbug.com/new](https://crbug.com/new).
 
 Until next month!  
 Paul Bakaus & the DevTools team

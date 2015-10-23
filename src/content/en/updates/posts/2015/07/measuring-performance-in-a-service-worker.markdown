@@ -22,7 +22,7 @@ an overview.
 If you are going to Supercharge your Page load time as Jake suggests, you really 
 need to be able to understand how service workers affect your page's requests.
 
-The [Resource Timing](http://w3c.github.io/resource-timing/) and the [User Timing](http://w3c.github.io/user-timing/) API
+The [Resource Timing](https://w3c.github.io/resource-timing/) and the [User Timing](https://w3c.github.io/user-timing/) API
 are critcial components in many sites RUM (Real User Monitoring)
 infrastructure because it lets you understand holistically how all of your users see
 the performance of your site ([Another use-case is detecting content injection](https://paul.kinlan.me/detecting-injected-content/)).  In short, it lets you 
@@ -146,11 +146,11 @@ majority of your performance logic in your web app.
 
 ## Can I see what changed?
 
-* [crbug.com/465640](http://crbug.com/465640)  
-* [crbug.com/465641](http://crbug.com/465641)  
-* [crbug.com/465643](http://crbug.com/465643)
+* [crbug.com/465640](https://crbug.com/465640)  
+* [crbug.com/465641](https://crbug.com/465641)  
+* [crbug.com/465643](https://crbug.com/465643)
 
 ## I am interested in the discussion and specs:
 
 * [https://groups.google.com/a/chromium.org/forum/\#!topic/blink-dev/htsW078UcFA](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/htsW078UcFA)   
-* [http://w3c.github.io/resource-timing/](http://w3c.github.io/resource-timing/) 
+* [https://w3c.github.io/resource-timing/](https://w3c.github.io/resource-timing/) 

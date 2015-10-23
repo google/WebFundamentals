@@ -33,7 +33,7 @@ and we recommend providing a 192&times;192px PNG file. For example:
 `<link rel="icon" sizes="192x192" href="nice-highres.png">`
 
 Check out the theme-color here on HTML5Rocks as well as on the [Web
-Fundamentals](https://developers.google.com/web/fundamentals/) site, and be sure
+Fundamentals](/web/fundamentals/) site, and be sure
 to check out the
-[Add to home screen docs](https://developer.chrome.com/multidevice/android/installtohomescreen)
+[Add to home screen docs](/web/fundamentals/design-and-ui/browser-customization/)
 for more ways to make your site stand out.
