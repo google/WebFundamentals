@@ -15,7 +15,7 @@ updated_on: 2015-06-29
 [https://github.com/Polymer/polycasts/tree/master/ep19-go-offline]
 
 ## Polymer Starter Kit
-[https://developers.google.com/web/tools/polymer-starter-kit/index?hl=en]
+[/web/tools/polymer-starter-kit/]
 
 ## The Offline Cookbook
 [http://jakearchibald.com/2014/offline-cookbook/]

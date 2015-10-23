@@ -63,8 +63,7 @@ By making it responsive:
 * No need to redirect users depending on user agent so it is faster
 * Maintenance cost is lower for both website and crawlers
   
-Learn how to build your website with responsive web design at [Multi-Device
-Layouts](https://developers.google.com/web/fundamentals/layouts/) section.
+Learn how to build your website with responsive web design at [Responsive Layouts](/web/fundamentals/design-and-ui/responsive/) section.
 
 ## Use `link[rel=canonical]` and `link[rel=alternate]` when serving from separate URLs
 Serving similar contents on a desktop version and a mobile version at different

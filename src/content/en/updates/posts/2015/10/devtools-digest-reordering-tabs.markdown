@@ -47,7 +47,7 @@ But with the new “Framework Listeners” option in the Event Listener tab, Dev
 
 As always, [let us know what you think via 
 Twitter](https://twitter.com/intent/tweet?text=%40ChromeDevTools) or the 
-comments below, and submit bugs to [crbug.com/new](http://crbug.com/new).
+comments below, and submit bugs to [crbug.com/new](https://crbug.com/new).
 
 Until next month!  
 Paul Bakaus & the DevTools team

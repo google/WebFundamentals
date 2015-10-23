@@ -19,7 +19,7 @@ authors:
 
 {% include shared/toc.liquid %}
 
-The goal of optimizing the critical rendering path is to allow the browser to paint the page as quickly as possible: faster pages translate to higher engagement, number of pages viewed, and [improved conversion](http://www.google.com/think/multiscreen/success.html). As a result, we want to minimize the amount of time the visitor has to spend staring at a blank screen by optimizing which resources are loaded and in which order.
+The goal of optimizing the critical rendering path is to allow the browser to paint the page as quickly as possible: faster pages translate to higher engagement, number of pages viewed, and [improved conversion](https://www.google.com/think/multiscreen/success.html). As a result, we want to minimize the amount of time the visitor has to spend staring at a blank screen by optimizing which resources are loaded and in which order.
 
 To help illustrate this process, let's start with the simplest possible case and incrementally build up our page to include additional resources, styles, and application logic - in the process, we'll also see where things can go wrong, and how to optimize each of these cases.
 

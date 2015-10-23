@@ -27,7 +27,7 @@ You can install [EME Logger extension](https://chrome.google.com/webstore/detail
 
 <img src="/web/updates/images/2015-09-17-eme-logger/screenshot_console.png" alt="Screenshot of the Chrome DevTools console showing logging from the EME Logger extension">
 
-The code for EME Logger is available at [github.com/google/eme_logger](http://github.com/google/eme_logger). Patches, bug reports and feature requests welcome.
+The code for EME Logger is available at [github.com/google/eme_logger](https://github.com/google/eme_logger). Patches, bug reports and feature requests welcome.
 
 More information about EME is available from the HTML5 Rocks article [EME WTF](http://www.html5rocks.com/en/tutorials/eme/basics/)?
 

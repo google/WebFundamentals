@@ -27,7 +27,7 @@ authors:
 
 {% include shared/takeaway.liquid list=page.key-takeaways.code %}
 
-Most basic animations can be created with either CSS or JavaScript, but the amount of effort and time will differ (see also [CSS vs JavaScript Performance]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#css-vs-javascript-performance)). Each has their pros and cons, but these are good rules-of-thumb:
+Most basic animations can be created with either CSS or JavaScript, but the amount of effort and time will differ (see also [CSS vs JavaScript Performance](/web/fundamentals/design-and-ui/animations/animations-and-performance.html#css-vs-javascript-performance)). Each has their pros and cons, but these are good rules-of-thumb:
 
 * **Use CSS when you have smaller, self-contained states for UI elements.** CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip. You may end up using JavaScript to control the states, but the animations themselves will be in your CSS.
 * **Use JavaScript when you need significant control over your animations.** The Web Animations API is the standards-based approach, available today in Chrome and Opera. This provides real objects, ideal for complex object-oriented applications. JavaScript is also useful when you need to stop, pause, slow-down or reverse.
@@ -35,7 +35,7 @@ Most basic animations can be created with either CSS or JavaScript, but the amou
 
 {% ytvideo WaNoqBAp8NI %}
 
-Alternatively, if you're already using a JavaScript framework that includes animation functionality, such as via jQuery's [`.animate()`](http://api.jquery.com/animate/) method or [GreenSock's TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), then you may find it more convenient overall to stick with that for your animations.
+Alternatively, if you're already using a JavaScript framework that includes animation functionality, such as via jQuery's [`.animate()`](https://api.jquery.com/animate/) method or [GreenSock's TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), then you may find it more convenient overall to stick with that for your animations.
 
 ### Animate with CSS
 
@@ -140,7 +140,7 @@ CSS Animations are still somewhat vendor prefixed, with `-webkit-` being used in
 
 ### Animate with JavaScript and the Web Animations API
 
-Creating animations with JavaScript is, by comparison, more complex than writing CSS transitions or animations, but it does typically provide significantly more power to you as the developer. You can use the [Web Animations API](http://w3c.github.io/web-animations/) to either animate specific CSS properties, or build composable effect objects.
+Creating animations with JavaScript is, by comparison, more complex than writing CSS transitions or animations, but it does typically provide significantly more power to you as the developer. You can use the [Web Animations API](https://w3c.github.io/web-animations/) to either animate specific CSS properties, or build composable effect objects.
 
 JavaScript animations are *imperative*, as you write them inline as part of your code. You can also encapsulate them inside other objects. Below is the JavaScript that you would need to write to recreate the CSS transition we discussed earlier.
 

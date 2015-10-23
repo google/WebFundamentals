@@ -24,7 +24,7 @@ notes:
 
 The Chrome DevTools heap profiler shows memory distribution
 by your page's JavaScript objects and related DOM nodes
-(see also [Objects retaining tree](/web/tools/profile-performance/memory-problems/memory-101#objects-retaining-tree)).
+(see also [Objects retaining tree](/web/tools/chrome-devtools/profile/memory-problems/memory-101#objects-retaining-tree)).
 Use it to take JS heap snapshots, analyze memory graphs,
 compare snapshots, and find memory leaks.
 
@@ -41,7 +41,7 @@ They are transferred to the DevTools on demand, when you click on the snapshot i
 
 After the snapshot has been loaded into DevTools and has been parsed,
 the number below the snapshot title appears and shows the total size of the
-[reachable JavaScript objects](/web/tools/profile-performance/memory-problems/memory-101#object-sizes):
+[reachable JavaScript objects](/web/tools/chrome-devtools/profile/memory-problems/memory-101#object-sizes):
 
 ![Total size of reachable objects](imgs/total-size.png)
 
@@ -62,14 +62,14 @@ Closing the DevTools window will not delete profiles from the renderers memory. 
 View snapshots from different perspectives for different tasks.
 
 **Summary view** shows objects grouped by the constructor name. Use it to hunt down objects (and their memory use) based on type grouped by constructor name. It's particularly helpful for
-[tracking down DOM leaks](/web/tools/profile-performance/memory-problems/memory-diagnosis#narrow-down-causes-of-memory-leaks).
+[tracking down DOM leaks](/web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis#narrow-down-causes-of-memory-leaks).
 
 **Comparison view** displays difference between two snapshots. Use it to compare two (or more) memory snapshots of before and after an operation. Inspecting the delta in freed memory and reference count lets you confirm the presence and cause of a memory leak.
 
 **Containment view** allows exploration of heap contents. It provides a better view of object structure, helping analyze objects referenced in the global namespace (window) to find out what is keeping them around. Use it to analyse closures and dive into your objects at a low level.
 
 **Dominators view** shows the
-[dominators tree](/web/tools/profile-performance/memory-problems/memory-101#dominators)
+[dominators tree](/web/tools/chrome-devtools/profile/memory-problems/memory-101#dominators)
 and can be useful to find accumulation points.
 This view helps confirm that no unexpected references to objects are still hanging around and that deletion/garbage collection is actually working.
 
@@ -89,8 +89,8 @@ Top-level entries are "total" lines. They display:
 
 * **Constructor** represents all objects created using this constructor.
 * **Number of object instances** is displayed in the # column.
-* **Shallow size** column displays the sum of shallow sizes of all objects created by a certain constructor function. The shallow size is the size of memory held by an object itself (generally, arrays and strings have larger shallow sizes). See also [Object sizes](/web/tools/profile-performance/memory-problems/memory-101#object-sizes).
-* **Retained size** column displays the maximum retained size among the same set of objects. The size of memory that can be freed once an object is deleted (and this its dependents made no longer reachable) is called the retained size. See also [Object sizes](/web/tools/profile-performance/memory-problems/memory-101#object-sizes).
+* **Shallow size** column displays the sum of shallow sizes of all objects created by a certain constructor function. The shallow size is the size of memory held by an object itself (generally, arrays and strings have larger shallow sizes). See also [Object sizes](/web/tools/chrome-devtools/profile/memory-problems/memory-101#object-sizes).
+* **Retained size** column displays the maximum retained size among the same set of objects. The size of memory that can be freed once an object is deleted (and this its dependents made no longer reachable) is called the retained size. See also [Object sizes](/web/tools/chrome-devtools/profile/memory-problems/memory-101#object-sizes).
 * **Distance** displays the distance to the root using the shortest simple path of nodes.
 
 After expanding a total line in the upper view, all of its instances are displayed. For each instance, its shallow and retained sizes are displayed in the corresponding columns. The number after the @ character is the objects’ unique ID, allowing you to compare heap snapshots on per-object basis.
@@ -186,7 +186,7 @@ function createLargeClosure() {
 
 ### Dominators view
 
-The [Dominators](/web/tools/profile-performance/memory-problems/memory-101#dominators) view shows the dominators tree for the heap graph.
+The [Dominators](/web/tools/chrome-devtools/profile/memory-problems/memory-101#dominators) view shows the dominators tree for the heap graph.
 It looks similar to the Containment view, but lacks property names.
 This is because a dominator of an object may lack direct references to it;
 the dominators tree is not a spanning tree of the graph.

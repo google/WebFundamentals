@@ -24,7 +24,7 @@ key-takeaways:
 
 *Why is this variable value 20 instead of 30? Why doesn't that line of code seem to have any effect? Why is this flag true when it should be false?* Every developer faces these questions, and steps through code to find out.
 
-After [setting breakpoints](/web/tools/javascript/breakpoints/add-breakpoints), return to the page and use it normally until a breakpoint is reached. This pauses all JavaScript on the page, focus shifts to the DevTools Sources panel, and the breakpoint is highlighted. You can now selectively execute code and examine its data, step by step.
+After [setting breakpoints](/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints), return to the page and use it normally until a breakpoint is reached. This pauses all JavaScript on the page, focus shifts to the DevTools Sources panel, and the breakpoint is highlighted. You can now selectively execute code and examine its data, step by step.
 
 {% include shared/toc.liquid %}
 

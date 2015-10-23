@@ -61,7 +61,7 @@ showcase:
 ## Development
 
 When Paul set out to built the site, a key priority was to embrace 
-[Progressive Enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement). 
+[Progressive Enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement). 
 Instead of designing for desktop, he built it for for small screens first, 
 then build up to larger screens – progressively enhancing, instead of 
 gracefully degrading. That required a bunch of media queries, but but also a 
@@ -85,7 +85,7 @@ used PE to add it on.
 
 A major challenge of the site was the card expand and collapse feature, which 
 required thinking up a whole new way to do the animations work. Paul came up 
-with a strategy he calls [FLIP](http://aerotwist.com/blog/flip-your-animations), 
+with a strategy he calls [FLIP](https://aerotwist.com/blog/flip-your-animations), 
 which involves **setting animating elements to their final state**. From there, 
 you apply compositor-friendly properties like transforms and opacity to invert 
 the changes and return the element to its start position. Finally, with that 
@@ -98,7 +98,7 @@ performance boost.
 
 Knowing Paul Lewis as the performance guru he is, I wasn't surprised to 
 find out that powerformance was a super important consideration when building 
-the site. He heavily relied on [WebPageTest](http://webpagetest.org) to get 
+the site. He heavily relied on [WebPageTest](https://webpagetest.org) to get 
 the *Speed Index* value as low as he could. Without the YouTube embed, Paul 
 managed to get it to **less than 1,000 on a cable connection**, which meant 
 that most of the users would get an initial render in **under a second**.
@@ -119,10 +119,10 @@ up for it. In fact, he's now taking it to every site he builds!
 
 Performance, of course, isn’t just how well a site loads, but also how well it 
 runs. Paul knew the animations were going to be a challenge, which is why he 
-came up with [FLIP](http://aerotwist.com/blog/flip-your-animations). Besides 
+came up with [FLIP](https://aerotwist.com/blog/flip-your-animations). Besides 
 that, he went out of his way to ensure that nothing got in the way of touch 
 input or scrolling. Despite the fact that the site isn’t a hugely complex one, 
-he adopted a modified [RAIL methodology](https://developers.google.com/web/fundamentals/performance/rendering/use-the-rail-performance-model?hl=en) 
+he adopted a modified [RAIL methodology](/web/tools/chrome-devtools/profile/evaluate-performance/rail) 
 for the build (he didn’t really need much Idle time), and it helped a bunch!
 
 ## Design
@@ -142,7 +142,7 @@ invariably information architecture and priority will need updating.
   <figcaption></figcaption>
 </figure>
 
-Not all of it went smoothly. The [Material Design guidelines](http://www.google.com/design/spec/material-design/introduction.html)
+Not all of it went smoothly. The [Material Design guidelines](https://www.google.com/design/spec/material-design/introduction.html)
 at the time weren’t clear about how to make a content site, so there were areas 
 where he fell short. The design also failed to account for the schedule and 
 session information being related, and in the end, the UX meant that people 

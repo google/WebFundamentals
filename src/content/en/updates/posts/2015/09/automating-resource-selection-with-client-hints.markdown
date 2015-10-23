@@ -17,12 +17,12 @@ Building for the web gives you unparalleled reach. Your web application is a
 click away and available on most every connected device&mdash;smartphone, tablet, 
 laptop and desktop, TV, and more&mdash;regardless of the brand or the platform. To 
 deliver the best experience you've built a 
-[responsive site](https://developers.google.com/web/fundamentals/layouts/index?hl=en) that 
+[responsive site](/web/fundamentals/design-and-ui/responsive) that 
 adapts the presentation and functionality for each form-factor, and now you're 
 running down your performance checklist to ensure that the application loads as 
 quickly as possible: you've optimized your 
-[critical rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en), 
-you've [compressed and cached](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/?hl=en) 
+[critical rendering path](/web/fundamentals/performance/critical-rendering-path/), 
+you've [compressed and cached](/web/fundamentals/performance/optimizing-content-efficiency/) 
 your text resources, and now you're looking at your image resources, which often 
 account for majority of transferred bytes. Problem is, **image optimization 
 is hard**:
@@ -35,7 +35,7 @@ is hard**:
 * ...
 * Account for user's network type, speed, and preferences
 
-Individually, these are [well-understood problems](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=en). 
+Individually, these are [well-understood problems](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization). 
 Collectively, they create a large optimization space that we (the developers) 
 often overlook or neglect&mdash;_"ain't nobody got time fo that"_. Humans do a poor 
 job of exploring the same search space repetitively, especially when many steps 

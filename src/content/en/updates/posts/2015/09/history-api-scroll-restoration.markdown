@@ -31,6 +31,6 @@ if ('scrollRestoration' in history) {
 }
 {%endhighlight%}
 
-You will find `history.scrollRestoration` in Chrome 46 onwards, and you can [find its spec here](http://majido.github.io/scroll-restoration-proposal/history-based-api.html#web-idl).
+You will find `history.scrollRestoration` in Chrome 46 onwards, and you can [find its spec here](https://majido.github.io/scroll-restoration-proposal/history-based-api.html#web-idl).
 
 Don't forget to leave us feedback, and let other vendors know if you want them to support `scrollRestoration`, too.

@@ -13,7 +13,7 @@ We all know the problems that developers have had in the past building for WebVi
 
 The WebView supports full [remote debugging](https://developers.google.com/chrome-developer-tools/docs/remote-debugging#debugging-webviews) with the same tools you use for Chrome. You can also take your trusted web development workflow with Grunt and integrate that into your native stack tooling via Gradle.  Further merging worlds, there's a clever trick to use the Chrome DevTools to test your native code from Javascript.
 
-[Slides: Build Mobile Apps using the Chrome WebView](http://gauntface.co.uk/presentations/chrome-dev-summit-2013/chrome-webview/)
+[Slides: Build Mobile Apps using the Chrome WebView](https://gauntface.com/presentations/chrome-dev-summit-2013/chrome-webview/)
 
 ## Effective WebView development takeaways
 

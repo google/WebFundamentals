@@ -22,7 +22,7 @@ showcase:
   developer: Jake Archibald
   our_views:
     good: |
-      Built by our own [Jake Archibald](http://jakearchibald.com/), SVGOMG is an almost perfect example of a fully responsive and capable tool written with web technologies. It features a beautiful Material Design look, ServiceWorker ensures that the app loads quickly and is available offline, and the transitions are smooth on mobile.
+      Built by our own [Jake Archibald](https://jakearchibald.com/), SVGOMG is an almost perfect example of a fully responsive and capable tool written with web technologies. It features a beautiful Material Design look, ServiceWorker ensures that the app loads quickly and is available offline, and the transitions are smooth on mobile.
     bad: |
       The only real nitpick we'd have to offer is that the initial UX is confusing due to the main UI missing. Other than that, job well done!
   interview:
@@ -47,16 +47,16 @@ showcase:
 related-guides:
 -
     title: "Web App Manifest"
-    href: fundamentals/device-access/stickyness/web-app-manifest.html
+    href: fundamentals/engage-and-retain/simplified-app-installs/
     section:
       id: stickyness
-      title: "Add To Home Screen"
-      href: fundamentals/device-access/stickyness/
+      title: "App Install Banners"
+      href: fundamentals/engage-and-retain/simplified-app-installs/
 -
     title: "Animations"
-    href: fundamentals/look-and-feel/animations/
+    href: fundamentals/design-and-ui/animations/
     section:
       id: animations
       title: "Look and feel"
-      href: fundamentals/look-and-feel/
+      href: fundamentals/design-and-ui/
 ---

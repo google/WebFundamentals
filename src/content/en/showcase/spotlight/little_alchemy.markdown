@@ -22,7 +22,7 @@ showcase:
   developer: Jakub Koziol
   our_views:
     good: |
-      Little Alchemy is a prime example of using all of the web platform's latest abilities to its full advantage. It uses the [web app manifest](/web/fundamentals/device-access/stickyness/web-app-manifest.html) to launch fullscreen when installed and blends in with Android with the help of [theme-color](/web/fundamentals/device-access/stickyness/additional-customizations.html).
+      Little Alchemy is a prime example of using all of the web platform's latest abilities to its full advantage. It uses the [web app manifest](/web/fundamentals/engage-and-retain/simplified-app-installs) to launch fullscreen when installed and blends in with Android with the help of [theme-color](/web/fundamentals/design-and-ui/browser-customization/theme-color).
 
       The first time load is extremely responsive and shows the preloader right away. In addition, it can be played entirely offline through its use of AppCache. Well done.
     bad: |
@@ -49,16 +49,16 @@ showcase:
 related-guides:
 -
     title: "Web App Manifest"
-    href: fundamentals/device-access/stickyness/web-app-manifest.html
+    href: fundamentals/engage-and-retain/simplified-app-installs
     section:
       id: stickyness
       title: "Add To Home Screen"
-      href: fundamentals/device-access/stickyness/
+      href: fundamentals/engage-and-retain/simplified-app-installs
 -
     title: "Theme Color"
-    href: fundamentals/device-access/stickyness/additional-customizations.html
+    href: fundamentals/design-and-ui/browser-customization/theme-color
     section:
       id: stickyness
-      title: "Add To Home Screen"
-      href: fundamentals/device-access/stickyness/
+      title: "Browser Customization"
+      href: fundamentals/design-and-ui/browser-customization
 ---

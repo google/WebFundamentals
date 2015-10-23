@@ -44,7 +44,7 @@ commands to your bashrc file. On Mac or Linux:
    `master` and it will checkout the master branch for you.
 
 Note: See these instructions for [setting up Windows
-aliases](http://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx).
+aliases](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.85).aspx).
 
 ## Shortcuts we recommend
 
@@ -83,7 +83,7 @@ These are a few commands that you may find useful.
 Store your shortcuts and dot files on Github. The major gain with this is
 your shortcuts can be shared across devices and they are always backed up.
 
-Github even created a [dedicated page for dotfiles](http://dotfiles.github.io/)
+Github even created a [dedicated page for dotfiles](https://dotfiles.github.io/)
 and quite a few of the Chrome Team have forked
 [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles).
 

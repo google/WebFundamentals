@@ -103,7 +103,7 @@ DevTools provides four types of conditional breakpoints:
 Use the DOM mutation event breakpoint when the script is about to insert, change, 
 or delete a DOM node and you want to isolate and observe the change as it happens. 
 Execution pauses when a specific DOM node is to be modified, before the modification 
-is applied (see also [Edit the DOM](/web/tools/iterate/inspect-styles/edit-dom)).
+is applied (see also [Edit the DOM](/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom)).
 
 To add a DOM mutation breakpoint, open the Elements panel and right-click an element. 
 From the context menu, click **Break on…**, then choose one of the options: 
@@ -160,7 +160,7 @@ Use the JavaScript event listener breakpoint
 when you want to see how a certain event
 (such as keypress or dblclick) is processed by the script.
 Execution pauses before the event listener is fired (see also 
-[View element event listeners](/web/tools/iterate/inspect-styles/edit-dom#view-element-event-listeners)).
+[View element event listeners](/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom#view-element-event-listeners)).
 
 To add a JavaScript event listener breakpoint:
 
