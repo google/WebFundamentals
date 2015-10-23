@@ -37,7 +37,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Other times the image may need to be changed more drastically: changing the
 proportions, cropping and even replacing the entire image.  In this case,
 changing the image is usually referred to as art direction.  See
-[responsiveimages.org/demos/](http://responsiveimages.org/demos/) for more
+[responsiveimages.org/demos/](https://responsiveimages.org/demos/) for more
 examples.
 
 

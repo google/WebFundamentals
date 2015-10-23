@@ -23,4 +23,4 @@ After an analysis of the mobile-friendliness of the top 1000 sites we found some
 
 PageSpeed Insights just launched a [UX analysis for determining how mobile-friendly](https://developers.google.com/speed/pagespeed/insights/) your site is. It will help you [find common problems](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fnews.google.com) with your sites mobile UX. Try it out!
 
-[Slides: Best UX patterns for mobile web apps](http://mobile-ux.appspot.com/)
+[Slides: Best UX patterns for mobile web apps](https://mobile-ux.appspot.com/)

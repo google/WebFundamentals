@@ -25,7 +25,7 @@ Building your first app in Angular 2, Addy Osmani and Matt Gaunt show off Subime
 
 [https://www.youtube.com/watch?v=2eu23_if6Lw&list=PLOU2XLYxmsILKwwASNS0xgfcmakbK_8JZ&index=1](https://www.youtube.com/watch?v=2eu23_if6Lw&list=PLOU2XLYxmsILKwwASNS0xgfcmakbK_8JZ&index=1)
 
-[https://developers.google.com/web/shows/ttt/series-1/sublime-text-plugins](https://developers.google.com/web/shows/ttt/series-1/sublime-text-plugins)
+[https://developers.google.com/web/shows/ttt/series-1/sublime-text-plugins](/web/shows/ttt/series-1/sublime-text-plugins)
 
 
 

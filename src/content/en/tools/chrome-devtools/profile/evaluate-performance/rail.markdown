@@ -101,7 +101,7 @@ From a purely mathematical point of view, every frame has a budget of 16.66ms (d
 In high pressure points like animations, the key is to do nothing where you can, and where you can’t, do the absolute minimum. Whenever possible, make use of the 100ms response to pre-calculate expensive work so that you maximize your chances of hitting 60fps.
 
 For more information, see
-[Rendering Performance](https://developers.google.com/web/fundamentals/performance/rendering/).
+[Rendering Performance](/web/fundamentals/performance/rendering/).
 
 ## Idle: maximize idle time
 
@@ -122,14 +122,14 @@ If you don't, your user's attention wanders,
 and their perception of dealing with the task is broken.
 
 Focus on
-[optimizing the critical rendering path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/)
+[optimizing the critical rendering path](/web/fundamentals/performance/critical-rendering-path/)
 to unblock rendering.
 
 You don't have to load everything in under 1 second to produce the perception of a complete load. Enable progressive rendering and do some work in the background. Defer non-essential loads to periods of idle time (see this [Website Performance Optimization Udacity course](https://www.udacity.com/course/website-performance-optimization--ud884) for more information).
 
 ## Summary of key rail metrics
 
-To evaluate your site against RAIL metrics, use the Chrome DevTools [Timeline tool](https://web-central.appspot.com/web/tools/profile-performance/evaluate-performance/timeline-tool?hl=en) to record user actions. Then check the recording times in the Timeline against these key rail metrics:
+To evaluate your site against RAIL metrics, use the Chrome DevTools [Timeline tool](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) to record user actions. Then check the recording times in the Timeline against these key rail metrics:
 
 <table class="mdl-data-table">
   <thead>

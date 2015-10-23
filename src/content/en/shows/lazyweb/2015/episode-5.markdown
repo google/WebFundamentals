@@ -62,7 +62,7 @@ updated_on: 2015-05-12
 ## Jello Cone by Vivek Thakyal
 [http://codepen.io/vivekthakyal/full/VLLbgz](http://codepen.io/vivekthakyal/full/VLLbgz)
 
-Original music by Terra Monk ([terramonk.com](terramonk.com))
+Original music by Terra Monk ([terramonk.com](http://terramonk.com))
 
 Let us know what you think on Twitter #LazyWebShow
 

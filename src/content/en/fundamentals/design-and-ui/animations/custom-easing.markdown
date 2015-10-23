@@ -21,7 +21,7 @@ authors:
 
 {% include shared/takeaway.liquid list=page.key-takeaways.code %}
 
-If you're animating with CSS, you'll find that you can define cubic bezier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out` and `linear` map to predefined bezier curves, which are detailed in the [CSS transitions specification](http://www.w3.org/TR/css3-transitions/) and the [Web Animations specification](http://w3c.github.io/web-animations/#scaling-using-a-cubic-bezier-curve).
+If you're animating with CSS, you'll find that you can define cubic bezier curves to define the timing. In fact, the keywords `ease`, `ease-in`, `ease-out` and `linear` map to predefined bezier curves, which are detailed in the [CSS transitions specification](http://www.w3.org/TR/css3-transitions/) and the [Web Animations specification](https://w3c.github.io/web-animations/#scaling-using-a-cubic-bezier-curve).
 
 These bezier curves take four values, or 2 pairs of numbers, with each pair describing the X and Y coordinates of a cubic bezier curve’s control points.  The starting point of the bezier curve has a coordinate of (0, 0) and the end coordinate is (1, 1); you get to set the X and Y values of the two control points. The X values for the two control points must be between 0 and 1, and each control point’s Y value can exceed the [0, 1] limit, although the spec isn’t clear by how much!
 
@@ -74,7 +74,7 @@ TweenMax.to(box, animationDurationInSeconds, {
 });
 {% endhighlight %}
 
-The [TweenMax documentation](http://greensock.com/docs/#/HTML5/GSAP/TweenMax/) highlights all the options you have here, so it's well worth a read.
+The [TweenMax documentation](https://greensock.com/docs/#/HTML5/GSAP/TweenMax/) highlights all the options you have here, so it's well worth a read.
 
 
 

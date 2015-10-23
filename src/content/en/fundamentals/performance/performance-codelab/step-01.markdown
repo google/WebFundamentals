@@ -30,7 +30,7 @@ turn this janky app into an attractive and efficient 60fps experience.
 First, you should get the application code, both the "before" and "after" 
 versions. You can either clone the repositories or just download the zip files.
 
-*   Here is the original app with performance bottlenecks in a [GitHub repository](http://github.com/udacity/news-aggregator); also, here's the [live site](http://udacity.github.io/news-aggregator) if you'd like to see it. This is the version you'll work on.
+*   Here is the original app with performance bottlenecks in a [GitHub repository](https://github.com/udacity/news-aggregator); also, here's the [live site](http://udacity.github.io/news-aggregator) if you'd like to see it. This is the version you'll work on.
 *   Here is the completed app without performance bottlenecks in a [GitHub repository](https://github.com/udacity/news-aggregator/tree/solution). You can use this corrected version for reference.
 
 ## Run the original app

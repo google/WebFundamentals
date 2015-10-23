@@ -11,12 +11,12 @@ translation_priority: 0
 key-takeaways:
   too-much-memory:
     - "Quickly see if a page is consuming too much memory by monitoring memory columns in the Chrome Task Manager."
-    - "Determine if memory usage is growing using the memory view in the <a href='/web/tools/profile-performance/evaluate-performance/timeline-tool'>Chrome DevTools Timeline</a>."
+    - "Determine if memory usage is growing using the memory view in the <a href='/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool'>Chrome DevTools Timeline</a>."
     - "Identify detached nodes still retaining memory using the Chrome DevTools heap profiler."
     - "Watch out for frequent garbage collection and garbage collection pauses. Both frequent garbage collection and garbage collection pauses can impact performance."
 notes:
   memory-terminology:
-    - "New to memory management? Get started with the basics in <a href='/web/tools/profile-performance/memory-problems/memory-101'>Memory Terminology</a>."
+    - "New to memory management? Get started with the basics in <a href='/web/tools/chrome-devtools/profile/memory-problems/memory-101'>Memory Terminology</a>."
 ---
 
 <p class="intro">
@@ -39,7 +39,7 @@ This could be anything from navigating around a site, hovering, clicking, or oth
 
 Once you suspect memory performance issues,
 use the
-[Chrome DevTools Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool)
+[Chrome DevTools Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool)
 to diagnose excessive memory usage
 when you first notice your page has slowed down after extended use.
 
@@ -100,7 +100,7 @@ This helps to discover otherwise invisible leaks happening
 due to forgotten detached DOM subtrees floating around.
 
 Use the heap profiler to take JS heap snapshots, analyze memory graphs, compare snapshots, and detect DOM leaks
-(see [How to Record Heap Snapshots](/web/tools/profile-performance/memory-problems/heap-snapshots)).
+(see [How to Record Heap Snapshots](/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots)).
 
 There can be a lot of data in the constructor and retained view.
 The object retained with the shortest distance is usually your first candidate for causing a memory leak.
@@ -139,13 +139,13 @@ Tracking objects’ heap allocation involves starting a recording, performing a 
 
 ![Object allocation tracker](imgs/allocation-tracker.png)
 
-Learn how to use this tool in [How to Use the Allocation Profiler Tool](/web/tools/profile-performance/memory-problems/allocation-profiler).
+Learn how to use this tool in [How to Use the Allocation Profiler Tool](/web/tools/chrome-devtools/profile/memory-problems/allocation-profiler).
 
 ## Determine garbage collection frequency
 
 A *garbage collector* (such as the one in V8) needs to be able to locate objects in your application which are *live*, as well as, those which are considered *dead* (garbage*)* and are *unreachable*. If you are GCing frequently, you may be allocating too frequently. 
 
-Also watch out for garbage collection pauses of interest. If **garbage collection** (GC) misses any dead objects due to logical errors in your JavaScript then the memory consumed by these objects cannot be reclaimed. Situations like this can end up slowing down your application over time (see [How to Use the Allocation Profiler Tool](/web/tools/profile-performance/memory-problems/allocation-profiler)).
+Also watch out for garbage collection pauses of interest. If **garbage collection** (GC) misses any dead objects due to logical errors in your JavaScript then the memory consumed by these objects cannot be reclaimed. Situations like this can end up slowing down your application over time (see [How to Use the Allocation Profiler Tool](/web/tools/chrome-devtools/profile/memory-problems/allocation-profiler)).
 
 This often happens when you’ve written your code in such a way that variables and event listeners you don’t require are still referenced by some code. While these references are maintained, the objects cannot be correctly cleaned up by GC.
 
@@ -177,7 +177,7 @@ Additional demos are available for:
 
 ### Extras 
 
-[Memory Management Masterclass](http://youtu.be/LaxbdIyBkL0) with Addy Osmani gives you a crash-course in debugging memory issues. The [slides for the presentation](https://speakerdeck.com/addyosmani/javascript-memory-management-masterclass) are available as well as the [example code](https://github.com/addyosmani/memory-mysteries).
+[Memory Management Masterclass](https://youtu.be/LaxbdIyBkL0) with Addy Osmani gives you a crash-course in debugging memory issues. The [slides for the presentation](https://speakerdeck.com/addyosmani/javascript-memory-management-masterclass) are available as well as the [example code](https://github.com/addyosmani/memory-mysteries).
 
 <br>
 

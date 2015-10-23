@@ -12,9 +12,11 @@ featured_image: /web/updates/images/2015/10/splashscreen.png
 description: "Detecting if a web app is launched from the home screen"
 ---
 
-During the past year we have focused on enabling users to build app like experiences
-on the web by making it possible for apps to work offline using [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) and
-to get a presence on the homescreen using the [Web App Manifest](/web/fundamentals/engage-and-retain/simplified-app-installs).
+During the past year we have focused on enabling users to build app like 
+experiences on the web by making it possible for apps to work offline using 
+[Service Worker](/web/fundamentals/primers/service-workers) and to get a 
+presence on the homescreen using the 
+[Web App Manifest](/web/fundamentals/engage-and-retain/simplified-app-installs).
 
 Now apps tend to offer different experiences as sites, and developers might want to
 offer different experiences depending on whether the site is viewed in the browser
@@ -44,7 +46,7 @@ directly JavaScript, including modifying CSS, or applying different CSS rules.
 
 The web already has a very nice way of working with conditional CSS, called
 [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries).
-Since M46, Chrome in Android supports the [display-mode](http://w3c.github.io/manifest/#the-display-mode-media-feature) media
+Since M46, Chrome in Android supports the [display-mode](https://w3c.github.io/manifest/#the-display-mode-media-feature) media
 query feature, which can be used to find out what the current `display-mode`
 is being used for displaying the app, ie. is it being displayed by a `browser`,
 `standalone` or `fullscreen`. `display-mode` is also supported for standalone Chrome

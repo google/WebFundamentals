@@ -25,7 +25,7 @@ In classic animation the terms for motion that starts slowly and accelerates is 
 
 ## Easing Keywords
 
-CSS transitions and animations both let you [choose the kind of easing you want to use for your animations]({{site.fundamentals}}/look-and-feel/animations/choosing-the-right-easing.html). You can use keywords that affect the easing (or timing as it's sometimes called) of the animation in question. You can also [go completely custom with your easing]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html), which gives you way more freedom to express your app's personality.
+CSS transitions and animations both let you [choose the kind of easing you want to use for your animations](/web/fundamentals/design-and-ui/animations/choosing-the-right-easing.html). You can use keywords that affect the easing (or timing as it's sometimes called) of the animation in question. You can also [go completely custom with your easing](/web/fundamentals/design-and-ui/animations/custom-easing.html), which gives you way more freedom to express your app's personality.
 
 Here are some of the keywords that you can use in CSS:
 

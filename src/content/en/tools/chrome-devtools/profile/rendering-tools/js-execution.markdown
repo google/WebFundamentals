@@ -51,7 +51,7 @@ First verify the CPU profiler is enabled:
 To start recording a JavaScript CPU profiler:
 
 1. Open the page that calls the JavaScript you wish to profile.
-For example, let's profile the [Google Chrome V8 Benchmark Suite](http://v8.googlecode.com/svn/data/benchmarks/v7/run.html).
+For example, let's profile the [Google Chrome V8 Benchmark Suite](https://v8.googlecode.com/svn/data/benchmarks/v7/run.html).
 2. Open the Chrome DevTools Profiles panel and click the **Start** button or press <span class="kbd">Cmd</span> + <span class="kbd">E</span>.
 3. Refresh the V8 Benchmark Suite page. When the page has completed reloading, a score for the benchmark tests is shown.
 4. Return to the Profiles panel and stop the recording by clicking the Stop button or by pressing <span class="kbd">Cmd</span> + <span class="kbd">E</span> again.
@@ -87,19 +87,19 @@ Depending on the function you selected, you should see something like this:
 
 ### Customize the CPU profiler
 
-Use the [Chrome DevTools Console](/web/tools/javascript/console/console-ui) and [Command Line API](/web/tools/javascript/command-line/)
+Use the [Chrome DevTools Console](/web/tools/chrome-devtools/debug/console/console-ui) and [Command Line API](/web/tools/chrome-devtools/debug/command-line/)
 to customize and control CPU profiles:
 
-* Create profiles from console using [profile() and profileEnd()](/web/tools/javascript/command-line/command-line-reference?hl=en#profilename-and-profileendname).
-* [Group profiles](/web/tools/javascript/command-line/command-line-reference?hl=en#profilename-and-profileendnam) from console by using the same label.
+* Create profiles from console using [profile() and profileEnd()](/web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname).
+* [Group profiles](/web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendnam) from console by using the same label.
 
 ## How to profile JavaScript performance over time
 
 The Flame Chart view provides a visual representation
 of JavaScript processing aggregated _over_time_,
 similar to those found in the
-[Timeline](/web/tools/profile-performance/evaluate-performance/timeline-tool) and 
-[Network](/web/tools/profile-performance/network-performance/resource-loading) panels.
+[Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) and 
+[Network](/web/tools/chrome-devtools/profile/network-performance/resource-loading) panels.
 
 ### Read the Flame Chart
 

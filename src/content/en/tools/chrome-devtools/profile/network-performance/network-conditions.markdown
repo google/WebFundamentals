@@ -29,7 +29,7 @@ notes:
 ## Emulate network connectivity on Chrome
 
 Network conditioning in
-[Chrome DevTools Device mode](/web/tools/setup/device-testing/devtools-emulator)
+[Chrome DevTools Device mode](/web/tools/chrome-devtools/iterate/device-mode/)
 allows you to test your site on a variety of network connections, including Edge, 3G, and even offline. Select a connection from the preset dropdown to apply network throttling and latency manipulation.
 
 ![Device mode network controls](imgs/network-throttling.png)

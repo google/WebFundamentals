@@ -42,7 +42,7 @@ request that includes the following:
 For a production site or app, you would normally set up a service to interact
 with GCM from your server. (There is some sample code for doing just that in
 [Push Notifications on the Open
-Web](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en).) For this codelab, you can send requests from your terminal or from an app running in the browser.
+Web](/web/updates/2015/03/push-notifications-on-the-open-web).) For this codelab, you can send requests from your terminal or from an app running in the browser.
 
 You can send a request to GCM using the cURL utility.
 

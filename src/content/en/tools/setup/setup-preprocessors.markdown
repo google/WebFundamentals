@@ -36,7 +36,7 @@ With JavaScript as output, they either convert (compile) from a completely diffe
 
 ## Debugging and editing preprocessed content
 
-As soon as you are in the browser and use DevTools to [edit your CSS](/web/tools/iterate/inspect-styles/edit-styles) or debug your JavaScript, one issue becomes very apparent: what you are looking at does not reflect your source, and doesn't really help you fix your problem.
+As soon as you are in the browser and use DevTools to [edit your CSS](/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles) or debug your JavaScript, one issue becomes very apparent: what you are looking at does not reflect your source, and doesn't really help you fix your problem.
 
 In order to work around, most modern preprocessors support a feature called <b>Source Maps</b>.
 
@@ -86,7 +86,7 @@ Below is an example source map file:
 
 ## Verify web server can serve Source Maps
 
-Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your Source Maps should be served with a MIME type of `application/json`, but Chrome will actually [accept any content-type](http://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files), for example `application/octet-stream`.
+Some web servers, like Google App Engine for example, require explicit configuration for each file type served. In this case, your Source Maps should be served with a MIME type of `application/json`, but Chrome will actually [accept any content-type](https://stackoverflow.com/questions/19911929/what-mime-type-should-i-use-for-source-map-files), for example `application/octet-stream`.
 
 ### Bonus: Source mapping via custom header 
 
@@ -151,7 +151,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
   </thead>
   <tbody>
     <tr>
-      <td data-th="Compiler"><a href="sass-lang.com">Sass</a></td>
+      <td data-th="Compiler"><a href="http://sass-lang.com">Sass</a></td>
       <td data-th="Command"><code>$ scss --sourcemap styles.scss styles.css</code></td>
       <td data-th="Instructions">Source Maps in Sass are supported since Sass 3.3.</td>
     </tr>
@@ -184,8 +184,8 @@ Now that you've got Source Maps properly set up, you might be happy to learn tha
 
 ### Editing preprocessed CSS
 
-Head over to [Edit Sass, Less or Stylus](/web/tools/iterate/inspect-styles/edit-styles) to learn more about how to edit and refresh styles linked to a source map directly within DevTools.
+Head over to [Edit Sass, Less or Stylus](/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles) to learn more about how to edit and refresh styles linked to a source map directly within DevTools.
 
 ### Editing and debugging preprocessed JavaScript
 
-Learn more about how to debug manified, compiled or transpiled JavaScript in the Sources Panel in [Map Preprocessed Code to Source Code](/web/tools/setup/readability/source-maps).
+Learn more about how to debug manified, compiled or transpiled JavaScript in the Sources Panel in [Map Preprocessed Code to Source Code](/web/tools/chrome-devtools/debug/readability/source-maps).

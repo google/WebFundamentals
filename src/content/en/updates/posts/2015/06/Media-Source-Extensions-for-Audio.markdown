@@ -18,7 +18,7 @@ tags:
 
 [Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/about/) based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
 
-You've likely listened to a music album where songs flowed seamlessly across tracks; you may even be listening to one right now. Artists create these [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback) experiences both as an artistic choice as well as an artifact of [vinyl records](http://en.wikipedia.org/wiki/Gramophone_record) and [CDs](http://en.wikipedia.org/wiki/Compact_disc) where audio was written as one continuous stream. Unfortunately, due to the way modern audio codecs like [MP3](http://en.wikipedia.org/wiki/MP3) and [AAC](http://en.wikipedia.org/wiki/Advanced_Audio_Coding) work, this seamless aural experience is often lost today.
+You've likely listened to a music album where songs flowed seamlessly across tracks; you may even be listening to one right now. Artists create these [gapless playback](https://en.wikipedia.org/wiki/Gapless_playback) experiences both as an artistic choice as well as an artifact of [vinyl records](https://en.wikipedia.org/wiki/Gramophone_record) and [CDs](https://en.wikipedia.org/wiki/Compact_disc) where audio was written as one continuous stream. Unfortunately, due to the way modern audio codecs like [MP3](https://en.wikipedia.org/wiki/MP3) and [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) work, this seamless aural experience is often lost today.
 
 We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/) chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
@@ -82,14 +82,14 @@ Once the `MediaSource` object is connected, it will perform some initialization 
 
 ## Anomalous Waveforms
 
-We'll come back to the code in a moment, but let's now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](http://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
+We'll come back to the code in a moment, but let's now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](https://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap_end.png" alt="End of sintel_0.mp3">
 </p>
 
 
-What's with all that those zero (silent) samples!? They're actually due to [compression artifacts](http://en.wikipedia.org/wiki/Gapless_playback#Compression_artifacts) introduced during encoding. Almost every encoder introduces some type of padding. In this case [LAME](http://lame.sourceforge.net/) added exactly 576 padding samples to the end of the file.
+What's with all that those zero (silent) samples!? They're actually due to [compression artifacts](https://en.wikipedia.org/wiki/Gapless_playback#Compression_artifacts) introduced during encoding. Almost every encoder introduces some type of padding. In this case [LAME](http://lame.sourceforge.net/) added exactly 576 padding samples to the end of the file.
 
 In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [`metadata`](#appendix-b-parsing-gapless-metadata) included within each file.
 
@@ -207,7 +207,7 @@ First, we'll split out the first 31.5 seconds the `1-Snow_Fight.flac` track. We 
 ffmpeg -i 1-Snow_Fight.flac -t 31.5 -af "afade=t=out:st=28:d=2.5" sintel.flac
 {% endhighlight %}
 
-Next, we'll split the file into 5 [wave](http://en.wikipedia.org/wiki/WAV) files of 6.5 seconds each; it's easiest to use wave since almost every encoder supports ingestion of it. Again, we can do this precisely with FFmpeg, after which we'll have: `sintel_0.wav`, `sintel_1.wav`, `sintel_2.wav`, `sintel_3.wav`, and `sintel_4.wav`.
+Next, we'll split the file into 5 [wave](https://en.wikipedia.org/wiki/WAV) files of 6.5 seconds each; it's easiest to use wave since almost every encoder supports ingestion of it. Again, we can do this precisely with FFmpeg, after which we'll have: `sintel_0.wav`, `sintel_1.wav`, `sintel_2.wav`, `sintel_3.wav`, and `sintel_4.wav`.
 
 {% highlight bash %}
 ffmpeg -i sintel.flac -acodec pcm_f32le -map 0 -f segment \
@@ -224,7 +224,7 @@ lame -V=2 sintel_3.wav sintel_3.mp3
 lame -V=2 sintel_4.wav sintel_4.mp3
 {% endhighlight %}
 
-That's all that's necessary to create the MP3 files. Now let's cover the creation of the fragmented MP4 files. We'll follow Apple's directions for creating media which is [mastered for iTunes](http://www.apple.com/itunes/mastered-for-itunes/). Below, we'll convert the wave files into intermediate [CAF](http://en.wikipedia.org/wiki/Core_Audio_Format) files, per the instructions, before encoding them as [AAC](http://en.wikipedia.org/wiki/Advanced_Audio_Coding) in an [MP4](http://en.wikipedia.org/wiki/MP4) container using the recommended parameters.
+That's all that's necessary to create the MP3 files. Now let's cover the creation of the fragmented MP4 files. We'll follow Apple's directions for creating media which is [mastered for iTunes](http://www.apple.com/itunes/mastered-for-itunes/). Below, we'll convert the wave files into intermediate [CAF](https://en.wikipedia.org/wiki/Core_Audio_Format) files, per the instructions, before encoding them as [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) in an [MP4](https://en.wikipedia.org/wiki/MP4) container using the recommended parameters.
 
 {% highlight bash %}
 afconvert sintel_0.wav sintel_0_intermediate.caf -d 0 -f caff \
@@ -372,7 +372,7 @@ With that we have a complete function for parsing the vast majority of gapless c
 
 ## Appendix C: On Garbage Collection
 
-Memory belonging to `SourceBuffer`s is actively [garbage collected](http://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
+Memory belonging to `SourceBuffer`s is actively [garbage collected](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) according to content type, platform specific limits, and the current play position. In Chrome, memory will first be reclaimed from already played buffers. However, if memory usage exceeds platform specific limits, it will remove memory from unplayed buffers.
 
 When playback reaches a gap in the timeline due to reclaimed memory it may glitch if the gap is small enough or stall completely if the gap is too large. Neither is a great user experience, so it's important to avoid appending too much data at once and to manually remove ranges from the media timeline that are no longer necessary.
 

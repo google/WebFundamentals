@@ -47,16 +47,16 @@ showcase:
 related-guides:
 -
     title: "Web App Manifest"
-    href: fundamentals/device-access/stickyness/web-app-manifest.html
+    href: fundamentals/engage-and-retain/simplified-app-installs
     section:
       id: stickyness
       title: "Add To Home Screen"
-      href: fundamentals/device-access/stickyness/
+      href: fundamentals/engage-and-retain/simplified-app-installs
 -
     title: "Theme Color"
-    href: fundamentals/device-access/stickyness/additional-customizations.html
+    href: fundamentals/design-and-ui/browser-customization/theme-color
     section:
       id: stickyness
-      title: "Add To Home Screen"
-      href: fundamentals/device-access/stickyness/
+      title: "Browser Customization"
+      href: fundamentals/design-and-ui/browser-customization
 ---

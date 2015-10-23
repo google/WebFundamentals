@@ -36,7 +36,7 @@ Project Number from Step 2:
 
 There are lots more useful options for web manifests, such as setting an app icon and enabling Add to home screen on mobile.
 
-Find out more from the Web Fundamentals article [Installable Web Apps](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en).
+Find out more from the Web Fundamentals article [Installable Web Apps](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android).
 
 ## 2. Tell the browser where to find the manifest for your web app
 

@@ -13,4 +13,4 @@ Building for the web is awesome, but sometimes you can find yourself baffled by 
 
 ## Read more
 
-* [Some Gotchas That Got Me](http://aerotwist.com/blog/some-gotchas-that-got-me/)
+* [Some Gotchas That Got Me](https://aerotwist.com/blog/some-gotchas-that-got-me/)

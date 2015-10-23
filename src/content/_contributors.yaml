@@ -15,7 +15,7 @@ jbnicolai:
   role:
     - engineer
     - contributor
-  homepage: http://jbnicolai.com
+  homepage: https://github.com/jbnicolai
   google: +JoshuaAppelman
   twitter: BoyNicolai
   email: me@jbnicolai.com
@@ -488,7 +488,7 @@ mikemahemoff:
   country: UK
   role:
     - author
-  homepage: http://mahemoff.com
+  homepage: https://github.com/mahemoff
   google: 106413090159067280619
   twitter: mahemoff
   email: mahemoff@google.com

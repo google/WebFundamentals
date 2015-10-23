@@ -59,7 +59,7 @@ demo is in global scope, so you can inspect it from the console.  Call
 
 ## Stop(), ended and active
 
-When the [Media Capture and Streams](http://w3c.github.io/mediacapture-main/getusermedia.html) W3C Working Group looked at the problem of what happens when you add new tracks to a `MediaStream`,
+When the [Media Capture and Streams](https://w3c.github.io/mediacapture-main/getusermedia.html) W3C Working Group looked at the problem of what happens when you add new tracks to a `MediaStream`,
 and whether an empty `MediaStream` is ended, they realized that there was
 no sensible way to implement `ended` on a `MediaStream` (as in 'will never start again'). In other parts of HTML5 'ended' means 'this has ended and will
 never resume'. 'Active' carries no such implication: an inactive stream can

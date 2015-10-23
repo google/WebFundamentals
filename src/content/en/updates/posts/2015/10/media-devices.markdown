@@ -147,11 +147,11 @@ get the new list of devices. This hasn't been implemented in any browser
 yet.
 
 The [Screen Capture
-draft](http://w3c.github.io/mediacapture-screen-share/#example) is an extension
+draft](https://w3c.github.io/mediacapture-screen-share/#example) is an extension
 to the Media Capture API which proposes a `MediaDevices.getDisplayMedia()` method
 that enables regions of a user's display to be used as the source of a media
 stream. There is also a `MediaDevices` extension proposal for
-[`getSupportedConstraints()`](http://w3c.github.io/mediacapture-main/#mediadevices-interface-extensions)
+[`getSupportedConstraints()`](https://w3c.github.io/mediacapture-main/#mediadevices-interface-extensions)
 , which provides information about what constraints could be used for a
 `getUserMedia()` call: audio and video capabilities supported by the browser.
 
@@ -171,7 +171,7 @@ stream. There is also a `MediaDevices` extension proposal for
 * [Implementation
   status](https://www.chromestatus.com/features/4906859072847872)
 * Media Capture and Streams Editor's Draft:
-  [MediaDevices](http://w3c.github.io/mediacapture-main/#mediadevices)
+  [MediaDevices](https://w3c.github.io/mediacapture-main/#mediadevices)
 * [Audio Output Devices API](http://www.w3.org/TR/audio-output)
 
 
