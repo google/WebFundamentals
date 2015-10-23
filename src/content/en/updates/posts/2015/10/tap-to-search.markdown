@@ -67,4 +67,4 @@ determine what's preventing Touch to Search from triggering:
 
 If your page still doesn't behave the way you'd like, file a bug at 
 [crbug.com](https://crbug.com) and add the label 
-Cr-UI-Browser-Mobile-TouchToSearch.
+`Cr-UI-Browser-Mobile-TouchToSearch`.
