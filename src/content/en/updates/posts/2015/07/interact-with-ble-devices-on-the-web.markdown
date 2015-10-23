@@ -4,7 +4,7 @@ title: "Interact with BLE devices on the Web"
 description: "A Web API has been added to Chrome OS that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
 featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 published_on: 2015-07-22
-updated_on: 2015-09-10
+updated_on: 2015-10-23
 authors:
   - beaufortfrancois
 tags:
@@ -214,7 +214,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
-## Samples & Demos
+## Samples, Demos & Codelabs
 
 The samples below have been tested on Chrome OS with the Web Bluetooth flag
 enabled. To enjoy these samples to their fullest, I recommend you install the [BLE Peripheral Simulator Android
@@ -226,7 +226,7 @@ Service.
 - Reset Energy - [https://googlechrome.github.io/samples/web-bluetooth/reset-energy.html](https://googlechrome.github.io/samples/web-bluetooth/reset-energy.html)
 - Device Info - [https://googlechrome.github.io/samples/web-bluetooth/device-info.html](https://googlechrome.github.io/samples/web-bluetooth/device-info.html)
 
-You can also find some Web Bluetooth Demos at [https://github.com/WebBluetoothCG/demos](https://github.com/WebBluetoothCG/demos).
+You can also find some Web Bluetooth Demos at [https://github.com/WebBluetoothCG/demos](https://github.com/WebBluetoothCG/demos) and the Official Codelabs at [https://github.com/googlecodelabs?query=bluetooth](https://github.com/googlecodelabs?query=bluetooth).
 
 ## Dev Tips
 
