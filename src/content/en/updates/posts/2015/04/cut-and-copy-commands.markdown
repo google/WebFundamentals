@@ -133,12 +133,7 @@ will do as expected, otherwise present a message to the user.
 
 # Browser Support
 
-IE 10+, Chrome 43+, and Opera 29+ support these commands.
-
-Firefox supports this but requires a preference change ([See cut and
-copy commands
-here](https://developer.mozilla.org/en-US/docs/Web/API/Document/execCommand)).
-Without this Firefox throws an error.
+IE 10+, Chrome 43+, Firefox 41+, and Opera 29+ support these commands.
 
 Safari does not support these commands.
 
