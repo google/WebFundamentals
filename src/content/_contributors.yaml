@@ -125,11 +125,13 @@ kenchris:
     family: Christiansen
   org:
     name: Intel
+    unit: "OTC, Web Technology Team"
   country: Denmark
   role:
     - author
   twitter: kennethrohde
-  email: kenneth@webkit.org
+  email: kenneth.christiansen@gmail.com
+  google: +KennethRohdeChristiansen
   desciption:
     en: "Kenneth is an Engineer at Intel"
 
