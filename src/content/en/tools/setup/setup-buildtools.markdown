@@ -52,7 +52,7 @@ your development workflow.
 The most popular tools for implementing a build process are
 [Gulp](http://gulpjs.com/) and [Grunt](http://gruntjs.com/), both of which are
 command line tools. If you have no experience of either, use Gulp, we use it for
-[Web Starter Kit](https://developers.google.com/web/starter-kit/) and recommend
+[Web Starter Kit](/web/tools/starter-kit/) and recommend
 you do the same.
 
 There are tools which have GUIs and may be a bit easier to get to grips with but
@@ -99,7 +99,7 @@ This requires a lot of trial and error to get each piece set-up the way you want
 and can be daunting if you are new to build processes.
 
 For a good example of a build process, check out the [getting started guide for Web Starter
-Kit](https://developers.google.com/web/fundamentals/getting-started/web-starter-kit/),
+Kit](/web/fundamentals/getting-started/web-starter-kit/),
 which goes through how to use Web Starter Kit and explains what each of the
 commands in the Gulp file do. This can be used as a quick way to get set-up and then
 you can make changes if needed.

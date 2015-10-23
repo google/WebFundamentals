@@ -53,7 +53,7 @@ on the screen because they will have a smaller surface area than a harder press.
 
 Firstly you need a device that can detect this. A Nexus 10 will work fine. A 
 great example is to look directly at 
-[Rick Byers paint example](http://rbyers.github.io/paint.html). Not to be outdone 
+[Rick Byers paint example](https://rbyers.github.io/paint.html). Not to be outdone 
 though here is a way to use it without canvas.
 
 {% highlight javascript %}
@@ -122,5 +122,5 @@ read [Rick Byers' tracking doc](https://docs.google.com/document/d/1keeTmtqTEFS6
 
 ## See Also
 
-* [Precision Touch Getures](https://developers.google.com/web/updates/2014/09/Precision-Touch-for-Precise-Gestures?hl=en) 
+* [Precision Touch Getures](/web/updates/2014/09/Precision-Touch-for-Precise-Gestures) 
 * [TouchEvent spec with rotationAngle](http://www.w3.org/TR/2011/WD-touch-events-20110505/#widl-Touch-rotationAngle)

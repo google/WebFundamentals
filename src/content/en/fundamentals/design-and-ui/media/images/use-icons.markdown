@@ -82,8 +82,8 @@ alt="Example of a page that uses FontAwesome for its font icons.">
 {% include_code src=_code/icon-font.html snippet=iconfont lang=html %}
 
 There are hundreds of free and paid icon fonts available including [Font
-Awesome](http://fortawesome.github.io/Font-Awesome/),
-[Pictos](http://pictos.cc/) and [Glyphicons](http://glyphicons.com/).
+Awesome](https://fortawesome.github.io/Font-Awesome/),
+[Pictos](http://pictos.cc/) and [Glyphicons](https://glyphicons.com/).
 
 Be sure to balance the weight of the additional HTTP request and file size with
 the need for the icons. For example, if you only need a handful of icons, it

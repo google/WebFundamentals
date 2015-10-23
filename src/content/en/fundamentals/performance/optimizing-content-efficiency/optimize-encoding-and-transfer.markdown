@@ -107,7 +107,7 @@ In short, as a first step in optimizing the efficiency of your assets, build an 
 
 {% include shared/takeaway.liquid list=page.key-takeaways.text-compression %}
 
-[GZIP](http://en.wikipedia.org/wiki/Gzip) is a generic compressor that can be applied to any stream of bytes: under the hood it remembers some of the previously seen content and attempts to find and replace duplicate data fragments in an efficient way - for the curious, [great low-level explanation of GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). However, in practice, GZIP performs best on text-based content, often achieving compression rates of as high as 70-90% for larger files, whereas running GZIP on assets that are already compressed via alternative algorithms (e.g. most image formats) yields little to no improvement.
+[GZIP](https://en.wikipedia.org/wiki/Gzip) is a generic compressor that can be applied to any stream of bytes: under the hood it remembers some of the previously seen content and attempts to find and replace duplicate data fragments in an efficient way - for the curious, [great low-level explanation of GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). However, in practice, GZIP performs best on text-based content, often achieving compression rates of as high as 70-90% for larger files, whereas running GZIP on assets that are already compressed via alternative algorithms (e.g. most image formats) yields little to no improvement.
 
 All modern browsers support and automatically negotiate GZIP compression for all HTTP requests: our job is to ensure that the server is properly configured to serve the compressed resource when requested by the client.
 

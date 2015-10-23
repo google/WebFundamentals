@@ -39,7 +39,7 @@ automatically.
 
 ## Set Up Your Web Starter Kit Project
 
-The first step is to go to [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
+The first step is to go to [https://developers.google.com/web/tools/starter-kit/](/web/tools/starter-kit/)
 and download and extract the zip. This will be the basis for your project so rename the folder and put it somewhere relevant on your machine. For the rest of this guide we'll call the folder `my-project.`
 
 Next, you need to install the local dependencies for Web Starter Kit. Open a

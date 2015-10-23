@@ -44,7 +44,7 @@ For example, the recording below is of an HTML page being loaded into Chrome. Th
 When you hover over a Timeline record, a pop-up appears with details
 about the associated event. For example, the screenshot below shows
 details for a Finish Loading record associated with an image resource.
-The [Timeline Event Reference](/web/tools/profile-performance/evaluate-performance/performance-reference)
+The [Timeline Event Reference](/web/tools/chrome-devtools/profile/evaluate-performance/performance-reference)
 explains the details that are available for each record type.
 
 ![Pop-up showing event details](imgs/event-details.png)
@@ -66,7 +66,7 @@ The time to render a frame is displayed above of the Records view. If you hover 
 
 ![Frames mode](imgs/frames_mode.png)
 
-You can learn more about how to test and fix rendering problems in [Analyze Runtime Performance](/web/tools/profile-performance/rendering-tools/analyze-runtime).
+You can learn more about how to test and fix rendering problems in [Analyze Runtime Performance](/web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime).
 
 ### Clear or light-gray frames
 
@@ -121,7 +121,7 @@ haven’t been garbage collected).
 ![Memory view](imgs/memory-usage.png)
 
 Memory mode can't show you exactly what is causing a memory leak, but it can help you identify what events in your application may be leading to a memory leak.
-Learn more about memory problems in [Memory Diagnosis](/web/tools/profile-performance/memory-problems/memory-diagnosis).
+Learn more about memory problems in [Memory Diagnosis](/web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis).
 
 ## Make a recording
 
@@ -146,8 +146,8 @@ Some recording tips:
 * **Avoid unnecessary actions**. Try to avoid actions (mouse clicks, network loads, etc.) that are extraneous to the activity you want to record and analyze. For example, if you want to record events that occur after you click a Login button, don’t also scroll the page, load an image, and so on.
 *  **Disable the browser cache**. When recording network operations, it’s a good idea to disable the browser’s cache in the DevTools Settings panel.
 * **Disable extensions**. Chrome extensions can add unrelated noise to Timeline recordings of your application. You can do one of the following:
-    * Open a Chrome window in [incognito mode](http://support.google.com/chrome/bin/answer.py?hl=en&answer=95464).
-    * Create a new [Chrome user profile](http://support.google.com/chrome/bin/answer.py?hl=en&answer=142059) for testing.
+    * Open a Chrome window in [incognito mode](https://support.google.com/chrome/answer/95464).
+    * Create a new [Chrome user profile](https://support.google.com/chrome/answer/142059) for testing.
 
 ## Record a page load
 
@@ -168,7 +168,7 @@ to start recording.
 to reload the browser page.
 4.  Stop the recording as soon as the page has finished loading (look for the red event marker).
 
-The Timeline annotates each recording with blue and red lines that indicate, respectively, when the [DOMContentLoaded](http://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) and [load](http://docs.webplatform.org/wiki/dom/events/load) events were dispatched by the browser. The DOMContentLoaded event is fired when all of the page’s DOM content has been loaded and parsed. The load event is fired once all of the document’s resources (images and CSS files, and so forth) have been fully loaded.
+The Timeline annotates each recording with blue and red lines that indicate, respectively, when the [DOMContentLoaded](https://docs.webplatform.org/wiki/dom/events/DOMContentLoaded) and [load](https://docs.webplatform.org/wiki/dom/events/load) events were dispatched by the browser. The DOMContentLoaded event is fired when all of the page’s DOM content has been loaded and parsed. The load event is fired once all of the document’s resources (images and CSS files, and so forth) have been fully loaded.
 
 Your recording should look something like the following example.
 The first record (Send Request) is Chrome's HTTP request for the page,
@@ -178,7 +178,7 @@ and a Parse HTML record.
 
 ![Page load recording](imgs/page-load.png)
 
-See the [Timeline event reference](/web/tools/profile-performance/evaluate-performance/performance-reference) for details on each record type.
+See the [Timeline event reference](/web/tools/chrome-devtools/profile/evaluate-performance/performance-reference) for details on each record type.
 
 ## View recording details
 
@@ -187,7 +187,7 @@ the Details pane displays additional information about the event.
 
 ![Event details pane](imgs/frames_mode_event_selected.png)
 
-Certain details are present in events of all types, such as Duration and CPU Time, while some only apply to certain event types. See the [Timeline event reference](/web/tools/profile-performance/evaluate-performance/performance-reference) for details on each record type.
+Certain details are present in events of all types, such as Duration and CPU Time, while some only apply to certain event types. See the [Timeline event reference](/web/tools/chrome-devtools/profile/evaluate-performance/performance-reference) for details on each record type.
 
 When you select a Paint record, DevTools highlights the region of the screen that was updated with a blue semi-transparent rectangle, as shown below.
 

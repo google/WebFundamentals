@@ -15,8 +15,8 @@ Polymer 0.8 has landed and with it come some major changes and performance impro
 
 - [Demo source code](https://github.com/robdodson/polycasts/tree/master/ep13-08-first-look)
 - [Polymer 0.8 documentation](https://www.polymer-project.org/0.8/)
-- [Content elements with core-drawer-panel](https://developers.google.com/web/shows/polycasts/season-1/core-drawer-panel)
+- [Content elements with core-drawer-panel](/web/shows/polycasts/season-1/core-drawer-panel)
 - [Shady DOM explainer](https://www.polymer-project.org/0.8/docs/devguide/local-dom.html)
 - [Host selector documentation (and Shadow DOM CSS cheat sheet)](http://robdodson.me/shadow-dom-css-cheat-sheet/#host)
-- [Scrolling at 60fps with core-list](https://developers.google.com/web/shows/polycasts/season-2/scrolling-at-60fps-with-core-list)
-- [Moar routing with... more-routing](https://developers.google.com/web/shows/polycasts/season-2/more-routing-with-more-routing)
+- [Scrolling at 60fps with core-list](/web/shows/polycasts/season-2/scrolling-at-60fps-with-core-list)
+- [Moar routing with... more-routing](/web/shows/polycasts/season-2/more-routing-with-more-routing)

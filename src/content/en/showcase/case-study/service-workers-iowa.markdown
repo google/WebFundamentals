@@ -392,7 +392,7 @@ replayQueuedAnalyticsRequests();
 ### Push Notification Landing Pages
 
 Service workers didn’t just handle IOWA’s offline functionality—they also
-powered the [push notifications](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web)
+powered the [push notifications](/web/updates/2015/03/push-notifications-on-the-open-web)
 that we used to notify users about updates to their bookmarked sessions. The
 landing page associated with those notifications displayed the updated session
 details. Those landing pages were already being cached as part of the overall
@@ -564,12 +564,12 @@ This ended up causing an issue for us during development, when we started using
 traffic was coming from. For example, we [added](https://github.com/GoogleChrome/ioweb2015/blob/28113917b88436dd569c39fd5eef184b6aefdd1c/app/scripts/shed/push-notifications.js#L32)
 the `utm_source=notification` parameter to URLs that were opened when clicking on one of our
 notifications, and used `utm_source=web_app_manifest` in the [`start_url`](https://github.com/GoogleChrome/ioweb2015/blob/0bab714dbb08927f901420fc05b43b9f97f7ddc3/app/templates/manifest.json#L4)
-for our [web app manifest](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en).
+for our [web app manifest](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android).
 URLs which previously matched cached responses were coming up as misses when those parameters
 were appended.
 
 This is partially addressed by the [`ignoreSearch`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match#Parameters)
-option which can be used when calling `Cache.match()`. Unfortunately, Chrome [doesn't yet](https://developers.google.com/web/updates/2015/09/updates-to-cache-api#cache-query-options-coming-to-chrome-soon)
+option which can be used when calling `Cache.match()`. Unfortunately, Chrome [doesn't yet](/web/updates/2015/09/updates-to-cache-api#cache-query-options-coming-to-chrome-soon)
 support `ignoreSearch`, and even if it did, it's an all-or-nothing behavior. What we needed was a
 way to ignore _some_ URL query parameters while taking others that were meaningful into account.
 

@@ -16,25 +16,25 @@ related-guides:
   example:
     -
       title: Using Media Queries
-      href: fundamentals/layouts/rwd-fundamentals/use-media-queries
+      href: fundamentals/design-and-ui/responsive/fundamentals/use-media-queries
       section:
         id: rwd-fundamentals
         title: "Responsive Web design"
-        href: fundamentals/layouts/rwd-fundamentals/use-media-queries
+        href: fundamentals/design-and-ui/responsive/
     -
       title: Layout patterns
-      href: fundamentals/layouts/rwd-patterns/
+      href: fundamentals/design-and-ui/responsive/patterns/
       section:
         id: rwd-patterns
         title: "Layout Patterns"
-        href: fundamentals/layouts/rwd-patterns/
+        href: fundamentals/design-and-ui/responsive/patterns/
     -
       title: Mostly Fluid layout
-      href: fundamentals/layouts/rwd-patterns/mostly-fluid
+      href: fundamentals/design-and-ui/responsive/patterns/mostly-fluid
       section:
         id: rwd-patterns
         title: "Responsive Web design"
-        href: fundamentals/layouts/rwd-patterns/mostly-fluid
+        href: fundamentals/design-and-ui/responsive/patterns/mostly-fluid
 ---
 
 ## Table of Contents

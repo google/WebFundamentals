@@ -11,7 +11,7 @@ key-takeaways:
   webview:
     - "Enable WebView debugging in your native Android app; debug WebViews in Chrome DevTools."
     - "Access list of debug-enabled WebViews via <strong>chrome://inspect</strong>."
-    - "Debugging WebViews is the same as debugging a web page through <a href='/web/tools/setup/remote-debugging'>remote debugging</a>."
+    - "Debugging WebViews is the same as debugging a web page through <a href='/web/tools/chrome-devtools/debug/remote-debugging'>remote debugging</a>."
 ---
 
 <p class="intro">
@@ -27,7 +27,7 @@ use DevTools to debug WebView content in native Android applications.
 
 ## Configure WebViews for debugging
 
-WebView debugging must be enabled from within your application. To enable WebView debugging, call the static method [setWebContentsDebuggingEnabled](http://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)) on the WebView class.
+WebView debugging must be enabled from within your application. To enable WebView debugging, call the static method [setWebContentsDebuggingEnabled](https://developer.android.com/reference/android/webkit/WebView.html#setWebContentsDebuggingEnabled(boolean)) on the WebView class.
 
 {% highlight javascript %}
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

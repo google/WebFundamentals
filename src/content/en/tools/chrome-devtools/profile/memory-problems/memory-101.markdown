@@ -23,7 +23,7 @@ notes:
 </p>
 
 The terms and notions described here refer to the
-[Chrome DevTools Heap Profiler](/web/tools/profile-performance/memory-problems/heap-snapshots).
+[Chrome DevTools Heap Profiler](/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots).
 If you have ever worked with either the Java, .NET, or some other memory profiler, then this may be a refresher.
 
 {% include shared/toc.liquid %}
@@ -81,7 +81,7 @@ The heap is a network of interconnected objects. In the mathematical world, this
 * **Nodes** (*or objects*) are labelled using the name of the *constructor* function that was used to build them.
 * **Edges** are labelled using the names of *properties*.
 
-Learn [how to record a profile using the Heap Profiler](/web/tools/profile-performance/memory-problems/heap-snapshots).
+Learn [how to record a profile using the Heap Profiler](/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots).
 Some of the eye-catching things we can see
 in the Heap Profiler recording below include distance:
 the distance from the GC root.

@@ -29,7 +29,7 @@ This will start a web server on the default HTTP port 80. Navigate to [localhost
 
 To view your own work in the **_app_** directory, navigate to [localhost/app](http://localhost/app). To view the examples of completed code for each step, navigate to the directories in [localhost/completed](http://localhost/completed).
 
-If you don't have Python, you can get it [here](https://www.python.org/downloads/). If there are problems starting the server, [check](http://www.google.com/search?q=what+is+using+port+80) that there is not another service using port 80.
+If you don't have Python, you can get it [here](https://www.python.org/downloads/). If there are problems starting the server, [check](https://www.google.com/search?q=what+is+using+port+80) that there is not another service using port 80.
 
 The command line examples in this codelab use the bash shell.
 

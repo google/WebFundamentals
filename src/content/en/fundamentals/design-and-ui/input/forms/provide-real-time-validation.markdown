@@ -43,7 +43,7 @@ comments:
 ### The `pattern` attribute
 
 The `pattern` attribute specifies a [regular
-expression](http://en.wikipedia.org/wiki/Regular_expression) used to validate an
+expression](https://en.wikipedia.org/wiki/Regular_expression) used to validate an
 input field. For example, to validate a US Zip code (5 digits, sometimes
 followed by a dash and an additional 4 digits), we would set the `pattern` like
 this:

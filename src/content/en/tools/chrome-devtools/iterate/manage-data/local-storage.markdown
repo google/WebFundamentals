@@ -119,7 +119,7 @@ The table of cached resources includes the following properties for each resourc
 * **Type** — The type of cached resource, which can have one of the following 
   values:
     * **Master** — The resource was added to the cache because its 
-      [manifest](http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-html-manifest) 
+      [manifest](https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-html-manifest) 
       attribute indicated that this was its cache.
     * **Explicit** — The resource was explicitly listed in the application's 
       cache manifest file.
@@ -128,7 +128,7 @@ The table of cached resources includes the following properties for each resourc
     * **Fallback** — The resource was specified as a fallback if a resource is inaccessible.
 * **Size** — Size of the cached resource.
 
-The Resources panel displays the current [status](http://www.whatwg.org/specs/web-apps/current-work/#dom-appcache-status) 
+The Resources panel displays the current [status](https://www.whatwg.org/specs/web-apps/current-work/#dom-appcache-status) 
 of the application cache along with a colored status icon (green, yellow, or red). The following are the possible status values and their descriptions:
 
 <table class="mdl-data-table">

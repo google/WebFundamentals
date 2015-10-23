@@ -16,7 +16,7 @@ we use to take full advantage of ES2015 when building JavaScript web-apps.
 # Transpilation with Babel
 
 Although JavaScript engines are making great
-[progress](http://kangax.github.io/compat-table/es6/) in implementing ES2015
+[progress](https://kangax.github.io/compat-table/es6/) in implementing ES2015
 features natively, there is one gotcha. To use the complete set of features
 today, you will need to transpile your code back down to ES5 so it can be
 interpreted by current browsers. Thankfully, tools like Babel exist that make
@@ -303,7 +303,7 @@ console.log('foo ${fn()} bar');
 {% endhighlight %}
 
 You can learn more from [this handy blog post by
-Addy](https://developers.google.com/web/updates/2015/01/ES6-Template-Strings?hl=en).
+Addy](/web/updates/2015/01/ES6-Template-Strings).
 
 ## Shorthand Object Literals
 

@@ -19,7 +19,7 @@ Chrome 42 hit stable this week and with it comes a number of new features. Push 
 
 [https://twitter.com/ChromiumDev/status/590169593110335488](https://twitter.com/ChromiumDev/status/590169593110335488)
 
-[http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web](http://updates.html5rocks.com/2015/03/push-notificatons-on-the-open-web)
+[http://updates.html5rocks.com/2015/03/push-notifications-on-the-open-web](http://updates.html5rocks.com/2015/03/push-notifications-on-the-open-web)
 
 [http://updates.html5rocks.com/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android](http://updates.html5rocks.com/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android)
 
@@ -39,7 +39,7 @@ Protocol relative URLs are now an anti-pattern. Tweeted by Paul Irish this week,
 
 [https://twitter.com/paul_irish/status/588502455530311680](https://twitter.com/paul_irish/status/588502455530311680)
 
-[http://www.paulirish.com/2010/the-protocol-relative-url/](http://www.paulirish.com/2010/the-protocol-relative-url/)
+[https://www.paulirish.com/2010/the-protocol-relative-url/](https://www.paulirish.com/2010/the-protocol-relative-url/)
 
 [http://www.netresec.com/?page=Blog&month=2015-03&post=China%27s-Man-on-the-Side-Attack-on-GitHub](http://www.netresec.com/?page=Blog&month=2015-03&post=China%27s-Man-on-the-Side-Attack-on-GitHub)
 
@@ -82,4 +82,4 @@ JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/)
 Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/)
 HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/)
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+Subscribe to the Google Developers channel at: [https://goo.gl/mQyv5L](https://goo.gl/mQyv5L)
