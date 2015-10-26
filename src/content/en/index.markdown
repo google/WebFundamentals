@@ -1,5 +1,5 @@
 ---
-layout: shared/wide
+layout: shared/root
 description: "Web Landing"
 title: "Web @ Google Developers"
 ---
@@ -15,28 +15,55 @@ title: "Web @ Google Developers"
 
 <div class="wf-subheading">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col wf-showcase__title">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet wf-showcase__title">
       <h2>Next Generation Web</h2>
       <p class="mdl-typography--font-light">
-        The average user visits 100+ sites per month on the mobile web - how will you be discovered?
+        The average user visits 100+ sites per month on the mobile web - will yours be one of them?
       </p>
     </div>
-    <div class="mdl-cell mdl-cell--6-col">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
       <img src="/web/imgs/landing-devices.png">
     </div>
   </div>
 </div>
 
-<div class="">
+<div class="wf-landing-section">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <h3>Web Fundamentals</h3>
-      <p>
-        Not sure where to start? Our getting started guides will walk you through the key things you need to know and help you figure out where to go next.
-      </p>
-      <a href="/web/fundamentals/getting-started/">Get started</a>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      {% ytvideo X1F8GEiZf9o %}
     </div>
-    <div class="mdl-cell mdl-cell--6-col">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      <div class="wf-landing-whatsnew">
+        <h4>Push notifications</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a href="/web/fundamentals/">Learn more</a>
+      </div>
+      <div class="wf-landing-whatsnew">
+        <h4>Add to home screen</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a href="/web/fundamentals/">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="wf-landing-section wf-secondaryheading">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      <h3>Web<b>Fundamentals</b></h3>
+      <p>
+        WebFundamentals is a comprehensive resource for web development best practices, designed to help you add the right features and experiences to your web project. If you’re new to web development or just looking to make your project better, we’ve got you covered.
+      </p>
+      <a href="/web/fundamentals/">Jump in</a>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <img src="/web/imgs/dgc-web-w1x.jpg">
     </div>
   </div>
@@ -48,102 +75,85 @@ title: "Web @ Google Developers"
   }
 </style>
 
-<div class="wf-secondaryheading">
+<div class="wf-landing-section wf-landing-tools">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <a href="#"><img class="tools-thumb" src="/web/tools/imgs/chrome-devtools.png"></a>
-      <a href="#"><img class="tools-thumb" src="/web/tools/starter-kit/images/thumb.jpg"></a>
-      <a href="#"><img class="tools-thumb" src="/web/tools/polymer-starter-kit/thumb.jpg"></a>
-      <a href="#"><img class="tools-thumb" src="/web/tools/imgs/mdl-thumb.png"></a>
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--hide-phone">
+      <a href="/web/tools/chrome-devtools/">
+        <img class="wf-landing-tool-img" src="/web/tools/imgs/chrome-devtools.png">
+      </a>
+      <a href="/web/tools/starter-kit/">
+        <img class="wf-landing-tool-img" src="/web/tools/starter-kit/images/thumb.jpg">
+      </a>
     </div>
-    <div class="mdl-cell mdl-cell--6-col">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--hide-phone">
+      <a href="/web/tools/polymer-starter-kit/">
+        <img class="wf-landing-tool-img" src="/web/tools/polymer-starter-kit/thumb.jpg">
+      </a>
+      <a href="http://www.getmdl.io/">
+        <img class="wf-landing-tool-img" src="/web/tools/imgs/mdl-thumb.png">
+      </a>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Get Productive</h3>
       <p>Discover our tools and kickstart your development</p>
       <ul>
-        <li><a href="/web/tools/devtools/">Chrome Dev Tools</a></li>
-        <li><a href="/web/tools/devtools/">Web Starter Kit</a></li>
-        <li><a href="/web/tools/devtools/">Polymer Start Kit</a></li>
-        <li><a href="/web/tools/devtools/">Material Design Lite</a></li>
+        <li><a href="/web/tools/chrome-devtools/">Chrome Dev Tools</a></li>
+        <li><a href="/web/tools/starter-kit/">Web Starter Kit</a></li>
+        <li><a href="/web/tools/polymer-starter-kit/">Polymer Start Kit</a></li>
+        <li><a href="http://www.getmdl.io/">Material Design Lite</a></li>
       </ul>
     </div>
   </div>
 </div>
 
-<div class="">
+<div class="wf-landing-section wf-landing-casestudies wf-secondaryheading">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <h3>What's new?</h3>
-      <p>
-        Discover the latest API’s coming to the Web Platform, find out what the Chrome team are working on and check out the latest features in DevTools.
-      </p>
-      <ul>
-        <li><a href="#">Push notifications</a></li>
-        <li><a href="#">Add to home screen</a></li>
-        <li><a href="#">More updates</a></li>
-      </ul>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <img src="/web/imgs/dgc-web-w1x.jpg">
-    </div>
-  </div>
-</div>
-
-<div class="wf-secondaryheading">
-  <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <img src="https://placehold.it/350x225">
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Success stories</h3>
       <p>
         See how our partners, from publishing to ecommerce, drive discovery and re-engagement with a rich web experience. More traffic and users means more revenue for your business.
       </p>
-      <a href="#">Showcase</a>
+      <a href="/web/showcase/">Showcase</a>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      <img src="https://placehold.it/450x225">
     </div>
   </div>
 </div>
 
-<div class="">
+<div class="wf-landing-section wf-landing-update">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col">
-      <h4>Performance</h4>
-      <img src="https://placehold.it/150x150">
-      <p>The rail performance model</p>
-      <a href="#">Learn more</a>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <h4>Security</h4>
-      <img src="https://placehold.it/150x150">
-      <p>Keep your users safe with HTTPS</p>
-      <a href="#">Learn more</a>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <h4>Shows</h4>
-      <img src="https://placehold.it/150x150">
-      <p>Google web engineers discuss how they build web apps</p>
-      <a href="#">Learn more</a>
+    <h3 class="mdl-cell mdl-cell--12-col">What's new?</h3>
+    <div class="mdl-cell mdl-cell--4-col wf-landing-update-item">
+      <h4>title</h4>
+      <img src="https://placehold.it/350x225">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p><a href="#">Learn more</a></p>
     </div>
 
-    <div class="mdl-cell mdl-cell--4-col">
-      <a href="#">
-        <img src="https://placehold.it/100x100">
-        <h5>Blog</h5>
-        <p>Find out the latest on Chrome</p>
-      </a>
+    <div class="mdl-cell mdl-cell--4-col wf-landing-update-item">
+      <h4>title</h4>
+      <img src="https://placehold.it/350x225">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p><a href="#">Learn more</a></p>
+
     </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <a href="#">
-        <img src="https://placehold.it/100x100">
-        <h5>Goolge Webmasters</h5>
-        <p>Follow us for tips, Q&A and webinars</p>
-      </a>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <a href="#">
-        <img src="https://placehold.it/100x100">
-        <h5>Videos</h5>
-        <p>Watch videos and talks</p>
-      </a>
+
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet wf-landing-update-item">
+      <h4>title</h4>
+      <img src="https://placehold.it/350x225">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <p><a href="#">Learn more</a></p>
     </div>
   </div>
 </div>
+
