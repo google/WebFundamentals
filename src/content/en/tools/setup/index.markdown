@@ -5,6 +5,7 @@ description: "Set up your workspace to include a good editor, debugging, and bui
 published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 1
+translation_priority: 1
 ---
 
 <p class="intro">

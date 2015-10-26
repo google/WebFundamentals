@@ -9,6 +9,7 @@ authors:
 published_on: 2015-07-09
 updated_on: 2015-07-31
 order: 3
+translation_priority: 1
 key-takeaways:
   - "Don't manually copy changes to local files. Use workspaces to persist changes made in DevTools to your local resources."
   - "Stage your local files to your browser. Map files to URLs."

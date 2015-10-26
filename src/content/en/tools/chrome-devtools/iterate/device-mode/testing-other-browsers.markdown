@@ -8,6 +8,7 @@ authors:
 published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 4
+translation_priority: 1
 key-takeaways:
   emulator: 
     - "When you don’t have a particular device, or want to do a spot check on something, the best option is to emulate the device right inside your browser."

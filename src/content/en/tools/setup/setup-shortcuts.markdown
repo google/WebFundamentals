@@ -8,6 +8,7 @@ authors:
 published_on: 2014-09-25
 updated_on: 2015-04-14
 order: 4
+translation_priority: 1
 key-takeaways:
   commandlinetools:
     - "Make the command line work for you; create aliases that are easy to remember and fast to type."

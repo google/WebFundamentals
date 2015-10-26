@@ -3,6 +3,7 @@ layout: shared/wide
 description: "Service Worker Libraries."
 title: "Service Worker Libraries"
 order: 6
+translation_priority: 1
 feedName: sw-toolbox Releases
 feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
 ---
