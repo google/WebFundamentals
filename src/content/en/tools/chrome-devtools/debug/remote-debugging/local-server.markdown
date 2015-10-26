@@ -7,6 +7,7 @@ authors:
 published_on: 2015-04-14
 updated_on: 2015-04-14
 order: 2
+translation_priority: 1
 key-takeaways:
   local-server:
     - "Use port forwarding when your device can't access your development server's network."

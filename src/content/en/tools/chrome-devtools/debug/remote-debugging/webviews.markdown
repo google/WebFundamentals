@@ -7,6 +7,7 @@ authors:
 published_on: 2015-04-14
 updated_on: 2015-07-30
 order: 3
+translation_priority: 1
 key-takeaways:
   webview:
     - "Enable WebView debugging in your native Android app; debug WebViews in Chrome DevTools."
