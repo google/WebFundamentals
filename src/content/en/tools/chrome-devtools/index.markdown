@@ -3,6 +3,7 @@ layout: shared/wide
 description: "The Chrome DevTools are Chrome's built-in authoring and debugging tool."
 title: "Chrome DevTools"
 order: 3
+translation_priority: 1
 ---
 
 <div class="wf-devtools-wrapper">

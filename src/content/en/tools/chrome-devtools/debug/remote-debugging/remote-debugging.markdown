@@ -7,6 +7,7 @@ authors:
 published_on: 2015-04-14
 updated_on: 2015-04-22
 order: 1
+translation_priority: 1
 key-takeaways:
   real: 
     - "There's no substitute for debugging your site on a real device. Debug browser tabs on your device from your development workspace using remote debugging."

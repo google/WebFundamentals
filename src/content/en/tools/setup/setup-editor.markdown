@@ -8,6 +8,7 @@ authors:
 published_on: 2014-05-29
 updated_on: 2015-04-14
 order: 1
+translation_priority: 1
 key-takeaways:
   editor:
     - "Choose an editor that lets you customize shortcuts and has lots of plugins to help you write better code."

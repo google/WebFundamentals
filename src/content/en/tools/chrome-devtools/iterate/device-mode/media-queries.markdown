@@ -5,6 +5,7 @@ description: "Preview styles for targeted screen sizes using Device Mode's Media
 published_on: 2015-04-14
 updated_on: 2015-07-31
 order: 3
+translation_priority: 1
 authors:
   - megginkearney
 translation_priority: 0

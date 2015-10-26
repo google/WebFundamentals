@@ -6,7 +6,7 @@ published_on: 2015-09-30
 updated_on: 2015-10-01
 authors:
   - petelepage
-translation_priority: 1
+translation_priority: 3
 order: 1
 key-takeaways:
   tldr: 

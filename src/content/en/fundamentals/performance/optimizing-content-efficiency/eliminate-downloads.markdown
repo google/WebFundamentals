@@ -4,6 +4,7 @@ title: "Eliminating unnecessary downloads"
 published_on: 2014-04-01
 updated_on: 2014-04-29
 order: 2
+translation_priority: 0
 authors:
   - ilyagrigorik
 key-takeaways:
