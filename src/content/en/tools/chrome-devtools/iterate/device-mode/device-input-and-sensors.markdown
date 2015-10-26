@@ -5,6 +5,7 @@ description: "Touch screens, GPS chips, and accelerometers can be difficult to t
 published_on: 2015-04-14
 updated_on: 2015-05-18
 order: 2
+translation_priority: 1
 authors:
   - megginkearney
 key-takeaways:

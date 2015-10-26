@@ -7,6 +7,7 @@ authors:
 published_on: 2015-04-14
 updated_on: 2015-04-23
 order: 1
+translation_priority: 1
 key-takeaways:
   device-mode:
     - "Enable Device Mode and turn your viewport into a device emulator."

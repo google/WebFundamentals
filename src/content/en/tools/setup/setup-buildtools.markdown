@@ -7,6 +7,7 @@ authors:
 published_on: 2014-09-25
 updated_on: 2015-04-14
 order: 6
+translation_priority: 1
 key-takeaways:
   build-process:
     - "Your build process tools must optimise for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images."

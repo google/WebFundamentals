@@ -8,6 +8,7 @@ authors:
 published_on: 2015-08-04
 updated_on: 2015-08-04
 order: 4
+translation_priority: 1
 key-takeaways:
     - "Preprocessors let you use features in CSS and JavaScript that your browser doesn't support natively, for example, CSS variables."
     - "If you're using preprocessors, map your original source files to the rendered output using Source Maps."
