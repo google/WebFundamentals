@@ -26,7 +26,7 @@ For example:
 * For a video chat, choose internal or external microphone or camera.
 
 All this functionality is exposed by the  MediaDevices object, which is returned
-by `navigator.mediaDevices()`.
+by `navigator.mediaDevices`.
 
 MediaDevices has two methods, both implemented in Chrome 47 on desktop and
 Android: `enumerateDevices()` and `getUserMedia()`.
