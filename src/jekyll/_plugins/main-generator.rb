@@ -281,7 +281,9 @@ module Jekyll
         page = ShowcasePage.new(site, relative_dir, file_name, langcode)
       when 'styleguide'
         page = LanguagePage.new(site, relative_dir, file_name, langcode)
-      when '.', 'resources'
+      when '.'
+        page = LandingPage.new(site, relative_dir, file_name, langcode)
+      when 'resources'
         page = LanguagePage.new(site, relative_dir, file_name, langcode)
       else
         Jekyll.logger.info "Unsure what Page to use for markdown files in the \"" +

@@ -1,0 +1,68 @@
+@import "global-base";
+
+/* ** Note **
+ * If you change these colors, you must update the theme color in the
+ * src/jekyll/_plugins/pages/FundamentalsPage.rb generator to match.
+ */
+$color-primary: $palette-indigo-500;
+$color-accent: unquote("rgb(#{$palette-indigo-300})");
+
+@import "global";
+
+
+.page-content {
+  max-width: 1024px;
+}
+
+.wf-landing-section {
+  margin-top: 2em;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.wf-landing-whatsnew {
+  margin-bottom: 2em;
+
+  h4 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+.wf-landing-tools {
+
+  img {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+.wf-landing-update {
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .wf-landing-update-item {
+    h4 {
+      margin-top: 0;
+    }
+    p {
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+
+
