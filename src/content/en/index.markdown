@@ -13,7 +13,19 @@ title: "Web @ Google Developers"
   {% endif %}
 {% endfor %}
 
-<div class="wf-subheading">
+<div class="wf-subheading" hidden>
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col wf-showcase__title">
+      <h2>Next Generation Web</h2>
+      <p class="mdl-typography--font-light">
+        The average user visits 100+ sites per month on the mobile web - 
+        will yours be one of them?
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="wf-subheading" hidden>
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet wf-showcase__title">
       <h2>Next Generation Web</h2>
@@ -27,8 +39,12 @@ title: "Web @ Google Developers"
   </div>
 </div>
 
+
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
+    <h2 class="mdl-cell mdl-cell--12-col">
+      What's hot?
+    </h2>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       {% ytvideo X1F8GEiZf9o %}
     </div>
@@ -59,7 +75,10 @@ title: "Web @ Google Developers"
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Web<b>Fundamentals</b></h3>
       <p>
-        WebFundamentals is a comprehensive resource for web development best practices, designed to help you add the right features and experiences to your web project. If you’re new to web development or just looking to make your project better, we’ve got you covered.
+        WebFundamentals is a comprehensive resource for web development best 
+        practices, designed to help you add the right features and experiences 
+        to your web project. If you’re new to web development or just looking 
+        to make your project better, we’ve got you covered.
       </p>
       <a href="/web/fundamentals/">Jump in</a>
     </div>
@@ -68,12 +87,6 @@ title: "Web @ Google Developers"
     </div>
   </div>
 </div>
-
-<style>
-  .tools-thumb {
-    width: 175px;
-  }
-</style>
 
 <div class="wf-landing-section wf-landing-tools">
   <div class="page-content mdl-grid">
@@ -111,12 +124,14 @@ title: "Web @ Google Developers"
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Success stories</h3>
       <p>
-        See how our partners, from publishing to ecommerce, drive discovery and re-engagement with a rich web experience. More traffic and users means more revenue for your business.
+        See how our partners, from publishing to ecommerce, drive discovery 
+        and re-engagement with a rich web experience. More traffic and users 
+        means more revenue for your business.
       </p>
       <a href="/web/showcase/">Showcase</a>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <img src="https://placehold.it/450x225">
+      <img src="https://placehold.it/500x250">
     </div>
   </div>
 </div>
@@ -124,36 +139,47 @@ title: "Web @ Google Developers"
 <div class="wf-landing-section wf-landing-update">
   <div class="page-content mdl-grid">
     <h3 class="mdl-cell mdl-cell--12-col">What's new?</h3>
-    <div class="mdl-cell mdl-cell--4-col wf-landing-update-item">
-      <h4>title</h4>
-      <img src="https://placehold.it/350x225">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <p><a href="#">Learn more</a></p>
+    {% for post in updates.index.updates | limit:3 %}
+    {% assign authorKey = post.authors[0] %}
+    {% assign author = site.data["contributors"][authorKey] %}
+    <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--2dp wf-card">
+      <a style="background-image:url({{post.featured_image}})" class="mdl-card__title" href="{{post.relative_url}}">
+        <div>
+          <h2 class="mdl-card__title-text">{{post.title}}</h2>
+        </div>
+      </a>
+      <div class="mdl-card__supporting-text">
+        <span>{{post.description}}</span>
+      </div>
+      <div class="mdl-card__actions mdl-card--border wf-update-card--actions">
+        <span class="wf-update-card--author">
+          {{author.name.given}} {{author.name.family}}
+        </span>
+        <span class="wf-update-card--date">
+          {{post.published_on | date: '%B %-d, %Y' }}
+        </span>
+      </div>
+      <div class="mdl-card__menu">
+      </div>
     </div>
+    {% endfor %}
+  </div>
+</div>
 
-    <div class="mdl-cell mdl-cell--4-col wf-landing-update-item">
-      <h4>title</h4>
-      <img src="https://placehold.it/350x225">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <p><a href="#">Learn more</a></p>
-
+<div class="wf-landing-section wf-landing-gmp wf-secondaryheading">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
+      <img src="https://placehold.it/500x250">
     </div>
-
-    <div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet wf-landing-update-item">
-      <h4>title</h4>
-      <img src="https://placehold.it/350x225">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      <h3>Google APIs for the web</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Simplify your web development, grow your user base, and monetize more 
+        effectively with Google services for the web.
       </p>
-      <p><a href="#">Learn more</a></p>
+      <a href="#">Develop, engage &amp; earn</a>
     </div>
   </div>
 </div>
+
 
