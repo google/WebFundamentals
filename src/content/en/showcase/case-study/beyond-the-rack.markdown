@@ -7,13 +7,13 @@ published_on: 2015-10-25
 updated_on: 2015-10-25
 authors:
   - paulkinlan
-featured_image: images/beyond-the-rack/1.png
+featured_image: images/beyond-the-rack/card.jpg
 showcase:
-  key_image: images/beyond-the-rack/1.png
+  key_image: images/beyond-the-rack/btr-2.png
   link: http://www.beyondtherack.com/
 ---
 
-<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="#">Download PDF Case study</a>
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="pdfs/btr-web-push-casestudy.pdf">Download PDF Case study</a>
 
 Beyond the Rack is a leading online retailer that runs sale events of designer products
 for its 14 million members globally. Until recently, the company primarily depended on 
@@ -24,6 +24,8 @@ mobile shopping platform partner Mobify. Working with Mobify, Beyond the Rack im
 push notifications on their mobile website and saw a **50%** increase in repeat visits within 
 3 months. The company also found push notifications delivered higher value visits, with 
 members spending **26%** more per visit on average.
+
+<img src="images/beyond-the-rack/btr-steps.jpg">
 
 ### Timely, relevant notifications
 
