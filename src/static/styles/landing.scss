@@ -8,7 +8,7 @@ $color-primary: $palette-indigo-500;
 $color-accent: unquote("rgb(#{$palette-indigo-300})");
 
 @import "global";
-
+@import "partials/components/wf-updates-card";
 
 .page-content {
   max-width: 1024px;
@@ -48,6 +48,14 @@ $color-accent: unquote("rgb(#{$palette-indigo-300})");
   }
 }
 
+.wf-landing-casestudies {
+
+  img {
+    width: 100%;
+  }
+}
+
+
 .wf-landing-update {
   h3 {
     margin-bottom: 0;
@@ -64,5 +72,9 @@ $color-accent: unquote("rgb(#{$palette-indigo-300})");
   }
 }
 
-
+.wf-landing-gmp {
+  img {
+    width: 100%;
+  }
+}
 
