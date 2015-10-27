@@ -2,9 +2,8 @@
 layout: updates/post
 title: "Web Animations Resources"
 description: "Resources and more for the Web Animations API"
-article:
-  written_on: 2015-10-27
-  updated_on: 2015-10-27
+published_on: 2015-10-27
+updated_on: 2015-10-27
 authors:
   - samthorogood
 tags:
@@ -22,7 +21,8 @@ At its core, the API provides the `Element.animate()` method.
 Let's see an example, which animates the background color from red to green-
 
 {% highlight javascript %}
-var player = document.body.animate([{'background': 'red'}, {'background': 'green'}], 1000);
+var player = document.body.animate(
+    [{'background': 'red'}, {'background': 'green'}], 1000);
 {% endhighlight %}
 
 This method is supported in all modern browsers, with a great polyfill fallback (more on that later).
@@ -41,9 +41,7 @@ In most of these codelabs, you'll take static content and enhance it with animat
 [These codelabs][web-animations-codelabs], and related links or resources, are the absolute best place to start if you're looking to understand the new primitives available to you in Web Animations.
 For an idea of what you might build, check out this Android-inspired reveal effect-
 
-
-<img src="/web/updates/images/2015/10/web-animations-resources-codelab.gif" />
-<img src="/web/updates/images/2015-10-27-web-animations-resources/codelab.gif" />
+<img src="/web/updates/images/2015/10/web-animations-resources-codelab.gif" alt="Preview of codelab result" />
 
 So if you're just getting started, then look no further!
 
@@ -76,7 +74,10 @@ In all cases, you can simply include the polyfill in a script tag before any oth
 {% highlight HTML %}
 <script src="https://cdn.jsdelivr.net/web-animations/latest/web-animations.min.js"></script>
 <script>
-  document.body.animate([{'background': 'red'}, {'background': 'green'}], 1000);
+  document.body.animate([
+    {'background': 'red'},
+    {'background': 'green'}
+  ], 1000);
 </script>
 {% endhighlight %}
 
