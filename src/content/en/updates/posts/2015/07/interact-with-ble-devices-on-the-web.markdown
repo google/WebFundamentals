@@ -167,7 +167,6 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
   return server.getPrimaryService('battery_service');
 })
 .then(service => {
-  if (!service) throw 'Battery Service not found';
   // Getting Battery Level Characteristic...
   return service.getCharacteristic('battery_level');
 })
@@ -199,10 +198,7 @@ page](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicV
 navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
 .then(device => device.connectGATT())
 .then(server => server.getPrimaryService('heart_rate'))
-.then(service => {
-  if (!service) throw 'Heart Rate Service not found';
-  return service.getCharacteristic('heart_rate_control_point');
-})
+.then(service => service.getCharacteristic('heart_rate_control_point'))
 .then(characteristic => {
   // Writing 1 is the signal to reset energy expended.
   var resetEnergyExpended = new Uint8Array([1]);
