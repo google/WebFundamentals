@@ -41,6 +41,7 @@
     {% assign wptScore = "high" %}
   {% endif %}
 
+  {% if showcase.scores %}
   <div class="wf-showcase__spotlight-scores">
     <div class="wf-showcase__score-container">
       <div class="wf-showcase__score wf-showcase__score_{{uxScore}}"><strong>{{showcase.scores.pagespeed.ux}}</strong>/100</div>
@@ -55,6 +56,7 @@
       <a href="{{showcase.scores.webpagetest.result}}">Speed Index (3G)</a>
     </div>
   </div>
+  {% endif %}
 
   <section class="wf-showcase__section-container">
     <h3 id="tldr">{{"tl_dr" | localize_string }}</h3>
