@@ -2,7 +2,7 @@
 layout: showcase/casestudy
 title: "Beyond the Rack"
 subtitle: "Beyond the Rack re-engages users on the mobile web, increasing revenue per visit by 26% with push notifications"
-description: "&quot;<span style='font-style: italic;'>Push notifications allowed us to bring one of the most compelling capabilities from our native app to our mobile site. We see a direct 20% click through rate from push notifications—having another channel to reach our users is a game changer.</span>&quot; <br><br> &mdash;  Richard Cohene, VP Marketing, Beyond the Rack"
+description: "&quot;<em>Push notifications</em> allowed us to bring one of the most compelling capabilities from our native app to our mobile site. We see a direct 20% click through rate from push notifications—having another channel to reach our users is a game changer.&quot; <br><br> &mdash;  Richard Cohene, VP Marketing, Beyond the Rack"
 published_on: 2015-10-25
 updated_on: 2015-10-25
 authors:
