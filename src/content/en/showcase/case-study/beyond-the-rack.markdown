@@ -9,7 +9,7 @@ authors:
   - paulkinlan
 featured_image: images/beyond-the-rack/card.jpg
 showcase:
-  key_image: images/beyond-the-rack/btr-2.png
+  key_image: images/beyond-the-rack/btr-1.png
   link: http://www.beyondtherack.com/
 ---
 
