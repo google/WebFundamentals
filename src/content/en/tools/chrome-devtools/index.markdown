@@ -29,6 +29,8 @@ translation_priority: 1
     </div>
   </div>
 
+  {% include page-structure/site-promo-banner.liquid %}
+
   <div class="wf-devtools-panels">
     
     <h2 class="page-content mdl-typography--font-light">Discover the Panels</h2>

@@ -17,6 +17,8 @@ translation_priority: 0
   </div>
 </div>
 
+{% include page-structure/site-promo-banner.liquid %}
+
 <div class="page-content">
 
   <div class="mdl-grid">

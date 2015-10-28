@@ -12,6 +12,8 @@ title: "Shows"
   </div>
 </div>
 
+{% include page-structure/site-promo-banner.liquid %}
+
 <div class="page-content">
   <div class="mdl-grid">
     {% for subdirectory in page.context.subdirectories %}

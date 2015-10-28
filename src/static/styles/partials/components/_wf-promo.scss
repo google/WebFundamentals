@@ -1,0 +1,58 @@
+/* Promo Small */
+
+.wf-promo-small-container {
+  border-top-style: solid;
+  border-color: $color-accent;
+  border-width: $base-line / 2;
+  margin-bottom:$base-line * 2;
+
+  img {
+    max-height: 42px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+}
+
+.wf-promo-small__title {
+  font-size: 1em;
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+
+.wf-promo-small__description {
+  margin: 0;
+}
+
+/* Promo Full Sized Banner */
+
+.wf-promo-banner-container {
+  text-align: center;
+  padding: 20px;
+  vertical-align: top;
+}
+
+.wf-promo-banner__image {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.wf-promo-banner__image img {
+  max-height: 100px;
+}
+
+.wf-promo-banner__text {
+  text-align: left;
+  display: inline-block;
+  margin-left: 1em;
+
+  .wf-promo-banner__title {
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
+
+  .wf-promo-banner__description {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

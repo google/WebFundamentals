@@ -26,6 +26,8 @@ feedURL: https://github.com/google/web-starter-kit/releases.atom
   </div>
 </div>
 
+{% include page-structure/site-promo-banner.liquid %}
+
 <div class="page-content">
 
   <h3>What is Web Starter Kit?</h3>

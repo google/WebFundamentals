@@ -54,6 +54,8 @@ description: "Showcase is a page highlighting some of the great web apps availab
 </div>
 {% endif %}
 
+{% include page-structure/site-promo-small.liquid %}
+
 <div class="page-content" style="clear:both">
   <div class="mdl-grid">
     <p class="mdl-cell mdl-cell--12-col">
