@@ -13,6 +13,10 @@ $color-accent: unquote("rgb(#{$palette-blue-300})");
 
 .wf-devtools-wrapper {
 
+  .wf-promo-banner {
+    margin-top: -24px;
+  }
+
   h2 {
     color: #757575;
   }

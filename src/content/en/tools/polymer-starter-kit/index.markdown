@@ -23,6 +23,7 @@ feedURL: https://github.com/polymerelements/polymer-starter-kit/releases.atom
   </div>
 </div>
 
+{% include page-structure/site-promo-banner.liquid %}
 
 <div class="page-content">
   <div class="mdl-grid mdl-typography--text-center">
