@@ -28,6 +28,7 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
   </div>
 </div>
 
+{% include page-structure/site-promo-banner.liquid %}
 
 <div class="page-content">
   <h2>Ship your shell with <code>sw-precache</code></h2>

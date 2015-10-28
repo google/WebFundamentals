@@ -57,6 +57,13 @@ WFStyleguideLocation: resources/styleguide/
 WFarray: []
 
 
+# Custom Promo across the entire site, use with care.
+# Image is optional, 
+WFPromo: 
+  title: "Chrome Developer Summit"
+  image: "https://www.gstatic.com/images/branding/product/1x/chrome_512dp.png"
+  text: "Nov 17-18, Mountain View, CA - <a href='https://developer.chrome.com/devsummit'>Learn more</a>"
+
 ## Unknowns
 fundamentals: /web/fundamentals
 spotlights: false
