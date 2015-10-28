@@ -25,7 +25,7 @@ push notifications on their mobile website and saw a **50%** increase in repeat 
 3 months. The company also found push notifications delivered higher value visits, with 
 members spending **26%** more per visit on average.
 
-<img src="images/beyond-the-rack/btr-steps.jpg">
+<img src="images/beyond-the-rack/btr-steps.jpg" alt="Three steps of Push: Ask, Register, Engage">
 
 ### Timely, relevant notifications
 
