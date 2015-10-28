@@ -1,0 +1,19 @@
+{% if site.WFPromo %}
+<div class="wf-promo-banner wf-secondaryheading">
+  <div class="wf-promo-banner-container">
+    {% if site.WFPromo.image %}
+    <div class="wf-promo-banner__image">
+      <img src="{{site.WFPromo.image}}">
+    </div>
+    {% endif %}
+    <div class="wf-promo-banner__text">
+      {% if site.WFPromo.title %}
+      <h3 class="wf-promo-banner__title">{{ site.WFPromo.title }}</h3>
+      {% endif %}
+      <p class="wf-promo-banner__description">
+      {{site.WFPromo.text}}
+      </p>
+    </div>
+  </div>
+</div>
+{% endif%}
