@@ -18,6 +18,8 @@ translation_priority: 0
   </div>
 </div>
 
+{% include page-structure/site-promo-banner.liquid %}
+
 <div class="page-content mdl-grid wf-fundamentals-cta">
   {% include shared/base_card.liquid title="Get started" text="Not sure where to start? Our getting started guides will walk you through some key things you need to know and help you figure out where to go next." linkHref="/web/fundamentals/getting-started/" linkText="Get Started" imgUrl="/web/fundamentals/imgs/wsk-on-pixel-n5.jpg" %}
 
