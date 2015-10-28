@@ -16,6 +16,8 @@ description: "Sites and apps we love, regardless of their mainstream success. Al
   </div>
 </div>
 
+{% include page-structure/site-promo-banner.liquid %}
+
 <div class="page-content">
   <div class="mdl-grid">
     {% for pageInSection in page.context.pages reversed %}
