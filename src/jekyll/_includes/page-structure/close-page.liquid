@@ -3,6 +3,10 @@
     <div class="wf-footer-section">
       <ul class="wf-footer__list wf-footer__list--primary">
       {% for contentnavTocItem in page.contentnav.toc %}
+        {% if contentnavTocItem.title == 'Resources' %}
+          {% continue %}
+        {% endif %}
+
         {% if contentnavTocItem.home %}
         <a href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
           <strong>{{ contentnavTocItem.title }}</strong>
