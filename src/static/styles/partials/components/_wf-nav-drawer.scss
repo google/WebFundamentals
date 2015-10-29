@@ -56,6 +56,10 @@
   margin-bottom: 0;
 }
 
+.wf-main-nav__item a:hover {
+  text-decoration: underline;
+}
+
 // Default color for text (Black)
 .wf-main-nav__list-level-1 > .wf-main-nav__item > .wf-main-nav__link,
 .wf-main-nav__list-level-3 > .wf-main-nav__item .wf-main-nav__link {
