@@ -46,7 +46,8 @@ module Jekyll
         'layout', 'title', 'description', 'order', 'translation_priority',
         'authors', 'translators', 'comments', 'published_on', 'updated_on',
         'published', 'rss', 'comments', 'key-takeaways', 'notes',
-        'related-guides', 'html_head_social_img', 'feedName', 'feedURL'
+        'related-guides', 'html_head_social_img', 'feedName', 'feedURL',
+        'pageGroups'
       ]
 
       # This is a Jekyll::Page method (See: http://www.rubydoc.info/github/mojombo/jekyll/Jekyll/Page#process-instance_method)
@@ -153,7 +154,7 @@ module Jekyll
             puts ''
             puts '---------------------------------------------------------------'
             puts ''
-            Jekyll.logger.error "Error: Invalid Author '" + authorKey + "' found in  " + @langcode + '/' + self.relative_path
+            Jekyll.logger.error "Error: Invalid Author '" + authorKey + "' found in  " + @langcode + '/' + self.relative_path + ". Please ensure this author is added to src/content/_contributors.yaml."
             puts ''
             puts '---------------------------------------------------------------'
             puts ''

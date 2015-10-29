@@ -27,11 +27,22 @@ module Jekyll
 
       generateFeeds(site)
 
+      # Initialise the pageGroups mapping
+      site.data['pageGroups'] = {}
 
-
-      # This should run as the end of all generators and will give pages a
-      # chance to do any final work needed
       site.pages.each { |page|
+        # Add pages to site.pageGroups
+        if not page.data['pageGroups'].nil?
+          page.data['pageGroups'].each { |pageGroup|
+            pageGroup = pageGroup.downcase.strip
+
+            site.data['pageGroups'][pageGroup] ||= []
+            site.data['pageGroups'][pageGroup] << page
+          }
+        end
+
+        # This should run as the end of all generators and will give pages a
+        # chance to do any final work needed
         page.onBuildComplete()
 
         page.data['translations'].each { |langCode, translationPage|
@@ -43,6 +54,17 @@ module Jekyll
 
           translationPage.onBuildComplete()
         }
+      }
+
+
+      site.data['pageGroups'].each { |key, group|
+        group = group.sort do |a, b|
+          a_order = a.data['order'] || a.data['published_on'] || 0
+          b_order = b.data['order'] || b.data['published_on'] || 0
+          a_order <=> b_order
+        end
+
+        site.data['pageGroups'][key] = group
       }
 
       generateSamples(site)
@@ -192,8 +214,8 @@ module Jekyll
         array << page
       }
 
-      subdirectory['subdirectories'].each { |subdirectory|
-        array = array + getPages(subdirectory)
+      subdirectory['subdirectories'].each { |innerSubdirectory|
+        array = array + getPages(innerSubdirectory)
       }
 
       return array

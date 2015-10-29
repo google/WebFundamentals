@@ -21,7 +21,7 @@ We'll look at each of these in more detail below.
 
 Includes the entire contents of a file
 
-<pre>{% raw %}{% include_code src=_code/example.js %}{% endraw %}</pre>
+<pre>&#123;% include_code src=_code/example.js %&#125;</pre>
 
 {% include_code src=_code/example.js %}
 
@@ -43,7 +43,7 @@ The snippet is defined in example.html like so:
 
 You can then add it to a page with:
 
-<pre>{% raw %}{% include_code src=_code/example.html snippet=examplesnippet %}{% endraw %}</pre>
+<pre>&#123;% include_code src=_code/example.html snippet=examplesnippet %&#125;</pre>
 
 The result is:
 
@@ -53,7 +53,7 @@ The special snippet comments are removed from the code in the final docs.
 
 ### Defining the Language of Code
 
-<pre>{% raw %}{% include_code src=_code/example.js snippet=classdefinition lang=javascript %}{% endraw %}</pre>
+<pre>&#123;% include_code src=_code/example.js snippet=classdefinition lang=javascript %&#125;</pre>
 
 {% include_code src=_code/example.js snippet=classdefinition lang=javascript %}
 
@@ -66,9 +66,9 @@ appropriate link to the sample based on the current environment (development,
 This is the same as the link sample button except it's styled as a normal
 link rather than a button.
 
-<pre>{% raw %}{% link_sample _code/mse-gap.html %}
+<pre>&#123;% link_sample _code/mse-gap.html %&#125;
   Demo
-{% endlink_sample %}{% endraw %}</pre>
+&#123;% endlink_sample %&#125;</pre>
 
 {% link_sample _code/mse-gap.html %}Demo{% endlink_sample %}
 
@@ -82,9 +82,9 @@ appropriate link to the sample based on the current environment (development,
 This is the same as the link sample except it's styled as a button rather than
 a link.
 
-<pre>{% raw %}{% link_sample_button _code/mse-gap.html %}
+<pre>&#123;% link_sample_button _code/mse-gap.html %&#125;
   Demo
-{% endlink_sample_button %}{% endraw %}</pre>
+&#123;% endlink_sample_button %&#125;</pre>
 
 {% link_sample_button _code/mse-gap.html %}
   Demo
@@ -100,13 +100,13 @@ embeds.
 
 ### Tag usage
 
-<pre>{% raw %}{% ytvideo 2eu23_if6Lw %}{% endraw %}</pre>
+<pre>&#123;% ytvideo 2eu23_if6Lw %&#125;</pre>
 
 {% ytvideo 2eu23_if6Lw %}
 
 You can add additional arguments to the end of the youtube embed by adding
 them to the end of the tag.
 
-<pre>{% raw %}{% ytvideo 2eu23_if6Lw start=41 %}{% endraw %}</pre>
+<pre>&#123;% ytvideo 2eu23_if6Lw start=41 %&#125;</pre>
 
 {% ytvideo 2eu23_if6Lw start=41 %}
