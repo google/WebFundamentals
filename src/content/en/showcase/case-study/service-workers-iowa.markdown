@@ -618,4 +618,3 @@ techniques we’re describing to power your own web applications.
 Service workers are a [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement)
 that you can start using today, and when used as part of a properly structured
 web app, the speed and offline benefits are significant for your users.
-
