@@ -58,8 +58,7 @@ module VideoWrapper
 
       out =  '<div class="video-wrapper">'
       out += '<iframe src="' + iframeSrcUrl +'" '
-      # out += 'class="devsite-embedded-youtube-video" allowfullscreen '
-      out += 'class="devsite-embedded-youtube-video" '
+      out += 'class="devsite-embedded-youtube-video" allowfullscreen '
       out += 'data-video-id="' + @videoId +'" '
       out += 'data-autohide="1" data-modestbranding="1" data-controls="2" '
       out += 'data-utm-source="crdev-wf" data-showinfo="0" frameborder="0">'

@@ -12,3 +12,7 @@ $color-accent: unquote("rgb(#{$palette-blue-grey-600})");
 @import "partials/components/wf-shows-subscribe";
 @import "partials/components/wf-shows";
 @import "partials/components/wf-podcasts";
+
+.mdl-layout__content {
+  will-change: initial;
+}
