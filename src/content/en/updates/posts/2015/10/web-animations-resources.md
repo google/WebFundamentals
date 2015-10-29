@@ -66,8 +66,10 @@ To use either polyfill in your code, you have a few options.
 
 1. Install via NPM or Bower
 
+      {% highlight bash %}
       $ npm install web-animations-js
       $ bower install web-animations-js
+      {% endhighlight %}
 
 In all cases, you can simply include the polyfill in a script tag before any other code-
 
