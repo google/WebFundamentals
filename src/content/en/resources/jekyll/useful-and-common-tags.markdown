@@ -41,7 +41,7 @@ related-guides:
 
 This publishes a table of contents for the current page
 
-<pre>{% raw %}{% include shared/toc.liquid %}{% endraw %}</pre>
+<pre>&#123;% include shared/toc.liquid %&#125;</pre>
 
 {% include shared/toc.liquid %}
 
@@ -49,7 +49,7 @@ This publishes a table of contents for the current page
 
 The takeaway include is used to highlight important parts of a doc
 
-<pre>{% raw %}{% include shared/takeaway.liquid list=page.key-takeaways.example %}{% endraw %}</pre>
+<pre>&#123;% include shared/takeaway.liquid list=page.key-takeaways.example %&#125;</pre>
 
 {% include shared/takeaway.liquid list=page.key-takeaways.example %}
 
@@ -66,13 +66,13 @@ key-takeaways:
 
 ## Notes and Remembers
 
-<pre>{% raw %}{% include shared/remember.liquid list=page.notes.example %}{% endraw %}</pre>
+<pre>&#123;% include shared/remember.liquid list=page.notes.example %&#125;</pre>
 
 {% include shared/remember.liquid list=page.notes.example %}
 
 or
 
-<pre>{% raw %}{% include shared/note.liquid list=page.notes.example %}{% endraw %}</pre>
+<pre>&#123;% include shared/note.liquid list=page.notes.example %&#125;</pre>
 
 {% include shared/note.liquid list=page.notes.example %}
 
@@ -90,7 +90,7 @@ notes:
 
 ## Related Guides
 
-<pre>{% raw %}{% include shared/related_guides.liquid list=page.related-guides.example %}{% endraw %}</pre>
+<pre>&#123;% include shared/related_guides.liquid list=page.related-guides.example %&#125;</pre>
 
 {% include shared/related_guides.liquid list=page.related-guides.example %}
 
@@ -98,7 +98,7 @@ notes:
 // This should be enabled but needs a different css file that contains these styles
 ## Subscribe List
 
-<pre>{% raw %}{% include shows/subscribe.liquid %}{% endraw %}</pre>
+<pre>&#123;% include shows/subscribe.liquid %&#125;</pre>
 
 {% include shows/subscribe.liquid %}
 {% endcomment %}
@@ -110,15 +110,13 @@ code highlighter.
 
 ### Example
 
-<pre>{% raw %}
-{% highlight javascript %}
+<pre>&#123;% highlight javascript %&#125;
 if (navigator.onLine) {
   console.log('ONLINE!');
 } else {
   console.log('Connection flaky');
 }
-{% endhighlight %}
-{% endraw %}</pre>
+&#123;% endhighlight %&#125;</pre>
 
 {% highlight javascript %}
 if (navigator.onLine) {

@@ -14,9 +14,9 @@ from the current page down.
 
 You can view the content of the object for a page with:
 
-{% highlight text %}
-    {% raw %}{{page.context}}{% endraw %}
-{% endhighlight %}
+<pre>
+&#123;&#123;page.context&#125;&#125;
+</pre>
 
 ## Structure of page.context
 
@@ -42,18 +42,15 @@ The current pages context is:
 
 To display all the pages title you can use liquid like so:
 
-{% highlight text %}
-{% raw %}
-<ol>
-  {% for page in page.context.pages %}
-    <li>
-    {{page.title}}
-    </li>
-  {% endfor %}
-</ol>
-{% endraw %}
-{% endhighlight %}
-
+<pre>
+&lt;ol&gt;
+&#123;% for page in page.context.pages %&#125;
+  &lt;li&gt;
+    &#123;&#123;page.title&#125;&#125;
+    &lt;/li&gt;
+  &#123;% endfor %&#125;
+&lt;/ol&gt;
+</pre>
 
 <ol>
   {% for page in page.context.pages %}
@@ -66,18 +63,15 @@ To display all the pages title you can use liquid like so:
 To display titles for all the subdirectories you could do something
 like the following:
 
-
-{% highlight text %}
-{% raw %}
-<ol>
-  {% for subdirectory in page.context.subdirectories %}
-    <li>
-    {{subdirectory.index.title}}
-    </li>
-  {% endfor %}
-</ol>
-{% endraw %}
-{% endhighlight %}
+<pre>
+&lt;ol&gt;
+  &#123;% for subdirectory in page.context.subdirectories %&#125;
+    &lt;li&gt;
+    &#123;&#123;subdirectory.index.title&#125;&#125;
+    &lt;/li&gt;
+  &#123;% endfor %&#125;
+&lt;/ol&gt;
+</pre>
 
 # page.nextPage & page.previousPage
 
@@ -87,17 +81,9 @@ do with the nextPage and previousPage variables.
 
 This code:
 
-{% highlight text %}
-{% raw %}
-{{page.nextPage}}
-{% endraw %}
-{% endhighlight %}
+&#123;&#123;page.nextPage&#125;&#125;
 
-{% highlight text %}
-{% raw %}
-{{page.previousPage}}
-{% endraw %}
-{% endhighlight %}
+&#123;&#123;page.previousPage&#125;&#125;
 
 Will output the following (Note: you may see 0, 1 or 2 snippets depending
   on whether or not this page has a next and / or previous page):
@@ -131,11 +117,9 @@ is that it will also account for language of the current page.
 Canonical URL has some filtering done on it to become a canonical url and
 will always be the full path.
 
-{% highlight text %}
-{% raw %}
-{{page.canonical_url}}
-{% endraw %}
-{% endhighlight %}
+<pre>
+&#123;&#123;page.canonical_url&#125;&#125;
+</pre>
 
 {% highlight text %}
 {{page.canonical_url}}
@@ -145,11 +129,9 @@ will always be the full path.
 
 The relative url is the relative url for a page from the root of the domain
 
-{% highlight text %}
-{% raw %}
-{{page.relative_url}}
-{% endraw %}
-{% endhighlight %}
+<pre>
+&#123;&#123;page.relative_url&#125;&#125;
+</pre>
 
 {% highlight text %}
 {{page.relative_url}}
@@ -160,8 +142,6 @@ The relative url is the relative url for a page from the root of the domain
 This variable is defined for every page and will be true if a translation is
 no longer up to date with the primary language version, otherwise its false.
 
-{% highlight text %}
-{% raw %}
-{{page.outOfDate}}
-{% endraw %}
-{% endhighlight %}
+<pre>
+&#123;&#123;page.outOfDate&#125;&#125;
+</pre>

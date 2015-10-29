@@ -193,12 +193,12 @@ consectetur nisl.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et libero eget
 nibh porttitor maximus ac ut urna. `console.log('Inline Code')` Lorem ipsum dolor
-sit amet, consectetur adipiscing elit. 
+sit amet, consectetur adipiscing elit.
 
 ### Code Block
 
-To add code highlighting you need to the `{% raw %}{% highlight javascript %}{% endraw %}` and 
-`{% raw %}{% endhighlight %}{% endraw %}` liquid tags.
+To add code highlighting you need to the {{"&#123;% highlight javascript %&#125;"}} and
+{{"&#123;% endhighlight %&#125;"}} liquid tags.
 
 {% highlight javascript%}
 function() {
