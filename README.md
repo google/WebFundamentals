@@ -15,7 +15,7 @@ To build and run this project you need to have Ruby, Node and NPM.
 
 1. Install [XCode Command Line Tools](https://developer.apple.com/xcode/downloads/)
 1. Install node
-    * [https://nodejs.org/en/]()
+    * [https://nodejs.org/en/](https://nodejs.org/en/)
 1. Install [RVM](https://rvm.io/rubies/default)
     * `curl -sSL https://get.rvm.io | bash`
 1. Set RVM Default to 2.2.0
