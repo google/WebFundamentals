@@ -44,9 +44,9 @@ notes:
   Typography is fundamental to good design, branding, readability, and accessibility. Webfonts enable all of the above and more: the text is selectable, searchable, zoomable, and high-DPI friendly, providing consistent and sharp text rendering regardless of the screen size and resolution. Webfonts are critical to good design, UX, and performance.
 </p>
 
-{% include shared/toc.liquid %}
-
 Webfont optimization is a critical piece of the overall performance strategy. Each font is an additional resource, and some fonts may block rendering of the text, but just because the page is using webfonts doesn't mean that it has to render slower. To the contrary, an optimized font, combined with a judicious strategy for how they are loaded and applied on the page can help reduce the total page size, and improve page rendering times.
+
+{% include shared/toc.liquid %}
 
 ## Anatomy of a webfont
 
