@@ -7,23 +7,18 @@ translation_priority: 1
 order: 4
 authors:
   - paulkinlan
+  - rupl
 ---
 
 
-Turn up your speakers to full volume. Click the horn and it should make a sound.  
+Go back to the command line and switch from `master` to the `code-lab` branch:
 
-<img src="images/image01.png"  />  
+{% highlight bash %}
+git checkout -b code-lab
+{% endhighlight %}
 
-Now kill the server (ctrl-c in the command line).  This simulates the network 
-going offline. Then reload the site. The page should fully reload and you should 
-be able to still use the horn.
+This will remove all assets that were supplying offline functionality so you can add them back in by following the tutorial.
 
-<img src="images/image01.png" />  
-
-The reason why this works offline is the basis of this codelab: offline support 
-with service worker.
-
-We are now going to remove all offline support and you are going to learn how to 
-use Service Worker offline by adding it back into this application.
+Additionally, you will need to unregister the Service Worker. In Chrome you can do this by visiting `chrome://serviceworker-internals/` and clicking the **Unregister** button underneath the appropriate URL.
 
 
