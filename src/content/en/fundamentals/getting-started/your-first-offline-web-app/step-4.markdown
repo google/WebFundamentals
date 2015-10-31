@@ -7,7 +7,6 @@ translation_priority: 1
 order: 4
 authors:
   - paulkinlan
-  - rupl
 ---
 
 
