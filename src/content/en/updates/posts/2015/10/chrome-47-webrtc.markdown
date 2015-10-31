@@ -25,13 +25,12 @@ stars. Media recording has now been added to Chrome behind the experimental Web 
 
 ### Audio output device selection
 
-`MediaDevices.enumerateDevices()` has been released: more details details in [Issue
+`MediaDevices.enumerateDevices()` has been released. More details are available from [Chromium issue
 504280](https://crbug.com/504280). You can now enumerate audio output devices in
 addition to the audio input and video input devices that `MediaStreamTrack.getSources()` already provides. You can find out more about how to use it
 in [this update](https://developers.google.com/web/updates/2015/10/media-devices).
 
-Default communications device support on Windows has been added ([Issue
-525443](http://crbug.com/525443)). This means that when enumerating audio
+On Windows there has been a [known issue](http://crbug.com/525443) with communications device support. Default communications device support on Windows has now been added. This means that when enumerating audio
 devices on Windows, there will be an additional entry for the communications
 device whose ID will be 'communications'.
 
