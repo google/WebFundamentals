@@ -30,9 +30,9 @@ stars. Media recording has now been added to Chrome behind the experimental Web 
 addition to the audio input and video input devices that `MediaStreamTrack.getSources()` already provides. You can find out more about how to use it
 in [this update](https://developers.google.com/web/updates/2015/10/media-devices).
 
-On Windows there has been a [known issue](http://crbug.com/525443) with communications device support. Default communications device support on Windows has now been added. This means that when enumerating audio
-devices on Windows, there will be an additional entry for the communications
-device whose ID will be 'communications'.
+### Device support on Windows
+
+Default communications device support on Windows has now been added. This means that when enumerating audio devices on Windows, there will be an additional entry for the communications device whose ID will be 'communications'.
 
 Device IDs for the default audio device (and communications on Windows) will no
 longer be hashed ([Issue 535980](http://crbug.com/535980)).  Instead, two
@@ -41,8 +41,8 @@ across all security origins. Device labels will be translated to the browser
 locale so developers should not expect labels to have a predetermined value.
 Video rendering accuracy has been improved by propagating the capture timestamp
 all the way to the rendering algorithm, where the right vsync can be chosen
-based on that. For Windows platform the capture timestamp are also more accurate
-in 47.
+based on that. For Windows platform the capture timestamp is also more accurate
+in Chrome 47.
 
 ### Proxy handling
 
@@ -52,19 +52,18 @@ Chrome 47 adds a new preference to force WebRTC traffic to be sent through a loc
 
 Data channel throughput has been greatly improved for high latency connections.
 
-We will gradually roll out support for DTLS 1.2 in the M47 timeframe.
+We will gradually roll out support for DTLS 1.2 in the Chrome 47 timeframe.
 
-VP9 did not make it for this release, nor did H.264 support. Work on these
-continues, and we expect to release VP9 and an initial version of H.264 (behind
-a flag) in M48.
+Though neither VP9 nor H.264 are supported in this release, work on these
+continues, and we hope to implement support for VP9 and an initial version of H.264 (behind a flag) in Chrome 48.
 
 ### Public Service Announcements
 
-* From Chrome 47, getUserMedia requests are only allowed from secure origins: HTTPS or localhost.
+* Starting with Chrome 47, `getUserMedia()` requests are only allowed from secure origins: HTTPS or localhost.
 * RTP data channel support has been removed. Any remaining applications still
   using RTP data channels should use the standard data channels instead.
 
-As with all releases, we encourage developers to try Chrome on the Canary, Dev, and Beta channels and report any issues found. The help we receive is invaluable! For pointers on how to file a good bug report, please take a look at the [WebRTC bug page](http://www.webrtc.org/report-bug).
+As with all releases, we encourage developers to try Chrome on the Canary, Dev, and Beta channels and report any issues found. The help we receive is invaluable. For pointers on how to file a good bug report, please take a look at the [WebRTC bug page](http://www.webrtc.org/report-bug).
 
 ### Demos
 
