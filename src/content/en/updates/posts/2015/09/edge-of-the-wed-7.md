@@ -17,7 +17,8 @@ featured_image: /web/updates/images/2015-09-27-edge-of-the-wed-7/chrome_512dp.pn
 
 ### Chrome 46 (Beta)
 <img src="/web/updates/images/2015-09-27-edge-of-the-wed-7/chrome_256.png">
-* **Performance boost**
+
+* *Performance boost*
     * Tools like srcset allow developers to serve an optimized image variant in 
       a responsive way, but it can be cumbersome and inefficient to use in 
       practice. Developers can now[ 
@@ -58,24 +59,24 @@ featured_image: /web/updates/images/2015-09-27-edge-of-the-wed-7/chrome_512dp.pn
       the Cache API is now[ 
       ](https://code.google.com/p/chromium/issues/detail?id=501380)[restricted 
       to HTTPS](https://code.google.com/p/chromium/issues/detail?id=501380).
-* **CSS Land**
+* *CSS Land*
     * Developers can now use[ 
       ](https://googlechrome.github.io/samples/css-escape/index.html)[CSS.escape()](https://googlechrome.github.io/samples/css-escape/index.html), 
       eliminating the need for complicated string escape code while handling 
       user generated identifiers.
     * The [CSS intrinsic sizing values](https://drafts.csswg.org/css-sizing-3/), 
       which allow boxes to fit their contents, are no longer prefixed.
-* **Animating objects along author specified paths - **Developers can now[ 
+* *Animating objects along author specified paths* - Developers can now[ 
   ](http://codepen.io/danwilson/blog/css-motion-paths)[animate any graphical 
   object along an arbitrary 
   path](http://codepen.io/danwilson/blog/css-motion-paths) declaratively as a[ 
   ](https://googlechrome.github.io/samples/css-motion-path/index.html)[CSS 
   property](https://googlechrome.github.io/samples/css-motion-path/index.html), 
   allowing simpler code that doesn't block rendering or input.
-* **WebRTC - **[Timer-based polling is no longer 
+* *WebRTC* - [Timer-based polling is no longer 
   necessary](https://code.google.com/p/chromium/issues/detail?id=496700) to use 
   WebRTC DataChannels, making them more efficient and convenient.
-* **DevTools** - It has a[ 
+* *DevTools* - It has a[ 
   ](https://developers.google.com/web/updates/2015/07/23/devtools-digest-aggregated-timeline-details-color-palettes-and-more)[better 
   tool tips and custom network 
   profiles](https://developers.google.com/web/updates/2015/07/23/devtools-digest-aggregated-timeline-details-color-palettes-and-more).  
