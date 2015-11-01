@@ -87,15 +87,14 @@ featured_image: /web/updates/images/2015-10-31-edge-of-the-wed-8/splash-screen.g
   For example: On a phone, select the front or rear-facing camera. On a laptop, 
   choose the internal speakers or a speaker connected by Bluetooth. For a video 
   chat, choose internal or external microphone or camera. All this functionality 
-  is exposed by the _MediaDevices_ object, which is returned by_ 
-  navigator.mediaDevices()_<br/>
-  Read more: 
-  [https://developers.google.com/web/updates/2015/10/media-devices](https://developers.google.com/web/updates/2015/10/media-devices)
+  is exposed by the _MediaDevices_ object, which is returned by navigator.mediaDevices()<br/>
+  [Read more on media devices.](https://developers.google.com/web/updates/2015/10/media-devices)
 
 
 - - -  
 If you have any questions or feedback, please [share it with 
 us](https://groups.google.com/d/forum/mobile-web-rock) or privately with 
 [@greenido](https://twitter.com/greenido)  
-Wish to get these updates to your mailbox?   
+
+#### Wish to get these updates to your mailbox?   
 Please use this [Signup form](https://goo.gl/l6TN40)
