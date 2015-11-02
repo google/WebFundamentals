@@ -16,13 +16,13 @@ authors:
 
 {% include shared/toc.liquid %}
 
-As you saw in Step 2, Chrome uses Google Cloud Messaging (GCM) for push
+As you saw earlier, Chrome uses Google Cloud Messaging (GCM) for push
 messaging.
 
 To get GCM to push a notification to your web client, you need to send GCM a
 request that includes the following:
 
-* The **public API key** that you created in Step 2, which looks like this:<br>
+* The **public API key** that you created earlier, which looks like this:<br>
   <br>
   _AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c_<br>
   <br>
@@ -60,7 +60,7 @@ _curl --header "Authorization: key=**&lt;PUBLIC\_API\_KEY&gt;**" --header "Conte
 ## 1. Make a request to GCM
 
 From your terminal, run the cURL command below — but make sure to use your
-own API key from Step 2 and the subscription ID from step 4:
+own API key and subscription ID, which you created earlier:
 
 {% highlight bash %}
 curl --header "Authorization: key=AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"APA91bE9DAy6\_p9bZ9I58rixOv-ya6PsNMi9Nh5VfV4lpXGw1wS6kxrkQbowwBu17ryjGO0ExDlp-S-mCiwKc5HmVNbyVfylhgwITXBYsmSszpK0LpCxr9Cc3RgxqZD7614SqDokwsc3vIEXkaT8OPIM-mnGMRYG1-hsarEU4coJWNjdFP16gWs\"]}"

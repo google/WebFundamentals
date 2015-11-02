@@ -25,7 +25,7 @@ At the top level of your _app_ directory, create a file named
 _manifest.json_ (you can give it any name you like).
 
 Include the following code. The _gcm\_sender\_id_ value should be the
-Project Number from Step 2:
+Project Number you saved earlier:
 
 {% highlight json %}
 {
@@ -40,8 +40,7 @@ Find out more from the Web Fundamentals article [Installable Web Apps](/web/upda
 
 ## 2. Tell the browser where to find the manifest for your web app
 
-Add the following to the head element in the _index.html_ file you created in
-Step 1:
+Add the following to the head element in the _index.html_ file you created earlier:
 
 {% highlight html %}
 <link rel="manifest" href="manifest.json">

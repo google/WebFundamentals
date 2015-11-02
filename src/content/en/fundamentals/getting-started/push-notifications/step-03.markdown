@@ -36,7 +36,7 @@ code:
 </html>
 {% endhighlight %}
 
-Open _index.html_ locally in Chrome from localhost: the URL should be something like _http://localhost/push-notifications/app/step1/index.html_.
+Open _index.html_ locally in Chrome from localhost: the URL should be something like _http://localhost/push-notifications/app/index.html_.
 
 ## 2. Add a Service Worker
 
@@ -58,7 +58,7 @@ if ('serviceWorker' in navigator) {
  console.log('Service Worker is supported');
  navigator.serviceWorker.register('/sw.js').then(function(reg) {
    console.log(':^)', reg);
-   // TODO: Step 4
+   // TODO
  }).catch(function(err) {
    console.log(':^(', err);
  });
@@ -74,7 +74,7 @@ console.
 
 It should look like this:
 
-<img src="images/image01.png" width="965" height="901" alt="Codelab Step 1 web page open in Chrome, showing ServiceWorkerRegistration in DevTools console" />
+<img src="images/image01.png" width="965" height="901" alt="Codelab web page open in Chrome, showing ServiceWorkerRegistration in DevTools console" />
 
 ## 5. Try out serviceworker-internals
 
@@ -98,7 +98,7 @@ self.addEventListener('activate', function(event) {
 });
 self.addEventListener('push', function(event) {
   console.log('Push message received', event);
-  // TODO: Step 6
+  // TODO
 });
 {% endhighlight %}
 

@@ -28,7 +28,7 @@ In a production implementation you will also need to to remove subscription data
 
 ## 1. Add a Subscribe/Unsubscribe button to your app
 
-In the _index.html_ file you created in Step 1, add a button so the code looks like this:
+In the _index.html_ file you created earlier, add a button so the code looks like this:
 
 {% highlight html %}
 <!DOCTYPE html>
