@@ -157,6 +157,6 @@ If you have any questions or feedback, please [share it with
 us](https://groups.google.com/d/forum/mobile-web-rock) or privately with 
 [@greenido](https://twitter.com/greenido)  
 
-###Wish to invite your colleague to this newsletter?   
-Please use this [sign-up form](https://goo.gl/l6TN40).
+#### Wish to get these updates to your mailbox?   
+Please use this [Signup form](https://goo.gl/l6TN40)
 
