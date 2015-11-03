@@ -12,7 +12,7 @@ translation_priority: 0
 key-takeaways:
   - "You need to create a 2048-bit RSA public and private key pair."
   - "Generate a certificate signing request (CSR) which embeds your public key."
-  - "Share your CSR with your Certicate Authority (CA) to receive a final certificate or certificate chain."
+  - "Share your CSR with your Certificate Authority (CA) to receive a final certificate or certificate chain."
   - "Install your final certificate in a non-web-accessible place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows)."
 ---
 
