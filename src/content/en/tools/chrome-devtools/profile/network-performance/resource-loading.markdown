@@ -11,7 +11,7 @@ authors:
 translation_priority: 0
 key-takeaways:
   network:
-    - "View how much time was spent in the various network phases for each resoure in the Network panel's Timeline waterfall."
+    - "View how much time was spent in the various network phases for each resource in the Network panel's Timeline waterfall."
     - "Watch out for the blue and red vertical lines. The blue line indicates when the main document loaded; the red line indicates when the page fully loaded."
     - "View which resource has the slowest time to first byte by selecting the Latency filter in the Timeline column."
     - "View which resources took the longest time to load by selecting the Duration filter in the Timeline column."
