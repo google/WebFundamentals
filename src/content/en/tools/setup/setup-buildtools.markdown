@@ -76,10 +76,6 @@ will be less flexible.
       <td data-th="Gulp"><a href="http://alphapixels.com/prepros/">Prepros</a></td>
     </tr>
     <tr>
-      <td data-th="Supported Platforms">OS X / Windows</td>
-      <td data-th="Gulp"><a href="http://mixture.io/">Mixture</a></td>
-    </tr>
-    <tr>
       <td data-th="Supported Platforms">OS X</td>
       <td data-th="Gulp"><a href="https://incident57.com/codekit/">CodeKit</a></td>
     </tr>
