@@ -30,7 +30,8 @@ colors for elements of the browser, and even the platform using meta tags.
 <!-- Windows Phone -->
 <meta name="msapplication-navbutton-color" content="#4285f4">
 <!-- iOS Safari -->
-<meta name="apple-mobile-web-app-status-bar-style" content="#4285f4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 {% endhighlight %}
 
 <img src="imgs/theme-color.png" alt="Theme colors styling the address bar in Chrome">
