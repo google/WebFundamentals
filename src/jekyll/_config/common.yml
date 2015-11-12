@@ -62,7 +62,7 @@ WFarray: []
 WFPromo: 
   title: "Chrome Developer Summit"
   image: "https://www.gstatic.com/images/branding/product/1x/chrome_512dp.png"
-  text: "Nov 17-18, Mountain View, CA - <a href='https://developer.chrome.com/devsummit'>Learn more</a>"
+  text: "Tune in and watch the <a href='https://developer.chrome.com/devsummit'>Live Stream</a> now!"
 
 ## Unknowns
 fundamentals: /web/fundamentals
