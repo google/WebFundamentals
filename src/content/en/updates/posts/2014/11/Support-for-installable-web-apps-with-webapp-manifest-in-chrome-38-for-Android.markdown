@@ -3,7 +3,7 @@ layout: updates/post
 title: "Installable Web Apps with the WebApp Manifest in Chrome for Android"
 description: "Use the WebApp manifest to control how your web app launches"
 published_on: 2014-11-10
-updated_on: 2014-11-10
+updated_on: 2015-11-13
 authors:
   - paulkinlan
 tags:
@@ -28,7 +28,9 @@ To integrate the manifest in to your own site you just need to do two things:
 
 ## Creating the manifest
 
-You can call the manifest whatever you want.  Most people will probably just use `manifest.json`.
+You can call the manifest whatever you want.  Most people will probably just use `manifest.json`. 
+
+An example manifest is shown below. It doesn't show everything that can be in a manifest. For that you can check out [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest). 
 
 {% highlight json %}
 {
