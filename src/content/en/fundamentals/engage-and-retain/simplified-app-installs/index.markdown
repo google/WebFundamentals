@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Using app install banners"
 description: "App Install Banners give you the ability to have your users quickly and seamlessly add your web app to their home screen, or install your native app, without ever leaving the browser."
 published_on: 2014-12-17
-updated_on: 2015-09-30
+updated_on: 2015-11-13
 authors:
   - mattgaunt
   - paulkinlan
@@ -46,7 +46,7 @@ order: 1
 
 ### Manifest for web applications
 
-The [manifest for Web applications](https://w3c.github.io/manifest/) is 
+The [manifest for Web applications](https://developer.mozilla.org/en-US/docs/Web/Manifest) is 
 a simple JSON file that gives you, the developer, the ability to 
 control how your app appears to the user in the areas that they would 
 expect to see apps (for example the mobile home screen), direct what 
