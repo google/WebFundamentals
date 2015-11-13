@@ -30,7 +30,7 @@ To integrate the manifest in to your own site you just need to do two things:
 
 You can call the manifest whatever you want.  Most people will probably just use `manifest.json`. 
 
-An example manifest is shown below. It doesn't show everything that can be in a manifest. For that you can check out [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest). 
+An example manifest is shown below. It doesn't show everything that can be in a manifest. For that you can check out the [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest). 
 
 {% highlight json %}
 {
