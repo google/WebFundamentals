@@ -100,7 +100,7 @@ As of Chrome 43 (Beta as of May 2015), you can now [cancel the prompt](http://go
 
 I would say though, I am not sure why you would do this... But you can.
 
-A more interesting future update will the ability to defer the prompt until later in the page lifecycle,
+A more interesting future update will include the ability to defer the prompt until later in the page lifecycle,
 i.e, just after a user has performed an action, or hit the bottom of the page (something to indicate
 that they are engaging with your site).
 
