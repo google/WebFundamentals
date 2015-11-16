@@ -45,7 +45,7 @@ manage the prompting of users:
   - The manifest defines how your app appears on the user's system and how it
   should be launched - and you are required to have a \`short\_name\` and a
   \`144x144\` png icon
-  - Your icon declartion's should include a mime type of `image/png`
+  - Your icon declaration's should include a mime type of `image/png`
 * You have a [service
   worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
   registered on your site. We recommend a [simple custom offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js)
@@ -88,7 +88,7 @@ label.
 
 Chrome manages when to trigger the prompt and for some sites this might not be ideal.
 
-As of Chrome 43 (Beta as of May 2015), you can now [cancel the prompt](http://googlechrome.github.io/samples/app-install-banner/cancelable-banner/index.html) by intercepting the `onbeforinstallprompt` event and preventing default on the event.
+As of Chrome 43 (Beta as of May 2015), you can now [cancel the prompt](http://googlechrome.github.io/samples/app-install-banner/cancelable-banner/index.html) by intercepting the `onbeforeinstallprompt` event and preventing default on the event.
 
 {% highlight javascript %}
  window.addEventListener('beforeinstallprompt', function(e) {
@@ -100,13 +100,13 @@ As of Chrome 43 (Beta as of May 2015), you can now [cancel the prompt](http://go
 
 I would say though, I am not sure why you would do this... But you can.
 
-A more interesting future update will the ability to defer the prompt until later in the page lifecycle,
+A more interesting future update will include the ability to defer the prompt until later in the page lifecycle,
 i.e, just after a user has performed an action, or hit the bottom of the page (something to indicate
 that they are engaging with your site).
 
 ## <span id="action">Did a user install our web app</span>
 
-A recetent addtion in Chrome 43 (Beta as of May 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
+A recent addition in Chrome 43 (Beta as of May 2015) is the ability to discern if the user clicked "Yes" or "No" to the App install banner.
 
 The `beforeinstallprompt` event will return a promise called `userChoice` that will resolve when the user
 actions the prompt.  The promise will return an object with a value of `dismissed` on the `outcome`
@@ -142,7 +142,7 @@ A new powerful feature for native app developers also landed in Chrome 44 Beta. 
   <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
 </p>
 
-The criteria is similar to the Web App install banner except for the need of a Serivce Worker:
+The criteria is similar to the Web App install banner except for the need of a Service Worker:
 
 * You have a [web app manifest
   file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)
@@ -176,13 +176,12 @@ Yes you can, see "[Did a user install our web app](#action)".
 
 **If a user dismisses the banner, will it appear again?**  
 No.  Not unless the user clears their history.  We want to make sure users have
-a good experience.  We will likely be changing all the heuristics over time.
+a good experience.  We will likely be changing the heuristics over time.
 
-**Can I decide when to prompt the user****?**  
+**Can I decide when to prompt the user?**  
 No, we are not letting developers actively prompt the user to Add to Home Screen.
 
-**You said that I will only get the banner if I visit the site on two different
-days.  How on earth do I test it?**  
+**You said that I will only get the banner if I visit the site on two different days.  How on earth do I test it?**  
 Yeah, we had the same problem when we were building this.  Enable
 chrome://flags/\#bypass-app-banner-engagement-checks and you will see it as long
 as you have a manifest (configured correctly) and are on HTTPS and have a
