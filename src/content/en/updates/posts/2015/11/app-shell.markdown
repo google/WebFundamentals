@@ -11,7 +11,7 @@ authors:
 tags:
   - app-shell
   - service-worker
-featured_image: /web/updates/images/2015/11/appshell/featured-image.png
+featured_image: /web/updates/images/2015/11/appshell/app-shell-browsers.jpg
 ---
 
 [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) (PWAs) describe how a web app can *progressively* change with use and user consent to give the user a more native-app-like experience with offline support, push notifications and being installable to the home-screen. They can gain **substantial** performance benefits thanks to intelligent [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) caching of your UI shell for repeat visits.
@@ -79,11 +79,11 @@ The implications of this split are large. On the first visit you can render cont
 
 ## What about Progressive Enhancement?
 
-While service worker isn’t currently supported by all browsers, the application content shell architecture uses [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) to ensure everyone can access the content. For example, take our sample project. Below you can see the full version rendered in Chrome and Safari.On the left you can see the Safari version where the content is rendered on the server without a server worker. On the right we see the Chrome and service worker version.
+While service worker isn’t currently supported by all browsers, the application content shell architecture uses [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) to ensure everyone can access the content. For example, take our sample project.
 
-![Image of Application Shell loaded in Safari and Chrome]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/image_6.png)
+Below you can see the full version rendered in Chrome, Firefox Nightly and Safari. On the very left you can see the Safari version where the content is rendered on the server _without_ a service worker. On the right we see the Chrome and Firefox Nightly versions powered by service worker.
 
-Left: Safari. Right: Chrome, where we’re loading from a service worker.
+![Image of Application Shell loaded in Safari, Chrome and Firefox]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/app-shell-browsers.jpg)
 
 ## When does it make sense to use this architecture?
 
