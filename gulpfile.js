@@ -34,7 +34,11 @@ GLOBAL.WF = {
   }
 };
 GLOBAL.WF.options = minimist(process.argv.slice(2), knownOptions);
-
+console.log('---------------------------------');
+console.log('');
+console.log(chalk.magenta('STOP - this branch is now closed.'));
+console.log('');
+console.log('Please use the ' + chalk.cyan('master') + ' branch instead.');
 console.log('');
 console.log('---------------------------------');
 console.log('');
