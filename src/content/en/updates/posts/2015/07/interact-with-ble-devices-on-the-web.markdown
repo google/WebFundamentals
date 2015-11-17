@@ -1,10 +1,10 @@
 ---
 layout: updates/post
 title: "Interact with BLE devices on the Web"
-description: "A Web API has been added to Chrome OS that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
+description: "A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
 featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 published_on: 2015-07-22
-updated_on: 2015-10-23
+updated_on: 2015-11-17
 authors:
   - beaufortfrancois
 tags:
@@ -36,7 +36,8 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the implementation](https://code.google.com/p/chromium/issues/entry?labels=Cr-Blink-Bluetooth).
 
 Web Bluetooth API is at the time of writing partially implemented in Chrome OS
-behind an experimental flag. Go to `chrome://flags/#enable-web-bluetooth`,
+and Chrome Dev for Android behind an experimental flag. Go to
+`chrome://flags/#enable-web-bluetooth`,
 enable the highlighted flag, restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices and
@@ -89,11 +90,13 @@ running in the Central role, to connect to remote GATT Servers over a BLE
 connection. It supports communication among devices that implement
 Bluetooth 4.0 or later.
 
-When a website requests access to nearby BLE devices using
+When a website requests access to nearby devices using
 `navigator.bluetooth.requestDevice`, Google Chrome will prompt user with a
 device chooser where he can pick one device or simply cancel the request. At
-the time of writing though, **the device chooser hasn't been implemented yet.**
-Only the first device that matches filters will be returned.
+the time of writing though, the device chooser hasn't been implemented yet in
+Chrome OS. Only the first device that matches filters will be returned.
+
+<img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.png" alt="Bluetooth Device Chooser screenshot"/>
 
 The `navigator.bluetooth.requestDevice` function takes a mandatory Object that
 defines Bluetooth GATT service filters. These filters are used to return
@@ -212,8 +215,9 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
 
 ## Samples, Demos & Codelabs
 
-The samples below have been tested on Chrome OS with the Web Bluetooth flag
-enabled. To enjoy these samples to their fullest, I recommend you install the [BLE Peripheral Simulator Android
+The samples below have been tested on Chrome OS and Chrome Dev for Android with
+the Web Bluetooth flag enabled. To enjoy these samples to their fullest, I
+recommend you install the [BLE Peripheral Simulator Android
 App](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
 which simulates a BLE Peripheral with a Battery Service or a Heart Rate
 Service.
@@ -234,7 +238,7 @@ list of all available commands.
 <img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-developer-console.png" alt="Bluetooth Developer Console screenshot"/>
 
 Resetting the first device resolved by `navigator.bluetooth.requestDevice` can
-be done in two ways:
+be done in two ways in Chrome OS:
 
 - Restart Chrome OS.
 - Enter `remove 01:23:45:67:89:01` in the Bluetooth Console where
@@ -259,11 +263,10 @@ peek of what to expect in the coming months:
   platform](https://github.com/WebBluetoothCG/web-bluetooth/issues/127) will be
   added to improve user experience.
 
-At the time of writing, Chrome OS is [the most advanced
-platform](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md)
-as the low level work has been done already. Android 6+ and Mac OSX are under
-active development. Windows 8.1+, Linux, and iOS will be supported as much as
-feasible by the platforms.
+At the time of writing, Chrome OS and Android 6+ are [the most advanced
+platform](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md).
+Mac OSX is partially working.  Windows 8.1+, Linux, and iOS will be supported
+as much as feasible by the platforms.
 
 ## Resources
 
