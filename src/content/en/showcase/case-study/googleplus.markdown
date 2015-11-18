@@ -36,7 +36,7 @@ unoptimized, slowing the page down further. As a result, our stream was almost
 inaccessible on slow and unstable networks and the experience for these users 
 was disappointing at best. In addition, the requirement to support legacy 
 browsers on the mobile web kept us from relying on JavaScript throughout the 
-site and prevented us from implementing highly interactive features &mash; we 
+site and prevented us from implementing highly interactive features &mdash; we 
 could not rely on the advances in mobile web browsers. 
 
 ### Solution
