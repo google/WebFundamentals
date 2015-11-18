@@ -2,7 +2,7 @@
 layout: showcase/casestudy
 title: "Google+"
 subtitle: "Google+ goes completely responsive."
-description: "We hit our goal of never downloading more than 60k of HTML, 60k of JavaScript and 60k of CSS at any one time and!"
+description: "We hit our goal of never downloading more than 60k of HTML, 60k of JavaScript and 60k of CSS at any one time!"
 published_on: 2015-11-17
 updated_on: 2015-11-17
 authors:
