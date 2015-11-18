@@ -264,7 +264,7 @@ peek of what to expect in the coming months:
   added to improve user experience.
 
 At the time of writing, Chrome OS and Android 6+ are [the most advanced
-platform](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md).
+platforms](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md).
 Mac OSX is partially working.  Windows 8.1+, Linux, and iOS will be supported
 as much as feasible by the platforms.
 
