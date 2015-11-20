@@ -12,7 +12,7 @@ authors:
 udacity:
   id: ud884
   title: Website Performance Optimization
-  description: "Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages."
+  description: "Interested in taking a deep dive into the Critical Rendering Path? Check out our companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages."
   image: images/crp-udacity.png
 ---
 
