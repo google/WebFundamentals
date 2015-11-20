@@ -40,13 +40,12 @@ Try it out on [Voice Memos](https://voice-memos.appspot.com/),
 [Air Horner](https://airhorner.com) or [SVG OMG](https://jakearchibald.github.io/svgomg/).
 
 The splash screen is generated dynamically from information held in the Web App 
-Manifest and is a combination of the `name` and `background_color` properties 
-from the manifest, and the icon in the `icons` array that is closest to 
-"128dp" for the device.
+Manifest and is a combination of the `name` and `background_color` properties, 
+and the icon in the `icons` array that is closest to "128dp" for the device.
 
 128dp is the ideal size for the image on the splash screen as it means no 
 scaling will be applied to the image.  Now we web developers don't deal with 
-dp's, we use physical pixels or CSS pixels, in the case of splash screen and 
+dp's. We use physical pixels or CSS pixels. In the case of splash screen and 
 configuration in the manifest only physical pixels are considered.  1dp is 1 
 physical pixel at a screen density of 160dpi. 
 
@@ -65,7 +64,8 @@ need to 196px image for Add to Homescreen to work! Yay. Therefore, _I_ would
 recommend **always** having 196px as the minimum sized icon and create 3 other 
 versions at 256px, 384px and 512px. However, if you want to ensure that the user
 is not downloading too much data for the splash screen, especially on a low density
-device then you can go lower and Chrome will try to fetch the most appropriate.
+device then you can go lower and Chrome will try to fetch the most appropriate
+image.
 
 The following is a sample manifest (note: do not set the density field in the 
 icons array, it will cause you a whole heap of pain, well, unless you know what 
