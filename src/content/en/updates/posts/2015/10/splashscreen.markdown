@@ -53,16 +53,16 @@ physical pixel at a screen density of 160dpi.
 1dp = 1px at 160 dpi.
 
 128dp at 1x   (160dpi) = 128px  
-128dp at 1.5x (240dpi) = 196px  
+128dp at 1.5x (240dpi) = 192px  
 128dp at 2x   (320dpi) = 256px   
 128dp at 3x   (480dpi) = 384px (Equivalent to Nexus 5)  
 128dp at 4x   (640dpi) = 512px (Nexus 6 is in between 3 and 4)
 
 If you want to ensure that an icon will always be displayed consider that 48dp 
 is the minimum image size we will display, which if you take the maximum density 
-display currently supported (4x) then 48 \* 4 = 196px. This is lucky because we 
-need to 196px image for Add to Homescreen to work! Yay. Therefore, _I_ would 
-recommend **always** having 196px as the minimum sized icon and create 3 other 
+display currently supported (4x) then 48 \* 4 = 192px. This is lucky because we 
+need to 192px image for Add to Homescreen to work! Yay. Therefore, _I_ would 
+recommend **always** having 192px as the minimum sized icon and create 3 other 
 versions at 256px, 384px and 512px. However, if you want to ensure that the user
 is not downloading too much data for the splash screen, especially on a low density
 device then you can go lower and Chrome will try to fetch the most appropriate.
@@ -113,7 +113,7 @@ Ensure that in your manifest you have:
 * An optional `theme_color` if you have them inside the your app already, this will
   ensure a smooth transition when the splash screen is replaced by your app content.
 * High quality icons that will displayed in the center of the splash screen - ensure 
-  your icon is at least 196px.
+  your icon is at least 192px.
 
 I think this is a great step in making sites and apps feel even more like they 
 are meant to be part of the user's mobile device.
