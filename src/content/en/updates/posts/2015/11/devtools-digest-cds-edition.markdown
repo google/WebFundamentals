@@ -39,11 +39,11 @@ The work-in-progress **Animation Inspection** gives you a full, detailed picture
 
 Not quite ready for prime time but very promising is the new Layout Mode, a feature I can’t wait to see fully built out. The Layout Mode adds WYSIWYG editing capabilities to DevTools for any element on the page. So far, the height, width, paddings and margins can be edited in context. It’s going to take a little longer until we’re ready to let you try but we’ll keep you updated.
 
-## Performance profiling with RAIL
+## Performance profiling with the updated Timeline panel
 
 {% ytvideo w0O2znkSBXA %}
 
-There have been hundreds of smaller and bigger changes to the Timeline panel, and together they transform and improve the performance profiling story quite a bit. So instead of showing every individual change, our own Paul Irish showed us how to properly debug the performance of a site, in this case the mobile site of Hotel Tonight,  live on stage.
+As part of a bigger push of introducing the new [RAIL performance model](https://www.youtube.com/watch?v=wO9GGY17NXY), there have been hundreds of smaller and bigger changes to the Timeline panel, and together they transform and improve the performance profiling story quite a bit. So instead of showing every individual change in isolation, our own Paul Irish showed us how to properly debug the performance of a site, in this case the mobile site of Hotel Tonight, live on stage. Among the newly announced features are the [load and performance film strips](/web/updates/2015/07/devtools-digest-film-strip-and-a-new-home-for-throttling), the **included network waterfall**, the **treeview summary** and the ability to view **perf costs by domain & file**.
 
 ## Easily add foreground and background colors to any element
 
