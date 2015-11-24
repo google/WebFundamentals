@@ -59,14 +59,14 @@ but have since been garbage collected:
 
 ![Allocation profiler snapshot](imgs/collected.png)
 
+![Zoom in on snapshot](imgs/sliders.png)
+
 In the snapshot above, an action was performed 10 times.
 The sample program caches five objects, so the last five blue bars are expected.
 But the leftmost blue bar indicates a potential problem.
 
 You can then use the sliders in the timeline above to zoom in on that particular snapshot
 and see the objects that were recently allocated at that point:
-
-![Zoom in on snapshot](imgs/sliders.png)
 
 Clicking on a specific object in the heap will show its retaining tree in the bottom portion of the heap snapshot. Examining the retaining path to the object should give you enough information to understand why the object was not collected, and you can make the necessary code changes to remove the unnecessary reference.
 
