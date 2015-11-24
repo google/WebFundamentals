@@ -19,7 +19,7 @@ featured_image: /web/updates/images/2015/11/devtools-digest/animations.png
 
 {% ytvideo dJR-n8szgBc %}
 
-We’re just coming back from the Chrome Dev Summit where I showed you what working with DevTools looks like today and in the future. I usually don’t mention any features that are still experiments or heavy work of progress in this digest but I’m making an exception this time. If you don’t have time to watch the whole talk, here’s the gist:
+We’re just coming back from the Chrome Dev Summit where I showed you what working with DevTools looks like today and in the future. I usually don’t mention any features that are still experiments or heavy works of progress in this digest but I’m making an exception this time. If you don’t have time to watch the whole talk, here’s the gist:
 
 ### Device Mode v2
 
@@ -31,7 +31,7 @@ We’re still heavily working on this new, bold iteration of the **Device Mode**
 
 {% ytvideo MjaYjUram14 %}
 
-The work-in-progress **Animation Inspection** gives you a full, detailed picture over what’s happening on anything moving. Instead of showing you a transition on one element at a time, we added heuristics that group complex animations to so you can focus on all you’re seeing. Have a look at the video and like with Device Mode, we’ll offer a bigger, standalone blog post when we’re fully launched.
+The work-in-progress **Animation Inspection** gives you a full, detailed picture over what’s happening on anything moving. Instead of showing you a transition on one element at a time, we added heuristics that group complex animations so you can focus on all you’re seeing. Have a look at the video. We’ll offer a bigger, standalone blog post when we’re fully launched.
 
 ### Layout Mode (Sneak Peek)
 
