@@ -12,6 +12,7 @@ translation_priority: 1
     <div class="page-content">
         <h1><img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/chrome_devtools.svg" alt="Chrome DevTools Logo">Chrome DevTools</h1>
     </div>
+
     <div class="page-content mdl-grid">
       <div class="mdl-cell mdl-cell--6-col">
         <p>The Chrome DevTools are a set of web authoring and debugging tools built into Google Chrome. Use the DevTools to iterate, debug and profile your site.</p>
@@ -26,6 +27,13 @@ translation_priority: 1
           <li>Use <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">more shortcuts</a>)</li>
         </ul>
       </div>
+    </div>
+  </div>
+
+  <div class="wf-devtools-announcement">
+    <div class="page-content">
+      <h3>Rewatch the future of mobile-first authoring in DevTools.</h3>
+      {% ytvideo dJR-n8szgBc %}
     </div>
   </div>
 
