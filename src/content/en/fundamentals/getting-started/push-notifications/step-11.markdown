@@ -99,4 +99,4 @@ In this code, you set the value of the ServiceWorkerRegistration object reg when
 
 The `subscribe()` function creates the `PushSubscription` object **sub** which can be used by the `unsubscribe()` function.
 
-Remember: every time the client gets a new registration ID every time it re-subscribes, so you will need to adjust requests to GCM accordingly.
+Remember: the client gets a new registration ID every time it re-subscribes, so you will need to adjust requests to GCM accordingly.

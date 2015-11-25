@@ -57,7 +57,7 @@ click the page icon to the left of the URL:
 
 ## 3. Get the subscription ID
 
-From Chrome DevTools, right click on the `endpoint` value and select **Copy Link Address** to copy the value, which should look like this:
+From Chrome DevTools, right-click the `endpoint` value and select **Copy Link Address** to copy the value, which should look like this:
 
 _https://android.googleapis.com/gcm/send/**APA91bGdUldXgd4Eu9MD0qNmGd0K6fu0UvhhNGL9FipYzisrRWbc-qsXpKbxocgSXm7lQuaEOwsJcEWWadNYTyqN8OTMrvNA94shns\_BfgFH14wmYw67KZGHsAg74sm1\_H7MF2qoyRCwr6AsbTf5n7Cgp7ZqsBZwl8IXGovAuknubr5gaJWBnDc**_
 
