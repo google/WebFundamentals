@@ -19,7 +19,7 @@ A completed version of this step is in the completed/step6 directory.
 
 ## 1. Add subscription code
 
-Replace the TODO comment in the _main.js_ file you created in Step 1 so that it looks like this:
+Replace the TODO comment in the _main.js_ file you created earlier so that it looks like this:
 
 {% highlight javascript %}
 if ('serviceWorker' in navigator) {
@@ -37,7 +37,7 @@ if ('serviceWorker' in navigator) {
 }
 {% endhighlight %}
 
-This code uses the `ServiceWorkerRegistration` object's `pushManager` to subscribe to  messages for the gcm\_sender\_id you added to the manifest in Step 3.
+This code uses the `ServiceWorkerRegistration` object's `pushManager` to subscribe to  messages for the gcm\_sender\_id you added to the manifest.
 
 You must pass a `{userVisibleOnly: true}` argument to the subscribe() method. This tells the browser that a notification will always be shown when a push message is received. Currently it's mandatory to show a notification.
 
@@ -57,14 +57,14 @@ click the page icon to the left of the URL:
 
 ## 3. Get the subscription ID
 
-From Chrome DevTools, right click on the `endpoint` value and select **Copy Link Address** to copy the value, which should look like this:
+From Chrome DevTools, right-click the `endpoint` value and select **Copy Link Address** to copy the value, which should look like this:
 
 _https://android.googleapis.com/gcm/send/**APA91bGdUldXgd4Eu9MD0qNmGd0K6fu0UvhhNGL9FipYzisrRWbc-qsXpKbxocgSXm7lQuaEOwsJcEWWadNYTyqN8OTMrvNA94shns\_BfgFH14wmYw67KZGHsAg74sm1\_H7MF2qoyRCwr6AsbTf5n7Cgp7ZqsBZwl8IXGovAuknubr5gaJWBnDc**_
 
 Make a note of the subscription ID, which is the last part of the URL,
 highlighted here in bold.
 
-You'll use that value in Step 5 to tell Google Cloud Messaging where to send
+You'll use this value later to tell Google Cloud Messaging where to send
 messages.
 
 <img src="images/image15.png" width="774" height="932" alt="Web page screenshot: Chrome DevTools console showing Push Notifications endpoint value" />

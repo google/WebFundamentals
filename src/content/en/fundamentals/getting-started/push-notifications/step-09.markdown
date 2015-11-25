@@ -43,7 +43,7 @@ self.addEventListener('push', function(event) {
       tag: 'my-tag'
     }));
 });
-// TODO: Step 7
+// TODO
 {% endhighlight %}
 
 The `event.waitUntil()` method takes a promise and extends the lifetime of the event handler until, in this case, the promise returned by `showNotification()` is resolved.
@@ -52,7 +52,7 @@ One notification will be shown for each tag value: if a new push message is rece
 
 ## 2. Make a request to GCM to send a notification
 
-Run the cURL command from Step 4 or the XHR request from Step 5.
+Run the cURL command or the XHR request from the previous steps.
 
 You should see a notification like this:
 

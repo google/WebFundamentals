@@ -17,7 +17,7 @@ authors:
 
 You can either download all the sample code to your computer:
 
-[Download Zip file](https://github.com/samdutton/push-notifications/archive/master.zip)
+[Download Zip file](https://github.com/GoogleChrome/push-notifications/archive/master.zip)
 
 ...or clone the GitHub repository from the command line:
 

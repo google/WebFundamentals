@@ -59,11 +59,11 @@ Leave the HTTP referrers field blank and click the **Create** button:
 
 <img src="images/image10.png" width="907" height="822" alt="Web page screenshot: click the Create button to create a browser API key from the Google Developers Console" />
 
-Get the **API key** — you'll need this in Step 5:
+Get the **API key** — you'll need this later:
 
 <img src="images/image11.png" width="907" height="822" alt="Web page screenshot: get the API key for your project from the Google Developers Console" />
 
-From the Home page, get the **Project Number** — you'll also need this in Step 5:
+From the Home page, get the **Project Number** — you'll also need this later:
 
 <img src="images/image12.png" width="965" height="901" alt="Web page screenshot: get the Project Number for your project from the Google Developers Console" />
 

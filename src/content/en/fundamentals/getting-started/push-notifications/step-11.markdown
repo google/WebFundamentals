@@ -28,7 +28,7 @@ In a production implementation you will also need to to remove subscription data
 
 ## 1. Add a Subscribe/Unsubscribe button to your app
 
-In the _index.html_ file you created in Step 1, add a button so the code looks like this:
+In the _index.html_ file you created earlier, add a button so the code looks like this:
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -99,4 +99,4 @@ In this code, you set the value of the ServiceWorkerRegistration object reg when
 
 The `subscribe()` function creates the `PushSubscription` object **sub** which can be used by the `unsubscribe()` function.
 
-Remember: every time the client gets a new registration ID every time it re-subscribes, so you will need to adjust requests to GCM accordingly.
+Remember: the client gets a new registration ID every time it re-subscribes, so you will need to adjust requests to GCM accordingly.
