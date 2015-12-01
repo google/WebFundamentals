@@ -6,7 +6,7 @@ CLOUDSDK_URL=https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz
 SDK_DIR=google-cloud-sdk
 
 # deploy only master builds
-if [ "$TRAVIS_BRANCH" != "material-branch" ] || [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
+if [ "$TRAVIS_BRANCH" != "master" ] || [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
   echo "Skip deploy."
   exit 0
 fi
@@ -35,4 +35,4 @@ $SDK_DIR/bin/gcloud config set project web-central
 # We do this as the new behaviour doesn't work for our content :(
 $SDK_DIR/bin/gcloud config set app/use_appengine_api false
 
-$SDK_DIR/bin/gcloud --verbosity info preview app deploy --version material ./build/app.yaml
+$SDK_DIR/bin/gcloud --verbosity info preview app deploy --version master ./build/app.yaml

@@ -1,6 +1,6 @@
-# Web Fundamentals <material-branch> [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=material-branch)](https://travis-ci.org/google/WebFundamentals)
+# Web Fundamentals <master> [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
 
-`material-branch` staging: https://material-dot-web-central.appspot.com/web/
+`master` staging: https://master-dot-web-central.appspot.com/web/
 <hr>
 
 Web Fundamentals is a technical documentation center for multi-device web
