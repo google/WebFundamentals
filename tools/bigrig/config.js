@@ -1,6 +1,6 @@
 'use strict';
 
-var rootUrl = 'https://material-dot-web-central.appspot.com/web/';
+var rootUrl = 'https://master-dot-web-central.appspot.com/web/';
 
 module.exports = {
   'tasks': {
