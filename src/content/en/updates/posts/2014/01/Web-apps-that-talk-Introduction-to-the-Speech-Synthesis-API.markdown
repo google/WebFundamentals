@@ -3,7 +3,7 @@ layout: updates/post
 title: "Web apps that talk - Introduction to the Speech Synthesis API"
 description: "Introduction to the Web Speech API's synthesis feature."
 published_on: 2014-01-14
-updated_on: 2014-01-14
+updated_on: 2015-11-15
 authors:
   - ericbidelman
 tags:
@@ -85,7 +85,7 @@ if ('speechSynthesis' in window) {
  // Synthesis support. Make your web apps talk!
 }
 
-if ('SpeechRecognition' in window) {
+if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
   // Speech recognition support. Talk to your apps!
 }
 {% endhighlight %}
