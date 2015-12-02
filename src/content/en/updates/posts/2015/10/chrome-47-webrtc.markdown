@@ -22,7 +22,7 @@ featured_image: /web/updates/images/2015-10-28-chrome-47-webrtc/featured.jpg
 
 The `MediaStreamRecorder` API has long been the top chromium.org request, with over 2500 stars. Media recording has now been added to Chrome behind the experimental Web Platform features flag &mdash; though it's desktop only for the moment. This allows you to record and play back or download video. There is a simple demo on [the WebRTC samples repo](https://webrtc.github.io/samples/src/content/getusermedia/record/) and you can find out more from the [discuss-webrtc announcement](https://groups.google.com/forum/?#!msg/discuss-webrtc/n11m846oV4I/0b3ycjmjCAAJ). A sample Chrome App for recording video from screen capture is available at [github.com/niklasenbom/RecordingApp](https://github.com/niklasenbom/RecordingApp). These are brand-new implementations and there may still be bugs to iron out: please file issues on the repos if you encounter problems.
 
-<img src="/web/updates/images/2015-10-28-chrome-47-webrtc/lp.jpg" alt="Screenshot of MediaRecorder demo on the WebRTC GitHub samples repo">
+<a href="https://webrtc.github.io/samples/src/content/getusermedia/record/" title="MediaRecorder demo"><img src="/web/updates/images/2015-10-28-chrome-47-webrtc/lp.jpg" alt="Screenshot of MediaRecorder demo on the WebRTC GitHub samples repo"></a>
 
 ### Audio output device selection
 
@@ -46,7 +46,7 @@ in Chrome 47.
 
 Chrome 47 adds a new preference to force WebRTC traffic to be sent through a local proxy server, if one is configured, which is important for some users browsing via a VPN. This means that the WebRTC application will only see the proxy IP address. Be aware that this will hurt application performance, and won't work at all unless the application supports TURN/TCP or ICE-TCP. Look for a new version of the [WebRTC Network Limiter Extension](https://chrome.google.com/webstore/detail/webrtc-network-limiter/npeicpdbkakmehahjeeohfdhnlpdklia) soon to provide a UI for this preference. There's more information about IP address 'leakage' in [What's Next for WebRTC](https://www.youtube.com/watch?v=HCE3S1E5UwY&t=5m24s).
 
-<img src="/web/updates/images/2015-10-28-chrome-47-webrtc/network-limiter.png" alt="The WebRTC Network Limiter Chrome extension">
+<a href="https://chrome.google.com/webstore/detail/webrtc-network-limiter/npeicpdbkakmehahjeeohfdhnlpdklia" title="WebRTC Network Limiter extension on the Chrome Web Store"><img src="/web/updates/images/2015-10-28-chrome-47-webrtc/network-limiter.png" alt="WebRTC Network Limiter Chrome extension"></a>
 
 ### ...and more
 
