@@ -13,7 +13,7 @@ translation_priority: 1
 ## Always use a title, description, and icon
 
 A notification takes a number of options. To be minimally user-friendly you
-should always include a title, description, and icon. Do so with options
+should always include a title, description, and icon. Do this with the options
 parameter of the `showNotification()` method. For example:
 
 {% highlight javascript %} 
