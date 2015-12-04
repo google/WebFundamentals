@@ -15,17 +15,17 @@ tags:
 featured_image: /web/updates/images/2015/11/presentation-api/featured.jpg
 ---
 
-<p class="intro">Imagine being able to present a slide deck to a conference projector — or share images, or play games on a TV — from your phone.</p>
+<p class="intro">Imagine being able to use a web app to present a slide deck to a conference projector from your phone — or share images, play games or watch videos on TV, using your phone (or tablet or laptop) as a controller.</p>
 
-The latest release of Chrome on Android now allows sites to [present to Google Cast devices](https://storage.googleapis.com/presentation-api/index.html)
-using the standards-based [Presentation  API](https://w3c.github.io/presentation-api/) and the [Cast Web
+The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/presentation-api/index.html)
+using the [Presentation  API](https://w3c.github.io/presentation-api/) and the [Cast Web
 SDK](https://developers.google.com/cast/docs/chrome_sender).
 
-![Mobile phone, tablet and desktop monitor](/web/updates/images/2015/11/presentation-api/screens.jpg)
+![Alt text](/web/updates/images/2015/11/presentation-api/screens.jpg)
 
-As the spec states, the Presentation API 'enables an exchange of messages between a page that acts as the  [controller](http://www.w3.org/TR/presentation-api/#dfn-controller) and another page that represents the [presentation](http://www.w3.org/TR/presentation-api/#dom-presentation) shown in  the [presentation display](http://www.w3.org/TR/presentation-api/#dfn-presentation-display)'.
+The Presentation API 'enables an exchange of messages between a page that acts as the  [controller](http://www.w3.org/TR/presentation-api/#dfn-controller) and another page that represents the [presentation](http://www.w3.org/TR/presentation-api/#dom-presentation) shown in  the [presentation display](http://www.w3.org/TR/presentation-api/#dfn-presentation-display)' (as the spec puts it).
 
-The browser — or, more correctly, the user agent — gets to decide how to exchange control messages. A user agent acting as a controller may even render the presentation itself — for example when the presentation display is connected via HDMI, or when the presentation is to another window on the same device.  Alternatively, the presentation display device may render content itself.
+The user agent (which may be a web browser) gets to decide how to exchange control messages. A user agent acting as a controller may even render the presentation itself, for example when the presentation display is connected via HDMI or [Miracast](https://en.wikipedia.org/wiki/Miracast) — or when the presentation is to another window on the same device.  Alternatively, the presentation display device may render the content.
 
 Here's how to create a request to start displaying a presentation, and find out when presentation displays become available:
 
@@ -51,14 +51,14 @@ request.getAvailability().then(function(availability) {
 });
 {% endhighlight %}
 
-Once a `PresentationRequest` has been created successfully, `start()` can be called on it to show a display selection dialog to the user (unless there's no presentation display compatibile with the `presentationUrl`):
+Once a `PresentationRequest` has been created successfully, `start()` can be called on it to show a display selection dialog to the user (unless there's no presentation display compatible with the `presentationUrl`):
 
 {% highlight javascript %}
 // controller.html
 
 request.start() // user will be presented with a display selection dialog
   .then(setConnection) // success!
-  .catch(endConnection); // error, or the user cancelled the dialog
+  .catch(endConnection); // error, or the user canceled the dialog
 {% endhighlight %}
 
 Once the user has selected a display device, a new page or tab (strictly speaking, a [browsing context](http://www.w3.org/TR/html5/browsers.html#browsing-context)) will be opened on it, and `presentationUrl` will be displayed.
@@ -108,7 +108,7 @@ function endConnection() {
 }
 {% endhighlight %}
 
-In the presentation, you can then set up a connection and handle messages:
+In the presentation, you can then make a connection and handle messages:
 
 {% highlight javascript %}
 // presentation.html
@@ -139,9 +139,9 @@ navigator.presentation.receiver.
 
 The Presentation API, along with the [Remote Playback API](https://w3c.github.io/remote-playback/), is part of the [Second Screen Working Group](http://www.w3.org/2014/secondscreen) effort to enable web pages to use second screens to display web content.
 
-These APIs take advantage of the variety of devices coming online, including connected displays that run a user agent, enabling a diverse range of applications where a user has access to a 'control' device and a 'display' device.
+These APIs take advantage of the range of devices coming online — including connected displays that run a user agent — enabling a rich variety of applications for users with access to a 'control' device and a 'display' device.
 
-Let us know what you make of them!
+Let us know what you make of them.
 
 ### Find out more
 
