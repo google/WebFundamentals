@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "Instant Loading Web Apps With An Application Shell Architecture"
+title: "Instant Loading Web Apps with An Application Shell Architecture"
 description: "Application shell architecture is a method of building progressive
 web apps today, taking advantage of a range of technologies."
 published_on: 2015-11-17
@@ -29,7 +29,7 @@ application shell architecture**. We'll look at both the client and server-side 
 
 Our application has loaded for the first time and displays an ‘App is ready for offline use’ toast. If an update to the shell becomes available later, we can inform the user to refresh for the new version.
 
-# What are Service Workers, again?
+# What are Service Workers, Again?
 
 A service worker is a script that runs in the background, separate from your web page. It responds to events, including network requests made from pages it serves. A service worker has an intentionally short lifetime. It wakes up when it gets an event and runs only as long as it needs to process it.
 
@@ -45,7 +45,7 @@ Service workers are powerful for offline caching but they also offer significant
 
 On repeat visits, this allows you to get **meaningful pixels** on the screen without the network, even if your content eventually comes from there. Think of it as displaying regions of the screen where toolbars and cards will eventually be populated very quickly and then loading in the rest of the content **progressively**.
 
-## What is the performance impact of this architecture?
+## What is the Performance Impact of this Architecture?
 
 To test this architecture on real devices, we’ve run our [application shell sample](https://github.com/GoogleChrome/application-shell/) on [WebPageTest.org](http://www.webpagetest.org/) and shown the results below.
 
@@ -71,7 +71,7 @@ to the **0.9 seconds** it takes when loaded from our service worker cache. Over 
 
 Similar and reliable performance wins are possible for your own applications using the application shell architecture.
 
-## Does service worker require us to rethink how we structure apps?
+## Does Service Worker Require us to Rethink How We Structure Apps?
 
 Service workers imply some subtle changes in application architecture. Rather than squashing all of your application into an HTML string, it can be beneficial to do things XHR-style. This is where you have a shell (always cached and can always boot up without the network) and content which is refreshed regularly and managed separately.
 
@@ -85,11 +85,11 @@ Below you can see the full version rendered in Chrome, Firefox Nightly and Safar
 
 ![Image of Application Shell loaded in Safari, Chrome and Firefox]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/app-shell-browsers.jpg)
 
-## When does it make sense to use this architecture?
+## When Does it Make Sense to Use This Architecture?
 
 The Application Shell architecture makes the most sense for apps and sites that are dynamic. If you're a very small static site, you probably don't need an application shell and can simply cache the whole site in a service worker `oninstall` step. Use the approach that makes the most sense for your project. A number of JavaScript frameworks already encourage splitting your application logic from the content, making this pattern more straight-forward to apply.
 
-## Production apps using this pattern already?
+## Production Apps Using this Pattern Already?
 
 The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](https://developers.google.com/web/showcase/case-study/service-workers-iowa) and Google’s Inbox.
 
@@ -99,7 +99,7 @@ Offline application shells are a major performance win and are also demonstrated
 
 ![Screenshots of Jake Archibald's Wikipedia Demo.]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/wikipedia.jpg)
 
-# Explaining the architecture
+# Explaining the Architecture
 
 During the first load experience, your goal is to get meaningful content to the user’s screen as quickly as possible.
 
@@ -125,7 +125,7 @@ During the first load experience, your goal is to get meaningful content to the 
 
 ![App Shell for Content]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/inline.jpg)
 
-# A practical implementation
+# A Practical Implementation
 
 We’ve written a fully working [sample](https://github.com/GoogleChrome/application-shell) using the Application Shell architecture using vanilla ES2015 JavaScript for the client and Express.js for the server. There is course nothing stopping you from using your own stack for either the client or the server portions (e.g PHP, Ruby, Python). We found using JS all the way through relatively painless for this example.
 
@@ -153,7 +153,7 @@ For our application-shell project, we use [sw-precache](https://github.com/Googl
 </table>
 
 
-## Server bits
+## Server Bits
 
 In the architecture, a server side component (in our case, written in Express) should be able to treat the content separate from how it’s presented. Content could be added to a HTML layout that results in a static render of the page, or it could be served up on it’s own to dynamically pulled in.
 
@@ -171,7 +171,7 @@ Understandably, your server-side setup may drastically differ from the one we us
 
 * Browsers **without** service worker support should always be served a fall-back experience. In our demo, we fall back to basic static server-side rendering, but this is only one of many options. The service worker aspect provides you with new opportunities for enhancing the performance of your Single-page Application style app using the cached application shell.
 
-## File versioning
+## File Versioning
 
 One question that arises is how exactly should file versioning/updates be handled. This is application specific and the options are:
 
@@ -191,13 +191,13 @@ We maintain a number of different [service worker helper libraries](https://deve
 
 ![Screenshot of the Service Worker Library Site on Web Fundamentals]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/image_10.png)
 
-## Use sw-precache for your application shell
+## Use sw-precache for Your Application Shell
 
 Using [sw-precache](https://github.com/GoogleChrome/sw-precache) to cache the application shell should handle the concerns around file revisions, the install/activate questions, and the fetch scenario for the app shell.  You can drop sw-precache into your application’s build process and can use configurable wildcards to pick up your static resources. Rather than manually hand-crafting your service worker script, it generates one for you to take care of cache management in a way that is safe and has an efficient, cache-first fetch handler.
 
 Initial visits to your app trigger precaching of the complete set of needed resources. This is very similar to the experience of installing a native app from an app store. When users return to your app, only updated resources are downloaded. In our demo app, we display an "App updated. Refresh for the new version" message to inform users that a new version of the application shell is available. This pattern is a low-friction way of letting users know they can refresh for the latest version.
 
-## Use sw-toolbox for runtime caching
+## Use sw-toolbox for Runtime Caching
 
 Use [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) for runtime caching with varying strategies depending on the resource:
 
@@ -205,7 +205,7 @@ Use [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) for runtime caching
 
 * [networkFirst](https://github.com/GoogleChrome/sw-toolbox#toolboxnetworkfirst) or fastest for API requests, depending on the desired content freshness. Fastest might be fine, but if there’s a specific API feed that's updated frequently, use networkFirst.
 
-# Conclusions
+# Conclusion
 
 Application shell architectures comes with several benefits but only makes sense for some classes of applications.The model is still young and it will be worth evaluating how much effort and overall performance benefits you might gain from using this architecture.
 
