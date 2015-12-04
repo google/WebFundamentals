@@ -14,16 +14,24 @@ tags:
 featured_image: /web/updates/images/2015/11/appshell/app-shell-browsers.jpg
 ---
 
-[Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) describe how a web app can *progressively* change with use and user consent to give the user a more native-app-like experience with offline support, push notifications and being installable to the home-screen. They can gain **substantial** performance benefits thanks to intelligent [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) caching of your UI shell for repeat visits.
+An **application shell** is the minimal HTML, CSS, and JavaScript powering a user interface. The application shell should:
 
-This allows you to focus on **speed**, giving your webapps the same **instant loading** and regular updates you're used to seeing in native applications. It’s all possible using an **Application shell architecture** - a companion to this new way of thinking. Any site can take advantage of [service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/), but progressive web apps must have them so it’s a natural fit.
+* load fast
+* be cached 
+* dynamically display content
+
+An application shell is the secret to reliably good performance. Think of your app's shell like the bundle of code you'd publish to an app store if building a native app. It's the load needed to get off the ground, but might not be the whole story. It keeps your UI local and pulls in content dynamically through an API.
 
 ![App Shell Separation of HTML, JS and CSS shell and the HTML Content]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/appshell-1.jpg)
 
-When we talk about an app’s shell, we mean the minimal HTML, CSS and JavaScript powering the user interface. **This should load fast, be cached and once loaded, dynamic content can populate your view**. It's the secret to reliably good performance. Think of your app's shell like the bundle of code you'd publish to an app store if building a native app - it's the load needed to get off the ground, but might not be the whole story. Keep your UI local and pull in content dynamically through an API.
+# Background
+
+Alex Russell's [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) article describes how a web app can *progressively* change through use and user consent to provide a more native-app-like experience complete with offline support, push notifications and the ability to be added to the home screen. It depends very much on the functionality and performance benefits of [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) and their caching abilities. This allows you to focus on **speed**, giving your web apps the same **instant loading** and regular updates you're used to seeing in native applications.
+
+To take full advanrtage of these capabilities we need a new way of thinking about web sites: the **application shell architecture**.
 
 Let's dive into how to structure your app using a **service worker augmented
-application shell architecture**. We'll look at both the client and server-side rendering involved and share an end-to-end sample you can try out today.
+application shell architecture**. We'll look at both client and server-side rendering and share an end-to-end sample you can try today.
 
 ![Image of Service Worker running in DevTools for the Application Shell]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/image_1.png)
 
