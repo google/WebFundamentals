@@ -14,6 +14,8 @@ tags:
 featured_image: /web/updates/images/2015/11/appshell/app-shell-browsers.jpg
 ---
 
+{% include shared/toc.liquid %}
+
 [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) describe how a web app can *progressively* change with use and user consent to give the user a more native-app-like experience with offline support, push notifications and being installable to the home-screen. They can gain **substantial** performance benefits thanks to intelligent [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) caching of your UI shell for repeat visits.
 
 This allows you to focus on **speed**, giving your webapps the same **instant loading** and regular updates you're used to seeing in native applications. It’s all possible using an **Application shell architecture** - a companion to this new way of thinking. Any site can take advantage of [service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/), but progressive web apps must have them so it’s a natural fit.
