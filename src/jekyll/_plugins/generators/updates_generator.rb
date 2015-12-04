@@ -105,11 +105,11 @@ module Jekyll
           # Error on reserved words or if there is a space in the tag
           if tag === 'index' || tag === 'index.html'
             msg = 'Reserved tag name index[.html] (' + page.name + ')'
-            raise ArgumentError.new("Create Tag Pages: " + msg);
+            throw new PluginError("Create Tag Pages", msg);
           end
           if tag.index(' ') != nil
-            msg = 'Spaces not permitted in tags! You have \'' + tag + '\' in the tag list of file: (' + page.name + ')'
-            raise ArgumentError.new("Create Tag Pages: " + msg);
+            msg = 'Spaces not permitted in tags: ' + tag + ' (' + page.name + ')'
+            throw new PluginError("Create Tag Pages", msg);
           end
 
           @tagPageMapping[tag] ||= []
