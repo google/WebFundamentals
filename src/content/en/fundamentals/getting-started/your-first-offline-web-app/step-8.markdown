@@ -11,7 +11,7 @@ authors:
 ---
 
 Give a little honk of the air horn. You now have a web app that can work 
-offline. If everything was set up correctly, you should see yoru debug
+offline. If everything was set up correctly, you should see your debug
 statements appearing in the Log section of your Service Worker on the
 `chrome://serviceworker-internals/` page.
 
