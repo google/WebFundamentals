@@ -595,6 +595,23 @@ jeffposnick:
   description:
     en: "Web DevRel @ Google"
 
+rupl:
+  name:
+    given: Chris
+    family: Ruppel
+  org:
+    name:
+    unit:
+  country: DE
+  role:
+    - author
+  homepage: https://chrisruppel.com
+  google: +ChrisRuppel
+  twitter: rupl
+  email: chris.ruppel@gmail.com
+  description:
+    en: "Chris is a frontend developer and web performance advocate."
+
 glenshires:
   name:
     given: Glen
