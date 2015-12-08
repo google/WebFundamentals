@@ -1,0 +1,125 @@
+---
+layout: updates/post
+title: "Introducing Background Sync"
+description: "Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is really useful for ensuring whatever the user wants to send, actually sends."
+published_on: 2015-12-09
+updated_on: 2015-12-09
+authors:
+  - jakearchibald
+tags:
+  - service-worker
+featured_image: /web/updates/images/2015/12/sync/emojoy.png
+---
+
+<p class="intro">Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is really useful for ensuring whatever the user wants to send, actually sends.</p>
+
+## The problem
+
+The internet is a great place to waste time. Without wasting time on the internet, we wouldn't know <a href="https://www.youtube.com/watch?v=-Z4jx5VMw8M">cats dislike flowers</a>, <a href="https://www.youtube.com/watch?v=PrjkqW37n_k">chameleons love bubbles</a>, and "you do what they told ya" as sung by "Rage against the machine" <a href="https://youtu.be/W4BzJm4-Wo0?t=14s">sounds like the Japanese for "Break the chicken nugget, daddy"</a>.
+
+But sometimes, just sometimes, we're not looking to waste time. The desired user experience is more like:
+
+1. Phone out of pocket
+1. Achieve minor goal
+1. Phone back in pocket
+1. Resume life
+
+Unfortunately this experience is frequently broken by poor connectivity. We've all been there. You're staring at a white screen or a spinner, and you know you should just give up and get on with your life, but you give it another 10 seconds just in case. After that 10 seconds? Nothing. But why give up now? You've invested time already, so walking away with nothing would be a waste, so you carry on waiting. By this point you *want* to give up, but you know the second you do so, is the second before everything would have loaded if only you'd waited.
+
+[Service workers](/web/updates/2015/11/app-shell) solve the page loading part by letting you serve content from a cache. But what about when the page needs to send something to the server?
+
+At the moment, if the user hits "send" on a message they have to stare at a spinner until it completes. If they try to navigate away or close the tab, we use [`onbeforeunload`](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload) to display a message like “Nope, I need you to stare at this spinner some more. Sorry”. If the user has no connection we tell the user “Sorry, *you* must come back later and try again”.
+
+This is rubbish. Background sync lets you do better.
+
+## The solution
+
+The following video shows [Emojoy](https://jakearchibald-gcm.appspot.com) - a simple emoji-only chat demo… thing. It’s a [progressive app](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/); it works offline-first, it uses push messages & notifications, and it uses background sync.
+
+The user tries to send a message when they have zero connectivity. Thankfully, the message is sent in the background once they get connectivity.
+
+{% ytvideo l4e_LFozK2k %}
+
+Background sync hasn't hit the main release of Chrome yet, so if you want to try this out you’ll need either [Chrome Dev for Android](https://play.google.com/store/apps/details?id=com.chrome.dev&hl=en), or [Chrome Canary for desktop](https://www.google.com/chrome/browser/canary.html). You’ll also need to enable `chrome://flags/#enable-experimental-web-platform-features` and restart the browser. Then:
+
+1. [Open Emojoy](https://jakearchibald-gcm.appspot.com)
+1. Go offline (either using airplane-mode or visit your local Faraday cage)
+1. Type a message
+1. Go back to your homescreen (optionally close the tab/browser)
+1. Go online
+1. Message sends in the background!
+
+Being able to send in the background like this also yields a perceived performance improvement. The app doesn’t need to make such a big deal about the message sending, so it can add the message to the output straight away.
+
+## How to request a background sync
+
+In true [extensible web](https://extensiblewebmanifesto.org/) style, this is a low level feature that gives you the freedom to do what you need. You ask for an event to be fired when the user has connectivity, which is immediate if the user already has connectivity. Then, you listen for that event and do whatever you need to do.
+
+Like push messaging, it uses a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) as the event target, which enables it to work when the page isn’t open. To begin, register for a sync from a page:
+
+{% highlight javascript %}
+// Register your service worker:
+navigator.serviceWorker.register('/sw.js');
+
+// Then later, request a one-off sync:
+navigator.serviceWorker.ready.then(function(swRegistration) {
+  return swRegistration.sync.register('myFirstSync');
+});
+{% endhighlight %}
+
+Then listen for the event in `/sw.js`:
+
+{% highlight javascript %}
+self.addEventListener('sync', function(event) {
+  if (event.tag == 'myFirstSync') {
+    event.waitUntil(doSomeStuff());
+  }
+});
+{% endhighlight %}
+
+And that's it! In the above, `doSomeStuff()` should return a promise indicating the success/failure of whatever it’s trying to do. If it fulfills, the sync is complete. If it fails, another sync will be scheduled to retry. Retry syncs also wait for connectivity, and employ an exponential back-off.
+
+[Here’s a simple demo](https://jakearchibald.github.io/isserviceworkerready/demos/sync/) that does the bare minimum - uses the sync event to show a notification.
+
+## What could I use background sync for?
+
+Ideally, you’d use it to schedule any data-sending that you care about beyond the life of the page. Chat messages, emails, document updates, settings changes, photo uploads… anything that you want to reach the server even if user navigates away or closes the tab.
+
+Although, you could also use it to fetch small bits of data…
+
+### Another demo!
+
+{% ytvideo oiVyIT7ljC0 %}
+
+This is the [offline wikipedia](https://wiki-offline.jakearchibald.com/) demo I created for [Supercharging Page Load](https://www.youtube.com/watch?v=d5_6yHixpsQ). I’ve since added some background sync magic to it.
+
+To try this out yourself, as before make sure you’re in [Chrome Dev for Android](https://play.google.com/store/apps/details?id=com.chrome.dev&hl=en), or [Chrome Canary for desktop](https://www.google.com/chrome/browser/canary.html) with `chrome://flags/#enable-experimental-web-platform-features`.
+
+1. Go to any article, perhaps [Chrome](https://wiki-offline.jakearchibald.com/wiki/Google_Chrome)
+1. Go offline (either using airplane-mode or join a terrible mobile provider like I have)
+1. Click a link to another article
+1. You should be told the page failed to load (this will also appear if the page just takes a while to load)
+1. Agree to notifications
+1. Close browser
+1. Go online
+1. You get notified when the article is downloaded, cached, and ready to view!
+
+Using this pattern, the user can put their phone in their pocket and get on with their life, knowing the phone will alert them when it's fetched want they wanted.
+
+## Permissions
+
+The demos I’ve shown use [web notifications](https://notifications.spec.whatwg.org/), which require permission, but background sync itself does not.
+
+Sync events will often complete while the user has a page open to the site, so requiring user permission would be a poor experience. Instead, we’re limiting when syncs can be registered and triggered to prevent abuse. Eg:
+
+* You can only register for a sync event from a window, not a service worker
+* The CPU time in a sync is capped, so you can’t use them for heavy computational tasks
+* The event time is capped, so you can’t use them to ping a server every x seconds
+
+Of course, these restrictions may loosen/tighten based on real-world usage.
+
+## The future
+
+We're aiming to ship background sync to stable version of Chrome in the first half of 2016. But we're also working on a variant, “periodic background sync”. This will allow you to request a “periodicsync” event restricted by time interval, battery state and network state. This would require user permission, of course, but it will also be down to the will of the browser for when & how often these events fire. Eg, a news site could request to sync every hour, but the browser may know you only read that site at 07:00, so the sync would fire daily at 06:50. This idea is a little further off than one-off syncing, but it’s coming!
+
+Bit by bit we're bringing successful patterns from Android/iOS onto the web, while still retaining what makes the web great!
