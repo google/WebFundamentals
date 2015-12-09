@@ -33,8 +33,8 @@ the CLA.
 
 If your contribution contains code, please make sure that it follows 
 [the style guide](http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml).
-Otherwise we will have to ask you to make changes, and that's no fun for anyone.
+Otherwise, we will have to ask you to make changes, and that's no fun for anyone.
 
 ## Formatting HTML ##
 
-To simplify PR reviews, please word-wrap HTML files at 80 characters or less.
+To simplify PR reviews, please word-wrap HTML files at 80 characters or fewer.
