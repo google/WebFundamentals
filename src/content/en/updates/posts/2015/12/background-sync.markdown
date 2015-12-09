@@ -15,16 +15,16 @@ featured_image: /web/updates/images/2015/12/sync/emojoy.png
 
 ## The problem
 
-The internet is a great place to waste time. Without wasting time on the internet, we wouldn't know <a href="https://www.youtube.com/watch?v=-Z4jx5VMw8M">cats dislike flowers</a>, <a href="https://www.youtube.com/watch?v=PrjkqW37n_k">chameleons love bubbles</a>, and "you do what they told ya" as sung by "Rage against the machine" <a href="https://youtu.be/W4BzJm4-Wo0?t=14s">sounds like the Japanese for "Break the chicken nugget, daddy"</a>.
+The internet is a great place to waste time. Without wasting time on the internet, we wouldn’t know <a href="https://www.youtube.com/watch?v=-Z4jx5VMw8M">cats dislike flowers</a>, <a href="https://www.youtube.com/watch?v=PrjkqW37n_k">chameleons love bubbles</a>, and "you do what they told ya" as sung by "Rage against the machine" <a href="https://youtu.be/W4BzJm4-Wo0?t=14s">sounds like the Japanese for "Break the chicken nugget, daddy"</a>.
 
-But sometimes, just sometimes, we're not looking to waste time. The desired user experience is more like:
+But sometimes, just sometimes, we’re not looking to waste time. The desired user experience is more like:
 
 1. Phone out of pocket
 1. Achieve minor goal
 1. Phone back in pocket
 1. Resume life
 
-Unfortunately this experience is frequently broken by poor connectivity. We've all been there. You're staring at a white screen or a spinner, and you know you should just give up and get on with your life, but you give it another 10 seconds just in case. After that 10 seconds? Nothing. But why give up now? You've invested time already, so walking away with nothing would be a waste, so you carry on waiting. By this point you *want* to give up, but you know the second you do so, is the second before everything would have loaded if only you'd waited.
+Unfortunately this experience is frequently broken by poor connectivity. We’ve all been there. You’re staring at a white screen or a spinner, and you know you should just give up and get on with your life, but you give it another 10 seconds just in case. After that 10 seconds? Nothing. But why give up now? You’ve invested time already, so walking away with nothing would be a waste, so you carry on waiting. By this point you *want* to give up, but you know the second you do so, is the second before everything would have loaded if only you’d waited.
 
 [Service workers](/web/updates/2015/11/app-shell) solve the page loading part by letting you serve content from a cache. But what about when the page needs to send something to the server?
 
@@ -40,7 +40,7 @@ The user tries to send a message when they have zero connectivity. Thankfully, t
 
 {% ytvideo l4e_LFozK2k %}
 
-Background sync hasn't hit the main release of Chrome yet, so if you want to try this out you’ll need either [Chrome Dev for Android](https://play.google.com/store/apps/details?id=com.chrome.dev&hl=en), or [Chrome Canary for desktop](https://www.google.com/chrome/browser/canary.html). You’ll also need to enable `chrome://flags/#enable-experimental-web-platform-features` and restart the browser. Then:
+Background sync hasn’t hit the main release of Chrome yet, so if you want to try this out you’ll need either [Chrome Dev for Android](https://play.google.com/store/apps/details?id=com.chrome.dev&hl=en), or [Chrome Canary for desktop](https://www.google.com/chrome/browser/canary.html). You’ll also need to enable `chrome://flags/#enable-experimental-web-platform-features` and restart the browser. Then:
 
 1. [Open Emojoy](https://jakearchibald-gcm.appspot.com)
 1. Go offline (either using airplane-mode or visit your local Faraday cage)
@@ -118,8 +118,28 @@ Sync events will often complete while the user has a page open to the site, so r
 
 Of course, these restrictions may loosen/tighten based on real-world usage.
 
+## Progressive Enhancement
+
+It’ll be a while before all browsers support background sync, especially as Safari & Edge don’t yet support service workers. But progressive enhancement helps here:
+
+{% highlight javascript %}
+if ('serviceWorker' in navigator && 'SyncManger' in window) {
+  navgiator.serviceWorker.ready.then(function(reg) {
+    return reg.sync.register('tag-name');
+  }).catch(function() {
+    postDataFromThePage();
+  });
+} else {
+  postDataFromThePage();
+}
+{% endhighlight %}
+
+If service workers or background sync aren’t available, just post the content from the page as you’d do today.
+
+Note that it’s worth using background sync even if the user appears to have good connectivity, as it protects you against navigations and tab closures during data send.
+
 ## The future
 
-We're aiming to ship background sync to stable version of Chrome in the first half of 2016. But we're also working on a variant, “periodic background sync”. This will allow you to request a “periodicsync” event restricted by time interval, battery state and network state. This would require user permission, of course, but it will also be down to the will of the browser for when & how often these events fire. Eg, a news site could request to sync every hour, but the browser may know you only read that site at 07:00, so the sync would fire daily at 06:50. This idea is a little further off than one-off syncing, but it’s coming!
+We're aiming to ship background sync to stable version of Chrome in the first half of 2016. But we’re also working on a variant, “periodic background sync”. This will allow you to request a “periodicsync” event restricted by time interval, battery state and network state. This would require user permission, of course, but it will also be down to the will of the browser for when & how often these events fire. Eg, a news site could request to sync every hour, but the browser may know you only read that site at 07:00, so the sync would fire daily at 06:50. This idea is a little further off than one-off syncing, but it’s coming!
 
-Bit by bit we're bringing successful patterns from Android/iOS onto the web, while still retaining what makes the web great!
+Bit by bit we’re bringing successful patterns from Android/iOS onto the web, while still retaining what makes the web great!
