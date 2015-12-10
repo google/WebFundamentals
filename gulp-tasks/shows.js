@@ -206,7 +206,7 @@ if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
         maxResults: 50
       }, function(err, result) {
         if (err) {
-          reject('A problem occured with the YouTube API', err);
+          reject('A problem occured fetching playlist with the YouTube API', err);
           return;
         }
 
@@ -222,6 +222,8 @@ if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
           var showDetails = createShowObject(videoDetails);
           args.shows.push(showDetails);
         }
+        
+        
 
         resolve(args);
       });
@@ -297,7 +299,10 @@ if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
               .then(getVideoInfo);
           case 'Playlist':
             return getPlaylistId(args)
-              .then(getPlaylistInfo);
+              .then(getPlaylistInfo)
+              .catch(function(err) {
+                console.error(err);
+              });
           default:
             throw Error('Unable to handle unknown type of generation.');
         }
