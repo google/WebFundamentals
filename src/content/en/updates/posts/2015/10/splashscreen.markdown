@@ -96,7 +96,7 @@ you are doing):
       "src": "/images/icon-512x512.png",  
       "sizes": "512x512",  
       "type": "image/png"  
-    },  
+    }
   ],  
   "background_color": "#FAFAFA",
   "theme_color": "#512DA8", 
