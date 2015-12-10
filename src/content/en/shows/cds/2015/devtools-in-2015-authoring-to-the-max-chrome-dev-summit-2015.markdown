@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "DevTools in 2015: Authoring to the max (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6DWqxz00xg6Bmh09qLsQyvg"
+youtubeID: "dJR-n8szgBc"
 youtubeThumbnail: "https://i.ytimg.com/vi/dJR-n8szgBc/maxresdefault.jpg"
-published_on: "2015-11-18"
+published_on: 2015-11-18
+updated_on: 2015-11-18
 ---
 
 In early 2015, the Chrome DevTools team has come to the realization that an expanding number of DevTools users aren't simply developers, but prototypers and designers. Thus, we've refocused some of our efforts to ensure everyone can iterate quickly and efficiently on mobile-first, responsive page layouts. Tune in to learn about a few upcoming features that dramatically enhance your authoring workflow.

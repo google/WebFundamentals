@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Accessibility (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6Dyp7YmUXXQ_LZe_DJBxrXc"
+youtubeID: "RkKl1O56w-c"
 youtubeThumbnail: "https://i.ytimg.com/vi/RkKl1O56w-c/maxresdefault.jpg"
-published_on: "2015-11-18"
+published_on: 2015-11-18
+updated_on: 2015-11-18
 ---
 
 Join Alice Boxhall to learn about all the work that Chrome has been doing to make Accessibility simple for developers.

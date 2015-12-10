@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "V8 Performance from the Driver's Seat (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6GkP_afcZmNxXkSdC7IAr1o"
+youtubeID: "oDFWIb0pi4U"
 youtubeThumbnail: "https://i.ytimg.com/vi/oDFWIb0pi4U/maxresdefault.jpg"
-published_on: "2015-11-18"
+published_on: 2015-11-18
+updated_on: 2015-11-18
 ---
 
 When peak JavaScript speed is the bottleneck in your app’s performance, is it the browser’s fault or is it inefficient code? Learn about the most recent speed breakthroughs in Chrome’s V8 JavaScript engine, and how you can write code that is optimizable by modern browsers today and in the future.

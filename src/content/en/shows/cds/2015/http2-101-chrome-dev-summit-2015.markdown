@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "HTTP/2 101 (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6PRW4JvYR_1USBaqwOwvXZU"
+youtubeID: "r5oT_2ndjms"
 youtubeThumbnail: "https://i.ytimg.com/vi/r5oT_2ndjms/maxresdefault.jpg"
-published_on: "2015-11-19"
+published_on: 2015-11-19
+updated_on: 2015-11-19
 ---
 
 HTTP/2 is coming. Actually, it’s here. Right now. It impacts not only your user’s experience but also the way you need to think about your website and webapps. Let’s see how HTTP/2 came to be and how it makes development easier.

@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Asking for Permission: respectful, opinionated UI (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6MIMh14N1b39x3TqGNTTxv0"
+youtubeID: "4QQyjqtHwlY"
 youtubeThumbnail: "https://i.ytimg.com/vi/4QQyjqtHwlY/maxresdefault.jpg"
-published_on: "2015-11-18"
+published_on: 2015-11-18
+updated_on: 2015-11-18
 ---
 
 Access to new device capabilities such as background sync and bluetooth allow developers to deliver more meaningful experiences to the web than ever before, but also leave users open to a brand new set of privacy and security risks. We’ll be discussing how developers can best take advantage of the Chrome permissions model to build experiences that keep users coming back.

@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Instant Loading with Service Workers (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6Dl6713U5Wq35o-NZrgv8oo"
+youtubeID: "jCKZDTtUA2A"
 youtubeThumbnail: "https://i.ytimg.com/vi/jCKZDTtUA2A/maxresdefault.jpg"
-published_on: "2015-11-17"
+published_on: 2015-11-17
+updated_on: 2015-11-17
 ---
 
 Service workers can power your web app while offline, but they can also offer substantial performance benefits while online. We’ll explain how to structure your web app to optimize load time for initial and return visitors, and cover helpful service worker libraries that minimize the amount of boilerplate code you’ll have to write.

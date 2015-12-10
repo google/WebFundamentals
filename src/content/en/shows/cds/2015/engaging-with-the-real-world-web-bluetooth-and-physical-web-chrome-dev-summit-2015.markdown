@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Engaging with the Real World: Web Bluetooth and Physical Web (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6IEq6Bh0chY0Z7WsfJBsLJQ"
+youtubeID: "_BUwOBdLjzQ"
 youtubeThumbnail: "https://i.ytimg.com/vi/_BUwOBdLjzQ/maxresdefault.jpg"
-published_on: "2015-11-18"
+published_on: 2015-11-18
+updated_on: 2015-11-18
 ---
 
 Web Bluetooth opens up low level communication with an expanding ecosystem of BLE devices such as toys, vending machines, museum exhibits, kiosks and more. The Physical Web makes discovering and connecting to these objects trivial for users. Together they expand the reach of the web to even more devices around users.

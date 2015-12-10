@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "RAIL in the real world (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6Dwh3DVibiK_pPJplEYvV-A"
+youtubeID: "iIV1xPFXmBs"
 youtubeThumbnail: "https://i.ytimg.com/vi/iIV1xPFXmBs/maxresdefault.jpg"
-published_on: "2015-11-18"
+published_on: 2015-11-18
+updated_on: 2015-11-18
 ---
 
 RAIL is the Chrome team’s way of thinking about performance, but how can you apply it to your projects? Does it work as-is, or do you need to do tweak things first? Let’s take a look at what RAIL involves when the rubber hits the road.

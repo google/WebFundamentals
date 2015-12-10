@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Building and deploying a Progressive Web App at scale with Flipkart (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6MSbTdl5CjmTbKl9TVX0fvk"
+youtubeID: "StdKz32M1RM"
 youtubeThumbnail: "https://i.ytimg.com/vi/StdKz32M1RM/maxresdefault.jpg"
-published_on: "2015-11-19"
+published_on: 2015-11-19
+updated_on: 2015-11-19
 ---
 
 Flipkart is one of the largest e-commerce companies in India. Hear from their development team about their approach in architecting an immersive mobile experience that is fast, reliable and engaging.

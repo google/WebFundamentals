@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Deploying HTTPS: The Green Lock and Beyond (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6BxS3MkYMDBkFpwxBK88POo"
+youtubeID: "9WuP4KcDBpI"
 youtubeThumbnail: "https://i.ytimg.com/vi/9WuP4KcDBpI/maxresdefault.jpg"
-published_on: "2015-11-17"
+published_on: 2015-11-17
+updated_on: 2015-11-17
 ---
 
 In this day and age, all sites should be using HTTPS to protect their users’ privacy and security. Fortunately, Chrome is here to help you deploy HTTPS correctly. In this session we’ll cover new developer tools that will help you roll out HTTPS without a hiccup.

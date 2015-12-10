@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Quantify and improve real-world RAIL (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6DKg2zDDwyCqCZ5XiLNMGEo"
+youtubeID: "NrEjkflqPxQ"
 youtubeThumbnail: "https://i.ytimg.com/vi/NrEjkflqPxQ/maxresdefault.jpg"
-published_on: "2015-11-18"
+published_on: 2015-11-18
+updated_on: 2015-11-18
 ---
 
 You’ve mastered DevTools and tuned your application to follow all the RAIL best practices. Except, how it does perform on your users devices in the real world? We’ll take a look at existing, new, and upcoming APIs that will help you quantify and improve performance of your applications.

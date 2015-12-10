@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Developing for Billions (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6N8nStpsFqVRWx6ld98-RTI"
+youtubeID: "9jmqsq2OQjc"
 youtubeThumbnail: "https://i.ytimg.com/vi/9jmqsq2OQjc/maxresdefault.jpg"
-published_on: "2015-11-17"
+published_on: 2015-11-17
+updated_on: 2015-11-17
 ---
 
 With millions of people coming online every year, we are seeing a new diversity of users from around the word using the web for the first time. We’ll talk about the opportunity we have with these new users, the unique constraints and challenges in developing for them, and some of the capabilities the web and Chrome offer to help create the best possible experiences.

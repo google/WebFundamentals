@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Increase Engagement with Web Push Notifications (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6H-wMYqrIBH9e-BbGfmqPYo"
+youtubeID: "uh0IASBexdM"
 youtubeThumbnail: "https://i.ytimg.com/vi/uh0IASBexdM/maxresdefault.jpg"
-published_on: "2015-11-17"
+published_on: 2015-11-17
+updated_on: 2015-11-17
 ---
 
 Timely, personalized notifications save users the effort of manually checking for updates throughout the day and have enabled a host of new experiences from real time communication to live updates on breaking news. In this talk, we'll do a deep dive into sending push notifications to your web users on desktop and mobile, even after they've left your site.

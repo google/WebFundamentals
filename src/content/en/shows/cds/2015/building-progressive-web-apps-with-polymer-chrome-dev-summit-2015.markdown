@@ -1,9 +1,10 @@
 ---
 layout: shows/episode
 title: "Building Progressive Web Apps with Polymer (Chrome Dev Summit 2015)"
-youtubeID: "PLdK_RlPcQLk2N7sOT857T6KAElm8FqFafrpxQtnJuFSE"
+youtubeID: "g7f1Az5fxgU"
 youtubeThumbnail: "https://i.ytimg.com/vi/g7f1Az5fxgU/maxresdefault.jpg"
-published_on: "2015-11-18"
+published_on: 2015-11-18
+updated_on: 2015-11-18
 ---
 
 With the combination of Web Components and Service worker, web developers have incredibly powerful and fundamentally new tools to build applications. We’ll explain how we on the Polymer team see these two technologies creating a whole new paradigm for building applications on the web, and how Polymer can help make it easier to build this brand-new breed of web application.
