@@ -35,6 +35,7 @@ We'll keep you posted on our progress with implementation.
 
 ### Find out more
 
+* [Get Started with Google Cast SDK](https://developers.google.com/cast/)
 * [Presentation API spec](http://www.w3.org/TR/presentation-api)
 * [Use cases and requirements](https://github.com/w3c/presentation-api/blob/gh-pages/uc-req.md)
 * [The Second Screen Working Group](http://www.w3.org/2014/secondscreen/)
