@@ -145,7 +145,13 @@ if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
 
   function createShowObject(ytVideoObject) {
     var showDetails = {};
-    showDetails.id = ytVideoObject.id;
+    if(ytVideoObject.kind == 'youtube#playlistItem') {
+      showDetails.id = ytVideoObject.snippet.resourceId.videoId;
+    }
+    else {
+      showDetails.id = ytVideoObject.id;
+    }
+    
     showDetails.title = ytVideoObject.snippet.title;
     showDetails.description = ytVideoObject.snippet.description;
     showDetails.publishedOn = ytVideoObject.snippet.publishedAt;
@@ -223,8 +229,6 @@ if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
           args.shows.push(showDetails);
         }
         
-        
-
         resolve(args);
       });
     });
@@ -234,6 +238,8 @@ if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
     var year = dateObj.getFullYear().toString();
     var month = (dateObj.getMonth() + 1).toString();
     var day = dateObj.getDate().toString();
+    var hour = dateObj.getHours().toString();
+    var minute = dateObj.getMinutes().toString();
 
     if (month.length < 2) {
       month = '0' + month;
@@ -242,8 +248,16 @@ if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
     if (day.length < 2) {
       day = '0' + day;
     }
+    
+    if (hour.length < 2) {
+      hour = '0' + hour;
+    }
+    
+    if (minute.length < 2) {
+      minute = '0' + minute;
+    }
 
-    return year + '-' + month + '-' + day;
+    return year + '-' + month + '-' + day;// + ' ' + hour + ':' + minute + ':00';
   }
 
   function slugify(text) {
@@ -274,6 +288,8 @@ if (fs.existsSync('tools/shows-gen/yt-api-key.json')) {
         showContents = showContents.replace('/@ YTID @/',
           showObj.id);
         showContents = showContents.replace('/@ PUBLISHDATE @/',
+          formatDate(new Date(showObj.publishedOn)));
+        showContents = showContents.replace('/@ UPDATEDATE @/',
           formatDate(new Date(showObj.publishedOn)));
         showContents = showContents.replace('/@ YTTHUMBNAIL @/',
           showObj.thumbnail);
