@@ -38,8 +38,7 @@
         {{subdirectory.index.title}}
       </h4>
       {% for showPage in subdirectory.pages reversed %}
-
-        {% capture imgUrl %}https://img.youtube.com/vi/{{showPage.youtubeID}}/mqdefault.jpg {% endcapture %}
+        {% capture imgUrl %}{% if showPage.youtubeThumbnail %}{{showPage.youtubeThumbnail}}{% else %}https://img.youtube.com/vi/{{showPage.youtubeID}}/mqdefault.jpg{%endif%}{% endcapture %}
         {% include shows/card.liquid title=showPage.title text=showPage.description linkHref=showPage.relative_url linkText="Watch Now" imgUrl=imgUrl %}
       {% endfor %}
     {% endfor %}

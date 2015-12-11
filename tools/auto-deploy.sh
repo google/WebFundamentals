@@ -25,14 +25,15 @@ openssl aes-256-cbc -d -k $KEY_PASSPHRASE \
         -in tools/web-central-44673aab0806.json.enc \
         -out tools/web-central-44673aab0806.json
 
-$SDK_DIR/bin/gcloud components update gae-python -q
+
+$SDK_DIR/bin/gcloud config set project web-central
+$SDK_DIR/bin/gcloud components update app -q
 $SDK_DIR/bin/gcloud auth activate-service-account $SERVICE_ACCOUNT \
         --key-file tools/web-central-44673aab0806.json \
         --quiet
 $SDK_DIR/bin/gcloud config set project web-central
+$SDK_DIR/bin/gcloud config set app/promote_by_default false
+$SDK_DIR/bin/gcloud config set app/use_appengine_api true
+$SDK_DIR/bin/gcloud preview app modules cancel-deployment default --version $TRAVIS_BRANCH
+$SDK_DIR/bin/gcloud preview app deploy --version $TRAVIS_BRANCH --bucket gs://${TRAVIS_BRANCH}-webcentral-appspot-com  ./build/app.yaml
 
-# The gcloud API was updated for app engine updates and this reverts back to the old SDK behaviour
-# We do this as the new behaviour doesn't work for our content :(
-$SDK_DIR/bin/gcloud config set app/use_appengine_api false
-
-$SDK_DIR/bin/gcloud --verbosity info preview app deploy --version master ./build/app.yaml
