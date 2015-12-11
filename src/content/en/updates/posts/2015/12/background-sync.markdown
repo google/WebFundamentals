@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Introducing Background Sync"
-description: "Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is really useful for ensuring whatever the user wants to send, actually sends."
+description: "Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is useful for ensuring that whatever the user wants to send, is actually sent."
 published_on: 2015-12-09
 updated_on: 2015-12-09
 authors:
@@ -13,24 +13,24 @@ featured_image: /web/updates/images/2015/12/sync/emojoy.png
 
 ## DRAFT - not ready for prime time yet. 
 
-<p class="intro">Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is really useful for ensuring whatever the user wants to send, actually sends.</p>
+<p class="intro">Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is useful for ensuring that whatever the user wants to send, is actually sent.</p>
 
 ## The problem
 
-The internet is a great place to waste time. Without wasting time on the internet, we wouldn’t know <a href="https://www.youtube.com/watch?v=-Z4jx5VMw8M">cats dislike flowers</a>, <a href="https://www.youtube.com/watch?v=PrjkqW37n_k">chameleons love bubbles</a>, and "you do what they told ya" as sung by "Rage against the machine" <a href="https://youtu.be/W4BzJm4-Wo0?t=14s">sounds like the Japanese for "Break the chicken nugget, daddy"</a>.
+The internet is a great place to waste time. Without wasting time on the internet, we wouldn’t know <a href="https://www.youtube.com/watch?v=-Z4jx5VMw8M">cats dislike flowers</a>, <a href="https://www.youtube.com/watch?v=PrjkqW37n_k">chameleons love bubbles</a>, and "You do What They Told Ya" as sung by "Rage Against the Machine" <a href="https://youtu.be/W4BzJm4-Wo0?t=14s">sounds like the Japanese for, "Break the chicken nugget, daddy"</a>.
 
 But sometimes, just sometimes, we’re not looking to waste time. The desired user experience is more like:
 
-1. Phone out of pocket
-1. Achieve minor goal
-1. Phone back in pocket
-1. Resume life
+1. Phone out of pocket.
+1. Achieve minor goal.
+1. Phone back in pocket.
+1. Resume life.
 
 Unfortunately this experience is frequently broken by poor connectivity. We’ve all been there. You’re staring at a white screen or a spinner, and you know you should just give up and get on with your life, but you give it another 10 seconds just in case. After that 10 seconds? Nothing. But why give up now? You’ve invested time already, so walking away with nothing would be a waste, so you carry on waiting. By this point you *want* to give up, but you know the second you do so, is the second before everything would have loaded if only you’d waited.
 
 [Service workers](/web/updates/2015/11/app-shell) solve the page loading part by letting you serve content from a cache. But what about when the page needs to send something to the server?
 
-At the moment, if the user hits "send" on a message they have to stare at a spinner until it completes. If they try to navigate away or close the tab, we use [`onbeforeunload`](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload) to display a message like “Nope, I need you to stare at this spinner some more. Sorry”. If the user has no connection we tell the user “Sorry, *you* must come back later and try again”.
+At the moment, if the user hits "send" on a message they have to stare at a spinner until it completes. If they try to navigate away or close the tab, we use [`onbeforeunload`](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload) to display a message like, “Nope, I need you to stare at this spinner some more. Sorry”. If the user has no connection we tell the user “Sorry, *you* must come back later and try again”.
 
 This is rubbish. Background sync lets you do better.
 
