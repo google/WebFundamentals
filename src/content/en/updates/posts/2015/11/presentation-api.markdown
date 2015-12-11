@@ -23,9 +23,9 @@ SDK](https://developers.google.com/cast/docs/chrome_sender).
 
 ![Alt text](/web/updates/images/2015/11/presentation-api/screens.jpg)
 
-In other words, you can now use Cast from Chrome on Android, whereas previously you could only use Cast from desktop with an extension.
+In other words, you can now use Cast from Chrome on Android, whereas previously you could only use Cast from desktop with an extension or from Android using a native app.
 
-At present, you can only cast to a Cast application (registerd with Google) but there is work underway to enable the Presentation API to be used from Chrome on Android with any user agent that supports the API.
+At present, you can only cast to a Cast application (registered with Google) but there is work underway to enable the Presentation API to be used from Chrome on Android with any user agent that supports the API.
 
 The Presentation API, along with the [Remote Playback API](https://w3c.github.io/remote-playback/), is part of the [Second Screen Working Group](http://www.w3.org/2014/secondscreen) effort to enable web pages to use second screens to display web content.
 
