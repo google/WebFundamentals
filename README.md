@@ -1,4 +1,4 @@
-# Web Fundamentals <master> [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
+# Web Fundamentals <master> [![Build Status](https://ci.cloudware.io/api/badges/google/WebFundamentals/status.svg)](https://ci.cloudware.io/google/WebFundamentals)
 
 `master` staging: https://master-dot-web-central.appspot.com/web/
 <hr>
