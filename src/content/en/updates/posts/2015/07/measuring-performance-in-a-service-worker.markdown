@@ -122,7 +122,7 @@ self.addEventListener("install", function() {
       })
       .then(function () {
         // Analyse all the requests
-        var requests = window.performance.getEntriesByType("resource");
+        var requests = self.performance.getEntriesByType("resource");
         
         // Loop across all the requests and save the timing data.
         return;
