@@ -19,9 +19,7 @@ featured_image: /web/updates/images/2015/11/presentation-api/featured.jpg
 
 The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/presentation-api/index.html)
 using the [Presentation  API](https://w3c.github.io/presentation-api/) and the [Cast Web
-SDK](https://developers.google.com/cast/docs/chrome_sender).
-
-In other words, Cast is now available from Chrome on Android, whereas previously you could only use Cast from desktop with an extension or from Android using a native app. This means you can use the Cast Web SDK with Chrome on Android or iOS, and on desktop with the extension, along with native Android and iOS Cast apps.
+SDK](https://developers.google.com/cast/docs/chrome_sender).  The SDK was already available for web pages in Chrome desktop (with the Google Cast extension installed) and also on iOS, but on Android it was only possible to interact with Cast devices from native apps. In other words, you can now use the Cast Web SDK with Chrome on Android or iOS or on desktop with the extension, along with native Android and iOS Cast apps.
 
 The [Google Cast site](https://developers.google.com/cast/) has great resources for Chrome, Android and iOS development, including tutorials, code and samples apps.
 
