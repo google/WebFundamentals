@@ -26,7 +26,7 @@ The [Google Cast site](https://developers.google.com/cast/) has great resources 
 ![Alt text](/web/updates/images/2015/11/presentation-api/screens.jpg)
 
 
-At present, you can only cast to a Cast application (registered with Google) but there is work underway to enable the Presentation API to be used from Chrome on Android with any user agent that supports the API.
+At present, you can only present a Cast [Receiver Application](https://developers.google.com/cast/docs/receiver_apps) using the Cast Web SDK. but there is work underway to enable the Presentation API to be used without the Cast SDK (on desktop and Android) to present any web page to a Cast device without registration with Google. The page using the API directly will work on any user agent that supports the API.
 
 The Presentation API, along with the [Remote Playback API](https://w3c.github.io/remote-playback/), is part of the [Second Screen Working Group](http://www.w3.org/2014/secondscreen) effort to enable web pages to use second screens to display web content.
 
