@@ -9,7 +9,6 @@ authors:
 tags:
   - service-worker
 featured_image: /web/updates/images/2015/12/sync/emojoy.png
-published: false
 ---
 
 <p class="intro">Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is really useful for ensuring whatever the user wants to send, actually sends.</p>
@@ -80,11 +79,13 @@ self.addEventListener('sync', function(event) {
 
 And that's it! In the above, `doSomeStuff()` should return a promise indicating the success/failure of whatever it’s trying to do. If it fulfills, the sync is complete. If it fails, another sync will be scheduled to retry. Retry syncs also wait for connectivity, and employ an exponential back-off.
 
+The tag name of the sync ('myFirstSync' in the above example) should be unique for a given sync. If you register for a sync using the same tag as a pending sync, it coalesces with the existing sync. That means you can register for an "clear-outbox" sync every time the user sends a message, but if they send 5 messages while offline, you'll only get one sync when they become online. If you want 5 separate sync events, just use unique tags!
+
 [Here’s a simple demo](https://jakearchibald.github.io/isserviceworkerready/demos/sync/) that does the bare minimum - uses the sync event to show a notification.
 
 ## What could I use background sync for?
 
-Ideally, you’d use it to schedule any data-sending that you care about beyond the life of the page. Chat messages, emails, document updates, settings changes, photo uploads… anything that you want to reach the server even if user navigates away or closes the tab.
+Ideally, you’d use it to schedule any data-sending that you care about beyond the life of the page. Chat messages, emails, document updates, settings changes, photo uploads… anything that you want to reach the server even if user navigates away or closes the tab. The page could store these in an "outbox" store in indexedDB, and the service worker would retrieve them, and send them.
 
 Although, you could also use it to fetch small bits of data…
 
@@ -107,15 +108,16 @@ To try this out yourself, as before make sure you’re in [Chrome Dev for Androi
 
 Using this pattern, the user can put their phone in their pocket and get on with their life, knowing the phone will alert them when it's fetched want they wanted.
 
+### Together with indexeddb
+
 ## Permissions
 
 The demos I’ve shown use [web notifications](https://notifications.spec.whatwg.org/), which require permission, but background sync itself does not.
 
 Sync events will often complete while the user has a page open to the site, so requiring user permission would be a poor experience. Instead, we’re limiting when syncs can be registered and triggered to prevent abuse. Eg:
 
-* You can only register for a sync event from a window, not a service worker
-* The CPU time in a sync is capped, so you can’t use them for heavy computational tasks
-* The event time is capped, so you can’t use them to ping a server every x seconds
+* You can only register for a sync event when the user has a window open to the site
+* The event execution time is capped, so you can’t use them to ping a server every x seconds, mine bitcoins or whatever
 
 Of course, these restrictions may loosen/tighten based on real-world usage.
 
@@ -124,13 +126,16 @@ Of course, these restrictions may loosen/tighten based on real-world usage.
 It’ll be a while before all browsers support background sync, especially as Safari & Edge don’t yet support service workers. But progressive enhancement helps here:
 
 {% highlight javascript %}
-if ('serviceWorker' in navigator && 'SyncManger' in window) {
+if ('serviceWorker' in navigator && 'SyncManager' in window) {
   navgiator.serviceWorker.ready.then(function(reg) {
     return reg.sync.register('tag-name');
   }).catch(function() {
+    // system was unable to register for a sync,
+    // this could be an OS-level restriction
     postDataFromThePage();
   });
 } else {
+  // serviceworker/sync not supported
   postDataFromThePage();
 }
 {% endhighlight %}
