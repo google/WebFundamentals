@@ -34,6 +34,8 @@ These APIs take advantage of the range of devices coming online — including c
 
 We'll keep you posted on our progress with implementation.
 
+In the meantime, please let us know if you find bugs or have feature requests: [crbug.com/new](https://crbug.com/new).
+
 ### Find out more
 
 * [Get Started with Google Cast SDK](https://developers.google.com/cast/)
