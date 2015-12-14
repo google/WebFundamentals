@@ -15,9 +15,9 @@ tags:
 featured_image: /web/updates/images/2015/11/presentation-api/featured.jpg
 ---
 
-<p class="intro">Imagine being able to use a web app to present a slide deck to a conference projector from your phone — or share images, play games or watch videos on TV, using your phone (or tablet or laptop) as a controller.</p>
+<p class="intro">Imagine being able to use a mobile web app to present a slide deck to a conference projector from your phone — or share images, play games or watch videos on TV — using the web app as a controller.</p>
 
-The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/presentation-api/index.html) using the [Presentation  API](https://w3c.github.io/presentation-api/) and the [Cast Web SDK](https://developers.google.com/cast/docs/chrome_sender). This means you can now use the Cast Web SDK with Chrome on Android or iOS, or on desktop with the extension, along with native Android and iOS Cast apps. (Previously, a Google Cast sender application needed the Google Cast Chrome extension, so on Android it was only possible to interact with Cast devices from native apps.)
+The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/presentation-api/index.html) using the [Presentation  API](https://w3c.github.io/presentation-api/) and the [Cast Web SDK](https://developers.google.com/cast/docs/chrome_sender). This means you can now create Cast sender apps using the Web SDK with Chrome on Android or iOS (or on desktop with the extension) or use the native Cast SDK for native Android and iOS apps. (Previously, a Google Cast sender application needed the Google Cast Chrome extension, so on Android it was only possible to interact with Cast devices from native apps.)
 
 Below is a brief introduction to building a Cast sender app. More comprehensive information is available from the [Chrome Sender App Development Guide](https://developers.google.com/cast/docs/chrome_sender).
 
