@@ -11,8 +11,6 @@ tags:
 featured_image: /web/updates/images/2015/12/sync/emojoy.png
 ---
 
-## DRAFT - not ready for prime time yet. 
-
 <p class="intro">Background sync is a new web API that lets you defer actions until the user has stable connectivity. This is useful for ensuring that whatever the user wants to send, is actually sent.</p>
 
 ## The problem
