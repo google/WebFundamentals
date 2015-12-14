@@ -56,19 +56,19 @@ top-level, fullscreen experiences.
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h4>Guides and Code Labs</h4>
       <ul>
-        <li>X</li>
-        <li>Y</li>
-        <li>Z</li>
+        <li><a href="https://developers.google.com/web/fundamentals/getting-started/your-first-offline-web-app/">Your first offline web app</a></li>
+        <li><a href="https://developers.google.com/web/fundamentals/getting-started/push-notifications/">Your first push notification web app</a></li>
       </ul>
       <h4>Components</h4>
       <ul>
-        <li>X</li>
-        <li>Y</li>
-        <li>Z</li>
+        <li><a href="https://developers.google.com/web/updates/2015/11/app-shell">App Shell</a></li>
+        <li><a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/">Service Workers</a></li>
+        <li><a href="https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android">Add to Home Screen</a></li>
+        <li><a href="https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/">Push and Notifications</a></li>
       </ul>
       <h4>Get Support</h4>
       <ul>
-        <li>Stack Overflow</li>
+        <li><a href="http://stackoverflow.com/questions/tagged/progressive-web-apps">Stack Overflow</a></li>
       </ul>
     </div>
   </div>
