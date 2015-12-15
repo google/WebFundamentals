@@ -10,6 +10,7 @@ node_modules/
 .ruby-gemset
 .rvmrc
 .grunt-gae-pid
+.drone.sec.yml
 src/css/styles.css
 src/css/styles.min.css
 jekyll/content
