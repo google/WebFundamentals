@@ -14,7 +14,7 @@ featured_image: /web/updates/images/2015/12/security-panel/security-panel.png
 
 ![The new Security Panel](/web/updates/images/2015/12/security-panel/security-panel.png)
 
-The Chrome Security team has been [hard at work](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to realize a future without HTTP, a future where you and your users can be reasonably sure that whatever data you’re sending to the web stays between you and the site you’re looking at. And to to make it even easier to jump ship and join the glorious HTTPS future, we’ve made Security a first-class citizen in the DevTools.
+The Chrome Security team has been [hard at work](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to realize a future without HTTP, a future where you and your users can be reasonably sure that whatever data you’re sending to the web stays between you and the site you’re looking at. And to to make it even easier to jump ship and join the glorious HTTPS future, we’ve made Security a first-class citizen in DevTools.
 
 The new Security panel introduced in Chrome 48 makes it a lot easier to see any issues you have with certificates and mixed content. You can head to it directly in DevTools or by clicking on the URL bar’s lock icon,  then the "Details" link.
 
@@ -32,7 +32,7 @@ Unfortunately, this tab had several problems:
 
 ![Overview tab](/web/updates/images/2015/12/security-panel/overview.png)
 
-The **lock icon** represents the security state of the page, so knowing when and why it appears is extremely important. The overview screen in the new security panel explains the important parts that contribute to the lock icon:
+The **lock icon** represents the security state of the page, so knowing when and why it appears is extremely important. The overview screen in the new security panel explains the important parts that contribute to a secure page:
 
  - **Identity** (certificate)
  - **Connection** (protocol, cipher suite)
@@ -40,7 +40,7 @@ The **lock icon** represents the security state of the page, so knowing when and
 
 You’ll now know at a glance why your site does or does not get the little green badge of awesomeness.
 
-Have **mixed content** appear out of nowhere? No worries. We show it directly on the overview, and a click brings you to as filtered view of the Network Panel, so you can quickly look at the offending requests:
+Have **mixed content** appear out of nowhere? No worries. We show it directly on the overview, and a click brings you to a filtered view of the Network Panel, so you can quickly look at the offending requests:
 
 (image)
 
