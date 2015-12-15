@@ -145,6 +145,31 @@ When you save changes to a CSS preprocessor file in DevTools, the CSS preprocess
 1. Open DevTools Settings and click **General**.
 2. Turn on **Enable CSS source maps** and **Auto-reload generated CSS**.
 
+### Use the Colorpicker's palettes
+
+The Colorpicker now helps you select and maintain a consistent color palette for your site. Access the palettes by clicking the spinner at the bottom right of the Colorpicker window.
+
+![spinner.png](imgs/spinner.png)
+
+This version of the Colorpicker has three distinct palettes.
+
+####Page colors
+This palette is automatically generated from the colors found in your CSS, making it a great option if you're extending an existing site. Use this palette when you are adding or changing colors, to keep your site's color scheme consistent.
+
+####Material Design
+The [Material Design](https://www.google.com/design/spec/style/color.html) palette offers a selection of beautiful colors out of the box and is an ideal choice when starting a new project. This palette will expand as Material Design continues to evolve.
+
+####Custom
+This palette is your own playground, made up of any colors you choose. The Custom palette is maintained when the palette pane is closed, so if the palette pane is open, click the "Return to color picker" button to close it.
+
+![closepalettesx.png](imgs/closepalettesx.png)
+
+To add a new color, choose one in the main color box, then click the "Add to palette" button next to the lower spinner. 
+
+![addtopalette.png](imgs/addtopalette.png)
+
+You can add as many colors as you like, to keep them handy as you work. You can reorder the custom colors by dragging them, and you can right-click a color to reveal more options, including "Remove color", "Remove all to the right", and "Clear palette".
+
 ### Requirements & Gotchas
 
 - **Changes made in an external editor** are not detected by DevTools until the Sources tab containing the associated source file regains focus.
