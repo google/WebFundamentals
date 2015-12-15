@@ -7,45 +7,94 @@ title: "Progressive Web Apps"
 
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <h3>Progressive Web Apps</b></h3>
+    <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet">
+      <h2>Progressive Web Apps</h2>
       <p>
+        <!--
         A Progressive Web App provides a low friction, app-like user experience
-        built using modern web capabilities.
+        built using modern web capabilities.-->
+        A Progressive Web App uses modern web capabilities to deliver an 
+        app-like user experience. They evolve from pages in 
+        browser tabs to immersive, top-level apps, maintaining the web's low 
+        friction at every moment.
+      </p>
+      <p>
+        <a href="#getstarted" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          Get Started
+        </a>
       </p>
     </div>
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <img src="/web/imgs/dgc-web-w1x.jpg">
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
+      <img src="/web/imgs/pwa-video-small.png" style="max-height: 450px;">
     </div>
   </div>
 </div>
 
 {% include page-structure/site-promo-banner.liquid %}
 
-### What is a Progressive Web App?
 
-Progressive Web Apps are experiences that combine the best of the web and 
-the best of apps. They are useful to users from the very first visit in 
-a browser tab, no install required. As the user progressively builds 
-a relationship with the App over time, it becomes more and more 
-powerful; loading quickly, even on flaky networks, sending relevant 
-push notifications, having an icon on the homescreen and loading as 
-top-level, fullscreen experiences.
+<div class="wf-landing-section wf-secondaryheading">
+  <div class="page-content">
+    <h3>What is a Progressive Web App?</h3>
+    <p>
+      Progressive Web Apps are experiences that combine the best of the web and 
+      the best of apps. They are useful to users from the very first visit in 
+      a browser tab, no install required. As the user progressively builds a 
+      relationship with the App over time, it becomes more and more powerful. 
+      It loads quickly, even on flaky networks, sends relevant push 
+      notifications, has an icon on the homescreen and loads as top-level, 
+      full screen experience.
+    </p>
 
-#### Progressive Web Apps are:
+    <h4>Progressive Web Apps are:</h4>
+    <ul>
+      <li>
+        <b>Progressive</b> - Work for every user, regardless of browser 
+        choice because they’re built with progressive enhancement as a core 
+        tenant.
+      </li>
+      <li>
+        <b>Responsive</b> - Fit any form factor, desktop, mobile, tablet, or 
+        whatever is next.
+      </li>
+      <li>
+        <b>Connectivity independent</b> - Enhanced with service workers to 
+        work offline or on low quality networks.
+      </li>
+      <li>
+        <b>App-like</b> - Use the app-shell model to provide app-style 
+        navigations and interactions.
+      </li>
+      <li>
+        <b>Fresh</b> - Always up-to-date thanks to the service worker update 
+        process.
+      </li>
+      <li>
+        <b>Safe</b> - Served via TLS to prevent snooping and ensure content 
+        hasn’t been tampered with.
+      </li>
+      <li>
+        <b>Discoverable</b> - Are identifiable as “applications” thanks to 
+        W3C manifests and service worker registration scope allowing search 
+        engines to find them.
+      </li>
+      <li>
+        <b>Re-engageable</b> - Make re-engagement easy through features like 
+        push notifications.
+      </li>
+      <li>
+        <b>Installable</b> - Allow users to “keep” apps they find most useful 
+        on their home screen without the hassle of an app store.
+      </li>
+      <li>
+        <b>Linkable</b> - Easily share via URL and not require complex 
+        installation.
+      </li>
+    </ul>
+  </div>
+</div>
 
-* **Progressive** - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenant.
-* **Responsive**  - Fit any form factor, desktop, mobile, tablet, or whatever is next.
-* **Connectivity independent** - Enhanced with Service Workers to work offline or on low quality networks.
-* **App-like** - Use the App Shell model to provide app style navigations & interactions.
-* **Fresh** - Always up-to-date thanks to the Service Worker update process.
-* **Safe** - Served via TLS to prevent snooping and ensure content hasn’t been tampered with.
-* **Discoverable** - Are identifiable as “applications” thanks to W3C Manifests and Service Worker registration scope allowing search engines to find them.
-* **Re-engageable** - Makes re-engagement easy through features like push notifications.
-* **Installable** - Allows users to “keep” apps they find most useful on their home screen without the hassle of an app store.
-* **Linkable** - Zero-friction, zero-install, and easy to share, the social power of the URL still matters.
-
-<div class="wf-landing-section">
+<div id="getstarted" class="wf-landing-section wf-pwa-gs">
   <div class="page-content mdl-grid">
     <h2 class="mdl-cell mdl-cell--12-col">
       Get Started
@@ -56,20 +105,35 @@ top-level, fullscreen experiences.
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h4>Guides and Code Labs</h4>
       <ul>
-        <li><a href="https://developers.google.com/web/fundamentals/getting-started/your-first-offline-web-app/">Your first offline web app</a></li>
-        <li><a href="https://developers.google.com/web/fundamentals/getting-started/push-notifications/">Your first push notification web app</a></li>
+        <li><a href="/web/fundamentals/getting-started/your-first-offline-web-app/">Your first offline web app</a></li>
+        <li><a href="/web/fundamentals/getting-started/push-notifications/">Your first push notification web app</a></li>
       </ul>
       <h4>Components</h4>
       <ul>
-        <li><a href="https://developers.google.com/web/updates/2015/11/app-shell">App Shell</a></li>
+        <li><a href="/web/updates/2015/11/app-shell">App Shell</a></li>
         <li><a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/">Service Workers</a></li>
-        <li><a href="https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android">Add to Home Screen</a></li>
-        <li><a href="https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/">Push and Notifications</a></li>
+        <li><a href="/web/fundamentals/engage-and-retain/simplified-app-installs/">Add to Home Screen</a></li>
+        <li><a href="/web/fundamentals/engage-and-retain/push-notifications/">Push and Notifications</a></li>
       </ul>
       <h4>Get Support</h4>
       <ul>
         <li><a href="http://stackoverflow.com/questions/tagged/progressive-web-apps">Stack Overflow</a></li>
       </ul>
+    </div>
+  </div>
+</div>
+
+
+<div hidden class="wf-landing-section">
+  <div class="page-content mdl-grid">
+    <h2 class="mdl-cell mdl-cell--12-col">
+      Progressive Web Apps in Action
+    </h2>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      app 1
+    </div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      app 2
     </div>
   </div>
 </div>
