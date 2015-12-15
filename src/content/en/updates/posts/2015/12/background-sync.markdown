@@ -108,8 +108,6 @@ Try this out yourself. As before make sure you’re in [Chrome Dev for Android](
 
 Using this pattern, the user can put their phone in their pocket and get on with their life, knowing the phone will alert them when it's fetched want they wanted.
 
-### Together with indexeddb
-
 ## Permissions
 
 The demos I’ve shown use [web notifications](https://notifications.spec.whatwg.org/), which require permission, but background sync itself does not.
