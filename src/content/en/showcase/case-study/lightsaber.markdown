@@ -759,7 +759,7 @@ see the glow that surrounds the trail:
 
 ## Conclusion
 
-Polymer if a powerful library and concept (same as WebComponents are in 
+Polymer is a powerful library and concept (same as WebComponents are in 
 general). It is only up to you what you make with it. It can be anything from 
 a simple UI button to a full-sized WebGL application. In the previous chapters 
 we have shown you some tips and tricks for how to efficiently use Polymer 
