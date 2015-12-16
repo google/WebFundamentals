@@ -17,7 +17,7 @@ featured_image: /web/updates/images/2015/11/presentation-api/featured.jpg
 
 <p class="intro">Imagine being able to use a mobile web app to present a slide deck to a conference projector from your phone — or share images, play games or watch videos on TV — using the web app as a controller.</p>
 
-The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/presentation-api/index.html) using the [Presentation  API](https://w3c.github.io/presentation-api/) and the [Cast Web SDK](https://developers.google.com/cast/docs/chrome_sender). This means you can now create Cast sender apps using the Web SDK with Chrome on Android or iOS (or on desktop with the extension) or use the native Cast SDK for native Android and iOS apps. (Previously, a Google Cast sender application needed the Google Cast Chrome extension, so on Android it was only possible to interact with Cast devices from native apps.)
+The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/castapi/CastHelloVideo/index.html) using the [Cast Web SDK](https://developers.google.com/cast/docs/chrome_sender). This means you can now create Cast sender apps using the Web SDK with Chrome on Android or iOS (or on desktop with the extension) or use the native Cast SDK for native Android and iOS apps. (Previously, a Google Cast sender application needed the Google Cast Chrome extension, so on Android it was only possible to interact with Cast devices from native apps.)
 
 Below is a brief introduction to building a Cast sender app. More comprehensive information is available from the [Chrome Sender App Development Guide](https://developers.google.com/cast/docs/chrome_sender).
 
@@ -114,7 +114,13 @@ The [Cast Web SDK guide](https://developers.google.com/cast/docs/chrome_sender) 
 
 ![Alt text](/web/updates/images/2015/11/presentation-api/screens.jpg)
 
-At present, you can only present to a Cast [Receiver Application](https://developers.google.com/cast/docs/receiver_apps) using the Cast Web SDK, but there is work underway to enable the Presentation API to be used without the Cast SDK (on desktop and Android) to present any web page to a Cast device without registration with Google: to any user agent that supports the API.
+On a related note, if Chrome on Android already allows casting media from your website and you want to disable this feature, there's a [disableRemotePlayback](https://w3c.github.io/remote-playback/#idl-def-htmlmediaelement-disableremoteplayback) media element attribute being shipped in Chrome M49, like this:
+
+```
+<video disableRemotePlayback src="...">
+```
+
+At present, you can only present to a Cast [Receiver Application](https://developers.google.com/cast/docs/receiver_apps) using the Cast Web SDK, but there is work underway to enable the [Presentation  API](https://w3c.github.io/presentation-api/) to be used without the Cast SDK (on desktop and Android) to present any web page to a Cast device without registration with Google. Unlike the Chrome-only Cast SDK, using the standard API will allow the page work with other user agents and devices that support the API.
 
 The Presentation API, along with the [Remote Playback API](https://w3c.github.io/remote-playback/), is part of the [Second Screen Working Group](http://www.w3.org/2014/secondscreen) effort to enable web pages to use second screens to display web content.
 
