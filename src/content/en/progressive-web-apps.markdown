@@ -24,8 +24,8 @@ title: "Progressive Web Apps"
         </a>
       </p>
     </div>
-    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet">
-      <img src="/web/imgs/pwa-video-small.png" style="max-height: 450px;">
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--hide-phone">
+      <img src="/web/imgs/pwa-voice-memos_framed.png">
     </div>
   </div>
 </div>
@@ -99,10 +99,10 @@ title: "Progressive Web Apps"
     <h2 class="mdl-cell mdl-cell--12-col">
       Get Started
     </h2>
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
       {% ytvideo MyQ8mtR9WxI %}
     </div>
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
       <h4>Guides and Code Labs</h4>
       <ul>
         <li><a href="/web/fundamentals/getting-started/your-first-offline-web-app/">Your first offline web app</a></li>
