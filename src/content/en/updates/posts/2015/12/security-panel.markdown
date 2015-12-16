@@ -42,7 +42,7 @@ You’ll now know at a glance why your site does or does not get the little gree
 
 Have **mixed content** appear out of nowhere? No worries. We show it directly on the overview, and a click brings you to a filtered view of the Network Panel, so you can quickly look at the offending requests:
 
-(image)
+![Mixed Content](/web/updates/images/2015/12/security-panel/mixed.png)
 
 # Origin View: Connection Type and Certificate Details
 
