@@ -107,7 +107,7 @@ Have a look at the example below:
 
 But on a larger project it might be helpful to separate these three logical 
 components (HTML, CSS, JS) and only merge them at compile time. So one thing 
-we did is give each element in the project to its separate folder:
+we did was give each element in the project its own separate folder:
 
 <pre>
 src/elements/
