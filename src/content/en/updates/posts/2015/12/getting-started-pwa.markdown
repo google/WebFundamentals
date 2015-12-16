@@ -1,5 +1,6 @@
 ---
 layout: updates/post
+published: false
 title: "Getting started with Progressive Web Apps"
 published_on: 2015-12-16
 updated_on: 2015-12-16
