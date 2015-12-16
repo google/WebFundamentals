@@ -18,19 +18,67 @@ There's been much welcome discussion about [Progressive Web Apps](https://infreq
 
 ## What is a Progressive Web App?
 
-> A Progressive Web App provides a native app-like user experience that is low friction and is built using modern web capabilities. Progressive Web Apps are hosted on the web and can progressively become an app on the user's device over time.
+> A Progressive Web App uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, maintaining the web's low friction at every moment.
 
 **It's important to remember that Progressive Web Apps work everywhere but are supercharged in modern browsers. Progressive enhancement is a backbone of the model**.
 
 Aaron Gustafson likened [progressive enhancement](http://alistapart.com/article/understandingprogressiveenhancement) to a peanut M&M. The peanut is your content, the chocolate coating is your presentation layer and your JavaScript is the hard candy shell. This layer can vary in color and the exerience can vary depending on the capabilities of the browser using it.
 
 Think of the candy shell as where many Progressive Web App features can live.
+They are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required.
+
 As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)), sending relevant [Push Notifications](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's homescreen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg" alt="Web app install banners for engagement, launch from the user's homescreen, splash screen in Chrome for Android, works offline with Service Worker"/>
 
-Progressive Web Apps aren't unique to Chrome for Android. Below we can see the [Pokedex](https://pokedex.org) Progressive Web App working in Firefox for Android (Beta) with early Add to Homescreen and Service Worker caching features running just fine.
+<h4>Progressive Web Apps are:</h4>
+<ul>
+  <li>
+    <b>Progressive</b> - Work for every user, regardless of browser
+    choice because they’re built with progressive enhancement as a core
+    tenant.
+  </li>
+  <li>
+    <b>Responsive</b> - Fit any form factor, desktop, mobile, tablet, or
+    whatever is next.
+  </li>
+  <li>
+    <b>Connectivity independent</b> - Enhanced with service workers to
+    work offline or on low quality networks.
+  </li>
+  <li>
+    <b>App-like</b> - Use the app-shell model to provide app-style
+    navigations and interactions.
+  </li>
+  <li>
+    <b>Fresh</b> - Always up-to-date thanks to the service worker update
+    process.
+  </li>
+  <li>
+    <b>Safe</b> - Served via TLS to prevent snooping and ensure content
+    hasn’t been tampered with.
+  </li>
+  <li>
+    <b>Discoverable</b> - Are identifiable as “applications” thanks to
+    W3C manifests and service worker registration scope allowing search
+    engines to find them.
+  </li>
+  <li>
+    <b>Re-engageable</b> - Make re-engagement easy through features like
+    push notifications.
+  </li>
+  <li>
+    <b>Installable</b> - Allow users to “keep” apps they find most useful
+    on their home screen without the hassle of an app store.
+  </li>
+  <li>
+    <b>Linkable</b> - Easily share via URL and not require complex
+    installation.
+  </li>
+</ul>
+
+Progressive Web Apps also aren't unique to Chrome for Android. Below we can see the [Pokedex](https://pokedex.org) Progressive Web App working in Firefox for Android (Beta) with early Add to Homescreen and Service Worker caching features running just fine.
 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-ff-@1x.jpg" alt="Progressive web apps working in Firefox for Android"/>
