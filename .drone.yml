@@ -1,0 +1,34 @@
+# Note: if you modify this file, don't forget to update
+# checksum in .drone.sec with:
+# drone secure --repo google/WebFundamentals --checksum
+clone:
+  depth: 1
+cache:
+  mount:
+    - vendor/bundle
+    - node_modules
+build:
+  image: crhym3/ci-image
+  commands:
+    - eval "$(rbenv init -)"
+    - bundle install --deployment --jobs=3 --retry=3
+    - npm install
+    - gulp build:staging
+    - "tools/dump-ci-state.sh > .state"
+deploy:
+  bash:
+    when:
+      repo: google/WebFundamentals
+      branch: master
+    image: crhym3/drone-plugin-bash-node
+    env:
+      - RIG_URL=$$RIG_URL
+      - RIG_SECRET=$$RIG_SECRET
+      - WPT_API_KEY=$$WPT_API_KEY
+      - SERVICE_ACCOUNT=$$SERVICE_ACCOUNT
+      - SERVICE_SECRET=$$SERVICE_SECRET
+    script:
+      - cat .state
+      - . .state
+      - tools/auto-deploy.sh
+      - npm test

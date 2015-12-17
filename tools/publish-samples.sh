@@ -55,7 +55,7 @@ if [[ ! -d $GHSAMPLESDIR ]]; then
 fi
 
 log "Starting" "sync sample repo"
-cd $GHSAMPLESDIR
+cd $GHSAMPLESDIR || exit
 git pull
 log "Finished" "sync sample repo"
 

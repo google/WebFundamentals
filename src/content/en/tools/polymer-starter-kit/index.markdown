@@ -39,7 +39,7 @@ feedURL: https://github.com/polymerelements/polymer-starter-kit/releases.atom
         {%include svgs/build-chain.svg %}
       </div>
       <h3 class="mdl-typography--title">Complete build chain</h3>
-      <p>Get started quickly with the complete set of the same paper and iron elements used by Google products.</p>
+      <p>Build your app using a suite of gulp tasks that leverage the full range of Polymer-related tools, such as vulcanize, crisper, and more.</p>
     </div>
     <div class="mdl-cell mdl-cell--4-col">
       <div class="icon">

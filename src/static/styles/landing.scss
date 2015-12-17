@@ -78,3 +78,19 @@ $color-accent: unquote("rgb(#{$palette-indigo-300})");
   }
 }
 
+/* Progressive Web App Landing Page Styles */
+
+.wf-pwa-gs h4:first-of-type {
+  margin-top: 0;
+}
+.wf-pwa-gs h4 {
+  margin-top: 12px;
+  margin-bottom: 8px;
+}
+.wf-pwa-gs ul {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.wf-pwa-gs li {
+  margin-bottom: 0;
+}

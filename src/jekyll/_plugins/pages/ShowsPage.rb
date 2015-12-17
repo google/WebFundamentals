@@ -30,6 +30,7 @@ module Jekyll
       # see https://github.com/google/WebFundamentals/issues/1651
       validKeys = [
         'youtubeID',
+        'youtubeThumbnail',
         'key_img',
         'subtitle',
         'udacity',

@@ -19,9 +19,9 @@ var config = require('./config');
 
 config.rigUrl = process.env.RIG_URL;
 config.apiKey = process.env.WPT_API_KEY;
-config.secret = process.env.SECRET;
-config.repo = process.env.TRAVIS_REPO_SLUG;
-config.commit = process.env.TRAVIS_COMMIT;
+config.secret = process.env.RIG_SECRET;
+config.repo = process.env.CI_REPO;
+config.commit = process.env.CI_COMMIT;
 
 if (typeof config.apiKey === 'undefined') {
   console.error ('No WebPagetest API key provided');

@@ -1,4 +1,4 @@
-# Web Fundamentals <master> [![Build Status](https://travis-ci.org/google/WebFundamentals.svg?branch=master)](https://travis-ci.org/google/WebFundamentals)
+# Web Fundamentals <master> [![Build Status](https://ci.cloudware.io/api/badges/google/WebFundamentals/status.svg)](https://ci.cloudware.io/google/WebFundamentals)
 
 `master` staging: https://master-dot-web-central.appspot.com/web/
 <hr>
@@ -65,7 +65,7 @@ These can be combined like so:
 
 ## Learning More About Jekyll and Liquid Used
 
-We have a styleguide which you can access at [http://localhost:7331/web/styleguide/](http://localhost:7331/web/styleguide/) that should get you up and running with a lot of the custom and useful info.
+We have a styleguide which you can access at [http://localhost:7331/web/styleguide/](http://localhost:7331/web/resources/styleguide/) that should get you up and running with a lot of the custom and useful info.
 
 
 # Translations

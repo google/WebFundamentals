@@ -21,9 +21,11 @@ translation_priority: 0
 {% include page-structure/site-promo-banner.liquid %}
 
 <div class="page-content mdl-grid wf-fundamentals-cta">
+
+  {% include shared/base_card.liquid title="Progressive Web Apps" text="What is a <b>Progressive Web App</b> and what do you need to know to get started building one?" linkHref="/web/progressive-web-apps" linkText="Learn more" imgUrl="/web/fundamentals/imgs/vm-pwa.png" %}
+
   {% include shared/base_card.liquid title="Get started" text="Not sure where to start? Our getting started guides will walk you through some key things you need to know and help you figure out where to go next." linkHref="/web/fundamentals/getting-started/" linkText="Get Started" imgUrl="/web/fundamentals/imgs/wsk-on-pixel-n5.jpg" %}
 
-  {% include shared/base_card.liquid title="What's new:<br>App install banners" text="<b>App Install Banners</b> give you the ability to have your users quickly and seamlessly add your web app to their home screen, or install your native app, without ever leaving the browser." linkHref="engage-and-retain/simplified-app-installs/" linkText="Learn more" imgUrl="/web/fundamentals/imgs/app-install-banners-2.jpg" %}
 </div>
 
 <div class="wf-secondaryheading">

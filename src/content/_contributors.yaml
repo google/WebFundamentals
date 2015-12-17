@@ -87,6 +87,20 @@ ericbidelman:
     - author
   email: e.bidelman@google.com
 
+yatesbuckley:
+  name:
+    given: Yates
+    family: Buckley
+  org:
+    name: UNIT9
+  country: UK
+  role:
+    - author
+  homepage:
+  google: https://plus.google.com/+YatesBuckley
+  email: yates@unit9.com
+
+
 beaufortfrancois:
   name:
     given: François
@@ -595,6 +609,23 @@ jeffposnick:
   description:
     en: "Web DevRel @ Google"
 
+rupl:
+  name:
+    given: Chris
+    family: Ruppel
+  org:
+    name:
+    unit:
+  country: DE
+  role:
+    - author
+  homepage: https://chrisruppel.com
+  google: +ChrisRuppel
+  twitter: rupl
+  email: chris.ruppel@gmail.com
+  description:
+    en: "Chris is a frontend developer and web performance advocate."
+
 glenshires:
   name:
     given: Glen
@@ -810,3 +841,27 @@ kaycebasques:
     - author
   description:
     en: "Kayce is a Tech Writer"
+
+fouadvaladbeigi:
+  name:
+    given: Fouad
+    family: Valadbeigi
+  org:
+    name: UNIT9
+  country: UK
+  role:
+    - author
+  google: https://plus.google.com/115771375659957547634/posts
+  email: fouad.valadbeigi@unit9.com
+
+maciejzasada:
+  name:
+    given: Maciej
+    family: Zasada
+  org:
+    name: UNIT9
+  country: UK
+  role:
+    - author
+  google: https://plus.google.com/104812516714503133849/posts
+  email: maciej@unit9.com
