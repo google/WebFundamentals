@@ -47,7 +47,7 @@ function initializeCastApi() {
 };
 {% endhighlight %}
 
-If you're using the default receiver application, not a roll-your-own [registered](https://developers.google.com/cast/docs/registration) receiver, you can create a `SessionRequest` like this:
+If you're using the default [Styled Media Receiver](https://developers.google.com/cast/docs/receiver_apps#Styled)) application and not a roll-your-own, registered [Custom Receiver](https://developers.google.com/cast/docs/custom_receiver) application, you can create a `SessionRequest` like this:
 
 {% highlight javascript %}
 var sessionRequest = new chrome.cast.SessionRequest(chrome.cast.media.
@@ -64,7 +64,7 @@ function receiverListener(e) {
 }
 {% endhighlight %}
 
-When your user clicks the Cast icon, as mandated by the [User Experience Guidelines](https://developers.google.com/cast/docs/ux_guidelines#sender-cast-icon-available), launch a Cast session:
+Launch a Cast session when your user clicks the Cast icon, as mandated by the [User Experience Guidelines](https://developers.google.com/cast/docs/ux_guidelines#sender-cast-icon-available):
 
 {% highlight javascript %}
 chrome.cast.requestSession(onRequestSessionSuccess,
@@ -74,6 +74,14 @@ function onRequestSessionSuccess(e) {
   session = e;
 }
 {% endhighlight %}
+
+The user will be presented with a device picker:
+
+![Cast device selection dialog](/web/updates/images/2015/11/presentation-api/devices.png)
+
+The **route details** dialog is shown when the page is already connected and calls `requestSession()`:
+
+![Cast route details dialog](/web/updates/images/2015/11/presentation-api/route-details.png)
 
 Once you have a Cast session, you can load media for the selected Cast device, and add a listener for media playback events:
 
@@ -89,6 +97,14 @@ function onMediaDiscovered(how, media) {
   media.addUpdateListener(onMediaStatusUpdate);
 }
 {% endhighlight %}
+
+A play/pause notification is shown when media is playing:
+
+![Cast play/pause notification](/web/updates/images/2015/11/presentation-api/play-pause-notification.png)
+
+If no media is playing, the notification only has a stop button, to stop casting:
+
+![Cast stop notification](/web/updates/images/2015/11/presentation-api/stop-notification.png)
 
 The `currentMedia` variable here is a `chrome.cast.media.Media` object, which can be used for controlling playback:
 
@@ -112,7 +128,7 @@ function sessionListener(e) {
 
 The [Cast Web SDK guide](https://developers.google.com/cast/docs/chrome_sender) has links to sample apps, and information about Cast features such as session management, text tracks (for subtitles and captions) and status updates.
 
-![Alt text](/web/updates/images/2015/11/presentation-api/screens.jpg)
+![Alt Sender and receiver devices](/web/updates/images/2015/11/presentation-api/screens.jpg)
 
 At present, you can only present to a Cast [Receiver Application](https://developers.google.com/cast/docs/receiver_apps) using the Cast Web SDK, but there is work underway to enable the Presentation API to be used without the Cast SDK (on desktop and Android) to present any web page to a Cast device without registration with Google: to any user agent that supports the API.
 
