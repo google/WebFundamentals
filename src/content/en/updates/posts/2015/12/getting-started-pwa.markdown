@@ -18,14 +18,13 @@ There's been much welcome discussion about [Progressive Web Apps](https://infreq
 
 ## What is a Progressive Web App?
 
-> A Progressive Web App uses modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, maintaining the web's low friction at every moment.
+> Progressive Web Apps use modern web capabilities to deliver an app-like user experience. They evolve from pages in browser tabs to immersive, top-level apps, maintaining the web's low friction at every moment.
 
 **It's important to remember that Progressive Web Apps work everywhere but are supercharged in modern browsers. Progressive enhancement is a backbone of the model**.
 
 Aaron Gustafson likened [progressive enhancement](http://alistapart.com/article/understandingprogressiveenhancement) to a peanut M&M. The peanut is your content, the chocolate coating is your presentation layer and your JavaScript is the hard candy shell. This layer can vary in color and the exerience can vary depending on the capabilities of the browser using it.
 
-Think of the candy shell as where many Progressive Web App features can live.
-They are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required.
+Think of the candy shell as where many Progressive Web App features can live. They are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required.
 
 As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)), sending relevant [Push Notifications](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's homescreen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
