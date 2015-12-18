@@ -125,7 +125,7 @@ It’ll be a while before all browsers support background sync, especially as Sa
 
 {% highlight javascript %}
 if ('serviceWorker' in navigator && 'SyncManager' in window) {
-  navgiator.serviceWorker.ready.then(function(reg) {
+  navigator.serviceWorker.ready.then(function(reg) {
     return reg.sync.register('tag-name');
   }).catch(function() {
     // system was unable to register for a sync,
