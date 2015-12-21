@@ -41,7 +41,7 @@ But with the new “Framework Listeners” option in the Event Listener tab, Dev
   * [Custom Object Formatters](https://docs.google.com/document/d/1FTascZXT9cxfetuPRT2eXPQKXui4nWFivUnS_335T3U/preview?usp=sharing) allow transpiled languages such as CoffeeScript [to better format their objects](https://github.com/binaryage/cljs-devtools) in the DevTools Console.
   * The Timeline has a new better looking dialog during recording that shows you status, time and buffer usage at a glance. <br>![Timeline Hint](/web/updates/images/2015-10-05/timeline_hint.png)
   * Along the same lines, the Network Panel shows a helpful hint when empty now: ![Network Hint](/web/updates/images/2015-10-05/network_hint.png)
-  * You can now filter for mixed content in the Network Panel by using the filter input and set it to “mixed-content:true”
+  * You can now filter for mixed content in the Network Panel by using the filter input and set it to `mixed-content:displayed`
 
 - - -
 
