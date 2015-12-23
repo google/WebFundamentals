@@ -121,7 +121,7 @@ Yellow nodes (with a yellow background) however do have direct references from J
 Look for yellow nodes in the same detached DOM tree to locate references from your JavaScript.
 There should be a chain of properties leading from the DOM window to the element (e.g `window.foo.bar[2].baz`).
 
-Watch this animation to understand where detached notes fit
+Watch this animation to understand where detached nodes fit
 into the overall picture:
 
 ![](animations/detached-nodes.gif)
