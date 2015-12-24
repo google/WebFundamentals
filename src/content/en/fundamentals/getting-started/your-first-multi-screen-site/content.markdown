@@ -134,8 +134,8 @@ In the headline, add simple text to describe the course:
 {% include_code src=_code/addheadline.html snippet=headline %}
 
 We need to also fill out the form.
-It will be a simple form that collects the users' names,
-their phone number, and a good time to call them back.
+It will be a simple form that collects the users' name, email address,
+and phone number.
 
 All forms should have labels and placeholders to make it easy for users to
 focus elements, understand what is supposed to go in them, and to also help
