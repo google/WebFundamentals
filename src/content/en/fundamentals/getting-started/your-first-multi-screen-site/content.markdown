@@ -226,8 +226,7 @@ Most sites need a footer to display content such as Terms and Conditions,
 disclaimers, and other content that isn't meant to be in the main navigation
 or in the main content area of the page.
 
-In our site, we will just link to Terms and Conditions, a Contact page, and
-our social media profiles.
+In our site, we'll just create a simple placeholder footer.
 
 {% include_code src=_code/addcontent.html snippet=footer %}
 
