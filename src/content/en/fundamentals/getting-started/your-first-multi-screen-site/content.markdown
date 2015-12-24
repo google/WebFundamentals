@@ -157,7 +157,7 @@ The Video and Information section of content will contain a little more depth.
 It will have a bulleted list of features of our products and will also contain
 a video placeholder that shows our product working for the user.
 
-{% include_code src=_code/addcontent.html snippet=section1 %}
+{% include_code src=_code/addvideo.html snippet=section1 %}
 
 Videos are often used to describe content in a more interactive manner and are
 frequently used to show a demonstration of a product or a concept.
