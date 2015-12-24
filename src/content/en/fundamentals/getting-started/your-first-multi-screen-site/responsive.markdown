@@ -290,8 +290,6 @@ to each other.
 
 {% include_code src=_code/fixingfirstbreakpoint.html snippet=formfloat lang=css %}
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=padding lang=css %}
-
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
   <source src="videos/floatingform.webm" type="video/webm"></source>
