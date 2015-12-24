@@ -167,7 +167,7 @@ key-takeaways:
 
 {% include_code src=_code/addimages.html snippet=images lang=html %}
 
-התמונות מוגדרות בקנה מידה לרוחב של המסך 100%. זה עובד גם על מכשירים עם vieport צר, אבל פחות טוב באלה עם viewport רחב (כמו שולחן עבודה). אנחנו ננהל את זה בסעיף responsive design.
+התמונות מוגדרות בקנה מידה לרוחב של המסך 100%. זה עובד גם על מכשירים עם viewport צר, אבל פחות טוב באלה עם viewport רחב (כמו שולחן עבודה). אנחנו ננהל את זה בסעיף responsive design.
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
 

@@ -193,7 +193,7 @@ Bennet.
 {% include_code src=_code/addimages.html snippet=images lang=html %}
 
 The images are set to scale to 100% of the width of the screen. This works
-well on devices with a narrow vieport, but less well on those with a
+well on devices with a narrow viewport, but less well on those with a
 wide viewport (like desktop).  We will manage this in the responsive design
 section.
 
