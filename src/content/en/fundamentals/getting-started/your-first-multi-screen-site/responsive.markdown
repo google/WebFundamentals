@@ -351,8 +351,18 @@ For browsers that support it, you can display a high density image on a high den
 Tables are very hard to get right on devices that have a narrow viewport and need
 special consideration.
 
-We recommend on a narrow viewport that you make your table into two rows,
-transposing the heading and cells in a row to make the columnar.
+We recommend on a narrow viewport that you transform your table by changing
+each row into a block of key-value pairs (where the key is what was
+previously the column header, and the value is still the cell value).
+Fortunately, this isn't too difficult. First, annotate each `td` element with
+the corresponding heading as a data attribute. (This won't have any visible
+effect until we add some more CSS.)
+
+{% include_code src=_code/updatingtablehtml.html snippet=table-tbody lang=html %}
+
+Now we just need to add the CSS to hide the original `thead` and instead show
+the `data-th` labels using a `:before` pseudoelement. This will result in
+the multi-device experience seen in the following video.
 
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
