@@ -218,7 +218,7 @@ about the product.
 
 Tables should only be used for tabular data, i.e, matrices of information.
 
-{% include_code src=_code/addcontent.html snippet=section3 %}
+{% include_code src=_code/addtable.html snippet=section3 %}
 
 ### Add a Footer
 
