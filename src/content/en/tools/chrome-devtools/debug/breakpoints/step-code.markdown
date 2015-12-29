@@ -156,56 +156,42 @@ Call stack with named functions:
 
 ### Blackbox third-party code
 
-<!-- change the bold part as this is no longer reflects UI -->
+Blackbox script files to omit third-party files from your call stacks.
 
-Use the **Blackbox Third-Party Code** feature to omit 
-third-party files from your call stacks. For example, you can use
-this to hide third-party library and framework function calls from
-your call stack.
+Before blackbox:
 
-![Blackboxing functions in call stack]
-(/web/tools/chrome-devtools/debug/breakpoints/imgs/blackboxed-call-stack.png)
+![Call stack before blackbox](/web/tools/chrome-devtools/debug/breakpoints/imgs/before-blackbox.png)
+
+After blackbox:
+
+![Call stack after blackbox](/web/tools/chrome-devtools/debug/breakpoints/imgs/after-blackbox.png)
 
 To blackbox a file:
 
 1. Open DevTools Settings.
 
-   ![Opening DevTools Settings]
-   (/web/tools/chrome-devtools/debug/breakpoints/imgs/open-settings.png)
+   ![Opening DevTools Settings](/web/tools/chrome-devtools/debug/breakpoints/imgs/open-settings.png)
 
 2. In the navigation menu on the left, click **Blackboxing**.
 
-   ![Blackboxing panel in Chrome DevTools]
-   (/web/tools/chrome-devtools/debug/breakpoints/imgs/blackbox-panel.png)
+   ![Blackboxing panel in Chrome DevTools](/web/tools/chrome-devtools/debug/breakpoints/imgs/blackbox-panel.png)
 
 3. Click **Add pattern**.
 
-4. In the **Pattern** textfield enter the pattern that you wish to exclude
-   from your call stack. DevTools excludes any script that matches the 
+4. In the **Pattern** textfield enter the filename pattern that you wish to 
+   exclude from your call stack. DevTools excludes any scripts that match the 
    pattern. 
+
+   ![Adding blackbox pattern](/web/tools/chrome-devtools/debug/breakpoints/imgs/add-pattern.png)
 
 5. In the dropdown menu to the right of the textfield, select **Blackbox** to
    execute the script files but exclude the calls from the call stack, or select
-   **Disabled** to prevent the script file from executing.
+   **Disabled** to prevent the files from executing.
 
+6. Click **Add** to save.
 
-
-
-
-<!-- below this comment is old -->
-
-1. Open the **Sources** panel of DevTools.
-2. Right-click on the file you wish to blackbox.
-3. Select **Blackbox Script**.
-
-In the animation below, a button is clicked and a breakpoint is triggered. DevTools populates
-the call stack with the functions leading up to the breakpoint. The call stack
-displays a couple of third-party functions. A third-party script is then blackboxed,
-and the third-party functions are automatically hidden from the call stack.
-
-{% animation animations/blackbox.mp4 %}
-
-To remove a blackbox, right-click on the file again and select **Stop Blackboxing**.
+The next time that you run the page and a breakpoint is triggered, DevTools
+hides any function calls from the blackboxed scripts from the call stack.
 
 ## Data manipulation
 
