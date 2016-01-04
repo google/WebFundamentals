@@ -44,7 +44,7 @@ To emphasize the point, the example below shows the first load of an app using t
 
 A service worker is a script that runs in the background, separate from your web page. It responds to events, including network requests made from pages it serves and push notices from your server. A service worker has an intentionally short lifetime. It wakes up when it gets an event and runs only as long as it needs to process it.
 
-Service workers also have a limited set of APIs when compared to JavaScript in a normsl browsing context. This is standard for [workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) on the web. A Service worker can’t access the DOM but can access things like the [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache), and they can make network requests using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) and [postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Client/postMessage) are also available to use for data persistence and messaging between the service worker and pages it controls. [Push events](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onpush) sent from your server can invoke the [Notification API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) to increase user engagement.
+Service workers also have a limited set of APIs when compared to JavaScript in a normal browsing context. This is standard for [workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) on the web. A Service worker can’t access the DOM but can access things like the [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache), and they can make network requests using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). The [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) and [postMessage()](https://developer.mozilla.org/en-US/docs/Web/API/Client/postMessage) are also available to use for data persistence and messaging between the service worker and pages it controls. [Push events](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/onpush) sent from your server can invoke the [Notification API](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API) to increase user engagement.
 
 A service worker can intercept network requests made from a page (which triggers a fetch event on the service worker) and return a response retrieved from the network, or retrieved from a local cache, or even constructed programmatically. Effectively, it's a programmable proxy in the browser.  The neat part is that, regardless of where the response comes from, it looks to the web page as though there were no service worker involvement.
 
@@ -82,7 +82,7 @@ Similar and reliable performance wins are possible for your own applications usi
 
 # Does Service Worker Require us to Rethink How We Structure Apps?
 
-Service workers imply some subtle changes in application architecture. Rather than squashing all of your application into an HTML string, it can be beneficial to do things XHR-style. This is where you have a shell (that is always cached and can always boot up without the network) and content that is refreshed regularly and managed separately.
+Service workers imply some subtle changes in application architecture. Rather than squashing all of your application into an HTML string, it can be beneficial to do things AJAX-style. This is where you have a shell (that is always cached and can always boot up without the network) and content that is refreshed regularly and managed separately.
 
 The implications of this split are large. On the first visit you can render content on the server and install the service worker on the client. On subsequent visits you need only request data.
 
@@ -128,7 +128,7 @@ During the first load experience, your goal is to get meaningful content to the 
 
 * **Server** will send HTML content that the client can render and use far-future HTTP cache expiration headers to account for browsers without service worker support. It will serve filenames using hashes to enable both ‘versioning’ and easy updates for later in the application lifecycle.
 
-* **Page(s)** will include inline CSS styles in a `<style>` tag within the document `<head>` to provide a fast first paint of the application shell. Each page will asynchronously load the JavaScript necessary for the current view. As we all know, CSS cannot yet be asynchronously loaded. Instead, we can request styles using JavaScript as it IS asynchronous rather than parser-driven and synchronous. We can also take advantage of [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) to avoid cases where we might get a fast cache hit and end up with styles accidentally becoming part of the critical rendering path. `requestAnimationFrame()` forces the first frame to be painted before the styles to are loaded. Another option is to use projects such as Filament Group’s [loadCSS](https://github.com/filamentgroup/loadCSS) to request CSS asynchronously using JavaScript.
+* **Page(s)** will include inline CSS styles in a `<style>` tag within the document `<head>` to provide a fast first paint of the application shell. Each page will asynchronously load the JavaScript necessary for the current view. Because CSS cannot be asynchronously loaded, we can request styles using JavaScript as it IS asynchronous rather than parser-driven and synchronous. We can also take advantage of [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame) to avoid cases where we might get a fast cache hit and end up with styles accidentally becoming part of the critical rendering path. `requestAnimationFrame()` forces the first frame to be painted before the styles to be loaded. Another option is to use projects such as Filament Group’s [loadCSS](https://github.com/filamentgroup/loadCSS) to request CSS asynchronously using JavaScript.
 
 * **Service worker** will store a cached entry of the application shell so that on repeat visits, the shell can be loaded entirely from the service worker cache unless an update is available on the network.
 
@@ -136,11 +136,11 @@ During the first load experience, your goal is to get meaningful content to the 
 
 # A Practical Implementation
 
-We’ve written a fully working [sample](https://github.com/GoogleChrome/application-shell) using the application shell architecture, vanilla ES2015 JavaScript for the client, and Express.js for the server. There is of course nothing stopping you from using your own stack for either the client or the server portions (e.g PHP, Ruby, Python). We found using JS all the way through relatively painless for this example.
+We’ve written a fully working [sample](https://github.com/GoogleChrome/application-shell) using the application shell architecture, vanilla ES2015 JavaScript for the client, and Express.js for the server. There is of course nothing stopping you from using your own stack for either the client or the server portions (e.g PHP, Ruby, Python). 
 
 ## Service Worker Lifecycle
 
-For our application shell project, we use [sw-precache](https://github.com/GoogleChrome/sw-precache/) which generates our service worker script and [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) which handles runtime caching. Together they offer the following service worker lifecycle:
+For our application shell project, we use [sw-precache](https://github.com/GoogleChrome/sw-precache/) which offers the following service worker lifecycle:
 
 <table>
   <tr>
