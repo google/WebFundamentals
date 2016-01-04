@@ -67,7 +67,7 @@ As with all releases, we encourage developers to try Chrome on the Canary, Dev, 
 
 ### Demos
 
-* [MediaRecorder](https://rawgit.com/Miguelao/demos/master/mediarecorder.html)
+* [MediaRecorder](https://webrtc.github.io/samples/src/content/getusermedia/record/)
 * enumerateDevices():
 
     * [Select sources &amp; outputs](https://webrtc.github.io/samples/src/content/devices/input-output/)

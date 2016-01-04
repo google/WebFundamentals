@@ -30,7 +30,7 @@ Project Number you saved earlier:
 {% highlight json %}
 {
   "name": "Push Notifications codelab",
-  "gcm\_sender\_id": "593836075156"
+  "gcm_sender_id": "593836075156"
 }
 {% endhighlight %}
 
