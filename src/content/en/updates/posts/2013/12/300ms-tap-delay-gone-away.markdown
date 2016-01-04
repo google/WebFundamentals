@@ -12,7 +12,7 @@ tags:
   - performance
   - touchevent
 ---
-<p>You'll find large articles throughout this site dedicated to shaving 10ms here and 90ms there in order to deliver a fast and fluid user experience. Unfortunately every touch-based mobile browser, across platforms, has an artificial ~300ms delay between you tapping a thing on the screen and the browser considering it a "click". When people think of the web as being sluggish compared to native apps on mobile, this is this one of the main contributors.</p>
+<p>You'll find large articles throughout this site dedicated to saving 10ms here and 90ms there in order to deliver a fast and fluid user experience. Unfortunately every touch-based mobile browser, across platforms, has an artificial ~300ms delay between you tapping a thing on the screen and the browser considering it a "click". When people think of the web as being sluggish compared to native apps on mobile, this is this one of the main contributors.</p>
 
 <p>However, as of <a href="https://play.google.com/store/apps/details?id=com.chrome.beta">Chrome 32 for Android</a>, which is currently in beta, this <strong>delay is gone</strong> for <strong>mobile-optimised</strong> sites, <strong>without removing pinch-zooming</strong>!</p>
 
