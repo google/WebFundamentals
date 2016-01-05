@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Asking permission for notifications"
-description: "There's more to getting a user's permission to send them notifications than throwing up a dialog box."
+description: "There's more to requesting permission than throwing up a dialog box."
 published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 3
@@ -11,8 +11,7 @@ translation_priority: 1
 ---
 
 <p class="intro">
-  There's more to getting a user's permission to send them notifications than 
-  throwing up a dialog box. 
+  TThere's more to requesting permission than throwing up a dialog box. 
 </p>
 
 {% include shared/toc.liquid %}
