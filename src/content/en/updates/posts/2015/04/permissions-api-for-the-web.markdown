@@ -28,21 +28,22 @@ intended to be this single, standard way to check the permission status of an AP
 
 # permissions.query()
 
-Check the status of a permission using the permissions.query() method. This will
-return a status of [granted (you have permission), denied (you are blocked from
+Check the status of a permission using the `permissions.query()` method. This will
+[return a status](https://w3c.github.io/permissions/#h-status-of-a-permission) of granted (you have permission), denied (you are blocked from
 accessing the API) or
-prompt](https://w3c.github.io/permissions/#h-status-of-a-permission) (user needs
+prompt (user needs
 to be prompted). For example:
 
 {% highlight javascript %}
 // Check for Geolocation API permissions  
-navigator.permissions.query({name:'geolocation'}).then(function(permissionStatus)
-{  
-  console.log('geolocation permission status is ', permissionStatus.status);  
-  permissionStatus.onchange = function() {  
-    console.log('geolocation permission status has changed to ', this.status);  
-  };
-});
+navigator.permissions.query({name:'geolocation'})
+  .then(function(permissionStatus) {  
+    console.log('geolocation permission state is ', permissionStatus.state);
+
+    permissionStatus.onchange = function() {  
+      console.log('geolocation permission state has changed to ', this.state);
+    };
+  });
 {% endhighlight %}
 
 The query method takes a
@@ -50,10 +51,10 @@ The query method takes a
 object, where you define the permission's name. The response is a Promise
 resolving to a
 [PermissionStatus](https://w3c.github.io/permissions/#idl-def-PermissionStatus)
-object. From this object, you can check the status with `permissionStatus.status`
+object. From this object, you can check the state with `permissionStatus.state`
 for 'granted', 'denied' or 'prompt'. You can also also implement an event
 handler for `permissionStatus.onchange` and handle changes to the permission
-status of an API.
+state.
 
 ## Supported PermissionDescriptors
 
@@ -67,13 +68,13 @@ name attribute: `{name:'notifications'}`.
 [midi](https://w3c.github.io/permissions/#h-midi) each have an additional
 parameter that is specific to that API.
 
-For the push permission, you can supply a `userVisible` parameter. This indicates
-whether you wish to show a notification for every push message or be able to
-send silent push notifications (At the moment Chrome only supports push messages
-with notifications). You'd use it like so:
+For the push permission, you can supply a `userVisibleOnly` parameter.
+This indicates whether you wish to show a notification for every push message
+or be able to send silent push notifications (At the moment Chrome only
+supports push messages with notifications). You'd use it like so:
 
 {% highlight javascript %}
-navigator.permissions.query({name:'push', userVisible:true})
+navigator.permissions.query({name:'push', userVisibleOnly:true})
 {% endhighlight %}
 
 Midi allows a `sysex` parameter. This indicates whether you need to and/or receive
