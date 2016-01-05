@@ -2,8 +2,8 @@
 layout: shared/narrow-pages-list
 title: "Push Notifications"
 description: "You may already know how to implement push notifications. Are you using them well? Could you be using them better?"
-published_on: 2015-12-18
-updated_on: 2015-12-18
+published_on: 2016-01-05
+updated_on: 2016-01-05
 order: 1
 translation_priority: 0
 authors:
