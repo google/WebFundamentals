@@ -11,7 +11,14 @@ tags:
   - pushmessaging
   - notifications
   - serviceworker
+notes:
+  tutorial:
+    - "This blog post is getting a bit old. If you are looking to learn more
+    about implementing push, check out
+    <a href=\"https://developers.google.com/web/fundamentals/getting-started/push-notifications/?hl=en\">this getting started guide</a>."
 ---
+
+{% include shared/note.liquid list=page.notes.tutorial %}
 
 If you ask a room of developers what mobile device features are missing from the
 web, push notifications are always high on the list.
@@ -21,7 +28,7 @@ love and allow you to effectively re-engage them with customized, engaging conte
 
 As of Chrome version 42, the [Push API](http://w3c.github.io/push-api/) and
 [Notification API](https://notifications.spec.whatwg.org) are available to
-developers.  
+developers.
 
 The Push API in Chrome relies on a few different pieces of technology, including
 [Web App

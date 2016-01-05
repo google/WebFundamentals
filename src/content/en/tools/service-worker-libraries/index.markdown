@@ -148,4 +148,13 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
     <code>sw-toolbox</code> libraries were used together to power the
     <a href="https://events.google.com/io2015/">Google I/O 2015 web app</a>.
   </p>
+  <p>
+    <a href="https://twitter.com/jeffposnick">Jeff Posnick</a>'s
+    <a href="https://speakerdeck.com/jeffposnick/instant-loading-with-service-workers-chrome-dev-summit-15">presentation</a>
+    from the Chrome Dev Summit 2015, <em>Instant Loading with Service
+    Workers</em>, describes how to effectively use <code>sw-precache</code>
+    alongside <code>sw-toolbox</code> to build web apps that load quickly and
+    work offline.
+  </p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jCKZDTtUA2A" frameborder="0" allowfullscreen></iframe>
 </div>

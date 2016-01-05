@@ -28,6 +28,7 @@ $SDK_DIR/bin/gcloud auth activate-service-account $SERVICE_ACCOUNT \
 $SDK_DIR/bin/gcloud config set project web-central
 $SDK_DIR/bin/gcloud config set app/promote_by_default false
 $SDK_DIR/bin/gcloud config set app/use_appengine_api true
-$SDK_DIR/bin/gcloud preview app modules cancel-deployment default --version $CI_BRANCH
-$SDK_DIR/bin/gcloud preview app deploy --version $CI_BRANCH --bucket gs://${CI_BRANCH}-webcentral-appspot-com  ./build/app.yaml
-
+$SDK_DIR/bin/gcloud preview app deploy --force \
+        --version $CI_BRANCH \
+        --bucket gs://${CI_BRANCH}-webcentral-appspot-com \
+        ./build/app.yaml

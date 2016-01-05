@@ -52,7 +52,7 @@ As all string substitutions in Template Strings are JavaScript expressions, we c
     //=> JavaScript first appeared 20 years ago. Crazy!
 
     console.log(`The number of JS MVC frameworks is ${2 * (a + b)} and not ${10 * (a + b)}.`);
-    //=> The number of JS frameworks is 20 and not 2000.
+    //=> The number of JS frameworks is 40 and not 200.
 
 They are also very useful for functions inside expressions:
 

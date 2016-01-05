@@ -12,9 +12,11 @@ description: "Learn all about the new Security Panel in Chrome DevTools."
 featured_image: /web/updates/images/2015/12/security-panel/security-panel.png
 ---
 
-![The new Security Panel](/web/updates/images/2015/12/security-panel/security-panel.png)
+{% ytvideo 9WuP4KcDBpI %}
 
-The Chrome Security team has been [hard at work](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) to realize a future without HTTP, a future where you and your users can be reasonably sure that whatever data you’re sending to the web stays between you and the site you’re looking at. And to to make it even easier to jump ship and join the glorious HTTPS future, we’ve made Security a first-class citizen in DevTools.
+The Chrome Security team has been [hard at work](https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure) (rewatch the video above for a great overview) to realize a future without HTTP, a future where you and your users can be reasonably sure that whatever data you’re sending to the web stays between you and the site you’re looking at. And to to make it even easier to jump ship and join the glorious HTTPS future, we’ve made Security a first-class citizen in DevTools.
+
+![The new Security Panel](/web/updates/images/2015/12/security-panel/security-panel.png)
 
 The new Security panel introduced in Chrome 48 makes it a lot easier to see any issues you have with certificates and mixed content. You can head to it directly in DevTools or by clicking on the URL bar’s lock icon,  then the "Details" link.
 
@@ -42,7 +44,7 @@ You’ll now know at a glance why your site does or does not get the little gree
 
 Have **mixed content** appear out of nowhere? No worries. We show it directly on the overview, and a click brings you to a filtered view of the Network Panel, so you can quickly look at the offending requests:
 
-(image)
+![Mixed Content](/web/updates/images/2015/12/security-panel/mixed.png)
 
 # Origin View: Connection Type and Certificate Details
 

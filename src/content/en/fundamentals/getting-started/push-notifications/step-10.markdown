@@ -32,7 +32,7 @@ self.addEventListener('notificationclick', function(event) {
             type: 'window'
         })
         .then(function(windowClients) {
-            for (var i = 0; i & lt; windowClients.length; i++) {
+            for (var i = 0; i < windowClients.length; i++) {
                 var client = windowClients[i];
                 if (client.url === url && 'focus' in client) {
                     return client.focus();
