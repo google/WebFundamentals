@@ -4,8 +4,8 @@ title: "Personal, timely, and relevant"
 description: "Here are a few tips for making your notifications personal, timely, and relevant."
 authors:
 - josephmedley
-published_on: 2015-12-18
-updated_on: 2015-12-18
+published_on: 2016-01-05
+updated_on: 2016-01-05
 order: 2
 ---
 
