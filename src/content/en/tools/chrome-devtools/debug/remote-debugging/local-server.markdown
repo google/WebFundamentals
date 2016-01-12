@@ -42,7 +42,7 @@ Need a simple way to run a web server locally?
 To start the server, run:
 
 {% highlight bash %}
-python -m SimpleHTTPServe
+python -m SimpleHTTPServer
 {% endhighlight %}
 
 ## Use port-forwarding when site and device on different networks
