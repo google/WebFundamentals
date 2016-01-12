@@ -2,8 +2,8 @@
 layout: updates/post
 title: "Google Cast for Chrome on Android"
 description: "Chrome on Android now allows mobile sites to present to Google Cast devices using the Presentation API and the Cast Web SDK."
-published_on: 2015-12-04
-updated_on: 2015-12-04
+published_on: 2015-12-18
+updated_on: 2015-12-18
 authors:
   - samdutton
 tags:
@@ -15,11 +15,23 @@ tags:
 featured_image: /web/updates/images/2015/11/presentation-api/featured.jpg
 ---
 
-<p class="intro">Imagine being able to use a mobile web app to present a slide deck to a conference projector from your phone — or share images, play games or watch videos on TV — using the web app as a controller.</p>
+<style>
+img.screenshot {
+  max-width: 360px;
+}
+@media screen and (max-width: 500px) {
+  img.screenshot {
+    max-width: 100%;
+  }
+}
+</style>
 
-The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/castapi/CastHelloVideo/index.html) using the [Cast Web SDK](https://developers.google.com/cast/docs/chrome_sender). This means you can now create Cast sender apps using the Web SDK with Chrome on Android or iOS (or on desktop with the extension) or use the native Cast SDK for native Android and iOS apps. (Previously, a Google Cast sender application needed the Google Cast Chrome extension, so on Android it was only possible to interact with Cast devices from native apps.)
 
-Below is a brief introduction to building a Cast sender app. More comprehensive information is available from the [Chrome Sender App Development Guide](https://developers.google.com/cast/docs/chrome_sender).
+<p class="intro">Imagine being able to use a web app from your phone to present a slide deck to a conference projector — or share images, play games or watch videos on a TV screen — using the mobile web app as a controller.</p>
+
+The latest release of Chrome on Android allows sites to [present to Google Cast devices](https://storage.googleapis.com/castapi/CastHelloVideo/index.html) using the [Cast Web SDK](https://developers.google.com/cast/docs/chrome_sender). This means you can now create Cast sender apps using the Web SDK with Chrome on Android or iOS (or on desktop with the extension) as well as creating apps that use the native Cast SDK for Android and iOS. (Previously, a Google Cast sender application needed the Google Cast Chrome extension, so on Android it was only possible to interact with Cast devices from native apps.)
+
+Below is a brief introduction to building a Cast sender app using the Web SDK. More comprehensive information is available from the [Chrome Sender App Development Guide](https://developers.google.com/cast/docs/chrome_sender).
 
 All pages using Cast must include the Cast library:
 
@@ -41,13 +53,13 @@ window['__onGCastApiAvailable'] = function(isLoaded, error) {
 
 function initializeCastApi() {
   var sessionRequest = new chrome.cast.SessionRequest(applicationID);
-  var apiConfig = new chrome.cast.ApiConfig(sessionRequest, sessionListener,
-      receiverListener);
+  var apiConfig = new chrome.cast.ApiConfig(sessionRequest,
+      sessionListener, receiverListener);
   chrome.cast.initialize(apiConfig, onInitSuccess, onError);
 };
 {% endhighlight %}
 
-If you're using the default [Styled Media Receiver](https://developers.google.com/cast/docs/receiver_apps#Styled)) application and not a roll-your-own, registered [Custom Receiver](https://developers.google.com/cast/docs/custom_receiver) application, you can create a `SessionRequest` like this:
+If you're using the default [Styled Media Receiver](https://developers.google.com/cast/docs/receiver_apps#Styled) application and not a roll-your-own, registered [Custom Receiver](https://developers.google.com/cast/docs/custom_receiver) application, you can create a `SessionRequest` like this:
 
 {% highlight javascript %}
 var sessionRequest = new chrome.cast.SessionRequest(chrome.cast.media.
@@ -77,11 +89,11 @@ function onRequestSessionSuccess(e) {
 
 The user will be presented with a device picker:
 
-![Cast device selection dialog](/web/updates/images/2015/11/presentation-api/devices.png)
+<img class="screenshot" src="/web/updates/images/2015/11/presentation-api/devices.png" alt="Cast device selection dialog">
 
 The **route details** dialog is shown when the page is already connected and calls `requestSession()`:
 
-![Cast route details dialog](/web/updates/images/2015/11/presentation-api/route-details.png)
+<img class="screenshot" src="/web/updates/images/2015/11/presentation-api/route-details.png" alt="Cast route details dialog">
 
 Once you have a Cast session, you can load media for the selected Cast device, and add a listener for media playback events:
 
@@ -98,22 +110,24 @@ function onMediaDiscovered(how, media) {
 }
 {% endhighlight %}
 
-A play/pause notification is shown when media is playing:
-
-![Cast play/pause notification](/web/updates/images/2015/11/presentation-api/play-pause-notification.png)
-
-If no media is playing, the notification only has a stop button, to stop casting:
-
-![Cast stop notification](/web/updates/images/2015/11/presentation-api/stop-notification.png)
-
 The `currentMedia` variable here is a `chrome.cast.media.Media` object, which can be used for controlling playback:
 
 {% highlight javascript %}
 function playMedia() {
   currentMedia.play(null, success, error)
 }
+
 // ...
+
 {% endhighlight %}
+
+A play/pause notification is shown when media is playing:
+
+<img class="screenshot" src="/web/updates/images/2015/11/presentation-api/play-pause-notification.png" alt="Cast play/pause notification">
+
+If no media is playing, the notification only has a stop button, to stop casting:
+
+<img class="screenshot" src="/web/updates/images/2015/11/presentation-api/stop-notification.png" alt="Cast stop notification">
 
 The `sessionListener` callback for `chrome.cast.ApiConfig()` (see above) enables your app to join or manage an existing Cast session:
 
@@ -126,15 +140,15 @@ function sessionListener(e) {
 }
 {% endhighlight %}
 
-The [Cast Web SDK guide](https://developers.google.com/cast/docs/chrome_sender) has links to sample apps, and information about Cast features such as session management, text tracks (for subtitles and captions) and status updates.
+If Chrome on Android allows casting media from your website but you want to disable this feature, use the [disableRemotePlayback](https://w3c.github.io/remote-playback/#idl-def-htmlmediaelement-disableremoteplayback) attribute, available in Chrome 49 and above:
+
+{% highlight html %}
+<video disableRemotePlayback src="...">
+{% endhighlight %}
 
 ![Alt Sender and receiver devices](/web/updates/images/2015/11/presentation-api/screens.jpg)
 
-On a related note, if Chrome on Android already allows casting media from your website and you want to disable this feature, there's a [disableRemotePlayback](https://w3c.github.io/remote-playback/#idl-def-htmlmediaelement-disableremoteplayback) media element attribute being shipped in Chrome M49, like this:
-
-```
-<video disableRemotePlayback src="...">
-```
+The [Cast Web SDK guide](https://developers.google.com/cast/docs/chrome_sender) has links to sample apps, and information about Cast features such as session management, text tracks (for subtitles and captions) and status updates.
 
 At present, you can only present to a Cast [Receiver Application](https://developers.google.com/cast/docs/receiver_apps) using the Cast Web SDK, but there is work underway to enable the [Presentation  API](https://w3c.github.io/presentation-api/) to be used without the Cast SDK (on desktop and Android) to present any web page to a Cast device without registration with Google. Unlike the Chrome-only Cast SDK, using the standard API will allow the page work with other user agents and devices that support the API.
 
