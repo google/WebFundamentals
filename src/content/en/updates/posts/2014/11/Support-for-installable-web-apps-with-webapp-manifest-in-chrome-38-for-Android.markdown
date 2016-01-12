@@ -133,9 +133,9 @@ Taking a look at native apps, the majority of news-centric apps treat their expe
 
 A question that keeps popping up about Chrome's implementation of "mobile-web-app-capable" is: How can I tell if
 I am running as launched from the home screen?  On iOS you can use `navigator.standalone` to see if it is running
-like a native app, but we don't have this on Chrome for Android.
+like a native app, but we don't have this on Chrome for Android. [Instead](https://code.google.com/p/chromium/issues/detail?id=289113), you should [use the `display-mode`](https://developers.google.com/web/updates/2015/10/display-mode) media query feature.
 
-A naive approach is: Because you can now define how your app is launched, add a query string parameter to your `start_url` that indicates how it was launched.  For example `start_url: /index.html?homescreen=1`.  This will help in some cases but it is not infallible.
+
 
 # Learning More
 
