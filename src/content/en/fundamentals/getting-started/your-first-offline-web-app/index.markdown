@@ -30,7 +30,7 @@ experience is.
 ### What you'll learn
 
 * How to add a basic Service Worker to an existing project.
-* A brief overview of Service Worker Lifecycle
+* A brief overview of the Service Worker Lifecycle
 * A simple offline caching strategy
 
 ### What you'll need
