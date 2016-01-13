@@ -62,13 +62,14 @@ are on our way.
   
 ### Frequently Asked Questions
 
-* Why is the Service Worker in the root?  Why can't I place it in a `/scripts` 
-  directory?
-    * For security reasons, a service worker can only control the pages that are 
-      in the same directory level or below it.  This means that if you place the 
-      service worker file in a scripts directory it will be only able to be 
-      attached to pages inside the /scripts directory and below (/scripts/test/ 
-      for example).  It is unlikely that your pages for your site will live 
-      there.
+**Why is the Service Worker in the root?  Why can't I place it in a `/scripts` 
+  directory?**
+
+For security reasons, a service worker can only control the pages that are 
+in the same directory level or below it.  This means that if you place the 
+service worker file in a scripts directory it will be only able to be 
+attached to pages inside the /scripts directory and below (/scripts/test/ 
+for example).  It is unlikely that your pages for your site will live 
+there.
 
 
