@@ -139,7 +139,7 @@ like a native app, but we don't have this on Chrome for Android. [Instead](https
 
 # Learning More
 
-Check out Chrome's guidance for [installing to the home screen](https://developer.chrome.com/multidevice/android/installtohomescreen#supporting) and the [HTML5Doctor](http://html5doctor.com/web-manifest-specification/) for a deeper dive in
+Check out Chrome's guidance for [adding to the home screen](https://developer.chrome.com/multidevice/android/installtohomescreen#supporting) and [HTML5Doctor](http://html5doctor.com/web-manifest-specification/) for a deeper dive in
 to where the future of the spec and implementations will be.
 
 ## Diving deep
