@@ -57,7 +57,7 @@ a regular HTML file but has some magic inside:
 {% endhighlight %}
 
 So there are many choices out there nowadays when you want to create 
-a HTML5 based application. API’s, Frameworks, Libraries, Game Engines etc. 
+a HTML5 based application. APIs, Frameworks, Libraries, Game Engines etc. 
 Despite all the choices it is difficult to get a setup that is a good mix 
 between control over high performance of graphics and clean modular 
 structure and scalability. We found that Polymer could help us keep the 
