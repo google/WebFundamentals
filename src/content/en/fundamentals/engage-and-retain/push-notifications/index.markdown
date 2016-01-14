@@ -1,34 +1,24 @@
 ---
 layout: shared/narrow-pages-list
-title: "Push and Notifications"
-description: "Push messaging allows developers to engage users by providing timely and customized content outside the context of the web page. <b>Push</b> and <b>Notification</b> are different, but complementary, functions: a <b>push</b> is the action of the server supplying message information to a service worker; a <b>notification</b> is the action of the service worker sending the information to a user."
-published_on: 2015-10-01
-updated_on: 2015-10-01
+title: "Push Notifications"
+description: "You may already know how to implement push notifications. Are you using them well? Could you be using them better?"
+published_on: 2016-01-05
+updated_on: 2016-01-05
 order: 1
 translation_priority: 0
 authors:
-  - dgash
+  - josephmedley
 ---
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--8-col">
 <p class="intro">
-  Push messaging allows developers to engage users by providing timely and customized content outside the context of the web page. <b>Push</b> and <b>Notification</b> are different, but complementary, functions: a <b>push</b> is the action of the server supplying message information to a service worker; a <b>notification</b> is the action of the service worker sending the information to a user.
+  You may already know <a href="/web/fundamentals/primers/push-notifications">how to implement push notifications</a>. Are you using them well? Could you be using them better? 
 </p>
-  </div>
-  <figure class="mdl-cell mdl-cell--4-col">
-    <img src="images/airline-prompt.png" alt="An example of a notification."> 
-  </figure>
-</div>
+
+In 2015, [a case study](http://googlewebmastercentral.blogspot.com/2015/07/google-case-study-on-app-download-interstitials.html) 
+found that when prompted to download and install Google+, 9% of users did so. 
+That's an impressive click-through rate, or it would be if we were talking
+about online ads. The same study found that 69% of users both left the page 
+that prompted and ignored the invite to install Google+.
 
 
-The W3C manages the specifications for the [Push API](http://www.w3.org/TR/push-api/)
-and the [Notifications API](https://dvcs.w3.org/hg/notifications/raw-file/tip/Overview.html).
-
-### Sample
-
-Want to try out push and notifications? Check out the 
-[push messaging and notifications](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications)
-sample. It's got everything you need to get started and includes the instructions
-for setting up push messaging through Google Cloud Messaging.
-
+Push notifications and the technologies behind them improve retention odds by taking advantage of the code that's already on the user's device: your web page. If you're deploying a [web app manifest](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android), or following the principals of [application shell architecture](/web/updates/2015/11/app-shell) then your web pages are already more like native apps than are other web sites. Even if they're not using those technologies, you can retain more users by using push notifications more effectively.
