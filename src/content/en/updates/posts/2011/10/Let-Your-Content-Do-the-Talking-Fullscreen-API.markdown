@@ -33,7 +33,7 @@ Then to exit fullscreen, the `document` exposes a method for that:
 
 {% highlight javascript %}
 document.webkitExitFullscreen();
-document.mozCancelFullscreen();
+document.mozCancelFullScreen();
 document.msExitFullscreen();
 document.exitFullscreen();
 {% endhighlight %}
