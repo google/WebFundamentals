@@ -10,9 +10,11 @@ authors:
   - mattgaunt
 ---
 
-After a controlled page kicks off the registration process, let's shift to the point of view of the service worker script, which handles the `install` event.
+After a controlled page kicks off the registration process, let's shift to the
+point of view of the service worker script, which handles the `install` event.
 
-For the most basic example, you need to define a callback for the install event and decide which files you want to cache.
+For the most basic example, you need to define a callback for the install event
+and decide which files you want to cache.
 
 {% highlight javascript %}
 // The files we want to cache
@@ -24,15 +26,15 @@ var urlsToCache = [
 
 // Set the callback for the install step
 self.addEventListener('install', function(event) {
-    // Perform install steps
+  // Perform install steps
 });
 {% endhighlight %}
 
 Inside of our install callback, we need to take the following steps:
 
-1. Open a cache
-2. Cache our files
-3. Confirm whether all the required assets are cached or not
+1. Open a cache.
+2. Cache our files.
+3. Confirm whether all the required assets are cached or not.
 
 {% highlight javascript %}
 var CACHE_NAME = 'my-site-cache-v1';
@@ -54,9 +56,20 @@ self.addEventListener('install', function(event) {
 });
 {% endhighlight %}
 
-Here you can see we call `caches.open()` with our desired cache name, after this we call `cache.addAll()` and pass in our array of files. This is a chain of promises (`caches.open()` and `cache.addAll()`). event.waitUntil takes a promise and uses it to know how long installation takes, and whether it succeeded.
+Here you can see we call `caches.open()` with our desired cache name, after this
+we call `cache.addAll()` and pass in our array of files. This is a chain of
+promises (`caches.open()` and `cache.addAll()`). The `event.waitUntil()` method
+takes a promise and uses it to know how long installation takes, and whether it
+succeeded.
 
-If all the files are successfully cached, then the service worker will be installed. If **any** of the files fail to download, then the install step will fail. This allows you to rely on having all the assets that you defined, but does mean you need to be careful with the list of files you decide to cache in the install step. Defining a long list of files will increase the chance that one file may fail to cache, leading to your service worker not getting installed.
+If all the files are successfully cached, then the service worker will be
+installed. If **any** of the files fail to download, then the install step will
+fail. This allows you to rely on having all the assets that you defined, but
+does mean you need to be careful with the list of files you decide to cache in
+the install step. Defining a long list of files will increase the chance that
+one file may fail to cache, leading to your service worker not getting
+installed.
 
-This is just one example, you can perform other tasks in the `install` event or avoid setting an `install` event listener altogether.
+This is just one example, you can perform other tasks in the `install` event or
+avoid setting an `install` event listener altogether.
 

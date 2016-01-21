@@ -11,9 +11,16 @@ authors:
   - josephmedley
 ---
 
-If you're not using Chrome 46 or later, then [please upgrade now](https://support.google.com/chrome/answer/95414). Versions earlier than that lack support for some features you're going to need for service workers, specifically `Cache.addAll()`.
+If you're not using Chrome 46 or later, then 
+[please upgrade now](https://support.google.com/chrome/answer/95414). Versions 
+earlier than that lack support for some features you're going to need for 
+service workers, specifically `Cache.addAll()`.
 
-If you really are stuck with an older version of Chrome, there's [a polyfill](https://github.com/coonsta/cache-polyfill) that adds the missing features. Grab `dist/serviceworker-cache-polyfill.js` to put somewhere in your site and use it in a service worker with the `importScripts()` method. Any script which is imported will automatically be cached by the service worker.
+If you really are stuck with an older version of Chrome, there's 
+[a polyfill](https://github.com/coonsta/cache-polyfill) that adds the missing 
+features. Grab `dist/serviceworker-cache-polyfill.js` to put somewhere in your 
+site and use it in a service worker with the `importScripts()` method. Any 
+script which is imported will automatically be cached by the service worker.
 
 {% highlight javascript %}
 importScripts('serviceworker-cache-polyfill.js');

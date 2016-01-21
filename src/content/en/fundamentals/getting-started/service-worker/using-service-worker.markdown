@@ -10,4 +10,5 @@ authors:
   - mattgaunt
 ---
 
-Now that we've got the Polyfill and covered HTTPS, let's look at what we do in each step.
+Now that we've got the Polyfill and covered HTTPS, let's look at what we do in 
+each step.
