@@ -175,9 +175,10 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
   // Reading Battery Level...
   return characteristic.readValue();
 })
-.then(buffer => {
-  var data = new DataView(buffer);
-  console.log('Battery percentage is ' + data.getUint8(0));
+.then(value => {
+  // In Chrome 50+, a DataView is returned instead of an ArrayBuffer.
+  value = value.buffer ? value : new DataView(value);
+  console.log('Battery percentage is ' + value.getUint8(0));
 })
 .catch(error => { console.log(error); });
 {% endhighlight %}
