@@ -35,7 +35,7 @@ in control, it will be in one of two states: either the service worker will be
 terminated to save memory, or it will handle fetch and message events which
 occur when a network request or message is made from your page.
 
-Below is an overly simplified version of the service worker lifecycle on it's
+Below is an overly simplified version of the service worker lifecycle on its
 first installation.
 
 ![Service Worker lifecydle](images/sw-lifecycle.png)

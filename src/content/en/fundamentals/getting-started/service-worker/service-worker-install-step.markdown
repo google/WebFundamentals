@@ -56,7 +56,7 @@ self.addEventListener('install', function(event) {
 });
 {% endhighlight %}
 
-Here you can see we call `caches.open()` with our desired cache name, after this
+Here you can see we call `caches.open()` with our desired cache name, after which
 we call `cache.addAll()` and pass in our array of files. This is a chain of
 promises (`caches.open()` and `cache.addAll()`). The `event.waitUntil()` method
 takes a promise and uses it to know how long installation takes, and whether it

@@ -19,15 +19,16 @@ mindful of.
 ## If Installation Fails, We're Not so Good at Telling You About It
 
 If a worker registers, but then doesn't appear in `chrome://inspect/#service-
-workers` or `chrome://serviceworker-internals`, it's likely its failed to
+workers` or `chrome://serviceworker-internals`, it's likely failed to
 install due to an error being thrown, or a rejected promise being passed to
 `event.waitUntil()`.
 
-To work around this, go to `chrome://serviceworker-internals` and check "Opens
-the DevTools window for service worker on start for debugging", and put a
-debugger statement at the start of your install event. This, along with 
-"[Pause on uncaught exceptions](https://developer.chrome.com/devtools/docs/javascript-debugging#pause-on-uncaught-exceptions)", 
-should reveal the issue.
+To work around this, go to `chrome://serviceworker-internals` and check "Open
+DevTools window and pause JavaScript execution on Service Worker startup for
+debugging.", and put a debugger statement at the start of your install event.
+(This option is named differently in versions of Chrome earlier than 47.)
+This, along with  "[Pause on uncaught exceptions](https://developer.chrome.com/devtools/docs/javascript-debugging
+#pause-on-uncaught-exceptions)",  should reveal the issue.
 
 ## The Defaults of fetch()
 
