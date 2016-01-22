@@ -1,8 +1,8 @@
 div.highlight > pre > code, code .highlight  { background: transparent; }
 div.highlight > pre .c, code .highlight .c { color: #999988; font-style: italic } /* Comment */
 div.highlight > pre .err, code .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
-div.highlight > pre .k, code .highlight .k { } /* Keyword */
-div.highlight > pre .o, code .highlight .o { } /* Operator */
+div.highlight > pre .k, code .highlight .k { font-weight: bold; } /* Keyword */
+div.highlight > pre .o, code .highlight .o { font-weight: bold; } /* Operator */
 div.highlight > pre .cm, code .highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
 div.highlight > pre .cp, code .highlight .cp { color: $colorGray; } /* Comment.Preproc */
 div.highlight > pre .c1, code .highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
@@ -20,14 +20,14 @@ div.highlight > pre .gs, code .highlight .gs { } /* Generic.Strong */
 div.highlight > pre .gu, code .highlight .gu { color: #aaaaaa } /* Generic.Subheading */
 div.highlight > pre .gt, code .highlight .gt { color: #aa0000 } /* Generic.Traceback */
 div.highlight > pre .kc, code .highlight .kc { } /* Keyword.Constant */
-div.highlight > pre .kd, code .highlight .kd { } /* Keyword.Declaration */
+div.highlight > pre .kd, code .highlight .kd { font-weight: bold; } /* Keyword.Declaration */
 div.highlight > pre .kp, code .highlight .kp { } /* Keyword.Pseudo */
 div.highlight > pre .kr, code .highlight .kr { } /* Keyword.Reserved */
 div.highlight > pre .kt, code .highlight .kt { color: #445588; } /* Keyword.Type */
 div.highlight > pre .m, code .highlight .m { color: #009999 } /* Literal.Number */
 div.highlight > pre .s, code .highlight .s { color: $colorLearning } /* Literal.String */
 div.highlight > pre .na, code .highlight .na { color: #008080 } /* Name.Attribute */
-div.highlight > pre .nb, code .highlight .nb { color: #0086B3 } /* Name.Builtin */
+div.highlight > pre .nb, code .highlight .nb { color: #4527A0 } /* Name.Builtin */
 div.highlight > pre .nc, code .highlight .nc { color: #445588; } /* Name.Class */
 div.highlight > pre .no, code .highlight .no { color: #008080 } /* Name.Constant */
 div.highlight > pre .ni, code .highlight .ni { color: #800080 } /* Name.Entity */
