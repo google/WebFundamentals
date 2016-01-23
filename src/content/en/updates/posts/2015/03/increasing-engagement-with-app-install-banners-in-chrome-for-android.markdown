@@ -45,7 +45,7 @@ manage the prompting of users:
   - The manifest defines how your app appears on the user's system and how it
   should be launched - and you are required to have a \`short\_name\` and a
   \`144x144\` png icon
-  - Your icon declartion's should include a mime type of `image/png`
+  - Your icon declaration's should include a mime type of `image/png`
 * You have a [service
   worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
   registered on your site. We recommend a [simple custom offline page](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js)

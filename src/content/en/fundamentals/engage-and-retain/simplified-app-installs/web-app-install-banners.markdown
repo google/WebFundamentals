@@ -32,7 +32,7 @@ criteria:
 
 * Have a [web app manifest](.) file with:
   - a `short_name`
-  - a 144x144 png icon (the icon declartion's must include a mime type of `image/png`)
+  - a 144x144 png icon (the icon declaration's must include a mime type of `image/png`)
 * Have a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
   registered on your site.
 * Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/) (you 

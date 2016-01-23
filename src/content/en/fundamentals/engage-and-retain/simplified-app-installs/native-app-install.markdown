@@ -32,7 +32,7 @@ a Service Worker. Your site must:
 
 * Have a [web app manifest](.) file with:
   - a `short_name`
-  - a 144x144 png icon, your icon declartion's should include a mime type of `image/png`
+  - a 144x144 png icon, your icon declaration's should include a mime type of `image/png`
   - a `related_applications` object with information about the app
 * Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/)
 * Be visited by the user twice, over two separate days during the course
