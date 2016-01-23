@@ -27,7 +27,7 @@ It's time for a proper API that does this stuff for us!
 [Try the demo](https://googlechrome.github.io/samples/urlsearchparams/index.html)
 
 Chrome 49 implements `URLSearchParams` from the [URL spec](https://url.spec.whatwg.org/#urlsearchparams), an API which is useful for fiddling around with URL
-parameters. I think of `URLSearchParams` an equivalent convenience to URLs
+query parameters. I think of `URLSearchParams` as an equivalent convenience to URLs
 as `FormData` was to forms.
 
 So what can you do with it? Given a URL string, you can easily extract parameter values:
@@ -56,7 +56,8 @@ for (let p of params) {
 params.set('version', 2);
 {% endhighlight %}
 
-Note: If there are several values, `delete` the others:
+Note: If there are several values, `delete` removes all of the parameters with
+the given name.
 
 **append** another value for an existing parameter:
 
@@ -120,7 +121,7 @@ fetch('https://example.com/api', {
 {% endhighlight %}
 
 Although it's not yet implemented in Chrome, `URLSearchParams` also integrates
-with the `URL` constructor and `a` tags. BOth support our new buddy by providing
+with the `URL` constructor and `a` tags. Both support our new buddy by providing
 a read-only property, `.searchParams` for accessing query params:
 
 {% highlight javascript %}
@@ -151,7 +152,7 @@ if ('URLSearchParams' in window) {
 }
 {% endhighlight %}
 
-For polyfills, I recommend the one at [github.comWebReflection/url-search-params](https://github.com/WebReflection/url-search-params).
+For polyfills, I recommend the one at [github.com/WebReflection/url-search-params](https://github.com/WebReflection/url-search-params).
 
 ## Demo
 
