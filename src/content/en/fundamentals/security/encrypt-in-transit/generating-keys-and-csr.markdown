@@ -46,7 +46,7 @@ This will give you the following output:
 
 In this step, you embed your public key and information about your organization
 and your web site into a certificate signing request. *openssl* will interactively
-ask your for that metadata.
+ask you for that metadata.
 
 Running the following command:
 
