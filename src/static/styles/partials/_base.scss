@@ -79,7 +79,7 @@ li {
 }
 
 pre {
-  padding: $base-line;
+  padding: $base-line / 2;
 
   overflow-x: auto;
 
@@ -87,6 +87,8 @@ pre {
 }
 
 pre, code {
+  font-size: 10pt;
+  line-height: $base-line;
   word-wrap: normal;
   font-family: 'Roboto Mono', 'Inconsolata', 'monospace';
 }
