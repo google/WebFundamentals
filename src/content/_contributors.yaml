@@ -81,11 +81,13 @@ ericbidelman:
     unit: Developer Relations
   country: USA
   homepage: http://ericbidelman.com
-  google: 118075919496626375791
+  google: +EricBidelman
   twitter: ebidel
   role:
     - author
   email: e.bidelman@google.com
+  description:
+    en: "Engineer @ Google working on Polymer, Chrome, and the web"
 
 yatesbuckley:
   name:
