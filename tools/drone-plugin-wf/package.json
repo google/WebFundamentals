@@ -1,0 +1,14 @@
+{
+  "name": "drone-plugin-wf",
+  "version": "1.0.0",
+  "description": "Drone plugin for Web Fundamentals",
+  "bugs": {
+    "url": "https://github.com/google/WebFundamentals/issues"
+  },
+  "private": true,
+  "dependencies": {
+    "request": "^2.60.0",
+    "webpagetest": "^0.3.3",
+    "yargs": "^3.32.0"
+  }
+}

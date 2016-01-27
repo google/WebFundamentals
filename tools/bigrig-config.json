@@ -1,0 +1,28 @@
+{
+  "tasks": {
+    "Fundamentals Home Page (3G, Motorola G)": {
+      "url": "/web/fundamentals/",
+      "labels": "fundamentals-home-page-3g-motorola-g"
+    },
+    "Updates Home Page (3G, Motorola G)": {
+      "url": "/web/updates/",
+      "labels": "updates-home-page-3g-motorola-g"
+    },
+    "Updates Article (3G, Motorola G)": {
+      "url": "/web/updates/2015/06/mse-gapless-audio.html",
+      "labels": "updates-article-page-3g-motorola-g"
+    },
+    "Show Index": {
+      "url": "/web/shows",
+      "labels": "show-index"
+    },
+    "Show Home": {
+      "url": "/web/shows/ttt",
+      "labels": "show-home"
+    },
+    "Show Episode": {
+      "url": "/web/shows/ttt/series-1/sublime-text-plugins",
+      "labels": "show-episode"
+    }
+  }
+}

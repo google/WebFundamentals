@@ -14,40 +14,41 @@
  * limitations under the License.
  */
 'use strict';
+var fs = require('fs');
+var request = require('request');
+var https = require('https');
+var WebPageTest = require('webpagetest');
 
-var config = require('./config');
+var argv = require('yargs').argv;
+argv.config = argv.config || 'bigrig-config.json';
+var config = JSON.parse(fs.readFileSync(argv.config, 'utf8'));
+config.baseURL = argv.baseUrl || '';
+config.commitURL = argv.commitUrl;
+config.wptApiKey = process.env.WPT_API_KEY;
+config.rigHost = process.env.RIG_URL;
+config.rigSecret = process.env.RIG_SECRET;
 
-config.rigUrl = process.env.RIG_URL;
-config.apiKey = process.env.WPT_API_KEY;
-config.secret = process.env.RIG_SECRET;
-config.repo = process.env.CI_REPO;
-config.commit = process.env.CI_COMMIT;
-
-if (typeof config.apiKey === 'undefined') {
+if (typeof config.wptApiKey === 'undefined') {
   console.error ('No WebPagetest API key provided');
-  process.exit(-1);
+  process.exit(1);
 }
 
 if (typeof config.tasks === 'undefined' || config.tasks.length === 0) {
   console.error ('No tasks provided');
-  process.exit(-1);
+  process.exit(1);
 }
 
-if (typeof config.rigUrl === 'undefined') {
-  console.error ('No Rig URL provided');
-  process.exit(-1);
+if (typeof config.rigHost === 'undefined') {
+  console.error ('No Rig host provided');
+  process.exit(1);
 }
 
-if (typeof config.secret === 'undefined') {
-  console.error ('No secret provided');
-  process.exit(-1);
+if (typeof config.rigSecret === 'undefined') {
+  console.error ('No Rig secret provided');
+  process.exit(1);
 }
 
-var request = require('request');
-var fs = require('fs');
-var https = require('https');
-var WebPageTest = require('webpagetest');
-var wpt = new WebPageTest('www.webpagetest.org', config.apiKey);
+var wpt = new WebPageTest('www.webpagetest.org', config.wptApiKey);
 var wptRequestOptionsBase = {
   private: true,
   location: 'Dulles:Chrome',
@@ -78,7 +79,7 @@ for (var t = 0; t < tasks.length; t++) {
   if (typeof currentTask.connectivity !== 'undefined')
     wptRequestOptions.connectivity = currentTask.connectivity;
 
-  wpt.runTest(currentTask.url, wptRequestOptions,
+  wpt.runTest(config.baseURL + currentTask.url, wptRequestOptions,
       onWebPageTestResult.bind(currentTask));
 }
 
@@ -86,7 +87,7 @@ function onWebPageTestResult (err, data) {
 
   if (err) {
     console.error(err);
-    process.exit(-1);
+    process.exit(1);
   }
 
   // Get the test results.
@@ -107,7 +108,7 @@ function onWebPageTestResult (err, data) {
   }
 
   // Set up the secret
-  this.secret = process.env.SECRET;
+  this.secret = config.rigSecret;
 
   // Request the timeline data. Clone the timeline request, which feels ick.
   // Why don't we have proper Object.clone yet? I dunno.
@@ -133,7 +134,7 @@ function onTimelineData (timelineRequestRes) {
 function onTimelineDataComplete () {
 
   var uploadRequest = {
-    host: config.rigUrl,
+    host: config.rigHost,
     port: 443,
     path: '/action/import?secret=' + encodeURIComponent(this.secret)
   }
@@ -171,12 +172,8 @@ function onUploadRequestComplete () {
     if (typeof this.results.speedIndex !== 'undefined')
       submissionData["speed-index"] = this.results.speedIndex.toString();
 
-    if (typeof config.repo !== 'undefined' &&
-        typeof config.commit !== 'undefined') {
-      var commitURL =
-          'https://github.com/' + config.repo +
-          '/commit/' + config.commit;
-      submissionData["commit"] = commitURL;
+    if (config.commitURL) {
+      submissionData["commit"] = config.commitURL;
     }
 
     var formData = {
@@ -197,19 +194,19 @@ function onUploadRequestComplete () {
 
       if (err) {
         console.error(err);
-        process.exit(-1);
+        process.exit(1);
       }
 
       try {
         bigrigResponse = JSON.parse(body);
       } catch (e) {
         console.error(e);
-        process.exit(-1);
+        process.exit(1);
       }
 
       if (bigrigResponse.status !== 'ok') {
         console.error(bigrigResponse.status)
-        process.exit(-1);
+        process.exit(1);
       }
     })
   }

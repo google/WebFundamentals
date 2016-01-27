@@ -14,21 +14,18 @@ build:
     - bundle install --deployment --jobs=3 --retry=3
     - npm install
     - gulp build:staging
-    - "tools/dump-ci-state.sh > .state"
 deploy:
-  bash:
-    when:
-      repo: google/WebFundamentals
-      branch: master
-    image: crhym3/drone-plugin-bash-node
-    env:
-      - RIG_URL=$$RIG_URL
-      - RIG_SECRET=$$RIG_SECRET
-      - WPT_API_KEY=$$WPT_API_KEY
-      - SERVICE_ACCOUNT=$$SERVICE_ACCOUNT
-      - SERVICE_SECRET=$$SERVICE_SECRET
-    script:
-      - cat .state
-      - . .state
-      - tools/auto-deploy.sh
-      - npm test
+  wf:
+    image: crhym3/drone-plugin-wf
+    auth_key: >
+      $$SERVICE_ACCOUNT
+    github_token: $$GITHUB_TOKEN
+    wpt_api_key: $$WPT_API_KEY
+    rig_url: $$RIG_URL
+    rig_secret: $$RIG_SECRET
+    project: web-central
+    server_suffix: -dot-weasel-dot-web-central.appspot.com
+    bucket_suffix: -webcentral-appspot-weasel
+    source: build
+    gzip: [js, css, html, svg]
+    cache_control: public,max-age=300
