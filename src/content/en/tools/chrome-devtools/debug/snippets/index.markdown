@@ -95,14 +95,6 @@ You can also evaluate a portion of a snippet in the DevTools Console.
 
 {% animation /web/tools/chrome-devtools/debug/snippets/animations/evaluate-in-console.mp4 %}
 
-## Map Snippets to external files via Workspaces
-
-By default, Snippets are saved to DevTools' local storage, which is not
-easy to access via external editors. If you wish to edit your Snippets
-with external editors, or to use revision control systems like Git
-to track the history of your Snippets, you can map your Snippets to
-external files using [Workspaces](/web/tools/setup/setup-workflow).
-
 ## View local modifications
 
 DevTools maintains a revision history of all changes made to local 
