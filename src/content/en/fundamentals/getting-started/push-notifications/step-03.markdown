@@ -56,7 +56,7 @@ _main.js_ with the following code:
 {% highlight javascript %}
 if ('serviceWorker' in navigator) {
  console.log('Service Worker is supported');
- navigator.serviceWorker.register('/sw.js').then(function(reg) {
+ navigator.serviceWorker.register('sw.js').then(function(reg) {
    console.log(':^)', reg);
    // TODO
  }).catch(function(err) {
