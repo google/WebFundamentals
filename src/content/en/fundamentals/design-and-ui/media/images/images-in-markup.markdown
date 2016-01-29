@@ -46,7 +46,7 @@ comments:
 </style>
 
 <p class="intro">
-  The <code>img</code> element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image  formats.  Including images that work across devices is no different than for desktop, and only requires a few minor tweaks to create a good experience.
+  The <code>img</code> element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image  formats.  Including images that work across devices is no different than for desktop, and only requires a few minor tweaks to create a good experience."
 </p>
 
 {% include shared/toc.liquid %}
@@ -67,7 +67,7 @@ example:
 
 {% highlight css %}
 img, embed, object, video {
-max-width: 100%;
+  max-width: 100%;
 }
 {% endhighlight %}
 
