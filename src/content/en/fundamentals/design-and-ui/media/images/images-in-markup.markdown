@@ -57,7 +57,7 @@ comments:
 ## Use relative sizes for images
 
 Remember to use relative units when specifying widths for images to prevent them
-from accidentally overflowing the viewport.  For example, `width: 50%;`, will
+from accidentally overflowing the viewport.  For example, `width: 50%;` will
 cause the image width to be 50% of the containing element (not the viewport or
 actual pixel size).
 
@@ -114,7 +114,7 @@ the attribute.
 ## Art direction in responsive images with `picture`
 
 Changing images based on device characteristics, also known as art
-direction can be accomplished using the picture element.  The
+direction, can be accomplished using the <code>picture</code> element.  The
 <code>picture</code> element defines a declarative solution for
 providing multiple versions of an image based on different
 characteristics, like device size, device resolution, orientation,
@@ -166,7 +166,7 @@ the effective pixel density and choose the best image to download.
 {% include_code src=_code/sizes.html snippet=picture lang=html %}
 
 The above example renders an image that is half of the viewport width
-(`sizes="50vw"`), and depending on the width of the browser and it’s device
+(`sizes="50vw"`), and depending on the width of the browser and its device
 pixel ratio, allowing the browser to choose the correct image regardless of
 how large the browser window is.  For example, the table below shows which
 image the browser would choose:
@@ -249,7 +249,7 @@ details, and [study participants](/web/fundamentals/principles/research-study.ht
 </figure>
 
 A good example of tappable, expandable images is provided by the J. Crew site.
-An disappearing overlay indicates that an image is tappable, providing a zoomed
+A disappearing overlay indicates that an image is tappable, providing a zoomed
 in image with fine detail visible.
 
 
@@ -438,13 +438,13 @@ width="396.74px" height="560px" viewBox="281.63 0 396.74 560" enable-background=
 
 #### Data URI
 
-Data URIs provide a way to include a file such as an image inline by setting the src of an &lt;img&gt; element as a Base64 encoded string using the following format:
+Data URIs provide a way to include a file, such as an image, inline by setting the src of an <code>img</code> element as a Base64 encoded string using the following format:
 
 {% highlight html %}
 <img src="data:image/svg+xml;base64,[data]">
 {% endhighlight %}
 
-The code for the HTML5 logo above looks like this:
+The start of the code for the HTML5 logo above looks like this:
 
 {% highlight html %}
 <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
