@@ -183,7 +183,7 @@ see the [`console.dir()`](/web/tools/chrome-devtools/debug/console/console-refer
 as seen in the Elements tab.
 This method is equivalent to the [console.dirxml()](https://developer.mozilla.org/en-US/docs/Web/API/Console) method.
 
-## inspect(object/function)
+## inspect(object/function) {#inspect}
 
 `inspect(object/function)` opens and selects the specified element
 or object in the appropriate panel: either the Elements panel for DOM elements or the Profiles panel for JavaScript heap objects.
