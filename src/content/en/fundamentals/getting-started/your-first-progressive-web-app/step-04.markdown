@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
 title: "Use a service worker to pre-cache the App Shell"
-description: "TODO"
+description: "Use a service worker to pre-cache the App Shell of a Progressive Web App."
 published_on: 2016-02-04
 updated_on: 2016-02-04
-translation_priority: 0
+translation_priority: 1
 order: 4
 authors:
   - petelepage
@@ -38,7 +38,7 @@ the offline code isn't called, and the user gets a basic experience. Using
 feature detection to provide progressive enhancement has little overhead and it 
 won't break in older browsers that don't support that feature.
 
-{% include shared/note.liquid list=page.notes.sw-https %}
+{% include shared/remember.liquid list=page.notes.sw-https %}
 
 ## Register the service worker if it's available
 
@@ -189,7 +189,7 @@ the `fetch` event, and checks to see if it's available in the cache. It then
 either responds with the cached version, or uses `fetch` to get a copy from the 
 network. The `response` is passed back to the web page with `e.respondWith`.
 
-{% include shared/note.liquid list=page.notes.bump-name %}
+{% include shared/remember.liquid list=page.notes.bump-name %}
 
 ## Beware of the edge cases
 

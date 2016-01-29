@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
 title: "Architect the App Shell"
-description: "TODO"
+description: "What is an App Shell and how do you architect a web app to use the App Shell model?"
 published_on: 2016-02-04
 updated_on: 2016-02-04
-translation_priority: 0
+translation_priority: 1
 order: 2
 authors:
   - petelepage
@@ -54,11 +54,22 @@ Ask yourself:
 We're going to create a Weather app as our first Progressive Web App, the key 
 components will consist of:
 
-* Header with a title, and an add and refresh button
-* Container for forecast cards
-* A forecast card template
-* A dialog for adding new cities
-* A loading indicator 
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <ul>
+      <li>Header with a title, and an add and refresh button</li>
+      <li>Container for forecast cards</li>
+      <li>A forecast card template</li>
+      <li>A dialog for adding new cities</li>
+      <li>A loading indicator</li> 
+    </ul>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <img src="images/weather-ss.png">
+  </div>
+</div>
+
+
 
 When designing a more complex app, additional content that isn't needed for the 
 initial load can be requested later and then cached for future use. For example, 

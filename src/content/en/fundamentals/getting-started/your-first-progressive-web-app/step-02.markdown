@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
 title: "Implement the App Shell"
-description: "TODO"
+description: "How do I use an an App Shell within a Progressive Web App?"
 published_on: 2016-02-04
 updated_on: 2016-02-04
-translation_priority: 0
+translation_priority: 1
 order: 2
 authors:
   - petelepage
@@ -93,11 +93,15 @@ It's now time to add the core styles. As part of our build and deployment
 process, we'll want to inline these core styles into the document body, but for 
 now, let's put them into a separate CSS file.
 
-In the `index.html` file, replace `<!-- Insert link to styles here -->` with:  
-`<link rel="stylesheet" type="text/css" href="styles/inline.css">`
+In the `index.html` file, replace `<!-- Insert link to styles here -->` with: 
+{% highlight html %} 
+<link rel="stylesheet" type="text/css" href="styles/inline.css">
+{% endhighlight %}
 
-To save time, we've already created the stylesheet for you to use. Take a few 
-minutes to review it and customize it to make it more your own.
+To save time, we've already created the 
+[stylesheet](https://weather-pwa-sample.firebaseapp.com/styles/inline.css) for 
+you to use. Take a few minutes to review it and customize it to make it more 
+your own.
 
 {% include shared/note.liquid list=page.notes.image-sprite %}
 
@@ -105,10 +109,10 @@ minutes to review it and customize it to make it more your own.
 
 Now is a great time to test things out, see how they look and make any 
 adjustments you want. Be sure to test the rendering of your forecast card by 
-removing the `hidden` attribute from the main container, and adding some fake data 
+removing the `hidden` attribute from the `main` container, and adding some fake data 
 to the card. 
 
-{% include shared/note.liquid list=page.notes.give-you %}
+{% include shared/remember.liquid list=page.notes.give-you %}
 
 This app is reasonably responsive right now, but it's not perfect. Try adding 
 additional styles that will improve the responsiveness and make it really shine 

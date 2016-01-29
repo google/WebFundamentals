@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
 title: "Start with a fast first load"
-description: "TODO"
+description: "Fast first loads with Progressive Web Apps and the App Shell model."
 published_on: 2016-02-04
 updated_on: 2016-02-04
-translation_priority: 0
+translation_priority: 1
 order: 3
 authors:
   - petelepage

@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
 title: "Use a service worker to cache app data"
-description: "TODO"
+description: "Use a Service Worker to cache application data in a Progressive Web App"
 published_on: 2016-02-04
 updated_on: 2016-02-04
-translation_priority: 0
+translation_priority: 1
 order: 5
 authors:
   - petelepage
@@ -51,7 +51,9 @@ Keep in mind, if your data format changes in the future, you'll need a way to
 handle that and ensure the App Shell and content stay in sync.
 
 Add the following line to the top of your `service-worker.js` file:  
-`var dataCacheName = 'weatherData-v1';`
+{% highlight javascript %}
+var dataCacheName = 'weatherData-v1';
+{% endhighlight %}
 
 Next, we need to modify the `fetch` event handler to handle requests to the data 
 API separately from other requests.

@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
 title: "Support native integration"
-description: "TODO"
+description: "Use Add to Home Screen and integrate your Progressive Web App with the native platform."
 published_on: 2016-02-04
 updated_on: 2016-02-04
-translation_priority: 0
+translation_priority: 1
 order: 6
 authors:
   - petelepage

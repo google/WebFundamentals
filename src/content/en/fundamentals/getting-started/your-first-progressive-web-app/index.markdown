@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
 title: "Your first Progressive Web App"
-description: "TODO"
+description: "Progressive Web Apps are experiences that combine the best of the web and the best of apps. In this step-by-step guide, you'll build your own Progressive Web App and learn the the fundamentals needed for building Progressive Web Apps, including the App Shell model, how to use Service Workers to cache the App Shell and your key application data and more."
 published_on: 2016-02-04
 updated_on: 2016-02-04
-translation_priority: 0
+translation_priority: 1
 order: 1
 authors:
   - petelepage
@@ -22,6 +22,8 @@ and loads as top-level, full screen experience.
 </p>
 
 {% include shared/toc.liquid %}
+
+## What is a Progressive Web App?
 
 Progressive Web Apps are:
 
@@ -47,7 +49,6 @@ Progressive Web Apps are:
 This getting started guide will walk you through creating your own Progressive 
 Web App, including the design considerations, as well as implementation details 
 to ensure that your app meets the key principles of a Progressive Web App.
-
 
 {% include shared/note.liquid list=page.notes.devsummit-video %}
 
@@ -84,19 +85,29 @@ to ensure that your app meets the key principles of a Progressive Web App.
   </div>
 </div>
 
-
-
 ## What will you learn
 
 * How to design and construct an app using the "App Shell" method
 * How to make your app work offline
 * How to store data for use offline later
 
+## Topics covered
+
+<ol>
+{% for pageInSection in page.context.pages %}
+  <li>
+    <a href="{{pageInSection.relative_url }}">
+      {{pageInSection.title}}
+    </a>
+  </li>
+{% endfor %}
+</ol>
+
 ## What you'll need
 
 * Chrome 47 or above
 * A knowledge of HTML, CSS and JavaScript
 
-This getting started guide is focuses on Progressive Web Apps, some areas are 
-glossed over or code blocked (for example styles or non-relevant javascript) are 
+This getting started guide is focuses on Progressive Web Apps, some concepts are 
+glossed over or code blocks (for example styles or non-relevant javascript) are 
 provided for you to simply copy and paste.
