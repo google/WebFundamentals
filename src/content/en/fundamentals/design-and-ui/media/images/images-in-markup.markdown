@@ -151,7 +151,6 @@ For screen widths less than 450px and backwards compatibility where the
 `picture` element isn’t supported, the browser will render the `img` element
 instead, and should always be included.
 
-
 ### Relative sized images
 
 When the final size of the image isn’t known, it can be difficult to specify
@@ -270,7 +269,6 @@ See example
 {% endlink_sample %}
 
 {% include shared/remember.liquid title="Important" list=page.notes.compressive %}
-
 
 ### JavaScript image replacement
 
