@@ -56,8 +56,7 @@ for (let p of params) {
 params.set('version', 2);
 {% endhighlight %}
 
-Note: If there are several values, `delete` removes all of the parameters with
-the given name.
+Note: If there are several values, `set` removes all other parameters with the same name. 
 
 **append** another value for an existing parameter:
 
@@ -66,7 +65,7 @@ params.append('person', 'Tim');
 params.getAll('person') === ['Eric', 'Tim']
 {% endhighlight %}
 
-**remove** a parameter(s):
+**delete** a parameter(s):
 
 {% highlight javascript %}
 params.delete('person');
