@@ -468,7 +468,7 @@ Inline code for images can be verbose — especially Data URIs – so why would 
 
 On the downside:
 
-* On mobile, Data URIs can be [signficantly slower](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) to display on mobile than images rendered from &lt;img&gt; elements.
+* On mobile, Data URIs can be [signficantly slower](https://www.mobify.com/blog/data-uris-are-slow-on-mobile/) to display on mobile than images from an external <code>src</code>.
 * Data URIs can considerably increase the size of an HTML request.
 * They add complexity to your markup and your workflow.
 * The Data URI format is considerably bigger than binary (up to 30%) and therefore doesn't reduce total download size.
