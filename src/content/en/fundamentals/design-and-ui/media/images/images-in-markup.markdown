@@ -151,6 +151,7 @@ For screen widths less than 450px and backwards compatibility where the
 `picture` element isn’t supported, the browser will render the `img` element
 instead, and should always be included.
 
+
 ### Relative sized images
 
 When the final size of the image isn’t known, it can be difficult to specify
@@ -270,6 +271,7 @@ See example
 
 {% include shared/remember.liquid title="Important" list=page.notes.compressive %}
 
+
 ### JavaScript image replacement
 
 JavaScript image replacement checks the capabilities of the device and "does the
@@ -284,6 +286,7 @@ delay image loading until at least the look-ahead parser has finished. This
 means that images won't even start downloading until after the `pageload` event
 fires. In addition, the browser will most likely download both the 1x and 2x
 images, resulting in increased page weight.
+
 
 ### Inlining images: raster and vector
 
