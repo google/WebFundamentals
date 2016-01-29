@@ -3,10 +3,11 @@ layout: shared/narrow
 title: "Keyboard & UI Shortcuts Reference"
 description: "Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. "
 published_on: 2015-04-30
-updated_on: 2015-04-30
+updated_on: 2016-01-28
 order: 5
 authors:
   - megginkearney
+  - kaycebasques
 translation_priority: 0
 key-takeaways:
   shortcuts:
@@ -15,11 +16,15 @@ notes:
   tbd:
     - "TBD"
 ---
-<p class="intro">
-  Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow.
-</p>
+<p class="intro">Chrome DevTools has several built-in shortcut keys that
+can save you time in your daily workflows.</p>
 
-This guide provides a quick reference to each shortcut availabe in Chrome DevTools. While some shortcuts are available globally, others are specific to a single panel, and are broken up based on where it can be used.
+This guide provides a quick reference to each shortcut available in Chrome
+DevTools. While some shortcuts are available globally, others are specific
+to a single panel, and are broken up based on where it can be used.
+
+You can also find shortcuts in tooltips. Hover over an element to display its
+tooltip. If the element has a shortcut, the tooltip will include it.
 
 {% include shared/toc.liquid %}
 
