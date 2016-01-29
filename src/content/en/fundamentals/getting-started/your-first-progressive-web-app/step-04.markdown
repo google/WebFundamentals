@@ -229,7 +229,8 @@ deploying sites that are extremely difficult to update!
 
 ### How do I avoid these edge cases?
 
-So how do we avoid these edge cases? Use a library like sw-precache, which 
+So how do we avoid these edge cases? Use a library like 
+[sw-precache](https://github.com/GoogleChrome/sw-precache), which 
 provides fine control over what gets expired, ensures requests go directly to 
 the network and handles all of the hard work for you. 
 
