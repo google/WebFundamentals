@@ -140,7 +140,9 @@ function sessionListener(e) {
 }
 {% endhighlight %}
 
-If Chrome on Android allows casting media from your website but you want to disable this feature, use the [disableRemotePlayback](https://w3c.github.io/remote-playback/#idl-def-htmlmediaelement-disableremoteplayback) attribute, available in Chrome 49 and above:
+<a id="disable-remote-playback">
+
+If Chrome on Android allows casting media from your website but you want to disable this feature so the default casting UI doesn't interfere with your own, use the [disableRemotePlayback](https://w3c.github.io/remote-playback/#idl-def-htmlmediaelement-disableremoteplayback) attribute, available in Chrome 49 and above:
 
 {% highlight html %}
 <video disableRemotePlayback src="...">
