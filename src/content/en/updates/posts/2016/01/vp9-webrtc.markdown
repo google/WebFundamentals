@@ -31,14 +31,56 @@ img.screenshot {
 
 <p class="intro">Two years ago Chrome enabled support for the [VP9](http://webmproject.org) codec. From Chrome 48 on desktop and Android, VP9 will be an optional video codec for video calls using [WebRTC](https://webrtc.org).</p>
 
+While VP9 uses the same basic blueprint as previous codecs, the [WebM team](http://thewebmproject.org) has packed improvements into VP9 to get more quality out of each byte of video. For instance, the encoder prioritizes the sharpest image features, and the codec now uses asymmetric transforms to help keep even the most challenging scenes looking crisp and block-free.
+
 With VP9, internet connections that are currently able to serve 720p without
 packet loss or delay will be able to support a 1080p video call at the same
 bandwidth. VP9 can also reduce data usage for users with poor connections or
 expensive data plans, requiring only 40% of the bitrate of VP8.
 
-You can try out VP9 with the canonical video chat application [appr.tc](https://appr.tc/), which uses VP9 by default, or [compare VP8 video side by side with VP9](), screenshot below:
+You can compare VP8 video side by side with VP9 [here](), screenshot below:
 
 <img alt="Screenshot of video showing VP8 and VP9 WebRTC calls side by side" src="/web/updates/images/2016/01/vp9-webrtc/vp8-v-vp9.jpg" />
+
+The codec for a WebRTC call, along with other media settings such as bitrate, is negotiated between caller and callee by exchanging Session Description Protocol (SDP) metadata messages that describe the media capabilities of the client.
+
+This handshaking process — exchanging media capabilities — is known as offer/answer.  For example, a caller might  send an offer (an SDP message) stating a preference for VP9, with VP8 as a fallback. If the answer confirms that the callee can handle VP9, the video call can proceed using VP9. If the callee responds with an answer that it can only use VP8, the call will proceed with VP8.
+
+To see this in action, take a look at the WebRTC project's canonical video chat application[ appr.tc](https://appr.tc/). In [appcontroller.js](https://github.com/webrtc/apprtc/blob/5eb702d341796840edd0e57f3e7eebb6ebcba8d4/src/web_app/js/appcontroller.js#L536), VP9 is set as the preferred codec unless a _vsc_ or _vrc_ parameter is specified in the URL:
+
+{% highlight javascript %}
+AppController.prototype.loadUrlParams_ = function() {
+  // ...
+  var DEFAULT_VIDEO_CODEC = 'VP9';
+  // …
+  this.loadingParams_.videoSendCodec = urlParams['vsc'];
+  // ...
+  this.loadingParams_.videoRecvCodec = urlParams['vrc'] || DEFAULT_VIDEO_CODEC;
+}
+{% endhighlight %}
+
+In [sdputils.js](https://github.com/webrtc/apprtc/blob/9eed9e0f2c98bc84ea5bb75ba15c8f304f8485e4/src/web_app/js/sdputils.js#L219) the custom codec value (if specified) is then used for the SDP metadata:
+
+{% highlight javascript %}
+function maybePreferVideoSendCodec(sdp, params) {
+  return maybePreferCodec(sdp, 'video', 'send', params.videoSendCodec);
+}
+
+function maybePreferVideoReceiveCodec(sdp, params) {
+  return maybePreferCodec(sdp, 'video', 'receive', params.videoRecvCodec);
+}
+{% endhighlight %}
+
+The [maybePreferCodec()](https://github.com/webrtc/apprtc/blob/9eed9e0f2c98bc84ea5bb75ba15c8f304f8485e4/src/web_app/js/sdputils.js#L226) function used here sets values for the requested codec in the text of the SDP metadata. SDP is verbose and not designed to be human readable, but you can view the SDP used by [appr.tc](https://appr.tc/) from the DevTools console once a call has been made. The important part with regard to codecs is the _m line_:
+
+{% highlight javascript %}
+{
+    "sdp": "v=0\r\no=- 9188830394109743399 2 IN IP4 127.0.0.1\r\ns … m=video ...",
+    "type": "offer"
+}
+{% endhighlight %}
+
+Using [appr.tc](https://appr.tc/) with its default settings in a recent version of Chrome, you will see that VP9 is the first codec listed in the SDP _m line_ — followed by VP8, which Chrome can also use. If you set VP8 as the preferred codec (via URL parameters in [appr.tc](https://appr.tc), for example) VP8 will be listed first instead.
 
 ### Find out more
 
