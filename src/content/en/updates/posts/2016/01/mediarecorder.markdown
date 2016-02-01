@@ -149,7 +149,6 @@ We'd also like to know what usage scenarios are most important to you, and what 
 ## Demos
 * [webrtc.github.io/samples/src/content/getusermedia/record](https://webrtc.github.io/samples/src/content/getusermedia/record/)
 * [simpl.info/mr](https://simpl.info/mediarecorder) (same code, easier URL for mobile!)
-* [Screen recording Chrome App](https://github.com/niklasenbom/RecordingApp)
 * [Record a video and upload it to YouTube](https://jeffy.info/google-youtube-upload/components/google-youtube-upload/demo/) with an experimental custom <google-youtube-upload>  element
 
 ## Polyfills
