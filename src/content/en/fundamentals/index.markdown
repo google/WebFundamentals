@@ -22,9 +22,9 @@ translation_priority: 0
 
 <div class="page-content mdl-grid wf-fundamentals-cta">
 
-  {% include shared/base_card.liquid title="Progressive Web Apps" text="What is a <b>Progressive Web App</b> and what do you need to know to get started building one?" linkHref="/web/progressive-web-apps" linkText="Learn more" imgUrl="/web/fundamentals/imgs/vm-pwa.png" %}
+  {% include shared/base_card.liquid text="What is a <b>Progressive Web App</b> and what do you need to know to get started building one? In this step-by-step guide, you'll build your own Progressive Web App and learn the the fundamentals needed for building Progressive Web Apps." linkHref="/web/fundamentals/getting-started/your-first-progressive-web-app/" linkText="Get Started" imgUrl="/web/fundamentals/imgs/vm-pwa.png" %}
 
-  {% include shared/base_card.liquid title="Get started" text="Not sure where to start? Our getting started guides will walk you through some key things you need to know and help you figure out where to go next." linkHref="/web/fundamentals/getting-started/" linkText="Get Started" imgUrl="/web/fundamentals/imgs/wsk-on-pixel-n5.jpg" %}
+  {% include shared/base_card.liquid text="Learn how to add <b>Push Notifications</b> to your web applications to re-engage users with breaking news and information about new content." linkHref="/web/fundamentals/getting-started/push-notifications/" linkText="Learn More" imgUrl="/web/fundamentals/imgs/notif-example.png" %}
 
 </div>
 
