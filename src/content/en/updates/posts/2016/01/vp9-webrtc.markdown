@@ -24,7 +24,7 @@ img {
 </style>
 
 
-<p class="intro">Two years ago Chrome enabled support for the [VP9](http://webmproject.org) codec. From Chrome 48 on desktop and Android, VP9 will be an optional video codec for video calls using [WebRTC](https://webrtc.org).</p>
+<p class="intro">Two years ago Chrome enabled support for the <a href="http://webmproject.org" title="The WebM Project">VP9</a> codec. From Chrome 48 on desktop and Android, VP9 will be an optional video codec for video calls using <a href="https://webrtc.org" title="webrtc.org: home of the WebRTC project">WebRTC</a>.</p>
 
 While VP9 uses the same basic blueprint as previous codecs, the [WebM team](http://thewebmproject.org) has packed improvements into VP9 to get more quality out of each byte of video. For instance, the encoder prioritizes the sharpest image features, and the codec now uses asymmetric transforms to help keep even the most challenging scenes looking crisp and block-free.
 
