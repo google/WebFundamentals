@@ -5,6 +5,7 @@ description: "Service workers are background scripts that open the door to rich 
 published_on: 2015-09-30
 updated_on: 2015-10-06
 translation_priority: 1
+order: 3
 ---
 In this codelab, you’ll learn how to integrate a service worker into an existing application to make it work offline.
 
