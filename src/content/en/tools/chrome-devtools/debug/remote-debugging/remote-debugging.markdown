@@ -109,11 +109,12 @@ For example, you can use DevTools to inspect web page elements on your device:
 
 To debug Safari for iOS, follow these steps:
 
-1. Open Safari on your iOS device.
-2. Connect it to your computer via USB.
-3. Open Safari on your computer.
-4. In Safari's menu, go to `Develop` and, look for your device's name.
-5. Select the tab you want to debug.
+1. In your iOS device go to Settings > Safari > Advanced > Web Inspector to enable Web Inspector
+2. Open Safari on your iOS device.
+3. Connect it to your computer via USB.
+4. Open Safari on your computer.
+5. In Safari's menu, go to `Develop` and, look for your device's name.
+6. Select the tab you want to debug.
 
 ![Safari iOS Debugging Menu](imgs/ios-safari-debugging.png)
 
