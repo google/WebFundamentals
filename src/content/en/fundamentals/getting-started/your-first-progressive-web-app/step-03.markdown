@@ -13,8 +13,8 @@ notes:
 ---
 
 <p class="intro">
-Progressive Web Apps should start fast and be usable immediately. In it's 
-current state, our Weather App starts quickly, but it's not useable, there's no 
+Progressive Web Apps should start fast and be usable immediately. In its 
+current state, our Weather App starts quickly, but it's not useable. There's no 
 data. We could make an AJAX request to get that data, but that results in an 
 extra request and makes the initial load longer. Instead, provide real data in 
 the first load.
@@ -26,9 +26,9 @@ the first load.
 
 For this code lab, we'll statically inject a weather forecast, but in a 
 production app, the latest weather forecast data would be injected by the server 
-at run time based on the IP address geo-location of the user. 
+when served based on the IP address geo-location of the user. 
 
-Add the following inside the immediately invoked function expression (`IIFE`):
+Add the following inside the immediately invoked function expression:
 
 {% highlight javascript %}  
 var initialWeatherForecast = {  
@@ -89,7 +89,7 @@ app.saveSelectedCities = function() {
 };
 {% endhighlight %}
 
-Next, let's add the start up code to check if the user has any subscribed cities 
+Next, let's add the startup code to check if the user has any subscribed cities 
 and render those, or use the injected data. Add the following code to your 
 `app.js`:  
 
@@ -127,9 +127,9 @@ adding: `app.saveSelectedCities();` to the `butAddCity` event handler.
 ## Test it out
 
 * When first run, your app should immediately show the user the forecast from 
-  `initialWeatherForecast`
-* Add a new city and verify the two cards are shown
+  `initialWeatherForecast`.
+* Add a new city and verify that two cards are shown.
 * Refresh the browser and verify that the app loads both forecasts and shows the 
   latest information.
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-03/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/step-04/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>

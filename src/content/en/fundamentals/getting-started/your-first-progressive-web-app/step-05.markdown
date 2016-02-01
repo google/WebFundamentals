@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Use a service worker to cache app data"
+title: "Use service workers to cache application data"
 description: "Use a Service Worker to cache application data in a Progressive Web App"
 published_on: 2016-02-04
 updated_on: 2016-02-04
@@ -11,7 +11,7 @@ authors:
 ---
 
 <p class="intro">
-Choosing the right caching strategy for your data is vital and varies depending 
+Choosing the right caching strategy for your data is vital and depends 
 on the type of data your app presents. For example, time sensitive data like 
 weather or stock quotes should be as fresh as possible, while avatar images or 
 article content can be updated less frequently. 
@@ -19,7 +19,7 @@ article content can be updated less frequently.
 
 {% include shared/toc.liquid %}
 
-The **cache first then network** strategy is ideal for our use case. It gets data 
+The **cache first then network** strategy is ideal for our app. It gets data 
 on screen as quickly as possible, then updates that once the network has 
 returned the latest data. In comparison to **network first then cache**, the user 
 does not have to wait until the fetch times out to get the cached data. 
@@ -38,11 +38,11 @@ network.
 ## Intercept the network request and cache the response
 
 We need to modify the service worker to intercept requests to the weather API 
-and store the response in the cache, so we can easily access it later. In the 
-**cache then network** strategy, we expect the network response to be the 'source 
-of truth', always providing us with the most recent information. If it can't, 
-it's OK to fail because we've already retrieved the latest cached data in our 
-app.
+and store their responses in the cache, so we can easily access them later. In 
+the **cache then network** strategy, we expect the network response to be the 
+'source of truth', always providing us with the most recent information. If 
+it can't, it's OK to fail because we've already retrieved the latest cached 
+data in our app.
 
 In the service worker, let's add a `dataCacheName` so that we can separate our 
 applications data from the App Shell. When the App Shell is updated and older 
@@ -58,7 +58,7 @@ var dataCacheName = 'weatherData-v1';
 Next, we need to modify the `fetch` event handler to handle requests to the data 
 API separately from other requests.
 
-{% highlight javascript %}
+{% highlight javascript hl_lines="3 4 5 6" %}
 self.addEventListener('fetch', function(e) {  
   console.log('[ServiceWorker] Fetch', e.request.url);  
   var dataUrl = 'https://publicdata-weather.firebaseio.com/';  
@@ -75,10 +75,12 @@ self.addEventListener('fetch', function(e) {
 {% endhighlight %}
 
 The code intercepts the request and checks if the URL starts with the address of 
-the weather API, if it does we'll use `fetch` to make the request. Once the 
-response is returned, it opens the cache, clones the response, stores it in the 
-cache and finally returns the response to the original requestor. Replace `// Put 
-data handler code here` with the code below:
+the weather API. If it does we'll use `fetch` to make the request. Once the 
+response is returned, our code opens the cache, clones the response, stores 
+it in the cache and finally returns the response to the original requestor. 
+
+
+Next, replace `// Put data handler code here` with the code below:
 
 {% highlight javascript %}
 e.respondWith(  
@@ -93,7 +95,7 @@ e.respondWith(
 );
 {% endhighlight %}
 
-Our app won't work offline quite yet, we've implemented caching and retrieval 
+Our app won't work offline quite yet. We've implemented caching and retrieval 
 for the App Shell, but even though we're caching the data, we're still dependant 
 on the network.
 
@@ -106,22 +108,22 @@ excellent example of _progressive enhancement_ as the `caches` object may not be
 available in all browsers, and if it's not the network request should still 
 work.
 
-In order to do this, we need to:
+To do this, we need to:
 
-1. Check if the `caches` object is available in the global `window` object
-1. Request data from the cache
-    1. If the Server request is still outstanding update the app with the cached 
-       data
-1. Request data from the Server
-    1. Save the data for quick access later
-    1. Update the app with the fresh data from the server
+1. Check if the `caches` object is available in the global `window` object.
+1. Request data from the cache.
+    1. If the server request is still outstanding update the app with the cached 
+       data.
+1. Request data from the server.
+    1. Save the data for quick access later.
+    1. Update the app with the fresh data from the server.
 
 First, let's add the flag we'll use to prevent the cache from updating the app 
 in the rare case that the XHR responds before the cache. Add `hasRequestPending: 
 false` to the `app` object. 
 
 Next, we need to check if the `caches` object exists and request the latest data 
-from there. Add the following code to `app.getForecast`, before the XHR is made:
+from it. Add the following code to `app.getForecast`, before the XHR is made:
 
 {% highlight javascript %}
 if ('caches' in window) {  
@@ -161,8 +163,8 @@ from the network.
 * In the console, you should see two events each time you refresh, one 
   indicating data was retrieved from the cache, and one that it was retrieved 
   from the network.
-* The app should work completely offline now, try stopping your development 
+* The app should work completely offline now. Try stopping your development 
   server and disconnecting your network and running the app. The App Shell and 
   data should both be served from the cache.
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-05/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/step-07/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>

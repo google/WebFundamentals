@@ -11,7 +11,7 @@ authors:
 notes:
   learn-about-wsk: "Learn more about the <a href='https://developers.google.com/web/tools/starter-kit/'>Web Starter Kit</a>"
   image-sprite: "Specifying each icon individually might seem less efficient compared to using an image sprite, but we'll cache those later as part of the app shell, ensuring that they're always available, without the need to make a network request."
-  give-you: "We've given you the markup and styles to save you some time and make sure you're starting on a solid foundation. In the next section, you'll have an opportunity to dive in and write your own code."
+  give-you: "We've given you the markup and styles to save you some time and make sure you're starting on a solid foundation. In the next section, you'll have an opportunity to write your own code."
 ---
 
 <p class="intro">
@@ -105,7 +105,7 @@ your own.
 
 {% include shared/note.liquid list=page.notes.image-sprite %}
 
-## Test things out & make any adjustments
+## Test things out and make adjustments
 
 Now is a great time to test things out, see how they look and make any 
 adjustments you want. Be sure to test the rendering of your forecast card by 
@@ -119,7 +119,7 @@ additional styles that will improve the responsiveness and make it really shine
 across different devices. Also, consider what you can do to make it more your 
 own.
 
-## Add the key JavaScript boot strap code
+## Add the key JavaScript bootstrap code
 
 Now that we have most of the UI ready, it's time to start hooking up the code to 
 make everything work. Like the rest of the app shell, be conscious about what 
@@ -135,23 +135,23 @@ In our boot strap code, we've included:
   Weather API (`app.getForecast`).
 * A method to iterate the current cards and call `app.getForecast` to get the 
   latest forecast data (`app.updateForecasts`).
-* Some fake data (`fakeForecast`) you can use quickly test how things render.
+* Some fake data (`fakeForecast`) you can use to quickly test how things render.
 
 Add the JavaScript code
 
-1. Copy `step3-app.js` from the `resources` directory to the `scripts` folder and 
-   rename it to `app.js`
+1. Copy `step3-app.js` from the `resources` directory to your `scripts` folder
+   and rename it `app.js`
 1. In the `index.html` file, add a link to the newly create `app.js`.<br/>
    `<script src="/scripts/app.js"></script>`
 
 ## Test it out
 
 Now that you've added the core HTML, styles and JavaScript it's time to test the 
-app. While it may not do much yet, make sure that there are no errors in the 
+app. While it may not do much yet, make sure it doesn't write errors to the
 console.
 
 To see how the fake weather data is rendered, add the line below to your `app.js` 
 file:  
 `app.updateForecastCard(fakeForecast);`
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-02/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/step-03/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>

@@ -11,7 +11,7 @@ authors:
 ---
 
 <p class="intro">
-The app's shell, is the minimal HTML, CSS and JavaScript that is required to 
+The app's shell, is the minimal HTML, CSS, and JavaScript that is required to 
 power the user interface of a progressive web app and is one of the the 
 components that ensures reliably good performance. It's first load should be 
 extremely quick, then immediately be cached. This means that the shell does not 
@@ -22,7 +22,7 @@ need to be loaded every time, but instead just gets the necessary content.
 
 App shell architecture separates the core application infrastructure and UI from 
 the data. All of the UI and infrastructure is cached locally using a service 
-worker so that subsequent loads, the Progressive Web App only needs to retrieve 
+worker so that on subsequent loads, the Progressive Web App only needs to retrieve 
 the necessary data, instead of having to load the everything.
 
 <figure>
@@ -33,16 +33,15 @@ Put another way, the App shell is similar to the bundle of code that you'd
 publish to an app store when building a native app. It is the core components 
 necessary to get your app off the ground, but likely does not contain the data.
 
-## Why use the App Shell architecture
+## Why use the App Shell architecture?
 
 Using the App Shell architecture allows you to focus on speed, giving your 
-Progressive Web App the similar properties to native apps: instant loading and 
-regular updates. All without the need of an app store.
+Progressive Web App similar properties to native apps: instant loading and 
+regular updates, all without the need of an app store.
 
 ## Design the App Shell 
 
-The first step is to take our previously created design and break it down into 
-the core components. 
+The first step is to break the design down into it's core components. 
 
 Ask yourself:
 
@@ -60,7 +59,7 @@ components will consist of:
       <li>Header with a title, and an add and refresh button</li>
       <li>Container for forecast cards</li>
       <li>A forecast card template</li>
-      <li>A dialog for adding new cities</li>
+      <li>A dialog box for adding new cities</li>
       <li>A loading indicator</li> 
     </ul>
   </div>
@@ -69,9 +68,7 @@ components will consist of:
   </div>
 </div>
 
-
-
-When designing a more complex app, additional content that isn't needed for the 
+When designing a more complex app, content that isn't needed for the 
 initial load can be requested later and then cached for future use. For example, 
 we could defer the loading of the New City Dialog until after we've rendered the 
 first run experience and have some idle cycles available.

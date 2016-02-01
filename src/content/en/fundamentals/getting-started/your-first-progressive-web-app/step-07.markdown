@@ -21,7 +21,7 @@ from a store, but with a lot less friction.
 
 ## Web App Install Banners and Add to Homescreen for Chrome on Android
 
-Web app install banners give you the ability to have your users quickly and 
+Web app install banners give you the ability to let your users quickly and 
 seamlessly add your web app to their home screen, making it easy to launch and 
 return to your app.  Adding app install banners is easy, and Chrome handles most 
 of the heavy lifting for you. We simply need to include a web app manifest file 
@@ -34,7 +34,7 @@ Chrome.
 
 ### Declare an App Manifest with a manifest.json file
 
-The manifest for Web applications is a simple JSON file that gives you, the 
+The web app manifest is a simple JSON file that gives you, the 
 developer, the ability to control how your app appears to the user in the areas 
 that they would expect to see apps (for example the mobile home screen), direct 
 what the user can launch and more importantly how they can launch it.
@@ -132,5 +132,5 @@ In your `index.html`, add the following to the `<head>`:
 launch screen appears properly and the right icons are used.
 * Check Safari and Internet Explorer to make sure the icons appear properly.
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-07/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
 

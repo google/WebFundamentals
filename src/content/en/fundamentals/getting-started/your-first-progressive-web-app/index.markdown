@@ -18,7 +18,7 @@ best of apps. They are useful to users from the very first visit in a browser
 tab, no install required. As the user progressively builds a relationship with 
 the App over time, it becomes more and more powerful. It loads quickly, even on 
 flaky networks, sends relevant push notifications, has an icon on the homescreen 
-and loads as top-level, full screen experience.
+and loads as a top-level, full screen experience.
 </p>
 
 {% include shared/toc.liquid %}
@@ -34,7 +34,7 @@ Progressive Web Apps are:
 * **Connectivity independent** - Enhanced with service workers to work offline 
   or on low quality networks.
 * **App-like** - Feel like an app to the user with app-style interactions and 
-  navigation because it's built on the app-shell model.
+  navigation because they're built on the app-shell model.
 * **Fresh** - Always up-to-date thanks to the service worker update process.
 * **Safe** - Served via HTTPS to prevent snooping and ensure content hasn't been 
   tampered with.
@@ -108,6 +108,6 @@ to ensure that your app meets the key principles of a Progressive Web App.
 * Chrome 47 or above
 * A knowledge of HTML, CSS and JavaScript
 
-This getting started guide is focuses on Progressive Web Apps, some concepts are 
-glossed over or code blocks (for example styles or non-relevant javascript) are 
-provided for you to simply copy and paste.
+This getting started guide is focused on Progressive Web Apps. Some concepts are 
+glossed over or code blocks (for example styles or non-relevant javascript) or
+are provided for you to simply copy and paste.

@@ -11,21 +11,21 @@ authors:
 
 <p class="intro">
 The final step is to deploy our weather app to a server that supports HTTPS. If 
-you don't already have one, the absolute easiest (and free) is to use the static 
-content hosting from Firebase. It's super easy to use, serves content over HTTPS 
-and is backed by a global CDN.
+you don't already have one, the absolute easiest (and free) approach is to use
+the static content hosting from Firebase. It's super easy to use, serves 
+content over HTTPS and is backed by a global CDN.
 </p>
 
 {% include shared/toc.liquid %}
 
-## Extra Credit: Minify and Inline CSS
+## Extra credit: minify and inline CSS
 
 There's one more thing that you should consider, minifying the key styles and 
-inlining them directly into `index.html`. [Page Speed Insights](https://developers.google.com/speed) 
-recommends serving the above the fold content in the first 15k bytes of the 
-request. 
+inlining them directly into `index.html`. 
+[Page Speed Insights](https://developers.google.com/speed) recommends serving 
+the above the fold content in the first 15k bytes of the request. 
 
-See how you can small you can get the initial request with everything inlined. 
+See how small you can get the initial request with everything inlined. 
 
 **Further Reading:** [PageSpeed Insight 
 Rules](https://developers.google.com/speed/docs/insights/rules)
@@ -37,10 +37,10 @@ tools first.
 
 1. Create a Firebase account at 
    [https://www.firebase.com/signup/](https://www.firebase.com/signup/)
-1. Install the Firebase tools via npm<br/>
+1. Install the Firebase tools via npm:<br/>
    `npm install -g firebase-tools`
 
-Once you're account has been created and you've signed in, you're ready to 
+Once your account has been created and you've signed in, you're ready to 
 deploy!
 
 1. Create a new app at 
@@ -53,8 +53,8 @@ deploy!
    `firebase init`
 1. Finally, deploy the app to Firebase:<br/>
    `firebase deploy`
-1. Celebrate, you're done! Your app will be deployed to the domain 
-   https://&lt;YOUR-FIREBASE-APP&gt;.firebaseapp.com
+1. Celebrate. You're done! Your app will be deployed to the domain:<br/> 
+   `https://YOUR-FIREBASE-APP.firebaseapp.com`
 
 **Further reading:** [Firebase Hosting 
 Guide](https://www.firebase.com/docs/hosting/guide/)
