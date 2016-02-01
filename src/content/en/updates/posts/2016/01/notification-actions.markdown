@@ -20,14 +20,14 @@ featured_image: /web/updates/images/2016/01/notification-actions/notification.pn
 </style>
 
 Early in 2015 we introduced Push Messaging and Notification in to Chrome for 
-Android and Desktop.  It was a great step forward on the web, users could start 
+Android and Desktop.  It was a great step forward on the web.  Users could start 
 to engage more deeply with experiences on the web even when the browser was 
 closed.
 
 Whilst it is great that you can send these messages, the only thing you could do 
-with them was either to click and open a page or dismiss it entirely.
+with one was either to click it and open a page or dismiss it entirely.
 
-If you look at the notifications provided natively to apps on Mobile platforms 
+If you look at the notifications provided natively to apps on mobile platforms 
 such as iOS and Android, they each let the developer define contextual actions 
 that the user can invoke and interact with.  In Chrome 48 we have now added a 
 similar ability to [Web 
@@ -56,7 +56,7 @@ self.registration.showNotification('New message from Alice', {
 });
 {% endhighlight %}
 
-This will create a simple notification with two plain buttons.  Note, it is not 
+This will create a simple notification with two buttons.  Note, it is not 
 possible to add icons to the action directly 
 ([yet](https://github.com/whatwg/notifications/issues/59)), but you can use 
 Emoji and the extended Unicode character set to add more context to your 
@@ -72,7 +72,7 @@ self.registration.showNotification("New message from Alice", {
 });
 {% endhighlight %}
 
-Now that you have created a notification and made it look 😻the user may 
+Now that you have created a notification and made it look 😻, the user may 
 interact with the notification at some time in the future.  Interactions with 
 the notification all currently (as of Chrome 48) come through the 
 `notificationclick` event registered in your service worker and they can either be 
@@ -108,14 +108,14 @@ they can perform general application interactions without creating a user
 interface.  For example, a user could "Like" or "Delete" a social media post 
 that would perform the action on the user's local data and then synchronize it 
 with the cloud without opening a UI (although it is good practice to message the 
-data change to any open windows so the UI could be updated), and then for an 
+data change to any open windows so the UI can be updated). For an 
 action that requires user interaction you would open a window for the user to 
 reply. 
 
 Because platforms will not support the same number of actions, or in some cases 
-not be able to support Notification Action buttons at all, you will need to 
-ensure that you always provide a sensible fallback to a task that is what you 
-would expect the user to do if they were to just click on the notification.
+not be able to support Notification Action buttons at all, you will need to ensure 
+that you always provide a sensible fallback to a task that is what you would expect
+the user to do if they were to just click the notification.
 
 If you want to see this in action today, check out [Peter Beverloo's 
 Notification Test 
