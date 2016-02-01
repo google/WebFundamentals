@@ -2,8 +2,8 @@
 layout: updates/post
 title: "VP9 is now available in WebRTC"
 description: "From Chrome 48 on desktop and Android, VP9 will be an optional video codec for video calls using WebRTC."
-published_on: 2016-01-30
-updated_on: 2016-01-30
+published_on: 2016-01-31
+updated_on: 2016-01-31
 authors:
   - samdutton
 tags:
@@ -18,13 +18,8 @@ featured_image: /web/updates/images/2016/01/vp9-webrtc/featured.jpg
 ---
 
 <style>
-img.screenshot {
-  max-width: 360px;
-}
-@media screen and (max-width: 500px) {
-  img.screenshot {
-    max-width: 100%;
-  }
+img {
+  max-width: 100%;
 }
 </style>
 
@@ -38,9 +33,9 @@ packet loss or delay will be able to support a 1080p video call at the same
 bandwidth. VP9 can also reduce data usage for users with poor connections or
 expensive data plans, requiring only 40% of the bitrate of VP8.
 
-You can see how VP8 calls compare with VP9 in the recordings [here](), screenshot below:
+You can see how VP8 calls compare with VP9 in the recordings [here](http://GoogleChrome.github.io/samples/webrtc-vp8-vp9/), screenshot below:
 
-<img alt="Screenshot of video showing VP8 and VP9 WebRTC calls side by side" src="/web/updates/images/2016/01/vp9-webrtc/vp8-v-vp9.jpg" />
+<a href="" title=""><img alt="Screenshot of video showing VP8 and VP9 WebRTC calls side by side" src="/web/updates/images/2016/01/vp9-webrtc/vp8-v-vp9.jpg" /></a>
 
 The codec for a WebRTC call, along with other media settings such as bitrate, is negotiated between caller and callee by exchanging Session Description Protocol (SDP) metadata messages that describe the media capabilities of the client.
 
