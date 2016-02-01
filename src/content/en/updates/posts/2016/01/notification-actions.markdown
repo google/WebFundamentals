@@ -1,16 +1,23 @@
 ---
 layout: updates/post
-title: "Notification Actions"
-description: "Give the user"
+title: "Notification Actions in Chrome 48"
+description: "Users can interact with your site without opening up the page by using Notification Action buttons"
 published_on: 2016-01-30
 updated_on: 2016-01-30
 authors:
   - paulkinlan
 tags:
-  - events
-  - performance
-featured_image: /web/updates/images/2016/01/notification-actions/actions.jpg
+  - notifications
+featured_image: /web/updates/images/2016/01/notification-actions/notification.png
 ---
+
+<style>
+@media screen and (max-width: 500px) {
+  img.screenshot {
+    max-width: 100%;
+  }
+}
+</style>
 
 Early in 2015 we introduced Push Messaging and Notification in to Chrome for 
 Android and Desktop.  It was a great step forward on the web, users could start 
@@ -27,7 +34,7 @@ similar ability to [Web
 Notifications](https://www.chromestatus.com/features/5906566364528640) across 
 Desktop and Chrome for Android.
 
-<img src="image00.png" width="388" height="692" />
+<img class="screenshot" src="/web/updates/images/2016/01/notification-actions/screenshot.png" />
 
 The addition to the API is pretty simple.  You just need to create an Array of 
 actions and add them into the `NotificationOptions` object when you call 
@@ -74,9 +81,9 @@ buttons.  Side note, in the future you will also be able to [respond to the
 ](https://www.chromestatus.com/features/5706570994286592)[notificationclose](https://www.chromestatus.com/features/5706570994286592)[ 
 event](https://www.chromestatus.com/features/5706570994286592).
 
-To understand which action the user took you need to inspect the action property 
+To understand which action the user took you need to inspect the `action` property 
 on the event and then you have the choice of either opening a new page for the 
-user to complete an action  
+user to complete an action or to perform the task in the background.
 
 {% highlight javascript %}
 self.addEventListener('notificationclick', function(event) {  
