@@ -38,7 +38,7 @@ packet loss or delay will be able to support a 1080p video call at the same
 bandwidth. VP9 can also reduce data usage for users with poor connections or
 expensive data plans, requiring only 40% of the bitrate of VP8.
 
-You can compare VP8 video side by side with VP9 [here](), screenshot below:
+You can see how VP8 calls compare with VP9 in the recordings [here](), screenshot below:
 
 <img alt="Screenshot of video showing VP8 and VP9 WebRTC calls side by side" src="/web/updates/images/2016/01/vp9-webrtc/vp8-v-vp9.jpg" />
 
