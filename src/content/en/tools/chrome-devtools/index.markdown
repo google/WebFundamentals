@@ -24,7 +24,11 @@ translation_priority: 1
         <ul>
           <li>Select <strong>More Tools &gt; Developer Tools</strong> from the Chrome Menu.</li>
           <li>Right-click on a page element and select Inspect</li>
-          <li>Use <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">more shortcuts</a>)</li>
+          <li>
+            Use <a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">shortcuts</a>
+            <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows)
+            or <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>I</kbd> (Mac)
+          </li>
         </ul>
       </div>
     </div>
@@ -92,7 +96,7 @@ translation_priority: 1
         <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/elements.png" alt="Elements Panel">
         <p>Use the Elements panel to iterate on the layout and design of your site by freely manipulating the DOM and CSS.</p>
         <ul>
-          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/basics">Inspect and Tweak Your Pages: the Basics</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/">Inspect and Tweak Your Pages</a></li>
           <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles">Edit Styles</a></li>
           <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom">Edit the DOM</a></li>
         </ul>
