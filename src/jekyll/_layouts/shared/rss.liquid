@@ -17,8 +17,8 @@
     <item>
       <title>{{ post.title | xml_escape }}</title>
       <pubDate>{% if post.updated_on %}{{ post.updated_on | date: "%a, %d %b %Y" }}{% else%}{{ post.published_on | date: "%a, %d %b %Y" }}{% endif %} 00:00:01 GMT</pubDate>
-      <link>{{ post.canonical_url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed</link>
-      <guid isPermaLink="true">{{ post.canonical_url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed</guid>
+      <link>{{ post.raw_canonical_url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed</link>
+      <guid isPermaLink="true">{{ post.raw_canonical_url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed</guid>
       <description>
         <![CDATA[
           <img src="https://ga-beacon.appspot.com/UA-52746336-1{{ post.relative_url }}?feed_type=rss&pixel">
