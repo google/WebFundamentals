@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "API Deprecations and Removals in Chrome 49 "
-description: ""
+description: "An round up of the deprecations and API removals in Chrome to help you plan."
 published_on: 2016-02-02
 updated_on: 2016-02-02
 authors:
@@ -40,7 +40,8 @@ features by applying the [removed
 filter](https://www.chromestatus.com/features#removed).  We will also try to 
 summarize some of the changes, reasoning, and migration paths in these posts.
 
-In Chrome 49 (Beta Feb 2nd, 2016) we have seen an number of changes to Chrome
+In Chrome 49 (Beta Feb 2nd, 2016. Estimated stable date: March 2016) we have seen an 
+number of changes to Chrome
 
 ### Use of "css" prefix in getComputedStyle(e).cssX is deprecated
 
