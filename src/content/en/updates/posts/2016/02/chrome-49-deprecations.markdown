@@ -183,9 +183,9 @@ document.body.dispatchEvent(touchEvent);
 
 ### Error and success handlers required in RTCPeerConnection methods
 
-**TL;DR:** The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/) RTCPeerConnection methods [createOffer()](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createOffer-Promise-RTCSessionDescription--RTCOfferOptions-options) and [createAnswer()](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createAnswer-Promise-RTCSessionDescription--RTCAnswerOptions-options) now require an error handler as well as a success handler. Previously it had been possible to call these methods with only a success handler. That usage is deprecated.
+**TL;DR:** The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/) RTCPeerConnection methods `[createOffer()](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createOffer-Promise-RTCSessionDescription--RTCOfferOptions-options)` and `[createAnswer()](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createAnswer-Promise-RTCSessionDescription--RTCAnswerOptions-options)` now require an error handler as well as a success handler. Previously it had been possible to call these methods with only a success handler. That usage is deprecated.
 
-In Chrome 49 we've also added a warning if you call [setLocalDescription()](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setLocalDescription-Promise-void--RTCSessionDescriptionInit-description) or [setRemoteDescription()](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setRemoteDescription-Promise-void--RTCSessionDescriptionInit-description) without supplying an error handler. We expect to make the error handler argument mandatory for these methods in Chrome 50.
+In Chrome 49 we've also added a warning if you call `[setLocalDescription()](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setLocalDescription-Promise-void--RTCSessionDescriptionInit-description)` or `[setRemoteDescription()](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-setRemoteDescription-Promise-void--RTCSessionDescriptionInit-description)` without supplying an error handler. We expect to make the error handler argument mandatory for these methods in Chrome 50.
 
 This is part of clearing the way for introducing promises on these methods, as required by the [WebRTC spec](https://w3c.github.io/webrtc-pc/).
 
