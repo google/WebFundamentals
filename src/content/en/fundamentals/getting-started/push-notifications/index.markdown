@@ -5,6 +5,7 @@ description: "In this codelab, you'll learn how to add Push Notifications to web
 published_on: 2015-09-28
 updated_on: 2015-09-28
 translation_priority: 1
+order: 2
 ---
 
 <img src="images/image00.png" width="373" height="93" alt="Screenshot of push notification" />

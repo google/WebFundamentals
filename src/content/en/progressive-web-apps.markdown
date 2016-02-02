@@ -43,6 +43,7 @@ title: "Progressive Web Apps"
     <div class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet">
       <h4>Guides and Code Labs</h4>
       <ul>
+        <li><a href="/web/fundamentals/getting-started/your-first-progressive-web-app/">Your first Progressive Web App</a></li>
         <li><a href="/web/fundamentals/getting-started/your-first-offline-web-app/">Your first offline web app</a></li>
         <li><a href="/web/fundamentals/getting-started/push-notifications/">Your first push notification web app</a></li>
       </ul>
@@ -122,16 +123,34 @@ title: "Progressive Web Apps"
   </div>
 </div>
 
-<div hidden class="wf-landing-section">
+<style>
+  .pwa-image {
+    max-width: 300px;
+  }
+</style>
+
+<div class="wf-landing-section wf-secondaryheading">
   <div class="page-content mdl-grid">
     <h2 class="mdl-cell mdl-cell--12-col">
       Progressive Web Apps in Action
     </h2>
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      app 1
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-typography--text-center">
+      <h3>Air Horner</h3>
+      <a href="https://airhorner.com/">
+        <img src="/web/imgs/pwa-airhorner.png" class="pwa-image">
+      </a>
     </div>
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      app 2
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-typography--text-center">
+      <h3>Voice Memos</h3>
+      <a href="https://voice-memos.appspot.com/">
+        <img src="/web/imgs/pwa-voice-memos.png" class="pwa-image">
+      </a>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-typography--text-center">
+      <h3>Weather</h3>
+      <a href="https://weather-pwa-sample.firebaseapp.com/final/">
+        <img src="/web/imgs/pwa-weather.png" class="pwa-image">
+      </a>
     </div>
   </div>
 </div>
