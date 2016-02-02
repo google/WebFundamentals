@@ -24,7 +24,11 @@ translation_priority: 1
         <ul>
           <li>Select <strong>More Tools &gt; Developer Tools</strong> from the Chrome Menu.</li>
           <li>Right-click on a page element and select Inspect</li>
-          <li>Use <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (<a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">more shortcuts</a>)</li>
+          <li>
+            Use <a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">shortcuts</a>
+            <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows)
+            or <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>I</kbd> (Mac)
+          </li>
         </ul>
       </div>
     </div>
