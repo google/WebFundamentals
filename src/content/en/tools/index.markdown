@@ -52,6 +52,11 @@ translation_priority: 0
       <h3 class="mdl-typography--title"><a href="{{site.WFBaseUrl}}/tools/service-worker-libraries/">Service Worker Libraries</a></h3>
       <p>Service workers, without the work.</p>
     </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <a href="/speed/pagespeed/module/"><img src="{{site.WFBaseUrl}}/tools/imgs/pagespeed.png"></a>
+      <h3 class="mdl-typography--title"><a href="/speed/pagespeed/module/">PageSpeed Module</a></h3>
+      <p>The PageSpeed modules are open-source server modules that optimize your site automatically.</p>
+    </div>
   </div>
 
 </div>
