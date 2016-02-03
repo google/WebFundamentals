@@ -68,6 +68,12 @@ The `var()` function retrieves and replaces itself with the custom property
 value, resulting in `color: #06c;` So long as the custom property is defined
 somewhere in your stylesheet it should be available to the `var` function.
 
+The syntax may look a little strange at first. Many developers ask, "Why not
+just use `$foo` for variable names?" The approach was specifically chosen to be
+as flexible as possible and potentially allow for `$foo` macros in the future.
+For the backstory you can read [this post](http://www.xanthir.com/blog/b4KT0)
+from one of the spec authors, Tab Atkins.
+
 ## Custom property syntax
 
 The syntax for a custom property is straightforward.
@@ -85,7 +91,7 @@ permissive. For example, the following is a valid custom property:
 --foo: if(x > 5) this.width = 10;
 {% endhighlight %}
 
-White this would not be useful as a variable, as it would be invalid in any
+While this would not be useful as a variable, as it would be invalid in any
 normal property, it could potentially be read and acted upon with JavaScript at
 runtime. This means custom properties have the potential to unlock all kinds of
 interesting techniques not currently possible with today’s CSS preprocessors. So
