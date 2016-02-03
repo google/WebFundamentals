@@ -65,7 +65,8 @@ Here’s a quick example to demonstrate
 that all custom properties begin with two dashes.
 
 The `var()` function retrieves and replaces itself with the custom property
-value, resulting in `color: #06c;`
+value, resulting in `color: #06c;` So long as the custom property is defined
+somewhere in your stylesheet it should be available to the `var` function.
 
 ## Custom property syntax
 
