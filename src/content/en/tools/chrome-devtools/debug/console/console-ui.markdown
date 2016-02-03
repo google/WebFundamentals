@@ -1,26 +1,30 @@
 ---
 layout: shared/narrow
 title: "Navigating the Console"
-description: "Learn how to navigate the JavaScript Console UI within Chrome DevTools."
+description: "Learn how to navigate the Chrome DevTools JavaScript Console."
 published_on: 2015-05-11
-updated_on: 2015-05-11
+updated_on: 2016-02-02
 order: 1
 authors:
+  - kaycebasques
   - andismith
   - megginkearney
   - pbakaus
 translation_priority: 0
 key-takeaways:
   tldr:
-    - "Use the Console to not only log, but interact with the page and execute JavaScript."
-    - "Open the Console Drawer anytime by using the <kbd class='kbd'>Esc</kbd> key shortcut."
-    - "Consecutive repeated messages will be stacked."
-    - "Use clear() to clear the console."
-    - "Persist your console output by selecting 'Preserve Log'."
+    - "Open the Console as a dedicated panel or as a drawer next to any other
+       panel."
+    - "Stack redundant messages, or display them on their own lines."
+    - "Clear or persist output between pages, or save it to a file."
+    - "Filter output by severity level, by hiding network messages, or by
+       regular expression patterns."
 ---
-<p class="intro">
-  The powerful JavaScript Console within Chrome DevTools can be customized and controlled in a number of ways, and learning how to use it makes you a better developer, guaranteed.
-</p>
+
+<p class="intro">Learn how to: open the DevTools Console, stack redundant 
+messages or display them on their own lines, clear or persist 
+output or save it to a file, filter output, and access additional
+Console settings.</p>
 
 {% include shared/toc.liquid %}
 
@@ -28,36 +32,50 @@ key-takeaways:
 
 ## Opening the Console
 
-Access the Console full screen as dedicated panel or from a Drawer that opens next to any open panel.
+Access the Console as a full-screen, dedicated panel:
 
-### The Console panel
+![The Console panel](images/console-panel.png)
 
-To open the dedicated 'Console' panel, either:
+Or as a drawer that opens next to any other panel:
 
-* Use the keyboard shortcuts
-  * On Windows and Linux: <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">J</kbd>
-  * On Mac: <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Option</kbd> + <kbd class="kbd">J</kbd>
-* Select the Chrome Menu icon <img src="images/menu.gif" alt="menu" style="display:inline-block;margin:0;width:15px" /> > More Tools > JavaScript Console.
-* Or if the Chrome Developer Tools are already open, press the 'Console' tab.
+![The Console drawer](images/console-drawer.png)
 
-![The Console Panel](images/console-panel.png)
+### Open as panel
 
-### The Console Drawer
+To open the dedicated **Console** panel, either:
 
-To open the Drawer from within another panel, either:
+* Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>J</kbd> (Windows / Linux) or
+  <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac).
+* If DevTools is already open, press the **Console** button.
 
-* Press the <kbd class="kbd">Esc</kbd> key when the Chrome DevTools are in focus.
-* Or click the 'Show Drawer' icon <img src="images/drawer.gif" alt="drawer" style="display:inline-block;margin:0;width:15px" /> found in the upper right corner of the Chrome DevTools.
+### Open as drawer
 
-![The Console Drawer while on the 'Sources' panel](images/console-drawer.png)
+To open the Console as a drawer next to any other panel, either:
+
+* Press <kbd>Esc</kbd> while DevTools is in focus.
+* Press the **Customize and control DevTools** button and then press 
+  **Show console**.
+
+![Show console](images/show-console.png)
 
 ## Message stacking
 
-![Example of messages stacking within the console](images/message-stacking.png)
+If a message is consecutively repeated, rather than printing out each
+instance of the message on a new line, the Console "stacks" the messages
+and shows a number in the left margin instead. The number indicates how many
+times the message has repeated.
 
-The console keeps a record of every message posted to it on any given page until the page is closed, navigated away from, or refreshed. If the same message is repeated consecutive times, the console stacks them to keep the information provided as concise as possible. When messages are stacked, the number in the left margin shows how many times a particular message has been repeated.
+![Message stacking](images/message-stacking.png)
 
-If you prefer a unique line entry for every log, enable **Show timestamps** from the Settings menu  <img src="images/settings.gif" alt="settings" style="display:inline-block;margin:0;width:15px" /> found in the upper right corner to give every message a unique timestamp.
+If you prefer a unique line entry for every log, enable **Show timestamps**
+from the DevTools settings.
+
+![Show timestamps](images/show-timestamps.png)
+
+Since the timestamp of each message is different, each message is displayed
+on its own line.
+
+![Timestamped console](images/timestamped-console.png)
 
 ## Working with the Console history
 
@@ -65,36 +83,45 @@ If you prefer a unique line entry for every log, enable **Show timestamps** from
 
 You can clear the console history by doing any of the following:
 
-* Right-click or Ctrl-click anywhere in the Console area and choose 'Clear Console'.
-* Enter the `clear()` Command Line API at the shell prompt.
-* Invoke `console.clear()` Console API from within your JavaScript code.
-* Use the keyboard shortcut <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">K</kbd> (Mac) or <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">L</kbd> (Windows and Linux).
+* Right-click in the Console and press **Clear console**.
+* Type `clear()` in the Console.
+* Call `console.clear()` from within your JavaScript code.
+* Type <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">L</kbd> 
+  (Mac, Windows, Linux).
 
 ### Persisting the history
 
-Persist the console history during page refreshes and when navigating between pages by selecting the 'Preserve log' option found at the top of the console. Messages will be stored until you clear the Console or until you close the tab.
-
-![Example of preserve log activated](images/preserve-log.png)
+Enable the **Preserve log** checkbox at the top of the console to persist
+the console history between page refreshes or changes. Messages will be stored
+until you clear the Console or close the tab.
 
 ### Saving the history
 
-Right-click or Ctrl-click anywhere in the console area and choose 'Save As' to save the output of the console to a log file that can be opened in any text editor.
+Right-click in the Console and select **Save as** to save the output
+of the console to a log file.
 
-![Example of preserve log activated](images/console-save-as.png)
+![Save Console to log file](images/console-save-as.png)
 
 ## Selecting the right target
 
-By default, logging and error output from frames or extensions contained within a page will not be output to the Console. You can access other frames' Console output by using the dropdown at the top of the console. An iframe element, for example, would create its own frame context, selectable from this menu.
+By default, logging and error output from frames or extensions contained 
+within a page will not be output to the Console. You can access other frames' 
+Console output by using the dropdown at the top of the console. An `<iframe>` 
+element, for example, would create its own frame context, selectable from 
+this menu.
 
-![Example of frame selection](images/frame-selection.png)
+![Frame selection](images/frame-selection.png)
 
 ## Filtering the Console output
 
-![Filtering errors](images/console-write-filter-errors.png)
+Click the **Filter** button 
+(![filter button](images/filter-button.png){:.inline})
+to filter console output. You can filter by severity level, by a regular 
+expression, or by hiding network messages.
 
-Filter console output by its severity level by selecting one of the filter options.
-Activate filters under the filter icon located in the upper-left corner of the console panel.
-The following filter options are available:
+![Filtered Console output](images/filtered-console.png)
+
+Filtering by severity level is equivalent to the following:
 
 <table class="mdl-data-table">
   <thead>
@@ -133,7 +160,10 @@ The following filter options are available:
 
 ## Additional settings
 
-You can customize the Console further from the 'Settings' menu <img src="images/settings.gif" alt="settings" style="display:inline-block;margin:0;width:15px" /> in the upper right corner of DevTools.
+Open the DevTools settings, go to the **General** tab, and scroll down to
+the **Console** section for further Console settings.
+
+![Console settings](images/console-settings.png)
 
 <table class="mdl-data-table">
   <thead>
@@ -159,7 +189,9 @@ You can customize the Console further from the 'Settings' menu <img src="images/
     <td>Show timestamps</td>
     <td>Prepends a timestamp to each console message showing when the call was made. Useful for debugging when a certain event occurred. This will disable message stacking.</td>
   </tr>
+  <tr>
+    <td>Enable custom formatters</td>
+    <td>Control the <a href="https://docs.google.com/document/d/1FTascZXT9cxfetuPRT2eXPQKXui4nWFivUnS_335T3U/preview">formatting</a> of JavaScript objects.</td>
+  </tr>
   </tbody>
 </table>
-
-
