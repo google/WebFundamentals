@@ -58,7 +58,7 @@ to ensure that your app meets the key principles of a Progressive Web App.
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
     <p>
-      In this getting started guide, you're going to build this Weather Web 
+      In this getting started guide, you're going to build a Weather Web 
       App using Progressive Web App techniques.
     </p>
     <p>
