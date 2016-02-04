@@ -28,7 +28,7 @@ featured_image: /web/updates/images/2016/01/mediarecorder/featured.jpg
 
 <p class="intro">Break out the champagne and doughnuts!  The <a href="https://code.google.com/p/chromium/issues/detail?id=113676">most starred</a> Chrome feature EVER has now been implemented.</p>
 
-Imagine a ski-run recorder that synchronizes video and GeoLocation data, or a super-simple voice memo app, or a widget that enables you to record a video and upload it to YouTube — all without plugins.
+Imagine a ski-run recorder that synchronizes video with GeoLocation data, or a super-simple voice memo app, or a widget that enables you to record a video and upload it to YouTube — all without plugins.
 
 The [MediaRecorder API](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder_API) enables you to record audio and video from a web app. It's available now in Firefox and in Chrome for Android and desktop.
 
@@ -36,7 +36,7 @@ Try it out [here](https://webrtc.github.io/samples/src/content/getusermedia/reco
 
 <img class="screenshot" src="/web/updates/images/2016/01/mediarecorder/screenshot.jpg" alt="Screenshot of mediaRecorder demo on Android Nexus 5X">
 
-The API is straightforward, which I'll demonstrate using code from the [WebRTC sample repo demo](http://webrtc.github.io/samples/src/content/getusermedia/record).  Note that the API can only be used from [secure origins only](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins): HTTPS or localhost.
+The API is straightforward, which I'll demonstrate using code from the [WebRTC sample repo demo](https://webrtc.github.io/samples/src/content/getusermedia/record).  Note that the API can only be used from [secure origins only](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins): HTTPS or localhost.
 
 First up, instantiate a MediaRecorder with a MediaStream. Optionally, use an `options` parameter to specify the desired output format:
 
@@ -149,7 +149,7 @@ We'd also like to know what usage scenarios are most important to you, and what 
 ## Demos
 * [webrtc.github.io/samples/src/content/getusermedia/record](https://webrtc.github.io/samples/src/content/getusermedia/record/)
 * [simpl.info/mr](https://simpl.info/mediarecorder) (same code, easier URL for mobile!)
-* [Record a video and upload it to YouTube](https://jeffy.info/google-youtube-upload/components/google-youtube-upload/demo/) with an experimental custom <google-youtube-upload>  element
+* [Record a video and upload it to YouTube](https://jeffy.info/google-youtube-upload/components/google-youtube-upload/demo/) with an experimental custom &lt;google-youtube-upload&gt; element
 
 ## Polyfills
 * Muaz Khan's [MediaStreamRecorder](https://www.webrtc-experiment.com/msr/) is a JavaScript library for recording audio and video, compatible with MediaRecorder.
@@ -162,7 +162,7 @@ We'd also like to know what usage scenarios are most important to you, and what 
 * [Edge](https://dev.windows.com/en-us/microsoft-edge/platform/status/mediarecorder): 'Under Consideration'
 
 ## Spec
-[w3c.github.io/mediacapture-record/MediaRecorder.html](http://w3c.github.io/mediacapture-record/MediaRecorder.html)
+[w3c.github.io/mediacapture-record/MediaRecorder.html](https://w3c.github.io/mediacapture-record/MediaRecorder.html)
 
 ## API information
 [developer.mozilla.org/en/docs/Web/API/MediaRecorder_API](https://developer.mozilla.org/en/docs/Web/API/MediaRecorder_API)
