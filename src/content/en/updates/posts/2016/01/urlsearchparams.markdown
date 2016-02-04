@@ -38,7 +38,7 @@ let params = new URLSearchParams('q=search+string&version=1&person=Eric');
 
 params.get('q') === "search string"
 params.get('version') === "1"
-Array.from(params.length) === 3
+Array.from(params).length === 3
 {% endhighlight %}
 
 Note: If there are several values for a param, `get` returns the first value.
