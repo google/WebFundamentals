@@ -48,7 +48,7 @@ deploy!
 1. If you haven't recently signed in to the Firebase tools, update your 
    credentials:<br/>
    `firebase login`
-1. Initialize your app, and provide the directory where you completed app 
+1. Initialize your app, and provide the directory where your completed app 
    lives:<br/>
    `firebase init`
 1. Finally, deploy the app to Firebase:<br/>
