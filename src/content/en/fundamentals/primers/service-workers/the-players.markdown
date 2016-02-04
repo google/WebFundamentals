@@ -3,8 +3,8 @@ layout: shared/narrow
 published: false
 title: "The Players"
 description: "A basic service worker implementation has two types of players."
-published_on: 2015-10-01
-updated_on: 2015-10-01
+published_on: 2015-12-16
+updated_on: 2015-12-16
 order: 3
 translation_priority: 0
 authors:

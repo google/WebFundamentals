@@ -5,8 +5,8 @@ title: "Debugging service workers"
 description: "So far our service worker doesn't do very much. But it's enough that we can watch it working. That makes this a good time to talk about debugging."
 authors:
   - josephmedley
-published_on: 2015-10-01
-updated_on: 2015-10-01
+published_on: 2015-12-16
+updated_on: 2015-12-16
 order: 5
 key-takeaways:
   tldr:   

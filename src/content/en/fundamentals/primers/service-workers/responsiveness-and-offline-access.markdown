@@ -5,8 +5,8 @@ title: "Responsiveness and offline access with fetch and cache"
 description: "Responsiveness and offline access are two of the key advantages of service workers. How do we get them? We get them by implementing fetching and caching in our service worker. Fetching allows us to intercept requests made by service worker clients and cache them so they're available when the network connection is slow or unavailable."
 authors:
   - josephmedley
-published_on: 2014-09-25
-updated_on: 2015-09-25
+published_on: 2014-12-16
+updated_on: 2015-12-16
 order: 6
 ---
 

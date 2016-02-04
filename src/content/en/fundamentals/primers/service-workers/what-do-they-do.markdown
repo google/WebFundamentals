@@ -5,8 +5,8 @@ title: "What do they do?"
 description: "Site search is vital for helping mobile users find what they’re looking for in a hurry"
 authors:
 - josephmedley
-published_on: 2015-10-01
-updated_on: 2015-10-01
+published_on: 2015-12-16
+updated_on: 2015-12-16
 order: 2
 ---
 
