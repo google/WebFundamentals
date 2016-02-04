@@ -7,6 +7,7 @@ updated_on: 2014-01-29
 authors:
   - jakearchibald
 translation_priority: 1
+order: 3
 ---
 
 Ladies and gentlemen, prepare yourself for a pivotal moment in the history of web development…

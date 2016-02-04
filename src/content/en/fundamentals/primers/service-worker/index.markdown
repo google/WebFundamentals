@@ -5,6 +5,7 @@ description: "Rich offline experiences, periodic background syncs, push notifica
 published_on: 2014-12-01
 updated_on: 2016-01-18
 translation_priority: 1
+order: 1
 ---
 
 <p class="intro">Rich offline experiences, periodic background syncs, push
