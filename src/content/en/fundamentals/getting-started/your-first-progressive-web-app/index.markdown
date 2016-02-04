@@ -110,5 +110,5 @@ to ensure that your app meets the key principles of a Progressive Web App.
 * A knowledge of HTML, CSS and JavaScript
 
 This getting started guide is focused on Progressive Web Apps. Some concepts are 
-glossed over or code blocks (for example styles or non-relevant javascript) or
+glossed over or code blocks (for example styles or non-relevant JavaScript) or
 are provided for you to simply copy and paste.
