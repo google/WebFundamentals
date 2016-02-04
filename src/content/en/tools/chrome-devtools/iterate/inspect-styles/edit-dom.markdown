@@ -43,11 +43,30 @@ notes:
 
 {% include shared/takeaway.liquid list=page.key-takeaways.dom %}
 
-## Inspect page element
+## Inspect an element {#inspect-an-element}
 
-[Inspect a page element](/web/tools/chrome-devtools/iterate/inspect-styles/basics#how-to-inspect-a-page) to see it's DOM nodes rendered in the browser:
+Use the **Elements panel** to inspect all elements in your page in one
+DOM tree. Select any element and inspect the styles applied to it.
 
-{% animation animations/right-click-inspect-element.mp4 %}
+{% animation animations/inspect-element.mp4 %}
+
+There are several ways to inspect an element:
+
+Right-click any element on the page and select **Inspect**.
+
+![Inspect an element via right-click](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/right-click-inspect.png)
+
+Press <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd>
++ <kbd class="kbd">C</kbd> (Windows) or <kbd class="kbd">Cmd</kbd>
++ <kbd class="kbd">Shift</kbd> + <kbd class="kbd">C</kbd> (Mac) to open
+DevTools in Inspect Element mode, then click on an element.
+
+Click the **Inspect Element** button
+![Inspect icon](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/inspect-icon.png){:.inline}
+to go into Inspect Element Mode, then click on an element.
+
+Use the [`inspect`][inspect] method in the console, such as
+`inspect(document.body)`.
 
 ## Navigate the DOM
 
