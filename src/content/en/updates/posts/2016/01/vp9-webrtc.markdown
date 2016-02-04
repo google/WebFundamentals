@@ -24,24 +24,27 @@ img {
 </style>
 
 
-<p class="intro">Two years ago Chrome enabled support for the <a href="http://webmproject.org" title="The WebM Project">VP9</a> codec. From Chrome 48 on desktop and Android, VP9 will be an optional video codec for video calls using <a href="https://webrtc.org" title="webrtc.org: home of the WebRTC project">WebRTC</a>.</p>
+<p class="intro">Two years ago Chrome enabled support for the <a href="http://www.webmproject.org/vp9/" title="The WebM Project: VP9">VP9</a> codec. From Chrome 48 on desktop and Android, VP9 will be an optional video codec for video calls using <a href="https://webrtc.org" title="webrtc.org: home of the WebRTC project">WebRTC</a>.</p>
 
-While VP9 uses the same basic blueprint as previous codecs, the [WebM team](http://thewebmproject.org) has packed improvements into VP9 to get more quality out of each byte of video. For instance, the encoder prioritizes the sharpest image features, and the codec now uses asymmetric transforms to help keep even the most challenging scenes looking crisp and block-free.
+While VP9 uses the same basic blueprint as previous codecs, the [WebM team](http://webmproject.org) has packed improvements into VP9 to get more quality out of each byte of video. For instance, the encoder prioritizes the sharpest image features, and the codec now uses asymmetric transforms to help keep even the most challenging scenes looking crisp and block-free.
 
-With VP9, internet connections that are currently able to serve 720p without
-packet loss or delay will be able to support a 1080p video call at the same
-bandwidth. VP9 can also reduce data usage for users with poor connections or
-expensive data plans, requiring only 40% of the bitrate of VP8.
+With VP9, internet connections that are currently able to serve 720p without packet loss or delay will be able to support a 1080p video call at the same bandwidth. VP9 can also reduce data usage for users with poor connections or expensive data plans, requiring in best cases only 40% of the bitrate of VP8.
 
-You can see how VP8 calls compare with VP9 in the recordings [here](http://GoogleChrome.github.io/samples/webrtc-vp8-vp9/), screenshot below:
+You can see how VP8 calls compare with VP9 in the screenshot below of recordings we made with the WebRTC encoder settings, showing 30% bitrate savings:
 
-<a href="" title=""><img alt="Screenshot of video showing VP8 and VP9 WebRTC calls side by side" src="/web/updates/images/2016/01/vp9-webrtc/vp8-v-vp9.jpg" /></a>
+<img alt="Screenshot of video showing VP8 and VP9 WebRTC calls side by side" src="/web/updates/images/2016/01/vp9-webrtc/vp8-v-vp9.jpg" />
 
 The codec for a WebRTC call, along with other media settings such as bitrate, is negotiated between caller and callee by exchanging Session Description Protocol (SDP) metadata messages that describe the media capabilities of the client.
 
 This handshaking process — exchanging media capabilities — is known as offer/answer.  For example, a caller might  send an offer (an SDP message) stating a preference for VP9, with VP8 as a fallback. If the answer confirms that the callee can handle VP9, the video call can proceed using VP9. If the callee responds with an answer that it can only use VP8, the call will proceed with VP8.
 
-To see this in action, take a look at the WebRTC project's canonical video chat application[ appr.tc](https://appr.tc/). In [appcontroller.js](https://github.com/webrtc/apprtc/blob/5eb702d341796840edd0e57f3e7eebb6ebcba8d4/src/web_app/js/appcontroller.js#L536), VP9 is set as the preferred codec unless a _vsc_ or _vrc_ parameter is specified in the URL:
+To see this in action, take a look at the code for the canonical WebRTC video chat application [appr.tc](https://appr.tc/).
+
+> <strong>Top tip: </strong> In <a href="https://appr.tc" title="appr.tc WebRTC video chat app">appr.tc</a>, you can press <strong>I</strong> to get information about call state including signaling and codec details:
+>
+> <img alt="Screenshot of appr.tc infobox, showing signaling and codec information" src="/web/updates/images/2016/01/vp9-webrtc/apprtc-infobox.jpg" />
+
+In [appcontroller.js](https://github.com/webrtc/apprtc/blob/5eb702d341796840edd0e57f3e7eebb6ebcba8d4/src/web_app/js/appcontroller.js#L536), VP9 is set as the preferred codec unless a _vsc_ or _vrc_ parameter is specified in the URL:
 
 {% highlight javascript %}
 AppController.prototype.loadUrlParams_ = function() {
