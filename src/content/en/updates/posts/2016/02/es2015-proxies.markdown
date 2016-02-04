@@ -179,7 +179,7 @@ var Vehicle = function(name){
   this.name = name;
 };
 
-var Car = extend(Person, function(name, year) {
+var Car = extend(Vehicle, function(name, year) {
   this.year = year;
 });
 

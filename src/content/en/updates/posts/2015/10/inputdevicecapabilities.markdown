@@ -14,7 +14,7 @@ description: "A simpler method to rationalize your mouse and touch logic for whe
 
 Chrome 47 has a new feature that makes it easier to understand the how users 
 interact with your site: 
-[InputDeviceCapabilities](https://rbyers.github.io/InputDevice/)! Let's step 
+[InputDeviceCapabilities](https://wicg.github.io/InputDeviceCapabilities/)! Let's step 
 back a bit and learn why this is important.
  
 DOM input events are an abstraction above low-level input events, loosely tied 
@@ -64,7 +64,7 @@ function addMouseEventListener(target, type, handler, capture) {
 {% endhighlight %}
  
 The good news is that this has been 
-[Polyfilled](https://github.com/RByers/InputDevice/blob/gh-pages/inputdevicecapabilities-polyfill.js) 
+[Polyfilled](https://github.com/WICG/InputDeviceCapabilities/blob/gh-pages/inputdevicecapabilities-polyfill.js) 
 by Rick Byers so that you can use it across most platforms.
  
 Today this API is minimal, focused on solving [a specific problem with 

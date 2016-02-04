@@ -225,6 +225,19 @@ samdutton:
   description:
     en: "Sam is a Developer Advocate"
 
+jonathangarbee:
+  name:
+    given: Jonathan
+    family: Garbee
+  org:
+    name: Individual
+  country: USA
+  email: jonathan.garbee@gmail.com
+  role:
+    - author
+  description:
+    en: "Google Developer Expert for Web Technology"
+
 dgash:
   name:
     given: Dave
