@@ -27,6 +27,8 @@ notes:
   </figure>
 </div>
 
+{% include shared/toc.liquid %}
+
 Chrome will automatically display the banner when your app meets the following
 criteria:
 
