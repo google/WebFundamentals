@@ -25,7 +25,7 @@ related-guides:
   edit-dom:
     -
       title: "Edit the DOM"
-      href: /web/tools/chrome-devtools/iterate/inspect-styles/edit-dom
+      href: tools/chrome-devtools/iterate/inspect-styles/edit-dom
 ---
 
 <p class="intro">Inspect and live-edit the HTML and CSS of a page using 
