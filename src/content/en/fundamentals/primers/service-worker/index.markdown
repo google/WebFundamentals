@@ -7,10 +7,10 @@ updated_on: 2016-01-18
 translation_priority: 1
 ---
 
-Rich offline experiences, periodic background syncs, push notifications&mdash;
-functionality that would normally require a native application&mdash;are coming
-to the web. Service workers provide the technical foundation that all these
-features will rely on.
+<p class="intro">Rich offline experiences, periodic background syncs, push
+notifications&mdash; functionality that would normally require a native
+application&mdash;are coming to the web. Service workers provide the technical
+foundation that all these features will rely on.</p>
 
 ## What is a Service Worker
 

@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
-title: "How to Register and Install a Service Worker"
-description: "To install a service worker you need to kick start the process by **registering** a service worker in your page."
+title: "Register a Service Worker"
+description: "To install a service worker you need to kick start the process by **registering** it in your page."
 published_on: 2014-12-01
 updated_on: 2016-01-19
 translation_priority: 0
@@ -10,15 +10,15 @@ authors:
   - mattgaunt
 ---
 
-To install a service worker you need to kick start the process by
-**registering** a service worker in your page. This tells the browser where your
-service worker JavaScript file lives.
+<p class="intro">To install a service worker you need to kick start the process by
+<b>registering</b> it in your page. This tells the browser where your
+service worker JavaScript file lives.</p>
 
 {% highlight javascript %}
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
     // Registration was successful
-    console.log('ServiceWorker registration successful with scope: ',registration.scope);
+    console.log('ServiceWorker registration successful with scope: ', registration.scope);
   }).catch(function(err) {
     // registration failed :(
     console.log('ServiceWorker registration failed: ', err);
@@ -29,16 +29,16 @@ if ('serviceWorker' in navigator) {
 This code checks to see if the service worker API is available, and if it is,
 the service worker at `/sw.js` is registered.
 
-You can call register every time a page loads without concern; the browser will
+You can call `register()` every time a page loads without concern; the browser will
 figure out if the service worker is already registered or not and handle it
 accordingly.
 
-One subtlety with the register method is the location of the service worker
+One subtlety with the `register()` method is the location of the service worker
 file. You'll notice in this case that the service worker file is at the root of
 the domain. This means that the service worker's scope will be the entire
 origin. In other words, this service worker will receive `fetch` events for
 everything on this domain. If we register the service worker file at
-`/example/sw.js`, then the service worker would only see fetch events for pages
+`/example/sw.js`, then the service worker would only see `fetch` events for pages
 whose URL starts with `/example/` (i.e. `/example/page1/`, `/example/page2/`).
 
 Now you can check that a service worker is enabled by going to `chrome://inspect

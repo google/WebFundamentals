@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "How to Update a Service Worker"
+title: "Update a Service Worker"
 description: "There will be a point in time where your service worker will need updating."
 published_on: 2014-12-01
 updated_on: 2016-01-19
@@ -10,20 +10,20 @@ authors:
   - mattgaunt
 ---
 
-There will be a point in time where your service worker will need updating. When
-that time comes, you'll need to follow these steps:
+<p class="intro">There will be a point in time where your service worker will 
+  need updating. When that time comes, you'll need to follow these steps:</p>
 
-1. Update your service worker JavaScript file.     When the user navigates to
+1. Update your service worker JavaScript file. When the user navigates to
    your site, the browser tries to redownload the script file that defined the
    service worker in the background. If there is even a byte's difference in 
    the service worker file compared to what it currently has, it considers it 
-   'new'.
-2. Your new service worker will be started and the install event will be fired.
+   _new_.
+2. Your new service worker will be started and the `install` event will be fired.
 3. At this point the old service worker is still controlling the current pages 
-   so the new service worker will enter a "waiting" state.
+   so the new service worker will enter a `waiting` state.
 4. When the currently open pages of your site are closed, the old service 
    worker will be killed and the new service worker will take control.
-5. Once your new service worker takes control, its activate event will be 
+5. Once your new service worker takes control, its `activate` event will be 
    fired.
 
 One common task that will occur in the `activate` callback is cache management.

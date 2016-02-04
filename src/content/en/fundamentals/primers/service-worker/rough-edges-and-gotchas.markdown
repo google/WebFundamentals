@@ -10,16 +10,17 @@ authors:
   - mattgaunt
 ---
 
-{% include shared/toc.liquid %}
+<p class="intro">This stuff is really new. Here's a collection of issues that 
+	get in the way. Hopefully this section can be deleted soon, but for now 
+	these are worth being mindful of.
+</p>
 
-This stuff is really new. Here's a collection of issues that get in the way.
-Hopefully this section can be deleted soon, but for now these are worth being
-mindful of.
+{% include shared/toc.liquid %}
 
 ## If Installation Fails, We're Not so Good at Telling You About It
 
-If a worker registers, but then doesn't appear in `chrome://inspect/#service-
-workers` or `chrome://serviceworker-internals`, it's likely failed to
+If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers` 
+or `chrome://serviceworker-internals`, it's likely failed to
 install due to an error being thrown, or a rejected promise being passed to
 `event.waitUntil()`.
 
@@ -34,7 +35,7 @@ This, along with  "[Pause on uncaught exceptions](https://developer.chrome.com/d
 
 ### No Credentials by Default
 
-When you use fetch, by default, requests won't contain credentials such as 
+When you use `fetch`, by default, requests won't contain credentials such as 
 cookies. If you want credentials, instead call:
 
 {% highlight javascript %}
@@ -52,7 +53,7 @@ crossorigin="use-credentials">`.
 ### Non-CORS Fail by Default
 
 By default, fetching a resource from a third party URL will fail if it doesn't
-support CORS. You can add a non-CORS option to the Request to overcome this,
+support CORS. You can add a `no-CORS` option to the Request to overcome this,
 although this will cause an 'opaque' response, which means you won't be able to
 tell if the response was successful or not.
 
@@ -72,13 +73,13 @@ appropriate image asset at run time and make a network request.
 For service worker, if you wanted to cache an image during the install step, you
 have a few options:
 
-* Install all the images that the  `<picture>` element and the `srcset` 
-  attribute will request.
-* Install a single low-res version of the image.
-* Install a single high-res version of the image.
+1. Install all the images that the  `<picture>` element and the `srcset` 
+   attribute will request.
+2. Install a single low-res version of the image.
+3. Install a single high-res version of the image.
 
 Realistically you should be picking option 2 or 3 since downloading all of the
-images would be a waste of memory.
+images would be a waste of storage space.
 
 Let's assume you go for the low res version at install time and you want to try
 and retrieve higher res images from the network when the page is loaded, but if
@@ -92,18 +93,18 @@ If we have the following two images:
 | 1x             | 400   | 400    |
 | 2x             | 800   | 800    |
 
-In a srcset image, we'd have some markup like this:
+In a `srcset` image, we'd have some markup like this:
 
 {% highlight html %}
 <img src="image-src.png" srcset="image-src.png 1x, image-2x.png 2x" />
 {% endhighlight %}
 
-If we are on a 2x display, then the browser will opt to download image-2x.png,
-if we are offline you could .catch this request and return image-src.png instead
-if it's cached, however the browser will expect an image which takes into
-account the extra pixels on a 2x screen, so the image will appear as 200x200 CSS
-pixels instead of 400x400 CSS pixels. The only way around this is to set a fixed
-height and width on the image.
+If we are on a 2x display, then the browser will opt to download `image-2x.png`,
+if we are offline you could `.catch()` this request and return `image-src.png`
+instead if it's cached, however the browser will expect an image which takes
+into account the extra pixels on a 2x screen, so the image will appear as
+200x200 CSS pixels instead of 400x400 CSS pixels. The only way around this is to
+set a fixed height and width on the image.
 
 {% highlight html %}
 <img src="image-src.png" srcset="image-src.png 1x, image-2x.png 2x"

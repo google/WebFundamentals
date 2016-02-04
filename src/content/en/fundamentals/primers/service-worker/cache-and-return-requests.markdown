@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "How to Cache and Return Requests"
+title: "Cache and Return Requests"
 description: "Now that you've installed a service worker, you probably want to return one of your cached responses right?"
 published_on: 2014-12-01
 updated_on: 2016-01-19
@@ -10,8 +10,8 @@ authors:
   - mattgaunt
 ---
 
-Now that you've installed a service worker, you probably want to return one of
-your cached responses right?
+<p class="intro">Now that you've installed a service worker, you probably want to 
+  return one of your cached responses right?</p>
 
 After a service worker is installed and the user navigates to a different page
 or refreshes, the service worker will begin to receive fetch events, an example

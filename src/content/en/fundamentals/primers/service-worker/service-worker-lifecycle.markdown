@@ -10,8 +10,8 @@ authors:
   - mattgaunt
 ---
 
-A service worker has a lifecycle which is completely separate from your web
-page.
+<p class="intro">A service worker has a lifecycle which is completely separate 
+	from your web page.</p>
 
 To install a service worker for your site, you need to register it, which you do
 in your page's JavaScript. Registering a service worker will cause the browser

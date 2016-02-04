@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Service Worker Install Step"
+title: "Install a Service Worker"
 description: "After a controlled page kicks off the registration process, let's shift to the point of view of the service worker script, which handles the `install` event."
 published_on: 2014-12-01
 updated_on: 2016-01-19
@@ -17,20 +17,12 @@ For the most basic example, you need to define a callback for the install event
 and decide which files you want to cache.
 
 {% highlight javascript %}
-// The files we want to cache
-var urlsToCache = [
-  '/',
-  '/styles/main.css',
-  '/script/main.js'
-];
-
-// Set the callback for the install step
 self.addEventListener('install', function(event) {
   // Perform install steps
 });
 {% endhighlight %}
 
-Inside of our install callback, we need to take the following steps:
+Inside of our `install` callback, we need to take the following steps:
 
 1. Open a cache.
 2. Cache our files.
