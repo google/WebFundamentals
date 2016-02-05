@@ -71,7 +71,7 @@ title: "Progressive Web Apps"
       a browser tab, no install required. As the user progressively builds a 
       relationship with the App over time, it becomes more and more powerful. 
       It loads quickly, even on flaky networks, sends relevant push 
-      notifications, has an icon on the homescreen and loads as top-level, 
+      notifications, has an icon on the home screen and loads as top-level, 
       full screen experience.
     </p>
 
@@ -92,7 +92,7 @@ title: "Progressive Web Apps"
       </li>
       <li>
         <b>App-like</b> - Feel like an app to the user with app-style
-        interactions and navigation because it's built on the app-shell model.
+        interactions and navigation because it's built on the app shell model.
       </li>
       <li>
         <b>Fresh</b> - Always up-to-date thanks to the service worker update 

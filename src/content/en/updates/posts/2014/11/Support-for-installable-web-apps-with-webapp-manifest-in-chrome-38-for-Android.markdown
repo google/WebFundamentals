@@ -1,7 +1,7 @@
 ---
 layout: updates/post
-title: "Installable Web Apps with the WebApp Manifest in Chrome for Android"
-description: "Use the WebApp manifest to control how your web app launches"
+title: "Installable Web Apps with the Web App Manifest in Chrome for Android"
+description: "Use the web app manifest to control how your web app launches"
 published_on: 2014-11-10
 updated_on: 2016-01-12
 authors:

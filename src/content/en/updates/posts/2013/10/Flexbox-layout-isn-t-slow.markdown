@@ -14,7 +14,7 @@ tags:
 ---
 **TL;DR:** Old flexbox (display: box) is 2.3x slower than new flexbox (display: flex).
 
-A bit ago, Wilson Page wrote a [great article for Smashing Magazine](http://coding.smashingmagazine.com/2013/05/23/building-the-new-financial-times-web-app/) digging into how they brought the Financial Times webapp to life. In the article, Wilson notes:
+A bit ago, Wilson Page wrote a [great article for Smashing Magazine](http://coding.smashingmagazine.com/2013/05/23/building-the-new-financial-times-web-app/) digging into how they brought the Financial Times web app to life. In the article, Wilson notes:
 
 > As the app began to grow, we found performance was getting worse and worse.
 

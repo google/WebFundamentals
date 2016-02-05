@@ -281,7 +281,7 @@ page of your project here. You don't need the brackets or hash, just the number.
 
 ![Google Developer Project final API Key]({{site.WFBaseUrl}}/updates/images/2015/03/push/project-number.png)
 
-The project number will be used in the Web App Manifest
+The project number will be used in the web app manifest
 as the **gcm\_sender\_id** parameter (see the next section).
 
 ### Add a Web App Manifest
@@ -750,7 +750,7 @@ issues, you have two options:
 
 One of the best tips I can give to anyone who is new to service workers is make
 use of the checkbox called "Open DevTools window and pause JavaScript execution
-on Service Worker startup for debugging." This checkbox will add a breakpoint at
+on service worker startup for debugging." This checkbox will add a breakpoint at
 the start of your service worker and **pause execution**, this allows you to
 resume or step through your service worker script and see if you hit any
 problems.

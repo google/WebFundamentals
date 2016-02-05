@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Start with a fast first load"
-description: "Fast first loads with Progressive Web Apps and the App Shell model."
+description: "Fast first loads with Progressive Web Apps and the app shell model."
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1

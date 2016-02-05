@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Implement the App Shell"
-description: "How do I use an an App Shell within a Progressive Web App?"
+description: "How do I use an an app shell within a Progressive Web App?"
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1

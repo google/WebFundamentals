@@ -70,14 +70,14 @@ density.
 {% include shared/note.liquid list=page.notes.icons %}
 
 <figure>
-  <img src="images/homescreen-icon.png" alt="Add to Home screen Icon">
-  <figcaption>Add to Home screen Icon</figcaption>
+  <img src="images/homescreen-icon.png" alt="Add to Home Screen Icon">
+  <figcaption>Add to Home Screen Icon</figcaption>
 </figure>
 
 
 ## Customize how your site is launched
 
-You make your WebApp hide the browsers UI by setting the `display` type to `standalone`.
+You make your web app hide the browsers UI by setting the `display` type to `standalone`.
 
 {% highlight json %}
 "display": "standalone"
@@ -172,8 +172,8 @@ care. Users prefer selecting the orientation.
 {% endhighlight %}
 
 <figure>
-  <img src="images/manifest-orientation-options.png" alt="WebApp Manifest Orientation Options">
-  <figcaption>WebApp Manifest Orientation Options</figcaption>
+  <img src="images/manifest-orientation-options.png" alt="Web App Manifest Orientation Options">
+  <figcaption>Web App Manifest Orientation Options</figcaption>
 </figure>
 
 ## Detect if you are launched from the home screen

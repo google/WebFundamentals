@@ -9,16 +9,16 @@ authors:
   - paulkinlan
 ---
 
-The first step to making the app work offline is to register a Service Worker, a script that allows background functionality without the need for an open web page or user interaction.
+The first step to making the app work offline is to register a service worker, a script that allows background functionality without the need for an open web page or user interaction.
 
 This takes two simple steps:
 
-1. Create a javascript file that will be the Service Worker.
-1. Tell the browser to register the javascript file as the "Service Worker".
+1. Create a javascript file that will be the service worker.
+1. Tell the browser to register the javascript file as the "service worker".
 
 First, create a blank file called `sw.js` and place it in the `/app` folder. (This 
 folder is the root folder for the app).  You need to do this because the scope 
-of a Service Worker (the set of urls that the ServiceWorker will load for) is 
+of a service worker (the set of urls that the ServiceWorker will load for) is 
 defined by the directory where it resides. If it is not in the correct directory 
 then the ServiceWorker will not be able to make the app work offline (this means 
 you can't place it in a script directory.)
@@ -35,7 +35,7 @@ if('serviceWorker' in navigator) {
 </script>
 {% endhighlight %}
 
-The above snippet checks to see if the browser supports Service Worker and if it 
+The above snippet checks to see if the browser supports service worker and if it 
 does it calls the register method and returns a Promise.  After the registration 
 is completed the browser will resolve the Promise and call the function in the 
 `.then()` clause. (Note: this happens asynchronously.)
@@ -55,14 +55,14 @@ debug the `install` phase of a service worker.
 <img src="images/image02.png" width="624" height="350" />  
 Load the web app, open Chrome DevTools and if successful you will see "Service 
 Worker Registered" in Chrome DevTools.  This is the first step to integrating 
-Service Worker into your application.  It won't work offline by default, but we 
+service worker into your application.  It won't work offline by default, but we 
 are on our way.
 
 <img src="images/image03.png" width="624" height="350" />
   
 ### Frequently Asked Questions
 
-**Why is the Service Worker in the root?  Why can't I place it in a `/scripts` 
+**Why is the service worker in the root?  Why can't I place it in a `/scripts` 
   directory?**
 
 For security reasons, a service worker can only control the pages that are 

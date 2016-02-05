@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Architect the App Shell"
-description: "What is an App Shell and how do you architect a web app to use the App Shell model?"
+description: "What is an app shell and how do you architect a web app to use the app shell model?"
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1
@@ -29,17 +29,17 @@ the necessary data, instead of having to load the everything.
   <img src="images/appshell.jpg" /> 
 </figure>
 
-Put another way, the App shell is similar to the bundle of code that you'd 
+Put another way, the app shell is similar to the bundle of code that you'd 
 publish to an app store when building a native app. It is the core components 
 necessary to get your app off the ground, but likely does not contain the data.
 
-## Why use the App Shell architecture?
+## Why use the app shell architecture?
 
-Using the App Shell architecture allows you to focus on speed, giving your 
+Using the app shell architecture allows you to focus on speed, giving your 
 Progressive Web App similar properties to native apps: instant loading and 
 regular updates, all without the need of an app store.
 
-## Design the App Shell 
+## Design the app shell 
 
 The first step is to break the design down into it's core components. 
 

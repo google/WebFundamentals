@@ -10,16 +10,16 @@ tags:
   - splashscreen
   - addtohomescreen
 featured_image: /web/updates/images/2015/10/splashscreen.png
-description: "Chrome 47 introduces a splash screen to web apps added to the homescreen"
+description: "Chrome 47 introduces a splash screen to web apps added to the home screen"
 ---
 
 Over the past year we have focused on letting developers build sites and apps 
-that feel like they are installed on the user's system: [Service Worker](/web/fundamentals/primers/service-workers) for 
+that feel like they are installed on the user's system: [service worker](/web/fundamentals/primers/service-workers) for 
 letting you easily build offline first experiences and Add to Homescreen to give 
 your site the presence on the user's device.
 
 The home screen launch process on Android is a great first step, however there was always a 
-tell that this wasn't a native-like experience: When you click on the homescreen 
+tell that this wasn't a native-like experience: When you click on the home screen 
 icon the screen would go white until the document was ready to render its first 
 frame of the document.  This could take anywhere from 200ms of white up to, 
 well, it depends on how quickly you can draw something.  Some poorly designed 
@@ -124,7 +124,7 @@ are meant to be part of the user's mobile device.
     * No. It is only Android.
 * Will this splash screen appear when a user visits my site from a link?
     * No, this only shows when a user clicks the icon for your site on their 
-      homescreen.
+      home screen.
 * Is there an API to control this or make it look like the shell of my app?
     * No, we are following guidelines similar to Android's and how iOS works.  
       Added to that, we don't know that the screen size will always be the same 

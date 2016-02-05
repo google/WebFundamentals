@@ -26,10 +26,10 @@ Aaron Gustafson likened [progressive enhancement](http://alistapart.com/article/
 
 Think of the candy shell as where many Progressive Web App features can live. They are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required.
 
-As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)), sending relevant [Push Notifications](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's homescreen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
+As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)), sending relevant [Push Notifications](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
 <img
-src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg" alt="Web app install banners for engagement, launch from the user's homescreen, splash screen in Chrome for Android, works offline with Service Worker"/>
+src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg" alt="Web app install banners for engagement, launch from the user's home screen, splash screen in Chrome for Android, works offline with service worker"/>
 
 <h4>Progressive Web Apps are:</h4>
 <ul>
@@ -47,7 +47,7 @@ src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg" alt=
     work offline or on low quality networks.
   </li>
   <li>
-    <b>App-like</b> - Use the app-shell model to provide app-style
+    <b>App-like</b> - Use the app shell model to provide app-style
     navigations and interactions.
   </li>
   <li>
@@ -77,7 +77,7 @@ src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg" alt=
   </li>
 </ul>
 
-Progressive Web Apps also aren't unique to Chrome for Android. Below we can see the [Pokedex](https://pokedex.org) Progressive Web App working in Firefox for Android (Beta) with early Add to Homescreen and Service Worker caching features running just fine.
+Progressive Web Apps also aren't unique to Chrome for Android. Below we can see the [Pokedex](https://pokedex.org) Progressive Web App working in Firefox for Android (Beta) with early Add to home screen and service worker caching features running just fine.
 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-ff-@1x.jpg" alt="Progressive web apps working in Firefox for Android"/>
@@ -95,29 +95,29 @@ For diving deeper into Progressive Web Apps, read Alex Russell's original [blog 
 
 > The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the device home screen), direct what the user can launch and more importantly how they can launch it
 
-The manifest enables your web app to have a more native-like presence on the user's homescreen. It allows the app to be launched in full-screen mode (without a URL bar being present), provides control over the screen orientation and in recent versions of Chrome on Android supports defining a [Splash Screen](https://developers.google.com/web/updates/2015/10/splashscreen?hl=en) and [theme color](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android?hl=en) for the address bar. It is also used to define a set of icons by size and density used for the aforementioned Splash screen and homescreen icon.
+The manifest enables your web app to have a more native-like presence on the user's home screen. It allows the app to be launched in full-screen mode (without a URL bar being present), provides control over the screen orientation and in recent versions of Chrome on Android supports defining a [Splash Screen](https://developers.google.com/web/updates/2015/10/splashscreen?hl=en) and [theme color](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android?hl=en) for the address bar. It is also used to define a set of icons by size and density used for the aforementioned Splash screen and home screen icon.
 
 <img
-src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-1-@1x.jpg" alt="Add to homescreen, launch from homescreen and full-screen app-like experiences."/>
+src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-1-@1x.jpg" alt="Add to home screen, launch from homescreen and full-screen app-like experiences."/>
 
 A sample manifest file can be found in [Web Starter Kit](https://github.com/google/web-starter-kit/blob/master/app/manifest.json) and over in the [Google Chrome samples](https://github.com/GoogleChrome/samples/tree/0768ee71e4548f779219798d8c83fdcc67b469e8/web-application-manifest). Bruce Lawson wrote a [Manifest Generator](http://brucelawson.github.io/manifest/) and Mounir Lamouri has also written a handy [Web Manifest validator](https://mounirlamouri.github.io/manifest-validator/) worth checking out.
 
-In my personal projects, I rely on [realfavicongenerator](http://realfavicongenerator.net/) to generate the correctly sized icons for both the Web App manifest and for use across iOS, desktop and so on. The [favicons](https://github.com/haydenbleasel/favicons) Node module is also able to achieve a similar output as part of your build process.
+In my personal projects, I rely on [realfavicongenerator](http://realfavicongenerator.net/) to generate the correctly sized icons for both the web app manifest and for use across iOS, desktop and so on. The [favicons](https://github.com/haydenbleasel/favicons) Node module is also able to achieve a similar output as part of your build process.
 
-Chromium-based browsers (Chrome, Opera etc.) [support](https://www.chromestatus.com/feature/6488656873259008) Web App manifests today with Firefox actively developing support and Edge listing them as [under consideration](https://dev.windows.com/en-us/microsoft-edge/platform/status/webapplicationmanifest). WebKit/Safari have not yet posted public signals about their intents to implement the feature just yet.
+Chromium-based browsers (Chrome, Opera etc.) [support](https://www.chromestatus.com/feature/6488656873259008) web app manifests today with Firefox actively developing support and Edge listing them as [under consideration](https://dev.windows.com/en-us/microsoft-edge/platform/status/webapplicationmanifest). WebKit/Safari have not yet posted public signals about their intents to implement the feature just yet.
 
-For more details, read [Installable Web Apps with the WebApp Manifest in Chrome for Android](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en) on Web Fundamentals.
+For more details, read [Installable Web Apps with the Web App Manifest in Chrome for Android](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en) on Web Fundamentals.
 
 ### Add to Home Screen Banner
 
-Chrome on Android has support adding in your site to the homescreen for a while now, but recent versions also support proactively suggesting sites be added using native [Web App install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en).
+Chrome on Android has support adding in your site to the home screen for a while now, but recent versions also support proactively suggesting sites be added using native [Web App install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en).
 
 <img
-src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-2-@1x.jpg" alt="The voice memos demo application displaying a webapp install banner prompt in Chrome for Android"/>
+src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-2-@1x.jpg" alt="The voice memos demo application displaying a web app install banner prompt in Chrome for Android"/>
 
 In order for the app install prompts to display your app must:
 
-* Have a valid Web App manifest
+* Have a valid web app manifest
 * Be served over HTTPS (see [letsencrypt](https://letsencrypt.org/) for a free certificate)
 * Have a valid service worker registered
 * Be visited twice, with at least 5 minutes between visits
@@ -137,20 +137,20 @@ src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-3-@1x.jpg" alt=
 
 A comprehensive set of [service worker samples](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker) are available over on Google Chrome samples. Jake Archibald's [offline cookbook](https://jakearchibald.com/2014/offline-cookbook/) is a must-read and I highly recommend trying out Paul Kinlan's [your first offline web app](https://developers.google.com/web/fundamentals/getting-started/your-first-offline-web-app/) walkthrough if new to service worker.
 
-Our team also maintain a number of Service Worker helper utilities and build tools that we find useful for reducing the overhead in getting Service Worker setup. They're listed over on [Service Worker Libraries](https://developers.google.com/web/tools/service-worker-libraries/). The two main ones are:
+Our team also maintain a number of service worker helper utilities and build tools that we find useful for reducing the overhead in getting service worker setup. They're listed over on [Service Worker Libraries](https://developers.google.com/web/tools/service-worker-libraries/). The two main ones are:
 
 * [sw-precache](https://github.com/GoogleChrome/sw-precache/): a build-time tool that generates a service worker script useful for precaching your web app shell
 * [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox): a library providing runtime caching for infrequently used resources
 
 Jeff Posnick wrote a quick primer on sw-precache called [Offline-first, fast, with the sw-precache module](https://developers.google.com/web/updates/2015/02/offline-first-with-sw-precache?hl=en) and a [codelab](https://www.code-labs.io/codelabs/sw-precache/index.html) on the same tool that you might find useful.
 
-Chrome, Opera and Firefox have all implemented support for Service Worker with Edge having positive public signals about interest in the feature. Safari briefly mentioned interest in it via one engineer's proposed [five year plan](https://trac.webkit.org/wiki/FiveYearPlanFall2015).
+Chrome, Opera and Firefox have all implemented support for service worker with Edge having positive public signals about interest in the feature. Safari briefly mentioned interest in it via one engineer's proposed [five year plan](https://trac.webkit.org/wiki/FiveYearPlanFall2015).
 
 ### Push Notifications for re-engagement
 
 > Push notifications allow your users to opt-in to timely updates from sites they love and allow you to effectively re-engage them with customized, engaging content.
 
-Effectively, you can build web apps that users can engage with outside of a tab. The browser can be closed and they don't even need to be actively using your web app to engage with your experience. The feature requires both service worker and a Web App manifest, building on some of the features summarised earlier.
+Effectively, you can build web apps that users can engage with outside of a tab. The browser can be closed and they don't even need to be actively using your web app to engage with your experience. The feature requires both service worker and a web app manifest, building on some of the features summarised earlier.
 
 The Push API is [implemented](https://www.chromestatus.com/features/5416033485586432) in Chrome, in development in Firefox and [under consideration](https://dev.windows.com/en-us/microsoft-edge/platform/status/pushapi) in Edge. There are no public signals from Safari about their intent to implement this feature just yet.
 
@@ -206,7 +206,7 @@ The official starting point for [Polymer](https://polymer-project.org) web apps 
 
 * Web Application manifest
 * Chrome for Android Splashscreen
-* Service Worker offline caching with the [Platinum SW elements](https://elements.polymer-project.org/elements/platinum-sw)
+* Service worker offline caching with the [Platinum SW elements](https://elements.polymer-project.org/elements/platinum-sw)
 * Push Notifications (manual setup required) with the [Platinum Push elements](https://elements.polymer-project.org/elements/platinum-push-messaging)
 
 <img
