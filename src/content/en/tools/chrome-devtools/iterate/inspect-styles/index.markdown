@@ -25,7 +25,7 @@ related-guides:
   edit-dom:
     -
       title: "Edit the DOM"
-      href: /web/tools/chrome-devtools/iterate/inspect-styles/edit-dom
+      href: tools/chrome-devtools/iterate/inspect-styles/edit-dom
 ---
 
 <p class="intro">Inspect and live-edit the HTML and CSS of a page using 
@@ -36,74 +36,6 @@ the Chrome DevTools Elements panel.</p>
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.dom-styles %}
-
-## Inspect an element {#inspect-an-element}
-
-Use the **Elements panel** to inspect all elements in your page in one 
-DOM tree. Select any element and inspect the styles applied to it.
-
-{% animation animations/inspect-element.mp4 %}
-
-There are several ways to inspect an element:
-
-Right-click any element on the page and select **Inspect**.
-
-![Inspect an element via right-click](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/right-click-inspect.png)
-
-Press <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd>
-+ <kbd class="kbd">C</kbd> (Windows) or <kbd class="kbd">Cmd</kbd>
-+ <kbd class="kbd">Shift</kbd> + <kbd class="kbd">C</kbd> (Mac) to open 
-DevTools in Inspect Element mode, then click on an element.
-
-Click the **Inspect Element** button
-![Inspect icon](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/inspect-icon.png){:.inline} 
-to go into Inspect Element Mode, then click on an element.
-
-Use the [`inspect`][inspect] method in the console, such as 
-`inspect(document.body)`. 
-
-### Inspect styles applied to an element
-
-The Styles pane shows the CSS rules that apply to the selected element, from 
-highest priority to lowest.
-
-![styles pane](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/styles-pane.png)
-
-At the top are element styles applied directly to the element 
-(`element.style`) using the style property (or applied in DevTools).
-
-Below that are any CSS rules that match the element. For example, in
-the screenshot above the selected element receives `font-weight:400` from
-a rule defined in `tools.css`.
-
-Below that are inherited styles, which include any inheritable style 
-rules that match the selected element's ancestors. For example, in the
-screenshot above the selected element inherits `display:block` from 
-`user agent stylesheet`.
-
-The labels on the image below correspond with the numbered items below.
-
-![Annotated Styles pane](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/styles-annotated.png)
-
-1. Styles associated with a selector that matches the element.
-2. [User agent stylesheets](http://meiert.com/en/blog/20070922/user-agent-style-sheets/) 
-   are clearly labelled, and are often overridden by the CSS on your web page.
-3. Rules that have been overridden by **cascading rules** are shown with 
-   strikethrough text.
-4. **Inherited** styles are displayed as a group under the "Inherited 
-   from `<NODE>`" header. Click the DOM node in the header to navigate to 
-   its position in the DOM tree view. (The [CSS 2.1 properties 
-   table](http://www.w3.org/TR/CSS21/propidx.html) shows which properties 
-   are inheritable.)
-5. Grey colored entries are rules that are not defined but instead 
-   **computed at runtime**.
-
-Understanding how cascading and inheritance works is essential to 
-debugging your styles. The cascade relates to how CSS declarations are 
-given weights to determine which rules should take precedence when they 
-overlap with another rule. Inheritance relates to how HTML elements inherit 
-CSS properties from their containing elements (ancestors). For more, 
-see [W3C documentation on cascading](http://www.w3.org/TR/CSS2/cascade.html).
 
 ## Live-edit a DOM node
 
