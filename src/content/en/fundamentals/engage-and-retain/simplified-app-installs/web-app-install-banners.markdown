@@ -32,14 +32,14 @@ notes:
 Chrome will automatically display the banner when your app meets the following
 criteria:
 
-* Have a [web app manifest](.) file with:
+* Has a [web app manifest](.) file with:
   - a `short_name`
-  - a 144x144 png icon (the icon declaration's must include a mime type of `image/png`)
-* Have a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
+  - a 144x144 png icon (the icon declarations must include a mime type of `image/png`).
+* Has a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
   registered on your site.
-* Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/) (you 
-  need a service worker after all)
-* Be visited by the user twice, over two separate days during the course
+* Is served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/) (you 
+  need a service worker after all).
+* Is visited by the user twice, over two separate days during the course
   of two weeks.
 
 ## Customize the icons
@@ -77,7 +77,7 @@ density.
 
 ## Customize how your site is launched
 
-You make your web app hide the browsers UI by setting the `display` type to `standalone`.
+You make your web app hide the browser's UI by setting the `display` type to `standalone`.
 
 {% highlight json %}
 "display": "standalone"
