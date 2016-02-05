@@ -38,4 +38,4 @@ occur when a network request or message is made from your page.
 Below is an overly simplified version of the service worker lifecycle on its
 first installation.
 
-![Service Worker lifecydle](images/sw-lifecycle.png)
+![service worker lifecydle](images/sw-lifecycle.png)

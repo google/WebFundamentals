@@ -35,7 +35,7 @@ Sindre Sorhus also created [envcheck](https://github.com/sindresorhus/envcheck/)
 
 ## Articles
 
-This month the community have been building full-stack webapps, Hybrid apps and even a remote desktop client with Yeoman generators. We enjoyed reading:
+This month the community have been building full-stack web apps, Hybrid apps and even a remote desktop client with Yeoman generators. We enjoyed reading:
 
 [A Remote Desktop Client with AngularJS and Yeoman](http://blog.mgechev.com/2014/02/08/remote-desktop-vnc-client-with-angularjs-and-yeoman/)
 

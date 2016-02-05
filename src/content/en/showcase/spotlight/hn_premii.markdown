@@ -35,16 +35,16 @@ showcase:
         User can try my app without downloading, and can use same app on different platforms. As of today, my app works on latest HTML5 capable browsers including but not limited to Firefox OS, Windows Phone, blackberry, iOS and Android; and its available to download on different app stores. This app is also available on the Chrome Web Store. I am a sole developer and I work on this few hours per week. I don't think that any other technology would have allowed me to support different platforms.
     - question: What worked really well during development?
       answer: |
-        I was surprised how well all latest browsers support major HTML5 features. I started my webapp as a prototype to see what I can build using Open Web (HTML5, CSS, Javascript). I only tested my app on iOS Safari and Android browser during development, and it worked on Firefox and with little changes, I was able to support IE mobile.
+        I was surprised how well all latest browsers support major HTML5 features. I started my web app as a prototype to see what I can build using Open Web (HTML5, CSS, Javascript). I only tested my app on iOS Safari and Android browser during development, and it worked on Firefox and with little changes, I was able to support IE mobile.
 
-        Like everyone else, I thought 60FPS was not possible on mobile webapp, specially gestures. I was able to implement pull to refresh, and swipe to go back with little learning; and was able to make it work on all major browsers. With that knowledge, I was able to implement Flipboard webapp style story navigation in few hours.
+        Like everyone else, I thought 60FPS was not possible on mobile web app, specially gestures. I was able to implement pull to refresh, and swipe to go back with little learning; and was able to make it work on all major browsers. With that knowledge, I was able to implement Flipboard web app style story navigation in few hours.
     - question: If you could have any API to improve your app, what would it be?
       answer: |
-        **Intent**: Should be able to launch Android native share intent or iOS share from my webapp. This will allow user to choose the service of their choice instead of my app's limited options.
+        **Intent**: Should be able to launch Android native share intent or iOS share from my web app. This will allow user to choose the service of their choice instead of my app's limited options.
 
         **Persistent local storage**: Like to see better support for localstorage. 5MB/2.5MB is not enough. Not only that, there is no way to figure out how much space is available. My app can manage storage properly if I knew how much space is left.
 
-        **Native/standalone webapp**: Better option to deploy/install my webapp on iOS, Android and WP as a standalone app. I use Cordova but its painful to update to the latest version. Chrome on Android is moving in right direction, but iOS and Windows Phone is not providing enough support for standalone app.
+        **Native/standalone web app**: Better option to deploy/install my web app on iOS, Android and WP as a standalone app. I use Cordova but its painful to update to the latest version. Chrome on Android is moving in right direction, but iOS and Windows Phone is not providing enough support for standalone app.
 
 related-guides:
 -

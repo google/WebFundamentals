@@ -23,7 +23,7 @@ self.addEventListener('fetch', function(event) {
 });
 {% endhighlight %}
 
-Now open up Chrome DevTools for the Service Worker and you will see a number of 
+Now open up Chrome DevTools for the service worker and you will see a number of 
 requests.
 
 <img src="images/image04.png" width="624" height="350" />

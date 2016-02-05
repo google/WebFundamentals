@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "DevTools Digest: Efficient element edits, Service Worker debugging, and Material Design shades"
+title: "DevTools Digest: Efficient element edits, service worker debugging, and Material Design shades"
 published_on: 2015-10-29
 updated_on: 2015-10-29
 authors:
@@ -23,11 +23,11 @@ It’s now much easier to quickly hide or delete an element, trigger a certain s
 
 ## Debug Service Workers via the Resources panel
 
-Service Workers are fantastic once you’ve got them set up but they can be tricky to wrap your head around early on. This was made worse by the fact that debugging them required leaving the DevTools and opening chrome://serviceworker-internals/ in a new browser window.
+Service workers are fantastic once you’ve got them set up but they can be tricky to wrap your head around early on. This was made worse by the fact that debugging them required leaving the DevTools and opening chrome://serviceworker-internals/ in a new browser window.
 
 ![Service Workers in Resources](/web/updates/images/2015/10/devtools-service-workers.png)
 
-Not anymore! Now you can debug Service Workers for the current domain directly from the Resources panel. It’s still a work-in-progress, but already a heavy improvement from the previous status quo.
+Not anymore! Now you can debug service workers for the current domain directly from the Resources panel. It’s still a work-in-progress, but already a heavy improvement from the previous status quo.
 
 ## All the colors: Material Design shades in the colorpicker
 

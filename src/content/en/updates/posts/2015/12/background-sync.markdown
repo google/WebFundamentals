@@ -34,7 +34,7 @@ This is rubbish. Background sync lets you do better.
 
 ## The solution
 
-The following video shows [Emojoy](https://jakearchibald-gcm.appspot.com), a simple emoji-only chat demo… thing. It’s a [progressive app](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/). It works offline-first. It uses push messages and notifications, and it uses background sync.
+The following video shows [Emojoy](https://jakearchibald-gcm.appspot.com), a simple emoji-only chat demo… thing. It’s a [progressive web app](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/). It works offline-first. It uses push messages and notifications, and it uses background sync.
 
 If the user tries to send a message when they have zero connectivity, then, thankfully, the message is sent in the background once they get connectivity.
 
@@ -45,7 +45,7 @@ Background sync hasn’t hit the main release of Chrome yet, so if you want to t
 1. [Open Emojoy](https://jakearchibald-gcm.appspot.com).
 1. Go offline (either using airplane-mode or visit your local Faraday cage).
 1. Type a message.
-1. Go back to your homescreen (optionally close the tab/browser).
+1. Go back to your home screen (optionally close the tab/browser).
 1. Go online.
 1. Message sends in the background!
 

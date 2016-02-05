@@ -15,11 +15,11 @@ In this codelab, you'll learn how to add Push Notifications to web applications.
 This will enable you to re-engage users with breaking news and information about
 new content.
 
-You'll also learn the basics of Service Workers.
+You'll also learn the basics of service workers.
 
 ## What you'll learn
 
-* Service Worker basics: installation and event handling
+* Service worker basics: installation and event handling
 * How to set up a Google Cloud Messaging (GCM) account
 * How to add a web manifest
 * Techniques for requesting GCM to send a notification to a web client
@@ -30,7 +30,7 @@ You'll also learn the basics of Service Workers.
 
 * Chrome 42 or above
 * A basic understanding of [git](https://git-scm.com/), and [Chrome DevTools](/web/tools/chrome-devtools)
-* Experience of [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/) and [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) would also be useful, but is not crucial
+* Experience of [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/) and [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) would also be useful, but is not crucial
 * The sample code
 * A text editor
 * A terminal window to run command line tools

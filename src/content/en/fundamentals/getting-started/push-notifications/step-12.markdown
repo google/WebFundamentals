@@ -19,12 +19,12 @@ Pat yourself on the back. You built a web app that enables Push Notifications!
 
 ## Frequently Asked Questions
 
-* **My Service Worker didn't update!**<br>
+* **My service worker didn't update!**<br>
 Are you sure? Check the source tab in _chrome://serviceworker-internals_. If it
 really didn't update, restart Chrome.
 
-* **I tried everything, but my Service Worker's still not updating :^|**<br>
-Did you check and validate your code? If your Service Worker code can't be
+* **I tried everything, but my service worker's still not updating :^|**<br>
+Did you check and validate your code? If your service worker code can't be
 parsed, it won't install.
 
 * **My request to GCM is failing**<br>
@@ -39,12 +39,12 @@ messaging API enabled on
 
 * **I'm getting errors I don't understand**<br>
 Try using Chrome Canary: this often gives more informative error messages about
-Service Worker woes.
+service worker woes.
 
-* **I'm not seeing console logs for events in my Service Worker**<br>
+* **I'm not seeing console logs for events in my service worker**<br>
 You'll only get installed and activated events the first time you use the
-Service Worker or when the code is changed. The started event will only be fired
-once for each Service Worker session.
+service worker or when the code is changed. The started event will only be fired
+once for each service worker session.
 
 * **What about Firefox?**<br>
 [As of Firefox
@@ -52,17 +52,17 @@ once for each Service Worker session.
 
 ## What we've covered
 
-* Install a Service Worker and handle events
+* Install a service worker and handle events
 * Set up a Google Cloud Messaging (GCM) account
 * Add a web manifest
-* Enable a Service Worker to handle push message events
+* Enable a service worker to handle push message events
 * Send a request to GCM via cURL or XHR
 * Display notifications
 * Handle notification clicks
 
 ## Next Steps
 
-* Service Worker codelab (if you haven't already done it!)
+* Service worker codelab (if you haven't already done it!)
 
 ## Learn More
 

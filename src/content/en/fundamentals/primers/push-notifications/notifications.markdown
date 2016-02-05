@@ -37,7 +37,7 @@ instructions in the getting started guide for either
 [iOS](https://developers.google.com/cloud-messaging/ios/start). Make sure to 
 enable *Google Cloud Messaging for Android*, and make a note of the 
 *project number* and *API key*, as you’ll need them later on. The project 
-number is used in the Web App manifest ([below](#the-web-app-manifest)) as the `gcm_sender_id` 
+number is used in the web app manifest ([below](#the-web-app-manifest)) as the `gcm_sender_id` 
 parameter, and you will need the Public API Key on your server when you use 
 the GCM API.
 

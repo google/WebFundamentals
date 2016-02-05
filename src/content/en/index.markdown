@@ -110,7 +110,7 @@ title: "Web @ Google Developers"
       <h3>Get Productive</h3>
       <p>Discover our tools and kickstart your development</p>
       <ul>
-        <li><a href="/web/tools/chrome-devtools/">Chrome Dev Tools</a></li>
+        <li><a href="/web/tools/chrome-devtools/">Chrome DevTools</a></li>
         <li><a href="/web/tools/starter-kit/">Web Starter Kit</a></li>
         <li><a href="/web/tools/polymer-starter-kit/">Polymer Start Kit</a></li>
         <li><a href="http://www.getmdl.io/">Material Design Lite</a></li>

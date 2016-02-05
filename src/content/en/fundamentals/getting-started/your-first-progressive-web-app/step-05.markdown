@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Use service workers to cache application data"
-description: "Use a Service Worker to cache application data in a Progressive Web App"
+description: "Use a service worker to cache application data in a progressive web app"
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1
@@ -45,10 +45,10 @@ it can't, it's OK to fail because we've already retrieved the latest cached
 data in our app.
 
 In the service worker, let's add a `dataCacheName` so that we can separate our 
-applications data from the App Shell. When the App Shell is updated and older 
+applications data from the app shell. When the app shell is updated and older 
 caches are purged, our data will remain untouched, ready for a super fast load. 
 Keep in mind, if your data format changes in the future, you'll need a way to 
-handle that and ensure the App Shell and content stay in sync.
+handle that and ensure the app shell and content stay in sync.
 
 Add the following line to the top of your `service-worker.js` file:  
 {% highlight javascript %}
@@ -96,7 +96,7 @@ e.respondWith(
 {% endhighlight %}
 
 Our app won't work offline quite yet. We've implemented caching and retrieval 
-for the App Shell, but even though we're caching the data, we're still dependant 
+for the app shell, but even though we're caching the data, we're still dependant 
 on the network.
 
 ## Making the requests
@@ -164,7 +164,7 @@ from the network.
   indicating data was retrieved from the cache, and one that it was retrieved 
   from the network.
 * The app should work completely offline now. Try stopping your development 
-  server and disconnecting your network and running the app. The App Shell and 
+  server and disconnecting your network and running the app. The app shell and 
   data should both be served from the cache.
 
 <a href="https://weather-pwa-sample.firebaseapp.com/step-07/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>

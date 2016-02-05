@@ -28,7 +28,7 @@ order: 3
 ## Criteria to show the banner
 
 The criteria is similar to the Web App install banner except for the need of 
-a Service Worker. Your site must:
+a service worker. Your site must:
 
 * Have a [web app manifest](.) file with:
   - a `short_name`

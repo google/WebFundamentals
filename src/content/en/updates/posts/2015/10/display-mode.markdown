@@ -14,8 +14,8 @@ description: "Detecting if a web app is launched from the home screen"
 
 During the past year we have focused on enabling users to build app like 
 experiences on the web by making it possible for apps to work offline using 
-[Service Worker](/web/fundamentals/primers/service-workers) and to get a 
-presence on the homescreen using the 
+[service worker](/web/fundamentals/primers/service-workers) and to get a 
+presence on the home screen using the 
 [Web App Manifest](/web/fundamentals/engage-and-retain/simplified-app-installs).
 
 Now apps tend to offer different experiences as sites, and developers might want to
@@ -53,7 +53,7 @@ is being used for displaying the app, ie. is it being displayed by a `browser`,
 apps, which will mean that `(display-mode: standalone)` is `true`.
 
 To apply a different background color for the app above when being launched
-from the homescreen, all we need to do it use the following conditional CSS:
+from the home screen, all we need to do it use the following conditional CSS:
 
 {% highlight javascript %}
 @media all and (display-mode: standalone) {
@@ -84,7 +84,7 @@ engagement with Web App install banners".
 
 It is also recommended to not add back-buttons which are visible in the standard
 Chrome UI. If a back-button is needed, the `"display": "browser"` mode can be used
-in the Web App Manifest instead.
+in the web app manifest instead.
 
 ###FAQ
 * Will this work on Chrome for iOS or on Desktop?
