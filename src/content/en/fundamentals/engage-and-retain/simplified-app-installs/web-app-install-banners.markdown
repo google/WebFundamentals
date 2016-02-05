@@ -32,14 +32,14 @@ notes:
 Chrome will automatically display the banner when your app meets the following
 criteria:
 
-* Have a [web app manifest](.) file with:
+* Has a [web app manifest](.) file with:
   - a `short_name`
-  - a 144x144 png icon (the icon declaration's must include a mime type of `image/png`)
-* Have a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
+  - a 144x144 png icon (the icon declarations must include a mime type of `image/png`).
+* Has a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
   registered on your site.
-* Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/) (you 
-  need a service worker after all)
-* Be visited by the user twice, over two separate days during the course
+* Is served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/) (you 
+  need a service worker after all).
+* Is visited by the user twice, over two separate days during the course
   of two weeks.
 
 ## Customize the icons
@@ -77,7 +77,7 @@ density.
 
 ## Customize how your site is launched
 
-You make your web app hide the browsers UI by setting the `display` type to `standalone`.
+You make your web app hide the browser's UI by setting the `display` type to `standalone`.
 
 {% highlight json %}
 "display": "standalone"
@@ -101,13 +101,13 @@ site in a browser, you can set the `display` type to `browser`.
 When you launch your web app from the home screen a number of things happen behind the
 scenes:
 
-1. Chrome needs to launch.
-2. The renderer that displays the page needs to start up.
-3. Your site is loaded from the network (or cache like ServiceWorker).
+1. Chrome launchs.
+2. The renderer that displays the page starts up.
+3. Your site loads from the network (or from cache if it has a ServiceWorker).
 
 While this is happening the screen will be white and will look like it has stalled.
 This becomes especially apparent if you are loading your web page from the network where
-pages take more than 1 or 2 seconds to get any content visible on the homepage.
+pages take more than one or two seconds to get any content visible on the homepage.
 
 To provide a better user experience you can control the color of the screen by adding a
 `background_color` to your manifest and giving it an HTML color value. The color will be used
@@ -144,12 +144,11 @@ is a hint from your web page that tells the browser what color to tint
   <figcaption>Theme color</figcaption>
 </figure>
 
-The problem is, you have to define the theme color on every single page, and if 
+Without a manifest, you have to define the theme color on every single page, and if 
 you have a large site or legacy site, making a lot of site wide changes is not feasible.
 
 Add in a `theme_color` attribute to your manifest, and when the site is launched
-from the home screen every page in the domain will automatically have the theme color
-applied.
+from the home screen every page in the domain will automatically get the theme color.
 
 {% highlight json %}
 "theme_color": "#2196F3"
@@ -163,9 +162,9 @@ applied.
 
 ## Specify the initial orientation of the page
 
-You can enforce a specific orientation, which is really useful for some use 
-cases like games, which may only work in one orientation. Use this with 
-care. Users prefer selecting the orientation.
+You can enforce a specific orientation, which is really useful for use cases 
+that work in only one orientation, like games for example. Use this with 
+selectively. Users prefer selecting the orientation.
 
 {% highlight json %}
 "orientation": "landscape"

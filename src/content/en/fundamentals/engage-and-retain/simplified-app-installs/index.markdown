@@ -87,7 +87,7 @@ unlikely to be what your users want.
 ## Tell the browser about your manifest
 
 Once you have the manifest created and and on your site, all you need to do is add 
-a `link` tag to all the pages that encompass your web app as follows.
+a `link` tag to all the pages that encompass your web app as follows:
 
 {% highlight html %}
 <link rel="manifest" href="/manifest.json">
