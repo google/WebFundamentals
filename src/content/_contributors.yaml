@@ -411,8 +411,8 @@ jeokrang:
     given: Hunmin
     family: Kim
   org:
-    name: NHN Technology Services
-    unit: Front-End Development Team
+    name: NAVER Corp.
+    unit: Blog & Post Development lab
   country: Korea
   role:
     - translator
@@ -421,7 +421,7 @@ jeokrang:
   twitter:
   email: jeokrang@gmail.com
   description:
-    en: "Hunmin is a Web Front-End Developer"
+    en: "Hunmin is a JavaScript Developer"
 
 greenido:
   name:
