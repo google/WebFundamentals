@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Start with a fast first load"
-description: "Fast first loads with Progressive Web Apps and the app shell model."
+description: "Fast first loads with Progressive Web Apps and the App Shell model."
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1
@@ -26,7 +26,7 @@ the first load.
 
 For this code lab, we'll statically inject a weather forecast, but in a 
 production app, the latest weather forecast data would be injected by the server 
-when served based on the IP address geo-location of the user. 
+based on the IP address geo-location of the user. 
 
 Add the following inside the immediately invoked function expression:
 
@@ -70,7 +70,7 @@ loads the app on subsequent visits, they may have changed cities, so we need to
 load the information for those cities, not necessarily the first city they ever 
 looked up.
 
-User preferences, like the list of cities a user has subscribed to should be 
+User preferences, like the list of cities a user has subscribed to, should be 
 stored locally using IndexedDB or other fast storage mechanism. To simplify this 
 sample as much as possible, we've used `localStorage`, which is not ideal for 
 production apps because it is a blocking, synchronous storage mechanism that is 
@@ -99,7 +99,7 @@ and render those, or use the injected data. Add the following code to your
  * Code required to start the app
  *
  * NOTE: To simplify this getting started guide, we've used localStorage.
- *   localStorage is a syncronous API and has serious performance
+ *   localStorage is a synchronous API and has serious performance
  *   implications. It should not be used in production applications!
  *   Instead, check out IDB (https://www.npmjs.com/package/idb) or
  *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)
