@@ -20,9 +20,9 @@ app install banner and even cancel or defer it until a more convenient time.
 
 ## Did a user install the app
 
-The `beforeinstallprompt` event will return a promise called `userChoice` 
-that will resolve when the user actions the prompt.  The promise will 
-return an object with a value of `dismissed` on the `outcome`
+The `beforeinstallprompt` event returns a promise called `userChoice` 
+that resolves when the user acts on the prompt.  The promise 
+returns an object with a value of `dismissed` on the `outcome`
 attribute or `accepted` if the user added the web page to the home screen.
 
 {% highlight javascript %}
@@ -51,8 +51,8 @@ install prompt.
 
 ## Deferring or cancelling the prompt
 
-Chrome manages when to trigger the prompt and for some sites this might not 
-be ideal. You to defer the prompt to a later time in the apps usage or 
+Chrome manages when to trigger the prompt but for some sites this might not 
+be ideal. You can defer the prompt to a later time in the app's usage or 
 even cancel it. 
 
 When Chrome decides to prompt the user to install the app you 
@@ -60,7 +60,7 @@ can prevent the default action and store the event for later. Then when
 the user has a positive interaction with your site you can then re-trigger 
 the prompt by calling `prompt()` on the stored event. 
 
-This will then cause Chrome to show the banner and all the Promise attributes 
+This causes Chrome to show the banner and all the Promise attributes 
 such as `userChoice` will be available to bind to so that you can understand 
 what action the user took.
 

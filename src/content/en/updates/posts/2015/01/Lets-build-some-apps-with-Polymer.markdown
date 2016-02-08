@@ -115,9 +115,9 @@ Vulcanize will concatenate your imports into a single bundle, *significantly* re
 
 But just building a performant app doesn't solve the dilemma of a user with little or no connectivity. In other words, if your app doesn't work offline, then it's not really a mobile app. Today you can use [the much maligned application cache](http://alistapart.com/article/application-cache-is-a-douchebag) to offline your resources, but looking to the future, [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) should soon make the offline development experience much nicer.
 
-Jake Archibald has recently published [an amazing cookbook of Service Worker patterns](http://jakearchibald.com/2014/offline-cookbook/) but I'll give you the quick start to get you going:
+Jake Archibald has recently published [an amazing cookbook of service worker patterns](http://jakearchibald.com/2014/offline-cookbook/) but I'll give you the quick start to get you going:
 
-Installing a Service Worker is quit easy. Create a `worker.js` file, and register it when your application boots up.
+Installing a service worker is quit easy. Create a `worker.js` file, and register it when your application boots up.
 
 <p style="text-align: center;">
   <img src="{{site.WFBaseUrl}}/updates/images/2015-01-20-lets-build-some-apps-with-polymer/service-worker.jpg" alt="Polymer report card needs improvement" width="800" />

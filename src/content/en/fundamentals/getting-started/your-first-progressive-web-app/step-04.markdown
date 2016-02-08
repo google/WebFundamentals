@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
-title: "Use service workers to pre-cache the App Shell"
-description: "Use a service worker to pre-cache the App Shell of a Progressive Web App."
+title: "Use service workers to pre-cache the app shell"
+description: "Use a service worker to pre-cache the app shell of a Progressive Web App."
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1
@@ -9,7 +9,7 @@ order: 4
 authors:
   - petelepage
 notes:
-  sw-intro: "If you're unfamiliar with Service Workers, you can get a basic understanding by reading <a href='http://www.html5rocks.com/en/tutorials/service-worker/introduction/'>Introduction To Service Workers</a> about what they can do, the life cycle and some of the limitation."
+  sw-intro: "If you're unfamiliar with service workers, you can get a basic understanding by reading <a href='http://www.html5rocks.com/en/tutorials/service-worker/introduction/'>Introduction To Service Workers</a> about what they can do, the life cycle and some of the limitation."
   sw-https: "Service worker functionality is only available on pages that are accessed via HTTPS (<code>https://localhost</code> and equivalents will also work, to facilitate testing). To learn about the rationale behind this restriction check out <a href='http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features'>Prefer Secure Origins For Powerful New Features</a> from the Chromium team."
   not-production: "The code below <b>must NOT</b> be used in production, it covers only the most basic use cases and it's easy to get yourself into a state where your app shell will never update. Be sure to review the section below that discusses the pitfalls of this implementation and how to avoid them."
   permutations: "Be sure to include all permutations of file names, for example our app is served from <code>index.html</code>, but it may also be requested as <code>/</code> since the server sends <code>index.html</code> when a root folder is requested. You could deal with this in the <code>fetch</code> method, but it would require special casing which may become complex."
@@ -19,7 +19,7 @@ notes:
 <p class="intro">
 Progressive Web Apps have to be fast, and installable, which means that they 
 work online, offline, or on an intermittent, slow connections. To achieve 
-this, we need to cache our App Shell using service worker, so that it's 
+this, we need to cache our app shell using service worker, so that it's 
 always available quickly and reliably. 
 </p>
 
@@ -32,7 +32,7 @@ about what they can do, how their lifecycle works and more.
 
 Features provided via service workers should be considered a progressive 
 enhancement, and added only if supported by the browser. For example, with 
-service workers you can cache the App Shell and data for your app, so that it's 
+service workers you can cache the app shell and data for your app, so that it's 
 available even when the network isn't. When service workers aren't supported, 
 the offline code isn't called, and the user gets a basic experience. Using 
 feature detection to provide progressive enhancement has little overhead and it 
@@ -87,7 +87,7 @@ self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] Install');  
   e.waitUntil(  
     caches.open(cacheName).then(function(cache) {  
-      console.log('[ServiceWorker] Caching App Shell');  
+      console.log('[ServiceWorker] Caching app shell');  
       return cache.addAll(filesToCache);  
     })  
   );  
@@ -96,7 +96,7 @@ self.addEventListener('install', function(e) {
 
 First, we need to open the cache with `cache.open()` and provide a cache name. 
 Providing a cache name allows us to version files, or separate data from the 
-App Shell so that we can easily update one but not affect the other. 
+app shell so that we can easily update one but not affect the other. 
 
 Once the cache is open, we can then call `cache.addAll()`, which takes a list of 
 URLs, then fetches them from the server and adds the response to the cache. 
@@ -153,10 +153,10 @@ var filesToCache = [
 
 {% include shared/note.liquid list=page.notes.permutations %}
 
-Our app doesn’t work offline quite yet. We’ve cached the App Shell components, 
+Our app doesn’t work offline quite yet. We’ve cached the app shell components, 
 but we still need to load them from the local cache.
 
-## Serve the App Shell from the cache
+## Serve the app shell from the cache
 
 Service workers provide the ability to intercept requests made from our 
 Progressive Web App and handle them within the service worker. That means we can 
@@ -171,7 +171,7 @@ self.addEventListener('fetch', function(event) {
 });
 {% endhighlight %}
 
-Let's now serve the App Shell from the cache. Add the following code to the 
+Let's now serve the app shell from the cache. Add the following code to the 
 `service-worker.js` file:
 
 {% highlight javascript %}

@@ -6,6 +6,7 @@ published_on: 2015-04-30
 updated_on: 2015-04-30
 order: 3
 authors:
+  - kaycebasques
   - megginkearney
 related-guides:
   basics:
@@ -35,6 +36,7 @@ notes:
   chrome-extensions:
     - "Many Chrome extensions add their own event listeners onto the DOM. If you see a number of event listeners that aren't set by your code, you may want to reopen your page in an <a href='https://support.google.com/chrome/answer/95464?hl=en'>Incognito window</a>. Incognito windows prevent extensions from running by default."
 ---
+
 <p class="intro">
   The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates.
 </p>
@@ -43,31 +45,65 @@ notes:
 
 {% include shared/takeaway.liquid list=page.key-takeaways.dom %}
 
-## Inspect page element
+## Inspect an element {#inspect-an-element}
 
-[Inspect a page element](/web/tools/chrome-devtools/iterate/inspect-styles/basics#how-to-inspect-a-page) to see it's DOM nodes rendered in the browser:
+Use the **Elements panel** to inspect all elements in your page in one
+DOM tree. Select any element and inspect the styles applied to it.
 
-{% animation animations/right-click-inspect-element.mp4 %}
+{% animation animations/inspect-element.mp4 %}
+
+There are several ways to inspect an element:
+
+Right-click any element on the page and select **Inspect**.
+
+![Inspect an element via right-click](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/right-click-inspect.png)
+
+Press <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd>
++ <kbd class="kbd">C</kbd> (Windows) or <kbd class="kbd">Cmd</kbd>
++ <kbd class="kbd">Shift</kbd> + <kbd class="kbd">C</kbd> (Mac) to open
+DevTools in Inspect Element mode, then click on an element.
+
+Click the **Inspect Element** button
+![Inspect icon](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/inspect-icon.png){:.inline}
+to go into Inspect Element Mode, then click on an element.
+
+Use the [`inspect`][inspect] method in the console, such as
+`inspect(document.body)`.
 
 ## Navigate the DOM
 
-Navigate through the DOM structure using either mouse or keyboard.
-See also the complete list of [keyboard shortcuts for the Elements panel](/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts).
+Navigate through the DOM structure using your mouse or keyboard.
 
-### Expand or collapse node
+A collapsed node has an arrow next to it pointing right:
+![collapsed node](imgs/collapsed-node.png){:.inline}
 
-To expand a collapsed node: ![Expand node](imgs/collapsed-div.png){:.inline}, double-click the node or press **Right arrow**.
-Expanding a node automatically selects its first child, so you can expand a deeply-nested structure by pressing the **Right arrow** repeatedly.
+An expanded node has an arrow next to it pointing down:
+![expanded node](imgs/expanded-node.png){:.inline}
 
-To collapse an expanded node: ![Collapse node](imgs/expanded-body.png){:.inline}, double-click the node or press **Left arrow**.
+Using your mouse:
+
+* Click once to highlight a node.
+* To expand a node, double-click anywhere on it or click on the arrow next  
+  to it.
+* To collapse a node, click on the arrow next to it.
+
+Using your keyboard:
+
+* Press the **Up Arrow** key to select the node above the current one.
+* Press the **Down Arrow** to select the node below the current one.
+* Press the **Right Arrow** key to expand a collapsed node. Press
+  it again to move to the first child of the (now-expanded) node. You can 
+  use this technique to quickly navigate deeply-nested nodes.
 
 ### Navigate the breadcrumb trail
 
-As you navigate, the Elements panel shows a breadcrumb trail in the bottom bar:
+At the bottom of the Elements panel is a breadcrumb trail. 
 
 ![Breadcrumb trail](imgs/breadcrumb-body.png)
 
-The currently selected node is highlighted in blue. Navigating down the structure extends the trail:
+The currently selected node is highlighted in blue. The node to the left is
+the current node's parent. And to the left of that is the parent's parent.
+And so on, all the way up the tree.
 
 ![Extend breadcrumb trail](imgs/breadcrumb-footer.png)
 
@@ -76,76 +112,65 @@ Navigating back up the structure moves the highlight:
 ![Navigate up breadcrumb trail](imgs/breadcrumb-trail.png)
 
 DevTools displays as many items as possible in the trail.
-If the entire trail doesn't fit in the status bar, an ellipsis (...) shows where the trail has been truncated. Click the ellipsis to show the hidden elements:
+If the entire trail doesn't fit in the status bar, an ellipsis (...) 
+shows where the trail has been truncated. Click the ellipsis to show the 
+hidden elements:
 
 ![Breadcrumb ellipsis](imgs/breadcrumb-ellipsis.png)
 
 ## Edit DOM nodes and attributes
 
-To [edit DOM nodes](/web/tools/chrome-devtools/iterate/inspect-styles/basics#how-to-live-edit-a-dom-node), double-click the DOM node to open the **Element tag** and edit. The closing tag is automatically updated after renaming.
+To edit a DOM node name or attribute:
 
-To edit DOM attributes, double-click on the attribute name or value.
-When edit mode is active,
-cycle through attribute values by pressing **Tab**.
-Once you reach the last attribute value, pressing tab again creates a new attribute field.
+* Double-click directly on the node name or attribute.
+* Highlight the node, press <kbd>Enter</kbd>, and then press <kbd>Tab</kbd>
+  until the name or attribute is selected.
+* Right-click on the node and select **Add Attribute** or **Edit Attribute**.
+  **Edit Attribute** is context-sensitive; the portion you click on determines
+  what gets edited.
+
+The closing tag is automatically updated when you're finished.
+
+{% animation animations/edit-element-name.mp4 %}
 
 ### Edit DOM node and its children as HTML
 
 To edit a DOM node and its children as HTML:
 
-1. Right-click on the node and choose **Edit as HTML**.
-(On Windows, press <kbd class="kbd">F2</kbd> to toggle editing mode on the currently selected node.)
-2. Use the editable field to make your changes.
-3. Click outside the editable field to update the DOM.
-4. Press <kbd class="kbd">Esc</kbd> to stop editing
-without modifying the DOM.
+* Right-click on the node and select **Edit as HTML**. Clicking on the 
+  ellipsis button to the left of the node opens up the same menu.
+* Press <kbd>F2</kbd> (Windows / Linux) or <kbd>Fn</kbd>+<kbd>F2</kbd> (Mac).
+* Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (Windows / Linux) or 
+  <kbd>Cmd</kbd>+<kbd>Enter</kbd> (Mac) to save your changes. 
+* Press <kbd>Esc</kbd> to exit the editor without saving.
 
-{% animation animations/edit-as-html.mp4 %}
+![edit as HTML](imgs/edit-as-html.png)
 
-### Edit node attributes using context menu
+## Move DOM node
 
-Using **Tab** is not the only way to add and edit attributes.
-Edit and add attributes using the DOM node context menu:
+Click, hold, and drag a node to move it.
 
-![Edit DOM from Context Menu](imgs/context-menu-add-edit-attribute.png)
+{% animation animations/move-node.mp4 %}
 
-* Select **Add Attribute** to create a new field
-at the end of the opening tag.
-* Select **Edit Attribute** to modify an existing attribute. This action is context-sensitive; the portion you **Right-click** on determines the editable portion of the node.
+## Delete DOM node
 
-## Move DOM elements
-
-Test out different page structures by rearranging the elements
-in the DOM tree.
-Drag a node within the Elements panel
-to move it to a new position in the DOM tree.
-
-{% animation animations/rearrange-nodes.mp4 %}
-
-## Delete DOM elements
-
-Remove DOM nodes by using any of the following techniques:
+To delete a DOM node:
 
 * Right-click on the node and select **Delete Node**.
-* Select the node and press **Delete**.
-
-You can also remove an element by deleting its tag
-when using **Edit as HTML**.
+* Select the node and press the <kbd>Delete</kbd> key.
 
 {% include shared/remember.liquid title="Note" list=page.notes.delete-node %}
 
 ## Scroll into view
 
-When you hover over or select a DOM node,
-the rendered element is highlighted in the main browser window.
-If the element is scrolled offscreen,
-a tooltip is displayed at the edge of the browser window
-indicating that the selected element is offscreen.
+When you hover over or select a DOM node, the rendered node is highlighted 
+in the viewport. If the node is scrolled offscreen, you'll see
+a tooltip at the top of the viewport if the node is above the
+current viewport, and a tooltip at the bottom if the node is below the current
+viewport.
 
-To scroll the page so the element appears in the viewport,
-**Right-click** the element and select **Scroll into View**.
-
-{% animation animations/scroll-into-view.mp4 %}
+To scroll the page so the node appears in the viewport,
+**Right-click** the node and select **Scroll into View**.
 
 ## Set DOM breakpoints
 
@@ -185,48 +210,43 @@ in question is removed from the DOM:
 document.getElementById('main-content').remove();
 {% endhighlight %}
 
-## View DOM breakpoints
+## Interact with DOM breakpoints
 
-The Elements and Sources panels both include a pane for managing your DOM Breakpoints.
+The Elements and Sources panels both include a pane for managing your DOM 
+breakpoints.
 
-To see all of your DOM breakpoints,
-click the expander arrow next to DOM Breakpoints to show the pane.
 Each breakpoint is listed with an element identifier and the breakpoint type.
 
-![List of DOM breakpoints](imgs/active-dom-breakpoints.png)
-
-## Interact with DOM breakpoints
+![DOM breakpoints pane](imgs/dom-breakpoints-pane.png)
 
 Interact with each listed breakpoint in any of the following ways:
 
-* **Hover** over the element identifier to show the element's corresponding position on the page (similar to hovering over nodes in the Elements panel).
-* **Click** an element to jump to its location in the Elements panel.
-* **Toggle** the **checkbox** to enable or disable the breakpoint.
+* **Hover** over the element identifier to show the element's corresponding 
+  position on the page (similar to hovering over nodes in the Elements panel).
+* **Click** an element to select it in the Elements panel.
+* **Toggle** the checkbox to enable or disable the breakpoint.
 
-For example, in the following animation:
-
-* Type in the search box, and the search box changes size.
-* Set an attribute modification breakpoint on the search box.
-* Type in the search box, triggering the breakpoint and pausing execution.
-* Hovers over a JavaScript variable, displaying a popover with more details.
-
-{% animation animations/dom-breakpoint.mp4 %}
-
-When you trigger a DOM breakpoint, the breakpoint is highlighted in the DOM Breakpoints pane. The **Call Stack** pane displays the **reason** for a debugger pause:
+When you trigger a DOM breakpoint, the breakpoint is highlighted in the DOM 
+Breakpoints pane. The **Call Stack** pane displays the **reason** for a 
+debugger pause:
 
 ![Breakpoint reason](imgs/breakpoint-reason.png)
 
 ## View element event listeners
 
-View JavaScript event listeners associated with a DOM node in the **Event Listeners** pane.
-The top-level items in the Event Listeners pane show the event types
-that have registered listeners.
+View JavaScript event listeners associated with a DOM node in the 
+**Event Listeners** pane. 
 
-![Event types that have event listeners](imgs/view-event-listeners.png)
+![event listeners pane](imgs/event-listeners-pane.png)
 
-Click the expander arrow next to the event type (for example `click`) to see a list of registered event handlers. Each handler is identified by a CSS selector-like element identifier, such as `document` or `button#call-to-action`. If more than one handler is registered for the same element, the element is listed repeatedly.
+The top-level items in the Event Listeners pane show the event types that 
+have registered listeners.
 
-{% animation animations/event-listeners.mp4 %}
+Click the arrow next to the event type (for example `click`) to see 
+a list of registered event handlers. Each handler is identified by a CSS 
+selector-like element identifier, such as `document` or 
+`button#call-to-action`. If more than one handler is registered for the 
+same element, the element is listed repeatedly.
 
 Click the expander arrow next to an element identifier to see the properties of the event handler. The Event Listeners pane lists the following properties for each listener:
 
@@ -243,39 +263,80 @@ Click the expander arrow next to an element identifier to see the properties of 
       <td data-th="Description">Contains a callback function. Right-click on the function and select <strong>Show Function Definition</strong> to view where the function is defined (if source code is available).</td>
     </tr>
     <tr>
-      <td data-th="Value"><code>isAttribute</code></td>
-      <td data-th="Description">True if the event is registered through a DOM attribute (for example, <code>onclick</code>).</td>
-    </tr>
-    <tr>
-      <td data-th="Value"><code>lineNumber</code></td>
-      <td data-th="Description">Line number containing the event registration.</td>
-    </tr>
-    <tr>
-      <td data-th="Value"><code>listenerBody</code></td>
-      <td data-th="Description">String representation of the callback function.</td>
-    </tr>
-    <tr>
-      <td data-th="Value"><code>sourceName</code></td>
-      <td data-th="Description">URL Path to the source file containing the event listener.</td>
-    </tr>
-    <tr>
-      <td data-th="Value"><code>type</code></td>
-      <td data-th="Description">Type of event being listened for (for example, <code>click</code>).</td>
-    </tr>
-    <tr>
       <td data-th="Value"><code>useCapture</code></td>
       <td data-th="Description">A boolean value stating whether the <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener">useCapture</a> flag on <code>addEventListener</code> was set.</td>
     </tr>
   </tbody>
 </table>
 
-By default, registered event handlers display for the following types of elements:
-
-* The currently selected element.
-* Ancestors of the currently selected element.
-
-If you find it excessive to view all event handlers, including those registered using event delegation, click **Filter** and select the menu item **Selected Node Only** which limits displayed event listeners to only those registered directly on the element.
-
 {% include shared/remember.liquid title="Note" list=page.notes.chrome-extensions %}
 
+### View ancestor event listeners
 
+{% comment %}
+
+code for screenshot
+
+<!doctype html>
+<html>
+<body onload="console.log('onload');">
+  <div onfocus="console.log('focus');">
+    <button id="button" onclick="console.log('onclick');">click me</button>
+  </div>
+</body>
+</html>
+
+{% endcomment %}
+
+When the **Ancestors** checkbox is enabled, the event listeners for the 
+ancestors of the currently selected node are displayed, in addition to the
+currently selected node's event listeners.
+
+![ancestors enabled](imgs/ancestors-enabled.png)
+
+When the checkbox is disabled, only the event listeners for the currently
+selected node are displayed.
+
+![ancestors disabled](imgs/ancestors-disabled.png)
+
+### View framework listeners
+
+{% comment %}
+
+code for screenshot
+
+<!doctype html>
+<html>
+<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<body>
+  <button id="button">click me, please</button>
+  <script>
+    $('#button').click(function() {
+      $('#button').text('hehe, that tickled, thanks');
+    });
+  </script>
+</body>
+</html>
+
+{% endcomment %}
+
+Some JavaScript frameworks and libraries wrap native DOM events into their 
+custom event APIs. In the past this made it hard to inspect the event listeners
+with DevTools, because the function definition would just reference back to 
+the framework or library code. The **Framework listeners** feature solves 
+this problem.
+
+When the **Framework listeners** checkbox is enabled, DevTools automatically
+resolves the framework or library wrapping portion of the event code, and
+then tells you where you actually bound the event in your own code.
+
+![framework listeners enabled](imgs/framework-listeners-enabled.png)
+
+When the **Framework listeners** checkbox is disabled, the event listener code
+will probably resolve somewhere in the framework or library code. 
+
+![framework listeners disabled](imgs/framework-listeners-disabled.png)
+
+
+
+[inspect]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#inspect

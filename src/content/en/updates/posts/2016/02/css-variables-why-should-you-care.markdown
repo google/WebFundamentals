@@ -45,9 +45,10 @@ the form of CSS custom properties.
 
 Custom properties add two new features to our CSS toolbox:
 
-The ability for an author to assign arbitrary values to a property with an
-author-chosen name. The `var()` function, which allows an author to use these
-values in other properties.
+- The ability for an author to assign arbitrary values to a property with an
+author-chosen name.
+- The `var()` function, which allows an author to use these values in other
+properties.
 
 Here’s a quick example to demonstrate
 

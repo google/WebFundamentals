@@ -95,7 +95,7 @@ function unsubscribe() {
 }
 {% endhighlight %}
 
-In this code, you set the value of the ServiceWorkerRegistration object reg when the Service Worker installs, which is then used in the subscribe() function to subscribe to push messaging.
+In this code, you set the value of the ServiceWorkerRegistration object reg when the service worker installs, which is then used in the subscribe() function to subscribe to push messaging.
 
 The `subscribe()` function creates the `PushSubscription` object **sub** which can be used by the `unsubscribe()` function.
 

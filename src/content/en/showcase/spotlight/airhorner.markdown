@@ -30,11 +30,11 @@ showcase:
       answer: |
         I built this app because I wanted to show users and developers that not every single app needs to be a native app, and for an experience
         such as this where it is only meant to be used once in while, but feel like it should be installed. The web is an ideal distribution platform for this.
-    - question: Are you worried that Service Worker is not yet in all browsers?
+    - question: Are you worried that service worker is not yet in all browsers?
       answer: |
-        No. I made this app to load quickly irrespective of the browser being used, Service Worker for installability and
+        No. I made this app to load quickly irrespective of the browser being used, service worker for installability and
         offline is an added bonus that should delight users. My thought at the time was that if a user adds this app to the
-        homescreen then it *must* work where ever the user is irrespective of the conncetivity.
+        home screen then it *must* work where ever the user is irrespective of the conncetivity.
     - question: If you could have any API to improve your app, what would it be?
       answer: |
         **Web Intents** but everyone knows that.  Actually, Web Intents wouldn't have been useful for this app.  One area

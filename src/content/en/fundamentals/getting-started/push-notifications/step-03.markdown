@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Get started with Service Worker"
-description: "Add JavaScript to install a Service Worker"
+description: "Add JavaScript to install a service worker"
 notes:
   styling:
     - Styling will come later
@@ -43,14 +43,14 @@ Open _index.html_ locally in Chrome from localhost: the URL should be something 
 In your _app_ directory, create an empty file named _sw.js_. You'll add code
 to this later.
 
-Don't worry if you haven't used Service Workers before. You won't need to know much about them to complete this codelab. Service Workers are worker scripts that run in the background to intercept network requests, handle push messages and perform other tasks. If you want to find out more, take a look at [Introduction to Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) on HTML5 Rocks.
+Don't worry if you haven't used service workers before. You won't need to know much about them to complete this codelab. Service workers are worker scripts that run in the background to intercept network requests, handle push messages and perform other tasks. If you want to find out more, take a look at [Introduction to Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) on HTML5 Rocks.
 
-When a push message is received, the browser can run a Service Worker in the background to handle push messages without requiring a web page to be open.
+When a push message is received, the browser can run a service worker in the background to handle push messages without requiring a web page to be open.
 
 ## 3. Register and install a Service Worker
 
 In this step you create the _main.js_ JavaScript file referred to in
-_index.html_. This in turn gives access to the Service Worker script.  In your _app_ directory, create a _js_ directory and add to it a file named
+_index.html_. This in turn gives access to the service worker script.  In your _app_ directory, create a _js_ directory and add to it a file named
 _main.js_ with the following code:
 
 {% highlight javascript %}
@@ -65,7 +65,7 @@ if ('serviceWorker' in navigator) {
 }
 {% endhighlight %}
 
-This code checks if Service Worker is supported by your browser, then registers and installs the Service Worker you created in _sw.js_ — which doesn't do anything (yet!)
+This code checks if service worker is supported by your browser, then registers and installs the service worker you created in _sw.js_ — which doesn't do anything (yet!)
 
 ## 4. Try it out from localhost
 
@@ -79,7 +79,7 @@ It should look like this:
 ## 5. Try out serviceworker-internals
 
 The diagnostic page _chrome://serviceworker-internals_ is a good place to
-check that your Service Workers are working:
+check that your service workers are working:
 
 <img src="images/image02.png" width="907" height="641" alt="chrome:serviceworker-internals diagnostic page open in Chrome" />
 
@@ -102,20 +102,20 @@ self.addEventListener('push', function(event) {
 });
 {% endhighlight %}
 
-In a Service Worker, `self` refers to the `ServiceWorkerGlobalScope` object: the Service Worker itself.
+In a service worker, `self` refers to the `ServiceWorkerGlobalScope` object: the service worker itself.
 
 **TOP TIP!**
 
-By default an old Service Worker will stay running until all tabs that use it are closed or unloaded. A new Service Worker will remain in the `waiting` state.
+By default an old service worker will stay running until all tabs that use it are closed or unloaded. A new service worker will remain in the `waiting` state.
 
-When `skipWaiting()` is called (as in the code above) the Service Worker will skip the waiting state and immediately activate.
+When `skipWaiting()` is called (as in the code above) the service worker will skip the waiting state and immediately activate.
 
 Handy for debugging!
 
 Click the **Inspect** button on the _chrome://serviceworker-internals_ page. You should see the following:
 
-<img src="images/image03.png" width="888" height="845" alt="Chrome DevTools console showing Service Worker Installed and Activated events" />
+<img src="images/image03.png" width="888" height="845" alt="Chrome DevTools console showing service worker instal and activate events" />
 
-**Warning**: If there are errors parsing your Service Worker code, it won't be installed and an error will be thrown during the install event.
-This can result in a Service Worker mysteriously not updating when you change the code. Always remember to check and validate your code when you change it!
+**Warning**: If there are errors parsing your service worker code, it won't be installed and an error will be thrown during the install event.
+This can result in a service worker mysteriously not updating when you change the code. Always remember to check and validate your code when you change it!
 

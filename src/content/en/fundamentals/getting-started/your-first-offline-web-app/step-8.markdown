@@ -12,17 +12,17 @@ authors:
 
 Give a little honk of the air horn. You now have a web app that can work 
 offline. If everything was set up correctly, you should see your debug
-statements appearing in the Log section of your Service Worker on the
+statements appearing in the Log section of your service worker on the
 `chrome://serviceworker-internals/` page.
 
 Give it a functional test by stopping the Python server from Step 5. Hit **Ctrl C**
 to stop the server, then refresh the air horn page now that the server is no
-longer running. If the app still loads, the Service Worker is functioning properly.
+longer running. If the app still loads, the service worker is functioning properly.
 
 ### What we've covered
 
-* Adding a basic Service Worker to an existing project.
-* A brief overview of Service Worker Lifecycle
+* Adding a basic service worker to an existing project.
+* A brief overview of service worker Lifecycle
 * A simple offline caching strategy
 
 ### Next Steps

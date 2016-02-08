@@ -38,7 +38,7 @@ application shell architecture**. We'll look at both client and server-side rend
 
 To emphasize the point, the example below shows the first load of an app using this architecture. Notice the 'App is ready for offline use' toast at the bottom of the screen. If an update to the shell becomes available later, we can inform the user to refresh for the new version.
 
-![Image of Service Worker running in DevTools for the application shell]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/image_1.png)
+![Image of service worker running in DevTools for the application shell]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/image_1.png)
 
 ## What are Service Workers, Again?
 
@@ -104,7 +104,7 @@ The application shell architecture is possible with just a few changes to your o
 
 ![Image of Google Inbox loading. Illustrates Inbox using service worker.]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/image_7.png)
 
-Offline application shells are a major performance win and are also demonstrated well in Jake Archibald’s [offline Wikipedia app](https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty) and [Flipkart Lite](http://tech-blog.flipkart.net/2015/11/progressive-web-app/)’s progressive webapp.
+Offline application shells are a major performance win and are also demonstrated well in Jake Archibald’s [offline Wikipedia app](https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty) and [Flipkart Lite](http://tech-blog.flipkart.net/2015/11/progressive-web-app/)’s progressive web app.
 
 ![Screenshots of Jake Archibald's Wikipedia Demo.]({{site.WFBaseUrl}}/updates/images/2015/11/appshell/wikipedia.jpg)
 
@@ -177,7 +177,7 @@ Understandably, your server-side setup may drastically differ from the one we us
 
 * The user is initially served a static page with content. This page registers a service worker, if it’s supported, which caches the application shell and everything it depends on (CSS, JS etc).
 
-* The app-shell will then act as a single page web app, using javascript to XHR in the content for a specific URL. The XHR calls are made to a /partials* endpoint which returns the small chunk of HTML, CSS and JS needed to display that content. 
+* The app shell will then act as a single page web app, using javascript to XHR in the content for a specific URL. The XHR calls are made to a /partials* endpoint which returns the small chunk of HTML, CSS and JS needed to display that content. 
 **Note:** There are many ways to approach this and XHR is just one of them. Some applications will inline their data (maybe using JSON) for initial render and therefore aren’t "static" in the flattened HTML sense.
 
 * Browsers **without** service worker support should always be served a fall-back experience. In our demo, we fall back to basic static server-side rendering, but this is only one of many options. The service worker aspect provides you with new opportunities for enhancing the performance of your Single-page Application style app using the cached application shell.

@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Show a notification"
-description: "Add code to your Service Worker's push handler to show a notification."
+description: "Add code to your service worker's push handler to show a notification."
 notes:
   styling:
     - Styling will come later
@@ -17,7 +17,7 @@ authors:
 
 A completed version of this step is in the completed/step9 directory.
 
-In this step you will add code to your Service Worker's push handler to show a
+In this step you will add code to your service worker's push handler to show a
 notification.
 
 ## 1. Add showNotification() code

@@ -23,7 +23,7 @@ key-takeaways:
 The DevTools console allows you to learn the state of items
 in your page in an ad-hoc manner.
 Evaluate any expression you can type using a combination
-of your knowlege of JavaScript and several features that support it.
+of your knowledge of JavaScript and several features that support it.
 
 {% include shared/toc.liquid %}
 

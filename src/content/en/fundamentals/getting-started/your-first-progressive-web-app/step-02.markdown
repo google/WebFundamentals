@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Implement the App Shell"
-description: "How do I use an an App Shell within a Progressive Web App?"
+description: "How do I use an an app shell within a Progressive Web App?"
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1
@@ -25,9 +25,9 @@ with all of the resources you'll need.
 
 ## Download the code
 
-You can download all of the code for this guide in a ZIP file that you can
-download for easy use [here](pwa-weather.zip). Each step and 
-all of the resources you need are available in the ZIP. 
+You can [download all of the code for this PWA guide](pwa-weather.zip) in a
+ZIP file for easy use. Each step and all of the resources you need are
+available in the ZIP. 
 
 ## Create the HTML for the App Shell
 
@@ -37,7 +37,7 @@ brand new `index.html` file and add the core components we discussed in
 
 Remember, the key components will consist of:
 
-* Header with a title, and an add and refresh button
+* Header with a title, and add/refresh buttons
 * Container for forecast cards
 * A forecast card template
 * A dialog for adding new cities
@@ -79,11 +79,11 @@ Remember, the key components will consist of:
 </html>
 {% endhighlight %}
 
-Notice the `main` content is `hidden` by default and the loader is visible, this 
-ensures that the user sees the loader immediately as the page loads giving them 
+Notice the `main` content is `hidden` by default and the loader is visible. This 
+ensures that the user sees the loader immediately as the page loads, giving them 
 a clear indication that the content is loading.
 
-Next, let's add the forecast card, and add new city dialog. To save time, these 
+Next, let's add the forecast card, and Add New City dialog. To save time, these 
 are provided in the `resources` directory, so you can simply copy and paste them 
 into the corresponding location.
 
@@ -125,7 +125,7 @@ Now that we have most of the UI ready, it's time to start hooking up the code to
 make everything work. Like the rest of the app shell, be conscious about what 
 code is necessary as part of the key experience and what can be loaded later. 
 
-In our boot strap code, we've included:
+In our bootstrap code, we've included:
 
 * An `app` object that contains some of the key information necessary for the app.
 * The event listeners for all of the buttons in the header (`add`/`refresh`) and in 
@@ -146,7 +146,7 @@ Add the JavaScript code
 
 ## Test it out
 
-Now that you've added the core HTML, styles and JavaScript it's time to test the 
+Now that you've added the core HTML, styles and JavaScript, it's time to test the 
 app. While it may not do much yet, make sure it doesn't write errors to the
 console.
 
