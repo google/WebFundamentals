@@ -49,8 +49,8 @@ Now you can check that a service worker is enabled by going to `chrome://inspect
 When service worker was first being implemented you could also view your service
 worker details through `chrome://serviceworker-internals`. This may still be
 useful, if for nothing more than learning about the life cycle of service
-workers, but don't be surprised if it gets replaced by `chrome://inspect
-/#service-workers` at a later date.
+workers, but don't be surprised if it gets replaced completely by
+`chrome://inspect/#service-workers` at a later date.
 
 You may find it useful to test your service worker in an Incognito window so
 that you can close and reopen knowing that the previous service worker won't
