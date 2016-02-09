@@ -441,6 +441,23 @@ greenido:
   description:
     en: "Ido is a Developer Advocate and a runner"
 
+eligrey:
+  name:
+    given: Eli
+    family: Grey
+  org:
+    name: "ΩF:∅"
+  country: USA
+  role:
+    - author
+    - engineer
+  homepage: https://eligrey.com
+  google: 111217788892362755679
+  twitter: sephr
+  email: me@eligrey.com
+  description:
+    en: "Eli is a Developer"
+
 nurinamu:
   name:
     given: Wonjae
