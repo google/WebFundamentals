@@ -9,11 +9,11 @@ tags:
   - devtools
   - digest
   - update
-description: "Learn how DevTools makes you type less with smarter Console autocomplete, how to edit @keyframe rules directly in the Styles pane, how to have fun with CSS Custom Variables and how to join the dark side."
+description: "Learn how DevTools makes you type less with smarter Console autocomplete, how to edit <code>@keyframe</code> rules directly in the Styles pane, how to have fun with CSS Custom Variables and how to join the dark side."
 featured_image: /web/updates/images/2016/02/devtools-digest/dark_theme.png
 ---
 
-<p class="intro">Learn how DevTools makes you type less with smarter Console autocomplete, how to edit @keyframe rules directly in the Styles pane, how to have fun with CSS Custom Variables and how to join the dark side.</p>
+<p class="intro">Learn how DevTools makes you type less with smarter Console autocomplete, how to edit <code>@keyframe</code> rules directly in the Styles pane, how to have fun with CSS Custom Variables and how to join the dark side.</p>
 
 ## A smarter autocomplete in your Console
 
@@ -23,7 +23,7 @@ If you’re like me and many others, you type a command into the console to debu
 
 ## Directly edit @keyframe rules in Styles pane
 
-When we introduced the animation inspector and easing editor to DevTools, it was limited to transitions because we never showed @keyframe-based CSS animations in the Style pane. I’m pleased to say that that’s now a thing of the past, so go wild! Check out our [video tweet](https://twitter.com/ChromeDevTools/status/694966453376675840) for a preview.
+When we introduced the animation inspector and easing editor to DevTools, it was limited to transitions because we never showed `@keyframe`-based CSS animations in the Style pane. I’m pleased to say that that’s now a thing of the past, so go wild! Check out our [video tweet](https://twitter.com/ChromeDevTools/status/694966453376675840) for a preview.
 
 ## Custom CSS Properties support
 
