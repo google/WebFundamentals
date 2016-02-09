@@ -4,7 +4,7 @@ title: "Saving generated files on the client-side"
 published_on: 2011-08-08
 updated_on: 2011-08-08
 authors:
-  - paulkinlan
+  - eligrey
 tags:
   - news
   - filesystem
