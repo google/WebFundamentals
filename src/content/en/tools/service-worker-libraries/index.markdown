@@ -31,7 +31,7 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
 {% include page-structure/site-promo-banner.liquid %}
 
 <div class="page-content">
-  <h2>Ship your shell with <code>sw-precache</code></h2>
+  <h2>Ship your shell with sw-precache</h2>
   <p>
     Add <code>sw-precache</code> to your build process and get always-up-to-date caching of your web
     app's most important resources.
@@ -86,7 +86,7 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
     </div>
   </div>
 
-  <h2>Dynamic caching with <code>sw-toolbox</code></h2>
+  <h2>Dynamic caching with sw-toolbox</h2>
   <p>
     <code>sw-toolbox</code> provides common
     <a href="https://github.com/GoogleChrome/sw-toolbox#built-in-handlers">caching patterns</a>
