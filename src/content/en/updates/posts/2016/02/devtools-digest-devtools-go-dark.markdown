@@ -1,8 +1,8 @@
 ---
 layout: updates/post
 title: "DevTools go dark, @keyframe editing and smarter autocomplete"
-published_on: 2016-02-08
-updated_on: 2016-02-08
+published_on: 2016-02-10
+updated_on: 2016-02-10
 authors:
   - pbakaus
 tags:
@@ -27,7 +27,7 @@ When we introduced the animation inspector and easing editor to DevTools, it was
 
 ## Custom CSS Properties support
 
-![Custom CSS properties in DevTools](http://3.bp.blogspot.com/-gJn1NEz81YQ/VrDqiHlp85I/AAAAAAAAAvM/YtNyMyS0B-8/s1600/css-custom-properties-3.gif)
+![Custom CSS properties in DevTools](/web/updates/images/2016/02/devtools-digest/css-custom-properties.gif)
 
 There’s a lot of goodness coming to CSS, and one of them is custom variables, launching in Chrome 49. We made sure to include full support in DevTools, so if you’ve been using variables in Sass before, give the native ones a try, as they allow you to edit properties on the fly in the Styles pane and immediately update dependent elements.
 
