@@ -1,6 +1,6 @@
 # Web Fundamentals <master> [![Build Status](https://ci.cloudware.io/api/badges/google/WebFundamentals/status.svg)](https://ci.cloudware.io/google/WebFundamentals)
 
-`master` staging: https://master-dot-web-central.appspot.com/web/
+`master` staging: https://web-central.appspot.com/web/
 <hr>
 
 Web Fundamentals is a technical documentation center for multi-device web
@@ -65,7 +65,7 @@ These can be combined like so:
 
 ## Learning More About Jekyll and Liquid Used
 
-We have a resource area which you can access at [https://master-dot-web-central.appspot.com/web/resources/?hl=en](https://master-dot-web-central.appspot.com/web/resources/?hl=en) that should get you up and running with a lot of the custom and useful info.
+We have a resource area which you can access at [https://web-central.appspot.com/web/resources/?hl=en](https://web-central.appspot.com/web/resources/?hl=en) that should get you up and running with a lot of the custom and useful info.
 
 # Translations
 
