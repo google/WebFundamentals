@@ -45,3 +45,7 @@ selectively. Users prefer selecting the orientation.
   <img src="images/manifest-orientation-options.png" alt="Web App Manifest Orientation Options">
   <figcaption>Web App Manifest Orientation Options</figcaption>
 </figure>
+
+## Detect if you are launched from the home screen
+
+Because you can now define how your app is launched, add a query string parameter to the `start_url` that indicates how it was launched. For example `start_url: /index.html?homescreen=1`.

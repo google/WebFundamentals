@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Create the manifest"
-description: "Before diving into details, let's create a basic manifest link a web page to it."
+description: "Before diving into details, let's create a basic manifest and link a web page to it."
 published_on: 2014-12-17
 updated_on: 2015-02-12
 authors:
@@ -11,7 +11,7 @@ translation_priority: 1
 order: 2
 ---
 
-Before diving into details, let's create a basic manifest link a web page to it.
+Before diving into details, let's create a basic manifest and link a web page to it.
 
 {% include shared/toc.liquid %}
 
