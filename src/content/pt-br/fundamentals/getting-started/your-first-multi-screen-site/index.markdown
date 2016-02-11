@@ -8,7 +8,7 @@ updated_on: 2014-01-06
   O desenvolvimento de experiências para diversos dispositivos não é tão difícil quanto parece. Ao seguir as instruções deste guia, criaremos um exemplo de página de destino do produto para nosso <a href='https://www.udacity.com/course/cs256'>curso CS256 Desenvolvimento da Web para dispositivos móveis</a> que funcionará de maneira eficiente em diferentes tipos de dispositivos.
 </p>
 
-<img src="images/finaloutput-2x.jpg" alt="muitos dispositivos que exibem o projeto final">
+<img src="../../../../en/fundamentals/getting-started/your-first-multi-screen-site/images/finaloutput-2x.jpg" alt="muitos dispositivos que exibem o projeto final">
 
 Criar um site para múltiplos dispositivos com funcionalidades, tamanhos de telas e métodos de interação completamente distintos pode parecer uma tarefa assustadora e até impossível.
 
