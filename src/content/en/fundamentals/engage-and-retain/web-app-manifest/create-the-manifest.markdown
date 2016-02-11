@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
-title: "Create the manifest"
-description: "Before diving into details, let's create a basic manifest and link a web page to it."
+title: "Create the Manifest"
+description: "Before diving into details of a web app manifest, let's create a basic manifest and link a web page to it."
 published_on: 2014-12-17
 updated_on: 2015-02-12
 authors:
@@ -11,11 +11,11 @@ translation_priority: 1
 order: 2
 ---
 
-Before diving into details, let's create a basic manifest and link a web page to it.
+Before diving into details of a web app manifest, let's create a basic manifest and link a web page to it.
 
 {% include shared/toc.liquid %}
 
-## Create the manifest
+## Create the Manifest
 
 You can call the manifest whatever you want. Most people will probably just 
 use `manifest.json`. An example is given below.
@@ -44,10 +44,16 @@ use `manifest.json`. An example is given below.
 
 You should include a `short_name` as this will get used for the launcher text.
 
-If you don't provide a `start_url`, then the current page will be used, which is 
-unlikely to be what your users want.
+## Set a Start URL
 
-## Tell the browser about your manifest
+If you don't provide a `start_url`, then the current page will be used, which is 
+unlikely to be what your users want. But that's not the only reason to include it. Because you can now define how your app is launched, add a query string parameter to the `start_url` that indicates how it was launched. For example:
+
+{% highlight json %}
+"start_url": "/index.html?homescreen=1"
+{% endhighlight %}
+
+## Tell the Browser about your Manifest
 
 Once you have the manifest created and and on your site, all you need to do is add 
 a `link` tag to all the pages that encompass your web app as follows:

@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Set the launch style"
-description: ""
+description: "Use the web app manifest to control the display type and page orientation."
 published_on: 2014-12-17
 updated_on: 2016-02-12
 authors:
@@ -11,7 +11,11 @@ translation_priority: 1
 order: 5
 ---
 
-## Customize how your site is launched
+Use the web app manifest to control the display type and page orientation.
+
+{% include shared/toc.liquid %}
+
+## Customize the Display Type
 
 You make your web app hide the browser's UI by setting the `display` type to `standalone`.
 
@@ -20,7 +24,7 @@ You make your web app hide the browser's UI by setting the `display` type to `st
 {% endhighlight %}
 
 Don't worry, if you think users would prefer to view your page as a normal 
-site in a browser, you can set the `display` type to `browser`.
+site in a browser. You can set the `display` type to `browser`.
 
 {% highlight json %}
 "display": "browser"
@@ -33,8 +37,8 @@ site in a browser, you can set the `display` type to `browser`.
 
 ## Specify the initial orientation of the page
 
-You can enforce a specific orientation, which is really useful for use cases 
-that work in only one orientation, like games for example. Use this with 
+You can enforce a specific orientation, which is advantageous for use cases 
+that work in only one orientation, like games for example. Use this 
 selectively. Users prefer selecting the orientation.
 
 {% highlight json %}
@@ -46,6 +50,3 @@ selectively. Users prefer selecting the orientation.
   <figcaption>Web App Manifest Orientation Options</figcaption>
 </figure>
 
-## Detect if you are launched from the home screen
-
-Because you can now define how your app is launched, add a query string parameter to the `start_url` that indicates how it was launched. For example `start_url: /index.html?homescreen=1`.
