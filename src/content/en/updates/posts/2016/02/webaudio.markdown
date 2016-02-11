@@ -65,7 +65,7 @@ var context = new OfflineAudioContext(2, length, sampleRate);
 scheduleNextBlock();
 context.startRendering().then( (buffer) => { /* store the buffer */ } );
 
-Function scheduleNextBlock() {
+function scheduleNextBlock() {
     // create any notes for the next blockSize number of seconds here
     // ...
 
