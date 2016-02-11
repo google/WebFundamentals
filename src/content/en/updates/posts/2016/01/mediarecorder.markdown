@@ -36,7 +36,15 @@ Try it out [here](https://webrtc.github.io/samples/src/content/getusermedia/reco
 
 <img class="screenshot" src="/web/updates/images/2016/01/mediarecorder/screenshot.jpg" alt="Screenshot of mediaRecorder demo on Android Nexus 5X">
 
-The API is straightforward, which I'll demonstrate using code from the [WebRTC sample repo demo](https://webrtc.github.io/samples/src/content/getusermedia/record).  Note that the API can only be used from [secure origins only](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins): HTTPS or localhost.
+> <strong>A word about support</strong>:
+>
+> • To use MediaRecorder in Chrome 47 and 48, enable **experimental Web Platform features** from the chrome://flags page.
+>
+> • Audio recording work in Firefox and in Chrome 49 and above; Chrome 47 and 48 only support video recording.
+>
+> • In Chrome on Android you can save and download recordings made with MediaRecorder, but it's not yet possible to view a recording in a video element via `window.URL.createObjectURL()`. See [this bug](https://code.google.com/p/chromium/issues/detail?id=253465).
+
+The API is straightforward, which I'll demonstrate using code from the [WebRTC sample repo demo](https://webrtc.github.io/samples/src/content/getusermedia/record). Note that the API can only be used from [secure origins only](https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins): HTTPS or localhost.
 
 First up, instantiate a MediaRecorder with a MediaStream. Optionally, use an `options` parameter to specify the desired output format:
 
@@ -150,6 +158,9 @@ We'd also like to know what usage scenarios are most important to you, and what 
 * [webrtc.github.io/samples/src/content/getusermedia/record](https://webrtc.github.io/samples/src/content/getusermedia/record/)
 * [simpl.info/mr](https://simpl.info/mediarecorder) (same code, easier URL for mobile!)
 * [Record a video and upload it to YouTube](https://jeffy.info/google-youtube-upload/components/google-youtube-upload/demo/) with an experimental custom &lt;google-youtube-upload&gt; element
+
+## Apps
+* Paul Lewis's [Voice Memos](https://voice-memos.appspot.com/) app now has MediaRecorder support, polyfilled for browsers that don't support MediaRecorder audio.
 
 ## Polyfills
 * Muaz Khan's [MediaStreamRecorder](https://www.webrtc-experiment.com/msr/) is a JavaScript library for recording audio and video, compatible with MediaRecorder.

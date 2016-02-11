@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Cache and Return Requests"
-description: "Now that you've installed a service worker, you probably want to return one of your cached responses right?"
+description: "Now that you've installed a service worker, you probably want to return one of your cached responses, right?"
 published_on: 2014-12-01
 updated_on: 2016-01-19
 translation_priority: 0
@@ -11,10 +11,10 @@ authors:
 ---
 
 <p class="intro">Now that you've installed a service worker, you probably want to 
-  return one of your cached responses right?</p>
+  return one of your cached responses, right?</p>
 
 After a service worker is installed and the user navigates to a different page
-or refreshes, the service worker will begin to receive fetch events, an example
+or refreshes, the service worker will begin to receive `fetch` events, an example
 of which is below.
 
 {% highlight javascript %}
@@ -33,7 +33,7 @@ self.addEventListener('fetch', function(event) {
 });
 {% endhighlight %}
 
-Here we've defined our `fetch` event and within the `event.respondWith()`. We
+Here we've defined our `fetch` event and within `event.respondWith()`, we
 pass in a promise from `caches.match()`. This method looks at the request and
 finds any cached results from any of the caches your service worker created.
 
@@ -58,7 +58,7 @@ self.addEventListener('fetch', function(event) {
         // IMPORTANT: Clone the request. A request is a stream and
         // can only be consumed once. Since we are consuming this
         // once by cache and once by the browser for fetch, we need
-        // to clone the response
+        // to clone the response.
         var fetchRequest = event.request.clone();
 
         return fetch(fetchRequest).then(
@@ -71,7 +71,7 @@ self.addEventListener('fetch', function(event) {
             // IMPORTANT: Clone the response. A response is a stream
             // and because we want the browser to consume the response
             // as well as the cache consuming the response, we need
-            // to clone it so we have 2 stream.
+            // to clone it so we have two streams.
             var responseToCache = response.clone();
 
             caches.open(CACHE_NAME)

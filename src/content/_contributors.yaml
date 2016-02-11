@@ -411,8 +411,8 @@ jeokrang:
     given: Hunmin
     family: Kim
   org:
-    name: NHN Technology Services
-    unit: Front-End Development Team
+    name: NAVER Corp.
+    unit: Blog & Post Development lab
   country: Korea
   role:
     - translator
@@ -421,7 +421,7 @@ jeokrang:
   twitter:
   email: jeokrang@gmail.com
   description:
-    en: "Hunmin is a Web Front-End Developer"
+    en: "Hunmin is a JavaScript Developer"
 
 greenido:
   name:
@@ -440,6 +440,23 @@ greenido:
   email: idog@google.com
   description:
     en: "Ido is a Developer Advocate and a runner"
+
+eligrey:
+  name:
+    given: Eli
+    family: Grey
+  org:
+    name: "ΩF:∅"
+  country: USA
+  role:
+    - author
+    - engineer
+  homepage: https://eligrey.com
+  google: 111217788892362755679
+  twitter: sephr
+  email: me@eligrey.com
+  description:
+    en: "Eli is a Developer"
 
 nurinamu:
   name:
