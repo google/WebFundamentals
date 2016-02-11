@@ -65,8 +65,7 @@ These can be combined like so:
 
 ## Learning More About Jekyll and Liquid Used
 
-We have a styleguide which you can access at [http://localhost:7331/web/styleguide/](http://localhost:7331/web/resources/styleguide/) that should get you up and running with a lot of the custom and useful info.
-
+We have a resource area which you can access at [https://master-dot-web-central.appspot.com/web/resources/?hl=en](https://master-dot-web-central.appspot.com/web/resources/?hl=en) that should get you up and running with a lot of the custom and useful info.
 
 # Translations
 
@@ -83,7 +82,6 @@ For Linux:
 # Content plan
 
 Content plan for Web Fundamentals is tracked through GitHub Issues and our [Site Structure + Content Inventory](http://goo.gl/nWDD0M) doc
-
 
 # Release status
 
