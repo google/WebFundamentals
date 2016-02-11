@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Provide a site-wide theme color"
-description: ""
+description: "The theme color is a hint from your web page that tells the browser what color to tint UI elements such as the address bar."
 published_on: 2014-12-17
 updated_on: 2016-02-12
 authors:

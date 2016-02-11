@@ -24,7 +24,7 @@ criteria:
 * Is visited by the user twice, over two separate days during the course
   of two weeks.
 
-## Testing the app install banner
+## Testing the App Install Banner
 
 The app install banner is only shown after the user has visited the page at least twice over two different days, making testing difficult. You can disable the visit frequency check by enabling the Chrome flag `#bypass-app-banner-engagement-checks`.
 

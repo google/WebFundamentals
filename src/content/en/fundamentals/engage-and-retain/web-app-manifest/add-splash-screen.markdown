@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
-title: "Add a splash screen"
-description: ""
+title: "Add a Splash Screen"
+description: "To provide a better user experience you can replace the white launch screen with a title, color, and images."
 published_on: 2014-12-17
 updated_on: 2016-02-12
 authors:

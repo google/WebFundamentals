@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow-pages-list
-title: "About App Install Banners"
+title: "Using App Install Banners"
 description: "There are two types of app install banners: <i>web</i> app install banners and <i>native</i> app install banners. They give you the ability to let users quickly and seamlessly add your web or native app to their home screens without leaving the browser."
 published_on: 2014-12-17
 updated_on: 2016-02-12

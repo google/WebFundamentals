@@ -1,7 +1,8 @@
 ---
 layout: shared/narrow
 title: "Customize the Icons"
-description: ""
+description: "When a user adds your site to their home screen, you can define a set of icons for the 
+browser to use."
 published_on: 2014-12-17
 updated_on: 2016-02-12
 authors:

@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "More Information"
-description: ""
+description: "This article has given you a quick introduction to web app manifests. But there's more to learn."
 published_on: 2014-12-17
 updated_on: 2016-02-12
 authors:

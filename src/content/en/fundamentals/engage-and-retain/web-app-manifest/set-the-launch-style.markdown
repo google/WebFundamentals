@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Set the launch style"
+title: "Set the Launch Style"
 description: "Use the web app manifest to control the display type and page orientation."
 published_on: 2014-12-17
 updated_on: 2016-02-12
@@ -35,7 +35,7 @@ site in a browser. You can set the `display` type to `browser`.
   <figcaption>Manifest Display Options</figcaption>
 </figure>
 
-## Specify the initial orientation of the page
+## Specify the Initial Orientation of the Page
 
 You can enforce a specific orientation, which is advantageous for use cases 
 that work in only one orientation, like games for example. Use this 
