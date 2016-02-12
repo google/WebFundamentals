@@ -198,7 +198,7 @@ Because old browsers are not smart enough to select just the necessary subsets a
   - If unicode-range subsetting is supported by the browser, then it will automatically select the right subset. The page just needs to provide the subset files and specify appropriate unicode-ranges in the @font-face rules.
   - If unicode-range is not supported then the page needs to hide all unnecessary subsets - i.e. the developer must specify required subsets.
 1. **How do we generate font subsets?**
-  - Use the open-source [pyftsubset tool](https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py#L16) to subset and optimize your fonts.
+  - Use the open-source [pyftsubset tool](https://github.com/behdad/fonttools/) to subset and optimize your fonts.
   - Some font services allow manual subsetting via custom query parameters, which you can use to manually specify the required subset for your page - consult the documentation of your font provider.
 
 
