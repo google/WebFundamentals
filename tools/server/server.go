@@ -44,9 +44,6 @@ var (
 		DefaultBucket string `json:"default_bucket"`
 		// BucketSuffix is appended to bucket name matched against in-flight request
 		BucketSuffix string `json:"bucket_suffix"`
-		// GCSHook is the URL pattern for GCS Object Change Notifications
-		// to clear locally cached objects
-		GCSHook string `json:"gcs_hook"`
 		// RegexPaths are matched against before anything else.
 		// If not match found, tryPaths function is used instead.
 		RegexPaths []struct {
@@ -76,9 +73,6 @@ func init() {
 	if config.Root == "" {
 		config.Root = "/"
 	}
-	if config.GCSHook == "" || config.GCSHook == "/" {
-		config.GCSHook = "/-/gcs-hook"
-	}
 	if !strings.HasSuffix(config.DefaultBucket, config.BucketSuffix) {
 		config.DefaultBucket += config.BucketSuffix
 	}
@@ -96,10 +90,14 @@ func init() {
 	}
 	// http handlers
 	http.HandleFunc("/", handleRoot)
-	http.HandleFunc(config.GCSHook, storage.HandleChangeHook)
 }
 
 func handleRoot(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "POST" && r.Header.Get("x-goog-channel-id") != "" {
+		storage.HandleChangeHook(w, r)
+		return
+	}
+
 	if r.URL.Path == "/" && config.Root != "/" {
 		http.Redirect(w, r, config.Root, http.StatusMovedPermanently)
 		return

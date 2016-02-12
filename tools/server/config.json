@@ -2,7 +2,6 @@
 	"root": "/web/",
 	"default_bucket": "master",
 	"bucket_suffix": "-webcentral-appspot-weasel",
-	"gcs_hook": "/-/gcs-hook",
 	"regexp": [
 		{
 			"pattern": "/robots\\.txt",
