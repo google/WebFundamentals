@@ -11,7 +11,7 @@ translation_priority: 1
 ---
 
 <p class="intro">
-  TThere's more to requesting permission than throwing up a dialog box. 
+  There's more to requesting permission than throwing up a dialog box. 
 </p>
 
 {% include shared/toc.liquid %}
