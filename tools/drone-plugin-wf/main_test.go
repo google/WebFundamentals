@@ -75,6 +75,17 @@ func writeFile(t *testing.T, dir, name string, b []byte) {
 	}
 }
 
+func TestRandomString(t *testing.T) {
+	a := randomString(32)
+	if len(a) != 32 {
+		t.Fatalf("len(a) = %d; want 32", len(a))
+	}
+	b := randomString(32)
+	if a == b {
+		t.Errorf("a == b == %q", a)
+	}
+}
+
 func TestRun(t *testing.T) {
 	wdir, err := ioutil.TempDir("", "drone-gcs-test")
 	if err != nil {

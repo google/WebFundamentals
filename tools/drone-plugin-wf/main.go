@@ -20,6 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io"
+	"io/ioutil"
 	"log"
 	"math"
 	"math/rand"
@@ -45,9 +46,13 @@ import (
 )
 
 const (
+	// configBucket is where object change notifications
+	// settings are stored
+	configBucket = "webcentral-weasel-config"
+
 	// maxConcurrent is the highest upload concurrency.
 	// It cannot be 0.
-	maxConcurrent = 100
+	maxConcurrent = 10
 
 	// jsonAPI is the base URL for the storage JSON API.
 	jsonAPI = "https://www.googleapis.com/storage/v1"
@@ -114,6 +119,17 @@ func fatalf(format string, args ...interface{}) {
 	msg := fmt.Sprintf(format, args...)
 	updateStatus("error", msg, "")
 	log.Fatal(msg)
+}
+
+const alpha = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+// randomString generates a string of random characters picked from alpha.
+func randomString(n int) string {
+	b := make([]byte, n)
+	for i := 0; i < n; i++ {
+		b[i] = alpha[rand.Intn(len(alpha))]
+	}
+	return string(b)
 }
 
 // prNum extracts github PR number from ref string.
@@ -260,6 +276,7 @@ func ensureBucket() error {
 	}
 
 	// create the bucket with the given name
+	printf("creating %s bucket", bucketName)
 	req := &struct {
 		Name         string `json:"name"`
 		StorageClass string `json:"storageClass"`
@@ -273,10 +290,60 @@ func ensureBucket() error {
 	}
 	u := fmt.Sprintf("%s/b?project=%s", jsonAPI, vargs.Project)
 	res, err := client.http.Post(u, "application/json", bytes.NewReader(b))
-	if err == nil && res.StatusCode > 299 {
-		err = fmt.Errorf("%s: %v", u, res.Status)
+	if err == nil {
+		res.Body.Close()
+		if res.StatusCode > 299 {
+			err = fmt.Errorf("%s: %v", u, res.Status)
+		}
 	}
-	return err
+	if err != nil {
+		return err
+	}
+
+	// setup object change notifications
+	printf("setting up OCN web hook")
+	r := &struct {
+		Type      string `json:"type"`
+		URL       string `json:"address"`
+		ChannelID string `json:"id"`
+	}{
+		Type:      "web_hook",
+		URL:       stagingURL,
+		ChannelID: randomString(64),
+	}
+	u = fmt.Sprintf("%s/b/%s/o/watch?alt=json", jsonAPI, bucketName)
+	b, err = json.Marshal(r)
+	if err != nil {
+		errorf("watch payload: %v", err)
+		return nil
+	}
+	res, err = client.http.Post(u, "application/json", bytes.NewReader(b))
+	if err == nil {
+		defer res.Body.Close()
+		if res.StatusCode > 299 {
+			err = fmt.Errorf("%s: %v", u, res.Status)
+		}
+	}
+	if err != nil {
+		errorf("%s: %v", u, err)
+		return nil
+	}
+	b, err = ioutil.ReadAll(res.Body)
+	if err != nil {
+		printf("error reading watch response: %v", err)
+		return nil
+	}
+	confb := client.gcs.Bucket(configBucket)
+	w := confb.Object(bucketName + ".json").NewWriter(context.Background())
+	w.ContentType = "application/json"
+	_, err = w.Write(b)
+	if err1 := w.Close(); err == nil {
+		err = err1
+	}
+	if err != nil {
+		printf("error writing watch conf object: %v", err)
+	}
+	return nil
 }
 
 // updateStatus updates GitHub Pull Request status.
@@ -382,6 +449,8 @@ func bigrig() error {
 
 func main() {
 	log.SetFlags(0)
+	rand.Seed(time.Now().UnixNano())
+
 	plugin.Param("workspace", &workspace)
 	plugin.Param("build", &build)
 	plugin.Param("repo", &repo)
