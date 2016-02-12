@@ -1,14 +1,14 @@
 ---
 layout: shared/narrow
-title: "Do more with app install banners"
+title: "Do More With App Install Banners"
 description: "You can defer or cancel the app install banner, and understand how the user responded to the banner."
 published_on: 2014-12-17
-updated_on: 2015-09-30
+updated_on: 2016-02-12
 authors:
   - mattgaunt
   - paulkinlan
 translation_priority: 1
-order: 4
+order: 3
 ---
 
 <p class="intro">
@@ -18,7 +18,7 @@ app install banner and even cancel or defer it until a more convenient time.
 
 {% include shared/toc.liquid %}
 
-## Did a user install the app
+## Did a User Install the App?
 
 The `beforeinstallprompt` event returns a promise called `userChoice` 
 that resolves when the user acts on the prompt.  The promise 
@@ -49,7 +49,7 @@ This is a good tool for understanding how your users interact with the app
 install prompt.
 
 
-## Deferring or cancelling the prompt
+## Deferring or Cancelling the Prompt
 
 Chrome manages when to trigger the prompt but for some sites this might not 
 be ideal. You can defer the prompt to a later time in the app's usage or 
@@ -112,14 +112,3 @@ window.addEventListener('beforeinstallprompt', function(e) {
   return false;
 });
 {% endhighlight %}
-
-## Testing the app install banner
-
-The app install banner is only shown after the user has visited the 
-page at least twice over two different days, making testing difficult. You can
-disable the visit frequency check by enabling the Chrome flag 
-`#bypass-app-banner-engagement-checks`.
-
-Then, as long as you have a manifest (configured correctly), are on HTTPS 
-and have a service worker, you should see the install prompt.
-

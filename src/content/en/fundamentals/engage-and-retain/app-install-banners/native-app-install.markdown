@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Native app install banners"
+title: "Native app Install Banners"
 description: "Native App install banners are similar to Web app install banners, but instead of adding to the home screen will let the user install your native app without leaving your site."
 published_on: 2014-12-17
 updated_on: 2015-09-30
@@ -8,7 +8,7 @@ authors:
   - mattgaunt
   - paulkinlan
 translation_priority: 1
-order: 3
+order: 4
 ---
 
 <div class="mdl-grid">
@@ -25,7 +25,7 @@ order: 3
   </figure>
 </div>
 
-## Criteria to show the banner
+## Criteria to Show the Banner
 
 The criteria is similar to the Web App install banner except for the need of 
 a service worker. Your site must:
@@ -38,7 +38,7 @@ a service worker. Your site must:
 * Be visited by the user twice, over two separate days during the course
   of two weeks.
 
-## Manifest requirements
+## Manifest Requirements
 
 To integrate into any manifest, add a `related_applications` array with the 
 platforms of `play` (for Google Play) and the App Id.
