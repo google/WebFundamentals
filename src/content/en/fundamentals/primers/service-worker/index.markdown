@@ -4,7 +4,7 @@ title: "Introduction to Service Worker"
 description: "Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features will rely on."
 published_on: 2014-12-01
 updated_on: 2016-01-18
-translation_priority: 1
+translation_priority: 0
 order: 1
 ---
 

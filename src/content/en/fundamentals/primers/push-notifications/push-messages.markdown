@@ -7,6 +7,7 @@ authors:
 published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 2
+translation_priority: 1
 key-takeaways:
   tldr:
     - Users must first allow push messages as a global permissions setting.

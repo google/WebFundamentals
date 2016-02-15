@@ -5,7 +5,7 @@ description: "Push messaging allows developers to engage users by providing time
 published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 2
-translation_priority: 0
+translation_priority: 1
 authors:
   - dgash
 ---

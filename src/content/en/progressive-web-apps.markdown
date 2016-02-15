@@ -3,6 +3,7 @@ layout: shared/root
 published: false
 description: "Progressive Web Apps"
 title: "Progressive Web Apps"
+translation_priority: 0
 ---
 
 <div class="wf-landing-section">

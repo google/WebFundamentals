@@ -7,6 +7,7 @@ authors:
 published_on: 2015-10-01
 updated_on: 2015-10-01
 order: 4
+translation_priority: 1
 notes:
   sameorigin: "It is important to note that a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect."
 ---

@@ -7,7 +7,7 @@ notes:
     - Styling will come later
 published_on: 2015-09-28
 updated_on: 2015-09-28
-translation_priority: 0
+translation_priority: 1
 order: 5
 authors:
   - samdutton

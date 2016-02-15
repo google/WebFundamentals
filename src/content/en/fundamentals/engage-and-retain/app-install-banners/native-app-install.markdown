@@ -7,7 +7,7 @@ updated_on: 2015-09-30
 authors:
   - mattgaunt
   - paulkinlan
-translation_priority: 1
+translation_priority: 2
 order: 4
 ---
 
