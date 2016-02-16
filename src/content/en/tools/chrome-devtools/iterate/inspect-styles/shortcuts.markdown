@@ -145,8 +145,8 @@ The following keyboard shortcuts are available in all DevTools panels:
     </tr>
     <tr>
       <td data-th="Global Shortcuts">Search by filename (except on Timeline)</td>
-      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">O</kbd>, <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">O</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">O</kbd>, <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">O</kbd></td>
+      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">O</kbd>, <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">P</kbd></td>
+      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">O</kbd>, <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">P</kbd></td>
     </tr>
     <tr>
       <td data-th="Global Shortcuts">Zoom in (while focused in DevTools)</td>
