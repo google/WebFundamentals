@@ -245,9 +245,9 @@ The container will be a simple `div` in the following form:
 
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=containerhtml lang=html %}
+{% include_code src=_code/constrainwidth.html snippet=containerhtml lang=html %}
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=container lang=css %}
+{% include_code src=_code/constrainwidth.html snippet=container lang=css %}
 
 ## Alter the padding and reduce text size
 
@@ -264,7 +264,7 @@ In our product page, we will increase the padding of the section elements by
 setting it to remain at 5% of the width.  We will also increase the size of
 the headers for each of the sections.
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=padding lang=css %}
+{% include_code src=_code/alterpadding.html snippet=padding lang=css %}
 
 ## Adapt elements to wide viewport
 
@@ -288,7 +288,7 @@ To make more effective use of the horizontal screen space, we need to break out
 of the linear flow of the header and move the form and list to be next
 to each other.
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=formfloat lang=css %}
+{% include_code src=_code/floattheform.html snippet=formfloat lang=css %}
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
@@ -308,7 +308,7 @@ to our list of features.
 The video element needs to be moved out of the vertical flow of the narrow
 viewport and should be displayed side-by-side with the bulleted list of content on a wide viewport.
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=floatvideo lang=css %}
+{% include_code src=_code/floatthevideo.html snippet=floatvideo lang=css %}
 
 ### Tile the Images
 
@@ -323,7 +323,7 @@ the images look more appealing.
 
 <img src="images/imageswide.png" style="width:100%">
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=tileimages lang=css %}
+{% include_code src=_code/tiletheimages.html snippet=tileimages lang=css %}
 
 ### Make images responsive to DPI
 
