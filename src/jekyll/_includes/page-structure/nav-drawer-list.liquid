@@ -13,6 +13,11 @@
     {% if tocItem.hasSubNav == true %}
       {% capture nextListLevel %}{{ listLevel | plus:1 }}{% endcapture %}
       {% include page-structure/nav-drawer-list.liquid toc=tocItem.section level=nextListLevel  %}
+      
+      {% if nextListLevel.hasSubNav == true %}
+        {% capture finalListLevel %}{{ nextListLevel | plus:1 }}{% endcapture %}
+        {% include page-structure/nav-drawer-list.liquid toc=tocItem.section level=finalListLevel  %}
+      {% endif %}
     {% endif %}
   </li>
 {% endfor %}
