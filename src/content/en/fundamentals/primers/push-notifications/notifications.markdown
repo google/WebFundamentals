@@ -6,7 +6,7 @@ authors:
   - dgash
 published_on: 2015-10-01
 updated_on: 2015-10-01
-order: 4
+order: 20
 translation_priority: 1
 notes:
   sameorigin: "It is important to note that a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect."
@@ -88,53 +88,5 @@ send the data as JSON or form data.
 - An array of `registration_ids`, which you can extract from the 
 `PushSubscription.endpoint` you sent to your server.
 
-## Responding to the display
 
-When the user clicks a notification, a `notificationclick` event is 
-dispatched in the service worker. In the handler function, you can take 
-appropriate action. A common response to a `notificationclick` event 
-is to focus a tab or open a window with a particular URL.
 
-{% highlight javascript %}
-self.addEventListener('notificationclick', function(event) {  
-  console.log('On notification click: ', event.notification.tag);  
-  // Android doesn't close the notification when you click on it  
-  // See: http://crbug.com/463146  
-  event.notification.close();
-
-  // This looks to see if the current window is already open and  
-  // focuses if it is  
-  event.waitUntil(
-    clients.matchAll({ type: "window" })
-      .then(function(clientList) {  
-        for (var i = 0; i < clientList.length; i++) {  
-          var client = clientList[i];  
-          if (client.url == '/' && 'focus' in client)  
-            return client.focus();  
-        }  
-        if (clients.openWindow) {
-          return clients.openWindow('/');  
-        }
-      })
-  );
-});
-{% endhighlight %}
-
-The current implementation of the Push API in Chrome does not allow you to send 
-a payload with a push message. In the future, the payload will be encrypted 
-on your server before it is sent to a push messaging endpoint. That is so that 
-the endpoint, regardless of the push provider, will not be able to easily view 
-the content of the push payload. Encryption also protects against other 
-vulnerabilities like poor validation of HTTPS certificates and 
-man-in-the-middle attacks between your server and the push provider. 
-
-To get around not being able to tie data to your notification, you could use 
-the service worker's caching API, for example, to save a URL for a 
-particular notification tag; that way you can look it up in the 
-`notificationclick` event and open the window to that URL.
-
-An alternative approach (albeit somewhat unconventional) is to use a fragment
-identifier on the end of your icon URL. This won’t affect the image’s
-cacheability, and gives you access to a short URL. 
-
-{% include shared/note.liquid list=page.notes.sameorigin %}

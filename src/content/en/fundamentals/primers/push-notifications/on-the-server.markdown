@@ -6,7 +6,7 @@ authors:
   - dgash
 published_on: 2015-10-01
 updated_on: 2015-10-01
-order: 7
+order: 30
 translation_priority: 1
 ---
 
@@ -22,27 +22,6 @@ has a reference for the [HTTP syntax](https://developers.google.com/cloud-messag
 used to pass messages from your app server to client apps. The 
 [XMPP server protocol](https://developers.google.com/cloud-messaging/xmpp-server-ref)
 serves a similar purpose.
-
-## Message content
-
-In the service worker's push handler, code is executed that establishes 
-the message information, including the `title`, `body`, `icon`, and `tag`. It 
-is the service worker's job to take the pushed data and turn it into a 
-sendable notification.
-
-{% highlight javascript %}
-self.addEventListener('push', function(event) {
-  console.log('Push message', event);
-  var title = 'Push message';
-  event.waitUntil(
-    self.registration.showNotification(title, {
-      body: 'The Message',
-      icon: 'images/icon.png',
-      tag: 'my-tag'
-    })
-  );
-});
-{% endhighlight %}
 
 
 ## Notification test
