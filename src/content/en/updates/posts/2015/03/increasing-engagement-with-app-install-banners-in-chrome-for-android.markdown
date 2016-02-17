@@ -41,10 +41,10 @@ to add it!".  The good news is if you currently meet the following criteria Chro
 manage the prompting of users:
 
 * You have a [web app manifest
-  file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)
+  file](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)
   - The manifest defines how your app appears on the user's system and how it
-  should be launched - and you are required to have a \`short\_name\` and a
-  \`144x144\` png icon
+  should be launched - and you are required to have a \`short\_name\`, a `name` for
+  display in the Banner and *at least* an \`144x144\` png icon
   - Your icon declaration's should include a mime type of `image/png`
 * You have a [service
   worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
@@ -168,27 +168,27 @@ It is simple to integrate into any manifest.  Just add a `related_applications` 
 {% endhighlight %}
 
 ## <span id="criteria-faq">Frequently Asked Questions</span>
-**My app meets all the criteria, but I don't want the banner to display. Can I control this?**  
+**My app meets all the criteria, but I don't want the banner to display. Can I control this?**
 Yes, you can prevent the banner from displaying.  See "[Cancelling the prompt](#cancel)".
 
-**Can I detect if a user tapped "Add" at the prompt and added to home screen?**  
+**Can I detect if a user tapped "Add" at the prompt and added to home screen?**
 Yes you can, see "[Did a user install our web app](#action)".
 
-**If a user dismisses the banner, will it appear again?**  
+**If a user dismisses the banner, will it appear again?**
 No.  Not unless the user clears their history.  We want to make sure users have
 a good experience.  We will likely be changing all the heuristics over time.
 
-**Can I decide when to prompt the user****?**  
+**Can I decide when to prompt the user****?**
 No, we are not letting developers actively prompt the user to "Add to Home Screen".
 
 **You said that I will only get the banner if I visit the site on two different
-days.  How on earth do I test it?**  
+days.  How on earth do I test it?**
 Yeah, we had the same problem when we were building this.  Enable
 chrome://flags/\#bypass-app-banner-engagement-checks and you will see it as long
 as you have a manifest (configured correctly) and are on HTTPS and have a
 service worker.
 
-**Why do I need a service worker?**  
+**Why do I need a service worker?**
 We believe that when you add to the user's home screen you should be providing
 an app-like experience.  A service worker, especially one that supports push
 messaging or offline, is a strong indicator that you are developing a first
@@ -204,10 +204,10 @@ We can't say specifics right now but as we better understand what makes an exper
 **What could one of the critria for App Banner activation be?**
 Again, it is hard to say.  One example could be: supporting offline scenarios in your app could indicate that your app is more resiliant to connectivity issues and therefore would offer a better launchable experience.
 
-**Why do I need SSL?**  
+**Why do I need SSL?**
 Because you need a service worker, and we believe it is the best option for the future of the platform.
 
-**Are there any good examples of this in action?**  
+**Are there any good examples of this in action?**
 Yes, Glad you asked:
 
 * [Google I/O 2015 web app](https://events.google.com/io2015/)
@@ -217,5 +217,5 @@ Yes, Glad you asked:
 * [QR Snapper](https://qrsnapper.appspot.com)
   [[Code](https://github.com/PaulKinlan/qrcode)]
 
-**Examples are great, but do you have anything I can just copy and paste?**  
+**Examples are great, but do you have anything I can just copy and paste?**
 Yes. We have made a [minimal app install banner example](https://github.com/GoogleChrome/samples/tree/gh-pages/app-install-banner/) that you can copy, paste and change.
