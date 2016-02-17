@@ -13,7 +13,7 @@ tags:
   - frontend
 ---
 
-For Web Apps to be successful, they need to work how the user would expect a native application to work. The ability for the developer to control how their web app is launched is just one part of UX that needs to be solved.  
+For Web Apps to be successful, they need to work how the user would expect a native application to work. The ability for the developer to control how their web app is launched is just one part of UX that needs to be solved.
 
 The [Manifest for Web applications](https://w3c.github.io/manifest/) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and, more importantly, *how* they can launch it.  In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched.
 
@@ -28,9 +28,9 @@ To integrate the manifest in your own site you just need to do two things:
 
 ## Creating the manifest
 
-You can call the manifest whatever you want.  Most people will probably just use `manifest.json`. 
+You can call the manifest whatever you want.  Most people will probably just use `manifest.json`.
 
-An example manifest is shown below. It doesn't show everything that can be in a manifest. For that you can check out the [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest). 
+An example manifest is shown below. It doesn't show everything that can be in a manifest. For that you can check out the [reference on MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 
 {% highlight json %}
 {
@@ -62,6 +62,8 @@ An example manifest is shown below. It doesn't show everything that can be in a 
 Some interesting points in Chrome's implementation:
 
 *  The `short_name` is preferred over `name` and if provided will be used.
+   * Note: [as of Chrome 42](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en), you
+     should also provide a `name` which will be used for the App Install Banner.
 *  If you don't supply a `start_url` it will use the current page's URL.
 *  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/webapps/add_to_homescreen_data_fetcher.cc&l=115) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42). If none are found it will search for the icon that closest matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular pixel density, you can use the [`density` member](http://w3c.github.io/manifest/#display-member). The `density` member takes a number. When you don't declare `density`, it just defaults to "1", which means "use this icon for screen densities 1.0 and up", which is normally what you want.
 
