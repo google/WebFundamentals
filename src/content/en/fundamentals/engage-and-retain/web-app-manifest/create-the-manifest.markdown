@@ -17,7 +17,7 @@ Before diving into details of a web app manifest, let's create a basic manifest 
 
 ## Create the Manifest
 
-You can call the manifest whatever you want. Most people will probably just 
+You can call the manifest whatever you want. Most people will probably just
 use `manifest.json`. An example is given below.
 
 {% highlight json %}
@@ -42,11 +42,12 @@ use `manifest.json`. An example is given below.
 }
 {% endhighlight %}
 
-You should include a `short_name` as this will get used for the launcher text.
+You should include a `short_name` as this will get used for the text on the users homescreen
+and a `name` as that will be used in the Web App Install banner..
 
 ## Set a Start URL
 
-If you don't provide a `start_url`, then the current page will be used, which is 
+If you don't provide a `start_url`, then the current page will be used, which is
 unlikely to be what your users want. But that's not the only reason to include it. Because you can now define how your app is launched, add a query string parameter to the `start_url` that indicates how it was launched. For example:
 
 {% highlight json %}
@@ -55,7 +56,7 @@ unlikely to be what your users want. But that's not the only reason to include i
 
 ## Tell the Browser about your Manifest
 
-Once you have the manifest created and and on your site, all you need to do is add 
+Once you have the manifest created and and on your site, all you need to do is add
 a `link` tag to all the pages that encompass your web app as follows:
 
 {% highlight html %}
