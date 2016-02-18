@@ -44,7 +44,7 @@ the GCM API.
 
 ### The web app manifest
 
-You will also need a [manifest](/web/fundamentals/engage-and-retain/simplified-app-installs/#manifest-for-web-applications) 
+You will also need a [manifest](/web/fundamentals/engage-and-retain/web-app-manifest) 
 file that includes the `gcm_sender_id` parameter, used by Chrome when 
 establishing a subscription with GCM. This allows GCM to link a specific 
 subscription to a corresponding project number that can be matched with the 
