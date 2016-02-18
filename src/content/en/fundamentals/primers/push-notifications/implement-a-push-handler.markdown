@@ -6,8 +6,10 @@ authors:
  - josephmedley
 published_on: 2016-02-19
 updated_on: 2016-02-19
-order: 2
+order: 10
 translation_priority: 1
+notes:
+  sameorigin: "It is important to note that a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect."
 ---
 
 <p class="intro">
@@ -23,9 +25,13 @@ The first step in implementing push is to add a push event handler to your servi
 {% highlight javascript %}
 self.addEventListener('push', function(event) {
   console.log('Push message received: ', event);
-  // Process the push event.
+  event.waitUntil(
+    // Process the push event.
+  );
 }
 {% endhighlight %}
+
+Notice how the `event` object is used. Just like `install` and `activate`, `push` supports the `waitUntil()` method, giving you greater control over the order of asynchronous actions.
 
 ## Message Content
 
@@ -60,18 +66,28 @@ If `Running Status` says `STOPPED`, click the `Start` button. Now click `Push`. 
 
 ## Fetch Some Content
 
-Using `fetch()` is a whole subject in and of itself. What we want to focus on here is how to use `fetch()` with a push handler. 
+The current implementations of the Push API do not allow you to send 
+a payload with a push message. To get around this, we're going to make a call to global `fetch()`.
+
+Using `fetch()` is a whole subject in and of itself. What we want to focus on here is how to use `fetch()` with a push handler. For the best user experience we want to minimized the perceived wait for any updates. To do that we're going to get data from the server before telling the user there's new data available. This is when chaining promises comes in handy.
 
 {% highlight javascript %}
 self.addEventListener('push', function(event) {
   console.log('Push message received: ', event);
   event.waitUntil(
-  	fetch('notification/end/point/data.txt')
-  	  .then(function(response) {
-    	response.json().then(function(data) {
-          //Do something with the data.
-    	});
-  	  })
+    fetch('notification/end/point/data.txt')
+      .then(function(response) {
+        response.json().then(function(data){
+          console.log(data.message);
+          var title = 'Yay a message.';
+          self.registration.showNotification(title, {
+            body: data.message,
+            icon: 'images/icon.png'
+          })
+        })
+      })
   );
 });
 {% endhighlight %}
+
+{% include shared/note.liquid list=page.notes.sameorigin %}

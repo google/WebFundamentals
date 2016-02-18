@@ -1,54 +1,31 @@
 ---
 layout: shared/narrow
-title: "Register for push messages"
-description: "Push messages may consist of breaking news, site updates, or other information of interest to the user. The information is pushed from the server to a service worker before it is sent to the user as a notification."
+title: "Handle Subscriptions"
+description: "To receive messages, users must allow your web site to push notificaton 
+messages to them. That's where subscriptions come in. You can't just subscribe users and call it done. You need to let users unsubscribe as well."
 authors:
 - dgash
 published_on: 2015-10-01
-updated_on: 2015-10-01
-order: 10
+updated_on: 2016-02-19
+order: 30
 translation_priority: 1
-key-takeaways:
-  tldr:
-    - Users must first allow push messages as a global permissions setting.
-    - Users must also explicitly subscribe to your site to receive notifications.
-    - You can unsubscribe users at their request, regardless of their global notifications permissions.
 ---
 
 <p class="intro">
-  Push messages may consist of breaking news, site updates, or other 
-  information of interest to the user. The information is pushed from the 
-  server to a service worker before it is sent to the user as a notification.
+	To receive messages, users must allow your web site to push notificaton 
+messages to them. That's where subscriptions come in. You can't just subscribe users and call it done. You need to let users unsubscribe as well.
 </p>
 
 {% include shared/toc.liquid %}
 
-{% include shared/takeaway.liquid list=page.key-takeaways.tldr %}
+## Subscribing
 
-## Subscribe 
-
-To receive messages, users must allow your web site to push notificaton 
-messages to them. This is a two-step process performed on the receiving 
+Subscribing is a two-step process performed on the receiving 
 device, comprising of enabling of push notifications and an explicit 
 subscription request to a specific web site. Both of these conditions must 
 be met for the user to receive push messages; that is, a status of either 
 "disabled" or "enabled but not subscribed" prevents messages from 
 being received.
-
-Push messages are implemented via a [service worker](/web/fundamentals/primers/service-workers/).
-When a push message is received, the browser can start up a service worker 
-that runs in the background without a page being open. The service worker 
-must be initialized and registered in order to process push messages. 
-
-{% highlight javascript %}
-// Check that service workers are supported
-if ('serviceWorker' in navigator) {  
-  navigator.serviceWorker.register('/service-worker.js')  
-    .then(initialiseState);  
-  } else {  
-    console.warn('Service workers aren\'t supported in this browser.');  
-}
-{% endhighlight %}
 
 Users expect a simple UI to enable or disable push messages for your site. 
 This is typically accomplished via a UI element such as a button or toggle 

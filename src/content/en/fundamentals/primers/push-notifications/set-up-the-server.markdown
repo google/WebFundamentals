@@ -1,24 +1,21 @@
 ---
 layout: shared/narrow
-title: "Display a notification"
-description: "The notification is the actual message that is sent to a user after he has enabled push messages and has subscribed to the site. Messages are often sent via Google Cloud Messaging (GCM), a service that handles all aspects of message queueing and delivery to client applications running on target devices, but there are other services that support push notifications."
+title: "Set Up the Server"
+description: "We're done with the basics of the client side of push. But how do we send a message to the client? That requires server work. This section describes how to send a message using Google Cloud Messaging (GCM), a service that handles all aspects of message queueing and delivery to client applications running on target devices. After that, we'll discuss other services that support push notifications."
 authors:
   - dgash
 published_on: 2015-10-01
-updated_on: 2015-10-01
-order: 20
+updated_on: 2016-02-19
+order: 40
 translation_priority: 1
 notes:
   sameorigin: "It is important to note that a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect."
 ---
 
 <p class="intro">
-  The notification is the actual message that is sent to a user after enabling
-  push messages and has subscribed to the site. Messages are often sent 
-  via <a href="https://developer.android.com/google/gcm/index.html">Google 
+  We're done with the basics of the client side of push. But how do we send a message to the client? That requires server work. This section describes how to send a message using <a href="https://developer.android.com/google/gcm/index.html">Google 
   Cloud Messaging (GCM)</a>, a service that handles all aspects of message 
-  queueing and delivery to client applications running on target devices, but 
-  there are other services that support push notifications.
+  queueing and delivery to client applications running on target devices. After that, we'll discuss other services that support push notifications.
 </p>
 
 {% include shared/toc.liquid %}
@@ -29,22 +26,28 @@ service to handle messaging. Chrome currently uses Google Cloud Messaging
 [Web Push Protocol](https://datatracker.ietf.org/doc/draft-thomson-webpush-protocol/), 
 other browsers are free to use other services.
 
-## Displaying
+The [GCM documentation](https://developer.android.com/google/gcm/index.html) 
+has a reference for the [HTTP syntax](https://developers.google.com/cloud-messaging/http-server-ref)
+used to pass messages from your app server to client apps. The 
+[XMPP server protocol](https://developers.google.com/cloud-messaging/xmpp-server-ref)
+serves a similar purpose.
+
+## Configure GCM
 
 To use the GCM API, you must set up a project in the 
 [Google Developer Console](https://console.developers.google.com/). Follow the 
 instructions in the getting started guide for either 
 [Android](https://developers.google.com/cloud-messaging/android/start) or 
 [iOS](https://developers.google.com/cloud-messaging/ios/start). Make sure to 
-enable *Google Cloud Messaging for Android*, and make a note of the 
-*project number* and *API key*, as you’ll need them later on. The project 
+enable *Google Cloud Messaging*. When you create the credentials select *API Key* then select *Browser key* as the type. Before leaving the Developer Console, make a note of the 
+*API key* and the *Project number* (located under Home, then Dashboard), as you’ll need them later. The project 
 number is used in the web app manifest ([below](#the-web-app-manifest)) as the `gcm_sender_id` 
 parameter, and you will need the Public API Key on your server when you use 
 the GCM API.
 
-### The web app manifest
+## Configure the Web App Manifest
 
-You will also need a [manifest](/web/fundamentals/engage-and-retain/simplified-app-installs/#manifest-for-web-applications) 
+You will also need a [manifest](/web/fundamentals/engage-and-retain/web-app-manifest/) 
 file that includes the `gcm_sender_id` parameter, used by Chrome when 
 establishing a subscription with GCM. This allows GCM to link a specific 
 subscription to a corresponding project number that can be matched with the 
@@ -88,5 +91,24 @@ send the data as JSON or form data.
 - An array of `registration_ids`, which you can extract from the 
 `PushSubscription.endpoint` you sent to your server.
 
+## Send a Test Push
 
+Earlier](notifications), we discussed creating a project in Google Developer 
+Console, and retaining some information for later use in the manifest file. 
+That information is also useful in a simple notification test.
 
+For a quick check of your service worker, you can use 
+[cURL](https://en.wikipedia.org/wiki/CURL) to send a push message to your 
+browser, provided that you have whitelisted your IP address for your local 
+machine in the Google Developer Console.
+
+In the cURL command below, replace `<YOUR_PUBLIC_API_KEY>` and 
+`<YOUR_REGISTRATION_ID>` with your values, run it from a terminal window, 
+and you should get a notification.
+
+{%highlight bash %}
+curl --header "Authorization: key=<YOUR_PUBLIC_API_KEY>" \ 
+  --header "Content-Type: application/json" 
+  https://android.googleapis.com/gcm/send -d \
+  '{"registration_ids":["<YOUR_REGISTRATION_ID>"]}'
+{% endhighlight %}
