@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Deploy to a secure host and celebrate!"
+title: "Deploy to a Secure Host and Celebrate!"
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1

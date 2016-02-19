@@ -15,7 +15,7 @@ Chrome will automatically display the banner when your app meets the following
 criteria:
 
 * Has a [web app manifest](.) file with:
-  - a `short_name` (used on the homescreen)
+  - a `short_name` (used on the home screen)
   - a `name` (used in the banner)
   - a 144x144 png icon (the icon declarations must include a mime type of `image/png`).
 * Has a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
