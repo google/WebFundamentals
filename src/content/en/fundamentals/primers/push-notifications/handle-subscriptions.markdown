@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Handle Subscriptions"
-description: "To receive messages, users must allow your web site to push notificaton 
+description: "To receive messages, users must allow your web site to push notification 
 messages to them. That's where subscriptions come in. You can't just subscribe users and call it done. You need to let users unsubscribe as well."
 authors:
 - dgash
@@ -12,7 +12,7 @@ translation_priority: 1
 ---
 
 <p class="intro">
-	To receive messages, users must allow your web site to push notificaton 
+	To receive messages, users must allow your web site to push notification 
 messages to them. That's where subscriptions come in. You can't just subscribe users and call it done. You need to let users unsubscribe as well.
 </p>
 

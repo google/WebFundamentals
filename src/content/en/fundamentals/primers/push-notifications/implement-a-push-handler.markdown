@@ -69,7 +69,7 @@ If `Running Status` says `STOPPED`, click the `Start` button. Now click `Push`. 
 The current implementations of the Push API do not allow you to send 
 a payload with a push message. To get around this, we're going to make a call to global `fetch()`.
 
-Using `fetch()` is a whole subject in and of itself. What we want to focus on here is how to use `fetch()` with a push handler. For the best user experience we want to minimized the perceived wait for any updates. To do that we're going to get data from the server before telling the user there's new data available. This is when chaining promises comes in handy.
+Using `fetch()` is a whole subject in and of itself. What we want to focus on here is how to use `fetch()` with a push handler. For the best user experience we want to minimize the perceived wait for any updates. To do that we're going to get data from the server before telling the user there's new data available. This is when chaining promises comes in handy.
 
 {% highlight javascript %}
 self.addEventListener('push', function(event) {

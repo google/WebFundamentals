@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Respond to the User"
-description: "efore we leave the service worker behind, we need to implement another event
+description: "Before we leave the service worker behind, we need to implement another event
 handler called <code>notificationclick</code>."
 authors:
  - dgash
