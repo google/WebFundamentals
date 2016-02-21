@@ -19,7 +19,7 @@ platform.
 To keep the platform healthy we sometimes remove APIs from the Web Platform which
 have run their course.  There can be many reasons why we would remove an API, such
 as: they are superseded by newer APIs, are updated to reflect changes to
-specifications, to bring alignment and conistency with other browsers, or are
+specifications, to bring alignment and consistency with other browsers, or are
 early experimentations that never came to fruition in other browsers and thus 
 can increase the burden of support for web developers.
 
@@ -67,12 +67,14 @@ displayed.
 
 It seems quite a handy API. So what are we changing?
 
-Before the rendering engine of Chrome changed from Blink it was powered by
+Before the rendering engine of Chrome changed to Blink, it was powered by
 WebKit and that had let you prefix "css" to the start of a property.  For
 example `getComputedStyle(e).cssHeight` instead of `getComputedStyle(e).height`.
 Both would return the same data as they mapped to the same underlying values,
 but it is this usage of the "css" prefix that is non-standard and has been
 deprecated and removed.
+
+Note - `cssFloat` is a standard property and is not affected by this deprecation.
 
 If you access a property this way in Chrome 49 it will return `undefined` and you
 will have to fix your code.
@@ -223,10 +225,8 @@ function onCreateOfferSuccess(desc) {
 }
 {% endhighlight %}
 
-Note that both `setLocalDescription()` and `setRemoteDescription()` have an error
-handler. Older browsers expecting only a success handler will simply ignore the
-error handler argument if it's present; calling this code in an older browser
-will not cause an exception.
+Note that both `setLocalDescription()` and `setRemoteDescription()` always had an error
+handler parameter, so simply specifying that parameter is a safe change.
 
 In general, for production WebRTC applications we recommend that you use
 [`adapter.js`](https://github.com/webrtc/adapter),  a shim, maintained by the
@@ -325,8 +325,7 @@ and will be removed in a future release.
 In November 2015 it was announced that [`Object.Observe` was being withdrawn from
 TC39](https://esdiscuss.org/topic/an-update-on-object-observe).  It has been
 deprecated from Chrome 49 and you will see the following warning in the console
-if you try to use it: "___
-for more details._"
+if you try to use it:
 
 <figure>
   <img src="/web/updates/images/2016/02/chrome-49-deprecations/image02.png" />
