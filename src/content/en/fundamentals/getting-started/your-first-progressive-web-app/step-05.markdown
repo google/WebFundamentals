@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Use service workers to cache application data"
+title: "Use Service Workers to Cache Application Data"
 description: "Use a service worker to cache application data in a progressive web app"
 published_on: 2016-02-04
 updated_on: 2016-02-04
@@ -150,12 +150,12 @@ before `app.updateForecastCard(response)`, set `app.hasRequestPending = false;`
 
 Our weather app now makes two asynchronous requests for data, one from the cache 
 and one via an XHR. If there's data in the cache, it'll be returned and rendered 
-extremely quickly (10s of ms) and update the card if the XHR is still 
+extremely quickly (tens of microseconds) and update the card if the XHR is still 
 outstanding. Then, when the XHR responds, the card will be updated with the 
 freshest data direct from our weather API.  
 
 If for some reason, the XHR responds faster than the cache, the 
-`hasRequestPending` flag will prevent the cache from over writing the latest data 
+`hasRequestPending` flag will prevent the cache from overwriting the latest data 
 from the network.
 
 ## Test it out

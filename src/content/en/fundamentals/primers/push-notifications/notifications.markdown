@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Display a notification"
+title: "Display a Notification"
 description: "The notification is the actual message that is sent to a user after he has enabled push messages and has subscribed to the site. Messages are often sent via Google Cloud Messaging (GCM), a service that handles all aspects of message queueing and delivery to client applications running on target devices, but there are other services that support push notifications."
 authors:
   - dgash

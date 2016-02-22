@@ -42,7 +42,7 @@ use `manifest.json`. An example is given below.
 }
 {% endhighlight %}
 
-You should include a `short_name` as this will get used for the text on the users homescreen
+You should include a `short_name` as this will get used for the text on the users home screen
 and a `name` as that will be used in the Web App Install banner..
 
 ## Set a Start URL

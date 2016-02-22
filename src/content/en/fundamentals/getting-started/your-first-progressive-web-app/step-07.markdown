@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Support native integration"
+title: "Support Native Integration"
 description: "Use Add to Home Screen and integrate your Progressive Web App with the native platform."
 published_on: 2016-02-04
 updated_on: 2016-02-04
@@ -113,7 +113,7 @@ In your `index.html`, add the following to the `<head>`:
 <!-- Add to home screen for Safari on iOS -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Weather PWA">
+<meta name="apple-mobile-web-app-title" content="Weather App">
 <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
 {% endhighlight %}
 
