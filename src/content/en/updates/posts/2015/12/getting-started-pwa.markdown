@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 published: false
-title: "Getting started with Progressive Web Apps"
+title: "Getting Started with Progressive Web Apps"
 published_on: 2015-12-16
 updated_on: 2015-12-16
 authors:
@@ -13,7 +13,7 @@ description: "Learn how to get started building Progressive Web Apps"
 featured_image: /web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg
 ---
 
-There's been much welcome discussion about [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) lately. They're still a relatively new model, but their principles can equally enhance apps built with vanilla JS, React, Polymer, Angular or any other framework. In this post, I'll summarise some options and reference apps for getting started with your own PWApp today.
+There's been much welcome discussion about [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) lately. They're still a relatively new model, but their principles can equally enhance apps built with vanilla JS, React, Polymer, Angular or any other framework. In this post, I'll summarise some options and reference apps for getting started with your own progressive web app today.
 
 
 ## What is a Progressive Web App?
@@ -98,7 +98,7 @@ For diving deeper into Progressive Web Apps, read Alex Russell's original [blog 
 The manifest enables your web app to have a more native-like presence on the user's home screen. It allows the app to be launched in full-screen mode (without a URL bar being present), provides control over the screen orientation and in recent versions of Chrome on Android supports defining a [Splash Screen](https://developers.google.com/web/updates/2015/10/splashscreen?hl=en) and [theme color](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android?hl=en) for the address bar. It is also used to define a set of icons by size and density used for the aforementioned Splash screen and home screen icon.
 
 <img
-src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-1-@1x.jpg" alt="Add to home screen, launch from homescreen and full-screen app-like experiences."/>
+src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-1-@1x.jpg" alt="Add to home screen, launch from home screen and full-screen app-like experiences."/>
 
 A sample manifest file can be found in [Web Starter Kit](https://github.com/google/web-starter-kit/blob/master/app/manifest.json) and over in the [Google Chrome samples](https://github.com/GoogleChrome/samples/tree/0768ee71e4548f779219798d8c83fdcc67b469e8/web-application-manifest). Bruce Lawson wrote a [Manifest Generator](http://brucelawson.github.io/manifest/) and Mounir Lamouri has also written a handy [Web Manifest validator](https://mounirlamouri.github.io/manifest-validator/) worth checking out.
 

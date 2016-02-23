@@ -16,8 +16,8 @@ key-takeaways:
     - "View which resource has the slowest time to first byte by selecting the Latency filter in the Timeline column."
     - "View which resources took the longest time to load by selecting the Duration filter in the Timeline column."
 notes:
-  resource-timing:
-    - "The Network panel uses the <a href='#how-to-use-the-resource-timing-api'>Resource Timing API</a> to retrieve detailed network timing data for each loaded resource. This API is available to any web page, not just DevTools."
+  note-tbd:
+    - "TBD note."
 ---
 
 <p class="intro">
@@ -146,7 +146,7 @@ Each requested resource is added as a row to the Network table, which contains t
 
 {% include shared/remember.liquid title="Note" list=page.notes.resource-timing %}
 
-## Determine performance by resource type 
+## Determine performance by resource type
 
 By default, the Network panel graphs the time it took
 to load each resource in a waterfall view,
@@ -229,8 +229,6 @@ or click on a resource name in the Network panel table
 to view performance information about a particular type:
 
 ![Timing data](imgs/timeline-view-hover.png)
-
-Resource details appear in a tabbed window.
 
 ### HTTP headers
 
@@ -404,76 +402,7 @@ Errors are light-red.
 * To refresh the Frames table after new messages arrive, click the resource name on the left.
 * Only the last 100 WebSocket messages are preserved by the Frames table.
 
-### Resource network timing
-
-The Timing tab graphs the time spent on the various network phases involved loading the resource
-
-![Resource network timing graph](imgs/timing.png)
-
-<style>
-dt:before {
-  content: "\00a0\00a0\00a0";
-}
-dt strong {
-  margin-left: 5px;
-}
-dt.stalled:before, dt.proxy-negotiation:before {
-  background-color: #cdcdcd;
-}
-dt.dns-lookup:before {
-  background-color: #1f7c83;
-}
-dt.initial-connection:before, dt.ssl:before {
-  background-color: #e58226;
-}
-dt.request-sent:before, dt.ttfb:before {
-  background-color: #5fdd5f;
-}
-dt.content-download:before {
-  background-color: #4189d7;
-}
-</style>
-
-<dl class="mdl-data-table">
-  <dt class="stalled"><strong> Stalled/Blocking</strong></dt>
-  <dd>
-    Time the request spent waiting before it could be sent.
-    This time is inclusive of any time spent in proxy negotiation.
-    Additionally, this time will include when the browser is waiting for an already established connection to become available for re-use, obeying Chrome's <a href="https://code.google.com/p/chromium/issues/detail?id=12066">maximum six</a> <abbr title="Transmission Control Protocol">TCP</abbr> connection per origin rule.
-  </dd>
-
-  <dt class="proxy-negotiation"><strong> Proxy Negotiation</strong></dt>
-  <dd>Time spent negotiating with a proxy server connection.</dd>
-
-  <dt class="dns-lookup"><strong><abbr title="Domain Name System"> DNS</abbr> Lookup</strong></dt>
-  <dd>
-    Time spent performing the DNS lookup.
-    Every new domain on a page requires a full roundtrip to do the DNS lookup.
-  </dd>
-
-  <dt class="initial-connection"><strong> Initial Connection / Connecting</strong></dt>
-  <dd>Time it took to establish a connection, including <abbr title="Transmission Control Protocol">TCP</abbr> handshakes/retries and negotiating a <abbr title="Secure Sockets Layer">SSL</abbr>.</dd>
-
-  <dt class="ssl"><strong> SSL</strong></dt>
-  <dd>Time spent completing a SSL handshake.</dd>
-
-  <dt class="request-sent"><strong> Request Sent / Sending</strong></dt>
-  <dd>
-    Time spent issuing the network request.
-    Typically a fraction of a millisecond.
-  </dd>
-
-  <dt class="ttfb"><strong> Waiting (<abbr title="Time To First Byte">TTFB</abbr>)</strong></dt>
-  <dd>
-    Time spent waiting for the initial response, also known as the Time To First Byte.
-    This time captures the latency of a round trip to the server in addition to the time spent waiting for the server to deliver the response.
-  </dd>
-
-  <dt class="content-download"><strong> Content Download / Downloading</strong></dt>
-  <dd>Time spent receiving the response data.</dd>
-</dl>
-
-## How to filter and sort results 
+## How to filter and sort results
 
 By default, resources in the Network table are sorted by the start time of each request (the network "waterfall"). Click another column header to sort the table by a different column value. Click the header again to change the sort order (ascending or descending).
 
@@ -563,29 +492,6 @@ new records are appended to the bottom of the table.
 Click the same button again (now red)
 to disable log preservation.
 
-## How to use the Resource Timing API
-
-The [Resource Timing API](http://www.w3.org/TR/resource-timing)
-provides detailed network timing data for each loaded resource.
-For example, the API can tell you precisely when the HTTP request for an image started, and when the image's final byte was received.
-The following illustration shows the network timing data points that the Resource Timing API provides.
-
-![Resource Timing API](imgs/resource-timing-api.png)
-
-The API is available to any web page, not just DevTools. In Chrome, it's exposed as methods on the global `window.performance` object.
-The `performance.getEntries()` method returns an array of "resource timing objects", one for each requested resource on the page.
-
-Try this: open the JavaScript console on the current page, enter the following at the prompt, and hit Return:
-
-`window.performance.getEntries()[0]`
-
-This evaluates the first element in the array of resource timing objects and displays its properties in the console, as shown below.
-
-![getEntries() method](imgs/getentries.png)
-
-Each timestamp is in microseconds, following the [High Resolution
-Time](http://www.w3.org/TR/hr-time/#sec-high-resolution-time) specification. This API is [available in
-Chrome](http://updates.html5rocks.com/2012/08/When-milliseconds-are-not-enough-performance-now) as the `window.performance.now()` method.
 
 ## Additional resources
 

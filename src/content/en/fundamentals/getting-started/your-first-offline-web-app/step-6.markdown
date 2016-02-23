@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Install the site assets"
+title: "Install the Site Assets"
 published_on: 2015-09-30
 updated_on: 2015-10-06
 translation_priority: 1

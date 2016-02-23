@@ -1,12 +1,14 @@
 ---
 layout: shared/narrow
 title: "Make JavaScript Look Pretty"
-description: "Transform your JavaScript into a more readable form by clicking the Pretty Print icon in Chrome DevTools."
+description: "Transform your JavaScript into a more readable form by clicking 
+the Pretty-Print icon in Chrome DevTools."
 published_on: 2015-04-14
-updated_on: 2015-04-22
+updated_on: 2016-02-22
 order: 1
 authors:
   - megginkearney
+  - kaycebasques
 translation_priority: 0
 key-takeaways:
   tldr-tbd:
@@ -16,18 +18,14 @@ notes:
     - "TBD note."
 ---
 
-<p class="intro">
-  Transform your JavaScript into a more readable form by clicking the Pretty Print icon in Chrome DevTools.
-</p>
+When viewing a script in the **Sources** panel, click the **Pretty-Print**
+![the pretty-print icon](imgs/prettyprint-icon.png){:.inline} 
+icon to transform a minified script into a more human-readable form.
 
-If you have trouble trying to read and debug minified JavaScript in the DevTools, a pretty printing option is available to make life easier. 
+Here is how a minified script might look in the **Sources** panel:
 
-Here is how a minified script displayed in the tools might look prior to being displayed in the DevTools:
+![a minified script](imgs/pretty-print-off.jpg)
 
-![Minified script](imgs/pretty-print-off.jpg)
+Here is how the same script looks after clicking the **Pretty-Print** icon:
 
-By clicking the curly braces ![Pretty print icon](imgs/prettyprint-icon.png){:.inline} icon in the bottom left corner, the JavaScript is transformed into a more human readable form. This is also easier for debugging and setting breakpoints.
-
-![Pretty print JavaScript](imgs/pretty-print-on.jpg)
-
-
+![a minified script after pretty print](imgs/pretty-print-on.jpg)

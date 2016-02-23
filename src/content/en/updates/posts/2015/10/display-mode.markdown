@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "Detecting if a web app is launched from the home screen"
+title: "Detecting if a Web App is Launched from the Home Screen"
 published_on: 2015-10-16
 updated_on: 2015-10-16
 authors:
@@ -20,7 +20,7 @@ presence on the home screen using the
 
 Now apps tend to offer different experiences as sites, and developers might want to
 offer different experiences depending on whether the site is viewed in the browser
-or launched as a standalone web app, from the homescreen.
+or launched as a standalone web app, from the home screen.
 
 One example could be to show a navigation drawer only when launched as an app
 (ie. without any browser chrome).
@@ -88,7 +88,7 @@ in the web app manifest instead.
 
 ###FAQ
 * Will this work on Chrome for iOS or on Desktop?
-  * This feature works on any platform where web apps can be added to the homescreen,
+  * This feature works on any platform where web apps can be added to the home screen,
     meaning it works for Android as well as for desktop "Add to desktop" apps. It
     additional works for Chrome Apps distributed through the Chrome store. It currently
     does not work on iOS.

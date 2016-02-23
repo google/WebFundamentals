@@ -69,7 +69,7 @@ Die beste Anfrage ist eine Anfrage, für die keine Kommunikation mit dem Server 
 
 `no-cache` gibt an, dass die zurückgesendete Antwort nicht für die Beantwortung einer nachfolgenden Anfrage an dieselbe URL verwendet werden kann, ohne zunächst beim Server nachzufragen, ob sich die Antwort geändert hat. Aus diesem Grund wird bei Vorliegen eines ordnungsgemäßen Validierungstokens (ETag) `no-cache` einen Paketumlauf zur Validierung der zwischengespeicherten Antwort nach sich ziehen. Allerdings wird der Download vermieden, wenn sich die Ressource nicht geändert hat.
 
-Im Gegensatz dazu ist `no-store` wesentlich unkomplizierter, weil damit der Browser und alle dazwischen geschalteten Cachespeicher einfach jede beliebige Version der zurückgesendeten Antwort speichern können, z. B. eine mit persönlichen Daten oder Bankdaten. Jedes Mal, wenn der Nutzer diese Ressource anfordert, wird eine Anfrage an den Server gesendet und es wird in jedem Fall eine vollständige Antwort heruntergeladen.
+Im Gegensatz dazu ist `no-store` wesentlich unkomplizierter, denn es verbietet dem Browser und allen dazwischen geschalteten Caches  einfach, irgendeine Version der zurückgesendeten Antwort zu speichern, z. B. eine mit persönlichen Daten oder Bankdaten. Jedes Mal, wenn der Nutzer diese Ressource anfordert, wird eine Anfrage an den Server gesendet und es wird in jedem Fall eine vollständige Antwort heruntergeladen.
 
 ### `Öffentlich` oder `privat`
 
