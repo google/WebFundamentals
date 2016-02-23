@@ -4,7 +4,7 @@ title: "Tips for creating engaging notifications"
 description: ""
 published_on: 2015-10-02
 updated_on: 2015-10-02
-order: 40
+order: 400
 authors:
   - josephmedley
 translation_priority: 1
