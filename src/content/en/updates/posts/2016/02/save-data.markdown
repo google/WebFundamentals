@@ -20,11 +20,11 @@ situations where network connectivity is slow. In short, they significantly
 improve the user experience, hence their continuing growth in use and
 popularity.
 
-However, the popularity of the proxy browsers and transcoding services is also
+However, the popularity of proxy browsers and transcoding services is also
 an indicator that we&mdash;the site owners and web developers&mdash;are ignoring the high
 user demand for fast and light applications and pages. Let's fix that.
 
-**The new [`Save-Data` client hint request header](https://httpwg.github.io/http-extensions/client-hints.html#the-save-data-hint) available in Chrome, Opera, and Yandex browsers enables developers to deliver fast and light applications to users who have opted-in to 'data savings' mode in their browser.** By identifying this request header, the application can customize and deliver an optimized user experience to cost- and performance-constrained users.
+**The new [`Save-Data` client hint request header](https://httpwg.github.io/http-extensions/client-hints.html#the-save-data-hint) available in Chrome, Opera, and Yandex browsers enables developers to deliver fast and light applications to users who have opted-in to "data savings" mode in their browser.** By identifying this request header, the application can customize and deliver an optimized user experience to cost- and performance-constrained users.
 
 ## The Need for Lightweight Apps and Pages
 
@@ -73,7 +73,7 @@ In short, counting on third-party services is both suboptimal and unreliable. **
 
 How do you know when to deliver the "light" experience to your users? Your application should check for the new `Save-Data` client hint request header:
 
-> _The "**Save-Data**" client hint request header_ indicates the client's preference for reduced data usage, due to high transfer costs, slow connection speeds, or other reasons._
+> _The "**Save-Data**" client hint request header indicates the client's preference for reduced data usage, due to high transfer costs, slow connection speeds, or other reasons._
 
 Whenever the user enables a "data savings" mode in their browser, the browser
 will append the new `Save-Data` request header to all outgoing requests (both
@@ -114,9 +114,9 @@ In turn, if your application is [using a service worker](https://developers.goog
     * And so on...
 
 1. Enable server logic to check for the `Save-Data` request header and consider
-   providing an alternate (lighter) response&mdash;e.g. reduce number of required
+   providing an alternate (lighter) response&mdash;e.g. reduce the number of required
    resources and dependencies to display the page, apply higher image
-   compression, etc..
+   compression, etc.
 
    If you're serving an alternate response based on the `Save-Data` header, don't
    forget to add it to the Vary list&mdash;e.g. `Vary: Save-Data`, to indicate
@@ -126,12 +126,12 @@ In turn, if your application is [using a service worker](https://developers.goog
    caches](https://httpwg.github.io/http-extensions/client-hints.html#interaction-with-caches).
 
 1. If you're using a service worker, your application can detect when the data savings
-   option is enabled by checking for the presence of the `Save-Data` request header. If enabled, 
+   option is enabled by checking for the presence of the `Save-Data` request header. If enabled,
    consider if you can   rewrite the request to fetch fewer bytes, or use an already fetched response.
 
 1. Consider augmenting `Save-Data` with other signals such as information about
-   the users' connection type and technology (see [NetInfo
+   the user's connection type and technology (see [NetInfo
    API](http://w3c.github.io/netinfo/#examples-of-usage)). For example, you
-   might want to serve the lightweight experience to any users on a 2G
+   might want to serve the lightweight experience to any user on a 2G
    connection. Conversely, just because the user is on a "fast" 4G connection
    does not mean they're not interested in saving data&mdash;e.g. roaming.
