@@ -126,6 +126,7 @@ translation_priority: 1
         <p>Use the Network panel to get insights into requested and downloaded resources and optimize your page load performance.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/profile/network-performance/resource-loading">Network Panel Basics</a></li>
+          <li><a href="/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing">Understanding Resource Timing</a></li>
           <li><a href="/web/tools/chrome-devtools/profile/network-performance/network-conditions">Network Throttling</a></li>
         </ul>
       </div>

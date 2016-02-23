@@ -20,7 +20,7 @@ showcase:
   link: https://events.google.com/io2015/
 
 notes:
-  oldversion: "The GitHub source code linked to below uses an previous version of <code>sw-toolbox</code> named <code>shed</code>; you can assume that the older <code>shed</code> interface and the newer <code>toolbox</code> interface can be used interchangeably."
+  oldversion: "The <a href='https://github.com/GoogleChrome/ioweb2015'>GitHub source code</a> for this app uses an previous version of <code>sw-toolbox</code> named <code>shed</code>; you can assume that the older <code>shed</code> interface and the newer <code>toolbox</code> interface can be used interchangeably."
 ---
 
 ## Overview

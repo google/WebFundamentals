@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Start with a fast first load"
+title: "Start with a Fast First Load"
 description: "Fast first loads with Progressive Web Apps and the App Shell model."
 published_on: 2016-02-04
 updated_on: 2016-02-04
@@ -26,7 +26,7 @@ the first load.
 
 For this code lab, we'll statically inject a weather forecast, but in a 
 production app, the latest weather forecast data would be injected by the server 
-based on the IP address geo-location of the user. 
+based on the IP address geolocation of the user. 
 
 Add the following inside the immediately invoked function expression:
 

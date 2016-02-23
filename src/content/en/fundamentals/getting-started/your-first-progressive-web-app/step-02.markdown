@@ -25,7 +25,7 @@ with all of the resources you'll need.
 
 ## Download the code
 
-You can [download all of the code for this PWA guide](pwa-weather.zip) in a
+You can [download all of the code for this progressive web app guide](pwa-weather.zip) in a
 ZIP file for easy use. Each step and all of the resources you need are
 available in the ZIP. 
 
@@ -50,12 +50,12 @@ Remember, the key components will consist of:
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather PWA</title>
+  <title>Weather App</title>
   <!-- Insert link to styles.css here -->
 </head>
 <body>
   <header class="header">
-    <h1 class="header__title">Weather PWA</h1>
+    <h1 class="header__title">Weather App</h1>
     <button id="butRefresh" class="headerButton"></button>
     <button id="butAdd" class="headerButton"></button>
   </header>

@@ -7,7 +7,6 @@ updated_on: 2016-02-12
 authors:
   - mattgaunt
   - paulkinlan
-  - josephmedley
 translation_priority: 1
 order: 4
 ---

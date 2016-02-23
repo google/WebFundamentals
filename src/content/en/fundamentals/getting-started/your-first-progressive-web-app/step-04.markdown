@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Use service workers to pre-cache the app shell"
+title: "Use Service Workers to Pre-cache the App Shell"
 description: "Use a service worker to pre-cache the app shell of a Progressive Web App."
 published_on: 2016-02-04
 updated_on: 2016-02-04
@@ -18,8 +18,8 @@ notes:
 
 <p class="intro">
 Progressive Web Apps have to be fast, and installable, which means that they 
-work online, offline, or on an intermittent, slow connections. To achieve 
-this, we need to cache our app shell using service worker, so that it's 
+work online, offline, or on intermittent, slow connections. To achieve 
+this, we need to cache our app shell using a service worker so that it's 
 always available quickly and reliably. 
 </p>
 
@@ -260,7 +260,7 @@ A couple of tips:
 
 ### Your new best friend: chrome://serviceworker-internals
 
-Chrome's Service Worker Internals page (chrome://serviceworker-internals) is a 
+Chrome's Service Worker Internals page (`chrome://serviceworker-internals`) is a 
 life saver, easily allowing you to stop and un-register existing service workers 
 and start fresh. You can also use this page to launch the Developer Tools on the 
 service worker, giving you access to the console of the service worker. 

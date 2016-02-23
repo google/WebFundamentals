@@ -27,11 +27,12 @@ order: 4
 
 ## Criteria to Show the Banner
 
-The criteria is similar to the Web App install banner except for the need of 
+The criteria is similar to the Web App install banner except for the need of
 a service worker. Your site must:
 
 * Have a [web app manifest](.) file with:
   - a `short_name`
+  - a `name` (used in the banner prompt)
   - a 144x144 png icon, your icon declaration's should include a mime type of `image/png`
   - a `related_applications` object with information about the app
 * Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/)
@@ -40,7 +41,7 @@ a service worker. Your site must:
 
 ## Manifest Requirements
 
-To integrate into any manifest, add a `related_applications` array with the 
+To integrate into any manifest, add a `related_applications` array with the
 platforms of `play` (for Google Play) and the App Id.
 
 {% highlight javascript %}
@@ -52,7 +53,7 @@ platforms of `play` (for Google Play) and the App Id.
 ]
 {% endhighlight %}
 
-If just want to offer the user the ability to install your Android 
+If just want to offer the user the ability to install your Android
 application, and not show the web app install banner, then add
 `"prefer_related_applications": true`. For example:
 

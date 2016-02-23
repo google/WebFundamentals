@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Display a notification"
+title: "Display a Notification"
 description: "The notification is the actual message that is sent to a user after he has enabled push messages and has subscribed to the site. Messages are often sent via Google Cloud Messaging (GCM), a service that handles all aspects of message queueing and delivery to client applications running on target devices, but there are other services that support push notifications."
 authors:
   - dgash
@@ -44,7 +44,7 @@ the GCM API.
 
 ### The web app manifest
 
-You will also need a [manifest](/web/fundamentals/engage-and-retain/simplified-app-installs/#manifest-for-web-applications) 
+You will also need a [manifest](/web/fundamentals/engage-and-retain/web-app-manifest) 
 file that includes the `gcm_sender_id` parameter, used by Chrome when 
 establishing a subscription with GCM. This allows GCM to link a specific 
 subscription to a corresponding project number that can be matched with the 
