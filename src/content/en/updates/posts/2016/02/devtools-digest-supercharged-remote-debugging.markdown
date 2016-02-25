@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "Supercharged Remote Rebugging, Class Toggles and our own late night show?!"
+title: "Supercharged Remote Debugging, Class Toggles and our own late night show?!"
 published_on: 2016-02-25
 updated_on: 2016-02-25
 authors:
@@ -13,7 +13,7 @@ description: "Learn all about the revamped “Inspect Devices” UI, toggle clas
 featured_image: /web/updates/images/2016/02/devtools-digest/devtools-tonight.jpg
 ---
 
-<p class="intro">Learn all about the revamped “Inspect Devices” UI, toggle classes easily in the now-fixed style panel and watch the pilot of DevTools Tonight.</p>
+<p class="intro">Learn all about the revamped <strong>Inspect Devices</strong> UI, toggle classes easily in the now-fixed style panel and watch the pilot of DevTools Tonight.</p>
 
 Welcome back to the latest edition of the digest for all you Canary users out there! Turns out I missed a few updates in December (I’ve been a little preoccupied with my newborn daughter), so here they come, along a few super fresh ones.
 
@@ -29,7 +29,7 @@ So we went ahead and revamped the UX. Instead of having to open an entirely diff
 
 ![cls toggles in Style Panel](/web/updates/images/2016/02/devtools-digest/cls-toggles.png)
 
-It’s now easier than ever to quickly toggle a class on an element to preview how it would look like with or without the associated styles. And we’ve also added a input to quickly add new classes so you don’t have to edit the attribute. Click on the new “.cls” button in the Style panel to try it out.
+It’s now easier than ever to quickly toggle a class on an element to preview how it would look like with or without the associated styles. And we’ve also added a input to quickly add new classes so you don’t have to edit the attribute. Click on the new **.cls** button in the Style panel to try it out.
 
 ## DevTools Tonight
 
@@ -41,7 +41,7 @@ In the new show that’ll be serialized on a bi-weekly schedule, I’ll focus on
 
 ## The Best of the Rest
 
-  * We’ve added a setting to [auto-open DevTools for popups](https://twitter.com/ChromeDevTools/status/697993811696291842) (newly created windows).
+  * We’ve added a setting to [auto-open DevTools for popups](https://twitter.com/ChromeDevTools/status/697993811696291842) (newly created windows). When enabled, a new instance of DevTools opens automatically with any newly created window.
   * The action bar on top of the Style panel [is now fixed in place](https://twitter.com/ChromeDevTools/status/676839096405221376), so you can always access it even if you scroll down to edit more styles.
   * We now [auto-zoom the timeline](https://twitter.com/ChromeDevTools/status/678992332922818560) to what we think is actually relevant to your perf debugging session.
   * [Network Throttling now supports upload](https://twitter.com/ChromeDevTools/status/679356228326195201) in addition to download so you can test stuff like file uploads on a 3G connection.
