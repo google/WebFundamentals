@@ -34,13 +34,6 @@ translation_priority: 1
     </div>
   </div>
 
-  <div class="wf-devtools-announcement">
-    <div class="page-content">
-      <h3>Rewatch the future of mobile-first authoring in DevTools.</h3>
-      {% ytvideo dJR-n8szgBc %}
-    </div>
-  </div>
-
   {% include page-structure/site-promo-banner.liquid %}
 
   <div class="wf-devtools-panels">
@@ -57,6 +50,7 @@ translation_priority: 1
           <a href="#timeline" class="mdl-tabs__tab">Timeline</a>
           <a href="#profiles" class="mdl-tabs__tab">Profiles</a>
           <a href="#resources" class="mdl-tabs__tab">Resources</a>
+          <a href="#security" class="mdl-tabs__tab">Security</a>
           <a href="#devicemode" class="mdl-tabs__tab wf-devtools-tabdivider">Device Mode</a>
           <a href="#remotedebugging" class="mdl-tabs__tab">Remote Debugging</a>
           <a href="#settings" class="mdl-tabs__tab">Settings</a>
@@ -158,6 +152,14 @@ translation_priority: 1
         </ul>
       </div>
 
+      <div class="mdl-tabs__panel" id="security">
+        <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/security.png" alt="Security Panel">
+        <p>Use the Security Panel to debug mixed content issues, problems with your certificate and more.</p>
+        <ul>
+          <li><a href="/web/tools/chrome-devtools/security/">Security</a></li>
+        </ul>
+      </div>
+
     </div>
 
   </div>
@@ -193,51 +195,51 @@ translation_priority: 1
         <div class="android-card-container mdl-grid">
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser1.png" alt="Aggregated Details">
+                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser1.png" alt="DevTools Tonight">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Aggregated Details</h4>
+                 <h4 class="mdl-card__title-text">DevTools Tonight</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Find out which third party scripts make your page slow.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">Watch our late-night show pilot and learn all about colors.</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/2015/08/devtools-digest-aggregated-timeline-details#better-blame-perf-issues-aggregated-details-in-timeline">
-                   Find out now
+                 <a class="mdl-button mdl-js-button mdl-typography--text-uppercase" href="https://www.youtube.com/watch?v=nLpNHNlonMs">
+                   Watch
                  </a>
               </div>
             </div>
 
             <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
               <div class="mdl-card__media">
-                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser2.png" alt="Color Palettes">
+                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser2.png" alt="Inspect Devices">
               </div>
               <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">Color Palettes</h4>
+                 <h4 class="mdl-card__title-text">Inspect Devices</h4>
               </div>
               <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Automatic, Material and custom color palettes in the color picker.</span>
+                <span class="mdl-typography--font-light mdl-typography--subhead">Inspect Devices right within DevTools with our revamped UI.</span>
               </div>
               <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/2015/08/devtools-digest-aggregated-timeline-details#automatic-material-and-custom-color-palettes">
-                   Explore the colors
-                 </a>
-              </div>
-            </div>
-
-            <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
-              <div class="mdl-card__media">
-                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser3.png" alt="New main menu">
-              </div>
-              <div class="mdl-card__title">
-                 <h4 class="mdl-card__title-text">New main menu</h4>
-              </div>
-              <div class="mdl-card__supporting-text">
-                <span class="mdl-typography--font-light mdl-typography--subhead">Streamlined, easier docking, settings and help access.</span>
-              </div>
-              <div class="mdl-card__actions">
-                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/2015/08/devtools-digest-aggregated-timeline-details#new-dedicated-main-menu">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/2016/02/devtools-digest-supercharged-remote-debugging">
                    Learn more
+                 </a>
+              </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--3dp">
+              <div class="mdl-card__media">
+                <img src="{{site.WFBaseUrl}}/tools/chrome-devtools/images/teaser3.png" alt="Class Toggles">
+              </div>
+              <div class="mdl-card__title">
+                 <h4 class="mdl-card__title-text">Class Toggles</h4>
+              </div>
+              <div class="mdl-card__supporting-text">
+                <span class="mdl-typography--font-light mdl-typography--subhead">Quickly enable, disable or add new classes to elements.</span>
+              </div>
+              <div class="mdl-card__actions">
+                 <a class="android-link mdl-button mdl-js-button mdl-typography--text-uppercase" href="/web/updates/2016/02/devtools-digest-supercharged-remote-debugging">
+                   Start toggling
                  </a>
               </div>
             </div>
