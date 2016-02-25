@@ -62,7 +62,7 @@ Go ahead and load your client page in a Chrome tab. Open a new tab and enter `ch
 
 If `Running Status` says `STOPPED`, click the `Start` button. Now click `Push`. If you've done everything correctly, you should see something like the image below. If not, double check your work.
 
-![A test push message.](images/notification.png)
+![A test push message.](images/notification.png){:width="380px"}
 
 ## Fetch Some Content
 
