@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Make a project on the Google Developer Console"
+title: "Make a project on the Google Developers Console"
 description: "Push notifications from a web app need a backend service to handle messaging. Chrome currently uses Google Cloud Messaging. In this step, you set up a project on the Google Developer Console."
 notes:
   styling:
@@ -30,32 +30,32 @@ For this step, you need to set up a project on the Google Developer Console.
 From the [Google Developers Console](https://console.developers.google.com)
 create a new project:
 
-<img src="images/image04.png" width="907" height="845" alt="Web page screenshot: setting up APIs and Auth for a project from the Google Developers Console" />
+<img src="images/image04.png" width="907" height="845" alt="Web page screenshot: create a new project from the Google Developers Console" />
 
 ## 2. Select APIs for the project
 
-From the **APIs &amp; auth** menu, select **APIs**:
+From **Use Google APIs**, select **Enable and manage APIs**:
 
-<img src="images/image05.png" width="907" height="845" alt="Web page screenshot: selecting APIs from the Google Developers Console" />
+<img src="images/image05.png" width="907" height="845" alt="Web page screenshot: select APIs from the Google Developers Console" />
 
-From the **API Library** list, select **Cloud Messaging for Android** (Cloud Messaging for Chrome is for [Chrome apps and extensions](https://developer.chrome.com/apps/about_apps)):
+From the **Google APIs** list, select **Google Cloud Messaging**:
 
-<img src="images/image06.png" width="907" height="845" alt="Web page screenshot: selecting Cloud Messaging for Android API" /> If the API was added successfully you will see a page like this:
+<img src="images/image06.png" width="907" height="845" alt="Web page screenshot: select Google Cloud Messaging API" /> If the API was added successfully you will see a page like this:
 
-<img src="images/image07.png" width="965" height="901" alt="Web page screenshot: Google Developers Console, Google Cloud Messaging for Android enabled" />
+<img src="images/image07.png" width="965" height="901" alt="Web page screenshot: Google Developers Console, Google Cloud Messaging enabled" />
 
 ## 3. Get credentials
 
-From the **APIs &amp; auth** menu, select **Credentials**, click the **Add
+From the **API Manager** menu, select **Credentials**, click the **Create
 credentials** dropdown button and select **API key**:
 
 <img src="images/image08.png" width="965" height="901" alt="Web page screenshot: add credentials from the Google Developers Console" />
 
-Click the **Browser Key** button:
+Click the **Browser key** button:
 
 <img src="images/image09.png" width="907" height="822" alt="Web page screenshot: click Browser key button to select new API key type in the Google Developers Console" />
 
-Leave the HTTP referrers field blank and click the **Create** button:
+Give the key a name (anything you like!), leave the HTTP referrers field blank and click the **Create** button:
 
 <img src="images/image10.png" width="907" height="822" alt="Web page screenshot: click the Create button to create a browser API key from the Google Developers Console" />
 
