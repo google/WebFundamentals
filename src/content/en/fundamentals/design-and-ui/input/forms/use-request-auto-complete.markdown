@@ -17,6 +17,12 @@ notes:
   request-auto-complete-flow:
     - "If you're asking for any kind of personal information or credit card data, ensure the page is served via SSL.  Otherwise the dialog will warn the user their information may not be secure."
 ---
+
+<h2>requestAutocomplete is being deprecated and should not be implemented.</h2>
+<p>We recommend instead annotating your checkout form fields with autocomplete attributes to <a href="https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill">leverage autofill.</a>
+</p>
+
+---
 <p class="intro">
   While <code>requestAutocomplete</code> was designed to help users fill out any form, today its most common use is in eCommerce where shopping cart abandonment on the mobile web <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>can be as high as 97%</a>. Imagine 97% of people in a supermarket, with a cart brimming full of things that they want, flipping their cart over and walking out.
 </p>
