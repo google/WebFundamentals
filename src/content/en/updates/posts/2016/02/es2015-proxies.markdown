@@ -3,7 +3,7 @@ layout: updates/post
 title: "Introducing ES2015 Proxies"
 description: "ES2015 Proxies (in Chrome 49 and later) provide JavaScript with an intercession API, enabling us to trap or intercept all of the operations on a target object and modify how this target operates."
 published_on: 2016-02-02
-updated_on: 2016-02-02
+updated_on: 2016-03-01
 authors:
   - addyosmani
 tags:
@@ -286,6 +286,8 @@ Although we're saying [goodbye](https://esdiscuss.org/topic/an-update-on-object-
 ## Browser Support
 
 ES2015 Proxies are supported in Chrome 49, Opera, Microsoft Edge and Firefox. Safari have had mixed public signals towards the feature but we remain optimistic. Reflect is in Chrome, Opera, and Firefox and is in-development for Microsoft Edge.
+
+Google has released a [limited polyfill for Proxy](https://github.com/GoogleChrome/proxy-polyfill). This can only used for **generic wrappers**, as it can only proxy properties known at the time a Proxy is created.
 
 ## Further Reading
 
