@@ -1,133 +1,110 @@
 ---
 layout: shared/narrow
 title: "Handle Subscriptions"
-description: "To receive messages, users must allow your web site to push notification 
-messages to them. That's where subscriptions come in. You can't just subscribe users and call it done. You need to let users unsubscribe as well."
+description: "To receive messages, users must allow your web site to push messages to them. That's where subscriptions come in. You can't just subscribe users and call it done. You need to let users unsubscribe as well."
 authors:
 - dgash
 published_on: 2015-10-01
-updated_on: 2016-02-19
+updated_on: 2016-03-04
 order: 30
-translation_priority: 1
+translation_priority: 1 
+notes:
+  clarity: "For clarity, this code sample excludes several items include two `catch()` clauses for error handling."
 ---
 
 <p class="intro">
-	To receive messages, users must allow your web site to push notification 
-messages to them. That's where subscriptions come in. You can't just subscribe users and call it done. You need to let users unsubscribe as well.
+  To receive messages, users must allow your web site to push messages to them. That's where subscriptions come in. You can't just subscribe users and call it done. You need to let users unsubscribe as well.
 </p>
 
 {% include shared/toc.liquid %}
 
+This lesson uses code from the [Push Messaging & Notifications](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications) Chrome sample, but it doesn't show all of the code in that sample. Instead, we're going to highlight certain aspects of it.
+
+## User permission
+
+Users expect a simple UI to enable or disable push messages for your site. 
+This is typically accomplished via a button or a [switch from Material Design Light](https://www.getmdl.io/components/index.html#toggles-section/switch) that enables or disables push messages and clearly indicates its 
+state. 
+
+When the user requests a subscription activation, your web page must 
+subscribe the user to your push service so they can receive messages. For example:
+
+![Example of a mobile permission control](images/pushux.png)
+
+The code for the switch looks like this:
+
+{% highlight javascript %}
+pushButton.addEventListener('click', function() {
+  if (isPushEnabled) {
+    unsubscribe();
+  } else {
+    subscribe();
+  }
+});
+{% endhighlight %}
+
+The actual permissions are actually controlled in the `subscribe()` and `unsubscribe()` functions, which we'll look at shortly. `isPushEnabled` was defined at the top of our script.
+
+When we get to [Best Practices](/web/fundamentals/engage-and-retain/push-notifications/best-practices/asking-permission) we'll look at where and when to show the switch. The key thing is, it's best not to do it right away.
+
 ## Subscribing
 
 Subscribing is a two-step process performed on the receiving 
-device, comprising of enabling of push notifications and an explicit 
-subscription request to a specific web site. Both of these conditions must 
+device, comprised of subscribing to push and an explicit 
+subscription request for a specific web site. Both of these conditions must 
 be met for the user to receive push messages; that is, a status of either 
 "disabled" or "enabled but not subscribed" prevents messages from 
 being received.
 
-Users expect a simple UI to enable or disable push messages for your site. 
-This is typically accomplished via a UI element such as a button or toggle 
-switch that enables or disables push messages and clearly indicates its 
-state. For example:
-
-![Push UX](images/pushux.png)
-
-When the user requests a subscription activation, your web page must 
-subscribe the user to your push service so they can receive messages.
+Subscribing to push is done by calling `pushManager.subscribe()` (a member of the service worker registration interface). This triggers a permission request from the browser, but only applies to your site or app.
 
 {% highlight javascript %}
 function subscribe() {
-  // Disable the button so it can't be changed while
-  //   we process the permission request
-  var pushButton = document.querySelector('.js-push-button');
-  pushButton.disabled = true;
-
+  // Code excerpted 
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
+    // STEP 1: Subscribe to push.
     serviceWorkerRegistration.pushManager.subscribe({userVisibleOnly: true})
       .then(function(subscription) {
         // The subscription was successful
+        // Toggle the user control.
         isPushEnabled = true;
-        pushButton.textContent = 'Disable Push Messages';
-        pushButton.disabled = false;
 
-        // TODO: Send the subscription subscription.endpoint
-        // to your server and save it to send a push message
-        // at a later date
+        // STEP 2: Let your web server know the user has subscribed.
         return sendSubscriptionToServer(subscription);
-      })
-      .catch(function(e) {
-        if (Notification.permission === 'denied') {
-          // The user denied the notification permission which
-          // means we failed to subscribe and the user will need
-          // to manually change the notification permission to
-          // subscribe to push messages
-          window.Demo.debug.log('Permission for Notifications was denied');
-          pushButton.disabled = true;
-        } else {
-          // A problem occurred with the subscription, this can
-          // often be down to an issue or lack of the gcm_sender_id
-          // and / or gcm_user_visible_only
-          window.Demo.debug.log('Unable to subscribe to push.', e);
-          pushButton.disabled = false;
-          pushButton.textContent = 'Enable Push Messages';
-        }
-    });
+     })
+     .catch(function(e) {
+       If (Notification.permission === 'denied') {
+  // The user did not grant permission.
+       } else {
+            // Some other error occurred.
+       }
+     });
   });
 }
 {% endhighlight %}
 
 ## Unsubscribe
 
-Likewise, users can refuse push messages, either by unsubscribing to a 
+Likewise, users can revoke push messages, either by unsubscribing to a 
 specific site or by disabling push notifications completely. Your page has 
 no control over their global enable/disable setting, but you should 
 unsubscribe users when they request it.
 
-{% highlight javascript %}
-function unsubscribe() {  
-  var pushButton = document.querySelector('.js-push-button');  
-  pushButton.disabled = true;
+{% include shared/note.liquid list=page.notes.clarity %}
 
+{% highlight javascript %}
+function unsubscribe() { 
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {  
-    // To unsubscribe from push messaging, you need get the  
+    // To unsubscribe from push messaging, you need to get the  
     // subscription object, which you can call unsubscribe() on.  
     serviceWorkerRegistration.pushManager.getSubscription()
-      .then(function(pushSubscription) {  
-        // Check we have a subscription to unsubscribe  
-        if (!pushSubscription) {  
-          // No subscription object, so set the state  
-          // to allow the user to subscribe to push  
-          isPushEnabled = false;  
-          pushButton.disabled = false;  
-          pushButton.textContent = 'Enable Push Messages';  
-          return;  
-        }  
-
-        // TODO: Make a request to your server to remove
-        // the users data from your data store so you
-        // don't attempt to send them push messages anymore
-
+      .then(function(pushSubscription) { 
         // We have a subscription, so call unsubscribe on it  
         pushSubscription.unsubscribe()
-          .then(function(successful) {  
-            pushButton.disabled = false;  
+          .then(function(successful) {   
             pushButton.textContent = 'Enable Push Messages';  
-            isPushEnabled = false;  
-          }).catch(function(e) {  
-            // We failed to unsubscribe, this can lead to  
-            // an unusual state, so may be best to remove   
-            // the users data from your data store and   
-            // inform the user that you have done so
-
-            console.log('Unsubscription error: ', e);  
-            pushButton.disabled = false;
-            pushButton.textContent = 'Enable Push Messages'; 
-          });  
-      }).catch(function(e) {  
-        console.error('Error thrown while unsubscribing from push messaging.', e);  
-      });  
+            isPushEnabled = false; 
+          }); 
   });  
 }
 {% endhighlight %}

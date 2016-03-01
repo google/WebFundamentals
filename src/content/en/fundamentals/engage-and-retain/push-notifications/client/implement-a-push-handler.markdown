@@ -5,7 +5,7 @@ description: "We're going to start our exploration of push by implementing a pus
 authors:
  - josephmedley
 published_on: 2016-02-19
-updated_on: 2016-02-19
+updated_on: 2016-03-04
 order: 10
 translation_priority: 1
 notes:
@@ -13,7 +13,7 @@ notes:
 ---
 
 <p class="intro">
-	We're going to start our exploration of push by implementing a push event handler in a service worker. If you don't have a service worker yet, then <a href="/web/fundamentals/primers/service-worker">go get one</a> and come back here when you're ready to implement push.
+  We're going to start our exploration of push by implementing a push event handler in a service worker. If you don't have a service worker yet, then <a href="/web/fundamentals/primers/service-worker">build one</a> or download ours, then come back here when you're ready to implement push.
 </p>
 
 {% include shared/toc.liquid %}
@@ -60,16 +60,16 @@ Go ahead and load your client page in a Chrome tab. Open a new tab and enter `ch
 
 ![Chrome's service worker internals page.](images/sw-internals.png)
 
-If `Running Status` says `STOPPED`, click the `Start` button. Now click `Push`. If you've done everything correctly, you should see something like the image below. If not, double check your work.
+If `Running Status` says `STOPPED`, click the `Start` button. Now click `Push`. If you've done everything correctly, you should see something like the image below. If not, double check your work. Remember, there's a sample you can compare too if need be.
 
 ![A test push message.](images/notification.png){:width="380px"}
 
 ## Fetch Some Content
 
-The current implementations of the Push API do not allow you to send 
-a payload with a push message. To get around this, we're going to make a call to global `fetch()`.
+Current implementations of the Push API do not allow you to send 
+a payload with a push message. Even if they did, pushes are intended to be merely tickles (meaning small) and the exact payload size will likely vary from browser to browser. To get around this, we're going to make a call to global `fetch()`.
 
-Using `fetch()` is a whole subject in and of itself. What we want to focus on here is how to use `fetch()` with a push handler. For the best user experience we want to minimize the perceived wait for any updates. To do that we're going to get data from the server before telling the user there's new data available. This is when chaining promises comes in handy.
+Using `fetch()` is a whole subject in and of itself. What we want to focus on here is how to use `fetch()` with a push handler. For the best user experience we want to minimize the perceived wait for any updates. To do that we're going to get data from the server before telling the user there's new data available. This is when [chaining promises](http://www.html5rocks.com/en/tutorials/es6/promises/#toc-chaining) comes in handy.
 
 {% highlight javascript %}
 self.addEventListener('push', function(event) {

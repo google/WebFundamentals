@@ -1,13 +1,12 @@
 ---
 layout: shared/narrow
-title: "Set Up the Server"
+title: "On the Server"
 description: "We're done with the basics of the client side of push. But how do we send a message to the client? That requires server work."
 authors:
   - dgash
-  - josephmedley
 published_on: 2015-10-01
-updated_on: 2016-03-01
-order: 40
+updated_on: 2016-03-04
+order: 1
 translation_priority: 1
 ---
 
@@ -103,3 +102,8 @@ curl --header "Authorization: key=<YOUR_PUBLIC_API_KEY>" \
   https://android.googleapis.com/gcm/send -d \
   '{"registration_ids":["<YOUR_REGISTRATION_ID>"]}'
 {% endhighlight %}
+
+## Other Push Services
+
+MDN
+The protocol spec

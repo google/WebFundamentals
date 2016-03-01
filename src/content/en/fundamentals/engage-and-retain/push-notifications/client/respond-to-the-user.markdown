@@ -7,7 +7,7 @@ authors:
  - dgash
  - josephmedley
 published_on: 2015-10-01
-updated_on: 2016-02-19
+updated_on: 2016-03-04
 order: 20
 translation_priority: 1
 ---
@@ -15,7 +15,7 @@ translation_priority: 1
 <p class="intro">
 Before we leave the service worker behind, we need to implement another event
 handler called <code>notificationclick</code>. When the user clicks a notification, a
-<code>notificationclick</code> event is dispatched in the service worker.
+<code>notificationclick</code> event is dispatched to the service worker.
 </p>
 
 ## Show the Page
@@ -48,4 +48,3 @@ self.addEventListener('notificationclick', function(event) {
   );
 });
 {% endhighlight %}
-
