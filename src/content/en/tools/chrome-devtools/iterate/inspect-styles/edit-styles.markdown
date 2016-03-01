@@ -27,7 +27,7 @@ notes:
   CSS defines the presentation layer of your page. View and modify any CSS declaration that affects an element on the current page using the Chrome DevTools Styles pane.
 </p>
 
-If you haven't already, familiarize yourself on the [basics of inspecting and tweaking your pages](/web/tools/chrome-devtools/iterate/inspect-styles/basics). This guide dives deeper into editing and creating styles, including working with css preprocessor source files.
+If you haven't already, familiarize yourself on the [basics of inspecting and tweaking your pages](/web/tools/chrome-devtools/iterate/inspect-styles). This guide dives deeper into editing and creating styles, including working with css preprocessor source files.
 
 {% include shared/toc.liquid %}
 
