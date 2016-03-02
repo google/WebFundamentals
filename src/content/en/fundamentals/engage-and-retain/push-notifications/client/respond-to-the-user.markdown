@@ -18,7 +18,7 @@ handler called <code>notificationclick</code>. When the user clicks a notificati
 <code>notificationclick</code> event is dispatched to the service worker.
 </p>
 
-## Show the Page
+## Respond to the Event
 
 A common
 response to a `notificationclick` event  is to focus a tab or open a window with
@@ -27,8 +27,7 @@ a particular URL.
 {% highlight javascript %}
 self.addEventListener('notificationclick', function(event) {  
   console.log('Notification clicked: ', event);  
-  // Android doesn't close the notification when you click on it  
-  // See: http://crbug.com/463146  
+  // Android doesn't close the notification when you click on it.   
   event.notification.close();
 
   // This looks to see if the current window is already open and  

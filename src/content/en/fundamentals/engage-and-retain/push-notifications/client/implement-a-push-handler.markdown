@@ -9,7 +9,7 @@ updated_on: 2016-03-04
 order: 10
 translation_priority: 1
 notes:
-  sameorigin: "It is important to note that a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect."
+  sameorigin: "Currently, a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect."
 ---
 
 <p class="intro">
@@ -69,7 +69,7 @@ If `Running Status` says `STOPPED`, click the `Start` button. Now click `Push`. 
 Current implementations of the Push API do not allow you to send 
 a payload with a push message. Even if they did, pushes are intended to be merely tickles (meaning small) and the exact payload size will likely vary from browser to browser. To get around this, we're going to make a call to global `fetch()`.
 
-Using `fetch()` is a whole subject in and of itself. What we want to focus on here is how to use `fetch()` with a push handler. For the best user experience we want to minimize the perceived wait for any updates. To do that we're going to get data from the server before telling the user there's new data available. This is when [chaining promises](http://www.html5rocks.com/en/tutorials/es6/promises/#toc-chaining) comes in handy.
+Using `fetch()` is a whole subject in and of itself. What we want to focus on here is how to use `fetch()` with a push handler. For the best user experience we want to minimize the perceived wait for updates. To do that we're going to get data from the server before telling the user there's new data available. This is when [chaining promises](http://www.html5rocks.com/en/tutorials/es6/promises/#toc-chaining) comes in handy.
 
 {% highlight javascript %}
 self.addEventListener('push', function(event) {

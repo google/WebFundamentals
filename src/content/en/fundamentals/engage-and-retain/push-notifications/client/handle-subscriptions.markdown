@@ -9,7 +9,7 @@ updated_on: 2016-03-04
 order: 30
 translation_priority: 1 
 notes:
-  clarity: "For clarity, this code sample excludes several items include two `catch()` clauses for error handling."
+  clarity: "For clarity, this code sample excludes several items include two <code>catch()</code> clauses for error handling."
 ---
 
 <p class="intro">
@@ -18,7 +18,7 @@ notes:
 
 {% include shared/toc.liquid %}
 
-This lesson uses code from the [Push Messaging & Notifications](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications) Chrome sample, but it doesn't show all of the code in that sample. Instead, we're going to highlight certain aspects of it.
+This lesson uses code from the [Push Messaging and Notifications](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications) Chrome sample, but it doesn't show all of the code in that sample. Instead, we're going to highlight certain aspects of it.
 
 ## User permission
 
@@ -43,7 +43,7 @@ pushButton.addEventListener('click', function() {
 });
 {% endhighlight %}
 
-The actual permissions are actually controlled in the `subscribe()` and `unsubscribe()` functions, which we'll look at shortly. `isPushEnabled` was defined at the top of our script.
+The actual permissions are actually controlled in the `subscribe()` and `unsubscribe()` functions, which we'll look at shortly. The `isPushEnabled` variable was defined at the top of our script.
 
 When we get to [Best Practices](/web/fundamentals/engage-and-retain/push-notifications/best-practices/asking-permission) we'll look at where and when to show the switch. The key thing is, it's best not to do it right away.
 
@@ -52,20 +52,20 @@ When we get to [Best Practices](/web/fundamentals/engage-and-retain/push-notific
 Subscribing is a two-step process performed on the receiving 
 device, comprised of subscribing to push and an explicit 
 subscription request for a specific web site. Both of these conditions must 
-be met for the user to receive push messages; that is, a status of either 
-"disabled" or "enabled but not subscribed" prevents messages from 
-being received.
+be met for the user to receive push messages.
 
-Subscribing to push is done by calling `pushManager.subscribe()` (a member of the service worker registration interface). This triggers a permission request from the browser, but only applies to your site or app.
+Subscribing to push is done by calling `pushManager.subscribe()` (a member of the [service worker registration](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration) interface). This triggers a permission request from the browser that only applies to your site or app.
 
 {% highlight javascript %}
 function subscribe() {
-  // Code excerpted 
+
+  // CODE EXCERPTED 
+
   navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
     // STEP 1: Subscribe to push.
     serviceWorkerRegistration.pushManager.subscribe({userVisibleOnly: true})
       .then(function(subscription) {
-        // The subscription was successful
+        // The subscription was successful.
         // Toggle the user control.
         isPushEnabled = true;
 
