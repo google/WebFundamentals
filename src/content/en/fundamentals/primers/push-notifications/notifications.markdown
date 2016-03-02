@@ -98,8 +98,7 @@ is to focus a tab or open a window with a particular URL.
 {% highlight javascript %}
 self.addEventListener('notificationclick', function(event) {  
   console.log('On notification click: ', event.notification.tag);  
-  // Android doesn't close the notification when you click on it  
-  // See: http://crbug.com/463146  
+  // Android doesn't close the notification when you click on it.
   event.notification.close();
 
   // This looks to see if the current window is already open and  
