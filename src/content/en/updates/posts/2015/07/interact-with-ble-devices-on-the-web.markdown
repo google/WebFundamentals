@@ -4,7 +4,7 @@ title: "Interact with BLE devices on the Web"
 description: "A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
 featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 published_on: 2015-07-22
-updated_on: 2016-20-26
+updated_on: 2016-02-26
 authors:
   - beaufortfrancois
 tags:

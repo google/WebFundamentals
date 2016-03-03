@@ -365,7 +365,7 @@ func updateStatus(state, desc, url string) {
 // run is the actual entry point called from main.
 // It expects vargs and workspace to be initialized
 func run() {
-	bucketName = build.Branch
+	bucketName = strings.ToLower(build.Branch)
 	if build.Event == plugin.EventPull {
 		bucketName = fmt.Sprintf("pr-%v", prNum(build.Ref))
 	}
