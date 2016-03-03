@@ -16,8 +16,8 @@ CSP's ability to block untrusted resources client-side is a huge win for your
 users, but it would be quite helpful indeed to get some sort of notification
 sent back to the server so that you can identify and squash any bugs that allow
 malicious injection in the first place. To this end, you can instruct the
-browser to <code>POST</code> JSON-formatted violation reports to a location specified in a
-<code>report-uri</code> directive.
+browser to <code>POST</code> JSON-formatted violation reports to a location
+specified in a <code>report-uri</code> directive.
 </p>
 
     Content-Security-Policy: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;

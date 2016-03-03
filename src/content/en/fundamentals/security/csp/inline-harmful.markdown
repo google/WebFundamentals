@@ -17,10 +17,11 @@ unambiguous way of instructing the browser to treat specific sets of resources
 as acceptable and to reject the rest. Origin-based whitelisting doesn't,
 however, solve the biggest threat posed by XSS attacks: inline script injection.
 If an attacker can inject a script tag that directly contains some malicious
-payload (<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>), 
-the browser has no mechanism by which to distinguish it from a legitimate 
-inline script tag. CSP solves this problem by banning inline script entirely: 
-<a href="https://www.youtube.com/watch?v=aCbfMkh940Q">it's the only way to be sure</a>.
+payload (<code>&lt;script&gt;sendMyDataToEvilDotCom();&lt;/script&gt;</code>),
+the browser has no mechanism by which to distinguish it from a legitimate
+inline script tag. CSP solves this problem by banning inline script entirely:
+<a href="https://www.youtube.com/watch?v=aCbfMkh940Q">it's the only way to be
+sure</a>.
 </p>
 
 This ban includes not only scripts embedded directly in `script` tags, but also
@@ -66,7 +67,7 @@ code if you do the work to move code into external resources.
 
 Inline style is treated in the same way: both the `style` attribute and `style`
 tags should be consolidated into external stylesheets to protect against a
-variety of [surprisingly clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html) 
+variety of [surprisingly clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html)
 data exfiltration methods that CSS enables.
 
 If you really, absolutely must have inline script and style, you can enable it
@@ -95,7 +96,7 @@ in the list of trusted sources. For example:
 
 Now, add the nonce to your `script-src` directive appended to the `nonce-` keyword.
 
-    Content-Security-Policy: script-src 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa' 
+    Content-Security-Policy: script-src 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa'
 
 Remember that nonces must be regenerated for every page request and they must be
 unguessable.

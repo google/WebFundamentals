@@ -11,17 +11,17 @@ translation_priority: 2
 order: 50
 ---
 
-{% include shared/toc.liquid %}
-
 <p class="intro">
-CSP 1 is quite usable in Chrome, Safari, and Firefox, and has (very) limited 
+CSP 1 is quite usable in Chrome, Safari, and Firefox, and has (very) limited
 support in IE 10. You can <a href="http://caniuse.com/#feat=contentsecuritypolicy">
-view specifics at canisue.com</a>. CSP Level 2 was available in Chrome with 
-version 40. Massive sites like Twitter and Facebook have deployed the header 
-(<a href="https://blog.twitter.com/2011/improving-browser-security-csp">
-Twitter's case study</a> is worth a read), and the standard is very much ready 
+view specifics at canisue.com</a>. CSP Level 2 was available in Chrome with
+version 40. Massive sites like Twitter and Facebook have deployed the header
+(<a href="https://blog.twitter.com/2011/improving-browser-security-csp">Twitter's
+case study</a> is worth a read), and the standard is very much ready
 for you to start deploying on your own sites.
 </p>
+
+{% include shared/toc.liquid %}
 
 The first step towards crafting a policy for your application is to evaluate the
 resources you're actually loading. Once you think you have a handle on how
@@ -31,7 +31,7 @@ best be able to support them within the protective confines of CSP:
 
 ## Use Case #1: Social Media Widgets
 
-* Google's [+1 button](http://www.google.com/intl/en/webmasters/+1/button/index.html) 
+* Google's [+1 button](http://www.google.com/intl/en/webmasters/+1/button/index.html)
 includes a script from `https://apis.google.com`, and embeds an `<iframe>` from
 `https://plusone.google.com`. You'll need a policy that includes both these
 origins in order to embed the button. A minimal policy would be `script-src
@@ -40,7 +40,7 @@ to ensure that the snippet of JavaScript that Google provides is pulled out into
 an external JavaScript file. If you had an existing policy using `child-src`,
 you would need to change it to `child-src`.
 
-* Facebook's [Like button](http://developers.facebook.com/docs/reference/plugins/like/) 
+* Facebook's [Like button](http://developers.facebook.com/docs/reference/plugins/like/)
 has a number of implementation options. We recommend sticking with the
 `<iframe>` version, as it's safely sandboxed from the rest of your site. That
 would require a `child-src https://facebook.com` directive to function properly.
@@ -48,7 +48,7 @@ Note that, by default, the `<iframe>` code Facebook provides loads a relative
 URL, `//facebook.com`. Please change that to explicitly specify HTTPS:
 `https://facebook.com`. There's no reason to use HTTP if you don't have to.
 
-* Twitter's [Tweet button](https://twitter.com/about/resources/buttons) 
+* Twitter's [Tweet button](https://twitter.com/about/resources/buttons)
 relies on access to a script and frame, both hosted at
 `https://platform.twitter.com`. (Twitter likewise provides a relative URL by
 default: please edit the code to specify HTTPS when copy/pasting it locally.)

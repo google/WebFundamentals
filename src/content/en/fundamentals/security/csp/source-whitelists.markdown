@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Source Whitelists"
-description: "The core issue exploited by XSS attacks is the browser's inability to distinguish between script that's intended to be part of your application, and script that's been maliciously injected by a third-party. Instead of blindly trusting everything that a server delivers, CSP defines the Content-Security-Policy HTTP header that allows you to create a whitelist of sources of trusted content, and instructs the browser to only execute or render resources from those sources."
+description: "The issue exploited by XSS attacks is the browser's inability to distinguish between script that's part of your application, and script that's been maliciously injected by a third-party. Instead of blindly trusting everything that a server delivers, CSP defines the Content-Security-Policy HTTP header that allows you to create a whitelist of sources of trusted content, and instructs the browser to only execute or render resources from those sources."
 published_on: 2012-06-15
 updated_on: 2016-02-19
 authors:
@@ -11,19 +11,19 @@ translation_priority: 2
 order: 10
 ---
 
-{% include shared/toc.liquid %}
-
-<p class="intro">
-The core issue exploited by XSS attacks is the browser's inability to
-distinguish between script that's intended to be part of your application, and
-script that's been maliciously injected by a third-party. For example, the
-Google +1 button at the bottom of this page loads and executes code from
+<p class="intro" markdown="1">
+The issue exploited by XSS attacks is the browser's inability to distinguish
+between script that's part of your application, and script that's been
+maliciously injected by a third-party. For example, the Google +1 button at the
+bottom of this page loads and executes code from
 `https://apis.google.com/js/plusone.js` in the context of this page's origin. We
 trust that code, but we can't expect the browser to figure out on it's own that
 code from `apis.google.com` is awesome, while code from `apis.evil.example.com`
 probably isn't. The browser happily downloads and executes any code a page
 requests, regardless of source.
 </p>
+
+{% include shared/toc.liquid %}
 
 Instead of blindly trusting _everything_ that a server delivers, CSP defines the
 `Content-Security-Policy` HTTP header that allows you to create a whitelist of
@@ -59,29 +59,31 @@ that a page is allowed to load. You've already seen `script-src`, so the concept
 should be clear. Let's quickly walk through the rest of the resource directives:
 
 * **`base-uri`** restricts the URLs that can appear in a page's `<base>` element.
-* **`child-src`** lists the URLs for workers and embedded frame contents. For 
-  example: `child-src https://youtube.com` would enable embedding videos from 
-  YouTube but not from other origins. Use this in place of the deprecated 
+* **`child-src`** lists the URLs for workers and embedded frame contents. For
+  example: `child-src https://youtube.com` would enable embedding videos from
+  YouTube but not from other origins. Use this in place of the deprecated
   **`frame-src`** directive.
-* **`connect-src`** limits the origins to which you can connect (via XHR, 
+* **`connect-src`** limits the origins to which you can connect (via XHR,
   WebSockets, and EventSource).
-* **`font-src`** specifies the origins that can serve web fonts. Google's Web Fonts 
-  could be enabled via `font-src https://themes.googleusercontent.com`.
+* **`font-src`** specifies the origins that can serve web fonts. Google's Web
+Fonts    could be enabled via `font-src https://themes.googleusercontent.com`.
 * **`form-action`** lists valid endpoints for submission from `<form>` tags.
-* **`frame-ancestors`**  specifies the sources that can embed the current page. 
-  This directive applies to `<frame>`, `<iframe>`, `<embed>`, and `<applet>` tags. 
-  This directive cant be used in `<meta>` tags and applies only to non-HTML resources.
+* **`frame-ancestors`**  specifies the sources that can embed the current page.
+This directive applies to `<frame>`, `<iframe>`, `<embed>`, and `<applet>` tags.
+This directive cant be used in `<meta>` tags and applies only to non-HTML
+resources.
 * **`frame-src`** deprecated. Use **`child-src`** instead.
 * **`img-src`** defines the origins from which images can be loaded.
 * **`media-src`** restricts the origins allowed to deliver video and audio.
 * **`object-src`** allows control over Flash and other plugins.
 * **`plugin-types`** limits the kinds of plugins a page may invoke.
-* **`report-uri`** specifies a URL where a browser will send reports when a content 
-  security policy is violated. This directive cant be used in `<meta>` tags.
+* **`report-uri`** specifies a URL where a browser will send reports when a
+content security policy is violated. This directive cant be used in `<meta>`
+tags.
 * **`style-src`** is `script-src`'s counterpart for stylesheets.
-* **`upgrade-insecure-requests`** Instructs user agents to rewrite URL schemes, 
-  changing HTTP to HTTPS. This directive is for web sites with large numbers of old 
-  URL's that need to be rewritten.
+* **`upgrade-insecure-requests`** Instructs user agents to rewrite URL schemes,
+changing HTTP to HTTPS. This directive is for web sites with large numbers of
+old    URL's that need to be rewritten.
 
 By default, directives are wide open. If you don't set a specific policy for a
 directive, let's say `font-src`, then that directive behaves by default as
@@ -151,9 +153,9 @@ Four keywords are also accepted in the source list:
 
 * **`'none'`**, as you might expect, matches nothing.
 * **`'self'`** matches the current origin, but not its subdomains.
-* **`'unsafe-inline'`** allows inline JavaScript and CSS. (We'll touch on this in 
+* **`'unsafe-inline'`** allows inline JavaScript and CSS. (We'll touch on this in
   more detail in a bit.)
-* **`'unsafe-eval'`** allows text-to-JavaScript mechanisms like `eval`. (We'll get 
+* **`'unsafe-eval'`** allows text-to-JavaScript mechanisms like `eval`. (We'll get
   to this too.)
 
 These keywords require single-quotes. `script-src 'self'` (with quotes)
@@ -170,7 +172,7 @@ the page can take, rather than on resources that the page can load. If the
 inside of an `<iframe>` with a `sandbox` attribute. This can have a wide range of
 effects on the page: forcing the page into a unique origin, and preventing form
 submission, among others. It's a bit beyond the scope of this article, but you
-can find full details on valid sandboxing attributes in the 
+can find full details on valid sandboxing attributes in the
 ["sandboxing flag set" section of the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#sandboxing-flag-set).
 
 ## The meta Tag
@@ -180,7 +182,7 @@ to set a policy on a page directly in the markup. Do that using a `<meta>` tag w
 an `http-equiv` attribute:
 
 {% highlight html %}
-<meta http-equiv="Content-Security-Policy" content="default-src https://cdn.example.net; child-src 'none'; object-src 'none'"> 
+<meta http-equiv="Content-Security-Policy" content="default-src https://cdn.example.net; child-src 'none'; object-src 'none'">
 {% endhighlight %}
 
 This can't be used for frame-ancestors, report-uri, or sandbox.
