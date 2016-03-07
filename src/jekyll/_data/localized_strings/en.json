@@ -60,7 +60,7 @@
   "@try_sample": {"description": "Link/Button - text used on a link or button to tell people to try the embedded sample."},
   "udacity_course": "Udacity course",
   "@udacity_course": {"description": "Link - Udacity is a brand name/company"},
-  "udacity_course_description_crp": "Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.",
+  "udacity_course_description_crp": "Interested in taking a deep dive into the Critical Rendering Path? Check out our companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.",
   "udacity_description": "Get hands on with videos, quizzes, discussions and more.",
   "@udacity_description": {"description": "Text - A short description of the online training courses that Udacity offers"},
   "updated_on": "Updated on",
