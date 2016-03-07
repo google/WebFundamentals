@@ -39,7 +39,7 @@ Here's a simple example letting you autocapitalize sentences in a text area:
 
 [[Demo]]
 
-## What values can _autocapitalize_ take?
+## What values can autocapitalize take?
 
 The following table shows the different states that an input element can be in:
 
@@ -117,9 +117,8 @@ websites already.
 ## When should I use this?
 
 This isn't an exhaustive list of when you should use `autocapitalize`; however
-there a number of places where aiding the user enter text helps a great deal:
+there are a number of places where helping the user enter text provides great value:
 
-* If you don't want hinting, don't add autocapitalize.
 * Use `autocapitalization=words` if you are
     * Expecting people's names (note: not all names follow this rule, but the
       majority of western names will capitalize automatically as expected)
@@ -131,6 +130,7 @@ there a number of places where aiding the user enter text helps a great deal:
 * Use `sentences` for input elements if you are expecting content
   that is entered in normal paragraph form - for example, a blog post.
 * Use `none` on TextAreas if you are expecting content that should not be affected - for example, entering code.
+* If you don't want hinting, don't add autocapitalize.
 
 ## Other interesting links
 
