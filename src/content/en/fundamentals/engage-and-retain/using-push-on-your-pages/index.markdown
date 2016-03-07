@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow-pages-list
-title: "On the Client"
+title: "Using Push on Your Pages"
 description: "Push and notifications allow developers to engage users by providing timely and customized content outside the context of the web page. Push and notification are different, but complementary, functions: a <b>push</b> is the action of the server supplying information to a service worker; a <b>notification</b> is the action of the service worker showing the information to a user."
 published_on: 2015-10-01
-updated_on: 2016-03-04
+updated_on: 2016-03-11
 order: 1
 translation_priority: 1
 authors:

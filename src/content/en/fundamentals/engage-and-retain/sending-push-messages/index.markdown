@@ -1,11 +1,11 @@
 ---
 layout: shared/narrow
-title: "On the Server"
-description: "As an example, this section describes how to send a message using <a href='https://developer.android.com/google/gcm/index.html'>Google Cloud Messaging (GCM)<a>, a service that handles all aspects of message queueing and delivery to client applications. After that, we'll discuss other services that support push notifications."
+title: "Sending Push Messages Using GCM"
+description: "Sending a push message requires server-side code. To get you started with push, this section describes how to send a message using <a href='https://developer.android.com/google/gcm/index.html'>Google Cloud Messaging (GCM)</a>."
 authors:
   - dgash
 published_on: 2015-10-01
-updated_on: 2016-03-04
+updated_on: 2016-03-11
 order: 1
 translation_priority: 1
 notes:
@@ -13,8 +13,8 @@ notes:
 ---
 
 <p class="intro">
-  As an example, this section describes how to send a message using <a href="https://developer.android.com/google/gcm/index.html">Google Cloud Messaging (GCM)</a>, a service that handles all aspects of message 
-  queueing and delivery to client applications running. After that, we'll discuss other services that support push notifications.
+  Sending a push message requires server-side code. To get you started with push, this section describes how to send a message using <a href='https://developer.android.com/google/gcm/index.html'>Google Cloud Messaging (GCM)</a>, a service that handles all aspects of message 
+  queueing and delivery to client applications. 
 </p>
 
 {% include shared/note.liquid list=page.notes.protocol %}
@@ -86,8 +86,3 @@ curl --header "Authorization: key=<YOUR_PUBLIC_API_KEY>" \
   https://android.googleapis.com/gcm/send -d \
   '{"registration_ids":["<YOUR_REGISTRATION_ID>"]}'
 {% endhighlight %}
-
-## Other Push Services
-
-MDN
-The protocol spec

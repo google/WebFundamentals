@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
-title: "Asking permission for notifications"
-description: "There's more to requesting permission than throwing up a dialog box."
+title: "Ask Permission"
+description: "There's more to asking permission than throwing up a dialog box."
 published_on: 2015-10-01
 updated_on: 2016-01-05
 order: 20
@@ -11,16 +11,16 @@ translation_priority: 1
 ---
 
 <p class="intro">
-  There's more to requesting permission than throwing up a dialog box. 
+  There's more to asking permission than throwing up a dialog box. 
 </p>
 
 {% include shared/toc.liquid %}
 
 ## Prefer logged in users
 
-If you don't know who your users are it's hard to send them relevant 
+Consider only asking for notification permissions from users who are logged in. If you don't know who your users are it's hard to send them relevant 
 notifications. And if notifications aren't relevant, users might 
-regard them as spam.
+call them spam.
 
 ## Trigger from a specific action
 
@@ -44,12 +44,14 @@ notification permissions after the user chooses to opt in.
   </figure>
 </div>
 
-## Clarify page-load permission requests
+## Avoid page-load permission requests
 
-We discourage sites from requesting notification permissions during page load.
-They can be distracting, spammy, and unclear. If your app requests 
-notifications during `onload`, make it clear why you're asking. Dim out 
-the screen and add an overlay that explains the reason for the request.
+Page loads are a bad time to request permission to send notifications. 
+They can be distracting, spammy, and unclear. If users are new to your
+site, don't enough enough about it to feel comfortable granting
+permission. If your app absolutely must request permission during
+`onload`, make it clear why you're asking. Dim out the screen and add
+an overlay that explains the reason for the request.
 
 For example:
 
