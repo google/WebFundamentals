@@ -84,7 +84,7 @@ If you are interested in the implementation, check out [crbug
 
 Chrome manages when to trigger the prompt and for some sites this might not be ideal.
 
-Since Chrome 43, you can now [cancel the prompt](http://googlechrome.github.io/samples/app-install-banner/cancelable-banner/index.html) by intercepting the `onbeforinstallprompt` event and preventing default on the event.
+Since Chrome 43, you can now [cancel the prompt](http://googlechrome.github.io/samples/app-install-banner/cancelable-banner/index.html) by intercepting the `onbeforeinstallprompt` event and preventing default on the event.
 
 {% highlight javascript %}
  window.addEventListener('beforeinstallprompt', function(e) {
