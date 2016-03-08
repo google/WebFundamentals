@@ -35,7 +35,7 @@ featured_image: /web/updates/images/2016/03/mse-sourcebuffer/featured.jpg
 
 That works well for simple use cases, but for techniques such as [adaptive streaming](https://www.youtube.com/watch?v=Fm3Bagcf9Oo), the Media Source Extensions API (MSE) provides more control. MSE enables streams to be built from segments of audio or video.
 
-You can try out MSE at [simpl.info/mse](https://simpl.info/mse). In this example a `SourceBuffer` is created once the `MediaSource` object is open for business:
+You can try out MSE at [simpl.info/mse](https://simpl.info/mse). A `SourceBuffer` is created once the `MediaSource` object is open for business:
 
 {% highlight javascript %}
 var mediaSource = new MediaSource();
@@ -47,7 +47,7 @@ mediaSource.addEventListener('sourceopen', function() {
 }
 {% endhighlight %}
 
-Video segments are 'streamed' to a video element by adding each segment to the `SourceBuffer`. In this example, segments are retrieved via XHR then stored using the File APIs:
+Video segments are 'streamed' to a video element by adding each segment to the `SourceBuffer`. In this example, segments are retrieved via XHR then split up into _NUM_CHUNKS_ items, which are stored using the File APIs:
 
 {% highlight javascript %}
 reader.onload = function (e) {
@@ -59,30 +59,29 @@ reader.onload = function (e) {
       // start playing after first chunk is appended
       video.play();
     }
-    readChunk_(++i);
+    readChunk(++i);
   }
 };
 {% endhighlight %}
 
+<img class="screenshot" src="/web/updates/images/2016/03/mse-sourcebuffer/screenshot.jpg" alt="Screenshot of video played back using the MSE API">
+
 ## Setting playback order
 
-The `mode` attribute of `SourceBuffer` has one of two values. This can be used to determine how play back of segments is ordered:
+The `mode` attribute of `SourceBuffer` has one of two values which can be used to determine how playback of segments is ordered:
 
 * _segments_: the timestamp of each segment determines playback order, no matter the order in which segments are appended.
-* _sequence_: playback order is determined by the order in which segments are appended.
+* _sequence_: playback order is determined by the order in which segments are appended and timestamps are added to segments automatically.
 
-Setting the mode attribute is optional.
+If the media segments have timestamps when they are appended to the `SourceBuffer`, its `mode` property will be set to _segments_. Otherwise `mode` will be set to _sequence_.
 
-If the media segments have timestamps when they are added to the `SourceBuffer`, its `mode` will be set to _segments_. Otherwise the `SourceBuffer`'s `mode` will be set to _sequence_.
-
-The `mode` value can be changed from _segments_ to _sequence_: However, an error will be thrown if you try the other way around.
-
-
-<img class="screenshot" src="/web/updates/images/2016/01/mediarecorder/screenshot.jpg" alt="Screenshot of mediaRecorder demo on Android Nexus 5X">
+Setting the `mode` attribute is optional and it can only be changed from _segments_ to _sequence_: an error will be thrown if you try to change `mode` from _sequence_ to _segments_.
 
 {% highlight javascript %}
-
+sourceBuffer.mode = 'sequence';
 {% endhighlight %}
+
+
 
 ## Feedback on the APIs and demos
 
