@@ -1,122 +1,168 @@
 ---
 layout: shared/narrow
-title: "Emulate Mobile Viewports"
+title: "Test Responsive and Device-specific Viewports"
 description: "Chrome DevTools' Device Mode lets you mimic how your development 
 site will look in production on a range of devices."
 authors:
+  - pbakaus
   - megginkearney
   - kaycebasques
 published_on: 2015-04-14
-updated_on: 2016-02-01
+updated_on: 2016-03-08
 order: 1
 translation_priority: 1
 key-takeaways:
   device-mode:
-    - "Enable Device Mode and turn your viewport into a device emulator."
     - "Test your site's responsiveness using the Device Mode's screen emulator."
     - "Save custom presets so you can easily access them later."
     - "Device mode isn't a replacement for real device testing. Be aware of 
        its limitations."
 ---
 
-<p class="intro">As your mobile audience grows, responsive mobile-friendly 
-web design becomes all the more important. Web content needs to look and feel 
-great across a wide variety of devices and network conditions.</p>
-
-But testing the quality of your mobile experiences on a multitude of devices 
-takes longer and makes debugging more complex. Chrome DevTools' Device Mode 
-lets you mimic how your development site will look in production on a range of 
-devices.
-
-![device mode enabled](imgs/device-mode.png)
+<p class="intro">The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-first DevTools and extend the main DevTools bar. Learn how to use its controls to simulate a wide range of devices or go fully responsive.</p>
 
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.device-mode %}
 
-## Enable Device Mode
+## Using the viewport controls
 
-1. Open DevTools.
+![device mode enabled](imgs/device-mode.png)
 
-1. Press the **Toggle Device Mode** button. When Device Mode is off, the 
-   button is grey
-   (![device mode off](imgs/device-mode-off.png){:.inline}). 
-   When Device Mode is on, the button is blue
-   (![device mode on](imgs/device-mode-on.png){:.inline}). 
+The Viewport Controls allow you to test your site against a variety of devices, as well as fully responsively. It comes in two modes:
 
-   Alternatively, you can toggle Device Mode on and off using the keyboard 
-   shortcut <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + 
-   <kbd class="kbd">M</kbd> (Windows) or <kbd class="kbd">Cmd</kbd> +
-   <kbd class="kbd">Shift</kbd> + <kbd class="kbd">M</kbd> (Mac).
+  1. **Responsive**. Makes the Viewport freely resizable via big handles on either side. 
+  2. **Specific Device**. Locks the Viewport to the exact viewport size of a specific device and emulates certain device characteristics.
 
-If you see a yellow triangle with an exclamation point next to the Device Mode
-button 
-(![device mode reload needed](imgs/device-mode-reload-needed.png){:.inline}), 
-it means you need to reload the page to get proper user agent spoofing and 
-viewport rendering. 
+## Responsive mode
 
-## Using the screen emulator
+We recommend using the **Responsive Mode** as your default work mode. Use it during active development of your site and app and resize the viewport often to create a freely responsive design that adapts to even unknown and future device types.
 
-Device mode's screen emulator helps you test the responsiveness of your site, without the hassle of switching between multiple devices.
+To get the most out of the Responsive Mode, turn on the [Media Queries Controls](./media-queries).
 
-### Get started with device presets
+### Customize the viewport size
 
-Select a device from the **Device** dropdown menu. 
+Either drag the big resize handles on the viewport or click into the values in the menu bar for finer grained control.
 
-![select a device](imgs/select-device.png)
+## Device-specific mode
 
-Each preset automatically configures device emulation in the following ways:
+Use the **Device-specific Mode** when you're nearing the end of active development and want to perfect how your site looks like on specific mobiles (e.g. an certain iPhone or Nexus).
 
-* Specifies the "User Agent" (UA) string for requests.
-* Sets the device resolution and pixel ratio.
-* Enables touch emulation (if applicable).
-* Emulates mobile scrollbar overlays and meta viewport.
-* Autosizes (boosts) text for pages without a defined viewport.
+### Built-in device presets
 
-Use these set of actions to control device mode:
+<div class="wf-devtools-flex">
+  <div>
+  <p>We've included the currently most popular devices in the device dropdown. After selecting a device, each preset automatically configures emulation of certain device characteristics:</p>
+  <ul>
+    <li>Sets the correct "User Agent" (UA) string.</li>
+    <li>Sets the device resolution and DPI (device pixel ratio).</li>
+    <li>Emulates touch events (if applicable).</li>
+    <li>Emulates mobile scrollbar overlays and meta viewport.</li>
+    <li>Autosizes (boosts) text for pages without a defined viewport.</li>
+  </ul>
+  </div>
+  <div class="wf-devtools-flex-third">
+    <img src="imgs/select-device.png" alt="select a device">
+  </div>
+</div>
 
-* Click the checkbox next to **Screen** to toggle the mobile viewport emulator
-  on and off. 
+### Adding custom device presets
 
-  Emulator on:
+Device Mode offers a wide array of devices for emulation. You can add a 
+custom device if you find an edge-case or niche device that isn't covered. 
 
-  ![mobile emulator on](imgs/emulator-on.png)
+<div class="wf-devtools-flex">
+  <div>
+  <p>To add a custom device:</p>
+  <ol>
+    <li>Go to DevTools Settings.</li>
+    <li>Click the <strong>Devices</strong> tab.</li>
+    <li>Click <strong>Add custom device</strong>.</li>
+    <li>Enter a device name, width, height, device pixel ratio, and 
+     user agent string.</li>
+     <li>Click <strong>Add</strong>.</li>
+  </ol>
+  <p>Your custom device is now available in the <strong>Device</strong> dropdown menu.</p>
+  </div>
+  <div class="wf-devtools-flex-half">
+    <img src="imgs/custom-device.png" alt="select a device">
+  </div>
+</div>
 
-  Emulator off:
+### Device states and orientation
 
-  ![mobile emulator off](imgs/emulator-off.png)
+![toggle orientation](imgs/change-orientation.png)
 
-* Click the **change dimensions** button 
-  (![change dimensions button](imgs/change-dimensions.png){:.inline})
-  to alternate between landscape and portrait views. 
+When emulating a specific device, the Device Mode toolbar shows an additional control that primarily serves as a way to toggle the orientation between landscape and portrait.
 
-  Portrait:
+<div class="wf-devtools-flex">
+  <div>
+    <p>On selected devices, the control does more than just orientation toggling. For supported devices like the Nexus 5X, you'll get a dropdown that allows you to emulate certain device states, like:</p>
+    <ul>
+      <li>Default browser UI</li>
+      <li>With Chrome navigation bar</li>
+      <li>With opened keyboard</li>
+    </ul>
+  </div>
+  <div class="wf-devtools-flex-third">
+    <img src="imgs/change-device-state.png" alt="Change the Device UI">
+  </div>
+</div>
 
-  ![portrait view](imgs/portrait.png)
+### Zoom to fit  
 
-  Landscape:
+<div class="wf-devtools-flex">
+  <div>
+  <p>Sometimes you'll want to test a device that has a resolution larger than the actual available space in your browser window. In these cases, the <strong>Zoom to Fit</strong> option comes in handy:</p>
+  <ol>
+    <li><strong>Fit to Window</strong> will automatically set the zoom level to the maximum available space.</li>
+    <li><strong>Explicit percentages</strong> are useful if you want to test DPI on images, for instance.</li>
+  </ol>
+  </div>
+  <div class="wf-devtools-flex-third">
+    <img src="imgs/zoom-to-fit.png" alt="Zoom to Fit">
+  </div>
+</div>
 
-  ![landscape view](imgs/landscape.png)
+## Optional controls (e.g. touch, media queries, DPR)
 
-* Enable the **Zoom to fit** checkbox to automatically increase or decrease
-  the size of the emulated screen whenever you resize your Chrome window 
-  or DevTools window. This setting is for your convenience and does not affect
-  the emulation.
+<div class="wf-devtools-flex">
+  <div>
+  <p>Optional controls can be changed or enabled by clicking on the three little dots on the right side of the device toolbar. Current options include</p>
+  <ul>
+    <li>User agent type (Emulates UA and touch events)</li>
+    <li>Device pixel ratio</li>
+    <li>Media Queries</li>
+    <li>Rulers</li>
+    <li>Configure Network (UA, Network Throttling)</li>
+  </ul>
+  </div>
+  <div class="wf-devtools-flex-third">
+    <img src="imgs/device-mode-dotmenu.png" alt="Device Mode Settings">
+  </div>
+</div>
 
-### Customize the screen settings
+Read on to learn more about the specific options.
 
-You can manually set the screen emulator width and height in the width and
-height text fields
-(![width and height fields](imgs/width-height-fields.png){:.inline}).
-The left field is the width, and the right field is the height.
+### User agent type (&gt; Chrome 50: Device type)
 
-#### Retina displays
+The **User Agent Type**, or Device Type, setting let's you change the type of
+the device. Possible values are:
+
+  1. Mobile
+  2. Desktop
+  3. Desktop with touch
+
+Changing this setting will influence mobile viewport and touch event emulation
+and change the UA string. So if you'd like to create a responsive site for
+Desktop and want to test hover effects, switch to "Desktop" in Responsive Mode.
+
+### Device pixel ratio (DPR)
 
 If you want to emulate a Retina device from a non-Retina machine or vice 
-versa, adjust the **Device pixel ratio** 
-(![emulate DPR icon](imgs/icon-DPR.png){:.inline}) field. The **device pixel 
+versa, adjust the **Device pixel ratio**. The **device pixel 
 ratio** (DPR) is the ratio between logical pixels and physical pixels. 
-Devices with Retina displays, such as the iPhone 5, have higher pixel density 
+Devices with Retina displays, such as the Nexus 6P, have higher pixel density 
 than standard devices, which can affect the sharpness and size of visual 
 content.
 
@@ -130,7 +176,7 @@ Some examples of "Device Pixel Ratio" (DPR) sensitivity on the web are:
 * CSS [image-set](http://dev.w3.org/csswg/css-images/#image-set-notation) 
   rules.
 
-* The [srcset](http://www.w3.org/html/wg/drafts/html/master/embedded-content.html#attr-img-srcset) 
+* The [srcset](/web/fundamentals/design-and-ui/media/images/images-in-markup) 
   attribute on images.
 
 * The `window.devicePixelRatio` property.
@@ -141,23 +187,62 @@ this effect on a standard display, set the DPR to 2 and scale the viewport
 by zooming. A 2x asset will continue to look sharp, while a 1x one will look 
 pixelated.
 
-## Custom devices
+### Media queries
 
-Device Mode offers a wide array of devices for emulation. You can add a 
-custom device if you find an edge-case or niche device that isn't covered. 
+[Media queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
+are an essential part of responsive web design.To view the media query inspector,
+click **Show Media queries** in the three dot menu. The DevTools detect media
+queries in your stylesheets and display them as colored bars in the top ruler.
 
-![adding a custom device](imgs/custom-device.png)
+![media query inspector](imgs/media-query-inspector-ruler.png)
 
-To add a custom device:
+Media queries are color-coded as follows:
 
-1. Go to DevTools Settings.
-1. Click the **Devices** tab.
-1. Click **Add custom device**.
-1. Enter a device name, width, height, device pixel ratio, and 
-   user agent string.
-1. Click **Add**.
+<style>#colortable { width: 60%; border: none; } #colortable td { border: none; } .max-width { background: #327ff2; width: 10%; } .max-and-min { background: #3b9903; width: 10%; } .min-width { background: #d4731f; width: 10%; }</style>
 
-Your custom device is now available in the **Device** dropdown menu.
+<table id="colortable">
+  <tbody>
+    <tr>
+      <td class="max-width"></td>
+      <td>Queries targeting a maximum width.</td>
+    </tr>
+    <tr>
+      <td class="max-and-min"></td>
+      <td>Queries targeting widths within a range.</td>
+    </tr>
+    <tr>
+      <td class="min-width"></td>
+      <td>Queries targeting a minimum width.</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Quickly preview a media query
+
+Click a media query bar to adjust the viewport size and preview styles for the
+targeted screen sizes.
+
+#### View associated CSS
+
+Right-click a bar to view where the media query is defined in CSS and jump to
+the definition in source code.
+
+![web fundamentals media queries view](imgs/reveal-source-code.png)
+
+### Rulers
+
+Toggle this option to show pixel-based rulers next to the viewport.
+
+### Configure network (UA, network throttling)
+
+Selecting this option will open a panel in the Drawer that allows you to change
+network related behaviours:
+
+  1. **Disk Cache**: Disable Disk Cache stops pages and their assets from being
+     cached by the browser while the DevTools are open.
+  2. **Network Throttling**: Read more about [Network Throttling here](/web/tools/chrome-devtools/profile/network-performance/network-conditions).
+  3. **User Agent**: Allows you to set a specific UA (User Agent) string
+     override.
 
 ## Limitations
 
