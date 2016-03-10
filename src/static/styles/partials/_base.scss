@@ -75,7 +75,6 @@ img, video {
 
 li {
   line-height: $base-line;
-  margin-bottom: $base-line / 2;
 }
 
 pre {
@@ -203,8 +202,11 @@ blockquote {
 .intro {
   @include typo-subhead-2($usePreferred: false);
   font-weight: normal;
+  letter-spacing: 0;
   margin-bottom: $base-line;
   margin-top: $base-line * 2;
+  padding-bottom: $base-line / 2;
+  border-bottom: 1px solid #eee;
 }
 
 .mdl-cell > .intro {

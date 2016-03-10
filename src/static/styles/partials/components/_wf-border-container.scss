@@ -20,3 +20,8 @@
   border-bottom-width: 1px;
   border-bottom-color: $grey-border-color;
 }
+
+p.intro + .wf-border-container .wf-border-container__content {
+    border-top: 0;
+    padding-top: 0;
+}
