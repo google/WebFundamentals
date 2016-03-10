@@ -263,6 +263,7 @@ translation_priority: 1
             <li><a href="https://stackoverflow.com/questions/tagged/google-chrome-devtools">StackOverflow</a></li>
             <li><a href="https://plus.google.com/+GoogleChromeDevelopers">Google+</a></li>
             <li><a href="https://www.youtube.com/user/ChromeDevelopers">YouTube</a></li>
+            <li><a href="https://chromiumdev.slack.com/messages/devtools/">Slack</a></li>
           </ul>
         </div>
 
