@@ -102,14 +102,15 @@ keyboard shortcut again to stop the recording.
   For example, if you want to record events that occur after you click a Login 
   button, don’t also scroll the page, load an image, and so on.
 * **Disable the browser cache**. When recording network operations, it’s a 
-  good idea to disable the browser’s cache in the DevTools Settings panel.
+  good idea to disable the browser’s cache from the DevTools Settings panel or
+  the [**Network conditions**][nc] drawer.
 * **Disable extensions**. Chrome extensions can add unrelated noise to 
   Timeline recordings of your application. Open a Chrome window in 
   [incognito mode][incognito], or create a new 
   [Chrome user profile][new chrome profile] to ensure that your environment
   has no extensions.
 
-
+[nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
 [incognito]: https://support.google.com/chrome/answer/95464
 [new chrome profile]: https://support.google.com/chrome/answer/142059
 

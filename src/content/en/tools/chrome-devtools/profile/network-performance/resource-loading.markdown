@@ -377,6 +377,9 @@ that resource's row. The list below describes each of the options.
   HAR file along with each page resource. Binary resources, including images, 
   are encoded as Base64-encoded text.
 * **Clear Browser Cache**. Clear the browser cache.
+
+  **Tip**: You can also enable or disable the browser cache from the 
+  [**Network Conditions**][nc] drawer.
 * **Clear Browser Cookies**. Clear the browser's cookies.
 * **Open in Sources Panel**. Open the selected resource in the **Sources** 
   panel.
@@ -389,6 +392,8 @@ that resource's row. The list below describes each of the options.
   resources.
 
 ![copy and save context menu](imgs/copy-save-menu.png) 
+
+[nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
 
 ### Copy requests as cURL commands
 

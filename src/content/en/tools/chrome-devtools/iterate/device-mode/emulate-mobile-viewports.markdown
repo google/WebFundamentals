@@ -157,6 +157,10 @@ Changing this setting will influence mobile viewport and touch event emulation
 and change the UA string. So if you'd like to create a responsive site for
 Desktop and want to test hover effects, switch to "Desktop" in Responsive Mode.
 
+**Tip**: You can also set the user agent in the [**Network conditions**][nc] 
+drawer.
+
+
 ### Device pixel ratio (DPR)
 
 If you want to emulate a Retina device from a non-Retina machine or vice 
@@ -244,6 +248,9 @@ network related behaviours:
   3. **User Agent**: Allows you to set a specific UA (User Agent) string
      override.
 
+**Tip**: You can also open the **Network conditions** drawer from the 
+[main menu][nc].
+
 ## Limitations
 
 Device Mode has some limitations.
@@ -267,3 +274,6 @@ Despite these limitations, the Device Mode is robust enough for most tasks.
 When you need to test on a real device, you can use 
 [Remote Debugging](/web/tools/chrome-devtools/debug/remote-debugging) 
 for additional insight.
+
+
+[nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
