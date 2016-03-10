@@ -27,7 +27,7 @@ notes:
 
 ## How to disable Device Mode
 
-Device Mode is enabled by default. If you're building a Desktop-only site, you may turn it off by pressing the **Toggle device mode** ![toggle device mode icon on](imgs/device-mode-on.png){:.inline.wf-devtools-icon} icon. When Device Mode is disabled, the icon turns grey and the viewport controls are hidden.
+Device Mode is enabled by default. If you're building a Desktop-only site, you may turn it off by pressing the **Toggle device mode** (![toggle device mode icon on](imgs/device-mode-on.png){:.inline.wf-devtools-icon}) icon. When Device Mode is disabled, the icon turns grey and the viewport controls are hidden.
 
 You can also toggle device mode on and off using the keyboard shortcut:
 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> on Mac).

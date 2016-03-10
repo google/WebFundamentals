@@ -19,7 +19,7 @@ key-takeaways:
        its limitations."
 ---
 
-<p class="intro">The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-first DevTools and extend the main DevTools bar. Learn how to use its controls to simulate a wide range of devices or go fully responsive.</p>
+<p class="intro">The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-first DevTools and extends the main DevTools bar. Learn how to use its controls to simulate a wide range of devices or go fully responsive.</p>
 
 {% include shared/toc.liquid %}
 
@@ -38,7 +38,7 @@ The Viewport Controls allow you to test your site against a variety of devices, 
 
 We recommend using the **Responsive Mode** as your default work mode. Use it during active development of your site and app and resize the viewport often to create a freely responsive design that adapts to even unknown and future device types.
 
-To get the most out of the Responsive Mode, turn on the [Media Queries Controls](./media-queries).
+To get the most out of the Responsive Mode, turn on the [Media Queries Bar](#media-queries).
 
 ### Customize the viewport size
 
@@ -46,7 +46,7 @@ Either drag the big resize handles on the viewport or click into the values in t
 
 ## Device-specific mode
 
-Use the **Device-specific Mode** when you're nearing the end of active development and want to perfect how your site looks like on specific mobiles (e.g. an certain iPhone or Nexus).
+Use the **Device-specific Mode** when you're nearing the end of active development and want to perfect how your site looks like on specific mobiles (e.g. a certain iPhone or Nexus).
 
 ### Built-in device presets
 
@@ -144,7 +144,7 @@ When emulating a specific device, the Device Mode toolbar shows an additional co
 
 Read on to learn more about the specific options.
 
-### User agent type (&gt; Chrome 50: Device type)
+### User agent type
 
 The **User Agent Type**, or Device Type, setting let's you change the type of
 the device. Possible values are:
