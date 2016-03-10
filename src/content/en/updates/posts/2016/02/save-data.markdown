@@ -9,6 +9,7 @@ authors:
 tags:
   - savedata
   - clienthints
+  - chrome49
 featured_image: /web/updates/images/2016/02/save-data/data-saver-chrome.png
 ---
 
