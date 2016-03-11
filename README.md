@@ -67,6 +67,36 @@ These can be combined like so:
 
 We have a resource area which you can access at [https://web-central.appspot.com/web/resources/?hl=en](https://web-central.appspot.com/web/resources/?hl=en) that should get you up and running with a lot of the custom and useful info.
 
+# View staged pull requests and branches
+
+**Note: this feature is experimental.**
+
+The build process automatically creates staging sites for all pull requests.
+
+To access the staging site for a pull request:
+
+1. Open the pull request on `github.com`.
+2. Click **Show All Checks**.
+3. Click **Details** next to the **Builder** check. The staging site opens
+   up in a new tab. 
+
+You can also access each staging site directly, using the following URL:
+
+    https://pr-<NUMBER>-dot-weasel-dot-web-central.appspot.com
+
+Where `<NUMBER>` is the pull request number. For example, the URL for
+PR #1000 would be:
+
+    https://pr-1000-dot-weasel-dot-web-central.appspot.com
+
+Staged branches are also available at:
+
+    <branch>-dot-weasel-dot-web-central.appspot.com
+
+Where `<branch>` is the name of the branch. 
+
+**The URL pattern for pull requests and branches may change without notice.**
+
 # Translations
 
 See [our translations guide](TRANSLATION.md)

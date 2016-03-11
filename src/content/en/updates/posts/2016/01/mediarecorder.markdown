@@ -14,6 +14,7 @@ tags:
   - recording
   - video
   - webrtc
+  - chrome49
 featured_image: /web/updates/images/2016/01/mediarecorder/featured.jpg
 ---
 

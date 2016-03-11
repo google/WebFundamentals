@@ -175,3 +175,37 @@ $color-accent: unquote("rgb(#{$palette-blue-300})");
 .wf-devtools-announcement {
   text-align: center;
 }
+
+.wf-devtools-flex {
+  display: flex;
+  margin-bottom: 24px;
+  margin-top: 1em;
+
+  > div {
+
+    &.wf-devtools-flex-third {
+      width: 33%;
+      min-width: 33%;
+    }
+
+    &.wf-devtools-flex-half {
+      width: 50%;
+      min-width: 50%;
+    }
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    &:first-child {
+      padding-right: 1em;
+    }
+
+  }
+
+}
+
+.wf-devtools-icon {
+  height: 1em;
+  vertical-align: text-top;
+}

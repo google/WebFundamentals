@@ -1,11 +1,13 @@
 ---
 layout: shared/narrow
 title: "Edit Styles"
-description: "CSS defines the presentation layer of your page. View and modify any CSS declaration that affects an element on the current page using the Chrome DevTools Styles pane."
+description: "Use the Styles pane in Chrome DevTools to inspect and modify the
+CSS styles associated to an element."
 published_on: 2015-04-14
-updated_on: 2015-04-14
+updated_on: 2016-02-26
 order: 2
 authors:
+  - kaycebasques
   - megginkearney
 translation_priority: 0
 key-takeaways:
@@ -23,46 +25,41 @@ notes:
     - "This section assumes that you've got source maps working already. <a href='/web/tools/setup/setup-preprocessors'>Read here how setup your preprocessor</a>."
 ---
 
-<p class="intro">
-  CSS defines the presentation layer of your page. View and modify any CSS declaration that affects an element on the current page using the Chrome DevTools Styles pane.
-</p>
+<p class="intro">Use the <strong>Styles</strong> pane to modify the CSS
+styles associated to an element.</p>
 
-If you haven't already, familiarize yourself on the [basics of inspecting and tweaking your pages](/web/tools/chrome-devtools/iterate/inspect-styles). This guide dives deeper into editing and creating styles, including working with css preprocessor source files.
+![Styles pane](imgs/styles-pane.png)
 
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.edit-styles %}
 
-You can add or edit styles within the **Styles pane** in the Elements panel in the following ways:
-
-* Edit an existing property name or value.
-* Add a new property declaration.
-* Add a new CSS rule.
-
 ## Inspect styles applied to an element
 
-The Styles pane shows the CSS rules that apply to the selected element, from
-highest priority to lowest.
+[Select an element](edit-dom#inspect-an-element) to inspect its styles. 
+The **Styles** pane shows the CSS rules that apply to the selected element, 
+from highest priority to lowest:
 
-![styles pane](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/styles-pane.png)
+* At the top is `element.style`. These are styles either applied directly to 
+  the element using the style property (for example, 
+  `<p style="color:green">`), or applied in DevTools.
 
-At the top are element styles applied directly to the element
-(`element.style`) using the style property (or applied in DevTools).
+* Below that are any CSS rules that match the element. For example, in
+  the screenshot below the selected element receives `line-height:24px` from
+  a rule defined in `tools.css`.
 
-Below that are any CSS rules that match the element. For example, in
-the screenshot above the selected element receives `font-weight:400` from
-a rule defined in `tools.css`.
+* Below that are inherited styles, which include any inheritable style
+  rules that match the selected element's ancestors. For example, in the
+  screenshot below the selected element inherits `display:list-item` from
+  `user agent stylesheet`.
 
-Below that are inherited styles, which include any inheritable style
-rules that match the selected element's ancestors. For example, in the
-screenshot above the selected element inherits `display:block` from`user agent stylesheet`.
-
-The labels on the image below correspond with the numbered items below.
+The labels on the image below correspond with the numbered items below it.
 
 ![Annotated Styles pane](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/styles-annotated.png)
 
 1. Styles associated with a selector that matches the element.
-2. [User agent stylesheets](http://meiert.com/en/blog/20070922/user-agent-style-sheets/)   are clearly labelled, and are often overridden by the CSS on your web page.
+2. [User agent stylesheets](http://meiert.com/en/blog/20070922/user-agent-style-sheets/)
+   are clearly labelled, and are often overridden by the CSS on your web page.
 3. Rules that have been overridden by **cascading rules** are shown with
    strikethrough text.
 4. **Inherited** styles are displayed as a group under the "Inherited
@@ -79,85 +76,73 @@ given weights to determine which rules should take precedence when theyoverlap w
 CSS properties from their containing elements (ancestors). For more,
 see [W3C documentation on cascading](http://www.w3.org/TR/CSS2/cascade.html).
 
+## Add, enable, and disable CSS classes {#classes}
+
+Click on the **.cls** button to view all of the CSS classes associated to the
+currently selected element. From there, you can:
+
+* Enable or disable the classes currently associated to the element.
+* Add new classes to the element. 
+
+![classes pane](imgs/classes.png)
+
 ## Edit an existing property name or value
 
-Click on a CSS property name or property value to edit; press Tab or Enter to change the name or value (see also [How to live-edit a style](/web/tools/chrome-devtools/iterate/inspect-styles/basics#how-to-live-edit-a-style)).
+Click on a CSS property name or value to edit it. While a name or value is 
+highlighted, press <kbd>Tab</kbd> to move forward to the next property, name,
+or selector. Hold <kbd>Shift</kbd> and press <kbd>Tab</kbd> to move backwards.
 
-When editing a numeric CSS property value, increment and decrement numeric CSS property values using the following shortcuts:
+When editing a numeric CSS property value, increment and decrement with the 
+following keyboard shortcuts:
 
-* Press <kbd class="kbd">Up</kbd> or <kbd class="kbd">Down</kbd> to increment or decrement the value by 1 (or by .1 if the current value is between -1 and 1).
-* Press <kbd class="kbd">Alt</kbd> + <kbd class="kbd">Up</kbd> or <kbd class="kbd">Alt</kbd> + <kbd class="kbd">Down</kbd> to increment or decrement the value by 0.1.
-* Press <kbd class="kbd">Shift</kbd> + <kbd class="kbd">Up/Down</kbd> or <kbd class="kbd">PageUp</kbd>/<kbd class="kbd">PageDown</kbd> to increment or decrement the value by 10.
-* Press <kbd class="kbd">Shift</kbd> + <kbd class="kbd">PageUp</kbd>/<kbd class="kbd">PageDown</kbd> to increment or decrement the value by 100.
+* <kbd>Up</kbd> and <kbd>Down</kbd> to increment and decrement the value by 1,
+  or by .1 if the current value is between -1 and 1.
+* <kbd>Alt</kbd>+<kbd>Up</kbd> and <kbd>Alt</kbd>+<kbd>Down</kbd> to 
+  increment and decrement the value by 0.1.
+* <kbd>Shift</kbd>+<kbd>Up</kbd> to increment by 10 and 
+  <kbd>Shift</kbd>+<kbd>Down</kbd> to decrement by 10.
+* <kbd>Shift</kbd>+<kbd>Page Up</kbd> (Windows, Linux) or 
+  <kbd>Shift</kbd>+<kbd>Function</kbd>+<kbd>Up</kbd> (Mac) to increment the 
+  value by 100. <kbd>Shift</kbd>+<kbd>Page Down</kbd> (Windows, Linux) or 
+  <kbd>Shift</kbd>+<kbd>Function</kbd>+<kbd>Down</kbd> (Mac) to decrement the 
+  value by 100. 
 
 ## Add a new property declaration
 
-Click an empty space within an editable CSS rule to create a new style. Edit mode now applies to the CSS property field, where you can enter a new property.
-
-To add a new property and view code hints in the CSS property field, follow these steps:
-
-1. Begin typing into the CSS property field. Suggestions display in a drop down box.
-2. Press <kbd class="kbd">Up</kbd> or <kbd class="kbd">Down</kbd> arrows to focus on a suggestion.
-3. Accept a suggestion using <kbd class="kbd">Tab</kbd>, Right arrow or <kbd class="kbd">Enter</kbd>.
-
-After you select a valid CSS property, bring up suggestions for applicable CSS values by moving focus to the CSS property value field. For example, the property `display` suggests values such as `block, flex, none,` and others.
-
-Paste CSS into the Styles pane using <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">V</kbd> (or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">V</kbd> on Mac). Properties and their values are parsed and entered into the correct fields.
+Click an empty space within an editable CSS rule to create a new declaration. 
+Type it out, or paste the CSS into the **Styles** pane. Properties and their 
+values are parsed and entered into the correct fields.
 
 {% include shared/remember.liquid title="Remember" list=page.notes.enable-style %}
 
 ## Add a style rule
 
-You may find it preferable to add styles along with a **new selector**.
-Click **New Style Rule** within the styles pane header bar to generate a new CSS rule.
+Click the **New Style Rule** 
+(![new style rule button](imgs/new-style-rule.png){:.inline}) button to add a 
+new CSS rule. 
 
-{% animation animations/new-style-rule.mp4 %}
+Click and hold the button to choose which stylesheet the rule is added to. 
 
-{% include shared/remember.liquid title="Note" list=page.remember.new-rule %}
+## Add or remove dynamic styles (pseudo-classes) {#pseudo-classes}
 
-## Add dynamic styles to page elements
+You can manually set dynamic pseudo-class selectors (such as `:active`, 
+`:focus`, `:hover`, and `:visited`) on elements. 
 
-You can provide dynamic styling for your UI elements using pseudo-class selectors such as `:hover`. However, these dynamic states can be hard to debug, so DevTools lets you manually set pseudo-classes on individual elements.
+There are two ways to set these dynamic states on an element:
 
-{% animation animations/pseudo-triggers.mp4 %}
+* Right-click on an element within the **Elements** panel and then select
+  the target pseudo-class from the menu to enable or disable it.
+  
+  ![right-click on element 
+  to enable pseudoclass selector](imgs/pseudoclass-rightclick.png)
 
-Trigger any combination of the following four pseudo-classes:
+* Select an element in the **Elements** panel, click the **:hov** button
+  in the **Styles** pane, and use the checkboxes to enable or disable the 
+  selectors for the currently selected element.
 
-<table class="mdl-data-table">
-  <thead>
-    <tr>
-      <th>Pseudo-class</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="Value"><code>:active</code></td>
-      <td data-th="Description">Applies to a link in the process of activation (for example, upon click).</td>
-    </tr>
-    <tr>
-      <td data-th="Value"><code>:hover</code></td>
-      <td data-th="Description">Applies to an element while a mouse cursor is over it.</td>
-    </tr>
-    <tr>
-      <td data-th="Value"><code>:focus</code></td>
-      <td data-th="Description">Applies to an element which gains focus (for example, through pressing Tab).</td>
-    </tr>
-    <tr>
-      <td data-th="Value"><code>:visited</code></td>
-      <td data-th="Description">Applies to a link previously visited in the browser.</td>
-    </tr>
-  </tbody>
-</table>
-
-To set an element's state:
-
-1. Click **Toggle Element State**![attributes](imgs/attributes-icon.png){:.inline} next to **New Style Rule** ![plus](imgs/plus.png){:.inline} within the styles pane header.
-2. Right-click a DOM node in the Elements panel and select **Force Element State**.
+  ![:hov pane](imgs/hov.png)
 
 ## Edit Sass, Less or Stylus
-
-{% include shared/remember.liquid title="Note" list=page.remember.setup-preprocessor %}
 
 If you are using Sass, Less, Stylus or any other CSS preprocessor, editing the generated CSS output files in the Styles editor won't help as they don't map to your original source.
 

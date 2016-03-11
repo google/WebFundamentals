@@ -3,7 +3,9 @@ layout: shared/narrow-pages-list
 title: "Simulate Mobile Devices with Device Mode"
 description: "Use virtual devices in Chrome's Device Mode to build mobile-first web sites."
 published_on: 2015-04-14
-updated_on: 2015-04-14
+updated_on: 2016-03-08
+authors:
+  - pbakaus
 order: 3
 translation_priority: 1
 notes:
@@ -23,15 +25,11 @@ notes:
 * Evaluate your site's performance using the [network emulator](/web/tools/chrome-devtools/profile/network-performance/network-conditions), without affecting traffic to other tabs.
 * Accurately [simulate device input](/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors) for touch events, geolocation, and device orientation
 
-Some of this documentation might be ahead of the stable version of Chrome. Use <a href="https://www.google.com/intl/en/chrome/browser/canary.html">Chrome Canary</a>.
+## How to disable Device Mode
 
-## How to enable Device Mode
-
-Turn on device mode by pressing the **Toggle device mode** ![toggle device mode icon off](imgs/icon-device-mode-off.png){:.inline} icon. When device mode is enabled, the icon turns blue and the viewport transforms into a device emulator.
+Device Mode is enabled by default. If you're building a Desktop-only site, you may turn it off by pressing the **Toggle device mode** (![toggle device mode icon on](imgs/device-mode-on.png){:.inline.wf-devtools-icon}) icon. When Device Mode is disabled, the icon turns grey and the viewport controls are hidden.
 
 You can also toggle device mode on and off using the keyboard shortcut:
 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> on Mac).
-
-
 
 {% include shared/remember.liquid list=page.notes.realworld %}

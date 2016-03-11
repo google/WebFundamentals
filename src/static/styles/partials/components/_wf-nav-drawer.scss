@@ -76,8 +76,13 @@
   padding: $nav-drawer-vertical-padding $nav-drawer-horizontal-padding;
 }
 
+// No horizontal padding for first indentation, bold title already covers it
+.wf-main-nav__list-level-2 .wf-main-nav__item {
+  padding: ($nav-drawer-vertical-padding / 2) 0;
+}
+
 // Less padding on the lower levels
-.wf-main-nav__list-level-2 .wf-main-nav__item, .wf-main-nav__list-level-3 .wf-main-nav__item {
+.wf-main-nav__list-level-3 .wf-main-nav__item {
   padding: ($nav-drawer-vertical-padding / 2) $nav-drawer-vertical-padding;
 }
 

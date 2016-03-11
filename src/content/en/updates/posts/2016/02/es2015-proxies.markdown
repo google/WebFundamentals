@@ -9,6 +9,7 @@ authors:
 tags:
   - javascript
   - es2015
+  - chrome49
 featured_image: /web/updates/images/2016/02/es2015-proxies/featured.png
 ---
 
