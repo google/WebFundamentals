@@ -9,6 +9,7 @@ authors:
 tags:
   - deprecations
   - removals
+  - chrome49
 ---
 
 In nearly every version of Chrome we see a significant number of updates and

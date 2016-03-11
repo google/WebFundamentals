@@ -9,6 +9,7 @@ authors:
 tags:
   - events
   - performance
+  - chrome49
 featured_image: /web/updates/images/2016/01/high-res-timestamps/ic_timer_black.png
 ---
 

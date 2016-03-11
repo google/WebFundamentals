@@ -8,6 +8,7 @@ authors:
   - ericbidelman
 tags:
   - url
+  - chrome49
 featured_image: /web/updates/images/2016/01/urlsearchparams/overview.png
 ---
 

@@ -9,6 +9,7 @@ tags:
   - devtools
   - digest
   - update
+  - chrome49
 description: "Learn all about the revamped “Inspect Devices” UI, toggle classes easily in the now-fixed style panel and watch the pilot of DevTools Tonight."
 featured_image: /web/updates/images/2016/02/devtools-digest/devtools-tonight.jpg
 ---
