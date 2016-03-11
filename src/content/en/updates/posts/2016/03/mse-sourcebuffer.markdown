@@ -1,9 +1,9 @@
 ---
 layout: updates/post
-title: "Media Source API: Select Playback Order"
-description: "The Media Source API enables JavaScript to construct media streams for playback for uses cases such as adaptive streaming. This update to Chrome makes it possible to set the playback order of media segments."
-published_on: 2016-03-09
-updated_on: 2016-03-09
+title: "Media Source API: automatically ensure gapless playback of media segments in append order"
+description: "The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use the <em>sequence</em> mode to ensure media segments are automatically relocated in the timeline to be adjacent, in the order they were appended to a <code>SourceBuffer</code>."
+published_on: 2016-03-10
+updated_on: 2016-03-10
 authors:
   - samdutton
 tags:
@@ -36,7 +36,7 @@ That works well for simple use cases, but for techniques such as [adaptive strea
 
 You can try out MSE at [simpl.info/mse](https://simpl.info/mse). The code below is from that example.
 
-A `MediaSource` represents a source of media for an audio or video element. Once a `MediaSource` object is instantiated and its `open` event has fired, media segments can be added via a `SourceBuffer`:
+A `MediaSource` represents a source of media for an audio or video element. Once a `MediaSource` object is instantiated and its `open` event has fired, `SourceBuffer`s for it can be added, which act as buffers for media segments:
 
 {% highlight javascript %}
 var mediaSource = new MediaSource();
@@ -48,7 +48,7 @@ mediaSource.addEventListener('sourceopen', function() {
 }
 {% endhighlight %}
 
-Media segments are 'streamed' to an audio or video element by adding each segment to the `SourceBuffer` with `appendBuffer()`. In this example, video is fetched from the server then stored using the File APIs:
+Media segments are 'streamed' to an audio or video element by adding each segment to a `SourceBuffer` with `appendBuffer()`. In this example, video is fetched from the server then stored using the File APIs:
 
 {% highlight javascript %}
 reader.onload = function (e) {
@@ -71,24 +71,27 @@ reader.onload = function (e) {
 
 Chrome 50 adds support for the `SourceBuffer` `mode` attribute.
 
-The `mode` attribute can have either of two possible values, which can be used to determine how playback of media segments are ordered:
+The `mode` attribute can be used to specify playback order for media segments. It has one of two values:
 
-* _segments_: the timestamp of each segment determines playback order, no matter the order in which segments are appended.
-* _sequence_: playback order is determined by the order in which segments are appended and timestamps are added to segments automatically.
+* _segments_: the timestamp of each segment (which may have been modified by [`timestampOffset`](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset)) determines playback order, no matter the order in which segments are appended.
+* _sequence_: playback order is determined by the order in which segments are appended to the `SourceBuffer`, and timestamps are added to segments automatically.
 
-If the media segments have timestamps parsed from byte stream data when they are appended to the `SourceBuffer`, the `SourceBuffer`'s `mode` property will be set to _segments_. Otherwise `mode` will be set to _sequence_.
+If the media segments have timestamps parsed from byte stream data when they are appended to the `SourceBuffer`, the `SourceBuffer`'s `mode` property will be set to _segments_. Otherwise `mode` will be set to _sequence_.  Note that timestamps are not optional: they _must_ be there for most stream types, and _cannot_ be there for others.
 
-Setting the `mode` attribute is optional and it can only be changed from _segments_ to _sequence_. An error will be thrown if you try to change `mode` from _sequence_ to _segments_ — the existing segment order needs to be maintained in sequence.
+Setting the `mode` attribute is optional. For streams that don't contain timestamps (audio/mpeg and audio/aac) `mode` can only be changed from _segments_ to _sequence_: an error will be thrown if you try to change `mode` from _sequence_ to _segments_. For streams that have timestamps, it is possible to switch between _segments_ and _sequence_, though in practice that would probably produce behaviour that was undesirable, hard to understand or difficult to predict.
 
-You can, however, change the value from _segments_ to _sequence_ — it just means the play order will be fixed, and new timestamps generated to reflect this.
+For all stream types, you can change the value from _segments_ to _sequence_. This means segments will be played back in the order they were appended, and new timestamps generated accordingly:
 
 {% highlight javascript %}
 sourceBuffer.mode = 'sequence';
 {% endhighlight %}
 
-Being able to set the mode value to _sequence_ is useful because it ensures continuous media playback — no matter if the video segment timestamps were discontinuous (for example, if there were problems with video muxing, or discontinuous segments are appended).
+Being able to set the `mode` value to _sequence_ is useful because it ensures continuous media playback, no matter if the media segment timestamps were discontinuous — for example, if there were problems with video [muxing](https://en.wikipedia.org/wiki/Multiplexing), or if (for whatever reason) discontinuous segments are appended.
 
-## Demos
+## MSE _sequence_ `AppendMode` demo
+
+
+## MSE apps &amp; demos
 [Media Source API](https://simpl.info/mse)
 [Shaka Player](https://shaka-player-demo.appspot.com): video player demo that uses MSE to implement [DASH](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-MPEG-DASH-79041.aspx) with the [Shaka](https://g.co/shakainfo) JavaScript library
 
@@ -101,6 +104,4 @@ Being able to set the mode value to _sequence_ is useful because it ensures cont
 
 ## API Information
 [MDN: SourceBuffer.mode](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode)
-
-
 
