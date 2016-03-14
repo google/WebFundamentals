@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Media Source API: Automatically Ensure Seamless Playback of Media Segments in Append Order"
-description: "The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use the <code>SourceBuffer</code> <em>sequence</em> mode to ensure media segments are automatically relocated in the timeline in the order they were appended, without gaps between them."
+description: "The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use <code>SourceBuffer</code> <em>sequence</em> mode to ensure media segments are automatically relocated in the timeline in the order they were appended, without gaps between them."
 published_on: 2016-03-10
 updated_on: 2016-03-10
 authors:
@@ -27,14 +27,14 @@ featured_image: /web/updates/images/2016/03/mse-sourcebuffer/featured.jpg
 }
 </style>
 
-<p class="intro">The HTML audio and video elements enable you to load, decode and play media simply by providing a src URL:
+<p class="intro">The HTML audio and video elements enable you to load, decode and play media, simply by providing a src URL:
 </p>
 
 {% highlight html %}
 <video src='foo.webm'></video>
 {% endhighlight %}
 
-That works well in simple use cases, but for techniques such as [adaptive streaming](https://www.youtube.com/watch?v=Fm3Bagcf9Oo), the Media Source Extensions API (MSE) provides more control. MSE enables streams to be built from segments of audio or video.
+That works well in simple use cases, but for techniques such as [adaptive streaming](https://www.youtube.com/watch?v=Fm3Bagcf9Oo), the Media Source Extensions API (MSE) provides more control. MSE enables streams to be built in JavaScript from segments of audio or video.
 
 You can try out MSE at [simpl.info/mse](https://simpl.info/mse):
 
@@ -94,6 +94,7 @@ Being able to set the `mode` value to _sequence_ ensures continuous media playba
 
 ## MSE Apps and Demos
 These show MSE in action, though without `SourceBuffer.mode` manipulation:
+
 * [Media Source API](https://simpl.info/mse)
 * [Shaka Player](https://shaka-player-demo.appspot.com): video player demo that uses MSE to implement [DASH](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-MPEG-DASH-79041.aspx) with the [Shaka](https://g.co/shakainfo) JavaScript library
 
