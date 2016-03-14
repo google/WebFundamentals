@@ -897,3 +897,16 @@ maciejzasada:
     - author
   google: https://plus.google.com/104812516714503133849/posts
   email: maciej@unit9.com
+
+mscales:
+  name:
+    given: Mat
+    family: Scales
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  twitter: wibblymat
+  email: mscales@google.com
