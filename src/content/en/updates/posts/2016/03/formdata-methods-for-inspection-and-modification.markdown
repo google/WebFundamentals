@@ -38,7 +38,7 @@ function sendRequest(theFormElement) {
   // log all values like <input name="widget">
   console.info("User selected widgets", formData.getAll("widget"));
 
-  window.fetch(url, {body: formData});
+  window.fetch(url, {method: 'POST', body: formData});
 }
 {% endhighlight %}
 
@@ -64,9 +64,9 @@ Check this example out:
 
   // send like request
   formData.set("action", "like");
-  window.fetch(url, {body: formData});
+  window.fetch(url, {method: 'POST', body: formData});
 
   // send reshare request
   formData.set("action", "reshare");  // overrides previous "action"
-  window.fetch(url, {body: formData});
+  window.fetch(url, {method: 'POST', body: formData});
 {% endhighlight %}
