@@ -14,11 +14,9 @@ tags:
 featured_image: /web/updates/images/2016/03/formdata-methods-for-inspection-and-modification/form.png
 ---
 
-<p class="intro">
 `FormData` is the XHR user's best friend, and it's getting an upgrade in Chrome 50.
 We're adding methods allowing you to inspect your `FormData` objects or modify them after-the-fact.
 You can now use `get()`, `delete()`, and iteration helpers like `entries`, `keys`, and more. ([Check out the full list](https://developer.mozilla.org/en/docs/Web/API/FormData).)
-  </p>
 
 If you're not already using FormData, it's a simple, [well-supported](http://caniuse.com/#feat=xhr2) API that allows you to programmatically build a virtual form and send it to a far away place using `window.fetch()` or `XMLHttpRequest.send(formData)`.
 
