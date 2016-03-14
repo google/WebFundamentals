@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Media Source API: automatically ensure gapless playback of media segments in append order"
-description: "The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use the <em>sequence</em> mode to ensure media segments are automatically relocated in the timeline to be adjacent, in the order they were appended to a <code>SourceBuffer</code>."
+description: "The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use the <code>SourceBuffer</code> <em>sequence</em> mode to ensure media segments are automatically relocated in the timeline to be adjacent, in the order they were appended."
 published_on: 2016-03-10
 updated_on: 2016-03-10
 authors:
@@ -14,6 +14,7 @@ tags:
   - recording
   - video
   - webrtc
+  - chrome50
 featured_image: /web/updates/images/2016/03/mse-sourcebuffer/featured.jpg
 ---
 
@@ -32,11 +33,15 @@ featured_image: /web/updates/images/2016/03/mse-sourcebuffer/featured.jpg
 <video src='foo.webm'></video>
 {% endhighlight %}
 
-That works well for simple use cases, but for techniques such as [adaptive streaming](https://www.youtube.com/watch?v=Fm3Bagcf9Oo), the Media Source Extensions API (MSE) provides more control. MSE enables streams to be built from segments of audio or video.
+That works well in simple use cases, but for techniques such as [adaptive streaming](https://www.youtube.com/watch?v=Fm3Bagcf9Oo), the Media Source Extensions API (MSE) provides more control. MSE enables streams to be built from segments of audio or video.
 
-You can try out MSE at [simpl.info/mse](https://simpl.info/mse). The code below is from that example.
+You can try out MSE at [simpl.info/mse](https://simpl.info/mse):
 
-A `MediaSource` represents a source of media for an audio or video element. Once a `MediaSource` object is instantiated and its `open` event has fired, `SourceBuffer`s for it can be added, which act as buffers for media segments:
+<a href="https://simpl.info/mse"><img class="screenshot" src="/web/updates/images/2016/03/mse-sourcebuffer/screenshot.jpg" alt="Screenshot of video played back using the MSE API"></a>
+
+The code below is from that example.
+
+A `MediaSource` represents a source of media for an audio or video element. Once a `MediaSource` object is instantiated and its `open` event has fired, `SourceBuffer`s  can be added to it. These act as buffers for media segments:
 
 {% highlight javascript %}
 var mediaSource = new MediaSource();
@@ -65,18 +70,16 @@ reader.onload = function (e) {
 };
 {% endhighlight %}
 
-<img class="screenshot" src="/web/updates/images/2016/03/mse-sourcebuffer/screenshot.jpg" alt="Screenshot of video played back using the MSE API">
-
 ## Setting Playback Order
 
-Chrome 50 adds support for the `SourceBuffer` `mode` attribute.
+Chrome 50 adds additional support to the `SourceBuffer` `mode` attribute, allowing you to specify that media segments are played back continuously, in the order that they were appended, no matter whether the media segments initially had discontinuous timestamps.
 
 The `mode` attribute can be used to specify playback order for media segments. It has one of two values:
 
-* _segments_: the timestamp of each segment (which may have been modified by [`timestampOffset`](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset)) determines playback order, no matter the order in which segments are appended.
-* _sequence_: playback order is determined by the order in which segments are appended to the `SourceBuffer`, and timestamps are added to segments automatically.
+* _segments_: The timestamp of each segment (which may have been modified by [`timestampOffset`](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset)) determines playback order, no matter the order in which segments are appended.
+* _sequence_: The order of segments buffered in the media timeline is determined by the order in which segments are appended to the `SourceBuffer`.
 
-If the media segments have timestamps parsed from byte stream data when they are appended to the `SourceBuffer`, the `SourceBuffer`'s `mode` property will be set to _segments_. Otherwise `mode` will be set to _sequence_.  Note that timestamps are not optional: they _must_ be there for most stream types, and _cannot_ be there for others.
+If the media segments have timestamps parsed from byte stream data when they are appended to the `SourceBuffer`, the `SourceBuffer`'s `mode` property will be set to _segments_. Otherwise `mode` will be set to _sequence_.  Note that timestamps are not optional: they _must_ be there for most stream types, and _cannot_ be there for others: inband timestamps are innate to stream types that contain them.
 
 Setting the `mode` attribute is optional. For streams that don't contain timestamps (audio/mpeg and audio/aac) `mode` can only be changed from _segments_ to _sequence_: an error will be thrown if you try to change `mode` from _sequence_ to _segments_. For streams that have timestamps, it is possible to switch between _segments_ and _sequence_, though in practice that would probably produce behaviour that was undesirable, hard to understand or difficult to predict.
 
@@ -86,22 +89,23 @@ For all stream types, you can change the value from _segments_ to _sequence_. Th
 sourceBuffer.mode = 'sequence';
 {% endhighlight %}
 
-Being able to set the `mode` value to _sequence_ is useful because it ensures continuous media playback, no matter if the media segment timestamps were discontinuous — for example, if there were problems with video [muxing](https://en.wikipedia.org/wiki/Multiplexing), or if (for whatever reason) discontinuous segments are appended.
+Being able to set the `mode` value to _sequence_ is useful because it ensures continuous media playback, no matter if the media segment timestamps were discontinuous — for example, if there were problems with video [muxing](https://en.wikipedia.org/wiki/Multiplexing), or if (for whatever reason) discontinuous segments are appended. It is possible for an app to polyfill with [`timestampOffset`](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset)) to ensure continuous playback, if correct stream metadata is available, but _sequence_ mode makes the process simpler and less error prone.
 
-## MSE _sequence_ `AppendMode` demo
+## MSE sequence AppendMode demo
 
 
-## MSE apps &amp; demos
-[Media Source API](https://simpl.info/mse)
-[Shaka Player](https://shaka-player-demo.appspot.com): video player demo that uses MSE to implement [DASH](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-MPEG-DASH-79041.aspx) with the [Shaka](https://g.co/shakainfo) JavaScript library
+## MSE apps & demos
+These show MSE in action, though without `SourceBuffer.mode` manipulation:
+* [Media Source API](https://simpl.info/mse)
+* [Shaka Player](https://shaka-player-demo.appspot.com): video player demo that uses MSE to implement [DASH](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-MPEG-DASH-79041.aspx) with the [Shaka](https://g.co/shakainfo) JavaScript library
 
 ## Browser Support
 * Chrome 50 and above by default
 * For Firefox, see [MDN](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer#Browser_compatibility) for details
 
 ## Specification
-[Media Source Extensions `appendMode()` method](https://www.w3.org/TR/media-source/#idl-def-AppendMode)
+* [Media Source Extensions `appendMode()` method](https://www.w3.org/TR/media-source/#idl-def-AppendMode)
 
 ## API Information
-[MDN: SourceBuffer.mode](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode)
+* [MDN: SourceBuffer.mode](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode)
 
