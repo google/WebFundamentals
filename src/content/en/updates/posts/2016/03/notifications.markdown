@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Web Notification Improvements in Chrome 50: Icons, Close Events, Renotify Preferences and Timestamps"
-description: "Check support for various features directly in code, coming in Chrome 50."
+description: "There are lots of great new features in Chrome 50 for Notifications, here is a rundown."
 published_on: 2016-03-14
 updated_on: 2016-03-14
 authors:
