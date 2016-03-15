@@ -3,7 +3,7 @@ layout: updates/post
 title: "Device Orientation Changes Are Coming to Chrome 50"
 description: "DeviceOrientationEvent uses relative degrees, and there's a new DeviceOrientationAbsoluteEvent."
 published_on: 2016-03-14
-updated_on: 2016-03-14
+updated_on: 2016-03-15
 authors:
   - jeffposnick
 tags:
@@ -35,7 +35,7 @@ tracking changes in orientation, this magnetic noise is bad news.
 ## What’s Changing?
 
 Starting with Chrome 50, the degrees included in the `DeviceOrientationEvent`
-are no longer absolute with respect to the Earth’s coordinate frame. This means
+are by default no longer absolute with respect to the Earth’s coordinate frame. This means
 that `DeviceOrientationEvent`s should only be triggered when there’s actual
 movement, as detected by some combination of a device’s accelerometer and
 gyroscope. The magnetometer, and false readings due to magnetic field
@@ -69,15 +69,15 @@ if (window.hasOwnProperty('ondeviceorientationabsolute')) {
 }
 {% endhighlight %}
 
-## Cross-Browser Compatability
+## Cross-Browser Compatibility
 
 The values reported in the `DeviceOrientationEvent` have never been consistent.
 
-Safari on iOS uses relative values for the degrees , which matches the
+Safari and Firefox on iOS uses relative values for the degrees, which matches the
 implementation change introduced in Chrome 50. The change should lead to more
-consistency with web applications that were written with iOS Safari in mind.
+consistency with web applications that were written with iOS in mind.
 
-Both Firefox and Edge, and Chrome versions prior to 50, use absolute degree
+Firefox (on platforms other than iOS), Edge, and Chrome versions prior to 50 use absolute degree
 values for the`DeviceOrientationEvent` when run on devices with the appropriate
 sensors.
 
@@ -93,3 +93,8 @@ how to implement a bespoke sensor fusion using
 [`DeviceMotionEvent`](https://developer.mozilla.org/en-US/docs/Web/API/DeviceMotionEvent)s.
 They provide low-level access to the accelerometer and gyroscope, and can lead
 to a more accurate virtual reality experience for your users.
+
+## Additional Resources
+
+* [The DeviceOrientation Event specification](http://w3c.github.io/deviceorientation/spec-source-orientation.html)
+* [A `deviceorientation` diagnostics page](https://timvolodine.github.io/deviceorientation-test/)
