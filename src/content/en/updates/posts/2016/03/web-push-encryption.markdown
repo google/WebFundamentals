@@ -347,17 +347,16 @@ Content-Encoding: aesgcm
 &lt;SALT> and &lt;PUBLICKEY> are the salt and server public key used in the
 encryption, encoded as URL-safe Base64.
 
-The body of the POST is then just the raw bytes of the encrypted message.
+When using the Web Push protocol, the body of the POST is then just the raw bytes of the encrypted message. However, until Chrome and Google Cloud Messaging support the protocol, you can easily include the data in your existing JSON payload as follows.
 
-Unfortunately, the Web Push protocol is not currently supported by Google Cloud
-Messaging (GCM) by default. However, at the moment you can rewrite any
-<code>https://android.googleapis.com/gcm/send</code> URL to be
-<code>https://jmt17.google.com/gcm/demo-webpush-00</code> instead. You will also need to add
-the Authentication header with your GCM auth token, as was already necessary in
-the [pre-Web Push case](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/?hl=en).
+{% highlight javascript %}
+{
+    “registration_ids”: [ … ],
+    “raw_data”: “BIXzEKOFquzVlr/1tS1bhmobZ…”
+}
+{% endhighlight %}
 
-The endpoints received from [PushManager.subscribe()](https://developer.mozilla.org/en-US/docs/Web/API/PushManager/subscribe) should point to fully working Web Push endpoints in future versions of Chrome,
-hopefully starting with Chrome 51.
+The value of the `rawData` property must be the base64 encoded representation of the encrypted message.
 
 # Debugging / Verifier
 
