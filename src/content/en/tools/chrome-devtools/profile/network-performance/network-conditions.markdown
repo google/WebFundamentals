@@ -37,6 +37,9 @@ Select a connection from the dropdown to apply network throttling and latency ma
 
 ![Select Network Throttle](imgs/throttle-selection.png)
 
+**Tip**: You can also set network throttles via the 
+[Network conditions](#network-conditions) drawer.
+
 When a Throttle is enabled the panel indicator will show a warning icon.
 This is to remind you that throttling is enabled when you are in other panels.
 
@@ -66,3 +69,15 @@ On hover the **Edit** and **Delete** icons are shown to the right of the entry.
 
 Now you may close the settings dialog.
 Your new custom profiles will be shown under the **custom** header to select a condition.
+
+## Open the network conditions drawer {#network-conditions}
+
+You can access network functions while other DevTools panels are open with
+the **Network conditions** drawer. 
+
+![the network conditions drawer](imgs/network-drawer.png)
+
+Access the drawer from the DevTools main menu (**Main Menu** > **More Tools** >
+**Network Conditions**).
+
+![opening the network conditions drawer](imgs/open-network-drawer.png)

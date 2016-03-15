@@ -11,6 +11,7 @@ authors:
 tags:
   - css
   - fonts
+  - chrome49
 featured_image: /web/updates/images/2016/02/font-display/font-display.png
 ---
 

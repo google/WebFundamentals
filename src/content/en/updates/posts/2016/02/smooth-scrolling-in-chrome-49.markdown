@@ -8,6 +8,7 @@ authors:
   - paullewis
 tags:
   - scroll
+  - chrome49
 featured_image: /web/updates/images/2016/02/smooth-scrolling-in-chrome-49/smooth-scroll.png
 ---
 

@@ -31,6 +31,7 @@ body[dir="rtl"] .wf-highlight-list {
 
 .wf-highlight-list__list li {
   @include typo-subhead();
+  letter-spacing: 0;
 
   margin-bottom: $base-line / 2;
 

@@ -9,6 +9,7 @@ authors:
 tags:
   - webaudio
   - media
+  - chrome49
 ---
 
 Chrome has been consistently and quietly improving its support for the [Web

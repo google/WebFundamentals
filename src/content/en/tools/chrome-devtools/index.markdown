@@ -80,9 +80,8 @@ translation_priority: 1
         <p>Use the Device Mode to build fully responsive, mobile-first web experiences.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/iterate/device-mode/">Device Mode</a></li>
-          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports">Emulate Mobile Viewports</a></li>
-          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors">Emulate Device Input and Sensors</a></li>
-          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/media-queries">Inspect CSS Media Queries</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports">Test Responsive and Device-specific Viewports</a></li>
+          <li><a href="/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors">Emulate Sensors: Geolocation &amp; Accelerometer</a></li>
         </ul>
       </div>
 
@@ -263,6 +262,7 @@ translation_priority: 1
             <li><a href="https://stackoverflow.com/questions/tagged/google-chrome-devtools">StackOverflow</a></li>
             <li><a href="https://plus.google.com/+GoogleChromeDevelopers">Google+</a></li>
             <li><a href="https://www.youtube.com/user/ChromeDevelopers">YouTube</a></li>
+            <li><a href="https://chromiumdev.slack.com/messages/devtools/">Slack</a></li>
           </ul>
         </div>
 

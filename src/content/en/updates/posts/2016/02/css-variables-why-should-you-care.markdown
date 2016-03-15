@@ -11,6 +11,7 @@ authors:
   - robdodson
 tags:
   - css
+  - chrome49
 featured_image: /web/updates/images/2016/02/css-variables-why-should-you-care/custom-prop.png
 ---
 

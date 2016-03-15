@@ -9,6 +9,7 @@ tags:
   - devtools
   - digest
   - update
+  - chrome49
 description: "Learn how DevTools makes you type less with smarter Console autocomplete, how to edit <code>@keyframe</code> rules directly in the Styles pane, how to have fun with CSS Custom Variables and how to join the dark side."
 featured_image: /web/updates/images/2016/02/devtools-digest/dark_theme.png
 ---

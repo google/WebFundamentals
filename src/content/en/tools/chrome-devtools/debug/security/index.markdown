@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Security"
+title: "Understand security issues"
 description: "Use the Security Panel to ensure that all resources on your 
 site are protected with HTTPS."
 published_on: 2015-12-22
-updated_on: 2015-12-22
+updated_on: 2016-03-10
 order: 2
 authors:
   - kaycebasques
@@ -37,12 +37,12 @@ The first thing you see is the Security Overview. At a glance, the
 Security Overview tells you whether the page is secure. A secure page is 
 indicated with the message `This page is secure (valid HTTPS).`
 
-![security overview, secure page](/web/tools/chrome-devtools/security/images/overview-secure.png)
+![security overview, secure page](/web/tools/chrome-devtools/debug/security/images/overview-secure.png)
 
 Click **View certificate** to view the server certificate for the 
 [main origin][same-origin-policy]. 
 
-![view certificate](/web/tools/chrome-devtools/security/images/view-certificate.png)
+![view certificate](/web/tools/chrome-devtools/debug/security/images/view-certificate.png)
 
 A non-secure page is indicated with the message `This page is not secure.`
 
@@ -50,7 +50,7 @@ The Security Panel distinguishes between two types of non-secure pages.
 If the requested page is served over HTTP, then the main origin is flagged as 
 not secure. 
 
-![security overview, non-secure main origin](/web/tools/chrome-devtools/security/images/overview-non-secure.png)
+![security overview, non-secure main origin](/web/tools/chrome-devtools/debug/security/images/overview-non-secure.png)
 
 If the requested page is retrieved over HTTPS, but the page then goes on 
 to retrieve content from other origins using HTTP, then the page is still 
@@ -58,13 +58,13 @@ flagged as not secure. This is known as a [mixed content][mixed-content]
 page. Mixed content pages are only partially protected because the HTTP 
 content is accessible to sniffers and vulnerable to man-in-the-middle attacks. 
 
-![security overview, mixed content](/web/tools/chrome-devtools/security/images/overview-mixed.png)
+![security overview, mixed content](/web/tools/chrome-devtools/debug/security/images/overview-mixed.png)
 
 Click **View request in Network Panel** to open up a filtered view of the 
 Network Panel and see exactly which requests were served over HTTP. This shows 
 all unprotected requests from all origins. 
 
-![network panel, non-secure resources, all origins](/web/tools/chrome-devtools/security/images/network-all.png)
+![network panel, non-secure resources, all origins](/web/tools/chrome-devtools/debug/security/images/network-all.png)
 
 ## Inspect origins
 
@@ -73,16 +73,16 @@ Use the left panel to inspect an individual secure or non-secure origin.
 Click on a secure origin to view the connection and certificate details for 
 that origin.
 
-![origin details, secure](/web/tools/chrome-devtools/security/images/origin-detail-secure.png)
+![origin details, secure](/web/tools/chrome-devtools/debug/security/images/origin-detail-secure.png)
 
 If you click on a non-secure origin, the Security Panel provides a link to a filtered view of the Network Panel. 
 
-![origin details, non-secure](/web/tools/chrome-devtools/security/images/origin-detail-non-secure.png)
+![origin details, non-secure](/web/tools/chrome-devtools/debug/security/images/origin-detail-non-secure.png)
 
 Click on the link to see exactly which requests from that origin were 
 served over HTTP. 
 
-![network panel, non-secure resources, one origin](/web/tools/chrome-devtools/security/images/network-one.png)
+![network panel, non-secure resources, one origin](/web/tools/chrome-devtools/debug/security/images/network-one.png)
 
 
 
