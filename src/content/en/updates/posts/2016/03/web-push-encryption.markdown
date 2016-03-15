@@ -11,7 +11,9 @@ tags:
   - encryption
   - chrome50
 ---
-Prior to Chrome 50, [push messages](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web) could not contain any payload data. When the ['push' event](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent) fired in your service worker, all you knew was the the server was trying to
+Prior to Chrome 50, [push messages](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web) 
+could not contain any payload data. When the ['push' event](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent) 
+fired in your service worker, all you knew was the the server was trying to
 tell you something, but not what it might be. You then had to make a follow up
 request to the server and obtain the details of the notification to show, which
 might fail in poor network conditions.
@@ -36,14 +38,16 @@ in transit.
 
 # Client-side changes
 
-If you have already [implemented push notifications without payloads](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/?hl=en) then there are only two small changes that you need to make on the
-client-side.
+If you have already
+[implemented push notifications without payloads](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
+then there are only two small changes that you need to make on the client-side.
 
 This first is that when you send the subscription information to your backend
 server you need to gather some extra information. If you already use
-JSON.stringify() on the [PushSubscription](https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription) object to serialize it for sending to your server then you don't need to
-change anything. The subscription will now have some extra data in the keys
-property.
+`JSON.stringify()` on the 
+[PushSubscription](https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription)
+object to serialize it for sending to your server then you don't need to
+change anything. The subscription will now have some extra data in the keys property.
 
 
 {% highlight javascript %}
@@ -51,10 +55,14 @@ property.
 {"endpoint":"https://android.googleapis.com/gcm/send/f1LsxkKphfQ:APA91bFUx7ja4BK4JVrNgVjpg1cs9lGSGI6IMNL4mQ3Xe6mDGxvt_C_gItKYJI9CAx5i_Ss6cmDxdWZoLyhS2RJhkcv7LeE6hkiOsK6oBzbyifvKCdUYU7ADIRBiYNxIVpLIYeZ8kq_A","keys":{"p256dh":"BLc4xRzKlKORKWlbdgFaBrrPK3ydWAHo4M0gs0i1oEKgPpWC5cW8OCzVrOQRv-1npXRWk8udnW3oYhIO4475rds=","auth":"5I2Bu2oKdyy9CwL8QVF0NQ=="}}
 {% endhighlight %}
 
-The two values 'p256dh' and 'auth' are encoded in a variant of Base64 that I'll
+The two values `p256dh` and `auth` are encoded in a variant of Base64 that I'll
 call [URL-Safe Base64](https://en.wikipedia.org/wiki/Base64#URL_applications).
 
-If you want to get right at the bytes instead, you can use the new [getKey()](https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/getKey) method on the subscription that returns a parameter as an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). The two parameters that you need are 'auth' and 'p256dh'.
+If you want to get right at the bytes instead, you can use the new
+[`getKey()`](https://developer.mozilla.org/en-US/docs/Web/API/PushSubscription/getKey)
+method on the subscription that returns a parameter as an
+[`ArrayBuffer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). 
+The two parameters that you need are `auth` and `p256dh`.
 
 
 {% highlight javascript %}
@@ -65,9 +73,10 @@ If you want to get right at the bytes instead, you can use the new [getKey()](ht
 [4, 183, 56, ...] (65 bytes)
 {% endhighlight %}
 
-The second change is a new [data](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent/data) property when the push event fires. It has various synchronous methods for
-parsing the received data, such as .text(), .json(), .arrayBuffer() and
-.blob().
+The second change is a new [data](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent/data)
+property when the `push` event fires. It has various synchronous methods for
+parsing the received data, such as `.text()`, `.json()`, `.arrayBuffer()` and
+`.blob()`.
 
 
 {% highlight javascript %}
@@ -87,9 +96,10 @@ subscription, adding some extra HTTP headers.
 
 The details are relatively complex, and as with anything related to encryption
 it's better to use an actively developed library than to roll your own. The
-Chrome team has published [a library](https://github.com/GoogleChrome/push-encryption-node) for Node.js, with more languages and platforms coming soon. This handles both
+Chrome team has published [a library](https://github.com/GoogleChrome/push-encryption-node) 
+for Node.js, with more languages and platforms coming soon. This handles both
 encryption and the web push protocol, so that sending a push message from a
-Node.js server is as easy as <code>webpush.sendWebPush(message, subscription)</code>.
+Node.js server is as easy as `webpush.sendWebPush(message, subscription)`.
 
 While we definitely recommend using a library, this is a new feature and there
 are many popular languages that don't yet have any libraries. If you do need to
@@ -102,9 +112,9 @@ basic principles should be the same in any language.
 
 In order to encrypt a message, we first need to get two things from the
 subscription object that we received from the client. If you used
-JSON.stringify() on the client and transmitted that to your server then the
-client's public key is stored in the keys.p256dh field, while the shared
-authentication secret is in the keys.auth field. Both of these will be URL-safe
+`JSON.stringify()` on the client and transmitted that to your server then the
+client's public key is stored in the `keys.p256dh` field, while the shared
+authentication secret is in the `keys.auth` field. Both of these will be URL-safe
 Base64 encoded, as mentioned above. The binary format of the client public key
 is an uncompressed P-256 elliptic curve point.
 
@@ -124,18 +134,24 @@ with the application server that you want to send you messages, and treated
 like a password.
 
 We also need to generate some new data. We need a 16-byte cryptographically
-secure random [salt](https://en.wikipedia.org/wiki/Salt_(cryptography)) and a public/private pair of [elliptic curve](https://en.wikipedia.org/wiki/Elliptic_curve_cryptography) keys. The particular curve used by the push encryption spec is called P-256,
-or 'prime256v1'. For the best security the key pair should be generated from
+secure random [salt](https://en.wikipedia.org/wiki/Salt_(cryptography))
+and a public/private pair of [elliptic curve](https://en.wikipedia.org/wiki/Elliptic_curve_cryptography)
+keys. The particular curve used by the push encryption spec is called P-256,
+or `prime256v1`. For the best security the key pair should be generated from
 scratch every time you encrypt a message, and you should never reuse a salt.
 
 ## ECDH
 
 Let's take a little aside to talk about a neat property of elliptic curve
-cryptography. There is relatively simple process which combines <em>your</em> private key with <em>someone else's</em> public key to derive a value. So what? Well, if the other party takes <em>their</em> private key and <em>your</em> public key it will derive the exact same value!
+cryptography. There is relatively simple process which combines 
+<em>your</em> private key with <em>someone else's</em> public key to derive 
+a value. So what? Well, if the other party takes <em>their</em> private
+key and <em>your</em> public key it will derive the exact same value!
 
 This is the basis of the elliptic curve Diffie-Hellman (ECDH) key agreement
-protocol, which allows both parties to have the same <em>shared secret</em> even though they only exchanged public keys. We'll use this shared secret as
-the basis for our actual encryption key.
+protocol, which allows both parties to have the same <em>shared 
+secret</em> even though they only exchanged public keys. We'll use 
+this shared secret as the basis for our actual encryption key.
 
 
 {% highlight javascript %}
@@ -154,7 +170,8 @@ const sharedSecret = serverECDH.computeSecret(clientPublicKey);
 
 Already time for another aside. Let's say that you have some secret data that
 you want to use as an encryption key, but it isn't cryptographically secure
-enough. You can use the HMAC-based [Key Derivation Function](https://en.wikipedia.org/wiki/Key_derivation_function) (HKDF) to turn a secret with low security into one with high security.
+enough. You can use the HMAC-based [Key Derivation Function](https://en.wikipedia.org/wiki/Key_derivation_function)
+(HKDF) to turn a secret with low security into one with high security.
 
 One consequence of the way that it works is that it allows you to take a secret
 of any number of bits and produce another secret of any size up to 255 times as
@@ -206,8 +223,11 @@ secret into a longer, more cryptographically secure secret. In the spec this is
 referred to as a Pseudo-Random Key (PRK) so that's what I'll call it here,
 though cryptography purists may note that this isn't strictly a PRK.
 
-Now we create the final content encryption key and a [nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) that will be passed to the cipher. These are created by making a simple data
-structure for each, [referred to in the spec](http://httpwg.org/http-extensions/draft-ietf-httpbis-encryption-encoding.html#derivation) as an info, that contains information specific to the elliptic curve, sender
+Now we create the final content encryption key and a 
+[nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) that will be passed 
+to the cipher. These are created by making a simple data structure for each, 
+[referred to in the spec](http://httpwg.org/http-extensions/draft-ietf-httpbis-encryption-encoding.html#derivation) 
+as an info, that contains information specific to the elliptic curve, sender
 and receiver of the information in order to further verify the message's
 source. Then we use HKDF with the PRK, our salt and the info to derive the key
 and nonce of the correct size.
@@ -291,7 +311,7 @@ above example you could pad all messages to be exactly 32 bytes, making it
 impossible to distinguish the messages based only on length.
 
 The padding value is a 16-bit big-endian integer specifying the padding length
-followed by that number of NUL bytes of padding. So the minimum padding is two
+followed by that number of `NUL` bytes of padding. So the minimum padding is two
 bytes - the number zero encoded into 16 bits.
 
 
@@ -309,8 +329,9 @@ unpadded message.
 ## Encryption
 
 Now we finally have all of the things to do the encryption. The cipher required
-for Web Push is [AES128](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) using [GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode). We use our content encryption key as the key and the nonce as the
-initialization vector (IV).
+for Web Push is [AES128](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) 
+using [GCM](https://en.wikipedia.org/wiki/Galois/Counter_Mode). We use our content 
+encryption key as the key and the nonce as the initialization vector (IV).
 
 In this example our data is a string, but it could be any binary data. You can
 send payloads up to a size of 4078 bytes - 4096 bytes maximum per post, with
@@ -344,10 +365,13 @@ Crypto-Key: dh=<PUBLICKEY>
 Content-Encoding: aesgcm
 {% endhighlight %}
 
-&lt;SALT> and &lt;PUBLICKEY> are the salt and server public key used in the
+&lt;SALT&gt; and &lt;PUBLICKEY&gt; are the salt and server public key used in the
 encryption, encoded as URL-safe Base64.
 
-When using the Web Push protocol, the body of the POST is then just the raw bytes of the encrypted message. However, until Chrome and Google Cloud Messaging support the protocol, you can easily include the data in your existing JSON payload as follows.
+When using the Web Push protocol, the body of the POST is then just the raw 
+bytes of the encrypted message. However, until Chrome and Google Cloud 
+Messaging support the protocol, you can easily include the data in your 
+existing JSON payload as follows.
 
 {% highlight javascript %}
 {
@@ -356,12 +380,14 @@ When using the Web Push protocol, the body of the POST is then just the raw byte
 }
 {% endhighlight %}
 
-The value of the `rawData` property must be the base64 encoded representation of the encrypted message.
+The value of the `rawData` property must be the base64 encoded 
+representation of the encrypted message.
 
 # Debugging / Verifier
 
 Peter Beverloo, one of the Chrome engineers that implemented the feature (as
-well as being one of the people who worked on the spec), has [created a verifier](https://tests.peter.sh/push-encryption-verifier/).
+well as being one of the people who worked on the spec), has 
+[created a verifier](https://tests.peter.sh/push-encryption-verifier/).
 
 By getting your code to output each of the intermediate values of the
 encryption you can paste them into the verifier and check that you are on the
