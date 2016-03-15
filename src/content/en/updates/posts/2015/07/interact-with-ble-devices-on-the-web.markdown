@@ -276,4 +276,4 @@ as much as feasible by the platforms.
 - BLE Peripheral Simulator App: [https://github.com/WebBluetoothCG/ble-test-peripheral-android](https://github.com/WebBluetoothCG/ble-test-peripheral-android)
 - Google+ Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 
-{% ytvideo I3obFcCw8mk %}
+{% ytvideo _BUwOBdLjzQ %}
