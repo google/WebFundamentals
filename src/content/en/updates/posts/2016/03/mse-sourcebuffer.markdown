@@ -2,8 +2,8 @@
 layout: updates/post
 title: "Media Source API: Automatically Ensure Seamless Playback of Media Segments in Append Order"
 description: "The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use <code>SourceBuffer</code> <em>sequence</em> mode to ensure media segments are automatically relocated in the timeline in the order they were appended, without gaps between them."
-published_on: 2016-03-10
-updated_on: 2016-03-10
+published_on: 2016-03-15
+updated_on: 2016-03-15
 authors:
   - samdutton
 tags:
@@ -11,7 +11,6 @@ tags:
   - chrome50
   - media
   - mse
-  - news
   - recording
   - video
   - webrtc
@@ -38,7 +37,7 @@ That works well in simple use cases, but for techniques such as [adaptive stream
 
 You can try out MSE at [simpl.info/mse](https://simpl.info/mse):
 
-<a href="https://simpl.info/mse"><img class="screenshot" src="/web/updates/images/2016/03/mse-sourcebuffer/screenshot.jpg" alt="Screenshot of video played back using the MSE API"></a>
+<a href="https://simpl.info/mse"><img style="max-width: 50%" class="screenshot" src="/web/updates/images/2016/03/mse-sourcebuffer/screenshot.jpg" alt="Screenshot of video played back using the MSE API"></a>
 
 The code below is from that example.
 
@@ -90,7 +89,7 @@ For all stream types, you can change the value from _segments_ to _sequence_. Th
 sourceBuffer.mode = 'sequence';
 {% endhighlight %}
 
-Being able to set the `mode` value to _sequence_ ensures continuous media playback, no matter if the media segment timestamps were discontinuous — for example, if there were problems with video [muxing](https://en.wikipedia.org/wiki/Multiplexing), or if (for whatever reason) discontinuous segments are appended. It is possible for an app to polyfill with [`timestampOffset`](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset)) to ensure continuous playback, if correct stream metadata is available, but _sequence_ mode makes the process simpler and less error prone.
+Being able to set the `mode` value to _sequence_ ensures continuous media playback, no matter if the media segment timestamps were discontinuous — for example, if there were problems with video [muxing](https://en.wikipedia.org/wiki/Multiplexing), or if (for whatever reason) discontinuous segments are appended. It is possible for an app to polyfill with [`timestampOffset`](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset) to ensure continuous playback, if correct stream metadata is available, but _sequence_ mode makes the process simpler and less error prone.
 
 ## MSE Apps and Demos
 These show MSE in action, though without `SourceBuffer.mode` manipulation:
