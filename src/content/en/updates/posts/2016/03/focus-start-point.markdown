@@ -29,15 +29,15 @@ Text heavy sites often interlink within the same page to help users quickly jump
 
 {% highlight html %}
 <!-- Table of Contents -->
-<a href=”#recipes”>Recipes</a>
-<a href=”#ingredients”>Ingredients</a>
+<a href="#recipes">Recipes</a>
+<a href="#ingredients">Ingredients</a>
 
 <!-- Recipes Section -->
-<h2 id=”recipes”>Recipes</h1>
+<h2 id="recipes">Recipes</h1>
 <h3>Vegemite Cheesecake</h3>
 <p>
   Vegemite cheesecake is delicious. We promise.
-  <a href=”cheesecake.html”>Read More</a>
+  <a href="cheesecake.html">Read More</a>
 </p>
 {% endhighlight %}
 
@@ -53,7 +53,7 @@ Let’s see that in action using Chrome 49.
 
 Oh. Well that didn’t go quite according to plan did it?
 
-Instead of focusing the Read More link, pressing \[Tab\] for the final time moved focus to the next item in the table of contents. This is because the developer did not set `tabindex=”-1”` on the header to make it focusable. So clicking on the `#recipes` named anchor did not move focus. It’s a subtle mistake, and not a big deal if you’re a mouse user. But it's potentially a very big deal if you’re a keyboard or switch device user. Consider the amount of interlinking on a typical Wikipedia page? It would be frustrating to have to constantly tab back and forth through all of those anchors!
+Instead of focusing the Read More link, pressing \[Tab\] for the final time moved focus to the next item in the table of contents. This is because the developer did not set `tabindex="-1"` on the header to make it focusable. So clicking on the `#recipes` named anchor did not move focus. It’s a subtle mistake, and not a big deal if you’re a mouse user. But it's potentially a very big deal if you’re a keyboard or switch device user. Consider the amount of interlinking on a typical Wikipedia page? It would be frustrating to have to constantly tab back and forth through all of those anchors!
 
 Let’s look at the same experience now using Chrome 50.
 
@@ -81,7 +81,7 @@ Aside from the above example, there are many other scenarios where this feature 
 There may be times when a user will be focused on an item that needs to be set to `visibility: hidden` or `display: none`. An example of this would be clickable items within a carousel. In prior versions of Chrome, hiding the currently focused item in this manner would reset focus back to the default starting point, turning the aforementioned carousel into a nasty trap for motor impaired users. With sequential focus starting point, this is no longer the case. If an element is hidden through either of the above methods, pressing the \[Tab\] key will simply move to the next focusable item.
 
 ### Skip Links
-Skip links are invisible anchors which can only be reached via the keyboard. They allow users to “skip” navigation elements in order to jump straight into the content of a page and they can be extremely beneficial for keyboard and switch device users. As explained [on the WebAIM site](http://webaim.org/techniques/skipnav/):
+Skip links are invisible anchors which can only be reached via the keyboard. They allow users to “skip" navigation elements in order to jump straight into the content of a page and they can be extremely beneficial for keyboard and switch device users. As explained [on the WebAIM site](http://webaim.org/techniques/skipnav/):
 
 > Without some sort of system for bypassing the long list of links, some users are at a huge disadvantage. Consider users with no arm movement, who use computers by tapping their heads on a switch or that use a stick in their mouth to press keyboard keys. Requiring users to perform any action perhaps 100s of times before reaching the main content is simply unacceptable.
 
@@ -93,7 +93,7 @@ Many popular websites implement skip links, though you may have never noticed th
 Because skip links are named anchors, they work in the same fashion as our original table of contents example.
 
 ## Caveats and Support
-Sequential focus navigation starting point is currently only supported in Chrome 50, Firefox, and Opera. Until it is supported in all browsers you’ll still need to add `tabindex=”-1”` (and remove the focus outline) to your named anchor targets.
+Sequential focus navigation starting point is currently only supported in Chrome 50, Firefox, and Opera. Until it is supported in all browsers you’ll still need to add `tabindex="-1"` (and remove the focus outline) to your named anchor targets.
 
 ## Demo
 Sequential focus navigation starting point is a great addition to the browser’s set of accessibility primitives. It’s easy to grok and actually lets us remove code from our application while improving the experience for our users. Double win! Take a look at [the demo](https://googlechrome.github.io/samples/focus-navigation-start-point/index.html) to explore this feature in more depth.
