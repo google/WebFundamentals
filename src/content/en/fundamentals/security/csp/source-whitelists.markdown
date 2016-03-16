@@ -70,7 +70,7 @@ Fonts    could be enabled via `font-src https://themes.googleusercontent.com`.
 * **`form-action`** lists valid endpoints for submission from `<form>` tags.
 * **`frame-ancestors`**  specifies the sources that can embed the current page.
 This directive applies to `<frame>`, `<iframe>`, `<embed>`, and `<applet>` tags.
-This directive cant be used in `<meta>` tags and applies only to non-HTML
+This directive can't be used in `<meta>` tags and applies only to non-HTML
 resources.
 * **`frame-src`** deprecated. Use **`child-src`** instead.
 * **`img-src`** defines the origins from which images can be loaded.
@@ -78,7 +78,7 @@ resources.
 * **`object-src`** allows control over Flash and other plugins.
 * **`plugin-types`** limits the kinds of plugins a page may invoke.
 * **`report-uri`** specifies a URL where a browser will send reports when a
-content security policy is violated. This directive cant be used in `<meta>`
+content security policy is violated. This directive can't be used in `<meta>`
 tags.
 * **`style-src`** is `script-src`'s counterpart for stylesheets.
 * **`upgrade-insecure-requests`** Instructs user agents to rewrite URL schemes,
