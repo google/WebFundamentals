@@ -203,8 +203,8 @@ Sometimes conditional breakpoints will cause DevTools to break repeatedly on
 a line that isn't relevant to the issue you're debugging. You can tell
 the debugger to never pause on a specific line.
 
-1. Right-click on the number of the line
-2. Select "Never pause here" from the context menu
+1. Right-click on the line number.
+2. Select "Never pause here" from the context menu.
 
 ![Never Pause Here](imgs/never-pause-here.png)
 
