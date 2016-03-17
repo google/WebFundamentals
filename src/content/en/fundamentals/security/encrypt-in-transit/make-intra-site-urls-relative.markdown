@@ -11,6 +11,8 @@ order: 4
 translation_priority: 0
 key-takeaways:
   - "Make sure intra-site URLs and external URLs are agnostic to protocol, i.e. make sure you use relative paths or leave out the protocol like //example.com/something.js"
+notes:
+  ok: "It is perfectly OK to include HTTPS resources in an HTTP page."
 ---
 
 <p class="intro">
@@ -28,7 +30,7 @@ In fact, in the case of active mixed content (script, plug-ins, CSS, iframes),
 browsers often simply won't load or execute the content at all — resulting in a
 broken page.
 
-**NOTE:** It is perfectly OK to include HTTPS resources in an HTTP page.
+{% include shared/note.liquid list=page.notes.ok %}
 
 Additionally, when you link to other pages in your site, users could get
 downgraded from HTTPS to HTTP.
