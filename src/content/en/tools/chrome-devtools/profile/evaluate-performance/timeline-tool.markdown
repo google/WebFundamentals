@@ -127,6 +127,32 @@ reference][event reference] for details on each record type.
 
 [event reference]: /web/tools/chrome-devtools/profile/evaluate-performance/performance-reference
 
+## Profile JavaScript {#profile-js}
+
+Enable the **JS Profile** checkbox before you take a recording to capture 
+JavaScript stacks in your timeline recording. When the JS profiler is 
+enabled, your flame chart shows every JavaScript function that was called. 
+
+![flame chart with JS profile enabled](imgs/js-profile.png)
+
+## Profile painting {#profile-painting}
+
+Enable the **Paint** checkbox before you take a recording to gain more insight
+into **Paint** events. When paint profiling is enabled and you click
+on a **Paint** event, a new **Paint Profiler** tab is displayed in the 
+**Details** pane that shows much more granular information about the event.
+
+![paint profiler](imgs/paint-profiler.png)
+
+### Rendering settings {#rendering-settings}
+
+Open the main DevTools menu and select **More tools** > **Rendering settings**
+to access rendering settings that may be helpful when debugging paint issues.
+The rendering settings opens up as a tab next to the **Console** drawer (press
+<kbd>esc</kbd> to show the drawer, if it's hiding).
+
+![rendering settings](imgs/rendering-settings.png)
+
 ## Search records
 
 While looking at events you may want to focus on one type of events. For
