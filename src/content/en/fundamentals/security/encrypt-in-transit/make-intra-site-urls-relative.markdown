@@ -13,6 +13,9 @@ key-takeaways:
   - "Make sure intra-site URLs and external URLs are agnostic to protocol, i.e. make sure you use relative paths or leave out the protocol like //example.com/something.js"
 notes:
   ok: "It is perfectly OK to include HTTPS resources in an HTTP page."
+  script: "Do this with a script, not by hand. If your site’s content is in a database, you’ll want to test your script on a development copy of your database. If your site’s content is simple files, test your script on a development copy of the files. Only push the changes to production after the changes pass QA, as normal. You can use <a href="https://github.com/bramus/mixed-content-scan">Bram van Damme’s script</a> or something like it to detect mixed content in your site."
+  linking: "When linking to other sites (as opposed to including resources from them), don’t change the protocol since you don’t have control over how those sites operate."
+  recommend: "I recommend protocol-relative URLs to make migration smoother for large sites. If you are not sure you can fully deploy HTTPS yet, forcing your site to use HTTPS for all sub-resources may backfire. There is likely to be a period of time in which HTTPS is new and weird for you, and the HTTP site must still work as well as ever. Over time, you’ll complete the migration and can lock in HTTPS (see the next two sections)."
 ---
 
 <p class="intro">
@@ -73,24 +76,11 @@ That is, make intra-site URLs as relative as possible: either protocol-relative
 (lacking a protocol, starting with //example.com) or host-relative (starting
 with just the path, like /jquery.js).
 
-**NOTE:** Do this with a script, not by hand. If your site's content is in a
-database, you'll want to test your script on a development copy of your
-database. If your site's content is simple files, test your script on a
-development copy of the files. Only push the changes to production after the
-changes pass QA, as normal. You can use [Bram van Damme's
-script](https://github.com/bramus/mixed-content-scan) or something like it to
-detect mixed content in your site.
+{% include shared/note.liquid list=page.notes.script %}
 
-**NOTE:** When linking to other sites (as opposed to including resources from
-them), don't change the protocol since you don't have control over how those
-sites operate.
+{% include shared/note.liquid list=page.notes.linking %}
 
-**NOTE:** I recommend protocol-relative URLs to make migration smoother for
-large sites. If you are not sure you can fully deploy HTTPS yet, forcing your
-site to use HTTPS for all sub-resources may backfire. There is likely to be a
-period of time in which HTTPS is new and weird for you, and the HTTP site must
-still work as well as ever. Over time, you'll complete the migration and can
-lock in HTTPS (see the next two sections).
+{% include shared/note.liquid list=page.notes.recommend %}
 
 If your site depends on script, image, or other resources served from a third
 party, such as a CDN, jquery.com, or the like, you have 2 options:
