@@ -216,6 +216,35 @@ all of the colors to the right of the currently selected color. Right-click
 anywhere within the color palette region and select **Clear template** to 
 delete all of the template's colors.
 
+## View and edit CSS custom properties (CSS variables) {#custom-properties}
+
+You can view and edit declarations that define or use [CSS custom 
+properties][intro] (informally known as CSS variables) just like any other 
+declaration. 
+
+Custom properties are usually [defined][def] in the `:root` 
+selector. To view a custom property defined in `:root`, inspect the `html` 
+element.
+
+![custom property defined on :root](imgs/css-var-defined-on-root.png)
+
+Custom properties do not have to be defined on the `:root` selector, however.
+If you defined it elsewhere, inspect the element on which it was defined to
+view the definition.
+
+You can view and edit declaration values that use custom properties just
+like any other declaration value. 
+
+If you see a declaration value like `var(--main-color)` as in the screenshot
+below, it means that the declaration is using custom properties. These
+values can be edited like any other declaration value. Currently there is no
+way to jump to the custom property definition.
+
+![using a custom property](imgs/css-var-in-use.png)
+
+[intro]: /web/updates/2016/02/css-variables-why-should-you-care
+[def]: https://drafts.csswg.org/css-variables/#defining-variables
+
 ## Edit Sass, Less or Stylus
 
 If you are using Sass, Less, Stylus or any other CSS preprocessor, editing the generated CSS output files in the Styles editor won't help as they don't map to your original source.
