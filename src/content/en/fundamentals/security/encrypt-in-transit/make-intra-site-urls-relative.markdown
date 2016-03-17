@@ -89,10 +89,10 @@ party, such as a CDN, jquery.com, or the like, you have 2 options:
   not serve HTTPS, ask them to. Most already do, including jquery.com.
 * Serve the resources from a server you control, and which offers both HTTP and
   HTTPS. This is often a good idea anyway, because then you have better control
-  over your site's appearance, performance, and security — you don't have to
+  over your site's appearance, performance, and security. You don't have to
   trust a third party, which is always nice.
 
 Keep in mind also that you will need to change intra-site URLs in your
-stylesheets, JavaScript, redirect rules, `<link …` tags, and CSP
+stylesheets, JavaScript, redirect rules, `<link>` tags, and CSP
 declarations as well — not just the HTML pages!
 
