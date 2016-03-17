@@ -142,6 +142,22 @@ There are two ways to set these dynamic states on an element:
 
   ![:hov pane](imgs/hov.png)
 
+## Add background-color or color to a style rule
+
+The **Styles** pane provides a shortcut for adding `color` and
+`background-color` declarations to a style rule.
+
+In the bottom-right of the style rule, there is a three-dot icon. You need 
+to hover over the style rule in order to see it.
+
+![three-dots icon in rule set](imgs/rule-set-three-dots-icon.png)
+
+Hover over this icon to reveal buttons for adding a `color` declaration 
+(![add color declaration](imgs/add-color.png){:.inline})
+or a `background-color` declaration (![add background-color 
+declaration](imgs/add-background-color.png){:.inline}). Click on one of these
+buttons to add the declaration to the style rule. 
+
 ## Modify colors with the Color Picker {#color-picker}
 
 To open the **Color Picker**, find a CSS declaration in the **Styles** pane 
