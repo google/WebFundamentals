@@ -2,8 +2,8 @@
 layout: updates/post
 title: "A new Device Mode for a mobile-first generation"
 description: "Learn all about Chrome DevTools' new, refreshed Device Mode introduced in Chrome 49."
-published_on: 2016-03-16
-updated_on: 2016-03-16
+published_on: 2016-03-21
+updated_on: 2016-03-21
 authors:
   - pbakaus
 tags:
@@ -15,15 +15,14 @@ featured_image: /web/updates/images/2016/03/device-mode-v2/device-mode-initial-v
 
 # A new Device Mode for a mobile-first generation
 
-We've introduced the Device Mode, a way to emulate devices and work with your 
-responsive design, a bit more than a year ago, and it's now time for its first 
-major upgrade, starting in Chrome 49. So what's new?
+We introduced Device Mode, a way to emulate devices and work with responsive designs,
+a bit more than a year ago. Now it's time for its first major upgrade, starting
+in Chrome 49. So, what's new?
 
-While we offered ways to emulate mobile in the past, the development default has 
-been Desktop: Emulation always had to be switched on. Now that consumption of 
-mobile sites has overtaken Desktop in many places, we're switching our position 
-in DevTools as well. **Mobile is becoming the starting point in Chrome 
-DevTools**.
+**Mobile is becoming the starting point in Chrome DevTools.** While we offered
+ways to emulate mobile in the past, the development default was desktop. Mobile
+emulation always had to be turned on. Now that consumption of mobile sites has
+overtaken desktop in many places, we're switching our position in DevTools as well.
 
 ## What's new?
 
@@ -50,13 +49,13 @@ toolbar, hit up the little three dot menu icon.
 <img src="/web/updates/images/2016/03/device-mode-v2/select-device.png" alt="Device Mode dropdown" style="float: right;max-width: 33%;margin: 0 0 10px 10px;">
 
 The main DevTools toolbar now expands to the left side of the browser window and 
-includes the most important tools to emulate a variety of mobile and Desktop 
+includes the most important tools to emulate a variety of mobile and desktop 
 devices. You can choose between two development modes:
 
 * **Responsive**
 * **Specific Device**
 
-In both modes, the viewport sits in its own resizable window within Chrome.This 
+In both modes, the viewport sits in its own resizable window within Chrome. This 
 has the significant advantage that you can maximize your browser window and the 
 DevTools the way you like them and not have them jump around when you test 
 multiple sizes of your page and go back and forth.
@@ -75,23 +74,23 @@ chrome and UI (if available) are all emulated.
 
 ## Integrated Remote Debugging
 
-Emulation, even the best one available, can only get you so far. There are 
-simply things that emulation can't do today, like:
+Emulations, even the best ones available, can only get you so far. There are 
+simply things that emulations can't do today, like:
 
-* Check if a button is large enough for your thumb
-* Test the performance of your site on a slower phone
-* Debug random quirks and limitations of certain devices
+* Check if a button is large enough for your thumb.
+* Test the performance of your site on a slower phone.
+* Debug random quirks and limitations of certain devices.
 
 To sufficiently test all of these scenarios, you need to test, work and debug 
 using actual physical devices.
 
 <img src="/web/updates/images/2016/03/device-mode-v2/inspect-devices.png" alt="Inspect Devices dialog">
 
-For a while now, you could browse to chrome://inspect, connect your device over 
+For a while now, you could browse to `chrome://inspect`, connect your device over 
 USB and open a remote debugging session via DevTools. But we've now gone one 
 step further and refactored how remote debugging looks and behaves, embedding it 
 into the core of DevTools. Instead of browsing to another page, you can now 
-access "**Inspect Devices**" as a dialog directly within the new main menu. This 
+access **Inspect Devices** as a dialog directly within the new main menu. This 
 makes it much easier to include physical debugging into your workflow – just 
 plug in your phone, no need to exit your DevTools!
 
