@@ -56,20 +56,14 @@ Here’s a basic example of using <code>sw-precache</code> as part of a <code>gu
 
 {% highlight javascript %}
 gulp.task('generate-service-worker', function(callback) {
-  var fs = require('fs');
   var path = require('path');
   var swPrecache = require('sw-precache');
   var rootDir = 'app';
 
-  swPrecache({
+  swPrecache.write(path.join(rootDir, 'service-worker.js'), {
     staticFileGlobs: [rootDir + '/**/*.{js,html,css,png,jpg,gif}'],
     stripPrefix: rootDir
-  }, function(error, swFileContents) {
-    if (error) {
-      return callback(error);
-    }
-    fs.writeFile(path.join(rootDir, 'service-worker.js'), swFileContents, callback);
-  });
+  }, callback);
 });
 {% endhighlight %}
 
