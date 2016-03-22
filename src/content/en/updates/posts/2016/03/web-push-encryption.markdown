@@ -195,7 +195,7 @@ in bytes of the desired output key.
 // Simplified HKDF, returning keys up to 32 bytes long
 function hkdf(salt, ikm, info, length) {
   if (length > 32) {
-    throw new Error(`Cannot return keys of more than 32 bytes, ${length} requested`);
+    throw new Error('Cannot return keys of more than 32 bytes, ${length} requested');
   }
 
   // Extract
@@ -365,7 +365,7 @@ Crypto-Key: dh=<PUBLICKEY>
 Content-Encoding: aesgcm
 {% endhighlight %}
 
-&lt;SALT&gt; and &lt;PUBLICKEY&gt; are the salt and server public key used in the
+`<SALT>` and `<PUBLICKEY>` are the salt and server public key used in the
 encryption, encoded as URL-safe Base64.
 
 When using the Web Push protocol, the body of the POST is then just the raw 
@@ -375,8 +375,8 @@ existing JSON payload as follows.
 
 {% highlight javascript %}
 {
-    “registration_ids”: [ … ],
-    “raw_data”: “BIXzEKOFquzVlr/1tS1bhmobZ…”
+    "registration_ids": [ "…" ],
+    "raw_data": "BIXzEKOFquzVlr/1tS1bhmobZ…"
 }
 {% endhighlight %}
 
@@ -392,4 +392,3 @@ well as being one of the people who worked on the spec), has
 By getting your code to output each of the intermediate values of the
 encryption you can paste them into the verifier and check that you are on the
 right track.
-
