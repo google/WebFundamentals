@@ -277,11 +277,11 @@ widely-supported properties on `HTMLElement`.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=463116)
 
 Offset properties have long been supported by both `HTMLElement` and
-`SVGElement`; however, Geck and Edge only support them on `HTMLElement`. To
+`SVGElement`; however, Gecko and Edge only support them on `HTMLElement`. To
 improve consistency between browsers these properties were deprecated in Chrome
 48 and are now being removed.
 
 Though equivalent properties are part of `HTMLElement`, developers looking for
 an alternative can also use
-`[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)`
+[`getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 
