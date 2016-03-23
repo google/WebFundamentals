@@ -38,7 +38,7 @@ console.log("Node count:", a.childNodes.length, "and the current time is:", Date
 Will output this in the Console:
 ![Log Multiple](images/console-write-log-multiple.png)
 
-## Organizing Console output
+## Organizing Console output {#organizing}
 
 ### Group messages together
 

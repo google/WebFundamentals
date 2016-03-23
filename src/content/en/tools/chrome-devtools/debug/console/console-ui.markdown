@@ -79,7 +79,7 @@ on its own line.
 
 ## Working with the Console history
 
-### Clearing the history
+### Clearing the history {#clearing}
 
 You can clear the console history by doing any of the following:
 
@@ -89,7 +89,7 @@ You can clear the console history by doing any of the following:
 * Type <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">L</kbd> 
   (Mac, Windows, Linux).
 
-### Persisting the history
+### Persisting the history {#preserve-log}
 
 Enable the **Preserve log** checkbox at the top of the console to persist
 the console history between page refreshes or changes. Messages will be stored
