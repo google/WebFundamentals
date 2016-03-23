@@ -130,6 +130,23 @@ reference][event reference] for details on each record type.
 
 [event reference]: /web/tools/chrome-devtools/profile/evaluate-performance/performance-reference
 
+## Capture screenshots during recording {#filmstrip}
+
+The **Timeline** panel can capture screenshots during a page load. This feature
+is known as the **Filmstrip**.
+
+Enable the **Screenshots** checkbox in the **Controls** pane before you make
+a recording to capture screenshots of the recording. The screenshots are
+displayed below the **Overview** pane.
+
+![timeline recording with filmstrip](imgs/timeline-filmstrip.png)
+
+Hover your mouse over the **Screenshots** or **Overview** pane to view a 
+zoomed screenshot of that point in the recording. Move your mouse left and
+right to simulate an animation of the recording.
+
+{% animation animations/hover.mp4 %}
+
 ## Profile JavaScript {#profile-js}
 
 Enable the **JS Profile** checkbox before you take a recording to capture 
