@@ -93,6 +93,9 @@ shortcut <kbd>Cmd</kbd>+<kbd>E</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>E</kbd>
 your page interactions, and then press the **Record** button or type the 
 keyboard shortcut again to stop the recording.
 
+When the recording is finished, DevTools guesses what portion of the recording
+is most relevant to you, and automatically zooms to that portion.
+
 ### Recording tips
 
 * **Keep recordings as short as possible**. Shorter recordings generally make 
