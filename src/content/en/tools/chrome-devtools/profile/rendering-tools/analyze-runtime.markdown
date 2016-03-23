@@ -1,82 +1,73 @@
 ---
 layout: shared/narrow
 title: "Analyze Runtime Performance"
-description: "Users expect pages to be interactive and smooth. Each stage in the pixel pipeline represents an opportunity to introduce 'jank'. Learn about the tools and strategies to identify and fix common problems that slow down runtime performance."
+description: "Users expect pages to be interactive and smooth. Each stage in 
+the pixel pipeline represents an opportunity to introduce jank. Learn about 
+tools and strategies to identify and fix common problems that slow down 
+runtime performance."
 published_on: 2015-04-14
-updated_on: 2015-06-15
+updated_on: 2016-03-16
 order: 1
 authors:
+  - kaycebasques
   - megginkearney
 related-guides:
   style:
     -  
       title: "Reduce the scope and complexity of style calculations"
       href: fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
-      section:
-        title: "Reduce the scope and complexity of style calculations"
-        href: fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
   layout:
     -  
       title: "Avoid large, complex layouts and layout thrashing"
       href: fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
-      section:
-        title: "Avoid large, complex layouts and layout thrashing"
-        href: fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
+    - 
+      title: "Diagnose Forced Synchronous Layouts"
+      href: tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts
   javascript:
     -  
       title: "Optimize JavaScript Execution"
       href: fundamentals/performance/rendering/optimize-javascript-execution
-      section:
-        title: "Optimize JavaScript Execution"
-        href: fundamentals/performance/rendering/optimize-javascript-execution
 translation_priority: 0
 key-takeaways:
-  layout-issues:
-    - "Don't write JavaScript that forces the browser to recalculate layout. Separate read and write functions, and perform reads first."
-    - "Don't over-complicate your CSS. Use less CSS and keep your CSS selectors simple."
-    - "Avoid layout as much as possible. Choose CSS that doesn't trigger layout at all."
-    - "Painting can take up more time than any other rendering activity. Watch out for paint bottlenecks."
-
+  - "Don't write JavaScript that forces the browser to recalculate layout. Separate read and write functions, and perform reads first."
+  - "Don't over-complicate your CSS. Use less CSS and keep your CSS selectors simple."
+  - "Avoid layout as much as possible. Choose CSS that doesn't trigger layout at all."
+  - "Painting can take up more time than any other rendering activity. Watch out for paint bottlenecks."
 notes:
   css-triggers:
     - "Learn how Paul Lewis built <a href='https://aerotwist.com/blog/css-triggers'>CSS Triggers</a>."
 ---
 
-<p class="intro">
-  Users expect pages to be interactive and smooth. Each stage in the pixel pipeline represents an opportunity to introduce 'jank'. Learn about the tools and strategies to identify and fix common problems that slow down runtime performance.
-</p>
+<p class="intro">Users expect pages to be interactive and smooth. Each stage 
+in the pixel pipeline represents an opportunity to introduce jank. Learn about 
+tools and strategies to identify and fix common problems that slow down 
+runtime performance.</p>
 
 {% include shared/toc.liquid %}
 
-{% include shared/takeaway.liquid list=page.key-takeaways.layout-issues %}
+{% include shared/takeaway.liquid list=page.key-takeaways %}
 
-## How to identify JavaScript bottlenecks
+## JavaScript 
 
-JavaScript calculations, especially ones
-that trigger extensive visual changes,
-can stall application performance.
-Don't let badly-timed or long-running JavaScript interfere
-with users interacting with your site.
+JavaScript calculations, especially ones that trigger extensive visual changes,
+can stall application performance. Don't let badly-timed or long-running 
+JavaScript interfere with user interactions.
 
 ### Tools
 
-The simplest way to test JavaScript performance is to view Scripting events
-in the [Chrome DevTools Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool).
-If any of the scripting events seem suspiciously long,
-enable the JS Stacks at the top of the Timeline tool:
+Make a **Timeline** [recording][recording] and look for suspiciously long 
+**Evaluate Script** events. If you find any, you can enable the 
+[JS Profiler][profiler] and re-do your recording to get more detailed 
+information about exactly which JS functions were called and how long each 
+took.
 
-![JavaScript Profiler](imgs/js-stack.png)
+If you're noticing quite a bit of jank in your JavaScript, you may need to 
+take your analysis to the next level and collect a JavaScript CPU profile.
+CPU profiles show where execution time is spent within your page's functions.
+Learn how to create CPU profiles in [Speed Up JavaScript Execution][cpu].
 
-Now you can find out more about the specific functions called in your application.
-Don't enable the JS Stacks by default, as you'll experience information overload;
-only enable the tool when identifying JavaScript bottlenecks.
-
-If you're noticing quite a bit of jank in your JavaScript,
-you may need to take the next step beyond a timeline recording,
-and collect a JavaScript CPU profile.
-CPU profiles show where execution time is spent in your page's functions.
-Learn how to create CPU profiles
-in [Speed Up JavaScript Execution](/web/tools/chrome-devtools/profile/rendering-tools/js-execution).
+[profiler]: ../evaluate-performance/timeline-tool#profile-js
+[cpu]: js-execution
 
 ### Problems
 
@@ -112,38 +103,41 @@ The following table describes some common JavaScript problems and potential solu
   </tbody>
 </table>
 
-## How to identify style bottlenecks
+## Style 
 
-Style changes are costly, especially if those changes affect more than one element in the DOM. Any time you apply styles to an element, the browser has to figure out the impact on all related elements, recalculate the layout, and repaint.
+Style changes are costly, especially if those changes affect more than one 
+element in the DOM. Any time you apply styles to an element, the browser has 
+to figure out the impact on all related elements, recalculate the layout, and 
+repaint.
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.style %}
 
 ### Tools
 
-Make a recording using the [Chrome DevTools Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool). Recalculate Style events are displayed in purple blocks; check the timeline for large Recalculate Style events:
+Make a **Timeline** [recording][recording]. Check the recording for large
+**Recalculate Style** events (displayed in purple).
 
-![Long running styles](imgs/long-running-style.jpg)
+Click on a **Recalculate Style** event to view more information about it in 
+the **Details** pane. If the style changes are taking a long time, that's a 
+performance hit. If the style calculations are affecting a large number of 
+elements, that's another area with room for improvement.
 
-Less time and less impact means improved performance.
-View more details for these events. If the style changes are taking a long time,
-that's a performance hit. Also, if the style calculations are impacting a large number of elements,
-that's also a sign there's room for improvement:
+![Long recalculate style](imgs/recalculate-style.png)
 
-![Style details](imgs/style-details.jpg)
+To reduce the impact of **Recalculate Style** events:
 
-Another easy way to reduce style changes is to avoid CSS properties
-that have the most impact on rendering performance.
-Use the [CSS Triggers tool](http://csstriggers.com/)
-to determine whether a CSS property triggers layout, paint, and/or composite:
+* Use the [CSS Triggers](https://csstriggers.com) to learn which CSS properties
+  trigger layout, paint, and composite. These properties have the worst impact
+  on rendering performance.
+* Switch to properties that have less impact. See [Stick to compositor-only 
+  properties and manage layer count][compositor] for more guidance.
 
-![csstriggers.com](imgs/csstriggers.png)
-
-If you're using CSS properties that trigger everything, consider switching to a CSS property with less impact (see also
-[Stick to compositor-only properties and manage layer count](/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)).
+[compositor]: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
 
 ### Problems
 
-The following table describes some common style problems and potential solutions:
+The following table describes some common style problems and potential 
+solutions:
 
 <table class="mdl-data-table">
   <thead>
@@ -167,29 +161,39 @@ The following table describes some common style problems and potential solutions
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.style %}
 
-## How to identify layout bottlenecks
+## Layout 
 
-Layout (or reflow in Firefox) is the process by which the browser calculates the positions and sizes of all the elements on a page. The web’s layout model means that one element can affect others; for example,
-the width of the `<body>` element typically affects its children’s widths, and so on,
-all the way up and down the tree. The process can be quite involved for the browser.
+Layout (or reflow in Firefox) is the process by which the browser calculates 
+the positions and sizes of all the elements on a page. The web’s layout model 
+means that one element can affect others; for example, the width of the 
+`<body>` element typically affects its children’s widths, and so on,
+all the way up and down the tree. The process can be quite involved for the 
+browser.
 
-A general rule of thumb-- if you ask for a geometric value back from the DOM before a frame is complete, you are going to find yourself with "forced synchronous layouts", which can be a big performance bottleneck if repeated frequently or performed for a large DOM tree. 
+As a general rule of thumb, if you ask for a geometric value back from the 
+DOM before a frame is complete, you are going to find yourself with 
+"forced synchronous layouts", which can be a big performance bottleneck if 
+repeated frequently or performed for a large DOM tree. 
+
+{% include shared/related_guides.liquid inline=true list=page.related-guides.layout %}
 
 ### Tools
 
-The Chrome DevTools Timeline identifies when your application causes a forced asynchronous layout and marks such records with yellow warning icon: ![Forced synchronous layout warning](imgs/forced-synchronous.png){:.inline}. 
+The Chrome DevTools **Timeline** identifies when a page causes forced
+synchronous layouts. These **Layout** events are marked with red bars. 
 
-"Layout thrashing" is a repetition of forced synchronous layout conditions. JavaScript writes and then reads from the DOM  multiple times, forcing the browser to re-calculate layout over and over again.
+![forced synchronous layout](imgs/forced-synchronous-layout.png)
 
-Layout thrashing is easy to spot using a Timeline recording.
-Learn more in [Diagnose Forced Synchronous Layouts](/web/tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts).
-Look for a pattern of multiple forced synchronous warnings:
-
-![Layout thrashing](imgs/layout-thrashing.png)
+"Layout thrashing" is a repetition of forced synchronous layout conditions. 
+This occurs when JavaScript writes and reads from the DOM repeatedly, which
+forces the browser to recalculate the layout over and over. To identify
+layout thrashing, look for a pattern of multiple forced synchronous layout
+warnings (as in the screenshot above).
 
 ### Problems
 
-The following table describes some common layout problems and potential solutions:
+The following table describes some common layout problems and potential 
+solutions:
 
 <table class="mdl-data-table">
   <thead>
@@ -212,31 +216,29 @@ The following table describes some common layout problems and potential solution
   </tbody>
 </table>
 
-## How to identify paint and composite bottlenecks
+## Paint and composite 
 
-Paint is the process of filling in pixels and is often the most costly part of the rendering process.
-If you've noticed that your page is janky in any way -- for example, scrolling isn't smooth -- then it's likely that you have paint problems.
+Paint is the process of filling in pixels. It is often the most costly part of 
+the rendering process. If you've noticed that your page is janky in any 
+way, it's likely that you have paint problems.
 
-Compositing is where the painted parts of the page are put together for displaying on screen.
-For the most part, if you stick to compositor-only properties and avoid paint altogether,
-you should see a major improvement in performance,
-but you need to watch out for excessive layer counts (see also [Stick to compositor-only properties and manage layer count](/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)).
+Compositing is where the painted parts of the page are put together for 
+displaying on screen. For the most part, if you stick to compositor-only 
+properties and avoid paint altogether, you should see a major improvement in 
+performance, but you need to watch out for excessive layer counts (see 
+also [Stick to compositor-only properties and manage layer count](/web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count)).
 
 ### Tools
 
-Want to know how long painting takes or how often painting occurs? Enable the Paint profile in the Chrome DevTools Timeline. Record interaction with your page, and then check to see if most of the rendering time is spent painting. If it is, you have paint problems.
+Want to know how long painting takes or how often painting occurs? Enable the 
+[Paint profiler][paint] on the **Timeline** panel and then [make a 
+recording][recording]. If most of your rendering time is spent painting, you 
+have paint problems. 
 
 ![Long paint times in timeline recording](imgs/long-paint.png)
 
-Diagnose the paint problems further by enabling <strong>Show paint rectangles</strong> and <strong>Enable continuous page repainting</strong> in the Timeline Rendering settings:
-
-![Chrome DevTools rendering settings](imgs/rendering-settings.png)
-
-When you enable continuous paint mode, the page continuously repaints, showing a counter of how much painting work is happening. You can hide elements and mutate styles, watching the counter, in order to figure out what is slowing things down.
-
-Paul Irish's post,
-[Profiling Long Paint Times with DevTools Continuous Painting Mode](http://updates.html5rocks.com/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode),
-explains how to use Chrome DevTools to track paint issues.
+Check out the [**rendering settings**][rendering settings] menu for further 
+configurations that can help diagnose paint problems. 
 
 ### Problems
 
@@ -264,3 +266,6 @@ The following table describes some common paint and composite problems and poten
 </table>
 
 
+[recording]: ../evaluate-performance/timeline-tool#make-a-recording
+[paint]: ../evaluate-performance/timeline-tool#profile-painting
+[rendering settings]: ../evaluate-performance/timeline-tool#rendering-settings
