@@ -21,6 +21,14 @@ lightbulbs, [turtles](https://www.youtube.com/watch?v=1LV1Fk5ZXwA) and [flying
 grumpy cats](https://www.youtube.com/watch?v=tRMcMDIyIGQ) could interact
 directly with a website.
 
+Until now, the ability to interact with bluetooth devices has been possible
+only for native apps. The Web Bluetooth API aims to change this and brings it
+to web browsers as well. Alongside efforts like [Physical
+Web](https://google.github.io/physical-web/), people can walk up to and
+interact with devices straight from the web. Check out this [drone controlled
+from a web app](https://www.youtube.com/watch?v=yILD_ZdXJW4) video to get a
+sense of how that would work.
+
 ## Before we start
 
 This article assumes you have some basic knowledge of how Bluetooth Low
@@ -276,4 +284,4 @@ as much as feasible by the platforms.
 - BLE Peripheral Simulator App: [https://github.com/WebBluetoothCG/ble-test-peripheral-android](https://github.com/WebBluetoothCG/ble-test-peripheral-android)
 - Google+ Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 
-{% ytvideo I3obFcCw8mk %}
+{% ytvideo _BUwOBdLjzQ %}

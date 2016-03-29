@@ -142,6 +142,109 @@ There are two ways to set these dynamic states on an element:
 
   ![:hov pane](imgs/hov.png)
 
+## Add background-color or color to a style rule
+
+The **Styles** pane provides a shortcut for adding `color` and
+`background-color` declarations to a style rule.
+
+In the bottom-right of the style rule, there is a three-dot icon. You need 
+to hover over the style rule in order to see it.
+
+![three-dots icon in rule set](imgs/rule-set-three-dots-icon.png)
+
+Hover over this icon to reveal buttons for adding a `color` declaration 
+(![add color declaration](imgs/add-color.png){:.inline})
+or a `background-color` declaration (![add background-color 
+declaration](imgs/add-background-color.png){:.inline}). Click on one of these
+buttons to add the declaration to the style rule. 
+
+## Modify colors with the Color Picker {#color-picker}
+
+To open the **Color Picker**, find a CSS declaration in the **Styles** pane 
+that defines a color (such as `color: blue`). To the left of the declaration 
+value there is a small, colored square. The color of the square matches the 
+declaration value. Click on this little square to open the **Color Picker**.
+
+![opening the color picker](imgs/open-color-picker.jpg)
+
+You can interact with the **Color Picker** in multiple ways:
+
+1. **Eyedropper**. See [Eyedropper](#eyedropper) for more information.
+2. **Current color**. A visual representation of the **current value**. 
+3. **Current value**. The hexadecimal, RGBA, or HSL representation of the 
+   **current color**. 
+4. **Color palette**. See [Color palettes](#color-palettes) for more
+   information. 
+5. **Tint and shade selector**. 
+6. **Hue selector**. 
+7. **Opacity selector**.
+8. **Color value selector**. Click to toggle between RGBA, HSL, and
+   hexadecimal. 
+9. **Color palette selector**. Click to select different templates.
+
+![annotated color picker](imgs/annotated-color-picker.jpg)
+
+[md]: https://www.google.com/design/spec/style/color.html)
+
+### Eyedropper {#eyedropper}
+
+Click on the **eyedropper** button so that it is enabled
+(![enabled eyedropper](imgs/eyedropper-enabled.png){:.inline}), hover over a
+color on the live page, and then click to set the currently selected
+declaration value to the color that you're hovering over.
+
+![the eyedropper in action](imgs/eyedropper.jpg)
+
+### Color palettes {#color-palettes}
+
+The **Color Picker** provides the following color palettes:
+
+* **Page Colors**. A set of colors automatically generated from the page's 
+  CSS.
+* **Material Design**. A collection of colors consistent with the 
+  [Material Design spec][md]. 
+* **Custom**. A set of any colors you choose. DevTools saves your custom 
+  palette, even across pages, until you delete it. 
+
+#### Modifying a custom color palette {#custom-color-palette}
+
+Press the **plus sign** button to add the current color to the palette. 
+Click and hold on a color to drag it to a different position, or drag it 
+to the **trash can** icon to delete it. Right-click on a color and select
+**Remove color** to delete it. Select **Remove all to the right** to delete
+all of the colors to the right of the currently selected color. Right-click
+anywhere within the color palette region and select **Clear template** to 
+delete all of the template's colors.
+
+## View and edit CSS custom properties (CSS variables) {#custom-properties}
+
+You can view and edit declarations that define or use [CSS custom 
+properties][intro] (informally known as CSS variables) just like any other 
+declaration. 
+
+Custom properties are usually [defined][def] in the `:root` 
+selector. To view a custom property defined in `:root`, inspect the `html` 
+element.
+
+![custom property defined on :root](imgs/css-var-defined-on-root.png)
+
+Custom properties do not have to be defined on the `:root` selector, however.
+If you defined it elsewhere, inspect the element on which it was defined to
+view the definition.
+
+You can view and edit declaration values that use custom properties just
+like any other declaration value. 
+
+If you see a declaration value like `var(--main-color)` as in the screenshot
+below, it means that the declaration is using custom properties. These
+values can be edited like any other declaration value. Currently there is no
+way to jump to the custom property definition.
+
+![using a custom property](imgs/css-var-in-use.png)
+
+[intro]: /web/updates/2016/02/css-variables-why-should-you-care
+[def]: https://drafts.csswg.org/css-variables/#defining-variables
+
 ## Edit Sass, Less or Stylus
 
 If you are using Sass, Less, Stylus or any other CSS preprocessor, editing the generated CSS output files in the Styles editor won't help as they don't map to your original source.
@@ -169,31 +272,6 @@ When you save changes to a CSS preprocessor file in DevTools, the CSS preprocess
 
 1. Open DevTools Settings and click **General**.
 2. Turn on **Enable CSS source maps** and **Auto-reload generated CSS**.
-
-### Use the Colorpicker's palettes
-
-The Colorpicker now helps you select and maintain a consistent color palette for your site. Access the palettes by clicking the spinner at the bottom right of the Colorpicker window.
-
-![spinner.png](imgs/spinner.png)
-
-This version of the Colorpicker has three distinct palettes.
-
-####Page colors
-This palette is automatically generated from the colors found in your CSS, making it a great option if you're extending an existing site. Use this palette when you are adding or changing colors, to keep your site's color scheme consistent.
-
-####Material Design
-The [Material Design](https://www.google.com/design/spec/style/color.html) palette offers a selection of beautiful colors out of the box and is an ideal choice when starting a new project. This palette will expand as Material Design continues to evolve.
-
-####Custom
-This palette is your own playground, made up of any colors you choose. The Custom palette is maintained when the palette pane is closed, so if the palette pane is open, click the "Return to color picker" button to close it.
-
-![closepalettesx.png](imgs/closepalettesx.png)
-
-To add a new color, choose one in the main color box, then click the "Add to palette" button next to the lower spinner. 
-
-![addtopalette.png](imgs/addtopalette.png)
-
-You can add as many colors as you like, to keep them handy as you work. You can reorder the custom colors by dragging them, and you can right-click a color to reveal more options, including "Remove color", "Remove all to the right", and "Clear palette".
 
 ### Requirements & Gotchas
 
