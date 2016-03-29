@@ -1,33 +1,50 @@
 ---
 layout: shared/narrow
 title: "Console API Reference"
-description: "Write to the console, create JavaScript profiles, and start debugging sessions with the Console API."
-published_on: 2015-04-14
-updated_on: 2015-05-12
+description: "Use the Console API to write information to the console, 
+create JavaScript profiles, and start a debugging session."
+updated_on: 2016-03-22
 order: 6
 authors:
+  - kaycebasques
   - megginkearney
   - pbakaus
 translation_priority: 0
+related-guides:
+  organizing:
+    -
+      title: "Organizing console output"
+      href: tools/chrome-devtools/debug/console/console-write#organizing
+  formatting:
+    -
+      title: "String substitution and formatting"
+      href: tools/chrome-devtools/debug/console/console-write#string-substitution-and-formatting
+  timeline:
+    -
+      title: "Marking the Timeline"
+      href: tools/chrome-devtools/debug/console/track-executions#marking-the-timeline
 ---
-<p class="intro">
-  The Console API provides web applications with methods for writing information to the console, creating JavaScript profiles, and initiating a debugging session.
-</p>
+
+<p class="intro">Use the Console API to write information to the console, 
+create JavaScript profiles, and start a debugging session.</p>
 
 {% include shared/toc.liquid %}
 
-## console.assert(expression, object)
+## console.assert(expression, object) {#assert}
 
-If the evaluated expression is `false`, the message is written to the console along with a stack trace. In the following example, the assert message is written to the console only when the `document` contains fewer than ten child nodes:
+Writes an [error](#error) to the console when the evaluated expression is 
+`false`. 
 
 {% highlight js %}
-var list = document.querySelector('#myList');
-console.assert(list.childNodes.length < 10, "List item count is >= 10");
+function greaterThan(a,b) {
+  console.assert(a > b, {"message":"a is not greater than b","a":a,"b":b});
+}
+greaterThan(5,6);
 {% endhighlight %}
 
-![Example of console.assert()](images/assert-failed-list.png)
+![console.assert() example](images/assert.png)
 
-## console.clear()
+## console.clear() {#clear}
 
 Clears the console.
 
@@ -35,234 +52,228 @@ Clears the console.
 console.clear();
 {% endhighlight %}
 
-If *Preserve Logs* is on, `console.clear()` will not do anything in case there's an iframe that calls `console.clear()`, since that would make your debugging process harder. In this case, "Clear console" in the context menu will still work, and actually clear the console.
+If the [**Preserve log**](console-ui#preserve-log) checkbox is enabled, 
+`console.clear()` is disabled. However, pressing the **clear console** button 
+(![clear console button](images/clear-console-button.png){:.inline})
+or typing the shortcut <kbd>Ctrl</kbd>+<kbd>L</kbd> while the Console is in
+focus still works. 
 
-See also [Clearing the console](./console-ui#working-with-the-console-history).
+See [Clearing the console](console-ui#clearing) for more information.
 
-## console.count(label)
+## console.count(label) {#count}
 
-Writes the the number of times that `count()` has been invoked at the same line and with the same label.
-
-In the following example, `count()` is invoked each time the `login()` function is invoked.
+Writes the the number of times that `count()` has been invoked at the same 
+line and with the same label.
 
 {% highlight js %}
-function login(user) {
-    console.count("Login called");
-    // login() code...
+function login(name) {
+  console.count(name + ' logged in');
 }
 {% endhighlight %}
 
-![Example of using console.count()](images/count.png)
+![console.count() example](images/count.png)
 
-See [Counting Statement Executions](./track-executions?#counting-statement-executions) for more examples.
+See [Counting Statement Executions][cse] for more examples.
+
+[cse]: track-executions#counting-statement-executions
 
 ## console.debug(object [, object, ...])
 
-This method is identical to [`console.log()`](#consolelogobject--object-).
+Identical to [`console.log()`](#log).
 
-## console.dir(object)
+## console.dir(object) {#dir}
 
-Prints a JavaScript representation of the specified object. If the object being logged is an HTML element, then the properties of its DOM representation are printed, as shown below:
+Prints a JavaScript representation of the specified object. If the object 
+being logged is an HTML element, then the properties of its DOM representation 
+are printed, as shown below:
 
 {% highlight js %}
 console.dir(document.body);
 {% endhighlight %}
 
-![Example of using console.dir() with an HTML element()](images/consoledir-body.png)
+![`console.dir()` example](images/dir.png)
 
-Learn about the functional equivalent object formatter (`%O`) and more in [String substitution and formatting](./console-write#string-substitution-and-formatting).
+Learn about the functionally equivalent object formatter (`%O`) and more 
+in [String substitution and formatting][of].
+
+[of]: console-write#string-substitution-and-formatting
 
 ## console.dirxml(object)
 
-Prints an XML representation of the specified object as it would appear in the Elements panel. For HTML elements, calling this method is equivalent to calling [`console.log()`](#consolelogobject--object-).
+Prints an XML representation of the descendant elements of `object` if 
+possible, or the JavaScript representation if not. Calling `console.dirxml()`
+on HTML and XML elements is equivalent to calling [`console.log()`](#log).
 
 {% highlight js %}
-var list = document.querySelector("#myList");
-console.dirxml(list);
+console.dirxml(document);
 {% endhighlight %}
 
-`%o` acts either as dir or dirxml depending on the object type (non-DOM or DOM).
+![console.dirxml() example](images/dirxml.png)
 
-## console.error(object [, object, ...])
+## console.error(object [, object, ...]) {#error}
 
-Similar to [`console.log()`](#consolelogobject--object-), `console.error()` additionally includes a stack trace from where the method was called and is styled like an error.
+Prints a message similar to [`console.log()`](#log), styles the 
+message like an error, and includes a stack trace from where the method was 
+called.
 
 {% highlight js %}
-function connectToServer() {
-    var errorCode = 1;
-    if (errorCode) {
-        console.error("Error: %s (%i)", "Server is  not responding", 500);
-    }
-}
-connectToServer();
+console.error('error: name is undefined');
 {% endhighlight %}
 
-![Example of console.error()](images/error-server-not-resp.png)
+![console.error() example](images/error.png)
 
 ## console.group(object[, object, ...])
 
-Starts a new logging group with an optional title. All console output that occurs after calling this method and calling `console.groupEnd()` appears in the same visual group.
+Starts a new logging group with an optional title. All console output that
+occurs after `console.group()` and before `console.groupEnd()` is visually
+grouped together. 
 
 {% highlight js %}
-console.group("Authenticating user '%s'", user);
-console.log("User authenticated");
-console.groupEnd();
+function name(obj) {
+  console.group('name');
+  console.log('first: ', obj.first);
+  console.log('middle: ', obj.middle);
+  console.log('last: ', obj.last);
+  console.groupEnd();
+}
+
+name({"first":"Wile","middle":"E","last":"Coyote"});
 {% endhighlight %}
 
-![Console group example](images/log-group-simple.png)
+![console.group() example](images/group.png)
 
 You can also nest groups:
 
 {% highlight js %}
-// New group for authentication:
-console.group("Authenticating user '%s'", user);
-// later...
-console.log("User authenticated", user);
-// A nested group for authorization:
-console.group("Authorizing user '%s'", user);
-console.log("User authorized");
-console.groupEnd();
-console.groupEnd();
+function name(obj) {
+  console.group('name');
+  console.log('first: ', obj.first);
+  console.log('middle: ', obj.middle);
+  console.log('last: ', obj.last);
+  console.groupEnd();
+}
+
+function doStuff() {
+  console.group('doStuff()');
+  name({"first":"Wile","middle":"E","last":"coyote"});
+  console.groupEnd();
+}
+
+doStuff();
 {% endhighlight %}
 
-![Nested logging group examples](images/nestedgroup-api.png)
+![nested console.group() example](images/nested-group.png)
 
-Learn more about [organizing console output](./console-write?#organizing-console-output).
+{% include shared/related_guides.liquid inline=true list=page.related-guides.organizing %}
 
 ## console.groupCollapsed(object[, object, ...])
 
-Creates a new logging group that is initially collapsed instead of open, as with `console.group()`.
+Creates a new logging group that is initially collapsed instead of open. 
 
 {% highlight js %}
-console.groupCollapsed("Authenticating user '%s'", user);
-console.log("User authenticated");
+console.groupCollapsed('status');
+console.log("peekaboo, you can't see me");
 console.groupEnd();
-console.log("A group-less log trace.");
 {% endhighlight %}
 
-![Creating a collapsed group](images/groupcollapsed.png)
+## console.groupEnd() {#groupend}
 
-## console.groupEnd()
-
-Closes the logging group that was most recently created with `console.group()` or `console.groupCollapsed()`. See `[console.group()](#consolegroupobject-object)` and `[console.groupCollapsed()](#consolegroupcollapsedobject-object)` for examples.
+Closes a logging group. See [`console.group`](#group) for an example.
 
 ## console.info(object [, object, ...])
 
-This method is identical in function to [`console.log()`](#consolelogobject--object-), but additionally shows an info icon next to the output.
+Prints a message like [`console.log()`](#log) but also shows an icon (blue
+circle with white "i") next to the output. 
 
-## console.log(object [, object, ...])
+## console.log(object [, object, ...]) {#log}
 
-Displays a message in the console. You pass one or more objects to this method, each of which are evaluated and concatenated into a space-delimited string.
-
-Basic example:
-
-{% highlight js %}
-console.log("App started");
-{% endhighlight %}
-
-### Format specifiers
-
-The first parameter you pass to `log()` may contain _format specifiers_, a string token composed of the percent sign (`%`) followed by a letter that indicates the formatting to be applied. Learn more about format specifiers in [String substitution and formatting](./console-write#string-substitution-and-formatting).
-
-The following example uses the string (`%s`) and integer (`%d`) format specifiers to insert the values contained by the variables `userName` and `userPoints`:
+Displays a message in the console. Pass one or more objects to this method.
+Each object is evaluated and concatenated into a space-delimited string.
 
 {% highlight js %}
-console.log("User %s has %d points", userName, userPoints);
+console.log('Hello, Logs!');
 {% endhighlight %}
 
-![Console output styled with %c](images/log-format-specifier.png)
+### Format specifiers {#format-specifiers}
 
-## console.profile([label])
+The first object you pass can contain one or more **format specifiers**. A
+format specifier is composed of the percent sign (`%`) followed by a letter
+that indicates the formatting to apply. 
 
-Starts a JavaScript CPU profile with an optional label. To complete the profile, call `console.profileEnd()`. Each profile is added to the Profiles tab.
+{% include shared/related_guides.liquid inline=true list=page.related-guides.formatting %}
 
-In the following example a CPU profile is used in a function that we suspect consumes excessive CPU resources.
+## console.profile([label]) {#profile}
+
+Starts a JavaScript CPU profile with an optional label. To complete the 
+profile, call `console.profileEnd()`. Each profile is added to the **Profiles**
+panel.
 
 {% highlight js %}
 function processPixels() {
-  console.profile("Processing pixels");
+  console.profile("processPixels()");
   // later, after processing pixels
   console.profileEnd();
 }
 {% endhighlight %}
 
-## console.profileEnd()
+## console.profileEnd() {#profileend}
 
-Stops the current JavaScript CPU profiling session if one is in progress and prints the report to the Profiles panel.
+Stops the current JavaScript CPU profiling session if one is in progress and 
+prints the report to the **Profiles** panel.
 
-{% highlight js %}
-console.profileEnd()
-{% endhighlight %}
+See [`console.profile()`](#profile) for an example.
 
-See [console.profile()](#consoleprofilelabel) for an example.
+## console.time(label) {#time}
 
-## console.time(label)
-
-Starts a new timer with an associated label. When `console.timeEnd()` is called with the same label, the timer is stopped and the elapsed time displayed in the console. Timer values are accurate to the sub-millisecond.
+Starts a new timer with an associated label. When `console.timeEnd()` is 
+called with the same label, the timer is stopped and the elapsed time is
+displayed in the console. Timer values are accurate to the sub-millisecond.
+The strings passed to `time()` and `timeEnd()` must match or else the timer 
+will not finish.
 
 {% highlight js %}
 console.time("Array initialize");
 var array = new Array(1000000);
 for (var i = array.length - 1; i >= 0; i--) {
-    array[i] = new Object();
-};
+  array[i] = new Object();
+}
 console.timeEnd("Array initialize");
 {% endhighlight %}
 
-![Example of using console.time() and timeEnd()](images/time-duration.png)
+![console.time() example](images/time.png)
 
-Note: The strings you pass to the `time()` and `timeEnd()` methods must match or the timer will not finish.
+## console.timeEnd(label) {#timeend}
 
-## console.timeEnd(label)
+Stops the current timer if one is in progress and prints the timer label 
+followed by the elapsed time to the Console. 
 
-Stops the timer with the specified label and prints the elapsed time.
+See [`console.time()`](#time) for an example. 
 
-For example usage, see [console.time()](#consoletimelabel).
+## console.timeStamp([label]) {#timestamp}
 
-## console.timeStamp([label])
-
-Adds an event to the Timeline during a recording session. This lets you visually correlate your code-generated time stamp to events that are automatically added to the Timeline, like layout and point, for example.
-
-See [Marking the Timeline](./track-executions/#marking-the-timeline) for an example of using `console.timeStamp()`.
-
-## console.trace(object)
-
-Prints a stack trace from the point where the method was called, including links to the specific lines in the JavaScript source. A counter indicates the number of times that `trace()` method was invoked at that point, as shown in the screen shot below.
-
-![Example of a stack trace with counter](images/track-exceptions-console-trace.jpg)
-
-It is also possible to pass in arguments to trace(). For example:
-
-![Example of a stack trace with arguments](images/console-trace-args.png)
-
-## console.warn(object [, object, ...])
-
-This method is like [`console.log()`](#consolelogobject--object-) but also displays a yellow warning icon next to the logged message.
+Adds an event to the **Timeline** during a recording session. 
 
 {% highlight js %}
-console.warn("User limit reached! (%d)", userPoints);
+console.timeStamp('check out this custom timestamp thanks to console.timeStamp()!');
 {% endhighlight %}
 
-![Example of console.warn()](images/log-warn.png)
+![console.timeStamp() example](images/timestamp.png)
 
-## debugger
+{% include shared/related_guides.liquid inline=true list=page.related-guides.timeline %}
 
-The global `debugger` function causes Chrome to stop program execution and start a debugging session at the line where it was called. It is equivalent to setting a "manual" breakpoint in the Sources tab of Chrome DevTools.
+## console.trace(object) {#trace}
 
-Note: The `debugger` command is not a method of the `console` object.
+Prints a stack trace from the point where the method was called. 
 
-In the following example the JavaScript debugger is opened when an object's `brightness()` function is invoked:
+    console.trace();
 
-{% highlight js %}
-brightness: function() {
-    debugger;
-    var r = Math.floor(this.red*255);
-    var g = Math.floor(this.green*255);
-    var b = Math.floor(this.blue*255);
-    return (r * 77 + g * 150 + b * 29) >> 8;
-}
-{% endhighlight %}
+![console.trace() example](images/trace.png)
 
-![Example of using debugger command](images/debugger.png)
+## console.warn(object [, object, ...]) {#warn}
 
+Prints a message like [`console.log()`](#log), but also displays a yellow 
+warning icon next to the logged message.
 
+    console.warn('user limit reached!');
+
+![console.warn() example](images/warn.png)
