@@ -387,7 +387,7 @@ representation of the encrypted message.
 
 # Debugging / Verifier
 
-Peter Beverloo, one of the Chrome engineers that implemented the feature (as
+Peter Beverloo, one of the Chrome engineers who implemented the feature (as
 well as being one of the people who worked on the spec), has 
 [created a verifier](https://tests.peter.sh/push-encryption-verifier/).
 
