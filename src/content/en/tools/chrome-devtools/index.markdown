@@ -61,7 +61,7 @@ translation_priority: 1
         <p>Learn how to customize the DevTools to suit your workflow.</p>
         <ul>
           <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">Keyboard shortcuts</a></li>
-          <li><a href="https://developer.chrome.com/devtools/docs/settings">Settings</a></li>
+          <li><a href="/web/tools/chrome-devtools/settings">Settings</a></li>
         </ul>
       </div>
 
