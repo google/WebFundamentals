@@ -48,7 +48,7 @@ To open the dedicated **Console** panel, either:
   <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac).
 * If DevTools is already open, press the **Console** button.
 
-When you open the Console panel, the Console drawer automatically closes. 
+When you open the Console panel, the Console drawer collapses automatically.
 
 ### Open as drawer
 

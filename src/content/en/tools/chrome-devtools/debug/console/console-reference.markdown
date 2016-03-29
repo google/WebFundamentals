@@ -100,7 +100,7 @@ in [String substitution and formatting][of].
 
 ## console.dirxml(object)
 
-Prints of an XML representation of the descendant elements of `object` if 
+Prints an XML representation of the descendant elements of `object` if 
 possible, or the JavaScript representation if not. Calling `console.dirxml()`
 on HTML and XML elements is equivalent to calling [`console.log()`](#log).
 
@@ -112,7 +112,7 @@ console.dirxml(document);
 
 ## console.error(object [, object, ...]) {#error}
 
-Prints a message, similar to [`console.log()`](#log), and also styles the 
+Prints a message similar to [`console.log()`](#log), styles the 
 message like an error, and includes a stack trace from where the method was 
 called.
 
@@ -132,11 +132,12 @@ grouped together.
 function name(obj) {
   console.group('name');
   console.log('first: ', obj.first);
+  console.log('middle: ', obj.middle);
   console.log('last: ', obj.last);
   console.groupEnd();
 }
 
-name({"first":"wiley","last":"coyote"});
+name({"first":"Wile","middle":"E","last":"Coyote"});
 {% endhighlight %}
 
 ![console.group() example](images/group.png)
@@ -147,13 +148,14 @@ You can also nest groups:
 function name(obj) {
   console.group('name');
   console.log('first: ', obj.first);
+  console.log('middle: ', obj.middle);
   console.log('last: ', obj.last);
   console.groupEnd();
 }
 
 function doStuff() {
   console.group('doStuff()');
-  name({"first":"wiley","last":"coyote"});
+  name({"first":"Wile","middle":"E","last":"coyote"});
   console.groupEnd();
 }
 
@@ -180,8 +182,8 @@ Closes a logging group. See [`console.group`](#group) for an example.
 
 ## console.info(object [, object, ...])
 
-Prints a message like [`console.log()`](#log) but also shows an info icon
-next to the output.
+Prints a message like [`console.log()`](#log) but also shows an icon (blue
+circle with white "i") next to the output. 
 
 ## console.log(object [, object, ...]) {#log}
 
