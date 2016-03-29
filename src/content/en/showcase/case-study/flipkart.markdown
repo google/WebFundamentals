@@ -74,7 +74,7 @@ this is a new way to experience mobile and we’re just getting started."
 ### Key insights
 
 * Users time on site with Flipkart lite vs. previous mobile experience:
-  **3.5 minutes vs 70 seconds.
+  **3.5 minutes vs 70 seconds**.
 * **3x** more time spent on site
 * **40%** higher re-engagement rate
 * **70%** greater conversion rate among those arriving via Add to Homescreen
