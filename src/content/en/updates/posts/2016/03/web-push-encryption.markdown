@@ -13,7 +13,7 @@ tags:
 ---
 Prior to Chrome 50, [push messages](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web) 
 could not contain any payload data. When the ['push' event](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent) 
-fired in your service worker, all you knew was the the server was trying to
+fired in your service worker, all you knew was that the server was trying to
 tell you something, but not what it might be. You then had to make a follow up
 request to the server and obtain the details of the notification to show, which
 might fail in poor network conditions.
