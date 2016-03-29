@@ -38,7 +38,7 @@ the product they are looking for. Users can even continue to browse
 categories, review previous searches, and view product pages—all
 while offline.
 
-### Taking advantage of the web's friction
+### Taking advantage of the web's low friction
 
 Reaching a broad set of users is important for Flipkart. With Flipkart Lite,
 users are one click away from accessing content and many new users are
