@@ -5,7 +5,7 @@ description: "Here are a few tips for making your notifications personal and rel
 authors:
 - josephmedley
 published_on: 2016-01-05
-updated_on: 2016-03-11
+updated_on: 2016-04-01
 order: 30
 translation_priority: 1
 ---

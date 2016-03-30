@@ -1,17 +1,17 @@
 ---
 layout: shared/narrow
 title: "Don't be <s>Evil</s> Anoying"
-description: ""
+description: "You're not the only ones vying for the user's attention. Here are a few more tips for helping you get it and keep it."
 authors:
 - josephmedley
 published_on: 2016-01-05
-updated_on: 2016-03-11
+updated_on: 2016-04-01
 order: 50
 translation_priority: 1
 ---
 
 <p class="intro">
-  xxx
+  You're not the only ones vying for the user's attention. Here are a few more tips for helping you get it and keep it.
 </p>
 
 {% include shared/toc.liquid %}

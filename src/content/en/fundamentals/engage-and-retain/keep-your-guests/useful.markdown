@@ -5,7 +5,7 @@ description: "Here are a few tips for making your notifications useful."
 authors:
 - josephmedley
 published_on: 2016-01-05
-updated_on: 2016-03-11
+updated_on: 2016-04-01
 order: 40
 translation_priority: 1
 ---

@@ -5,7 +5,7 @@ description: "Notifications are great, but notifications by themselves aren't as
 authors:
  - josephmedley
 published_on: 2015-10-01
-updated_on: 2016-03-11
+updated_on: 2016-04-01
 order: 20
 translation_priority: 1
 ---

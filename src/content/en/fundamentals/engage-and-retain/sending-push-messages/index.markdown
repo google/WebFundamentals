@@ -5,7 +5,7 @@ description: "Sending a push message requires server-side code. To get you start
 authors:
   - dgash
 published_on: 2015-10-01
-updated_on: 2016-03-11
+updated_on: 2016-04-01
 order: 1
 translation_priority: 1
 notes:
