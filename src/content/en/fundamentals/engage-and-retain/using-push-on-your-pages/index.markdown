@@ -12,9 +12,9 @@ authors:
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--8-col">
-<p class="intro">
-  Push and notifications allow developers to engage users by providing timely and customized content outside the context of the web page. Push and notification are different, but complementary, functions: a <b>push</b> is the action of the server supplying information to a service worker; a <b>notification</b> is the action of the service worker showing the information to a user.
-</p>
+	<p class="intro">
+	  Push and notifications allow developers to engage users by providing timely and customized content outside the context of the web page. Push and notification are different, but complementary, functions: a <b>push</b> is the action of the server supplying information to a service worker; a <b>notification</b> is the action of the service worker showing the information to a user.
+	</p>
   </div>
   <figure class="mdl-cell mdl-cell--4-col">
     <img src="images/airline-prompt.png" alt="An example of a notification."> 
@@ -25,8 +25,9 @@ authors:
 The W3C manages the specifications for the [Push API](http://www.w3.org/TR/push-api/)
 and the [Notifications API](https://dvcs.w3.org/hg/notifications/raw-file/tip/Overview.html).
 
-### Sample
+### Sample {#sample}
 
 Want to try out push and notifications? Check out the 
-[push messaging and notifications sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). It's got everything you need to get started and includes the instructions
-for setting up push messaging through Google Cloud Messaging.
+[push messaging and notifications sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). 
+It's got everything you need to get started and includes the instructions for
+setting up push messaging through Google Cloud Messaging.

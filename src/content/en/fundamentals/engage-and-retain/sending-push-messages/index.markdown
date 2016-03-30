@@ -21,7 +21,7 @@ notes:
 
 {% include shared/toc.liquid %}
 
-## Configure GCM
+## Configure GCM {#configure-gcm}
 
 To use the GCM API, you must set up a project in the 
 [Google Developer Console](https://console.developers.google.com/). Follow the 
@@ -35,7 +35,7 @@ Before leaving the Developer Console, make a note of the
 parameter, and the API key on your server when you use 
 the GCM API. Also make sure you've added localhost to the whitelist.
 
-## Configure the Web App Manifest
+## Configure the Web App Manifest {#configure-manifest}
 
 You will also need a [web app manifest](/web/fundamentals/engage-and-retain/web-app-manifest/) 
 file that includes the `gcm_sender_id` parameter, used by Chrome when 
@@ -69,7 +69,7 @@ send the data as JSON or form data.
 - An array of `registration_ids`, which you can extract from the 
 `PushSubscription.endpoint` you sent to your server.
 
-## Send a Test Push
+## Send a Test Push {#send-test-push}
 
 For a quick check of your service worker, use 
 [cURL](https://en.wikipedia.org/wiki/CURL) to send a push message to your 

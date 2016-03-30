@@ -14,11 +14,11 @@ translation_priority: 1
   Here are a few tips for making your notifications useful.
 </p>
 
-## Make it available regardless of connectivity
+## Make it available regardless of connectivity {#make-it-available}
 
 Until recently only mobile apps could do this. With service workers you can store a notification until a user wants it. When the user clicks it, the status of the network is irrelevant. 
 
-## Always use a title, description, and icon
+## Always use a title, description, and icon {#title-desc-icon}
 
 A notification takes a number of options. To be minimally user-friendly you
 should always include a title, description, and icon. Do this with the options
@@ -43,7 +43,7 @@ parameter of the `showNotification()` method. For example:
   });
 {% endhighlight %}
 
-## Make the icon contextual
+## Make the icon contextual {#contextual-icon}
 
 Just as with titles, icons should convey something about the message. In the
 previous instance where 'Paul Kinlan sent you a message', use an
