@@ -15,7 +15,7 @@ notes:
 ---
 
 When a user adds your site to their home screen, you can define a set of icons for the 
-browser to use. The icons for your web app can be defined as shown below, with a type, size, and opitional
+browser to use. The icons for your web app can be defined as shown below, with a type, size, and optional
 density.
 
 {% highlight json %}

@@ -48,6 +48,8 @@ To open the dedicated **Console** panel, either:
   <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd class="kbd">J</kbd> (Mac).
 * If DevTools is already open, press the **Console** button.
 
+When you open the Console panel, the Console drawer collapses automatically.
+
 ### Open as drawer
 
 To open the Console as a drawer next to any other panel, either:
@@ -79,7 +81,7 @@ on its own line.
 
 ## Working with the Console history
 
-### Clearing the history
+### Clearing the history {#clearing}
 
 You can clear the console history by doing any of the following:
 
@@ -89,7 +91,7 @@ You can clear the console history by doing any of the following:
 * Type <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">L</kbd> 
   (Mac, Windows, Linux).
 
-### Persisting the history
+### Persisting the history {#preserve-log}
 
 Enable the **Preserve log** checkbox at the top of the console to persist
 the console history between page refreshes or changes. Messages will be stored
