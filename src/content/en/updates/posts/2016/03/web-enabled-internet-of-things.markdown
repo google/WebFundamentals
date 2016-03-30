@@ -60,7 +60,7 @@ of PWAs. PWAs are site that have a responsive app like user
 experience, can work offline and can be added to the device home screen.
 
 As a proof of concept, I have been building a small device using
-the Intel&reg; Edison Arduino breakout board. Teh device contains
+the Intel&reg; Edison Arduino breakout board. The device contains
 a temperature sensor (TMP36) as well as an actuator (colored LED
 cathode). The schematics for this device can be found at the end
 of this article.
@@ -154,13 +154,8 @@ Chrome finds the device nicely.
 ## Communicating with the sensor/actuator
 
 We use [Johnny-Five](http://johnny-five.io/) to talk to our board
-enhancements.
-In simple cases like this, this is not strictly easier than communicating
-with the raws input (pins) manually, but for bigger projects it can be
-a real help. Johnny-Five has a nice abstraction for talking to the TMP36
-sensor, but for some reason I could only get it to return `undefined`
-as the current temperature, so I went ahead and read the temperature
-value manually.
+enhancements. Johnny-Five has a nice abstraction for talking to the TMP36
+sensor.
 
 Below you can find the simple code for listening to temperature changes
 as well as setting the initial LED color.
@@ -189,7 +184,7 @@ board.on("ready", function() {
   });
 
   temp.on("change", function() {
-    temperatureCharacteristic.valueChange(this.value);
+    temperatureCharacteristic.valueChange(this.celsius);
   });
 
   colorCharacteristic._led = led;
