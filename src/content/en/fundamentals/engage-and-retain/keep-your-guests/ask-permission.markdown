@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Ask Permission"
-description: "ou should ask your users' permission before sending them push messages. But there's more to asking permission than throwing up a dialog box. "
+description: "You should ask your users' permission before sending them push messages. But there's more to asking permission than throwing up a dialog box. "
 published_on: 2015-10-01
 updated_on: 2016-01-05
 order: 20
