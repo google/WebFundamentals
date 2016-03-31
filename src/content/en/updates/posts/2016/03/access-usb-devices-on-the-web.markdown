@@ -64,6 +64,13 @@ connect to it. This is similar to the
 mechanism in HTTP. In other words, **WebUSB devices are associated with a web
 origin** and can only be accessed from a page from the same origin.
 
+Hardware manufacturers will have to update the firmware in their USB devices in order
+to enable WebUSB access to their device via the [Platform Capability
+descriptor](https://wicg.github.io/webusb/#webusb-platform-capability-descriptor).
+Later a [Public Device Registry](https://wicg.github.io/webusb/#public-device-registry) 
+will be created so that hardware manufacturers can support WebUSB on existing
+devices.
+
 ### HTTPS Only
 
 Because this experimental API is a powerful new feature added to the Web,
@@ -284,6 +291,14 @@ Debugging USB in Chrome is made easier with the internal page
 single place.
 
 <img style="width:723px; max-height:414px" src="/web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-device-log-page.png" alt="Internal page to debug Web USB"/>
+
+Early adopters who want to test their existing devices with WebUSB before they
+can update their firmware or the [Public Device Registry](https://wicg.github.io/webusb/#public-device-registry) 
+is [implemented](https://bugs.chromium.org/p/chromium/issues/detail?id=598765) 
+are not out ouf luck there thanks to a dedicated switch. To disable checking of
+the WebUSB allowed origins descriptors that implement a CORS-like mechanism to
+secure origin to device communications, run `chrome` with the
+`--disable-webusb-security` [switch](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
 
 ## What's next
 
