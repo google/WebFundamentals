@@ -35,9 +35,11 @@ recommend reading [USB in a NutShell](http://www.beyondlogic.org/usbnutshell).
 For background information about USB, check out the [official USB
 specifications](http://www.usb.org/home).
 
-The [WebUSB API](https://wicg.github.io/webusb/) draft is hmm... a
-draft. That's why the Chrome Team is actively looking for eager developers to
-give it a try and send
+The Chrome team is excited to be launching experimental features early to
+developers. The [WebUSB API](https://wicg.github.io/webusb/) is currently a
+draft which means that it is far enough along to be real and usable, but there
+is still time to make fixes that developers need. That's why the Chrome Team is
+actively looking for eager developers to give it a try and send
 [feedback on the spec](https://github.com/wicg/webusb/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EUSB).
 
@@ -69,12 +71,17 @@ Chrome aims to make it available only to [secure
 contexts](https://w3c.github.io/webappsec/specs/powerfulfeatures/#intro). This
 means you'll need to build with TLS in mind.
 
+> We care deeply about security, so you will notice that all new Web APIs
+require HTTPS. The WebUSB API is no different, and is yet another good reason
+to get HTTPS up and running on your site.
+
 During development you'll be able to interact with WebUSB through
 http://localhost by using tools like the [Chrome Dev
 Editor](https://chrome.google.com/webstore/detail/pnoffddplpippgcfjdhbmhkofpnaalpg)
 or the handy `python -m SimpleHTTPServer`, but to deploy it on a site you'll
 need to have HTTPS set up on your server. I personally enjoy [GitHub
 Pages](https://pages.github.com) for demo purposes.
+
 To add HTTPS to your server you'll need to get a TLS certificate and set
 it up. Be sure to check out [Security with HTTPS
 article](/web/fundamentals/security/)
@@ -282,7 +289,8 @@ single place.
 
 A second iteration on the WebUSB API will look at [Shared Worker](https://developer.mozilla.org/fr/docs/Web/API/SharedWorker)
 and [Service Worker](https://jakearchibald.github.io/isserviceworkerready/resources.html)
-support.
+support. Imagine for instance a security key website using the WebUSB API that
+would install a service worker to act as a middle man to authenticate users.
 
 And for your greatest pleasure, the WebUSB API will come later to Android.
 
