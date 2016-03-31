@@ -280,7 +280,7 @@ as much as feasible by the platforms.
 - Web Bluetooth Spec: [https://webbluetoothcg.github.io/web-bluetooth](https://webbluetoothcg.github.io/web-bluetooth)
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5264933985976320](https://www.chromestatus.com/feature/5264933985976320)
 - Spec Issues: [https://github.com/WebBluetoothCG/web-bluetooth/issues](https://github.com/WebBluetoothCG/web-bluetooth/issues)
-- Implementation Bugs: [http://crbug.com?q=component:Blink>Bluetooth](http://crbug.com?q=component:Blink>Bluetooth)
+- Implementation Bugs: [https://crbug.com?q=component:Blink>Bluetooth](https://crbug.com?q=component:Blink>Bluetooth)
 - BLE Peripheral Simulator App: [https://github.com/WebBluetoothCG/ble-test-peripheral-android](https://github.com/WebBluetoothCG/ble-test-peripheral-android)
 - Google+ Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 
