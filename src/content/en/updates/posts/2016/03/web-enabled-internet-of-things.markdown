@@ -60,7 +60,7 @@ of PWAs. PWAs are site that have a responsive app like user
 experience, can work offline and can be added to the device home screen.
 
 As a proof of concept, I have been building a small device using
-the Intel&reg; Edison Arduino breakout board. Teh device contains
+the Intel&reg; Edison Arduino breakout board. The device contains
 a temperature sensor (TMP36) as well as an actuator (colored LED
 cathode). The schematics for this device can be found at the end
 of this article.
@@ -154,13 +154,8 @@ Chrome finds the device nicely.
 ## Communicating with the sensor/actuator
 
 We use [Johnny-Five](http://johnny-five.io/) to talk to our board
-enhancements.
-In simple cases like this, this is not strictly easier than communicating
-with the raws input (pins) manually, but for bigger projects it can be
-a real help. Johnny-Five has a nice abstraction for talking to the TMP36
-sensor, but for some reason I could only get it to return `undefined`
-as the current temperature, so I went ahead and read the temperature
-value manually.
+enhancements. Johnny-Five has a nice abstraction for talking to the TMP36
+sensor.
 
 Below you can find the simple code for listening to temperature changes
 as well as setting the initial LED color.
@@ -173,24 +168,29 @@ var board = new five.Board({
 });
 
 board.on("ready", function() {
-  var led = new five.Led.RGB({
-      pins: {
-          red: 3,
-          green: 5,
-          blue: 6
-      },
+  // Johnny-Five's Led.RGB class can be initialized with
+  // an array of pin numbers in R, G, B order.
+  // Reference: http://johnny-five.io/api/led.rgb/#parameters
+  var led = new five.Led.RGB([ 3, 5, 6 ]);
+
+  // Johnny-Five's Thermometer class provides a built-in
+  // controller definition for the TMP36 sensor. The controller
+  // handles computing a celsius (also fahrenheit & kelvin) from
+  // a raw analog input value.
+  // Reference: http://johnny-five.io/api/thermometer/
+  var temp = new five.Thermometer({
+    controller: "TMP36",
+    pin: "A0",
+  });
+
+  temp.on("change", function() {
+    temperatureCharacteristic.valueChange(this.celsius);
   });
 
   colorCharacteristic._led = led;
   led.color(colorCharacteristic._value);
   led.intensity(30);
-
-  board.analogRead("A0", function(raw) {
-    var mV = 5 * 1000 * (raw / 1024);
-    var value = (mV / 10) - 50;
-    temperatureCharacteristic.valueChange(value);
-  });
-}
+});
 {% endhighlight %}
 
 You can ignore the above `*Characteristic` variables for now; these
