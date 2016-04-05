@@ -78,7 +78,7 @@ Chrome aims to make it available only to [secure
 contexts](https://w3c.github.io/webappsec/specs/powerfulfeatures/#intro). This
 means you'll need to build with TLS in mind.
 
-> We care deeply about security, so you will notice that all new Web APIs
+> We care deeply about security, so you will notice that new Web capabilities
 require HTTPS. The WebUSB API is no different, and is yet another good reason
 to get HTTPS up and running on your site.
 
@@ -90,9 +90,10 @@ need to have HTTPS set up on your server. I personally enjoy [GitHub
 Pages](https://pages.github.com) for demo purposes.
 
 To add HTTPS to your server you'll need to get a TLS certificate and set
-it up. Be sure to check out [Security with HTTPS
+it up. Be sure to check out the [Security with HTTPS
 article](/web/fundamentals/security/)
-for best practices there.
+for best practices there. For info, you can now get free TLS certificates with
+the new Certificate Authority [Let's Encrypt](https://letsencrypt.org/).
 
 ### User Gesture Required
 
