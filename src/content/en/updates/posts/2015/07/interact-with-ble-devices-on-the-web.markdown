@@ -60,10 +60,10 @@ Bluetooth characteristics and [receive GATT Notifications](#receive-gatt-notific
 
 Because this experimental API is a powerful new feature added to the Web,
 Google Chrome aims to make it available only to [secure
-contexts](https://w3c.github.io/webappsec/specs/powerfulfeatures/#intro). This
+contexts](https://w3c.github.io/webappsec-secure-contexts/#intro). This
 means you'll need to build with TLS in mind.
 
-> We care deeply about security, so you will notice that all new Web APIs
+> We care deeply about security, so you will notice that new Web capabilities
 require HTTPS. The Web Bluetooth API is no different, and is yet another good
 reason to get HTTPS up and running on your site.
 
@@ -75,9 +75,10 @@ need to have HTTPS set up on your server. I personally enjoy [GitHub
 Pages](https://pages.github.com) for demo purposes.
 
 To add HTTPS to your server you'll need to get a TLS certificate and set
-it up. Be sure to check out [Security with HTTPS
+it up. Be sure to check out the [Security with HTTPS
 article](/web/fundamentals/security/)
-for best practices there.
+for best practices there. For info, you can now get free TLS certificates with
+the new Certificate Authority [Let's Encrypt](https://letsencrypt.org/).
 
 ### User Gesture Required
 
@@ -105,7 +106,7 @@ Bluetooth 4.0 or later.
 
 When a website requests access to nearby devices using
 `navigator.bluetooth.requestDevice`, Google Chrome will prompt user with a
-device chooser where he can pick one device or simply cancel the request.
+device chooser where they can pick one device or simply cancel the request.
 
 <img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.png" alt="Bluetooth Device Chooser screenshot"/>
 
@@ -213,8 +214,8 @@ full Bluetooth UUID or a short 16- or 32-bit form to `service.getCharacteristic`
 ### Write to a Bluetooth Characteristic
 
 Writing to a Bluetooth GATT Characteristic is as easy as reading it. This time,
-let's reset the value of the Energy Expended field in the Heart Rate
-Control Point characteristic to 0 on a heart rate monitor device.
+let's use the Heart Rate Control Point to reset the value of the Energy
+Expended field to 0 on a heart rate monitor device.
 
 I promise there is no magic here. It's all explained in the [Heart Rate
 Control Point Characteristic
@@ -266,8 +267,8 @@ function handleNotifications(event) {
 {% endhighlight %}
 
 The dedicated [sample](https://googlechrome.github.io/samples/web-bluetooth/notifications.html)
-will show you to stop notifications with `stopNotifications()` and properly
-remove the added `characteristicvaluechanged` event listener.
+will show you to how to stop notifications with `stopNotifications()` and
+properly remove the added `characteristicvaluechanged` event listener.
 
 ## Samples, Demos & Codelabs
 
