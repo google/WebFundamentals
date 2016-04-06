@@ -7,7 +7,7 @@ from your web browser? In this article we look at how you can do
 exactly that using Physical Web, Web Bluetooth as well as Node.js,
 running on an Intel&reg; Edison Arduino breakout board."
 published_on: 2016-03-20
-updated_on: 2016-03-20
+updated_on: 2016-04-05
 authors:
   - kenchris
 tags:
@@ -25,6 +25,10 @@ The Internet of Things is on everyone's lips these days, and
 it makes tinkerers and programmers like me very excited. Nothing
 is cooler than bringing your own inventions to life and
 being able to talk to them!
+
+But IoT devices that install apps that you rarely use can be annoying, so we
+take advantage of upcoming web technologies such as the Physical
+Web and Web Bluetooth to make IoT devices more intuitive and less intrusive.
 </p>
 
 ![Client application](/web/updates/images/2016/03/web-enabled-internet-of-things/tablet-ux.png)
@@ -32,10 +36,10 @@ being able to talk to them!
 # Web and IoT, a match to be
 
 There are still a lot of hurdles to overcome before Internet
-of Things can be a huge success. One obstacle is companies that
-require people to install apps for each device that people purchase,
+of Things can be a huge success. One obstacle is companies and products
+that require people to install apps for each device they purchase,
 cluttering users' phones with a multitude of apps that
-they *rarely* use. This is something that we would like to avoid.
+they *rarely* use.
 
 For this reason, we are very excited about the
 [Physical Web](https://google.github.io/physical-web/)
@@ -53,10 +57,10 @@ use cases might be better suited for Web NFC or Web USB. For example,
 Web USB is preferred if you require a physical connection for security
 reasons.
 
-The web site can also serve as a Progressive Web Apps (PWA).
+The website can also serve as a Progressive Web App (PWA).
 We encourage readers to check out
 [Google's explanation](https://developers.google.com/web/progressive-web-apps)
-of PWAs. PWAs are site that have a responsive app like user
+of PWAs. PWAs are sites that have a responsive, app-like user
 experience, can work offline and can be added to the device home screen.
 
 As a proof of concept, I have been building a small device using
@@ -67,13 +71,13 @@ of this article.
 
 ![Breadboard](/web/updates/images/2016/03/web-enabled-internet-of-things/breadboard.jpg)
 
-The Edison is an interesting device because it can run a full Linux
+The Intel Edison is an interesting product because it can run a full Linux&#42;
 distribution. Therefore I can easily program it using
-*Node.js*. The installer lets you install the Intel&reg; XDK which
-makes it easy to get started, although you can program and upload
-to your device manually as well.
+*Node.js*. The [installer](https://software.intel.com/en-us/iot/hardware/edison/downloads)
+lets you install the Intel&#42; XDK which makes it easy to get started, although
+you can program and upload to your device manually as well.
 
-> Note: It is possible to use Brillo or Ostro instead of the
+> Note: It is possible to use Brillo&#42; or Ostro&#42; OS instead of the
 > default OS software. If you do, follow the Brillo or Ostro OS
 > documentation to get a Node.js application running on the
 > device.
@@ -91,8 +95,8 @@ that I use to talk via Bluetooth Low Energy.
 > Note: It is important to not list `noble` as a dependency in the
 > `package.json` file, as you need to use the same `noble` instance as
 > `eddystone-beacon`, for them to work together.
-
-You can find more info [here](https://github.com/don/node-eddystone-beacon/issues/30)
+>
+> You can find more info [here](https://github.com/don/node-eddystone-beacon/issues/30)
 
 The `package.json` file for the project looks like this:
 
@@ -112,19 +116,20 @@ The `package.json` file for the project looks like this:
 }
 {% endhighlight %}
 
-## Announcing the web site
+## Announcing the website
 
-The latest version (M49) of Chrome on Android supports Physical Web, which
+Beginning with version 49, Chrome on Android supports Physical Web, which
 allows Chrome to see URLs being broadcasted by devices around it.
-There are a few requirements: the sites need to be publicly
-accessible and use HTTPS.
+There are some requirements the developer must be aware of, like the need for
+the sites need to be publicly accessible and use HTTPS.
 
 The Eddystone protocol has an
 [18 byte size limit](https://github.com/google/eddystone/blob/master/eddystone-url/docs/config-service-spec.md#34-uri-data) 
 on URLs. So to make the URL for my demo app work (<https://edison-webbt.appspot.com/>),
 I need to use a URL shortener.
 
-Broadcasting the URL is quite simple. Import the required libraries and
+Broadcasting the URL is quite simple. All you need to do it import the
+required libraries and
 call a few functions. One way of doing this is by calling `advertiseUrl`
 when the BLE chip is turned on:
 
@@ -139,7 +144,7 @@ bleno.on('stateChange', function(state) {
 }
 {% endhighlight %}
 
-That really couldn't be much easier. You see in the image below that
+That really couldn't be easier. You see in the image below that
 Chrome finds the device nicely.
 
 > Note: The Physical Web enabled devices only show up on your phone
@@ -153,11 +158,11 @@ Chrome finds the device nicely.
 
 ## Communicating with the sensor/actuator
 
-We use [Johnny-Five](http://johnny-five.io/) to talk to our board
+We use [Johnny-Five](http://johnny-five.io/)&#42; to talk to our board
 enhancements. Johnny-Five has a nice abstraction for talking to the TMP36
 sensor.
 
-Below you can find the simple code for listening to temperature changes
+Below you can find the simple code for being notified of temperature changes
 as well as setting the initial LED color.
 
 {% highlight javascript %}
@@ -196,10 +201,10 @@ board.on("ready", function() {
 You can ignore the above `*Characteristic` variables for now; these
 will be defined in the later section about interfacing with Bluetooth.
 
-As you notice, I talk to
+As you might notice in the instantiation of the Themometer object, I talk to
 the TMP36 via the analog `A0` port. The voltage legs on the color
 LED cathode are connected to digital pins 3, 5 and 6, which happen
-to be the pulse-wide modulation (PWM) pins on the Edison Arduino breakout
+to be the pulse-width modulation (PWM) pins on the Edison Arduino breakout
 board.
 
 ![Edison board](/web/updates/images/2016/03/web-enabled-internet-of-things/board.jpg)
@@ -234,7 +239,7 @@ communication options are read, write, notify, or any combination thereof.
 The easiest way to do this is to create a new object and inherit from
 `bleno.Characteristic`.
 
-> Note: I am not using ES2016 here as Edison currently uses an older
+> Note: I am not using ES2016 here as the Edison SDK currently uses an older
 > version of Node.js.
 >
 > With the newly launched [Ostro Project](https://ostroproject.org)
@@ -353,7 +358,7 @@ ColorCharacteristic.prototype.onReadRequest = function(offset, callback) {
 
 To control the LED from the object, I add a
 `this._led` member which I use to store the Johnny-Five LED
-object. I also set the color of the LED to its' default
+object. I also set the color of the LED to its default
 value (white, aka `#ffffff`).
 
 {% highlight javascript %}
@@ -368,7 +373,7 @@ board.on("ready", function() {
 
 The "write" method receives a string (just like "read" sends
 a string), which can consist of a CSS color code (For example: CSS names
-like `rebeccapurple` or hex codes like `#ff00bb`). I use a node
+such as `rebeccapurple` or hex codes such as `#ff00bb`). I use a node
 module called [parse-color](https://github.com/substack/parse-color)
 to always get the hex value which is what Johnny-Five expects.
 
@@ -418,9 +423,9 @@ bleno.on('advertisingStart', function(error) {
 
 # Creating the client web app
 
-Without getting into too many defails on how the non-bluetooth
+Without getting into too many defails about how the non-bluetooth
 parts of the client app work, we can demonstrate a responsive user
-interface created in [Polymer](https://www.polymer-project.org/1.0/) 
+interface created in [Polymer](https://www.polymer-project.org/1.0/)&#42;
 as an example. The resulting app is shown below:
 
 <img alt="Client app on phone" src="/web/updates/images/2016/03/web-enabled-internet-of-things/phone-ux.png" style="width: 50%; float: left"/>
@@ -533,13 +538,13 @@ Edison is quite easy and very powerful.
 
 Using the Physical Web and Web Bluetooth, Chrome finds the
 device and allows the user to easily connect to it without installing
-applications that update from time to time even
-when the user seldom uses them.
+seldom-used applications that the user may not want, and which may update
+from time to time.
 
 ## Demo
 
 You can try the [client](https://edison-webbt.appspot.com) to get
-inspired on how can you create your own web apps to connect to
+inspired about how can you create your own web apps to connect to
 your custom Internet of Things devices.
 
 ## Source code
