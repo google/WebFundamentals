@@ -12,7 +12,6 @@ order: 2
 authors:
   - samdutton
 ---
-{% include shared/toc.liquid %}
 
 **Start up a web server on localhost**
 
