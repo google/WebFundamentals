@@ -27,7 +27,7 @@ This feature is available to try out in Chrome behind an experimental flag. It's
 * Content can overlap (enabling layout that's impossible with other methods)
 * Grid Layout is fast
 
-Here's an overview video that explains a lot about how CSS Grid Layout works ([slides are here](http://sydcss-grid.appspot.com/""):
+Here's an overview video that explains a lot about how CSS Grid Layout works ([slides are here](http://sydcss-grid.appspot.com/):
 
 {% ytvideo hy7IMGVUHps %}
 

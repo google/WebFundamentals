@@ -99,6 +99,32 @@ When it's grey (![record button off](imgs/record-off.png){:.inline}), DevTools
 is not recording. Click this button to start or stop recording, or press 
 the keyboard shortcut <kbd>cmd</kbd>+<kbd>e</kbd>.
 
+## Capture screenshots during recording {#filmstrip}
+
+The **Network** panel can capture screenshots during a page load. This feature
+is known as the **Filmstrip**. 
+
+Click on the **camera** icon to enable the Filmstrip. When the icon is grey, 
+the Filmstrip is disabled  (![filmstrip 
+disabled](imgs/filmstrip-disabled.png){:.inline}). When the icon is blue, it is
+enabled (![filmstrip enabled](imgs/filmstrip-enabled.png){:.inline}).
+
+Reload the page to capture the screenshots. The screenshots are displayed
+above the **Overview**. 
+
+![recording with filmstrip](imgs/filmstrip.png)
+
+When you hover over a screenshot, the **Timeline** displays a vertical yellow
+line indicating when the frame was captured.
+
+![filmstrip overlay on timeline](imgs/filmstrip-timeline-overlay.png)
+
+Double-click on a screenshot to view a zoomed version of the screenshot. While
+a screenshot is zoomed, use the left and right arrows of your keyboard
+to navigate between screenshots.
+
+![zoomed filmstrip screenshot](imgs/filmstrip-zoom.png)
+
 ## View DOMContentLoaded and load event information
 
 The **Network** panel highlights two events: 

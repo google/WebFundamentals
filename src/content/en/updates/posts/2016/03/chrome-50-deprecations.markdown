@@ -83,7 +83,7 @@ During the standardization process, NPN was replaced with ALPN, published as RFC
 
 **TL;DR**: To hinder cross-site scripting, we're deprecating AppCache on insecure
 origins. We expect that in Chrome 52 it will only work on origins serving
-ontent over HTTPS.
+content over HTTPS.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/UKF8cK0EwMI/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5714236168732672) &#124;
@@ -130,7 +130,7 @@ You can read more discussion of the reasoning not to spec this out
 [Chromestatus Tracker](https://www.chromestatus.com/features/6596598008119296) &#124;
 [Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=581840)
 
-The intent of the `subresource` atttribute on &lt;link&gt; was to prefetch a
+The intent of the `subresource` attribute on &lt;link&gt; was to prefetch a
 resource during a browser's idle time. After a browser downloaded a page, it
 could then pre-download resources such as other pages so that when they were
 requested by users, they could simply be retrieved from the browser cache.
@@ -277,11 +277,11 @@ widely-supported properties on `HTMLElement`.
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=463116)
 
 Offset properties have long been supported by both `HTMLElement` and
-`SVGElement`; however, Geck and Edge only support them on `HTMLElement`. To
+`SVGElement`; however, Gecko and Edge only support them on `HTMLElement`. To
 improve consistency between browsers these properties were deprecated in Chrome
 48 and are now being removed.
 
 Though equivalent properties are part of `HTMLElement`, developers looking for
 an alternative can also use
-`[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)`
+[`getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 

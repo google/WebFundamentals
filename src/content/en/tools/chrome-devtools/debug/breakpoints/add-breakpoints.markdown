@@ -196,3 +196,16 @@ DevTools console is clicked. The call stack leading up to the exception
 is displayed in the console.
 
 {% animation animations/exception-in-console.mp4 %}
+
+### Never Pause Here
+
+Sometimes conditional breakpoints will cause DevTools to break repeatedly on
+a line that isn't relevant to the issue you're debugging. You can tell
+the debugger to never pause on a specific line.
+
+1. Right-click on the line number.
+2. Select "Never pause here" from the context menu.
+
+![Never Pause Here](imgs/never-pause-here.png)
+
+You can also use this to disable `debugger` statements.

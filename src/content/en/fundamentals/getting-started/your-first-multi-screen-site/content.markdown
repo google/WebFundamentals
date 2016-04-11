@@ -134,8 +134,8 @@ In the headline, add simple text to describe the course:
 {% include_code src=_code/addheadline.html snippet=headline %}
 
 We need to also fill out the form.
-It will be a simple form that collects the users' names,
-their phone number, and a good time to call them back.
+It will be a simple form that collects the users' name, email address,
+and phone number.
 
 All forms should have labels and placeholders to make it easy for users to
 focus elements, understand what is supposed to go in them, and to also help
@@ -157,7 +157,7 @@ The Video and Information section of content will contain a little more depth.
 It will have a bulleted list of features of our products and will also contain
 a video placeholder that shows our product working for the user.
 
-{% include_code src=_code/addcontent.html snippet=section1 %}
+{% include_code src=_code/addvideo.html snippet=section1 %}
 
 Videos are often used to describe content in a more interactive manner and are
 frequently used to show a demonstration of a product or a concept.
@@ -193,7 +193,7 @@ Bennet.
 {% include_code src=_code/addimages.html snippet=images lang=html %}
 
 The images are set to scale to 100% of the width of the screen. This works
-well on devices with a narrow vieport, but less well on those with a
+well on devices with a narrow viewport, but less well on those with a
 wide viewport (like desktop).  We will manage this in the responsive design
 section.
 
@@ -218,7 +218,7 @@ about the product.
 
 Tables should only be used for tabular data, i.e, matrices of information.
 
-{% include_code src=_code/addcontent.html snippet=section3 %}
+{% include_code src=_code/addtable.html snippet=section3 %}
 
 ### Add a Footer
 
@@ -226,8 +226,7 @@ Most sites need a footer to display content such as Terms and Conditions,
 disclaimers, and other content that isn't meant to be in the main navigation
 or in the main content area of the page.
 
-In our site, we will just link to Terms and Conditions, a Contact page, and
-our social media profiles.
+In our site, we'll just create a simple placeholder footer.
 
 {% include_code src=_code/addcontent.html snippet=footer %}
 

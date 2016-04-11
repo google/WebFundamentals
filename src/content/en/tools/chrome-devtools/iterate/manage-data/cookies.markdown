@@ -1,27 +1,28 @@
 ---
 layout: shared/narrow
-title: "Inspect and Manage Your Cookies"
-description: "Inspect and manage your site's cookies by expanding the Cookies category in the Chrome DevTools Resources panel."
+title: "Inspect and Manage Cookies"
+description: "Inspect and manage the cookies on page in the Chrome DevTools 
+Resources panel."
 published_on: 2015-04-14
-updated_on: 2015-08-03
+updated_on: 2016-03-17
 order: 2
 authors:
+  - kaycebasques
   - megginkearney
 translation_priority: 0
 key-takeaways:
   cookies:
-    - "View detailed information about cookies created by an HTTP header or with JavaScript."
-    - "Clear a single cookie, cookies in a selected frame, or cookies in a specified domain."
-    - "Refresh the cookie's table."
-notes:
-  note-tbd:
-    - "TBD note."
+    - "View detailed information about a cookie, such as its name, value, 
+      domain, size, expiration date, and more."
+    - "Delete a single cookie, cookies from a selected domain, or all cookies
+      from all domains."
+    - "Refresh a cookie."
 ---
-<p class="intro">
-  Inspect and manage your site's cookies by expanding the Cookies category in the Chrome DevTools Resources panel.
-</p>
 
-![Cookies](imgs/cookies.png)
+<p class="intro">Inspect and manage your site's cookies by expanding the 
+Cookies category in the Chrome DevTools Resources panel.</p>
+
+![cookies category in resources panel](imgs/cookies.png)
 
 {% include shared/toc.liquid %}
 
@@ -29,9 +30,13 @@ notes:
 
 ## View cookies
 
-View detailed information about cookies that have been created by an HTTP header or with JavaScript. 
+To view cookies, open the **Resources** panel and then expand the **Cookies**
+category.
 
-When you expand the Cookies category, it displays a list of domains of the main document and those of all loaded frames. Selecting one of these "frame groups" displays all cookies, for all resources, for all frames in that group. There are two consequences of this grouping to be aware of:
+When you expand the **Cookies** category, you see a list of domains of the 
+main document and of all loaded frames. Selecting one of these "frame groups" 
+displays all cookies, for all resources, for all frames in that group. There 
+are two consequences of this grouping to be aware of:
 
 * Cookies from different domains may appear in the same frame group. 
 * The same cookie may appear in several frame groups.
@@ -85,14 +90,21 @@ The following fields are displayed for each cookie in the selected frame group:
 
 ## Clear cookies
 
-You can clear (delete) a single cookie, all cookies in the selected frame group, or cookies from a specific domain. Recall the same cookie may appear in more than one frame group. If the same cookie for a given domain is referenced in two frame groups, deleting all cookies for that domain will affect both groups.
+You can clear (delete) a single cookie, all cookies in the selected frame 
+group, or cookies from a specific domain. Recall the same cookie may appear 
+in more than one frame group. If the same cookie for a given domain is 
+referenced in two frame groups, deleting all cookies for that domain will 
+affect both groups.
 
 ### Clear a single cookie
 
 To clear a single cookie:
 
-* Select a cookie in the table and click the Delete button at the bottom of the panel.
-* Right-click on a cookie and select Delete.
+* Select a cookie in the table and click the **Delete** button 
+  (![delete cookie button](imgs/delete-cookie.png){:.inline}) at the 
+  bottom of the panel. 
+* Right-click on a cookie and select **Delete**. In this context "clear" and 
+  "delete" mean the same thing.
 
 ### Clear all cookies from selected frame group
 
@@ -104,23 +116,24 @@ To clear all cookies from the selected frame group:
 
 ### Clear all cookies from specific domain
 
-To clear all cookies from a specific domain:
+To clear all cookies from a specific domain, right-click on a cookie from the
+target domain and select **Clear all from "DOMAIN"**, where **DOMAIN** is the
+target domain.
 
-1. Right+click (or Ctrl+click) a cookie in the table from the target domain.
-2. From the context menu, select **Clear All from _domain_**, where
-   _domain_ is the target domain. 
-
-![Clear all cookies](imgs/clear-all-cookies.png)
+![clear cookies from domain](imgs/delete-cookies-from-domain.png)
 
 Note the following about this operation:
 
-* Only cookies with exactly the same domain name are removed; sub- and top-level domains are unaffected. 
-* It only works on domains visible in the cookies table.
+* Only cookies with exactly the same domain name are removed; sub- and 
+  top-level domains are unaffected. 
+* This operation only works on domains visible in the cookies table.
 
 ## Refresh page's cookies
 
 You can also refresh the table to reflect any changes to the page's cookies.
 
-To refresh the cookies table, click the refresh button ![Refresh button](imgs/refresh.png){:.inline} at the bottom of the Resources panel. 
+To refresh the cookies table, click the refresh button (![Refresh 
+button](imgs/refresh.png){:.inline}) at the bottom of the Resources panel, or
+right-click on the table and select **Refresh**.
 
 

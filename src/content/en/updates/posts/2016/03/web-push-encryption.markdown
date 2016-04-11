@@ -13,7 +13,7 @@ tags:
 ---
 Prior to Chrome 50, [push messages](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web) 
 could not contain any payload data. When the ['push' event](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent) 
-fired in your service worker, all you knew was the the server was trying to
+fired in your service worker, all you knew was that the server was trying to
 tell you something, but not what it might be. You then had to make a follow up
 request to the server and obtain the details of the notification to show, which
 might fail in poor network conditions.
@@ -52,7 +52,9 @@ change anything. The subscription will now have some extra data in the keys prop
 
 {% highlight javascript %}
 > JSON.stringify(subscription)
-{"endpoint":"https://android.googleapis.com/gcm/send/f1LsxkKphfQ:APA91bFUx7ja4BK4JVrNgVjpg1cs9lGSGI6IMNL4mQ3Xe6mDGxvt_C_gItKYJI9CAx5i_Ss6cmDxdWZoLyhS2RJhkcv7LeE6hkiOsK6oBzbyifvKCdUYU7ADIRBiYNxIVpLIYeZ8kq_A","keys":{"p256dh":"BLc4xRzKlKORKWlbdgFaBrrPK3ydWAHo4M0gs0i1oEKgPpWC5cW8OCzVrOQRv-1npXRWk8udnW3oYhIO4475rds=","auth":"5I2Bu2oKdyy9CwL8QVF0NQ=="}}
+{"endpoint":"https://android.googleapis.com/gcm/send/f1LsxkKphfQ:APA91bFUx7ja4BK4JVrNgVjpg1cs9lGSGI6IMNL4mQ3Xe6mDGxvt_C_gItKYJI9CAx5i_Ss6cmDxdWZoLyhS2RJhkcv7LeE6hkiOsK6oBzbyifvKCdUYU7ADIRBiYNxIVpLIYeZ8kq_A",
+"keys":{"p256dh":"BLc4xRzKlKORKWlbdgFaBrrPK3ydWAHo4M0gs0i1oEKgPpWC5cW8OCzVrOQRv-1npXRWk8udnW3oYhIO4475rds=",
+"auth":"5I2Bu2oKdyy9CwL8QVF0NQ=="}}
 {% endhighlight %}
 
 The two values `p256dh` and `auth` are encoded in a variant of Base64 that I'll
@@ -195,7 +197,7 @@ in bytes of the desired output key.
 // Simplified HKDF, returning keys up to 32 bytes long
 function hkdf(salt, ikm, info, length) {
   if (length > 32) {
-    throw new Error(`Cannot return keys of more than 32 bytes, ${length} requested`);
+    throw new Error('Cannot return keys of more than 32 bytes, ${length} requested');
   }
 
   // Extract
@@ -365,7 +367,7 @@ Crypto-Key: dh=<PUBLICKEY>
 Content-Encoding: aesgcm
 {% endhighlight %}
 
-&lt;SALT&gt; and &lt;PUBLICKEY&gt; are the salt and server public key used in the
+`<SALT>` and `<PUBLICKEY>` are the salt and server public key used in the
 encryption, encoded as URL-safe Base64.
 
 When using the Web Push protocol, the body of the POST is then just the raw 
@@ -375,8 +377,8 @@ existing JSON payload as follows.
 
 {% highlight javascript %}
 {
-    “registration_ids”: [ … ],
-    “raw_data”: “BIXzEKOFquzVlr/1tS1bhmobZ…”
+    "registration_ids": [ "…" ],
+    "raw_data": "BIXzEKOFquzVlr/1tS1bhmobZ…"
 }
 {% endhighlight %}
 
@@ -385,11 +387,10 @@ representation of the encrypted message.
 
 # Debugging / Verifier
 
-Peter Beverloo, one of the Chrome engineers that implemented the feature (as
+Peter Beverloo, one of the Chrome engineers who implemented the feature (as
 well as being one of the people who worked on the spec), has 
 [created a verifier](https://tests.peter.sh/push-encryption-verifier/).
 
 By getting your code to output each of the intermediate values of the
 encryption you can paste them into the verifier and check that you are on the
 right track.
-

@@ -60,9 +60,9 @@ determine whether they’re on a browser that supports the new
 `DeviceOrientationAbsoluteEvent` event:
 
 {% highlight javascript %}
-if (window.hasOwnProperty('ondeviceorientationabsolute')) {
+if ('ondeviceorientationabsolute' in window) {
   // We can listen for the new deviceorientationabsolute event.
-} else if (window.hasOwnProperty('ondeviceorientation')) {
+} else if ('ondeviceorientation' in window) {
   // We can still listen for deviceorientation events.
   // The `absolute` property of the event tells us whether
   // or not the degrees are absolute.

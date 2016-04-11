@@ -2,169 +2,6 @@
 <html>
   <head>
     <title>CS256: Mobile Web Development - Adding a video</title>
-      
-      <style>
-        body {
-          margin: 0;
-          padding: 0;
-        }
-
-        /* // [START styles] */
-        #headline {
-          padding: 0.8em;
-          color: white;
-          font-family: Roboto, sans-serif;
-          background-image: url(hero.jpg);
-          background-size: cover;
-        }
-        /* // [END styles] */
-
-        #headline header h1 {
-          font-family: Roboto, sans-serif;
-          font-weight: 100;
-          font-size: 60px;
-          line-height: 1em;
-          margin-bottom: 0;
-        }
-          
-        #headline header p {
-          font-weight: 200;
-          font-size: 30px;
-          margin-top: 5px;
-        }
-
-        #headline #blurb {
-          font-weight: 200;
-          font-size: 18px;
-        }
-
-        #headline #register {
-          background-color: #39b1a4;
-          padding: 1em;
-        }
-
-        #headline #register h2 {
-          padding: 0;
-          margin: 0;
-        }
-
-        #headline #register label {
-          font-size: 1.2em;
-          padding-top: 12px;
-          display: block;
-        }
-
-        #headline #register input {
-          width: 100%;
-          font-size: 18px;
-          padding: 10px;
-          box-sizing: border-box;
-        }
-
-        #headline #register input[type=submit] {
-          background-color: hsl(8, 70%, 54%);
-          color: white;
-          margin-top: 20px;
-          padding: 10px;
-          border: none;
-          box-sizing: border-box;
-          font-size: 18px;
-        }
-
-        #section1, #section2, #section3 {
-          padding: 20px;
-        }
-
-        #section1 h2, #section2 h2, #section3 h2  {
-          margin-top: 0;
-          font-size: 24px
-        }
-
-        #section1 {
-          background-color: white;
-          font-family: Roboto, sans-serif;
-          font-weight: 100;
-          font-size: 18px;
-        }
-
-        #section1 h2 {
-          font-weight: 300;
-          text-align: center;
-          margin-bottom: 0px;
-          margin-top: 20px;
-        }
-
-        #section1 h2 + p {
-          text-align: center;
-        }
-
-        #section1 video {
-          width: 100%;
-        }
-
-        #section2 {
-          background-color: #e9e9e9;
-          font-family: Roboto, sans-serif;
-          font-weight: 100;
-          font-size: 18px;
-        }
-
-        #section2 h2 {
-          font-weight: 300;
-          text-align: center;
-          margin-bottom: 0px;
-          margin-top: 20px;
-        }
-
-        #section2 h2 + p {
-          text-align: center;
-        }
-
-        #section2 div {
-          text-align: center;
-        }
-
-        #section2 div img{
-          width: 100%
-        }
-
-        #section3 {
-          background-color: #f5f5f5;
-          font-family: Roboto, sans-serif;
-          font-weight: 100;
-          text-align: center;
-          margin: auto;
-        }
-
-        #section3 h2 {
-          font-weight: 300;
-          text-align: center;
-          margin-bottom: 0px;
-          margin-top: 20px;
-        }
-
-        #section3 h2 + p {
-          text-align: center;
-        }
-
-        footer {
-          font-family: Roboto, sans-serif;
-          font-weight: 300;
-          text-align: center;
-          background-color: hsl(8, 70%, 54%);
-          color: white;
-          padding-bottom: 20px;
-          padding-top: 20px;
-        }
-
-        thead {
-          font-weight: bold;
-        }
-
-        tbody {
-          text-align: center;
-        }
-      </style>
   </head>
   <body>   
     <!-- // [START headline] -->
@@ -199,6 +36,7 @@
       <br>
     </div>
     
+    <!-- // [START section1] -->    
     <div id="section1">
       <h2>What will I learn?</h2>
       <p>After completing this class, you'll have built a web application with a first-class mobile experience.</p>
@@ -208,7 +46,7 @@
         <li>use the tools you need to test performance</li>
         <li>apply your knowledge to your own projects in the future</li>
       </ul>
-      <!-- // [START video] -->
+<!-- // [START video] -->
       <video controls poster="udacity.png">
         <source src="udacity.webm" type="video/webm"></source>
         <source src="udacity.mov" type="video/mov"></source>
@@ -216,10 +54,10 @@
            <a href="udacity.mov">Download the video</a>.
         </p>
       </video>
-      <!-- // [END video] -->
+<!-- // [END video] -->
       <br>
     </div>
-
+    <!-- // [END section1] -->
    
     <div id="section2">
       

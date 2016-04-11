@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow-pages-list
 title: "Improve User Experiences with a Web App Manifest"
-description: "The web app manifest is a JSON file that gives you the ability to control how your app appears to the user in areas where they would expect to see apps (for example the mobile home screen), direct what the user can launch, and define its appearance at launch."
+description: "The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch."
 published_on: 2016-02-12
 updated_on: 2016-02-12
 authors:

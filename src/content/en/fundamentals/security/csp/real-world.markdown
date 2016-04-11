@@ -56,10 +56,9 @@ You'll be all set with `script-src https://platform.twitter.com; child-src
 https://platform.twitter.com`, as long as you move the JavaScript snippet
 Twitter provides out into an external JavaScript file.
 
-* Other platforms will have similar requirements, and can be addressed
-* similarly. We suggest just setting a `default-src` of `'none'`, and watching
-* your console to determine which resources you'll need to enable to make the
-* widgets work.
+* Other platforms will have similar requirements, and can be addressed similarly. 
+We suggest just setting a `default-src` of `'none'`, and watching your console to 
+determine which resources you'll need to enable to make the widgets work.
 
 Including multiple widgets is straightforward: simply combine the policy
 directives, remembering to merge all resources of a single type into a single

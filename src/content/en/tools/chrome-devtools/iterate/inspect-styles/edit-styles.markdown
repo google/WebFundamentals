@@ -142,6 +142,22 @@ There are two ways to set these dynamic states on an element:
 
   ![:hov pane](imgs/hov.png)
 
+## Add background-color or color to a style rule
+
+The **Styles** pane provides a shortcut for adding `color` and
+`background-color` declarations to a style rule.
+
+In the bottom-right of the style rule, there is a three-dot icon. You need 
+to hover over the style rule in order to see it.
+
+![three-dots icon in rule set](imgs/rule-set-three-dots-icon.png)
+
+Hover over this icon to reveal buttons for adding a `color` declaration 
+(![add color declaration](imgs/add-color.png){:.inline})
+or a `background-color` declaration (![add background-color 
+declaration](imgs/add-background-color.png){:.inline}). Click on one of these
+buttons to add the declaration to the style rule. 
+
 ## Modify colors with the Color Picker {#color-picker}
 
 To open the **Color Picker**, find a CSS declaration in the **Styles** pane 
@@ -199,6 +215,35 @@ to the **trash can** icon to delete it. Right-click on a color and select
 all of the colors to the right of the currently selected color. Right-click
 anywhere within the color palette region and select **Clear template** to 
 delete all of the template's colors.
+
+## View and edit CSS custom properties (CSS variables) {#custom-properties}
+
+You can view and edit declarations that define or use [CSS custom 
+properties][intro] (informally known as CSS variables) just like any other 
+declaration. 
+
+Custom properties are usually [defined][def] in the `:root` 
+selector. To view a custom property defined in `:root`, inspect the `html` 
+element.
+
+![custom property defined on :root](imgs/css-var-defined-on-root.png)
+
+Custom properties do not have to be defined on the `:root` selector, however.
+If you defined it elsewhere, inspect the element on which it was defined to
+view the definition.
+
+You can view and edit declaration values that use custom properties just
+like any other declaration value. 
+
+If you see a declaration value like `var(--main-color)` as in the screenshot
+below, it means that the declaration is using custom properties. These
+values can be edited like any other declaration value. Currently there is no
+way to jump to the custom property definition.
+
+![using a custom property](imgs/css-var-in-use.png)
+
+[intro]: /web/updates/2016/02/css-variables-why-should-you-care
+[def]: https://drafts.csswg.org/css-variables/#defining-variables
 
 ## Edit Sass, Less or Stylus
 
