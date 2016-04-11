@@ -150,7 +150,7 @@ on a button for too long. You can prevent this from happening using the
 user-select: none;
 {% endhighlight %}
 
-{% include shared/remember.liquid title="Remember" list=page.remember.disable-user-select %}
+{% include shared/remember.liquid title="Remember" list=page.notes.disable-user-select %}
 
 ## Reference
 
