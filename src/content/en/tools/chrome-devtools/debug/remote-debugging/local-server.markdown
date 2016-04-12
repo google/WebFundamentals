@@ -1,147 +1,133 @@
 ---
 layout: shared/narrow
-title: "Remote Access to Your Local Site"
-description: "The simplest way to test on a real device is to run your site in a web server and point your device to the IP address."
+title: "Access Local Servers"
+description: "Host a site on a development machine web server, and then access
+the content from an Android device."
 authors:
+  - kaycebasques
   - megginkearney
 published_on: 2015-04-14
-updated_on: 2015-04-14
+updated_on: 2016-04-08
 order: 2
 translation_priority: 1
 key-takeaways:
   local-server:
-    - "Use port forwarding when your device can't access your development server's network."
-    - "To reach content on a customized domain, use port forwarding in combination with a proxy server."
+    - Port forwarding enables you to view content from your development 
+      machine's web server on your Android device.
+    - If your web server is using a custom domain, you can set up your 
+      Android device to access the content at that domain with custom domain
+      mapping. 
 ---
 
-<p class="intro">
-  The simplest way to test on a real device is to run your site in a web server and point your device to the IP address.
-</p>
+<p class="intro">Host a site on a development machine web server, then 
+access the content from an Android device.</p>
+
+With a USB cable and Chrome DevTools, you can run a site from a development
+machine and then view the site on an Android device. 
 
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.local-server %}
 
-## Open local version in device browser
+## Set up port forwarding {#port-forwarding}
 
-Run your site in a web server, find the IP address of your computer, and then point your mobile devices to your computer's IP address.
-
-### Find IP address
-
-Every OS has a different way of finding out your IP address. If you spot
-the network panel on your computer, that will be the easiest way to find your
-local IP address.  
-
-OS X and Ubuntu users can always run `ifconfig` from a command prompt; Windows
-users can run `ipconfig` from the command prompt.
-
-### Simple way to run web server
-
-Need a simple way to run a web server locally?
-
-To start the server, run:
-
-{% highlight bash %}
-python -m SimpleHTTPServer
-{% endhighlight %}
-
-## Use port-forwarding when site and device on different networks
-
-Your phone can't always reach the content on your development server. They might be on different networks. Moreover, you might be developing on a restricted corporate network. Use port forwarding when your development server and device are on different networks.
-
-Port forwarding on Chrome for Android makes it easy to test your development site on mobile. It works by creating a listening TCP port on your mobile device that maps to a particular TCP port on your development machine. Traffic between these ports travels through USB, so the connection doesn't depend on your network configuration.
+Port forwarding enables your Android device to access content that's being
+hosted on your development machine's web server. Port forwarding works by
+creating a listening TCP port on your Android device that maps to a TCP port
+on your development machine. Traffic between the ports travel through the USB
+connection between your Android device and development machine, so
+the connection doesn't depend on your network configuration.
 
 To enable port forwarding:
 
-1. Open **chrome://inspect** on your development machine.
-2. Click **Port Forwarding**. The port forwarding settings display. ![port forwarding button location](imgs/chrome-port-forwarding.png)
-3. In the **Device port** field, enter the port number you want your Android device to listen on. (The default port is 8080.)
-4. In the **Host** field, enter the IP address (or hostname) and port number where your web application is running. This address can be any local location accessible from your development machine. Currently, port numbers must be between 1024 and 65535 (inclusive).
-5. Check **Enable port forwarding**.
-6. Click **Done**. ![port forwarding dialog](imgs/port-forwarding-dialog.png)
+1. Set up [remote debugging](remote-debugging) between your development machine
+   and your Android device. When you're finished, you should see your Android
+   device in the left-hand menu of the **Inspect Devices** dialog and a 
+   **Connected** status indicator. 
+1. In the **Inspect Devices** dialog in DevTools, enable **Port forwarding**.
+1. Click **Add rule**.
 
-The port status indicators on **chrome://inspect** are green when port forwarding is successful.
+   ![adding a port forwarding rule](imgs/add-rule.png)
+1. In the **Device port** textfield on the left, enter the `localhost` port 
+   number from which you want to be able to access the site on your Android 
+   device. For example, if you wanted to access the site from `localhost:5000` 
+   you would enter `5000`.
+1. In the **Local address** textfield on the right, enter the IP address or 
+   hostname on which your site is running on your development machine's web
+   server, followed by the port number. For example, if your site is running 
+   on `localhost:7331` you would enter `localhost:7331`. 
+1. Click **Add**.
 
-![viewing local content on mobile](imgs/port-forwarding-on-device.png)
+Port forwarding is now set up. You can see a status indicator of the port
+forward on the device's tab within the **Inspect Devices** dialog.
 
-Now you can open a new Chrome for Android tab and view the content of your local server on your device.
+![port forwarding status](imgs/port-forwarding-status.png)
 
-## Use virtual host mapping for customized local domains
+To view the content, open up Chrome on your Android device and go to 
+the `localhost` port that you specified in the **Device port** field. For 
+example, if you entered `5000` in the field, then you would go to 
+`localhost:5000`. 
 
-Port forwarding works great when you're developing on `localhost`. But there are cases when you might be using a customized local domain.
+## Map to custom local domains {#custom-domains}
 
-For example, suppose you're using a third party JavaScript SDK that only works on whitelisted domains. So you added an entry, such as `127.0.0.1 production.com`, to your [hosts file](https://en.wikipedia.org/wiki/Hosts_(file)). Or maybe you configured a customized domain using virtual hosts on your web server ([MAMP](http://www.mamp.info/en/)).
+Custom domain mapping enables you to view content on an Android device
+from a web server on your development machine that is using a custom domain.
 
-If you want your phone to reach content on your customized domain, you can use port forwarding in combination with a proxy server. The proxy maps requests from your device to the correct location on the host machine.
+For example, suppose that your site uses a third-party JavaScript library
+that only works on the whitelisted domain `chrome.devtools`. So, you create
+an entry in your `hosts` file on your development machine to map this domain 
+to `localhost` (i.e. `127.0.0.1 chrome.devtools`). After setting up custom 
+domain mapping and port forwarding, you'll be able to view the site on your
+Android device at the URL `chrome.devtools`. 
 
-### Set up port forwarding to a proxy
+### Set up port forwarding to proxy server
 
-Virtual host mapping requires you to run a proxy server on the host machine. All requests from your Android device will be forwarded to the proxy.
+To map a custom domain you must run a proxy server on your development 
+machine. Examples of proxy servers are [Charles][charles], [Squid][squid], 
+and [Fiddler][fiddler].
 
 To set up port forwarding to a proxy:
 
-1. On the host machine, install proxy software such as [Charles Proxy](http://www.charlesproxy.com/) (free trial available) or [Squid](http://www.squid-cache.org/).
-2. Run the proxy server and note the port that it's using. **Note**: The proxy server and your development server must be running on different ports.
-3. In a Chrome browser, navigate to **chrome://inspect**.
-4. Click **Port forwarding**. The port forwarding settings display. ![port forwarding button location](imgs/chrome-virtual-host-mapping.png)
-5. In the **Device port** field, enter the port number that you want your Android device to listen on. Use a port that Android allows, such as `9000`.
-6. In the **Host** field, enter `localhost:xxxx`, where `xxxx` is the port your proxy is running on.
-7. Check **Enable port forwarding**.
-8. Click **Done**. ![port forwarding dialog](imgs/port-forward-to-proxy.png) The proxy on the host machine is set up to make requests on behalf of your Android device.
+1. Run the proxy server and note the port that it's using. **Note**: The 
+   proxy server and your web server must run on different ports. 
+1. Set up [port forwarding](#port-forwarding) to your Android device. For the
+   **local address** field, enter `localhost:` followed by the port that your
+   proxy server is running on. For example, if it's running on port `8000`,
+   then you would enter `localhost:8000`. In the **device port** field enter 
+   the number that you want your Android device to listen on, such as `3333`.
+
+[charles]: http://www.charlesproxy.com/
+[squid]: http://www.squid-cache.org/
+[fiddler]: http://www.telerik.com/fiddler
 
 ### Configure proxy settings on your device
 
-Your Android device needs to communicate with the proxy on the host machine.
+Next, you need to configure your Android device to communicate with the 
+proxy server. 
 
-To configure the proxy settings on your device:
-
-1. Select **Settings > Wi-Fi**.
-2. Long-press the network that you are currently connected to.
-    **Note**: Proxy settings apply per network.
+1. On your Android device go to **Settings** > **Wi-Fi**.
+1. Long-press the name of the network that you are currently connected to. 
+   **Note**: Proxy settings apply per network.
 3. Tap **Modify network**.
-4. Select **Advanced options**. The proxy settings display. ![phone proxy settings](imgs/phone-proxy-settings.png)
+4. Tap **Advanced options**. The proxy settings display. 
 5. Tap the **Proxy** menu and select **Manual**.
-6. In the **Proxy hostname** field, enter `localhost`.
-7. In the **Proxy port** field, enter `9000`.
+6. For the **Proxy hostname** field, enter `localhost`.
+7. For the **Proxy port** field, enter the port number that you entered for
+   **device port** in the previous section. 
 8. Tap **Save**.
 
-With these settings, your device forwards all of its requests to the proxy on the host machine. The proxy makes requests on behalf of your device, so requests to your customized local domain are properly resolved.
+With these settings, your device forwards all of its requests to the proxy on 
+your development machine. The proxy makes requests on behalf of your device, 
+so requests to your customized local domain are properly resolved.
 
-Now you can load local domains on Chrome for Android just as you would on the host machine.
+Now you can access custom domains on your Android device Android just as you 
+would on the development machine. 
 
-![virtual host mapping](imgs/virtual-host-mapping.png)
+If your web server is running off of a non-standard port,
+remember to specify the port when requesting the content from your Android
+device. For example, if your web server is using the custom domain 
+`chrome.devtools` on port `7331`, when you view the site from your Android
+device you should be using the URL `chrome.devtools:7331`. 
 
-**Tip**: To resume normal browsing, remember to revert the proxy settings on your device after you disconnect from the host.
-
-## How to test site on lots of devices
-
-Most likely one device isn't enough.
-Eventually you will need to test how your site behaves
-on different types of devices.
-
-### Synchronize testing across devices.
-
-If you have a large number of devices to test against, you may find it
-overwhelming to do a basic test across all of the devices. [Browser
-Sync](http://www.browsersync.io/) can help with this by synchronising
-interactions across all of your devices. This includes scrolling, clicking and
-form entry.
-
-{% ytvideo RKKBIs_3svM %}
-
-BrowserSync is enabled out of the box with [Web Starter
-Kit](/web/tools/starter-kit/), so try it out there or
-check out the gulp file for how to integrate it in your own workflow.
-
-If you aren't using Gulp, head on over to the [BrowserSync
-site](http://www.browsersync.io/) for alternative approaches to using it.
-
-If interested in running unit tests across browsers/devices, you’ll need a test runner that can run your test suite on these platforms. Some options for this include [Karma](https://karma-runner.github.io/0.12/index.html) and [Yeti](http://www.yuiblog.com/blog/2010/08/25/introducing-yeti-the-yui-easy-testing-interface/).
-
-### Help, I need lots of devices!
-
-You might get by with testing your site on one or two personal devices, but if you really want to be sure your site works on a large user base, you are going to need a lot of devices.
-If you've got the budget, you should definitely invest in a device collection.
-
-If you don't have the budget, or you want access to any device, [Device Anywhere](http://www.keynote.com/solutions/testing/mobile-testing) lets you control any number of real devices remotely,
-without having to actually own those devices.
+**Tip**: To resume normal browsing, remember to revert the proxy settings on 
+your Android device after you disconnect from the development machine.
