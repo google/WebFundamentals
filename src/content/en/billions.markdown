@@ -19,7 +19,7 @@ translation_priority: 0
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--9-col wf-showcase__title">
       <h2>Build for billions</h2>
-      <p><strong>The next billion people coming online will be diverse in every respect: their physical location, cultural&nnbsp;experience, computer expertise, connectivity and the kind of devices they access.</strong></p>
+      <p><strong>The next billion people coming online will be diverse in every respect: their physical location, cultural&nbsp;experience, computer expertise, connectivity and the kind of devices they access.</strong></p>
       <p><strong>They will virtually all be mobile users.</strong></p>
       <p>This presents unique challenges for web developers who must abandon the limited "mobile first" approach in favor of a comprehensive "mobile only" strategy.</p>
       <p>You can address these challenges by focusing on specific areas.</p>
