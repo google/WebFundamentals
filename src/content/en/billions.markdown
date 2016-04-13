@@ -19,7 +19,7 @@ translation_priority: 0
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--9-col wf-showcase__title">
       <h2>Build for billions</h2>
-      <p><strong>The next billion people coming online will be diverse in every respect: physical location, cultural experience, computer expertise, connectivity and device types.</strong></p>
+      <p><strong>The next billion people coming online will be diverse in every respect: their physical location, cultural&nnbsp;experience, computer expertise, connectivity and the kind of devices they access.</strong></p>
       <p><strong>They will virtually all be mobile users.</strong></p>
       <p>This presents unique challenges for web developers who must abandon the limited "mobile first" approach in favor of a comprehensive "mobile only" strategy.</p>
       <p>You can address these challenges by focusing on specific areas.</p>
@@ -65,7 +65,7 @@ translation_priority: 0
       </ul>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <a href="https://blog.jana.com/2015/01/26/the-data-trap/" title="Cisco Visual Networking Index: Global Mobile Data Traffic Forecast Update, 2015–2020"><img src="/web/imgs/billions/cost.jpg" alt="Histogram showing the numbers of hours of minimum wage work to pay for a 500MB mobile data plan"></a>
+      <a href="https://blog.jana.com/2015/01/26/the-data-trap/" title="Jana Blog: The data trap"><img src="/web/imgs/billions/cost.jpg" alt="Histogram showing the numbers of hours of minimum wage work to pay for a 500MB mobile data plan"></a>
     </div>
   </div>
 </div>
@@ -93,7 +93,7 @@ translation_priority: 0
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
       <h3>Optimize for device capability</h3>
-      <p>Low spec is the norm. Globally, most new internet users have low cost devices with basic hardware: single-core processors, 4" screens, limited memory and limited storage.</p>
+      <p>Low spec is the norm. Globally, most new internet users have low-cost devices with basic hardware: single-core processors, 4" screens, limited memory and limited storage.</p>
       <ul>
         <li><a href=".">Cater for very small viewports</a></li>
         <li><a href=".">Design for limited memory and CPU: reduce and optimize JavaScript, images and media</a></li>
@@ -113,7 +113,7 @@ translation_priority: 0
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Transactions &amp; monetization: think global</h3>
-      <p>Payment systems are inaccessible for many people on the web. Many users globally <a href="http://datatopics.worldbank.org/financialinclusion/country/india" title="World Bank report for India">don't have bank accounts and don't use credit cards</a> (<a href="https://www.economist.com/news/united-states/21663262-why-low-income-americans-often-have-pay-more-its-expensive-be-poor" title="Economist article about poverty in the US"> including 8% of US households</a>). Many payment systems don't work well on small viewports or with unreliable connectivity.</p>
+      <p>Payment systems are inaccessible for many people on the web. Many users globally <a href="http://datatopics.worldbank.org/financialinclusion/country/india" title="World Bank report for India">don't have bank accounts and don't use credit cards</a> — <a href="https://www.economist.com/news/united-states/21663262-why-low-income-americans-often-have-pay-more-its-expensive-be-poor" title="Economist article about poverty in the US"> including 8% of US households</a>. Many payment systems don't work well on small viewports or with unreliable connectivity.</p>
       <ul>
         <li><a href=".">Design for multiple monetization options — including local banking, net banking and Cash On Delivery (COD)</a></li>
         <li><a href=".">Streamline forms to cope with small screens</a></li>
@@ -151,7 +151,7 @@ translation_priority: 0
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Plan for localization</h3>
-      <p>Many websites are only published in English, but English is not the first language of most people online. Only <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers" title="">5.52% of the world's population are native English speakers</a> — and US or European cultural conventions may not be familiar or intuitive. Instructions or prompts that are succinct and compact in English may be verbose and obtrusive when viewed in other languages.</p>
+      <p>Many websites are only published in English, but English is not the first language of most people online. Only <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers" title="">5.52% of the world's population are native English speakers</a> and US or European cultural conventions may not be familiar or intuitive. Instructions or prompts that are succinct and compact in English may be verbose and obtrusive when viewed in other languages.</p>
       <ul>
         <li><a href=".">Design your site to enable localization</a></li>
         <li><a href=".">Store text in string tables</a></li>
