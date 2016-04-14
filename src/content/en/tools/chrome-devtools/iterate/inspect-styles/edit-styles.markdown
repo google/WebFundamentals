@@ -76,6 +76,19 @@ given weights to determine which rules should take precedence when theyoverlap w
 CSS properties from their containing elements (ancestors). For more,
 see [W3C documentation on cascading](http://www.w3.org/TR/CSS2/cascade.html).
 
+## Inspect elements affected by a selector
+
+Hover your mouse over a CSS selector in the **Styles** pane to view all
+elements that are affected by the selector. For example, in the screenshot 
+below the mouse is hovering over the selector 
+`.wf-tools-guide__section-link a`. In the live page you can see all of the 
+`<a>` elements that are affected by the selector. 
+
+![viewing elements affected by selector](imgs/selector-hover.png)
+
+**Note**: this feature only highlights elements in the viewport; it's possible 
+that other elements outside of the viewport are also affected by the selector. 
+
 ## Add, enable, and disable CSS classes {#classes}
 
 Click on the **.cls** button to view all of the CSS classes associated to the
