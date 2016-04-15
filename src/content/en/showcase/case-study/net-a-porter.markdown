@@ -13,6 +13,8 @@ showcase:
   link: https://www.net-a-porter.com/
 ---
 
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="pdfs/net-a-porter.pdf">Download PDF Case study</a>
+
 Launched in June 2000, NET-A-PORTER is a global leader in online 
 luxury fashion, featuring collections from over 350 of the world’s most 
 sought-after designers. 
