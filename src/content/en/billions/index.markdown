@@ -1,12 +1,21 @@
 ---
-layout: shared/root
-published: false
+layout: shared/wide
+title: "Building for Billions"
+authors:
+  - samdutton
 description: "Building Web Apps for the Next Billion Users"
-title: "Building Web Apps for the Next Billion Users"
+published: false
 translation_priority: 0
 ---
 
 <style>
+.mdl-cell h3 {
+  margin-top: 0;
+}
+.mdl-cell img {
+  position: relative;
+  top: 7px;
+}
 .wf-landing-section {
     padding-top: 20px;
 }
@@ -18,7 +27,7 @@ translation_priority: 0
 <div class="wf-subheading">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--9-col wf-showcase__title">
-      <h2>Build for billions</h2>
+      <h2>Building Web Apps for the Next Billion Users</h2>
       <p><strong>The next billion people coming online will be diverse in every respect: their physical location, cultural&nbsp;experience, computer expertise, connectivity and the kind of devices they access.</strong></p>
       <p><strong>They will virtually all be mobile users.</strong></p>
       <p>This presents unique challenges for web developers who must abandon the limited "mobile first" approach in favor of a comprehensive "mobile only" strategy.</p>
@@ -29,6 +38,7 @@ translation_priority: 0
 
 {% include page-structure/site-promo-banner.liquid %}
 
+<!-- item 1 -->
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
@@ -38,9 +48,9 @@ translation_priority: 0
       <h3>Design for variable connectivity</h3>
       <p>For many people accessing the web, bandwidth is low and connectivity is intermittent. <a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/mobile-white-paper-c11-520862.html" title="Cisco Visual Networking Index: Global Mobile Data Traffic Forecast Update, 2015–2020">Most people online still have 2G connections</a> or '3G' that downgrades to 2G — and even by 2020 more than 10% of users will still be on 2G. Many smartphones are used offline and users regularly turn on airplane mode to avoid data consumption.</p>
       <ul>
-        <li><a href=".">Understand what the flakey/2G experience feels like</a></li>
+        <li><a href=".">Understand what poor connectivity feels like</a></li>
         <li><a href=".">Handle unreliable connectivity and 'lie-fi'</a></li>
-        <li><a href=".">Design for offline</a></li>
+        <li><a href="https://developers.google.com/web/fundamentals/getting-started/your-first-offline-web-app/?hl=en">Design for offline</a></li>
         <li><a href=".">Reduce the number of resource requests</a></li>
         <li><a href=".">Make installs and updates as small and fast as possible</a></li>
         <li><a href=".">Reduce page load failures caused by connectivity problems</a></li>
@@ -50,6 +60,7 @@ translation_priority: 0
 </div>
 
 
+<!-- item 2 -->
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
@@ -70,6 +81,7 @@ translation_priority: 0
   </div>
 </div>
 
+<!-- item 3 -->
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
@@ -89,6 +101,7 @@ translation_priority: 0
   </div>
 </div>
 
+<!-- item 4 -->
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
@@ -106,6 +119,7 @@ translation_priority: 0
   </div>
 </div>
 
+<!-- item 5 -->
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
@@ -124,7 +138,7 @@ translation_priority: 0
   </div>
 </div>
 
-
+<!-- item 6 -->
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
@@ -144,6 +158,7 @@ translation_priority: 0
   </div>
 </div>
 
+<!-- item 7 -->
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
@@ -151,7 +166,7 @@ translation_priority: 0
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Plan for localization</h3>
-      <p>Many websites are only published in English, but English is not the first language of most people online. Only <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers" title="">5.52% of the world's population are native English speakers</a> and US or European cultural conventions may not be familiar or intuitive. Instructions or prompts that are succinct and compact in English may be verbose and obtrusive when viewed in other languages.</p>
+      <p>Many websites are only published in English, but English is not the first language of most people online. Only <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers" title="Wikipedia list of languages by number of native speakers, graphic by User:Jroehl">5.52% of the world's population are native English speakers</a> and US or European cultural conventions may not be familiar or intuitive. Instructions or prompts that are succinct and compact in English may be verbose and obtrusive when viewed in other languages.</p>
       <ul>
         <li><a href=".">Design your site to enable localization</a></li>
         <li><a href=".">Store text in string tables</a></li>

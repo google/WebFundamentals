@@ -197,6 +197,7 @@ module Jekyll
         when 'resources'
         when 'tools'
         when 'showcase'
+        when 'billions'
           # NOOP
         when 'fundamentals'
           site.pages << WFFeedPage.new(site, id, site.data['curr_lang'], pagesToInclude, WFFeedPage.FEED_TYPE_RSS)
