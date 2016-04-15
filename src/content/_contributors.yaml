@@ -908,3 +908,18 @@ mscales:
     - author
   twitter: wibblymat
   email: mscales@google.com
+
+yoichiro:
+  name:
+    given: Yoichiro
+    family: Tanaka
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: yoichiro
+  google: +YoichiroTanaka
+  homepage: https://www.eisbahn.jp/yoichiro
+  email: yoichiro@eisbahn.jp
