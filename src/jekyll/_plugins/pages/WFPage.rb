@@ -163,6 +163,27 @@ module Jekyll
           end
         }
       end
+      
+      if (not self.data['translators'].nil?) and (self.data['translators'].length > 0)
+        self.data['translators'].each { |translatorKey|
+          if site.data['contributors'][translatorKey].nil?
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+            puts "Found invalid translator '" + translatorKey + "' in " + @langcode + '/' + self.relative_path
+            puts 'Please ensure this translator is in the contributors.yaml'
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+            Jekyll.logger.error "Error: Invalid Translator '" + translatorKey + "' found in  " + @langcode + '/' + self.relative_path + ". Please ensure this translator is added to src/content/_contributors.yaml."
+            puts ''
+            puts '---------------------------------------------------------------'
+            puts ''
+
+            raise "Invalid translator '" + translatorKey + "' in YAML in " + @langcode + '/' + self.relative_path
+          end
+        }
+      end
     end
 
     # TODO: Change to throwing an error when we get closer to release
