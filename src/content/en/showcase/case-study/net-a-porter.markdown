@@ -2,14 +2,16 @@
 layout: showcase/casestudy
 title: "NET-A-PORTER"
 subtitle: "NET-A-PORTER saves development time with Google’s Polymer Library"
-description: ""
-published_on: 2016-03-28
-updated_on: 2016-03-28
+description: "NET-A-PORTER implemented a component-based design on their online properties using Google's
+   Polymer library. The result was a large saving in development time, standarized code across their sites and 
+   an improved SEO performance through use of structured data."
+published_on: 2016-04-15
+updated_on: 2016-04-15
 authors:
   - paulkinlan
 featured_image: images/net-a-porter/card.jpg
 showcase:
-  key_image: images/net-a-porter/net-a-porter.png
+  key_image: images/net-a-porter/net-a-porter-device.png
   link: https://www.net-a-porter.com/
 ---
 
@@ -38,7 +40,7 @@ In early 2016, the NET-A-PORTER engineering team decided to evaluate how
 the company could take components and apply them to the way they write 
 code for their web properties. Because of the many pages and sub-properties 
 that fall under NET-A-PORTER &mdash; and the different teams that manage those 
-pages — the engineers knew it didn’t make sense to start from scratch with 
+pages &mdash; the engineers knew it didn’t make sense to start from scratch with 
 a new technology that would require getting rid of their existing stack. An 
 ideal solution would let them layer on new components and add to pages as 
 additional components were created. Components would need to be able to 
@@ -53,24 +55,29 @@ and successfully that the NET-A-PORTER engineers decided to move forward
 and introduce Polymer into the organization’s overall website development 
 planning almost immediately.
 
-Robin Glen and Matthew Green, engineers on the team, shared, "Polymer
-was easy to integrate into our system and get up and running in no time at 
-all. The fact that we have such a large website with so many different aspects 
-means it’s easy for us to have inconsistencies. Polymer allows us to create 
-complete and complex web applications that are scalable and maintainable."
+Robin Glen and Matthew Green, engineers on the team, shared,
+
+<blockquote> "Polymer was easy to integrate into our system and get up and running in no time at 
+ all. The fact that we have such a large website with so many different aspects 
+ means it’s easy for us to have inconsistencies. Polymer allows us to create 
+ complete and complex web applications that are scalable and maintainable."</blockquote>
 
 Code standardization was easy as well, because Polymer is based on
-web components browser standards. Glen continues, "Building using web 
+web components browser standards. Glen continues, 
+
+<blockquote>"Building using web 
 standards keeps our code close to the platform. This makes it easier to 
 learn how to use and build new components, ensuring performance will 
 continually get better as browsers improve, and letting us plan for the
 long-term. Because it’s based on the W3C standard, we are confident in 
-building on the platform. Soon even the need for polyfills will broadly go away."
+building on the platform. Soon even the need for polyfills will broadly go away."</blockquote>
 
-And there were SEO benefits, too. Glen says that the "components
+And there were SEO benefits, too. Glen says that the 
+
+<blockquote>"components
 effectively surface detailed structured data about products to search 
 engines. Testing this structured data is now directly part of our team's 
-continuous integration scheme."
+continuous integration scheme."</blockquote>
 
 By making the up-front investment in designing and building components,
 the NET-A-PORTER team is seeing dramatic long-term efficiency gains: 
@@ -81,12 +88,17 @@ engineering process.
 ## The future of Polymer
 
 The team is thrilled with how Polymer has enabled its web development.
-Glen says, "As soon as we saw how we could reuse components by 
+Glen says, 
+
+<blockquote>"As soon as we saw how we could reuse components by 
 putting them together in different ways, we got excited. We started to 
 wonder if there were further ways in which we could exploit components 
 within the business."
+</blockquote>
 
-Glen feels there is much more to explore with Polymer. He says, "This
+Glen feels there is much more to explore with Polymer. He says, 
+
+<blockquote>"This
 is just the beginning of our Polymer journey. We are currently improving 
 the delivery and maintainability of existing components, while working 
 towards expanding the use of Polymer to more NET-A-PORTER pages. We 
@@ -94,6 +106,7 @@ are working towards documenting our approach with a publicly available
 NET-A-PORTER component style guide. Polymer has also been very useful 
 for internal tooling. We recently built a set of graphing components and 
 re-platformed our entire monitoring service to use Polymer."
+</blockquote>
 
 ## Results
 
