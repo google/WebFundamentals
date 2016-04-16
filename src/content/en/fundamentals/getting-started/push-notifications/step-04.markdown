@@ -16,7 +16,7 @@ authors:
 {% include shared/toc.liquid %}
 
 Push notifications from a web app need a backend service to handle messaging.
-Chrome currently uses [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) (GCM) for this, though the eventual goal is for Chrome and GCM to support the [Web Push Protocol](https://datatracker.ietf.org/doc/draft-thomson-webpush-protocol/).
+Chrome currently uses [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) (GCM) for this, though the eventual goal is for Chrome and GCM to support the [Web Push Protocol](https://datatracker.ietf.org/doc/draft-ietf-webpush-protocol/).
 
 Other browsers are free to use other services.
 
