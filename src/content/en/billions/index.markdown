@@ -85,7 +85,7 @@ translation_priority: 0
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <img src="/web/imgs/billions/power.jpg" alt="A number of feature phones connnected to multiple makeshift power sockets">
+      <a href="http://www.folkecenter.net/gb/news/world/wabutungulu/" title="Solar Installation in Wabutungulu, Uganda"><img src="/web/imgs/billions/power.jpg" alt="A number of feature phones connnected to multiple power sockets in Wabutungulu, Uganda"></a>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Reduce battery consumption</h3>
