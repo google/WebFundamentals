@@ -63,7 +63,7 @@ From your terminal, run the cURL command below — but make sure to use your
 own API key and subscription ID, which you created earlier:
 
 {% highlight bash %}
-curl --header "Authorization: key=XXXXXXXXXXXX" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"fs...Tw:APA...SzXha\"]}"
+curl --header "Authorization: key=XXXXXXXXXXXX" --header Content-Type:"application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"fs...Tw:APA...SzXha\"]}"
 {% endhighlight %}
 
 ## 2. Check the response
