@@ -19,10 +19,11 @@ var t, previousTime;
 var drawLoad = 1;
 var slowCount = 0;
 var maxSlow = 10;
-t = previousTime = performance.webkitNow();
+// Note, you might need to polyfill performance.now and requestAnimationFrame
+t = previousTime = performance.now();
 var tick = function() {
     var maximumFrameTime = 1000/30; // 30 FPS
-    t = performance.webkitNow();
+    t = performance.now();
     var elapsed = t - previousTime;
     previousTime = t;
     if (elapsed < maximumFrameTime || slowCount < maxSlow) {
@@ -32,14 +33,14 @@ var tick = function() {
             slowCount++;
         }
         draw(drawLoad);
-        webkitRequestAnimationFrame(tick);
+        requestAnimationFrame(tick);
     } else {
       // found maximum sustainable load at 30 FPS
       document.getElementById('res').innerHTML = ("could draw "+(drawLoad)+" in " +
           maximumFrameTime + " ms");
     }
 };
-webkitRequestAnimationFrame(tick);
+requestAnimationFrame(tick);
 {% endhighlight %}
 ​
 See [the live example at jsFiddle](http://jsfiddle.net/tbhZs/)
