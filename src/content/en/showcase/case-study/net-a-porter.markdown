@@ -74,14 +74,14 @@ building on the platform. Soon even the need for polyfills will broadly go away.
 
 And there were SEO benefits, too. Glen says that the 
 
-<blockquote>"components
+<blockquote>"Components
 effectively surface detailed structured data about products to search 
 engines. Testing this structured data is now directly part of our team's 
 continuous integration scheme."</blockquote>
 
 By making the up-front investment in designing and building components,
 the NET-A-PORTER team is seeing dramatic long-term efficiency gains: 
-New pages and features are simpler and faster to create and launch, and 
+new pages and features are simpler and faster to create and launch, and 
 it’s easier to integrate stakeholder feedback and design tweaks into the 
 engineering process.
 
@@ -110,6 +110,6 @@ re-platformed our entire monitoring service to use Polymer."
 
 ## Results
 
-* Saved development time
-* Standardized code on NET-A-PORTER’s online properties
-* Improved SEO performance through use of structured data
+* Saved development time.
+* Standardized code on NET-A-PORTER’s online properties.
+* Improved SEO performance through use of structured data.
