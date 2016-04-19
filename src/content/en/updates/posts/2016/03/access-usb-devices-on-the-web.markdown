@@ -139,7 +139,7 @@ navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
 {% endhighlight %}
 
 Before you ask, I didn't magically come up with this `0x2341` hexadecimal
-number. I simply searched for the word "Arduino" in the official [List of USB
+number. I simply searched for the word "Arduino" in this [List of USB
 ID's](http://www.linux-usb.org/usb.ids).
 
 The USB `device` returned in the fulfilled promise above has some basic, yet
@@ -300,6 +300,18 @@ are not out ouf luck there thanks to a dedicated switch. To disable checking of
 the WebUSB allowed origins descriptors that implement a CORS-like mechanism to
 secure origin to device communications, run `chrome` with the
 `--disable-webusb-security` [switch](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
+
+On most Linux systems, USB devices are mapped with read-only permissions by
+default. To allow Chrome to open a USB device, you will need to add a new [udev rule](https://www.freedesktop.org/software/systemd/man/udev.html).
+Create a file at `/etc/udev/rules.d/50-yourdevicename.rules` with the following
+content:
+
+```
+SUBSYSTEM=="usb", ATTR{idVendor}=="[yourdevicevendor]", MODE="0664", GROUP="plugdev"
+```
+
+where `[yourdevicevendor]` is `2341` if your device is an Arduino for instance.
+Then, just restart the udev daemon with `service udev restart`.
 
 ## What's next
 
