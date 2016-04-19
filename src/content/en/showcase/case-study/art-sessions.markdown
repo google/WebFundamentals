@@ -8,7 +8,8 @@ real-time with web browsers."
 published_on: 2016-04-19
 updated_on: 2016-04-19
 authors:
-  - paulkinlan
+  - michaelchang
+  - jeffnusz
 featured_image: images/art-sessions/card.jpg
 showcase:
   key_image: images/art-sessions/device.png
