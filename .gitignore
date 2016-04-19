@@ -19,3 +19,4 @@ appengine/build
 tools/shows-gen/yt-api-key.json
 src/jekyll/_includes/svgs/
 .bundle/
+google_appengine/

@@ -106,3 +106,11 @@ You should now see a new page called **Experiments** when you open DevTools
 Settings.
 
 ![DevTools Experiments](images/experiments.png)
+
+## Emulate print media {#emulate-print-media}
+
+To view a page in print preview mode, [open the DevTools main 
+menu](#main-menu), select **More Tools** > **Rendering Settings**, and then 
+enable the **emulate media** checkbox with the dropdown menu set to **print**.
+
+![enabling print preview mode](images/emulate-print-media.png)
