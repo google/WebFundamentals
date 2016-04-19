@@ -311,7 +311,8 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="[yourdevicevendor]", MODE="0664", GROUP="plug
 ```
 
 where `[yourdevicevendor]` is `2341` if your device is an Arduino for instance.
-Then, just restart the udev daemon with `service udev restart`.
+`ATTR{idProduct}` can also be added for a more specific rule. Make sure your
+`user` is a member of the `plugdev` group.  Then, just reconnect your device.
 
 ## What's next
 
