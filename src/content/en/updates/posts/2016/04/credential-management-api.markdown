@@ -9,7 +9,7 @@ authors:
 tags:
   - credentials
   - sign-in
-  - Chrome51
+  - chrome51
 ---
 
 To provide a sophisticated user experience, it's important to help users 
