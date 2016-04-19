@@ -3,7 +3,7 @@ layout: updates/post
 title: "API Deprecations and Removals in Chrome 51"
 description: "An round up of the deprecations and removals in Chrome to help you plan."
 published_on: 2016-04-20
-Updated_on: 2016-04-20
+updated_on: 2016-04-20
 authors:
   - josephmedley
 tags:
