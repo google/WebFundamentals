@@ -46,7 +46,6 @@
     "chalk": "^1.0.0",
     "globby": "^3.0.1",
     "googleapis": "^2.1.3",
-    "gulp": "^3.9.1",
     "gulp-cache": "^0.2.10",
     "gulp-copy": "0.0.2",
     "gulp-imagemin": "^2.2.1",
