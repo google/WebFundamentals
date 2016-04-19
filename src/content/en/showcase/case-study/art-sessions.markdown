@@ -192,9 +192,10 @@ function fuseQuads( lastVerts, nextVerts) {
 }
 {% endhighlight %}
 
-<img src="/web/showcase/case-study/images/art-sessions/image03.png" />  
-Fused quads.
-
+<img src="/web/showcase/case-study/images/art-sessions/image03.png" alt="Fused quads" />  
+<figure>
+<figcaption>Fused quads.</figcaption>
+</figure>
 Each quad also contain UVs which are generated as a next step. Some brushes 
 contain a variety of stroke patterns to give the impression that every stroke 
 felt like a different stroke of the paint brush. This is accomplished using 
@@ -239,14 +240,20 @@ atlasIndex ) {
 }
 {% endhighlight %}
 
-<img src="/web/showcase/case-study/images/art-sessions/image04.png" />  
-Four textures in a texture atlas for oil brush
+<img src="/web/showcase/case-study/images/art-sessions/image04.png" alt="Four textures in a texture atlas for oil brush" />  
+<figure>
+<figcaption>Four textures in a texture atlas for oil brush</figcaption>
+</figure>
 
-<img src="/web/showcase/case-study/images/art-sessions/image05.png"  />  
-In Tilt Brush
+<img src="/web/showcase/case-study/images/art-sessions/image05.png"  alt="In Tilt Brush" />  
+<figure>
+<figcaption>In Tilt Brush</figcaption>
+</figure>
 
-<img src="/web/showcase/case-study/images/art-sessions/image06.png" />  
-In WebGL
+<img src="/web/showcase/case-study/images/art-sessions/image06.png" alt="In WebGL" />  
+<figure>
+<figcaption>In WebGL</figcaption>
+</figure>
 
 Since each sketch has unbounded number of strokes, and the strokes won't need to 
 modified in run-time, we pre-compute the stroke geometry ahead of time and merge 
@@ -254,7 +261,9 @@ them into one single mesh. Even though each new brush type must be its own
 material, that still reduces our draw calls to one per brush. 
 
 <img src="/web/showcase/case-study/images/art-sessions/image07.png" />  
-The entire sketch above is performed in one draw call in WebGL
+<figure>
+<figcaption>The entire sketch above is performed in one draw call in WebGL</figcaption>
+</figure>
 
 To stress test the system, we created a sketch that took 20 minutes filling the 
 space with as many vertices as we could. The resulting sketch still played at 
@@ -311,9 +320,11 @@ system. We wrote some additional tools in
 [openFrameworks](http://openframeworks.cc/) to further clean up the footage, in 
 particular removing the floors, walls and ceiling.
 
-<img src="/web/showcase/case-study/images/art-sessions/image10.png"  />  
-All four channels of a recorded video session (two color channels above and two 
-depth below)
+<img src="/web/showcase/case-study/images/art-sessions/image10.png" />  
+<figure>
+<figcaption>All four channels of a recorded video session (two color channels above and two 
+depth below)</figcaption>
+</figure>
 
 In addition to showing the artists, we wanted to render the HMD and the 
 controllers in 3D as well. This was not only important for showing the HMD in 
@@ -322,7 +333,9 @@ Kinect's IR readings), it gave us points of contact for debugging the particle
 output and lining up the videos with the sketch.
 
 <img src="/web/showcase/case-study/images/art-sessions/image11.png" />  
-The head mounted display, controllers, and particles lined up
+<figure>
+<figcaption>The head mounted display, controllers, and particles lined up</figcaption>
+</figure>
 
 This was done by writing a custom plugin into Tilt Brush that extracted the 
 positions of the HMD and controllers each frame. Since Tilt Brush runs at 90fps, 
@@ -357,9 +370,8 @@ size down to just shy of 3mb which was acceptable to deliver over the wire.
 Since the video itself is served as an HTML5 video element that is read in by a 
 WebGL texture to become particles, the video itself needed to play hidden in the 
 background. A shader converts the colors in the depth imagery into positions in 
-3D space. James George has shared [a great 
-example](https://github.com/obviousjim/DepthKitJS) of how you can do with with 
-footage straight out of DepthKit.
+3D space. James George has shared [a great example](https://github.com/obviousjim/DepthKitJS)
+of how you can do with with footage straight out of DepthKit.
 
 iOS has restrictions on inline video playback, which we assume is to prevent 
 users from being pestered by web video ads that autoplay. We used a technique 
@@ -368,27 +380,29 @@ web](http://stanko.github.io/html-canvas-video-player/), which is to copy the
 video frame into a canvas and manually update the video seek time, every 1/30 of 
 a second. 
 
-  videoElement.addEventListener( 'timeupdate', function(){  
-    videoCanvas.paintFrame( videoElement );      
-  });
+{% highlight javascript %}
+videoElement.addEventListener( 'timeupdate', function(){  
+  videoCanvas.paintFrame( videoElement );      
+});
 
-  function loopCanvas(){
+function loopCanvas(){
 
-    if( videoElement.readyState === videoElement.HAVE\_ENOUGH\_DATA ){
+  if( videoElement.readyState === videoElement.HAVE\_ENOUGH\_DATA ){
 
-      const time = Date.now();  
-      const elapsed = ( time - lastTime ) / 1000;
+    const time = Date.now();  
+    const elapsed = ( time - lastTime ) / 1000;
 
-      if( videoState.playing && elapsed &gt;= ( 1 / 30 ) ){  
-        videoElement.currentTime = videoElement.currentTime + elapsed;  
-        lastTime = time;  
-      }
-
+    if( videoState.playing && elapsed &gt;= ( 1 / 30 ) ){  
+      videoElement.currentTime = videoElement.currentTime + elapsed;  
+      lastTime = time;  
     }
 
   }
 
-  frameLoop.add( loopCanvas );
+}
+
+frameLoop.add( loopCanvas );
+{% endhighlight %}
 
 Our approach had the unfortunate side-effect of significantly lowering iOS 
 framerate since the copying of pixel buffer from video to canvas is very 
