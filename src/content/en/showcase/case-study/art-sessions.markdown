@@ -11,7 +11,7 @@ authors:
   - paulkinlan
 featured_image: images/art-sessions/card.jpg
 showcase:
-  key_image: images/art-sessions/btr-1.png
+  key_image: images/art-sessions/device.png
   link: https://g.co/VirtualArtSessions
 ---
 
