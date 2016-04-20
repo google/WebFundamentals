@@ -10,7 +10,7 @@ tags:
   - deprecations
   - removals
   - chrome51
-featured_image: /web/updates/images/2016/04/chrome-51-deprecations/deps-removes.png
+featured_image: /web/updates/images/2016/04/chrome-51-deprecations/deps-rems.png
 ---
 
 In nearly every version of Chrome we see a significant number of updates and
