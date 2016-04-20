@@ -46,7 +46,7 @@ translation_priority: 0
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Design for variable connectivity</h3>
-      <p>Low bandwidth and intermittent connectivity is the norm for many people accessing the web. <a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/mobile-white-paper-c11-520862.html" title="Cisco Visual Networking Index: Global Mobile Data Traffic Forecast Update, 2015–2020">Most people online still have 2G connections</a> or '3G' that downgrades to 2G — and even by 2020 more than 10% of users will still be on 2G. Many smartphones are used offline and users regularly turn on airplane mode to avoid data consumption.</p>
+      <p>Low bandwidth and intermittent connectivity are the norm for many people accessing the web. <a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/mobile-white-paper-c11-520862.html" title="Cisco Visual Networking Index: Global Mobile Data Traffic Forecast Update, 2015–2020">Most people online still have 2G connections</a> or '3G' that downgrades to 2G — and even by 2020 more than 10% of users will still be on 2G. Many smartphones are used offline and users regularly turn on airplane mode to avoid data consumption.</p>
       <ul>
         <li><a href="https://docs.google.com/document/d/1IoethlCWzjTKY1A1JIMNl7KI8mBtOvpQ4TkhU9FhDUU/edit#heading=h.kdb8454jukab">Test with emulated low bandwidth and high latency</a></li>
         <li><a href="https://docs.google.com/document/d/1fyZ3EORcvx6HWZ9UAK1_YHSuou9BjwP5BY9_H81CSlA/edit#">Handle unreliable connectivity and 'lie-fi'</a></li>
@@ -142,7 +142,7 @@ translation_priority: 0
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
       <h3>Build multi-device content</h3>
-      <p>Large-layout, graphics-heavy content frustrates users and discourages them from using your app or site. Content that is too wide or too tall is overlooked by some users and deliberately avoided by others. Excess content adds page weight and data cost.</p>
+      <p>Large-layout, graphics-heavy content frustrates users and discourages them from using your app or site. Content that is too wide or too tall is overlooked by some users and deliberately avoided by others — and excess content adds page weight and data cost.</p>
       <ul>
         <li><a href=".">Design content to work well across different viewport sizes</a></li>
         <li><a href=".">Eliminate redundant images and other unnecessary content</a></li>
