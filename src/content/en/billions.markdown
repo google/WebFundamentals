@@ -163,7 +163,7 @@ translation_priority: 0
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Plan for localization</h3>
-      <p>Localization can help you access to new markets. Many websites are only published in English, but English is not the first language of most people online. Only <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers" title="Wikipedia list of languages by number of native speakers, graphic by User:Jroehl">5.52% of the world's population are native English speakers</a> and US or European cultural conventions may not be familiar or intuitive. Instructions or prompts that are succinct and compact in English may be verbose and obtrusive when viewed in other languages.</p>
+      <p>Localization can help you access new markets. Many websites are only published in English, but English is not the first language of most people online. Only <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers" title="Wikipedia list of languages by number of native speakers, graphic by User:Jroehl">5.52% of the world's population are native English speakers</a> and US or European cultural conventions may not be familiar or intuitive. Instructions or prompts that are succinct and compact in English may be verbose and obtrusive when viewed in other languages.</p>
       <ul>
         <li><a href="https://support.google.com/webmasters/answer/182192?hl=en">Architect your site to enable localization</a></li>
         <li><a href=".">Store text in string tables</a></li>
