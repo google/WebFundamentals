@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Streamlining the Sign-in Flow Using Credential Management API"
-description: ""
+description: "To provide a sophisticated user experience, it's important to help users authenticate themselves to your website. But creating, remembering and typing passwords tends to be cumbersome for end users, especially on mobile"
 published_on: 2016-04-19
 updated_on: 2016-04-19
 authors:
