@@ -61,7 +61,10 @@ Right-click any element on the page and select **Inspect**.
 Press <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd>
 + <kbd class="kbd">C</kbd> (Windows) or <kbd class="kbd">Cmd</kbd>
 + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">C</kbd> (Mac) to open
-DevTools in Inspect Element mode, then click on an element.
+DevTools in Inspect Element mode, then hover over an element. DevTools
+automatically highlights the element that you are hovering over in the
+**Elements** panel. Click on the element to exit inspect mode while keeping the
+element highlighted within the **Elements** panel. 
 
 Click the **Inspect Element** button
 ![Inspect icon](/web/tools/chrome-devtools/iterate/inspect-styles/imgs/inspect-icon.png){:.inline}
@@ -125,9 +128,9 @@ To edit a DOM node name or attribute:
 * Double-click directly on the node name or attribute.
 * Highlight the node, press <kbd>Enter</kbd>, and then press <kbd>Tab</kbd>
   until the name or attribute is selected.
-* Right-click on the node and select **Add Attribute** or **Edit Attribute**.
-  **Edit Attribute** is context-sensitive; the portion you click on determines
-  what gets edited.
+* Open the [more actions menu](#more-actions) and select **Add Attribute** 
+  or **Edit Attribute**. **Edit Attribute** is context-sensitive; the portion 
+  you click on determines what gets edited.
 
 The closing tag is automatically updated when you're finished.
 
@@ -137,8 +140,7 @@ The closing tag is automatically updated when you're finished.
 
 To edit a DOM node and its children as HTML:
 
-* Right-click on the node and select **Edit as HTML**. Clicking on the 
-  ellipsis button to the left of the node opens up the same menu.
+* Open the [more actions menu](#more-actions) and select **Edit as HTML**. 
 * Press <kbd>F2</kbd> (Windows / Linux) or <kbd>Fn</kbd>+<kbd>F2</kbd> (Mac).
 * Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> (Windows / Linux) or 
   <kbd>Cmd</kbd>+<kbd>Enter</kbd> (Mac) to save your changes. 
@@ -156,10 +158,20 @@ Click, hold, and drag a node to move it.
 
 To delete a DOM node:
 
-* Right-click on the node and select **Delete Node**.
+* Open the [more actions menu](#more-actions) and select **Delete Node**.
 * Select the node and press the <kbd>Delete</kbd> key.
 
 {% include shared/remember.liquid title="Note" list=page.notes.delete-node %}
+
+## Show more actions menu {#more-actions}
+
+The **more actions** menu lets you interact with a DOM node in a variety
+of ways. To view the menu, right-click on a node, or select a node
+and then press the **more actions** button (![more action 
+button](imgs/more-actions-button.png){:.inline})). The button is only 
+displayed on the currently selected element.
+
+![more actions menu](imgs/more-actions-menu.png)
 
 ## Scroll into view
 
@@ -167,7 +179,10 @@ When you hover over or select a DOM node, the rendered node is highlighted
 in the viewport. If the node is scrolled offscreen, you'll see
 a tooltip at the top of the viewport if the node is above the
 current viewport, and a tooltip at the bottom if the node is below the current
-viewport.
+viewport. For example, in the screenshot below DevTools is indicating that the
+currently selected element in the **Elements** panel is below the viewport.
+
+![element below viewport](imgs/below-viewport.png)
 
 To scroll the page so the node appears in the viewport,
 **Right-click** the node and select **Scroll into View**.
