@@ -10,6 +10,7 @@ tags:
   - credentials
   - sign-in
   - chrome51
+featured_image: /web/updates/images/2016/04/credential-management-api/image00.png
 ---
 
 To provide a sophisticated user experience, it's important to help users
@@ -72,11 +73,12 @@ features to the site, for example:
 
 * **Show an account chooser when signing in:** Shows a native account chooser UI
   when a user taps "Sign In".
-* **Store credentials:** Upon _successful_ sign-in, store the credential
-  information to the browser's password manager for later use.
+* **Store credentials:** Upon _successful_ sign-in, offer to store the
+  credential information to the browser's password manager for later use.
 * **Let the user automatically sign back in:** Let the user sign back in if a
   session is expired.
-* **Mediate auto sign-in:** Once a user signs out, disable automatic sign-in.
+* **Mediate auto sign-in:** Once a user signs out, disable automatic sign-in for
+  the next visit of the user.
 
 You can experience these features implemented in [a demo
 site](https://credential-management-sample.appspot.com) with [its sample
@@ -304,14 +306,14 @@ navigator.credentials.get({
 });
 {% endhighlight %}  
 
-The code should look similar to what you've seen in "Show Account Chooser
+The code should look similar to what you've seen in the "Show Account Chooser
 when Signing In" section. The only difference is that you will set
 `unmediated: true`.
 
 This resolves the function immediately and gives you the credential to
 automatically sign the user in. There are a few conditions:
 
-* The user has chosen to allow automatic sign-in.
+* The user has acknowledged the automatic sign-in feature in a warm welcome.
 * The user has previously signed in to the website using the Credential Management API.
 * The user has only one credential stored for your origin.
 * The user did not explicitly sign out in the previous session.
