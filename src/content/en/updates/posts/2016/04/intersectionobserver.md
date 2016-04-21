@@ -8,6 +8,7 @@ authors:
   - surma
 tags:
   - intersectionobserver
+  - chrome51
 ---
 
 Let’s say you want to track when an element in your DOM enters the visible [viewport](https://en.wikipedia.org/wiki/Viewport). You might want to do this so you can lazy-load images just in time or because
