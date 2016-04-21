@@ -302,7 +302,7 @@ pointing at the center.
 
 In addition to the depth information, we also captured the color information of 
 the scene with standard DSLR cameras. We used the excellent 
-[DepthKit](http://www.depthkit.tv/) software by Specular to calibrate and merge 
+[DepthKit](http://www.depthkit.tv/) software to calibrate and merge 
 the footage from the depth camera and the color cameras. The Kinect is capable 
 of recording color, but we chose to use DSLRs because we could control the 
 exposure settings, use beautiful high-end lenses, and record in high definition. 
