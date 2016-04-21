@@ -4,7 +4,7 @@ title: "Access USB devices on the Web"
 description: "The WebUSB API has been created to provide an easy way to safely expose USB device services to the Web."
 featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero.jpg
 published_on: 2016-03-02
-updated_on: 2016-03-30
+updated_on: 2016-04-21
 authors:
   - beaufortfrancois
 tags:
