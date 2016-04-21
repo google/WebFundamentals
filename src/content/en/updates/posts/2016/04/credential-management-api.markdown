@@ -39,7 +39,7 @@ By using these simple APIs, developers can do powerful things like:
 
 * Enable users to sign in with just one tap.
 * Remember the federated account the user has used to sign in with.
-* Sign users back in without explicit action when a session expires.
+* Sign users back in when a session expires.
 
 {% ytvideo O3mBdKYMsMY %}
 
