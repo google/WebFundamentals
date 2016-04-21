@@ -288,6 +288,17 @@ mattgaunt:
   google: +MattGuant
   twitter: gauntface
 
+surma:
+  name:
+    given: Surma
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+    - engineer
+  twitter: DasSurma
 
 ilyagrigorik:
   name:
