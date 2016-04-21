@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "IntersectionObserver"
+title: "IntersectionObserver’s coming into view"
 description: "IntersectionObservers let you know when an observed element enters or exits the browser’s viewport."
 published_on: 2016-04-21
 updated_on: 2016-04-21
@@ -10,7 +10,6 @@ tags:
   - intersectionobserver
 ---
 
-# Intersection Observer Web Update
 Let’s say you want to track when an element in your DOM enters the visible [viewport](https://en.wikipedia.org/wiki/Viewport). You might want to do this so you can lazy-load images just in time or because
 you need to know if the user is actually looking at a certain ad banner. You
 can do that by hooking up the scroll event or use a periodic timer and call [`getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) on that element. This approach, however, is painfully slow as each call to `getBoundingClientRect()` forces the browser to [re-layout the entire page](https://gist.github.com/paulirish/5d52fb081b3570c81e3a) and will introduce considerable jank to your website. Matters get close to
@@ -146,7 +145,7 @@ are in view. If an iframe observes one of its elements, both scrolling the
 iframe as well as scrolling the window *containing the iframe* will trigger the callback at the appropriate times. For the latter case,
 however, `rootBounds` will be set to `null` to avoid leaking data across origins.
 
-# What is `IntersectionObserver` *not* about?
+# What is IntersectionObserver *not* about?
 Something to keep in mind is that `IntersectionObservers` are intentionally neither pixel perfect nor low latency. Using them to
 implement endeavours like scroll-dependent animations are bound to fail, as the
 data will be – strictly speaking – out of date by the time you’ll get to use
