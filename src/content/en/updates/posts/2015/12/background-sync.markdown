@@ -40,7 +40,7 @@ If the user tries to send a message when they have zero connectivity, then, than
 
 {% ytvideo l4e_LFozK2k %}
 
-As of March 2016, Background sync is now available in Chrome from version 49 and above.  You can see it action by following:
+As of March 2016, Background sync is available in Chrome from version 49 and above.  You can see it action by following the steps below:
 
 1. [Open Emojoy](https://jakearchibald-gcm.appspot.com).
 1. Go offline (either using airplane-mode or visit your local Faraday cage).
@@ -95,7 +95,7 @@ Although, you could also use it to fetch small bits of data…
 
 This is the [offline wikipedia](https://wiki-offline.jakearchibald.com/) demo I created for [Supercharging Page Load](https://www.youtube.com/watch?v=d5_6yHixpsQ). I’ve since added some background sync magic to it.
 
-Try this out yourself make sure you are using Chrome 49 and above and then:
+Try this out yourself. Make sure you are using Chrome 49 and above and then:
 
 1. Go to any article, perhaps [Chrome](https://wiki-offline.jakearchibald.com/wiki/Google_Chrome).
 1. Go offline (either using airplane-mode or join a terrible mobile provider like I have).
