@@ -22,7 +22,7 @@ location](https://developers.google.com/web/fundamentals/native-hardware/user-lo
 This means that the page that's making the Geolocation API call must be served 
 over a [secure context ](https://w3c.github.io/webappsec-secure-contexts/)such 
 as 
-[HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/?hl=en). 
+[HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/?hl=en) and `localhost`. 
 
 **When is this changing?**
 
