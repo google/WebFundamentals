@@ -14,6 +14,11 @@ tags:
 featured_image: /web/updates/images/2016/04/chrome-51-deprecations/deps-rems.png
 ---
 
+Chrome has [public 
+intent](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins) 
+to deprecate powerful features like geolocation on non-secure origins, and we 
+hope that others will follow.
+
 Starting with Chrome version 50, Chrome no longer supports [the HTML5 
 Geolocation 
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
@@ -58,10 +63,6 @@ privacy of your users' location data. If the user's location is sent over an
 non-secure connection, _anyone_ on the network will be able to know where that 
 user is. This seriously compromises user privacy.
 
-Chrome has [public 
-intent](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins) 
-to deprecate powerful features like geolocation on non-secure origins.
-
 **Who does this affect?**
 
 This affects any page currently using the [Geolocation 
@@ -94,8 +95,3 @@ API](https://developers.google.com/maps/documentation/geolocation/intro#overview
 there are other geo based solutions), and user-entered zip code. However, we 
 _strongly recommend_ that the best path to ensure ongoing access to geolocation 
 is to move to HTTPS.
-
-Chrome has [public 
-intent](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins) 
-to deprecate powerful features like geolocation on non-secure origins, and we 
-hope that others will follow.
