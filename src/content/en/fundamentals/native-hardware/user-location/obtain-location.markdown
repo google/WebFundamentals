@@ -26,6 +26,11 @@ key-takeaways:
   method whenever you request a location.
 </p>
 
+**Note**: [As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS](/web/updates/2016/04/geolocation-on-secure-contexts-only).
+If your site is hosted on an non-secure origin (such as `HTTP`) the requests to get the users.
+location will no longer function.
+
+
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.geo %}

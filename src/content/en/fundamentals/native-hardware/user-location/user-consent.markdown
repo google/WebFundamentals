@@ -26,6 +26,10 @@ As a user, your physical location is a piece of information you want to
 guard and only give out to people that you trust.  This is why the browser
 shows a prompt when a site asks for your location.
 
+**Note**: [As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS](/web/updates/2016/04/geolocation-on-secure-contexts-only).
+If your site is hosted on an non-secure origin (such as `HTTP`) the requests to get the users.
+location will no longer function.
+
 {% include shared/toc.liquid %}
 
 Recent user studies <a href="http://static.googleusercontent.com/media/www.google.com/en/us/intl/ALL_ALL/think/multiscreen/pdf/multi-screen-moblie-whitepaper_research-studies.pdf">have shown</a> that
