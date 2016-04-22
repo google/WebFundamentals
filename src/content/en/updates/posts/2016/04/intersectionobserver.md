@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "IntersectionObserver’s coming into view"
+title: "IntersectionObserver’s Coming into View"
 description: "IntersectionObservers let you know when an observed element enters or exits the browser’s viewport."
 published_on: 2016-04-21
 updated_on: 2016-04-21
@@ -24,7 +24,7 @@ Making this visibility test more efficient is what [`IntersectionObserver`](http
 
 <img src="/web/updates/images/2016/04/intersectionobserver/iframe.gif">
 
-# How to create an IntersectionObserver
+# How to Create an IntersectionObserver
 The API is rather small, and best described using an example:
 
 {% highlight javascript %}
@@ -93,7 +93,7 @@ I am not a big fan of scrolling inside an element, but I am not here to judge,
 and neither are `IntersectionObservers`. The [`options`](https://wicg.github.io/IntersectionObserver/#dictdef-intersectionobserverinit) object takes a [`root`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverinit-root) option that lets you define an alternative to the viewport as your root. It is
 important to keep in mind that `root` needs to be an ancestor of all the observed elements.
 
-# Intersect all the things!
+# Intersect all the Things!
 No! Bad developer! That’s not mindful usage of your user’s CPU cycles. Let’s
 think about an infinite scroller as an example: In that scenario, it is
 definitely advisable to add [sentinels](https://en.wikipedia.org/wiki/Sentinel_value) to the DOM and observe (and recycle!) those. You should add a sentinel close
@@ -104,7 +104,7 @@ sentinel, no additional call to `observe()` is needed. The `IntersectionObserver
 
 <img src="/web/updates/images/2016/04/intersectionobserver/infinitescroller.png">
 
-# Moar updates, please
+# Moar Updates, Please
 As mentioned earlier, the callback will be triggered a single time when the
 observed element comes partially into view and another time when it has left
 the viewport. This way `IntersectionObserver` gives you an answer to the question, “Is element X in view?”. In some use
@@ -115,7 +115,7 @@ visible:
 
 <img src="/web/updates/images/2016/04/intersectionobserver/threshold.gif">
 
-# Any other options?
+# Any Other Options?
 As of now, there’s only one additional option to the ones listed above. [`rootMargin`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverinit-rootmargin) allows you to specify the margins for the root, effectively allowing you to
 either grow or shrink the area used for intersections. These margins are
 specified using a CSS-style string, á la “`10px 20px 30px 40px`”, specifying top, right, bottom and left margin respectively. To summarize,
@@ -139,24 +139,24 @@ new IntersectionObserver(entries => {/* … */}, {
 });
 {% endhighlight %}
 
-# iframe magic
+# iframe Magic
 `IntersectionObservers` were designed specifically with ads services and social network widgets in
 mind, which frequently use iframes and could benefit from knowing whether they
 are in view. If an iframe observes one of its elements, both scrolling the
 iframe as well as scrolling the window *containing the iframe* will trigger the callback at the appropriate times. For the latter case,
 however, `rootBounds` will be set to `null` to avoid leaking data across origins.
 
-# What is IntersectionObserver *not* about?
+# What is IntersectionObserver *Not* About?
 Something to keep in mind is that `IntersectionObservers` are intentionally neither pixel perfect nor low latency. Using them to
 implement endeavours like scroll-dependent animations are bound to fail, as the
 data will be – strictly speaking – out of date by the time you’ll get to use
 it. The [explainer](https://github.com/WICG/IntersectionObserver/blob/gh-pages/explainer.md) has more details about the original use cases for `IntersectionObserver`.
 
-# How much work can I do in the callback?
+# How Much Work Can I Do in the Callback?
 Short’n’Sweet: Spending too much time in the callback will make your app lag –
 all the common practices apply.
 
-# Go forth and intersect thy elements
+# Go Forth and Intersect thy Elements
 The browser support for `IntersectionObservers` is still fairly slim, so it won’t work everywhere right off the bat just yet.
 In the meantime, a polyfill is being worked on in the [WICG’s repository](https://github.com/WICG/IntersectionObserver). Obviously, you won’t get the performance benefits using that polyfill that a
 native implementation would give you.
