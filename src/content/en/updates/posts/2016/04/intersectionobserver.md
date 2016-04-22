@@ -13,14 +13,14 @@ tags:
 
 Let’s say you want to track when an element in your DOM enters the visible [viewport](https://en.wikipedia.org/wiki/Viewport). You might want to do this so you can lazy-load images just in time or because
 you need to know if the user is actually looking at a certain ad banner. You
-can do that by hooking up the scroll event or use a periodic timer and call [`getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) on that element. This approach, however, is painfully slow as each call to `getBoundingClientRect()` forces the browser to [re-layout the entire page](https://gist.github.com/paulirish/5d52fb081b3570c81e3a) and will introduce considerable jank to your website. Matters get close to
+can do that by hooking up the scroll event or by using a periodic timer and calling [`getBoundingClientRect()`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) on that element. This approach, however, is painfully slow as each call to `getBoundingClientRect()` forces the browser to [re-layout the entire page](https://gist.github.com/paulirish/5d52fb081b3570c81e3a) and will introduce considerable jank to your website. Matters get close to
 impossible when you know your site is being loaded inside an iframe and you
 want to know when the user can see an element. The Single Origin Model and the
 browser won’t let you access any data from the web page that contains the
 iframe. This is a common problem for ads for example, that are frequently
 loaded using iframes.
 
-Making this visibility test more efficient is what [`IntersectionObserver`](https://wicg.github.io/IntersectionObserver/) was [designed for](https://github.com/WICG/IntersectionObserver/blob/gh-pages/explainer.md), and it’s now landed in Chrome 51 (which is, as of this writing, the [Canary](https://www.google.com/chrome/browser/canary.html) release). `IntersectionObserver`s let you know when an observed element enters or exits the browser’s viewport.
+Making this visibility test more efficient is what [`IntersectionObserver`](https://wicg.github.io/IntersectionObserver/) was [designed for](https://github.com/WICG/IntersectionObserver/blob/gh-pages/explainer.md), and it’s landed in Chrome 51 (which is, as of this writing, the [beta](https://www.google.com/chrome/browser/beta.html) release). `IntersectionObserver`s let you know when an observed element enters or exits the browser’s viewport.
 
 <img src="/web/updates/images/2016/04/intersectionobserver/iframe.gif">
 
@@ -47,15 +47,17 @@ io.observe(element);
 {% endhighlight %}
 
 
-With this code, using the default options for `IntersectionObserver`, your callback will be called once the element comes partially into view and
-once it completely leaves the viewport.
+Using the default options for `IntersectionObserver`, your callback will be called
+both when the element comes partially into view and when it completely leaves the
+viewport.
 
 If you *need* to observe multiple elements, it is both possible and advised to observe
 multiple elements using the *same* `IntersectionObserver` instance by calling `observe()` multiple times.
 
-Each [`IntersectionObserverEntry`](https://wicg.github.io/IntersectionObserver/#intersection-observer-entry) in the `entries` array that’s passed to your callback will contain updated intersection data
-for one of your observed elements.
 
+An `entries` parameter is passed to your callback which is an array of
+[`IntersectionObserverEntry`](https://wicg.github.io/IntersectionObserver/#intersection-observer-entry)
+objects. Each such object contains updated intersection data for one of your observed elements. 
 
 <pre><code>
 🔽[IntersectionObserverEntry]
@@ -76,17 +78,15 @@ for one of your observed elements.
     // ...
 </code></pre>
 
-[`rootBounds`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverentry-rootbounds) is the result of of calling `getBoundingClientRect()` on the root element, which is the viewport by default. [`boundingClientRect`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverentry-boundingclientrect) is the result of `getBoundingClientRect()` called on the observed element. [`intersectionRect`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionrect) is the intersection of these two rectangles and effectively tells you *which part* of the observed element is visible. [`intersectionRatio`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionratio) is closely related, and tells you *how much* of the element is visible. With this info at your disposal, you are now able
+[`rootBounds`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverentry-rootbounds) is the result of calling `getBoundingClientRect()` on the root element, which is the viewport by default. [`boundingClientRect`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverentry-boundingclientrect) is the result of `getBoundingClientRect()` called on the observed element. [`intersectionRect`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionrect) is the intersection of these two rectangles and effectively tells you *which part* of the observed element is visible. [`intersectionRatio`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverentry-intersectionratio) is closely related, and tells you *how much* of the element is visible. With this info at your disposal, you are now able
 to implement features like just-in-time loading of assets before they become
 visible on screen. Efficiently.
 
 <img src="/web/updates/images/2016/04/intersectionobserver/intersectratio.png">
 
 `IntersectionObservers` deliver their data asynchronously, and your callback code will run in the main
-thread. Not only that, but [the spec actually says that IntersectionObserver implementations should use
-[`requestIdleCallback`](https://wicg.github.io/IntersectionObserver/#queue-intersection-observer-task). This means that the call to your provided callback is low priority and should
-will be made by the browser if it has idle time. This is a conscious design
-decision.
+thread. Additionally, [the spec actually says that IntersectionObserver implementations should use
+[`requestIdleCallback()`](https://wicg.github.io/IntersectionObserver/#queue-intersection-observer-task). This means that the call to your provided callback is low priority and will be made by the browser during idle time. This is a conscious design decision.
 
 # Scrolling divs
 I am not a big fan of scrolling inside an element, but I am not here to judge,
