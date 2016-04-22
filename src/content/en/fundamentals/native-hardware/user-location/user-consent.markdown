@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Getting the user to consent to location sharing"
 description: ""
 published_on: 2014-01-01
-updated_on: 2014-10-21
+updated_on: 2016-04-22
 order: 2
 translation_priority: 1
 authors:
@@ -25,6 +25,10 @@ comments:
 As a user, your physical location is a piece of information you want to
 guard and only give out to people that you trust.  This is why the browser
 shows a prompt when a site asks for your location.
+
+**Note**: [As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS](/web/updates/2016/04/geolocation-on-secure-contexts-only).
+If your site is hosted on an non-secure origin (such as `HTTP`) the requests to get the users.
+location will no longer function.
 
 {% include shared/toc.liquid %}
 
