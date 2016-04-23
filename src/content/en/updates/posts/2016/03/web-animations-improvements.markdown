@@ -3,16 +3,17 @@ layout: updates/post
 title: "Web Animations Improvements in Chrome 50"
 description: "Better specification compliance and new features coming in Chrome 50."
 published_on: 2016-03-15
-updated_on: 2016-03-15
+updated_on: 2016-04-18
 authors:
   - alexdanilo
 tags:
   - animation
   - chrome50
+  - chrome51
 ---
 
 The [Web Animations API](http://w3c.github.io/web-animations/), which first 
-shipped in Chrome 36, provides convenient Javascript control of
+shipped in Chrome 36, provides convenient JavaScript control of
 animations in the browser, and is also being implemented in Gecko and WebKit.
 
 Chrome 50 introduces changes to improve interoperability with other browsers
@@ -22,6 +23,10 @@ and to be more compliant with the spec. These changes are:
   * `Animation.id`
   * State change for the `pause()` method
   * Deprecation of dashed names as keys in keyframes
+
+In Chrome 51, some of these changes are finalized:
+
+  * Removing dashed names as keys in keyframes
 
 ### Cancel Events
 
@@ -67,19 +72,21 @@ attribute would indicate `idle` if the animation hadn’t started yet, however
 now it reflects the correct state which is 
 [`paused`](http://w3c.github.io/web-animations/#paused-play-state).
 
-### Deprecating Dashed Names as Keys in Keyframes
+### Removing Dashed Names as Keys in Keyframes
 
 To further comply with the spec. and other implementations, Chrome 50 sends a
 warning to the console if dashed names are used for keys in keyframe
-animations, although they will continue to work. The correct strings to use are
+animations. The correct strings to use are
 camelCase names as per the CSS property to IDL attribute 
 [conversion algorithm](https://drafts.csswg.org/cssom/#css-property-to-idl-attribute).
 
 For example, the CSS property `margin-left` would require you to pass in
 `marginLeft` as the key.
 
-Chrome 51 will remove support for dashed names altogether, so this is a good
+Chrome 51 removes support for dashed names altogether, so now is a good
 time to correct any existing content with the correct naming as per the spec.
+
+### Summary
 
 These changes bring Chrome’s implementation of Web Animations closer to other
 browsers implementations and more compliant with the specification which all

@@ -118,6 +118,14 @@ beaufortfrancois:
   description:
     en: "Dives into Chromium source code"
 
+michaelchang:
+  name:
+    given: Michael
+    family: Chang
+  role:
+    - author
+  homepage: http://minmax.design
+
 samchen:
   name:
     given: Sam
@@ -280,6 +288,17 @@ mattgaunt:
   google: +MattGuant
   twitter: gauntface
 
+surma:
+  name:
+    given: Surma
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+    - engineer
+  twitter: DasSurma
 
 ilyagrigorik:
   name:
@@ -391,7 +410,7 @@ agektmr:
   twitter: agektmr
   email: agektmr@google.com
   description:
-    en: "Eiji is a Developer Advocate"
+    en: "Developer Advocate in Tokyo"
 
 ilmariheikkinen:
   name:
@@ -583,6 +602,14 @@ jacquerie:
   email: jacopo.notarstefano@gmail.com
   description:
     en: "Jacopo is a Full Stack Developer"
+
+jeffnusz:
+  name:
+    given: Jeff
+    family: Nusz
+  role:
+    - author
+  homepage: http://www.custom-logic.com
 
 addyosmani:
   name:
