@@ -14,9 +14,9 @@
 
       <div class="wf-author__info">
         <div class="wf-author__name">
-          {% if include.translator and translator.homepage %}<a href="{{translator.homepage}}" target="_blank" title="{{translator.name.given}} {{translator.name.family}}'s Homepage">{% endif %}
+          {% if include.linkauthor and translator.homepage %}<a href="{{translator.homepage}}" target="_blank" title="{{translator.name.given}} {{translator.name.family}}'s Homepage">{% endif %}
           {{translator.name.given}} {{translator.name.family}}
-          {% if include.linkauthor %}</a>{% endif %}
+          {% if include.linkauthor and translator.homepage %}</a>{% endif %}
         </div>
 
         {% if translator.description[page.curr_lang] %}
