@@ -34,6 +34,7 @@ understand the reasoning and how to proceed.
 **When is this changing?**
 
 This change is effective as of Chrome version 50 (12PM PST April 20 2016). 
+
 Chrome's developer tools console has been providing warnings since version 44 
 (released July 21 2015).    
 There have been a number of public announcements that describe the rationale 
@@ -76,8 +77,7 @@ It is _not_ a requirement that the whole app be served via HTTPS to use
 Geolocation. Only pages that use Geolocation need to be served over a secure 
 context.  A secure context currently is anything hosted at the top level on 
 HTTPS or localhost. For example, an iframe that points to a secure origin but is 
-hosted on unsecured origin 
-(**[http](http://paul.kinlan.me/)**[://paul.kinlan.me/](http://paul.kinlan.me/)) 
+hosted on unsecured origin (**[http](http://paul.kinlan.me/)**[://paul.kinlan.me/](http://paul.kinlan.me/)) 
 would not be allowed to call the geolocation API.
 
 We strongly suggest that you migrate to HTTPS as powerful new and existing 
@@ -93,10 +93,8 @@ still work.
 **I really need to use Geolocation. What should I do?**
 
 If you would like to use the HTML5 Geolocation API, or if your site already uses 
-the Geolocation API, [please 
-](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[migrate 
-the 
-page](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[s](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[ 
+the Geolocation API, [please](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators) [migrate 
+the page](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[s](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[ 
 making Geolocation API calls to 
 HTTPS](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators), 
 ensuring that they're used in a secure context.

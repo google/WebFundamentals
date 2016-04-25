@@ -39,5 +39,5 @@ Gary Kačmarčík has put together a [fantastic demo](https://w3c.github.io/uiev
 <img src="/web/updates/images/2016/04/keyboardevent-keys-codes/screenshot.png">
 
 ## Cross-Browser Support
-Support for the [`code`](http://caniuse.com/#feat=keyboardevent-code) attribute is, as of this writing, limited to Chrome 48+ and Firefox 44+.
-The [`key`](http://caniuse.com/#feat=keyboardevent-key) attribute is supported in Firefox 44+ and Chrome 51+, with [partial support](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#Browser_compatibility) in Internet Explorer 9+ and Edge 13+.
+Support for the [`code`](http://caniuse.com/#feat=keyboardevent-code) attribute is, as of this writing, limited to Chrome 48+, Opera 35+, and Firefox 44+.
+The [`key`](http://caniuse.com/#feat=keyboardevent-key) attribute is supported in Firefox 44+, Chrome 51+, and Opera 38+, with [partial support](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key#Browser_compatibility) in Internet Explorer 9+ and Edge 13+.
