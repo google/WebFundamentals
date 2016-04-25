@@ -14,53 +14,52 @@ tags:
 featured_image: /web/updates/images/2016/04/chrome-51-deprecations/deps-rems.png
 ---
 
-Chrome has [public 
-intent](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins) 
+Chrome has [public intent](https://sites.google.com/a/chromium.org/dev/Home/chromium-security/deprecating-powerful-features-on-insecure-origins) 
 to deprecate powerful features like geolocation on non-secure origins, and we 
 hope that others will follow.
 
-Starting with Chrome version 50, Chrome no longer supports [the HTML5 
-Geolocation 
+Starting with Chrome 50, Chrome no longer supports [obtaining the user's 
+location](https://developers.google.com/web/fundamentals/native-hardware/user-location/obtain-location?hl=en) 
+using [the HTML5 Geolocation 
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
-over non-secure connections [to obtain the user's 
-location](https://developers.google.com/web/fundamentals/native-hardware/user-location/obtain-location?hl=en). 
-This means that the page that's making the Geolocation API call must be served 
-over a [secure context ](https://w3c.github.io/webappsec-secure-contexts/)such 
-as 
-[HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/?hl=en) and `localhost`. 
+from pages delivered by non-secure connections. This means that the page that's 
+making the Geolocation API call must be served from a [secure context](https://w3c.github.io/webappsec-secure-contexts/) such as 
+[HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/?hl=en). 
+
+It is an important issue as it will directly impact any site that requires use 
+of the geolocation API and is served over https, but it is a change that we do 
+believe is beneficial to all users on the web. This post should help you 
+understand the reasoning and how to proceed. 
 
 **When is this changing?**
 
 This change is effective as of Chrome version 50 (12PM PST April 20 2016). 
-Chrome has been providing warnings since version 44 (released July 21 2015).    
-There have been other public announcements, so hopefully this isn't the first 
-time you've seen this:
+Chrome's developer tools console has been providing warnings since version 44 
+(released July 21 2015).    
+There have been a number of public announcements that describe the rationale 
+(and discussion) of why we are making this change:
 
-* [Intent to deprecate set of powerful features over 
-  HTTP](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/2LXKVWYkOus/gT-ZamfwAKsJ) 
+* [Intent to deprecate set of powerful features over HTTP](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/2LXKVWYkOus/gT-ZamfwAKsJ) 
    (Feb 2015)
-* [Intent to deprecate Geolocation API over 
-  HTTP](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ylz0Zoph76A) 
+* [Intent to deprecate Geolocation API over HTTP](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ylz0Zoph76A) 
   (Nov 2015)
 * [Chrome Dev Summit](https://www.youtube.com/watch?v=9WuP4KcDBpI&t=31m0s) (Nov 
   2015)
-* [Mobiforge](https://mobiforge.com/news-comment/no-https-then-bye-bye-geolocation-in-chrome-50) 
-  (Jan 26, 2016)
-* **[Chrome Beta 
-  Channel](http://blog.chromium.org/2016/03/chrome-50-beta-push-notification.html)** ** 
-  release blog (March 17, 2016)**
-* [Wired](http://www.wired.com/2016/03/https-adoption-google-report/) (March 17, 
-  2016)
-* [VentureBeat](http://venturebeat.com/2016/04/13/chrome-50-arrives-with-push-notification-improvements-and-declarative-preload/) 
-  (April 13, 2016)
+* [Chrome Beta Channel](http://blog.chromium.org/2016/03/chrome-50-beta-push-notification.html) 
+  release blog (March 17, 2016)
 * [Chrome Status](https://www.chromestatus.com/feature/5636088701911040) website
-* et al
+
+There have been a number of other sources that have highlighted this: 
+[Mobiforge](https://mobiforge.com/news-comment/no-https-then-bye-bye-geolocation-in-chrome-50) (Jan 26, 2016), 
+[Wired](http://www.wired.com/2016/03/https-adoption-google-report/) (March 17, 2016), 
+[VentureBeat](http://venturebeat.com/2016/04/13/chrome-50-arrives-with-push-notification-improvements-and-declarative-preload/) 
+(April 13, 2016).
 
 **Why are we making this change?**
 
-Location is sensitive data! Requiring HTTPS is the _only_ way to protect the 
-privacy of your users' location data. If the user's location is sent over an 
-non-secure connection, _anyone_ on the network will be able to know where that 
+Location is sensitive data! Requiring HTTPS is required to protect the privacy 
+of your users' location data. If the user's location is available from a 
+non-secure context, attackers on the network will be able to know where that 
 user is. This seriously compromises user privacy.
 
 **Who does this affect?**
@@ -68,30 +67,44 @@ user is. This seriously compromises user privacy.
 This affects any page currently using the [Geolocation 
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
 from pages served over HTTP (non-secure). It also affects HTTPS iframes that use 
-the Geolocation API if they are embedded in HTTP pages (you won't be able to 
-polyfil using a shared HTTPS based service).
+the Geolocation API if they are embedded in HTTP pages. (You won't be able to 
+polyfill using a shared HTTPS-delivered frame.)
 
 **Does my whole web app need HTTPS?**
 
 It is _not_ a requirement that the whole app be served via HTTPS to use 
-Geolocation. Only pages that use Geolocation need to be served via HTTPS. 
-However, we strongly suggest that you migrate to HTTPS.
+Geolocation. Only pages that use Geolocation need to be served over a secure 
+context.  A secure context currently is anything hosted at the top level on 
+HTTPS or localhost. For example, an iframe that points to a secure origin but is 
+hosted on unsecured origin 
+(**[http](http://paul.kinlan.me/)**[://paul.kinlan.me/](http://paul.kinlan.me/)) 
+would not be allowed to call the geolocation API.
 
-**I need to use Geolocation. What should I do?**
+We strongly suggest that you migrate to HTTPS as powerful new and existing 
+browser features [require secure 
+origins](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features).
+
+**Does this affect local development?**
+
+It should not, localhost has been declared as "potentially secure" in the spec 
+and in our case geolocation requests served at the top level over localhost will 
+still work.
+
+**I really need to use Geolocation. What should I do?**
 
 If you would like to use the HTML5 Geolocation API, or if your site already uses 
 the Geolocation API, [please 
 ](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[migrate 
 the 
-page](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[ 
-making the Geolocation API JavaScript function call to 
+page](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[s](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[ 
+making Geolocation API calls to 
 HTTPS](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators), 
-ensuring that it's used in a secure context.
+ensuring that they're used in a secure context.
 
-There are other fallback options available to get a user's location that are not 
-affected by this change, such as [Google Maps Geolocation 
+There are a number of fallback options available to get a user's location that 
+are not affected by this change, such as [Google Maps Geolocation 
 API](https://developers.google.com/maps/documentation/geolocation/intro#overview), 
 [GeoIP](https://www.maxmind.com/en/geoip2-precision-services) (as an example, 
-there are other geo based solutions), and user-entered zip code. However, we 
+there are other geo based solutions), and a user-entered zip code. However, we 
 _strongly recommend_ that the best path to ensure ongoing access to geolocation 
 is to move to HTTPS.
