@@ -158,7 +158,7 @@ navigator.credentials.get({
   password: true, // `true` to obtain password credentials  
   federated: {  
     providers: [  // Specify an array of IdP strings  
-      'https://account.google.com',  
+      'https://accounts.google.com',  
       'https://www.facebook.com'  
     ]  
   }  
@@ -262,7 +262,7 @@ navigator.credentials.store(cred)
 var cred = new FederatedCredential({  
   id: id,                                  // The id for the user  
   name: name,                              // Optional user name  
-  provider: 'https://account.google.com',  // A string that represents the identity provider  
+  provider: 'https://accounts.google.com',  // A string that represents the identity provider  
   iconURL: iconUrl                         // Optional user avatar image url  
 });  
 // Store it  
@@ -290,7 +290,7 @@ navigator.credentials.get({
   password: true, // Obtain password credentials or not  
   federated: {    // Obtain federation credentials or not  
     providers: [  // Specify an array of IdP strings  
-      'https://account.google.com',  
+      'https://accounts.google.com',  
       'https://www.facebook.com'  
     ]  
   },  
