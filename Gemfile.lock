@@ -80,3 +80,6 @@ DEPENDENCIES
   jekyll (>= 2.5.3)
   kramdown
   sanitize
+
+BUNDLED WITH
+   1.10.3
