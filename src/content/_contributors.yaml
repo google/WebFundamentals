@@ -118,6 +118,21 @@ beaufortfrancois:
   description:
     en: "Dives into Chromium source code"
 
+owencm:
+  name:
+    given: Owen
+    family: Campbell-Moore
+  org:
+    name: Google
+    unit: Product Management
+  country: US
+  role:
+    - contributer
+  homepage: http://www.owencampbellmoore.com/
+  google: +OwenCampbellMoore
+  twitter: owencm
+  email: owencm@google.com
+
 michaelchang:
   name:
     given: Michael
