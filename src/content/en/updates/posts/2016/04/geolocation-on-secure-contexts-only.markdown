@@ -90,6 +90,32 @@ It should not, localhost has been declared as "potentially secure" in the spec
 and in our case geolocation requests served at the top level over localhost will 
 still work.
 
+**Can I detect at runtime if the geolocation was blocked because of not being on a secure context**
+
+Yes. The geolocation spec defines a [PositionError](https://dev.w3.org/geo/api/spec-source.html#position_error_interface)
+object that is passed in to the failure callback of the Geolocation APIs.  The object
+defines a `code` and `message` properties.  
+
+Errors due to this secure-context issue will return a `code` of 1 which is a "Permission Denied Error".
+You can get this error when a user has denied access or the system has denied access to the user's 
+locations. This means you will have to check the message to see what the exact reason was.
+
+This can be quite brittle as it might change in the future, but a strong signal that it was 
+a non-secure content issue is to look for the string "Only secure origins are allowed".
+
+{% highlight javascript %}
+navigator.geolocation.getCurrentPosition(function(success) { /* Do some magic. */ },
+  function(faiure) {
+    if(failure.mode.indexOf("Only secure origins are allowed") == 0) {
+      // Secure Origin issue.
+    }
+  };
+});
+{% endhighlight %} 
+
+Remember, you can't just check for the origin of the page because your page could be on https but inside
+an iframe that is hosted from an unsecure context.
+
 **I really need to use Geolocation. What should I do?**
 
 If you would like to use the HTML5 Geolocation API, or if your site already uses 
