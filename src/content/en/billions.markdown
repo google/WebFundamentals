@@ -53,7 +53,6 @@ translation_priority: 0
         <li><a href="https://developers.google.com/web/fundamentals/getting-started/your-first-offline-web-app/">Design for offline</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads">Reduce the number of resource requests</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer">Make installs and updates as small and fast as possible</a></li>
-        <li><a href=".">Reduce page load failures caused by connectivity problems</a></li>
       </ul>
     </div>
   </div>
@@ -70,8 +69,7 @@ translation_priority: 0
         <li><a href="https://docs.google.com/document/d/1eTIGzoiX-14xpD120p4AibbK46dq3J9pOMCW4oyiovM/edit#">Understand the cost of loading page and app components</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/">Reduce the amount of data retrieval required for user interaction</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/site-and-page-navigation">Streamline navigation: help users get to what they want</a></li>
-        <li><a href=".">Prioritize content loading</a></li>
-        <li><a href=".">Minimize data upload requirements</a></li>
+        <li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en">Prioritize content display</a></li>
       </ul>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
@@ -109,7 +107,6 @@ translation_priority: 0
       <ul>
         <li><a href="https://developers.google.com/web/fundamentals/getting-started/your-first-multi-screen-site/">Cater for a range of viewports and devices</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/">Design for limited memory and CPU: reduce and optimize JavaScript, images, and media</a></li>
-        <li><a href="https://developers.google.com/web/fundamentals/performance/">Design for limited storage</a></li>
       </ul>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
@@ -131,7 +128,6 @@ translation_priority: 0
         <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/commerce-and-conversion">Streamline transactions</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/design-and-ui/input/forms/">Streamline forms</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/usability-and-form-factor">Design orientation-friendly layouts for small-screen devices</a></li>
-        <li><a href=".">Make transactions resilient to poor connectivity</a></li>
       </ul>
     </div>
   </div>
@@ -146,7 +142,8 @@ translation_priority: 0
       <ul>
         <li><a href=".">Design content to work well across different viewport sizes</a></li>
         <li><a href=".">Eliminate redundant images and other unnecessary content</a></li>
-        <li><a href=".">Embrace minimalist writing</a></li>
+        <li><a href=".">Write for mobile</a></li>
+        <li><a href="https://www.ampproject.org/">Consider AMP HTML</a></li>
       </ul>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
@@ -166,11 +163,6 @@ translation_priority: 0
       <p>Localization can help you access new markets. Many websites are only published in English, but English is not the first language of most people online. Only <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers" title="Wikipedia list of languages by number of native speakers, graphic by User:Jroehl">5.52% of the world's population are native English speakers</a> and US or European cultural conventions may not be familiar or intuitive. Instructions or prompts that are succinct and compact in English may be verbose and obtrusive in other languages.</p>
       <ul>
         <li><a href="https://support.google.com/webmasters/answer/182192">Architect your site to enable localization</a></li>
-        <li><a href=".">Store text in string tables</a></li>
-        <li><a href=".">Use "plain English" (e.g., ASD-STE) language construction</a></li>
-        <li><a href=".">Avoid slang, technical terms, and acronyms</a></li>
-        <li><a href=".">Be aware of cultural issues such as colors, icons, and gestures</a></li>
-        <li><a href=".">Minimize use of font variants that may not render well in non-European fonts</a></li>
       </ul>
     </div>
   </div>
