@@ -16,7 +16,7 @@ Have you ever visited a web page, started reading some of the content and then t
 
 {% ytvideo 28ZsLMgjLl8 %}
 
-Well it might be worth checking out the Scroll Anchoring flag in Chrome Dev / Canary.
+Well it might be worth checking out the Scroll Anchoring flag in Chrome version 41.
 
 [Scroll Anchoring](https://groups.google.com/a/chromium.org/forum/#!msg/intervention-dev/THTySB4TdDE/Kk4R68HvDAAJ) keeps track of where you are on the page and prevents anything that causes a reflow from disrupting your position on the page.
 
