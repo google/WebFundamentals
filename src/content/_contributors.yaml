@@ -118,6 +118,29 @@ beaufortfrancois:
   description:
     en: "Dives into Chromium source code"
 
+owencm:
+  name:
+    given: Owen
+    family: Campbell-Moore
+  org:
+    name: Google
+    unit: Product Management
+  country: US
+  role:
+    - contributer
+  homepage: http://www.owencampbellmoore.com/
+  google: +OwenCampbellMoore
+  twitter: owencm
+  email: owencm@google.com
+
+michaelchang:
+  name:
+    given: Michael
+    family: Chang
+  role:
+    - author
+  homepage: http://minmax.design
+
 samchen:
   name:
     given: Sam
@@ -279,9 +302,18 @@ mattgaunt:
   homepage: http://blog.gauntface.com
   google: +MattGuant
   twitter: gauntface
-  description:
-    en: "Matt is a Developer Advocate"
 
+surma:
+  name:
+    given: Surma
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+    - engineer
+  twitter: DasSurma
 
 ilyagrigorik:
   name:
@@ -393,7 +425,7 @@ agektmr:
   twitter: agektmr
   email: agektmr@google.com
   description:
-    en: "Eiji is a Developer Advocate"
+    en: "Developer Advocate in Tokyo"
 
 ilmariheikkinen:
   name:
@@ -585,6 +617,14 @@ jacquerie:
   email: jacopo.notarstefano@gmail.com
   description:
     en: "Jacopo is a Full Stack Developer"
+
+jeffnusz:
+  name:
+    given: Jeff
+    family: Nusz
+  role:
+    - author
+  homepage: http://www.custom-logic.com
 
 addyosmani:
   name:
@@ -910,3 +950,20 @@ mscales:
     - author
   twitter: wibblymat
   email: mscales@google.com
+
+yoichiro:
+  name:
+    given: Yoichiro
+    family: Tanaka
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: yoichiro
+  google: +YoichiroTanaka
+  homepage: https://www.eisbahn.jp/yoichiro
+  email: yoichiro@eisbahn.jp
+  description:
+    en: "Yoichiro is a Google Developers Expert"

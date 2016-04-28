@@ -284,6 +284,28 @@ Messages are color-coded according to their type:
   resource name on the left.
 * Only the last 100 `WebSocket` messages are preserved by the **Frames** table.
 
+## View resource initiators and dependencies {#initiators-dependencies}
+
+Hold <kbd>Shift</kbd> and hover over a resource to view its initiators
+and dependencies. This section refers to the resource that you are 
+hovering over as the **target**. 
+
+The first resource above the target that is color-coded green is the initiator
+of the target. If there is a second resource above that which is color-coded
+green, that's the initiator of the initiator. Any resources below the target
+that are color-coded red are dependencies of the target.
+
+In the screenshot below, the target is `dn/`. The initiator of the target is
+the script beginning with `rs=AA2Y`. The initiator of the initiator 
+(`rs=AA2Y`) is `google.com`. Last, `dn.js` is a dependency of the 
+target (`dn/`).
+
+![viewing resource initiators and 
+dependencies](imgs/initiators-dependencies.png)
+
+Keep in mind that for pages with lots of resources it's possible that you 
+may not be able to see all of the initiators or dependencies. 
+
 ## Sort requests
 
 By default, the resources in the **Requests Table** are sorted by the start
