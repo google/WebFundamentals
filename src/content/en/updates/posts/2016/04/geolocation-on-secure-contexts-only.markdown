@@ -119,8 +119,7 @@ an iframe that is hosted from an unsecure context.
 **I really need to use Geolocation. What should I do?**
 
 If you would like to use the HTML5 Geolocation API, or if your site already uses 
-the Geolocation API, [please migrate 
-the pages making Geolocation API calls to 
+the Geolocation API, [please migrate the pages making Geolocation API calls to 
 HTTPS](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators), 
 ensuring that they're used in a secure context.
 
