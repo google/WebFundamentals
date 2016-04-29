@@ -27,7 +27,7 @@ making the Geolocation API call must be served from a [secure context](https://w
 [HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/?hl=en). 
 
 It is an important issue as it will directly impact any site that requires use 
-of the geolocation API and is served over https, but it is a change that we do 
+of the geolocation API and is not served over https, but it is a change that we do 
 believe is beneficial to all users on the web. This post should help you 
 understand the reasoning and how to proceed. 
 
@@ -119,9 +119,8 @@ an iframe that is hosted from an unsecure context.
 **I really need to use Geolocation. What should I do?**
 
 If you would like to use the HTML5 Geolocation API, or if your site already uses 
-the Geolocation API, [please](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators) [migrate 
-the page](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[s](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators)[ 
-making Geolocation API calls to 
+the Geolocation API, [please migrate 
+the pages making Geolocation API calls to 
 HTTPS](https://www.chromium.org/Home/chromium-security/education/tls#TOC-TLS-Resources-for-Developers-and-Site-Operators), 
 ensuring that they're used in a secure context.
 
