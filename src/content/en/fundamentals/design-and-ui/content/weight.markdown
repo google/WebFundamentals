@@ -11,7 +11,7 @@ authors:
 ---
 
 <p class="intro">
-Web pages are getting bigger. <br><br>According to [HTTP Archive](http://httparchive.org/trends.php#bytesTotal&reqTotal), the average page weight for the [top one million sites](http://httparchive.org/about.php#listofurls) is now over 2MB.
+Web pages are getting bigger. <br><br>According to <a href="http://httparchive.org/trends.php#bytesTotal&reqTotal">HTTP Archive</a>, the average page weight for the [top one million sites](http://httparchive.org/about.php#listofurls) is now over 2MB.
 
 </p>
 
