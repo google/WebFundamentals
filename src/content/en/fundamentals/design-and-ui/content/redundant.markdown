@@ -27,7 +27,7 @@ Does every page component help users achieve their goal?
 
 HTML files constitute nearly [70k and more than nine requests](http://httparchive.org/trends.php#bytesHtml&reqHtml) for the average web page. Many popular sites use several thousand HTML elements per page, and several thousand lines of code, even on mobile.
 
-[![HTTP Archive graph of HTML Transfer Size and HTML Requests](images/http-archive-html-requests.png)](http://httparchive.org/trends.php#bytesHtml&reqHtml))
+[![HTTP Archive graph of HTML Transfer Size and HTML Requests](images/http-archive-html-requests.png)](http://httparchive.org/trends.php#bytesHtml&reqHtml)
 
 Excessive HTML file size [may not make pages load more slowly](http://jsbin.com/zofavunapo/1/edit?html,js,output), but a heavy HTML payload can be a sign of content bloat: larger .html files mean more elements, more text content, or both.
 
