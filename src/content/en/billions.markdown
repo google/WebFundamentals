@@ -48,8 +48,8 @@ translation_priority: 0
       <h3>Design for variable connectivity</h3>
       <p>Low bandwidth and intermittent connectivity are the norm for many people accessing the web. <a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/mobile-white-paper-c11-520862.html" title="Cisco Visual Networking Index: Global Mobile Data Traffic Forecast Update, 2015–2020">Most people online still have 2G connections</a> or "3G" that downgrades to 2G — by 2020, more than 10% of users will still be on 2G. Many smartphones are used offline, and users regularly turn on airplane mode to avoid data consumption.</p>
       <ul>
-        <li><a href="https://docs.google.com/document/d/1IoethlCWzjTKY1A1JIMNl7KI8mBtOvpQ4TkhU9FhDUU/edit#heading=h.kdb8454jukab">Test with emulated low bandwidth and high latency</a></li>
-        <li><a href="https://docs.google.com/document/d/1fyZ3EORcvx6HWZ9UAK1_YHSuou9BjwP5BY9_H81CSlA/edit#">Handle unreliable connectivity and "lie-fi"</a></li>
+        <li><a href="/web/fundamentals/performance/poor-connectivity/testing">Test with emulated low bandwidth and high latency</a></li>
+        <li><a href="/web/fundamentals/performance/poor-connectivity/lie-fi">Handle unreliable connectivity and "lie-fi"</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/getting-started/your-first-offline-web-app/">Design for offline</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads">Reduce the number of resource requests</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer">Make installs and updates as small and fast as possible</a></li>
@@ -66,7 +66,7 @@ translation_priority: 0
       <h3>Reduce data cost</h3>
       <p>High data cost is often a greater barrier to access than poor connectivity. Mobile users are cost-conscious; even "unlimited" plans can become expensive when roaming or if unexpected fees are applied. Many mobile users are extremely cost conscious, with good reason: for example, a 500MB data plan in India costs the same as <a href="https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/" title="jana.com report: affordable smartphones, expensive data">17 hours of minimum wage work</a>.</p>
       <ul>
-        <li><a href="https://docs.google.com/document/d/1eTIGzoiX-14xpD120p4AibbK46dq3J9pOMCW4oyiovM/edit#">Understand the cost of loading page and app components</a></li>
+        <li><a href="/web/fundamentals/design-and-ui/content/weight">Understand the cost of loading page and app components</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/">Reduce the amount of data retrieval required for user interaction</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/site-and-page-navigation">Streamline navigation: help users get to what they want</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/?hl=en">Prioritize content display</a></li>
@@ -140,9 +140,9 @@ translation_priority: 0
       <h3>Build multi-device content</h3>
       <p>Large-layout, graphics-heavy content frustrates users and discourages them from using your app or site. Content that is too wide or too tall is overlooked by some users and deliberately avoided by others — and excess content adds page weight and data cost.</p>
       <ul>
-        <li><a href=".">Design content to work well across different viewport sizes</a></li>
-        <li><a href=".">Eliminate redundant images and other unnecessary content</a></li>
-        <li><a href=".">Write for mobile</a></li>
+        <li><a href="/web/fundamentals/design-and-ui/content/viewport">Design content to work well across different viewport sizes</a></li>
+        <li><a href="/web/fundamentals/design-and-ui/content/redundant">Eliminate redundant images and other unnecessary content</a></li>
+        <li><a href="/web/fundamentals/design-and-ui/content/write">Write for mobile</a></li>
         <li><a href="https://www.ampproject.org/">Consider AMP HTML</a></li>
       </ul>
     </div>

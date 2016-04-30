@@ -10,7 +10,7 @@ authors:
   - samdutton
 ---
 
-<p class="intro">The term [lie-fi](http://www.urbandictionary.com/define.php?term=lie-fi) dates back to at least 2008 (when phones looked like [this](https://www.mobilegazette.com/2008-phones-wallchart.htm)), and refers to connectivity that isn't what it seems. Your browser behaves as if it has connectivity when, for whatever reason, it doesn't.</p>
+<p class="intro">The term <a href="http://www.urbandictionary.com/define.php?term=lie-fi">lie-fi</a> dates back to at least 2008 (when phones looked like [this](https://www.mobilegazette.com/2008-phones-wallchart.htm)), and refers to connectivity that isn't what it seems. Your browser behaves as if it has connectivity when, for whatever reason, it doesn't.</p>
 
 <img src="images/lie-fi.png" class="center" alt="Lie-fi">
 

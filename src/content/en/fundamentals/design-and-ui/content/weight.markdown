@@ -10,26 +10,20 @@ authors:
   - samdutton
 ---
 
-
 <p class="intro">
-Web pages are getting bigger.
-</p>
+Web pages are getting bigger. <br><br>According to [HTTP Archive](http://httparchive.org/trends.php#bytesTotal&reqTotal), the average page weight for the [top one million sites](http://httparchive.org/about.php#listofurls) is now over 2MB.
 
-According to [HTTP Archive](http://httparchive.org/trends.php#bytesTotal&reqTotal), the average page weight for the [top one million sites](http://httparchive.org/about.php#listofurls) is now over 2MB.
+</p>
 
 ![HTTP Archive graph showing increasing total transfer size and total requests](images/http-archive-graph-total-transfer-size-and-requests.png)
 
-On average, most of that page weight is images.
-
-![HTTP Archive pie chart showing average bytes per page by content type, around 60% of which is images](images/http-archive-content-type-pie-chart.png)
-
 Users avoid sites or apps perceived to be slow or expensive, so it's crucial to understand the cost of loading page and app components.
 
-Reducing page weight can also be profitable. Chris Zacharias from YouTube found that when they reduced the watch-page size from 1.2MB to 250KB:
+Reducing page weight can also be profitable. [Chris Zacharias from YouTube](http://blog.chriszacharias.com/page-weight-matters) found that when they reduced the watch-page size from 1.2MB to 250KB:
 
 > Large numbers of people who were previously unable to use YouTube before were suddenly able to.
 
-In other words, [reducing page weight opened up whole new markets](http://blog.chriszacharias.com/page-weight-matters).
+In other words, reducing page weight **can open up whole new markets**.
 
 ## Calculate page weight
 
@@ -55,7 +49,7 @@ The site [What Does My Site Cost?](https://whatdoesmysitecost.com/) enables you 
 
 ![Estimated data cost (in 20 countries) of loading the amazon.com homepage](images/what-does-my-site-cost.png)
 
-However, this doesn't take into account affordability relative to income. This chart from [blog.jana.com](https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/) shows the cost of data.
+Bare in mind that this doesn't take into account affordability relative to income. The following chart from [blog.jana.com](https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/) shows the cost of data.
 
 ![Comparative data for relative data cost in India, Indonesia and Brazil](images/relative-data-cost-india-indonesia-brazil.png)
 
