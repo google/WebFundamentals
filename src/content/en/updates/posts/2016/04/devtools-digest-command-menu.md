@@ -42,7 +42,7 @@ The new command menu is a super quick way to navigate and discover new settings 
 ![Pretty HTML](/web/updates/images/2016/04/devtools-digest/pretty-html.jpg)
 
 We've had pretty-print for JS and CSS sources built into the Sources panel for 
-a while now, but have just extended it to the Elements panel for full-blown 
+a while now, but have just extended it supoort full-blown 
 HTML pretty-printing. Give it a try – not only does it reformat the HTML, it 
 also reformats the JavaScript and CSS within it!
 
