@@ -105,7 +105,7 @@ a non-secure content issue is to look for the string "Only secure origins are al
 
 {% highlight javascript %}
 navigator.geolocation.getCurrentPosition(function(success) { /* Do some magic. */ },
-  function(faiure) {
+  function(failure) {
     if(failure.message.indexOf("Only secure origins are allowed") == 0) {
       // Secure Origin issue.
     }
