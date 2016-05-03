@@ -37,6 +37,11 @@ is in focus!) to bring up the Command Menu, then type to filter and hit
 
 The new command menu is a super quick way to navigate and discover new settings and actions across DevTools.
 
+Looking for the good old "Go to member" dialog that was previously also
+associated with that shortcut? It is still there, just hit
+<kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>
+(or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>) from now on.
+
 ## Pretty-print HTML
 
 ![Pretty HTML](/web/updates/images/2016/04/devtools-digest/pretty-html.jpg)
