@@ -135,6 +135,10 @@ required to use insecure endpoints as a fallback. Because of this, attackers
 could force _any_ web site, not just those that are incorrectly configured, to
 negotiate for weaker versions of TLS.
 
+Affected sites will fail to connect with `ERR_SSL_FALLBACK_BEYOND_MINIMUM_VERSION`. Administrators 
+should ensure their server software is up-to-date. If still unresolved, contact the server 
+software vendor to see if a fix is available.
+
 ## Remove KeyboardEvent.prototype.keyLocation
 
 **TL;DR**: Remove an unneeded alias for the `Keyboard.prototype.location`
