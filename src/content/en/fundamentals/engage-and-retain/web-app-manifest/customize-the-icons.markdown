@@ -25,12 +25,15 @@ density.
     "sizes": "128x128"
   }, {
     "src": "images/touch/apple-touch-icon.png",
+    "type": "image/png",
     "sizes": "152x152"
   }, {
     "src": "images/touch/ms-touch-icon-144x144-precomposed.png",
+    "type": "image/png",
     "sizes": "144x144"
   }, {
     "src": "images/touch/chrome-touch-icon-192x192.png",
+    "type": "image/png",
     "sizes": "192x192"
   }],
 {% endhighlight %}
