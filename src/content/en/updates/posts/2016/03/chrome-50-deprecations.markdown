@@ -51,34 +51,6 @@ these posts.
 In Chrome 50 (Estimated beta date: March 10 to 17) there are a number of changes to Chrome.
 This list is subject to change at any time.
 
-## Remove Support for SPDY/3.1
-
-**TL;DR**: Support for HTTP/2 is widespread enough that SPDY/3.1 support can be
-dropped.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/_f24SluuXtc/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5711167683035136) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=587469)
-
-SPDY/3.1 was an experimental application layer protocol that provided
-performance improvements over HTTP/1.1. It did this by, for example, connection
-multiplexing and server push. Many of its features were incorporated into
-HTTP/2, which was published as an RFC last May. Since HTTP/2 is supported by
-major servers and clients, it's time to remove SPDY/3.1 from Chrome.
-
-## Remove TLS Next Protocol Negotiation (NPN)
-
-**TL;DR**: As part of deprecation of SPDY, NPN is removed, having previously been
-replaced with ALPN.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/Qroz7eyCzRs/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5767920709795840) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=587472)
-
-NPN was the TLS extension used to negotiate SPDY (and, in transition, HTTP/2).
-During the standardization process, NPN was replaced with ALPN, published as RFC
-7301 in July 2014. We intend to remove NPN at the same time as the SPDY removal.
-
 ## AppCache Deprecated on Insecure Contexts
 
 **TL;DR**: To hinder cross-site scripting, we're deprecating AppCache on insecure
@@ -162,6 +134,10 @@ compatibility. Some servers implemented this in such a way that browsers were
 required to use insecure endpoints as a fallback. Because of this, attackers
 could force _any_ web site, not just those that are incorrectly configured, to
 negotiate for weaker versions of TLS.
+
+Affected sites will fail to connect with `ERR_SSL_FALLBACK_BEYOND_MINIMUM_VERSION`. Administrators 
+should ensure their server software is up-to-date. If still unresolved, contact the server 
+software vendor to see if a fix is available.
 
 ## Remove KeyboardEvent.prototype.keyLocation
 
