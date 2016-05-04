@@ -141,14 +141,14 @@ navigator.bluetooth.requestDevice({
 You can also scan for Bluetooth devices based on the device name being
 advertised with the `name` filters key, or even a prefix of this name with the
 `namePrefix` filters key. Note that in this case, you will also need to define
-the `optional_services` key to be able to access some services.
+the `optionalServices` key to be able to access some services.
 
 {% highlight javascript %}
 navigator.bluetooth.requestDevice({
   filters: [{
     name: 'Francois robot'
   }],
-  optional_services: ['battery_service']
+  optionalServices: ['battery_service']
 })
 .then(device => {...})
 .catch(error => { console.log(error); });
