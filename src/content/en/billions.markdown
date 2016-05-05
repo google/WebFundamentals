@@ -2,26 +2,27 @@
 layout: shared/wide
 title: "Building for Billions"
 authors:
-  - samdutton
+- samdutton
 description: "Building Web Apps for the Next Billion Users"
 published: false
 translation_priority: 0
 ---
 
 <style>
-.mdl-cell h3 {
-  margin-top: 0;
-}
-.mdl-cell img {
-  position: relative;
-  top: 7px;
-}
-.wf-landing-section {
+  .mdl-cell h3 {
+    margin-top: 0;
+  }
+  .mdl-cell img {
+    padding-bottom: 30px;
+    position: relative;
+    top: 7px;
+  }
+  .wf-landing-section {
     padding-top: 20px;
-}
-.wf-landing-section:nth-child(even) {
-    background-color: #eee;
-}
+  }
+  .wf-landing-section:nth-child(even) {
+/*    background-color: #eee; */
+  }
 </style>
 
 <div class="wf-subheading">
@@ -42,7 +43,7 @@ translation_priority: 0
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/mobile-white-paper-c11-520862.html" title="Cisco Visual Networking Index: Global Mobile Data Traffic Forecast Update, 2015–2020"><img src="/web/imgs/billions/2g.jpg" alt="CISCO chart showing projections for 2G, 3G and 4G connectivity"></a>
+      <img src="/web/imgs/billions/connectivity.png" alt="Icon: connectivity">
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Design for variable connectivity</h3>
@@ -73,7 +74,7 @@ translation_priority: 0
       </ul>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <a href="https://blog.jana.com/2015/01/26/the-data-trap/" title="Jana Blog: The data trap"><img src="/web/imgs/billions/cost.jpg" alt="Histogram showing the numbers of hours of minimum wage work to pay for a 500MB mobile data plan"></a>
+      <img src="/web/imgs/billions/cost.png" alt="Icon: data cost">
     </div>
   </div>
 </div>
@@ -82,7 +83,7 @@ translation_priority: 0
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <a href="http://www.folkecenter.net/gb/news/world/wabutungulu/" title="Solar Installation in Wabutungulu, Uganda"><img src="/web/imgs/billions/power.jpg" alt="A number of feature phones connnected to multiple power sockets in Wabutungulu, Uganda"></a>
+      <img src="/web/imgs/billions/consumption.png" alt="Icon: battery consumption">
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Reduce battery consumption</h3>
@@ -110,33 +111,18 @@ translation_priority: 0
       </ul>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <img src="/web/imgs/billions/devices.jpg" alt="Nexus 6P phone next to smaller Samsung phone"></a>
+      <img src="/web/imgs/billions/capability.png" alt="Icon: optimize for devices">
     </div>
   </div>
 </div>
 
 <!-- item 5 -->
-<div class="wf-landing-section">
-  <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <a href="https://flipkart.com" title="Flipkart: India's largest e-commerce site"><img src="/web/imgs/billions/checkout.jpg" alt="flipkart.com checkout screen, showing Cash On Delivery and Net Banking options"></a>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <h3>Transactions &amp; monetization: think global</h3>
-      <p>Payment systems are inaccessible for many people on the web. Many users globally <a href="http://datatopics.worldbank.org/financialinclusion/country/india" title="World Bank report for India">don't have bank accounts and don't use credit cards</a> — <a href="https://www.economist.com/news/united-states/21663262-why-low-income-americans-often-have-pay-more-its-expensive-be-poor" title="Economist article about poverty in the US"> including 8% of US households</a>. Many payment systems don't work well on small viewports or with unreliable connectivity.</p>
-      <ul>
-        <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/commerce-and-conversion">Streamline transactions</a></li>
-        <li><a href="https://developers.google.com/web/fundamentals/design-and-ui/input/forms/">Streamline forms</a></li>
-        <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/usability-and-form-factor">Design orientation-friendly layouts for small-screen devices</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- item 6 -->
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
+      <img src="/web/imgs/billions/connectivity.png" alt="Icon: right content for the right context">
+    </div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Build multi-device content</h3>
       <p>Large-layout, graphics-heavy content frustrates users and discourages them from using your app or site. Content that is too wide or too tall is overlooked by some users and deliberately avoided by others — and excess content adds page weight and data cost.</p>
       <ul>
@@ -146,8 +132,23 @@ translation_priority: 0
         <li><a href="https://www.ampproject.org/">Consider AMP HTML</a></li>
       </ul>
     </div>
+  </div>
+</div>
+
+<!-- item 6 -->
+<div class="wf-landing-section">
+  <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <img src="/web/imgs/billions/multi.jpg" alt="Phone, tablet and desktop displays showing responsive design">
+      <h3>Transactions &amp; monetization: think global</h3>
+      <p>Payment systems are inaccessible for many people on the web. Many users globally <a href="http://datatopics.worldbank.org/financialinclusion/country/india" title="World Bank report for India">don't have bank accounts and don't use credit cards</a> — <a href="https://www.economist.com/news/united-states/21663262-why-low-income-americans-often-have-pay-more-its-expensive-be-poor" title="Economist article about poverty in the US"> including 8% of US households</a>. Many payment systems don't work well on small viewports or with unreliable connectivity.</p>
+      <ul>
+        <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/commerce-and-conversion">Streamline transactions</a></li>
+        <li><a href="https://developers.google.com/web/fundamentals/design-and-ui/input/forms/">Streamline forms</a></li>
+        <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/usability-and-form-factor">Design orientation-friendly layouts for small-screen devices</a></li>
+      </ul>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      <a href="https://flipkart.com" title="Flipkart: India's largest e-commerce site"><img src="/web/imgs/billions/checkout.jpg" alt="flipkart.com checkout screen, showing Cash On Delivery and Net Banking options"></a>
     </div>
   </div>
 </div>
