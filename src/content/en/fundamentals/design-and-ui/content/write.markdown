@@ -17,52 +17,27 @@ The US government writing guide at <a href="http://www.usability.gov/how-to-and-
 > It should also be actionable, findable, and shareable.
 
 
-## How people read
+## How people read on the web
 
-[Research from Nielsen Norman Group](https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/) shows that:
+Research shows that [people don't read web pages, they scan](https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/). On average, [people only read 20–28% of web page content](https://www.nngroup.com/articles/how-little-do-users-read/). Reading from screens is much slower than reading from paper. People will give up and leave your site unless information is easy to access and understand.
 
-* People don't read web pages, they scan.
+## How to write for the web
 
-* On average, [people only read 20–28% of web page content](https://www.nngroup.com/articles/how-little-do-users-read/).
+Focus on the subject at hand and tell the story upfront. For writing to work across a range of devices and viewports, make sure to get your main points across at the start: as a rule, ideally [in the first four paragraphs, in around 70 words](http://www.bbc.co.uk/academy/journalism/article/art20130702112133610).
 
-* Interactive [users read very few words](http://www.nngroup.com/articles/how-little-do-users-read/) on most web pages, because they're impatient and already have their mouse-finger itching to move to the next page.
+Ask yourself what people want from your site. Are they trying to find something out? If people visit your site for information, make sure that all your text is oriented to helping them achieve their goal.
 
-* People won’t read web content unless the text is clear, the words and sentences are simple, and the information is easy to understand.
-* A study of five different writing styles found that a sample Web site scored 58% higher in measured usability when it was written concisely, 47% higher when the text was scannable, and 27% higher when it was written in an objective style.
+Publish only what your visitors want, and nothing more.
 
-* Reading from computer screens is about 25% slower than reading from paper.
-
-* Be succinct: write no more than 50% of the text you would have used in a hardcopy publication.
-
-[The BBC's Journalism Academy](http://www.bbc.co.uk/academy/journalism/article/art20130702112133610) advises writers to focus on the subject at hand:
-
-> When writing for the web, tell the story upfront. For it to work across all possible platforms and devices, it needs to be told in essence in the first four paragraphs, around 70 words:
->
-> • Make sure the crux of the story is in the introduction — not in paragraph four
->
-> • Check that paragraphs are clear, balanced, provide context, and are effectively self-standing
->
-> • Double-check that the headline matches the story.
-
-The [gov.uk](https://www.gov.uk/guidance/content-design/writing-for-gov-uk) guidelines tell a similar story:
-
-> Don’t publish everything you can online. Publish only what someone needs to know so they can complete their task. Nothing more.
->
-> People don’t usually read text unless they want information. When you write for the web, start with the same question every time: what does the user want to know?
->
-> Meeting that need means being:
->
-> • specific
->
-> • informative
->
-> • clear and to the point
-
-They also point out that from their research:
+[UK government research](https://www.gov.uk/guidance/content-design/writing-for-gov-uk) also shows that:
 
 > • 80% of people preferred sentences written in clear English — and the more complex the issue, the greater that preference (e.g., 97% preferred "among other things" over the Latin "inter alia").
 >
 > • The more educated the person and the more specialist their knowledge, the greater their preference for plain English.
+
+In other words: prefer plain English, shorter words and simple sentence structures — even for a literate, technical audience.
+
+## The next billion users
 
 The pared-down approach to writing is particularly important for readers on mobile devices, and is crucial when creating content for low-cost phones with small viewports that require more scrolling and may have lower quality displays and less responsive screens. A minimalist attitude will also make your content easier to localize and internationalize.
 
@@ -74,4 +49,10 @@ The bottom line:
 * Reduce clutter
 * Get to the point
 
+## Find out more
+
+* <a href="http://www.usability.gov/how-to-and-tools/methods/writing-for-the-web.html">Writing for the Web</a>, usability.gov
+* <a href="https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/">How to Write for the Web</a>, Norman Nielsen Group
+* <a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">Writing well for the web</a>, gov.uk
+* <a href="https://www.bbc.co.uk/academy/journalism/article/art20130702112133610">Writing for the Web</a>, BBC Journalism Academy
 
