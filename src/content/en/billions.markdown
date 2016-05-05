@@ -46,7 +46,7 @@ translation_priority: 0
       <img src="/web/imgs/billions/connectivity.png" alt="Icon: connectivity">
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <h3>Design for variable connectivity</h3>
+      <h3>Design for seamless connectivity</h3>
       <p>Low bandwidth and intermittent connectivity are the norm for many people accessing the web. <a href="http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/mobile-white-paper-c11-520862.html" title="Cisco Visual Networking Index: Global Mobile Data Traffic Forecast Update, 2015–2020">Most people online still have 2G connections</a> or "3G" that downgrades to 2G — by 2020, more than 10% of users will still be on 2G. Many smartphones are used offline, and users regularly turn on airplane mode to avoid data consumption.</p>
       <ul>
         <li><a href="/web/fundamentals/performance/poor-connectivity/testing">Test with emulated low bandwidth and high latency</a></li>
@@ -64,7 +64,7 @@ translation_priority: 0
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
-      <h3>Reduce data cost</h3>
+      <h3>Conserve data usage</h3>
       <p>High data cost is often a greater barrier to access than poor connectivity. Mobile users are cost-conscious; even "unlimited" plans can become expensive when roaming or if unexpected fees are applied. Many mobile users are extremely cost conscious, with good reason: for example, a 500MB data plan in India costs the same as <a href="https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/" title="jana.com report: affordable smartphones, expensive data">17 hours of minimum wage work</a>.</p>
       <ul>
         <li><a href="/web/fundamentals/design-and-ui/content/weight">Understand the cost of loading page and app components</a></li>
@@ -120,7 +120,7 @@ translation_priority: 0
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
-      <img src="/web/imgs/billions/connectivity.png" alt="Icon: right content for the right context">
+      <img src="/web/imgs/billions/content.png" alt="Icon: right content for the right context">
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Build multi-device content</h3>
@@ -148,7 +148,7 @@ translation_priority: 0
       </ul>
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <a href="https://flipkart.com" title="Flipkart: India's largest e-commerce site"><img src="/web/imgs/billions/checkout.jpg" alt="flipkart.com checkout screen, showing Cash On Delivery and Net Banking options"></a>
+      <img src="/web/imgs/billions/monetization.png" alt="Icon: shopping trolley">
     </div>
   </div>
 </div>
@@ -157,7 +157,7 @@ translation_priority: 0
 <div class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
-      <a href="https://en.wikipedia.org/wiki/List_of_languages_by_number_of_native_speakers#Charts_and_graphs" title="Wikipedia list of languages by number of native speakers, graphic by User:Jroehl"><img src="/web/imgs/billions/localization.jpg" alt="Wikipedia chart showing the most common languages as different size circles"></a>
+      <img src="/web/imgs/billions/localization.png" alt="Icon: globe">
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Plan for localization</h3>
