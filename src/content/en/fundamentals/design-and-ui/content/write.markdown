@@ -19,7 +19,7 @@ The US government writing guide at <a href="http://www.usability.gov/how-to-and-
 
 ## How people read on the web
 
-Research shows that [people don't read web pages, they scan](https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/). On average, [people only read 20–28% of web page content](https://www.nngroup.com/articles/how-little-do-users-read/). Reading from screens is much slower than reading from paper. People will give up reading and leave your site unless information is easy to access and understand.
+Research shows that [people don't read web pages, they scan](https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/). On average, [people only read 20–28% of web page content](https://www.nngroup.com/articles/how-little-do-users-read/). Reading from screens is much slower than reading from paper. People will give up and leave your site unless information is easy to access and understand.
 
 ## How to write for mobile
 
@@ -35,13 +35,15 @@ Publish only what your visitors want, and nothing more.
 >
 > The more educated the person and the more specialist their knowledge, the greater their preference for plain English.
 
-In other words: prefer plain English, shorter words and simple sentence structures — even for a literate, technical audience. Unless there's a good reason not to, keep your tone of voice conversational — an old rule of journalism is to write as if you are speaking to an intelligent 11 year old.
+In other words: use plain English, shorter words and simple sentence structures — even for a literate, technical audience. Unless there's a good reason not to, keep your tone of voice conversational. An old rule of journalism is to write as if you are speaking to an intelligent 11 year old.
 
 ## The next billion users
 
 The pared-down approach to writing is particularly important for readers on mobile devices, and is crucial when creating content for low-cost phones with small viewports that require more scrolling and may have lower quality displays and less responsive screens.
 
-Most of the next billion users coming online will have cheap devices. They will not want to spend their data budget on navigating long-winded content, and may not be reading in their first language. Trim your text: use short sentences, minimal punctuation, paragraphs five lines or less, and single line headings. A minimalist attitude will also make your content easier to localize and internationalize — and make it more likely that your content gets quoted in social media.
+Most of the next billion users coming online will have cheap devices. They will not want to spend their data budget on navigating long-winded content, and may not be reading in their first language. Trim your text: use short sentences, minimal punctuation, paragraphs five lines or less, and single line headings. Consider responsive text (for example, using shorter headlines for smaller viewports) but [beware of the downsides](https://www.smashingmagazine.com/2012/02/ever-justification-for-responsive-text/).
+
+A minimalist attitude to text will also make your content easier to localize and internationalize — and make it more likely that your content gets quoted in social media.
 
 The bottom line:
 
@@ -49,7 +51,7 @@ The bottom line:
 * Reduce clutter
 * Get to the point
 
-## Find out more about tone, voice, style and structure
+## Find out more about voice, style and structure
 
 * <a href="http://www.usability.gov/how-to-and-tools/methods/writing-for-the-web.html">Writing for the Web</a>, usability.gov
 * <a href="https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/">How to Write for the Web</a>, Norman Nielsen Group
