@@ -2,8 +2,8 @@
 layout: shared/narrow-pages-list
 title: "Test with low bandwidth and high latency"
 description: "It's important to understand what your app or site feels like when connectivity is poor. A range of tools can help you."
-published_on: 2016-04-29
-updated_on: 2016-04-29
+published_on: 2016-05-10
+updated_on: 2016-05-10
 order: 2
 translation_priority: 1
 authors:
@@ -14,33 +14,25 @@ authors:
 
 In this context, it's important to understand what your app or site feels like when connectivity is poor. A range of software tools can help you [emulate and simulate](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-difference) low bandwidth and high [latency](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/).
 
-## Chrome DevTools
+## Emulate network throttling
 
-Emulate [network throttling](https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions?hl=en) with presets or custom settings from the Chrome DevTools Network panel:
+When you're building or updating a site, check continually to ensure acceptable performance under a variety of connectivity conditions.
+
+### Browser tools
+
+The [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions?hl=en) enable you to test your site or app under different network conditions, using presets or custom settings from the Chrome DevTools Network panel:
 
 ![Chrome DevTools throttling](images/chrome-devtools-throttling.png)
 
-## WebPagetest
+### System tools
 
-From [webpagetest.org](https://webpagetest.org), select a location and, from advanced settings, select a connection type. You can even automate testing using [scripts](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting) (for example, to log in to a site) or using their [RESTful APIs](https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis).
+Network Link Conditioner is a preference panel available on Mac if you install XCode:
 
-## Software proxies
+![Mac Network Link Conditioner control panel](images/network-link-conditioner-control-panel.png)
 
-The [Charles](https://www.charlesproxy.com/) HTTP/HTTPS proxy can be used to [adjust bandwidth and latency](http://www.charlesproxy.com/documentation/proxying/throttling/). Charles is commercial software, but a free trial is available.
+![Mac Network Link Conditioner settings](images/network-link-conditioner-settings.png)
 
-![Charles proxy bandwidth and latency settings](images/charles.png)
-
-Source: [codewithchris.com](http://codewithchris.com/tutorial-using-charles-proxy-with-your-ios-development-and-http-debugging/)
-
-[Fiddler](http://www.telerik.com/fiddler) supports Global proxying via [GeoEdge](http://www.geoedge.com/faq), and its custom rules can be used to simulate modem speeds:
-
-![Fiddler proxy](images/fiddler.png)
-
-Facebook's [Augmented Traffic Control](http://facebook.github.io/augmented-traffic-control/) (ATC) is a BSD-licensed set of applications that can be used to shape traffic and emulate impaired network conditions:
-
-![Facebook's Augmented Traffic Control](images/augmented-traffic-control.png)
-
-## Android Emulator
+### Device emulation
 
 [Android Emulator](http://developer.android.com/tools/devices/emulator.html#netspeed) lets you simulate various network conditions:
 
@@ -48,11 +40,29 @@ Facebook's [Augmented Traffic Control](http://facebook.github.io/augmented-traff
 
 ![Android Emulator settings](images/android-emulator-settings.png)
 
-## Mac Network Link Conditioner
+## Test from different locations and networks
 
-This preference panel is available on Mac if you install XCode:
+Connectivity performance depends on server location as well as network type.
 
-![Mac Network Link Conditioner control panel](images/network-link-conditioner-control-panel.png)
+[WebPagetest](https://webpagetest.org) is an online service that allows performance tests to be run for your site via a variety of networks and locations. For example, you can try out your site from a server in India on a 2G network, or a .
 
-![Mac Network Link Conditioner settings](images/network-link-conditioner-settings.png)
+Select a location and, from advanced settings, select a connection type. You can even automate testing using [scripts](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting) (for example, to log in to a site) or using their [RESTful APIs](https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis). This enables you to include connectivity testing in build processes or performance logging.
+
+[Fiddler](http://www.telerik.com/fiddler) supports Global proxying via [GeoEdge](http://www.geoedge.com/faq), and its custom rules can be used to simulate modem speeds:
+
+![Fiddler proxy](images/fiddler.png)
+
+## Test on an impaired network
+
+Software and hardware proxies can be used to
+
+The [Charles](https://www.charlesproxy.com/) HTTP/HTTPS proxy can be used to [adjust bandwidth and latency](http://www.charlesproxy.com/documentation/proxying/throttling/). Charles is commercial software, but a free trial is available.
+
+![Charles proxy bandwidth and latency settings](images/charles.png)
+
+More information is available from [codewithchris.com](http://codewithchris.com/tutorial-using-charles-proxy-with-your-ios-development-and-http-debugging/).
+
+Facebook's [Augmented Traffic Control](http://facebook.github.io/augmented-traffic-control/) (ATC) is a BSD-licensed set of applications that can be used to shape traffic and emulate impaired network conditions:
+
+![Facebook's Augmented Traffic Control](images/augmented-traffic-control.png)
 
