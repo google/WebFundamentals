@@ -383,7 +383,7 @@ Shortcuts available in the Styles sidebar:
     </tr>
     <tr>
       <td data-th="Sources Panel">Delete individual words</td>
-      <td data-th="Windows"><kbd class="kbd">Alt</kbd> + <kbd class="kbd">Delete</kbd></td>
+      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Delete</kbd></td>
       <td data-th="Mac"><kbd class="kbd">Opt</kbd> + <kbd class="kbd">Delete</kbd></td>
     </tr>
     <tr>
@@ -679,4 +679,3 @@ Here are some additional Chrome shortcuts which are useful for general use withi
     </tr>
   </tbody>
 </table>
-
