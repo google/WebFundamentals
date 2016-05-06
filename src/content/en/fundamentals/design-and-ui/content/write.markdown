@@ -21,7 +21,7 @@ The US government writing guide at <a href="http://www.usability.gov/how-to-and-
 
 Research shows that [people don't read web pages, they scan](https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/). On average, [people only read 20–28% of web page content](https://www.nngroup.com/articles/how-little-do-users-read/). Reading from screens is much slower than reading from paper. People will give up reading and leave your site unless information is easy to access and understand.
 
-## How to write for the web
+## How to write for mobile
 
 Focus on the subject at hand and tell the story upfront. For writing to work across a range of devices and viewports, make sure to get your main points across at the start: as a rule, ideally [in the first four paragraphs, in around 70 words](http://www.bbc.co.uk/academy/journalism/article/art20130702112133610).
 

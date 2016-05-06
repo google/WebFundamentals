@@ -2,8 +2,8 @@
 layout: shared/narrow-pages-list
 title: "Understand data cost"
 description: "Page weight affects performance and costs money. Learn how to calculate the data cost of your site."
-published_on: 2016-04-29
-updated_on: 2016-04-29
+published_on: 2016-05-10
+updated_on: 2016-05-10
 order: 4
 translation_priority: 1
 authors:

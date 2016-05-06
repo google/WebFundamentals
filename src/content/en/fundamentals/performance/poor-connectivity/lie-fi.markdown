@@ -2,8 +2,8 @@
 layout: shared/narrow-pages-list
 title: "Handle unreliable connectivity and 'lie-fi'"
 description: "As users move to mobile, it's increasingly important to handle unreliable connectivity — especially when the browser behaves as if it ha connectivity when, for whatever reason, it doesn't. Some new techniques can help."
-published_on: 2016-04-29
-updated_on: 2016-04-29
+published_on: 2016-05-10
+updated_on: 2016-05-10
 order: 5
 translation_priority: 1
 authors:

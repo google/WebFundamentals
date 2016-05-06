@@ -2,7 +2,7 @@
 layout: shared/narrow
 title: "Eliminate unnecessary content"
 description: "Page weights on the web are big and getting bigger, and content is often difficult to read and interact with on mobile. This article describes techniques for streamlining page content."
-published_on: 2016-04-29
+published_on: 2016-05-10
 updated_on: 2015-04-29
 order: 2
 authors:

@@ -17,11 +17,9 @@ translation_priority: 0
     position: relative;
     top: 7px;
   }
-  .wf-landing-section {
-    padding-top: 20px;
-  }
   .wf-landing-section:nth-child(even) {
-/*    background-color: #eee; */
+    background-color: #eee;
+    padding-top: 20px;
   }
 </style>
 
@@ -63,7 +61,7 @@ translation_priority: 0
 <!-- item 2 -->
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Conserve data usage</h3>
       <p>High data cost is often a greater barrier to access than poor connectivity. Mobile users are cost-conscious; even "unlimited" plans can become expensive when roaming or if unexpected fees are applied. Many mobile users are extremely cost conscious, with good reason: for example, a 500MB data plan in India costs the same as <a href="https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/" title="jana.com report: affordable smartphones, expensive data">17 hours of minimum wage work</a>.</p>
       <ul>
@@ -102,7 +100,7 @@ translation_priority: 0
 <!-- item 4 -->
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Optimize for device capability</h3>
       <p>Low spec is the norm. Globally, most new internet users have low-cost devices with basic hardware: single-core processors, 4" screens, limited memory, and limited storage.</p>
       <ul>
@@ -119,7 +117,7 @@ translation_priority: 0
 <!-- item 5 -->
 <div class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--hide-phone">
+    <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <img src="/web/imgs/billions/content.png" alt="Icon: right content for the right context">
     </div>
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
