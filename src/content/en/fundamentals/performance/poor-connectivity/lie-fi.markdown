@@ -10,19 +10,21 @@ authors:
   - samdutton
 ---
 
-<p class="intro">The term <a href="http://www.urbandictionary.com/define.php?term=lie-fi">lie-fi</a> dates back to at least 2008 (when phones looked like [this](https://www.mobilegazette.com/2008-phones-wallchart.htm)), and refers to connectivity that isn't what it seems. Your browser behaves as if it has connectivity when, for whatever reason, it doesn't.</p>
+## What is lie-fi?
 
-<img src="images/lie-fi.png" class="center" alt="Lie-fi">
+<p class="intro">The term <a href="http://www.urbandictionary.com/define.php?term=lie-fi">lie-fi</a> dates back to at least 2008 (when phones looked like <a href="https://www.mobilegazette.com/2008-phones-wallchart.htm" title="Images of phones from 2008">this</a>), and refers to connectivity that isn't what it seems. Your browser behaves as if it has connectivity when, for whatever reason, it doesn't.</p>
 
-This can result in a poor experience as the browser (or JavaScript) persists in trying to retrieve resources rather than giving up and choosing a sensible fallback. Lie-fi can actually be worse than offline; at least if a device is definitely offline, your JavaScript can take appropriate evasive action.
+Misinterpreted connectivity can result in a poor experience as the browser (or JavaScript) persists in trying to retrieve resources rather than giving up and choosing a sensible fallback. Lie-fi can actually be worse than offline; at least if a device is definitely offline, your JavaScript can take appropriate evasive action.
 
-This is likely to become a bigger problem as more people move to mobile and away from fixed broadband.
+Lie-fi is likely to become a bigger problem as more people move to mobile and away from fixed broadband.
 
 <img src="images/home-broadband.png" class="center" alt="Washington Post chart showing the move to mobile away from fixed broadband, particularly in lower income households">
 
  Source: [Washington Post](https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/) from [US Census data](https://www.ntia.doc.gov/blog/2016/evolving-technologies-change-nature-internet-use)
 
-In the past, [hacky methods using XHR](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) have been used to test for intermittent connectivity, but Service Worker enables more reliable methods for setting network timeouts. Jeff Posnick explains how to achieve this using [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) timeouts in his talk [Instant Loading with Service Workers](https://youtu.be/jCKZDTtUA2A?t=19m58s):
+## Use timeouts to handle intermittent connectivity
+
+In the past, [hacky methods using XHR](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) have been used to test for intermittent connectivity, but Service Worker enables more reliable methods in order to set network timeouts. Jeff Posnick explains how to achieve this using [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) timeouts in his talk [Instant Loading with Service Workers](https://youtu.be/jCKZDTtUA2A?t=19m58s):
 
 {% highlight javascript %}
 toolbox.router.get(
