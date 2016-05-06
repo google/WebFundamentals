@@ -50,14 +50,14 @@ When building a site or app for a range of viewports, consider content as well a
 * Put your most important content at the top, since [users tend to read web pages in an F-shaped pattern](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/).
 * Users visit your site to achieve a goal. Ask yourself what they need to achieve that goal and get rid of everything else. Get tough on visual and textual embellishments, legacy content, excessive links, and other clutter.
 * Be careful with social sharing icons; they can clutter layouts, and the code for them can slow down page loading.
-* Design [responsive layouts](https://developers.google.com/web/fundamentals/design-and-ui/responsive/?hl=en) for content, not fixed device sizes.
+* Design [responsive layouts](/web/fundamentals/design-and-ui/responsive/?hl=en) for content, not fixed device sizes.
 
 ## Content design testing
 
 Whatever you do — **test**!
 
 * Check readability on smaller viewports with Chrome DevTools and other emulation tools.
-* [Test your content under conditions of low bandwidth and high latency](); try out content in a variety of connectivity scenarios.
+* [Test your content under conditions of low bandwidth and high latency](/web/fundamentals/performance/poor-connectivity/testing); try out content in a variety of connectivity scenarios.
 * Try reading and interacting with your content on a low-cost phone.
 * Ask friends and colleagues to try out your app or site.
 * Build a simple device test lab. The [GitHub repo](https://github.com/GoogleChrome/MiniMobileDeviceLab) for Google's Mini Mobile Device Lab has instructions on how to build your own. [OpenSTF](https://github.com/openstf/stf) is a simple web application for testing websites on multiple Android devices.
