@@ -38,7 +38,7 @@ translation_priority: 0
 {% include page-structure/site-promo-banner.liquid %}
 
 <!-- item 1 -->
-<div class="wf-landing-section">
+<div id="connectivity" class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <img src="/web/imgs/billions/connectivity.png" alt="Icon: connectivity">
@@ -59,7 +59,7 @@ translation_priority: 0
 
 
 <!-- item 2 -->
-<div class="wf-landing-section wf-landing-gmp">
+<div id="cost" class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Conserve data usage</h3>
@@ -78,7 +78,7 @@ translation_priority: 0
 </div>
 
 <!-- item 3 -->
-<div class="wf-landing-section">
+<div class="wf-landing-section" id="consumption">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <img src="/web/imgs/billions/consumption.png" alt="Icon: battery consumption">
@@ -91,14 +91,14 @@ translation_priority: 0
         <li><a href="https://developers.google.com/web/fundamentals/design-and-ui/animations/#avoid-animating-expensive-properties">Avoid expensive UI animations</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads">Avoid radio usage: eliminate unnecessary downloads</a></li>
         <li><a href="https://developers.google.com/web/fundamentals/getting-started/principles/">Reduce user actions required to access content</a></li>
-        <li><a href="https://developers.google.com/web/fundamentals/design-and-ui/animations/animations-and-performance">Use hardware acceleration</a></li>
+        <li><a href="https://developers.google.com/web/fundamentals/design-and-ui/animations/animations-and-performance">Avoid expensive animations</a></li>
       </ul>
     </div>
   </div>
 </div>
 
 <!-- item 4 -->
-<div class="wf-landing-section wf-landing-gmp">
+<div id="capability" class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Optimize for device capability</h3>
@@ -115,7 +115,7 @@ translation_priority: 0
 </div>
 
 <!-- item 5 -->
-<div class="wf-landing-section wf-landing-gmp">
+<div id="content" class="wf-landing-section wf-landing-gmp">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <img src="/web/imgs/billions/content.png" alt="Icon: right content for the right context">
@@ -134,7 +134,7 @@ translation_priority: 0
 </div>
 
 <!-- item 6 -->
-<div class="wf-landing-section">
+<div id="commerce" class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <h3>Transactions &amp; monetization: think global</h3>
@@ -152,7 +152,7 @@ translation_priority: 0
 </div>
 
 <!-- item 7 -->
-<div class="wf-landing-section">
+<div id="localization" class="wf-landing-section">
   <div class="page-content mdl-grid">
     <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
       <img src="/web/imgs/billions/localization.png" alt="Icon: globe">
