@@ -4,11 +4,6 @@ description: "洗練されたユーザ体験を提供するために、あなた
 updated_on: 2016-05-08
 translators:
   - yoichiro
-tags:
-  - credentials
-  - sign-in
-  - chrome51
-featured_image: /web/updates/images/2016/04/credential-management-api/image00.png
 ---
 
 洗練されたユーザ体験を提供するために、ウェブサイト上でユーザ認証を手助けすることは非常に重要なことです。
