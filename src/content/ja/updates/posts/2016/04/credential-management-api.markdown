@@ -1,5 +1,5 @@
 ---
-title: "Credential Management APIを使ったサインインフローの効率化"
+title: "Credential Management API を使ったサインインフローの効率化"
 description: "洗練されたユーザ体験を提供するために、あなたのウェブサイトでユーザの認証を手助けすることは重要なことです。しかし、特にモバイル環境においては、パスワードの作成、記憶、そして打ち込みは、エンドユーザにとって面倒に感じる傾向があります。"
 updated_on: 2016-05-08
 translators:
@@ -13,8 +13,8 @@ translators:
 これは、モバイルの画面上では、そのユーザが異なるサイトで同じパスワードを使い回すことを助長します。
 これはセキュリティリスクの原因となります。
 
-Chromeの最新バージョン(51)は、**[Credential Management API](http://w3c.github.io/webappsec-credential-management/)**
-をサポートします。これは、W3Cによる標準化過程の提案であり、開発者にブラウザのクレデンシャルマネージャに
+Chrome の最新バージョン(51)は、**[Credential Management API](http://w3c.github.io/webappsec-credential-management/)**
+をサポートします。これは、W3C による標準化過程の提案であり、開発者にブラウザのクレデンシャルマネージャに
 プログラムからアクセスすることを可能にし、そしてユーザがサインインをより簡単にできるように助けます。
 
 # Credential Management API とは
@@ -26,7 +26,7 @@ Credential Management API は、パスワードクレデンシャルやフェデ
 * `navigator.credentials.store()`
 * `navigator.credentials.requireUserMediation()`
 
-これらのシンプルなAPIを使うことで、開発者は以下のような強力なことをすることができます。
+これらのシンプルな API を使うことで、開発者は以下のような強力なことをすることができます。
 
 * たった1回のタップでユーザがサインインすることを可能にします。
 * ユーザがサインインする時に使ったフェデレーティッドアカウントを記憶します。
@@ -34,32 +34,32 @@ Credential Management API は、パスワードクレデンシャルやフェデ
 
 {% ytvideo O3mBdKYMsMY %}
 
-Chromeの実装では、クレデンシャルはChromeのパスワードマネージャの中に格納されます。もしユーザが
-Chromeにサインインした場合、それらはデバイスを横断してユーザのパスワードを同期できます。
+Chrome の実装では、クレデンシャルは Chrome のパスワードマネージャの中に格納されます。もしユーザが
+Chrome にサインインした場合、それらはデバイスを横断してユーザのパスワードを同期できます。
 それらの同期されたパスワードは、
 [シームレスなクロスプラットフォーム体験のために](https://developers.google.com/identity/smartlock-passwords/android/)
 [Smart Lock for Passwords API for Android](https://developers.google.com/identity/smartlock-passwords/android/)
-を統合したAndroidアプリで共有もされることが可能です。
+を統合した Android アプリで共有もされることが可能です。
 
-# あなたのサイトへのCredential Management APIの組み込み
+# あなたのサイトへの Credential Management API の組み込み
 
-あなたのウェブサイトでCredential Management APIを使うための方法は、そのアーキテクチャに依存して
-異なる可能性があります。それは単一ページアプリですか？それはページ遷移を伴うレガシーなアーキテクチャですか？
+あなたのウェブサイトで Credential Management API を使うための方法は、そのアーキテクチャに依存して
+異なる可能性があります。それはシングルページアプリですか？それはページ遷移を伴うレガシーなアーキテクチャですか？
 サインインフォームはトップページにのみ配置されていますか？サインインボタンはどこでもありますか？
 ユーザはサインインすることなしにあなたのウェブサイトをわかりやすく閲覧できますか？フェデレーションはポップアップ
 ウィンドウ内で機能しますか？または、複数のページを横断してインタラクションを要求しますか？
 
-それらのすべてのケースをカバーすることはほとんど無理ですが、典型的な単一ページアプリを見ていきましょう。
+それらのすべてのケースをカバーすることはほとんど無理ですが、典型的なシングルページアプリを見ていきましょう。
 
 * トップページは登録フォームである。
 * "サインイン"ボタンをタップすることで、ユーザはサインインフォームに移動される。
-* 登録とサインインフォームの両方は、ID/パスワードクレデンシャルとフェデレーション
-（例: GoogleサインインやFacebookサインイン）の2つの典型的な選択肢を持つ。
+* 登録とサインインフォームの両方は、ID /パスワードクレデンシャルとフェデレーション
+（例: Google サインインや Facebook サインイン）の2つの典型的な選択肢を持つ。
 
-Credential Management APIを使うことで、サイトに以下の例のような機能を追加することができるでしょう。
+Credential Management API を使うことで、サイトに以下の例のような機能を追加することができるでしょう。
 
 * **サインインの際にアカウントチューザーを見せる:** ユーザが"サインイン"をタップした時に、ネイティブの
-  アカウントチューザーUIを表示する。
+  アカウントチューザー UI を表示する。
 * **クレデンシャルの格納:** サインインが_成功_した時に、後で使うために、ブラウザのパスワードマネージャに
   クレデンシャル情報を格納することを提案する。
 * **自動的にユーザを再度サインインさせる** もしセッションが失効した場合にユーザを再度サインインさせる。
@@ -70,23 +70,23 @@ Credential Management APIを使うことで、サイトに以下の例のよう�
 [そのサンプルコード](https://github.com/GoogleChrome/credential-management-sample)）
 にて、実装された機能を体験することができます。
 
-**このAPIは、HTTPSドメインまたはlocalhostのようなセキュアなオリジンで利用される必要があることに
+**この API は、HTTPS ドメインまたは localhost のようなセキュアなオリジンで利用される必要があることに
 注意してください。**
 
 ## サインインの際にアカウントチューザーを表示する
 
 "サインイン"ボタンのユーザタップと、サインインフォームへの移動の間に、クレデンシャル情報を取得するために
-[navigator.credentials.get()](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get)
-を使うことができます。Chromeは、ユーザがアカウントを選択することを可能にするアカウントチューザーUIを表示
+[`navigator.credentials.get()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/get)
+を使うことができます。Chrome は、ユーザがアカウントを選択することを可能にするアカウントチューザー UI を表示
 します。
 
 <img src="/web/updates/images/2016/04/credential-management-api/image00.png" style="max-width:540px; width:100%;" />
 
-_アカウントチューザーUIは、サインインするためのアカウントを選択するために、ユーザに対してポップアップされます_
+_アカウントチューザー UI は、サインインするためのアカウントを選択するために、ユーザに対してポップアップされます_
 
 ### パスワードクレデンシャルオブジェクトの取得:
 
-アカウントオプションとしてパスワードくれデンシャルを表示するためには、`password: true`を使用します。
+アカウントオプションとしてパスワードクレデンシャルを表示するためには、`password: true` を使用します。
 
 {% highlight javascript %}
 navigator.credentials.get({
@@ -99,7 +99,7 @@ navigator.credentials.get({
 
 ### サインインのためのパスワードクレデンシャルの利用
 
-ユーザがアカウント選択をした時、解決する関数はパスワードクレデンシャルを受け取ります。`fetch()`を
+ユーザがアカウント選択をした時、解決する関数はパスワードクレデンシャルを受け取ります。`fetch()` を
 使うことで、それをサーバに送ることができます:
 
 {% highlight javascript %}
@@ -134,7 +134,7 @@ navigator.credentials.get({
 ### サインインのためのフェデレーションクレデンシャルの利用
 
 ユーザにフェデレーティッドアカウントを表示するために、アイデンティティプロバイダの配列を取る
-`federated`を`get()`に追加します。
+`federated` を `get()` に追加します。
 
 <img src="/web/updates/images/2016/04/credential-management-api/image01.png" style="max-width:540px; width:100%;" />
 
@@ -156,10 +156,10 @@ navigator.credentials.get({
 
 
 `PasswordCredential `(`type == 'password'`) または `FederatedCredential` (`type == 'federrated'`)
-かどうかを、クレデンシャルオブジェクトの`type`プロパティで調べることができます。
+かどうかを、クレデンシャルオブジェクトの `type` プロパティで調べることができます。
 もしクレデンシャルが
 [`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential) の場合は、
-それが持つ情報を使って適切なAPIを呼び出すことが可能です。
+それが持つ情報を使って適切な API を呼び出すことが可能です。
 
 {% highlight javascript %}
       });
@@ -199,24 +199,22 @@ navigator.credentials.get({
 ## クレデンシャルの保存
 
 ユーザがあなたのウェブザイトにフォームを使ってサインインする際に、クレデンシャルを保存するために
-[navigator.credentials.store()](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store)
+[`navigator.credentials.store()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store)
 を使うことができます。ユーザは、それを保存するかしないかの選択を聞かれることになります。クレデンシャルの種類に
 依存して、保存したいクレデンシャルオブジェクトを作成するために、
-[`new
-PasswordCredential()`](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
-または [`new
-FederatedCredential()`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential)
+[`new PasswordCredential()`](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
+または [`new FederatedCredential()`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential)
 を使います。
 
 <img src="/web/updates/images/2016/04/credential-management-api/image03.png" style="max-width:540px; width:100%;" />
 
-_Chromeにはユーザにクレデンシャル（またはフェデレーションプロバイダ）を保存したいかどうかを尋ねます。_
+_Chrome にはユーザにクレデンシャル（またはフェデレーションプロバイダ）を保存したいかどうかを尋ねます。_
 
 ### フォーム要素からのパスワードクレデンシャルの作成及び保存
 
 以下のコードは、フォームの要素を [PasswordCredential](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
 オブジェクトパラメータに自動的に [マップ](http://w3c.github.io/webappsec-credential-management/#passwordcredential-form-constructor)
-するために、`autocomplete`属性を使っています。
+するために、`autocomplete` 属性を使っています。
 
 HTML
 {% highlight html %}
@@ -295,13 +293,13 @@ navigator.credentials.get({
 {% endhighlight %}
 
 コードは、"サインイン時にアカウントチューザーを表示する"セクションの時に見たものと似ているはずです。
-違いは、`unmediated: true`がセットされていることのみです。
+違いは、`unmediated: true` がセットされていることのみです。
 
 これは、即座に関数を解決し、ユーザを自動的にサインインさせるためのクレデンシャルをあなたに与えます。
 幾つかの条件があります:
 
 * ユーザがワームウェルカム（温かい歓迎）において自動サインイン機能を承認している。
-* ユーザが前にCredential Management APIを使ってウェブサイトにサインインしている。
+* ユーザが前に Credential Management API を使ってウェブサイトにサインインしている。
 * ユーザがあなたのオリジンに対してクレデンシャルを一つだけ保存している。
 * ユーザが前回のセッションを明示的にサインアウトしていない。
 
@@ -309,17 +307,17 @@ navigator.credentials.get({
 
 <img src="/web/updates/images/2016/04/credential-management-api/image06.png" />
 
-## 自動サインインの仲介
+## 自動サインインを仲介する
 
 ユーザがあなたのウェブサイトからサインアウトする際に、**ユーザが自動的にサインイン状態に戻らないように
-保証するのは、あなたの責任です**。これを保証するために、Credential Management APIは**mediation**
+保証するのは、あなたの責任です**。これを保証するために、Credential Management API は**mediation（仲介）**
 と呼ばれる機構を提供します。
 あなたは、[`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation) を呼び出すことで、
-mediationモードを有効にすることができます。
-そのオリジンのユーザのmediationステータスがONになっている間、`navigator.credentials.get()`が持つ
-`unmediated: true`を使って、その関数は`undefined`で解決します。
+mediation モードを有効にすることができます。
+そのオリジンのユーザの mediation ステータスが ON になっている間、`navigator.credentials.get()` が持つ
+`unmediated: true` を使って、その関数は `undefined` で解決します。
 
-## 自動サインインの仲介
+### 自動サインインの仲介
 
 {% highlight javascript %}
 navigator.credentials.requireUserMediation();
@@ -329,18 +327,18 @@ navigator.credentials.requireUserMediation();
 
 # FAQ
 
-**ウェブサイト上で生のパスワードを取得することはJavaScriptで可能ですか？**
-いいえ。`PasswordCredential`の一部としてパスワードを取得することができるだけで、
+**ウェブサイト上で生のパスワードを取得することは JavaScript で可能ですか？**
+いいえ。`PasswordCredential` の一部としてパスワードを取得することができるだけで、
 決してさらされることはありません。
 
-**Credential Management APIを使ってIDに対して3組の桁を保存することは可能ですか？**
+**Credential Management API を使って ID に対して3組の桁を保存することは可能ですか？**
 現在はできません。あなたからの[仕様へのフィードバック](https://github.com/w3c/webappsec-credential-management)
 は大きく歓迎されるでしょう。
 
-**iframeの内部でCredential Management APIを利用することは可能ですか？**
-このAPIはトップレベルコンテキストに制限されます。iframeないで`.get()`または`.store()`を
+**iframe の内部で Credential Management API を利用することは可能ですか？**
+このAPIはトップレベルコンテキストに制限されます。iframe 内で `.get()` または `.store()` を
 呼び出すことは、何も起きずに直ちに解決するでしょう。
 
-**Credential Management APIを使って、自分のパスワード管理Chrome拡張機能を統合することができますか？**
-`navigator.credentials`をオーバーライドして、クレデンシャルの`get()`または`store()`をするために、
-それをあなたのChrome拡張機能にフックすることはできるかもしれません。
+**Credential Management API を使って、自分のパスワード管理 Chrome 拡張機能を統合することができますか？**
+`navigator.credentials` をオーバーライドして、クレデンシャルの `get()` または `store()` をするために、
+それをあなたの Chrome 拡張機能にフックすることはできるかもしれません。
