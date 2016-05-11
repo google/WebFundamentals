@@ -15,10 +15,10 @@ featured_image: /web/updates/images/2016/05/houdini/compworklet_small.png
 
 Have you ever thought about the amount of work CSS does? You change a single
 attribute and suddenly your entire website appears in a different layout. It’s
-kind of *magic* in that regard (can you tell where I am going with this?!). So
+kind of *magic* in that regard. (Can you tell where I am going with this?!) So
 far, we – the community of web developers – have only been able to witness and
-observe the magic. What if we want to come up with our own magic tricks and
-perform them? What if we want to *become the magician*? Enter Houdini!
+observe the magic. What if we want to come up with our own magic? What if we 
+want to *become the magician*? Enter Houdini!
 
 The Houdini task force consists of engineers from Mozilla, Apple, Opera,
 Microsoft, HP, Intel and Google working together to expose certain parts of the
@@ -26,19 +26,19 @@ CSS engine to web developers. The task force is working on a *collection of
 drafts* with the goal to get them accepted by the W3C to become actual web
 standards. They set themselves a few high-level goals, turned them into
 specification drafts which in turn gave birth to a set of supporting,
-lower-level specification drafts. The combination of these drafts is what is
-usually meant when someone is talking about “Houdini”. At the time of writing,
-the [list of drafts][Houdini Drafts] is still incomplete and some of the drafts
+lower-level specification drafts. The collection of these drafts is what is
+usually meant when someone talks about “Houdini”. At the time of writing,
+the [list of drafts][Houdini Drafts] is incomplete and some of the drafts
 are mere placeholders. That’s how early in development of Houdini we are.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/EUlIxr8mk7s" frameborder="0" allowfullscreen></iframe>
 
 *Disclaimer:* I want to give a quick overview of the Houdini drafts so you have
 *an idea of what kind of problems Houdini tries to tackle. As far as the current
-*state of the specs allow, I’ll try to give code examples, as well. Keeping that
-*in mind, please be aware that all of these specs are *drafts* and very
-*volatile. There’s no guarantee that these code samples are even remotely
-*correct in the future or that any of these drafts become reality at all.
+*state of the specs allow, I’ll try to give code examples, as well. Please be
+*aware that all of these specs are *drafts* and very volatile. There’s no
+*guarantee that these code samples will be even remotely correct in the future or
+*that any of these drafts become reality.
 
 ## The specifications
 
