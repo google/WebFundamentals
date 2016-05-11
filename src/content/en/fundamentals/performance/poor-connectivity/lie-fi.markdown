@@ -16,11 +16,11 @@ authors:
 
 Misinterpreted connectivity can result in a poor experience as the browser (or JavaScript) persists in trying to retrieve resources rather than giving up and choosing a sensible fallback. Lie-fi can actually be worse than offline; at least if a device is definitely offline, your JavaScript can take appropriate evasive action.
 
-Lie-fi is likely to become a bigger problem as more people move to mobile and away from fixed broadband.
+Lie-fi is likely to become a bigger problem as more people move to mobile and away from fixed broadband. Recent [US Census data](https://www.ntia.doc.gov/blog/2016/evolving-technologies-change-nature-internet-use) shows a[move away from fixed broadband](https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/):
 
-<img src="images/home-broadband.png" class="center" alt="Washington Post chart showing the move to mobile away from fixed broadband, particularly in lower income households">
-
- Source: [Washington Post](https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/) from [US Census data](https://www.ntia.doc.gov/blog/2016/evolving-technologies-change-nature-internet-use)
+<table>
+<tr><td></td></tr>
+</table>
 
 ## Use timeouts to handle intermittent connectivity
 
