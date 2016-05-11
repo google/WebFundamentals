@@ -36,13 +36,13 @@ Case in point: the Unified Media Pipeline, **UMP** for short.
 
 This may sound like a sinister Soviet era directive, but in fact it's an important step towards consistent cross-platform audio and video delivery. Chrome on Android will now use the same media stack as desktop Chrome, rather than relying on the underlying platform implementation.
 
-UMP might not sound all that exciting, but it does a lot. For example:
+UMP enables you to do a lot:
 
-* Cache audio and video with service workers, since media delivery is now implemented directly within Chrome rather than being passed off to the Android media stack.
+* Cache audio and video with service workers — since media delivery is now implemented directly within Chrome rather than being passed off to the Android media stack.
 * Use Blob URLs for audio and video elements.
 * Set `playbackRate` for audio and video.
 * Pass MediaStreams between Web Audio and MediaRecorder.
-* Cross-platform development and debugging is easier, since media works the same on desktop and Android.
+* Develop and debug media across different devices. Media works the same on desktop and Android.
 
 UMP took some hard engineering work to implement:
 
