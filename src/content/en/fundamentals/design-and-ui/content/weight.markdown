@@ -10,12 +10,16 @@ authors:
   - samdutton
 ---
 
+<style>
+td {
+  padding: 5px;
+}
+</style>
+
 <p class="intro">
 Web pages are getting bigger. <br><br>According to <a href="http://httparchive.org/trends.php#bytesTotal&reqTotal">HTTP Archive</a>, the average page weight for the <a href="http://httparchive.org/about.php#listofurls">top one million sites</a> is now over 2MB.
 
 </p>
-
-![HTTP Archive graph showing increasing total transfer size and total requests](images/http-archive-graph-total-transfer-size-and-requests.png)
 
 Users avoid sites or apps perceived to be slow or expensive, so it's crucial to understand the cost of loading page and app components.
 
@@ -47,11 +51,37 @@ For many users, data doesn't just cost bytes and performance — it costs money.
 
 The site [What Does My Site Cost?](https://whatdoesmysitecost.com/) enables you to estimate the actual financial cost of loading your site. The histogram below shows how much it costs (using a prepaid data plan) to load [amazon.com](https://www.amazon.com/).
 
-![Estimated data cost (in 20 countries) of loading the amazon.com homepage](images/what-does-my-site-cost.png)
+![Estimated data cost in 12 countries) of loading the amazon.com homepage](images/what-does-my-site-cost.png)
 
-Bare in mind that this doesn't take into account affordability relative to income. The following chart from [blog.jana.com](https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/) shows the cost of data.
+Bear in mind that this doesn't take into account affordability relative to income. Data from [blog.jana.com](https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/) shows the cost of data.
 
-![Comparative data for relative data cost in India, Indonesia and Brazil](images/relative-data-cost-india-indonesia-brazil.png)
+<table>
+  <tr>
+    <td></td>
+    <td><strong>500MB data plan<br>cost (USD)</strong></td>
+    <td><strong>Hourly minimum<br>wage (USD)</strong></td>
+    <td><strong>Hours of work to pay<br>for 500MB data plan</strong></td>
+  </tr>
+  <tr>
+    <td>India</td>
+    <td>$3.38</td>
+    <td>$0.20</td>
+    <td>17 hours</td>
+  </tr>
+  <tr>
+    <td>Indonesia</td>
+    <td>$2.39</td>
+    <td>$0.43</td>
+    <td>6 hours</td>
+  </tr>
+  <tr>
+    <td>Brazil</td>
+    <td>$13.77</td>
+    <td>$1.04</td>
+    <td>13 hours</td>
+  </tr>
+</table>
+
 
 Page weight isn't just a problem for emerging markets. In many countries, people use mobile plans with limited data, and will avoid your site or app if they perceive it to be heavy and expensive. Even "unlimited" cell and wifi data plans generally have a data limit beyond which they are blocked or throttled.
 

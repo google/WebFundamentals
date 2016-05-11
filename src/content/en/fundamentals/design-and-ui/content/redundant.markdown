@@ -25,9 +25,7 @@ Does every page component help users achieve their goal?
 
 ## Remove redundant page elements
 
-HTML files constitute nearly 70k and more than nine requests for the average web page, according to [HTTP Archive](http://httparchive.org/trends.php#bytesHtml&reqHtml):
-
-[![HTTP Archive graph of HTML Transfer Size and HTML Requests](images/http-archive-html-requests.png)](http://httparchive.org/trends.php#bytesHtml&reqHtml)
+HTML files constitute nearly 70k and more than nine requests for the average web page, according to [HTTP Archive](http://httparchive.org/trends.php#bytesHtml&reqHtml).
 
 Many popular sites use several thousand HTML elements per page, and several thousand lines of code, even on mobile. Excessive HTML file size [may not make pages load more slowly](http://jsbin.com/zofavunapo/1/edit?html,js,output), but a heavy HTML payload can be a sign of content bloat: larger .html files mean more elements, more text content, or both.
 
@@ -51,7 +49,7 @@ See [Write for mobile](write.html) for more information.
 
 ## Remove redundant images
 
-According to [HTTP Archive data](http://httparchive.org/trends.php#bytesImg&reqImg), the average web page makes 54 requests for images:
+According to [HTTP Archive data](http://httparchive.org/trends.php#bytesImg&reqImg), the average web page makes 54 requests for images.
 
 <a href="http://httparchive.org/trends.php#bytesImg&reqImg" title="HTTP Archive"><img src="images/http-archive-images.png" alt="HTTP Archive showing increasing number of image transfer sizes and image requests" /></a>
 
