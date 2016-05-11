@@ -9,27 +9,26 @@ landing_page:
   custom_css_path: /web/scratch/scratch.css
   rows:
 
-  - heading: Flipkart triples time-on-site with Progressive Web App
+  - heading: Jumia increases conversions by 9X with Web Push Notifications
     classname: devsite-landing-row-67
     items:
     - description: >
         <p>
-          Flipkart, India’s largest e-commerce site, decided to combine their
-          web presence and native app into a Progressive Web Application that
-          has resulted in a 70% increase in conversions.
+          Jumia is the leading e-commerce website in Africa. Most of their
+          customers use mobile devices, which also provide the largest source
+          of traffic and user growth.
         </p>
         <blockquote>
-          We know that everyone needs to build mobile-first experiences. With
-          Flipkart Lite, we’ve developed a powerful, technically-advanced web
-          app that performs as well as our native app. We now feel we have the
-          best of both worlds.
+          We finally have proper means to address our fastest growing pool of
+          customers—mobile web users. That’s incredibly valuable. We even see
+          better results from Web-Push Notifications than from app pushes.
           <br>
-          - Amar Nagaram, an Engineering Director at Flipkart.
+          - Jeremy Doutte, Jumia CEO
         </blockquote>
       image_path: https://placehold.it/425x350
       buttons:
       - label: Read more
-        path: "flipkart"
+        path: 2016/jumia
 
 
 

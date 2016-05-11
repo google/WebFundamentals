@@ -1,0 +1,60 @@
+project_path: /web/scratch/_project.yaml
+book_path: /web/scratch/showcase/_book.yaml
+
+
+{% setvar wf_published_on %}2016-05-18{% endsetvar %}
+{% setvar wf_updated_on %}2015-05-18{% endsetvar %}
+
+<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
+
+# Jumia {: .page-title }
+
+<img src="/web/showcase/case-study/images/net-a-porter/net-a-porter-device.png" class="attempt-right">
+
+## TL;DR
+
+Push Notifications help Jumia reverse cart abandonment and increase
+conversions by 9X!
+
+### Results
+
+<span class="compare-yes"></span> 38% Open rate
+
+<span class="compare-yes"></span> 9X more conversion on previously abandoned carts from web push users
+
+<span class="compare-yes"></span>7.85% conversion rate on previously abandoned carts from web push users, vs. 4.5% for native app.
+
+<a class="button button-primary" href="#">
+  Download PDF Case study
+</a>
+
+## About Jumia
+
+Jumia is the leading e-commerce website in Africa. Most of their customers use
+mobile devices, which also provide the largest source of traffic and user growth.
+
+## Challenge
+
+Nearly a quarter of shopping carts were abandoned on Jumia’s mobile site
+every day. To counter this, they reminded customers via email to complete
+their purchases. But getting people to provide their email addresses is
+challenging, and email open rates are low. With over 65% of their web traffic
+on mobile browsers, Jumia looked to progressive web-app technologies like
+Push Notifications to solve their problem and re-engage mobile users who
+had abandoned carts.
+
+## Solution
+
+Working with middleware provider Accengage, Jumia implemented [Push
+Notifications](/web/fundamentals/getting-started/push-notifications/) in just
+days through Google Tag Manager. They then began sending Push Notifications to
+customers with abandoned carts. These notifications look the same as those
+from native apps, and arrive even if the browser is no longer running.
+
+The new strategy delivered a 38% open rate on mobile. During subsequent
+visits, shoppers converted 9X more often than before. Conversion rates from
+Push Notifications for cart abandonments on mobile web now outpace the
+native app’s—7.85% versus 4.5% respectively. “We’re closer to our users with
+web push, because it’s a more personal way to communicate with them.
+Customers aren’t all willing to download our apps, as they dread the impact
+on their data bills,” says Jeremy Doutte, Jumia CEO.

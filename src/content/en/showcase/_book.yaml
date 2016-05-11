@@ -19,22 +19,48 @@ upper_tabs:
     path: /web/scratch/showcase/
     lower_tabs:
       other:
-      - name: Case Studies
+      - name: "Case Studies"
         contents:
-        - title: Home
-          path: /web/scratch/showcase/
-        - break: true
-        - title: Flipkart
-          path: /web/scratch/showcase/flipkart
-          status: new
-        - title: Visual Art Sessions
-          path: /web/scratch/showcase/art-sessions
-        - title: Net-a-Porter
-          path: /web/scratch/showcase/flipkartc
-        - title: Creating a Lightsaber with Polymer
-          path: /web/scratch/showcase/flipkartd
-        - title: Google+
-          path: /web/scratch/showcase/flipkarte
-        - title: Beyond the Rack
-          path: /web/scratch/showcase/flipkarte
+        - title: "2016"
+          section:
+          - title: Jumia increases conversions with Web Push
+            path: /web/scratch/showcase/2016/jumia
+          - title: Visual Art Sessions
+            path: /web/scratch/showcase/2016/art-sessions
+          - title: Net-A-Porter
+            path: /web/scratch/showcase/2016/net-a-porter
+          - title: Flipkart
+            path: /web/scratch/showcase/2016/flipkart
 
+        - title: "2015"
+          section:
+          - title: Creating a Lightsaber with Polymer
+            path: /web/scratch/showcase/2015/lightsaber
+          - title: Google+
+            path: /web/scratch/showcase/2015/googleplus
+          - title: Beyond the Rack
+            path: /web/scratch/showcase/2015/beyond-the-rack
+          - title: AirHorner
+            path: /web/scratch/showcase/2015/airhorner
+          - title: Service Workers in Production
+            path: /web/scratch/showcase/2015/service-workers-iowa
+          - title: Hummingbird Library
+            path: /web/scratch/showcase/2015/hummingbirdlibrary
+          - title: Madeon Adventure Machine
+            path: /web/scratch/showcase/2015/adventuremachine
+          - title: Adsy.me
+            path: /web/scratch/showcase/2015/adsy_me
+          - title: Little Alchemy
+            path: /web/scratch/showcase/2015/little_alchemy
+          - title: Hacker New Reader
+            path: /web/scratch/showcase/2015/hn_premii
+          - title: Chrome Dev Summit 2014
+            path: /web/scratch/showcase/2015/chrome-dev-summit
+          - title: Merry Pixmas
+            path: /web/scratch/showcase/2015/merry_pixmas
+          - title: Web Filter
+            path: /web/scratch/showcase/2015/web_filter
+          - title: SVGOMG
+            path: /web/scratch/showcase/2015/svgomg
+          - title: 0h h1
+            path: /web/scratch/showcase/2015/0hh1
