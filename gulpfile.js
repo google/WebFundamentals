@@ -85,6 +85,7 @@ gulp.task('develop', function(cb) {
       'cp-scripts',
     ],
     'compile-jekyll:localhost',
+    'cp-showcase',
     'start-gae-dev-server',
     'dev-watch-tasks',
     cb);
@@ -105,6 +106,7 @@ gulp.task('develop:prod', function(cb) {
       'html',
       'minify-images:content'
     ],
+    'cp-showcase',
     'start-gae-dev-server',
     'prod-watch-tasks',
     cb);
@@ -126,6 +128,7 @@ gulp.task('build:staging', function(cb) {
       'html',
       'minify-images:content'
     ],
+    'cp-showcase',
     cb);
 });
 
@@ -144,6 +147,7 @@ gulp.task('build', function(cb) {
       'html',
       'minify-images:content'
     ],
+    'cp-showcase',
     'removeIndexPage',
     cb);
 });
