@@ -96,6 +96,8 @@ function play() {
 
 For the demo at <a href="https://simpl.info/video/offline" title="Offline video using the File APIs">simpl.info/video/offline</a>, video is stored using the File APIs, then played back using a Blob URL:
 
+<a href="https://simpl.info/video/offline"><img class="screenshot-portrait" src="/web/updates/images/2016/04/ump/screenshot-file.jpg" alt="Screenshot of playback in Chrome on Android of video stored using the File APIs"></a>
+
 {% highlight javascript %}
 function writeToFile(fileEntry, blob) {
   fileEntry.createWriter(function(fileWriter) {
@@ -121,8 +123,6 @@ function readFromFile(fullPath) {
   }, handleError);
 }
 {% endhighlight %}
-
-<a href="https://simpl.info/video/offline"><img class="screenshot-portrait" src="/web/updates/images/2016/04/ump/screenshot-file.jpg" alt="Screenshot of playback in Chrome on Android of video stored using the File APIs"></a>
 
 The Unified Media Pipeline has also been [enabled for MSE and EME](https://groups.google.com/a/chromium.org/forum/#!topic/chromium-reviews/Qi4dLcKjcCM).
 
