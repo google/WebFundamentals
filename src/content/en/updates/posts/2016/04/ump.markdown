@@ -2,8 +2,8 @@
 layout: updates/post
 title: "Service worker caching, playbackRate and Blob URLS for audio and video on Chrome for Android"
 description: "From version 51, Android Chrome uses the same media stack as desktop Chrome, rather than relying on the underlying platform implementation. This enables service worker media caching, variable playback rates, Blob URLs on Android, MediaStream passing between APIs, and easier cross-platform debugging."
-published_on: 2016-04-19
-updated_on: 2016-04-19
+published_on: 2016-05-19
+updated_on: 2016-05-19
 authors:
   - samdutton
 tags:
