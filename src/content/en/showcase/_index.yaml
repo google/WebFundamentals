@@ -1,0 +1,135 @@
+project_path: /web/scratch/_project.yaml
+book_path: /web/scratch/showcase/_book.yaml
+landing_page:
+
+
+  header:
+    description: Learn how other developers have been awesome.
+
+  custom_css_path: /web/scratch/scratch.css
+  rows:
+
+  - heading: Flipkart triples time-on-site with Progressive Web App
+    classname: devsite-landing-row-67
+    items:
+    - description: >
+        <p>
+          Flipkart, India’s largest e-commerce site, decided to combine their
+          web presence and native app into a Progressive Web Application that
+          has resulted in a 70% increase in conversions.
+        </p>
+        <blockquote>
+          We know that everyone needs to build mobile-first experiences. With
+          Flipkart Lite, we’ve developed a powerful, technically-advanced web
+          app that performs as well as our native app. We now feel we have the
+          best of both worlds.
+          <br>
+          - Amar Nagaram, an Engineering Director at Flipkart.
+        </blockquote>
+      image_path: https://placehold.it/425x350
+      buttons:
+      - label: Read more
+        path: "flipkart"
+
+
+
+  - items:
+    - heading: Lorem ipsum dolor sit amet, ius natum aeterno cu
+      description: An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae putant.
+      image_path: https://placehold.it/425x180
+      buttons:
+      - label: Learn more
+        path: /web/scratch/
+
+    - heading: Lorem ipsum dolor sit amet, ius natum aeterno cu
+      description: An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae putant.
+      image_path: https://placehold.it/425x180
+      buttons:
+      - label: Learn more
+        path: /web/scratch/
+
+
+  - items:
+    - heading: Lorem ipsum dolor sit amet, ius natum aeterno cu
+      description: An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae putant.
+      image_path: https://placehold.it/425x180
+      buttons:
+      - label: Learn more
+        path: /web/scratch/
+
+    - heading: Lorem ipsum dolor sit amet, ius natum aeterno cu
+      description: An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae putant.
+      image_path: https://placehold.it/425x180
+      buttons:
+      - label: Learn more
+        path: /web/scratch/
+
+    - heading: Lorem ipsum dolor sit amet, ius natum aeterno cu
+      description: An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae putant.
+      image_path: https://placehold.it/425x180
+      buttons:
+      - label: Learn more
+        path: /web/scratch/
+
+  - items:
+    - heading: Lorem ipsum dolor sit amet, ius natum aeterno cu
+      description: An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae putant.
+      image_path: https://placehold.it/425x180
+      buttons:
+      - label: Learn more
+        path: /web/scratch/
+
+    - heading: Lorem ipsum dolor sit amet, ius natum aeterno cu
+      description: An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae putant.
+      image_path: https://placehold.it/425x180
+      buttons:
+      - label: Learn more
+        path: /web/scratch/
+
+    - heading: Lorem ipsum dolor sit amet, ius natum aeterno cu
+      description: An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae putant.
+      image_path: https://placehold.it/425x180
+      buttons:
+      - label: Learn more
+        path: /web/scratch/
+
+  - classname: devsite-landing-row-100
+    items:
+    - description: >
+        <h4>
+          Lorem ipsum dolor sit amet, ius natum aeterno cu
+        </h4>
+        <p>
+          An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus
+          posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae
+          putant.
+          <a href="#">Read more</a>
+        </p>
+        <h4>
+          Lorem ipsum dolor sit amet, ius natum aeterno cu
+        </h4>
+        <p>
+          An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus
+          posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae
+          putant.
+          <a href="#">Read more</a>
+        </p>
+        <h4>
+          Lorem ipsum dolor sit amet, ius natum aeterno cu
+        </h4>
+        <p>
+          An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus
+          posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae
+          putant.
+          <a href="#">Read more</a>
+        </p>
+        <h4>
+          Lorem ipsum dolor sit amet, ius natum aeterno cu
+        </h4>
+        <p>
+          An mel nobis fierent. Ut vel maiorum nostrum appellantur, laboramus
+          posidonium eloquentiam nam ex. Eu solet indoctum quo, in duo vitae
+          putant.
+          <a href="#">Read more</a>
+        </p>
+

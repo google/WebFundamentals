@@ -1,0 +1,40 @@
+upper_tabs:
+  - name: Fundamentals
+    heading: Web Fundamentals
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/scratch/fundamentals/
+  - name: Tools
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/tools/
+  - name: What's New
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/scratch/updates/
+  - name: Case Studies
+    path: /web/scratch/showcase/
+    lower_tabs:
+      other:
+      - name: Case Studies
+        contents:
+        - title: Home
+          path: /web/scratch/showcase/
+        - break: true
+        - title: Flipkart
+          path: /web/scratch/showcase/flipkart
+          status: new
+        - title: Visual Art Sessions
+          path: /web/scratch/showcase/art-sessions
+        - title: Net-a-Porter
+          path: /web/scratch/showcase/flipkartc
+        - title: Creating a Lightsaber with Polymer
+          path: /web/scratch/showcase/flipkartd
+        - title: Google+
+          path: /web/scratch/showcase/flipkarte
+        - title: Beyond the Rack
+          path: /web/scratch/showcase/flipkarte
+
