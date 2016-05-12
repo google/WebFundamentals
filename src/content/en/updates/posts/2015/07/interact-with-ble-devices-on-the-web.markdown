@@ -43,8 +43,8 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the spec](https://github.com/WebBluetoothCG/web-bluetooth/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
-Web Bluetooth API is at the time of writing partially implemented in Chrome OS
-and Chrome Dev for Android behind an experimental flag. Go to
+Web Bluetooth API is at the time of writing partially implemented in Chrome OS,
+Chrome for Android and Chrome for Linux behind an experimental flag. Go to
 `chrome://flags/#enable-web-bluetooth`,
 enable the highlighted flag, restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
