@@ -396,7 +396,7 @@ If you want to reduce the number of file requests your page makes, you can code 
   </g>
   </svg>
 
-SVG has [great support](caniuse.com/#feat=svg-html5) on mobile and desktop, and [optimization tools](https://sarasoueidan.com/blog/svgo-tools/) can significantly reduce SVG size. The following two inline SVG logos look identical, but one is around 3KB and the other only 2KB:
+SVG has [great support](http://caniuse.com/svg-html5) on mobile and desktop, and [optimization tools](https://sarasoueidan.com/blog/svgo-tools/) can significantly reduce SVG size. The following two inline SVG logos look identical, but one is around 3KB and the other only 2KB:
 
 <svg class="side-by-side" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 width="396.74px" height="560px" viewBox="281.63 0 396.74 560" enable-background="new 281.63 0 396.74 560" xml:space="preserve"
@@ -453,7 +453,7 @@ BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ..."
 
 (The full version is over 5000 characters in length!)
 
-Drag 'n' drop tool such as [jpillora.com/base64-encoder](https://jpillora.com/base64-encoder) are available to convert binary files such as images to Data URIs. Just like SVGs, Data URIs are [well supported](caniuse.com/datauri) on mobile and desktop browsers.
+Drag 'n' drop tool such as [jpillora.com/base64-encoder](https://jpillora.com/base64-encoder) are available to convert binary files such as images to Data URIs. Just like SVGs, Data URIs are [well supported](http://caniuse.com/datauri) on mobile and desktop browsers.
 
 #### Inlining in CSS
 
