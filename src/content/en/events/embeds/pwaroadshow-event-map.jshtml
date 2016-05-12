@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/web/events/embeds/event-map.css">
+  </head>
+  <body>
+
+    <div id="map" data-tags="progressivewebapps"></div>
+
+    <script src="/web/events/embeds/event-map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap"
+        async defer></script>
+
+  </body>
+</html>
