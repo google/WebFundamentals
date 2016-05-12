@@ -15,10 +15,10 @@ featured_image: /web/updates/images/2016/05/houdini/compworklet_small.png
 
 Have you ever thought about the amount of work CSS does? You change a single
 attribute and suddenly your entire website appears in a different layout. It’s
-kind of *magic* in that regard (can you tell where I am going with this?!). So
+kind of *magic* in that regard. (Can you tell where I am going with this?!) So
 far, we – the community of web developers – have only been able to witness and
-observe the magic. What if we want to come up with our own magic tricks and
-perform them? What if we want to *become the magician*? Enter Houdini!
+observe the magic. What if we want to come up with our own magic? What if we 
+want to *become the magician*? Enter Houdini!
 
 The Houdini task force consists of engineers from Mozilla, Apple, Opera,
 Microsoft, HP, Intel and Google working together to expose certain parts of the
@@ -26,19 +26,19 @@ CSS engine to web developers. The task force is working on a *collection of
 drafts* with the goal to get them accepted by the W3C to become actual web
 standards. They set themselves a few high-level goals, turned them into
 specification drafts which in turn gave birth to a set of supporting,
-lower-level specification drafts. The combination of these drafts is what is
-usually meant when someone is talking about “Houdini”. At the time of writing,
-the [list of drafts][Houdini Drafts] is still incomplete and some of the drafts
+lower-level specification drafts. The collection of these drafts is what is
+usually meant when someone talks about “Houdini”. At the time of writing,
+the [list of drafts][Houdini Drafts] is incomplete and some of the drafts
 are mere placeholders. That’s how early in development of Houdini we are.
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/EUlIxr8mk7s" frameborder="0" allowfullscreen></iframe>
 
-*Disclaimer:* I want to give a quick overview of the Houdini drafts so you have
-*an idea of what kind of problems Houdini tries to tackle. As far as the current
-*state of the specs allow, I’ll try to give code examples, as well. Keeping that
-*in mind, please be aware that all of these specs are *drafts* and very
-*volatile. There’s no guarantee that these code samples are even remotely
-*correct in the future or that any of these drafts become reality at all.
+*Disclaimer:* I want to give a quick overview of the Houdini drafts so you have 
+*an idea of what kind of problems Houdini tries to tackle. As far as the current 
+*state of the specs allow, I’ll try to give code examples, as well. Please be 
+*aware that all of these specs are *drafts* and very volatile. There’s no 
+*guarantee that these code samples will be even remotely correct in the future or 
+*that any of these drafts become reality.
 
 ## The specifications
 
@@ -58,8 +58,8 @@ large numbers. For example, it would be inappropriate to launch one worker for
 each pixel of a four megapixel image.
 
 That means web workers are not viable for the things Houdini plans to do.
-Therefore, worklets were invented. Worklets make use of ES2015 classes as nice
-way to define a collection of methods, the signatures of which are predefined by
+Therefore, worklets were invented. Worklets make use of ES2015 classes to define
+a collection of methods, the signatures of which are predefined by
 the type of the worklet. They are light-weight and short-lived.
 
 ### Paint Worklet ([spec][Paint Worklet spec])
@@ -73,29 +73,28 @@ layout stage) and computed style.
 
 This allows you not only to define how an element should draw itself (think of
 the synergy with [Web Components]!) but also *alter* the visuals of existing
-elements. No need for hacky things like DOM elements to create a ripple effect
-on buttons. This would allow a significant reduction in DOM node count for
-common visuals. Another big advantage of running your code at paint time of an
-element compared to using a regular `<canvas>` is that you will know the size of the
-element you are supposed to paint and that you will be aware of fragments and
-handle them appropriately.
+elements. There is no need for hacky things like DOM elements to create a
+ripple effect on buttons. This would allow a significant reduction in DOM node
+count for common visuals. Another big advantage of running your code at an
+element's paint time over using a `<canvas>` element is that you will know the
+size of the element you are painting and that you will be aware of the
+fragments and handle them appropriately.
 
 Wait, what are fragments?
 
 #### Fragments
 
 I think of elements in the DOM tree as boxes that are laid out by the CSS engine
-to make up my website. It turns out, however, that this mental model becomes
-flawed once inline elements come into play. A `<span>` may need to be wrapped;
-so while still technically being a single DOM node, it has been *fragmented*
-into 2, well, *fragments*. The [spec][Fragmentation spec] calls the bounding box
-of these 2 fragments a *fragmentainer*. I am not even kidding.
+to make up my website. This model is flawed when inline elements come into play.
+A `<span>` may need to be wrapped; so while still technically being a single DOM
+node, it has been *fragmented* into 2, well, *fragments*. The [spec][Fragmentation spec]
+calls the bounding box of these 2 fragments a *fragmentainer*. (I am not kidding.)
 
 <img src="/web/updates/images/2016/05/houdini/fragment.png">
 
-Back to the Paint Worklet: Effectively, your code will get called for each
+Back to the Paint Worklet: effectively, your code will get called for each
 fragment and will be given access to a stripped down `<canvas>`-like API as well
-as the styles applied to the element, which allows you to draw (but not visually
+as the styles applied to the element. This allows you to draw (but not visually
 inspect) the fragment. You can even request an “overflow” margin to allow you to
 draw effects *around* the element’s boundaries, just like `box-shadow`.
 
@@ -153,8 +152,8 @@ class {
 
 ### Compositor Worklet
 
-At the time of writing, the compositor worklet doesn’t even have a proper draft
-and yet it’s the one that gets me excited the most. As you might know, some
+At the time of writing, the compositor worklet doesn’t have a proper draft
+and yet it’s the one that most excites me. As you might know, some
 operations are outsourced to the graphics card of your computer by the CSS
 engine, although that is dependent on both your grapics card and your device in
 general. A browser usually takes the DOM tree and, based on specific criteria,
@@ -165,9 +164,9 @@ and positioned on top of each other, respecting z-indices, 3D transforms and
 such, to yield the final image that is visible on your screen. This process is
 called “compositing” and is executed by the “compositor”. The advantage of this
 process is that you don’t have to make *all* the elements repaint themselves
-when you scrolled a tiny bit. Instead, you can reuse the layers from the
+when the page scrolls a tiny bit. Instead, you can reuse the layers from the
 previous frame and just re-run the compositor with the changed scroll position.
-This makes things fast. This makes us reach 60fps. This makes [Paul Lewis]
+This makes things fast. This helps us reach 60fps. This makes [Paul Lewis]
 happy.
 
 <img src="/web/updates/images/2016/05/houdini/compworklet_small.png">
@@ -175,10 +174,10 @@ happy.
 As the name suggests, the compositor worklet lets you hook into the compositor
 and influence the way an element’s layer, which has already been painted, is
 positioned and layered on top of the other layers. To get a little more
-specific: You can tell the browser that you want to hook into the compositing
+specific, you can tell the browser that you want to hook into the compositing
 process for a certain DOM node and can request access to certain attributes like
-scroll position, `transform` or `opacity`. This will force this element on its own
-layer and *on each frame* your code gets called. You can move your layer around
+scroll position, `transform` or `opacity`. This will force this element on to its
+own layer and *on each frame* your code gets called. You can move your layer
 by manipulating the layers transform and change its attributes (like `opacity`)
 allowing you to do fancy-schmancy things at a whopping 60 fps. Here’s a *full*
 implementation for parallax scrolling using the compositor worklet.
@@ -210,17 +209,17 @@ registerCompositorAnimator('parallax', class {
 {% endhighlight %}
 
 My colleague Robert Flack has written a [polyfill][CompWorklet polyfill] for the
-compositor worklet so you can give it a try already – obviously with a much
+compositor worklet so you can give it a try – obviously with a much
 higher performance impact.
 
 ### Layout Worklet ([spec][Layout Worklet spec])
 
-Again, a specification that is practically empty, but the concept is intriguing:
-Write your own layout! The layout worklet is supposed to enable you to do
-`display: layout('myLayout')` and run your JavaScript to arrange a node’s
-children in the node’s box . Of course, running a full JavaScript implementation
+Again, the specification for this is practically empty, but the concept is
+intriguing: write your own layout! The layout worklet is supposed to enable you
+to do `display: layout('myLayout')` and run your JavaScript to arrange a node’s
+children in the node’s box. Of course, running a full JavaScript implementation
 of CSS’s `flex-box` layout will be slower than running an equivalent native
-implementation – but it’s easy to imagine a scenario where cutting corners can
+implementation, but it’s easy to imagine a scenario where cutting corners can
 yield a performance gain. Imagine a website consisting of nothing but tiles á la
 Windows 10 or a [Masonry]-style layout. Absolute/fixed positioning is not used,
 neither is `z-index` nor do elements ever overlap or have any kind of border or
@@ -263,7 +262,7 @@ registerLayout('random-layout', class {
 {% endhighlight %}
 
 ### Typed CSSOM ([spec][Typed CSSOM spec])
-Typed CSSOM (CSS Object Model (Cascading Style Sheets Object Model)) addresses a
+Typed CSSOM (CSS Object Model or Cascading Style Sheets Object Model) addresses a
 problem we probably all have encountered and just learned to just put up with.
 Let me illustrate with a line of JavaScript:
 
@@ -272,13 +271,14 @@ $('#someDiv').style.height = getRandomInt() + 'px';
 {% endhighlight %}
 
 We are doing math, converting a number to a string to append a unit just to have
-the browser parse that string and convert it back to a number for the CSS engine
-to use. This gets even uglier when you [manipulate transforms with
-JavaScript][Aerotwist FLIP]. No more! CSS is about to get some typing! This
-draft is one of the more mature ones and a [polyfill][Typed CSSOM polyfill] is
-actually already being worked on (Disclaimer: Using the polyfill will obviously
+the browser parse that string and convert it back to a number for the CSS engine.
+This gets even uglier when you [manipulate transforms with JavaScript][Aerotwist FLIP].
+No more! CSS is about to get some typing! 
+
+This draft is one of the more mature ones and a [polyfill][Typed CSSOM polyfill] is
+already being worked on. (Disclaimer: using the polyfill will obviously
 add *even more* computational overhead. The point is to show how convenient the
-API is).
+API is.)
 
 Instead of strings you will be working on an element’s `StylePropertyMap`, where
 each CSS attribute has it’s own key and corresponding value type. Attributes
@@ -286,8 +286,8 @@ like `width` have `LengthValue` as their value type. A `LengthValue` is a
 dictionary of all CSS units like `em`, `rem`, `px`, `percent`, etc. Setting
 `height: calc(5px + 5%)` would yield a `LengthValue{px: 5, percent: 5}`. Some
 properties like `box-sizing` just accept certain keywords and therefore have a
-`KeywordValue`. The validity of those attributes could now be checked at
-runtime.
+`KeywordValue` value type. The validity of those attributes could then be checked
+at runtime.
 
 {% highlight JS %}
 <div style="width: 200px;" id="div1"></div>
@@ -310,7 +310,7 @@ used a simple search-and-replace approach. This draft would allow you to not
 only specify a type for your variables, but also define a default value and
 influence the inheritance behavior using a JavaScript API. Technically, this
 would also allow custom properties to get animated with standard CSS transitions
-and animations, which is being considered.
+and animations, which is also being considered.
 
 {% highlight JS %}
 ["--scale-x", "--scale-y"].forEach(function(name) {
@@ -328,26 +328,26 @@ document.registerProperty({
 Font metrics is exactly what it sounds like. What is the bounding box (or the
 bounding boxes when we are wrapping) when I render string X with font Y at size
 Z? What if I go all crazy unicode on you like using [ruby annotations]? This has
-been requested a lot in the past and Houdini should finally make these wishes
+been requested a lot and Houdini should finally make these wishes
 come true.
 
 ### But wait, there’s more!
 
 There’s even more specs in Houdini’s list of drafts, but the future of those is
-rather uncertain and they are not much more than a placeholder for an idea at
-this point. Examples include custom overflow behaviors, CSS syntax extension
-API, extension of native scroll behavior and similar ambitious things that allow
-us new things on the web platform that weren’t possible before.
+rather uncertain and they are not much more than placeholders for ideas.
+Examples include custom overflow behaviors, CSS syntax extension API, extension 
+of native scroll behavior and similarly ambitious things all of which enable
+things on the web platform that weren't possible before.
 
 ## Gimme!
 
-As of now, nothing of the Houdini specs is in Chrome. However, some of them may
-be available behind a “OMG this is totally not for production” flag soon(tm) in
-Canary.
+As of now, none of the Houdini specs are implemented in Chrome. However, some
+of them may be available behind a “OMG this is totally not for production”
+flag soon(TM) in Canary.
 
-For what it’s worth, I have open-sourced the [code for the demo][Houdini
-Samples] ([live demo][Houdini Demo] using polyfill) videos I made so you can get a feeling on what working with worklets
-feels like.
+For what it’s worth, I have open-sourced the [code for the demo][Houdini Samples]
+([live demo][Houdini Demo] using polyfill) videos I made so you can get a feeling
+on what working with worklets feels like.
 
 If you want to get involved, there’s always the [Houdini mailing list].
 
