@@ -1,7 +1,7 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/_book.yaml
 landing_page:
-  custom_css_path: /web/scratch/scratch.css
+  custom_css_path: /web/scratch/styles/wf-root.css
 
   header:
     description: >

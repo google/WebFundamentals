@@ -1,7 +1,7 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/_book.yaml
 landing_page:
-  custom_css_path: /web/scratch/scratch.css
+  custom_css_path: /web/scratch/styles/wf-root.css
 
   rows:
 
@@ -36,7 +36,10 @@ landing_page:
     classname: devsite-landing-row-no-image-background
     items:
     - heading: Move to HTTPS
-      description: HTTPS allows users to securely connect to your website or app. Set up HTTPS to protect the integrity of your site, and the security of your users.
+      description: >
+        HTTPS allows users to securely connect to your website or app. Set up
+        HTTPS to protect the integrity of your site, and the security of your
+        users.
       image_path: /web/scratch/images/content-https-2x.jpg
       buttons:
       - label: Learn more
@@ -52,7 +55,10 @@ landing_page:
         classname: wf-small-link
 
     - heading: Optimize performance
-      description: Users don’t have the patience to wait for sites that can’t deliver content quickly. Learn testing techniques and best practices to ensure that your sites and apps are optimized and performant.
+      description: >
+        Users don’t have the patience to wait for sites that can’t deliver
+        content quickly. Learn testing techniques and best practices to ensure
+        that your sites and apps are optimized and performant.
       image_path: /web/scratch/images/content-performance-2x.jpg
       buttons:
       - label: Learn more
@@ -71,7 +77,10 @@ landing_page:
         classname: wf-small-link
 
     - heading: Make it responsive
-      description: Modern users live on phones, tablets and laptops; your apps and websites should do the same. Learn how to structure and code your content to look great on screens of any size.
+      description: >
+        Modern users live on phones, tablets and laptops; your apps and
+        websites should do the same. Learn how to structure and code your
+        content to look great on screens of any size.
       image_path: /web/scratch/images/content-responsive-2x.jpg
       buttons:
       - label: Learn more
@@ -140,26 +149,25 @@ landing_page:
         </blockquote>
       buttons:
       - label: Learn more
-        path: /web/showcase/case-study/flipkart
-    - heading: Pete uses 80% less words than his peers
+        path: showcase/2016/flipkart
+    - heading: AliExpress increases conversion by 104% with Progressive Web App
       description: >
         <p>
-          Lorem ipsum dolor sit amet, meliore detracto recteque cu his. Velit
-          utinam consequuntur ei his. Sed dicant laoreet nostrum ea, no alia
-          tincidunt interpretaris usu.
+          AliExpress, part of the Alibaba Group was looking for a way to provide
+          their web users with the benefits of their app, such as performance,
+          the ability to work offline and re-engage users. Their solution,
+          a Progressive Web App.
         </p>
-        <blockquote>
-          Magna definiebas mel at, novum recteque vituperata eu quo, id porro
-          dolores omittam usu. Eam oblique denique verterem in. Nisl
-          referrentur ei pri, vel ei probo error suscipit, usu tacimates
-          tractatos erroribus ad. Sed adhuc corrumpit no, ex mel erant
-          dicant. Sea autem iudico tincidunt et.
-          <br>
-          - Pete LePage, full of hot air.
-        </blockquote>
-      buttons:
-      - label: Learn more
-        path: /web/scratch/progressive-web-apps/
+        <p>
+          After implementing their Progressive Web App, AliExpress saw their
+          conversion rate rise by 45%. For new users, the increase was even
+          higher, 104%. The new strategy delivered a much better experience.
+          Users now visit twice as many pages per session, and time spent
+          per session increased by 74%. 
+        </p>
+      #buttons:
+      #- label: Learn more
+      #  path: /web/scratch/progressive-web-apps/
 
   - items:
     - custom_html: <hr>
@@ -213,4 +221,3 @@ landing_page:
       buttons:
       - label: Learn more
         path: https://amphtml.wordpress.com/2015/12/14/building-a-faster-mobile-web-experience-with-amp/
-

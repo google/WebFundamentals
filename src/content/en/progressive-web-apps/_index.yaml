@@ -1,7 +1,7 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/_book.yaml
 landing_page:
-  custom_css_path: /web/scratch/scratch.css
+  custom_css_path: /web/scratch/styles/wf-root.css
 
   header:
     description: >
@@ -41,14 +41,14 @@ landing_page:
     - heading: Instant Loading
       icon:
         icon_name: schedule
-      path: "#"
+      path: /web/fundamentals/getting-started/your-first-offline-web-app/
       description: >
         Service workers allow your apps to load nearly instantly and reliably,
         no matter what kind of network connection your user is on.
     - heading: Add to Home Screen
       icon:
         icon_name: phone_android
-      path: "#"
+      path: /web/fundamentals/engage-and-retain/app-install-banners/
       description: >
         Web app install banners give you the ability to let your users
         quickly and seamlessly add your web app to their home screen, making
@@ -56,7 +56,7 @@ landing_page:
     - heading: Push Notifications
       icon:
         icon_name: notifications_active
-      path: "#"
+      path: /web/fundamentals/getting-started/push-notifications/
       description: >
         Web push notifications makes it easy to re-engage with users by showing
         relevant, timely, and contextual notifications, even when the browser
@@ -67,25 +67,25 @@ landing_page:
     - heading: Fast
       icon:
         icon_name: touch_app
-      path: "#"
+      path: /web/fundamentals/performance/rendering/
       description: >
         Smooth animations, scrolling, and navigations keep the experience
         silky smooth.
     - heading: Secure
       icon:
         icon_name: lock
-      path: "#"
+      path: /web/fundamentals/security/encrypt-in-transit/why-https
       description: >
         HTTPS secures the connection between you and your users, ensuring
         your users information is protected and isn't tampered with.
     - heading: Responsive
       icon:
         icon_name: devices_other
-      path: "#"
+      path: /web/fundamentals/design-and-ui/responsive/
       description: >
-        Lorem ipsum dolor sit amet, eam eius sale vulputate ei, aperiri 
-        nusquam deleniti sit in. Cibo oblique no sea. Elit adipiscing duo
-        te, te vidit cetero necessitatibus mea. 
+        Modern users live on phones, tablets and laptops; your apps and
+        websites should do the same. Learn how to structure and code your
+        content to look great on screens of any size.
 
   - items:
     - custom_html: <hr>
@@ -138,5 +138,5 @@ landing_page:
       description: Write your first Progressive Web App with our step by step code lab.
       buttons:
       - label: Get started
-        path: "#"
+        path: https://g.co/codelabs/pwa
         classname: button

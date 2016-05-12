@@ -32,7 +32,6 @@ footer:
       path: /web/billions/
   - name: Learn with Udacity
     icon_name: school
-    # icon: https://d125fmws0bore1.cloudfront.net/assets/svgs/logo_mark-9fe087a553be4f083e55902df9f650bcc2fad097714ec9740e5edf0cfba4bb0d.svg
     contents:
     - title: Offline web applications
       path: https://www.udacity.com/courses/ud899
@@ -44,4 +43,3 @@ footer:
       path: https://www.udacity.com/courses/ud884
     - title: Responsive Web Design Fundamentals
       path: https://www.udacity.com/courses/ud893
-
