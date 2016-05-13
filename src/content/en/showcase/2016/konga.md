@@ -9,7 +9,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Konga {: .page-title }
 
-<img src="/web/showcase/2016/images/konga/konga_framed.gif" class="attempt-right">
+<img src="images/konga/konga_framed.gif" class="attempt-right">
 
 ## TL;DR
 
@@ -25,9 +25,12 @@ Konga cuts data usage 92% with new Progressive Web App
 
 <span class="compare-yes"></span> 84% less data to complete first transaction, vs. previous mobile web experience
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/konga.pdf">
+{% comment %}
+<a hidden class="button button-primary" href="pdfs/konga.pdf">
   Download PDF Case study
 </a>
+{% endcomment %}
+
 
 ## About Konga
 

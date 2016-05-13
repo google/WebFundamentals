@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Web Filter {: .page-title }
 
-<img src="/web/showcase/2015/images/web_filter/screenshot.png" class="attempt-right">
+<img src="images/web_filter/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

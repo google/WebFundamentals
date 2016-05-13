@@ -15,7 +15,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # AirHorner.com {: .page-title }
 
-<img src="/web/showcase/2014/images/airhorner/screenshot.png" class="attempt-right">
+<img src="images/airhorner/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

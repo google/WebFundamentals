@@ -15,7 +15,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Adsy.me {: .page-title }
 
-<img src="/web/showcase/2015/images/adsy_me/screenshot.png" class="attempt-right">
+<img src="images/adsy_me/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

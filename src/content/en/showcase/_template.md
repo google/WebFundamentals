@@ -9,7 +9,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # COMPANY {: .page-title }
 
-<img src="/web/showcase/2016/images/DIR/FILE.png" class="attempt-right">
+<img src="images/DIR/FILE.png" class="attempt-right">
 
 ## TL;DR
 
@@ -23,9 +23,12 @@ book_path: /web/scratch/showcase/_book.yaml
 
 <span class="compare-yes"></span> Stat 3
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/FILE.pdf">
+{% comment %}
+<a hidden class="button button-primary" href="pdfs/FILE.pdf">
   Download PDF Case study
 </a>
+{% endcomment %}
+
 
 ## About COMPANY
 

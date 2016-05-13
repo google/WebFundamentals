@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Little Alchemy {: .page-title }
 
-<img src="/web/showcase/2015/images/little_alchemy/screenshot.png" class="attempt-right">
+<img src="images/little_alchemy/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

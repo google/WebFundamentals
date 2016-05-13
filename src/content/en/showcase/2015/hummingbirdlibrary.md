@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Hummingbird Library {: .page-title }
 
-<img src="/web/showcase/2015/images/hummingbirdlibrary/screenshot.png" class="attempt-right">
+<img src="images/hummingbirdlibrary/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

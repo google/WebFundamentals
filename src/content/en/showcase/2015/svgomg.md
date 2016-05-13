@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # SVGOMG {: .page-title }
 
-<img src="/web/showcase/2015/images/svgomg/screenshot.png" class="attempt-right">
+<img src="images/svgomg/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

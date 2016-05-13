@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Creating a Lightsaber with Polymer {: .page-title }
 
-<img src="/web/showcase/lightsaber/images/lightsaber/hilt_framed-n5x-sm.png" class="attempt-right">
+<img src="images/lightsaber/hilt_framed-n5x-sm.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   How to set up a high FPS WebGL project with Polymer.
@@ -609,7 +609,7 @@ line joining the two points A and B as below. The closer a point is to
 the main axis the brighter it is.
 
 <figure>
-  <img src="/web/showcase/case-study/images/lightsaber/inner-blade.jpg" alt="Inner blade glow">
+  <img src="images/lightsaber/inner-blade.jpg" alt="Inner blade glow">
 </figure>
 
 The source below shows how we compute a `vFactor` to control the intensity 
@@ -715,7 +715,7 @@ need to have if you want a decent saber. Namely the white core, the middle
 blue-ish glow and the outer glow.
 
 <figure>
-  <img src="/web/showcase/case-study/images/lightsaber/outer-blade.png" alt="Outer blade">
+  <img src="images/lightsaber/outer-blade.png" alt="Outer blade">
 </figure>
 
 ## Lightsaber Trail
@@ -729,8 +729,8 @@ and current transform we generate a new triangle in the mesh, dropping
 off the tail portion after a certain length. 
 
 <figure>
-  <img src="/web/showcase/case-study/images/lightsaber/trail-left.jpg" srcset="/web/showcase/case-study/images/lightsaber/trail-left.jpg 1x, /web/showcase/case-study/images/lightsaber/trail-left-2x.jpg 2x">
-  <img src="/web/showcase/case-study/images/lightsaber/trail-right.jpg" srcset="/web/showcase/case-study/images/lightsaber/trail-right.jpg 1x, /web/showcase/case-study/images/lightsaber/trail-right-2x.jpg 2x">
+  <img src="images/lightsaber/trail-left.jpg" srcset="images/lightsaber/trail-left.jpg 1x, images/lightsaber/trail-left-2x.jpg 2x">
+  <img src="images/lightsaber/trail-right.jpg" srcset="images/lightsaber/trail-right.jpg 1x, images/lightsaber/trail-right-2x.jpg 2x">
 </figure>
 
 Once we have a mesh we assign a simple material to it, and pass it to the 
@@ -738,7 +738,7 @@ postprocessor to create a smooth effect. We use the same bloom effect that
 we applied to the outer blade glow and get a smooth trail as you can see:
 
 <figure>
-  <img src="/web/showcase/case-study/images/lightsaber/trail-example.png" alt="The full trail">
+  <img src="images/lightsaber/trail-example.png" alt="The full trail">
 </figure>
 
 ### Glow around the trail
@@ -751,7 +751,7 @@ renderbuffer. We then combine this output in the final render, here you can
 see the glow that surrounds the trail:
 
 <figure>
-  <img src="/web/showcase/case-study/images/lightsaber/trail-glow.png" alt="Trail with glow">
+  <img src="images/lightsaber/trail-glow.png" alt="Trail with glow">
 </figure>
 
 ## Conclusion
@@ -767,5 +767,5 @@ before deploying to production server and if you don't forget to use Crisper
 if you want to stay CSP compliant, may the force be with you!
 
 <figure>
-  <img src="/web/showcase/case-study/images/lightsaber/game-play.jpg" srcset="/web/showcase/case-study/images/lightsaber/game-play.jpg 1x, /web/showcase/case-study/images/lightsaber/game-play-2x.jpg 2x" alt="Game play">
+  <img src="images/lightsaber/game-play.jpg" srcset="images/lightsaber/game-play.jpg 1x, images/lightsaber/game-play-2x.jpg 2x" alt="Game play">
 </figure>

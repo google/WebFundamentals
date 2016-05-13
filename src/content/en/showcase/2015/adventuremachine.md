@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Madeon Adventure Machine {: .page-title }
 
-<img src="/web/showcase/2015/images/adventuremachine/screenshot.png" class="attempt-right">
+<img src="images/adventuremachine/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

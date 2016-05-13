@@ -5,13 +5,13 @@ description: Six artists were invited to paint, design, and sculpt in VR.
 {# wf_published_on: 2016-04-19 #}
 {# wf_updated_on: 2016-04-19 #}
 {# wf_author: michaelchang,jeffnusz #}
-{# wf_featured_image: /web/showcase/2016/images/art-sessions/featured.png #}
+{# wf_featured_image: /web/scratch/showcase/2016/images/art-sessions/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # Virtual Art Sessions {: .page-title }
 
-<img src="/web/showcase/2016/images/art-sessions/screenshot.png" class="attempt-right">
+<img src="images/art-sessions/device.png" class="attempt-right">
 
 ## TL;DR
 
@@ -29,7 +29,7 @@ drawing with motion-tracked controllers coupled with the presence of being "in a
 room with super-powers" lingers with you; there really isn't an experience quite
 like being able to draw in the empty space all around you.
 
-<img src="/web/showcase/case-study/images/art-sessions/image00.png" />
+<img src="images/art-sessions/image00.png" />
 
 The Data Arts Team at Google was presented with the challenge of showcasing this
 experience to those without a VR headset, on the web where Tilt Brush doesn't
@@ -127,7 +127,7 @@ motion, the entirety of the sketch is already "finished" by the time we show it
 on the web. This allows us to bypass much of the real-time calculation and bake 
 the geometry on load.
 
-<img src="/web/showcase/case-study/images/art-sessions/image01.png" />
+<img src="images/art-sessions/image01.png" />
 
 Each pair of vertices in a stroke produce a direction vector (the blue lines 
 connecting each point as shown above, `moveVector` in the code snippet below). 
@@ -176,7 +176,7 @@ the direction of the stroke (from last point to current point), and the
 orientation of the controller (a quaternion). More importantly, it also returns 
 a new "preferred right" vector for the next set of computations. 
 
-<img src="/web/showcase/case-study/images/art-sessions/image02.png" />
+<img src="images/art-sessions/image02.png" />
 
 After generating quads based on the control points of each stroke, we _fuse the 
 quads_ by interpolating their corners, from one quad to the next.
@@ -196,7 +196,7 @@ quads_ by interpolating their corners, from one quad to the next.
     }
 
 
-<img src="/web/showcase/case-study/images/art-sessions/image03.png" alt="Fused quads" />  
+<img src="images/art-sessions/image03.png" alt="Fused quads" />  
 <figure>
 <figcaption>Fused quads.</figcaption>
 </figure>
@@ -243,17 +243,17 @@ stroke.
     }
 
 
-<img src="/web/showcase/case-study/images/art-sessions/image04.png" alt="Four textures in a texture atlas for oil brush" />  
+<img src="images/art-sessions/image04.png" alt="Four textures in a texture atlas for oil brush" />  
 <figure>
 <figcaption>Four textures in a texture atlas for oil brush</figcaption>
 </figure>
 
-<img src="/web/showcase/case-study/images/art-sessions/image05.png"  alt="In Tilt Brush" />  
+<img src="images/art-sessions/image05.png"  alt="In Tilt Brush" />  
 <figure>
 <figcaption>In Tilt Brush</figcaption>
 </figure>
 
-<img src="/web/showcase/case-study/images/art-sessions/image06.png" alt="In WebGL" />  
+<img src="images/art-sessions/image06.png" alt="In WebGL" />  
 <figure>
 <figcaption>In WebGL</figcaption>
 </figure>
@@ -263,7 +263,7 @@ modified in run-time, we pre-compute the stroke geometry ahead of time and merge
 them into one single mesh. Even though each new brush type must be its own 
 material, that still reduces our draw calls to one per brush. 
 
-<img src="/web/showcase/case-study/images/art-sessions/image07.png" />  
+<img src="images/art-sessions/image07.png" />  
 <figure>
 <figcaption>The entire sketch above is performed in one draw call in WebGL</figcaption>
 </figure>
@@ -287,7 +287,7 @@ array from the current timestamp, checking which vertices need to be revealed
 and then updating the geometry. This puts a lot of load on the CPU which causes 
 the fan to spin as well as wasting battery life.
 
-<img src="/web/showcase/case-study/images/art-sessions/image08.png" />
+<img src="images/art-sessions/image08.png" />
 
 ## Recording the Artists
 
@@ -316,14 +316,14 @@ matting on the floor). In case the material showed up in the point cloud
 footage, we chose black material so it wouldn't be as distracting as something 
 that was white.
 
-<img src="/web/showcase/case-study/images/art-sessions/image09.jpg" />
+<img src="images/art-sessions/image09.jpg" />
 
 The resulting video recordings gave us enough information to project a particle 
 system. We wrote some additional tools in 
 [openFrameworks](http://openframeworks.cc/) to further clean up the footage, in 
 particular removing the floors, walls and ceiling.
 
-<img src="/web/showcase/case-study/images/art-sessions/image10.png" />  
+<img src="images/art-sessions/image10.png" />  
 <figure>
 <figcaption>All four channels of a recorded video session (two color channels above and two 
 depth below)</figcaption>
@@ -335,7 +335,7 @@ the final output clearly (the HTC Vive's reflective lenses were throwing off
 Kinect's IR readings), it gave us points of contact for debugging the particle 
 output and lining up the videos with the sketch.
 
-<img src="/web/showcase/case-study/images/art-sessions/image11.png" />  
+<img src="images/art-sessions/image11.png" />  
 <figure>
 <figcaption>The head mounted display, controllers, and particles lined up</figcaption>
 </figure>
@@ -356,7 +356,7 @@ artist with the data captured from their drawing. Phew! We wrote browser based
 tools to help with most of these tasks, and you can try them yourself 
 [here](https://virtualart.chromeexperiments.com/test/).
 
-<img src="/web/showcase/case-study/images/art-sessions/image12.png" />
+<img src="images/art-sessions/image12.png" />
 
 Once the data was aligned, we used some scripts written in NodeJS to process it 
 all and output  a video file and series of JSON files, all trimmed and 
@@ -368,7 +368,7 @@ data so instead of using plain JSON with key/value pairs, an order of values is
 created for position and rotation of the HMD and controllers. This cut the file 
 size down to just shy of 3mb which was acceptable to deliver over the wire.
 
-<img src="/web/showcase/case-study/images/art-sessions/image13.png" />
+<img src="images/art-sessions/image13.png" />
 
 Since the video itself is served as an HTML5 video element that is read in by a 
 WebGL texture to become particles, the video itself needed to play hidden in the 

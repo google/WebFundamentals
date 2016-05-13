@@ -11,7 +11,7 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 
 # Beyond the Rack {: .page-title }
 
-<img src="/web/showcase/2015/images/beyond-the-rack/btr-1.png" class="attempt-right">
+<img src="images/beyond-the-rack/btr-1.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   <a href="https://www.beyondtherack.com">Beyond the Rack</a>
@@ -25,10 +25,10 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 > "Push notifications allowed us to bring one of the most compelling
 > capabilities from our native app to our mobile site. We see a direct 20%
 > click through rate from push notifications—having another channel to reach
-> our users is a game changer."<br><br>
-> -- Richard Cohene, VP Marketing, Beyond the Rack
+> our users is a game changer."<br>
+> <b>Richard Cohene</b>, VP Marketing, Beyond the Rack
 
-<a class="button button-primary" href="/web/showcase/2015/pdfs/btr-web-push-casestudy.pdf">
+<a class="button button-primary" href="pdfs/btr-web-push-casestudy.pdf">
   Download PDF Case study
 </a>
 
@@ -46,7 +46,7 @@ push notifications on their mobile website and saw a **50%** increase in repeat 
 3 months. The company also found push notifications delivered higher value visits, with 
 members spending **26%** more per visit on average.
 
-<img src="/web/showcase/case-study/images/beyond-the-rack/btr-steps.jpg" alt="Three steps of Push: Ask, Register, Engage">
+<img src="images/beyond-the-rack/btr-steps.jpg" alt="Three steps of Push: Ask, Register, Engage">
 
 ## Timely, relevant notifications
 

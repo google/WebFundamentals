@@ -9,7 +9,7 @@ hide_last_updated: true
 
 # Flipkart triples time-on-site with Progressive Web App {: .page-title }
 
-<img src="/web/showcase/2016/images/flipkart/flipkart.png" class="attempt-right">
+<img src="images/flipkart/flipkart.png" class="attempt-right">
 
 Flipkart, India’s largest e-commerce site, decided to combine their web
 presence and native app into a Progressive Web Application that has resulted
@@ -23,7 +23,7 @@ development approach. They were drawn back to the mobile web by the
 introduction of features that made the mobile web run instantly, work offline,
 and re-engage users.
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/flipkart.pdf">
+<a class="button button-primary" href="pdfs/flipkart.pdf">
   Download PDF Case study
 </a>
 

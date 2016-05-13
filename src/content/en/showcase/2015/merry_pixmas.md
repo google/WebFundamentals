@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Merry Pixmas {: .page-title }
 
-<img src="/web/showcase/2015/images/merry_pixmas/screenshot.png" class="attempt-right">
+<img src="images/merry_pixmas/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

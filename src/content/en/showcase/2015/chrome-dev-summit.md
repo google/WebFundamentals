@@ -14,7 +14,7 @@ description: >
 
 # Chrome Dev Summit 2014 {: .page-title }
 
-<img src="/web/showcase/2015/images/chrome-dev-summit/screenshot-portrait.png" class="attempt-right">
+<img src="images/chrome-dev-summit/screenshot-portrait.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   Conferencing done right.
@@ -79,7 +79,7 @@ site, this turned out to be no problem at all. If he needed Flexbox he would’v
 used PE to add it on.
 
 <figure>
-  <img src="/web/showcase/case-study/images/chrome-dev-summit/flip.jpg">
+  <img src="images/chrome-dev-summit/flip.jpg">
   <figcaption>
     FLIP is taking advantage of user's perception by prioritizing the animation.
   </figcaption>
@@ -141,7 +141,7 @@ are getting the most attention. That then informs the Desktop version, because
 invariably information architecture and priority will need updating.
 
 <figure>
-  <img src="/web/showcase/case-study/images/chrome-dev-summit/design_problem.jpg" alt="Design Problem" style="max-height: 500px" />
+  <img src="images/chrome-dev-summit/design_problem.jpg" alt="Design Problem" style="max-height: 500px" />
   <figcaption></figcaption>
 </figure>
 

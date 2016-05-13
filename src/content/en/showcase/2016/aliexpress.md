@@ -3,13 +3,13 @@ book_path: /web/scratch/showcase/_book.yaml
 
 {# wf_published_on: 2016-05-17 #}
 {# wf_updated_on: 2016-05-17 #}
-{# wf_featured_image: /web/showcase/2016/images/aliexpress/featured.png #}
+{# wf_featured_image: /web/scratch/showcase/2016/images/aliexpress/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # AliExpress {: .page-title }
 
-<img src="/web/showcase/2016/images/aliexpress/aliexpress_framed.gif" class="attempt-right">
+<img src="images/aliexpress/aliexpress_framed.gif" class="attempt-right">
 
 ## TL;DR
 
@@ -24,9 +24,12 @@ Progressive Web App
 
 <span class="compare-yes"></span> 74% increase in time spent per session across all browsers
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/aliexpress.pdf">
+{% comment %}
+<a hidden class="button button-primary" href="pdfs/aliexpress.pdf">
   Download PDF Case study
 </a>
+{% endcomment %}
+
 
 ## About AliExpress
 

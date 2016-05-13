@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Hacker News Reader {: .page-title }
 
-<img src="/web/showcase/2015/images/hn_premii/screenshot.png" class="attempt-right">
+<img src="images/hn_premii/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

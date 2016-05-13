@@ -9,7 +9,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Suumo {: .page-title }
 
-<img src="/web/showcase/2016/images/suumo/suumo_framed.gif" class="attempt-right">
+<img src="images/suumo/suumo_framed.gif" class="attempt-right">
 
 ## TL;DR
 
@@ -24,9 +24,12 @@ Notifications and sees a 31% open rate for notifications.
 
 <span class="compare-yes"></span> Stat 3
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/suumo.pdf">
+{% comment %}
+<a hidden class="button button-primary" href="pdfs/suumo.pdf">
   Download PDF Case study
 </a>
+{% endcomment %}
+
 
 ## About Suumo
 

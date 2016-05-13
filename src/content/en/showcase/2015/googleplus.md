@@ -10,7 +10,7 @@ description: We hit our goal of never downloading more than 60k of HTML, 60k of 
 
 # Google+ {: .page-title }
 
-<img src="/web/showcase/case-study/images/gplus/main.png" class="attempt-right">
+<img src="images/gplus/main.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   <a href="https://plus.google.com">Google+</a> goes completely responsive.
@@ -21,7 +21,6 @@ description: We hit our goal of never downloading more than 60k of HTML, 60k of 
 > We hit our goal of never downloading more than 60k of HTML, 60k of
 > JavaScript and 60k of CSS at any one time!
 
-<div class="wf-clear"></div>
 
 ## Going Responsive
 
@@ -61,7 +60,7 @@ building a website that functioned properly on a slower mobile phone with a
 cellular connection, but still gave a great immersive experience on faster 
 browsers and larger screens.
 
-<img src="/web/showcase/case-study/images/gplus/timeline.jpg" alt="Evolution of Google+ site">
+<img src="images/gplus/timeline.jpg" alt="Evolution of Google+ site">
 
 This set of constraints meant that we had to scrutinize each and every code 
 change going forward. To achieve this we established a 6^5 rule to ensure that 
@@ -102,7 +101,7 @@ our page size.
 This took some time, but it would have been much more difficult if we hadn’t 
 had the ability to identify and eliminate problems as we built.
 
-<img src="/web/showcase/case-study/images/gplus/after.jpg" alt="The finished Google+ responsive site">
+<img src="images/gplus/after.jpg" alt="The finished Google+ responsive site">
 
 We launched our mobile-web version of this responsive implementation in 
 February, 2015. This allowed us to vet the new designs and our new process. 

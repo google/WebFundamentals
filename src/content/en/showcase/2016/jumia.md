@@ -9,7 +9,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Jumia {: .page-title }
 
-<img src="/web/showcase/2016/images/jumia/jumia.png" class="attempt-right">
+<img src="images/jumia/jumia.png" class="attempt-right">
 
 ## TL;DR
 
@@ -24,9 +24,12 @@ conversions by 9X!
 
 <span class="compare-yes"></span>7.85% conversion rate on previously abandoned carts from web push users, vs. 4.5% for native app.
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/jumia.pdf">
+{% comment %}
+<a hidden class="button button-primary" href="pdfs/jumia.pdf">
   Download PDF Case study
 </a>
+{% endcomment %}
+
 
 ## About Jumia
 

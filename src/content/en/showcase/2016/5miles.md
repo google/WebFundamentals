@@ -3,13 +3,13 @@ book_path: /web/scratch/showcase/_book.yaml
 
 {# wf_published_on: 2016-05-17 #}
 {# wf_updated_on: 2016-05-17 #}
-{# wf_featured_image: /web/showcase/2016/images/5miles/featured.png #}
+{# wf_featured_image: /web/scratch/showcase/2016/images/5miles/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # 5miles {: .page-title }
 
-<img src="/web/showcase/2016/images/5miles/5miles_framed.gif" class="attempt-right">
+<img src="images/5miles/5miles_framed.gif" class="attempt-right">
 
 ## TL;DR
 
@@ -23,9 +23,11 @@ book_path: /web/scratch/showcase/_book.yaml
 
 <span class="compare-yes"></span> 30% better conversion for users who arrived via Add to Home screen
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/5miles.pdf">
+{% comment %}
+<a hidden class="button button-primary" href="pdfs/5miles.pdf">
   Download PDF Case study
 </a>
+{% endcomment %}
 
 ## About 5miles
 

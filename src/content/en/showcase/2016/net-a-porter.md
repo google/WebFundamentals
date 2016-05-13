@@ -10,7 +10,7 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 
 # NET-A-PORTER {: .page-title }
 
-<img src="/web/showcase/2016/images/net-a-porter/net-a-porter-device.png" class="attempt-right">
+<img src="images/net-a-porter/net-a-porter-device.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   Net-A-Porter saves development time with Google's Polymer Library
@@ -24,7 +24,7 @@ library. The result was a large saving in development time, standarized code
 across their sites and an improved SEO performance through use of structured
 data.
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/net-a-porter.pdf">
+<a class="button button-primary" href="pdfs/net-a-porter.pdf">
   Download PDF Case study
 </a>
 

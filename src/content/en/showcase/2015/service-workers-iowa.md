@@ -10,7 +10,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Service Workers in Production {: .page-title }
 
-<img src="/web/showcase/2015/images/service-workers-iowa/screenshot-portrait.png" class="attempt-right">
+<img src="images/service-workers-iowa/screenshot-portrait.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   The Google I/O 2015 Web App

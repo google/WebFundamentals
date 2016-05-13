@@ -9,7 +9,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # BaBe {: .page-title }
 
-<img src="/web/showcase/2016/images/babe/babe_framed.gif" class="attempt-right">
+<img src="images/babe/babe_framed.gif" class="attempt-right">
 
 ## TL;DR
 
@@ -23,9 +23,12 @@ app: 3 minutes vs. 3 minutes per session
 <span class="compare-yes"></span> Articles read on site comparable to native
 app: 3 vs. 4 per session
 
-<a class="button button-primary" href="/web/showcase/2016/pdfs/babe.pdf">
+{% comment %}
+<a hidden class="button button-primary" href="pdfs/babe.pdf">
   Download PDF Case study
 </a>
+{% endcomment %}
+
 
 ## About BaBe
 
