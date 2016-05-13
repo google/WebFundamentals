@@ -23,15 +23,26 @@ upper_tabs:
         contents:
         - title: "2016"
           section:
-          - title: Jumia increases conversions with Web Push
-            path: /web/scratch/showcase/2016/jumia
+          - title: AliExpress
+            path: /web/scratch/showcase/2016/aliexpress
+          # - title: Jumia
+          #   path: /web/scratch/showcase/2016/jumia
+          - title: eXtra
+            path: /web/scratch/showcase/2016/extra
+          - title: BaBe
+            path: /web/scratch/showcase/2016/babe
+          - title: Konga
+            path: /web/scratch/showcase/2016/konga
+          - title: 5miles
+            path: /web/scratch/showcase/2016/5miles
+          - title: Suumo
+            path: /web/scratch/showcase/2016/suumo
           - title: Visual Art Sessions
             path: /web/scratch/showcase/2016/art-sessions
           - title: Net-A-Porter
             path: /web/scratch/showcase/2016/net-a-porter
           - title: Flipkart
             path: /web/scratch/showcase/2016/flipkart
-
         - title: "2015"
           section:
           - title: Creating a Lightsaber with Polymer

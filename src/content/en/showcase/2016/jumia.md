@@ -1,15 +1,15 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 
-
-{% setvar wf_published_on %}2016-05-18{% endsetvar %}
-{% setvar wf_updated_on %}2015-05-18{% endsetvar %}
+{# wf_published_on: 2016-05-17 #}
+{# wf_updated_on: 2016-05-17 #}
+{# wf_featured_image: /web/showcase/2016/images/jumia/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # Jumia {: .page-title }
 
-<img src="/web/showcase/case-study/images/net-a-porter/net-a-porter-device.png" class="attempt-right">
+<img src="/web/showcase/2016/images/jumia/jumia.png" class="attempt-right">
 
 ## TL;DR
 
@@ -24,7 +24,7 @@ conversions by 9X!
 
 <span class="compare-yes"></span>7.85% conversion rate on previously abandoned carts from web push users, vs. 4.5% for native app.
 
-<a class="button button-primary" href="#">
+<a class="button button-primary" href="/web/showcase/2016/pdfs/jumia.pdf">
   Download PDF Case study
 </a>
 

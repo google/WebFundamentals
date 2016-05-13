@@ -2,11 +2,11 @@ project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 landing_page:
 
+  custom_css_path: /web/scratch/styles/wf-root.css
 
   header:
     description: Learn how other developers have been awesome.
 
-  custom_css_path: /web/scratch/styles/wf-root.css
   rows:
 
   - heading: Jumia increases conversions by 9X with Web Push Notifications

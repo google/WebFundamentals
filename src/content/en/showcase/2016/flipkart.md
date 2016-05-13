@@ -3,13 +3,13 @@ book_path: /web/scratch/showcase/_book.yaml
 description: this is the page description
 hide_last_updated: true
 
-{% setvar wf_author %}paulkinlan{% endsetvar %}
-{% setvar wf_published_on %}2016-03-28{% endsetvar %}
-{% setvar wf_updated_on %}2016-03-28{% endsetvar %}
+{# wf_published_on: 2016-03-28 #}
+{# wf_updated_on: 2016-03-28 #}
+{# wf_featured_image: /web/showcase/2016/images/flipkart/featured.png #}
 
 # Flipkart triples time-on-site with Progressive Web App {: .page-title }
 
-<img src="/web/showcase/case-study/images/flipkart/flipkart.png" alt="Alert dialog" class="attempt-right">
+<img src="/web/showcase/2016/images/flipkart/flipkart.png" class="attempt-right">
 
 Flipkart, India’s largest e-commerce site, decided to combine their web
 presence and native app into a Progressive Web Application that has resulted
@@ -23,7 +23,7 @@ development approach. They were drawn back to the mobile web by the
 introduction of features that made the mobile web run instantly, work offline,
 and re-engage users.
 
-<a class="button button-primary" href="/web/showcase/case-study/pdfs/flipkart.pdf">
+<a class="button button-primary" href="/web/showcase/2016/pdfs/flipkart.pdf">
   Download PDF Case study
 </a>
 
@@ -93,8 +93,3 @@ this is a new way to experience mobile and we’re just getting started."
 * **70%** greater conversion rate among those arriving via Add to Homescreen
 * **3x** lower data usage
 
-
-#### Author and date stuff
-{{ wf_author }}<br>
-{{ wf_published_on }}<br>
-{{ wf_updated_on }}<br>

@@ -1,15 +1,16 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 
-{% setvar wf_author %}pbakaus{% endsetvar %}
-{% setvar wf_published_on %}2015-08-14{% endsetvar %}
-{% setvar wf_updated_on %}2015-08-14{% endsetvar %}
+{# wf_published_on: 2015-08-14 #}
+{# wf_updated_on: 2015-08-14 #}
+{# wf_author: pbakaus #}
+{# wf_featured_image: /web/showcase/2015/images/hummingbirdlibrary/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # Hummingbird Library {: .page-title }
 
-<img src="/web/showcase/spotlight/images/hummingbirdlibrary/screenshot.png" class="attempt-right">
+<img src="/web/showcase/2015/images/hummingbirdlibrary/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

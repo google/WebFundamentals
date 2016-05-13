@@ -1,15 +1,16 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 
-{% setvar wf_author %}paulkinlan{% endsetvar %}
-{% setvar wf_published_on %}2015-04-01{% endsetvar %}
-{% setvar wf_updated_on %}2015-04-01{% endsetvar %}
+{# wf_published_on: 2015-04-01 #}
+{# wf_updated_on: 2015-04-01 #}
+{# wf_author: paulkinlan #}
+{# wf_featured_image: /web/showcase/2015/images/hn_premii/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # Hacker News Reader {: .page-title }
 
-<img src="/web/showcase/spotlight/images/hn_premii/screenshot.png" class="attempt-right">
+<img src="/web/showcase/2015/images/hn_premii/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

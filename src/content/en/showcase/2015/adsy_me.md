@@ -1,6 +1,12 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 
+{# wf_published_on: 2015-05-04 #}
+{# wf_updated_on: 2015-05-04 #}
+{# wf_author: pbakaus #}
+{# wf_featured_image: /web/showcase/2015/images/adsy_me/featured.png #}
+
+
 {% setvar wf_author %}pbakaus{% endsetvar %}
 {% setvar wf_published_on %}2015-05-04{% endsetvar %}
 {% setvar wf_updated_on %}2015-05-04{% endsetvar %}
@@ -9,7 +15,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # Adsy.me {: .page-title }
 
-<img src="/web/showcase/spotlight/images/adsy_me/screenshot.png" class="attempt-right">
+<img src="/web/showcase/2015/images/adsy_me/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

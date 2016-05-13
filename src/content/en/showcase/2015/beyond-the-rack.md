@@ -2,15 +2,16 @@ project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 description: Beyond the Rack re-engages users on the mobile web, increasing revenue per visit by 26% with push notifications.
 
-{% setvar wf_author %}paulkinlan{% endsetvar %}
-{% setvar wf_published_on %}2015-10-25{% endsetvar %}
-{% setvar wf_updated_on %}2015-10-25{% endsetvar %}
+{# wf_published_on: 2015-10-25 #}
+{# wf_updated_on: 2015-10-25 #}
+{# wf_author: paulkinlan #}
+{# wf_featured_image: /web/showcase/2015/images/beyond-the-rack/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # Beyond the Rack {: .page-title }
 
-<img src="/web/showcase/case-study/images/beyond-the-rack/btr-1.png" class="attempt-right">
+<img src="/web/showcase/2015/images/beyond-the-rack/btr-1.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   <a href="https://www.beyondtherack.com">Beyond the Rack</a>
@@ -27,7 +28,7 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 > our users is a game changer."<br><br>
 > -- Richard Cohene, VP Marketing, Beyond the Rack
 
-<a class="button button-primary" href="/web/showcase/case-study/pdfs/btr-web-push-casestudy.pdf">
+<a class="button button-primary" href="/web/showcase/2015/pdfs/btr-web-push-casestudy.pdf">
   Download PDF Case study
 </a>
 

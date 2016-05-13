@@ -2,21 +2,16 @@ project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 description: Six artists were invited to paint, design, and sculpt in VR.
 
-{% setvar wf_author %}michaelchang,jeffnusz{% endsetvar %}
-{% setvar wf_published_on %}2016-04-19{% endsetvar %}
-{% setvar wf_updated_on %}2016-04-19{% endsetvar %}
-
-{% comment %}
- hi, i'm a comment
-{% endcomment %}
-
-{# some text #}
+{# wf_published_on: 2016-04-19 #}
+{# wf_updated_on: 2016-04-19 #}
+{# wf_author: michaelchang,jeffnusz #}
+{# wf_featured_image: /web/showcase/2016/images/art-sessions/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # Virtual Art Sessions {: .page-title }
 
-<img src="/web/showcase/case-study/images/art-sessions/device.png" class="attempt-right">
+<img src="/web/showcase/2016/images/art-sessions/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

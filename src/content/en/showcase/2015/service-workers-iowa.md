@@ -1,15 +1,16 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 
-{% setvar wf_author %}jeffreyposnick{% endsetvar %}
-{% setvar wf_published_on %}2015-10-01{% endsetvar %}
-{% setvar wf_updated_on %}2015-10-01{% endsetvar %}
+{# wf_published_on: 2015-10-01 #}
+{# wf_updated_on: 2015-10-01 #}
+{# wf_author: jeffreyposnick #}
+{# wf_featured_image: /web/showcase/2015/images/service-workers-iowa/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # Service Workers in Production {: .page-title }
 
-<img src="/web/showcase/case-study/images/service-workers-iowa/screenshot-portrait.png" class="attempt-right">
+<img src="/web/showcase/2015/images/service-workers-iowa/screenshot-portrait.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   The Google I/O 2015 Web App

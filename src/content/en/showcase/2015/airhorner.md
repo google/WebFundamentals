@@ -1,6 +1,12 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 
+{# wf_published_on: 2015-10-16 #}
+{# wf_updated_on: 2015-10-16 #}
+{# wf_author: paulkinlan #}
+{# wf_featured_image: /web/showcase/2015/images/airhorner/featured.png #}
+
+
 {% setvar wf_author %}paulkinlan{% endsetvar %}
 {% setvar wf_published_on %}2015-10-16{% endsetvar %}
 {% setvar wf_updated_on %}2015-10-16{% endsetvar %}
@@ -9,7 +15,7 @@ book_path: /web/scratch/showcase/_book.yaml
 
 # AirHorner.com {: .page-title }
 
-<img src="/web/showcase/spotlight/images/airhorner/screenshot.png" class="attempt-right">
+<img src="/web/showcase/2014/images/airhorner/screenshot.png" class="attempt-right">
 
 ## TL;DR
 

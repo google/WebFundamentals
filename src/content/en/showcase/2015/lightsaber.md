@@ -1,15 +1,16 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 
-{% setvar wf_author %}yatesbuckley,maciejzasada,fouadvaladbeigi{% endsetvar %}
-{% setvar wf_published_on %}2015-12-15{% endsetvar %}
-{% setvar wf_updated_on %}2015-12-15{% endsetvar %}
+{# wf_published_on: 2015-12-15 #}
+{# wf_updated_on: 2015-12-15 #}
+{# wf_author: yatesbuckley,maciejzasada,fouadvaladbeigi #}
+{# wf_featured_image: /web/showcase/2015/images/lightsaber/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # Creating a Lightsaber with Polymer {: .page-title }
 
-<img src="/web/showcase/case-study/images/lightsaber/hilt_framed-n5x-sm.png" class="attempt-right">
+<img src="/web/showcase/lightsaber/images/lightsaber/hilt_framed-n5x-sm.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   How to set up a high FPS WebGL project with Polymer.

@@ -2,15 +2,15 @@ project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
 description: Beyond the Rack re-engages users on the mobile web, increasing revenue per visit by 26% with push notifications.
 
-{% setvar wf_author %}paulkinlan{% endsetvar %}
-{% setvar wf_published_on %}2015-04-15{% endsetvar %}
-{% setvar wf_updated_on %}2015-04-15{% endsetvar %}
+{# wf_published_on: 2016-04-15 #}
+{# wf_updated_on: 2016-04-15 #}
+{# wf_featured_image: /web/showcase/2016/images/net-a-porter/featured.png #}
 
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # NET-A-PORTER {: .page-title }
 
-<img src="/web/showcase/case-study/images/net-a-porter/net-a-porter-device.png" class="attempt-right">
+<img src="/web/showcase/2016/images/net-a-porter/net-a-porter-device.png" class="attempt-right">
 
 <p class="wf-casestudy-subtitle">
   Net-A-Porter saves development time with Google's Polymer Library
@@ -24,7 +24,7 @@ library. The result was a large saving in development time, standarized code
 across their sites and an improved SEO performance through use of structured
 data.
 
-<a class="button button-primary" href="/web/showcase/case-study/pdfs/net-a-porter.pdf">
+<a class="button button-primary" href="/web/showcase/2016/pdfs/net-a-porter.pdf">
   Download PDF Case study
 </a>
 
