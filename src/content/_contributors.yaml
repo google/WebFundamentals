@@ -967,3 +967,20 @@ yoichiro:
   email: yoichiro@eisbahn.jp
   description:
     en: "Yoichiro is a Google Developers Expert"
+
+henrylim:
+  name:
+    given: Henry
+    family: Lim
+  org:
+    name: Independent
+    unit: Developer
+  country: Malaysia
+  role:
+    - translator
+  twitter: henrylim96
+  google: +henrylim96
+  homepage: https://limhenry.xyz
+  email: henrylim.everything@gmail.com
+  description:
+    en: "Henry is a Event Organizer and Volunteer at Google Developer Group Kuala Lumpur"    
