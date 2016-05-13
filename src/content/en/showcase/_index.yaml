@@ -35,7 +35,6 @@ landing_page:
         path: 2016/aliexpress
 
 
-
   - items:
     - heading: United eXtra Electronics grows eCommerce sales by 100% with Web Push Notifications
       description: >
@@ -47,7 +46,16 @@ landing_page:
       buttons:
       - label: Learn more
         path: 2016/extra
-
+    - heading: Push Notifications help Jumia reverse cart abandonment and increase conversions by 9X
+      description: >
+        "We finally have proper means to address our fastest growing pool of
+        customers — mobile web users. That’s incredibly valuable. We even see
+        better results from web Push Notifications than from app pushes.<br>
+        <b>Jeremy Doutte</b>, Jumia CEO
+      image_path: 2016/images/jumia/featured.png
+      buttons:
+      - label: Learn more
+        path: 2016/jumia
     - heading: BaBe’s cross-browser Progressive Web App rivals performance of native app
       description: >
          “For us, it’s no longer an either-or decision. To reach new users,

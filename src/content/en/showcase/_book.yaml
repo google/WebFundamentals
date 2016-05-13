@@ -25,8 +25,8 @@ upper_tabs:
           section:
           - title: AliExpress
             path: /web/scratch/showcase/2016/aliexpress
-          # - title: Jumia
-          #   path: /web/scratch/showcase/2016/jumia
+          - title: Jumia
+            path: /web/scratch/showcase/2016/jumia
           - title: eXtra
             path: /web/scratch/showcase/2016/extra
           - title: BaBe

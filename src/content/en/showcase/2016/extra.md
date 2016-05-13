@@ -23,12 +23,9 @@ United eXtra Electronics grows eCommerce sales by 100% with Web Push Notificatio
 
 <span class="compare-yes"></span> 4x increase in re-engagement
 
-{% comment %}
 <a hidden class="button button-primary" href="pdfs/extra.pdf">
   Download PDF Case study
 </a>
-{% endcomment %}
-
 
 ## About COMPANY
 
