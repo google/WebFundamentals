@@ -1,11 +1,7 @@
 ---
-layout: shared/narrow-pages-list
-title: "Your first push notifications web app 你的首个推送通知 web app"
+title: "你的首个推送通知 web app"
 description: "在这个codelab,你将会学到如何在web app里加入推送通知。这也将会重新接触用户与新内容的最新新闻和信息。"
-published_on: 2015-09-28
-updated_on: 2015-09-28
-translation_priority: 1
-order: 2
+updated_on: 2016-05-14
 translators:
  - henrylim
 ---

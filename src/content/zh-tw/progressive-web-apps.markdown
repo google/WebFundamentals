@@ -1,9 +1,8 @@
 ---
-layout: shared/root
 published: false
 description: "Progressive Web Apps"
 title: "Progressive Web Apps"
-translation_priority: 0
+updated_on: 2016-05-14
 translators:
   - henrylim  
 ---
@@ -79,7 +78,7 @@ translators:
         <b>連接性、獨立性</b> - 應用可在斷網以及間歇性斷網或低帶寬環境下很好地工作。
       </li>
       <li>
-        <b>類應用 UI</b> - 應用采用原生平台的 UI 元素，包括快速加載用戶界面（可以通過 service workers 獲取重要的緩存資源。)
+        <b>類應用 UI</b> - 應用采用原生平臺的 UI 元素，包括快速加載用戶界面（可以通過 service workers 獲取重要的緩存資源。)
       </li>
       <li>
         <b>持續更新</b> - Service Worker API 定義一個進程用來將應用自動更新至新版。
@@ -94,7 +93,7 @@ translators:
         <b>推送與互動</b> - 推送通知的特性，主動讓用戶了解最新動態。
       </li>
       <li>
-        <b>可本地安裝</b> -  在一些平台上，你可以安裝 web 應用使得它看起來像一個本地應用（將 icon 放在主屏，在應用程序切換器單獨列出，chrome 浏覽器可選）。所有這些應用不用經過本地應用商店。
+        <b>可本地安裝</b> -  在一些平臺上，你可以安裝 web 應用使得它看起來像一個本地應用（將 icon 放在主屏，在應用程序切換器單獨列出，chrome 瀏覽器可選）。所有這些應用不用經過本地應用商店。
       </li>
       <li>
         <b>可連接性</b> - 通過 URL 可以輕松分享應用，不用安裝即可運行。

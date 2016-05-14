@@ -1,9 +1,8 @@
 ---
-layout: shared/root
 published: false
 description: "Progressive Web Apps"
 title: "Progressive Web Apps"
-translation_priority: 0
+updated_on: 2016-05-14
 translators:
   - henrylim  
 ---

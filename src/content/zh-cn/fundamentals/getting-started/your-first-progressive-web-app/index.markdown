@@ -1,13 +1,7 @@
 ---
-layout: shared/narrow
 title: "你的首个Progressive Web App"
 description: "Progressive Web Apps是个结合了网页和应用程序的最好功能的一个体验。在这个指南引导，你将会建立你自己的Progressive Web Apps。你也会学到建立Progressive Web App的基础，包括app shell模式, 如何使用service worker来缓存app shell和缓存应用程序的资料等等."
-published_on: 2016-02-04
-updated_on: 2016-02-04
-translation_priority: 1
-order: 1
-authors:
-  - petelepage
+updated_on: 2016-05-14
 translators:
   - henrylim  
 notes:
@@ -28,7 +22,6 @@ Progressive Web Apps 是:
 
 * **渐进增强** - 应用运行在尽可能多的环境中。它会使用任何可用的服务，如果没有可用的服务则会优雅降级。
 * **响应用户界面** -  应用适应多种输入方式（触摸、 语言输入等）和多种输出方式（不同的屏幕尺寸、震动、音频、盲文显示等）。
-  next.
 * **连接性、独立性** - 应用可在断网以及间歇性断网或低带宽环境下很好地工作。
 * **类应用 UI** - 应用采用原生平台的 UI 元素，包括快速加载用户界面（可以通过 service workers 获取重要的缓存资源。）
 * **持续更新** - Service Worker API 定义一个进程用来将应用自动更新至新版。
@@ -54,11 +47,11 @@ Progressive Web Apps 是:
       <ul>
         <li><b>渐进增强</b> - 我们将会使用渐进增强的特性。</li>
         <li><b>响应用户界面</b> - 我们将确保这应用程序能适合任何形式因素。</li>
-        <li><b>连接性、独立性<b> -我们将会用Service Worker缓存app shell。</li>
+        <li><b>连接性、独立性</b> -我们将会用Service Worker缓存app shell。</li>
         <li><b>类应用 UI</b> - 我们将会使用本地应用的UI交互来添加城市以及更新天气。</li>
         <li><b>持续更新</b> - 我们将会用Service Worker来缓存最新的内容。</li>
         <li><b>安全通信</b> - 我们将会把网页发布在一个支持HTTPS的主机服务。</li>
-        <li><b>推送与互动</b> - >我们将添加一个程序集清单以让搜索器找到我们的应用程序。</li>
+        <li><b>推送与互动</b> - 我们将添加一个程序集清单以让搜索器找到我们的应用程序。</li>
         <li><b>可连接性</b> - 这就是网络!</li>
       </ul>
     </p>
@@ -68,7 +61,7 @@ Progressive Web Apps 是:
       <img src="images/weather-ss.png">
     </a>
     <p>
-      <a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+      <a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">尝试</a>
     </p>
   </div>
 </div>

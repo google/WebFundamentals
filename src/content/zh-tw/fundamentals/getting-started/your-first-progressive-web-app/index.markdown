@@ -1,13 +1,7 @@
 ---
-layout: shared/narrow
 title: "你的首個Progressive Web App"
 description: "Progressive Web Apps是個結合了網頁和應用程序的最好功能的一個體驗。在這個指南引導，你將會建立你自己的Progressive Web Apps。你也會學到建立Progressive Web App的基礎，包括app shell模式, 如何使用service worker來緩存app shell和緩存應用程序的資料等等."
-published_on: 2016-02-04
-updated_on: 2016-02-04
-translation_priority: 1
-order: 1
-authors:
-  - petelepage
+updated_on: 2016-05-14
 translators:
   - henrylim  
 notes:
@@ -28,14 +22,13 @@ Progressive Web Apps 是:
 
 * **漸進增強** - 應用運行在盡可能多的環境中。它會使用任何可用的服務，如果沒有可用的服務則會優雅降級。
 * **響應用戶界面** -  應用適應多種輸入方式（觸摸、 語言輸入等）和多種輸出方式（不同的屏幕尺寸、震動、音頻、盲文顯示等）。
-  next.
 * **連接性、獨立性** - 應用可在斷網以及間歇性斷網或低帶寬環境下很好地工作。
-* **類應用 UI** - 應用采用原生平台的 UI 元素，包括快速加載用戶界面（可以通過 service workers 獲取重要的緩存資源。
+* **類應用 UI** - 應用采用原生平臺的 UI 元素，包括快速加載用戶界面（可以通過 service workers 獲取重要的緩存資源。）
 * **持續更新** - Service Worker API 定義一個進程用來將應用自動更新至新版。
 * **安全通信** - 應用使用 HTTPS 通信來提供服務，阻止網絡劫持和攻擊。
 * **應用發現** - 就像 W3C 應用 manifest 元數據能使搜索引擎找到 web 應用。
 * **推送與互動** - 推送通知的特性，主動讓用戶了解最新動態。
-* **可本地安裝** - 在一些平台上，你可以安裝 web 應用使得它看起來像一個本地應用（將 icon 放在主屏，在應用程序切換器單獨列出，chrome 浏覽器可選）。所有這些應用不用經過本地應用商店。
+* **可本地安裝** - 在一些平臺上，你可以安裝 web 應用使得它看起來像一個本地應用（將 icon 放在主屏，在應用程序切換器單獨列出，chrome 瀏覽器可選）。所有這些應用不用經過本地應用商店。
 * **可連接性** - 通過 URL 可以輕松分享應用，不用安裝即可運行。
 
 這指南引導將會引導你完成你自己的Progressive Web App，這也包括網頁設計考量以及確保你的應用程序符合Progressive Web App的關鍵原則。
@@ -54,11 +47,11 @@ Progressive Web Apps 是:
       <ul>
         <li><b>漸進增強</b> - 我們將會使用漸進增強的特性。</li>
         <li><b>響應用戶界面</b> - 我們將確保這應用程序能適合任何形式因素。</li>
-        <li><b>獨立性的連接<b> -我們將會用Service Worker緩存app shell。</li>
+        <li><b>連接性、獨立性</b> -我們將會用Service Worker緩存app shell。</li>
         <li><b>類應用 UI</b> - 我們將會使用本地應用的UI交互來添加城市以及更新天氣。</li>
         <li><b>持續更新</b> - 我們將會用Service Worker來緩存最新的內容。</li>
         <li><b>安全通信</b> - 我們將會把網頁發布在一個支持HTTPS的主機服務。</li>
-        <li><b>推送與互動</b> - >我們將添加一個程序集清單以讓搜索器找到我們的應用程序。</li>
+        <li><b>推送與互動</b> - 我們將添加一個程序集清單以讓搜索器找到我們的應用程序。</li>
         <li><b>可連接性</b> - 這就是網絡!</li>
       </ul>
     </p>
@@ -68,7 +61,7 @@ Progressive Web Apps 是:
       <img src="images/weather-ss.png">
     </a>
     <p>
-      <a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+      <a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">嘗試</a>
     </p>
   </div>
 </div>
@@ -97,4 +90,4 @@ Progressive Web Apps 是:
 * HTML，CSS和JavaScript的知識
 
 這指南引導的重點是Progressive Web Apps。當中，有些概念的只是簡單的解釋，並沒有深入的解釋。
-而有些則是只提供示例代碼（例如CSS和其他不相關的Javascipt），你只需複制和粘貼即可。
+而有些則是只提供示例代碼（例如CSS和其他不相關的Javascipt），你只需復制和粘貼即可。
