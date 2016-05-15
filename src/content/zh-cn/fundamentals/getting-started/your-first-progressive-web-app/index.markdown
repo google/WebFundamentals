@@ -3,7 +3,7 @@ title: "你的首个Progressive Web App"
 description: "Progressive Web Apps是个结合了网页和应用程序的最好功能的一个体验。在这个指南引导，你将会建立你自己的Progressive Web Apps。你也会学到建立Progressive Web App的基础，包括app shell模式, 如何使用service worker来缓存app shell和缓存应用程序的资料等等."
 updated_on: 2016-05-14
 translators:
-  - henrylim  
+  - henrylim
 notes:
   devsummit-video: "Looking for more? Watch Alex Russell talk about <a href='https://www.youtube.com/watch?v=MyQ8mtR9WxI'>Progressive Web Apps</a> from the 2015 Chrome Dev Summit"
 ---
