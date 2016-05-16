@@ -271,4 +271,4 @@ service worker, giving you access to the console of the service worker.
 service worker is properly registered and the right resources are cached.
 * Try changing the `cacheName` and make sure that the cache is properly updated.
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-05/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/step-06/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
