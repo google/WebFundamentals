@@ -7,8 +7,6 @@ description: Six artists were invited to paint, design, and sculpt in VR.
 {# wf_author: michaelchang,jeffnusz #}
 {# wf_featured_image: /web/scratch/showcase/2016/images/art-sessions/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Virtual Art Sessions {: .page-title }
 
 <img src="images/art-sessions/device.png" class="attempt-right">

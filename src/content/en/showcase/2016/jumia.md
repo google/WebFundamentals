@@ -5,11 +5,9 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/showcase/2016/images/jumia/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Jumia {: .page-title }
 
-<img src="images/jumia/jumia.png" class="attempt-right">
+<img src="images/jumia/jumia_framed.gif" class="attempt-right">
 
 ## TL;DR
 
@@ -20,11 +18,13 @@ conversions by 9X
 
 <span class="compare-yes"></span> 38% Open rate
 
-<span class="compare-yes"></span> 9X more conversion on previously abandoned carts from web push users
+<span class="compare-yes"></span> 9X more conversion on previously abandoned
+carts from web push users
 
-<span class="compare-yes"></span>7.85% conversion rate on previously abandoned carts from web push users, vs. 4.5% for native app.
+<span class="compare-yes"></span>7.85% conversion rate on previously abandoned
+carts from web push users, vs. 4.5% for native app.
 
-<a hidden class="button button-primary" href="pdfs/jumia.pdf">
+<a class="button button-primary" href="pdfs/jumia.pdf">
   Download PDF Case study
 </a>
 

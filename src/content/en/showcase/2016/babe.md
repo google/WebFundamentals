@@ -5,8 +5,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/showcase/2016/images/babe/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # BaBe {: .page-title }
 
 <img src="images/babe/babe_framed.gif" class="attempt-right">

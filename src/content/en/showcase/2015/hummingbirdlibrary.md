@@ -6,8 +6,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/hummingbirdlibrary/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Hummingbird Library {: .page-title }
 
 <img src="images/hummingbirdlibrary/screenshot.png" class="attempt-right">

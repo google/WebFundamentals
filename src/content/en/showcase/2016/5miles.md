@@ -5,7 +5,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/scratch/showcase/2016/images/5miles/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # 5miles {: .page-title }
 
@@ -13,7 +12,8 @@ book_path: /web/scratch/showcase/_book.yaml
 
 ## TL;DR
 
-5miles decreases bounce rate by 50% and increases conversions by 60% with new Progressive Web App
+5miles decreases bounce rate by 50% and increases conversions by 60% with new
+Progressive Web App
 
 ### Results
 
@@ -21,7 +21,8 @@ book_path: /web/scratch/showcase/_book.yaml
 
 <span class="compare-yes"></span> 30% increase in time spent on site
 
-<span class="compare-yes"></span> 30% better conversion for users who arrived via Add to Home screen
+<span class="compare-yes"></span> 30% better conversion for users who arrived
+via Add to Home screen
 
 {% comment %}
 <a hidden class="button button-primary" href="pdfs/5miles.pdf">

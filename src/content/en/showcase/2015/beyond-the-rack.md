@@ -7,26 +7,27 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/beyond-the-rack/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Beyond the Rack {: .page-title }
 
 <img src="images/beyond-the-rack/btr-1.png" class="attempt-right">
 
-<p class="wf-casestudy-subtitle">
-  <a href="https://www.beyondtherack.com">Beyond the Rack</a>
-  re-engages users on the mobile web, increasing revenue per visit by 26% with
-  push notifications.
-</p>
-
 ## TL;DR
 
-
+[Beyond the Rack](https://www.beyondtherack.com) re-engages users on the
+mobile web, increasing revenue per visit by 26% with push notifications.
+  
 > "Push notifications allowed us to bring one of the most compelling
 > capabilities from our native app to our mobile site. We see a direct 20%
 > click through rate from push notifications—having another channel to reach
 > our users is a game changer."<br>
 > <b>Richard Cohene</b>, VP Marketing, Beyond the Rack
+
+### Key Insights
+
+* **52%** of total users are mobile web
+* **26%** is the average increase in spend that occurred by members who visited via push
+* **20%** click through rate from push notifications
+* **72%** more time spent on the site per visit from members who visited via push notifications
 
 <a class="button button-primary" href="pdfs/btr-web-push-casestudy.pdf">
   Download PDF Case study
@@ -76,13 +77,6 @@ mobile phone home screen, they prompt greater response and more immediate action
 Push notifications enable your mobile web users to choose to receive notifications on their
 device just like an installed native app. This lets you effectively re-engage them with customized, 
 compelling content.
-
-## Key Insights
-
-* **52%** of total users are mobile web
-* **26%** is the average increase in spend that occurred by members who visited via push
-* **20%** click through rate from push notifications
-* **72%** more time spent on the site per visit from members who visited via push notifications
 
 ## More Information
 

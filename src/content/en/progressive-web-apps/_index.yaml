@@ -22,7 +22,7 @@ landing_page:
           Flipkart, India’s largest e-commerce site, decided to combine their
           web presence and native app into a Progressive Web Application that
           has resulted in a 70% increase in conversions.
-          <a href="/web/showcase/case-study/flipkart">Read more</a>
+          <a href="/web/showcase/2016/flipkart">Read more</a>
         </p>
         <blockquote>
           We know that everyone needs to build mobile-first experiences. With
@@ -106,7 +106,7 @@ landing_page:
     - items:
       - heading: "Code Lab: Your First Progressive Web App"
         description: Learn step by step how to write your own progressive web app.
-        path: /analytics/community/
+        path: https://g.co/codelabs/pwa
       - heading: "Guide: Your first offline web app"
         description: A step-by-step guide to making your web app work offline.
         path: /web/fundamentals/getting-started/your-first-offline-web-app/

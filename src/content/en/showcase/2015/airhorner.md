@@ -6,11 +6,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/airhorner/featured.png #}
 
-
-{% setvar wf_author %}paulkinlan{% endsetvar %}
-{% setvar wf_published_on %}2015-10-16{% endsetvar %}
-{% setvar wf_updated_on %}2015-10-16{% endsetvar %}
-
 <link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # AirHorner.com {: .page-title }

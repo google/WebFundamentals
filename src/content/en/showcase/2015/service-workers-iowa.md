@@ -1,27 +1,20 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
+description: The Google I/O 2015 Web App
 
 {# wf_published_on: 2015-10-01 #}
 {# wf_updated_on: 2015-10-01 #}
 {# wf_author: jeffreyposnick #}
 {# wf_featured_image: /web/showcase/2015/images/service-workers-iowa/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Service Workers in Production {: .page-title }
 
 <img src="images/service-workers-iowa/screenshot-portrait.png" class="attempt-right">
-
-<p class="wf-casestudy-subtitle">
-  The Google I/O 2015 Web App
-</p>
 
 ## TL;DR
 
 Learn how we used service worker libraries to make the Google I/O 2015 web app
 fast, and offline-first.
-
-<div class="wf-clear"></div>
 
 ## Overview
 

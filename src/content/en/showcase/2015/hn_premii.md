@@ -6,8 +6,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/hn_premii/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Hacker News Reader {: .page-title }
 
 <img src="images/hn_premii/screenshot.png" class="attempt-right">

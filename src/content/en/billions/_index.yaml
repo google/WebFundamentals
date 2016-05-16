@@ -17,14 +17,15 @@ landing_page:
   - classname: devsite-landing-row-50
     items:
     - description: >
-        <h4>They will virtually all be mobile users.</h4>
+        <h4>The next billion users will virtually all be on mobile</h4>
         <p>
           This presents unique challenges for web developers who must abandon
           the limited mobile first approach in favor of a comprehensive mobile
-          only strategy.
+          strategy.
         </p>
         <p>
-          You can address these challenges by focusing on specific areas.
+          You can address these challenges by focusing a few key areas
+          listed below.
         </p>
       youtube_id: MyQ8mtR9WxI
 

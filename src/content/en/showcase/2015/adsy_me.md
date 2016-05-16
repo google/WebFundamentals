@@ -6,13 +6,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/adsy_me/featured.png #}
 
-
-{% setvar wf_author %}pbakaus{% endsetvar %}
-{% setvar wf_published_on %}2015-05-04{% endsetvar %}
-{% setvar wf_updated_on %}2015-05-04{% endsetvar %}
-
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Adsy.me {: .page-title }
 
 <img src="images/adsy_me/screenshot.png" class="attempt-right">

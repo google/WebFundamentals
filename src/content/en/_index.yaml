@@ -17,7 +17,7 @@ landing_page:
           order to deliver fast, secure, and performant content to any screen.
          </p>
          <h3>Get started with...</h3>
-      image_path: /web/scratch/images/hero-2x.png
+      image_path: images/hero-2x.png
       buttons:
       - label: Best Practices
         path: "#follow-best-practices"
@@ -40,7 +40,7 @@ landing_page:
         HTTPS allows users to securely connect to your website or app. Set up
         HTTPS to protect the integrity of your site, and the security of your
         users.
-      image_path: /web/scratch/images/content-https-2x.jpg
+      image_path: images/content-https-2x.jpg
       buttons:
       - label: Learn more
         path: /web/fundamentals/security/
@@ -59,7 +59,7 @@ landing_page:
         Users don’t have the patience to wait for sites that can’t deliver
         content quickly. Learn testing techniques and best practices to ensure
         that your sites and apps are optimized and performant.
-      image_path: /web/scratch/images/content-performance-2x.jpg
+      image_path: images/content-performance-2x.jpg
       buttons:
       - label: Learn more
         path: /web/fundamentals/performance/
@@ -81,7 +81,7 @@ landing_page:
         Modern users live on phones, tablets and laptops; your apps and
         websites should do the same. Learn how to structure and code your
         content to look great on screens of any size.
-      image_path: /web/scratch/images/content-responsive-2x.jpg
+      image_path: images/content-responsive-2x.jpg
       buttons:
       - label: Learn more
         path: /web/fundamentals/design-and-ui/responsive/
@@ -163,11 +163,11 @@ landing_page:
           conversion rate rise by 45%. For new users, the increase was even
           higher, 104%. The new strategy delivered a much better experience.
           Users now visit twice as many pages per session, and time spent
-          per session increased by 74%. 
+          per session increased by 74%.
         </p>
-      #buttons:
-      #- label: Learn more
-      #  path: /web/scratch/progressive-web-apps/
+      buttons:
+      - label: Learn more
+        path: /web/scratch/showcase/2016/aliexpress
 
   - items:
     - custom_html: <hr>
@@ -194,7 +194,7 @@ landing_page:
             looks and feels.
           </li>
         </ul>
-      image_path: /web/scratch/images/AMP-GIF-2x.gif
+      image_path: images/AMP-GIF-2x.gif
       buttons:
       - label: Get Started
         path: https://www.ampproject.org/docs/get_started/create_page.html
@@ -221,3 +221,4 @@ landing_page:
       buttons:
       - label: Learn more
         path: https://amphtml.wordpress.com/2015/12/14/building-a-faster-mobile-web-experience-with-amp/
+

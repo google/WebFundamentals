@@ -5,8 +5,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/showcase/2016/images/konga/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Konga {: .page-title }
 
 <img src="images/konga/konga_framed.gif" class="attempt-right">
@@ -19,11 +17,14 @@ Konga cuts data usage 92% with new Progressive Web App
 
 <span class="compare-yes"></span> 92% less data for initial load, vs. native app
 
-<span class="compare-yes"></span> 82% less data to complete first transaction, vs. native app
+<span class="compare-yes"></span> 82% less data to complete first transaction,
+vs. native app
 
-<span class="compare-yes"></span> 63% less data for initial load, vs. previous mobile web experience
+<span class="compare-yes"></span> 63% less data for initial load, vs. previous
+mobile web experience
 
-<span class="compare-yes"></span> 84% less data to complete first transaction, vs. previous mobile web experience
+<span class="compare-yes"></span> 84% less data to complete first transaction,
+vs. previous mobile web experience
 
 {% comment %}
 <a hidden class="button button-primary" href="pdfs/konga.pdf">

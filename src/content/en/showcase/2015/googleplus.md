@@ -6,17 +6,13 @@ description: We hit our goal of never downloading more than 60k of HTML, 60k of 
 {# wf_updated_on: 2015-11-17 #}
 {# wf_featured_image: /web/showcase/2015/images/gplus/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Google+ {: .page-title }
 
 <img src="images/gplus/main.png" class="attempt-right">
 
-<p class="wf-casestudy-subtitle">
-  <a href="https://plus.google.com">Google+</a> goes completely responsive.
-</p>
-
 ## TL;DR
+
+[Google+](https://plus.google.com) goes completely responsive.
 
 > We hit our goal of never downloading more than 60k of HTML, 60k of
 > JavaScript and 60k of CSS at any one time!

@@ -6,8 +6,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/little_alchemy/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Little Alchemy {: .page-title }
 
 <img src="images/little_alchemy/screenshot.png" class="attempt-right">

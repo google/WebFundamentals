@@ -65,6 +65,8 @@ landing_page:
       - label: Learn more
         path: 2016/babe
 
+  - items:
+    - custom_html: <hr>
 
   - items:
     - heading: Konga cuts data usage 92% with new Progressive Web App

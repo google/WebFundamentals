@@ -5,8 +5,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/scratch/showcase/2016/images/aliexpress/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # AliExpress {: .page-title }
 
 <img src="images/aliexpress/aliexpress_framed.gif" class="attempt-right">
@@ -18,11 +16,14 @@ Progressive Web App
 
 ### Results
 
-<span class="compare-yes"></span> 104% for new users across all browsers; 82% increase in iOS conversion rate
+<span class="compare-yes"></span> 104% for new users across all browsers; 82%
+increase in iOS conversion rate
 
-<span class="compare-yes"></span> 2X more pages visited per session per user across all browsers
+<span class="compare-yes"></span> 2X more pages visited per session per user
+across all browsers
 
-<span class="compare-yes"></span> 74% increase in time spent per session across all browsers
+<span class="compare-yes"></span> 74% increase in time spent per session
+across all browsers
 
 {% comment %}
 <a hidden class="button button-primary" href="pdfs/aliexpress.pdf">
@@ -62,7 +63,7 @@ for new users increase by 104%. This investment in the mobile web also resulted
 in conversion rates on Safari increasing by 82%. The new strategy also
 delivered a much better experience. Users now visit twice as many pages per
 session, and time spent per session increased an average of 74% across all
-browsers. 
+browsers.
 
 > "One of the reasons we built a Progressive Web App was to be able to invest
 > in the web experience across all browsers. Not only did we see huge benefits

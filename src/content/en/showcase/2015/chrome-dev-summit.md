@@ -10,15 +10,9 @@ description: >
 {# wf_author: pbakaus #}
 {# wf_featured_image: /web/showcase/2015/images/chrome-dev-summit/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # Chrome Dev Summit 2014 {: .page-title }
 
 <img src="images/chrome-dev-summit/screenshot-portrait.png" class="attempt-right">
-
-<p class="wf-casestudy-subtitle">
-  Conferencing done right.
-</p>
 
 ## TL;DR
 
@@ -49,7 +43,7 @@ Source Code
 
 
 
-<div class="wf-clear"></div>
+<div style="clear:both;"></div>
 
 ## The Interview
 

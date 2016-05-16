@@ -1,7 +1,5 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
-description: this is the page description
-hide_last_updated: true
 
 {# wf_published_on: 2016-03-28 #}
 {# wf_updated_on: 2016-03-28 #}
@@ -10,6 +8,8 @@ hide_last_updated: true
 # Flipkart triples time-on-site with Progressive Web App {: .page-title }
 
 <img src="images/flipkart/flipkart.png" class="attempt-right">
+
+## TL;DR
 
 Flipkart, India’s largest e-commerce site, decided to combine their web
 presence and native app into a Progressive Web Application that has resulted
@@ -23,11 +23,20 @@ development approach. They were drawn back to the mobile web by the
 introduction of features that made the mobile web run instantly, work offline,
 and re-engage users.
 
+### Key insights
+
+* Users time on site with Flipkart lite vs. previous mobile experience:
+  **3.5 minutes vs 70 seconds**.
+* **3x** more time spent on site
+* **40%** higher re-engagement rate
+* **70%** greater conversion rate among those arriving via Add to Homescreen
+* **3x** lower data usage
+
 <a class="button button-primary" href="pdfs/flipkart.pdf">
   Download PDF Case study
 </a>
 
-### Flipkart Lite
+## Flipkart Lite
 
 They soon began building Flipkart Lite, a Progressive Web App that
 combines the best of the web and the best of the Flipkart native app.
@@ -42,7 +51,7 @@ to build mobile-first experiences. With Flipkart Lite, we've developed a
 powerful, technically-advanced web app that performs as well as our
 native app. We now feel we have the best of both worlds."
 
-### A fast and streamlined site
+## A fast and streamlined site
 
 With **63%** of Flipkart Lite users reaching the site via a 2G network, a fast
 user experience was essential. To decrease load times, Flipkart added
@@ -51,7 +60,7 @@ the product they are looking for. Users can even continue to browse
 categories, review previous searches, and view product pages—all
 while offline.
 
-### Taking advantage of the web's low friction
+## Taking advantage of the web's low friction
 
 Reaching a broad set of users is important for Flipkart. With Flipkart Lite,
 users are one click away from accessing content and many new users are
@@ -62,7 +71,7 @@ uses **3x** less data. Nagaram continues, "Having a strong and engaging
 mobile website means we’re no longer turning away potential shoppers
 who don’t want to use data or space to download an app."
 
-### Bringing users back with home screen icon
+## Bringing users back with home screen icon
 
 Flipkart wanted to be able to re-engage with mobile web users just as they
 would with mobile app users.
@@ -75,7 +84,7 @@ with customers converting **70%** more than average users.
 These two activities alone resulted in engagement numbers that were **40%**
 higher than before.
 
-### Building for future success for the evolving online shopper
+## Building for future success for the evolving online shopper
 
 Flipkart will continue using progressive web technology to reach their
 evolving online shoppers. Nagaram concludes, "Flipkart Lite has enabled
@@ -84,12 +93,5 @@ progressive web app technology across all of our platforms, investing
 significant resources to maximize the potential scale. We truly believe that
 this is a new way to experience mobile and we’re just getting started."
 
-### Key insights
 
-* Users time on site with Flipkart lite vs. previous mobile experience:
-  **3.5 minutes vs 70 seconds**.
-* **3x** more time spent on site
-* **40%** higher re-engagement rate
-* **70%** greater conversion rate among those arriving via Add to Homescreen
-* **3x** lower data usage
 

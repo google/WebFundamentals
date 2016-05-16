@@ -1,11 +1,10 @@
 project_path: /web/scratch/_project.yaml
 book_path: /web/scratch/showcase/_book.yaml
+description: TODO if there is a description
 
 {# wf_published_on: 2016-05-17 #}
 {# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/showcase/2016/images/DIR/featured.png #}
-
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # COMPANY {: .page-title }
 

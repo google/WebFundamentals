@@ -5,8 +5,6 @@ book_path: /web/scratch/showcase/_book.yaml
 {# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/showcase/2016/images/extra/featured.png #}
 
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
-
 # eXtra Electronics {: .page-title }
 
 <img src="images/extra/extra_framed.gif" class="attempt-right">
@@ -23,7 +21,7 @@ United eXtra Electronics grows eCommerce sales by 100% with Web Push Notificatio
 
 <span class="compare-yes"></span> 4x increase in re-engagement
 
-<a hidden class="button button-primary" href="pdfs/extra.pdf">
+<a class="button button-primary" href="pdfs/extra.pdf">
   Download PDF Case study
 </a>
 
