@@ -1,25 +1,25 @@
 ---
-title: "Add a manifest"
-description: "Add a manifest file to provide configuration for Push Notifications."
+title: "添加manifest檔案"
+description: "添加manifest檔案以提供推送通知的配置"
 notes:
   styling:
     - Styling will come later
-updated_on: 2015-09-28
+updated_on: 2016-05-15
+translators:
+ - henrylim
 ---
 
 {% include shared/toc.liquid %}
 
-A completed version of this step is in the completed/step5 directory.
+你可以在completed/step5目錄找到這步驟的完整代碼。
 
-A manifest is a JSON file that provides information about your web app, including Push Notifications configuration.
+Manifest是個JSON檔案，它提供Web app各種的資訊，包括了推送通知的配置。
 
-## 1. Create a manifest file
+## 1. 創建一個Manifest檔案
 
-At the top level of your _app_ directory, create a file named
-_manifest.json_ (you can give it any name you like).
+在 _app_ 目錄裏，創建一個名為 _manifest.json_ 的文件。
 
-Include the following code. The _gcm\_sender\_id_ value should be the
-Project Number you saved earlier:
+添加以下的代碼至 _manifest.json_ 。在 _gcm\_sender\_id_ 填入你在上個步驟獲取的Project Number:
 
 {% highlight json %}
 {
@@ -28,13 +28,13 @@ Project Number you saved earlier:
 }
 {% endhighlight %}
 
-There are lots more useful options for web manifests, such as setting an app icon and enabling Add to home screen on mobile.
+除此之外, web manifests也帶來許多其他的功能，包括了設置App圖示以及添加至主屏幕。
 
-Find out more from the Web Fundamentals article [Installable Web Apps](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android).
+更多關於Web Manifest的資料，請見網頁基礎的文章[Installable Web Apps](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android).
 
-## 2. Tell the browser where to find the manifest for your web app
+## 2. 告訴遊覽器你的web app的manifest的路徑
 
-Add the following to the head element in the _index.html_ file you created earlier:
+將以下的代碼添加進 _index.html_ 裏的head標題：
 
 {% highlight html %}
 <link rel="manifest" href="manifest.json">

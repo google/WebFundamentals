@@ -1,22 +1,23 @@
 ---
-title: "Show a notification"
-description: "Add code to your service worker's push handler to show a notification."
+title: "顯示推送通知"
+description: "添加你的代碼到service worker的push handler以顯示推送通知。"
 notes:
   styling:
     - Styling will come later
-updated_on: 2015-09-28
+updated_on: 2016-05-15
+translators:
+ - henrylim
 ---
 
 {% include shared/toc.liquid %}
 
-A completed version of this step is in the completed/step9 directory.
+你可以在completed/step9目錄找到這步驟的完整代碼。
 
-In this step you will add code to your service worker's push handler to show a
-notification.
+在這個步驟，你將會把你的代碼添加到service worker的push handler以顯示推送通知。
 
-## 1. Add showNotification() code
+## 1. 添加 showNotification()代碼
 
-Update _sw.js _to look like this, replacing the _TODO_ comment:
+更改 _sw.js_ 中的代碼，用以下的代碼代替 _TODO_ 註釋：
 
 {% highlight javascript %}
 console.log('Started', self);
@@ -40,14 +41,14 @@ self.addEventListener('push', function(event) {
 // TODO
 {% endhighlight %}
 
-The `event.waitUntil()` method takes a promise and extends the lifetime of the event handler until, in this case, the promise returned by `showNotification()` is resolved.
+這`event.waitUntil()`拿到一個promise並延長了他的生命周期直到`showNotification()`返回了promise。
 
-One notification will be shown for each tag value: if a new push message is received, the old notification will be replaced. To show multiple notifications, use a different tag value for each showNotification() call, or no tag at all.
+每一個標記值（Tag）都會顯示一個通知: 如果接收到新的推送消息，舊的推送消息將會被替換。 如果你要顯示多個不同的推送通知，在每個 showNotification() 的函數, 請使用不一樣的標記值，或者不要放入標記值。
 
-## 2. Make a request to GCM to send a notification
+## 2. 發送一個請求至GCM以發送推送通知
 
-Run the cURL command or the XHR request from the previous steps.
+運行在上個步驟的cURL命令或者XHR請求。
 
-You should see a notification like this:
+你將會看到像這樣的推送通知：
 
 <img src="images/image19.png" width="394" height="114" alt="Screenshot of Push Notification" />

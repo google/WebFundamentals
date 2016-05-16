@@ -1,28 +1,27 @@
 ---
-title: "Unsubscribe from notifications"
-description: "Enable your users to unsubscribe from Push Notifications."
+title: "退订推送通知"
+description: "让用户退订推送通知"
 notes:
   styling:
     - Styling will come later
-updated_on: 2015-09-28
+updated_on: 2016-05-15
+translators:
+ - henrylim
 ---
 
 {% include shared/toc.liquid %}
 
-A completed version of this step is in the completed/step11 directory.
+你可以在completed/step11目录找到这步骤的完整代码。
 
-**ENOUGH WITH THE MESSAGES ALREADY :^)!**
+要如何让用户退订及重新订阅推送通知呢？
 
-How can you enable your users to unsubscribe and resubscribe?
+非常简单: 用户只需调用`PushSubscription`对象中的 `unsubscribe()`函数， 便可以退订推送通知。
 
-Simple: a client unsubscribes from notifications by calling the `unsubscribe()`
-method of the `PushSubscription` object.
+在一个生产实现中，你也必须从服务器删除用户的订阅数据, 以避免发送不必要的推送通知。
 
-In a production implementation you will also need to to remove subscription data for an unsubscribed client from your server, to avoid sending notifications that won't be received.
+## 1. 添加订阅/退订按钮到你的应用程序里
 
-## 1. Add a Subscribe/Unsubscribe button to your app
-
-In the _index.html_ file you created earlier, add a button so the code looks like this:
+在你之前创建的 _index.html_ 里，将以下的代码添加进去:
 
 {% highlight html %}
 <!DOCTYPE html>
@@ -40,9 +39,9 @@ In the _index.html_ file you created earlier, add a button so the code looks lik
 </html>
 {% endhighlight %}
 
-## 2. Add subscribe/unsubscribe functionality to _main.js_
+## 2. 添加订阅/退订功能到 _main.js_ 里
 
-Adjust _main.js_ so the code looks like this:
+更改你的 _main.js_, 代码应该看起来是这样的:
 
 {% highlight javascript %}
 var reg;
@@ -89,8 +88,8 @@ function unsubscribe() {
 }
 {% endhighlight %}
 
-In this code, you set the value of the ServiceWorkerRegistration object reg when the service worker installs, which is then used in the subscribe() function to subscribe to push messaging.
+在这个代码中，当service worker在安装是，ServiceWorkerRegistration物件的reg，是在之后在subscribe()函數以用来订阅推送通知。
 
-The `subscribe()` function creates the `PushSubscription` object **sub** which can be used by the `unsubscribe()` function.
+`subscribe()`函數将会创建`PushSubscription` 物件 **sub**, 并使用在`unsubscribe()`函數。
 
-Remember: the client gets a new registration ID every time it re-subscribes, so you will need to adjust requests to GCM accordingly.
+记得: 每一次推送通知被重新订阅时，客户端将会获取新的注册ID, 所以你必须为GCM请求作出相应的调整。

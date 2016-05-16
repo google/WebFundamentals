@@ -1,16 +1,19 @@
 ---
-title: "Send a push notification request using XHR (Ajax)"
-description: "Another way to make a request to GCM to send a notification is via XHR (also known as Ajax). In this step, you work out for yourself how to do that."
+title: "使用XHR (Ajax)来请求发送推送通知"
+description: "另外一个来请求发送推送通知的方法是通过XHR(也被称为Ajax)。但在这个步骤，你需要自己寻找方法。"
 notes:
   styling:
     - Styling will come later
-updated_on: 2015-09-28
+updated_on: 2016-05-15
+translators:
+ - henrylim
 ---
 
 {% include shared/toc.liquid %}
 
-Another way to make a request to GCM to send a notification is via XHR.
+另外一个来请求发送推送通知的方法是通过XHR。
 
-We leave this as an exercise for the reader!
+但是，我们会把这个当成你们的练习!
 
-**Hint**: You may want to take a look at the demo at [simple-push-demo.appspot.com](https://simple-push-demo.appspot.com).
+**提示**: 你可以常考这个演示：
+[simple-push-demo.appspot.com](https://simple-push-demo.appspot.com).

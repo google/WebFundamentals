@@ -1,66 +1,68 @@
 ---
-title: "Make a project on the Google Developers Console"
-description: "Push notifications from a web app need a backend service to handle messaging. Chrome currently uses Google Cloud Messaging. In this step, you set up a project on the Google Developer Console."
+title: "在谷歌開發者控制臺創建項目"
+description: "Web app的推送通知需要後端要處理推送通知的信息。Chrome目前使用谷歌雲端推送。在這個步驟，你將會在谷歌開發者控制臺建立一個項目。"
 notes:
   styling:
     - Styling will come later
-updated_on: 2015-09-28
+updated_on: 2016-05-15
+translators:
+ - henrylim
 ---
 
 {% include shared/toc.liquid %}
 
-Push notifications from a web app need a backend service to handle messaging.
-Chrome currently uses [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) (GCM) for this, though the eventual goal is for Chrome and GCM to support the [Web Push Protocol](https://datatracker.ietf.org/doc/draft-ietf-webpush-protocol/).
+Web app的推送通知需要後端要處理推送通知的信息。Chrome目前使用[谷歌雲端推送/Google Cloud Messaging](https://developers.google.com/cloud-messaging/) (GCM)。
+這個的最終目標是讓Chrome和GCM支持
+[Web推送協議/Web Push Protocol](https://datatracker.ietf.org/doc/draft-ietf-webpush-protocol/).
 
-Other browsers are free to use other services.
+其他遊覽器可以使用其他的服務。
 
-For this step, you need to set up a project on the Google Developer Console.
+在這個步驟，你將會在谷歌開發者控制臺建立一個項目。
 
-**There are lots of steps here, but don't be put off. It's really easy to set up a project!**
+**在這裏有很多步驟，但別放棄。其實這是非常簡單的。**
 
+## 1. 創建項目
 
-## 1. Create a project
-
-From the [Google Developers Console](https://console.developers.google.com)
-create a new project:
+從[谷歌開發者控制臺/Google Developers Console](https://console.developers.google.com),
+創建一個新的項目:
 
 <img src="images/image04.png" width="907" height="845" alt="Web page screenshot: create a new project from the Google Developers Console" />
 
-## 2. Select APIs for the project
+## 2. 為該項目選擇API
 
-From **Use Google APIs**, select **Enable and manage APIs**:
+從 **Use Google APIs**, 選擇 **Enable and manage APIs**:
 
 <img src="images/image05.png" width="907" height="845" alt="Web page screenshot: select APIs from the Google Developers Console" />
 
-From the **Google APIs** list, select **Google Cloud Messaging**:
+從 **Google APIs** 目錄中, 選擇 **Google Cloud Messaging**:
 
-<img src="images/image06.png" width="907" height="845" alt="Web page screenshot: select Google Cloud Messaging API" /> If the API was added successfully you will see a page like this:
+<img src="images/image06.png" width="907" height="845" alt="Web page screenshot: select Google Cloud Messaging API" /> 如果API順利的被添加，你將會看到以下的情況:
 
 <img src="images/image07.png" width="965" height="901" alt="Web page screenshot: Google Developers Console, Google Cloud Messaging enabled" />
 
-## 3. Get credentials
+## 3. 獲取證書
 
-From the **API Manager** menu, select **Credentials**, click the **Create
-credentials** dropdown button and select **API key**:
+從 **API Manager** 的菜單中, 選擇 **Credentials**, 點擊 **Create
+credentials**，然後在下拉列表中選擇 **API key**:
 
 <img src="images/image08.png" width="965" height="901" alt="Web page screenshot: add credentials from the Google Developers Console" />
 
-Click the **Browser key** button:
+選擇 **Browser key** 按鈕:
 
 <img src="images/image09.png" width="907" height="822" alt="Web page screenshot: click Browser key button to select new API key type in the Google Developers Console" />
 
-Give the key a name (anything you like!), leave the HTTP referrers field blank and click the **Create** button:
+為你的Browser key命名(任何名字都可以!), 並在HTTP referrers留下空白。點擊 **Create** 按鈕繼續。
 
 <img src="images/image10.png" width="907" height="822" alt="Web page screenshot: click the Create button to create a browser API key from the Google Developers Console" />
 
-Get the **API key** — you'll need this later:
+獲取你的 **API key** — 之後你需要這個:
 
 <img src="images/image11.png" width="907" height="822" alt="Web page screenshot: get the API key for your project from the Google Developers Console" />
 
-From the Home page, get the **Project Number** — you'll also need this later:
+回去主頁，獲取你的 **Project Number** — 之後你也需要這個:
 
 <img src="images/image12.png" width="965" height="901" alt="Web page screenshot: get the Project Number for your project from the Google Developers Console" />
 
-Congratulations!
+恭喜!
 
-You've now created a Google Cloud Messaging project.
+你已經成功創建了一個新的谷歌雲端推送項目。

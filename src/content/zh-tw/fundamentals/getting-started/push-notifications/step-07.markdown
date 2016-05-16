@@ -1,89 +1,82 @@
 ---
-title: "Send a request from the command line for GCM to push a message"
-description: "Chrome uses Google Cloud Messaging (GCM) for push
-messaging. To get GCM to push a notification to your web client, you can send GCM a request from the command line."
+title: "從命令行發送GCM請求以發送推送通知"
+description: "Chrome的推送通知是使用谷歌雲端推送(GCM).
+為了讓GCM發送推送通知到你的Web客戶端, 你可以從命令行發送GCM請求"
 notes:
   styling:
     - Styling will come later
-updated_on: 2015-09-28
+updated_on: 2016-05-15
+translators:
+ - henrylim
 ---
 
 {% include shared/toc.liquid %}
+在上個步驟，我們說到Chrome的推送通知是使用谷歌雲端推送(GCM).
 
-As you saw earlier, Chrome uses Google Cloud Messaging (GCM) for push
-messaging.
+為了讓GCM發送推送通知到Web客戶端，你需要發送一個GCM請求。請求的內容包括:
 
-To get GCM to push a notification to your web client, you need to send GCM a
-request that includes the following:
-
-* The **public API key** that you created earlier, which looks like this:<br>
+* 在前個步驟創建的 **public API key** 這看起來像下面這樣:<br>
   <br>
   _AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c_<br>
   <br>
-  GCM will match this with the Project Number you got from the Google Developer
-  Console to use as the `gcm_sender_id` value in the manifest.
+  GCM將匹配這與你從Google Developer Console裏獲取到的Project Number。
+  這將會和manifest裏的`gcm_sender_id`一起使用。
 
-* An appropriate **Content-Type header**, such as `application/json`.
+* 一個適當的 **Content-Type header**, 例如 `application/json`.
 
-* An array of **subscription IDs**, each of which corresponds to an individual
-  client app. That's the last part of the subscription endpoint URL, and looks
-  like this: <br>
+* 一個 **subscription IDs** 的數組。每個數組中的值就是代表每個客戶端應用程序,
+  也就是訂閱 endpoint URL的最後一部分:<br>
   <br>
   _APA91bHMaA-R0eZrPisZCGfwwd7z1EzL7P7Q7cyocVkxBU3nXWed1cQYCYvF
   glMHIJ40kn-jZENQ62UFgg5QnEcqwB5dFZ-AmNZjATO8QObGp0p1S6Rq2tcCu
   UibjnyaS0UF1gIM1mPeM25MdZdNVLG3dM6ZSfxV8itpihroEN5ANj9A26RU2Uw_
 
-For a production site or app, you would normally set up a service to interact
-with GCM from your server. (There is some sample code for doing just that in
-[Push Notifications on the Open
-Web](/web/updates/2015/03/push-notifications-on-the-open-web).) For this codelab, you can send requests from your terminal or from an app running in the browser.
+至於已經發布或待發布的網頁或web應用程序，你應該在服務器設置GCM，並從服務器發送GCM請求。
+(代碼樣本請見 [Push Notifications on the Open Web](/web/updates/2015/03/push-notifications-on-the-open-web).) 但是在這個codelab,你可以使用命令提示符來發送GCM請求。
 
-You can send a request to GCM using the cURL utility.
+你可以使用cURL實用程來發送GCM請求。
 
-If you haven't used cURL before, you may find the following helpful:
+如果你沒用過cURL, 以下的網站可能對你有幫助:
 
 * [Getting Started guide](http://ethanmick.com/getting-started-with-curl)
 * [Reference documentation](http://curl.haxx.se/docs/manpage.html)
 
-The cURL command to send a request to GCM to issue a push message looks like
-this:
+你需要像以下的cURL命令以發送GCM請求:
 _curl --header "Authorization: key=**&lt;PUBLIC\_API\_KEY&gt;**" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"**&lt;SUBSCRIPTION\_ID&gt;**\"]}"_
 
- Let's see that in action...
+ 讓我們開始吧!
 
-## 1. Make a request to GCM
+## 1. 對GCM發出請求
 
-From your terminal, run the cURL command below — but make sure to use your
-own API key and subscription ID, which you created earlier:
+在你的命令提示符, 運行以下的cURL命令 - 但確保你使用你在前個步驟獲取的API key和訂閱ID:
 
 {% highlight bash %}
 curl --header "Authorization: key=XXXXXXXXXXXX" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"fs...Tw:APA...SzXha\"]}"
 {% endhighlight %}
 
-## 2. Check the response
+## 2. 檢查響應
 
-If it all worked out, you will see a response like this in your terminal:
+如果沒有問題，你將會在你的命令提示符看到以下的情況:
 
 <img src="images/image16.png" width="890" height="551" alt="BASH terminal screenshot: successful response to cURL request to GCM to send a push message" />
 
-If there are authorisation errors, check the Authorization key value. If the response shows an invalid registration error, check the subscription ID you used.
+如果出現授權錯誤，確保你的授權號是對的。如果響應出現註冊無效的錯誤，確保你的訂閱ID是對的。
 
-## 3. Check diagnostics
+## 3. 檢查診斷
 
-Take a look at _chrome://serviceworker-internals_. You should see something
-like this:
+看一下 _chrome://serviceworker-internals_. 你應該看到一樣或類是的情況:
 
 <img src="images/image17.png" width="1547" height="492" alt="Chrome DevTools screenshot:  Push message received" />
 
-Try requesting a notification for two different endpoints by opening your app in Chrome Canary as well as Chrome.
+開啟你的Chrome Canary和Chrome，然後嘗試向GCM請求推送通知。
 
-Make sure to put escaped quotes around each subscription ID.
+確保你把每個訂閱ID放上引號。
 
-## 4. Try changing window focus
+## 4. 嘗試改變窗口焦點
 
-Try closing or moving focus away from the browser tab that's running your
-app. You should see a notification like this:
+嘗試關閉或改變你的應用程序的遊覽器的窗口焦點。你應該會看到像這樣的推送通知:
 
 <img src="images/image18.png" width="373" height="109" alt="Push notification screenshot: 'This site has been updated in the background'" />
 
-**Important**: Each client that subscribes to push messaging will have its own subscription ID. If you're sending requests to GCM for notifications, remember to include subscription IDs for all the clients you want to send messages to! If you build each step of this codelab separately, each step will represent a different endpoint and therefore have a different subscription ID.
+**重要**: 每個客戶端都會有不一樣的訂閱ID. 當你在向GCM發送請求時，確保你全部要接受推送通知的用戶的訂閱ID包括在內！
+ 當你在建構這codelab的代碼時，這codelab每個步驟的訂閱ID都會不一樣。
