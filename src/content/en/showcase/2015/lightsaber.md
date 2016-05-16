@@ -1,5 +1,5 @@
-project_path: /web/scratch/_project.yaml
-book_path: /web/scratch/showcase/_book.yaml
+project_path: /web/_project.yaml
+book_path: /web/showcase/_book.yaml
 description: How to set up a high FPS WebGL project with Polymer.
 
 {# wf_published_on: 2015-12-15 #}

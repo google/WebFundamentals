@@ -1,5 +1,5 @@
-project_path: /web/scratch/_project.yaml
-book_path: /web/scratch/showcase/_book.yaml
+project_path: /web/_project.yaml
+book_path: /web/showcase/_book.yaml
 description: >
   The Chrome Dev Summit 2014 web site was built in-house by our own Paul Lewis,
   the CDS website showed how to build a great mobile web experience for conference

@@ -1,12 +1,10 @@
-project_path: /web/scratch/_project.yaml
-book_path: /web/scratch/showcase/_book.yaml
+project_path: /web/_project.yaml
+book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2015-10-16 #}
 {# wf_updated_on: 2015-10-16 #}
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/airhorner/featured.png #}
-
-<link rel="stylesheet" type="text/css" href="/web/scratch/showcase/showcase.css">
 
 # AirHorner.com {: .page-title }
 

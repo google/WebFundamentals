@@ -1,11 +1,11 @@
 name: "Web"
 description: "Build next generation web experiences."
-home_url: /web/scratch/
+home_url: /web/
 buganizer_id: 60575
 
 color: blue
 content_license: cc3-apache2
-footer_path: /web/scratch/_footer.yaml
+footer_path: /web/_footer.yaml
 hide_from_products_list: True
 
 icon:

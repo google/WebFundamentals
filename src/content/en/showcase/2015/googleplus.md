@@ -1,5 +1,5 @@
-project_path: /web/scratch/_project.yaml
-book_path: /web/scratch/showcase/_book.yaml
+project_path: /web/_project.yaml
+book_path: /web/showcase/_book.yaml
 description: We hit our goal of never downloading more than 60k of HTML, 60k of JavaScript and 60k of CSS at any one time!
 
 {# wf_published_on: 2015-11-17 #}

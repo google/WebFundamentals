@@ -4,7 +4,7 @@ upper_tabs:
     lower_tabs:
       guides:
       - title: Home
-        path: /web/scratch/fundamentals/
+        path: /web/fundamentals/
   - name: Tools
     lower_tabs:
       guides:
@@ -14,9 +14,9 @@ upper_tabs:
     lower_tabs:
       guides:
       - title: Home
-        path: /web/scratch/updates/
+        path: /web/updates/
   - name: Case Studies
     lower_tabs:
       guides:
       - title: Home
-        path: /web/scratch/showcase/
+        path: /web/showcase/

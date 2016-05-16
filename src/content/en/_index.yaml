@@ -1,7 +1,7 @@
-project_path: /web/scratch/_project.yaml
-book_path: /web/scratch/_book.yaml
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
 landing_page:
-  custom_css_path: /web/scratch/styles/wf-root.css
+  custom_css_path: /web/styles/wf-root.css
 
   rows:
 
@@ -124,11 +124,11 @@ landing_page:
             HTTPS</a> secures the connection between you and your users.
           </li>
         </ul>
-      image_path: /web/scratch/images/pwa-gif-flipkart-250.gif
+      image_path: /web/images/pwa-gif-flipkart-250.gif
       image_left: true
       buttons:
       - label: Get Started
-        path: /web/scratch/progressive-web-apps/
+        path: /web/progressive-web-apps/
         classname: button button-primary
 
   - items:
@@ -167,7 +167,7 @@ landing_page:
         </p>
       buttons:
       - label: Learn more
-        path: /web/scratch/showcase/2016/aliexpress
+        path: /web/showcase/2016/aliexpress
 
   - items:
     - custom_html: <hr>
