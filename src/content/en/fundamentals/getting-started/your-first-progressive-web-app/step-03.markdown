@@ -132,4 +132,4 @@ adding: `app.saveSelectedCities();` to the `butAddCity` event handler.
 * Refresh the browser and verify that the app loads both forecasts and shows the 
   latest information.
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-04/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/step-05/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
