@@ -10,7 +10,7 @@ upper_tabs:
       guides:
       - title: Home
         path: /web/tools/
-  - name: What's New
+  - name: Updates
     lower_tabs:
       guides:
       - title: Home
