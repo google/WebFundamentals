@@ -26,12 +26,9 @@ mobile web experience
 <span class="compare-yes"></span> 84% less data to complete first transaction,
 vs. previous mobile web experience
 
-{% comment %}
-<a hidden class="button button-primary" href="pdfs/konga.pdf">
+<a  class="button button-primary" href="pdfs/konga.pdf">
   Download PDF Case study
 </a>
-{% endcomment %}
-
 
 ## About Konga
 

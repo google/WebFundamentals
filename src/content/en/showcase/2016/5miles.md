@@ -24,11 +24,9 @@ Progressive Web App
 <span class="compare-yes"></span> 30% better conversion for users who arrived
 via Add to Home screen
 
-{% comment %}
-<a hidden class="button button-primary" href="pdfs/5miles.pdf">
+<a class="button button-primary" href="pdfs/5miles.pdf">
   Download PDF Case study
 </a>
-{% endcomment %}
 
 ## About 5miles
 
