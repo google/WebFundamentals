@@ -1,0 +1,22 @@
+upper_tabs:
+  - name: Fundamentals
+    heading: Web Fundamentals
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/fundamentals/
+  - name: Tools
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/tools/
+  - name: Updates
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/updates/
+  - name: Case Studies
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/showcase/

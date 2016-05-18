@@ -1,0 +1,142 @@
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
+landing_page:
+  custom_css_path: /web/styles/wf-root.css
+
+  header:
+    description: >
+      <h2 class="wf-header-title">Progressive Web Apps</h2>
+      <p>
+        Progressive Web Applications take advantage of new technologies to
+        bring the best of mobile sites and native applications to users.
+        They're reliable, fast, and engaging.
+      </p>
+
+  rows:
+
+  - classname: devsite-landing-row-50
+    items:
+    - description: >
+        <h4>Flipkart triples time-on-site with Progressive Web App</h4>
+        <p>
+          Flipkart, India’s largest e-commerce site, decided to combine their
+          web presence and native app into a Progressive Web Application that
+          has resulted in a 70% increase in conversions.
+          <a href="/web/showcase/2016/flipkart">Read more</a>
+        </p>
+        <blockquote>
+          We know that everyone needs to build mobile-first experiences. With
+          Flipkart Lite, we’ve developed a powerful, technically-advanced web
+          app that performs as well as our native app. We now feel we have the
+          best of both worlds.
+          <br>
+          - Amar Nagaram, an Engineering Director at Flipkart.
+        </blockquote>
+      youtube_id: MyQ8mtR9WxI
+
+  - items:
+    - custom_html: <hr>
+
+  - items:
+    - heading: Instant Loading
+      icon:
+        icon_name: schedule
+      path: /web/fundamentals/getting-started/your-first-offline-web-app/
+      description: >
+        Service workers allow your apps to load nearly instantly and reliably,
+        no matter what kind of network connection your user is on.
+    - heading: Add to Home Screen
+      icon:
+        icon_name: phone_android
+      path: /web/fundamentals/engage-and-retain/app-install-banners/
+      description: >
+        Web app install banners give you the ability to let your users
+        quickly and seamlessly add your web app to their home screen, making
+        it easy to launch and return to your app.
+    - heading: Push Notifications
+      icon:
+        icon_name: notifications_active
+      path: /web/fundamentals/getting-started/push-notifications/
+      description: >
+        Web push notifications makes it easy to re-engage with users by showing
+        relevant, timely, and contextual notifications, even when the browser
+        is closed.
+
+
+  - items:
+    - heading: Fast
+      icon:
+        icon_name: touch_app
+      path: /web/fundamentals/performance/rendering/
+      description: >
+        Smooth animations, scrolling, and navigations keep the experience
+        silky smooth.
+    - heading: Secure
+      icon:
+        icon_name: lock
+      path: /web/fundamentals/security/encrypt-in-transit/why-https
+      description: >
+        HTTPS secures the connection between you and your users, ensuring
+        your users information is protected and isn't tampered with.
+    - heading: Responsive
+      icon:
+        icon_name: devices_other
+      path: /web/fundamentals/design-and-ui/responsive/
+      description: >
+        Modern users live on phones, tablets and laptops; your apps and
+        websites should do the same. Learn how to structure and code your
+        content to look great on screens of any size.
+
+  - items:
+    - custom_html: <hr>
+
+
+  - heading: More resources
+    columns:
+    - items:
+      - heading: App Shell
+        description: Learn how to use the App Shell model to architect your app.
+        path: /web/updates/2015/11/app-shell
+      - heading: Service Workers
+        description: Service workers are a key technology needed for your app.
+        path: https://slightlyoff.github.io/ServiceWorker/spec/service_worker/
+      - heading: Get support
+        description: Get your questions answered on Stack Overflow
+        path: http://stackoverflow.com/questions/tagged/progressive-web-apps
+    - items:
+      - heading: "Code Lab: Your First Progressive Web App"
+        description: Learn step by step how to write your own progressive web app.
+        path: https://g.co/codelabs/pwa
+      - heading: "Guide: Your first offline web app"
+        description: A step-by-step guide to making your web app work offline.
+        path: /web/fundamentals/getting-started/your-first-offline-web-app/
+      - heading: "Guide: Your first push notification"
+        description: A step-by-step guide to adding push notifications to your web app.
+        path: /web/fundamentals/getting-started/push-notifications/
+
+
+  - items:
+    - custom_html: <hr>
+
+
+  - heading: Progressive Web Apps in action
+    classname: devsite-landing-row-no-image-background wf-pwa-in-action
+    items:
+    - heading: Air Horner
+      image_path: /web/imgs/pwa-airhorner.png
+      path: https://airhorner.com
+    - heading: Voice Memos
+      image_path: /web/imgs/pwa-voice-memos.png
+      path: https://voice-memos.appspot.com/
+    - heading: Weather
+      image_path: /web/imgs/pwa-weather.png
+      path: https://weather-pwa-sample.firebaseapp.com/final/
+
+  - classname: devsite-landing-row-cta
+    items:
+    - heading: Start developing today
+      description: Write your first Progressive Web App with our step by step code lab.
+      buttons:
+      - label: Get started
+        path: https://g.co/codelabs/pwa
+        classname: button
