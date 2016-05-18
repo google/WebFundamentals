@@ -25,12 +25,9 @@ across all browsers
 <span class="compare-yes"></span> 74% increase in time spent per session
 across all browsers
 
-{% comment %}
-<a hidden class="button button-primary" href="pdfs/aliexpress.pdf">
+<a class="button button-primary" href="pdfs/aliexpress.pdf">
   Download PDF Case study
 </a>
-{% endcomment %}
-
 
 ## About AliExpress
 

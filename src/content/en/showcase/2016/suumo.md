@@ -22,12 +22,9 @@ Notifications and sees a 31% open rate for notifications.
 
 <span class="compare-yes"></span> Stat 3
 
-{% comment %}
-<a hidden class="button button-primary" href="pdfs/suumo.pdf">
+<a class="button button-primary" href="pdfs/suumo.pdf">
   Download PDF Case study
 </a>
-{% endcomment %}
-
 
 ## About Suumo
 
