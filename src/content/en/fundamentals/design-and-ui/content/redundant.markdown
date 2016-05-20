@@ -49,7 +49,11 @@ See [Write for mobile](write.html) for more information.
 
 ## Remove redundant images
 
-According to [HTTP Archive data](http://httparchive.org/trends.php#bytesImg&reqImg), the average web page makes 54 requests for images, and images constitute over 60% of page weight:
+According to [HTTP Archive data](http://httparchive.org/trends.php#bytesImg&reqImg), the average web page makes 54 requests for images.
+
+<a href="http://httparchive.org/trends.php#bytesImg&reqImg" title="HTTP Archive"><img src="images/http-archive-images.png" alt="HTTP Archive showing increasing number of image transfer sizes and image requests" /></a>
+
+Images constitute over 60% of page weight.
 
 <a href="http://httparchive.org/interesting.php#bytesperpage" title="HTTP Archive"><img src="images/http-archive-content-type-pie-chart.png" alt="HTTP Archive pie chart showing average bytes per page by content type, around 60% of which is images"></a>
 
