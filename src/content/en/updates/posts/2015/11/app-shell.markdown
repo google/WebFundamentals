@@ -31,7 +31,7 @@ An application shell is the secret to reliably good performance. Think of your a
 
 Alex Russell's [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) article describes how a web app can *progressively* change through use and user consent to provide a more native-app-like experience complete with offline support, push notifications and the ability to be added to the home screen. It depends very much on the functionality and performance benefits of [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) and their caching abilities. This allows you to focus on **speed**, giving your web apps the same **instant loading** and regular updates you're used to seeing in native applications.
 
-To take full advanrtage of these capabilities we need a new way of thinking about web sites: the **application shell architecture**.
+To take full advantage of these capabilities we need a new way of thinking about web sites: the **application shell architecture**.
 
 Let's dive into how to structure your app using a **service worker augmented
 application shell architecture**. We'll look at both client and server-side rendering and share an end-to-end sample you can try today.
