@@ -20,8 +20,6 @@ Notifications and sees a 31% open rate for notifications.
 
 <span class="compare-yes"></span> 31% open rate from web Push Notifications
 
-<span class="compare-yes"></span> Stat 3
-
 <a class="button button-primary" href="pdfs/suumo.pdf">
   Download PDF Case study
 </a>
