@@ -490,6 +490,22 @@ eligrey:
   description:
     en: "Eli is a Developer"
 
+swengineer:
+  name:
+    given: Sungwon
+    family: Kim
+  org:
+    name: SK planet
+  country: KR
+  role:
+    - translator
+  homepage: http://fetobe.co.kr
+  google: 112816149994035233646
+  email: kim.sw.engineer@gmail.com
+  twitter:
+  description:
+    en: "Sungwon is a front-end Developer"
+
 nurinamu:
   name:
     given: Wonjae
