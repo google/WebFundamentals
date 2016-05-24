@@ -1,0 +1,181 @@
+project_path: /web/_project.yaml
+book_path: /web/showcase/_book.yaml
+landing_page:
+
+  custom_css_path: /web/styles/wf-root.css
+
+  header:
+    description: Learn how other developers have been awesome.
+
+  rows:
+
+  - heading: AliExpress increases conversion rate for new users by 104% with new Progressive Web App
+    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+    items:
+    - description: >
+        <p>
+          "Smarter shopping, better living!" is the motto of AliExpress, a
+          website where shoppers can buy everything from baby clothes to
+          refrigerators directly from China. Part of the Alibaba Group, the
+          global online retail marketplace is now a popular e-commerce site in
+          America, Russia, and Brazil.
+        </p>
+        <blockquote>
+          "One of the reasons we built a Progressive Web App was to be able to
+          invest in the web experience across all browsers. Not only did we
+          see huge benefits on browsers that support the latest features, but
+          we also got to see a bump across the board. That is the sign of a
+          great investment, and one that will keep paying for itself as
+          browsers evolve." <br>
+          <b>Lijun Chen</b>, director of AliExpress Mobile Team.
+        </blockquote>
+      image_path: 2016/images/aliexpress/featured.png
+      buttons:
+      - label: Read more
+        path: 2016/aliexpress
+
+
+  - items:
+    - heading: United eXtra Electronics grows eCommerce sales by 100% with Web Push Notifications
+      description: >
+        "Push Notifications are a huge part of our mobile engagement strategy.
+        It’s a more personal way to communicate with our customers. That’s
+        incredibly valuable to our bottom line." <br>
+        <b>Mujeeb Hazzaa</b>, Chief Business Development Officer
+      image_path: 2016/images/extra/featured.png
+      buttons:
+      - label: Learn more
+        path: 2016/extra
+    - heading: Push Notifications help Jumia reverse cart abandonment and increase conversions by 9X
+      description: >
+        "We finally have proper means to address our fastest growing pool of
+        customers — mobile web users. That’s incredibly valuable. We even see
+        better results from web Push Notifications than from app pushes.<br>
+        <b>Jeremy Doutte</b>, Jumia CEO
+      image_path: 2016/images/jumia/featured.png
+      buttons:
+      - label: Learn more
+        path: 2016/jumia
+    - heading: BaBe’s cross-browser Progressive Web App rivals performance of native app
+      description: >
+         “For us, it’s no longer an either-or decision. To reach new users,
+         we must be on the mobile web!”,<br> <b>Weihan Liew</b>, BaBe CEO.
+      image_path: 2016/images/babe/featured.png
+      buttons:
+      - label: Learn more
+        path: 2016/babe
+
+  - items:
+    - custom_html: <hr>
+
+  - items:
+    - heading: Konga cuts data usage 92% with new Progressive Web App
+      description: >
+        “We estimate that with our new light, super-fast, UX-rich browsing
+        capability, customers’ data consumption will fall dramatically which
+        we believe will result in a corresponding increase in conversions.” <br>
+        <b>Shola Adekoya</b>, Konga.com CEO. 
+      image_path: 2016/images/konga/featured.png
+      buttons:
+      - label: Learn more
+        path: 2016/konga
+
+    - heading: 5miles decreases bounce rate by 50% and increases conversions by 60% with new Progressive Web App
+      description: >
+        "With a new user growth rate of 100%, quarter-on-quarter, the mobile
+        web is at the heart of our success...It’s a major venue for low-cost
+        and highly effective customer acquisition and engagement.”<br>
+        <b>Lucas Lu</b>, 5miles CEO
+      image_path: 2016/images/5miles/featured.png
+      buttons:
+      - label: Learn more
+        path: 2016/5miles
+
+    - heading: Suumo supercharges new listings with Web Push Notifications and sees a 31% open rate for notifications
+      description: >
+        “We finally have a way to retain users on the mobile web. This has
+        been a game changer for us!”<br>
+        <b>Dai Shibayama</b>, manager, Smart Device Division, Recruit Sumai
+        Company Ltd.
+      image_path: 2016/images/suumo/featured.png
+      buttons:
+      - label: Learn more
+        path: 2016/suumo
+
+  - items:
+    - custom_html: <hr>
+
+  - items:
+    - heading: Visual Art Sessions
+      description: >
+        Six artists were invited to paint, design, and sculpt in VR. This is
+        the process for how we recorded their sessions, converted the data,
+        and presented it in real-time with web browsers.
+      buttons:
+      - label: Learn more
+        path: 2016/art-sessions
+
+    - heading: Net-A-Porter saves development time with Google's Polymer Library
+      description: >
+        NET-A-PORTER implemented a component-based design on their online
+        properties using Google's Polymer library. The result was a large
+        saving in development time, standarized code across their sites and an
+        improved SEO performance through use of structured data.
+      buttons:
+      - label: Learn more
+        path: 2016/net-a-porter
+
+    - heading: Flipkart triples time-on-site with Progressive Web App
+      description: >
+        In 2015, Flipkart, India’s largest e-commerce site, adopted an
+        app-only strategy and temporarily shut down their mobile website.
+        The company found it harder and harder to provide a user experience
+        that was as fast and engaging as that of their mobile app. But then,
+        Flipkart decided to rethink their development approach. They were
+        drawn back to the mobile web by the introduction of features that
+        made the mobile web run instantly, work offline, and re-engage users.
+      buttons:
+      - label: Learn more
+        path: 2016/flipkart
+
+  - heading: More case studies
+    classname: devsite-landing-row-100
+    items:
+    - description: >
+        <h4>
+          Creating a Lightsaber with Polymer
+        </h4>
+        <p>
+          How we used Polymer to create a high-performance WebGL mobile
+          controlled Lightsaber that is modular and configurable. We
+          review some of the key details of our <a href="https://lightsaber.withgoogle.com/">
+          project</a> to help you save time when creating your own next time
+          you run into a pack of angry Stormtroopers.
+          <a href="2015/lightsaber">Read more</a>
+        </p>
+        <h4>
+          Google+
+        </h4>
+        <p>
+          We hit our goal of never downloading more than 60k of HTML, 60k of
+          JavaScript and 60k of CSS at any one time!
+          <a href="2015/googleplus">Read more</a>
+        </p>
+        <h4>
+          Beyond the Rack
+        </h4>
+        <p>
+          "Push notifications allowed us to bring one of the most compelling
+          capabilities from our native app to our mobile site. We see a direct
+          20% click through rate from push notifications—having another channel
+          to reach our users is a game changer."
+          <a href="2015/beyond-the-rack">Read more</a>
+        </p>
+        <h4>
+          AirHorner
+        </h4>
+        <p>
+          AirHorner is a simple air horn.
+          <a href="2015/airhorner">Read more</a>
+        </p>
+

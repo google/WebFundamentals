@@ -72,9 +72,6 @@ gulp.task('clean', del.bind(null,
     GLOBAL.WF.build.root
   ], {dot: true}));
 
-gulp.task('removeIndexPage', del.bind(null,
-  [GLOBAL.WF.build.jekyll + '/*/index.html']));
-
 gulp.task('develop', function(cb) {
   runSequence(
     'clean',
@@ -85,6 +82,7 @@ gulp.task('develop', function(cb) {
       'cp-scripts',
     ],
     'compile-jekyll:localhost',
+    'cp-showcase',
     'start-gae-dev-server',
     'dev-watch-tasks',
     cb);
@@ -105,6 +103,7 @@ gulp.task('develop:prod', function(cb) {
       'html',
       'minify-images:content'
     ],
+    'cp-showcase',
     'start-gae-dev-server',
     'prod-watch-tasks',
     cb);
@@ -126,6 +125,7 @@ gulp.task('build:staging', function(cb) {
       'html',
       'minify-images:content'
     ],
+    'cp-showcase',
     cb);
 });
 
@@ -144,7 +144,7 @@ gulp.task('build', function(cb) {
       'html',
       'minify-images:content'
     ],
-    'removeIndexPage',
+    'cp-showcase',
     cb);
 });
 

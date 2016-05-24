@@ -293,7 +293,7 @@ continuous form.
    element.
 1. **Use placeholder to provide guidance** about what you expect. The
    placeholder attribute provides a hint to the user about what's expected in
-   the input, typically by displaying the value as light text until the the user
+   the input, typically by displaying the value as light text until the user
    starts typing in the element. Placeholders disappear as soon as the user
    starts typing in an element, thus they are not a replacement for labels. They
    should be used as an aid to help guide users on the required format and

@@ -151,6 +151,5 @@ There are a couple of bugs affecting &lt;video&gt;, service workers and the Cach
 
 ## Browser support
 
-* Behind a flag in Chrome Dev since January 2016
-* Enabled by default in Chrome 51 and above
+* Enabled by default in Chrome 52 and above.
 
