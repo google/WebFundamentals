@@ -1,7 +1,6 @@
 ---
 title: "从命令行发送GCM请求以发送推送通知"
-description: "Chrome的推送通知是使用谷歌云端推送(GCM).
-为了让GCM发送推送通知到你的Web客户端, 你可以从命令行发送GCM请求"
+description: "Chrome的推送通知是使用谷歌云端推送(GCM). 为了让GCM发送推送通知到你的Web客户端, 你可以从命令行发送GCM请求"
 notes:
   styling:
     - Styling will come later
