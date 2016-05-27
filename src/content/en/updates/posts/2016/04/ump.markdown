@@ -1,7 +1,7 @@
 ---
 layout: updates/post
-title: "Service worker caching, playbackRate and Blob URLS for audio and video on Chrome for Android"
-description: "From version 51, Android Chrome uses the same media stack as desktop Chrome, rather than relying on the underlying platform implementation. This enables service worker media caching, variable playback rates, Blob URLs on Android, MediaStream passing between APIs, and easier cross-platform debugging."
+title: "Service worker caching, playbackRate and blob URLs for audio and video on Chrome for Android"
+description: "From version 51, Android Chrome uses the same media stack as desktop Chrome, rather than relying on the underlying platform implementation. This enables service worker media caching, variable playback rates, blob URLs on Android, MediaStream passing between APIs, and easier cross-platform debugging."
 published_on: 2016-05-19
 updated_on: 2016-05-19
 authors:
@@ -39,7 +39,7 @@ This may sound like a sinister Soviet era directive, but in fact it's an importa
 UMP enables you to do a lot:
 
 * Cache audio and video with service workers, since media delivery is now implemented directly within Chrome rather than being passed off to the Android media stack.
-* Use Blob URLs for audio and video elements.
+* Use blob URLs for audio and video elements.
 * Set `playbackRate` for audio and video.
 * Pass MediaStreams between Web Audio and MediaRecorder.
 * Develop and maintain media apps more easily across devices — media works the same on desktop and Android.
@@ -73,7 +73,7 @@ The inability to change `playbackRate` on Android has been a [long-standing bug]
 
 <a href="https://simpl.info/video/playbackrate"><img class="screenshot-landscape" src="/web/updates/images/2016/04/ump/screenshot-rate.jpg" alt="Screenshot of video playback with playbackRate set to 2"></a>
 
-UMP enables Blob URLs for media elements — which means that, for example, you can now <a href="https://webrtc.github.io/samples/src/content/getusermedia/record/" title="MediRecorder demo">play back a video recorded using the MediaRecorder API</a> in a video element on Android:
+UMP enables blob URLs for media elements — which means that, for example, you can now <a href="https://webrtc.github.io/samples/src/content/getusermedia/record/" title="MediRecorder demo">play back a video recorded using the MediaRecorder API</a> in a video element on Android:
 
 <a href="https://webrtc.github.io/samples/src/content/getusermedia/record/"><img class="screenshot-landscape" src="/web/updates/images/2016/04/ump/screenshot-mr.jpg" alt="Screenshot of playback in Chrome on Android of a video recorded using the MediaRecorder API"></a>
 
