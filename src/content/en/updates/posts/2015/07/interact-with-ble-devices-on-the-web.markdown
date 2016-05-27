@@ -4,7 +4,7 @@ title: "Interact with BLE devices on the Web"
 description: "A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
 featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 published_on: 2015-07-22
-updated_on: 2016-02-26
+updated_on: 2016-05-27
 authors:
   - beaufortfrancois
 tags:
@@ -286,8 +286,14 @@ Service.
 - [Notifications](https://googlechrome.github.io/samples/web-bluetooth/notifications.html) - start and stop characteristic notifications from a BLE Device.
 - [Device Disconnect](https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html) - disconnect and get notified from a disconnection of a BLE Device after connecting to it.
 - [Get Characteristics](https://googlechrome.github.io/samples/web-bluetooth/get-characteristics.html) - get all characteristics of an advertised service from a BLE Device.
+- [GAP Characteristics](https://googlechrome.github.io/samples/web-bluetooth/gap-characteristics.html) - get all GAP characteristics of a BLE Device.
 
 You can also find some Web Bluetooth Demos at [https://github.com/WebBluetoothCG/demos](https://github.com/WebBluetoothCG/demos) and the Official Codelabs at [https://github.com/googlecodelabs?query=bluetooth](https://github.com/googlecodelabs?query=bluetooth).
+
+## Tools
+
+- [Get Started with Web Bluetooth](https://beaufortfrancois.github.io/sandbox/web-bluetooth/generator/) is a simple Web App that will generate all the JavaScript boilerplate code to start interacting with a Bluetooth device. Enter a device name, a service, a characteristic, define its properties and you’re good to go.
+- If you’re already a Bluetooth developer, the [Web Bluetooth Developer Studio Plugin](https://github.com/beaufortfrancois/sandbox/tree/gh-pages/web-bluetooth/bluetooth-developer-studio-plugin) will also generate the Web Bluetooth JavaScript code for your Bluetooth device.
 
 ## Dev Tips
 
