@@ -134,7 +134,7 @@ If you experience problems as a result of the Unified Media Pipeline, please fil
 
 * <a href="https://googlechrome.github.io/samples/service-worker/prefetch-video/index.html">Cache video with a service worker</a>
 * <a href="https://simpl.info/video/playbackrate">Media `playbackRate`</a>
-* <a href="https://simpl.info/mediarecorder">MediaRecorder: playback using a Blob URL</a>
+* <a href="https://simpl.info/mediarecorder">MediaRecorder: playback using a blob URL</a>
 * <a href="https://simpl.info/video/offline">Offline video implemented with the File APIs</a>
 
 ## Relevant bugs
