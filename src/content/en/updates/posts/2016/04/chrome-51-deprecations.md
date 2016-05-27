@@ -94,13 +94,13 @@ With this change, Chrome will be consistent with Safari 9.1 and later, as well a
 
 ## Deprecated results attribute for <input type=search>
 
-**TL;DR:** The `result` attribute is being deprecated because it's not part of any standard and it inconsistently implemented across browsers.
+**TL;DR:** The `result` attribute is being deprecated because it's not part of any standard and is inconsistently implemented across browsers.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8fHsOWz1XEw/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5738199536107520) &#124;
 [Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=590117) 
 
-The `results` is not implemented on most browser and highly inconsistently on those that do. For example, Chrome responds by adding a magnifier icon to the input box. While Safari desktop , it controls how many submitted queries are shown in a popup shown by click the magnifier icon. Since this isn't part of any standard, it's being deprecated.
+The `results` value is not implemented on most browsers and behaves highly inconsistently on those that do. For example, Chrome adds a magnifier icon to the input box, while on Safari desktop, it controls how many submitted queries are shown in a popup shown by clicking the magnifier icon. Since this isn't part of any standard, it's being deprecated.
 
 Removal is expected in Chrome 53.
 
