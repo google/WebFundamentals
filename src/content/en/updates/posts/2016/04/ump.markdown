@@ -124,7 +124,7 @@ function readFromFile(fullPath) {
 }
 {% endhighlight %}
 
-The Unified Media Pipeline has also been [enabled for MSE and EME](https://groups.google.com/a/chromium.org/forum/#!topic/chromium-reviews/Qi4dLcKjcCM).
+The Unified Media Pipeline has also been [enabled for Media Source Extensions (MSE) and Encrypted Media Extensions (EME)](https://groups.google.com/a/chromium.org/forum/#!topic/chromium-reviews/Qi4dLcKjcCM).
 
 This is another step towards unifying mobile and desktop Chrome. You don't need to change your code, but building a consistent media experience across desktop and mobile should now be easier, since the media stack is the same across platforms. Debugging with Chrome DevTools? Mobile emulation now uses the 'real' audio and video stack.
 

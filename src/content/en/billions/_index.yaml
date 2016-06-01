@@ -44,7 +44,7 @@ landing_page:
       - label: Test with emulated low bandwidth and high latency
         path: /web/fundamentals/performance/poor-connectivity/testing/
         classname: wf-small-link
-      - label: Handle unreliable connectivity and lie-fi
+      - label: Handle unreliable connectivity and "lie-fi"
         path: /web/fundamentals/performance/poor-connectivity/lie-fi/
         classname: wf-small-link
       - label: Design for offline
