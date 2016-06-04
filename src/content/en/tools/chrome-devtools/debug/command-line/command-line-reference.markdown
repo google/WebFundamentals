@@ -366,7 +366,7 @@ you would do:
 
 ## undebug(function)
 
-`undebug(function)` tops the debugging of the specified function
+`undebug(function)` stops the debugging of the specified function
 so that when the function is called,
 the debugger is no longer invoked.
 
@@ -374,7 +374,7 @@ the debugger is no longer invoked.
 
 ## unmonitor(function)
 
-`unmonitor(function)` tops the monitoring of the specified function.
+`unmonitor(function)` stops the monitoring of the specified function.
 This is used in concert with `monitor(fn)`.
 
 		unmonitor(getData);
