@@ -1,9 +1,10 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
 name: "Web"
 description: "Build next generation web experiences."
 home_url: /web/
 buganizer_id: 60575
 
-color: blue
+color: google-blue
 content_license: cc3-apache2
 footer_path: /web/_footer.yaml
 hide_from_products_list: True
