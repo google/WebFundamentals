@@ -557,6 +557,23 @@ paullewis:
   description:
     en: "Paul is a Design and Perf Advocate"
 
+henrylim:
+  name:
+    given: Henry
+    family: Lim
+  org:
+    name: Independent
+    unit: Developer
+  country: Malaysia
+  role:
+    - translator
+  twitter: henrylim96
+  google: +henrylim96
+  homepage: https://limhenry.xyz
+  email: henrylim.everything@gmail.com
+  description:
+    en: "Web Developer, Volunteer @ GDG Kuala Lumpur"        
+
 heathermahan:
   name:
     given: Heather
