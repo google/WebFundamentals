@@ -288,6 +288,7 @@ Service.
 - [Get Characteristics](https://googlechrome.github.io/samples/web-bluetooth/get-characteristics.html) - get all characteristics of an advertised service from a BLE Device.
 - [GAP Characteristics](https://googlechrome.github.io/samples/web-bluetooth/gap-characteristics.html) - get all GAP characteristics of a BLE Device.
 - [Device Information Characteristics](https://googlechrome.github.io/samples/web-bluetooth/device-information-characteristics.html) - get all Device Information characteristics of a BLE Device.
+- [Link Loss](https://googlechrome.github.io/samples/web-bluetooth/link-loss.html) - set the Alert Level characteristic of a BLE Device (readValue & writeValue).
 
 You can also find some Web Bluetooth Demos at [https://github.com/WebBluetoothCG/demos](https://github.com/WebBluetoothCG/demos) and the Official Codelabs at [https://github.com/googlecodelabs?query=bluetooth](https://github.com/googlecodelabs?query=bluetooth).
 
