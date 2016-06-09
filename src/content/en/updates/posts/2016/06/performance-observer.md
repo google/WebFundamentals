@@ -36,17 +36,17 @@ methods to access the timeline:
 
 * Today, apps have to periodically poll and diff the stored measurements,
 which is costly. This interface offers them a callback (i.e. no need to
-poll). As a result app using this API can be more responsive and more
+poll). As a result apps using this API can be more responsive and more
 efficient.
 * It’s not subject to buffer limits (most buffers are set to 150 items
 by default), and avoids race conditions between different consumers that
 may want to modify the buffer.
 * Performance observer notifications are delivered asynchronously and
-the browser can dispatch them during idle time, to avoid competing with
+the browser can dispatch them during idle time to avoid competing with
 critical rendering work.
 
-*Beginning in Chrome release 52, the performance observer interface is
-enabled by default*. Let’s take a look at how to use it…
+*Beginning in Chrome 52, the performance observer interface is
+enabled by default*. Let’s take a look at how to use it.
 
 {% highlight HTML %}
 <html>
@@ -85,21 +85,21 @@ the object such that our handler will be called every time a new set
 of measurement data is ready to be processed (with the measurement
 data passed as a list of objects). The handler is defined here as an
 anonymous function that simply displays the formatted measurement data
-on the console. In a more real world scenario, this data might be stored
+on the console. In a real world scenario, this data might be stored
 in the cloud for subsequent analysis, or piped into an interactive
 visualization tool.
 * We register for the [types of timing events][types] we’re interested
-in (via the `observe` method) and call the [mark][mark] method
+in via the `observe()` method and call the [`mark()`][mark] method
 to mark the instant at which we registered, which we’ll consider the
 beginning of our timing intervals.
 * We define a click handler for a button defined in the page body. This
-click handler calls the [measure][measure] method to capture timing data
+click handler calls the [`measure()`][measure] method to capture timing data
 about when the button was clicked.
 
 In the body of the page, we define a button, assign our click handler to
 the `onclick` event, and we’re ready to go.
 
-Now, if we load the page from a local file and open the Chrome DevTools
+Now, if we load the page and open the Chrome DevTools
 panel to watch the Javascript console, every time we click the button a
 performance measurement is taken. *And because we’ve registered to observe
 such measurements, they are forwarded to our event handler, asynchronously
