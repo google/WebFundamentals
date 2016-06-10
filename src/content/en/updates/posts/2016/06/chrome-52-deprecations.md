@@ -14,25 +14,25 @@ featured_image: /web/updates/images/2016/06/chrome-52-deprecations/deps-rems.png
 ---
 
 <p class="intro">
-In nearly every version of Chrome we see a significant number of updates and
-improvements to the product, its performance, and also capabilities of the web
-platform. This article describes the changes in Chrome 52, which is in beta as 
+In nearly every version of Chrome, we see a significant number of updates and
+improvements to the product, its performance, and also capabilities of the Web
+Platform. This article describes the changes in Chrome 52, which is in beta as 
 of June 9. This list is subject to change at any time.
 </p>
 
 {% include shared/toc.liquid %}
 ## Deprecation policy
 
-To keep the platform healthy we sometimes remove APIs from the Web Platform which
+To keep the platform healthy, we sometimes remove APIs from the Web Platform which
 have run their course.  There can be many reasons why we would remove an API, such
 as: they are superseded by newer APIs, are updated to reflect changes to
-specifications, to bring alignment and consistency with other browsers, or they are
+specifications to bring alignment and consistency with other browsers, or they are
 early experiments that never came to fruition in other browsers and thus 
 can increase the burden of support for web developers.
 
-Some of these changes might have an effect on a very small number of sites and
-to mitigate issues ahead of time we try to give developers advanced notice so
-that if needed they can make the required changes to keep their sites running.
+Some of these changes might have an effect on a very small number of sites.
+To mitigate issues ahead of time, we try to give developers advanced notice so
+that if needed, they can make the required changes to keep their sites running.
 
 Chrome currently has a
 [process for deprecations and removals of API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation)
@@ -41,7 +41,7 @@ and the TL;DR is:
 * Announce on [blink-dev](https://groups.google.com/a/chromium.org/forum/#!forum/blink-dev).
 * Set warnings and give time scales in the developer console of the browser when
   usage is detected on a page.
-* Wait, monitor and then remove feature as usage drops.
+* Wait, monitor, and then remove feature as usage drops.
 
 You can find a list of all deprecated features in
 [chromestatus.com using the deprecated filter](https://www.chromestatus.com/features#deprecated)
@@ -87,10 +87,9 @@ Removal is anticipated in Chrome 54.
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/R1gkjKZI0J8/discussion) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=603002)
 
-The `X-Frame-Options` HTTP response header indicates whether a browser can render a page in an`<frame>`, `<iframe>`, or `<object>` tag. This let's a site avoid clickjacking since such pages cannot be embedded in other sites. The current version of the [X-Frame-Options spec](https://tools.ietf.org/html/rfc7034) explicitely restricts user agents from supporting this field inside a `<meta>` tag. 
+The `X-Frame-Options` HTTP response header indicates whether a browser can render a page in an`<frame>`, `<iframe>`, or `<object>` tag. This lets a site avoid clickjacking since such pages cannot be embedded in other sites. The current version of the [X-Frame-Options spec](https://tools.ietf.org/html/rfc7034) explicitly restricts user agents from supporting this field inside a `<meta>` tag. 
 
 To both comply with the spec and increase consistency with other browsers, support for `X-Frame-Options` inside a `<meta>` tag is being removed.
-
 
 ## Remove non-primary button click event
 
@@ -100,11 +99,9 @@ To bring Chrome in line with the [UIEvents spec](https://w3c.github.io/uievents/
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5769439450497024) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=255)
 
-
-
 ## Remove requestAutocomplete()
 
-The `requestAutocomplete()` function allowed forms to be filled out on demand by the browser's autofill capability. Yet more than two years in this capability is only supported in Blink and its [usage is low](https://www.chromestatus.com/metrics/feature/timeline/popularity/965). For these reasons, `requestAutocomplete()` is removed in Chrome 52.
+The `requestAutocomplete()` function allowed forms to be filled out on demand by the browser's autofill capability. Yet more than two years in, this capability is only supported in Blink and its [usage is low](https://www.chromestatus.com/metrics/feature/timeline/popularity/965). For these reasons, `requestAutocomplete()` is removed in Chrome 52.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/O9_XnDQh3Yk/discussion)
 
