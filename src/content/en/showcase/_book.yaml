@@ -23,6 +23,8 @@ upper_tabs:
         contents:
         - title: "2016"
           section:
+          - title: Building the Google I/O 2016 Progressive Web App
+            path: /web/showcase/2016/iowa2016
           - title: AliExpress
             path: /web/showcase/2016/aliexpress
           - title: Jumia
