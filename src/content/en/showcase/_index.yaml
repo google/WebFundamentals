@@ -20,9 +20,10 @@ landing_page:
         </p>
         <p>
           IOWA is a single page application (SPA) that's built using web 
-          components. It pre-caches content using a service worker, dynamically
-          loads new pages, gracefully transitions between views, and reuses 
-          content after first load.
+          components, Polymer, Firebase, and has an extensive backend written 
+          in App Engine (Go). It pre-caches content for offline users using a 
+          service worker, dynamically loads new pages, gracefully transitions 
+          between views, and reuses content after first load.
         </p>
       image_path: 2016/images/iowa/featured.gif
       buttons:
