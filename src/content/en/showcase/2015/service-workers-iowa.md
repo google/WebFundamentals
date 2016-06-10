@@ -331,62 +331,6 @@ requests as soon as possible, each time the service worker started up.
   </figcaption>
 </figure>
 
-
-    var DB_NAME = 'offline-analytics';
-    var EXPIRATION_TIME_DELTA = 86400000;
-    var ORIGIN = /https?:\/\/((www|ssl)\.)?google-analytics\.com/;
-
-    function replayQueuedAnalyticsRequests() {
-      simpleDB.open(DB_NAME).then(function(db) {
-        db.forEach(function(url, originalTimestamp) {
-          var timeDelta = Date.now() - originalTimestamp;
-          var replayUrl = url + '&qt=' + timeDelta;
-          fetch(replayUrl).then(function(response) {
-            if (response.status >= 500) {
-              return Response.error();
-            }
-            db.delete(url);
-          }).catch(function(error) {
-            if (timeDelta > EXPIRATION_TIME_DELTA) {
-              db.delete(url);
-            }
-          });
-        });
-      });
-    }
-
-    function queueFailedAnalyticsRequest(request) {
-      simpleDB.open(DB_NAME).then(function(db) {
-        db.set(request.url, Date.now());
-      });
-    }
-
-    function handleAnalyticsCollectionRequest(request) {
-      return global.fetch(request).then(function(response) {
-        if (response.status >= 500) {
-          return Response.error();
-        }
-        return response;
-      }).catch(function() {
-        queueFailedAnalyticsRequest(request);
-      });
-    }
-
-    toolbox.router.get('/collect',
-                       handleAnalyticsCollectionRequest,
-                       {origin: ORIGIN});
-    toolbox.router.get('/analytics.js',
-                       toolbox.networkFirst,
-                       {origin: ORIGIN});
-
-    replayQueuedAnalyticsRequests();
-
-<figure>
-  <figcaption>
-    Adapted from the <a href="https://github.com/GoogleChrome/ioweb2015/blob/master/app/scripts/shed/offline-analytics.js">original source</a>.
-  </figcaption>
-</figure>
-
 ### Push Notification Landing Pages
 
 Service workers didn’t just handle IOWA’s offline functionality—they also
