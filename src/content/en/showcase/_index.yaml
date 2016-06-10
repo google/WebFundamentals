@@ -24,7 +24,7 @@ landing_page:
           loads new pages, gracefully transitions between views, and reuses 
           content after first load.
         </p>
-      image_path: 2016/images/iowa/featured.png
+      image_path: 2016/images/iowa/featured.gif
       buttons:
       - label: Read more
         path: 2016/iowa2016
