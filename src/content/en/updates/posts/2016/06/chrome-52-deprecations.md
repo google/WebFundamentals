@@ -93,11 +93,13 @@ To both comply with the spec and increase consistency with other browsers, suppo
 
 ## Remove non-primary button click event
 
-To bring Chrome in line with the [UIEvents spec](https://w3c.github.io/uievents/#event-type-click), we're removing the mouse events for non-primary mouse buttons. Non-primary mouse buttons varies by device. Generally this means anything other than a right or left mouse button.
+**TL;DR:** Non-primary mouse clicks no longer fire click events, but `MouseEvent.button` is still available.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/pYAh8bBl5Yc/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5769439450497024) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=255)
+
+To bring Chrome in line with the [UIEvents spec](https://w3c.github.io/uievents/#event-type-click), we're removing the click events for non-primary mouse buttons. Non-primary mouse buttons vary by device. Generally this means anything other than a right or left mouse button. Note that the precise button clicked may still be retrieved using the [`MouseEvent.button` property](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button) sent to events such as [`mousedown'](https://developer.mozilla.org/en-US/docs/Web/Events/mousedown) or [`mouseup`](https://developer.mozilla.org/en-US/docs/Web/Events/mouseup).
 
 ## Remove requestAutocomplete()
 
