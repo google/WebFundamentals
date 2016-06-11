@@ -67,7 +67,7 @@ When editing a value that was compiled from a Sass variable, your edit updates t
 
 ![Editing a Sass variable](/web/updates/images/2016/06/sass-edit.gif)
 
-## Progressive Web Aps
+## Progressive Web Apps
 
 Look at the list of [web and Chrome talks at Google I/O 2016](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP) and you'll see a huge theme emerging in the world of web development: [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/).
 
