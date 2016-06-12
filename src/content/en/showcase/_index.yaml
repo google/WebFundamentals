@@ -9,33 +9,39 @@ landing_page:
 
   rows:
 
-  - heading: AliExpress increases conversion rate for new users by 104% with new Progressive Web App
+  - heading: Building the Google I/O 2016 Progressive Web App
     classname: devsite-landing-row-67 devsite-landing-row-no-image-background
     items:
     - description: >
         <p>
-          "Smarter shopping, better living!" is the motto of AliExpress, a
-          website where shoppers can buy everything from baby clothes to
-          refrigerators directly from China. Part of the Alibaba Group, the
-          global online retail marketplace is now a popular e-commerce site in
-          America, Russia, and Brazil.
+          Learn how we built a the Google I/O 2016 Progressive Web App (IOWA)
+          using web components, Polymer, and material design and launched it 
+          into production on Google.com.
         </p>
-        <blockquote>
-          "One of the reasons we built a Progressive Web App was to be able to
-          invest in the web experience across all browsers. Not only did we
-          see huge benefits on browsers that support the latest features, but
-          we also got to see a bump across the board. That is the sign of a
-          great investment, and one that will keep paying for itself as
-          browsers evolve." <br>
-          <b>Lijun Chen</b>, director of AliExpress Mobile Team.
-        </blockquote>
+        <p>
+          IOWA is a single page application (SPA) that's built using web 
+          components, Polymer, Firebase, and has an extensive backend written 
+          in App Engine (Go). It pre-caches content for offline users using a 
+          service worker, dynamically loads new pages, gracefully transitions 
+          between views, and reuses content after first load.
+        </p>
+      image_path: 2016/images/iowa/featured.gif
+      buttons:
+      - label: Read more
+        path: 2016/iowa2016
+
+  - items:
+    - heading: AliExpress increases conversion rate for new users by 104% with new Progressive Web App
+      description: >
+        "Smarter shopping, better living!" is the motto of AliExpress, a
+        website where shoppers can buy everything from baby clothes to
+        refrigerators directly from China. Part of the Alibaba Group, the
+        global online retail marketplace is now a popular e-commerce site in
+        America, Russia, and Brazil.
       image_path: 2016/images/aliexpress/featured.png
       buttons:
       - label: Read more
         path: 2016/aliexpress
-
-
-  - items:
     - heading: United eXtra Electronics grows eCommerce sales by 100% with Web Push Notifications
       description: >
         "Push Notifications are a huge part of our mobile engagement strategy.
@@ -56,6 +62,11 @@ landing_page:
       buttons:
       - label: Learn more
         path: 2016/jumia
+
+  - items:
+    - custom_html: <hr>
+
+  - items:
     - heading: BaBe’s cross-browser Progressive Web App rivals performance of native app
       description: >
          “For us, it’s no longer an either-or decision. To reach new users,
@@ -64,11 +75,6 @@ landing_page:
       buttons:
       - label: Learn more
         path: 2016/babe
-
-  - items:
-    - custom_html: <hr>
-
-  - items:
     - heading: Konga cuts data usage 92% with new Progressive Web App
       description: >
         “We estimate that with our new light, super-fast, UX-rich browsing
@@ -91,21 +97,21 @@ landing_page:
       - label: Learn more
         path: 2016/5miles
 
+
+  - items:
+    - custom_html: <hr>
+
+  - items:
     - heading: Suumo supercharges new listings with Web Push Notifications and sees a 31% open rate for notifications
       description: >
         “We finally have a way to retain users on the mobile web. This has
         been a game changer for us!”<br>
         <b>Dai Shibayama</b>, manager, Smart Device Division, Recruit Sumai
         Company Ltd.
-      image_path: 2016/images/suumo/featured.png
       buttons:
       - label: Learn more
         path: 2016/suumo
 
-  - items:
-    - custom_html: <hr>
-
-  - items:
     - heading: Visual Art Sessions
       description: >
         Six artists were invited to paint, design, and sculpt in VR. This is
@@ -125,23 +131,25 @@ landing_page:
       - label: Learn more
         path: 2016/net-a-porter
 
-    - heading: Flipkart triples time-on-site with Progressive Web App
-      description: >
-        In 2015, Flipkart, India’s largest e-commerce site, adopted an
-        app-only strategy and temporarily shut down their mobile website.
-        The company found it harder and harder to provide a user experience
-        that was as fast and engaging as that of their mobile app. But then,
-        Flipkart decided to rethink their development approach. They were
-        drawn back to the mobile web by the introduction of features that
-        made the mobile web run instantly, work offline, and re-engage users.
-      buttons:
-      - label: Learn more
-        path: 2016/flipkart
+
 
   - heading: More case studies
     classname: devsite-landing-row-100
     items:
     - description: >
+        <h4>
+          Flipkart triples time-on-site with Progressive Web App
+        </h4>
+        <p>
+          In 2015, Flipkart, India’s largest e-commerce site, adopted an
+          app-only strategy and temporarily shut down their mobile website.
+          The company found it harder and harder to provide a user experience
+          that was as fast and engaging as that of their mobile app. But then,
+          Flipkart decided to rethink their development approach. They were
+          drawn back to the mobile web by the introduction of features that
+          made the mobile web run instantly, work offline, and re-engage users.
+          <a href="2015/flipkart">Read more</a>
+        </p>
         <h4>
           Creating a Lightsaber with Polymer
         </h4>
@@ -171,11 +179,3 @@ landing_page:
           to reach our users is a game changer."
           <a href="2015/beyond-the-rack">Read more</a>
         </p>
-        <h4>
-          AirHorner
-        </h4>
-        <p>
-          AirHorner is a simple air horn.
-          <a href="2015/airhorner">Read more</a>
-        </p>
-
