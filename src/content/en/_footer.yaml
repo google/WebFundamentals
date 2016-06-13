@@ -31,6 +31,8 @@ footer:
       path: https://codelabs.developers.google.com/?cat=Web
     - title: Building for Billions
       path: /web/billions/
+    - title: Physical Web
+      path: https://google.github.io/physical-web/
   - name: Learn with Udacity
     icon_name: school
     contents:
