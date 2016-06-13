@@ -103,11 +103,11 @@ Enabling containment here can potentially reduce the number of elements to just 
 > This value turns on paint containment for the element. This ensures that the descendants of the containing element don’t display outside its bounds, so if an element is off-screen or otherwise not visible, its descendants are also guaranteed to be not visible.
 > [Containment spec](https://drafts.csswg.org/css-containment/#style-containment)
 
-Scoping paint is another incredibly useful benefit of containment. Paint containment essentially clips the element in question, but it has also has a few other side effects:
+Scoping paint is another incredibly useful benefit of containment. Paint containment essentially clips the element in question, but it also has a few other side effects:
 
 * **It acts as a containing block for absolutely positioned and fixed position elements.** This means any children are positioned based on the element with `contain: paint` not any other parent element like -- say -- the document.
 * **It becomes a stacking context.** This means that things like `z-index` will have an effect on the element, and children will be stacked according to the new context.
-* **It becomes a new formatting context.** This means that if you have, for exaple, a block level element with paint containment, it will be treated as a new, _independent_ layout environment. This means that layout outside of the element won’t typically affect the containing element's children.
+* **It becomes a new formatting context.** This means that if you have, for example, a block level element with paint containment, it will be treated as a new, _independent_ layout environment. This means that layout outside of the element won’t typically affect the containing element's children.
 
 ### Size (contain: size)
 
