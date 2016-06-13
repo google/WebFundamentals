@@ -50,6 +50,18 @@ and removed features by applying the
 try to summarize some of the changes, reasoning, and migration paths in 
 these posts.
 
+## Deprecate MediaStream ended event and attribute and onended attribute
+
+**TL;DR:** The `ended` event and attribute and the `onended` event handler are being deprecated because they have been removed from the  [Media Capture and Streams spec](https://www.w3.org/TR/mediacapture-streams/).
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/EHy8zm0eVy0/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5730404371791872) &#124;
+[Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=608795)
+
+Neither the `ended` event, nor the `onended` event handler have been part of the WebRTC spec for about three years. Developers wanting to watch events should use [`MediaStreamTracks`](https://developer.mozilla.org/en-US/docs/Web/API/MediaStreamTrack) instead of `MediaStreams`.
+
+Removal is anticipated in Chrome 53.
+
 ## Block pop-ups from cross-origin iframes during touch events except during a tap gesture
 
 **TL;DR:** Chrome will begin disallowing pop-ups and other sensitive operations on touch events that don't correspond to a tap from inside of cross-origin iframes.
