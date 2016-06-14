@@ -15,8 +15,8 @@
 # limitations under the License.
 #
 import webapp2
-import json
 import logging
+import markdown
 from datetime import datetime, timedelta
 from urlparse import urljoin
 import os
@@ -30,6 +30,22 @@ JekyllOutputFile = "langs"
 class HomePage(webapp2.RequestHandler):
     def get(self):
         self.redirect("/web/", permanent=True)
+
+class DevSitePages(webapp2.RequestHandler):
+    def get(self, path):
+        lang = self.request.get("hl", "en")
+
+        fileLocation = os.path.join(os.path.dirname(__file__), JekyllOutputFile, lang, "showcase", path + ".md")
+        if os.path.isfile(fileLocation):
+          fileContent = open(fileLocation, "r").read()
+          fileContent = fileContent.decode("utf8")
+          fileContent = re.sub(r"{#.+?#}", "", fileContent)
+          ext = ["markdown.extensions.attr_list", "markdown.extensions.meta"]
+          md = markdown.markdown(fileContent, extensions=ext)
+          text = render("devsite.tpl", {"content": md, "lang": path})
+        else:
+          text = "404 - The requested file (" + path + ") was not found."
+        self.response.out.write(text)
 
 class AllPages(webapp2.RequestHandler):
     def get(self, path):
@@ -62,6 +78,8 @@ class AllPages(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', HomePage),
     ('/web', HomePage),
+    ('/web/showcase/(.+)', DevSitePages),
+    ('/web/showcase/(.*)', DevSitePages),
     ('/web/(.+)/', AllPages),
     ('/web/(.*)', AllPages)
 ], debug=True)
