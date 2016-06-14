@@ -1,18 +1,20 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
-description: TODO if there is a description
+description: This description is used in the doc head as the document description. (OPTIONAL)
 
-{# wf_published_on: 2016-05-17 #}
-{# wf_updated_on: 2016-05-17 #}
-{# wf_featured_image: /web/showcase/2016/images/DIR/featured.png #}
+{# wf_published: false #} {# <- OPTIONAL #}
+{# wf_published_on: 2016-05-17 #} {# <- REQUIRED #}
+{# wf_updated_on: 2016-05-17 #} {# <- REQUIRED #}
+{# wf_featured_image: /web/showcase/2016/images/DIR/featured.png #} {# <- REQUIRED #}
+{# wf_featured_snippet: This snippet is the snippet that appears on the showcase index page. #} {# <- REQUIRED #}
 
-# COMPANY {: .page-title }
+# Showcase Title (REQUIRED) {: .page-title }
 
 <img src="images/DIR/FILE.png" class="attempt-right">
 
 ## TL;DR
 
-
+This is a template for using when creating new case studies. 
 
 ### Results
 
