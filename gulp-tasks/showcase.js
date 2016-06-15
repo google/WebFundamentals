@@ -5,7 +5,8 @@ var path = require('path');
 var gulp = require('gulp');
 var del = require('del');
 var plugins = require('gulp-load-plugins')();
-var runSequence = require('run-sequence').use(gulp);
+var through = require('through2');
+var gutil = require('gulp-util');
 
 var sourcePath = 'src/content/en/showcase/';
 var destPath = 'build/langs/en';
@@ -30,21 +31,6 @@ if (!String.prototype.endsWith) {
   });
 }
 
-function recurseDir(dir) {
-  var result = [];
-  var files = fs.readdirSync(dir);
-  files.forEach(function(filename) {
-    var file = path.join(dir, filename);
-    var stat = fs.statSync(file);
-    if (stat.isDirectory()) {
-      result = result.concat(recurseDir(file));
-    } else if (file.endsWith('.md')) {
-      result.push(file);
-    }
-  });
-  return result;
-}
-
 function sortByDate(a, b) {
   if (a.publishedOn < b.publishedOn) {
     return 1;
@@ -54,59 +40,76 @@ function sortByDate(a, b) {
   return 0;
 }
 
-// This task moves content into the jekyll directory
-gulp.task('showcase:copy', function() {
+var createIndex = function(template, generatedFileName) {
+  var snippets = [];
+  var firstFile = null;
+
+  function parseAndExtract(file, enc, cb) {
+    var parsedFile;
+    if (!firstFile) {
+      firstFile = file;
+    }
+    // Read the file and get the meta data
+    if (file.relative.endsWith('.md')) {
+      parsedFile = file.contents.toString('utf8');
+      var published = !regexDoNotPublish.test(parsedFile);
+      if (published) {
+        var publishedOn = regexPublishedOn.exec(parsedFile);
+        var title = regexTitle.exec(parsedFile);
+        var featuredImage = regexImage.exec(parsedFile);
+        var snippet = regexSnippet.exec(parsedFile);
+        var summary = {
+          filename: file.relative,
+          title: title[1],
+          publishedOn: publishedOn[1],
+          path: file.path.replace('.md', ''),
+          image: featuredImage[1]
+        };
+        if (snippet && snippet[1]) {
+          summary.snippet = snippet[1];
+        }
+        snippets.push(summary);
+      }
+    }
+    cb();
+  }
+
+  function endStream(cb) {
+    if (!firstFile) {
+      return cb();
+    }
+    snippets.sort(sortByDate);
+    var basePath = path.dirname(firstFile.path) + path.sep;
+    var tpl = fs.readFileSync(template).toString();
+    for (var i = 0; i < 15; i++) {
+      tpl = tpl.replace('[[title_' + i + ']]', snippets[i].title);
+      tpl = tpl.replace('[[snippet_' + i + ']]', snippets[i].snippet);
+      tpl = tpl.replace('[[image_' + i + ']]', snippets[i].image);
+      var relativePath = snippets[i].path.replace(basePath, '');
+      tpl = tpl.replace('[[path_' + i + ']]', relativePath);
+    }
+    var generatedFile = new gutil.File({
+      base: firstFile.base,
+      cwd: firstFile.cwd,
+      path: path.join(firstFile.base, generatedFileName),
+      contents: new Buffer(tpl)
+    });
+    this.push(generatedFile);
+    cb();
+  }
+  return through.obj(parseAndExtract, endStream);
+};
+
+gulp.task('showcase', function() {
+  var indexTemplate = path.join(sourcePath, '_index.yaml');
   return gulp.src([
     path.join(sourcePath, '/**/*'),
-    '!' + path.join(sourcePath, '_index.yaml'),
     '!' + path.join(sourcePath, '_template.md')
   ])
-    .pipe(plugins.copy(destPath, {prefix: 3}));
+    .pipe(plugins.copy(destPath, {prefix: 3}))
+    .pipe(createIndex(indexTemplate, 'showcase/_index.yaml'))
+    .pipe(gulp.dest(destPath));
 });
 
-gulp.task('showcase:build-index', function() {
-  var caseStudies = [];
-  var casestudyList = recurseDir(sourcePath);
-  casestudyList.forEach(function(filename) {
+gulp.task('showcase:clean', del.bind(null, [destPath], {dot: true}));
 
-    var casestudy = fs.readFileSync(filename).toString();
-    var published = !regexDoNotPublish.test(casestudy);
-    var publishedOn = regexPublishedOn.exec(casestudy);
-    var title = regexTitle.exec(casestudy);
-    var featuredImage = regexImage.exec(casestudy);
-    var snippet = regexSnippet.exec(casestudy);
-    var pathToFile = filename.replace(sourcePath, '').replace('.md', '');
-    if (published) {
-      var summary = {
-        filename: filename,
-        title: title[1],
-        publishedOn: publishedOn[1],
-        path: pathToFile
-      };
-      if (featuredImage && featuredImage[1]) {
-        summary.image = featuredImage[1];
-      }
-      if (snippet && snippet[1]) {
-        summary.snippet = snippet[1];
-      }
-      caseStudies.push(summary);
-    }
-  });
-  caseStudies.sort(sortByDate);
-  var template = fs.readFileSync(sourcePath + '/_index.yaml').toString();
-  for (var i = 0; i < 15; i++) {
-    template = template.replace('[[title_' + i + ']]', caseStudies[i].title);
-    template = template.replace('[[snippet_' + i + ']]', caseStudies[i].snippet);
-    template = template.replace('[[image_' + i + ']]', caseStudies[i].image);
-    template = template.replace('[[path_' + i + ']]', caseStudies[i].path);
-  }
-  fs.writeFileSync(path.join(destPath, 'showcase/_index.yaml'), template);
-});
-
-gulp.task('showcase:clean', del.bind(null,
-  [destPath], {dot: true}));
-
-// Copies and builds the files needed for the showcase section
-gulp.task('showcase', function(cb) {
-  runSequence('showcase:copy', ['showcase:build-index'], cb);
-});
