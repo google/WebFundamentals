@@ -1,14 +1,14 @@
 ---
 layout: updates/post
 title: "Service worker caching, playbackRate and blob URLs for audio and video on Chrome for Android"
-description: "From version 51, Android Chrome uses the same media stack as desktop Chrome, rather than relying on the underlying platform implementation. This enables service worker media caching, variable playback rates, blob URLs on Android, MediaStream passing between APIs, and easier cross-platform debugging."
-published_on: 2016-05-19
-updated_on: 2016-05-19
+description: "From version 52, Android Chrome uses the same media stack as desktop Chrome, rather than relying on the underlying platform implementation. This enables service worker media caching, variable playback rates, blob URLs on Android, MediaStream passing between APIs, and easier cross-platform debugging."
+published_on: 2016-06-17
+updated_on: 2016-06-17
 authors:
   - samdutton
 tags:
   - audio
-  - chrome51
+  - chrome52
   - media
   - recording
   - video
@@ -68,6 +68,8 @@ Caching the video file and the video poster image is as simple as adding their p
     'static/video.webm', 'static/poster.jpg',
   ];
 {% endhighlight %}
+
+In this demo, you'll notice some shim code to handle range requests, which are not yet implemented by Service Worker.
 
 The inability to change `playbackRate` on Android has been a [long-standing bug](https://bugs.chromium.org/p/chromium/issues/detail?id=263654). UMP fixes this. For the demo at <a href="https://simpl.info/video/playbackrate">simpl.info/video/playbackrate</a>, `playbackRate` is set to 2. Try it out!
 
