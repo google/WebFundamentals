@@ -13,7 +13,7 @@ tags:
   - recording
   - video
   - webrtc
-featured_image: /web/updates/images/2016/04/ump/featured.jpg
+featured_image: /web/updates/images/2016/06/ump/featured.jpg
 ---
 
 <style>
@@ -52,7 +52,7 @@ UMP took some hard engineering work to implement:
 
 Here's a <a href="https://googlechrome.github.io/samples/service-worker/prefetch-video/index.html">demo of video caching with a service worker</a>:
 
-<a href="https://googlechrome.github.io/samples/service-worker/prefetch-video/index.html"><img class="screenshot-landscape" src="/web/updates/images/2016/04/ump/screenshot-sw.jpg" alt="Screenshot of video playback"></a>
+<a href="https://googlechrome.github.io/samples/service-worker/prefetch-video/index.html"><img class="screenshot-landscape" src="/web/updates/images/2016/06/ump/screenshot-sw.jpg" alt="Screenshot of video playback"></a>
 
 Caching the video file and the video poster image is as simple as adding their paths to the list of URLs to prefetch:
 
@@ -69,15 +69,15 @@ Caching the video file and the video poster image is as simple as adding their p
   ];
 {% endhighlight %}
 
-In this demo, you'll notice some shim code to handle range requests, which are not yet implemented by Service Worker.
+> There's some shim code in this demo to handle range requests, which are not yet implemented by Service Worker.
 
 The inability to change `playbackRate` on Android has been a [long-standing bug](https://bugs.chromium.org/p/chromium/issues/detail?id=263654). UMP fixes this. For the demo at <a href="https://simpl.info/video/playbackrate">simpl.info/video/playbackrate</a>, `playbackRate` is set to 2. Try it out!
 
-<a href="https://simpl.info/video/playbackrate"><img class="screenshot-landscape" src="/web/updates/images/2016/04/ump/screenshot-rate.jpg" alt="Screenshot of video playback with playbackRate set to 2"></a>
+<a href="https://simpl.info/video/playbackrate"><img class="screenshot-landscape" src="/web/updates/images/2016/06/ump/screenshot-rate.jpg" alt="Screenshot of video playback with playbackRate set to 2"></a>
 
 UMP enables blob URLs for media elements — which means that, for example, you can now <a href="https://webrtc.github.io/samples/src/content/getusermedia/record/" title="MediRecorder demo">play back a video recorded using the MediaRecorder API</a> in a video element on Android:
 
-<a href="https://webrtc.github.io/samples/src/content/getusermedia/record/"><img class="screenshot-landscape" src="/web/updates/images/2016/04/ump/screenshot-mr.jpg" alt="Screenshot of playback in Chrome on Android of a video recorded using the MediaRecorder API"></a>
+<a href="https://webrtc.github.io/samples/src/content/getusermedia/record/"><img class="screenshot-landscape" src="/web/updates/images/2016/06/ump/screenshot-mr.jpg" alt="Screenshot of playback in Chrome on Android of a video recorded using the MediaRecorder API"></a>
 
 Here's the relevant code:
 
@@ -98,7 +98,7 @@ function play() {
 
 For the demo at <a href="https://simpl.info/video/offline" title="Offline video using the File APIs">simpl.info/video/offline</a>, video is stored using the File APIs, then played back using a Blob URL:
 
-<a href="https://simpl.info/video/offline"><img class="screenshot-portrait" src="/web/updates/images/2016/04/ump/screenshot-file.jpg" alt="Screenshot of playback in Chrome on Android of video stored using the File APIs"></a>
+<a href="https://simpl.info/video/offline"><img class="screenshot-portrait" src="/web/updates/images/2016/06/ump/screenshot-file.jpg" alt="Screenshot of playback in Chrome on Android of video stored using the File APIs"></a>
 
 {% highlight javascript %}
 function writeToFile(fileEntry, blob) {
