@@ -8,7 +8,7 @@ var plugins = require('gulp-load-plugins')();
 var through = require('through2');
 var gutil = require('gulp-util');
 
-var sourcePath = 'src/content/en/showcase/';
+var sourcePath = 'src/content/en/showcase';
 var destPath = 'build/langs/en';
 
 var regexDoNotPublish = /^{#\s*wf_published:\s*false\s*#}/m;
@@ -40,7 +40,7 @@ function sortByDate(a, b) {
   return 0;
 }
 
-var createIndex = function(template, generatedFileName) {
+var createIndex = function(pathToTemplate, generatedFileName) {
   var snippets = [];
   var firstFile = null;
 
@@ -80,7 +80,7 @@ var createIndex = function(template, generatedFileName) {
     }
     snippets.sort(sortByDate);
     var basePath = path.dirname(firstFile.path) + path.sep;
-    var tpl = fs.readFileSync(template).toString();
+    var tpl = fs.readFileSync(pathToTemplate).toString();
     for (var i = 0; i < 15; i++) {
       tpl = tpl.replace('[[title_' + i + ']]', snippets[i].title);
       tpl = tpl.replace('[[snippet_' + i + ']]', snippets[i].snippet);
