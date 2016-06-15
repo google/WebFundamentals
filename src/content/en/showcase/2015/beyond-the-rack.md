@@ -6,6 +6,7 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 {# wf_updated_on: 2015-10-25 #}
 {# wf_author: paulkinlan #}
 {# wf_featured_image: /web/showcase/2015/images/beyond-the-rack/featured.png #}
+{# wf_featured_snippet: \"Push notifications allowed us to bring one of the most compelling capabilities from our native app to our mobile site. We see a direct 20% click through rate from push notifications—having another channel to reach our users is a game changer.\" #}
 
 # Beyond the Rack {: .page-title }
 
