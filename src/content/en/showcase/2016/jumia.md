@@ -4,7 +4,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2016-05-17T21:00:00.000Z #}
 {# wf_updated_on: 2016-05-17T21:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2016/images/jumia/featured.png #}
-{# wf_featured_snippet: \"We finally have proper means to address our fastest growing pool of customers — mobile web users. That’s incredibly valuable. We even see better results from web Push Notifications than from app pushes.\"<br><b>Jeremy Doutte</b>, Jumia CEO #}
+{# wf_featured_snippet: "We finally have proper means to address our fastest growing pool of customers — mobile web users. That’s incredibly valuable. We even see better results from web Push Notifications than from app pushes."<br><b>Jeremy Doutte</b>, Jumia CEO #}
 
 # Jumia {: .page-title }
 

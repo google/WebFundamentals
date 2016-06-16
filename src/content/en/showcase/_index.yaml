@@ -13,7 +13,7 @@ landing_page:
   - heading: [[title_0]]
     classname: devsite-landing-row-67 devsite-landing-row-no-image-background
     items:
-    - description: [[snippet_0]]
+    - description: "[[snippet_0]]"
       image_path: [[image_0]]
       buttons:
       - label: Read more
@@ -21,19 +21,19 @@ landing_page:
 
   - items:
     - heading: [[title_1]]
-      description: [[snippet_1]]
+      description: "[[snippet_1]]"
       image_path: [[image_1]]
       buttons:
       - label: Read more
         path: [[path_1]]
     - heading: [[title_2]]
-      description: [[snippet_2]]
+      description: "[[snippet_2]]"
       image_path: [[image_2]]
       buttons:
       - label: Read more
         path: [[path_2]]
     - heading: [[title_3]]
-      description: [[snippet_3]]
+      description: "[[snippet_3]]"
       image_path: [[image_3]]
       buttons:
       - label: Read more
@@ -44,22 +44,22 @@ landing_page:
 
   - items:
     - heading: [[title_4]]
-      description: [[snippet_4]]
+      description: "[[snippet_4]]"
       image_path: [[image_4]]
       buttons:
-      - label: Learn more
+      - label: Read more
         path: [[path_4]]
     - heading: [[title_5]]
-      description: [[snippet_5]]
+      description: "[[snippet_5]]"
       image_path: [[image_5]]
       buttons:
-      - label: Learn more
+      - label: Read more
         path: [[path_5]]
     - heading: [[title_6]]
-      description: [[snippet_6]]
+      description: "[[snippet_6]]"
       image_path: [[image_6]]
       buttons:
-      - label: Learn more
+      - label: Read more
         path: [[path_6]]
 
   - items:
@@ -67,19 +67,19 @@ landing_page:
 
   - items:
     - heading: [[title_7]]
-      description: [[snippet_7]]
+      description: "[[snippet_7]]"
       buttons:
-      - label: Learn more
+      - label: Read more
         path: [[path_7]]
     - heading: [[title_8]]
-      description: [[snippet_8]]
+      description: "[[snippet_8]]"
       buttons:
-      - label: Learn more
+      - label: Read more
         path: [[path_8]]
     - heading: [[title_9]]
-      description: [[snippet_9]]
+      description: "[[snippet_9]]"
       buttons:
-      - label: Learn more
+      - label: Read more
         path: [[path_9]]
 
   - heading: More case studies

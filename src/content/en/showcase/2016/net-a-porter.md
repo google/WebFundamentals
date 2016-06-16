@@ -5,7 +5,7 @@ description: Net-A-Porter saves development time with Google's Polymer Library
 {# wf_published_on: 2016-04-15 #}
 {# wf_updated_on: 2016-04-15 #}
 {# wf_featured_image: /web/showcase/2016/images/net-a-porter/featured.png #}
-{# wf_featured_snipped: NET-A-PORTER implemented a component-based design on their online properties using Google's Polymer library. The result was a large saving in development time, standarized code across their sites and an improved SEO performance through use of structured data. #}
+{# wf_featured_snippet: NET-A-PORTER implemented a component-based design on their online properties using Google's Polymer library. The result was a large saving in development time, standarized code across their sites and an improved SEO performance through use of structured data. #}
 
 # NET-A-PORTER {: .page-title }
 
