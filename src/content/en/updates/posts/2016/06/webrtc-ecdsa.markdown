@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "ECDSA for WebRTC: better security, better privacy and better performance"
-description: "From version 52, Chrome uses ECDSA — a much more efficient and secure algorithm for certificate key generation. In addition, RTCCertificates can now be stored with IndexedDB."
+description: "From version 52, Chrome uses ECDSA — a much more efficient and secure algorithm for WebRTC certificate key generation. In addition, RTCCertificates can now be stored with IndexedDB."
 published_on: 2016-06-17
 updated_on: 2016-06-17
 authors:
@@ -11,7 +11,7 @@ tags:
   - media
   - security
   - webrtc
-featured_image: /web/updates/images/2016/06/webrtc-ecdsa/featured.jpg
+featured_image: /web/updates/images/2016/06/webrtc-ecdsa/featured.png
 ---
 
 <style>
