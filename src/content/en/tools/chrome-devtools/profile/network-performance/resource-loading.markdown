@@ -99,6 +99,32 @@ When it's grey (![record button off](imgs/record-off.png){:.inline}), DevTools
 is not recording. Click this button to start or stop recording, or press 
 the keyboard shortcut <kbd>cmd</kbd>+<kbd>e</kbd>.
 
+## Capture screenshots during recording {#filmstrip}
+
+The **Network** panel can capture screenshots during a page load. This feature
+is known as the **Filmstrip**. 
+
+Click on the **camera** icon to enable the Filmstrip. When the icon is grey, 
+the Filmstrip is disabled  (![filmstrip 
+disabled](imgs/filmstrip-disabled.png){:.inline}). When the icon is blue, it is
+enabled (![filmstrip enabled](imgs/filmstrip-enabled.png){:.inline}).
+
+Reload the page to capture the screenshots. The screenshots are displayed
+above the **Overview**. 
+
+![recording with filmstrip](imgs/filmstrip.png)
+
+When you hover over a screenshot, the **Timeline** displays a vertical yellow
+line indicating when the frame was captured.
+
+![filmstrip overlay on timeline](imgs/filmstrip-timeline-overlay.png)
+
+Double-click on a screenshot to view a zoomed version of the screenshot. While
+a screenshot is zoomed, use the left and right arrows of your keyboard
+to navigate between screenshots.
+
+![zoomed filmstrip screenshot](imgs/filmstrip-zoom.png)
+
 ## View DOMContentLoaded and load event information
 
 The **Network** panel highlights two events: 
@@ -257,6 +283,28 @@ Messages are color-coded according to their type:
 * To refresh the **Frames** table after new messages arrive, click the 
   resource name on the left.
 * Only the last 100 `WebSocket` messages are preserved by the **Frames** table.
+
+## View resource initiators and dependencies {#initiators-dependencies}
+
+Hold <kbd>Shift</kbd> and hover over a resource to view its initiators
+and dependencies. This section refers to the resource that you are 
+hovering over as the **target**. 
+
+The first resource above the target that is color-coded green is the initiator
+of the target. If there is a second resource above that which is color-coded
+green, that's the initiator of the initiator. Any resources below the target
+that are color-coded red are dependencies of the target.
+
+In the screenshot below, the target is `dn/`. The initiator of the target is
+the script beginning with `rs=AA2Y`. The initiator of the initiator 
+(`rs=AA2Y`) is `google.com`. Last, `dn.js` is a dependency of the 
+target (`dn/`).
+
+![viewing resource initiators and 
+dependencies](imgs/initiators-dependencies.png)
+
+Keep in mind that for pages with lots of resources it's possible that you 
+may not be able to see all of the initiators or dependencies. 
 
 ## Sort requests
 

@@ -63,7 +63,7 @@ From your terminal, run the cURL command below — but make sure to use your
 own API key and subscription ID, which you created earlier:
 
 {% highlight bash %}
-curl --header "Authorization: key=AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration\_ids\":[\"APA91bE9DAy6\_p9bZ9I58rixOv-ya6PsNMi9Nh5VfV4lpXGw1wS6kxrkQbowwBu17ryjGO0ExDlp-S-mCiwKc5HmVNbyVfylhgwITXBYsmSszpK0LpCxr9Cc3RgxqZD7614SqDokwsc3vIEXkaT8OPIM-mnGMRYG1-hsarEU4coJWNjdFP16gWs\"]}"
+curl --header "Authorization: key=XXXXXXXXXXXX" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"fs...Tw:APA...SzXha\"]}"
 {% endhighlight %}
 
 ## 2. Check the response
@@ -72,7 +72,7 @@ If it all worked out, you will see a response like this in your terminal:
 
 <img src="images/image16.png" width="890" height="551" alt="BASH terminal screenshot: successful response to cURL request to GCM to send a push message" />
 
-If there are authorisation errors, check the Authorization key value. If the response shows an invalid registration error, check the subscription ID you used.
+If there are authorization errors, check the Authorization key value. If the response shows an invalid registration error, check the subscription ID you used.
 
 ## 3. Check diagnostics
 
@@ -93,4 +93,3 @@ app. You should see a notification like this:
 <img src="images/image18.png" width="373" height="109" alt="Push notification screenshot: 'This site has been updated in the background'" />
 
 **Important**: Each client that subscribes to push messaging will have its own subscription ID. If you're sending requests to GCM for notifications, remember to include subscription IDs for all the clients you want to send messages to! If you build each step of this codelab separately, each step will represent a different endpoint and therefore have a different subscription ID.
-

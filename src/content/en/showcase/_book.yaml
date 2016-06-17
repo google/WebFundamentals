@@ -1,0 +1,79 @@
+upper_tabs:
+  - name: Fundamentals
+    heading: Web Fundamentals
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/fundamentals/
+  - name: Tools
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/tools/
+  - name: Updates
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/updates/
+  - name: Case Studies
+    path: /web/showcase/
+    lower_tabs:
+      other:
+      - name: "Case Studies"
+        contents:
+        - title: "2016"
+          section:
+          - title: Building the Google I/O 2016 Progressive Web App
+            path: /web/showcase/2016/iowa2016
+          - title: AliExpress
+            path: /web/showcase/2016/aliexpress
+          - title: Jumia
+            path: /web/showcase/2016/jumia
+          - title: eXtra
+            path: /web/showcase/2016/extra
+          - title: BaBe
+            path: /web/showcase/2016/babe
+          - title: Konga
+            path: /web/showcase/2016/konga
+          - title: 5miles
+            path: /web/showcase/2016/5miles
+          - title: Suumo
+            path: /web/showcase/2016/suumo
+          - title: Visual Art Sessions
+            path: /web/showcase/2016/art-sessions
+          - title: Net-A-Porter
+            path: /web/showcase/2016/net-a-porter
+          - title: Flipkart
+            path: /web/showcase/2016/flipkart
+        - title: "2015"
+          section:
+          - title: Creating a Lightsaber with Polymer
+            path: /web/showcase/2015/lightsaber
+          - title: Google+
+            path: /web/showcase/2015/googleplus
+          - title: Beyond the Rack
+            path: /web/showcase/2015/beyond-the-rack
+          - title: AirHorner
+            path: /web/showcase/2015/airhorner
+          - title: Service Workers in Production
+            path: /web/showcase/2015/service-workers-iowa
+          - title: Hummingbird Library
+            path: /web/showcase/2015/hummingbirdlibrary
+          - title: Madeon Adventure Machine
+            path: /web/showcase/2015/adventuremachine
+          - title: Adsy.me
+            path: /web/showcase/2015/adsy_me
+          - title: Little Alchemy
+            path: /web/showcase/2015/little_alchemy
+          - title: Hacker New Reader
+            path: /web/showcase/2015/hn_premii
+          - title: Chrome Dev Summit 2014
+            path: /web/showcase/2015/chrome-dev-summit
+          - title: Merry Pixmas
+            path: /web/showcase/2015/merry_pixmas
+          - title: Web Filter
+            path: /web/showcase/2015/web_filter
+          - title: SVGOMG
+            path: /web/showcase/2015/svgomg
+          - title: 0h h1
+            path: /web/showcase/2015/0hh1

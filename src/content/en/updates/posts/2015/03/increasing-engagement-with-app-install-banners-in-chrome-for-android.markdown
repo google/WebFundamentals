@@ -41,7 +41,7 @@ to add it!".  The good news is if you currently meet the following criteria Chro
 manage the prompting of users:
 
 * You have a [web app manifest
-  file](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android), which defines how your app appears on the user's system and how itshould be launched
+  file](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android), which defines how your app appears on the user's system and how it should be launched
   - The manifest must have a \`short\_name\`, a `name` for
   display in the banner,
   - A start URL (e.g. `/` or `index.html`) which must be loadable,

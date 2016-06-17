@@ -13,8 +13,6 @@ authors:
   - samdutton
 ---
 
-{% include shared/toc.liquid %}
-
 You can either download all the sample code to your computer:
 
 [Download Zip file](https://github.com/GoogleChrome/push-notifications/archive/master.zip)

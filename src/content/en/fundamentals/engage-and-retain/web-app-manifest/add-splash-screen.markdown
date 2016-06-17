@@ -55,3 +55,8 @@ splashscreen to the homepage.
   <figcaption>Background color for launch screen</figcaption>
 </figure>
 
+## Set a Theme Color
+
+Specify a theme color using the (wait for it) `theme_color` property. This property
+sets the color of the toolbar. For this we also suggest duplicating an existing
+color, specifically the `theme-color` `<meta>`.

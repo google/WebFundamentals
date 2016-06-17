@@ -22,7 +22,7 @@ notification.
 
 ## 1. Add showNotification() code
 
-Update _sw.js _to look like this, replacing the _TODO_ comment:
+Update _sw.js_ to look like this, replacing the _TODO_ comment:
 
 {% highlight javascript %}
 console.log('Started', self);

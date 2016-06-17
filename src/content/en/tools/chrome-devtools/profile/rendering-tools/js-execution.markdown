@@ -1,214 +1,150 @@
 ---
 layout: shared/narrow
 title: "Speed Up JavaScript Execution"
-description: "Learn how to identify expensive functions using the Chrome DevTools CPU profiler, Flamechart, and V8 optimization checks."
+description: "Identify expensive functions using the Chrome DevTools 
+CPU Profiler."
 published_on: 2015-04-14
-updated_on: 2015-07-16
+updated_on: 2016-03-31
 order: 2
 authors:
+  - kaycebasques
   - megginkearney
 translation_priority: 0
 key-takeaways:
   javascript-performance:
-    - "Visualize expensive functions using the Chrome DevTools CPU profiler."
-    - "Visualize expensive functions over time using the Chrome DevTools Flamechart."
-    - "Identify specific functions that the V8 engine can't optimize and why as a next step to making these functions better."
-notes:
-  absolute-times:
-    - "Click the <strong>Percentage</strong> button to view absolute times."
-  high-resolution:
-    - "For increased accuracy, enable <strong>High resolution CPU profiling</strong> in the DevTools flame-chart under Profiling. When enabled, you can zoom into the graph to view it by a tenth of a millisecond."
-  optimize:
-    - "Learn more about how to write JavaScript the V8 engine can optimize in <a href='http://www.html5rocks.com/en/tutorials/speed/v8/'>Performance Tips for JavaScript in V8</a>."
+    - Record exactly which functions were called and how long each took with
+      the CPU Profiler. 
+    - Vizualize your profiles as a flame chart. 
 ---
 
-<p class="intro">
-  Learn how to identify expensive functions using the Chrome DevTools CPU profiler, Flamechart, and V8 optimization checks.
-</p>
+<p class="intro">Identify expensive functions using the Chrome DevTools CPU 
+Profiler.</p>
+
+![CPU profile](imgs/cpu-profile.png)
 
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.javascript-performance %}
 
-## Visualize JavaScript performance in a CPU profile
+## Record a CPU profile {#record-profile}
 
-If you’re noticing jank in your JavaScript,
-collect a JavaScript CPU profile.
+If you’re noticing jank in your JavaScript, collect a JavaScript CPU profile.
 CPU profiles show where execution time is spent in your page’s functions.
 
-The sidebar on the left lists your recorded profiles,
-the tree view on the right shows the information gathered for the selected profile:
+1. Go to the **Profiles** panel of DevTools.
+2. Select the **Collect JavaScript CPU Profile** radio button.
+3. Press **Start**. 
+4. Depending on what you are trying to analyze, you can either reload the 
+   page, interact with the page, or just let the page run.
+5. Press the **Stop** button when you are finished. 
 
-![Sample CPU profile](imgs/cpu-profile.png)
+You can also use the [Command Line API][profile] to record and group profiles 
+from the command line.
 
-### Record a CPU profile
+[profile]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
 
-First verify the CPU profiler is enabled:
+## View CPU profile {#view-profile}
 
-1. Navigate to the Chrome DevTools Profiles panel.
-2. Verify "Collect JavaScript CPU Profile" is selected.
+When you finish recording, DevTools automatically populates the Profile panel
+with the data from your recording. 
 
-To start recording a JavaScript CPU profiler:
+The default view is **Heavy (Bottom Up)**. This view enables you to see 
+which functions had the most impact on performance and examine the calling
+paths to those functions. 
 
-1. Open the page that calls the JavaScript you wish to profile.
-For example, let's profile the [Google Chrome V8 Benchmark Suite](https://v8.googlecode.com/svn/data/benchmarks/v7/run.html).
-2. Open the Chrome DevTools Profiles panel and click the **Start** button or press <span class="kbd">Cmd</span> + <span class="kbd">E</span>.
-3. Refresh the V8 Benchmark Suite page. When the page has completed reloading, a score for the benchmark tests is shown.
-4. Return to the Profiles panel and stop the recording by clicking the Stop button or by pressing <span class="kbd">Cmd</span> + <span class="kbd">E</span> again.
+### Change sort order {#sort}
 
-### View CPU profile
+To change the sorting order, click on the dropdown menu next to the 
+**focus selected function** icon
+(![focus selected function icon](imgs/focus.png){:.inline}) 
+and then choose one of the following options:
 
-The following **Bottom Up** view lists functions by impact on performance. It also enables you to examine the calling paths to those functions.
+**Chart**. Displays a chronological flame chart of the recording.
 
-![Bottom-up view of CPU profile](imgs/heavy-bottom-up.png)
+![flame chart](imgs/flamechart.png)
 
-The **Top Down** view shows an overall picture of the calling structure, starting at the top of the call stack.
-Select the **Top Down** view by clicking the Bottom Up / Top Down selection button. Then click the small arrow to the left of **(program)** in the **Function** column.
+**Heavy (Bottom Up)**. Lists functions by impact on performance and enables
+you to examine the calling paths to the functions. This is the default view. 
 
-{% include shared/remember.liquid title="Note" list=page.notes.absolute-times %}
+![heavy chart](imgs/heavy.png)
 
-Select one of the functions in the **Function** column,
-then click the **Focus selected function** button (the Eye icon on the right).
-This filters the profile to show only the selected function and its callers:
+**Tree (Top Down)**. Shows an overall picture of the calling structure, 
+starting at the top of the call stack. 
 
-![Focus on selected function](imgs/focus-selected-function.png)
+![tree chart](imgs/tree.png)
 
-### Exclude functions from CPU profile
+### Exclude functions {#exclude}
 
-The **Exclude selected function** button removes the selected function from the profile and charges its callers with the excluded function's total time.
+To exclude a function from your CPU profile, click on it to select it and 
+then press the **exclude selected function** icon 
+(![exclude function icon](imgs/exclude.png){:.inline}). The caller of the 
+excluded function is charged with the excluded function's total time.
 
-1. Click the **Reload** button at the bottom-right of the window to restore the profile to its original state.
-2. Select one of the functions in the **Function** column.
-3. Click the **Exclude selected function** button (the X icon). 
+Click the **restore all functions** icon 
+(![restore all functions icon](imgs/restore.png){:.inline})
+to restore all excluded functions back into the recording.
 
-Depending on the function you selected, you should see something like this:
+## View CPU profile as Flame Chart {#flame-chart}
 
-![Exclude selected function](imgs/tree-top-down.png)
+The Flame Chart view provides a visual representation of the CPU profile over
+time.
 
-### Customize the CPU profiler
-
-Use the [Chrome DevTools Console](/web/tools/chrome-devtools/debug/console/console-ui) and [Command Line API](/web/tools/chrome-devtools/debug/command-line/)
-to customize and control CPU profiles:
-
-* Create profiles from console using [profile() and profileEnd()](/web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname).
-* [Group profiles](/web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendnam) from console by using the same label.
-
-## How to profile JavaScript performance over time
-
-The Flame Chart view provides a visual representation
-of JavaScript processing aggregated _over_time_,
-similar to those found in the
-[Timeline](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) and 
-[Network](/web/tools/chrome-devtools/profile/network-performance/resource-loading) panels.
-
-### Read the Flame Chart
-
-The horizontal axis is time and vertical axis is the call stack.
-Expensive functions are wide.
-Call stacks are represented on the Y axis,
-so a tall flame is not necessarily significant.
-Pay close attention to wide bars,
-no matter their position in the call stack.
+After [recording a CPU profile](#record-profile), view the recording as a 
+flame chart by [changing the sort order](#sort) to **Chart**.
 
 ![Flamechart view](imgs/flamechart.png)
 
-Identify outlier functions with color coding.
-When zoomed out you can identify repetitive patterns that could be optimized,
-or more importantly, you're able to spot outliers or unexpected executions much easier.
+The flame chart is split into two parts:
 
-![Identify outlier functions through color coding](imgs/flamechart-outliers.png)
+1. **Overview**. A birds-eye view of the entire recording.
+   The height of the bars correspond to the depth of 
+   the call stack. So, the higher the bar, the deeper the call stack. 
 
-### How to use the Flame Chart:
+2. **Call Stacks**. This is an in-depth view of the functions that were called 
+   during the recording. The horizontal axis is time and vertical axis is 
+   the call stack. The stacks are organized top-down. So, the function on top
+   called the one below it, and so on. 
 
-1.  Open the DevTools and go to the Profiles panel.
-2.  Choose **Record JavaScript CPU profile** and click **Start**.
-3.  When you are done collecting data, click **Stop**.
+   Functions are colored randomly. There is no correlation to the colors used
+   in the other panels. However, functions are always colored the same
+   across invocations so that you can see patterns of executions. 
 
-In the profile view,
-select the Flame Chart visualization from the select menu at the bottom of the DevTools.
+![annotated flame chart](imgs/annotated-cpu-flame.png)
 
-![Flamechart menu](imgs/flamechart-menu.jpg)
+A tall call stack is not necessarily significant, it just means that a lot of
+functions were called. But a wide bar means that a call took a long time to 
+complete. These are candidates for optimization. 
 
-{% include shared/remember.liquid title="Note" list=page.remember.high-resolution %}
+### Zoom in on specific parts of recording {#zoom}
 
-### Zoom in on specific parts of recording
+Click, hold, and drag your mouse left and right across the overview to zoom in
+on particular parts of the call stack. After you zoom, the call stack 
+automatically displays the portion of the recording that you've selected.
 
-Across the top of the panel is an overview that shows the entire recording.
-Zoom in on a specific region of the overview
-by selecting it with your mouse as shown below.
+![flame chart zoomed](imgs/benchmark-zoom.png)
 
-You can also pan left and right by clicking on the white area and
-dragging your mouse.
-The Details view timescale shrinks accordingly.
+### View function details {#flame-chart-function-details}
 
-![Flamechart zoom](imgs/flamechart-zoom.png)
+Click on a function to view its definition in the **Sources** panel.
 
-### View call stacks
+Hover over a function to display its name and timing data. The following
+information is provided: 
 
-In the Details view,
-a **call stack** is represented as a stack of function "blocks".
-A block that sits atop another was called by the lower function block.
-Hovering over a given block displays its function name and timing data:
+*  **Name**. The name of the function.
+*  **Self time**. How long it took to complete the current invocation of the 
+   function, including only the statements in the function itself, not 
+   including any functions that it called.
+*  **Total time**. The time it took to complete the current invocation of 
+   this function and any functions that it called.
+*  **URL**. The location of the function defintion in the form of 
+   `file.js:100` where `file.js` is the name of the file where the function
+   is defined and `100` is the line number of the definition.
+*  **Aggregated self time**. Aggregate time for all invocations of the 
+   function across the recording, not including functions called by this 
+   function.
+*  **Aggregated total time**. Aggregate total time for all invocations of 
+   the function, including functions called by this function.
+*  **Not optimized**. If the profiler has detected a potential optimization
+   for the function it lists it here.
 
-![Flamechart hover](imgs/flamechart-hover.jpg)
-
-*  **Name** — The name of the function.
-*  **Self time** — How long it took to complete the current invocation of the function, including only the statements in the function itself, not including any functions that it called.
-*  **Total time** — The time it took to complete the current invocation of this function and any functions that it called.
-*  **Aggregated self time** — Aggregate time for all invocations of the function across the recording, not including functions called by this function.
-*  **Aggregated total time** — Aggregate total time for all invocations of the function, including functions called by this function.
-
-### Open function in Sources panel
-
-The colors in the Flame Chart are random;
-however, functions will always be colored the same across invocations.
-This allows you to see a pattern of execution and spot outliers easier.
-There is no correlation to the colors used in the Timeline.
-
-Clicking a function block opens its containing JavaScript file in the Sources panel, at the line where the function is defined:
-
-![Function block](imgs/function-block.png)
-
-## Test for optimized functions
-
-The [standalone "d8" version](https://developers.google.com/v8/build)
-provides tools to test whether or not your JavaScript
-can be optimized by the V8 engine.
-
-Two tools worth calling out are `d8 --trace-opt primes.js`,
-which lists all optimized functions, and
-`d8 --trace-deopt primes.js`,
-which lists functions that the V8 engine can't optimize.
-
-### List optimized functions
-
-Log what gets optimized using the
-[standalone "d8" version](https://developers.google.com/v8/build)
-of the V8 engine:
-`d8 --trace-opt primes.js`. This logs names of optimized functions to stdout.
-
-V8 re-compiles "hot" functions (that is, functions that are run many times) with an optimizing compiler. This compiler uses type feedback to make the compiled code faster.
-
-In the optimizing compiler, operations get speculatively inlined (directly placed where they are called). This speeds execution (at the cost of memory footprint), but also enables other optimizations. Monomorphic functions and constructors can be inlined entirely.
-
-Not all functions can be optimized.
-Some features prevent the optimizing compiler from running on a given function (a "bail-out"). The `--trace-opt` option above gives you more information on which functions were bailed out.
-
-### List de-optimized functions
-
-Sometimes optimization doesn't work out.
-The process of "deoptimization" throws away optimized code, and resumes execution at the right place in "full" compiler code.
-
-Reoptimization might be triggered again later,
-but for the short term, execution slows down.
-In particular, causing changes in the hidden classes of variables after the functions have been optimized will cause this deoptimization to occur.
-
-Therefore:
-
-Avoid hidden class changes in functions after they are optimized.
-Get a log of functions that V8 had to deoptimize with a logging flag:
-`d8 --trace-deopt primes.js`.
-
-{% include shared/remember.liquid title="Note" list=page.remember.optimize %}
-
-
+![viewing functions details in flame chart](imgs/details.png)

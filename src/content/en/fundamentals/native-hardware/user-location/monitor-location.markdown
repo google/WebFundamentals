@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Monitor the user's location"
 description: "The Geolocation API lets you watch where the user is and keep tabs on them as they move around, always with the user's consent."
 published_on: 2014-01-01
-updated_on: 2014-10-21
+updated_on: 2016-04-22
 order: 2
 translation_priority: 1
 authors:
@@ -16,8 +16,13 @@ key-takeaways:
 ---
 
 <p class="intro">
-  The Geolocation API lets you watch where the user is and keep tabs on them as they move around, always with the user's consent.
+  The Geolocation API lets you watch where the user is and keep tabs on them as they move 
+  around, always with the user's consent.
 </p>
+
+**Note**: [As of Chrome 50, the Geolocation API will only work on secure contexts such as HTTPS](/web/updates/2016/04/geolocation-on-secure-contexts-only).
+If your site is hosted on an non-secure origin (such as `HTTP`) the requests to get the users.
+location will no longer function.
 
 {% include shared/toc.liquid %}
 

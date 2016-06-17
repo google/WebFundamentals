@@ -1,7 +1,7 @@
 ---
 title: "Para Kazanma"
-description: "Tüm cihazlarda gelirinizi nasil en üst düzeye çikaracaginizi ögrenin. Kullanici deneyimini iyilestirin ve ödeme alin."
-updated_on: 2014-05-29
+description: "Tüm cihazlarda gelirinizi nasıl en üst düzeye çıkaracağınızı öğrenin. Kullanıcı deneyimini iyileştirin ve ödeme alın."
+updated_on: 2016-05-03
 ---
 
 {% comment %}

@@ -38,7 +38,15 @@ console.log("Node count:", a.childNodes.length, "and the current time is:", Date
 Will output this in the Console:
 ![Log Multiple](images/console-write-log-multiple.png)
 
-## Organizing Console output
+## Autocompleting commands {#autocomplete}
+
+When you type in the Console, the Console automatically displays an 
+autocomplete dropdown menu of relevant methods that match the text that 
+you have already typed. This includes previous commands that you executed.
+
+![example of autocomplete](images/autocomplete.png)
+
+## Organizing Console output {#organizing}
 
 ### Group messages together
 

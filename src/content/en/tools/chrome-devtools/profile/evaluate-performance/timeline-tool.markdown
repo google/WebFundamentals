@@ -93,6 +93,9 @@ shortcut <kbd>Cmd</kbd>+<kbd>E</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>E</kbd>
 your page interactions, and then press the **Record** button or type the 
 keyboard shortcut again to stop the recording.
 
+When the recording is finished, DevTools guesses what portion of the recording
+is most relevant to you, and automatically zooms to that portion.
+
 ### Recording tips
 
 * **Keep recordings as short as possible**. Shorter recordings generally make 
@@ -126,6 +129,49 @@ only available to certain event types. See the [Timeline event
 reference][event reference] for details on each record type.
 
 [event reference]: /web/tools/chrome-devtools/profile/evaluate-performance/performance-reference
+
+## Capture screenshots during recording {#filmstrip}
+
+The **Timeline** panel can capture screenshots during a page load. This feature
+is known as the **Filmstrip**.
+
+Enable the **Screenshots** checkbox in the **Controls** pane before you make
+a recording to capture screenshots of the recording. The screenshots are
+displayed below the **Overview** pane.
+
+![timeline recording with filmstrip](imgs/timeline-filmstrip.png)
+
+Hover your mouse over the **Screenshots** or **Overview** pane to view a 
+zoomed screenshot of that point in the recording. Move your mouse left and
+right to simulate an animation of the recording.
+
+{% animation animations/hover.mp4 %}
+
+## Profile JavaScript {#profile-js}
+
+Enable the **JS Profile** checkbox before you take a recording to capture 
+JavaScript stacks in your timeline recording. When the JS profiler is 
+enabled, your flame chart shows every JavaScript function that was called. 
+
+![flame chart with JS profile enabled](imgs/js-profile.png)
+
+## Profile painting {#profile-painting}
+
+Enable the **Paint** checkbox before you take a recording to gain more insight
+into **Paint** events. When paint profiling is enabled and you click
+on a **Paint** event, a new **Paint Profiler** tab is displayed in the 
+**Details** pane that shows much more granular information about the event.
+
+![paint profiler](imgs/paint-profiler.png)
+
+### Rendering settings {#rendering-settings}
+
+Open the main DevTools menu and select **More tools** > **Rendering settings**
+to access rendering settings that may be helpful when debugging paint issues.
+The rendering settings opens up as a tab next to the **Console** drawer (press
+<kbd>esc</kbd> to show the drawer, if it's hiding).
+
+![rendering settings](imgs/rendering-settings.png)
 
 ## Search records
 

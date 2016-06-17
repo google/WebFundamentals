@@ -56,13 +56,12 @@ WFContributors: src/content/_contributors.yaml
 WFStyleguideLocation: resources/styleguide/
 WFarray: []
 
-
 # Custom Promo across the entire site, use with care.
 # Image is optional, 
-# WFPromo: 
-#   title: "Missed the Chrome Developer Summit?"
-#   image: "https://www.gstatic.com/images/branding/product/1x/chrome_512dp.png"
-#   text: "All sessions available on demand - <a href='https://www.youtube.com/playlist?list=PLNYkxOF6rcICcHeQY02XLvoGL34rZFWZn'>Watch Now</a>"
+WFPromo: 
+  title: "Progressive Web App Dev Summit"
+  image: "https://www.gstatic.com/images/branding/product/1x/chrome_512dp.png"
+  text: "June 20-21, Amsterdam, NL - <a href='https://events.withgoogle.com/progressive-web-app-dev-summit/'>Learn more</a>"
 
 ## Unknowns
 fundamentals: /web/fundamentals

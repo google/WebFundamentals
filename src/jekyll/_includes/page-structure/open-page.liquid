@@ -39,7 +39,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{page.canonical_url}}" />
 <meta property="og:publisher" content="https://www.facebook.com/googlechrome" />
-<meta property="og:image" content="{{ page.html_head_social_img }}" />
+<meta property="og:image" content="{{site.WFAbsoluteUrl}}{{ page.html_head_social_img }}" />
 {% if main_author.facebook %}
 <meta property="og:author" content="{{ main_author.facebook }}" />
 {% endif %}
@@ -49,7 +49,7 @@
 <meta name="twitter:site" content="@chromiumdev" />
 <meta name="twitter:description" content="{{ page.strippedDescription }}" />
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image:src" content="{{ page.html_head_social_img }}" />
+<meta name="twitter:image" content="{{site.WFAbsoluteUrl}}{{ page.html_head_social_img }}" />
 
 {% if page.rss_feed_url %}
 <link rel="alternate" type="application/rss+xml" title="{{page.feed_name}}" href="{{page.rss_feed_url}}">

@@ -1,75 +1,141 @@
 ---
 layout: shared/narrow
 title: "Diagnose Forced Synchronous Layouts"
-description: "Learn how to use the Timeline tool to diagnose forced synchronous layouts in an animation."
+description: "Follow along with this interactive guide to learn how to use 
+DevTools to diagnose forced synchronous layouts."
 published_on: 2015-04-14
-updated_on: 2015-07-07
+updated_on: 2016-04-01
 order: 3
 authors:
+  - kaycebasques
   - megginkearney
 translation_priority: 0
-key-takeaways:
-  tldr-tbd:
-    - "TBD tldr."
 ---
 
-<p class="intro">
-  Learn how to use the Timeline tool to diagnose forced synchronous layouts in an animation.
-</p>
+<p class="intro">Learn how to use DevTools to diagnose forced synchronous 
+layouts.</p>
 
-Follow this demo to learn how to use the Timeline tool to identify
-[forced synchronous layouts](/web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime#how-to-identify-layout-bottlenecks)
-and apply a fix with DevTools.
+In this guide you learn how to debug [forced synchronous layouts][fsl] by 
+identifying and fixing issues in a live demo.  The demo animates images 
+using [`requestAnimationFrame()`][raf], which is the recommended approach for 
+frame-based animation. However, there's a considerable amount of jank in the 
+animation. Your goal is to identify the cause of the jank and fix the issue so 
+that the demo runs at a silky-smooth 60 FPS. 
 
-The demo animates images using
-[requestAnimationFrame()](https://docs.webplatform.org/wiki/apis/timing/methods/requestAnimationFrame), the [recommended approach](http://updates.html5rocks.com/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision) for frame-based animation,
-but there's a considerable amount of stuttering and "jank" as the animation runs.
+[fsl]: fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid-forced-synchronous-layouts
+
+[raf]: fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes
 
 {% include shared/toc.liquid %}
 
-## Make a recording
+## Gather data
 
-First, make a Timeline recording of the animation:
+First, you need to capture data so that you can understand exactly what happens
+as your page runs. 
 
 1. Open the {% link_sample _code/forcedsync.html %}demo{% endlink_sample %}.
-2. Click **Start** to start the animation.
-3. Open the Timeline panel on the page, and go the Frames view.
-4. Click the **Record** button in the Timeline.
-5. After after a second or two (10-12 frames recorded) stop the recording and click **Stop** to stop the animation.
+1. Open the **Timeline** panel of DevTools.
+1. Enable the **JS Profile** option. When analyzing the flame chart later, this
+   option will let you see exactly which functions were called. 
+1. Click **Start** on the page to start the animation.
+1. Click the **Record** button on the Timeline panel to start the Timeline
+   recording. 
+1. Wait two seconds.
+1. Click the **Record** button again to stop the recording. 
 
-## Analyze the recording
+When you are finished recording you should see something like the following
+on the Timeline panel. 
 
-Looking at the recording of the first few frames, it's clear that each one is taking over 300ms to complete. If you hover the mouse over one of the frames a pop-up appears showing additional details about the frame.
+![timeline recording of janky demo](imgs/demo-recording.png)
 
-![First recording](imgs/frame-rate.png)
+## Identify problem
 
-Locate an Animation Frame Fired record and notice the yellow warning icon next to it, indicating a forced synchronous layout. The icon is slightly dimmed indicating that one of its child records contains the offending code, rather than this record itself. Expand the Animation Frame Fired record to view its children.
+Now that you have your data, it's time to start making sense of it. 
 
-![View child records of Animation Frame Fired](imgs/recording-1.png)
+At a glance, you can see in the **Summary** pane of your Timeline recording 
+that the browser spent most of its time rendering. Generally speaking, if you
+can [optimize your page's layout operations][layout], you may be able to reduce
+time spent rendering. 
 
-The child records show a long, repeating pattern of **Recalculate Style** and **Layout** records. Each layout record is a result of the style recalculation that, in turn, is a result of the `requestAnimationFrame()` handler requesting the value of `offsetTop` for each image on the page. Hover the mouse over one of the Layout records and click the link for source.js next to the Layout Forced property.
+![Timeline summary](imgs/summary.png)
 
-![Layout warning](imgs/layout-warning-hover.png)
+Now move your attention to the pink bars just below the **Overview** pane. 
+These represent frames. Hover over them to see more information about the
+frame.
 
-The Sources panel opens the source file at the `update()` function, which is the `requestAnimationCallback()` callback handler. The handler computes the image's `left` CSS style property on the the image's `offsetTop` value. This forces Chrome to perform a new layout immediately to make sure it provides the correct value.
+![long frame](imgs/long-frame.png)
 
-{% include_code src=_code/forcedsync.html snippet=forcedsync lang=javascript %}
+The frames are taking a long time to complete. For smooth animations you want
+to target 60 FPS. 
 
-We know that forcing a page layout during every animation frame is slowing things down. Now we can try to fix the problem directly in DevTools.
+Now it's time to diagnose exactly what is wrong. Using your mouse, 
+[zoom in][zoom] on a call stack. 
+
+![zoomed timeline recording](imgs/zoom.png)
+
+The top of the stack is an `Animation Frame Fired` event. The function that you
+passed to `requestAnimationFrame()` is called whenever this event is fired.
+Below `Animation Frame Fired` you see `Function Call`, and below that you 
+see `update`. You can infer that a method called `update()` is the callback for
+`requestAnimationFrame()`. 
+
+Note: This is where the **JS Profile** option that you enabled earlier is 
+useful. If it was disabled, you would just see `Function Call`, followed
+by all the small purple events (discussed next), without details on exactly
+which functions were called.
+
+Now, focus your attention on all of the small purple events below the `update`
+event. The top part of many of these events are red. That's a warning sign. 
+Hover over these events and you see that DevTools is warning you that your 
+page may be a victim of forced reflow. Forced reflow is just another name for 
+forced synchronous layouts. 
+
+![hovering over layout event](imgs/layout-hover.png)
+
+Now it's time to take a look at the function which is causing all of the 
+forced synchronous layouts. Click on one of the layout events to select it.
+In the Summary pane you should now see details about this event. Click on the
+link under **Layout Forced** (`update @ forcedsync.html:457`) to jump to
+the function definition.
+
+![jump to function defintion](imgs/jump.png)
+
+You should now see the function definition in the **Sources** panel. 
+
+![function definition in sources panel](imgs/definition.png)
+
+The `update()` function is the callback handler for 
+`requestAnimationCallback()`. The handler computes each image's `left` property
+based off of the image's `offsetTop` value. This forces the browser to perform
+a new layout immediately to make sure that it provides the correct value. 
+Forcing a layout during every animation frame is the cause of the janky
+animations on the page. 
+
+So now that you've identified the problem, you can try to fix it directly
+in DevTools.
+
+[layout]: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime?hl=en#layout
+[zoom]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool?hl=en#zoom
 
 ## Apply fix within DevTools
 
-Now that we have an idea what's causing the performance issues, we can modify the JavaScript file directly in the Sources panel and test our changes right away.
+This script is embedded in HTML, so you can't edit it via the **Sources** panel
+(scripts in `*.js` can be edited in the Sources panel, however). 
 
-1. In the Sources panel that was opened previously, find the line
-`movers[m].style.left = ((Math.sin(movers[m].offsetTop + timestamp / 1000) + 1) * 500) + 'px';` and comment it out.
-2. Uncomment the commented line below it: `//movers[m].style.left = ((Math.sin(m + timestamp/1000)+1) * 500) + 'px';`. This version computes each image's `left` style property on its index in the holding array instead of on the layout-dependent property `offsetTop`.
-3. Save your changes by pressing <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">S</kbd> or <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd>.
+However, to test your changes, you can redefine the function in the Console.
+Copy and paste the function definition from the HTML file into the DevTools
+Console. Delete the statement that uses `offsetTop` and uncomment the one 
+below it. Press `Enter` when you're done. 
+
+![redefining the problematic function](imgs/redefinition.png)
+
+Restart the animation. You can verify visually that it's much smoother now. 
 
 ## Verify with another recording
 
-The animation is now obviously faster and smoother than before, but it's always good practice to measure the difference with another recording. It should look something like the recording below.
+It's always good practice to take another recording and verify that the 
+animation truly is faster and more performant than before. 
 
-![Fixed demo](imgs/fixed.png)
+![timeline recording after optimization](imgs/after.png)
 
-
+Much better.

@@ -41,8 +41,7 @@ This contains a good chunk of information that will help you track down the
 specific cause of the violation, including the page on which the violation
 occurred (`document-uri`), that page's referrer (note that unlike the HTTP
 header field, the key is _not_ misspelled), the resource that violated the
-page's policy (`blocked- uri`), the specific directive it violated (`violated-
-directive`), and the page's complete policy (`original-policy`).
+page's policy (`blocked-uri`), the specific directive it violated (`violated-directive`), and the page's complete policy (`original-policy`).
 
 ## Report-Only
 
@@ -50,8 +49,7 @@ If you're just starting out with CSP, it makes sense to evaluate the current
 state of your application before rolling out a draconian policy to your users.
 As a stepping stone to a complete deployment, you can ask the browser to monitor
 a policy, reporting violations, but not enforcing the restrictions. Instead of
-sending a `Content-Security-Policy` header, send a `Content-Security-Policy-
-Report-Only` header.
+sending a `Content-Security-Policy` header, send a `Content-Security-Policy-Report-Only` header.
 
     Content-Security-Policy-Report-Only: default-src 'self'; ...; report-uri /my_amazing_csp_report_parser;
 

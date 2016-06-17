@@ -13,9 +13,9 @@ authors:
   - samdutton
 ---
 
-{% include shared/toc.liquid %}
-
 A completed version of this step is in the completed/step3 directory.
+
+{% include shared/toc.liquid %}
 
 ## 1. Create index.html
 

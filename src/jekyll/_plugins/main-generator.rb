@@ -152,6 +152,11 @@ module Jekyll
           if fileEntry == "." || fileEntry == ".."
             next
           end
+          # Check if the directory has moved to the DevSite templates
+          if fileEntry =~ /(showcase)/
+            Jekyll.logger.info "Skipping /#{fileEntry}, moved to DevSite templates."
+            next
+          end
           newDirectory = {
             "id" => fileEntry,
             "pages" => [],
@@ -277,8 +282,6 @@ module Jekyll
         page = ShowsPage.new(site, relative_dir, file_name, langcode)
       when 'tools'
         page = ToolsPage.new(site, relative_dir, file_name, langcode)
-      when 'showcase'
-        page = ShowcasePage.new(site, relative_dir, file_name, langcode)
       when 'styleguide'
         page = LanguagePage.new(site, relative_dir, file_name, langcode)
       when '.'

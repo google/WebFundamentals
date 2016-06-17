@@ -154,4 +154,4 @@ To see how the fake weather data is rendered, add the line below to your `app.js
 file:  
 `app.updateForecastCard(fakeForecast);`
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-03/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/step-04/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>

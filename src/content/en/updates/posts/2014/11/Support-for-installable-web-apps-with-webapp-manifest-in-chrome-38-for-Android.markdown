@@ -65,7 +65,7 @@ Some interesting points in Chrome's implementation:
    * Note: [as of Chrome 42](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en), you
      should also provide a `name` which will be used for the App Install Banner.
 *  If you don't supply a `start_url` it will use the current page's URL.
-*  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/webapps/add_to_homescreen_data_fetcher.cc&l=115) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42). If none are found it will search for the icon that closest matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular pixel density, you can use the [`density` member](http://w3c.github.io/manifest/#display-member). The `density` member takes a number. When you don't declare `density`, it just defaults to "1", which means "use this icon for screen densities 1.0 and up", which is normally what you want.
+*  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/webapps/add_to_homescreen_data_fetcher.cc&l=115) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42). If none are found it will search for the icon that closest matches the device characteristics. **Please note**, there used to be a dedicated "density" field in the manifest spec, this has been removed from the Spec and the implementation in Chrome.  If it is defined in your manifest it will be ignored.
 
 ## Telling the browser about your manifest
 
@@ -79,7 +79,7 @@ That's it.
 
 # What every developer should do today
 
-This feature is entirely progressive and allows you create better, more integrated experiences for users of a browser that supports the feature.  As of Jan 2016, Chrome, Firefox and Opera have implemented the manifest, and [IE is exploring the area](https://status.modern.ie/webapplicationmanifest?term=manifest).
+This feature is entirely progressive and allows you create better, more integrated experiences for users of a browser that supports the feature.  As of Jan 2016, Chrome, Firefox and Opera have implemented the manifest, and [Edge is exploring the area](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/webapplicationmanifest).
 
 When a user adds your site or app to the home screen, there is an intent by the user to treat it like an app.  This means you should aim to direct the user to the functionality of your app rather than a product landing page. For example, if the user is required to sign-in to your app, then that is a good page to launch.
 

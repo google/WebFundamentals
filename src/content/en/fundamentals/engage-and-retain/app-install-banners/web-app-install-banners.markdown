@@ -23,7 +23,7 @@ criteria:
   registered on your site.
 * Is served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/)
   (a requirement for using Service Worker).
-* Is visited by the user twice within 5 minutes
+* Is visited at least twice, with at least five minutes between visits.
 
 ## Testing the App Install Banner
 
