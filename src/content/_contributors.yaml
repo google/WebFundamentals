@@ -588,7 +588,7 @@ henrylim:
   homepage: https://limhenry.xyz
   email: henrylim.everything@gmail.com
   description:
-    en: "Web Developer, Volunteer @ GDG Kuala Lumpur"        
+    en: "Web Developer, Volunteer @ GDG Kuala Lumpur"
 
 heathermahan:
   name:
@@ -1016,3 +1016,19 @@ yoichiro:
   email: yoichiro@eisbahn.jp
   description:
     en: "Yoichiro is a Google Developers Expert"
+
+wdenniss:
+  name:
+    given: William
+    family: Denniss
+  org:
+    name: Google
+    unit: Identity
+  country: USA
+  role:
+    - author
+  google: +WilliamDenniss
+  twitter: WilliamDenniss
+  email: wdenniss@google.com
+  description:
+    en: "Google Identity Product Manager"
