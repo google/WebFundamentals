@@ -30,7 +30,7 @@ criteria:
 The app install banner is only shown after the user has visited the page at least
 twice within 5 minutes. You can disable the visit frequency check by enabling
 the Chrome flag `#bypass-app-banner-engagement-checks`. You can also enable the
-Chrome flag `#enable-add-to-shelf` to test on dekstop Chrome.
+Chrome flag `#enable-add-to-shelf` to test on desktop Chrome.
 
 Then, as long as you have a manifest (configured correctly), are on HTTPS (or `localhost`)
 and have a service worker, you should see the install prompt.
