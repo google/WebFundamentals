@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "ECDSA for WebRTC: better security, better privacy and better performance"
-description: "From version 52, Chrome uses ECDSA — a much more efficient and secure algorithm for WebRTC certificate key generation. In addition, RTCCertificates can now be stored with IndexedDB."
+description: "From version 52, Chrome uses ECDSA by default — a much more efficient and secure algorithm for WebRTC certificate key generation. In addition, RTCCertificates can now be stored with IndexedDB."
 published_on: 2016-06-17
 updated_on: 2016-06-17
 authors:
@@ -28,7 +28,9 @@ featured_image: /web/updates/images/2016/06/webrtc-ecdsa/featured.png
 }
 </style>
 
-<p class="intro">You can now choose which type of cryptographic certificate to use for setting up a WebRTC peer connection.</p>
+<p class="intro">From Chrome 52, WebRTC uses a much more efficient and secure algorithm for certificate (RTCCertificate) generation: ECDSA. In addition, RTCCertificates can now be stored with IndexedDB.</p>
+
+RTCCertificates are the self-signed certificates used in the [DTLS](https://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) handshake when setting up a WebRTC peer connection. (DTLS is an implementation of the cryptographic protocol [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) for datagram protocols such as [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol), which is used by WebRTC.)
 
 Until recently, WebRTC used RSA-1024 keys for certificates. There are several disadvantages with these keys:
 
@@ -48,16 +50,18 @@ All in all, ECDSA keys mean better security, better privacy and better performan
 From Chrome 47 you can opt in to ECDSA:
 
 {% highlight javascript %}
-pc.generateCertificate({name: "ECDSA", namedCurve: "P-256"})
+pc.generateCertificate({name: 'ECDSA', namedCurve: 'P-256'})
 {% endhighlight %}
 
-From Chrome 52, ECDSA is enabled by default.
+From Chrome 52, though ECDSA is enabled by default, you can still choose to generate RSA certificates:
+
+{% highlight javascript %}
+pc.generateCertificate({ name: "RSASSA-PKCS1-v1_5", modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: "SHA-256" })
+{% endhighlight %}
 
 ## Storing RTCCertificate in IndexedDB
 
-Another improvement in Chrome 52: the RTCCertificates used by WebRTC can be saved and loaded from IndexedDB storage, avoiding the need to generate new certificates between sessions.
-
-RTCCertificates are self-signed certificates used in the [DTLS](https://en.wikipedia.org/wiki/Datagram_Transport_Layer_Security) handshake when setting up a WebRTC peer connection. (DTLS is an implementation of the cryptographic protocol [TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security) for datagram protocols such as [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol), which is used by WebRTC.) RTCCertificates can be stored by implementing [structured cloning](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), a new algorithm for serializing JavaScript objects.
+Another improvement in Chrome 52: the RTCCertificates used by WebRTC can be saved and loaded from IndexedDB storage, avoiding the need to generate new certificates between sessions. This can be useful, for example, if you still need to use RSA and want to avoid the RSA generation overhead.
 
 RTCCertificate IndexedDB storage has already shipped in Firefox and is in Opera 39.
 
