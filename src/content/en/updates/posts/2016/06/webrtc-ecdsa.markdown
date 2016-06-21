@@ -34,10 +34,10 @@ RTCCertificates are the self-signed certificates used in the [DTLS](https://en.w
 
 Until recently, WebRTC used RSA-1024 keys for certificates. There are several disadvantages with these keys:
 
-* Generating RSA-1024 keys adds around 1000ms to call setup time.
+* Generating RSA-1024 keys adds up to around 1000ms to call setup time.
 * 1024-bit RSA keys do not provide adequate cryptographic strength.
 
-Because certificate generation with RSA-1024 is slow, some sites have resorted to preparing certificates in advance or reusing them.
+Because certificate generation with RSA-1024 is slow, some mobile apps have resorted to preparing certificates in advance or reusing them.
 
 The key strength issue could be resolved by going to 2048-bit RSA keys or more, but that would delay call setup by several additional seconds. Instead of changing the RSA key size, Chrome 52 implements ECDSA keys (Elliptic Curve Digital Signature Algorithm) for use in certificates. These are as strong as 3072-bit RSA keys‚ but several thousand times faster: call setup overhead with ECDSA is just a few milliseconds.
 
@@ -50,18 +50,31 @@ All in all, ECDSA keys mean better security, better privacy and better performan
 From Chrome 47 you can opt in to ECDSA:
 
 {% highlight javascript %}
-pc.generateCertificate({name: 'ECDSA', namedCurve: 'P-256'})
+// or webkitRTCPeerConnection
+RTCPeerConnection.generateCertificate({
+  name: "ECDSA",
+  namedCurve: "P-256"
+}).then(function(certificate) {
+  var pc = new RTCPeerConnection({..., certificates: [cert]});
+});
 {% endhighlight %}
 
 From Chrome 52, though ECDSA is enabled by default, you can still choose to generate RSA certificates:
 
 {% highlight javascript %}
-pc.generateCertificate({ name: "RSASSA-PKCS1-v1_5", modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: "SHA-256" })
+pc.generateCertificate({
+  name: "RSASSA-PKCS1-v1_5",
+  modulusLength: 2048,
+  publicExponent: new Uint8Array([1, 0, 1]),
+  hash: "SHA-256"
+})
 {% endhighlight %}
+
+(See the [W3C draft](http://w3c.github.io/webrtc-pc/#dom-rtcpeerconnection-generatecertificate) for more information about `generateCertificate()`.)
 
 ## Storing RTCCertificate in IndexedDB
 
-Another improvement in Chrome 52: the RTCCertificates used by WebRTC can be saved and loaded from IndexedDB storage, avoiding the need to generate new certificates between sessions. This can be useful, for example, if you still need to use RSA and want to avoid the RSA generation overhead.
+Another improvement in Chrome 52: the RTCCertificates used by WebRTC can be saved and loaded from IndexedDB storage, avoiding the need to generate new certificates between sessions. This can be useful, for example, if you still need to use RSA and want to avoid the RSA generation overhead. With ECDSA, caching is not necessary since it is fast enough to generate a new certificate every time.
 
 RTCCertificate IndexedDB storage has already shipped in Firefox and is in Opera 39.
 
