@@ -6,7 +6,7 @@ updated_on: 2015-10-16
 authors:
   - paulkinlan
 tags:
-  - notification
+  - notifications
 description: "Notifications on desktop will be automatically dismissed after a short period of time."
 featured_image: /web/updates/images/2015/10/notification.png
 ---

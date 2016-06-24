@@ -7,9 +7,7 @@ updated_on: 2015-10-27
 authors:
   - samthorogood
 tags:
-  - animation
-  - animations
-  - web-animation
+  - webanimations
 featured_image: /web/updates/images/2015/10/web-animations-resources.png
 ---
 

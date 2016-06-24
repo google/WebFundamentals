@@ -10,7 +10,7 @@ authors:
   - mattgaunt
 tags:
   - app-shell
-  - service-worker
+  - serviceworker
 featured_image: /web/updates/images/2015/11/appshell/app-shell-browsers.jpg
 ---
 

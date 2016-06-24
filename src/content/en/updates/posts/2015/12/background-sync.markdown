@@ -7,7 +7,7 @@ updated_on: 2015-12-09
 authors:
   - jakearchibald
 tags:
-  - service-worker
+  - serviceworker
 featured_image: /web/updates/images/2015/12/sync/emojoy.png
 ---
 

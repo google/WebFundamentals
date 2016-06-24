@@ -8,7 +8,7 @@ authors:
   - addyosmani
 tags:
   - progressive-web-apps
-  - service-worker
+  - serviceworker
 description: "Learn how to get started building Progressive Web Apps"
 featured_image: /web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg
 ---

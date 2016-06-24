@@ -8,7 +8,7 @@ authors:
   - mattgaunt
 tags:
   - news
-  - push
+  - pushmessaging
   - notifications
   - data
 ---

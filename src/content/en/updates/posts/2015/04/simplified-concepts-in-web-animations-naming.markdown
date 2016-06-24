@@ -8,7 +8,6 @@ authors:
   - samthorogood
 tags:
   - news
-  - animations
   - webanimations
 ---
 
