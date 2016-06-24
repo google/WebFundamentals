@@ -2,7 +2,7 @@
 layout: updates/post
 title: "Updates to the service worker cache API"
 published_on: 2015-09-03
-updated_on: 2015-09-03
+updated_on: 2016-06-24
 authors:
   - jakearchibald
 tags:
@@ -40,8 +40,7 @@ self.addEventListener('install', function(event) {
         '/',
         '/css/styles.css',
         '/js/script.js',
-        '/imgs/cat-falls-over.gif',
-        new Request('//example.com/whatever/script.js', {mode: 'no-cors'})
+        '/imgs/cat-falls-over.gif'
       ]);
     })
   );
@@ -49,6 +48,14 @@ self.addEventListener('install', function(event) {
 {% endhighlight %}
 
 `addAll` takes an array of urls & requests, fetches them, and adds them to the cache. This is transactional - if any of the fetching or writing fails, the whole operation fails, and the cache is returned to its previous state. This is particularly useful for install operations like above, where a single failure should be an overall failure.
+
+**Update**: As of Chrome 50, the `cache.addAll()` (and `cache.add()`) behavior
+has [changed slightly](https://github.com/dstockwell/chromium/commit/d8a95558a04b5734bc5568546097799d942aaec5#diff-c0babf201659e01414abe4a511fb8c7cR218).
+Now, all of the responses that are added to the
+cache [need to have](https://github.com/slightlyoff/ServiceWorker/issues/823) a
+`2xx` (i.e. "OK") response code. Any responses with non-`2xx` response codes,
+including [opaque](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque)
+responses from non-CORS requests, will cause the `cache.addAll()` to reject.
 
 The example above is within a service worker, but the caches API is fully accessible from pages too.
 
