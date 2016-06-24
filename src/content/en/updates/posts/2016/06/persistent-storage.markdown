@@ -2,15 +2,16 @@
 layout: updates/post
 title: "Persistent Storage"
 description: "With Chrome 52, we’re introducing the ability to make storage persistent.  Storage for web applications is a complex topic, and persistence for data on the frequently - ephemeral web doubly so!"
-published_on: 2016-06-23
-updated_on: 2016-06-23
+published_on: 2016-06-24
+updated_on: 2016-06-24
 authors:
   - chriswilson
 tags:
   - chrome52
   - storage
-  - persistent-storage
+  - persistentstorage
   - localstorage
+  - indexeddb
 ---
 
 # Persistent Storage
@@ -45,7 +46,7 @@ So how do I make my storage persistent?  Well, you have to ask for it
 explicitly:
 
 {% highlight javascript %}
-If (navigator.storage)
+if (navigator.storage && navigator.storage.persist)
   navigator.storage.persist().then(granted => {
     if (granted)
       alert("Storage will not be cleared except by explicit user action");
@@ -76,13 +77,13 @@ You can also use the Javascript API to tell if persistence has been granted
 already:
 
 {% highlight html %}
-if (navigator.storage) 
+if (navigator.storage && navigator.storage.persist) 
   navigator.storage.persisted().then(persistent=>{
     if (persistent)
       console.log("Storage will not be cleared except by explicit user action");
     else
       console.log("Storage may be cleared by the UA under storage pressure.");
-  }
+  });
 {% endhighlight %}
 
 You probably want to request permission, but then use the `.persisted` API to 
