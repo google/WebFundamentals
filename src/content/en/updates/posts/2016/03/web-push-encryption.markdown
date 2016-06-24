@@ -7,7 +7,10 @@ updated_on: 2016-03-14
 authors:
   - mscales
 tags:
-  - push
+  - notifications
+  - pushmessaging
+  - webpush
+  - payload
   - encryption
   - chrome50
 ---

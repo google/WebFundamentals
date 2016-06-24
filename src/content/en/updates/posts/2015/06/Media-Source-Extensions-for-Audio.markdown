@@ -9,7 +9,7 @@ authors:
 tags:
   - news
   - audio
-  - codec
+  - codecs
   - MediaSourceExtensions
   - MSE
 ---

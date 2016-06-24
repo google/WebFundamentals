@@ -7,7 +7,7 @@ updated_on: 2016-04-18
 authors:
   - alexdanilo
 tags:
-  - animation
+  - webanimations
   - chrome50
   - chrome51
 ---

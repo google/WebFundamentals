@@ -11,7 +11,7 @@ tags:
   - audio
   - video
   - Android
-  - Notifications
+  - notifications
 ---
 
 Chrome 45 Beta introduces a handy new feature for controlling audio and video playback.

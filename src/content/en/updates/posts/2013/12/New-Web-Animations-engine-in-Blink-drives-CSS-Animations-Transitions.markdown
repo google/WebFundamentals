@@ -8,7 +8,7 @@ authors:
   - alexdanilo
 tags:
   - news
-  - animations
+  - webanimations
   - css
 ---
 Users expect smooth 60fps animations in modern multi-device UIs. Achieving that level of performance with the web’s current animation primitives can be difficult. Fortunately we’re working on a new Blink animation implementation that just shipped in Chrome Canary!

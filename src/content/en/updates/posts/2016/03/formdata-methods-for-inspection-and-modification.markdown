@@ -7,7 +7,7 @@ updated_on: 2016-03-15
 authors:
   - samthorogood
 tags:
-  - form
+  - forms
   - formdata
   - input
   - chrome50
