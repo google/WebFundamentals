@@ -84,11 +84,6 @@ The following keyboard shortcuts are available in all DevTools panels:
       <td data-th="Mac"><kbd class="kbd">?</kbd></td>
     </tr>
     <tr>
-      <td data-th="Global Shortcuts">Show General Settings dialog</td>
-      <td data-th="Windows"><kbd class="kbd">?</kbd>, <kbd class="kbd">F1</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">?</kbd></td>
-    </tr>
-    <tr>
       <td data-th="Global Shortcuts">Next panel</td>
       <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">]</kbd></td>
       <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">]</kbd></td>
