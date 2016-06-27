@@ -13,12 +13,12 @@ key-takeaways:
 
 <p class="intro">
   여러분은 측정할 수 없는 것을 최적화 할 수는 없습니다. 고맙게도, 네비게이션 타이밍 API는
-  크리티컬 렌더링 패스의 각 단계의 측정에 필요한 모든 툴들을 제공합니다.
+  크리티컬 렌더링 패스의 각 단계 측정에 필요한 모든 툴들을 제공합니다.
 </p>
 
 {% include shared/takeaway.liquid list=page.key-takeaways.measure-crp %}
 
-모든 단단한 성능 전략의 핵심은 훌륭한 측정과 기기장치입니다. 네비게이션 타이밍 API가 바로 그것입니다.
+모든 단단한 성능 전략의 핵심은 훌륭한 측정과 도구입니다. 네비게이션 타이밍 API가 바로 그것입니다.
 
 <img src="images/dom-navtiming.png" class="center" alt="Navigation Timing">
 
