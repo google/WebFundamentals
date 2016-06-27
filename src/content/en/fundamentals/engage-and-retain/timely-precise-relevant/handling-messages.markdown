@@ -155,7 +155,7 @@ Combining similar notifications comes down to three things.
 
 * A call to `getNotifications()`.
 * reusing an existing `tag` value.
-* Setting the `retnotify` flag in the call to `showNotification()`
+* Setting the `retnotify` flag in the call to `showNotification()`.
 
 Let's look at an example that shows all three.
 
@@ -410,7 +410,7 @@ self.addEventListener('notificationclick', function(event) {
 });
 {% endhighlight %}
 
-Here's the entire notificationclick handler from end to end.
+Here's the entire `notificationclick` handler from end to end.
 
 {% highlight javascript %}
 self.addEventListener('notificationclick', function(event) {

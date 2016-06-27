@@ -10,11 +10,8 @@ authors:
   - josephmedley
 ---
 
-<p class="intro">
-	<blockquote>"Don't annoy your users, or you'll lose access to them
-	forever!"—Pete LePage</blockquote>
-
-Do we need to say anything more than that? We do because it's easier said than
+<p class="intro">Don't annoy your users, or you'll lose access to them
+	forever. Do we need to say anything more than that? We do because it's easier said than
 done.
 
 Push notifications are one of the most valuable capabilities of native apps, and

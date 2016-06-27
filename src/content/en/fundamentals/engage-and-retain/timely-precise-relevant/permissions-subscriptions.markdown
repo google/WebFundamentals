@@ -9,6 +9,8 @@ order: 20
 translation_priority: 0
 authors:
   - josephmedley
+notes:
+  clarity: "For the sake of clarity, this example excludes a number of feature checks that you should always perform. You can view the original code in it's entirety in our <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>GitHub samples repo</a>."
 ---
 
 <p class="intro">
@@ -26,9 +28,7 @@ notifications sooner than you would for new users. Finally, it lets you set the
 state of any controls that manage the subscription. An example of this is shown
 below.
 
-**Note:** for the sake of clarity, this example excludes a number of feature
-checks that you should always perform. You can view the original code in it's
-entirety in our [GitHub samples repo](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications).
+{% include shared/note.liquid list=page.notes.clarity %}
 
 {% highlight javascript %}
 function initialiseState() {

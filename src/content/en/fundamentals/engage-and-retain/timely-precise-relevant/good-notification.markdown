@@ -41,20 +41,20 @@ store a notification until a user wants it. When the user clicks it, the status
 of the network is irrelevant.
 
 {% highlight javascript %}
-self.addEventListener('push', event =&gt; {
+self.addEventListener('push', event => {
   var dataPromise;
   if (data in event) {
     dataPromise = Promise.resolve(event.data.json());
   } else {
     dataPromise = fetch('notification/end/point/data.json')
-      .then(response =&gt; {
+      .then(response => {
         return response.json();
       });
   }
 
   event.waitUntil(
     dataPromise
-    .then(msgData =&gt; {
+    .then(msgData => {
       // Now tell the user.
       return self.registration.showNotification(data.title, {
         // Whether you show data and how much you show depends on
@@ -132,7 +132,7 @@ add them to a notification. The service worker needs to process those actions.
 Do this in the notificationclick event.
 
 {% highlight javascript %}
-self.addEventListener('notificationclick', event =&gt; {
+self.addEventListener('notificationclick', event => {
   var messageId = event.notification.data;
   
   event.notification.close();
@@ -217,7 +217,7 @@ avoid the problem completely; don't encourage users to run both.
 
 You'll have opportunities to monetize the user experience once they're in your
 app. Don't blow it by spamming your users when they're not. If you spam your
-users with notifications, you may loose them altogether.
+users with notifications, you may lose them altogether.
 
 ### Don't Include your Website Name or Domain {#no-website}
 
@@ -236,8 +236,7 @@ example.
 It tells us exactly who sent the message. The icon, which in many notifications
 is the site or app logo, tells us nothing.
 
-Instead, let's use the sender's profile image. (Granted, the world has more
-Paul's than it *really* knows what to do with.)
+Instead, let's use the sender's profile image.
 
 <img src="images/still-up.png" width="321" height="117" />
 

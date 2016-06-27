@@ -10,13 +10,12 @@ authors:
   - josephmedley
 ---
 
-<p class="intro">
-It's easy to assume that sending messages must involve building a complex
-messaging system on the server. That's not quite right. There are actually two
-servers involved in sending a message: your server and a third party messaging
-server. You keep track of who to send messages to. The third party server
-handles the routing.
-</p>
+<p class="intro"> It's easy to assume that sending messages must involve
+building a complex messaging system on the server. That's not quite right. There
+are actually two servers involved in sending a message: your server and a third
+party messaging server. You keep track of two things: recipients and recipient-
+specific endpoints on the messaging server. The messaging server handles the
+routing. </p>
 
 {% include shared/toc.liquid %}
 
@@ -40,6 +39,7 @@ What's in this?
 _endpoint_—Contains two parts: the URL of the messaging service you're using
 followed by unique identifier for the user. This is called a subscription ID or
 a registration ID.
+
 _keys_—Encryption keys used for encrypting data passed to the service worker
 messages.
 
@@ -87,4 +87,9 @@ Crypto-Key: keyid=p256dh;dh=xxxxxxxx
 
 BIXzEKOFquzVlr/1tS1bhmobZ...</pre>
 
-TTL is the time in seconds before the message expires. 
+TTL is the time in seconds before the message expires. This means that the
+server will spend the specified number of seconds trying to send the message to
+the recipient. For example, let's say TTL is 60 seconds, but the recipient's
+phone is in airplane mode. If the recipient's phone comes out of airplane mode
+during those 60 seconds, the message is sent. Otherwise the message will be
+dropped.
