@@ -33,7 +33,8 @@ The device orientation menu lets you view your page when different system UI ele
 
 ![Showing system UI elements](/web/updates/images/2016/06/system-ui.png)
 
-The desktop story has improved, too. Thanks to Device Mode's zoom feature, you can emulate desktop screens larger than the screen that you're actually working on, such as a 4K (2560px) screen. 
+The desktop story has improved, too. Thanks to Device Mode's zoom feature, you can emulate desktop screens larger than the screen that you're actually working on, such as a 4K (3840px x 
+2160px) screen. 
 
 ![Showing a 4K screen](/web/updates/images/2016/06/4k.png)
 
