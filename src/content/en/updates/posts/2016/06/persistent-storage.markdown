@@ -55,13 +55,15 @@ if (navigator.storage && navigator.storage.persist)
   });
 {% endhighlight %}
 
-This feature is still somewhat experimental - so in order to keep from
+This feature is still somewhat experimental. So in order to keep from
 prematurely baking this design in before it’s fully specified and agreed upon,
 we’ve implemented this feature in Chrome Stable as an
 [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
-In order to use this API in Chrome Stable, you’ll need to
+To use this API in Chrome Stable, you’ll need to
 [request a token](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin)
-and insert it in your application, and the trial will end in October 2016. 
+and insert it in your application.
+
+The trial will end in October 2016. 
 (By that point, we expect to have figured out any changes necessary to
 stabilize the feature and move it out from Origin Trials.)  Or, of course,
 your users can use Chrome Canary, or enable experimental web features in
@@ -94,7 +96,7 @@ degradation if the user won’t get an offline experience.
 
 ## What about “Clear Data”?  Will the user still inadvertently wipe my data?
 
-This is still under development, but in short, the goal is to make users aware
+This is still under development, but in short, the goal is to make users are aware
 of “persistent” data before clearing it - ideally letting them manually manage
 any such data.  We’re still designing the fine-grained options and user flow
 for how this can best work, but from your app, you can presume that
@@ -102,5 +104,5 @@ for how this can best work, but from your app, you can presume that
 explicitly informed and directly in control of that deletion.
 
 The landscape of persistently storing data in the web platform is still
-changing, but we’re very excited to take this strong first step in making
+changing, but we’re excited to take this strong first step in making
 web applications more reliable!
