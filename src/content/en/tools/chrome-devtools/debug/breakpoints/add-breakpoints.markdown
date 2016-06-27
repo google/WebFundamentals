@@ -197,7 +197,7 @@ is displayed in the console.
 
 {% animation animations/exception-in-console.mp4 %}
 
-### Never Pause Here
+## Never Pause Here {#never-pause-here}
 
 Sometimes conditional breakpoints will cause DevTools to break repeatedly on
 a line that isn't relevant to the issue you're debugging. You can tell
