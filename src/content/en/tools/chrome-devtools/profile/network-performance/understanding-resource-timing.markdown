@@ -212,7 +212,7 @@ The network traversal could be hindered by any number of things.
 There are a lot of points between clients and servers and each one has its own connection limitations and could cause a problem.
 The simplest method to test reducing this is to put your application on another host and see if the TTFB improves.
 
-### Hitting throughput capactiy
+### Hitting throughput capacity
 
 <small>AKA: lots of blue</small>
 
