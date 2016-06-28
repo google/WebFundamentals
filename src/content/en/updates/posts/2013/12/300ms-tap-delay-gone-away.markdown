@@ -37,7 +37,7 @@ To remove the 300-350ms tap delay, all you need is the following in the `<head>`
 <meta name="viewport" content="width=device-width">
 {% endhighlight %}
 
-This sets the viewport width to the same as the device, and is general best-practice for mobile-optimised sites. With this tag, browsers assume you've made text readable on mobile, and the double-tap-to-zoom feature is dropped in favour of faster clicks.
+This sets the viewport width to the same as the device, and is generally a best-practice for mobile-optimised sites. With this tag, browsers assume you've made text readable on mobile, and the double-tap-to-zoom feature is dropped in favour of faster clicks.
 
 If for some reason you cannot make this change, you can use `touch-action: manipulation` to achieve the same effect either across the page or on particular elements:
 
