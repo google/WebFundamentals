@@ -133,7 +133,7 @@ Bad:
 
 We've seen this a few times already and the anatomy lesson even showed how to
 add them to a notification. The service worker needs to process those actions.
-Do this in the notificationclick event.
+Do this in the `notificationclick` event.
 
 {% highlight javascript %}
 self.addEventListener('notificationclick', event => {
@@ -191,7 +191,7 @@ notification is sent.
 
 A relevant message is one about people or subjects the user cares about.
 
-### prefer logged-in users {#prefer-logged}
+### Prefer logged-in users {#prefer-logged}
 
 Only ask for notification permissions from users who are logged in.
 If you don't know who your users are it's hard to send them relevant

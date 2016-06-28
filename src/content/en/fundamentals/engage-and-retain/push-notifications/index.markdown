@@ -12,9 +12,7 @@ authors:
 
 <p class="intro">Don't annoy your users, or you'll lose access to them
 	forever. Do we need to say anything more than that? We do because it's easier said than
-done.
-
-Push notifications are one of the most valuable capabilities of native apps, and
+done. Push notifications are one of the most valuable capabilities of native apps, and
 this capability is now available on the web. To get the most out of them,
 notifications need to be timely, precise, and relevant.
 </p>
@@ -65,20 +63,20 @@ A typical options object looks something like this:
 
 {% highlight json %}
 {
-  body: 'Are you free tonight?',
-  icon: 'images/joe.png',
+  body: "Are you free tonight?",
+  icon: "images/joe.png",
   vibrate: [200, 100, 200, 100, 200, 100, 400],
-  tag: 'request',
+  tag: "request",
   actions: [
-    { action: 'yes', title: 'Yes!', icon: 'images/thumb-up.png' },
-    { action: 'no', title: 'No', icon: 'images/thumb-down.png' }
+    { action: "yes", title: "Yes!", icon: "images/thumb-up.png" },
+    { action: "no", title: "No", icon: "images/thumb-down.png" }
   ]
 }
 {% endhighlight %}
 
 This produces a notifiation that looks like this:
 
-![The example notification.](images/joe-asked.png){:width="316px"}
+![The example notification.](images/joe-asked-contextual.png){:width="316px"}
 
 In the next few sections we'll provide tips to help you build better
 notifications. We'll go on to describe the mechanincs of implementing them,

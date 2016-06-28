@@ -23,10 +23,10 @@ light a touch as showing them notifications.
 ## Check permissions {#check-permissions}
 
 Always check for an existing permission when the page loads. If the permission
-has already been granted you'll be able to start sending customized
-notifications sooner than you would for new users. Finally, it lets you set the
-state of any controls that manage the subscription. An example of this is shown
-below.
+has already been granted you'll be able to start sending notifications
+immediately. Either way use this information to set the state of permission
+settings. An example of this is shown below. To be clear, we're not asking for
+anything yet.
 
 {% include shared/note.liquid list=page.notes.clarity %}
 
@@ -70,7 +70,7 @@ explains exactly why you want to send them notifications.
 
 If the user approves, we need to send a subscription request to the push
 manager. Do this by calling `PushManager.subscribe()` (lines 5 through 9). In
-this example, we're passing it an object with `userVisibleOnly` set to true so
+this example, we're passing it an object with `userVisibleOnly` set to `true` so
 that all push messages  sent the client will be shown to the user as a
 notification. We're also  including an `applicationServerKey` converted to an
 integer array.
@@ -153,7 +153,7 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
       return registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: window.base64UrlToUint8Array(
-          'bdbdbd\_totallyFakePublicKey\_a10nZ13'
+          '3xt3rm1n8_totallyFakePublicKey_a10nZ13'
          );
       })
     }

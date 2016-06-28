@@ -21,7 +21,7 @@ routing. </p>
 
 ## Anatomy of a subscription object {#subscription-anatomy}
 
-In the last section we said that a subscription object must be stringified and
+In [the last section](permissions-subscriptions#passing-subscription) we said that a subscription object must be stringified and
 passed to the server. The data the server gets looks like this:
 
 {% highlight json %}
@@ -60,8 +60,8 @@ consider.
 * Messages without a data payload, often called a tickle.
 
 In the case of the tickle, the service worker uses the message as a signal to
-fetch data from an endpoint. The Handling Messages section contains sample code
-for showing how a service worker does this.
+fetch data from an endpoint. The [Handling Messages](handling-messages) section
+contains sample code for showing how a service worker does this.
 
 Why would you ever send a message without a payload? There are two reasons.
 
@@ -69,9 +69,8 @@ Why would you ever send a message without a payload? There are two reasons.
 * The clients needs fresher data than what would be in the push.
 
 Technically, there's another reason which is that browser capabilities may vary
-for a while yet, but the two main reasons will likely always apply. (By the way,
-if a browser supports push, but not payloads, the subscription object won't
-contain a keys member.)
+for a while yet, but the two main reasons will likely always apply. If the
+browser doesn't support payloads, the subscription object won't contain keys.
 
 ## Sending messages {#sending-messages}
 

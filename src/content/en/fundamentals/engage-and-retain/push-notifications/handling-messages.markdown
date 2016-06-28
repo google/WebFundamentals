@@ -1,16 +1,20 @@
 ---  
 layout: shared/narrow
 title: "Handling messages"
-description: ""
+description: "You've seen what makes a good notification. Now let's see how to implement them."
 published_on: 2016-07-01
 updated_on: 2016-07-01
 order: 40
 translation_priority: 0
 authors:
   - josephmedley
+notes:
+  truncation: "From here on, the code samples start to get a little large. We're
+  going to truncate them for the sake of space. But, don't worry. We'll show you
+  the whole thing at the end."
 ---
 
-<p class="intro"> Way back at the [beginning of this section](index#anatomy), we
+<p class="intro">Way back at the <a href="index#anatomy">beginning of this section</a>, we
 showed a notification that looks like this and the code that goes with it.<br/><br/>
 
 <img src="images/joe-asked.png" alt="The example notification." width="316" /><br/><br/>
@@ -53,8 +57,8 @@ self.registration.showNotification(title, {
 Technically, the only required parameter for `showNotification()` is the title.
 Practically speaking, you should include a body and an icon.
 
-Finally, we'll process the user's response using the notificationclick and
-notificationclose methods.
+Finally, we'll process the user's response using the `notificationclick` and
+`notificationclose` methods.
 
 {% highlight javascript %}
 self.addEventListener('notificationclick', event => {  
@@ -190,16 +194,16 @@ self.addEventListener('push', function(event) {
 });
 {% endhighlight %}
 
-In other examples, we've instantiated our notification options right in the call 
-to `showNotification()`. For this scenario, the options object needs to change 
-based on the results of `getNotifications()`.  So instantiate a notification 
-options object. 
+In other examples, we've instantiated our `options` object right in the call  to
+`showNotification()`. For this scenario, the `options` object needs to change
+based on the results of `getNotifications()`.  So instantiate a notification
+`options` object.
 
 Notice that we've also attached the notification data to the notification
 options. We're doing this to ensure that it's available to `notificationclick`,
 which we'll look at in a later section. To tell the browser we're combining
-notifications, we need to not just reuse the tag (line 6), we also need to set renotify
-to true (line 17).
+notifications, we need to reuse the `tag` (line 6) and set `renotify` to `true`
+(line 17).
 
 {% highlight javascript linenos %}
 self.addEventListener('push', function(event) {
@@ -319,7 +323,9 @@ self.addEventListener('notificationclick', function(event) {
 {% endhighlight %}
 
 If the user clicked confirm, we can send that straight back to the server
-without opening the application (lines 4 through 12).
+without opening the application (lines 3 through 13). Notice that we're
+returning from the `notificationclick` event immediately after sending the
+confirmation to the server. This prevents app from opening.
 
 {% highlight javascript linenos %}
 self.addEventListener('notificationclick', function(event) {
@@ -334,6 +340,7 @@ self.addEventListener('notificationclick', function(event) {
     };
     var confirmation = new Request('/back/end/system/confirm');
     event.waitUntil(fetch(confirmation, fetchOptions));
+    return; // So we don't open the page when we don't need to.
   } else if (event.action === 'change') {
     // Open the application to a place where the user can reschedule.
   } else {
@@ -342,9 +349,9 @@ self.addEventListener('notificationclick', function(event) {
 });
 {% endhighlight %}
 
-For the change and default click options, we want to navigate to different URLs.
-But we want to do exactly the same thing regardless of URL (lines 14 through
-19). Start by using our test on `event.action` to create the appropriate URL.
+If the recipient clicked change, we want to open to a confirmation page. If the
+user clicks somewhere other than an action button, we just want to open the app
+(lines 14 through 19). In both cases, we'll create an appropriate URL.
 
 {% highlight javascript linenos %}
 self.addEventListener('notificationclick', function(event) {
@@ -359,6 +366,7 @@ self.addEventListener('notificationclick', function(event) {
     };
     var confirmation = new Request('/back/end/system/confirm');
     event.waitUntil(fetch(confirmation, fetchOptions));
+    return; // So we don't open the page when we don't need to.
   } else if (event.action === 'change') {
     var appUrl = '/?confirmation_id=' +
       event.notification.data.confirmation_id + '#reschedule';
@@ -369,9 +377,7 @@ self.addEventListener('notificationclick', function(event) {
 });
 {% endhighlight %}
 
-**Note:** From here on, the code samples start to get a little large. We're
-going to truncate them for the sake of space. But, don't worry. We'll show you
-the whole thing at the end.
+{% include shared/note.liquid list=page.notes.truncation %}
 
 Regardless of URL, we'll call `clients.matchAll()` to get a client window we can
 navigate with.
@@ -425,6 +431,7 @@ self.addEventListener('notificationclick', function(event) {
     };
     var confirmation = new Request('/back/end/system/confirm');
     event.waitUntil(fetch(confirmation, fetchOptions));
+    return; // So we don't open the page when we don't need to.
   } else if (event.action === 'change') {
     var appUrl = '?confirmation_id=' +
       event.notification.data.confirmation_id + '#reschedule';
