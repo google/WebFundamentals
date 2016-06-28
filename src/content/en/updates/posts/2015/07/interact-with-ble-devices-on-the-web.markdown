@@ -316,8 +316,12 @@ function onDisconnected(event) {
 {% endhighlight %}
 
 You can also call `device.gatt.disconnect()` to disconnect your web app from
-the Bluetooth device. Note that it will NOT stop bluetooth device communication
-if another app is already communicating with the Bluetooth device. Check out the [Device Disconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html) and the [Automatic Reconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html) to dive deeper.
+the Bluetooth device. This will trigger existing `gattserverdisconnected` event
+listeners. Note that it will NOT stop bluetooth device communication if another
+app is already communicating with the Bluetooth device. Check out the [Device
+Disconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html)
+and the [Automatic Reconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html)
+to dive deeper.
 
 ## Samples, Demos and Codelabs
 
