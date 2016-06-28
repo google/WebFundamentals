@@ -76,7 +76,7 @@ favorite web apps and not find they have suddenly been cleared.
 You can also use the Javascript API to tell if persistence has been granted
 already:
 
-{% highlight html %}
+{% highlight javascript %}
 if (navigator.storage && navigator.storage.persist) 
   navigator.storage.persisted().then(persistent=>{
     if (persistent)
