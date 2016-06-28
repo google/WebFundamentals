@@ -50,7 +50,7 @@ enable the highlighted flag, restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices,
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
-Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications) and know when [Bluetooth device gets
+Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications) and know when a [Bluetooth device gets
 disconnected](#get-disconnected-from-a-bluetooth-device).
 
 <img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/web-bluetooth-flag.png" alt="Web Bluetooth Flag highlighted in chrome://flags"/>
@@ -119,7 +119,7 @@ For instance, scanning for Bluetooth devices advertising the [Bluetooth GATT Bat
 
 {% highlight javascript %}
 navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
-.then(device => {...})
+.then(device => { /* ... */ })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
@@ -135,7 +135,7 @@ navigator.bluetooth.requestDevice({
     services: [0x1234, 0x12345678, '99999999-0000-1000-8000-00805f9b34fb']
   }]
 })
-.then(device => {...})
+.then(device => { /* ... */ })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
@@ -152,7 +152,7 @@ navigator.bluetooth.requestDevice({
   }],
   optionalServices: ['battery_service']
 })
-.then(device => {...})
+.then(device => { /* ... */ })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
@@ -173,7 +173,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
   // Attempts to connect to remote GATT Server.
   return device.gatt.connect();
 })
-.then(server => {...})
+.then(server => { /* ... */ })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
@@ -259,9 +259,6 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
-Using a `characteristicvaluechanged` event listener to know when a characteristic
-value changes after writing to it also works.
-
 ### Receive GATT Notifications
 
 Now, let's see how to be notified when the [Heart Rate Measurement](https://developer.bluetooth.org/gatt/characteristics/Pages/CharacteristicViewer.aspx?u=org.bluetooth.characteristic.heart_rate_measurement.xml)
@@ -297,8 +294,8 @@ properly remove the added `characteristicvaluechanged` event listener.
 
 ### Get disconnected from a Bluetooth Device
 
-In order to provide a better user experience, you may want to show a warning
-message if the `BluetoothDevice` gets disconnected to invite user to reconnect.
+To provide a better user experience, you may want to show a warning message if
+the `BluetoothDevice` gets disconnected to invite the user to reconnect.
 
 {% highlight javascript %}
 navigator.bluetooth.requestDevice({ filters: [{ name: 'Francois robot' }] })
@@ -309,7 +306,7 @@ navigator.bluetooth.requestDevice({ filters: [{ name: 'Francois robot' }] })
   // Attempts to connect to remote GATT Server.
   return device.gatt.connect();
 })
-.then(server => {...})
+.then(server => { /* ... */ })
 .catch(error => { console.log(error); });
 
 function onDisconnected(event) {
@@ -322,7 +319,7 @@ You can also call `device.gatt.disconnect()` to disconnect your web app from
 the Bluetooth device. Note that it will NOT stop bluetooth device communication
 if another app is already communicating with the Bluetooth device. Check out the [Device Disconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html) and the [Automatic Reconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html) to dive deeper.
 
-## Samples, Demos & Codelabs
+## Samples, Demos and Codelabs
 
 All [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/index.html) below
 have been tested with the Web Bluetooth flag enabled. To enjoy these samples to
@@ -373,7 +370,7 @@ Check the [browser and platform implementation
 status](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md)
 first to know which parts of the Web Bluetooth API are currently being implemented.
 
-As it is still not complete yet, here's a sneak peek of what to expect in the
+Though it's still incomplete, here's a sneak peek of what to expect in the
 coming months:
 
 - [Scanning for nearby BLE advertisements](https://github.com/WebBluetoothCG/web-bluetooth/pull/239)
