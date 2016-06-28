@@ -66,7 +66,7 @@ Regardless of when you do it, requesting permission is a two-step process.
 First, ask whether your application can send notifications using a message that
 explains exactly why you want to send them notifications.
 
-<img src="images/news-prompt.png" width="296" height="525" />
+![First ask before sending notifications and explain why.](images/news-prompt.png){:width="296px"}
 
 If the user approves, we need to send a subscription request to the push
 manager. Do this by calling `PushManager.subscribe()` (lines 5 through 9). In
@@ -99,7 +99,7 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
 
 This is the result in Chrome.
 
-<img src="images/news-permissions.png" width="296" height="526" />
+![Chrome prompts for permissions.](images/news-permissions.png){:width="296px"}
 
 ## Trigger from a specific action {#trigger-from-action}
 
@@ -112,7 +112,7 @@ For example, If an airline site wanted to notify users of flight delays,
 they would prominently display an opt-in checkbox and only ask for
 notification permissions after the user chooses to opt in.
 
-<img src="images/airline-prompt.png" width="324" height="520" />
+![A prompt with a specific action.](images/airline-prompt.png){:width="296px"}
 
 ## Provide a place to manage notifications {#manage-notifications}
 
@@ -125,10 +125,12 @@ more idea what a 'push notification' is than you would know how to adjust the
 orbit of a Soyuz capsule.
 
 Good:
-<img src="images/flight-delay.png" width="276" height="36" />
+
+![A notifications switch that shows what notifications will contain.](images/flight-delay.png){:width="296px"}
 
 Bad:
-<img src="images/send-push.png" width="276" height="36" />
+
+![A notifications switch that shows how notifications are implemented.](images/send-push.png){:width="296px"}
 
 ## Passing a subscription to the server {#passing-subscription}
 

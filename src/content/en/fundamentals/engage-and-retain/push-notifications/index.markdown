@@ -75,3 +75,12 @@ A typical options object looks something like this:
   ]
 }
 {% endhighlight %}
+
+This produces a notifiation that looks like this:
+
+![The example notification.](images/joe-asked.png){:width="316px"}
+
+In the next few sections we'll provide tips to help you build better
+notifications. We'll go on to describe the mechanincs of implementing them,
+including handling permissions and subscriptions, sending messages and
+responding to them.

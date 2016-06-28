@@ -13,7 +13,7 @@ authors:
 <p class="intro"> Way back at the [beginning of this section](index#anatomy), we
 showed a notification that looks like this and the code that goes with it.<br/><br/>
 
-<img src="images/joe-asked.png" width="300" height="109" /><br/><br/>
+<img src="images/joe-asked.png" alt="The example notification." width="316" /><br/><br/>
 
 While we showed you a little bit about how this is coded, we really didn't give
 you enough information for it to be useful. That's what this section is about.
@@ -149,7 +149,7 @@ Sometimes it's useful to combine multiple notifications into a single one. For
 example, a social networking app might want to avoid messaging users for every
 post from a particular person, and instead combine them.
 
-<img src="images/combined-notes-mobile.png" width="296" height="526">
+![Combine messages from the same sender.](images/combined-notes-mobile.png){:width="316px"}
 
 Combining similar notifications comes down to three things.
 
@@ -290,7 +290,7 @@ their own confirmation or ask for the appointment to be rescheduled. For the
 former we will send a message directly to the server. For the later we will open
 the application to an appropriate interface.
 
-<img src="images/confirmation.png" width="393" height="200" />
+![A notification with actions.](images/confirmation.png){:width="316px"}
 
 First, let's add a `notificationclick` event handler to the service worker. Also, 
 close the notification.

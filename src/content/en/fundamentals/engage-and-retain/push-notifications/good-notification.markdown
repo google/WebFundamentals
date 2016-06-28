@@ -94,7 +94,7 @@ use more power than an on-screen notification.
 A precise notification is one that has specific information that can be acted on
 immediately. Consider the image from the anatomy lesson again.
 
-<img src="images/joe-asked.png" width="300" height="109" />
+![A precise notification has specific information.](images/joe-asked.png){:width="316px"}
 
 It tells you:
 
@@ -112,18 +112,22 @@ then don't show a message that says, "New notification". Show one that says,
 "Pete said, 'no'."
 
 Good:
-<img src="images/pete-replied.png" width="298" height="69" />
+
+![Offer enough information so that users don't need to visit.](images/pete-replied.png){:width="316px"}
 
 Bad:
-<img src="images/new-missive.png" width="297" height="70" />
+
+![Don\'t make your messages vague and cryptic](images/new-missive.png){:width="316px"}
 
 This is especially important for critical information.
 
 Good:
-<img src="images/extreme-danger.png" width="304" height="70" />
+
+![Extreme Danger. Warp core breach in progress.](images/extreme-danger.png){:width="316px"}
 
 Bad:
-<img src="images/suggestion.png" width="301" height="70" />
+
+![Suggestion. What\s Scotty up to?](images/suggestion.png){:width="316px"}
 
 ### Put actions right in the notification {#offer-actions}
 
@@ -148,13 +152,17 @@ self.addEventListener('notificationclick', event => {
 ### Make the title and content specific {#specific-title}
 
 Make the title relevant to the context of the message and include something
-specific from the message.
+specific from the message. Content the recipient already knows, such as the name
+of your app sin not helpful. Niether is information the recipient doesn't know,
+such as technology used to send the message.
 
 Good:
-<img src="images/joe-asked.png" width="300" height="109" />
+
+![Make the title include something specific from the message.][images/joe-asked.png]{:width="316px"}
 
 Bad:
-<img src="images/sms-call.png" width="305" height="110" />
+
+![Don\'t include information that users already know or don't understand.](images/sms-call.png){:width="316px"}
 
 ### Put important information up front
 
@@ -164,10 +172,12 @@ text is read from left to right and from top to bottom. So a messaging app would
 might put the name of the sender at the top and left.
 
 Good:
-<img src="images/pete-replied.png" width="316" height="73" />
+
+![The sender name is at the top and left.](images/pete-replied.png){:width="316px"}
 
 Bad:
-<img src="images/new-missive.png" width="316" height="76" />
+
+![The information at the top and left is redundant.](images/new-missive.png){:width="316px"}
 
 ### Keep the message short {#keep-it-short}
 
@@ -197,10 +207,12 @@ information. For example if your title contains the day of the week,
 don't also list it in the body.
 
 Good:
-<img src="images/notification-no-dup-content.png" width="316" height="73" />
+
+![Information in the title isn\'t repeated.](images/notification-do-dup-content.png){:width="316px"}
 
 Bad:
-<img src="images/notification-dup-content.png" width="317" height="85" />
+
+![Message content repeats information in the title.](images/notification-dup-content.png){:width="316px"}
 
 Also, if the app is open, it's possible the new information is already on the
 screen. Instead of a notification, use the application UI to notify the user.
@@ -223,21 +235,21 @@ users with notifications, you may lose them altogether.
 
 Notifications already contain your domain name, and space is tight anyway.
 
-![Domain name in a Chrome notification.]()  
-![Domain name in a Firefox notification.]()
+<img alt="Domain name in a Chrome notification." src="images/chrome-notification.png" width="316" />
+<img alt="Domain name in a Firefox notification." src="images/firefox-notification.png" width="287" />
 
 ### Make the icon contextual {#contextual-icon}
 
 Icons should convey something about the message they accompany. Consider this
 example.
 
-<img src="images/contextual-icon.png" width="324" height="117" />
+![An icon that tells us nothing](images/still-up.png){:width="316px"}
 
-It tells us exactly who sent the message. The icon, which in many notifications
-is the site or app logo, tells us nothing.
+It tells us exactly who sent the message. But the icon, which in many
+notifications is the site or app logo, tells us nothing.
 
 Instead, let's use the sender's profile image.
 
-<img src="images/still-up.png" width="321" height="117" />
+![Use a profile image to tell the recipeient who sent the message.](images/contextual-icon.png){:width="316px"}
 
 But please keep the icon simple. Too much nuance may be lost on the user.
