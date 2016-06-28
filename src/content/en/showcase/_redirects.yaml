@@ -16,6 +16,8 @@ redirects:
   to: /web/showcase/2016/flipkart
 - from: /web/showcase/case-study/net-a-porter
   to: /web/showcase/2016/net-a-porter
+- from: /web/showcase/2016/
+  to: /web/showcase/
 
 - from: /web/showcase/spotlight/0hh1
   to: /web/showcase/2015/0hh1
@@ -35,6 +37,8 @@ redirects:
   to: /web/showcase/2015/svgomg
 - from: /web/showcase/spotlight/web_filter
   to: /web/showcase/2015/web_filter
+- from: /web/showcase/2015/
+  to: /web/showcase/
 
 - from: /web/showcase/case-study/
   to: /web/showcase/

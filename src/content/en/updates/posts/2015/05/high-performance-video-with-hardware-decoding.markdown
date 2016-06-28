@@ -14,7 +14,7 @@ tags:
   - EME
   - MSE
   - hardware-decoding
-  - codec
+  - codecs
 ---
 
 With the Chromium 42 release, H.264 hardware video decoding support has been expanded to OS X. Now Chromium on Macs, Windows 7+ and essentially all Chromebooks support power efficient decoding of video by default. Chromium's HTML5 video implementation will automatically make the best decision on when to use this feature based on driver and hardware support.

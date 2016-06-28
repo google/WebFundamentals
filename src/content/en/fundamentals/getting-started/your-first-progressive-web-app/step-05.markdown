@@ -24,13 +24,12 @@ on screen as quickly as possible, then updates that once the network has
 returned the latest data. In comparison to **network first then cache**, the user 
 does not have to wait until the fetch times out to get the cached data. 
 
-Cache first then network means we need to kick off two asynchronous requests, 
+**Cache first then network** means we need to kick off two asynchronous requests, 
 one to the cache and one to the network. Our network request with the app 
 doesn't need to change much, but we need to modify the service worker to cache 
 the response before returning it.
 
-This requires the us to make two asynchronous requests, one to the cache, and 
-one to the network. Under normal circumstances, the cached data will be return 
+Under normal circumstances, the cached data will be returned, 
 almost immediately providing the app with recent data it can use. Then, when the 
 network request returns, the app will be updated using the latest data from the 
 network.
@@ -39,7 +38,7 @@ network.
 
 We need to modify the service worker to intercept requests to the weather API 
 and store their responses in the cache, so we can easily access them later. In 
-the **cache then network** strategy, we expect the network response to be the 
+the **cache first then network** strategy, we expect the network response to be the 
 'source of truth', always providing us with the most recent information. If 
 it can't, it's OK to fail because we've already retrieved the latest cached 
 data in our app.

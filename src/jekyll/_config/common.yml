@@ -61,7 +61,7 @@ WFarray: []
 WFPromo: 
   title: "Progressive Web App Dev Summit"
   image: "https://www.gstatic.com/images/branding/product/1x/chrome_512dp.png"
-  text: "June 20-21, Amsterdam, NL - <a href='https://events.withgoogle.com/progressive-web-app-dev-summit/'>Learn more</a>"
+  text: "All sessions are availble on YouTube, <a href='https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb'>watch now</a>!"
 
 ## Unknowns
 fundamentals: /web/fundamentals

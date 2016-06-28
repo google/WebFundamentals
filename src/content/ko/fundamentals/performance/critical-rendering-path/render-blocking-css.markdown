@@ -1,6 +1,6 @@
 ---
 title: "렌더링을 블록 하는 CSS"
-description: "기본적으로 CSS는 렌더링을 블록 시키는 자원으로 여겨집니다, 어떻게 하면 렌더링이 블록되는 것을 막을 수 있는 지 배우세요."
+description: "기본적으로 CSS는 렌더링을 블록 시키는 자원으로 여겨집니다, 어떻게 하면 렌더링이 블록되는 것을 막을 수 있는 지 배워봅시다."
 updated_on: 2014-09-18
 translation_priority: 0
 translators:

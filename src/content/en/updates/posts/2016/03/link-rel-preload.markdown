@@ -9,7 +9,7 @@ authors:
 tags:
   - link
   - preload
-  - perf
+  - performance
   - chrome50
 featured_image: /web/updates/images/2016/03/link-rel-preload/preload.png
 ---

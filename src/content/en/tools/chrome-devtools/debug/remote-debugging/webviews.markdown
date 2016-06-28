@@ -42,7 +42,7 @@ This setting applies to all of the application's WebViews.
 
 {% highlight javascript %}
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-    if (0 != (getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE))
+    if (0 != (getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE))
     { WebView.setWebContentsDebuggingEnabled(true); }
 }
 {% endhighlight %}
