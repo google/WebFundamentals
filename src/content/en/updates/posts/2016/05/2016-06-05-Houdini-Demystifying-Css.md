@@ -1,3 +1,19 @@
+---
+layout: updates/post
+title: "Houdini – Demystifying CSS"
+description: "Houdini is a collection of APIs that expose the CSS engine’s internals to developers"
+published_on: 2016-05-20
+updated_on: 2016-05-20
+authors:
+  - surma
+tags:
+  - houdini
+  - css
+featured_image: /web/updates/images/2016/05/houdini/compworklet_small.png
+
+---
+
+
 你是否曾思考过(在页面布局中)CSS所承载的工作量？(紧接着)你修改了某个CSS属性的属性值，然后你整个网站瞬间以不同的layout展示在我们面前。CSS在页面布局方面确实有点魔力。(谁能告诉我，拥有这些魔力我们今后的道路将如何走?)到目前为止，身在web开发者社区的我们才能见证以及体验这些魔力。如果我们想提出自己的魔力该怎么办？如果我们想变成魔法师该怎么办？加入Houdini工作小组！  
 
 Houdini工作小组聚齐了来自Mozilla，Apple，Opera，Microsoft，HP，Intel以及Google工程师,工作小组的意图旨在把CSS引擎的部分模块暴露给web开发者。Houdini工作小组正在制订能够被W3C组织认可从而逐渐成为web标准的草案集。Houdini工作小组给他们自己定下了更高的目标，要将(由他们制订的)草案集变成规范草案，反过来，(由他们制订的)草案将会变成低层次且带有辅助性质的草案集。当有人谈论到"Houdini"时通常就表示他们谈论的是草案集。在我们写(自己筹备的)草案集的那段时间，草案列表都是处于未完成状态，甚至(草案列表中的)一些草案仅仅还是处于计划阶段。可见我们Houdini工作小组的准备工作是有多么的早啊。  
@@ -24,7 +40,7 @@ Paint Worklet不但可以让你定义元素如何画它本身(可以考虑结合
 
     class {
       static get inputProperties() {
-    return ['border-color', 'border-size'];
+      return ['border-color', 'border-size'];
       }
       paint(ctx, geom, inputProperties) {
     /*定义了inputProperties的get操作，调用inputProperties返回一个数组，所以对inputProperties['border-size']不是很理解*/
@@ -87,7 +103,7 @@ Paint Worklet不但可以让你定义元素如何画它本身(可以考虑结合
       new CompositorProxy($('.parallax'), ['transform']),
     ]);
       });  
-###
+
     // worklet.js
     registerCompositorAnimator('parallax', class {
       tick(timestamp) {
@@ -163,7 +179,7 @@ Typed CSSOM草案只是成熟草案的一个，并且[polyfill](https://github.c
       // => {em: 5, percent: 50}  
 
 ###Properties and Values([规范](https://drafts.css-houdini.org/css-properties-values-api/))
-你知道[CSS有哪些常见的属性](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care)(或者CSS Variables有哪些非正式的别名)？CSS Variables甚至还有数据类型的概念！到目前为止，CSS变量只能被赋值为字符串类型而且被经常用作关于搜索以及替换的解决方案。Properties and Values草案不仅允许你为CSS变量指定类型，而且允许你为CSS变量设置默认值以及允许你使用JavaScript API来影响CSS变量之间的继承关系。从技术上来讲，Properties and Values也允许常见的属性通过使用标准CSS过渡以及动画来实现动画效果，对于这种想法我们还是可以实现的。  
+你知道[CSS有哪些常见的属性](https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care)(或者CSS Variables有哪些非正式的别名)？CSS Variables甚至还有数据类型的概念！到目前为止，CSS变量只能被赋值为字符串而且被经常用作关于搜索以及替换的解决方案。Properties and Values草案不仅允许你为CSS变量指定类型，而且允许你为CSS变量设置默认值以及允许你使用JavaScript API来影响CSS变量之间的继承关系。从技术上来讲，Properties and Values也允许常见的属性通过使用标准CSS过渡以及动画来实现动画效果，对于这种想法我们还是可以实现的。  
 
     ["--scale-x", "--scale-y"].forEach(function(name) {
     document.registerProperty({
