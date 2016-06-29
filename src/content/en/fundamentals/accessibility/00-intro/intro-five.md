@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow
+layout: shared/narrow-pages-list
 title: "Accessibility Codelab"
 description: "Accessibility Codelab"
 published_on: 2016-03-01
