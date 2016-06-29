@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
+title: "Understanding Users' Diversity"
 description: "Accessibility Codelab"
 published_on: 2016-03-01
 updated_on: 2016-03-01
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Understanding Users' Diversity
 
 To explain further, here's an informative question/answer session with Victor Tsaran, a Technical Program Manager at Google, who is totally blind.
 

@@ -1,6 +1,6 @@
 ---
-layout: shared/narrow
-title: "Accessibility Codelab"
+layout: shared/narrow-pages-list
+title: "What Is Accessibility?"
 description: "Accessibility Codelab"
 published_on: 2016-03-01
 updated_on: 2016-03-01
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# What is Accessibility?
 
 Broadly speaking, when we say a site is "accessible", we mean that the site's content is available, and its functionality can be operated, by literally *anyone*. As developers, it's easy to assume that all users can see and use a keyboard, mouse, or touch screen, and interact with your application the same way you do. This can lead to an experience that might work well for some people, but create issues that can range from simple annoyances to show-stoppers for others. 
 
