@@ -25,7 +25,7 @@ notes:
 
 # Screen Readers
 
-Accessibility is all about understanding the experience of a diverse range of users. One popular type of software is the *screen reader*, a program that enables visually impaired people to use computers by reading the text on the screen in a generated voice. The user can control what is read by moving the cursor to a relevant area with the mouse or keyboard.
+Accessibility is about understanding the experience of a diverse range of users. One popular type of software is the *screen reader*, a program that enables visually impaired people to use computers by reading the text on the screen in a generated voice. The user can control what is read by moving the cursor to a relevant area with the mouse or keyboard.
 
 We asked Victor Tsaran to explain how, as a blind person, he accesses the web using a free screen reader for Windows called NonVisual Desktop Access, or NVDA.
 
