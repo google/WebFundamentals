@@ -34,7 +34,7 @@ RTCCertificates are the self-signed certificates used in the [DTLS](https://en.w
 
 Until recently, WebRTC used RSA-1024 keys for certificates. There are several disadvantages with these keys:
 
-* Generating RSA-1024 keys adds up to around 1000ms to call setup time.
+* Generating RSA-1024 keys can add up to around 1000ms in call setup time.
 * 1024-bit RSA keys do not provide adequate cryptographic strength.
 
 Because certificate generation with RSA-1024 is slow, some mobile apps have resorted to preparing certificates in advance or reusing them.
