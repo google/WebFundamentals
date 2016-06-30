@@ -4,7 +4,7 @@ title: "Interact with Bluetooth devices on the Web"
 description: "A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
 featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 published_on: 2015-07-22
-updated_on: 2016-07-27
+updated_on: 2016-06-30
 authors:
   - beaufortfrancois
 tags:
@@ -213,7 +213,8 @@ If you use a custom Bluetooth GATT characteristic, you may provide either the
 full Bluetooth UUID or a short 16- or 32-bit form to `service.getCharacteristic`.
 
 Note that you can also add a `characteristicvaluechanged` event listener on a
-characteristic to handle reading its value.
+characteristic to handle reading its value. Check out [Read Characteristic Value Changed Sample](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html) 
+to see how to optionally handle upcoming GATT notifications as well.
 
 {% highlight javascript %}
 ...
@@ -349,6 +350,7 @@ Service.
 - [Link Loss](https://googlechrome.github.io/samples/web-bluetooth/link-loss.html) - set the Alert Level characteristic of a BLE Device (readValue & writeValue).
 - [Discover Services & Characteristics](https://googlechrome.github.io/samples/web-bluetooth/discover-services-and-characteristics.html) - discover all accessible primary services and their characteristics from a BLE Device.
 - [Automatic Reconnect](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html) - reconnect to a disconnected BLE device using an exponential backoff algorithm.
+- [Read Characteristic Value Changed](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html) - read battery level and be notified of changes from a BLE Device.
 
 Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/demos) and [official Web Bluetooth Codelabs](https://github.com/googlecodelabs?query=bluetooth) as well.
 
