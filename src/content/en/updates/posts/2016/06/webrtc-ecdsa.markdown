@@ -55,7 +55,7 @@ RTCPeerConnection.generateCertificate({
   name: "ECDSA",
   namedCurve: "P-256"
 }).then(function(certificate) {
-  var pc = new RTCPeerConnection({..., certificates: [cert]});
+  var pc = new RTCPeerConnection({..., certificates: [certificate]});
 });
 {% endhighlight %}
 
