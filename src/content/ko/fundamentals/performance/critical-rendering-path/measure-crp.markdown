@@ -1,6 +1,6 @@
 ---
 description: "크리티컹 렌더링 패스를 측정하는 방법을 배워봅시다"
-title: "Measuring the critical rendering path with Navigation Timing"
+title: "네비게이션 타이밍으로 크리티컬 렌더링 패스 측정하기"
 updated_on: 2014-09-18
 translation_priority: 0
 translators:
