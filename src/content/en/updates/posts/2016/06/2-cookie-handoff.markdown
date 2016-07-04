@@ -6,6 +6,7 @@ published_on: 2016-06-20
 updated_on: 2016-06-20
 authors:
   - wdenniss
+  - owencm
 tags:
   - identity
   - sessions
