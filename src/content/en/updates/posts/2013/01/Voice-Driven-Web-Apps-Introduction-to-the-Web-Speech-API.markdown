@@ -22,7 +22,7 @@ tags:
 <figcaption><p><a href="https://www.google.com/intl/en/chrome/demos/speech.html">DEMO</a> / <a href="https://github.com/GoogleChrome/webplatform-samples/tree/master/webspeechdemo">SOURCE</a></p></figcaption>
 </figure>
 
-<p>Let’s take a look under the hood. First we check to see if the browser supports the Web Speech API by checking if the <code>webkitSpeechRecognition</code> object exists. If not, we suggest the user upgrades his browser. (Since the API is still experimental, it's currently vendor prefixed.) Lastly, we create the <code>webkitSpeechRecognition</code> object which provides the speech interface, and set some of its attributes and event handlers.</p>
+<p>Let’s take a look under the hood. First we check to see if the browser supports the Web Speech API by checking if the <code>webkitSpeechRecognition</code> object exists. If not, we suggest the user upgrades their browser. (Since the API is still experimental, it's currently vendor prefixed.) Lastly, we create the <code>webkitSpeechRecognition</code> object which provides the speech interface, and set some of its attributes and event handlers.</p>
 
 {% highlight javascript %}
 if (!('webkitSpeechRecognition' in window)) {
