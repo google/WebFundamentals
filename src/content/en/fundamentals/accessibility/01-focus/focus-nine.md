@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Focus Wrap-up"
+description: "Wrap-up for the Focus section"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 15
+order: 9
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Focus Wrap-up
 
 Using the skills you've learned in this lesson, you should now be equipped to implement a solid focus strategy in your application.
 
