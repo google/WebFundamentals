@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Text Alternatives for Images"
+description: "Using the alt attribute to provide text alternatives for images"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 21
+order: 6
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Text Alternatives for Images
 
 Of course, images are an important component of most web pages, and are a particular sticking point for low-vision users. We must consider the role an image plays in a page to work out what type of text alternative it should have. Take a look at this page.
 
