@@ -1,10 +1,10 @@
 ---
-layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+layout: shared/narrow-pages-list
+title: "Focus"
+description: "Overview of screen focus in accessibility"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 7
+order: 1
 translation_priority: 0
 authors:
   - megginkearney
@@ -23,9 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-# Overview
-
-In this lesson we'll talk about *focus* and how you can manage it in your application. In a nutshell, screen focus refers to which *control* (an input item such as a field, checkbox, button, or link) on the screen currently receives input from the keyboard (and from the clipboard when you paste content).
+In this lesson we'll talk about *focus* and how you can manage it in your application. In a nutshell, screen focus refers to which control (an input item such as a field, checkbox, button, or link) on the screen currently receives input from the keyboard (and from the clipboard when you paste content).
 
 You're probably familiar with focus for text fields. To type into a text field, you click it with the mouse, giving it focus. You may also know that if you press `Tab`, focus moves to the next control on the page. This is a great place to start learning about accessibility because we all know how to use a keyboard, it's easy to relate to and test, and it benefits virtually all users. 
 
