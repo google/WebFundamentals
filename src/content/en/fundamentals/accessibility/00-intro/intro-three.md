@@ -83,4 +83,4 @@ Let's take a look at some real-world examples of access impairments and see wher
 
 *Repetitive Strain Injury: e.g., carpal tunnel syndrome, tennis elbow, trigger finger
 
-Note that some impairments may fall into more than one category and/or type.
+**Important:** Note that some impairments may fall into more than one category and/or type.
