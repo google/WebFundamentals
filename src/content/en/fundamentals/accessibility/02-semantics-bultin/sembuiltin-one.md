@@ -1,10 +1,10 @@
 ---
-layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+layout: shared/narrow-pages-list
+title: "Introduction to Semantics"
+description: "Introduction to semantics and assistive technology"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 16
+order: 1
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Introduction to Semantics
 
 You've seen how to make a site accessible to users who can't use a mouse or pointing device &mdash; whether due to physical impairment, a technology issue, or personal preference &mdash; by addressing keyboard-only use. While it requires some care and thought, it's not a huge amount of work if you plan it from the beginning. Once that basic work is done, you're a long way down the path to a fully accessible, and more polished, site. 
 
