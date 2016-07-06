@@ -63,13 +63,13 @@ A typical options object looks something like this:
 
 {% highlight json %}
 {
-  body: "Are you free tonight?",
-  icon: "images/joe.png",
-  vibrate: [200, 100, 200, 100, 200, 100, 400],
-  tag: "request",
-  actions: [
-    { action: "yes", title: "Yes!", icon: "images/thumb-up.png" },
-    { action: "no", title: "No", icon: "images/thumb-down.png" }
+  "body": "Are you free tonight?",
+  "icon": "images/joe.png",
+  "vibrate": [200, 100, 200, 100, 200, 100, 400],
+  "tag": "request",
+  "actions": [
+    { "action": "yes", "title": "Yes!", "icon": "images/thumb-up.png" },
+    { "action": "no", "title": "No", "icon": "images/thumb-down.png" }
   ]
 }
 {% endhighlight %}

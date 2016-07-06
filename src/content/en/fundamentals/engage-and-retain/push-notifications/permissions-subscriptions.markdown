@@ -124,13 +124,17 @@ show users what you want to send them, not how it's implemented. Users have no
 more idea what a 'push notification' is than you would know how to adjust the
 orbit of a Soyuz capsule.
 
-Good:
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/flight-delay.png">
+    <figcaption class="wf-figcaption-good"><b>Do:</b> A notifications switch that shows what notifications will contain.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/send-push.png">
+    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> A notifications switch that shows how notifications are implemented.</figcaption>
+  </figure>
+</div>
 
-![A notifications switch that shows what notifications will contain.](images/flight-delay.png){:width="296px"}
-
-Bad:
-
-![A notifications switch that shows how notifications are implemented.](images/send-push.png){:width="296px"}
 
 ## Passing a subscription to the server {#passing-subscription}
 

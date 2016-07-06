@@ -111,23 +111,33 @@ it. For example, if you wanted to notify one user of acknowledgment by another,
 then don't show a message that says, "New notification". Show one that says,
 "Pete said, 'no'."
 
-Good:
-
-![Offer enough information so that users don't need to visit.](images/pete-replied.png){:width="316px"}
-
-Bad:
-
-![Don\'t make your messages vague and cryptic](images/new-missive.png){:width="316px"}
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/pete-replied.png">
+    <figcaption class="wf-figcaption-good"><b>Do:</b> Offer enough information
+    so that users don't need to visit.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/new-missive.png">
+    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Don't make your messages
+    vague and cryptic.</figcaption>
+  </figure>
+</div>
 
 This is especially important for critical information.
 
-Good:
-
-![Extreme Danger. Warp core breach in progress.](images/extreme-danger.png){:width="316px"}
-
-Bad:
-
-![Suggestion. What\s Scotty up to?](images/suggestion.png){:width="316px"}
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/extreme-danger.png">
+    <figcaption class="wf-figcaption-good"><b>Do:</b> Offer enough information
+    so that users don't need to visit.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/suggestion.png">
+    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Don't make your messages
+    vague and cryptic.</figcaption>
+  </figure>
+</div>
 
 ### Put actions right in the notification {#offer-actions}
 
@@ -156,13 +166,19 @@ specific from the message. Content the recipient already knows, such as the name
 of your app sin not helpful. Niether is information the recipient doesn't know,
 such as technology used to send the message.
 
-Good:
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/joe-asked.png">
+    <figcaption class="wf-figcaption-good"><b>Do:</b> Make the title include
+    something specific from the message.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/sms-call.png">
+    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Don't include
+    information that users already know or don't understand.</figcaption>
+  </figure>
+</div>
 
-![Make the title include something specific from the message.][images/joe-asked.png]{:width="316px"}
-
-Bad:
-
-![Don\'t include information that users already know or don't understand.](images/sms-call.png){:width="316px"}
 
 ### Put important information up front
 
@@ -171,13 +187,20 @@ notification that gets the most attention. For example, in western languages
 text is read from left to right and from top to bottom. So a messaging app would
 might put the name of the sender at the top and left.
 
-Good:
 
-![The sender name is at the top and left.](images/pete-replied.png){:width="316px"}
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/pete-replied.png">
+    <figcaption class="wf-figcaption-good"><b>Do:</b> The sender name is at 
+    the top and left.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/new-missive.png">
+    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> The information at the
+    top and left is redundant.</figcaption>
+  </figure>
+</div>
 
-Bad:
-
-![The information at the top and left is redundant.](images/new-missive.png){:width="316px"}
 
 ### Keep the message short {#keep-it-short}
 
@@ -206,13 +229,17 @@ relevant information, but removing duplication gives you extra room for other
 information. For example if your title contains the day of the week,
 don't also list it in the body.
 
-Good:
-
-![Information in the title isn\'t repeated.](images/notification-do-dup-content.png){:width="316px"}
-
-Bad:
-
-![Message content repeats information in the title.](images/notification-dup-content.png){:width="316px"}
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/notification-no-dup-content.png">
+    <figcaption class="wf-figcaption-good"><b>Do:</b> Information in the title
+    isn't repeated.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/notification-dup-content.png">
+    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Message content repeats information in the title.</figcaption>
+  </figure>
+</div>
 
 Also, if the app is open, it's possible the new information is already on the
 screen. Instead of a notification, use the application UI to notify the user.
@@ -235,21 +262,42 @@ users with notifications, you may lose them altogether.
 
 Notifications already contain your domain name, and space is tight anyway.
 
-<img alt="Domain name in a Chrome notification." src="images/chrome-notification.png" width="316" />
-<img alt="Domain name in a Firefox notification." src="images/firefox-notification.png" width="287" />
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/chrome-notification.png" alt="Domain name in a Chrome notification.">
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/firefox-notification.png" alt="Domain name in a Firefox notification.">
+  </figure>
+</div>
 
 ### Make the icon contextual {#contextual-icon}
 
 Icons should convey something about the message they accompany. Consider this
 example.
 
-![An icon that tells us nothing](images/still-up.png){:width="316px"}
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/still-up.png">
+    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Use a generic icon.
+    </figcaption>
+  </figure>
+  <div class="mdl-cell mdl-cell--6-col"></div>
+</div>
 
 It tells us exactly who sent the message. But the icon, which in many
 notifications is the site or app logo, tells us nothing.
 
 Instead, let's use the sender's profile image.
 
-![Use a profile image to tell the recipeient who sent the message.](images/contextual-icon.png){:width="316px"}
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/contextual-icon.png">
+    <figcaption class="wf-figcaption-good"><b>Do:</b> Use an icon that provides
+    some contextual information about the message.</figcaption>
+  </figure>
+  <div class="mdl-cell mdl-cell--6-col"></div>
+</div>
+
 
 But please keep the icon simple. Too much nuance may be lost on the user.
