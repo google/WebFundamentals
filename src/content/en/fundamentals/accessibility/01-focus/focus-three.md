@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Experiencing Focus"
+description: "How different kinds of users experience screen focus"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 9
+order: 3
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Experiencing Focus
 
 Let's try some of the focus techniques we just discussed. Again, using Chrome, go to this [airline site mockup page](http://robdodson.github.io/udacity-a11y/lesson2-focus/01-basic-form/) and search for a specific ticket **using only keyboard input**. The page doesn't accept mouse input, so you can't fudge the exercise (not that we don't trust you ;-). 
 
