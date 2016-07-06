@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Course Practicalities"
+description: "What we have covered so far and a look ahead"
 published_on: 2016-03-01
 updated_on: 2016-03-01
 order: 6
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Course Practicalities
 
 We've covered quite a bit of ground already! You have read about 
 
