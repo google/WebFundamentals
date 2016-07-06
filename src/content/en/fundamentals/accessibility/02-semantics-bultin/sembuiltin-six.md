@@ -27,7 +27,7 @@ Of course, images are an important component of most web pages, and are a partic
 
 ![funioncat1](imgs/funioncat1.png)
 
-In the page we have a picture of some bees, illustrating the article on bees. ChromeVox announces this as its literal name, "160204193356-01-cat-500.jpg" (which you can see in the black voiceover bar). Accurate, yes, but not at all useful.
+In the page we have a picture of a cat, illustrating the article on cats' judgemental behavior. ChromeVox announces this as its literal name, "160204193356-01-cat-500.jpg" (which you can see in the black voiceover bar). Accurate, yes, but not at all useful.
 
 You can use the `alt` attribute to provide a useful text alternative to this image &mdash; for example, "A cat staring menacingly into space" &mdash; then the screen reader can provide a succinct description of the image (again, seen in the black voiceover bar) and the user can choose whether to move on to the article.
 
