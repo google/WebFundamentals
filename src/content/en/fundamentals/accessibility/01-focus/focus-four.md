@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "DOM Order Matters"
+description: "The importance of the default DOM order"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 10
+order: 4
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# DOM Order Matters
 
 Working with native elements is a great way to learn about focus behavior because they are automatically inserted into the tab order based on their position in the DOM.
 
