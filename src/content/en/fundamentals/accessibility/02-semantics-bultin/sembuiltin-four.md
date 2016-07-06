@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "The Accessibility Tree"
+description: "Introduction to the Accessibility Tree"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 19
+order: 4
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# The Accessibility Tree
 
 Imagine you're building a user interface for screen reader users *only*. Here, you don't need to create any visual UI at all, but just provide enough information for the screen reader to use. 
 
