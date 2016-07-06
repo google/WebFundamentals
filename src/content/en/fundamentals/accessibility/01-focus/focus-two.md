@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "What is Focus?"
+description: "More coverage of focus in accessibility"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 8
+order: 2
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# What is Focus?
 
 Focus determines where keyboard events go in the page at any given moment. For instance, if you focus a text input field and begin typing, the input field receives the keyboard events and displays the characters you type. While it has focus, it will also receive pasted input from the clipboard.
 
