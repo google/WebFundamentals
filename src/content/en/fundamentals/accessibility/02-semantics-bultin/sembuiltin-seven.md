@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Built-in Semantics Wrap-up"
+description: "Wrap-up for Built-in Semantics section"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 22
+order: 7
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Built-in Semantics Wrap-up
 
 We've had a general look at semantics, how they're used by screen readers, and how we can structure HTML to express those semantics.
 
