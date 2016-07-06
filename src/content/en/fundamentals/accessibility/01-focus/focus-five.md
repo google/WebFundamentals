@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Using tabindex"
+description: "Modifying the DOM order with tabindex"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 11
+order: 5
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Using `tabindex`
 
 The default tab order provided by the DOM position of native elements is convenient, but there are times when you'll want to modify the tab order, and physically moving elements in the HTML isn't always an optimal (or even a feasible) solution. For these cases you can use the `tabindex` HTML attribute to explicitly set an element's tab position.
 
