@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Offscreen Content"
+description: "Managing tab order for offscreen content"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 13
+order: 7
 translation_priority: 0
 authors:
   - megginkearney
@@ -23,7 +23,6 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-# Offscreen Content
 Earlier we discussed making sure that elements appear in the DOM in a way that makes sense for the tab order. But what if you have content that isn't on screen yet, but still needs to be in the DOM, such as a slide-in/slide-out panel? When you have elements like this that receive focus, it can seem as if focus is disappearing and reappearing as the user tabs around, clearly an undesirable effect. Ideally, we should prevent the panel from gaining focus when it's offscreen, and only allow it to be focused when the user is able to interact with it.
 
 Sometimes you may need to do a bit of detective work to figure out where focus has gone. You can use `document.activeElement` from the console and figure out which element is currently focused. 
