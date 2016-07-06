@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Affordances"
+description: "Introduction to affordances"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 18
+order: 3
 translation_priority: 0
 authors:
   - megginkearney
@@ -23,8 +23,6 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-# Affordances
-
 When we use a man-made tool or device, we typically look to its form and design to give us an idea of what it does and how it works. An *affordance* is an object that offers, or affords, its user the opportunity to perform an action. The better the affordance is designed, the more obvious or intuitive its use.
 
 Some affordances can be misleading. A common example is a door with a U-shaped handle that most users expect to pull, but which may respond only to pushing. Others, such as a door with a flat plate that is clearly meant to be pushed, are more direct and obvious.
@@ -39,8 +37,6 @@ For example, you might paraphrase the use of common form elements (affordances) 
  - Dropdown &mdash; "I can open this element to display my options."
 
 You can draw conclusions about these elements *only because you can see them*. Obviously, someone who can't see the visual cues provided by the element can't comprehend its meaning or intuitively grasp the value of the affordance. So we must make sure that the information is expressed flexibly enough to be accessed by assistive technology that can construct an alternative interface to suit its user's needs.
-
-## Semantics and Assistive Technology
 
 This non-visual exposure of an affordance's use is called its *semantics*. The WebAIM WCAG guidelines address it like this.
 
