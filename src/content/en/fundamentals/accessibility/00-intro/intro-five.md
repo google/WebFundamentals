@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Web Content Accessibility Guidelines"
+description: "Introduction to WCAG 2.0"
 published_on: 2016-03-01
 updated_on: 2016-03-01
 order: 5
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Web Content Accessibility Guidelines
 
 Throughout this course we will refer to the *Web Content Accessibility Guidelines 2.0 (WCAG)*, a set of guidelines and best practices put together by accessibility experts to address what "accessibility" means in a methodical way. Several countries actually mandate the use of these guidelines in their web accessibility legal requirements.
 
