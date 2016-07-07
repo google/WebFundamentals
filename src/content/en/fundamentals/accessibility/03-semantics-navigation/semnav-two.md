@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Using Headings Effectively"
+description: "The role of heading structure in accessibility"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 24
+order: 2
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Using Headings Effectively
 
 First, let's reiterate an ealier point: *DOM order matters*, not only for focus order but for screen reader order. As you experiment with screen readers like VoiceOver and ChromeVox Lite, you'll notice how the heading list follows the DOM order rather than the visual order. 
 
@@ -46,13 +44,3 @@ Not all headings are visible on-screen. Wikipedia, for instance, uses a techniqu
 For complex applications, this can be a good way to accommodate headings when the visual design doesn't require or have room for a visible heading. 
 
 >Caveat: It's important not to go overboard with this technique. Remember that assistive technology users may also be able to see the screen for themselves, so going too far down the path of creating "screen reader only" content may actually degrade the user experience for some users. It can also create a maintenance headache for you later.
-
-
-
-
-
-
-
-
-
-
