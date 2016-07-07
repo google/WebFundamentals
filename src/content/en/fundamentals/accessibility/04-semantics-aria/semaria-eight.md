@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Implicit Semantics"
+description: "Using the implicit semantics of ARIA roles"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 34
+order: 8
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Implicit Semantics and Super-powered Roles
 
 Certain ARIA roles have implicit, or default, semantics.
 
