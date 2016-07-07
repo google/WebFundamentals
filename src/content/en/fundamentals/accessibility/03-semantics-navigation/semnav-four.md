@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Semantics and Navigation Wrap-up"
+description: "Wrap-up for the Semantics and Navigation section"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 26
+order: 4
 translation_priority: 0
 authors:
   - megginkearney
@@ -23,10 +23,8 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-# Semantics and Navigating Content Wrap-up
-
 You've seen that the more meaningful your headings are, as well as your link text page semantics, the more usable your page will be to a screen reader user.
 
-You've also seen that, as a general rule, you shouldn't try to control a screen reader user's experience; screen reader users will use the information available plus the capabilities of the tool they're using to find their own ways of using the page. 
+You've also seen that, as a general rule, you shouldn't try to control a screen reader user's experience; screen reader users will use the information available plus the capabilities of the tool they use &mdash; including its idiosyncracies &mdash; to find their own ways of using the page. 
 
 In the next lesson, we'll take a look at what we can do if HTML doesn't have the exact semantics we need or if, for some reason, the HTML element we would usually use isn't a good fit.
