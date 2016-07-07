@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "ARIA Relationships"
+description: "Using ARIA relationship attributes"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 31
+order: 5
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# ARIA Relationships
 
 Earlier, we discussed `aria-labelledby`, which is an example of a *relationship attribute*. A relationship attribute creates a semantic relationship between elements on the page regardless of their DOM relationship. In the case of `aria-labelledby`, that relationship is "this element is labelled by that element".
 
