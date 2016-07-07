@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "NVDA Screen Reader"
+description: "Introduction to the NVDA screen reader"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 30
+order: 4
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# NVDA Screen Reader
 
 Let's pause here for one small but important point: Just as you would test regular HTML code by viewing it in a browser, you should test your accessibility-compliant code with a real-world screen reader.
 
