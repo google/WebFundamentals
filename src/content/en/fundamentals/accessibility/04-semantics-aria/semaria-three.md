@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "ARIA Labels"
+description: "Using ARIA labels to create accessible element descriptions"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 29
+order: 3
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# ARIA Labels
 
 ARIA provides mechanisms for adding labels and descriptions to elements. In fact, ARIA is the only way to add accessible help or description text. Let's look at the properties ARIA uses to create accessible labels.
 
@@ -44,4 +42,3 @@ Importantly, `aria-labelledby` overrides **all** other name sources for an eleme
 ARIA allows us to add extra semantics to  HTML via attributes. Essentially, it allows us to modify the accessibility tree without changing anything else about the page presentation or behavior. By default, it won't affect styling nor interactive behavior; the only thing it changes is how the page appears to assistive technology users.
 
 We've taken a look at how to use ARIA to change an element's role, state, and properties, and how we can use ARIA to fine-tune the accessible name. Next, we'll learn more about how ARIA semantics interact with native HTML semantics. We'll look at some ARIA attributes that allow us to define more nuanced element relationships than we can express in the DOM alone, and we'll learn how and why to hide or show information exclusively for assistive technology users.
-
