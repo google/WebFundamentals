@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Hidden in Plain Sight"
+description: "Hiding content from assistive technology"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 32
+order: 6
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Hidden in Plain Sight
 
 Another important technique in fine-tuning the experience for assistive technology users involves ensuring that only the relevant parts of the page are exposed to assistive technology. There are several ways to ensure that a section of the DOM does not get exposed to accessibility APIs.
 
