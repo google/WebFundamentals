@@ -55,7 +55,7 @@ Each CSS file contains an annotation that specifies the URL of its source map fi
 
 For instance, given an Sass source file named **styles.scss**:
 
-{% highlight css %}$textSize: 26px;
+{% highlight scss %}$textSize: 26px;
 $fontColor: red;
 $bgColor: whitesmoke;
 h2 {
@@ -77,7 +77,7 @@ Sass generates a CSS file, **styles.css**, with the sourceMappingURL annotation:
 
 Below is an example source map file:
 
-{% highlight css %}{
+{% highlight json %}{
   "version": "3",
   "mappings":"AAKA,EAAG;EACC,SAAS,EANF,IAAI;EAOX,KAAK"
   "sources": ["sass/styles.scss"],
