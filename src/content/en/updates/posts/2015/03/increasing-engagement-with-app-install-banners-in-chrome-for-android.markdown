@@ -98,7 +98,7 @@ One use case is to defer the prompt until later in the page lifecycle, for examp
 
 ## <span id="action">Did a user install our web app</span>
 
-Anoter addition in Chrome 43 was the ability to discern if the user clicked "Yes" or "No" to the App install banner.
+Another addition in Chrome 43 was the ability to discern if the user clicked "Yes" or "No" to the App install banner.
 
 The `beforeinstallprompt` event will return a promise called `userChoice` that will resolve when the user
 actions the prompt.  The promise will return an object with a value of `dismissed` on the `outcome`
@@ -134,7 +134,7 @@ A new powerful feature for native app developers also landed in Chrome 44 Beta. 
   <img style="max-width: 100%; height: auto;" src="{{site.WFBaseUrl}}/updates/images/2015-03-03/inlineinstall.gif" alt="Native app install banner" />
 </p>
 
-The criteria are similar to the Web App install banner except for the need of a Serivce Worker:
+The criteria are similar to the Web App install banner except for the need of a Service Worker:
 
 * You have a [web app manifest
   file](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)
@@ -192,11 +192,11 @@ Yes.
 **How will the criteria for App Banner activation change over time?**
 We can't give specifics right now but as we better understand what makes an experience the user will want to install we will want to make sure the criteria are updated and also well understood for developers.
 
-**What could one of the critria for App Banner activation be?**
+**What could one of the criteria for App Banner activation be?**
 Again, it is hard to say.  One example could be: supporting offline scenarios in your app could indicate that your app is more resilient to connectivity issues and therefore would offer a better launchable experience.
 
 **Why do I need SSL?**
-Because you need a service worker, and since service workers can completly redirect any HTTP requests, we wouldn't want a man-in-the-middle attack to insert a different service worker than the one your app and user expects.
+Because you need a service worker, and since service workers can completely redirect any HTTP requests, we wouldn't want a man-in-the-middle attack to insert a different service worker than the one your app and user expects.
 
 **Are there any good examples of this in action?**
 Yes, Glad you asked:
