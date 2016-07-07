@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Semantics and ARIA Wrap-up"
+description: "Wrap-up for the ARIA semantics section"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 35
+order: 9
 translation_priority: 0
 authors:
   - megginkearney
@@ -23,11 +23,9 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-# Semantics and ARIA Wrap-up
-
 ARIA allows us to express an extremely broad range of semantic concepts via the use of HTML attributes.
 
-Obviously, ARIA is a very complex topic and it can take a long time to learn all of the precise details of the best use of ARIA roles, states, and properties, and special roles and attributes like `aria-live`.
+Obviously, ARIA is a very complex topic and it can take a long time to learn all of the precise details of the best use of ARIA roles, states, and properties, as well as special roles and attributes like `aria-live`.
 
 The [ARIA practices document](http://rawgit.com/w3c/aria/master/practices/aria-practices.html) is a great place to get information on ARIA best practices and design patterns, and the [ARIA spec](https://www.w3.org/TR/wai-aria/) has all the nitty gritty details on what the roles and attributes do, if you need to take a deeper dive. Then, like any skill, it's a matter of experimentation, practice, and persistence. There is no substitute for trying things out with real-world assistive technology, especially screen readers. And keep an eye out, because browsers are also developing native features that will start to make all of this easier.
 
