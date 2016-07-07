@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "What Can ARIA Do?"
+description: "Exploring ARIA's capabilities"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 28
+order: 2
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# What Can ARIA Do?
 
 As you saw with the checkbox example, ARIA can modify existing element semantics or add semantics to an element where no native semantics exist. It can also express semantic patterns that don't exist at all in HTML, like a menu or a tab panel. Often, ARIA lets us create widget-type elements that wouldn't be possible with plain HTML.
 
