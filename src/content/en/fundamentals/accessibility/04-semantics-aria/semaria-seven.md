@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Introducing aria-live"
+description: "Using aria-live to call attention to page updates"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 33
+order: 7
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Introducing aria-live
 
 `aria-live` allows developers to mark a part of the page as "live" in the sense that updates should be communicated to users immediately rather than if they just happen to explore that part of the page. When an element has an `aria-live` attribute, the part of the page containing it and its descendants is called a *live region*.
 
