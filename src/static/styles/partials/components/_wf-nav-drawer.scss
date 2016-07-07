@@ -54,6 +54,9 @@
 
 .wf-main-nav__item {
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .wf-main-nav__item a:hover {
