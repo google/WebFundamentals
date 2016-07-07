@@ -1,10 +1,10 @@
 ---
-layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+layout: shared/narrow-pages-list
+title: "Semantics and ARIA"
+description: "Introduction to ARIA and non-native HTML semantics"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 27
+order: 1
 translation_priority: 0
 authors:
   - megginkearney
@@ -23,9 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-# Semantics and ARIA
-
-So far, we've encouraged using native HTML elements because they give you focus, keyboard support, and built-in semantics, but there are instances when a simple layout and native HTML won't do the job. For example, currently there's no standardized HTML element for a pop-up menu, which is a very common UI metaphor. Nor is there an HTML element that provides a semantic characteristic like "the user needs to know about this as soon as possible".
+So far, we've encouraged using native HTML elements because they give you focus, keyboard support, and built-in semantics, but there are instances when a simple layout and native HTML won't do the job. For example, currently there's no standardized HTML element for a pop-up menu, which is a very common UI construct. Nor is there an HTML element that provides a semantic characteristic such as "the user needs to know about this as soon as possible".
 
 In this lesson, then, we'll explore how to express semantics that HTML can't express on its own.
 
