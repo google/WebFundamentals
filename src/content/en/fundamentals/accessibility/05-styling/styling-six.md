@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Color Deficiency and Accessibility"
+description: "Don't convey information with color alone"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 41
+order: 6
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Don't Convey Information with Color Alone
 
 There are roughly 320 million users with color vision deficiency. About 1 in 12 men and 1 in 200 women have some form of "color blindness"; this translates to around 1/20th, or 5%, of your users who will not experience your site the way you intend. When we rely on conveying information using color alone, we effectively push that number to unacceptable levels.
 
