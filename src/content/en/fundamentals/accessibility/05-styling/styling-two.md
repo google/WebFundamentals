@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Input Modality"
+description: "Styling input elements for proper focus"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 37
+order: 2
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Input Modality
 
 For native elements like `button`, browsers implement behaviors that let them detect whether the element was interacted with via a mouse click or a keyboard press, and only display the focus ring for keyboard interaction. The logic here is that mouse users are less likely to need the focus ring because they know what element they clicked.
 
