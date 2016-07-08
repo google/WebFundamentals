@@ -1,18 +1,16 @@
 ---
 layout: shared/narrow-subdirectories-list
 title: "Accessibility"
-description: "TBD"
+description: "Improving accessibility for web pages"
 published_on: 2016-06-27
 updated_on: 2016-06-27
 translation_priority: 0
 order: 6
 ---
 
-# Introduction
-
 This document set is a text-based version of part of the content covered in the Udacity course on Accessibility. Rather than a direct transcription of the video course, it is meant to be a more concise treatment of accessibility principles and practices, using the course's original content as a base.
 
-In this course, you'll learn basic principles for accessible web development, and how to make your sites accessible not just for people with disabilities, but for everyone. 
+In this course, you'll learn basic principles for accessible web development, and how to make your sites accessible &mdash; not just for people with disabilities, but for everyone. 
 
 The course consists of an introduction, five lessons, and a brief wrap-up. 
 
