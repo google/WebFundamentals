@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Mobile Screen Readers"
+description: "Links to information about mobile-specific screen readers"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 39
+order: 4
 translation_priority: 0
 authors:
   - megginkearney
