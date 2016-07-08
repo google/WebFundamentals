@@ -16,11 +16,23 @@
   <itunes:category text="Technology"/>
 
   <item>
+    <title>Springy CSS, Storage, and Bisecting.</title>
+    <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+    <itunes:subtitle>Paul and Jake talk about physics-based animation, asking the browser for permanent storage space, and how to find where a Chrome bug was created.</itunes:subtitle>
+    <itunes:summary><![CDATA[Paul has been playing with springy animations in the Safari Tech Preview, and Jake loves pubs that are also... windmills?]]></itunes:summary>
+    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art-la.png" />
+    <enclosure url="https://storage.googleapis.com/http-203-podcast/epsiode-5.mp3" length="85018132" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://developers.google.com/web/shows/http203/podcast/http-203-springy-css-storage-and-bisecting</guid>
+    <pubDate>Mon, 04 Jul 2016 15:23:55 +0100</pubDate>
+    <itunes:duration>00:59:56</itunes:duration>
+  </item>
+
+  <item>
     <title>Promises, Mistakes, and Door Handles.</title>
     <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
     <itunes:subtitle>Paul and Jake talk about how to Promisify Node, the sins of CSS, and how hard it can be to find a door handle.</itunes:subtitle>
     <itunes:summary><![CDATA[Jake's discovered display: contents, while Paul is concerned about people microbenchmarking ES2015 features.]]></itunes:summary>
-    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art-la.jpg" />
+    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art-la.png" />
     <enclosure url="https://storage.googleapis.com/http-203-podcast/episode-4.mp3" length="63577518" type="audio/mpeg"/>
     <guid isPermaLink="false">https://developers.google.com/web/shows/http203/podcast/http-203-promises-mistakes-and-door-handles</guid>
     <pubDate>Thu, 25 Feb 2016 16:00:00 +0100</pubDate>

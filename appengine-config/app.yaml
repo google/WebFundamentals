@@ -2,14 +2,6 @@ runtime: python27
 api_version: 1
 threadsafe: true
 
-pagespeed:
-  enabled_rewriters:
-    - InlineImages
-    - CollapseWhitespace
-    - RemoveComments
-    - InlineJs
-  url_blacklist:
-
 #default_expiration: "1d"
 handlers:
 - url: /robots.txt
