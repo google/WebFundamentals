@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Color and Contrast"
+description: "Color and contrast recommendations for improving accessibility"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 40
+order: 5
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Color and Contrast Requirements
 
 If you have good vision, it's easy to fall into the trap of thinking that everyone perceives colors, or text legibility, the same way you do &mdash; but evidence proves otherwise. Let's wrap things up by looking at how we can effectively use color and contrast to create pleasant designs that are accessible to everyone.
 
