@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "High-contrast Mode"
+description: "Using high-contrast mode to improve accessibility"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 42
+order: 7
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# High-contrast Mode
 
 High-contrast mode allows a user to invert foreground and background colors, which may help text stand out better. For someone with a low vision impairment, high -contrast mode can make it much easier to navigate the content on the page. There are a few ways to get a high-contrast setup on your machine.
 
