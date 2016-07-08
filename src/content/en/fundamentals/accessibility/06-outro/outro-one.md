@@ -1,10 +1,10 @@
 ---
-layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+layout: shared/narrow-pages-list
+title: "Course Wrap-up"
+description: "Wrap-up for Accessibility course"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 44
+order: 1
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Course Wrap-up
 
 Congratulations on completing this course! Let's recap.
 
