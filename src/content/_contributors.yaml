@@ -1000,6 +1000,22 @@ mscales:
   twitter: wibblymat
   email: mscales@google.com
 
+alan:
+  name:
+    given: Alan
+    family: Silva
+  org:
+    name: Independent
+    unit: Developer
+  country: Brazil
+  role:
+    - translator
+  twitter: AlanCezarAraujo
+  homepage: https://www.linkedin.com/in/alan-cezar-31a6a538
+  email: alan.cezar.silva@gmail.com
+  description:
+    en: "Alan is a JavaScript Developer"
+
 yoichiro:
   name:
     given: Yoichiro

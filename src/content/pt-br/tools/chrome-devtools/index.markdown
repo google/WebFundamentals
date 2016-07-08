@@ -2,6 +2,8 @@
 description: "O Chrome DevTools é um conjunto de ferramentas de desenvolvimento web embutidas no Google Chrome."
 title: "Chrome DevTools"
 translation_priority: 1
+translators:
+  - alan
 ---
 
 <div class="wf-devtools-wrapper">

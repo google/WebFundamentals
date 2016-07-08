@@ -3,6 +3,8 @@ title: "Configure e customize o DevTools"
 description: "Altere a aparência do DevTools e acesse recursos escondidos."
 updated_on: 2016-03-29
 translation_priority: 0
+translators:
+  - alan
 key-takeaways:
   tldr:
     - "Abra os menus Principal e Settings."
