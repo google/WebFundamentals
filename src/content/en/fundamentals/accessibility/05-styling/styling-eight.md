@@ -1,10 +1,10 @@
 ---
 layout: shared/narrow
-title: "Accessibility Codelab"
-description: "Accessibility Codelab"
+title: "Accessibility Styling Wrap-up"
+description: "Wrap-up for Accessibility Styling section"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 43
+order: 8
 translation_priority: 0
 authors:
   - megginkearney
@@ -22,8 +22,6 @@ notes:
   problem-solving:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
-
-# Accessibility Styling Wrap-up
 
 As you've seen in this lesson, there are a lot of interesting facets to accessibility worth considering when building an app.
 
