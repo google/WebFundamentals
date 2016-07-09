@@ -55,7 +55,7 @@ Each CSS file contains an annotation that specifies the URL of its source map fi
 
 For instance, given an Sass source file named **styles.scss**:
 
-{% highlight css %}$textSize: 26px;
+{% highlight scss %}$textSize: 26px;
 $fontColor: red;
 $bgColor: whitesmoke;
 h2 {
@@ -77,7 +77,7 @@ Sass generates a CSS file, **styles.css**, with the sourceMappingURL annotation:
 
 Below is an example source map file:
 
-{% highlight css %}{
+{% highlight json %}{
   "version": "3",
   "mappings":"AAKA,EAAG;EACC,SAAS,EANF,IAAI;EAOX,KAAK"
   "sources": ["sass/styles.scss"],
@@ -159,7 +159,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
     <tr>
       <td data-th="Compiler"><a href="http://lesscss.org/">Less</a></td>
       <td data-th="Command"><code>$ lessc styles.less > styles.css --source-map styles.css.map</code></td>
-      <td data-th="Instructions">Implemented in 1.5.0\. See <a href="https://github.com/less/less.js/issues/1050#issuecomment-25566463">issue #1050</a> for details and usage patterns.</td>
+      <td data-th="Instructions">Implemented in 1.5.0. See <a href="https://github.com/less/less.js/issues/1050#issuecomment-25566463">issue #1050</a> for details and usage patterns.</td>
     </tr>
     <tr>
       <td data-th="Compiler"><a href="https://learnboost.github.io/stylus/">Stylus</a></td>
