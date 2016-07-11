@@ -39,10 +39,10 @@ The rotor can also retrieve a *form control list*. Using this list, readers can 
 
 A common error that screen readers make is pronunciation. For example, a screen reader might pronounce "Udacity" as "oo-dacity", or read a phone number as a large integer, or read capitalized text as though it were an acronym. Interestingly, screen reader users are quite used to this quirk and take it into consideration.
 
-Some developers try to ameliorate this situation by providing screen-reader-only text that is spelled phonetically. Simple rule: don't do this &mdash; it only makes the problem worse. If, for example, a reader is using a braille display, the word will be spelled incorrectly, leading to more confusion. Screen readers allow words to be spelled aloud, so leave it to the reader to control their experience and decide when this is necessary.
+Some developers try to ameliorate this situation by providing screen-reader-only text that is spelled phonetically. Here's a simple rule for phonetic spelling: don't do it; it only makes the problem worse! If, for example, a reader is using a braille display, the word will be spelled incorrectly, leading to more confusion. Screen readers allow words to be spelled aloud, so leave it to the reader to control their experience and decide when this is necessary.
 
 Readers can use the rotor to see a *landmarks list*. This list helps readers find the main content and a set of navigational landmarks provided by HTML landmark elements.
 
-HTML5 introduces some new elements that help define the semantic structure of the page, including `header`, `footer`, `nav`, `article`, `section`, `main`, and `aside`. These elements specifically provide structural clues in the page without forcing any built-in styling (which you should do with CSS anyway). 
+HTML5 introduced some new elements that help define the semantic structure of the page, including `header`, `footer`, `nav`, `article`, `section`, `main`, and `aside`. These elements specifically provide structural clues in the page without forcing any built-in styling (which you should do with CSS anyway). 
 
 Semantic structural elements replace multiple, repetitive `div` blocks, and provide a clearer, more descriptive way to intuitively express page structure for both authors and readers.
