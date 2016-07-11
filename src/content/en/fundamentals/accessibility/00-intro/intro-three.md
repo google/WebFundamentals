@@ -72,7 +72,8 @@ To explain further, here's an informative question/answer session with Victor Ts
 
 In this interview, Victor identified a range of impairments, and placed them into four broad categories: *visual*, *motor*, *hearing*, and *cognitive*. He also pointed out that each type of impairment might be *situational*, *temporary*, or *permanent*. 
 
-Let's take a look at some real-world examples of access impairments and see where they fall within those categories and types.
+Let's take a look at some real-world examples of access impairments and see where they fall within those categories and types. Note that some impairments may fall into more than one category or type.
+
 
 | &nbsp;        | Situational  | Temporary | Permanent |
 |:----          |:----:        |:----:     |:----:     |
@@ -82,5 +83,3 @@ Let's take a look at some real-world examples of access impairments and see wher
 | **Cognitive** |              |concussion |           | 
 
 *Repetitive Strain Injury: e.g., carpal tunnel syndrome, tennis elbow, trigger finger
-
-**Important:** Note that some impairments may fall into more than one category and/or type.
