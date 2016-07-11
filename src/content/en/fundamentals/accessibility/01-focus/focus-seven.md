@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-Earlier we discussed making sure that elements appear in the DOM in a way that makes sense for the tab order. But what if you have content that isn't on screen yet, but still needs to be in the DOM, such as a slide-in/slide-out panel? When you have elements like this that receive focus, it can seem as if focus is disappearing and reappearing as the user tabs around, clearly an undesirable effect. Ideally, we should prevent the panel from gaining focus when it's offscreen, and only allow it to be focused when the user is able to interact with it.
+Earlier we discussed making sure that elements appear in the DOM in a way that makes sense for the tab order. But what if you have content that isn't on screen yet, but still needs to be in the DOM, such as a slide-in/slide-out panel? When you have elements like this that receive focus, it can seem as if focus is disappearing and reappearing as the user tabs around &mdash; clearly an undesirable effect. Ideally, we should prevent the panel from gaining focus when it's offscreen, and only allow it to be focused when the user can interact with it.
 
 Sometimes you may need to do a bit of detective work to figure out where focus has gone. You can use `document.activeElement` from the console and figure out which element is currently focused. 
 
@@ -31,7 +31,7 @@ Sometimes you may need to do a bit of detective work to figure out where focus h
 >
 >In this example, when the focus ring disappears, you can either use `document.activeElement` from the console, or you can run the accessibility audit to actively check for other things you may have overlooked.
 
-Once you know which offscreen element is being focused, you can set it to `display: none` or `visibility: hidden`, and then set it back to `display: block` or `visibility: visible` before showing it to the user. You could even give the element a tabindex of -1 and call focus on it when it appears on screen, although you must be careful with this approach because the element would still be visible to screen readers.
+Once you know which offscreen element is being focused, you can set it to `display: none` or `visibility: hidden`, and then set it back to `display: block` or `visibility: visible` before showing it to the user. You could even give the element a `tabindex` of -1 and call focus on it when it appears on screen (although you should be careful with this approach, because the element would still be visible to screen readers).
 
 Here's a sample page where the focus seems to get lost as we tab around. It is probably focusing something offscreen, but exactly which element isn't obvious.
 
