@@ -27,7 +27,7 @@ Congratulations on completing this course! Let's recap.
 
 In these lessons, you've leaned about *focus*, *semantics* (built-in and custom), *ARIA*, and *styling*, and how they all fit into the WCAG and WebAIM checklist. While these are all important tools in our accessibility kit, don't forget that accessibility isn't about the low-level details &mdash; it's really about making sure **all** of your users can access your content.
 
-It's important to remember that there's a whole range of users out there, not just the narrow spectrum that we might be designing for. Try not to over-focus; to build **only** for that subset of users is to exclude not only anyone with a permanent disability or impairment, but also means your product might fail any user when they are in a context that impacts the way they use technology, such as trying to use a phone one-handed while wrangling a screaming toddler.
+It's important to remember that there's a whole range of users out there, not just the narrow spectrum that we might be designing for at the moment. That is, try not to over-focus; to build only for that subset of users is to exclude not only anyone with a permanent disability or impairment, but also means your product might fail any user when they are in a context that impacts the way they use technology, such as trying to use a phone one-handed while wrangling a screaming toddler.
 
 Another critical aspect is to make accessibility part of the process from the beginning, and make it part of everyone's job.
 
