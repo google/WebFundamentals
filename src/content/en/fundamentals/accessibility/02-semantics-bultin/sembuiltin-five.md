@@ -29,13 +29,13 @@ However, sometimes we use elements that look like native elements but aren't. Fo
 
 ![tacobutton.png](imgs/tacobutton.png)
 
-It might be constructed in HTML in any number of ways.
+It might be constructed in HTML in any number of ways; one way is shown below.
 
 ```html
 <div class="button-ish">Give me tacos</div>
 ```
 
-When we don't use an actual button element, the screen reader has no way to know what it has landed on. Also, we would have to do the extra work we talked about in the previous lesson to make it usable to keyboard-only users, as right now, it can only be used with a mouse.
+When we don't use an actual button element, the screen reader has no way to know what it has landed on. Also, we would have to do the extra work discussed in the previous lesson to make it usable to keyboard-only users because, as it is coded now, it can only be used with a mouse.
 
 We can easily fix this by using a regular `button` element instead of a `div`. Using a native element also has the benefit of taking care of keyboard interactions for us. And remember that you don't have to lose your spiffy visual effects just because you use a native element; you can style native elements to make them look the way you want and still retain the implicit semantics and behavior.
 
@@ -46,7 +46,7 @@ Broadly, there are two types of names:
  - *Visible labels*, which are used by all users to associate meaning with an element, and
  - *Text alternatives*, which are only used when there is no need for a visual label.
 
-For text-level elements, we don't need to do anything, because by definition it will have some text content. However, for input or control elements, and visual content like images, we need to make sure that we specify a name. In fact, providing text alternatives for any non-text content is the [very first item on the WebAIM checklist](http://webaim.org/standards/wcag/checklist#g1.1).
+For text-level elements, we don't need to do anything, because by definition it will have some text content. However, for input or control elements, and visual content like images, we need to make sure that we specify a name. In fact, providing text alternatives for any non-text content is [the very first item on the WebAIM checklist](http://webaim.org/standards/wcag/checklist#g1.1).
 
 One way to do that is to follow their recommendation that "Form inputs have associated text labels." There are two ways to associate a label with a form element, such as a checkbox. Either of the methods causes the label text to also become a click target for the checkbox, which is also helpful for mouse or touchscreen users. To associate a label with an element, either
 
