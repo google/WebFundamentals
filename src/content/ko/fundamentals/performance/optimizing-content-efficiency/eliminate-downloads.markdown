@@ -5,7 +5,7 @@ published_on: 2016-07-11
 translators:
   - captainpangyo
 key-takeaways:
-  다운로드 제거하기:
+  eliminate-downloads:
     - "페이지의 모든 자원 및 3rd 파티 자원 목록 만들어 관리하기"
     - "각 자원의 성능을 측정하기: 그 가치와 기술적인 성능"
     - "그 자원이 충분한 가치를 제공하는지 확인하기"
