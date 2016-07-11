@@ -35,4 +35,4 @@ Don't worry about screen reader users missing important content because it doesn
 
 Here's a scenario where `tabindex` is not only useful, but necessary. You might be building a robust single page with different content sections, not all of which are simultaneously visible. In this kind of page, clicking a navigation link might change the content without doing a page refresh.
 
-When this happens, you would probably identify the selected content area, give it a `tabindex` of `-1` so that it doesn't appear in the natural tab order, and call its `focus` method. This technique, called *managing focus*, keeps the user's interactive context in sync with the site's visual representation (content).
+When this happens, you would probably identify the selected content area, give it a `tabindex` of -1 so that it doesn't appear in the natural tab order, and call its `focus` method. This technique, called *managing focus*, keeps the user's interactive context in sync with the site's visual representation (content).
