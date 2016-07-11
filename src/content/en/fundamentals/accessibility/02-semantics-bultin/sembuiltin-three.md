@@ -25,9 +25,9 @@ notes:
 
 When we use a man-made tool or device, we typically look to its form and design to give us an idea of what it does and how it works. An *affordance* is an object that offers, or affords, its user the opportunity to perform an action. The better the affordance is designed, the more obvious or intuitive its use.
 
-Some affordances can be misleading. A common example is a door with a U-shaped handle that most users expect to pull, but which may respond only to pushing. Others, such as a door with a flat plate that is clearly meant to be pushed, are more direct and obvious.
+Some affordances can be misleading. A common example is a door with a U-shaped handle that most users expect to pull, but that may respond only to pushing. Others affordances, such as a door with a flat plate that is clearly meant to be pushed, are more direct and obvious.
 
-In graphical user interfaces, affordances represent actions we can take, but can be ambiguous because there is no physical object to interact with. GUI affordances are thus specifically designed to be unambiguous: buttons, check boxes, and scroll bars are meant to convey their usage with as little training as possible.
+In graphical user interfaces, affordances represent actions we can take, but they can be ambiguous because there is no physical object to interact with. GUI affordances are thus specifically designed to be unambiguous: buttons, check boxes, and scroll bars are meant to convey their usage with as little training as possible.
 
 For example, you might paraphrase the use of common form elements (affordances) like this:
 
