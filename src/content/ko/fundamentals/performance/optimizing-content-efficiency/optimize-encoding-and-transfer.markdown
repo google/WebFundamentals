@@ -1,32 +1,32 @@
 ---
 layout: shared/narrow
-title: "Optimizing encoding and transfer size of text-based assets"
-description: "Next to eliminating unnecessary resource downloads, the best thing we can do to improve page load speed is to minimize our overall download size by optimizing and compressing the remaining resources."
-published_on: 2014-04-01
+title: "인코딩과 텍스트 기반 자원의 전송 크기 최적화 하기"
+description: "불필요한 자원 다운로딩을 하지 않는 것과 함께, 페이시 로딩 속도를 향상 시킬 수 있는 최선의 방법은 자원을 최적화 하고 압축하여 전체적인 다운로드 사이즈를 최소화 하는 것입니다."
+published_on: 2016-7-11
 updated_on: 2016-7-11
-order: 3
+order: 1
 translation_priority: 0
 authors:
-  - josh jang
+  - captainpangyo
 key-takeaways:
   compression-101:
-    - Compression is the process of encoding information using fewer bits
-    - Eliminating unnecessary data always yields the best results
-    - There are many different compression techniques and algorithms
-    - You will need a variety of techniques to achieve the best compression
+    - 압축은 적은 비트수를 이용하여 정보를 인코딩하는 과정.
+    - 불필요한 데이터를 제거하는 것은 최고의 결과를 낳는다.
+    - 압축 기술과 압축 알고리즘은 무수히 많다.
+    - 최적의 압축을 하려면 여러가지 기술을 혼용해야 한다.
   minification:
-    - Content-specific optimizations can significantly reduce the size of delivered resources.
-    - Content-specific optimizations are best applied as part of your build/release cycle.
+    - 특정 컨텐츠 최적화는 전송하려는 자원의 상당한 양을 줄일 수 있다.
+    - 특정 컨텐츠 최적화는 개발/배포 싸이클에 가장 잘 적용될 수 있다.
   text-compression:
-    - "GZIP performs best on text-based assets: CSS, JavaScript, HTML"
-    - All modern browsers support GZIP compression and will automatically request it
-    - Your server needs to be configured to enable GZIP compression
-    - Some CDNs require special care to ensure that GZIP is enabled
+    - GZIP은 CSS, Javascript, HTML와 같은 텍스트 기반 자원에서 가장 잘 수행된다.
+    - 대부분의 최신 브라우저들은 GZIP 압축을 지원하고 자동으로 요청한다.
+    - GZIP 압축을 사용할 수 있도록 서버를 구성해야 한다.
+    - 몇몇의 CDNs는 GZIP 사용을 위한 추가적인 관리가 필요하다.
 notes:
   jquery-minify:
-    - "Case in point, the uncompressed development version of the JQuery library is now approaching ~300KB. The same library, but minified (removed comments, etc.) is about 3x smaller: ~100KB."
+    - "압축이 안된 JQuery 라이브러리는 현재 300KB 정도 크기다. 동일한 라이브러리로 압축된 버전(주석제거 등)은 약 3배 정도 작다: ~100KB."
   gzip:
-    - "Believe it or not, there are cases where GZIP can increase the size of the asset. Typically, this happens when the asset is very small and the overhead of the GZIP dictionary is higher than the compression savings, or if the resource is already well compressed. Some servers allow you to specify a “minimum filesize threshold” to avoid this problem."
+    - "믿거나 말거나, GZIP가 자원의 크기를 늘릴 수 있는 경우가 있다. 일반적으로, 자원이 매우 작거나 GZIP 사전의 오버헤드가 압축으로 절약할 수 있는 양보다 높을 경우 일어난다, 또한 만약 자원이 이미 잘 압축이 되어 있는 경우도 포함된다. 몇몇 서버는 이러한 문제를 방지하기 위해"최소 파일 크기 한계점" 을 정의하도록 요구한다."
 ---
 
 <p class="intro">
