@@ -25,7 +25,7 @@ notes:
 
 Another important technique in fine-tuning the experience for assistive technology users involves ensuring that only the relevant parts of the page are exposed to assistive technology. There are several ways to ensure that a section of the DOM does not get exposed to accessibility APIs.
 
-First, anything that is explicitly hidden to the DOM will also not be included in the accessibility tree. So anything that has a `visibility: hidden` or `display: none` CSS style or uses the HTML5 `hidden` attribute will also be hidden from assistive technology users.
+First, anything that is explicitly hidden from the DOM will also not be included in the accessibility tree. So anything that has a CSS style of `visibility: hidden` or `display: none` or uses the HTML5 `hidden` attribute will also be hidden from assistive technology users.
 
 However, an element that is not visually rendered but not explicitly hidden is still included in the accessibility tree. One common technique is to include "screen reader only text" in an element that is absolute positioned offscreen &mdash; although, as we have seen, it's also possible to provide screen reader only text via an `aria-label`, `aria-labelledby`, or `aria-describedby` attribute referencing an element that is otherwise hidden. 
 
