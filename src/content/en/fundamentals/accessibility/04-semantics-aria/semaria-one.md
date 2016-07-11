@@ -23,11 +23,11 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-So far, we've encouraged using native HTML elements because they give you focus, keyboard support, and built-in semantics, but there are instances when a simple layout and native HTML won't do the job. For example, currently there's no standardized HTML element for a pop-up menu, which is a very common UI construct. Nor is there an HTML element that provides a semantic characteristic such as "the user needs to know about this as soon as possible".
+So far, we've encouraged using native HTML elements because they give you focus, keyboard support, and built-in semantics, but there are instances when a simple layout and native HTML won't do the job. For example, currently there's no standardized HTML element for a very common UI construct, the pop-up menu. Nor is there an HTML element that provides a semantic characteristic such as "the user needs to know about this as soon as possible".
 
 In this lesson, then, we'll explore how to express semantics that HTML can't express on its own.
 
-The Web Accessibility Initiative's Accessible Rich Internet Applications specification (WAI-ARIA, or just ARIA) is good for bridging areas where there are accessibility issues that can't be managed with native HTML. It works by allowing you to specify attributes modify the way an element is translated into the accessibility tree. Let's look at an example.
+The Web Accessibility Initiative's Accessible Rich Internet Applications specification (WAI-ARIA, or just ARIA) is good for bridging areas with accessibility issues that can't be managed with native HTML. It works by allowing you to specify attributes that modify the way an element is translated into the accessibility tree. Let's look at an example.
 
 In the following snippet, we use a list item as a kind of custom checkbox. The CSS "checkbox" class gives the element the required visual characteristics.
 
@@ -39,7 +39,7 @@ In the following snippet, we use a list item as a kind of custom checkbox. The C
 
 While this works fine for sighted users, a screen reader will give no indication that the element is meant to be a checkbox, so low-vision users may miss the element entirely. 
 
-Using ARIA attributes, we can give the element the missing information so the screen reader can properly interpret it. Here, we added the `role` and `aria-checked` attributes to explicitly identify the element as a checkbox and specify that it is checked. The list item will now be added to the accessibility tree and a screen reader will correctly report it as a checkbox.
+Using ARIA attributes, however, we can give the element the missing information so the screen reader can properly interpret it. Here, we've added the `role` and `aria-checked` attributes to explicitly identify the element as a checkbox and to specify that it is checked by default. The list item will now be added to the accessibility tree and a screen reader will correctly report it as a checkbox.
 
 ```html
 <li tabindex="0" class="checkbox" role="checkbox" checked aria-checked="true">
