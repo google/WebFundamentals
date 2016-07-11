@@ -23,9 +23,9 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-`aria-live` allows developers to mark a part of the page as "live" in the sense that updates should be communicated to users immediately rather than if they just happen to explore that part of the page. When an element has an `aria-live` attribute, the part of the page containing it and its descendants is called a *live region*.
+`aria-live` allows developers to mark a part of the page as "live" in the sense that updates should be communicated to users immediately regardless of the page position, rather than if they just happen to explore that part of the page. When an element has an `aria-live` attribute, the part of the page containing it and its descendants is called a *live region*.
 
-For example, a live region might be a status message that appears as a result of a user action. If this message is important enough to grab a sighted user's attention, we can direct an assistive technology user's attention to it by setting an `aria-live` attribute on it. Compare this plain `div`
+For example, a live region might be a status message that appears as a result of a user action. If the message is important enough to grab a sighted user's attention, it is important enough to direct an assistive technology user's attention to it by setting its `aria-live` attribute. Compare this plain `div`
 
 ```html
 <div class="status">Your message has been sent.</div>
@@ -45,7 +45,7 @@ with its "live" counterpart.
 
 There are some tricks to making sure your live regions work correctly.
 
-First, your `aria-live` region should probably be in the initial page load. This is not a hard-and-fast rule, but if you're having difficulty with an `aria-live` region, this might be the issue.
+First, your `aria-live` region should probably be set in the initial page load. This is not a hard-and-fast rule, but if you're having difficulty with an `aria-live` region, this might be the issue.
 
 Second, different screen readers react differently to different types of changes. For example, it's possible to trigger an alert on some screen readers by toggling a descendant element's `hidden` style from true to false. 
 
