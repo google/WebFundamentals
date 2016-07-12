@@ -1041,7 +1041,7 @@ captainpangyo:
     name: POSCO ICT
     unit: SW Platform
   country: KR
-    role:
+  role:
     - translator
   homepage: https://joshuajangblog.wordpress.com/
   google: +jangkeehyo
