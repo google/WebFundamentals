@@ -34,15 +34,16 @@ notes:
   }
 </style>
 
-<script>
+<!-- <script>
 function supportsCustomElements() {
   return 'customElements' in window;
 }
 </script>
+ -->
 
 <div class="forward">
   <b>Already familiar with custom elements?</b>
-  <p>This article describes the new <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">Custom Elements v1 spec</a>. If you've been using custom elements, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4642138092470272">v0 version shipped in Chrome 33</a>. The concepts are the same, but the v1 spec has important API differences. Keep reading too see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.</p>
+  <p>This article describes the new <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">Custom Elements v1 spec</a>. If you've been using custom elements, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4642138092470272">v0 version shipped in Chrome 33</a>. The concepts are the same, but the v1 spec has important API differences. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.</p>
 </div>
 
 ### TL;DR {#tldr}
@@ -58,7 +59,7 @@ vanilla JS/HTML/CSS. The result is less code, modular code, and more reuse in ou
 {% include shared/toc.liquid %}
 
 The browser gives us an excellent tool for structuring web applications.
-It's called HTML.  You may have heard of it! It's declarative, portable, well supported, and easy to work with. Great as HTML may be, its vocabulary and extensibility is limited. [HTML living standard](https://html.spec.whatwg.org/multipage/) lacks a way to automatically associate JS behavior with your markup...until now.
+It's called HTML.  You may have heard of it! It's declarative, portable, well supported, and easy to work with. Great as HTML may be, its vocabulary and extensibility are limited. [HTML living standard](https://html.spec.whatwg.org/multipage/) lacks a way to automatically associate JS behavior with your markup...until now.
 
 
 Custom elements are the answer to modernizing HTML; filling in the missing pieces,
@@ -89,13 +90,11 @@ Example usage:
 <app-drawer></app-drawer>
 {% endhighlight %}
 
-It's important to remember that using a custom element is no different than using a `<div>`.
-Instances can be declared on the page, created dynamically in JavaScript, event listeners can be attached,
-etc. Keep reading for more examples.
+It's important to remember that using a custom element is no different than using a `<div>` or any other element. Instances can be declared on the page, created dynamically in JavaScript, event listeners can be attached, etc. Keep reading for more examples.
 
 ### Defining an element's JavaScript API {#jsapi}
 
-The functionality of a custom element is defined using an ES2015 `class` which extends `HTMLElement`.
+The functionality of a custom element is defined using an ES2015 [`class`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) which extends `HTMLElement`.
 Extending `HTMLElement` ensures the custom element inherits the entire DOM API and
 means any properties/methods that you add to the class become part of the element's DOM interface.
 Essentially, use the class to create a **public JavaScript API** for your tag.
@@ -158,11 +157,11 @@ class AppDrawer extends HTMLElement {
 customElements.define('app-drawer', AppDrawer);
 {% endhighlight %}
 
-In this example, we're creating a drawer that has a `open` property, `disabled` property,
+In this example, we're creating a drawer that has an `open` property, `disabled` property,
 and a `toggleDrawer()` method. It also [reflects properties as HTML attributes](#reflectattr).
 
 A neat feature of custom elements is that **`this` inside a class definition refers to
-the DOM element itself**. In our example, `this` refers to `<app-drawer>`. This (😉) is how the element can attach a `click` listener to itself! And you're not limited to event listeners. The entire DOM API is available inside element code. Use `this` to access the element's properties, inspect its children (`this.children`), query nodes (`this.querySelectorAll('.items')`), etc.
+the DOM element itself** i.e. the instance of the class. In our example, `this` refers to `<app-drawer>`. This (😉) is how the element can attach a `click` listener to itself! And you're not limited to event listeners. The entire DOM API is available inside element code. Use `this` to access the element's properties, inspect its children (`this.children`), query nodes (`this.querySelectorAll('.items')`), etc.
 
 **Rules on creating custom elements**
 
@@ -184,7 +183,7 @@ Extending another custom element is done by extending its class definition.
 {% highlight javascript %}
 class FancyDrawer extends AppDrawer {
   constructor() {
-    super(); // always call super() first in the ctor.
+    super(); // always call super() first in the ctor. This also calls the extended class' ctor.
     ...
   }
 
@@ -261,14 +260,14 @@ They can declare it by adding the `is=""` attribute on the native tag:
 create an instance in JavaScript:
 
 {% highlight javascript %}
-// Custom elements overloads createElement() to support the is="" attribute.
-let button document.createElement('button', {is: 'fancy-button'});
+// Custom elements overload createElement() to support the is="" attribute.
+let button = document.createElement('button', {is: 'fancy-button'});
 button.textContent = 'Fancy button!';
 button.disabled = true;
 document.body.appendChild(button);
 {% endhighlight %}
 
-use the `new` operator:
+or use the `new` operator:
 
 {% highlight javascript %}
 let button = new FancyButton();
@@ -388,37 +387,42 @@ the values are applied to the live DOM as attributes:
 <div id="my-id" hidden>
 {% endhighlight %}
 
-This is called "[reflecting properties to attributes](https://www.w3.org/TR/html5/infrastructure.html#reflect)". Almost every property in HTML does this. Custom elements can also reflect their properties back to attributes. It's useful when you want to **keep markup in-sync with the state of JavaScript**.
+This is called "[reflecting properties to attributes](https://www.w3.org/TR/html5/infrastructure.html#reflect)". Almost every property in HTML does this. Why? Attributes are also useful for configuring an
+element declaratively and certain APIs like accessibility and CSS selectors rely on attributes to work.
 
-Recall our app drawer. When users toggle the `open` property, a setter reflects
-that value to an attribute of the same name:
+Reflecting a property is useful anywhere you want to **keep the element's DOM
+representation in sync with its JavaScript state**. One reason you might want
+to reflect a property is so user-defined styling applies when JS state changes.
 
-{% highlight javascript %}
-...
-
-get open() {
-  return this.hasAttribute('open');
-}
-
-set open(val) {
-  // Reflect the value of `open` as an attribute.
-  if (val) {
-    this.setAttribute('open', '');
-  } else {
-    this.removeAttribute('open');
-  }
-  this.toggleDrawer();
-}
-{% endhighlight %}
-
-Another reason for reflecting property values is so user-defined styling will
-apply when JS state changes. For example, users could fade out the drawer
-and prevent user interaction when it's disabled:
+Recall our `<app-drawer>`. A consumer of this component may want to fade it out
+and/or prevent user interaction when it's disabled:
 
 {% highlight css %}
 app-drawer[disabled] {
   opacity: 0.5;
   pointer-events: none;
+}
+{% endhighlight %}
+
+When the `disabled` property is changed in JS, we want that attribute to be added
+to the DOM so the user's selector matches. The element can provide that behavior
+by reflecting the value to an attribute of the same name:
+
+{% highlight javascript %}
+...
+
+get disabled() {
+  return this.hasAttribute('disabled');
+}
+
+set disabled(val) {
+  // Reflect the value of `disabled` as an attribute.
+  if (val) {
+    this.setAttribute('disabled', '');
+  } else {
+    this.removeAttribute('disabled');
+  }
+  this.toggleDrawer();
 }
 {% endhighlight %}
 
@@ -481,7 +485,7 @@ But this doesn't mean you have to define + register a custom element all in one 
 
 **Custom elements can be used _before_ their definition is registered**.
 
-Progressive enhancement is a feature of custom elements. In other words, you can use a bunch of `<app-drawer>` elements on the page and never invoke `customElements.define('app-drawer', ...)` until much later. The process of calling `define()` and endowing an existing element with a class definition is called "element upgrades".
+Progressive enhancement is a feature of custom elements. In other words, you can declare a bunch of `<app-drawer>` elements on the page and never invoke `customElements.define('app-drawer', ...)` until much later. This is because the browser treats potential custom elements differently thank [unknown tags](#unknown). The process of calling `define()` and endowing an existing element with a class definition is called "element upgrades".
 
 To know when a tag name becomes defined, you can use `window.customElements.whenDefined()`.
 It vends a Promise that resolves when the element becomes defined.
@@ -542,7 +546,7 @@ Declaring this tag will produce:
 </x-foo-with-markup>
 {% endhighlight %}
 
-<div class="demoarea">
+<!-- <div class="demoarea">
   <x-foo-with-markup></x-foo-with-markup>
 </div>
 
@@ -554,7 +558,7 @@ if (supportsCustomElements()) {
     }
   });
 }
-</script>
+</script> -->
 
 {% include shared/note.liquid list=page.notes.children %}
 
@@ -606,7 +610,7 @@ Example usage:
 
 {% endhighlight %}
 
-<div class="demoarea">
+<!-- <div class="demoarea">
   <x-foo-shadowdom>
     <p><b>User's</b> custom text</p>
   </x-foo-shadowdom>
@@ -625,7 +629,7 @@ if (supportsCustomElements()) {
     }
   });
 }
-</script>
+</script> -->
 
 ### Creating elements from a &lt;template&gt; {#fromtemplate}
 
@@ -662,7 +666,7 @@ These few lines of code pack a punch. Let's understanding the key things going o
 3. The element's DOM is local to the element thanks to Shadow DOM
 4. The element's internal CSS is scoped to the element thanks to Shadow DOM
 
-<div class="demoarea">
+<!-- <div class="demoarea">
   <x-foo-from-template></x-foo-from-template>
 </div>
 
@@ -682,7 +686,7 @@ if (supportsCustomElements()) {
     }
   });
 }
-</script>
+</script> -->
 
 ## Styling a custom element {#styling}
 
@@ -861,14 +865,14 @@ components. Combine them with the other new platform primitives like Shadow DOM 
   </div>
 </div>
 
-<script>
+<!-- <script>
 if (!supportsCustomElements()) {
   let demos = document.querySelectorAll('.demoarea');
   Array.from(demos).forEach(function(demo) {
     demo.hidden = true;
   });
 }
-</script>
+</script> -->
 
 [spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [sd_spec]: http://w3c.github.io/webcomponents/spec/shadow/
