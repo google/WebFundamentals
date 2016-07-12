@@ -27,8 +27,8 @@
       </description>
       {% if post.tags %}{% for tag in post.tags %}<category>{{ tag | xml_escape }}</category>
       {% endfor %}{% endif %}
-      {% if post.authors %}{% for author in post.authors %}{% assign contributor = site.data["contributors"][author] %}
-      <author>{{contributor.name.given}} {{contributor.name.family}} &lt;{% if contributor.email %}{{contributor.email}}{% else %}sorry@example.com{% endif %}&gt;</author>
+      {% if post.authors %}{% for author in post.authors limit:1 %}{% assign contributor = site.data["contributors"][author] %}
+      <author>{% if contributor.email %}{{contributor.email}}{% else %}sorry@example.com{% endif %} ({{contributor.name.given}} {{contributor.name.family}})</author>
       {% endfor %}{% endif %}
     </item>
     {% endfor %}
