@@ -58,7 +58,7 @@ vanilla JS/HTML/CSS. The result is less code, modular code, and more reuse in ou
 {% include shared/toc.liquid %}
 
 The browser gives us an excellent tool for structuring web applications.
-It's called HTML.  You may have heard of it! It's declarative, portable, well supported, and easy to work with. Great as HTML may be, its vocabulary and extensibility are limited. [HTML living standard](https://html.spec.whatwg.org/multipage/) lacks a way to automatically associate JS behavior with your markup...until now.
+It's called HTML.  You may have heard of it! It's declarative, portable, well supported, and easy to work with. Great as HTML may be, its vocabulary and extensibility are limited. The [HTML living standard](https://html.spec.whatwg.org/multipage/) lacks a way to automatically associate JS behavior with your markup...until now.
 
 
 Custom elements are the answer to modernizing HTML; filling in the missing pieces,
@@ -69,7 +69,7 @@ we can create a custom element that does. **Custom elements teach the browser ne
 
 To define a new HTML element we need the power of JavaScript!
 
-The `customElements` interface is used for defining a custom element and teaching
+The `customElements` global is used for defining a custom element and teaching
 the browser about a new tag. Call `customElements.define()` with the tag name you want
 to create and a JavaScript `class` that extends the base `HTMLElement`.
 
@@ -166,7 +166,7 @@ the DOM element itself** i.e. the instance of the class. In our example, `this` 
 
 1. The name of a custom element **must contain a dash (-)**. So `<x-tags>`, `<my-element>`, and `<my-awesome-app>` are all valid names, while `<tabs>` and `<foo_bar>` are not. This requirement is so the HTML parser can distinguish custom elements from regular elements. It also ensures forward compatibility when new tags are added to HTML.
 2. You can't register the same tag more than once. Attempting to do so will throw a `DOMException`. Once you've told the browser about a new tag, that's it. No take backs.
-3. Custom elements cannot be self-closing because HTML only allows <a href='https://www.w3.org/TR/html-markup/syntax.html#void-elements' target='blank'>a few elements</a> to be self-closing. Always declare a closing tag (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>".
+3. Custom elements cannot be self-closing because HTML only allows [a few elements](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) to be self-closing. Always declare a closing tag (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>).
 
 ## Extending elements {#extend}
 
@@ -386,7 +386,7 @@ the values are applied to the live DOM as attributes:
 <div id="my-id" hidden>
 {% endhighlight %}
 
-This is called "[reflecting properties to attributes](https://www.w3.org/TR/html5/infrastructure.html#reflect)". Almost every property in HTML does this. Why? Attributes are also useful for configuring an
+This is called "[reflecting properties to attributes](https://html.spec.whatwg.org/multipage/infrastructure.html#reflecting-content-attributes-in-idl-attributes)". Almost every property in HTML does this. Why? Attributes are also useful for configuring an
 element declaratively and certain APIs like accessibility and CSS selectors rely on attributes to work.
 
 Reflecting a property is useful anywhere you want to **keep the element's DOM
@@ -632,7 +632,7 @@ if (supportsCustomElements()) {
 
 ### Creating elements from a &lt;template&gt; {#fromtemplate}
 
-For those unfamiliar, the [`<template>` element](http://www.whatwg.org/specs/web-apps/current-work/multipage/scripting-1.html#the-template-element) allows you to declare fragments of DOM which are parsed, inert at page load, and can be activated later at runtime. It's another API primitive in the web components family. **Templates are an ideal placeholder for declaring the structure of a custom element**.
+For those unfamiliar, the [`<template>` element](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element) allows you to declare fragments of DOM which are parsed, inert at page load, and can be activated later at runtime. It's another API primitive in the web components family. **Templates are an ideal placeholder for declaring the structure of a custom element**.
 
 **Example:** registering an element with Shadow DOM content created from a `<template>`:
 
@@ -754,7 +754,7 @@ no longer matches.
 
 ### Unknown elements vs. undefined custom elements {#unknown}
 
-HTML is lenient and flexible to work with. For example, declare `<randomtagthatdoesntexist>` on a page and the browser is perfectly happy accepting it. Why do non-standard tags work? The answer is the [HTML specification](http://www.whatwg.org/specs/web-apps/current-work/multipage/elements.html#htmlunknownelement) allows it. Elements that are not defined by the specification get parsed as `HTMLUnknownElement`.
+HTML is lenient and flexible to work with. For example, declare `<randomtagthatdoesntexist>` on a page and the browser is perfectly happy accepting it. Why do non-standard tags work? The answer is the [HTML specification](https://html.spec.whatwg.org/multipage/dom.html#htmlunknownelement) allows it. Elements that are not defined by the specification get parsed as `HTMLUnknownElement`.
 
 The same is not true for custom elements. Potential custom elements are parsed as
 an `HTMLElement` if they're created with a valid name (includes a "-"). You can check this in a browser that supports custom elements. Fire up the Console: <span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">J</span> (or <span class="kbd">Cmd</span>+<span class="kbd">Opt</span>+<span class="kbd">J</span> on Mac) and paste in the following lines of code:
@@ -769,7 +769,7 @@ document.createElement('x-tabs') instanceof HTMLElement === true
 
 ## API reference
 
-The `customElements` interface defines useful methods for working with custom elements.
+The `customElements` global defines useful methods for working with custom elements.
 
 **`define(tagName, constructor, options)`**
 
@@ -824,7 +824,7 @@ If you happen to be interested in the old v0 spec, check out the [html5rocks art
 Chrome ([status](https://www.chromestatus.com/features/4696261944934400)) has an implementation of
 the Custom Elements v1 under a runtime flag: `--enable-blink-features=CustomElementsV1`. Safari has [begun prototyping](https://bugs.webkit.org/show_bug.cgi?id=150225). Edge has [begun prototyping](https://twitter.com/AaronGustafson/status/717028669948977153). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=889230) to implement.
 
-Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/webcomponentsjs/tree/v1) for Custom Elements v1. **Note**: the `:define` CSS pseudo-class is not polyfilled.
+Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/webcomponentsjs/tree/v1) for Custom Elements v1. **Note**: the `:defined` CSS pseudo-class is not polyfilled.
 
 To feature detect custom elements, check for the existence of `window.customElements`:
 
