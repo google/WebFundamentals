@@ -8,7 +8,6 @@ authors:
   - ericbidelman
 translation_priority: 1
 order: 4
-published: false
 notes:
   extend:
     - "Some browsers have expressed distaste for implementing the <code>is=\"\"</code> syntax. This is unfortunate for accessibility and progressive enhancement. If you think extending native HTML elements is useful, voice your thoughts <a href='https://github.com/w3c/webcomponents/issues/509'>on Github</a>."
