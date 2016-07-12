@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "불필요한 다운로드 제거하기"
-published_on: 2016-07-11
+updated_on: 2016-07-11
 translators:
   - captainpangyo
 key-takeaways:

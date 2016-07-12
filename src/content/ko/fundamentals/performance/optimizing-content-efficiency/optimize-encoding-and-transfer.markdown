@@ -1,7 +1,7 @@
 ---
 title: "인코딩과 텍스트 기반 리소스의 전송 크기 최적화 하기"
 description: "불필요한 리소스 다운로딩을 하지 않는 것과 함께, 페이시 로딩 속도를 향상 시킬 수 있는 최선의 방법은 리소스을 최적화 하고 압축하여 전체적인 다운로드 사이즈를 최소화 하는 것입니다."
-published_on: 2016-7-11
+updated_on: 2016-7-11
 translation_priority: 0
 translators:
   - captainpangyo
