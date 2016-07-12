@@ -1,6 +1,6 @@
 ---
 title: "불필요한 다운로드 제거하기"
-updated_on: 2016-07-11
+updated_on: 2014-04-29
 translators:
   - captainpangyo
 key-takeaways:
