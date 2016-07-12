@@ -1039,7 +1039,7 @@ captainpangyo:
     family: Jang
   org:
     name: POSCO ICT
-      unit: SW Platform
+    unit: SW Platform
   country: KR
     role:
     - translator
@@ -1048,4 +1048,4 @@ captainpangyo:
   twitter:
   email: jangkeehyo@google.com
   description:
-    en: "Josh is an Mobile & Web Enthusiast"
+    en: "Josh is a Mobile & Web Enthusiast"
