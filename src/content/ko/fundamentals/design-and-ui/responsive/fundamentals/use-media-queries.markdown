@@ -1,6 +1,6 @@
 ---
-title: "Use CSS media queries for responsiveness"
-description: "Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop or anything else with a screen."
+title: "반응형 디자인을 위한 CSS 미디어쿼리 사용하기"
+description: "상당히 많은 웹들이 여러 디바이스 사용성을 고려하여 최적화 되어 있지 않다. 당신의 사이트를 모바일, 데스크탑 또는 어떠한 스크린에서도 동작할 수 있도록 기본을 배워보자."
 updated_on: 2014-10-10
 translators:
   - captainpangyo
@@ -56,11 +56,7 @@ stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 C
 
 ## viewport 크기에 맞춰 미디어쿼리 적용하기
 
-
-Media queries enable us to create a responsive experience, where specific styles
-are applied to small screens, large screens and anywhere in between.  The media
-query syntax allows for the creation of rules that can be applied depending on
-device characteristics.
+미디어쿼리는 작거나 큰 화면에 맞춰 스타일을 적용하는 반응형 경험을 제공합니다. 미디어쿼리 구문은 기기 특성에 따라 규칙을 생성할 수 있게 합니다.
 
 {% highlight css %}
 @media (query) {
@@ -68,9 +64,7 @@ device characteristics.
 }
 {% endhighlight %}
 
-While there are several different items we can query on, the ones used most
-often for responsive web design are `min-width`, `max-width`, `min-height` and
-`max-height`.
+쿼리에 적용할 수 있는 속성들이 여러가지가 있지만, 그 중에서도 `min-width`, `max-width`, `min-height`, `max-height` 가 가장 흔하게 사용됩니다.
 
 
 <table class="mdl-data-table mdl-js-data-table">
@@ -112,7 +106,7 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
   </tbody>
 </table>
 
-Let's take a look an example:
+아래 예제를 봅시다:
 
 <figure>
   {% link_sample _code/media-queries.html %}
@@ -122,52 +116,32 @@ Let's take a look an example:
 
 {% include_code src=_code/media-queries.html snippet=mqueries %}
 
-* When the browser is between <b>0px</b> and <b>640px</b> wide, `max-640px.css` will be applied.
-* When the browser is between <b>500px</b> and <b>600px</b> wide, styles within the `@media` will be applied.
-* When the browser is <b>640px or wider</b>, `min-640px.css` will be applied.
-* When the browser <b>width is greater than the height</b>, `landscape.css` will be applied.
-* When the browser <b>height is greater than the width</b>, `portrait.css` will be applied.
+* 브라우저가 <b>0px</b> 와 <b>640px</b> 사이 너비일 때, `max-640px.css`가 적용됩니다.
+* 브라우저가 <b>500px</b> 와 <b>600px</b> 사이 너비일 때, styles 안에 있는 `@media` 가 적용됩니다.
+* 브라우저가 <b>640px 이거나 더 넓으면</b>, `min-640px.css` 가 적용됩니다.
+* 브라우저가 <b>너비가 높이보다 크면</b>, `landscape.css` 가 적용됩니다.
+* 브라우저가 <b>높이가 너비보다 크면</b>, `portrait.css` 가 적용됩니다.
 
 
-## A note on `min-device-width`
+## `min-device-width` 에 대해 알아둘 점
 
-It is also possible to create queries based on
-`*-device-width`; though this practice is **strongly discouraged**.
+`*-device-width` 에 맞춰 쿼리를 생성하는 것도 가능하지만 매우 추천되지 않는 방법입니다.
 
-The difference is subtle but very important: `min-width` is based on the
-size of the browser window, whereas `min-device-width` is based on
-the size of the screen.  Unfortunately some browsers, including the legacy
-Android browser may not report the device width properly and instead
-report the screen size in device pixels instead of the expected viewport width.
+차이점은 미묘하지만 중요한 점: `min-device-width`가 스크린 크기에 기준하는 반면에 `min-width` 는 브라우저 윈도우 크기에 기준합니다. 아쉽게도 레거시 안드로이드 브라우저를 포함한 몇몇 브라우저는 기기 너비를 적절하게 알려주지 못하고 예상되는 viewport 너비 대신에 기기 픽셀에 맞춘 화면 크기를 알려줍니다.
 
-In addition, using `*-device-width` can prevent content from adapting on
-desktops or other devices that allow windows to be resized because the query
-is based on the actual device size, not the size of the browser window.
+또한, `*-device-width` 사용은 컨텐츠가 윈도우 리사이징이 가능한 데스크탑이나 다른 기기들에 맞춰 변경되는 것을 막습니다. 왜냐하면 쿼리는 브라우저 윈도우 크기에 기준하는 것이 아니라 실질기기 크기에 기준하기 때문입니다.
 
-## Use `any-pointer` and `any-hover` for flexible interactions
+## 유연한 인터렉션을 위해 `any-pointer` 와 `any-hover` 사용하기
 
-Starting with Chrome 39, your style sheets can write selectors that cover
-multiple pointer types and hover behaviors. The `any-pointer` and `any-hover`
-media features are similar to `pointer` and `hover` in allowing you to query the
-capabilities of the user's pointer. Unlike the later, `any-pointer` and
-`any-hover` operate on the union of all pointer devices rather than the just the
-primary pointer device.
+크롬 39 버전부터, 스타일시트는 여러개의 포인터 타입과 호버 행동을 커버할 수 있는 선택자를 쓸 수 있습니다. `any-pointer` 와 `any-hover`의 특징은 사용자 포인터를 쿼리할 수 있도록 한다는 점에서 `pointer` 그리고 `hover` 와 유사합니다. `any-pointer` 와 `any-hover` 단지 몇개의 주요 포인터 기기에서 동작하는 것이 아니라 거의 모든 포인터 기기에서 작동합니다.
 
-## Use relative units
+## 상대적 단위 사용하기
 
-A key concept behind responsive design is fluidity and proportionality as
-opposed to fixed width layouts.  Using relative units for measurements can help
-simplify layouts and prevent accidentally creating components that are too big
-for the viewport.
+반응형 디자인의 중요한 컨셉은 고정된 너비 레이아웃에 반해 가변하고 비례할 수 있다는 점입니다. 상대적 단위를 사용하면 레이아웃을 쉽게 설계할 수 있고 viewport에 비해 컴포넌트를 너무 크게 만드는 실수도 줄일 수 있습니다.
 
-For example, setting width: 100% on a top level div, ensures that it spans the
-width of the viewport and is never too big or too small for the viewport.  The
-div will fit, no matter if it's a 320px wide iPhone, 342px wide Blackberry Z10
-or a 360px wide Nexus 5.
+예를 들어, 가장 상위의 div 너비를 100%로 지정하면 viewport의 너비보다 너무 작거나 너무 크게 되지 않습니다. 320px의 iPhone이든, 342px의 Blackberry Z10이든, 360px Nexus 5 이든 div 길이가 맞춰질테니까요.
 
-In addition, using relative units allows browsers to render the content based on
-the users zoom level without the need for adding horizontal scroll bars to the
-page.
+또한, 상대적 단위를 사용하면 브라우저가 페이지를 수평으로 스크롤 할 필요 없이 사용자의 줌 레벨에 맞춰 컨텐츠가 그려질 것입니다.
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
