@@ -2,7 +2,6 @@
 description: "크리티컬 렌더링 패스 최적화의 주요 요소를 배운다."
 title: "크리티컬 렌더링 패스 최적화하기"
 updated_on: 2015-10-06
-order: 8
 translators:
   - captainpangyo
 ---
