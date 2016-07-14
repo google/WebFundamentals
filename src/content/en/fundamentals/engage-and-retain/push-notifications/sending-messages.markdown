@@ -38,7 +38,8 @@ What's in this?
 
 _endpoint_—Contains two parts: the URL of the messaging service you're using
 followed by unique identifier for the user. This is called a subscription ID or
-a registration ID.
+a registration ID. This tells your server how to identify you the messaging
+server.
 
 _keys_—Encryption keys used for encrypting data passed to the service worker
 messages.
