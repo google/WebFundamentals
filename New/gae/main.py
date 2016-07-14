@@ -25,8 +25,6 @@ import re
 
 from google.appengine.ext.webapp.template import render
 
-JekyllOutputFile = "langs"
-
 class HomePage(webapp2.RequestHandler):
     def get(self):
         self.redirect("/web/index", permanent=True)
@@ -37,25 +35,43 @@ class DevSitePages(webapp2.RequestHandler):
 
         sourcePath = 'content'
 
-        fileLocation = os.path.join(os.path.dirname(__file__), sourcePath, lang, path + ".md")
+        fileLocations = [
+          os.path.join(os.path.dirname(__file__), sourcePath, lang, path),
+          os.path.join(os.path.dirname(__file__), sourcePath, lang, path) + ".md",
+          os.path.join(os.path.dirname(__file__), sourcePath, lang, path, "index.md"),
+          os.path.join(os.path.dirname(__file__), sourcePath, "en", path),
+          os.path.join(os.path.dirname(__file__), sourcePath, "en", path) + ".md",
+          os.path.join(os.path.dirname(__file__), sourcePath, "en", path, "index.md")
+        ]
 
-        logging.info("Looking for file: " + fileLocation);
+        text = None
+        for fileLocation in fileLocations:
+          if os.path.isfile(fileLocation):
+            # Read the file and pass in the contents - avoids issues if the
+            # file contains {%%} <- this breaks pythons templating
+            fileContent = open(fileLocation, 'r').read()
+            fileContent = fileContent.decode("utf8")
 
-        if os.path.isfile(fileLocation):
-          fileContent = open(fileLocation, "r").read()
-          fileContent = fileContent.decode("utf8")
-          fileContent = re.sub(r"{#.+?#}", "", fileContent)
-          ext = ["markdown.extensions.attr_list", "markdown.extensions.meta"]
-          md = markdown.markdown(fileContent, extensions=ext)
-          text = render("devsite.tpl", {"content": md, "lang": path})
-        else:
-          text = "404 - The requested file (" + path + ") was not found."
+            # TODO: Pete what is this for? Please add comments
+            fileContent = re.sub(r"{#.+?#}", "", fileContent)
+            # TODO: Pete what is this extension array for?
+            ext = ["markdown.extensions.attr_list", "markdown.extensions.meta"]
+            parsedMarkdown = markdown.markdown(fileContent, extensions=ext)
+
+            # TODO: Pete why is lang set to path?
+            text = render("devsite.tpl", {"content": parsedMarkdown, "lang": path})
+            break
+
+        if text is None:
+          text = "404 - Requested file not found."
+          self.response.set_status(404)
 
         self.response.out.write(text)
 
 # The '/' entry is a redirect to /web/ - just a convenience thing
 app = webapp2.WSGIApplication([
     ('/', HomePage),
+    ('/web/(.*)/', DevSitePages),
     ('/web/(.*)', DevSitePages),
     #('/web/showcase/(.+)', DevSitePages),
     #('/web/showcase/(.*)', DevSitePages),
