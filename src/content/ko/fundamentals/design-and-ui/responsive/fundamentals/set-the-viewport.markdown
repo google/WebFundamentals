@@ -12,7 +12,7 @@ key-takeaways:
     - "당신의 페이지는 사용자가 크기를 조정할 수 있도록 해야합니다."
   size-content-to-vp:
     - "큰 사이즈로 고정되어 있는 너비 요소를 사용하지 마세요."
-    - "컨텐츠는 특정 viewport 너비에서 잘 그려지면 안됩니다."
+    - "컨텐츠는 특정 viewport 너비에서만 잘 그려지면 안됩니다."
     - "CSS media queries 를 이용하여 작거나 큰 화면에 각기 다른 스타일링을 적용해보세요."
   media-queries:
     - "media query는 기기 특성에 따른 스타일을 적용할 수 있습니다."

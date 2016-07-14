@@ -12,7 +12,7 @@ key-takeaways:
     - "당신의 페이지는 사용자가 크기를 조정할 수 있도록 해야합니다."
   size-content-to-vp:
     - "큰 사이즈로 고정되어 있는 너비 요소를 사용하지 마세요."
-    - "컨텐츠는 특정 viewport 너비에서 잘 그려지면 안됩니다."
+    - "컨텐츠는 특정 viewport 너비에서만 잘 그려지면 안됩니다."
     - "CSS media queries 를 이용하여 작거나 큰 화면에 각기 다른 스타일링을 적용해보세요."
   media-queries:
     - "media query는 기기 특성에 따른 스타일을 적용할 수 있습니다."
@@ -41,7 +41,7 @@ notes:
 <link rel="stylesheet" href="print.css" media="print">
 {% endhighlight %}
 
-stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 CSS 파일에 미디워 쿼리를 적용하는 두가지 방법이 더 있습니다: `@media` 와 `@import`
+stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 CSS 파일에 미디어 쿼리를 적용하는 방법으로 `@media` 와 `@import` 가 더 있습니다.
 성능상의 이유로, `@import` 를 제외한 위 두가지 방법을 추천합니다. (자세한 내용은 [Avoid CSS imports](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations.html))
 
 {% highlight css %}
