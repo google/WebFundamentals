@@ -1,0 +1,24 @@
+{% comment %}
+  Handy alias for the highlight module with pre-populated values for Key Takeaways / learnings
+{% endcomment %}
+
+{% assign type = "learning" %}
+{% assign title = "tl_dr" | localize_string %}
+{% assign position = "left" %}
+{% assign inline = false %}
+
+{% if include.title %}
+{% assign title = include.title %}
+{% endif %}
+{% if include.type %}
+{% assign type = include.type %}
+{% endif %}
+{% if include.position %}
+{% assign position = include.position %}
+{% endif %}
+{% if include.inline %}
+{% assign inline = include.inline %}
+{% endif %}
+
+
+{% include shared/highlight.liquid title=title text=include.text list=include.list position=position type=type character=character inline=inline %}

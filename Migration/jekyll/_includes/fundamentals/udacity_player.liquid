@@ -1,0 +1,23 @@
+<div class="wf-udacity-player">
+  <div class="wf-udacity-player-container">
+    <div class="wf-udacity-player-content">
+      <h2>
+        {% if include.link %}
+        <a href="{{include.link}}">{{include.title}}</a>
+        {% else %}
+        {{include.title}}
+        {% endif %}
+      </h2>
+	    <p>
+        {% if include.description %}
+          {{include.description}}
+        {% else %}
+          {{"udacity_description" | localize_string}}
+        {% endif %}
+      </p>
+	    <div class="wf-udacity--video">
+	      <iframe frameborder="0" src="//embeddable-player-dot-udacity-extras.appspot.com/embeddable-player/embeddable-player.html?videos={{include.videos}}"></iframe>
+      </div>
+	  </div>
+  </div>
+</div>

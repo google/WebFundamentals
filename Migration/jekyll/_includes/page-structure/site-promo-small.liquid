@@ -1,0 +1,13 @@
+{% if site.WFPromo %}
+<div class="page-content">
+  <div class="wf-promo-small-container">
+    {% if site.WFPromo.image %}<img src="{{site.WFPromo.image}}">{% endif %}
+    {% if site.WFPromo.title %}
+    <p class="mdl-typography--caption wf-promo-small__title">{{ site.WFPromo.title }}</p>
+    {% endif %}
+    <p class="mdl-typography--caption wf-promo-small__description">
+      {{site.WFPromo.text}}
+    </p>
+  </div>
+</div>
+{% endif%}

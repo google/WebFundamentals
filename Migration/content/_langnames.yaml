@@ -1,0 +1,52 @@
+ar:
+  name: 'العربية‬'
+  rtl: true
+
+de:
+  name: 'Deutsch'
+
+en:
+  name: 'English'
+
+es:
+  name: 'Español'
+
+fa:
+  name: 'فارسی'
+
+fr:
+  name: 'Français'
+
+it:
+  name: 'Italiano'
+
+iw:
+  name: 'עִבְרִית'
+  rtl: true
+
+ja:
+  name: '日本語'
+
+ko:
+  name: '한국어'
+
+nl:
+  name: 'Nederlands'
+
+pl:
+  name: 'Polski'
+
+'pt-br':
+  name: 'Português (Brasil)'
+
+ru:
+  name: 'Pусский'
+
+tr:
+  name: 'Türkçe'
+
+'zh-cn':
+  name: '中文 (简体)'
+
+'zh-tw':
+  name: '中文（繁體）'

@@ -1,0 +1,48 @@
+{% include page-structure/open-page.liquid %}
+
+{% include page-structure/site-promo-small.liquid %}
+
+<div class="page-content">
+
+{% assign firstThird = page.tags.size | divided_by: 3 %}
+{% assign middleThird = oneThird | plus:firstThird %}
+{% assign lastThird = middleThird | plus:firstThird %}
+
+
+  <div class="mdl-grid wf-updates-taglist">
+    <div class="mdl-cell mdl-cell--4-col">
+      <ul>
+        {% for tag in page.tags limit:firstThird %}
+          <li>
+            <a href="{{site.WFBaseUrl}}/{{page.tag_path}}/{{tag | canonicalize}}">
+              #{{tag}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <ul>
+        {% for tag in page.tags offset:middleThird limit:firstThird %}
+          <li>
+            <a href="{{site.WFBaseUrl}}/{{page.tag_path}}/{{tag | canonicalize}}">
+              #{{tag}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <ul>
+        {% for tag in page.tags limit offset:lastThird %}
+          <li>
+            <a href="{{site.WFBaseUrl}}/{{page.tag_path}}/{{tag | canonicalize}}">
+              #{{tag}}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% include page-structure/close-page.liquid %}

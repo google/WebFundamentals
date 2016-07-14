@@ -1,0 +1,260 @@
+{% include page-structure/open-page.liquid %}
+
+{% assign showcase = page.showcase %}
+
+<div class="wf-subheading">
+  <div class="page-content mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col wf-showcase__title">
+      <h2>{{page.title}}</h2>
+      {% if page.subtitle %}<h5>{{page.subtitle}}</h5>{% endif %}
+      <p><a href="{{showcase.link}}">{{showcase.link}}</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="page-content top-padding">
+  <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet wf-showcase__device-img">
+    <img src="{{showcase.key_image}}" class="spotlight-header__image" alt="">
+  </div>
+
+  {% if showcase.scores.pagespeed.ux < 60 %}
+    {% assign uxScore = "low" %}
+  {% elsif showscores.pagespeed.ux < 71 %}
+    {% assign uxScore = "med" %}
+  {% else %}
+    {% assign uxScore = "high" %}
+  {% endif %}
+
+  {% if showcase.scores.pagespeed.speed < 60 %}
+    {% assign speedScore = "low" %}
+  {% elsif showcase.scores.pagespeed.speed < 71 %}
+    {% assign speedScore = "med" %}
+  {% else %}
+    {% assign speedScore = "high" %}
+  {% endif %}
+
+  {% if showcase.scores.webpagetest.value > 6000 %}
+    {% assign wptScore = "low" %}
+  {% elsif showcase.scores.webpagetest.value > 3000 %}
+    {% assign wptScore = "med" %}
+  {% else %}
+    {% assign wptScore = "high" %}
+  {% endif %}
+
+  <div class="wf-showcase__spotlight-scores">
+    <div class="wf-showcase__score-container">
+      <div class="wf-showcase__score wf-showcase__score_{{uxScore}}"><strong>{{showcase.scores.pagespeed.ux}}</strong>/100</div>
+      <a href="https://developers.google.com/speed/pagespeed/insights/?url={{showcase.link}}">PageSpeed UX</a>
+    </div>
+    <div class="wf-showcase__score-container">
+      <div class="wf-showcase__score wf-showcase__score_{{speedScore}}"><strong>{{showcase.scores.pagespeed.speed}}</strong>/100</div>
+      <a href="https://developers.google.com/speed/pagespeed/insights/?url={{showcase.link}}">PageSpeed</a>
+    </div>
+    <div class="wf-showcase__score-container">
+      <div class="wf-showcase__score wf-showcase__score_{{wptScore}}"><strong>{{showcase.scores.webpagetest.value}}</strong></div>
+      <a href="{{showcase.scores.webpagetest.result}}">Speed Index (3G)</a>
+    </div>
+  </div>
+
+  <section class="wf-showcase__section-container">
+    <h3 id="tldr">TL;DR</h3>
+
+    {{ page.description | markdownify }}
+  </section>
+</div>
+
+<div style="clear:both;"></div>
+{% include page-structure/site-promo-banner.liquid %}
+
+<div class="page-content">
+  {% if showcase.ytvideo %}
+  <section class="wf-showcase__section-container clear">
+    <h3>The Interview</h3>
+    {% ytvideo showcase.ytvideo %}
+  </section>
+  {% endif %}
+
+  {% if showcase.overview %}
+  <section class="wf-showcase__section-container">
+    <h3>Overview</h3>
+    <p>{{showcase.overview.description | markdownify }}</p>
+
+    <dl>
+      {% if showcase.overview.audience %}
+      <dt>Target audience</dt>
+      <dd>{{showcase.overview.audience}}</dd>
+      {% endif %}
+      {% if showcase.overview.features %}
+      <dt>Features</dt>
+      <dd>
+        <ul>
+          {% for feature in showcase.overview.features %}
+          <li>
+            {{feature}}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+
+      {% if showcase.overview.webbyness %}
+      <dt>Webbyness</dt>
+      <dd>
+        <ul>
+          {% for advantage in showcase.overview.webbyness %}
+          <li>
+            <a href="{{advantage.link}}">{{advantage.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+    </dl>
+  </section>
+  {% endif %}
+
+  {% if showcase.behind_the_scenes %}
+  <section class="wf-showcase__section-container">
+    <h3>Behind the scenes</h3>
+    <p>{{showcase.behind_the_scenes.description | markdownify }}</p>
+    <dl class="case-study__dl">
+      {% if showcase.behind_the_scenes.owp %}
+      <dt>New web platform features</dt>
+      <dd>
+        <ul>
+          {% for owp in showcase.behind_the_scenes.owp %}
+          <li>
+            {{owp}}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+
+      {% if showcase.behind_the_scenes.patterns %}
+      <dt>Patterns</dt>
+      <dd>
+        <ul>
+          {% for pattern in showcase.behind_the_scenes.patterns %}
+          <li>
+            {{pattern}}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+
+      {% if showcase.behind_the_scenes.samples %}
+      <dt>Forkable samples</dt>
+      <dd>
+        <ul>
+          {% for sample in showcase.behind_the_scenes.samples %}
+          <li>
+            {{sample}}
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+
+      {% if showcase.behind_the_scenes.source_code %}
+      <dt>Source Code</dt>
+      <dd>
+        <ul>
+          {% for source_code in showcase.behind_the_scenes.source_code %}
+          <li>
+            <a href="{{source_code.link}}">{{source_code.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+
+      {% if showcase.behind_the_scenes.oss %}
+      <dt>Used Open Source</dt>
+      <dd>
+        <ul>
+          {% for oss in showcase.behind_the_scenes.oss %}
+          <li>
+            <a href="{{oss.link}}">{{oss.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </dd>
+      {% endif %}
+    </dl>
+  </section>
+  {% endif %}
+
+  {% if showcase.sections %}
+    {% for section in showcase.sections %}
+      <section class="wf-showcase__section-container">
+        <h3 id="{{ section.title | slugify }}">{{section.title}}</h3>
+        {{ section.content | markdownify }}
+      </section>
+      {% if section.subsections %}
+        {% for subsection in section.subsections %}
+          <section class="wf-showcase__section-container">
+            <h4 id="{{ subsection.title | slugify }}">{{subsection.title}}</h3>
+            {{ subsection.content | markdownify }}
+          </section>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+
+  {% if showcase.interview %}
+  <section class="wf-showcase__section-container">
+    <h3 class="quote__content-icononly">Q&amp;A with {{ showcase.developer }}</h3>
+
+    <dl>
+      {% for question in showcase.interview %}
+        {% capture answer %}{{ question.answer }}{% endcapture %}
+        <dt>{{ question.question }}</dt>
+        <dd>{{ answer | markdownify }}</dd>
+      {% endfor %}
+    </dl>
+  </section>
+  {% endif %}
+
+  {% if showcase.our_views.good %}
+  <section class="wf-showcase__section-container">
+    <h3>What we like</h3>
+    {{ showcase.our_views.good | markdownify }}
+  </section>
+  {% endif %}
+
+  {% if showcase.our_views.bad %}
+  <section class="wf-showcase__section-container">
+    <h3>Possible improvements</h3>
+    {{ showcase.our_views.bad | markdownify }}
+  </section>
+  {% endif %}
+
+  {% include shared/related_guides.liquid list=page.related-guides %}
+
+  <div class="mdl-grid">
+    <h3 class="wf-showcase__latest-title mdl-cell--12-col">Latest spotlights</h3>
+
+    {% assign pages = page.context.pages | reverse %}
+    {% assign count = 0 %}
+
+    {% for pageInSection in pages %}
+      {% if count >= 2 %}
+        {% break %}
+      {% endif %}
+
+      {% if pageInSection.canonical_url != page.canonical_url %}
+        {% include shared/base_card.liquid title=pageInSection.title text=pageInSection.description linkHref=pageInSection.canonical_url imgUrl=pageInSection.featured_image linkText="View" %}
+        {% assign count = count | plus:1 %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% include page-structure/license.liquid %}
+
+{% include page-structure/article-nav.liquid %}
+
+{% include page-structure/close-page.liquid%}

@@ -1,0 +1,41 @@
+{% if page.authors and page.authors.size > 0 %}
+<div class="wf-author__container mdl-grid page-content">
+  <h6 class="mdl-cell--12-col">{{"authors" | localize_string}}</h6>
+  {% for authorKey in page.authors %}
+    {% assign author = site.data["contributors"][authorKey] %}
+    <div class="wf-author__row mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
+      <div class="wf-author__img-container">
+      {% if author.imgUrl %}
+        <img class="wf-author__profile-photo" src="{{author.imgUrl}}" alt="Profile photo of {{author.name.given}} {{author.name.family}}" />
+      {% else %}
+        {% include svgs/person.svg %}
+      {% endif %}
+      </div>
+
+      <div class="wf-author__info">
+        <div class="wf-author__name">
+          {% if include.linkauthor and author.homepage %}<a href="{{author.homepage}}" target="_blank" title="{{author.name.given}} {{author.name.family}}'s Homepage">{% endif %}
+          {{author.name.given}} {{author.name.family}}
+          {% if include.linkauthor %}</a>{% endif %}
+        </div>
+
+        {% if author.description[page.curr_lang] %}
+        <p>{{ author.description[page.curr_lang] }}</p>
+        {% else %}
+        <p>{{ author.description[site.primary_lang] }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if include.date %}
+    <div class="wf-author__row">
+      <div class="wf-author__time-icon">
+        {% include svgs/time.svg %}
+      </div>
+      <time class="wf-author__date" datetime="{{ include.date | date: '%F' }}">{{ include.date | date: '%B %-d, %Y' }}</time>
+    </div>
+    {% endif %}
+
+  {% endfor %}
+</div>
+{% endif %}

@@ -1,0 +1,17 @@
+{% comment %}
+Base template used by remember.liquid and takeaway.liquid
+TODO: Apply and clean up styles
+TODO: Verify all strings are localized
+{% endcomment %}
+
+<div class="wf-highlight-list{% if include.type %} wf-highlight-list--{{ include.type }}{% endif %}" markdown="1">
+  <h3 class="wf-highlight-list__title">{{ include.title }}</h3>
+
+  {% if include.list %}
+  <ul class="wf-highlight-list__list">
+    {% for item in include.list %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <title>Image gallery mixed content example</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.gallery').click(function(e) {
+          e.preventDefault();
+          $('.overlay-foreground').css('background-image', 'url(' + $(this).attr('href') + ')');
+          $('.overlay').fadeIn('slow');
+        })
+        $('.overlay').click(function() {
+          $('.overlay').fadeOut('slow');
+        })
+      });
+    </script>
+    <style>
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .overlay-background {
+        background-color: #000;
+        filter:alpha(opacity=80);
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
+        opacity: 0.8;
+        z-index: 10000;
+      }
+      .overlay-foreground {
+        background-position: center center;
+        background-repeat: no-repeat;
+        z-index: 10001;
+      }
+    </style>
+  </head>
+  <body>
+    <div role="main">
+      <h1>
+        Image gallery mixed content!
+      </h1>
+      <p>
+        View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html">HTTPS</a>
+      </p>
+      <p> 
+        Image galleries often rely on the &lt;img&gt; tag src attribute to display thumbnail images on the page, the anchor ( &lt;a&gt; ) tag href attribute is then used to load the full sized image for the gallery overlay. Normally &lt;a&gt; tags do not cause mixed content, but in this case the jQuery code overrides the default link behavior &mdash; to navigate to a new page &mdash; and instead loads the HTTP image on this page. While this content isn't blocked, modern browsers display a warning in the JavaScript console. This can be seen when the page is viewed over HTTPS and the thumbnail is clicked.
+      </p>
+      CLICK ME! -->
+      <!-- // [START snippet1] -->
+      <a class="gallery" href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy.jpg">
+        <img src="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg">
+      </a>
+      <!-- // [END snippet1] -->
+      <div class="overlay overlay-background" style="display: none;"></div>
+      <div class="overlay overlay-foreground" style="display: none;"></div>
+    </div>
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html>

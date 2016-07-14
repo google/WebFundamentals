@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+
+    <!-- // [START ms-specific] -->
+    <!-- IE Specific to remove tap highlight -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- // [END ms-specific] -->
+
+    <title>States Example</title>
+    
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+
+    <style>
+      body {
+        background-color: #d3e2fc;
+        
+        margin: 32px;
+        
+        font-family: 'Roboto', sans-serif;
+        color: #ecf0f1;
+      }
+
+      a {
+        color: #ecf0f1;
+      }
+
+      button {
+        display: block;
+        
+        width: 100%;
+        max-width: 400px;
+
+        padding: 16px;
+        margin: 0 auto 16px auto;
+        
+        box-sizing: border-box;
+
+        border-style: none;
+        border-radius: 6px;
+
+        color: inherit;
+        font-family: inherit;
+        font-size: inherit;
+        text-align:center;
+        text-decoration: none;
+
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      /* // [START btnstates] */
+      .btn {
+        background-color: #4285f4;
+      }
+
+      .btn:hover {
+        background-color: #296CDB;
+      }
+
+      .btn:focus {
+        background-color: #0F52C1;
+        
+        /* The outline parameter surpresses the border 
+        color / outline when focused */
+        outline: 0;
+      }
+
+      .btn:active {
+        background-color: #0039A8;
+      }
+      /* // [END btnstates] */
+
+      /* // [START webkit-specific] */
+      /* Webkit / Chrome Specific CSS to remove tap 
+      highlight color */
+      .btn {
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* // [END webkit-specific] */
+
+      /* // [START ff-specific] */
+      /* Firefox Specific CSS to remove button 
+      differences and focus ring */
+      .btn {
+        background-image: none;
+      }
+
+      .btn::-moz-focus-inner {
+        border: 0;
+      }
+      /* // [END ff-specific] */
+    </style>
+  </head>
+
+  <body>
+    <button class="btn" tabindex="1">Button 1</button>
+    
+    <button class="btn hover" tabindex="2">Button 2</button>
+    
+    <button class="btn active" tabindex="3">Button 3</button>
+    
+    <button class="btn focus" tabindex="4">Button 4</button>
+
+    <script>
+      window.onload = function() {
+        if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+          document.body.addEventListener('touchstart', function() {}, false);
+        }
+      };
+    </script>
+
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html>

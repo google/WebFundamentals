@@ -1,0 +1,18 @@
+<div class="wf-border-container">
+  <div class="wf-border-container__content with-bottom-border">
+    <h3 class="wf-highlight-list__title">{{"subscribe" | localize_string }}</h3>
+
+    <div class="wf-highlight-list__list mdl-grid">
+
+      {% if page.podcast_feed_url %}
+      <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button mdl-cell mdl-cell--4-col">
+        <div class="wf-shows-subscribe__icon">
+          {% include svgs/rss-icon.svg %}
+        </div>
+        <a href="{{page.podcast_feed_url}}" target="_blank">{{page.feed_name}}</a>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>

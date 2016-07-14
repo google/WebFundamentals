@@ -1,0 +1,25 @@
+<h2 class="center">{{include.title}}</h2>
+
+<div class="mdl-grid ">
+{% for contributorKeyValuePair in site.data["contributors"] %}
+{% assign contributorKey = contributorKeyValuePair[0] %}
+{% assign contributor = contributorKeyValuePair[1] %}
+
+{% if contributor.role contains include.filter %}
+<a class="wf-contributor mdl-cell mdl-cell--4-col" href="{{contributor.homepage}}" target="_blank" title="{{contributor.name.given}} {{contributor.name.family}}">
+<div>
+  <div class="wf-contributor__img mdl-shadow--3dp" style="background-image: url({{contributor.imgUrl}});"></div>
+
+  <h4 class="wf-contributor__name">{{contributor.name.given}} {{contributor.name.family}}</h4>
+  {% if contributor.description %}
+  {% if contributor.description[page.langcode] %}
+  <p class="wf-contributor__description">{{ contributor.description[page.langcode] }}</p>
+  {% else %}
+  <p class="wf-contributor__description">{{ contributor.description[site.primary_lang] }}</p>
+  {% endif %}
+  {% endif %}
+</div>
+</a>
+{% endif %}
+{% endfor %}
+</div>

@@ -1,0 +1,26 @@
+{% comment %}
+  Handy alias for the highlight module with pre-populated values for "Note"
+{% endcomment %}
+
+{% assign type = "note" %}
+{% assign title = "note" | localize_string %}
+{% assign position = "right" %}
+{% assign inline = true %}
+
+{% if include.title %}
+{% assign title = include.title %}
+{% endif %}
+
+{% if include.type %}
+{% assign type = include.type %}
+{% endif %}
+
+{% if include.position %}
+{% assign position = include.position %}
+{% endif %}
+
+{% if include.inline %}
+{% assign inline = include.inline %}
+{% endif %}
+
+{% include shared/highlight.liquid title=title text=include.text list=include.list position=position type=type inline=inline %}

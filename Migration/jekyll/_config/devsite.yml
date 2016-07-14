@@ -1,0 +1,5 @@
+# For developers.google.com
+sample_link_base: "https://googlesamples.github.io/web-fundamentals/samples/"
+
+WFAbsoluteUrl: "https://developers.google.com"
+WFGithubBranch: master

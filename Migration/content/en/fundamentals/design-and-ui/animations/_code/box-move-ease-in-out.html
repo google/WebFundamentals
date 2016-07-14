@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+  <head>
+    <!-- // [TEMPLATE header_base] -->
+	  <title>Simple Box Move</title>
+	  <style>
+	  	html {
+	  		background: #f2f2f2;
+	  	}
+
+	  	p {
+	  		font-family: 'Helvetica', Arial, sans-serif;
+	  		text-align: center;
+	  	}
+
+	  	.box {
+			  width: 100px;
+			  height: 100px;
+
+			  background: #FFF;
+			  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+			  -webkit-transform: translate(0, 0);
+			  -webkit-transition: -webkit-transform 500ms ease-in-out;
+
+			  transform: translate(0, 0);
+			  transition: transform 500ms ease-in-out;
+
+			  will-change: transform;
+			}
+
+			.box.move {
+			  transform: translate(100px, 100px);
+			}
+	  </style>
+	</head>
+
+	<body>
+		<p>Click on the box to animate it</p>
+		<div class="box"></div>
+
+		<script>
+			var box = document.querySelector('.box');
+			box.addEventListener('click', function() {
+				box.classList.toggle('move');
+			});
+		</script>
+    <!-- // [TEMPLATE footer] -->
+	</body>
+
+</html>

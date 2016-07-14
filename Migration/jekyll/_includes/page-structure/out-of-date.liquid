@@ -1,0 +1,9 @@
+{% if page.outOfDate %}
+<div class="wf-translation-warning">
+  <p class="mdl-typography--caption wf-translation-warning__title">{{"out_of_date" | localize_string }}</p>
+  <p class="mdl-typography--caption-color-contrast wf-translation-warning__description">
+    {{"out_of_date_body" | localize_string }}
+    <a href="{{page.primary_lang_canonical_url}}">{{"out_of_date_view_en" | localize_string }}</a>.
+  </p>
+</div>
+{% endif%}

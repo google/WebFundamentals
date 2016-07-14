@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <link rel="stylesheet" href="vpdemo.css">
+    <!-- // [START mqueries] -->
+    <link rel="stylesheet" media="(max-width: 640px)" href="max-640px.css">
+    <link rel="stylesheet" media="(min-width: 640px)" href="min-640px.css">
+    <link rel="stylesheet" media="(orientation: portrait)" href="portrait.css">
+    <link rel="stylesheet" media="(orientation: landscape)" href="landscape.css">
+    <style>
+      @media (min-width: 500px) and (max-width: 600px) {
+        h1 {
+          color: fuchsia;
+        }
+
+        .desc:after {
+          content:" In fact, it's between 500px and 600px wide.";
+        }
+      }
+    </style>
+    <!-- // [END mqueries] -->
+    <title>RWD Fundamentals: Experimenting with media queries</title>
+  </head>
+  <body>
+    <article role="main">
+      <h1>Media Queries</h1>
+
+      <p class="desc"></p>
+
+      <p class="orientation">Orientation:</p>
+
+      <p>
+        This is a test to show how the <code>media</code> queries
+        affects a page.
+      </p>
+
+    </article>
+  <!-- // [TEMPLATE footer] -->
+      <script type="text/javascript">
+      function init() {
+        window.matchMedia("(min-width: 640px)").addListener(hitMQ);
+      }
+
+      function hitMQ(evt) {
+        sampleCompleted("RWDFundamentals-MediaQueries");
+      }
+
+      init();
+
+    </script>
+  </body>
+</html>

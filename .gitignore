@@ -21,3 +21,5 @@ src/jekyll/_includes/svgs/
 .bundle/
 google_appengine/
 New/gae/lib/
+Migration/build/
+Migration/content/

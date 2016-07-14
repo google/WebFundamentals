@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg2"
+   version="1.1"
+   viewBox="0 0 48 48"
+   height="48"
+   width="48">
+  <defs
+     id="defs8">
+    <path
+       id="a"
+       d="M0 0h47.99v48H0z" />
+  </defs>
+  <g
+     transform="matrix(0.37164797,0,0,0.37164797,0.43052057,-1.0937614)"
+     style="fill-rule:evenodd;stroke:none;stroke-width:1"
+     sketch:type="MSPage"
+     id="Page-1">
+    <g
+       sketch:type="MSArtboardGroup"
+       id="rss-icon">
+      <path
+         sketch:type="MSShapeGroup"
+         id="Rectangle-2"
+         d="m 11,85 0,25.99172 C 11,115.41457 14.588171,119 19.007097,119 l 29.963752,0 C 43.781319,101.65234 29.146805,88.351583 11,85 Z" />
+      <path
+         sketch:type="MSShapeGroup"
+         id="Rectangle-3"
+         d="M 10.052556,52.083211 C 10.017841,52.386363 10,52.694688 10,53.007222 l 0,26.244748 0,0 C 31.71903,81.453189 49.24674,97.838488 53.175264,119 l 27.451909,0 C 76.982176,82.537087 47.045721,53.819908 10.052556,52.083211 Z" />
+      <path
+         sketch:type="MSShapeGroup"
+         id="Rectangle-4"
+         d="m 11,16.040487 0,30.17568 0,0 C 50.499603,49.07264 82.244115,79.907849 86.511744,119 l 30.325916,0 C 113.77689,62.581302 67.811875,17.575669 11.000011,16.040487 Z" />
+    </g>
+  </g>
+</svg>

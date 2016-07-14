@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+  <head>
+	  <!-- // [TEMPLATE header_base] -->
+	  <title>Simple Box Move</title>
+	  <style>
+	  	html {
+	  		background: #f2f2f2;
+	  		width: 100%;
+	  		height: 100%;
+	  	}
+
+			.button-container {
+			  text-align: center;
+			}
+
+			.box-mover {
+			  background: #4285f4;
+			  border: none;
+			  padding: 10px 12px;
+			  border-radius: 3px;
+			  color: #FFF;
+			}
+
+			.box {
+			  position: absolute;
+			  width: 162px;
+			  height: 100px;
+			  left: 50%;
+			  top: 50%;
+			  margin: -50px 0 0 -81px;
+			  border-radius: 2px;
+			  border: 1px solid #EEE;
+			  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+			  background: #FFF;
+			}
+	  </style>
+	</head>
+
+	<body>
+
+	  <div class="button-container">
+	    <button class="box-mover">Move the box</button>
+	  </div>
+
+		<div class="box"></div>
+
+		<script src="//cdn.rawgit.com/web-animations/web-animations-js/2.1.2/web-animations.min.js"></script>
+		<script>
+			var boxMover = document.querySelector('.box-mover');
+			var box = document.querySelector('.box');
+			var x = 200;
+			var bounceEasing = 'cubic-bezier(.15,1.9,.38,.71)';
+
+			var key = 'transform';
+			if ('webkitTransform' in box.style) {
+				key = 'webkitTransform';  // for Safari
+			}
+
+			boxMover.addEventListener('click', function() {
+				var curr = window.getComputedStyle(box)[key];
+				var final = 'translate(' + x + 'px)';
+				var player = box.animate([
+					{transform: curr}, {transform: final},
+				], {
+					easing: bounceEasing,
+					fill: 'forwards',
+					duration: 1000
+				});
+				player.onfinish = (function() {
+					box.style[key] = final;
+					player.cancel();
+				});
+
+			  x = (x === 200 ? -200 : 200);
+
+			}, false);
+
+		</script>
+    <!-- // [TEMPLATE footer] -->
+	</body>
+
+</html>

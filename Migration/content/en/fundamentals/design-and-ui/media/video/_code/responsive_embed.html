@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- // [TEMPLATE header_full] -->
+	<title>Responsive Embeds</title>
+  <style>
+    /* // [START styling] */
+    .video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /* // [END styling] */
+    </style>
+</head>
+<body>
+<div id="container" role="main">
+
+  <h1>Responsive Embeds</h1>
+
+  <!-- // [START markup] -->
+  <div class="video-container">
+    <iframe src="//www.youtube.com/embed/l-BA9Ee2XuM"
+            frameborder="0" width="560" height="315">
+    </iframe>
+  </div>
+  <!-- // [END markup] -->
+
+</div>
+<!-- // [TEMPLATE footer] -->
+</body>
+</html>

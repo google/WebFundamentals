@@ -1,0 +1,197 @@
+<!DOCTYPE html> <html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <style>
+
+      /* // [START invalidstyle] */
+      input.dirty:not(:focus):invalid {
+        background-color: #FFD9D9;
+      }
+      input.dirty:not(:focus):valid {
+        background-color: #D9FFD9;
+      }
+      /* // [END invalidstyle] */
+
+    </style>
+    <title>멋진 양식 만들기: 샘플 주문 양식:</title>
+  </head>
+  <body>
+    <div role="main">
+      <form method="post" id="usrForm">
+        <fieldset>
+          <legend>연락처 정보</legend>
+          <!-- // [START autocomplete] -->
+          <label for="frmNameA">이름</label>
+          <input type="text" name="name" id="frmNameA" placeholder="전체 이름" required autocomplete="name">
+
+          <label for="frmEmailA">이메일</label>
+          <input type="email" name="email" id="frmEmailA" placeholder="name@example.com" required autocomplete="email">
+
+          <label for="frmEmailC">이메일 확인</label>
+          <input type="email" name="emailC" id="frmEmailC" placeholder="name@example.com" required autocomplete="email">
+
+          <label for="frmPhoneNumA">전화</label>
+          <input type="tel" name="phone" id="frmPhoneNumA" placeholder="+1-555-555-1212" required autocomplete="tel">
+          <!-- // [END autocomplete] -->
+
+          <label for="frmShoeSize">신발 사이즈</label>
+          <input type="number" name="shoe-size" id="frmShoeSize"
+            min="1" max="18" step="0.5">
+
+          <!-- // [START datalist] -->
+          <label for="frmFavChocolate">좋아하는 초콜릿 유형</label>
+          <input type="text" name="fav-choc" id="frmFavChocolate" list="chocType">
+          <datalist id="chocType">
+            <option value="white">
+            <option value="milk">
+            <option value="dark">
+          </datalist>
+          <!-- // [END datalist] -->
+        </fieldset>
+
+
+        <fieldset>
+          <legend>배송</legend>
+          <!-- // [START labels] -->
+          <label for="frmAddressS">주소</label>
+          <input type="text" name="ship-address" required id="frmAddressS" placeholder="123 Any Street" autocomplete="shipping street-address">
+          <!-- // [END labels] -->
+
+          <label for="frmCityS">구/군/시</label>
+          <input type="text" name="ship-city" required id="frmCityS" placeholder="New York" autocomplete="shipping locality">
+
+          <label for="frmStateS">시/도</label>
+          <input type="text" name="ship-state" required id="frmStateS" placeholder="NY" autocomplete="shipping region">
+
+          <label for="frmZipS">우편 번호</label>
+          <input type="text" name="ship-zip" required id="frmZipS" placeholder="10011" autocomplete="shipping postal-code">
+
+          <label for="frmCountryS">국가</label>
+          <input type="text" name="ship-country" required id="frmCountryS" placeholder="USA" autocomplete="shipping country">
+
+          <label>
+            <input type="checkbox" name="billAndShip" id="cbBillAndShip">
+            이 주소로 청구.
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>청구</legend>
+
+          <label for="frmAddressB">주소</label>
+          <input type="text" name="bill-address" id="frmAddressB" required placeholder="123 Any Street" autocomplete="billing street-address">
+
+          <label for="frmCityB">구/군/시</label>
+          <input type="text" name="bill-city" id="frmCityB" required placeholder="New York" autocomplete="billing locality">
+
+          <label for="frmStateB">시/도</label>
+          <input type="text" name="bill-state" id="frmStateB" required placeholder="NY" autocomplete="billing region">
+
+          <label for="frmZipB">우편 번호</label>
+          <input type="text" name="bill-zip" id="frmZipB" required placeholder="10011" autocomplete="billing postal-code">
+
+          <label for="frmCountryB">국가</label>
+          <input type="text" name="bill-country" id="frmCountryB" required placeholder="USA" autocomplete="billing country">
+        </fieldset>
+
+        <fieldset>
+          <legend>결제</legend>
+          <p>이 필드에 실제 신용 카드 정보를 제공하지 <b>마십시오</b>.</p>
+          <label for="frmNameCC">카드 소유자 이름</label>
+          <input type="text" name="ccname" id="frmNameCC" required placeholder="전체 이름" autocomplete="cc-name">
+
+          <label for="frmCCNum">카드 번호</label>
+          <input type="text" name="cardnumber" id="frmCCNum"
+            required autocomplete="cc-number">
+
+          <label for="frmCCCVC">CVC</label>
+          <input type="text" name="cvc" id="frmCCCVC" required
+            autocomplete="cc-csc">
+
+          <label for="frmCCExp">유효 기한</label>
+          <!-- // [START placeholder] -->
+          <input type="text" name="cc-exp" id="frmCCExp" required placeholder="MM-YYYY" autocomplete="cc-exp">
+          <!-- // [END placeholder] -->
+        </fieldset>
+        <div>
+          <button class="btn" id="butCheckout">결제하기</button>
+        </div>
+      </form>
+    </div>
+
+
+    <script type="text/javascript">
+      var form;
+
+      function initForm() {
+        form = document.getElementById("usrForm")
+        /* // [START preventsubmission] */
+        form.addEventListener("submit", function(evt) {
+          if (form.checkValidity() === false) {
+            evt.preventDefault();
+            alert("Form is invalid - submission prevented!");
+            return false;
+          } else {
+            // To prevent data from being sent, we've prevented submission
+            // here, but normally this code block would not exist.
+            evt.preventDefault();
+            alert("Form is valid - submission prevented to protect privacy.");
+            return false;
+          }
+        });
+        /* // [END preventsubmission] */
+      }
+
+      function initConfirmEmail() {
+        var elem = document.getElementById("frmEmailC");
+        elem.addEventListener("blur", verifyEmail);
+        function verifyEmail(input) {
+          input = input.srcElement;
+          sampleCompleted("Forms-orderConfirm");
+          var primaryEmail = document.getElementById('frmEmailA').value
+          /* // [START customvalidation] */
+          if (input.value != primaryEmail) {
+            // the provided value doesn't match the primary email address
+            input.setCustomValidity('The two email addresses must match.');
+            console.log("E-mail addresses do not match", primaryEmail, input.value);
+          } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+          }
+          /* // [END customvalidation] */
+        }
+      }
+
+      function initInputs() {
+        /* // [START initinputs] */
+        var inputs = document.getElementsByTagName("input");
+        var inputs_len = inputs.length;
+        var addDirtyClass = function(evt) {
+          sampleCompleted("Forms-order-dirty");
+          evt.srcElement.classList.toggle("dirty", true);
+        };
+        for (var i = 0; i < inputs_len; i++) {
+          var input = inputs[i];
+          input.addEventListener("blur", addDirtyClass);
+          input.addEventListener("invalid", addDirtyClass);
+          input.addEventListener("valid", addDirtyClass);
+        }
+        /* // [END initinputs] */
+      }
+
+      function initNoSubmit() {
+        form.addEventListener("submit", function(evt) {
+          evt.preventDefault();
+          alert("Submission of this form is prevented.");
+        });
+      }
+
+      initForm();
+      initInputs();
+      initConfirmEmail();
+
+
+    </script>
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html> 

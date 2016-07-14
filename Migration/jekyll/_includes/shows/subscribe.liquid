@@ -1,0 +1,30 @@
+<div class="wf-border-container">
+  <div class="wf-border-container__content with-bottom-border">
+    <h3 class="wf-highlight-list__title">{{"keep_up_to_date" | localize_string }}</h3>
+
+    <div class="wf-highlight-list__list mdl-grid">
+      <div class="wf-shows-subscribe__yt-btn mdl-button mdl-js-button mdl-cell mdl-cell--4-col">
+        <div class="wf-shows-subscribe__icon">
+          {% include svgs/youtube.svg %}
+        </div>
+        <a href="https://www.youtube.com/user/chromedevelopers?sub_confirmation=1" target="_blank">{{"subscribe" | localize_string }}</a>
+      </div>
+
+      <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button mdl-cell mdl-cell--4-col">
+        <div class="wf-shows-subscribe__icon">
+          {% include svgs/rss-icon.svg %}
+        </div>
+        <a href="{{site.WFBaseUrl}}/shows/rss.xml" target="_blank">{{"shows" | localize_string }}</a>
+      </div>
+
+      {% if page.rss_feed_url %}
+      <div class="wf-shows-subscribe__feed-btn mdl-button mdl-js-button mdl-cell mdl-cell--4-col">
+        <div class="wf-shows-subscribe__icon">
+          {% include svgs/rss-icon.svg %}
+        </div>
+        <a href="{{page.rss_feed_url}}" target="_blank">{{page.feed_name}}</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

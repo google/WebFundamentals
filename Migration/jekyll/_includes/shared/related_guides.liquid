@@ -1,0 +1,29 @@
+{% if include.list %}
+<div class="wf-border-container">
+  <div class="wf-border-container__content with-bottom-border">
+    <h3 class="wf-highlight-list__title">{{"related_guides" | localize_string}}</h3>
+    <ul class="wf-highlight-list__list">
+    {% for listItem in include.list %}
+      <li>
+        {% if listItem.section %}
+          <p class="wf-highlight-list__subtitle"><a
+            href="{{site.WFBaseUrl}}/{{listItem.section.href}}"
+            title="{{listItem.section.title}}">
+            {{listItem.section.title}}
+          </a></p>
+        {% endif %}
+
+        <a href="{{site.WFBaseUrl}}/{{listItem.href}}">
+          {% if listItem.thumbnail %}
+          <img src="{{ listItem.thumbnail }}" alt="{{ listItem.title }}">
+          {% endif %}
+          {{listItem.title}}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+
+  </div>
+</div>
+
+{% endif %}

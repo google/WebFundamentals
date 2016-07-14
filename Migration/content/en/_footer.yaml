@@ -1,0 +1,48 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+footer:
+- promos:
+  - title: Chromium Blog
+    description: The latest news on the Chromium blog
+    icon: https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
+    path: https://blog.chromium.org
+  - title: GitHub
+    description: Fork our API code samples and other open-source projects.
+    path: https://github.com/googlechrome
+    icon: /site-assets/logo-github.svg
+  - title: Twitter
+    description: Connect with @ChromiumDev on Twitter
+    icon: /site-assets/logo-twitter.svg
+    path: https://twitter.com/chromiumdev
+  - title: Videos
+    description: Check out the Web Developer Relations team's YouTube channel
+    icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
+    path: https://www.youtube.com/user/chromedevelopers
+- linkboxes:
+  - name: Related Resources
+    icon_name: link
+    contents:
+    - title: Chrome DevTools
+      path: /web/tools/devtools
+    - title: Chrome Extension Docs
+      path: https://developers.chrome.com/extensions/api_index
+    - title: Chromium Issue Tracker
+      path: https://crbug.com/
+    - title: Code Labs
+      path: https://codelabs.developers.google.com/?cat=Web
+    - title: Building for Billions
+      path: /web/billions/
+    - title: Physical Web
+      path: https://google.github.io/physical-web/
+  - name: Learn with Udacity
+    icon_name: school
+    contents:
+    - title: Offline web applications
+      path: https://www.udacity.com/courses/ud899
+    - title: Web Tooling and Automation
+      path: https://www.udacity.com/courses/ud892
+    - title: Browser Rendering Optimization
+      path: https://www.udacity.com/courses/ud860
+    - title: Website Performance Optimization
+      path: https://www.udacity.com/courses/ud884
+    - title: Responsive Web Design Fundamentals
+      path: https://www.udacity.com/courses/ud893

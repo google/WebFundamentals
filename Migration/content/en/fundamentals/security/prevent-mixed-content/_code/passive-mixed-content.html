@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <title>Passive mixed content example</title>
+    <style>
+      audio, img, video {
+        display: block;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div role="main">
+      <h1>
+        Passive mixed content!
+      </h1>
+      <p>
+        View page over: <a href="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html">HTTP</a> - <a href="https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html">HTTPS</a>
+      </p>
+      <p>
+        Several examples of passive mixed content. When viewed over HTTPS most browsers do <b>not</b> block this content but instead display warnings in the JavaScript console.
+      </p>
+
+      <!-- // [START snippet1] -->
+      <!-- An insecure audio file loaded on a secure page -->
+      <audio src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/symphony-5-beethoven.mp3" type="audio/mp3" controls></audio>
+
+      <!-- An insecure image loaded on a secure page -->
+      <img src="http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy.jpg">
+
+      <!-- An insecure video file loaded on a secure page -->
+      <video src="http://developers.google.com/web/fundamentals/design-and-ui/media/video/video/chrome.webm" type="video/webm" controls></video>
+      <!-- // [END snippet1] -->
+    </div>
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html>

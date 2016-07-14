@@ -1,0 +1,16 @@
+{% include page-structure/open-page.liquid %}
+
+{% include page-structure/site-promo-small.liquid %}
+
+<div class="page-content">
+
+  {% ytvideo page.youtubeID %}
+
+  {{ page.raw_content }}
+
+  <h4>Keep watching</h4>
+  {% include shows/shows-in-season.liquid %}
+
+</div>
+
+{% include page-structure/close-page.liquid %}

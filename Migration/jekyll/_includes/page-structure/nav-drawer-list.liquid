@@ -1,0 +1,19 @@
+{% assign listLevel = include.level %}
+{% if listLevel == nil %}
+  {% assign listLevel = 1%}
+{% endif %}
+
+<ul class="wf-main-nav__list-level-{{listLevel}} wf-nav__list clear">
+{% for tocItem in include.toc %}
+  <li class="wf-main-nav__item{% if tocItem.isSelected %} wf-main-nav__selected{% endif %}">
+    <a class="wf-main-nav__link{% if tocItem.currentPageInThisSection %} page-in-section{% endif %}" href="{{ tocItem.path }}" title="Go to {{ tocItem.title | strip_html }}">
+      {{ tocItem.title }}
+    </a>
+
+    {% if tocItem.hasSubNav == true %}
+      {% capture nextListLevel %}{{ listLevel | plus:1 }}{% endcapture %}
+      {% include page-structure/nav-drawer-list.liquid toc=tocItem.section level=nextListLevel  %}
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>

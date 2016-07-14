@@ -1,0 +1,119 @@
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="{{ page.theme_color }}">
+
+<link rel="manifest" href="{{site.WFBaseUrl}}/manifest.json">
+<link rel="canonical" href="{{page.raw_canonical_url}}">
+<link rel="icon" href="{{site.WFBaseUrl}}/imgs/favicon.ico" />
+
+<link rel="stylesheet" media="screen" href="{{page.html_css_file}}" />
+
+<meta name="google-site-verification" content="zFM_etMkM6oOvH6CNip7QxEbslAw6kJ2kiGJBYYBIcA" />
+
+<!-- Title -->
+<title>{{ page.html_head_title }}</title>
+<meta itemprop="name" content="{{ page.html_head_title }}">
+<meta property="og:title" content="{{ page.html_head_title }}" />
+
+<!-- Description -->
+<meta name="description" content="{{ page.html_head_description }}" />
+<meta itemprop="description" content="{{ page.html_head_description }}">
+
+<!-- Page Date Details -->
+{% if page.published_on %}
+<meta itemprop="datePublished" content="{{ page.published_on }}" />
+{% endif %}
+{% if page.updated_on and page.published_on != page.updated_on %}
+<meta itemprop="dateModified" content="{{ page.updated_on }}" />
+{% endif %}
+
+<!-- Translated Page -->
+{% for translated_page in page.translations %}
+<link rel="alternate" hreflang="{{translated_page[0]}}" href="{{translated_page[1].canonical_url}}" />
+{% endfor %}
+
+<link rel="publisher" href="https://plus.google.com/+GoogleChromeDevelopers">
+<link itemprop="image" href="{{ page.html_head_social_img }}">
+
+<meta property="og:site_name" content="{{ page.html_head_title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{page.canonical_url}}" />
+<meta property="og:publisher" content="https://www.facebook.com/googlechrome" />
+<meta property="og:image" content="{{site.WFAbsoluteUrl}}{{ page.html_head_social_img }}" />
+{% if main_author.facebook %}
+<meta property="og:author" content="{{ main_author.facebook }}" />
+{% endif %}
+
+<meta name="twitter:creator" content="{{ main_author.twitter }}" />
+<meta name="twitter:account_id" content="@chromiumdev" />
+<meta name="twitter:site" content="@chromiumdev" />
+<meta name="twitter:description" content="{{ page.strippedDescription }}" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{site.WFAbsoluteUrl}}{{ page.html_head_social_img }}" />
+
+{% if page.rss_feed_url %}
+<link rel="alternate" type="application/rss+xml" title="{{page.feed_name}}" href="{{page.rss_feed_url}}">
+{% endif %}
+{% if page.atom_feed_url %}
+<link rel="alternate" type="application/atom+xml" title="{{page.feed_name}}" href="{{page.atom_feed_url}}">
+{% endif %}
+</head>
+
+<body {% if page.rtl == true %}dir="rtl" {% endif %}class="page--{{ page.class }}" itemscope itemtype="http://schema.org/WebSite">
+
+<!-- Uses a header that contracts as the page scrolls down. -->
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__drawer-button wf-header__menu-btn">
+      {% include svgs/menu.svg %}
+    </div>
+    <!-- Top row, always visible -->
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title wf-header-title">{{ page.title }}</span>
+
+      <div class="mdl-layout-spacer"></div>
+
+      <!-- Search Box -->
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right wf-header__search-container">
+        <form class="devsite-search-form" action="/s/results" method="GET">
+          <label class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-header__small-btn wf-header__search-btn" for="fixed-header-drawer-exp">
+            {% include svgs/search.svg  %}
+          </label>
+          <div class="mdl-textfield__expandable-holder wf-header__search-expanding-container">
+            <input class="mdl-textfield__input wf-header__search-field devsite-search-field devsite-search-query" type="text" name="q" value="" autocomplete="off" id="fixed-header-drawer-exp" />
+            <input type="hidden" name="p" id="search_project" value="/web" data-project-name="Google APIs for Web" data-project-path="/web" data-query-match="">
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title wf-nav-drawer__title"><img src="{{site.WFBaseUrl}}/imgs/developers-logo-no-brackets.svg" alt="Google Developers Logo" /></span>
+    <nav class="mdl-navigation wf-nav-drawer__container">
+      {% include page-structure/navigation.liquid %}
+    </nav>
+
+    <div class="mdl-layout-spacer"></div>
+
+    {% if page.path %}
+      {% capture githubUrl %}{{site.github.root}}/tree/{{site.WFGithubBranch}}/{{page.path | uri_escape }}{% endcapture %}
+    {% else %}
+      {% capture githubUrl %}{{site.github.root}}/tree/{{site.WFGithubBranch}}/{% endcapture %}
+    {% endif %}
+
+    <a class="wf-navdrawer__bottom-link" href="{{githubUrl}}" target="_blank">
+      <div class="wf-navdrawer__bottom-link-container">
+        <img src="{{ site.WFBaseUrl }}/imgs/third_party/github-mark.svg" alt="Github logo" />
+        {{"view_source" | localize_string}}
+      </div>
+    </a>
+    <a class="wf-navdrawer__bottom-link" href="{{site.github.root}}/issues/new?title={{"[" | uri_escape }}{{page.langcode | upcase}}{{"] Feedback for: " | uri_escape }}{{page.relative_url | uri_escape }}" target="_blank">
+      <div class="wf-navdrawer__bottom-link-container">
+        <img src="{{ site.WFBaseUrl }}/imgs/feedback.svg" alt="feedback icon" />
+        {{"submit_feedback" | localize_string}}
+      </div>
+    </a>
+  </div>
+  <main class="mdl-layout__content">

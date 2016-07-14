@@ -1,0 +1,36 @@
+{% if page.previousPage or page.nextPage %}
+<div class="wf-article-nav">
+  <div class="wf-article-nav__link-container wf-article-nav__prev">
+    {% if page.previousPage %}
+    <a
+      class="wf-article-nav__link"
+      title="{{"previous_article" | localize_string}}"
+      href="{{ page.previousPage.relative_url }}">
+      <div class="wf-article-nav__link-text-container">
+        <span class="wf-article-nav__subtitle">{{"previous" | localize_string}}</span>
+        <div class="wf-article-nav__row">
+          <div class="wf-article-nav__icon">{% include svgs/arrow-backwards.svg %}</div>
+          <div class="wf-article-nav__link-title">{{ page.previousPage.title }}</div>
+        </div>
+      </div>
+    </a>
+    {% endif %}
+  </div>
+  <div class="wf-article-nav__link-container wf-article-nav__next">
+    {% if page.nextPage %}
+    <a
+      class="wf-article-nav__link"
+      title="{{"next_article" | localize_string}}"
+      href="{{ page.nextPage.relative_url }}">
+      <div class="wf-article-nav__link-text-container">
+        <span class="wf-article-nav__subtitle">{{"next" | localize_string}}</span>
+        <div class="wf-article-nav__row">
+          <div class="wf-article-nav__link-title">{{ page.nextPage.title }}</div>
+          <div class="wf-article-nav__icon">{% include svgs/arrow-forwards.svg %}</div>
+        </div>
+      </div>
+    </a>
+    {% endif %}
+  </div>
+</div>
+{% endif %}

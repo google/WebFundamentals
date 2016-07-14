@@ -1,0 +1,4 @@
+{% capture linkText %}{{"view_course" | localize_string}}{% endcapture %}
+{% capture linkUrl %}https://www.udacity.com/course/{{ include.uid }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index{% endcapture %}
+
+{% include shared/base_card.liquid title=include.title text=include.description linkHref=linkUrl linkText=linkText imgUrl=include.image %}

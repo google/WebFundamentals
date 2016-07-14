@@ -1,0 +1,17 @@
+{% comment %}
+  The greater > 1 is to account for English language.
+{% endcomment %}
+
+<button id="language-selection-menu" aria-label="Language selector"
+        class="mdl-button mdl-js-button mdl-button--icon wf-btn__small">
+  {% include svgs/language.svg %}
+</button>
+
+<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+  for="language-selection-menu">
+  {% for translatedPageMap in page.translations %}
+    <li class="mdl-menu__item">
+      <a class="wf-translation-link__link" href="{{ translatedPageMap[1].canonical_url }}">{{  translatedPageMap[1].langcode | lang_name }}</a>
+    </li>
+  {% endfor %}
+</ul>

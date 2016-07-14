@@ -1,0 +1,20 @@
+<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone  wf-card {{include.cardClasses}}">
+  <a style="background-image:url({{include.imgUrl}})" class="mdl-card__title" href="{{include.linkHref}}">
+    <div>
+      {% if include.title %}
+      <h2 class="mdl-card__title-text">{{include.title}}</h2>
+      {% endif %}
+    </div>
+  </a>
+  <div class="mdl-card__supporting-text">
+    <span>{{include.text}}</span>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    {%if include.linkHref %}
+      <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="{{include.linkHref}}">{{include.linkText}}</a>
+    {% endif %}
+  </div>
+  <div class="mdl-card__menu">
+
+  </div>
+</div>

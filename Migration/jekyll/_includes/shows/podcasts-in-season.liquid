@@ -1,0 +1,12 @@
+<!-- podcasts in season -->
+
+<div class="mdl-grid">
+  {% for podcast in page.context.pages reversed %}
+    {% if podcast.url != page.url%}
+      {% capture text %}
+        <b>{{podcast.title}}</b> {{podcast.description}}
+      {% endcapture %}
+      {% include shows/podcast-card.liquid linkHref=podcast.relative_url text=text imgUrl=podcast.podcast_image_url  %}
+    {% endif %}
+  {% endfor %}
+</div>

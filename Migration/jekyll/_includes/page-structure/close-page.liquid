@@ -1,0 +1,57 @@
+<footer class="wf-footer">
+  <div class="wf-footer__section-container">
+    <div class="wf-footer-section">
+      <ul class="wf-footer__list wf-footer__list--primary">
+      {% for contentnavTocItem in page.contentnav.toc %}
+        {% if contentnavTocItem.title == 'Resources' %}
+          {% continue %}
+        {% endif %}
+
+        {% if contentnavTocItem.home %}
+        <a href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
+          <strong>{{ contentnavTocItem.title }}</strong>
+        </a>
+        {% else %}
+        <a href="{{ contentnavTocItem.path }}" title="Go to {{ contentnavTocItem.strippedTitle }}">
+          {{ contentnavTocItem.title }}
+        </a>
+        {% endif %}
+
+        {% if site.spotlights == true or checkTitle != 'spotlights' %}
+        <li class="sitemap__item sitemap__item--{{ section.title | downcase | replace:' ','-' }} {% if section.home %} sitemap__item--home {% endif %}{% unless section.home %}{% if page.relative_url contains section.path %} sitemap__item--current{% endif %}{% endunless %}{% if section.home and page.relative_url == '/index.html' %} sitemap__item--current{% endif %} {% if section.hasSubNav %} sitemap__item--has-child{% endif %}">
+          <a class="sitemap-list__link sitemap-list__link--parent" href="{% if section.external != true %}{{site.WFBaseUrl}}{% endif %}{{ section.path }}?hl={{page.langcode}}" title="Go to {{ stripTitle }}">
+            {{ section.title }}
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
+      <li><a href="{{site.WFBaseUrl}}/resources/">Resources</a></li>
+      </ul>
+    </div>
+    <div class="wf-footer-section">
+      <header class="wf-footer__header">
+        <h3 class="wf-footer__title">
+          <a href="https://developers.google.com/" class="wf-footer__title--link">
+            <img id="developers-logo-footer" src="{{site.WFBaseUrl}}/imgs/developers-logo_short.svg" alt="Google Developers logo">
+          </a>
+        </h3>
+        <div class="wf-footer_social-icons">
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-footer__small-btn" href="https://twitter.com/ChromiumDev">{% include svgs/twitter.svg %}</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-footer__small-btn" href="https://www.youtube.com/user/ChromeDevelopers">{% include svgs/youtube.svg %}</a>
+          <a class="mdl-button mdl-js-button mdl-button--icon wf-btn__small wf-footer__small-btn" href="https://plus.google.com/+GoogleChromeDevelopers">{% include svgs/gplus.svg %}</a>
+        </div>
+      </header>
+
+      <ul class="wf-footer__list wf-footer__list--secondary">
+        <li><a href="https://www.google.com/">Google</a></li>
+        <li><a href="https://developers.google.com/site-terms">{{"terms_of_service" | localize_string}}</a></li>
+        <li><a href="https://www.google.com/intl/en/policies/privacy">{{"privacy_policy" | localize_string}}</a></li>
+        <li><a href="https://developers.google.com/careers">{{"careers" | localize_string}}</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</main>
+</div>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,300,500,700,400italic,700italic' rel='stylesheet' type='text/css'>

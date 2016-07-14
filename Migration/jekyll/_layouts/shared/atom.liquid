@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ page.feed_title | xml_escape }}</title>
+  <icon>{% if page.feed_icon %}{{ page.feed_icon }}{% else %}{{ site.WFAbsoluteUrl | append: site.WFBaseUrl | append: "/favicon.ico"}}{% endif %}</icon>
+  <id>{{ page.feed_id }}</id>
+  <subtitle>{{ page.feed_description | xml_escape }}</subtitle>
+  <updated>{{ page.feed_update | date_to_xmlschema }}</updated>
+  {% if page.feed_logo %}<logo>{{ page.feed_logo }}</logo>{% endif %}
+  <link href="{{ page.feed_id | append: '/atom.xml' }}" rel="self" />
+  <link href="{{ page.feed_link }}" />
+  {% for post in page.feed_pages %}
+  <entry>
+    <title>{{ post.title | xml_escape }}</title>
+    <published>{{ post.published_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</published>
+    {% if post.updated_on %}<updated>{{ post.updated_on | date: "%Y-%m-%dT%H:%M:%SZ" }}</updated>{% endif %}
+    <link rel="alternate" type="text/html" href="{{ post.raw_canonical_url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ page.feed_section }}_feed" />
+    <id>{{ post.raw_canonical_url }}</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1{{ post.relative_url }}?feed_type=atom&pixel">
+        {{ post.content }}
+      ]]>
+    </content>
+    {% if post.tags %}{% for tag in post.tags %}
+    <category term="{{tag}}" label="{{tag}}" />{% endfor %}{% endif %}
+    {% if post.authors %}<author>
+      {% for author in post.authors %}{% assign contributor = site.data["contributors"][author] %}
+      <name>{{contributor.name.given}} {{contributor.name.family}}</name>
+      {% endfor %}
+    </author>{% endif %}
+  </entry>
+  {% endfor %}
+</feed>
