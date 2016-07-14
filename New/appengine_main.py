@@ -33,7 +33,7 @@ class DevSitePages(webapp2.RequestHandler):
     def get(self, path):
         lang = self.request.get("hl", "en")
 
-        sourcePath = 'content'
+        sourcePath = 'src/content'
 
         fileLocations = [
           os.path.join(os.path.dirname(__file__), sourcePath, lang, path),
@@ -59,7 +59,7 @@ class DevSitePages(webapp2.RequestHandler):
             parsedMarkdown = markdown.markdown(fileContent, extensions=ext)
 
             # TODO: Pete why is lang set to path?
-            text = render("devsite.tpl", {"content": parsedMarkdown, "lang": path})
+            text = render("gae/devsite.tpl", {"content": parsedMarkdown, "lang": path})
             break
 
         if text is None:
