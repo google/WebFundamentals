@@ -67,15 +67,15 @@ selecione **Dark** do menu **Theme**.
 
 ![dark theme](images/dark-theme.png)
 
-## Abra e feche os painéis inferiores {#drawer-tabs}
+## Abra e feche os Drawers {#drawer-tabs}
 
 Pressione <kbd>Esc</kbd> para abrir e fechar as **Abas Inferiores** no DevTools. A imagem
 abaixo mostra um exemplo do painel **Elements** enquanto o painel **Console**
 está aberto no canto inferior.
 
-![painel Elements com painéis inferiores](images/drawer.png)
+![painel Elements com Drawers](images/drawer.png)
 
-A partir dos painéis inferiores você pode executar comandos no Console, ver o Animation
+A partir dos Drawers você pode executar comandos no Console, ver o Animation
 Inspector, configurar condições de rede e configurações de renderização, procurar por
 textos e arquivos, e emular sensores de dispositivos móveis.
 
