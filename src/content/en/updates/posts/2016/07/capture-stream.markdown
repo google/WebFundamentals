@@ -29,7 +29,7 @@ featured_image: /web/updates/images/2016/07/capture-stream/featured.jpg
 }
 </style>
 
-<p class="intro">The <code>captureStream()</code> method makes it possible to stream from a <code>canvas</code>, <code>audio</code> or <code>video</code> element.</p>
+<p class="intro">The <a href="https://w3c.github.io/mediacapture-fromelement/#dfn-capturestream" title="W3C captureStream() spec"><code>captureStream()</code></a> method makes it possible to stream from a <code>canvas</code>, <code>audio</code> or <code>video</code> element.</p>
 
 Try it out! There are links to canvas and video examples below.
 
@@ -43,8 +43,9 @@ For `canvas`:
 var canvas = document.querySelector('canvas');
 var video = document.querySelector('video');
 
-// optional frames per second argument
+// Optional frames per second argument.
 var stream = canvas.captureStream(25);
+// Set the source of the <video> element to be the stream from the <canvas>.
 video.srcObject = stream;
 {% endhighlight %}
 
@@ -54,27 +55,27 @@ For `video`:
 var leftVideo = document.getElementById('leftVideo');
 var rightVideo = document.getElementById('rightVideo');
 
-leftVideo.onloadedmetadata = function() {
-  var stream = leftVideo.captureStream();
-  rightVideo.srcObject = stream;
-};
+// Set the source of one <video> element to be a stream from the other.
+var stream = leftVideo.captureStream();
+rightVideo.srcObject = stream;
 {% endhighlight %}
 
 ## But why?
 
 The `captureStream()` method makes it possible to [record](https://developers.google.com/web/updates/2016/01/mediarecorder) or [live stream](http://www.html5rocks.com/en/tutorials/webrtc/basics/) from canvas and media elements:
 
-* Game play from a &lt;canvas&gt;
-* Video from a camera, with content or effects added
-* Picture-in-picture from videos via a canvas
-* Video and images (from files or a camera) combined in a &lt;canvas&gt;
-* A video played from a file
+* Record and stream game play from a &lt;canvas&gt;
+* Capture video from a camera, then add additional content or effects
+* Create picture-in-picture effects from multiple videos via a &lt;canvas&gt;
+* Combine video and images (from files or a camera or both) in a &lt;canvas&gt;
+* Live-stream video played from a file
 
-Essentially, `captureStream()` enables JavaScript to construct and 'inject stuff' into a [MediaStream](https://developer.mozilla.org/en/docs/Web/API/MediaStream).
+
+Essentially, `captureStream()` enables JavaScript to construct and "inject stuff" into a [MediaStream](https://developer.mozilla.org/en/docs/Web/API/MediaStream).
 
 ## The small print
 
-* Attempting to use `captureStream()` on media element that implements content protection via [Encrypted Media Extensions](http://www.html5rocks.com/en/tutorials/eme/basics/) will throw an exception. (The relevant code is [here](https://cs.chromium.org/chromium/src/third_party/WebKit/Source/modules/mediacapturefromelement/HTMLMediaElementCapture.cpp?l=31).)
+* Attempting to use `captureStream()` with a media element that implements content protection via [Encrypted Media Extensions](http://www.html5rocks.com/en/tutorials/eme/basics/) will throw an exception.
 
 * When capturing from a &lt;canvas&gt;, the frame rate is set when `captureStream()` is called, and it doesn't vary. That can be inefficient if the &lt;canvas&gt; doesn't change, but there is no way around this for the moment, and nothing (yet) planned for the `captureStream()` spec.
 
@@ -89,8 +90,8 @@ Essentially, `captureStream()` enables JavaScript to construct and 'inject stuff
 * [Stream from a video element to a peer connection](https://webrtc.github.io/samples/src/content/capture/video-pc/)
 
 ## Support
-* Canvas `captureStream()`: Firefox 43 or above; Chrome 50 and above with Experimental Web Platform features enabled from chrome://flags, or Chrome 52 and above by default.
-* Video and audio `captureStream()`: recent versions of Firefox; Chrome 52 and above with Experimental Web Platform features enabled from chrome://flags, or Chrome 53 and above by default.
+* Canvas `captureStream()`: Firefox 43 or above; Chrome 50 and above with  chrome://flags/#enable-experimental-web-platform-features enabled, or Chrome 52 and above by default.
+* Video and audio `captureStream()`: recent versions of Firefox; Chrome 52 and above with  chrome://flags/#enable-experimental-web-platform-features enabled, or Chrome 53 and above by default.
 
 ## Find out more
 * [Firefox implementation bug](https://bugzilla.mozilla.org/show_bug.cgi?id=664918)
