@@ -70,7 +70,7 @@ The `captureStream()` method makes it possible to [record](https://developers.go
 * Video and images (from files or a camera) combined in a &lt;canvas&gt;
 * A video played from a file
 
-Essentially, `captureStream()` enables JavasScript to construct and 'inject stuff' into a [MediaStream](https://developer.mozilla.org/en/docs/Web/API/MediaStream).
+Essentially, `captureStream()` enables JavaScript to construct and 'inject stuff' into a [MediaStream](https://developer.mozilla.org/en/docs/Web/API/MediaStream).
 
 ## The small print
 
@@ -90,7 +90,7 @@ Essentially, `captureStream()` enables JavasScript to construct and 'inject stuf
 
 ## Support
 * Canvas `captureStream()`: Firefox 43 or above; Chrome 50 and above with Experimental Web Platform features enabled from chrome://flags, or Chrome 52 and above by default.
-* Video and audio `captureStream()`: rtecent versions of Firefox; Chrome 52 and above with Experimental Web Platform features enabled from chrome://flags, or Chrome 53 and above by default.
+* Video and audio `captureStream()`: recent versions of Firefox; Chrome 52 and above with Experimental Web Platform features enabled from chrome://flags, or Chrome 53 and above by default.
 
 ## Find out more
 * [Firefox implementation bug](https://bugzilla.mozilla.org/show_bug.cgi?id=664918)
