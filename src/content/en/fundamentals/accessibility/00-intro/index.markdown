@@ -4,7 +4,7 @@ title: "Get Started"
 description: "Learn the basics of accessibility, what it means and why it's important."
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 1
+order: 2
 translation_priority: 0
 authors:
   - megginkearney
