@@ -31,9 +31,9 @@ However, sometimes we use elements that look like native elements but aren't. Fo
 
 It might be constructed in HTML in any number of ways; one way is shown below.
 
-```html
+{% highlight html %}
 <div class="button-ish">Give me tacos</div>
-```
+{% endhighlight %}
 
 When we don't use an actual button element, the screen reader has no way to know what it has landed on. Also, we would have to do the extra work discussed in the previous lesson to make it usable to keyboard-only users because, as it is coded now, it can only be used with a mouse.
 
