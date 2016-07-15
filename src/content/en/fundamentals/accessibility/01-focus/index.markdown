@@ -4,7 +4,7 @@ title: "Focus"
 description: "Overview of screen focus in accessibility"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 1
+order: 2
 translation_priority: 0
 authors:
   - megginkearney

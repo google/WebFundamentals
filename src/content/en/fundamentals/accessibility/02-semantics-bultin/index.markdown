@@ -4,7 +4,7 @@ title: "Introduction to Semantics"
 description: "Introduction to semantics and assistive technology"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 1
+order: 3
 translation_priority: 0
 authors:
   - megginkearney

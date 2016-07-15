@@ -4,7 +4,7 @@ title: "Semantics and Navigating Content"
 description: "The role of semantics in page navigation"
 published_on: 2016-03-01
 updated_on: 2016-03-01
-order: 1
+order: 4
 translation_priority: 0
 authors:
   - megginkearney
