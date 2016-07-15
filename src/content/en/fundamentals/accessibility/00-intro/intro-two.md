@@ -1,5 +1,5 @@
 ---
-layout: shared/narrow-pages-list
+layout: shared/narrow
 title: "What Is Accessibility?"
 description: "Accessibility Codelab"
 published_on: 2016-03-01
