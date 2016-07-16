@@ -81,7 +81,7 @@ Essentially, `captureStream()` enables JavaScript to construct and "inject stuff
 
 * Attempting to use `captureStream()` with a media element that implements content protection via [Encrypted Media Extensions](http://www.html5rocks.com/en/tutorials/eme/basics/) will throw an exception.
 
-* When capturing from a &lt;canvas&gt;, the frame rate is set when `captureStream()` is called, and it doesn't vary. That can be inefficient if the &lt;canvas&gt; doesn't change, but there is no way around this for the moment, and nothing (yet) planned for the `captureStream()` spec.
+* When capturing from a &lt;canvas&gt;, the frame rate is set when `captureStream()` is called, and it can't then be modified. This could be inefficient, given that the &lt;canvas&gt; might sometimes change rapidly, and sometimes not at all — for example, during game play. Unfortunately there is no way around this for the moment, and nothing (yet) planned for the `captureStream()` spec.
 
 ## Demos
 
