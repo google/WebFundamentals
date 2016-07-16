@@ -45,7 +45,7 @@ To see this in action, open [simpl.info/video/muted](https://simpl.info/video/mu
 
 <img src="/web/updates/images/2016/07/autoplay/screenshot.jpg">
 
-In addition, muted playback can now be initiated using the `play()` method. (If the video is not muted, playback won't start. We recommend using the video element `muted` attribute by default, and the video object `muted` property only if necessary.) Previously, `play()` would only initiate playback if it came from a user gesture such as a button click. Compare the following two demos on Android — try them on Chrome 53, then on an older version:
+In addition, muted playback can now be initiated using the `play()` method. If the video is not muted, playback won't start. We recommend using the autoplay attribute by default, and the `play()` method only if necessary. Previously, `play()` would only initiate playback if it came from a user gesture such as a button click. Compare the following two demos on Android — try them on Chrome 53, then on an older version:
 
 * [Scripted playback](https://simpl.info/video/scripted)
 * [Playback initiated by a button](https://simpl.info/video/button)
