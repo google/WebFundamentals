@@ -55,10 +55,14 @@ For `video`:
 var leftVideo = document.getElementById('leftVideo');
 var rightVideo = document.getElementById('rightVideo');
 
-// Set the source of one <video> element to be a stream from the other.
-var stream = leftVideo.captureStream();
-rightVideo.srcObject = stream;
+leftVideo.onplay = function() {
+  // Set the source of one <video> element to be a stream from another.
+  var stream = leftVideo.captureStream();
+  rightVideo.srcObject = stream;
+};
 {% endhighlight %}
+
+Note that `captureStream()` can only be called after the video element is able to play video: that's the reason it's in the handler here.
 
 ## But why?
 
@@ -69,7 +73,7 @@ The `captureStream()` method makes it possible to [record](https://developers.go
 * Create picture-in-picture effects from multiple videos via a &lt;canvas&gt;
 * Combine video and images (from files or a camera or both) in a &lt;canvas&gt;
 * Live-stream video played from a file
-
+* Use a recorded audio or video message for a video or voice mail
 
 Essentially, `captureStream()` enables JavaScript to construct and "inject stuff" into a [MediaStream](https://developer.mozilla.org/en/docs/Web/API/MediaStream).
 
