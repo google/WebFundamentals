@@ -2,6 +2,7 @@
 title: "서비스워커 라이프싸이클"
 description: "서비스워커는 웹 페이지와 완전 별개의 라이프싸이클을 갖고 있습니다."
 updated_on: 2016-01-18
+order: 1
 translators:
   - captainpangyo
 ---
@@ -27,4 +28,4 @@ fetch나 message event를 처리하는 형태의 2가지 상태 중 하나가 �
 
 아래는 처음 설치단계에서의 서비스워커 라이프싸이클을 단순화한 형태입니다.
 
-![service worker lifecydle](images/sw-lifecycle.png)
+![service worker lifecycle](images/sw-lifecycle.png)
