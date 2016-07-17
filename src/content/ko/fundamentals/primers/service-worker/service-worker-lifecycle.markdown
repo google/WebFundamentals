@@ -2,7 +2,6 @@
 title: "서비스워커 라이프싸이클"
 description: "서비스워커는 웹 페이지와 완전 별개의 라이프싸이클을 갖고 있습니다."
 updated_on: 2016-01-18
-order: 1
 translators:
   - captainpangyo
 ---
