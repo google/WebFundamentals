@@ -50,3 +50,6 @@ tr:
 
 'zh-tw':
   name: '中文（繁體）'
+
+hi:
+  name: 'Hindi(हिंदी)'
