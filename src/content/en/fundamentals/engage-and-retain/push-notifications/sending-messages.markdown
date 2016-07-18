@@ -77,7 +77,7 @@ browser doesn't support payloads, the subscription object won't contain keys.
 
 To send a push to a client, send a PUT request to the push service endpoint.
 
-<pre>PUT /push-service/send/dbDqU8xX10w:APA91b... HTTP/1.1
+<pre>POST /push-service/send/dbDqU8xX10w:APA91b... HTTP/1.1
 HOST: example.com
 TTL: 120
 Content-Type: application/octet-stream
