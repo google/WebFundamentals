@@ -23,9 +23,9 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-Sometimes when you're managing focus you can get into a situation you can't get out of. Consider an autocomplete widget that tries to manage focus and captures the tab behavior, but prevents the user from leaving it until it's complete. This is a *keyboard trap*, and it can be very frustrating for the user. Section 2.1.2 of the Web AIM checklist addresses this issue, stating that keyboard focus should never be locked or trapped at one particular page element. The user should be able to navigate to and from all page elements using only the keyboard.
+Sometimes when you're managing focus you can get into a situation you can't get out of. Consider an autocomplete widget that tries to manage focus and captures the tab behavior, but prevents the user from leaving it until it's complete. This is called a *keyboard trap*, and it can be very frustrating for the user. Section 2.1.2 of the Web AIM checklist addresses this issue, stating that keyboard focus should never be locked or trapped at one particular page element. The user should be able to navigate to and from all page elements using only the keyboard.
 
-Oddly, there are times when this behavior is actually desirable, like in a modal window. Normally you don't want the user to access any of the content behind it. You might add an overlay to cover the page, but that doesn't stop keyboard focus from accidentally traveling outside the modal. In instances like this you can implement a temporary keyboard trap to ensure that you trap focus while the modal is displaying and restore it to the previously-focused item when the modal is closed.
+Oddly, there are times when this behavior is actually desirable, like in a modal window. Normally, when the modal is displayed, you don't want the user to access the content behind it. You might add an overlay to cover the page visually, but that doesn't stop keyboard focus from accidentally traveling outside the modal. In instances like this you can implement a temporary keyboard trap to ensure that you trap focus only while the modal is displayed and then restore focus to the previously-focused item when the modal is closed.
 
 >There are some proposals on how to make this easier for developers, including the `<dialog>` element, but they don't yet have widespread browser support.
 
@@ -40,4 +40,4 @@ Consider a modal dialog represented by a `div` that contains a few elements, and
  1. If the user presses `Esc`, close the modal. This is very helpful because it allows the user to close the modal without searching for a specific close button, and it benefits even users who are using a mouse. 
  1. When the modal is closed, hide it and the background overlay, and restore focus to the previously-focused element saved earlier.
 
-This procedure gives you a usable, non-frustrating modal window that everyone can use effectively.
+This straightforward procedure gives you a usable, non-frustrating modal window that everyone can use effectively.
