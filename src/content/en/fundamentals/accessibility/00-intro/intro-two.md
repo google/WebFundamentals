@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-Broadly speaking, when we say a site is accessible, we mean that the site's content is available, and its functionality can be operated, by literally *anyone*. As developers, it's easy to assume that all users can see and use a keyboard, mouse, or touch screen, and interact with your application the same way you do. This can lead to an experience that works well for some people, but creates issues that range from simple annoyances to show-stoppers for others. 
+Broadly speaking, when we say a site is accessible, we mean that the site's content is available, and its functionality can be operated, by literally *anyone*. As developers, it's easy to assume that all users can see and use a keyboard, mouse, or touch screen, and can interact with your page content the same way you do. This can lead to an experience that works well for some people, but creates issues that range from simple annoyances to show-stoppers for others. 
 
 Accessibility, then, refers to the experience of users who might be outside the narrow range of the "typical" user, who might access or interact with things differently than you expect. Specifically, it concerns users who are experiencing some type of impairment or disability &mdash; and bear in mind that that experience might be non-physical or temporary.
 
@@ -43,4 +43,4 @@ Now let's wave our accessibility wand and see the form with those issues fixed. 
 
 ![betteraccess.png](imgs/betteraccess.png)
 
-Which would you rather use? If you said "the accessible version", you're on your way to understanding the main premise of this course. Often, something that's a complete blocker for a few users is also an annoying pain point for many others, so by fixing the accessibility issue you improve the experience for everyone.
+Which would you rather use? If you said "the accessible version", you're on your way to understanding a main premise of this course. Often, something that's a complete blocker for a few users is also a pain point for many others, so by fixing the accessibility issue you improve the experience for everyone.
