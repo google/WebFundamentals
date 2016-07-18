@@ -27,7 +27,7 @@ Images are an important component of most web pages, and are of course a particu
 
 ![funioncat1](imgs/funioncat1.png)
 
-In the page we have a picture of a cat, illustrating the article on cats' well-known judgemental behavior. ChromeVox announces this image using its literal name, "160204193356-01-cat-500.jpg" (seen in the black voiceover bar). Accurate, yes, but not at all useful.
+In the page we have a picture of a cat, illustrating the article on cats' well-known judgemental behavior. ChromeVox announces this image using its literal name, "/160204193356-01-cat-500.jpg" (seen in the black voiceover bar). That's accurate, but not at all useful.
 
 You can use the `alt` attribute to provide a useful text alternative to this image &mdash; for example, "A cat staring menacingly into space" &mdash; then the screen reader can provide a succinct description of the image (again, seen in the black voiceover bar) and the user can choose whether to move on to the article.
 
@@ -44,8 +44,8 @@ Consider a linked logo image in the masthead of a page. We can describe the imag
 
 Imagine a screen reader user who wants to locate the masthead logo on the page; giving it an alt value of "home" actually creates a more confusing experience. And a sighted user faces the same challenge &mdash; figuring out what clicking the site logo does &mdash; as a screen reader user.
 
-However, it's not always useful to describe an image. For example, consider a magnifying glass image inside a search button that has the text "Search". If the text wasn't there, you would definitely give that image an alt value of "search". But because we have the visible text, the screen reader will pick it up, and an identical `alt` value on the image is redundant. 
+On the other hand, it's not always useful to describe an image. For example, consider a magnifying glass image inside a search button that has the text "Search". If the text wasn't there, you would definitely give that image an alt value of "search". But because we have the visible text, the screen reader will pick up and read aloud the word "search"; thus, an identical `alt` value on the image is redundant. 
 
-However, we know that if we leave the alt text out, we'll probably hear the image file name instead, which is both useless and potentially confusing information. In this case you can just use an empty `alt` attribute, and the screen reader will skip the image altogether.
+However, we know that if we leave the alt text out, we'll probably hear the image file name instead, which is both useless and potentially confusing. In this case you can just use an empty `alt` attribute, and the screen reader will skip the image altogether.
 
-To summarize, *all* images should have an `alt` attribute, but they need not all have text. Important images should have descriptive alt text that succinctly describes what the image is, while decorative images should have no alt text &mdash; that is, `alt=""`. 
+To summarize, all images should have an `alt` attribute, but they need not all have text. Important images should have descriptive alt text that succinctly describes what the image is, while decorative images should have empty alt attributes &mdash; that is, `alt=""`. 
