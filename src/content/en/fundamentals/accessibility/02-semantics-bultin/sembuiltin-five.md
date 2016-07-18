@@ -46,7 +46,7 @@ Broadly, there are two types of names:
  - *Visible labels*, which are used by all users to associate meaning with an element, and
  - *Text alternatives*, which are only used when there is no need for a visual label.
 
-For text-level elements, we don't need to do anything, because by definition it will have some text content. However, for input or control elements, and visual content like images, we need to make sure that we specify a name. In fact, providing text alternatives for any non-text content is [the very first item on the WebAIM checklist](http://webaim.org/standards/wcag/checklist#g1.1).
+For text-level elements, we don't need to do anything, because by definition it will have some text content. However, for input or control elements, and visual content like images, we need to make sure that we specify a name. In fact, providing text alternatives for any non-text content is <a href="http://webaim.org/standards/wcag/checklist#g1.1" target="_blank">the very first item on the WebAIM checklist</a>.
 
 One way to do that is to follow their recommendation that "Form inputs have associated text labels." There are two ways to associate a label with a form element, such as a checkbox. Either of the methods causes the label text to also become a click target for the checkbox, which is also helpful for mouse or touchscreen users. To associate a label with an element, either
 
