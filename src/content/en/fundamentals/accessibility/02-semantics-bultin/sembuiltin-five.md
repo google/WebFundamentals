@@ -51,19 +51,21 @@ For text-level elements, we don't need to do anything, because by definition it 
 One way to do that is to follow their recommendation that "Form inputs have associated text labels." There are two ways to associate a label with a form element, such as a checkbox. Either of the methods causes the label text to also become a click target for the checkbox, which is also helpful for mouse or touchscreen users. To associate a label with an element, either
 
  - Place the input element inside a label element
-```html
+
+{% highlight html %}
 <label>
   <input type="checkbox">Receive promotional offers?</input>
 </label>
-```
+{% endhighlight %}
 
 or
 
  - Use the label's `for` attribute and refer to the element's `id`
-```html
+
+{% highlight html %}
 <input id="promo" type="checkbox"></input>
 <label for="promo">Receive promotional offers?</label>
-```
+{% endhighlight %}
 
 When the checkbox has been labeled correctly, the screen reader can report that the element has a role of checkbox, is in a checked state, and is named "Receive promotional offers?". 
 
