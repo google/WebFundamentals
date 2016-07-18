@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-Imagine you're building a user interface for screen reader users *only*. Here, you don't need to create any visual UI at all, but just provide enough information for the screen reader to use. 
+Imagine that you're building a user interface *for screen reader users only*. Here, you don't need to create any visual UI at all, but just provide enough information for the screen reader to use. 
 
 What you'd be creating is a kind of API describing the page structure, similar to the DOM API, but you can get away with less information and fewer nodes, because a lot of that information is only useful for visual presentation. It might look something like this. 
 
