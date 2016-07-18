@@ -79,15 +79,15 @@ Amplie ainda mais cada um desses objetos para explorar suas propriedades:
 Por padrão,
 o painel *Event Listeners* no painel Elements mostra todos os eventos ligados em uma página:
 
-![Event listeners panel](images/events-eventlisteners_panel.png)
+![Painel Event Listeners](images/events-eventlisteners_panel.png)
 
 O filtro limita os eventos apenas para o nó selecionado:
 
-![Event listeners panel, filtered by selected node only](images/events-eventlisteners_panel_filtered.png)
+![Painel Event Listeners, filtrado apenas pelo nó selecionado](images/events-eventlisteners_panel_filtered.png)
 
 Ao expandir o objeto, o painel mostra os detalhes do ouvinte.
 Neste exemplo,
 a página tem dois ouvintes de evento ligados via jQuery:
 
-![Expanded view of the event listeners](images/events-eventlisteners_panel_details.png)
+![Visão expandida dos ouvintes de eventos](images/events-eventlisteners_panel_details.png)
 
