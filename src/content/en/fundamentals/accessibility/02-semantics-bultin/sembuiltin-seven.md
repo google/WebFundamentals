@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-We've had a general look at semantics, how they're used by screen readers, and how we can structure HTML to express those semantics.
+We've had a general look at semantics, how they're used by screen readers, and how we can structure standard HTML to express those semantics.
 
 So far, we've just used the implicit semantics of native HTML elements. Later, we'll cover what to do when HTML doesn't have the built-in semantics we need.
 
