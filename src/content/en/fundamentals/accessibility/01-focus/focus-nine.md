@@ -25,6 +25,6 @@ notes:
 
 Using the skills you've learned in this lesson, you should now be equipped to implement a solid focus strategy in your application.
 
-The next step is to take the various interactive controls you've been working with and start to imbue them with some meaning. For instance, when a screenreader lands on your custom radio buttons, how is it going to tell the user that these are in fact radio buttons, and not just a bunch of divs?
+The next step is to take the various interactive controls you've been working with and start to give them some contextual meaning. For instance, when a screenreader lands on your custom radio button controls, how will it know to tell the user that they are in fact radio buttons, and not just a bunch of heavily-styled divs?
 
 For that you need to learn about *semantics*, and that's next.
