@@ -33,14 +33,17 @@ Be careful when changing the visual position of elements on screen using CSS. Th
 
 As a rule, try tabbing through your pages every so often just to make sure you haven't accidentally messed up the tab order. It's a good habit to adopt, and one that doesn't require much effort.
 
-Here's a [page with a broken tab order](http://robdodson.github.io/udacity-a11y/lesson2-focus/02-dom-order/). 
+Here's a <a href="http://robdodson.github.io/udacity-a11y/lesson2-focus/02-dom-order/" target="_blank">page with a broken tab order</a>. 
 
 ![Navigation links](imgs/navlinks.png)
 
-Check it out and try to navigate through the page using only `Tab`; you'll quickly find that the tab order doesn't match the visual order. If you examine the page source, you'll see that the tab order originally dictated by the DOM is rearranged by CSS, making the page confusing and difficult to use and resulting in a serious accessibility issue.
+Check it out and try to navigate through the page using only `Tab`; you'll quickly find that the tab order doesn't match the visual order. If you examine the page source, you'll see that the tab order originally dictated by the DOM is rearranged by the CSS, making the page confusing and difficult to use and resulting in a serious accessibility issue.
 
-It would make more sense if the page could be navigated in this order: navigation, search, content, footer. How might you accomplish that? Grab the code and use a text editor to change the order of the elements in the DOM so that the tab order makes sense. Let's have a look.
+It would make more sense if the page could be navigated in this order: navigation, search, content, footer. How might you accomplish that? Grab the code and use a text editor to review the order of the elements in the DOM. Think about how we might reorder them so that the tab order makes sense.
 
-First, you can see that the Search link is actually higher in the DOM order than the other navigation links, and that it's using a "pull-right" CSS class to float to the right. That's fine visually, but the style placement overrides the link's physical DOM order. The easiest fix is to move the Search button below the other elements in the HTML; that won't change the visual presentation, but it will change the element's DOM position so that it matches the default tab order.
+First, you can see that the Search link is actually higher in the DOM order than the other navigation links, and that it's using a "pull-right" CSS class to float to the right. That's fine visually, but the style placement overrides the link's physical DOM order. The easiest fix is to move the Search button below the other elements in the HTML; that won't change the visual presentation because the CSS will still float it to the right, but it will change the element's DOM position so that it matches the default tab order.
 
-You may also notice that the newsletter footer's tab order is ahead of the other elements on the page because &mdash; although it is near the top of the DOM in the HTML &mdash; the "newsletter" CSS class absolutely positions it at the bottom of the page. Just like the search link, let's move the newsletter `div`, placing it at the bottom of the document, just after the `main` element. Again, this has no visual effect, but it changes the element's DOM position so that its default tab order now falls in a logical place.
+You may also notice that the newsletter footer's tab order is ahead of the other elements on the page. Although it is near the top of the DOM in the HTML, the "newsletter" CSS class absolutely positions it at the bottom of the page. Just like the search link, let's move the newsletter `div`, placing it at the bottom of the document, just after the `main` element. Again, this has no visual effect because the CSS still positions it, but it changes the element's physical DOM position so that its default tab order now falls in a logical place.
+
+You can see that these two minor changes result in a much more intuitive, and DOM-based, tab order.
+
