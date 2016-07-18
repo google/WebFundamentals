@@ -30,7 +30,7 @@ We've covered quite a bit of ground already! You have read about
  - what it's like to use a screen reader, and
  - the WCAG and the WebAIM accessibility checklist
 
-For the rest of the course, we'll dive into the practical aspects of creating accessible web sites. We'll organize this effort around three main topics:
+For the rest of the course, we'll dive into the practical aspects of creating accessible web sites. We'll organize this effort around three main subject areas:
 
  - **Focus**: We'll look at how to build things that can be operated with a keyboard instead of a mouse. This is important for users with motor impairments, of course, but it also ensures that your UI is in good shape for all users.
 
@@ -38,4 +38,4 @@ For the rest of the course, we'll dive into the practical aspects of creating ac
 
  - **Styling**: We'll consider visual design and look at some techniques for making the visual elements of the interface as flexible and usable as possible.
 
-Each of those topics could probably fill a whole course, so we won't be able to cover every aspect of creating accessible web sites. However, we'll give you enough information to get started, and point you to some good places where you can learn more about each topic.
+Each of those subjects could fill a whole course, so we won't cover every aspect of creating accessible web sites. However, we'll give you enough information to get started, and point you to some good places where you can learn more about each topic.
