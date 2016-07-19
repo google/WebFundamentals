@@ -23,11 +23,11 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-We know that it's a good idea to design responsively to provide the best multi-device experience, but responsive design is also a win for accessibility.
+We know that it's a good idea to design responsively to provide the best multi-device experience, but responsive design also yields a win for accessibility.
 
-Consider a site like [Udacity](https://www.udacity.com/). A low-vision user who has difficulty reading small print might zoom in the page, perhaps as much as 400%, whereupon they are now essentially viewing the mobile version of the site on their desktop. 
+Consider a site like <a href="https://www.udacity.com/" target="_blank">Udacity</a>. A low-vision user who has difficulty reading small print might zoom in the page, perhaps as much as 400%, whereupon they are now essentially viewing the mobile version of the site on their desktop. 
 
-The UI has rearranged itself for the "smaller viewport" (actually for the larger page), which is great for desktop users who require screen magnification and for mobile screen reader users as well. It's a win-win. In fact, just by designing responsively, we're meeting rule 1.4.4 of the WebAIM checklist, which states that a page "...should be readable and functional when the text size is doubled."
+The UI will rearrange itself for the "smaller viewport" (actually for the larger page), which is great for desktop users who require screen magnification and for mobile screen reader users as well. It's a win-win. In fact, just by designing responsively, we're meeting rule 1.4.4 of the WebAIM checklist, which states that a page "...should be readable and functional when the text size is doubled."
 
 Going over all of responsive design is outside the scope of this course, but here are a few important takeaways that will benefit your responsive experience and give your users better access to your content.
 
@@ -43,4 +43,4 @@ Going over all of responsive design is outside the scope of this course, but her
 
 A minimum recommended touch target size is around 48px on a site with a properly set mobile viewport. For example, while an icon may only have a width and height of 24px, you can use additional padding to bring the tap target size up to 48px. The 48x48 pixel area corresponds to around 9mm, which is about the size of a person's finger pad area. Touch targets should also be spaced about 32 pixels apart, both horizontally and vertically, so that a user's finger pressing on one tap target does not inadvertently touch another tap target. 
 
->See the Google article [Size Tap Targets Appropriately](https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately?hl=en) for more information.
+>See the Google article <a href="https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately?hl=en" target="_blank">Size Tap Targets Appropriately</a> for more information.
