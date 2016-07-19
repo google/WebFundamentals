@@ -11,7 +11,48 @@
         <div class="devsite-top-logo-row-wrapper-wrapper" style="position:fixed;">
           <div class="devsite-top-logo-row-wrapper">
             <div class="devsite-top-logo-row devsite-full-site-width">
-              DevSite Header
+              <div class="devsite-product-name-wrapper">
+                <a class="devsite-product-name-link" href="https://developers.google.com/web/">
+                  <div class="devsite-product-logo-container">
+                    <img src="https://www.gstatic.com/images/branding/product/2x/google_developers_64dp.png" class="devsite-product-logo" alt="Web">
+                  </div>
+                </a>
+                <span class="devsite-product-name">
+                  <ul class="devsite-breadcrumb-list">
+                    <li class="devsite-breadcrumb-item">
+                      <a href="https://developers.google.com/web/" class="devsite-breadcrumb-link">
+                        <h1 class="devsite-product-name">Web</h1>
+                      </a>
+                    </li>
+                  </ul>
+                </span>
+              </div>
+              <div class="devsite-header-upper-tabs">
+                <nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper">
+                  <ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll">
+                    <li class="devsite-doc-set-nav-tab-container">
+                      <a href="/web/fundamentals/" class="devsite-doc-set-nav-tab">
+                        Fundamentals
+                      </a>
+                    </li>
+                    <li class="devsite-doc-set-nav-tab-container">
+                      <a href="/web/tools/" class="devsite-doc-set-nav-tab">
+                        Tools
+                      </a>
+                    </li>
+                    <li class="devsite-doc-set-nav-tab-container">
+                      <a href="/web/updates/" class="devsite-doc-set-nav-tab">
+                        Updates
+                      </a>
+                    </li>
+                    <li class="devsite-doc-set-nav-tab-container">
+                      <a href="/web/showcase/" class="devsite-doc-set-nav-tab">
+                        Case Studies
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
             </div>
           </div>
         </div>
