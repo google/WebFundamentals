@@ -54,7 +54,14 @@ class DevSitePages(webapp2.RequestHandler):
 
             # Remove any comments {# something #} from the markdown
             fileContent = re.sub(r"{#.+?#}", "", fileContent)
-            
+
+            # Handle Special DevSite Cases
+            fileContent = re.sub(r"^Success: (.*)(?m)", r"<aside class='success'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Dogfood: (.*)(?m)", r"<aside class='dogfood'><strong>Dogfood:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Note: (.*)(?m)", r"<aside class='note'><note>Success:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Caution: (.*)(?m)", r"<aside class='caution'><strong>Caution:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Warning: (.*)(?m)", r"<aside class='warning'><strong>Warning:</strong> <span>\1</span></aside>", fileContent)
+
             # Adds a set of markdown extensions available to us on DevSite
             ext = [
               "markdown.extensions.attr_list", # Adds support for {: #someid }
@@ -63,6 +70,9 @@ class DevSitePages(webapp2.RequestHandler):
             ]
             md = markdown.Markdown(extensions=ext)
             parsedMarkdown = md.convert(fileContent)
+
+            # Replaces <pre> tags with prettyprint enabled tags
+            parsedMarkdown = re.sub(r"^<pre>(?m)", r"<pre class='prettyprint'>", parsedMarkdown)
 
             # Build the table of contents & transform so it fits within DevSite
             toc = md.toc

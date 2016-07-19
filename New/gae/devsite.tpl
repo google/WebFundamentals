@@ -86,4 +86,9 @@
       </div>
     </div>
   </body>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/prettify.js">
+  </script>
+  <script>
+    addEventListener('load', function(event) { PR.prettyPrint(); }, false);
+  </script>
 </html>
