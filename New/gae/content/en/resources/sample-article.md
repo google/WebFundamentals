@@ -1,5 +1,5 @@
 project_path: /web/_project.yaml
-book_path: /web/petele/_book.yaml
+book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
 
@@ -495,6 +495,12 @@ automatically maintain a 16:9 ratio.
               data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
       </iframe>
     </div>
+
+{% include "web/_shared/sample.html" %}
+
+<pre class="prettyprint">
+&#123;% include "web/_shared/sample.html" %}
+</pre>
 
 ## Other Elements
 
