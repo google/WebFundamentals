@@ -23,13 +23,13 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-Another important technique in fine-tuning the experience for assistive technology users involves ensuring that only the relevant parts of the page are exposed to assistive technology. There are several ways to ensure that a section of the DOM does not get exposed to accessibility APIs.
+Another important technique in fine-tuning the experience for assistive technology users involves ensuring that only relevant parts of the page are exposed to assistive technology. There are several ways to ensure that a section of the DOM does not get exposed to accessibility APIs.
 
 First, anything that is explicitly hidden from the DOM will also not be included in the accessibility tree. So anything that has a CSS style of `visibility: hidden` or `display: none` or uses the HTML5 `hidden` attribute will also be hidden from assistive technology users.
 
 However, an element that is not visually rendered but not explicitly hidden is still included in the accessibility tree. One common technique is to include "screen reader only text" in an element that is absolute positioned offscreen &mdash; although, as we have seen, it's also possible to provide screen reader only text via an `aria-label`, `aria-labelledby`, or `aria-describedby` attribute referencing an element that is otherwise hidden. 
 
-See this WebAIM article on [Techniques for hiding text](http://webaim.org/techniques/css/invisiblecontent/#techniques) for more information on creating "screen reader only" text. 
+See this WebAIM article on <a href="http://webaim.org/techniques/css/invisiblecontent/#techniques" target="_blank">Techniques for hiding text</a> for more information on creating "screen reader only" text. 
 
 Finally, ARIA provides a mechanism for excluding content from assistive technology that is not visually hidden, using the `aria-hidden` attribute. Applying this attribute to an element effectively removes it *and all of its descendants* from the accessibility tree. The only exceptions are elements referred to by an `aria-labelledby` or `aria-describedby` attribute. 
 
