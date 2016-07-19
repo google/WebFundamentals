@@ -1,0 +1,27 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+name: "Web"
+description: "Build next generation web experiences."
+home_url: /web/
+buganizer_id: 60575
+
+color: google-blue
+content_license: cc3-apache2
+footer_path: /web/_footer.yaml
+hide_from_products_list: True
+
+icon:
+  path: https://www.gstatic.com/images/branding/product/2x/google_developers_64dp.png
+
+tags:
+- html5
+- mobile
+- performance
+- web
+
+google_analytics_ids:
+- UA-52746336-1
+
+announcement:
+  description: <b>Progressive Web App Dev Summit</b> - June 20-21, Amsterdam, NL - <a href="https://events.withgoogle.com/progressive-web-app-dev-summit/">Learn more</a>
+  start: '2016-05-01T08:00:00Z'
+  end: '2016-06-20T08:00:00Z'
