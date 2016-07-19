@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-If you have good vision, it's easy to fall into the trap of thinking that everyone perceives colors, or text legibility, the same way you do &mdash; but evidence proves otherwise. Let's wrap things up by looking at how we can effectively use color and contrast to create pleasant designs that are accessible to everyone.
+If you have good vision, it's easy to assume that everyone perceives colors, or text legibility, the same way you do &mdash; but of course that's not the case. Let's wrap things up by looking at how we can effectively use color and contrast to create pleasant designs that are accessible to everyone.
 
 As you might imagine, some color combinations that are easy for many people to read are difficult or impossible for others. This usually comes down to *color contrast*, the relationship between the foreground and background colors' *luminance*. When the colors are similar, the contrast ratio is low; when they are different, the contrast ratio is high.
 
@@ -33,4 +33,4 @@ The contrast ratio of 4.5:1 was chosen for level AA because it compensates for t
 
 You can use the accessibility tools in Chrome to identify contrast ratios. If you run an audit on your page you may get a few warnings for low contrast colors. One benefit of using the Chrome Devtools is that they will suggest AA and AAA alternatives to your current colors, and you can click the values to preview them in your app.
 
-WebAIM itself provides a handy [color contrast checker](http://webaim.org/resources/contrastchecker/) you can use to examine the contrast of any color pair.
+WebAIM itself provides a handy <a href="http://webaim.org/resources/contrastchecker/" target="_blank">color contrast checker</a> you can use to examine the contrast of any color pair.
