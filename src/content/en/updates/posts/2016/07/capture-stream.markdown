@@ -33,7 +33,7 @@ featured_image: /web/updates/images/2016/07/capture-stream/featured.jpg
 
 Try it out! There are links to canvas and video examples below.
 
-<img src="/web/updates/images/2016/07/capture-stream/screenshot.jpg">
+<a href="https://webrtc.github.io/samples/src/content/capture/canvas-pc/" title="WebRTC samples demo: streaming from a canvas via a peer connection to a video element"><img src="/web/updates/images/2016/07/capture-stream/screenshot.jpg"></a>
 
 The `captureStream()` code is simple.
 
