@@ -23,8 +23,8 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-There's not a lot to say about mobile screen readers that hasn't been said about desktop screen readers. In this case, it might be best to let the experts speak for themselves. Have a look at the official Android and iOS accessibility docs for more information.
+There's not much to say about mobile-specific screen readers that hasn't been said about desktop screen readers. In this case, it might be best to let the experts speak for themselves. Have a look at the official Android and iOS accessibility docs for more information.
 
- - [Android Accessibility Help](https://support.google.com/accessibility/android/answer/6007100?hl=en)
+ - <a href="https://support.google.com/accessibility/android/answer/6007100?hl=en" target="_blank">Android Accessibility Help</a>
 
- - [Use Accessibility features in iOS ](https://support.apple.com/en-us/HT204390)
+ - <a href="https://support.apple.com/en-us/HT204390" target="_blank">Use Accessibility features in iOS</a>
