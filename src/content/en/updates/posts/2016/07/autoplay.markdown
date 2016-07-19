@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "Muted autoplay on mobile: goodbye to &lt;canvas&gt; hacks and animated GIFs!"
+title: "Muted autoplay on mobile: say goodbye to &lt;canvas&gt; hacks and animated GIFs!"
 description: "Muted autoplay for video is supported on Android from Chrome 53. Previously, a video element required a user gesture to initiate playback."
 published_on: 2016-07-18
 updated_on: 2016-07-18
@@ -32,7 +32,7 @@ featured_image: /web/updates/images/2016/07/autoplay/featured.jpg
 
 <p class="intro">Say goodbye to animated GIFs and &lt;canvas&gt; hacks!</p>
 
-Muted autoplay for video is supported by Chrome for Android from version 53. Playback will start automatically for a video element once it comes into view if both `autoplay` and `muted` are set, and playback of muted videos can be [initiated progamatically with `play()`](https://developers.google.com/web/updates/2016/03/play-returns-promise). Previously, playback on mobile had to be initiated by a user gesture, regardless of the muted state.
+Muted autoplay for video is supported by Chrome Beta for Android as of version 53. Playback will start automatically for a video element once it comes into view if both `autoplay` and `muted` are set, and playback of muted videos can be [initiated progamatically with `play()`](https://developers.google.com/web/updates/2016/03/play-returns-promise). Previously, playback on mobile had to be initiated by a user gesture, regardless of the muted state.
 
 {% highlight html %}
 <video autoplay muted>
