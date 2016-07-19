@@ -21,8 +21,6 @@ from datetime import datetime, timedelta
 from urlparse import urljoin
 import os
 import re
-
-
 from google.appengine.ext.webapp.template import render
 
 class HomePage(webapp2.RequestHandler):
@@ -52,18 +50,42 @@ class DevSitePages(webapp2.RequestHandler):
             fileContent = open(fileLocation, 'r').read()
             fileContent = fileContent.decode("utf8")
 
-            # TODO: Pete what is this for? Please add comments
-            fileContent = re.sub(r"{#.+?#}", "", fileContent)
-            # TODO: Pete what is this extension array for?
-            ext = ["markdown.extensions.attr_list", "markdown.extensions.meta"]
-            parsedMarkdown = markdown.markdown(fileContent, extensions=ext)
+            logging.info("200 " + fileLocation)
 
-            # TODO: Pete why is lang set to path?
-            text = render("gae/devsite.tpl", {"content": parsedMarkdown, "lang": path})
+            # Remove any comments {# something #} from the markdown
+            fileContent = re.sub(r"{#.+?#}", "", fileContent)
+            
+            # Adds a set of markdown extensions available to us on DevSite
+            ext = [
+              "markdown.extensions.attr_list", # Adds support for {: #someid }
+              "markdown.extensions.meta", # Removes the meta data from the top of the doc
+              "markdown.extensions.toc" # Generate the TOC for the right side
+            ]
+            md = markdown.Markdown(extensions=ext)
+            parsedMarkdown = md.convert(fileContent)
+
+            # Build the table of contents & transform so it fits within DevSite
+            toc = md.toc
+            toc = toc.strip()
+            toc = re.sub(r"<div class=\"toc\">", "", toc) # remove <div> wrapper
+            toc = re.sub(r"</div>", "", toc) # remove <div> wrapper
+            toc = re.sub("<ul>", "", toc, 1) # Remove outer <ul></ul>
+            toc = toc[:toc.rfind("</ul>")]# Remove outer <ul></ul>
+            # Add appropriate classes
+            toc = re.sub(r"<ul>", "<ul class=\"devsite-page-nav-list\">", toc)
+            toc = re.sub(r"<a href", "<a class=\"devsite-nav-title\" href", toc)
+            toc = re.sub(r"<li>", "<li class=\"devsite-nav-item\">", toc)
+ 
+            text = render("gae/devsite.tpl", {
+              "content": parsedMarkdown,
+              "toc": toc,
+              "lang": lang}
+            )
             break
 
         if text is None:
-          text = "404 - Requested file not found."
+          text = "404 " + os.path.join(sourcePath, lang, path)
+          logging.error(text)
           self.response.set_status(404)
 
         self.response.out.write(text)

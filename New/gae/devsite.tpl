@@ -29,10 +29,9 @@
                   <span>Contents</span>
                 </a>
               </li>
-              <li class="devsite-nav-item">Heading 1</li>
-              <li class="devsite-nav-item">Heading 1</li>
-              <li class="devsite-nav-item">Heading 1</li>
-              <li class="devsite-nav-item">Heading 1</li>
+              {% autoescape off %}
+                {{ toc }}
+              {% endautoescape %}
             </ul>
           </nav>
           <article class="devsite-article">
