@@ -23,11 +23,11 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-ARIA provides mechanisms for adding labels and descriptions to elements. In fact, ARIA is the only way to add accessible help or description text. Let's look at the properties ARIA uses to create accessible labels.
+ARIA provides several mechanisms for adding labels and descriptions to elements. In fact, ARIA is the only way to add accessible help or description text. Let's look at the properties ARIA uses to create accessible labels.
 
 `aria-label` allows us to specify a string to be used as the accessible label. This overrides any other native labeling mechanism, such as a `label` element &mdash; for example, if a `button` has both text content and an `aria-label`, only the `aria-label` value will be used. 
 
-You might use an `aria-label` attribute when you have some kind of visual indication of an element's purpose (such as a button that uses a graphic instead of text), but still need to clarify that for anyone who might not be able to access the visual indication.
+You might use an `aria-label` attribute when you have some kind of visual indication of an element's purpose, such as a button that uses a graphic instead of text, but still need to clarify that purpose for anyone who cannot access the visual indication.
 
 `aria-labelledby` allows us to specify the ID of another element in the DOM as an element's label. This is much like using a `label` element, with some key differences.
 
