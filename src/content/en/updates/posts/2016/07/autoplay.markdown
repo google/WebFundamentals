@@ -58,7 +58,19 @@ The `muted autoplay` change will also make it possible to use `play()` with a `v
 
 Autoplay was disabled in previous versions of Chrome on Android because it can be disruptive, data-hungry and [many users don't like it](http://ux.stackexchange.com/questions/5252/video-and-audio-autoplay-evidence-that-its-bad-practice).
 
-Disabling autoplay had the unintended effect of driving developers to alternatives such as animated GIFs, as well as `<canvas>` and `<img>` hacks. These techniques are all much worse than optimized video in terms of power consumption, performance, bandwidth requirements, data cost and memory usage. Video can provide higher quality than animated GIFs, with far better compression: around 10x on average, and up to 100x at best. Video decoding in JavaScript [is possible](https://github.com/mbebenita/Broadway), but it's a huge drain on battery power. In addition, these techniques have no standardised, built-in UI controls.
+Disabling autoplay had the unintended effect of driving developers to alternatives such as animated GIFs, as well as `<canvas>` and `<img>` hacks. These techniques are all much worse than optimized video in terms of power consumption, performance, bandwidth requirements, data cost and memory usage. Video can provide higher quality than animated GIFs, with far better compression: around 10x on average, and up to 100x at best. Video decoding in JavaScript [is possible](https://github.com/mbebenita/Broadway), but it's a huge drain on battery power.
+
+Compare the following — the first is a video and the second is an animated GIF:
+
+<video id="chrome-clip" autoplay loop muted style="margin: 0 0 20px 0;">
+  <source src="/web/updates/videos/2016/07/autoplay/chrome-clip.webm" type="video/webm" />
+  <source src="/web/updates/videos/2016/07/autoplay/chrome-clip.mp4" type="video/mp4" />
+  <p>Your browser does not support the video element.</p>
+</video>
+
+<img src="/web/updates/images/2016/07/autoplay/chrome-clip.gif" style="display: block; margin: 0 0 20px 0;">
+
+They look pretty similar — but the video is less than 200KB in size and the animated GIF is over 900KB.
 
 Chrome and other browser vendors are extremely cautious about user bandwidth. For many users in many contexts [high data cost is often a greater barrier to access than poor connectivity](https://developers.google.com/web/billions/#conserve-data-usage). Given the prevalence of workarounds, muted autoplay isn't something that can be blocked, so offering good APIs and defaults is the best the platform can do. The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html). Designers and developers continue to find new and unforeseen ways to use video — and they want consistent behaviour across platforms, for example when using background video as a design element. Muted autoplay enables functionality like this on both mobile and desktop.
 
