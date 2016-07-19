@@ -111,12 +111,18 @@ module Jekyll
       autogenerateBetterBook()
     end
 
-    def prepareMigrationOnlyString()
+    def render(layouts, site_payload)
+      copyPayload = site_payload;
+      copyPayload["page"] = to_liquid
+
+      info = { :filters => [Jekyll::Filters], :registers => { :site => @site, :page => copyPayload['page'] } }
+
       @template = Liquid::Template.parse(self.content)
-      attrs = self.to_liquid()
-      self.data['parsed_content'] = @template.render({
-        'page' => attrs
-      })
+      self.data['parsed_content'] = @template.render(copyPayload, info)
+      # testing = @site.liquid_renderer.file(self.path).parse(self.content).render!(copyPayload, layouts)
+      # testing = render_liquid(self.content, copyPayload, layouts, self.path)
+
+      super(layouts, site_payload)
     end
 
     # This method checks for any invalid or disallowed fields in the

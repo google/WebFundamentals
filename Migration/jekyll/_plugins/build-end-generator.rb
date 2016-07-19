@@ -55,7 +55,7 @@ module Jekyll
           translationPage.onBuildComplete()
         }
 
-        page.prepareMigrationOnlyString()
+        # page.prepareMigrationOnlyString()
       }
 
 

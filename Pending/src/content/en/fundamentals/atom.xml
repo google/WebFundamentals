@@ -505,12 +505,12 @@ Web pages are getting bigger. <br /><br />According to <a href="http://httparchi
       <![CDATA[
         <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/?hl=en?feed_type=atom&pixel">
         <p class="intro">
-<a href="/web/progressive-web-apps">Progressive Web Apps</a> are experiences 
-that combine the best of the web and the best of apps. They are useful to users 
-from the very first visit in a browser tab, no install required. As the user 
-progressively builds a relationship with the App over time, it becomes more 
-and more powerful. It loads quickly, even on flaky networks, sends relevant 
-push notifications, has an icon on the home screen and loads as a top-level, 
+<a href="/web/progressive-web-apps">Progressive Web Apps</a> are experiences
+that combine the best of the web and the best of apps. They are useful to users
+from the very first visit in a browser tab, no install required. As the user
+progressively builds a relationship with the App over time, it becomes more
+and more powerful. It loads quickly, even on flaky networks, sends relevant
+push notifications, has an icon on the home screen and loads as a top-level,
 full screen experience.
 </p>
 
@@ -519,28 +519,28 @@ full screen experience.
 <p>Progressive Web Apps are:</p>
 
 <ul>
-  <li><strong>Progressive</strong> - Work for every user, regardless of browser choice because 
+  <li><strong>Progressive</strong> - Work for every user, regardless of browser choice because
 they&#8217;re built with progressive enhancement as a core tenet.</li>
-  <li><strong>Responsive</strong> - Fit any form factor: desktop, mobile, tablet, or whatever is 
+  <li><strong>Responsive</strong> - Fit any form factor: desktop, mobile, tablet, or whatever is
 next.</li>
-  <li><strong>Connectivity independent</strong> - Enhanced with service workers to work offline 
+  <li><strong>Connectivity independent</strong> - Enhanced with service workers to work offline
 or on low quality networks.</li>
-  <li><strong>App-like</strong> - Feel like an app to the user with app-style interactions and 
+  <li><strong>App-like</strong> - Feel like an app to the user with app-style interactions and
 navigation because they&#8217;re built on the app shell model.</li>
   <li><strong>Fresh</strong> - Always up-to-date thanks to the service worker update process.</li>
-  <li><strong>Safe</strong> - Served via HTTPS to prevent snooping and ensure content hasn&#8217;t been 
+  <li><strong>Safe</strong> - Served via HTTPS to prevent snooping and ensure content hasn&#8217;t been
 tampered with.</li>
-  <li><strong>Discoverable</strong> - Are identifiable as &#8220;applications&#8221; thanks to W3C manifests 
+  <li><strong>Discoverable</strong> - Are identifiable as &#8220;applications&#8221; thanks to W3C manifests
 and service worker registration scope allowing search engines to find them.</li>
-  <li><strong>Re-engageable</strong> - Make re-engagement easy through features like push 
+  <li><strong>Re-engageable</strong> - Make re-engagement easy through features like push
 notifications.</li>
-  <li><strong>Installable</strong> - Allow users to &#8220;keep&#8221; apps they find most useful on their 
+  <li><strong>Installable</strong> - Allow users to &#8220;keep&#8221; apps they find most useful on their
 home screen without the hassle of an app store.</li>
   <li><strong>Linkable</strong> - Easily share via URL and not require complex installation.</li>
 </ul>
 
-<p>This getting started guide will walk you through creating your own Progressive 
-Web App, including the design considerations, as well as implementation details 
+<p>This getting started guide will walk you through creating your own Progressive
+Web App, including the design considerations, as well as implementation details
 to ensure that your app meets the key principles of a Progressive Web App.</p>
 
 <div class="wf-highlight-list wf-highlight-list--note">
@@ -559,7 +559,7 @@ to ensure that your app meets the key principles of a Progressive Web App.</p>
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
     <p>
-      In this getting started guide, you're going to build a Weather Web 
+      In this getting started guide, you're going to build a Weather Web
       App using Progressive Web App techniques.
     </p>
     <p>
@@ -571,7 +571,7 @@ to ensure that your app meets the key principles of a Progressive Web App.</p>
         <li><b>App-like</b> - we'll use app-style interactions to add cities and refresh the data.</li>
         <li><b>Fresh</b> - we'll cache the latest data with service workers.</li>
         <li><b>Safe</b> - we'll deploy the app to a host that support HTTPS.</li>
-        <li><b>Discoverable and installable</b> - we'll include a manifest making it 
+        <li><b>Discoverable and installable</b> - we'll include a manifest making it
           easy for search engines to find our app.</li>
         <li><b>Linkable</b> - it's the web!</li>
       </ul>
@@ -650,7 +650,7 @@ to ensure that your app meets the key principles of a Progressive Web App.</p>
   <li>A knowledge of HTML, CSS and JavaScript</li>
 </ul>
 
-<p>This getting started guide is focused on Progressive Web Apps. Some concepts are 
+<p>This getting started guide is focused on Progressive Web Apps. Some concepts are
 glossed over or code blocks (for example styles or non-relevant JavaScript) or
 are provided for you to simply copy and paste.</p>
 
