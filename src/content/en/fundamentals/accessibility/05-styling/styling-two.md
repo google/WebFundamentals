@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-For native elements like `button`, browsers can detect whether interaction occurred via the mouse or the keyboard press, and typically only display the focus ring for keyboard interaction. The logic here is that mouse users are less likely to need the focus ring because they know what element they clicked.
+For native elements like `button`, browsers can detect whether user interaction occurred via the mouse or the keyboard press, and typically only display the focus ring for keyboard interaction. The logic here is that mouse users are less likely to need the focus ring because they know what element they clicked.
 
 Where does that leave us in our accessibility efforts? Unfortunately there isn't currently a single cross-browser solution that yields this same behavior. But there are some options.
 
