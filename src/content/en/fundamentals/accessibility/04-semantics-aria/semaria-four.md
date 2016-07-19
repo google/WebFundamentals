@@ -27,7 +27,7 @@ Let's pause here for a small but important point: Just as you would test regular
 
 Although ChromeVox Lite and VoiceOver are great ways to get a feel for the basic screen reader experience, we recommend NVDA (NonVisual Desktop Access), a free, open-source screen reader that is very popular with Windows users.
 
-WebAIM conducts an annual survey of screen reader users that includes popularity rankings for various screen readers, and NVDA consistently scores very high on the list. Here is [their 2015 survey](http://webaim.org/projects/screenreadersurvey6/#used); the report also includes links to previous surveys.
+WebAIM conducts an annual survey of screen reader users that includes popularity rankings for various screen readers, and NVDA consistently scores very high on the list. Here is <a href="http://webaim.org/projects/screenreadersurvey6/#used" target="_blank">their 2015 survey</a>; the report also includes links to previous surveys.
 
 You can find more information about NVDA and how to use it at the following links.
 
