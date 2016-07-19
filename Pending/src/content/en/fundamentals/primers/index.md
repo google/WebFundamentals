@@ -1,14 +1,6 @@
 
 
 
-{% comment %}
-
-{% for subdirectory in page.context.subdirectories %}
-<h4><a href="{{subdirectory.id}}">{{subdirectory.index.title}}</a></h4>
-<p>{{subdirectory.index.description}}</p>
-{% endfor %}
-
-{% endcomment %}
 
 
 

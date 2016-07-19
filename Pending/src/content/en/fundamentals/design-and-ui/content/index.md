@@ -1,10 +1,6 @@
 
 
 
-<p class="intro">
-  {{page.description}}
-</p>
-
 
 
 ### Topics

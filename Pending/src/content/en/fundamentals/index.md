@@ -26,21 +26,110 @@ Learn how to add <b>Push Notifications</b> to your web applications to re-engage
 Already have something in mind? Then jump right in!
 
 <ul>
-{% for pageInSection in page.context.subdirectories %}
-{% if pageInSection.index.published != false %}
-{% if pageInSection.id != 'getting-started' and pageInSection.id != 'primers' %}
-{% capture icon %}svgs/{{pageInSection.id}}.svg{% endcapture %}
+
+
+
+
+
+
+
+
   <li>
-    <!-- Icon: {% include {{icon}} %} -->
+    <!-- Icon: Liquid error: undefined method `source' for nil:NilClass -->
     <h3>
-      <a href="{{pageInSection.index.canonical_url }}">
-      {{pageInSection.index.title}}
+      <a href="http://localhost:7331/web/fundamentals/design-and-ui/?hl=en">
+      Design and UI
       </a>
     </h3>
-    <p>{{pageInSection.index.description}}</p>
+    <p>Make your projects look great and interact beautifully.</p>
   </li>
-{% endif %}
-{% endif %}
-{% endfor %}
+
+
+
+
+
+
+  <li>
+    <!-- Icon: Liquid error: undefined method `source' for nil:NilClass -->
+    <h3>
+      <a href="http://localhost:7331/web/fundamentals/discovery-and-monetization/?hl=en">
+      Discovery and monetization
+      </a>
+    </h3>
+    <p>Maximize discoverability for your users and your revenue.</p>
+  </li>
+
+
+
+
+
+
+  <li>
+    <!-- Icon: Liquid error: undefined method `source' for nil:NilClass -->
+    <h3>
+      <a href="http://localhost:7331/web/fundamentals/security/?hl=en">
+      Security and identity
+      </a>
+    </h3>
+    <p>Know who your users are and keep their information safe.</p>
+  </li>
+
+
+
+
+
+
+  <li>
+    <!-- Icon: Liquid error: undefined method `source' for nil:NilClass -->
+    <h3>
+      <a href="http://localhost:7331/web/fundamentals/performance/?hl=en">
+      Performance
+      </a>
+    </h3>
+    <p>Performance is a feature, and #perfmatters!</p>
+  </li>
+
+
+
+
+
+
+
+
+
+
+  <li>
+    <!-- Icon: Liquid error: undefined method `source' for nil:NilClass -->
+    <h3>
+      <a href="http://localhost:7331/web/fundamentals/engage-and-retain/?hl=en">
+      Engage and retain users
+      </a>
+    </h3>
+    <p>Connect with your users and keep them coming back.</p>
+  </li>
+
+
+
+
+
+
+  <li>
+    <!-- Icon: Liquid error: undefined method `source' for nil:NilClass -->
+    <h3>
+      <a href="http://localhost:7331/web/fundamentals/native-hardware/?hl=en">
+      Native hardware access
+      </a>
+    </h3>
+    <p>Locate your users and help them contact you.</p>
+  </li>
+
+
+
+
+
+
+
+
+
 </ul>
 

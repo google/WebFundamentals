@@ -1,11 +1,6 @@
 
 
 
-<p class="intro">
-  Users like videos; they can be fun, informative. On mobile devices, videos can be an easier way to consume information. But videos take bandwidth; they don't always work the same across every platform. Users don't like waiting for videos to load, or when they press play and nothing happens. Read more to find the simplest way to add video to your site and ensure users get the best possible experience on any device.
-</p>
-
-{% ytvideo j5fYOYrsocs %}
 
 
 ### Topics
