@@ -1,0 +1,12 @@
+toc:
+  - title: Security & Identity
+    path: /web/fundamentals/security/
+    section:
+    - title: Encrypting Data In Transit
+      section:
+      - title: Enabling HTTPS
+        path: /web/fundamentals/security/encrypt/
+      - title: Preventing Mixed Content
+        path: /web/fundamentals/security/mixed-content/
+    - title: Content Security Policy
+      path: /web/fundamentals/security/csp/

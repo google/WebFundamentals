@@ -1,0 +1,17 @@
+toc:
+  - title: Getting Started
+    path: /web/fundamentals/getting-started/
+    section:
+    - title: Code Labs
+      path: https://codelabs.developers.google.com/?cat=Web
+      status: external
+    - title: Principles of Site Design
+      path: /web/fundamentals/getting-started/site-design/
+    - title: Asking Permission Respectfully
+      path: /web/fundamentals/getting-started/permission/
+    - title: Service Worker Primer
+      path: /web/fundamentals/getting-started/service-workers/
+    - title: Promises Primer
+      path: /web/fundamentals/getting-started/promises/
+    - title: Custom Elements Primer
+      path: /web/fundamentals/getting-started/customelements/

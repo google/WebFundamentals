@@ -1,0 +1,86 @@
+toc:
+  - title: Performance
+    path: /web/fundamentals/performance/
+    section:
+    - title: Status Text Examples
+      status: new
+      section:
+      - title: Example Content 1
+        status: alpha
+        path: /web/fundamentals/performance/example1
+      - title: Example Content 2
+        status: beta
+        path: /web/fundamentals/performance/example2
+      - title: Example Content 3
+        status: deprecated
+        path: /web/fundamentals/performance/example3
+      - title: Example Content 4
+        status: experimental
+        path: /web/fundamentals/performance/example4
+      - title: Example Content 5
+        status: external
+        path: /web/fundamentals/performance/example5
+      - title: Example Content 6
+        status: new
+        path: /web/fundamentals/performance/example6
+    - title: Critical Path Rendering
+      section:
+      - title: Overview
+        path: /web/fundamentals/perforance/crp/1
+      - title: "Learn how the browser constructs the DOM and CSSOM trees."
+        path: /web/fundamentals/perforance/crp/2
+      - title: "Render-tree construction, layout, and paint"
+        path: /web/fundamentals/perforance/crp/3
+      - title: "Render blocking CSS"
+        path: /web/fundamentals/performance/4
+      - title: "Adding interactivity with JavaScript"
+        path: /web/fundamentals/performance/5
+      - title: "Learn to measure the critical rendering path."
+        path: /web/fundamentals/performance/6
+      - title: "Analyzing critical rendering path performance"
+        path: /web/fundamentals/performance/7
+      - title: "Learn the key factors in optimizing the critical rendering path."
+        path: /web/fundamentals/performance/crp/8
+      - title: "PageSpeed rules and recommendations"
+        path: /web/fundamentals/performance/crp/9
+    - title: Optimizing Content Efficiency
+      section:
+      - title: Overview
+        path: /web/fundamentals/perforance/crp/1
+      - title: "Learn how the browser constructs the DOM and CSSOM trees."
+        path: /web/fundamentals/perforance/crp/2
+      - title: "Render-tree construction, layout, and paint"
+        path: /web/fundamentals/perforance/crp/3
+      - title: "Render blocking CSS"
+        path: /web/fundamentals/performance/4
+      - title: "Adding interactivity with JavaScript"
+        path: /web/fundamentals/performance/5
+      - title: "Learn to measure the critical rendering path."
+        path: /web/fundamentals/performance/6
+      - title: "Analyzing critical rendering path performance"
+        path: /web/fundamentals/performance/7
+      - title: "Learn the key factors in optimizing the critical rendering path."
+        path: /web/fundamentals/performance/crp/8
+      - title: "PageSpeed rules and recommendations"
+        path: /web/fundamentals/performance/crp/9
+    - title: Rendering Performance
+      section:
+      - title: Overview
+        path: /web/fundamentals/perforance/crp/1
+      - title: "Learn how the browser constructs the DOM and CSSOM trees."
+        path: /web/fundamentals/perforance/crp/2
+      - title: "Render-tree construction, layout, and paint"
+        path: /web/fundamentals/perforance/crp/3
+      - title: "Render blocking CSS"
+        path: /web/fundamentals/performance/4
+      - title: "Adding interactivity with JavaScript"
+        path: /web/fundamentals/performance/5
+      - title: "Learn to measure the critical rendering path."
+        path: /web/fundamentals/performance/6
+      - title: "Analyzing critical rendering path performance"
+        path: /web/fundamentals/performance/7
+      - title: "Learn the key factors in optimizing the critical rendering path."
+        path: /web/fundamentals/performance/crp/8
+      - title: "PageSpeed rules and recommendations"
+        path: /web/fundamentals/performance/crp/9
+

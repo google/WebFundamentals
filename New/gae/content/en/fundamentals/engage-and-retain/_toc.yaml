@@ -1,0 +1,23 @@
+toc:
+  - title: Engage & Retain Users
+    section:
+    - title: The Web App Manifest
+      path: /web/fundamentals/engage-and-retain/web-app-manifest/
+    - title: Web Push Notifications
+      path: /web/fundamentals/engage-and-retain/push/
+      section:
+      - title: Getting User Permission
+        path: /web/fundamentals/engage-and-retain/push/permission
+      - title: Sending Messages
+        path: /web/fundamentals/engage-and-retain/push/send
+      - title: Handling & Showing Notifications
+        path: /web/fundamentals/engage-and-retain/push/handle
+    - title: App Install Banners
+      section:
+      - title: Web App Install Banners
+        path: /web/fundamentals/engage-and-retain/app-install/
+      - title: Handling Banner Events
+        path: /web/fundamentals/engage-and-retain/app-install/events
+      - title: Native App Install Banners
+        path: /web/fundamentals/engage-and-retain/app-install/native
+

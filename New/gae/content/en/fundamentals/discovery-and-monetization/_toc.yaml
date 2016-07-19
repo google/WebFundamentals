@@ -1,0 +1,10 @@
+toc:
+  - title: Discovery & Monetization
+    section:
+    - title: Search Optimization
+      path: /web/fundamentals/discovery-and-monetization/search/
+    - title: Social Discovery
+      path: /web/fundamentals/discovery-and-monetization/social/
+    - title: Monetization with Ads
+      path: /web/fundamentals/ads
+      status: external

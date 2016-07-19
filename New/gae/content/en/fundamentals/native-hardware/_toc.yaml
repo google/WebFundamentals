@@ -1,0 +1,9 @@
+toc:
+  - title: Accessing Native Hardware
+    section:
+    - title: Click to Call
+      path: /web/fundamentals/native/click-to-call
+    - title: User Location
+      path: /web/fundamentals/native/geoloc
+    - title: Device Orientation
+      path: /web/fundamentals/native/dev-o

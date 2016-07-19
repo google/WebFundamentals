@@ -1,0 +1,146 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+landing_page:
+  # custom_css_path: landing.css
+
+  header:
+    description: >
+      Web Fundamentals: A comprehensive resource for web
+      development best practices.
+
+  rows:
+
+  - heading: What's The Most Hot Thing Right Now?
+    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+    items:
+    - description: >
+        This is an early mock of the new Web<b>Fundamentals</b> landing page.
+        I'm still undecided about what type of content goes at the top, but in
+        the mean time, the link below takes you to a sample article so you can
+        see the left hand nav, how content will generally look and the TOC on
+        the right. This also includes an updated IA.
+      image_path: https://placehold.it/1600x900
+      buttons:
+      - label: See sample doc
+        path: performance/
+
+  - heading: Latest Updates for Web Developers (aka the New Stuff)
+    columns:
+    - items:
+      - custom_html: >
+          <div class="feed hfeed" data-limit="2">
+            <a href="https://developers.google.com/web/updates/rss.xml"></a>
+            <article class="hentry">
+              <a class="link"><header></header></a>
+              <article class="entry-content" data-truncate="50w"></article>
+              <div>
+                By <span class="vcard author" rel="author"></span>,
+                <a class="link"><time class="updated published"></time></a>
+              </div>
+            </article>
+          </div>
+    - items:
+      - youtube_id: YEbtvKPvTYE
+
+  - heading: Ways to Enhance Your Site (aka the Hot Stuff)
+    items:
+    - heading: The New Information Architecture
+      description: >
+        Here's a look at the new information architecture. It's really just
+        a minor set of tweaks to what we have already in order to get the 
+        open things up to new stuff.
+      image_path: https://placehold.it/1600x900
+      buttons:
+      - label: New IA
+        path: http://shortn/_MZeS6CkWno
+
+    - heading: Progressive Web Apps
+      description: >
+        What is a Progressive Web App and what do you need to know to get
+        started building one? In this step-by-step guide, you'll build your
+        own Progressive Web App and learn the fundamentals needed for building
+        Progressive Web Apps.
+      image_path: https://placehold.it/1600x900
+      buttons:
+      - label: Get Started
+        path: /web/progressive-web-apps/
+
+
+    - heading: Add Push Notifications
+      description: >
+        Learn how to add Push Notifications to your web applications to
+        re-engage users with breaking news and information about new content.
+      image_path: https://placehold.it/1600x900
+      buttons:
+      - label: Learn more
+        path: /web/fundamentals/performance/
+
+
+    - heading: Move to HTTPS
+      description: >
+        HTTPS allows users to securely connect to your website or app. Set up
+        HTTPS to protect the integrity of your site, and the security of your
+        users.
+      image_path: https://placehold.it/1600x900
+      buttons:
+      - label: Learn more
+        path: /web/fundamentals/security/
+
+
+  - heading: Ready, Set, Code
+    items:
+    - description: Already have something in mind, then jump right in!
+
+  - columns:
+    - items:
+      - icon:
+          icon_name: trending_up
+        path: /web/petele/performance/
+        heading: "Performance"
+        description: "Performance is a feature, and #perfmatters!"
+
+      - icon:
+          icon_name: network_check
+        path: /web/petele/performance/
+        heading: "Instant Loading"
+        description: "Lorem ipsum, something, this that and the other thing."
+
+      - icon:
+          icon_name: security
+        path: /web/petele/performance/
+        heading: "Security & Identity"
+        description: "Know who your users are and keep their information safe."
+
+      - icon:
+          icon_name: web
+        path: /web/petele/performance/
+        heading: "Design & UI"
+        description: "Make your projects look great and interact beautifully."
+
+
+    - items:
+      - icon:
+          icon_name: group_add
+        path: /web/petele/performance/
+        heading: "Engage & Retain"
+        description: "Connect with your users and keep them coming back."
+
+      - icon:
+          icon_name: find_in_page
+        path: /web/petele/performance/
+        heading: "Discovery & Monetization"
+        description: "Maximize discoverability for your users and your revenue."
+
+      - icon:
+          icon_name: devices
+        path: /web/petele/performance/
+        heading: "Accessing Native Hardware"
+        description: "Locate your users and help them contact you."
+
+      - icon:
+          icon_name: accessibility
+        path: /web/petele/performance/
+        heading: "Accessibility"
+        description: "i like bacon, it's yummy and informative."
