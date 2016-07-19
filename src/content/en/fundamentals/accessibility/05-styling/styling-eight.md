@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-As you've seen in this lesson, there are a lot of interesting facets to accessibility worth considering when building an app.
+As you've seen in this lesson, there are many interesting facets to accessibility worth considering when building an app.
 
  - You saw that a well laid-out focus strategy is extremely important but that, without focus styling, that effort goes completely to waste.
 
