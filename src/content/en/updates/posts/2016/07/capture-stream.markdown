@@ -31,6 +31,8 @@ featured_image: /web/updates/images/2016/07/capture-stream/featured.jpg
 
 <p class="intro">The <a href="https://w3c.github.io/mediacapture-fromelement/#dfn-capturestream" title="W3C captureStream() spec"><code>captureStream()</code></a> method makes it possible to stream from a <code>canvas</code>, <code>audio</code> or <code>video</code> element.</p>
 
+This enables an audio or video `MediaStream` to be captured from these elements, which can then be live-streamed or recorded: `captureStream()` enables `MediaStream` to pass media back and forth between canvas, audio or video elements — or to an `RTCPeerConnection` or `MediaRecorder`.
+
 Try it out! There are links to canvas and video examples below.
 
 <a href="https://webrtc.github.io/samples/src/content/capture/canvas-pc/" title="WebRTC samples demo: streaming from a canvas via a peer connection to a video element"><img src="/web/updates/images/2016/07/capture-stream/screenshot.jpg"></a>
