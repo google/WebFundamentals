@@ -34,8 +34,8 @@ module Jekyll
 
       if @directories.count > 1
         self.data['feed_name'] = 'Web Updates - Google Developers'
-        self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'rss.xml')
-        self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], @directories[1], 'atom.xml')
+        self.data['rss_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'rss.xml')
+        self.data['atom_feed_url'] = File.join(site.config['WFBaseUrl'], @directories[0], 'atom.xml')
       else
         self.data['feed_name'] = 'Web Updates - Google Developers'
       end
