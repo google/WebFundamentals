@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-Certain ARIA roles have implicit, or default, semantics.
+As you've now seen, certain ARIA roles have implicit, or default, semantics.
 
 `alert` is an example of a role that has implicit aria-live semantics. An `alert` is implicitly `aria-live=assertive` and `aria-atomic=true`, meaning that its presence should be immediately announced to the user when it is added to the page.
 
