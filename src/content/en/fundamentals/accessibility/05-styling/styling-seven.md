@@ -23,11 +23,11 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-High-contrast mode allows a user to invert foreground and background colors, which may help text stand out better. For someone with a low vision impairment, high -contrast mode can make it much easier to navigate the content on the page. There are a few ways to get a high-contrast setup on your machine.
+High-contrast mode allows a user to invert foreground and background colors, which often helps text stand out better. For someone with a low vision impairment, high-contrast mode can make it much easier to navigate the content on the page. There are a few ways to get a high-contrast setup on your machine.
 
-Operating systems like Mac OSX and Windows offer high-contrast modes that can be enabled for everything at the system level. Or users can install an extension, like the [Chrome High Contrast extension](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en-US) to only enable high-contrast in that specific app.
+Operating systems like Mac OSX and Windows offer high-contrast modes that can be enabled for everything at the system level. Or users can install an extension, like the <a href="https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en-US" target="_blank">Chrome High Contrast extension</a> to enable high-contrast only in that specific app.
 
-A useful exercise is to turn on high-contrast settings and verify that all of the UI in your application is still visible.
+A useful exercise is to turn on high-contrast settings and verify that all of the UI in your application is still visible and usable.
 
 For example, a navigation bar might use a subtle background color to indicate which page is currently selected. If you view it in high-contrast extension, that subtlety completely disappears, and with it goes the reader's understanding of which page is active.
 
