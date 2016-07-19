@@ -1,0 +1,2602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Web - Google Developers</title>
+  <icon>http://localhost:7331/webfavicon.ico</icon>
+  <id>http://localhost:7331/web/fundamentals</id>
+  <subtitle>The latest changes to developers.google.com/web/fundamentals.</subtitle>
+  <updated>2016-05-10T00:00:00Z</updated>
+  
+  <link href="http://localhost:7331/web/fundamentals/atom.xml" rel="self" />
+  <link href="http://localhost:7331/web/fundamentals/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+  
+  <entry>
+    <title>Multi-device content</title>
+    <published>2016-05-10T00:00:00Z</published>
+    <updated>2016-05-10T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/design-and-ui/content/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/design-and-ui/content/</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/design-and-ui/content/?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+  Consider content as well as layout and graphic design when building for a range of users and devices.<br /><br />
+This section outlines simple techniques for content design to increase engagement and expand your audience.
+</p>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Sam Dutton</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Eliminate unnecessary content</title>
+    <published>2016-05-10T00:00:00Z</published>
+    <updated>2015-04-29T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/design-and-ui/content/redundant?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/design-and-ui/content/redundant</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/design-and-ui/content/redundant?hl=en?feed_type=atom&pixel">
+        <p class="intro">In terms of byte size, web pages are <a href="http://httparchive.org/trends.php#bytesTotal&amp;reqTotal" title="HTTP Archive: Total Transfer Size and Total Requests">big and getting bigger</a>.
+</p>
+
+<p><a href="/web/fundamentals/design-and-ui/responsive/fundamentals/">Responsive design techniques</a> make it possible to serve different content for smaller viewports, but it&#8217;s always sensible to start by streamlining text, images and other content.</p>
+
+<blockquote>
+  <p>Web users are often action oriented, &#8220;leaning forward&#8221; in the hunt for answers to their current question, rather than leaning back to absorb a good book.</p>
+
+  <p>— <a href="https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/">Jakob Nielsen</a></p>
+</blockquote>
+
+<p>Ask yourself: what are people are trying to achieve when they visit my site?</p>
+
+<p>Does every page component help users achieve their goal?</p>
+
+<h2 id="remove-redundant-page-elements">Remove redundant page elements</h2>
+
+<p>HTML files constitute nearly 70k and more than nine requests for the average web page, according to <a href="http://httparchive.org/trends.php#bytesHtml&amp;reqHtml">HTTP Archive</a>.</p>
+
+<p>Many popular sites use several thousand HTML elements per page, and several thousand lines of code, even on mobile. Excessive HTML file size <a href="http://jsbin.com/zofavunapo/1/edit?html,js,output">may not make pages load more slowly</a>, but a heavy HTML payload can be a sign of content bloat: larger .html files mean more elements, more text content, or both.</p>
+
+<p>Reducing HTML complexity will also reduce page weight, help enable localization and internationalization and make responsive design easier to plan and debug. For information about writing more efficient HTML, see <a href="https://samdutton.wordpress.com/2015/04/02/high-performance-html/">High performance HTML</a>.</p>
+
+<blockquote>
+  <p>Every step you make a user perform before they get value out of your app will cost you 20% of users</p>
+
+  <p>— <a href="http://blog.gaborcselle.com/2012/10/every-step-costs-you-20-of-users.html">Gabor Cselle, Twitter</a></p>
+</blockquote>
+
+<p>The same applies to content: help users get to what they want as quickly as possible.</p>
+
+<p>Don&#8217;t just hide content from mobile users. Aim for <a href="http://bradfrost.com/blog/mobile/content-parity/">content parity</a>, since guessing what features your mobile users won&#8217;t miss is bound to fail for someone. If you have the resources, create alternative versions of the same content for different viewport sizes — even if only for high priority page elements.</p>
+
+<p>Consider content management and workflow: are legacy systems resulting in legacy content?</p>
+
+<h2 id="simplify-text">Simplify text</h2>
+
+<p>As the web goes mobile, you need to change the way you write. Keep it simple, reduce clutter and get to the point.</p>
+
+<p>See <a href="write.html">Write for mobile</a> for more information.</p>
+
+<h2 id="remove-redundant-images">Remove redundant images</h2>
+
+<p>According to <a href="http://httparchive.org/trends.php#bytesImg&amp;reqImg">HTTP Archive data</a>, the average web page makes 54 requests for images.</p>
+
+<p><a href="http://httparchive.org/trends.php#bytesImg&amp;reqImg" title="HTTP Archive"><img src="images/http-archive-images.png" alt="HTTP Archive showing increasing number of image transfer sizes and image requests" /></a></p>
+
+<p>Images constitute over 60% of page weight.</p>
+
+<p><a href="http://httparchive.org/interesting.php#bytesperpage" title="HTTP Archive"><img src="images/http-archive-content-type-pie-chart.png" alt="HTTP Archive pie chart showing average bytes per page by content type, around 60% of which is images" /></a></p>
+
+<p>Images can be beautiful, fun and informative — but they also use page real estate, add to page weight, and increase the number of file requests. <a href="https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/">Latency gets worse as connectivity gets worse</a>, meaning that an excess of image file requests is an increasing problem as the web goes mobile.</p>
+
+<p>Images also consume power. After the screen, radio is the second biggest drain on your battery. More image requests, more radio usage, more flat batteries. Even just to render images takes power – and this is proportional to size and number. Check out the Stanford report <a href="http://cdn.oreillystatic.com/en/assets/1/event/79/Who%20Killed%20My%20Battery_%20Analyzing%20Mobile%20Browser%20Energy%20Consumption%20Presentation.pdf">Who Killed My Battery?</a></p>
+
+<p>If you can, get rid of images!</p>
+
+<p>Here are some suggestions:</p>
+
+<ul>
+  <li>Consider designs that avoid images altogether, or use images sparingly. <a href="https://onepagelove.com/tag/text-only">Text-only can be beautiful</a>! Ask yourself, &#8220;What are visitors to my site trying to achieve? Do images help that process?&#8221;</li>
+  <li>In the old days, it was commonplace to save headings and other text as graphics. That approach does not respond well to viewport size changes, and adds to page weight and latency. Using text as a graphic also means the text can&#8217;t be found by search engines, and isn&#8217;t accessible by screenreaders and other assistive technologies. Use &#8220;real&#8221; text where possible — Web Fonts and CSS can enable beautiful typography.</li>
+  <li>Use CSS rather than images for gradients, shadows, rounded corners, and <a href="http://lea.verou.me/css3patterns/">background textures</a>, features <a href="http://caniuse.com/#search=shadows">supported by all modern browsers</a>. Bear in mind, however, that CSS may be better than images, but there can still be a <a href="http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/">processing and rendering penalty</a>, especially significant on mobile.</li>
+  <li>Background images rarely work well on mobile. You can <a href="http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/">use media queries</a> to avoid background images on small viewports.</li>
+  <li>Avoid splash screen images.</li>
+  <li><a href="https://developers.google.com/web/fundamentals/design-and-ui/animations/?hl=en">Use CSS for UI animations</a>.</li>
+  <li>Get to know your glyphs; use <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters">Unicode symbols and icons</a> instead of images, with Web Fonts if necessary.</li>
+  <li>Consider <a href="http://weloveiconfonts.com/#zocial">icon fonts</a>; they are vector graphics that can be infinitely scaled, and an entire set of images can be downloaded in one font. (Be aware of <a href="https://sarasoueidan.com/blog/icon-fonts-to-svg/">these concerns</a>, however.)</li>
+  <li>The &lt;canvas&gt; element can be used to build images in JavaScript from lines, curves, text, and other images.</li>
+  <li><a href="http://udacity.github.io/responsive-images/examples/2-11/svgDataUri/">Inline SVG or Data URI images</a> will not reduce page weight, but they can reduce latency by reducing the number of resource requests. Inline SVG has <a href="http://caniuse.com/#feat=svg-html5">great support on mobile and desktop browsers</a>, and <a href="http://petercollingridge.appspot.com/svg-optimiser">optimization tools</a> can significantly reduce SVG size. Likewise, Data URIs are <a href="http://caniuse.com/datauri">well supported</a>. Both can be inlined in CSS.</li>
+  <li>Consider using &lt;video&gt; instead of animated GIFs. <a href="http://caniuse.com/video">The video element is supported by all browsers on mobile</a> (apart from Opera Mini).</li>
+</ul>
+
+<p>For more information see <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=en">Image Optimization</a> and <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization?hl=en#eliminating-and-replacing-images">Eliminating and replacing images</a>.</p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Sam Dutton</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Understand data cost</title>
+    <published>2016-05-10T00:00:00Z</published>
+    <updated>2016-05-10T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/design-and-ui/content/weight?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/design-and-ui/content/weight</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/design-and-ui/content/weight?hl=en?feed_type=atom&pixel">
+        <style>
+td {
+  padding: 5px;
+}
+</style>
+
+<p class="intro">
+Web pages are getting bigger. <br /><br />According to <a href="http://httparchive.org/trends.php#bytesTotal&amp;reqTotal">HTTP Archive</a>, the average page weight for the <a href="http://httparchive.org/about.php#listofurls">top one million sites</a> is now over 2MB.
+
+</p>
+
+<p>Users avoid sites or apps perceived to be slow or expensive, so it&#8217;s crucial to understand the cost of loading page and app components.</p>
+
+<p>Reducing page weight can also be profitable. <a href="http://blog.chriszacharias.com/page-weight-matters">Chris Zacharias from YouTube</a> found that when they reduced the watch-page size from 1.2MB to 250KB:</p>
+
+<blockquote>
+  <p>Large numbers of people who were previously unable to use YouTube before were suddenly able to.</p>
+</blockquote>
+
+<p>In other words, reducing page weight <strong>can open up whole new markets</strong>.</p>
+
+<h2 id="calculate-page-weight">Calculate page weight</h2>
+
+<p>There are a number of tools for calculating page weight. The Chrome DevTools Network panel shows the total byte size for all resources, and can be used to ascertain weights for individual asset types. You can also check which items have been retrieved from the browser cache.</p>
+
+<p><img src="images/chrome-dev-tools.png" alt="Chrome DevTools Network panel showing resource sizes" /></p>
+
+<p>Firefox and other browsers offer similar tools.</p>
+
+<p><a href="http://webpagetest.org">WebPagetest</a> provides the ability to test first and subsequent page loads. You can automate testing with <a href="https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting">scripts</a> (for example, to log in to a site) or by using their <a href="https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis">RESTful APIs</a>. The following example (loading <a href="https://developers.google.com/web/">developers.google.com/web</a>) shows that caching was successful and that subsequent page loads required no additional resources.</p>
+
+<p><img src="images/webpagetest-first-and-repeat.png" alt="WebPagetest results showing total byte size for first and repeat page visits" /></p>
+
+<p>WebPagetest also gives a size and request breakdown by MIME type.</p>
+
+<p><img src="images/webpagetest-requests-and-bytes-pie-charts.png" alt="WebPagetest pie charts showing requests and bytes by MIME type" /></p>
+
+<h2 id="calculate-page-cost">Calculate page cost</h2>
+
+<p>For many users, data doesn&#8217;t just cost bytes and performance — it costs money.</p>
+
+<p>The site <a href="https://whatdoesmysitecost.com/">What Does My Site Cost?</a> enables you to estimate the actual financial cost of loading your site. The histogram below shows how much it costs (using a prepaid data plan) to load <a href="https://www.amazon.com/">amazon.com</a>.</p>
+
+<p><img src="images/what-does-my-site-cost.png" alt="Estimated data cost in 12 countries) of loading the amazon.com homepage" /></p>
+
+<p>Bear in mind that this doesn&#8217;t take into account affordability relative to income. Data from <a href="https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/">blog.jana.com</a> shows the cost of data.</p>
+
+<table>
+  <tr>
+    <td></td>
+    <td><strong>500MB data plan<br />cost (USD)</strong></td>
+    <td><strong>Hourly minimum<br />wage (USD)</strong></td>
+    <td><strong>Hours of work to pay<br />for 500MB data plan</strong></td>
+  </tr>
+  <tr>
+    <td>India</td>
+    <td>$3.38</td>
+    <td>$0.20</td>
+    <td>17 hours</td>
+  </tr>
+  <tr>
+    <td>Indonesia</td>
+    <td>$2.39</td>
+    <td>$0.43</td>
+    <td>6 hours</td>
+  </tr>
+  <tr>
+    <td>Brazil</td>
+    <td>$13.77</td>
+    <td>$1.04</td>
+    <td>13 hours</td>
+  </tr>
+</table>
+
+<p>Page weight isn&#8217;t just a problem for emerging markets. In many countries, people use mobile plans with limited data, and will avoid your site or app if they perceive it to be heavy and expensive. Even &#8220;unlimited&#8221; cell and wifi data plans generally have a data limit beyond which they are blocked or throttled.</p>
+
+<p>The bottom line: page weight affects performance and costs money. <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/?hl=en]">Optimizing content efficiency</a> shows how to reduce that cost.</p>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Sam Dutton</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Understand low bandwidth and high latency</title>
+    <published>2016-05-10T00:00:00Z</published>
+    <updated>2016-05-10T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/performance/poor-connectivity/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/performance/poor-connectivity/</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/performance/poor-connectivity/?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+  It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
+</p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Sam Dutton</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Test with low bandwidth and high latency</title>
+    <published>2016-05-10T00:00:00Z</published>
+    <updated>2016-05-10T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/performance/poor-connectivity/testing?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/performance/poor-connectivity/testing</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/performance/poor-connectivity/testing?hl=en?feed_type=atom&pixel">
+        <p class="intro">An <a href="http://adwords.blogspot.co.uk/2015/05/building-for-next-moment.html">increasing proportion</a> of people experience the web on mobile devices. Even at home, <a href="https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/">many people are abandoning fixed broadband for mobile</a>.</p>
+
+<p>In this context, it&#8217;s important to understand what your app or site feels like when connectivity is poor or unreliable. A range of software tools can help you <a href="https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-difference">emulate and simulate</a> low bandwidth and high <a href="https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/">latency</a>.</p>
+
+<h2 id="emulate-network-throttling">Emulate network throttling</h2>
+
+<p>When building or updating a site, you should check to ensure adequate performance in a variety of connectivity conditions. There are a several tools that can help.</p>
+
+<h3 id="browser-tools">Browser tools</h3>
+
+<p>The <a href="https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions?hl=en">Chrome DevTools</a> enable you to test your site with a variety of upload/download speeds and <a href="https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/">round-trip times</a>, using presets or custom settings from the Chrome DevTools Network panel:</p>
+
+<p><img src="images/chrome-devtools-throttling.png" alt="Chrome DevTools throttling" /></p>
+
+<h3 id="system-tools">System tools</h3>
+
+<p>Network Link Conditioner is a preference panel available on Mac if you install <a href="https://developer.apple.com/downloads/?q=Hardware%20IO%20Tools">Hardware IO Tools</a> for Xcode:</p>
+
+<p><img src="images/network-link-conditioner-control-panel.png" alt="Mac Network Link Conditioner control panel" /></p>
+
+<p><img src="images/network-link-conditioner-settings.png" alt="Mac Network Link Conditioner settings" /></p>
+
+<p><img src="images/network-link-conditioner-custom.png" alt="Mac Network Link Conditioner custom settings" /></p>
+
+<h3 id="device-emulation">Device emulation</h3>
+
+<p><a href="http://developer.android.com/tools/devices/emulator.html#netspeed">Android Emulator</a> allows you simulate various network conditions while running apps (including web browsers and hybrid web apps) on Android:</p>
+
+<p><img src="images/android-emulator.png" alt="Android Emulator" /></p>
+
+<p><img src="images/android-emulator-settings.png" alt="Android Emulator settings" /></p>
+
+<p>For iPhone, Network Link Conditioner can be used to simulate impaired network conditions (see above).</p>
+
+<h2 id="test-from-different-locations-and-networks">Test from different locations and networks</h2>
+
+<p>Connectivity performance depends on server location as well as network type.</p>
+
+<p><a href="https://webpagetest.org">WebPagetest</a> is an online service that enables a set of performance tests to be run for your site using a variety of networks and host locations. For example, you can try out your site from a server in India on a 2G network, or over cable from a city in the US.</p>
+
+<p><img src="images/webpagetest.png" alt="WebPagetest settings" /></p>
+
+<p>Select a location and, from advanced settings, select a connection type. You can even automate testing using <a href="https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting">scripts</a> (for example, to log in to a site) or using their <a href="https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis">RESTful APIs</a>. This helps you to include connectivity testing into build processes or performance logging.</p>
+
+<p><a href="http://www.telerik.com/fiddler">Fiddler</a> supports Global proxying via <a href="http://www.geoedge.com/faq">GeoEdge</a>, and its custom rules can be used to simulate modem speeds:</p>
+
+<p><img src="images/fiddler.png" alt="Fiddler proxy" /></p>
+
+<h2 id="test-on-an-impaired-network">Test on an impaired network</h2>
+
+<p>Software and hardware proxies enable you to emulate problematic mobile network conditions, such as bandwidth throttling, packet delay and random packet loss. A shared proxy or impaired network can enable a team of developers to incorporate real-world network testing in their workflow.</p>
+
+<p>Facebook&#8217;s <a href="http://facebook.github.io/augmented-traffic-control/">Augmented Traffic Control</a> (ATC) is a BSD-licensed set of applications that can be used to shape traffic and emulate impaired network conditions:</p>
+
+<p><img src="images/augmented-traffic-control.png" alt="Facebook's Augmented Traffic Control" /></p>
+
+<blockquote>
+  <p>Facebook even instituted <a href="https://code.facebook.com/posts/1556407321275493/building-for-emerging-markets-the-story-behind-2g-tuesdays/">2G Tuesdays</a> to help understand how people on 2G use their product. On Tuesdays, employees get a pop-up that gives them the option to simulate a 2G connection.</p>
+</blockquote>
+
+<p>The <a href="https://www.charlesproxy.com/">Charles</a> HTTP/HTTPS proxy can be used to <a href="http://www.charlesproxy.com/documentation/proxying/throttling/">adjust bandwidth and latency</a>. Charles is commercial software, but a free trial is available.</p>
+
+<p><img src="images/charles.png" alt="Charles proxy bandwidth and latency settings" /></p>
+
+<p>More information about Charles is available from <a href="http://codewithchris.com/tutorial-using-charles-proxy-with-your-ios-development-and-http-debugging/">codewithchris.com</a>.</p>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Sam Dutton</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Handle unreliable connectivity and &#39;lie-fi&#39;</title>
+    <published>2016-05-10T00:00:00Z</published>
+    <updated>2016-05-10T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/performance/poor-connectivity/lie-fi?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/performance/poor-connectivity/lie-fi</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/performance/poor-connectivity/lie-fi?hl=en?feed_type=atom&pixel">
+        <h2 id="what-is-lie-fi">What is lie-fi?</h2>
+
+<p class="intro">The term <a href="http://www.urbandictionary.com/define.php?term=lie-fi">lie-fi</a> dates back to at least 2008 (when phones looked like <a href="https://www.mobilegazette.com/2008-phones-wallchart.htm" title="Images of phones from 2008">this</a>), and refers to connectivity that isn't what it seems. Your browser behaves as if it has connectivity when, for whatever reason, it doesn't.</p>
+
+<p>Misinterpreted connectivity can result in a poor experience as the browser (or JavaScript) persists in trying to retrieve resources rather than giving up and choosing a sensible fallback. Lie-fi can actually be worse than offline; at least if a device is definitely offline, your JavaScript can take appropriate evasive action.</p>
+
+<p>Lie-fi is likely to become a bigger problem as more people move to mobile and away from fixed broadband. Recent <a href="https://www.ntia.doc.gov/blog/2016/evolving-technologies-change-nature-internet-use">US Census data</a> shows a <a href="https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/">move away from fixed broadband</a>. The following chart compares the use of mobile internet at home in 2015 compared with 2013:</p>
+
+<p><img src="images/home-broadband.png" class="center" alt="Chart from US census data showing the move to mobile away from fixed broadband, particularly in lower income households" /></p>
+
+<h2 id="use-timeouts-to-handle-intermittent-connectivity">Use timeouts to handle intermittent connectivity</h2>
+
+<p>In the past, <a href="http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline">hacky methods using XHR</a> have been used to test for intermittent connectivity, but Service Worker enables more reliable methods in order to set network timeouts. Jeff Posnick explains how to achieve this using <a href="https://github.com/GoogleChrome/sw-toolbox">sw-toolbox</a> timeouts in his talk <a href="https://youtu.be/jCKZDTtUA2A?t=19m58s">Instant Loading with Service Workers</a>:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">toolbox</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span>
+  <span class="s1">&#39;/path/to/image&#39;</span><span class="p">,</span>
+  <span class="nx">toolbox</span><span class="p">.</span><span class="nx">networkFirst</span><span class="p">,</span>
+  <span class="p">{</span><span class="nx">networkTimeoutSeconds</span><span class="o">:</span> <span class="mi">3</span><span class="p">}</span>
+<span class="p">);</span></code></pre></div>
+
+<p>A <a href="https://github.com/whatwg/fetch/issues/20">timeout option</a> is also planned for the <a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalFetch/fetch">Fetch API</a> — and the <a href="https://www.w3.org/TR/streams-api/">Streams API</a> should help by optimizing content delivery and avoiding monolithic requests. Jake Archibald gives more details about tackling lie-fi in <a href="https://youtu.be/d5_6yHixpsQ?t=6m42s">Supercharging page load</a>.</p>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Sam Dutton</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Write for mobile</title>
+    <published>2016-04-26T00:00:00Z</published>
+    <updated>2016-04-26T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/design-and-ui/content/write?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/design-and-ui/content/write</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/design-and-ui/content/write?hl=en?feed_type=atom&pixel">
+        <p>The US government writing guide at <a href="http://www.usability.gov/how-to-and-tools/methods/writing-for-the-web.html">usability.gov</a> summarizes what people want from writing on the web:</p>
+
+<blockquote>
+  <p>When writing for the web, using plain language allows users to find what they need, understand what they have found, and then use it to meet their needs.</p>
+
+  <p>It should also be actionable, findable, and shareable.</p>
+</blockquote>
+
+<h2 id="how-people-read-on-the-web">How people read on the web</h2>
+
+<p>Research shows that <a href="https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/">people don&#8217;t read web pages, they scan</a>. On average, <a href="https://www.nngroup.com/articles/how-little-do-users-read/">people only read 20–28% of web page content</a>. Reading from screens is much slower than reading from paper. People will give up and leave your site unless information is easy to access and understand.</p>
+
+<h2 id="how-to-write-for-mobile">How to write for mobile</h2>
+
+<p>Focus on the subject at hand and tell the story upfront. For writing to work across a range of devices and viewports, make sure to get your main points across at the start: as a rule, ideally <a href="http://www.bbc.co.uk/academy/journalism/article/art20130702112133610">in the first four paragraphs, in around 70 words</a>.</p>
+
+<p>Ask yourself what people want from your site. Are they trying to find something out? If people visit your site for information, make sure that all your text is oriented to helping them achieve their goal. Write in the <a href="https://learnenglish.britishcouncil.org/en/english-grammar/verbs/active-and-passive-voice" title="British Council: Learn English">active voice</a>, offer actions and solutions.</p>
+
+<p>Publish only what your visitors want, and nothing more.</p>
+
+<p><a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">UK government research</a> also shows that:</p>
+
+<blockquote>
+  <p>80% of people preferred sentences written in clear English — and the more complex the issue, the greater that preference (e.g., 97% preferred &#8220;among other things&#8221; over the Latin &#8220;inter alia&#8221;).</p>
+
+  <p>The more educated the person and the more specialist their knowledge, the greater their preference for plain English.</p>
+</blockquote>
+
+<p>In other words: use plain English, shorter words and simple sentence structures — even for a literate, technical audience. Unless there&#8217;s a good reason not to, keep your tone of voice conversational. An old rule of journalism is to write as if you are speaking to an intelligent 11 year old.</p>
+
+<h2 id="the-next-billion-users">The next billion users</h2>
+
+<p>The pared-down approach to writing is particularly important for readers on mobile devices, and is crucial when creating content for low-cost phones with small viewports that require more scrolling and may have lower quality displays and less responsive screens.</p>
+
+<p>Most of the next billion users coming online will have cheap devices. They will not want to spend their data budget on navigating long-winded content, and may not be reading in their first language. Trim your text: use short sentences, minimal punctuation, paragraphs five lines or less, and single line headings. Consider responsive text (for example, using shorter headlines for smaller viewports) but <a href="https://www.smashingmagazine.com/2012/02/ever-justification-for-responsive-text/">beware of the downsides</a>.</p>
+
+<p>A minimalist attitude to text will also make your content easier to localize and internationalize — and make it more likely that your content gets quoted in social media.</p>
+
+<p>The bottom line:</p>
+
+<ul>
+  <li>Keep it simple</li>
+  <li>Reduce clutter</li>
+  <li>Get to the point</li>
+</ul>
+
+<h2 id="find-out-more-about-voice-style-and-structure">Find out more about voice, style and structure</h2>
+
+<ul>
+  <li><a href="http://www.usability.gov/how-to-and-tools/methods/writing-for-the-web.html">Writing for the Web</a>, usability.gov</li>
+  <li><a href="https://www.nngroup.com/articles/concise-scannable-and-objective-how-to-write-for-the-web/">How to Write for the Web</a>, Norman Nielsen Group</li>
+  <li><a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk">Writing well for the web</a>, gov.uk</li>
+  <li><a href="https://www.bbc.co.uk/academy/journalism/article/art20130702112133610">Writing for the Web</a>, BBC Journalism Academy</li>
+</ul>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Sam Dutton</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Improve User Experiences with a Web App Manifest</title>
+    <published>2016-02-12T00:00:00Z</published>
+    <updated>2016-02-12T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/engage-and-retain/web-app-manifest/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/engage-and-retain/web-app-manifest/</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/engage-and-retain/web-app-manifest/?hl=en?feed_type=atom&pixel">
+        <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">web app manifest</a> is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in areas where they would expect to see apps (for example the mobile home screen), direct what the user can launch, and define its appearance at launch.</p>
+
+<p>Web app manifests provide the ability to save a site bookmark to a device&#8217;s home screen. When a site is launched this way:</p>
+
+<ul>
+  <li>It has a unique icon and name so that users can distinguish it from other other sites</li>
+  <li>It displays something to the user while resources are downloaded or restored from cache</li>
+  <li>It provides default display characterstics to the browser to avoid a too abrupt a transition when site resources become available.</li>
+</ul>
+
+<p>It does all this through the simple mechanism of metadata in a text file. That&#8217;s the web app manifest.</p>
+
+<div class="wf-highlight-list wf-highlight-list--note">
+  <h3 class="wf-highlight-list__title">Note</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>Though you can use a web app manifest on any site, they are required for <a href="/web/progressive-web-apps">progressive web apps</a>.</li>
+    
+  </ul>
+
+</div>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Joseph Medley</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Your First Progressive Web App</title>
+    <published>2016-02-04T00:00:00Z</published>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+<a href="/web/progressive-web-apps">Progressive Web Apps</a> are experiences 
+that combine the best of the web and the best of apps. They are useful to users 
+from the very first visit in a browser tab, no install required. As the user 
+progressively builds a relationship with the App over time, it becomes more 
+and more powerful. It loads quickly, even on flaky networks, sends relevant 
+push notifications, has an icon on the home screen and loads as a top-level, 
+full screen experience.
+</p>
+
+<h2 id="what-is-a-progressive-web-app">What is a Progressive Web App?</h2>
+
+<p>Progressive Web Apps are:</p>
+
+<ul>
+  <li><strong>Progressive</strong> - Work for every user, regardless of browser choice because 
+they&#8217;re built with progressive enhancement as a core tenet.</li>
+  <li><strong>Responsive</strong> - Fit any form factor: desktop, mobile, tablet, or whatever is 
+next.</li>
+  <li><strong>Connectivity independent</strong> - Enhanced with service workers to work offline 
+or on low quality networks.</li>
+  <li><strong>App-like</strong> - Feel like an app to the user with app-style interactions and 
+navigation because they&#8217;re built on the app shell model.</li>
+  <li><strong>Fresh</strong> - Always up-to-date thanks to the service worker update process.</li>
+  <li><strong>Safe</strong> - Served via HTTPS to prevent snooping and ensure content hasn&#8217;t been 
+tampered with.</li>
+  <li><strong>Discoverable</strong> - Are identifiable as &#8220;applications&#8221; thanks to W3C manifests 
+and service worker registration scope allowing search engines to find them.</li>
+  <li><strong>Re-engageable</strong> - Make re-engagement easy through features like push 
+notifications.</li>
+  <li><strong>Installable</strong> - Allow users to &#8220;keep&#8221; apps they find most useful on their 
+home screen without the hassle of an app store.</li>
+  <li><strong>Linkable</strong> - Easily share via URL and not require complex installation.</li>
+</ul>
+
+<p>This getting started guide will walk you through creating your own Progressive 
+Web App, including the design considerations, as well as implementation details 
+to ensure that your app meets the key principles of a Progressive Web App.</p>
+
+<div class="wf-highlight-list wf-highlight-list--note">
+  <h3 class="wf-highlight-list__title">Note</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>Looking for more? Watch Alex Russell talk about <a href="https://www.youtube.com/watch?v=MyQ8mtR9WxI">Progressive Web Apps</a> from the 2015 Chrome Dev Summit</li>
+    
+  </ul>
+
+</div>
+
+<h2 id="what-are-we-going-to-be-building">What are we going to be building?</h2>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <p>
+      In this getting started guide, you're going to build a Weather Web 
+      App using Progressive Web App techniques.
+    </p>
+    <p>
+      Let's consider the properties of a Progressive Web App:
+      <ul>
+        <li><b>Progressive</b> - we'll use progressive enhancement throughout</li>
+        <li><b>Responsive</b> - we'll ensure it fits any form factor</li>
+        <li><b>Connectivity independent</b> - we'll cache the app shell with service workers.</li>
+        <li><b>App-like</b> - we'll use app-style interactions to add cities and refresh the data.</li>
+        <li><b>Fresh</b> - we'll cache the latest data with service workers.</li>
+        <li><b>Safe</b> - we'll deploy the app to a host that support HTTPS.</li>
+        <li><b>Discoverable and installable</b> - we'll include a manifest making it 
+          easy for search engines to find our app.</li>
+        <li><b>Linkable</b> - it's the web!</li>
+      </ul>
+    </p>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <a href="https://weather-pwa-sample.firebaseapp.com/final/">
+      <img src="images/weather-ss.png" />
+    </a>
+    <p>
+      <a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
+    </p>
+  </div>
+</div>
+
+<h2 id="what-will-you-learn">What will you learn</h2>
+
+<ul>
+  <li>How to design and construct an app using the &#8220;app shell&#8221; method</li>
+  <li>How to make your app work offline</li>
+  <li>How to store data for use offline later</li>
+</ul>
+
+<h2 id="topics-covered">Topics covered</h2>
+
+<ol>
+
+  <li>
+    <a href="/web/fundamentals/getting-started/your-first-progressive-web-app/step-02?hl=en">
+      Implement the App Shell
+    </a>
+  </li>
+
+  <li>
+    <a href="/web/fundamentals/getting-started/your-first-progressive-web-app/step-01?hl=en">
+      Architect the App Shell
+    </a>
+  </li>
+
+  <li>
+    <a href="/web/fundamentals/getting-started/your-first-progressive-web-app/step-03?hl=en">
+      Start with a Fast First Load
+    </a>
+  </li>
+
+  <li>
+    <a href="/web/fundamentals/getting-started/your-first-progressive-web-app/step-04?hl=en">
+      Use Service Workers to Pre-cache the App Shell
+    </a>
+  </li>
+
+  <li>
+    <a href="/web/fundamentals/getting-started/your-first-progressive-web-app/step-05?hl=en">
+      Use Service Workers to Cache Application Data
+    </a>
+  </li>
+
+  <li>
+    <a href="/web/fundamentals/getting-started/your-first-progressive-web-app/step-07?hl=en">
+      Support Native Integration
+    </a>
+  </li>
+
+  <li>
+    <a href="/web/fundamentals/getting-started/your-first-progressive-web-app/step-08?hl=en">
+      Deploy to a Secure Host and Celebrate!
+    </a>
+  </li>
+
+</ol>
+
+<h2 id="what-youll-need">What you&#8217;ll need</h2>
+
+<ul>
+  <li>Chrome 47 or above</li>
+  <li>A knowledge of HTML, CSS and JavaScript</li>
+</ul>
+
+<p>This getting started guide is focused on Progressive Web Apps. Some concepts are 
+glossed over or code blocks (for example styles or non-relevant JavaScript) or
+are provided for you to simply copy and paste.</p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Pete LePage</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Implement the App Shell</title>
+    <published>2016-02-04T00:00:00Z</published>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-02?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-02</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/step-02?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+There are multiple ways to get started with any project, and we generally 
+recommend using Web Starter Kit. But, in this case, to keep our project as 
+simple as possible and concentrate on Progressive Web Apps, we've provided you 
+with all of the resources you'll need.
+</p>
+
+<h2 id="download-the-code">Download the code</h2>
+
+<p>You can <a href="pwa-weather.zip">download all of the code for this progressive web app guide</a> in a
+ZIP file for easy use. Each step and all of the resources you need are
+available in the ZIP.</p>
+
+<h2 id="create-the-html-for-the-app-shell">Create the HTML for the App Shell</h2>
+
+<p>To make sure that we&#8217;re starting as cleanly as possible, we&#8217;ll start with a 
+brand new <code>index.html</code> file and add the core components we discussed in 
+<a href="step-01">Architect the App Shell</a>.</p>
+
+<p>Remember, the key components will consist of:</p>
+
+<ul>
+  <li>Header with a title, and add/refresh buttons</li>
+  <li>Container for forecast cards</li>
+  <li>A forecast card template</li>
+  <li>A dialog for adding new cities</li>
+  <li>A loading indicator</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">&quot;utf-8&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">http-equiv=</span><span class="s">&quot;X-UA-Compatible&quot;</span> <span class="na">content=</span><span class="s">&quot;IE=edge&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Weather App<span class="nt">&lt;/title&gt;</span>
+  <span class="c">&lt;!-- Insert link to styles.css here --&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;header__title&quot;</span><span class="nt">&gt;</span>Weather App<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&quot;butRefresh&quot;</span> <span class="na">class=</span><span class="s">&quot;headerButton&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">&quot;butAdd&quot;</span> <span class="na">class=</span><span class="s">&quot;headerButton&quot;</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+
+  <span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">&quot;main&quot;</span> <span class="na">hidden</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Insert forecast-card.html here --&gt;</span>
+  <span class="nt">&lt;/main&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;dialog-container&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- Insert add-new-city-dialog.html here --&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;loader&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">&quot;0 0 32 32&quot;</span> <span class="na">width=</span><span class="s">&quot;32&quot;</span> <span class="na">height=</span><span class="s">&quot;32&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;circle</span> <span class="na">id=</span><span class="s">&quot;spinner&quot;</span> <span class="na">cx=</span><span class="s">&quot;16&quot;</span> <span class="na">cy=</span><span class="s">&quot;16&quot;</span> <span class="na">r=</span><span class="s">&quot;14&quot;</span> <span class="na">fill=</span><span class="s">&quot;none&quot;</span><span class="nt">&gt;&lt;/circle&gt;</span>
+    <span class="nt">&lt;/svg&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="c">&lt;!-- Insert link to app.js here --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></div>
+
+<p>Notice the <code>main</code> content is <code>hidden</code> by default and the loader is visible. This 
+ensures that the user sees the loader immediately as the page loads, giving them 
+a clear indication that the content is loading.</p>
+
+<p>Next, let&#8217;s add the forecast card, and Add New City dialog. To save time, these 
+are provided in the <code>resources</code> directory, so you can simply copy and paste them 
+into the corresponding location.</p>
+
+<h2 id="add-styles-to-the-core-ui-components">Add styles to the core UI components</h2>
+
+<p>It&#8217;s now time to add the core styles. As part of our build and deployment 
+process, we&#8217;ll want to inline these core styles into the document body, but for 
+now, let&#8217;s put them into a separate CSS file.</p>
+
+<p>In the <code>index.html</code> file, replace <code>&lt;!-- Insert link to styles here --&gt;</code> with:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">type=</span><span class="s">&quot;text/css&quot;</span> <span class="na">href=</span><span class="s">&quot;styles/inline.css&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+<p>To save time, we&#8217;ve already created the 
+<a href="https://weather-pwa-sample.firebaseapp.com/styles/inline.css">stylesheet</a> for 
+you to use. Take a few minutes to review it and customize it to make it more 
+your own.</p>
+
+<div class="wf-highlight-list wf-highlight-list--note">
+  <h3 class="wf-highlight-list__title">Note</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>Specifying each icon individually might seem less efficient compared to using an image sprite, but we'll cache those later as part of the app shell, ensuring that they're always available, without the need to make a network request.</li>
+    
+  </ul>
+
+</div>
+
+<h2 id="test-things-out-and-make-adjustments">Test things out and make adjustments</h2>
+
+<p>Now is a great time to test things out, see how they look and make any 
+adjustments you want. Be sure to test the rendering of your forecast card by 
+removing the <code>hidden</code> attribute from the <code>main</code> container, and adding some fake data 
+to the card.</p>
+
+<div class="wf-highlight-list wf-highlight-list--remember">
+  <h3 class="wf-highlight-list__title">Remember</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>We've given you the markup and styles to save you some time and make sure you're starting on a solid foundation. In the next section, you'll have an opportunity to write your own code.</li>
+    
+  </ul>
+
+</div>
+
+<p>This app is reasonably responsive right now, but it&#8217;s not perfect. Try adding 
+additional styles that will improve the responsiveness and make it really shine 
+across different devices. Also, consider what you can do to make it more your 
+own.</p>
+
+<h2 id="add-the-key-javascript-bootstrap-code">Add the key JavaScript bootstrap code</h2>
+
+<p>Now that we have most of the UI ready, it&#8217;s time to start hooking up the code to 
+make everything work. Like the rest of the app shell, be conscious about what 
+code is necessary as part of the key experience and what can be loaded later.</p>
+
+<p>In our bootstrap code, we&#8217;ve included:</p>
+
+<ul>
+  <li>An <code>app</code> object that contains some of the key information necessary for the app.</li>
+  <li>The event listeners for all of the buttons in the header (<code>add</code>/<code>refresh</code>) and in 
+the add city dialog (<code>add</code>/<code>cancel</code>).</li>
+  <li>A method to add or update forecast cards (<code>app.updateForecastCard</code>).</li>
+  <li>A method to get the latest weather forecast data from the Firebase Public 
+Weather API (<code>app.getForecast</code>).</li>
+  <li>A method to iterate the current cards and call <code>app.getForecast</code> to get the 
+latest forecast data (<code>app.updateForecasts</code>).</li>
+  <li>Some fake data (<code>fakeForecast</code>) you can use to quickly test how things render.</li>
+</ul>
+
+<p>Add the JavaScript code</p>
+
+<ol>
+  <li>Copy <code>step3-app.js</code> from the <code>resources</code> directory to your <code>scripts</code> folder
+and rename it <code>app.js</code></li>
+  <li>In the <code>index.html</code> file, add a link to the newly created <code>app.js</code>.<br />
+<code>&lt;script src="/scripts/app.js"&gt;&lt;/script&gt;</code></li>
+</ol>
+
+<h2 id="test-it-out">Test it out</h2>
+
+<p>Now that you&#8217;ve added the core HTML, styles and JavaScript, it&#8217;s time to test the 
+app. While it may not do much yet, make sure it doesn&#8217;t write errors to the
+console.</p>
+
+<p>To see how the fake weather data is rendered, add the line below to your <code>app.js</code> 
+file:<br />
+<code>app.updateForecastCard(fakeForecast);</code></p>
+
+<p><a href="https://weather-pwa-sample.firebaseapp.com/step-04/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a></p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Pete LePage</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Architect the App Shell</title>
+    <published>2016-02-04T00:00:00Z</published>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-01?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-01</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/step-01?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+The app's shell, is the minimal HTML, CSS, and JavaScript that is required to 
+power the user interface of a progressive web app and is one of the the 
+components that ensures reliably good performance. Its first load should be 
+extremely quick, then immediately be cached. This means that the shell does not 
+need to be loaded every time, but instead just gets the necessary content.
+</p>
+
+<p>App shell architecture separates the core application infrastructure and UI from 
+the data. All of the UI and infrastructure is cached locally using a service 
+worker so that on subsequent loads, the Progressive Web App only needs to retrieve 
+the necessary data, instead of having to load everything.</p>
+
+<figure>
+  <img src="images/appshell.jpg" /> 
+</figure>
+
+<p>Put another way, the app shell is similar to the bundle of code that you&#8217;d 
+publish to an app store when building a native app. It is the core components 
+necessary to get your app off the ground, but likely does not contain the data.</p>
+
+<h2 id="why-use-the-app-shell-architecture">Why use the app shell architecture?</h2>
+
+<p>Using the app shell architecture allows you to focus on speed, giving your 
+Progressive Web App similar properties to native apps: instant loading and 
+regular updates, all without the need of an app store.</p>
+
+<h2 id="design-the-app-shell">Design the app shell</h2>
+
+<p>The first step is to break the design down into its core components.</p>
+
+<p>Ask yourself:</p>
+
+<ul>
+  <li>What needs to be on screen immediately?</li>
+  <li>What other UI components are key to our app?</li>
+  <li>What supporting resources are needed for the app shell? For example images, 
+JavaScript, styles, etc.</li>
+</ul>
+
+<p>We&#8217;re going to create a Weather app as our first Progressive Web App. The key 
+components will consist of:</p>
+
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col">
+    <ul>
+      <li>Header with a title, and add/refresh buttons</li>
+      <li>Container for forecast cards</li>
+      <li>A forecast card template</li>
+      <li>A dialog box for adding new cities</li>
+      <li>A loading indicator</li> 
+    </ul>
+  </div>
+  <div class="mdl-cell mdl-cell--6-col">
+    <img src="images/weather-ss.png" />
+  </div>
+</div>
+
+<p>When designing a more complex app, content that isn&#8217;t needed for the 
+initial load can be requested later and then cached for future use. For example, 
+we could defer the loading of the New City dialog until after we&#8217;ve rendered the 
+first run experience and have some idle cycles available.</p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Pete LePage</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Start with a Fast First Load</title>
+    <published>2016-02-04T00:00:00Z</published>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-03?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-03</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/step-03?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+Progressive Web Apps should start fast and be usable immediately. In its 
+current state, our Weather App starts quickly, but it's not useable. There's no 
+data. We could make an AJAX request to get that data, but that results in an 
+extra request and makes the initial load longer. Instead, provide real data in 
+the first load.
+</p>
+
+<h2 id="inject-the-weather-forecast-data">Inject the weather forecast data</h2>
+
+<p>For this code lab, we&#8217;ll statically inject a weather forecast, but in a 
+production app, the latest weather forecast data would be injected by the server 
+based on the IP address geolocation of the user.</p>
+
+<p>Add the following inside the immediately invoked function expression:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">initialWeatherForecast</span> <span class="o">=</span> <span class="p">{</span>  
+  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;newyork&#39;</span><span class="p">,</span>  
+  <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;New York, NY&#39;</span><span class="p">,</span>  
+  <span class="nx">currently</span><span class="o">:</span> <span class="p">{</span>  
+    <span class="nx">time</span><span class="o">:</span> <span class="mi">1453489481</span><span class="p">,</span>  
+    <span class="nx">summary</span><span class="o">:</span> <span class="s1">&#39;Clear&#39;</span><span class="p">,</span>  
+    <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;partly-cloudy-day&#39;</span><span class="p">,</span>  
+    <span class="nx">temperature</span><span class="o">:</span> <span class="mf">52.74</span><span class="p">,</span>  
+    <span class="nx">apparentTemperature</span><span class="o">:</span> <span class="mf">74.34</span><span class="p">,</span>  
+    <span class="nx">precipProbability</span><span class="o">:</span> <span class="mf">0.20</span><span class="p">,</span>  
+    <span class="nx">humidity</span><span class="o">:</span> <span class="mf">0.77</span><span class="p">,</span>  
+    <span class="nx">windBearing</span><span class="o">:</span> <span class="mi">125</span><span class="p">,</span>  
+    <span class="nx">windSpeed</span><span class="o">:</span> <span class="mf">1.52</span>  
+  <span class="p">},</span>  
+  <span class="nx">daily</span><span class="o">:</span> <span class="p">{</span>  
+    <span class="nx">data</span><span class="o">:</span> <span class="p">[</span>  
+      <span class="p">{</span><span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;clear-day&#39;</span><span class="p">,</span> <span class="nx">temperatureMax</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span> <span class="nx">temperatureMin</span><span class="o">:</span> <span class="mi">34</span><span class="p">},</span>  
+      <span class="p">{</span><span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;rain&#39;</span><span class="p">,</span> <span class="nx">temperatureMax</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span> <span class="nx">temperatureMin</span><span class="o">:</span> <span class="mi">34</span><span class="p">},</span>  
+      <span class="p">{</span><span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;snow&#39;</span><span class="p">,</span> <span class="nx">temperatureMax</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span> <span class="nx">temperatureMin</span><span class="o">:</span> <span class="mi">34</span><span class="p">},</span>  
+      <span class="p">{</span><span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;sleet&#39;</span><span class="p">,</span> <span class="nx">temperatureMax</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span> <span class="nx">temperatureMin</span><span class="o">:</span> <span class="mi">34</span><span class="p">},</span>  
+      <span class="p">{</span><span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;fog&#39;</span><span class="p">,</span> <span class="nx">temperatureMax</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span> <span class="nx">temperatureMin</span><span class="o">:</span> <span class="mi">34</span><span class="p">},</span>  
+      <span class="p">{</span><span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;wind&#39;</span><span class="p">,</span> <span class="nx">temperatureMax</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span> <span class="nx">temperatureMin</span><span class="o">:</span> <span class="mi">34</span><span class="p">},</span>  
+      <span class="p">{</span><span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;partly-cloudy-day&#39;</span><span class="p">,</span> <span class="nx">temperatureMax</span><span class="o">:</span> <span class="mi">55</span><span class="p">,</span> <span class="nx">temperatureMin</span><span class="o">:</span> <span class="mi">34</span><span class="p">}</span>  
+    <span class="p">]</span>  
+  <span class="p">}</span>  
+<span class="p">};</span></code></pre></div>
+
+<p>Next, remove the <code>fakeForecast</code> data that we created earlier for testing as we 
+won&#8217;t be using it any more.</p>
+
+<h2 id="differentiating-the-first-run">Differentiating the first run</h2>
+
+<p>But, how do we know when to display this information, which may not be relevant 
+on future loads when the weather app is pulled from the cache? When the user 
+loads the app on subsequent visits, they may have changed cities, so we need to 
+load the information for those cities, not necessarily the first city they ever 
+looked up.</p>
+
+<p>User preferences, like the list of cities a user has subscribed to, should be 
+stored locally using IndexedDB or other fast storage mechanism. To simplify this 
+sample as much as possible, we&#8217;ve used <code>localStorage</code>, which is not ideal for 
+production apps because it is a blocking, synchronous storage mechanism that is 
+potentially very slow on some devices.</p>
+
+<div class="wf-highlight-list wf-highlight-list--note">
+  <h3 class="wf-highlight-list__title">Note</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>For extra credit, replace the <code>localStorage</code> implementation with <a href="https://www.npmjs.com/package/idb">idb</a></li>
+    
+  </ul>
+
+</div>
+
+<p>First, let&#8217;s add the code required to save user preferences within <code>app.js</code>:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Save list of cities to localStorage, see note below about localStorage.</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">saveSelectedCities</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">selectedCities</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">selectedCities</span><span class="p">);</span>
+  <span class="c1">// IMPORTANT: See notes about use of localStorage.</span>
+  <span class="nx">localStorage</span><span class="p">.</span><span class="nx">selectedCities</span> <span class="o">=</span> <span class="nx">selectedCities</span><span class="p">;</span>
+<span class="p">};</span></code></pre></div>
+
+<p>Next, let&#8217;s add the startup code to check if the user has any subscribed cities 
+and render those, or use the injected data. Add the following code to your 
+<code>app.js</code>:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/****************************************************************************   </span>
+<span class="cm"> *</span>
+<span class="cm"> * Code required to start the app</span>
+<span class="cm"> *</span>
+<span class="cm"> * NOTE: To simplify this getting started guide, we&#39;ve used localStorage.</span>
+<span class="cm"> *   localStorage is a synchronous API and has serious performance</span>
+<span class="cm"> *   implications. It should not be used in production applications!</span>
+<span class="cm"> *   Instead, check out IDB (https://www.npmjs.com/package/idb) or</span>
+<span class="cm"> *   SimpleDB (https://gist.github.com/inexorabletash/c8069c042b734519680c)</span>
+<span class="cm"> *</span>
+<span class="cm"> ****************************************************************************/</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">selectedCities</span> <span class="o">=</span> <span class="nx">localStorage</span><span class="p">.</span><span class="nx">selectedCities</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">selectedCities</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">selectedCities</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">selectedCities</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">selectedCities</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">city</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">app</span><span class="p">.</span><span class="nx">getForecast</span><span class="p">(</span><span class="nx">city</span><span class="p">.</span><span class="nx">key</span><span class="p">,</span> <span class="nx">city</span><span class="p">.</span><span class="nx">label</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">updateForecastCard</span><span class="p">(</span><span class="nx">initialWeatherForecast</span><span class="p">);</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">selectedCities</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="nx">key</span><span class="o">:</span> <span class="nx">initialWeatherForecast</span><span class="p">.</span><span class="nx">key</span><span class="p">,</span> <span class="nx">label</span><span class="o">:</span> <span class="nx">initialWeatherForecast</span><span class="p">.</span><span class="nx">label</span><span class="p">}</span>
+  <span class="p">];</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">saveSelectedCities</span><span class="p">();</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Finally, don&#8217;t forget to save the list of cities when the user adds a new one by 
+adding: <code>app.saveSelectedCities();</code> to the <code>butAddCity</code> event handler.</p>
+
+<h2 id="test-it-out">Test it out</h2>
+
+<ul>
+  <li>When first run, your app should immediately show the user the forecast from 
+<code>initialWeatherForecast</code>.</li>
+  <li>Add a new city and verify that two cards are shown.</li>
+  <li>Refresh the browser and verify that the app loads both forecasts and shows the 
+latest information.</li>
+</ul>
+
+<p><a href="https://weather-pwa-sample.firebaseapp.com/step-05/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a></p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Pete LePage</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Use Service Workers to Pre-cache the App Shell</title>
+    <published>2016-02-04T00:00:00Z</published>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-04?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-04</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/step-04?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+Progressive Web Apps have to be fast, and installable, which means that they 
+work online, offline, or on intermittent, slow connections. To achieve 
+this, we need to cache our app shell using a service worker so that it's 
+always available quickly and reliably. 
+</p>
+
+<p>If you&#8217;re unfamiliar with service workers, you can get a basic 
+understanding by reading <a href="http://www.html5rocks.com/en/tutorials/service-worker/introduction/">Introduction To Service 
+Workers</a> 
+about what they can do, how their lifecycle works and more.</p>
+
+<p>Features provided via service workers should be considered a progressive 
+enhancement, and added only if supported by the browser. For example, with 
+service workers you can cache the app shell and data for your app, so that it&#8217;s 
+available even when the network isn&#8217;t. When service workers aren&#8217;t supported, 
+the offline code isn&#8217;t called, and the user gets a basic experience. Using 
+feature detection to provide progressive enhancement has little overhead and it 
+won&#8217;t break in older browsers that don&#8217;t support that feature.</p>
+
+<div class="wf-highlight-list wf-highlight-list--remember">
+  <h3 class="wf-highlight-list__title">Remember</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>Service worker functionality is only available on pages that are accessed via HTTPS (<code>https://localhost</code> and equivalents will also work, to facilitate testing). To learn about the rationale behind this restriction check out <a href="http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">Prefer Secure Origins For Powerful New Features</a> from the Chromium team.</li>
+    
+  </ul>
+
+</div>
+
+<h2 id="register-the-service-worker-if-its-available">Register the service worker if it&#8217;s available</h2>
+
+<p>The first step to making the app work offline is to register a service worker, a 
+script that allows background functionality without the need for an open web 
+page or user interaction.</p>
+
+<p>This takes two simple steps:</p>
+
+<ol>
+  <li>Create a JavaScript file that will be the service worker</li>
+  <li>Tell the browser to register the JavaScript file as the service worker.</li>
+</ol>
+
+<p>First, create a blank file called <code>service-worker.js</code> in your application root
+folder. This <code>service-worker.js</code> file must live in the application root because
+the scope for the service workers is defined by the directory where the file 
+exists.</p>
+
+<p>Next, we need to check if the browser supports service workers, and if it does, 
+register the service worker. Add the following code to the <code>app.js</code> file:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span><span class="p">(</span><span class="s1">&#39;serviceWorker&#39;</span> <span class="k">in</span> <span class="nx">navigator</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="nx">navigator</span><span class="p">.</span><span class="nx">serviceWorker</span>  
+           <span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s1">&#39;/service-worker.js&#39;</span><span class="p">)</span>  
+           <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Service Worker Registered&#39;</span><span class="p">);</span> <span class="p">});</span>  
+<span class="p">}</span></code></pre></div>
+
+<h2 id="cache-the-site-assets">Cache the site assets</h2>
+
+<p>When the service worker is registered, an <code>install</code> event is triggered the first 
+time the user visits the page. In this event handler, we will cache all the 
+assets that are needed for the application.</p>
+
+<div class="wf-highlight-list wf-highlight-list--note">
+  <h3 class="wf-highlight-list__title">Note</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>The code below <b>must NOT</b> be used in production, it covers only the most basic use cases and it's easy to get yourself into a state where your app shell will never update. Be sure to review the section below that discusses the pitfalls of this implementation and how to avoid them.</li>
+    
+  </ul>
+
+</div>
+
+<p>When the service worker is fired, it should open the caches object and 
+populate it with the assets necessary to load the App Shell. Add this 
+code to your <code>service-worker.js</code> file:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">cacheName</span> <span class="o">=</span> <span class="s1">&#39;weatherPWA-step-5-1&#39;</span><span class="p">;</span>  
+<span class="kd">var</span> <span class="nx">filesToCache</span> <span class="o">=</span> <span class="p">[];</span>
+
+<span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;install&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Install&#39;</span><span class="p">);</span>  
+  <span class="nx">e</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span>  
+    <span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">cacheName</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>  
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Caching app shell&#39;</span><span class="p">);</span>  
+      <span class="k">return</span> <span class="nx">cache</span><span class="p">.</span><span class="nx">addAll</span><span class="p">(</span><span class="nx">filesToCache</span><span class="p">);</span>  
+    <span class="p">})</span>  
+  <span class="p">);</span>  
+<span class="p">});</span></code></pre></div>
+
+<p>First, we need to open the cache with <code>cache.open()</code> and provide a cache name. 
+Providing a cache name allows us to version files, or separate data from the 
+app shell so that we can easily update one but not affect the other.</p>
+
+<p>Once the cache is open, we can then call <code>cache.addAll()</code>, which takes a list of 
+URLs, then fetches them from the server and adds the response to the cache. 
+Unfortunately <code>cache.addAll()</code> is atomic, if any of the files fail, the entire 
+cache step will also fail!</p>
+
+<p>Be sure to bump <code>cacheName</code> each time you make changes to your service worker to 
+ensure you&#8217;re always getting the latest version of the files from the cache. 
+It&#8217;s important to periodically purge the cache of unused content and data. Add 
+an event listener to the <code>activate</code> event that gets all of the cache keys and 
+deletes the unused ones:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;activate&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Activate&#39;</span><span class="p">);</span>  
+  <span class="nx">e</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span>  
+    <span class="nx">caches</span><span class="p">.</span><span class="nx">keys</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">keyList</span><span class="p">)</span> <span class="p">{</span>  
+      <span class="k">return</span> <span class="nx">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">(</span><span class="nx">keyList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Removing old cache&#39;</span><span class="p">,</span> <span class="nx">key</span><span class="p">);</span>  
+        <span class="k">if</span> <span class="p">(</span><span class="nx">key</span> <span class="o">!==</span> <span class="nx">cacheName</span><span class="p">)</span> <span class="p">{</span>  
+          <span class="k">return</span> <span class="nx">caches</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">key</span><span class="p">);</span>  
+        <span class="p">}</span>  
+      <span class="p">}));</span>  
+    <span class="p">})</span>  
+  <span class="p">);</span>  
+<span class="p">});</span></code></pre></div>
+
+<p>Finally, let&#8217;s update the list of files required for the app shell. In the 
+array, we need to include all of the files our app needs, including images, 
+JavaScript, stylesheets, etc.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">filesToCache</span> <span class="o">=</span> <span class="p">[</span>  
+  <span class="s1">&#39;/&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/index.html&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/scripts/app.js&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/styles/inline.css&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/clear.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/cloudy-scattered-showers.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/cloudy.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/fog.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/ic\_add\_white\_24px.svg&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/ic\_refresh\_white\_24px.svg&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/partly-cloudy.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/rain.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/scattered-showers.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/sleet.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/snow.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/thunderstorm.png&#39;</span><span class="p">,</span>  
+  <span class="s1">&#39;/images/wind.png&#39;</span>  
+<span class="p">];</span></code></pre></div>
+
+<div class="wf-highlight-list wf-highlight-list--note">
+  <h3 class="wf-highlight-list__title">Note</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>Be sure to include all permutations of file names, for example our app is served from <code>index.html</code>, but it may also be requested as <code>/</code> since the server sends <code>index.html</code> when a root folder is requested. You could deal with this in the <code>fetch</code> method, but it would require special casing which may become complex.</li>
+    
+  </ul>
+
+</div>
+
+<p>Our app doesn’t work offline quite yet. We’ve cached the app shell components, 
+but we still need to load them from the local cache.</p>
+
+<h2 id="serve-the-app-shell-from-the-cache">Serve the app shell from the cache</h2>
+
+<p>Service workers provide the ability to intercept requests made from our 
+Progressive Web App and handle them within the service worker. That means we can 
+determine how we want to handle the request and potentially serve our own cached 
+response.</p>
+
+<p>For example:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;fetch&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="c1">// Do something interesting with the fetch here  </span>
+<span class="p">});</span></code></pre></div>
+
+<p>Let&#8217;s now serve the app shell from the cache. Add the following code to the 
+<code>service-worker.js</code> file:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;fetch&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Fetch&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>  
+  <span class="nx">e</span><span class="p">.</span><span class="nx">respondWith</span><span class="p">(</span>  
+    <span class="nx">caches</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>  
+      <span class="k">return</span> <span class="nx">response</span> <span class="o">||</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">);</span>  
+    <span class="p">})</span>  
+  <span class="p">);</span>  
+<span class="p">});</span></code></pre></div>
+
+<p>Stepping from inside, out, <code>caches.match()</code> evaluates the web request that 
+triggered the <code>fetch</code> event, and checks to see if it&#8217;s available in the cache. 
+It then either responds with the cached version, or uses <code>fetch</code> to get a copy 
+from the network. The <code>response</code> is passed back to the web page with 
+<code>e.respondWith()</code>.</p>
+
+<div class="wf-highlight-list wf-highlight-list--remember">
+  <h3 class="wf-highlight-list__title">Remember</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>If you're not seeing the <code>[ServiceWorker]</code> logging in the console, be sure you've bumped <code>cacheName</code> and reload the page. If that doesn't work, see the section on Tips for testing live service workers.</li>
+    
+  </ul>
+
+</div>
+
+<h2 id="beware-of-the-edge-cases">Beware of the edge cases</h2>
+
+<p>As previously mentioned, this code <strong>must not be used in production</strong> 
+because of the many unhandled edge cases.</p>
+
+<h3 id="cache-depends-on-updating-the-cache-key-for-every-change">Cache depends on updating the cache key for every change</h3>
+
+<p>For example this caching method requires you to update the cache key every time 
+content is changed, otherwise, the cache will not be updated, and the old 
+content will be served. So be sure to change the cache key with every change 
+as you’re working on your project!</p>
+
+<h3 id="requires-everything-to-be-redownloaded-for-every-change">Requires everything to be redownloaded for every change</h3>
+
+<p>Another downside is that the entire cache is invalidated and needs to be 
+re-downloaded every time a file changes. That means fixing a simple single 
+character spelling mistake will invalidate the cache and require everything to 
+be downloaded again. Not exactly efficient.</p>
+
+<h3 id="browser-cache-may-prevent-the-service-worker-cache-from-updating">Browser cache may prevent the service worker cache from updating</h3>
+
+<p>There&#8217;s another important caveat here. It&#8217;s crucial that the HTTPS request made 
+during the install handler goes directly to the network and doesn&#8217;t return a 
+response from the browser&#8217;s cache. Otherwise the browser may return the old, 
+cached version, resulting in the service worker cache never actually updating!</p>
+
+<h3 id="beware-of-cache-first-strategies-in-production">Beware of cache-first strategies in production</h3>
+
+<p>Our app uses a cache-first strategy, which results in a copy of any cached 
+content being returned without consulting the network. While a cache-first 
+strategy is easy to implement, it can cause challenges in the future. Once the 
+copy of the host page and service worker registration is cached, it can be 
+extremely difficult to change the configuration of the service worker (since the 
+configuration depends on where it was defined), and you could find yourself 
+deploying sites that are extremely difficult to update!</p>
+
+<h3 id="how-do-i-avoid-these-edge-cases">How do I avoid these edge cases?</h3>
+
+<p>So how do we avoid these edge cases? Use a library like 
+<a href="https://github.com/GoogleChrome/sw-precache">sw-precache</a>, which 
+provides fine control over what gets expired, ensures requests go directly to 
+the network and handles all of the hard work for you.</p>
+
+<h2 id="tips-for-testing-live-service-workers">Tips for testing live service workers</h2>
+
+<p>Debugging service workers can be a challenge, and when it involves caching, 
+things can become even more of a nightmare if the cache isn&#8217;t updated when you 
+expect it. Between the typical service worker life cycle and bug in your code, 
+you may become quickly frustrated. But don&#8217;t. There are some tools you can use 
+to make your life easier.</p>
+
+<p>A couple of tips:</p>
+
+<ul>
+  <li>Once a service worker has been unregistered, it may remain listed until 
+its containing browser window is closed.</li>
+  <li>If multiple windows to your app are open, the new service worker will 
+not take effect until they&#8217;ve all been reloaded and updated to the latest 
+service worker.</li>
+  <li>Unregistering a service worker does not clear the cache, so it may be possible 
+you&#8217;ll still get old data if the cache name hasn&#8217;t changed.</li>
+  <li>If a service worker exists and a new service worker is registered, the new 
+service worker won&#8217;t take control until the page is reloaded, unless you take 
+<a href="https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control">immediate 
+control</a>.</li>
+</ul>
+
+<h3 id="your-new-best-friend-chromeserviceworker-internals">Your new best friend: chrome://serviceworker-internals</h3>
+
+<p>Chrome&#8217;s Service Worker Internals page (<code>chrome://serviceworker-internals</code>) is a 
+life saver, easily allowing you to stop and un-register existing service workers 
+and start fresh. You can also use this page to launch the Developer Tools on the 
+service worker, giving you access to the console of the service worker.</p>
+
+<h2 id="test-it-out">Test it out</h2>
+
+<ul>
+  <li>Open the Chrome DevTools and check the resources tab to make sure the
+service worker is properly registered and the right resources are cached.</li>
+  <li>Try changing the <code>cacheName</code> and make sure that the cache is properly updated.</li>
+</ul>
+
+<p><a href="https://weather-pwa-sample.firebaseapp.com/step-06/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a></p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Pete LePage</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Use Service Workers to Cache Application Data</title>
+    <published>2016-02-04T00:00:00Z</published>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-05?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-05</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/step-05?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+Choosing the right caching strategy for your data is vital and depends 
+on the type of data your app presents. For example, time sensitive data like 
+weather or stock quotes should be as fresh as possible, while avatar images or 
+article content can be updated less frequently. 
+</p>
+
+<p>The <strong>cache first then network</strong> strategy is ideal for our app. It gets data 
+on screen as quickly as possible, then updates that once the network has 
+returned the latest data. In comparison to <strong>network first then cache</strong>, the user 
+does not have to wait until the fetch times out to get the cached data.</p>
+
+<p><strong>Cache first then network</strong> means we need to kick off two asynchronous requests, 
+one to the cache and one to the network. Our network request with the app 
+doesn&#8217;t need to change much, but we need to modify the service worker to cache 
+the response before returning it.</p>
+
+<p>Under normal circumstances, the cached data will be returned, 
+almost immediately providing the app with recent data it can use. Then, when the 
+network request returns, the app will be updated using the latest data from the 
+network.</p>
+
+<h2 id="intercept-the-network-request-and-cache-the-response">Intercept the network request and cache the response</h2>
+
+<p>We need to modify the service worker to intercept requests to the weather API 
+and store their responses in the cache, so we can easily access them later. In 
+the <strong>cache first then network</strong> strategy, we expect the network response to be the 
+&#8216;source of truth&#8217;, always providing us with the most recent information. If 
+it can&#8217;t, it&#8217;s OK to fail because we&#8217;ve already retrieved the latest cached 
+data in our app.</p>
+
+<p>In the service worker, let&#8217;s add a <code>dataCacheName</code> so that we can separate our 
+applications data from the app shell. When the app shell is updated and older 
+caches are purged, our data will remain untouched, ready for a super fast load. 
+Keep in mind, if your data format changes in the future, you&#8217;ll need a way to 
+handle that and ensure the app shell and content stay in sync.</p>
+
+<p>Add the following line to the top of your <code>service-worker.js</code> file:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">dataCacheName</span> <span class="o">=</span> <span class="s1">&#39;weatherData-v1&#39;</span><span class="p">;</span></code></pre></div>
+
+<p>Next, we need to modify the <code>fetch</code> event handler to handle requests to the data 
+API separately from other requests.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;fetch&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Fetch&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">);</span>  
+<span class="hll">  <span class="kd">var</span> <span class="nx">dataUrl</span> <span class="o">=</span> <span class="s1">&#39;https://publicdata-weather.firebaseio.com/&#39;</span><span class="p">;</span>  
+</span><span class="hll">  <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">dataUrl</span><span class="p">)</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>  
+</span><span class="hll">    <span class="c1">// Put data handler code here  </span>
+</span><span class="hll">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>  
+</span>    <span class="nx">e</span><span class="p">.</span><span class="nx">respondWith</span><span class="p">(</span>  
+      <span class="nx">caches</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="k">return</span> <span class="nx">response</span> <span class="o">||</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">);</span>  
+      <span class="p">})</span>  
+    <span class="p">);</span>  
+  <span class="p">}</span>  
+<span class="p">});</span></code></pre></div>
+
+<p>The code intercepts the request and checks if the URL starts with the address of 
+the weather API. If it does we&#8217;ll use <code>fetch</code> to make the request. Once the 
+response is returned, our code opens the cache, clones the response, stores 
+it in the cache and finally returns the response to the original requestor.</p>
+
+<p>Next, replace <code>// Put data handler code here</code> with the code below:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">e</span><span class="p">.</span><span class="nx">respondWith</span><span class="p">(</span>  
+  <span class="nx">fetch</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">)</span>  
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>  
+      <span class="k">return</span> <span class="nx">caches</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">dataCacheName</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">cache</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="nx">cache</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">,</span> <span class="nx">response</span><span class="p">.</span><span class="nx">clone</span><span class="p">());</span>  
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[ServiceWorker] Fetched&amp;Cached Data&#39;</span><span class="p">);</span>  
+        <span class="k">return</span> <span class="nx">response</span><span class="p">;</span>  
+      <span class="p">});</span>  
+    <span class="p">})</span>  
+<span class="p">);</span></code></pre></div>
+
+<p>Our app won&#8217;t work offline quite yet. We&#8217;ve implemented caching and retrieval 
+for the app shell, but even though we&#8217;re caching the data, we&#8217;re still dependant 
+on the network.</p>
+
+<h2 id="making-the-requests">Making the requests</h2>
+
+<p>As mentioned previously, the app needs to kick off two asynchronous requests, 
+one to the cache and one to the network. The app uses the <code>caches</code> object 
+available in <code>window</code> to access the cache and retrieve the latest data. This is an 
+excellent example of <em>progressive enhancement</em> as the <code>caches</code> object may not be 
+available in all browsers, and if it&#8217;s not the network request should still 
+work.</p>
+
+<p>To do this, we need to:</p>
+
+<ol>
+  <li>Check if the <code>caches</code> object is available in the global <code>window</code> object.</li>
+  <li>Request data from the cache.
+    <ol>
+      <li>If the server request is still outstanding update the app with the cached 
+data.</li>
+    </ol>
+  </li>
+  <li>Request data from the server.
+    <ol>
+      <li>Save the data for quick access later.</li>
+      <li>Update the app with the fresh data from the server.</li>
+    </ol>
+  </li>
+</ol>
+
+<p>First, let&#8217;s add the flag we&#8217;ll use to prevent the cache from updating the app 
+in the rare case that the XHR responds before the cache. Add <code>hasRequestPending: 
+false</code> to the <code>app</code> object.</p>
+
+<p>Next, we need to check if the <code>caches</code> object exists and request the latest data 
+from it. Add the following code to <code>app.getForecast</code>, before the XHR is made:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="s1">&#39;caches&#39;</span> <span class="k">in</span> <span class="nb">window</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="nx">caches</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">url</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>  
+      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">json</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="c1">// Only update if the XHR is still pending, otherwise the XHR  </span>
+        <span class="c1">// has already returned and provided the latest data.  </span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">hasRequestPending</span><span class="p">)</span> <span class="p">{</span>  
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;updated from cache&#39;</span><span class="p">);</span>  
+          <span class="nx">json</span><span class="p">.</span><span class="nx">key</span> <span class="o">=</span> <span class="nx">key</span><span class="p">;</span>  
+          <span class="nx">json</span><span class="p">.</span><span class="nx">label</span> <span class="o">=</span> <span class="nx">label</span><span class="p">;</span>  
+          <span class="nx">app</span><span class="p">.</span><span class="nx">updateForecastCard</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>  
+        <span class="p">}</span>  
+      <span class="p">});</span>  
+    <span class="p">}</span>  
+  <span class="p">});</span>  
+<span class="p">}</span></code></pre></div>
+
+<p>Finally, we need to update the <code>app.hasRequestPending</code> flag. Before making the 
+XHR, add <code>app.hasRequestPending = true;</code> and in the XHR response handler, just 
+before <code>app.updateForecastCard(response)</code>, set <code>app.hasRequestPending = false;</code></p>
+
+<p>Our weather app now makes two asynchronous requests for data, one from the cache 
+and one via an XHR. If there&#8217;s data in the cache, it&#8217;ll be returned and rendered 
+extremely quickly (tens of microseconds) and update the card if the XHR is still 
+outstanding. Then, when the XHR responds, the card will be updated with the 
+freshest data direct from our weather API.</p>
+
+<p>If for some reason, the XHR responds faster than the cache, the 
+<code>hasRequestPending</code> flag will prevent the cache from overwriting the latest data 
+from the network.</p>
+
+<h2 id="test-it-out">Test it out</h2>
+
+<ul>
+  <li>In the console, you should see two events each time you refresh, one 
+indicating data was retrieved from the cache, and one that it was retrieved 
+from the network.</li>
+  <li>The app should work completely offline now. Try stopping your development 
+server and disconnecting your network and running the app. The app shell and 
+data should both be served from the cache.</li>
+</ul>
+
+<p><a href="https://weather-pwa-sample.firebaseapp.com/step-07/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a></p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Pete LePage</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Support Native Integration</title>
+    <published>2016-02-04T00:00:00Z</published>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-07?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-07</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/step-07?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+Nobody likes to have to type in long URLs on a mobile keyboard if they
+don’t need to. With the Add To home screen feature, your users can choose to
+add a shortcut link to their device just as they would install a native app
+from a store, but with a lot less friction.
+</p>
+
+<h2 id="web-app-install-banners-and-add-to-homescreen-for-chrome-on-android">Web App Install Banners and Add to Homescreen for Chrome on Android</h2>
+
+<p>Web app install banners give you the ability to let your users quickly and
+seamlessly add your web app to their home screen, making it easy to launch and
+return to your app.  Adding app install banners is easy, and Chrome handles most
+of the heavy lifting for you. We simply need to include a web app manifest file
+with details about the app.</p>
+
+<p>Chrome then uses a set of criteria including the use of a service worker, SSL
+status and visit frequency heuristics to determine when to show the banner. In
+addition a user can manually add it via the &#8220;Add to Home Screen&#8221; menu button in
+Chrome.</p>
+
+<h3 id="declare-an-app-manifest-with-a-manifestjson-file">Declare an app manifest with a manifest.json file</h3>
+
+<p>The web app manifest is a simple JSON file that gives you, the
+developer, the ability to control how your app appears to the user in the areas
+that they would expect to see apps (for example the mobile home screen), direct
+what the user can launch and more importantly how they can launch it.</p>
+
+<p>Using the web app manifest, your web app can:</p>
+
+<ul>
+  <li>Have a rich presence on the user&#8217;s Android home screen</li>
+  <li>Be launched in full-screen mode on Android with no URL bar</li>
+  <li>Control the screen orientation for optimal viewing</li>
+  <li>Define a &#8220;splash screen&#8221; launch experience and theme color for the site</li>
+  <li>Track whether you&#8217;re launched from the home screen or URL bar</li>
+</ul>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Weather&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;short_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Weather&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;icons&quot;</span><span class="o">:</span> <span class="p">[{</span>
+    <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;images/icons/icon-128x128.png&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sizes&quot;</span><span class="o">:</span> <span class="s2">&quot;128x128&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;image/png&quot;</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;images/icons/icon-144x144.png&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sizes&quot;</span><span class="o">:</span> <span class="s2">&quot;144x144&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;image/png&quot;</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;images/icons/icon-152x152.png&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sizes&quot;</span><span class="o">:</span> <span class="s2">&quot;152x152&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;image/png&quot;</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;images/touch/icon-192x192.png&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sizes&quot;</span><span class="o">:</span> <span class="s2">&quot;192x192&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;image/png&quot;</span>
+    <span class="p">},</span> <span class="p">{</span>
+      <span class="s2">&quot;src&quot;</span><span class="o">:</span> <span class="s2">&quot;images/touch/icon-256x256.png&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;sizes&quot;</span><span class="o">:</span> <span class="s2">&quot;256x256&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;image/png&quot;</span>
+    <span class="p">}],</span>
+  <span class="s2">&quot;start_url&quot;</span><span class="o">:</span> <span class="s2">&quot;/index.html&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;display&quot;</span><span class="o">:</span> <span class="s2">&quot;standalone&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;background_color&quot;</span><span class="o">:</span> <span class="s2">&quot;#3E4EB8&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;theme_color&quot;</span><span class="o">:</span> <span class="s2">&quot;#2F3BA2&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+<p>An easy way to track how the app is launched is to add a query string to the
+<code>start_url</code> parameter and then use an analytics suite to track the query string.
+If you use this method, remember to update the list of files cached by the App
+Shell to ensure that the file with the query string is cached.</p>
+
+<h3 id="tell-the-browser-about-your-manifest-file">Tell the browser about your manifest file</h3>
+
+<p>Add the following to the <code>&lt;head&gt;</code> of your <code>index.html</code> file:
+<code>&lt;link rel="manifest" href="/manifest.json"&gt;</code></p>
+
+<h3 id="best-practices">Best Practices</h3>
+
+<ul>
+  <li>Place the manifest link on all your site&#8217;s pages, so it will be retrieved by
+Chrome right when the user first visits, no matter what page they land on.</li>
+  <li>The <code>short_name</code> is preferred on Chrome and will be used if present over the
+<code>name</code> field.</li>
+  <li>Define icon sets for different density screens. Chrome will attempt to use the
+icon closest to 48dp, for example, 96px on a 2x device or 144px for a 3x
+device.</li>
+  <li>Remember to include an icon with a size that is sensible for a splash screen
+and don&#8217;t forget to set the <code>background_color</code>.</li>
+</ul>
+
+<p>Further Reading:
+<a href="https://developers.google.com/web/fundamentals/engage-and-retain/simplified-app-installs/">Using app install
+banners</a></p>
+
+<h2 id="add-to-homescreen-elements-for-safari-on-ios">Add to Homescreen elements for Safari on iOS</h2>
+
+<p>In your <code>index.html</code>, add the following to the <code>&lt;head&gt;</code>:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Add to home screen for Safari on iOS --&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-capable&quot;</span> <span class="na">content=</span><span class="s">&quot;yes&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-status-bar-style&quot;</span> <span class="na">content=</span><span class="s">&quot;black&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;apple-mobile-web-app-title&quot;</span> <span class="na">content=</span><span class="s">&quot;Weather App&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;apple-touch-icon&quot;</span> <span class="na">href=</span><span class="s">&quot;images/icons/icon-152x152.png&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+<h2 id="tile-icon-for-windows">Tile Icon for Windows</h2>
+
+<p>In your <code>index.html</code>, add the following to the <code>&lt;head&gt;</code>:</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;msapplication-TileImage&quot;</span> <span class="na">content=</span><span class="s">&quot;images/icons/icon-144x144.png&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;msapplication-TileColor&quot;</span> <span class="na">content=</span><span class="s">&quot;#2F3BA2&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+<h2 id="test-it-out">Test it out</h2>
+
+<ul>
+  <li>Try adding the app to the home screen in Chrome on Android and verify the
+launch screen appears properly and the right icons are used.</li>
+  <li>Check Safari and Internet Explorer to make sure the icons appear properly.</li>
+</ul>
+
+<p><a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a></p>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Pete LePage</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Deploy to a Secure Host and Celebrate!</title>
+    <published>2016-02-04T00:00:00Z</published>
+    <updated>2016-02-04T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-08?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/getting-started/your-first-progressive-web-app/step-08</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/getting-started/your-first-progressive-web-app/step-08?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+The final step is to deploy our weather app to a server that supports HTTPS. If 
+you don't already have one, the absolute easiest (and free) approach is to use
+the static content hosting from Firebase. It's super easy to use, serves 
+content over HTTPS and is backed by a global CDN.
+</p>
+
+<h2 id="extra-credit-minify-and-inline-css">Extra credit: minify and inline CSS</h2>
+
+<p>There&#8217;s one more thing that you should consider, minifying the key styles and 
+inlining them directly into <code>index.html</code>. 
+<a href="https://developers.google.com/speed">Page Speed Insights</a> recommends serving 
+the above the fold content in the first 15k bytes of the request.</p>
+
+<p>See how small you can get the initial request with everything inlined.</p>
+
+<p><strong>Further Reading:</strong> <a href="https://developers.google.com/speed/docs/insights/rules">PageSpeed Insight 
+Rules</a></p>
+
+<h2 id="deploy-to-firebase">Deploy to Firebase</h2>
+
+<p>If you&#8217;re new to Firebase, you&#8217;ll need to create your account and install some 
+tools first.</p>
+
+<ol>
+  <li>Create a Firebase account at 
+<a href="https://www.firebase.com/signup/">https://www.firebase.com/signup/</a></li>
+  <li>Install the Firebase tools via npm:<br />
+<code>npm install -g firebase-tools</code></li>
+</ol>
+
+<p>Once your account has been created and you&#8217;ve signed in, you&#8217;re ready to 
+deploy!</p>
+
+<ol>
+  <li>Create a new app at 
+<a href="https://www.firebase.com/account/">https://www.firebase.com/account/</a></li>
+  <li>If you haven&#8217;t recently signed in to the Firebase tools, update your 
+credentials:<br />
+<code>firebase login</code></li>
+  <li>Initialize your app, and provide the directory where your completed app 
+lives:<br />
+<code>firebase init</code></li>
+  <li>Finally, deploy the app to Firebase:<br />
+<code>firebase deploy</code></li>
+  <li>Celebrate. You&#8217;re done! Your app will be deployed to the domain:<br /> 
+<code>https://YOUR-FIREBASE-APP.firebaseapp.com</code></li>
+</ol>
+
+<p><strong>Further reading:</strong> <a href="https://www.firebase.com/docs/hosting/guide/">Firebase Hosting 
+Guide</a></p>
+
+<h2 id="test-it-out">Test it out</h2>
+
+<ul>
+  <li>Try adding the app to your home screen then disconnect the network and
+verify the app works offline as expected.</li>
+</ul>
+
+<p><a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a></p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Pete LePage</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Push Notifications</title>
+    <published>2016-01-05T00:00:00Z</published>
+    <updated>2016-01-05T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/engage-and-retain/push-notifications/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/engage-and-retain/push-notifications/</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/engage-and-retain/push-notifications/?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+  You may already know <a href="/web/fundamentals/primers/push-notifications">how to implement push notifications</a>. Are you using them well? Could you be using them better? 
+</p>
+
+<p>In 2015, <a href="http://googlewebmastercentral.blogspot.com/2015/07/google-case-study-on-app-download-interstitials.html">a case study</a> 
+found that when prompted to download and install Google+, 9% of users did so. 
+That&#8217;s an impressive click-through rate, or it would be if we were talking
+about online ads. The same study found that 69% of users both left the page 
+that prompted and ignored the invite to install Google+.</p>
+
+<p>Push notifications and the technologies behind them improve retention odds by taking advantage of the code that&#8217;s already on the user&#8217;s device: your web page. If you&#8217;re deploying a <a href="/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android">web app manifest</a>, or following the principles of <a href="/web/updates/2015/11/app-shell">application shell architecture</a> then your web pages are already more like native apps than are other web sites. Even if they&#8217;re not using those technologies, you can retain more users by using push notifications more effectively.</p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Joseph Medley</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Personal, timely, and relevant</title>
+    <published>2016-01-05T00:00:00Z</published>
+    <updated>2016-01-05T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/engage-and-retain/push-notifications/personal-timely-relevant?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/engage-and-retain/push-notifications/personal-timely-relevant</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/engage-and-retain/push-notifications/personal-timely-relevant?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+  Here are a few tips for making your notifications personal, timely, and relevant.
+</p>
+
+<h2 id="make-it-personal-and-relevant">Make it personal and relevant</h2>
+
+<p>Look at the notifications on any of your devices. You&#8217;re likely to find two types of messages: ones that tell you specific things and ones that are vague or opaque. For example, a social site might give you a notification like this:</p>
+
+<p><img src="images/better-notification.png" alt="A notification that says nothing" width="380px" /></p>
+
+<p>Notice that it tells you who sent it, even showing you the sender&#8217;s picture, and gives you some idea what it&#8217;s about.</p>
+
+<p>This one on the other hand tells you nothing that would make you want to open the application.</p>
+
+<p><img src="images/bad-notification.png" alt="A notification that says nothing" width="380px" /></p>
+
+<h2 id="make-it-available-regardless-of-connectivity">Make it available regardless of connectivity</h2>
+
+<p>Until recently only mobile apps could do this. With service workers you can store a notification until a user wants it. When the user clicks it, the status of the network is irrelevant.</p>
+
+<h2 id="dont-advertise-your-native-app">Don&#8217;t advertise your native app</h2>
+
+<p>The point of service workers, the technology behind push notifications, is that you can avoid the time and expense of writing an application separate from your web site. A user who has both your service worker and your native app may get duplicate notifications unless write server-side code to prevent it. You can avoid the problem completely; don&#8217;t encourge users to run both.</p>
+
+<h2 id="dont-advertise">Don&#8217;t advertise</h2>
+
+<p>You&#8217;ll have opportunities to monitize the user experience once they&#8217;re in your app. Don&#8217;t blow it by spamming your users when they&#8217;re not. If you spam your users with notifications, they may stop allowing them altogether.</p>
+
+<h2 id="keep-it-short">Keep it short.</h2>
+
+<p>Notifications aren&#8217;t emails. The intent of notifications is to tease users so they&#8217;ll open your app. How do you do that? Make it personal. Make it timely. Make it relevant.</p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Joseph Medley</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Why you should always use HTTPS</title>
+    <published>2015-11-23T00:00:00Z</published>
+    <updated>2015-11-23T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/security/encrypt-in-transit/why-https?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/security/encrypt-in-transit/why-https</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/security/encrypt-in-transit/why-https?hl=en?feed_type=atom&pixel">
+        <p>You should always protect all of your websites with HTTPS,
+even if they don’t handle sensitive communications. HTTPS provides
+critical security and data integrity both for your websites and for the
+people that entrust your websites with their personal information.</p>
+
+<div class="video-wrapper"><iframe src="https://www.youtube.com/embed/9WuP4KcDBpI?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf" class="devsite-embedded-youtube-video" allowfullscreen="" data-video-id="9WuP4KcDBpI" data-autohide="1" data-modestbranding="1" data-controls="2" data-utm-source="crdev-wf" data-showinfo="0" frameborder="0"></iframe></div>
+
+<h2 id="https-protects-the-integrity-of-your-website">HTTPS protects the integrity of your website</h2>
+
+<p>HTTPS helps prevent intruders from tampering with the communications 
+between your websites and your users’ browsers. Intruders include 
+intentionally malicious attackers, and legitimate but intrusive companies, 
+such as ISPs or hotels that inject ads into pages.</p>
+
+<p>Intruders exploit unprotected communications to trick your users into giving 
+up sensitive information or installing malware, or to insert their own 
+advertisements into your resources. For example, some third-parties inject 
+advertisements into websites that potentially break user experiences and 
+create security vulnerabilities.</p>
+
+<p>Intruders exploit every unprotected resource that travels between your 
+websites and your users. Images, cookies, scripts, HTML… they’re all 
+exploitable. Intrusions can occur at any point in the network, including a 
+user’s machine, a Wi-Fi hotspot, or a compromised ISP, just to name a few.</p>
+
+<h2 id="https-protects-the-privacy-and-security-of-your-users">HTTPS protects the privacy and security of your users</h2>
+
+<p>HTTPS prevents intruders from being able to passively listen in on the 
+communications between your websites and your users.</p>
+
+<p>One common misconception about HTTPS is the belief that the only websites 
+that need HTTPS are those that handle sensitive communications. Every 
+unprotected HTTP request can potentially reveal information about the 
+behaviors and identities of your users. Although a single visit to one of 
+your unprotected websites may seem benign, some intruders look at the 
+aggregate browsing activities of your users to make inferences about their 
+behaviors and intentions, and to 
+<a href="https://en.wikipedia.org/wiki/De-anonymization">de-anonymize</a>
+their identities. For example, 
+employees might inadvertently disclose sensitive health conditions to their 
+employers just by reading unprotected medical articles.</p>
+
+<h2 id="https-is-the-future-of-the-web">HTTPS is the future of the web</h2>
+
+<p>Powerful, new web platform features, such as taking pictures or recording 
+audio with getUserMedia, or enabling offline app experiences with Service 
+Workers, require explicit permission from the user before executing. Many 
+older APIs are also being updated to require permission to execute, such as 
+the 
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation">geolocation</a> 
+API. HTTPS is a key component to the permission workflows 
+for both these new features and updated APIs.</p>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Kayce Basques</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Tips for creating engaging notifications</title>
+    <published>2015-10-02T00:00:00Z</published>
+    <updated>2015-10-02T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/engage-and-retain/push-notifications/create-a-great-notification?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/engage-and-retain/push-notifications/create-a-great-notification</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/engage-and-retain/push-notifications/create-a-great-notification?hl=en?feed_type=atom&pixel">
+        <h2 id="always-use-a-title-description-and-icon">Always use a title, description, and icon</h2>
+
+<p>A notification takes a number of options. To be minimally user-friendly you
+should always include a title, description, and icon. Do this with the options
+parameter of the <code>showNotification()</code> method. For example:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;push&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Received a push message&#39;</span><span class="p">,</span> <span class="nx">event</span><span class="p">);</span>
+
+    <span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="s1">&#39;Yay a message.&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">body</span> <span class="o">=</span> <span class="s1">&#39;We have received a push message.&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">icon</span> <span class="o">=</span> <span class="s1">&#39;/images/icon-192x192.png&#39;</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">tag</span> <span class="o">=</span> <span class="s1">&#39;simple-push-demo-notification-tag&#39;</span><span class="p">;</span>
+
+    <span class="nx">event</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span>
+      <span class="nx">self</span><span class="p">.</span><span class="nx">registration</span><span class="p">.</span><span class="nx">showNotification</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="p">{</span>
+        <span class="nx">body</span><span class="o">:</span> <span class="nx">body</span><span class="p">,</span>
+        <span class="nx">icon</span><span class="o">:</span> <span class="nx">icon</span><span class="p">,</span>
+        <span class="nx">tag</span><span class="o">:</span> <span class="nx">tag</span>
+      <span class="p">})</span>
+    <span class="p">);</span>
+  <span class="p">});</span></code></pre></div>
+
+<h2 id="make-the-title-relevant-and-specific">Make the title relevant and specific</h2>
+
+<p>Make the title relevant to the context of the message and include something
+specific from the message.</p>
+
+<p><strong>BAD:</strong> Notifcation from facebook.com</p>
+
+<p><strong>GOOD:</strong> Paul Kinlan sent you a message</p>
+
+<h2 id="make-the-icon-contextual">Make the icon contextual</h2>
+
+<p>Just as with titles, icons should convey something about the message. In the
+previous instance where &#8216;Paul Kinlan sent you a message&#8217;, use an
+icon specific to messages rather than your app or site logo.</p>
+
+<h2 id="use-vibration-judiciously">Use vibration judiciously</h2>
+
+<p>To vibrate a mobile device has to run a tiny motor. Consequently it&#8217;s a larger
+battery drain than an on-screen notification. Be courteous of the user and use
+vibration judiciously. Give users the ability to select which notifications
+use vibrate, or to turn them off completely.</p>
+
+<h2 id="combine-similar-notifications">Combine similar notifications</h2>
+
+<p>Even though you&#8217;re not spamming users, you might still have a reason to send
+multiple, similar notifications back to back.  For example, if a messaging app
+receives two messages back to back, instead of stacking the messages you might
+do something like this:</p>
+
+<p><img src="images/combined-notifications.png" alt="Combined notifications" /></p>
+
+<p>Notice that this message has also pluralized the text to make it clear that
+more than one update is available.</p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Joseph Medley</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Performance codelab</title>
+    <published>2015-10-01T00:00:00Z</published>
+    <updated>2015-10-01T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/performance/performance-codelab/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/performance/performance-codelab/</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/performance/performance-codelab/?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+Apps whose displays tend to jump raggedly during animations, 
+scrolling, or other user interaction suffer from a performance issue
+commonly called <i>jank</i> or <i>judder</i>.
+Jank is an annoying distraction for users;
+it interrupts the users' flow of thought and
+it makes the app look less polished and professional.
+</p>
+
+<p>If the browser takes too long to make and display a frame, it gets skipped 
+and you don&#8217;t see the frame at all. Instead, you see the next one (or the one 
+after that), and the object jumps across the gap instead of smoothly moving 
+through it.</p>
+
+<p>The jank phenomenon can be avoided by ensuring that an app runs at a 
+consistent sixty frames per second (60fps). Many factors contribute to an 
+app&#8217;s frame rate, and there are various ways to code JavaScript and CSS to 
+reduce or eliminate jank and achieve the desired rate.</p>
+
+<h2 id="what-youll-learn-in-this-codelab">What you&#8217;ll learn in this codelab</h2>
+
+<p>This codelab is about changing the way you approach app performance issues
+by helping you find and fix frame display bottlenecks that cause jank.
+You will learn:</p>
+
+<ul>
+  <li>How to identify application code that causes display performance bottlenecks</li>
+  <li>How to analyze and modify the code to reduce or eliminate the bottlenecks</li>
+</ul>
+
+<p>The codelab is a text-based version of part of the content covered in a 
+Udacity course on app/web performance 
+(<a href="https://www.udacity.com/course/viewer#!/c-ud860/l-4138328558/m-4157078575">ud860</a>).
+Rather than a transcription of the video course, this codelab is meant to be 
+a lean, to-the-point treatment of jank identification and correction, using 
+the course&#8217;s original hands-on final project.</p>
+
+<h2 id="what-you-should-know-before-you-start">What you should know before you start</h2>
+
+<ul>
+  <li><em>Critical rendering path</em>: You should understand the rendering pipeline and 
+how JavaScript and CSS affect it. Learn more here: <a href="/web/fundamentals/performance/critical-rendering-path/">https://developers.google.com/web/fundamentals/performance/critical-rendering-path/</a> and here: Udacity course on <a href="https://www.udacity.com/course/website-performance-optimization--ud884">Website Performance Optimization: The Critical Rendering Path</a>.</li>
+  <li><em>Frames and frame rate</em>: You should know how the browser constructs frames and why the 60fps rate is important for a smooth display. Learn more here: <a href="/web/fundamentals/performance/rendering/">https://developers.google.com/web/fundamentals/performance/rendering/</a> and here: Udacity course on <a href="https://www.udacity.com/course/browser-rendering-optimization--ud860">Browser Rendering Optimization: Building 60 FPS Web Apps</a>.</li>
+  <li><em>Application life cycle</em>: You should understand the Load, Idle, Animate, and Response parts of a running app and recognize the windows of opportunity that each part presents. Learn more here: <a href="/web/tools/chrome-devtools/profile/evaluate-performance/rail">The RAIL Performance Model</a>.</li>
+  <li><em>Chrome DevTools</em>: You should have a basic understanding of DevTools and how to use them to analyze a web app, especially the Timeline tool. Learn more here: <a href="/web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime">Analyze Runtime Performance</a>.</li>
+</ul>
+
+<h2 id="what-youll-need-in-your-development-workspace">What you&#8217;ll need in your development workspace</h2>
+
+<ul>
+  <li>Google Chrome browser, DevTools</li>
+  <li>The sample code for the hands-on project (see <a href="step-01">About the project app</a>)</li>
+</ul>
+
+<h2 id="jankjudder">Jank/Judder</h2>
+
+<p>Let&#8217;s get familiar with jank by playing a game, &#8220;Jank Invaders&#8221; by Jake Archibald. It&#8217;s designed to demonstrate problems with frame rates and performance. Here&#8217;s a screen shot.</p>
+
+<figure>
+  <img src="images/image07.png" alt="Jank Invaders game" />
+</figure>
+
+<p>In the game, spaceships move across the screen. The good guys move smoothly, while the bad guys (&#8220;spy ships&#8221;) are janky. Your mission: identify and shoot down the ten janky spy ships among the smooth ones by clicking them as quickly as you can. <a href="https://www.google.com/url?q=http://jakearchibald.github.io/jank-invaders">Here&#8217;s the link to the game</a>. Go ahead, have fun; come back when you&#8217;re finished.</p>
+
+<p>Clearly, users notice jank and almost invariably choose apps that perform better, and it&#8217;s no different with the web: bad performance kills good sites. This codelab will help you think about your projects&#8217; performance and explore how to identify and correct common issues. You&#8217;ll hunt down causes of sticky scrolling, flickering updates, and juddering animations, with the goal of reaching a smooth and seamless 60fps frame rate.</p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Meggin Kearney</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Asking permission for notifications</title>
+    <published>2015-10-01T00:00:00Z</published>
+    <updated>2016-01-05T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/engage-and-retain/push-notifications/asking-permission?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/engage-and-retain/push-notifications/asking-permission</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/engage-and-retain/push-notifications/asking-permission?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+  There's more to requesting permission than throwing up a dialog box. 
+</p>
+
+<h2 id="prefer-logged-in-users">Prefer logged in users</h2>
+
+<p>If you don&#8217;t know who your users are it&#8217;s hard to send them relevant 
+notifications. And if notifications aren&#8217;t relevant, users might 
+regard them as spam.</p>
+
+<h2 id="trigger-from-a-specific-action">Trigger from a specific action</h2>
+
+<p>Ask for permission to send notifications in response to a specific, 
+contextual user interaction. This allows you to tie your notifications 
+to a user&#8217;s goal and makes it clear to the user why you want to send 
+notifications.</p>
+
+<p>For example, If an airline site wanted to notify users of flight delays, 
+they would prominently display an opt-in checkbox and only ask for 
+notification permissions after the user chooses to opt in.</p>
+
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/airline-prompt.png" alt="Prominently display an opt-in checkbox" />
+    <figcaption>First, show an opt-in to send notifications.</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/airline-permissions.png" alt="Prominently display an opt-in checkbox" /> 
+    <figcaption>Only after the user has opted in, ask for permission.</figcaption>
+  </figure>
+</div>
+
+<h2 id="clarify-page-load-permission-requests">Clarify page-load permission requests</h2>
+
+<p>We discourage sites from requesting notification permissions during page load.
+They can be distracting, spammy, and unclear. If your app requests 
+notifications during <code>onload</code>, make it clear why you&#8217;re asking. Dim out 
+the screen and add an overlay that explains the reason for the request.</p>
+
+<p>For example:</p>
+
+<div class="mdl-grid">
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/news-prompt.png" alt="Prominently display an opt-in" />
+    <figcaption>Display an opt-in with an explanation of why you're asking</figcaption>
+  </figure>
+  <figure class="mdl-cell mdl-cell--6-col">
+    <img src="images/news-permissions.png" alt="Prominently display an opt-in checkbox" /> 
+    <figcaption>Only then, request permission.</figcaption>
+  </figure>
+</div>
+
+<h2 id="provide-a-place-to-manage-notifications">Provide a place to manage notifications</h2>
+
+<p>Make it easy for users to change and even disable notifications for your site. It prevents users from killing notifications at the browser or device level.</p>
+
+<p>Add a link to notification settings in a place with high visibility. You could use the site navigation drawer, for example.</p>
+
+<p><img src="images/news-drawer.png" alt="A high-visibility settings link" /></p>
+
+<p>If your site uses different kinds of notifications, users should be able to toggle them individually.</p>
+
+<p><img src="images/news-options.png" alt="Toggle different kinds of notifications" /></p>
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Joseph Medley</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Push and Notifications</title>
+    <published>2015-10-01T00:00:00Z</published>
+    <updated>2015-10-01T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/primers/push-notifications/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/primers/push-notifications/</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/primers/push-notifications/?hl=en?feed_type=atom&pixel">
+        <div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--8-col">
+<p class="intro">
+  Push messaging allows developers to engage users by providing timely and customized content outside the context of the web page. <b>Push</b> and <b>Notification</b> are different, but complementary, functions: a <b>push</b> is the action of the server supplying message information to a service worker; a <b>notification</b> is the action of the service worker sending the information to a user.
+</p>
+  </div>
+  <figure class="mdl-cell mdl-cell--4-col">
+    <img src="images/airline-prompt.png" alt="An example of a notification." /> 
+  </figure>
+</div>
+
+<p>The W3C manages the specifications for the <a href="http://www.w3.org/TR/push-api/">Push API</a>
+and the <a href="https://dvcs.w3.org/hg/notifications/raw-file/tip/Overview.html">Notifications API</a>.</p>
+
+<h3 id="sample">Sample</h3>
+
+<p>Want to try out push and notifications? Check out the 
+<a href="https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications">push messaging and notifications</a>
+sample. It&#8217;s got everything you need to get started and includes the instructions
+for setting up push messaging through Google Cloud Messaging.</p>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Dave Gash</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Register for push messages</title>
+    <published>2015-10-01T00:00:00Z</published>
+    <updated>2015-10-01T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/primers/push-notifications/push-messages?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/primers/push-notifications/push-messages</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/primers/push-notifications/push-messages?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+  Push messages may consist of breaking news, site updates, or other 
+  information of interest to the user. The information is pushed from the 
+  server to a service worker before it is sent to the user as a notification.
+</p>
+
+<div class="wf-highlight-list wf-highlight-list--learning">
+  <h3 class="wf-highlight-list__title">TL;DR</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>Users must first allow push messages as a global permissions setting.</li>
+    
+    <li>Users must also explicitly subscribe to your site to receive notifications.</li>
+    
+    <li>You can unsubscribe users at their request, regardless of their global notifications permissions.</li>
+    
+  </ul>
+
+</div>
+
+<h2 id="subscribe">Subscribe</h2>
+
+<p>To receive messages, users must allow your web site to push notificaton 
+messages to them. This is a two-step process performed on the receiving 
+device, comprising of enabling of push notifications and an explicit 
+subscription request to a specific web site. Both of these conditions must 
+be met for the user to receive push messages; that is, a status of either 
+&#8220;disabled&#8221; or &#8220;enabled but not subscribed&#8221; prevents messages from 
+being received.</p>
+
+<p>Push messages are implemented via a <a href="/web/fundamentals/primers/service-workers/">service worker</a>.
+When a push message is received, the browser can start up a service worker 
+that runs in the background without a page being open. The service worker 
+must be initialized and registered in order to process push messages.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Check that service workers are supported</span>
+<span class="k">if</span> <span class="p">(</span><span class="s1">&#39;serviceWorker&#39;</span> <span class="k">in</span> <span class="nx">navigator</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="nx">navigator</span><span class="p">.</span><span class="nx">serviceWorker</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="s1">&#39;/service-worker.js&#39;</span><span class="p">)</span>  
+    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">initialiseState</span><span class="p">);</span>  
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>  
+    <span class="nx">console</span><span class="p">.</span><span class="nx">warn</span><span class="p">(</span><span class="s1">&#39;Service workers aren\&#39;t supported in this browser.&#39;</span><span class="p">);</span>  
+<span class="p">}</span></code></pre></div>
+
+<p>Users expect a simple UI to enable or disable push messages for your site. 
+This is typically accomplished via a UI element such as a button or toggle 
+switch that enables or disables push messages and clearly indicates its 
+state. For example:</p>
+
+<p><img src="images/pushux.png" alt="Push UX" /></p>
+
+<p>When the user requests a subscription activation, your web page must 
+subscribe the user to your push service so they can receive messages.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">subscribe</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Disable the button so it can&#39;t be changed while</span>
+  <span class="c1">//   we process the permission request</span>
+  <span class="kd">var</span> <span class="nx">pushButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.js-push-button&#39;</span><span class="p">);</span>
+  <span class="nx">pushButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+  <span class="nx">navigator</span><span class="p">.</span><span class="nx">serviceWorker</span><span class="p">.</span><span class="nx">ready</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">serviceWorkerRegistration</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">serviceWorkerRegistration</span><span class="p">.</span><span class="nx">pushManager</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">({</span><span class="nx">userVisibleOnly</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">subscription</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// The subscription was successful</span>
+        <span class="nx">isPushEnabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="nx">pushButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Disable Push Messages&#39;</span><span class="p">;</span>
+        <span class="nx">pushButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+        <span class="c1">// TODO: Send the subscription subscription.endpoint</span>
+        <span class="c1">// to your server and save it to send a push message</span>
+        <span class="c1">// at a later date</span>
+        <span class="k">return</span> <span class="nx">sendSubscriptionToServer</span><span class="p">(</span><span class="nx">subscription</span><span class="p">);</span>
+      <span class="p">})</span>
+      <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">Notification</span><span class="p">.</span><span class="nx">permission</span> <span class="o">===</span> <span class="s1">&#39;denied&#39;</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// The user denied the notification permission which</span>
+          <span class="c1">// means we failed to subscribe and the user will need</span>
+          <span class="c1">// to manually change the notification permission to</span>
+          <span class="c1">// subscribe to push messages</span>
+          <span class="nb">window</span><span class="p">.</span><span class="nx">Demo</span><span class="p">.</span><span class="nx">debug</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Permission for Notifications was denied&#39;</span><span class="p">);</span>
+          <span class="nx">pushButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="c1">// A problem occurred with the subscription, this can</span>
+          <span class="c1">// often be down to an issue or lack of the gcm_sender_id</span>
+          <span class="c1">// and / or gcm_user_visible_only</span>
+          <span class="nb">window</span><span class="p">.</span><span class="nx">Demo</span><span class="p">.</span><span class="nx">debug</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Unable to subscribe to push.&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">);</span>
+          <span class="nx">pushButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+          <span class="nx">pushButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Enable Push Messages&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">});</span>
+  <span class="p">});</span>
+<span class="p">}</span></code></pre></div>
+
+<h2 id="unsubscribe">Unsubscribe</h2>
+
+<p>Likewise, users can refuse push messages, either by unsubscribing to a 
+specific site or by disabling push notifications completely. Your page has 
+no control over their global enable/disable setting, but you should 
+unsubscribe users when they request it.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">unsubscribe</span><span class="p">()</span> <span class="p">{</span>  
+  <span class="kd">var</span> <span class="nx">pushButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.js-push-button&#39;</span><span class="p">);</span>  
+  <span class="nx">pushButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+  <span class="nx">navigator</span><span class="p">.</span><span class="nx">serviceWorker</span><span class="p">.</span><span class="nx">ready</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">serviceWorkerRegistration</span><span class="p">)</span> <span class="p">{</span>  
+    <span class="c1">// To unsubscribe from push messaging, you need get the  </span>
+    <span class="c1">// subscription object, which you can call unsubscribe() on.  </span>
+    <span class="nx">serviceWorkerRegistration</span><span class="p">.</span><span class="nx">pushManager</span><span class="p">.</span><span class="nx">getSubscription</span><span class="p">()</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">pushSubscription</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="c1">// Check we have a subscription to unsubscribe  </span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">pushSubscription</span><span class="p">)</span> <span class="p">{</span>  
+          <span class="c1">// No subscription object, so set the state  </span>
+          <span class="c1">// to allow the user to subscribe to push  </span>
+          <span class="nx">isPushEnabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>  
+          <span class="nx">pushButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>  
+          <span class="nx">pushButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Enable Push Messages&#39;</span><span class="p">;</span>  
+          <span class="k">return</span><span class="p">;</span>  
+        <span class="p">}</span>  
+
+        <span class="c1">// TODO: Make a request to your server to remove</span>
+        <span class="c1">// the users data from your data store so you</span>
+        <span class="c1">// don&#39;t attempt to send them push messages anymore</span>
+
+        <span class="c1">// We have a subscription, so call unsubscribe on it  </span>
+        <span class="nx">pushSubscription</span><span class="p">.</span><span class="nx">unsubscribe</span><span class="p">()</span>
+          <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">successful</span><span class="p">)</span> <span class="p">{</span>  
+            <span class="nx">pushButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>  
+            <span class="nx">pushButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Enable Push Messages&#39;</span><span class="p">;</span>  
+            <span class="nx">isPushEnabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>  
+          <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>  
+            <span class="c1">// We failed to unsubscribe, this can lead to  </span>
+            <span class="c1">// an unusual state, so may be best to remove   </span>
+            <span class="c1">// the users data from your data store and   </span>
+            <span class="c1">// inform the user that you have done so</span>
+
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Unsubscription error: &#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">);</span>  
+            <span class="nx">pushButton</span><span class="p">.</span><span class="nx">disabled</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="nx">pushButton</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;Enable Push Messages&#39;</span><span class="p">;</span> 
+          <span class="p">});</span>  
+      <span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error thrown while unsubscribing from push messaging.&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">);</span>  
+      <span class="p">});</span>  
+  <span class="p">});</span>  
+<span class="p">}</span></code></pre></div>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Dave Gash</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>Display a Notification</title>
+    <published>2015-10-01T00:00:00Z</published>
+    <updated>2015-10-01T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/primers/push-notifications/notifications?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/primers/push-notifications/notifications</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/primers/push-notifications/notifications?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+  The notification is the actual message that is sent to a user after enabling
+  push messages and has subscribed to the site. Messages are often sent 
+  via <a href="https://developer.android.com/google/gcm/index.html">Google 
+  Cloud Messaging (GCM)</a>, a service that handles all aspects of message 
+  queueing and delivery to client applications running on target devices, but 
+  there are other services that support push notifications.
+</p>
+
+<p>At the most basic level, push notifications from a web app need a back-end 
+service to handle messaging. Chrome currently uses Google Cloud Messaging 
+(GCM). While the eventual goal is for Chrome and GCM to support the 
+<a href="https://datatracker.ietf.org/doc/draft-thomson-webpush-protocol/">Web Push Protocol</a>, 
+other browsers are free to use other services.</p>
+
+<h2 id="displaying">Displaying</h2>
+
+<p>To use the GCM API, you must set up a project in the 
+<a href="https://console.developers.google.com/">Google Developer Console</a>. Follow the 
+instructions in the getting started guide for either 
+<a href="https://developers.google.com/cloud-messaging/android/start">Android</a> or 
+<a href="https://developers.google.com/cloud-messaging/ios/start">iOS</a>. Make sure to 
+enable <em>Google Cloud Messaging for Android</em>, and make a note of the 
+<em>project number</em> and <em>API key</em>, as you’ll need them later on. The project 
+number is used in the web app manifest (<a href="#the-web-app-manifest">below</a>) as the <code>gcm_sender_id</code> 
+parameter, and you will need the Public API Key on your server when you use 
+the GCM API.</p>
+
+<h3 id="the-web-app-manifest">The web app manifest</h3>
+
+<p>You will also need a <a href="/web/fundamentals/engage-and-retain/web-app-manifest">manifest</a> 
+file that includes the <code>gcm_sender_id</code> parameter, used by Chrome when 
+establishing a subscription with GCM. This allows GCM to link a specific 
+subscription to a corresponding project number that can be matched with the 
+corresponding public API key. This relationship ensures that your server 
+is permitted to send messages to the client web app by validating the 
+information against the IP addresses whitelisted in the project you set up 
+in Google Developer Console.</p>
+
+<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span>  
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Push Demo&quot;</span><span class="p">,</span>  
+  <span class="nt">&quot;short_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Push Demo&quot;</span><span class="p">,</span>  
+  <span class="nt">&quot;icons&quot;</span><span class="p">:</span> <span class="p">[{</span>  
+    <span class="nt">&quot;src&quot;</span><span class="p">:</span> <span class="s2">&quot;images/icon-192x192.png&quot;</span><span class="p">,</span>  
+    <span class="nt">&quot;sizes&quot;</span><span class="p">:</span> <span class="s2">&quot;192x192&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;image/png&quot;</span> 
+  <span class="p">}],</span>  
+  <span class="nt">&quot;start_url&quot;</span><span class="p">:</span> <span class="s2">&quot;/index.html?homescreen=1&quot;</span><span class="p">,</span>  
+  <span class="nt">&quot;display&quot;</span><span class="p">:</span> <span class="s2">&quot;standalone&quot;</span><span class="p">,</span>  
+  <span class="nt">&quot;gcm_sender_id&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789012&quot;</span><span class="p">,</span>  
+  <span class="nt">&quot;gcm_user_visible_only&quot;</span><span class="p">:</span> <span class="kc">true</span>  
+<span class="p">}</span></code></pre></div>
+
+<p>When a push message is received, a push event is dispatched in the 
+service worker, at which point it is ready to display a notification.</p>
+
+<p>You can send notifications via GCM; in addition to the introductory 
+document linked above, you can find more detailed information 
+<a href="https://developer.chrome.com/apps/gcm">in the GCM documentation</a>. Some key 
+aspects of the API include:</p>
+
+<ul>
+  <li>An Authorization header with a value of <code>key=&lt;YOUR_PUBLIC_API_KEY&gt;</code>, which 
+is the API key from the Google Developer Console. The public API key is used 
+by GCM to find the appropriate project number, match it with the subscription 
+ID’s project number you want to send the message to, and ensure that the 
+server’s IP address is whitelisted for that project.</li>
+  <li>An appropriate <code>Content-Type</code> header of <code>application/json</code> or 
+<code>application/x-www-form-urlencoded; charset=UTF-8</code>, depending on whether you 
+send the data as JSON or form data.</li>
+  <li>An array of <code>registration_ids</code>, which you can extract from the 
+<code>PushSubscription.endpoint</code> you sent to your server.</li>
+</ul>
+
+<h2 id="responding-to-the-display">Responding to the display</h2>
+
+<p>When the user clicks a notification, a <code>notificationclick</code> event is 
+dispatched in the service worker. In the handler function, you can take 
+appropriate action. A common response to a <code>notificationclick</code> event 
+is to focus a tab or open a window with a particular URL.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;notificationclick&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>  
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;On notification click: &#39;</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">tag</span><span class="p">);</span>  
+  <span class="c1">// Android doesn&#39;t close the notification when you click on it.</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">notification</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+
+  <span class="c1">// This looks to see if the current window is already open and  </span>
+  <span class="c1">// focuses if it is  </span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span>
+    <span class="nx">clients</span><span class="p">.</span><span class="nx">matchAll</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;window&quot;</span> <span class="p">})</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">clientList</span><span class="p">)</span> <span class="p">{</span>  
+        <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">clientList</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  
+          <span class="kd">var</span> <span class="nx">client</span> <span class="o">=</span> <span class="nx">clientList</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>  
+          <span class="k">if</span> <span class="p">(</span><span class="nx">client</span><span class="p">.</span><span class="nx">url</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span> <span class="o">&amp;&amp;</span> <span class="s1">&#39;focus&#39;</span> <span class="k">in</span> <span class="nx">client</span><span class="p">)</span>  
+            <span class="k">return</span> <span class="nx">client</span><span class="p">.</span><span class="nx">focus</span><span class="p">();</span>  
+        <span class="p">}</span>  
+        <span class="k">if</span> <span class="p">(</span><span class="nx">clients</span><span class="p">.</span><span class="nx">openWindow</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="nx">clients</span><span class="p">.</span><span class="nx">openWindow</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">);</span>  
+        <span class="p">}</span>
+      <span class="p">})</span>
+  <span class="p">);</span>
+<span class="p">});</span></code></pre></div>
+
+<p>The current implementation of the Push API in Chrome does not allow you to send 
+a payload with a push message. In the future, the payload will be encrypted 
+on your server before it is sent to a push messaging endpoint. That is so that 
+the endpoint, regardless of the push provider, will not be able to easily view 
+the content of the push payload. Encryption also protects against other 
+vulnerabilities like poor validation of HTTPS certificates and 
+man-in-the-middle attacks between your server and the push provider.</p>
+
+<p>To get around not being able to tie data to your notification, you could use 
+the service worker&#8217;s caching API, for example, to save a URL for a 
+particular notification tag; that way you can look it up in the 
+<code>notificationclick</code> event and open the window to that URL.</p>
+
+<p>An alternative approach (albeit somewhat unconventional) is to use a fragment
+identifier on the end of your icon URL. This won’t affect the image’s
+cacheability, and gives you access to a short URL.</p>
+
+<div class="wf-highlight-list wf-highlight-list--note">
+  <h3 class="wf-highlight-list__title">Note</h3>
+
+  <ul class="wf-highlight-list__list">
+    
+    <li>It is important to note that a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect.</li>
+    
+  </ul>
+
+</div>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Dave Gash</name>
+      
+    </author>
+  </entry>
+  
+  <entry>
+    <title>On the server: sending notifications</title>
+    <published>2015-10-01T00:00:00Z</published>
+    <updated>2015-10-01T00:00:00Z</updated>
+    <link rel="alternate" type="text/html" href="http://localhost:7331/web/fundamentals/primers/push-notifications/on-the-server?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=fundamentals_feed" />
+    <id>http://localhost:7331/web/fundamentals/primers/push-notifications/on-the-server</id>
+    <content type="html">
+      <![CDATA[
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1/web/fundamentals/primers/push-notifications/on-the-server?hl=en?feed_type=atom&pixel">
+        <p class="intro">
+  A service running on the server is responsible for taking the 
+  data provided in the push message and actually forwarding it to the user as a notification.
+</p>
+
+<p>The <a href="https://developer.android.com/google/gcm/index.html">GCM documentation</a> 
+has a reference for the <a href="https://developers.google.com/cloud-messaging/http-server-ref">HTTP syntax</a>
+used to pass messages from your app server to client apps. The 
+<a href="https://developers.google.com/cloud-messaging/xmpp-server-ref">XMPP server protocol</a>
+serves a similar purpose.</p>
+
+<h2 id="message-content">Message content</h2>
+
+<p>In the service worker&#8217;s push handler, code is executed that establishes 
+the message information, including the <code>title</code>, <code>body</code>, <code>icon</code>, and <code>tag</code>. It 
+is the service worker&#8217;s job to take the pushed data and turn it into a 
+sendable notification.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">self</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;push&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Push message&#39;</span><span class="p">,</span> <span class="nx">event</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="s1">&#39;Push message&#39;</span><span class="p">;</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">waitUntil</span><span class="p">(</span>
+    <span class="nx">self</span><span class="p">.</span><span class="nx">registration</span><span class="p">.</span><span class="nx">showNotification</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;The Message&#39;</span><span class="p">,</span>
+      <span class="nx">icon</span><span class="o">:</span> <span class="s1">&#39;images/icon.png&#39;</span><span class="p">,</span>
+      <span class="nx">tag</span><span class="o">:</span> <span class="s1">&#39;my-tag&#39;</span>
+    <span class="p">})</span>
+  <span class="p">);</span>
+<span class="p">});</span></code></pre></div>
+
+<h2 id="notification-test">Notification test</h2>
+
+<p><a href="notifications">Earlier</a>, we discussed creating a project in Google Developer 
+Console, and retaining some information for later use in the manifest file. 
+That information is also useful in a simple notification test.</p>
+
+<p>For a quick check of your service worker, you can use 
+<a href="https://en.wikipedia.org/wiki/CURL">cURL</a> to send a push message to your 
+browser, provided that you have whitelisted your IP address for your local 
+machine in the Google Developer Console.</p>
+
+<p>In the cURL command below, replace <code>&lt;YOUR_PUBLIC_API_KEY&gt;</code> and 
+<code>&lt;YOUR_REGISTRATION_ID&gt;</code> with your values, run it from a terminal window, 
+and you should get a notification.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">curl --header <span class="s2">&quot;Authorization: key=&lt;YOUR_PUBLIC_API_KEY&gt;&quot;</span> <span class="se">\ </span>
+  --header <span class="s2">&quot;Content-Type: application/json&quot;</span> 
+  https://android.googleapis.com/gcm/send -d <span class="se">\</span>
+  <span class="s1">&#39;{&quot;registration_ids&quot;:[&quot;&lt;YOUR_REGISTRATION_ID&gt;&quot;]}&#39;</span></code></pre></div>
+
+
+      ]]>
+    </content>
+    
+    <author>
+      
+      <name>Dave Gash</name>
+      
+    </author>
+  </entry>
+  
+</feed>

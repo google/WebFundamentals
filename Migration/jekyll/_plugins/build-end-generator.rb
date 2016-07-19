@@ -47,13 +47,15 @@ module Jekyll
 
         page.data['translations'].each { |langCode, translationPage|
           page.data.each { |key, value|
-            if key != 'translators' and translationPage.data[key].nil? 
+            if key != 'translators' and translationPage.data[key].nil?
               translationPage.data[key] = value
             end
           }
 
           translationPage.onBuildComplete()
         }
+
+        page.prepareMigrationOnlyString()
       }
 
 

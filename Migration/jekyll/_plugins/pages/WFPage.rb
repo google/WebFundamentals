@@ -26,7 +26,7 @@ module Jekyll
 
     attr_reader :raw_canonical_url, :canonical_url, :relative_url,
       :directories, :context, :nextPage, :previousPage, :outOfDate,
-      :raw_content
+      :raw_content, :parsed_content
 
     def initialize(site, relativeDir, filename, addtionalYamlKeys=[])
       @contentSource = site.config['WFContentSource']
@@ -48,7 +48,7 @@ module Jekyll
         'authors', 'translators', 'comments', 'published_on', 'updated_on',
         'published', 'rss', 'comments', 'key-takeaways', 'notes',
         'related-guides', 'html_head_social_img', 'feedName', 'feedURL',
-        'pageGroups', 'raw_content'
+        'pageGroups', 'parsed_content'
       ]
 
       # This is a Jekyll::Page method (See: http://www.rubydoc.info/github/mojombo/jekyll/Jekyll/Page#process-instance_method)
@@ -109,6 +109,14 @@ module Jekyll
     # This is called when the main generator has finished creating pages
     def onBuildComplete()
       autogenerateBetterBook()
+    end
+
+    def prepareMigrationOnlyString()
+      @template = Liquid::Template.parse(self.content)
+      attrs = self.to_liquid()
+      self.data['parsed_content'] = @template.render({
+        'page' => attrs
+      })
     end
 
     # This method checks for any invalid or disallowed fields in the
@@ -342,7 +350,6 @@ module Jekyll
         if content =~ /\A(---\s*\n.*?\n?)^((---|\.\.\.)\s*$\n?)/m
           self.content = $POSTMATCH
           self.data = SafeYAML.load($1)
-          self.data['raw_content'] = $POSTMATCH
         end
       rescue SyntaxError => e
         Jekyll.logger.warn "YAML Exception reading #{File.join(base, name)}: #{e.message}"
@@ -488,9 +495,9 @@ module Jekyll
       end
 
       if (self.data['translations'][site.config['primary_lang']].data['updated_on'].nil?) || (self.data['updated_on'].nil?)
-        if not ((self.data['translations'][site.config['primary_lang']].data['updated_on'].nil?) && (self.data['updated_on'].nil?))
-          raise Exception.new("A translation file has an updated_on while the primary language version doesn't have an updated_on field. Please add one.")
-        end
+        #if not ((self.data['translations'][site.config['primary_lang']].data['updated_on'].nil?) && (self.data['updated_on'].nil?))
+        #  raise Exception.new("A translation file has an updated_on while the primary language version doesn't have an updated_on field. Please add one.")
+        #end
         return false
       end
 

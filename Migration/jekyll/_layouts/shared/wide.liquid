@@ -1,1 +1,5 @@
-{{ page.raw_content }}
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
+{% if page.description %}description: {{ page.description }}{% endif %}
+
+{{ page.parsed_content }}
