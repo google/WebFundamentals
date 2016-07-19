@@ -29,9 +29,7 @@ This is true for screen readers in general. Because screen readers interact with
 
 >Tip: Paste the following JavaScript snippet into the Chrome DevTools console to generate a list of headings in a page.
 
-{% highlight javascript %}
-for (var i = 0, headings = $$('h1,h2,h3,h4,h5,h6'); i < headings.length; i++) console.log(headings[i].textContent.trim() + " " + headings[i].tagName, headings[i])
-{% endhighlight %}
+`for (var i = 0, headings = $$('h1,h2,h3,h4,h5,h6'); i < headings.length; i++) console.log(headings[i].textContent.trim() + " " + headings[i].tagName, headings[i])`
 
 In most well-structured pages, the heading levels are nested to indicate parent-child relationships among content blocks. The WebAIM checklist repeatedly refers to this technique.
 
