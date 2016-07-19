@@ -29,9 +29,10 @@ This is true for screen readers in general. Because screen readers interact with
 
 >Tip: Paste the following JavaScript snippet into the Chrome DevTools console to generate a list of headings in a page.
 
-```javascript
+{% highlight javascript %}
 for (var i = 0, headings = $$('h1,h2,h3,h4,h5,h6'); i < headings.length; i++) console.log(headings[i].textContent.trim() + " " + headings[i].tagName, headings[i])
-```
+{% endhighlight %}
+
 In most well-structured pages, the heading levels are nested to indicate parent-child relationships among content blocks. The WebAIM checklist repeatedly refers to this technique.
 
  - 1.3.1 mentions "Semantic markup is used to designate headings"
@@ -39,7 +40,7 @@ In most well-structured pages, the heading levels are nested to indicate parent-
  - 2.4.6 discusses some details for writing useful headings
  - 2.4.10 states "individual sections of content are designated using headings, where appropriate"
 
-Not all headings are visible on-screen. Wikipedia, for instance, uses a technique that deliberately places some headings off-screen to specifically make them accessible *only* to screen readers and other assistive technology. The WebAIM site discusses this technique at length in [this article](http://webaim.org/techniques/css/invisiblecontent/).
+Not all headings are visible on-screen. Wikipedia, for instance, uses a technique that deliberately places some headings off-screen to specifically make them accessible *only* to screen readers and other assistive technology. The WebAIM site discusses this technique at length in <a href="http://webaim.org/techniques/css/invisiblecontent/" target="_blank">this article</a>.
 
 For complex applications, this can be a good way to accommodate headings when the visual design doesn't require or have room for a visible heading. 
 
