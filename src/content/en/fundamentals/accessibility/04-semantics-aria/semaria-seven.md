@@ -23,19 +23,19 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-`aria-live` allows developers to mark a part of the page as "live" in the sense that updates should be communicated to users immediately regardless of the page position, rather than if they just happen to explore that part of the page. When an element has an `aria-live` attribute, the part of the page containing it and its descendants is called a *live region*.
+`aria-live` lets developers mark a part of the page as "live" in the sense that updates should be communicated to users immediately regardless of the page position, rather than if they just happen to explore that part of the page. When an element has an `aria-live` attribute, the part of the page containing it and its descendants is called a *live region*.
 
 For example, a live region might be a status message that appears as a result of a user action. If the message is important enough to grab a sighted user's attention, it is important enough to direct an assistive technology user's attention to it by setting its `aria-live` attribute. Compare this plain `div`
 
-```html
+{% highlight html %}
 <div class="status">Your message has been sent.</div>
-```
+{% endhighlight %}
 
 with its "live" counterpart.
 
-```html
+{% highlight html %}
 <div class="status" aria-live="polite">Your message has been sent.</div>
-```
+{% endhighlight %}
 
 `aria-live` has three allowable values: `polite`, `assertive`, and `off`. 
 
