@@ -23,13 +23,13 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-For native elements like `button`, browsers implement behaviors that let them detect whether the element was interacted with via a mouse click or a keyboard press, and only display the focus ring for keyboard interaction. The logic here is that mouse users are less likely to need the focus ring because they know what element they clicked.
+For native elements like `button`, browsers can detect whether interaction occurred via the mouse or the keyboard press, and typically only display the focus ring for keyboard interaction. The logic here is that mouse users are less likely to need the focus ring because they know what element they clicked.
 
-But where does that leave us? Unfortunately there isn't currently any single, cross-browser solution that yields this same behavior. But there are some options.
+Where does that leave us in our accessibility efforts? Unfortunately there isn't currently a single cross-browser solution that yields this same behavior. But there are some options.
 
 In Firefox, the `:-moz-focusring` CSS pseudo-class allows you to write a focus style that is only applied if the element is focused via the keyboard, quite a handy feature. While this pseudo-class is currently only supported in Firefox, there is currently work going on to add it to other browsers. By the time you read this, it may be implemented in your favorite browser.
 
-There is also [this great article by Alice Boxhall](http://radar.oreilly.com/2015/08/proposing-css-input-modailty.html) that explores the topic of modality and contains prototype code for differentiating between mouse and keyboard input. You can use her solution today, and then include the focus ring pseudo-class later when it has more widespread support.
+There is also <a href="http://radar.oreilly.com/2015/08/proposing-css-input-modailty.html" target="_blank">this great article by Alice Boxhall</a> that explores the topic of modality and contains prototype code for differentiating between mouse and keyboard input. You can use her solution today, and then include the focus ring pseudo-class later when it has more widespread support.
 
 Finally, you can use ARIA styles to indicate control states. When you build components, it's common practice to reflect their state, and thus their appearance, using CSS classes controlled with JavaScript.
 
@@ -37,14 +37,14 @@ Fox example, consider a toggle button that goes into a "pressed" visual state wh
 
 A useful technique to employ here is to remove the class altogether, and just use the ARIA attributes to style the element. Now you can update the CSS selector for the pressed state of the button from this
 
-```CSS
+{% highlight css %}
 .toggle.pressed { ... }
-```
+{% endhighlight %}
 
 to this.
 
-```CSS
+{% highlight css %}
 .toggle[aria-pressed="true"] { ... }
-```
+{% endhighlight %}
 
 This creates both a logical and a semantic relationship between the ARIA state and the element's appearance, and cuts down on extra code as well.
