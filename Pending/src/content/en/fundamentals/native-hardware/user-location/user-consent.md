@@ -35,21 +35,15 @@ position on page load. So what are the best practices?
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Assume users will not give you their location.</li>
-    
-    <li>Make it clear why you need access to the user's location.</li>
-    
-    <li>Don't immediately prompt for access on page load.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

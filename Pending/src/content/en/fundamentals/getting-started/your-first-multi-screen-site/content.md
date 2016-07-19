@@ -33,21 +33,15 @@ We have identified we need:
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Identify the content you need first.</li>
-    
-    <li>Sketch out Information Architecture (IA) for narrow and wide viewports.</li>
-    
-    <li>Create a skeleton view of the page with content but without styling.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -144,17 +138,15 @@ information architecture. We can now start to build out the site.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Styling will come later</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

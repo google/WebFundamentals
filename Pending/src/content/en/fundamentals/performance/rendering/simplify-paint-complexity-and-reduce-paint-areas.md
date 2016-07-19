@@ -25,23 +25,15 @@ description: Paint is the process of filling in pixels that eventually get compo
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Changing any property apart from transforms or opacity always triggers paint.</li>
-    
-    <li>Paint is often the most expensive part of the pixel pipeline; avoid it where you can.</li>
-    
-    <li>Reduce paint areas through layer promotion and orchestration of animations.</li>
-    
-    <li>Use the Chrome DevTools paint profiler to assess paint complexity and cost; reduce where you can.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -124,17 +116,15 @@ Sometimes, however, despite promoting elements, paint work is still necessary. A
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>On High DPI screens elements that are fixed position are automatically promoted to their own compositor layer. This is not the case on low DPI devices because the promotion changes text rendering from subpixel to grayscale, and layer promotion needs to be done manually.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

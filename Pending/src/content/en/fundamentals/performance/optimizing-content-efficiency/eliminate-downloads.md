@@ -21,21 +21,15 @@ The fastest and best optimized resource is a resource not sent. Have you audited
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Inventory all own and third party assets on your pages</li>
-    
-    <li>Measure the performance of each asset: its value and its technical performance</li>
-    
-    <li>Determine if the resources are providing sufficient value</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

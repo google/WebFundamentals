@@ -23,21 +23,15 @@ description: When it comes to keeping your users happy, size matters.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Don't serve videos with a larger frame size or higher quality than the platform can handle.</li>
-    
-    <li>Don't make your videos any longer than they need be.</li>
-    
-    <li>Long videos can cause hiccups with download and seeking; some browsers may have to wait until the video downloads before beginning playback.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -127,17 +121,15 @@ approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsi
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Don't force element sizing that results in an aspect ratio different from the original video. Squashed or stretched looks bad.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

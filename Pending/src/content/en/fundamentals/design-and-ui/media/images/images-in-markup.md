@@ -44,23 +44,15 @@ description: The `img` element is powerful – it downloads, decodes and renders
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use relative sizes for images to prevent them from accidentally overflowing the container.</li>
-    
-    <li>Use the <code>picture</code> element when you want to specify different images depending on device characteristics (a.k.a. art direction).</li>
-    
-    <li>Use <code>srcset</code> and the <code>x</code> descriptor in the  <code>img</code> element to give hints to the browser about the best  image to use when choosing from different densities.</li>
-    
-    <li>Consider using inline images to reduce file requests if your page only has one or two images and these are not used elsewhere on your site.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -149,17 +141,15 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Important</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>The <code>picture</code> element is beginning to land in browsers. Although it's not available in every browser yet, we recommend its use because of the strong backward compatibility and potential use of the  <a href='http://picturefill.responsiveimages.org/'>Picturefill polyfill</a>. See the <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a> site for further details.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -363,17 +353,15 @@ See example
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Important</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use caution with the compressive technique because of the increased memory and decoding costs it requires. Resizing large images to fit on smaller screens is expensive and can be particularly painful on low-end devices where both memory and processing is limited.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

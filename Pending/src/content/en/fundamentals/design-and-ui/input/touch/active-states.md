@@ -35,21 +35,15 @@ element’s change in state.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Make your site feel snappy and responsive&colon; change the UI for each state <code>:hover</code>, <code>:active</code> and <code>:focus</code>.</li>
-    
-    <li>Don’t override a browser’s default responses to touch and focus unless you are implementing your own UI changes.</li>
-    
-    <li>Disable text selection on elements users will touch, unless there’s a good reason why users might need to copy / select the text.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -151,17 +145,15 @@ touch, you should override these defaults when you've added your own styles.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Only override browser styles if you are implementing your own!</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -261,17 +253,15 @@ on a button for too long. You can prevent this from happening using the
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>You should be cautious not to disable user selection if the information on the element may be useful to the user (phone number, e-mail address, and so on).</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

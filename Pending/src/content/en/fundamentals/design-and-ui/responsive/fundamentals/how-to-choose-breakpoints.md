@@ -23,21 +23,15 @@ description: Much of the web isn't optimized for those multi-device experiences.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Create breakpoints based on content, never on specific devices, products, or brands.</li>
-    
-    <li>Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.</li>
-    
-    <li>Keep lines of text to a maximum of around 70 or 80 characters.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

@@ -27,23 +27,15 @@ description: JavaScript is often the trigger for visual changes. Sometimes that'
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.</li>
-    
-    <li>Move long-running JavaScript off the main thread to Web Workers.</li>
-    
-    <li>Use micro-tasks to make DOM changes over several frames.</li>
-    
-    <li>Use Chrome DevTools’ Timeline and JavaScript Profiler to assess the impact of JavaScript.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -68,17 +60,15 @@ JavaScript performance profiling can be something of an art, because the JavaScr
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>If you really want to see JIT in action you should check out <a href='http://mrale.ph/irhydra/2/'>IRHydra<sup>2</sup> by Vyacheslav Egorov</a>. It shows the intermediate state of JavaScript code when Chrome’s JavaScript engine, V8, is optimizing it.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

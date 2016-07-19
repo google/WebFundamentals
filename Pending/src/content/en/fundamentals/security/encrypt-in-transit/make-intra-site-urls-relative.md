@@ -21,17 +21,15 @@ description: Now that you are serving your site on both HTTP and HTTPS, it needs
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Make sure intra-site URLs and external URLs are agnostic to protocol, i.e. make sure you use relative paths or leave out the protocol like //example.com/something.js</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -61,17 +59,15 @@ broken page.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>It is perfectly OK to include HTTPS resources in an HTTP page.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -133,17 +129,12 @@ with just the path, like /jquery.js).
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Do this with a script, not by hand. If your site’s content is in a database, you’ll want to test your script on a development copy of your database. If your site’s content is simple files, test your script on a development copy of the files. Only push the changes to production after the changes pass QA, as normal. You can use <a href="https://github.com/bramus/mixed-content-scan">Bram van Damme’s script</a> or something like it to detect mixed content in your site.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
 
 
 
@@ -164,17 +155,15 @@ with just the path, like /jquery.js).
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>When linking to other sites (as opposed to including resources from them), don’t change the protocol since you don’t have control over how those sites operate.</li>
-    
-  </ul>
-  
-</div>
+
+
+
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
 
 
 
@@ -195,17 +184,18 @@ with just the path, like /jquery.js).
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>I recommend protocol-relative URLs to make migration smoother for large sites. If you are not sure you can fully deploy HTTPS yet, forcing your site to use HTTPS for all sub-resources may backfire. There is likely to be a period of time in which HTTPS is new and weird for you, and the HTTP site must still work as well as ever. Over time, you’ll complete the migration and can lock in HTTPS (see the next two sections).</li>
-    
-  </ul>
-  
-</div>
+
+
+
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

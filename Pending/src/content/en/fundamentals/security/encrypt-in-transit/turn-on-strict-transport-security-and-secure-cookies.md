@@ -21,19 +21,15 @@ At this point, you are ready to "lock in" the use of HTTPS.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>You need to use HTTP Strict Transport Security (HSTS) to avoid the cost of the 301 redirect.</li>
-    
-    <li>Ensure you always set the Secure flag on cookies.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -62,17 +58,15 @@ round-trip cost of the 301 redirect we enabled in "Redirect HTTP to HTTPS".
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Clients that have noted your site as a known HSTS Host are likely to <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>hard-fail</i> if your site ever has an error in its TLS configuration</a> (such as an expired certificate). This is an explicit design choice of HSTS; it helps ensure that network attackers cannot trick clients into accessing the site without HTTPS. Do not enable HSTS until you are certain that your site operation is robust enough to avoid ever deploying HTTPS with certificate validation errors.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -100,17 +94,15 @@ Most web servers offer a similar ability to add custom headers.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li><code>max-age</code> is measured in seconds. You can start with low values and gradually increase the <code>max-age</code> as you become more comfortable operating an HTTPS-only site.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

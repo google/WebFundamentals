@@ -21,21 +21,15 @@ description: You can animate with CSS or JavaScript. Which should you use, and w
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use CSS animations for simpler “one-shot” transitions, like toggling UI element states.</li>
-    
-    <li>Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind or slow-down.</li>
-    
-    <li>If you choose to animate with JavaScript, go with the Web Animations API or a modern framework you are comfortable with.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -106,17 +100,15 @@ In addition to using CSS transitions, you can also use CSS animations, which wil
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>If you’re new to animations, keyframes are an old term from hand-drawn animations. Animators would create specific frames for a piece of action, called key frames, which would capture things like the most extreme part of some motion, and then they would set about drawing all the individual frames in between the keyframes. We have a similar process today with CSS animations, where we instruct the browser what values CSS properties need to have at given points, and it fills in the gaps.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

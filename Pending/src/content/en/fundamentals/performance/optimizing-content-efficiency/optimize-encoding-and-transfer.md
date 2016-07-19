@@ -29,23 +29,15 @@ Delivering the best performance requires the combination of all of these techniq
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Compression is the process of encoding information using fewer bits</li>
-    
-    <li>Eliminating unnecessary data always yields the best results</li>
-    
-    <li>There are many different compression techniques and algorithms</li>
-    
-    <li>You will need a variety of techniques to achieve the best compression</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -99,19 +91,15 @@ Of course, you may be wondering, this is all great, but how does this help us op
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Content-specific optimizations can significantly reduce the size of delivered resources.</li>
-    
-    <li>Content-specific optimizations are best applied as part of your build/release cycle.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -186,17 +174,15 @@ Taking a step back, the above example illustrates an important point: a general 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Case in point, the uncompressed development version of the JQuery library is now approaching ~300KB. The same library, but minified (removed comments, etc.) is about 3x smaller: ~100KB.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -221,23 +207,15 @@ In short, as a first step in optimizing the efficiency of your assets, build an 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>GZIP performs best on text-based assets: CSS, JavaScript, HTML</li>
-    
-    <li>All modern browsers support GZIP compression and will automatically request it</li>
-    
-    <li>Your server needs to be configured to enable GZIP compression</li>
-    
-    <li>Some CDNs require special care to ensure that GZIP is enabled</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -338,17 +316,15 @@ A quick and simple way to see GZIP in action is to open Chrome DevTools and insp
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Believe it or not, there are cases where GZIP can increase the size of the asset. Typically, this happens when the asset is very small and the overhead of the GZIP dictionary is higher than the compression savings, or if the resource is already well compressed. Some servers allow you to specify a “minimum filesize threshold” to avoid this problem.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

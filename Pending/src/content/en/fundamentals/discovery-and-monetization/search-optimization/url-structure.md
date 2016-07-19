@@ -22,23 +22,15 @@ How your website appears in search results is an important aspect of multi-devic
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Determine the URL structure of your webpage</li>
-    
-    <li>Responsive design is most recommended</li>
-    
-    <li>Use <code>rel='canonical'</code> + <code>rel='alternate'</code> for separate desktop/mobile sites</li>
-    
-    <li>Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

@@ -21,23 +21,15 @@ description: This section uses the openssl command-line program, which comes wit
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>You need to create a 2048-bit RSA public and private key pair.</li>
-    
-    <li>Generate a certificate signing request (CSR) which embeds your public key.</li>
-    
-    <li>Share your CSR with your Cerfticate Authority (CA) to receive a final certificate or certificate chain.</li>
-    
-    <li>Install your final certificate in a non-web-accessible place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows).</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

@@ -96,17 +96,15 @@ the worse its performance will get.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>If you understand the problem we've just described, your first thought for a potential fix might be to simply remove the node after the story is viewed (or, more accurately, before the next one is viewed) with <code>removeChild</code> -- or replacing it with <code>replaceChild</code> -- thereby avoiding the clutter of multiple abandoned nodes. <br><br>That's not an unreasonable idea, but both methods still require a significant amount of DOM work by the browser, manipulating the DOM tree to add and remove nodes every time a story is clicked.<br><br>Let's consider whether we can accomplish the same thing without manipulating the DOM tree at all.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

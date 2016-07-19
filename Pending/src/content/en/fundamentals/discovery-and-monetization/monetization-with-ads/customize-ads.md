@@ -24,23 +24,15 @@ description: Relevant and appropriate ads can actually improve the user experien
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push important content below it.</li>
-    
-    <li>Always use responsive ad units; if smart sizing isn't enough, switch to advanced mode.</li>
-    
-    <li>Look for opportunities to integrate ads throughout the content to avoid ad blindness.</li>
-    
-    <li>Choose text styles that blend, compliment, or contrast your site.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -109,17 +101,15 @@ See [advanced features](https://support.google.com/adsense/answer/3543893) in th
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Important</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Always test your ads on different devices and screens to make sure that the responsive behavior is working correctly.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -182,17 +172,15 @@ are automatically updated.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Advertisers have full control over how their display ads look. You can influence the types of display ads that appear on your site using ad placement and sizing, but you can't actually control the image content.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

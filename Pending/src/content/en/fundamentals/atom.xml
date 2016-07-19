@@ -473,16 +473,9 @@ Web pages are getting bigger. <br /><br />According to <a href="http://httparchi
 
 <p>It does all this through the simple mechanism of metadata in a text file. That&#8217;s the web app manifest.</p>
 
-<div class="wf-highlight-list wf-highlight-list--note">
-  <h3 class="wf-highlight-list__title">Note</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>Though you can use a web app manifest on any site, they are required for <a href="/web/progressive-web-apps">progressive web apps</a>.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 
       ]]>
@@ -543,16 +536,9 @@ home screen without the hassle of an app store.</li>
 Web App, including the design considerations, as well as implementation details
 to ensure that your app meets the key principles of a Progressive Web App.</p>
 
-<div class="wf-highlight-list wf-highlight-list--note">
-  <h3 class="wf-highlight-list__title">Note</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>Looking for more? Watch Alex Russell talk about <a href="https://www.youtube.com/watch?v=MyQ8mtR9WxI">Progressive Web Apps</a> from the 2015 Chrome Dev Summit</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <h2 id="what-are-we-going-to-be-building">What are we going to be building?</h2>
 
@@ -759,16 +745,9 @@ now, let&#8217;s put them into a separate CSS file.</p>
 you to use. Take a few minutes to review it and customize it to make it more 
 your own.</p>
 
-<div class="wf-highlight-list wf-highlight-list--note">
-  <h3 class="wf-highlight-list__title">Note</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>Specifying each icon individually might seem less efficient compared to using an image sprite, but we'll cache those later as part of the app shell, ensuring that they're always available, without the need to make a network request.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <h2 id="test-things-out-and-make-adjustments">Test things out and make adjustments</h2>
 
@@ -777,16 +756,9 @@ adjustments you want. Be sure to test the rendering of your forecast card by
 removing the <code>hidden</code> attribute from the <code>main</code> container, and adding some fake data 
 to the card.</p>
 
-<div class="wf-highlight-list wf-highlight-list--remember">
-  <h3 class="wf-highlight-list__title">Remember</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this-1">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>We've given you the markup and styles to save you some time and make sure you're starting on a solid foundation. In the next section, you'll have an opportunity to write your own code.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue-1">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <p>This app is reasonably responsive right now, but it&#8217;s not perfect. Try adding 
 additional styles that will improve the responsiveness and make it really shine 
@@ -995,16 +967,9 @@ sample as much as possible, we&#8217;ve used <code>localStorage</code>, which is
 production apps because it is a blocking, synchronous storage mechanism that is 
 potentially very slow on some devices.</p>
 
-<div class="wf-highlight-list wf-highlight-list--note">
-  <h3 class="wf-highlight-list__title">Note</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>For extra credit, replace the <code>localStorage</code> implementation with <a href="https://www.npmjs.com/package/idb">idb</a></li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <p>First, let&#8217;s add the code required to save user preferences within <code>app.js</code>:</p>
 
@@ -1099,16 +1064,9 @@ the offline code isn&#8217;t called, and the user gets a basic experience. Using
 feature detection to provide progressive enhancement has little overhead and it 
 won&#8217;t break in older browsers that don&#8217;t support that feature.</p>
 
-<div class="wf-highlight-list wf-highlight-list--remember">
-  <h3 class="wf-highlight-list__title">Remember</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>Service worker functionality is only available on pages that are accessed via HTTPS (<code>https://localhost</code> and equivalents will also work, to facilitate testing). To learn about the rationale behind this restriction check out <a href="http://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features">Prefer Secure Origins For Powerful New Features</a> from the Chromium team.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <h2 id="register-the-service-worker-if-its-available">Register the service worker if it&#8217;s available</h2>
 
@@ -1143,16 +1101,9 @@ register the service worker. Add the following code to the <code>app.js</code> f
 time the user visits the page. In this event handler, we will cache all the 
 assets that are needed for the application.</p>
 
-<div class="wf-highlight-list wf-highlight-list--note">
-  <h3 class="wf-highlight-list__title">Note</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this-1">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>The code below <b>must NOT</b> be used in production, it covers only the most basic use cases and it's easy to get yourself into a state where your app shell will never update. Be sure to review the section below that discusses the pitfalls of this implementation and how to avoid them.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue-1">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <p>When the service worker is fired, it should open the caches object and 
 populate it with the assets necessary to load the App Shell. Add this 
@@ -1224,16 +1175,9 @@ JavaScript, stylesheets, etc.</p>
   <span class="s1">&#39;/images/wind.png&#39;</span>  
 <span class="p">];</span></code></pre></div>
 
-<div class="wf-highlight-list wf-highlight-list--note">
-  <h3 class="wf-highlight-list__title">Note</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this-2">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>Be sure to include all permutations of file names, for example our app is served from <code>index.html</code>, but it may also be requested as <code>/</code> since the server sends <code>index.html</code> when a root folder is requested. You could deal with this in the <code>fetch</code> method, but it would require special casing which may become complex.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue-2">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <p>Our app doesn’t work offline quite yet. We’ve cached the app shell components, 
 but we still need to load them from the local cache.</p>
@@ -1269,16 +1213,9 @@ It then either responds with the cached version, or uses <code>fetch</code> to g
 from the network. The <code>response</code> is passed back to the web page with 
 <code>e.respondWith()</code>.</p>
 
-<div class="wf-highlight-list wf-highlight-list--remember">
-  <h3 class="wf-highlight-list__title">Remember</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this-3">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>If you're not seeing the <code>[ServiceWorker]</code> logging in the console, be sure you've bumped <code>cacheName</code> and reload the page. If that doesn't work, see the section on Tips for testing live service workers.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue-3">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <h2 id="beware-of-the-edge-cases">Beware of the edge cases</h2>
 
@@ -2228,20 +2165,9 @@ for setting up push messaging through Google Cloud Messaging.</p>
   server to a service worker before it is sent to the user as a notification.
 </p>
 
-<div class="wf-highlight-list wf-highlight-list--learning">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>Users must first allow push messages as a global permissions setting.</li>
-    
-    <li>Users must also explicitly subscribe to your site to receive notifications.</li>
-    
-    <li>You can unsubscribe users at their request, regardless of their global notifications permissions.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 <h2 id="subscribe">Subscribe</h2>
 
@@ -2507,16 +2433,9 @@ particular notification tag; that way you can look it up in the
 identifier on the end of your icon URL. This won’t affect the image’s
 cacheability, and gives you access to a short URL.</p>
 
-<div class="wf-highlight-list wf-highlight-list--note">
-  <h3 class="wf-highlight-list__title">Note</h3>
+<h1 id="warning-this-page-has-an-include-that-should-be-a-callout-ie-a-highlightliquid-but-it-has-no-text---please-fix-this">WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)</h1>
 
-  <ul class="wf-highlight-list__list">
-    
-    <li>It is important to note that a notification can only open URLs from the same origin as the notification. The simplest way to overcome this issue is to have a page on your domain that performs a redirect.</li>
-    
-  </ul>
-
-</div>
+<h1 id="warning-this-page-has-a-highlightliquid-include-that-wants-to-show-a-list-but-its-not-supported-on-devsite-please-change-this-to-text-and-fix-the-issue">WARNING: This page has a highlight.liquid include that wants to show a list but it&#8217;s not supported on devsite. Please change this to text and fix the issue</h1>
 
 
       ]]>

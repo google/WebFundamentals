@@ -47,17 +47,15 @@ can address this issue by using `requestAnimationFrame`.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>When a JavaScript function is called without specific timing, it runs immediately, basically interrupting the browser's current task. Recall that at 60fps, the browser has a maximum of 16ms (realistically, 10-12ms) to render a frame. Unexpected scripts can easily take up a lot of that time, and may cause some previously completed work to be redone, which could result in a missed frame. <br><br><a href='http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/'><code>requestAnimationFrame</code></a> schedules a script to run at the earliest possible moment in the frame pipeline, giving the browser as much time as possible to complete the remaining steps: style recalculation, layout, painting, and compositing. Thus, <code>requestAnimationFrame</code> is the go-to tool for running scripts that animate some part of the page, such as our loadStoryBatch function.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

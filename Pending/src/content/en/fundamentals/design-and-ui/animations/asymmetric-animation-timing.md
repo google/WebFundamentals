@@ -21,19 +21,15 @@ description: Breaking symmetry provides contrast and appeal to your projects. Le
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use asymmetric animation timing to add personality and contrast to your work.</li>
-    
-    <li>Always favor the user's interaction; use shorter durations when responding to taps or clicks, and reserve slower durations for times where you aren't.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

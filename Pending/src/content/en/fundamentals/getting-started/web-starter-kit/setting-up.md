@@ -62,17 +62,15 @@ Kit.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Errors?</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>If you see permission or access errors such as <code>EPERM</code> or <code>EACCESS</code>, do not use <code>sudo</code> as a work-around. Consult <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>this page</a> for a more robust solution.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

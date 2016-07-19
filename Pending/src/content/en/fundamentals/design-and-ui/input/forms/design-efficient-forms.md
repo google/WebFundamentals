@@ -23,21 +23,15 @@ description: Design efficient forms by avoiding repeated actions, asking for onl
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use existing data to pre-populate fields and be sure to enable auto-fill.</li>
-    
-    <li>Use clearly-labeled progress bars to help users get through multi-part forms.</li>
-    
-    <li>Provide visual calendar so users don’t have to leave your site and jump to the calendar app on their smartphones.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

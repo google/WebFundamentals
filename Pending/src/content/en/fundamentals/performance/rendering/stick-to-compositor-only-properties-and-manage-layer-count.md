@@ -24,21 +24,15 @@ description: Compositing is where the painted parts of the page are put together
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Stick to transform and opacity changes for your animations.</li>
-    
-    <li>Promote moving elements with <code>will-change</code> or <code>translateZ</code>.</li>
-    
-    <li>Avoid overusing promotion rules; layers require memory and management.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -75,17 +69,15 @@ The caveat for the use of `transform`s and `opacity` is that the element on whic
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>If you’re concerned that you may not be able to limit your animations to just those properties, take a look at the <a href='http://aerotwist.com/blog/flip-your-animations'>FLIP principle</a>, which may help you remap animations to changes in transforms and opacity from more expensive properties.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

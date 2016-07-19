@@ -23,23 +23,15 @@ description: The device orientation event returns rotation data, which includes 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use device motion for when the current motion of the device is needed.</li>
-    
-    <li><code>rotationRate</code> is provided in &deg;/sec.</li>
-    
-    <li><code>acceleration</code> and <code>accelerationWithGravity</code> is provided in m/sec<sup>2</sup>.</li>
-    
-    <li>Be aware of differences between browser implementations.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

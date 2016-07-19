@@ -21,23 +21,15 @@ description: Much of the web isn't optimized for those multi-device experiences.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use the meta viewport tag to control the width and scaling of the browser's viewport.</li>
-    
-    <li>Include <code>width=device-width</code> to match the screen's width in device-independent pixels.</li>
-    
-    <li>Include <code>initial-scale=1</code> to establish a 1:1 relationship between CSS pixels and device-independent pixels.</li>
-    
-    <li>Ensure your page is accessible by not disabling user scaling.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -97,17 +89,15 @@ allows the page to take advantage of the full landscape width.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use a comma to separate attributes to ensure older browsers can properly parse the attributes.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

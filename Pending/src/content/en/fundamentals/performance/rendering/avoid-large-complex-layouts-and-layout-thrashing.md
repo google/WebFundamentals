@@ -28,23 +28,15 @@ description: Layout is where the browser figures out the geometric information f
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Layout is normally scoped to the whole document.</li>
-    
-    <li>The number of DOM elements will affect performance; you should avoid triggering layout wherever possible.</li>
-    
-    <li>Assess layout model performance; new Flexbox is typically faster than older Flexbox or float-based layout models.</li>
-    
-    <li>Avoid forced synchronous layouts and layout thrashing; read style values then make style changes.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -98,17 +90,15 @@ When digging into the frame in the above example, we see that over 20ms is spent
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Want a definitive list of which CSS properties trigger layout, paint, or composite? Check out <a href='http://csstriggers.com/'>CSS Triggers</a>.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

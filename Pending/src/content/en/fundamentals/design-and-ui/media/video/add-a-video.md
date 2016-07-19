@@ -23,23 +23,15 @@ description: Learn about the simplest ways to add video to your site and ensure 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use the video element to load, decode, and play video on your site.</li>
-    
-    <li>Produce video in multiple formats to cover a range of mobile platforms.</li>
-    
-    <li>Size videos correctly; ensure they don't overflow their containers.</li>
-    
-    <li>Accessibility matters; add the track element as a child of the video element.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -146,19 +138,15 @@ serve multiple files.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>The Media Fragments API is supported on most platforms, but not on iOS.</li>
-    
-    <li>Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

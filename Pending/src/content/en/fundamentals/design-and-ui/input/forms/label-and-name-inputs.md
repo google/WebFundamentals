@@ -23,21 +23,15 @@ description: Forms are hard to fill out on mobile. The best forms are the ones w
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Always use <code>label</code>s on form inputs, and ensure they're visible when the field is in focus.</li>
-    
-    <li>Use <code>placeholder</code>s to provide guidance about what you expect.</li>
-    
-    <li>To help the browser auto-complete the form, use established <code>name</code>'s for elements and include the <code>autocomplete</code> attribute.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -102,17 +96,15 @@ starts typing in the element.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Placeholders disappear as soon as the user starts typing in an element, thus they are not a replacement for labels.  They should be used as an aid to help guide users on the required format and content.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -315,11 +307,13 @@ The `autocomplete` attributes can be accompanied with a section name, such as **
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+
+
 
 
 

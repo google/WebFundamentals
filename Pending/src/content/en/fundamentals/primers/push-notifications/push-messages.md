@@ -25,21 +25,15 @@ description: Push messages may consist of breaking news, site updates, or other 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Users must first allow push messages as a global permissions setting.</li>
-    
-    <li>Users must also explicitly subscribe to your site to receive notifications.</li>
-    
-    <li>You can unsubscribe users at their request, regardless of their global notifications permissions.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

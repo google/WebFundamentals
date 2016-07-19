@@ -21,19 +21,15 @@ description: Enabling HTTPS on your servers is a critical step in providing secu
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use Mozilla's Server Configuration tool to set up your server for HTTPS support.</li>
-    
-    <li>Regularly test your site with the Qualys' handy SSL Server Test and ensure you get at least an A or A+.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -84,17 +80,12 @@ certificate.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Many site operators have already completed the steps we’ve covered, but are using HTTPS for the sole purpose of redirecting clients back to HTTP. If you are doing that, stop doing that now. See the next section to make sure HTTPS and HTTP work smoothly.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
 
 
 
@@ -115,17 +106,18 @@ certificate.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--note" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Ultimately you should redirect HTTP requests to HTTPS and use HTTP Strict Transport Security (HSTS). This is not the right stage in the migration process to do that; see “Redirect HTTP To HTTPS” and “Turn On Strict Transport Security And Secure Cookies”.</li>
-    
-  </ul>
-  
-</div>
+
+
+
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

@@ -27,21 +27,15 @@ Webfont optimization is a critical piece of the overall performance strategy. Ea
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Unicode fonts can contain thousands of glyphs</li>
-    
-    <li>There are four font formats: WOFF2, WOFF, EOT, TTF</li>
-    
-    <li>Some font formats require use of GZIP compression</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -84,17 +78,15 @@ So, where does that leave us? There isn't a single format that works in all brow
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Technically, there is also the <a href='http://caniuse.com/svg-fonts'>SVG font container</a>, but it was never supported by IE or Firefox, and is now deprecated in Chrome. As such, it is of limited use and we are intentionally omitting it in this guide.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -127,17 +119,15 @@ Finally, it is worth noting that some font formats contain additional metadata, 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Consider using <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli compression</a> for EOT, TTF, and WOFF formats. Zopfli is a zlib compatible compressor that delivers ~5% filesize reduction over gzip.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -158,21 +148,15 @@ Finally, it is worth noting that some font formats contain additional metadata, 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use <code>format()</code> hint to specify multiple font formats</li>
-    
-    <li>Subset large unicode fonts to improve performance: use unicode-range subsetting and provide a manual subsetting fallback for older browsers</li>
-    
-    <li>Reduce number of stylistic font variants to improve page and text rendering performance</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -230,17 +214,15 @@ comma-separated list of resource variants:
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Unless you are referencing one of the default system fonts, in practice it is rare for the user to have it locally installed, especially on mobile devices, where it is effectively impossible to 'install' additional fonts. As a result, you should always provide a list of external font locations.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -273,17 +255,15 @@ The combination of local and external directives with appropriate format hints a
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>The order in which the font variants are specified matters. The browser will pick the first format it supports. Hence, if you want the newer browsers to use WOFF2, then you should place WOFF2 declaration above WOFF, and so on.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -346,17 +326,15 @@ subsets, each of which will be downloaded by the browser on as-needed basis:
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Unicode-range subsetting is particularly important for Asian languages, where the number of glyphs is much larger than in western languages and a typical 'full' font is often measured in megabytes, instead of tens of kilobytes!</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -459,17 +437,15 @@ The example above illustrates the difference between the actual vs. synthesized 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>For best consistency and visual results you should not rely on font synthesis. Instead, minimize the number of used font variants and specify their locations, such that the browser can download them when they are used on the page. That said, in some cases a synthesized variant <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>may be a viable option</a> - use with caution.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -490,21 +466,15 @@ The example above illustrates the difference between the actual vs. synthesized 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Font requests are delayed until the render tree is constructed, which can result in delayed text rendering</li>
-    
-    <li>Font Loading API allows us to implement custom font loading and rendering strategies that override default lazyload font loading</li>
-    
-    <li>Font inlining allows us to override default lazyload font loading in older browsers</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -589,17 +559,15 @@ Best of all, we can also mix and match above strategies for different content on
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Font Loading API is still <a href='http://caniuse.com/#feat=font-loading'>under development in some browsers</a>. Consider using the <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a>, or the <a href='https://github.com/typekit/webfontloader'>webfontloader library</a>, to deliver similar functionality, albeit with the overhead of an additional JavaScript dependency.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -631,17 +599,15 @@ The inlining strategy is not as flexible and does not allow us to define custom 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Use inlining selectively! Recall that the reason @font-face uses lazyload behavior is to avoid downloading unnecessary font variants and subsets. Also, increasing the size of your CSS via aggressive inlining will negatively impact your <a href='/web/fundamentals/performance/critical-rendering-path/'>critical rendering path</a> - the browser must download all CSS before it can construct the CSSOM, build the render tree, and render page contents to the screen.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

@@ -23,23 +23,15 @@ description: Follow the steps in this guide to learn how to include ads in your 
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>To create an AdSense account, you must be 18, have a Google Account, and address.</li>
-    
-    <li>Your website must be live before submitting an application, and the website content must comply with AdSense policies.</li>
-    
-    <li>Create responsive ad units to ensure that your ads fit, no matter what device a user views them on.</li>
-    
-    <li>Verify payment settings and wait for the money to start rolling in.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -156,19 +148,15 @@ on your site, similar to the code below:
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Note</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>The <code>data-ad-client</code> and <code>data-ad-slot</code> will be unique for each ad you generate.</li>
-    
-    <li>The <code>data-ad-format=auto</code> tag in the generated ad code enables the smart sizing behavior for the responsive ad unit.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
@@ -202,17 +190,15 @@ mobile device or via the Chrome emulator.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--remember" markdown="1">
-  <h3 class="wf-highlight-list__title">Remember</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Paste all ad code within the body tag; otherwise the ads won't work.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 

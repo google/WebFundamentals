@@ -34,23 +34,15 @@ location will no longer function.
 
 
 
-<div class="wf-highlight-list wf-highlight-list--learning" markdown="1">
-  <h3 class="wf-highlight-list__title">TL;DR</h3>
 
-  
-  <ul class="wf-highlight-list__list">
-    
-    <li>Check for Compatibility before you use the API.</li>
-    
-    <li>Prefer a coarse location over a fine location.</li>
-    
-    <li>Always handle errors.</li>
-    
-    <li>Don't poll for the data too frequently to save the user's battery.</li>
-    
-  </ul>
-  
-</div>
+# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
+
+
+
+# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
+
+
+
 
 
 
