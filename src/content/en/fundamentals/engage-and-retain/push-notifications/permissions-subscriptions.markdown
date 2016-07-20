@@ -54,7 +54,7 @@ function initialiseState() {
 
 ## Avoid page-load subscription requests {#avoid-page-load-requests}
 
-Notice one thing the previous example does _not_ do. It does not call
+Notice one thing the previous example does _not_ do. It does not call 
 `pushManager.subscribe()`, though this would seem to be the logical response to
 finding that no existing subscription exists. Such requests may seem timely.
 But, since you don't yet know anything about your users, it's difficult for them
