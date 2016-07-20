@@ -31,5 +31,8 @@ Device Mode is enabled by default. If you're building a Desktop-only site, you m
 
 You can also toggle device mode on and off using the keyboard shortcut:
 <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> on Mac).
+To use this shortcut your mouse needs to be focused on your DevTools window.
+If it's focused on your viewport, you'll trigger [Chrome's switch user
+shortcut](https://support.google.com/chrome/answer/157179?hl=en).
 
 {% include shared/remember.liquid list=page.notes.realworld %}
