@@ -1,211 +1,232 @@
 ---
 layout: shared/narrow
 title: "How to set breakpoints"
-description: "Set breakpoints in Chrome DevTools to quickly and effectively debug problematic code."
+description: "Use breakpoints to pause your JavaScript code and investigate
+the values of variables and the call stack at that particular moment in
+time."
 published_on: 2015-04-14
-updated_on: 2015-09-03
+updated_on: 2016-07-18
 order: 2
 authors:
-  - megginkearney
-  - dgash
   - kaycebasques
 translation_priority: 0
 key-takeaways:
-  breakpoint:
-    - "Use manual breakpoints to pause script execution at a specific line of code."
-    - "Use conditional breakpoints to pause when a specific condtion is met."
-    - "Set conditional breakpoints on DOM node changes, XHR requests, event listeners, and uncaught exceptions."
+  - The most basic way to set a breakpoint is to manually add one on a
+    specific line of code. You can configure these breakpoints to only get
+    triggered when a certain condition is met.
+  - You can also set breakpoints that are triggered when general conditions
+    are met, such as an event, a DOM change, or an uncaught exception.
 ---
-<p class="intro">
-  Breakpoints are one of the most effective ways to debug code. Breakpoints
-  enable you to pause script execution and then investigate the call stack
-  and variable values at that particular moment in time. There are two types 
-  of breakpoints at your disposal: manual and conditional.
-</p>
 
-* Manual breakpoints are individual breakpoints that you set on a 
-  specific line of code. You can set these via the Chrome DevTools GUI, or
-  by inserting the `debugger` keyword in your code.
-* Conditional breakpoints are triggered when a specified condition is 
-  met (e.g. an `onclick` event is fired, an exception is uncaught, and 
-  so on). You enable these via the DevTools GUI,
-  and then DevTools automatically breaks whenever
-  the specified condition is met.
+<p class="intro">Use breakpoints to pause your JavaScript code and investigate
+the values of variables and the call stack at that particular moment in
+time.</p>
+
+Once you've got your breakpoints set up, learn how to step through your code
+and investigate your variables and call stacks in [How to step through your
+code](step-code).
 
 {% include shared/toc.liquid %}
 
-{% include shared/takeaway.liquid list=page.key-takeaways.breakpoint %}
+{% include shared/takeaway.liquid list=page.key-takeaways %}
 
-## View breakpoints
+## Set a breakpoint on a particular line of code {#line-number}
 
-View existing breakpoints at any time in the Sources panel:
+Setting a breakpoint on a particular line of code is useful when you know
+what statement you want to investigate. For example, if your
+login workflow is not working as expected, and you only have one function in
+your code that handles the login, then it's safe to assume that the bug
+is probably in that function. It makes sense in this scenario to add a
+breakpoint at the first line of that function.
 
-1. Open the Chrome menu ![Chrome menu](imgs/image_0.png){:.inline}.
-2. Choose **More tools** > **Developer tools**, or right-click a page 
-   element and choose **Inspect element** from the context menu.
-3. Select the **Sources** panel. 
+When you set a breakpoint on a line of code, the code always pauses on that
+line of code until you delete the breakpoint, disable it, or make it
+conditional.
 
-Breakpoints are shown in the sidebar, grouped by type.
+To set a breakpoint on a particular line of code, first open the **Sources**
+panel, and select the script from the **File Navigator** pane on the lefthand
+side. If you can't see the **File Navigator**, press the **Toggle file
+navigator** button
+(![hide / show file navigator button][fn]{:.inline})
+.
 
-![Breakpoints sidebar](imgs/image_1.png)
+**Tip**: If you're working with minified code, press the **pretty print**
+button 
+(![pretty print button][pp]{:.inline})
+to make it readable. 
 
-## Create manual breakpoints
+Along the left side of your source code you can see line numbers. This region
+is called the **line number gutter**. Click within the line number gutter to
+add a breakpoint on that line of code.
 
-Manual breakpoints are breakpoints that you set on a single line of code. There are two ways 
-to set manual breakpoints, via the DevTools GUI, or by inserting the `debugger` keyword in 
-your code.
+![line number breakpoint][lnb]
 
-Use manual breakpoints when you have a strong suspicion of where your code is failing,
-and you want to inspect the call stack and variable values at that exact moment
-in time.
+[pp]: /web/tools/chrome-devtools/debug/breakpoints/imgs/pretty-print.png
+[fn]: /web/tools/chrome-devtools/debug/breakpoints/imgs/file-navigator.png
+[lnb]: /web/tools/chrome-devtools/debug/breakpoints/imgs/line-number-breakpoint.png
 
-### Add a manual breakpoint on a single line of code
+### Make a line number breakpoint conditional
 
-To add a line breakpoint:
+A conditional breakpoint is only triggered when the condition that you specify
+is true.
 
-* Click the line number of the line where you 
-  want to set the breakpoint. You can add multiple breakpoints by clicking 
-  each line's line number. 
-* Insert the `debugger` keyword in your code, which is 
-  equivalent to setting a line breakpoint at that line.
+Right-click on a line number that does not already have a breakpoint and
+press **Add conditional breakpoint** to create a conditional breakpoint. 
+If you've already added a breakpoint on a line of code and you want to make
+that breakpoint conditional, right-click and press **Edit breakpoint**.
 
-![Line breakpoint](imgs/image_2.png)
+Enter your condition in the textfield and press <kbd>Enter</kbd>.
 
-To temporarily disable a breakpoint, clear its checkbox in the sidebar.
+![adding condition][ac]
 
-To remove a breakpoint, click the line number again. Or, right-click 
-the breakpoint in the sidebar, and then select **Remove breakpoint**.
+Conditional breakpoints are colored gold. 
 
-## Create conditional breakpoints
+![conditional breakpoint][cb]
 
-Conditional breakpoints are triggered when a specified condition is
-met (e.g. an `onclick` event is fired, or an exception is uncaught). 
-You enable these via the DevTools GUI,
-and then DevTools automatically breaks whenever
-the specified condition is met.
+[ac]: /web/tools/chrome-devtools/debug/breakpoints/imgs/adding-condition.png
+[cb]: /web/tools/chrome-devtools/debug/breakpoints/imgs/conditional-breakpoint.png
 
-Use conditional breakpoints when you need to set many breakpoints at once.
-For example, suppose you are experiencing errors when DOM nodes are removed.
-There are 20 different places where the error might be originating from. Rather 
-than placing a manual breakpoint before every suspicious statement, you can just 
-set a conditional breakpoint. The breakpoint is triggered whenever any code
-removes a DOM node.
+### Delete or disable a line number breakpoint
 
-DevTools provides four types of conditional breakpoints:
+If you want to temporarily ignore a breakpoint, then disable it. 
+Right-click within the **line number gutter** and select **Disable
+breakpoint**.
 
-* DOM mutation events (insertions, modifications, deletions)
-* `XMLHttpRequest`
-* JavaScript event listeners
-* Uncaught exceptions
+![disable breakpoint][db]
 
-### Break before DOM mutation event 
+If you no longer need a breakpoint, then delete it. Right-click within the 
+**line number gutter** and select **Remove breakpoint**.
 
-Use the DOM mutation event breakpoint when the script is about to insert, change, 
-or delete a DOM node and you want to isolate and observe the change as it happens. 
-Execution pauses when a specific DOM node is to be modified, before the modification 
-is applied (see also [Edit the DOM](/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom)).
+You can also manage all of your line number breakpoints across all of your
+scripts from a single location. This location is the **Breakpoints** pane
+on the **Sources** panel.
 
-To add a DOM mutation breakpoint, open the Elements panel and right-click an element. 
-From the context menu, click **Break on…**, then choose one of the options: 
-**Subtree modifications**, **Attributes modifications**, or **Node removal**. 
+To delete a breakpoint from the **Breakpoints** pane UI, right-click on it
+and select **Remove breakpoint**.
 
-![DOM mutation breakpoint](imgs/image_3.png)
+![breakpoints pane][bp]
 
-Temporarily disable a DOM breakpoint by clearing its checkbox in the sidebar. 
+To disable a breakpoint from this pane, disable its checkbox.
 
-To remove a DOM breakpoint, right-click the element again, then click 
-**Break on…**, then choose the currently enabled option. Or, right-click the 
-breakpoint in the sidebar and choose **Remove breakpoint**.
+To disable all breakpoints, right-click from this pane and select **Deactivate
+breakpoints**. This produces the same effect as the **Disable All
+Breakpoints** option.
 
-### Break on `XMLHttpRequest`
+You can also disable all breakpoints by pressing the **deactivate
+breakpoints** button
+(![deactivate breakpoints button][dbb]{:.inline}), also on the 
+**Sources** panel.
 
-There are two ways you can create conditional breakpoints for an `XMLHttpRequest`:
+[db]: /web/tools/chrome-devtools/debug/breakpoints/imgs/disable-breakpoint.png
+[bp]: /web/tools/chrome-devtools/debug/breakpoints/imgs/breakpoints-pane.png
+[dbb]: /web/tools/chrome-devtools/debug/breakpoints/imgs/deactivate-breakpoints-button.png
 
-* When the URL of a request contains a specified string. DevTools breaks before 
-  the request is sent.
-* Before a specified `XMLHttpRequest` event (e.g. `load`, `timeout`, `error`). DevTools 
-  breaks right before the specified `XMLHttpRequest` event is fired. 
+## Set a breakpoint on DOM change {#dom}
 
-#### Break when XMLHttpRequest URL contains specified string
+Setting a breakpoint on DOM changes is useful when a DOM node is being added,
+deleted, or modified in an unexpected way, and you don't know what script is
+causing the change.
 
-To break when an `XMLHttpRequest` URL contains a specific string:
+This section shows you how to set a breakpoint on a particular node. If you
+want to trigger a breakpoint when *any* node is deleted, changed, etc., check
+out the **DOM Mutation** category in the [event listeners breakpoints 
+pane](#events).
 
-1. Click the **Add XHR breakpoint** button 
-   ![Add XHR breakpoint](imgs/image_4.png){:.inline} in the sidebar. 
-2. In the **Break when URL contains** field, type the string that the 
-   URL should contain when you want the XHR request to break and press 
-   **Enter**. 
+Go to the **Elements** panel to set DOM change breakpoints.
 
-![XMLHttpRequest breakpoint](imgs/image_5.png)
+Right-click on a node, hover over **Break on**, and select one of the options.
 
-To edit the field, double-click the breakpoint. 
+![DOM change breakpoint][dcb]
 
-To remove the breakpoint, right-click the breakpoint in the sidebar, then 
-choose **Remove breakpoint**.
+**Tip**: These are not exclusive options. You can have two or more of the
+options enabled on any given node.
 
-#### Break before specified `XMLHttpRequest` event
+Here's more information about each type of breakpoint:
 
-To break before a specified `XMLHttpRequest` event is fired:
+* **Subtree modifications**. Triggered when a child of the currently-selected
+  node is removed, added, or the contents of a child are changed. Not
+  triggered on child node attribute changes, or on any changes to the
+  currently-selected node.
 
-1. Go to the **Event Listener Breakpoints** panel.
-2. Expand the **XHR** dropdown menu.
-3. Select the stage in the event lifecycle which you want to break at.
-   DevTools breaks at that stage for all `XMLHttpRequest` events.
+* **Attributes modifications**: Triggered when an attribute is added or removed
+  on the currently selected node, or when an attribute value changes.
 
-![Available breakpoints for XMLHttpRequest events](imgs/xhr-events.png)
+* **Node Removal**: Triggered when the currently-selected node is removed.
 
-### Break before JavaScript event listener is fired 
+When you set a DOM change breakpoint, a blue circle is displayed next to
+the node where the breakpoint is set. 
 
-Use the JavaScript event listener breakpoint
-when you want to see how a certain event
-(such as keypress or dblclick) is processed by the script.
-Execution pauses before the event listener is fired (see also 
-[View element event listeners](/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom#view-element-event-listeners)).
+![DOM change breakpoint indicator][dbi]
 
-To add a JavaScript event listener breakpoint:
+You can manage all of your DOM change breakpoints from the **DOM Breakpoints**
+pane on the **Elements** panel.
 
-1. Expand the **Event Listener Breakpoints** section in the sidebar, 
-   then expand the category of listener you want to break on 
-   (**Animation**, **Clipboard**, **Control**, etc.).
-2. Under the expanded category, click the checkbox for the type(s) 
-   of listener that should trigger a break. To choose all possible 
-   listener types in a category, click the checkbox for the category itself. 
+Toggle the checkbox next to a breakpoint to disable or enable that breakpoint.
+Right-click on a breakpoint and select **Remove Breakpoint** to delete that
+breakpoint. You can also remove all breakpoints by right-clicking anywhere
+within the **DOM Breakpoints** pane and selecting **Remove all breakpoints**.
 
-![Event listener breakpoint](imgs/image_6.png)
+![DOM Breakpoints pane][dbp]
 
-Remove an event listener breakpoint by clearing its checkbox.
+You can also access the **DOM Breakpoints** pane from the **Sources** panel.
 
-### Break on uncaught exception
+![DOM Breakpoints pane on Sources panel][dbps]
 
-Click on the **Pause on Exceptions** button 
-(!["pause on exceptions" button](imgs/pause-on-exception-button.png){:.inline})
-in the **Sources** panel of DevTools to pause script execution on any
-uncaught exception.
+[dcb]: /web/tools/chrome-devtools/debug/breakpoints/imgs/dom-change-breakpoint.png
+[dbi]: /web/tools/chrome-devtools/debug/breakpoints/imgs/dom-breakpoint-indicator.png
+[dbp]: /web/tools/chrome-devtools/debug/breakpoints/imgs/dom-breakpoints-pane.png
+[dbps]: /web/tools/chrome-devtools/debug/breakpoints/imgs/dom-breakpoints-pane-sources.png
 
-In the animation below, the **Pause on Exceptions** button is clicked, a
-button on the page is clicked, and an uncaught exception is triggered.
+## Break on XHR
+
+There are two ways you can trigger breakpoints on XHRs: when *any* XHR reaches
+a certain stage of the XHR lifecycle (`readystatechange`, `load`, etc.), or
+when the URL of an XHR matches a certain string. 
+
+If you want to break on a certain stage of the XHR lifecycle, check out the
+**XHR** category in the [event listener breakpoints pane](#events).
+
+To break when the URL of an XHR matches a certain string, use the **XHR
+Breakpoints** pane on the **Sources** panel. 
+
+![XHR breakpoints pane][xbp]
+
+[xbp]: /web/tools/chrome-devtools/debug/breakpoints/imgs/xhr-breakpoints-pane.png
+
+Click the plus sign button to add a new breakpoint pattern. Enter your string
+in the textfield and press <kbd>Enter</kbd> to save it.
+
+**Tip**: Click the plus sign and then immediately press <kbd>Enter</kbd> to
+trigger a breakpoint before any XHR is sent.
+
+## Break when an event is fired {#events}
+
+Use the **Event Listener Breakpoints** pane on the **Sources** panel to
+break when a certain event (e.g. `click`) or category of events (e.g. any
+`mouse` event) is fired.
+
+![event listener breakpoints pane][elbp]
+
+The top-level represents categories of events. Enable one of these checkboxes
+to pause whenever any of the events from that category is triggered. Expand
+the top-level category to see what events it encompasses.
+
+If you want to monitor a specific event, find the top-level category that the
+event belongs to, and then enable the checkbox next to your target event.
+
+![expanded event listener breakpoints pane][eelbp]
+
+[elbp]: /web/tools/chrome-devtools/debug/breakpoints/imgs/event-listener-breakpoints-pane.png
+
+[eelbp]: /web/tools/chrome-devtools/debug/breakpoints/imgs/expanded-event-listener-breakpoints-pane.png
+
+## Break on uncaught exceptions {#exceptions}
+
+If your code is throwing exceptions, and you don't know where they're coming
+from, press the **pause on exception** button 
+(![pause on exception button][poeb]{:.inline})
+on the **Sources** panel.
+
 DevTools automatically breaks at the line where the exception is thrown.
 
-{% animation animations/pause-on-uncaught-exception.mp4 %}
-
-You can also view the call stack leading up to an uncaught exception 
-in the DevTools console. In the animation below, a button is clicked,
-an uncaught exception is triggered,
-and then the carat next to the uncaught exception message (`Uncaught 0`) in the 
-DevTools console is clicked. The call stack leading up to the exception
-is displayed in the console.
-
-{% animation animations/exception-in-console.mp4 %}
-
-## Never Pause Here {#never-pause-here}
-
-Sometimes conditional breakpoints will cause DevTools to break repeatedly on
-a line that isn't relevant to the issue you're debugging. You can tell
-the debugger to never pause on a specific line.
-
-1. Right-click on the line number.
-2. Select "Never pause here" from the context menu.
-
-![Never Pause Here](imgs/never-pause-here.png)
-
-You can also use this to disable `debugger` statements.
+[poeb]: /web/tools/chrome-devtools/debug/breakpoints/imgs/pause-on-exception-button.png

@@ -11,6 +11,8 @@
 // From Git Issue https://github.com/google/WebFundamentals/issues/2022
 .mdl-layout__content {
    will-change: transform;
+   // From Git issue https://github.com/google/WebFundamentals/issues/2949
+   transform: translateZ(0);
 }
 
 @media screen and (max-width: $grid-desktop-breakpoint) {
