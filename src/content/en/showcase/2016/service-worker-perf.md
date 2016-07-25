@@ -124,7 +124,7 @@ function getTimeToFirstPaintIfSupported() {
 {% endhtmlescape %}</pre>
 
 <aside class="caution">
-  <strong>Important:</strong> the <code>firstpaint</code> values referenced in the above function are part of vendor-specific APIs. They are non-standard and subject to change (or removal) at any time. We chose to implement them in IOWA knowing the site would have a limited lifespan. For most sites, it's best to use other <a href="https://speedcurve.com/blog/user-timing-and-custom-metrics/">User Timing techniques</a> until a <code>firstpaint</code> (or a <code>firstpaint</code> alternative) is standardized.
+  <strong>Important:</strong> the <code>firstpaint</code> values referenced in the above function are part of vendor-specific APIs. They are non-standard and subject to change (or removal) at any time. We chose to implement them in IOWA knowing the site would have a limited lifespan. For most sites, it's best to use other <a href="https://speedcurve.com/blog/user-timing-and-custom-metrics/">user timing techniques</a> until a <code>firstpaint</code> (or a <code>firstpaint</code> alternative) is standardized.
 </aside>
 
 With this, we could now write another function that [sends](/analytics/devguides/collection/analyticsjs/sending-hits) a [non-interaction](https://support.google.com/analytics/answer/1033068#NonInteractionEvents) event with the time to first paint as its value:&nbsp;<sup><a href="#footnotes">[3]</a></sup>
