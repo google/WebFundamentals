@@ -23,6 +23,8 @@ td[align="right"] {
 
 # Measuring the Real-world Performance Impact of Service Workers {: .page-title }
 
+*By <a href="https://philipwalton.com">Philip Walton</a> Developer Programs Engineer*
+
 One of the most significant benefits of [service workers](/web/fundamentals/primers/service-worker/) (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even measure this?
 
 The [Google I/O web app](https://events.google.com/io2016/) (IOWA for short) is a [progressive web app](/web/progressive-web-apps/) that leveraged most of the new capabilities offered by service workers to deliver a rich, app-like experience to its users. It also used Google Analytics to capture key performance data and usage patterns from its large and diverse user audience.
