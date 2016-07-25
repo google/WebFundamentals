@@ -1065,3 +1065,21 @@ captainpangyo:
   email: jangkeehyo@google.com
   description:
     en: "Josh is a Singing Computer Scientist"
+
+
+moinshaikh:
+  name:
+    given: Moin
+    family: Shaikh
+  org:
+    name: N/A
+    unit: Developer / l10n contributor
+  country: IN
+  role:
+    - translator
+  homepage: https://moingshaikh.wordpress.com/
+  google: +MoinShaikhMS
+  twitter:moingshaikh
+  email: montugshaikh@gmail.com
+  description:
+    en: "Moin is an Opensource advocate and a tech geek"
