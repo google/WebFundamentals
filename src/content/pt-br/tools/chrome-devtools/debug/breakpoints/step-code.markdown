@@ -203,7 +203,7 @@ irá esconder qualquer chamadas de função dos scripts omitidos na pilha de cha
 Quando a execução do código for pausada, você poderá observar e modificar os dados do processamento. Isto é crucial quando for tentar rastrear
 uma variável que parece estar com o valor errado, ou um parâmetro que foi passado que não veio como esperado.
 
-Mostre o Console nos painéis inferiores clicando no **Show/Hide drawer** ![Show/Hide drawer](imgs/image_16.png){: .inline} ou pressione <kbd class="kbd">ESC</kbd>.
+Mostre o Console nos Drawers clicando no **Show/Hide drawer** ![Show/Hide drawer](imgs/image_16.png){: .inline} ou pressione <kbd class="kbd">ESC</kbd>.
 Com o console aberto enquanto você passeia pelo código, você pode agora:
 
 * Digitar o nome de uma variável para ver o seu valor atual no escopo da função atual
