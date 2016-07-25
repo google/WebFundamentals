@@ -1063,4 +1063,18 @@ captainpangyo:
   google: +GihyoJoshuaJang
   email: jangkeehyo@gmail.com
   description:
-    en: "Singing Web Technologist"
+    en: "Josh is a Singing Computer Scientist"
+
+zkoch:
+  name:
+    given: Zach
+    family: Koch
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  email: zkoch@google.com
+  description:
+    en: "Google Chrome Product Manager"
