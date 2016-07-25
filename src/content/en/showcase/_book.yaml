@@ -23,6 +23,8 @@ upper_tabs:
         contents:
         - title: "2016"
           section:
+          - title: Measuring the Real-world Performance Impact of Service Workers
+            path: /web/showcase/2016/service-worker-perf
           - title: The Washington Post
             path: /web/showcase/2016/wapo
           - title: Building the Google I/O 2016 Progressive Web App
