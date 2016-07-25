@@ -6,7 +6,7 @@ description: Measuring the Real-world Performance Impact of Service Workers
 {# wf_updated_on: 2016-07-22T18:00:00.000Z #}
 {# wf_author: philipwalton #}
 {# wf_featured_image: /web/showcase/2016/images/service-worker-perf/desktop-all.png #}
-{# wf_featured_snippet: One of the most significant benefits of service workers (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even go about measuring this? #}
+{# wf_featured_snippet: One of the most significant benefits of service workers (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even measure this? #}
 
 <style>
 td[align="right"] {
@@ -23,7 +23,7 @@ td[align="right"] {
 
 # Measuring the Real-world Performance Impact of Service Workers {: .page-title }
 
-One of the most significant benefits of [service workers](/web/fundamentals/primers/service-worker/) (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even go about measuring this?
+One of the most significant benefits of [service workers](/web/fundamentals/primers/service-worker/) (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even measure this?
 
 The [Google I/O web app](https://events.google.com/io2016/) (IOWA for short) is a [progressive web app](/web/progressive-web-apps/) that leveraged most of the new capabilities offered by service workers to deliver a rich, app-like experience to its users. It also used Google Analytics to capture key performance data and usage patterns from its large and diverse user audience.
 
@@ -31,7 +31,7 @@ This case study explores how IOWA used Google Analytics to answer key performanc
 
 ## Starting with the questions
 
-Any time you implement analytics in a website or application, it's important to start by identifying the questions you're trying to answer from the data you'll be  collecting.
+Any time you implement analytics in a website or application, it's important to start by identifying the questions you're trying to answer from the data you'll be collecting.
 
 While we had several questions we wanted to answer, for the purposes of this case study, let's focus on two of the more interesting ones.
 
@@ -41,7 +41,7 @@ We already expect pages to load faster for returning visitors than for new visit
 
 Service workers offers alternative caching capabilities that give developers fine-grained control over exactly what and how caching is done. In IOWA, we optimized our service worker implementation so that every asset would be cached, so returning visitors could use the app completely offline.
 
-But would this effort end up being any better than what the browser already does by default? And if so, how much better?&nbsp;<sup><a href="#footnotes">[1]</a></sup>
+But would this effort be any better than what the browser already does by default? And if so, how much better?&nbsp;<sup><a href="#footnotes">[1]</a></sup>
 
 **2. How does service worker impact the experience of the site loading?**
 
@@ -49,7 +49,7 @@ In other words, how fast does it *feel* like the site is loading, regardless of 
 
 Answering questions about how an experience feels is obviously not an easy task, and no metric is going to perfectly represent such a subjective sentiment. That being said, there are definitely some metrics that are better than others, so choosing the right ones is important.
 
-### Choosing the right metric
+## Choosing the right metric
 
 Google Analytics, by default, tracks [page load times](https://support.google.com/analytics/answer/1205784) (via the [Navigation Timing API](https://developer.mozilla.org/en-US/docs/Web/API/Navigation_timing_API)) for 1% of a site's visitors, and it makes that data available via metrics like [Avg. Page Load Time](/analytics/devguides/reporting/core/dimsmets#view=detail&group=site_speed&jump=ga_avgpageloadtime).
 
@@ -85,8 +85,8 @@ These two [commands](/analytics/devguides/collection/analyticsjs/how-analyticsjs
 
 For IOWA, we wanted to track two additional things:
 
-* The amount of time that elapses between when the page first starts to load and when pixels appear on the screen.
-* Whether or not a service worker is controlling the page. With this information we could then segment our reports to compare the results with and without service worker.
+* The elapsed time between when the page first starts to load and when pixels appear on the screen.
+* Whether or not a service worker is controlling the page. With this information we could segment our reports to compare the results with and without service worker.
 
 ### Capturing time to first paint
 
@@ -159,7 +159,7 @@ ga('send', 'pageview');
 sendTimeToFirstPaint();
 </pre>
 
-Note that depending on when the above code runs, pixel may or may not have already been painted to the screen. To ensure we always run this code after the first paint occurs, we postponed the call to `sendTimeToFirstPaint()` until after the `load` event. In fact, we decided to postpone sending all analytics data until after the page was loaded to ensure those requests wouldn't compete with the loading of other resources.
+Note that depending on when the above code runs, pixels may or may not have already been painted to the screen. To ensure we always run this code after the first paint occurs, we postponed the call to `sendTimeToFirstPaint()` until after the `load` event. In fact, we decided to postpone sending all analytics data until after the page was loaded to ensure those requests wouldn't compete with the loading of other resources.
 
 <pre class="prettyprint">
 // Creates the tracker object.
@@ -231,7 +231,7 @@ To include this information in all hits (e.g. all pageviews, events, etc.) we [s
 ga('set', 'dimension1', getServiceWorkerStatus());
 </pre>
 
-Once set, this value gets sent with all subsequent hits for the current pageload. If the user load the page again later, a new value will likely be returned from the `getServiceWorkerStatus` function, and that value will be set on the tracker object.
+Once set, this value gets sent with all subsequent hits for the current pageload. If the user loads the page again later, a new value will likely be returned from the `getServiceWorkerStatus()` function, and that value will be set on the tracker object.
 
 A quick note on code clarity and readability: since other people looking at this code may not know what `dimension1` refers to, it's always best to create a variable that maps meaningful dimension names to the values analytics.js will use.
 
@@ -268,7 +268,7 @@ As you can see almost 85% of all pageviews for IOWA were from browsers that [sup
 
 ## The results: answering our questions
 
-Once we updated our tracking implementation to track the data needed to answer our original questions, we could start reporting on that data to see the results. *(Note: all Google Analytics data shown here represents actual web traffic to the IOWA site from May 16-22, 2016).*
+Once we started collecting data to answer our questions, we could report on that data to see the results. *(Note: all Google Analytics data shown here represents actual web traffic to the IOWA site from May 16-22, 2016).*
 
 The first question we had was: *Is service worker caching more performant than the existing HTTP caching mechanisms available in all browsers?*
 
@@ -518,7 +518,7 @@ The shape of this curve is quite typical of load time distributions. Contrast th
 
 <img src="images/service-worker-perf/desktop-sw.png" alt="Time to first paint distribution on Desktop (controlled)">
 
-Notice how when a service worker was controlling the page, many visitors experienced a near-immediate first paint, with a median of **583 ms**.
+Notice that when a service worker was controlling the page, many visitors experienced a near-immediate first paint, with a median of **583 ms**.
 
 <div class="pull-quote">"&hellip;when a service worker was controlling the page, many visitors experienced a near-immediate first paint&hellip;"</div>
 
@@ -536,7 +536,7 @@ Here's how things looked on mobile:
 
 <img src="images/service-worker-perf/mobile-all.png" alt="Time to first paint distribution on Mobile">
 
-While we still had a sizeable increase in near-immediate first paint times, the tail was quite a bit larger and longer. This is likely due to the fact that, on mobile, starting an idle service worker thread takes longer than it does on desktop. It also explains why the difference between average `firstpaint` time wasn't as big as I was expecting (discussed above).
+While we still had a sizeable increase in near-immediate first paint times, the tail was quite a bit larger and longer. This is likely because, on mobile, starting an idle service worker thread takes longer than it does on desktop. It also explains why the difference between average `firstpaint` time wasn't as big as I was expecting (discussed above).
 
 <div class="pull-quote">"&hellip;on mobile, starting an idle service worker thread takes longer than it does on desktop."</div>
 
@@ -571,7 +571,7 @@ In addition to the performance impact, service workers also impact the user expe
 
 Service workers allow users to interact with your site while offline, and while some sort of offline support is probably critical for any progressive web app, determining how critical it is in your case largely depends on how much usage is occurring offline. But how do we measure that?
 
-Sending data to Google Analytics requires an internet connection, but it doesn't require the data to be sent at the exact time the interaction took place. Google Analytics supports sending interaction data after the fact by  specifying a time offset (via the <code>[qt](/analytics/devguides/collection/protocol/v1/parameters#qt)</code> parameter).
+Sending data to Google Analytics requires an internet connection, but it doesn't require the data to be sent at the exact time the interaction took place. Google Analytics supports sending interaction data after the fact by specifying a time offset (via the <code>[qt](/analytics/devguides/collection/protocol/v1/parameters#qt)</code> parameter).
 
 For the past two years IOWA has been using a [service worker script](https://www.npmjs.com/package/sw-offline-google-analytics) that detects failed hits to Google Analytics when the user is offline and replays them later with the `qt` parameter.
 
@@ -593,7 +593,7 @@ The following report is based on the metric [Users](/analytics/devguides/reporti
 
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=1028704919&amp;format=interactive"></iframe>
 
-It's great to see that more than half of our signed-in users opted in to receiving push notifications.
+It's great to see that more than half of our signed-in users opted to receive push notifications.
 
 ### App install banners
 
@@ -645,7 +645,7 @@ This presented a problem for us when we tried to implement notification tracking
 
 While we were able to track the success of notifications in general via the `utm_source` [campaign parameter](https://support.google.com/analytics/answer/1033863#parameters), we weren't able to tie a particular re-engagement session to a particular user.
 
-What we could have done to workaround this limitation was store the client ID via IndexedDB in our tracking code, and then that value would have been accessible to the service worker script.
+What we could have done to work around this limitation was store the client ID via IndexedDB in our tracking code, and then that value would have been accessible to the service worker script.
 
 **3. Let the service worker report online/offline status**
 
@@ -655,7 +655,7 @@ In the future we should track both the status of `navigator.onLine` as well as w
 
 ## Wrapping up
 
-This case study has shown that using service worker did indeed improve the load performance of the Google I/O webapp across a wide range of browsers, networks, and devices. It has also shown that when you look at a distribution of the load data across a wide range of browsers, networks, and devices, you get much more insight into how this technology handles in real-world scenarios, and you discover performance characteristics that you may not have expected.
+This case study has shown that using service worker did indeed improve the load performance of the Google I/O webapp across a wide range of browsers, networks, and devices. It has also shown that when you look at a distribution of the load data across a wide range of browsers, networks, and devices, you get much more insight into how this technology handles real-world scenarios, and you discover performance characteristics that you may not have expected.
 
 Here were some of the key takeaways from the IOWA study:
 
@@ -666,7 +666,7 @@ Here were some of the key takeaways from the IOWA study:
 
 While the performance gains observed in one particular application are generally useful to report to the larger developer community, it's important to remember that these results are specific to the type of site IOWA is (an event site) and the type of audience IOWA has (mostly developers).
 
-If you're implementing service worker in your application, it's important that you implement your own measurement strategy, so you can assess your own performance and prevent future regression. If you do, please share your results so everyone can benefit!
+If you're implementing service worker in your application, it's important that you implement your own measurement strategy so you can assess your own performance and prevent future regression. If you do, please share your results so everyone can benefit!
 
 ---
 
@@ -675,5 +675,5 @@ If you're implementing service worker in your application, it's important that y
 1. It's not entirely fair to compare the performance of our service worker cache implementation to the performance of our site with HTTP cache alone. Because we were optimizing IOWA for service worker, we didn't spend much time optimizing for HTTP cache. If we had, the results probably would have been different. To learn more about optimizing your site for HTTP cache, read [Optimizing Content Efficiently](/web/fundamentals/performance/optimizing-content-efficiency/http-caching).
 2. Depending on how your site loads its styles and content, it's possible that the browser is able to paint prior to content or styles being available. In such cases, `firstpaint` may correspond to a blank white screen. If you use `firstpaint`, it's important to ensure it corresponds to a meaningful point in the loading of your site's resources.
 3. Technically we could send a [timing](/analytics/devguides/collection/analyticsjs/user-timings) hit (which are non-interaction by default) to capture this information instead of an event. In fact, timing hits were added to Google Analytics specifically to track load metrics like this; however, timing hits get [heavily sampled](/analytics/devguides/collection/analyticsjs/user-timings#sampling_considerations) at processing time, and their values cannot be used in [segments](https://support.google.com/analytics/answer/3123951). Given these current limitations, non-interaction events remain better suited.
-4. To better understand what scope to give a custom dimension in Google Analytics refer to the [Custom Dimension](https://support.google.com/analytics/answer/2709828) section of the Analytics help center. It's also important to understand the Google Analytics data model, which consists of Users, Sessions, and Interactions (hits). To learn more, watch the [Analytics Academy lesson on the Google Analytics Data Model](https://analyticsacademy.withgoogle.com/course/2/unit/1/lesson/3).
+4. To better understand what scope to give a custom dimension in Google Analytics refer to the [Custom Dimension](https://support.google.com/analytics/answer/2709828) section of the Analytics help center. It's also important to understand the Google Analytics data model, which consists of users, sessions, and interactions (hits). To learn more, watch the [Analytics Academy lesson on the Google Analytics Data Model](https://analyticsacademy.withgoogle.com/course/2/unit/1/lesson/3).
 5. This does not account for resources lazily loaded after the load event.
