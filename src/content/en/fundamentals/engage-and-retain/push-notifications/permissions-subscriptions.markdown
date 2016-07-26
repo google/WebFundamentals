@@ -4,7 +4,7 @@ title: "Requesting permission and subscribing users"
 description: "Requesting permission for and subscribing users to notifications requires as 
 light a touch as showing them notifications."
 published_on: 2016-07-01
-updated_on: 2016-07-25
+updated_on: 2016-07-29
 order: 20
 translation_priority: 0
 authors:
@@ -107,9 +107,9 @@ You probably noticed that the call to `subscribe()` contains a parameter called 
 
 There are several things you need to know about the `applicationServerKey`:
 
-* It's the public key portion of a public/private key pair.
+* It's the public key portion of a public/private key pair generated on your application server.
 * The key pair should be usable with an elliptic curve digital signature (ECDSA) over the P-256 curve.
-* It should be passed to the server as an array of eight-bit unsigned integers.
+* Your app should pass key to the server as an array of eight-bit unsigned integers.
 * It's required by a spec called Voluntary Application Server Identification for Web Push (VAPID), which we'll discuss in the [sending messages](sending-messages) section. 
 
 You can find an example for generating this in the [web-push node library](https://github.com/web-push-libs/web-push/). It looks something like this:
@@ -169,9 +169,9 @@ related controls, you need to send the subscription information (called the
 appropriate request object containing the subscription data, then passing it to
 the server.
 
-When you create the request (lines 14 through 21), use the  `POST` verb and a
-`Content-Type` header of  `application/json`. For the body you need to convert
-the subscription object to a  string. We'll look at what's in this object in the
+When you create the request (lines 14 through 21), use the `POST` verb and a
+`Content-Type` header of `application/json`. For the body you need to convert
+the subscription object to a string. We'll look at what's in this object in the
 next section, [Sending  messages](sending-messages). Use `fetch()` to send the
 subscription request to the server.
 
@@ -204,3 +204,34 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
   });
 }
 {% endhighlight %}
+
+### Upgrading from GCM to the web push protocal {#upgrad}
+
+If you're implementing push for the first time, you can scroll to the bottom of
+the page and click next. You don't need the information in this section.
+
+If you were previously using Google Cloud Messaging (GCM) as your messaging
+service, you were required to add the GCM API Key as an Authorization header
+when sending the subscription to your application server. This means that in
+constructing your `fetchOptions` object you were doing something like this:
+
+{% highlight javascript %}
+var fetchOptions = {
+  method: 'post',
+  headers: new Headers({
+    'Content-Type': 'application/json',
+  });
+};
+
+if (subscription.endpoint.indexOf('https://android.googleapis.com/gcm/send/') === 0) {
+  fetchOptions.headers.append('Authoriztion', '3xt3rm1n8_totallyFakeAuthKey_a10nZ13')
+}
+{% endhighlight %}
+
+This works because if your `subscribe()` lacks an `applicationServerKey`, the
+subscription's endpoint will always be a GCM endpoint. If the
+`applicationServerKey` is included, you'll get back and endpoint with the domain
+`https://fcm.googleapis.com`.
+
+To make your code compatible with other browsers and future versions of Chrome,
+you should add an `applicationServerKey` to your `subscribe()` call.
