@@ -3,5 +3,15 @@ upper_tabs:
   - include: /web/_upper_tabs-Tools.yaml
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml
-
+  - name: Resources
+    heading: Resources
+    path: /web/resources/
+    lower_tabs:
+      other:
+      - name: Resources
+        contents:
+        - title: Style Guide
+          path: /web/resources/sample-article
+        - title: Contributors
+          path: /web/resources/contributors
 
