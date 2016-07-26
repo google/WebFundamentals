@@ -3,7 +3,7 @@ layout: updates/post
 title: "Offline Google Analytics Made Easy"
 description: "The sw-offline-google-analytics library gives you everything you need."
 published_on: 2016-07-21
-updated_on: 2016-07-21
+updated_on: 2016-07-26
 authors:
   - jeffposnick
 tags:
