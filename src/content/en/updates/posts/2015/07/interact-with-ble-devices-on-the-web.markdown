@@ -4,7 +4,7 @@ title: "Interact with Bluetooth devices on the Web"
 description: "A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
 featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 published_on: 2015-07-22
-updated_on: 2016-06-30
+updated_on: 2016-07-27
 authors:
   - beaufortfrancois
 tags:
@@ -44,7 +44,7 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
 Web Bluetooth API is at the time of writing partially implemented in Chrome OS,
-Chrome for Android and Chrome for Linux behind an experimental flag. Go to
+Chrome for Android M, Linux and Mac behind an experimental flag. Go to
 `chrome://flags/#enable-web-bluetooth`,
 enable the highlighted flag, restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
@@ -54,6 +54,19 @@ Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notificati
 disconnected](#get-disconnected-from-a-bluetooth-device).
 
 <img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/web-bluetooth-flag.png" alt="Web Bluetooth Flag highlighted in chrome://flags"/>
+
+### Available for Origin Trials
+
+In order to keep from prematurely baking the Web Bluetooth API design in before
+it's fully specified and agreed upon, we're also adding this feature in Chrome
+53 as an [origin trial](https://github.com/jpchase/OriginTrials) for Chrome
+OS, Android M & Mac. To use this experimental API in Chrome with no flag,
+you'll need to [request a token for your origin](http://bit.ly/WebBluetoothOriginTrial) 
+and [insert it in your application](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+
+The trial will end in January 2017. By that point, we expect to have figured
+out any changes necessary to stabilize the feature and move it out from Origin
+Trials.
 
 ## Security Requirements
 
@@ -389,10 +402,9 @@ coming months:
   event will fire when any characteristic and/or descriptor gets added or
   removed from a Bluetooth GATT Service.
 
-At the time of writing, Chrome OS, Android M+ and Chrome for Linux are [the most advanced
+At the time of writing, Chrome OS, Android M, Linux and Mac are [the most advanced
 platforms](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md).
-macOS is partially working. Windows 8.1+ and iOS will be supported as much as
-feasible by the platforms.
+Windows 8.1+ and iOS will be supported as much as feasible by the platforms.
 
 ## Resources
 
