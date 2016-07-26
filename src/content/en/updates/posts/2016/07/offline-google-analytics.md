@@ -3,7 +3,7 @@ layout: updates/post
 title: "Offline Google Analytics Made Easy"
 description: "The sw-offline-google-analytics library gives you everything you need."
 published_on: 2016-07-21
-updated_on: 2016-07-21
+updated_on: 2016-07-26
 authors:
   - jeffposnick
 tags:
@@ -44,7 +44,7 @@ That's all there is to it!
 
 ## What's going on under the hood?
 
-`sw-offline-google-analytics` sets up a new `fetch` event handler in your service worker, which responds to requests made to the [Google Analytics domain](https://developers.google.com/analytics/devguides/collection/protocol/v1/). (The library ignores non-Google Analytics requests, giving your service worker's other `fetch` event handlers a chance to implement appropriate strategies for those resources.) It will first attempt to fulfill the request against the network. If the user is offline, that will proceed as normal.
+`sw-offline-google-analytics` sets up a new `fetch` event handler in your service worker, which responds to requests made to the [Google Analytics domain](https://developers.google.com/analytics/devguides/collection/protocol/v1/). (The library ignores non-Google Analytics requests, giving your service worker's other `fetch` event handlers a chance to implement appropriate strategies for those resources.) It will first attempt to fulfill the request against the network. If the user is online, that will proceed as normal.
 
 If the [network request fails](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/offline-google-analytics-import.js#L76), the library will [automatically store](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/enqueue-request.js#L37) information about the request to `IndexedDB`, along with a [timestamp](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/enqueue-request.js#L46) indicating when the request was initially made. Each time your service worker [starts up](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/offline-google-analytics-import.js#L98), the library will [check for queued requests](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/replay-queued-requests.js#L39) and [attempt to resend them](https://github.com/GoogleChrome/sw-helpers/blob/30b57f20aaf67211069b45e172f3a191b4ecb840/projects/sw-offline-google-analytics/src/lib/replay-queued-requests.js#L62), along with some additional Google Analytics parameters:
 
