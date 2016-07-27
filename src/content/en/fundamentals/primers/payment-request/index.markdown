@@ -21,7 +21,8 @@ notes:
     - As noted earlier, <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> need to be <code>undefined</code> or an empty array upon initialization in order to receive <code>shippingaddresschange</code> event. Set this value on initialization only when shipping options won't change based on address (such as global free shipping).
 
 ---
-# Payment Request API Integration Guide
+
+{% include shared/toc.liquid %}
 
 {% include shared/note.liquid list=page.notes.may_change %}
 
@@ -37,7 +38,7 @@ Most of the problems that lead to abandonment can be directly traced to purchase
 
 Any system that improves or solves one or more of those problems is a welcome change. We started solving the problem already with [Autofill](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill), but now we'd like to talk about a more comprehensive solution.
 
-# Introducing the Payment Request API
+## Introducing the Payment Request API {#introducing}
 The Payment Request API is a system that is meant to *eliminate checkout forms*. It vastly improves user workflow during the purchase process, providing a more consistent user experience and enabling web merchants to easily leverage disparate payment methods. The Payment Request API is not a new payment method, nor does it integrate directly with payment processors; rather, it is a process layer whose goals are:
 
 * To let the browser act as intermediary among merchants, users, and payment methods
@@ -49,7 +50,7 @@ The Payment Request API is an open and cross-browser standard that replaces trad
 
 Best of all, with the browser acting as an intermediary, all the information necessary for a fast checkout can be stored in the browser, so users can just confirm and pay, all with a single click.
 
-## Payment Transaction Process
+### Payment transaction process {#transaction-process}
 Using the Payment Request API, the transaction process is made as seamless as possible for both users and merchants.
 
 ![](images/4_the_payment_transaction_process.png)
@@ -68,9 +69,9 @@ PaymentRequest can also be extended to return additional information, such as sh
 
 The beauty of the new process is threefold: from the user's perspective, all the previously tedious interaction -- request, authorization, payment, and result -- now takes place in a single step; from the web site's perspective, it requires only a single JavaScript API call; from the payment method's perspective, there is no process change whatsoever.
 
-# Using the Payment Request API
+## Using the Payment Request API {#using}
 
-## Create a Payment Request
+### Create a PaymentRequest {#create-paymentrequest}
 The first step is to create a [`PaymentRequest`](https://www.w3.org/TR/payment-request/#paymentrequest-interface) object by calling the [`PaymentRequest`](https://www.w3.org/TR/payment-request/#paymentrequest-constructor) constructor. This step is typically (but not always) associated with a user-initiated action indicating their intent to make a purchase. The object is constructed using parameters that contain required data.
 
 
@@ -84,7 +85,7 @@ var request = new PaymentRequest(
 
 *PaymentRequest constructor*
 
-### The methodData Parameter
+#### The methodData parameter {#methoddata-parameter}
 The `methodData` parameter contains a list of supported payment methods and, if relevant, additional information about the payment method. This sequence contains `PaymentMethodData` dictionaries, including standard identifiers that are associated with the payment methods the app intends to accept, and any payment method-specific data. See [Payment Request API Architecture](https://w3c.github.io/browser-payment-api/specs/architecture.html) for more details.
 
 Right now, `PaymentRequest` in Chrome only supports the following standard credit cards: '`amex`', '`diners`', '`discover`', '`jcb`', '`maestro`', '`mastercard`', '`unionpay`', and '`visa`'.
@@ -99,7 +100,7 @@ var methodData = [
 
 *Payment methods & data*
 
-### The details Parameter
+#### The details parameter {#details-parameter}
 The `details` parameter contains information about the transaction. There are two major components: a total, which reflects the total amount and currency to be charged, and an optional set of `displayItems` that indicate how the final amount was calculated. This parameter is not intended to be a line-item list, but is rather a summary of the order's major components: subtotal, discounts, tax, shipping costs, etc.
 
 It is important to note that the Payment Request API does not do arithmetic. That is, it does not and cannot ensure that the display components correctly sum to the total amount due. These calculations are the developer's responsibility. So you should always ensure that the list items sum to the same amount in the total. Also, `PaymentRequest` doesn't support refunds, so the amounts should always be positive (but individual list items can be negative, such as discounts).
@@ -142,7 +143,7 @@ var total = "55.00";
 
 *PaymentRequest variables*
 
-## Display the PaymentRequest
+### Display the PaymentRequest {#display-paymentrequest}
 <img src="images/7_display_payment_request.png" style="max-width: 340px">
 
 Activate the `PaymentRequest` interface by calling its [`show`](https://www.w3.org/TR/payment-request/#show) method. This method invokes a native UI that allows the user to examine the details of the purchase, add or change information, and finally, pay. A [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) (indicated by its `then` method and callback function) that resolves will be returned when the user accepts or rejects the payment request.
@@ -158,7 +159,7 @@ payment.show().then(function(paymentResponse) {
 
 *PaymentRequest show method*
 
-## Abort a PaymentRequest
+### Abort a PaymentRequest {#abort-paymentrequest}
 You can intentionally abort a `PaymentRequest` by calling its [`abort`](https://www.w3.org/TR/payment-request/#abort) method. Use this method if the app needs to cancel the payment request after the `show` method has been called but before the promise has been resolved -- for example, if an item is no longer available, or the user fails to confirm the purchase within an allotted amount of time.
 
 If you abort a request, you'll need to create a new instance of `PaymentRequest` before you can call `show` again.
@@ -169,7 +170,7 @@ payment.abort();
 
 *PaymentRequest abort method*
 
-## Process the PaymentResponse
+### Process the PaymentResponse {#process-paymentresponse}
 Upon a user approval for a payment request, the [`show`](https://www.w3.org/TR/payment-request/#show) method's promise resolves, resulting in a `PaymentResponse` object.
 
 A `PaymentResponse` has the following fields:
@@ -240,7 +241,7 @@ paymentResponse.complete('fail').then(() => {
 
 *PaymentRequest complete method*
 
-# Collecting a Shipping Address
+## Collecting a shipping address {#shipping-address}
 If you are a merchant selling physical goods, you may want to collect the user's shipping address using the PaymentRequest API. This is accomplished by adding `requestShipping: true` to the `options` parameter. With this parameter set, "Shipping" will be added to the UI, and users can select from a list of stored addresses or add a new shipping address.
 
 {% include shared/note.liquid list=page.notes.shipping_options %}
@@ -339,7 +340,7 @@ payment.show().then(paymentResponse => {
 {% endhighlight %}
 
 
-# Adding Shipping Options
+## Adding shipping options {#shipping-options}
 If your service allows users to select shipping options such as "free", "standard", or "express", you can also do that through Payment Request UI. To offer such choices, add the  [`shippingOptions`](https://www.w3.org/TR/payment-request/#paymentshippingoption-dictionary) property and its options to the `details` object. By setting one choice to `selected: true`, the UI will render it as pre-selected (which means your total amount should reflect the price for that shipping option).
 
 {% highlight javascript %}
@@ -423,7 +424,7 @@ payment.show().then(paymentResponse => {
 {% endhighlight %}
 
 
-# Adding Optional Contact Information
+## Adding optional contact information {#contact-information}
 You can also collect a user's email address or phone number by adding `requestPayerEmail: true` and/or `requestPayerPhone: true` to the `options` object.
 
 {% highlight javascript %}
@@ -460,7 +461,7 @@ payment.show().then(paymentResponse => {
 {% endhighlight %}
 
 
-# Making PaymentRequest a progressive enhancement
+## Making PaymentRequest a progressive enhancement {#request-progressive}
 As PaymentRequest API is an emerging feature, many browsers don't yet support it. To determine whether the feature is available, query `window.PaymentRequest`.
 
 {% highlight javascript %}
@@ -473,7 +474,7 @@ if (window.PaymentRequest) {
 }
 {% endhighlight %}
 
-# Putting Them All Together
+## Putting them all together {#putting-them-together}
 
 {% highlight javascript %}
 function onBuyClicked() {
