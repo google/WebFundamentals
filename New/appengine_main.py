@@ -22,47 +22,101 @@ from datetime import datetime, timedelta
 from urlparse import urljoin
 import os
 import re
+from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
+
+USE_MEMCACHE = not os.environ['SERVER_SOFTWARE'].startswith('Dev')
+DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 
 class HomePage(webapp2.RequestHandler):
     def get(self):
         self.redirect("/web/index", permanent=True)
 
 class DevSitePages(webapp2.RequestHandler):
-    def buildNav(self, yamlBookPath):
-      whoops = "<h2>Whoops!</h2>"
-      whoops += "<p>An error occured while trying to parse and build the"
-      whoops += " left hand navigation. Check the error logs."
-      whoops += "</p><p>Sorry!</p>"
+    def buildNav(self, bookYaml):
+      # Recursively reads the book.yaml file and generates the navigation tree
+      result = ''
+      for item in bookYaml:
+        if 'include' in item:
+          includePath = self.getBookPath(item['include'])
+          try:
+            include = yaml.load(open(includePath, 'r').read())
+            if 'toc' in include and len(include['toc']) == 1:
+              item = include['toc'][0]
+          except Exception as e:
+            logging.error('Unable to process include file: ' + includePath)
+        if 'path' in item:
+          # Single link item
+          result += '<li class="devsite-nav-item">\n'
+          result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
+          result += '<span>' + item['title'] + '</span>\n'
+          result += '</a>\n'
+          result += '</li>\n'
+        elif 'section' in item:
+          # Sub-section
+          result += '<li class="devsite-nav-item devsite-nav-item-section-expandable">\n'
+          result += '<span class="devsite-nav-title devsite-nav-title-no-path" '
+          result += 'track-type="leftNav" track-name="expandNavSectionNoLink" '
+          result += 'track-metadata-position="0">\n'
+          result += '<span>' + item['title'] + '</span>\n'
+          result += '</span>'
+          result += '<a '
+          result += 'class="devsite-nav-toggle devsite-nav-toggle-collapsed material-icons" '
+          result += 'track-type="leftNav" track-name="expandNavSectionArrow" '
+          result += 'track-metadata-position="0">\n'
+          result += '</a>'
+          result += '<ul class="devsite-nav-section devsite-nav-section-collapsed">\n'
+          result += self.buildNav(item['section'])
+      result += '</ul>\n'
+      return result
+
+    def getLeftNav(self, yamlBookPath):
+      # Returns the left nav. If it's already been generated and stored in
+      # memcache, return that, otherwise, read the file then recursively 
+      # build the tree using buildNav. The results are stored in memcache only
+      # when USE_MEMCACHE is True.
+      if USE_MEMCACHE:
+        result = memcache.get(yamlBookPath)
+        if result is not None:
+          return result
+      requestPath = self.request.path
       try:
-        result = ""
         yamlNav = yaml.load(open(yamlBookPath, 'r').read())
-        for attr in yamlNav['upper_tabs']:
-          if 'path' in attr and self.request.path.startswith(attr['path']):
-            if 'lower_tabs' in attr:
-              nav = attr['lower_tabs']['other'][0]['contents']
-              for item in nav:
-                if 'path' in item:
-                  if item['path'] == self.request.path:
-                    result += '<li class="devsite-nav-item devsite-nav-active">'
-                  else: 
-                    result += '<li class="devsite-nav-item">'
-                  result += '<a href="' + item['path'] + '" class="devsite-nav-title">'
-                else:
-                  result += '<li class="devsite-nav-item">'
-                result += '<span class="devsite-nav-text">'
-                result += '<span>' + item['title'] + '</span>'
-                if 'path' in item:
-                  result += '</a>'
-                result += '</li>'
-        return result
+        for tab in yamlNav['upper_tabs']:
+          if 'path' in tab and requestPath.startswith(tab['path']):
+            if 'lower_tabs' in tab:
+              result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
+              result += self.buildNav(tab['lower_tabs']['other'][0]['contents'])
+              if USE_MEMCACHE:
+                memcache.set(key=yamlBookPath, value=result, time=3600)
+              return result
       except Exception as e:
         logging.error(e)
-      return whoops
+        whoops = "<h2>Whoops!</h2>"
+        whoops += "<p>An error occured while trying to parse and build the"
+        whoops += " left hand navigation. Check the error logs."
+        whoops += "</p><p>Sorry!</p>"
+        return whoops
+
+    def getBookPath(self, pathToBook):
+        bookPath = pathToBook
+        cwd = os.path.dirname(__file__)
+        sourcePath = 'src/content'
+        lang = self.request.get('hl', 'en')
+        bookPath = re.sub('/web/', '', bookPath);
+        bookPath = os.path.join(cwd, sourcePath, lang, bookPath)
+        if os.path.isfile(bookPath):
+          return bookPath
+        else:
+          bookPath = os.path.join(cwd, sourcePath, 'en', bookPath)
+          if os.path.isfile(bookPath):
+            return bookPath
+          else:
+            logging.error('Unable to find book.yaml: ' + pathToBook)
+            return None
 
     def get(self, path):
-        lang = self.request.get("hl", "en")
-
+        lang = self.request.get('hl', 'en')
         sourcePath = 'src/content'
 
         fileLocations = [
@@ -103,32 +157,16 @@ class DevSitePages(webapp2.RequestHandler):
             md = markdown.Markdown(extensions=ext)
             parsedMarkdown = md.convert(fileContent)
             
-            yamlBookPath = md.Meta['book_path'][0]
-            yamlBookPath = re.sub("/web/", "./src/content/en/", yamlBookPath)
-            leftNav = self.buildNav(yamlBookPath)
-            # leftNav = "<h2>Whoops!</h2><p>An error occured while trying to"
-            # leftNav += " parse the left hand navigation. Check the error logs."
-            # leftNav += "</p><p>Sorry!</p>"
-            # try:
-            #   bookYamlPath = md.Meta['book_path'][0]
-            #   bookYamlPath = re.sub("/web/", "./src/content/en/", bookYamlPath)
-            #   yamlNav = yaml.load(open(bookYamlPath, 'r').read())
-            #   for attr in yamlNav['upper_tabs']:
-            #     if 'path' in attr and self.request.path.startswith(attr['path']):
-            #       if 'lower_tabs' in attr:
-            #         nav = attr['lower_tabs']['other'][0]['contents']
-            #         logging.info(nav)
-            #         #logging.info('WHEE ' + self.request.path)
-            #         #logging.info(attr)
-            #     else:
-            #       logging.info('NO')
-            #   #  logging.info(attr)
-            #   # logging.info(yamlNav)
-            #   # logging.info(self.request.path)
-            # except Exception as e:
-            #   logging.error(e)
-
-            # logging.info(bookYamlPath)
+            # Reads the book.yaml file and generate the lefthand nav
+            if 'book_path' in md.Meta and len(md.Meta['book_path']) == 1:
+              bookPath = md.Meta['book_path'][0]
+              bookPath = self.getBookPath(bookPath)
+              if bookPath is not None:
+                leftNav = self.getLeftNav(bookPath)
+              else:
+                leftNav = 'Could not find book.yaml'
+            else:
+              leftNav = 'No book.yaml specified in markdown'
 
             # Replaces <pre> tags with prettyprint enabled tags
             parsedMarkdown = re.sub(r"^<pre>(?m)", r"<pre class='prettyprint'>", parsedMarkdown)

@@ -7,8 +7,6 @@ upper_tabs:
         contents:
         - title: Another Article
           path: /web/resources/performance/
-        - title: Style Guide
-          path: /web/resources/sample-article
         - title: Contributors
           path: /web/resources/contributors
         - title: Design & UI
@@ -27,6 +25,8 @@ upper_tabs:
               path: /web/petele/design-and-ui/content/
           - title: User Input
             section:
+            - title: Style Guide
+              path: /web/resources/sample-article
             - title: Create Amazing Forms
               path: /web/petele/design-and-ui/input/forms/
             - title: Add Touch To Your Site
