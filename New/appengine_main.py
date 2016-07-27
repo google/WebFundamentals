@@ -194,7 +194,7 @@ class DevSitePages(webapp2.RequestHandler):
             # Handle Special DevSite Cases
             fileContent = re.sub(r"^Success: (.*)(?m)", r"<aside class='success'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
             fileContent = re.sub(r"^Dogfood: (.*)(?m)", r"<aside class='dogfood'><strong>Dogfood:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Note: (.*)(?m)", r"<aside class='note'><note>Success:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Note: (.*)(?m)", r"<aside class='note'><note>Note:</strong> <span>\1</span></aside>", fileContent)
             fileContent = re.sub(r"^Caution: (.*)(?m)", r"<aside class='caution'><strong>Caution:</strong> <span>\1</span></aside>", fileContent)
             fileContent = re.sub(r"^Warning: (.*)(?m)", r"<aside class='warning'><strong>Warning:</strong> <span>\1</span></aside>", fileContent)
 
@@ -202,7 +202,8 @@ class DevSitePages(webapp2.RequestHandler):
             ext = [
               "markdown.extensions.attr_list", # Adds support for {: #someid }
               "markdown.extensions.meta", # Removes the meta data from the top of the doc
-              "markdown.extensions.toc" # Generate the TOC for the right side
+              "markdown.extensions.toc", # Generate the TOC for the right side
+              "markdown.extensions.tables" # Support for Markdown Tables
             ]
             md = markdown.Markdown(extensions=ext)
             parsedMarkdown = md.convert(fileContent)
