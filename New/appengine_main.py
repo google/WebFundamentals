@@ -17,6 +17,7 @@
 import webapp2
 import logging
 import markdown
+import yaml
 from datetime import datetime, timedelta
 from urlparse import urljoin
 import os
@@ -28,6 +29,37 @@ class HomePage(webapp2.RequestHandler):
         self.redirect("/web/index", permanent=True)
 
 class DevSitePages(webapp2.RequestHandler):
+    def buildNav(self, yamlBookPath):
+      whoops = "<h2>Whoops!</h2>"
+      whoops += "<p>An error occured while trying to parse and build the"
+      whoops += " left hand navigation. Check the error logs."
+      whoops += "</p><p>Sorry!</p>"
+      try:
+        result = ""
+        yamlNav = yaml.load(open(yamlBookPath, 'r').read())
+        for attr in yamlNav['upper_tabs']:
+          if 'path' in attr and self.request.path.startswith(attr['path']):
+            if 'lower_tabs' in attr:
+              nav = attr['lower_tabs']['other'][0]['contents']
+              for item in nav:
+                if 'path' in item:
+                  if item['path'] == self.request.path:
+                    result += '<li class="devsite-nav-item devsite-nav-active">'
+                  else: 
+                    result += '<li class="devsite-nav-item">'
+                  result += '<a href="' + item['path'] + '" class="devsite-nav-title">'
+                else:
+                  result += '<li class="devsite-nav-item">'
+                result += '<span class="devsite-nav-text">'
+                result += '<span>' + item['title'] + '</span>'
+                if 'path' in item:
+                  result += '</a>'
+                result += '</li>'
+        return result
+      except Exception as e:
+        logging.error(e)
+      return whoops
+
     def get(self, path):
         lang = self.request.get("hl", "en")
 
@@ -70,6 +102,33 @@ class DevSitePages(webapp2.RequestHandler):
             ]
             md = markdown.Markdown(extensions=ext)
             parsedMarkdown = md.convert(fileContent)
+            
+            yamlBookPath = md.Meta['book_path'][0]
+            yamlBookPath = re.sub("/web/", "./src/content/en/", yamlBookPath)
+            leftNav = self.buildNav(yamlBookPath)
+            # leftNav = "<h2>Whoops!</h2><p>An error occured while trying to"
+            # leftNav += " parse the left hand navigation. Check the error logs."
+            # leftNav += "</p><p>Sorry!</p>"
+            # try:
+            #   bookYamlPath = md.Meta['book_path'][0]
+            #   bookYamlPath = re.sub("/web/", "./src/content/en/", bookYamlPath)
+            #   yamlNav = yaml.load(open(bookYamlPath, 'r').read())
+            #   for attr in yamlNav['upper_tabs']:
+            #     if 'path' in attr and self.request.path.startswith(attr['path']):
+            #       if 'lower_tabs' in attr:
+            #         nav = attr['lower_tabs']['other'][0]['contents']
+            #         logging.info(nav)
+            #         #logging.info('WHEE ' + self.request.path)
+            #         #logging.info(attr)
+            #     else:
+            #       logging.info('NO')
+            #   #  logging.info(attr)
+            #   # logging.info(yamlNav)
+            #   # logging.info(self.request.path)
+            # except Exception as e:
+            #   logging.error(e)
+
+            # logging.info(bookYamlPath)
 
             # Replaces <pre> tags with prettyprint enabled tags
             parsedMarkdown = re.sub(r"^<pre>(?m)", r"<pre class='prettyprint'>", parsedMarkdown)
@@ -87,6 +146,7 @@ class DevSitePages(webapp2.RequestHandler):
             toc = re.sub(r"<li>", "<li class=\"devsite-nav-item\">", toc)
  
             text = render("gae/devsite.tpl", {
+              "leftNav": leftNav,
               "content": parsedMarkdown,
               "toc": toc,
               "lang": lang}

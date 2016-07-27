@@ -61,7 +61,11 @@
       <div id="gc-wrapper">
         <div class="devsite-main-content clearfix">
           <hav class="devsite-section-nav devsite-nav">
-            Section Nav
+            <ul class="devsite-nav-list devsite-nav-expandable">
+            {% autoescape off %}
+              {{ leftNav }}
+            {% endautoescape %}
+            </ul>
           </hav>
           <nav class="devsite-page-nav devsite-nav">
             <ul class="devsite-page-nav-list">
