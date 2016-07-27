@@ -264,7 +264,7 @@ window.addEventListener('load', function() {
 
 As I mentioned, sending the *Service Worker Status* dimension with every hit allows us to use it when reporting on any metric. For example, here's what service worker usage looked like for all pageviews during the week of Google I/O:
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=537990599&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=537990599&amp;format=interactive"></iframe>
 
 As you can see almost 85% of all pageviews for IOWA were from browsers that [support service worker](https://jakearchibald.github.io/isserviceworkerready/).
 
@@ -286,7 +286,7 @@ To control for the possibility that non-service-worker-related factors were skew
 
 The chart below shows the average page load times across desktop and mobile for service worker controlled pages and non-controlled pages:
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=1528363694&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=1528363694&amp;format=interactive"></iframe>
 
 As you can see, visits to our app when controlled by a service worker loaded quite a bit faster than non-controlled visits, even those from returning users who likely had most of the page's resources cached. It's also interesting to notice that, on average, visitors on mobile with a service worker saw faster loads than new desktop visitors.
 
@@ -375,13 +375,13 @@ Our second question was: *How does service worker impact the experience of the s
 
 To answer this question, we created another custom report for the metric [Avg. Event Value](/analytics/devguides/reporting/core/dimsmets#view=detail&group=event_tracking&jump=ga_avgeventvalue) and filtered the results to only include our `firstpaint` events. We used the dimensions *Device Category* and our custom *Service Worker Status* dimension:
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=673302558&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=673302558&amp;format=interactive"></iframe>
 
 To better visualize how the `firstpaint` events related to the overall page load times, we created a timeline chart plotting both events for mobile and desktop:
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=1187664125&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=1187664125&amp;format=interactive"></iframe>
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=610404153&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=610404153&amp;format=interactive"></iframe>
 
 Contrary to what I would have expected, the service worker on mobile had much less impact on time to first paint than it did on overall page load.
 
@@ -581,7 +581,7 @@ To track whether the user was online or offline, we created a custom dimension c
 
 And to get a sense for how common it was for a user to be offline while using IOWA, we created a [segment](https://support.google.com/analytics/answer/3123951) that targeted users with at least one offline interaction. Turns out, that was almost 5% of users:
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=1623911536&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=1623911536&amp;format=interactive"></iframe>
 
 ### Push notifications
 
@@ -593,7 +593,7 @@ In IOWA, we only sent notifications related to the user's personalized schedule,
 
 The following report is based on the metric [Users](/analytics/devguides/reporting/core/dimsmets#view=detail&group=user&jump=ga_users) and our Notification Permission custom dimension, segmented by users who signed in at some point and whose browsers support push notifications.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=1028704919&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=1028704919&amp;format=interactive"></iframe>
 
 It's great to see that more than half of our signed-in users opted to receive push notifications.
 
@@ -627,7 +627,7 @@ window.addEventListener('beforeinstallprompt', function(event) {
 
 Of the users who saw an app install banner, about 10% chose to add it to their home screen.
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/a/google.com/spreadsheets/d/18uCZKpkXii3eD2Z9pzqNdIYa8sjCI-zOnHjr5KkZmaE/pubchart?oid=1347385203&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=1347385203&amp;format=interactive"></iframe>
 
 ## Possible tracking improvements (for next time)
 
