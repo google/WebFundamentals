@@ -116,3 +116,6 @@
 
 - from: /web/fundamentals/principles/...
   to: /web/fundamentals/getting-started/principles/
+
+- from: /web/fundamentals/getting-started/principles/...
+  to: /web/fundamentals/getting-started/principles/

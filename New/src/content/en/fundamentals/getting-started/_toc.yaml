@@ -1,12 +1,11 @@
 toc:
   - title: Getting Started
-    path: /web/fundamentals/getting-started/
     section:
     - title: Code Labs
       path: https://codelabs.developers.google.com/?cat=Web
       status: external
     - title: Principles of Site Design
-      path: /web/fundamentals/getting-started/site-design/
+      path: /web/fundamentals/getting-started/principles/
     - title: Asking Permission Respectfully
       path: /web/fundamentals/getting-started/permission/
     - title: Service Worker Primer
