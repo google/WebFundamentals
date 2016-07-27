@@ -5,13 +5,14 @@ description: This is the page description placed in the head.
 
 # Sample Article {: .page-title }
 
+{% include "_shared/contributors/petelepage.html" %}
+
 This is the intro paragraph. It's the equivalent of the old
 `introduction` yaml attribute, but instead of living in the YAML
 front matter, it now lives in the document.
 
 Using `# Sample Article {: .page-title }` sets the page title to the value
 provided.
-
 
 ## Key Takeaways
 

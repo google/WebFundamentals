@@ -33,18 +33,69 @@ class HomePage(webapp2.RequestHandler):
         self.redirect("/web/index", permanent=True)
 
 class DevSitePages(webapp2.RequestHandler):
+    def readFile(self, pathToFile):
+      # Reads a file from the file system, first trying the localized, then
+      # the English version. If neither exist, it returns None
+      originalPathToFile = pathToFile
+      pathToFile = re.sub(r'^/?web/', '', pathToFile)
+      cwd = os.path.dirname(__file__)
+      sourcePath = 'src/content'
+      lang = self.request.get('hl', 'en')
+      fullPath = os.path.join(cwd, sourcePath, lang, pathToFile)
+      if not os.path.isfile(fullPath):
+        fullPath = os.path.join(cwd, sourcePath, 'en', pathToFile)
+      if os.path.isfile(fullPath):
+        try:
+          result = open(fullPath, 'r').read()
+          result = result.decode('utf8')
+          return result
+        except Exception as e:
+          result = '500 Exception occured trying to read: ' + originalPathToFile
+          logging.error(result)
+          logging.error(e)
+          return None
+      else:
+        result = 'ReadFile failed trying to find: ' + originalPathToFile
+        logging.error(result)
+        return None
+
+
+    def getInclude(self, pathToInclude):
+      # Returns the contents of an include file. If the file is not found,
+      # it returns a warning into the doc. Otherwise it returns the file.
+      if USE_MEMCACHE:
+        result = memcache.get(pathToInclude)
+        if result is not None:
+          return result
+      # Strip the filename down to just the actual path.
+      fileName = pathToInclude.replace('{%', '')
+      fileName = fileName.replace('%}', '')
+      fileName = fileName.replace('include', '')
+      fileName = fileName.replace('"', '')
+      fileName = fileName.strip()
+      result = self.readFile(fileName)
+      if result is None:
+        return 'Warning: Unable to find include <code>' + fileName + '</code>'
+      if USE_MEMCACHE:
+        memcache.set(key=pathToInclude, value=result, time=3600)
+      return result
+
+
     def buildNav(self, bookYaml):
       # Recursively reads the book.yaml file and generates the navigation tree
       result = ''
       for item in bookYaml:
         if 'include' in item:
-          includePath = self.getBookPath(item['include'])
-          try:
-            include = yaml.load(open(includePath, 'r').read())
-            if 'toc' in include and len(include['toc']) == 1:
-              item = include['toc'][0]
-          except Exception as e:
-            logging.error('Unable to process include file: ' + includePath)
+          include = self.readFile(item['include'])
+          if include:
+            try:
+              include = yaml.load(include)
+              if 'toc' in include and len(include['toc']) == 1:
+                item = include['toc'][0]
+            except Exception as e:
+              msg = 'Unable to parsing embedded toc file: ' + item['include'] 
+              logging.error(msg)
+              logging.error(e)
         if 'path' in item:
           # Single link item
           result += '<li class="devsite-nav-item">\n'
@@ -70,50 +121,43 @@ class DevSitePages(webapp2.RequestHandler):
       result += '</ul>\n'
       return result
 
-    def getLeftNav(self, yamlBookPath):
+
+    def getLeftNav(self, pathToBook):
       # Returns the left nav. If it's already been generated and stored in
       # memcache, return that, otherwise, read the file then recursively 
       # build the tree using buildNav. The results are stored in memcache only
       # when USE_MEMCACHE is True.
       if USE_MEMCACHE:
-        result = memcache.get(yamlBookPath)
+        result = memcache.get(pathToBook)
         if result is not None:
           return result
+      whoops = '<h2>Whoops!</h2>'
+      whoops += '<p>An error occured while trying to parse and build the'
+      whoops += ' left hand navigation. Check the error logs.'
+      whoops += '</p>'
       requestPath = self.request.path
-      try:
-        yamlNav = yaml.load(open(yamlBookPath, 'r').read())
-        for tab in yamlNav['upper_tabs']:
-          if 'path' in tab and requestPath.startswith(tab['path']):
-            if 'lower_tabs' in tab:
-              result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
-              result += self.buildNav(tab['lower_tabs']['other'][0]['contents'])
-              if USE_MEMCACHE:
-                memcache.set(key=yamlBookPath, value=result, time=3600)
-              return result
-      except Exception as e:
-        logging.error(e)
-        whoops = "<h2>Whoops!</h2>"
-        whoops += "<p>An error occured while trying to parse and build the"
-        whoops += " left hand navigation. Check the error logs."
-        whoops += "</p><p>Sorry!</p>"
+      bookContents = self.readFile(pathToBook)
+      if bookContents:
+        try:
+          yamlNav = yaml.load(bookContents)
+          for tab in yamlNav['upper_tabs']:
+            if 'path' in tab and requestPath.startswith(tab['path']):
+              if 'lower_tabs' in tab:
+                result = '<ul class="devsite-nav-list devsite-nav-expandable">\n'
+                result += self.buildNav(tab['lower_tabs']['other'][0]['contents'])
+                if USE_MEMCACHE:
+                  memcache.set(key=pathToBook, value=result, time=3600)
+                return result
+        except Exception as e:
+          msg = 'Unable to read or parse primary book.yaml: ' + pathToBook
+          logging.error(msg)
+          logging.error(e)
+          whoops += '<p>Exception occured.</p>'
+          return whoops
+      else:
+        whoops += '<p>Not found: ' + pathToBook + '</p>'
         return whoops
 
-    def getBookPath(self, pathToBook):
-        bookPath = pathToBook
-        cwd = os.path.dirname(__file__)
-        sourcePath = 'src/content'
-        lang = self.request.get('hl', 'en')
-        bookPath = re.sub('/web/', '', bookPath);
-        bookPath = os.path.join(cwd, sourcePath, lang, bookPath)
-        if os.path.isfile(bookPath):
-          return bookPath
-        else:
-          bookPath = os.path.join(cwd, sourcePath, 'en', bookPath)
-          if os.path.isfile(bookPath):
-            return bookPath
-          else:
-            logging.error('Unable to find book.yaml: ' + pathToBook)
-            return None
 
     def get(self, path):
         lang = self.request.get('hl', 'en')
@@ -141,6 +185,12 @@ class DevSitePages(webapp2.RequestHandler):
             # Remove any comments {# something #} from the markdown
             fileContent = re.sub(r"{#.+?#}", "", fileContent)
 
+            # Injects includes into the markdown as appropriate
+            includes = re.findall(r'{% include.+%}', fileContent)
+            for include in includes:
+              regex = r'^' + include + '(?m)'
+              fileContent = re.sub(regex, self.getInclude(include), fileContent)
+
             # Handle Special DevSite Cases
             fileContent = re.sub(r"^Success: (.*)(?m)", r"<aside class='success'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
             fileContent = re.sub(r"^Dogfood: (.*)(?m)", r"<aside class='dogfood'><strong>Dogfood:</strong> <span>\1</span></aside>", fileContent)
@@ -160,11 +210,7 @@ class DevSitePages(webapp2.RequestHandler):
             # Reads the book.yaml file and generate the lefthand nav
             if 'book_path' in md.Meta and len(md.Meta['book_path']) == 1:
               bookPath = md.Meta['book_path'][0]
-              bookPath = self.getBookPath(bookPath)
-              if bookPath is not None:
-                leftNav = self.getLeftNav(bookPath)
-              else:
-                leftNav = 'Could not find book.yaml'
+              leftNav = self.getLeftNav(bookPath)
             else:
               leftNav = 'No book.yaml specified in markdown'
 
