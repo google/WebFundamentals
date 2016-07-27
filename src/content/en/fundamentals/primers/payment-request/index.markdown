@@ -117,12 +117,12 @@ var details = {
     },
     {
       label: "Friends and family discount",
-      amount: { currency: "USD", value : "-5.00" }, // -US$5.00
+      amount: { currency: "USD", value : "-10.00" }, // -US$10.00
     }
   ],
   total:  {
     label: "Total",
-    amount: { currency: "USD", value : "60.00" }, // US$60.00
+    amount: { currency: "USD", value : "55.00" }, // US$55.00
   }
 }
 {% endhighlight %}
