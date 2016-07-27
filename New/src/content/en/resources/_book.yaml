@@ -1,17 +1,49 @@
 upper_tabs:
-  - include: /web/_upper_tabs-Fundamentals.yaml
-  - include: /web/_upper_tabs-Tools.yaml
-  - include: /web/_upper_tabs-Updates.yaml
-  - include: /web/_upper_tabs-Showcase.yaml
-  - name: Resources
-    heading: Resources
+  - name: Fundamentals
     path: /web/resources/
     lower_tabs:
       other:
       - name: Resources
         contents:
+        - title: Another Article
+          path: /web/resources/performance/
         - title: Style Guide
           path: /web/resources/sample-article
         - title: Contributors
           path: /web/resources/contributors
-
+        - title: Design & UI
+          section:
+          - title: Responsive Design
+            section:
+            - title: The Fundamentals
+              path: /web/petele/design-and-ui/responsive/fundamentals/
+            - title: Design Patterns
+              path: /web/petele/design-and-ui/responsive/patterns/
+            - title: Images
+              path: /web/petele/design-and-ui/media/images/
+            - title: Video
+              path: /web/petele/design-and-ui/media/video/
+            - title: Content
+              path: /web/petele/design-and-ui/content/
+          - title: User Input
+            section:
+            - title: Create Amazing Forms
+              path: /web/petele/design-and-ui/input/forms/
+            - title: Add Touch To Your Site
+              path: /web/petele/design-and-ui/input/touch/
+          - title: Icons and colors
+            path: /web/petele/design-and-ui/blah/
+          - title: Animations
+            section:
+            - title: Overview
+              path: /web/petele/perforance/crp/1
+            - title: CSS vs JavaScript Animations
+              path: /web/petele/perforance/crp/2
+            - title: Easing and Timing in Animation
+              path: /web/petele/perforance/crp/3
+            - title: Animating Between Views
+              path: /web/petele/performance/5
+            - title: Animating Modal Views
+              path: /web/petele/performance/7
+            - title: Animation Performance
+              path: /web/petele/performance/crp/9
