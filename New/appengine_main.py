@@ -185,8 +185,14 @@ class DevSitePages(webapp2.RequestHandler):
             # Remove any comments {# something #} from the markdown
             fileContent = re.sub(r"{#.+?#}", "", fileContent)
 
+            # Show Angry Warning About Unsupported Elements
+            fileContent = re.sub(r"{% link_sample_button .+%}", r"<aside class='warning'>Web<strong>FUNDAMENTALS</strong>: <span>Unsupported tag {% link_sample_button ... %}</span></aside>", fileContent)
+
+            # TODO: Replace this with actual functionality to include code.
+            fileContent = re.sub(r"{% include_code (.+)%}", r"<aside class='dogfood'><strong>include_code:</strong> <code>\1</code></aside>", fileContent)
+
             # Injects includes into the markdown as appropriate
-            includes = re.findall(r'{% include.+%}', fileContent)
+            includes = re.findall(r'{% include .+%}', fileContent)
             for include in includes:
               regex = r'^' + include + '(?m)'
               fileContent = re.sub(regex, self.getInclude(include), fileContent)
