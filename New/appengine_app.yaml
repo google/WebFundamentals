@@ -22,9 +22,9 @@ handlers:
   upload: src/content/en/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3))
 
 - url: /(.*\.ico)
-  static_files: imgs/\1
+  static_files: src/content/en/images/\1
   expiration: 7d
-  upload: imgs/(.*\.ico)
+  upload: src/content/en/images/(.*\.ico)
 
 - url: /web/manifest.json
   static_files: src/content/en/manifest.json

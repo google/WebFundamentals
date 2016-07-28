@@ -4,17 +4,21 @@ description: Two of the hurdles developers face when migrating to HTTPS are conc
 
 # Enabling HTTPS on Your Servers {: .page-title }
 
+{% include "_shared/contributors/chrispalmer.html" %}
+{% include "_shared/contributors/mattgaunt.html" %}
 
+## TL;DR
+
+* You need to create a 2048-bit RSA public and private key pair.
+* Generate a certificate signing request (CSR) which embeds your public key.
+* Share your CSR with your Cerfticate Authority (CA) to receive a final certificate or certificate chain.
+* Install your final certificate in a non-web-accessible place such as `/etc/ssl` (Linux and Unix) or wherever IIS wants them (Windows).
 
 ## Generating keys and certificate signing requests
 
 This section uses the openssl command-line program, which comes with most
 Linux, BSD, and Mac OS X systems, to generate private / public keys and a CSR.
 
-  - "You need to create a 2048-bit RSA public and private key pair."
-  - "Generate a certificate signing request (CSR) which embeds your public key."
-  - "Share your CSR with your Cerfticate Authority (CA) to receive a final certificate or certificate chain."
-  - "Install your final certificate in a non-web-accessible place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows)."
 
 ### Generate A Public/Private Key Pair
 

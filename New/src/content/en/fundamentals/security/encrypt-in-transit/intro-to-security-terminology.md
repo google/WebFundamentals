@@ -4,17 +4,14 @@ description: Two of the hurdles developers face when migrating to HTTPS are conc
 
 # Important Security Terminology {: .page-title }
 
-
+{% include "_shared/contributors/chrispalmer.html" %}
+{% include "_shared/contributors/mattgaunt.html" %}
   
+## TL;DR
 
-
-  - "Public / Private keys are used to sign and decrypt messages between the browser and the server"
-  - "A certificate authority (CA) is an organization that vouches for the mapping between the public keys and public DNS names (such as 'www.foobar.com')"
-  - "A certificate signing request (CSR) is a data format that bundles a public key together with some metadata about the entity that owns the key"
-
-
-
-Two of the hurdles developers face when migrating to HTTPS are concepts and terminology. This guide provides a brief overview of both.
+* Public / Private keys are used to sign and decrypt messages between the browser and the server
+* A certificate authority (CA) is an organization that vouches for the mapping between the public keys and public DNS names (such as 'www.foobar.com')
+* A certificate signing request (CSR) is a data format that bundles a public key together with some metadata about the entity that owns the key
 
 ## What are the Public and Private Key Pairs?
 

@@ -1,6 +1,5 @@
 toc:
   - title: Performance
-    path: /web/fundamentals/performance/
     section:
     - title: Status Text Examples
       status: new
@@ -23,6 +22,22 @@ toc:
       - title: Example Content 6
         status: new
         path: /web/fundamentals/performance/example6
+    - title: Rendering Performance
+      section:
+      - title: Overview
+        path: /web/fundamentals/performance/rendering/
+      - title: Optimizing JavaScript Execution
+        path: /web/fundamentals/performance/rendering/optimize-javascript-execution
+      - title: Reduce the Scope and Complexity of Style Calculations
+        path: /web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations
+      - title: Avoid Large, Complex Layouts and Layout Thrashing
+        path: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing
+      - title: Simplify Paint Complexity and Reduce Paint Areas
+        path: /web/fundamentals/performance/rendering/simplify-paint-complexity-and-reduce-paint-areas
+      - title: Stick to Compositor-Only Properties and Manage Layer Count
+        path: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
+      - title: Debounce Your Input Handlers
+        path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
     - title: Critical Path Rendering
       section:
       - title: Overview

@@ -34,16 +34,18 @@
 
   function highlightActiveNavElement() {
     var elems = document.querySelectorAll('.devsite-section-nav a.devsite-nav-title');
-    elems.forEach(function(elem) {
-      var currentURL = window.location.pathname;
+    var currentURL = window.location.pathname;
+    for (var i = 0; i < elems.length; i++) {
+      var elem = elems[i];
       if (currentURL === elem.getAttribute('href')) {
         var parentLI = elem.parentElement;
         if (parentLI.localName === 'li') {
           parentLI.classList.add('devsite-nav-active');
           expandPathAndHighlight(parentLI);
+          break;
         }
       }
-    });
+    }
   }
 
   function expandPathAndHighlight(elem) {

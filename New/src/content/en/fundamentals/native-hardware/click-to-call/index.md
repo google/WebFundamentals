@@ -6,14 +6,13 @@ description: On devices with phone capabilities, make it easy for users to direc
 
 {% include "_shared/contributors/petelepage.html" %}
 
-
 On devices with phone capabilities, make it easy for users to directly connect
 with you by simply tapping a phone number, more commonly known as click to call.
 
 ## TL;DR
 
-Success: Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema.
-Success: Always use the international dialing format.
+* Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema.
+* Always use the international dialing format.
 
 
 ## Link telephone numbers for click to call

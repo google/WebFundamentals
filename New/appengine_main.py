@@ -50,12 +50,12 @@ class DevSitePages(webapp2.RequestHandler):
           result = result.decode('utf8')
           return result
         except Exception as e:
-          result = '500 Exception occured trying to read: ' + originalPathToFile
+          result = ' - Exception occured trying to read: ' + originalPathToFile
           logging.error(result)
           logging.error(e)
           return None
       else:
-        result = 'ReadFile failed trying to find: ' + originalPathToFile
+        result = ' - ReadFile failed trying to find: ' + originalPathToFile
         logging.error(result)
         return None
 
@@ -93,11 +93,10 @@ class DevSitePages(webapp2.RequestHandler):
               if 'toc' in include and len(include['toc']) == 1:
                 item = include['toc'][0]
             except Exception as e:
-              msg = 'Unable to parsing embedded toc file: ' + item['include'] 
+              msg = ' - Unable to parsing embedded toc file: ' + item['include'] 
               logging.error(msg)
               logging.error(e)
         if 'path' in item:
-          # Single link item
           result += '<li class="devsite-nav-item">\n'
           result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
           result += '<span>' + item['title'] + '</span>\n'
@@ -149,7 +148,7 @@ class DevSitePages(webapp2.RequestHandler):
                   memcache.set(key=pathToBook, value=result, time=3600)
                 return result
         except Exception as e:
-          msg = 'Unable to read or parse primary book.yaml: ' + pathToBook
+          msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
           logging.error(msg)
           logging.error(e)
           whoops += '<p>Exception occured.</p>'
@@ -221,9 +220,18 @@ class DevSitePages(webapp2.RequestHandler):
               leftNav = self.getLeftNav(bookPath)
             else:
               leftNav = 'No book.yaml specified in markdown'
+              logging.warn(' - No book.yaml specified in markdown.')
 
             # Replaces <pre> tags with prettyprint enabled tags
             parsedMarkdown = re.sub(r"^<pre>(?m)", r"<pre class='prettyprint'>", parsedMarkdown)
+
+            # Get the page title from the markup.
+            title = re.search(r"<h1 class=\"page-title\".*?>(.*?)<\/h1>", parsedMarkdown)
+            if title:
+              title = title.group(1)
+            else:
+              title = "Web Fundamentals"
+              logging.warn(' - Page doesn\'t have a title.')
 
             # Build the table of contents & transform so it fits within DevSite
             toc = md.toc
@@ -238,6 +246,7 @@ class DevSitePages(webapp2.RequestHandler):
             toc = re.sub(r"<li>", "<li class=\"devsite-nav-item\">", toc)
  
             text = render("gae/devsite.tpl", {
+              "title": title,
               "leftNav": leftNav,
               "content": parsedMarkdown,
               "toc": toc,
