@@ -198,18 +198,19 @@ class DevSitePages(webapp2.RequestHandler):
               fileContent = re.sub(regex, self.getInclude(include), fileContent)
 
             # Handle Special DevSite Cases
-            fileContent = re.sub(r"^Success: (.*)(?m)", r"<aside class='success'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Dogfood: (.*)(?m)", r"<aside class='dogfood'><strong>Dogfood:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Note: (.*)(?m)", r"<aside class='note'><note>Note:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Caution: (.*)(?m)", r"<aside class='caution'><strong>Caution:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Warning: (.*)(?m)", r"<aside class='warning'><strong>Warning:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Success: (.*)(?m)", r"<aside class='success' markdown='1'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Dogfood: (.*)(?m)", r"<aside class='dogfood' markdown='1'><strong>Dogfood:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Note: (.*)(?m)", r"<aside class='note' markdown='1'><strong>Note:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Caution: (.*)(?m)", r"<aside class='caution' markdown='1'><strong>Caution:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Warning: (.*)(?m)", r"<aside class='warning' markdown='1'><strong>Warning:</strong> <span>\1</span></aside>", fileContent)
 
             # Adds a set of markdown extensions available to us on DevSite
             ext = [
               "markdown.extensions.attr_list", # Adds support for {: #someid }
               "markdown.extensions.meta", # Removes the meta data from the top of the doc
               "markdown.extensions.toc", # Generate the TOC for the right side
-              "markdown.extensions.tables" # Support for Markdown Tables
+              "markdown.extensions.tables", # Support for Markdown Tables
+              "markdown.extensions.extra"
             ]
             md = markdown.Markdown(extensions=ext)
             parsedMarkdown = md.convert(fileContent)
