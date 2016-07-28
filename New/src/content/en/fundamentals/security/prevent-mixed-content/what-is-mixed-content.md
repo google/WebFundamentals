@@ -1,27 +1,21 @@
----
-layout: shared/narrow
-title: "What is mixed content?"
-description: "This guide discusses the dangers mixed content poses to your website and users."
-published_on: 2015-09-25
-updated_on: 2015-10-06
-authors:
-  - johyphenel
-translation_priority: 1
-key-takeaways:
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: Mixed content refers to a webpage where the initial HTML content is loaded over a secure HTTPS connection, but other resources are then loaded into the page over an insecure HTTP connection.
+
+# What is mixed content? {: .page-title }
+
+{% include "_shared/contributors/johyphenel.html" %}
+
   - "HTTPS is important to protect both your site and your users from attack."
   - "Mixed content degrades the security and user experience of your HTTPS site."
-notes:
-  - "Your users are counting on you to protect them when they visit your website. It is important to fix your mixed content issues to protect <b>all</b> your visitors, including those on older browsers."
----
 
-<p class="intro">
-  This guide discusses the dangers mixed content poses to your website and 
-  users.
-</p>
-
-{% include shared/toc.liquid %}
-
-{% include shared/takeaway.liquid list=page.key-takeaways %}
+**Mixed content** refers to a webpage where the initial HTML content is
+loaded over a secure HTTPS connection, but other resources (such as images,
+videos, stylesheets, scripts) are then loaded over an insecure HTTP connection.
+This is called mixed content because both HTTP and HTTPS content are being
+loaded to display the same page, and the initial request was secure over HTTPS.
+Modern browsers display warnings about this type of content to indicate to the
+user that this page contains insecure resources.
 
 ## Resource request and web browsers
 
@@ -101,9 +95,10 @@ requests without restricting the functionality of many sites.
 
 <figure>
   <img src="imgs/image-gallery-warning.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure image. This content should also be served over HTTPS.">
+  <figcaption>
+    It's up to you, the developer, to fix mixed content issues in your application.
+  </figcaption>
 </figure>
-
-It's up to you, the developer, to fix mixed content issues in your application.
 
 ### A simple example
 
@@ -273,4 +268,6 @@ The exact behavior of each browser is constantly changing, so we won't include
 specifics here. If you're interested in how a specific browser behaves, look for 
 information published by the vendors directly. 
 
-{% include shared/remember.liquid list=page.notes %}
+Note: Your users are counting on you to protect them when they visit your website. It is important to fix your mixed content issues to protect <b>all</b> your visitors, including those on older browsers.
+
+

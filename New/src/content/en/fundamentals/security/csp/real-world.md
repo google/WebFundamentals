@@ -1,17 +1,13 @@
----
-layout: shared/narrow
-title: "Real World Usage"
-description: "CSP 1 is quite usable in Chrome, Safari, and Firefox, and has (very) limited support in IE 10. CSP Level 2 was available in Chrome with version 40. "
-published_on: 2012-06-15
-updated_on: 2016-02-19
-authors:
-  - mikewest
-  - josephmedley
-translation_priority: 2
-order: 50
----
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: CSP 1 is quite usable in Chrome, Safari, and Firefox, and has (very) limited support in IE 10. CSP Level 2 was available in Chrome with version 40.
 
-<p class="intro">
+# Real World Usage {: .page-title }
+
+{% include "_shared/contributors/mikewest.html" %}
+{% include "_shared/contributors/josephmedley.html" %}
+
+
 CSP 1 is quite usable in Chrome, Safari, and Firefox, and has (very) limited
 support in IE 10. You can <a href="http://caniuse.com/#feat=contentsecuritypolicy">
 view specifics at canisue.com</a>. CSP Level 2 was available in Chrome with
@@ -19,9 +15,6 @@ version 40. Massive sites like Twitter and Facebook have deployed the header
 (<a href="https://blog.twitter.com/2011/improving-browser-security-csp">Twitter's
 case study</a> is worth a read), and the standard is very much ready
 for you to start deploying on your own sites.
-</p>
-
-{% include shared/toc.liquid %}
 
 The first step towards crafting a policy for your application is to evaluate the
 resources you're actually loading. Once you think you have a handle on how
@@ -95,3 +88,17 @@ effective:
 Even though `https:` was specified in `default-src`, the script and style
 directives don't automatically inherit that source. Each directive overwrites
 the default completely for that specific type of resource.
+
+## The Future
+
+
+Content Security Policy Level 2 is a <a href="http://www.w3.org/TR/CSP2/">
+Candidate Recommendation</a>. The W3C's Web
+Application Security Working Group isn't lounging around, patting itself on the
+back; work has already begun on the specification's next iteration. The next
+version is already under active development.
+
+
+If you're interested in the discussion around these upcoming features,
+[skim the public-webappsec@ mailing list archives](http://lists.w3.org/Archives/Public/public-webappsec/),
+or join in yourself.

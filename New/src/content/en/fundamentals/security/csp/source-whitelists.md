@@ -1,17 +1,12 @@
----
-layout: shared/narrow
-title: "Source Whitelists"
-description: "The issue exploited by XSS attacks is the browser's inability to distinguish between script that's part of your application, and script that's been maliciously injected by a third-party. Instead of blindly trusting everything that a server delivers, CSP defines the Content-Security-Policy HTTP header that allows you to create a whitelist of sources of trusted content, and instructs the browser to only execute or render resources from those sources."
-published_on: 2012-06-15
-updated_on: 2016-02-19
-authors:
-  - mikewest
-  - josephmedley
-translation_priority: 2
-order: 10
----
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: The issue exploited by XSS attacks is the browser's inability to distinguish between script that's part of your application, and script that's been maliciously injected by a third-party. Instead of blindly trusting everything that a server delivers, CSP defines the Content-Security-Policy HTTP header that allows you to create a whitelist of sources of trusted content, and instructs the browser to only execute or render resources from those sources.
 
-<p class="intro" markdown="1">
+# Source Whitelists {: .page-title }
+
+{% include "_shared/contributors/mikewest.html" %}
+{% include "_shared/contributors/josephmedley.html" %}
+
 The issue exploited by XSS attacks is the browser's inability to distinguish
 between script that's part of your application, and script that's been
 maliciously injected by a third-party. For example, the Google +1 button at the
@@ -21,9 +16,6 @@ trust that code, but we can't expect the browser to figure out on it's own that
 code from `apis.google.com` is awesome, while code from `apis.evil.example.com`
 probably isn't. The browser happily downloads and executes any code a page
 requests, regardless of source.
-</p>
-
-{% include shared/toc.liquid %}
 
 Instead of blindly trusting _everything_ that a server delivers, CSP defines the
 `Content-Security-Policy` HTTP header that allows you to create a whitelist of
@@ -44,12 +36,18 @@ controls a set of script-related privileges for a specific page. We've specified
 another. The browser will dutifully download and execute JavaScript from
 `apis.google.com` over HTTPS, as well as from the current page's origin.
 
+<div class="attempt-right">
+  <figure>
+    <img src="images/csp-error.png" alt="Console error: Refused to load the script 'http://evil.example.com/evil.js' because it violates the following Content Security Policy directive: script-src 'self' https://apis.google.com">
+  </figure>
+</div>
+
 With this policy defined, the browser will simply throw an error instead of
 loading script from any other source. When a clever attacker manages to
 inject code into your site, she'll run headlong into an error message, rather
-than the success she was expecting:
+than the success she was expecting.
 
-![Console error: "Refused to load the script 'http://evil.example.com/evil.js' because it violates the following Content Security Policy directive: "script-src 'self' https://apis.google.com"."](images/csp-error.png)
+<div style="clear:both;"></div>
 
 ## Policy Applies to a Wide Variety of Resources
 
@@ -181,8 +179,8 @@ CSPs preferred delivery mechanism is an HTTP header. It can be useful, however,
 to set a policy on a page directly in the markup. Do that using a `<meta>` tag with
 an `http-equiv` attribute:
 
-{% highlight html %}
-<meta http-equiv="Content-Security-Policy" content="default-src https://cdn.example.net; child-src 'none'; object-src 'none'">
-{% endhighlight %}
+
+    <meta http-equiv="Content-Security-Policy" content="default-src https://cdn.example.net; child-src 'none'; object-src 'none'">
+
 
 This can't be used for frame-ancestors, report-uri, or sandbox.

@@ -1,12 +1,25 @@
 toc:
   - title: Security & Identity
-    path: /web/fundamentals/security/
     section:
     - title: Encrypting Data In Transit
       section:
       - title: Enabling HTTPS
-        path: /web/fundamentals/security/encrypt/
+        path: /web/fundamentals/security/encrypt-in-transit/
+    - title: Preventing Mixed Content
+      section:
+      - title: What is Mixed Content?
+        path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
       - title: Preventing Mixed Content
-        path: /web/fundamentals/security/mixed-content/
+        path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
     - title: Content Security Policy
-      path: /web/fundamentals/security/csp/
+      section:
+      - title: Overview
+        path: /web/fundamentals/security/csp/
+      - title: Source Whitelists
+        path: /web/fundamentals/security/csp/source-whitelists
+      - title: The Evils Of Inline Code & Eval
+        path: /web/fundamentals/security/csp/inline-and-eval
+      - title: Reporting
+        path: /web/fundamentals/security/csp/reporting
+      - title: Real World Usage
+        path: /web/fundamentals/security/csp/real-world

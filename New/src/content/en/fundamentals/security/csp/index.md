@@ -1,23 +1,19 @@
----
-layout: shared/narrow-pages-list
-title: "Content Security Policy"
-description: "Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers."
-published_on: 2012-06-15
-updated_on: 2016-02-19
-authors:
-  - mikewest
-  - josephmedley
-translation_priority: 1
-order: 1
----
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: Content Security Policy can significantly reduce the risk and impact of cross-site scripting attacks in modern browsers.
 
-<p class="intro" markdown="1">
-The web's security model is rooted in the [_same origin policy_](http://en.wikipedia.org/wiki/Same_origin_policy).
-Code from `https://mybank.com` should only have access to `https://mybank.com`'s
+# Content Security Policy {: .page-title }
+
+{% include "_shared/contributors/mikewest.html" %}
+{% include "_shared/contributors/josephmedley.html" %}
+
+The web's security model is rooted in the
+[_same origin policy_](http://en.wikipedia.org/wiki/Same_origin_policy). Code
+from `https://mybank.com` should only have access to `https://mybank.com`'s
 data, and `https://evil.example.com` should certainly never be allowed access.
 Each origin is kept isolated from the rest of the web, giving developers a safe
 sandbox in which to build and play. In theory, this is perfectly brilliant. In
-practice, attackers have found clever ways to subvert the system. </p>
+practice, attackers have found clever ways to subvert the system.
 
 [Cross-site scripting (XSS)](http://en.wikipedia.org/wiki/Cross-site_scripting)
 attacks, for example, bypass the same origin policy by tricking a site into
@@ -33,3 +29,9 @@ obviously like to prevent that if possible.
 
 This article highlights a defense that can significantly reduce the risk and
 impact of XSS attacks in modern browsers: Content Security Policy (CSP).
+
+
+
+
+
+

@@ -1,32 +1,22 @@
----
-layout: shared/narrow
-title: "Fixing mixed content"
-description: "Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process."
-published_on: 2015-09-28
-updated_on: 2015-10-06
-authors:
-  - johyphenel
-translation_priority: 1
-key-takeaways:
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
+
+# What is mixed content? {: .page-title }
+
+{% include "_shared/contributors/johyphenel.html" %}
+
+Success: Supporting HTTPS for your website is an important step to protecting your site and your users from attack, but mixed content can render that protection useless. To protect your site and your users, it is very important to find and fix mixed content issues.
+
+Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
+
+This guide discusses tools and techniques to find and fix mixed content; for 
+more information on mixed content itself, see
+[What is Mixed Content](./what-is-mixed-content).
+
   - "Always use https:// URLs when loading resources on your page."
   - "Use <code>Content-Security-Policy-Report-Only</code> header to monitor mixed content errors on your site."
   - "Use <code>upgrade-insecure-requests</code> CSP directive to protect your visitors from insecure content."
-notes:
-  current-page: "Mixed content errors and warnings are only shown for the page your are currently viewing, and the JavaScript console is cleared every time you navigate to a new  page. This means you will have to view every page of your site individually to find these errors. Some errors may only show up after you interact with part of the page, see the image gallery mixed content example from our previous guide."
-  csp: "Browsers enforce <b>all</b> content security policies they receive. Multiple CSP header values received by the browser in the response header or <code>&lt;meta&gt;</code> elements are combined and enforced as single policy; reporting policies are likewise combined. Policies are combined by taking the intersection of the policies; that is to say, each policy after the first can only further restrict the allowed content, not broaden it."
-  important: "Supporting HTTPS for your website is an important step to protecting your site and your users from attack, but mixed content can render that protection useless. To protect your site and your users, it is very important to find and fix mixed content issues."
----
-
-<p class="intro">
-  Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
-</p>
-
-This guide discusses tools and techniques to find and fix mixed content; for 
-more information on mixed content itself, see our [previous guide](.) on this topic.
-
-{% include shared/toc.liquid %}
-
-{% include shared/takeaway.liquid list=page.key-takeaways %}
 
 ## Find and fix mixed content 
 
@@ -52,9 +42,7 @@ The [passive mixed content example](https://googlesamples.github.io/web-fundamen
   <img src="imgs/passive-mixed-content-warnings.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure video. This content should also be served over HTTPS.">
 </figure>
 
-{% link_sample_button src=_code/passive-mixed-content.html %}
-  Try sample
-{% endlink_sample_button %}
+<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/security/prevent-mixed-content/passive-mixed-content.html" class="external">Try Sample</a>
 
 While the active mixed content example will cause mixed content errors to be 
 displayed:
@@ -63,15 +51,14 @@ displayed:
   <img src="imgs/active-mixed-content-errors.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure resource. This request has been blocked; the content must be served over HTTPS.">
 </figure>
 
-{% link_sample_button src=_code/active-mixed-content.html %}
-  Try sample
-{% endlink_sample_button %} 
+<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/security/prevent-mixed-content/active-mixed-content.html" class="external">Try Sample</a>
+
 
 The `http://` URLs listed in these errors and warnings should be fixed in your 
 site's source, it helps to make a list of these URLs, along with the page you 
 found them on, to help you fix them later. 
 
-{% include shared/remember.liquid list=page.notes.current-page %}
+Note: Mixed content errors and warnings are only shown for the page your are currently viewing, and the JavaScript console is cleared every time you navigate to a new  page. This means you will have to view every page of your site individually to find these errors. Some errors may only show up after you interact with part of the page, see the image gallery mixed content example from our previous guide.
 
 ### Finding mixed content in your source code
 
@@ -97,10 +84,8 @@ Assuming you have the following mixed content error in Chrome:
 </figure>
 
 Which you found in source here:
-
-{% highlight html %}  
-<img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg"> 
-{% endhighlight %}
+ 
+    <img src="http://googlesamples.github.io/web-fundamentals/.../puppy.jpg"> 
 
 #### Step 1
 
@@ -110,30 +95,46 @@ your browser, enter the URL in the address bar, and change `http://` to `https:/
 If the resource displayed is the same over **HTTP** and **HTTPS**, everything is OK, 
 proceed to [step 2](#step-2).
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="imgs/puppy-http.png">
-    <figcaption class="wf-figcaption-good">HTTP image loads without error.</figcaption>
+    <figcaption class="success">
+      HTTP image loads without error.
+     </figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="imgs/puppy-https.png">
-    <figcaption class="wf-figcaption-good">HTTPS image loads without error, and image is the same as HTTP. Go to <a href="#step-2">step 2</a>!</figcaption>
-   </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="imgs/puppy-https.png">
+    <figcaption class="success">
+      HTTPS image loads without error, and image is the same as HTTP. Go to <a href="#step-2">step 2</a>!
+     </figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 If you see a certificate warning, or if the content can't be displayed over
 **HTTPS**, it means the resource is not available securely.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="imgs/https-not-available.png">
-    <figcaption class="wf-figcaption-bad">Resource not available over HTTPS.</figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="imgs/https-cert-warning.png">
-    <figcaption class="wf-figcaption-bad">Certificate warning when attempting to view resource over HTTPS.</figcaption>
+    <figcaption class="warning">
+      Resource not available over HTTPS
+     </figcaption>
   </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="imgs/https-cert-warning.png">
+    <figcaption class="warning">
+      Certificate warning when attempting to view resource over HTTPS.
+     </figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 In this case, you should consider one of the following options:
 
@@ -174,10 +175,11 @@ ensure that your pages never unexpectedly load insecure resources.
 
 ### Content security policy
 
-**Content security policy** (CSP) is a multi-purpose browser feature that you 
-can use to manage mixed content at scale. The CSP reporting mechanism can be 
-used to track the mixed content on your site; and the enforcement policy, to 
-protect users by upgrading or blocking mixed content. 
+[**Content security policy**](/web/fundamentals/security/csp/) (CSP) is a
+multi-purpose browser feature that you can use to manage mixed content at 
+scale. The CSP reporting mechanism can be used to track the mixed content on
+your site; and the enforcement policy, to protect users by upgrading or
+blocking mixed content. 
 
 You can enable these features for a page by including the 
 `Content-Security-Policy` or `Content-Security-Policy-Report-Only` header in the 
@@ -194,11 +196,7 @@ more information about other CSP directives at the following resources:
 * [CSP playground](http://www.cspplayground.com/)
 * [CSP spec](http://www.w3.org/TR/CSP/)
 
-<!-- Span required to prevent rest of page from being indented. 
-https://github.com/google/WebFundamentals/issues/1873 -->
-<span></span>
-
-{% include shared/remember.liquid list=page.notes.csp %}
+Note: Browsers enforce <b>all</b> content security policies they receive. Multiple CSP header values received by the browser in the response header or <code>&lt;meta&gt;</code> elements are combined and enforced as single policy; reporting policies are likewise combined. Policies are combined by taking the intersection of the policies; that is to say, each policy after the first can only further restrict the allowed content, not broaden it.
 
 ### Finding mixed content with content security policy 
 
@@ -207,9 +205,8 @@ site. To enable this feature, set the `Content-Security-Policy-Report-Only`
 directive by adding it as a response header for your site. 
 
 Response header:  
-{% highlight http %}
-Content-Security-Policy-Report-Only: default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://example.com/reportingEndpoint 
-{% endhighlight %}
+
+    Content-Security-Policy-Report-Only: default-src https: 'unsafe-inline' 'unsafe-eval'; report-uri https://example.com/reportingEndpoint 
 
 
 Whenever a user visits a page on your site, their browser sends JSON-formatted 
@@ -244,9 +241,9 @@ before making network requests.
 
 As an example, if a page contains an image tag with a HTTP URL:
 
-{% highlight html %}  
-<img src="http://example.com/image.jpg"> 
-{% endhighlight %}
+ 
+    <img src="http://example.com/image.jpg"> 
+
 
 The browser instead makes a secure request for 
 <code><b>https:</b>//example.com/image.jpg</code>, thus saving the user from mixed 
@@ -255,16 +252,16 @@ content.
 You can enable this behavior either by sending a `Content-Security-Policy` header 
 with this directive:
 
-{% highlight http %}  
-Content-Security-Policy: upgrade-insecure-requests  
-{% endhighlight %}
+
+    Content-Security-Policy: upgrade-insecure-requests  
+
 
 Or by embedding that same directive inline in the document's `<head>` 
 section using a `<meta>` element:
 
-{% highlight html %}  
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
-{% endhighlight %}
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">  
+
 
 It is worth noting, that if the resource is not available over HTTPS, the 
 upgraded request fails and the resource is not loaded. This maintains the 
@@ -286,20 +283,18 @@ ensuring the entire page is mixed content free.
 A page can opt itself into this behavior either by sending a 
 `Content-Security-Policy` header with this directive:
 
-{% highlight http %}  
-Content-Security-Policy: block-all-mixed-content  
-{% endhighlight %}
+  
+    Content-Security-Policy: block-all-mixed-content  
+
 
 Or by embedding that same directive inline in the document's `<head>` 
 section using a `<meta>` element:
 
-{% highlight html %}  
-<meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
-{% endhighlight %}
+  
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+
 
 The downside of using `block-all-mixed-content` is, perhaps obviously, that all 
 content is blocked. This is a security improvement, but it means that these 
 resources are no longer available on the page. This might break features and 
 content your users expect to be available. 
-
-{% include shared/remember.liquid list=page.notes.important %}
