@@ -3,8 +3,12 @@ toc:
     section:
     - title: Encrypting Data In Transit
       section:
-      - title: Enabling HTTPS
-        path: /web/fundamentals/security/encrypt-in-transit/
+      - title: Why HTTPS
+        path: /web/fundamentals/security/encrypt-in-transit/why-https
+      - title: Important Security Terminology
+        path: /web/fundamentals/security/encrypt-in-transit/intro-to-security-terminology
+      - title: Enabling HTTPS on Your Servers
+        path: /web/fundamentals/security/encrypt-in-transit/enable-https
     - title: Preventing Mixed Content
       section:
       - title: What is Mixed Content?

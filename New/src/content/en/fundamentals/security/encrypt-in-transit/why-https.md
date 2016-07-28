@@ -1,26 +1,19 @@
----
-layout: shared/narrow
-title: "Why you should always use HTTPS"
-description: "You should always protect all of your websites with HTTPS, 
-even if they don’t handle sensitive communications. HTTPS provides 
-critical security and data integrity both for your websites and for the 
-people that entrust your websites with their personal information."
-authors:
-  - kaycebasques
-published_on: 2015-11-23	
-updated_on: 2015-11-23
-order: 1
-translation_priority: 0
----
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: You should always protect all of your websites with HTTPS, even if they don’t handle sensitive communications. HTTPS provides critical security and data integrity both for your websites and for the people that entrust your websites with their personal information.
+
+# Why HTTPS Matters {: .page-title }
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="9WuP4KcDBpI"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 You should always protect all of your websites with HTTPS,
 even if they don’t handle sensitive communications. HTTPS provides
 critical security and data integrity both for your websites and for the
 people that entrust your websites with their personal information.
-
-{% ytvideo 9WuP4KcDBpI %}
-
-{% include shared/toc.liquid %}
 
 ## HTTPS protects the integrity of your website 
 
@@ -67,4 +60,9 @@ the
 [geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
 API. HTTPS is a key component to the permission workflows 
 for both these new features and updated APIs.
+
+
+
+
+
 
