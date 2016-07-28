@@ -239,9 +239,8 @@ that don't need it.
 ### Floating images on the right
 
 <div class="attempt-right">
-  <figure id="fig1">
-    <img src="https://placehold.it/350x150"
-      alt="Alert dialog">
+  <figure>
+    <img src="https://placehold.it/350x150" alt="Alert dialog">
     <figcaption><b>Figure 1</b>: Alert dialog</figcaption>
   </figure>
 </div>
@@ -255,9 +254,8 @@ together, make sure the `attempt-left` element comes first.
 <div style="clear:both;"></div>
 
     <div class="attempt-right">
-      <figure id="fig1">
-        <img src="https://placehold.it/350x150"
-          alt="Alert dialog">
+      <figure>
+        <img src="https://placehold.it/350x150" alt="Alert dialog">
         <figcaption><b>Figure 1</b>: Alert dialog</figcaption>
       </figure>
     </div>
@@ -271,18 +269,16 @@ to indicate a good or bad example.
 
 
 <div class="attempt-left">
-  <figure id="fig1">
-    <img src="https://placehold.it/350x150"
-      alt="Alert dialog">
+  <figure>
+    <img src="https://placehold.it/350x150" alt="Alert dialog">
     <figcaption class="success">
       <b>DO</b>: This is the right thing to do
      </figcaption>
   </figure>
 </div>
 <div class="attempt-right">
-  <figure id="fig1">
-    <img src="https://placehold.it/350x150"
-      alt="Alert dialog">
+  <figure>
+    <img src="https://placehold.it/350x150" alt="Alert dialog">
     <figcaption class="warning">
       <b>DON'T</b>: This is the wrong thing to do
      </figcaption>
@@ -292,18 +288,16 @@ to indicate a good or bad example.
 <div style="clear:both;"></div>
 
     <div class="attempt-left">
-      <figure id="fig1">
-        <img src="https://placehold.it/350x150"
-          alt="Alert dialog">
+      <figure>
+        <img src="https://placehold.it/350x150" alt="Alert dialog">
         <figcaption class="success">
           <b>DO</b>: This is the right thing to do
          </figcaption>
       </figure>
     </div>
     <div class="attempt-right">
-      <figure id="fig1">
-        <img src="https://placehold.it/350x150"
-          alt="Alert dialog">
+      <figure>
+        <img src="https://placehold.it/350x150" alt="Alert dialog">
         <figcaption class="warning">
           <b>DON'T</b>: This is the wrong thing to do
          </figcaption>
