@@ -6,4 +6,4 @@ toc:
     - title: User Location
       path: /web/fundamentals/native-hardware/geoloc
     - title: Device Orientation
-      path: /web/fundamentals/native-hardware/dev-o
+      path: /web/fundamentals/native-hardware/device-orientation/
