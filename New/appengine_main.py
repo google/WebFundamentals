@@ -24,6 +24,7 @@ from datetime import datetime, timedelta
 from urlparse import urljoin
 import os
 import re
+import devsite
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
@@ -204,6 +205,8 @@ class DevSitePages(webapp2.RequestHandler):
           fileLocations = [
             os.path.join(searchPath, lang, path, 'index.md'),
             os.path.join(searchPath, 'en', path, 'index.md'),
+            os.path.join(searchPath, lang, path, '_index.yaml'),
+            os.path.join(searchPath, 'en', path, '_index.yaml'),
           ]
         else:
           fileLocations = [
@@ -220,6 +223,10 @@ class DevSitePages(webapp2.RequestHandler):
             fileContent = fileContent.decode("utf8")
 
             logging.info("200 " + fileLocation)
+
+            if fileLocation.endswith('_index.yaml'):
+              text = devsite.generateHTMLfromYaml(lang, fileContent)
+              break
 
             # Remove any comments {# something #} from the markdown
             fileContent = re.sub(r"{#.+?#}", "", fileContent)
