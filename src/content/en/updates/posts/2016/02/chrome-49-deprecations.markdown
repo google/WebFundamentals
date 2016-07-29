@@ -3,7 +3,7 @@ layout: updates/post
 title: "API Deprecations and Removals in Chrome 49 "
 description: "An round up of the deprecations and API removals in Chrome to help you plan."
 published_on: 2016-02-02
-updated_on: 2016-02-02
+updated_on: 2016-07-29
 authors:
   - paulkinlan
 tags:
@@ -90,7 +90,7 @@ will have to fix your code.
 has been deprecated in favor of the
 [`TouchEvent`](https://w3c.github.io/touch-events/#touch-interface)
 [`constructor`](https://w3c.github.io/touch-events/#touch-interface) to improve
-spec compliance and will be removed altogether in Chrome 53.
+spec compliance and will be removed altogether in Chrome 54.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dqlJguVuIHs)
 [Chromestatus Tracker](https://www.chromestatus.com/features/5730982598541312)
