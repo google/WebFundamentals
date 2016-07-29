@@ -204,9 +204,7 @@ element that extends `<img>` needs to extend `HTMLImageElement`.
 Notice that the call to `define()` changes slightly when extending a native element. The required third parameter tells the browser which tag you're extending. This is necessary because many HTML tags share the same DOM interface. `<section>`, `<address>`, and `<em>` (among others) all share `HTMLElement`; both `<q>` and `<blockquote>` share `HTMLQuoteElement`; etc.. Specifying `{extends: 'blockquote'}` lets the browser know you're creating a souped-up `<blockquote>` instead of a `<q>`. See [the HTML spec](https://html.spec.whatwg.org/multipage/indices.html#element-interfaces) for
 the full list of HTML's DOM interfaces.
 
-> Extending `HTMLButtonElement` endows our fancy button with all the DOM properties/methods
-of `<button>`. That checks off a bunch of stuff we don't have to implement ourselves: `disabled` property, `click()` method, `keydown` listeners, `tabindex` management. Instead, our focus can be progressively enhancing `<button>` with custom functionality, namely, the `drawRipple()` method. Less code, more reuse!
-{: .wf-talkinghead }
+Note: Extending `HTMLButtonElement` endows our fancy button with all the DOM properties/methods of `<button>`. That checks off a bunch of stuff we don't have to implement ourselves: `disabled` property, `click()` method, `keydown` listeners, `tabindex` management. Instead, our focus can be progressively enhancing `<button>` with custom functionality, namely, the `drawRipple()` method. Less code, more reuse!
 
 Consumers of a customized built-in element can use it in several ways.
 They can declare it by adding the `is=""` attribute on the native tag:
