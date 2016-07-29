@@ -27,13 +27,12 @@ import re
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
-SOURCE_PATH = 'src/content'
 USE_MEMCACHE = not os.environ['SERVER_SOFTWARE'].startswith('Dev')
 DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 
 class HomePage(webapp2.RequestHandler):
     def get(self):
-        self.redirect("/web/index", permanent=True)
+        self.redirect("/web/", permanent=True)
 
 class DevSitePages(webapp2.RequestHandler):
     def readFile(self, pathToFile):
@@ -200,14 +199,17 @@ class DevSitePages(webapp2.RequestHandler):
         lang = self.request.get('hl', 'en')
         sourcePath = 'src/content'
 
-        fileLocations = [
-          os.path.join(os.path.dirname(__file__), sourcePath, lang, path),
-          os.path.join(os.path.dirname(__file__), sourcePath, lang, path) + ".md",
-          os.path.join(os.path.dirname(__file__), sourcePath, lang, path, "index.md"),
-          os.path.join(os.path.dirname(__file__), sourcePath, "en", path),
-          os.path.join(os.path.dirname(__file__), sourcePath, "en", path) + ".md",
-          os.path.join(os.path.dirname(__file__), sourcePath, "en", path, "index.md")
-        ]
+        searchPath = os.path.join(os.path.dirname(__file__), sourcePath)
+        if path == '' or path.endswith('/'):
+          fileLocations = [
+            os.path.join(searchPath, lang, path, 'index.md'),
+            os.path.join(searchPath, 'en', path, 'index.md'),
+          ]
+        else:
+          fileLocations = [
+            os.path.join(searchPath, lang, path) + '.md',
+            os.path.join(searchPath, 'en', path) + '.md',
+          ]
 
         text = None
         for fileLocation in fileLocations:
@@ -296,7 +298,7 @@ class DevSitePages(webapp2.RequestHandler):
             toc = re.sub(r"<a href", "<a class=\"devsite-nav-title\" href", toc)
             toc = re.sub(r"<li>", "<li class=\"devsite-nav-item\">", toc)
  
-            text = render("gae/devsite.tpl", {
+            text = render("gae/article.tpl", {
               "title": title,
               "leftNav": leftNav,
               "content": parsedMarkdown,
@@ -306,8 +308,8 @@ class DevSitePages(webapp2.RequestHandler):
             break
 
         if text is None:
-          text = "404 " + os.path.join(sourcePath, lang, path)
-          logging.error(text)
+          text = render("gae/404.tpl", {})
+          logging.error("404 " + os.path.join(sourcePath, lang, path))
           self.response.set_status(404)
 
         self.response.out.write(text)
@@ -315,10 +317,5 @@ class DevSitePages(webapp2.RequestHandler):
 # The '/' entry is a redirect to /web/ - just a convenience thing
 app = webapp2.WSGIApplication([
     ('/', HomePage),
-    ('/web/(.*)/', DevSitePages),
     ('/web/(.*)', DevSitePages),
-    #('/web/showcase/(.+)', DevSitePages),
-    #('/web/showcase/(.*)', DevSitePages),
-    #('/web/(.+)/', AllPages),
-    #('/web/(.*)', AllPages)
 ], debug=True)
