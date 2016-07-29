@@ -150,7 +150,22 @@ also checks for the file in the en locale before failing.
 
 <pre class="prettyprint">
 &lt;pre class="prettyprint">
-  &#123;% includecode content_path="myproject/_samples/hello.cc" %}
+  &#123;% includecode content_path="web/fundamentals/resources/_code/file.js" %}
+&lt;/pre>
+</pre>
+
+Includes can be limited by using `region_tag="region"` and including a 
+`[START region]` and `[END region]` within the code file.
+
+By default `includecode` returns the specified section of the source code,
+including whitespace, without modification. This may be undesired if the
+specified region is deeply indented in the source file as it may appear out of
+line with the rest of the documentation. You can adjust the indentation of the
+included code with the `adjust_indentation="auto"` option.
+
+<pre class="prettyprint">
+&lt;pre class="prettyprint">
+  &#123;% includecode content_path="path/file.js" adjust_indentation="auto" %}
 &lt;/pre>
 </pre>
 

@@ -159,7 +159,9 @@ some image gallery scripts overrides the functionality of the `<a>` tag and
 load the HTTP resource specified by the `href` attribute into a lightbox display 
 on the page, causing a mixed content problem. 
 
-{% include_code src=_code/image-gallery-example.html snippet=snippet1 %}
+<pre class="prettyprint">
+{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html region_tag=snippet1 adjust_indentation="auto" %}
+</pre>
 
 In the code above, it may seem safe to leave the `<a>` tags href as `http://`, 
 however if you view the sample and click on the image, you'll see that it loads 
@@ -196,7 +198,12 @@ more information about other CSP directives at the following resources:
 * [CSP playground](http://www.cspplayground.com/)
 * [CSP spec](http://www.w3.org/TR/CSP/)
 
-Note: Browsers enforce <b>all</b> content security policies they receive. Multiple CSP header values received by the browser in the response header or <code>&lt;meta&gt;</code> elements are combined and enforced as single policy; reporting policies are likewise combined. Policies are combined by taking the intersection of the policies; that is to say, each policy after the first can only further restrict the allowed content, not broaden it.
+Note: Browsers enforce <b>all</b> content security policies they receive.
+Multiple CSP header values received by the browser in the response header or
+<code>&lt;meta&gt;</code> elements are combined and enforced as single policy;
+reporting policies are likewise combined. Policies are combined by taking the
+intersection of the policies; that is to say, each policy after the first can
+only further restrict the allowed content, not broaden it.
 
 ### Finding mixed content with content security policy 
 
