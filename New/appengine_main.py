@@ -14,10 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+import cgi
 import webapp2
 import logging
 import markdown
 import yaml
+import textwrap
 from datetime import datetime, timedelta
 from urlparse import urljoin
 import os
@@ -25,6 +27,7 @@ import re
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
+SOURCE_PATH = 'src/content'
 USE_MEMCACHE = not os.environ['SERVER_SOFTWARE'].startswith('Dev')
 DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 
@@ -78,6 +81,41 @@ class DevSitePages(webapp2.RequestHandler):
         return 'Warning: Unable to find include <code>' + fileName + '</code>'
       if USE_MEMCACHE:
         memcache.set(key=pathToInclude, value=result, time=3600)
+      return result
+
+    def getIncludeCode(self, includeTag):
+      # Returns the contents of an includecode file. If the file is not found,
+      # it returns a warning into the doc. Otherwise it returns the file.
+      # It also handles start and end regions and can unindent code as requested
+      if USE_MEMCACHE:
+        result = memcache.get(includeTag)
+        if result is not None:
+          return result
+      # Get the filename, the region and indent adjustment parameters
+      fileRegEx = re.search(r"content_path=['\"]?(.+?)['\" ]", includeTag)
+      regionRegEx = re.search(r"region_tag=['\"]?(.+?)['\" ]", includeTag)
+      dedentRegEx = re.search(r"adjust_indentation=['\"]?(.+?)['\" ]", includeTag)
+      if fileRegEx is None:
+        msg = 'Warning: No <code>content_path</code> specified for ' + includeTag
+        logging.warn(' - ' + msg)
+        return msg
+      fileName = fileRegEx.group(1)
+      result = self.readFile(fileName)
+      if result is None:
+        return 'Warning: Unable to find includecode <code>' + fileName + '</code>'
+      if regionRegEx is not None:
+        regionName = regionRegEx.group(1)
+        startAt = result.find('[START ' + regionName + ']')
+        if startAt >= 0:
+          startAt = result.find('\n', startAt) + 1
+          endAt = result.find('[END ' + regionName + ']')
+          endAt = result.rfind('\n', startAt, endAt)
+          result = result[startAt:endAt]
+      if dedentRegEx and dedentRegEx.group(1) == 'auto':
+        result = textwrap.dedent(result)
+      result = cgi.escape(result)
+      if USE_MEMCACHE:
+        memcache.set(key=includeTag, value=result, time=3600)
       return result
 
 
@@ -184,11 +222,23 @@ class DevSitePages(webapp2.RequestHandler):
             # Remove any comments {# something #} from the markdown
             fileContent = re.sub(r"{#.+?#}", "", fileContent)
 
-            # Show Angry Warning About Unsupported Elements
-            fileContent = re.sub(r"{% link_sample_button .+%}", r"<aside class='warning'>Web<strong>FUNDAMENTALS</strong>: <span>Unsupported tag {% link_sample_button ... %}</span></aside>", fileContent)
+            # Show warning for unsupported elements
+            badTags = [
+              r"{% link_sample_button .+%}",
+              r"{% include_code (.+)%}"
+            ]
+            for tag in badTags:
+              if re.search(tag, fileContent) is not None:
+                logging.warn(' - Unsupported tag: ' + tag)
+                replaceWith = '<aside class="warning">Web<strong>Fundamentals</strong>: '
+                replaceWith += '<span>Unsupported tag: <code>' + tag + '</code></span></aside>'
+                fileContent = re.sub(tag, replaceWith, fileContent)
 
-            # TODO: Replace this with actual functionality to include code.
-            fileContent = re.sub(r"{% include_code (.+)%}", r"<aside class='dogfood'><strong>include_code:</strong> <code>\1</code></aside>", fileContent)
+            # Injects includecode into the markdown as appropriate
+            includes = re.findall(r'{% includecode .+%}', fileContent)
+            for include in includes:
+              regex = r'^' + include + '(?m)'
+              fileContent = re.sub(regex, self.getIncludeCode(include), fileContent)
 
             # Injects includes into the markdown as appropriate
             includes = re.findall(r'{% include .+%}', fileContent)
@@ -197,11 +247,11 @@ class DevSitePages(webapp2.RequestHandler):
               fileContent = re.sub(regex, self.getInclude(include), fileContent)
 
             # Handle Special DevSite Cases
-            fileContent = re.sub(r"^Success: (.*)(?m)", r"<aside class='success' markdown='1'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Dogfood: (.*)(?m)", r"<aside class='dogfood' markdown='1'><strong>Dogfood:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Note: (.*)(?m)", r"<aside class='note' markdown='1'><strong>Note:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Caution: (.*)(?m)", r"<aside class='caution' markdown='1'><strong>Caution:</strong> <span>\1</span></aside>", fileContent)
-            fileContent = re.sub(r"^Warning: (.*)(?m)", r"<aside class='warning' markdown='1'><strong>Warning:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Success: (.*?)\n{2}(?ms)", r"<aside class='success' markdown='1'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Dogfood: (.*?)\n{2}(?ms)", r"<aside class='dogfood' markdown='1'><strong>Dogfood:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Note: (.*?)\n{2}(?ms)", r"<aside class='note' markdown='1'><strong>Note:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Caution: (.*?)\n{2}(?ms)", r"<aside class='caution' markdown='1'><strong>Caution:</strong> <span>\1</span></aside>", fileContent)
+            fileContent = re.sub(r"^Warning: (.*?)\n{2}(?ms)", r"<aside class='warning' markdown='1'><strong>Warning:</strong> <span>\1</span></aside>", fileContent)
 
             # Adds a set of markdown extensions available to us on DevSite
             ext = [
