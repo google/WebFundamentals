@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Configure and Customize DevTools"
 description: "Change the appearance of DevTools and access hidden features."
 published_on: 2016-03-29
-updated_on: 2016-03-29
+updated_on: 2016-07-27
 order: 1
 authors:
   - kaycebasques
@@ -36,6 +36,14 @@ of the DevTools window.
 
 To open the DevTools Settings, press <kbd>F1</kbd> while DevTools is in focus,
 or [open the Main Menu](#main-menu) and then select **Settings**.
+
+## Open the Command Menu {#command-menu}
+
+Press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux) to open the
+Command Menu.
+
+![command menu](images/command-menu.png)
 
 ## Reorder panel tabs {#panel-tabs}
 
