@@ -71,12 +71,12 @@ A melhor solicitação é uma solicitação que não precise se comunicar com o 
 
 Em contrapartida, `no-store` é muito mais simples, pois ele simplesmente proíbe o navegador e todos os caches intermediários de armazenar uma versão da resposta retornada, por exemplo, uma que contenha dados pessoais ou dados bancários. Sempre que o usuário solicita esse recurso, uma solicitação é enviada ao servidor e uma resposta completa é transferida.
 
-### `pública` versus `particular`
+### `public` versus `private`
 
-Se a resposta for marcada como `pública`, ela pode ser armazenada em cache, mesmo se tiver autenticação HTTP associada e mesmo quando o código de status da resposta normalmente não puder ser armazenado em cache. Na maioria das vezes, a opção `pública` não é necessária, pois informações explícitas sobre o armazenamento em cache (como `max-age`) indicam
+Se a resposta for marcada como `public`, ela pode ser armazenada em cache, mesmo se tiver autenticação HTTP associada e mesmo quando o código de status da resposta normalmente não puder ser armazenado em cache. Na maioria das vezes, a opção `public` não é necessária, pois informações explícitas sobre o armazenamento em cache (como `max-age`) indicam
 que a resposta pode ser armazenada em cache de qualquer maneira.
 
-Em contrapartida, as respostas `particulares` podem ser armazenadas em cache pelo navegador, mas normalmente são destinadas a um só usuário, portanto, não podem ser armazenadas por um cache intermediário. Por exemplo, uma página HTML com informações particulares do usuário pode ser armazenada em cache pelo navegador desse usuário, mas não por um CDN.
+Em contrapartida, as respostas `private` podem ser armazenadas em cache pelo navegador, mas normalmente são destinadas a um só usuário, portanto, não podem ser armazenadas por um cache intermediário. Por exemplo, uma página HTML com informações particulares do usuário pode ser armazenada em cache pelo navegador desse usuário, mas não por um CDN.
 
 ### `max-age`
 
@@ -97,10 +97,10 @@ Siga a árvore de decisão acima para determinar a política de armazenamento em
 </thead>
 <tr>
   <td data-th="controle de cache">max-age=86400</td>
-  <td data-th="explicação">A resposta pode ser armazenada em cache pelo navegador e por qualquer cache intermediário (ou seja, ela é `pública`) por até um dia (60 segundos x 60 minutos x 24 horas)</td>
+  <td data-th="explicação">A resposta pode ser armazenada em cache pelo navegador e por qualquer cache intermediário (ou seja, ela é `public`) por até um dia (60 segundos x 60 minutos x 24 horas)</td>
 </tr>
 <tr>
-  <td data-th="controle de cache">particular, max-age=600</td>
+  <td data-th="controle de cache">private, max-age=600</td>
   <td data-th="explicação">A resposta só pode ser armazenada em cache pelo navegador do cliente por até 10 minutos (60 segundos x 10 minutos)</td>
 </tr>
 <tr>
@@ -132,7 +132,7 @@ efinir `hierarquias de cache`, com as quais é possível controlar não só o pe
 * O HTML está marcado com `no-cache`, o que significa que o navegador sempre revalidará o documento a cada solicitação e buscará a versão mais recente se o conteúdo mudar. Além disso, dentro da marcação HTML, integramos
 A capacidade de definir políticas de armazenamento em cache por recurso permite d impressões digitais nos URLs para recursos de CSS e JavaScript: se o conteúdo desses arquivos mudar, o HTML da página também mudará e será feito o download da nova cópia da resposta HTML.
 * O CSS tem permissão para ser armazenado por navegadores e por caches intermediários (por exemplo, um CDN) e está configurado para expirar em um ano. Podemos usar esse prazo longo de expiração com segurança porque integramos a impressão digital do arquivo em seu nome: se o CSS for atualizado, o URL também mudará.
-* O JavaScript também está configurado para expirar em um ano, mas está marcado como particular, talvez porque contenha alguns dados pessoais do usuário que o CDN não deve armazenar em cache.
+* O JavaScript também está configurado para expirar em um ano, mas está marcado como `private`, talvez porque contenha alguns dados pessoais do usuário que o CDN não deve armazenar em cache.
 * A imagem é armazenada em cache sem uma versão ou impressão digital única e é configurada para expirar em um dia.
 
 A combinação entre ETag, controle de cache e URLs únicos permite oferecer o melhor de todos os mundos: tempos de expiração longos, controle sobre onde a resposta pode ser armazenada em cache e atualizações sob demanda.
