@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Bringing easy and fast checkout with Payment Request API"
-description: ""
+description: "Payment Request is a new API for the open web that makes checkout flows easier, faster and consistent."
 published_on: 2016-07-29
 updated_on: 2016-07-29
 authors:
@@ -11,14 +11,14 @@ tags:
   - payment
 ---
 
-It's no surprise that the majority of online shopping is happening on mobile devices these days. But did you know that 66% of mobile purchases are made through websites rather than apps?  Unfortunately though, conversion rate on mobile websites is only 33% of that on desktop. We need to fix this.
+It's no surprise that the majority of online shopping is happening on mobile devices these days. But did you know that 66% of mobile purchases are made through websites rather than apps?  Unfortunately though, conversion rate on mobile websites is only 33% of that on desktop. We need to fix this.
 
 Chrome 53 for Android (desktop to be supported in the future) introduces a new API called [Payment Request API](https://www.w3.org/TR/payment-request/) - a new approach for developers to entirely eliminate checkout forms and evolve user's payment experience from the ground up.
 
 # Introducing Payment Request API
 Payment Request is a new API for the open web that makes checkout flows easier, faster and consistent on shopping sites.
 
-[Embed a demo video](https://www.youtube.com/watch?v=vZ_0Dvwsvp0)
+{% ytvideo vZ_0Dvwsvp0 %}
 
 * Provides a native user interface for users to select or add a payment method, a shipping address and a shipping option in an easy, fast and consistent way.
 * Provides standardized imperative APIs for developers to obtain user's payment preferences in a consistent format.
@@ -27,133 +27,135 @@ Payment Request is a new API for the open web that makes checkout flows easier, 
 # How Payment Request API works
 Let's peek at how Payment Request API works in some code. Here's a minimal example that collects a user's credit card information and submits it to a server.
 
-```
+{% highlight js %}
 function onBuyClicked() {
-  if (!window.PaymentRequest) {
-    // PaymentRequest API is not available. Forwarding to
-    // legacy form based experience.
-    location.href = '/checkout';
-    return;
-  }
+  if (!window.PaymentRequest) {
+    // PaymentRequest API is not available. Forwarding to
+    // legacy form based experience.
+    location.href = '/checkout';
+    return;
+  }
 
-  // Supported payment methods
-  var supportedInstruments = [{
-    supportedMethods: [
-      'visa', 'mastercard', 'amex', 'discover',
-      'diners', 'jcb', 'unionpay'
-    ]
-  }];
+  // Supported payment methods
+  var supportedInstruments = [{
+    supportedMethods: [
+      'visa', 'mastercard', 'amex', 'discover',
+      'diners', 'jcb', 'unionpay'
+    ]
+  }];
 
-  // Checkout details
-  var details = {
-    displayItems: [{
-      label: 'Original donation amount',
-      amount: { currency: 'USD', value: '65.00' }
-    }, {
-      label: 'Friends and family discount',
-      amount: { currency: 'USD', value: '-10.00' }
-    }],
-    total: {
-      label: 'Total due',
-      amount: { currency: 'USD', value : '55.00' }
-    }
-  };
+  // Checkout details
+  var details = {
+    displayItems: [{
+      label: 'Original donation amount',
+      amount: { currency: 'USD', value: '65.00' }
+    }, {
+      label: 'Friends and family discount',
+      amount: { currency: 'USD', value: '-10.00' }
+    }],
+    total: {
+      label: 'Total due',
+      amount: { currency: 'USD', value : '55.00' }
+    }
+  };
 
-  // 1. Create a `PaymentRequest` instance
-  var request = new PaymentRequest(supportedInstruments, details);
+  // 1. Create a `PaymentRequest` instance
+  var request = new PaymentRequest(supportedInstruments, details);
 
-  // 2. Show the native UI with `.show()`
-  request.show()
-  // 3. `POST` the payment info to the server upon "Pay"
-  .then(result =&gt; {
-    var data = {};
-    data.methodName = result.methodName;
-    data.details    = result.details;
+  // 2. Show the native UI with `.show()`
+  request.show()
+  // 3. `POST` the payment info to the server upon "Pay"
+  .then(result => {
+    var data = {};
+    data.methodName = result.methodName;
+    data.details    = result.details;
 
-    // POST the payment information to the server
-    return fetch('/pay', {
-      method: 'POST',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then(response =&gt; {
-      // Examine server response
-      if (response.status === 200) {
-        // Payment successful
-        return result.complete('success');
-      } else {
-        // Payment failure
-        return result.complete('fail');
-      }
-    }).catch(() =&gt; {
-      return result.complete('fail');
-    });
-  });
+    // POST the payment information to the server
+    return fetch('/pay', {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(response => {
+      // Examine server response
+      if (response.status === 200) {
+        // Payment successful
+        return result.complete('success');
+      } else {
+        // Payment failure
+        return result.complete('fail');
+      }
+    }).catch(() => {
+      return result.complete('fail');
+    });
+  });
 }
 
 document.querySelector('#start').addEventListener('click', onBuyClicked);
-```
+{% endhighlight %}
 
-![Screen Shot 2016-07-15 at 11.44.24.png](https://lh3.googleusercontent.com/lHJpx7HOy8gUQ0nYouAbP7dxeBCgWoOczecKhn6x6-vqLCprwbSBc4px950OikNsacHvqf55st2j5NZNTQk5gkMEMQdCdumKW-xuhHRQzqoG0_4EtW5T3wG07sLYaB31R4U0QtGL)
+![](/web/updates/images/2016/07/payment-request/1.png)
 
-## 1. Create a `PaymentRequest` instance
-When a  user taps on "Checkout", trying to make a payment, start a payment procedure by instantiating PaymentRequest instance.
+## 1. Create a PaymentRequest instance
+When a  user taps on "Checkout", trying to make a payment, start a payment procedure by instantiating `PaymentRequest` instance.
 
-```
+{% highlight js %}
 var request = new PaymentRequest(supportedInstruments, details);
-```
+{% endhighlight %}
 
-## 2. Show the native UI with `.show()`
-Show the native payment UI with show(). Within this UI, a user can determine a payment method or add a new one.
+## 2. Show the native UI with .show()
+Show the native payment UI with `show()`. Within this UI, a user can determine a payment method or add a new one.
 
-```
-  request.show()
-  .then(payment =&gt; {
-    // pressed "Pay"
-  });
-```
+{% highlight js %}
+  request.show()
+  .then(payment => {
+    // pressed "Pay"
+  });
+{% endhighlight %}
 
-![](https://lh6.googleusercontent.com/kbwnDgSp8Vc3IZID2glvQJO4RMhaDH2YBvN-q3zYO25G3Om8efpLpmzdHjTKM71SSC-uihUCu1A5N0olIcQXiFqyqtJcSCafJ7LPnuxK5eG93ibtzqrYPV3JVgCJX_x9Te7TUvPG)![](https://lh6.googleusercontent.com/wRDs8iHrnbqrVJES8oCQtyL1OMiFWGoPHC3m4uh5GGbu5blfjQwougW4l_gHsEFlU7qdI78LIHuLck00W2-QDfqCbrtA008Ej2JCCeGMHHrPa2r4yWGSgkKuiy5y7_6Hn6dEJM3K)
+ <img src="/web/updates/images/2016/07/payment-request/2.png" style="max-width:340px">
+ <img src="/web/updates/images/2016/07/payment-request/3.png" style="max-width:340px">
 
-## 3. `POST` the payment info to the server upon "Pay"
-Upon user tapping on "PAY" button, a promise will be resolved and payment information will be passed to the resolving function. You can then POST the information to the server to verify the purchase.
+## 3. POST the payment info to the server
+Upon user tapping on "PAY" button, a promise will be resolved and payment information will be passed to the resolving function. You can then `POST` the information to the server to verify the purchase.
 
-```
-  request.show()
-  .then(result =&gt; {
-    var data = {};
-    data.methodName = result.methodName;
-    data.details    = result.details;
+{% highlight js %}
+  request.show()
+  .then(result => {
+    var data = {};
+    data.methodName = result.methodName;
+    data.details    = result.details;
 
-    // POST the payment information to the server
-    return fetch('/pay', {
-      method: 'POST',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then(response =&gt; {
-      // Examine server response
-      if (response.status === 200) {
-        // Payment successful
-        return result.complete('success');
-      } else {
-        // Payment failure
-        return result.complete('fail');
-      }
-    }).catch(() =&gt; {
-      return result.complete('fail');
-    });
-  });
- ```
+    // POST the payment information to the server
+    return fetch('/pay', {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(response => {
+      // Examine server response
+      if (response.status === 200) {
+        // Payment successful
+        return result.complete('success');
+      } else {
+        // Payment failure
+        return result.complete('fail');
+      }
+    }).catch(() => {
+      return result.complete('fail');
+    });
+  });
+{% endhighlight %}
 
-![](https://lh4.googleusercontent.com/dn1lLoJjVHYbsUG4X9ehyb-4_Vh8PwExukA4uOPCu9WIT9GD9K-71ce6ijV4bzgFokYEuEZQsmC5DexPa4JcHSKDEkYC6Reu1YK_Tsc_m7h4usBvAty7xOJZERWf_-KRYp-XaR9b)![](https://lh3.googleusercontent.com/o38KM-Tp1jiU567oN35-NMkwoJjPdQJ1-6x_c-Xjjq02bBPl7Hmx0TYnvyCCYJP8J1XPcYWDCkvqi-RdySUlKFvGGPkKW8OHuSypNHOwrEg5Ciss67iR7Zd2LD_dMR0_75wUftIu)
+ <img src="/web/updates/images/2016/07/payment-request/4.png" style="max-width:340px">
+ <img src="/web/updates/images/2016/07/payment-request/5.png" style="max-width:340px">
 
 ## 4. Display payment result
-If the payment verification was successful, call .complete('success') to complete the purchase, otherwise .complete('fail'). Success / failure status will be displayed using a native UI. Upon resolving the .complete(), you can proceed to the next step.
+If the payment verification was successful, call `.complete('success')` to complete the purchase, otherwise `.complete('fail')`. Success / failure status will be displayed using a native UI. Upon resolving the `.complete()`, you can proceed to the next step.
 
 # Payment Request API can do more
 ## Shipping items
