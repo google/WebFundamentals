@@ -259,7 +259,8 @@ class DevSitePages(webapp2.RequestHandler):
               "markdown.extensions.meta", # Removes the meta data from the top of the doc
               "markdown.extensions.toc", # Generate the TOC for the right side
               "markdown.extensions.tables", # Support for Markdown Tables
-              "markdown.extensions.extra"
+              "markdown.extensions.extra", # Support for markdown="1" in tags
+              "markdown.extensions.def_list" # Support for definition lists
             ]
             md = markdown.Markdown(extensions=ext)
             parsedMarkdown = md.convert(fileContent)
