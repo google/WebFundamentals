@@ -1,6 +1,6 @@
 ---
 title: "서비스워커 설치하기"
-description: "페이지가 등록 절차를 시작하면 서비스워커 스크립트에서 `install` 이벤트를 처리하는 부분에 집중합니다."
+description: "페이지가 등록 절차를 시작하면 서비스워커 스크립트에서 `install` 이벤트를 처리하는 서비스워커 스크립트를 봅니다."
 updated_on: 2016-01-19
 translators:
   - captainpangyo
