@@ -1,0 +1,161 @@
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
+landing_page:
+  custom_css_path: /web/events/events.css
+
+  header:
+    description: Polymer is a new kind of library for building Web Components
+
+  rows:
+
+  - heading: Learn Polymer at your local event, <br> or start one yourself!
+    classname: devsite-landing-row-67
+    items:
+    - description: >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
+        ligula, lobortis quis feugiat ut, blandit vitae enim.
+
+  - items:
+    - custom_html: <hr>
+
+  - heading: Find an event
+    classname: devsite-landing-row-67
+    items:
+    - custom_html: >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
+          ligula, lobortis quis feugiat ut, blandit vitae enim.
+        </p>
+        <div class="doc-iframe-container">
+          <iframe class="link-analytics map-frame"
+            data-src="/web/events/embeds/polytechnic-event-map"
+            scrolling="no"
+            frameborder="0">
+          </iframe>
+        </div>
+
+  - items:
+    - custom_html: <hr>
+
+  - heading: Run your own event
+    items:
+    - description: >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
+        ligula, lobortis quis feugiat ut, blandit vitae enim.
+
+  - columns:
+    - items:
+      - heading: Plan
+        icon:
+          icon_name: assignment
+          is_white: True
+        description:
+            <a href="#">Event Guide</a>
+            &mdash; Understand how to plan your event.<br />
+            <a href="#">Hackathon Tips</a> &mdash; Do's and Don'ts of running
+            a successful hackathon.
+      - heading: Tech Talk
+        icon:
+          icon_name: lightbulb_outline
+          is_white: True
+        description: >
+          <a href="#">Speaker Deck</a> &mdash; Start with the basics!<br />
+          <a href="#">Training Video</a> &mdash; Learn from the team.
+      - heading: Curriculum
+        icon:
+          icon_name: school
+          is_white: True
+        description: >
+          <a href="#">Code Labs</a> &mdash; Get Hacking!
+    - items:
+      - heading: Graphic Assets
+        icon:
+          icon_name: collections
+          is_white: True
+        description: >
+          <a href="#">Event Logo</a> &mdash; Look official!<br />
+          <a href="#">PWA Sticker</a> &mdash; Decorate your laptops.<br />
+          <a href="#">PWA Shirt</a> &mdash; Dress for success.
+      - heading: PWA Experts
+        icon:
+          icon_name: supervisor_account
+          is_white: True
+        description: >
+          <a href="#">Q&A Hangout</a> &mdash; Get answers to common questions.
+      - heading: Communities
+        icon:
+          icon_name: question_answer
+          is_white: True
+        description: >
+          <a href="#">PWA Slack</a> &mdash; Discuss in realtime.<br />
+          <a href="#">PWA G+</a> &mdash; Coordinate with other organizers<br />
+          <a href="#">Mailing List</a> &mdash; Get answers in your inbox.
+
+
+  - classname: devsite-landing-row-fullbleed faq dark-background
+    heading: Frequently Asked Questions
+    items:
+    - custom_html: >
+        <p class="faq-question">
+          Are PWAs just a Google / Chrome thing?
+        </p>
+        <p class="faq-answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="faq-question">
+          What hashtag should I use to talk about PWAs on social media?
+        </p>
+        <p class="faq-answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="faq-question">
+          Should a PWA event have a code of conduct?
+        </p>
+        <p class="faq-answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="faq-question">
+          Are these official Google events?
+        </p>
+        <p class="faq-answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="faq-question">
+          Can Google send my event free swag?
+        </p>
+        <p class="faq-answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="faq-question">
+          What's Paul Irish like in person?
+        </p>
+        <p class="faq-answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="faq-question">
+          Is a hotdog a sandwich?
+        </p>
+        <p class="faq-answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p class="faq-question">
+          Would you rather fight 100 duck sized horses or 1 horse sized duck?
+        </p>
+        <p class="faq-answer">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
