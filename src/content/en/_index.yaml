@@ -198,7 +198,7 @@ landing_page:
       image_path: images/AMP-GIF-2x.gif
       buttons:
       - label: Get Started
-        path: https://www.ampproject.org/docs/get_started/create_page.html
+        path: https://www.ampproject.org/docs/get_started/create.html
         classname: button button-primary
 
   - items:

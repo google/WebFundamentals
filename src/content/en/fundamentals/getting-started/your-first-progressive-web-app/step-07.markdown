@@ -64,11 +64,11 @@ Using the web app manifest, your web app can:
       "sizes": "152x152",
       "type": "image/png"
     }, {
-      "src": "images/touch/icon-192x192.png",
+      "src": "images/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     }, {
-      "src": "images/touch/icon-256x256.png",
+      "src": "images/icons/icon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     }],

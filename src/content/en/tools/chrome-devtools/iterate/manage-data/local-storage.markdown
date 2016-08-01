@@ -1,165 +1,190 @@
 ---
 layout: shared/narrow
-title: "Inspect and Manage Your Local Storage APIs"
-description: "Inspect and edit local storage APIs including local and session storage, IndexedDB and Web SQL databases, and the Application Cache in the Chrome DevTools Resources panel."
+title: "Inspect and Manage Storage, Databases, and Caches"
+description: "Inspect and manage storage, databases, and caches from the
+Application panel."
 published_on: 2015-04-14
-updated_on: 2015-05-18
+updated_on: 2016-07-29
 order: 1
 authors:
-  - megginkearney
+  - kaycebasques
 translation_priority: 0
 key-takeaways:
   local-storage:
     - "View and edit local and session storage."
-    - "Inspect IndexedDB databases and object stores."
-    - "View resources cached according to the Application Cache manifest file."
+    - "Inspect and modify IndexedDB databases."
+    - "Execute statements on a Web SQL database."
+    - "View Application and Service Worker Caches."
+    - "Clear all storage, databases, caches, and service workers with a single
+      button click."
 notes:
   note-tbd:
     - "TBD note."
+related-guides:
+  pwa:
+    -
+      title: "Debug Progressive Web Apps"
+      href: tools/chrome-devtools/debug/progressive-web-apps
 ---
-<p class="intro">
-  Inspect and manage local storage APIs including local and session storage, IndexedDB and Web SQL databases, and the Application Cache in the Chrome DevTools Resources panel.
-</p>
+<p class="intro">Inspect and manage storage, databases, and caches from the
+<strong>Application</strong> panel.</p>
 
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.local-storage %}
 
-## Local and session storage
+## Local storage {#local-storage}
 
-View and edit local and session storage key/value pairs created using the [Web Storage APIs](http://www.w3.org/TR/webstorage/).
+If you're using [local storage][ls] to store key-value pairs (KVPs), you can
+inspect, modify, and delete these KVPs from the **Local Storage** pane.
 
-### Add key/value pair
+![local storage pane][ls-pane]
 
-To add a new key/value pair:
+* Double-click on a key or value to edit that value.
+* Double-click on an empty cell to add a new KVP.
+* Click on a KVP and then press the **delete** button
+  (![delete button][delete]{:.inline}) to delete that KVP. You can
+  wipe all of your local storage data with a single button click from the
+  [**Clear storage** pane](#clear-storage).
+* If you're interacting with a page in a way that creates, deletes, or modifies
+  KVPs, you won't see those changes get updated in realtime. Click the
+  **refresh** button (![refresh button][refresh]{:.inline}) to see your changes.
 
-1. Double-click inside an empty Key table cell and enter the key name.
-2. Double-click inside the corresponding Value table cell and enter the key's value.
+[ls]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[ls-pane]: /web/tools/chrome-devtools/iterate/manage-data/imgs/local-storage.png
+[refresh]: /web/tools/chrome-devtools/iterate/manage-data/imgs/refresh.png
+[delete]: /web/tools/chrome-devtools/iterate/manage-data/imgs/delete.png
 
-### Edit key/value pair
+## Session storage {#session-storage}
 
-To edit an existing key/value pair, do one of the following:
+The **Session Storage** pane works the same as the **Local Storage**
+pane. Check out the [Local storage](#local-storage) section above to learn how
+to view and edit [session storage][ss].
 
-* Double-click in the cell you want to edit.
-* Right-click or Control-click the cell you want to edit and choose Edit from the context menu.
+[ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 
-### Refresh table
+## IndexedDB {#indexeddb}
 
-To refresh the table with new storage data, click the Refresh button ![Refresh](imgs/refresh.png){:.inline} at the bottom of the panel.
+Use the **IndexedDB** pane to inspect, modify, and delete IndexedDB data.
 
-### Delete key/value pair
+When you expand the **IndexedDB** pane, the first level below that are
+databases. If there are multiple databases active, then you'll see multiple
+entries. In the screenshot below there's only one database active for the page.
 
-To delete a key/value pair,
+![indexeddb tab][idb-tab]
 
-1. Select the item in the data table and click the Delete button, or press the Delete key on your keyboard.
-2. Right-click or Control-click on the data item and choose Delete from the context menu.
+Click on the name of a database to view the security origin, name, and version
+of that database.
 
-## IndexedDB
+![indexeddb database][idb-db]
 
-Inspect IndexedDB databases and object stores, page through an object store's records, and clear an object store of its records.
+Expand a database to view its key-value pairs (KVPs).
 
-### View IndexedDB databases and object stores
+![indexeddb key-value pairs][idb-kvps]
 
-* To view a list of available database, expand the IndexedDB category.
-* To view a database's object stores, select it from the list of available databases.
+Use the arrow buttons next to the **Start from key** textfield to move between
+pages of KVPs.
 
-![IndexedDB](imgs/indexeddb.png)
+Expand a value and double-click to edit that value.
+When you add, modify, or delete values, those changes won't get updated in
+realtime. Click the **refresh** button to update a database.
+![editing an indexeddb kvp][idb-edit]
 
-To view properties of a database, select it from the list of databases.
+Enter a key in the **Start from key** textfield to filter out all keys with
+a value smaller than that one.
 
-![Database properties](imgs/database-properties.png)
+![filtered kvps][idb-filter]
 
-### Page through records
+When you add, modify, or delete values, those changes won't get updated in
+realtime. Click the **refresh** button (![refresh button][refresh]{:.inline})
+to update a database.
 
-To page through records in the object store, click the Previous and Next page buttons. You can also specify the record where paging starts by specifying the record's key.
+Click the **clear object store** button (![clear object store][cos]{:.inline})
+to delete all data from your database. You can also accomplish this as well
+as unregistering service workers and removing other storage and caches with
+a single click from the [**Clear storage** pane](#clear-storage).
 
-![Next-previous page](imgs/next-previous-page.png)
+[idb-tab]: /web/tools/chrome-devtools/iterate/manage-data/imgs/idb-tab.png
+[idb-db]: /web/tools/chrome-devtools/iterate/manage-data/imgs/idb-db.png
+[idb-kvps]: /web/tools/chrome-devtools/iterate/manage-data/imgs/idb-kvps.png
+[idb-edit]: /web/tools/chrome-devtools/iterate/manage-data/imgs/idb-edit.png
+[idb-filter]: /web/tools/chrome-devtools/iterate/manage-data/imgs/idb-filter.png
+[cos]: /web/tools/chrome-devtools/iterate/manage-data/imgs/clear-object-store.png
 
-### Clear object store
+## Web SQL {#web-sql}
 
-To clear the object store, do one of the following:
+Use the **Web SQL** pane to query and modify Web SQL databases.
 
-* Click the **Clear object store** button ![Clear](imgs/clear.png){:.inline} at the bottom of the panel.
-* Right-click or Control-click the object store and select **Clear** from the context menu.
+Click on a database name to open a console for that database. From here you
+can execute statements on the database.
 
-## Web SQL
+![web sql console][wsc]
 
-Inspect the content of Web SQL databases, and run SQL commands against 
-their contents.
+Click on a database table to view that table's data.
 
-### Inspect content
+![web sql table][wst]
 
-* To view the available Web SQL databases, expand the Web SQL item in the tree control.
-* To view available tables in a database, expand the database tree item.
-* To view a table's records, select the table. Its properties appear in the right-hand pane.
-* To refresh the view of the database, click the Refresh button ![Refresh button](imgs/refresh.png){:.inline} at the bottom of the panel. 
+* You can't update values from here, but you can do so via the database
+  console (see above).
+* Click on a column's header to sort the table by that column.
+* Changes that you make to a table won't update in realtime. Click the
+  **refresh** button (![refresh button][refresh]{:.inline}) to view your
+  updates.
+* Enter a space-separated or comma-separated list of column names in the
+  **Visibile columns** textfield to only display those columns.
 
-### Query content
+[wsc]: /web/tools/chrome-devtools/iterate/manage-data/imgs/web-sql-console.png
+[wst]: /web/tools/chrome-devtools/iterate/manage-data/imgs/web-sql-table.png
 
-Query a Web SQL database's tables with SQL commands and view 
-query results in a tabular format. As you type out a command or table name, code hints are provided for the names of supported SQL commands and clauses, and the names of tables that the database contains.
+## Application Cache {#application-cache}
 
-To run a SQL command against a database:
+Use the **Application Cache** pane to inspect resources and rules that have
+been created via the [Application Cache API][appcache-api].
 
-1. Select the database containing the table you want to query.
-2. At the prompt that appears in the right-hand panel, enter the SQL statement you want to execute.
+![application cache pane][appcache]
 
-![SQL](imgs/sql.png)
+Each row represents a resource.
 
-## Application Cache
+The **Type** column will have one of the following values:
 
-The Resources panel shows the resources Chrome has cached according to the Application Cache manifest file specified by the current document. You can view the current status of the Application Cache (idle or downloading, for 
-example), and the browser's connection status (online or offline).<br/>
+* **Master**. The `manifest` attribute on the resource indicated that this
+  cache is its master.
+* **Explicit**. This resource was explicitly listed in the manifest.
+* **Network**. The manifest specified that this resource must come from the
+  network.
+* **Fallback**. The URL in the **Resource** column was listed as a fallback
+  for another URL (not shown in DevTools).
 
-![Application Cache](imgs/app-cache.png) 
+At the bottom of the table there are status icons indicating your network
+connection and the status of the application cache. The application cache
+can have the following statuses:
 
-The table of cached resources includes the following properties for each resource:
+* **IDLE**. The cache has no new changes.
+* **CHECKING**. The manifest is being fetched and checked for updates.
+* **DOWNLOADING**. Resources are being added to the cache.
+* **UPDATEREADY**. A new version of the cache is available.
+* **OBSOLETE**. The cache is being deleted.
 
-* **Resource** — The URL of the resource.
-* **Type** — The type of cached resource, which can have one of the following 
-  values:
-    * **Master** — The resource was added to the cache because its 
-      [manifest](https://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-html-manifest) 
-      attribute indicated that this was its cache.
-    * **Explicit** — The resource was explicitly listed in the application's 
-      cache manifest file.
-    * **Network** — The resources was listed in the application's cache manifest 
-      file as a network entry. 
-    * **Fallback** — The resource was specified as a fallback if a resource is inaccessible.
-* **Size** — Size of the cached resource.
+[appcache-api]: https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache
+[appcache]: /web/tools/chrome-devtools/iterate/manage-data/imgs/appcache.png
 
-The Resources panel displays the current [status](https://www.whatwg.org/specs/web-apps/current-work/#dom-appcache-status) 
-of the application cache along with a colored status icon (green, yellow, or red). The following are the possible status values and their descriptions:
+## Service Worker Caches {#service-worker-caches}
 
-<table class="mdl-data-table">
-  <thead>
-    <tr>
-      <th>Status</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="Status"><img src="imgs/green.png" class="inline"/>IDLE </td>
-      <td data-th="Description">The application cache is idle.</td>
-    </tr>
-    <tr>
-      <td data-th="Status"><img src="imgs/yellow.png" class="inline"/>CHECKING </td>
-      <td data-th="Description">The manifest is being fetched and checked for updates.</td>
-    </tr>
-    <tr>
-      <td data-th="Status"><img src="imgs/yellow.png" class="inline"/>DOWNLOADING </td>
-      <td data-th="Description">Resources are being downloaded to be added to the cache, due to a changed resource manifest.</td>
-    </tr>
-    <tr>
-      <td data-th="Status"><img src="imgs/green.png" class="inline"/>UPDATEREADY </td>
-      <td data-th="Description">There is a new version of the application cache available. </td>
-    </tr>
-    <tr>
-      <td data-th="Status"><img src="imgs/red.png" class="inline"/>OBSOLETE </td>
-      <td data-th="Description">The application cache group is obsolete.</td>
-    </tr>
-  </tbody>
-</table>
+The **Cache Storage** pane on the **Application** panel lets you inspect,
+modify, and debug caches created with the (service worker) Cache API. Check
+out the guide below for more help.
 
+{% include shared/related_guides.liquid inline=true list=page.related-guides.pwa %}
 
+## Clear service workers, storage, databases, and caches {#clear-storage}
+
+Sometimes you just need to wipe all of the data for a given origin. The **Clear
+Storage** pane on the **Application** panel lets you selectively unregister
+service workers, storage, and caches. To clear data, just enable the checkboxes
+next to the components that you want to wipe, and then click **Clear site
+data**. The action wipes all of the data for the origin listed under the
+**Clear storage** label.
+
+![clear storage][clear]
+
+[clear]: /web/tools/chrome-devtools/iterate/manage-data/imgs/clear-storage.png

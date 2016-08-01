@@ -1,19 +1,20 @@
 ---
 layout: shared/narrow-pages-list
-title: "Manage Your Local Data Resources"
-description: "Inspect and manage your application’s local data resources using the Chrome Developer Tools Resources panel."
+title: "Inspect and Manage Storage, Caches, and Resources"
+description: "Inspect and manage storage, caches, and resources."
 published_on: 2015-04-14
-updated_on: 2015-04-14
+updated_on: 2016-07-29
 order: 3
 authors:
-  - megginkearney
+  - kaycebasques
 translation_priority: 0
+notes:
+  resources: "The <strong>Resources</strong> panel has been renamed to the
+  <strong>Application</strong> panel. All of the features from the Resources
+  panel are still available in the Application panel."
 ---
 
-<p class="intro">
-  Inspect and manage your application’s local data resources using the Chrome Developer Tools Resources panel.
-</p>
+<p class="intro">Use the <strong>Application</strong> panel to inspect and
+manage storage, caches, and resources.</p>
 
-The Resources panel lets you access data sources like IndexedDB and Web SQL databases, cookies, the Application Cache, and local and session storage, as well as page resources like images, fonts, style sheets, and the actual pages, as shown here:
-
-![Resources panel](imgs/resources_panel.png)
+{% include shared/note.liquid list=page.notes.resources %}

@@ -107,3 +107,15 @@ redirects:
 
 - from: /web/fundamentals/principles/...
   to: /web/fundamentals/getting-started/principles/
+
+- from: /web/fundamentals/primers/push-notifications/push-messages
+  to: /web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
+
+- from: /web/fundamentals/primers/push-notifications/notifications
+  to: /web/fundamentals/engage-and-retain/push-notifications/handling-messages
+
+- from: /web/fundamentals/primers/push-notifications/on-the-server
+  to: /web/fundamentals/engage-and-retain/push-notifications/sending-messages
+
+- from: /web/fundamentals/primers/push-notifications/...
+  to: /web/fundamentals/engage-and-retain/push-notifications/
