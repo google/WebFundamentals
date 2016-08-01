@@ -232,7 +232,7 @@ class FancyButton extends HTMLButtonElement {
     this.appendChild(div);
     div.style.top = `${y - div.clientHeight/2}px`;
     div.style.left = `${x - div.clientWidth/2}px`;
-    div.style.backgroundColor = window.getComputedStyle(this).color;
+    div.style.backgroundColor = 'currentColor';
     div.classList.add('run');
     div.addEventListener('transitionend', e => div.remove());
   }
