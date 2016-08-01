@@ -1,0 +1,68 @@
+.devsite-main-content {
+  margin-bottom: 160px;
+}
+
+.doc-iframe-container {
+  width: 100%;
+  height: 500px;
+}
+
+.map-frame {
+  width: 100%;
+  height: 100%;
+}
+
+/* This fullbleed code is taken from firebase.google.com */
+.devsite-landing-row-fullbleed {
+  margin: 0 -10000px;
+  padding: 64px 10000px 40px;
+}
+
+.devsite-landing-row-fullbleed h3 {
+  font-size: 32px;
+}
+
+.devsite-landing-row-fullbleed .devsite-landing-row-item-image {
+  background: transparent;
+}
+
+.devsite-landing-row-fullbleed .devsite-landing-row-item-description {
+  padding-top: 24px;
+}
+
+.primary-featured-event {
+  margin-top: 60px;
+}
+
+.light-background {
+  background: #EBEFF2;
+}
+
+.dark-background {
+  color: #FFF;
+  background: #2D384B;
+}
+
+.dark-background h2 {
+  color: #FFF;
+}
+
+.faq {
+  margin-top: 100px;
+  padding-top: 16px;
+  padding-bottom: 100px;
+}
+
+.faq-question {
+  font-size: 28px;
+}
+
+.faq-answer {
+  font-size: 18px;
+  font-weight: lighter;
+  margin-bottom: 32px;
+}
+
+.faq-answer:last-of-type {
+  margin-bottom: 0;
+}
