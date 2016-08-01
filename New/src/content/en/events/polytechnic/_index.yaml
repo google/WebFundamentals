@@ -12,8 +12,10 @@ landing_page:
     classname: devsite-landing-row-67
     items:
     - description: >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
-        ligula, lobortis quis feugiat ut, blandit vitae enim.
+        Interested to learn Polymer but not sure where to start? Polymer
+        Polytechnics are community run events designed to give developers a
+        hands-on experience building Polymer apps. Come learn from the experts
+        in your area or use the course material to run your own event!
 
   - items:
     - custom_html: <hr>
@@ -23,12 +25,13 @@ landing_page:
     items:
     - custom_html: >
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
-          ligula, lobortis quis feugiat ut, blandit vitae enim.
+          Check the map to see if there's a Polytechnic happening near you. Can't find one?
+          Don't worry! <a href="#">We have all the material you need to run your own event or learn in
+          your own time</a>.
         </p>
         <div class="doc-iframe-container">
           <iframe class="link-analytics map-frame"
-            data-src="/web/events/embeds/polytechnic-event-map"
+            data-src="/web/events/embeds/polymer-event-map"
             scrolling="no"
             frameborder="0">
           </iframe>
@@ -40,8 +43,9 @@ landing_page:
   - heading: Run your own event
     items:
     - description: >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
-        ligula, lobortis quis feugiat ut, blandit vitae enim.
+        We provide all the tools you need to run your own event, from slide
+        decks to code labs. Organize a watch party or meet-up in your area, or
+        just work through the material at your own pace!
 
   - columns:
     - items:

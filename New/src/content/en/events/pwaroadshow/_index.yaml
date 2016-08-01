@@ -8,12 +8,15 @@ landing_page:
 
   rows:
 
-  - heading: Learn to build Progressive Web Apps at your local event, <br> or start one yourself!
+  - heading: Attend a Progressive Web App Roadshow in your area, <br> or start one yourself!
     classname: devsite-landing-row-67
     items:
     - description: >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
-        ligula, lobortis quis feugiat ut, blandit vitae enim.
+        Progressive Web App (PWA) Roadshows are local run events where speakers and developers
+        get together to learn about the amazing new set of technologies that are revolutioning
+        the mobile web. If you're interested in learning more about building offline experiences
+        with Service Worker or Push notifications come join a nearby PWA Roadshow or use the
+        material on this site to run one yourself!
 
   - items:
     - custom_html: <hr>
@@ -23,12 +26,13 @@ landing_page:
     items:
     - custom_html: >
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
-          ligula, lobortis quis feugiat ut, blandit vitae enim.
+          Check the map to see if there's a PWA Roadshow happening near you. Can't find one?
+          Don't worry! <a href="#">We have all the material you need to run your own event or learn in
+          your own time</a>.
         </p>
         <div class="doc-iframe-container">
           <iframe class="link-analytics map-frame"
-            data-src="/web/events/embeds/pwaroadshow-event-map"
+            data-src="/web/events/embeds/progressivewebapps-event-map"
             scrolling="no"
             frameborder="0">
           </iframe>
@@ -40,8 +44,9 @@ landing_page:
   - heading: Run your own event
     items:
     - description: >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
-        ligula, lobortis quis feugiat ut, blandit vitae enim.
+        From pre-made slide decks, to code labs, to speaker training videos, we
+        have everything you need to organize your own Progressive Web App
+        Roadshow.
 
   - columns:
     - items:
