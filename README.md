@@ -31,7 +31,7 @@ To build and run this project you need to have Ruby, Node and NPM.
     * `npm install -g gulp`
 1. Install [npm](https://www.npmjs.org) dependencies
     * `npm install`
-1. Get the [App Engine SDK](https://cloud.google.com/appengine/downloads) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
+1. Get the [App Engine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
 
 # Running the site
 
