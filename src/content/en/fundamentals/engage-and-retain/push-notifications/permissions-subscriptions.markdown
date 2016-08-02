@@ -4,7 +4,7 @@ title: "Requesting permission and subscribing users"
 description: "Requesting permission for and subscribing users to notifications requires as 
 light a touch as showing them notifications."
 published_on: 2016-07-01
-updated_on: 2016-07-29
+updated_on: 2016-08-05
 order: 20
 translation_priority: 0
 authors:

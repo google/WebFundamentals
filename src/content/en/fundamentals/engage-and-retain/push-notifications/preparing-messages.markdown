@@ -2,22 +2,26 @@
 layout: shared/narrow
 title: "Preparing messages"
 description: ""
-published_on: 2016-07-29
-updated_on: 2016-07-29
+published_on: 2016-08-05
+updated_on: 2016-08-05
 order: 25
 translation_priority: 0
 authors:
   - josephmedley
 ---
 
-<p class="intro"> </p>
+<p class="intro">
+Construct an Authorization header. Send a message using the Authorization header to the enpoing provided by the subscription object.
+ </p>
 
 {% include shared/toc.liquid %}
 
 ## Anatomy of a subscription object {#subscription-anatomy}
 
 In [the last section](permissions-subscriptions#passing-subscription) we said that a subscription object must be stringified and
-passed to the server. The data the server gets looks like this:
+passed to the server, but we didn't tell you what was in the subscription object. That's because the client doesn't do anything with it. The server does.
+
+The subscription obje t looks like this:
 
 {% highlight json %}
 {
@@ -37,15 +41,27 @@ a registration ID. This tells your server how to identify you the messaging
 server.
 
 _keys_—Encryption keys used for encrypting data passed to the service worker
-messages.
+messages. It contains the following:
+
+* _auth_
+* _p256dh_
 
 ## Constructiong the Authorization header {#authorization-header}
 
 The Authorization header consists of four parts.
 
-`Bearer <JWTHeader>.<Payload>.<Signature>`
+    Bearer <JWTHeader>.<Payload>.<Signature>
 
-The word `Bearer` is a litteral that must be followed by a space. The remaining portions are encrypted and concatenated using a period. Let's look at each in detail.
+The word `Bearer` is a litteral that must be followed by a space. The remaining portions, which are encrypted and concatenated using a period are a signed JSON web token (JWT). A JWT is a way of sharing a JSON object with a second party in such a way that the sending party can sign it and the receiving party can verify the signature is from the expected sender. Adding the literal `Bearer` to the front makes it a bearer token.
+
+You must encrypt all messages before sending them. Encryption is enough of a
+specialty, even within software development, that we don't recommend writing
+your own encryption system. Fortunately, there are [a range of push
+libraries](https://github.com/web-push-libs) including our own [Push Encryption
+Library](https://github.com/GoogleChrome/web-push-encryption).
+
+Let's look at each part of the bearer token in detail.
+
 
 ### JWT Header {#jwtheader}
 
@@ -53,8 +69,8 @@ The JWT Header contains two standard pieces of information: a `typ` property to 
 
 {% highlight json %}
 {
-	typ: "JWT",
-	alg: "ES256"
+	"typ": "JWT",
+	"alg": "ES256"
 }
 {% endhighlight %}
 
@@ -70,28 +86,49 @@ This contains the push service endpoint, which you should extract from the subsc
 
 Specifies the time the request expires in miliseconds. It must be within twenty-four hours. This can be calculated by converting the current date to milliseconds and adding the duration. For example, in Node.js you could do this:
 
-Math.floor((Date.now() / 1000) + 12 * 60 * 60)
+    Math.floor((Date.now() / 1000) + 12 * 60 * 60)
 
 **`sub`**
 
 Specifices a subject, which the VAPID spec defines as a way for the push service to contact a message sender. This can be a URL or a mail to URL.
 
+A complete payload looks like this:
+
 {% highlight json %}
 {
-	“aud”: "http://push-service.example.com",
-	“exp”: 1469618703,
-	“sub”: “mailto: my-email@some-url.com”
+	"aud": "http://push-service.example.com",
+	"exp": "1469618703",
+	"sub": "mailto: my-email@some-url.com"
 }
 {% endhighlight %}
 
 ### Signature {#signature}
 
-`Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2ZjbS5nb29nbGVhcGlzLmNvbSIsImV4cCI6MTQ2NjY2ODU5NCwic3ViIjoibWFpbHRvOnNpbXBsZS1wdXNoLWRlbW9AZ2F1bnRmYWNlLmNvLnVrIn0.Ec0VR8dtf5qb8Fb5Wk91br-evfho9sZT6jBRuQwxVMFyK5S8bhOjk8kuxvilLqTBmDXJM5l3uVrVOQirSsjq0A`
+Create the signature by first concatenating the JWT header and the payload with
+a dot, the encrypting the private key [you created earlier](permissions-
+subscriptions#applicationserverkey). We're not going to show you how to do this,
+but there are a number of ecryption libraries available. The result will look
+something like the following:
 
-## Encrypting a message {#encrypting}
 
-You must encrypt all messages before sending them. Encryption is enough of a
-specialty, even within software development, that we don't recommend writing
-your own encryption system. Fortunately, there are [a range of push
-libraries](https://github.com/web-push-libs) including our own [Push Encryption
-Library](https://github.com/GoogleChrome/web-push-encryption).
+    Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2ZjbS5nb29n
+    bGVhcGlzLmNvbSIsImV4cCI6MTQ2NjY2ODU5NCwic3ViIjoibWFpbHRvOnNpbXBsZS1wdXNoLWRl
+    bW9AZ2F1bnRmYWNlLmNvLnVrIn0.Ec0VR8dtf5qb8Fb5Wk91br-evfho9sZT6jBRuQwxVMFyK5S8
+    bhOjk8kuxvilLqTBmDXJM5l3uVrVOQirSsjq0A
+
+## Crypto-Key header {#crypto-key-header}
+
+The second header to add to your message is Crypto-Key header. It has several
+parts.
+
+`dh=`_applicationServerKey_`;p256ecdsa=`_publicKey_
+
+For example:
+
+    dh=BGEw2wsHgLwzerjvnMTkbKrFRxdmwJ5S_k7zi7A1coR_sVjHmGrlvzYpAT1n4NPbioFlQkIrT
+    NL8EH4V3ZZ4vJE,p256ecdsa=BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1
+    rRPF3foIiBHXRdJI2Qhumhf6_LFTeZaN
+
+The first parg (`dh=`_applicationServerKey_) is the public key, the one we created under [Requesting permission and subscribing users](permissions-subscriptions) and used in the last section to create the bearer token. The second part (p256ecdsa=`_publicKey_) is the public key, but base64 url encoded. Notice the comma separating the two parts of the crypto-key.
+
+Note: A bug in Chrome 52 requires that a semicolon be send to the message server in the Crypto-Key header instead of a comma.
