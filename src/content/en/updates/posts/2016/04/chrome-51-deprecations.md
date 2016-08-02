@@ -3,7 +3,7 @@ layout: updates/post
 title: "API Deprecations and Removals in Chrome 51"
 description: "An round up of the deprecations and removals in Chrome to help you plan."
 published_on: 2016-04-20
-updated_on: 2016-04-20
+updated_on: 2016-08-02
 authors:
   - josephmedley
 tags:
@@ -94,13 +94,22 @@ With this change, Chrome will be consistent with Safari 9.1 and later, as well a
 
 ## Deprecated results attribute for <input type=search>
 
-**TL;DR:** The `result` attribute is being deprecated because it's not part of any standard and is inconsistently implemented across browsers.
+**TL;DR:** The `results` attribute is being deprecated because it's not part of any standard and is inconsistently implemented across browsers.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/8fHsOWz1XEw/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5738199536107520) &#124;
 [Chromium Bug](https://code.google.com/p/chromium/issues/detail?id=590117) 
 
-The `results` value is not implemented on most browsers and behaves highly inconsistently on those that do. For example, Chrome adds a magnifier icon to the input box, while on Safari desktop, it controls how many submitted queries are shown in a popup shown by clicking the magnifier icon. Since this isn't part of any standard, it's being deprecated.
+The `results` value is only implemented in webkit and behaves highly inconsistently on those that do. For example, Chrome adds a magnifier icon to the input box, while on Safari desktop, it controls how many submitted queries are shown in a popup shown by clicking the magnifier icon. Since this isn't part of any standard, it's being deprecated.
+
+If you still need to include the search icon in your input field then you will have to add some custom styling to the element.  You can do this by including a background image and specifying a left padding on the input field.
+
+{% highlight css %}
+input[type=search] {
+  background: url(some-great-icon.png) no-repeat scroll 15px 15px;
+ padding-left:30px;
+}
+{% endhighlight %}
 
 Removal is expected in Chrome 53.
 
