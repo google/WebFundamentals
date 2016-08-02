@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "Using custom elements to build reusable web components"
+title: "Custom elements: building reusable web components"
 description: "Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components."
 published_on: 2016-06-29
 updated_on: 2016-06-29
