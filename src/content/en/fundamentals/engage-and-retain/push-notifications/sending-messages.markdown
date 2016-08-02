@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Sending messages"
 description: "There are two servers involved in sending a message: your server and a third party messaging server. You keep track of who to send messages to. The third party server handles the routing."
 published_on: 2016-07-01
-updated_on: 2016-07-29
+updated_on: 2016-08-05
 order: 30
 translation_priority: 0
 authors:
