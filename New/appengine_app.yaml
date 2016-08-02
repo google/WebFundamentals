@@ -39,6 +39,7 @@ handlers:
   upload: (.*\.(js|css))
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
+  application_readable: true
 
 - url: /web/(.*\.(woff|eot|ttf))
   static_files: \1

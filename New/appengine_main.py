@@ -212,6 +212,8 @@ class DevSitePages(webapp2.RequestHandler):
           fileLocations = [
             os.path.join(searchPath, lang, path) + '.md',
             os.path.join(searchPath, 'en', path) + '.md',
+            os.path.join(searchPath, lang, path) + '.jshtml',
+            os.path.join(searchPath, 'en', path) + '.jshtml',
           ]
 
         text = None
@@ -224,8 +226,14 @@ class DevSitePages(webapp2.RequestHandler):
 
             logging.info("200 " + fileLocation)
 
+            # Handle _index.yaml files
             if fileLocation.endswith('_index.yaml'):
               text = devsite.generateHTMLfromYaml(lang, fileContent)
+              break
+
+            # Serve .jshtml files as plain HTML files
+            if fileLocation.endswith('.jshtml'):
+              text = fileContent
               break
 
             # Remove any comments {# something #} from the markdown
