@@ -67,6 +67,11 @@ def generateHTMLfromYaml(lang, rawYaml):
   page = parsedYaml['landing_page']
   rows = page['rows']
   header = 'Generic Page Header Here'
+  customCss = ''
+  if 'custom_css_path' in page:
+    customCss = '<link rel="stylesheet" href="'
+    customCss += page['custom_css_path']
+    customCSS += '">'
   if 'header' in page:
     if 'description' in page['header']:
       header = page['header']['description']
@@ -97,6 +102,7 @@ def generateHTMLfromYaml(lang, rawYaml):
     content += section
   text = render("gae/home.tpl", {
                 "title": 'Web',
+                "customcss": customCss,
                 "header": header,
                 "content": content,
                 "lang": lang}

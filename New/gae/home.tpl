@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://developers.google.com/_static/5258774f52/css/devsite-google-blue.css">
     <title>{{ title }}</title>
-    <style>.devsite-collapsible-section{background:url(/web/scratch/images/background-1x.png) 100%/600px repeat-x}ul.checkmarks{list-style-type:none;padding:0}ul.checkmarks li{background-image:url("/maps/images/lhimages/compare-yes.svg");background-repeat:no-repeat;background-position:0 1px;padding-left:30px}a.wf-learn-more{margin-left:-8px}a.wf-small-link{display:block;margin:0 4px;padding:2px 8px}h2.wf-header-title{margin-top:0}.wf-pwa-in-action img{margin-bottom:0}.wf-pwa-in-action .devsite-landing-row-item{text-align:center}</style>
+    {{ customcss }}
   </head>
   <body class="devsite-chekov devsite-landing-page devsite-header-no-lower-tabs" id="top_of_page">
     <div class="devsite-wrapper">
