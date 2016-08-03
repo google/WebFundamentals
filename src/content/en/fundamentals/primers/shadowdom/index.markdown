@@ -56,7 +56,7 @@ function supportsShadowDOM() {
   <p>This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version shipped in Chrome 35</a>, which has also been polyfilled. The concepts are the same, but the v1 spec has important API differences. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.</p>
 </div>
 
-## TL;DR {#tldr}
+### TL;DR {#tldr}
 
 Shadow DOM provides a **way for elements to own, render, and style a chunk of DOM that's separate from the rest of the page**. While you don't have to author custom elements that use shadow DOM, [doing so](#elements) allows you to take advantage of its benefits (CSS scoping, DOM encapsulation, composition) and build web components which are more resilient, highly configurable, and extremely reusable.
 
@@ -86,7 +86,7 @@ Although you can use the shadow DOM API and its benefits outside of web componen
 Throughout this article, I'll be referring to a demo component (`<fancy-tabs>`) and referencing code snippets from it. If your browser supports the APIs, you should see a live demo of it just below. Otherwise, check out the <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">full source on Github</a>.
 
 <figure class="demoarea">
-  <iframe style="height:360px;width:100%;border:none" src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/13b3296d1adb6f20ee4748d686bbfeef7d187224/fancy-tabs-demo.html"></iframe>
+  <iframe style="height:360px;width:100%;border:none" src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/6aa39a15906adafd3764f01fc553bfdc24ea213c/fancy-tabs-demo.html"></iframe>
   <figcaption><a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">View source on Github</a></figcaption>
 </figure>
 
