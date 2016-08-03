@@ -58,7 +58,7 @@ function supportsShadowDOM() {
 
 ### TL;DR {#tldr}
 
-Shadow DOM provides a **way for elements to own, render, and style a chunk of DOM that's separate from the rest of the page**. While you don't have to author custom elements that use shadow DOM, [doing so](#elements) allows you to take advantage of its benefits (CSS scoping, DOM encapsulation, composition) and build web components which are more resilient, highly configurable, and extremely reusable.
+Shadow DOM provides a **way for HTML elements to own, render, and style a chunk of DOM that's separate from the rest of the page**. While you don't have to author custom elements that use shadow DOM, [doing so](#elements) allows you to take advantage of its benefits (CSS scoping, DOM encapsulation, composition) and build web components which are more resilient, highly configurable, and extremely reusable.
 
 When combined with custom elements, shadow DOM provides a **framework-free way of creating self-contained components**.
 
@@ -86,7 +86,7 @@ Although you can use the shadow DOM API and its benefits outside of web componen
 Throughout this article, I'll be referring to a demo component (`<fancy-tabs>`) and referencing code snippets from it. If your browser supports the APIs, you should see a live demo of it just below. Otherwise, check out the <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">full source on Github</a>.
 
 <figure class="demoarea">
-  <iframe style="height:360px;width:100%;border:none" src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/6aa39a15906adafd3764f01fc553bfdc24ea213c/fancy-tabs-demo.html"></iframe>
+  <iframe style="height:360px;width:100%;border:none" src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/7c4189d4a72ab3d53c3817a259730806b6a03cd1/fancy-tabs-demo.html"></iframe>
   <figcaption><a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">View source on Github</a></figcaption>
 </figure>
 
