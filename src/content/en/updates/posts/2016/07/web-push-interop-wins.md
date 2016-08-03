@@ -67,7 +67,7 @@ headers.append(Content-Length, 0);
 // Assuming you're not using VAPID (read on), this
 // proprietary header is needed  
 if(subscription.endpoint
-  .indexOf('https://android.googleapits.com/gcm/send/') === 0) {  
+  .indexOf('https://android.googleapis.com/gcm/send/') === 0) {  
   headers.append('Authorization', 'GCM_API_KEY');  
 }
 
