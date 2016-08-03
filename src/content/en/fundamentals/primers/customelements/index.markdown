@@ -1,9 +1,9 @@
 ---
 layout: shared/narrow
-title: "Using custom elements to build reusable web components"
+title: "Custom elements v1: reusable web components"
 description: "Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components."
 published_on: 2016-06-29
-updated_on: 2016-06-29
+updated_on: 2016-08-02
 authors:
   - ericbidelman
 translation_priority: 1
@@ -825,7 +825,7 @@ If you happen to be interested in the old v0 spec, check out the [html5rocks art
 Chrome ([status](https://www.chromestatus.com/features/4696261944934400)) has an implementation of
 the Custom Elements v1 under a runtime flag: `--enable-blink-features=CustomElementsV1`. Safari has [begun prototyping](https://bugs.webkit.org/show_bug.cgi?id=150225). Edge has [begun prototyping](https://twitter.com/AaronGustafson/status/717028669948977153). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=889230) to implement.
 
-Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/webcomponentsjs/tree/v1) for Custom Elements v1. **Note**: the `:defined` CSS pseudo-class is not polyfilled.
+Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/webcomponentsjs/blob/v1/src/CustomElements/v1/README.md) for Custom Elements v1. **Note**: the `:defined` CSS pseudo-class is not polyfilled.
 
 To feature detect custom elements, check for the existence of `window.customElements`:
 
