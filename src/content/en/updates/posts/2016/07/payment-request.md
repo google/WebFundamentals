@@ -9,6 +9,7 @@ authors:
 tags:
   - javascript
   - payment
+featured_image: /web/updates/images/2016/07/payment-request/0.png
 ---
 
 It's no surprise that the majority of online shopping is happening on mobile devices these days. But did you know that 66% of mobile purchases are made through websites rather than apps?  Unfortunately though, conversion rate on mobile websites is only 33% of that on desktop. We need to fix this.
@@ -18,7 +19,7 @@ Chrome 53 for Android (desktop to be supported in the future) introduces a new A
 ## Introducing Payment Request API
 Payment Request is a new API for the open web that makes checkout flows easier, faster and consistent on shopping sites.
 
-{% ytvideo vZ_0Dvwsvp0 %}
+{% ytvideo hmqZxP6iTpo %}
 
 * Provides a native user interface for users to select or add a payment method, a shipping address and a shipping option in an easy, fast and consistent way.
 * Provides standardized imperative APIs for developers to obtain user's payment preferences in a consistent format.
@@ -170,7 +171,6 @@ To learn more about Payment Request API, a few documents and resources are avail
 
 * [Official specification](https://www.w3.org/TR/payment-request/)
 * [Payment Request API integration guide](https://developers.google.com/web/fundamentals/primers/payment-request/)
-* Mozilla Developer Network
 * [Demo](https://emerald-eon.appspot.com/)
 * [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/)
 
