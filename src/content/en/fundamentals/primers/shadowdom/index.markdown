@@ -10,11 +10,11 @@ translation_priority: 1
 order: 4
 ---
 
-<script>
+<!-- <script>
 function supportsShadowDOM() {
   return !!HTMLElement.prototype.attachShadow;
 }
-</script>
+</script> -->
 
 <style>
   .forward {
@@ -61,6 +61,8 @@ function supportsShadowDOM() {
 Shadow DOM provides a **way for elements to own, render, and style a chunk of DOM that's separate from the rest of the page**. While you don't have to author custom elements that use shadow DOM, [doing so](#elements) allows you to take advantage of its benefits (CSS scoping, DOM encapsulation, composition) and build web components which are more resilient, highly configurable, and extremely reusable.
 
 When combined with custom elements, shadow DOM provides a **framework-free way of creating self-contained components**.
+
+{% include shared/toc.liquid %}
 
 ## Introduction {#intro}
 
@@ -721,7 +723,7 @@ el.attachShadow({mode: 'open'}).innerHTML = `
 </script>
 {% endhighlight %}
 
-<div class="demoarea">
+<!-- <div class="demoarea">
   <style>
     #initialdemo {
       padding: 10px;
@@ -755,7 +757,7 @@ if (supportsShadowDOM()) {
     <slot></slot>
   `;
 }
-</script>
+</script> -->
 
 ### Finding all the custom elements used by a page {#finall}
 
@@ -877,14 +879,14 @@ See [Closed shadow roots](#closed).
   </div>
 </div>
 
-<script>
+<!-- <script>
 if (!supportsShadowDOM()) {
   let demos = document.querySelectorAll('.demoarea');
   Array.from(demos).forEach(function(demo) {
     demo.hidden = true;
   });
 }
-</script>
+</script> -->
 
 [ce_spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [ce_article]: /web/fundamentals/primers/customelements/
