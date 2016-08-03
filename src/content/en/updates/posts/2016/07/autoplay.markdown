@@ -30,11 +30,7 @@ featured_image: /web/updates/images/2016/07/autoplay/featured.jpg
 }
 </style>
 
-<<<<<<< HEAD
-<p class="intro">Muted autoplay for video is supported by Chrome for Android as of version 53. Playback will start automatically for a video element once it comes into view if both `autoplay` and `muted` are set, and playback of muted videos can be [initiated progamatically with `play()`](https://developers.google.com/web/updates/2016/03/play-returns-promise). Previously, playback on mobile had to be initiated by a user gesture, regardless of the muted state.</p>
-=======
 Muted autoplay for video is supported by Chrome for Android as of version 53. Playback will start automatically for a video element once it comes into view if both `autoplay` and `muted` are set, and playback of muted videos can be [initiated progamatically with `play()`](https://developers.google.com/web/updates/2016/03/play-returns-promise). Previously, playback on mobile had to be initiated by a user gesture, regardless of the muted state.
->>>>>>> 12eaa135c4668aebafbe29ea9d159ff7b63fd655
 
 {% highlight html %}
 <video autoplay muted>
@@ -64,11 +60,7 @@ The `play()` method also [returns a promise](https://developers.google.com/web/u
 
 Autoplay was disabled in previous versions of Chrome on Android because it can be disruptive, data-hungry and [many users don't like it](http://ux.stackexchange.com/questions/5252/video-and-audio-autoplay-evidence-that-its-bad-practice).
 
-<<<<<<< HEAD
-Disabling autoplay had the unintended effect of driving developers to alternatives such as animated GIFs, as well as `<canvas>` and `<img>` hacks. These techniques are much worse than optimized video in terms of power consumption, performance, bandwidth requirements, data cost and memory usage. Video can provide higher quality than animated GIFs, with far better compression: around 10 times on average, and up to 100 times at best. Video decoding in JavaScript [is possible](https://github.com/mbebenita/Broadway) but it does not take advantage of hardware decoding, making it a huge drain on battery power.
-=======
 Disabling autoplay had the unintended effect of driving developers to alternatives such as animated GIFs, as well as `<canvas>` and `<img>` hacks. These techniques are much worse than optimized video in terms of power consumption, performance, bandwidth requirements, data cost and memory usage. Video can provide higher quality than animated GIFs, with far better compression: around 10 times on average, and up to 100 times at best. Video decoding in JavaScript [is possible](https://github.com/mbebenita/Broadway), but it's a huge drain on battery power.
->>>>>>> 12eaa135c4668aebafbe29ea9d159ff7b63fd655
 
 Compare the following — the first is a video and the second is an animated GIF:
 
@@ -81,15 +73,8 @@ Compare the following — the first is a video and the second is an animated GIF
 <img src="/web/updates/images/2016/07/autoplay/chrome-clip.gif" style="display: block; margin: 0 0 20px 0;">
 
 They look pretty similar, but the video is less than 200KB in size and the animated GIF is over 900KB.
-<<<<<<< HEAD
 
 Chrome and other browser vendors are extremely cautious about user bandwidth. For many users in many contexts [high data cost is often a greater barrier to access than poor connectivity](https://developers.google.com/web/billions/#conserve-data-usage). Given the prevalence of workarounds, muted autoplay isn't something that can be blocked, so offering good APIs and defaults is the best the platform can do.
-
-The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html). Designers and developers continue to find new and unforeseen ways to use video — and they want consistent behaviour across platforms, for example when using background video as a design element. Muted autoplay enables functionality like this on both mobile and desktop.
-=======
-
-Chrome and other browser vendors are extremely cautious about user bandwidth. For many users in many contexts [high data cost is often a greater barrier to access than poor connectivity](https://developers.google.com/web/billions/#conserve-data-usage). Given the prevalence of workarounds, muted autoplay isn't something that can be blocked, so offering good APIs and defaults is the best the platform can do.
->>>>>>> 12eaa135c4668aebafbe29ea9d159ff7b63fd655
 
 The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/collateral/service-provider/visual-networking-index-vni/vni-hyperconnectivity-wp.html). Designers and developers continue to find new and unforeseen ways to use video — and they want consistent behaviour across platforms, for example when using background video as a design element. Muted autoplay enables functionality like this on both mobile and desktop.
 
