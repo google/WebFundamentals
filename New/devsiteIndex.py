@@ -61,7 +61,7 @@ def parseIndexYamlItems(yamlItems):
     result += item
   return result
 
-def generateHTMLfromYaml(lang, rawYaml):
+def generateYaml(lang, rawYaml):
   content = ''
   parsedYaml = yaml.load(rawYaml)
   page = parsedYaml['landing_page']

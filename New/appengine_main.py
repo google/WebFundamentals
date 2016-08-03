@@ -24,7 +24,7 @@ from datetime import datetime, timedelta
 from urlparse import urljoin
 import os
 import re
-import devsite
+import devsiteIndex
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
@@ -229,7 +229,7 @@ class DevSitePages(webapp2.RequestHandler):
 
             # Handle _index.yaml files
             if fileLocation.endswith('_index.yaml'):
-              text = devsite.generateHTMLfromYaml(lang, fileContent)
+              text = devsiteIndex.generateYaml(lang, fileContent)
               break
 
             # Serve .jshtml files as plain HTML files
