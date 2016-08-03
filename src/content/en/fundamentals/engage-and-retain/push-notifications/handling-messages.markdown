@@ -155,17 +155,20 @@ post from a particular person, and instead combine them.
 
 ![Combine messages from the same sender.](images/combined-notes-mobile.png){:width="316px"}
 
-Combining similar notifications comes down to three things.
+Combining similar notifications has a lot of moving parts. But I like to think
+of it as elaborations on the following tasks.
 
+* The `push` event handler.
 * A call to `getNotifications()`.
 * reusing an existing `tag` value.
 * Setting the `renotify` flag in the call to `showNotification()`.
 
-Let's look at an example that shows all three.
+Look for these things as we go through another example. We're going to assume
+that you've already received or retrieved message data as described in the last
+section. Now let's look at what to do with it. 
 
-The following examples, we're going to assume that you've already received or
-retrieved message data  as described in the last section. Now let's look at what
-to do with it. Start with a basic push event handler.
+Start with a basic push event handler. The `waitUntil()` method returns a
+Promise that resolves to the notification data.
 
 {% highlight javascript %}
 self.addEventListener('push', function(event) {
@@ -178,7 +181,7 @@ self.addEventListener('push', function(event) {
 });
 {% endhighlight %}
 
-Check for notifications that match `data.tag` with a call to `getNotifications()`.
+Once we have the message data, call `getNotifications()` using `data.tag`.
 
 {% highlight javascript %}
 self.addEventListener('push', function(event) {
