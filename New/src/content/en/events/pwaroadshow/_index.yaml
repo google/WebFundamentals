@@ -4,44 +4,45 @@ landing_page:
   custom_css_path: /web/events/events.css
 
   header:
-    description: Progressive Web Apps leverage the best features of the web to create amazing offline experiences
+    description: Attend a Progressive Web App Roadshow in your area, or start one yourself!
 
   rows:
 
-  - heading: Attend a Progressive Web App Roadshow in your area, <br> or start one yourself!
-    classname: devsite-landing-row-67
+  - heading: Find A Nearby PWA Roadshow
+    classname: find-events
     items:
     - description: >
-        Progressive Web App (PWA) Roadshows are local run events where speakers and developers
-        get together to learn about the amazing new set of technologies that are revolutioning
-        the mobile web. If you're interested in learning more about building offline experiences
-        with Service Worker or Push notifications come join a nearby PWA Roadshow or use the
-        material on this site to run one yourself!
+        <p>
+          Progressive Web App (PWA) Roadshows are local events where speakers and developers
+          get together to learn about the amazing new set of technologies that are revolutioning
+          the mobile web. If you're interested in learning more about building offline experiences
+          with Service Worker or Push notifications come join a nearby PWA Roadshow or use the
+          material on this site to run one yourself! Check the map to see if there's a PWA Roadshow
+          happening near you.
+        </p>
 
-  - items:
-    - custom_html: <hr>
-
-  - heading: Find an event
-    classname: devsite-landing-row-67
-    items:
-    - custom_html: >
         <p>
           Check the map to see if there's a PWA Roadshow happening near you. Can't find one?
-          Don't worry! <a href="#">We have all the material you need to run your own event or learn in
-          your own time</a>.
+          Don't worry! <a href="#run-your-own-event">We have all the material you
+          need to run your own event or learn in your own time</a>.
         </p>
+
+    - custom_html: >
         <div class="doc-iframe-container">
-          <iframe class="link-analytics map-frame"
-            data-src="/web/events/embeds/progressivewebapps-event-map"
-            scrolling="no"
-            frameborder="0">
-          </iframe>
+          {% framebox height="500px" %}
+            <link rel="stylesheet" href="/web/events/embeds/event-map.css">
+            <div id="map" data-tags="pwaroadshow"></div>
+
+            <script src="/web/events/embeds/event-map.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap"
+                async defer></script>
+          {% endframebox %}
         </div>
 
   - items:
     - custom_html: <hr>
 
-  - heading: Run your own event
+  - heading: Run your own PWA Roadshow
     items:
     - description: >
         From pre-made slide decks, to code labs, to speaker training videos, we

@@ -4,43 +4,42 @@ landing_page:
   custom_css_path: /web/events/events.css
 
   header:
-    description: Polymer is a new kind of library for building Web Components
+    description: Learn Polymer at your local event, or start one yourself!
 
   rows:
 
-  - heading: Learn Polymer at your local event, <br> or start one yourself!
-    classname: devsite-landing-row-67
+  - heading: Find a nearby Polytechnic
+    classname: find-events
     items:
     - description: >
-        Interested to learn Polymer but not sure where to start? Polymer
-        Polytechnics are community run events designed to give developers a
-        hands-on experience building Polymer apps. Come learn from the experts
-        in your area or use the course material to run your own event!
-
-  - items:
-    - custom_html: <hr>
-
-  - heading: Find an event
-    classname: devsite-landing-row-67
-    items:
-    - custom_html: >
         <p>
-          Check the map to see if there's a Polytechnic happening near you. Can't find one?
-          Don't worry! <a href="#">We have all the material you need to run your own event or learn in
-          your own time</a>.
+          Interested to learn Polymer but not sure where to start? Polymer
+          Polytechnics are community run events designed to give developers a
+          hands-on experience building Polymer apps.
         </p>
+        <p>
+          Check the map to see if there's a Polytechnic happening near you.
+          Can't find one? Don't worry! <a href="#run-your-own-polytechnic">We
+          have all the material you need to run your own event or learn in your
+          own time</a>.
+        </p>
+
+    - custom_html: >
         <div class="doc-iframe-container">
-          <iframe class="link-analytics map-frame"
-            data-src="/web/events/embeds/polymer-event-map"
-            scrolling="no"
-            frameborder="0">
-          </iframe>
+          {% framebox height="500px" %}
+            <link rel="stylesheet" href="/web/events/embeds/event-map.css">
+            <div id="map" data-tags="polymer"></div>
+
+            <script src="/web/events/embeds/event-map.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap"
+                async defer></script>
+          {% endframebox %}
         </div>
 
   - items:
     - custom_html: <hr>
 
-  - heading: Run your own event
+  - heading: Run your own Polytechnic
     items:
     - description: >
         We provide all the tools you need to run your own event, from slide

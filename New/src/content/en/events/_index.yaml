@@ -2,29 +2,20 @@ project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
   custom_css_path: /web/events/events.css
+  header:
+    description: Attend A Developer Event And Get Hacking
 
   rows:
-
-  - heading: Attend A Developer Event And Get Hacking
-    classname: devsite-landing-row-67
-    items:
-    - description: >
-        Events are run by local Google Developer Groups or other
-        developer meetups. Each event is a little different, but generally, an
-        event can include a tech talk, series of code labs, and time for
-        personal coding.
-
-  - items:
-    - custom_html: <hr>
 
   - heading: Find Events Near You
     classname: find-events
     items:
     - description: >
         <p>
-          Level up your skills at a local event. Events consist of code labs
-          and talks by leading domain experts. Find one in your area or start
-          your own!
+          Events are run by local Google Developer Groups or other
+          developer meetups. Each event is a little different, but generally, an
+          event can include a tech talk, series of code labs, and time for
+          personal coding. Find one in your area or start your own!
         </p>
 
         <p>
@@ -36,11 +27,18 @@ landing_page:
 
     - custom_html: >
         <div class="doc-iframe-container">
-          <iframe class="link-analytics map-frame"
-            data-src="/web/events/embeds/combined-event-map"
-            scrolling="no"
-            frameborder="0">
-          </iframe>
+          {% framebox height="500px" %}
+            <link rel="stylesheet" href="/web/events/embeds/event-map.css">
+            <div id="map" data-tags="pwaroadshow,polymer"></div>
+            <div id="map-key">
+              <span class="map-key-event pwa">= PWA Road Show</span>
+              <span class="map-key-event polymer">= Polymer Polytechnic</span>
+            </div>
+
+            <script src="/web/events/embeds/event-map.js"></script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap"
+                async defer></script>
+          {% endframebox %}
         </div>
 
 
