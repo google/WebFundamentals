@@ -33,7 +33,7 @@ DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 
 class HomePage(webapp2.RequestHandler):
     def get(self):
-        self.redirect("/web/", permanent=True)
+        self.redirect('/web/', permanent=True)
 
 class DevSitePages(webapp2.RequestHandler):
     def readFile(self, pathToFile):
@@ -75,6 +75,7 @@ class DevSitePages(webapp2.RequestHandler):
       fileName = fileName.replace('%}', '')
       fileName = fileName.replace('include', '')
       fileName = fileName.replace('"', '')
+      fileName = fileName.replace('\'', '')
       fileName = fileName.strip()
       result = self.readFile(fileName)
       if result is None:
@@ -222,9 +223,9 @@ class DevSitePages(webapp2.RequestHandler):
             # Read the file and pass in the contents - avoids issues if the
             # file contains {%%} <- this breaks pythons templating
             fileContent = open(fileLocation, 'r').read()
-            fileContent = fileContent.decode("utf8")
+            fileContent = fileContent.decode('utf8')
 
-            logging.info("200 " + fileLocation)
+            logging.info('200 ' + fileLocation)
 
             # Handle _index.yaml files
             if fileLocation.endswith('_index.yaml'):
@@ -237,12 +238,12 @@ class DevSitePages(webapp2.RequestHandler):
               break
 
             # Remove any comments {# something #} from the markdown
-            fileContent = re.sub(r"{#.+?#}", "", fileContent)
+            fileContent = re.sub(r'{#.+?#}', '', fileContent)
 
             # Show warning for unsupported elements
             badTags = [
-              r"{% link_sample_button .+%}",
-              r"{% include_code (.+)%}"
+              r'{% link_sample_button .+%}',
+              r'{% include_code (.+)%}'
             ]
             for tag in badTags:
               if re.search(tag, fileContent) is not None:
@@ -272,12 +273,12 @@ class DevSitePages(webapp2.RequestHandler):
 
             # Adds a set of markdown extensions available to us on DevSite
             ext = [
-              "markdown.extensions.attr_list", # Adds support for {: #someid }
-              "markdown.extensions.meta", # Removes the meta data from the top of the doc
-              "markdown.extensions.toc", # Generate the TOC for the right side
-              "markdown.extensions.tables", # Support for Markdown Tables
-              "markdown.extensions.extra", # Support for markdown="1" in tags
-              "markdown.extensions.def_list" # Support for definition lists
+              'markdown.extensions.attr_list', # Adds support for {: #someid }
+              'markdown.extensions.meta', # Removes the meta data from the top of the doc
+              'markdown.extensions.toc', # Generate the TOC for the right side
+              'markdown.extensions.tables', # Support for Markdown Tables
+              'markdown.extensions.extra', # Support for markdown='1' in tags
+              'markdown.extensions.def_list' # Support for definition lists
             ]
             md = markdown.Markdown(extensions=ext)
             parsedMarkdown = md.convert(fileContent)
@@ -291,40 +292,40 @@ class DevSitePages(webapp2.RequestHandler):
               logging.warn(' - No book.yaml specified in markdown.')
 
             # Replaces <pre> tags with prettyprint enabled tags
-            parsedMarkdown = re.sub(r"^<pre>(?m)", r"<pre class='prettyprint'>", parsedMarkdown)
+            parsedMarkdown = re.sub(r'^<pre>(?m)', r'<pre class=\prettyprint\'>', parsedMarkdown)
 
             # Get the page title from the markup.
-            title = re.search(r"<h1 class=\"page-title\".*?>(.*?)<\/h1>", parsedMarkdown)
+            title = re.search(r'<h1 class=\"page-title\".*?>(.*?)<\/h1>', parsedMarkdown)
             if title:
               title = title.group(1)
             else:
-              title = "Web Fundamentals"
+              title = 'Web Fundamentals'
               logging.warn(' - Page doesn\'t have a title.')
 
             # Build the table of contents & transform so it fits within DevSite
             toc = md.toc
             toc = toc.strip()
-            toc = re.sub(r"<div class=\"toc\">", "", toc) # remove <div> wrapper
-            toc = re.sub(r"</div>", "", toc) # remove <div> wrapper
-            toc = re.sub("<ul>", "", toc, 1) # Remove outer <ul></ul>
-            toc = toc[:toc.rfind("</ul>")]# Remove outer <ul></ul>
+            toc = re.sub(r'<div class="toc">', '', toc) # remove <div> wrapper
+            toc = re.sub(r'</div>', '', toc) # remove <div> wrapper
+            toc = re.sub('<ul>', '', toc, 1) # Remove outer <ul></ul>
+            toc = toc[:toc.rfind('</ul>')] # Remove outer <ul></ul>
             # Add appropriate classes
-            toc = re.sub(r"<ul>", "<ul class=\"devsite-page-nav-list\">", toc)
-            toc = re.sub(r"<a href", "<a class=\"devsite-nav-title\" href", toc)
-            toc = re.sub(r"<li>", "<li class=\"devsite-nav-item\">", toc)
+            toc = re.sub(r'<ul>', '<ul class=\"devsite-page-nav-list\">', toc)
+            toc = re.sub(r'<a href', '<a class=\"devsite-nav-title\" href', toc)
+            toc = re.sub(r'<li>', '<li class=\"devsite-nav-item\">', toc)
  
-            text = render("gae/article.tpl", {
-              "title": title,
-              "leftNav": leftNav,
-              "content": parsedMarkdown,
-              "toc": toc,
-              "lang": lang}
+            text = render('gae/article.tpl', {
+              'title': title,
+              'leftNav': leftNav,
+              'content': parsedMarkdown,
+              'toc': toc,
+              'lang': lang}
             )
             break
 
         if text is None:
-          text = render("gae/404.tpl", {})
-          logging.error("404 " + os.path.join(sourcePath, lang, path))
+          text = render('gae/404.tpl', {})
+          logging.error('404 ' + os.path.join(sourcePath, lang, path))
           self.response.set_status(404)
 
         self.response.out.write(text)

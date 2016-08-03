@@ -62,7 +62,7 @@ def parseIndexYamlItems(yamlItems):
   return result
 
 def generateHTMLfromYaml(lang, rawYaml):
-  content = ""
+  content = ''
   parsedYaml = yaml.load(rawYaml)
   page = parsedYaml['landing_page']
   rows = page['rows']
@@ -100,12 +100,12 @@ def generateHTMLfromYaml(lang, rawYaml):
     section += '</section>'
     section = section.replace('[[SECTION_CLASSES]]', ' '.join(sectionClass))
     content += section
-  text = render("gae/home.tpl", {
-                "title": 'Web',
-                "customcss": customCss,
-                "header": header,
-                "content": content,
-                "lang": lang}
+  text = render('gae/home.tpl', {
+                'title': 'Web',
+                'customcss': customCss,
+                'header': header,
+                'content': content,
+                'lang': lang}
               )
   return text
 
