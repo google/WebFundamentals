@@ -83,12 +83,12 @@ Although you can use the shadow DOM API and its benefits outside of web componen
 
 #### &lt;fancy-tabs&gt; demo {#demo}
 
-Throughout this article, I'll be referring to a demo component (`<fancy-tabs>`) and referencing code snippets from it. <!--If your browser supports the APIs, you should see a live demo of it just below. Otherwise, check out the <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">full source on Github</a>.--> Check out the [full source on Github](https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b).
+Throughout this article, I'll be referring to a demo component (`<fancy-tabs>`) and referencing code snippets from it. If your browser supports the APIs, you should see a live demo of it just below. Otherwise, check out the <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">full source on Github</a>.
 
-<!-- <figure class="demoarea">
-  <iframe style="height:360px;width:100%;border:none" src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/13b3296d1adb6f20ee4748d686bbfeef7d187224/fancy-tabs-demo.html"></iframe>
+<figure class="demoarea">
+  <iframe style="height:360px;width:100%;border:none" src="https://rawgit.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b/raw/6aa39a15906adafd3764f01fc553bfdc24ea213c/fancy-tabs-demo.html"></iframe>
   <figcaption><a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">View source on Github</a></figcaption>
-</figure> -->
+</figure>
 
 ## What is shadow DOM? {#what}
 
