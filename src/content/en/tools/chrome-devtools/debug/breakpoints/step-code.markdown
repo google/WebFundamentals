@@ -1,6 +1,6 @@
 ---
 layout: shared/narrow
-title: "How to Step Through the Code"
+title: "How to step through your code"
 description: "By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening."
 published_on: 2015-04-14
 updated_on: 2015-09-02
@@ -219,7 +219,9 @@ Try modifying values, then continue execution to see how it changes the outcome 
 
 Observing and pausing the executing code helps you locate errors, and live editing allows you to quickly preview changes without the need for reloading.
 
-To live edit a script, simply click into the editor part of the Sources panel while stepping. Make your changes as you would do in your editor, then resume execution and interact with the page as usual; your modified script will execute in place of the original, and you can observe the effects of your changes.
+To live edit a script, simply click into the editor part of the Sources panel while stepping. Make your changes as you would do in your editor, then commit the change with <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> (or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">S</kbd> on Mac). At this point, the entire JS file will be patched into the VM and all function definitions will be updated. 
+
+Now, you can resume execution; your modified script will execute in place of the original, and you can observe the effects of your changes.
 
 #### Example
 
@@ -228,7 +230,7 @@ To live edit a script, simply click into the editor part of the Sources panel wh
     <img src="imgs/image_18.png" alt="Live Editing" >
   </div>
   <div class="mdl-cell mdl-cell--8-col">
-    We suspect that the parameter <code>dow</code> is, in every case, off by +1 when it is passed to the function <code>setone()</code> – that is, the value of <code>dow</code>, as received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly test whether decrementing the passed value confirms that this is the problem, we add line 17 at the beginning of the function and resume.
+    We suspect that the parameter <code>dow</code> is, in every case, off by +1 when it is passed to the function <code>setone()</code> – that is, the value of <code>dow</code>, as received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly test whether decrementing the passed value confirms that this is the problem, we add line 17 at the beginning of the function, commit with <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd>  and resume.
   </div>
 </div>
 
