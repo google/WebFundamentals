@@ -43,10 +43,13 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the spec](https://github.com/WebBluetoothCG/web-bluetooth/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
-Web Bluetooth API is at the time of writing partially implemented in Chrome OS,
-Chrome for Android M, Linux, and Mac behind an experimental flag. Go to
-`chrome://flags/#enable-web-bluetooth`,
-enable the highlighted flag, restart Chrome and you should be able to
+Web Bluetooth API is currently available to be enabled experimentally on your
+origin in Origin Trials, or locally on your machine using an experimental flag.
+The implementation is partially complete and currently available on Chrome OS,
+Chrome for Android M, Linux, and Mac.
+
+Go to `chrome://flags/#enable-web-bluetooth`, enable the highlighted flag,
+restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices,
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
@@ -60,11 +63,12 @@ disconnected](#get-disconnected-from-a-bluetooth-device).
 In order to get as much feedback as possible from developers using the Web
 Bluetooth API in the field, we're also adding this feature in Chrome 53 as an
 [origin trial](https://github.com/jpchase/OriginTrials) for Chrome
-OS, Android M, and Mac. During the origin trial, the API may still change in
-backward-incompatible ways before we freeze it into the web platform.  To use
-this experimental API in Chrome with no flag, you'll need to [request a token
-for your origin](http://bit.ly/WebBluetoothOriginTrial) and [insert it in your
-application](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+OS, Android M, and Mac. **Origin Trials allow you to temporarily enable the
+feature for all of users of your website.** During the origin trial, the API may
+still change in backward-incompatible ways before we freeze it into the web
+platform.  To use this experimental API in Chrome with no flag, you'll need to
+[request a token for your origin](http://bit.ly/WebBluetoothOriginTrial) and
+[insert it in your application](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
 
 The trial will end in January 2017. By that point, we expect to have figured
 out any changes necessary to stabilize the feature and move it out from Origin
