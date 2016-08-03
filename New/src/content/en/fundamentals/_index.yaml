@@ -97,25 +97,25 @@ landing_page:
     - items:
       - icon:
           icon_name: trending_up
-        path: /web/petele/performance/
+        path: /web/fundamentals/performance/
         heading: "Performance"
         description: "Performance is a feature, and #perfmatters!"
 
       - icon:
           icon_name: network_check
-        path: /web/petele/performance/
+        path: /web/fundamentals/performance/
         heading: "Instant Loading"
         description: "Lorem ipsum, something, this that and the other thing."
 
       - icon:
           icon_name: security
-        path: /web/petele/performance/
+        path: /web/fundamentals/performance/
         heading: "Security & Identity"
         description: "Know who your users are and keep their information safe."
 
       - icon:
           icon_name: web
-        path: /web/petele/performance/
+        path: /web/fundamentals/performance/
         heading: "Design & UI"
         description: "Make your projects look great and interact beautifully."
 
@@ -123,24 +123,24 @@ landing_page:
     - items:
       - icon:
           icon_name: group_add
-        path: /web/petele/performance/
+        path: /web/fundamentals/performance/
         heading: "Engage & Retain"
         description: "Connect with your users and keep them coming back."
 
       - icon:
           icon_name: find_in_page
-        path: /web/petele/performance/
+        path: /web/fundamentals/performance/
         heading: "Discovery & Monetization"
         description: "Maximize discoverability for your users and your revenue."
 
       - icon:
           icon_name: devices
-        path: /web/petele/performance/
+        path: /web/fundamentals/performance/
         heading: "Accessing Native Hardware"
         description: "Locate your users and help them contact you."
 
       - icon:
           icon_name: accessibility
-        path: /web/petele/performance/
+        path: /web/fundamentals/performance/
         heading: "Accessibility"
         description: "i like bacon, it's yummy and informative."
