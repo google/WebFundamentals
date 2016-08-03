@@ -2,8 +2,8 @@
 layout: updates/post
 title: "Capture a media stream from &lt;canvas&gt;, &lt;audio&gt; or &lt;video&gt;"
 description: "The captureStream() method enables a MediaStream to be captured from a canvas, audio or video element, on Android and desktop."
-published_on: 2016-07-18
-updated_on: 2016-07-18
+published_on: 2016-08-03
+updated_on: 2016-08-03
 authors:
   - samdutton
 tags:
@@ -29,9 +29,9 @@ featured_image: /web/updates/images/2016/07/capture-stream/featured.jpg
 }
 </style>
 
-<p class="intro">The <a href="https://w3c.github.io/mediacapture-fromelement/#dfn-capturestream" title="W3C captureStream() spec"><code>captureStream()</code></a> method makes it possible to stream from a <code>canvas</code>, <code>audio</code> or <code>video</code> element.</p>
+<p class="intro">The <a href="https://w3c.github.io/mediacapture-fromelement/#dfn-capturestream" title="W3C captureStream() spec"><code>captureStream()</code></a> method makes it possible to capture a `MediaStream` from a <code>&lt;canvas&gt;</code>, <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> element.</p>
 
-This enables a `MediaStream` captured from any of these elements to be live-streamed via WebRTC, recorded, or combined with effects or other `MediaStream`s in a &lt;canvas&gt;. In other words, `captureStream()` enables `MediaStream` to pass media back and forth between canvas, audio or video elements — or to an `RTCPeerConnection` or `MediaRecorder`.
+This enables a video or audio stream from any of these elements to be recorded, live-streamed via WebRTC, or combined with effects or other `MediaStream`s in a `<canvas>`. In other words, `captureStream()` enables `MediaStream` to pass media back and forth between canvas, audio or video elements — or to an `RTCPeerConnection` or `MediaRecorder`.
 
 In the following demo (available from the [WebRTC samples](https://webrtc.github.io/samples/src/content/capture/canvas-pc/)) a `MediaStream` captured from a canvas element on the left is streamed via a WebRTC peer connection to the video element on the right:
 
@@ -70,16 +70,16 @@ leftVideo.onplay = function() {
 };
 {% endhighlight %}
 
-Note that `captureStream()` can only be called after the video element is able to play video: that's the reason it's in the handler here.
+Note that `captureStream()` can only be called after the video element is able to play video; that's the reason it's in the `onplay` handler here.
 
 ## But why?
 
 The `captureStream()` method makes it possible to [record](https://developers.google.com/web/updates/2016/01/mediarecorder) or [live stream](http://www.html5rocks.com/en/tutorials/webrtc/basics/) from canvas and media elements:
 
-* Record and stream game play from a &lt;canvas&gt;
+* Record and stream game play from a `<canvas>`
 * Capture video from a camera, then add additional content or effects
-* Create picture-in-picture effects from multiple videos via a &lt;canvas&gt;
-* Combine video and images (from files or a camera or both) in a &lt;canvas&gt;
+* Create picture-in-picture effects from multiple videos via a `<canvas>`
+* Combine video and images (from files or a camera or both) in a `<canvas>`
 * Live-stream video played from a file
 * Use a recorded audio or video message for a video or voice mail
 
@@ -89,7 +89,9 @@ Essentially, `captureStream()` enables JavaScript to construct and "inject stuff
 
 * Attempting to use `captureStream()` with a media element that implements content protection via [Encrypted Media Extensions](http://www.html5rocks.com/en/tutorials/eme/basics/) will throw an exception.
 
-* When capturing from a &lt;canvas&gt;, the frame rate is set when `captureStream()` is called, and it can't then be modified. This could be inefficient, given that the &lt;canvas&gt; might sometimes change rapidly, and sometimes not at all — for example, during game play. Unfortunately there is no way around this for the moment, and nothing (yet) planned for the `captureStream()` spec.
+* When capturing from a `<canvas>`, the maximum frame rate is set when `captureStream()` is called. For example, `canvas.captureStream(10)` means that the canvas outputs between 0 and 10 fps. Nothing gets captured when nothing gets painted on the `<canvas>`, and 10 fps is captured even if the `<canvas>` gets painted at 30 fps. There is a [bug with more discussion](https://github.com/w3c/mediacapture-fromelement/issues/43) filed on the `captureStream` spec.
+
+* The dimensions of a `captureStream()` video match the `<canvas>` it was called on.
 
 ## Demos
 
@@ -103,7 +105,7 @@ Essentially, `captureStream()` enables JavaScript to construct and "inject stuff
 
 ## Support
 * Canvas `captureStream()`: Firefox 43 or above; Chrome 50 and above with  chrome://flags/#enable-experimental-web-platform-features enabled, or Chrome 52 and above by default.
-* Video and audio `captureStream()`: recent versions of Firefox; Chrome 52 and above with  chrome://flags/#enable-experimental-web-platform-features enabled, or Chrome 53 and above by default.
+* Video and audio `captureStream()`: Firefox 47; Chrome 52 and above with  chrome://flags/#enable-experimental-web-platform-features enabled, or Chrome 53 and above by default.
 
 ## Find out more
 * [Firefox implementation bug](https://bugzilla.mozilla.org/show_bug.cgi?id=664918)
