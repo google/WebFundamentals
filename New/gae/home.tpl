@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-          DevSite Section Name
+          {{ header }}
       </header>
       <div id="gc-wrapper">
         <div class="devsite-main-content clearfix">

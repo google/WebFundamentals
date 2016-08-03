@@ -1,60 +1,104 @@
 import yaml
-import logging
-import xml.etree.ElementTree as ET
 from google.appengine.ext.webapp.template import render
+
+def parseIndexYamlItems(yamlItems):
+  result = ''
+  for yamlItem in yamlItems:
+    item = '<div class="[[ITEM_CLASSES]]">'
+    itemClasses = ['devsite-landing-row-item']
+    descriptionClasses = ['devsite-landing-row-item-description']
+    link = None
+    if 'path' in yamlItem:
+      link = '<a href="' + yamlItem['path'] + '">'
+    if 'icon' in yamlItem:
+      if link:
+        item += link
+      if 'icon_name' in yamlItem['icon']:
+        item += '<div class="devsite-landing-row-item-icon material-icons">'
+        item += yamlItem['icon']['icon_name']
+        item += '</div>'
+        descriptionClasses.append('devsite-landing-row-item-icon-description')
+      if link:
+        item += '</a>' 
+    if 'image_path' in yamlItem:
+      item += '<img src="' + yamlItem['image_path'] + '" '
+      item += 'class="devsite-landing-row-item-image">' 
+    else:
+      itemClasses.append('devsite-landing-row-item-no-image')
+    if 'description' in yamlItem:
+      item += '<div class="[[DESCRIPTION_CLASSES]]">'
+      if 'heading' in yamlItem:
+        if link:
+          item += link
+        item += '<h3>' + yamlItem['heading'] + '</h3>'
+        if link:
+          item += '</a>'
+      item += yamlItem['description']
+      if 'buttons' in yamlItem:
+        item += '<div class="devsite-landing-row-item-buttons">'
+        for button in yamlItem['buttons']:
+          item += '<a href="' + button['path'] + '"'
+          if 'classname' in button:
+            item += ' class="' + button['classname'] + '"'
+          else:
+            item += ' class="button button-white"'
+          item += '>' + button['label'] + '</a>'
+        item += '</div>'
+      item += '</div>'
+    if 'youtube_id' in yamlItem:
+      result += '<div class="devsite-landing-row-item-youtube">'
+      result += '<iframe class="devsite-embedded-youtube-video" '
+      result += 'frameborder="0" allowfullscreen '
+      result += 'src="//www.youtube.com/embed/' + yamlItem['youtube_id']
+      result += '?autohide=1&showinfo=0&enablejsapi=1">'
+      result += '</iframe>'
+      result += '</div>'
+    if 'custom_html' in yamlItem:
+      item += yamlItem['custom_html']
+    item += '</div>'
+    item = item.replace('[[ITEM_CLASSES]]', ' '.join(itemClasses))
+    item = item.replace('[[DESCRIPTION_CLASSES]]', ' '.join(descriptionClasses))
+    result += item
+  return result
 
 def generateHTMLfromYaml(lang, rawYaml):
   content = ""
   parsedYaml = yaml.load(rawYaml)
   page = parsedYaml['landing_page']
   rows = page['rows']
+  header = 'Generic Page Header Here'
+  if 'header' in page:
+    if 'description' in page['header']:
+      header = page['header']['description']
   for row in rows:
-    logging.info(row)
-    section = '<section '
     sectionClass = ['devsite-landing-row']
+    section = '<section class="[[SECTION_CLASSES]]">'
     if 'classname' in row:
       sectionClass.append(row['classname'])
-    if 'items' in row:
+    numItems = None
+    if 'columns' in row:
+      numItems = len(row['columns'])
+    elif 'items' in row:
       numItems = len(row['items'])
+    if numItems:
       sectionClass.append('devsite-landing-row-' + str(numItems) + '-up')
-    section += 'class="' + ' '.join(sectionClass) + '">'
     if 'heading' in row:
       section += '<h2>' + row['heading'] + '</h2>'
-    ## TODO: Add stuff to support columns
     if 'items' in row:
-      for item in row['items']:
-        section += '<div class="devsite-landing-row-item">'
-        if 'image_path' in item:
-          section += '<img src="' + item['image_path'] + '" '
-          section += 'class="devsite-landing-row-item-image">' 
-        if 'heading' in item:
-          section += '<h3>' + item['heading'] + '</h3>'
-        if 'description' in item:
-          section += '<div class="devsite-landing-row-item-description">'
-          section += item['description']
-          if 'buttons' in item:
-            section += '<div class="devsite-landing-row-item-buttons">'
-            for button in item['buttons']:
-              section += '<a href="' + button['path'] + '"'
-              if 'classname' in button:
-                section += ' class="' + button['classname'] + '"'
-              else:
-                section += ' class="button button-white"'
-              section += '>' + button['label'] + '</a>'
-            section += '</div>'
-          section += '</div>'
-      if 'custom_html' in item:
-        section += item['custom_html']
-      section += '</div>'
+      section += parseIndexYamlItems(row['items'])
+    if 'columns' in row:
+      for column in row['columns']:
+        section += '<div class="devsite-landing-row-column">'
+        if 'items' in column:
+          section += parseIndexYamlItems(column['items'])
+        section += '</div>'
     section += '</section>'
-
+    section = section.replace('[[SECTION_CLASSES]]', ' '.join(sectionClass))
     content += section
-    
   text = render("gae/home.tpl", {
-                "title": 'Title',
-                "leftNav": '',
+                "title": 'Web',
+                "header": header,
                 "content": content,
-                "toc": '',
                 "lang": lang}
               )
   return text
