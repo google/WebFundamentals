@@ -22,6 +22,6 @@ google_analytics_ids:
 - UA-52746336-1
 
 announcement:
-  description: Didn't make it to Amsterdam? Watch the <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb">Progressive Web App Dev Summit playlist</a> now!
-  start: '2016-05-20T08:00:00Z'
-  end: '2016-07-28T08:00:00Z'
+  description: Join the Progressive Web App Road Show<br><span style="font-weight:400;">Stopping in New York, Chicago, Austin, Toronto, Mountain View and Seattle. Learn more and <a href="https://events.withgoogle.com/pwa-roadshow-north-america/">sign up now.</a><span>
+  start: '2016-08-01T08:00:00Z'
+  end: '2016-10-05T08:00:00Z'

@@ -16,6 +16,11 @@ key-takeaways:
     their source code."
   - "Modify animations by changing their timing, delay, duration, or keyframe
     offsets."
+related-guides:
+  animations:
+    -
+      title: "Best Practices: Animations"
+      href: fundamentals/design-and-ui/animations
 ---
 
 <p class="intro">Inspect and modify animations with the Chrome DevTools
@@ -40,6 +45,8 @@ The Chrome DevTools Animation Inspector has two main purposes.
 The Animation Inspector supports CSS animations,
 CSS transitions, and web animations. `requestAnimationFrame` animations 
 are currently not supported.
+
+{% include shared/related_guides.liquid inline=true list=page.related-guides.animations %}
 
 ### What's an animation group?
 

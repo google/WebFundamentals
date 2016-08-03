@@ -54,11 +54,12 @@ function initialiseState() {
 
 ## Avoid page-load subscription requests {#avoid-page-load-requests}
 
-Notice one thing the previous example does _not_ do. It does not call
+Notice one thing the previous example does _not_ do. It does not call 
 `pushManager.subscribe()`, though this would seem to be the logical response to
 finding that no existing subscription exists. Such requests may seem timely.
-But, since you don't yet know anything about your users, it's difficult for them
-to be precise or relevant.
+But, since you don't yet know anything about your users, and they may not 
+know anything about you, it's difficult to send them pricise or relevant
+messages.
 
 ## Requesting permission {#requesting-permission}
 
@@ -70,7 +71,7 @@ explains exactly why you want to send them notifications.
 
 If the user approves, we need to send a subscription request to the push
 manager. Do this by calling `PushManager.subscribe()` (lines 5 through 9). In
-this example, we're passing it an object with `userVisibleOnly` set to `true` so
+this example, we're passing it an object with  `userVisibleOnly` set to `true` so
 that all push messages  sent the client will be shown to the user as a
 notification. We're also  including an `applicationServerKey` converted to an
 integer array.
@@ -139,11 +140,12 @@ orbit of a Soyuz capsule.
 ## Passing a subscription to the server {#passing-subscription}
 
 After getting a user's permission to send notifications and setting the state of
-related controls, you need to send the subscription information to the push
-server. This involves creating an appropriate request object containing the
-subscription data, then passing it to the server.
+related controls, you need to send the subscription information (called the
+"Push Resource" in the spec) to the push server. This involves creating an
+appropriate request object containing the subscription data, then passing it to
+the server.
 
-When you create the request (lines 14 through 21), use the `POST` verb and a
+When you create the request (lines 14 through 21), use the  `POST` verb and a
 `Content-Type` header of  `application/json`. For the body you need to convert
 the subscription object to a  string. We'll look at what's in this object in the
 next section, [Sending  messages](sending-messages). Use `fetch()` to send the

@@ -59,9 +59,9 @@ WFarray: []
 # Custom Promo across the entire site, use with care.
 # Image is optional, 
 WFPromo: 
-  title: "Progressive Web App Dev Summit"
+  title: "Progressive Web App Road Show 2016"
   image: "https://www.gstatic.com/images/branding/product/1x/chrome_512dp.png"
-  text: "All sessions are availble on YouTube, <a href='https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb'>watch now</a>!"
+  text: "Stopping in New York, Chicago, Austin, Toronto, Mountain View and Seattle. Learn more and <a href='https://events.withgoogle.com/pwa-roadshow-north-america/'>sign up now.</a>"
 
 ## Unknowns
 fundamentals: /web/fundamentals

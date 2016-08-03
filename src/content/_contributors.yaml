@@ -1060,8 +1060,21 @@ captainpangyo:
   role:
     - translator
   homepage: https://joshuajangblog.wordpress.com/
-  google: +jangkeehyo
-  twitter:
-  email: jangkeehyo@google.com
+  google: +GihyoJoshuaJang
+  email: jangkeehyo@gmail.com
   description:
-    en: "Josh is a Mobile & Web Enthusiast"
+    en: "Josh is a Singing Computer Scientist"
+
+zkoch:
+  name:
+    given: Zach
+    family: Koch
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  email: zkoch@google.com
+  description:
+    en: "Google Chrome Product Manager"

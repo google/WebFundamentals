@@ -166,7 +166,7 @@ the DOM element itself** i.e. the instance of the class. In our example, `this` 
 
 1. The name of a custom element **must contain a dash (-)**. So `<x-tags>`, `<my-element>`, and `<my-awesome-app>` are all valid names, while `<tabs>` and `<foo_bar>` are not. This requirement is so the HTML parser can distinguish custom elements from regular elements. It also ensures forward compatibility when new tags are added to HTML.
 2. You can't register the same tag more than once. Attempting to do so will throw a `DOMException`. Once you've told the browser about a new tag, that's it. No take backs.
-3. Custom elements cannot be self-closing because HTML only allows [a few elements](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) to be self-closing. Always declare a closing tag (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>).
+3. Custom elements cannot be self-closing because HTML only allows [a few elements](https://html.spec.whatwg.org/multipage/syntax.html#void-elements) to be self-closing. Always write a closing tag (<code>&lt;app-drawer&gt;&lt;/app-drawer&gt;</code>).
 
 ## Extending elements {#extend}
 
@@ -232,7 +232,7 @@ class FancyButton extends HTMLButtonElement {
     this.appendChild(div);
     div.style.top = `${y - div.clientHeight/2}px`;
     div.style.left = `${x - div.clientWidth/2}px`;
-    div.style.backgroundColor = window.getComputedStyle(this).color;
+    div.style.backgroundColor = 'currentColor';
     div.classList.add('run');
     div.addEventListener('transitionend', e => div.remove());
   }
@@ -280,7 +280,8 @@ Here's another example that extends `<img>`.
 
 {% highlight javascript %}
 customElements.define('bigger-img', class extends Image {
-  constructor(width, height) {
+  // Give img default size if users don't specify.
+  constructor(width=50, height=50) {
     super(width * 10, height * 10);
   }
 }, {extends: 'img'});
@@ -290,7 +291,7 @@ Users declare this component as:
 
 {% highlight html %}
 <!-- This <img> is a bigger img. -->
-<img is="bigger-img">
+<img is="bigger-img" width="15" height="20">
 {% endhighlight %}
 
 or create an instance in JavaScript:
