@@ -27,10 +27,18 @@ Focus determines where keyboard events go in the page at any given moment. For i
 
 The currently focused item is often indicated by a *focus ring*, the style of which depends on both the browser and on any styling the page author has applied. Chrome, for instance, typically highlights focused elements with a blue border, whereas Firefox uses a dashed border.
 
-Some users operate their computer almost entirely with the keyboard or other input device. For those users, focus is critical; it's their primary means of reaching everything on the screen. For that reason, the Web AIM checklist states in section 2.1.1 that all page functionality should be available using the keyboard, unless it's something you just cannot do with a keyboard, such as freehand drawing.
+![Sign up](imgs/sign-up.png)
+
+Some users operate their computer almost entirely with the keyboard or other input device. For those users, focus is critical; it's their primary means of reaching everything on the screen. For that reason, the Web AIM checklist states in section 2.1.1 that <a href="http://webaim.org/standards/wcag/checklist#sc2.1.1" target="_blank">all page functionality should be available using the keyboard</a>, unless it's something you just cannot do with a keyboard, such as freehand drawing.
 
 As a user, you can control which element is currently focused using `Tab`, `Shift+Tab`, or the arrow keys. On Mac OSX this works a little differently: while Chrome always lets you navigate with `Tab`, you need to press `Option+Tab` to change focus in other browsers like Safari. (You can change this setting in the Keyboard section of System Preferences.)
+
+![System preferences](imgs/system-prefs2.png)
 
 The order in which focus proceeds forward and backward through input elements via `Tab` is called, not surprisingly, the *tab order*. Ensuring that you design your page with a logical tab order is an important step that we'll cover later.
 
 Built-in interactive HTML elements like text fields, buttons, and select lists are *implicitly focusable*, meaning they are automatically inserted into the tab order and have built-in keyboard event handling without developer intervention. But not all elements are focusable; paragraphs, divs, and various other page elements are not focused as you tab through the page, and that's by design. There's no need to focus something if the user can't interact with it.
+
+![Implicit focus](imgs/implicitly-focused.png)
+
+![Not all elements](imgs/not-all-elements.png)
