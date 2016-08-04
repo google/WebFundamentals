@@ -1,6 +1,14 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: This article has given you a quick introduction to web app manifests. But there's more to learn.
+
+{# wf_review_required #}
+{# wf_updated_on: 2016-02-11 #}
+{# wf_published_on: 2014-12-16 #}
+
+# More Information {: .page-title }
+
+{% include "_shared/contributors/josephmedley.html" %}
 
 This article has given you a quick introduction to web app manifests. But there's more to learn.
 

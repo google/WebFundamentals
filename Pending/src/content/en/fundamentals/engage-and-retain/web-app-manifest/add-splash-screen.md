@@ -1,6 +1,16 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: To provide a better user experience you can replace the white launch screen with a title, color, and images.
+
+{# wf_review_required #}
+{# wf_updated_on: 2016-02-11 #}
+{# wf_published_on: 2014-12-16 #}
+
+# Add a Splash Screen {: .page-title }
+
+{% include "_shared/contributors/mattgaunt.html" %}
+{% include "_shared/contributors/paulkinlan.html" %}
+
 
 When you launch your web app from the home screen a number of things happen behind the
 scenes:
@@ -29,7 +39,9 @@ and will remain on the screen until the web app's first render.
 
 To set the bacground color, simply set the following in your manifest.
 
-<div class="highlight"><pre><code class="language-json" data-lang="json"><span class="s2">&quot;background_color&quot;</span><span class="err">:</span> <span class="s2">&quot;#2196F3&quot;</span><span class="err">,</span></code></pre></div>
+
+    "background_color": "#2196F3",
+    
 
 There will now be no white screen as your site is launched from the home screen.
 
@@ -47,4 +59,3 @@ splashscreen to the homepage.
 Specify a theme color using the (wait for it) `theme_color` property. This property
 sets the color of the toolbar. For this we also suggest duplicating an existing
 color, specifically the `theme-color` `<meta>`.
-

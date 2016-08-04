@@ -1,20 +1,24 @@
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
+{# wf_review_required #}
+{# wf_updated_on: 2016-02-11 #}
+{# wf_published_on: 2016-02-11 #}
 
+# Improve User Experiences with a Web App Manifest {: .page-title }
 
+{% include "_shared/contributors/josephmedley.html" %}
 
+The [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in areas where they would expect to see apps (for example the mobile home screen), direct what the user can launch, and define its appearance at launch.
 
-### Topics
+Web app manifests provide the ability to save a site bookmark to a device's home screen. When a site is launched this way: 
 
+* It has a unique icon and name so that users can distinguish it from other other sites
+* It displays something to the user while resources are downloaded or restored from cache
+* It provides default display characterstics to the browser to avoid a too abrupt a transition when site resources become available. 
 
-  [Create the Manifest](/web/fundamentals/engage-and-retain/web-app-manifest/create-the-manifest?hl=en)
+It does all this through the simple mechanism of metadata in a text file. That's the web app manifest.
 
-  [Customize the Icons](/web/fundamentals/engage-and-retain/web-app-manifest/customize-the-icons?hl=en)
-
-  [Add a Splash Screen](/web/fundamentals/engage-and-retain/web-app-manifest/add-splash-screen?hl=en)
-
-  [Set the Launch Style](/web/fundamentals/engage-and-retain/web-app-manifest/set-the-launch-style?hl=en)
-
-  [Provide a site-wide theme color](/web/fundamentals/engage-and-retain/web-app-manifest/site-wide-theme-color?hl=en)
-
-  [More Information](/web/fundamentals/engage-and-retain/web-app-manifest/more-information?hl=en)
-
+<!-- TODO: Verify note type! -->
+Note: Though you can use a web app manifest on any site, they are required for <a href='/web/progressive-web-apps'>progressive web apps</a>.
