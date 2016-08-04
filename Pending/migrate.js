@@ -197,4 +197,4 @@ function migrateDirectory(dir) {
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/engage-and-retain/web-app-manifest/');
+migrateDirectory('./src/content/en/fundamentals/performance/poor-connectivity/');

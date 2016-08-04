@@ -13,7 +13,6 @@ description: Requesting permission for and subscribing users to notifications re
 Requesting permission for and subscribing users to notifications requires as
 light a touch as showing them notifications.
 
-
 ## Check permissions {#check-permissions}
 
 Always check for an existing permission when the page loads. If the permission
@@ -22,7 +21,7 @@ immediately. Either way use this information to set the state of permission
 settings. An example of this is shown below. To be clear, we're not asking for
 anything yet.
 
-{% include shared/note.liquid list=page.notes.clarity %}
+Note: For the sake of clarity, this example excludes a number of feature checks that you should always perform. You can view the original code in it's entirety in our <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>GitHub samples repo</a>.
 
 
     function initialiseState() {
@@ -57,11 +56,13 @@ messages.
 
 ## Requesting permission {#requesting-permission}
 
+<figure class="attempt-right">
+  <img src="images/news-prompt.png" alt="First ask before sending notifications and explain why.">
+</figure>
+
 Regardless of when you do it, requesting permission is a two-step process.
 First, ask whether your application can send notifications using a message that
 explains exactly why you want to send them notifications.
-
-![First ask before sending notifications and explain why.](images/news-prompt.png){:width="296px"}
 
 If the user approves, we need to send a subscription request to the push
 manager. Do this by calling `PushManager.subscribe()` (lines 5 through 9). In
@@ -70,7 +71,9 @@ that all push messages  sent the client will be shown to the user as a
 notification. We're also  including an `applicationServerKey` converted to an
 integer array.
 
-{% highlight javascript linenos %}
+<div style="clear:both;"></div>
+
+<pre class="prettyprint linenums">
 if ('showNotification' in ServiceWorkerRegistration.prototype) {
   navigator.serviceworker.ready
   .then(registration => {
@@ -90,13 +93,17 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
     // Do something with the error.
   });
 }
-{% endhighlight %}
+</pre>
 
 This is the result in Chrome.
 
 ![Chrome prompts for permissions.](images/news-permissions.png){:width="296px"}
 
 ## Trigger from a specific action {#trigger-from-action}
+
+<figure class="attempt-right">
+  <img src="images/airline-prompt.png" alt="A prompt with a specific action.">
+</figure>
 
 Ask for permission to send notifications in response to a specific,
 contextual user action. This allows you to tie your notifications
@@ -107,7 +114,7 @@ For example, If an airline site wanted to notify users of flight delays,
 they would prominently display an opt-in checkbox and only ask for
 notification permissions after the user chooses to opt in.
 
-![A prompt with a specific action.](images/airline-prompt.png){:width="296px"}
+<div style="clear:both;"></div>
 
 ## Provide a place to manage notifications {#manage-notifications}
 
@@ -119,16 +126,23 @@ show users what you want to send them, not how it's implemented. Users have no
 more idea what a 'push notification' is than you would know how to adjust the
 orbit of a Soyuz capsule.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="images/flight-delay.png">
-    <figcaption class="wf-figcaption-good"><b>Do:</b> A notifications switch that shows what notifications will contain.</figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="images/send-push.png">
-    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> A notifications switch that shows how notifications are implemented.</figcaption>
+    <figcaption class="success">
+      <b>Do:</b> A notifications switch that shows what notifications will contain.
+    </figcaption>
   </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/send-push.png">
+    <figcaption class="warning">
+      <b>Don’t:</b> A notifications switch that shows how notifications are implemented.
+    </figcaption>
+  </figure>
+</div>
+<div style="clear:both;"></div>
 
 
 ## Passing a subscription to the server {#passing-subscription}
@@ -145,7 +159,7 @@ the subscription object to a  string. We'll look at what's in this object in the
 next section, [Sending  messages](sending-messages). Use `fetch()` to send the
 subscription request to the server.
 
-{% highlight javascript linenos %}
+<pre class="prettyprint linenums">
 if ('showNotification' in ServiceWorkerRegistration.prototype) {
   navigator.serviceworker.ready
   .then(registration => {
@@ -173,4 +187,4 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
     // Do something with the error.
   });
 }
-{% endhighlight %}
+</pre>

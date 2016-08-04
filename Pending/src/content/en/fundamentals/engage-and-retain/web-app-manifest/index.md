@@ -6,7 +6,7 @@ description: The web app manifest is a JSON file that gives you the ability to c
 {# wf_updated_on: 2016-02-11 #}
 {# wf_published_on: 2016-02-11 #}
 
-# Improve User Experiences with a Web App Manifest {: .page-title }
+# The Web App Manifest {: .page-title }
 
 {% include "_shared/contributors/josephmedley.html" %}
 
@@ -20,5 +20,228 @@ Web app manifests provide the ability to save a site bookmark to a device's home
 
 It does all this through the simple mechanism of metadata in a text file. That's the web app manifest.
 
-<!-- TODO: Verify note type! -->
 Note: Though you can use a web app manifest on any site, they are required for <a href='/web/progressive-web-apps'>progressive web apps</a>.
+
+## Create the Manifest
+
+Before diving into details of a web app manifest, let's create a basic
+manifest and link a web page to it.
+
+You can call the manifest whatever you want. Most people will probably just
+use `manifest.json`. An example is given below.
+
+
+    {
+      "short_name": "AirHorner",
+      "name": "Kinlan's AirHorner of Infamy",
+      "icons": [
+        {
+          "src": "launcher-icon-1x.png",
+          "type": "image/png",
+          "sizes": "48x48"
+        },
+        {
+          "src": "launcher-icon-2x.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "launcher-icon-4x.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        }
+      ],
+      "start_url": "index.html?launcher=true"
+    }
+    
+
+You should include a `short_name` as this will get used for the text on the users home screen
+and a `name` as that will be used in the Web App Install banner.
+  
+
+## Tell the Browser about your Manifest
+
+Once you have the manifest created and and on your site, all you need to do is add
+a `link` tag to all the pages that encompass your web app as follows:
+
+
+    <link rel="manifest" href="/manifest.json">
+  
+## Set a Start URL
+
+If you don't provide a `start_url`, then the current page will be used, which
+is unlikely to be what your users want. But that's not the only reason to
+include it. Because you can now define how your app is launched, add a query
+string parameter to the `start_url` that indicates how it was launched. 
+
+    "start_url": "/index.html?homescreen=1"
+
+## Customize the Icons
+
+<figure class="attempt-right">
+  <img src="images/homescreen-icon.png" alt="Add to Home Screen Icon">
+  <figcaption>Add to Home Screen Icon</figcaption>
+</figure>
+
+When a user adds your site to their home screen, you can define a set of icons
+for the browser to use. The icons for your web app can be defined as shown
+below, with a type, and size.
+
+<div style="clear:both;"></div>
+
+    "icons": [{
+        "src": "images/touch/icon-128x128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      }, {
+        "src": "images/touch/apple-touch-icon.png",
+        "type": "image/png",
+        "sizes": "152x152"
+      }, {
+        "src": "images/touch/ms-touch-icon-144x144-precomposed.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }, {
+        "src": "images/touch/chrome-touch-icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }],
+    
+
+Note: When saving an icon to the home screen, Chrome first looks for icons that match the density of the display and are sized to 48dp * screen density. If none are found it searches for the icon that most closely matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular-pixel density, you can use the optional <code>density</code> member which takes a number. When you don’t declare density, it defaults to 1.0. This means “use this icon for screen densities 1.0 and up”, which is normally what you want.
+
+## Add a Splash Screen
+
+<figure class="attempt-right">
+  <img src="images/background-color.gif" alt="backgroud color">
+  <figcaption>Background color for launch screen</figcaption>
+</figure>
+
+When you launch your web app from the home screen a number of things happen behind the
+scenes:
+
+1. Chrome launchs.
+2. The renderer that displays the page starts up.
+3. Your site loads from the network (or from cache if it has a service worker).
+
+While this is happening the screen will be white and will look like it has stalled.
+This becomes especially apparent if you are loading your web page from the network where
+pages take more than one or two seconds to get any content visible on the homepage.
+
+To provide a better user experience you can replace the white screen with a title, color, and images. 
+
+### Set an Image and Title
+
+If you've been following from the beginning, you've actually set and image and title already. Chrome infers the image and title from specific members of the manifest. What's important here is knowing the specifics. 
+
+A splashscreen image is drawn from the `icons` array. Chrome chooses the image that is closest to 128dp for the device. The title is simply pulled from the `name` member.
+
+### Set the Background Color 
+
+Specify background color using the appropriately named `background_color`
+property. The color will be used by Chrome the instant the web app is launched
+and will remain on the screen until the web app's first render.
+
+To set the bacground color, simply set the following in your manifest.
+
+
+    "background_color": "#2196F3",
+    
+
+There will now be no white screen as your site is launched from the home screen.
+
+A good suggested value for this property is the background color of the load page.  Using the 
+same colors as the load page allows for a smooth transistion from the
+splashscreen to the homepage.
+
+### Set a Theme Color
+
+Specify a theme color using the (wait for it) `theme_color` property. This property
+sets the color of the toolbar. For this we also suggest duplicating an existing
+color, specifically the `theme-color` `<meta>`.
+
+
+## Set the Launch Style
+
+<figure class="attempt-right">
+  <img src="images/manifest-display-options.png" alt="web-app-capable">
+  <figcaption>Manifest Display Options</figcaption>
+</figure>
+
+Use the web app manifest to control the display type and page orientation.
+
+<div style="clear:both;"></div>
+
+### Customize the Display Type
+
+You make your web app hide the browser's UI by setting the `display` type to `standalone`.
+
+
+    "display": "standalone"
+    
+
+Don't worry, if you think users would prefer to view your page as a normal 
+site in a browser. You can set the `display` type to `browser`.
+
+
+    "display": "browser"
+    
+
+### Specify the Initial Orientation of the Page
+
+<figure class="attempt-right">
+  <img src="images/manifest-orientation-options.png" alt="Web App Manifest Orientation Options">
+  <figcaption>Web App Manifest Orientation Options</figcaption>
+</figure>
+
+You can enforce a specific orientation, which is advantageous for use cases 
+that work in only one orientation, like games for example. Use this 
+selectively. Users prefer selecting the orientation.
+
+<div style="clear:both;"></div>
+
+    "orientation": "landscape"
+    
+
+## Provide a site-wide theme color
+
+<figure class="attempt-right">
+  <img src="images/theme-color.png" alt="backgroud color">
+  <figcaption>Theme color</figcaption>
+</figure>
+
+Chrome introduced the concept of a theme color for your site in 2014. The theme color
+is a hint from your web page that tells the browser what color to tint
+[UI elements such as the address bar](/web/fundamentals/design-and-ui/browser-customization/).  
+
+Without a manifest, you have to define the theme color on every single page, and if 
+you have a large site or legacy site, making a lot of site wide changes is not feasible.
+
+<div style="clear:both;"></div>
+
+Add a `theme_color` attribute to your manifest, and when the site is launched
+from the home screen every page in the domain will automatically get the theme color.
+
+
+
+    "theme_color": "#2196F3"
+    
+
+<figure>
+  <img src="images/manifest-display-options.png" alt="backgroud color">
+  <figcaption>Sitewide theme color</figcaption>
+</figure>
+
+## More Information
+
+This article has given you a quick introduction to web app manifests. But
+there's more to learn.
+
+* If you're using a web app manifest, you'll probably want set up an
+[app install banner](/web/fundamentals/engage-and-retain/app-install-banners) as well. 
+
+* [A complete reference](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+to the web app manifest is available on the Mozilla Developer Network.
+
+* If you want feature descriptions from the engineers who created web app
+manifests, you can read the [actual W3C specification](http://www.w3.org/TR/appmanifest/).

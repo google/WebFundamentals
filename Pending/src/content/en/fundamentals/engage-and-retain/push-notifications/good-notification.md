@@ -106,33 +106,41 @@ it. For example, if you wanted to notify one user of acknowledgment by another,
 then don't show a message that says, "New notification". Show one that says,
 "Pete said, 'no'."
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="images/pete-replied.png">
-    <figcaption class="wf-figcaption-good"><b>Do:</b> Offer enough information
+    <figcaption class="success"><b>Do:</b> Offer enough information
     so that users don't need to visit.</figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
+</div>
+<div class="attempt-right">
+  <figure>
     <img src="images/new-missive.png">
-    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Don't make your messages
+    <figcaption class="warning"><b>Don’t:</b> Don't make your messages
     vague and cryptic.</figcaption>
   </figure>
 </div>
+
+<div style="clear:both;"></div>
 
 This is especially important for critical information.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="images/extreme-danger.png">
-    <figcaption class="wf-figcaption-good"><b>Do:</b> Offer enough information
+    <figcaption class="success"><b>Do:</b> Offer enough information
     so that users don't need to visit.</figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
+</div>
+<div class="attempt-right">
+  <figure>
     <img src="images/suggestion.png">
-    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Don't make your messages
+    <figcaption class="warning"><b>Don’t:</b> Don't make your messages
     vague and cryptic.</figcaption>
   </figure>
 </div>
+
+<div style="clear:both;"></div>
 
 ### Put actions right in the notification {#offer-actions}
 
@@ -161,19 +169,21 @@ specific from the message. Content the recipient already knows, such as the name
 of your app sin not helpful. Niether is information the recipient doesn't know,
 such as technology used to send the message.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="images/joe-asked.png">
-    <figcaption class="wf-figcaption-good"><b>Do:</b> Make the title include
+    <figcaption class="success"><b>Do:</b> Make the title include
     something specific from the message.</figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
+</div>
+<div class="attempt-right">
+  <figure>
     <img src="images/sms-call.png">
-    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Don't include
+    <figcaption class="warning"><b>Don’t:</b> Don't include
     information that users already know or don't understand.</figcaption>
   </figure>
 </div>
-
+<div style="clear:both;"></div>
 
 ### Put important information up front
 
@@ -183,19 +193,21 @@ text is read from left to right and from top to bottom. So a messaging app would
 might put the name of the sender at the top and left.
 
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="images/pete-replied.png">
-    <figcaption class="wf-figcaption-good"><b>Do:</b> The sender name is at 
+    <figcaption class="success"><b>Do:</b> The sender name is at 
     the top and left.</figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
+</div>
+<div class="attempt-right">
+  <figure>
     <img src="images/new-missive.png">
-    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> The information at the
+    <figcaption class="warning"><b>Don’t:</b> The information at the
     top and left is redundant.</figcaption>
   </figure>
 </div>
-
+<div style="clear:both;"></div>
 
 ### Keep the message short {#keep-it-short}
 
@@ -224,17 +236,20 @@ relevant information, but removing duplication gives you extra room for other
 information. For example if your title contains the day of the week,
 don't also list it in the body.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="images/notification-no-dup-content.png">
-    <figcaption class="wf-figcaption-good"><b>Do:</b> Information in the title
+    <figcaption class="success"><b>Do:</b> Information in the title
     isn't repeated.</figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
+</div>
+<div class="attempt-right">
+  <figure>
     <img src="images/notification-dup-content.png">
-    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Message content repeats information in the title.</figcaption>
+    <figcaption class="warning"><b>Don’t:</b> Message content repeats information in the title.</figcaption>
   </figure>
 </div>
+<div style="clear:both;"></div>
 
 Also, if the app is open, it's possible the new information is already on the
 screen. Instead of a notification, use the application UI to notify the user.
@@ -257,42 +272,43 @@ users with notifications, you may lose them altogether.
 
 Notifications already contain your domain name, and space is tight anyway.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="images/chrome-notification.png" alt="Domain name in a Chrome notification.">
   </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
+</div>
+<div class="attempt-right">
+  <figure>
     <img src="images/firefox-notification.png" alt="Domain name in a Firefox notification.">
   </figure>
 </div>
+<div style="clear:both;"></div>
 
 ### Make the icon contextual {#contextual-icon}
+
+<figure class="attempt-right">
+  <img src="images/still-up.png">
+  <figcaption class="warning"><b>Don’t:</b> Use a generic icon.
+  </figcaption>
+</figure>
 
 Icons should convey something about the message they accompany. Consider this
 example.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="images/still-up.png">
-    <figcaption class="wf-figcaption-bad"><b>Don’t:</b> Use a generic icon.
-    </figcaption>
-  </figure>
-  <div class="mdl-cell mdl-cell--6-col"></div>
-</div>
-
 It tells us exactly who sent the message. But the icon, which in many
 notifications is the site or app logo, tells us nothing.
 
+<div style="clear:both;"></div>
+
 Instead, let's use the sender's profile image.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="images/contextual-icon.png">
-    <figcaption class="wf-figcaption-good"><b>Do:</b> Use an icon that provides
-    some contextual information about the message.</figcaption>
-  </figure>
-  <div class="mdl-cell mdl-cell--6-col"></div>
-</div>
+<figure class="attempt-right">
+  <img src="images/contextual-icon.png">
+  <figcaption class="success"><b>Do:</b> Use an icon that provides
+  some contextual information about the message.</figcaption>
+</figure>
+
+
 
 
 But please keep the icon simple. Too much nuance may be lost on the user.

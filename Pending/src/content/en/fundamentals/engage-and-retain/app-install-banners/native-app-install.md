@@ -9,28 +9,26 @@ description: Native App install banners are similar to Web app install banners, 
 # Native app Install Banners {: .page-title }
 
 {% include "_shared/contributors/mattgaunt.html" %}
-
 {% include "_shared/contributors/paulkinlan.html" %}
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    Native App install banners are similar to Web app install banners, but
-instead of adding to the home screen will let the user install your
-native app without leaving your site.
-
-  </div>
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="images/native-app-install-banner.gif" alt="Native app install banner">
-    <figcaption>Native app install banner flow</figcaption>
+<div class="attempt-right">
+  <figure>
+     <img src="images/native-app-install-banner.gif" alt="Native app install banner" style="max-height: 500px">
   </figure>
 </div>
+
+Native App install banners are similar to [Web app install banners](.), but
+instead of adding to the home screen, they will let the user install your
+native app without leaving your site.
+
+<div style="clear:both;"></div>
 
 ## Criteria to Show the Banner
 
 The criteria is similar to the Web App install banner except for the need of
 a service worker. Your site must:
 
-* Have a [web app manifest](.) file with:
+* Have a [web app manifest](../web-app-manifest/) file with:
   - a `short_name`
   - a `name` (used in the banner prompt)
   - a 144x144 png icon, your icon declaration's should include a mime type of `image/png`

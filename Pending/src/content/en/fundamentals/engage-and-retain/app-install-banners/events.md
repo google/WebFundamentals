@@ -6,15 +6,13 @@ description: You can defer or cancel the app install banner, and understand how 
 {# wf_updated_on: 2016-02-11 #}
 {# wf_published_on: 2014-12-16 #}
 
-# Do More With App Install Banners {: .page-title }
+# App Install Banner Events {: .page-title }
 
 {% include "_shared/contributors/mattgaunt.html" %}
-
 {% include "_shared/contributors/paulkinlan.html" %}
 
 Chrome provides an easy mechanism to determine how the user responded to the
 app install banner and even cancel or defer it until a more convenient time.
-
 
 ## Did a User Install the App?
 
@@ -22,7 +20,6 @@ The `beforeinstallprompt` event returns a promise called `userChoice`
 that resolves when the user acts on the prompt.  The promise 
 returns an object with a value of `dismissed` on the `outcome`
 attribute or `accepted` if the user added the web page to the home screen.
-
 
     window.addEventListener('beforeinstallprompt', function(e) {
       // beforeinstallprompt Event fired
@@ -61,8 +58,6 @@ the prompt by calling `prompt()` on the stored event.
 This causes Chrome to show the banner and all the Promise attributes 
 such as `userChoice` will be available to bind to so that you can understand 
 what action the user took.
-
-
     
     var deferredPrompt;
     
@@ -102,7 +97,6 @@ what action the user took.
     
 
 Alternatively, you can cancel the prompt by preventing the default.
-
 
     window.addEventListener('beforeinstallprompt', function(e) {
       console.log('beforeinstallprompt Event fired');

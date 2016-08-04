@@ -20,8 +20,9 @@ routing.
 
 ## Anatomy of a subscription object {#subscription-anatomy}
 
-In [the last section](permissions-subscriptions#passing-subscription) we said that a subscription object must be stringified and
-passed to the server. The data the server gets looks like this:
+In [the last section](permissions-subscriptions#passing-subscription) we said
+that a subscription object must be stringified and passed to the server. The
+data the server gets looks like this:
 
 
     {
@@ -35,12 +36,12 @@ passed to the server. The data the server gets looks like this:
 
 What's in this?
 
-_endpoint_—Contains two parts: the URL of the messaging service you're using
+**endpoint** —Contains two parts: the URL of the messaging service you're using
 followed by unique identifier for the user. This is called a subscription ID or
 a registration ID. This tells your server how to identify you the messaging
 server.
 
-_keys_—Encryption keys used for encrypting data passed to the service worker
+**keys** —Encryption keys used for encrypting data passed to the service worker
 messages.
 
 ## Encrypting a message {#encrypting}
@@ -76,17 +77,17 @@ browser doesn't support payloads, the subscription object won't contain keys.
 
 To send a push to a client, send a PUT request to the push service endpoint.
 
-<pre>POST /push-service/send/dbDqU8xX10w:APA91b... HTTP/1.1
-HOST: example.com
-TTL: 120
-Content-Type: application/octet-stream
-Content-Encoding: aesgcm128
-Encryption: keyid=p256dh;salt=xxxxxxx
-Crypto-Key: keyid=p256dh;dh=xxxxxxxx
+    POST /push-service/send/dbDqU8xX10w:APA91b... HTTP/1.1
+    HOST: example.com
+    TTL: 120
+    Content-Type: application/octet-stream
+    Content-Encoding: aesgcm128
+    Encryption: keyid=p256dh;salt=xxxxxxx
+    Crypto-Key: keyid=p256dh;dh=xxxxxxxx
 
-BIXzEKOFquzVlr/1tS1bhmobZ...</pre>
+    BIXzEKOFquzVlr/1tS1bhmobZ...
 
-TTL is the time in seconds before the message expires. This means that the
+`TTL` is the time in seconds before the message expires. This means that the
 server will spend the specified number of seconds trying to send the message to
 the recipient. For example, let's say TTL is 60 seconds, but the recipient's
 phone is in airplane mode. If the recipient's phone comes out of airplane mode

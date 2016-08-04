@@ -10,14 +10,17 @@ description: You've seen what makes a good notification. Now let's see how to im
 
 {% include "_shared/contributors/josephmedley.html" %}
 
-Way back at the <a href="index#anatomy">beginning of this section</a>, we
-showed a notification that looks like this and the code that goes with it.<br/><br/>
+<figure class="attempt-right">
+  <img src="images/joe-asked.png" alt="The example notification.">
+</figure>
 
-<img src="images/joe-asked.png" alt="The example notification." width="316" /><br/><br/>
+Way back at the [beginning of this section](.), we
+showed a notification that looks like this and the code that goes with it.
 
 While we showed you a little bit about how this is coded, we really didn't give
 you enough information for it to be useful. That's what this section is about.
 
+<div style="clear:both;"></div>
 
 ## More notification anatomy {#more-anatomy}
 
@@ -143,11 +146,13 @@ notification to the user.
 
 ## Combine similar notifications {#combine-similar-notes}
 
+<figure class="attempt-right">
+  <img src="images/combined-notes-mobile.png" alt="Combine messages from the same sender.">
+</figure>
+
 Sometimes it's useful to combine multiple notifications into a single one. For
 example, a social networking app might want to avoid messaging users for every
 post from a particular person, and instead combine them.
-
-![Combine messages from the same sender.](images/combined-notes-mobile.png){:width="316px"}
 
 Combining similar notifications comes down to three things.
 
@@ -199,7 +204,7 @@ which we'll look at in a later section. To tell the browser we're combining
 notifications, we need to reuse the `tag` (line 6) and set `renotify` to `true`
 (line 17).
 
-{% highlight javascript linenos %}
+<pre class="prettyprint linenums">
 self.addEventListener('push', function(event) {
   event.waitUntil(
     // Get the message data somehow and return a Promise.
@@ -221,7 +226,7 @@ self.addEventListener('push', function(event) {
     }
   })  
 });
-{% endhighlight %}
+</pre>
 
 When we fill out the remaining properties for the new notifications we're also
 going to add two action buttons to the notification (lines 21 through 24). One
@@ -229,7 +234,7 @@ will open the application. The other will dismiss the notification without
 taking action. Neither of those actions is handled by the push event. We'll look
 at that in the next section. Finally, show the notification (line 26).
 
-{% highlight javascript linenos %}
+<pre class="prettyprint linenums">
 self.addEventListener('push', function(event) {
   event.waitUntil(
     // Get the message data somehow and return a Promise.
@@ -258,7 +263,7 @@ self.addEventListener('push', function(event) {
     self.registration.showNotification(data.title, noteOptions);
   })  
 });
-{% endhighlight %}
+</pre>
 
 ## Put actions on the notification {#notification-actions}
 
@@ -281,14 +286,17 @@ optional actions.
       data: data  
     })
     
+<figure class="attempt-right">
+  <img src="images/confirmation.png" alt="A notification with actions.">
+</figure>
 
-The image below shows what this looks like. The notification says that Stacy has
+The notification says that Stacy has
 confirmed an appointment for 3:00 PM. The recipient can either respond with
 their own confirmation or ask for the appointment to be rescheduled. For the
 former we will send a message directly to the server. For the later we will open
 the application to an appropriate interface.
 
-![A notification with actions.](images/confirmation.png){:width="316px"}
+<div style="clear:both;"></div>
 
 First, let's add a `notificationclick` event handler to the service worker. Also, 
 close the notification.
@@ -321,7 +329,7 @@ without opening the application (lines 3 through 13). Notice that we're
 returning from the `notificationclick` event immediately after sending the
 confirmation to the server. This prevents app from opening.
 
-{% highlight javascript linenos %}
+<pre class="prettyprint linenums">
 self.addEventListener('notificationclick', function(event) {
   event.notification.close();
   if (event.action === 'confirm')
@@ -341,13 +349,13 @@ self.addEventListener('notificationclick', function(event) {
     // Just open the app.
   }
 });
-{% endhighlight %}
+</pre>
 
 If the recipient clicked change, we want to open to a confirmation page. If the
 user clicks somewhere other than an action button, we just want to open the app
 (lines 14 through 19). In both cases, we'll create an appropriate URL.
 
-{% highlight javascript linenos %}
+<pre class="prettyprint linenums">
 self.addEventListener('notificationclick', function(event) {
   event.notification.close();
   if (event.action === 'confirm') {
@@ -369,9 +377,9 @@ self.addEventListener('notificationclick', function(event) {
   }
   // Navigate to appUrl.
 });
-{% endhighlight %}
+</pre>
 
-{% include shared/note.liquid list=page.notes.truncation %}
+Note: From here on, the code samples start to get a little large. We're going to truncate them for the sake of space. But, don't worry. We'll show you the whole thing at the end.
 
 Regardless of URL, we'll call `clients.matchAll()` to get a client window we can
 navigate with.

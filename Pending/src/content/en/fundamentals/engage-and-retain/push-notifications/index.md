@@ -10,29 +10,28 @@ description: Push notifications are one of the most valuable capabilities of nat
 
 {% include "_shared/contributors/josephmedley.html" %}
 
-Don't annoy your users, or you'll lose access to them
-	forever. Do we need to say anything more than that? We do because it's easier said than
-done. Push notifications are one of the most valuable capabilities of native apps, and
-this capability is now available on the web. To get the most out of them,
+<figure class="attempt-right">
+  <img src="images/tpnr.png" alt="Timely, precise, and relevant">
+  <figcaption>Timely, precise, and relevant</figcaption>
+</figure>
+
+Don't annoy your users, or you'll lose access to them forever. Do we need to
+say anything more than that? We do because it's easier said than done. 
+
+Push notifications are one of the most valuable capabilities of native apps, 
+and this capability is now available on the web. To get the most out of them,
 notifications need to be timely, precise, and relevant.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col" markdown="1">
-_Timely_—A timely notification is one that appears when users want it and when
+**Timely** —A timely notification is one that appears when users want it and when
 it matters to them.
 
-_Precise_—A precise notification is one that has specific information that can
+**Precise** —A precise notification is one that has specific information that can
 be acted on immediately.
 
-_Relevant_—A relevant message is one about people or subjects the user cares
+**Relevant** —A relevant message is one about people or subjects the user cares
 about.
-  </div>
-  
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="images/tpnr.png" alt="Timely, precise, and relevant">
-    <figcaption>Timely, precise, and relevant</figcaption>
-  </figure>
-</div>
+
+<div style="clear:both;"></div>
 
 ## Are service workers involved? {#service-worker-involved}
 
@@ -73,9 +72,11 @@ A typical options object looks something like this:
     }
     
 
-This produces a notifiation that looks like this:
+<figure class="attempt-right">
+  <img src="images/joe-asked-contextual.png" alt="Example Notification">
+</figure>
 
-![The example notification.](images/joe-asked-contextual.png){:width="316px"}
+This produces a notifiation that looks like this:
 
 In the next few sections we'll provide tips to help you build better
 notifications. We'll go on to describe the mechanincs of implementing them,
