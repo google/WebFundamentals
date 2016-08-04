@@ -62,7 +62,7 @@ disconnected](#get-disconnected-from-a-bluetooth-device).
 
 In order to get as much feedback as possible from developers using the Web
 Bluetooth API in the field, we're also adding this feature in Chrome 53 as an
-[origin trial](https://github.com/jpchase/OriginTrials) for Chrome
+[origin trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) for Chrome
 OS, Android M, and Mac. **Origin Trials allow you to temporarily enable the
 feature for all of users of your website.** During the origin trial, the API may
 still change in backward-incompatible ways before we freeze it into the web
