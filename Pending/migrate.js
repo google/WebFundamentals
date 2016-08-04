@@ -88,10 +88,29 @@ function replaceHighlightedCode(markdown) {
   if (items) {
     items.forEach(function(item) {
       var sourceItem = item;
-      item = item.replace(/{% highlight .* %}/, '');
+      item = item.replace(/{% highlight \w* %}/, '');
       item = item.replace(/{% endhighlight %}\n?/, '');
       item = item.replace(/\n/gm, '\n    ');
       markdown = markdown.replace(sourceItem, item);
+    });
+  }
+  return markdown;
+}
+
+function replaceYTVideo(markdown) {
+  var items = markdown.match(/{% ytvideo (\w*) %}/g);
+  if (items) {
+    items.forEach(function(item) {
+      var sourceItem = item;
+      item = item.replace('{% ytvideo ', '');
+      item = item.replace(' %}', '');
+      var video = '<div class="video-wrapper">\n';
+      video += '  <iframe class="devsite-embedded-youtube-video" ';
+      video += 'data-video-id="' + item + '"\n          ';
+      video += 'data-autohide="1" data-showinfo="0" frameborder="0" ';
+      video += 'allowfullscreen>\n';
+      video += '  </iframe>\n</div>';
+      markdown = markdown.replace(sourceItem, video);
     });
   }
   return markdown;
@@ -152,6 +171,7 @@ function migrateFile(dir, file) {
   markdown = replaceNote(markdown, yaml);
   markdown = replaceHighlightedCode(markdown);
   markdown = removeIntroP(markdown);
+  markdown = replaceYTVideo(markdown);
 
   var result = topOfDoc + markdown;
   var newFile = dir + file.replace('.markdown', '.md');
@@ -167,4 +187,4 @@ function migrateDirectory(dir) {
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/engage-and-retain/push-notifications/');
+migrateDirectory('./src/content/en/fundamentals/engage-and-retain/app-install-banners/');
