@@ -4,14 +4,17 @@ toc:
     - title: The Web App Manifest
       path: /web/fundamentals/engage-and-retain/web-app-manifest/
     - title: Web Push Notifications
-      path: /web/fundamentals/engage-and-retain/push/
       section:
-      - title: Getting User Permission
-        path: /web/fundamentals/engage-and-retain/push/permission
+      - title: Overview
+        path: /web/fundamentals/engage-and-retain/push-notifications/
+      - title: What Makes a Good Notification
+        path: /web/fundamentals/engage-and-retain/push-notifications/
+      - title: Requesting Permission and Subscribing Users
+        path: /web/fundamentals/engage-and-retain/push-notifications/
       - title: Sending Messages
-        path: /web/fundamentals/engage-and-retain/push/send
-      - title: Handling & Showing Notifications
-        path: /web/fundamentals/engage-and-retain/push/handle
+        path: /web/fundamentals/engage-and-retain/push-notifications/
+      - title: Handling Messages
+        path: /web/fundamentals/engage-and-retain/push-notifications/
     - title: App Install Banners
       section:
       - title: Web App Install Banners

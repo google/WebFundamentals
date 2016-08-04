@@ -1,6 +1,20 @@
 toc:
   - title: Performance
     section:
+    - title: Optimizing Content Efficiency
+      section:
+      - title: Overview
+        path: /web/fundamentals/performance/optimizing-content-efficiency/
+      - title: Eliminating Unnecessary Downloads
+        path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads
+      - title: Optimizing Encoding and Transfer Size of Text-based Assets
+        path: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer
+      - title: Image Optimization
+        path: /web/fundamentals/performance/optimizing-content-efficiency/image-optimization
+      - title: Web Font Optimization
+        path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
+      - title: HTTP Caching
+        path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
     - title: Critical Rendering Path
       section:
       - title: Overview
@@ -37,6 +51,11 @@ toc:
         path: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
       - title: Debounce Your Input Handlers
         path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
+    - title: Performance Code Lab
+      path: /web/fundamentals/performance/performance-codelab/
+    - title: Understanding Low Bandwidth and High Latency
+      path: /web/fundamentals/performance/poor-connectivity/
+
 
     
 
