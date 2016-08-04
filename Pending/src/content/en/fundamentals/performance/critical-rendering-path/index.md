@@ -9,18 +9,14 @@ description: Optimizing the critical rendering path refers to prioritizing the d
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    Optimizing the critical rendering path refers to prioritizing the display of content that relates to the current user action.
-    <p>
-      Delivering a fast web experience requires a lot of work by the browser. Most of
-      this work is hidden from us as web developers: we write the markup, and a nice
-      looking page comes out on the screen. But how exactly does the browser go from
-      consuming our HTML, CSS, and JavaScript to rendered pixels on the screen?
-    </p>
-  </div>
-  {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
-</div>
+
+Optimizing the critical rendering path refers to prioritizing the display of
+content that relates to the current user action.
+
+Delivering a fast web experience requires a lot of work by the browser. Most of
+this work is hidden from us as web developers: we write the markup, and a nice
+looking page comes out on the screen. But how exactly does the browser go from
+consuming our HTML, CSS, and JavaScript to rendered pixels on the screen?
 
 Optimizing for performance is all about understanding what happens in these
 intermediate steps between receiving the HTML, CSS, and JavaScript bytes and
@@ -39,3 +35,17 @@ take a quick, ground-up overview of how the browser goes about displaying a
 simple page.
 
 
+## Website Performance Optimization Course
+
+<div class="attempt-right">
+  <figure>
+    <img src="images/crp-udacity.png">
+  </figure>
+</div>
+
+Interested in taking a deep dive into the Critical Rendering Path? Check out
+our companion course and learn how the browser converts HTML, CSS, and
+JavaScript to pixels on the screen, how to use DevTools to measure performance,
+and how to optimize the Critical Rendering Path of your pages.
+
+[View Course](https://udacity.com/ud884){: .external }

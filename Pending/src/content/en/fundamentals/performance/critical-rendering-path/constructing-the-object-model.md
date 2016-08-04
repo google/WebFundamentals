@@ -14,7 +14,7 @@ Before the browser can render the page it needs to construct the DOM and CSSOM t
 
 ## TL;DR
 - Bytes → characters → tokens → nodes → object model.
-- 'HTML markup is transformed into a Document Object Model (DOM), CSS markup is transformed into a CSS Object Model (CSSOM).'
+- HTML markup is transformed into a Document Object Model (DOM), CSS markup is transformed into a CSS Object Model (CSSOM).
 - DOM and CSSOM are independent data structures.
 - Chrome DevTools Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM.
 
@@ -34,15 +34,14 @@ Let’s start, with the simplest possible case: a plain HTML page with some text
 1. **Lexing:** the emitted tokens are converted into "objects" which define their properties and rules.
 1. **DOM construction:** Finally, because the HTML markup defines relationships between different tags (some tags are contained within tags) the created objects are linked in a tree data structure that also captures the parent-child relationships defined in the original markup: _HTML_ object is a parent of the _body_ object, the _body_ is a parent of the _paragraph_ object, and so on.
 
-<img src="images/dom-tree.png" class="center" alt="DOM tree">
+<img src="images/dom-tree.png"  alt="DOM tree">
 
 **The final output of this entire process is the Document Object Model, or the "DOM" of our simple page, which the browser uses for all further processing of the page.**
 
 Every time the browser has to process HTML markup it has to step through all of the steps above: convert bytes to characters, identify tokens, convert tokens to nodes, and build the DOM tree. This entire process can take some time, especially if we have a large amount of HTML to process.
 
-<img src="images/dom-timeline.png" class="center" alt="Tracing DOM construction in DevTools">
+<img src="images/dom-timeline.png"  alt="Tracing DOM construction in DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: We'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the <a href='/web/tools/chrome-devtools'>Chrome DevTools documentation</a>, or if you're new to DevTools, we recommend taking the Codeschool <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> course.
 
 If you open up Chrome DevTools and record a timeline while the page is loaded, you can see the actual time taken to perform this step &mdash; in the example above, it took us ~5ms to convert a chunk of HTML bytes into a DOM tree. Of course, if the page was larger, as most pages are, this process might take significantly longer. You will see in our future sections on creating smooth animations that this can easily become your bottleneck if the browser has to process large amounts of HTML.
@@ -61,11 +60,11 @@ Of course, we could have declared our styles directly within the HTML markup (in
 
 Just as with HTML, we need to convert the received CSS rules into something that the browser can understand and work with. Hence, once again, we repeat a very similar process as we did with HTML:
 
-<img src="images/cssom-construction.png" class="center" alt="CSSOM construction steps">
+<img src="images/cssom-construction.png"  alt="CSSOM construction steps">
 
 The CSS bytes are converted into characters, then to tokens and nodes, and finally are linked into a tree structure known as the "CSS Object Model", or CSSOM for short:
 
-<img src="images/cssom-tree.png" class="center" alt="CSSOM tree">
+<img src="images/cssom-tree.png"  alt="CSSOM tree">
 
 Why does the CSSOM have a tree structure? When computing the final set of styles for any object on the page, the browser starts with the most general rule applicable to that node (e.g. if it is a child of body element, then all body styles apply) and then recursively refines the computed styles by applying more specific rules - i.e. the rules "cascade down".
 
@@ -75,6 +74,6 @@ Also, note that the above tree is not the complete CSSOM tree and only shows the
 
 Curious to know how long the CSS processing took? Record a timeline in DevTools and look for "Recalculate Style" event: unlike DOM parsing, the timeline doesn’t show a separate "Parse CSS" entry, and instead captures parsing and CSSOM tree construction, plus the recursive calculation of computed styles under this one event.
 
-<img src="images/cssom-timeline.png" class="center" alt="Tracing CSSOM construction in DevTools">
+<img src="images/cssom-timeline.png"  alt="Tracing CSSOM construction in DevTools">
 
 Our trivial stylesheet takes ~0.6ms to process and affects 8 elements on the page -- not much, but once again, not free. However, where did the 8 elements come from? The CSSOM and DOM are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the render tree that links the DOM and CSSOM together.

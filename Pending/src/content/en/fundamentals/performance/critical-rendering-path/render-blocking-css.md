@@ -17,21 +17,25 @@ possible, and use media types and queries to unblock rendering.
 In the previous section we saw that the critical rendering path requires that we have both the DOM and the CSSOM to construct the render tree, which creates an important performance implication: **both HTML and CSS are render blocking resources.** The HTML is obvious, since without the DOM we would not have anything to render, but the CSS requirement may be less obvious. What would happen if we try to render a typical page without blocking rendering on CSS?
 
 ## TL;DR
-- 'By default, CSS is treated as a render blocking resource.'
+- By default, CSS is treated as a render blocking resource.
 - Media types and media queries allow us to mark some CSS resources as non-render blocking.
-- 'All CSS resources, regardless of blocking or non-blocking behavior, are downloaded by the browser.'
+- All CSS resources, regardless of blocking or non-blocking behavior, are downloaded by the browser.
 
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img class="center" src="images/nytimes-css-device.png" alt="NYTimes with CSS">
+<div class="attempt-left">
+  <figure>
+    <img src="images/nytimes-css-device.png" alt="NYTimes with CSS">
     <figcaption>The New York Times with CSS</figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
+</div>
+<div class="attempt-right">
+  <figure>
     <img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS">
     <figcaption>The New York Times without CSS (FOUC)</figcaption>
   </figure>
 </div>
+
+<div style="clear:both;"></div>
 
 The above example, showing the NYTimes website with and without CSS, demonstrates why rendering is blocked until CSS is available - without CSS the page is effectively unusable. In fact, the experience on the right is often referred to as a "Flash of Unstyled Content" (FOUC). As a result, the browser will block rendering until it has both the DOM and the CSSOM.
 
