@@ -25,7 +25,7 @@ notes:
 
 When learning about accessibility, it helps to have an understanding of the diverse range of users in the world and the kinds of accessibility topics that affect them. To explain further, here's an informative question/answer session with Victor Tsaran, a Technical Program Manager at Google, who is totally blind.
 
->![Victor Tsaran](imgs/victor_tsaran.jpg)&nbsp;&nbsp;&nbsp;**Victor Tsaran**
+>![Victor Tsaran](imgs/victor_tsaran.jpg)&nbsp;&nbsp;&nbsp;**Victor&nbsp;Tsaran**
 
  - *What do you work on at Google?*
 
@@ -41,11 +41,15 @@ When learning about accessibility, it helps to have an understanding of the dive
 
 >Visual impairments can be split into a few categories: Users with no vision, like me, might use a screen reader, braille, or combination of the two.
 >
+>![Braille reader](imgs/braille-reader.png)&nbsp;&nbsp;&nbsp;*Braille&nbsp;reader*
+>
 >Now, it's actually pretty unusual to have literally no vision, but still, there's a good chance you know or have met at least one person who can't see at all. However there are also a much larger number of what we call low-vision users.
 >
 >This is a broad range, from someone like my wife, who doesn't have any corneas &mdash; so while she can basically see things she has a hard time reading print and is considered legally blind &mdash; to someone who might have just poor vision and needs to wear very strong prescription glasses.
 >
 >There's a huge range, and so naturally there's a big range of accommodations that people in this category use: some do use a screen reader or a braille display (I've even heard of one woman who reads braille displayed on-screen because it's easier to see than printed text), or they might use text-to-speech technology without the full screen reader functionality, or they might use a screen magnifier which zooms in on part of the screen, or they might just use their browser zoom to make all the fonts bigger. They might also use high-contrast options like an operating system high-contrast mode, a high-contrast browser extension or a high-contrast theme for a website. 
+>
+>![High contrast](imgs/high-contrast.png)&nbsp;&nbsp;&nbsp;*High-contrast&nbsp;theme*
 >
 >A lot of users even use a combination of these, like my friend Laura who uses a combination of high-contrast mode, browser zoom and text-to-speech.
 >
@@ -55,21 +59,29 @@ When learning about accessibility, it helps to have an understanding of the dive
 
  - *What about motor impairments?*
 
->Yes, motor impairments, or dexterity impairments. This group ranges all the way from those who would prefer not to use a mouse, because perhaps they've had some RSI or something and find it painful, to someone who may be physically paralyzed and have limited range of motion for certain parts of their body. Motor impaired users may use a keyboard or switch control or voice control to interact with their computer.
+>Yes, motor impairments, or dexterity impairments. This group ranges all the way from those who would prefer not to use a mouse, because perhaps they've had some RSI or something and find it painful, to someone who may be physically paralyzed and have limited range of motion for certain parts of their body. Motor impaired users may use a keyboard, switch device, voice control, or even an eye-tracking device to interact with their computer.
+>
+>![Switch device](imgs/switch-device.png)&nbsp;&nbsp;&nbsp;*Switch&nbsp;device*
+>
+>![Eye-tracking](imgs/eye-tracking.png)&nbsp;&nbsp;&nbsp;*Eye-tracking&nbsp;device*
 >
 >Similar to vision impairments, mobility can also be a temporary or situational issue: Maybe you have a broken wrist on your mouse hand. Maybe the trackpad is broken on your laptop, or you're just riding on a shaky train. There can be a lot of situations where a user's mobility is impeded, and by making sure we cater for them we improve the experience overall, both for anyone with a permanent impairment but also for anyone who temporarily finds that they can't use a pointer-based UI.
 
  - *Great, let's talk about hearing impairments.*
 
->This group can range from the profoundly deaf through to hard-of-hearing. And much like eyesight, our hearing tends to degrade with age.
+>This group can range from the profoundly deaf through to hard-of-hearing. And much like eyesight, our hearing tends to degrade with age. Many of us use common affordances like hearing aids to help us.
+>
+>![Hearing aid](imgs/hearing-aid.png)&nbsp;&nbsp;&nbsp;*Hearing&nbsp;aid&nbsp;(cochlear&nbsp;implant&nbsp;type)*
 >
 >For hearing-impaired users we need to make sure that we're not relying on sound, so making sure to use things like video captions and transcripts, and providing some kind of alternative, if sound is part of the interface.
+>
+>![Screen captions](imgs/screen-captions.png)&nbsp;&nbsp;&nbsp;*Screen&nbsp;captions*
 >
 >And like we saw with vision and motor impairments, it's really easy to imagine a situation where someone whose ears work fine would benefit from these accommodations as well. A lot of my friends say they love it when videos have captions and transcripts because it means that if they're in an open plan office and didn't bring their headphones, they can still watch the video!
 
  - *All right, can you tell us a bit about cognitive impairments?*
 
->Finally there's a range of cognitive conditions like ADD, Dyslexia, and Autism, which can mean that people want or need to access things differently. The accommodations for these groups are obviously extremely diverse, but we definitely find some overlap with other areas, like using zoom functionality to make reading or concentrating easier. Also, these users may find that really minimal design works best because it minimizes distraction and cognitive load. 
+>Finally there's a range of cognitive conditions like ADD, Dyslexia, and Autism, which can mean that people want or need to access things differently. The accommodations for these groups are naturally extremely diverse, but we definitely find some overlap with other areas, like using zoom functionality to make reading or concentrating easier. Also, these users may find that really minimal design works best because it minimizes distraction and cognitive load. 
 >
 >I think everyone can relate to the stress of cognitive overload, so it's obvious that if we create something that works well for someone with a cognitive impairment, we're going to be creating something which is going to be a pleasant experience for everyone.
 
@@ -81,11 +93,6 @@ In this interview, Victor identified a range of impairments, and placed them int
 
 Let's take a look at some real-world examples of access impairments and see where they fall within those categories and types. Note that some impairments may fall into more than one category or type.
 
-| &nbsp;        | Situational  | Temporary | Permanent |
-|:----          |:----:        |:----:     |:----:     |
-| **Visual**    |              |concussion |blindness  |
-| **Motor**     |holding a baby|broken arm, RSI* |RSI* |
-| **Hearing**   |noisy office  |           |           |
-| **Cognitive** |              |concussion |           | 
+![Impairment table](imgs/impairment-table.png)
 
 *Repetitive Strain Injury: e.g., carpal tunnel syndrome, tennis elbow, trigger finger
