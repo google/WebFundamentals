@@ -25,7 +25,7 @@ In the previous section on constructing the object model, we built the DOM and t
 
 The first step is for the browser to combine the DOM and CSSOM into a "render tree" that captures all the visible DOM content on the page, plus all the CSSOM style information for each node.
 
-<img src="images/render-tree-construction.png" alt="DOM and CSSOM are combined to create the render tree" class="center">
+<img src="images/render-tree-construction.png" alt="DOM and CSSOM are combined to create the render tree" >
 
 To construct the render tree, the browser roughly does the following:
 
@@ -50,7 +50,7 @@ To figure out the exact size and position of each object the browser begins at t
 
 The body of the above page contains two nested div's: the first (parent) div sets the display size of the node to 50% of the viewport width, and the second div contained by the parent sets its width to be 50% of its parent - i.e. 25% of the viewport width!
 
-<img src="images/layout-viewport.png" alt="Calculating layout information" class="center">
+<img src="images/layout-viewport.png" alt="Calculating layout information" >
 
 The output of the layout process is a "box model" which precisely captures the exact position and size of each element within the viewport: all of the relative measures are converted to absolute pixels positions on the screen, and so on.
 
@@ -58,7 +58,7 @@ Finally, now that we know which nodes are visible, their computed styles, and ge
 
 Did you follow all of that? Each of these steps requires a non-trivial amount of work by the browser, which also means that it can often take quite a bit of time. Thankfully, Chrome DevTools can help us get some insight into all three of the stages we've described above. Let's examine the layout stage for our original "hello world" example:
 
-<img src="images/layout-timeline.png" alt="Measuring layout in DevTools" class="center">
+<img src="images/layout-timeline.png" alt="Measuring layout in DevTools" >
 
 * The render tree construction and position and size calculation are captured with the "Layout" event in the Timeline.
 * Once layout is complete, the browser issues a "Paint Setup" and "Paint" events which convert the render tree to actual pixels on the screen.
@@ -67,7 +67,7 @@ The time required to perform render tree construction, layout and paint will var
 
 Once all is said and done, our page is finally visible in the viewport - woohoo!
 
-<img src="images/device-dom-small.png" alt="Rendered Hello World page" class="center">
+<img src="images/device-dom-small.png" alt="Rendered Hello World page" >
 
 Let's do a quick recap of all the steps the browser went through:
 

@@ -1,11 +1,16 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Next to eliminating unnecessary resource downloads, the best thing we can do to improve page load speed is to minimize our overall download size by optimizing and compressing the remaining resources.
 
-<p class="intro">
-  Next to eliminating unnecessary resource downloads, the best thing we can do to improve page load speed is to minimize our overall download size by optimizing and compressing the remaining resources.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-03-31 #}
 
+# Optimizing encoding and transfer size of text-based assets {: .page-title }
+
+{% include "_shared/contributors/ilyagrigorik.html" %}
+
+Next to eliminating unnecessary resource downloads, the best thing we can do to improve page load speed is to minimize our overall download size by optimizing and compressing the remaining resources.
 
 
 ## Data compression 101
@@ -14,31 +19,11 @@ Once we’ve eliminated any unnecessary resources, the next step is to minimize 
 
 Delivering the best performance requires the combination of all of these techniques.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Compression is the process of encoding information using fewer bits
+- Eliminating unnecessary data always yields the best results
+- There are many different compression techniques and algorithms
+- You will need a variety of techniques to achieve the best compression
 
 
 The process of reducing the size of data is known as “data compression,” and it is a deep field of study on its own: many people have spent their entire careers working on algorithms, techniques, and optimizations to improve compression ratios, speed, and memory requirements of various compressors. Needless to say, a full discussion on this topic is out of our scope, but it is still important to understand, at a high level, how compression works and the techniques we have at our disposal to reduce the size of various assets required by our pages.
@@ -76,62 +61,16 @@ Of course, you may be wondering, this is all great, but how does this help us op
 
 ## Minification: preprocessing & context-specific optimizations
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Content-specific optimizations can significantly reduce the size of delivered resources.
+- Content-specific optimizations are best applied as part of your build/release cycle.
 
 
 The best way to compress redundant or unnecessary data is to eliminate it altogether. Of course, we can’t just delete arbitrary data, but in some contexts where we may have content-specific knowledge of the data format and its properties, it is often possible to significantly reduce the size of the payload without affecting its actual meaning.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-  <span class="nt">&lt;style&gt;</span>
-     <span class="c">/* awesome-container is only used on the landing page */</span>
-     <span class="nc">.awesome-container</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">120%</span> <span class="p">}</span>
-     <span class="nc">.awesome-container</span> <span class="p">{</span> <span class="k">width</span><span class="o">:</span> <span class="m">50%</span> <span class="p">}</span>
-  <span class="nt">&lt;/style&gt;</span>
- <span class="nt">&lt;/head&gt;</span>
-
- <span class="nt">&lt;body&gt;</span>
-   <span class="c">&lt;!-- awesome container content: START --&gt;</span>
-    <span class="nt">&lt;div&gt;</span>…<span class="nt">&lt;/div&gt;</span>
-   <span class="c">&lt;!-- awesome container content: END --&gt;</span>
-   <span class="nt">&lt;script&gt;</span>
-     <span class="nx">awesomeAnalytics</span><span class="p">();</span> <span class="c1">// beacon conversion metrics</span>
-   <span class="nt">&lt;/script&gt;</span>
- <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/optimizing-content-efficiency/minify.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+</pre>
 
 Consider the simple HTML page above and the three different content types that it contains: HTML markup, CSS styles, and JavaScript. Each of these content types has different rules for what constitutes valid HTML markup, CSS rules, or JavaScript content, different rules for indicating comments, and so on. How could we reduce the size of this page?
 
@@ -139,52 +78,15 @@ Consider the simple HTML page above and the three different content types that i
 * A “smart” CSS compressor could notice that we’re using an inefficient way of defining rules for ‘.awesome-container’ and collapse the two declarations into one without affecting any other styles, saving yet more bytes.
 * Whitespace (spaces and tabs) is a developer convenience in HTML, CSS, and JavaScript. An additional compressor could strip out all the tabs and spaces.
 
-^
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html&gt;&lt;head&gt;&lt;style&gt;</span><span class="nc">.awesome-container</span><span class="p">{</span><span class="k">font-size</span><span class="o">:</span><span class="m">120%</span><span class="p">;</span><span class="k">width</span><span class="o">:</span> <span class="m">50%</span><span class="p">}</span>
-<span class="nt">&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div&gt;</span>…<span class="nt">&lt;/div&gt;&lt;script&gt;</span><span class="nx">awesomeAnalytics</span><span class="p">();</span>
-<span class="nt">&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/optimizing-content-efficiency/minified.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+</pre>
 
 After applying the above steps our page goes from 406 to 150 characters - 63% compression savings! Granted, it’s not very readable, but it also doesn’t have to be: we can keep the original page as our “development version” and then apply the steps above whenever we are ready to release the page on our website.
 
 Taking a step back, the above example illustrates an important point: a general purpose compressor - say one designed to compress arbitrary text - could probably also do a pretty good job of compressing the page above, but it would never know to strip the comments, collapse the CSS rules, or dozens of other content-specific optimizations. This is why preprocessing / minification / context-aware optimization can be such a powerful tool.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Note: Case in point, the uncompressed development version of the JQuery library is now approaching ~300KB. The same library, but minified (removed comments, etc.) is about 3x smaller: ~100KB.
 
 Similarly, above techniques can be extended beyond just text-based assets. Images, video, and other content types all contain their own forms of metadata and various payloads. For example, whenever you take a picture with a camera, the photo also typically embeds a lot of extra information: camera settings, location, and so on. Depending on your application, this data may be critical (e.g. a photo sharing site), or completely useless and you should consider whether it is worth removing. In practice, this metadata can add up to tens of kilobytes for every image!
 
@@ -192,31 +94,11 @@ In short, as a first step in optimizing the efficiency of your assets, build an 
 
 ## Text compression with GZIP
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- 'GZIP performs best on text-based assets: CSS, JavaScript, HTML'
+- All modern browsers support GZIP compression and will automatically request it
+- Your server needs to be configured to enable GZIP compression
+- Some CDNs require special care to ensure that GZIP is enabled
 
 
 [GZIP](https://en.wikipedia.org/wiki/Gzip) is a generic compressor that can be applied to any stream of bytes: under the hood it remembers some of the previously seen content and attempts to find and replace duplicate data fragments in an efficient way - for the curious, [great low-level explanation of GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). However, in practice, GZIP performs best on text-based content, often achieving compression rates of as high as 70-90% for larger files, whereas running GZIP on assets that are already compressed via alternative algorithms (e.g. most image formats) yields little to no improvement.
@@ -224,8 +106,7 @@ In short, as a first step in optimizing the efficiency of your assets, build an 
 All modern browsers support and automatically negotiate GZIP compression for all HTTP requests: our job is to ensure that the server is properly configured to serve the compressed resource when requested by the client.
 
 
-<table class="mdl-data-table mdl-js-data-table">
-<colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
+<table>
 <thead>
   <tr>
     <th>Library</th>
@@ -295,38 +176,10 @@ The best part is that enabling GZIP is one of the simplest and highest payoff op
 
 What’s the best config for your server? The HTML5 Boilerplate project contains [sample configuration files](https://github.com/h5bp/server-configs) for all the most popular servers with detailed comments for each configuration flag and setting: find your favorite server in the list, look for the GZIP section, and confirm that your server is configured with recommended settings.
 
-<img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools demo of actual vs transfer size">
+<img src="images/transfer-vs-actual-size.png"  alt="DevTools demo of actual vs transfer size">
 
 A quick and simple way to see GZIP in action is to open Chrome DevTools and inspect the “Size / Content” column in the Network panel: “Size” indicates the transfer size of the asset, and “Content” the uncompressed size of the asset. For the HTML asset in above example, GZIP saved 98.8 KB during transfer!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Note: Believe it or not, there are cases where GZIP can increase the size of the asset. Typically, this happens when the asset is very small and the overhead of the GZIP dictionary is higher than the compression savings, or if the resource is already well compressed. Some servers allow you to specify a “minimum filesize threshold” to avoid this problem.
 
 Finally, a word of warning: while most servers will automatically compress the assets for you when serving them to the user, some CDNs require extra care and manual effort to ensure that the GZIP asset is served. Audit your site and ensure that your assets are, in fact, [being compressed](http://www.whatsmyip.org/http-compression-test/)!
-

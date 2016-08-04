@@ -1,178 +1,57 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
-description: يعد جلب شيء ما على الشبكة أمرًا بطيئًا ومكلفًا: ذلك أن الاستجابة الكبيرة تتطلب العديد من الجولات بين العميل والخادم، وهو ما يؤدي بدوره إلى تأخر في الإتاحة وقد يحتاج إلى معالجة المتصفح وتحمل الزائر تكلفة بيانات. ونتيجة لذلك، تعد إمكانية التخزين المؤقت وإعادة استخدام الموارد التي سبق جلبها أمرًا شديد الأهمية لتحسين مستوى الأداء.
+book_path: /web/fundamentals/_book.yaml
 
-<p class="intro">
-  Fetching something over the network is both slow and expensive: large responses require many roundtrips between the client and server, which delays when they are available and can be processed by the browser, and also incurs data costs for the visitor. As a result, the ability to cache and reuse previously fetched resources is a critical aspect of optimizing for performance.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-01-04 #}
+{# wf_published_on: 2013-12-31 #}
 
+# HTTP caching {: .page-title }
+
+{% include "_shared/contributors/ilyagrigorik.html" %}
+
+Fetching something over the network is both slow and expensive: large responses require many roundtrips between the client and server, which delays when they are available and can be processed by the browser, and also incurs data costs for the visitor. As a result, the ability to cache and reuse previously fetched resources is a critical aspect of optimizing for performance.
 
 
 Great news, every browser ships with an implementation of an HTTP cache! All we have to do is ensure that each server response provides correct HTTP header directives to instruct the browser on when and for how long the response can be cached by the browser.
 
+Note: If you are using a Webview to fetch and display web content in your application, you may need to provide additional configuration flags to ensure that the HTTP cache is enabled, its size is set to a reasonable number to match your use case, and that the cache is persisted. Check the platform documentation and confirm your settings!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
-
-<img src="images/http-request.png" class="center" alt="HTTP request">
+<img src="images/http-request.png"  alt="HTTP request">
 
 When the server returns a response it also emits a collection of HTTP headers, describing its content-type, length, caching directives, validation token, and more. For example, in the above exchange the server returns a 1024 byte response, instructs the client to cache it for up to 120 seconds, and provides a validation token (“x234dff”) that can be used after the response has expired to check if the resource has been modified.
 
 
 ## Validating cached responses with ETags
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Validation token is communicated by the server via the ETag HTTP header
+- Validation token enables efficient resource update checks: no data transfer if the resource has not changed.
 
 
 Let’s assume 120 seconds have passed since our initial fetch and the browser has initiated a new request for the same resource. First, the browser checks the local cache and finds the previous response, unfortunately it cannot use it as the response has now “expired”. At this point it could simply dispatch a new request and fetch the new full response, but that’s inefficient because if the resource has not changed then there is no reason to download the exact same bytes that are already in cache!
 
 That’s the problem that validation tokens, as specified in the ETag header, are designed to solve: the server generates and returns an arbitrary token which is typically a hash or some other fingerprint of the contents of the file. The client does not need to know how the fingerprint is generated, it only needs to send it to the server on the next request: if the fingerprint is still the same then the resource has not changed and we can skip the download.
 
-<img src="images/http-cache-control.png" class="center" alt="HTTP Cache-Control example">
+<img src="images/http-cache-control.png"  alt="HTTP Cache-Control example">
 
 In above example the client automatically provides the ETag token within the “If-None-Match” HTTP request header, the server checks the token against the current resource, and if it has not changed returns a “304 Not Modified” response which tells the browser that the response it has in cache has not changed and can be renewed for another 120 seconds. Note that we do not have to download the response once more - this saves time and bandwidth.
 
 As a web developer, how do you take advantage of efficient revalidation? The browser does all the work on our behalf. It will automatically detect if a validation token has been previously specified, it will append it to an outgoing request, and it will update the cache timestamps as necessary based on received response from the server. **The only thing that’s left for us to do is to ensure that the server is, in fact, providing the necessary ETag tokens: check your server documentation for necessary configuration flags.**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Note: Tip: HTML5 Boilerplate project contains <a href='https://github.com/h5bp/server-configs'>sample configuration files</a> for all the most popular servers with detailed comments for each configuration flag and setting: find your favorite server in the list, look for appropriate settings, and copy / confirm that your server is configured with recommended settings.
 
 ## Cache-Control
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Each resource can define its caching policy via Cache-Control HTTP header
+- Cache-Control directives control who can cache the response, under which conditions, and for how long
 
 
 The best request is a request that does not need to communicate with the server: a local copy of the response allows us to eliminate all network latency and avoid data charges for the data transfer. To achieve this, the HTTP specification allows the server to return a [number of different Cache-Control directives](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) that control how, and for how long, the individual response can be cached by the browser and other intermediate caches.
 
+Note: Cache-Control header was defined as part of the HTTP/1.1 specification and supersedes previous headers (e.g. Expires) used to define response caching policies. All modern browsers support Cache-Control, hence that is all we will need.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
-
-<img src="images/http-cache-control-highlight.png" class="center" alt="HTTP Cache-Control example">
+<img src="images/http-cache-control-highlight.png"  alt="HTTP Cache-Control example">
 
 ### "no-cache" and "no-store"
 
@@ -193,7 +72,7 @@ This directive specifies the maximum time in seconds that the fetched response i
 
 ## Defining optimal Cache-Control policy
 
-<img src="images/http-cache-decision-tree.png" class="center" alt="Cache decision tree">
+<img src="images/http-cache-decision-tree.png"  alt="Cache decision tree">
 
 Follow the decision tree above to determine the optimal caching policy for a particular resource, or a set of resources used by your application. Ideally, you should aim to cache as many responses as possible on the client for the longest possible period, and provide validation tokens for each response to enable efficient revalidation.
 
@@ -225,31 +104,10 @@ According to HTTP Archive, amongst the top 300,000 sites (by Alexa rank), [nearl
 
 ## Invalidating and updating cached responses
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Locally cached responses are used until the resource 'expires'
+- Embedding a file content fingerprint in the URL enables us to force the client to update to a new version of the response
+- Each application needs to define its own cache hierarchy for optimal performance
 
 
 All HTTP requests made by the browser are first routed to the browser cache to check if there is a valid cached response that can be used to fulfill the request. If there is a match, the response is read from the cache and we eliminate both the network latency and the data costs incurred by the transfer. **However, what if we want to update or invalidate a cached response?**
@@ -260,7 +118,7 @@ Once the response is cached by the browser, the cached version will be used unti
 
 **So, how do we get the best of both worlds: client-side caching and quick updates?** Simple, we can change the URL of the resource and force the user to download the new response whenever its content changes. Typically, this is done by embedding a fingerprint of the file, or a version number, in its filename - e.g. style.**x234dff**.css.
 
-<img src="images/http-cache-hierarchy.png" class="center" alt="Cache hierarchy">
+<img src="images/http-cache-hierarchy.png"  alt="Cache hierarchy">
 
 The ability to define per-resource caching policies allows us to define “cache hierarchies” that allow us to control not only how long each is cached for, but also how quickly new versions are seen by visitor. For example, let’s analyze the above example:
 
@@ -283,5 +141,4 @@ Some tips and techniques to keep in mind as you work on caching strategy:
 1. **Determine the optimal cache lifetime for each resource:** different resources may have different freshness requirements. Audit and determine the appropriate max-age for each one.
 1. **Determine the best cache hierarchy for your site:** the combination of resource URLs with content fingerprints, and short or no-cache lifetimes for HTML documents allows you to control how quickly updates are picked up by the client.
 1. **Minimize churn:** some resources are updated more frequently than others. If there is a particular part of resource (e.g. JavaScript function, or set of CSS styles) that are often updated, consider delivering that code as a separate file. Doing so allows the remainder of the content (e.g. library code that does not change very often), to be fetched from cache and minimizes the amount of downloaded content whenever an update is fetched.
-
 

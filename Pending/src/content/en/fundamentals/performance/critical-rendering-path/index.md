@@ -23,7 +23,7 @@ intermediate steps between receiving the HTML, CSS, and JavaScript bytes and
 the required processing to turn them into rendered pixels - that's
 the **critical rendering path**.
 
-<img src="images/progressive-rendering.png" class="center" alt="progressive page rendering">
+<img src="images/progressive-rendering.png"  alt="progressive page rendering">
 
 By optimizing the critical rendering path we can significantly improve the
 time to first render of our pages. Further, understanding the critical

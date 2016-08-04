@@ -32,7 +32,7 @@ Finally, one more thing before we start... So far we've focused exclusively on w
 
 We'll start with basic HTML markup and a single image - no CSS or JavaScript - which is about as simple as it gets. Now let's open up our Network timeline in Chrome DevTools and inspect the resulting resource waterfall:
 
-<img src="images/waterfall-dom.png" alt="" class="center" alt="CRP">
+<img src="images/waterfall-dom.png" alt=""  alt="CRP">
 
 As expected, the HTML file took ~200ms to download. Note that the transparent portion of the blue line indicates the time the browser is waiting on the network - i.e. no response bytes have yet been received - whereas the solid portion shows the time to finish the download after the first response bytes have been received. In our example above, the HTML download is tiny (<4K), so all we need is a single roundtrip to fetch the full file. As a result, the HTML document takes ~200ms to fetch, with half the time spent waiting on the network and other half on the server response.
 
@@ -53,11 +53,11 @@ Our "Hello World experience" page may seem simple on the surface, but there is a
 
 _Before adding JavaScript and CSS:_
 
-<img src="images/waterfall-dom.png" alt="DOM CRP" class="center">
+<img src="images/waterfall-dom.png" alt="DOM CRP" >
 
 _With JavaScript and CSS:_
 
-<img src="images/waterfall-dom-css-js.png" alt="DOM, CSSOM, JS" class="center">
+<img src="images/waterfall-dom-css-js.png" alt="DOM, CSSOM, JS" >
 
 Adding external CSS and JavaScript files added two extra requests to our waterfall, all of which are dispatched at about the same time by the browser - so far so good. However, **note that there is now a much smaller timing difference between the domContentLoaded and onload events. What happened?**
 
@@ -70,11 +70,11 @@ That said, despite blocking on CSS, will inlining the script make the page rende
 
 _External JavaScript:_
 
-<img src="images/waterfall-dom-css-js.png" alt="DOM, CSSOM, JS" class="center">
+<img src="images/waterfall-dom-css-js.png" alt="DOM, CSSOM, JS" >
 
 _Inlined JavaScript:_
 
-<img src="images/waterfall-dom-css-js-inline.png" alt="DOM, CSSOM, and inlined JS" class="center">
+<img src="images/waterfall-dom-css-js-inline.png" alt="DOM, CSSOM, and inlined JS" >
 
 We are making one less request, but our onload and domContentLoaded times are effectively the same, why? Well, we know that it doesn't matter if the JavaScript is inlined or external, because as soon as the browser hits the script tag it will block and wait until the CSSOM is constructed. Further, in our first example, both CSS and JavaScript are being downloaded in parallel by the browser and finish at about the same time. As a result, in this particular instance, inlining the JavaScript code doesn't help us much! Hmm, so are we stuck and is there nothing that we can do to make our page render faster? Actually, we have several different strategies.
 
@@ -86,11 +86,11 @@ First, recall that all inline scripts are parser blocking, but for external scri
 
 _Parser-blocking (external) JavaScript:_
 
-<img src="images/waterfall-dom-css-js.png" alt="DOM, CSSOM, JS" class="center">
+<img src="images/waterfall-dom-css-js.png" alt="DOM, CSSOM, JS" >
 
 _Async (external) JavaScript:_
 
-<img src="images/waterfall-dom-css-js-async.png" alt="DOM, CSSOM, async JS" class="center">
+<img src="images/waterfall-dom-css-js-async.png" alt="DOM, CSSOM, async JS" >
 
 Much better! The `domContentLoaded` event fires shortly after the HTML is parsed: the browser knows not to block on JavaScript and since there are no other parser blocking scripts the CSSOM construction can also proceed in parallel.
 
@@ -100,7 +100,7 @@ Alternatively, we could have tried a different approach and inlined both the CSS
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
 </pre>
 
-<img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, inline CSS, inline JS" class="center">
+<img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, inline CSS, inline JS" >
 
 Notice that the `domContentLoaded` time is effectively the same as in the previous example: instead of marking our JavaScript as async, we've inlined both the CSS and JS into the page itself. This made our HTML page much larger, but the upside is that the browser doesn't have to wait to fetch any external resources - everything is right there in the page.
 
@@ -116,7 +116,7 @@ The simplest possible page consists of just the HTML markup: no CSS, no JavaScri
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
-<img src="images/analysis-dom.png" alt="Hello world CRP" class="center">
+<img src="images/analysis-dom.png" alt="Hello world CRP" >
 
 **The time between T<sub>0</sub> and T<sub>1</sub> captures the network and server processing times.** In the best case (if the HTML file is small), all we will need is just one network roundtrip to fetch the entire document - due to how the TCP transports protocols work, larger files may require more roundtrips, this is a topic we'll come back to in a future lesson. **As a result, we can say that the above page, in the best case, has a one roundtrip (minimum) critical rendering path.**
 
@@ -126,7 +126,7 @@ Now, let's consider the same page but with an external CSS file:
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
 </pre>
 
-<img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
+<img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" >
 
 Once again, we incur a network roundtrip to fetch the HTML document and then the retrieved markup tells us that we will also need the CSS file: this means that the browser has to go back to the server and get the CSS before it can render the page on the screen. **As a result, this page will incur a minimum of two roundtrips before the page can be displayed** - once again, the CSS file may take multiple roundtrips, hence the emphasis on "minimum".
 
@@ -139,7 +139,7 @@ Our first example with a single HTML page contained a single critical resource (
 
 Now let's compare that to the critical path characteristics of the HTML + CSS example above:
 
-<img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
+<img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" >
 
 * **2** critical resources
 * **2** or more roundtrips for the minimum critical path length
@@ -155,7 +155,7 @@ Ok, now let's add an extra JavaScript file into the mix!
 
 We added app.js, which is an external JavaScript asset on the page, and as we know by now, it is a parser blocking (i.e. critical) resource. Worse, in order to execute the JavaScript file we will also have to block and wait for CSSOM - recall that JavaScript can query the CSSOM and hence the browser will pause until "style.css" is downloaded and CSSOM is constructed.
 
-<img src="images/analysis-dom-css-js.png" alt="DOM, CSSOM, JavaScript CRP" class="center">
+<img src="images/analysis-dom-css-js.png" alt="DOM, CSSOM, JavaScript CRP" >
 
 That said, in practice if we look at the "network waterfall" of this page you'll notice that both the CSS and JavaScript requests will be initiated at about the same time: the browser gets the HTML, discovers both resources and initiates both requests. As a result, the above page has the following critical path characteristics:
 
@@ -171,7 +171,7 @@ After chatting with our site developers we realized that the JavaScript we inclu
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
 </pre>
 
-<img src="images/analysis-dom-css-js-async.png" alt="DOM, CSSOM, async JavaScript CRP" class="center">
+<img src="images/analysis-dom-css-js-async.png" alt="DOM, CSSOM, async JavaScript CRP" >
 
 Making the script asynchronous has several advantages:
 
@@ -187,6 +187,6 @@ Finally, let's say the CSS stylesheet was only needed for print? How would that 
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
 </pre>
 
-<img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" class="center">
+<img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" >
 
 Because the style.css resource is only used for print, the browser does not need to block on it to render the page. Hence, as soon as DOM construction is complete, the browser has enough information to render the page! As a result, this page has only a single critical resource (the HTML document), and the minimum critical rendering path length is one roundtrip.

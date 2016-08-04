@@ -20,7 +20,7 @@ critical rendering path!
 
 The foundation of every solid performance strategy is good measurement and instrumentation. Turns out, that is exactly what the Navigation Timing API provides.
 
-<img src="images/dom-navtiming.png" class="center" alt="Navigation Timing">
+<img src="images/dom-navtiming.png"  alt="Navigation Timing">
 
 Each of the labels in the above diagram corresponds to a high resolution timestamp that the browser tracks for each and every page it loads. In fact, in this specific case we're only showing a fraction of all the different timestamps &mdash; for now we're skipping all network related timestamps, but we'll come back to them in a future lesson.
 
@@ -56,7 +56,7 @@ The HTML specification dictates specific conditions for each and every event: wh
 
 The above example may seem a little daunting on first sight, but in reality it is actually pretty simple. The Navigation Timing API captures all the relevant timestamps and our code simply waits for the `onload` event to fire &mdash; recall that `onload` event fires after `domInteractive`, `domContentLoaded` and `domComplete` &mdash; and computes the difference between the various timestamps.
 
-<img src="images/device-navtiming-small.png" class="center" alt="NavTiming demo">
+<img src="images/device-navtiming-small.png"  alt="NavTiming demo">
 
 All said and done, we now have some specific milestones to track and a simple function to output these measurements. Note that instead of printing these metrics on the page you can also modify the code to send these metrics to an analytics server ([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784?hl=en)), which is a great way to keep tabs on performance of your pages and identify candidate pages that can benefit from some optimization work.
 

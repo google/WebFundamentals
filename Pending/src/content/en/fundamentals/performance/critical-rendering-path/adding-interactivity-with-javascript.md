@@ -31,7 +31,7 @@ JavaScript is a dynamic language that runs in the browser and allows us to alter
 
 * JavaScript also allows us to create, style, and append and remove new elements to the DOM. In fact, technically our entire page could be just one big JavaScript file which creates and styles the elements one by one - that would work, but working with HTML and CSS is much easier in practice. In the second part of our JavaScript function we create a new div element, set its text content, style it, and append it to the body.
 
-<img src="images/device-js-small.png" class="center" alt="page preview">
+<img src="images/device-js-small.png"  alt="page preview">
 
 With that, we've modified the content and the CSS style of an existing DOM node, and added an entirely new node to the document. Our page won't win any design awards, but it illustrates the power and flexibility that JavaScript affords us.
 

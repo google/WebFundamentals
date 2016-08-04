@@ -1,42 +1,24 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
-description: غالبًا ما تكون الصور مسؤولة عن معظم وحدات بايت التي يتم تنزيلها على صفحة الويب، كما أنها غالبًا ما تستهلك قدرًا كبيرًا من المساحة الظاهرة على الصفحة. ونتيجة لذلك، يمكن أن يؤدي تحسين الصور في الغالب إلى توفير كبير في وحدات بايت وتحسين في الأداء على موقع الويب: ذلك أنه كلما قلت وحدات بايت التي ينزلها المتصفح، قلت المنافسة على معدل نقل البيانات وتمكن المتصفح من تنزيل جميع الأصول وعرضها.
+book_path: /web/fundamentals/_book.yaml
 
-<p class="intro">
-  Images often account for most of the downloaded bytes on a web page and also often occupy a significant amount of visual space. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for the client's bandwidth and the faster the browser can download and render useful content on the screen.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-05-09 #}
+{# wf_published_on: 2014-05-06 #}
 
+# Image optimization {: .page-title }
 
+{% include "_shared/contributors/ilyagrigorik.html" %}
+
+Images often account for most of the downloaded bytes on a web page and also often occupy a significant amount of visual space. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for the client's bandwidth and the faster the browser can download and render useful content on the screen.
 
 Image optimization is both an art and science: an art because there is no one definitive answer for how best to compress an individual image, and a science because there are many well developed techniques and algorithms that can significantly reduce the size of an image. Finding the optimal settings for your image requires careful analysis along many dimensions: format capabilities, content of encoded data, quality, pixel dimensions, and more.
 
 ## Eliminating and replacing images
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Eliminate unnecessary image resources
+- Leverage CSS3 effects where possible
+- Use web fonts instead of encoding text in images
 
 
 The very first question you should ask yourself is whether an image is, in fact, required to achieve the effect you are after. Good design is simple and will also always yield the best performance. If you can eliminate an image resource, which often requires a large number of bytes relative to HTML, CSS, JavaScript and other assets on the page, then that is always the best optimization strategy. That said, a well-placed image can also communicate more  information than a thousand words, so it is up to you to find that balance.
@@ -51,45 +33,28 @@ If you ever find yourself encoding text in an image asset, stop and reconsider. 
 
 ## Vector vs. Raster images
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Vector images are ideal for images that consist of geometric shapes
+- Vector images are zoom and resolution-independent
+- Raster images should be used for complex scenes with lots of irregular shapes and details
 
 
 Once you've determined that an image is, in fact, the optimal format to achieve the desired effect, the next critical choice is to select the appropriate format:
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <b>Vector</b>
-    <img class="center" src="images/vector-zoom.png" alt="Zoomed-in vector image">
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-    <b>Raster</b>
-    <img src="images/raster-zoom.png" alt="Zoomed-in raster image">   
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/vector-zoom.png" alt="Zoomed-in vector image">
+    <figcaption>Zoomed-in vector image</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/raster-zoom.png" alt="Zoomed-in raster image">
+    <figcaption>Zoomed-in raster image</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 * [Vector graphics](https://en.wikipedia.org/wiki/Vector_graphics) use lines, points, and polygons to represent an image.
 * [Raster graphics](https://en.wikipedia.org/wiki/Raster_graphics) represent an image by encoding the individual values of each pixel within a rectangular grid.
@@ -103,42 +68,21 @@ Raster images do not have the same nice properties of being resolution or zoom i
 
 ## Implications of high-resolution screens
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- High resolution screens have multiple device pixels per CSS pixel
+- High resolution images require significantly higher number of pixels and bytes
+- Image optimization techniques are the same regardless of resolution
 
 
 When we talk about image pixels, we need to distinguish between different kinds of pixels: CSS pixels and device pixels. A single CSS pixel may contain multiple device pixels - e.g. a single CSS pixel may correspond directly to a single device pixel, or may be backed by multiple device pixels. What's the point? Well, the more device pixels there are, the finer the detail of the displayed content on the screen.
 
-<img src="images/css-vs-device-pixels.png" class="center" alt="CSS vs device pixels">
+<img src="images/css-vs-device-pixels.png"  alt="CSS vs device pixels">
 
 High DPI (HiDPI) screens produce beautiful results, but there is one obvious tradeoff: our image assets require more detail in order to take advantage of the higher device pixel counts. The good news is, vector images are ideally suited for this task, as they can be rendered at any resolution with sharp results - we might incur a higher processing cost to render the finer detail, but the underlying asset is the same and is resolution independent.
 
 On the other hand, raster images pose a much larger challenge because they encode image data on a per-pixel basis. Hence, the larger the number of pixels, the larger the filesize of a raster image. As an example, let's consider the difference between a photo asset displayed at 100x100 (CSS) pixels:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Screen resolution</th>
@@ -171,45 +115,26 @@ So, what does this mean in practice? High resolution screens enable us to delive
 
 ## Optimizing vector images
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- SVG is an XML-based image format
+- SVG files should be minified to reduce their size
+- SVG files should be compressed with GZIP
 
 
 All modern browsers support Scalable Vector Graphics (SVG), which is an XML-based image format for two-dimensional graphics: we can embed the SVG markup directly on the page, or as an external resource. In turn, an SVG file can be created by most vector-based drawing software, or by hand and directly in your favorite text editor.
 
-<div class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
-<span class="c">&lt;!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --&gt;</span>
-<span class="nt">&lt;svg</span> <span class="na">version=</span><span class="s">&quot;1.2&quot;</span> <span class="na">baseProfile=</span><span class="s">&quot;tiny&quot;</span> <span class="na">id=</span><span class="s">&quot;Layer_1&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="na">xmlns:xlink=</span><span class="s">&quot;http://www.w3.org/1999/xlink&quot;</span>
-   <span class="na">x=</span><span class="s">&quot;0px&quot;</span> <span class="na">y=</span><span class="s">&quot;0px&quot;</span> <span class="na">viewBox=</span><span class="s">&quot;0 0 612 792&quot;</span> <span class="na">xml:space=</span><span class="s">&quot;preserve&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;g</span> <span class="na">id=</span><span class="s">&quot;XMLID_1_&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;g&gt;</span>
-    <span class="nt">&lt;circle</span> <span class="na">fill=</span><span class="s">&quot;red&quot;</span> <span class="na">stroke=</span><span class="s">&quot;black&quot;</span> <span class="na">stroke-width=</span><span class="s">&quot;2&quot;</span> <span class="na">stroke-miterlimit=</span><span class="s">&quot;10&quot;</span> <span class="na">cx=</span><span class="s">&quot;50&quot;</span> <span class="na">cy=</span><span class="s">&quot;50&quot;</span> <span class="na">r=</span><span class="s">&quot;40&quot;</span><span class="nt">/&gt;</span>
-  <span class="nt">&lt;/g&gt;</span>
-<span class="nt">&lt;/g&gt;</span>
-<span class="nt">&lt;/svg&gt;</span></code></pre></div>
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+       x="0px" y="0px" viewBox="0 0 612 792" xml:space="preserve">
+    <g id="XMLID_1_">
+      <g>
+        <circle fill="red" stroke="black" stroke-width="2" stroke-miterlimit="10" cx="50" cy="50" r="40"/>
+      </g>
+    </g>
+    </svg>
+    
 
 The above example renders a simple circle shape with a black outline and red background and was exported from Adobe Illustrator. As you can tell, it contains a lot of metadata, such as layer information, comments, and XML namespaces that are often unnecessary to render the asset in the browser. As a result, it is always a good idea to minify your SVG files by running through a tool like [svgo](https://github.com/svg/svgo).
 
@@ -218,31 +143,10 @@ Case in point, svgo reduces the size of the above SVG file generated by Illustra
 
 ## Optimizing raster images
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- A raster image is a grid of pixels
+- Each pixel encodes color and transparency information
+- Image compressors use a variety of techniques to reduce the number of required bits per pixel to reduce file size of the image
 
 
 A raster image is simply a 2-dimensional grid of individual "pixels" - e.g. a 100x100 pixel image is a sequence of 10,000 pixels. In turn, each pixel stores the "[RGBA](https://en.wikipedia.org/wiki/RGBA_color_space)" values: (R) red channel, (G) green channel, (B) blue channel, and (A) alpha (transparency) channel.
@@ -253,38 +157,9 @@ Internally, the browser allocates 256 values (shades) for each channel, which tr
 * 10,000 pixels x 4 bytes = 40,000 bytes
 * 40,000 bytes / 1024 = 39 KB
 
+Note: As an aside, regardless of the image format used to transfer the data from the server to the client, when the image is decoded by the browser, each pixel always occupies 4 bytes of memory. This can be an important constraint for large images and devices which do not have a lot of available memory - e.g. low-end mobile devices.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
-
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Dimensions</th>
@@ -325,38 +200,9 @@ Internally, the browser allocates 256 values (shades) for each channel, which tr
 
 One simple strategy is to reduce the "bit-depth" of the image from 8 bits per channel to a smaller color palette: 8 bits per channel gives us 256 values per channel and 16,777,216 (2563) colors in total. What if we reduced the palette to 256 colors? Then we would only need 8 bits in total for the RGB channels and immediately save two bytes per pixel -- that's 50% compression savings over our original 4 bytes per pixel format!
 
-<img src="images/artifacts.png" class="center" alt="Compression artifacts">
+<img src="images/artifacts.png"  alt="Compression artifacts">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Note: Left to right (PNG): 32-bit (16M colors), 7-bit (128 colors), 5-bit (32 colors). Complex scenes with gradual color transitions (gradients, sky, etc.) require larger color palettes to avoid visual artifacts such as the pixelated sky in the 5-bit asset. On the other hand, if the image only uses a few colors, then a large palette is simply wasting precious bits!
 
 Next, once we've optimized the data stored in individual pixels we could get more clever and look at nearby pixels as well: turns out, many images, and especially photos, have many nearby pixels with similar colors - e.g. the sky, repeating textures, and so on. Using this information to our advantage the compressor can apply "[delta encoding](https://en.wikipedia.org/wiki/Delta_encoding)" where instead of storing the individual values for each pixel, we can store the difference between nearby pixels: if the adjacent pixels are the same, then the delta is "zero" and we only need to store a single bit! But why stop there...
 
@@ -371,31 +217,11 @@ So, once again, this is all great, but also very academic: how does it help us o
 
 ## Lossless vs lossy image compression
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Due to how our eyes work, images are great candidates for lossy compression
+- Image optimization is a function of lossy and lossless compression
+- Differences in image formats are due to the difference in how and which lossy and lossless algorithms are used to optimize the image
+- There is no single best format or "quality setting" for all images: each combination of particular compressor and image contents produce a unique output
 
 
 For certain types of data, such as source code for a page, or an executable file, it is critical that a compressor does not alter or lose any of the original information: a single missing or wrong bit of data could completely change the meaning of the contents of the file, or worse, break it entirely. For some other types of data, such as images, audio, and video, it may be perfectly acceptable to deliver an "approximate" representation of the original data.
@@ -409,75 +235,25 @@ In fact, due to how the eye works, we can often get away with discarding some in
 
 So, what is the "optimal" configuration of lossy and lossless optimization? The answer depends on the image contents and your own criteria such as the tradeoff between filesize and artifacts introduced by lossy compression: in some cases you may want to skip lossy optimization to communicate intricate detail in its full fidelity, and in others you may be able to apply aggressive lossy optimization to reduce the filesize of the image asset.  This is where your own judgment and context need to come into play - there is no one universal setting.
 
-<img src="images/save-for-web.png" class="center" alt="Save for web">
+<img src="images/save-for-web.png" class="attempt-right" alt="Save for web">
 
 As a hands-on example, when using a lossy format such as JPEG, the compressor will typically expose a customizable "quality" setting (e.g. the quality slider provided by the "Save for Web" functionality in Adobe Photoshop), which is typically a number between 1 and 100 that controls the inner workings of the specific collection of lossy and lossless algorithms. For best results, experiment with various quality settings for your images, and don't be afraid to dial down the quality - the visual results are often very good and the filesize savings can be quite large.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Note: Note that quality levels for different image formats are not directly comparable due to differences in algorithms used to encode the image: quality 90 JPEG will produce a very different result than a quality 90 WebP. In fact, even quality levels for the same image format may produce visibly different output based on implementation of the compressor!
 
 
 ## Selecting the right image format
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Start by selecting the right universal format: GIF, PNG, JPEG
+- Experiment and select the best settings for each format: quality, palette size, etc.
+- Consider adding WebP and JPEG XR assets for modern clients
 
 
 In addition to different lossy and lossless compression algorithms, different image formats support different features such as animation and transparency (alpha) channels. As a result, the choice of the "right format" for a particular image is a combination of desired visual results and functional requirements.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Format</th>
@@ -522,16 +298,16 @@ In addition to different lossy and lossless compression algorithms, different im
 
 There are three universally supported image formats: GIF, PNG, and JPEG. In addition to these formats, some browsers also support newer formats such as WebP and JPEG XR, which offer better overall compression and more features. So, which format should you use?
 
-<img src="images/format-tree.png" class="center" alt="Save for web">
+<img src="images/format-tree.png"  alt="Save for web">
 
 1. **Do you need animation? If so, GIF is the only universal choice.**
-  * GIF limits the color palette to at most 256 colors, which makes it a poor choice for most images. Further, PNG-8 delivers better compression for images with a small palette. As a result, GIF is the right answer only when animation is required.
+    * GIF limits the color palette to at most 256 colors, which makes it a poor choice for most images. Further, PNG-8 delivers better compression for images with a small palette. As a result, GIF is the right answer only when animation is required.
 1. **Do you need to preserve fine detail with highest resolution? Use PNG.**
-  * PNG does not apply any lossy compression algorithms beyond the choice of the size of the color palette. As a result, it will produce the highest quality image, but at a cost of significantly higher filesize than other formats. Use judiciously.
-  * If the image asset contains imagery composed of geometric shapes, consider converting it to a vector (SVG) format!
-  * If the image asset contains text, stop and reconsider. Text in images is not selectable, searchable, or "zoomable". If you need to convey a custom look (for branding or other reasons), use a web font instead.
+    * PNG does not apply any lossy compression algorithms beyond the choice of the size of the color palette. As a result, it will produce the highest quality image, but at a cost of significantly higher filesize than other formats. Use judiciously.
+    * If the image asset contains imagery composed of geometric shapes, consider converting it to a vector (SVG) format!
+    * If the image asset contains text, stop and reconsider. Text in images is not selectable, searchable, or "zoomable". If you need to convey a custom look (for branding or other reasons), use a web font instead.
 1. **Are you optimizing a photo, screenshot, or a similar image asset? Use JPEG.**
-  * JPEG uses a combination of lossy and lossless optimization to reduce filesize of the image asset. Try several JPEG quality levels to find the best quality vs. filesize tradeoff for your asset.
+    * JPEG uses a combination of lossy and lossless optimization to reduce filesize of the image asset. Try several JPEG quality levels to find the best quality vs. filesize tradeoff for your asset.
 
 Finally, once you've determined the optimal image format and its settings for each of your assets, consider adding an additional variant encoded in WebP and JPEG XR. Both of of these formats are new, and unfortunately are not (yet) universally supported by all browsers, but they can nonetheless provide significant savings for newer clients - e.g. on average, WebP delivers a [30% filesize decrease](https://developers.google.com/speed/webp/docs/webp_study) over a comparable JPEG image.
 
@@ -548,7 +324,7 @@ Finally, note that if you are using a Webview to render content in your native a
 
 There is no one perfect image format, tool, or a set of optimization parameters that apply to all images. For best results you will have to pick the format and its settings depending on the contents of the image, and its visual and other technical requirements.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Tool</th>
@@ -581,73 +357,23 @@ Don't be afraid to experiment with parameters of each compressor. Dial down the 
 
 ## Delivering scaled image assets
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+### TL;DR
+- Delivering scaled assets is one of the simplest and most effective optimizations
+- Pay close attention to large assets as they result in high overhead
+- Reduce the number of unnecessary pixels by scaling your images to their display size
 
 
 Image optimization boils down to two criteria: optimizing the number of bytes used to encode each image pixel, and optimizing the total number of pixels: the filesize of the image is simply the total number of pixels times the number of bytes used to encode each pixel. Nothing more, nothing less.
 
+<img src="images/resized-image.png" class="attempt-right" alt="Resized image">
+
 As a result, one of the simplest and most effective image optimization techniques is to ensure that we are not shipping any more pixels than needed to display the asset at its intended size in the browser. Sounds simple, right? Unfortunately, most pages fail this test for many of their image assets: typically, they ship larger assets and rely on the browser to rescale them - which also consumes extra CPU resources - and display them at a lower resolution.
 
-<img src="images/resized-image.png" class="center" alt="Resized image">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Note: Hovering over the image element in Chrome DevTools reveals both the "natural" and "display" sizes of the image asset. In above example the 300x260 pixel image is downloaded but is then downscaled (245x212) on the client when it is displayed.
 
 The overhead of shipping unnecessary pixels, only to have the browser rescale the image on our behalf, is a big missed opportunity to reduce and optimize the total number of bytes required to render the page. Further, note that resizing is not simply a function of the number of pixels by which the image is reduced by, but also of its natural size.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Screen resolution</th>
@@ -711,4 +437,3 @@ Some tips and techniques to keep in mind as you work on optimizing your images:
 * **Remove unnecessary image metadata:** many raster images contain unnecessary metadata about the asset: geo information, camera information, and so on. Use appropriate tools to strip this data.
 * **Serve scaled images:** resize images on the server and ensure that the "display" size is as close as possible to the "natural" size of the image. Pay close to attention to large images in particular, as they account for largest overhead when resized!
 * **Automate, automate, automate:** invest into automated tools and infrastructure that will ensure that all of your image assets are always optimized.
-
