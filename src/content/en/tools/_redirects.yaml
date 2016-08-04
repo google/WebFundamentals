@@ -38,3 +38,6 @@ redirects:
 
 - from: /web/tools/chrome-devtools/security/
   to: /web/tools/chrome-devtools/debug/security/
+
+- from: /web/tools/devtools
+  to: /web/tools/chrome-devtools
