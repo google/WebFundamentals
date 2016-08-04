@@ -35,6 +35,21 @@ class HomePage(webapp2.RequestHandler):
     def get(self):
         self.redirect('/web/', permanent=True)
 
+class Framebox(webapp2.RequestHandler):
+    def get(self, path):
+        response = None
+        path = '/framebox/' + path
+        content = memcache.get(path)
+
+        if content is None:
+          response = render('gae/404.tpl', {})
+          logging.error('404 ' + path)
+          self.response.set_status(404)        
+        else:
+          response = render('gae/framebox.tpl', {'content': content})
+          logging.info('200 ' + path)
+        self.response.out.write(response)      
+
 class DevSitePages(webapp2.RequestHandler):
     def readFile(self, pathToFile):
       # Reads a file from the file system, first trying the localized, then
@@ -264,12 +279,17 @@ class DevSitePages(webapp2.RequestHandler):
               regex = r'^' + include + '(?m)'
               fileContent = re.sub(regex, self.getInclude(include), fileContent)
 
-            # Replaces frameboxes with simple placeholder
+            # Replaces frameboxes with the iframe it needs
             frameboxes = re.findall(r'{% framebox .+%}.*?{% endframebox %}(?ms)', fileContent)
-            frameboxReplace = '<aside class="dogfood"><strong>FRAMEBOX:</strong> <span>Not yet supported in staging.</span></aside>'
+            fbID = 0
             for framebox in frameboxes:
-              fileContent = fileContent.replace(framebox, frameboxReplace)
-
+              fbContent = re.search(r'{% framebox .+%}(.*?){% endframebox %}(?ms)', framebox)
+              fbMemcacheKey = '/framebox/' + path + '--' + str(fbID)
+              replaceWith = '<iframe class="framebox inherit-locale" '
+              replaceWith += 'style="width: 100%;" '
+              replaceWith += 'src="' + fbMemcacheKey + '"></iframe>'
+              fileContent = fileContent.replace(framebox, replaceWith)
+              fbID += 1
 
             # Handle Special DevSite Cases
             fileContent = re.sub(r"^Success: (.*?)\n{2}(?ms)", r"<aside class='success' markdown='1'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
@@ -341,4 +361,5 @@ class DevSitePages(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', HomePage),
     ('/web/(.*)', DevSitePages),
+    ('/framebox/(.*)', Framebox)
 ], debug=True)
