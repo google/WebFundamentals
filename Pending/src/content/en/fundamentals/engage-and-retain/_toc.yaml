@@ -8,13 +8,13 @@ toc:
       - title: Overview
         path: /web/fundamentals/engage-and-retain/push-notifications/
       - title: What Makes a Good Notification
-        path: /web/fundamentals/engage-and-retain/push-notifications/
+        path: /web/fundamentals/engage-and-retain/push-notifications/good-notification
       - title: Requesting Permission and Subscribing Users
-        path: /web/fundamentals/engage-and-retain/push-notifications/
+        path: /web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
       - title: Sending Messages
-        path: /web/fundamentals/engage-and-retain/push-notifications/
+        path: /web/fundamentals/engage-and-retain/push-notifications/sending-messages
       - title: Handling Messages
-        path: /web/fundamentals/engage-and-retain/push-notifications/
+        path: /web/fundamentals/engage-and-retain/push-notifications/handling-messages
     - title: App Install Banners
       section:
       - title: Web App Install Banners

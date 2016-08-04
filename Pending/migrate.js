@@ -167,4 +167,4 @@ function migrateDirectory(dir) {
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/performance/critical-rendering-path/');
+migrateDirectory('./src/content/en/fundamentals/engage-and-retain/push-notifications/');
