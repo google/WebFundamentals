@@ -1,6 +1,16 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Chrome will automatically display the banner when your app meets the right criteria.
+
+{# wf_review_required #}
+{# wf_updated_on: 2016-02-29 #}
+{# wf_published_on: 2014-12-16 #}
+
+# What are the Criteria? {: .page-title }
+
+{% include "_shared/contributors/mattgaunt.html" %}
+
+{% include "_shared/contributors/paulkinlan.html" %}
 
 Chrome will automatically display the banner when your app meets the following
 criteria:
@@ -21,8 +31,7 @@ criteria:
 The app install banner is only shown after the user has visited the page at least
 twice within 5 minutes. You can disable the visit frequency check by enabling
 the Chrome flag `#bypass-app-banner-engagement-checks`. You can also enable the
-Chrome flag `#enable-add-to-shelf` to test on dekstop Chrome.
+Chrome flag `#enable-add-to-shelf` to test on desktop Chrome.
 
 Then, as long as you have a manifest (configured correctly), are on HTTPS (or `localhost`)
 and have a service worker, you should see the install prompt.
-

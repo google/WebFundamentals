@@ -17,10 +17,12 @@ toc:
         path: /web/fundamentals/engage-and-retain/push-notifications/handling-messages
     - title: App Install Banners
       section:
-      - title: Web App Install Banners
-        path: /web/fundamentals/engage-and-retain/app-install/
-      - title: Handling Banner Events
-        path: /web/fundamentals/engage-and-retain/app-install/events
+      - title: Overview
+        path: /web/fundamentals/engage-and-retain/app-install-banners/
+      - title: What Are the Criteria
+        path: /web/fundamentals/engage-and-retain/app-install-banners/web-app-install-banners
+      - title: Do More With App Install Banners
+        path: /web/fundamentals/engage-and-retain/app-install-banners/advanced
       - title: Native App Install Banners
-        path: /web/fundamentals/engage-and-retain/app-install/native
+        path: /web/fundamentals/engage-and-retain/app-install-banners/native-app-install
 

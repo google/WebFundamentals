@@ -1,14 +1,23 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Native App install banners are similar to Web app install banners, but instead of adding to the home screen will let the user install your native app without leaving your site.
+
+{# wf_review_required #}
+{# wf_updated_on: 2015-09-29 #}
+{# wf_published_on: 2014-12-16 #}
+
+# Native app Install Banners {: .page-title }
+
+{% include "_shared/contributors/mattgaunt.html" %}
+
+{% include "_shared/contributors/paulkinlan.html" %}
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    <p class="intro">
     Native App install banners are similar to Web app install banners, but
-    instead of adding to the home screen will let the user install your
-    native app without leaving your site.
-    </p>
+instead of adding to the home screen will let the user install your
+native app without leaving your site.
+
   </div>
   <figure class="mdl-cell mdl-cell--6-col">
     <img src="images/native-app-install-banner.gif" alt="Native app install banner">
@@ -35,22 +44,25 @@ a service worker. Your site must:
 To integrate into any manifest, add a `related_applications` array with the
 platforms of `play` (for Google Play) and the App Id.
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;related_applications&quot;</span><span class="o">:</span> <span class="p">[</span>
-  <span class="p">{</span>
-  <span class="s2">&quot;platform&quot;</span><span class="o">:</span> <span class="s2">&quot;play&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;com.google.samples.apps.iosched&quot;</span>
-  <span class="p">}</span>
-<span class="p">]</span></code></pre></div>
+
+    "related_applications": [
+      {
+      "platform": "play",
+      "id": "com.google.samples.apps.iosched"
+      }
+    ]
+    
 
 If just want to offer the user the ability to install your Android
 application, and not show the web app install banner, then add
 `"prefer_related_applications": true`. For example:
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="s2">&quot;prefer_related_applications&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-<span class="s2">&quot;related_applications&quot;</span><span class="o">:</span> <span class="p">[</span>
-  <span class="p">{</span>
-  <span class="s2">&quot;platform&quot;</span><span class="o">:</span> <span class="s2">&quot;play&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;com.google.samples.apps.iosched&quot;</span>
-  <span class="p">}</span>
-<span class="p">]</span></code></pre></div>
 
+    "prefer_related_applications": true,
+    "related_applications": [
+      {
+      "platform": "play",
+      "id": "com.google.samples.apps.iosched"
+      }
+    ]
+    

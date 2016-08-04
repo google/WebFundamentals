@@ -9,7 +9,11 @@ book_path: /web/fundamentals/_book.yaml
 
 {% include "_shared/contributors/josephmedley.html" %}
 
-{% ytvideo _dXBibRO0SM %}
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="_dXBibRO0SM"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 Push notifications are an incredibly effective way to build deeper user
 engagement with your application, and are now available on the web. In this
