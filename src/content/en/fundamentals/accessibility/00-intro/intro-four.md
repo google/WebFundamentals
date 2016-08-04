@@ -23,9 +23,9 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-Accessibility is about understanding the experience of a diverse range of users. One popular type of software is the *screen reader*, a program that enables visually impaired people to use computers by reading screen text aloud in a generated voice. The user can control what is read by moving the cursor to a relevant area with the mouse or keyboard.
+Accessibility is about understanding the experience of a diverse range of users. One popular type of software is the *screen reader*, a program that enables visually impaired people to use computers by reading screen text aloud in a generated voice. The user can control what is read by moving the cursor to a relevant area with the keyboard.
 
-We asked Victor Tsaran to explain how, as a blind person, he accesses the web using a free screen reader for Windows called NonVisual Desktop Access, or NVDA.
+We asked Victor Tsaran to explain how, as a blind person, he accesses the web using a free screen reader for Windows called NonVisual Desktop Access, or <a href="http://www.nvaccess.org/" target="_blank">NVDA</a>. See <a href="https://www.youtube.com/watch?v=QW_dUs9D1oQ" target="_blank">this video</a> of Victor using NVDA.
 
 >I access the web using a screen reader that converts text and UI elements to descriptive text in either speech or braille form. For example, I would use NVDA to access the BBC.com website.
 >
@@ -45,7 +45,7 @@ We asked Victor Tsaran to explain how, as a blind person, he accesses the web us
 
 Now, it's your turn to try using a screen reader. Here is a page with *ChromeVox Lite*, a minimal but functioning screen reader written in Javascript. The screen is purposefully blurred to simulate a low-vision experience and force the user to complete the task with a screen reader. Of course, you'll need to use the Chrome browser for this exercise.
 
-<a href="http://robdodson.github.io/udacity-a11y/lesson3-semantics-built-in/02-chromevox-lite/" target="_blank">ChromeVox lite demo page</a>
+<a href="http://udacity.github.io/ud891/lesson3-semantics-built-in/02-chromevox-lite/" target="_blank">ChromeVox lite demo page</a>
 
 You can use the control panel at the bottom of the screen to control the screen reader. This screen reader has very minimal functionality, but you can explore the content using the `Previous` and `Next` buttons, and you can click things using the `Click` button.
 
