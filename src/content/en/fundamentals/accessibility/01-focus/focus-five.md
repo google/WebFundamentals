@@ -25,9 +25,11 @@ notes:
 
 The default tab order provided by the DOM position of native elements is convenient, but there are times when you'll want to modify the tab order, and physically moving elements in the HTML isn't always an optimal, or even a feasible, solution. For these cases you can use the `tabindex` HTML attribute to explicitly set an element's tab position.
 
-`tabindex` can be applied to any element &mdash; although it is not necessarily useful on every element &mdash; and takes a range of positive integer values. Using `tabindex`, you can specify an explicit order for focusable page elements, insert an otherwise unfocusable element (such as a button made from a `div`) into the tab order, and remove elements from the tab order. Like `focus`, `taborder` can also be controlled programmatically. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" target="_blank">this MDN page</a> for more details. 
+`tabindex` can be applied to any element &mdash; although it is not necessarily useful on every element &mdash; and takes a range of integer values. Using `tabindex`, you can specify an explicit order for focusable page elements, insert an otherwise unfocusable element into the tab order, and remove elements from the tab order. For example:
 
-Take care when attempting to manage focus with `tabindex`. Users who depend on screen readers typically navigate a page's DOM linearly, and an artificially manipulated tab order can interfere with the DOM order and make the page difficult or impossible to use.
+ - `tabindex="0"`: Inserts an element into the natural tab order, and the element can be focused by calling its `focus()` method
+ - `tabindex="-1"`: Removes an element from the natural tab order, but the element can still be focused by calling its `focus()` method
+ - `tabindex="5"`: Any tabindex greater than 0 jumps the element to the front of the natural tab order. If there are multiple elements with a tabindex greater than 0, the tab order starts from the lowest value that is greater than zero and works its way up. Using a tabindex greater than 0 is considered an **anti-pattern**.
 
 This is particularly true of non-input elements like headers, images, or article titles. Adding `tabindex` to those kinds of elements is counter-productive. If possible, it's best to arrange your source code so the DOM sequence provides a logical tab order. If you do use `tabindex`, restrict it to interactive controls like buttons, tabs, dropdowns, and text fields; that is, elements the user might expect to provide input to.
 
