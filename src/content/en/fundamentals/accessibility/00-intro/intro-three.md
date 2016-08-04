@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-To explain further, here's an informative question/answer session with Victor Tsaran, a Technical Program Manager at Google, who is totally blind.
+When learning about accessibility, it helps to have an understanding of the diverse range of users in the world and the kinds of accessibility topics that affect them. To explain further, here's an informative question/answer session with Victor Tsaran, a Technical Program Manager at Google, who is totally blind.
 
 >![Victor Tsaran](imgs/victor_tsaran.jpg)&nbsp;&nbsp;&nbsp;**Victor Tsaran**
 
@@ -61,7 +61,7 @@ To explain further, here's an informative question/answer session with Victor Ts
 
  - *Great, let's talk about hearing impairments.*
 
->Next we have hearing impaired users. This group can range from the profoundly deaf through to hard-of-hearing. And much like eyesight, our hearing tends to degrade with age.
+>This group can range from the profoundly deaf through to hard-of-hearing. And much like eyesight, our hearing tends to degrade with age.
 >
 >For hearing-impaired users we need to make sure that we're not relying on sound, so making sure to use things like video captions and transcripts, and providing some kind of alternative, if sound is part of the interface.
 >
