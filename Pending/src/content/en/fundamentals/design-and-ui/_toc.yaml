@@ -1,0 +1,38 @@
+toc:
+  - title: Design & UI
+    section:
+    - title: Responsive Design
+      section:
+      - title: The Fundamentals
+        path: /web/fundamentals/design-and-ui/responsive/fundamentals/
+      - title: Design Patterns
+        path: /web/fundamentals/design-and-ui/responsive/patterns/
+      - title: Images
+        path: /web/fundamentals/design-and-ui/media/images/
+      - title: Video
+        path: /web/fundamentals/design-and-ui/media/video/
+      - title: Content
+        path: /web/fundamentals/design-and-ui/content/
+    - title: User Input
+      section:
+      - title: Create Amazing Forms
+        path: /web/fundamentals/design-and-ui/input/forms/
+      - title: Add Touch To Your Site
+        path: /web/fundamentals/design-and-ui/input/touch/
+    - title: Icons and colors
+      path: /web/fundamentals/design-and-ui/blah/
+    - title: Animations
+      section:
+      - title: Overview
+        path: /web/fundamentals/perforance/crp/1
+      - title: CSS vs JavaScript Animations
+        path: /web/fundamentals/perforance/crp/2
+      - title: Easing and Timing in Animation
+        path: /web/fundamentals/perforance/crp/3
+      - title: Animating Between Views
+        path: /web/fundamentals/performance/5
+      - title: Animating Modal Views
+        path: /web/fundamentals/performance/7
+      - title: Animation Performance
+        path: /web/fundamentals/performance/crp/9
+

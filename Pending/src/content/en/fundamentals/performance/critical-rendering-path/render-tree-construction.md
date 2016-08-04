@@ -1,41 +1,26 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: TODO
 
-<p class="intro">
-  The CSSOM and DOM trees are combined into a render tree, which is then used 
-  to compute the layout of each visible element and serves as an input to the 
-  paint process which renders the pixels to screen. Optimizing each of these 
-  steps is critical to achieve optimal rendering performance.
-</p>
+{# wf_updated_on: 2015-08-20 #}
+{# wf_published_on: 2014-03-31 #}
+
+# Render-tree construction, layout, and paint {: .page-title }
+
+{% include "_shared/contributors/ilyagrigorik.html" %}
+
+The CSSOM and DOM trees are combined into a render tree, which is then used 
+to compute the layout of each visible element and serves as an input to the 
+paint process which renders the pixels to screen. Optimizing each of these 
+steps is critical to achieve optimal rendering performance.
 
 In the previous section on constructing the object model, we built the DOM and the CSSOM trees based on the HTML and CSS input. However, both of these are independent objects which capture different aspects of the document: one describes the content and the other the style rules that need to be applied to the document. How do we merge the two and get the browser to render pixels on the screen?
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- The DOM and CSSOM trees are combined to form the render tree.
+- Render tree contains only the nodes required to render the page.
+- Layout computes the exact position and size of each object.
+- Paint is the last step that takes in the final render tree and renders the pixels to the screen.
 
 
 The first step is for the browser to combine the DOM and CSSOM into a "render tree" that captures all the visible DOM content on the page, plus all the CSSOM style information for each node.
@@ -50,34 +35,8 @@ To construct the render tree, the browser roughly does the following:
 1. For each visible node find the appropriate matching CSSOM rules and apply them.
 1. Emit visible nodes with content and their computed styles.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: As a brief aside, note that 'visibility: hidden' is different from 'display: none'. The former makes the element invisible, but the element still occupies space in the layout (i.e. it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of layout.
 
 The final output is a render that contains both the content and the style information of all the visible content on the screen - we're getting close!  **With the render tree in place, we can proceed to the "layout" stage.**
 
@@ -85,26 +44,9 @@ Up to this point we've calculated which nodes should be visible and their comput
 
 To figure out the exact size and position of each object the browser begins at the root of the render tree and traverses it to compute the geometry of each object on the page. Let's consider a simple hands-on example:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Critial Path: Hello world!<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;width: 50%&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">&quot;width: 50%&quot;</span><span class="nt">&gt;</span>Hello world!<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/critical-rendering-path/nested.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+</pre>
 
 The body of the above page contains two nested div's: the first (parent) div sets the display size of the node to 50% of the viewport width, and the second div contained by the parent sets its width to be 50% of its parent - i.e. 25% of the viewport width!
 
@@ -138,5 +80,4 @@ Let's do a quick recap of all the steps the browser went through:
 Our demo page may look very simple, but it requires quite a bit of work! Care to guess what would happen if the DOM, or CSSOM is modified? We would have to repeat the same process over again to figure out which pixels need to be re-rendered on the screen.
 
 **Optimizing the critical rendering path is the process of minimizing the total amount of time spent in steps 1 through 5 in the above sequence.** Doing so enables us to render content to the screen as soon as possible and also to reduces the amount of time between screen updates after the initial render - i.e. achieve higher refresh rate for interactive content.
-
 

@@ -1,39 +1,20 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Input handlers are a potential cause of performance problems in your apps, as they can block frames from completing, and can cause additional and unnecessary layout work.
 
-<p class="intro">
-Input handlers are a potential cause of performance problems in your apps, as they can block frames from completing, and can cause additional and unnecessary layout work.
-</p>
+# Debounce Your Input Handlers {: .page-title }
 
+{% include "_shared/contributors/paullewis.html" %}
 
+Input handlers are a potential cause of performance problems in your apps, as
+they can block frames from completing, and can cause additional and unnecessary
+layout work.
 
+## TL;DR
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+* Avoid long-running input handlers; they can block scrolling.
+* Do not make style changes in input handlers.
+* Debounce your handlers; store event values and deal with style changes in the next requestAnimationFrame callback.
 
 ## Avoid long-running input handlers
 
@@ -59,20 +40,21 @@ If you make a visual change inside one of those handlers, then at the start of t
 
 The solution to both of the problems above is the same: you should always debounce visual changes to the next `requestAnimationFrame` callback:
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">onScroll</span> <span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
 
-  <span class="c1">// Store the scroll value for laterz.</span>
-  <span class="nx">lastScrollY</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">scrollY</span><span class="p">;</span>
+    function onScroll (evt) {
 
-  <span class="c1">// Prevent multiple rAF callbacks.</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">scheduledAnimationFrame</span><span class="p">)</span>
-    <span class="k">return</span><span class="p">;</span>
+      // Store the scroll value for laterz.
+      lastScrollY = window.scrollY;
 
-  <span class="nx">scheduledAnimationFrame</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-  <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">readAndUpdatePage</span><span class="p">);</span>
-<span class="p">}</span>
+      // Prevent multiple rAF callbacks.
+      if (scheduledAnimationFrame)
+        return;
 
-<span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span> <span class="nx">onScroll</span><span class="p">);</span></code></pre></div>
+      scheduledAnimationFrame = true;
+      requestAnimationFrame(readAndUpdatePage);
+    }
+
+    window.addEventListener('scroll', onScroll);
+
 
 Doing this also has the added benefit of keeping your input handlers light, which is awesome because now you’re not blocking things like scrolling or touch on computationally expensive code!
-

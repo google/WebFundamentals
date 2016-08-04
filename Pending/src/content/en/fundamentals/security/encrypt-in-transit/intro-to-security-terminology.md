@@ -1,39 +1,17 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Two of the hurdles developers face when migrating to HTTPS are concepts and terminology. This guide provides a brief overview of both.
 
-<p class="intro">
-  Two of the hurdles developers face when migrating to HTTPS are concepts and terminology. This guide provides a brief overview of both.
-</p>
+# Important Security Terminology {: .page-title }
 
+{% include "_shared/contributors/chrispalmer.html" %}
+{% include "_shared/contributors/mattgaunt.html" %}
+  
+## TL;DR
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
-
-
+* Public / Private keys are used to sign and decrypt messages between the browser and the server
+* A certificate authority (CA) is an organization that vouches for the mapping between the public keys and public DNS names (such as 'www.foobar.com')
+* A certificate signing request (CSR) is a data format that bundles a public key together with some metadata about the entity that owns the key
 
 ## What are the Public and Private Key Pairs?
 
@@ -81,5 +59,3 @@ to have a CA vouch for your web server's public key, you send the CA a CSR. The
 CA validates the information in the CSR, and uses it to generate a certificate.
 They then send you the final certificate, and you install that certificate (or,
 more likely, a certificate chain) and your private key on your web server.
-
-

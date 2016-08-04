@@ -1,67 +1,49 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
-description: Layout is where the browser figures out the geometric information for elements: their size and location in the page. Each element will have explicit or implicit sizing information based on the CSS that was used, the contents of the element, or a parent element. The process is called Layout in Blink, WebKit browsers, and Internet Explorer. In Gecko-based browsers like Firefox it’s called Reflow, but effectively these processes are the same.
+book_path: /web/fundamentals/_book.yaml
+description: JavaScript is often the trigger for visual changes.
 
-<p class="intro">
-  Layout is where the browser figures out the geometric information for 
-  elements: their size and location in the page. Each element will have 
-  explicit or implicit sizing information based on the CSS that was used, the 
-  contents of the element, or a parent element. The process is called Layout 
-  in Chrome, Opera, Safari, and Internet Explorer. In Firefox it’s called 
-  Reflow, but effectively the process is the same.
-</p>
+# Reduce the Scope and Complexity of Style Calculations {: .page-title }
 
+{% include "_shared/contributors/paullewis.html" %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Layout is where the browser figures out the geometric information for 
+elements: their size and location in the page. Each element will have 
+explicit or implicit sizing information based on the CSS that was used, the 
+contents of the element, or a parent element. The process is called Layout 
+in Chrome, Opera, Safari, and Internet Explorer. In Firefox it’s called 
+Reflow, but effectively the process is the same.
 
 Similarly to style calculations, the immediate concerns for layout cost are:
 
 1. The number of elements that require layout.
 2. The complexity of those layouts.
 
+## TL;DR
+
+* Layout is normally scoped to the whole document.
+* The number of DOM elements will affect performance; you should avoid triggering layout wherever possible.
+* Assess layout model performance; new Flexbox is typically faster than older Flexbox or float-based layout models.
+* Avoid forced synchronous layouts and layout thrashing; read style values then make style changes.
+
 ## Avoid layout wherever possible
 
 When you change styles the browser checks to see if any of the changes require layout to be calculated, and for that render tree to be updated. Changes to “geometric properties”, such as widths, heights, left, or top all require layout.
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.box</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">20px</span><span class="p">;</span>
-<span class="p">}</span>
 
-<span class="c">/**</span>
-<span class="c"> * Changing width and height</span>
-<span class="c"> * triggers layout.</span>
-<span class="c"> */</span>
-<span class="nc">.box--expanded</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">200px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">350px</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+    .box {
+      width: 20px;
+      height: 20px;
+    }
+
+    /**
+     * Changing width and height
+     * triggers layout.
+     */
+    .box--expanded {
+      width: 200px;
+      height: 350px;
+    }
+
 
 **Layout is almost always scoped to the entire document.** If you have a lot of elements, it’s going to take a long time to figure out the locations and dimensions of them all.
 
@@ -71,36 +53,7 @@ If it’s not possible to avoid layout then the key is to once again use Chrome 
 
 When digging into the frame in the above example, we see that over 20ms is spent inside layout, which, when we have 16ms to get a frame on screen in an animation, is far too high. You can also see that DevTools will tell you the tree size (1,618 elements in this case), and how many nodes were in need of layout.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Note: Want a definitive list of which CSS properties trigger layout, paint, or composite? Check out [CSS Triggers](https://csstriggers.com).
 
 ## Use flexbox over older layout models
 
@@ -128,24 +81,28 @@ First the JavaScript runs, _then_ style calculations, _then_ layout. It is, howe
 
 The first thing to keep in mind is that as the JavaScript runs all the old layout values from the previous frame are known and available for you to query. So if, for example, you want to write out the height of an element (let’s call it “box”) at the start of the frame you may write some code like this:
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Schedule our function to run at the start of the frame.</span>
-<span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">logBoxHeight</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">logBoxHeight</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Gets the height of the box in pixels and logs it out.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">offsetHeight</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
+    // Schedule our function to run at the start of the frame.
+    requestAnimationFrame(logBoxHeight);
+
+    function logBoxHeight() {
+      // Gets the height of the box in pixels and logs it out.
+      console.log(box.offsetHeight);
+    }
+
 
 Things get problematic if you’ve changed the styles of the box _before_ you ask for its height:
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">logBoxHeight</span><span class="p">()</span> <span class="p">{</span>
 
-  <span class="nx">box</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;super-big&#39;</span><span class="p">);</span>
+    function logBoxHeight() {
 
-  <span class="c1">// Gets the height of the box in pixels</span>
-  <span class="c1">// and logs it out.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">offsetHeight</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
+      box.classList.add('super-big');
+
+      // Gets the height of the box in pixels
+      // and logs it out.
+      console.log(box.offsetHeight);
+    }
+
 
 Now, in order to answer the height question, the browser must _first_ apply the style change (because of adding the `super-big` class), and _then_ run layout. Only then will it be able to return the correct height. This is unnecessary and potentially expensive work.
 
@@ -153,40 +110,45 @@ Because of this you should always batch your style reads and do them first (wher
 
 Done correctly the above function would be:
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">logBoxHeight</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Gets the height of the box in pixels</span>
-  <span class="c1">// and logs it out.</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">box</span><span class="p">.</span><span class="nx">offsetHeight</span><span class="p">);</span>
 
-  <span class="nx">box</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;super-big&#39;</span><span class="p">);</span>
-<span class="p">}</span></code></pre></div>
+    function logBoxHeight() {
+      // Gets the height of the box in pixels
+      // and logs it out.
+      console.log(box.offsetHeight);
+
+      box.classList.add('super-big');
+    }
+
 
 For the most part you shouldn’t need to apply styles and then query values; using the last frame’s values should be sufficient. Running the style calculations and layout synchronously and earlier than the browser would like are potential bottlenecks, and not something you will typically want to do.
 
 ## Avoid layout thrashing
 There’s a way to make forced synchronous layouts even worse: _do lots of them in quick succession_. Take a look at this code:
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">resizeAllParagraphsToMatchBlockWidth</span><span class="p">()</span> <span class="p">{</span>
 
-  <span class="c1">// Puts the browser into a read-write-read-write cycle.</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">paragraphs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">paragraphs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">box</span><span class="p">.</span><span class="nx">offsetWidth</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+    function resizeAllParagraphsToMatchBlockWidth() {
+
+      // Puts the browser into a read-write-read-write cycle.
+      for (var i = 0; i < paragraphs.length; i++) {
+        paragraphs[i].style.width = box.offsetWidth + 'px';
+      }
+    }
+
 
 This code loops over a group of paragraphs and sets each paragraph’s width to match the width of an element called “box”. It looks harmless enough, but the problem is that each iteration of the loop reads a style value (`box.offsetWidth`) and then immediately uses it to update the width of a paragraph (`paragraphs[i].style.width`). On the next iteration of the loop, the browser has to account for the fact that styles have changed since `offsetWidth` was last requested (in the previous iteration), and so it must apply the style changes, and run layout. This will happen on _every single iteration!_.
 
 The fix for this sample is to once again _read_ then _write_ values:
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Read.</span>
-<span class="kd">var</span> <span class="nx">width</span> <span class="o">=</span> <span class="nx">box</span><span class="p">.</span><span class="nx">offsetWidth</span><span class="p">;</span>
 
-<span class="kd">function</span> <span class="nx">resizeAllParagraphsToMatchBlockWidth</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">paragraphs</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Now write.</span>
-    <span class="nx">paragraphs</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">width</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
+    // Read.
+    var width = box.offsetWidth;
+
+    function resizeAllParagraphsToMatchBlockWidth() {
+      for (var i = 0; i < paragraphs.length; i++) {
+        // Now write.
+        paragraphs[i].style.width = width + 'px';
+      }
+    }
+
 
 If you want to guarantee safety you should check out [FastDOM](https://github.com/wilsonpage/fastdom), which automatically batches your reads and writes for you, and should prevent you from triggering forced synchronous layouts or layout thrashing accidentally.
-

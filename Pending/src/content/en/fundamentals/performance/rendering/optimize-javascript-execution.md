@@ -1,92 +1,45 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: JavaScript is often the trigger for visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that will result in visual changes, like searching or sorting some data. Badly-timed or long-running JavaScript can be a common cause of performance issues, and you should look to minimize its impact where you can.
 
-<p class="intro">
-  JavaScript is often the trigger for visual changes. Sometimes that's 
-  directly through style manipulations, and sometimes it's calculations that 
-  will result in visual changes, like searching or sorting some data. 
-  Badly-timed or long-running JavaScript can be a common cause of performance 
-  issues, and you should look to minimize its impact where you can.
-</p>
+# Optimize JavaScript Execution {: .page-title }
 
+{% include "_shared/contributors/paullewis.html" %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+JavaScript is often the trigger for visual changes. Sometimes that's 
+directly through style manipulations, and sometimes it's calculations that 
+will result in visual changes, like searching or sorting some data. 
+Badly-timed or long-running JavaScript can be a common cause of performance 
+issues, and you should look to minimize its impact where you can.
 
 JavaScript performance profiling can be something of an art, because the JavaScript you write is nothing like the code that is actually executed. Modern browsers use JIT compilers and all manner of optimizations and tricks to try and give you the fastest possible execution, and this substantially changes the dynamics of the code.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+Note: If you really want to see JIT in action you should check out <a href='http://mrale.ph/irhydra/2/'>IRHydra<sup>2</sup> by Vyacheslav Egorov</a>. It shows the intermediate state of JavaScript code when Chrome’s JavaScript engine, V8, is optimizing it.
 
 With all that said, however, there are some things you can definitely do to help your apps execute JavaScript well.
+
+## TL;DR
+
+* Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.
+* Move long-running JavaScript off the main thread to Web Workers.
+* Use micro-tasks to make DOM changes over several frames.
+* Use Chrome DevTools’ Timeline and JavaScript Profiler to assess the impact of JavaScript.
 
 ## Use `requestAnimationFrame` for visual changes
 
 When visual changes are happening on screen you want to do your work at the right time for the browser, which is right at the start of the frame. The only way to guarantee that your JavaScript will run at the start of a frame is to use `requestAnimationFrame`.
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="cm">/**</span>
-<span class="cm"> * If run as a requestAnimationFrame callback, this</span>
-<span class="cm"> * will be run at the start of the frame.</span>
-<span class="cm"> */</span>
-<span class="kd">function</span> <span class="nx">updateScreen</span><span class="p">(</span><span class="nx">time</span><span class="p">)</span> <span class="p">{</span>
-  <span class="c1">// Make visual updates here.</span>
-<span class="p">}</span>
 
-<span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">updateScreen</span><span class="p">);</span></code></pre></div>
+    /**
+     * If run as a requestAnimationFrame callback, this
+     * will be run at the start of the frame.
+     */
+    function updateScreen(time) {
+      // Make visual updates here.
+    }
+
+    requestAnimationFrame(updateScreen);
+
 
 Frameworks or samples may use `setTimeout` or `setInterval` to do visual changes like animations, but the problem with this is that the callback will run at _some point_ in the frame, possibly right at the end, and that can often have the effect of causing us to miss a frame, resulting in jank.
 
@@ -102,39 +55,44 @@ You should be tactical about when JavaScript runs, and for how long. For example
 
 In many cases you can move pure computational work to [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/basic_usage), if, for example, the it doesn’t require DOM access. Data manipulation or traversal, like sorting or searching, are often good fits for this model, as are loading and model generation.
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">dataSortWorker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Worker</span><span class="p">(</span><span class="s2">&quot;sort-worker.js&quot;</span><span class="p">);</span>
-<span class="nx">dataSortWorker</span><span class="p">.</span><span class="nx">postMesssage</span><span class="p">(</span><span class="nx">dataToSort</span><span class="p">);</span>
 
-<span class="c1">// The main thread is now free to continue working on other things...</span>
+    var dataSortWorker = new Worker("sort-worker.js");
+    dataSortWorker.postMesssage(dataToSort);
 
-<span class="nx">dataSortWorker</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">evt</span><span class="p">)</span> <span class="p">{</span>
-   <span class="kd">var</span> <span class="nx">sortedData</span> <span class="o">=</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-   <span class="c1">// Update data on screen...</span>
-<span class="p">});</span></code></pre></div>
+    // The main thread is now free to continue working on other things...
+
+    dataSortWorker.addEventListener('message', function(evt) {
+       var sortedData = evt.data;
+       // Update data on screen...
+    });
+
+
 
 Not all work can fit this model: Web Workers do not have DOM access. Where your work must be on the main thread, consider a batching approach, where you segment the larger task into micro-tasks, each taking no longer than a few milliseconds, and run inside of `requestAnimationFrame` handlers across each frame.
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">taskList</span> <span class="o">=</span> <span class="nx">breakBigTaskIntoMicroTasks</span><span class="p">(</span><span class="nx">monsterTaskList</span><span class="p">);</span>
-<span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">processTaskList</span><span class="p">);</span>
 
-<span class="kd">function</span> <span class="nx">processTaskList</span><span class="p">(</span><span class="nx">taskStartTime</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">taskFinishTime</span><span class="p">;</span>
+    var taskList = breakBigTaskIntoMicroTasks(monsterTaskList);
+    requestAnimationFrame(processTaskList);
 
-  <span class="k">do</span> <span class="p">{</span>
-    <span class="c1">// Assume the next task is pushed onto a stack.</span>
-    <span class="kd">var</span> <span class="nx">nextTask</span> <span class="o">=</span> <span class="nx">taskList</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>
+    function processTaskList(taskStartTime) {
+      var taskFinishTime;
 
-    <span class="c1">// Process nextTask.</span>
-    <span class="nx">processTask</span><span class="p">(</span><span class="nx">nextTask</span><span class="p">);</span>
+      do {
+        // Assume the next task is pushed onto a stack.
+        var nextTask = taskList.pop();
 
-    <span class="c1">// Go again if there’s enough time to do the next task.</span>
-    <span class="nx">taskFinishTime</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">performance</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
-  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="nx">taskFinishTime</span> <span class="o">-</span> <span class="nx">taskStartTime</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">);</span>
+        // Process nextTask.
+        processTask(nextTask);
 
-  <span class="k">if</span> <span class="p">(</span><span class="nx">taskList</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="nx">requestAnimationFrame</span><span class="p">(</span><span class="nx">processTaskList</span><span class="p">);</span>
+        // Go again if there’s enough time to do the next task.
+        taskFinishTime = window.performance.now();
+      } while (taskFinishTime - taskStartTime < 3);
 
-<span class="p">}</span></code></pre></div>
+      if (taskList.length > 0)
+        requestAnimationFrame(processTaskList);
+
+    }
+
 
 There are UX and UI consequences to this approach, and you will need to ensure that the user knows that a task is being processed, either by [using a progress or activity indicator](https://www.google.com/design/spec/components/progress-activity.html). In any case this approach will keep your app's main thread free, helping it to stay responsive to user interactions.
 
@@ -163,4 +121,3 @@ It may be cool to know that the browser can execute one version of a thing 100 t
 If you’re making a game, or a computationally expensive application, then you’re likely an exception to this guidance, as you’ll be typically fitting a lot of computation into a single frame, and in that case everything helps.
 
 In short, you should be very wary of micro-optimizations because they won’t typically map to the kind of application you’re building.
-

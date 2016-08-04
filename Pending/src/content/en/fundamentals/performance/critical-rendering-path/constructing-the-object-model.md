@@ -1,62 +1,29 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Learn how the browser constructs the DOM and CSSOM trees.
 
-<p class="intro">
-  Before the browser can render the page it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as quickly as possible.
-</p>
+{# wf_updated_on: 2014-09-11 #}
+{# wf_published_on: 2014-03-31 #}
+
+# Constructing the Object Model {: .page-title }
+
+{% include "_shared/contributors/ilyagrigorik.html" %}
+
+Before the browser can render the page it needs to construct the DOM and CSSOM trees. As a result, we need to ensure that we deliver both the HTML and CSS to the browser as quickly as possible.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Bytes → characters → tokens → nodes → object model.
+- 'HTML markup is transformed into a Document Object Model (DOM), CSS markup is transformed into a CSS Object Model (CSSOM).'
+- DOM and CSSOM are independent data structures.
+- Chrome DevTools Timeline allows us to capture and inspect the construction and processing costs of DOM and CSSOM.
 
 
 ## Document Object Model (DOM)
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Critical Path<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Hello <span class="nt">&lt;span&gt;</span>web performance<span class="nt">&lt;/span&gt;</span> students!<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;div&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;awesome-photo.jpg&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/critical-rendering-path/basic_dom.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+</pre>
 
 Let’s start, with the simplest possible case: a plain HTML page with some text and a single image. What does the browser need to do to process this simple page?
 
@@ -75,36 +42,8 @@ Every time the browser has to process HTML markup it has to step through all of 
 
 <img src="images/dom-timeline.png" class="center" alt="Tracing DOM construction in DevTools">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: We'll assume that you have basic familiarity with Chrome DevTools - i.e. you know how to capture a network waterfall, or record a timeline. If you need a quick refresher, check out the <a href='/web/tools/chrome-devtools'>Chrome DevTools documentation</a>, or if you're new to DevTools, we recommend taking the Codeschool <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> course.
 
 If you open up Chrome DevTools and record a timeline while the page is loaded, you can see the actual time taken to perform this step &mdash; in the example above, it took us ~5ms to convert a chunk of HTML bytes into a DOM tree. Of course, if the page was larger, as most pages are, this process might take significantly longer. You will see in our future sections on creating smooth animations that this can easily become your bottleneck if the browser has to process large amounts of HTML.
 
@@ -114,20 +53,9 @@ With the DOM tree ready, do we have enough information to render the page to the
 
 While the browser was constructing the DOM of our simple page, it encountered a link tag in the head section of the document referencing an external CSS stylesheet: style.css. Anticipating that it will need this resource to render the page, it immediately dispatches a request for this resource, which comes back with the following content:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">body</span> <span class="p">{</span> <span class="k">font-size</span><span class="o">:</span> <span class="m">16px</span> <span class="p">}</span>
-<span class="nt">p</span> <span class="p">{</span> <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span> <span class="p">}</span>
-<span class="nt">span</span> <span class="p">{</span> <span class="k">color</span><span class="o">:</span> <span class="nb">red</span> <span class="p">}</span>
-<span class="nt">p</span> <span class="nt">span</span> <span class="p">{</span> <span class="k">display</span><span class="o">:</span> <span class="k">none</span> <span class="p">}</span>
-<span class="nt">img</span> <span class="p">{</span> <span class="k">float</span><span class="o">:</span> <span class="k">right</span> <span class="p">}</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/critical-rendering-path/style.css">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+</pre>
 
 Of course, we could have declared our styles directly within the HTML markup (inline), but keeping our CSS independent of HTML allows us to treat content and design as separate concerns: the designers can work on CSS, developers can focus on HTML, and so on.
 
@@ -150,4 +78,3 @@ Curious to know how long the CSS processing took? Record a timeline in DevTools 
 <img src="images/cssom-timeline.png" class="center" alt="Tracing CSSOM construction in DevTools">
 
 Our trivial stylesheet takes ~0.6ms to process and affects 8 elements on the page -- not much, but once again, not free. However, where did the 8 elements come from? The CSSOM and DOM are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the render tree that links the DOM and CSSOM together.
-

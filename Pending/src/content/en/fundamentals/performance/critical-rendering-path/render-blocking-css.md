@@ -1,41 +1,25 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: By default CSS is treated as a render blocking resource, learn how to prevent it from blocking rendering.
 
-<p class="intro">
-  By default CSS is treated as a render blocking resource, which means that the
-  browser will hold rendering of any processed content until the CSSOM is
-  constructed. Make sure to keep your CSS lean, deliver it as quickly as
-  possible, and use media types and queries to unblock rendering.
-</p>
+{# wf_updated_on: 2014-09-17 #}
+{# wf_published_on: 2014-03-31 #}
+
+# Render blocking CSS {: .page-title }
+
+{% include "_shared/contributors/ilyagrigorik.html" %}
+
+By default CSS is treated as a render blocking resource, which means that the
+browser will hold rendering of any processed content until the CSSOM is
+constructed. Make sure to keep your CSS lean, deliver it as quickly as
+possible, and use media types and queries to unblock rendering.
 
 In the previous section we saw that the critical rendering path requires that we have both the DOM and the CSSOM to construct the render tree, which creates an important performance implication: **both HTML and CSS are render blocking resources.** The HTML is obvious, since without the DOM we would not have anything to render, but the CSS requirement may be less obvious. What would happen if we try to render a typical page without blocking rendering on CSS?
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'By default, CSS is treated as a render blocking resource.'
+- Media types and media queries allow us to mark some CSS resources as non-render blocking.
+- 'All CSS resources, regardless of blocking or non-blocking behavior, are downloaded by the browser.'
 
 
 <div class="mdl-grid">
@@ -57,9 +41,11 @@ However, what if we have some CSS styles that are only used under certain condit
 
 CSS "media types" and "media queries" allow us to address these use-cases:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;print.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;print&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;other.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;(min-width: 40em)&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+    <link href="style.css" rel="stylesheet">
+    <link href="print.css" rel="stylesheet" media="print">
+    <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
+    
 
 A [media query](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries) consists of a media type and zero or more expressions that check for the conditions of particular media features. For example, our first stylesheet declaration does not provide any media type or query, hence it will apply in all cases - that is to say, it is always render blocking. On the other hand, the second stylesheet will only apply when the content is being printed - perhaps you want to rearrange the layout, change the fonts, etc - and hence this stylesheet does not need to block the rendering of the page when it is first loaded. Finally, the last stylesheet declaration provides a "media query" which is executed by the browser: if the conditions match, the browser will block rendering until the stylesheet is downloaded and processed.
 
@@ -67,10 +53,12 @@ By using media queries, our presentation can be tailored to specific use cases s
 
 Let's consider some hands-on examples:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span>    <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span>    <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;all&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;portrait.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;orientation:portrait&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;print.css&quot;</span>    <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;print&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+    <link href="style.css"    rel="stylesheet">
+    <link href="style.css"    rel="stylesheet" media="all">
+    <link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+    <link href="print.css"    rel="stylesheet" media="print">
+    
 
 * The first declaration is render blocking and matches in all conditions.
 * The second declaration is also render blocking: "all" is the default type and if you don’t specify any type, it’s implicitly set to "all". Hence, the first and second declarations are actually equivalent.
@@ -78,5 +66,4 @@ Let's consider some hands-on examples:
 * The last declaration is only applied when the page is being printed, hence it is not render blocking when the page is first loaded in the browser.
 
 Finally, note that "render blocking" only refers to whether the browser will have to hold the initial rendering of the page on that resource. In either case, the CSS asset is still downloaded by the browser, albeit with a lower priority for non-blocking resources.
-
 

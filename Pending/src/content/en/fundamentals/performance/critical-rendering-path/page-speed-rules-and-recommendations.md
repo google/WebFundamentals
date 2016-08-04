@@ -1,11 +1,15 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: This guide examines PageSpeed Insights rules in context: what to pay attention to when optimizing the critical rendering path, and why.
 
-<p class="intro">
-  This guide examines PageSpeed Insights rules in context: what to pay attention to when optimizing the critical rendering path, and why.
-</p>
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-03-31 #}
 
+# PageSpeed rules and recommendations {: .page-title }
+
+{% include "_shared/contributors/ilyagrigorik.html" %}
+
+This guide examines PageSpeed Insights rules in context: what to pay attention to when optimizing the critical rendering path, and why.
 
 
 ## Eliminate render-blocking JavaScript and CSS
@@ -28,49 +32,55 @@ synchronous, they can slow page transitions, sometimes noticeably. The following
 code shows how to use `navigator.sendBeacon()` to send data to the server in the
 `pagehide` handler instead of in the `unload` handler.
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
-  <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;pagehide&#39;</span><span class="p">,</span> <span class="nx">logData</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
-    <span class="kd">function</span> <span class="nx">logData</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">navigator</span><span class="p">.</span><span class="nx">sendBeacon</span><span class="p">(</span>
-        <span class="s1">&#39;https://putsreq.herokuapp.com/Dt7t2QzUkG18aDTMMcop&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;Sent by a beacon!&#39;</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}();</span>
-<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+    <script>
+      function() {
+        window.addEventListener('pagehide', logData, false);
+        function logData() {
+          navigator.sendBeacon(
+            'https://putsreq.herokuapp.com/Dt7t2QzUkG18aDTMMcop',
+            'Sent by a beacon!');
+        }
+      }();
+    </script>
+    
 
 The new `fetch()` method provides an easy way to asynchronously request data. Because it is not available everywhere yet, you should use feature detection to test for its presence before use. This method processes responses with Promises rather than multiple event handlers. Unlike the response to an XMLHttpRequest, a fetch response is a stream object starting in Chrome 43. This means that a call to `json()` also returns a Promise. 
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
-<span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;./api/some.json&#39;</span><span class="p">)</span>  
-  <span class="p">.</span><span class="nx">then</span><span class="p">(</span>  
-    <span class="kd">function</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span> <span class="p">{</span>  
-      <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span> <span class="o">!==</span> <span class="mi">200</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Looks like there was a problem. Status Code: &#39;</span> <span class="o">+</span>  <span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">);</span>  
-        <span class="k">return</span><span class="p">;</span>  
-      <span class="p">}</span>
-      <span class="c1">// Examine the text in the response  </span>
-      <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">().</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>  
-      <span class="p">});</span>  
-    <span class="p">}</span>  
-  <span class="p">)</span>  
-  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>  
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Fetch Error :-S&#39;</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>  
-  <span class="p">});</span>
-<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+    <script>
+    fetch('./api/some.json')  
+      .then(  
+        function(response) {  
+          if (response.status !== 200) {  
+            console.log('Looks like there was a problem. Status Code: ' +  response.status);  
+            return;  
+          }
+          // Examine the text in the response  
+          response.json().then(function(data) {  
+            console.log(data);  
+          });  
+        }  
+      )  
+      .catch(function(err) {  
+        console.log('Fetch Error :-S', err);  
+      });
+    </script>
+    
 
 The `fetch()` method can also handle POST requests.
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script&gt;</span>
-<span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">method</span><span class="o">:</span> <span class="s1">&#39;post&#39;</span><span class="p">,</span>
-  <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>  
-    <span class="s2">&quot;Content-type&quot;</span><span class="o">:</span> <span class="s2">&quot;application/x-www-form-urlencoded; charset=UTF-8&quot;</span>  
-  <span class="p">},</span>  
-  <span class="nx">body</span><span class="o">:</span> <span class="s1">&#39;foo=bar&amp;lorem=ipsum&#39;</span>  
-<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// Aditional code });</span>
-<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+    <script>
+    fetch(url, {
+      method: 'post',
+      headers: {  
+        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"  
+      },  
+      body: 'foo=bar&lorem=ipsum'  
+    }).then(function() { // Aditional code });
+    </script>
+    
 
 ### Defer parsing JavaScript
 
@@ -95,5 +105,4 @@ CSS import (`@import`) directive enables one stylesheet to import rules from ano
 ### Inline render-blocking CSS
 
 For best performance, you may want to consider inlining the critical CSS directly into the HTML document. This eliminates additional roundtrips in the critical path and if done correctly can be used to deliver a "one roundtrip" critical path length where only the HTML is a blocking resource.
-
 

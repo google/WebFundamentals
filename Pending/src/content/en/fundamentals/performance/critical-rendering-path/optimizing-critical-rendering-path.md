@@ -1,10 +1,15 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Learn the key factors in optimizing the critical rendering path.
 
-<p class="intro">
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-03-31 #}
+
+# Optimizing the critical rendering path {: .page-title }
+
+{% include "_shared/contributors/ilyagrigorik.html" %}
+
 A critical resource is any resource that may block initial rendering of the page. The fewer of these resources there are on the page, the less work the browser has to do to get content on the screen, and the less contention there is for CPU and other resources.
-</p>
 
   In order to deliver the fastest possible time to first render, we need 
   to optimize three variables:
@@ -30,5 +35,4 @@ In other words, the number of resources, their bytesize, and the critical path l
 1. Minimize number of critical resources: eliminate them, defer their download, mark them as async, etc.
 1. Optimize the order in which the remaining critical resources are loaded: you want to download all critical assets as early as possible to shorten the critical path length.
 1. Optimize the number of critical bytes to reduce the download time (number of roundtrips).
-
 

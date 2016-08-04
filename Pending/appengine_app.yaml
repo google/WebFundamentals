@@ -1,12 +1,18 @@
 runtime: python27
 api_version: 1
 threadsafe: true
+application: petele-scratch
+version: wf-devsite
 
 #default_expiration: "1d"
 handlers:
 - url: /robots.txt
   static_files: gae/robots.txt
   upload: gae/robots.txt
+
+- url: /devsite.js
+  static_files: gae/devsite.js
+  upload: gae/devsite.js
 
 - url: /web/imgs
   static_dir: imgs
@@ -18,9 +24,9 @@ handlers:
   upload: src/content/en/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3))
 
 - url: /(.*\.ico)
-  static_files: imgs/\1
+  static_files: src/content/en/images/\1
   expiration: 7d
-  upload: imgs/(.*\.ico)
+  upload: src/content/en/images/(.*\.ico)
 
 - url: /web/manifest.json
   static_files: src/content/en/manifest.json
@@ -33,6 +39,7 @@ handlers:
   upload: (.*\.(js|css))
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
+  application_readable: true
 
 - url: /web/(.*\.(woff|eot|ttf))
   static_files: \1

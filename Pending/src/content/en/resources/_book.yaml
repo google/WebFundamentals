@@ -1,0 +1,32 @@
+upper_tabs:
+  - name: Fundamentals
+    path: /web/resources/
+    lower_tabs:
+      other:
+      - name: Resources
+        contents:
+        - title: Sample Article
+          path: /web/resources/sample-article
+        - title: Contributors
+          path: /web/resources/contributors
+        - title: Status Text Examples
+          status: new
+          section:
+          - title: Status - Alpha
+            status: alpha
+            path: /web/resources/sample-article
+          - title: Status - Beta
+            status: beta
+            path: /web/resources/sample-article
+          - title: Status - Deprecated
+            status: deprecated
+            path: /web/resources/sample-article
+          - title: Status - Experimental
+            status: experimental
+            path: /web/resources/sample-article
+          - title: Status - External
+            status: external
+            path: /web/resources/sample-article
+          - title: Status - New
+            status: new
+            path: /web/resources/sample-article

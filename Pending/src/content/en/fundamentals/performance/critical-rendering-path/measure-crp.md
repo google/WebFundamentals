@@ -1,38 +1,21 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Learn to measure the critical rendering path.
 
-<p class="intro">
-  You can't optimize what you can't measure. Thankfully, the Navigation 
-  Timing API gives us all the necessary tools to measure each step of the 
-  critical rendering path!
-</p>
+{# wf_updated_on: 2014-09-17 #}
+{# wf_published_on: 2014-03-31 #}
 
+# Measuring the critical rendering path with Navigation Timing {: .page-title }
 
+{% include "_shared/contributors/ilyagrigorik.html" %}
 
+You can't optimize what you can't measure. Thankfully, the Navigation 
+Timing API gives us all the necessary tools to measure each step of the 
+critical rendering path!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Navigation Timing provides high resolution timestamps for measuring CRP.
+- Browser emits series of consumable events which capture various stages of the CRP.
 
 
 The foundation of every solid performance strategy is good measurement and instrumentation. Turns out, that is exactly what the Navigation Timing API provides.
@@ -67,43 +50,13 @@ The HTML specification dictates specific conditions for each and every event: wh
   https://github.com/google/WebFundamentals/issues/1873 -->
 <span></span>
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Critical Path: Measure<span class="nt">&lt;/title&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
-      <span class="kd">function</span> <span class="nx">measureCRP</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">performance</span><span class="p">.</span><span class="nx">timing</span><span class="p">,</span>
-          <span class="nx">interactive</span> <span class="o">=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">domInteractive</span> <span class="o">-</span> <span class="nx">t</span><span class="p">.</span><span class="nx">domLoading</span><span class="p">,</span>
-          <span class="nx">dcl</span> <span class="o">=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">domContentLoadedEventStart</span> <span class="o">-</span> <span class="nx">t</span><span class="p">.</span><span class="nx">domLoading</span><span class="p">,</span>
-          <span class="nx">complete</span> <span class="o">=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">domComplete</span> <span class="o">-</span> <span class="nx">t</span><span class="p">.</span><span class="nx">domLoading</span><span class="p">;</span>
-        <span class="kd">var</span> <span class="nx">stats</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
-        <span class="nx">stats</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;interactive: &#39;</span> <span class="o">+</span> <span class="nx">interactive</span> <span class="o">+</span> <span class="s1">&#39;ms, &#39;</span> <span class="o">+</span>
-            <span class="s1">&#39;dcl: &#39;</span> <span class="o">+</span> <span class="nx">dcl</span> <span class="o">+</span> <span class="s1">&#39;ms, complete: &#39;</span> <span class="o">+</span> <span class="nx">complete</span> <span class="o">+</span> <span class="s1">&#39;ms&#39;</span><span class="p">;</span>
-        <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">stats</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body</span> <span class="na">onload=</span><span class="s">&quot;measureCRP()&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Hello <span class="nt">&lt;span&gt;</span>web performance<span class="nt">&lt;/span&gt;</span> students!<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;div&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;awesome-photo.jpg&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/critical-rendering-path/measure_crp.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+</pre>
 
 The above example may seem a little daunting on first sight, but in reality it is actually pretty simple. The Navigation Timing API captures all the relevant timestamps and our code simply waits for the `onload` event to fire &mdash; recall that `onload` event fires after `domInteractive`, `domContentLoaded` and `domComplete` &mdash; and computes the difference between the various timestamps.
 
 <img src="images/device-navtiming-small.png" class="center" alt="NavTiming demo">
 
 All said and done, we now have some specific milestones to track and a simple function to output these measurements. Note that instead of printing these metrics on the page you can also modify the code to send these metrics to an analytics server ([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784?hl=en)), which is a great way to keep tabs on performance of your pages and identify candidate pages that can benefit from some optimization work.
-
 

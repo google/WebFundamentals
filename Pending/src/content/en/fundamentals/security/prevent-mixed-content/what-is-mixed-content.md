@@ -1,40 +1,21 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
-description: This guide discusses the dangers mixed content poses to your website and users.
+book_path: /web/fundamentals/_book.yaml
+description: Mixed content refers to a webpage where the initial HTML content is loaded over a secure HTTPS connection, but other resources are then loaded into the page over an insecure HTTP connection.
 
-<p class="intro">
-  This guide discusses the dangers mixed content poses to your website and 
-  users.
-</p>
+# What is mixed content? {: .page-title }
 
+{% include "_shared/contributors/johyphenel.html" %}
 
+  - "HTTPS is important to protect both your site and your users from attack."
+  - "Mixed content degrades the security and user experience of your HTTPS site."
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+**Mixed content** refers to a webpage where the initial HTML content is
+loaded over a secure HTTPS connection, but other resources (such as images,
+videos, stylesheets, scripts) are then loaded over an insecure HTTP connection.
+This is called mixed content because both HTTP and HTTPS content are being
+loaded to display the same page, and the initial request was secure over HTTPS.
+Modern browsers display warnings about this type of content to indicate to the
+user that this page contains insecure resources.
 
 ## Resource request and web browsers
 
@@ -114,9 +95,10 @@ requests without restricting the functionality of many sites.
 
 <figure>
   <img src="imgs/image-gallery-warning.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure image. This content should also be served over HTTPS.">
+  <figcaption>
+    It's up to you, the developer, to fix mixed content issues in your application.
+  </figcaption>
 </figure>
-
-It's up to you, the developer, to fix mixed content issues in your application.
 
 ### A simple example
 
@@ -125,16 +107,7 @@ Loading an insecure script from an HTTPS page.
 Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html) — includes 
 an **HTTP** script tag which attempts to load mixed content. 
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/security/prevent-mixed-content/simple-example.html">Try full sample</a>
-      </p>
-  </div>
-
-
+{% include_code src=_code/simple-example.html snippet=snippet1 %}
 
 In this example, the script `simple-example.js` is loaded with an **HTTP** URL. This 
 is the simplest case of mixed content. When the `simple-example.js` file is 
@@ -156,28 +129,7 @@ Loading insecure data with XMLHttpRequest.
 Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html) — 
 includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;script&gt;</span>
-  <span class="kd">var</span> <span class="nx">rootUrl</span> <span class="o">=</span> <span class="s1">&#39;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content&#39;</span><span class="p">;</span>
-  <span class="kd">var</span> <span class="nx">resources</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">jsonData</span><span class="o">:</span> <span class="s1">&#39;/xmlhttprequest-data.js&#39;</span>
-  <span class="p">};</span>
-  <span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-  <span class="nx">request</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">jsonData</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;output&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="s1">&#39;&lt;br&gt;&#39;</span> <span class="o">+</span> <span class="nx">jsonData</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-  <span class="p">});</span>
-  <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="nx">rootUrl</span> <span class="o">+</span> <span class="nx">resources</span><span class="p">.</span><span class="nx">jsonData</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-  <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-<span class="nt">&lt;/script&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html">Try full sample</a>
-      </p>
-  </div>
-
- 
+{% include_code src=_code/xmlhttprequest-example.html snippet=snippet1 %} 
 
 Here the **HTTP** URL is constructed dynamically in JavaScript, and is eventually 
 used to load an insecure resource by `XMLHttpRequest`. Like the simple example 
@@ -200,18 +152,7 @@ Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io
 initially does not have any mixed content problems, however when the thumbnail 
 image is clicked, a full size mixed content image is loaded over **HTTP**. 
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;gallery&quot;</span> <span class="na">href=</span><span class="s">&quot;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy.jpg&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;/a&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/security/prevent-mixed-content/image-gallery-example.html">Try full sample</a>
-      </p>
-  </div>
-
-
+{% include_code src=_code/image-gallery-example.html snippet=snippet1 %}
 
 Image galleries often rely on the `<img>` tag `src` attribute to display 
 thumbnail images on the page, the anchor (`<a>`) tag `href` attribute is 
@@ -259,23 +200,7 @@ they view based on images or other resources loaded by the browser.
 
 The following are example of passive mixed content: 
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="c">&lt;!-- An insecure audio file loaded on a secure page --&gt;</span>
-<span class="nt">&lt;audio</span> <span class="na">src=</span><span class="s">&quot;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/symphony-5-beethoven.mp3&quot;</span> <span class="na">type=</span><span class="s">&quot;audio/mp3&quot;</span> <span class="na">controls</span><span class="nt">&gt;&lt;/audio&gt;</span>
-
-<span class="c">&lt;!-- An insecure image loaded on a secure page --&gt;</span>
-<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy.jpg&quot;</span><span class="nt">&gt;</span>
-
-<span class="c">&lt;!-- An insecure video file loaded on a secure page --&gt;</span>
-<span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">&quot;http://developers.google.com/web/fundamentals/design-and-ui/media/video/video/chrome.webm&quot;</span> <span class="na">type=</span><span class="s">&quot;video/webm&quot;</span> <span class="na">controls</span><span class="nt">&gt;&lt;/video&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/security/prevent-mixed-content/passive-mixed-content.html">Try full sample</a>
-      </p>
-  </div>
-
-
+{% include_code src=_code/passive-mixed-content.html snippet=snippet1 %}
 
 Most browsers still render this type of mixed content to the user, however a 
 warning is also displayed as this poses a security and privacy risk to your site 
@@ -301,56 +226,9 @@ versions.
 
 The following are examples of active mixed content:
 
+{% include_code src=_code/active-mixed-content.html snippet=snippet1 %}
 
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="c">&lt;!-- An insecure script file loaded on a secure page --&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-
-<span class="c">&lt;!-- An insecure stylesheet loaded on a secure page --&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/style.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
-
-<span class="nt">&lt;style&gt;</span>
-  <span class="nc">.insecure-background</span> <span class="p">{</span>
-    <span class="c">/* An insecure resources loaded from a style property on a secure page, this can</span>
-<span class="c">       happen in many places including, @font-face, cursor, background-image, and so on. */</span>
-    <span class="k">background</span><span class="o">:</span> <span class="sx">url(&#39;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/puppy-thumb.jpg&#39;)</span> <span class="k">no-repeat</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="nt">&lt;/style&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/security/prevent-mixed-content/active-mixed-content.html">Try full sample</a>
-      </p>
-  </div>
-
-
-
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="c">&lt;!-- An insecure iframed page loaded on a secure page --&gt;</span>
-<span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">&quot;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html&quot;</span><span class="nt">&gt;&lt;/iframe&gt;</span>
-
-<span class="c">&lt;!-- Flash resources also qualify as active mixed content and pose a</span>
-<span class="c">serious security risk. Be sure to look for &lt;object&gt; tags with type set</span>
-<span class="c">to &quot;application/x-shockwave-flash&quot;, and an http:// data attribute. --&gt;</span>
-<span class="c">&lt;!-- &lt;object type=&quot;application/x-shockwave-flash&quot; data=&quot;http://...&quot;&gt;&lt;/object&gt; --&gt;</span>
-
-<span class="nt">&lt;script&gt;</span>
-  <span class="c1">// An insecure resource loaded using XMLHttpRequest</span>
-  <span class="kd">var</span> <span class="nx">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLHttpRequest</span><span class="p">();</span>
-  <span class="nx">request</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;load&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">jsonData</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">responseText</span><span class="p">);</span>
-    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;output&#39;</span><span class="p">).</span><span class="nx">innerHTML</span> <span class="o">+=</span> <span class="s1">&#39;&lt;br&gt;&#39;</span> <span class="o">+</span> <span class="nx">jsonData</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
-  <span class="p">});</span>
-  <span class="nx">request</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;http://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-data.js&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
-  <span class="nx">request</span><span class="p">.</span><span class="nx">send</span><span class="p">();</span>
-<span class="nt">&lt;/script&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/security/prevent-mixed-content/active-mixed-content.html">Try full sample</a>
-      </p>
-  </div>
-
-
+{% include_code src=_code/active-mixed-content.html snippet=snippet2 %}
 
 
 <figure>
@@ -390,32 +268,6 @@ The exact behavior of each browser is constantly changing, so we won't include
 specifics here. If you're interested in how a specific browser behaves, look for 
 information published by the vendors directly. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+Note: Your users are counting on you to protect them when they visit your website. It is important to fix your mixed content issues to protect <b>all</b> your visitors, including those on older browsers.
 
 

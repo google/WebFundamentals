@@ -1,74 +1,31 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: JavaScript allows us to modify just about every aspect of the page: content, styling, and its behavior to user interactions. However, JavaScript can also block DOM construction and delay when the page is rendered. Make your JavaScript async and eliminate any unnecessary JavaScript from the critical rendering path to deliver optimal performance.
 
-<p class="intro">
-  JavaScript allows us to modify just about every aspect of the page: content, 
-  styling, and its behavior to user interactions. However, JavaScript can also
-  block DOM construction and delay when the page is rendered. Make your
-  JavaScript async and eliminate any unnecessary JavaScript from the critical
-  rendering path to deliver optimal performance.
-</p>
+{# wf_updated_on: 2014-09-17 #}
+{# wf_published_on: 2013-12-31 #}
 
+# Adding interactivity with JavaScript {: .page-title }
 
+{% include "_shared/contributors/ilyagrigorik.html" %}
 
+JavaScript allows us to modify just about every aspect of the page: content, 
+styling, and its behavior to user interactions. However, JavaScript can also
+block DOM construction and delay when the page is rendered. Make your
+JavaScript async and eliminate any unnecessary JavaScript from the critical
+rendering path to deliver optimal performance.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- JavaScript can query and modify DOM and CSSOM.
+- JavaScript execution blocks on CSSOM.
+- JavaScript blocks DOM construction unless explicitly declared as async.
 
 
 JavaScript is a dynamic language that runs in the browser and allows us to alter just about every aspect of how the page behaves: we can modify content on the page by adding or removing elements from the DOM tree, we can modify the CSSOM properties of each element, we can handle user input, and much more. To illustrate this in action, let's augment our previous "Hello World" example with a simple inline script:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Critical Path: Script<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Hello <span class="nt">&lt;span&gt;</span>web performance<span class="nt">&lt;/span&gt;</span> students!<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;div&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;awesome-photo.jpg&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;script&gt;</span>
-      <span class="kd">var</span> <span class="nx">span</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
-      <span class="nx">span</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;interactive&#39;</span><span class="p">;</span> <span class="c1">// change DOM text content</span>
-      <span class="nx">span</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;inline&#39;</span><span class="p">;</span>  <span class="c1">// change CSSOM property</span>
-      <span class="c1">// create a new element, style it, and append it to the DOM</span>
-      <span class="kd">var</span> <span class="nx">loadTime</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span>
-      <span class="nx">loadTime</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;You loaded this page on: &#39;</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-      <span class="nx">loadTime</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">;</span>
-      <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">loadTime</span><span class="p">);</span>
-    <span class="nt">&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/critical-rendering-path/script.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+</pre>
 
 * JavaScript allows us to reach into the DOM and pull out the reference to the hidden span node - the node may not be visible in the render tree, but it's still there in the DOM! Then, once we have the reference, we can change its text (via .textContent), and even override its calculated display style property from ‘none' to ‘inline'. Once all is said and done, our page will now display "**Hello interactive students!**".
 
@@ -103,47 +60,15 @@ By default, JavaScript execution is "parser blocking": when the browser encounte
 
 What about scripts included via a script tag? Let's take our previous example and extract our code into a separate file:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Critical Path: Script External<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Hello <span class="nt">&lt;span&gt;</span>web performance<span class="nt">&lt;/span&gt;</span> students!<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;div&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;awesome-photo.jpg&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;app.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/critical-rendering-path/split_script.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+</pre>
 
 **app.js**
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="kd">var</span> <span class="nx">span</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
-<span class="nx">span</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;interactive&#39;</span><span class="p">;</span> <span class="c1">// change DOM text content</span>
-<span class="nx">span</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">&#39;inline&#39;</span><span class="p">;</span>  <span class="c1">// change CSSOM property</span>
-<span class="c1">// create a new element, style it, and append it to the DOM</span>
-<span class="kd">var</span> <span class="nx">loadTime</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">);</span>
-<span class="nx">loadTime</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="s1">&#39;You loaded this page on: &#39;</span> <span class="o">+</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
-<span class="nx">loadTime</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">loadTime</span><span class="p">);</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/critical-rendering-path/app.js">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+</pre>
 
 Would you expect the execution order to be any different when we use a `<script>` tag instead of using an inline JavaScript snippet? Of course, the answer is "no" as they are identical and should behave in the same way. In both cases the browser will have to pause and execute the script before it can process the remainder of the document. However, **in the case of an external JavaScript file the browser will also have to pause and wait for the script to be fetched from disk, cache, or a remote server, which can add tens to thousands of milliseconds of delay to the critical rendering path.**
 
@@ -151,27 +76,8 @@ That said, good news, we do have an escape hatch! By default all JavaScript is p
 
 So, how do we achieve this trick? It's pretty simple, we can mark our script as _async_:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content=</span><span class="s">&quot;width=device-width,initial-scale=1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Critical Path: Script Async<span class="nt">&lt;/title&gt;</span>
-  <span class="nt">&lt;/head&gt;</span>
-  <span class="nt">&lt;body&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Hello <span class="nt">&lt;span&gt;</span>web performance<span class="nt">&lt;/span&gt;</span> students!<span class="nt">&lt;/p&gt;</span>
-    <span class="nt">&lt;div&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;awesome-photo.jpg&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">&quot;app.js&quot;</span> <span class="na">async</span><span class="nt">&gt;&lt;/script&gt;</span>
-  <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/performance/critical-rendering-path/split_script_async.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+</pre>
 
 Adding the async keyword to the script tag tells the browser that it should not block the DOM construction while it waits for the script to become available - this is a huge performance win!
-

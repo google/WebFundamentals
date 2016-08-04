@@ -1,0 +1,40 @@
+{
+  "short_name": "Web @ GoogleDev",
+  "name": "Web at Google Developers",
+  "icons": [
+    {
+      "src": "/web/images/web-fundamentals-icon36x36.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "/web/images/web-fundamentals-icon48x48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/web/images/web-fundamentals-icon72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/web/images/web-fundamentals-icon96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/web/images/web-fundamentals-icon144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/web/images/web-fundamentals-icon192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/web/fundamentals?homescreen=1",
+  "display": "browser",
+  "background_color": "#3F51B5",
+  "theme_color": "#3F51B5"
+}
