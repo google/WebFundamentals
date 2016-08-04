@@ -74,7 +74,7 @@ Unfortunately, it used an undocumented (and unofficial API) to perform the speec
 
 ## Browser Support
 
-Chrome 33 has full support for the Web Speech API, while Safari for iOS7 has partial support.
+Chrome 33 has full support for the Web Speech API, while Safari for iOS7 has partial support. Note that Chrome has to be online for the speech synthesis to work.
 
 ### Feature detection
 
