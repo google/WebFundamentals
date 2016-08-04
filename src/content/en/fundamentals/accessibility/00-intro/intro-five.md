@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-Throughout this course we'll refer to the *Web Content Accessibility Guidelines 2.0 (WCAG)*, a set of guidelines and best practices put together by accessibility experts to address what "accessibility" means in a methodical way. Several countries actually mandate the use of these guidelines in their web accessibility legal requirements.
+Throughout this course we'll refer to the <a href="https://www.w3.org/TR/WCAG20/" target="_blank">Web Content Accessibility Guidelines (WCAG) 2.0</a>, a set of guidelines and best practices put together by accessibility experts to address what "accessibility" means in a methodical way. Several countries actually mandate the use of these guidelines in their web accessibility legal requirements.
 
 WCAG is organized around four principles often called by the acronym *POUR*:
 
