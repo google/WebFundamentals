@@ -1,6 +1,7 @@
 'use strict';
 
 var fs = require('fs');
+var path = require('path');
 var moment = require('moment');
 var jsYaml = require('js-yaml');
 
@@ -18,12 +19,12 @@ if (!String.prototype.endsWith) {
   });
 }
 
-function recurseObject(path, obj) {
-  var currentNode = path.shift();
-  if (path.length === 0) {
+function recurseObject(pathArray, obj) {
+  var currentNode = pathArray.shift();
+  if (pathArray.length === 0) {
     return obj[currentNode];
   }
-  return recurseObject(path, obj[currentNode]);
+  return recurseObject(pathArray, obj[currentNode]);
 }
 
 function replaceTakeaway(markdown, yaml) {
@@ -45,7 +46,7 @@ function replaceTakeaway(markdown, yaml) {
 }
 
 function replaceNote(markdown, yaml) {
-  var items = markdown.match(/{% include shared\/remember.liquid(.*?)%}/g);
+  var items = markdown.match(/{% include shared\/(remember|note).liquid(.*?)%}/g);
   if (items) {
     items.forEach(function(item) {
       var result = '<!-- TODO: Verify note type! -->\n';
@@ -55,13 +56,17 @@ function replaceNote(markdown, yaml) {
       if (tldrObj) {
         var k = tldrObj[1].replace('page.', '');
         var tldr = recurseObject(k.split('.'), yaml);
-        if (tldr.length === 1) {
-          result += tldr[0];
+        if (Array.isArray(tldr)) {
+          if (tldr.length === 1) {
+            result += tldr[0];
+          } else {
+            result += jsYaml.dump(tldr, {lineWidth: 500});
+          }
         } else {
-          result += jsYaml.dump(tldr, {lineWidth: 500});
+          result += tldr;
         }
+        markdown = markdown.replace(item, result);
       }
-      markdown = markdown.replace(item, result);
     });
   }
   return markdown;
@@ -131,8 +136,8 @@ function removeIntroP(markdown) {
 }
 
 function migrateFile(dir, file) {
-  console.log(file);
-  var source = fs.readFileSync(dir + file, 'utf8');
+  console.log(path.join(dir, file));
+  var source = fs.readFileSync(path.join(dir, file), 'utf8');
   var yamlEndsAt = source.indexOf('---\n', 10);
   var yaml = jsYaml.safeLoad(source.substring(0, yamlEndsAt));
   var markdown = source.substring(yamlEndsAt);
@@ -159,8 +164,8 @@ function migrateFile(dir, file) {
     topOfDoc += '# ' + yaml.title + ' {: .page-title }\n';
   }
   if (yaml.authors) {
+    topOfDoc += '\n';
     yaml.authors.forEach(function(author) {
-      topOfDoc += '\n';
       topOfDoc += '{% include "_shared/contributors/' + author + '.html\" %}\n';
     });
   }
@@ -174,7 +179,7 @@ function migrateFile(dir, file) {
   markdown = replaceYTVideo(markdown);
 
   var result = topOfDoc + markdown;
-  var newFile = dir + file.replace('.markdown', '.md');
+  var newFile = path.join(dir, file).replace('.markdown', '.md');
   fs.writeFileSync(newFile, result);
 }
 
@@ -182,9 +187,14 @@ function migrateDirectory(dir) {
   var files = fs.readdirSync(dir);
   files.forEach(function(file) {
     if (file.endsWith('.markdown')) {
-      migrateFile(dir, file);
+      try {
+        migrateFile(dir, file);
+      } catch (ex) {
+        console.log('Failed trying to convert:', path.join(dir, file));
+        console.log(ex);
+      }
     }
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/engage-and-retain/app-install-banners/');
+migrateDirectory('./src/content/en/fundamentals/engage-and-retain/web-app-manifest/');
