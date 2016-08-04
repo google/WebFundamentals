@@ -264,6 +264,13 @@ class DevSitePages(webapp2.RequestHandler):
               regex = r'^' + include + '(?m)'
               fileContent = re.sub(regex, self.getInclude(include), fileContent)
 
+            # Replaces frameboxes with simple placeholder
+            frameboxes = re.findall(r'{% framebox .+%}.*?{% endframebox %}(?ms)', fileContent)
+            frameboxReplace = '<aside class="dogfood"><strong>FRAMEBOX:</strong> <span>Not yet supported in staging.</span></aside>'
+            for framebox in frameboxes:
+              fileContent = fileContent.replace(framebox, frameboxReplace)
+
+
             # Handle Special DevSite Cases
             fileContent = re.sub(r"^Success: (.*?)\n{2}(?ms)", r"<aside class='success' markdown='1'><strong>Success:</strong> <span>\1</span></aside>", fileContent)
             fileContent = re.sub(r"^Dogfood: (.*?)\n{2}(?ms)", r"<aside class='dogfood' markdown='1'><strong>Dogfood:</strong> <span>\1</span></aside>", fileContent)
