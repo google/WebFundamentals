@@ -48,11 +48,11 @@ def getPage(requestPath, lang):
 
       # If it's a markdown file, parse it to HTML
       if fileLocation.endswith('.md'):
-        content = re.sub(r"^Success: (.*?)\n{2}(?ms)", r"<aside class='success' markdown='1'><strong>Success:</strong> <span>\1</span></aside>", content)
-        content = re.sub(r"^Dogfood: (.*?)\n{2}(?ms)", r"<aside class='dogfood' markdown='1'><strong>Dogfood:</strong> <span>\1</span></aside>", content)
-        content = re.sub(r"^Note: (.*?)\n{2}(?ms)", r"<aside class='note' markdown='1'><strong>Note:</strong> <span>\1</span></aside>", content)
-        content = re.sub(r"^Caution: (.*?)\n{2}(?ms)", r"<aside class='caution' markdown='1'><strong>Caution:</strong> <span>\1</span></aside>", content)
-        content = re.sub(r"^Warning: (.*?)\n{2}(?ms)", r"<aside class='warning' markdown='1'><strong>Warning:</strong> <span>\1</span></aside>", content)
+        content = re.sub(r'^Success: (.*?)\n{2}(?ms)', r'<aside class="success" markdown="1"><strong>Success:</strong> <span>\1</span></aside>', content)
+        content = re.sub(r'^Dogfood: (.*?)\n{2}(?ms)', r'<aside class="dogfood" markdown="1"><strong>Dogfood:</strong> <span>\1</span></aside>', content)
+        content = re.sub(r'^Note: (.*?)\n{2}(?ms)', r'<aside class="note" markdown="1"><strong>Note:</strong> <span>\1</span></aside>', content)
+        content = re.sub(r'^Caution: (.*?)\n{2}(?ms)', r'<aside class="caution" markdown="1"><strong>Caution:</strong> <span>\1</span></aside>', content)
+        content = re.sub(r'^Warning: (.*?)\n{2}(?ms)', r'<aside class="warning" markdown="1"><strong>Warning:</strong> <span>\1</span></aside>', content)
 
         # Adds a set of markdown extensions available to us on DevSite
         ext = [
