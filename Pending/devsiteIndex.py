@@ -25,6 +25,8 @@ def getPage(requestPath, lang):
         break
 
       if fileLocation.endswith('index.md'):
+        # index.md are treated like other devsite pages, so just use the
+        # devsitePage rendering template.
         requestPath = os.path.join(requestPath, 'index')
         response = devsitePage.getPage(requestPath, lang)
         break
