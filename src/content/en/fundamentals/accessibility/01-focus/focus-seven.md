@@ -31,7 +31,7 @@ Sometimes you need to do a bit of detective work to figure out where focus has g
 >
 >In this example, when the focus ring disappears, you can either use `document.activeElement` from the console, or you can run the accessibility audit to actively check for other things you may have overlooked.
 
-Once you know which off screen element is being focused, you can set it to `display: none` or `visibility: hidden`, and then set it back to `display: block` or `visibility: visible` before showing it to the user. You could even give the element a `tabindex` of -1 and call focus on it when it appears on screen (although you should be careful with this approach, because the element would still be visible to screen readers).
+Once you know which off screen element is being focused, you can set it to `display: none` or `visibility: hidden`, and then set it back to `display: block` or `visibility: visible` before showing it to the user.
 
 Here's a sample page where the focus seems to get lost as you tab around. It is probably focusing something off screen, but exactly which invisible element is grabbing the focus isn't obvious.
 
