@@ -97,4 +97,4 @@ app = webapp2.WSGIApplication([
     ('/', HomePage),
     ('/web/(.*)', DevSitePages),
     ('/framebox/(.*)', Framebox)
-], debug=True)
+], debug=DEVENV)
