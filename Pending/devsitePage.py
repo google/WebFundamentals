@@ -6,7 +6,7 @@ import markdown
 import devsiteHelper
 from google.appengine.ext.webapp.template import render
 
-SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content')
+SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 UNSUPPORTED_TAGS = [
   r'{% link_sample_button .+%}',
   r'{% include_code (.+)%}'

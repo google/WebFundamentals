@@ -8,7 +8,54 @@ import textwrap
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
-SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content')
+SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
+
+
+def checkForRedirect(requestedPath, lang, useMemcache):
+  # Reads the redirect files from the current directory and up the directory
+  # tree then checks to see if a redirect exists for the current URL.
+  redirects = []
+  requestDir = requestedPath
+  if not requestDir.endswith('/'):
+    requestDir = requestDir[:requestDir.rindex('/') + 1]
+  requestDir = re.sub(r'^/?web/', '', requestDir)
+  requestDir = os.path.join(SOURCE_PATH, lang, requestDir)
+
+  while requestDir.startswith(SOURCE_PATH):
+    try:
+      redirectFile = os.path.join(requestDir, '_redirects.yaml')
+      if os.path.isfile(redirectFile):
+        memcacheKey = 'redirectFile-' + redirectFile
+        parsed = memcache.get(memcacheKey)
+        if parsed is None:
+          raw = open(redirectFile, 'r').read().decode('utf8')
+          parsed = yaml.load(raw)
+          if useMemcache:
+            memcache.set(memcacheKey, parsed)
+        if 'redirects' in parsed:
+          redirects += parsed['redirects']
+        else:
+          logging.warning('Didn\'t find redirects key in ' + redirectFile)
+      requestDir = os.path.join(requestDir, '..')
+      requestDir = os.path.normpath(requestDir)
+    except Exception as e:
+      logging.exception('checkForRedirect Failed')
+
+
+  for redirect in redirects:
+    redirectTo = None
+    if requestedPath == redirect['from']:
+      return redirect['to']
+    if redirect['from'].endswith('/...'):
+      redirectFrom = redirect['from'].replace('...', '')
+      if requestedPath.startswith(redirectFrom):
+        redirectTo = redirect['to']
+        if redirectTo.endswith('/...'):
+          redirectTo = redirect['to'].replace('...', '')
+          redirectTo = requestedPath.replace(redirectFrom, redirectTo)
+      return redirectTo
+  return None
+
 
 def readFile(requestedFile, lang='en'):
   # Reads a file from the file system, first trying the localized, then
@@ -25,8 +72,7 @@ def readFile(requestedFile, lang='en'):
       return result
     except Exception as e:
       result = ' - Exception occured trying to read: ' + requestedFile
-      logging.error(result)
-      logging.error(e)
+      logging.exception(result)
       return None
   else:
     result = ' - ReadFile failed trying to find: ' + requestedFile
@@ -55,8 +101,7 @@ def getLeftNav(requestPath, pathToBook, lang='en'):
             return result
     except Exception as e:
       msg = ' - Unable to read or parse primary book.yaml: ' + pathToBook
-      logging.error(msg)
-      logging.error(e)
+      logging.exception(msg)
       whoops += '<p>Exception occured.</p>'
       return whoops
   else:
@@ -77,8 +122,7 @@ def buildLeftNav(bookYaml, lang='en'):
             item = include['toc'][0]
         except Exception as e:
           msg = ' - Unable to parsing embedded toc file: ' + item['include'] 
-          logging.error(msg)
-          logging.error(e)
+          logging.exception(msg)
     if 'path' in item:
       result += '<li class="devsite-nav-item">\n'
       result += '<a href="' + item['path'] + '" class="devsite-nav-title">\n'
@@ -104,7 +148,7 @@ def buildLeftNav(bookYaml, lang='en'):
   return result
 
 
-def renderDevSiteContent(content, lang):
+def renderDevSiteContent(content, lang='en'):
   # Injects includecode into the markdown as appropriate
   includes = re.findall(r'^{%[ ]?includecode .+%}(?m)', content)
   for include in includes:
@@ -127,6 +171,7 @@ def renderDevSiteContent(content, lang):
     content = content.replace(framebox, replaceWith)
     memcache.set(fbMemcacheKey, fbContent)
 
+  # Escapes content between {% htmlescape %} tags
   htmlescapes = re.findall(r'{%[ ]?htmlescape[ ]?%}(.*?){%[ ]?endhtmlescape[ ]?%}(?ms)', content)
   for escapeMe in htmlescapes:
     escaped = cgi.escape(escapeMe)
@@ -134,9 +179,7 @@ def renderDevSiteContent(content, lang):
   if htmlescapes:
     content = re.sub(r'{%[ ]?htmlescape[ ]?%}', '', content)
     content = re.sub(r'{%[ ]?endhtmlescape[ ]?%}', '', content)
-
   return content
-
 
 
 def getInclude(includeTag, lang='en'):

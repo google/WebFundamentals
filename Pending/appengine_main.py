@@ -15,16 +15,9 @@
 # limitations under the License.
 #
 
-import cgi
+import os
 import webapp2
 import logging
-import markdown
-import yaml
-import textwrap
-from datetime import datetime, timedelta
-from urlparse import urljoin
-import os
-import re
 import traceback
 import devsitePage
 import devsiteIndex
@@ -32,8 +25,8 @@ import devsiteHelper
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
-USE_MEMCACHE = not os.environ['SERVER_SOFTWARE'].startswith('Dev')
 DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
+USE_MEMCACHE = not DEVENV
 
 class HomePage(webapp2.RequestHandler):
     def get(self):
@@ -70,12 +63,20 @@ class DevSitePages(webapp2.RequestHandler):
 
         if response is None:
           try:
-            if path.endswith('/'):
+            if path.endswith('/') or path == '':
               response = devsiteIndex.getPage(path, lang)
             else:
               response = devsitePage.getPage(path, lang)
           
             if response is None:
+              # No file found, check for redirect
+              redirectTo = devsiteHelper.checkForRedirect(fullPath, lang, USE_MEMCACHE)
+              if redirectTo:
+                logging.info('301 ' + redirectTo)
+                self.redirect(redirectTo, permanent=True)
+                return
+
+              # No redirect found, send the 404 page.
               response = render('gae/404.tpl', {})
               logging.error('404 ' + fullPath)
               self.response.set_status(404)
@@ -83,11 +84,9 @@ class DevSitePages(webapp2.RequestHandler):
               logging.info('200 ' + fullPath)
               if USE_MEMCACHE:
                 memcache.set(memcacheKey, response)
-          except Exception as e:
-            response = 'ERROR'
-            logging.error('500 ' + fullPath)
-            logging.error(e)
-            logging.error(traceback.format_exc())
+          except Exception as ex:
+            response = render('gae/500.tpl', {'content': ex})
+            logging.exception('500 ' + fullPath)
             self.response.set_status(500)
 
         self.response.out.write(response)

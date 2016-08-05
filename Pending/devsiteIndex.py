@@ -1,6 +1,8 @@
 import os
 import yaml
 import logging
+import devsitePage
+import devsiteHelper
 from google.appengine.ext.webapp.template import render
 
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content')
@@ -23,6 +25,7 @@ def getPage(requestPath, lang):
         break
 
       if fileLocation.endswith('index.md'):
+        requestPath = os.path.join(requestPath, 'index')
         response = devsitePage.getPage(requestPath, lang)
         break
   
@@ -82,7 +85,7 @@ def parseIndexYamlItems(yamlItems):
       result += '</iframe>'
       result += '</div>'
     if 'custom_html' in yamlItem:
-      item += yamlItem['custom_html']
+      item += devsiteHelper.renderDevSiteContent(yamlItem['custom_html'])
     item += '</div>'
     item = item.replace('[[ITEM_CLASSES]]', ' '.join(itemClasses))
     item = item.replace('[[DESCRIPTION_CLASSES]]', ' '.join(descriptionClasses))
