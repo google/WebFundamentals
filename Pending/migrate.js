@@ -197,4 +197,4 @@ function migrateDirectory(dir) {
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/performance/poor-connectivity/');
+migrateDirectory('./src/content/en/fundamentals/getting-started/primers/');
