@@ -324,13 +324,18 @@ to indicate a good or bad example.
 
 Note: This type of callout is an ordinary note or tip.
 
+
 Caution: This type of callout suggests proceeding with caution.
+
 
 Warning: This type of callout is stronger than a Caution; it means "Don't do this."
 
+
 Success: This type of callout describes a successful action or an error-free status. Used only in interactive or dynamic content; don't use in ordinary static pages.
 
+
 Dogfood: This type of callout is for notes that apply temporarily during internal dogfood testing. Remove all Dogfood callouts before making a document publicly visible.
+
 
 
 ## Comparisons
