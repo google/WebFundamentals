@@ -1,5 +1,33 @@
+import os
 import yaml
+import logging
 from google.appengine.ext.webapp.template import render
+
+SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content')
+
+def getPage(requestPath, lang):
+  response = None
+  fileLocations = [
+    os.path.join(SOURCE_PATH, lang, requestPath, '_index.yaml'),
+    os.path.join(SOURCE_PATH, 'en', requestPath, '_index.yaml'),
+    os.path.join(SOURCE_PATH, lang, requestPath, 'index.md'),
+    os.path.join(SOURCE_PATH, 'en', requestPath, 'index.md'),
+  ]
+  for fileLocation in fileLocations:
+    if os.path.isfile(fileLocation):
+      fileContent = open(fileLocation, 'r').read()
+      fileContent = fileContent.decode('utf8')
+
+      if fileLocation.endswith('_index.yaml'):
+        response = generateYaml(lang, fileContent)
+        break
+
+      if fileLocation.endswith('index.md'):
+        response = devsitePage.getPage(requestPath, lang)
+        break
+  
+  return response
+
 
 def parseIndexYamlItems(yamlItems):
   result = ''
