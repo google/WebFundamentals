@@ -2,10 +2,10 @@
 layout: साझ/संकुचित पृष्ठों की सूची
 title: "साइट डिजाइन के सिद्धांत"
 description: इसका उद्देश था इस प्रश्न का उत्तर निकालना, 'क्या है जो एक अच्छी मोबाइल साइट बनता है ?'
-published_on: २०१४-०८-०८
-updated_on: २०१५-०९-१७  
-order: ५ 
-translation_priority : ०
+published_on: 2014-08-08
+updated_on: 2015-09-17  
+order: 5
+translation_priority : 0
 author:
   - petelepage
 ---
