@@ -334,6 +334,10 @@ interesting times of its existence. These are called **custom element reactions*
       <td><code>attributeChangedCallback(attrName, oldVal, newVal)</code></td>
       <td>An attribute was added, removed, updated, or replaced. Also called for initial values when an element is created by the parser, or <a href="#upgrades">upgraded</a>. <b>Note:</b> only attributes listed in the <code>observedAttributes</code> property will receive this callback.</td>
     </tr>
+    <tr>
+    <td><code>adoptedCallback()</code></td>
+      <td>The custom element has been moved into a new `document` (e.g. someone called `document.adoptNode(el)`).</td>
+    <tr>
   </tbody>
 </table>
 
@@ -368,6 +372,35 @@ class AppDrawer extends HTMLElement {
 {% endhighlight %}
 
 Define reactions if/when it make senses. If your element is sufficiently complex and opens a connection to IndexedDB in `connectedCallback()`, do the necessary cleanup work in `disconnectedCallback()`. But be careful! You can't rely on your element being removed from the DOM in all circumstances. For example, `disconnectedCallback()` will never be called if the user closes the tab.
+
+**Example:** moving a custom element into another document, observing its `adoptedCallback()`:
+
+{% highlight javascript %}
+function createWindow(srcdoc) {
+  let p = new Promise(resolve => {
+    let f = document.createElement('iframe');
+    f.srcdoc = srcdoc || '';
+    f.onload = e => {
+      resolve(f.contentWindow);
+    };
+    document.body.appendChild(f);
+  });
+  return p;
+}
+
+// 1. Create two iframes, w1 and w2.
+Promise.all([createWindow(), createWindow()])
+  .then(([w1, w2]) => {
+    // 2. Define a custom element in w1.
+    w1.customElements.define('x-adopt', class extends w1.HTMLElement {
+      adoptedCallback() {
+        console.log('Adopted!');
+      }
+    });
+    let a = w1.document.createElement('x-adopt');
+    w2.document.adoptNode(a); // 3. Adopt the custom element into w2.
+  });
+{% endhighlight %}
 
 ## Properties and attributes
 

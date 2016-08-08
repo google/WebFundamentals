@@ -388,7 +388,7 @@ Ever wonder how the `<select>` element renders a multi-select widget (instead of
 
 One gotcha with `:host` is that rules in the parent page have higher specificity than `:host` rules defined in the element. That is, outside styles win. This allows users to override your top-level styling from the outside. Also, `:host` only works in the context of a shadow root, so you can't use it outside of shadow DOM.
 
-The functional form of `:host(<selector>)` allows you to target the host if it matches a `<selector>`. This is a great way to for your component to encapsulate behaviors that react to user interaction or state.
+The functional form of `:host(<selector>)` allows you to target the host if it matches a `<selector>`. This is a great way to for your component to encapsulate behaviors that react to user interaction or state or style internal nodes based on the host.
 
 {% highlight html %}
 <style>
@@ -400,18 +400,16 @@ The functional form of `:host(<selector>)` allows you to target the host if it m
 :host(:hover) {
   opacity: 1;
 }
-:host(:active) {
-  position: relative;
-  top: 3px;
-  left: 3px;
-}
-:host([disabled]) {
+:host([disabled]) { /* style when host has disabled attribute. */
   background: grey;
   pointer-events: none;
   opacity: 0.4;
 }
 :host(.blue) {
-  color: blue;
+  color: blue; /* color host when it has class="blue" */
+}
+:host(.pink) > #tabs {
+  color: pink; /* color internal #tabs node when host has class="pink".
 }
 </style>
 {% endhighlight %}
@@ -680,9 +678,15 @@ The events that **do** cross the shadow boundary are:
 - Keyboard Events: keydown, keyup
 - Composition Events: compositionstart, compositionupdate, compositionend
 
-If the shadow tree is open, calling `event.composedPath()` will return an array of nodes that the event traveled through.
-{: .wf-talkinghead }
+**Tips**
 
+If the shadow tree is open, calling `event.composedPath()` will return an array of nodes that the event traveled through.
+
+If you want to fire custom events from a custom element that uses shadow DOM, be sure to set the `composed` flag when creating the event:
+
+    this.dispatchEvent(new Event('special-thing', {bubbles: true, composed: true});
+
+If `composed: false` (default), consumers won't be able to listen for the event outside of your shadow root.
 
 ## Tips & Tricks {#tricks}
 
