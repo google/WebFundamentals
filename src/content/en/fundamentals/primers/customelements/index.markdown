@@ -547,7 +547,7 @@ let promises = [...undefinedButtons].map(socialButton => {
   return customElements.whenDefined(socialButton.localName);
 ));
 
-// Wait for all the social-buttons to to be upgraded.
+// Wait for all the social-buttons to be upgraded.
 Promise.all(promises).then(() => {
   // All social-button children are ready.
 });
@@ -812,9 +812,9 @@ Defines a new custom element in the browser.
 Example
 
 {% highlight javascript %}
-customElements.define('my-app', class extends HTMlElement { ... });
+customElements.define('my-app', class extends HTMLElement { ... });
 customElements.define(
-  'fancy-button', class extends HTMlButtonElement { ... }, {extends: 'button'});
+  'fancy-button', class extends HTMLButtonElement { ... }, {extends: 'button'});
 {% endhighlight %}
 
 **`get(tagName)`**
