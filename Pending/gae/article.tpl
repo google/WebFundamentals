@@ -26,7 +26,7 @@
                 <span class="devsite-product-name">
                   <ul class="devsite-breadcrumb-list">
                     <li class="devsite-breadcrumb-item">
-                      <a href="https://developers.google.com/web/" class="devsite-breadcrumb-link">
+                      <a href="/web/" class="devsite-breadcrumb-link">
                         <h1 class="devsite-product-name">Web</h1>
                       </a>
                     </li>

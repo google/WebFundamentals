@@ -109,13 +109,13 @@ landing_page:
 
       - icon:
           icon_name: security
-        path: /web/fundamentals/performance/
+        path: /web/fundamentals/security/
         heading: "Security & Identity"
         description: "Know who your users are and keep their information safe."
 
       - icon:
           icon_name: web
-        path: /web/fundamentals/performance/
+        path: /web/fundamentals/design-and-ui/
         heading: "Design & UI"
         description: "Make your projects look great and interact beautifully."
 
@@ -123,24 +123,24 @@ landing_page:
     - items:
       - icon:
           icon_name: group_add
-        path: /web/fundamentals/performance/
+        path: /web/fundamentals/engage-and-retain/
         heading: "Engage & Retain"
         description: "Connect with your users and keep them coming back."
 
       - icon:
           icon_name: find_in_page
-        path: /web/fundamentals/performance/
+        path: /web/fundamentals/discovery-and-monetization/
         heading: "Discovery & Monetization"
         description: "Maximize discoverability for your users and your revenue."
 
       - icon:
           icon_name: devices
-        path: /web/fundamentals/performance/
+        path: /web/fundamentals/native-hardware/
         heading: "Accessing Native Hardware"
         description: "Locate your users and help them contact you."
 
       - icon:
           icon_name: accessibility
-        path: /web/fundamentals/performance/
+        path: /web/fundamentals/accessibility/
         heading: "Accessibility"
         description: "i like bacon, it's yummy and informative."
