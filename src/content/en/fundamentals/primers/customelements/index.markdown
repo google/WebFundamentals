@@ -398,7 +398,9 @@ Promise.all([createWindow(), createWindow()])
       }
     });
     let a = w1.document.createElement('x-adopt');
-    w2.document.adoptNode(a); // 3. Adopt the custom element into w2.
+
+    // 3. Adopts the custom element into w2 and invokes its adoptedCallback().
+    w2.document.body.appendChild(a);
   });
 {% endhighlight %}
 
