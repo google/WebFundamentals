@@ -673,23 +673,38 @@ When an event bubbles up from shadow DOM it's target is adjusted to maintain the
 
 The events that **do** cross the shadow boundary are:
 
-- Focus Events: blur, focus, focusin, focusout
-- Mouse Events: click, dblclick, mousedown, mouseenter, mousemove, mosueout, mouseover, mouseup
-- Wheel Events: wheel
-- Input Events: beforeinput, input
-- Keyboard Events: keydown, keyup
-- Composition Events: compositionstart, compositionupdate, compositionend
-- DragEvent: dragstart, drag, dragend, drop, etc.
+- Focus Events: `blur`, `focus`, `focusin`, `focusout`
+- Mouse Events: `click`, `dblclick`, `mousedown`, `mouseenter`, `mousemove`, etc.
+- Wheel Events: `wheel`
+- Input Events: `beforeinput`, `input`
+- Keyboard Events: `keydown`, `keyup`
+- Composition Events: `compositionstart`, `compositionupdate`, `compositionend`
+- DragEvent: `dragstart`, `drag`, `dragend`, `drop`, etc.
 
 **Tips**
 
 If the shadow tree is open, calling `event.composedPath()` will return an array of nodes that the event traveled through.
 
-If you want to fire custom events from a custom element that uses shadow DOM, be sure to set the `composed` flag when creating the event:
+### Using custom events {#customevents}
 
-    this.dispatchEvent(new Event('special-thing', {bubbles: true, composed: true});
+Custom DOM events which are fired on internal nodes in a shadow tree do not bubble
+out of the shadow boundary unless the event is created using the `composed: true` flag:
+
+    // Inside <fancy-tab> custom element class definition:
+    selectTab() {
+      let tabs = this.shadowRoot.querySelector('#tabs');
+      tabs.dispatchEvent(new Event('tab-select', {bubbles: true, composed: true}));
+    }
 
 If `composed: false` (default), consumers won't be able to listen for the event outside of your shadow root.
+
+    <fancy-tabs></fancy-tabs>
+    <script>
+      let tabs = document.querySelector('fancy-tabs');
+      tabs.addEventListener('tab-select', e => {
+        // won't fire if `tab-select` wasn't created with `composed: true`.
+      });
+    </script>
 
 ## Tips & Tricks {#tricks}
 
