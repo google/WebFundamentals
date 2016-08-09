@@ -677,6 +677,7 @@ The events that **do** cross the shadow boundary are:
 - Input Events: beforeinput, input
 - Keyboard Events: keydown, keyup
 - Composition Events: compositionstart, compositionupdate, compositionend
+- DragEvent: dragstart, drag, dragend, drop, etc.
 
 **Tips**
 
