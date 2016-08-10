@@ -90,7 +90,7 @@ feedURL: https://github.com/googlechrome/sw-toolbox/releases.atom
   <p>
     <code>sw-toolbox</code> provides common
     <a href="https://github.com/GoogleChrome/sw-toolbox#built-in-handlers">caching patterns</a>
-    and a
+    and an
     <a href="https://github.com/GoogleChrome/sw-toolbox#toolboxrouterheadurlpattern-handler-options">expressive approach</a>
     to using those strategies for runtime requests.
   </p>
