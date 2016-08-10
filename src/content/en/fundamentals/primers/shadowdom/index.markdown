@@ -53,12 +53,12 @@ function supportsShadowDOM() {
 
 <div class="forward">
   <b>Already familiar with Shadow DOM?</b>
-  <p>This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version shipped in Chrome 35</a>, which has also been polyfilled. The concepts are the same, but the v1 spec has important API differences. It's also the version other browsers (Safari) have implemented. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.</p>
+  <p>This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.</p>
 </div>
 
 ### TL;DR {#tldr}
 
-Shadow DOM removes the brittleness of building web apps. The brittleness comes from the global nature of HTML, CSS, and JS. Over the years we've invented an [exorbitant](http://requirejs.org/) [number](http://getbem.com/introduction/) [of](https://github.com/css-modules/css-modules) [tools](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/) to circumvent the issues. For example, when you use a new HTML id/class, there's no telling if it will conflict with an existing name used by the page. [Subtle bugs](http://www.2ality.com/2012/08/ids-are-global.html) creep up, CSS specificity becomes a huge issue (`!important` all the things!), style selectors grow out of control, and [performance can suffer](https://developers.google.com/web/updates/2016/06/css-containment). The list goes on.
+Shadow DOM removes the brittleness of building web apps. The brittleness comes from the global nature of HTML, CSS, and JS. Over the years we've invented an exorbitant [number](http://getbem.com/introduction/) [of](https://github.com/css-modules/css-modules) [tools](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/) to circumvent the issues. For example, when you use a new HTML id/class, there's no telling if it will conflict with an existing name used by the page. [Subtle bugs](http://www.2ality.com/2012/08/ids-are-global.html) creep up, CSS specificity becomes a huge issue (`!important` all the things!), style selectors grow out of control, and [performance can suffer](https://developers.google.com/web/updates/2016/06/css-containment). The list goes on.
 
 **Shadow DOM fixes CSS and DOM**. It introduces **scoped styles** to the web platform. Without tools or naming conventions, you can **bundle CSS with markup**, hide implementation details, and **author self-contained components** in vanilla JavaScript.
 
@@ -354,6 +354,8 @@ Stylesheets are also scoped to the shadow tree:
 
 {% highlight html %}
 #shadow-root
+  <!-- Available in Chrome 54+ -->
+  <!-- WebKit bug: https://bugs.webkit.org/show_bug.cgi?id=160683 -->
   <link rel="stylesehet" href="styles.css">
   <div id="tabs">
     ...
@@ -388,7 +390,7 @@ Ever wonder how the `<select>` element renders a multi-select widget (instead of
 
 One gotcha with `:host` is that rules in the parent page have higher specificity than `:host` rules defined in the element. That is, outside styles win. This allows users to override your top-level styling from the outside. Also, `:host` only works in the context of a shadow root, so you can't use it outside of shadow DOM.
 
-The functional form of `:host(<selector>)` allows you to target the host if it matches a `<selector>`. This is a great way to for your component to encapsulate behaviors that react to user interaction or state.
+The functional form of `:host(<selector>)` allows you to target the host if it matches a `<selector>`. This is a great way to for your component to encapsulate behaviors that react to user interaction or state or style internal nodes based on the host.
 
 {% highlight html %}
 <style>
@@ -400,18 +402,16 @@ The functional form of `:host(<selector>)` allows you to target the host if it m
 :host(:hover) {
   opacity: 1;
 }
-:host(:active) {
-  position: relative;
-  top: 3px;
-  left: 3px;
-}
-:host([disabled]) {
+:host([disabled]) { /* style when host has disabled attribute. */
   background: grey;
   pointer-events: none;
   opacity: 0.4;
 }
 :host(.blue) {
-  color: blue;
+  color: blue; /* color host when it has class="blue" */
+}
+:host(.pink) > #tabs {
+  color: pink; /* color internal #tabs node when host has class="pink".
 }
 </style>
 {% endhighlight %}
@@ -673,16 +673,38 @@ When an event bubbles up from shadow DOM it's target is adjusted to maintain the
 
 The events that **do** cross the shadow boundary are:
 
-- Focus Events: blur, focus, focusin, focusout
-- Mouse Events: click, dblclick, mousedown, mouseenter, mousemove, mosueout, mouseover, mouseup
-- Wheel Events: wheel
-- Input Events: beforeinput, input
-- Keyboard Events: keydown, keyup
-- Composition Events: compositionstart, compositionupdate, compositionend
+- Focus Events: `blur`, `focus`, `focusin`, `focusout`
+- Mouse Events: `click`, `dblclick`, `mousedown`, `mouseenter`, `mousemove`, etc.
+- Wheel Events: `wheel`
+- Input Events: `beforeinput`, `input`
+- Keyboard Events: `keydown`, `keyup`
+- Composition Events: `compositionstart`, `compositionupdate`, `compositionend`
+- DragEvent: `dragstart`, `drag`, `dragend`, `drop`, etc.
+
+**Tips**
 
 If the shadow tree is open, calling `event.composedPath()` will return an array of nodes that the event traveled through.
-{: .wf-talkinghead }
 
+### Using custom events {#customevents}
+
+Custom DOM events which are fired on internal nodes in a shadow tree do not bubble
+out of the shadow boundary unless the event is created using the `composed: true` flag:
+
+    // Inside <fancy-tab> custom element class definition:
+    selectTab() {
+      let tabs = this.shadowRoot.querySelector('#tabs');
+      tabs.dispatchEvent(new Event('tab-select', {bubbles: true, composed: true}));
+    }
+
+If `composed: false` (default), consumers won't be able to listen for the event outside of your shadow root.
+
+    <fancy-tabs></fancy-tabs>
+    <script>
+      let tabs = document.querySelector('fancy-tabs');
+      tabs.addEventListener('tab-select', e => {
+        // won't fire if `tab-select` wasn't created with `composed: true`.
+      });
+    </script>
 
 ## Tips & Tricks {#tricks}
 
