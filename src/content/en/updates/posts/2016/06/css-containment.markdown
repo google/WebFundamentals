@@ -90,7 +90,7 @@ Each of these values allows you to limit how much rendering work the browser nee
 
 ### Layout (contain: layout)
 > This value turns on layout containment for the element. This ensures that the containing element is totally opaque for layout purposes; nothing outside can affect its internal layout, and vice versa.
-> [Containment spec](https://drafts.csswg.org/css-containment/#style-containment)
+> [Containment spec](https://drafts.csswg.org/css-containment/#valdef-contain-layout)
 
 Layout containment is probably _the_ biggest benefit of containment, along with `contain: paint`.
 
@@ -101,7 +101,7 @@ Enabling containment here can potentially reduce the number of elements to just 
 ### Paint (contain: paint)
 
 > This value turns on paint containment for the element. This ensures that the descendants of the containing element don’t display outside its bounds, so if an element is off-screen or otherwise not visible, its descendants are also guaranteed to be not visible.
-> [Containment spec](https://drafts.csswg.org/css-containment/#style-containment)
+> [Containment spec](https://drafts.csswg.org/css-containment/#valdef-contain-paint)
 
 Scoping paint is another incredibly useful benefit of containment. Paint containment essentially clips the element in question, but it also has a few other side effects:
 
@@ -112,7 +112,7 @@ Scoping paint is another incredibly useful benefit of containment. Paint contain
 ### Size (contain: size)
 
 > The value turns on size containment for the element. This ensures that the containing element can be laid out without needing to examine its descendants.
-> [Containment spec](https://drafts.csswg.org/css-containment/#style-containment)
+> [Containment spec](https://drafts.csswg.org/css-containment/#valdef-contain-size)
 
 What `contain: size` means is that the element’s children _do not affect the parent’s size_, and that its inferred or declared dimensions will be the ones used. Consequently if you were to set `contain: size` but didn’t specify dimensions for the element (either directly or via flex properties), it would be rendered at 0px by 0px!
 
@@ -121,7 +121,7 @@ Size containment is really a belt-and-braces measure to ensure you don’t rely 
 ### Style (contain: style)
 
 > This value turns on style containment for the element. This ensures that, for properties which can have effects on more than just an element and its descendants, those effects don’t escape the containing element.
-> [Containment spec](https://drafts.csswg.org/css-containment/#style-containment)
+> [Containment spec](https://drafts.csswg.org/css-containment/#valdef-contain-style)
 
 It can be hard to predict what the effects on the DOM tree of changing an element’s styles will be back up the tree. One example of this is in something like [CSS counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters), where changing a counter in a child can affect counter values of the same name used elsewhere in the document. With `contain: style` set, style changes won’t get propagated back up past the containing element.
 
