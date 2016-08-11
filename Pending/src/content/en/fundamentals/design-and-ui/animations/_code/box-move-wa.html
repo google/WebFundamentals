@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+  <head>
+	  <!-- // [TEMPLATE header_base] -->
+	  <title>Simple Box Move</title>
+	  <style>
+	  	html {
+	  		background: #f2f2f2;
+	  	}
+
+	  	.box {
+			  width: 100px;
+			  height: 100px;
+
+			  background: #FFF;
+			  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+			  will-change: transform;
+			}
+	  </style>
+	</head>
+
+	<body>
+		<div class="box"></div>
+
+		<script src="//cdn.rawgit.com/web-animations/web-animations-js/2.1.2/web-animations.min.js"></script>
+		<script>
+		var target = document.querySelector('.box');
+		var player = target.animate([
+		  {transform: 'translate(0)'},
+		  {transform: 'translate(100px, 100px)'}
+		], 500);
+		player.addEventListener('finish', function() {
+		  target.style.transform = 'translate(100px, 100px)';
+		});
+		</script>
+    <!-- // [TEMPLATE footer] -->
+	</body>
+
+</html>

@@ -1,109 +1,109 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Learn how to animate modal views in your apps.
 
-<p class="intro">
-Modal views are for important messages, and for which you have very good reasons to block the user interface. Care must be taken when you use them as they are disruptive and can easily ruin the user’s experience if overused. But, in some circumstances, they’re the right views to use, and adding some animation will bring them to life."
+{# wf_review_required #}
+{# wf_updated_on: 2014-10-21 #}
+{# wf_published_on: 2014-08-08 #}
 
-</p>
+# Animating modal views {: .page-title }
 
+{% include "_shared/contributors/paullewis.html" %}
 
+<div class="attempt-right">
+  <figure>
+    <img src="imgs/gifs/dont-press.gif" alt="Animating a modal view." />
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/animations/modal-view-animation.html">See sample.</a>
+    </figcaption>
+  </figure>
+</div>
 
+Modal views are for important messages, and for which you have very good reasons to block the user interface. Care must be taken when you use them as they are disruptive and can easily ruin the user’s experience if overused. But, in some circumstances, they’re the right views to use, and adding some animation will bring them to life.
 
+<div style="clear:both;"></div>
 
+## TL;DR
+- Modal views should be used sparingly; users will get frustrated if you interrupt their experience unnecessarily.
+- Adding scale to the animation gives a nice 'drop on' effect.
+- Be sure to get rid of the modal view quickly when the user dismisses it, but you should bring it on to screen a little more slowly so it doesn''t surprise the user.
 
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
-
-<img src="imgs/gifs/dont-press.gif" alt="Animating a modal view." />
-
-<a href="/web/resources/samples/fundamentals/design-and-ui/animations/modal-view-animation.html">See sample.</a>
 
 The modal overlay should be aligned to the viewport so it needs to have its `position` set to `fixed`:
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.modal</span> <span class="p">{</span>
-  <span class="k">position</span><span class="o">:</span> <span class="k">fixed</span><span class="p">;</span>
-  <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
 
-  <span class="k">pointer</span><span class="o">-</span><span class="n">events</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    
+      pointer-events: none;
+      opacity: 0;
+    
+      will-change: transform, opacity;
+    }
+    
 
-  <span class="n">will</span><span class="o">-</span><span class="n">change</span><span class="o">:</span> <span class="n">transform</span><span class="o">,</span> <span class="k">opacity</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
-
-It has an initial `opacity` of 0 so it's hidden from view, but then it will also need `pointer-events` set to `none` so that click and touches pass through. Without that it will block all interactions rendering the whole page unresponsive. Finally, since it will animate its `opacity` and `transform` those need to be marked as changing with `will-change` (see also [Using the will-change property](/web/fundamentals/design-and-ui/animations/animations-and-performance.html#using-the-will-change-property)).
+It has an initial `opacity` of 0 so it's hidden from view, but then it will also need `pointer-events` set to `none` so that click and touches pass through. Without that it will block all interactions rendering the whole page unresponsive. Finally, since it will animate its `opacity` and `transform` those need to be marked as changing with `will-change` (see also [Using the will-change property](animations-and-performance#using-the-will-change-property)).
 
 When the view is visible it will need to accept interactions and have an `opacity` of 1:
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.modal.visible</span> <span class="p">{</span>
-  <span class="k">pointer</span><span class="o">-</span><span class="n">events</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+
+    .modal.visible {
+      pointer-events: auto;
+      opacity: 1;
+    }
+    
 
 Now whenever the modal view is required, you can use JavaScript to toggle the "visible" class:
 
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">modal</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;visible&#39;</span><span class="p">);</span></code></pre></div>
+
+    modal.classList.add('visible');
+    
 
 At this point the modal view will appear without any animation, so that can now be added in
-(see also [Custom Easing](/web/fundamentals/design-and-ui/animations/custom-easing.html)):
+(see also [Custom Easing](custom-easing)):
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.modal</span> <span class="p">{</span>
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">15</span><span class="p">);</span>
-  <span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="o">.</span><span class="m">15</span><span class="p">);</span>
 
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span>
-    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span> <span class="m">0.1s</span> <span class="n">cubic</span><span class="o">-</span><span class="n">bezier</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">465</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">183</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">153</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">946</span><span class="p">)</span><span class="o">,</span>
-    <span class="k">opacity</span> <span class="m">0.1s</span> <span class="n">cubic</span><span class="o">-</span><span class="n">bezier</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">465</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">183</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">153</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">946</span><span class="p">);</span>
-
-  <span class="n">transition</span><span class="o">:</span>
-    <span class="n">transform</span> <span class="m">0.1s</span> <span class="n">cubic</span><span class="o">-</span><span class="n">bezier</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">465</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">183</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">153</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">946</span><span class="p">)</span><span class="o">,</span>
-    <span class="k">opacity</span> <span class="m">0.1s</span> <span class="n">cubic</span><span class="o">-</span><span class="n">bezier</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">465</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">183</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">153</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">946</span><span class="p">);</span>
-
-<span class="p">}</span></code></pre></div>
+    .modal {
+      -webkit-transform: scale(1.15);
+      transform: scale(1.15);
+    
+      -webkit-transition:
+        -webkit-transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+        opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    
+      transition:
+        transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+        opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    
+    }
+    
 
 Adding `scale` to the transform makes the view appear to drop onto the screen slightly, which is a nice effect. The default transition applies to both transform and opacity properties with a custom curve and a duration of 0.1 seconds.
 
 The duration is pretty short, though, but it's ideal for when the user dismisses the view and wants to get back to your app. The downside is that it’s probably too aggressive for when the modal view appears. To fix this you should override the transition values for the `visible` class:
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.modal.visible</span> <span class="p">{</span>
 
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-  <span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transition</span><span class="o">:</span>
-    <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span> <span class="m">0.3s</span> <span class="n">cubic</span><span class="o">-</span><span class="n">bezier</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">465</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">183</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">153</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">946</span><span class="p">)</span><span class="o">,</span>
-    <span class="k">opacity</span> <span class="m">0.3s</span> <span class="n">cubic</span><span class="o">-</span><span class="n">bezier</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">465</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">183</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">153</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">946</span><span class="p">);</span>
-
-  <span class="n">transition</span><span class="o">:</span>
-    <span class="n">transform</span> <span class="m">0.3s</span> <span class="n">cubic</span><span class="o">-</span><span class="n">bezier</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">465</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">183</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">153</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">946</span><span class="p">)</span><span class="o">,</span>
-    <span class="k">opacity</span> <span class="m">0.3s</span> <span class="n">cubic</span><span class="o">-</span><span class="n">bezier</span><span class="p">(</span><span class="m">0</span><span class="o">.</span><span class="m">465</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">183</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">153</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">946</span><span class="p">);</span>
-
-<span class="p">}</span></code></pre></div>
+    .modal.visible {
+    
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    
+      -webkit-transition:
+        -webkit-transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+        opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    
+      transition:
+        transform 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+        opacity 0.3s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+    
+    }
+    
 
 Now the modal view takes 0.3s seconds to come onto the screen, which is a bit less aggressive, but it is dismissed quickly, which the user will appreciate.
-
 
 
 
