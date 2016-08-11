@@ -336,7 +336,7 @@ interesting times of its existence. These are called **custom element reactions*
     </tr>
     <tr>
     <td><code>adoptedCallback()</code></td>
-      <td>The custom element has been moved into a new `document` (e.g. someone called `document.adoptNode(el)`).</td>
+      <td>The custom element has been moved into a new <code>document</code> (e.g. someone called <code>document.adoptNode(el)</code>).</td>
     <tr>
   </tbody>
 </table>
