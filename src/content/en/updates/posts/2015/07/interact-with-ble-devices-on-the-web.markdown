@@ -13,6 +13,7 @@ tags:
   - IoT
   - WebBluetooth
   - PhysicalWeb
+  - origintrials
 ---
 
 What if I told you websites could communicate with nearby Bluetooth devices
