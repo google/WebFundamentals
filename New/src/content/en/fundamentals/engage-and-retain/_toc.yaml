@@ -4,20 +4,24 @@ toc:
     - title: The Web App Manifest
       path: /web/fundamentals/engage-and-retain/web-app-manifest/
     - title: Web Push Notifications
-      path: /web/fundamentals/engage-and-retain/push/
       section:
-      - title: Getting User Permission
-        path: /web/fundamentals/engage-and-retain/push/permission
+      - title: Overview
+        path: /web/fundamentals/engage-and-retain/push-notifications/
+      - title: What Makes a Good Notification
+        path: /web/fundamentals/engage-and-retain/push-notifications/good-notification
+      - title: Requesting Permission and Subscribing Users
+        path: /web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
       - title: Sending Messages
-        path: /web/fundamentals/engage-and-retain/push/send
-      - title: Handling & Showing Notifications
-        path: /web/fundamentals/engage-and-retain/push/handle
+        path: /web/fundamentals/engage-and-retain/push-notifications/sending-messages
+      - title: Handling Messages
+        path: /web/fundamentals/engage-and-retain/push-notifications/handling-messages
     - title: App Install Banners
       section:
       - title: Web App Install Banners
-        path: /web/fundamentals/engage-and-retain/app-install/
-      - title: Handling Banner Events
-        path: /web/fundamentals/engage-and-retain/app-install/events
+        path: /web/fundamentals/engage-and-retain/app-install-banners/
+      - title: App Install Banner Events
+        path: /web/fundamentals/engage-and-retain/app-install-banners/events
       - title: Native App Install Banners
-        path: /web/fundamentals/engage-and-retain/app-install/native
+        path: /web/fundamentals/engage-and-retain/app-install-banners/native-app-install
+      
 
