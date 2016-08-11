@@ -9,6 +9,7 @@
 1. Run `node build-contributors.js`
 
 ## Serve the files
+1. If you haven't already, build the contributors includes
 1. Run `start-appengine.sh`
 
 ## Convert files from old to new
