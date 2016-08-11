@@ -21,8 +21,6 @@ Native App install banners are similar to [Web app install banners](.), but
 instead of adding to the home screen, they will let the user install your
 native app without leaving your site.
 
-<div style="clear:both;"></div>
-
 ## Criteria to Show the Banner
 
 The criteria is similar to the Web App install banner except for the need of

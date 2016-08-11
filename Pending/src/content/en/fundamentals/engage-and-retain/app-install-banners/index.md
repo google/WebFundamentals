@@ -30,8 +30,6 @@ with details about your app.
 Chrome then uses a set of criteria and visit frequency heuristics to determine
 when to show the banner. Read on for more details.
 
-<div style="clear:both;"></div>
-
 ## What are the Criteria?
 
 Chrome will automatically display the banner when your app meets the following
@@ -48,7 +46,7 @@ criteria:
   (a requirement for using Service Worker).
 * Is visited at least twice, with at least five minutes between visits.
 
-### Testing the App Install Banner
+## Testing the App Install Banner
 
 The app install banner is only shown after the user has visited the page at least
 twice within 5 minutes. You can disable the visit frequency check by enabling
