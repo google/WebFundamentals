@@ -58,9 +58,6 @@ There are two types of app install banners: <i>web</i> app install banners and <
 
 
   [Using App Install Banners](/web/fundamentals/engage-and-retain/app-install-banners/?hl=en)
-
-  
-  [What are the Criteria?](/web/fundamentals/engage-and-retain/app-install-banners/web-app-install-banners?hl=en)
   
   [Do More With App Install Banners](/web/fundamentals/engage-and-retain/app-install-banners/advanced?hl=en)
   
