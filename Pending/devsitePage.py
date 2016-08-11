@@ -41,7 +41,7 @@ def getPage(requestPath, lang):
           logging.warn(' - Unsupported tag: ' + tag)
           replaceWith = '<aside class="warning">Web<strong>Fundamentals</strong>: '
           replaceWith += '<span>Unsupported tag: <code>' + tag + '</code></span></aside>'
-          content = content.replace(tag, replaceWith)
+          content = re.sub(tag, replaceWith, content)
 
       # Render any DevSite specific tags
       content = devsiteHelper.renderDevSiteContent(content, lang)
@@ -74,10 +74,9 @@ def getPage(requestPath, lang):
         # Build the table of contents & transform so it fits within DevSite
         toc = md.toc
         toc = toc.strip()
-        toc = re.sub(r'<div class="toc">', '', toc) # remove <div> wrapper
-        toc = re.sub(r'</div>', '', toc) # remove <div> wrapper
-        toc = re.sub('<ul>', '', toc, 1) # Remove outer <ul></ul>
-        toc = toc[:toc.rfind('</ul>')] # Remove outer <ul></ul>
+        # Strips the outer wrapper and the page title from the doc
+        toc = re.sub(r'<div class="toc">(.*?<ul>){2}(?s)', '', toc)
+        toc = re.sub(r'</ul>\s*</li>\s*</ul>\s*</div>(?s)', '', toc)
         # Add appropriate classes
         toc = re.sub(r'<ul>', '<ul class="devsite-page-nav-list">', toc)
         toc = re.sub(r'<a href', '<a class="devsite-nav-title" href', toc)
