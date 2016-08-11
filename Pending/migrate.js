@@ -5,6 +5,8 @@ var path = require('path');
 var moment = require('moment');
 var jsYaml = require('js-yaml');
 
+var SAMPLES_PATH = 'https://googlesamples.github.io/web-fundamentals/samples/';
+
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
     value: function(searchString, position) {
@@ -102,6 +104,25 @@ function replaceHighlightedCode(markdown) {
   return markdown;
 }
 
+function replaceLinkSample(markdown, dir) {
+  var re = /{% link_sample (.*?)\s?%}(.*?){%\s?endlink_sample\s?%}/gm;
+  var items = markdown.match(re);
+  if (items) {
+    re = /{% link_sample (.*?)\s?%}(.*?){%\s?endlink_sample\s?%}/;
+    items.forEach(function(item) {
+      var sourceItem = item;
+      var regEx = re.exec(item);
+      if (regEx && regEx.length === 3) {
+        var url = SAMPLES_PATH + dir.replace('./src/content/en/', '');
+        url += regEx[1].replace('_code/', '');
+        item = '<a href="' + url + '">' + regEx[2] + '</a>';
+        markdown = markdown.replace(sourceItem, item);
+      }
+    });
+  }
+  return markdown;
+}
+
 function replaceYTVideo(markdown) {
   var items = markdown.match(/{% ytvideo (\w*) %}/g);
   if (items) {
@@ -175,6 +196,7 @@ function migrateFile(dir, file) {
   markdown = replaceTakeaway(markdown, yaml);
   markdown = replaceNote(markdown, yaml);
   markdown = replaceHighlightedCode(markdown);
+  markdown = replaceLinkSample(markdown, dir);
   markdown = removeIntroP(markdown);
   markdown = replaceYTVideo(markdown);
 
@@ -197,4 +219,4 @@ function migrateDirectory(dir) {
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/getting-started/primers/');
+migrateDirectory('./src/content/en/fundamentals/design-and-ui/input/touch/');
