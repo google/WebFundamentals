@@ -21,7 +21,7 @@ Native App install banners are similar to [Web app install banners](.), but
 instead of adding to the home screen, they will let the user install your
 native app without leaving your site.
 
-## Criteria to Show the Banner
+## Criteria to show the banner
 
 The criteria is similar to the Web App install banner except for the need of
 a service worker. Your site must:
@@ -35,7 +35,7 @@ a service worker. Your site must:
 * Be visited by the user twice, over two separate days during the course
   of two weeks.
 
-## Manifest Requirements
+## Manifest requirements
 
 To integrate into any manifest, add a `related_applications` array with the
 platforms of `play` (for Google Play) and the App Id.
