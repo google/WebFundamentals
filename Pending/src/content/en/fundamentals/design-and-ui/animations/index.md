@@ -33,4 +33,4 @@ The only thing worse than animations that are ill-placed are those that cause th
 
 Some properties are more expensive to change than others, and are therefore more likely to make things stutter. So, for example, changing the `box-shadow` of an element will require a much more expensive paint operation than changing -- say -- its text color. Changing the `width` of an element is likely to be more expensive than changing its `transform`.
 
-You can read more on the performance considerations of animations in the [Animations and Performance](animations-and-performance.html) guide, but if you want the TL;DR stick to transforms and opacity changes, and make use of `will-change`. If you want to know exactly which work is triggered by animating a given property check [CSS Triggers](http://csstriggers.com).
+You can read more on the performance considerations of animations in the [Animations and Performance](animations-and-performance) guide, but if you want the TL;DR stick to transforms and opacity changes, and make use of `will-change`. If you want to know exactly which work is triggered by animating a given property check [CSS Triggers](http://csstriggers.com).

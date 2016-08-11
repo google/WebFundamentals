@@ -19,7 +19,7 @@ There are two primary ways to create animations on the web: with CSS and with Ja
 - If you choose to animate with JavaScript, go with the Web Animations API or a modern framework you are comfortable with.
 
 
-Most basic animations can be created with either CSS or JavaScript, but the amount of effort and time will differ (see also [CSS vs JavaScript Performance](/web/fundamentals/design-and-ui/animations/animations-and-performance#css-vs-javascript-performance)). Each has their pros and cons, but these are good rules-of-thumb:
+Most basic animations can be created with either CSS or JavaScript, but the amount of effort and time will differ (see also [CSS vs JavaScript Performance](animations-and-performance#css-vs-javascript-performance)). Each has their pros and cons, but these are good rules-of-thumb:
 
 * **Use CSS when you have smaller, self-contained states for UI elements.** CSS transitions and animations are ideal for bringing a navigation menu in from the side, or showing a tooltip. You may end up using JavaScript to control the states, but the animations themselves will be in your CSS.
 * **Use JavaScript when you need significant control over your animations.** The Web Animations API is the standards-based approach, available today in Chrome and Opera. This provides real objects, ideal for complex object-oriented applications. JavaScript is also useful when you need to stop, pause, slow-down or reverse.
