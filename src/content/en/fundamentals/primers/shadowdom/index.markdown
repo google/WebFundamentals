@@ -68,7 +68,7 @@ Shadow DOM removes the brittleness of building web apps. The brittleness comes f
 
 Shadow DOM is one of the four Web Component standards: [HTML Templates](http://www.html5rocks.com/en/tutorials/webcomponents/template/), [Shadow DOM][sd_spec_whatwg], [Custom elements](/web/fundamentals/primers/customelements/) and [HTML Imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/).
 
-You don't have to author web components that use shadow DOM. But when you do, you take advantage of its benefits (CSS scoping, DOM encapsulation, composition) and build reusable [custom elements](/web/fundamentals/primers/customelements/) which are resilient, highly configurable, and extremely reusable. If custom elements are the way to create a new HTML (with a JS API(, shadow DOM is the way you provide its HTML and CSS. The two APIs combine to make a component with self-contained HTML, CSS, and JavaScript.
+You don't have to author web components that use shadow DOM. But when you do, you take advantage of its benefits (CSS scoping, DOM encapsulation, composition) and build reusable [custom elements](/web/fundamentals/primers/customelements/) which are resilient, highly configurable, and extremely reusable. If custom elements are the way to create a new HTML (with a JS API), shadow DOM is the way you provide its HTML and CSS. The two APIs combine to make a component with self-contained HTML, CSS, and JavaScript.
 
 Shadow DOM is designed as a tool for building component-based apps. Therefore, it brings solutions for common problems in web development:
 
