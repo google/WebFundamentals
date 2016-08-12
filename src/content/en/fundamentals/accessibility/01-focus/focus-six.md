@@ -27,6 +27,8 @@ Managing focus when you change something on the page is important, but sometimes
 
 Consider the native `select` element. It can receive basic focus but, once there, you can use the arrow keys to expose additional functionality (the selectable options). If you were building a custom select element, you would want to expose these same kinds of behaviors so that users who rely primarily on the keyboard could still interact with your control.
 
+![move-focus-in-select](imgs/move-focus-in-select.png)
+
 Knowing which keyboard behaviors to implement can be difficult, but there is a helpful document you can refer to. The <a href="https://www.w3.org/TR/wai-aria-practices/" target="_blank">Accessible Rich Internet Applications (ARIA) Authoring Practices</a> guide lists types of components and what kinds of keyboard actions they support. We will cover ARIA in more detail later, but for now let's use the guide to help us add keyboard support to a new component.
 
 Perhaps you're working on a new input element that resembles a set of radio buttons, but with your unique take on appearance and behavior. To determine what kind of keyboard support it needs, you would check the ARIA Design Patterns guide. Section 2 contains a list of design patterns, and in that list is a <a href="https://www.w3.org/TR/wai-aria-practices/#radiobutton" target="_blank">characteristics table for radio groups</a>, the existing component that most closely matches your new element.
