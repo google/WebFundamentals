@@ -1,10 +1,10 @@
 ---
 layout: updates/post
 title: "Access USB devices on the Web"
-description: "The WebUSB API has been created to provide an easy way to safely expose USB device services to the Web."
+description: "The WebUSB API makes USB safer and easier to use by bringing it to the Web."
 featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero.jpg
-published_on: 2016-03-02
-updated_on: 2016-04-21
+published_on: 2016-08-12
+updated_on: 2016-08-12
 authors:
   - beaufortfrancois
 tags:
@@ -13,6 +13,7 @@ tags:
   - WebUSB
   - IoT
   - Arduino
+  - origintrials
 ---
 
 If I said plain and simple "USB", there is a good chance that you will
@@ -23,10 +24,30 @@ there.
 These non-standardized USB devices require hardware vendors to write native
 drivers and SDKs in order for you (the developer) to take advantage of them.
 Sadly this native code has historically prevented these devices from being used
-by the Web. And that's exactly why the WebUSB API has been created: to
-**provide an easy way to safely expose USB device services to the Web**. With
-this API, hardware manufacturers will be able to build cross-platform
-JavaScript SDKs for their devices.
+by the Web. And that's one of the reasons the WebUSB API has been created: to
+provide a way to expose USB device services to the Web. With this API, hardware
+manufacturers will be able to build cross-platform JavaScript SDKs for their
+devices.
+But most importantly this will **make USB safer and easier to use by bringing
+it to the Web**.
+
+Let's see what you could expect with the WebUSB API:
+
+1. Buy a USB device,
+2. Plug it into your computer,
+3. A notification appears right away, with the right website to go to for this device.
+4. Simply click on it. Website is there and ready to use!
+5. Click to connect and a USB device chooser shows up in Chrome, where you can pick your device.
+6. Tada!
+
+What could it have been after you've plugged your USB device?
+
+- Read a box, label, or search online for website -- possibly ending up on the wrong website.
+- Have to install a native application.
+- Is it supported on my operating system? Make sure you download the "right" thing.
+- Scary OS prompts popup and warn you about installing drivers/applications from the Internet.
+- Malfunctioning code harms the whole computer, the Web is built to [contain malfunctioning websites](https://www.youtube.com/watch?v=29e0CtgXZSI).
+- Only use the USB device once? On the Web, the website is gone once you closed tab. On a computer the code sticks around.
 
 ## Before we start
 
@@ -43,10 +64,12 @@ actively looking for eager developers to give it a try and send
 [feedback on the spec](https://github.com/wicg/webusb/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EUSB).
 
-At the time of writing, the WebUSB API is partially implemented behind an
-experimental flag in Chrome for Windows, Mac OS, Linux and Chrome OS. Go to
-`chrome://flags/#enable-experimental-web-platform-features`, enable the
-highlighted flag, restart Chrome and you should be good to go.
+The WebUSB API is currently planned to be enabled experimentally on your
+origin in Origin Trials, and available now locally on your machine using an
+experimental flag. The implementation is partially complete and currently
+available on Chrome OS, Linux, Mac, and Windows. Go to
+`chrome://flags/#enable-webusb`, enable the highlighted flag, restart Chrome
+and you should be good to go.
 
 <img style="width:723px; max-height:205px" src="/web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-flag.png" alt="Web USB Flag highlighted in chrome://flags"/>
 
@@ -70,6 +93,21 @@ descriptor](https://wicg.github.io/webusb/#webusb-platform-capability-descriptor
 Later a [Public Device Registry](https://wicg.github.io/webusb/#public-device-registry) 
 will be created so that hardware manufacturers can support WebUSB on existing
 devices.
+
+### Available for Origin Trials
+
+In order to get as much feedback as possible from developers using the WebUSB
+API in the field, we will also add this feature in Chrome 54 as an
+[origin trial](https://github.com/jpchase/OriginTrials) for Chrome
+OS, Linux, Mac, and Windows. During the origin trial, the API may still change in
+backward-incompatible ways before we freeze it into the web platform.  To use
+this experimental API in Chrome with no flag, you'll need to [request a token
+for your origin](http://bit.ly/WebUSBOriginTrial) and [insert it in your
+application](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+
+The trial will end in March 2017. By that point, we expect to have figured
+out any changes necessary to stabilize the feature and move it out from Origin
+Trials.
 
 ### HTTPS Only
 
