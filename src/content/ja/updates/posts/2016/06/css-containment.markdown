@@ -1,8 +1,6 @@
 ---
 title: "Chrome 52 に CSS Containment が導入"
 description: "CSS Containment という新しい仕様によって、ブラウザが行うスタイル、レイアウト、描画の範囲を制限できるようになります。"
-authors:
-  - paullewis
 translators:
   - myakura
 ---
