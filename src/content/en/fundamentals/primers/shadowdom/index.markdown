@@ -100,7 +100,7 @@ When the browser loads a web page it does a bunch of interesting stuff. One of t
 
 {% highlight javascript %}
 const header = document.createElement('header');
-const h1 document.createElement('h1');
+const h1 = document.createElement('h1');
 h1.textContent = 'Hello world!';
 header.appendChild(h1);
 document.body.appendChild(header);
