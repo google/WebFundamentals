@@ -25,6 +25,8 @@ notes:
 
 Earlier we discussed making sure that elements appear in the DOM in a way that the default tab order makes sense. But what if you have content that isn't currently displayed, yet still needs to be in the DOM, such as a slide-in panel? When you have elements like this that receive focus when they're off screen, it can seem as if the focus is disappearing and reappearing as the user tabs through the page &mdash; clearly an undesirable effect. Ideally, we should prevent the panel from gaining focus when it's off screen, and only allow it to be focused when the user can interact with it.
 
+![slide-in-panel](imgs/slide-in-panel.png)
+
 Sometimes you need to do a bit of detective work to figure out where focus has gone. You can use `document.activeElement` from the console to figure out which element is currently focused. 
 
 >Another tool at your disposal is the <a href="https://chrome.google.com/webstore/search/accessibility%20developer%20tools" target="_blank">Accessibility Developer Tools extension</a>, available on the Chrome Web Store. The extension offers an audit that can run against your entire site and alert you of any accessibility issues, and an accessibilities tab in the elements panel for inspecting elements and learning about their semantic information.
@@ -33,10 +35,8 @@ Sometimes you need to do a bit of detective work to figure out where focus has g
 
 Once you know which off screen element is being focused, you can set it to `display: none` or `visibility: hidden`, and then set it back to `display: block` or `visibility: visible` before showing it to the user.
 
-Here's a sample page where the focus seems to get lost as you tab around. It is probably focusing something off screen, but exactly which invisible element is grabbing the focus isn't obvious.
+![slide-in-panel2](imgs/slide-in-panel2.png)
 
-<a href="http://robdodson.github.io/udacity-a11y/lesson2-focus/04-offscreen-content/" target="_blank">The Accessibility Blog sample page</a>
+![slide-in-panel3](imgs/slide-in-panel3.png)
 
-Tabbing through the page, it seems that focus jumps out of order somewhere after the navigation links. If you use `document.activeElement` or run the accessibility audit, you can see that the item stealing focus is a button with a class of "close". Looking at the source, you'll find that there is some markup for a modal window and, sure enough, there's a button with `class="close"` applied. 
-
-Because you aren't currently displaying that modal, you can update the CSS to set anything with `class="modal"` to `display: none`. That will opt it, and all of its children, out of the tab order. Then when you want to display the modal you can override that style, and its elements will have a normal tab order.
+In general, we encourage developers to tab through your sites before each publish to see that the tab order doesn't disappear or jump out of a logical sequence. If it does, you should make sure you are appropriately hiding offscreen content with `display: none` or `visibility: hidden`, or that you rearrange elements' physical positions in the DOM so they are in a logical order.
