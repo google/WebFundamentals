@@ -41,9 +41,9 @@ As you can see in the table, one of the common keyboard behaviors that should be
 
 Roving tabindex works by setting `tabindex` to -1 for all children except the currently-active one. The component then uses a keyboard event listener to determine which key the user presses; when this happens, it sets the previously focused child's `tabindex` to -1, sets the to-be-focused child's `tabindex` to 0, and calls the focus method on it. 
 
-![water-tea-coffee-code](imgs/water-coffee-tea-code.png)
+![water-tea-coffee-code](imgs/water-tea-coffee-code.png)
 
-![water-tea-coffee-code2](imgs/water-coffee-tea-code2.png)
+![water-tea-coffee-code2](imgs/water-tea-coffee-code2.png)
 
 When the user reaches the last (or first, depending on the direction they're moving the focus) child, you will loop around and focus the first (or last) child again.
 
