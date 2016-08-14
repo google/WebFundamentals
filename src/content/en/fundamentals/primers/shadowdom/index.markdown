@@ -72,7 +72,7 @@ You don't have to author web components that use shadow DOM. But when you do, yo
 
 Shadow DOM is designed as a tool for building component-based apps. Therefore, it brings solutions for common problems in web development:
 
-- **Isolated DOM**: a component's DOM is self-contained (e.g. `document.querySelector()` won't return nodes in the component's shadow DOM.
+- **Isolated DOM**: a component's DOM is self-contained (e.g. `document.querySelector()` won't return nodes in the component's shadow DOM).
 - **Scoped CSS**: CSS defined inside shadow DOM is scoped to it. Styles rules don't leak out and page styles don't bleed in.
 - **Composition**: design a declarative, markup-based API for your component.
 - **Simplifies CSS** - scoped DOM means you can use simple CSS selectors, more generic id/class names, and not worry about naming conflicts.
