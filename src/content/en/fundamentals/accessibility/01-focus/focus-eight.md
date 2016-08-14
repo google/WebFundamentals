@@ -46,4 +46,4 @@ Consider a modal dialog represented by a `div` that contains a few elements, and
 
 This procedure gives you a usable, non-frustrating modal window that everyone can use effectively.
 
-For more details, you can examine this <a href="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/modal.js" target="_blank">sample code</a>, and view a live example from <a href="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution" target="_blank">a completed page</a>.
+For more details, you can examine this <a href="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/modal.js" target="_blank">sample code</a>, and view a live example from a <a href="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution" target="_blank">completed page</a>.
