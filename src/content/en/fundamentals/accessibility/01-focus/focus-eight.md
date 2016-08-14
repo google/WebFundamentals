@@ -27,6 +27,8 @@ Sometimes when you're managing focus you can get into a situation you can't get 
 
 Oddly, there are times when this behavior is actually desirable, like in a modal window. Normally, when the modal is displayed, you don't want the user to access the content behind it. You might add an overlay to cover the page visually, but that doesn't stop keyboard focus from accidentally traveling outside the modal. In instances like this you can implement a temporary keyboard trap to ensure that you trap focus only while the modal is displayed and then restore focus to the previously-focused item when the modal is closed.
 
+![modal-example](imgs/modal-example.png)
+
 >There are some proposals on how to make this easier for developers, including the `<dialog>` element, but they don't yet have widespread browser support. 
 >
 >See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog" target="_blank">this MDN article</a> for more information on `<dialog>`, and this <a href="https://accessibility.oit.ncsu.edu/training/aria/modal-window/version-3/" target="_blank">North Carolina State University accessibility blog</a> for more information on modal windows.
@@ -42,4 +44,6 @@ Consider a modal dialog represented by a `div` that contains a few elements, and
  1. If the user presses `Esc`, close the modal. This is very helpful because it allows the user to close the modal without searching for a specific close button, and it benefits even users who are using a mouse. 
  1. When the modal is closed, hide it and the background overlay, and restore focus to the previously-focused element saved earlier.
 
-This straightforward procedure gives you a usable, non-frustrating modal window that everyone can use effectively.
+This procedure gives you a usable, non-frustrating modal window that everyone can use effectively.
+
+For more details, you can examine this <a href="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/modal.js" target="_blank">sample code</a>, and view a <a href="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution" target="_blank">live example</a> in action.
