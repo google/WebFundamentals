@@ -142,12 +142,11 @@ The spec [defines a list of elements](http://w3c.github.io/webcomponents/spec/sh
 - The browser already hosts its own internal shadow DOM for the element (`<textarea>`, `<input>`).
 - It doesn't make sense for the element to host a shadow DOM (`<img>`).
 
-For example:
+For example, this doesn't work:
 
 {% highlight javascript %}
-let shadowRoot = document.createElement('div').attachShadow({mode: 'open'});
+document.createElement('input').attachShadow({mode: 'open'});
 // Error. `<input>` cannot host shadow dom.
-// document.createElement('input').attachShadow({mode: 'open'});
 {% endhighlight %}
 
 ### Creating shadow DOM for a custom element {#elements}
