@@ -553,10 +553,10 @@ Users can tweak internal styles if the component's author provides styling hooks
     --fancy-tabs-bg: black;
   }
 </style>
-<fancy-tabs>...</fancy-tabs>
+<fancy-tabs background>...</fancy-tabs>
 {% endhighlight %}
 
-Inside it's shadow DOM:
+Inside its shadow DOM:
 
 {% highlight css %}
 :host([background]) {
