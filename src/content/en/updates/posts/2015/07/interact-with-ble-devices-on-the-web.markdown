@@ -13,6 +13,7 @@ tags:
   - IoT
   - WebBluetooth
   - PhysicalWeb
+  - origintrials
 ---
 
 What if I told you websites could communicate with nearby Bluetooth devices
@@ -372,6 +373,10 @@ Service.
 - [Read Characteristic Value Changed](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html) - read battery level and be notified of changes from a BLE Device.
 
 Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/demos) and [official Web Bluetooth Codelabs](https://github.com/googlecodelabs?query=bluetooth) as well.
+
+## Libraries
+
+- [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API.
 
 ## Tools
 
