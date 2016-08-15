@@ -1,82 +1,83 @@
 ---
 layout: shared/narrow
-title: "Inspect Page Resources"
-description: "View all of a page's resources, such as documents, images,
-scripts, and fonts, in the Chrome DevTools Resources panel."
+title: "Inspect Resources"
+description: "Organize resources by frame, domain, type, or other criteria."
 published_on: 2015-04-14
-updated_on: 2016-03-18
+updated_on: 2016-07-29
 order: 3
 authors:
   - kaycebasques
-  - megginkearney
 translation_priority: 0
 key-takeaways:
   page-resources:
-    - "View page resources, organized by main document and embedded frames."
-    - "Preview individual resources, such as images, fonts, and scripts."
-    - "Reveal a resource in the Network panel."
-    - "View the bounding box of an embedded frame."
+    - "Use the <strong>Frames</strong> pane of the <strong>Application</strong>
+      panel to organize resources by frame."
+    - "You can also view resources by frame from the <strong>Sources</strong>
+      panel by disabling the <strong>group by folder</strong> option."
+    - "To view resources by domain and folder, use the <strong>Sources</strong>
+      panel."
+    - "Filter resources by name or other criteria in the
+      <strong>Network</strong> panel."
+related-guides:
+  filter:
+    -
+      title: "Filter Requests"
+      href: tools/chrome-devtools/profile/network-performance/resource-loading?hl=en#filter-requests
 ---
 
-<p class="intro">View all of a page's resources, such as documents,
-images, scripts, and fonts, in the Chrome DevTools <strong>Resources</strong>
-panel.</p>
+<p class="intro">Organize resources by frame, domain, type, or other
+criteria.</p>
 
 {% include shared/toc.liquid %}
 
 {% include shared/takeaway.liquid list=page.key-takeaways.page-resources %}
 
-## View resources
+## Organize resources by frame {#frames}
 
-Open the **Resources** panel, and then expand the **Frames** category to
-see your page's resources. 
+Use the **Frames** pane on the **Application** panel for a frame-organized
+representation of your page's resources.
 
-1. The top-level folder is the main document.
-2. Nested folders are embedded frames. Expand one of these folders to view 
-   that frame's resources.
-3. Below the embedded frames folders (if any) are the main
-   document's resources (images, scripts, stylesheets, other).
-4. Last, the main document itself. 
+![frames detail][frames]
 
-![viewing page resources](imgs/resources.png)
+* The top-level (`top` in the screenshot above) is the main document.
+* Below that (e.g. `widget2` in the screenshot above) are subframes of the
+  main document. Expand one of these subframes to view the resources
+  originating from that frame.
+* Below the subframes are the images, scripts, and other resources of the
+  main document.
+* Last is the main document itself.
 
-## Preview a resource
+Click on a resource to view a preview of it.
 
-Select a resource to preview it. Hover over a resource's name to view its
-URL.
+Right-click on a resource to view it in the **Network** panel, open it in a
+new tab, copy its URL, or save it.
 
-![previewing an image in the resources panel](imgs/image-preview.png)
+![view resource][resource]
 
-Image previews (like in the screenshot above) include file size, dimensions,
-and MIME type. These are located in the information bar below the image 
-preview.
+You can also view resources by frame in the **Sources** panel, by clicking
+on the overflow menu in the navigator and disabling the **Group by folder**
+option to stop grouping resources by folder.
 
-## Show resource in Network panel
+![group by folder option](imgs/group-by-folder.png)
 
-Right-click on a resource name and select **Reveal in Network Panel** to 
-view it in the **Network** panel. The **Network** panel automatically opens
-and highlights the resource in yellow. It does not select the resource, 
-however.
+The resources will be listed by frame only.
 
-If you don't see the **Reveal in Network Panel** option, reload the page while
-DevTools is open. 
+![no folders](imgs/no-folders.png)
 
-## Open resource in new tab
+[frames-pane]: /web/tools/chrome-devtools/iterate/manage-data/imgs/frames-pane.png
+[frames]: /web/tools/chrome-devtools/iterate/manage-data/imgs/frames.png
+[resource]: /web/tools/chrome-devtools/iterate/manage-data/imgs/resource.png
 
-Right-click on a resource and select **Open Link in New Tab** to open the
-resource in a new Google Chrome tab.
+## Organize resources by domain and folder {#sources}
 
-## View resource address
+To view resources organized by domain and directory, use the **Sources**
+panel.
 
-Hover over a resource name to view a tooltip that displays the complete URL
-of the resource. 
+![sources panel](imgs/sources.png)
 
-Right-click on a resource name and select **Copy link address** to copy the 
-resource's URL to the system clipboard.
+## Filter resources by name, type, or other criteria {#filter}
 
-## View bounding box of an embedded frame
+Use the **Network** panel to filter resources by name, type, and a whole range
+of other criteria. Check out the guide below to learn more.
 
-Hover your mouse over one of the folders that represents an embedded frame
-to view the bounding box of the frame. 
-
-![view embedded frame bounding box](imgs/view-frame.png)
+{% include shared/related_guides.liquid inline=true list=page.related-guides.filter %}

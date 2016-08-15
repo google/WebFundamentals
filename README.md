@@ -31,7 +31,7 @@ To build and run this project you need to have Ruby, Node and NPM.
     * `npm install -g gulp`
 1. Install [npm](https://www.npmjs.org) dependencies
     * `npm install`
-1. Get the [App Engine SDK](https://cloud.google.com/appengine/downloads) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
+1. Get the [App Engine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python) and unzip into the google_appengine folder inside the project root. Add it to your path accordingly (in bash, `$ PATH=./google_appengine:$PATH`)
 
 # Running the site
 
@@ -78,7 +78,7 @@ To access the staging site for a pull request:
 1. Open the pull request on `github.com`.
 2. Click **Show All Checks**.
 3. Click **Details** next to the **Builder** check. The staging site opens
-   up in a new tab. 
+   up in a new tab.
 
 You can also access each staging site directly, using the following URL:
 
@@ -93,13 +93,13 @@ Staged branches are also available at:
 
     <branch>-dot-weasel-dot-web-central.appspot.com
 
-Where `<branch>` is the name of the branch. 
+Where `<branch>` is the name of the branch.
 
 **The URL pattern for pull requests and branches may change without notice.**
 
 # Translations
 
-See [our translations guide](TRANSLATION.md)
+See [our translations guide](https://developers.google.com/web/resources/translations/)
 
 # Building Shows
 

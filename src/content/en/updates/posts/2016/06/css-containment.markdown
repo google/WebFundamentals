@@ -63,7 +63,7 @@ And you append a new element to one view, which will trigger styles, layout and 
 
 <section class="view">
   About
-  <div class="newly-added-element">Check me out<!/div>
+  <div class="newly-added-element">Check me out!</div>
 </section>
 
 <section class="view">

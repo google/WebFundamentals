@@ -1,10 +1,10 @@
 ---
 layout: updates/post
-title: "Interact with BLE devices on the Web"
+title: "Interact with Bluetooth devices on the Web"
 description: "A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT."
 featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png
 published_on: 2015-07-22
-updated_on: 2016-05-27
+updated_on: 2016-07-27
 authors:
   - beaufortfrancois
 tags:
@@ -13,6 +13,7 @@ tags:
   - IoT
   - WebBluetooth
   - PhysicalWeb
+  - origintrials
 ---
 
 What if I told you websites could communicate with nearby Bluetooth devices
@@ -43,16 +44,36 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the spec](https://github.com/WebBluetoothCG/web-bluetooth/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
-Web Bluetooth API is at the time of writing partially implemented in Chrome OS,
-Chrome for Android and Chrome for Linux behind an experimental flag. Go to
-`chrome://flags/#enable-web-bluetooth`,
-enable the highlighted flag, restart Chrome and you should be able to
+Web Bluetooth API is currently available to be enabled experimentally on your
+origin in Origin Trials, or locally on your machine using an experimental flag.
+The implementation is partially complete and currently available on Chrome OS,
+Chrome for Android M, Linux, and Mac.
+
+Go to `chrome://flags/#enable-web-bluetooth`, enable the highlighted flag,
+restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices,
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
-Bluetooth characteristics and [receive GATT Notifications](#receive-gatt-notifications).
+Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications) and know when a [Bluetooth device gets
+disconnected](#get-disconnected-from-a-bluetooth-device).
 
 <img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/web-bluetooth-flag.png" alt="Web Bluetooth Flag highlighted in chrome://flags"/>
+
+### Available for Origin Trials
+
+In order to get as much feedback as possible from developers using the Web
+Bluetooth API in the field, we're also adding this feature in Chrome 53 as an
+[origin trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md) for Chrome
+OS, Android M, and Mac. **Origin Trials allow you to temporarily enable the
+feature for all of users of your website.** During the origin trial, the API may
+still change in backward-incompatible ways before we freeze it into the web
+platform.  To use this experimental API in Chrome with no flag, you'll need to
+[request a token for your origin](http://bit.ly/WebBluetoothOriginTrial) and
+[insert it in your application](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+
+The trial will end in January 2017. By that point, we expect to have figured
+out any changes necessary to stabilize the feature and move it out from Origin
+Trials.
 
 ## Security Requirements
 
@@ -111,14 +132,14 @@ device chooser where they can pick one device or simply cancel the request.
 <img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/bluetooth-device-chooser.png" alt="Bluetooth Device Chooser screenshot"/>
 
 The `navigator.bluetooth.requestDevice` function takes a mandatory Object that
-defines Bluetooth GATT service filters. These filters are used to return
-only devices that advertise the selected services.
+defines filters. These filters are used to return only devices that match some
+advertised Bluetooth GATT services and/or the device name.
 
 For instance, scanning for Bluetooth devices advertising the [Bluetooth GATT Battery Service](https://developer.bluetooth.org/gatt/services/Pages/ServiceViewer.aspx?u=org.bluetooth.service.battery_service.xml) is this simple:
 
 {% highlight javascript %}
 navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
-.then(device => {...})
+.then(device => { /* ... */ })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
@@ -134,14 +155,15 @@ navigator.bluetooth.requestDevice({
     services: [0x1234, 0x12345678, '99999999-0000-1000-8000-00805f9b34fb']
   }]
 })
-.then(device => {...})
+.then(device => { /* ... */ })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
 You can also scan for Bluetooth devices based on the device name being
 advertised with the `name` filters key, or even a prefix of this name with the
 `namePrefix` filters key. Note that in this case, you will also need to define
-the `optionalServices` key to be able to access some services.
+the `optionalServices` key to be able to access some services. If you don't,
+you'll get an error later when trying to access them.
 
 {% highlight javascript %}
 navigator.bluetooth.requestDevice({
@@ -150,7 +172,7 @@ navigator.bluetooth.requestDevice({
   }],
   optionalServices: ['battery_service']
 })
-.then(device => {...})
+.then(device => { /* ... */ })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
@@ -158,8 +180,7 @@ navigator.bluetooth.requestDevice({
 
 So what do you do now that you have a `BluetoothDevice` returned from
 `navigator.bluetooth.requestDevice`'s Promise? Let's connect to the Bluetooth
-remote GATT Server which holds the
-service and characteristic definitions.
+remote GATT Server which holds the service and characteristic definitions.
 
 {% highlight javascript %}
 navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
@@ -172,7 +193,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
   // Attempts to connect to remote GATT Server.
   return device.gatt.connect();
 })
-.then(server => {...})
+.then(server => { /* ... */ })
 .catch(error => { console.log(error); });
 {% endhighlight %}
 
@@ -211,6 +232,28 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }]
 If you use a custom Bluetooth GATT characteristic, you may provide either the
 full Bluetooth UUID or a short 16- or 32-bit form to `service.getCharacteristic`.
 
+Note that you can also add a `characteristicvaluechanged` event listener on a
+characteristic to handle reading its value. Check out [Read Characteristic Value Changed Sample](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html) 
+to see how to optionally handle upcoming GATT notifications as well.
+
+{% highlight javascript %}
+...
+.then(characteristic => {
+  // Set up event listener for when characteristic value changes.
+  characteristic.addEventListener('characteristicvaluechanged',
+                                  handleBatteryLevelChanged);
+  // Reading Battery Level...
+  return characteristic.readValue();
+})
+.catch(error => { console.log(error); });
+
+function handleBatteryLevelChanged(event) {
+  let batteryLevel = event.target.value.getUint8(0);
+  console.log('Battery percentage is ' + batteryLevel + '%');
+}
+{% endhighlight %}
+
+
 ### Write to a Bluetooth Characteristic
 
 Writing to a Bluetooth GATT Characteristic is as easy as reading it. This time,
@@ -231,7 +274,7 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
   var resetEnergyExpended = new Uint8Array([1]);
   return characteristic.writeValue(resetEnergyExpended);
 })
-.then(() => {
+.then(_ => {
   console.log('Energy expended has been reset.');
 })
 .catch(error => { console.log(error); });
@@ -249,35 +292,68 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
 .then(service => service.getCharacteristic('heart_rate_measurement'))
 .then(characteristic => {
   return characteristic.startNotifications()
-  .then(() => {
+  .then(_ => {
     characteristic.addEventListener('characteristicvaluechanged',
-      handleNotifications);
+                                    handleCharacteristicValueChanged);
   });
 })
-.then(() => {
+.then(_ => {
   console.log('Notifications have been started.');
 })
 .catch(error => { console.log(error); });
 
-function handleNotifications(event) {
+function handleCharacteristicValueChanged(event) {
   var value = event.target.value;
-  var textDecoder = new TextDecoder();
+  var textDecoder = new TextDecoder(); // Used to convert bytes to UTF-8 string.
   console.log('Received ' + textDecoder.decode(value));
 }
 {% endhighlight %}
 
-The dedicated [sample](https://googlechrome.github.io/samples/web-bluetooth/notifications.html)
+The [Notifications Sample](https://googlechrome.github.io/samples/web-bluetooth/notifications.html)
 will show you to how to stop notifications with `stopNotifications()` and
 properly remove the added `characteristicvaluechanged` event listener.
 
-## Samples, Demos & Codelabs
+### Get disconnected from a Bluetooth Device
 
-The samples below have been tested with the Web Bluetooth flag enabled. To
-enjoy these samples to their fullest, I recommend you install the [BLE
-Peripheral Simulator Android
-App](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
+To provide a better user experience, you may want to show a warning message if
+the `BluetoothDevice` gets disconnected to invite the user to reconnect.
+
+{% highlight javascript %}
+navigator.bluetooth.requestDevice({ filters: [{ name: 'Francois robot' }] })
+.then(device => {
+  // Set up event listener for when device gets disconnected.
+  device.addEventListener('gattserverdisconnected', onDisconnected);
+
+  // Attempts to connect to remote GATT Server.
+  return device.gatt.connect();
+})
+.then(server => { /* ... */ })
+.catch(error => { console.log(error); });
+
+function onDisconnected(event) {
+  let device = event.target;
+  console.log('Device ' + device.name + ' is disconnected.');
+}
+{% endhighlight %}
+
+You can also call `device.gatt.disconnect()` to disconnect your web app from
+the Bluetooth device. This will trigger existing `gattserverdisconnected` event
+listeners. Note that it will NOT stop bluetooth device communication if another
+app is already communicating with the Bluetooth device. Check out the [Device
+Disconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html)
+and the [Automatic Reconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html)
+to dive deeper.
+
+## Samples, Demos and Codelabs
+
+All [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/index.html) below
+have been tested with the Web Bluetooth flag enabled. To enjoy these samples to
+their fullest, I recommend you install the
+[BLE Peripheral Simulator Android App](https://play.google.com/store/apps/details?id=io.github.webbluetoothcg.bletestperipheral)
 which simulates a BLE Peripheral with a Battery Service or a Heart Rate
 Service.
+
+### Beginner
 
 - [Device Info](https://googlechrome.github.io/samples/web-bluetooth/device-info.html) - retrieve basic device information from a BLE Device.
 - [Battery Level](https://googlechrome.github.io/samples/web-bluetooth/battery-level.html) - retrieve battery information from a BLE Device advertising Battery information.
@@ -286,11 +362,21 @@ Service.
 - [Notifications](https://googlechrome.github.io/samples/web-bluetooth/notifications.html) - start and stop characteristic notifications from a BLE Device.
 - [Device Disconnect](https://googlechrome.github.io/samples/web-bluetooth/device-disconnect.html) - disconnect and get notified from a disconnection of a BLE Device after connecting to it.
 - [Get Characteristics](https://googlechrome.github.io/samples/web-bluetooth/get-characteristics.html) - get all characteristics of an advertised service from a BLE Device.
+
+### Combining multiple operations
+
 - [GAP Characteristics](https://googlechrome.github.io/samples/web-bluetooth/gap-characteristics.html) - get all GAP characteristics of a BLE Device.
 - [Device Information Characteristics](https://googlechrome.github.io/samples/web-bluetooth/device-information-characteristics.html) - get all Device Information characteristics of a BLE Device.
 - [Link Loss](https://googlechrome.github.io/samples/web-bluetooth/link-loss.html) - set the Alert Level characteristic of a BLE Device (readValue & writeValue).
+- [Discover Services & Characteristics](https://googlechrome.github.io/samples/web-bluetooth/discover-services-and-characteristics.html) - discover all accessible primary services and their characteristics from a BLE Device.
+- [Automatic Reconnect](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html) - reconnect to a disconnected BLE device using an exponential backoff algorithm.
+- [Read Characteristic Value Changed](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html) - read battery level and be notified of changes from a BLE Device.
 
-You can also find some Web Bluetooth Demos at [https://github.com/WebBluetoothCG/demos](https://github.com/WebBluetoothCG/demos) and the Official Codelabs at [https://github.com/googlecodelabs?query=bluetooth](https://github.com/googlecodelabs?query=bluetooth).
+Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/demos) and [official Web Bluetooth Codelabs](https://github.com/googlecodelabs?query=bluetooth) as well.
+
+## Libraries
+
+- [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API.
 
 ## Tools
 
@@ -310,29 +396,34 @@ I would recommend you check out the official [Bluetooth debug page](https://site
 
 ## What's next
 
-As the Web Bluetooth API implementation is not complete yet, here's a sneak
-peek of what to expect in the coming months:
+Check the [browser and platform implementation
+status](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md)
+first to know which parts of the Web Bluetooth API are currently being implemented.
 
+Though it's still incomplete, here's a sneak peek of what to expect in the
+coming months:
+
+- [Scanning for nearby BLE advertisements](https://github.com/WebBluetoothCG/web-bluetooth/pull/239)
+  will happen with `navigator.bluetooth.requestLEScan()`.
+- [Specifying the Eddystone upgrade](https://github.com/WebBluetoothCG/web-bluetooth/pull/230) will
+  allow a website opened from a Physical Web notification, to communicate
+  with the device that advertised its URL.
 - A new `serviceadded` event will track newly discovered Bluetooth GATT Services
   while `serviceremoved` event will track removed ones. A new `servicechanged`
   event will fire when any characteristic and/or descriptor gets added or
-  removed from the Bluetooth GATT Service.
-- A Promise to [detect if Bluetooth is available on the
-  platform](https://github.com/WebBluetoothCG/web-bluetooth/issues/127) will be
-  added to improve user experience.
+  removed from a Bluetooth GATT Service.
 
-At the time of writing, Chrome OS, Android 6+ and Chrome for Linux are [the most advanced
+At the time of writing, Chrome OS, Android M, Linux, and Mac are [the most advanced
 platforms](https://github.com/WebBluetoothCG/web-bluetooth/blob/gh-pages/implementation-status.md).
-Mac OSX is partially working.  Windows 8.1+ and iOS will be supported
-as much as feasible by the platforms.
+Windows 8.1+ and iOS will be supported as much as feasible by the platforms.
 
 ## Resources
 
-- Web Bluetooth Spec: [https://webbluetoothcg.github.io/web-bluetooth](https://webbluetoothcg.github.io/web-bluetooth)
+- Web Bluetooth Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 - Chrome Feature Status: [https://www.chromestatus.com/feature/5264933985976320](https://www.chromestatus.com/feature/5264933985976320)
-- Spec Issues: [https://github.com/WebBluetoothCG/web-bluetooth/issues](https://github.com/WebBluetoothCG/web-bluetooth/issues)
 - Implementation Bugs: [https://crbug.com/?q=component:Blink>Bluetooth](https://crbug.com/?q=component:Blink>Bluetooth)
+- Web Bluetooth Spec: [https://webbluetoothcg.github.io/web-bluetooth](https://webbluetoothcg.github.io/web-bluetooth)
+- Spec Issues: [https://github.com/WebBluetoothCG/web-bluetooth/issues](https://github.com/WebBluetoothCG/web-bluetooth/issues)
 - BLE Peripheral Simulator App: [https://github.com/WebBluetoothCG/ble-test-peripheral-android](https://github.com/WebBluetoothCG/ble-test-peripheral-android)
-- Google+ Community: [https://plus.google.com/communities/108953318610326025178](https://plus.google.com/communities/108953318610326025178)
 
 {% ytvideo _BUwOBdLjzQ %}

@@ -1000,6 +1000,22 @@ mscales:
   twitter: wibblymat
   email: mscales@google.com
 
+alan:
+  name:
+    given: Alan
+    family: Silva
+  org:
+    name: Independent
+    unit: Developer
+  country: Brazil
+  role:
+    - translator
+  twitter: AlanCezarAraujo
+  homepage: https://www.linkedin.com/in/alan-cezar-31a6a538
+  email: alan.cezar.silva@gmail.com
+  description:
+    en: "Alan is a JavaScript Developer"
+
 yoichiro:
   name:
     given: Yoichiro
@@ -1032,3 +1048,33 @@ wdenniss:
   email: wdenniss@google.com
   description:
     en: "Google Identity Product Manager"
+
+captainpangyo:
+  name:
+    given: Josh
+    family: Jang
+  org:
+    name: POSCO ICT
+    unit: SW Platform
+  country: KR
+  role:
+    - translator
+  homepage: https://joshuajangblog.wordpress.com/
+  google: +GihyoJoshuaJang
+  email: jangkeehyo@gmail.com
+  description:
+    en: "Josh is a Singing Computer Scientist"
+
+zkoch:
+  name:
+    given: Zach
+    family: Koch
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  email: zkoch@google.com
+  description:
+    en: "Google Chrome Product Manager"

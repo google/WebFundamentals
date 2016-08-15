@@ -89,7 +89,7 @@ pre, code {
   font-size: 10pt;
   line-height: $base-line;
   word-wrap: normal;
-  font-family: 'Roboto Mono', 'Inconsolata', 'monospace';
+  font-family: 'Roboto Mono', 'Inconsolata', monospace;
 }
 
 a {
@@ -137,6 +137,10 @@ figcaption {
   a {
     color: inherit;
   }
+}
+
+.mdl-layout {
+  height: auto !important;
 }
 
 .mdl-layout__drawer-button.wf-header__menu-btn {

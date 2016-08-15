@@ -34,7 +34,7 @@ To begin remote debugging, you need:
 
 * Chrome 32 or later installed on your development machine.
 * [USB drivers][drivers] installed on your development machine, if you're using
-  Windows.
+  Windows. (Ensure _Device Manager_ reports the USB driver correctly)
 * A USB cable to connect your Android device to your development machine.
 * Android 4.0 or later.
 * Chrome for Android installed on your Android device.
