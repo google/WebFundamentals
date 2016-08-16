@@ -1,63 +1,33 @@
 ---
 layout: shared/narrow
-title: "Prerequisites"
-description: "Before we do anything else, let's make sure we have the right technoloy."
-published_on: 2014-12-01
-updated_on: 2016-02-04
-translation_priority: 0
-order: 2
-authors:
-  - mattgaunt
-  - josephmedley
+title: "はじめる前に"
+description: "はじめる前に、まずちゃんとした環境を整えているかを確かめましょう。"
+translators:
+  - myakura
 ---
 
-<p class="intro">Before we do anything else, let's make sure we have the 
-	right technoloy.
-</p>
+<p class="intro">はじめる前に、まずちゃんとした環境を整えているかを確かめましょう。</p>
 
-## Use an appropriate browser
+## サポートしているブラウザを使う
 
-Browser options are growing. Service workers are suppported by Firefox and
-Opera. Microsoft Edge is now 
-[showing public support](https://dev.windows.com/en-us/microsoft-edge/platform/status/serviceworker). 
-Even Safari has dropped [hints of future development](https://trac.webkit.org/wiki/FiveYearPlanFall2015). 
-You can follow the progress of all the browsers at Jake Archibald's 
-[is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/) 
-site.
+Service Worker をサポートするブラウザは増えています。現在は Firefox と Opera でサポートされています。Microsoft Edge も[支持を表明](https://dev.windows.com/en-us/microsoft-edge/platform/status/serviceworker)しています。Safariも[将来の展開を示唆](https://trac.webkit.org/wiki/FiveYearPlanFall2015)しています。ブラウザの実装状況は、Jake Archibald による [is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/) で確認できます。
 
-### Which version of Chrome?
+### Chrome のバージョンは？
 
-If you're not using Chrome 46 or later, then  
-[please upgrade now](https://support.google.com/chrome/answer/95414). 
-Versions  earlier than that lack support for some features you're going 
-to need for  service workers, specifically `Cache.addAll()`.
+もし Chrome 46 以降のバージョンを使っていない場合は、[アップグレードしてください](https://support.google.com/chrome/answer/95414)。Chrome 46 より前のバージョンでは、Service Worker で必要になるだろう機能、たとえば `Cache.addAll()` などが使えません。
 
-If you really are stuck with an older version of Chrome, there's 
-[a polyfill](https://github.com/coonsta/cache-polyfill) that adds the missing 
-features. Grab `dist/serviceworker-cache-polyfill.js` to put somewhere in your 
-site and use it in a service worker with the `importScripts()` method. Any 
-script which is imported will automatically be cached by the service worker.
+もし古いバージョンの Chrome に固定されている場合、足りない機能を補う [polyfill](https://github.com/coonsta/cache-polyfill) があります。`dist/serviceworker-cache-polyfill.js` をサイトのどこかにコピーし、Service Worker のスクリプトから `importScripts()` メソッドで呼び出します。インポートされたすべてのスクリプトは Service Worker によってキャッシュされます。
 
 {% highlight javascript %}
 importScripts('serviceworker-cache-polyfill.js');
 {% endhighlight %}
 
-## You need HTTPS
+## HTTPS が必要
 
-During development you'll be able to use service worker through `localhost`, but
-to deploy it on a site you'll need to have HTTPS setup on your server.
+Service Worker は `localhost` では動作しますが、デプロイ時にはサーバに HTTPS を設定しなければいけません。
 
-Using service worker you can hijack connections, fabricate, and filter
-responses. Powerful stuff. While you would use these powers for good, a
-man-in-the-middle might not. To avoid this, you can only register service
-workers on pages served over HTTPS, so we know the service worker the browser
-receives hasn't been tampered with during its journey through the network.
+Service Worker を使うと接続へのハイジャック、改ざん、フィルタリングができてしまいます。とても強力です。良いことに使えばそれでよいのですが、中間者（man-in-the-middle）はそうではないかもしれません。これを防ぐため、Service Worker は HTTPS で提供されるページのみに登録できるようになっています。こうすることでブラウザが受け取る Service Worker は、ネットワークの旅の途中で改ざんされていないことを保証できます。
 
-[Github Pages](https://pages.github.com/) are served over HTTPS, so they're a
-great place to host demos.
+[Github Pages](https://pages.github.com/) は HTTPS で提供されるので、デモをホストするには絶好の環境です。
 
-If you want to add HTTPS to your server then you'll need to get a TLS 
-certificate and set it up for your server. This varies depending on your setup, 
-so check your server's documentation and be sure to check out 
-[Mozilla's SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/) 
-for best practices.
+サーバに HTTPS を設定したい場合は、TLS 証明書を取得しサーバにセットアップしなければなりません。セットアップ方法は環境によるので、サーバのドキュメントを読み、そして [Mozilla の SSL コンフィグジェネレータ](https://mozilla.github.io/server-side-tls/ssl-config-generator/)を使ってベストプラクティスを得てください。
