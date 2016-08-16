@@ -1,46 +1,24 @@
 ---
 layout: shared/narrow
-title: "Update a Service Worker"
-description: "There will be a point in time where your service worker will need updating."
-published_on: 2014-12-01
-updated_on: 2016-01-19
-translation_priority: 0
-order: 8
-authors:
-  - mattgaunt
+title: "Service Worker の更新"
+description: "開発が進むと、Service Worker を更新しなければいけない時が来るでしょう。"
+translators:
+  - myakura
 ---
 
-<p class="intro">There will be a point in time where your service worker will 
-  need updating. When that time comes, you'll need to follow these steps:</p>
+<p class="intro">開発が進むと、Service Worker を更新しなければいけない時が来るでしょう。更新は以下の手順で行います。</p>
 
-1. Update your service worker JavaScript file. When the user navigates to
-   your site, the browser tries to redownload the script file that defined the
-   service worker in the background. If there is even a byte's difference in 
-   the service worker file compared to what it currently has, it considers it 
-   _new_.
-2. Your new service worker will be started and the `install` event will be fired.
-3. At this point the old service worker is still controlling the current pages 
-   so the new service worker will enter a `waiting` state.
-4. When the currently open pages of your site are closed, the old service 
-   worker will be killed and the new service worker will take control.
-5. Once your new service worker takes control, its `activate` event will be 
-   fired.
+1. Service Worker の JavaScript ファイルを更新します。ユーザーがあなたのサイトに移動してきた時、ブラウザは Service Worker を定義する JavaScript ファイルを再度ダウンロードしようとします。現在ブラウザが保持しているファイルとダウンロードしようとするファイルにバイト差異がある場合、それは「新しいもの」と認識されます
+2. 新しい Service Worker がスタートし、`install` イベントが発火します
+3. この時点では、まだ古い Service Worker が現在のページをコントロールしているため、新しい Service Worker は `waiting` 状態になります
+4. 開かれているページが閉じられたら、古い Service Worker は終了され、新しい Service Worker がページをコントロール可能になります
+5. 新しい Service Worker がページをコントロール可能になったら、`activate` イベントが発火します
 
-One common task that will occur in the `activate` callback is cache management.
-The reason you'll want to do this in the `activate` callback is because if you
-were to wipe out any old caches in the install step, any old service worker,
-which keeps control of all the current pages, will suddenly stop being able to
-serve files from that cache.
+`activate` のコールバックで行いたいのが、キャッシュの管理です。なぜかというと、古いキャッシュをインストール時に削除すると、現在のページを管理する古い Service Worker がそのキャッシュからリソースを提供できなくなるからです。
 
-Let's say we have one cache called `'my-site-cache-v1'`, and we find that we
-want to split this out into one cache for pages and one cache for blog posts.
-This means in the install step we'd create two caches, `'pages-cache-v1'` and
-`'blog-posts-cache-v1'` and in the activate step we'd want to delete our older
-`'my-site-cache-v1'`.
+たとえば、`my-site-cache-v1` という名前のキャッシュがあり、これをページ用、ブログ用のふたつのキャッシュに分割したいとしましょう。インストール時に `pages-cache-v1` と `blog-posts-cache-v1` というふたつのキャッシュを作り、アクティベーション時に古い `my-site-cache-v1` を削除するわけです。
 
-The following code would do this by looping through all of the caches in the
-service worker and deleting any caches which aren't defined in the cache
-whitelist.
+次のコードは Service Worker 中のキャッシュすべてをループ処理し、ホワイトリストにないものを削除するものです。
 
 {% highlight javascript %}
 self.addEventListener('activate', function(event) {
