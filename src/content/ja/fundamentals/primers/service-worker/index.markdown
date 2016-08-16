@@ -1,55 +1,24 @@
 ---
 layout: shared/narrow-pages-list
-title: "Introduction to Service Worker"
-description: "Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features will rely on."
-published_on: 2014-12-01
-updated_on: 2016-01-18
-translation_priority: 0
-order: 1
+title: "Service Worker の紹介"
+description: "リッチなオフライン体験、定期的なバックグラウンド同期、プッシュ通知など、これまでネイティブアプリを必要としていた機能が Web にもやってきます。Service Worker はそれらの機能を提供する基盤技術です。"
+translators:
+  - myakura
 ---
 
-<p class="intro">Rich offline experiences, periodic background syncs, push
-notifications&mdash; functionality that would normally require a native
-application&mdash;are coming to the web. Service workers provide the technical
-foundation that all these features will rely on.</p>
+<p class="intro">リッチなオフライン体験、定期的なバックグラウンド同期、プッシュ通知など、これまでネイティブアプリを必要としていた機能が Web にもやってきます。Service Worker はそれらの機能を提供する基盤技術です。</p>
 
-## What is a Service Worker
+## Service Worker とは
 
-A service worker is a script that is run by your browser in the background,
-separate from a web page, opening the door to features which don't need a web
-page or user interaction. Today, they already include features like 
-[push notifications](/web/updates/2015/03/push-notifications-on-the-open-web) 
-and [background sync](/web/updates/2015/12/background-sync). In the future 
-service workers will support other things like periodic sync, or geofencing. 
-The core feature discussed in this tutorial is the ability to intercept and 
-handle network requests, including programmatically managing a cache of 
-responses.
+Service Worker はブラウザが Web ページとは別にバックグラウンドで実行するスクリプトで、Web ページやユーザのインタラクションを必要としない機能を Web にもたらします。すでに現在、[プッシュ通知](/web/updates/2015/03/push-notifications-on-the-open-web)や[バックグラウンド同期](/web/updates/2015/12/background-sync)が提供されています。さらに将来は定期的な同期、ジオフェンシングなども導入されるでしょう。このチュートリアルで説明する機能は、ネットワークリクエストへの介入や処理機能と、レスポンスをプログラムから操作できるキャッシュ機能です。
 
-The reason this is such an exciting API is that it allows you to support offline
-experiences, giving developers complete control over what exactly that
-experience is.
+この API にとてもわくわくするのは、それがオフライン体験をサポートし、そして開発者がその体験を完全にコントロールできるからです。
 
-Before service worker there was one other API that would give users an offline
-experience on the web called [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/). 
-The major issue with App Cache is the [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag) 
-that exist as well as the design working particularly well for single page web 
-apps, but not for multi-page sites. Service workers have been designed to 
-avoid these common pain points.
+Service Worker 以前にも、オフライン体験を Web にもたらすものとして [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/) というものがありました。しかし AppCache の重大な問題として、[たくさんの意図しない挙動](http://alistapart.com/article/application-cache-is-a-douchebag)があったこと、シングルページ Web アプリにはうまく動いてくれたものの、複数のページにまたがるサイトではうまく動いてくれないという設計がありました。Service Worker はこれらの弱点を避けるように設計されています。
 
-Things to note about a service worker:
+Service Worker について、知っておきたいことは次のとおりです。
 
-* It's a [JavaScript Worker](http://www.html5rocks.com/en/tutorials/workers/basics/),
-  so it can't access the DOM directly. Instead, a service worker can 
-  communicate with the pages it controls by responding to messages sent via 
-  the [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) 
-  interface, and those pages can manipulate the DOM if needed.
-* Service worker is a programmable network proxy, allowing you to control how 
-  network requests from your page are handled.
-* It will be terminated when not in use, and restarted when it's next needed, 
-  so you cannot rely on global state within a service worker's `onfetch` and 
-  `onmessage` handlers. If there is information that you need to persist and 
-  reuse across restarts, service workers do have access to the 
-  [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
-* Service workers make extensive use of promises, so if you're new to promises, 
-  then you should stop reading this and check out 
-  [Jake Archibald's article](/web/fundamentals/primers/promises/).
+* Service Worker は [JavaScript Worker](http://www.html5rocks.com/ja/tutorials/workers/basics/) のひとつです。ですので DOM に直接アクセスできません。Service Worker がコントロールするページとの通信は [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) インターフェースから送られるメッセージに返信することで行えます。DOM を操作したい場合は、コントロールするページ経由で行えます。
+* Service Worker はプログラム可能なネットワークプロキシです。ページからのネットワークリクエストをコントロールできます。
+* Service Worker は使用されていない間は終了され、必要な時になったら起動します。ですので `onfetch`、`onmessage` ハンドラ内でグローバルに設定したステートに依存できません。持続的で再利用可能な情報を Service Worker のライフサイクル間で共有したい場合は、[IndexedDB API](https://developer.mozilla.org/ja/docs/Web/API/IndexedDB_API) API にアクセスしなければいけません。
+* Service Worker は JavaScript の Promises を多用します。Promises についてよく知らない方はこの記事を読むのをいったん止めて、[Jake Archibaldの記事](/web/fundamentals/primers/promises/)を読みましょう。
