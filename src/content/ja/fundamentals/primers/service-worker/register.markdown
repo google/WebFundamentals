@@ -1,58 +1,35 @@
 ---
 layout: shared/narrow
-title: "Register a Service Worker"
-description: "To install a service worker you need to kick start the process by **registering** it in your page."
-published_on: 2014-12-01
-updated_on: 2016-01-19
-translation_priority: 0
-order: 5
-authors:
-  - mattgaunt
+title: "Service Worker の登録"
+description: "Service Worker をインストールするには、ページから Service Worker を**登録**しなければいけません。"
+translators:
+  - myakura
 ---
 
-<p class="intro">To install a service worker you need to kick start the process by
-<b>registering</b> it in your page. This tells the browser where your
-service worker JavaScript file lives.</p>
+<p class="intro">Service Worker をインストールするには、ページから Service Worker を<strong>登録</strong>しなければいけません。登録によって、ブラウザに Service Worker の JavaScript ファイルの場所を知らせられます。
 
 {% highlight javascript %}
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    // Registration was successful
+    // 登録成功
     console.log('ServiceWorker registration successful with scope: ', registration.scope);
   }).catch(function(err) {
-    // registration failed :(
+    // 登録失敗 :(
     console.log('ServiceWorker registration failed: ', err);
   });
 }
 {% endhighlight %}
 
-This code checks to see if the service worker API is available, and if it is,
-the service worker at `/sw.js` is registered.
+このコードはまず、Service Worker API が存在しているかをチェックし、あればさらに `/sw.js` にある Service Worker が登録されてるかをチェックします。
 
-You can call `register()` every time a page loads without concern; the browser will
-figure out if the service worker is already registered or not and handle it
-accordingly.
+ページが読み込まれるたびに `register()` メソッドが呼ばれますが、心配はいりません。ブラウザは Service Worker が登録されているかを調べてから登録処理をするかしないか判断してくれます。
 
-One subtlety with the `register()` method is the location of the service worker
-file. You'll notice in this case that the service worker file is at the root of
-the domain. This means that the service worker's scope will be the entire
-origin. In other words, this service worker will receive `fetch` events for
-everything on this domain. If we register the service worker file at
-`/example/sw.js`, then the service worker would only see `fetch` events for pages
-whose URL starts with `/example/` (i.e. `/example/page1/`, `/example/page2/`).
+`register()` メソッドについて気にかけておきたいところが、Service Worker ファイルの場所です。この例の場合、Service Worker のファイルはドメインのルートにあります。これはこの Service Worker のスコープが origin 全体ということです。つまり、この Service Worker はこのドメイン下ですべての `fetch` イベントを受け取ります。もし `/example/sw.js` という Service Worker ファイルを登録した場合、その Service Worker はページのパスが `/example/` から始まるもの（例：`/example/page1/`, `/example/page2`）のみの `fetch` イベントを受け取ります。
 
-Now you can check that a service worker is enabled by going to `chrome://inspect
-/#service-workers` and looking for your site.
+Service Worker が有効になっているかは、`chrome://inspect/#service-workers` にある自分のサイトからわかります。
 
-![Inspect service workers](images/sw-chrome-inspect.png)
+![Service Worker の調査](images/sw-chrome-inspect.png)
 
-When service worker was first being implemented you could also view your service
-worker details through `chrome://serviceworker-internals`. This may still be
-useful, if for nothing more than learning about the life cycle of service
-workers, but don't be surprised if it gets replaced completely by
-`chrome://inspect/#service-workers` at a later date.
+Service Worker が Chrome で実装された当初は、`chrome://serviceworker-internals` からその詳細を確認できました。これも Service Worker のライフサイクルを知りたいというだけの場合には有用かもしれません。ただもし今後 `chrome://inspect/#service-workers` に置き換わってもびっくりしないでくださいね。
 
-You may find it useful to test your service worker in an Incognito window so
-that you can close and reopen knowing that the previous service worker won't
-affect the new window. Any registrations and caches created from within an
-Incognito window will be cleared out once that window is closed.
+Service Worker のテストはシークレットウインドウで行うと便利です。というのもウインドウを閉じてまた新しいウインドウにすれば、古い Service Worker に影響されることがないからです。シークレットウインドウへの登録やキャッシュは、そのウインドウが閉じられたらすべて消去されます。
