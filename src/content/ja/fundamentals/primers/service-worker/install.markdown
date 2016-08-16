@@ -1,32 +1,26 @@
 ---
 layout: shared/narrow
-title: "Install a Service Worker"
-description: "After a controlled page kicks off the registration process, let's shift to the point of view of the service worker script, which handles the `install` event."
-published_on: 2014-12-01
-updated_on: 2016-01-19
-translation_priority: 0
-order: 6
-authors:
-  - mattgaunt
+title: "Service Worker のインストール"
+description: "コントロールされたページが登録プロセスを発生させると、主役は Service Worker のスクリプトに移ります。そしてスクリプトは `install` イベントを処理します。"
+translators:
+  - myakura
 ---
 
-After a controlled page kicks off the registration process, let's shift to the
-point of view of the service worker script, which handles the `install` event.
+コントロールされたページが登録プロセスを発生させると、主役は Service Worker のスクリプトに移ります。そしてスクリプトは `install` イベントを処理します。
 
-For the most basic example, you need to define a callback for the install event
-and decide which files you want to cache.
+最も簡単なケースとして、`install` イベントにコールバックを定義し、キャッシュさせたいファイルを指定します。
 
 {% highlight javascript %}
 self.addEventListener('install', function(event) {
-  // Perform install steps
+  // インストール処理
 });
 {% endhighlight %}
 
-Inside of our `install` callback, we need to take the following steps:
+セットしたコールバックでは以下を実行しています。
 
-1. Open a cache.
-2. Cache our files.
-3. Confirm whether all the required assets are cached or not.
+1. キャッシュを開く
+2. ファイルをキャッシュさせる
+3. 必要なアセットがすべてキャッシュされたかを確認する
 
 {% highlight javascript %}
 var CACHE_NAME = 'my-site-cache-v1';
@@ -37,7 +31,7 @@ var urlsToCache = [
 ];
 
 self.addEventListener('install', function(event) {
-  // Perform install steps
+  // インストール処理
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
@@ -48,20 +42,8 @@ self.addEventListener('install', function(event) {
 });
 {% endhighlight %}
 
-Here you can see we call `caches.open()` with our desired cache name, after which
-we call `cache.addAll()` and pass in our array of files. This is a chain of
-promises (`caches.open()` and `cache.addAll()`). The `event.waitUntil()` method
-takes a promise and uses it to know how long installation takes, and whether it
-succeeded.
+ここでは、好きなキャッシュ名をつけ `caches.open()` をコールし、その後キャッシュさせたいファイルの配列を `cache.addAll()` に渡しています。一連の処理は `Promise` をチェーンさせています（`caches.open()` と `cache.addAll()`）。 `event.waitUntil()` は `Promise` をとり、インストールにかかる時間と、与えた処理が成功したかどうかを知るために使われます。
 
-If all the files are successfully cached, then the service worker will be
-installed. If **any** of the files fail to download, then the install step will
-fail. This allows you to rely on having all the assets that you defined, but
-does mean you need to be careful with the list of files you decide to cache in
-the install step. Defining a long list of files will increase the chance that
-one file may fail to cache, leading to your service worker not getting
-installed.
+渡したファイルがすべて無事にキャッシュされた場合、Service Worker のインストールが完了します。渡したファイルのうち**どれかひとつでも**ダウンロードに失敗した場合、インストールは失敗します。こうすることによりすべてのアセットが存在していると保証できますが、インストール時にキャッシュさせたいファイルを決めなければいけません。ファイルの数が大きくなれば、キャッシュが失敗して Service Worker がインストールされない確率も高くなります。
 
-This is just one example, you can perform other tasks in the `install` event or
-avoid setting an `install` event listener altogether.
-
+これはあくまで一例です。`install` イベントでは他の処理もできますし、`install` にイベントリスナを設定しなくてもいいのです。
