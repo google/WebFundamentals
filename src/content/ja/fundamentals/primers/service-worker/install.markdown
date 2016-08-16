@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow
 title: "Service Worker のインストール"
 description: "コントロールされたページが登録プロセスを発生させると、主役は Service Worker のスクリプトに移ります。そしてスクリプトは `install` イベントを処理します。"
 translators:

@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow
 title: "つまづきポイント"
 description: "Service Worker はまだ新しい技術です。ここではつまづきやすいポイントを紹介します。"
 translators:

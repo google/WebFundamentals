@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow
 title: "リクエストをキャッシュして返す"
 description: "Service Worker がインストールされたいま、あなたがしたいのはキャッシュさせたレスポンスを返すことですよね？"
 translators:

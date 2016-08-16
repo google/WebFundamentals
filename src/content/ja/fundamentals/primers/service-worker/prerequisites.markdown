@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow
 title: "はじめる前に"
 description: "はじめる前に、まずちゃんとした環境を整えているかを確かめましょう。"
 translators:

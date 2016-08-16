@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow
 title: "もっと知るためのリンクとヘルプ"
 description: ""
 translators:

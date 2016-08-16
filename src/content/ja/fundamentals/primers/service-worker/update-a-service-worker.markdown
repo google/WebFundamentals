@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow
 title: "Service Worker の更新"
 description: "開発が進むと、Service Worker を更新しなければいけない時が来るでしょう。"
 translators:

@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow
 title: "Service Worker の登録"
 description: "Service Worker をインストールするには、ページから Service Worker を**登録**しなければいけません。"
 translators:

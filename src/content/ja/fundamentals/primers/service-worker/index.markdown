@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow-pages-list
 title: "Service Worker の紹介"
 description: "リッチなオフライン体験、定期的なバックグラウンド同期、プッシュ通知など、これまでネイティブアプリを必要としていた機能が Web にもやってきます。Service Worker はそれらの機能を提供する基盤技術です。"
 translators:

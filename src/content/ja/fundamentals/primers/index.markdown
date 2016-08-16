@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow-subdirectories-list
 title: "API 入門"
 description: "API 入門は API の重要な概念について理解するのを助けます"
 ---

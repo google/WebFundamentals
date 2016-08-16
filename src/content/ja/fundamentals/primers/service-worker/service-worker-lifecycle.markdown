@@ -1,5 +1,4 @@
 ---
-layout: shared/narrow
 title: "Service Worker のライフサイクル"
 description: "Service Worker は Web ページとはまったく異なるライフサイクルで動作します。"
 translators:
