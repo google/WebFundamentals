@@ -1,41 +1,21 @@
 ---
 layout: shared/narrow
-title: "Service Worker Lifecycle"
-description: "A service worker has a lifecycle which is completely separate from your web page."
-published_on: 2014-12-01
-updated_on: 2016-01-18
-translation_priority: 0
-order: 1
-authors:
-  - mattgaunt
+title: "Service Worker のライフサイクル"
+description: "Service Worker は Web ページとはまったく異なるライフサイクルで動作します。"
+translators:
+  - myakura
 ---
 
-<p class="intro">A service worker has a lifecycle which is completely separate 
-	from your web page.</p>
+<p class="intro">Service Worker は Web ページとはまったく異なるライフサイクルで動作します。</p>
 
-To install a service worker for your site, you need to register it, which you do
-in your page's JavaScript. Registering a service worker will cause the browser
-to start the service worker install step in the background.
+Service Worker を Web ページにインストールするには、ページの JavaScript から登録しなければいけません。Service Worker の登録をすると、ブラウザは Service Worker のインストール処理をバックグラウンドで実行します。
 
-Typically during the install step, you'll want to cache some static assets. If
-all the files are cached successfully, then the service worker becomes
-installed. If any of the files fail to download and cache, then the install step
-will fail and the service worker won't activate (i.e. won't be installed). If
-that happens, don't worry, it'll try again next time. But that means if it does
-install, you know you've got those static assets in the cache.
+インストールは、静的なアセットをキャッシュするために使われることが多いでしょう。すべてのファイルがキャッシュされたら、Service Worker のインストールは完了です。もしファイルがひとつでもダウンロード失敗、もしくはキャッシュに失敗した場合、インストールステップは失敗し Service Worker はアクティベートされません（つまりインストールされません）。ただ、失敗しても心配しないでください。またトライしますから。どういうことかというと、Service Worker がインストールされたなら、静的なアセットが確実にキャッシュされているということなのです。
 
-When we're installed, the activation step will follow and this is a great
-opportunity for handling any management of old caches, which we'll cover during
-the service worker update section.
+インストールが完了したら、アクティベーション処理が続きます。ここでは古いキャッシュの処理などに最適です。これは [Service Worker の更新](update-a-service-worker/)を説明する時に紹介しますね。
 
-After the activation step, the service worker will control all pages that fall
-under its scope, though the page that registered the service worker for the
-first time won't be controlled until it's loaded again. Once a service worker is
-in control, it will be in one of two states: either the service worker will be
-terminated to save memory, or it will handle fetch and message events which
-occur when a network request or message is made from your page.
+アクティベーションステップが終了したら、Service Worker はそのスコープ内のすべてのページをコントロールします。しかし、Service Worker を登録したページについては登録時点ではコントロールされず、次に読み込まれた際にコントロールされます。Service Worker が管理中、その状態は2つしかありません。メモリ節約のため Service Worker が終了されているか、ページで起こったネットワークリクエストまたはメッセージに対して `fetch` イベントもしくは `message` イベントの処理を行おうとしているかのどちらかです。
 
-Below is an overly simplified version of the service worker lifecycle on its
-first installation.
+次の図は最初のインストール後の Service Worker のライフサイクルをおおまかに図示したものです。
 
 ![service worker lifecydle](images/sw-lifecycle.png)
