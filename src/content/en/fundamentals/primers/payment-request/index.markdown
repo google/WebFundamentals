@@ -267,7 +267,7 @@ In order to reject an address for reasons such as non-supported region, pass `de
 {% include shared/note.liquid list=page.notes.address_rejection %}
 
 {% highlight javascript %}
-payment.addEventListener('shippingoptionchange', e => {
+payment.addEventListener('shippingaddresschange', e => {
   e.updateWith(((details, addr) => {
     if (addr.country === 'US') {
       var shippingOption = {
