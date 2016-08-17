@@ -19,9 +19,9 @@ toc:
       section:
       - title: Web App Install Banners
         path: /web/fundamentals/engage-and-retain/app-install-banners/
-      - title: Native App Install Banners
-        path: /web/fundamentals/engage-and-retain/app-install-banners/native-app-install
       - title: App Install Banner Events
         path: /web/fundamentals/engage-and-retain/app-install-banners/events
+      - title: Native App Install Banners
+        path: /web/fundamentals/engage-and-retain/app-install-banners/native-app-install
       
 

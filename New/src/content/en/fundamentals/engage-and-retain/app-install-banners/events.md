@@ -14,7 +14,7 @@ description: You can defer or cancel the app install banner, and understand how 
 Chrome provides an easy mechanism to determine how the user responded to the
 app install banner and even cancel or defer it until a more convenient time.
 
-## Did a User Install the App?
+## Did a user install the app?
 
 The `beforeinstallprompt` event returns a promise called `userChoice` 
 that resolves when the user acts on the prompt.  The promise 
@@ -44,7 +44,7 @@ This is a good tool for understanding how your users interact with the app
 install prompt.
 
 
-## Deferring or Cancelling the Prompt
+## Deferring or cancelling the prompt
 
 Chrome manages when to trigger the prompt but for some sites this might not 
 be ideal. You can defer the prompt to a later time in the app's usage or 
