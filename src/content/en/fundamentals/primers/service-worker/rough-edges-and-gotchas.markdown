@@ -53,7 +53,7 @@ crossorigin="use-credentials">`.
 ### Non-CORS Fail by Default
 
 By default, fetching a resource from a third party URL will fail if it doesn't
-support CORS. You can add a `no-CORS` option to the Request to overcome this,
+support CORS. You can add a `no-cors` option to the Request to overcome this,
 although this will cause an 'opaque' response, which means you won't be able to
 tell if the response was successful or not.
 
