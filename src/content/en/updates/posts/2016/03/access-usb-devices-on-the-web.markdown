@@ -33,20 +33,20 @@ it to the Web**.
 
 Let's see what you could expect with the WebUSB API:
 
-1. Buy a USB device,
-2. Plug it into your computer,
+1. Buy a USB device.
+2. Plug it into your computer.
 3. A notification appears right away, with the right website to go to for this device.
 4. Simply click on it. Website is there and ready to use!
 5. Click to connect and a USB device chooser shows up in Chrome, where you can pick your device.
 6. Tada!
 
-What could it have been after you've plugged your USB device?
+What would this procedure be like without the WebUSB API?
 
-- Read a box, label, or search online for website -- possibly ending up on the wrong website.
+- Read a box, label, or search on line and possibly end up on the wrong website.
 - Have to install a native application.
 - Is it supported on my operating system? Make sure you download the "right" thing.
 - Scary OS prompts popup and warn you about installing drivers/applications from the Internet.
-- Malfunctioning code harms the whole computer, the Web is built to [contain malfunctioning websites](https://www.youtube.com/watch?v=29e0CtgXZSI).
+- Malfunctioning code harms the whole computer. The Web is built to [contain malfunctioning websites](https://www.youtube.com/watch?v=29e0CtgXZSI).
 - Only use the USB device once? On the Web, the website is gone once you closed tab. On a computer the code sticks around.
 
 ## Before we start
@@ -56,20 +56,20 @@ recommend reading [USB in a NutShell](http://www.beyondlogic.org/usbnutshell).
 For background information about USB, check out the [official USB
 specifications](http://www.usb.org/home).
 
-The Chrome team is excited to be launching experimental features early to
-developers. The [WebUSB API](https://wicg.github.io/webusb/) is currently a
+The [WebUSB API](https://wicg.github.io/webusb/) is currently a
 draft which means that it is far enough along to be real and usable, but there
 is still time to make fixes that developers need. That's why the Chrome Team is
-actively looking for eager developers to give it a try and send
+actively looking for eager developers to try it and give
 [feedback on the spec](https://github.com/wicg/webusb/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EUSB).
 
-The WebUSB API is currently planned to be enabled experimentally on your
-origin in Origin Trials, and available now locally on your machine using an
+In the very near future we plan for you to be able to enable WebUSB on your
+origin via [Origin Trials](#available-for-origin-trials). Until then you can
+enable it on your local computer for development purposes by flipping an
 experimental flag. The implementation is partially complete and currently
 available on Chrome OS, Linux, Mac, and Windows. Go to
-`chrome://flags/#enable-webusb`, enable the highlighted flag, restart Chrome
-and you should be good to go.
+`chrome://flags/#enable-experimental-web-platform-features`, enable the
+highlighted flag, restart Chrome and you should be good to go.
 
 <img style="width:723px; max-height:205px" src="/web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-flag.png" alt="Web USB Flag highlighted in chrome://flags"/>
 
@@ -212,6 +212,9 @@ Arduino board over the USB port. Check out instructions at
 [https://github.com/webusb/arduino](https://github.com/webusb/arduino) to
 WebUSB-enable your [sketches](http://www.arduino.cc/en/Tutorial/Sketch).
 
+Don't worry, I'll cover all the WebUSB device methods mentioned below later in
+this article.
+
 {% highlight javascript %}
 var device;
 
@@ -238,7 +241,7 @@ navigator.usb.requestDevice({ filters: [{ vendorId: 0x2341 }] })
 
 Please keep in mind that the WebUSB library we are using here is just
 implementing one example protocol (based on the standard USB serial protocol)
-and that you can create any set and types of endpoints you
+and that manufacturers can create any set and types of endpoints they
 wish. Control transfers are especially nice for small configuration commands as
 they get bus priority and have a well defined structure.
 
@@ -282,7 +285,7 @@ in the sample code above does basically two things:
   and the [list of origins](https://wicg.github.io/webusb/#get-allowed-origins) allowed to communicate with.
 - It exposes a WebUSB Serial API that you may use to override the default one.
 
-Let's focus back to the JavaScript code. Once we get the `device` picked by the
+Let's look at the JavaScript code again. Once we get the `device` picked by the
 user, `device.open` simply runs all platform-specific steps to start a session
 with the USB device. Then, we have to select an available USB Configuration
 with `device.selectConfiguration`. Remember that a Configuration specifies how
@@ -293,9 +296,9 @@ or associated endpoints when the interface is claimed. Finally calling
 `device.controlTransferOut` is needed to set up the Arduino device with the
 appropriate commands to communicate through the WebUSB Serial API.
 
-From there, `device.transferIn` performs a Bulk Transfer onto the
-device to inform that the host is ready to receive bulk data. Then, the promise
-is fulfilled with a `result` object containing a
+From there, `device.transferIn` performs a bulk transfer onto the
+device to inform it that the host is ready to receive bulk data. Then, the
+promise is fulfilled with a `result` object containing a
 [DataView](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView)
 `data` that has to be parsed appropriately.
 
@@ -308,10 +311,10 @@ The WebUSB API lets you interact with the all USB transfer/endpoint types:
 - CONTROL transfers, used to send or receive configuration or command
   parameters to a USB device are handled with `controlTransferIn(setup,
   length)` and `controlTransferOut(setup, data)`.
-- INTERRUPT transfers, used for small amount of time sensitive data are handled
-  with same methods as BULK transfers with `transferIn(endpointNumber, length)`
-  and `transferOut(endpointNumber, data)`.
-- ISOCHRONOUS transfers, used for streams of data, like video and sound are
+- INTERRUPT transfers, used for a small amount of time sensitive data are
+  handled with the same methods as BULK transfers with
+  `transferIn(endpointNumber, length)` and `transferOut(endpointNumber, data)`.
+- ISOCHRONOUS transfers, used for streams of data like video and sound are
   handled with `isochronousTransferIn(endpointNumber, packetLengths)` and
  `isochronousTransferOut(endpointNumber, data, packetLengths)`.
 - BULK transfers, used to transfer a large amount of non-time-sensitive data in
@@ -325,16 +328,15 @@ an Arduino here). You'll find hardware, software, and firmware.
 
 ## Tips
 
-Debugging USB in Chrome is made easier with the internal page
-`chrome://device-log` where you can see all USB device related events in one
-single place.
+Debugging USB in Chrome is easier with the internal page `chrome://device-log`
+where you can see all USB device related events in one single place.
 
 <img style="width:723px; max-height:414px" src="/web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-device-log-page.png" alt="Internal page to debug Web USB"/>
 
 Early adopters who want to test their existing devices with WebUSB before they
-can update their firmware or the [Public Device Registry](https://wicg.github.io/webusb/#public-device-registry) 
+update their firmware or the [Public Device Registry](https://wicg.github.io/webusb/#public-device-registry) 
 is [implemented](https://bugs.chromium.org/p/chromium/issues/detail?id=598765) 
-are not out ouf luck there thanks to a dedicated switch. To disable checking of
+are not out of luck thanks to a dedicated switch. To disable checking of
 the WebUSB allowed origins descriptors that implement a CORS-like mechanism to
 secure origin to device communications, run `chrome` with the
 `--disable-webusb-security` [switch](https://www.chromium.org/developers/how-tos/run-chromium-with-flags).
@@ -354,12 +356,13 @@ where `[yourdevicevendor]` is `2341` if your device is an Arduino for instance.
 
 ## What's next
 
-A second iteration on the WebUSB API will look at [Shared Worker](https://developer.mozilla.org/fr/docs/Web/API/SharedWorker)
+A second iteration of the WebUSB API will look at [Shared Worker](https://developer.mozilla.org/fr/docs/Web/API/SharedWorker)
 and [Service Worker](https://jakearchibald.github.io/isserviceworkerready/resources.html)
 support. Imagine for instance a security key website using the WebUSB API that
 would install a service worker to act as a middle man to authenticate users.
 
-And for your greatest pleasure, the WebUSB API will come later to Android.
+And for your greatest pleasure, the WebUSB API is already available now on
+Android in Chrome 54.
 
 ## Resources
 
@@ -368,3 +371,7 @@ And for your greatest pleasure, the WebUSB API will come later to Android.
 - Spec Issues: [https://github.com/WICG/webusb/issues](https://github.com/WICG/webusb/issues)
 - Implementation Bugs: [http://crbug.com?q=component:Blink>USB](http://crbug.com?q=component:Blink>USB)
 - WebUSB ❤ ️Arduino: [https://github.com/webusb/arduino](https://github.com/webusb/arduino)
+- IRC: [#webusb](irc://irc.w3.org:6665/#webusb) on W3C's IRC
+- WICG Mailing list: [https://lists.w3.org/Archives/Public/public-wicg/](https://lists.w3.org/Archives/Public/public-wicg/)
+
+Please share your WebUSB demos with the [#webusb](https://twitter.com/search?q=webusb) hashtag.
