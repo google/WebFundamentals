@@ -9,7 +9,15 @@ from google.appengine.ext.webapp.template import render
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 UNSUPPORTED_TAGS = [
   r'{% link_sample_button .+%}',
-  r'{% include_code (.+)%}'
+  r'{% include_code (.+)%}',
+  r'{% comment %}',
+  r'{% endcomment %}'
+]
+UNSUPPORTED_CLASSES = [
+  r'mdl-grid',
+  r'mdl-cell',
+  r'mdl-data-table',
+  r'mdl-js-data-table'
 ]
 
 def getPage(requestPath, lang):
@@ -42,6 +50,11 @@ def getPage(requestPath, lang):
           replaceWith = '<aside class="warning">Web<strong>Fundamentals</strong>: '
           replaceWith += '<span>Unsupported tag: <code>' + tag + '</code></span></aside>'
           content = re.sub(tag, replaceWith, content)
+
+      # Show warning for unsupported classes
+      for tag in UNSUPPORTED_CLASSES:
+        if re.search(tag, content) is not None:
+          logging.warn(' - Unsupported class: ' + tag)
 
       # Render any DevSite specific tags
       content = devsiteHelper.renderDevSiteContent(content, lang)
