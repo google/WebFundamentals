@@ -41,8 +41,8 @@ everything on this domain. If we register the service worker file at
 `/example/sw.js`, then the service worker would only see `fetch` events for pages
 whose URL starts with `/example/` (i.e. `/example/page1/`, `/example/page2/`).
 
-Now you can check that a service worker is enabled by going to `chrome://inspect
-/#service-workers` and looking for your site.
+Now you can check that a service worker is enabled by going to
+`chrome://inspect/#service-workers` and looking for your site.
 
 ![Inspect service workers](images/sw-chrome-inspect.png)
 

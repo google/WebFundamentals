@@ -10,8 +10,8 @@ authors:
   - mattgaunt
 ---
 
-<p class="intro">This stuff is really new. Here's a collection of issues that 
-	get in the way. Hopefully this section can be deleted soon, but for now 
+<p class="intro">This stuff is really new. Here's a collection of issues that
+	get in the way. Hopefully this section can be deleted soon, but for now
 	these are worth being mindful of.
 </p>
 
@@ -19,7 +19,7 @@ authors:
 
 ## If Installation Fails, We're Not so Good at Telling You About It
 
-If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers` 
+If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers`
 or `chrome://serviceworker-internals`, it's likely failed to
 install due to an error being thrown, or a rejected promise being passed to
 `event.waitUntil()`.
@@ -73,7 +73,7 @@ appropriate image asset at run time and make a network request.
 For service worker, if you wanted to cache an image during the install step, you
 have a few options:
 
-1. Install all the images that the  `<picture>` element and the `srcset` 
+1. Install all the images that the `<picture>` element and the `srcset`
    attribute will request.
 2. Install a single low-res version of the image.
 3. Install a single high-res version of the image.
