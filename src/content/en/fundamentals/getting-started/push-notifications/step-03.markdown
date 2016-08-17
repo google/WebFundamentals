@@ -43,7 +43,7 @@ Open _index.html_ locally in Chrome from localhost: the URL should be something 
 In your _app_ directory, create an empty file named _sw.js_. You'll add code
 to this later.
 
-Don't worry if you haven't used service workers before. You won't need to know much about them to complete this codelab. Service workers are worker scripts that run in the background to intercept network requests, handle push messages and perform other tasks. If you want to find out more, take a look at [Introduction to Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) on HTML5 Rocks.
+Don't worry if you haven't used service workers before. You won't need to know much about them to complete this codelab. Service workers are worker scripts that run in the background to intercept network requests, handle push messages and perform other tasks. If you want to find out more, take a look at [Introduction to Service Worker](/web/fundamentals/primers/service-worker/).
 
 When a push message is received, the browser can run a service worker in the background to handle push messages without requiring a web page to be open.
 
