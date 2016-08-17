@@ -105,10 +105,10 @@ function replaceHighlightedCode(markdown) {
 }
 
 function replaceLinkSample(markdown, dir) {
-  var re = /{% link_sample (.*?)\s?%}(.*?){%\s?endlink_sample\s?%}/gm;
+  var re = /{% link_sample (.*?)\s?%}[\n\r]?(.*?)[\n\r]?{%\s?endlink_sample\s?%}/gm;
   var items = markdown.match(re);
   if (items) {
-    re = /{% link_sample (.*?)\s?%}(.*?){%\s?endlink_sample\s?%}/;
+    re = /{% link_sample (.*?)\s?%}[\n\r]?(.*?)[\n\r]?{%\s?endlink_sample\s?%}/;
     items.forEach(function(item) {
       var sourceItem = item;
       var regEx = re.exec(item);
@@ -156,6 +156,31 @@ function removeIntroP(markdown) {
   return markdown;
 }
 
+function replaceUdacity(markdown, yaml) {
+  if (yaml.udacity) {
+    var udacity = yaml.udacity;
+    if (udacity.title && udacity.image && udacity.description && udacity.id) {
+      var re = /{% include fundamentals\/udacity_course.liquid.*?%}/m;
+      var item = markdown.match(re);
+      if (item) {
+        var newContent = '{# UDACITY-COURSE #}\n';
+        newContent += '## ' + udacity.title + '\n\n';
+        newContent += '<div class="attempt-right">\n';
+        newContent += '  <figure>\n';
+        newContent += '    <img src="' + udacity.image + '">\n';
+        newContent += '  </figure>\n</div>\n\n';
+        newContent += udacity.description + '\n\n';
+        newContent += '[View Course](https://udacity.com/' + udacity.id;
+        newContent += '){: .external }\n\n';
+        markdown = markdown.replace(item, newContent);
+      }
+    } else {
+      console.warn(' - Missing Udacity tags, wasn\'t able to add Udacity block.');
+    }
+  }
+  return markdown;
+}
+
 function migrateFile(dir, file) {
   console.log(path.join(dir, file));
   var source = fs.readFileSync(path.join(dir, file), 'utf8');
@@ -190,6 +215,12 @@ function migrateFile(dir, file) {
       topOfDoc += '{% include "_shared/contributors/' + author + '.html\" %}\n';
     });
   }
+  if (yaml.translators) {
+    topOfDoc += '\n\nTranslated By: \n\n';
+    yaml.translators.forEach(function(translator) {
+      topOfDoc += '{% include "_shared/contributors/' + translator + '.html\" %}\n';
+    });
+  }
   markdown = markdown.replace('{% include shared/toc.liquid %}\n', '');
   markdown = markdown.replace(/{{ ?page.description ?}}/g, yaml.description);
   markdown = replaceIncludeCode(markdown, dir);
@@ -199,10 +230,12 @@ function migrateFile(dir, file) {
   markdown = replaceLinkSample(markdown, dir);
   markdown = removeIntroP(markdown);
   markdown = replaceYTVideo(markdown);
+  markdown = replaceUdacity(markdown, yaml);
 
   var result = topOfDoc + markdown;
   var newFile = path.join(dir, file).replace('.markdown', '.md');
   fs.writeFileSync(newFile, result);
+  fs.unlinkSync(path.join(dir, file));
 }
 
 function migrateDirectory(dir) {
@@ -219,4 +252,4 @@ function migrateDirectory(dir) {
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/design-and-ui/input/touch/');
+migrateDirectory('./src/content/en/fundamentals/discovery-and-monetization/social-discovery/');
