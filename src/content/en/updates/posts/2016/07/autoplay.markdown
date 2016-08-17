@@ -64,7 +64,7 @@ Disabling autoplay had the unintended effect of driving developers to alternativ
 
 Compare the following — the first is a video and the second is an animated GIF:
 
-<video id="chrome-clip" autoplay loop muted style="margin: 0 0 20px 0;">
+<video id="chrome-clip" autoplay controls loop muted style="margin: 0 0 20px 0;">
   <source src="/web/updates/videos/2016/07/autoplay/chrome-clip.webm" type="video/webm" />
   <source src="/web/updates/videos/2016/07/autoplay/chrome-clip.mp4" type="video/mp4" />
   <p>Your browser does not support the video element.</p>
