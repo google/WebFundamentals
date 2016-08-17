@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- // [TEMPLATE header_full] -->
+  <title>Images: Breakpoints in sizes attribute for srcset</title>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/picturefill/2.0.0/picturefill.min.js" async></script>
+  <style type="text/css">
+    @media (max-width: 500px) {
+      .vp-small {
+        font-weight: bold;
+      }
+    }
+    @media (min-width: 500px) and (max-width: 600px) {
+      .vp-medium {
+        font-weight: bold;
+      }
+    }
+    @media (min-width: 600px) {
+      .vp-large {
+        font-weight: bold;
+      }
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="margins.css">
+</head>
+<body role="main">
+  <div class="add_margin">
+    <h1>Using breakpoints in the <code>&lt;picture&gt;</code> element</h1>
+    <p>
+      <b>Note:</b> this sample uses the <a href="http://scottjehl.github.io/picturefill/">
+      picturefill</a> polyfill to provide backwards compatibility for browsers 
+      that do not support the &lt;picture&gt; element.
+    </p>
+  </div>
+  <!-- // [START picture] -->
+  <img src="400.png" 
+       sizes="(min-width: 600px) 25vw, (min-width: 500px) 50vw, 100vw"
+       srcset="100.png 100w, 200.png 200w, 400.png 400w,
+               800.png 800w, 1600.png 1600w, 2000.png 2000w">
+  <!-- // [END picture] -->
+  <div class="add_margin">
+    <p class="vp-small">Viewport widths 0 to 499px:</p>
+    <ul class="vp-small">
+      <li>the image is 100% of the viewport width</li>
+    </ul>
+    <p class="vp-medium">Viewport widths 500px to 599px:</p>
+    <ul class="vp-medium">
+      <li>the image is 50% of the viewport width</li>
+    </ul>
+    <p class="vp-large">Viewport widths 600px and over:</p>
+    <ul class="vp-large">
+      <li>the image is 25% of the viewport width</li>
+    </ul>
+  </div>
+  <!-- // [TEMPLATE footer] -->
+</body>
+</html>

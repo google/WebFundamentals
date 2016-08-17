@@ -1,38 +1,22 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
 
-<p class="intro">
-  You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-11-08 #}
+{# wf_published_on: 2014-10-07 #}
+
+# Social discovery {: .page-title }
+
+{% include "_shared/contributors/agektmr.html" %}
+
+You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'Use schema.org microdata to provide page title, description and an image for Google+.'
+- 'Use Open Graph Protocol (OGP) to provide page title, description and an image for Facebook.'
+- 'Use Twitter Cards to provide page title, description, an image and a Twitter id for Twitter.'
 
 
 You can influence the way your site appears when shared via social media by
@@ -84,21 +68,9 @@ engines better understand the contents of the page.
 
 Here's an example:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">&quot;http://schema.org/Article&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h1</span> <span class="na">itemprop=</span><span class="s">&quot;name&quot;</span><span class="nt">&gt;</span>Enjoy fireworks<span class="nt">&lt;/h1&gt;</span>
-  <span class="nt">&lt;p</span> <span class="na">itemprop=</span><span class="s">&quot;description&quot;</span><span class="nt">&gt;</span>Fireworks are beautiful.
-   This article explains how beautiful fireworks are.<span class="nt">&lt;/p&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">itemprop=</span><span class="s">&quot;image&quot;</span> <span class="na">src=</span><span class="s">&quot;//developers.google.com/web/imgs/fireworks.jpg&quot;</span> <span class="nt">/&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/discovery-and-monetization/social-discovery/social-sites.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" %}
+</pre>
 
 While most metadata are embedded in the head section of a webpage, microdata
 lives where the context exists.
@@ -142,25 +114,9 @@ The [Open Graph Protocol (OGP)](http://ogp.me/) provides Facebook with the
 metadata necessary to allow web pages to have the same functionality as other
 Facebook objects.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html</span> <span class="na">prefix=</span><span class="s">&quot;g: http://ogp.me/ns#&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-        <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content=</span><span class="s">&quot;Enjoy Fireworks&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:description&quot;</span> <span class="na">content=</span><span class="s">&quot;Fireworks are beautiful.</span>
-<span class="s">     This article explains how beautiful fireworks are.&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content=</span>
-     &quot;https://developers.google.com/web/imgs/fireworks.jpg&quot;&gt;
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:url&quot;</span> <span class="na">content=</span>
-     &quot;discovery-and-distribution/optimizations-for-crawlers/social-sites.html&quot;&gt;
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:type&quot;</span> <span class="na">content=</span><span class="s">&quot;website&quot;</span><span class="nt">&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/discovery-and-monetization/social-discovery/social-sites.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" %}
+</pre>
 
 When included in the head section of your page, this metadata is used for rich
 snippet information when the page is shared.
@@ -234,27 +190,9 @@ contain a meta tag that has `twitter:card` as the `name` attribute instead of
   
 Here's a quick example:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;html</span> <span class="na">prefix=</span><span class="s">&quot;g: http://ogp.me/ns#&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;head&gt;</span>
-        <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content=</span><span class="s">&quot;Enjoy Fireworks&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:description&quot;</span> <span class="na">content=</span><span class="s">&quot;Fireworks are beautiful.</span>
-<span class="s">     This article explains how beautiful fireworks are.&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content=</span>
-     &quot;https://developers.google.com/web/imgs/fireworks.jpg&quot;&gt;
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:url&quot;</span> <span class="na">content=</span>
-     &quot;discovery-and-distribution/optimizations-for-crawlers/social-sites.html&quot;&gt;
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:type&quot;</span> <span class="na">content=</span><span class="s">&quot;website&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;twitter:card&quot;</span> <span class="na">content=</span><span class="s">&quot;summary_large_image&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;twitter:site&quot;</span> <span class="na">content=</span><span class="s">&quot;agektmr&quot;</span><span class="nt">&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/discovery-and-monetization/social-discovery/social-sites.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" %}
+</pre>
 
 By assigning the Twitter id to the value of twitter:site, Twitter embeds this
 information in the shared post so that people can easily engage with the page
@@ -276,43 +214,9 @@ In order to validate your markup, Twitter provides:
 Given all three options, the best thing you can do is to include them all in
 your webpage. Here's an example:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="c">&lt;!-- namespace declaration --&gt;</span>
-<span class="nt">&lt;html</span> <span class="na">prefix=</span><span class="s">&quot;og: http://ogp.me/ns#&quot;</span><span class="nt">&gt;</span>
-  <span class="c">&lt;!-- define microdata scope and type --&gt;</span>
-  <span class="nt">&lt;head</span> <span class="na">itemscope</span> <span class="na">itemtype=</span><span class="s">&quot;http://schema.org/Article&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;title&gt;</span>Social Site Example<span class="nt">&lt;/title&gt;</span>
-    <span class="c">&lt;!-- define ogp and itemprop of microdata in one line --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:title&quot;</span> <span class="na">itemprop=</span><span class="s">&quot;name&quot;</span> <span class="na">content=</span><span class="s">&quot;Enjoy Fireworks&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- define ogp image --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:image&quot;</span> <span class="na">content=</span>
-     &quot;https://developers.google.com/web/imgs/fireworks.jpg&quot;&gt;
-    <span class="c">&lt;!-- use link[href] to define image url for microdata --&gt;</span>
-    <span class="nt">&lt;link</span> <span class="na">itemprop=</span><span class="s">&quot;image&quot;</span> <span class="na">href=</span><span class="s">&quot;//developers.google.com/web/imgs/fireworks.jpg&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- define ogp and itemprop of microdata in one line --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:url&quot;</span> <span class="na">content=</span>
-     &quot;discovery-and-distribution/optimizations-for-crawlers/social-sites2.html&quot;&gt;
-    <span class="c">&lt;!-- define ogp type --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:type&quot;</span> <span class="na">content=</span><span class="s">&quot;website&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- define twitter cards type --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;twitter:card&quot;</span> <span class="na">content=</span><span class="s">&quot;summary_large_image&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- define site&#39;s owner twitter id --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;twitter:site&quot;</span> <span class="na">content=</span><span class="s">&quot;agektmr&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- define description for ogp and itemprop of microdata in one line --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">property=</span><span class="s">&quot;og:description&quot;</span> <span class="na">itemprop=</span><span class="s">&quot;description&quot;</span>
-     <span class="na">content=</span><span class="s">&quot;Fireworks are beautiful. This article explains how beautiful fireworks are.&quot;</span><span class="nt">&gt;</span>
-    <span class="c">&lt;!-- general description (separate with ogp and microdata) --&gt;</span>
-    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;description&quot;</span> <span class="na">content=</span><span class="s">&quot;Fireworks are beautiful.</span>
-<span class="s">     This article explains how beautiful fireworks are.&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;/head&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/discovery-and-monetization/social-discovery/social-sites2.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" %}
+</pre>
 
 Notice that microdata and OGP share some markup:
 
@@ -323,5 +227,4 @@ reusing `meta` tag with `property="og:image"`
   
 Lastly, make sure to validate that your webpage appears as expected on each
 social sites before publishing.
-
 

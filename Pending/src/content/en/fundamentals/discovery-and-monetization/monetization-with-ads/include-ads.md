@@ -1,38 +1,24 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid.
 
-<p class="intro">
-  Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-07-30 #}
+{# wf_published_on: 2014-07-30 #}
+
+# Include AdSense ads on your site {: .page-title }
+
+{% include "_shared/contributors/megginkearney.html" %}
+{% include "_shared/contributors/petelepage.html" %}
+
+Follow the steps in this guide to learn how to include ads in your site. Create an AdSense account, create ad units, place the units in your site, configure payment settings, and get paid.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'To create an AdSense account, you must be 18, have a Google Account, and address.'
+- 'Your website must be live before submitting an application, and the website content must comply with AdSense policies.'
+- 'Create responsive ad units to ensure that your ads fit, no matter what device a user views them on.'
+- Verify payment settings and wait for the money to start rolling in.
 
 
 ## Build sample page with ads
@@ -118,46 +104,22 @@ your ad code.
 After creating your ad unit, AdSense provide a snippet of code to include 
 on your site, similar to the code below:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="c">&lt;!-- Top ad in web starter kit sample --&gt;</span>
-<span class="nt">&lt;ins</span> <span class="na">class=</span><span class="s">&quot;adsbygoogle&quot;</span>
-  <span class="na">style=</span><span class="s">&quot;display:block&quot;</span>
-  <span class="na">data-ad-client=</span><span class="s">&quot;XX-XXX-XXXXXXXXXXXXXXXX&quot;</span>
-  <span class="na">data-ad-slot=</span><span class="s">&quot;XXXXXXXXXX&quot;</span>
-  <span class="na">data-ad-format=</span><span class="s">&quot;auto&quot;</span><span class="nt">&gt;&lt;/ins&gt;</span>
-<span class="nt">&lt;script&gt;</span>
-  <span class="p">(</span><span class="nx">adsbygoogle</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">adsbygoogle</span> <span class="o">||</span> <span class="p">[]).</span><span class="nx">push</span><span class="p">({});</span>
-<span class="nt">&lt;/script&gt;</span></code></pre></div>
 
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Top ad in web starter kit sample -->
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="XX-XXX-XXXXXXXXXXXXXXXX"
+      data-ad-slot="XXXXXXXXXX"
+      data-ad-format="auto"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: - The <code>data-ad-client</code> and <code>data-ad-slot</code> will be unique for each ad you generate.
+- The <code>data-ad-format=auto</code> tag in the generated ad code enables the smart sizing behavior for the responsive ad unit.
 
 
 ## Include ad units in your site
@@ -171,36 +133,8 @@ re-use the same ad unit, or create multiple ad units.
 3. Save the file and try viewing it in your browser, then try opening it on a 
 mobile device or via the Chrome emulator.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: Paste all ad code within the body tag; otherwise the ads won't work.
 
 <div>
   <a href="/web/fundamentals/resources/samples/monetization/ads/">
@@ -229,5 +163,4 @@ the steps below:
 
 Refer to [Intro to AdSense payments](https://support.google.com/adsense/answer/1709858)
 for any additional questions.
-
 

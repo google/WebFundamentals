@@ -1,36 +1,21 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop or anything else with a screen.
 
-<p class="intro">
-  On both desktop and mobile devices, users are used to scrolling websites vertically but not horizontally, and forcing the user to scroll horizontally or to zoom out in order to see the whole page results in a poor user experience.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-04-29 #}
+{# wf_published_on: 2014-04-29 #}
 
+# Size content to the viewport {: .page-title }
 
+{% include "_shared/contributors/petelepage.html" %}
 
+On both desktop and mobile devices, users are used to scrolling websites vertically but not horizontally, and forcing the user to scroll horizontally or to zoom out in order to see the whole page results in a poor user experience.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Do not use large fixed width elements.
+- Content should not rely on a particular viewport width to render well.
+- Use CSS media queries to apply different styling for small and large screens.
 
 
 When developing a mobile site with a `meta viewport` tag, it's easy to
@@ -53,19 +38,18 @@ viewport on small screens.
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    <a href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/vp-fixed.html">
+    {% link_sample _code/vp-fixed.html %}
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone.">
       See example
-    </a>
+    {% endlink_sample %}
   </div>
 
   <div class="mdl-cell mdl-cell--6-col">
-    <a href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/vp-fixed.html">
+    {% link_sample _code/vp-fixed.html %}
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5.">
       See example
-    </a>
+    {% endlink_sample %}
   </div>
 </div>
-
 
 

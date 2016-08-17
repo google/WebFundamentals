@@ -1,11 +1,16 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Being listed properly on search engines is critical to delivering your website to the world, but poor configuration may cause unexpected content to be included in the results. Learn how crawlers work and how they index your website in order to avoid such problems.
 
-<p class="intro">
-  Being listed properly on search engines is critical to delivering your website to the world, but poor configuration may cause unexpected content to be included in the results. Learn how crawlers work and how they index your website in order to avoid such problems.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-12-14 #}
 
+# Control crawling and indexing from search engines {: .page-title }
+
+{% include "_shared/contributors/agektmr.html" %}
+
+Being listed properly on search engines is critical to delivering your website to the world, but poor configuration may cause unexpected content to be included in the results. Learn how crawlers work and how they index your website in order to avoid such problems.
 
 
 Sharing information to the world has no better place than the web. Once you publish a document to the web, it will be immediately available to the rest of the world. The page will be visible to anyone as long as they know the URL and that's where search engines come in. Once search engines learn about your website, your documents will be searchable and accessible from people all around the world.  
@@ -14,31 +19,10 @@ However, there are some cases where you don't want people to find those document
 
 In this document, you will learn how to inform search engines that you want certain pages not appear in the search results.  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'No robots.txt, no robots meta tags required for fully accessible pages'
+- Use noindex for pages you want to limit access to those who know the URL
+- Use relevant authentication mechanism for pages you want to keep private
 
 
 ## Understand the difference between "crawl" and "index"
@@ -48,34 +32,8 @@ Before learning how to control search results, understanding how search engines 
 
 "Indexing" is when a search engine stores a website's URL and any associated information to their database so it will be ready to be served as a search result.  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: Many people confuses crawling and indexing. Prohibiting crawling doesn't mean the page won't show up in the search results. For example, when a third party website has a link to one of your webpages which is blocked from crawling, the page may still be listed in search results (In that case, the result won't have detailed description).
 
 ## Control search bots' crawling
 You can actually control how well-behaved crawlers access your webpage using a text file called robots.txt. (Not all crawlers necessarily respect robots.txt. Imagine that anyone can create their own stray crawlers.)  
@@ -88,14 +46,18 @@ Place `robots.txt` at the root directory of your website's host: If your site's 
 Here's a quick example:  
 
 **http://pages.example.com/robots.txt**
-<div class="highlight"><pre><code class="language-text" data-lang="text">User-agent: *
-Disallow: /</code></pre></div>
+
+    User-agent: *
+    Disallow: /
+    
 
 This indicates that you want to disallow all kind of bots to crawl your entire website.  
 
 **http://pages.example.com/robots.txt**
-<div class="highlight"><pre><code class="language-text" data-lang="text">User-agent: Googlebot
-Disallow: /nogooglebot/</code></pre></div>
+
+    User-agent: Googlebot
+    Disallow: /nogooglebot/
+    
 
 You can specify the behavior per bots (user agents) by indicating a user-agent name after `User-agent:`. In the above case, you are disallowing user agent called `Googlebot` to crawl `/nogooglebot/` and all contents below the directory.  
 
@@ -106,36 +68,8 @@ You can learn how to create robots.txt further on relevant search engines' help 
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
 ^
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: <code>robots.txt</code> is only required <b>if</b> you want to control the way your site is crawled. Do not to return response code 500 for the url: <code>/robots.txt</code>. That will terminate all subsequent crawls for the entire host resulting in empty search result details.
 
 ### Test robots.txt
 Depending on which crawlers your robots.txt is targeting at, search engine providers may provide a tool to test robots.txt. Taking Google as an example, there's a validator in [Webmaster Tools](https://www.google.com/webmasters/tools/robots-testing-tool). Use it to test by yourself if your robots.txt works as expected.  
@@ -150,15 +84,19 @@ If you don't want your webpage to show up in the search results, robots.txt isn'
 ### Use robots meta tags
 In order to indicate you don't want an HTML page to be indexed, insert a specific kind of `meta` tag. By setting its attributes as `name="robots"` and `content="noindex"`, you can indicate that you don't want any search engines to index the page.  
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;&lt;head&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;robots&quot;</span> <span class="na">content=</span><span class="s">&quot;noindex&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
+
+    <!DOCTYPE html>
+    <html><head>
+    <meta name="robots" content="noindex" />
+    
 
 By changing the value of the `name` attribute to a specific user agent name, you can narrow the scope. For example, `name="googlebot"` indicates that you don't want Googlebot to index the page (case insensitive).  
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="nt">&lt;html&gt;&lt;head&gt;</span>
-<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;googlebot&quot;</span> <span class="na">content=</span><span class="s">&quot;noindex&quot;</span> <span class="nt">/&gt;</span></code></pre></div>
+
+    <!DOCTYPE html>
+    <html><head>
+    <meta name="googlebot" content="noindex" />
+    
 
 Other options for robots meta tag can be found here:  
 
@@ -171,15 +109,19 @@ Other options for robots meta tag can be found here:
 ### X-Robots-Tag
 In order to indicate you don't want other resources than HTML such as images, stylesheets or script files, to be indexed, add `X-Robots-Tag: noindex` in HTTP header.  
 
-<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
-<span class="na">X-Robots-Tag</span><span class="o">:</span> <span class="l">noindex</span>
-<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/html; charset=UTF-8</span></code></pre></div>
+
+    HTTP/1.1 200 OK
+    X-Robots-Tag: noindex
+    Content-Type: text/html; charset=UTF-8
+    
 
 If you want to narrow the scope to a specific user agent, insert user agent name before `noindex`.  
 
-<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
-<span class="na">X-Robots-Tag</span><span class="o">:</span> <span class="l">googlebot: noindex</span>
-<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/html; charset=UTF-8</span></code></pre></div>
+
+    HTTP/1.1 200 OK
+    X-Robots-Tag: googlebot: noindex
+    Content-Type: text/html; charset=UTF-8
+    
 
 To learn more about X-Robots-Tag:  
 
@@ -187,36 +129,8 @@ To learn more about X-Robots-Tag:
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 ^
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: If you disallow crawls using robots.txt,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your webpages by following links from other websites.</li><li>Search engines can't detect <code>noindex</code> because it can't crawl.</li></ul>
 
 Don't expect robots.txt to control search indexes.
 
@@ -245,36 +159,8 @@ In this type, you don't want search engines to index those pages.
 * Use `X-Robots-Tag: noindex` for non HTML resources (images, pdf, etc).
 ^
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: Wondering if you should prohibit crawling JavaScript and Stylesheet files? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google now try its best to understand them</a> to find contents available through modern technologies such as AJAX. You should definitely allow crawlers to crawl it.
 
 ### Restricted access from authorized people
 Confidential pages you want only those who have right permissions can access. In this case, even if someone finds the URL, the server refuses to present the result without a proper credential. For example:  
@@ -319,5 +205,4 @@ Check out concrete steps at respective search engines' help pages:
 * [Google](https://support.google.com/webmasters/answer/1061943)
 * [Bing](http://www.bing.com/webmaster/help/which-crawlers-does-bing-use-8c184ec0)
 * [Yandex](https://help.yandex.com/search/robots/logs.xml)
-
 

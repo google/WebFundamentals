@@ -1,37 +1,23 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: How your website appears in search results is an important aspect of multi-device site design. This guide helps you learn to optimize your website for search engines based on its URL structure.
 
-<p class="intro">
-How your website appears in search results is an important aspect of multi-device site design. This guide helps you learn to optimize your website for search engines based on its URL structure.</p>
+{# wf_review_required #}
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-10-07 #}
+
+# Instruct search engines how your multi-device page is structured {: .page-title }
+
+{% include "_shared/contributors/agektmr.html" %}
+
+How your website appears in search results is an important aspect of multi-device site design. This guide helps you learn to optimize your website for search engines based on its URL structure.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Determine the URL structure of your webpage
+- Responsive design is most recommended
+- Use <code>rel='canonical'</code> + <code>rel='alternate'</code> for separate desktop/mobile sites
+- Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs
 
 
 Are you planning to build your webpage responsive? Is there a mobile specific
@@ -99,8 +85,10 @@ small screens.
 
 [http://www.example.com/](http://www.example.com/) HTML
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;title&gt;</span>...<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;alternate&quot;</span> <span class="na">media=</span><span class="s">&quot;only screen and (max-width: 640px)&quot;</span> <span class="na">href=</span><span class="s">&quot;http://m.example.com/&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+    <title>...</title>
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.example.com/">
+    
 
 ### Use `link[rel=canonical]` for mobile version
 On mobile specific pages, indicate that there's a desktop (canonical) version at
@@ -109,8 +97,10 @@ version URL with `href`.
 
 [http://m.example.com/](http://m.example.com/) HTML
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;title&gt;</span>...<span class="nt">&lt;/title&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;canonical&quot;</span> <span class="na">href=</span><span class="s">&quot;http://www.example.com/&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+    <title>...</title>
+    <link rel="canonical" href="http://www.example.com/">
+    
   
 <img src="imgs/different_url-2x.png" srcset="imgs/different_url.png 1x, imgs/different_url-2x.png 2x" >
 
@@ -135,10 +125,12 @@ provide `Vary: User-Agent` in HTTP header.
 
 [http://www.example.com/](http://www.example.com/) HTTP Header
 
-<div class="highlight"><pre><code class="language-http" data-lang="http"><span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
-<span class="na">Content-Type</span><span class="o">:</span> <span class="l">text/html</span>
-<span class="na">Vary</span><span class="o">:</span> <span class="l">User-Agent</span>
-<span class="na">Content-Length</span><span class="o">:</span> <span class="l">5710</span></code></pre></div>
+
+    HTTP/1.1 200 OK
+    Content-Type: text/html
+    Vary: User-Agent
+    Content-Length: 5710
+    
 
 <img src="imgs/same_url-2x.png" srcset="imgs/same_url.png 1x, imgs/same_url-2x.png 2x" >
 
@@ -148,5 +140,4 @@ index to treat desktop version and mobile version separately, intermediate
 proxies to cache those contents gracefully.
 
 To learn more about building URL structure across desktop and mobile, read [Building Smartphone-Optimized Websites](https://developers.google.com/webmasters/smartphone-sites/).
-
 

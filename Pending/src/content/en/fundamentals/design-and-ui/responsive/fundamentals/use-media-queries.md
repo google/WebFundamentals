@@ -1,44 +1,30 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop or anything else with a screen.
 
-<p class="intro">
-  Media queries are simple filters that can be applied to CSS styles.  They make  it easy to change styles based on the characteristics of the device rendering the content, including the display type, width, height, orientation and even resolution.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-10-09 #}
+{# wf_published_on: 2014-04-29 #}
+
+# Use CSS media queries for responsiveness {: .page-title }
+
+{% include "_shared/contributors/petelepage.html" %}
+
+Media queries are simple filters that can be applied to CSS styles.  They make  it easy to change styles based on the characteristics of the device rendering the content, including the display type, width, height, orientation and even resolution.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Media queries can be used to apply styles based on device characteristics.
+- Use <code>min-width</code> over <code>min-device-width</code> to ensure the broadest experience.
+- Use relative sizes for elements to avoid breaking layout.
 
 
 For example, you could place all styles necessary for printing
 inside a print media query:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;print.css&quot;</span> <span class="na">media=</span><span class="s">&quot;print&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+    <link rel="stylesheet" href="print.css" media="print">
+    
 
 In addition to using the `media` attribute in the stylesheet link, there are two
 other ways to apply media queries that can be embedded in a CSS file: `@media`
@@ -46,11 +32,13 @@ and `@import`.  For performance reasons, either of the first two methods are
 recommended over the `@import` syntax
 (see [Avoid CSS imports](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="nt">print</span> <span class="p">{</span>
-  <span class="c">/* print style sheets go here */</span>
-<span class="p">}</span>
 
-<span class="k">@import</span> <span class="nt">url</span><span class="o">(</span><span class="nt">print</span><span class="nc">.css</span><span class="o">)</span> <span class="nt">print</span><span class="p">;</span></code></pre></div>
+    @media print {
+      /* print style sheets go here */
+    }
+    
+    @import url(print.css) print;
+    
 
 The logic that applies to media queries is not mutually exclusive and any filter
 that meets that criteria the resulting CSS block will be applied using the
@@ -63,9 +51,11 @@ are applied to small screens, large screens and anywhere in between.  The media
 query syntax allows for the creation of rules that can be applied depending on
 device characteristics.
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="o">(</span><span class="nt">query</span><span class="o">)</span> <span class="p">{</span>
-  <span class="c">/* CSS Rules used when query matches */</span>
-<span class="p">}</span></code></pre></div>
+
+    @media (query) {
+      /* CSS Rules used when query matches */
+    }
+    
 
 While there are several different items we can query on, the ones used most
 often for responsive web design are `min-width`, `max-width`, `min-height` and
@@ -114,35 +104,14 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
 Let's take a look an example:
 
 <figure>
-  <a href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/media-queries.html">
+  {% link_sample _code/media-queries.html %}
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Preview of a page using media queries to change properties as it is resized.">
-  </a>
+  {% endlink_sample %}
 </figure>
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;(max-width: 640px)&quot;</span> <span class="na">href=</span><span class="s">&quot;max-640px.css&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;(min-width: 640px)&quot;</span> <span class="na">href=</span><span class="s">&quot;min-640px.css&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;(orientation: portrait)&quot;</span> <span class="na">href=</span><span class="s">&quot;portrait.css&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;(orientation: landscape)&quot;</span> <span class="na">href=</span><span class="s">&quot;landscape.css&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;style&gt;</span>
-  <span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">500px</span><span class="o">)</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">600px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nt">h1</span> <span class="p">{</span>
-      <span class="k">color</span><span class="o">:</span> <span class="nb">fuchsia</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="nc">.desc</span><span class="nd">:after</span> <span class="p">{</span>
-      <span class="k">content</span><span class="o">:</span><span class="s2">&quot; In fact, it&#39;s between 500px and 600px wide.&quot;</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="nt">&lt;/style&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/media-queries.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+</pre>
 
 * When the browser is between <b>0px</b> and <b>640px</b> wide, `max-640px.css` will be applied.
 * When the browser is between <b>500px</b> and <b>600px</b> wide, styles within the `@media` will be applied.
@@ -194,19 +163,18 @@ page.
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
     <h2>YES</h2>
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span><span class="nc">.fullWidth</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+{% highlight css %}div.fullWidth {
+  width: 100%;
+}{% endhighlight %}
   </div>
   <div class="mdl-cell mdl-cell--6-col">
     <h2>NO</h2>
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">div</span><span class="nc">.fullWidth</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">320px</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-  <span class="k">margin-right</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+{% highlight css %}div.fullWidth {
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}{% endhighlight %}
   </div>
 </div>
-
 
 

@@ -1,6 +1,14 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: The `img` element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image formats.
+
+{# wf_review_required #}
+{# wf_updated_on: 2016-01-27 #}
+{# wf_published_on: 2014-04-29 #}
+
+# Images in markup {: .page-title }
+
+{% include "_shared/contributors/petelepage.html" %}
 
 <style>
   .side-by-side {
@@ -23,37 +31,14 @@ description: The `img` element is powerful – it downloads, decodes and renders
 
 </style>
 
-<p class="intro">
-  The <code>img</code> element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image  formats.  Including images that work across devices is no different than for desktop, and only requires a few minor tweaks to create a good experience."
-</p>
+The <code>img</code> element is powerful – it downloads, decodes and renders content – and modern browsers support a range of image  formats.  Including images that work across devices is no different than for desktop, and only requires a few minor tweaks to create a good experience."
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Use relative sizes for images to prevent them from accidentally overflowing the container.
+- Use the <code>picture</code> element when you want to specify different images depending on device characteristics (a.k.a. art direction).
+- Use <code>srcset</code> and the <code>x</code> descriptor in the  <code>img</code> element to give hints to the browser about the best  image to use when choosing from different densities.
+- Consider using inline images to reduce file requests if your page only has one or two images and these are not used elsewhere on your site.
 
 
 
@@ -68,9 +53,11 @@ Because CSS allows content to overflow its container, it may be necessary use
 max-width: 100% to prevent images and other content from overflowing.  For
 example:
 
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">img</span><span class="o">,</span> <span class="nt">embed</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">video</span> <span class="p">{</span>
-  <span class="k">max-width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span></code></pre></div>
+
+    img, embed, object, video {
+      max-width: 100%;
+    }
+    
 
 Be sure to provide meaningful descriptions via the `alt` attribute on `img`
 elements; these help make your site more accessible by providing context to
@@ -92,11 +79,17 @@ screen readers and other assistive technologies.
     </p>
   </div>
   <div class="mdl-cell mdl-cell--6-col">
-    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/Pzc5Dly_jEM?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf" class="devsite-embedded-youtube-video" allowfullscreen data-video-id="Pzc5Dly_jEM" data-autohide="1" data-modestbranding="1" data-controls="2" data-utm-source="crdev-wf" data-showinfo="0" frameborder="0"></iframe></div>
+    <div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="Pzc5Dly_jEM"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
   </div>
 </div>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;photo.png&quot;</span> <span class="na">srcset=</span><span class="s">&quot;photo@2x.png 2x&quot;</span> <span class="err">...</span><span class="nt">&gt;</span></code></pre></div>
+
+    <img src="photo.png" srcset="photo@2x.png 2x" ...>
+    
 
 On browsers that don't support `srcset`, the browser simply uses the default
 image file specified by the `src` attribute.  This is why it is important to
@@ -122,36 +115,8 @@ and more.
 <img class="center" src="img/art-direction.png" alt="Art direction example"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: The <code>picture</code> element is beginning to land in browsers. Although it's not available in every browser yet, we recommend its use because of the strong backward compatibility and potential use of the  <a href='http://picturefill.responsiveimages.org/'>Picturefill polyfill</a>. See the <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a> site for further details.
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
@@ -165,24 +130,17 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
     </p>
   </div>
   <div class="mdl-cell mdl-cell--6-col">
-    <div class="video-wrapper"><iframe src="https://www.youtube.com/embed/QINlm3vjnaY?controls=2&amp;modestbranding=1&amp;showinfo=0&amp;utm-source=crdev-wf" class="devsite-embedded-youtube-video" allowfullscreen data-video-id="QINlm3vjnaY" data-autohide="1" data-modestbranding="1" data-controls="2" data-utm-source="crdev-wf" data-showinfo="0" frameborder="0"></iframe></div>
+    <div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
   </div>
 </div>
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;picture&gt;</span>
-  <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 800px)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;head.jpg, head-2x.jpg 2x&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;source</span> <span class="na">media=</span><span class="s">&quot;(min-width: 450px)&quot;</span> <span class="na">srcset=</span><span class="s">&quot;head-small.jpg, head-small-2x.jpg 2x&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;head-fb.jpg&quot;</span> <span class="na">srcset=</span><span class="s">&quot;head-fb-2x.jpg 2x&quot;</span> <span class="nt">&gt;</span>
-<span class="nt">&lt;/picture&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/media/images/media.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media.html" region_tag="picture" lang=html %}
+</pre>
 
 In the above example, if the browser width is at least 800px, then either
 `head.jpg` or `head-2x.jpg` will be used, depending on the device resolution.
@@ -204,20 +162,9 @@ supplied image can be specified by adding a width descriptor along with the
 size of the image element, allowing the browser to automatically calculate
 the effective pixel density and choose the best image to download.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;lighthouse-200.jpg&quot;</span> <span class="na">sizes=</span><span class="s">&quot;50vw&quot;</span>
-     <span class="na">srcset=</span><span class="s">&quot;lighthouse-100.jpg 100w, lighthouse-200.jpg 200w,</span>
-<span class="s">             lighthouse-400.jpg 400w, lighthouse-800.jpg 800w,</span>
-<span class="s">             lighthouse-1000.jpg 1000w, lighthouse-1400.jpg 1400w,</span>
-<span class="s">             lighthouse-1800.jpg 1800w&quot;</span><span class="nt">&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/media/images/sizes.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/sizes.html" region_tag="picture" lang=html %}
+</pre>
 
 The above example renders an image that is half of the viewport width
 (`sizes="50vw"`), and depending on the width of the browser and its device
@@ -282,19 +229,9 @@ breakpoints.  For example, on a small screen, you might want the image to
 span the full width of the viewport, while on larger screens, it should only
 take a small proportion.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;400.png&quot;</span>
-     <span class="na">sizes=</span><span class="s">&quot;(min-width: 600px) 25vw, (min-width: 500px) 50vw, 100vw&quot;</span>
-     <span class="na">srcset=</span><span class="s">&quot;100.png 100w, 200.png 200w, 400.png 400w,</span>
-<span class="s">             800.png 800w, 1600.png 1600w, 2000.png 2000w&quot;</span><span class="nt">&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/media/images/breakpoints.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/breakpoints.html" region_tag="picture" lang=html %}
+</pre>
 
 The `sizes` attribute in the above example uses several media queries to
 specify the size of the image. When the browser width is greater than
@@ -330,40 +267,12 @@ capabilities of the device.  Depending on the type of image and level of
 compression, image quality may not appear to change, but the file size drops
 significantly.
 
-<a href="/web/resources/samples/fundamentals/design-and-ui/media/images/compressive.html">
+{% link_sample _code/compressive.html %}
 See example
-</a>
+{% endlink_sample %}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: Use caution with the compressive technique because of the increased memory and decoding costs it requires. Resizing large images to fit on smaller screens is expensive and can be particularly painful on low-end devices where both memory and processing is limited.
 
 ### JavaScript image replacement
 
@@ -535,12 +444,16 @@ width="396.74px" height="560px" viewBox="281.63 0 396.74 560" enable-background=
 
 Data URIs provide a way to include a file, such as an image, inline by setting the src of an <code>img</code> element as a Base64 encoded string using the following format:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;data:image/svg+xml;base64,[data]&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+    <img src="data:image/svg+xml;base64,[data]">
+    
 
 The start of the code for the HTML5 logo above looks like this:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">&quot;data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB</span>
-<span class="s">BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+    <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
+    BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW ...">
+    
 
 (The full version is over 5000 characters in length!)
 
@@ -568,4 +481,3 @@ On the downside:
 * With HTTP/2, reducing the number of asset requests will become less of a priority.
 
 As with all things responsive, you'll need to test what works best. Use developer tools to measure download file size, the number of requests and the total latency. Data URIs can sometimes be useful for raster images – for example, on a homepage that only has one or two photos which aren't used elsewhere. If you need to inline vector images, SVG is a much better option.
-

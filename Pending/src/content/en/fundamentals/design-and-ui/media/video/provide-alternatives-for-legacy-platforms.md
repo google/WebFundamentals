@@ -1,11 +1,16 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Not all video formats are supported on all platforms. Check which formats are supported on the major platforms and make sure your video works in each of these.
 
-<p class="intro">
-  Not all video formats are supported on all platforms. Check which formats are supported on the major platforms and make sure your video works in each of these.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-10-22 #}
+{# wf_published_on: 2014-04-15 #}
 
+# Provide alternatives for legacy platforms {: .page-title }
+
+{% include "_shared/contributors/samdutton.html" %}
+
+Not all video formats are supported on all platforms. Check which formats are supported on the major platforms and make sure your video works in each of these.
 
 
 ## Check which formats are supported
@@ -98,9 +103,8 @@ Want to know which video format was actually chosen by the browser?
 
 In JavaScript, use the video's `currentSrc` property to return the source used.
 
-To see this in action, check out <a href="/web/resources/samples/fundamentals/design-and-ui/media/video/video-main.html">this demo</a>: Chrome and Firefox choose `chrome.webm`
+To see this in action, check out <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/video-main.html">this demo</a>: Chrome and Firefox choose `chrome.webm`
 (because that's the first in the list of potential sources these browsers
 support) whereas Safari chooses `chrome.mp4`.
-
 
 

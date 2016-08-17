@@ -1,38 +1,22 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: When it comes to keeping your users happy, size matters.
 
-<p class="intro">
-  When it comes to keeping your users happy, file size is important.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-09-18 #}
+{# wf_published_on: 2014-04-15 #}
+
+# Size videos correctly {: .page-title }
+
+{% include "_shared/contributors/samdutton.html" %}
+
+When it comes to keeping your users happy, file size is important.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Don't serve videos with a larger frame size or higher quality than the platform can handle.
+- Don't make your videos any longer than they need be.
+- Long videos can cause hiccups with download and seeking; some browsers may have to wait until the video downloads before beginning playback.
 
 
 ## Check video size
@@ -70,117 +54,27 @@ other sources.
 
 Use [CSS media queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend.
 
-
-<div class="wf-border-container">
-  <div class="wf-border-container__content with-bottom-border">
-    <h3 class="wf-highlight-list__title">Related guides</h3>
-    <ul class="wf-highlight-list__list">
-    
-      <li>
-        
-          <p class="wf-highlight-list__subtitle"><a
-            href="/web/fundamentals/design-and-ui/responsive/"
-            title="Responsive Web Design Basics">
-            Responsive Web Design Basics
-          </a></p>
-        
-
-        <a href="/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries">
-          
-          Use CSS media queries for responsiveness
-        </a>
-      </li>
-    
-    </ul>
-
-  </div>
-</div>
-
-
-
+{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
 
 For media content in iframes (such as YouTube videos), try a responsive
 approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: Don't force element sizing that results in an aspect ratio different from the original video. Squashed or stretched looks bad.
 
 **CSS:**
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nc">.video-container</span> <span class="p">{</span>
-    <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
-    <span class="k">padding-bottom</span><span class="o">:</span> <span class="m">56.25%</span><span class="p">;</span>
-    <span class="k">padding-top</span><span class="o">:</span> <span class="m">30px</span><span class="p">;</span>
-    <span class="k">height</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.video-container</span> <span class="nt">iframe</span><span class="o">,</span>
-<span class="nc">.video-container</span> <span class="nt">object</span><span class="o">,</span>
-<span class="nc">.video-container</span> <span class="nt">embed</span> <span class="p">{</span>
-    <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
-    <span class="k">top</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-    <span class="k">height</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/media/video/responsive_embed.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+</pre>
 
 **HTML:**
 
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+</pre>
 
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;video-container&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">&quot;//www.youtube.com/embed/l-BA9Ee2XuM&quot;</span>
-          <span class="na">frameborder=</span><span class="s">&quot;0&quot;</span> <span class="na">width=</span><span class="s">&quot;560&quot;</span> <span class="na">height=</span><span class="s">&quot;315&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;/iframe&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/media/video/responsive_embed.html">Try full sample</a>
-      </p>
-  </div>
-
-
-
-Compare the <a href="/web/resources/samples/fundamentals/design-and-ui/media/video/responsive_embed.html">responsive sample</a> to the <a href="/web/resources/samples/fundamentals/design-and-ui/media/video/unyt.html">unresponsive version</a>.
-
+Compare the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/responsive_embed.html">responsive sample</a> to the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/unyt.html">unresponsive version</a>.
 
 
 

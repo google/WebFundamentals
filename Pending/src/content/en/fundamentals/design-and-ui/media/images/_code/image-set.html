@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <title>Images: Using CSS image-set to provide high res images</title>
+    <style>
+      /* // [START imageset] */
+      .sample {
+        width: 128px;
+        height: 128px;
+        background-image: url(icon1x.png);
+        background-image: -webkit-image-set(  
+          url(icon1x.png) 1x,  
+          url(icon2x.png) 2x  
+        );  
+        background-image: image-set(  
+          url(icon1x.png) 1x,  
+          url(icon2x.png) 2x  
+        );
+      }
+      /* // [END imageset] */
+    </style>
+  </head>
+  <body role="main">
+    <div class="sample"></div>
+    <div class="desc">
+      On a 1x display, a <a href="icon1x.png">monochrome 128x128px icon</a> will be shown.<br>
+      On a 2x display, a <a href="icon2x.png">color 256x256px icon</a> will be shown.
+    </div>
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html>
+
+

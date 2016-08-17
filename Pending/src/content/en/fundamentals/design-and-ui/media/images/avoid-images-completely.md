@@ -1,38 +1,20 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Sometimes, the best image isn't actually an image at all. Whenever possible, use the native capabilities of the browser to provide the same or similar functionality.
 
-<p class="intro">
-  Sometimes, the best image isn't actually an image at all. Whenever possible, use the native capabilities of the browser to provide the same or similar functionality.  Browsers generate visuals that would have previously required images.   This means that browsers no longer need to download separate image files and prevents awkwardly scaled images.  Icons can be rendered using unicode or special icon fonts.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-06-09 #}
+{# wf_published_on: 2014-04-29 #}
+
+# Avoid images completely {: .page-title }
+
+{% include "_shared/contributors/petelepage.html" %}
+
+Sometimes, the best image isn't actually an image at all. Whenever possible, use the native capabilities of the browser to provide the same or similar functionality.  Browsers generate visuals that would have previously required images.   This means that browsers no longer need to download separate image files and prevents awkwardly scaled images.  Icons can be rendered using unicode or special icon fonts.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'Avoid images whenever possible, instead, leverage browser capabilities for shadows, gradients, rounded corners and more.'
 
 
 
@@ -79,18 +61,19 @@ fringilla dui non vehicula. In hac habitasse platea dictumst. Donec
 ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 </p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;style&gt;</span>
-  <span class="nt">div</span><span class="nf">#noImage</span> <span class="p">{</span>
-    <span class="k">color</span><span class="o">:</span> <span class="nb">white</span><span class="p">;</span>
-    <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">5px</span><span class="p">;</span>
-    <span class="n">box</span><span class="o">-</span><span class="n">shadow</span><span class="o">:</span> <span class="m">5px</span> <span class="m">5px</span> <span class="m">4px</span> <span class="m">0</span> <span class="n">rgba</span><span class="p">(</span><span class="m">9</span><span class="o">,</span><span class="m">130</span><span class="o">,</span><span class="m">154</span><span class="o">,</span><span class="m">0</span><span class="o">.</span><span class="m">2</span><span class="p">);</span>
-    <span class="k">background</span><span class="o">:</span> <span class="n">linear</span><span class="o">-</span><span class="n">gradient</span><span class="p">(</span><span class="n">rgba</span><span class="p">(</span><span class="m">9</span><span class="o">,</span> <span class="m">130</span><span class="o">,</span> <span class="m">154</span><span class="o">,</span> <span class="m">1</span><span class="p">)</span><span class="o">,</span> <span class="n">rgba</span><span class="p">(</span><span class="m">9</span><span class="o">,</span> <span class="m">130</span><span class="o">,</span> <span class="m">154</span><span class="o">,</span> <span class="m">0</span><span class="o">.</span><span class="m">5</span><span class="p">));</span>
-  <span class="p">}</span>
-<span class="nt">&lt;/style&gt;</span></code></pre></div>
+
+    <style>
+      div#noImage {
+        color: white;
+        border-radius: 5px;
+        box-shadow: 5px 5px 4px 0 rgba(9,130,154,0.2);
+        background: linear-gradient(rgba(9, 130, 154, 1), rgba(9, 130, 154, 0.5));
+      }
+    </style>
+    
 
 Keep in mind that using these techniques does require rendering cycles, which
 can be significant on mobile.  If over-used, you'll lose any benefit you may
 have gained and may hinder performance.
-
 
 

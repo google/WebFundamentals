@@ -1,10 +1,17 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: You can make ad spaces (also known as ad inventory) available on your site. Advertisers bid to show their ads in those spaces, and the highest bidder wins. You get paid when users click the ads.
 
-<p class="intro">
+{# wf_review_required #}
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-07-30 #}
+
+# How ads work {: .page-title }
+
+{% include "_shared/contributors/megginkearney.html" %}
+{% include "_shared/contributors/petelepage.html" %}
+
 You can make ad spaces (also known as ad inventory) available on your site. Advertisers bid to show their ads in those spaces, and the highest bidder wins. You get paid when users click the ads.
-</p>
 
 This guide covers the basics of how ads work,
 but to learn more, refer to the
@@ -13,32 +20,10 @@ but to learn more, refer to the
 help centers.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'Choose the ads platform best suited to your site. We recommend the <a href=''http://www.google.com/adsense/start/''>AdSense</a> platform for most sites, and the <a href=''http://www.google.com/doubleclick/publishers/''>DoubleClick platform</a> for sites with their own advertising teams.'
+- 'Ads work best when they integrate nicely in your site; their color, content, size, and location enhance user experience. '
+- Users click on ads that are relevant to the content they are looking for; understand how ads targeting works so that you can maximize your revenue.
 
 
 ## Choose the best ads platform for your site
@@ -140,5 +125,4 @@ much you’ll earn from those ads. In a traditional auction, interested bidders
 state the maximum price they're willing to pay to buy a specific item. 
 Similarly, our ad auction allows advertisers to state the price they're 
 willing to pay for clicks on ads or for impressions served on AdSense pages.
-
 

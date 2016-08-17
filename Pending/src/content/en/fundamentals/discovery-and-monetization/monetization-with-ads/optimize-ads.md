@@ -1,10 +1,17 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Optimizing your site, and the ads that appear on it, can improve the quality of ads served and increase your earning potential.
 
-<p class="intro">
-  Optimizing your ads is crucial to the success of your advertising goals. Through ad optimization, you can grow your ad revenue, improve your site's usability, and get more traffic.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-08-11 #}
+
+# Optimize your ads {: .page-title }
+
+{% include "_shared/contributors/megginkearney.html" %}
+{% include "_shared/contributors/petelepage.html" %}
+
+Optimizing your ads is crucial to the success of your advertising goals. Through ad optimization, you can grow your ad revenue, improve your site's usability, and get more traffic.
 
 Want to get better results with AdSense ads and make sure that you give your
 users what they want while getting what you want? Need some inspiration?
@@ -15,32 +22,11 @@ of all sizes.
 ad provider.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Periodically check your AdSense <b>scorecard</b> and implement any <b>recommendations</b>.
+- Review <b>performance reports</b> to understand what ads are providing the most value to you and your users.
+- Choose ads that perform best on your site.
+- Don't block the AdSense crawler in <code>robots.txt</code>.
 
 
 ## Check scorecards and Recommendations
@@ -171,7 +157,6 @@ pages, *remove* the following two lines of text from your `robots.txt`:
 
     User-agent: Mediapartners-Google
     Disallow: /
-
 
 
 

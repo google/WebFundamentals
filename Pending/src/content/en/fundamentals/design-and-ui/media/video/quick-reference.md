@@ -1,11 +1,16 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: A quick overview of properties on the video element.
 
-<p class="intro">
-  A quick overview of properties on the video element.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-10-22 #}
+{# wf_published_on: 2014-04-15 #}
 
+# Quick reference {: .page-title }
+
+{% include "_shared/contributors/samdutton.html" %}
+
+A quick overview of properties on the video element.
 
 
 ## Video element attributes
@@ -155,7 +160,7 @@ updating it with mobile-specific concerns where relevant.
   </tbody>
 </table>
 
-Neither `playbackRate` (<a href="/web/resources/samples/fundamentals/design-and-ui/media/video/scripted.html">see demo</a>) nor `volume` are supported on mobile.
+Neither `playbackRate` (<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/scripted.html">see demo</a>) nor `volume` are supported on mobile.
 
 ### Methods
 
@@ -185,7 +190,7 @@ Neither `playbackRate` (<a href="/web/resources/samples/fundamentals/design-and-
 </table>
 
 On mobile (apart from Opera on Android) `play()` and `pause()` don't work unless
-called in response to user action, such as clicking a button: see the <a href="/web/resources/samples/fundamentals/design-and-ui/media/video/scripted.html">demo</a>. (Likewise, playback can't be initiated for content such as embedded YouTube videos.)
+called in response to user action, such as clicking a button: see the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/scripted.html">demo</a>. (Likewise, playback can't be initiated for content such as embedded YouTube videos.)
 
 ### Events
 
@@ -229,6 +234,5 @@ page on the Mozilla Developer Network for a complete listing.
     </tr>
   </tbody>
 </table>
-
 
 

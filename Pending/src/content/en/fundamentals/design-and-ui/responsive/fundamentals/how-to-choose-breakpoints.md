@@ -1,38 +1,21 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop or anything else with a screen.
 
-<p class="intro">
-  While it may be helpful to think about defining breakpoints based on device classes, use caution.  Defining breakpoints based on specific devices, products,brand names, or operating systems that are in use today can result in a maintenance nightmare. Instead, the content itself should determine how the layout adjusts to its container.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-09-11 #}
+{# wf_published_on: 2014-04-29 #}
+
+# How to choose breakpoints {: .page-title }
+
+{% include "_shared/contributors/petelepage.html" %}
+While it may be helpful to think about defining breakpoints based on device classes, use caution.  Defining breakpoints based on specific devices, products,brand names, or operating systems that are in use today can result in a maintenance nightmare. Instead, the content itself should determine how the layout adjusts to its container.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'Create breakpoints based on content, never on specific devices, products, or brands.'
+- 'Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.'
+- Keep lines of text to a maximum of around 70 or 80 characters.
 
 
 ## Pick major breakpoints by starting small, then working up
@@ -47,9 +30,9 @@ the [weather forecast](/web/fundamentals/design-and-ui/responsive/fundamentals/)
 The first step is to make the forecast look good on a small screen.
 
 <figure>
-  <a href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/weather-1.html">
+  {% link_sample _code/weather-1.html %}
     <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Preview of the weather forecast displayed on a small screen.">
-  </a>
+  {% endlink_sample %}
 </figure>
 
 Next, resize the browser until there is too much white space between the
@@ -57,26 +40,17 @@ elements and the forecast simply doesn't look as good.  The decision is somewhat
 subjective, but above 600px is certainly too wide.
 
 <figure>
-  <a href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/weather-1.html">
+  {% link_sample _code/weather-1.html %}
     <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Preview of the weather forecast as the page gets wider.">
-  </a>
+  {% endlink_sample %}
 </figure>
 
 To insert a breakpoint at 600px, create two new stylesheets, one to use when the
 browser is 600px and below, and one for when it is wider than 600px.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;weather.css&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;(max-width:600px)&quot;</span> <span class="na">href=</span><span class="s">&quot;weather-2-small.css&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">media=</span><span class="s">&quot;(min-width:601px)&quot;</span> <span class="na">href=</span><span class="s">&quot;weather-2-large.css&quot;</span><span class="nt">&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/weather-2.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+</pre>
 
 Finally, refactor the CSS.  In this example, we've placed the common styles such
 as fonts, icons, basic positioning, colors in `weather.css`.  Specific layouts
@@ -84,9 +58,9 @@ for the small screen are then placed in `weather-small.css` and large screen
 styles are placed in `weather-large.css`.
 
 <figure>
-  <a href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/weather-2.html">
+  {% link_sample _code/weather-2.html %}
     <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  </a>
+  {% endlink_sample %}
 </figure>
 
 ## Pick minor breakpoints when necessary
@@ -102,37 +76,9 @@ enough space, we can separate the high and low temperature so they're on the
 same line, instead of on top of each other.  And let's also make the weather
 icons a bit larger.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">360px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="nt">body</span> <span class="p">{</span>
-    <span class="k">font-size</span><span class="o">:</span> <span class="m">1.0em</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">500px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="nc">.seven-day-fc</span> <span class="nc">.temp-low</span><span class="o">,</span>
-  <span class="nc">.seven-day-fc</span> <span class="nc">.temp-high</span> <span class="p">{</span>
-    <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">45%</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="nc">.seven-day-fc</span> <span class="nc">.seven-day-temp</span> <span class="p">{</span>
-    <span class="k">margin-left</span><span class="o">:</span> <span class="m">5%</span><span class="p">;</span>
-  <span class="p">}</span>
-
-  <span class="nc">.seven-day-fc</span> <span class="nc">.icon</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">64px</span><span class="p">;</span>
-    <span class="k">height</span><span class="o">:</span> <span class="m">64px</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/weather-small.css">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+</pre>
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
@@ -147,20 +93,9 @@ icons a bit larger.
 Similarly, for the large screens, it's best to limit to maximum width of the
 forecast panel so it doesn't consume the whole screen width.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">700px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="nc">.weather-forecast</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">700px</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/weather-large.css">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+</pre>
 
 ## Optimize text for reading
 
@@ -185,22 +120,9 @@ the Roboto font at 1em works perfectly giving 10 words per line, but larger
 screens will require a breakpoint. In this case, if the browser width is greater
 than 575px, the ideal content width is 550px.
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="k">@media</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">575px</span><span class="o">)</span> <span class="p">{</span>
-  <span class="nt">article</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span> <span class="m">550px</span><span class="p">;</span>
-    <span class="k">margin-left</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-    <span class="k">margin-right</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/responsive/fundamentals/reading.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+</pre>
 
 ## Never completely hide content
 
@@ -210,7 +132,6 @@ is not a definitive indication of what a user may want.  For example,
 eliminating the pollen count from the weather forecast could be a serious issue
 for spring time allergy sufferers who need the information to determine if they
 can go outside or not.
-
 
 
 

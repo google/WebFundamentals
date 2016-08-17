@@ -1,38 +1,23 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Images often account for most of the downloaded bytes and also often occupy a significant amount of the visual space on the page.
 
-<p class="intro">
-  Images often account for most of the downloaded bytes and also often occupy a significant amount of the visual space on the page. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for client's bandwidth and the faster the browser can download and display all the assets.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-04-29 #}
+{# wf_published_on: 2014-04-29 #}
+
+# Optimize images for performance {: .page-title }
+
+{% include "_shared/contributors/petelepage.html" %}
+
+Images often account for most of the downloaded bytes and also often occupy a significant amount of the visual space on the page. As a result, optimizing images can often yield some of the largest byte savings and performance improvements for your website: the fewer bytes the browser has to download, the less competition there is for client's bandwidth and the faster the browser can download and display all the assets.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'Don''t just randomly choose an image format, understand the different formats available, and use the format best suited.'
+- Include image optimization and compression tools into your workflow to reduce file sizes.
+- Reduce the number of http requests by placing frequently used images into image sprites.
+- Consider loading images only after they’ve scrolled into view to improve the initial page load time and reduce the initial page weight.
 
 
 ## Choose the right format
@@ -93,38 +78,12 @@ CSS spriting is a technique whereby a number of images are combined in a single
 background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
-<a href="/web/resources/samples/fundamentals/design-and-ui/media/images/image-sprite.html">
+{% link_sample _code/image-sprite.html %}
 <img src="img/sprite-sheet.png" class="center" alt="Image sprite sheet used in example">
-</a>
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nc">.sprite-sheet</span> <span class="p">{</span>
-  <span class="k">background-image</span><span class="o">:</span> <span class="sx">url(sprite-sheet.png)</span><span class="p">;</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">40px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">25px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.google-logo</span> <span class="p">{</span>
-  <span class="k">width</span><span class="o">:</span> <span class="m">125px</span><span class="p">;</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">45px</span><span class="p">;</span>
-  <span class="k">background-position</span><span class="o">:</span> <span class="m">-190px</span> <span class="m">-170px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.gmail</span> <span class="p">{</span>
-  <span class="k">background-position</span><span class="o">:</span> <span class="m">-150px</span> <span class="m">-210px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nc">.maps</span> <span class="p">{</span>
-  <span class="k">height</span><span class="o">:</span> <span class="m">40px</span><span class="p">;</span>
-  <span class="k">background-position</span><span class="o">:</span> <span class="m">-120px</span> <span class="m">-165px</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/media/images/image-sprite.html">Try full sample</a>
-      </p>
-  </div>
-
-
+{% endlink_sample %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite" lang=css %}
+</pre>
 
 Spriting has the advantage of reducing the number of downloads required to get
 multiple images, while still enabling caching.
@@ -141,34 +100,6 @@ it becomes visible, search engines may never see that content.  In addition,
 users who are looking for information they expect to see in the footer will
 never see the footer because new content is always loaded.
 
-
-<div class="wf-border-container">
-  <div class="wf-border-container__content with-bottom-border">
-    <h3 class="wf-highlight-list__title">Related guides</h3>
-    <ul class="wf-highlight-list__list">
-    
-      <li>
-        
-          <p class="wf-highlight-list__subtitle"><a
-            href="/web/fundamentals/performance/optimizing-content-efficiency/"
-            title="Optimizing Content Efficiency">
-            Optimizing Content Efficiency
-          </a></p>
-        
-
-        <a href="/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html#image-optimization">
-          
-          Image optimization
-        </a>
-      </li>
-    
-    </ul>
-
-  </div>
-</div>
-
-
-
-
+{% include shared/related_guides.liquid inline=true list=page.related-guides.optimize %}
 
 

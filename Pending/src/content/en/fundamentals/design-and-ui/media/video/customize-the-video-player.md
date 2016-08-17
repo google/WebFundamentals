@@ -1,11 +1,16 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Different platforms display video differently. Mobile solutions need to consider device orientation. Use Fullscreen API to control the fullscreen view of video content.
 
-<p class="intro">
-  Different platforms display video differently. Mobile solutions need to consider device orientation. Use Fullscreen API to control the fullscreen view of video content.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-04-28 #}
+{# wf_published_on: 2014-04-15 #}
 
+# Customize the video player {: .page-title }
+
+{% include "_shared/contributors/samdutton.html" %}
+
+Different platforms display video differently. Mobile solutions need to consider device orientation. Use Fullscreen API to control the fullscreen view of video content.
 
 
 Different platforms display video differently. Mobile solutions need to
@@ -65,16 +70,24 @@ is [widely supported](//caniuse.com/fullscreen). Use this API to control
 fullscreening of content, or the page.
 
 To full screen an element, like a video:
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">elem</span><span class="p">.</span><span class="nx">requestFullScreen</span><span class="p">();</span></code></pre></div>
+
+    elem.requestFullScreen();
+    
 
 To full screen the entire document:
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">requestFullScreen</span><span class="p">();</span></code></pre></div>
+
+    document.body.requestFullScreen();
+    
 
 You can also listen for fullscreen state changes:
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">video</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;fullscreenchange&quot;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">);</span></code></pre></div>
+
+    video.addEventListener("fullscreenchange", handler);
+    
 
 Or, check to see if the element is currently in fullscreen mode:
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;In full screen mode: &quot;</span><span class="p">,</span> <span class="nx">video</span><span class="p">.</span><span class="nx">displayingFullscreen</span><span class="p">);</span></code></pre></div>
+
+    console.log("In full screen mode: ", video.displayingFullscreen);
+    
 
 You can also use the CSS `:fullscreen` pseudo-class to change the way
 elements are displayed in fullscreen mode.
@@ -88,10 +101,9 @@ images as placeholders for video:
   <p>This browser does not support the video element.</p>
 </video>
 
-To see this in action, check out the <a href="/web/resources/samples/fundamentals/design-and-ui/media/video/fullscreen.html">demo</a>.
+To see this in action, check out the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/fullscreen.html">demo</a>.
 
 **NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
-
 
 

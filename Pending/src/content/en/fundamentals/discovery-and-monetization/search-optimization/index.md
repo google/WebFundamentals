@@ -1,12 +1,13 @@
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.
 
+{# wf_review_required #}
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-08-30 #}
 
+# Search optimization {: .page-title }
 
+{% include "_shared/contributors/agektmr.html" %}
 
-
-### Topics
-
-
-  [Instruct search engines how your multi-device page is structured](/web/fundamentals/discovery-and-monetization/search-optimization/url-structure?hl=en)
-
-  [Control crawling and indexing from search engines](/web/fundamentals/discovery-and-monetization/search-optimization/control-crawling-and-indexing?hl=en)
-
+Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.

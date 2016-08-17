@@ -1,39 +1,25 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Relevant and appropriate ads can actually improve the user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of the ads.
 
-<p class="intro">
-  Relevant and appropriate ads can actually improve the user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of the ads.
-</p>
+{# wf_review_required #}
+{# wf_updated_on: 2015-10-05 #}
+{# wf_published_on: 2014-07-30 #}
+
+# Customize your ads {: .page-title }
+
+{% include "_shared/contributors/megginkearney.html" %}
+{% include "_shared/contributors/petelepage.html" %}
+
+Relevant and appropriate ads can actually improve the user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of the ads.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push important content below it.
+- 'Always use responsive ad units; if smart sizing isn''t enough, switch to advanced mode.'
+- Look for opportunities to integrate ads throughout the content to avoid ad blindness.
+- 'Choose text styles that blend, compliment, or contrast your site.'
 
 
 ## Place ads where users benefit the most
@@ -69,49 +55,23 @@ For example, you can control the exact sizing of ads using
 from the Mode drop-down.
 3. Modify the ad code to set the exact sizes of your ads based on the user's device:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ins</span> <span class="na">class=</span><span class="s">&quot;adsbygoogle adslot_1&quot;</span>
-    <span class="na">style=</span><span class="s">&quot;display:block;&quot;</span>
-    <span class="na">data-ad-client=</span><span class="s">&quot;ca-pub-1234&quot;</span>
-    <span class="na">data-ad-slot=</span><span class="s">&quot;5678&quot;</span><span class="nt">&gt;&lt;/ins&gt;</span>
-<span class="nt">&lt;script </span><span class="na">async</span> <span class="na">src=</span><span class="s">&quot;//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script&gt;</span><span class="p">(</span><span class="nx">adsbygoogle</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">adsbygoogle</span> <span class="o">||</span> <span class="p">[]).</span><span class="nx">push</span><span class="p">({});</span><span class="nt">&lt;/script&gt;</span></code></pre></div>
 
-<a href="/web/resources/samples/fundamentals/discovery-and-monetization/monetization-with-ads/customize.html">
+    <ins class="adsbygoogle adslot_1"
+        style="display:block;"
+        data-ad-client="ca-pub-1234"
+        data-ad-slot="5678"></ins>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    
+
+{% link_sample _code/customize.html %}
   Try it
-</a>
+{% endlink_sample %}
 
 See [advanced features](https://support.google.com/adsense/answer/3543893) in the AdSense help for more information.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: Always test your ads on different devices and screens to make sure that the responsive behavior is working correctly.
 
 ## Choose styles that compliment your site
 
@@ -153,35 +113,6 @@ new ad units:
 When you change an existing ad style, any active ad units using that style 
 are automatically updated.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: Advertisers have full control over how their display ads look. You can influence the types of display ads that appear on your site using ad placement and sizing, but you can't actually control the image content.
 

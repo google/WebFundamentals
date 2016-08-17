@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <title>Images: Reducing http requests with sprite sheets</title>
+    <style>
+      span.sprite-sheet {
+        display: inline-block;
+      }
+      /* // [START sprite] */
+      .sprite-sheet {
+        background-image: url(sprite-sheet.png);
+        width: 40px;
+        height: 25px;
+      }
+
+      .google-logo {
+        width: 125px;
+        height: 45px;
+        background-position: -190px -170px;
+      }
+
+      .gmail {
+        background-position: -150px -210px; 
+      }
+
+      .maps {
+        height: 40px;
+        background-position: -120px -165px;
+      }
+      /* // [END sprite] */
+
+    </style>
+  </head>
+  <body>
+    <div role="main">
+      <h1>Sprite Sheet Sample</h1>
+      <p>
+        <img src="sprite-sheet.png">
+      </p>
+      <p>
+        The Google logo <span class="sprite-sheet google-logo"></span>
+      </p>
+      <p>
+        The GMail logo <span class="sprite-sheet gmail"></span>
+      </p>
+      <p>
+        The Google Maps logo <span class="sprite-sheet maps"></span>
+      </p>
+    </div>
+    <!-- // [TEMPLATE footer] -->
+  </body>
+</html>
+
+

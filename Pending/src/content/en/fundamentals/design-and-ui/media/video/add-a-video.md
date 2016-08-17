@@ -1,38 +1,24 @@
 project_path: /web/_project.yaml
-book_path: /web/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device.
 
-<p class="intro">
-  Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device.
-  </p>
+{# wf_review_required #}
+{# wf_updated_on: 2014-04-28 #}
+{# wf_published_on: 2014-04-15 #}
+
+# Add a video {: .page-title }
+
+{% include "_shared/contributors/samdutton.html" %}
+
+Learn about the simplest ways to add video to your site and ensure users get the best possible experience on any device.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+## TL;DR
+- 'Use the video element to load, decode, and play video on your site.'
+- Produce video in multiple formats to cover a range of mobile platforms.
+- Size videos correctly; ensure they don't overflow their containers.
+- Accessibility matters; add the track element as a child of the video element.
 
 
 ## Add the video element
@@ -45,9 +31,11 @@ Add the video element to load, decode, and play video in your site:
   <p>This browser does not support the video element.</p>
 </video>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;video</span> <span class="na">src=</span><span class="s">&quot;chrome.webm&quot;</span> <span class="na">type=</span><span class="s">&quot;video/webm&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;p&gt;</span>Your browser does not support the video element.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/video&gt;</span></code></pre></div>
+
+    <video src="chrome.webm" type="video/webm">
+        <p>Your browser does not support the video element.</p>
+    </video>
+    
 
 ## Specify multiple file formats
 
@@ -56,20 +44,9 @@ The `<source>` element lets you specify multiple formats
 as a fallback in case the user's browser doesn't support one of them.
 For example:
 
-
-  <div dir="ltr" class="highlight-module highlight-module--code highlight-module--right">
-      <div class="highlight"><pre><span class="nt">&lt;video</span> <span class="na">controls</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;chrome.webm&quot;</span> <span class="na">type=</span><span class="s">&quot;video/webm&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;chrome.mp4&quot;</span> <span class="na">type=</span><span class="s">&quot;video/mp4&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;p&gt;</span>This browser does not support the video element.<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;/video&gt;</span>
-</pre></div>
-      <p>
-        <a class="highlight-module__cta mdl-button mdl-js-button mdl-button--raised mdl-button--colored" href="/web/resources/samples/fundamentals/design-and-ui/media/video/video-main.html">Try full sample</a>
-      </p>
-  </div>
-
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+</pre>
 
 When the browser parses the `<source>` tags, it uses the optional `type`
 attribute to help decide which file to download and play. If the browser supports WebM, it will play chrome.webm, if not, it will check if it can play MPEG-4 videos.
@@ -94,7 +71,7 @@ Not including a type attribute can affect performance when there are
 multiple sources with unsupported types.
 
 Using your mobile browser
-developer tools, compare network activity <a href="/web/resources/samples/fundamentals/design-and-ui/media/video/video-main.html">with type attributes</a> and <a href="/web/resources/samples/fundamentals/design-and-ui/media/video/notype.html">without type attributes</a>.
+developer tools, compare network activity <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/video-main.html">with type attributes</a> and <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/notype.html">without type attributes</a>.
 Also check the response headers in your browser developer tools to [ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
 otherwise video source type checks won't work.
 
@@ -113,41 +90,17 @@ To add a media fragment, you simply add `#t=[start_time][,end_time]` to the
 media URL. For example, to play the video between seconds 5 through 10,
 specify:
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;source</span> <span class="na">src=</span><span class="s">&quot;video/chrome.webm#t=5,10&quot;</span> <span class="na">type=</span><span class="s">&quot;video/webm&quot;</span><span class="nt">&gt;</span></code></pre></div>
+
+    <source src="video/chrome.webm#t=5,10" type="video/webm">
+    
 
 You can also use the Media Fragments API to deliver multiple views on the same
 video &ndash; like cue points in a DVD &ndash; without having to encode and
 serve multiple files.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# WARNING: This page has an include that should be a callout (i.e. a highlight.liquid, but it has no text - please fix this)
-
-
-
-# WARNING: This page has a highlight.liquid include that wants to show a list but it's not supported on devsite. Please change this to text and fix the issue
-
-
-
-
+<!-- TODO: Verify note type! -->
+Note: - 'The Media Fragments API is supported on most platforms, but not on iOS.'
+- 'Make sure Range Requests are supported by your server. Range Requests are enabled by default on most servers, but some hosting services may turn them off.'
 
 
 Using your browser developer tools,
@@ -161,9 +114,11 @@ Add a poster attribute to the video element so that your users have an idea
 of the content as soon as the element loads, without needing to download
 video or start playback.
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;video</span> <span class="na">poster=</span><span class="s">&quot;poster.jpg&quot;</span> <span class="err">...</span><span class="nt">&gt;</span>
-  ...
-<span class="nt">&lt;/video&gt;</span></code></pre></div>
+
+    <video poster="poster.jpg" ...>
+      ...
+    </video>
+    
 
 A poster can also be a fallback if the video `src` is broken or none of the
 video formats supplied are supported. The only downside to poster images is
@@ -182,6 +137,5 @@ Here's a side-by-side comparison of videos without and with a poster image
     <img class="center" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png">
   </div>
 </div>
-
 
 
