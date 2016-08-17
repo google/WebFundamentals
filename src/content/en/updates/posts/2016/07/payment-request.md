@@ -186,7 +186,7 @@ Currently not allowed. But planned to be allowed in the future.
 Not currently.
 
 ### Can I assume current API is final?
-It could change. We provide [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that protects yourself from API changes that may be backwards incompatible. By embedding the shim in your website, it will paper over any API differences for two major Chrome versions.
+It could change. We provide [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that protects you from API changes that may be backwards incompatible. By embedding the shim in your website, it will paper over any API differences for two major Chrome versions.
 
 ## Resources
 To learn more about Payment Request API, a few documents and resources are available:
