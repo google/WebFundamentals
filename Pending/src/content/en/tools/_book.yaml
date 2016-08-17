@@ -6,12 +6,15 @@ upper_tabs:
     path: /web/tools/
     lower_tabs:
       other:
-      - name: Fundamentals
+      - name: Tools
         contents:
         - include: /web/tools/chrome-devtools/_toc.yaml
-        - include: /web/tools/polymer-starter-kit/_toc.yaml
-        - include: /web/tools/service-worker-libraries/_toc.yaml
         - include: /web/tools/setup/_toc.yaml
-        - include: /web/tools/starter-kit/_toc.yaml
+        - title: Service Worker Libraries
+          path: /web/tools/service-worker-libraries/
+        - title: Web Starter Kit
+          path: /web/tools/starter-kit/
+        - title: Polymer Starter Kit
+          path: /web/tools/polymer-starter-kit/
   - include: /web/_upper_tabs-Updates.yaml
   - include: /web/_upper_tabs-Showcase.yaml
