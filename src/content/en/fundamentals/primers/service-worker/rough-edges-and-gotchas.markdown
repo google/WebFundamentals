@@ -45,7 +45,7 @@ fetch(url, {
 {% endhighlight %}
 
 This behaviour is on purpose, and is arguably better than XHR's more complex
-default of sending credentials if the URL is same-origin, but omiting them
+default of sending credentials if the URL is same-origin, but omitting them
 otherwise. Fetch's behaviour is more like other CORS requests, such as `<img
 crossorigin>`, which never sends cookies unless you opt-in with `<img
 crossorigin="use-credentials">`.
