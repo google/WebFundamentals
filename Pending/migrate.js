@@ -75,7 +75,10 @@ function replaceNote(markdown, yaml) {
 }
 
 function replaceIncludeCode(markdown, dir) {
-  var relPath = 'web' + dir.substring(dir.indexOf('/fundamental'));
+  var relPath = 'web' + dir.replace('src/content/en', '');
+  if (!relPath.endsWith('/')) {
+    relPath += '/';
+  }
   var items = markdown.match(/{% include_code(.*?)%}/g);
   if (items) {
     items.forEach(function(item) {
@@ -113,7 +116,10 @@ function replaceLinkSample(markdown, dir) {
       var sourceItem = item;
       var regEx = re.exec(item);
       if (regEx && regEx.length === 3) {
-        var url = SAMPLES_PATH + dir.replace('./src/content/en/', '');
+        var url = SAMPLES_PATH + dir.replace('src/content/en/', '');
+        if (!url.endsWith('/')) {
+          url += '/';
+        }
         url += regEx[1].replace('_code/', '');
         item = '<a href="' + url + '">' + regEx[2] + '</a>';
         markdown = markdown.replace(sourceItem, item);
@@ -163,8 +169,9 @@ function replaceUdacity(markdown, yaml) {
       var re = /{% include fundamentals\/udacity_course.liquid.*?%}/m;
       var item = markdown.match(re);
       if (item) {
-        var newContent = '{# UDACITY-COURSE #}\n';
-        newContent += '## ' + udacity.title + '\n\n';
+        var newContent = '';
+        newContent += '\n## ' + udacity.title + '\n';
+        newContent += '<!-- TODO: Verify Udacity course fits here -->\n';
         newContent += '<div class="attempt-right">\n';
         newContent += '  <figure>\n';
         newContent += '    <img src="' + udacity.image + '">\n';
@@ -238,10 +245,13 @@ function migrateFile(dir, file) {
   fs.unlinkSync(path.join(dir, file));
 }
 
-function migrateDirectory(dir) {
+function migrateDirectory(dir, recursive) {
   var files = fs.readdirSync(dir);
   files.forEach(function(file) {
-    if (file.endsWith('.markdown')) {
+    var fileStat = fs.statSync(path.join(dir, file));
+    if (fileStat.isDirectory() && recursive === true) {
+      migrateDirectory(path.join(dir, file), true);
+    } else if (file.endsWith('.markdown')) {
       try {
         migrateFile(dir, file);
       } catch (ex) {
@@ -252,4 +262,4 @@ function migrateDirectory(dir) {
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/discovery-and-monetization/social-discovery/');
+migrateDirectory('./src/content/en/fundamentals/', true);
