@@ -73,6 +73,21 @@ highlighted flag, restart Chrome and you should be good to go.
 
 <img style="width:723px; max-height:205px" src="/web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-flag.png" alt="Web USB Flag highlighted in chrome://flags"/>
 
+### Available for Origin Trials
+
+In order to get as much feedback as possible from developers using the WebUSB
+API in the field, we will also add this feature in Chrome 54 as an
+[origin trial](https://github.com/jpchase/OriginTrials) for Chrome
+OS, Linux, Mac, and Windows. During the origin trial, the API may still change in
+backward-incompatible ways before we freeze it into the web platform.  To use
+this experimental API in Chrome with no flag, you'll need to [request a token
+for your origin](http://bit.ly/WebUSBOriginTrial) and [insert it in your
+application](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
+
+The trial will end in March 2017. By that point, we expect to have figured
+out any changes necessary to stabilize the feature and move it out from Origin
+Trials.
+
 ## Privacy & Security
 
 ### Attacks against USB devices
@@ -93,21 +108,6 @@ descriptor](https://wicg.github.io/webusb/#webusb-platform-capability-descriptor
 Later a [Public Device Registry](https://wicg.github.io/webusb/#public-device-registry) 
 will be created so that hardware manufacturers can support WebUSB on existing
 devices.
-
-### Available for Origin Trials
-
-In order to get as much feedback as possible from developers using the WebUSB
-API in the field, we will also add this feature in Chrome 54 as an
-[origin trial](https://github.com/jpchase/OriginTrials) for Chrome
-OS, Linux, Mac, and Windows. During the origin trial, the API may still change in
-backward-incompatible ways before we freeze it into the web platform.  To use
-this experimental API in Chrome with no flag, you'll need to [request a token
-for your origin](http://bit.ly/WebUSBOriginTrial) and [insert it in your
-application](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
-
-The trial will end in March 2017. By that point, we expect to have figured
-out any changes necessary to stabilize the feature and move it out from Origin
-Trials.
 
 ### HTTPS Only
 
