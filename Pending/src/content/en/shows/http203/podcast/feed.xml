@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+<channel>
+  <title>HTTP 203 Podcast</title>
+  <link>https://developers.google.com/web/shows/http203/index</link>
+  <language>en</language>
+  <copyright>Google</copyright>
+  <itunes:subtitle>Where Paul and Jake occasionally talk web.</itunes:subtitle>
+  <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+  <itunes:summary>Paul and Jake talk about whatever&#x27;s going on in the world of web development.</itunes:summary>
+  <itunes:owner>
+    <itunes:name>Paul Lewis &amp; Jake Archibald</itunes:name>
+    <itunes:email>jaffathecake@gmail.com</itunes:email>
+  </itunes:owner>
+  <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg" />
+  <itunes:category text="Technology"/>
+
+  <item>
+    <title>Springy CSS, Storage, and Bisecting.</title>
+    <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+    <itunes:subtitle>Paul and Jake talk about physics-based animation, asking the browser for permanent storage space, and how to find where a Chrome bug was created.</itunes:subtitle>
+    <itunes:summary><![CDATA[Paul has been playing with springy animations in the Safari Tech Preview, and Jake loves pubs that are also... windmills?]]></itunes:summary>
+    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art-la.png" />
+    <enclosure url="https://storage.googleapis.com/http-203-podcast/epsiode-5.mp3" length="85018132" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://developers.google.com/web/shows/http203/podcast/http-203-springy-css-storage-and-bisecting</guid>
+    <pubDate>Mon, 04 Jul 2016 15:23:55 +0100</pubDate>
+    <itunes:duration>00:59:56</itunes:duration>
+  </item>
+
+  <item>
+    <title>Promises, Mistakes, and Door Handles.</title>
+    <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+    <itunes:subtitle>Paul and Jake talk about how to Promisify Node, the sins of CSS, and how hard it can be to find a door handle.</itunes:subtitle>
+    <itunes:summary><![CDATA[Jake's discovered display: contents, while Paul is concerned about people microbenchmarking ES2015 features.]]></itunes:summary>
+    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art-la.png" />
+    <enclosure url="https://storage.googleapis.com/http-203-podcast/episode-4.mp3" length="63577518" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://developers.google.com/web/shows/http203/podcast/http-203-promises-mistakes-and-door-handles</guid>
+    <pubDate>Thu, 25 Feb 2016 16:00:00 +0100</pubDate>
+    <itunes:duration>00:52:25</itunes:duration>
+  </item>
+
+  <item>
+    <title>Poetry and Delegated Event Listeners.</title>
+    <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+    <itunes:subtitle>Paul and Jake talk about poetry, event listeners, and content that jumps around your screen.</itunes:subtitle>
+    <itunes:summary><![CDATA[Jake brings his A+ poetry game, and Paul muses over the performance implications of event delegation.]]></itunes:summary>
+    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg" />
+    <enclosure url="https://storage.googleapis.com/http-203-podcast/episode-3.mp3" length="29840530" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://developers.google.com/web/shows/http203/podcast/http-203-poetry-and-delegated-event-listeners</guid>
+    <pubDate>Mon, 26 Oct 2015 16:00:00 +0100</pubDate>
+    <itunes:duration>00:32:30</itunes:duration>
+  </item>
+
+  <item>
+    <title>CORS, Forced Layouts, and Raptor Kebab Shops.</title>
+    <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+    <itunes:subtitle>Paul and Jake talk about CORS, Layout, and which of them has the evolutionary advantage.</itunes:subtitle>
+    <itunes:summary><![CDATA[Why does nobody seem to include CORS headers on their files? And can Paul answer Jake's dreaded CORS pre-flight quiz?]]></itunes:summary>
+    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg" />
+    <enclosure url="https://storage.googleapis.com/http-203-podcast/episode-2.mp3" length="29803546" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://developers.google.com/web/shows/http203/podcast/episode-2.mp3</guid>
+    <pubDate>Wed, 7 Oct 2015 16:00:00 +0100</pubDate>
+    <itunes:duration>00:30:37</itunes:duration>
+  </item>
+
+  <item>
+    <title>Making Burgers and Maintainable Code.</title>
+    <itunes:author>Paul Lewis &amp; Jake Archibald</itunes:author>
+    <itunes:subtitle>Paul and Jake talk about making burgers and maintainable code.</itunes:subtitle>
+    <itunes:summary>How can writing code be like making a burger? Turns out, by the power of weird segues, it can!</itunes:summary>
+    <itunes:image href="https://developers.google.com/web/shows/http203/podcast/http203-podcast-art.jpg" />
+    <enclosure url="https://storage.googleapis.com/http-203-podcast/episode-1.mp3" length="31517231" type="audio/mpeg"/>
+    <guid isPermaLink="false">https://developers.google.com/web/shows/http203/podcast/episode-1.mp3</guid>
+    <pubDate>Mon, 21 Sep 2015 15:23:55 +0100</pubDate>
+    <itunes:duration>00:30:13</itunes:duration>
+  </item>
+
+</channel>
+</rss>
