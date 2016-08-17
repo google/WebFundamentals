@@ -13,7 +13,7 @@ authors:
 After a controlled page kicks off the registration process, let's shift to the
 point of view of the service worker script, which handles the `install` event.
 
-For the most basic example, you need to define a callback for the install event
+For the most basic example, you need to define a callback for the `install` event
 and decide which files you want to cache.
 
 {% highlight javascript %}
