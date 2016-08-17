@@ -310,34 +310,34 @@ console.assert(image.height === 200);
 A custom element can define special lifecycle hooks for running code during
 interesting times of its existence. These are called **custom element reactions**.
 
-<table class="table">
+<table class="mdl-data-table mdl-js-data-table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Called when</th>
+      <th class="mdl-data-table__cell--non-numeric">Name</th>
+      <th class="mdl-data-table__cell--non-numeric">Called when</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>constructor</code></td>
-      <td>An instance of the element is created or <a href="#upgrades">upgraded</a>. Useful for initializing state, settings up event listeners, or <a href="#shadowdom">creating shadow dom</a>. See the <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">spec</a> for restrictions on what you can do in the <code>constructor</code>.</td>
+      <td class="mdl-data-table__cell--non-numeric"><code>constructor</code></td>
+      <td class="mdl-data-table__cell--non-numeric">An instance of the element is created or <a href="#upgrades">upgraded</a>. Useful for initializing state, settings up event listeners, or <a href="#shadowdom">creating shadow dom</a>. See the <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-element-conformance">spec</a> for restrictions on what you can do in the <code>constructor</code>.</td>
     </tr>
     <tr>
-      <td><code>connectedCallback</code></td>
-      <td>Called every time the element is inserted into the DOM. Useful for running setup code, such as fetching resources or rendering. Generally, you should try to delay work until this time.</td>
+      <td class="mdl-data-table__cell--non-numeric"><code>connectedCallback</code></td>
+      <td class="mdl-data-table__cell--non-numeric">Called every time the element is inserted into the DOM. Useful for running setup code, such as fetching resources or rendering. Generally, you should try to delay work until this time.</td>
     </tr>
     <tr>
-      <td><code>disconnectedCallback</code></td>
-      <td>Called every time the element is removed from the DOM. Useful for running clean up code (removing event listeners, etc.).</td>
+      <td class="mdl-data-table__cell--non-numeric"><code>disconnectedCallback</code></td>
+      <td class="mdl-data-table__cell--non-numeric">Called every time the element is removed from the DOM. Useful for running clean up code (removing event listeners, etc.).</td>
     </tr>
     <tr>
-      <td><code>attributeChangedCallback(attrName, oldVal, newVal)</code></td>
-      <td>An attribute was added, removed, updated, or replaced. Also called for initial values when an element is created by the parser, or <a href="#upgrades">upgraded</a>. <b>Note:</b> only attributes listed in the <code>observedAttributes</code> property will receive this callback.</td>
+      <td class="mdl-data-table__cell--non-numeric"><code>attributeChangedCallback(attrName, oldVal, newVal)</code></td>
+      <td class="mdl-data-table__cell--non-numeric">An attribute was added, removed, updated, or replaced. Also called for initial values when an element is created by the parser, or <a href="#upgrades">upgraded</a>. <b>Note:</b> only attributes listed in the <code>observedAttributes</code> property will receive this callback.</td>
     </tr>
     <tr>
-    <td><code>adoptedCallback()</code></td>
-      <td>The custom element has been moved into a new <code>document</code> (e.g. someone called <code>document.adoptNode(el)</code>).</td>
-    <tr>
+      <td class="mdl-data-table__cell--non-numeric"><code>adoptedCallback()</code></td>
+      <td class="mdl-data-table__cell--non-numeric">The custom element has been moved into a new <code>document</code> (e.g. someone called <code>document.adoptNode(el)</code>).</td>
+    </tr>
   </tbody>
 </table>
 
