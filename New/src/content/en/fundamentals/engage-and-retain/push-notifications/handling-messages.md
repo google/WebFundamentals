@@ -95,54 +95,55 @@ resolves to a promise.
 
 Next, if you find data in the event object, get it.
 
-
-    self.addEventListener('push', event => {
-      event.waitUntil(() => {
-        if (event.data) {
-          return Promise.resolve(event.data);
-        }
-        // No data, so do something else.  
-      });  
-    });
+<pre class="prettyprint">
+self.addEventListener('push', event => {
+  <strong>event.waitUntil(() => {
+    if (event.data) {
+      return Promise.resolve(event.data);
+    }
+    // No data, so do something else.</strong>
+  });  
+});
+</pre>
     
 
 If there's no data in the object, call `fetch()` to get it from the server. 
 Otherwise, just return the data.
 
-
-    self.addEventListener('push', event => {
-      event.waitUntil(() => {
-        if (event.data) {
-          return Promise.resolve(event.data);
-        }
-        return fetch('some/data/endpoint.json')
-          .then(response => response.json());
-      });
-    });
-    
+<pre class="prettyprint">
+self.addEventListener('push', event => {
+  event.waitUntil(() => {
+    if (event.data) {
+      return Promise.resolve(event.data);
+    }
+    <strong>return fetch('some/data/endpoint.json')
+      .then(response => response.json());</strong>
+  });
+});
+</pre>
 
 In both cases we end up with a JSON object. Now it's time to show a
 notification to the user.
 
-
-    self.addEventListener('push', event => {
-      event.waitUntil(() => {
-        if (event.data) {
-          return Promise.resolve(event.data);
-        }
-        return fetch('some/data/endpoint.json')
-            .then(response => response.json());
-        })
-        .then(data => {
-          return self.registration.showNotification(data.title, {
-            body: data.body,
-            icon: (data.icon ? data.icon : '/images/icon-192x192.png'),
-            vibrate: [200, 100, 200, 100, 200, 100, 400],
-            tag: data.tag
-           })
-        }))
-    });
-    
+<pre class="prettyprint">
+self.addEventListener('push', event => {
+  event.waitUntil(() => {
+    if (event.data) {
+      return Promise.resolve(event.data);
+    }
+    return fetch('some/data/endpoint.json')
+        .then(response => response.json());
+    })
+    <strong>.then(data => {
+      return self.registration.showNotification(data.title, {
+        body: data.body,
+        icon: (data.icon ? data.icon : '/images/icon-192x192.png'),
+        vibrate: [200, 100, 200, 100, 200, 100, 400],
+        tag: data.tag
+       })
+    }))</strong>
+});
+</pre>
 
 ## Combine similar notifications {#combine-similar-notes}
 
@@ -179,19 +180,19 @@ to do with it. Start with a basic push event handler.
 
 Check for notifications that match `data.tag` with a call to `getNotifications()`.
 
-
-    self.addEventListener('push', function(event) {
-      event.waitUntil(
-        // Get the message data somehow and return a Promise.
-      )
-      .then(data => {
-        return self.registration.getNotifications({tag: data.tag});
-      })
-      .then(notifications => {
-        //Do something with the notifications.
-      })
-    });
-    
+<pre class="prettyprint">
+self.addEventListener('push', function(event) {
+  event.waitUntil(
+    // Get the message data somehow and return a Promise.
+  )
+  .then(data => {
+    <strong>return self.registration.getNotifications({tag: data.tag});
+  })
+  .then(notifications => {
+    //Do something with the notifications.
+  })</strong>
+});
+</pre>
 
 In other examples, we've instantiated our `options` object right in the call  to
 `showNotification()`. For this scenario, the `options` object needs to change
@@ -201,10 +202,9 @@ based on the results of `getNotifications()`.  So instantiate a notification
 Notice that we've also attached the notification data to the notification
 options. We're doing this to ensure that it's available to `notificationclick`,
 which we'll look at in a later section. To tell the browser we're combining
-notifications, we need to reuse the `tag` (line 6) and set `renotify` to `true`
-(line 17).
+notifications, we need to reuse the `tag` and set `renotify` to `true`. Both are highlighted below.
 
-<pre class="prettyprint linenums">
+<pre class="prettyprint">
 self.addEventListener('push', function(event) {
   event.waitUntil(
     // Get the message data somehow and return a Promise.
@@ -217,11 +217,11 @@ self.addEventListener('push', function(event) {
       body: data.body,
       icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
       vibrate: [200, 100, 200, 100, 200, 100, 400],
-      tag: data.tag,
+      <strong>tag: data.tag,</strong>
       data: data
   	}
     if (notifications.length > 0) {
-      noteOptions.renotify = true;
+      <strong>noteOptions.renotify = true;</strong>
       // Configure other options for combined notifications.
     }
   })  
@@ -229,12 +229,12 @@ self.addEventListener('push', function(event) {
 </pre>
 
 When we fill out the remaining properties for the new notifications we're also
-going to add two action buttons to the notification (lines 21 through 24). One
+going to add two action buttons to the notification. One
 will open the application. The other will dismiss the notification without
 taking action. Neither of those actions is handled by the push event. We'll look
 at that in the next section. Finally, show the notification (line 26).
 
-<pre class="prettyprint linenums">
+<pre class="prettyprint">
 self.addEventListener('push', function(event) {
   event.waitUntil(
     // Get the message data somehow and return a Promise.
@@ -255,12 +255,12 @@ self.addEventListener('push', function(event) {
       data.title = "Flight Updates";
       noteOptions.body = "There are several updates regarding your flight, 5212 to Kansas City.";
       noteOptions.renotify = true;
-      noteOptions.actions = [
+      <strong>noteOptions.actions = [
         {action: 'view', title: 'View updates'},
         {action: 'notNow', title: 'Not now'}
       ]
     }
-    self.registration.showNotification(data.title, noteOptions);
+    self.registration.showNotification(data.title, noteOptions);</strong>
   })  
 });
 </pre>
@@ -311,28 +311,28 @@ close the notification.
 Next, we need some logic to figure out where the notification was clicked. Did
 the user click Confirm, Reschedule, or neither?
 
-
-    self.addEventListener('notificationclick', function(event) {
-      event.notification.close();
-      if (event.action === 'confirm') {
-        // Send the confirmation to the server.
-      } else if (event.action === 'change') {
-        // Open the application to a place where the user can reschedule.
-      } else {
-        // Just open the app.
-      }
-    });
-    
+<pre class="prettyprint">
+self.addEventListener('notificationclick', function(event) {
+  event.notification.close();
+  <strong>if (event.action === 'confirm') {
+    // Send the confirmation to the server.
+  } else if (event.action === 'change') {
+    // Open the application to a place where the user can reschedule.
+  } else {
+    // Just open the app.
+  }</strong>
+});
+</pre>
 
 If the user clicked confirm, we can send that straight back to the server
 without opening the application (lines 3 through 13). Notice that we're
 returning from the `notificationclick` event immediately after sending the
-confirmation to the server. This prevents app from opening.
+confirmation to the server. This prevents the app from opening.
 
-<pre class="prettyprint linenums">
+<pre class="prettyprint">
 self.addEventListener('notificationclick', function(event) {
   event.notification.close();
-  if (event.action === 'confirm')
+  <strong>if (event.action === 'confirm')
     var fetchOptions = {
       method: 'post',
       headers: new Headers({
@@ -342,7 +342,7 @@ self.addEventListener('notificationclick', function(event) {
     };
     var confirmation = new Request('/back/end/system/confirm');
     event.waitUntil(fetch(confirmation, fetchOptions));
-    return; // So we don't open the page when we don't need to.
+    return; // So we don't open the page when we don't need to.</strong>
   } else if (event.action === 'change') {
     // Open the application to a place where the user can reschedule.
   } else {
@@ -352,10 +352,10 @@ self.addEventListener('notificationclick', function(event) {
 </pre>
 
 If the recipient clicked change, we want to open to a confirmation page. If the
-user clicks somewhere other than an action button, we just want to open the app
-(lines 14 through 19). In both cases, we'll create an appropriate URL.
+user clicks somewhere other than an action button, we just want to open the app.
+In both cases, we'll create an appropriate URL.
 
-<pre class="prettyprint linenums">
+<pre class="prettyprint">
 self.addEventListener('notificationclick', function(event) {
   event.notification.close();
   if (event.action === 'confirm') {
@@ -369,13 +369,13 @@ self.addEventListener('notificationclick', function(event) {
     var confirmation = new Request('/back/end/system/confirm');
     event.waitUntil(fetch(confirmation, fetchOptions));
     return; // So we don't open the page when we don't need to.
-  } else if (event.action === 'change') {
+  <strong>} else if (event.action === 'change') {
     var appUrl = '/?confirmation_id=' +
       event.notification.data.confirmation_id + '#reschedule';
   } else {
     var appUrl = '/';
   }
-  // Navigate to appUrl.
+  // Navigate to appUrl.</strong>
 });
 </pre>
 
@@ -399,23 +399,24 @@ navigate with.
 Finally, we need to take different navigation paths depending on whether a
 client is open.
 
+<pre class="prettyprint">
+self.addEventListener('notificationclick', function(event) {
+  // Content excerpted
 
-    self.addEventListener('notificationclick', function(event) {
-      // Content excerpted
-    
-      event.waitUntil(clients.matchAll({
-        includeUncontrolled: true,
-        type: 'window'
-        }).then( activeClients => {
-          if (activeClients.length > 0) {
-            activeClients[0].navigate(appUrl);
-            activeClients[0].focus();
-          } else {
-            clients.openWindow(appUrl);
-          }
-        })
-      );
-    });
+  event.waitUntil(clients.matchAll({
+    includeUncontrolled: true,
+    type: 'window'
+    <strong>}).then( activeClients => {
+      if (activeClients.length > 0) {
+        activeClients[0].navigate(appUrl);
+        activeClients[0].focus();
+      } else {
+        clients.openWindow(appUrl);
+      }</strong>
+    })
+  );
+});
+</pre>
     
 
 Here's the entire `notificationclick` handler from end to end.

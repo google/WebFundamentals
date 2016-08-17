@@ -8,22 +8,20 @@
 
 ## Push Notifications
 
-You may already know how to implement push notifications. Are you using them well? Could you be using them better?
+Push notifications are one of the most valuable capabilities of native apps, and this capability is now available on the web. To get the most out of them, notifications need to be timely, precise, and relevant.
 
 
-  [Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
+  [Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
 
-  
-  [Personal, timely, and relevant](/web/fundamentals/engage-and-retain/push-notifications/personal-timely-relevant?hl=en)
-  
-  [Asking permission for notifications](/web/fundamentals/engage-and-retain/push-notifications/asking-permission?hl=en)
-  
-  [Tips for creating engaging notifications](/web/fundamentals/engage-and-retain/push-notifications/create-a-great-notification?hl=en)
-  
+  [What makes a good notification?](/web/fundamentals/engage-and-retain/push-notifications/good-notification?hl=en)
 
+  [Requesting permission and subscribing users](/web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions?hl=en)
 
+  [Sending messages](/web/fundamentals/engage-and-retain/push-notifications/sending-messages?hl=en)
 
+  [Handling messages](/web/fundamentals/engage-and-retain/push-notifications/handling-messages?hl=en)
 
+  [Video: web push notifications (I/O 2016)](/web/fundamentals/engage-and-retain/push-notifications/video?hl=en)
 
 
 ## Improve User Experiences with a Web App Manifest
