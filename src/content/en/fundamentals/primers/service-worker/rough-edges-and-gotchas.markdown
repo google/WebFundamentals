@@ -26,8 +26,7 @@ To work around this, go to `chrome://serviceworker-internals` and check "Open
 DevTools window and pause JavaScript execution on service worker startup for
 debugging.", and put a `debugger` statement at the start of your `install` event.
 (This option is named differently in versions of Chrome earlier than 47.)
-This, along with  "[Pause on uncaught exceptions](https://developer.chrome.com/devtools/docs/javascript-debugging
-#pause-on-uncaught-exceptions)",  should reveal the issue.
+This, along with "[Pause on exceptions](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints#exceptions)", should reveal the issue.
 
 ## The Defaults of fetch()
 
