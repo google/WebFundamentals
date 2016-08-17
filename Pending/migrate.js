@@ -212,6 +212,13 @@ function migrateFile(dir, file) {
     topOfDoc += '{# wf_published_on: ';
     topOfDoc += moment(yaml.published_on).format('YYYY-MM-DD') + ' #}\n';
   }
+  if (yaml.tags) {
+    var tagList = yaml.tags.join(',');
+    topOfDoc += '{# wf_tags: ' + tagList + ' #}\n';
+  }
+  if (yaml.featured_image) {
+    topOfDoc += '{# wf_featured_image: ' + yaml.featured_image + ' #}\n';
+  }
   if (yaml.title) {
     topOfDoc += '\n';
     topOfDoc += '# ' + yaml.title + ' {: .page-title }\n';
@@ -228,6 +235,8 @@ function migrateFile(dir, file) {
       topOfDoc += '{% include "_shared/contributors/' + translator + '.html\" %}\n';
     });
   }
+  topOfDoc += '\n\n';
+  markdown = markdown.replace(/{{site.WFBaseUrl}}/g, '/web');
   markdown = markdown.replace('{% include shared/toc.liquid %}\n', '');
   markdown = markdown.replace(/{{ ?page.description ?}}/g, yaml.description);
   markdown = replaceIncludeCode(markdown, dir);
@@ -238,6 +247,11 @@ function migrateFile(dir, file) {
   markdown = removeIntroP(markdown);
   markdown = replaceYTVideo(markdown);
   markdown = replaceUdacity(markdown, yaml);
+
+  if (yaml.layout === 'updates/post') {
+    markdown += '\n\n';
+    markdown += '{# wf_add_comment_widget #}\n';
+  }
 
   var result = topOfDoc + markdown;
   var newFile = path.join(dir, file).replace('.markdown', '.md');
@@ -262,4 +276,4 @@ function migrateDirectory(dir, recursive) {
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/', true);
+migrateDirectory('./src/content/en/updates/', true);
