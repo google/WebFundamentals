@@ -10,32 +10,29 @@ authors:
   - mattgaunt
 ---
 
-<p class="intro">This stuff is really new. Here's a collection of issues that 
-	get in the way. Hopefully this section can be deleted soon, but for now 
+<p class="intro">This stuff is really new. Here's a collection of issues that
+	get in the way. Hopefully this section can be deleted soon, but for now
 	these are worth being mindful of.
 </p>
 
-{% include shared/toc.liquid %}
-
 ## If Installation Fails, We're Not so Good at Telling You About It
 
-If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers` 
+If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers`
 or `chrome://serviceworker-internals`, it's likely failed to
 install due to an error being thrown, or a rejected promise being passed to
 `event.waitUntil()`.
 
 To work around this, go to `chrome://serviceworker-internals` and check "Open
 DevTools window and pause JavaScript execution on service worker startup for
-debugging.", and put a debugger statement at the start of your install event.
+debugging.", and put a `debugger` statement at the start of your `install` event.
 (This option is named differently in versions of Chrome earlier than 47.)
-This, along with  "[Pause on uncaught exceptions](https://developer.chrome.com/devtools/docs/javascript-debugging
-#pause-on-uncaught-exceptions)",  should reveal the issue.
+This, along with "[Pause on exceptions](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints#exceptions)", should reveal the issue.
 
 ## The Defaults of fetch()
 
 ### No Credentials by Default
 
-When you use `fetch`, by default, requests won't contain credentials such as 
+When you use `fetch()`, by default, requests won't contain credentials such as
 cookies. If you want credentials, instead call:
 
 {% highlight javascript %}
@@ -45,7 +42,7 @@ fetch(url, {
 {% endhighlight %}
 
 This behaviour is on purpose, and is arguably better than XHR's more complex
-default of sending credentials if the URL is same-origin, but omiting them
+default of sending credentials if the URL is same-origin, but omitting them
 otherwise. Fetch's behaviour is more like other CORS requests, such as `<img
 crossorigin>`, which never sends cookies unless you opt-in with `<img
 crossorigin="use-credentials">`.
@@ -53,7 +50,7 @@ crossorigin="use-credentials">`.
 ### Non-CORS Fail by Default
 
 By default, fetching a resource from a third party URL will fail if it doesn't
-support CORS. You can add a `no-CORS` option to the Request to overcome this,
+support CORS. You can add a `no-cors` option to the Request to overcome this,
 although this will cause an 'opaque' response, which means you won't be able to
 tell if the response was successful or not.
 
@@ -73,7 +70,7 @@ appropriate image asset at run time and make a network request.
 For service worker, if you wanted to cache an image during the install step, you
 have a few options:
 
-1. Install all the images that the  `<picture>` element and the `srcset` 
+1. Install all the images that the `<picture>` element and the `srcset`
    attribute will request.
 2. Install a single low-res version of the image.
 3. Install a single high-res version of the image.
@@ -100,7 +97,7 @@ In a `srcset` image, we'd have some markup like this:
 {% endhighlight %}
 
 If we are on a 2x display, then the browser will opt to download `image-2x.png`,
-if we are offline you could `.catch()` this request and return `image-src.png`
+if we are offline you could `catch()` this request and return `image-src.png`
 instead if it's cached, however the browser will expect an image which takes
 into account the extra pixels on a 2x screen, so the image will appear as
 200x200 CSS pixels instead of 400x400 CSS pixels. The only way around this is to
@@ -113,4 +110,4 @@ style="width:400px; height: 400px;" />
 
 For `<picture>` elements being used for art direction, this becomes considerably
 more difficult and will depend heavily on how your images are created and used,
-but you may be able to use a similar approach to srcset.
+but you may be able to use a similar approach to `srcset`.

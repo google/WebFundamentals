@@ -1078,3 +1078,18 @@ zkoch:
   email: zkoch@google.com
   description:
     en: "Google Chrome Product Manager"
+
+myakura:
+  name:
+    given: Masataka
+    family: Yakura
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: myakura
+  email: masataka.yakura@gmail.com
+  description:
+    en: "Masataka is a Web Google Developers Expert"

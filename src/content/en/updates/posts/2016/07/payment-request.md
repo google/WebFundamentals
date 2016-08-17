@@ -166,14 +166,6 @@ If you are selling physical goods, you'll probably need to collect the user's sh
 ### Adding more payment solutions
 Credit card is not the only supported payment solution for Payment Request. There are a number of other payment services and solutions in the wild and the Payment Request API is designed to support as many of those as possible. Google is working to bring Android Pay to Chrome. Other third party solutions will be supported in the near future as well. Stay tuned for updates.
 
-## Resources
-To learn more about Payment Request API, a few documents and resources are available:
-
-* [Official specification](https://www.w3.org/TR/payment-request/)
-* [Payment Request API integration guide](https://developers.google.com/web/fundamentals/primers/payment-request/)
-* [Demo](https://emerald-eon.appspot.com/)
-* [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/)
-
 ## FAQ
 
 ### Any restrictions to use the API?
@@ -189,3 +181,17 @@ We  are investigating how to best do this. For now, you can manually ask for co
 
 ### Does this work with iframes?
 Currently not allowed. But planned to be allowed in the future.
+
+### Are there any polyfills available to support incompatible browsers for this API?
+Not currently.
+
+### Can I assume current API is final?
+It could change. We provide [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that protects you from API changes that may be backwards incompatible. By embedding the shim in your website, it will paper over any API differences for two major Chrome versions.
+
+## Resources
+To learn more about Payment Request API, a few documents and resources are available:
+
+* [Official specification](https://www.w3.org/TR/payment-request/)
+* [Payment Request API integration guide](https://developers.google.com/web/fundamentals/primers/payment-request/)
+* [Demo](https://emerald-eon.appspot.com/)
+* [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/)

@@ -11,7 +11,7 @@ authors:
 ---
 
 <p class="intro">To install a service worker you need to kick start the process by
-<b>registering</b> it in your page. This tells the browser where your
+<strong>registering</strong> it in your page. This tells the browser where your
 service worker JavaScript file lives.</p>
 
 {% highlight javascript %}
@@ -41,8 +41,8 @@ everything on this domain. If we register the service worker file at
 `/example/sw.js`, then the service worker would only see `fetch` events for pages
 whose URL starts with `/example/` (i.e. `/example/page1/`, `/example/page2/`).
 
-Now you can check that a service worker is enabled by going to `chrome://inspect
-/#service-workers` and looking for your site.
+Now you can check that a service worker is enabled by going to
+`chrome://inspect/#service-workers` and looking for your site.
 
 ![Inspect service workers](images/sw-chrome-inspect.png)
 

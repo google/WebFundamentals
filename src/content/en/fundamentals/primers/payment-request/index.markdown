@@ -12,7 +12,7 @@ translation_priority: 0
 order: 5
 notes:
   may_change:
-    - PaymentRequest is still in development. While we think it's stable enough to implement, it may continue to change. We'll keep this page updated to always reflect the current status of the API.
+    - PaymentRequest is still in development. While we think it's stable enough to implement, it may continue to change. We'll keep this page updated to always reflect the current status of the API.<br>Meanwhile, to protect yourself from API changes that may be backwards incompatible, we're offering <a href="https://storage.googleapis.com/prshim/v1/payment-shim.js" target="_blank">a shim</a> that can be embedded on your site. The shim will paper over any API differences for two major Chrome versions.
   shipping_options:
     - "<code><a href=\"https://www.w3.org/TR/payment-request/#paymentdetails-dictionary\" target=\"_blank\">details</a>.shippingOptions</code> need to be <code>undefined</code> or an empty array upon initialization in order to receive <code>shippingaddresschange</code> event. Otherwise, the event won't be fired."
   address_rejection:
@@ -267,7 +267,7 @@ In order to reject an address for reasons such as non-supported region, pass `de
 {% include shared/note.liquid list=page.notes.address_rejection %}
 
 {% highlight javascript %}
-payment.addEventListener('shippingoptionchange', e => {
+payment.addEventListener('shippingaddresschange', e => {
   e.updateWith(((details, addr) => {
     if (addr.country === 'US') {
       var shippingOption = {

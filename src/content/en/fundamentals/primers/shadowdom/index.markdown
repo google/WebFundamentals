@@ -127,8 +127,8 @@ Shadow DOM is just normal DOM with two differences: 1) how it's created/used and
 A **shadow root** is a document fragment that gets attached to a “host” element. The act of attaching a shadow root is how the element gains its shadow DOM. To create shadow DOM for an element, call `element.attachShadow()`:
 
 {% highlight javascript %}
-let header = document.createElement('header');
-let shadowRoot = header.attachShadow({mode: 'open'});
+const header = document.createElement('header');
+const shadowRoot = header.attachShadow({mode: 'open'});
 shadowRoot.innerHTML = '<h1>Hello Shadow DOM</h1>'; // Could also use appendChild().
 
 // header.shadowRoot === shadowRoot
@@ -142,12 +142,11 @@ The spec [defines a list of elements](http://w3c.github.io/webcomponents/spec/sh
 - The browser already hosts its own internal shadow DOM for the element (`<textarea>`, `<input>`).
 - It doesn't make sense for the element to host a shadow DOM (`<img>`).
 
-For example:
+For example, this doesn't work:
 
 {% highlight javascript %}
-let shadowRoot = document.createElement('div').attachShadow({mode: 'open'});
+document.createElement('input').attachShadow({mode: 'open'});
 // Error. `<input>` cannot host shadow dom.
-// document.createElement('input').attachShadow({mode: 'open'});
 {% endhighlight %}
 
 ### Creating shadow DOM for a custom element {#elements}
@@ -163,7 +162,7 @@ Shadow DOM is particularly useful when creating [custom elements][ce_article]. U
         super(); // always call super() first in the ctor.
 
         // Attach a shadow root to <fancy-tabs>.
-        let shadowRoot = this.attachShadow({mode: 'open'});
+        const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
           <style>#tabs { ... }</style> <!-- styles are scoped to fancy-tabs! -->
           <div id="tabs">...</div>
@@ -481,7 +480,7 @@ If you remember from before, `<slot>`s do not move the user's light DOM. When no
 Another, more in-depth example from `<fancy-tabs>`:
 
 {% highlight javascript %}
-let shadowRoot = this.attachShadow({mode: 'open'});
+const shadowRoot = this.attachShadow({mode: 'open'});
 shadowRoot.innerHTML = `
   <style>
     #panels {
@@ -554,10 +553,10 @@ Users can tweak internal styles if the component's author provides styling hooks
     --fancy-tabs-bg: black;
   }
 </style>
-<fancy-tabs>...</fancy-tabs>
+<fancy-tabs background>...</fancy-tabs>
 {% endhighlight %}
 
-Inside it's shadow DOM:
+Inside its shadow DOM:
 
 {% highlight css %}
 :host([background]) {
@@ -581,8 +580,8 @@ There's another flavor of shadow DOM is called "closed" mode. When you create a 
 **Example** - creating a closed shadow tree:
 
 {% highlight javascript %}
-let div = document.createElement('div');
-let shadowRoot = div.attachShadow({mode: 'closed'}); // close shadow tree
+const div = document.createElement('div');
+const shadowRoot = div.attachShadow({mode: 'closed'}); // close shadow tree
 // div.shadowRoot === null
 // shadowRoot.host === div
 {% endhighlight %}
@@ -692,7 +691,7 @@ out of the shadow boundary unless the event is created using the `composed: true
 
     // Inside <fancy-tab> custom element class definition:
     selectTab() {
-      let tabs = this.shadowRoot.querySelector('#tabs');
+      const tabs = this.shadowRoot.querySelector('#tabs');
       tabs.dispatchEvent(new Event('tab-select', {bubbles: true, composed: true}));
     }
 
@@ -700,7 +699,7 @@ If `composed: false` (default), consumers won't be able to listen for the event 
 
     <fancy-tabs></fancy-tabs>
     <script>
-      let tabs = document.querySelector('fancy-tabs');
+      const tabs = document.querySelector('fancy-tabs');
       tabs.addEventListener('tab-select', e => {
         // won't fire if `tab-select` wasn't created with `composed: true`.
       });
@@ -918,7 +917,7 @@ See [Closed shadow roots](#closed).
 
 <!-- <script>
 if (!supportsShadowDOM()) {
-  let demos = document.querySelectorAll('.demoarea');
+  const demos = document.querySelectorAll('.demoarea');
   Array.from(demos).forEach(function(demo) {
     demo.hidden = true;
   });

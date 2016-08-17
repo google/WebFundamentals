@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Your First Progressive Web App"
-description: "Progressive Web Apps are experiences that combine the best of the web and the best of apps. In this step-by-step guide, you'll build your own Progressive Web App and learn the the fundamentals needed for building Progressive Web Apps, including the app shell model, how to use service workers to cache the App Shell and your key application data and more."
+description: "Progressive Web Apps are experiences that combine the best of the web and the best of apps. In this step-by-step guide, you'll build your own Progressive Web App and learn the fundamentals needed for building Progressive Web Apps, including the app shell model, how to use service workers to cache the App Shell and your key application data and more."
 published_on: 2016-02-04
 updated_on: 2016-02-04
 translation_priority: 1
