@@ -10,7 +10,7 @@ authors:
   - mattgaunt
 ---
 
-<p class="intro">Now that you've installed a service worker, you probably want to 
+<p class="intro">Now that you've installed a service worker, you probably want to
   return one of your cached responses, right?</p>
 
 After a service worker is installed and the user navigates to a different page
@@ -89,17 +89,17 @@ self.addEventListener('fetch', function(event) {
 
 What we are doing is this:
 
-1. Add a callback to `.then()` on the `fetch` request.
+1. Add a callback to `then()` on the `fetch` request.
 2. Once we get a response, we perform the following checks:
 
    1. Ensure the response is valid.
    2. Check the status is `200` on the response.
-   3. Make sure the response type is **basic**, which indicates that it's a 
-      request from our origin. This means that requests to third party assets 
+   3. Make sure the response type is **basic**, which indicates that it's a
+      request from our origin. This means that requests to third party assets
       aren't cached as well.
-3. If we pass the checks, we [clone](https://fetch.spec.whatwg.org/#dom-response-clone) 
-   the response. The reason for this is that because the response is a 
-   [Stream](https://streams.spec.whatwg.org/), the body can only be consumed 
-   once. Since we want to return the response for the browser to use, as well 
-   as pass it to the cache to use, we need to clone it so we can send one to 
+3. If we pass the checks, we [clone](https://fetch.spec.whatwg.org/#dom-response-clone)
+   the response. The reason for this is that because the response is a
+   [Stream](https://streams.spec.whatwg.org/), the body can only be consumed
+   once. Since we want to return the response for the browser to use, as well
+   as pass it to the cache to use, we need to clone it so we can send one to
    the browser and one to the cache.
