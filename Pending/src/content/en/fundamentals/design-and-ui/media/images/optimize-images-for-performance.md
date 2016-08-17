@@ -78,9 +78,7 @@ CSS spriting is a technique whereby a number of images are combined in a single
 background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
-{% link_sample _code/image-sprite.html %}
-<img src="img/sprite-sheet.png" class="center" alt="Image sprite sheet used in example">
-{% endlink_sample %}
+<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Image sprite sheet used in example"></a>
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite" lang=css %}
 </pre>

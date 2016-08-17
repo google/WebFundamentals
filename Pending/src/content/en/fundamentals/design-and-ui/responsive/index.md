@@ -13,5 +13,18 @@ description: Create flexible, not fixed, layouts that work on mobile, desktop, o
     Create flexible, not fixed, layouts that work on mobile, desktop, or any other device.
 
   </div>
-  {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+  
+## Responsive Web Design Fundamentals
+<!-- TODO: Verify Udacity course fits here -->
+<div class="attempt-right">
+  <figure>
+    <img src="fundamentals/imgs/udacity-rwd.png">
+  </figure>
+</div>
+
+Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more.
+
+[View Course](https://udacity.com/ud893){: .external }
+
+
 </div>

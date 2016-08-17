@@ -20,7 +20,20 @@ use too much real estate on a narrow phone, and still comes at the same
 bandwidth overhead when scaled down to fit on a smaller screen.
 
   </div>
-  {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title description=page.udacity.description image=page.udacity.image %}
+  
+## Responsive Images
+<!-- TODO: Verify Udacity course fits here -->
+<div class="attempt-right">
+  <figure>
+    <img src="img/udacity-ri.jpg">
+  </figure>
+</div>
+
+Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
+
+[View Course](https://udacity.com/ud882){: .external }
+
+
 </div>
 
 ### Art direction
