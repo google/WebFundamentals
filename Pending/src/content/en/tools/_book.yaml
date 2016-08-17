@@ -1,0 +1,17 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+upper_tabs:
+  - include: /web/_upper_tabs-Fundamentals.yaml
+  - name: Tools
+    heading: Tools
+    path: /web/tools/
+    lower_tabs:
+      other:
+      - name: Fundamentals
+        contents:
+        - include: /web/tools/chrome-devtools/_toc.yaml
+        - include: /web/tools/polymer-starter-kit/_toc.yaml
+        - include: /web/tools/service-worker-libraries/_toc.yaml
+        - include: /web/tools/setup/_toc.yaml
+        - include: /web/tools/starter-kit/_toc.yaml
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml
