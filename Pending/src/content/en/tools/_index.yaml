@@ -1,0 +1,61 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
+project_path: /web/_project.yaml
+book_path: /web/tools/_book.yaml
+landing_page:
+
+  header:
+    description: >
+      Discover our tools and kickstart your development.
+
+  rows:
+
+  - columns:
+    - items:
+      - icon:
+          icon_name: web
+        path: /web/tools/chrome-devtools/
+        heading: "Chrome DevTools"
+        description: "TBD"
+
+      - icon:
+          icon_name: trending_up
+        path: /web/tools/starter-kit/
+        heading: "Web Starter Kit"
+        description: "Let us do the bootstrapping, and you focus on what you'd like to build."
+
+      - icon:
+          icon_name: network_check
+        path: /web/tools/polymer-starter-kit/
+        heading: "Polymer Starter Kit"
+        description: "An opinionated starting point for building Polymer 1.0 web apps that work great across different devices."
+
+      - icon:
+          icon_name: security
+        path: https://www.getmdl.io/
+        heading: "Material Design Lite"
+        description: "TBD"
+
+
+
+
+    - items:
+      - icon:
+          icon_name: web
+        path: https://www.polymer-project.org
+        heading: "Polymer"
+        description: "TBD"
+
+      - icon:
+          icon_name: group_add
+        path: /web/tools/service-worker-libraries/
+        heading: "Service Worker Libraries"
+        description: "TBD"
+
+      - icon:
+          icon_name: find_in_page
+        path: /speed/pagespeed/module
+        heading: "Page Speed Module"
+        description: "Maximize discoverability for your users and your revenue."
+
+
