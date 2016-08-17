@@ -15,8 +15,6 @@ authors:
 	these are worth being mindful of.
 </p>
 
-{% include shared/toc.liquid %}
-
 ## If Installation Fails, We're Not so Good at Telling You About It
 
 If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers`
