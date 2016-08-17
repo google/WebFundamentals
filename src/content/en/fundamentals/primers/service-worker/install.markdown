@@ -10,8 +10,9 @@ authors:
   - mattgaunt
 ---
 
-After a controlled page kicks off the registration process, let's shift to the
-point of view of the service worker script, which handles the `install` event.
+<p class="intro">After a controlled page kicks off the registration process,
+let's shift to the point of view of the service worker script, which handles
+the `install` event.</p>
 
 For the most basic example, you need to define a callback for the `install` event
 and decide which files you want to cache.
