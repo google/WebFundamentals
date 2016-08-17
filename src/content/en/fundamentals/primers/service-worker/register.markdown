@@ -11,7 +11,7 @@ authors:
 ---
 
 <p class="intro">To install a service worker you need to kick start the process by
-<b>registering</b> it in your page. This tells the browser where your
+<strong>registering</strong> it in your page. This tells the browser where your
 service worker JavaScript file lives.</p>
 
 {% highlight javascript %}
