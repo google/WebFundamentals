@@ -89,7 +89,7 @@ self.addEventListener('fetch', function(event) {
 
 What we are doing is this:
 
-1. Add a callback to `.then()` on the `fetch` request.
+1. Add a callback to `then()` on the `fetch` request.
 2. Once we get a response, we perform the following checks:
 
    1. Ensure the response is valid.

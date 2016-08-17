@@ -35,7 +35,7 @@ This, along with  "[Pause on uncaught exceptions](https://developer.chrome.com/d
 
 ### No Credentials by Default
 
-When you use `fetch`, by default, requests won't contain credentials such as 
+When you use `fetch()`, by default, requests won't contain credentials such as
 cookies. If you want credentials, instead call:
 
 {% highlight javascript %}
@@ -100,7 +100,7 @@ In a `srcset` image, we'd have some markup like this:
 {% endhighlight %}
 
 If we are on a 2x display, then the browser will opt to download `image-2x.png`,
-if we are offline you could `.catch()` this request and return `image-src.png`
+if we are offline you could `catch()` this request and return `image-src.png`
 instead if it's cached, however the browser will expect an image which takes
 into account the extra pixels on a 2x screen, so the image will appear as
 200x200 CSS pixels instead of 400x400 CSS pixels. The only way around this is to
