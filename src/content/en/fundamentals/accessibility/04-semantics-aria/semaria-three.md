@@ -27,7 +27,7 @@ ARIA provides several mechanisms for adding labels and descriptions to elements.
 
 `aria-label` allows us to specify a string to be used as the accessible label. This overrides any other native labeling mechanism, such as a `label` element &mdash; for example, if a `button` has both text content and an `aria-label`, only the `aria-label` value will be used. 
 
-You might use an `aria-label` attribute when you have some kind of visual indication of an element's purpose, such as a button that uses a graphic instead of text, but still need to clarify that purpose for anyone who cannot access the visual indication, such as a button that uses an image to indicate its purpose.
+You might use an `aria-label` attribute when you have some kind of visual indication of an element's purpose, such as a button that uses a graphic instead of text, but still need to clarify that purpose for anyone who cannot access the visual indication, such as a button that uses only an image to indicate its purpose.
 
 ![hamburger-button](imgs/hamburger-button.png)
 
