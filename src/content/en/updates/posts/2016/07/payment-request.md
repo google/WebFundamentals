@@ -3,7 +3,7 @@ layout: updates/post
 title: "Bringing easy and fast checkout with Payment Request API"
 description: "Payment Request is a new API for the open web that makes checkout flows easier, faster and consistent."
 published_on: 2016-07-31
-updated_on: 2016-07-31
+updated_on: 2016-08-17
 authors:
   - agektmr
 tags:
