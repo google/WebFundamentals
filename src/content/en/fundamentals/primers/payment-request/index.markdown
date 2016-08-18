@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Payment Request API integration guide"
 description: "Payment Request API is for fast, easy payments on the web."
 published_on: 2016-07-25
-updated_on: 2016-07-25
+updated_on: 2016-08-18
 authors:
   - agektmr
   - dgash
