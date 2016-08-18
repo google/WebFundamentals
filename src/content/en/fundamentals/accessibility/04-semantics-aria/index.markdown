@@ -49,6 +49,12 @@ Using ARIA attributes, however, we can give the element the missing information 
 
 >Later, we will cover the list of ARIA attributes and when to use them.
 
+ARIA works by changing and augmenting the standard DOM accessibility tree.
+
+![acctree1](imgs/acctree1.png)
+
+![acctree2](imgs/acctree2.png)
+
 Although ARIA allows us to subtly (or even radically) modify the accessibility tree, that is the only page component it changes. ARIA doesn't augment any of the element's inherent behavior; it won't make the element focusable or give it keyboard event listeners. That is still part of our development task.
 
 It's important to understand that there is no need to redefine default semantics. Regardless of its use, a standard HTML `<input type="checkbox">` element doesn't need an additional `role="checkbox"` ARIA attribute to be correctly announced.
