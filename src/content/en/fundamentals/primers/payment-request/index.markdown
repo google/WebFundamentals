@@ -71,6 +71,13 @@ The beauty of the new process is threefold: from the user's perspective, all the
 
 ## Using the Payment Request API {#using}
 
+### Load Payment Request API shim
+To mitigate pains of catching up with this living standard API, we strongly recommend you to add this shim in `<head>` section of your code. This shim will be updated as API changes and will do its best to keep your code working at least 2 major releases of Chrome.
+
+{% highlight html %}
+<script src="https://storage.googleapis.com/prshim/v1/payment-shim.js">
+{% endhighlight %}
+
 ### Create a PaymentRequest {#create-paymentrequest}
 The first step is to create a [`PaymentRequest`](https://www.w3.org/TR/payment-request/#paymentrequest-interface) object by calling the [`PaymentRequest`](https://www.w3.org/TR/payment-request/#paymentrequest-constructor) constructor. This step is typically (but not always) associated with a user-initiated action indicating their intent to make a purchase. The object is constructed using parameters that contain required data.
 
