@@ -16,6 +16,9 @@ fa:
 
 fr:
   name: 'Français'
+  
+hi:
+  name: 'Hindi(हिंदी)'
 
 it:
   name: 'Italiano'
