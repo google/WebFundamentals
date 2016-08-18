@@ -1,11 +1,9 @@
 toc:
   - title: September
     section:
-      - title: '7 minute videos: Javascript Console Protips & newish DOM APIs'
-        path: >-
-          /web/updates/2011/09/7-minute-videos-Javascript-Console-Protips-newish-DOM-APIs
       - title: New Game Conference for HTML5 Game Developers Coupon
-        path: >-
-          /web/updates/2011/09/New-Game-Conference-for-HTML5-Game-Developers-Coupon
+        path: /web/updates/2011/09/New-Game-Conference-for-HTML5-Game-Developers-Coupon
+      - title: '7 minute videos: Javascript Console Protips & newish DOM APIs'
+        path: /web/updates/2011/09/7-minute-videos-Javascript-Console-Protips-newish-DOM-APIs
       - title: Workers ♥ ArrayBuffer
         path: /web/updates/2011/09/Workers-ArrayBuffer

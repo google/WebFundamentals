@@ -5,14 +5,13 @@ toc:
         path: /web/updates/2011/10/App-Cache-Tools-and-Auto-Generators
       - title: Defining Scope In IndexedDB Transactions
         path: /web/updates/2011/10/Defining-Scope-In-IndexedDB-Transactions
-      - title: Having a ride with Three.js
-        path: /web/updates/2011/10/Having-a-ride-with-Three-js
-      - title: Keeping up with HTML5 and browser support
-        path: /web/updates/2011/10/Keeping-up-with-HTML5-and-browser-support
-      - title: 'Let Your Content Do the Talking: Fullscreen API'
-        path: /web/updates/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API
       - title: Spooktacular HTML5 Pumpkin
         path: /web/updates/2011/10/Spooktacular-HTML5-Pumpkin
+      - title: 'Let Your Content Do the Talking: Fullscreen API'
+        path: /web/updates/2011/10/Let-Your-Content-Do-the-Talking-Fullscreen-API
       - title: WebSockets updated to latest version in Chrome Canary
-        path: >-
-          /web/updates/2011/10/WebSockets-updated-to-latest-version-in-Chrome-Canary
+        path: /web/updates/2011/10/WebSockets-updated-to-latest-version-in-Chrome-Canary
+      - title: Keeping up with HTML5 and browser support
+        path: /web/updates/2011/10/Keeping-up-with-HTML5-and-browser-support
+      - title: Having a ride with Three.js
+        path: /web/updates/2011/10/Having-a-ride-with-Three-js

@@ -1,37 +1,33 @@
 toc:
   - title: March
     section:
-      - title: Canvas toBlob() support added in Chrome 50
-        path: /web/updates/2016/03/canvas-toblob-in-chrome-50
-      - title: API Deprecations and Removals in Chrome 50
-        path: /web/updates/2016/03/chrome-50-deprecations
-      - title: Chrome Supports createImageBitmap() in Chrome 50
-        path: /web/updates/2016/03/createimagebitmap-in-chrome-50
       - title: A new Device Mode for a mobile-first generation
         path: /web/updates/2016/03/device-mode-v2
-      - title: Device Orientation Changes Are Coming to Chrome 50
-        path: /web/updates/2016/03/device-orientation-changes
+      - title: Creating a Web-enabled IoT device with Intel&reg; Edison
+        path: /web/updates/2016/03/web-enabled-internet-of-things
+      - title: FormData methods for inspection and modification
+        path: /web/updates/2016/03/formdata-methods-for-inspection-and-modification
+      - title: Canvas toBlob() support added in Chrome 50
+        path: /web/updates/2016/03/canvas-toblob-in-chrome-50
+      - title: Chrome Supports createImageBitmap() in Chrome 50
+        path: /web/updates/2016/03/createimagebitmap-in-chrome-50
       - title: DOMTokenList Validation Added in Chrome 50
         path: /web/updates/2016/03/domtokenlist-validation-added-in-chrome-50
       - title: Removing Headaches from Focus Management
         path: /web/updates/2016/03/focus-start-point
-      - title: FormData methods for inspection and modification
-        path: /web/updates/2016/03/formdata-methods-for-inspection-and-modification
-      - title: Prioritizing Your Resources with &lt;link rel='preload'>
-        path: /web/updates/2016/03/link-rel-preload
-      - title: >-
-          Media Source API: Automatically Ensure Seamless Playback of Media
-          Segments in Append Order
-        path: /web/updates/2016/03/mse-sourcebuffer
-      - title: >-
-          Web Notification Improvements in Chrome 50: Icons, Close Events,
-          Renotify Preferences and Timestamps
-        path: /web/updates/2016/03/notifications
-      - title: HTMLMediaElement.play() Returns a Promise
-        path: /web/updates/2016/03/play-returns-promise
+      - title: API Deprecations and Removals in Chrome 50
+        path: /web/updates/2016/03/chrome-50-deprecations
       - title: Web Animations Improvements in Chrome 50
         path: /web/updates/2016/03/web-animations-improvements
-      - title: Creating a Web-enabled IoT device with Intel&reg; Edison
-        path: /web/updates/2016/03/web-enabled-internet-of-things
+      - title: 'Media Source API: Automatically Ensure Seamless Playback of Media Segments in Append Order'
+        path: /web/updates/2016/03/mse-sourcebuffer
+      - title: 'Web Notification Improvements in Chrome 50: Icons, Close Events, Renotify Preferences and Timestamps'
+        path: /web/updates/2016/03/notifications
+      - title: Prioritizing Your Resources with &lt;link rel='preload'>
+        path: /web/updates/2016/03/link-rel-preload
+      - title: Device Orientation Changes Are Coming to Chrome 50
+        path: /web/updates/2016/03/device-orientation-changes
       - title: Web Push Payload Encryption
         path: /web/updates/2016/03/web-push-encryption
+      - title: HTMLMediaElement.play() Returns a Promise
+        path: /web/updates/2016/03/play-returns-promise

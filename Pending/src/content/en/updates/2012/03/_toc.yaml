@@ -1,9 +1,9 @@
 toc:
   - title: March
     section:
-      - title: 'A New Experimental Feature: scoped stylesheets'
-        path: /web/updates/2012/03/A-New-Experimental-Feature-style-scoped
       - title: CSS layout gets smarter with calc()
         path: /web/updates/2012/03/CSS-layout-gets-smarter-with-calc
       - title: Optimizing JavaScript
         path: /web/updates/2012/03/Optimizing-JavaScript
+      - title: 'A New Experimental Feature: scoped stylesheets'
+        path: /web/updates/2012/03/A-New-Experimental-Feature-style-scoped

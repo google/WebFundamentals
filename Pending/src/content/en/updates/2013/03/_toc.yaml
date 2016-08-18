@@ -3,7 +3,7 @@ toc:
     section:
       - title: Introduction to Custom Filters (aka CSS Shaders)
         path: /web/updates/2013/03/Introduction-to-Custom-Filters-aka-CSS-Shaders
-      - title: Visualizing Shadow DOM Concepts
-        path: /web/updates/2013/03/Visualizing-Shadow-DOM-Concepts
       - title: 'What''s the CSS :scope pseudo-class for?'
         path: /web/updates/2013/03/What-s-the-CSS-scope-pseudo-class-for
+      - title: Visualizing Shadow DOM Concepts
+        path: /web/updates/2013/03/Visualizing-Shadow-DOM-Concepts

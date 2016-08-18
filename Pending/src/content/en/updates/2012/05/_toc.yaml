@@ -1,8 +1,7 @@
 toc:
   - title: May
     section:
+      - title: 'requestAnimationFrame API: now with sub-millisecond precision'
+        path: /web/updates/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision
       - title: Websocket Frame Inspection now in Chrome DevTools
         path: /web/updates/2012/05/Websocket-Frame-Inspection-now-in-Chrome-DevTools
-      - title: 'requestAnimationFrame API: now with sub-millisecond precision'
-        path: >-
-          /web/updates/2012/05/requestAnimationFrame-API-now-with-sub-millisecond-precision

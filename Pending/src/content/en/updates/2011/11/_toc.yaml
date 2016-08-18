@@ -3,9 +3,9 @@ toc:
     section:
       - title: Chrome Developer Tools for Speed
         path: /web/updates/2011/11/Chrome-Developer-Tools-for-Speed
-      - title: 'Quota Management API : Fast Facts'
-        path: /web/updates/2011/11/Quota-Management-API-Fast-Facts
       - title: '&quot;Stream&quot; video using the MediaSource API'
         path: /web/updates/2011/11/Stream-video-using-the-MediaSource-API
+      - title: 'Quota Management API : Fast Facts'
+        path: /web/updates/2011/11/Quota-Management-API-Fast-Facts
       - title: WebGL demo roundup
         path: /web/updates/2011/11/WebGL-demo-roundup

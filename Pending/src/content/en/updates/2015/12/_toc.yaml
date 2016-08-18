@@ -1,9 +1,9 @@
 toc:
   - title: December
     section:
-      - title: Introducing Background Sync
-        path: /web/updates/2015/12/background-sync
       - title: Getting Started with Progressive Web Apps
         path: /web/updates/2015/12/getting-started-pwa
       - title: Security Panel debuts in Chrome DevTools
         path: /web/updates/2015/12/security-panel
+      - title: Introducing Background Sync
+        path: /web/updates/2015/12/background-sync

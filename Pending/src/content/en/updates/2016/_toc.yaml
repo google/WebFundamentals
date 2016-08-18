@@ -1,0 +1,11 @@
+toc:
+  - title: '2016'
+    section:
+    - include: /web/updates/2016/08/_toc.yaml
+    - include: /web/updates/2016/07/_toc.yaml
+    - include: /web/updates/2016/06/_toc.yaml
+    - include: /web/updates/2016/05/_toc.yaml
+    - include: /web/updates/2016/04/_toc.yaml
+    - include: /web/updates/2016/03/_toc.yaml
+    - include: /web/updates/2016/02/_toc.yaml
+    - include: /web/updates/2016/01/_toc.yaml

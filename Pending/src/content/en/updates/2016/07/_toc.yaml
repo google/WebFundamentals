@@ -1,15 +1,13 @@
 toc:
   - title: July
     section:
-      - title: >-
-          Muted autoplay on mobile: say goodbye to &lt;canvas&gt; hacks and
-          animated GIFs!
-        path: /web/updates/2016/07/autoplay
-      - title: Complexities of an infinite scroller
-        path: /web/updates/2016/07/infinite-scroller
-      - title: Offline Google Analytics Made Easy
-        path: /web/updates/2016/07/offline-google-analytics
       - title: Bringing easy and fast checkout with Payment Request API
         path: /web/updates/2016/07/payment-request
+      - title: 'Muted autoplay on mobile: say goodbye to &lt;canvas&gt; hacks and animated GIFs!'
+        path: /web/updates/2016/07/autoplay
       - title: Web Push Interoperability Wins
         path: /web/updates/2016/07/web-push-interop-wins
+      - title: Offline Google Analytics Made Easy
+        path: /web/updates/2016/07/offline-google-analytics
+      - title: Complexities of an infinite scroller
+        path: /web/updates/2016/07/infinite-scroller

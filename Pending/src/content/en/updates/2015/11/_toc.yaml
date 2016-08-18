@@ -1,11 +1,9 @@
 toc:
   - title: November
     section:
-      - title: Instant Loading Web Apps with An Application Shell Architecture
-        path: /web/updates/2015/11/app-shell
-      - title: >-
-          DevTools Digest (CDS Edition): A glimpse into the future + RAIL
-          Profiling
-        path: /web/updates/2015/11/devtools-digest-cds-edition
       - title: Google Cast for Chrome on Android
         path: /web/updates/2015/11/presentation-api
+      - title: 'DevTools Digest (CDS Edition): A glimpse into the future + RAIL Profiling'
+        path: /web/updates/2015/11/devtools-digest-cds-edition
+      - title: Instant Loading Web Apps with An Application Shell Architecture
+        path: /web/updates/2015/11/app-shell

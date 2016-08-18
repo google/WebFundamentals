@@ -1,16 +1,13 @@
 toc:
   - title: August
     section:
-      - title: 'Integrating input[type=&quot;file&quot;] with the Filesystem API'
-        path: >-
-          /web/updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API
-      - title: 'Quick FAQs on input[type=date] in Google Chrome'
-        path: /web/updates/2012/08/Quick-FAQs-on-input-type-date-in-Google-Chrome
       - title: 'Stick your landings! position: sticky lands in WebKit'
-        path: >-
-          /web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit
+        path: /web/updates/2012/08/Stick-your-landings-position-sticky-lands-in-WebKit
+      - title: 'Integrating input[type=&quot;file&quot;] with the Filesystem API'
+        path: /web/updates/2012/08/Integrating-input-type-file-with-the-Filesystem-API
       - title: 'When milliseconds are not enough: performance.now'
         path: /web/updates/2012/08/When-milliseconds-are-not-enough-performance-now
       - title: '[datalist] for range/color inputs offer some default choices  '
-        path: >-
-          /web/updates/2012/08/datalist-for-range-color-inputs-offer-some-default-choices
+        path: /web/updates/2012/08/datalist-for-range-color-inputs-offer-some-default-choices
+      - title: 'Quick FAQs on input[type=date] in Google Chrome'
+        path: /web/updates/2012/08/Quick-FAQs-on-input-type-date-in-Google-Chrome

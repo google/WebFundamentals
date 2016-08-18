@@ -3,7 +3,7 @@ toc:
     section:
       - title: Getting Rid of Synchronous XHRs
         path: /web/updates/2012/01/Getting-Rid-of-Synchronous-XHRs
-      - title: Introducing Video Player Sample
-        path: /web/updates/2012/01/Introducing-Video-Player-Sample
       - title: Web Audio FAQ
         path: /web/updates/2012/01/Web-Audio-FAQ
+      - title: Introducing Video Player Sample
+        path: /web/updates/2012/01/Introducing-Video-Player-Sample
