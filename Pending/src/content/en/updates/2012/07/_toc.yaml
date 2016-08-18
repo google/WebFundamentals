@@ -1,0 +1,15 @@
+toc:
+  - title: July
+    section:
+      - title: Arrived! xhr.send(ArrayBufferViews)
+        path: /web/updates/2012/07/Arrived-xhr-send-ArrayBufferView
+      - title: 'Drag and drop a folder onto Chrome now available '
+        path: /web/updates/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available
+      - title: How to measure browser graphics performance
+        path: /web/updates/2012/07/How-to-measure-browser-graphics-performance
+      - title: Taking advantage of GPU acceleration in the 2D canvas
+        path: >-
+          /web/updates/2012/07/Taking-advantage-of-GPU-acceleration-in-the-2D-canvas
+      - title: Writing a flippable book using CSS Regions and 3D transforms
+        path: >-
+          /web/updates/2012/07/Writing-a-flippable-book-using-CSS-Regions-and-3D-transforms

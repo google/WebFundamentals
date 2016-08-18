@@ -1,0 +1,14 @@
+toc:
+  - title: February
+    section:
+      - title: CSS Background shorthand coming to mobile WebKit browsers
+        path: >-
+          /web/updates/2013/02/CSS-Background-shorthand-coming-to-mobile-WebKit-browsers
+      - title: Profiling Long Paint Times with DevTools' Continuous Painting Mode
+        path: >-
+          /web/updates/2013/02/Profiling-Long-Paint-Times-with-DevTools-Continuous-Painting-Mode
+      - title: >-
+          WebRTC: RTCDataChannel demo, API changes... and Chrome talks to
+          Firefox!
+        path: >-
+          /web/updates/2013/02/WebRTC-RTCDataChannel-demo-API-changes-and-Chrome-talks-to-Firefox

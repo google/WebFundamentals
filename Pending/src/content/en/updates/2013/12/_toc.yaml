@@ -1,0 +1,12 @@
+toc:
+  - title: December
+    section:
+      - title: '300ms tap delay, gone away'
+        path: /web/updates/2013/12/300ms-tap-delay-gone-away
+      - title: DevTools Digest December 2013
+        path: /web/updates/2013/12/DevTools-Digest-December-2013
+      - title: New Web Animations engine in Blink drives CSS Animations & Transitions
+        path: >-
+          /web/updates/2013/12/New-Web-Animations-engine-in-Blink-drives-CSS-Animations-Transitions
+      - title: 'The Yeoman Monthly Digest #2'
+        path: /web/updates/2013/12/The-Yeoman-Monthly-Digest-2

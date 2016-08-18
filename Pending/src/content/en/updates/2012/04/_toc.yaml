@@ -1,0 +1,17 @@
+toc:
+  - title: April
+    section:
+      - title: Big boost to DOM performance - WebKit's innerHTML is 240% faster
+        path: >-
+          /web/updates/2012/04/Big-boost-to-DOM-performance-WebKit-s-innerHTML-is-240-faster
+      - title: Processing XHR2 file uploads in PHP
+        path: /web/updates/2012/04/Processing-XHR2-file-uploads-in-PHP
+      - title: Round-up of Web Browser Internals Resources
+        path: /web/updates/2012/04/Round-up-of-Web-Browser-Internals-Resources
+      - title: Taking an Entire Page Offline using the HTML5 FileSystem API
+        path: >-
+          /web/updates/2012/04/Taking-an-Entire-Page-Offline-using-the-HTML5-FileSystem-API
+      - title: WebRTC Protothon
+        path: /web/updates/2012/04/WebRTC-Protothon
+      - title: datalist landed in Chrome Canary
+        path: /web/updates/2012/04/datalist-landed-in-Chrome-Canary

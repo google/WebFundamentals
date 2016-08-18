@@ -1,0 +1,8 @@
+toc:
+  - title: August
+    section:
+      - title: 'Collecting and Iterating, the ES6 Way'
+        path: /web/updates/2014/08/Collecting-and-Iterating-the-ES6-Way
+      - title: Easier ArrayBuffer <-> String conversion with the Encoding API
+        path: >-
+          /web/updates/2014/08/Easier-ArrayBuffer-String-conversion-with-the-Encoding-API

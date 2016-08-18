@@ -1,0 +1,13 @@
+toc:
+  - title: January
+    section:
+      - title: High Resolution Timestamps for Events
+        path: /web/updates/2016/01/high-res-timestamps
+      - title: Record audio and video with MediaRecorder
+        path: /web/updates/2016/01/mediarecorder
+      - title: Notification Actions in Chrome 48
+        path: /web/updates/2016/01/notification-actions
+      - title: Easy URL manipulation with URLSearchParams
+        path: /web/updates/2016/01/urlsearchparams
+      - title: VP9 is now available in WebRTC
+        path: /web/updates/2016/01/vp9-webrtc

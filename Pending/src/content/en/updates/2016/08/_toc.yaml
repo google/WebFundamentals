@@ -1,0 +1,9 @@
+toc:
+  - title: August
+    section:
+      - title: API Deprecations and Removals in Chrome 53
+        path: /web/updates/2016/08/chrome-53-deprecations
+      - title: 'DevTools Digest, August 2016'
+        path: /web/updates/2016/08/devtools-digest
+      - title: Web Animations API hits cross-browser milestone
+        path: /web/updates/2016/08/web-animations

@@ -1,0 +1,105 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
+project_path: /web/_project.yaml
+book_path: /web/tools/_book.yaml
+landing_page:
+
+  header:
+    description: >
+      Discover our tools and kickstart your development.
+
+  rows:
+
+  # - heading: PLACE HOLDER PAGE
+  #   classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+  #   items:
+  #   - description: >
+  #       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+  #       ac congue metus. Fusce tristique pellentesque magna a facilisis. Nunc
+  #       maximus, lacus at condimentum pellentesque, eros urna finibus ante, et
+  #       condimentum augue eros eget ipsum. Etiam porta tortor eget dolor porta
+  #       commodo. Nulla et efficitur nisl. Nullam a convallis erat. Vivamus
+  #       erat ligula, pulvinar vel metus ut, vestibulum tincidunt ligula.
+  #       Cras et augue faucibus, dapibus sapien posuere, placerat urna. Cum
+  #       sociis natoque penatibus et magnis dis parturient montes, nascetur
+  #       ridiculus mus. Praesent at dolor eget lacus efficitur rutrum.
+  #       Phasellus urna felis, fringilla sed felis ut, sodales pretium augue.
+  #       Phasellus sodales bibendum nibh, sed aliquam nunc dictum eu. Aliquam
+  #       at est facilisis nibh egestas hendrerit. Lorem ipsum dolor sit amet,
+  #       consectetur adipiscing elit. Duis sodales at lacus in aliquet.
+  #     image_path: https://placehold.it/1600x900
+
+
+  - columns:
+    - items:
+      - custom_html: >
+          <p>The Chrome DevTools are a set of web authoring and debugging tools
+          built into Google Chrome. Use the DevTools to iterate, debug and
+          profile your site.</p>
+          <p><a href="https://tools.google.com/dlpage/chromesxs">Chrome Canary</a>
+          always has the latest DevTools.
+          </p>
+    - items:
+      - custom_html: >
+          <ul>
+            <li>Select <strong>More Tools &gt; Developer Tools</strong> from the Chrome Menu.</li>
+            <li>Right-click on a page element and select Inspect</li>
+            <li>
+              Use <a href="/web/tools/chrome-devtools/iterate/inspect-styles/shortcuts">shortcuts</a>
+              <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd> (Windows)
+              or <kbd>Cmd</kbd>+<kbd>Opt</kbd>+<kbd>I</kbd> (Mac)
+            </li>
+          </ul>
+
+  - heading: Discover the Panels
+
+
+  - heading: Solutions for your Workflow
+    items:
+    - heading: Iterate
+      description: Test and tweak your site design and content iteratively.
+      buttons:
+      - label: Inspect and Edit Pages and Styles
+        path: /web/tools/iterate/inspect-styles/
+    - heading: Debug
+      description: Debugging helps you find and fix errors in your code.
+    - heading: Profile
+      description: Especially when it comes to device testing, put the user first.
+
+
+
+
+  - heading: Hot Off the Press
+    description: >
+        Hmm, interesting, put custom RSS feed stuff here
+
+
+  - heading: Get Involved
+    items:
+    - heading: Connect
+      description: ""
+      buttons:
+      - label: Twitter
+        path: https://twitter.com/ChromeDevTools
+      - label: Stack Overflow
+        path: https://stackoverflow.com/questions/tagged/google-chrome-devtools
+      - label: Slack
+        path: https://chromiumdev.slack.com/messages/devtools/
+    - heading: Contribute
+      description: ""
+      buttons:
+      - label: File a Bug
+        path: https://crbug.com/new
+      - label: How to Contribute
+        path: https://developer.chrome.com/devtools/docs/contributing
+    - heading: Extend
+      description: ""
+      buttons:
+      - label: Integrating with DevTools and Chrome
+        path: https://developer.chrome.com/devtools/docs/integrating
+      - label: DevTools Extension APIs
+        path: https://developer.chrome.com/extensions/devtools
+      - label: Debugger Protocol
+        path: https://developer.chrome.com/devtools/docs/debugger-protocol
+
+

@@ -1,0 +1,41 @@
+toc:
+  - title: April
+    section:
+      - title: DOM Attributes now on the prototype chain
+        path: /web/updates/2015/04/DOM-attributes-now-on-the-prototype-chain
+      - title: A new home for DevTools
+        path: /web/updates/2015/04/a-new-home-for-devtools
+      - title: Alt + Click to expand all child nodes
+        path: /web/updates/2015/04/alt-click-to-expand-all-child-nodes
+      - title: Autocapitalize for mobile
+        path: /web/updates/2015/04/autocapitalize
+      - title: Better Incognito DevTools
+        path: /web/updates/2015/04/better-incognito-devtools
+      - title: Command click to add multiple cursors in the Sources Panel
+        path: >-
+          /web/updates/2015/04/command-click-to-add-multiple-cursors-in-the-sources-panel
+      - title: Copy image as data URI
+        path: /web/updates/2015/04/copy-image-as-data-uri
+      - title: Cut and Copy Commands
+        path: /web/updates/2015/04/cut-and-copy-commands
+      - title: Permissions API for the Web
+        path: /web/updates/2015/04/permissions-api-for-the-web
+      - title: Quick-edit element tags
+        path: /web/updates/2015/04/quick-edit-element-tags
+      - title: Quickly monitor events from the Console Panel
+        path: /web/updates/2015/04/quickly-monitor-events-from-the-console-panel
+      - title: Reveal in Elements panel
+        path: /web/updates/2015/04/reveal-in-elements-panel
+      - title: See matching selectors
+        path: /web/updates/2015/04/see-matching-selectors
+      - title: Simplified Concepts in Web Animations Naming
+        path: /web/updates/2015/04/simplified-concepts-in-web-animations-naming
+      - title: The currently selected DOM node
+        path: /web/updates/2015/04/the-currently-selected-dom-node
+      - title: The easing editor
+        path: /web/updates/2015/04/the-easing-editor
+      - title: Toggle the DevTools dock state with a keyboard shortcut
+        path: >-
+          /web/updates/2015/04/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
+      - title: Unfinished network requests
+        path: /web/updates/2015/04/unfinished-network-requests

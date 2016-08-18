@@ -1,0 +1,23 @@
+toc:
+  - title: February
+    section:
+      - title: 'API Deprecations and Removals in Chrome 49 '
+        path: /web/updates/2016/02/chrome-49-deprecations
+      - title: 'CSS Variables: Why Should You Care?'
+        path: /web/updates/2016/02/css-variables-why-should-you-care
+      - title: 'DevTools go dark, @keyframe editing and smarter autocomplete'
+        path: /web/updates/2016/02/devtools-digest-devtools-go-dark
+      - title: >-
+          Supercharged Remote Debugging, Class Toggles and Our Own Late Night
+          Show?!
+        path: /web/updates/2016/02/devtools-digest-supercharged-remote-debugging
+      - title: Introducing ES2015 Proxies
+        path: /web/updates/2016/02/es2015-proxies
+      - title: Controlling Font Performance with font-display
+        path: /web/updates/2016/02/font-display
+      - title: Delivering Fast and Light Applications with Save-Data
+        path: /web/updates/2016/02/save-data
+      - title: Smooth Scrolling in Chrome 49
+        path: /web/updates/2016/02/smooth-scrolling-in-chrome-49
+      - title: Web Audio Updates in Chrome 49
+        path: /web/updates/2016/02/webaudio

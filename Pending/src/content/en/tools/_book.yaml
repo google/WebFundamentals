@@ -8,8 +8,8 @@ upper_tabs:
       other:
       - name: Tools
         contents:
-        - include: /web/tools/chrome-devtools/_toc.yaml
         - include: /web/tools/setup/_toc.yaml
+        - include: /web/tools/chrome-devtools/_toc.yaml
         - title: Service Worker Libraries
           path: /web/tools/service-worker-libraries/
         - title: Web Starter Kit

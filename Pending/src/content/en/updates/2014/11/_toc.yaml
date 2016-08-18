@@ -1,0 +1,10 @@
+toc:
+  - title: November
+    section:
+      - title: Installable Web Apps with the Web App Manifest in Chrome for Android
+        path: >-
+          /web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android
+      - title: Support for theme-color in Chrome 39 for Android
+        path: /web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+      - title: 'Developer feedback needed: Frame Timing API'
+        path: /web/updates/2014/11/frame-timing-api

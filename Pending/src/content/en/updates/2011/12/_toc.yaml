@@ -1,0 +1,9 @@
+toc:
+  - title: December
+    section:
+      - title: CSS Filter Effects Landing in WebKit
+        path: /web/updates/2011/12/CSS-Filter-Effects-Landing-in-WebKit
+      - title: 'Transferable Objects: Lightning Fast!'
+        path: /web/updates/2011/12/Transferable-Objects-Lightning-Fast
+      - title: Use mediump precision in WebGL when possible
+        path: /web/updates/2011/12/Use-mediump-precision-in-WebGL-when-possible

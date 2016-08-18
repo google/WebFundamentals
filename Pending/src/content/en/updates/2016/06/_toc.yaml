@@ -1,0 +1,31 @@
+toc:
+  - title: June
+    section:
+      - title: >-
+          Goodbye Short Sessions: a proposal for using service-workers to
+          improve cookie management on the web
+        path: /web/updates/2016/06/2-cookie-handoff
+      - title: Flexbox gets new behavior for absolute-positioned children
+        path: /web/updates/2016/06/absolute-positioned-children
+      - title: API Deprecations and Removals in Chrome 52
+        path: /web/updates/2016/06/chrome-52-deprecations
+      - title: CSS Containment in Chrome 52
+        path: /web/updates/2016/06/css-containment
+      - title: 'DevTools Digest: DevTools in 2016 and Beyond'
+        path: /web/updates/2016/06/devtools-digest
+      - title: Improving scroll performance with passive event listeners
+        path: /web/updates/2016/06/passive-event-listeners
+      - title: Performance Observer - Efficient Access to Performance Data
+        path: /web/updates/2016/06/performance-observer
+      - title: Persistent Storage
+        path: /web/updates/2016/06/persistent-storage
+      - title: Stream Your Way to Immediate Responses
+        path: /web/updates/2016/06/sw-readablestreams
+      - title: >-
+          Service worker caching, playbackRate and blob URLs for audio and video
+          on Chrome for Android
+        path: /web/updates/2016/06/ump
+      - title: >-
+          ECDSA for WebRTC: better security, better privacy and better
+          performance
+        path: /web/updates/2016/06/webrtc-ecdsa

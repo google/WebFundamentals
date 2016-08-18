@@ -3,4 +3,44 @@ toc:
     section:
     - title: Overview
       path: /web/tools/chrome-devtools/
+    - title: Configure and Customize DevTools
+      path: /web/tools/chrome-devtools/settings
+    - title: Iterate
+      section:
+      - title: Inspect and Edit Pages and Styles
+        path: /web/tools/chrome-devtools/iterate/inspect-styles/
+      - title: Inspect and Manage Storage, Caches, and Resources
+        path: /web/tools/chrome-devtools/iterate/manage-data/
+      - title: Simulate Mobile Devices with Device Mode
+        path: /web/tools/chrome-devtools/iterate/device-mode/
+    - title: Debug
+      section:
+      - title: Remote Debugging
+        path: /web/tools/chrome-devtools/debug/remote-debugging/
+      - title: Run snippets of code from any page
+        path: /web/tools/chrome-devtools/debug/snippets/
+      - title: Debug Obfuscated Code
+        path: /web/tools/chrome-devtools/debug/readability/
+      - title: Debug Progressive Web Apps
+        path: /web/tools/chrome-devtools/debug/progressive-web-apps/
+      - title: Debug with Breakpoints
+        path: /web/tools/chrome-devtools/debug/breakpoints/
+      - title: Understand Security Issues
+        path: /web/tools/chrome-devtools/debug/security/
+      - title: Using the Console
+        path: /web/tools/chrome-devtools/debug/console/
+      - title: Interact from the Command Line
+        path: /web/tools/chrome-devtools/debug/command-line/
+      - title: Watch Variables in Sources
+        path: /web/tools/chrome-devtools/debug/watch-variables/
+    - title: Profile
+      section:
+      - title: How to Look at Performance
+        path: /web/tools/chrome-devtools/profile/evaluate-performance/
+      - title: Runtime Performance
+        path: /web/tools/chrome-devtools/profile/rendering-tools/
+      - title: Page Load Performance
+        path: /web/tools/chrome-devtools/profile/network-performance/
+      - title: Fix Memory Problems
+        path: /web/tools/chrome-devtools/profile/memory-problems/
 

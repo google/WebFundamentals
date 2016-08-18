@@ -95,7 +95,7 @@ In short, as a first step in optimizing the efficiency of your assets, build an 
 ## Text compression with GZIP
 
 ### TL;DR
-- 'GZIP performs best on text-based assets: CSS, JavaScript, HTML'
+- GZIP performs best on text-based assets: CSS, JavaScript, HTML
 - All modern browsers support GZIP compression and will automatically request it
 - Your server needs to be configured to enable GZIP compression
 - Some CDNs require special care to ensure that GZIP is enabled

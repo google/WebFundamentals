@@ -1,0 +1,85 @@
+toc:
+  - title: May
+    section:
+      - title: Alt + Click to expand all child nodes
+        path: /web/updates/2015/05/alt-click-to-expand-all-child-nodes
+      - title: Autocomplete for bracket notation
+        path: /web/updates/2015/05/autocomplete-for-bracket-notation
+      - title: Automatically pause on any exception
+        path: /web/updates/2015/05/automatically-pause-on-any-exception
+      - title: Better Incognito DevTools
+        path: /web/updates/2015/05/better-incognito-devtools
+      - title: Command click to add multiple cursors in the Sources Panel
+        path: >-
+          /web/updates/2015/05/command-click-to-add-multiple-cursors-in-the-sources-panel
+      - title: Copy image as data URI
+        path: /web/updates/2015/05/copy-image-as-data-uri
+      - title: Copy the response of a network resource to your clipboard
+        path: >-
+          /web/updates/2015/05/copy-the-response-of-a-network-resource-to-your-clipboard
+      - title: Cycle through editing locations
+        path: /web/updates/2015/05/cycle-through-editing-locations
+      - title: Easily jump to event listeners
+        path: /web/updates/2015/05/easily-jump-to-event-listeners
+      - title: Easy timeline recording
+        path: /web/updates/2015/05/easy-timeline-recording
+      - title: Expand CSS shorthand properties
+        path: /web/updates/2015/05/expand-css-shorthand-properties
+      - title: Film strips in Network panel
+        path: /web/updates/2015/05/film-strips-in-network-panel
+      - title: Get and debug event listeners
+        path: /web/updates/2015/05/get-and-debug-event-listeners
+      - title: Get notified of JS errors while you type
+        path: /web/updates/2015/05/get-notified-of-js-errors-while-you-type
+      - title: Go to a line number at a specific column
+        path: /web/updates/2015/05/go-to-a-line-number-at-a-specific-column
+      - title: Granular statement highlights
+        path: /web/updates/2015/05/granular-statement-highlights
+      - title: Hard reload
+        path: /web/updates/2015/05/hard-reload
+      - title: High performance video with hardware decoding
+        path: /web/updates/2015/05/high-performance-video-with-hardware-decoding
+      - title: Local Modifications
+        path: /web/updates/2015/05/local-modifications
+      - title: Notifying you of Changes to Notifications
+        path: /web/updates/2015/05/notifying-you-of-changes-to-notifications
+      - title: Perform a column selection by by dragging
+        path: /web/updates/2015/05/perform-a-column-selection-by-by-dragging
+      - title: Port forwarding
+        path: /web/updates/2015/05/port-forwarding
+      - title: Predefined snippets
+        path: /web/updates/2015/05/predefined-snippets
+      - title: Quick-edit element tags
+        path: /web/updates/2015/05/quick-edit-element-tags
+      - title: Quickly change CSS values
+        path: /web/updates/2015/05/quickly-change-css-values
+      - title: Quickly monitor events from the Console Panel
+        path: /web/updates/2015/05/quickly-monitor-events-from-the-console-panel
+      - title: Replay a network request in cURL
+        path: /web/updates/2015/05/replay-a-network-request-in-curl
+      - title: Reveal in Elements panel
+        path: /web/updates/2015/05/reveal-in-elements-panel
+      - title: Scroll elements into the viewport
+        path: /web/updates/2015/05/scroll-elements-into-the-viewport
+      - title: Search DOM tree by CSS selector
+        path: /web/updates/2015/05/search-dom-tree-by-css-selector
+      - title: See matching selectors
+        path: /web/updates/2015/05/see-matching-selectors
+      - title: Some UI and feature enhancements to the Colour Picker tool
+        path: >-
+          /web/updates/2015/05/some-ui-and-feature-enhancements-to-the-colour-picker-tool
+      - title: The currently selected DOM node
+        path: /web/updates/2015/05/the-currently-selected-dom-node
+      - title: The easing editor
+        path: /web/updates/2015/05/the-easing-editor
+      - title: Toggle the DevTools dock state with a keyboard shortcut
+        path: >-
+          /web/updates/2015/05/toggle-the-devtools-dock-state-with-a-keyboard-shortcut
+      - title: Triggering of pseudo classes
+        path: /web/updates/2015/05/triggering-of-pseudo-classes
+      - title: Unfinished network requests
+        path: /web/updates/2015/05/unfinished-network-requests
+      - title: Use keyboard to navigate through callstack
+        path: /web/updates/2015/05/use-keyboard-to-navigate-through-callstack
+      - title: View and change your DOM breakpoints
+        path: /web/updates/2015/05/view-and-change-your-dom-breakpoints

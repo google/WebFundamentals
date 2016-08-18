@@ -1,15 +1,18 @@
----
-layout: updates/post
-title: "Web Animations Resources"
-description: "Resources and more for the Web Animations API"
-published_on: 2015-10-27
-updated_on: 2015-10-27
-authors:
-  - samthorogood
-tags:
-  - webanimations
-featured_image: /web/updates/images/2015/10/web-animations-resources.png
----
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: Resources and more for the Web Animations API
+
+{# wf_review_required #}
+{# wf_updated_on: 2015-10-26 #}
+{# wf_published_on: 2015-10-26 #}
+{# wf_tags: webanimations #}
+{# wf_featured_image: /web/updates/images/2015/10/web-animations-resources.png #}
+
+# Web Animations Resources {: .page-title }
+
+{% include "_shared/contributors/samthorogood.html" %}
+
+
 
 The Web Animations API provides powerful primitives to describe imperative animations from JavaScript - but what does that mean?
 Find out about the resources available to you, including Google's [demos][web-animations-demos] and [codelabs][web-animations-codelabs].
@@ -19,10 +22,10 @@ Find out about the resources available to you, including Google's [demos][web-an
 At its core, the API provides the `Element.animate()` method.
 Let's see an example, which animates the background color from red to green-
 
-{% highlight javascript %}
-var player = document.body.animate(
-    [{'background': 'red'}, {'background': 'green'}], 1000);
-{% endhighlight %}
+
+    var player = document.body.animate(
+        [{'background': 'red'}, {'background': 'green'}], 1000);
+    
 
 This method is supported in all modern browsers, with a great polyfill fallback (more on that later).
 Native support for this method - and its player object - became widely available as part of [Chrome 39](https://developers.google.com/web/updates/2014/12/web-animation-playback).
@@ -65,22 +68,22 @@ To use either polyfill in your code, you have a few options.
 
 1. Install via NPM or Bower
 
-      {% highlight bash %}
-      $ npm install web-animations-js
-      $ bower install web-animations-js
-      {% endhighlight %}
+      
+          $ npm install web-animations-js
+          $ bower install web-animations-js
+          
 
 In all cases, you can simply include the polyfill in a script tag before any other code-
 
-{% highlight HTML %}
-<script src="https://cdn.jsdelivr.net/web-animations/latest/web-animations.min.js"></script>
-<script>
-  document.body.animate([
-    {'background': 'red'},
-    {'background': 'green'}
-  ], 1000);
-</script>
-{% endhighlight %}
+
+    <script src="https://cdn.jsdelivr.net/web-animations/latest/web-animations.min.js"></script>
+    <script>
+      document.body.animate([
+        {'background': 'red'},
+        {'background': 'green'}
+      ], 1000);
+    </script>
+    
 
 ## Other resources
 
@@ -93,3 +96,6 @@ For some samples using `motion-path`, check out [Eric Willigers' doc](https://do
 [web-animations-demos]: https://web-animations.github.io/web-animations-demos
 [web-animations-demos-repo]: https://github.com/web-animations/web-animations-demos
 [web-animations-codelabs]: https://github.com/web-animations/web-animations-codelabs
+
+
+{# wf_add_comment_widget #}
