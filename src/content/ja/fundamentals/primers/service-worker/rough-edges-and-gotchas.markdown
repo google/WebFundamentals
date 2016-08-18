@@ -13,7 +13,7 @@ translators:
 
 Worker が登録されても `chrome://inspect/#service-workers` や `chrome://serviceworker-internals` に現れない場合、`event.waitUntil` に渡された `Promise` が reject されたなどの理由からインストールに失敗した可能性が高いです。
 
-インストールが成功したか失敗したかを知るには、`chrome://serviceworker-internals` に行き、「Opens the DevTools window for service worker on start for debugging」にチェックを入れ、そして `install` イベントの開始時に `debugger;` ステートメントを記述してください。これと DevTools の [Pause on exception ボタン](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints#exceptions)」で問題を見つけられるでしょう。
+インストールが成功したか失敗したかを知るには、`chrome://serviceworker-internals` に行き、「Open DevTools window and pause JavaScript execution on service worker startup for debugging」にチェックを入れ、そして `install` イベントの開始時に `debugger;` ステートメントを記述してください（このオプションは Chrome 47 より前のバージョンでは名前が異なります）。これと DevTools の [Pause on exception ボタン](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints#exceptions)」で問題を見つけられるでしょう。
 
 ## fetch() のデフォルト
 
