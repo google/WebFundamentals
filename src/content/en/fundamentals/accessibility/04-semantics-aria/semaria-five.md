@@ -29,6 +29,8 @@ The ARIA specification lists <a href="https://www.w3.org/TR/wai-aria/states_and_
 
 `aria-owns` is one of the most widely used ARIA relationships. This attribute allows us to tell assistive technology that an element that is separate in the DOM should be treated as a child of the current element, or to rearrange existing child elements into a different order. For example, if a pop-up sub-menu is visually positioned near its parent menu, but cannot be a DOM child of its parent because it would affect the visual presentation, you can use `aria-owns` to present the sub-menu as a child of the parent menu to a screen reader.
 
+![aria-owns](imgs/aria-owns.png)
+
 `aria-activedescendant` plays a related role. Just as the active element of a page is the one that has focus, setting the active descendant of an element allows us to tell assistive technology that an element should be presented to the user as the focused element when its parent actually has the focus. For example, in a listbox, you might want to leave page focus on the listbox container, but keep its `aria-activedescendant` attribute updated to the currently selected list item. This makes the currently selected item appear to assistive technology as if it is the focused item.
 
 `aria-controls` and `aria-flowto` provide more "advisory only" relationships. `aria-controls` can provide a hint to the user that a particular element controls another part of the page, such as a sorting button on a column of data. And `aria-flowto` provides a user with one or more alternate "next elements" that they can optionally navigate to and from, such as a footnote or a selection of options in a flow chart.
