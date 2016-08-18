@@ -12,6 +12,7 @@ tags:
   - persistentstorage
   - localstorage
   - indexeddb
+  - origintrials
 ---
 
 # Persistent Storage
