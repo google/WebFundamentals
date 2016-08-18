@@ -6,10 +6,16 @@ var moment = require('moment');
 var jsYaml = require('js-yaml');
 
 var ROOT_PATH = './src/content';
+var JSYAML_OPTS = {
+  lineWidth: 1024
+};
 
-var rePublished = /{# wf_published_on: (.*?) #}/;
-var reDescription = /^description: (.*)/m;
-var reTitle = /^# (.*) {: .page-title }/m;
+var RE_PUBLISHED = /{# wf_published_on: (.*?) #}/;
+var RE_DESCRIPTION = /^description: (.*)/m;
+var RE_TITLE = /^# (.*) {: .page-title }/m;
+var RE_TAGS = /{# wf_tags: (.*?) #}/;
+var RE_IMAGE = /{# wf_featured_image: (.*?) #}/;
+
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
@@ -25,38 +31,76 @@ if (!String.prototype.endsWith) {
   });
 }
 
+function getRegEx(regEx, content, defaultResponse) {
+  var result = content.match(regEx);
+  if (result && result[1]) {
+    return result[1];
+  }
+  return defaultResponse;
+}
+
+function compareTocDates(a, b) {
+  var aPublished = moment(a.published);
+  var bPublished = moment(b.published);
+  if (aPublished < bPublished) {
+    return 1;
+  } else if (aPublished > bPublished) {
+    return -1;
+  }
+  return 0;
+}
+
 function buildMonth(lang, year, month) {
   var toc = [];
   var sourcePath = path.join(ROOT_PATH, lang, 'updates', year, month);
   var articles = fs.readdirSync(sourcePath);
   articles.forEach(function(file) {
     if (file.endsWith('.md')) {
-      var url = '/web/updates/' + year + '/' + month + '/' + file.replace('.md', '');
-      file = path.join(sourcePath, file);
-      var content = fs.readFileSync(file, 'utf8');
-      var title = content.match(reTitle);
-      var published = content.match(rePublished);
-      var description = content.match(reDescription);
-      var tocItem = {
-        title: title[1],
+      var url = '/web/updates/' + year + '/' + month + '/';
+      url += file.replace('.md', '');
+      var content = fs.readFileSync(path.join(sourcePath, file), 'utf8');
+      var title = getRegEx(RE_TITLE, content);
+      var published = getRegEx(RE_PUBLISHED, content);
+      var article = {
+        title: title,
+        published: published,
         path: url
       };
-      toc.push(tocItem);
+      var description = getRegEx(RE_DESCRIPTION, content);
+      if (description) {
+        article.description = description;
+      }
+      var tags = getRegEx(RE_TAGS, content);
+      if (tags) {
+        article.tags = tags.split(',');
+      }
+      var image = getRegEx(RE_IMAGE, content);
+      if (image) {
+        article.image = image;
+      }
+      toc.push(article);
     }
   });
-  if (toc.length === 0) {
-    return;
-  }
-  var monthName = moment.months()[parseInt(month - 1)];
+  toc.sort(compareTocDates);
+  return toc;
+}
+
+function writeToc(articles, title, filename) {
+  var toc = [];
+  articles.forEach(function(article) {
+    var tocItem = {
+      title: article.title,
+      path: article.path
+    };
+    toc.push(tocItem);
+  });
   var result = {
     toc: [{
-      title: monthName,
+      title: title,
       section: toc
     }]
   };
-  var tocFile = path.join(ROOT_PATH, lang, 'updates', year, month, '_toc.yaml');
-  fs.writeFileSync(tocFile, jsYaml.safeDump(result));
-  return tocFile;
+  fs.writeFileSync(filename, jsYaml.dump(result, JSYAML_OPTS));
 }
 
 function buildYear(lang, year) {
@@ -66,9 +110,12 @@ function buildYear(lang, year) {
   months.forEach(function(month) {
     var fileStat = fs.statSync(path.join(sourcePath, month));
     if (month.length === 2 && fileStat.isDirectory()) {
-      var toc = buildMonth(lang, year, month);
-      if (toc) {
-        tocs.push(toc);
+      var articles = buildMonth(lang, year, month);
+      if (articles) {
+        var tocFile = path.join(ROOT_PATH, lang, 'updates', year, month, '_toc.yaml');
+        var monthName = moment.months()[parseInt(month - 1)];
+        writeToc(articles, monthName, tocFile);
+        tocs.push(articles);
       }
     }
   });
