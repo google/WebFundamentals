@@ -7,13 +7,11 @@ translators:
 
 <p class="intro">Service Worker はまだ新しい技術です。ここではつまづきやすいポイントを紹介します。早くこのセクションがなくなればいいですが、いま Service Worker で何かをする場合は気に留めておいてください。</p>
 
-{% include shared/toc.liquid %}
-
 ## インストールが失敗したときのフィードバックが少ない
 
 Worker が登録されても `chrome://inspect/#service-workers` や `chrome://serviceworker-internals` に現れない場合、`event.waitUntil` に渡された `Promise` が reject されたなどの理由からインストールに失敗した可能性が高いです。
 
-インストールが成功したか失敗したかを知るには、`chrome://serviceworker-internals` に行き、「Open DevTools window and pause JavaScript execution on service worker startup for debugging」にチェックを入れ、そして `install` イベントの開始時に `debugger;` ステートメントを記述してください（このオプションは Chrome 47 より前のバージョンでは名前が異なります）。これと DevTools の [Pause on exception ボタン](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints#exceptions)」で問題を見つけられるでしょう。
+インストールが成功したか失敗したかを知るには、`chrome://serviceworker-internals` に行き、「Open DevTools window and pause JavaScript execution on service worker startup for debugging」にチェックを入れ、そして `install` イベントの開始時に `debugger` ステートメントを記述してください（このオプションは Chrome 47 より前のバージョンでは名前が異なります）。これと DevTools の [Pause on exception ボタン](https://developers.google.com/web/tools/chrome-devtools/debug/breakpoints/add-breakpoints#exceptions)」で問題を見つけられるでしょう。
 
 ## fetch() のデフォルト
 
@@ -68,7 +66,7 @@ Service Worker のインストール時に画像をキャッシュさせたい�
 <img src="image-src.png" srcset="image-src.png 1x, image-2x.png 2x">
 {% endhighlight %}
 
-2x な画面では、ブラウザは `image-2x.png` をダウンロードするでしょう。オフラインであれば `.catch()` し、キャッシュした `image-src.png` を返せます。しかしブラウザは 2x な画面での表示を想定しているので、画像は 400×400 CSS ピクセルではなく 200×200 CSS ピクセルで表示されます。これを回避するには、画像の幅と高さを明示します。
+2x な画面では、ブラウザは `image-2x.png` をダウンロードするでしょう。オフラインであれば `catch()` し、キャッシュした `image-src.png` を返せます。しかしブラウザは 2x な画面での表示を想定しているので、画像は 400×400 CSS ピクセルではなく 200×200 CSS ピクセルで表示されます。これを回避するには、画像の幅と高さを明示します。
 
 {% highlight html %}
 <img src="image-src.png" srcset="image-src.png 1x, image-2x.png 2x"
