@@ -25,13 +25,13 @@ pages take more than one or two seconds to get any content visible on the homepa
 
 To provide a better user experience you can replace the white screen with a title, color, and images. 
 
-## Set an Image and Title
+## Set an image and title
 
 If you've been following from the beginning, you've actually set and image and title already. Chrome infers the image and title from specific members of the manifest. What's important here is knowing the specifics. 
 
 A splashscreen image is drawn from the `icons` array. Chrome chooses the image that is closest to 128dp for the device. The title is simply pulled from the `name` member.
 
-## Set the Background Color 
+## Set the background color 
 
 Specify background color using the appropriately named `background_color`
 property. The color will be used by Chrome the instant the web app is launched
@@ -54,7 +54,7 @@ splashscreen to the homepage.
   <figcaption>Background color for launch screen</figcaption>
 </figure>
 
-## Set a Theme Color
+## Set a theme color
 
 Specify a theme color using the (wait for it) `theme_color` property. This property
 sets the color of the toolbar. For this we also suggest duplicating an existing

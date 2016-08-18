@@ -14,7 +14,7 @@ description: Use the web app manifest to control the display type and page orien
 Use the web app manifest to control the display type and page orientation.
 
 
-## Customize the Display Type
+## Customize the display type
 
 You make your web app hide the browser's UI by setting the `display` type to `standalone`.
 
@@ -34,7 +34,7 @@ site in a browser. You can set the `display` type to `browser`.
   <figcaption>Manifest Display Options</figcaption>
 </figure>
 
-## Specify the Initial Orientation of the Page
+## Specify the initial orientation of the page
 
 You can enforce a specific orientation, which is advantageous for use cases 
 that work in only one orientation, like games for example. Use this 

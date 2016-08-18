@@ -6,7 +6,7 @@ description: The theme color is a hint from your web page that tells the browser
 {# wf_updated_on: 2016-02-11 #}
 {# wf_published_on: 2014-12-16 #}
 
-# Provide a site-wide theme color {: .page-title }
+# Provide a Site-Wide Theme Color {: .page-title }
 
 {% include "_shared/contributors/mattgaunt.html" %}
 {% include "_shared/contributors/paulkinlan.html" %}

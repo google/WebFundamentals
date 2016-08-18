@@ -1,8 +1,22 @@
 toc:
   - title: Engage & Retain Users
     section:
-    - title: The Web App Manifest
-      path: /web/fundamentals/engage-and-retain/web-app-manifest/
+    - title: Improve User Experiences with a Web App Manifest
+      section:
+      - title: The Web App Manifest
+        path: /web/fundamentals/engage-and-retain/web-app-manifest/
+      - title: Create the Manifest
+        path: /web/fundamentals/engage-and-retain/create-the-manifest
+      - title: Customize the Icons
+        path: /web/fundamentals/engage-and-retain/customize-the-icons
+      - title: Add a Splash Screen
+        path: /web/fundamentals/engage-and-retain/add-splash-screen
+      - title: Set the Launch Style
+        path: /web/fundamentals/engage-and-retain/set-the-launch-style
+      - title: Provide a Site-Wide Theme Color
+        path: /web/fundamentals/engage-and-retain/site-wide-theme-color
+      - title: More Information
+        path: /web/fundamentals/engage-and-retain/more-information
     - title: Web Push Notifications
       section:
       - title: Overview
@@ -23,5 +37,4 @@ toc:
         path: /web/fundamentals/engage-and-retain/app-install-banners/events
       - title: Native App Install Banners
         path: /web/fundamentals/engage-and-retain/app-install-banners/native-app-install
-      
 
