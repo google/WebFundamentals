@@ -65,24 +65,24 @@ First, ask whether your application can send notifications using a message that
 explains exactly why you want to send them notifications.
 
 If the user approves, we need to send a subscription request to the push
-manager. Do this by calling `PushManager.subscribe()` (lines 5 through 9). In
-this example, we're passing it an object with  `userVisibleOnly` set to `true` so
-that all push messages  sent the client will be shown to the user as a
-notification. We're also  including an `applicationServerKey` converted to an
-integer array.
+manager. Do this by calling `PushManager.subscribe()` (emphasized in the
+example below). In this example, we're passing it an object with
+`userVisibleOnly` set to `true` so that all push messages  sent the client will
+be shown to the user as a notification. We're also  including an
+`applicationServerKey` converted to an integer array.
 
 <div style="clear:both;"></div>
 
-<pre class="prettyprint linenums">
+<pre class="prettyprint">
 if ('showNotification' in ServiceWorkerRegistration.prototype) {
   navigator.serviceworker.ready
   .then(registration => {
     if (!subscription) {
-      return registration.pushManager.subscribe({
+      <strong>return registration.pushManager.subscribe({
           userVisibleOnly: true,
           applicationServerKey: window.base64UrlToUint8Array(
             '3xt3rm1n8_totallyFakePublicKey_a10nZ13'
-          );
+          );</strong>
     }
     return subscription;
   })
@@ -153,13 +153,13 @@ related controls, you need to send the subscription information (called the
 appropriate request object containing the subscription data, then passing it to
 the server.
 
-When you create the request (lines 14 through 21), use the  `POST` verb and a
-`Content-Type` header of  `application/json`. For the body you need to convert
-the subscription object to a  string. We'll look at what's in this object in the
-next section, [Sending  messages](sending-messages). Use `fetch()` to send the
-subscription request to the server.
+When you create the request (emphasized in the example below), use the  `POST`
+verb and a `Content-Type` header of  `application/json`. For the body you need
+to convert the subscription object to a  string. We'll look at what's in this
+object in the next section, [Sending  messages](sending-messages). Use `fetch()`
+to send the subscription request to the server.
 
-<pre class="prettyprint linenums">
+<pre class="prettyprint">
 if ('showNotification' in ServiceWorkerRegistration.prototype) {
   navigator.serviceworker.ready
   .then(registration => {
@@ -173,13 +173,13 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
     }
     return subscription;
   })
-  .then(subscription => {
+  <strong>.then(subscription => {
     var fetchOptions = {
       method: 'post',
       headers: new Headers({
         'Content-Type': 'application/json'
       }),
-      body: JSON.stringify(subscription)
+      body: JSON.stringify(subscription)</strong>
     };
     return fetch('/your-web-server/api', fetchOptions);
   })
