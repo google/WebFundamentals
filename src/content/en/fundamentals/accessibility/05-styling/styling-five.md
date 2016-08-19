@@ -27,10 +27,12 @@ If you have good vision, it's easy to assume that everyone perceives colors, or 
 
 As you might imagine, some color combinations that are easy for many people to read are difficult or impossible for others. This usually comes down to *color contrast*, the relationship between the foreground and background colors' *luminance*. When the colors are similar, the contrast ratio is low; when they are different, the contrast ratio is high.
 
-The WebAIM guidelines recommend a minimum contrast ratio of 4.5:1 for all text. An exception is made for very large text (120-150% larger than the default body text), for which the ratio can go down to 3:1.
+The WebAIM guidelines recommend an AA (minimum) contrast ratio of 4.5:1 for all text. An exception is made for very large text (120-150% larger than the default body text), for which the ratio can go down to 3:1. Notice the difference in the contrast ratios shown below.
+
+![contrast-ratios](imgs/contrast-ratios.png)
 
 The contrast ratio of 4.5:1 was chosen for level AA because it compensates for the loss in contrast sensitivity usually experienced by users with vision loss equivalent to approximately 20/40 vision. 20/40 is commonly reported as typical visual acuity of people at about age 80. For users with low vision impairments or color deficiencies, we can increase the contrast up to 7:1 for body text.
 
-You can use the accessibility tools in Chrome to identify contrast ratios. If you run an audit on your page you may get a few warnings for low contrast colors. One benefit of using the Chrome Devtools is that they will suggest AA and AAA alternatives to your current colors, and you can click the values to preview them in your app.
+You can use the accessibility tools in Chrome to identify contrast ratios. If you run an audit on your page you may get a few warnings for low contrast colors. One benefit of using the Chrome Devtools is that they will suggest AA and AAA (enhanced) alternatives to your current colors, and you can click the values to preview them in your app.
 
 WebAIM itself provides a handy <a href="http://webaim.org/resources/contrastchecker/" target="_blank">color contrast checker</a> you can use to examine the contrast of any color pair.
