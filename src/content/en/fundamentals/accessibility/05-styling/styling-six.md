@@ -27,8 +27,14 @@ There are roughly 320 million users with color vision deficiency. About 1 in 12 
 
 For example, in an input form, a telephone number might be underlined in red to show that it is invalid. But to a color deficient or screen reader user, that information is not conveyed well, if at all. Thus, you should always try to provide multiple avenues for the user to access critical information.
 
+![input-form1](imgs/input-form1.png)
+
 The WebAIM checklist states in section 1.4.1 that "color should not be used as the sole method of conveying content or distinguishing visual elements." It also notes that "color alone should not be used to distinguish links from surrounding text" unless they meet certain contrast requirements. Instead, the checklist recommends adding an additional indicator such as an underscore (using the CSS `text-decoration` property) to indicate when the link is active.
 
-An easy way to fix the previous example is to add an additional message to the field, announcing that it is invalid and why. When you're building an app, keep these sorts of things in mind and watch out for areas where you may be relying too heavily on color to convey important information.
+An easy way to fix the previous example is to add an additional message to the field, announcing that it is invalid and why. 
+
+![input-form2](imgs/input-form2.png)
+
+When you're building an app, keep these sorts of things in mind and watch out for areas where you may be relying too heavily on color to convey important information.
 
 If you're curious about how your site looks to different people, or if you rely heavily on the use of color in your UI, you can use the <a href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=en-US" target="_blank">NoCoffee Chrome extension</a> to simulate various forms of visual impairment, including different types of color blindness. 
