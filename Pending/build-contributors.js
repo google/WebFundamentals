@@ -43,13 +43,6 @@ function getContributors() {
 }
 
 handlebarHelpers();
-Handlebars.registerHelper('ifNewRow', function(index, options) {
-  if (index % 2 === 0) {
-    return options.inverse(this);
-  }
-  return options.fn(this);
-});
-
 var contributors = getContributors();
 buildIncludes(contributors);
 buildIndex(contributors);

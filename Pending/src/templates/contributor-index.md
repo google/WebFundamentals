@@ -51,9 +51,9 @@ book_path: /web/resources/_book.yaml
         </div>
       </section>
     </td>
-    {{#ifNewRow @index}}
+    {{#ifNth 2 @index}}
     </tr>
     <tr>
-    {{/ifNewRow}}
+    {{/ifNth}}
     {{/each}}
 </table>
