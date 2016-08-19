@@ -8,16 +8,24 @@
 <section class="wf-byline">
   <div class="attempt-left">
     <figure>
-      <img src="/web/images/contributors/[[PHOTO]].jpg" alt="[[NAME]]">
+      {{#if noPhoto}}
+        <img src="/web/images/contributors/no-photo.jpg" alt="{{name.given}} {{name.family}}">
+      {{else}}
+        <img src="/web/images/contributors/{{id}}.jpg" alt="{{name.given}} {{name.family}}">
+      {{/if}}
     </figure>
   </div>
   <section class="wf-byline-meta">
     <div class="wf-byline-name">
       <strong>By</strong>
-      <a href="/web/resources/contributors#[[KEY]]">[[NAME]]</a>
+      <a href="/web/resources/contributors#{{id}}">{{name.given}} {{name.family}}</a>
     </div>
     <div class="wf-byline-desc">
-      [[DESCRIPTION]]
+      {{#if description.en}}
+        {{description.en}}
+      {{else}}
+        {{name.given}} is a contributor to Web<b>Fundamentals</b>
+      {{/if}}
     </div>
   </section>
 </section>
