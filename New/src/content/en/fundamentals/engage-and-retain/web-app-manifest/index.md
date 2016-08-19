@@ -3,12 +3,13 @@ book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
 {# wf_review_required #}
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2016-08-19 #}
 {# wf_published_on: 2016-02-11 #}
 
 # The Web App Manifest {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "_shared/contributors/mattgaunt.html" %}
+{% include "_shared/contributors/paulkinlan.html" %}
 
 The [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in areas where they would expect to see apps (for example the mobile home screen), direct what the user can launch, and define its appearance at launch.
 
@@ -21,6 +22,11 @@ Web app manifests provide the ability to save a site bookmark to a device's home
 It does all this through the simple mechanism of metadata in a text file. That's the web app manifest.
 
 Note: Though you can use a web app manifest on any site, they are required for <a href='/web/progressive-web-apps'>progressive web apps</a>.
+
+## TL;DR
+- Creating a manifest and linking it to your page are simple.
+- Control what the user sees when launching from the homescreen.
+- This includes things like a splashscreen, theme colors, and even the URL that's opened. 
 
 ## Create the manifest
 
@@ -74,7 +80,10 @@ is unlikely to be what your users want. But that's not the only reason to
 include it. Because you can now define how your app is launched, add a query
 string parameter to the `start_url` that indicates how it was launched. 
 
-    "start_url": "/index.html?homescreen=1"
+    "start_url": "/?utm_source=homescreen"
+
+This can actually be anything you want, though the value we're using has the advantage of being meaningful to Google Analytics among other analytics platforms.
+ 
 
 ## Customize the icons
 
