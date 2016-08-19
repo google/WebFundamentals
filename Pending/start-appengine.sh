@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "Building contributors files..."
-node build-contributors.js
+# echo "Building contributors files..."
+# node build-contributors.js
 
 echo "Starting server on: http://localhost:8080/"
 
