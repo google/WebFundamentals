@@ -1,3 +1,4 @@
+# ATTENTION - This file is auto-generated, changes must be made to the template!
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 
@@ -18,9 +19,9 @@ book_path: /web/updates/_book.yaml
 [Read more]({{path}})
 
 {{#if author}}
-[{{authorName author}}](/web/resources/contributors#{{author}})
+[{{author}}](/web/resources/contributors#{{author}})
 {{/if}}
-{{momentFormat published}}
+{{published}}
 
 {{#if tags}}
 Tags: {{#each tags}}[{{this}}](#) {{/each}}
