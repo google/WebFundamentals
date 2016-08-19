@@ -1,10 +1,10 @@
 toc:
   - title: '2011'
     section:
-    - include: /web/updates/2011/12/_toc.yaml
-    - include: /web/updates/2011/11/_toc.yaml
-    - include: /web/updates/2011/10/_toc.yaml
-    - include: /web/updates/2011/09/_toc.yaml
-    - include: /web/updates/2011/08/_toc.yaml
-    - include: /web/updates/2011/07/_toc.yaml
-    - include: /web/updates/2011/06/_toc.yaml
+      - include: /web/updates/2011/12/_toc.yaml
+      - include: /web/updates/2011/11/_toc.yaml
+      - include: /web/updates/2011/10/_toc.yaml
+      - include: /web/updates/2011/09/_toc.yaml
+      - include: /web/updates/2011/08/_toc.yaml
+      - include: /web/updates/2011/07/_toc.yaml
+      - include: /web/updates/2011/06/_toc.yaml

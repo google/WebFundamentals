@@ -1,15 +1,15 @@
 toc:
   - title: '2015'
     section:
-    - include: /web/updates/2015/12/_toc.yaml
-    - include: /web/updates/2015/11/_toc.yaml
-    - include: /web/updates/2015/10/_toc.yaml
-    - include: /web/updates/2015/09/_toc.yaml
-    - include: /web/updates/2015/08/_toc.yaml
-    - include: /web/updates/2015/07/_toc.yaml
-    - include: /web/updates/2015/06/_toc.yaml
-    - include: /web/updates/2015/05/_toc.yaml
-    - include: /web/updates/2015/04/_toc.yaml
-    - include: /web/updates/2015/03/_toc.yaml
-    - include: /web/updates/2015/02/_toc.yaml
-    - include: /web/updates/2015/01/_toc.yaml
+      - include: /web/updates/2015/12/_toc.yaml
+      - include: /web/updates/2015/11/_toc.yaml
+      - include: /web/updates/2015/10/_toc.yaml
+      - include: /web/updates/2015/09/_toc.yaml
+      - include: /web/updates/2015/08/_toc.yaml
+      - include: /web/updates/2015/07/_toc.yaml
+      - include: /web/updates/2015/06/_toc.yaml
+      - include: /web/updates/2015/05/_toc.yaml
+      - include: /web/updates/2015/04/_toc.yaml
+      - include: /web/updates/2015/03/_toc.yaml
+      - include: /web/updates/2015/02/_toc.yaml
+      - include: /web/updates/2015/01/_toc.yaml
