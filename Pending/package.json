@@ -19,6 +19,7 @@
   },
   "private": true,
   "dependencies": {
+    "handlebars": "^4.0.5",
     "moment": "^2.14.1"
   },
   "scripts": {}
