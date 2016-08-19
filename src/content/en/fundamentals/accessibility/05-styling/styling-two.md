@@ -23,9 +23,17 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-For native elements like `button`, browsers can detect whether user interaction occurred via the mouse or the keyboard press, and typically only display the focus ring for keyboard interaction. The logic here is that mouse users are less likely to need the focus ring because they know what element they clicked.
+For native elements like `button`, browsers can detect whether user interaction occurred via the mouse or the keyboard press, and typically only display the focus ring for keyboard interaction. For example, when you click this native button with the mouse
 
-Where does that leave us in our accessibility efforts? Unfortunately there isn't currently a single cross-browser solution that yields this same behavior. But there are some options.
+![button-mouse](imgs/button-mouse.png)
+
+there is no focus ring, but when you tab to it with the keyboard
+
+![button-keyboard](imgs/button-keyboard.png)
+
+the focus ring appears. 
+
+The logic here is that mouse users are less likely to need the focus ring because they know what element they clicked. But where does that leave us in our accessibility efforts? Unfortunately there isn't currently a single cross-browser solution that yields this same behavior. But there are some options.
 
 In Firefox, the `:-moz-focusring` CSS pseudo-class allows you to write a focus style that is only applied if the element is focused via the keyboard, quite a handy feature. While this pseudo-class is currently only supported in Firefox, there is currently work going on to add it to other browsers. By the time you read this, it may be implemented in your favorite browser.
 
