@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: On devices with phone capabilities, make it easy for users to directly connect with you by simply tapping a phone number, more commonly known as click to call.
 
+{# wf_updated_on: 2016-08-22 #}
+{# wf_published_on: 2014-06-17 #}
+
 # Click to Call {: .page-title }
 
 {% include "_shared/contributors/petelepage.html" %}
