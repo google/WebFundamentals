@@ -69,5 +69,7 @@ or
 
 When the checkbox has been labeled correctly, the screen reader can report that the element has a role of checkbox, is in a checked state, and is named "Receive promotional offers?". 
 
+![receive promotional offers](imgs/promo-offers.png)
+
 >Tip: You can actually use the screen reader to find improperly-associated labels by tabbing through the page and verifying the spoken roles, states, and names.
 
