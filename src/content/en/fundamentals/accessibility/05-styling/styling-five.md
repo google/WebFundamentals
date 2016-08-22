@@ -27,7 +27,7 @@ If you have good vision, it's easy to assume that everyone perceives colors, or 
 
 As you might imagine, some color combinations that are easy for many people to read are difficult or impossible for others. This usually comes down to *color contrast*, the relationship between the foreground and background colors' *luminance*. When the colors are similar, the contrast ratio is low; when they are different, the contrast ratio is high.
 
-The WebAIM guidelines recommend an AA (minimum) contrast ratio of 4.5:1 for all text. An exception is made for very large text (120-150% larger than the default body text), for which the ratio can go down to 3:1. Notice the difference in the contrast ratios shown below.
+The <a href="http://webaim.org/standards/wcag/" target="_blank">WebAIM guidelines</a> recommend an AA (minimum) contrast ratio of 4.5:1 for all text. An exception is made for very large text (120-150% larger than the default body text), for which the ratio can go down to 3:1. Notice the difference in the contrast ratios shown below.
 
 ![contrast-ratios](imgs/contrast-ratios.png)
 
