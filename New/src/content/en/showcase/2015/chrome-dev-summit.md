@@ -8,7 +8,7 @@ description: >
 {# wf_published_on: 2015-03-27 #}
 {# wf_updated_on: 2015-03-27 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/chrome-dev-summit/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/chrome-dev-summit/card.jpg #}
 
 # Chrome Dev Summit 2014 {: .page-title }
 

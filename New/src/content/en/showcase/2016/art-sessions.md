@@ -5,7 +5,6 @@ description: Six artists were invited to paint, design, and sculpt in VR.
 {# wf_published_on: 2016-04-19 #}
 {# wf_updated_on: 2016-04-19 #}
 {# wf_author: michaelchang,jeffnusz #}
-{# wf_featured_image: /web/showcase/2016/images/art-sessions/featured.png #}
 {# wf_featured_snippet: Six artists were invited to paint, design, and sculpt in VR. This is the process for how we recorded their sessions, converted the data, and presented it in real-time with web browsers. #}
 
 # Virtual Art Sessions {: .page-title }

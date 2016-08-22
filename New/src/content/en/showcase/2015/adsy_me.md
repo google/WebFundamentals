@@ -4,7 +4,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-05-04 #}
 {# wf_updated_on: 2015-05-04 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/adsy_me/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/adsy_me/card.jpg #}
 
 # Adsy.me {: .page-title }
 

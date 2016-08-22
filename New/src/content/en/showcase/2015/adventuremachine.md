@@ -4,7 +4,7 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-08-14 #}
 {# wf_updated_on: 2015-08-14 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/adventuremachine/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/adventuremachine/card.jpg #}
 
 # Madeon Adventure Machine {: .page-title }
 
