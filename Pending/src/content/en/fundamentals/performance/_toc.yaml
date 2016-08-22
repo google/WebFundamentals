@@ -1,6 +1,8 @@
 toc:
   - title: Performance
     section:
+    - title: Overview
+      path: /web/fundamentals/performance/
     - title: Optimizing Content Efficiency
       section:
       - title: Overview

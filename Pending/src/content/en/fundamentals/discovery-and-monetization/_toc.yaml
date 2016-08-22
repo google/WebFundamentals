@@ -1,6 +1,8 @@
 toc:
   - title: Discovery & Monetization
     section:
+    - title: Overview
+      path: /web/fundamentals/discovery-and-monetization/
     - title: Search Optimization
       path: /web/fundamentals/discovery-and-monetization/search/
     - title: Social Discovery

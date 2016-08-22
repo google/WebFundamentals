@@ -6,6 +6,6 @@ description: TODO
 {# wf_updated_on: 2015-09-08 #}
 {# wf_published_on: 2015-09-08 #}
 
-# Enage and Retain {: .page-title }
+# Instant and Offline {: .page-title }
 
 TODO: Needs to be completed

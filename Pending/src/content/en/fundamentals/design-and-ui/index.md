@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Use only media that loads fast and scales.
+description: TODO
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-09-08 #}

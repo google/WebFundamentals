@@ -1,6 +1,8 @@
 toc:
   - title: Accessing Native Hardware
     section:
+    - title: Overview
+      path: /web/fundamentals/native-hardware/
     - title: Click to Call
       path: /web/fundamentals/native-hardware/click-to-call/
     - title: User Location

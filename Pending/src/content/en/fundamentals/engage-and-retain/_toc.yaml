@@ -1,6 +1,8 @@
 toc:
   - title: Engage & Retain Users
     section:
+    - title: Overview
+      path: /web/fundamentals/engage-and-retain/
     - title: Improve User Experiences with a Web App Manifest
       section:
       - title: The Web App Manifest
