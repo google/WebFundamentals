@@ -23,7 +23,7 @@ notes:
     - "Catching, identifying, and removing potential accessibility roadblocks before they happen can improve your development process and reduce maintenance requirements."
 ---
 
-First, let's reiterate an ealier point: *DOM order matters*, not only for focus order but for screen reader order. As you experiment with screen readers like VoiceOver and ChromeVox Lite, you'll find the heading list follows the DOM order rather than the visual order. 
+First, let's reiterate an ealier point: *DOM order matters*, not only for focus order but for screen reader order. As you experiment with screen readers like VoiceOver and ChromeVox, you'll find the heading list follows the DOM order rather than the visual order. 
 
 This is true for screen readers in general. Because screen readers interact with the accessibility tree, and the accessibility tree is based on the DOM tree, the order a screen reader perceives is thus directly based on the DOM order. This means that an appropriate heading structure is more important than ever.
 
