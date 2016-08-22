@@ -27,11 +27,17 @@ Images are an important component of most web pages, and are of course a particu
 
 ![funioncat1](imgs/funioncat1.png)
 
-In the page we have a picture of a cat, illustrating the article on cats' well-known judgemental behavior. ChromeVox announces this image using its literal name, "/160204193356-01-cat-500.jpg" (seen in the black voiceover bar). That's accurate, but not at all useful.
+In the page we have a picture of a cat, illustrating the article on cats' well-known judgemental behavior. <a href="http://www.chromevox.com/" target="_blank">ChromeVox</a> announces this image using its literal name, "/160204193356-01-cat-500.jpg" (seen in the black voiceover bar). That's accurate, but not at all useful, when coded like this.
 
-You can use the `alt` attribute to provide a useful text alternative to this image &mdash; for example, "A cat staring menacingly into space" &mdash; then the screen reader can provide a succinct description of the image (again, seen in the black voiceover bar) and the user can choose whether to move on to the article.
+`<img src="/160204193356-01-cat-500.jpg">`
+
+You can use the `alt` attribute to provide a useful text alternative to this image &mdash; for example, "A cat staring menacingly off into space" &mdash; then the screen reader can provide a succinct description of the image (again, seen in the black voiceover bar) and the user can choose whether to move on to the article.
 
 ![funioncat2](imgs/funioncat2.png)
+
+The image, then, is much more useful when coded like this.
+
+`<img src="/160204193356-01-cat-500.jpg" alt="A cat staring menacingly off into space">`
 
 A couple of comments about `alt`:
 
