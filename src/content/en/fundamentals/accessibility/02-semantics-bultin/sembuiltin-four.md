@@ -33,7 +33,7 @@ This is basically what the browser actually presents to the screen reader. The b
 
 You might visualize the accessibility tree as looking a bit like an old web page from the '90s: a few images, lots of links, perhaps a field and a button. 
 
-![90swebpage.png](imgs/90swebpage.png)
+![90swebpage.png](imgs/google1998.png)
 
 Visually scanning down a page like this case gives you an experience similar to what a screen reader user would get. The interface is there, but it is simple and direct, much like an accessibility tree interface.
 
