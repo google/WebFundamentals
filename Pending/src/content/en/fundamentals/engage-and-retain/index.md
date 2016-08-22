@@ -24,7 +24,7 @@ Push notifications are one of the most valuable capabilities of native apps, and
   [Video: web push notifications (I/O 2016)](/web/fundamentals/engage-and-retain/push-notifications/video?hl=en)
 
 
-## Improve User Experiences with a Web App Manifest
+## The Web App Manifest
 
 The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
@@ -40,7 +40,7 @@ The web app manifest is a JSON file that gives you the ability to control how yo
   
   [Set the Launch Style](/web/fundamentals/engage-and-retain/web-app-manifest/set-the-launch-style?hl=en)
   
-  [Provide a site-wide theme color](/web/fundamentals/engage-and-retain/web-app-manifest/site-wide-theme-color?hl=en)
+  [Provide a Site-Wide Theme Color](/web/fundamentals/engage-and-retain/web-app-manifest/site-wide-theme-color?hl=en)
   
   [More Information](/web/fundamentals/engage-and-retain/web-app-manifest/more-information?hl=en)
   

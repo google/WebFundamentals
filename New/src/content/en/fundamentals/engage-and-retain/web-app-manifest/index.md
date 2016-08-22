@@ -3,12 +3,13 @@ book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
 {# wf_review_required #}
-{# wf_updated_on: 2016-02-11 #}
+{# wf_updated_on: 2016-08-19 #}
 {# wf_published_on: 2016-02-11 #}
 
 # The Web App Manifest {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "_shared/contributors/mattgaunt.html" %}
+{% include "_shared/contributors/paulkinlan.html" %}
 
 The [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in areas where they would expect to see apps (for example the mobile home screen), direct what the user can launch, and define its appearance at launch.
 
@@ -22,7 +23,12 @@ It does all this through the simple mechanism of metadata in a text file. That's
 
 Note: Though you can use a web app manifest on any site, they are required for <a href='/web/progressive-web-apps'>progressive web apps</a>.
 
-## Create the Manifest
+## TL;DR
+- Creating a manifest and linking it to your page are simple.
+- Control what the user sees when launching from the homescreen.
+- This includes things like a splashscreen, theme colors, and even the URL that's opened. 
+
+## Create the manifest
 
 Before diving into details of a web app manifest, let's create a basic
 manifest and link a web page to it.
@@ -59,7 +65,7 @@ You should include a `short_name` as this will get used for the text on the user
 and a `name` as that will be used in the Web App Install banner.
   
 
-## Tell the Browser about your Manifest
+## Tell the browser about your manifest
 
 Once you have the manifest created and and on your site, all you need to do is add
 a `link` tag to all the pages that encompass your web app as follows:
@@ -67,16 +73,19 @@ a `link` tag to all the pages that encompass your web app as follows:
 
     <link rel="manifest" href="/manifest.json">
   
-## Set a Start URL
+## Set a start URL
 
 If you don't provide a `start_url`, then the current page will be used, which
 is unlikely to be what your users want. But that's not the only reason to
 include it. Because you can now define how your app is launched, add a query
 string parameter to the `start_url` that indicates how it was launched. 
 
-    "start_url": "/index.html?homescreen=1"
+    "start_url": "/?utm_source=homescreen"
 
-## Customize the Icons
+This can actually be anything you want, though the value we're using has the advantage of being meaningful to Google Analytics among other analytics platforms.
+ 
+
+## Customize the icons
 
 <figure class="attempt-right">
   <img src="images/homescreen-icon.png" alt="Add to Home Screen Icon">
@@ -110,7 +119,7 @@ below, with a type, and size.
 
 Note: When saving an icon to the home screen, Chrome first looks for icons that match the density of the display and are sized to 48dp * screen density. If none are found it searches for the icon that most closely matches the device characteristics. If, for whatever reason, you want be specific about targetting an icon at a particular-pixel density, you can use the optional <code>density</code> member which takes a number. When you don’t declare density, it defaults to 1.0. This means “use this icon for screen densities 1.0 and up”, which is normally what you want.
 
-## Add a Splash Screen
+## Add a splash screen
 
 <figure class="attempt-right">
   <img src="images/background-color.gif" alt="backgroud color">
@@ -130,13 +139,13 @@ pages take more than one or two seconds to get any content visible on the homepa
 
 To provide a better user experience you can replace the white screen with a title, color, and images. 
 
-### Set an Image and Title
+### Set an image and title
 
 If you've been following from the beginning, you've actually set and image and title already. Chrome infers the image and title from specific members of the manifest. What's important here is knowing the specifics. 
 
 A splashscreen image is drawn from the `icons` array. Chrome chooses the image that is closest to 128dp for the device. The title is simply pulled from the `name` member.
 
-### Set the Background Color 
+### Set the background color 
 
 Specify background color using the appropriately named `background_color`
 property. The color will be used by Chrome the instant the web app is launched
@@ -154,14 +163,14 @@ A good suggested value for this property is the background color of the load pag
 same colors as the load page allows for a smooth transistion from the
 splashscreen to the homepage.
 
-### Set a Theme Color
+### Set a theme color
 
 Specify a theme color using the (wait for it) `theme_color` property. This property
 sets the color of the toolbar. For this we also suggest duplicating an existing
 color, specifically the `theme-color` `<meta>`.
 
 
-## Set the Launch Style
+## Set the launch style
 
 <figure class="attempt-right">
   <img src="images/manifest-display-options.png" alt="web-app-capable">
@@ -172,7 +181,7 @@ Use the web app manifest to control the display type and page orientation.
 
 <div style="clear:both;"></div>
 
-### Customize the Display Type
+### Customize the display type
 
 You make your web app hide the browser's UI by setting the `display` type to `standalone`.
 
@@ -187,7 +196,7 @@ site in a browser. You can set the `display` type to `browser`.
     "display": "browser"
     
 
-### Specify the Initial Orientation of the Page
+### Specify the initial orientation of the page
 
 <figure class="attempt-right">
   <img src="images/manifest-orientation-options.png" alt="Web App Manifest Orientation Options">
@@ -232,7 +241,7 @@ from the home screen every page in the domain will automatically get the theme c
   <figcaption>Sitewide theme color</figcaption>
 </figure>
 
-## More Information
+## More information
 
 This article has given you a quick introduction to web app manifests. But
 there's more to learn.
