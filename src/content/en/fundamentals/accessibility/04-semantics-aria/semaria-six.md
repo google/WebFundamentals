@@ -47,6 +47,6 @@ Finally, ARIA provides a mechanism for excluding content from assistive technolo
 
 ![aria-hidden](imgs/aria-hidden.png)
 
-For example, you might use `aria-hidden` if you're creating some modal UI that blocks access to the main page. In this case, a sighted user might see some kind of semi-transparent overlay indicating that most of the page can't currently be used, but a screen reader user may still be able to explore to the other parts of the page. In this case, as well as creating the keyboard trap explained earlier, you need to make sure that the parts of the page that are currently out of scope are `aria-hidden` as well.
+For example, you might use `aria-hidden` if you're creating some modal UI that blocks access to the main page. In this case, a sighted user might see some kind of semi-transparent overlay indicating that most of the page can't currently be used, but a screen reader user may still be able to explore to the other parts of the page. In this case, as well as creating the keyboard trap [explained earlier](/web/fundamentals/accessibility/01-focus/focus-eight), you need to make sure that the parts of the page that are currently out of scope are `aria-hidden` as well.
 
 Now that you understand the basics of ARIA, how it plays with native HTML semantics, and how it can be used to perform fairly major surgery on the accessibility tree as well as changing the semantics of a single element, let's look at how we can use it to convey time-sensitive information, and take a deeper look at exactly what it means to add an ARIA role to an element.
