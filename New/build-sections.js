@@ -206,12 +206,16 @@ function generateRSS(metadata, section) {
 function buildForSection(section, description, title) {
   console.log('Generating supporting files for', section);
   var fileList = getFileList(path.join(ROOT_PATH, section));
-  var articles = getAllMetadata(fileList, section);
-  generateHomePage(articles, section, description);
-  generateYearIndex(articles, section, title);
-  generateYearTOCs(articles, section);
-  generateATOM(articles, section);
-  generateRSS(articles, section);
+  if (fileList.length > 0) {
+    var articles = getAllMetadata(fileList, section);
+    generateHomePage(articles, section, description);
+    generateYearIndex(articles, section, title);
+    generateYearTOCs(articles, section);
+    generateATOM(articles, section);
+    generateRSS(articles, section);
+  } else {
+    console.log('No files found...');
+  }
   console.log('');
 }
 

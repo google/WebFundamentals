@@ -30,3 +30,6 @@ Migration/content/
 */src/content/en/updates/_index.yaml
 */src/content/en/updates/*/_toc.yaml
 */src/content/en/updates/*/index.md
+*/src/content/en/showcase/_index.yaml
+*/src/content/en/showcase/*/_toc.yaml
+*/src/content/en/showcase/*/index.md

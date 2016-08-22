@@ -5,6 +5,7 @@ description: TODO if there is a description
 {# wf_published_on: 2016-05-17 #}
 {# wf_updated_on: 2016-05-17 #}
 {# wf_featured_image: /web/showcase/2016/images/DIR/featured.png #}
+{# wf_featured_snippet: SNIPPET TO INCLUDE ON THE INDEX PAGE #}
 
 # COMPANY {: .page-title }
 
