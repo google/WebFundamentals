@@ -27,7 +27,7 @@ So far, we've encouraged using native HTML elements because they give you focus,
 
 In this lesson, then, we'll explore how to express semantics that HTML can't express on its own.
 
-The Web Accessibility Initiative's Accessible Rich Internet Applications specification (WAI-ARIA, or just ARIA) is good for bridging areas with accessibility issues that can't be managed with native HTML. It works by allowing you to specify attributes that modify the way an element is translated into the accessibility tree. Let's look at an example.
+The <a href="https://www.w3.org/TR/wai-aria/" target="_blank">Web Accessibility Initiative's Accessible Rich Internet Applications specification</a> (WAI-ARIA, or just ARIA) is good for bridging areas with accessibility issues that can't be managed with native HTML. It works by allowing you to specify attributes that modify the way an element is translated into the accessibility tree. Let's look at an example.
 
 In the following snippet, we use a list item as a kind of custom checkbox. The CSS "checkbox" class gives the element the required visual characteristics.
 
