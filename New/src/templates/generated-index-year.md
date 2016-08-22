@@ -1,8 +1,7 @@
-# ATTENTION - This file is auto-generated, changes must be made to the template!
 project_path: /web/_project.yaml
-book_path: /web/updates/_book.yaml
+book_path: /web/{{section}}/_book.yaml
 
-# Web Updates for {{year}}
+# {{pageTitle}}
 
 {{#each articles}}
 
@@ -14,7 +13,7 @@ book_path: /web/updates/_book.yaml
     <img src="https://placehold.it/350x150">
   {{/if}}
 </div>
-{{description}}
+{{{description}}}
 
 [Read more]({{path}})
 
