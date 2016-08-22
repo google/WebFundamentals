@@ -48,8 +48,6 @@ As you saw with the checkbox example, ARIA can modify existing element semantics
 </div>
 {% endhighlight %}
 
-Let's take a closer look at what ARIA roles and attributes are available and how to use them.
-
 One of the core aspects of the ARIA system is its collection of *roles*. A role in accessibility terms amounts to a shorthand indicator for a particular UI pattern. ARIA provides a vocabulary of patterns we can use via the `role` attribute on any HTML element.
 
 When we applied `role="checkbox"` in the previous example, we were telling assistive technology that the element should follow the "checkbox" pattern. That is, we're guaranteeing that it will have a checked state (either checked or not checked), and that the state may be toggled using the mouse or the spacebar, just like a standard HTML checkbox element.
