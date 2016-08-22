@@ -235,45 +235,44 @@ the form's elements to [PasswordCredential](https://developer.mozilla.org/en-US/
 object parameters.
 
 HTML
-{% highlight html %}  
-<form id="form" method="post">
-  <input type="text" name="id" autocomplete="username" />  
-  <input type="password" name="password" autocomplete="current-password" />  
-  <input type="hidden" name="csrf_token" value="******" />
-</form>
-{% endhighlight  %}
+ 
+    <form id="form" method="post">
+      <input type="text" name="id" autocomplete="username" />  
+      <input type="password" name="password" autocomplete="current-password" />  
+      <input type="hidden" name="csrf_token" value="******" />
+    </form>
+
 
 JavaScript
 
-{% highlight javascript %}  
-var form = document.querySelector('\#form');  
-var cred = new PasswordCredential(form);  
-// Store it  
-navigator.credentials.store(cred)  
-.then(function() {  
-  // continuation  
-});
-{% endhighlight %}
+ 
+    var form = document.querySelector('\#form');  
+    var cred = new PasswordCredential(form);  
+    // Store it  
+    navigator.credentials.store(cred)  
+    .then(function() {  
+      // continuation  
+    });
+
 
 
 
 #### Creating and Storing a Federated Credential
-
-{% highlight javascript %}  
-// After a federation, create a FederatedCredential object using   
-// information you have obtained  
-var cred = new FederatedCredential({  
-  id: id,                                  // The id for the user  
-  name: name,                              // Optional user name  
-  provider: 'https://accounts.google.com',  // A string that represents the identity provider  
-  iconURL: iconUrl                         // Optional user avatar image url  
-});  
-// Store it  
-navigator.credentials.store(cred)  
-.then(function() {  
-  // continuation  
-});
-{% endhighlight %}  
+ 
+    // After a federation, create a FederatedCredential object using   
+    // information you have obtained  
+    var cred = new FederatedCredential({  
+      id: id,                                  // The id for the user  
+      name: name,                              // Optional user name  
+      provider: 'https://accounts.google.com',  // A string that represents the identity provider  
+      iconURL: iconUrl                         // Optional user avatar image url  
+    });  
+    // Store it  
+    navigator.credentials.store(cred)  
+    .then(function() {  
+      // continuation  
+    });
+  
 
 <img src="/web/updates/images/2016/04/credential-management-api/image04.png" />
 
@@ -288,26 +287,26 @@ _When a user is automatically signed in, a notification will pop up._
 
 #### Getting a Credential Object
 
-{% highlight javascript %}  
-navigator.credentials.get({  
-  password: true, // Obtain password credentials or not  
-  federated: {    // Obtain federation credentials or not  
-    providers: [  // Specify an array of IdP strings  
-      'https://accounts.google.com',  
-      'https://www.facebook.com'  
-    ]  
-  },  
-  unmediated: true // `unmediated: true` lets the user automatically sign in  
-}).then(function(cred) {  
-  if (cred) {  
-    // auto sign-in possible  
-    ...  
-  } else {  
-    // auto sign-in not possible  
-    ...
-  }  
-});
-{% endhighlight %}  
+ 
+    navigator.credentials.get({  
+      password: true, // Obtain password credentials or not  
+      federated: {    // Obtain federation credentials or not  
+        providers: [  // Specify an array of IdP strings  
+          'https://accounts.google.com',  
+          'https://www.facebook.com'  
+        ]  
+      },  
+      unmediated: true // `unmediated: true` lets the user automatically sign in  
+    }).then(function(cred) {  
+      if (cred) {  
+        // auto sign-in possible  
+        ...  
+      } else {  
+        // auto sign-in not possible  
+        ...
+      }  
+    });
+  
 
 The code should look similar to what you've seen in the "Show Account Chooser
 when Signing In" section. The only difference is that you will set
@@ -337,10 +336,9 @@ As long as the user's mediation status for the origin is turned on, using
 resolve with `undefined`.
 
 #### Mediating Auto Sign-in
+ 
+    navigator.credentials.requireUserMediation();
 
-{% highlight javascript %}  
-navigator.credentials.requireUserMediation();
-{% endhighlight %}  
 
 <img src="/web/updates/images/2016/04/credential-management-api/image07.png" />
 

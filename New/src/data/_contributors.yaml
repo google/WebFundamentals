@@ -1013,3 +1013,34 @@ yoichiro:
   email: yoichiro@eisbahn.jp
   description:
     en: "Yoichiro is a Google Developers Expert"
+
+myakura:
+  name:
+    given: Masataka
+    family: Yakura
+  org:
+    name: Independent
+    unit: Developer
+  country: Japan
+  role:
+    - translator
+  twitter: myakura
+  email: masataka.yakura@gmail.com
+  description:
+    en: "Masataka is a Web Google Developers Expert"
+
+captainpangyo:
+  name:
+    given: Josh
+    family: Jang
+  org:
+    name: POSCO ICT
+    unit: SW Platform
+  country: KR
+  role:
+    - translator
+  homepage: https://joshuajangblog.wordpress.com/
+  google: +GihyoJoshuaJang
+  email: jangkeehyo@gmail.com
+  description:
+    en: "Josh is a Singing Computer Scientist"
