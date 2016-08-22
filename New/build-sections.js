@@ -95,7 +95,12 @@ function getMetadata(file, sectionRoot) {
   result.description = description;
   result.author = getRegEx(RE_AUTHOR, content);
   result.image = getRegEx(RE_IMAGE, content);
-  var published = moment(getRegEx(RE_PUBLISHED, content));
+  var published = getRegEx(RE_PUBLISHED, content);
+  if (!published) {
+    console.warn('No published date for', file);
+    return;
+  }
+  published = moment(published);
   result.published = published.format('YYYY-MM-DD');
   result.publishedYear = published.format('YYYY');
   result.publishedMonth = published.format('MM');
@@ -113,10 +118,12 @@ function getAllMetadata(fileList, sectionRoot) {
   var result = {};
   fileList.forEach(function(file) {
     var article = getMetadata(file, sectionRoot);
-    if (!result[article.publishedYear]) {
-      result[article.publishedYear] = [];
+    if (article) {
+      if (!result[article.publishedYear]) {
+        result[article.publishedYear] = [];
+      }
+      result[article.publishedYear].push(article);
     }
-    result[article.publishedYear].push(article);
   });
   var keys = Object.keys(result);
   keys.forEach(function(key) {
