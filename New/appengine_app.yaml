@@ -1,8 +1,8 @@
 runtime: python27
 api_version: 1
 threadsafe: true
-application: petele-scratch
-version: wf-devsite
+# application: petele-scratch
+# version: wf-devsite
 
 #default_expiration: "1d"
 handlers:
@@ -56,3 +56,6 @@ handlers:
 skip_files:
 - ^(.*/)?.*\.psd$
 - ^(.*/)?.*\.pxm$
+- ^node_modules/.*
+- ^/tools/.*
+- ^(.*/)?.*\.pyc$

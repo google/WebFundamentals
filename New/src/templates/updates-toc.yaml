@@ -1,0 +1,12 @@
+# ATTENTION - This file is auto-generated, changes must be made to the template!
+toc:
+  - title: '{{year}}'
+    section:
+{{#each months}}
+    - title: "{{@key}}"
+      section:
+      {{#each this}}
+      - title: "{{title}}"
+        path: {{path}}
+      {{/each}}
+{{/each}}

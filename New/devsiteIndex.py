@@ -1,5 +1,38 @@
+import os
 import yaml
+import logging
+import devsitePage
+import devsiteHelper
 from google.appengine.ext.webapp.template import render
+
+SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content')
+
+def getPage(requestPath, lang):
+  response = None
+  fileLocations = [
+    os.path.join(SOURCE_PATH, lang, requestPath, '_index.yaml'),
+    os.path.join(SOURCE_PATH, 'en', requestPath, '_index.yaml'),
+    os.path.join(SOURCE_PATH, lang, requestPath, 'index.md'),
+    os.path.join(SOURCE_PATH, 'en', requestPath, 'index.md'),
+  ]
+  for fileLocation in fileLocations:
+    if os.path.isfile(fileLocation):
+      fileContent = open(fileLocation, 'r').read()
+      fileContent = fileContent.decode('utf8')
+
+      if fileLocation.endswith('_index.yaml'):
+        response = generateYaml(lang, fileContent)
+        break
+
+      if fileLocation.endswith('index.md'):
+        # index.md are treated like other devsite pages, so just use the
+        # devsitePage rendering template.
+        requestPath = os.path.join(requestPath, 'index')
+        response = devsitePage.getPage(requestPath, lang)
+        break
+  
+  return response
+
 
 def parseIndexYamlItems(yamlItems):
   result = ''
@@ -54,7 +87,7 @@ def parseIndexYamlItems(yamlItems):
       result += '</iframe>'
       result += '</div>'
     if 'custom_html' in yamlItem:
-      item += yamlItem['custom_html']
+      item += devsiteHelper.renderDevSiteContent(yamlItem['custom_html'])
     item += '</div>'
     item = item.replace('[[ITEM_CLASSES]]', ' '.join(itemClasses))
     item = item.replace('[[DESCRIPTION_CLASSES]]', ' '.join(descriptionClasses))
