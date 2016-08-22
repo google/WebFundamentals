@@ -1,9 +1,0 @@
-{% include page-structure/out-of-date.liquid %}
-
-{{ page.raw_content }}
-
-### {{"topics" | localize_string}}
-
-{% for pageInSection in page.context.pages %}
-  [{{pageInSection.title}}]({{pageInSection.relative_url }})
-{% endfor %}

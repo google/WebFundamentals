@@ -1,9 +1,0 @@
-Discover the latest API's coming to the Web Platform, find out what the Chrome team are working on and check out the latest features in DevTools.
-
-{% for article in page.updates %}
-  {% assign authorKey = article.authors[0] %}
-  {% assign author = site.data["contributors"][authorKey] %}
-  {% include updates/card.liquid title=article.title text=article.description author=author date=article.updated_on imgUrl=article.featured_image linkHref=article.canonical_url %}
-{% endfor %}
-
-{% comment %}{% include page-structure/article-nav.liquid %}{% endcomment %}
