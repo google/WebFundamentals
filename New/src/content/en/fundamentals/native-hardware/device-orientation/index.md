@@ -2,7 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Device motion and orientation events provide access to the built in accelerometer, gyroscope, and compass in mobile devices.
 
-# Device Orientation and Device Motion {: .page-title }
+{# wf_updated_on: 2016-08-22 #}
+{# wf_published_on: 2014-06-17 #}
+
+# Device Orientation and Motion {: .page-title }
 
 {% include "_shared/contributors/petelepage.html" %}
 
@@ -15,6 +18,12 @@ help create more accurate turn-by-turn navigation or provide information about
 a specific location.
 
 Caution: Not all browsers use the same coordinate system, and they may report different values under identical situations. This has improved over time, but be sure to test your situation.
+
+##TL;DR
+
+* Detect which side of the device is up and how the devices is rotating.
+* Learn when and how to respond to motion and orientation events.
+
 
 ## Which end is up?
 

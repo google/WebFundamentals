@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Most browsers and devices have access to the user's geographic location. Learn how to work with the user's location in your site and apps.
 
+{# wf_updated_on: 2016-08-22 #}
+{# wf_published_on: 2014-01-01 #}
+
 # User Location {: .page-title }
 
 {% include "_shared/contributors/paulkinlan.html" %}
@@ -19,6 +22,14 @@ order for collection if the user is close by.
 You need to be aware of many things when using the Geolocation API. This guide walks you through the common use cases and solutions.
 
 Note: As of Chrome 50, the [Geolocation API will only work on secure contexts (HTTPS)](/web/updates/2016/04/geolocation-on-secure-contexts-only). If your site is hosted on a non-secure origin (such as `HTTP`), the requests to get the user's location **no longer** function.
+
+## TL;DR
+
+* Use geolocation when it benefits the user.
+* Ask for permission as a clear respone to a user gesture. 
+* Use feature detection on the off chance a user's browser doesn't support geolocation.
+* Don't just learn how to implement geolcation; learn the best way to use geolocation.
+* Test geolcation with your site.
 
 ## When to use geolocation
 
