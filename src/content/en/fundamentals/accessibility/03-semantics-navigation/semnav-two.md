@@ -31,7 +31,7 @@ This is true for screen readers in general. Because screen readers interact with
 
 `for (var i = 0, headings = $$('h1,h2,h3,h4,h5,h6'); i < headings.length; i++) console.log(headings[i].textContent.trim() + " " + headings[i].tagName, headings[i])`
 
-In most well-structured pages, the heading levels are nested to indicate parent-child relationships among content blocks. The WebAIM checklist repeatedly refers to this technique.
+In most well-structured pages, the heading levels are nested to indicate parent-child relationships among content blocks. The <a href="http://webaim.org/standards/wcag/checklist" target="_blank">WebAIM checklist</a> repeatedly refers to this technique.
 
  - 1.3.1 mentions "Semantic markup is used to designate headings"
  - 2.4.1 mentions heading structure as a technique for bypassing blocks of content
