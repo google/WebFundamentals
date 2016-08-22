@@ -35,7 +35,7 @@ It might be constructed in HTML in any number of ways; one way is shown below.
 <div class="button-ish">Give me tacos</div>
 {% endhighlight %}
 
-When we don't use an actual button element, the screen reader has no way to know what it has landed on. Also, we would have to do the extra work discussed in the previous lesson to make it usable to keyboard-only users because, as it is coded now, it can only be used with a mouse.
+When we don't use an actual button element, the screen reader has no way to know what it has landed on. Also, we would have to do the extra work [discussed in the previous lesson](/web/fundamentals/accessibility/02-semantics-builtin/sembuiltin-four) to make it usable to keyboard-only users because, as it is coded now, it can only be used with a mouse.
 
 We can easily fix this by using a regular `button` element instead of a `div`. Using a native element also has the benefit of taking care of keyboard interactions for us. And remember that you don't have to lose your spiffy visual effects just because you use a native element; you can style native elements to make them look the way you want and still retain the implicit semantics and behavior.
 
