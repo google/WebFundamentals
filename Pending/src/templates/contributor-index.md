@@ -1,4 +1,3 @@
-# ATTENTION - This file is auto-generated, changes must be made to the template!
 project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 
