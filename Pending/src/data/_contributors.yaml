@@ -1013,3 +1013,19 @@ yoichiro:
   email: yoichiro@eisbahn.jp
   description:
     en: "Yoichiro is a Google Developers Expert"
+
+wdenniss:
+  name:
+    given: William
+    family: Denniss
+  org:
+    name: Google
+    unit: Identity
+  country: USA
+  role:
+    - author
+  google: +WilliamDenniss
+  twitter: WilliamDenniss
+  email: wdenniss@google.com
+  description:
+    en: "Google Identity Product Manager"

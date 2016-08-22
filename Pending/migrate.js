@@ -130,7 +130,7 @@ function replaceLinkSample(markdown, dir) {
 }
 
 function replaceYTVideo(markdown) {
-  var items = markdown.match(/{% ytvideo (\w*) %}/g);
+  var items = markdown.match(/{% ytvideo ([\w-]*) %}/g);
   if (items) {
     items.forEach(function(item) {
       var sourceItem = item;
