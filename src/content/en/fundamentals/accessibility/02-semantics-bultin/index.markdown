@@ -25,7 +25,7 @@ notes:
 
 You've seen how to make a site accessible to users who can't use a mouse or pointing device &mdash; whether due to physical impairment, a technology issue, or personal preference &mdash; by addressing keyboard-only use. While it requires some care and thought, it's not a huge amount of work if you plan it from the beginning. Once that basic work is done, you're a long way down the path to a fully accessible and more polished site. 
 
-In this lesson, we'll build on that work and get you thinking about other accessibility factors, such as how to build websites to support users like Victor, who can't see the screen.
+In this lesson, we'll build on that work and get you thinking about other accessibility factors, such as how to build websites to support [users like Victor Tsaran](/web/fundamentals/accessibility/00-intro/intro-three), who can't see the screen.
 
 First, we'll get some background on *assistive technology*, the general term for tools like screen readers that help  users with impairments that can keep them from accessing information. 
 
