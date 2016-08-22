@@ -25,7 +25,11 @@ notes:
 
 When we use a man-made tool or device, we typically look to its form and design to give us an idea of what it does and how it works. An *affordance* is any object that offers, or affords, its user the opportunity to perform an action. The better the affordance is designed, the more obvious or intuitive its use.
 
-Some affordances can be misleading. A common example is a door with a U-shaped handle that most users expect to pull, but that only responds to a push. Other affordances, such as a door with a flat plate that is clearly meant to be pushed, are more direct and obvious.
+A classic example is a kettle or teapot. You can easily recognize that you should pick it up by the handle, not the spout, even if you've never seen a teapot before. 
+
+![teapot affordance](imgs/teapot.png)
+
+That's because the affordance is similar to those you have seen on many other objects -- watering pots, beverage pitchers, coffee mugs, and so on. You probably *could* pick up the pot by the spout, but your experience with similar affordances tells you the handle is the better option.
 
 In graphical user interfaces, affordances represent actions we can take, but they can be ambiguous because there is no physical object to interact with. GUI affordances are thus specifically designed to be unambiguous: buttons, check boxes, and scroll bars are meant to convey their usage with as little training as possible.
 
@@ -42,11 +46,11 @@ This non-visual exposure of an affordance's use is called its *semantics*. The W
 
 ![guideline4-1.png](imgs/guideline4-1.png)
 
-Let's try out some things from the point of view of someone using assistive technology. In the introduction, you had a brief look at ChromeVox Lite. Now we'll try using it without any access to the web page's visible interface.
+Let's try out some things from the point of view of someone using assistive technology. Earlier, you had [a brief look at ChromeVox Lite](/web/fundamentals/accessibility/00-intro/intro-four). Now we'll try using it without any access to the web page's visible interface.
 
 We've modified the flight reservation page from the previous lesson so that you can't see what you're doing any more, and you'll have to use the screen reader. You might want to refer back to the earlier exercise if you get stuck. As before, use the form to book a one-way ticket to Melbourne with a window seat.
 
-<a href="http://robdodson.github.io/udacity-a11y/lesson3-semantics-built-in/02-chromevox-lite/" target="_blank">ChromeVox lite demo page</a>
+<a href="http://udacity.github.io/ud891/lesson3-semantics-built-in/02-chromevox-lite/" target="_blank">ChromeVox lite demo page</a>
 
 Think about the fact that a screen reader (or other assistive technology) actually creates a complete alternate user experience for the user based on the programmatically expressed semantics. Instead of a visual interface, the screen reader provides an audible interface.
 
