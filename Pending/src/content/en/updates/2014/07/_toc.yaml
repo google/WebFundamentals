@@ -1,9 +1,0 @@
-toc:
-  - title: July
-    section:
-      - title: Web Audio Changes in m36
-        path: /web/updates/2014/07/Web-Audio-Changes-in-m36
-      - title: dialog element shipped in Chrome 37 Beta
-        path: /web/updates/2014/07/dialog-element-shipped-in-Chrome-37-Beta
-      - title: Blob support for IndexedDB landed on Chrome Dev
-        path: /web/updates/2014/07/Blob-support-for-IndexedDB-landed-on-Chrome-Dev
