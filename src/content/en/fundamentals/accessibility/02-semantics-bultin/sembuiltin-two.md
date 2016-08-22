@@ -25,7 +25,11 @@ notes:
 
 *Assistive technology* is an umbrella term for devices, software, and tools that help any person with a disability complete a task. In the broadest sense this could be something low-tech like a crutch for walking or a magnifying glass for reading, or something high-tech like a robotic arm or image recognition software on a smartphone.
 
+![assistive technology 1](imgs/assistive-tech1.png)
+
 Assistive technology can include something as general as browser zoom, or as specific as a custom-designed game controller. It can be a separate physical device like a braille display, or be implemented completely in software like voice control. It can be built-in to the operating system like some screen readers, or it can be an add-on like a Chrome extension.
+
+![assistive technology 2](imgs/assistive-tech2.png)
 
 The line between assistive technology and technology in general is blurry; after all, all technology is meant to assist people with some task or another. And technologies can often move into and out of the "assistive" category.
 
