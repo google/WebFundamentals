@@ -68,7 +68,7 @@
   }
 
   function initYouTubeVideos() {
-    var videoElements = document.querySelectorAll('.video-wrapper > iframe');
+    var videoElements = document.querySelectorAll('iframe.devsite-embedded-youtube-video');
     videoElements.forEach(function(elem) {
       var videoID = elem.getAttribute('data-video-id');
       if (videoID) {
