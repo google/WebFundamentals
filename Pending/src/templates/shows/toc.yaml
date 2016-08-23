@@ -1,0 +1,10 @@
+# ATTENTION - This file is auto-generated, changes must be made to the template!
+toc:
+  - title: '{{title}}'
+    section:
+    - title: Show Listing
+      path: /web/shows/{{path}}/
+{{#each shows}}
+    - title: "{{snippet.title}}"
+      path: /web/{{path}}
+{{/each}}

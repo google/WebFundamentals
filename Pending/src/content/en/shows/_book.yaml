@@ -1,0 +1,25 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+upper_tabs:
+  - include: /web/_upper_tabs_Fundamentals.yaml
+  - include: /web/_upper_tabs-Tools.yaml
+  - include: /web/_upper_tabs-Updates.yaml
+  - include: /web/_upper_tabs-Showcase.yaml
+  - name: Shows
+    heading: Shows
+    path: /web/shows/
+    lower_tabs:
+      other:
+      - name: Shows
+        contents:
+        - include: /web/shows/ay11casts/_toc.yaml
+        - include: /web/shows/devbytes/_toc.yaml
+        - include: /web/shows/google-io/_toc.yaml
+        - include: /web/shows/http203/_toc.yaml
+        - include: /web/shows/lazyweb/_toc.yaml
+        - include: /web/shows/new-in-chrome/_toc.yaml
+        - include: /web/shows/polycasts/_toc.yaml
+        - include: /web/shows/summits/_toc.yaml
+        - include: /web/shows/supercharged/_toc.yaml
+        - include: /web/shows/ttt/_toc.yaml
+        - include: /web/shows/udacity/_toc.yaml
+        - include: /web/shows/webrtc/_toc.yaml
