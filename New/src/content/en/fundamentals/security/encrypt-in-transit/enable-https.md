@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Enabling HTTPS on your servers is a critical step in providing security for your webpages. 
+description: Enabling HTTPS on your servers is critical to securing your webpages. 
 
 {# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2015-03-27 #}
@@ -15,7 +15,7 @@ description: Enabling HTTPS on your servers is a critical step in providing secu
 * Create a 2048-bit RSA public/private key pair.
 * Generate a certificate signing request (CSR) that embeds your public key.
 * Share your CSR with your Certificate Authority (CA) to receive a final certificate or a certificate chain.
-* Install your final certificate in a non-web-accessible place such as `/etc/ssl` (Linux and Unix) or wherever IIS wants them (Windows).
+* Install your final certificate in a non-web-accessible place such as `/etc/ssl` (Linux and Unix) or wherever IIS requires it (Windows).
 
 ## Generating keys and certificate signing requests
 
@@ -25,10 +25,10 @@ Linux, BSD, and Mac OS X systems, to generate private/public keys and a CSR.
 
 ### Generate a public/private key pair
 
-In this example, we'll generate a 2,048-bit RSA key pair. (A smaller key, such
+Let's start by generating a 2,048-bit RSA key pair. A smaller key, such
 as 1,024 bits, is insufficiently resistant to brute-force guessing attacks. A
 larger key, such as 4,096 bits, is overkill. Over time, key sizes increase as
-computer processing gets cheaper. 2,048 is currently the sweet spot.)
+computer processing gets cheaper. 2,048 is currently the sweet spot.
 
 The command to generate the RSA key pair is:
 
@@ -41,11 +41,11 @@ This gives the following output:
     .......................................................................................+++
     e is 65537 (0x10001)
 
-### Generate a CSR
+### Generate a certificate signing request
 
 In this step, you embed your public key and information about your organization
-and your website into a certificate signing request. The *openssl* command interactively
-asks you for that metadata.
+and your website into a certificate signing request or CSR. The *openssl*
+command interactively asks you for the required metadata.
 
 Running the following command:
 
@@ -75,11 +75,11 @@ Outputs the following:
     A challenge password []:
     An optional company name []:
 
-To ensure that the validity of the CSR, run this command:
+To ensure the validity of the CSR, run this command:
 
     openssl req -text -in www.example.com.csr -noout
 
-And the response should look like the following:
+And the response should look like this:
 
     Certificate Request:
         Data:
@@ -102,12 +102,13 @@ And the response should look like the following:
              2f:7f:00:49:08:0a:20:41:0b:70:03:04:7d:94:af:69:3d:f4:
              ...
 
-### Submit your CSR to a CA
+### Submit your CSR to a certificate authority
 
-Depending on what CA you want to use, there are different ways to send them
-your CSR: using a form on their website, sending the CSR by email, or something
-else. Some CAs (or their resellers) may even automate some or all of the process
-(including, in some cases, key pair and CSR generation).
+Different certificate authorities (CAs) require different methods for sending
+them your CSRs. Methods may include using a form on their website, sending the
+CSR by email, or something else. Some CAs (or their resellers) may even automate
+some or all of the process (including, in some cases, key pair and CSR
+generation).
 
 Send the CA to your CSR, and follow their instructions to receive your final
 certificate or certificate chain.
@@ -132,7 +133,7 @@ more convenient when you come to enable HTTPS on your servers.)
 Note: Keep in mind that in wildcard certificates the wildcard applies to only one DNS label. A certificate good for \*.example.com will work for foo.example.com and bar.example.com, but _not_ for foo.bar.example.com.
 
 Copy the certificates to all your front-end servers in a non-web-accessible
-place such as /etc/ssl (Linux and Unix) or wherever IIS wants them (Windows).
+place such as `/etc/ssl` (Linux and Unix) or wherever IIS (Windows) requires them.
 
 ## Enable HTTPS on your servers
 
@@ -159,7 +160,7 @@ which is crucial for HTTPS name-based virtual hosting.
 Someday—hopefully soon—clients that don't support SNI will be replaced
 with modern software. Monitor the user agent string in your request logs to know
 when enough of your user population has migrated to modern software. (You can
-decide what your threshold is; perhaps &lt; 5%, or &lt; 1%, or something.)
+decide what your threshold is; perhaps &lt; 5%, or &lt; 1%.)
 
 If you don't already have HTTPS service available on your servers, enable it now
 (without redirecting HTTP to HTTPS; see below). Configure your web server to use
@@ -178,7 +179,8 @@ Note: Ultimately you should redirect HTTP requests to HTTPS and use HTTP Strict 
 Now, and throughout your site's lifetime, check your HTTPS configuration with
 [Qualys' handy SSL Server Test](https://www.ssllabs.com/ssltest/). Your site
 should score an A or A+; treat anything that causes a lower grade as a bug.
-(Today's A is tomorrow's B, because attacks against algorithms and protocols are always improving!)
+(Today's A is tomorrow's B, because attacks against algorithms and protocols
+are always improving!)
 
 ## Make intrasite URLs relative
 
@@ -188,9 +190,8 @@ relative URLs for intrasite links.
 
 Make sure intrasite URLs and external URLs are agnostic to protocol; that is, make sure you use relative paths or leave out the protocol like `//example.com/something.js`.
 
-
-However, a problem arises when you serve a page via HTTPS that includes HTTP
-resources: [mixed content](/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content). Browsers warn the user that the full strength of HTTPS has been lost. In fact, in the case of active mixed content (script, plug-ins, CSS, iframes), browsers often simply won't load or execute the content at all—resulting in a broken page.
+A problem arises when you serve a page via HTTPS that includes HTTP
+resources, known as [mixed content](/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content). Browsers warn users that the full strength of HTTPS has been lost. In fact, in the case of active mixed content (script, plug-ins, CSS, iframes), browsers often simply won't load or execute the content at all, resulting in a broken page.
 
 Note: It is perfectly OK to include HTTPS resources in an HTTP page.
 
@@ -245,24 +246,24 @@ operate.
 
 Success: To make migration smoother for large sites, we recommend protocol-relative URLs. If you are not sure whether you can fully deploy HTTPS yet, forcing your site to use HTTPS for all sub-resources may backfire. There is likely to be a period of time in which HTTPS is new and weird for you, and the HTTP site must still work as well as ever. Over time, you’ll complete the migration and lock in HTTPS (see the next two sections).
 
-If your site depends on script, image, or other resources served from a third
+If your site depends on scripts, images, or other resources served from a third
 party, such as a CDN or jquery.com, you have two options:
 
-* Use protocol-relative URLs for these resources, too. If the third party does
-  not serve HTTPS, ask them to. Most already do, including jquery.com.
-* Serve the resources from a server that you control, and which offers both HTTP and HTTPS. This is often a good idea anyway, because then you have better control
-  over your site's appearance, performance, and security. In addition, you don't have to trust a third party, which is always nice.
+* Use protocol-relative URLs for these resources. If the third party does not
+serve HTTPS, ask them to. Most already do, including jquery.com. 
+* Serve the resources from a server that you control, and which offers both HTTP
+and HTTPS. This is often a good idea anyway, because then you have better
+control over your site's appearance, performance, and security. In addition,
+you don't have to trust a third party, which is always nice.
 
-Keep in mind that you also need to change intrasite URLs in your
-stylesheets, JavaScript, redirect rules, `<link>` tags, and CSP
-declarations — not just in the HTML pages!
+Note: Keep in mind that you also need to change intrasite URLs in your stylesheets, JavaScript, redirect rules, `<link>` tags, and CSP declarations, not just in the HTML pages.
 
 ## Redirect HTTP to HTTPS
 
 You need to put a [canonical link](https://support.google.com/webmasters/answer/139066?hl=en) at the head of your page to tell search engines that HTTPS is the best way to get to your site.
 
 Set `<link rel="canonical" href="https://…"/>` tags in your pages. This
-helps search engines to determine the best way to get to your site.
+helps search engines determine the best way to get to your site.
 
 ## Turn on Strict Transport Security and secure cookies
 
@@ -278,7 +279,7 @@ when following an `http://` reference. This defeats attacks such as
 avoids the round-trip cost of the `301 redirect` that we enabled in 
 [Redirect HTTP to HTTPS](#redirect-http-to-https).
 
-Note: Clients that have noted your site as a known HSTS Host are likely to <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>hard-fail</i> if your site ever has an error in its TLS configuration</a> (such as an expired certificate). HSTS explicitly designs it this way to ensure that network attackers cannot trick clients into accessing the site without HTTPS. Do not enable HSTS until you are certain that your site operation is robust enough to avoid ever deploying HTTPS with certificate validation errors.
+Note: Clients that have noted your site as a known HSTS Host are likely to <a href="https://tools.ietf.org/html/rfc6797#section-12.1"><i>hard-fail</i> if your site ever has an error in its TLS configuration</a> (such as an expired certificate). HSTS is explicitly designed this way to ensure that network attackers cannot trick clients into accessing the site without HTTPS. Do not enable HSTS until you are certain that your site operation is robust enough to avoid ever deploying HTTPS with certificate validation errors.
 
 Turn on HTTP Strict Transport Security (HSTS) by setting the `Strict-Transport-Security` header. [OWASP's HSTS page has links to instructions](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security) for various server software.
 
@@ -339,7 +340,7 @@ Caution: According to the [HTTP RFC](https://tools.ietf.org/html/rfc2616#section
 
 Site operators that monetize their site by showing ads want to make sure that
 migrating to HTTPS does not reduce ad impressions. But due to mixed content
-security concerns, an HTTP `iframe` doesn't work in an HTTPS page. There is a
+security concerns, an HTTP `<iframe>` doesn't work in an HTTPS page. There is a
 tricky collective action problem here: until advertisers publish over HTTPS,
 site operators cannot migrate to HTTPS without losing ad revenue; but until site
 operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
@@ -347,4 +348,4 @@ operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
 Advertisers should at least offer ad service via HTTPS (such as by completing
 the "Enable HTTPS on your servers" section on this page. Many already do. You 
 should ask advertisers that do not serve HTTPS at all to at least start. 
-You may wish to defer completing [Make IntraSite URLs relative](#make-intra-site-urls-relative) in this guide until enough advertisers interoperate properly.
+You may wish to defer completing [Make IntraSite URLs relative](#make-intra-site-urls-relative) until enough advertisers interoperate properly.

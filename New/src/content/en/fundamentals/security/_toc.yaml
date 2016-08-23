@@ -1,6 +1,8 @@
 toc:
-  - title: Security & Identity
+  - title: Security and Identity
     section:
+    - title: Overview
+      path: /web/fundamentals/security/
     - title: Encrypting Data In Transit
       section:
       - title: Why HTTPS
