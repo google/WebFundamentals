@@ -134,18 +134,24 @@ function replaceYTVideo(markdown) {
   if (items) {
     items.forEach(function(item) {
       var sourceItem = item;
-      item = item.replace('{% ytvideo ', '');
-      item = item.replace(' %}', '');
-      var video = '<div class="video-wrapper">\n';
-      video += '  <iframe class="devsite-embedded-youtube-video" ';
-      video += 'data-video-id="' + item + '"\n          ';
-      video += 'data-autohide="1" data-showinfo="0" frameborder="0" ';
-      video += 'allowfullscreen>\n';
-      video += '  </iframe>\n</div>';
+      item = item.replace('{% ytvideo', '');
+      item = item.replace('%}', '');
+      item = item.trim();
+      var video = getYoutubeMarkup(item);
       markdown = markdown.replace(sourceItem, video);
     });
   }
   return markdown;
+}
+
+function getYoutubeMarkup(id) {
+  var video = '<div class="video-wrapper">\n';
+  video += '  <iframe class="devsite-embedded-youtube-video" ';
+  video += 'data-video-id="' + id + '"\n          ';
+  video += 'data-autohide="1" data-showinfo="0" frameborder="0" ';
+  video += 'allowfullscreen>\n';
+  video += '  </iframe>\n</div>';
+  return video;
 }
 
 function removeIntroP(markdown) {
@@ -198,7 +204,7 @@ function migrateFile(dir, file) {
 
   var topOfDoc = '';
   topOfDoc += 'project_path: /web/_project.yaml\n';
-  topOfDoc += 'book_path: /web/fundamentals/_book.yaml\n';
+  topOfDoc += 'book_path: /web/shows/_book.yaml\n';
   if (yaml.description) {
     topOfDoc += 'description: ' + yaml.description + '\n';
   }
@@ -219,6 +225,9 @@ function migrateFile(dir, file) {
   if (yaml.featured_image) {
     topOfDoc += '{# wf_featured_image: ' + yaml.featured_image + ' #}\n';
   }
+  if (yaml.youtubeID) {
+    topOfDoc += '{# wf_youtube_id: ' + yaml.youtubeID + ' #}\n';
+  }
   if (yaml.title) {
     topOfDoc += '\n';
     topOfDoc += '# ' + yaml.title + ' {: .page-title }\n';
@@ -236,6 +245,9 @@ function migrateFile(dir, file) {
     });
   }
   topOfDoc += '\n\n';
+  if (yaml.youtubeID) {
+    topOfDoc += getYoutubeMarkup(yaml.youtubeID) + '\n\n';
+  }
   markdown = markdown.replace(/{{site.WFBaseUrl}}/g, '/web');
   markdown = markdown.replace('{% include shared/toc.liquid %}\n', '');
   markdown = markdown.replace(/{{ ?page.description ?}}/g, yaml.description);
@@ -276,4 +288,4 @@ function migrateDirectory(dir, recursive) {
   });
 }
 
-migrateDirectory('./src/content/en/updates/', true);
+migrateDirectory('./src/content/en/shows/', true);
