@@ -32,11 +32,11 @@ Rules](https://developers.google.com/speed/docs/insights/rules)
 
 ## Deploy to Firebase
 
-If you're new to Firebase, you'll need to create your account and install some 
+If you're new to Firebase, you'll need to sign in using your Google account and install some 
 tools first.
 
-1. Create a Firebase account at 
-   [https://www.firebase.com/signup/](https://www.firebase.com/signup/)
+1. Sign in to Firebase with your Google account at
+   [https://firebase.google.com/](https://firebase.google.com/)
 1. Install the Firebase tools via npm:<br/>
    `npm install -g firebase-tools`
 
@@ -44,7 +44,7 @@ Once your account has been created and you've signed in, you're ready to
 deploy!
 
 1. Create a new app at 
-   [https://www.firebase.com/account/](https://www.firebase.com/account/)
+   [https://console.firebase.google.com/](https://console.firebase.google.com/)
 1. If you haven't recently signed in to the Firebase tools, update your 
    credentials:<br/>
    `firebase login`
@@ -57,7 +57,7 @@ deploy!
    `https://YOUR-FIREBASE-APP.firebaseapp.com`
 
 **Further reading:** [Firebase Hosting 
-Guide](https://www.firebase.com/docs/hosting/guide/)
+Guide](https://firebase.google.com/docs/hosting/)
 
 ## Test it out
 
