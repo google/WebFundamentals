@@ -6,9 +6,9 @@ toc:
     - title: Responsive Design
       section:
       - title: The Fundamentals
-        path: /web/fundamentals/design-and-ui/responsive/fundamentals/
+        path: /web/fundamentals/design-and-ui/responsive/
       - title: Design Patterns
-        path: /web/fundamentals/design-and-ui/responsive/patterns/
+        path: /web/fundamentals/design-and-ui/responsive/patterns
       - title: Images
         path: /web/fundamentals/design-and-ui/media/images/
       - title: Video
