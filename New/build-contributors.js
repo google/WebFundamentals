@@ -7,8 +7,8 @@
     primary contributors file and the individual include files.
  */
 
-var jsYaml = require('js-yaml');
 var fs = require('fs');
+var jsYaml = require('js-yaml');
 var Handlebars = require('handlebars');
 var handlebarHelpers = require('handlebars-helpers');
 
