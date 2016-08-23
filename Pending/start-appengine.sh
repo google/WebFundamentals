@@ -4,6 +4,11 @@ set -e
 # echo "Building contributors files..."
 # node build-contributors.js
 
-echo "Starting server on: http://localhost:8080/"
+port=$1
+if [ "$port" == "" ]; then
+  port='8080'
+fi
 
-dev_appserver.py appengine_app.yaml --dev_appserver_log_level warning --port 8080
+echo "Starting server on: http://localhost:"$port"/"
+
+dev_appserver.py appengine_app.yaml --dev_appserver_log_level warning --port $port
