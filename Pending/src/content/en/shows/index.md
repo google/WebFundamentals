@@ -5,6 +5,8 @@ book_path: /web/shows/_book.yaml
 
 # Shows {: .page-title }
 
+
+
 <div class="wf-subheading">
   <div class="page-content">
     <h2>Watch &amp; learn</h2>
@@ -19,7 +21,7 @@ book_path: /web/shows/_book.yaml
 <div class="page-content">
   <div class="mdl-grid">
     {% for subdirectory in page.context.subdirectories %}
-      {% capture image %}{{site.WFBaseUrl}}/shows/imgs/{{subdirectory.index.key_img}}{% endcapture %}
+      {% capture image %}/web/shows/imgs/{{subdirectory.index.key_img}}{% endcapture %}
       {% include shared/base_card.liquid imgUrl=image text=subdirectory.index.description linkHref=subdirectory.index.relative_url linkText=subdirectory.index.title %}
     {% endfor %}
   </div>

@@ -8,6 +8,8 @@ description: Paul and Jake talk about CORS, Layout, and which of them has the ev
 
 # CORS, Forced Layouts, and Raptor Kebab Shops. {: .page-title }
 
+
+
 Paul and Jake talk about CORS, Layout, and which of them has the evolutionary advantage.
 
 In this episode:

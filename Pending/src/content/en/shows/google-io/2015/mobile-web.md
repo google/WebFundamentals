@@ -4,8 +4,17 @@ book_path: /web/shows/_book.yaml
 {# wf_review_required #}
 {# wf_updated_on: 2015-05-27 #}
 {# wf_published_on: 2015-05-27 #}
+{# wf_youtube_id: iZZdhTUP5qg #}
 
 # The next generation mobile web {: .page-title }
+
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="iZZdhTUP5qg"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 
 Alex Komoroske; Elisabeth Morant
 

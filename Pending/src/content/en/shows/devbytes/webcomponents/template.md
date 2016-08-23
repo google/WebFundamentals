@@ -5,5 +5,14 @@ description: Web Components are a set of technologies that changes the way you d
 {# wf_review_required #}
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
+{# wf_youtube_id: qC5xK6H0GlQ #}
 
 # Template {: .page-title }
+
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="qC5xK6H0GlQ"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+

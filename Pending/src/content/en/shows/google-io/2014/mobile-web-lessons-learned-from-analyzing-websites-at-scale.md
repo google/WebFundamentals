@@ -5,8 +5,17 @@ description: We've analyzed tens of thousands of mobile websites to figure out w
 {# wf_review_required #}
 {# wf_updated_on: 2015-03-29 #}
 {# wf_published_on: 2015-03-29 #}
+{# wf_youtube_id: UEfZ3aeCjoY #}
 
 # Mobile web lessons learned from analyzing websites at scale {: .page-title }
+
+
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="UEfZ3aeCjoY"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 
 We've analyzed tens of thousands of mobile websites to figure out what works
 and what doesn't when it comes to performance and user experience on mobile

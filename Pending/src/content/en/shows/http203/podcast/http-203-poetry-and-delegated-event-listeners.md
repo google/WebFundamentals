@@ -8,6 +8,8 @@ description: Jake brings his A+ poetry game, and Paul muses over the performance
 
 # Poetry and Delegated Event Listeners {: .page-title }
 
+
+
 Jake brings his A+ poetry game, and Paul muses over the performance implications of event delegation.
 
 In this episode:

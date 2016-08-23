@@ -8,6 +8,8 @@ description: How can writing code be like making a burger? Turns out, by the pow
 
 # Making Burgers and Maintainable Code {: .page-title }
 
+
+
 How can writing code be like making a burger? Turns out, by the power of weird segues, it can!
 
 In this episode:

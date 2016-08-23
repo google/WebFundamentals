@@ -1,0 +1,28 @@
+# ATTENTION - This file is auto-generated, changes must be made to the template!
+toc:
+  - title: 'New In Chrome'
+    section:
+    - title: Show Listing
+      path: /web/shows/new-in-chrome/
+    - title: "Chrome 52: Contain Property, the PerformanceObserver API &amp; Service Worker Stream"
+      path: /web/shows/new-in-chrome/chrome-52-contain-property-the-performanceobserver-api-and-service-worker-stream
+    - title: "Chrome 51: Intersection Observers, Passive Event Listeners and the Credential Management API"
+      path: /web/shows/new-in-chrome/chrome-51-intersection-observers-passive-event-listeners-and-the-credential-management-api
+    - title: "Chrome 50: Payload in Push, Preload Assets &amp; Canvas supports toBlob()"
+      path: /web/shows/new-in-chrome/chrome-50-payload-in-push-preload-assets-and-canvas-supports-toblob
+    - title: "Chrome 49: Custom CSS properties, background sync and save-data client hint"
+      path: /web/shows/new-in-chrome/chrome-49-custom-css-properties-background-sync-and-save-data-client-hint
+    - title: "Chrome 48: Custom buttons in notifications, DevTools Security panel, and Presentation mode"
+      path: /web/shows/new-in-chrome/chrome-48-custom-buttons-in-notifications-devtools-security-panel-and-presentation-mode
+    - title: "Chrome 47: Splash Screens, requestIdleCallback and better desktop notifications (New in Chrome)"
+      path: /web/shows/new-in-chrome/chrome-47-splash-screens-requestidlecallback-and-better-desktop-notifications-new-in-chrome
+    - title: "Chrome 46: New motion-path animations, client hints and service worker improvements"
+      path: /web/shows/new-in-chrome/chrome-46-new-motion-path-animations-client-hints-and-service-worker-improvements
+    - title: "Chrome 45: More ECMA Script 2015, improved Add to Home Screen, and more (New In Chrome - Ep 45)"
+      path: /web/shows/new-in-chrome/chrome-45-more-ecma-script-2015-improved-add-to-home-screen-and-more-new-in-chrome-ep-45
+    - title: "Chrome 44: Improvements to the App Install Banner &amp; More (New In Chrome - Ep 44)"
+      path: /web/shows/new-in-chrome/chrome-44-improvements-to-the-app-install-banner-and-more-new-in-chrome-ep-44
+    - title: "Chrome 43: Cut and Copy, changes to DOM attributes &amp; WebMIDI (New In Chrome - Ep 43)"
+      path: /web/shows/new-in-chrome/chrome-43-cut-and-copy-changes-to-dom-attributes-and-webmidi-new-in-chrome-ep-43
+    - title: "Chrome 42: Push API, App Install Banners &amp; Fetch (New In Chrome - Ep 42)"
+      path: /web/shows/new-in-chrome/chrome-42-push-api-app-install-banners-and-fetch-new-in-chrome-ep-42

@@ -8,6 +8,8 @@ description: Get started or build your web design and development skills with th
 
 # Udacity Courses {: .page-title }
 
+
+
 <div class="wf-subheading">
   <div class="page-content">
     <h2>Learn with Udacity</h2>

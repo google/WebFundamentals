@@ -1,0 +1,10 @@
+toc:
+  - title: Summits
+    section:
+    - include: /web/shows/summits/pwa-2016/_toc.yaml
+    - include: /web/shows/summits/cds-2015/_toc.yaml
+    - include: /web/shows/summits/polymer-2015/_toc.yaml
+    - include: /web/shows/summits/blinkon-06/_toc.yaml
+    - include: /web/shows/summits/cds-2014/_toc.yaml
+    - include: /web/shows/summits/blinkon-05/_toc.yaml
+    - include: /web/shows/summits/blinkon-04/_toc.yaml
