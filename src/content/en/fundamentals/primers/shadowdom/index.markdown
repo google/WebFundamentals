@@ -779,17 +779,17 @@ If you were to set `delegatesFocus: false`, here's what you would see instead:
 
 <figure>
   <img src="images/delegateFocusFalse.png">
-  <figcaption>The internal <code>&lt;input></code> is focused.</figcaption>
+  <figcaption><code>delegateFocus: false</code> and the internal <code>&lt;input></code> is focused.</figcaption>
 </figure>
 
 <figure>
   <img src="images/delegateFocusFalseFocus.png">
-  <figcaption><code>&lt;x-focus></code> gains focus (e.g  <code>focus()</code>).</figcaption>
+  <figcaption><code>delegateFocus: false</code> and <code>&lt;x-focus></code> gains focus (e.g. it has <code>tabindex="0"</code>).</figcaption>
 </figure>
 
 <figure>
   <img src="images/delegateFocusNothing.png">
-  <figcaption>"Clickable Shadow DOM text" is clicked (or other empty area within the element).</figcaption>
+  <figcaption><code>delegateFocus: false</code> and "Clickable Shadow DOM text" is clicked (or other empty area within the element's shadow DOM is clicked).</figcaption>
 </figure>
 
 ## Tips & Tricks {#tricks}
