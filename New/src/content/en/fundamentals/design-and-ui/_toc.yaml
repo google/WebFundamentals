@@ -24,15 +24,11 @@ toc:
     - title: Animations
       section:
       - title: Overview
-        path: /web/fundamentals/perforance/crp/1
-      - title: CSS vs JavaScript Animations
-        path: /web/fundamentals/perforance/crp/2
-      - title: Easing and Timing in Animation
-        path: /web/fundamentals/perforance/crp/3
+        path: /web/fundamentals/design-and-ui/animations/
+      - title: The Basics of Easing
+        path: /web/fundamentals/design-and-ui/animations/the-basics-of-easing
       - title: Animating Between Views
-        path: /web/fundamentals/performance/5
-      - title: Animating Modal Views
-        path: /web/fundamentals/performance/7
-      - title: Animation Performance
-        path: /web/fundamentals/performance/crp/9
+        path: /web/fundamentals/design-and-ui/animations/animating-between-views
+      - title: Asymmetric Animation Timing
+        path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
 
