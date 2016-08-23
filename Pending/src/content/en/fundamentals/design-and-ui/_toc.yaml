@@ -10,9 +10,9 @@ toc:
       - title: Design Patterns
         path: /web/fundamentals/design-and-ui/responsive/patterns
       - title: Images
-        path: /web/fundamentals/design-and-ui/media/images/
+        path: /web/fundamentals/design-and-ui/media/images
       - title: Video
-        path: /web/fundamentals/design-and-ui/media/video/
+        path: /web/fundamentals/design-and-ui/media/video
       - title: Content
         path: /web/fundamentals/design-and-ui/content/
     - title: User Input
