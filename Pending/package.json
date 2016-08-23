@@ -19,9 +19,12 @@
   },
   "private": true,
   "dependencies": {
+    "googleapis": "^12.4.0",
     "handlebars": "^4.0.5",
     "handlebars-helpers": "^0.7.5",
-    "moment": "^2.14.1"
+    "mkdirp": "^0.5.1",
+    "moment": "^2.14.1",
+    "slug": "^0.9.1"
   },
   "scripts": {}
 }
