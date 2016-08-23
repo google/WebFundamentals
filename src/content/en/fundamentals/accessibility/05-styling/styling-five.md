@@ -33,6 +33,15 @@ The <a href="http://webaim.org/standards/wcag/" target="_blank">WebAIM guideline
 
 The contrast ratio of 4.5:1 was chosen for level AA because it compensates for the loss in contrast sensitivity usually experienced by users with vision loss equivalent to approximately 20/40 vision. 20/40 is commonly reported as typical visual acuity of people at about age 80. For users with low vision impairments or color deficiencies, we can increase the contrast up to 7:1 for body text.
 
-You can use the accessibility tools in Chrome to identify contrast ratios. If you run an audit on your page you may get a few warnings for low contrast colors. One benefit of using the Chrome Devtools is that they will suggest AA and AAA (enhanced) alternatives to your current colors, and you can click the values to preview them in your app.
+You can use the <a href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en" target="_blank">Accessibility DevTools extension</a> in Chrome to identify contrast ratios. One benefit of using the Chrome Devtools is that they will suggest AA and AAA (enhanced) alternatives to your current colors, and you can click the values to preview them in your app.
+
+To run a color/contrast audit, follow these basic steps.
+
+ 1. After installing the extension, click `Audits`
+ 1. Uncheck everything except `Accessibility`
+ 1. Click `Audit Present State`
+ 1. Note any contrast warnings
+
+![contrast audit](imgs/contrast-audit.png)
 
 WebAIM itself provides a handy <a href="http://webaim.org/resources/contrastchecker/" target="_blank">color contrast checker</a> you can use to examine the contrast of any color pair.
