@@ -30,9 +30,24 @@
     "path": "summits/cds-2014"
   },
   {
+    "playlistId": "PLOU2XLYxmsIJblRBPqrwisutm3dxoa43P",
+    "title": "Chrome Dev Summit (2013)",
+    "path": "summits/cds-2013"
+  },
+  {
     "playlistId": "PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP",
     "title": "Google I/O 2016",
     "path": "google-io/2016"
+  },
+  {
+    "playlistId": "PLOU2XLYxmsII8L540LbY5hdC23cmoZMhV",
+    "title": "Google I/O 2014",
+    "path": "google-io/2014"
+  },
+  {
+    "playlistId": "PLOU2XLYxmsIKNXidK5HZsHu9T7zs6nxwK",
+    "title": "Google I/O 2013",
+    "path": "google-io/2013"
   },
   {
     "playlistId": "PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9",

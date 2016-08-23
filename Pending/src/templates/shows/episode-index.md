@@ -15,7 +15,7 @@ book_path: /web/shows/_book.yaml
 
 {{ellipsis snippet.description 500}}
 
-{{moment snippet.publishedAt "dddd, MMMM Do YYYY, h:mm a"}}
+{{snippet.publishedAt}}
 
 [Watch now](/web/{{path}}) 
 

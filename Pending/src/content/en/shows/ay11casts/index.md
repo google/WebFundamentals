@@ -18,7 +18,7 @@ Here&#x27;s a good quote from Web AIM to help explain it: &quot;&quot;When an it
 
 Users can change the currently focused element…
 
-Tuesday, August 23rd 2016, 9:09 pm
+2016-08-19T17:21:09.000Z
 
 [Watch now](/web/shows/ay11casts/what-is-focus-a11ycasts-03) 
 
@@ -33,7 +33,7 @@ Keyboard focus is crucially important for both motor impaired users, and visuall
 
 So in today&#x27;s episode we&#x27;ll look at how we can solve this common gotcha with a new proposed HTML attribute: inert! Using the inert attribute you can take an entire tree of elements out of the tab order and the accessibi…
 
-Wednesday, August 24th 2016, 5:12 am
+2016-08-09T19:05:12.000Z
 
 [Watch now](/web/shows/ay11casts/inert-polyfill-a11ycasts-02) 
 
@@ -48,7 +48,7 @@ Hey folks! Accessibility is a topic very near and dear to my heart. And as I&#x2
 
 A11ycasts is short for AccessibilityCasts (a11y is a common shortening of the term accessibility because there are 11 letter…
 
-Wednesday, August 24th 2016, 5:12 am
+2016-08-09T19:05:12.000Z
 
 [Watch now](/web/shows/ay11casts/introducing-a11ycasts-a11ycasts-01) 
 

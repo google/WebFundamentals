@@ -18,7 +18,7 @@ Come and join us right here: http://goo.gl/9y6ORx
 
 For more episodes of Supercharged click here: http://goo.gl/WFD8py
 
-Wednesday, August 24th 2016, 1:51 pm
+2016-08-23T14:13:51.000Z
 
 [Watch now](/web/shows/supercharged/3d-card-flip-live-coding-thursday-25th-august) 
 
@@ -35,7 +35,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 7:50 am
+2016-08-18T15:07:50.000Z
 
 [Watch now](/web/shows/supercharged/containment-microtip-4-supercharged) 
 
@@ -52,7 +52,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 5:25 am
+2016-08-10T14:05:25.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-qanda-august-2016) 
 
@@ -71,7 +71,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 10:16 am
+2016-08-03T15:34:16.000Z
 
 [Watch now](/web/shows/supercharged/resource-hints-microtip-3-supercharged) 
 
@@ -89,7 +89,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 10:49 am
+2016-07-27T16:34:49.000Z
 
 [Watch now](/web/shows/supercharged/accordion-tldw-supercharged) 
 
@@ -108,7 +108,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 5:29 am
+2016-07-19T15:05:29.000Z
 
 [Watch now](/web/shows/supercharged/accordion-live-coding-session-supercharged) 
 
@@ -128,7 +128,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 2:22 pm
+2016-07-13T16:14:22.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-qanda-july-2016) 
 
@@ -147,7 +147,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 9:47 am
+2016-07-07T15:09:47.000Z
 
 [Watch now](/web/shows/supercharged/router-part-2-tldw-supercharged) 
 
@@ -168,7 +168,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 1:33 pm
+2016-06-30T16:13:33.000Z
 
 [Watch now](/web/shows/supercharged/router-part-2-live-code-session-supercharged) 
 
@@ -187,7 +187,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 6:10 am
+2016-06-27T08:06:10.000Z
 
 [Watch now](/web/shows/supercharged/router-part-2-live-coding-session-coming-june-30th) 
 
@@ -208,7 +208,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 10:09 am
+2016-06-15T11:10:09.000Z
 
 [Watch now](/web/shows/supercharged/flip-microtip-2-supercharged) 
 
@@ -223,7 +223,7 @@ Paul recaps what goes into building a router, and he covers Custom Elements as w
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 6:15 am
+2016-06-09T14:30:15.000Z
 
 [Watch now](/web/shows/supercharged/router-part-1-tldw-supercharged) 
 
@@ -240,7 +240,7 @@ Please like if you want to see more Supercharged from Paul and Surma.
 
 Find the code on GitHub here: https://github.com/GoogleChrome/ui-element-samples
 
-Wednesday, August 24th 2016, 4:38 am
+2016-06-02T20:28:38.000Z
 
 [Watch now](/web/shows/supercharged/router-live-code-session-supercharged) 
 
@@ -257,7 +257,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Thursday, August 25th 2016, 3:31 am
+2016-05-26T15:51:31.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-qanda-may-2016) 
 
@@ -278,7 +278,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 2:54 am
+2016-05-11T17:02:54.000Z
 
 [Watch now](/web/shows/supercharged/side-navigation-bar-tldw-supercharged) 
 
@@ -297,7 +297,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 4:37 pm
+2016-05-05T13:16:37.000Z
 
 [Watch now](/web/shows/supercharged/easy-easing-micro-tip-1-supercharged) 
 
@@ -318,7 +318,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http…
 
-Wednesday, August 24th 2016, 11:01 am
+2016-05-04T22:35:01.000Z
 
 [Watch now](/web/shows/supercharged/side-navigation-bar-live-code-session-supercharged) 
 
@@ -337,7 +337,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Tuesday, August 23rd 2016, 9:24 pm
+2016-04-26T17:21:24.000Z
 
 [Watch now](/web/shows/supercharged/swipeable-cards-tldw-supercharged) 
 
@@ -360,7 +360,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subsc…
 
-Thursday, August 25th 2016, 1:46 am
+2016-04-16T08:49:46.000Z
 
 [Watch now](/web/shows/supercharged/swipeable-cards-live-code-session-supercharged) 
 
@@ -377,7 +377,7 @@ Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 8:50 am
+2015-12-18T11:32:50.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-slack-extended-xmas-special-s1-ep5) 
 
@@ -394,7 +394,7 @@ https://services.google.com/fb/forms/web
 
 Subscribe to the Google Chrome Developers Channel! http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 5:47 am
+2015-12-02T14:29:47.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-call-for-submissions) 
 
@@ -411,7 +411,7 @@ Don&#x27;t forget you can submit your own site here: https://services.google.com
 
 Subscribe to the Google Chrome Developers Channel! http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 1:16 pm
+2015-11-04T15:37:16.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-jais-web-blog-s1-ep4) 
 
@@ -426,7 +426,7 @@ Are there any quick wins for player.fm? Paul has a look over its scrolling perfo
 
 Don&#x27;t forget you can submit your own site here: https://services.google.com/fb/forms/web
 
-Wednesday, August 24th 2016, 7:42 am
+2015-10-22T15:07:42.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-player-fm-s1-ep3) 
 
@@ -443,7 +443,7 @@ Don&#x27;t forget you can submit your own site here: https://services.google.com
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 1:18 am
+2015-10-08T15:01:18.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-the-guardian-part-2-s1-ep2) 
 
@@ -460,7 +460,7 @@ Don&#x27;t forget you can submit your own site here: https://services.google.com
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 2:06 am
+2015-09-23T18:26:06.000Z
 
 [Watch now](/web/shows/supercharged/supercharged-the-guardian-s1-ep1) 
 
@@ -479,7 +479,7 @@ See you on soon!
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Tuesday, August 23rd 2016, 11:50 pm
+2015-09-23T18:23:50.000Z
 
 [Watch now](/web/shows/supercharged/web-performance-gets-supercharged-new-show-coming-soon) 
 

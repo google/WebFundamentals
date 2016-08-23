@@ -30,7 +30,7 @@ https://goo.gl/sp3lA4
 Webpack Module Bundler:
 http://goo.gl/…
 
-Wednesday, August 24th 2016, 11:07 am
+2016-08-19T15:35:07.000Z
 
 [Watch now](/web/shows/ttt/js-module-bundlers-totally-tooling-tips-s3-e11) 
 
@@ -47,7 +47,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7?
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 4:33 am
+2016-08-12T15:04:33.000Z
 
 [Watch now](/web/shows/ttt/testing-mocha-totally-tooling-tips-s3-e11) 
 
@@ -64,7 +64,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7?
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 5:01 am
+2016-08-04T16:29:01.000Z
 
 [Watch now](/web/shows/ttt/travis-and-appveyor-totally-tooling-tips-s3-e10) 
 
@@ -81,7 +81,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7?
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 12:50 am
+2016-07-27T15:24:50.000Z
 
 [Watch now](/web/shows/ttt/key-moments-in-web-page-loading-totally-tooling-tips-s3-e9) 
 
@@ -109,7 +109,7 @@ A11y CLI for continuous integration: http://bit.ly/a11y-ci
 
 Tenon.io: https://ten…
 
-Wednesday, August 24th 2016, 11:22 am
+2016-07-20T14:35:22.000Z
 
 [Watch now](/web/shows/ttt/accessibility-totally-tooling-tips-s3-e8) 
 
@@ -126,7 +126,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Tuesday, August 23rd 2016, 11:56 pm
+2016-06-29T15:23:56.000Z
 
 [Watch now](/web/shows/ttt/more-devtools-tips-totally-tooling-tips-s3-e7) 
 
@@ -147,7 +147,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 11:55 pm
+2016-06-15T15:47:55.000Z
 
 [Watch now](/web/shows/ttt/http2-totally-tooling-tips-s3-mini-tip) 
 
@@ -164,7 +164,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7?
 
 Subscribe to the Chrome Devel…
 
-Tuesday, August 23rd 2016, 11:29 pm
+2016-06-15T14:23:29.000Z
 
 [Watch now](/web/shows/ttt/service-worker-libraries-totally-tooling-tips-s3-e6) 
 
@@ -181,7 +181,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 8:19 am
+2016-06-08T15:32:19.000Z
 
 [Watch now](/web/shows/ttt/progressive-web-app-devtools-totally-tooling-tips-s3-mini-tip) 
 
@@ -198,7 +198,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 8:57 am
+2016-06-01T15:32:57.000Z
 
 [Watch now](/web/shows/ttt/devtools-device-mode-totally-tooling-tips-s3-e5) 
 
@@ -221,7 +221,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers chan…
 
-Thursday, August 25th 2016, 1:35 am
+2016-05-25T15:49:35.000Z
 
 [Watch now](/web/shows/ttt/web-app-manifest-totally-tooling-tips-s3-e4) 
 
@@ -240,7 +240,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 2:55 pm
+2016-05-11T16:14:55.000Z
 
 [Watch now](/web/shows/ttt/push-notifications-totally-tooling-tips-s3-e3) 
 
@@ -255,7 +255,7 @@ In this episode, Matt and Addy talk about instant loading web apps with an Appli
 
 First Meaningful Paint: http…
 
-Wednesday, August 24th 2016, 12:19 am
+2016-05-04T12:24:19.000Z
 
 [Watch now](/web/shows/ttt/instant-loading-with-the-app-shell-model-totally-tooling-tips-s3-e2) 
 
@@ -276,7 +276,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Tuesday, August 23rd 2016, 6:24 pm
+2016-04-27T13:18:24.000Z
 
 [Watch now](/web/shows/ttt/offline-support-totally-tooling-tips-s3-ep1) 
 
@@ -295,7 +295,7 @@ Watch more episodes of Totally Tooling Tips: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 11:26 pm
+2016-04-25T15:47:26.000Z
 
 [Watch now](/web/shows/ttt/season-3-trailer-totally-tooling-tips) 
 
@@ -335,7 +335,7 @@ http://goo.gl/qK6CSW
 
 WebPageTest JPEGI…
 
-Thursday, August 25th 2016, 8:43 am
+2016-04-14T08:56:43.000Z
 
 [Watch now](/web/shows/ttt/web-page-test-totally-tooling-tips-s3-mini-tip-3) 
 
@@ -360,7 +360,7 @@ sw tools: https://goo.gl/WhEvTD
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 5:49 am
+2016-03-30T09:05:49.000Z
 
 [Watch now](/web/shows/ttt/service-worker-toolbox-totally-tooling-tips-s3-mini-tip-2) 
 
@@ -383,7 +383,7 @@ Early docs: https://goo.gl/XIhlk0 Final docs will be at GulpJS.com when released
 
 Web Starter Kit: https://goo.g…
 
-Wednesday, August 24th 2016, 6:37 am
+2016-03-15T17:30:37.000Z
 
 [Watch now](/web/shows/ttt/intro-to-gulp-4-totally-tooling-tips-s3-mini-tip-1) 
 
@@ -400,7 +400,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 8:38 pm
+2015-12-16T15:44:38.000Z
 
 [Watch now](/web/shows/ttt/security-totally-tooling-tips-s2-ep7) 
 
@@ -424,7 +424,7 @@ Browsersync http://www.browsersync.io/
 Modern.ie www.modern.ie
 OpenSTF htt…
 
-Wednesday, August 24th 2016, 12:03 pm
+2015-12-09T09:12:03.000Z
 
 [Watch now](/web/shows/ttt/cross-device-testing-totally-tooling-tips-s2-ep6) 
 
@@ -447,7 +447,7 @@ Grunt: http://gruntjs.com
 Web Starter Kit: http://wsk.io
 Polymer Starter Kit: https…
 
-Thursday, August 25th 2016, 6:29 am
+2015-11-24T15:54:29.000Z
 
 [Watch now](/web/shows/ttt/build-processes-totally-tooling-tips-s2-ep-5) 
 
@@ -467,7 +467,7 @@ Links:
 - 2.05 - ConEmu. https://conemu.github.io/
 - 2:…
 
-Wednesday, August 24th 2016, 4:24 am
+2015-11-10T15:28:24.000Z
 
 [Watch now](/web/shows/ttt/windows-command-line-tooling-totally-tooling-tips-s2-ep4) 
 
@@ -484,7 +484,7 @@ Watch more episodes of Totally Tooling Tips here: https://goo.gl/IoXka7
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 4:55 pm
+2015-10-27T16:16:55.000Z
 
 [Watch now](/web/shows/ttt/sublime-shortcuts-totally-tooling-tips-s2-ep3) 
 
@@ -509,7 +509,7 @@ https://developer.chrome.com/devtools/docs/device-mode#network-conditions,
 
 0:55 DevTools Timeline Screenshots mode - https://developers.google.com/web/u…
 
-Thursday, August 25th 2016, 8:02 am
+2015-10-21T14:56:02.000Z
 
 [Watch now](/web/shows/ttt/critical-path-css-totally-tooling-tips-s2-mini-tip-1) 
 
@@ -527,7 +527,7 @@ Sublime snippets: Matt get&#x27;s a poor Yelp rating for not knowing what Sublim
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 2:45 am
+2015-10-14T15:02:45.000Z
 
 [Watch now](/web/shows/ttt/sublime-snippets-totally-tooling-tips-s2-ep2) 
 
@@ -544,7 +544,7 @@ What do we want? ES2015! When do we want it? Now! ES2015 (the next version of Ja
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 11:29 pm
+2015-09-30T14:47:29.000Z
 
 [Watch now](/web/shows/ttt/es2015-next-version-of-javascript-totally-tooling-tips-s2-ep1) 
 
@@ -569,7 +569,7 @@ Watch more great Totally Tooling Tips here: https://goo.gl/vIyImu
 
 Subscribe to the Google Deve…
 
-Wednesday, August 24th 2016, 10:03 am
+2015-07-29T16:34:03.000Z
 
 [Watch now](/web/shows/ttt/window-management-tools-totally-tooling-tips-s1-mini-tip-5) 
 
@@ -590,7 +590,7 @@ Subscribe by email: https://feedburner.google.com/fb/a/mailverify?uri&#x3D;Total
 
 RSS feed: https://developers.google.com/web/shows/…
 
-Wednesday, August 24th 2016, 10:04 am
+2015-07-15T15:34:04.000Z
 
 [Watch now](/web/shows/ttt/performance-auditing-totally-tooling-tips-s1-ep5) 
 
@@ -611,7 +611,7 @@ Subscribe by email: https://feedburner.google.com/fb/a/mailverify?uri&#x3D;Total
 
 RSS feed: https:…
 
-Wednesday, August 24th 2016, 12:45 pm
+2015-07-09T15:12:45.000Z
 
 [Watch now](/web/shows/ttt/page-speed-insights-totally-tooling-tips-s1-mini-tip-4) 
 
@@ -634,7 +634,7 @@ Watch more great Totally Tooling Tips here: https://goo.gl/vIyImu
 
 Subscribe to the Google Developers channel at: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 12:45 pm
+2015-07-09T15:12:45.000Z
 
 [Watch now](/web/shows/ttt/command-line-tips-totally-tooling-tips-s1-ep4) 
 
@@ -657,7 +657,7 @@ Watch more great Totally Tooling Tips here: https://goo.gl/vIyImu
 
 Subscribe to the Google Developers channel at: http://goo.gl/mQyv5…
 
-Wednesday, August 24th 2016, 9:46 am
+2015-07-01T11:33:46.000Z
 
 [Watch now](/web/shows/ttt/command-line-keyboard-shortcuts-totally-tooling-tips-s1-mini-tip-3) 
 
@@ -680,7 +680,7 @@ Watch more great Totally Tooling Tips here: https://goo.gl/vIyImu
 
 Subscribe to the Google Developers …
 
-Wednesday, August 24th 2016, 9:46 am
+2015-07-01T11:33:46.000Z
 
 [Watch now](/web/shows/ttt/devtools-grab-bag-of-tricks-totally-tooling-tips-s1-ep3) 
 
@@ -703,7 +703,7 @@ Watch more great Totally Tooling Tips here: https://goo.gl/vIyImu
 
 Subscribe to the Google Developers channel at: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 9:46 am
+2015-07-01T11:33:46.000Z
 
 [Watch now](/web/shows/ttt/devtools-eye-dropper-tool-totally-tooling-tips-s1-mini-tip-2) 
 
@@ -722,7 +722,7 @@ Learn more on TTT site: https://developers.google.com/web/shows/ttt/index
 
 Subscribe by email: https://feedburner.google.com/fb/a/mailverify?uri&#x3D;TotallyToolingTips&amp;amp;loc&#x3D;en_U…
 
-Wednesday, August 24th 2016, 9:46 am
+2015-07-01T11:33:46.000Z
 
 [Watch now](/web/shows/ttt/debugging-promises-with-devtools-totally-tooling-tips-s1-ep2) 
 
@@ -745,7 +745,7 @@ Watch more great Totally Tooling Tips here: https://goo.gl/vIyImu
 
 Subscribe to the Google Develop…
 
-Wednesday, August 24th 2016, 9:46 am
+2015-07-01T11:33:46.000Z
 
 [Watch now](/web/shows/ttt/what-theme-is-addy-using-totally-tooling-tips-s1-mini-tip-1) 
 
@@ -762,7 +762,7 @@ To find more Totally tooling tips and to read more about Sublime plugins visit: 
 
 Learn more on TTT site: https://developers.google.com/web/shows/ttt/ind…
 
-Wednesday, August 24th 2016, 9:46 am
+2015-07-01T11:33:46.000Z
 
 [Watch now](/web/shows/ttt/sublime-text-plugins-totally-tooling-tips-s1-ep1) 
 

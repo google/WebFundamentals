@@ -20,7 +20,7 @@ Also, to learn more about building with Polymer, check out Polycasts by Rob Dods
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Wednesday, August 24th 2016, 2:59 am
+2015-10-13T18:02:59.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/highlights-from-the-polymer-summit-2015) 
 
@@ -37,7 +37,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Wednesday, August 24th 2016, 6:18 am
+2015-09-15T23:06:18.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/polypanel-the-polymer-summit-2015) 
 
@@ -54,7 +54,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://go…
 
-Wednesday, August 24th 2016, 7:52 am
+2015-09-15T22:07:52.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/polymer-power-tools-the-polymer-summit-2015) 
 
@@ -71,7 +71,7 @@ Check out the slides deck to this talk here: https://speakerdeck.com/ebidel/poly
 
 To learn more about building with Polymer, check out Polycasts by Rob Dods…
 
-Wednesday, August 24th 2016, 4:26 am
+2015-09-15T21:28:26.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/polymer-performance-patterns-the-polymer-summit-2015) 
 
@@ -84,7 +84,7 @@ Wednesday, August 24th 2016, 4:26 am
 
 Performance is measured from the ground truth of the browser internals, and you&#x27;re operating a few levels up, with the DOM, framework code, and JavaScript sitting between your users finger and the resulting screen paints. In this session Paul Irish will show how the Chrome DevTools can help you understand where time is spent in your app and effective means of profiling your performance. You&#x27;ll walk away with a solid understanding of how your polymer work can be as fast-loading and responsive-to-…
 
-Wednesday, August 24th 2016, 3:35 am
+2015-09-15T21:27:35.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/doing-a-perf-audit-of-your-polymer-app-the-polymer-summit-2015) 
 
@@ -97,7 +97,7 @@ Wednesday, August 24th 2016, 3:35 am
 
 One in six people will experience a disability at some point in their life, so it&#x27;s crucial for sites and apps to work smoothly for users with a wide range of abilities. A well crafted site is usable whether or not a person can see, use a mouse, or distinguish red from green - to mention just a few of the assumptions we inadvertently make. Learn about how and why we hold the Polymer 1.0 widget set to a high bar for accessibility, and how you can use the Polymer libraries to create your own acces…
 
-Wednesday, August 24th 2016, 4:11 pm
+2015-09-15T16:16:11.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/a11y-with-polymer-the-polymer-summit-2015) 
 
@@ -114,7 +114,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Thursday, August 25th 2016, 6:44 am
+2015-09-15T14:54:44.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/polymers-animation-system-the-polymer-summit-2015) 
 
@@ -131,7 +131,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Thursday, August 25th 2016, 5:44 am
+2015-09-15T14:53:44.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/lightning-talk-polymers-gesture-system-the-polymer-summit-2015) 
 
@@ -148,7 +148,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Wednesday, August 24th 2016, 11:14 pm
+2015-09-15T14:47:14.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/lightning-talk-upgrading-to-10-with-polyup-the-polymer-summit-2015) 
 
@@ -165,7 +165,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Wednesday, August 24th 2016, 1:08 am
+2015-09-15T14:01:08.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/adaptive-ui-with-material-design-and-paper-elements-the-polymer-summit-2015) 
 
@@ -180,7 +180,7 @@ Traditionally, CSS stylesheets have a terrible opinion about style encapsulation
 
 To learn more about building with Polyme…
 
-Thursday, August 25th 2016, 10:36 am
+2015-09-15T13:58:36.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/polymers-styling-system-the-polymer-summit-2015) 
 
@@ -199,7 +199,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Wednesday, August 24th 2016, 2:04 pm
+2015-09-15T12:14:04.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/theres-an-element-for-that-but-what-if-there-isnt-the-polymer-summit-2015) 
 
@@ -216,7 +216,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Thursday, August 25th 2016, 4:11 am
+2015-09-15T11:52:11.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/platinum-elements-the-polymer-summit-2015) 
 
@@ -233,7 +233,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Wednesday, August 24th 2016, 3:15 am
+2015-09-15T11:03:15.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/testing-polymer-web-components-the-polymer-summit-2015) 
 
@@ -252,7 +252,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Wednesday, August 24th 2016, 9:52 am
+2015-09-15T10:33:52.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/using-es6-with-polymer-the-polymer-summit-2015) 
 
@@ -267,7 +267,7 @@ Polymer and Web Components are exciting, but developers are not always sure how 
 
 Slides: https://speakerdeck.…
 
-Wednesday, August 24th 2016, 2:34 am
+2015-09-15T10:26:34.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/end-to-end-with-polymer-the-polymer-summit-2015) 
 
@@ -280,7 +280,7 @@ Wednesday, August 24th 2016, 2:34 am
 
 Polymer embraces encapsulated Custom Elements as its main organizing unit. This simple-sounding concept is actually an incredibly powerful tool that can revolutionize how you think about solving complex problems, collaborate within large teams, reduce technology lock-in, and of course, build amazing apps for the web. Hear how we think about building apps using custom elements directly from one of the Polymer core team engineers, and how to best employ this simple concept for the most leverage in…
 
-Wednesday, August 24th 2016, 6:00 am
+2015-09-15T10:06:00.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/thinking-in-polymer-the-polymer-summit-2015) 
 
@@ -297,7 +297,7 @@ To learn more about building with Polymer, check out Polycasts by Rob Dodson: ht
 
 Subscribe to Chrome Developers on Youtube here: https://goo.gl/n7mBHx
 
-Thursday, August 25th 2016, 4:54 am
+2015-09-15T08:52:54.000Z
 
 [Watch now](/web/shows/summits/polymer-2015/opening-keynote-the-polymer-summit-2015) 
 

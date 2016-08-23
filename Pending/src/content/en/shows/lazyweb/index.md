@@ -20,7 +20,7 @@ Jafar Husain explains the power of ES6 Generators and async functions, Marcy Sut
 
 GROKKING GENE…
 
-Wednesday, August 24th 2016, 12:44 pm
+2015-07-09T15:12:44.000Z
 
 [Watch now](/web/shows/lazyweb/what-deep-dream-sees-lazyweb-12) 
 
@@ -41,7 +41,7 @@ PROJECT SPARTAN
 • https://www.youtube.com/watch?v&#x3D;KKjkfkAmzAg
 • https://www.youtube.com/watch?v&#x3D;4A5ZX…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/the-physical-web-is-all-around-us-lazyweb-1) 
 
@@ -58,7 +58,7 @@ CLICK &quot;&quot;&quot;&quot;SHOW MORE&quot;&quot;&quot;&quot; FOR LINKS TO EVE
 
 Bruce Lawson illustrates that everyone wants the same web, but not all networks are created equal, the a11y cheat sheet makes it easier to build accessible sites, Alex Komoroske and Elisabeth Morant highlight statistics and features of the next generation web, Firefox Developer Edition launches new performance tools, and Ilya Grigorik explains how old be…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/smart-phones-dumb-networks-lazyweb-10) 
 
@@ -76,7 +76,7 @@ CLICK &quot;&quot;&quot;&quot;SHOW MORE&quot;&quot;&quot;&quot; FOR LINKS TO EVE
 
 SUPERCHARGING PAGE LO…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/page-load-supercharge-and-web-audio-808-synthesis-lazyweb-9) 
 
@@ -98,7 +98,7 @@ http://rizzo.lonelyplanet.com/styleguide/ui-components/buttons
 https://www.youtube.com/watch?v&#x3D;Cs0n4YdMGac
 https:…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/build-your-own-bootstrap-lazyweb-8) 
 
@@ -121,7 +121,7 @@ https://www.youtube.com/watch?v&#x3D;HmWm21cCAXM
 
 https://www.firebase.com/…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/angular-2-tutorial-and-sublime-text-tips-lazyweb-7) 
 
@@ -140,7 +140,7 @@ JavaScript.com teaches beginners the basics of programming for the web, Progress
 
 LEARN U A JAVASC…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/tune-up-your-javascript-lazyweb-11) 
 
@@ -159,7 +159,7 @@ Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TCP and how it�
 
 LIFE ON THE EDGE…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/how-is-tcp-like-the-7th-grade-lazyweb-5) 
 
@@ -180,7 +180,7 @@ HTTP/2 IS COMING
 https://www.youtube.com/watch?v&#x3D;GIDXISQs67w
 h…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/how-hard-is-it-to-be-a-web-developer-lazyweb-4) 
 
@@ -201,7 +201,7 @@ CHROME 42 IS HERE
 https://twitter.com/ChromiumDev/status/590169593110335488
 http://updates.html5rocks.com/2015/03…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/push-notifications-for-the-web-lazyweb-3) 
 
@@ -223,7 +223,7 @@ SERVICE WORKERS
 • http://www.w3.org/TR/service-workers/
 • …
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/a-quest-to-save-the-universe-with-javascript-lazyweb-2) 
 
@@ -244,7 +244,7 @@ GLIMMER OF HOPE
 http://emberjs.com/blog/2015/05/05/glimmer-merging.html
 http://emberjs.com/blog/2015/05/10/run-up-to-two-oh.htm…
 
-Wednesday, August 24th 2016, 7:32 am
+2015-07-01T12:31:32.000Z
 
 [Watch now](/web/shows/lazyweb/embers-new-glimmer-engine-and-chrome-dev-on-android-lazyweb-6) 
 

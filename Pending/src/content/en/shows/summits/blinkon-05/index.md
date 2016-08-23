@@ -18,7 +18,7 @@ Slides: http://bit.ly/blinkon5-keynote
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Thursday, August 25th 2016, 3:24 am
+2016-03-11T16:51:24.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-state-of-blink) 
 
@@ -35,7 +35,7 @@ Slides: https://docs.google.com/presentation/d/1pbuEJPwbzlYKDEBqJU0D48IJnsN6-gte
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:00 am
+2016-03-11T01:10:00.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-paint-and-compositing-deep-dive) 
 
@@ -51,7 +51,7 @@ Slides: https://docs.google.com/presentation/d/1Cs8DkBOKgGo_HLGh1hxgsjsQaGWwbvaj
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 1:53 pm
+2016-01-04T15:13:53.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-text-and-layout-overview) 
 
@@ -67,7 +67,7 @@ Slides: https://docs.google.com/presentation/d/1NQeecwKYe_gF_y2hriRhiL2I4DhmYEAf
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-houdini-task-force) 
 
@@ -83,7 +83,7 @@ Slides: https://docs.google.com/presentation/d/19gdTwicIb-tkZ1bg8117pKVJ5oLnBbf1
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-web-assembly) 
 
@@ -99,7 +99,7 @@ Slides: https://docs.google.com/presentation/d/1bmqmkX40uW1lujP5ZfTIpJuUFiPHsZKa
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-perf-insights-rail-and-happiness) 
 
@@ -123,7 +123,7 @@ Wednesday, August 24th 2016, 10:57 am
 34:28 DevTools security panel (Emily Stark)
 …
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-lightning-talks) 
 
@@ -139,7 +139,7 @@ Slides: https://docs.google.com/presentation/d/1_LRxXp30j60npShHSRVit0B5tLOS4TLi
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-blink-memory-reduction) 
 
@@ -155,7 +155,7 @@ Slides: https://docs.google.com/presentation/d/1tEjjaQbJMGdufII_n5_pix0--Aouft_c
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-progressive-web-apps-and-project-fizz) 
 
@@ -170,7 +170,7 @@ The panel: Jochen Eisinger, Laslo Gombos, Alex Komoroske, Philip Jagenstadt, Dou
 
 This was the Q&amp;A session to end BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-qanda-panel) 
 
@@ -186,7 +186,7 @@ Slides: https://drive.google.com/file/d/0By9nsZ10MWBWRDhUTDZyb01oUkk/view
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-v8-garbage-collection) 
 
@@ -202,7 +202,7 @@ Slides: https://docs.google.com/presentation/d/1sEdUaOf5yyniGElXuol7w86v2D-62wJQ
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-hittin-the-rail) 
 
@@ -218,7 +218,7 @@ Slides: https://docs.google.com/presentation/d/1Am42_Tqn0uqgep6Keoiko0MPMtTsXTbT
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-blink-architecture-and-layering) 
 
@@ -234,7 +234,7 @@ Slides: https://docs.google.com/presentation/d/1ePz0Xbrxm0pyuDsgJrT-_y_VZqW6Ny4C
 
 This talk was given at BlinkOn 5, a low-key conference for Blink contributors, held on November 10 and November 11, 2015 in Google’s San Francisco office. More details can be found at http://bit.ly/blinkon5
 
-Wednesday, August 24th 2016, 10:57 am
+2016-01-04T11:10:57.000Z
 
 [Watch now](/web/shows/summits/blinkon-05/blinkon-5-chrome-memory-infra) 
 

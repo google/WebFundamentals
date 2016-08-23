@@ -14,7 +14,7 @@ book_path: /web/shows/_book.yaml
 
 Trent Johnsen from Hookflash will review of Object RTC (ORTC) and how its improvements are making they making their way into WebRTC already. Bernard will then discuss some ORTC-based WebRTC implementation examples, including Microsoft&#x27;s new Edge browser.
 
-Wednesday, August 24th 2016, 3:07 am
+2015-09-12T04:27:07.000Z
 
 [Watch now](/web/shows/webrtc/the-future-of-ortc-with-webrtc) 
 
@@ -27,7 +27,7 @@ Wednesday, August 24th 2016, 3:07 am
 
 Tim Panton builds a WebRTC application from scratch.
 
-Wednesday, August 24th 2016, 2:40 am
+2015-09-12T04:26:40.000Z
 
 [Watch now](/web/shows/webrtc/on-stage-building-a-webrtc-app) 
 
@@ -40,7 +40,7 @@ Wednesday, August 24th 2016, 2:40 am
 
 In this demo, a video call (using the new Twilio video API) is held between a customer and a customer service agent. As the video call is happening IBM Watson Speech to Text service is transcribing the audio in real time. After the video call completes, Alchemy API is used to automatically determine which product the customer was giving feedback on and then determines the sentiment of that feedback. The corresponding product&#x27;s feedback score, a number between 0 and 100, fluctuates based on this …
 
-Wednesday, August 24th 2016, 2:40 am
+2015-09-12T04:26:40.000Z
 
 [Watch now](/web/shows/webrtc/ibm-bluemix-mixing-voice-and-data) 
 
@@ -53,7 +53,7 @@ Wednesday, August 24th 2016, 2:40 am
 
 Always the highlight of this event, Google provides the nitty gritty details on what they are doing to progress WebRTC and their internal developments to help your application succeed. We&#x27;ll cover more details on the recently announced Alliance for Open Media, an effort to create royalty-free video codecs.
 
-Wednesday, August 24th 2016, 5:04 am
+2015-09-12T04:05:04.000Z
 
 [Watch now](/web/shows/webrtc/google-whats-next-for-webrtc) 
 
@@ -66,7 +66,7 @@ Wednesday, August 24th 2016, 5:04 am
 
 Build your own communications system? Yes indeed and all using WebRTC. Why undertake this effort and how hard was it? Wix.com will explain their decisions.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/application-chats-wixcom) 
 
@@ -79,7 +79,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 A warm welcome to the Kranky Geek WebRTC Show from Tsahi Levi-Levent.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/kranky-geek-webrtc-show-2015-welcome) 
 
@@ -92,7 +92,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 WebRTC allows the sharing of screen content - Mozilla has some cool demos to share which highlight the power of WebRTC beyond the typical voice/video communications that we typically think of. Plus, we&#x27;ll get an update on the continued progress of Firefox with WebRTC.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/what-is-mozilla-doing-with-firefox) 
 
@@ -105,7 +105,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 User interaction for real time communications is way different than dealing with typical web content and streaming media. Arin will cover best practices for incorporating WebRTC into your application for a smooth user experience.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/a-closer-look-at-the-webrtc-uxui-api) 
 
@@ -118,7 +118,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 Dealing with video conferences with many users, trying to setup your own Meerkat/Periscope, or just want to get WebRTC’s various codecs to work together? You’re going to need to do some media processing - Emil from Jitsi, an open source WebRTC media server, will walk you through the why &amp; how.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/beyond-p2p-video-routing-in-webrtc) 
 
@@ -131,7 +131,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 Let&#x27;s learn from the mistakes and best practices of others. Philipp aka Fippo of &amp;yet will through his extensive reverse engineering of major WebRTC and non-WebRTC VoIP services and share highlights of what to replicate and what to avoid.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/best-practices-from-billions-of-calls) 
 
@@ -144,7 +144,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 Designing for mixed-endpoint topologies: From connecting WebRTC to SIP or phone endpoints, to designing for hybrid mesh/SFU topologies or working across both ORTC and WebRTC until the standards align, Rob from Twilio will talk through design approach, frustrations and lessons learned in building a signaling framework and client SDKs to support it all.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/decisions-and-considerations-in-building-your-webrtc-app) 
 
@@ -157,7 +157,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 Skedans provides real time collaboration between drones, operators, and sensors using WebRTC. With the growing use of drones for business, Skedans gives developers the means to easily manage and coordinate the growing array of video streams, sensor feeds, and operators used in critical drone applications.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/application-chats-skedans) 
 
@@ -170,7 +170,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 Freshdesk has implemented near &quot;call center&quot; like capabilities as part of their customer experience management SaaS solution. This integration enables an &quot;agent&quot; to provide telephony support while utilizing the Freskdesk tools to solve the end users issue with no need for a traditional desktop telephone.
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/application-chats-freshdesk) 
 
@@ -183,7 +183,7 @@ Tuesday, August 23rd 2016, 7:38 pm
 
 Ok, the demo works. Now how do you build a reliable WebRTC service that scales? Amitha will talk about techniques for ensuring reliability when dealing with WebRTC media and how to architect scalable infrastructure from day 1
 
-Tuesday, August 23rd 2016, 7:38 pm
+2015-09-12T02:19:38.000Z
 
 [Watch now](/web/shows/webrtc/optimizing-the-customer-experience) 
 

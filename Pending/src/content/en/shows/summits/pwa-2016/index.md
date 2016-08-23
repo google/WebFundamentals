@@ -18,7 +18,7 @@ Watch Andrew&#x27;s Progressive Web App Summit 2016 talk here https://goo.gl/7Ug
 
 Subscribe to the Chrome Developers Channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 2:29 am
+2016-07-14T13:26:29.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/pwa-developer-spotlight-building-one-of-africas-most-successful-pwas) 
 
@@ -41,7 +41,7 @@ Learn how to build great web experiences that load quickly and are amazing to us
 
 The PWA …
 
-Thursday, August 25th 2016, 5:08 am
+2016-07-11T13:53:08.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/sizzle-reel-progressive-web-app-summit-2016) 
 
@@ -62,7 +62,7 @@ And take a look at some of the Showcase PWAs that have already been built over a
 
 Watch all the talks from the summit her…
 
-Wednesday, August 24th 2016, 2:12 am
+2016-06-21T16:26:12.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-thats-a-wrap-progressive-web-app-summit-2016) 
 
@@ -79,7 +79,7 @@ Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 5:01 am
+2016-06-21T13:29:01.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/pwas-the-panel-progressive-web-app-summit-2016) 
 
@@ -94,7 +94,7 @@ PWAs introduce a ton of new APIs to the web platform, but it isn&#x27;t an all o
 
 Patrick is a web developer, hacker, and dad from Seattle. As a passionate proponent of progressive development and empathic design, he is the Interop Program Manager for Microsoft Edge. In addition to trying to bridge…
 
-Wednesday, August 24th 2016, 3:35 pm
+2016-06-21T13:15:35.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/microsoft-keeping-the-progressive-in-pwas-progressive-web-app-summit-2016) 
 
@@ -109,7 +109,7 @@ This talk focuses on some interesting new interaction patterns progressive web a
 
 Andreas works for Opera Software, where he is product manager of Opera for Android and Dev Relations team lead. Over th…
 
-Wednesday, August 24th 2016, 2:16 pm
+2016-06-21T12:14:16.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/pwas-operas-perspective-progressive-web-app-summit-2016) 
 
@@ -126,7 +126,7 @@ On day 1 of the Progressive Web Applications Summit, Sarah&#x27;s team announced
 
 The Progressive Web Applications Specialization is an additional credential on top of the Sr. Front-end Web Developer Nanodegree. If you&#x27;re interested in this credential, please sign up to be notified when it opens for…
 
-Tuesday, August 23rd 2016, 7:20 pm
+2016-06-21T11:19:20.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-educating-bleeding-edge-pwa-developers-progressive-web-app-summit-2016) 
 
@@ -145,7 +145,7 @@ Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 11:41 am
+2016-06-21T10:11:41.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/progressive-web-apps-in-firefox-progressive-web-app-summit-2016) 
 
@@ -160,7 +160,7 @@ One of the best parts about Progressive Web App is being progressive. You can st
 
 Jesse Yang is a Client Side Developer on …
 
-Wednesday, August 24th 2016, 1:53 am
+2016-06-21T10:01:53.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/pwa-in-small-steps-progressive-web-app-summit-2016) 
 
@@ -175,7 +175,7 @@ The unassumingly named Samsung Internet browser has been making great strides th
 
 Samsung have a strong commitment to progressive web apps stemming from their leading participation in some of the key standards work. Daniel Appelquist &amp; Jungkee Song take you through Samsung&#x27;s approach to implementation of the progressive web app stack as well as some of the other areas they&#x27;re pushing into such as…
 
-Wednesday, August 24th 2016, 2:02 am
+2016-06-21T09:26:02.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/samsung-internets-progressive-web-app-commitment-progressive-web-app-summit-2016) 
 
@@ -194,7 +194,7 @@ Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Tuesday, August 23rd 2016, 9:26 pm
+2016-06-21T09:21:26.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/konga-learnings-from-building-with-polymer-progressive-web-app-summit-2016) 
 
@@ -209,7 +209,7 @@ Progressive Web Apps are really about providing an enhanced experience to users.
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Tuesday, August 23rd 2016, 9:03 pm
+2016-06-20T18:21:03.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/the-future-of-progressive-web-apps-progressive-web-app-summit-2016) 
 
@@ -224,7 +224,7 @@ Progressive Web Apps should load fast, work great offline, and progressively enh
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 2:38 pm
+2016-06-20T18:14:38.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/tools-for-success-progressive-web-app-summit-2016) 
 
@@ -239,7 +239,7 @@ With the growing number of people coming online around the world, we&#x27;ve see
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 1:31 pm
+2016-06-20T17:37:31.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/building-for-billions-progressive-web-app-summit-2016) 
 
@@ -258,7 +258,7 @@ Watch Tal&#x27;s Progressive Web App Summit 2016 talk here https://goo.gl/CYM34j
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 9:04 am
+2016-06-20T17:09:04.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-building-for-billions-with-progressive-web-apps-progressive-web-app-summit-2016) 
 
@@ -273,7 +273,7 @@ How do you put the &quot;progressive&quot; into your current web app? Starting w
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Thursday, August 25th 2016, 5:09 am
+2016-06-20T16:53:09.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/to-the-lighthouse-progressive-web-app-summit-2016) 
 
@@ -295,7 +295,7 @@ https://www.youtube.com/playlist?list&#x3D;PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb
 
 Music by…
 
-Wednesday, August 24th 2016, 5:06 am
+2016-06-20T16:29:06.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-reach-acquisition-and-conversion-progressive-web-apps-summit-2016) 
 
@@ -312,7 +312,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Tuesday, August 23rd 2016, 9:01 pm
+2016-06-20T16:21:01.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/using-web-components-to-build-pwas-progressive-web-app-summit-2016) 
 
@@ -329,7 +329,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Thursday, August 25th 2016, 8:20 am
+2016-06-20T15:56:20.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/putting-the-progressive-in-progressive-web-apps-progressive-web-app-summit-2016) 
 
@@ -349,7 +349,7 @@ https://www.youtube.com/playlist?list&#x3D;PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam…
 
-Thursday, August 25th 2016, 4:16 am
+2016-06-20T15:52:16.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-progressive-web-apps-for-any-occassion-progressive-web-app-summit-2016) 
 
@@ -372,7 +372,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-ams…
 
-Wednesday, August 24th 2016, 11:51 pm
+2016-06-20T15:47:51.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-making-progressive-web-apps-accessible-at-scale-progressive-web-app-summit-2016) 
 
@@ -395,7 +395,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Thursday, August 25th 2016, 5:21 am
+2016-06-20T14:53:21.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-what-do-i-need-to-know-about-http2-progressive-web-app-summit-2016) 
 
@@ -416,7 +416,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Thursday, August 25th 2016, 1:02 am
+2016-06-20T14:49:02.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-whys-it-called-a-progressive-web-app-progressive-web-app-summit-2016) 
 
@@ -431,7 +431,7 @@ Mobile devices accompany us in a wider range of contexts than any web-connected 
 
 Performance and offline support are both absolutely necessary to creating a viable user experience on mobile, but if …
 
-Wednesday, August 24th 2016, 1:57 pm
+2016-06-20T14:13:57.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/pwas-in-any-context-progressive-web-app-summit-2016) 
 
@@ -448,7 +448,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Tuesday, August 23rd 2016, 11:40 pm
+2016-06-20T13:23:40.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/ui-elements-at-60fps-progressive-web-app-summit-2016) 
 
@@ -465,7 +465,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Thursday, August 25th 2016, 5:16 am
+2016-06-20T12:53:16.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/deep-engagment-with-push-notifications-progressive-web-app-summit-2016) 
 
@@ -486,7 +486,7 @@ Watch Emily’s Progressive Web App Summit 2016 talk here https://goo.gl/LudiA1
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf and tune into our playlist to catch all the talks from the summit
 https://www.youtube.com/playlist?list&#x3D;PLNYkxOF6rcIAWWNR_…
 
-Wednesday, August 24th 2016, 12:26 am
+2016-06-20T12:00:26.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-talking-https-with-emily-schechter-progressive-web-app-summit-2016) 
 
@@ -503,7 +503,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-ams…
 
-Thursday, August 25th 2016, 9:38 am
+2016-06-20T11:57:38.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/instant-loading-with-http2-progressive-web-app-summit-2016) 
 
@@ -524,7 +524,7 @@ Watch Paul’s Progressive Web App Summit 2016 talk here https://goo.gl/jvv0M4 a
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf and tune into our playlist to catch all the talks from the summit
 https://…
 
-Thursday, August 25th 2016, 1:55 am
+2016-06-20T11:49:55.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-checking-in-with-paul-lewis-and-jake-archibald-progressive-web-apps-summit-2016) 
 
@@ -541,7 +541,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramon…
 
-Thursday, August 25th 2016, 10:57 am
+2016-06-20T10:58:57.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/mythbusting-https-progressive-web-app-summit-2016) 
 
@@ -561,7 +561,7 @@ https://www.youtube.com/playlist?list&#x3D;PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Wednesday, August 24th 2016, 6:35 am
+2016-06-20T10:30:35.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/summit-report-the-web-developers-swarm-progressive-web-apps-summit-2016) 
 
@@ -578,7 +578,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Tuesday, August 23rd 2016, 8:40 pm
+2016-06-20T10:20:40.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/instant-loading-offline-first-progressive-web-app-summit-2016) 
 
@@ -595,7 +595,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Thursday, August 25th 2016, 5:20 am
+2016-06-20T09:53:20.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/opening-keynote-progressive-web-app-summit-2016) 
 
@@ -612,7 +612,7 @@ Watch talks and learn how you can build great web experiences that load quickly 
 
 Don&#x27;t miss Day 2 live stream here: https://goo.gl/EWlmfh
 
-Wednesday, August 24th 2016, 12:24 pm
+2016-06-20T01:12:24.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/pwa-dev-summit-2016-day-1-live-stream) 
 
@@ -629,7 +629,7 @@ Check out the live stream here https://goo.gl/Fu2rxs at 10am June 20th!
 
 Learn how to build great web experiences that load quickly and are amazing to use in every browser and how to weave in the latest platform technologies to deliver a great Progressive Web App. Digging into Service Workers, add to Home Screen, Push Notifications,  building Fast, Responsive and Secure experienc…
 
-Wednesday, August 24th 2016, 1:58 am
+2016-06-14T16:25:58.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/pwa-developer-summit-2016-live-stream-registration) 
 
@@ -646,7 +646,7 @@ Check out the live stream here https://goo.gl/Fu2rxs at 10am June 20th!
 
 Learn how to build great web experiences that load quickly and are amazing to use in every browser and how to weave in the latest platform technologies to deliver a great Progressive Web App. Digging into Service Workers, add to Home Screen, Push Notifications,  building Fast, Responsive and Secure experienc…
 
-Wednesday, August 24th 2016, 8:06 am
+2016-06-09T15:08:06.000Z
 
 [Watch now](/web/shows/summits/pwa-2016/pwa-developer-summit-2016-is-coming) 
 

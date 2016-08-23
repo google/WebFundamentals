@@ -16,7 +16,7 @@ Join Seth Thompson as he talks about V8, modern JavaScript, and beyond.
 
 JavaScript powers the modern web and countless servers running Node.js. Chrome&#x27;s V8 engine is faster than ever at running JavaScript code and now includes powerful new ES2015 features to give developers more control over how they write their apps. Listen to Seth Thompson talk about the latest speed advances V8 has made in compiling and running real-world code and how those performance improvements scale to large JavaScript …
 
-Thursday, August 25th 2016, 10:40 am
+2016-05-23T22:58:40.000Z
 
 [Watch now](/web/shows/google-io/2016/v8-modern-javascript-and-beyond-google-io-2016) 
 
@@ -35,7 +35,7 @@ Progressive Web Apps deliver reliable performance for re-visits to sites thanks 
 
 Until now, howev…
 
-Wednesday, August 24th 2016, 10:47 pm
+2016-05-23T22:46:47.000Z
 
 [Watch now](/web/shows/google-io/2016/amp-progressive-web-apps-start-fast-stay-engaged-google-io-2016) 
 
@@ -54,7 +54,7 @@ Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB
 See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
 Subscribe to the Chrome Developers channel at http://goo.gl…
 
-Wednesday, August 24th 2016, 6:46 pm
+2016-05-23T22:42:46.000Z
 
 [Watch now](/web/shows/google-io/2016/houdini-demystifying-the-future-of-css-google-io-2016) 
 
@@ -72,7 +72,7 @@ The Accelerated Mobile Pages (AMP) project’s primary goal is to make mobile we
 Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
 See all the talks from Google I/O 2016 here: …
 
-Wednesday, August 24th 2016, 12:43 pm
+2016-05-23T22:36:43.000Z
 
 [Watch now](/web/shows/google-io/2016/how-amp-achieves-its-speed-google-io-2016) 
 
@@ -87,7 +87,7 @@ Owen Campbell-Moore, Aditya Punjani and Nate Schloss on Service workers at scale
 
 Service workers provide the technical foundation for Progressive Web Apps and unlock the ability to build rich app-like experiences on the web. Hear Facebook and Flipkart talk about how they are taking advantage of this new primitive and seeing real business impact by implementing offline features, lightning performance and push notifications on their web properties. This talk covers arc…
 
-Wednesday, August 24th 2016, 2:00 am
+2016-05-21T00:26:00.000Z
 
 [Watch now](/web/shows/google-io/2016/service-workers-at-scale-with-facebook-and-flipkart-google-io-2016) 
 
@@ -108,7 +108,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 #io16…
 
-Tuesday, August 23rd 2016, 10:34 pm
+2016-05-21T00:22:34.000Z
 
 [Watch now](/web/shows/google-io/2016/the-2016-web-development-workflow-google-io-2016) 
 
@@ -125,7 +125,7 @@ Progressive Web Apps can be built using any JavaScript library or framework, whe
 
 Watch more Chrome talks at…
 
-Tuesday, August 23rd 2016, 6:09 pm
+2016-05-21T00:18:09.000Z
 
 [Watch now](/web/shows/google-io/2016/progressive-web-apps-across-all-frameworks-google-io-2016) 
 
@@ -144,7 +144,7 @@ Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB
 See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
 Subscribe t…
 
-Tuesday, August 23rd 2016, 10:10 pm
+2016-05-20T22:22:10.000Z
 
 [Watch now](/web/shows/google-io/2016/deep-user-engagement-with-web-push-notifications-google-io-2016) 
 
@@ -161,7 +161,7 @@ Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB
 See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
 Subscribe to the Chrome Developers channel at ht…
 
-Tuesday, August 23rd 2016, 7:44 pm
+2016-05-20T20:19:44.000Z
 
 [Watch now](/web/shows/google-io/2016/bringing-seamless-checkouts-to-the-mobile-web-google-io-2016) 
 
@@ -176,7 +176,7 @@ Web components are the new shiny thing on the web, but what makes a good web com
 
 Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB …
 
-Wednesday, August 24th 2016, 2:11 pm
+2016-05-20T20:14:11.000Z
 
 [Watch now](/web/shows/google-io/2016/practical-lessons-from-a-year-of-building-web-components-google-io-2016) 
 
@@ -191,7 +191,7 @@ Jake Archibald on Instant Loading: Building offline-first Progressive Web Apps
 
 For most of the web, poor network connectivity destroys the user experience. We can do better. In this session we&#x27;ll take an online-only site and turn it into a fully network-resilient, offline-first installable progressive web app, and this won&#x27;t involve rebuilding from scratch; it&#x27;ll be done in small iterations, with each step improving the user experience whether they&#x27;re offline, online, or anything in between. T…
 
-Thursday, August 25th 2016, 2:42 am
+2016-05-20T14:50:42.000Z
 
 [Watch now](/web/shows/google-io/2016/instant-loading-building-offline-first-progressive-web-apps-google-io-2016) 
 
@@ -210,7 +210,7 @@ Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
 #io16 #GoogleIO #GoogleIO2016
 
-Wednesday, August 24th 2016, 6:03 pm
+2016-05-20T14:42:03.000Z
 
 [Watch now](/web/shows/google-io/2016/fireside-chat-with-the-progressive-web-apps-crew-google-io-2016) 
 
@@ -223,7 +223,7 @@ Wednesday, August 24th 2016, 6:03 pm
 
 A great webpage gives you the deeply-linked content you want, immediately, when you click a URL.  A great app provides an immersive client-side experience. Building a web app that&#x27;s great at both used to require a lot of effort and tooling. But a set of new technologies shipping in the modern web platform all fit together to bring this within reach for everyone.  Learn how HTTP/2+Push, Custom Elements, HTML Imports, and Service Worker help you build sites that transition from lightweight entry p…
 
-Wednesday, August 24th 2016, 12:25 pm
+2016-05-20T14:36:25.000Z
 
 [Watch now](/web/shows/google-io/2016/progressive-performant-polymer-pick-three-google-io-2016) 
 
@@ -238,7 +238,7 @@ Taylor Savage on Polymer and Progressive Web Apps: Building on the modern web
 
 The Polymer library, re-written from the ground up with its 1.0 release last year, helps you build composable, interoperable components to use in your web applications. We&#x27;ll go over the latest features of the library, show how to use some powerful newly-released components, show how Polymer is used in practice, dive into the cutting-edge tools for shipping component-based applications, reveal a brand-new way to get s…
 
-Wednesday, August 24th 2016, 6:04 pm
+2016-05-20T03:42:04.000Z
 
 [Watch now](/web/shows/google-io/2016/polymer-and-progressive-web-apps-building-on-the-modern-web-google-io-2016) 
 
@@ -253,7 +253,7 @@ Does the “Forgot password” link on your site receive more clicks than you&#x
 
 Learn about best practices on how to make your auth system more convenient and secure for your users - from the bare minimum (e.g.…
 
-Wednesday, August 24th 2016, 10:53 am
+2016-05-20T03:34:53.000Z
 
 [Watch now](/web/shows/google-io/2016/who-are-you-really-safer-and-more-convenient-sign-in-on-the-web-google-io-2016) 
 
@@ -271,7 +271,7 @@ Learn how far our upcoming integration with your favorite editors goes, our new 
 Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
 See all the talks from Google…
 
-Tuesday, August 23rd 2016, 6:44 pm
+2016-05-20T01:18:44.000Z
 
 [Watch now](/web/shows/google-io/2016/devtools-in-2016-accelerate-your-workflow-google-io-2016) 
 
@@ -286,7 +286,7 @@ Chris Wilson and Francois Beaufort on What&#x27;s next for the web?
 
 This talk focuses on the leading edge of web APIs - covering little-known, high-impact features we&#x27;ve recently shipped like Fetch and Web MIDI enabling new markets to use the web, and features that are being experimented with now, like Streams, foreign fetch, IntersectionObserver, Web Bluetooth controlling robots, lightbulbs and Physical Web beacons, and WebUSB for Arduino devices and more.  We will also spend some time describing t…
 
-Wednesday, August 24th 2016, 12:04 pm
+2016-05-20T01:12:04.000Z
 
 [Watch now](/web/shows/google-io/2016/whats-next-for-the-web-google-io-2016) 
 
@@ -299,7 +299,7 @@ Wednesday, August 24th 2016, 12:04 pm
 
 People use Google millions of times per day on their mobile phones. As a primary gateway to discover and engage, you&#x27;ll learn how Search is evolving well beyond ten blue links to bring your content to people in much richer and faster ways. We&#x27;ll discuss how you can surface fresher and more real-time content, introduce new treatments for engaging and content-forward discovery experiences, and we&#x27;ll let you know how the open source Accelerated Mobile Pages project (AMP) can provide blazing fast re…
 
-Thursday, August 25th 2016, 11:58 am
+2016-05-20T00:59:58.000Z
 
 [Watch now](/web/shows/google-io/2016/search-and-the-mobile-content-ecosystem-google-io-2016) 
 
@@ -312,7 +312,7 @@ Thursday, August 25th 2016, 11:58 am
 
 The web platform is important. It&#x27;s an open, interoperable platform for developers to build experiences that can be accessed by a large potential audience with no friction. But the shift to mobile hasn&#x27;t been easy. Chrome, in partnership with members of the broader web browser community, have been hard at work transitioning the web platform to work well on mobile devices and the mobile web is open for business. This talk will provide an overview of the changes to the web platform, including Acce…
 
-Tuesday, August 23rd 2016, 10:34 pm
+2016-05-20T00:22:34.000Z
 
 [Watch now](/web/shows/google-io/2016/the-mobile-web-state-of-the-union-google-io-2016) 
 
@@ -327,7 +327,7 @@ Our applications run on a variety of hardware and under continuously changing ne
 
 Watch more Chrome talks at I/O 2016 here: https…
 
-Wednesday, August 24th 2016, 7:26 pm
+2016-05-19T21:43:26.000Z
 
 [Watch now](/web/shows/google-io/2016/fast-and-resilient-web-apps-tools-and-techniques-google-io-2016) 
 
@@ -345,7 +345,7 @@ With the growth of smartphones, we are seeing millions of people from around the
 Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
 See all the talk…
 
-Wednesday, August 24th 2016, 8:59 am
+2016-05-19T19:32:59.000Z
 
 [Watch now](/web/shows/google-io/2016/building-for-billions-on-the-web-google-io-2016) 
 
@@ -362,7 +362,7 @@ My favorite part of my job is when I get to work on accessibility. I see this as
 
 This session aims to clear up some of the confusion that makes getting started with accessibility tricky, while …
 
-Tuesday, August 23rd 2016, 11:18 pm
+2016-05-19T19:23:18.000Z
 
 [Watch now](/web/shows/google-io/2016/accessibility-is-my-favorite-part-of-the-platform-google-io-2016) 
 
@@ -382,7 +382,7 @@ See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
 
 #io16 #GoogleIO #GoogleIO2016
 
-Wednesday, August 24th 2016, 2:51 am
+2016-05-19T03:26:51.000Z
 
 [Watch now](/web/shows/google-io/2016/great-libraries-and-tools-for-great-progressive-web-apps-google-io-2016) 
 
@@ -398,7 +398,7 @@ HTTPS is a must-have for progressive web apps. “But,” you say, “it&#x27;ll
 Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
 See all the talks from Google I/O 2016 here: https://go…
 
-Wednesday, August 24th 2016, 12:07 pm
+2016-05-19T03:12:07.000Z
 
 [Watch now](/web/shows/google-io/2016/mythbusting-https-squashing-securitys-urban-legends-google-io-2016) 
 
@@ -416,7 +416,7 @@ See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
 
 #io1…
 
-Wednesday, August 24th 2016, 10:37 am
+2016-05-19T01:10:37.000Z
 
 [Watch now](/web/shows/google-io/2016/building-the-google-io-web-app-launching-a-progressive-web-app-on-googlecom-google-io-2016) 
 
@@ -434,7 +434,7 @@ See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
 
 #io16 #GoogleIO #GoogleIO2016
 
-Wednesday, August 24th 2016, 1:51 pm
+2016-05-19T00:37:51.000Z
 
 [Watch now](/web/shows/google-io/2016/web-performance-tooling-google-io-2016) 
 
@@ -452,7 +452,7 @@ See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
 
 #io16 #GoogleIO #GoogleIO2016
 
-Wednesday, August 24th 2016, 3:01 am
+2016-05-18T23:03:01.000Z
 
 [Watch now](/web/shows/google-io/2016/high-performance-web-user-interfaces-google-io-2016) 
 

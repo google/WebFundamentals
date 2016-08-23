@@ -17,7 +17,7 @@ Emil gives an update on the Blink Layout team and their current projects. The ta
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Tuesday, August 23rd 2016, 7:47 pm
+2015-06-02T07:19:47.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-blink-layout) 
 
@@ -33,7 +33,7 @@ Kentaro gives an update on the Oilpan and PartionAlloc projects for improving me
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Wednesday, August 24th 2016, 8:54 am
+2015-06-02T06:32:54.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-blink-allocator) 
 
@@ -49,7 +49,7 @@ Shane and Ian give an update on the Houdini project, an effort to explain paint 
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Wednesday, August 24th 2016, 8:54 am
+2015-06-02T06:32:54.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-houdini) 
 
@@ -75,7 +75,7 @@ Attendees at the BlinkOn 4 conference gives short talks on topics they are think
  * Shadow DOM
  * Merge repository …
 
-Wednesday, August 24th 2016, 8:54 am
+2015-06-02T06:32:54.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-lightning-talks) 
 
@@ -91,7 +91,7 @@ Joel gives an update on improving web security and new policies around deliverin
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Wednesday, August 24th 2016, 8:54 am
+2015-06-02T06:32:54.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-moving-owp-security-forward) 
 
@@ -107,7 +107,7 @@ The service worker team gives an update on service workers and what is coming ne
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Wednesday, August 24th 2016, 8:54 am
+2015-06-02T06:32:54.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-service-workers) 
 
@@ -123,7 +123,7 @@ Heather gives an update on the Skia project and the cool new things they are wor
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Wednesday, August 24th 2016, 8:54 am
+2015-06-02T06:32:54.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-skia-update) 
 
@@ -139,7 +139,7 @@ Kent and Doug give an update on the state of Chrome&#x27;s rendering engine Blin
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Wednesday, August 24th 2016, 9:42 am
+2015-05-29T03:33:42.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-state-of-blink) 
 
@@ -155,7 +155,7 @@ Chris gives an update on the Paint team and their current projects. The talk inc
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Wednesday, August 24th 2016, 9:42 am
+2015-05-29T03:33:42.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-slimming-paint-update) 
 
@@ -171,7 +171,7 @@ Leaders within the Blink Community answer questions from the audience.
 
 This talk was given at BlinkOn 4, a low-key conference for Blink contributors, held May 13 and 14 2015 in Google’s Sydney office. More details can be found at http://bit.ly/blinkon4onepager
 
-Wednesday, August 24th 2016, 9:42 am
+2015-05-29T03:33:42.000Z
 
 [Watch now](/web/shows/summits/blinkon-04/blinkon-4-qanda-panel) 
 

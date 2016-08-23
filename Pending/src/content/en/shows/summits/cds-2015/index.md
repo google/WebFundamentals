@@ -18,7 +18,7 @@ The Chrome Dev Summit is an exclusive event to connect with Chrome engineers and
 
 Learn how to build fast, resilient, app like experiences for the mobile web from Chrome engineers. Take away tips for smooth and fast loading, reliable access on flaky networks and for re-engaging …
 
-Wednesday, August 24th 2016, 2:35 am
+2016-01-14T21:02:35.000Z
 
 [Watch now](/web/shows/summits/cds-2015/highlights-from-chrome-dev-summit-2015) 
 
@@ -34,7 +34,7 @@ Watch our panel of specialists answer questions about Chrome and the future of t
 
 Watch more talks from Chrome Dev Summit 2015: https://go…
 
-Wednesday, August 24th 2016, 2:34 am
+2015-11-19T18:02:34.000Z
 
 [Watch now](/web/shows/summits/cds-2015/leadership-panel-chrome-dev-summit-2015) 
 
@@ -51,7 +51,7 @@ Watch more talks from Chrome Dev Summit 2015: https://goo.gl/e4c7vD
 
 Subscribe to the Chrome Developers channel at: https://goo.gl/OUF4e2
 
-Wednesday, August 24th 2016, 2:15 pm
+2015-11-19T02:38:15.000Z
 
 [Watch now](/web/shows/summits/cds-2015/building-and-deploying-a-progressive-web-app-at-scale-with-flipkart-chrome-dev-summit-2015) 
 
@@ -70,7 +70,7 @@ Watch more talks from Chrome Dev Summit 2015: https://goo.gl/e4c7vD
 
 Subscribe to the Chrom…
 
-Wednesday, August 24th 2016, 1:15 am
+2015-11-19T01:25:15.000Z
 
 [Watch now](/web/shows/summits/cds-2015/http2-101-chrome-dev-summit-2015) 
 
@@ -89,7 +89,7 @@ Watch more talks from Chrome Dev Summit 2015: https://goo.gl/e4c7vD
 
 Subscribe to the Chrome Developers channel at: https://goo.gl/OUF4e2
 
-Tuesday, August 23rd 2016, 8:02 pm
+2015-11-18T23:20:02.000Z
 
 [Watch now](/web/shows/summits/cds-2015/owning-your-performance-rail-chrome-dev-summit-2015) 
 
@@ -106,7 +106,7 @@ Ilya Grigorik is a web performance engineer at Google, co-chair of the W3C Web P
 
 Watch more talks from Chrome Dev Summ…
 
-Tuesday, August 23rd 2016, 7:09 pm
+2015-11-18T22:19:09.000Z
 
 [Watch now](/web/shows/summits/cds-2015/quantify-and-improve-real-world-rail-chrome-dev-summit-2015) 
 
@@ -121,7 +121,7 @@ When peak JavaScript speed is the bottleneck in your app’s performance, is it 
 
 Seth Thompson is the product manager of the Chrome V8 JavaScript engine and the nascent WebAssembly project. He is passionate about empowering developers with great tools, expressive languages, and pro…
 
-Wednesday, August 24th 2016, 5:29 pm
+2015-11-18T21:41:29.000Z
 
 [Watch now](/web/shows/summits/cds-2015/v8-performance-from-the-drivers-seat-chrome-dev-summit-2015) 
 
@@ -136,7 +136,7 @@ RAIL is the Chrome team’s way of thinking about performance, but how can you a
 
 Paul Lewis is a Developer Advocate at Google. He spends his time trying to figure out patterns for making the next generation of web apps beautiful, integrated, useful, and performant. He tries lots of things in the process, which is why he looks like a crash tes…
 
-Wednesday, August 24th 2016, 5:57 am
+2015-11-18T20:29:57.000Z
 
 [Watch now](/web/shows/summits/cds-2015/rail-in-the-real-world-chrome-dev-summit-2015) 
 
@@ -151,7 +151,7 @@ In early 2015, the Chrome DevTools team has come to the realization that an expa
 
 Paul is a Developer Advocate for Chrome and the Open Web at Google and spends most of his time…
 
-Wednesday, August 24th 2016, 6:30 am
+2015-11-18T20:06:30.000Z
 
 [Watch now](/web/shows/summits/cds-2015/devtools-in-2015-authoring-to-the-max-chrome-dev-summit-2015) 
 
@@ -166,7 +166,7 @@ Looking around at web performance advice today can be overwhelming: everything c
 
 Paul Irish is a front-e…
 
-Wednesday, August 24th 2016, 4:31 am
+2015-11-18T20:04:31.000Z
 
 [Watch now](/web/shows/summits/cds-2015/introduction-to-rail-chrome-dev-summit-2015) 
 
@@ -183,7 +183,7 @@ Alice Boxhall is a software engineer working on accessibility features for Chrom
 
 Laura Palmaro is the Accessibility Program Manager for the Chrome and Chrome OS teams at Google. She collaborates with the engineers, designers, and product managers to make Chrome accessible and usable across platforms,…
 
-Wednesday, August 24th 2016, 3:14 pm
+2015-11-18T18:15:14.000Z
 
 [Watch now](/web/shows/summits/cds-2015/accessibility-chrome-dev-summit-2015) 
 
@@ -198,7 +198,7 @@ With the combination of Web Components and Service worker, web developers have i
 
 Rob Dodson is a developer advocate at Google where he focuses on Polymer and Web Components. In previous roles he’s helped …
 
-Tuesday, August 23rd 2016, 10:52 pm
+2015-11-18T02:22:52.000Z
 
 [Watch now](/web/shows/summits/cds-2015/building-progressive-web-apps-with-polymer-chrome-dev-summit-2015) 
 
@@ -215,7 +215,7 @@ Watch more talks from Chrome Dev Summit 2015: https://goo.gl/e4c7vD
 
 Subscribe to the Chrome Developers channel at: https://goo.gl/OUF4e2
 
-Wednesday, August 24th 2016, 5:23 pm
+2015-11-18T02:17:23.000Z
 
 [Watch now](/web/shows/summits/cds-2015/progressive-web-apps-chrome-dev-summit-2015) 
 
@@ -230,7 +230,7 @@ The Polymer library has come a long way. Since its 1.0 release at Google I/O and
 
 Matthew leads the Polymer team at Google Chrome. Prior to joining Googl…
 
-Thursday, August 25th 2016, 9:08 am
+2015-11-18T01:57:08.000Z
 
 [Watch now](/web/shows/summits/cds-2015/polymer-state-of-the-union-chrome-dev-summit-2015) 
 
@@ -245,7 +245,7 @@ Access to new device capabilities such as background sync and bluetooth allow de
 
 Elisabeth Morant is a Product Manager at Google where she works on Chrome security. Prior to Chrome she worked at YouTube, fo…
 
-Wednesday, August 24th 2016, 5:57 pm
+2015-11-18T01:17:57.000Z
 
 [Watch now](/web/shows/summits/cds-2015/asking-for-permission-respectful-opinionated-ui-chrome-dev-summit-2015) 
 
@@ -260,7 +260,7 @@ Web Bluetooth opens up low level communication with an expanding ecosystem of BL
 
 Scott Jenson has been doing user interface design and strategic planning for over 25 years. He worked at Apple on System 7, Newton, and the Apple Human Interface guidelines. He was…
 
-Wednesday, August 24th 2016, 7:51 am
+2015-11-18T00:31:51.000Z
 
 [Watch now](/web/shows/summits/cds-2015/engaging-with-the-real-world-web-bluetooth-and-physical-web-chrome-dev-summit-2015) 
 
@@ -275,7 +275,7 @@ Timely, personalized notifications save users the effort of manually checking fo
 
 You may recognize Owen from such features as Push Notifications on the web and Add To Home Screen. Prior to joining Chrome as a Product Manag…
 
-Wednesday, August 24th 2016, 2:22 pm
+2015-11-17T23:38:22.000Z
 
 [Watch now](/web/shows/summits/cds-2015/increase-engagement-with-web-push-notifications-chrome-dev-summit-2015) 
 
@@ -290,7 +290,7 @@ Service workers can power your web app while offline, but they can also offer su
 
 Jeff is a member of the Open Web Platform Developer Relations team at Google. Amongst other activities, he helps write libraries that take the &quot;&quot;work&quot;&quot; out of servic…
 
-Wednesday, August 24th 2016, 12:16 am
+2015-11-17T23:24:16.000Z
 
 [Watch now](/web/shows/summits/cds-2015/instant-loading-with-service-workers-chrome-dev-summit-2015) 
 
@@ -305,7 +305,7 @@ In this day and age, all sites should be using HTTPS to protect their users’ p
 
 Emily is a software engineer on the Google Chrome security team, where she focuses on efforts to make TLS/SSL more usable and secure. Previously, she was a core developer at Meteor Development Group, where she worked on web framework se…
 
-Thursday, August 25th 2016, 11:41 am
+2015-11-17T22:59:41.000Z
 
 [Watch now](/web/shows/summits/cds-2015/deploying-https-the-green-lock-and-beyond-chrome-dev-summit-2015) 
 
@@ -320,7 +320,7 @@ With millions of people coming online every year, we are seeing a new diversity 
 
 Tal is a product manager on the Chrome for Android team. Before making her way to Chrome, Tal worked on Google Apps and Local Sear…
 
-Wednesday, August 24th 2016, 5:54 pm
+2015-11-17T19:41:54.000Z
 
 [Watch now](/web/shows/summits/cds-2015/developing-for-billions-chrome-dev-summit-2015) 
 
@@ -337,7 +337,7 @@ Watch more talks from Chrome Dev Summit 2015: https://goo.gl/e4c7vD
 
 Subscribe to the Chrome Developers channel at: https://goo.gl/OUF4e2
 
-Wednesday, August 24th 2016, 8:29 am
+2015-11-17T19:08:29.000Z
 
 [Watch now](/web/shows/summits/cds-2015/keynote-by-darin-fisher-vp-of-chrome-chrome-dev-summit-2015) 
 

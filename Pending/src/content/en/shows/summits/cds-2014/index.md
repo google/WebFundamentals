@@ -18,7 +18,7 @@ For more information check out: https://developers.google.com/web/showcase/case-
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 7:29 am
+2015-09-18T19:07:29.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-2014-chrome-case-studies) 
 
@@ -35,7 +35,7 @@ Last year the Summit presentation mainly focused on performance, Polymer, Materi
 
 This year join us in person or on the livestream as we explore how to build the new generation of web apps with DevTools, Service Worker and the new suite of APIs coming to the web.
 
-Wednesday, August 24th 2016, 2:31 pm
+2015-09-12T09:38:31.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-developer-interviews-chrome-dev-summit-2015) 
 
@@ -50,7 +50,7 @@ Chrome Dev Summit 2014 provided an opportunity to connect with Chrome Engineers 
 
 Watch all the recorded sessions from our 2014 summit at: https://goo.gl/gzYMQ1
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-2014-highlights) 
 
@@ -63,7 +63,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 The Material Design Panel lets you talk directly to teams building and implementing Material and get answers directly from the teams: How do I use Material in a content site? Should I adhere to it ful
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/material-design-panel-chrome-dev-summit-2014) 
 
@@ -76,7 +76,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 The Chrome Leadership Panel is your chance to help direct the platform. Let the Leadership team know where your issues are and how you would like them to be solved. Ask tough questions and get your vo
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-leadership-panel-chrome-dev-summit-2014) 
 
@@ -89,7 +89,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 The Performance panel gives you direct access to the engineers who are leading the performance in Chrome and on the web and gives you the chance to ask the hard questions about performance: Where shou
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/performance-panel-chrome-dev-summit-2014) 
 
@@ -102,7 +102,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 The Future of Apps Panel gives you the chance to get answers for the hard questions about the direction Google are taking with Web Apps: What is the future of apps on the web? What platform should we
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/future-of-apps-panel-chrome-dev-summit-2014) 
 
@@ -115,7 +115,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 The Web Components and Polymer Panel gives you the chance to talk directly to the Web Components and Polymer engineering teams to get answers for the questions: What is the future of Web Components? H
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/web-components-and-polymer-panel-chrome-dev-summit-2014) 
 
@@ -128,7 +128,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Matt gives a whirlwind tour of getting started on Web, from our Web Fundamentals guide to jump-starting with the Web Starter Kit, and also cover some of the stunning advancements in DevTools.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/fundamentals-of-mobile-web-development-chrome-dev-summit-2014-matt-gaunt) 
 
@@ -141,7 +141,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Sundar Pichai presents the closing remarks on Day 1 of Chrome Dev Summit.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/day-one-closing-remarks-chrome-dev-summit-2014-sundar-pichai) 
 
@@ -154,7 +154,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Polymer started as an experiment in pushing the web platform. In the two and a half years since, we’ve helped ship a lot of standards, a developer preview of Polymer, and learned a lot and heard a lot of feedback from developers. Matt will share what we’ve learned, the state of the art of Polymer today, and most importantly what’s next.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/polymer-state-of-the-union-chrome-dev-summit-2014-matt-mcnulty) 
 
@@ -167,7 +167,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 This talk will cover what it takes to build a single page app in Polymer. Rob will demonstrate how to quickly scaffold the structure of an application by leveraging Material Design elements, explore best practices around lazy loading elements to keep our app speedy, and also touch upon the tools we can use to debug and test our app.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/lets-build-some-apps-with-polymer-chrome-dev-summit-2014-rob-dodson) 
 
@@ -180,7 +180,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Dimitri explores the set of enabling technologies that make up Web Components, and describes how these pieces make it easy and fast to build composable components, and make HTML finally earn its keep.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/easy-composition-and-reuse-with-web-components-chrome-dev-summit-2014-dimitri-glazkov) 
 
@@ -193,7 +193,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Ryan gives an overview of some of the architectural improvements we&#x27;ve been making to Chrome to ensure that it&#x27;s easy to make 60fps web applications across any device, as well as some features that help your apps perform silky-smooth.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/wicked-fast-performance-investments-chrome-dev-summit-2014-ryan-schoen) 
 
@@ -206,7 +206,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Alex gives an overview of why web apps don’t feel “appy” today, and shows how Service Worker is enabling a whole new world of appiness - beyond the simple goal of making web apps work offline, to building truly engaging web applications.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/making-web-apps-appy-chrome-dev-summit-2014-alex-russell) 
 
@@ -219,7 +219,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Darin Fisher introduces the Chrome Developer Summit. This year the Summit presentation mainly focuses on performance, Polymer, Material Design, and building mobile web apps that work like apps with Service Worker and other technologies. but also features breakouts and panels to discuss what you want to discuss.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/keynote-chrome-dev-summit-2014-darin-fisher) 
 
@@ -234,7 +234,7 @@ Adrienne explains how we can enable more powerful web applications while keeping
 
 Watch more from Chrome Dev Summit 2014 at http://goo.gl/VYRntY
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/asking-for-superpowers-chromes-permission-model-chrome-dev-summit-2014-adrienne-porter-felt) 
 
@@ -247,7 +247,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Roma explores the philosophy of Material Design, and provides practical guidance for building apps according to Material Design principles.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/material-design-deconstructed-chrome-dev-summit-2014-roma-shah) 
 
@@ -260,7 +260,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Building a 60fps, cross-browser website can be tricky. It requires knowledge, experience and judgment calls on trade-offs and what to prioritize.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/the-applied-science-of-runtime-performance-chrome-dev-summit-2014-paul-lewis) 
 
@@ -273,7 +273,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 TLS underlies all security and privacy on the web. Chris explains how to do TLS right: not only to deploy TLS and remain performant at scale, but also demonstrating how TLS is the basis of new performance improvements.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/tls-all-the-things-security-with-performance-chrome-dev-summit-2014-chris-palmer) 
 
@@ -286,7 +286,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 For all the videos and slides, visit: http://developer.chrome.com/devsummit/sessions
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-2013) 
 
@@ -301,7 +301,7 @@ Slides @ http://bit.ly/cds-network
 
 For most sites, network latency of fetching the HTML and other critical resources is the single biggest performance bottleneck. In this talk we&#x27;ll cover some of the latest and greatest improvements in Chrome that will help us deliver faster applications.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/optimizing-network-performance-chrome-dev-summit-2013) 
 
@@ -317,7 +317,7 @@ This session shows you how to ensure your web app is spectacular across all scre
 
 Slides: http://gauntface.co.uk/presentations/chrome-dev-summit-2013/cross-device-workflow/
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-2013-optimizing-your-workflow-for-a-cross-device-world-matt-gaunt) 
 
@@ -332,7 +332,7 @@ Connect with Chrome engineers and other leading developers for a two-day explora
 For more information:
 http://developer.chrome.com/devsummit
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-presents-colt-mcanlis) 
 
@@ -347,7 +347,7 @@ For most sites, network latency of fetching the HTML and other critical resource
 
 We&#x27;ll cover an end-to-end workflow for gathering network performance data in Chrome and applying best practices to deliver faster sites.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/perfmatters-optimizing-network-performance-chrome-dev-summit-2013-ilya-grigorik) 
 
@@ -360,7 +360,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 If you&#x27;re trying to reach the broadest audience possible, creating a website that can be accessed by everyone is critical. However, many modern websites are difficult or impossible to use for people with a range of disabilities. In this talk we&#x27;ll discuss how Chrome provides support for users of assistive technologies, discuss techniques and web features which can be used to create modern websites that are accessible to a broad spectrum of users, and demonstrate some Chrome features that you can…
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/multi-device-accessibility-chrome-dev-summit-2013-alice-boxhall) 
 
@@ -375,7 +375,7 @@ SSL support is a requirement if you care about your users&#x27; security and pri
 
 This talk will overview real threats to web applications and services only accessible via HTTP, what SSL provides and protects against, and common implementation gotchas.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/got-ssl-chrome-dev-summit-2013-parisa-tabriz) 
 
@@ -388,7 +388,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Mobile users expect amazing performance. As web developers, we need to rethink some practices we have developed for the desktop web. This talk will cover mobile web (anti-)patterns with ultimate goal of getting your sites to render in less than a second. We&#x27;ll do a deep dive on identifying critical CSS and look at the pros and cons of inlining the critical CSS in your HTML.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/perfmatters-instant-mobile-web-apps-chrome-dev-summit-2013-bryan-mcquade) 
 
@@ -403,7 +403,7 @@ Looking to become a web performance master? Then start here. The secret to creat
 
 In this talk, we&#x27;ll give you the cheat sheet on using Chrome Dev Tools to target performance problems, gather information about the cause, and move towards a solution.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/perfmatters-tooling-techniques-for-the-performance-ninja-chrome-dev-summit-2013-colt-mcanlis) 
 
@@ -418,7 +418,7 @@ Learn how to create mobile UIs with a mix of the latest HTML5 features and nativ
 
 Slides: http://gauntface.co.uk/presentations/chrome-dev-summit-2013/chrome-webview/
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/build-mobile-apps-with-chrome-webview-chrome-dev-summit-2013-matt-gaunt) 
 
@@ -433,7 +433,7 @@ Blink is Chrome&#x27;s open-source rendering engine.
 
 In this session we&#x27;ll describe a few new behind-the-scenes improvements we&#x27;ve started since our April launch and how they will affect you as a web developer. You&#x27;ll also learn how to stay up-to-date on changes in Blink and influence our future direction.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/blink-behind-the-scenes-chrome-dev-summit-2013-greg-simon-and-eric-seidel) 
 
@@ -448,7 +448,7 @@ Portable Native Client: How we Learned to Stop Compiling and Love the Translator
 
 Portable Native Client is a technology that enables portable, secure execution of native applications in Chrome. Developers produce a platform-independent form of their native application. Chrome translates this form to run on the user&#x27;s device at better than 80% of native performance.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/portable-native-client-chrome-dev-summit-2013-molly-mackinlay-david-sehr) 
 
@@ -463,7 +463,7 @@ Let&#x27;s face it: we all want our sites to scroll smoothly, animate gorgeously
 
 In this talk, we&#x27;ll explain the key building blocks for jank-free experiences, and how to use Chrome&#x27;s tools to get you out of hot water when things go wrong.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/perfmatters-60fps-layout-and-rendering-chrome-dev-summit-2013-tom-wiltzius-and-nat-duca) 
 
@@ -476,7 +476,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Ian Ellison-Taylor, Darin Fisher, Linus Upson, Erik Kay, Arnaud Weber, Hiroshi Lockheimer
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-leadership-panel-qanda-chrome-dev-summit-2013) 
 
@@ -493,7 +493,7 @@ Polymer is a new type of library for the evolving modern web platform that lever
 
 It provides an extra layer of opinionated API sugaring for building smarter apps, faster.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/polymer-chrome-dev-summit-2013-eric-bidelman) 
 
@@ -508,7 +508,7 @@ Users expect audio, video and realtime communication from apps, games and sites 
 
 This session will help you build dynamic, multi-device web applications using the video and audio elements, WebRTC, Web Audio and more. We show you how to maximise performance, avoid common gotchas, and deliver great experiences on mobile.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/media-apis-for-the-multi-platform-web-chrome-dev-summit-2013-sam-dutton-jan-linden) 
 
@@ -521,7 +521,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Chrome Dev Summit keynote by Linus Upson—VP of Engineering for Chrome.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/keynote-chrome-dev-summit-2013-linus-upson) 
 
@@ -534,7 +534,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Gracefully grow and evolve your code with Dart&#x27;s language features, libraries, and tools. Learn how Dart&#x27;s language and tools keep you productive, Dart is compiled to JavaScript, and how you can deploy Dart apps to the modern web.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/dart-for-the-modern-web-developer-chrome-dev-summit-2013-seth-ladd-kasper-lund) 
 
@@ -547,7 +547,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 The web had a bit of a false start with offline access. With ApplicationCache, even if you expect the unexpected you&#x27;re still likely to have your expectations unexpectedly confounded. Unexpectedly. However, there&#x27;s a new API on it&#x27;s way that takes away the magic and puts you in full control of how the browser handles network requests, the ServiceWorker.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/network-connectivity-optional-chrome-dev-summit-2013-jake-archibald) 
 
@@ -562,7 +562,7 @@ Thumbs and fingers; audio and voice.  The modern web developer has to contend wi
 
 In this session, you&#x27;ll learn how to design experiences that work for all these combinations. We&#x27;ll also show you some of the tools that you can use to help you detect experience issues before they arise.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/best-ux-patterns-for-mobile-web-apps-chrome-dev-summit-2013-paul-kinlan) 
 
@@ -577,7 +577,7 @@ Paul Irish covers the new Chrome DevTools for mobile development at the Chrome D
 In 23 minutes, learn about zero-config remote debugging, screencasting device screen to desktop, and near-perfect mobile emulation.
 Read more at: http://www.html5rocks.com/en/tutorials/developertools/mobile/
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/devtools-for-mobile-chrome-dev-summit-2013-paul-irish) 
 
@@ -593,7 +593,7 @@ All Chrome Dev Summit videos now available separately: https://www.youtube.com/p
 Chrome Dev Summit, live from Mountain View.
 http://developer.chrome.com/devsummit
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-live-stream-day-2) 
 
@@ -609,7 +609,7 @@ All Chrome Dev Summit videos now available separately: https://www.youtube.com/p
 Chrome Dev Summit, live from Mountain View.
 http://developer.chrome.com/devsummit
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-live-stream-day-1) 
 
@@ -624,7 +624,7 @@ Connect with Chrome engineers and other leading developers for a two-day explora
 For more information:
 http://developer.chrome.com/devsummit
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-presents-eric-bidelman) 
 
@@ -639,7 +639,7 @@ Connect with Chrome engineers and other leading developers for a two-day explora
 For more information:
 http://developer.chrome.com/devsummit
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/chrome-dev-summit-presents-nat-duca) 
 
@@ -652,7 +652,7 @@ Wednesday, August 24th 2016, 8:06 am
 
 Chrome Apps provide the power and user experience of native apps with the development simplicity and security of the Web, and run on 4 desktop and 2 mobile OSes right out of the box.
 
-Wednesday, August 24th 2016, 8:06 am
+2015-07-01T13:08:06.000Z
 
 [Watch now](/web/shows/summits/cds-2014/develop-chrome-apps-on-desktopmobile-distribute-and-profit-chrome-dev-summit-2013-joe-marini) 
 

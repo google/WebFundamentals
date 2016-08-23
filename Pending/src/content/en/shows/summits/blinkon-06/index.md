@@ -14,7 +14,7 @@ book_path: /web/shows/_book.yaml
 
 
 
-Wednesday, August 24th 2016, 6:08 am
+2016-06-23T15:30:08.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-2-talk-7-qanda-panel) 
 
@@ -29,7 +29,7 @@ Elliott Sprehn
 
 Slides: https://docs.google.com/presentation/d/1Dpj4tpueCdne4MoRh6UOHrFTq3fdfz_yH5QGQInFCl4/edit
 
-Wednesday, August 24th 2016, 6:08 am
+2016-06-23T15:30:08.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-2-talk-3-blink-onion-soup) 
 
@@ -44,7 +44,7 @@ Ian Kilpatrick, Shane Stephens and Eddy Mead
 
 Slides: http://bit.ly/blinkon-6-houdini
 
-Wednesday, August 24th 2016, 6:08 am
+2016-06-23T15:30:08.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-1-talk-4-houdini-and-the-future-of-web) 
 
@@ -59,7 +59,7 @@ Ben Maurer
 
 Slides: https://www.dropbox.com/s/dyvyv8vp8elf14z/web%20speed%20blinkon.key?dl&#x3D;0
 
-Wednesday, August 24th 2016, 6:08 am
+2016-06-23T15:30:08.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-2-talk-2-client-side-performance-from-the-perspective-of-a-developer) 
 
@@ -83,7 +83,7 @@ Wednesday, August 24th 2016, 6:08 am
 36:09 Offline content past MHTML (Dmitry Titov)
 39:47 Making best u…
 
-Wednesday, August 24th 2016, 6:08 am
+2016-06-23T15:30:08.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-1-talk-7-lightning-talks) 
 
@@ -98,7 +98,7 @@ Dimitri Glazkov and Jochen Eisinger
 
 Slides: http://bit.ly/blinkon6-keynote
 
-Wednesday, August 24th 2016, 5:29 am
+2016-06-23T15:29:29.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-1-talk-1-state-of-web-platform) 
 
@@ -113,7 +113,7 @@ Nat Duca and Annie Sullivan
 
 Slides: https://docs.google.com/presentation/d/1Zbkw2Ko54C1ZGKTVgu2POcDcCdzDg-cC1Ubh0wKB4NQ/edit
 
-Thursday, August 25th 2016, 12:10 am
+2016-06-23T14:48:10.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-1-talk-6-feeling-fast-for-our-users-building-a-smarter-engine) 
 
@@ -128,7 +128,7 @@ Ross McIlroy
 
 Slides: https://docs.google.com/presentation/d/1OqjVqRhtwlKeKfvMdX6HaCIu9wpZsrzqpIVIwQSuiXQ/edit
 
-Thursday, August 25th 2016, 12:09 am
+2016-06-23T14:48:09.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-1-talk-2-ignition-an-interpreter-for-v8) 
 
@@ -143,7 +143,7 @@ Rick Byers and Philip Jägenstedt
 
 Slides: https://docs.google.com/presentation/d/1umK4QkfCvzicHVJKLNo2yDRyWSqQEamavW9QVFmugNY/preview
 
-Thursday, August 25th 2016, 12:09 am
+2016-06-23T14:48:09.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-1-talk-5-web-platform-predictability) 
 
@@ -158,7 +158,7 @@ Stefan Zager and Ojan Vafai
 
 Slides: https://docs.google.com/presentation/d/1yD5nmmzQGAbV6Zn3aiuEOAFccgbWjXomLCDFM4dYMF4/edit
 
-Thursday, August 25th 2016, 12:09 am
+2016-06-23T14:48:09.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-1-talk-3-3rd-party-content) 
 
@@ -173,7 +173,7 @@ Toon Verwaest, Camillo Bruni
 
 Slides: https://docs.google.com/a/google.com/presentation/d/14WZkWbkvtmZDEIBYP5H1GrbC9H-W3nJSg3nvpHwfG5U/edit
 
-Thursday, August 25th 2016, 12:09 am
+2016-06-23T14:48:09.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-2-talk-4-real-world-javascript-performance) 
 
@@ -188,7 +188,7 @@ Adam Klein
 
 Slides: https://docs.google.com/presentation/d/1o1wld5z0BM8RTqXASGYD3Rvov8PzrxySghmrGTYTgw0/edit
 
-Thursday, August 25th 2016, 12:09 am
+2016-06-23T14:48:09.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-2-talk-5-v8-ecmascript-2015-and-beyond) 
 
@@ -203,7 +203,7 @@ Ulan Degenbaev, Michael Lippautz
 
 Slides: https://docs.google.com/presentation/d/15EQ603eZWAnrf4i6QjPP7S3KF3NaL3aAaKhNUEatVzY/edit
 
-Thursday, August 25th 2016, 12:09 am
+2016-06-23T14:48:09.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-2-talk-6-how-we-measure-and-optimize-for-rail-in-v8s-gc) 
 
@@ -218,7 +218,7 @@ Sami Kyostila and Alex Clarke
 
 Slides: https://docs.google.com/presentation/d/1gqK9F4lGAY3TZudAtdcxzMQNEE7PcuQrGu83No3l0lw/edit
 
-Tuesday, August 23rd 2016, 6:06 pm
+2016-06-23T14:18:06.000Z
 
 [Watch now](/web/shows/summits/blinkon-06/blinkon-6-day-2-talk-1-headless-chrome) 
 

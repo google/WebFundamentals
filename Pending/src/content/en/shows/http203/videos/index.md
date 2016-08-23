@@ -18,7 +18,7 @@ Watch the HTTP203 series here: https://goo.gl/WRKc7L
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 3:46 pm
+2016-05-16T15:39:46.000Z
 
 [Watch now](/web/shows/http203/videos/http203-s03-recap) 
 
@@ -36,7 +36,7 @@ https://goo.gl/WRKc7L
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 8:21 am
+2015-11-30T19:32:21.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-http2-s3-ep7) 
 
@@ -54,7 +54,7 @@ https://goo.gl/WRKc7L
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 11:01 pm
+2015-11-16T11:47:01.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-libraries-vs-frameworks-s3-ep6) 
 
@@ -72,7 +72,7 @@ https://goo.gl/WRKc7L
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 10:50 pm
+2015-11-02T19:46:50.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-jake-beats-wikipedia-s3-ep5) 
 
@@ -91,7 +91,7 @@ Watch more HTTP 203 here: https://www.youtube.com/watch?v&#x3D;Hy6wceqkxvA&amp;l
 
 Subscribe to the Chrome Developers channel here: https://www.youtube.com/user/ChromeDevelopers/
 
-Wednesday, August 24th 2016, 10:15 am
+2015-10-16T13:10:15.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-paul-built-a-web-app-s3-ep4) 
 
@@ -108,7 +108,7 @@ Watch more HTTP 203 here: https://www.youtube.com/watch?v&#x3D;Hy6wceqkxvA&amp;l
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 8:57 pm
+2015-10-12T09:44:57.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-season-3-trailer) 
 
@@ -125,7 +125,7 @@ Watch more HTTP 203 here: https://www.youtube.com/watch?v&#x3D;Hy6wceqkxvA&amp;l
 
 Subscribe to the Chrome Developers channel here: https://www.youtube.com/user/ChromeDevelopers/
 
-Wednesday, August 24th 2016, 6:22 pm
+2015-10-06T13:42:22.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-the-future-of-javascript-s3-ep3) 
 
@@ -144,7 +144,7 @@ Check out our Website: https://developers.google.com/web/shows/http203/index?hl&
 
 Subscribe to the Chrome Developers channel here: https://www.youtube.com/user/ChromeDevelopers/
 
-Wednesday, August 24th 2016, 12:46 pm
+2015-09-22T14:36:46.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-maintainable-code-s3-ep2) 
 
@@ -163,7 +163,7 @@ Check out our Website: https://developers.google.com/web/shows/http203/index?hl&
 
 Subscribe to the Chrome Developers channel here: https://www.youtube.com/user/ChromeDevelopers/
 
-Wednesday, August 24th 2016, 12:44 am
+2015-09-08T14:00:44.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-browser-monoculture-s3-ep1) 
 
@@ -180,7 +180,7 @@ Watch more HTTP 203 here: https://www.youtube.com/playlist?list&#x3D;PLOU2XLYxms
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 10:04 am
+2015-07-27T15:34:04.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-utopia-vs-dystopia-s2-ep6) 
 
@@ -197,7 +197,7 @@ Watch more HTTP 203 here: https://www.youtube.com/playlist?list&#x3D;PLOU2XLYxms
 
 Subscribe to the Google Developers channel at: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 10:03 am
+2015-07-13T16:34:03.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-performance-matters-s2-ep5) 
 
@@ -214,7 +214,7 @@ Watch more HTTP 203 here: https://goo.gl/B0evDX
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 7:51 am
+2015-07-01T11:31:51.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-progressive-loading-s2-ep4) 
 
@@ -233,7 +233,7 @@ Watch more HTTP 203 here: https://goo.gl/5MrXoK
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-https-everywhere-s2-ep3) 
 
@@ -252,7 +252,7 @@ Watch more HTTP 203 here: https://goo.gl/5MrXoK
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-build-tools-s2-ep2) 
 
@@ -269,7 +269,7 @@ Watch more HTTP 203 here:  https://www.youtube.com/playlist?list&#x3D;PLOU2XLYxm
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-web-vs-native-s2-ep1) 
 
@@ -284,7 +284,7 @@ HTTP 203 Season 2 is coming 5/18! Paul and Jake are back talking about the Web. 
 
 Make sure you subscribe and check out the show page at https://developers.google.com/web/shows/http203/
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-season-2-teaser) 
 
@@ -301,7 +301,7 @@ Watch more HTTP 203 here: https://www.youtube.com/playlist?list&#x3D;PLOU2XLYxms
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-gotchas-s1-ep6) 
 
@@ -318,7 +318,7 @@ Watch more HTTP 203 here: https://www.youtube.com/playlist?list&#x3D;PLOU2XLYxms
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-christmas-special-s1-ep5) 
 
@@ -335,7 +335,7 @@ Watch more HTTP 203 here: https://www.youtube.com/playlist?list&#x3D;PLOU2XLYxms
 
 Post your comments to Paul (https://twitter.com/aerotwist) and Jake (https://twitter.…
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-font-rendering-s1-ep4) 
 
@@ -354,7 +354,7 @@ Post your comments to Paul (https://twitter.com/aerotwist) and Jake (https://twi
 
 Subscribe to the Google Dev…
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-frame-timing-s1-ep3) 
 
@@ -373,7 +373,7 @@ Post your comments to Paul (https://twitter.com/aerotwist) and Jake (https://twi
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-pointer-events-s1-ep2) 
 
@@ -393,7 +393,7 @@ Post your comments to Paul (https://twitter.com/aerotwist) and Jake (https://twi
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 6:02 am
+2015-07-01T11:30:02.000Z
 
 [Watch now](/web/shows/http203/videos/http-203-css-triggers-s1-ep1) 
 

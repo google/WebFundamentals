@@ -14,7 +14,7 @@ book_path: /web/shows/_book.yaml
 
 Today we&#x27;re wrapping up our series on accessibility by talking about labeling. While it&#x27;s important to make sure our elements have great keyboard support and semantics, we also need to make sure we can tell the user what our control is being used for. For example, if you were using a screen reader and you landed on a control that just said &quot;&quot;button&quot;&quot;, you wouldn&#x27;t really know what to do with it. Imagine instead that the button said &quot;&quot;Main Menu, button&quot;&quot;, that would be much nicer! The way we achi…
 
-Thursday, August 25th 2016, 7:55 am
+2016-08-10T20:55:55.000Z
 
 [Watch now](/web/shows/polycasts/accessible-components-labeling-polycasts-51) 
 
@@ -27,7 +27,7 @@ Thursday, August 25th 2016, 7:55 am
 
 Continuing our series on Accessibility (a11y) today we&#x27;re talking about screen readers! Screen readers take the semantic information from your elements and produce an alternative, spoken UI, for user with visual impairments. But when we&#x27;re designing Web Components, we&#x27;re creating tags that have never existed before in the browser, meaning they don&#x27;t have built-in semantics. So what&#x27;s a screen reader supposed to do? Today on Polycasts we&#x27;ll look at how we can leverage ARIA to add semantics to our…
 
-Wednesday, August 24th 2016, 12:54 am
+2016-07-27T21:00:54.000Z
 
 [Watch now](/web/shows/polycasts/accessible-components-screen-readers-polycasts-50) 
 
@@ -51,7 +51,7 @@ http://goo.gl/WHjzMH
 
 Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
 
-Wednesday, August 24th 2016, 12:23 am
+2016-07-13T21:00:23.000Z
 
 [Watch now](/web/shows/polycasts/accessible-components-keyboard-access-polycasts-49) 
 
@@ -76,7 +76,7 @@ https://goo.gl/QHBDqp
 Polymer Slack:
 http://goo.gl/WHjzMH?
 
-Wednesday, August 24th 2016, 7:17 pm
+2016-06-15T20:43:17.000Z
 
 [Watch now](/web/shows/polycasts/polymer-cli-getting-started-polycast-48) 
 
@@ -91,7 +91,7 @@ Lazy loading data and managing flash of unstyled content (FOUC) can be pretty tr
 
 Demo source…
 
-Wednesday, August 24th 2016, 11:37 am
+2016-06-01T20:35:37.000Z
 
 [Watch now](/web/shows/polycasts/lazy-loading-data-with-app-route-polycasts-47) 
 
@@ -114,7 +114,7 @@ https://elements.polymer-project.org/elements/app-route
 
 Encapsulated routing with elements art…
 
-Wednesday, August 24th 2016, 1:08 am
+2016-04-20T20:01:08.000Z
 
 [Watch now](/web/shows/polycasts/routing-with-carbon-route-polycasts-46) 
 
@@ -136,7 +136,7 @@ https://bit.ly/polybin
 Polymer Slack:
 https://goo.gl/WHjzMH
 
-Wednesday, August 24th 2016, 4:04 am
+2016-04-07T16:28:04.000Z
 
 [Watch now](/web/shows/polycasts/polygit-the-polymer-cdn-polycasts-45) 
 
@@ -160,7 +160,7 @@ iron-scroll-threshold https://github.com/PolymerElements/iron-scroll-threshold
 Question 3:
 ht…
 
-Wednesday, August 24th 2016, 8:16 am
+2016-03-23T20:08:16.000Z
 
 [Watch now](/web/shows/polycasts/what-about-3rd-party-javascript-askpolymer-polycasts-44) 
 
@@ -181,7 +181,7 @@ https://www.polymer-project.org/1.0/api/#Polymer.Base:method-importHref
 
 Subscribe to the Google Developers channel here: https://goo.gl/WkxCU5
 
-Wednesday, August 24th 2016, 3:24 pm
+2016-03-09T19:15:24.000Z
 
 [Watch now](/web/shows/polycasts/lazy-loading-elements-polycasts-43) 
 
@@ -194,7 +194,7 @@ Wednesday, August 24th 2016, 3:24 pm
 
 A lot of folks have been asking when is the Polymer team going to build a date picker or a data table? Today on the show I want to highlight some of the awesome community built elements that meet these needs. paper-date-picker by Ben Davis is a super slick, Material design, responsive date picker that works in Polymer 1.0 apps. And the vaadin-grid is a full featured data table with a fancy pants expense manager demo. Got a cool element you&#x27;ve built? Tell us about it on Twitter with #builtwithpol…
 
-Thursday, August 25th 2016, 6:51 am
+2016-02-24T21:54:51.000Z
 
 [Watch now](/web/shows/polycasts/yo-wheres-my-data-table-builtwithpolymer-polycasts-42) 
 
@@ -227,7 +227,7 @@ https://goo.gl/djOKPW
 
 Polycast…
 
-Tuesday, August 23rd 2016, 11:07 pm
+2016-02-10T20:23:07.000Z
 
 [Watch now](/web/shows/polycasts/how-do-i-use-sass-with-polymer-askpolymer-polycasts-41) 
 
@@ -246,7 +246,7 @@ https://goo.gl/cJBR4H
 Introduction to CSP
 https://developer.mozilla.org/e…
 
-Thursday, August 25th 2016, 12:38 am
+2016-01-27T20:48:38.000Z
 
 [Watch now](/web/shows/polycasts/crisper-protecting-your-polymer-app-with-csp-polycasts-40) 
 
@@ -261,7 +261,7 @@ It&#x27;s important to get a good testing setup in place for your project as ear
 
 Examp…
 
-Wednesday, August 24th 2016, 1:08 pm
+2016-01-14T18:13:08.000Z
 
 [Watch now](/web/shows/polycasts/optimize-for-production-with-vulcanize-polycasts-39) 
 
@@ -276,7 +276,7 @@ It&#x27;s important to get a good testing setup in place for your project as ear
 
 Examp…
 
-Wednesday, August 24th 2016, 4:40 am
+2015-12-30T21:04:40.000Z
 
 [Watch now](/web/shows/polycasts/browser-testing-with-travis-and-sauce-labs-polycasts-38) 
 
@@ -289,7 +289,7 @@ Wednesday, August 24th 2016, 4:40 am
 
 Elements that need to get data from a backend service can be tricky to test. Do you need to startup your own test server just to verify an element does what it&#x27;s supposed to? Is that even a good idea? Today on Polycasts I&#x27;ll show you have to use Web Component Tester and a library called Sinon.js to mock your back end and speed up your unit tests. By mocking your backend you can verify that your element&#x27;s work in isolation, which is a crucial step to having good overall test coverage of your app.…
 
-Thursday, August 25th 2016, 10:40 am
+2015-12-16T21:58:40.000Z
 
 [Watch now](/web/shows/polycasts/testing-ajax-with-web-component-tester-polycasts-37) 
 
@@ -308,7 +308,7 @@ https://github.com/Polymer/web-component-tester
 Seed Element
 https://github.com/polymerelements/seed-el…
 
-Tuesday, August 23rd 2016, 9:44 pm
+2015-12-03T16:21:44.000Z
 
 [Watch now](/web/shows/polycasts/unit-testing-with-web-component-tester-polycasts-36) 
 
@@ -327,7 +327,7 @@ Polymer G+: https://goo.gl/YC5Bsh
 
 Subscribe to the Chrome Developers channel: https://goo.gl/OUF4e2
 
-Wednesday, August 24th 2016, 4:08 pm
+2015-11-25T20:40:08.000Z
 
 [Watch now](/web/shows/polycasts/binding-to-arrays-polycasts-35) 
 
@@ -345,7 +345,7 @@ The Chrome Dev Summit is an exclusive event to connect with Chrome engineers and
 
 Polycasts playlist: https://goo…
 
-Wednesday, August 24th 2016, 2:57 am
+2015-11-17T22:02:57.000Z
 
 [Watch now](/web/shows/polycasts/chromedevsummit-talks-are-up-w00t-polycast-34) 
 
@@ -373,7 +373,7 @@ https://github.com/Polymer/polymer/issues/2149
 CSS mixin
 *note* it turns out this …
 
-Thursday, August 25th 2016, 10:44 am
+2015-11-11T18:58:44.000Z
 
 [Watch now](/web/shows/polycasts/what-about-internationalization-askpolymer-polycasts-33) 
 
@@ -392,7 +392,7 @@ Polymer G+: https://goo.gl/YC5Bsh
 
 Subscribe to the Chrome Developers channel: https://goo.gl/OU…
 
-Tuesday, August 23rd 2016, 7:46 pm
+2015-11-04T22:19:46.000Z
 
 [Watch now](/web/shows/polycasts/supercharged-observers-polycasts-32) 
 
@@ -412,7 +412,7 @@ Subscribe to the Chrome Developers channel at: https://goo.gl/OUF4e2
 
 Check out music from the show at: http://terramonk.com/
 
-Wednesday, August 24th 2016, 1:04 pm
+2015-10-28T20:13:04.000Z
 
 [Watch now](/web/shows/polycasts/wheres-the-designer-askpolymer-polycasts-31) 
 
@@ -434,7 +434,7 @@ https://www.polymer-project.org/1.0/docs/devguide/data-binding.html#set-path
 Polymer Slack: http://bit.ly/polymerslack
 Polymer G+ community: https://plus.google.com/commun…
 
-Thursday, August 25th 2016, 10:50 am
+2015-10-21T18:58:50.000Z
 
 [Watch now](/web/shows/polycasts/binding-to-objects-polycasts-30) 
 
@@ -451,7 +451,7 @@ Screencast equipment list
 http://www.bhphotovideo.com/bnh/controller/home?O&#x3D;&amp;sku&#x3D;749467&amp;is&#x3D;REG&amp;m&#x3D;Y&amp;Q&#x3D;&amp;A&#x3D;details
 http://www.wacom.com/en-us/products/pen-displays/cintiq-…
 
-Thursday, August 25th 2016, 12:20 am
+2015-10-14T20:48:20.000Z
 
 [Watch now](/web/shows/polycasts/askpolymer-how-do-you-make-the-show-polycasts-29) 
 
@@ -473,7 +473,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
 Polymer Slack: http://bit.ly/polymerslack
 Polymer G+ com…
 
-Wednesday, August 24th 2016, 3:14 am
+2015-10-07T23:03:14.000Z
 
 [Watch now](/web/shows/polycasts/data-binding-101-polycasts-28) 
 
@@ -499,7 +499,7 @@ https://www.youtube.com/watch?v&#x3D;k1eR_3KqJms&amp;list&#x3D;PLNYkxOF6rcIDdS7H
 
 Polymer Team responds to HTML Imports question…
 
-Wednesday, August 24th 2016, 5:03 pm
+2015-09-30T21:17:03.000Z
 
 [Watch now](/web/shows/polycasts/askpolymer-rob-answers-all-the-questions-ever-polycasts-27) 
 
@@ -520,7 +520,7 @@ https://github.com/polymerelements/seed-element
 
 Polymer Yeoman gene…
 
-Wednesday, August 24th 2016, 1:22 am
+2015-09-23T22:01:22.000Z
 
 [Watch now](/web/shows/polycasts/iron-ajax-wat-polycasts-26) 
 
@@ -541,7 +541,7 @@ https://github.com/Polymer/polycasts/tree/master/ep25-neon-animated-pages
 Neon Animated Pages docs
 https://elements.polymer-project.org/elements/neon-animation?view&#x3D;docs&amp;…
 
-Wednesday, August 24th 2016, 12:31 am
+2015-09-09T21:24:31.000Z
 
 [Watch now](/web/shows/polycasts/neon-animated-pages-polycasts-25) 
 
@@ -568,7 +568,7 @@ https://github.com/robdodson/Atom-PolymerSnippets
 
 Behav…
 
-Thursday, August 25th 2016, 6:08 am
+2015-09-04T20:54:08.000Z
 
 [Watch now](/web/shows/polycasts/content-switcheroo-update-polycasts-24) 
 
@@ -583,7 +583,7 @@ Web Animations are a new set of standards to unify CSS and JavaScript animations
 
 In this episode I’ll teach you how to use the neon-animation behaviors from the Polymer Element catalog to mixing slick animation behavior without the hassle o…
 
-Thursday, August 25th 2016, 5:54 am
+2015-09-04T20:53:54.000Z
 
 [Watch now](/web/shows/polycasts/slick-web-animations-polycasts-23) 
 
@@ -609,7 +609,7 @@ https://elements.polymer-project.org/elements/iron-icon
 iron-icons docs/demo
 https://elements.polymer-projec…
 
-Thursday, August 25th 2016, 5:29 am
+2015-09-04T20:53:29.000Z
 
 [Watch now](/web/shows/polycasts/iron-icons-polycasts-20-100-days-of-google-dev) 
 
@@ -631,7 +631,7 @@ https://elements.polymer-project.org/elements/iron-iconset-svg
 Behaviors -- Polycasts #21
 https://www.youtube.com/watch?v&#x3D;YrlmieL3Z0k&amp;ind…
 
-Wednesday, August 24th 2016, 10:03 am
+2015-07-29T21:34:03.000Z
 
 [Watch now](/web/shows/polycasts/custom-icons-with-iron-iconsets-polycasts-22) 
 
@@ -661,7 +661,7 @@ https://elements.polymer-project.org/elements/iron-list
 Iron Icons -- Polycasts #20
 ht…
 
-Wednesday, August 24th 2016, 10:03 am
+2015-07-15T22:34:03.000Z
 
 [Watch now](/web/shows/polycasts/behaviors-polycasts-21) 
 
@@ -688,7 +688,7 @@ http://jakearchibald.com/2014/offline-cookbook/
 Introduction to Service Workers
 http://www.html5rocks.com/en/tutorials/service-worker/introd…
 
-Wednesday, August 24th 2016, 12:45 pm
+2015-07-09T15:12:45.000Z
 
 [Watch now](/web/shows/polycasts/go-offline-polycasts-19) 
 
@@ -715,7 +715,7 @@ https://github.com/yeoman/generator-polymer
 Theming Elements -- Polycasts #17
 https://www.yout…
 
-Wednesday, August 24th 2016, 12:31 pm
+2015-07-01T11:36:31.000Z
 
 [Watch now](/web/shows/polycasts/polymer-starter-kit-polycasts-18) 
 
@@ -742,7 +742,7 @@ https://github.com/polymerlabs/polyserve
 Create reusable elements with ease -- Polycasts #14
 https://www.youtube.com/watch?v&#x3D;p7Q1mQtFGM8&amp;index&#x3D;1&amp;list&#x3D;PLOU2…
 
-Wednesday, August 24th 2016, 12:31 pm
+2015-07-01T11:36:31.000Z
 
 [Watch now](/web/shows/polycasts/extending-native-elements-polycasts-15) 
 
@@ -768,7 +768,7 @@ https://github.com/polymerlabs/polyserve
 
 New Styling Sys…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/give-your-element-an-api-polycasts-16) 
 
@@ -785,7 +785,7 @@ Creating your own icon set in Polymer is a breeze! In this video we&#x27;ll look
 
 Guide: Using Core Icons (http://www.polymer-project.org/0.5/docs/elements/ico…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/core-icons-polycasts-01) 
 
@@ -814,7 +814,7 @@ https://www.polymer-project.org/0.5/docs/start/reusableelements.html
 
 LazyWeb…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/create-reusable-elements-with-ease-polycasts-14) 
 
@@ -841,7 +841,7 @@ https://github.com/polymerlabs/polyserve
 Give your element an API -- Polycasts #16
 https://www.youtube.com/watch…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/theming-elements-polycasts-17) 
 
@@ -868,7 +868,7 @@ https://www.polymer-project.org/0.5/docs/elements/core-image.html
 Layout attributes
 https://www.polymer-project.org/0.5/docs/pol…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/scrolling-at-60-frames-with-core-list-polycasts-12) 
 
@@ -892,7 +892,7 @@ https://www.youtube.com/watch?v&#x3D;iDQqP5Yyczg&amp;list&#x3D;PLOU2XLYxmsII5c3M
 Content Switcheroo with Core-Pages -- Polycasts #09
 https://www.youtube.com/watch?v&#x3D;6x2A9UgLqEw&amp;index&#x3D;9&amp;list&#x3D;PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sM…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/moar-routing-with-more-routing-polycasts-11) 
 
@@ -916,7 +916,7 @@ https://www.youtube.com/watch?v&#x3D;6x2A9UgLqEw&amp;index&#x3D;9&amp;list&#x3D;
 The Awesome Power of Auto-Binding Templates -- Polycasts #08
 https://www.youtube.com/watch?v&#x3D;82LfXCeuaOo&amp;index&#x3D;8&amp;list&#x3D;PLOU2XLYxm…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/routing-101-polycasts-10) 
 
@@ -941,7 +941,7 @@ Core Drawer Panel -- Polycasts #05
 https://www.youtube.com/watch?v&#x3D;GAjpaM4HcCQ&amp;index&#x3D;5&amp;list&#x3D;PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN
 …
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/content-switcheroo-with-core-pages-polycasts-09) 
 
@@ -968,7 +968,7 @@ https://www.youtube.com/watch?v&#x3D;ZAc51_0Xa_M&amp;index&#x3D;4&amp;list&#x3D;
 Polycasts: Core Toolbar
 https://www.you…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/the-awesome-power-of-auto-binding-templates-polycasts-08) 
 
@@ -989,7 +989,7 @@ Let&#x27;s build some apps with Polymer! - http://goo.gl/Uf0DfQ
 
 Season 2 survey -…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/seasons-greetings-polycasts-07) 
 
@@ -1008,7 +1008,7 @@ Watch more Polycasts here: http://www.youtube.com/playlist?list&#x3D;PLOU2XLYxms
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/whats-new-in-polymer-051-polycasts-06) 
 
@@ -1023,7 +1023,7 @@ A big part of building for the multi-device web is responsive design. To make th
 
 Element Reference: https://www.polymer-project.org/0.5/docs/elements/core-drawer-panel.html
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/core-drawer-panel-polycasts-05) 
 
@@ -1038,7 +1038,7 @@ The core-header-panel is a great next step after you&#x27;ve mastered some of th
 
 Guide: http://www.polymer-project.org/0.5/docs/elements/layout-eleme…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/core-header-panel-polycasts-04) 
 
@@ -1055,7 +1055,7 @@ Guide: http://www.polymer-project.org/0.5/docs/elements/layout-elements.html
 
 Element Reference: http://www.polymer-project.org/0.5/docs/elements/core-too…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/core-toolbar-polycasts-03) 
 
@@ -1076,7 +1076,7 @@ Watch more Polycasts here: http://www.polymer-project.org/0.5/docs/elements/layo
 
 Subs…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/core-iconset-polycasts-02) 
 
@@ -1103,7 +1103,7 @@ https://www.youtube.com/watch?v&#x3D;GAjpaM4HcCQ&amp;list&#x3D;PLOU2XLYxmsII5c3M
 Shady DOM explainer
 https://www.polymer-project.org/0.8/docs/devguide/local-…
 
-Wednesday, August 24th 2016, 11:55 am
+2015-07-01T11:35:55.000Z
 
 [Watch now](/web/shows/polycasts/polymer-08-first-look-polycasts-13) 
 

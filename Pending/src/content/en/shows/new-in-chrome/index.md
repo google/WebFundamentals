@@ -16,7 +16,7 @@ Chrome 52 adds support for the CSS contain property, and can make rendering perf
 
 Subscribe to the Chrome Developers YouTube channel and dive into What’s new for developers in Chrom…
 
-Wednesday, August 24th 2016, 1:56 pm
+2016-07-20T15:37:56.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-52-contain-property-the-performanceobserver-api-and-service-worker-stream) 
 
@@ -35,7 +35,7 @@ Chrome 51 makes it easy to know when an element enters or exits the viewport wit
 * WICG Spec Repo - https://goo.gl/CkokY6
 * WICG Spec - https:…
 
-Thursday, August 25th 2016, 4:12 am
+2016-05-25T15:52:12.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-51-intersection-observers-passive-event-listeners-and-the-credential-management-api) 
 
@@ -63,7 +63,7 @@ https://goo.gl/pVKYIr
 
 Subscribe to the …
 
-Wednesday, August 24th 2016, 4:05 pm
+2016-04-19T16:40:05.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-50-payload-in-push-preload-assets-and-canvas-supports-toblob) 
 
@@ -80,7 +80,7 @@ CSS Custom Properties
 * https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care
 * https://drafts.csswg.org/css…
 
-Wednesday, August 24th 2016, 2:57 pm
+2016-03-08T16:38:57.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-49-custom-css-properties-background-sync-and-save-data-client-hint) 
 
@@ -96,7 +96,7 @@ Chrome 48 allows users to take immediate action on notifications with custom but
 Custom Buttons in Notifications
 * Using actions from a service worker in the Notificatio…
 
-Thursday, August 25th 2016, 7:14 am
+2016-01-26T15:55:14.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-48-custom-buttons-in-notifications-devtools-security-panel-and-presentation-mode) 
 
@@ -116,7 +116,7 @@ Splash Screens
 requestIdleCallback
 *…
 
-Thursday, August 25th 2016, 4:11 am
+2015-12-01T17:52:11.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-47-splash-screens-requestidlecallback-and-better-desktop-notifications-new-in-chrome) 
 
@@ -135,7 +135,7 @@ Demos &amp; Links:
 * Motion path module spec: https://drafts.fxtf.org/motion-1/
 * Automating resource selection with cl…
 
-Tuesday, August 23rd 2016, 8:18 pm
+2015-10-13T17:20:18.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-46-new-motion-path-animations-client-hints-and-service-worker-improvements) 
 
@@ -156,7 +156,7 @@ ECMA Script 2015:
 * MDN Arrow functions: https://goo.gl/Wzhjwy
 * New array methods sample: https://goo.gl/HE…
 
-Wednesday, August 24th 2016, 5:51 pm
+2015-09-03T21:17:51.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-45-more-ecma-script-2015-improved-add-to-home-screen-and-more-new-in-chrome-ep-45) 
 
@@ -181,7 +181,7 @@ https://github.com/GoogleChrome/samples/tree/gh-pages/app-install-banner/cancela
 
 Push messaging: h…
 
-Wednesday, August 24th 2016, 10:03 am
+2015-07-21T19:34:03.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-44-improvements-to-the-app-install-banner-and-more-new-in-chrome-ep-44) 
 
@@ -202,7 +202,7 @@ Join the G+ Community here: https://google.com/+GoogleDevelopers/...
 
 Subscribe to the Google Developers…
 
-Wednesday, August 24th 2016, 2:17 pm
+2015-07-01T11:38:17.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-43-cut-and-copy-changes-to-dom-attributes-and-webmidi-new-in-chrome-ep-43) 
 
@@ -219,7 +219,7 @@ Join the G+ Community here: https://google.com/+GoogleDevelopers/posts
 
 Subscribe to the Google Developers channel here: http://goo.gl/mQyv5L
 
-Wednesday, August 24th 2016, 2:17 pm
+2015-07-01T11:38:17.000Z
 
 [Watch now](/web/shows/new-in-chrome/chrome-42-push-api-app-install-banners-and-fetch-new-in-chrome-ep-42) 
 
