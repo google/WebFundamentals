@@ -94,7 +94,7 @@ As the web goes mobile, you need to change the way you write. Keep it simple, re
 
 <div class="attempt-right">
   <figure>
-    <img src="images/http-archive-images.png" alt="HTTP Archive showing increasing number of image transfer sizes and image requests" />
+    <img src="imgs/http-archive-images.png" alt="HTTP Archive showing increasing number of image transfer sizes and image requests" />
     <figcaption>According to <a href="http://httparchive.org/trends.php#bytesImg&reqImg">HTTP Archive data</a>, the average web page makes 54 requests for images.</figcaption>
   </figure>
 </div>
@@ -106,7 +106,7 @@ Images can be beautiful, fun and informative — but they also use page real est
 
 <div class="attempt-right">
   <figure>
-    <img src="images/http-archive-content-type-pie-chart.png" alt="HTTP Archive pie chart showing average bytes per page by content type, around 60% of which is images">
+    <img src="imgs/http-archive-content-type-pie-chart.png" alt="HTTP Archive pie chart showing average bytes per page by content type, around 60% of which is images">
     <figcaption>Images constitute over 60% of page weight.</figcaption>
   </figure>
 </div>
@@ -146,7 +146,7 @@ Many of the next billion users coming online use low-cost devices with small vie
 
 Here is a photograph of the two together:
 
-![Photo comparing display of blog post on high end and low-cost smartphones](images/devices-photo.jpg)
+![Photo comparing display of blog post on high end and low-cost smartphones](imgs/devices-photo.jpg)
 
 On the larger screen, text is small but readable.
 
@@ -178,7 +178,7 @@ Success: Whatever you do — **test**!
 
 Here is OpenSTF in action:
 
-[![OpenSTF interface](images/stf.png)](https://github.com/openstf/stf)
+[![OpenSTF interface](imgs/stf.png)](https://github.com/openstf/stf)
 
 Mobile devices are increasingly used to consume content and obtain information — not just as devices for communication, games and media.
 
@@ -202,17 +202,17 @@ In other words, reducing page weight **can open up whole new markets**.
 
 There are a number of tools for calculating page weight. The Chrome DevTools Network panel shows the total byte size for all resources, and can be used to ascertain weights for individual asset types. You can also check which items have been retrieved from the browser cache.
 
-![Chrome DevTools Network panel showing resource sizes](images/chrome-dev-tools.png)
+![Chrome DevTools Network panel showing resource sizes](imgs/chrome-dev-tools.png)
 
 Firefox and other browsers offer similar tools.
 
 [WebPagetest](http://webpagetest.org) provides the ability to test first and subsequent page loads. You can automate testing with [scripts](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting) (for example, to log in to a site) or by using their [RESTful APIs](https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis). The following example (loading [developers.google.com/web](https://developers.google.com/web/)) shows that caching was successful and that subsequent page loads required no additional resources.
 
-![WebPagetest results showing total byte size for first and repeat page visits](images/webpagetest-first-and-repeat.png)
+![WebPagetest results showing total byte size for first and repeat page visits](imgs/webpagetest-first-and-repeat.png)
 
 WebPagetest also gives a size and request breakdown by MIME type.
 
-![WebPagetest pie charts showing requests and bytes by MIME type](images/webpagetest-requests-and-bytes-pie-charts.png)
+![WebPagetest pie charts showing requests and bytes by MIME type](imgs/webpagetest-requests-and-bytes-pie-charts.png)
 
 ### Calculate page cost
 
@@ -220,7 +220,7 @@ For many users, data doesn't just cost bytes and performance — it costs money.
 
 The site [What Does My Site Cost?](https://whatdoesmysitecost.com/) enables you to estimate the actual financial cost of loading your site. The histogram below shows how much it costs (using a prepaid data plan) to load [amazon.com](https://www.amazon.com/).
 
-![Estimated data cost in 12 countries) of loading the amazon.com homepage](images/what-does-my-site-cost.png)
+![Estimated data cost in 12 countries) of loading the amazon.com homepage](imgs/what-does-my-site-cost.png)
 
 Bear in mind that this doesn't take into account affordability relative to income. Data from [blog.jana.com](https://blog.jana.com/2015/05/21/the-data-trap-affordable-smartphones-expensive-data/) shows the cost of data.
 

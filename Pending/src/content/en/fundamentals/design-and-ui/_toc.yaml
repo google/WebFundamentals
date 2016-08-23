@@ -14,7 +14,7 @@ toc:
       - title: Video
         path: /web/fundamentals/design-and-ui/media/video
       - title: Content
-        path: /web/fundamentals/design-and-ui/content/
+        path: /web/fundamentals/design-and-ui/responsive/content
     - title: User Input
       section:
       - title: Create Amazing Forms
