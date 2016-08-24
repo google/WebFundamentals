@@ -6,7 +6,7 @@ description: You can make ad spaces (also known as ad inventory) available on yo
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-07-30 #}
 
-# How ads work {: .page-title }
+# How Ads Work {: .page-title }
 
 {% include "_shared/contributors/megginkearney.html" %}
 {% include "_shared/contributors/petelepage.html" %}
