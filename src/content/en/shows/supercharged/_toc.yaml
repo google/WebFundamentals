@@ -1,44 +1,7 @@
 toc:
   - title: Supercharged
-    section:
-    - title: Season 2
-      section:
-      - title: 'Easy Easing: Micro Tip #1 - Supercharged'
-        path: /web/shows/supercharged/season-2/easy-easing-micro-tip-1-supercharged
-      - title: 'FLIP: MicroTip #2 - Supercharged'
-        path: /web/shows/supercharged/season-2/flip-microtip-2-supercharged
-      - title: 'Router: Live code Session - Supercharged'
-        path: /web/shows/supercharged/season-2/router-live-code-session-supercharged
-      - title: 'Router Part 1: TL;DW - Supercharged'
-        path: /web/shows/supercharged/season-2/router-part-1-tldw-supercharged
-      - title: 'Router Part 2: Live Code Session - Supercharged'
-        path: /web/shows/supercharged/season-2/router-part-2-live-code-session-supercharged
-      - title: 'Router Part 2: Live Coding Session - Coming June 30th'
-        path: /web/shows/supercharged/season-2/router-part-2-live-coding-session-coming-june-30th
-      - title: 'Router Part 2: TL;DW - Supercharged'
-        path: /web/shows/supercharged/season-2/router-part-2-tldw-supercharged
-      - title: 'Side Navigation Bar: Live Code Session - Supercharged'
-        path: /web/shows/supercharged/season-2/side-navigation-bar-live-code-session-supercharged
-      - title: 'Side Navigation Bar: TL;DW - Supercharged'
-        path: /web/shows/supercharged/season-2/side-navigation-bar-tldw-supercharged
-      - title: 'Supercharged: Call For Submissions'
-        path: /web/shows/supercharged/season-2/supercharged-call-for-submissions
-      - title: 'Supercharged Q&A: May 2016'
-        path: /web/shows/supercharged/season-2/supercharged-qa-may-2016
-      - title: 'Swipeable Cards: Live Code Session - Supercharged'
-        path: /web/shows/supercharged/season-2/swipeable-cards-live-code-session-supercharged
-      - title: 'Swipeable Cards: TL;DW - Supercharged'
-        path: /web/shows/supercharged/season-2/swipeable-cards-tldw-supercharged
-    - title: 'Season 1'
-      section:
-      - title: The Guardian - Part 1
-        path: /web/shows/supercharged/season-1/the-guardian-part-1
-      - title: The Guardian - Part 2
-        path: /web/shows/supercharged/season-1/the-guardian-part-2
-      - title: Player.fm
-        path: /web/shows/supercharged/season-1/player-fm
-      - title: "Supercharged: Jai's Web blog (S1 Ep4)"
-        path: /web/shows/supercharged/season-1/supercharged-jais-web-blog-s1-ep4
-      - title: 'Supercharged: Slack - Extended Xmas Special (S1 Ep5)'
-        path: /web/shows/supercharged/season-1/supercharged-slack-extended-xmas-special-s1-ep5
+    path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBz9ACEQRmO9Lw8PW7vn0lr
+    status: external
+
+
 

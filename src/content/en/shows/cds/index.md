@@ -1,11 +1,41 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Chrome Dev Summit is a yearly event held in San Francisco where engineers on the Chrome team talk about what they've been working and the topics they're passionate about.
+description: Get started or build your web design and development skills with these free Udacity courses taught by your friends at Google.
 
-{# wf_review_required #}
-{# wf_updated_on: 2015-12-09 #}
-{# wf_published_on: 2015-12-09 #}
+{# wf_updated_on: 2016-08-24 #}
+{# wf_published_on: 2016-08-24 #}
 
-# Chrome Dev Summit {: .page-title }
+# Chrome Dev Summits {: .page-title }
+
+## Chrome Dev Summit 2015
+
+<a href="2015/">
+  <img src="../imgs/cds_rect.png" class="attempt-right">
+</a>
+
+[View Playlist](2015/)
+
+<div style="clear:both;"></div>
+
+## Chrome Dev Summit 2014
+
+<a href="2014/">
+  <img src="../imgs/cds_rect.png" class="attempt-right">
+</a>
+
+[View Playlist](2014/)
+
+<div style="clear:both;"></div>
+
+## Chrome Dev Summit 2013
+
+<a href="2013/">
+  <img src="../imgs/cds_rect.png" class="attempt-right">
+</a>
+
+[View Playlist](2013/)
+
+<div style="clear:both;"></div>
+
 
 

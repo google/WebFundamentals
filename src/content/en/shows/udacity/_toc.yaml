@@ -1,17 +1,4 @@
 toc:
   - title: Udacity
-    section:
-    - title: All Courses
-      path: /web/shows/udacity/
-    - title: Browser Rendering Optimizations
-      path: https://www.udacity.com/course/viewer&_ga=1.166646846.1892639550.1457536210#!/c-ud860?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index
-      status: external
-    - title: Responsive Web Design
-      path: https://www.udacity.com/course/viewer&_ga=1.166590526.1892639550.1457536210#!/c-ud893?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index
-      status: external
-    - title: Critical Rendering Path
-      path: https://www.udacity.com/course/viewer&_ga=1.166590526.1892639550.1457536210#!/c-ud884?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index
-      status: external
-    - title: Responsive Images
-      path: https://www.udacity.com/course/viewer&_ga=1.166590526.1892639550.1457536210#!/c-ud882?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index
-      status: external
+    path: /web/shows/udacity/
+
