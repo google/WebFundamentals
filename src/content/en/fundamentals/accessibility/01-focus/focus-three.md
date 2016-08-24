@@ -25,7 +25,7 @@ notes:
 
 Let's try some of the focus techniques we just discussed. Again, using Chrome, go to this <a href="http://udacity.github.io/ud891/lesson2-focus/01-basic-form/" target="_blank">airline site mockup page</a> and search for a specific ticket **using only keyboard input**. The page doesn't accept mouse input, so you can't fudge the exercise (not that we don't trust you ;-). 
 
-![Airline site mockup](imgs/airlinesite2.png)
+![airline site mockup](imgs/airlinesite2.png)
 
 The ticket parameters you should specify are:
 
