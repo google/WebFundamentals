@@ -27,7 +27,7 @@ A browser can transform the DOM tree into an accessibility tree because much of 
 
 However, sometimes we use elements that look like native elements but aren't. For example, this "button" isn't a button at all.
 
-![tacobutton.png](imgs/tacobutton.png)
+![a div styled as a button](imgs/tacobutton.png)
 
 It might be constructed in HTML in any number of ways; one way is shown below.
 
@@ -69,7 +69,7 @@ or
 
 When the checkbox has been labeled correctly, the screen reader can report that the element has a role of checkbox, is in a checked state, and is named "Receive promotional offers?". 
 
-![receive promotional offers](imgs/promo-offers.png)
+![a properly labeled checkbox](imgs/promo-offers.png)
 
 >Tip: You can actually use the screen reader to find improperly-associated labels by tabbing through the page and verifying the spoken roles, states, and names.
 
