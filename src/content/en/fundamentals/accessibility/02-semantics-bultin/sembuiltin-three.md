@@ -27,7 +27,7 @@ When we use a man-made tool or device, we typically look to its form and design 
 
 A classic example is a kettle or teapot. You can easily recognize that you should pick it up by the handle, not the spout, even if you've never seen a teapot before. 
 
-![teapot affordance](imgs/teapot.png)
+![a teapot with handle and spout](imgs/teapot.png)
 
 That's because the affordance is similar to those you have seen on many other objects -- watering pots, beverage pitchers, coffee mugs, and so on. You probably *could* pick up the pot by the spout, but your experience with similar affordances tells you the handle is the better option.
 
@@ -44,7 +44,7 @@ You are able to draw conclusions about these elements *only because you can see 
 
 This non-visual exposure of an affordance's use is called its *semantics*. The WebAIM WCAG guidelines address it like this.
 
-![guideline4-1.png](imgs/guideline4-1.png)
+![the Web AIM guideline on affordance semantics](imgs/guideline4-1.png)
 
 Let's try out some things from the point of view of someone using assistive technology. Earlier, you had [a brief look at ChromeVox Lite](/web/fundamentals/accessibility/00-intro/intro-four). Now we'll try using it without any access to the web page's visible interface.
 
@@ -63,4 +63,4 @@ Notice how the screen reader tells you some information about each interface ele
 
 The screen reader is able to construct this alternate UI because the native elements contain built-in accessibility metadata. Just as the rendering engine uses the native code to construct a visual interface, the screen reader uses the metadata in the DOM nodes to construct an accessible version, something like this.
 
-![nativecodetoacc.png](imgs/nativecodetoacc.png)
+![a screen reader uses the DOM to create accessible nodes](imgs/nativecodetoacc.png)
