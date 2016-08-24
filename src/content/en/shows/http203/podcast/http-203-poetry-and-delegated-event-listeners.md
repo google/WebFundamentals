@@ -5,6 +5,9 @@ description: Jake brings his A+ poetry game, and Paul muses over the performance
 {# wf_review_required #}
 {# wf_updated_on: 2015-10-24 #}
 {# wf_published_on: 2015-10-24 #}
+{# wf_audio_url: https://storage.googleapis.com/http-203-podcast/episode-3.mp3 #}
+{# wf_audio_url: /web/shows/http203/podcast/images/http203-episode-3-art.jpg #}
+{# wf_audio_url: http://feeds.feedburner.com/Http203Podcast #}
 
 # Poetry and Delegated Event Listeners {: .page-title }
 

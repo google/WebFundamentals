@@ -5,6 +5,9 @@ description: Paul and Jake talk about physics-based animation, asking the browse
 {# wf_review_required #}
 {# wf_updated_on: 2016-07-03 #}
 {# wf_published_on: 2016-07-03 #}
+{# wf_audio_url: https://storage.googleapis.com/http-203-podcast/epsiode-5.mp3 #}
+{# wf_audio_url: /web/shows/http203/podcast/images/http203-episode-5-art.jpg #}
+{# wf_audio_url: http://feeds.feedburner.com/Http203Podcast #}
 
 # Springy CSS, Storage, and Bisecting. {: .page-title }
 

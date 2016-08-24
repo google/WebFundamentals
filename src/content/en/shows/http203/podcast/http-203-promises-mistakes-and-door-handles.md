@@ -5,6 +5,9 @@ description: Paul and Jake talk about how to Promisify Node, the sins of CSS, an
 {# wf_review_required #}
 {# wf_updated_on: 2016-02-24 #}
 {# wf_published_on: 2016-02-24 #}
+{# wf_audio_url: https://storage.googleapis.com/http-203-podcast/episode-4.mp3 #}
+{# wf_audio_url: /web/shows/http203/podcast/images/http203-episode-4-art.jpg #}
+{# wf_audio_url: http://feeds.feedburner.com/Http203Podcast #}
 
 # Promises, Mistakes, and Door Handles {: .page-title }
 

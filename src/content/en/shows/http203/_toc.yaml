@@ -1,5 +1,59 @@
 toc:
-  - title: HTTP203
+  - title: HTTP 203
     section:
-    - include: /web/shows/http203/podcast/_toc.yaml
-    - include: /web/shows/http203/videos/_toc.yaml
+    - title: 'Podcast'
+      section:
+      - title: 'CORS, Forced Layouts, and Raptor Kebab Shops.'
+        path: /web/shows/http203/podcast/http-203-cors-forced-layouts-and-raptor-kebab-shops
+      - title: Making Burgers and Maintainable Code
+        path: /web/shows/http203/podcast/http-203-making-burgers-and-maintainable-code
+      - title: Poetry and Delegated Event Listeners
+        path: /web/shows/http203/podcast/http-203-poetry-and-delegated-event-listeners
+      - title: 'Promises, Mistakes, and Door Handles'
+        path: /web/shows/http203/podcast/http-203-promises-mistakes-and-door-handles
+      - title: 'Springy CSS, Storage, and Bisecting.'
+        path: /web/shows/http203/podcast/http-203-springy-css-storage-and-bisecting
+    - title: Series 1
+      section:
+      - title: 1. CSS Triggers
+        path: /web/shows/http203/series-1/css-triggers
+      - title: 2. Pointer Events
+        path: /web/shows/http203/series-1/pointer-events
+      - title: 3. Frame Timing API
+        path: /web/shows/http203/series-1/frame-timing
+      - title: 4. Font Rendering
+        path: /web/shows/http203/series-1/font-rendering
+      - title: 5. Gotchas
+        path: /web/shows/http203/series-1/gotchas
+      - title: 'HTTP203: Series 1'
+        path: /web/shows/http203/series-1/index
+      - title: Christmas Special
+        path: /web/shows/http203/series-1/christmas-special
+    - title: Series 2
+      section:
+      - title: Season 2 Teaser
+        path: /web/shows/http203/series-2/http203-season-2-teaser
+      - title: 2.1. Web Vs Native
+        path: /web/shows/http203/series-2/http-203-web-vs-native
+      - title: 2.2. Build Tools
+        path: /web/shows/http203/series-2/http-203-build-tools
+      - title: 2.3. HTTPS Everywhere
+        path: /web/shows/http203/series-2/http-203-https-everywhere
+      - title: 2.4. Progressive Loading
+        path: /web/shows/http203/series-2/http-203-progressive
+      - title: 2.5. Performance Matters
+        path: /web/shows/http203/series-2/http-203-perf-matters
+      - title: 2.6. Utopia vs. Dystopia
+        path: /web/shows/http203/series-2/http-203-utopia-vs-dystopia
+    - title: Series 3
+      section:
+      - title: Season 3 Teaser
+        path: /web/shows/http203/series-3/http203-season-3-teaser
+      - title: 3.1. Monoculture
+        path: /web/shows/http203/series-3/http-203-monoculture
+      - title: 3.2. Maintainable Code
+        path: /web/shows/http203/series-3/http-203-maintainable-code
+      - title: 3.3. The Future of JavaScript
+        path: /web/shows/http203/series-3/http-203-the-future-of-javascript
+      
+      
