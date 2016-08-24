@@ -126,5 +126,6 @@ and read up on the [Notifications
 specification](https://notifications.spec.whatwg.org/#using-actions) or [follow 
 along with spec as it updates](https://github.com/whatwg/notifications).
 
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
 
 {# wf_add_comment_widget #}

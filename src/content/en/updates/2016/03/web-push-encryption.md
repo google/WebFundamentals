@@ -395,5 +395,7 @@ By getting your code to output each of the intermediate values of the
 encryption you can paste them into the verifier and check that you are on the
 right track.
 
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+
 
 {# wf_add_comment_widget #}

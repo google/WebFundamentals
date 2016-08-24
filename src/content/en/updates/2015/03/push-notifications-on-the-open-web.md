@@ -11,8 +11,7 @@ description: Push Messaging and Notifications are Landing in Chrome 42.
 
 {% include "_shared/contributors/mattgaunt.html" %}
 
-
-Warning: This blog post is getting a bit old. If you are looking to learn more about implementing push, check out <a href="https://developers.google.com/web/fundamentals/getting-started/push-notifications/?hl=en">this getting started guide</a>.
+Warning: This blog post is getting a bit old. If you are looking to learn more about implementing push, check out our [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/) documentation.
 
 If you ask a room of developers what mobile device features are missing from the
 web, push notifications are always high on the list.

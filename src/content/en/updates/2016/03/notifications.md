@@ -162,5 +162,6 @@ The timestamp is currently only visible on Chrome for Android. Although it is
 not visible on desktop, it will affect the notification order on both mobile and
 desktop.
 
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
 
 {# wf_add_comment_widget #}

@@ -10,8 +10,6 @@ description: 2 new API's have been added in Chrome 44 which makes using Notifica
 
 {% include "_shared/contributors/mattgaunt.html" %}
 
-
-
 Firstly, I apologise for that awful title, but I couldn't not.
 
 In Chrome 44 [Notfication.data](https://notifications.spec.whatwg.org/#data) and
@@ -322,6 +320,6 @@ This can be used like so:
         showOptInUIForNotifications();
     }
     
-
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
 
 {# wf_add_comment_widget #}

@@ -12,8 +12,6 @@ description: Web push has had a few updates in recent versions of Chrome. GCM no
 {% include "_shared/contributors/mattgaunt.html" %}
 {% include "_shared/contributors/josephmedley.html" %}
 
-
-
 When Chrome first supported the Web Push API, it relied on the non-standard
 Google Cloud Messaging (GCM) sender ID and it's protocol. Although it was
 proprietary it allowed the  Web Push API to be made available to developers at a
@@ -272,5 +270,6 @@ VAPID it'll work in all browsers that support web push.  As more browsers
 support VAPID you can decide when to drop the `gcm_sender_id` from your
 manifest.
 
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
 
 {# wf_add_comment_widget #}

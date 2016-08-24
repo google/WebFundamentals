@@ -68,4 +68,6 @@ On Chrome for Android, because the notifications are minimized in the notificati
 [Try the demo](https://googlechrome.github.io/samples/notifications/requireInteraction.html).
 
 
+Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
+
 {# wf_add_comment_widget #}
