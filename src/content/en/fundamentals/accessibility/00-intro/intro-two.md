@@ -31,7 +31,7 @@ For example, although we tend to center our discussion of accessibility on users
 
 As you learn more, you'll find that addressing accessibility issues in this broader, more general sense almost always improves the user experience for everyone. Let's look at an example.
 
-![pooraccess.png](imgs/pooraccess.png)
+![a form with poor accessibility](imgs/pooraccess.png)
 
 This form has several accessibility issues.
 
@@ -41,6 +41,6 @@ This form has several accessibility issues.
 
 Now let's wave our accessibility wand and see the form with those issues fixed. We're going to make the text darker, modify the design so that the labels are close to the things they're labeling, and fix the label to be associated with the checkbox so you can toggle it by clicking the label as well.
 
-![betteraccess.png](imgs/betteraccess.png)
+![a form with improved accessibility](imgs/betteraccess.png)
 
 Which would you rather use? If you said "the accessible version", you're on your way to understanding a main premise of this course. Often, something that's a complete blocker for a few users is also a pain point for many others, so by fixing the accessibility issue you improve the experience for everyone.
