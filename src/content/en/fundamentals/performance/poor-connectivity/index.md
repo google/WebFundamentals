@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-05-09 #}
 {# wf_published_on: 2016-05-09 #}
 

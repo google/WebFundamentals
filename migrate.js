@@ -284,8 +284,6 @@ function migrateFile(dir, file) {
   };
 }
 
-var x = [];
-
 function migrateDirectory(dir, recursive) {
   var files = fs.readdirSync(dir);
   files.forEach(function(file) {
@@ -294,7 +292,7 @@ function migrateDirectory(dir, recursive) {
       migrateDirectory(path.join(dir, file), true);
     } else if (file.endsWith('.markdown')) {
       try {
-        x.push(migrateFile(dir, file));
+        migrateFile(dir, file);
       } catch (ex) {
         console.log('Failed trying to convert:', path.join(dir, file));
         console.log(ex);
@@ -303,5 +301,5 @@ function migrateDirectory(dir, recursive) {
   });
 }
 
-migrateDirectory('./src/content/en/shows/', true);
-fs.writeFileSync('./migrated.yaml', jsYaml.dump(x));
+migrateDirectory('./src/content/en/fundamentals/getting-started/primers/', false);
+

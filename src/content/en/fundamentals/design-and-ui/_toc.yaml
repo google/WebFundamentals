@@ -4,15 +4,15 @@ toc:
     - title: Responsive Design
       section:
       - title: The Fundamentals
-        path: /web/fundamentals/design-and-ui/responsive/fundamentals/
+        path: /web/fundamentals/design-and-ui/responsive/
       - title: Design Patterns
-        path: /web/fundamentals/design-and-ui/responsive/patterns/
+        path: /web/fundamentals/design-and-ui/responsive/patterns
       - title: Images
-        path: /web/fundamentals/design-and-ui/media/images/
+        path: /web/fundamentals/design-and-ui/media/images
       - title: Video
-        path: /web/fundamentals/design-and-ui/media/video/
+        path: /web/fundamentals/design-and-ui/media/video
       - title: Content
-        path: /web/fundamentals/design-and-ui/content/
+        path: /web/fundamentals/design-and-ui/responsive/content
     - title: User Input
       section:
       - title: Create Amazing Forms
@@ -20,7 +20,7 @@ toc:
       - title: Add Touch To Your Site
         path: /web/fundamentals/design-and-ui/input/touch/
     - title: Icons and colors
-      path: /web/fundamentals/design-and-ui/blah/
+      path: /web/fundamentals/design-and-ui/browser-customization/
     - title: Animations
       section:
       - title: Overview

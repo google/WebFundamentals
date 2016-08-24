@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-04-30 #}
 
@@ -26,7 +25,7 @@ Forms are hard to fill out on mobile. The best forms are the ones with the fewes
 Design efficient forms by avoiding repeated actions, asking for only the necessary information and guide users by showing them how far along they are in multi-part forms.
 
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 - Use existing data to pre-populate fields and be sure to enable auto-fill.
 - Use clearly-labeled progress bars to help users get through multi-part forms.
 - Provide visual calendar so users don’t have to leave your site and jump to the calendar app on their smartphones.

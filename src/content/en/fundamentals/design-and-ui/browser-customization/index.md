@@ -2,16 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Modern browsers make it easy to customize certain components, like icons, the address bar color, and even add things like custom tiles. These simple tweaks can increase engagement and bring users back to your site.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2015-09-21 #}
 {# wf_published_on: 2015-09-21 #}
 
 # Customizing Icons and Browser Colors {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
 {% include "_shared/contributors/pbakaus.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
-
 
 Modern browsers make it easy to customize certain components, like icons, the address bar color, and even add things like custom tiles. These simple tweaks can increase engagement and bring users back to your site.
 

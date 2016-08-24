@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Consider content as well as layout and graphic design when building for a range of users and devices.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-05-10 #}
 {# wf_published_on: 2016-05-10 #}
 
