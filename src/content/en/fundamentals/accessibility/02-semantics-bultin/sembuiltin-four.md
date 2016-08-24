@@ -27,13 +27,13 @@ Imagine that you're building a user interface *for screen reader users only*. He
 
 What you'd be creating is a kind of API describing the page structure, similar to the DOM API, but you can get away with less information and fewer nodes, because a lot of that information is only useful for visual presentation. It might look something like this. 
 
-![treestructure.png](imgs/treestructure.png)
+![screen reader DOM API mockup](imgs/treestructure.png)
 
 This is basically what the browser actually presents to the screen reader. The browser takes the DOM tree and modifies it into a form that is useful to assistive technology. We refer to this modified tree as the *Accessibility Tree*.
 
 You might visualize the accessibility tree as looking a bit like an old web page from the '90s: a few images, lots of links, perhaps a field and a button. 
 
-![90swebpage.png](imgs/google1998.png)
+![a 1990s style web page](imgs/google1998.png)
 
 Visually scanning down a page like this case gives you an experience similar to what a screen reader user would get. The interface is there, but it is simple and direct, much like an accessibility tree interface.
 
