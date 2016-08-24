@@ -3,6 +3,18 @@ toc:
     section:
     - title: Overview
       path: /web/fundamentals/security/
+    - title: Content Security Policy
+      section:
+      - title: Overview
+        path: /web/fundamentals/security/csp/
+      - title: Source Whitelists
+        path: /web/fundamentals/security/csp/source-whitelists
+      - title: The Evils Of Inline Code & Eval
+        path: /web/fundamentals/security/csp/inline-and-eval
+      - title: Reporting
+        path: /web/fundamentals/security/csp/reporting
+      - title: Real World Usage
+        path: /web/fundamentals/security/csp/real-world
     - title: Encrypting Data In Transit
       section:
       - title: Why HTTPS
@@ -17,15 +29,3 @@ toc:
         path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
       - title: Preventing Mixed Content
         path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
-    - title: Content Security Policy
-      section:
-      - title: Overview
-        path: /web/fundamentals/security/csp/
-      - title: Source Whitelists
-        path: /web/fundamentals/security/csp/source-whitelists
-      - title: The Evils Of Inline Code & Eval
-        path: /web/fundamentals/security/csp/inline-and-eval
-      - title: Reporting
-        path: /web/fundamentals/security/csp/reporting
-      - title: Real World Usage
-        path: /web/fundamentals/security/csp/real-world
