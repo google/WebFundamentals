@@ -5,7 +5,7 @@ description: Optimizing the critical rendering path refers to prioritizing the d
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Critical rendering path {: .page-title }
+# Critical Rendering Path {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 

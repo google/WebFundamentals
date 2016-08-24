@@ -6,7 +6,7 @@ description: It's important to understand what your app or site feels like when 
 {# wf_updated_on: 2016-05-09 #}
 {# wf_published_on: 2016-05-09 #}
 
-# Understand low bandwidth and high latency {: .page-title }
+# Understand Low Bandwidth and High Latency {: .page-title }
 
 {% include "_shared/contributors/samdutton.html" %}
 
