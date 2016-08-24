@@ -228,6 +228,15 @@ function migrateFile(dir, file) {
   if (yaml.youtubeID) {
     topOfDoc += '{# wf_youtube_id: ' + yaml.youtubeID + ' #}\n';
   }
+  if (yaml.audio_url) {
+    topOfDoc += '{# wf_audio_url: ' + yaml.audio_url + ' #}\n';
+  }
+  if (yaml.podcast_image_url) {
+    topOfDoc += '{# wf_audio_url: ' + yaml.podcast_image_url + ' #}\n';
+  }
+  if (yaml.podcast_feed_url) {
+    topOfDoc += '{# wf_audio_url: ' + yaml.podcast_feed_url + ' #}\n';
+  }
   if (yaml.title) {
     topOfDoc += '\n';
     topOfDoc += '# ' + yaml.title + ' {: .page-title }\n';
@@ -269,7 +278,13 @@ function migrateFile(dir, file) {
   var newFile = path.join(dir, file).replace('.markdown', '.md');
   fs.writeFileSync(newFile, result);
   fs.unlinkSync(path.join(dir, file));
+  return {
+    title: yaml.title,
+    path: newFile
+  };
 }
+
+var x = [];
 
 function migrateDirectory(dir, recursive) {
   var files = fs.readdirSync(dir);
@@ -279,7 +294,7 @@ function migrateDirectory(dir, recursive) {
       migrateDirectory(path.join(dir, file), true);
     } else if (file.endsWith('.markdown')) {
       try {
-        migrateFile(dir, file);
+        x.push(migrateFile(dir, file));
       } catch (ex) {
         console.log('Failed trying to convert:', path.join(dir, file));
         console.log(ex);
@@ -289,3 +304,4 @@ function migrateDirectory(dir, recursive) {
 }
 
 migrateDirectory('./src/content/en/shows/', true);
+fs.writeFileSync('./migrated.yaml', jsYaml.dump(x));
