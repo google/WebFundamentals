@@ -2,12 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Payment Request API is for fast, easy payments on the web.
 
+{# wf_published_on: 2016-07-25 #}
+{# wf_updated_on: 2016-08-18 #}
+
 # Payment Request API: An Integration Guide {: .page-title }
 
 {% include "_shared/contributors/agektmr.html" %}
 {% include "_shared/contributors/dgash.html" %}
 
-Dogfood: PaymentRequest is still in development. While we think it's stable enough to implement, it may continue to change. We'll keep this page updated to always reflect the current status of the API.
+Dogfood: PaymentRequest is still in development. While we think it's stable enough to implement, it may continue to change. We'll keep this page updated to always reflect the current status of the API. Meanwhile, to protect yourself from API changes that may be backwards incompatible, we're offering [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that can be embedded on your site. The shim will paper over any API differences for two major Chrome versions.
 
 
 Buying goods online is a convenient but often frustrating experience, particularly on mobile devices. Although mobile traffic continues to increase, mobile conversions account for only about a third of all completed purchases. In other words, users abandon mobile purchases twice as often as desktop purchases. Why?
@@ -22,7 +25,8 @@ Most of the problems that lead to abandonment can be directly traced to purchase
 
 Any system that improves or solves one or more of those problems is a welcome change. We started solving the problem already with [Autofill](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill), but now we'd like to talk about a more comprehensive solution.
 
-## Introducing the Payment Request API {: # introducing}
+## Introducing the Payment Request API {: #introducing }
+
 The Payment Request API is a system that is meant to *eliminate checkout forms*. It vastly improves user workflow during the purchase process, providing a more consistent user experience and enabling web merchants to easily leverage disparate payment methods. The Payment Request API is not a new payment method, nor does it integrate directly with payment processors; rather, it is a process layer whose goals are:
 
 * To let the browser act as intermediary among merchants, users, and payment methods
@@ -61,6 +65,17 @@ The beauty of the new process is threefold: from the user's perspective, all the
 <div style="clear:both;"></div>
 
 ## Using the Payment Request API {: #using }
+
+### Load Payment Request API shim
+
+To mitigate pains of catching up with this living standard API, we strongly 
+recommend you to add this shim in `<head>` section of your code. This shim
+will be updated as API changes and will do its best to keep your code working
+at least 2 major releases of Chrome.
+
+
+    <script src="https://storage.googleapis.com/prshim/v1/payment-shim.js">
+
 
 ### Create a PaymentRequest {: #create-paymentrequest }
 
@@ -313,7 +328,7 @@ In order to reject an address for reasons such as non-supported region, pass `de
 Note: Resolving <code>shippingaddresschange</code> event and leaving <code>details.shippingOptions</code> as an empty array also means address rejection (i.e. you cannot ship to that location). Always make sure your shipping options are up-to-date and match whatever address the user provided.
 
 
-    payment.addEventListener('shippingoptionchange', e => {
+    payment.addEventListener('shippingaddresschange', e => {
       e.updateWith(((details, addr) => {
         if (addr.country === 'US') {
           var shippingOption = {
