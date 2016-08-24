@@ -1,49 +1,48 @@
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: TODO
 
+{# wf_review_required #}
+{# wf_updated_on: 2015-09-08 #}
+{# wf_published_on: 2015-09-08 #}
 
+# Enage and Retain Users {: .page-title }
 
+Connect with your users and keep them coming back. Use any to improve your
+site. Use all if you're working towards a [progressive web app](/web/progressive-web-apps/).
 
+## Web App Manifest
 
+<img src="https://placehold.it/300x200" class="attempt-right">
 
+With a JSON file and a link tag you can control how your app appears 
+to the user in areas where they would expect to see apps (for example 
+the mobile home screen), direct what the user can launch, and define 
+its appearance at launch.
 
+[Get Started](web-app-manifest/)
+
+<div style="clear:both;"></div>
+
+## Add to Home Screen
+
+<img src="https://placehold.it/300x200" class="attempt-right">
+
+Web app install banners give you the ability to let your users quickly
+and seamlessly add your web app to their home screen, making it easy to
+launch and return to your app.
+
+[Get Started](app-install-banners/)
+
+<div style="clear:both;"></div>
 
 ## Push Notifications
 
-Push notifications are one of the most valuable capabilities of native apps, and this capability is now available on the web. To get the most out of them, notifications need to be timely, precise, and relevant.
+<img src="https://placehold.it/300x200" class="attempt-right">
 
+Web push notifications makes it easy to re-engage with users by
+showing relevant, timely, and contextual notifications, even when 
+the browser is closed.
 
-  [Push Notifications: Timely, Relevant, and Precise](/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
-
-  [What makes a good notification?](/web/fundamentals/engage-and-retain/push-notifications/good-notification?hl=en)
-
-  [Requesting permission and subscribing users](/web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions?hl=en)
-
-  [Sending messages](/web/fundamentals/engage-and-retain/push-notifications/sending-messages?hl=en)
-
-  [Handling messages](/web/fundamentals/engage-and-retain/push-notifications/handling-messages?hl=en)
-
-  [Video: web push notifications (I/O 2016)](/web/fundamentals/engage-and-retain/push-notifications/video?hl=en)
-
-
-## Improve User Experiences with a Web App Manifest
-
-The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
-
-
-  [Improve User Experiences with a Web App Manifest](/web/fundamentals/engage-and-retain/web-app-manifest/?hl=en)
-
-
-## Using App Install Banners
-
-There are two types of app install banners: <i>web</i> app install banners and <i>native</i> app install banners. They give you the ability to let users quickly and seamlessly add your web or native app to their home screens without leaving the browser.
-
-
-  [Using App Install Banners](/web/fundamentals/engage-and-retain/app-install-banners/?hl=en)
-  
-  [Do More With App Install Banners](/web/fundamentals/engage-and-retain/app-install-banners/advanced?hl=en)
-  
-  [Native app Install Banners](/web/fundamentals/engage-and-retain/app-install-banners/native-app-install?hl=en)
-  
-
-
-
+[Get Started](push-notifications/)
 

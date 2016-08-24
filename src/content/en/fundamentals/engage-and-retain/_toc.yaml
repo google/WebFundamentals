@@ -1,6 +1,8 @@
 toc:
   - title: Engage & Retain Users
     section:
+    - title: Overview
+      path: /web/fundamentals/engage-and-retain/
     - title: The Web App Manifest
       path: /web/fundamentals/engage-and-retain/web-app-manifest/
     - title: Web Push Notifications
