@@ -28,7 +28,7 @@ When a browser _visits_ a website page, it is requesting for an HTML resource. T
 
 ## HTTPS benefits
 
-When a browser requests resources over HTTPS---which stands for HTTP Secure---it 
+When a browser requests resources over HTTPS&mdash;which stands for HTTP Secure&mdash;it 
 uses an encrypted connection to communicate with the web server.
 
 Using HTTPS has three main benefits:
@@ -103,7 +103,7 @@ requests without restricting the functionality of many sites.
 
 Loading an insecure script from an HTTPS page.
 
-Viewing this sample page over **HTTPS**---[**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html)---includes an **HTTP** script tag which attempts to load mixed content. 
+Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html)&mdash;includes an **HTTP** script tag which attempts to load mixed content. 
 
 <pre class="prettyprint">
 {% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/simple-example.html %}
@@ -124,7 +124,7 @@ default. See [browser behavior with mixed content](#browser-behavior-with-mixed-
 
 Loading insecure data with XMLHttpRequest.
 
-Viewing this sample page over **HTTPS**---[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html)---includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
+Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html)&mdash;includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
 
 <pre class="prettyprint">
 {% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html %}
@@ -157,7 +157,7 @@ Image galleries often rely on the `<img>` tag `src` attribute to display
 thumbnail images on the page, the anchor (`<a>`) tag `href` attribute is 
 then used to load the full sized image for the gallery overlay. Normally 
 `<a>` tags do not cause mixed content, but in this case, the jQuery code 
-overrides the default link behavior---to navigate to a new page---and instead 
+overrides the default link behavior&mdash;to navigate to a new page&mdash;and instead 
 loads the **HTTP** image on this page. 
 
 <figure>
