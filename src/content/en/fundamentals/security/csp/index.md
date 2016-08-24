@@ -12,8 +12,8 @@ The web's security model is rooted in the
 from `https://mybank.com` should only have access to `https://mybank.com`'s
 data, and `https://evil.example.com` should certainly never be allowed access.
 Each origin is kept isolated from the rest of the web, giving developers a safe
-sandbox in which to build and play. In theory, this is perfectly brilliant. In
-practice, attackers have found clever ways to subvert the system.
+sandbox in which to build and play. In theory, this is brilliant. In practice,
+attackers have found clever ways to subvert the system.
 
 [Cross-site scripting (XSS)](http://en.wikipedia.org/wiki/Cross-site_scripting)
 attacks, for example, bypass the same origin policy by tricking a site into

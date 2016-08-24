@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Mixed content refers to a webpage where the initial HTML content is loaded over a secure HTTPS connection, but other resources are then loaded into the page over an insecure HTTP connection.
+description: Mixed occurs when initial HTML is loaded over a secure HTTPS connection, but other resources are loaded over an insecure HTTP connection.
 
 # What is mixed content? {: .page-title }
 
@@ -9,13 +9,13 @@ description: Mixed content refers to a webpage where the initial HTML content is
   - "HTTPS is important to protect both your site and your users from attack."
   - "Mixed content degrades the security and user experience of your HTTPS site."
 
-**Mixed content** refers to a webpage where the initial HTML content is
-loaded over a secure HTTPS connection, but other resources (such as images,
-videos, stylesheets, scripts) are then loaded over an insecure HTTP connection.
-This is called mixed content because both HTTP and HTTPS content are being
-loaded to display the same page, and the initial request was secure over HTTPS.
-Modern browsers display warnings about this type of content to indicate to the
-user that this page contains insecure resources.
+**Mixed content** occurs when initial HTML is loaded over a secure HTTPS
+connection, but other resources (such as images, videos, stylesheets, scripts)
+are loaded over an insecure HTTP connection. This is called mixed content
+because both HTTP and HTTPS content are being loaded to display the same page,
+and the initial request was secure over HTTPS. Modern browsers display warnings
+about this type of content to indicate to the user that this page contains
+insecure resources.
 
 ## Resource request and web browsers
 

@@ -6,7 +6,7 @@ description: How your website appears in search results is an important aspect o
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-10-07 #}
 
-# Instruct search engines how your multi-device page is structured {: .page-title }
+# Give Search Engines Your Site Structure {: .page-title }
 
 {% include "_shared/contributors/agektmr.html" %}
 

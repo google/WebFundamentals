@@ -4,9 +4,25 @@ toc:
     - title: Overview
       path: /web/fundamentals/discovery-and-monetization/
     - title: Search Optimization
-      path: /web/fundamentals/discovery-and-monetization/search/
+      section:
+      - title: Overview
+        path: /web/fundamentals/discovery-and-monetization/search-optimization/
+      - title: Give Search Engines Your Site Structure
+        path: /web/fundamentals/discovery-and-monetization/search-optimization/url-structure
+      - title: Control Crawling and Indexing from Search Engines
+        path: /web/fundamentals/discovery-and-monetization/search-optimization/control-crawling-and-indexing
     - title: Social Discovery
-      path: /web/fundamentals/discovery-and-monetization/social/
+      path: /web/fundamentals/discovery-and-monetization/social-discovery/
     - title: Monetization with Ads
-      path: /web/fundamentals/ads
       status: external
+      section:
+      - title: Overview
+        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/
+      - title: How Ads Work
+        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/how-ads-work
+      - title: Include
+        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/include-ads
+      - title: Customize
+        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/customize-ads
+      - title: Optimize
+        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/optimize-ads
