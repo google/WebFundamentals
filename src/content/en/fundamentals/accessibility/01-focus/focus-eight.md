@@ -27,7 +27,7 @@ Sometimes when you're managing focus you can get into a situation you can't get 
 
 Oddly, there are times when this behavior is actually desirable, like in a modal window. Normally, when the modal is displayed, you don't want the user to access the content behind it. You might add an overlay to cover the page visually, but that doesn't stop keyboard focus from accidentally traveling outside the modal. In instances like this you can implement a temporary keyboard trap to ensure that you trap focus only while the modal is displayed and then restore focus to the previously-focused item when the modal is closed.
 
-![modal-example](imgs/modal-example.png)
+![a modal window](imgs/modal-example.png)
 
 >There are some proposals on how to make this easier for developers, including the `<dialog>` element, but they don't yet have widespread browser support. 
 >
