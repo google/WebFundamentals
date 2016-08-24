@@ -85,7 +85,11 @@ function writeEpisode(show, episode, template) {
   var result = template(episode);
   mkdirp.sync(path.join(ROOT_PATH, show.path));
   var filename = path.join(ROOT_PATH, show.path, episode.slugified) + '.md';
-  fs.writeFileSync(filename, result);
+  try {
+    fs.writeFileSync(filename, result, {flag: 'wx'});
+  } catch (ex) {
+    console.log('Skipping: File already exists', filename);
+  }
 }
 
 function buildFilesForShow(show, shows) {
@@ -117,6 +121,8 @@ function createShow(show) {
 }
 
 showList.forEach(function(show) {
-  createShow(show);
+  if (show.skip !== true) {
+    createShow(show);
+  }
 });
 
