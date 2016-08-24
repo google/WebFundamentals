@@ -27,7 +27,7 @@ In this lesson we'll talk about *focus* and how you can manage it in your applic
 
 You're probably familiar with focus for text fields. To type into a text field, you click it with the mouse, giving it focus. You may also know that if you press `Tab`, focus moves to the next control on the page. This is a great place to start learning about accessibility because we all know how to use a keyboard, it's easy to relate to and test, and it benefits virtually all users. 
 
-![Keyboard focus](imgs/keyboard-focus.png)
+![keyboard focus in a text field](imgs/keyboard-focus.png)
 
 Users with motor impairments, which could be anything from permanent paralysis to a sprained wrist, may rely on a keyboard or switch device to navigate your page, so a good focus strategy is critical to providing a good experience for them.
 
