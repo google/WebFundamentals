@@ -2,12 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Mixed occurs when initial HTML is loaded over a secure HTTPS connection, but other resources are loaded over an insecure HTTP connection.
 
-# What is mixed content? {: .page-title }
+{# wf_updated_on: 2016-08-24 #}
+{# wf_published_on: 2015-09-25 #}
+
+# What Is Mixed Content? {: .page-title }
 
 {% include "_shared/contributors/johyphenel.html" %}
-
-  - "HTTPS is important to protect both your site and your users from attack."
-  - "Mixed content degrades the security and user experience of your HTTPS site."
 
 **Mixed content** occurs when initial HTML is loaded over a secure HTTPS
 connection, but other resources (such as images, videos, stylesheets, scripts)
@@ -17,22 +17,21 @@ and the initial request was secure over HTTPS. Modern browsers display warnings
 about this type of content to indicate to the user that this page contains
 insecure resources.
 
-## Resource request and web browsers
+## TL;DR
 
-When a browser _visits_ a page of a website, it is making a request for an HTML 
-resource. The web server then returns the HTML content, which the browser parses 
-and displays to the users. Often a single HTML file isn't enough to display a 
-complete page, so the HTML file includes references to other resources that need 
-to be requested by the browser. These subresources can be things like images, 
-videos, extra HTML, CSS, or JavaScript; which are each fetched using separate 
-requests. 
+* HTTPS is important to protect both your site and your users from attack.
+* Mixed content degrades the security and user experience of your HTTPS site.
+
+## Resource requests and web browsers
+
+When a browser _visits_ a website page, it is requesting for an HTML resource. The web server then returns the HTML content, which the browser parses and displays to users. Often a single HTML file isn't enough to display a complete page, so the HTML file includes references to other resources that the browser needs to request. These subresources can be things like images, videos, extra HTML, CSS, or JavaScript, which are each fetched using separate requests. 
 
 ## HTTPS benefits
 
-When a browser requests resources over HTTPS - which stands for HTTP Secure - it 
+When a browser requests resources over HTTPS---which stands for HTTP Secure---it 
 uses an encrypted connection to communicate with the web server.
 
-Using HTTPS has 3 main benefits:
+Using HTTPS has three main benefits:
 
 * Authentication
 * Data integrity
@@ -49,7 +48,7 @@ impersonating your bank and stealing your login credentials.
 
 ### Data integrity
 
-_Has anyone tampered with the content I am sending or receiving?_ 
+_Has anyone tampered with the content that I'm sending or receiving?_ 
 
 HTTPS lets the browser detect if an attacker has changed any data the browser 
 receives. When transferring money using your bank's website, this prevents an 
@@ -67,11 +66,11 @@ tracking the websites visited, or stealing information sent or received.
 
 HTTPS stands for HTTP Secure, Hyper(t)ext Transfer Protocol Secure. The 
 **secure** portion here comes from the encryption added to the requests sent 
-and received by the browser. Currently most browsers use the TLS protocol to 
+and received by the browser. Currently, most browsers use the TLS protocol to 
 provide encryption; **TLS** is sometimes referred to as SSL. 
 
-The details of HTTPS, TLS, and SSL are beyond the scope of this article, but if 
-you want to learn more, these resources are a good place to start:
+Details of HTTPS, TLS, and SSL are beyond the scope of this article, but if 
+you want to learn more, the following resources are a good place to start:
 
 * [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS) 
 * [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)
@@ -90,7 +89,7 @@ resource.
 Although many browsers report mixed content warnings to the user, by the time 
 this happens, it is too late: the insecure requests have already been performed 
 and the security of the page is compromised. This scenario is, unfortunately, 
-quite common in the web, which is why browsers can't just block all mixed 
+quite common o n the web, which is why browsers can't just block all mixed 
 requests without restricting the functionality of many sites.
 
 <figure>
@@ -104,14 +103,13 @@ requests without restricting the functionality of many sites.
 
 Loading an insecure script from an HTTPS page.
 
-Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html) — includes 
-an **HTTP** script tag which attempts to load mixed content. 
+Viewing this sample page over **HTTPS**---[**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html)---includes an **HTTP** script tag which attempts to load mixed content. 
 
-{% include_code src=_code/simple-example.html snippet=snippet1 %}
+<pre class="prettyprint">
+{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/simple-example.html %}
+</pre>
 
-In this example, the script `simple-example.js` is loaded with an **HTTP** URL. This 
-is the simplest case of mixed content. When the `simple-example.js` file is 
-requested by the browser, an attacker can inject code into the returned content 
+In this example, the script `simple-example.js` is loaded with an **HTTP** URL. This is the simplest case of mixed content. When the browser requests the `simple-example.js` file, an attacker can inject code into the returned content 
 and take control of the entire page. 
 
 Thankfully, most modern browsers block this type of dangerous content by 
@@ -126,14 +124,15 @@ default. See [browser behavior with mixed content](#browser-behavior-with-mixed-
 
 Loading insecure data with XMLHttpRequest.
 
-Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html) — 
-includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
+Viewing this sample page over **HTTPS**---[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html)---includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
 
-{% include_code src=_code/xmlhttprequest-example.html snippet=snippet1 %} 
+<pre class="prettyprint">
+{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html %}
+</pre>
 
 Here the **HTTP** URL is constructed dynamically in JavaScript, and is eventually 
-used to load an insecure resource by `XMLHttpRequest`. Like the simple example 
-above, when the `xmlhttprequest-data.js` file is requested by the browser, an 
+used  by `XMLHttpRequest` to load an insecure resource. Like the simple example 
+above, when the browser requests the `xmlhttprequest-data.js` file, an 
 attacker can inject code into the returned content and take control of the 
 entire page.
 
@@ -148,17 +147,17 @@ Most modern browsers block these dangerous requests as well.
 
 Loading insecure images with jQuery lightbox.
 
-Viewing this sample page over **HTTPS** — [**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html) —
-initially does not have any mixed content problems, however when the thumbnail 
-image is clicked, a full size mixed content image is loaded over **HTTP**. 
+When viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html)&mdash;initially it does not have any mixed content problems; however, when the thumbnail image is clicked, a full size mixed content image is loaded over **HTTP**. 
 
-{% include_code src=_code/image-gallery-example.html snippet=snippet1 %}
+<pre class="prettyprint">
+{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html %}
+</pre>
 
 Image galleries often rely on the `<img>` tag `src` attribute to display 
 thumbnail images on the page, the anchor (`<a>`) tag `href` attribute is 
 then used to load the full sized image for the gallery overlay. Normally 
 `<a>` tags do not cause mixed content, but in this case, the jQuery code 
-overrides the default link behavior — to navigate to a new page — and instead 
+overrides the default link behavior---to navigate to a new page---and instead 
 loads the **HTTP** image on this page. 
 
 <figure>
@@ -179,10 +178,10 @@ do if they intercept or change that content. Passive mixed content includes
 images, video, and audio content, along with other resources that cannot interact 
 with the rest of the page.  
 
-**Active mixed content** interacts with the page as a whole and will allow an 
+**Active mixed content** interacts with the page as a whole and allows an 
 attacker to do almost anything with the page. Active mixed content includes 
-scripts, stylesheets, iframes, flash resources, and other code that can be 
-downloaded and executed by the browser.
+scripts, stylesheets, iframes, flash resources, and other code that the browser can  
+download and execute.
 
 ### Passive mixed content
 
@@ -196,11 +195,13 @@ site; or replace your product pictures with ads for a different site or product.
 Even if the attacker doesn't alter the content of your site, you still have a 
 large privacy issue where an attacker can track users using mixed content 
 requests. The attacker can tell which pages a user visits and which products 
-they view based on images or other resources loaded by the browser. 
+they view based on images or other resources that the browser loads.
 
-The following are example of passive mixed content: 
+The following is an example of passive mixed content: 
 
-{% include_code src=_code/passive-mixed-content.html snippet=snippet1 %}
+<pre class="prettyprint">
+{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/passive-mixed-content.html %}
+</pre>
 
 Most browsers still render this type of mixed content to the user, however a 
 warning is also displayed as this poses a security and privacy risk to your site 
@@ -214,7 +215,7 @@ and users.
 ### Active mixed content
 
 Active mixed content poses a greater threat than passive. An attacker can 
-intercept and rewrite active content thereby taking full control of your page or 
+intercept and rewrite active content, thereby taking full control of your page or 
 even your entire website. This allows the attacker to change anything about the 
 page, including displaying entirely different content, stealing user passwords 
 or other login credentials, stealing user session cookies, or redirecting the 
@@ -224,12 +225,11 @@ Due to the severity of this threat, many browsers block this type of content by
 default to protect users, but functionality varies between browser vendors and 
 versions.
 
-The following are examples of active mixed content:
+The following contains examples of active mixed content:
 
-{% include_code src=_code/active-mixed-content.html snippet=snippet1 %}
-
-{% include_code src=_code/active-mixed-content.html snippet=snippet2 %}
-
+<pre class="prettyprint">
+{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/active-mixed-content.html %}
+</pre>
 
 <figure>
   <img src="imgs/active-mixed-content-errors.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure resource. This request has been blocked; the content must be served over HTTPS.">
@@ -239,14 +239,14 @@ The following are examples of active mixed content:
 ## Browser behavior with mixed content
 
 Due to the threats described above, it would be ideal for browsers to block all 
-mixed content. However this would break a large number of websites that millions 
+mixed content. However, this would break a large number of websites that millions 
 of users rely on every day. The current compromise is to block the most 
-dangerous types of mixed content, and allow the less dangerous types to still be 
+dangerous types of mixed content and allow the less dangerous types to still be 
 requested. 
 
 Modern browsers follow [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/), which defines [**optionally blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable) and [**blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable) categories. 
 
-From the spec, resources qualify as optionally blockable content "when the risk 
+From the spec, a resource qualifies as optionally blockable content "when the risk 
 of allowing its usage as mixed content is outweighed by the risk of breaking 
 significant portions of the web"; this is a subset of the [passive mixed 
 content](#passive-mixed-content) category described above. At the time of this writing, images, 
@@ -259,8 +259,8 @@ and is blocked by the browser.
 
 ### Browser versions
 
-It is important to remember that not every visitor of your website will be using 
-the most up to date browsers. Different versions from different browser vendors 
+It is important to remember that not every visitor to your website use 
+the most up-to-date browsers. Different versions from different browser vendors 
 each behave differently with mixed content. At worst, some browsers and versions 
 don't block any mixed content at all, which is very unsafe for the user. 
 
