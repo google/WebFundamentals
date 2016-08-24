@@ -6,7 +6,7 @@ description: Being listed properly on search engines is critical to delivering y
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-12-14 #}
 
-# Control crawling and indexing from search engines {: .page-title }
+# Control Crawling and Indexing from Search Engines {: .page-title }
 
 {% include "_shared/contributors/agektmr.html" %}
 

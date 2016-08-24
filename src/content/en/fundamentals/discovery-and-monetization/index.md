@@ -8,4 +8,34 @@ description: TODO
 
 # Discovery and Monetization {: .page-title }
 
-TODO: Needs to be completed
+TBD
+
+## Search Optimization
+
+<img src="https://placehold.it/300x200" class="attempt-right">
+
+TBD
+
+[Get Started](search-optimization/)
+
+<div style="clear:both;"></div>
+
+## Social Discovery
+
+<img src="https://placehold.it/300x200" class="attempt-right">
+
+TBD
+
+[Get Started](social-discovery/)
+
+<div style="clear:both;"></div>
+
+## Montetization with Ads
+
+<img src="https://placehold.it/300x200" class="attempt-right">
+
+TBD
+
+[Get Started](monetization-with-ads/)
+
+<div style="clear:both;"></div>
