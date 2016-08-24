@@ -79,7 +79,23 @@
     });
   }
 
+  function initFeed() {
+    var placeholderTitle = 'RSS Feed Widget is not supported.';
+    var placeholderText = 'The RSS Feed Widget is <b>NOT</b> supported in the ';
+    placeholderText += 'local development environment. Sorry. ';
+    placeholderText += 'Lorem ipsum dolor sit amet, perfecto volutpat prodesset duo ei. Per ne albucius consulatu. Graece repudiandae ut vis. Quot omnis vix ad, prodesset consetetur persequeris ea mel. Nostrum urbanitas usu eu, qui id graeci facilisi.';
+    var feedElements = document.querySelectorAll('div.feed.hfeed');
+    feedElements.forEach(function(elem) {
+      elem.querySelector('article.hentry').style.display = 'block';
+      elem.querySelector('header').textContent = placeholderTitle;
+      elem.querySelector('.entry-content').innerHTML = placeholderText;
+      elem.querySelector('.vcard').innerHTML = 'Jane Doe';
+      elem.querySelector('.published').textContent = 'January 1st, 2016';
+    });
+  }
+
   initNavToggles();
   highlightActiveNavElement();
   initYouTubeVideos();
+  initFeed();
 })();

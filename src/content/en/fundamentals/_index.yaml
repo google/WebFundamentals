@@ -26,7 +26,7 @@ landing_page:
       - label: See sample doc
         path: performance/
 
-  - heading: Latest Updates for Web Developers (aka the New Stuff)
+  - heading: Latest Updates for Web Developers
     columns:
     - items:
       - custom_html: >
@@ -75,7 +75,7 @@ landing_page:
       image_path: https://placehold.it/1600x900
       buttons:
       - label: Learn more
-        path: /web/fundamentals/performance/
+        path: /web/fundamentals/engage-and-retain/push-notifications/
 
 
     - heading: Move to HTTPS
@@ -103,8 +103,8 @@ landing_page:
 
       - icon:
           icon_name: network_check
-        path: /web/fundamentals/performance/
-        heading: "Instant Loading"
+        path: /web/fundamentals/instant-and-offline/
+        heading: "Instant & Offline Loading"
         description: "Lorem ipsum, something, this that and the other thing."
 
       - icon:
@@ -137,10 +137,10 @@ landing_page:
           icon_name: devices
         path: /web/fundamentals/native-hardware/
         heading: "Accessing Native Hardware"
-        description: "Locate your users and help them contact you."
+        description: "Access native device hardware to level-up your experience."
 
       - icon:
           icon_name: accessibility
         path: /web/fundamentals/accessibility/
         heading: "Accessibility"
-        description: "i like bacon, it's yummy and informative."
+        description: "Make your site accessible to everone."

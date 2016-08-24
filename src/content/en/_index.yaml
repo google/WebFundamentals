@@ -24,7 +24,7 @@ landing_page:
         path: "#follow-best-practices"
         classname: button button-primary
       - label: Progressive Web Apps
-        path: "#progressive-web-apps"
+        path: "/web/progressive-web-apps/"
         classname: button button-primary
       - label: Accelerated Mobile Pages
         path: "#accelerated-mobile-pages"
