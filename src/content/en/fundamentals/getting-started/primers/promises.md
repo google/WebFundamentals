@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: "Promises simplify deferred and asynchronous computations. A promise represents an operation that hasn't completed yet."
 
+{# wf_published_on: 2013-12-16 #}
+{# wf_updated_on: 2014-01-29 #}
+
 # Introduction to JavaScript Promises {: .page-title }
 
 {% include "_shared/contributors/jakearchibald.html" %}
@@ -840,48 +843,94 @@ All methods work in Chrome, Opera, Firefox, Microsoft Edge, and Safari unless ot
 
 ### Static Methods
 
-#### `Promise.resolve(promise);`
-Returns promise (only if `promise.constructor == Promise`)
+<table class="responsive methods">
+<tr>
+<th colspan="2">Method summaries</th>
+</tr>
+<tr>
+  <td><code>Promise.resolve(promise);</code></td>
+  <td>Returns promise (only if <code>promise.constructor == Promise</code>)</td>
+</tr>
+<tr>
+  <td><code>Promise.resolve(thenable);</code></td>
+  <td>Make a new promise from the thenable. A thenable is promise-like in as far as it has a "then" method.</td>
+</tr>
+<tr>
+  <td><code>Promise.resolve(obj);</code></td>
+  <td>Make a promise that fulfills to <code>obj</code>. in this situation.</td>
+</tr>
+<tr>
+  <td><code>Promise.reject(obj);</code></td>
+  <td>Make a promise that rejects to <code>obj</code>. For consistency and debugging (e.g. stack traces), <code>obj</code> should be an <code>instanceof Error</code>.</td>
+</tr>
+<tr>
+  <td><code>Promise.all(array);</code></td>
+  <td>Make a promise that fulfills when every item in the array fulfills, and rejects if (and when) any item rejects. Each array item is passed to <code>Promise.resolve</code>, so the array can be a mixture of promise-like objects and other objects. The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.</td>
+</tr>
+<tr>
+  <td><code>Promise.race(array);</code></td>
+  <td>Make a Promise that fulfills as soon as any item fulfills, or rejects as soon as any item rejects, whichever happens first.</td>
+</tr>
+</table>
 
-#### `Promise.resolve(thenable);`
-Make a new promise from the thenable. A thenable is promise-like in as far as it has a "then" method.
-
-
-#### `Promise.resolve(obj);`
-Make a promise that fulfills to `obj`.` in this situation.
-
-#### `Promise.reject(obj);`
-Make a promise that rejects to `obj`. For consistency and debugging (e.g. stack traces), `obj` should be an `instanceof Error`.
-
-#### `Promise.all(array);`
-Make a promise that fulfills when every item in the array fulfills, and rejects if (and when) any item rejects. Each array item is passed to `Promise.resolve`, so the array can be a mixture of promise-like objects and other objects. The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.
-
-#### `Promise.race(array);`
-Make a Promise that fulfills as soon as any item fulfills, or rejects as soon as any item rejects, whichever happens first.
-
-**Note:** I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposite of `Promise.all` that only rejects if all items reject.
+Note: I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposite of `Promise.all` that only rejects if all items reject.
 
 ### Constructor
 
-    new Promise(function(resolve, reject) {});
+<table class="responsive constructors">
+<tr>
+<th colspan="2">Constructor</th>
+</tr>
+<tr>
+  <td><code>new Promise(function(resolve, reject) {});</code></td>
+  <td>
+    <p>
+      <code>resolve(thenable)</code><br>
+      Your promise will be fulfilled/rejected with the outcome of <code>thenable</code>
+    </p>
 
+    <p>
+      <code>resolve(obj)</code><br>
+      Your promise is fulfilled with <code>obj</code>
+    </p>
 
-#### `resolve(thenable)`
-Your promise will be fulfilled/rejected with the outcome of `thenable`
-
-#### `resolve(obj)`
-Your promise is fulfilled with `obj`
-
-#### `reject(obj)`
-Your promise is rejected with `obj`. For consistency and debugging (eg stack traces), obj should be an `instanceof Error`. Any errors thrown in the constructor callback will be implicitly passed to `reject()`.
-
+    <p>
+      <code>reject(obj)</code><br>
+      Your promise is rejected with <code>obj</code>. For consistency and 
+      debugging (eg stack traces), obj should be an <code>instanceof Error</code>.
+      Any errors thrown in the constructor callback will be implicitly passed
+      to <code>reject()</code>.
+    </p>
+  </td>
+</tr>
+</table>
+    
 ### Instance Methods
 
-#### `promise.then(onFulfilled, onRejected)`
-`onFulfilled` is called when/if "promise" resolves. `onRejected` is called when/if "promise" rejects. Both are optional, if either/both are omitted the next `onFulfilled`/`onRejected` in the chain is called. Both callbacks have a single parameter, the fulfillment value or rejection reason. "then" returns a new promise equivalent to the value you return from `onFulfilled`/`onRejected` after being passed through `Promise.resolve`. If an error is thrown in the callback, the returned promise rejects with that error.
+<table class="responsive methods">
+<tr>
+<th colspan="2">Instance Methods</th>
+</tr>
+<tr>
+  <td><code>promise.then(onFulfilled, onRejected)</code></td>
+  <td>
+    <code>onFulfilled</code> is called when/if "promise" resolves. 
+    <code>onRejected</code> is called when/if "promise" rejects. Both are
+    optional, if either/both are omitted the next 
+    <code>onFulfilled</code>/<code>onRejected</code> in the chain is called. 
+    Both callbacks have a single parameter, the fulfillment value or 
+    rejection reason. <code>then</code> returns a new promise equivalent to 
+    the value you return from <code>onFulfilled</code>/<code>onRejected</code>
+    after being passed through <code>Promise.resolve</code>. If an error is
+    thrown in the callback, the returned promise rejects with that error.
+  </td>
+</tr>
+<tr>
+  <td><code>promise.catch(onRejected)</code></td>
+  <td>Sugar for <code>promise.then(undefined, onRejected)</code></td>
+</tr>
+</table>
 
-#### `promise.catch(onRejected)`
-Sugar for `promise.then(undefined, onRejected)`
 
 
 Many thanks to Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp, Addy Osmani, Arthur Evans, and Yutaka Hirano who proofread this and made corrections/recommendations.

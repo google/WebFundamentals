@@ -2,7 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Google and AnswerLab undertook a study examining how users interact with a diverse set of mobile sites. The goal was to answer the question, 'What makes a good mobile site?'
 
-{# wf_translation_priority: 1 #}
+{# wf_published_on: 2014-08-08 #}
+{# wf_updated_on: 2015-09-17 #}
 
 # What makes a good mobile site? {: .page-title }
 
@@ -215,7 +216,7 @@ ensure that users get results from the most relevant segment.
 
 Success: Understand your customer journeys and let users convert on their own terms. 
 
-### 9. Let users explore before they commit
+### Let users explore before they commit
 
 Study participants were frustrated by sites that require upfront registrations
 to view the site, especially when the brand was unfamiliar. Although customer

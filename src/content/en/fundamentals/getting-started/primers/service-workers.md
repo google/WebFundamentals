@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features will rely on.
 
+{# wf_published_on: 2014-12-01 #}
+{# wf_updated_on: 2016-01-18 #}
+
 # Service Workers - an Introduction {: .page-title }
 
 {% include "_shared/contributors/mattgaunt.html" %}
