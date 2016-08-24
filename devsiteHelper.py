@@ -10,6 +10,13 @@ from google.appengine.ext.webapp.template import render
 
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 
+def slugify(str):
+  # Very simply slugify
+  slug = str.encode('ascii', 'ignore').lower()
+  slug = re.sub(r'[^a-z0-9]+', '-', slug).strip('-')
+  slug = re.sub(r'[-]+', '-', slug)
+  return slug
+
 
 def checkForRedirect(requestedPath, lang, useMemcache):
   # Reads the redirect files from the current directory and up the directory

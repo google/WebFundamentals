@@ -63,7 +63,9 @@ def parseIndexYamlItems(yamlItems):
       if 'heading' in yamlItem:
         if link:
           item += link
-        item += '<h3>' + yamlItem['heading'] + '</h3>'
+        item += '<h3 id="' + devsiteHelper.slugify(yamlItem['heading']) +'">' 
+        item += yamlItem['heading'] + '</h3>'
+        # item += '<h3>' + yamlItem['heading'] + '</h3>'
         if link:
           item += '</a>'
       item += yamlItem['description']
@@ -121,7 +123,8 @@ def generateYaml(lang, rawYaml):
     if numItems:
       sectionClass.append('devsite-landing-row-' + str(numItems) + '-up')
     if 'heading' in row:
-      section += '<h2>' + row['heading'] + '</h2>'
+      section += '<h2 id="' + devsiteHelper.slugify(row['heading']) +'">' 
+      section += row['heading'] + '</h2>'
     if 'items' in row:
       section += parseIndexYamlItems(row['items'])
     if 'columns' in row:
