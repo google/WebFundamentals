@@ -8,24 +8,55 @@ description: Get started or build your web design and development skills with th
 
 # Udacity Courses {: .page-title }
 
+## Browser Rendering Optimizations
 
+<a href="https://udacity.com/ud860">
+  <img src="img/ud860.jpg" class="attempt-right">
+</a>
 
-<div class="wf-subheading">
-  <div class="page-content">
-    <h2>Learn with Udacity</h2>
-    <p>
-      Get started or build your web design and development skills with
-      these <b>free</b> Udacity courses taught by your friends at Google.
-    </p>
-  </div>
-</div>
+Google performance guru Paul Lewis is here to help you destroy jank and
+create web apps that maintain 60 frames per second performance.
 
-<div class="page-content">
-  <div class="mdl-grid">
-    {% for course in page.udacity %}
-      {% capture linkHref %}https://www.udacity.com/course/viewer#!/c-{{ course.udacity_id }}?utm_source=webfundamentals&utm_medium=d.g.com&utm_content=promo&utm_campaign=index{% endcapture %}
-      {% capture linkText %}{{"take_course" | localize_string}}{% endcapture %}
-      {% include shared/base_card.liquid imgUrl=course.key_img title=course.title text=course.description linkHref=linkHref linkText=linkText %}
-    {% endfor %}
-  </div>
-</div>
+[Take Course](https://udacity.com/ud860)
+
+<div style="clear:both;"></div>
+
+## Responsive Web Design
+
+<a href="https://udacity.com/ud893">
+  <img src="img/ud893.jpg" class="attempt-right">
+</a>
+
+Learn the fundamentals of responsive web design with and create your own
+responsive web page that works well on any device - phone, tablet, desktop.
+
+[Take Course](https://udacity.com/ud893)
+
+<div style="clear:both;"></div>
+
+## Critical Rendering Path
+
+<a href="https://udacity.com/ud884">
+  <img src="img/ud884.jpg" class="attempt-right">
+</a>
+
+Learn about the Critical Rendering Path, or the set of steps browsers must
+take to convert HTML, CSS and JavaScript into living, breathing websites.
+
+[Take Course](https://udacity.com/ud884)
+
+<div style="clear:both;"></div>
+
+## Responsive Images
+
+<a href="https://udacity.com/ud882">
+  <img src="img/ud882.png" class="attempt-right">
+</a>
+
+Learn how to work with images on the modern web, so that your images look
+great and load quickly on any device.
+
+[Take Course](https://udacity.com/ud882)
+
+<div style="clear:both;"></div>
+

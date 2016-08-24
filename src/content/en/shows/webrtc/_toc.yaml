@@ -1,34 +1,31 @@
-# ATTENTION - This file is auto-generated, changes must be made to the template!
 toc:
-  - title: 'Kranky Geek WebRTC Show'
+  - title: Kranky Geek WebRTC
     section:
-    - title: Show Listing
-      path: /web/shows/webrtc/
-    - title: "The Future of ORTC with WebRTC"
-      path: /web/shows/webrtc/the-future-of-ortc-with-webrtc
-    - title: "On-stage: Building a WebRTC app"
-      path: /web/shows/webrtc/on-stage-building-a-webrtc-app
-    - title: "IBM Bluemix: Mixing voice &amp; data"
-      path: /web/shows/webrtc/ibm-bluemix-mixing-voice-and-data
-    - title: "Google: What&#x27;s next for WebRTC?"
-      path: /web/shows/webrtc/google-whats-next-for-webrtc
-    - title: "Application Chats: Wix.com"
-      path: /web/shows/webrtc/application-chats-wixcom
-    - title: "Kranky Geek WebRTC Show 2015 Welcome"
-      path: /web/shows/webrtc/kranky-geek-webrtc-show-2015-welcome
-    - title: "What is Mozilla doing with Firefox?"
-      path: /web/shows/webrtc/what-is-mozilla-doing-with-firefox
-    - title: "A closer look at the WebRTC UX/UI API"
-      path: /web/shows/webrtc/a-closer-look-at-the-webrtc-uxui-api
-    - title: "Beyond P2P: Video Routing in WebRTC"
-      path: /web/shows/webrtc/beyond-p2p-video-routing-in-webrtc
-    - title: "Best practices from billions of calls"
-      path: /web/shows/webrtc/best-practices-from-billions-of-calls
-    - title: "Decisions &amp; considerations in building your WebRTC app"
-      path: /web/shows/webrtc/decisions-and-considerations-in-building-your-webrtc-app
-    - title: "Application Chats: Skedans"
-      path: /web/shows/webrtc/application-chats-skedans
-    - title: "Application Chats: Freshdesk"
-      path: /web/shows/webrtc/application-chats-freshdesk
-    - title: "Optimizing the customer experience"
-      path: /web/shows/webrtc/optimizing-the-customer-experience
+    - title: Welcome
+      path: /web/shows/webrtc/2015/krankygeek-01-welcome
+    - title: A closer look at WebRTC UX/UI
+      path: /web/shows/webrtc/2015/krankygeek-02-ux
+    - title: 'Application Chats: Skedans'
+      path: /web/shows/webrtc/2015/krankygeek-03-skedans
+    - title: 'Application Chats: Freshdesk'
+      path: /web/shows/webrtc/2015/krankygeek-04-freshdesk
+    - title: 'Application Chats: wix.com'
+      path: /web/shows/webrtc/2015/krankygeek-05-wix
+    - title: 'IBM Bluemix: Mixing voice &amp; data'
+      path: /web/shows/webrtc/2015/krankygeek-06-bluemix
+    - title: What is Mozilla doing with Firefox?
+      path: /web/shows/webrtc/2015/krankygeek-07-mozilla
+    - title: Optimizing the customer experience
+      path: /web/shows/webrtc/2015/krankygeek-08-customer
+    - title: 'Beyond P2P: video routing in WebRTC'
+      path: /web/shows/webrtc/2015/krankygeek-09-routing
+    - title: Best practices from billions of calls
+      path: /web/shows/webrtc/2015/krankygeek-10-billions
+    - title: Decisions and considerations in building a WebRTC app
+      path: /web/shows/webrtc/2015/krankygeek-11-decisions
+    - title: 'Google: What''s next for WebRTC?'
+      path: /web/shows/webrtc/2015/krankygeek-12-google
+    - title: The Future of ORTC with WebRTC
+      path: /web/shows/webrtc/2015/krankygeek-13-ortc
+    - title: 'Live on stage: building a WebRTC app'
+      path: /web/shows/webrtc/2015/krankygeek-14-building
