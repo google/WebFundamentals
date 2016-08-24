@@ -17,6 +17,18 @@ authors:
 
 Pat yourself on the back. You built a web app that enables Push Notifications!
 
+<div class="wf-highlight-list wf-highlight-list--learning">
+  <h3 class="wf-highlight-list__title">Note</h3>
+  <ul class="wf-highlight-list__list">
+    <li>
+      Be sure to check out 
+      <a href="/web/fundamentals/engage-and-retain/push-notifications/">
+      Push Notification</a> for best practices and more details on how to use
+      Web Push Notifications.
+    </li>
+  </ul>
+</div>
+
 ## Frequently Asked Questions
 
 * **My service worker didn't update!**<br>
@@ -64,16 +76,9 @@ once for each service worker session.
 
 * Service worker codelab (if you haven't already done it!)
 
-## Learn More
+## Dive Deeper
 
-* [Push Notifications on the Open
-  Web](/web/updates/2015/03/push-notifications-on-the-open-web)
-* [Google Cloud Messaging](https://developers.google.com/cloud-messaging/)
-* [Best Practices for Push Notifications Permission
-  UX](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/edit)
-* [Do's and Don'ts for
-  Notifications](http://android-developers.blogspot.co.uk/2015/08/get-dos-and-donts-for-notifications.html)
-* [Notifications
-  guidelines](https://www.google.com/design/spec/patterns/notifications.html)
-* [Service Worker
-  API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+* [Web Push Notification Documentation](/web/fundamentals/engage-and-retain/push-notifications/)
+* [Using VAPID and the Web Push Protocol](/web/updates/2016/07/web-push-interop-wins)
+* [Google Cloud Messaging Documentation](https://developers.google.com/cloud-messaging/)
+* [Android Material Design Notifications Guidelines](https://www.google.com/design/spec/patterns/notifications.html)
