@@ -3,7 +3,7 @@ title: "Como Percorrer Seu Código"
 description: "Executar uma linha de código ou uma função de cada vez, te permite observar alterações nos dados e na página para entender exatamente o que está acontecendo."
 updated_on: 2015-09-02
 translators:
-  - alan
+  - alansilva
 translation_priority: 0
 key-takeaways:
   tldr:

@@ -4,7 +4,7 @@ description: "A API da Linha de Comandos do Chrome DevTools oferece várias mane
 updated_on: 2015-08-03
 translation_priority: 0
 translators:
-  - alan
+  - alansilva
 key-takeaways:
   command-line:
     - "Ouça eventos de um certo tipo usando <code>monitorEvents()</code>."

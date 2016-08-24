@@ -4,7 +4,7 @@ description: "O console é um terminal integrado que você pode usar para intera
 updated_on: 2015-05-12
 translation_priority: 0
 translators:
-  - alan
+  - alansilva
 ---
 
 <p class="intro">
