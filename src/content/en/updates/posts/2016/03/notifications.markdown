@@ -16,6 +16,7 @@ users, alerting them of important and timely updates like incoming chat
 messages. The notification platform is relatively new in browsers and as more
 and more use cases and requirements are fleshed out, we are seeing many
 additions to the APIs for notifications.
+
 Chrome 50 (beta in March 2016) is no exception, with no fewer than four new
 features that give developers more control over notifications. You get the
 ability to:
@@ -26,6 +27,18 @@ ability to:
   analytics,
 * manage the renotify experience when a notification replaces the currently
   displayed notification.
+
+<div class="wf-highlight-list wf-highlight-list--learning">
+  <h3 class="wf-highlight-list__title">Note</h3>
+  <ul class="wf-highlight-list__list">
+    <li>
+      Be sure to check out 
+      <a href="/web/fundamentals/engage-and-retain/push-notifications/">
+      Push Notification</a> for best practices and more details on how to use
+      Web Push Notifications.
+    </li>
+  </ul>
+</div>
 
 Chrome 50 has also added [Payloads for Push
 notifications](https://developers.google.com/web/updates). To stay up to date

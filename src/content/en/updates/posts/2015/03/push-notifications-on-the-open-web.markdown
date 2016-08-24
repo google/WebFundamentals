@@ -11,14 +11,19 @@ tags:
   - pushmessaging
   - notifications
   - serviceworker
-notes:
-  tutorial:
-    - "This blog post is getting a bit old. If you are looking to learn more
-    about implementing push, check out
-    <a href=\"https://developers.google.com/web/fundamentals/getting-started/push-notifications/?hl=en\">this getting started guide</a>."
 ---
 
-{% include shared/note.liquid list=page.notes.tutorial %}
+<div class="wf-highlight-list wf-highlight-list--learning">
+  <h3 class="wf-highlight-list__title">Note</h3>
+  <ul class="wf-highlight-list__list">
+    <li>
+      Be sure to check out 
+      <a href="/web/fundamentals/engage-and-retain/push-notifications/">
+      Push Notification</a> for best practices and more details on how to use
+      Web Push Notifications.
+    </li>
+  </ul>
+</div>
 
 If you ask a room of developers what mobile device features are missing from the
 web, push notifications are always high on the list.

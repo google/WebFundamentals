@@ -14,6 +14,7 @@ tags:
   - encryption
   - chrome50
 ---
+
 Prior to Chrome 50, [push messages](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web) 
 could not contain any payload data. When the ['push' event](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent) 
 fired in your service worker, all you knew was that the server was trying to
@@ -31,6 +32,18 @@ HTTPS gives you security when communicating between the browser and your own
 server, because you trust the server. However, the browser chooses which push
 provider will be used to actually deliver the payload, so you, as the app
 developer, have no control over it.
+
+<div class="wf-highlight-list wf-highlight-list--learning">
+  <h3 class="wf-highlight-list__title">Note</h3>
+  <ul class="wf-highlight-list__list">
+    <li>
+      Be sure to check out 
+      <a href="/web/fundamentals/engage-and-retain/push-notifications/">
+      Push Notification</a> for best practices and more details on how to use
+      Web Push Notifications.
+    </li>
+  </ul>
+</div>
 
 Here, HTTPS can only guarantee that no one can snoop on the message in transit
 to the push service provider. Once they receive it, they are free to do what

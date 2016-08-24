@@ -8,6 +8,18 @@ translation_priority: 1
 order: 2
 ---
 
+<div class="wf-highlight-list wf-highlight-list--learning">
+  <h3 class="wf-highlight-list__title">Note</h3>
+  <ul class="wf-highlight-list__list">
+    <li>
+      Be sure to check out 
+      <a href="/web/fundamentals/engage-and-retain/push-notifications/">
+      Push Notification</a> for best practices and more details on how to use
+      Web Push Notifications.
+    </li>
+  </ul>
+</div>
+
 <img src="images/image00.png" width="373" height="93" alt="Screenshot of push notification" />
 
 In this codelab, you'll learn how to add Push Notifications to web applications.

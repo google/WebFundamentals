@@ -41,6 +41,18 @@ actions and add them into the `NotificationOptions` object when you call
 `showNotification` from a ServiceWorker registration (either directly in the 
 ServiceWorker or on a page via `navigator.serviceWorker.ready`).
 
+<div class="wf-highlight-list wf-highlight-list--learning">
+  <h3 class="wf-highlight-list__title">Note</h3>
+  <ul class="wf-highlight-list__list">
+    <li>
+      Be sure to check out 
+      <a href="/web/fundamentals/engage-and-retain/push-notifications/">
+      Push Notification</a> for best practices and more details on how to use
+      Web Push Notifications.
+    </li>
+  </ul>
+</div>
+
 Currently Chrome only supports [two actions on each 
 notification](https://code.google.com/p/chromium/codesearch#chromium/src/content/common/notification_constants.h&sq=package:chromium&type=cs&l=13&rcl=1454286458). 
 Some platforms might be able to support more, and some platforms may support 

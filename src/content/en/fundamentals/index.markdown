@@ -24,7 +24,7 @@ translation_priority: 0
 
   {% include shared/base_card.liquid text="What is a <b>Progressive Web App</b> and what do you need to know to get started building one? In this step-by-step guide, you'll build your own Progressive Web App and learn the fundamentals needed for building Progressive Web Apps." linkHref="/web/fundamentals/getting-started/your-first-progressive-web-app/" linkText="Get Started" imgUrl="/web/fundamentals/imgs/vm-pwa.png" %}
 
-  {% include shared/base_card.liquid text="Learn how to add <b>Push Notifications</b> to your web applications to re-engage users with breaking news and information about new content." linkHref="/web/fundamentals/getting-started/push-notifications/" linkText="Learn More" imgUrl="/web/fundamentals/imgs/notif-example.png" %}
+  {% include shared/base_card.liquid text="Learn how to add <b>Push Notifications</b> to your web applications to re-engage users with breaking news and information about new content." linkHref="/web/fundamentals/engage-and-retain/push-notifications/" linkText="Learn More" imgUrl="/web/fundamentals/imgs/notif-example.png" %}
 
 </div>
 

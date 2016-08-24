@@ -20,6 +20,18 @@ In Chrome 44 [Notfication.data](https://notifications.spec.whatwg.org/#data) and
 are added and open up / simplify some common use cases when dealing with
 notifications with push messages.
 
+<div class="wf-highlight-list wf-highlight-list--learning">
+  <h3 class="wf-highlight-list__title">Note</h3>
+  <ul class="wf-highlight-list__list">
+    <li>
+      Be sure to check out 
+      <a href="/web/fundamentals/engage-and-retain/push-notifications/">
+      Push Notification</a> for best practices and more details on how to use
+      Web Push Notifications.
+    </li>
+  </ul>
+</div>
+
 ## Notification Data
 
 Notification.data allows you to associate a JavaScript object with a
