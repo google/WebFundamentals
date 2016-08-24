@@ -21,14 +21,21 @@ toc:
         path: /web/fundamentals/design-and-ui/input/touch/
     - title: Icons and colors
       path: /web/fundamentals/design-and-ui/blah/
+
     - title: Animations
       section:
       - title: Overview
         path: /web/fundamentals/design-and-ui/animations/
       - title: The Basics of Easing
         path: /web/fundamentals/design-and-ui/animations/the-basics-of-easing
+      - title: Custom Easing
+        path: /web/fundamentals/design-and-ui/animations/custom-easing
       - title: Animating Between Views
         path: /web/fundamentals/design-and-ui/animations/animating-between-views
+      - title: Choosing the Right Easing
+        path: /web/fundamentals/design-and-ui/animations/choosing-the-right-easing
       - title: Asymmetric Animation Timing
         path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
+      - title: Animations and Performance
+        path: /web/fundamentals/design-and-ui/animations/animations-and-performance
 
