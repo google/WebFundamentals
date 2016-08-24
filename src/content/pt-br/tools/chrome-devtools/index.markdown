@@ -3,7 +3,7 @@ description: "O Chrome DevTools é um conjunto de ferramentas de desenvolvimento
 title: "Chrome DevTools"
 translation_priority: 1
 translators:
-  - alan
+  - alansilva
 ---
 
 <div class="wf-devtools-wrapper">

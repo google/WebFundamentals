@@ -3,7 +3,7 @@ title: "Como trabalhar com breakpoints"
 description: "Adicione breakpoints no Chrome DevTools para rapidamente e efetivamente debugar código problemático."
 updated_on: 2015-09-03
 translators:
-  - alan
+  - alansilva
 translation_priority: 0
 key-takeaways:
   breakpoint:
