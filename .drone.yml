@@ -10,10 +10,10 @@ cache:
 build:
   image: crhym3/ci-image
   commands:
-    - eval "$(rbenv init -)"
-    - bundle install --deployment --jobs=3 --retry=3
+    - pip install markdown -t ./gae/lib
     - npm install
-    - gulp build:staging
+    - node build-contributors.js
+    - node build-sections.js
 deploy:
   wf:
     image: crhym3/drone-plugin-wf
@@ -26,6 +26,6 @@ deploy:
     project: web-central
     server_suffix: -dot-weasel-dot-web-central.appspot.com
     bucket_suffix: -webcentral-appspot-weasel
-    source: build
+    source: .
     gzip: [js, css, html, svg]
     cache_control: public,max-age=300
