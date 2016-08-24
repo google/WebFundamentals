@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
+{# wf_published_on: 2016-06-29 #}
+{# wf_updated_on: 2016-08-02 #}
+
 # Custom Elements v1: reusable web components {: .page-title }
 
 {% include "_shared/contributors/ericbidelman.html" %}
