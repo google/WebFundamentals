@@ -150,7 +150,7 @@ also checks for the file in the en locale before failing.
 
 <pre class="prettyprint">
 &lt;pre class="prettyprint">
-  &#123;% includecode content_path="web/fundamentals/resources/_code/file.js" %}
+&#123;% includecode content_path="web/fundamentals/resources/_code/file.js" %}
 &lt;/pre>
 </pre>
 
@@ -165,7 +165,7 @@ included code with the `adjust_indentation="auto"` option.
 
 <pre class="prettyprint">
 &lt;pre class="prettyprint">
-  &#123;% includecode content_path="path/file.js" adjust_indentation="auto" %}
+&#123;% includecode content_path="path/file.js" adjust_indentation="auto" %}
 &lt;/pre>
 </pre>
 
