@@ -6,13 +6,13 @@ description: The amount of data downloaded by apps continues to increase over ti
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Optimizing content efficiency {: .page-title }
+# Optimizing Content Efficiency {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 
 Our web applications continue to grow in their scope, ambition, and functionality -- that's a good thing. However, the relentless march toward a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte!
 
-What does a modern web application look like? [HTTP Archive](http://httparchive.org/) can help us answer this question. The project tracks how the web is built by periodically crawling the most popular sites (300,000+ from the Alexa Top 1M list) and recording and aggregating analytics on the number resources, content types, and other metadata for each individual destination.
+What does a modern web application look like? [HTTP Archive](http://httparchive.org/) can help us answer this question. The project tracks how the web is built by periodically crawling the most popular sites (300,000+ from the Alexa Top 1M list) and recording and aggregating analytics on the number of resources, content types, and other metadata for each individual destination.
 
 <img src="images/http-archive-trends.png"  alt="HTTP Archive trends">
 

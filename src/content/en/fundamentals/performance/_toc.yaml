@@ -17,6 +17,9 @@ toc:
         path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
       - title: HTTP Caching
         path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
+
+
+        
     - title: Critical Rendering Path
       section:
       - title: Overview
@@ -53,10 +56,10 @@ toc:
         path: /web/fundamentals/performance/rendering/stick-to-compositor-only-properties-and-manage-layer-count
       - title: Debounce Your Input Handlers
         path: /web/fundamentals/performance/rendering/debounce-your-input-handlers
-    - title: Performance Code Lab
-      path: /web/fundamentals/performance/performance-codelab/
     - title: Understanding Low Bandwidth and High Latency
       path: /web/fundamentals/performance/poor-connectivity/
+    - title: Performance Code Lab
+      path: /web/fundamentals/performance/performance-codelab/
 
 
     
