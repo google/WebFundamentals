@@ -723,7 +723,19 @@ If you recall from [shadow DOM's event model](#events), events that are fired in
 
     document.activeElement.shadowRoot.activeElement // only works with open mode.
 
-Another option is `delegatesFocus: true`, which expands the focus behavior of element's within a shadow tree:
+If there are multiple levels of shadow DOM at play (say a custom element within another custom element), you need to recursively drill into the shadow roots to find the `activeElement`:
+
+{% highlight javascript %}
+function deepActiveElement() {
+  let a = document.activeElement;
+  while (a && a.shadowRoot && a.shadowRoot.activeElement) {
+    a = a.shadowRoot.activeElement;
+  }
+  return a;
+}
+{% endhighlight %}
+
+Another option for focus is the `delegatesFocus: true` option, which expands the focus behavior of element's within a shadow tree:
 
 - If you click on a node inside shadow DOM and the node is not a focusable area, the first focusable area becomes focused.
 - When a node inside shadow DOM gains focus, `:focus` applies to the host in addition to the focused element.
