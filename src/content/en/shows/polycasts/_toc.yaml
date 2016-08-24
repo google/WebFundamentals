@@ -1,108 +1,63 @@
-# ATTENTION - This file is auto-generated, changes must be made to the template!
 toc:
-  - title: 'Polycasts'
+  - title: Polycasts
     section:
-    - title: Show Listing
-      path: /web/shows/polycasts/
-    - title: "Accessible Components: Labeling -- Polycasts #51"
-      path: /web/shows/polycasts/accessible-components-labeling-polycasts-51
-    - title: "Accessible Components: Screen readers -- Polycasts #50"
-      path: /web/shows/polycasts/accessible-components-screen-readers-polycasts-50
-    - title: "Accessible Components: Keyboard access -- Polycasts #49"
-      path: /web/shows/polycasts/accessible-components-keyboard-access-polycasts-49
-    - title: "Polymer CLI: Getting Started -- Polycast #48"
-      path: /web/shows/polycasts/polymer-cli-getting-started-polycast-48
-    - title: "Lazy loading data with app-route -- Polycasts #47"
-      path: /web/shows/polycasts/lazy-loading-data-with-app-route-polycasts-47
-    - title: "Routing with carbon-route -- Polycasts #46"
-      path: /web/shows/polycasts/routing-with-carbon-route-polycasts-46
-    - title: "Polygit. The Polymer CDN! -- Polycasts #45"
-      path: /web/shows/polycasts/polygit-the-polymer-cdn-polycasts-45
-    - title: "What about 3rd party JavaScript? #AskPolymer -- Polycasts #44"
-      path: /web/shows/polycasts/what-about-3rd-party-javascript-askpolymer-polycasts-44
-    - title: "Lazy Loading Elements -- Polycasts #43"
-      path: /web/shows/polycasts/lazy-loading-elements-polycasts-43
-    - title: "Yo! Where&#x27;s my data table?! #BuiltWithPolymer -- Polycasts #42"
-      path: /web/shows/polycasts/yo-wheres-my-data-table-builtwithpolymer-polycasts-42
-    - title: "How do I use Sass with Polymer? #AskPolymer -- Polycasts #41"
-      path: /web/shows/polycasts/how-do-i-use-sass-with-polymer-askpolymer-polycasts-41
-    - title: "Crisper: Protecting your Polymer app with CSP -- Polycasts #40"
-      path: /web/shows/polycasts/crisper-protecting-your-polymer-app-with-csp-polycasts-40
-    - title: "Optimize for production with Vulcanize -- Polycasts #39"
-      path: /web/shows/polycasts/optimize-for-production-with-vulcanize-polycasts-39
-    - title: "Browser testing with Travis &amp; Sauce Labs -- Polycasts #38"
-      path: /web/shows/polycasts/browser-testing-with-travis-and-sauce-labs-polycasts-38
-    - title: "Testing AJAX with Web Component Tester -- Polycasts #37"
-      path: /web/shows/polycasts/testing-ajax-with-web-component-tester-polycasts-37
-    - title: "Unit Testing with Web Component Tester -- Polycasts #36"
-      path: /web/shows/polycasts/unit-testing-with-web-component-tester-polycasts-36
-    - title: "Binding to Arrays -- Polycasts #35"
-      path: /web/shows/polycasts/binding-to-arrays-polycasts-35
-    - title: "#ChromeDevSummit talks are up - W00T! -- Polycast #34"
-      path: /web/shows/polycasts/chromedevsummit-talks-are-up-w00t-polycast-34
-    - title: "What about internationalization? #AskPolymer -- Polycasts #33"
-      path: /web/shows/polycasts/what-about-internationalization-askpolymer-polycasts-33
-    - title: "Supercharged Observers! -- Polycasts #32"
-      path: /web/shows/polycasts/supercharged-observers-polycasts-32
-    - title: "Where’s the Designer? #AskPolymer -- Polycasts #31"
-      path: /web/shows/polycasts/wheres-the-designer-askpolymer-polycasts-31
-    - title: "Binding to Objects -- Polycasts #30"
-      path: /web/shows/polycasts/binding-to-objects-polycasts-30
-    - title: "#AskPolymer: How do you make the show? -- Polycasts #29"
-      path: /web/shows/polycasts/askpolymer-how-do-you-make-the-show-polycasts-29
-    - title: "Data Binding 101 -- Polycasts #28"
-      path: /web/shows/polycasts/data-binding-101-polycasts-28
-    - title: "#AskPolymer: Rob answers all the questions ever -- Polycasts #27"
-      path: /web/shows/polycasts/askpolymer-rob-answers-all-the-questions-ever-polycasts-27
-    - title: "iron-ajax… wat?! -- Polycasts #26"
-      path: /web/shows/polycasts/iron-ajax-wat-polycasts-26
-    - title: "Neon-animated pages -- Polycasts #25"
-      path: /web/shows/polycasts/neon-animated-pages-polycasts-25
-    - title: "Content Switcheroo Update! -- Polycasts #24"
-      path: /web/shows/polycasts/content-switcheroo-update-polycasts-24
-    - title: "Slick web animations -- Polycasts #23"
-      path: /web/shows/polycasts/slick-web-animations-polycasts-23
-    - title: "Iron Icons -- Polycasts #20 (100 Days of Google Dev)"
-      path: /web/shows/polycasts/iron-icons-polycasts-20-100-days-of-google-dev
-    - title: "Custom icons with Iron Iconsets -- Polycasts #22"
-      path: /web/shows/polycasts/custom-icons-with-iron-iconsets-polycasts-22
-    - title: "Behaviors -- Polycasts #21"
-      path: /web/shows/polycasts/behaviors-polycasts-21
-    - title: "Go Offline -- Polycasts #19"
-      path: /web/shows/polycasts/go-offline-polycasts-19
-    - title: "Polymer Starter Kit -- Polycasts #18"
-      path: /web/shows/polycasts/polymer-starter-kit-polycasts-18
-    - title: "Extending Native Elements -- Polycasts #15"
-      path: /web/shows/polycasts/extending-native-elements-polycasts-15
-    - title: "Give your element an API -- Polycasts #16"
-      path: /web/shows/polycasts/give-your-element-an-api-polycasts-16
-    - title: "Core Icons -- Polycasts #01"
-      path: /web/shows/polycasts/core-icons-polycasts-01
-    - title: "Create reusable elements with ease -- Polycasts #14"
-      path: /web/shows/polycasts/create-reusable-elements-with-ease-polycasts-14
-    - title: "Theming Elements -- Polycasts #17"
-      path: /web/shows/polycasts/theming-elements-polycasts-17
-    - title: "Scrolling at 60 frames with core-list -- Polycasts #12"
-      path: /web/shows/polycasts/scrolling-at-60-frames-with-core-list-polycasts-12
-    - title: "Moar routing with... more-routing -- Polycasts #11"
-      path: /web/shows/polycasts/moar-routing-with-more-routing-polycasts-11
-    - title: "Routing 101 -- Polycasts #10"
-      path: /web/shows/polycasts/routing-101-polycasts-10
-    - title: "Content Switcheroo with Core-Pages -- Polycasts #09"
-      path: /web/shows/polycasts/content-switcheroo-with-core-pages-polycasts-09
-    - title: "The Awesome Power of Auto-Binding Templates -- Polycasts #08"
-      path: /web/shows/polycasts/the-awesome-power-of-auto-binding-templates-polycasts-08
-    - title: "Season&#x27;s greetings! -- Polycasts #07"
-      path: /web/shows/polycasts/seasons-greetings-polycasts-07
-    - title: "What&#x27;s new in Polymer 0.5.1 -- Polycasts #06"
-      path: /web/shows/polycasts/whats-new-in-polymer-051-polycasts-06
-    - title: "Core Drawer Panel -- Polycasts #05"
-      path: /web/shows/polycasts/core-drawer-panel-polycasts-05
-    - title: "Core Header Panel -- Polycasts #04"
-      path: /web/shows/polycasts/core-header-panel-polycasts-04
-    - title: "Core Toolbar  -- Polycasts #03"
-      path: /web/shows/polycasts/core-toolbar-polycasts-03
-    - title: "Core Iconset  -- Polycasts #02"
-      path: /web/shows/polycasts/core-iconset-polycasts-02
-    - title: "Polymer 0.8: First Look -- Polycasts #13"
-      path: /web/shows/polycasts/polymer-08-first-look-polycasts-13
+    - title: Season 2
+      section:
+      - title: '#AskPolymer -- Polycasts #27'
+        path: /web/shows/polycasts/season-2/AskPolymer_PC27
+      - title: 'AskPolymer: How do you make the show? -- Polycasts #29'
+        path: /web/shows/polycasts/season-2/AskPolymer_PC29
+      - title: Behaviors
+        path: /web/shows/polycasts/season-2/Behaviors
+      - title: 'Data Binding 101 -- Polycasts #28'
+        path: /web/shows/polycasts/season-2/Data_Binding_101
+      - title: Custom icons with Iron Iconsets
+        path: /web/shows/polycasts/season-2/Iron-Iconsets
+      - title: Slick web animations
+        path: /web/shows/polycasts/season-2/WebAnimations
+      - title: The Awesome Power of Auto-Binding Templates
+        path: /web/shows/polycasts/season-2/awesome-power-of-auto-binding
+      - title: Binding to Objects
+        path: /web/shows/polycasts/season-2/binding-to-objects
+      - title: Content Switcheroo with Core-Pages
+        path: /web/shows/polycasts/season-2/content-switcheroo
+      - title: Create reusable elements with ease
+        path: /web/shows/polycasts/season-2/create-reusable-elements
+      - title: Extending Native Elements
+        path: /web/shows/polycasts/season-2/extending-native-elements
+      - title: 'Polymer 0.8: First Look'
+        path: /web/shows/polycasts/season-2/first-look-polymer-0.8
+      - title: Episode 16
+        path: /web/shows/polycasts/season-2/give-your-element-an-API
+      - title: Go Offline
+        path: /web/shows/polycasts/season-2/go-offline
+      - title: iron-ajax… wat?!
+        path: /web/shows/polycasts/season-2/iron-ajax
+      - title: Moar routing with... more-routing
+        path: /web/shows/polycasts/season-2/more-routing-with-more-routing
+      - title: Neon Animated Pages
+        path: /web/shows/polycasts/season-2/neon-animated-pages
+      - title: Polymer Starter Kit
+        path: /web/shows/polycasts/season-2/polymer-starter-kit
+      - title: Routing 101
+        path: /web/shows/polycasts/season-2/routing-101
+      - title: 'Scrolling at 60 frames with core-list '
+        path: /web/shows/polycasts/season-2/scrolling-at-60fps-with-core-list
+      - title: Theming Elements
+        path: /web/shows/polycasts/season-2/theming-elements
+    - title: Season 1
+      section:
+      - title: Core Drawer Panel
+        path: /web/shows/polycasts/season-1/core-drawer-panel
+      - title: Core Header Panel
+        path: /web/shows/polycasts/season-1/core-header-panel
+      - title: Core Icons
+        path: /web/shows/polycasts/season-1/core-icons
+      - title: Core Iconset
+        path: /web/shows/polycasts/season-1/core-iconset
+      - title: Core Toolbar
+        path: /web/shows/polycasts/season-1/core-toolbar
+      - title: What's new in Polymer 0.5.1
+        path: /web/shows/polycasts/season-1/whats-new-in-polymer-0-5-1
+      - title: Season's greetings!
+        path: /web/shows/polycasts/season-1/seasons-greetings
