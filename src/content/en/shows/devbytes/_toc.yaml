@@ -1,7 +1,7 @@
 toc:
   - title: DevBytes
     section:
-    - title: Web Components
+    - title: 'Web Components'
       section:
       - title: Overview
         path: /web/shows/devbytes/webcomponents/overview
@@ -11,5 +11,5 @@ toc:
         path: /web/shows/devbytes/webcomponents/html-imports
       - title: Shadow DOM
         path: /web/shows/devbytes/webcomponents/shadowdom
-      - title: Templates
+      - title: Template
         path: /web/shows/devbytes/webcomponents/template
