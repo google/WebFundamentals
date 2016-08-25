@@ -1,35 +1,35 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Relevant and appropriate ads can actually improve the user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of the ads.
+description: Relevant and appropriate ads can improve the user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of the ads.
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-07-30 #}
 
-# Customize your ads {: .page-title }
+# Customizeing {: .page-title }
 
 {% include "_shared/contributors/megginkearney.html" %}
 {% include "_shared/contributors/petelepage.html" %}
 
-Relevant and appropriate ads can actually improve the user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of the ads.
+Relevant and appropriate ads can actually the user experience. While the actual ad content comes from advertisers, you have control over the content type, color, size, and placement of the ads.
 
 
 
 ## TL;DR
 - Never place ads where they might interfere with a user's intended experience on your site; ensure ads above the fold don't push important content below it.
-- 'Always use responsive ad units; if smart sizing isn''t enough, switch to advanced mode.'
+- Always use responsive ad units; if smart sizing isn't enough, switch to advanced mode.
 - Look for opportunities to integrate ads throughout the content to avoid ad blindness.
-- 'Choose text styles that blend, compliment, or contrast your site.'
+- Choose text styles that blend, compliment, or contrast your site.
 
 
 ## Place ads where users benefit the most
 
-When it comes to deciding where to place ads on your site,
-and how many ads to include, always put the user first!
+When it comes to deciding where to place ads on your site, and how many ads to
+include, always put the user first.ß
 
 * Use ads to augment site content; not the other way around.
-* Pages with excessive ads, ads that push important content down below the fold, 
-ads clustered together that dominate the viewable space or ads without clear 
+* Pages with excessive ads, ads that push important content below the fold, 
+ads clustered together that dominate the viewable space, or ads without clear 
 labeling lead to lower user satisfaction and are against AdSense policies.
 * Ensure ads provide value to users. If you have ad units that generate 
 significantly less revenue or drive less clicks or views, it’s likely they 
@@ -62,11 +62,10 @@ from the Mode drop-down.
         data-ad-slot="5678"></ins>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    
 
-{% link_sample _code/customize.html %}
-  Try it
-{% endlink_sample %}
+<pre class="prettyprint">
+{% includecode content_path=web/fundamentals/discovery-and-monetization/monetization-with-ads/_code/customize.html %}
+</pre>
 
 See [advanced features](https://support.google.com/adsense/answer/3543893) in the AdSense help for more information.
 

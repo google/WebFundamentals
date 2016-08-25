@@ -1,17 +1,19 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Optimizing your site, and the ads that appear on it, can improve the quality of ads served and increase your earning potential.
+description: Optimizing your ads is crucial to the success of your advertising goals. Through ad optimization, you can grow your ad revenue, improve your site's usability, and get more traffic.
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-08-11 #}
 
-# Optimize your ads {: .page-title }
+# Optimizing {: .page-title }
 
 {% include "_shared/contributors/megginkearney.html" %}
 {% include "_shared/contributors/petelepage.html" %}
 
-Optimizing your ads is crucial to the success of your advertising goals. Through ad optimization, you can grow your ad revenue, improve your site's usability, and get more traffic.
+Optimizing your ads is crucial to the success of your advertising goals. Through
+ad optimization, you can grow your ad revenue, improve your site's usability,
+and get more traffic.
 
 Want to get better results with AdSense ads and make sure that you give your
 users what they want while getting what you want? Need some inspiration?

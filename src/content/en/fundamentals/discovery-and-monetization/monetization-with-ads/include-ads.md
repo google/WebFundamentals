@@ -6,7 +6,7 @@ description: Follow the steps in this guide to learn how to include ads in your 
 {# wf_updated_on: 2014-07-30 #}
 {# wf_published_on: 2014-07-30 #}
 
-# Include AdSense ads on your site {: .page-title }
+# Including {: .page-title }
 
 {% include "_shared/contributors/megginkearney.html" %}
 {% include "_shared/contributors/petelepage.html" %}
@@ -15,9 +15,9 @@ Follow the steps in this guide to learn how to include ads in your site. Create 
 
 
 ## TL;DR
-- 'To create an AdSense account, you must be 18, have a Google Account, and address.'
-- 'Your website must be live before submitting an application, and the website content must comply with AdSense policies.'
-- 'Create responsive ad units to ensure that your ads fit, no matter what device a user views them on.'
+- To create an AdSense account, you must be 18, have a Google account, and address.
+- Your website must be live before submitting an application, and the website content must comply with AdSense policies.'
+- Create responsive ad units to ensure that your ads fit, no matter what device a user views them on.
 - Verify payment settings and wait for the money to start rolling in.
 
 

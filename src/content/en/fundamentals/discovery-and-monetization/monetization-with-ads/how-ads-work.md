@@ -21,8 +21,8 @@ help centers.
 
 
 ## TL;DR
-- 'Choose the ads platform best suited to your site. We recommend the <a href=''http://www.google.com/adsense/start/''>AdSense</a> platform for most sites, and the <a href=''http://www.google.com/doubleclick/publishers/''>DoubleClick platform</a> for sites with their own advertising teams.'
-- 'Ads work best when they integrate nicely in your site; their color, content, size, and location enhance user experience. '
+- Choose the ads platform best suited to your site. We recommend the <a href=''http://www.google.com/adsense/start/''>AdSense</a> platform for most sites, and the <a href=''http://www.google.com/doubleclick/publishers/''>DoubleClick platform</a> for sites with their own advertising teams.
+- Ads work best when they integrate nicely in your site; their color, content, size, and location enhance user experience.
 - Users click on ads that are relevant to the content they are looking for; understand how ads targeting works so that you can maximize your revenue.
 
 
