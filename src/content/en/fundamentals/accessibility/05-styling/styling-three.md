@@ -33,7 +33,7 @@ Going over all of responsive design is outside the scope of this course, but her
 
  - First, make sure you always use a `viewport` meta tag, and set its width to the `device-width` and its `initial-scale` to 1. Setting `width=device-width` will match the screen's width in device-independent pixels, and setting `initial-scale=1` establishes a 1:1 relationship between CSS pixels and device-independent pixels. Doing this instructs the browser to fit your content to the screen size, so users don't just see a bunch of scrunched-up text.
 
-![scrunched-up](imgs/scrunched-up.png)
+![a phone display without and with the viewport meta tag](imgs/scrunched-up.png)
 
 >Note: When using the viewport meta tag, make sure you don't force `maximum-scale` to 1 or set `user-scaleable` to no. Let users zoom if they need to!
 
@@ -41,12 +41,12 @@ Going over all of responsive design is outside the scope of this course, but her
 
  - Also, consider using relative units like `em` or `rem` for things like text size, instead of pixel values. Some browsers support resizing text only in user preferences, and if you're using a pixel value for text, this setting will not affect your copy. If, however, you've used relative units throughout, then the site copy will update to reflect the user's preference.
 
-![relative-units](imgs/relative-units.png)
+![use relative units instead of pixel values](imgs/relative-units.png)
 
  - Finally, when your design is displayed on a mobile device, you should ensure that interactive elements like buttons or links are large enough, and have enough space around them, to make them easy to press without accidentally overlapping onto other elements. This benefits all users, but is especially helpful for anyone with a motor impairment.
 
 A minimum recommended touch target size is around 48px on a site with a properly set mobile viewport. For example, while an icon may only have a width and height of 24px, you can use additional padding to bring the tap target size up to 48px. The 48x48 pixel area corresponds to around 9mm, which is about the size of a person's finger pad area. Touch targets should also be spaced about 32 pixels apart, both horizontally and vertically, so that a user's finger pressing on one tap target does not inadvertently touch another tap target. 
 
-![touch target size](imgs/touch-target.png)
+![proper touch target size and distance](imgs/touch-target.png)
 
 >See the Google article <a href="https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately?hl=en" target="_blank">Size Tap Targets Appropriately</a> for more information.
