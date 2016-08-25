@@ -18,11 +18,7 @@ book_path: /web/resources/_book.yaml
     <td class="wf-byline" id="{{@key}}">
       <div class="attempt-left">
         <figure>
-          {{#if noPhoto}}
-            <img src="/web/images/contributors/no-photo.jpg" alt="{{name.given}} {{name.family}}">
-          {{else}}
-            <img src="/web/images/contributors/{{@key}}.jpg" alt="{{name.given}} {{name.family}}">
-          {{/if}}
+          <img src="/web/images/contributors/{{photo}}.jpg" alt="{{name.given}} {{name.family}}">
         </figure>
       </div>
       <section class="wf-byline-meta">
