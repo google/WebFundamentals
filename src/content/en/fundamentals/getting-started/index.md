@@ -13,7 +13,8 @@ Are you new to web development, or an old pro? We've got resources for both.
 
 These code labs provide a guided, tutorial, hands-on coding experience. Most
 code labs will step you through the process of building a small application,
-or adding a new feature to an existing application.
+or adding a new feature to an existing application.  Find more code labs on
+[codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web){: .external }
 
 <style>.wf-width-50 {width: 50%;}</style>
 
@@ -71,8 +72,6 @@ Sometimes the hardest part of a new project is getting started. Web Starter
 Kit gives you a solid base with a range of tools to help you along the
 development process.
 
-Find more code labs on
-[codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web){: .external }
 
 ## New, Fun, and Cool
 

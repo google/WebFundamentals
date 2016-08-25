@@ -152,7 +152,7 @@ Sites without images can be a little boring. There are two types of images:
    to convey extra information about the content.
 *  Stylistic images &mdash; images that are used to make the site look
    better; often these are background images, patterns and gradients.  We will
-   cover this in the [next article]({{page.nextPage.relative_url}}).
+   cover this in the [next section](#make-it-responsive).
 
 The Images section in our page is a collection of content images.
 
@@ -235,7 +235,7 @@ an excellent base to build upon. We will style our content in the next guide.
 
 
 
-## Make it responsive
+## Make it responsive {: #make-it-responsive }
 
 The web is accessible on a huge range of devices from small-screen phones
 through to huge-screen televisions. Each device presents its own unique
