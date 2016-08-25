@@ -17,9 +17,9 @@ Design and UI encopases a few broad areas.
 
 <img src="https://placehold.it/300x200" class="attempt-right">
 
-Users have come to expect responsive and interactive interfaces. Animating your interface is not straightforward. What should be animated, when, and what kind of feel should the animation have?
+Users expect responsive and interactive interfaces. Animating them isn't straightforward. What should be animated, when, and what kind of feel should the animations have?
 
-[Get Started](animations/)
+[Learn More](animations/)
 
 <div style="clear:both;"></div>
 
@@ -27,7 +27,7 @@ Users have come to expect responsive and interactive interfaces. Animating your 
 
 <img src="https://placehold.it/300x200" class="attempt-right">
 
-Modern browsers make it easy to customize components, like icons, the address bar color, and even add things like custom tiles. These simple tweaks can increase engagement and bring users back to your site.
+Modern browsers make it easy to customize components like icons, address bar color, and even add things like custom tiles. Simple tweaks can increase engagement and bring users back to your site.
 
 [Get Started](browser-customization/)
 
@@ -37,7 +37,7 @@ Modern browsers make it easy to customize components, like icons, the address ba
 
 <img src="https://placehold.it/300x200" class="attempt-right">
 
-Information entry happens more often on mobile these days. Forms on mobile are hard to fill out and is usally done with fingers. Learn how to make responses to entry and touch both intuitive and beautiful.
+Information entry happens more often on mobile than on desktop these days. Mobile forms are hard to fill out. Learn how to make responses to entry and touch both intuitive and beautiful.
 
 [Get Started](input/)
 
@@ -47,6 +47,6 @@ Information entry happens more often on mobile these days. Forms on mobile are h
 
 <img src="https://placehold.it/300x200" class="attempt-right">
 
-Web surfing on mobile is growing at an astronomical pace, but unfortunately much of the web isn't optimized for mobile devices. Mobile devices are often constrained by display size and require a different approach to how content is laid out on screen.
+Web surfing on mobile is growing astronomically. Unfortunately much of the web isn't optimized for mobile devices, which are often constrained by display size and require a different approach to content layout.
 
-[Get Started](responsive/)
+[Learn More](responsive/)

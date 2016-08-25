@@ -1,6 +1,8 @@
 toc:
   - title: Design & UI
     section:
+    - title: Overview
+      path: /web/fundamentals/design-and-ui/
     - title: Responsive Design
       section:
       - title: The Fundamentals
