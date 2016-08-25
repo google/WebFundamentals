@@ -57,5 +57,6 @@ skip_files:
 - ^(.*/)?.*\.psd$
 - ^(.*/)?.*\.pxm$
 - ^node_modules/.*
-- ^/tools/.*
+- ^tools/.*
+- ^\..*
 - ^(.*/)?.*\.pyc$
