@@ -5,7 +5,7 @@ description: "Promises simplify deferred and asynchronous computations. A promis
 {# wf_published_on: 2013-12-16 #}
 {# wf_updated_on: 2014-01-29 #}
 
-# Introduction to JavaScript Promises {: .page-title }
+# JavaScript Promises - an Introduction {: .page-title }
 
 {% include "_shared/contributors/jakearchibald.html" %}
 

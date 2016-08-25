@@ -14,9 +14,9 @@ toc:
       path: /web/fundamentals/getting-started/primers/service-workers
     - title: JavaScript Promises - an Introduction
       path: /web/fundamentals/getting-started/primers/promises
-    - title: "Shadow DOM v1: self-contained web components"
+    - title: "Shadow DOM v1: Self-Contained Web Components"
       path: /web/fundamentals/getting-started/primers/shadowdom
-    - title: "Custom elements v1: reusable web components"
+    - title: "Custom Elements v1: Reusable Web Components"
       path: /web/fundamentals/getting-started/primers/customelements
     - title: "Payment Request API: An Integration Guide"
       path: /web/fundamentals/getting-started/primers/payment-request
