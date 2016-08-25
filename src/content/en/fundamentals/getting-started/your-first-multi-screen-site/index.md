@@ -141,7 +141,7 @@ By following the best practices, you can easily integrate video into your site:
 *  Add fall-back text to let people download the video if they can't play it in the window.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
 #### Create the Images Section
@@ -213,16 +213,20 @@ content ready and in-place to satisfy our business needs.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/content.png" alt="Content" style="max-width: 100%;">
+    <img src="images/content.png" alt="Content">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
+    </figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img src="images/narrowsite.png" alt="" style="max-width: 100%;">
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
+    </figcaption>
   </figure>
 </div>
-
-<div style="clear:both;"></div>
 
 You will notice that the page looks terrible right now; this is intentional.
 Content is the most important aspect of any site and we needed to make sure we
@@ -244,25 +248,6 @@ types. We've crafted the Information Architecture of the page and created a
 basic structure. In this section, we will take our basic structure with
 content and turn it into a beautiful page that is responsive across a large 
 number of screen sizes.
-
-<div class="attempt-left">
-  <figure>
-    <img src="images/content.png" alt="Content">
-    <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
-    </figcaption>
-  </figure>
-</div>
-<div class="attempt-right">
-  <figure>
-    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
-    <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
-    </figcaption>
-  </figure>
-</div>
-
-<div style="clear:both;"></div>
 
 Following the principles of Mobile First web development, we start with a 
 narrow viewport &mdash; similar to a mobile phone &mdash; and build for 
@@ -409,11 +394,11 @@ The container will be a simple `div` in the following form:
     <div class="container">...</div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/constrainwidth.html" region_tag="containerhtml" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/constrainwidth.html" region_tag="containerhtml" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/constrainwidth.html" region_tag="container" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/constrainwidth.html" region_tag="container" adjust_indentation="auto" %}
 </pre>
 
 ### Alter the padding and reduce text size
@@ -432,7 +417,7 @@ setting it to remain at 5% of the width.  We will also increase the size of
 the headers for each of the sections.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/alterpadding.html" region_tag="padding" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/alterpadding.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
 ### Adapt elements to wide viewport
@@ -458,7 +443,7 @@ of the linear flow of the header and move the form and list to be next
 to each other.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/floattheform.html" region_tag="formfloat" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/floattheform.html" region_tag="formfloat" adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -480,7 +465,7 @@ The video element needs to be moved out of the vertical flow of the narrow
 viewport and should be displayed side-by-side with the bulleted list of content on a wide viewport.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/floatthevideo.html" region_tag="floatvideo" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/floatthevideo.html" region_tag="floatvideo" adjust_indentation="auto" %}
 </pre>
 
 #### Tile the Images
@@ -499,21 +484,21 @@ the images look more appealing.
 <div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/tiletheimages.html" region_tag="tileimages" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/tiletheimages.html" region_tag="tileimages" adjust_indentation="auto" %}
 </pre>
 
 #### Make images responsive to DPI
 
-When using images,
-take the size of the viewport and the density of the display into consideration.
+When using images, take the size of the viewport and the density of the
+display into consideration.
 
 The web was built for 96dpi screens.  With the introduction of mobile devices,
 we have seen a huge increase in the pixel density of screens not to mention
 Retina class displays on laptops.  As such, images that are encoded to 96dpi
 often look terrible on a hi-dpi device.
 
-We have a solution that is not widely adopted yet.
-For browsers that support it, you can display a high density image on a high density display.
+We have a solution that is not widely adopted yet. For browsers that support
+it, you can display a high density image on a high density display.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x">
@@ -556,7 +541,7 @@ This gives us a clear and consistent break.
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" adjust_indentation="auto" %}
 </pre>
 
-### Wrapping up
+## Wrapping up
 
 Success: By the time you read this, you will have created your
 first simple product landing page that works across a large range of devices,
@@ -567,6 +552,5 @@ If you follow these guidelines, you will be off to a good start:
 1.  Create a basic IA and understand your content before you code.
 2.  Always set a viewport.
 3.  Create your base experience around mobile-first approach.
-4.  Once you have your mobile experience, increase the width of the display
-   until it doesn't look right and set your breakpoint there.
+4.  Once you have your mobile experience, increase the width of the display until it doesn't look right and set your breakpoint there.
 5.  Keep iterating.
