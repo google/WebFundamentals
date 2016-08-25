@@ -8,13 +8,13 @@ description: TODO
 
 # Discovery and Monetization {: .page-title }
 
-TBD
+Learn how to bring more readers to your web site and increase revenue.
 
 ## Search Optimization
 
 <img src="https://placehold.it/300x200" class="attempt-right">
 
-TBD
+Use your site structure and a robots.txt file to improve your search engine optimization.
 
 [Get Started](search-optimization/)
 
@@ -24,9 +24,9 @@ TBD
 
 <img src="https://placehold.it/300x200" class="attempt-right">
 
-TBD
+A few lines of code on each page an bring more people to your site by providing previews with rich information.
 
-[Get Started](social-discovery/)
+[Learn More](social-discovery/)
 
 <div style="clear:both;"></div>
 
@@ -34,8 +34,8 @@ TBD
 
 <img src="https://placehold.it/300x200" class="attempt-right">
 
-TBD
+Advertisements can make your content and site free while they earn money. Learn how ads work and how to serve responsive ads on your site.
 
-[Get Started](monetization-with-ads/)
+[Learn More](monetization-with-ads/)
 
 <div style="clear:both;"></div>
