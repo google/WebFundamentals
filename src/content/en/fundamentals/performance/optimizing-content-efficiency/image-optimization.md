@@ -5,7 +5,7 @@ book_path: /web/fundamentals/_book.yaml
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
-# Image optimization {: .page-title }
+# Image Optimization {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 

@@ -5,7 +5,7 @@ description: This guide examines PageSpeed Insights rules in context: what to pa
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# PageSpeed rules and recommendations {: .page-title }
+# PageSpeed Rules and Recommendations {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 

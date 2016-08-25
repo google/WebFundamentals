@@ -5,7 +5,7 @@ description: Learn to measure the critical rendering path.
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Measuring the critical rendering path with Navigation Timing {: .page-title }
+# Measuring the Critical Rendering Path with Navigation Timing {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 

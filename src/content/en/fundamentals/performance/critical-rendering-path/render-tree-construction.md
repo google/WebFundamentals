@@ -5,7 +5,7 @@ description: TODO
 {# wf_updated_on: 2015-08-20 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Render-tree construction, layout, and paint {: .page-title }
+# Render-Tree Construction, Layout, and Paint {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 
