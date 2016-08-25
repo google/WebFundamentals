@@ -31,7 +31,7 @@ We've explored two of the crucial pillars of accessibility, focus and semantics.
 
 Generally, any time we focus an element, we rely on the built-in browser focus ring (the CSS *outline* property) to style the element. The focus ring is handy because, without it, it's impossible for a keyboard user to tell which element has the focus. The <a href="http://webaim.org/standards/wcag/checklist" target="_blank">WebAIM checklist</a> makes a point of this, requiring that "It is visually apparent which page element has the current keyboard focus (i.e., as you tab through the page, you can see where you are)."
 
-![focus-ring](imgs/focus-ring.png)
+![form elements with a focus ring](imgs/focus-ring.png)
 
 However, sometimes the focus ring can look distorted or it may just not fit in with your page design. Some developers remove this style altogether by setting the element's `outline` to `0` or `none`. But without a focus indicator, how is a keyboard user supposed to know which item they're interacting with?
 
