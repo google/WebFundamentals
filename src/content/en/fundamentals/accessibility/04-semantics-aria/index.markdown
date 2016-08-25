@@ -51,9 +51,9 @@ Using ARIA attributes, however, we can give the element the missing information 
 
 ARIA works by changing and augmenting the standard DOM accessibility tree.
 
-![acctree1](imgs/acctree1.png)
+![the standard DOM accessibility tree](imgs/acctree1.png)
 
-![acctree2](imgs/acctree2.png)
+![the ARIA augmented accessibility tree](imgs/acctree2.png)
 
 Although ARIA allows us to subtly (or even radically) modify the accessibility tree, that is the only page component it changes. ARIA doesn't augment any of the element's inherent behavior; it won't make the element focusable or give it keyboard event listeners. That is still part of our development task.
 
