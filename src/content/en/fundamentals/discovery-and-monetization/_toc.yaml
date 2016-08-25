@@ -14,15 +14,5 @@ toc:
     - title: Social Discovery
       path: /web/fundamentals/discovery-and-monetization/social-discovery/
     - title: Monetization with Ads
+      path: https://www.google.com/adsense
       status: external
-      section:
-      - title: Overview
-        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/
-      - title: How Ads Work
-        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/how-ads-work
-      - title: Including
-        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/include-ads
-      - title: Customizing
-        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/customize-ads
-      - title: Optimizing
-        path: /web/fundamentals/discovery-and-monetization/monetization-with-ads/optimize-ads
