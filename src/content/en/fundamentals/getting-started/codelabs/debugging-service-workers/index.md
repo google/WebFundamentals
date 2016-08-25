@@ -1,6 +1,11 @@
-# Debugging Service Workers
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
-[Codelab Feedback](https://github.com/googlecodelabs/debugging-service-workers/issues)
+{# wf_updated_on: 2016-08-15T18:03:59Z #}
+
+# Debugging Service Workers {: .page-title }
+
 
 
 ## Introduction
@@ -484,3 +489,10 @@ Nice work!
 Now that you have some debugging tools in your toolbox, you should be well equipped to fix-up any issues that arise in your project. The only thing left is for you to get out there and build the next amazing Progressive Web App!
 
 
+
+
+
+
+## Found an issue, or have feedback? {: .hide-from-toc }
+
+Help us make our code labs better by submitting an [issue](https://github.com/googlecodelabs/debugging-service-workers/issues) today. And thanks!

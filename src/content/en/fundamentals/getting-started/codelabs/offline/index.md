@@ -1,6 +1,11 @@
-# Adding a Service Worker and Offline into your Web App
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
-[Codelab Feedback](https://github.com/googlesamples/io2015-codelabs/issues)
+{# wf_updated_on: 2016-07-18T20:46:36Z #}
+
+# Adding a Service Worker and Offline into your Web App {: .page-title }
+
 
 
 ## Overview
@@ -240,3 +245,10 @@ You now have offline support. Reload your page while still online to update your
 *  [Introduction to service worker](https://developers.google.com/web/fundamentals/primers/service-worker/?hl=en)
 
 
+
+
+
+
+## Found an issue, or have feedback? {: .hide-from-toc }
+
+Help us make our code labs better by submitting an [issue](https://github.com/googlesamples/io2015-codelabs/issues) today. And thanks!

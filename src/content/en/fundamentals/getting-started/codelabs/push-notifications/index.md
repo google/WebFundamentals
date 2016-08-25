@@ -1,6 +1,11 @@
-# Enable Push Notifications for your Web App
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: In this codelab, you will learn how to enable push messaging and notifications for web apps and sites.
 
-[Codelab Feedback](https://github.com/GoogleChrome/push-notifications/issues)
+{# wf_updated_on: 2016-08-08T21:16:46Z #}
+
+# Enable Push Notifications for your Web App {: .page-title }
+
 
 
 ## Overview
@@ -617,3 +622,10 @@ __What about Firefox?__
 *  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
 
+
+
+
+
+## Found an issue, or have feedback? {: .hide-from-toc }
+
+Help us make our code labs better by submitting an [issue](https://github.com/GoogleChrome/push-notifications/issues) today. And thanks!

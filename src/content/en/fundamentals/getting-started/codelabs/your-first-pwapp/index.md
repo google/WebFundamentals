@@ -1,6 +1,11 @@
-# Your First Progressive Web App
+project_path: /web/_project.yaml
+book_path: /web/fundamentals/_book.yaml
+description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
-[Codelab Feedback](https://github.com/googlecodelabs/your-first-pwapp/issues)
+{# wf_updated_on: 2016-08-15T17:15:23Z #}
+
+# Your First Progressive Web App {: .page-title }
+
 
 
 ## Introduction
@@ -865,3 +870,10 @@ Further reading:  [Firebase Hosting Guide](https://www.firebase.com/docs/hosting
 [](https://weather-pwa-sample.firebaseapp.com/final/)
 
 
+
+
+
+
+## Found an issue, or have feedback? {: .hide-from-toc }
+
+Help us make our code labs better by submitting an [issue](https://github.com/googlecodelabs/your-first-pwapp/issues) today. And thanks!
