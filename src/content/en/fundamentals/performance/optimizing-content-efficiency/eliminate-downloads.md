@@ -5,14 +5,14 @@ book_path: /web/fundamentals/_book.yaml
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Eliminating unnecessary downloads {: .page-title }
+# Eliminating Unnecessary Downloads {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 
 The fastest and best optimized resource is a resource not sent. Have you audited your resources recently? You should, and you should do so periodically to ensure that each resource is helping deliver a better user experience.
 
 ## TL;DR
-- Inventory all own and third party assets on your pages
+- Inventory all owned and third-party assets on your pages
 - 'Measure the performance of each asset: its value and its technical performance'
 - Determine if the resources are providing sufficient value
 

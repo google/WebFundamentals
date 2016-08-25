@@ -5,7 +5,7 @@ description: Learn to identify and resolve critical rendering path performance b
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Analyzing critical rendering path performance {: .page-title }
+# Analyzing Critical Rendering Path Performance {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 

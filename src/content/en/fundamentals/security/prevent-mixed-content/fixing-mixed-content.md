@@ -5,7 +5,7 @@ description: Finding and fixing mixed content is an important task, but it can b
 {# wf_published_on: 2015-09-28 #}
 {# updated_on: 2016-08-24 #}
 
-# Preventing mixed content {: .page-title }
+# Preventing Mixed Content {: .page-title }
 
 {% include "_shared/contributors/johyphenel.html" %}
 

@@ -5,7 +5,7 @@ description: JavaScript allows us to modify just about every aspect of the page:
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 
-# Adding interactivity with JavaScript {: .page-title }
+# Adding Interactivity with JavaScript {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 

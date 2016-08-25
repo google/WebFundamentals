@@ -5,7 +5,7 @@ description: Learn the key factors in optimizing the critical rendering path.
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Optimizing the critical rendering path {: .page-title }
+# Optimizing the Critical Rendering Path {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 

@@ -5,7 +5,7 @@ book_path: /web/fundamentals/_book.yaml
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 
-# HTTP caching {: .page-title }
+# HTTP Caching {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 
