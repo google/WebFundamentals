@@ -25,11 +25,11 @@ notes:
 
 For native elements like `button`, browsers can detect whether user interaction occurred via the mouse or the keyboard press, and typically only display the focus ring for keyboard interaction. For example, when you click this native button with the mouse
 
-![button-mouse](imgs/button-mouse.png)
+![a button clicked with the mouse has no focus ring](imgs/button-mouse.png)
 
 there is no focus ring, but when you tab to it with the keyboard
 
-![button-keyboard](imgs/button-keyboard.png)
+![a button tabbed to with the keyboard has a focus ring](imgs/button-keyboard.png)
 
 the focus ring appears. 
 
