@@ -5,7 +5,7 @@ description: By default CSS is treated as a render blocking resource, learn how 
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Render blocking CSS {: .page-title }
+# Render Blocking CSS {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 

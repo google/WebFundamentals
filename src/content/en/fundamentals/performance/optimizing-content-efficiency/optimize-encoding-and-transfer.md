@@ -6,7 +6,7 @@ description: Next to eliminating unnecessary resource downloads, the best thing 
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Optimizing encoding and transfer size of text-based assets {: .page-title }
+# Optimizing Encoding and Transfer Size of Text-Based Assets {: .page-title }
 
 {% include "_shared/contributors/ilyagrigorik.html" %}
 
