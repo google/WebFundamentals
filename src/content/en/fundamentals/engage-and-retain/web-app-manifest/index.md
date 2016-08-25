@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The web app manifest is a JSON file that gives you the ability to control how your web app or site appears to the user in areas where they would expect to see native apps (for example, a device's home screen), direct what the user can launch, and define its appearance at launch.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-08-19 #}
 {# wf_published_on: 2016-02-11 #}
 
@@ -21,9 +20,9 @@ Web app manifests provide the ability to save a site bookmark to a device's home
 
 It does all this through the simple mechanism of metadata in a text file. That's the web app manifest.
 
-Note: Though you can use a web app manifest on any site, they are required for <a href='/web/progressive-web-apps'>progressive web apps</a>.
+Note: Though you can use a web app manifest on any site, they are required for [progressive web apps](/web/progressive-web-apps/).
 
-## TL;DR
+## TL;DR {: .hide-from-toc }
 - Creating a manifest and linking it to your page are simple.
 - Control what the user sees when launching from the homescreen.
 - This includes things like a splashscreen, theme colors, and even the URL that's opened. 
@@ -247,7 +246,7 @@ This article has given you a quick introduction to web app manifests. But
 there's more to learn.
 
 * If you're using a web app manifest, you'll probably want set up an
-[app install banner](/web/fundamentals/engage-and-retain/app-install-banners) as well. 
+[app install banner](/web/fundamentals/engage-and-retain/app-install-banners/) as well. 
 
 * [A complete reference](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 to the web app manifest is available on the Mozilla Developer Network.

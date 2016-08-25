@@ -10,33 +10,28 @@ description: Push notifications are one of the most valuable capabilities of nat
 
 {% include "_shared/contributors/josephmedley.html" %}
 
-<figure class="attempt-right">
-  <img src="images/tpnr.png" alt="Timely, precise, and relevant">
-  <figcaption>Timely, precise, and relevant</figcaption>
-</figure>
 
-Don't annoy your users, or you'll lose access to them forever. Do we need to
-say anything more than that? We do because it's easier said than done. 
+<img src="images/joe-asked-contextual.png" alt="Example Notification" class="attempt-right">
 
-Push notifications are one of the most valuable capabilities of native apps, 
-and this capability is now available on the web. To get the most out of them,
-notifications need to be timely, precise, and relevant.
+If you ask a room of developers what mobile device features are missing from
+the web, push notifications are always high on the list.
 
-**Timely** —A timely notification is one that appears when users want it and when
-it matters to them.
+Web push notifications allow users to opt-in to timely updates from sites
+they love and allow you to effectively re-engage them with customized,
+relevant content. 
 
-**Precise** —A precise notification is one that has specific information that can
-be acted on immediately.
+The Push API and Notification API open a whole new set of possibilities for
+you to re-engage with your users.
 
-**Relevant** —A relevant message is one about people or subjects the user cares
-about.
 
 <div style="clear:both;"></div>
 
 ## Are service workers involved? {#service-worker-involved}
 
-Yes. We're not going to explain [service workers](/web/fundamentals/getting-started/primers/service-workers). We will use service worker code
-in later sections when we show you how to implement pushes and notifications.
+Yes! If you're not familiar with them, check out the 
+[service worker introduction](/web/fundamentals/getting-started/primers/service-workers).
+We will use service worker code in later sections when we show you how to
+implement pushes and notifications.
 
 ## Two technologies {#two-technologies}
 
@@ -71,12 +66,8 @@ A typical options object looks something like this:
       ]
     }
     
+<img src="images/joe-asked-contextual.png" alt="Example Notification" class="attempt-right">
 
-<figure class="attempt-right">
-  <img src="images/joe-asked-contextual.png" alt="Example Notification">
-</figure>
-
-This produces a notifiation that looks like this:
 
 In the next few sections we'll provide tips to help you build better
 notifications. We'll go on to describe the mechanincs of implementing them,

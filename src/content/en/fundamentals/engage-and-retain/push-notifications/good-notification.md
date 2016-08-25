@@ -10,12 +10,28 @@ description: There are right ways of using notifications, and ways of using them
 
 {% include "_shared/contributors/josephmedley.html" %}
 
-You've no doubt implemented some form of notification before. Maybe you've
-used them in a native application. Perhaps you've created your own web
-notifications from scratch. Maybe you've never done anything like them.
-Regardless, there are right ways of using them, and ways of using them better.
-Let's start our review of notifications by demonstrating what makes a good
-notification. We won't just show you what to do. We'll show you how to do it.
+<figure class="attempt-right">
+  <img src="images/tpnr.png" alt="Timely, precise, and relevant">
+  <figcaption>Timely, precise, and relevant</figcaption>
+</figure>
+
+Don't annoy your users, or you'll lose access to them forever. Do we need to
+say anything more than that? We do because it's easier said than done. 
+
+Push notifications are one of the most valuable capabilities of native apps, 
+and this capability is now available on the web. To get the most out of them,
+notifications need to be timely, precise, and relevant.
+
+**Timely** —A timely notification is one that appears when users want it and when
+it matters to them.
+
+**Precise** —A precise notification is one that has specific information that can
+be acted on immediately.
+
+**Relevant** —A relevant message is one about people or subjects the user cares
+about.
+
+<div style="clear:both;"></div>
 
 
 ## Timely {#timely}
