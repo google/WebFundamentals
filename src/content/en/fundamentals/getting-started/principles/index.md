@@ -5,7 +5,7 @@ description: Google and AnswerLab undertook a study examining how users interact
 {# wf_published_on: 2014-08-08 #}
 {# wf_updated_on: 2015-09-17 #}
 
-# What makes a good mobile site? {: .page-title }
+# What Makes a Good Mobile Site? {: .page-title }
 
 {% include "_shared/contributors/petelepage.html" %}
 
