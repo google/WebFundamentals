@@ -29,7 +29,7 @@ ARIA provides several mechanisms for adding labels and descriptions to elements.
 
 You might use an `aria-label` attribute when you have some kind of visual indication of an element's purpose, such as a button that uses a graphic instead of text, but still need to clarify that purpose for anyone who cannot access the visual indication, such as a button that uses only an image to indicate its purpose.
 
-![hamburger-button](imgs/hamburger-button.png)
+![using ARIA label to identify an image only button](imgs/hamburger-button.png)
 
 `aria-labelledby` allows us to specify the ID of another element in the DOM as an element's label. This is much like using a `label` element, with some key differences.
 
