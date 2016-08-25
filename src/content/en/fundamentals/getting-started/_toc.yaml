@@ -3,13 +3,20 @@ toc:
     section:
     - title: Welcome
       path: /web/fundamentals/getting-started/
-    # - title: Code Labs
-    #   path: https://codelabs.developers.google.com/?cat=Web
-    #  status: external
-    # - title: Principles of Site Design
-    #  path: /web/fundamentals/getting-started/principles/
-    # - title: Asking Permission Respectfully
-    #   path: /web/fundamentals/getting-started/permission/
+    - title: Code Labs
+      section:
+      - title: Your First Progressive Web App
+        path: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
+      - title: Debugging Service Workers
+        path: /web/fundamentals/getting-started/codelabs/debugging-service-workers/
+      - title: Your First Offline Web App
+        path: /web/fundamentals/getting-started/codelabs/offline/
+      - title: Your First Web Push Notification
+        path: /web/fundamentals/getting-started/codelabs/push-notifications/
+    - title: Principles of Site Design
+      path: /web/fundamentals/getting-started/principles/
+    - title: Asking Permission Respectfully
+      path: /web/fundamentals/getting-started/permission/
     - title: Service Workers - an Introduction
       path: /web/fundamentals/getting-started/primers/service-workers
     - title: JavaScript Promises - an Introduction
