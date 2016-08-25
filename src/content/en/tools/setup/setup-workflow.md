@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Set up persistent authoring in Chrome DevTools so you can both see your changes immediatedly and save those changes to disk.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-07-30 #}
 {# wf_published_on: 2015-07-08 #}
 
@@ -28,7 +27,7 @@ and view changes made to those files as if they were being served.
 ## TL;DR
 - Don't manually copy changes to local files. Use workspaces to persist changes made in DevTools to your local resources.
 - Stage your local files to your browser. Map files to URLs.
-- 'Once persistent workspaces are set-up, style changes made in the Elements panel are persisted automatically; DOM changes aren''t. Persist element changes in the Sources panel instead.'
+- Once persistent workspaces are set-up, style changes made in the Elements panel are persisted automatically; DOM changes aren't. Persist element changes in the Sources panel instead.
 
 
 ## Add local source files to workspace

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2014-09-24 #}
 
@@ -24,7 +23,7 @@ minute you start.
 
 
 ## TL;DR
-- 'Your build process tools must optimise for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.'
+- Your build process tools must optimise for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.
 - Use tools like LiveReload to make your development process smoother.
 
 

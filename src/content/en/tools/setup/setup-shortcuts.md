@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2014-09-24 #}
 
@@ -16,7 +15,7 @@ Set up shortcuts for the command line tasks you use over and over again. If you 
 
 ## TL;DR
 - Make the command line work for you; create aliases that are easy to remember and fast to type.
-- 'Give Github dotfiles a try to save, share and sync up your command line shortcuts.'
+- Give Github dotfiles a try to save, share and sync up your command line shortcuts.
 
 
 ## How to set them up
