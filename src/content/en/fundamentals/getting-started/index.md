@@ -61,12 +61,12 @@ or adding a new feature to an existing application.
 
 <div style="clear:both"></div>
 
-[Your First Multi-Device Site](web-starter-kit/)
+[Your First Multi-Device Site](your-first-multi-screen-site/)
 The web is accessible on a huge range of devices, from small-screen phones to
 big-screen televisions. Each device presents its own benefits and constraints.
 As a web developer, you are expected to support a full ranges of devices.
 
-[Start Your Site With Web Starter Kit](your-first-multi-screen-site/)
+[Start Your Site With Web Starter Kit](web-starter-kit/)
 Sometimes the hardest part of a new project is getting started. Web Starter
 Kit gives you a solid base with a range of tools to help you along the
 development process.
