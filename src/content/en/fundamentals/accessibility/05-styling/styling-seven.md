@@ -29,12 +29,12 @@ Operating systems like Mac OSX and Windows offer high-contrast modes that can be
 
 A useful exercise is to turn on high-contrast settings and verify that all of the UI in your application is still visible and usable.
 
-For example, a navigation bar might use a subtle background color to indicate which page is currently selected. If you view it in high-contrast extension, that subtlety completely disappears, and with it goes the reader's understanding of which page is active.
+For example, a navigation bar might use a subtle background color to indicate which page is currently selected. If you view it in a high-contrast extension, that subtlety completely disappears, and with it goes the reader's understanding of which page is active.
 
-![tab-contrast](imgs/tab-contrast.png)
+![a navigation bar in high contrast mode](imgs/tab-contrast.png)
 
 Similarly, if you consider the example from the previous lesson, the red underline on the invalid phone number field might be displayed in a hard-to-distinguish blue-green color.
 
-![field-contrast](imgs/field-contrast.png)
+![a form with an error field in high contrast mode](imgs/field-contrast.png)
 
 If you are meeting the contrast ratios covered in the previous lessons you should be fine when it comes to supporting high-contrast mode. But for added peace of mind, consider installing the Chrome High Contrast extension and giving your page a once-over just to check that everything works, and looks, as expected.
