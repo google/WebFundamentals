@@ -6,76 +6,51 @@ description: TODO
 {# wf_updated_on: 2015-09-08 #}
 {# wf_published_on: 2015-09-08 #}
 
-# Getting Started {: .page-title }
+# Welcome [WIP] {: .page-title }
 
-TODO: Needs to be completed
+Are you new to web development, or an old pro? We've got resources for both. 
 
-## Code Labs
-
-<img src="https://placehold.it/300x200" class="attempt-right">
-
-TBD
-
-[Get Started](tbd/)
-
-<div style="clear:both;"></div>
-
-## Principles of Site Design
-
-<img src="https://placehold.it/300x200" class="attempt-right">
-
-TBD
-
-[Get Started](tbd/)
+<a class="button button-primary" href="https://codelabs.developers.google.com/?cat=Web">
+  Codelabs
+</a>
+<a class="button button-primary" href="../progressive-web-apps/">
+  Progressive Web Apps
+</a>
 
 <div style="clear:both;"></div>
 
-## Service Workers - an Introduction
+## New, Fun, and Cool
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+Want to know about the newest and shiniest parts of the web platform? The current field may be wider than we can cover conprehensively. Here are the subjects we think are the best place to start.
 
-TBD
+<div style="clear:none;"></div>
 
-[Get Started](tbd/)
+### Service Workers
 
-<div style="clear:both;"></div>
+<img src="https://placehold.it/48x48">
 
-## JavaScript Promises - an Introduction
+Do you want to build pages with rich offline experiences formerly reserved native applications? Services workers are the foundation.
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+### JavaScript Promises - an Introduction
 
-TBD
+<img src="https://placehold.it/48x48">
 
-[Get Started](tbd/)
+So much in web development is asynchornous, yet JavaScript only has one thread. Callback functions were once the standard. Increasingly, promises are taking their place.
 
-<div style="clear:both;"></div>
+### Shadow DOM v1: Reusable Web Components
 
-## Shadow DOM v1: Self-Contained Web Components
+<img src="https://placehold.it/48x48">
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+Shadow DOM is encapsulated DOM subtree that's rendered, but not shown. With them you can build components that are insulated form the global nature of typical web development.
 
-TBD
+### Custom Elements v1: Reusable Web Components
 
-[Get Started](tbd/)
+<img src="https://placehold.it/48x48">
 
-<div style="clear:both;"></div>
+Create new HTML tags, beef-up existing HTML tags, or extend the components other developers have authored.
 
-## Custom Elements v1: Reusable Web Components
+### Payment Request API: An Integration Guide
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+<img src="https://placehold.it/48x48">
 
-TBD
-
-[Get Started](tbd/)
-
-<div style="clear:both;"></div>
-
-## Payment Request API: An Integration Guides
-
-<img src="https://placehold.it/300x200" class="attempt-right">
-
-TBD
-
-[Get Started](tbd/)
-
-<div style="clear:both;"></div>
+Standardizing payment flows is about simplifying the process for users and improving mobile's abysmal payment conversion rates.
