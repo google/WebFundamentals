@@ -35,7 +35,7 @@ about.
 
 ## Are service workers involved? {#service-worker-involved}
 
-Yes. We're not going to [explain service workers](../../getting-started/primers/service-workers). We will use service worker code
+Yes. We're not going to explain [service workers](/web/fundamentals/getting-started/primers/service-workers). We will use service worker code
 in later sections when we show you how to implement pushes and notifications.
 
 ## Two technologies {#two-technologies}
