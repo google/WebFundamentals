@@ -25,6 +25,8 @@ toc:
       section:
       - title: Overview
         path: /web/fundamentals/design-and-ui/animations/
+      - title: CSS Versus JavaScript
+        path: /web/fundamentals/design-and-ui/animations/css-vs-javascript
       - title: The Basics of Easing
         path: /web/fundamentals/design-and-ui/animations/the-basics-of-easing
       - title: Custom Easing
@@ -33,6 +35,8 @@ toc:
         path: /web/fundamentals/design-and-ui/animations/animating-between-views
       - title: Choosing the Right Easing
         path: /web/fundamentals/design-and-ui/animations/choosing-the-right-easing
+      - title: Animating Modal Views
+        path: /web/fundamentals/design-and-ui/animations/animating-modal-views
       - title: Asymmetric Animation Timing
         path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
       - title: Animations and Performance
