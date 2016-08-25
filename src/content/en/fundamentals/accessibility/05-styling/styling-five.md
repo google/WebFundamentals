@@ -29,7 +29,7 @@ As you might imagine, some color combinations that are easy for many people to r
 
 The <a href="http://webaim.org/standards/wcag/" target="_blank">WebAIM guidelines</a> recommend an AA (minimum) contrast ratio of 4.5:1 for all text. An exception is made for very large text (120-150% larger than the default body text), for which the ratio can go down to 3:1. Notice the difference in the contrast ratios shown below.
 
-![contrast-ratios](imgs/contrast-ratios.png)
+![comparison of various contrast ratios](imgs/contrast-ratios.png)
 
 The contrast ratio of 4.5:1 was chosen for level AA because it compensates for the loss in contrast sensitivity usually experienced by users with vision loss equivalent to approximately 20/40 vision. 20/40 is commonly reported as typical visual acuity of people at about age 80. For users with low vision impairments or color deficiencies, we can increase the contrast up to 7:1 for body text.
 
@@ -42,6 +42,6 @@ To run a color/contrast audit, follow these basic steps.
  1. Click `Audit Present State`
  1. Note any contrast warnings
 
-![contrast audit](imgs/contrast-audit.png)
+![the devtools contrast audit dialog](imgs/contrast-audit.png)
 
 WebAIM itself provides a handy <a href="http://webaim.org/resources/contrastchecker/" target="_blank">color contrast checker</a> you can use to examine the contrast of any color pair.
