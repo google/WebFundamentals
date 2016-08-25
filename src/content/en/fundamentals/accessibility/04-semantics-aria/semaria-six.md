@@ -45,7 +45,7 @@ See this WebAIM article on <a href="http://webaim.org/techniques/css/invisibleco
 
 Finally, ARIA provides a mechanism for excluding content from assistive technology that is not visually hidden, using the `aria-hidden` attribute. Applying this attribute to an element effectively removes it *and all of its descendants* from the accessibility tree. The only exceptions are elements referred to by an `aria-labelledby` or `aria-describedby` attribute. 
 
-![aria-hidden](imgs/aria-hidden.png)
+![using ARIA hidden to exclude visible content from assistive technology](imgs/aria-hidden.png)
 
 For example, you might use `aria-hidden` if you're creating some modal UI that blocks access to the main page. In this case, a sighted user might see some kind of semi-transparent overlay indicating that most of the page can't currently be used, but a screen reader user may still be able to explore to the other parts of the page. In this case, as well as creating the keyboard trap [explained earlier](/web/fundamentals/accessibility/01-focus/focus-eight), you need to make sure that the parts of the page that are currently out of scope are `aria-hidden` as well.
 
