@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TODO
+description: esign and UI encopases a few broad areas. What does a web page look like and hat's in it? How does it behave?
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-09-08 #}

@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TODO
+description: Improving performance starts with minimizing, or at lease, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-09-08 #}
@@ -8,7 +8,7 @@ description: TODO
 
 # Performance {: .page-title }
 
-Improving performance is about much more than finding better algorithms and eliminating nested loops. It starts with minimizing, or at lease, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
+Improving performance starts with minimizing, or at lease, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
 
 ## Optimizing Content Efficiency
 
