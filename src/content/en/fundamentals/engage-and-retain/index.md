@@ -1,6 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TODO
+description: Connect with your users and keep them coming back. Use any to improve your
+site. Use all if you're working towards a progressive web app.
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-09-08 #}

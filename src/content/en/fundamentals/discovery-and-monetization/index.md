@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TODO
+description: Learn how to bring more readers to your web site and increase revenue.
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-09-08 #}

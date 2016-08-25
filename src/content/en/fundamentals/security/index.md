@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: TODO
+description: ecurity is a big topic, bigger than we can conver in this section. We've provided a few things to get you started. 
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-09-08 #}
