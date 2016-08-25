@@ -3,11 +3,11 @@ toc:
     section:
     - title: Welcome
       path: /web/fundamentals/getting-started/
-    - title: Code Labs
-      path: https://codelabs.developers.google.com/?cat=Web
-      status: external
-    - title: Principles of Site Design
-      path: /web/fundamentals/getting-started/principles/
+    # - title: Code Labs
+    #   path: https://codelabs.developers.google.com/?cat=Web
+    #  status: external
+    # - title: Principles of Site Design
+    #  path: /web/fundamentals/getting-started/principles/
     # - title: Asking Permission Respectfully
     #   path: /web/fundamentals/getting-started/permission/
     - title: Service Workers - an Introduction
