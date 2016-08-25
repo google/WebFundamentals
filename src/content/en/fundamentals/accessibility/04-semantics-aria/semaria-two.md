@@ -56,7 +56,7 @@ In fact, because keyboard interactions feature so prominently in screen reader u
 
 The <a href="https://www.w3.org/TR/wai-aria/" target="_blank">ARIA spec</a> describes a taxonomy of possible values for the `role` attribute and associated ARIA attributes that may be used in conjunction with those roles. This is the best source of definitive information about how the ARIA roles and attributes work together and how they can be used in a way that is supported by browsers and assistive technologies.
 
-![aria-roles](imgs/aria-roles.png)
+![available ARIA roles](imgs/aria-roles.png)
 
 However, the spec is very dense; a more approachable place to start is the <a href="http://rawgit.com/w3c/aria/master/practices/aria-practices.html" target="_blank">ARIA practices document</a>, which explores best practices for using the available ARIA roles and properties.
 
