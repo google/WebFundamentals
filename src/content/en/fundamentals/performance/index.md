@@ -46,16 +46,26 @@ To write performant sites and apps you need to understand how HTML, JavaScript a
 
 It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help.
 
-[Learn More](TBD/)
+[Learn More](poor-connectivity/)
 
 <div style="clear:both;"></div>
 
-## Performance Code Lab
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+## Related Resources
 
-Avoid jank by ensuring that an app runs at a consistent sixty frames per second (60fps) by coding JavaScript and CSS to reduce or eliminate jank.
+### Code Labs
 
-[Get Started](TBD/)
+[Find and Fix Web App Performance Issues](/web/fundamentals/codelabs/web-perf/)
+This codelab will help you learn to identify and fix web app performance bottlenecks.
+
+### Udacity Courses
+
+[Browser Rendering Optimization](https://udacity.com/ud860)
+Google performance guru Paul Lewis is here to help you destroy jank and create
+web apps that maintain 60 frames per second performance.
+
+[Critical Rendering Path](https://udacity.com/ud884)
+Learn about the Critical Rendering Path, or the set of steps browsers must take
+to convert HTML, CSS and JavaScript into living, breathing websites.
 
 <div style="clear:both;"></div>

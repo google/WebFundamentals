@@ -62,6 +62,9 @@ or adding a new feature to an existing application.  Find more code labs on
 
 <div style="clear:both"></div>
 
+[Find and Fix Web App Performance Issues](codelabs/web-perf/)
+This codelab will help you learn to identify and fix web app performance bottlenecks.
+
 [Your First Multi-Device Site](your-first-multi-screen-site/)
 The web is accessible on a huge range of devices, from small-screen phones to
 big-screen televisions. Each device presents its own benefits and constraints.
