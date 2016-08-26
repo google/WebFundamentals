@@ -2,13 +2,16 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: CSP's ability to block untrusted resources client-side is a huge win for your users, but it would be quite helpful indeed to get some sort of notification sent back to the server so that you can identify and squash any bugs that allow malicious injection in the first place.
 
+{# wf_updated_on: 2016-02-19 #}
+{# wf_published_on: 2015-05-08 #}
+
 # Reporting {: .page-title }
 
 {% include "_shared/contributors/mikewest.html" %}
 {% include "_shared/contributors/josephmedley.html" %}
 
 CSP's ability to block untrusted resources client-side is a huge win for your
-users, but it would be quite helpful indeed to get some sort of notification
+users, but it would be quite helpful to have some sort of notification
 sent back to the server so that you can identify and squash any bugs that allow
 malicious injection in the first place. To this end, you can instruct the
 browser to <code>POST</code> JSON-formatted violation reports to a location
@@ -44,7 +47,7 @@ page's policy (`blocked-uri`), the specific directive it violated
 If you're just starting out with CSP, it makes sense to evaluate the current
 state of your application before rolling out a draconian policy to your users.
 As a stepping stone to a complete deployment, you can ask the browser to monitor
-a policy, reporting violations, but not enforcing the restrictions. Instead of
+a policy, reporting violations but not enforcing the restrictions. Instead of
 sending a `Content-Security-Policy` header, send a
 `Content-Security-Policy-Report-Only` header.
 
@@ -55,5 +58,4 @@ it will send violation reports to the location you specify. You can even send
 _both_ headers, enforcing one policy while monitoring another. This is a great
 way to evaluate the effect of changes to your application's CSP: turn on
 reporting for a new policy, monitor the violation reports and fix any bugs that
-turn up, then start enforcing the new policy once you're satisfied with its
-effect.
+turn up; when you're satisfied with its effect, start enforcing the new policy.

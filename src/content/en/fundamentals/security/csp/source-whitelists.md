@@ -1,6 +1,9 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: The issue exploited by XSS attacks is the browser's inability to distinguish between script that's part of your application, and script that's been maliciously injected by a third-party. Instead of blindly trusting everything that a server delivers, CSP defines the Content-Security-Policy HTTP header that allows you to create a whitelist of sources of trusted content, and instructs the browser to only execute or render resources from those sources.
+description: The issue exploited by XSS attacks is the browser's inability to distinguish between script that's part of your application and script that's been maliciously injected by a third-party. Instead of blindly trusting everything that a server delivers, CSP defines the Content-Security-Policy HTTP header that allows you to create a whitelist of sources of trusted content, and instructs the browser to only execute or render resources from those sources.
+
+{# wf_updated_on: 2016-02-19 #}
+{# wf_published_on: 2015-05-08 #}
 
 # Source Whitelists {: .page-title }
 
@@ -8,7 +11,7 @@ description: The issue exploited by XSS attacks is the browser's inability to di
 {% include "_shared/contributors/josephmedley.html" %}
 
 The issue exploited by XSS attacks is the browser's inability to distinguish
-between script that's part of your application, and script that's been
+between script that's part of your application and script that's been
 maliciously injected by a third-party. For example, the Google +1 button at the
 bottom of this page loads and executes code from
 `https://apis.google.com/js/plusone.js` in the context of this page's origin. We
@@ -33,7 +36,7 @@ comes from one of those two sources:
 Simple, right? As you probably guessed, `script-src` is a directive that
 controls a set of script-related privileges for a specific page. We've specified
 `'self'` as one valid source of script, and `https://apis.google.com` as
-another. The browser will dutifully download and execute JavaScript from
+another. The browser dutifully downloads and executes JavaScript from
 `apis.google.com` over HTTPS, as well as from the current page's origin.
 
 <div class="attempt-right">
@@ -42,14 +45,12 @@ another. The browser will dutifully download and execute JavaScript from
   </figure>
 </div>
 
-With this policy defined, the browser will simply throw an error instead of
+With this policy defined, the browser simply throws an error instead of
 loading script from any other source. When a clever attacker manages to
-inject code into your site, she'll run headlong into an error message, rather
-than the success she was expecting.
+inject code into your site, they'll run headlong into an error message rather
+than the success they were expecting.
 
-<div style="clear:both;"></div>
-
-## Policy Applies to a Wide Variety of Resources
+## Policy applies to a wide variety of resources
 
 While script resources are the most obvious security risks, CSP provides a rich
 set of policy directives that enable fairly granular control over the resources
@@ -61,10 +62,10 @@ should be clear. Let's quickly walk through the rest of the resource directives:
   example: `child-src https://youtube.com` would enable embedding videos from
   YouTube but not from other origins. Use this in place of the deprecated
   **`frame-src`** directive.
-* **`connect-src`** limits the origins to which you can connect (via XHR,
+* **`connect-src`** limits the origins that you can connect to (via XHR,
   WebSockets, and EventSource).
-* **`font-src`** specifies the origins that can serve web fonts. Google's Web
-Fonts    could be enabled via `font-src https://themes.googleusercontent.com`.
+* **`font-src`** specifies the origins that can serve web fonts. Google's web
+fonts could be enabled via `font-src https://themes.googleusercontent.com`.
 * **`form-action`** lists valid endpoints for submission from `<form>` tags.
 * **`frame-ancestors`**  specifies the sources that can embed the current page.
 This directive applies to `<frame>`, `<iframe>`, `<embed>`, and `<applet>` tags.
@@ -79,18 +80,18 @@ resources.
 content security policy is violated. This directive can't be used in `<meta>`
 tags.
 * **`style-src`** is `script-src`'s counterpart for stylesheets.
-* **`upgrade-insecure-requests`** Instructs user agents to rewrite URL schemes,
-changing HTTP to HTTPS. This directive is for web sites with large numbers of
+* **`upgrade-insecure-requests`** instructs user agents to rewrite URL schemes,
+changing HTTP to HTTPS. This directive is for websites with large numbers of
 old    URL's that need to be rewritten.
 
 By default, directives are wide open. If you don't set a specific policy for a
 directive, let's say `font-src`, then that directive behaves by default as
-though you'd specified `*` as the valid source (e.g. you could load fonts from
-everywhere, without restriction).
+though you'd specified `*` as the valid source (for example, you could load fonts from
+anywhere, without restriction).
 
 You can override this default behavior by specifying a **`default-src`**
-directive. This directive, as you might suspect, defines the defaults for most
-directives you leave unspecified. Generally, this applies to any directive that
+directive. This directive defines the defaults for most
+directives that you leave unspecified. Generally, this applies to any directive that
 ends with `-src`. If `default-src` is set to `https://example.com`, and you fail
 to specify a `font-src` directive, then you can load fonts from
 `https://example.com`, and nowhere else. We specified only `script-src` in our
@@ -109,7 +110,7 @@ failing to set them is the same as allowing anything.
 
 You can use as many or as few of these directives as makes sense for your
 specific application, simply listing each in the HTTP header, separating
-directives with semicolons. You'll want to make sure that you list _all_
+directives with semicolons. Make sure that you list _all_
 required resources of a specific type in a _single_ directive. If you wrote
 something like `script-src https://host1.com; script-src https://host2.com` the
 second directive would simply be ignored. Something like the following would
@@ -119,15 +120,15 @@ correctly specify both origins as valid:
 
 If, for example, you have an application that loads all of its resources from a
 content delivery network (say, `https://cdn.example.net`), and know that you
-don't need framed content or any plugins at all, then your policy might look
+don't need any framed content or plugins, then your policy might look something
 like the following:
 
     Content-Security-Policy: default-src https://cdn.example.net; child-src 'none'; object-src 'none'
 
-## Implementation Details
+## Implementation details
 
 You will see `X-WebKit-CSP` and `X-Content-Security-Policy` headers in various
-tutorials on the web. Going forward, you can and should ignore these prefixed
+tutorials on the web. Going forward, you should ignore these prefixed
 headers. Modern browsers (with the exception of IE) support the unprefixed
 `Content-Security-Policy` header. That's the header you should use.
 
@@ -147,7 +148,7 @@ a port, or in the leftmost position of the hostname: `*://*.example.com:*` would
 match all subdomains of `example.com` (but _not_ `example.com` itself), using
 any scheme, on any port.
 
-Four keywords are also accepted in the source list:
+The source list also accepts four keywords:
 
 * **`'none'`**, as you might expect, matches nothing.
 * **`'self'`** matches the current origin, but not its subdomains.
@@ -156,24 +157,24 @@ Four keywords are also accepted in the source list:
 * **`'unsafe-eval'`** allows text-to-JavaScript mechanisms like `eval`. (We'll get
   to this too.)
 
-These keywords require single-quotes. `script-src 'self'` (with quotes)
-authorizes the execution of JavaScript from the current host. `script-src self`
+These keywords require single-quotes. For example, `script-src 'self'` (with quotes)
+authorizes the execution of JavaScript from the current host; `script-src self`
 (no quotes) allows JavaScript from a server named "`self`" (and _not_ from the
 current host), which probably isn't what you meant.
 
 ## Sandboxing
 
 There's one more directive worth talking about: `sandbox`. It's a bit
-different than the others we've looked at, as is places restrictions on actions
-the page can take, rather than on resources that the page can load. If the
-`sandbox` directive is present, the page will be treated as though it was loaded
+different from the others we've looked at, as it places restrictions on actions that
+the page can take rather than on resources that the page can load. If the
+`sandbox` directive is present, the page is treated as though it was loaded
 inside of an `<iframe>` with a `sandbox` attribute. This can have a wide range of
 effects on the page: forcing the page into a unique origin, and preventing form
 submission, among others. It's a bit beyond the scope of this article, but you
 can find full details on valid sandboxing attributes in the
 ["sandboxing flag set" section of the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#sandboxing-flag-set).
 
-## The meta Tag
+## The meta tag
 
 CSPs preferred delivery mechanism is an HTTP header. It can be useful, however,
 to set a policy on a page directly in the markup. Do that using a `<meta>` tag with
