@@ -169,11 +169,17 @@ def renderDevSiteContent(content, lang='en'):
   # Replaces frameboxes with the iframe it needs
   frameboxes = re.findall(r'^{%[ ]?framebox .+%}.*?{%[ ]?endframebox[ ]?%}(?ms)', content)
   for framebox in frameboxes:
-    fbContent = re.search(r'^{%[ ]?framebox .+%}(.*?){%[ ]?endframebox[ ]?%}(?ms)', framebox)
-    fbContent = fbContent.group(1)
+    fbContent = re.search(r'^({%[ ]?framebox .+%})(.*?){%[ ]?endframebox[ ]?%}(?ms)', framebox)
+    fbOpenTag = fbContent.group(1)
+    fbHeight = re.search(r'height="(.*?)"', fbContent.group(1))
+    logging.info(fbHeight.group(1))
+    fbContent = fbContent.group(2)
     fbMemcacheKey = '/framebox/' + hashlib.md5(fbContent).hexdigest()
     replaceWith = '<iframe class="framebox inherit-locale" '
-    replaceWith += 'style="width: 100%;" '
+    replaceWith += 'style="width: 100%;'
+    if fbHeight:
+      replaceWith += 'height:' + fbHeight.group(1) + ';'
+    replaceWith += '" '
     replaceWith += 'src="' + fbMemcacheKey + '"></iframe>'
     content = content.replace(framebox, replaceWith)
     memcache.set(fbMemcacheKey, fbContent)
