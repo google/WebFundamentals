@@ -1,11 +1,6 @@
 toc:
   - title: Instant & Offline Loading
     section:
-    - title: Overview
-      path: /web/fundamentals/instant-and-offline/
     - title: The Offline Cook Book
-      section:
-      - title: When To Store Resources
-        path: /web/fundamentals/instant-and-offline/offline-cookbook/
-      - title: Serving Suggestions
-        path: /web/fundamentals/instant-and-offline/offline-cookbook/serving-suggestions
+      path: /web/fundamentals/instant-and-offline/offline-cookbook/
+
