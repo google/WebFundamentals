@@ -14,9 +14,9 @@ footer:
     icon: /site-assets/logo-twitter.svg
     path: https://twitter.com/chromiumdev
   - title: Videos
-    description: Check out the Web Developer Relations team's YouTube channel
+    description: Check out the Web Developer Relations team's videos
     icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
-    path: https://www.youtube.com/user/chromedevelopers
+    path: /web/shows/
 - linkboxes:
   - name: Related Resources
     icon_name: link
