@@ -5,6 +5,7 @@ var path = require('path');
 var moment = require('moment');
 var jsYaml = require('js-yaml');
 
+var SOURCE_ROOT = '../src/content';
 var SAMPLES_PATH = 'https://googlesamples.github.io/web-fundamentals/samples/';
 
 if (!String.prototype.endsWith) {
@@ -39,7 +40,7 @@ function replaceTakeaway(markdown, yaml) {
       if (tldrObj) {
         var k = tldrObj[1].replace('page.', '');
         var tldr = recurseObject(k.split('.'), yaml);
-        result += jsYaml.dump(tldr, {lineWidth: 500});
+        result += jsYaml.dump(tldr, {lineWidth: 1024});
       }
       markdown = markdown.replace(item, result);
     });
@@ -62,7 +63,7 @@ function replaceNote(markdown, yaml) {
           if (tldr.length === 1) {
             result += tldr[0];
           } else {
-            result += jsYaml.dump(tldr, {lineWidth: 500});
+            result += jsYaml.dump(tldr, {lineWidth: 1024});
           }
         } else {
           result += tldr;
@@ -74,8 +75,9 @@ function replaceNote(markdown, yaml) {
   return markdown;
 }
 
-function replaceIncludeCode(markdown, dir) {
-  var relPath = 'web' + dir.replace('src/content/en', '');
+function replaceIncludeCode(markdown, lang, dir) {
+  var relPath = 'web' + dir.replace('src/content/', '');
+  relPath = relPath.replace(lang, '');
   if (!relPath.endsWith('/')) {
     relPath += '/';
   }
@@ -107,7 +109,7 @@ function replaceHighlightedCode(markdown) {
   return markdown;
 }
 
-function replaceLinkSample(markdown, dir) {
+function replaceLinkSample(markdown, lang, dir) {
   var re = /{% link_sample (.*?)\s?%}[\n\r]?(.*?)[\n\r]?{%\s?endlink_sample\s?%}/gm;
   var items = markdown.match(re);
   if (items) {
@@ -116,7 +118,8 @@ function replaceLinkSample(markdown, dir) {
       var sourceItem = item;
       var regEx = re.exec(item);
       if (regEx && regEx.length === 3) {
-        var url = SAMPLES_PATH + dir.replace('src/content/en/', '');
+        var url = SAMPLES_PATH + dir.replace('src/content', '');
+        url = url.replace('/' + lang + '/', '');
         if (!url.endsWith('/')) {
           url += '/';
         }
@@ -168,6 +171,27 @@ function removeIntroP(markdown) {
   return markdown;
 }
 
+function hideTLDRsFromTOC(markdown) {
+  var re = /(#{1,6} TL;DR)[ ]?\n/gm;
+  var items = markdown.match(re);
+  if (items) {
+    items.forEach(function(item) {
+      var sourceItem = item;
+      item = item.replace(re, '$1 {: .hide-from-toc }\n');
+      markdown = markdown.replace(sourceItem, item);
+    });
+  }
+  return markdown;
+}
+
+function replaceFailedTags(markdown) {
+  var re = /\!\<tag:yaml\.org,2002:js\/undefined>/gm;
+  var replaceWith = '{# wf_TODO #}\n';
+  replaceWith += 'Warning: A tag here did NOT convert properly, please fix!';
+  markdown = markdown.replace(re, replaceWith);
+  return markdown;
+}
+
 function replaceUdacity(markdown, yaml) {
   if (yaml.udacity) {
     var udacity = yaml.udacity;
@@ -194,17 +218,54 @@ function replaceUdacity(markdown, yaml) {
   return markdown;
 }
 
-function migrateFile(dir, file) {
-  console.log(path.join(dir, file));
-  var source = fs.readFileSync(path.join(dir, file), 'utf8');
+function getMetaFromEnglish(sourcePath) {
+  var result = {
+    authors: [],
+    publishedOn: '2000-01-01'
+  };
+  var reAuthors = /{% include "_shared\/contributors\/(.*?)\.html" %}\n/gm;
+  var rePublishedOn = /{# wf_published_on: (.*?) #}/gm;
+  var fileName = path.join(SOURCE_ROOT, 'en', sourcePath);
+  try {
+    fileName = fileName.replace('.markdown', '.md');
+    var enFile = fs.readFileSync(fileName, 'utf8');
+    var authors = enFile.match(reAuthors);
+    if (authors) {
+      authors.forEach(function(author) {
+        result.authors.push(author.replace(reAuthors, '$1'));
+      });
+    }
+    var publishedOn = enFile.match(rePublishedOn);
+    if (publishedOn && publishedOn[0]) {
+      result.publishedOn = publishedOn[0].replace(rePublishedOn, '$1');
+    }
+  } catch (ex) {
+    console.log('Unable to get authors for: ', sourcePath);
+    result.authors = ['TODO'];
+    result.publishedOn = '2000-01-01';
+  }
+  return result;
+}
+
+function migrateFile(lang, section, directory, file) {
+  var dirPath = path.join(SOURCE_ROOT, lang, section, directory);
+  var fileName = path.join(SOURCE_ROOT, lang, section, directory, file);
+  console.log(fileName);
+  var source = fs.readFileSync(fileName, 'utf8');
   var yamlEndsAt = source.indexOf('---\n', 10);
   var yaml = jsYaml.safeLoad(source.substring(0, yamlEndsAt));
   var markdown = source.substring(yamlEndsAt);
   markdown = markdown.replace('---\n', '');
+  
+  if (lang !== 'en') {
+    var enMeta = getMetaFromEnglish(path.join(section, directory, file));
+    yaml.authors = enMeta.authors;
+    yaml.published_on = enMeta.publishedOn;
+  }
 
   var topOfDoc = '';
   topOfDoc += 'project_path: /web/_project.yaml\n';
-  topOfDoc += 'book_path: /web/shows/_book.yaml\n';
+  topOfDoc += 'book_path: /web/' + section + '/_book.yaml\n';
   if (yaml.description) {
     topOfDoc += 'description: ' + yaml.description + '\n';
   }
@@ -260,22 +321,25 @@ function migrateFile(dir, file) {
   markdown = markdown.replace(/{{site.WFBaseUrl}}/g, '/web');
   markdown = markdown.replace('{% include shared/toc.liquid %}\n', '');
   markdown = markdown.replace(/{{ ?page.description ?}}/g, yaml.description);
-  markdown = replaceIncludeCode(markdown, dir);
+  markdown = replaceIncludeCode(markdown, lang, dirPath);
   markdown = replaceTakeaway(markdown, yaml);
   markdown = replaceNote(markdown, yaml);
   markdown = replaceHighlightedCode(markdown);
-  markdown = replaceLinkSample(markdown, dir);
+  markdown = replaceLinkSample(markdown, lang, dirPath);
   markdown = removeIntroP(markdown);
   markdown = replaceYTVideo(markdown);
   markdown = replaceUdacity(markdown, yaml);
+  markdown = hideTLDRsFromTOC(markdown);
 
   if (yaml.layout === 'updates/post') {
     markdown += '\n\n';
     markdown += '{# wf_add_comment_widget #}\n';
   }
 
+  markdown = replaceFailedTags(markdown);
+
   var result = topOfDoc + markdown;
-  var newFile = path.join(dir, file).replace('.markdown', '.md');
+  var newFile = fileName.replace('.markdown', '.md');
   fs.writeFileSync(newFile, result);
   fs.unlinkSync(path.join(dir, file));
   return {
@@ -284,22 +348,29 @@ function migrateFile(dir, file) {
   };
 }
 
-function migrateDirectory(dir, recursive) {
-  var files = fs.readdirSync(dir);
+function migrate(lang, section, directory, recursive) {
+  var fullPath = path.join(SOURCE_ROOT, lang, section, directory);
+  var files = fs.readdirSync(fullPath);
   files.forEach(function(file) {
-    var fileStat = fs.statSync(path.join(dir, file));
+    var fileStat = fs.statSync(path.join(fullPath, file));
     if (fileStat.isDirectory() && recursive === true) {
-      migrateDirectory(path.join(dir, file), true);
+      migrateTranslation(lang, section, path.join(directory, file), true);
     } else if (file.endsWith('.markdown')) {
       try {
-        migrateFile(dir, file);
+        migrateFile(lang, section, directory, file);
       } catch (ex) {
-        console.log('Failed trying to convert:', path.join(dir, file));
+        console.log('Failed trying to convert:', path.join(fullPath, file));
+        console.log(ex.stack);
         console.log(ex);
       }
     }
   });
 }
 
-migrateDirectory('./src/content/en/fundamentals/getting-started/primers/', false);
+var lang = 'ar';
+var section = 'fundamentals';
+var directory = 'performance/critical-rendering-path';
+var recursive = true;
+migrate(lang, section, directory, recursive);
+
 
