@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
     <link rel="stylesheet" href="https://developers.google.com/_static/css/devsite-google-blue.css">
     <title>{{ title }}</title>
-    {{ customcss }}
+    {% autoescape off %}{{ customcss }}{% endautoescape %}
   </head>
   <body class="devsite-chekov devsite-landing-page devsite-header-no-lower-tabs" id="top_of_page">
     <div class="devsite-wrapper">

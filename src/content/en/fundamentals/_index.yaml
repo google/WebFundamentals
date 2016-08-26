@@ -3,7 +3,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 landing_page:
-  # custom_css_path: landing.css
+  custom_css_path: /web/styles/wf-root.css
 
   header:
     description: >

@@ -34,9 +34,9 @@ handlers:
   upload: src/content/en/manifest.json
 
 - url: /web/(.*\.(js|css))
-  static_files: \1
+  static_files: src/content/en/\1
   expiration: 1d
-  upload: (.*\.(js|css))
+  upload: src/content/en/(.*\.(js|css))
   http_headers:
     Access-Control-Allow-Origin: https://developers.google.com
   application_readable: true

@@ -106,7 +106,7 @@ def generateYaml(lang, requestPath, rawYaml):
   if 'custom_css_path' in page:
     customCss = '<link rel="stylesheet" href="'
     customCss += page['custom_css_path']
-    customCSS += '">'
+    customCss += '">'
   if 'header' in page:
     if 'description' in page['header']:
       header = page['header']['description']
