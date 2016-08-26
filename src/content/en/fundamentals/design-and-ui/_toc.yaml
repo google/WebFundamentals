@@ -21,7 +21,7 @@ toc:
         path: /web/fundamentals/design-and-ui/input/forms/
       - title: Add Touch To Your Site
         path: /web/fundamentals/design-and-ui/input/touch/
-    - title: Icons and colors
+    - title: Icons & Browser Colors
       path: /web/fundamentals/design-and-ui/browser-customization/
     - title: Animations
       section:

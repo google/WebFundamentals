@@ -6,7 +6,7 @@ description: Modern browsers make it easy to customize certain components, like 
 {# wf_updated_on: 2015-09-21 #}
 {# wf_published_on: 2015-09-21 #}
 
-# Customizing Icons and Browser Colors {: .page-title }
+# Icons & Browser Colors {: .page-title }
 
 {% include "_shared/contributors/pbakaus.html" %}
 

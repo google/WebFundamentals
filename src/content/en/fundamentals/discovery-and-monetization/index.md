@@ -8,34 +8,30 @@ description: Learn how to bring more readers to your web site and increase reven
 
 # Discovery and Monetization {: .page-title }
 
-Learn how to bring more readers to your web site and increase revenue.
+Broaden your web site's audience and increase revenue.
 
-## Search Optimization
+For many, online advertisements are the first thing that comes to mind when considering monetization. [Google's AdSense site](https://www.google.com/adsense) has resources and instructions to help you through that. To earn those revenues you need to bring more people to your site.
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+<style>.wf-width-50 {width: 50%;}</style>
 
-Use your site structure and a robots.txt file to improve your search engine optimization.
+<div class="attempt-left wf-width-50">
+  <h2>Search Optimization</h2>
+  <a href="search-optimization/">
+    <img src="https://placehold.it/321x213">
+  </a>
+  <p>
+    Use your site structure and a robots.txt file to improve your search engine optimization.
+    <a href="search-optimization/">Get Started</a>
+  </p>
+</div>
 
-[Get Started](search-optimization/)
-
-<div style="clear:both;"></div>
-
-## Social Discovery
-
-<img src="https://placehold.it/300x200" class="attempt-right">
-
-A few lines of code on each page an bring more people to your site by providing previews with rich information.
-
-[Learn More](social-discovery/)
-
-<div style="clear:both;"></div>
-
-## Montetization with Ads
-
-<img src="https://placehold.it/300x200" class="attempt-right">
-
-Advertisements can make your content and site free while they earn money. Learn how ads work and how to serve responsive ads on your site.
-
-[Learn More](monetization-with-ads/)
-
-<div style="clear:both;"></div>
+<div class="attempt-right wf-width-50">
+  <h2>Social Discovery</h2>
+  <a href="social-discovery/">
+    <img src="https://placehold.it/321x213">
+  </a>
+  <p>
+    A few lines of code on each page an bring more people to your site by providing previews with rich information.
+    <a href="social-discovery/">Learn More</a>
+  </p>
+</div>
