@@ -240,7 +240,7 @@ function getMetaFromEnglish(sourcePath) {
       result.publishedOn = publishedOn[0].replace(rePublishedOn, '$1');
     }
   } catch (ex) {
-    console.log('Unable to get authors for: ', sourcePath);
+    console.log(' - Unable to get EN metadata for:', sourcePath);
     result.authors = ['TODO'];
     result.publishedOn = '2000-01-01';
   }
@@ -341,7 +341,7 @@ function migrateFile(lang, section, directory, file) {
   var result = topOfDoc + markdown;
   var newFile = fileName.replace('.markdown', '.md');
   fs.writeFileSync(newFile, result);
-  fs.unlinkSync(path.join(dir, file));
+  fs.unlinkSync(fileName);
   return {
     title: yaml.title,
     path: newFile
@@ -354,7 +354,7 @@ function migrate(lang, section, directory, recursive) {
   files.forEach(function(file) {
     var fileStat = fs.statSync(path.join(fullPath, file));
     if (fileStat.isDirectory() && recursive === true) {
-      migrateTranslation(lang, section, path.join(directory, file), true);
+      migrate(lang, section, path.join(directory, file), true);
     } else if (file.endsWith('.markdown')) {
       try {
         migrateFile(lang, section, directory, file);
@@ -367,9 +367,9 @@ function migrate(lang, section, directory, recursive) {
   });
 }
 
-var lang = 'ar';
-var section = 'fundamentals';
-var directory = 'performance/critical-rendering-path';
+var lang = 'zh-tw';
+var section = 'tools';
+var directory = '';
 var recursive = true;
 migrate(lang, section, directory, recursive);
 
