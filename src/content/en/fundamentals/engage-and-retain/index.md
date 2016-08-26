@@ -16,9 +16,7 @@ you control how your app appears to the user in areas where they would expect
 to see apps (for example the mobile home screen), direct what the user can 
 launch, and define its appearance at launch.
 
-<style>.wf-width-50 {width: 50%;}</style>
-
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <h2>Add to Home Screen</h2>
   <a href="app-install-banners/">
     <img src="images/wapo-addtohs_framed.png">
@@ -30,7 +28,7 @@ launch, and define its appearance at launch.
     <a href="app-install-banners/">Get Started</a>
   </p>
 </div>
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <h2>Web Push Notifications</h2>
   <a href="push-notifications/">
     <img src="push-notifications/images/joe-asked-contextual.png">

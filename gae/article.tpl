@@ -7,7 +7,7 @@
     <meta name="robots" content="noindex">
     <link rel="canonical" href="https://developers.google.com/web/{{requestPath}}">
     <style>
-      img, video {
+      video {
         max-width: 100%;
       }
     </style>
@@ -87,6 +87,21 @@
           </nav>
           <article class="devsite-article">
             <article class="devsite-article-inner">
+              <div class="devsite-rating-container">
+                <div class="devsite-rating-stars">
+                  <div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
+                  </div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
+                  </div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
+                  </div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
+                  </div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
+                  </div>
+                </div>
+                <div class="devsite-rating-description">
+                </div>
+                <div class="devsite-rating-internal">
+                  <span class="devsite-rating-stats"></span>
+                </div>
+              </div>
               {% autoescape off %}
                 {{ content }}
               {% endautoescape %}

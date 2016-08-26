@@ -14,10 +14,8 @@ Web design and UI encopases a few broad areas.
 * What does it look like?
 * What's in it?
 
-<style>.wf-width-50 {width: 50%;}</style>
 
-
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <h2>Responsive Design</h2>
   <a href="tbd">
     <img src="https://placehold.it/321x213">
@@ -28,7 +26,7 @@ Web design and UI encopases a few broad areas.
   </p>
 </div>
 
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <h2>User Input</h2>
   <a href="imput/forms/">
     <img src="https://placehold.it/321x213">
@@ -39,7 +37,7 @@ Web design and UI encopases a few broad areas.
   </p>
 </div>
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <h2>Icons &amp; Browser Colors</h2>
   <a href="tbd">
     <img src="https://placehold.it/321x213">
@@ -50,7 +48,7 @@ Web design and UI encopases a few broad areas.
   </p>
 </div>
 
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <h2>Animations</h2>
   <a href="animations/">
     <img src="https://placehold.it/321x213">

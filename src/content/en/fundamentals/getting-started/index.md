@@ -16,9 +16,7 @@ code labs will step you through the process of building a small application,
 or adding a new feature to an existing application.  Find more code labs on
 [codelabs.developers.google.com](https://codelabs.developers.google.com/?cat=Web){: .external }
 
-<style>.wf-width-50 {width: 50%;}</style>
-
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <a href="codelabs/your-first-pwapp/">
     Your First Progressive Web App
   </a>
@@ -28,7 +26,7 @@ or adding a new feature to an existing application.  Find more code labs on
     top-level, full screen experience.
   </p>
 </div>
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <a href="codelabs/debugging-service-workers/">
     Debugging Service Workers
   </a>
@@ -41,7 +39,7 @@ or adding a new feature to an existing application.  Find more code labs on
 
 <div style="clear:both"></div>
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <a href="codelabs/offline/">
     Your First Offline Web App
   </a>
@@ -50,7 +48,7 @@ or adding a new feature to an existing application.  Find more code labs on
     make the application work offline.
   </p>
 </div>
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <a href="codelabs/debugging-service-workers/">
     Adding Push Notifications
   </a>
@@ -82,7 +80,7 @@ Looking to get started with a new API or feature you haven't used before?
 These getting started guides will help you to understand everything you need
 to know to get started quickly and easily.
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <a href="primers/service-workers">
     Service Workers
   </a>
@@ -91,7 +89,7 @@ to know to get started quickly and easily.
     reserved native applications? Services workers are the foundation.
   </p>
 </div>
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <a href="primers/promises">
     JavaScript Promises
   </a>
@@ -104,7 +102,7 @@ to know to get started quickly and easily.
 
 <div style="clear:both"></div>
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <a href="primers/shadowdom">
     Shadow DOM v1: Reusable Web Components
   </a>
@@ -114,7 +112,7 @@ to know to get started quickly and easily.
     nature of typical web development.
   </p>
 </div>
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <a href="primers/customelements">
     Custom Elements v1: Reusable Web Components
   </a>
@@ -126,7 +124,7 @@ to know to get started quickly and easily.
 
 <div style="clear:both"></div>
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <a href="primers/paymentrequest">
     Payment Request API: An Integration Guide
   </a>
@@ -135,7 +133,7 @@ to know to get started quickly and easily.
     and improving mobile's abysmal payment conversion rates.
   </p>
 </div>
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <a href="principles/">
     Principles Of Site Design
   </a>

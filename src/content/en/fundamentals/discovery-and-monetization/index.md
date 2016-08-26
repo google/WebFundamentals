@@ -12,9 +12,8 @@ Broaden your web site's audience and increase revenue.
 
 For many, online advertisements are the first thing that comes to mind when considering monetization. [Google's AdSense site](https://www.google.com/adsense) has resources and instructions to help you through that. To earn those revenues you need to bring more people to your site.
 
-<style>.wf-width-50 {width: 50%;}</style>
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <h2>Search Optimization</h2>
   <a href="search-optimization/">
     <img src="https://placehold.it/321x213">
@@ -25,7 +24,7 @@ For many, online advertisements are the first thing that comes to mind when cons
   </p>
 </div>
 
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <h2>Social Discovery</h2>
   <a href="social-discovery/">
     <img src="https://placehold.it/321x213">

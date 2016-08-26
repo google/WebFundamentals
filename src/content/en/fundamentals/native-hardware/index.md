@@ -10,9 +10,8 @@ description: Make your web sites and apps more like native applications.
 
 Make your web sites and apps more like native applications.
 
-<style>.wf-width-50 {width: 50%;}</style>
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <h2>User Location</h2>
   <a href="user-location/">
     <img src="https://placehold.it/321x213">
@@ -23,7 +22,7 @@ Make your web sites and apps more like native applications.
   </p>
 </div>
 
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <h2>Device Orientation &amp; Motion</h2>
   <a href="device-orientation/">
     <img src="https://placehold.it/321x213">
@@ -34,7 +33,7 @@ Make your web sites and apps more like native applications.
   </p>
 </div>
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <h2>Click to Call</h2>
   <a href="click-to-call/">
     <img src="https://placehold.it/321x213">

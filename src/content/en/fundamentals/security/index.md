@@ -14,9 +14,8 @@ Security is a big topic, bigger than we can conver in this section. We've provid
 
 One of the most critical security features, one that is required for many modern APIs and [progressive web apps](/web/progressive-web-apps/) is [Secure HTTP also called HTTPS](encrypt-in-transit/why-https). A common misconception about HTTPS is that the only websites that need it are those that handle sensitive communications. If privacy and security weren't reason enough to protect your users, many new browser features such as service workers the Payment Request API require HTTPS.
 
-<style>.wf-width-50 {width: 50%;}</style>
 
-<div class="attempt-left wf-width-50">
+<div class="attempt-left">
   <h2>Content Security Policy</h2>
   <a href="csp/">
     <img src="https://placehold.it/321x213">
@@ -26,7 +25,7 @@ One of the most critical security features, one that is required for many modern
     <a href="csp/">Learn More</a>
   </p>
 </div>
-<div class="attempt-right wf-width-50">
+<div class="attempt-right">
   <h2>Prevent Mixed Content</h2>
   <a href="prevent-mixed-content/what-is-mixed-content">
     <img src="https://placehold.it/321x213">
