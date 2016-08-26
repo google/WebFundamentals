@@ -21,7 +21,7 @@ def getPage(requestPath, lang):
       fileContent = fileContent.decode('utf8')
 
       if fileLocation.endswith('_index.yaml'):
-        response = generateYaml(lang, fileContent)
+        response = generateYaml(lang, requestPath, fileContent)
         break
 
       if fileLocation.endswith('index.md'):
@@ -96,7 +96,7 @@ def parseIndexYamlItems(yamlItems):
     result += item
   return result
 
-def generateYaml(lang, rawYaml):
+def generateYaml(lang, requestPath, rawYaml):
   content = ''
   parsedYaml = yaml.load(rawYaml)
   page = parsedYaml['landing_page']
@@ -138,6 +138,7 @@ def generateYaml(lang, rawYaml):
     content += section
   text = render('gae/home.tpl', {
                 'title': 'Web',
+                'requestPath': requestPath,
                 'customcss': customCss,
                 'header': header,
                 'content': content,

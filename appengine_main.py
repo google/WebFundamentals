@@ -77,7 +77,7 @@ class DevSitePages(webapp2.RequestHandler):
                 return
 
               # No redirect found, send the 404 page.
-              response = render('gae/404.tpl', {})
+              response = render('gae/404.tpl', {'requestPath': fullPath})
               logging.error('404 ' + fullPath)
               self.response.set_status(404)
             else:
@@ -85,7 +85,8 @@ class DevSitePages(webapp2.RequestHandler):
               if USE_MEMCACHE:
                 memcache.set(memcacheKey, response)
           except Exception as ex:
-            response = render('gae/500.tpl', {'content': ex})
+            context = {'content': ex, 'requestPath': fullPath}
+            response = render('gae/500.tpl', context)
             logging.exception('500 ' + fullPath)
             self.response.set_status(500)
 

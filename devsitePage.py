@@ -106,6 +106,7 @@ def getPage(requestPath, lang):
       # Renders the content into the template
       response = render('gae/article.tpl', {
         'title': title,
+        'requestPath': requestPath.replace('index', ''),
         'leftNav': leftNav,
         'content': content,
         'toc': toc,
