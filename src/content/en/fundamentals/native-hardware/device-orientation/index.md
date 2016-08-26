@@ -5,7 +5,7 @@ description: Device motion and orientation events provide access to the built in
 {# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2014-06-17 #}
 
-# Device Orientation and Motion {: .page-title }
+# Device Orientation & Motion {: .page-title }
 
 {% include "_shared/contributors/petelepage.html" %}
 

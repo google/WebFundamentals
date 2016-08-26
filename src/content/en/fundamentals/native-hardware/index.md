@@ -10,30 +10,37 @@ description: Make your web sites and apps more like native applications.
 
 Make your web sites and apps more like native applications.
 
-## User Location
+<style>.wf-width-50 {width: 50%;}</style>
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+<div class="attempt-left wf-width-50">
+  <h2>User Location</h2>
+  <a href="user-location/">
+    <img src="https://placehold.it/321x213">
+  </a>
+  <p>
+    Access the device's location to guide users to a destination, geo-tag user-created content, or provide up-to-date local information.
+    <a href="user-location/">Get Started</a>
+  </p>
+</div>
 
-Access the device's location to guide users to a destination, geo-tag user-created content, or provide up-to-date local information.
+<div class="attempt-right wf-width-50">
+  <h2>Device Orientation &amp; Motion</h2>
+  <a href="device-orientation/">
+    <img src="https://placehold.it/321x213">
+  </a>
+  <p>
+    Use a mobile devince's accelerometer, gyroscope, and compass. In gaming control the direction or action of a character. With geolocation, create more accurate turn-by-turn navigation or provide information about a specific location.
+    <a href="device-orientation/">Learn More</a>
+  </p>
+</div>
 
-[Get Started](device-orientation/)
-
-<div style="clear:both;"></div>
-
-## Device Orientation and Motion
-
-<img src="https://placehold.it/300x200" class="attempt-right">
-
-Use a mobile devince's accelerometer, gyroscope, and compass. In gaming control the direction or action of a character. With geolocation, create more accurate turn-by-turn navigation or provide information about a specific location.
-
-[Learn More](user-location/)
-
-<div style="clear:both;"></div>
-
-## Click to Call
-
-<img src="https://placehold.it/300x200" class="attempt-right">
-
-Let users directly connect with you by tapping a phone number.
-
-[Get Started](click-to-call/)
+<div class="attempt-left wf-width-50">
+  <h2>Click to Call</h2>
+  <a href="click-to-call/">
+    <img src="https://placehold.it/321x213">
+  </a>
+  <p>
+	Let users directly connect with you by tapping a phone number.
+    <a href="click-to-call/">Get Started</a>
+  </p>
+</div>

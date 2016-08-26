@@ -178,8 +178,6 @@ color, specifically the `theme-color` `<meta>`.
 
 Use the web app manifest to control the display type and page orientation.
 
-<div style="clear:both;"></div>
-
 ### Customize the display type
 
 You make your web app hide the browser's UI by setting the `display` type to `standalone`.
@@ -194,6 +192,7 @@ site in a browser. You can set the `display` type to `browser`.
 
     "display": "browser"
     
+<div style="clear:both;"></div>
 
 ### Specify the initial orientation of the page
 
