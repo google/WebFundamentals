@@ -1,0 +1,130 @@
+<!DOCTYPE html> <html lang="en">
+  <head>
+    <!-- // [TEMPLATE header_full] -->
+    <title>Movimiento del dispositivo: cómo calcular la aceleración máxima de un objeto</title>
+
+  </head>
+  <body>
+    <div role="main" class="container">
+      <h1>Prueba de salto</h1>
+      <p>
+        La función Movimiento del dispositivo <b><span id="dmeSupported">no</span></b> es compatible con su dispositivo.
+      </p>
+
+      <p>
+        <h1 id="instructions"></h1>
+      </p>
+
+      <div id="result" style="display:none;">
+        <h2>Su aceleración máxima fue:</h2>
+        <table>
+          <tr>
+            <td id="jumpx"></td>
+            <td id="jumpy"></td>
+            <td id="jumpz"></td>
+          </tr>
+        </table>
+      </div>
+
+      <button id="butJump" type="button">Go!</button>
+
+    </div>
+    <!-- // [TEMPLATE footer] -->
+    <script type="text/javascript">
+      var counter, timer;
+      var but = document.getElementById("butJump");
+      var inst = document.getElementById("instructions");
+      var jumpMin, jumpMax, jumpResult;
+
+      function init() {
+        but.addEventListener("click", startJump);
+        if (window.DeviceMotionEvent) {
+          document.getElementById("dmeSupported").innerText = "";
+        }
+      }
+
+      function startJump(evt) {
+        counter = 3;
+        document.getElementById("result").style.display = "none";
+        if (timer === undefined) {
+          doCounter();
+        }
+        
+      }
+
+      function doCounter() {
+        console.log("doCounter", counter);
+        if (counter == 3) {
+          inst.innerText = "Ready!";
+        } else if (counter == 2) {
+          inst.innerText = "Get Set!";
+        } else if (counter == 1) {
+          inst.innerText = "Jump!";
+          startListener();
+        }
+        timer = undefined;
+
+        counter--
+        if (counter > 0) {
+          timer = setTimeout(doCounter, 1000);
+        }
+      }
+
+      function startListener(evt) {
+        jumpMin = { x: 0, y: 0, z: 0 };
+        jumpMax = { x: 0, y: 0, z: 0 };
+        /* // [START devmot] */
+        if (window.DeviceMotionEvent) {
+          window.addEventListener("devicemotion", deviceMotionHandler);
+          setTimeout(stopJump, 3*1000);
+        }
+        /* // [END devmot] */
+      }
+
+      function stopJump(evt) {
+        inst.innerText = "Great job!";
+        window.removeEventListener("devicemotion", deviceMotionHandler);
+        jumpResult = {};
+        jumpResult.x = jumpMax.x;
+        document.getElementById("jumpx").innerText = jumpResult.x.toFixed(3) + " m/s^2";
+        jumpResult.y = jumpMax.y;
+        document.getElementById("jumpy").innerText = jumpResult.y.toFixed(3) + " m/s^2";
+        jumpResult.z = jumpMax.z;
+        document.getElementById("jumpz").innerText = jumpResult.z.toFixed(3) + " m/s^2";
+        console.log("jump", jumpResult);
+        document.getElementById("result").style.display = "block";
+      }
+
+      
+      function deviceMotionHandler(evt) {
+        
+        if (evt.acceleration.x < jumpMin.x) {
+          jumpMin.x = evt.acceleration.x;
+        }
+        
+        if (evt.acceleration.y < jumpMin.y) {
+          jumpMin.y = evt.acceleration.y;
+        }
+        if (evt.acceleration.z < jumpMin.z) {
+          jumpMin.z = evt.acceleration.z;
+        }
+
+        /* // [START devmothand] */
+        if (evt.acceleration.x > jumpMax.x) {
+          jumpMax.x = evt.acceleration.x;
+        }
+        if (evt.acceleration.y > jumpMax.y) {
+          jumpMax.y = evt.acceleration.y;
+        }
+        if (evt.acceleration.z > jumpMax.z) {
+          jumpMax.z = evt.acceleration.z;
+        }
+        /* // [END devmothand] */
+      }
+      
+
+      init();
+
+    </script>
+  </body>
+</html>
