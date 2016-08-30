@@ -16,7 +16,7 @@ Chrome and wondered what it was?
 
 ```
 (index):34 A Parser-blocking, cross-origin script, 
-http://www.google-analytics.com/analytics.js, is invoked via document.write(). 
+https://paul.kinlan.me/ad-inject.js, is invoked via document.write(). 
 This may be blocked by the browser if the device has poor network connectivity.
 ```
 
@@ -32,11 +32,7 @@ can cause real issues for users.
 
 
 {% highlight javascript %}
-document.write('&lt;script 
-src="[https://](https://www.google-analytics.com/analytics.js)[www.google-analytics.com/analytics.js](https://www.google-analytics.com/analytics.js)"&gt;&lt;/script&gt;);  
-The Google Analytics team doesn't recommend this. It's just an illustrative 
-example
-
+document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>);  
 {% endhighlight %}
 
 Before the browser can render a page it has to build the DOM tree by parsing the 
@@ -61,10 +57,10 @@ the load of these scripts, we saw the following improvements on those loads:
 * **10%** more page loads reaching first contentful paint, **25%** more page 
   loads reaching the fully parsed state as well as **10%** fewer reloads 
   suggesting a decrease in user frustration.
-* **21% **decrease of the mean time (over one second faster) until the [first 
+* **21%** decrease of the mean time (over one second faster) until the [first 
   contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/edit#slide=id.g146ced9404_0_231) 
   (a visual confirmation for the user that the page is effectively loading)
-* **38% **reduction to the mean time it takes to parse a page, representing an 
+* **38%** reduction to the mean time it takes to parse a page, representing an 
   improvement of nearly six seconds and therefore dramatically reducing the time 
   it takes to display what matters to the user.
 
@@ -109,7 +105,7 @@ speed by using the Network Information API that is available in Chrome.
 {% highlight javascript %}
 if(navigator.connection &&
    navigator.connection.type == 'cellular' &&
-   navigator.connection.downlinkMax &lt;= 0.115)
+   navigator.connection.downlinkMax <= 0.115)
   // Beacon the server that we might be affected.
 }
 {% endhighlight %}
@@ -120,12 +116,6 @@ Since Chrome 53, DevTools is issuing warnings for problematic `document.write()`
 statements. Specifically, if a `document.write()` request meets criteria 2 to 5 
 (we ignore the connection criteria when sending this warning), the warning will 
 look something like:
-
-```
-(index):34 A Parser-blocking, cross-origin script, 
-http://www.google-analytics.com/analytics.js, is invoked via `document.write()`. 
-This may be blocked by the browser if the device has poor network connectivity.
-```
 
 <img src="/web/updates/images/2016/08/document-write-warning.png" />
 
@@ -138,13 +128,12 @@ intervention happens.
 When a script inserted via `document.write` has been blocked, Chrome will send the 
 following header to the requested resource:
 
-Intervention: 
-&lt;[https://shorturl/relevant/spec](https://shorturl/relevant/spec)&gt;
+```Intervention: <https://shorturl/relevant/spec>;```
 
 When a script inserted via `document.write` is found and could be blocked in 
 different circumstances, Chrome might send:
 
-Intervention: &lt;https://shorturl/relevant/spec&gt;; level="warning"
+```Intervention: <https://shorturl/relevant/spec>; level="warning"```
 
 The intervention header will be sent as part of the GET request for the script 
 (asynchronously in case of an actual intervention).
@@ -177,7 +166,7 @@ September 2016.)
 
 We will intervene to block injected scripts for 2G users tentatively starting in 
 Chrome M54 which is estimated to be in a stable release for all users in 
-mid-October 2016. Check out the[ Chrome Status entry for more 
+mid-October 2016. Check out the [Chrome Status entry for more 
 updates](https://www.chromestatus.com/features/5718547946799104).
 
 Over time, we're looking to intervene when any user has a slow connection (i.e, 
