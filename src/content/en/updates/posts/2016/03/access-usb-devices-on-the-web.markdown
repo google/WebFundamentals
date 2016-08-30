@@ -356,7 +356,7 @@ where `[yourdevicevendor]` is `2341` if your device is an Arduino for instance.
 
 ## What's next
 
-A second iteration of the WebUSB API will look at [Shared Worker](https://developer.mozilla.org/fr/docs/Web/API/SharedWorker)
+A second iteration of the WebUSB API will look at [Shared Worker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker)
 and [Service Worker](https://jakearchibald.github.io/isserviceworkerready/resources.html)
 support. Imagine for instance a security key website using the WebUSB API that
 would install a service worker to act as a middle man to authenticate users.
