@@ -32,7 +32,7 @@ can cause real issues for users.
 
 
 {% highlight javascript %}
-document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>);  
+document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>');  
 {% endhighlight %}
 
 Before the browser can render a page it has to build the DOM tree by parsing the 
