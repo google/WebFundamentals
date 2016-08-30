@@ -97,28 +97,29 @@ so how do you know if you are affected?
 ### Detecting when a user is on 2G
 
 To understand the potential impact of this change you first need to understand 
-how many of your users will be on 2G. You can detect the user's current network 
-speed by using the Network Information API that is available in Chrome.
+how many of your users will be on 2G. You can detect the user's current network type
+and speed by using the [Network Information API](https://wicg.github.io/netinfo/) that is available in Chrome and then
+send a heads-up to your analytic or RUM systems.
 
 {% highlight javascript %}
 if(navigator.connection &&
    navigator.connection.type == 'cellular' &&
    navigator.connection.downlinkMax <= 0.115)
-  // Beacon the server that we might be affected.
+  // Notify your service to indicate that you might be affected by this restriction.
 }
 {% endhighlight %}
 
 ### Catch warnings in Chrome DevTools
 
-Since Chrome 53, DevTools is issuing warnings for problematic `document.write()` 
+Since Chrome 53, DevTools issues warnings for problematic `document.write()` 
 statements. Specifically, if a `document.write()` request meets criteria 2 to 5 
-(we ignore the connection criteria when sending this warning), the warning will 
+(Chrome ignores the connection criteria when sending this warning), the warning will 
 look something like:
 
 <img src="/web/updates/images/2016/08/document-write-warning.png" />
 
 Seeing warnings in Chrome DevTools is great, but how do you detect this at 
-scale? You can check for HTTP headers being sent to your server when the 
+scale? You can check for HTTP headers that are sent to your server when the 
 intervention happens.
 
 ### Check your HTTP headers on the script resource
@@ -151,14 +152,14 @@ into your page then we encourage you to contact them and let them know how they
 will be affected.
 
 If your provider gives you a snippet that includes the `document.write()`, it 
-might be possible for you to add an async attribute to the script element, or 
-for you to add an element with `document.appendChild` (like Google Analytics 
-does).
+might be possible for you to add an `async` attribute to the script element, or 
+for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics 
+does](https://developers.google.com/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
 
 ## What does the future hold?
 
 The initial plan is to execute this intervention when we detect the criteria 
-being met.  We started with showing just a warning to the user in Chrome 53. 
+being met.  We started with showing just a warning in the Developer Console in Chrome 53. 
 (Beta was in July 2016. We expect Stable to be available for all users in 
 September 2016.)
 
@@ -178,6 +179,6 @@ To learn more, see these additional resources:
 * [Specification of the document.write() intervention and its feedback loops](https://github.com/WICG/interventions/issues/17#issuecomment-238477265)
 * [Chrome Status (intervention for users on 2G)](https://www.chromestatus.com/feature/5718547946799104)
 * [Chrome Status (intervention for users on effectively slow connections)](https://www.chromestatus.com/feature/5652436521844736)
-* [Design document](https://docs.google.com/document/d/1dMJRQKTw75ZNdknP3pirSBH3koPl_IWHnxlcBuu4t_c/edit)
-* [Additional rationale for this effort](https://docs.google.com/document/d/1dMJRQKTw75ZNdknP3pirSBH3koPl_IWHnxlcBuu4t_c/edit)
-* [blink-dev I2I thread](https://groups.google.com/a/chromium.org/d/topic/blink-dev/HGh92uMX_kE/discussion)
+* [Design document](https://docs.google.com/document/d/1dMJRQKTw75ZNdknP3pirSBH3koPl_IWHnxlcBuu4t_c/preview)
+* [Additional rationale for this effort](https://docs.google.com/document/d/1dMJRQKTw75ZNdknP3pirSBH3koPl_IWHnxlcBuu4t_c/preview)
+* [blink-dev Intent to implement thread](https://groups.google.com/a/chromium.org/d/topic/blink-dev/HGh92uMX_kE/discussion)
