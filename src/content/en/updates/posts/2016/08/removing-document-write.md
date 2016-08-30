@@ -54,23 +54,21 @@ on 2G included at least one cross-origin, parser-blocking script that was
 inserted via `document.write()` in the top level document. As a result of blocking 
 the load of these scripts, we saw the following improvements on those loads:
 
-* **10%** more page loads reaching first contentful paint, **25%** more page 
-  loads reaching the fully parsed state as well as **10%** fewer reloads 
+* **10%** more page loads reaching [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview?slide=id.g146ced9404_0_231), **25%** more page 
+  loads reaching the fully parsed state, and **10%** fewer reloads 
   suggesting a decrease in user frustration.
 * **21%** decrease of the mean time (over one second faster) until the [first 
-  contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/edit#slide=id.g146ced9404_0_231) 
+  contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview#slide=id.g146ced9404_0_231) 
   (a visual confirmation for the user that the page is effectively loading)
 * **38%** reduction to the mean time it takes to parse a page, representing an 
-  improvement of nearly six seconds and therefore dramatically reducing the time 
+  improvement of nearly six seconds, dramatically reducing the time 
   it takes to display what matters to the user.
 
 With this data in mind, the Chrome team have recently announced an intention to 
 [intervene](https://github.com/WICG/interventions/issues/17) on behalf of all 
 users when we detect this known-bad pattern by changing how `document.write(` is 
-handled in Chrome (See [Chrome 
-Status](https://www.chromestatus.com/feature/5718547946799104)). Specifically 
-Chrome will not execute the &lt;script&gt; elements in the `document.write()` 
-command when **all** of the following conditions are met:
+handled in Chrome (See [Chrome Status](https://www.chromestatus.com/feature/5718547946799104)). Specifically 
+Chrome will not execute the &lt;script&gt; elements injected via `document.write()` when **all** of the following conditions are met:
 
 1. The user is on a slow connection, specifically when the user is on 2G. (In 
    the future, the change might be extended to other users on slow connections, 
@@ -78,11 +76,11 @@ command when **all** of the following conditions are met:
 1. The `document.write()` is in a top level document. The intervention does not 
    apply to document.written scripts within iframes as they don't block the 
    rendering of the main page.
-1. The script in the `document.write()` is Parser-blocking. Scripts with 'async' 
-   or 'defer' will still execute.
+1. The script in the `document.write()` is parser-blocking. Scripts with the '[async](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)' 
+   or '[defer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)' attributes will still execute.
 1. The script is not already in the browser HTTP cache. Scripts in the cache 
    will not incur a network delay and will still execute. 
-1. The request is not a reload. Chrome will not intervene if the user triggered 
+1. The request for the page is not a reload. Chrome will not intervene if the user triggered 
    a reload and will execute the page as normal.
 
 Third party snippets sometimes use `document.write()` to load scripts. 
@@ -93,8 +91,8 @@ the content on the page.
 
 ## How to detect when your site is affected
 
-There are a large number of criteria applied to when the site will and will not 
-be affected so how do you know if you are affected?
+There are a large number of criteria that determine whether the restriction is enforced,
+so how do you know if you are affected?
 
 ### Detecting when a user is on 2G
 
