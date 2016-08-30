@@ -377,6 +377,7 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 ## Libraries
 
 - [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API.
+- [web-bluetooth-utils](https://www.npmjs.com/package/web-bluetooth-utils) is a npm module that adds some convenience functions to the API.
 
 ## Tools
 
