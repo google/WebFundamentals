@@ -10,7 +10,7 @@ description: Optimizing the critical rendering path refers to prioritizing the d
 {% include "_shared/contributors/ilyagrigorik.html" %}
 
 
-Optimizing the critical rendering path refers to prioritizing the display of
+_Optimizing the critical rendering path_ refers to prioritizing the display of
 content that relates to the current user action.
 
 Delivering a fast web experience requires a lot of work by the browser. Most of
@@ -27,15 +27,11 @@ the **critical rendering path**.
 
 By optimizing the critical rendering path we can significantly improve the
 time to first render of our pages. Further, understanding the critical
-rendering path will also serve as a foundation for building well performing
-interactive applications. It turns out, the process for processing interactive
-updates is the same, just done in a continuous loop and ideally at 60 frames
-per second! However, let's not get ahead of ourselves just yet. First, let's
-take a quick, ground-up overview of how the browser goes about displaying a
-simple page.
+rendering path also serves as a foundation for building well-performing
+interactive applications. The interactive updates process is the same, just done in a continuous loop and ideally at 60 frames per second! But first, an overview of how the browser displays a simple page.
 
 
-## Website Performance Optimization Course
+## Website performance optimization course
 
 <div class="attempt-right">
   <figure>
@@ -43,9 +39,9 @@ simple page.
   </figure>
 </div>
 
-Interested in taking a deep dive into the Critical Rendering Path? Check out
+Interested in learning more about the critical rendering path? Check out
 our companion course and learn how the browser converts HTML, CSS, and
 JavaScript to pixels on the screen, how to use DevTools to measure performance,
-and how to optimize the Critical Rendering Path of your pages.
+and how to optimize the critical rendering path for your pages.
 
 [View Course](https://udacity.com/ud884){: .external }
