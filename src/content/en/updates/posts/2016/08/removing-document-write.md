@@ -41,8 +41,8 @@ it before it can continue parsing the HTML. For an external script the parser is
 also forced to wait for the resource to download, which can incur one or more 
 network roundtrips and delay the time to first render of the page.
 
-For users on slow connections such as 2G, external scripts loaded via 
-`document.write()` can delay the display of main page content for tens of seconds, 
+**For users on slow connections such as 2G, external scripts loaded via 
+`document.write()` can delay the display of main page content for tens of seconds**, 
 or cause pages to either fail to load or take so long that the user just gives 
 up and based on instrumentation in Chrome, we've learned that pages featuring 
 external scripts inserted via document.write() are typically twice as slow to 
