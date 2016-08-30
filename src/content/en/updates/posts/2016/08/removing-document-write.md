@@ -27,7 +27,7 @@ over the user experience. If the integration is sub-optimal, the user experience
 will be negatively impacted.
 
 One known cause of poor performance is the use of `document.write()` inside pages, 
-specifically those that inject scripts. As innocuous as the following looks, it 
+specifically those uses that inject scripts. As innocuous as the following looks, it 
 can cause real issues for users.
 
 
@@ -35,7 +35,7 @@ can cause real issues for users.
 document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>');  
 {% endhighlight %}
 
-Before the browser can render a page it has to build the DOM tree by parsing the 
+Before the browser can render a page, it has to build the DOM tree by parsing the 
 HTML markup. Whenever the parser encounters a script it has to stop and execute 
 it before it can continue parsing the HTML. For an external script the parser is 
 also forced to wait for the resource to download, which can incur one or more 
@@ -44,12 +44,12 @@ network roundtrips and delay the time to first render of the page.
 **For users on slow connections such as 2G, external scripts loaded via 
 `document.write()` can delay the display of main page content for tens of seconds**, 
 or cause pages to either fail to load or take so long that the user just gives 
-up and based on instrumentation in Chrome, we've learned that pages featuring 
+up. Based on instrumentation in Chrome, we've learned that pages featuring 
 external scripts inserted via document.write() are typically twice as slow to 
 load than other pages on 2G.
 
-We collected the following data from a 28 days field trial on 1% of Chrome 
-stable users, restricted to 2G connections. We saw that 7.6% of all page loads 
+We collected the following data from a 28 day field trial on 1% of Chrome 
+stable users, restricted to users on 2G connections. We saw that 7.6% of all page loads 
 on 2G included at least one cross-origin, parser-blocking script that was 
 inserted via `document.write()` in the top level document. As a result of blocking 
 the load of these scripts, we saw the following improvements on those loads:
