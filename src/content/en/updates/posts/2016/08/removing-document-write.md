@@ -22,7 +22,7 @@ This may be blocked by the browser if the device has poor network connectivity.
 
 Composability is one of the great powers of the web, allowing us to easily 
 integrate with services built by third parties to build great new products! One 
-of the downsides of composability, is that it implies a shared responsibility 
+of the downsides of composability is that it implies a shared responsibility 
 over the user experience. If the integration is sub-optimal, the user experience 
 will be negatively impacted.
 
@@ -75,7 +75,7 @@ command when **all** of the following conditions are met:
 1. The user is on a slow connection, specifically when the user is on 2G. (In 
    the future, the change might be extended to other users on slow connections, 
    such as slow 3G or slow WiFi.)
-1. The `document.write()` is in a Top level document. The intervention does not 
+1. The `document.write()` is in a top level document. The intervention does not 
    apply to document.written scripts within iframes as they don't block the 
    rendering of the main page.
 1. The script in the `document.write()` is Parser-blocking. Scripts with 'async' 
