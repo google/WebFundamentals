@@ -41,7 +41,7 @@ To run the site:
 
 This will compile styles & javascript and build the site with Jekyll. If thats
 all working, it will start a server on port 7331 (which you can reach at
-[http://localhost:7331/web/](http://localhost:7331/web/)).
+[http://localhost:7331/web/fundamentals](http://localhost:7331/web/fundamentals)).
 
 
 Any changes to files will result in the appropriate tasks be running in gulp.
