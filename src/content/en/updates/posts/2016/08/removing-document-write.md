@@ -164,7 +164,7 @@ being met.  We started with showing just a warning in the Developer Console in C
 September 2016.)
 
 We will intervene to block injected scripts for 2G users tentatively starting in 
-Chrome M54 which is estimated to be in a stable release for all users in 
+Chrome 54, which is estimated to be in a stable release for all users in 
 mid-October 2016. Check out the [Chrome Status entry for more 
 updates](https://www.chromestatus.com/features/5718547946799104).
 
