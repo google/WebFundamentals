@@ -16,7 +16,7 @@ order: 4
 When you launch your web app from the home screen a number of things happen behind the
 scenes:
 
-1. Chrome launchs.
+1. Chrome launches.
 2. The renderer that displays the page starts up.
 3. Your site loads from the network (or from cache if it has a service worker).
 
