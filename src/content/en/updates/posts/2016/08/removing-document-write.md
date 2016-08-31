@@ -35,17 +35,17 @@ can cause real issues for users.
 document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>');  
 {% endhighlight %}
 
-Before the browser can render a page, it has to build the DOM tree by parsing the 
-HTML markup. Whenever the parser encounters a script it has to stop and execute 
-it before it can continue parsing the HTML. For an external script the parser is 
-also forced to wait for the resource to download, which can incur one or more 
-network roundtrips and delay the time to first render of the page.
+Before the browser can render a page, it has to build the DOM tree by parsing the HTML markup. 
+Whenever the parser encounters a script it has to stop and execute it before it can continue 
+parsing the HTML. If the script dynamically injects another script, the parser is forced to wait 
+even longer for the resource to download, which can incur one or more network roundtrips and 
+delay the time to first render of the page
 
-**For users on slow connections such as 2G, external scripts loaded via 
+**For users on slow connections such as 2G, external scripts dynamically injected via 
 `document.write()` can delay the display of main page content for tens of seconds**, 
 or cause pages to either fail to load or take so long that the user just gives 
 up. Based on instrumentation in Chrome, we've learned that pages featuring 
-external scripts inserted via document.write() are typically twice as slow to 
+third-party scripts inserted via document.write() are typically twice as slow to 
 load than other pages on 2G.
 
 We collected the following data from a 28 day field trial on 1% of Chrome 
@@ -54,12 +54,12 @@ on 2G included at least one cross-origin, parser-blocking script that was
 inserted via `document.write()` in the top level document. As a result of blocking 
 the load of these scripts, we saw the following improvements on those loads:
 
-* **10%** more page loads reaching [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview?slide=id.g146ced9404_0_231), **25%** more page 
+* **10%** more page loads reaching [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview?slide=id.g146ced9404_0_231)(a visual confirmation for the user that the page is effectively loading), **25%** more page 
   loads reaching the fully parsed state, and **10%** fewer reloads 
   suggesting a decrease in user frustration.
 * **21%** decrease of the mean time (over one second faster) until the [first 
   contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview#slide=id.g146ced9404_0_231) 
-  (a visual confirmation for the user that the page is effectively loading)
+  
 * **38%** reduction to the mean time it takes to parse a page, representing an 
   improvement of nearly six seconds, dramatically reducing the time 
   it takes to display what matters to the user.
@@ -170,7 +170,7 @@ mid-October 2016. Check out the [Chrome Status entry for more
 updates](https://www.chromestatus.com/features/5718547946799104).
 
 Over time, we're looking to intervene when any user has a slow connection (i.e, 
-slow 3G or WiFi). Follow this [Chrome status 
+slow 3G or WiFi). Follow this [Chrome Status 
 entry](https://www.chromestatus.com/feature/5652436521844736).
 
 ## Want to learn more?
