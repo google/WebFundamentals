@@ -89,6 +89,26 @@ alternatives](https://developers.google.com/speed/docs/insights/UseAsync), which
 allow third party scripts to load without blocking the display of the rest of 
 the content on the page.
 
+## How do I fix this?
+
+This simple answer is don't inject scripts using `document.write()`. We are 
+[maintaining a set of known services that provide asynchronous loader 
+support](https://developers.google.com/speed/docs/insights/UseAsync) that we 
+encourage you to keep checking.
+
+If your provider is not on the list and does support asynchronous script loading 
+then please [let us know and we can update the page to help all users](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform).
+
+If your provider does not support the ability to asynchronously load scripts 
+into your page then we encourage you to contact them and [let us](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform) and them know how they 
+will be affected.
+
+If your provider gives you a snippet that includes the `document.write()`, it 
+might be possible for you to add an `async` attribute to the script element, or 
+for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics 
+does](https://developers.google.com/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
+
+
 ## How to detect when your site is affected
 
 There are a large number of criteria that determine whether the restriction is enforced,
@@ -99,11 +119,11 @@ so how do you know if you are affected?
 To understand the potential impact of this change you first need to understand 
 how many of your users will be on 2G. You can detect the user's current network type
 and speed by using the [Network Information API](https://wicg.github.io/netinfo/) that is available in Chrome and then
-send a heads-up to your analytic or RUM systems.
+send a heads-up to your analytic or Real User Metrics (RUM) systems.
 
 {% highlight javascript %}
 if(navigator.connection &&
-   navigator.connection.type == 'cellular' &&
+   navigator.connection.type === 'cellular' &&
    navigator.connection.downlinkMax <= 0.115)
   // Notify your service to indicate that you might be affected by this restriction.
 }
@@ -136,25 +156,6 @@ different circumstances, Chrome might send:
 
 The intervention header will be sent as part of the GET request for the script 
 (asynchronously in case of an actual intervention).
-
-## How do I fix this?
-
-This simple answer is don't inject scripts using `document.write()`. We are 
-[maintaining a set of known services that provide asynchronous loader 
-support](https://developers.google.com/speed/docs/insights/UseAsync) that we 
-encourage you to keep checking.
-
-If your provider is not on the list and does support asynchronous script loading 
-then please let us know and we can update the page to help all users.
-
-If your provider does not support the ability to asynchronously load scripts 
-into your page then we encourage you to contact them and let them know how they 
-will be affected.
-
-If your provider gives you a snippet that includes the `document.write()`, it 
-might be possible for you to add an `async` attribute to the script element, or 
-for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics 
-does](https://developers.google.com/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
 
 ## What does the future hold?
 
