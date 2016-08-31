@@ -1,6 +1,6 @@
 ---
-title: "Rendering Performance"
-description: "O usuário percebem se os sites e aplicativos não funcionam bem, portanto, otimizar o desempenho da renderização é fundamental."
+title: "Desempenho da renderização"
+description: "Os usuários percebem se os sites e aplicativos não funcionam bem, portanto, otimizar o desempenho da renderização é fundamental."
 updated_on: 2015-03-20
 notes:
   csstriggers:
