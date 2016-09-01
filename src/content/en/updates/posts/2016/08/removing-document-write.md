@@ -41,14 +41,14 @@ parsing the HTML. If the script dynamically injects another script, the parser i
 even longer for the resource to download, which can incur one or more network roundtrips and 
 delay the time to first render of the page
 
-**For users on slow connections such as 2G, external scripts dynamically injected via 
+**For users on slow connections, such as 2G, external scripts dynamically injected via 
 `document.write()` can delay the display of main page content for tens of seconds**, 
 or cause pages to either fail to load or take so long that the user just gives 
 up. Based on instrumentation in Chrome, we've learned that pages featuring 
 third-party scripts inserted via document.write() are typically twice as slow to 
 load than other pages on 2G.
 
-We collected the following data from a 28 day field trial on 1% of Chrome 
+We collected data from a 28 day field trial on 1% of Chrome 
 stable users, restricted to users on 2G connections. We saw that 7.6% of all page loads 
 on 2G included at least one cross-origin, parser-blocking script that was 
 inserted via `document.write()` in the top level document. As a result of blocking 
