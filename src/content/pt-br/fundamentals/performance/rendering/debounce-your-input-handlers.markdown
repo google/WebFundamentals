@@ -1,5 +1,5 @@
 ---
-title: "Debounce your input handlers"
+title: "Atrase seus manipuladores de entrada"
 description: "Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout."
 updated_on: 2015-03-20
 notes:
