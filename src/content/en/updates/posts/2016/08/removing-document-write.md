@@ -30,7 +30,6 @@ One known cause of poor performance is the use of `document.write()` inside page
 specifically those uses that inject scripts. As innocuous as the following looks, it 
 can cause real issues for users.
 
-
 {% highlight javascript %}
 document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>');  
 {% endhighlight %}
@@ -45,10 +44,10 @@ network roundtrips and delay the time to first render of the page.
 `document.write()` can delay the display of main page content for tens of seconds**, 
 or cause pages to either fail to load or take so long that the user just gives 
 up. Based on instrumentation in Chrome, we've learned that pages featuring 
-external scripts inserted via document.write() are typically twice as slow to 
+external scripts inserted via `document.write()` are typically twice as slow to 
 load than other pages on 2G.
 
-We collected the following data from a 28 day field trial on 1% of Chrome 
+We collected data from a 28 day field trial on 1% of Chrome 
 stable users, restricted to users on 2G connections. We saw that 7.6% of all page loads 
 on 2G included at least one cross-origin, parser-blocking script that was 
 inserted via `document.write()` in the top level document. As a result of blocking 
@@ -66,21 +65,21 @@ the load of these scripts, we saw the following improvements on those loads:
 
 With this data in mind, the Chrome team have recently announced an intention to 
 [intervene](https://github.com/WICG/interventions/issues/17) on behalf of all 
-users when we detect this known-bad pattern by changing how `document.write(` is 
+users when we detect this known-bad pattern by changing how `document.write()` is 
 handled in Chrome (See [Chrome Status](https://www.chromestatus.com/feature/5718547946799104)). Specifically 
-Chrome will not execute the &lt;script&gt; elements injected via `document.write()` when **all** of the following conditions are met:
+Chrome will not execute the `<script>` elements injected via `document.write()` when **all** of the following conditions are met:
 
 1. The user is on a slow connection, specifically when the user is on 2G. (In 
    the future, the change might be extended to other users on slow connections, 
    such as slow 3G or slow WiFi.)
-1. The `document.write()` is in a top level document. The intervention does not 
+2. The `document.write()` is in a top level document. The intervention does not 
    apply to document.written scripts within iframes as they don't block the 
    rendering of the main page.
-1. The script in the `document.write()` is parser-blocking. Scripts with the '[async](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)' 
+3. The script in the `document.write()` is parser-blocking. Scripts with the '[async](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)' 
    or '[defer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)' attributes will still execute.
-1. The script is not already in the browser HTTP cache. Scripts in the cache 
+4. The script is not already in the browser HTTP cache. Scripts in the cache 
    will not incur a network delay and will still execute. 
-1. The request for the page is not a reload. Chrome will not intervene if the user triggered 
+5. The request for the page is not a reload. Chrome will not intervene if the user triggered 
    a reload and will execute the page as normal.
 
 Third party snippets sometimes use `document.write()` to load scripts. 
@@ -169,7 +168,7 @@ mid-October 2016. Check out the [Chrome Status entry for more
 updates](https://www.chromestatus.com/features/5718547946799104).
 
 Over time, we're looking to intervene when any user has a slow connection (i.e, 
-slow 3G or WiFi). Follow this [Chrome status 
+slow 3G or WiFi). Follow this [Chrome Status 
 entry](https://www.chromestatus.com/feature/5652436521844736).
 
 ## Want to learn more?
