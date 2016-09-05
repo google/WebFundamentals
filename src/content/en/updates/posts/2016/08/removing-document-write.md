@@ -58,7 +58,6 @@ the load of these scripts, we saw the following improvements on those loads:
   suggesting a decrease in user frustration.
 * **21%** decrease of the mean time (over one second faster) until the [first 
   contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview#slide=id.g146ced9404_0_231) 
-  
 * **38%** reduction to the mean time it takes to parse a page, representing an 
   improvement of nearly six seconds, dramatically reducing the time 
   it takes to display what matters to the user.
