@@ -34,17 +34,17 @@ can cause real issues for users.
 document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>');  
 {% endhighlight %}
 
-Before the browser can render a page, it has to build the DOM tree by parsing the 
-HTML markup. Whenever the parser encounters a script it has to stop and execute 
-it before it can continue parsing the HTML. For an external script the parser is 
-also forced to wait for the resource to download, which can incur one or more 
-network roundtrips and delay the time to first render of the page.
+Before the browser can render a page, it has to build the DOM tree by parsing the HTML markup. 
+Whenever the parser encounters a script it has to stop and execute it before it can continue 
+parsing the HTML. If the script dynamically injects another script, the parser is forced to wait 
+even longer for the resource to download, which can incur one or more network roundtrips and 
+delay the time to first render of the page
 
-**For users on slow connections such as 2G, external scripts loaded via 
+**For users on slow connections, such as 2G, external scripts dynamically injected via 
 `document.write()` can delay the display of main page content for tens of seconds**, 
 or cause pages to either fail to load or take so long that the user just gives 
 up. Based on instrumentation in Chrome, we've learned that pages featuring 
-external scripts inserted via `document.write()` are typically twice as slow to 
+third-party scripts inserted via `document.write()` are typically twice as slow to 
 load than other pages on 2G.
 
 We collected data from a 28 day field trial on 1% of Chrome 
@@ -53,12 +53,12 @@ on 2G included at least one cross-origin, parser-blocking script that was
 inserted via `document.write()` in the top level document. As a result of blocking 
 the load of these scripts, we saw the following improvements on those loads:
 
-* **10%** more page loads reaching [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview?slide=id.g146ced9404_0_231), **25%** more page 
+* **10%** more page loads reaching [first contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview?slide=id.g146ced9404_0_231)(a visual confirmation for the user that the page is effectively loading), **25%** more page 
   loads reaching the fully parsed state, and **10%** fewer reloads 
   suggesting a decrease in user frustration.
 * **21%** decrease of the mean time (over one second faster) until the [first 
   contentful paint](https://docs.google.com/presentation/d/1AnZOscwm3kMPRkPfjS4V2VUzuNCFWh6cpK72eKCpviU/preview#slide=id.g146ced9404_0_231) 
-  (a visual confirmation for the user that the page is effectively loading)
+  
 * **38%** reduction to the mean time it takes to parse a page, representing an 
   improvement of nearly six seconds, dramatically reducing the time 
   it takes to display what matters to the user.
@@ -88,6 +88,26 @@ alternatives](https://developers.google.com/speed/docs/insights/UseAsync), which
 allow third party scripts to load without blocking the display of the rest of 
 the content on the page.
 
+## How do I fix this?
+
+This simple answer is don't inject scripts using `document.write()`. We are 
+[maintaining a set of known services that provide asynchronous loader 
+support](https://developers.google.com/speed/docs/insights/UseAsync) that we 
+encourage you to keep checking.
+
+If your provider is not on the list and does support asynchronous script loading 
+then please [let us know and we can update the page to help all users](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform).
+
+If your provider does not support the ability to asynchronously load scripts 
+into your page then we encourage you to contact them and [let us](https://docs.google.com/a/google.com/forms/d/e/1FAIpQLSdMQ7PfoVMob5OTXSgodoG5V1eNC5CyQ_qo4skbN62RDSEPcg/viewform) and them know how they 
+will be affected.
+
+If your provider gives you a snippet that includes the `document.write()`, it 
+might be possible for you to add an `async` attribute to the script element, or 
+for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics 
+does](https://developers.google.com/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
+
+
 ## How to detect when your site is affected
 
 There are a large number of criteria that determine whether the restriction is enforced,
@@ -98,12 +118,12 @@ so how do you know if you are affected?
 To understand the potential impact of this change you first need to understand 
 how many of your users will be on 2G. You can detect the user's current network type
 and speed by using the [Network Information API](https://wicg.github.io/netinfo/) that is available in Chrome and then
-send a heads-up to your analytic or RUM systems.
+send a heads-up to your analytic or Real User Metrics (RUM) systems.
 
 {% highlight javascript %}
 if(navigator.connection &&
-   navigator.connection.type == 'cellular' &&
-   navigator.connection.downlinkMax <= 0.115)
+   navigator.connection.type === 'cellular' &&
+   [navigator.connection.downlinkMax](http://wicg.github.io/netinfo/#idl-def-ConnectionType.cellular) <= 0.115)
   // Notify your service to indicate that you might be affected by this restriction.
 }
 {% endhighlight %}
@@ -135,25 +155,6 @@ different circumstances, Chrome might send:
 
 The intervention header will be sent as part of the GET request for the script 
 (asynchronously in case of an actual intervention).
-
-## How do I fix this?
-
-This simple answer is don't inject scripts using `document.write()`. We are 
-[maintaining a set of known services that provide asynchronous loader 
-support](https://developers.google.com/speed/docs/insights/UseAsync) that we 
-encourage you to keep checking.
-
-If your provider is not on the list and does support asynchronous script loading 
-then please let us know and we can update the page to help all users.
-
-If your provider does not support the ability to asynchronously load scripts 
-into your page then we encourage you to contact them and let them know how they 
-will be affected.
-
-If your provider gives you a snippet that includes the `document.write()`, it 
-might be possible for you to add an `async` attribute to the script element, or 
-for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics 
-does](https://developers.google.com/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
 
 ## What does the future hold?
 
