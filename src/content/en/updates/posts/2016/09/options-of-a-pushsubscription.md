@@ -24,7 +24,7 @@ in a subscription object, known as
 You can copy and paste the following code snippet into
 [simple-push-demo](https://gauntface.github.io/simple-push-demo/) to see what
 the options look like. The code simply gets the current subscription and prints
-out subscription.options.
+out `subscription.options`.
 
 {% highlight javascript %}
     navigator.serviceWorker.ready.then(registration => {  
@@ -52,6 +52,6 @@ event like so:
           // TODO: Send new subscription to application server  
         }));  
     });
-{% endhighlight %
+{% endhighlight %}
 
 It's a small change, that will be super useful in the future.
