@@ -202,7 +202,10 @@ def getInclude(includeTag, lang='en'):
   fileName = fileName.replace('"', '')
   fileName = fileName.replace('\'', '')
   fileName = fileName.strip()
-  result = readFile(fileName, lang)
+  if fileName == 'comment-widget.html':
+    result = readFile('../templates/comment-widget.html', '')
+  else:
+    result = readFile(fileName, lang)
   if result is None:
     return 'Warning: Unable to find include <code>' + fileName + '</code>'
   return result

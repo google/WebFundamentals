@@ -536,6 +536,18 @@ Will render as:
 {% include "_shared/related-guides/heading.html" %}
 {% include "_shared/related-guides/service-workers.html" %}
 
+## User Comment Blocks
+
+To allow users to comment on your documentation, add a comment widget to the
+bottom of the page. For example:
+
+<pre class="prettyprint">
+&#123;% include "comment-widget.html" %}
+</pre>
+
+Note: the comment widget does **not** render in the staging or development
+environment, and will only be visible when the page is published on DevSite.
+
 ## Other Elements
 
 ### Inline and block layout
@@ -632,3 +644,4 @@ loin flank venison. Brisket turkey cupim tongue. Ham hock swine sirloin
 turducken biltong bacon ribeye rump jerky spare ribs. Beef ribs venison strip 
 steak brisket tail jerky.
 
+{% include "comment-widget.html" %}
