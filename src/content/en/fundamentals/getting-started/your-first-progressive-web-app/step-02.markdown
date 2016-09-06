@@ -139,7 +139,7 @@ In our bootstrap code, we've included:
 
 Add the JavaScript code
 
-1. Copy `step3-app.js` from the `resources` directory to your `scripts` folder
+1. Copy `app.js` from the `resources/step3` directory to your `scripts` folder
    and rename it `app.js`
 1. In the `index.html` file, add a link to the newly created `app.js`.<br/>
    `<script src="/scripts/app.js"></script>`
