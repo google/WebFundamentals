@@ -1,7 +1,7 @@
 'use strict';
 
 /*
-    build-sections.js
+    generate-codelabs.js
 
     Generates necessary index files, including:
     homepage, tocs, year indexes, RSS and ATOM feeds for updates and showcase
@@ -9,7 +9,7 @@
 
 var fs = require('fs');
 var path = require('path');
-var moment = require('moment');
+var log = require('./Logger.js');
 
 var CODELAB_ROOT = './src/content/en/fundamentals/getting-started/codelabs/';
 
@@ -56,6 +56,7 @@ function run() {
   directories.forEach(function(directory) {
     var fullPath = path.join(CODELAB_ROOT, directory);
     if (fs.statSync(fullPath).isDirectory()) {
+      console.log('Generating files for:', directory);
       updateCodeLab(fullPath);
     }
   });

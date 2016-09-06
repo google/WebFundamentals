@@ -21,5 +21,7 @@ src/content/en/updates/*/index.md
 src/content/en/showcase/_index.yaml
 src/content/en/showcase/*/_toc.yaml
 src/content/en/showcase/*/index.md
+src/content/**/rss.xml
+src/content/**/atom.xml
 
 

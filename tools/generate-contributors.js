@@ -1,7 +1,7 @@
 'use strict';
 
 /*
-    build-contributors.js
+    generate-contributors.js
 
     Reads the _contributors.yaml file and uses Handlebars to generate the
     primary contributors file and the individual include files.
@@ -12,6 +12,7 @@ var path = require('path');
 var jsYaml = require('js-yaml');
 var Handlebars = require('handlebars');
 var handlebarHelpers = require('handlebars-helpers');
+var log = require('./wf-Logger.js');
 
 var PHOTO_PATH = './src/content/en/images/contributors/';
 
@@ -23,11 +24,12 @@ function getPhotoForContributor(key) {
       return key;
     }
   } catch (ex) {}
-  console.log(key, 'is missing a photo, using simple avatar instead.');
+  log.warn(key + ' is missing a photo, using simple avatar instead.');
   return 'no-photo';
 }
 
 function buildIncludes(contributors) {
+  log.log('Building include file for each contributor...');
   var ts = fs.readFileSync('./src/templates/contributors/include.html', 'utf8');
   var template = Handlebars.compile(ts);
   var keys = Object.keys(contributors);
@@ -43,6 +45,7 @@ function buildIncludes(contributors) {
 }
 
 function buildIndex(contributors) {
+  log.log('Building index file of all contributors...');
   var ts = fs.readFileSync('./src/templates/contributors/index.md', 'utf8');
   var template = Handlebars.compile(ts);
   var context = {
@@ -54,12 +57,15 @@ function buildIndex(contributors) {
 }
 
 function getContributors() {
+  log.log('Reading contributors.yaml file...');
   var yamlDoc = fs.readFileSync('./src/data/_contributors.yaml', 'utf8');
   return jsYaml.safeLoad(yamlDoc);
 }
 
+log.taskStart('CONTRIBUTORS');
 handlebarHelpers();
 var contributors = getContributors();
 buildIncludes(contributors);
 buildIndex(contributors);
+log.taskStop('CONTRIBUTORS');
 

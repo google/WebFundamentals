@@ -4,7 +4,7 @@ book_path: /web/{{section}}/_book.yaml
 landing_page:
 
   header:
-    description: {{headerDesc}}
+    description: "Be smarter. Do more."
 
   rows:
 
@@ -15,7 +15,7 @@ landing_page:
       {{#if articles.0.image }}image_path: {{articles.0.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.0.path}}
+        path: {{articles.0.url}}
 
 
   - items:
@@ -24,19 +24,19 @@ landing_page:
       {{#if articles.1.image }}image_path: {{articles.1.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.1.path}}
+        path: {{articles.1.url}}
     - heading: "{{articles.2.title}}"
       description: "{{{replace articles.2.description '"' '\"'}}}"
       {{#if articles.2.image }}image_path: {{articles.2.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.2.path}}
+        path: {{articles.2.url}}
     - heading: "{{articles.3.title}}"
       description: "{{{replace articles.3.description '"' '\"'}}}"
       {{#if articles.3.image }}image_path: {{articles.3.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.3.path}}
+        path: {{articles.3.url}}
 
 
   - items:
@@ -48,19 +48,19 @@ landing_page:
       {{#if articles.4.image }}image_path: {{articles.4.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.4.path}}
+        path: {{articles.4.url}}
     - heading: "{{articles.5.title}}"
       description: "{{{replace articles.5.description '"' '\"'}}}"
       {{#if articles.5.image }}image_path: {{articles.5.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.5.path}}
+        path: {{articles.5.url}}
     - heading: "{{articles.6.title}}"
       description: "{{{replace articles.6.description '"' '\"'}}}"
       {{#if articles.6.image }}image_path: {{articles.6.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.6.path}}
+        path: {{articles.6.url}}
 
   - items:
     - custom_html: <hr>
@@ -71,19 +71,19 @@ landing_page:
       {{#if articles.7.image }}image_path: {{articles.7.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.7.path}}
+        path: {{articles.7.url}}
     - heading: "{{articles.8.title}}"
       description: "{{{replace articles.8.description '"' '\"'}}}"
       {{#if articles.8.image }}image_path: {{articles.8.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.8.path}}
+        path: {{articles.8.url}}
     - heading: "{{articles.9.title}}"
       description: "{{{replace articles.9.description '"' '\"'}}}"
       {{#if articles.9.image }}image_path: {{articles.9.image}}{{/if}}
       buttons:
       - label: Read more
-        path: {{articles.9.path}}
+        path: {{articles.9.url}}
 
 
   - heading: More Updates
@@ -91,11 +91,11 @@ landing_page:
     items:
     - description: >
         <h4>{{articles.10.title}}</h4>
-        <p>{{{articles.10.description}}} <a href="{{articles.10.path}}">Read more</a></p>
+        <p>{{{articles.10.description}}} <a href="{{articles.10.url}}">Read more</a></p>
         <h4>{{articles.11.title}}</h4>
-        <p>{{{articles.11.description}}} <a href="{{articles.11.path}}">Read more</a></p>
+        <p>{{{articles.11.description}}} <a href="{{articles.11.url}}">Read more</a></p>
         <h4>{{articles.12.title}}</h4>
-        <p>{{{articles.12.description}}} <a href="{{articles.12.path}}">Read more</a></p>
+        <p>{{{articles.12.description}}} <a href="{{articles.12.url}}">Read more</a></p>
         <h4>More from the archives</h4>
-        <p>See more from the <a href="/web/{{section}}/{{year}}/">archives</a></p>
+        <p>See more from the <a href="/web/{{section}}/{{articles.12.yearPublished}}/">archives</a></p>
 
