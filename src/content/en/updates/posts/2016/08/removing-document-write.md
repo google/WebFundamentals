@@ -1,9 +1,9 @@
 ---
 layout: updates/post
 title: "Intervening against document.write()"
-description: ""
+description: "Chrome is blocking some scripts that are added using document.write()"
 published_on: 2016-08-30
-updated_on: 2016-08-30
+updated_on: 2016-09-06
 authors:
   - paulkinlan
 tags:
