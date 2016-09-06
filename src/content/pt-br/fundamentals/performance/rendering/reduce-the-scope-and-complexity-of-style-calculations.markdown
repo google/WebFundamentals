@@ -1,5 +1,5 @@
 ---
-title: "Reduce the scope and complexity of style calculations"
+title: "Reduzir o escopo e complexidade dos calculos de estilo"
 description: "Mudando o DOM, através da adição e remoção de elementos, mudando atributos, classes ou através da animação, fará com que o navegador recalcule estilos de elemento e, em vários casos, o layout (ou refluxo) da página ou partes dela. Esse processo é chamado de cálculo de estilo computado."
 updated_on: 2015-03-20
 notes:

@@ -1,5 +1,5 @@
 ---
-title: "Optimize JavaScript Execution"
+title: "Otimizar a execuçao do Javascript"
 description: "JavaScript é geralmente o acionador de mudanças visuais. Algumas vezes de forma direta, através de manipulações de estilo, outras, seu cálculos resultarão em mudanças visuais, como pesquisa ou classificação de algum dado. O JavaScript mal cronometrado ou de longa execução pode ser uma causa comum de problemas de desempenho, então minimize seu impacto sempre que possível."
 updated_on: 2015-03-20
 notes:

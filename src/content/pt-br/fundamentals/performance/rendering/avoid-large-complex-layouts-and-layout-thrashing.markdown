@@ -1,5 +1,5 @@
 ---
-title: "Avoid large, complex layouts and layout thrashing"
+title: "Evitar grandes layouts complexos e layout desnecessário"
 description: "Layout é onde o navegador descobre a informação geométrica para os elementos: seu tamanho e localização na página. Cada elemento terá uma informação de dimensionamento explícita ou implícita com base no CSS que foi usado, o conteúdo do elemento ou um elemento principal. O processo é chamado Layout in Blink, navegadores WebKit e Internet Explorer. Em navegadores baseados em Gecko, como o Firefox, ele é chamado de Reflow, mas na realidade esses processos são iguais."
 updated_on: 2015-03-20
 notes:

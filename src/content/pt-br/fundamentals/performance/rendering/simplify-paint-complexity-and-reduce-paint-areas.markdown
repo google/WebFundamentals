@@ -1,5 +1,5 @@
 ---
-title: "Simplify paint complexity and reduce paint areas"
+title: "Simplificar a complexidade de pintura e reduzir áreas de pintura"
 description: "A pintura é o processo de preenchimento em pixels que é composto nas telas dos usuários. Geralmente é a execução mais longa de todas as tarefas no pipeline e que deve ser evitada sempre que possível."
 updated_on: 2015-03-20
 notes:
