@@ -99,7 +99,7 @@ landing_page:
         path: /web/updates/2015/11/app-shell
       - heading: Service Workers
         description: Service workers are a key technology needed for your app.
-        path: https://slightlyoff.github.io/ServiceWorker/spec/service_worker/
+        path: /web/fundamentals/primers/service-worker/
       - heading: Get support
         description: Get your questions answered on Stack Overflow
         path: http://stackoverflow.com/questions/tagged/progressive-web-apps
