@@ -1,4 +1,21 @@
 redirects:
+- from: /web/billions
+  to: /web/billions/
+- from: /web/fundamentals
+  to: /web/fundamentals/
+- from: /web/progressive-web-apps
+  to: /web/progressive-web-apps/
+- from: /web/resources
+  to: /web/resources/
+- from: /web/showcase
+  to: /web/showcase/  
+- from: /web/shows
+  to: /web/shows/
+- from: /web/tools
+  to: /web/tools/
+- from: /web/updates
+  to: /web/updates/
+
 - from: /web/starter-kit/...
   to: /web/tools/starter-kit/...
 - from: /web/fundamentals/resources/contributors/
@@ -7,13 +24,6 @@ redirects:
   to: /web/resources/styleguide/sample-article
 - from: /web/fundamentals/resources/...
   to: /web/resources/
-- from: /web/updates
-  to: /web/updates/
-- from: /web/fundamentals
-  to: /web/fundamentals/
-- from: /web/shows
-  to: /web/shows/
-- from: /web/tools
-  to: /web/tools/
-- from: /web/showcase
-  to: /web/showcase/
+
+
+
