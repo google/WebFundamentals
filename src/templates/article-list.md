@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/{{section}}/_book.yaml
 
-# {{ title }}
+# {{{ title }}}
 
 {{#each articles}}
 
-## {{title}}
+## {{ title }}
 <div class="attempt-right">
   {{#if image}}
     <img src="{{image}}">

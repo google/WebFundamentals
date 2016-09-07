@@ -3,8 +3,8 @@
 var fs = require('fs');
 var path = require('path');
 var moment = require('moment');
-var jsYaml = require('js-yaml');
 var marked = require('marked');
+var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var Handlebars = require('handlebars');
 require('handlebars-helpers')();
@@ -16,16 +16,20 @@ function renderTemplate(templateFile, context, outputFile) {
   fs.writeFileSync(outputFile, result);
 }
 
-function generateIndex(files, options) {
-  gutil.log(' ', 'Generating index file...');
-  var context = {
-    description: options.description,
-    section: options.sectionId,
-    articles: files,
-  };
-  var template = path.join(GLOBAL.WF.src.templates, options.sectionId, '_index.yaml');
-  var outputFile = path.join(GLOBAL.WF.src.content, options.sectionId, '_index.yaml');
-  renderTemplate(template, context, outputFile);
+function splitArticlesByMonth(files) {
+  var result = [];
+  files.forEach(function(file) {
+    var month = moment(file.datePublished).format('MM');
+    month = parseInt(month, 10);
+    if (!result[month]) {
+      result[month] = {
+        title: moment.months()[month - 1],
+        articles: []
+      };
+    }
+    result[month].articles.push(file);
+  });
+  return result;
 }
 
 function getFullFeedEntries(articles) {
@@ -65,68 +69,78 @@ function getFullFeedEntries(articles) {
 function generateFeeds(files, options) {
   gutil.log(' ', 'Generating RSS and ATOM feeds...');
   var lastUpdated = files[0].datePublished;
-  var rssPubDate = moment(lastUpdated).format('MM MMM YYYY HH:mm:ss [GMT]');
-  var atomPubDate = moment(lastUpdated).format('YYYY-MM-DDTHH:mm:ss[Z]');
   var context = {
     title: options.title,
-    section: options.sectionId,
     description: options.description,
-    rssPubDate: rssPubDate,
-    atomPubDate: atomPubDate,
-    articles: getFullFeedEntries(files)
+    articles: getFullFeedEntries(files),
+    host: 'https://developers.google.com',
+    baseUrl: 'https://developers.google.com/web/',
+    analyticsQS: '?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=root_feed'
   };
+  if (options.baseUrl) {
+    context.baseUrl = options.baseUrl;
+  }
+  if (options.section) {
+    context.baseUrl += options.section + '/';
+    context.analyticsQS = context.analyticsQS.replace('root_feed', options.section + '_feed');
+  }
+  context.rssPubDate = moment(lastUpdated).format('MM MMM YYYY HH:mm:ss [GMT]');
+  context.atomPubDate = moment(lastUpdated).format('YYYY-MM-DDTHH:mm:ss[Z]');
 
-  var atomTemplate = path.join(GLOBAL.WF.src.templates, 'atom.xml');
-  var atomOutputFile = path.join(GLOBAL.WF.src.content, options.sectionId, 'atom.xml');
-  renderTemplate(atomTemplate, context, atomOutputFile);
+  var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
+  var outputFile = path.join(options.outputPath, 'atom.xml');
+  renderTemplate(template, context, outputFile);
 
-  var rssTemplate = path.join(GLOBAL.WF.src.templates, 'rss.xml');
-  var rssOutputFile = path.join(GLOBAL.WF.src.content, options.sectionId, 'rss.xml');
-  renderTemplate(rssTemplate, context, rssOutputFile);
-}
-
-function generateListPage(files, options) {
-  gutil.log(' ', 'Generating listing page for', options.title);
-  var context = {
-    title: options.title,
-    section: options.sectionId,
-    articles: files
-  };
-  var template = path.join(GLOBAL.WF.src.templates, options.sectionId, 'list-page.md');
-  var outputFile = path.join(GLOBAL.WF.src.content, options.sectionId, options.outputFile);
+  template = path.join(GLOBAL.WF.src.templates, 'rss.xml');
+  outputFile = path.join(options.outputPath, 'rss.xml');
   renderTemplate(template, context, outputFile);
 }
 
-function splitArticlesByMonth(files) {
-  var result = [];
-  files.forEach(function(file) {
-    var month = moment(file.datePublished).format('MM');
-    month = parseInt(month, 10);
-    if (!result[month]) {
-      result[month] = {
-        title: moment.months()[month - 1],
-        articles: []
-      };
-    }
-    result[month].articles.push(file);
-  });
-  return result;
+function _generateListPage(files, options) {
+  var context = {
+    title: options.title,
+    section: options.section,
+    articles: files
+  };
+  var tmpl = path.join(GLOBAL.WF.src.templates, 'article-list.md');
+  var outputFile = options.outputFile;
+  if (!outputFile) {
+    outputFile = path.join(options.outputPath, 'index.md');
+  }
+  renderTemplate(tmpl, context, outputFile);
+}
+
+function generateListPage(files, options) {
+  gutil.log(' ', 'Generating article list page for', options.title);
+  return _generateListPage(files, options);
 }
 
 function generateTOCbyMonth(files, options) {
-  gutil.log(' ', 'Generating TOC for', options.title);
+  gutil.log(' ', 'Generating _toc.yaml for', options.title);
   var context = {
     title: options.title,
-    section: options.sectionId,
+    section: options.section,
     months: splitArticlesByMonth(files).reverse()
   };
-  var template = path.join(GLOBAL.WF.src.templates, options.sectionId, '_toc.yaml');
-  var outputFile = path.join(GLOBAL.WF.src.content, options.sectionId, options.outputFile);
+  var template = path.join(GLOBAL.WF.src.templates, '_toc-month.yaml');
+  var outputFile = path.join(options.outputPath, '_toc.yaml');
+  renderTemplate(template, context, outputFile);
+}
+
+function generateIndex(files, options) {
+  gutil.log(' ', 'Generating index page...');
+  var context = {
+    description: options.description,
+    section: options.section,
+    articles: files
+  };
+  var template = path.join(GLOBAL.WF.src.templates, '_index.yaml');
+  var outputFile = path.join(options.outputPath, '_index.yaml');
   renderTemplate(template, context, outputFile);
 }
 
 function generateTagPages(files, options) {
-  gutil.log(' ', 'Generating tag pages');
+  gutil.log(' ', 'Generating tag pages...');
   var allTags = {};
   files.forEach(function(file) {
     var tags = file.tags;
@@ -141,24 +155,21 @@ function generateTagPages(files, options) {
       allTags[tag].articles.push(file);
     });
   });
-
   var context = {
     title: options.title,
     tags: Object.keys(allTags).sort(),
-    section: options.sectionId
+    section: options.section
   };
-  var template = path.join(GLOBAL.WF.src.templates, options.sectionId, 'tag-index.md');
-  var outputFile = path.join(GLOBAL.WF.src.content, options.sectionId, 'tags/index.md');
-  var templateList = path.join(GLOBAL.WF.src.templates, options.sectionId, 'tag-list.md');
-  renderTemplate(template, context, outputFile);
+  var tmplIndex = path.join(GLOBAL.WF.src.templates, 'tag-index.md');
+  var outputFile = path.join(options.outputPath, 'index.md');
+  renderTemplate(tmplIndex, context, outputFile);
   Object.keys(allTags).forEach(function(key) {
-    var context = {
-      title: allTags[key].tag,
-      section: options.sectionId,
-      articles: allTags[key].articles
+    var opts = {
+      title: 'All Updates tagged: `' + key + '`',
+      section: options.section,
+      outputFile: path.join(options.outputPath, key + '.md')
     };
-    var outputFile = path.join(GLOBAL.WF.src.content, options.sectionId, 'tags/' + key + '.md');
-    renderTemplate(templateList, context, outputFile);
+    _generateListPage(allTags[key].articles, opts);
   });
 }
 
@@ -167,3 +178,4 @@ exports.generateFeeds = generateFeeds;
 exports.generateListPage = generateListPage;
 exports.generateTOCbyMonth = generateTOCbyMonth;
 exports.generateTagPages = generateTagPages;
+exports.renderTemplate = renderTemplate;

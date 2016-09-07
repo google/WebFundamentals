@@ -31,6 +31,7 @@ gulp.task('clean', function() {
     'src/content/en/_shared/contributors/*',
     'src/content/**/rss.xml',
     'src/content/**/atom.xml',
+    'src/content/**/_files.json',
     'src/content/en/sitemap.xml',
     'src/content/*/showcase/_index.yaml',
     'src/content/*/showcase/*/_toc.yaml',
@@ -43,7 +44,7 @@ gulp.task('clean', function() {
   ];
   var opts = {dryRun: false, dot: true};
   var deletedFiles = del.sync(filesToDelete, opts);
-  gutil.log('Deleted', gutil.colors.magenta(deletedFiles.length + ' files'))
+  gutil.log(' ', 'Deleted', gutil.colors.magenta(deletedFiles.length + ' files'));
 });
 
 

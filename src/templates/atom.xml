@@ -2,22 +2,23 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ title }}</title>
   <icon>https://developers.google.com/web/images/web-fundamentals-icon192x192.png</icon>
-  <id>https://developers.google.com/web/{{ section }}/</id>
+  <id>{{ baseUrl }}</id>
   <subtitle>{{ description }}</subtitle>
   <updated>{{ atomPubDate }}</updated>
   <logo>https://developers.google.com/web/images/web-fundamentals-icon192x192.png</logo>
-  <link href="https://developers.google.com/web/{{ section }}/atom.xml" rel="self" />
-  <link href="https://developers.google.com/web/{{ section }}/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ section }}_feed" />
+  <link href="{{#if feedRoot }}{{ feedRoot }}{{else}}{{ baseUrl }}{{/if}}atom.xml" rel="self" />
+  <link href="{{ baseUrl }}{{{ analyticsQS }}}" />
   {{#each articles}}
   <entry>
     <title>{{ title }}</title>
     <published>{{ datePublished }}</published>
     <updated>{{ dateUpdated }}</updated>
-    <link rel="alternate" type="text/html" href="https://developers.google.com/web/{{ ../section }}{{ url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ ../section }}_feed" />
-    <id>https://developers.google.com/web/{{ ../section }}{{ url }}</id>
+    <link rel="alternate" type="text/html" href="{{ ../host }}{{ url }}{{{ ../analyticsQS }}}" />
+    <id>{{ ../host }}{{ url }}</id>
     <content type="html">
       <![CDATA[
-        <img src="https://ga-beacon.appspot.com/UA-52746336-1{{ url }}?feed_type=atom&pixel">
+        <img src="https://ga-beacon.appspot.com/UA-52746336-1{{#if analyticsUrl }}{{ analyticsUrl }}{{else}}{{ url }}{{/if}}?feed_type=atom&pixel">
+        
         {{{ content }}}
       ]]>
     </content>
