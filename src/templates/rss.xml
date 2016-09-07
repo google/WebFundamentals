@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ section }} from WebFundamentals</title>
-    <link>https://developers.google.com/web/{{ section }}/?utm_source=feed&utm_medium=feed&utm_campaign={{ section }}_feed</link>
+    <title>{{title}}</title>
+    <link>https://developers.google.com/web/{{ section }}/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ section }}_feed</link>
     <description>{{ description }}</description>
-    <pubDate>{{ pubDate }}</pubDate>
-    <lastBuildDate>{{ pubDate }}</lastBuildDate>
-    <generator>Google Developers</generator>
+    <pubDate>{{ rssPubDate }}</pubDate>
+    <lastBuildDate>{{ rssPubDate }}</lastBuildDate>
+    <generator>HandlebarsJS</generator>
     <image>
       <url>https://developers.google.com/web/images/web-fundamentals-icon192x192.png</url>
-      <title>{{ section }} from WebFundamentals</title>
-      <link>https://developers.google.com/web/{{ section }}/rss.xml</link>
+      <title>{{title}}</title>
+      <link>https://developers.google.com/web/{{ section }}/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ section }}_feed</link>
     </image>
     <atom:link href="https://developers.google.com/web/{{ section }}/rss.xml" rel="self" type="application/rss+xml" />
     {{#each articles}}
     <item>
       <title>{{ title }}</title>
-      <pubDate>{{ datePublished }} 00:00:01 GMT</pubDate>
+      <pubDate>{{ rssPubDate }}</pubDate>
       <link>https://developers.google.com/web/{{ ../section }}{{ url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=feed</link>
       <guid isPermaLink="true">https://developers.google.com/web/{{ ../section }}{{ url }}?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign=feed</guid>
       <description>
         <![CDATA[
           <img src="https://ga-beacon.appspot.com/UA-52746336-1{{ url }}?feed_type=rss&pixel">
-          {{ content }}
+          {{{ content }}}
         ]]>
       </description>
       {{#each tags}}<category>{{ this }}</category> {{/each}}
-      <author>{{ author }}</author>
+      <author>{{ rssAuthor }}</author>
     </item>
     {{/each}}
   </channel>

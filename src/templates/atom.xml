@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ section }} from WebFundamentals</title>
+  <title>{{ title }}</title>
   <icon>https://developers.google.com/web/images/web-fundamentals-icon192x192.png</icon>
   <id>https://developers.google.com/web/{{ section }}/</id>
   <subtitle>{{ description }}</subtitle>
-  <updated>{{ pubDate }}</updated>
+  <updated>{{ atomPubDate }}</updated>
   <logo>https://developers.google.com/web/images/web-fundamentals-icon192x192.png</logo>
   <link href="https://developers.google.com/web/{{ section }}/atom.xml" rel="self" />
-  <link href="https://developers.google.com/web/{{ section }}/?utm_source=feed&utm_medium=feed&utm_campaign={{ section }}_feed" />
+  <link href="https://developers.google.com/web/{{ section }}/?utm_source=feed&amp;utm_medium=feed&amp;utm_campaign={{ section }}_feed" />
   {{#each articles}}
   <entry>
     <title>{{ title }}</title>
@@ -18,12 +18,12 @@
     <content type="html">
       <![CDATA[
         <img src="https://ga-beacon.appspot.com/UA-52746336-1{{ url }}?feed_type=atom&pixel">
-        {{ content }}
+        {{{ content }}}
       ]]>
     </content>
     {{#each tags}}<category term="{{this}}" label="{{this}}"/> {{/each}}
     <author>
-      <name>{{ author }}</name>
+      <name>{{ atomAuthor }}</name>
     </author>
   </entry>
   {{/each}}

@@ -1,7 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/{{section}}/_book.yaml
 
-# {{pageTitle}}
+# {{ title }}
 
 {{#each articles}}
 
@@ -15,7 +15,7 @@ book_path: /web/{{section}}/_book.yaml
 </div>
 {{{description}}}
 
-[Read more]({{path}})
+[Read more]({{url}})
 
 {{#if author}}
 [{{author}}](/web/resources/contributors#{{author}})
@@ -23,7 +23,7 @@ book_path: /web/{{section}}/_book.yaml
 {{published}}
 
 {{#if tags}}
-Tags: {{#each tags}}[{{this}}](#) {{/each}}
+Tags: {{#each tags}}[{{this}}](/web/updates/tags/{{this}}) {{/each}}
 {{/if}}
 
 <div style="clear:both"></div>
