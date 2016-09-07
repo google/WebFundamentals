@@ -98,3 +98,198 @@ y el marco de coordenadas de la Tierra.
   </div>
 </div>
 
+
+
+## Orientación del dispositivo 
+
+
+
+
+En el evento de orientación del dispositivo, se proporcionan datos de la rotación, que incluyen cuánto se está inclinando el dispositivo de la parte frontal a la parte trasera y de lado a lado y, si el teléfono o la computadora portátil poseen una brújula, la dirección hacia la que está orientado el dispositivo.
+
+
+### TL;DR {: .hide-from-toc }
+- Utilícelo con moderación.
+- Pruébelo para ver si es compatible.
+- 'No actualice la IU en cada evento de orientación; en su lugar, realice la sincronización con <code>requestAnimationFrame</code>.'
+
+
+### Cuándo se deben utilizar los eventos de orientación del dispositivo
+
+Los eventos de orientación del dispositivo se pueden utilizar de diferentes maneras.  Por ejemplo:
+
+<ul>
+  <li>Actualizar un mapa mientras el usuario se desplaza</li>
+  <li>Realizar pequeños ajustes en la IU; por ejemplo, agregar efectos de paralaje</li>
+  <li>Si se lo combina con la función de geolocalización, se puede utilizar para la navegación paso a paso.</li>
+</ul>
+
+### Verificación de la compatibilidad y escucha de eventos
+
+Para escuchar un `DeviceOrientationEvent`, primero, verifique si los eventos
+son compatibles con el navegador.  Luego, coloque un agente de escucha en el objeto de `window` 
+que escucha los eventos de `deviceorientation`. 
+
+<pre class="prettyprint">
+{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
+</pre>
+
+### Manejo de los eventos de orientación del dispositivo
+
+El evento de orientación del dispositivo se activa cuando se mueve el dispositivo o cuando se cambia su 
+orientación.  Proporciona datos sobre la diferencia entre el dispositivo en 
+la posición actual en relación con el <a href="index.html#earth-coordinate-frame">
+marco de coordenadas de la Tierra</a>.
+
+El evento generalmente proporciona tres propiedades: 
+<a href="index.html#rotation-data">`alpha`</a>, 
+<a href="index.html#rotation-data">`beta`</a> y 
+<a href="index.html#rotation-data">`gamma`</a>.  En Mobile Safari, se proporciona un
+parámetro adicional <a href="https://developer.apple.com/library/safari/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">`webkitCompassHeading`</a> con el título
+Brújula.
+
+
+
+
+## Movimiento del dispositivo 
+
+
+
+
+A través de la función Movimiento del dispositivo se proporciona información sobre la fuerza de aceleración que se aplica al dispositivo en un momento determinado, y sobre la velocidad de rotación.
+
+
+### TL;DR {: .hide-from-toc }
+- Utilice la función Movimiento del dispositivo cuando necesite conocer el movimiento actual del dispositivo.
+- La función <code>rotationRate</code> se muestra en &deg;/seg.
+- Las funciones <code>acceleration</code> y <code>accelerationWithGravity</code> se muestran en m/seg<sup>2</sup>.
+- Tenga en cuenta las diferencias entre las implementaciones del navegador.
+
+
+### Cuándo se deben utilizar los eventos de movimiento del dispositivo
+
+Los eventos de movimiento del dispositivo se pueden utilizar de diferentes maneras.  Por ejemplo:
+
+<ul>
+  <li>Un gesto de sacudida para actualizar los datos</li>
+  <li>En los juegos, para hacer que los personajes salten o se muevan</li>
+  <li>En aplicaciones relacionadas con la salud y el estado físico</li>
+</ul>
+
+### Verificación de la compatibilidad y escucha de eventos
+
+Para escuchar instancias de `DeviceMotionEvent`, primero, verifique si los eventos
+son compatibles con el navegador.  Luego, coloque un agente de escucha en el objeto de `window` 
+que escucha los eventos de `devicemotion`. 
+
+<pre class="prettyprint">
+{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
+</pre>
+
+### Manejo de los eventos de movimiento del dispositivo
+
+El evento de movimiento del dispositivo se activa a intervalos regulares y proporciona datos sobre la
+rotación (en &deg; por segundo) y la aceleración (en m por segundo<sup>2</sup>)
+del dispositivo, en ese momento específico.  Algunos dispositivos no cuentan con el hardware
+para excluir el efecto de la gravedad.
+
+El evento proporciona cuatro propiedades: 
+<a href="index.html#device-frame-coordinate">`accelerationIncludingGravity`</a>, 
+<a href="index.html#device-frame-coordinate">`acceleration`</a> 
+(que excluye los efectos de la gravedad), 
+<a href="index.html#rotation-data">`rotationRate`</a> y `interval`.
+
+Por ejemplo, miremos el teléfono apoyado sobre una mesa plana,
+con la pantalla hacia arriba.
+
+<table class="mdl-data-table mdl-js-data-table">
+    <thead>
+    <tr>
+      <th data-th="State">Estado</th>
+      <th data-th="Rotation">Rotación</th>
+      <th data-th="Acceleration (m/s<sup>2</sup>)">Aceleración (m/s<sup>2</sup>)</th>
+      <th data-th="Acceleration with gravity (m/s<sup>2</sup>)">Aceleración con gravedad (m/s<sup>2</sup>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="State">Sin movimiento</td>
+      <td data-th="Rotation">[0, 0, 0]</td>
+      <td data-th="Acceleration">[0, 0, 0]</td>
+      <td data-th="Acceleration with gravity">[0, 0, 9,8]</td>
+    </tr>
+    <tr>
+      <td data-th="State">Con movimiento hacia arriba</td>
+      <td data-th="Rotation">[0, 0, 0]</td>
+      <td data-th="Acceleration">[0, 0, 5]</td>
+      <td data-th="Acceleration with gravity">[0, 0, 14,81]</td>
+    </tr>
+    <tr>
+      <td data-th="State">Con movimiento solo hacia la derecha</td>
+      <td data-th="Rotation">[0, 0, 0]</td>
+      <td data-th="Acceleration">[3, 0, 0]</td>
+      <td data-th="Acceleration with gravity">[3, 0, 9,81]</td>
+    </tr>
+    <tr>
+      <td data-th="State">Con movimiento hacia arriba y hacia la derecha</td>
+      <td data-th="Rotation">[0, 0, 0]</td>
+      <td data-th="Acceleration">[5, 0, 5]</td>
+      <td data-th="Acceleration with gravity">[5, 0, 14,81]</td>
+    </tr>
+  </tbody>
+</table>
+
+Por el contrario, si el teléfono se colocara con la pantalla en posición perpendicular al
+piso, y el espectador lo pudiera visualizar directamente:
+
+<table class="mdl-data-table mdl-js-data-table">
+    <thead>
+    <tr>
+      <th data-th="State">Estado</th>
+      <th data-th="Rotation">Rotación</th>
+      <th data-th="Acceleration (m/s<sup>2</sup>)">Aceleración (m/s<sup>2</sup>)</th>
+      <th data-th="Acceleration with gravity (m/s<sup>2</sup>)">Aceleración con gravedad (m/s<sup>2</sup>)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="State">Sin movimiento</td>
+      <td data-th="Rotation">[0, 0, 0]</td>
+      <td data-th="Acceleration">[0, 0, 0]</td>
+      <td data-th="Acceleration with gravity">[0, 9,81, 0]</td>
+    </tr>
+    <tr>
+      <td data-th="State">Con movimiento hacia arriba</td>
+      <td data-th="Rotation">[0, 0, 0]</td>
+      <td data-th="Acceleration">[0, 5, 0]</td>
+      <td data-th="Acceleration with gravity">[0, 14,81, 0]</td>
+    </tr>
+    <tr>
+      <td data-th="State">Con movimiento solo hacia la derecha</td>
+      <td data-th="Rotation">[0, 0, 0]</td>
+      <td data-th="Acceleration">[3, 0, 0]</td>
+      <td data-th="Acceleration with gravity">[3, 9,81, 0]</td>
+    </tr>
+    <tr>
+      <td data-th="State">Con movimiento hacia arriba y hacia la derecha</td>
+      <td data-th="Rotation">[0, 0, 0]</td>
+      <td data-th="Acceleration">[5, 5, 0]</td>
+      <td data-th="Acceleration with gravity">[5, 14,81, 0]</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Ejemplo: cómo calcular la aceleración máxima de un objeto
+
+Una forma de utilizar los eventos de movimiento del dispositivo consiste en calcular la aceleración máxima
+de un objeto.  Por ejemplo, cuál es la aceleración máxima de una persona 
+que está saltando.
+
+<pre class="prettyprint">
+{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
+</pre>
+
+Luego de presionar el botón Go!, se le indica al usuario que salte.  Durante ese tiempo,
+en la página se almacenan los valores de aceleración máximos (y mínimos) y, luego del
+salto, se le informa al usuario su aceleración máxima.
+
