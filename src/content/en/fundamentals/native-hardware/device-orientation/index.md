@@ -21,7 +21,7 @@ Caution: Not all browsers use the same coordinate system, and they may report di
 
 ##TL;DR
 
-* Detect which side of the device is up and how the devices is rotating.
+* Detect which side of the device is up and how the device is rotating.
 * Learn when and how to respond to motion and orientation events.
 
 
@@ -32,7 +32,7 @@ it is important to understand the values provided.
 
 ### Earth coordinate frame
 
-The Earth coordinate frame, described by the values `X`, `Y`, and `Z`, are aligned
+The Earth coordinate frame, described by the values `X`, `Y`, and `Z`, is aligned
 based on gravity and standard magnetic orientation.
 
 <table class="responsive">
@@ -67,7 +67,7 @@ based on gravity and standard magnetic orientation.
 <!-- Special thanks to Sheppy (https://developer.mozilla.org/en-US/profiles/Sheppy)
   for his images which are in the public domain. -->
 
-The device coordinate frame described by the values `x`, `y`, and `z` are aligned
+The device coordinate frame, described by the values `x`, `y`, and `z`, is aligned
 based on the center of the device.
 
 <table class="responsive">
@@ -105,7 +105,7 @@ frame and the Earth coordinate frame.
   <figure id="fig1">
     <img src="images/alpha.png" alt="illustration of device coordinate frame">
     <figcaption>
-      Illustration of device coordinate frame
+      Illustration of alpha in the device coordinate frame
     </figcaption>
   </figure>
 </div>
@@ -122,7 +122,7 @@ the `alpha` value increases.
   <figure id="fig1">
     <img src="images/beta.png" alt="illustration of device coordinate frame">
     <figcaption>
-      Illustration of device coordinate frame
+      Illustration of beta in the device coordinate frame
     </figcaption>
   </figure>
 </div>
@@ -139,7 +139,7 @@ increases as the top of the device is tipped toward the surface of the earth.
   <figure id="fig1">
     <img src="images/gamma.png" alt="illustration of device coordinate frame">
     <figcaption>
-      Illustration of device coordinate frame
+      Illustration of gamma in the device coordinate frame
     </figcaption>
   </figure>
 </div>
@@ -184,11 +184,11 @@ object listening for `deviceorientation` events.
 The device orientation event fires when the device moves or changes 
 orientation. It returns data about the difference between the device in 
 its current position in relation to the 
-[Earth coordinate frame](#earth-coordinate-frame)
+[Earth coordinate frame](#earth-coordinate-frame).
 
 The event typically returns three properties: [`alpha`](#alpha), 
 [`beta`](#beta), and [`gamma`](#gamma). On Mobile Safari, an additional parameter
-[`webkitCompassHeading`](https://developer.apple.com/library/safari/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html)
+[`webkitCompassHeading`](https://developer.apple.com/library/ios/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/)
 is returned with the compass heading.
 
 ## Device motion 
@@ -266,7 +266,7 @@ screen facing up.
       <td data-th="Acceleration with gravity">[3, 0, 9.81]</td>
     </tr>
     <tr>
-      <td data-th="State">Moving up &amp; to the right</td>
+      <td data-th="State">Moving up and to the right</td>
       <td data-th="Rotation">[0, 0, 0]</td>
       <td data-th="Acceleration">[5, 0, 5]</td>
       <td data-th="Acceleration with gravity">[5, 0, 14.81]</td>
@@ -312,7 +312,7 @@ ground, and was directly visible to the viewer:
       <td data-th="Acceleration with gravity">[3, 9.81, 0]</td>
     </tr>
     <tr>
-      <td data-th="State">Moving up &amp; to the right</td>
+      <td data-th="State">Moving up and to the right</td>
       <td data-th="Rotation">[0, 0, 0]</td>
       <td data-th="Acceleration">[5, 5, 0]</td>
       <td data-th="Acceleration with gravity">[5, 14.81, 0]</td>
