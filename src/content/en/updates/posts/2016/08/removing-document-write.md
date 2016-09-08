@@ -7,7 +7,8 @@ updated_on: 2016-09-06
 authors:
   - paulkinlan
 tags:
-  - intervention
+  - interventions
+  - chrome53
 featured_image: /web/updates/images/misc/deps-rems.png
 ---
 
