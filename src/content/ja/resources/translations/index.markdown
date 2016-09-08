@@ -37,15 +37,15 @@ notes:
 {% highlight yaml %}
 paulkinlan:
   name:
-    given: Paul
-    family: Kinlan
+ . given: Paul
+ . family: Kinlan
   org:
-    name: Google
-    unit: Developer Relations
+ . name: Google
+ . unit: Developer Relations
   country: UK
   role:
-    - author
-    - engineer
+ . - author
+ . - engineer
     - translator
   homepage: http://paul.kinlan.me
   google: +PaulKinlan

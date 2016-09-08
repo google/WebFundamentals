@@ -1093,3 +1093,17 @@ maciejzasada:
     - author
   google: 104812516714503133849
   email: maciej@unit9.com
+
+sieke:
+  name:
+    given: Alex
+    family: Sieke
+  org:
+    name: Google
+    unit: Android
+  country: US
+  role:
+    - author
+  email: sieke@google.com
+  description:
+    en: Payments Product Manager
