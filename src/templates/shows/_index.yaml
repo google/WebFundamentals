@@ -1,0 +1,50 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
+landing_page:
+  custom_css_path: /web/styles/wf-root.css
+
+  rows:
+
+  - classname: devsite-landing-row-50
+    items:
+    - custom_html: >
+        <div class="video-wrapper">
+          <iframe class="devsite-embedded-youtube-video" data-video-id="{{videos.0.snippet.resourceId.videoId}}"
+                  data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+        <h2>{{videos.0.snippet.title}}</h2>
+        <p>{{{videos.0.shortDesc}}}</p>
+        <b>Want more?</b><br>
+        Check out the videos below, and subscribe to our YouTube channel.<br>
+        <script async defer src="https://apis.google.com/js/platform.js"></script>
+        <div class="g-ytsubscribe" data-channel="ChromeDevelopers" data-layout="full" data-count="default"></div>
+      
+  - items:
+    - heading: "{{videos.1.snippet.title}}"
+      youtube_id: {{videos.1.snippet.resourceId.videoId}}
+      description: >
+        {{{videos.1.shortDesc}}}
+    - heading: "{{videos.2.snippet.title}}"
+      youtube_id: {{videos.2.snippet.resourceId.videoId}}
+      description: >
+        {{{videos.2.shortDesc}}}
+    - heading: "{{videos.3.snippet.title}}"
+      youtube_id: {{videos.3.snippet.resourceId.videoId}}
+      description: >
+        {{{videos.3.shortDesc}}}
+
+  - items:
+    - heading: "{{videos.4.snippet.title}}"
+      youtube_id: {{videos.4.snippet.resourceId.videoId}}
+      description: >
+        {{{videos.4.shortDesc}}}
+    - heading: "{{videos.5.snippet.title}}"
+      youtube_id: {{videos.5.snippet.resourceId.videoId}}
+      description: >
+        {{{videos.5.shortDesc}}}
+    - heading: "{{videos.6.snippet.title}}"
+      youtube_id: {{videos.6.snippet.resourceId.videoId}}
+      description: >
+        {{{videos.6.shortDesc}}}

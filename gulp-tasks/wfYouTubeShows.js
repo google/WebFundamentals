@@ -46,8 +46,21 @@ function buildFeeds() {
           rssPubDate: moment(video.snippet.publishedAt).format('MM MMM YYYY HH:mm:ss [GMT]')
         };
         articles.push(result);
+        var shortDesc = video.snippet.description.replace(/\n/g, '<br>');
+        // shortDesc = shortDesc.
+        if (shortDesc.length > 256) {
+          shortDesc = shortDesc.substring(0, 254) + '...';
+        }
+        video.shortDesc = shortDesc;
       });
       var context = {
+        videos: response.items
+      };
+      var template = path.join(GLOBAL.WF.src.templates, 'shows', '_index.yaml');
+      var outputFile = path.join(GLOBAL.WF.src.content, 'shows', '_index.yaml');
+      wfTemplateHelper.renderTemplate(template, context, outputFile);
+
+      context = {
         title: 'Web Shows - Google Developers',
         description: 'YouTube videos from the Google Chrome Developers team',
         feedRoot: 'https://developers.google.com/web/shows/',
@@ -57,8 +70,8 @@ function buildFeeds() {
         atomPubDate: moment().format('YYYY-MM-DDTHH:mm:ss[Z]'),
         articles: articles
       };
-      var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
-      var outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'atom.xml');
+      template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
+      outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'atom.xml');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 
       template = path.join(GLOBAL.WF.src.templates, 'rss.xml');
