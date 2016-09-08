@@ -46,4 +46,4 @@ It's important that the image used is the same dimensions as the plugin content 
 the image could end up distorted on the user's screen
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

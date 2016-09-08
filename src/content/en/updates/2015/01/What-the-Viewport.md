@@ -73,4 +73,4 @@ should do since he's much better at this stuff than me ;)
 </p>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

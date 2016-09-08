@@ -67,4 +67,4 @@ courtesy of [Majid Valipour](https://github.com/majido). It takes an
 <code>performance.timing.navigationStart</code>.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

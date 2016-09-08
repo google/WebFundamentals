@@ -54,4 +54,4 @@ In Chrome 20, it is almost 27 times faster to use the direct `ArrayBuffer` manip
 **Update, August 2014**: The Encoding API specification has matured, and a number of browsers now support it natively. The information in this article still applies for browsers that don’t yet support the Encoding API, but the recommended approach is to use the official API wherever possible. See [Easier ArrayBuffer <-> String conversion with the Encoding API](http://updates.html5rocks.com/2014/08/Easier-ArrayBuffer---String-conversion-with-the-Encoding-API) for more details.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

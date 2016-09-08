@@ -21,4 +21,4 @@ Use the <a href="http://kaazingcorp.cachefly.net/com/file/kaazing-training-happy
 </p>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

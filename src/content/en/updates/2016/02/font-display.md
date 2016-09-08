@@ -234,4 +234,4 @@ Check out the [sample](https://jsbin.com/nigahi/latest/edit?html,output) to give
 useful tool in your toolbelt!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

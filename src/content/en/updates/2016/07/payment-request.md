@@ -196,4 +196,4 @@ We  are investigating how to best do this. For now, you can manually ask for co
 Currently not allowed. But planned to be allowed in the future.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

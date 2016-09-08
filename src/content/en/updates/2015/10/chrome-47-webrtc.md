@@ -83,4 +83,4 @@ As with all releases, we encourage developers to try Chrome on the Canary, Dev, 
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

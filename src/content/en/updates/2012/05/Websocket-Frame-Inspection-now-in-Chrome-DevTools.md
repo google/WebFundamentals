@@ -15,4 +15,4 @@ While before we could see sockets being established, we haven't had inspection a
 Open up your [Chrome Canary](https://tools.google.com/dlpage/chromesxs) or a [fresh Chromium build](http://download-chromium.appspot.com) for the latest changes here.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

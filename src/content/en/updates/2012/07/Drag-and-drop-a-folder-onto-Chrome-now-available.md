@@ -60,4 +60,4 @@ After obtaining access to the `Entry` object, you can use standard file handling
 For further information regarding the FileSystem API, read [Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/), regarding new drag and drop capability, read [this document](http://wiki.whatwg.org/wiki/DragAndDropEntries). Of course, these features are open standards or are waiting to become one soon.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

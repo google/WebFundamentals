@@ -20,4 +20,4 @@ When the debugger is paused, you can now see the exact portion of code which exe
 <em>Currently in Chrome Canary</em>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

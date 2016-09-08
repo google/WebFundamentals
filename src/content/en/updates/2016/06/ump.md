@@ -154,4 +154,4 @@ There are a couple of bugs affecting &lt;video&gt;, service workers and the Cach
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

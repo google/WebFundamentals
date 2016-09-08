@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2016-08-15T17:15:23Z",
+  "updated": "2016-09-02T20:34:34Z",
   "id": "your-first-pwapp",
   "duration": 0,
   "title": "Your First Progressive Web App",
@@ -24,5 +24,6 @@
     "web"
   ],
   "feedback": "https://github.com/googlecodelabs/your-first-pwapp/issues",
-  "url": "your-first-pwapp"
+  "url": "your-first-pwapp",
+  "wfProcessed": true
 }

@@ -115,4 +115,4 @@ Removal is expected in Chrome 53.
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

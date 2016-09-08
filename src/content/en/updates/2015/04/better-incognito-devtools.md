@@ -23,4 +23,4 @@ More information: <a href="https://code.google.com/p/chromium/issues/detail?id=3
 <em>Now in Chrome Canary</em>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

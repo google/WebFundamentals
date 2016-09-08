@@ -167,4 +167,4 @@ I've included a recorded version of a presentation I recently delivered to Londo
 </ul>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

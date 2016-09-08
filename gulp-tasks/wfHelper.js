@@ -1,10 +1,16 @@
 'use strict';
 
+/*
+    wfHelper.js
+    TODO
+ */
+
 var fs = require('fs');
 var path = require('path');
-var gutil = require('gulp-util');
+var glob = require('globule');
 var moment = require('moment');
 
+var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md'];
 var RE_UPDATED = /{# wf_updated_on: (.*?) #}/;
 var RE_PUBLISHED = /{# wf_published_on: (.*?) #}/;
 var RE_DESCRIPTION = /^description: (.*)/m;
@@ -88,31 +94,19 @@ function readMetadataForFile(file) {
   return result;
 }
 
-function _getFileList(startPath, recursive, filesToIgnore) {
-  if (!filesToIgnore) {
-    filesToIgnore = [];
-  }
-  var result = [];
-  var files = fs.readdirSync(startPath);
+function getFileList(base, patterns) {
+  var results = [];
+  var opts = {
+    srcBase: base,
+    prefixBase: true
+  };
+  var files = glob.find(patterns, STD_EXCLUDES, opts);
   files.forEach(function(file) {
-    if (file.endsWith('.md') && filesToIgnore.indexOf(file) === -1) {
-      result.push(readMetadataForFile(path.join(startPath, file)));
-    } else if (recursive) {
-      var fileStat = fs.statSync(path.join(startPath, file));
-      if (fileStat.isDirectory()) {
-        result = result.concat(_getFileList(path.join(startPath, file), recursive, filesToIgnore));
-      }
-    }
+    results.push(readMetadataForFile(file));
   });
-  return result;
-}
-
-function getFileList(startPath, recursive, filesToIgnore) {
-  gutil.log(' ', 'Parsing files in', gutil.colors.cyan(startPath));
-  var result = _getFileList(startPath, recursive, filesToIgnore);
-  var filename = path.join(startPath, '_files.json');
-  fs.writeFileSync(filename, JSON.stringify(result, null, 2));
-  return result;
+  var filename = path.join(base, '_files.json');
+  fs.writeFileSync(filename, JSON.stringify(results, null, 2));
+  return results;
 }
 
 function splitByYear(files) {

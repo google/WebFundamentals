@@ -36,4 +36,4 @@ And the specification's repository to learn how to implement passive event liste
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

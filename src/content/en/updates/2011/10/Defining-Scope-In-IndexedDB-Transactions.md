@@ -54,4 +54,4 @@ Other sources:
 So until next time... keep pushing the web to near territories.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

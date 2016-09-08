@@ -83,4 +83,4 @@ This API isn't shipping yet, but hopefully it will do soon. In the meantime here
 * **[File issues for missing features or potential headaches](https://github.com/w3c/frame-timing/issues).** You know what you would want to measure, so please do provide feedback if you think there's something you can't do with the API that you'd like to.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

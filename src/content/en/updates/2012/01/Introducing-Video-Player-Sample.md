@@ -51,4 +51,4 @@ You can grab the code from [Google Code](http://code.google.com/p/video-player-s
 Enjoy!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

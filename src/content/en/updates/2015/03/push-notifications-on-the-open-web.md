@@ -924,4 +924,4 @@ message which has the same 'collapse_key', with the new message.
 [More details can be found here](https://developer.android.com/google/gcm/server.html#lifetime).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

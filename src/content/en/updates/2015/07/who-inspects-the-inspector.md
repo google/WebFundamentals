@@ -25,4 +25,4 @@ You might find this useful if working on a custom DevTools theme, for example.
 		
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -4,7 +4,8 @@ description: In this codelab, you'll learn how to debug a service worker using t
 
 {# wf_updated_on: 2016-08-15T18:03:59Z #}
 
-# Debugging Service Workers {: .page-title }
+
+# Debugging Service Workers {: page-title }
 
 
 
@@ -492,7 +493,6 @@ Now that you have some debugging tools in your toolbox, you should be well equip
 
 
 
-
 ## Found an issue, or have feedback? {: .hide-from-toc }
-
-Help us make our code labs better by submitting an [issue](https://github.com/googlecodelabs/debugging-service-workers/issues) today. And thanks!
+Help us make our code labs better by submitting an 
+[issue](https://github.com/googlecodelabs/debugging-service-workers/issues) today. And thanks!

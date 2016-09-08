@@ -86,4 +86,4 @@ We're on the cusp of a very exciting time in web development. Unlike other new f
 If you want to learn more about the fundamentals of the APIs, check out [ebidel.github.com/webcomponents](ebidel.github.com/webcomponents).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

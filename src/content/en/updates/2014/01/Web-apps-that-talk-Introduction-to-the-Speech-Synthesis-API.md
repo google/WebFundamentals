@@ -95,4 +95,4 @@ Since browsers may support each portion of the Web Speech API separately (e.g. t
     
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

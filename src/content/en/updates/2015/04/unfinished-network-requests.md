@@ -17,4 +17,4 @@ description: You can use the <code>Is:running</code> Advanced Network Filter to 
 You can use the <code>Is:running</code> Advanced Network Filter to see unfinished network requests (e.g. running requests). Some other filters you can try are: <code>status-code</code>, <code>method</code>, <code>domain</code> and more!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

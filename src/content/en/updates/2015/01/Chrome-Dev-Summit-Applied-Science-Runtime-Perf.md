@@ -51,4 +51,4 @@ The expensive work to do the animation is done inside that first 100ms and, on a
 If you’re interested in looking at the site in more detail you’ll be pleased to hear that [the code has been released on GitHub](https://github.com/GoogleChrome/devsummit), so go and take a look!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

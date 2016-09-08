@@ -99,4 +99,4 @@ in the web app manifest instead.
     the foreseeable future.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

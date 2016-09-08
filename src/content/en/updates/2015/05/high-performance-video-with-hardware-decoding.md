@@ -21,4 +21,4 @@ For best platform support and video performance, we strongly recommend moving fr
 More information about plugin deprecation timelines, and how to move to native APIs, is available from the [NPAPI deprecation developer guide](https://www.chromium.org/developers/npapi-deprecation).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

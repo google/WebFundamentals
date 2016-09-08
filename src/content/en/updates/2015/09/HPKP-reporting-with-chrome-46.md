@@ -130,4 +130,4 @@ If you don't have another domain handy, you could instead try a service such as
 report-uri.io, which handles violation reports for you.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

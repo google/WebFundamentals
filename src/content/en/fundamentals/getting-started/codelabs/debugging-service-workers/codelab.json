@@ -22,5 +22,6 @@
     "web"
   ],
   "feedback": "https://github.com/googlecodelabs/debugging-service-workers/issues",
-  "url": "debugging-service-workers"
+  "url": "debugging-service-workers",
+  "wfProcessed": true
 }

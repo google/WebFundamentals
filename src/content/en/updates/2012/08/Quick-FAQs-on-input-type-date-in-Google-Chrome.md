@@ -59,4 +59,4 @@ If you'd like to apply jQuery Datepicker only on platforms without `input[type=d
     
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

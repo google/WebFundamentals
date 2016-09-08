@@ -175,4 +175,4 @@ in Edge, along with overall
 can be tracked at Microsoft's [Platform status page](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -34,4 +34,4 @@ You could set a conditional breakpoint based on the existence of <code>err</code
 		
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

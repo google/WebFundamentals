@@ -62,4 +62,4 @@ From here, you can find out everything about the **certificate** used and the **
 Give the new Security panel a try and and let us know what you think on [Twitter](https://twitter.com/ChromeDevTools) or via [bug/feature ticket](https://crbug.com/new)!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

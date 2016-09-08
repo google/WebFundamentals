@@ -26,4 +26,4 @@ Notes:
 </ul>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

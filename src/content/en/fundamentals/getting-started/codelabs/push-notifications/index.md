@@ -4,13 +4,13 @@ description: In this codelab, you will learn how to enable push messaging and no
 
 {# wf_updated_on: 2016-08-08T21:16:46Z #}
 
-# Enable Push Notifications for your Web App {: .page-title }
+
+# Enable Push Notifications for your Web App {: page-title }
 
 
 
 ## Overview
 
-*Duration is 1 min*
 
 
 ![68c4c0bef9c548cd.png](img/68c4c0bef9c548cd.png)
@@ -43,7 +43,6 @@ You'll also learn the basics of Service Workers.
 
 ## Get the sample code
 
-*Duration is 2 min*
 
 
 You can either download all the sample code to your computer: 
@@ -62,7 +61,6 @@ This will create a __push-notifications__ directory containing:
 
 ## Get started
 
-*Duration is 2 min*
 
 
 ### Install and verify web server
@@ -102,7 +100,6 @@ Now visit your app site in your web browser by clicking on the highlighted Web S
 
 ## Get started with Service Worker
 
-*Duration is 3 min*
 
 
 ### Add a Service Worker
@@ -175,7 +172,6 @@ Click the __Inspect__ button on the chrome://serviceworker-internals page. You s
 
 ## Make a project on the Google Developer Console
 
-*Duration is 3 min*
 
 
 Push notifications from a web app need a backend service to handle messaging. Chrome currently uses  [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) (GCM)  for this, though the eventual goal is for Chrome and GCM to support the  [Web Push Protocol](https://datatracker.ietf.org/doc/draft-thomson-webpush-protocol/). Other browsers are free to use other services.
@@ -230,7 +226,6 @@ You've now created a Google Cloud Messaging project.
 
 ## Add a manifest
 
-*Duration is 2 min*
 
 
 
@@ -256,7 +251,6 @@ Add the following to the head element in the __index.html __file you created pre
 
 ## Subscribe to Push Notifications
 
-*Duration is 4 min*
 
 
 1. Replace the TODO comment in __main.js__ so that it looks like this:
@@ -305,7 +299,6 @@ You'll use that value in a later step to tell Google Cloud Messaging where to se
 
 ## Send a request from the command line for GCM to push a message
 
-*Duration is 4 min*
 
 
 As you saw previously, Chrome uses Google Cloud Messaging (GCM) for push messaging.
@@ -353,7 +346,6 @@ Let's see that in action...
 
 ## Send a request using XHR (Ajax)
 
-*Duration is 4 min*
 
 
 Another way to make a request to GCM to send a notification is via XHR.
@@ -361,7 +353,6 @@ Another way to make a request to GCM to send a notification is via XHR.
 
 ## Show a notification
 
-*Duration is 3 min*
 
 
 In this step you will add code to your Service Worker's push handler to show a notification.
@@ -412,7 +403,6 @@ You should see a notification like this:
 
 ## Handle notification clicks
 
-*Duration is 2 min*
 
 
 In this step you will add code to enable an action (such as navigating to a web page) when a user clicks a notification.
@@ -458,7 +448,6 @@ This code checks all window clients for this Service Worker; if the requested UR
 
 ## Unsubscribe from notifications
 
-*Duration is 2 min*
 
 
 ENOUGH WITH THE MESSAGES ALREADY! How can you enable your users to unsubscribe — and resubscribe?
@@ -625,7 +614,6 @@ __What about Firefox?__
 
 
 
-
 ## Found an issue, or have feedback? {: .hide-from-toc }
-
-Help us make our code labs better by submitting an [issue](https://github.com/GoogleChrome/push-notifications/issues) today. And thanks!
+Help us make our code labs better by submitting an 
+[issue](https://github.com/GoogleChrome/push-notifications/issues) today. And thanks!

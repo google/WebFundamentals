@@ -139,4 +139,4 @@ Until the next time we run `yo digest`, happy scaffolding and don't be afraid - 
 *With thanks for the rest of the Yeoman team for their reviews*
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

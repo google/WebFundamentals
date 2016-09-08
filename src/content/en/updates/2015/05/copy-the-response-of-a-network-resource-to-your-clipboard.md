@@ -17,4 +17,4 @@ description: In addition to copying the <strong>request/response</strong> header
 In addition to copying the <strong>request/response</strong> headers of a network resource, you can also copy the response itself.﻿
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

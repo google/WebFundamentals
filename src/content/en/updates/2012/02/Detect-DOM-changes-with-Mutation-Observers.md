@@ -48,4 +48,4 @@ And here’s how it looks with Mutation Observers:
     
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

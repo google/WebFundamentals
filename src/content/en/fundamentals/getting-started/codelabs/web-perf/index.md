@@ -4,7 +4,8 @@ description: This codelab will help you learn to identify and fix web app perfor
 
 {# wf_updated_on: 2016-06-16T18:31:26Z #}
 
-# Find and Fix Web App Performance Issues {: .page-title }
+
+# Find and Fix Web App Performance Issues {: page-title }
 
 
 
@@ -526,7 +527,6 @@ Thanks for working through this codelab. We're always striving to improve; if yo
 
 
 
-
 ## Found an issue, or have feedback? {: .hide-from-toc }
-
-Help us make our code labs better by submitting an [issue](https://github.com/google/SAMPLE-REPO/issues ??? TBD) today. And thanks!
+Help us make our code labs better by submitting an 
+[issue](https://github.com/google/SAMPLE-REPO/issues ??? TBD) today. And thanks!

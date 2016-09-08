@@ -61,4 +61,4 @@ If you find an example where scroll anchoring is affecting your page, please
 send feedback via this form: [g.co/reportbadreflow](http://g.co/reportbadreflow)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

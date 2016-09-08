@@ -201,4 +201,4 @@ Kit](/web/tools/starter-kit/) and the new features in
 [Chrome DevTools](/web/tools/chrome-devtools).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

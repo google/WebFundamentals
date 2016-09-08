@@ -41,4 +41,4 @@ You may also be wondering what happens if the user visits a browser that doesn't
 We have published [a sample client and backend](https://github.com/GoogleChrome/two-token-sw). We hope you will [try it for yourself](https://ws-codelab.appspot.com/) and [answer a survey about session management](http://goo.gl/forms/djaMEOgBUb4WEhCz2).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

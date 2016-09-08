@@ -342,4 +342,4 @@ wrapper library like
 [polymer/observe-js](https://github.com/polymer/observe-js).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -1,9 +1,8 @@
 'use strict';
 
 /*
-    wfContributors.js
-    Reads the _contributors.yaml file and uses Handlebars to generate the
-    primary contributors file and the individual include files.
+    wfYouTubeShows.js
+    TODO
  */
 
 var fs = require('fs');

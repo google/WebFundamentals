@@ -21,4 +21,4 @@ description: DevTools port forwarding enables even localhost URLs to work on mob
 </ol>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

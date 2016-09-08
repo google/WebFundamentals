@@ -135,4 +135,4 @@ this, and Microsoft have shown interest in the API.
   [[crbug.com/476509](http://crbug.com/476509)]
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

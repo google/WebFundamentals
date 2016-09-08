@@ -79,4 +79,4 @@ system. We would love to get your feedback on
 [use cases](http://discourse.wicg.io/t/inputdevice-api-for-identifying-mouse-events-derived-from-touch/972).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

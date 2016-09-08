@@ -19,4 +19,4 @@ If you view a property value containing an easing (e.g. the <em>'ease-in'</em> i
 <em>Now in Chrome Canary</em>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

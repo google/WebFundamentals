@@ -136,4 +136,4 @@ In turn, if your application is [using a service worker](https://developers.goog
    does not mean they're not interested in saving data&mdash;e.g. roaming.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

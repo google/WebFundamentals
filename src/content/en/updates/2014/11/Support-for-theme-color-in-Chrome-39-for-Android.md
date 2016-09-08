@@ -36,4 +36,4 @@ to check out the
 for more ways to make your site stand out.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

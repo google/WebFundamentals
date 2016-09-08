@@ -24,4 +24,4 @@ You can trigger the various breakpoints with a click on a bar. If you right clic
 		
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

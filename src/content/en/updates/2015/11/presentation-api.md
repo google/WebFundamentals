@@ -172,4 +172,4 @@ In the meantime, please let us know if you find bugs or have feature requests: [
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

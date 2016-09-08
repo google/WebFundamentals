@@ -107,4 +107,4 @@ Sequential focus navigation starting point is currently only supported in Chrome
 Sequential focus navigation starting point is a great addition to the browser’s set of accessibility primitives. It’s easy to grok and actually lets us remove code from our application while improving the experience for our users. Double win! Take a look at [the demo](https://googlechrome.github.io/samples/focus-navigation-start-point/index.html) to explore this feature in more depth.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -62,4 +62,4 @@ Also part of that project is [`sw-appcache-behavior`](https://www.npmjs.com/pack
 If you have other library ideas, we'd love to hear from you. So please file a request in the [issue tracker](https://github.com/GoogleChrome/sw-helpers/issues/new)!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

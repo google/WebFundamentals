@@ -106,4 +106,4 @@ changing, but we’re excited to take this strong first step in making
 web applications more reliable!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

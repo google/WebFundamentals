@@ -49,4 +49,4 @@ In summary, `performance.now()` is...
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

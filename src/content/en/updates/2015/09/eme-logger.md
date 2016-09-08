@@ -31,4 +31,4 @@ As an alternative to 'roll your own' EME, we recommend Shaka Player: an easy-to-
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

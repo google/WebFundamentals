@@ -102,4 +102,4 @@ These show MSE in action, though without `SourceBuffer.mode` manipulation:
 * [MDN: SourceBuffer.mode](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

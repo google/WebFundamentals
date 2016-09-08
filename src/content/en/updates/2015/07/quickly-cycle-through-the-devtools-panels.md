@@ -22,4 +22,4 @@ You can use <kbd class="kbd">Cmd + ]</kbd> (or <kbd class="kbd">Cmd + [</kbd>) t
 		
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

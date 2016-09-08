@@ -96,4 +96,4 @@ The web is [increasingly media centric](http://www.cisco.com/c/en/us/solutions/c
 * [Convert animated GIFs to videos with ffmpeg](http://rigor.com/blog/2015/12/optimizing-animated-gifs-with-html5-video)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

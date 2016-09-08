@@ -55,4 +55,4 @@ If you're interested in learning more about the API, see the [specification](htt
 *Support:* Currently, the MediaSource API is only available in Chrome Dev Channel 17+ with the `--enable-media-source` flag set or enabled via `about:flags`.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

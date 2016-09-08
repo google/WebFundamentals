@@ -45,4 +45,4 @@ Typed array I/O makes intense image manipulation, sound processing, and heavy we
 In my opinion this is one of those nitpicks workers should have included from the start. It just makes sense.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

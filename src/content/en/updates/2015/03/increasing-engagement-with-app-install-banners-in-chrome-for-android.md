@@ -210,4 +210,4 @@ Yes, Glad you asked:
 Yes. We have made a [minimal app install banner example](https://github.com/GoogleChrome/samples/tree/gh-pages/app-install-banner/) that you can copy, paste and change.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

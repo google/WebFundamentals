@@ -110,4 +110,4 @@ create chains of nodes, as in this
 That's all for now, and keep rocking!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

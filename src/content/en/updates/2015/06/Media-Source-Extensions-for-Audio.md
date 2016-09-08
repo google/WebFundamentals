@@ -364,4 +364,4 @@ Garbage collection only impacts data added to SourceBuffers; there are no limits
 Powered by [gnuplot](http://www.gnuplot.info/) and [wavesurfer.fm](http://www.wavesurfer.fm/).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

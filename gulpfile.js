@@ -19,11 +19,9 @@ GLOBAL.WF = {
   maxArticlesInFeed: 3
 };
 
-console.log('');
-console.log('---------------------------------');
-console.log('Web' + chalk.bold.white('Fundamentals'), 'Build Script');
-console.log('---------------------------------');
-console.log('');
+gutil.log('---------------------------------');
+gutil.log(gutil.colors.dim('Web') + gutil.colors.bold('Fundamentals'), 'Build Script');
+gutil.log('---------------------------------');
 
 
 gulp.task('clean', function() {
@@ -47,8 +45,10 @@ gulp.task('clean', function() {
   gutil.log(' ', 'Deleted', gutil.colors.magenta(deletedFiles.length + ' files'));
 });
 
-
-
 gulp.task('default', function() {
-  // place code for your default task here
+  gutil.log('Options:');
+  gutil.log(' ', gutil.colors.cyan('clean'), 'Removes all auto-generated files from src/content/...');
+  gutil.log(' ', gutil.colors.cyan('build'), 'Builds all auto-generated files...');
+  gutil.log(' ', gutil.colors.cyan('codelabs'), 'Updates the Code Labs to the latest from Docs');
+  gutil.log('');
 });

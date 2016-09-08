@@ -91,4 +91,4 @@ book_path: /web/updates/_book.yaml
 <p>...and don't forget to file any bugs you encounter at <a href="http://new.crbug.com" title="Post Chrome bug">new.crbug.com</a>!</p>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -19,4 +19,4 @@ Resources which show up in the network panel have a context menu which allows yo
 In the example, I'm using: <a href="http://numbersapi.com/#42">http://numbersapi.com/#42</a>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

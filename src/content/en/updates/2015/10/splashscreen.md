@@ -133,4 +133,4 @@ are meant to be part of the user's mobile device.
  
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

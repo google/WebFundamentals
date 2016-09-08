@@ -172,4 +172,4 @@ stream. There is also a `MediaDevices` extension proposal for
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

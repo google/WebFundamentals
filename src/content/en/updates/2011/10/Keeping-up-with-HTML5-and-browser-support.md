@@ -31,4 +31,4 @@ Actually keeping up with those features can be a challenge, but only if you don'
 Follow the above, stay up to date, and build for modern browsers!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

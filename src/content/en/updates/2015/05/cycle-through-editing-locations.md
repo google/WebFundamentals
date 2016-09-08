@@ -17,4 +17,4 @@ description: Your cursor position history is preserved in the Sources Panel, all
 Your cursor position history is preserved in the Sources Panel allowing you to cycle through previous editing locations with <kbd class="kbd">Alt-</kbd> (backwards) or <kbd class="kbd">Alt+</kbd> (forwards).﻿
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

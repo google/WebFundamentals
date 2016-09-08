@@ -279,4 +279,4 @@ Paul Kinlan is currently [planning](https://github.com/google/WebFundamentals/is
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

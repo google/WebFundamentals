@@ -212,4 +212,4 @@ One of the most significant features they bring are tagged templates - a critica
 * [http://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx](http://odetocode.com/blogs/scott/archive/2014/09/30/features-of-es6-part-8-tagged-templates.aspx)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

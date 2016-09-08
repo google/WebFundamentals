@@ -165,4 +165,4 @@ native implementation would give you.
 You can start using `IntersectionObservers` right now in Chrome Canary! Tell us what you came up with.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

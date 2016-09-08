@@ -93,4 +93,4 @@ in action, just check out the recently launched
 <code>sw-precache</code>, you can browse it at your leisure, online or off.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

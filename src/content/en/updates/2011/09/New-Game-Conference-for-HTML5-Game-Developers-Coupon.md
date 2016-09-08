@@ -47,4 +47,4 @@ New Game is proudly sponsored by Google and presented by Bocoup. Follow <a href=
 </p>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

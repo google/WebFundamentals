@@ -159,4 +159,4 @@ We're aiming to ship background sync to a stable version of Chrome in the first 
 Bit by bit we’re bringing successful patterns from Android/iOS onto the web, while still retaining what makes the web great!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

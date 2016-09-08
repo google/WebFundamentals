@@ -431,4 +431,4 @@ Windows 8.1+ and iOS will be supported as much as feasible by the platforms.
 </div>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

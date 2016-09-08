@@ -21,4 +21,4 @@ When an element has some sort of state applied, you'll get a little visual indic
 We can trigger: active, focus, hover &amp; visited pseudo classes.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

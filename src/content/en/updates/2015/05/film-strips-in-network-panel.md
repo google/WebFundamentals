@@ -19,4 +19,4 @@ The Network Panel is getting some nice upgrades. There's a film strip at the top
 <em>Currently in Chrome Canary</em>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

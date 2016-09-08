@@ -58,4 +58,4 @@ Allo’ Allo’. Welcome to the first issue of the [Yeoman](http://yeoman.io) mo
 If there are Yeoman resources you would like to suggest for the next issue, please feel free to suggest them to [@yeoman](http://twitter.com/yeoman) on Twitter or [+Yeoman](https://plus.google.com/101063139999404044459) on Plus and we’ll be sure to check em’ out.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

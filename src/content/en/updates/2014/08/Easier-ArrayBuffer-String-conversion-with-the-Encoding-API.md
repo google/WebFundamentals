@@ -64,4 +64,4 @@ The sample above uses feature detection to determine whether the required `TextD
 **Update, September 2014**: Modified the sample to illustrate checking whether the Encoding API is available in the current browser.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

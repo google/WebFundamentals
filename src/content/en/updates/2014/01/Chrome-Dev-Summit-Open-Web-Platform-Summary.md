@@ -143,4 +143,4 @@ So what do we have for web developers? An ecosystem of media APIs for the open W
 **Slides:** [Media APIs for the multi-device Web](http://simpl.info/media/#1)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

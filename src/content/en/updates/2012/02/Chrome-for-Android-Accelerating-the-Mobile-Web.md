@@ -86,4 +86,4 @@ web development question, please post it on Stack Overflow, tagged with the
 [File System API]: http://www.html5rocks.com/en/tutorials/file/filesystem/
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}
