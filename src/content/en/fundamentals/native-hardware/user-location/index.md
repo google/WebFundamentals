@@ -26,8 +26,8 @@ Note: As of Chrome 50, the [Geolocation API will only work on secure contexts (H
 ## TL;DR
 
 * Use geolocation when it benefits the user.
-* Ask for permission as a clear respone to a user gesture. 
-* Use feature detection on the off chance a user's browser doesn't support geolocation.
+* Ask for permission as a clear response to a user gesture. 
+* Use feature detection in case a user's browser doesn't support geolocation.
 * Don't just learn how to implement geolcation; learn the best way to use geolocation.
 * Test geolcation with your site.
 
