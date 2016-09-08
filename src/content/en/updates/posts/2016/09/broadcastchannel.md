@@ -1,6 +1,6 @@
 ---
 layout: updates/post
-title: "BroadcastChannel API: a message bus for the web"
+title: "BroadcastChannel API: A Message Bus for the Web"
 description: "BroadcastChannel API can be used for simple pub/sub between windows, tabs, iframes, or workers."
 published_on: 2016-09-07
 updated_on: 2016-09-07
@@ -17,7 +17,7 @@ tags:
 The [BroadcastChannel API][spec] allows same-origin scripts to send messages to other browsing contexts. It can be thought of as a simple message bus that allows pub/sub semantics between windows/tabs, iframes, web workers, and service workers.
 {: .intro }
 
-## API Basics
+## API basics
 
 The Broadcast Channel API is a simple API that makes communicating between browsing contexts easier. That is, communicating between windows/tabs, iframes, web workers, and service workers. Messages which are posted to a given channel are delivered to all listeners of that channel.
 
@@ -174,7 +174,7 @@ For fancier use cases like managing locks, shared state, synchronizing resources
 
 The main difference between the [Channel Messaging API](https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API) and `BroadcastChannel` is that the latter is a means to dispatch messages to multiple listeners (one-to-many). `MessageChannel` is meant for one-to-one communication directly between scripts. It's also more involved, requiring you to setup channels with a port on each end.
 
-## Feature detection & browser support
+## Feature detection and browser support
 
 Currently, Chrome 54, Firefox 38, and Opera 41 support the Broadcast Channel API.
 
