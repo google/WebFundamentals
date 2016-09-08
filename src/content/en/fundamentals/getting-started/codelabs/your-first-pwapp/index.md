@@ -2,9 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
-{# wf_updated_on: 2016-08-15T17:15:23Z #}
+{# wf_updated_on: 2016-09-02T20:34:34Z #}
 
-# Your First Progressive Web App {: .page-title }
+
+# Your First Progressive Web App {: page-title }
 
 
 
@@ -215,13 +216,13 @@ Your work directory also already includes the app code (`scripts/app.js`), in it
 
 Now that you've got the core HTML, styles and JavaScript, it's time to test the app.
 
-To see how the fake weather data is rendered, uncomment the following line at the bottom of your `app.js` file:
-
-    // app.updateForecastCard(initialWeatherForecast);
-
-Next, uncomment the following line at the bottom of your `index.html` file:
+To see how the fake weather data is rendered, uncomment the following line at the bottom of your `index.html` file:
 
     <!--<script src="scripts/app.js" async></script>-->
+
+Next, uncomment the following line at the bottom of your `app.js` file:
+
+    // app.updateForecastCard(initialWeatherForecast);
 
 Reload your app. The result should be a nicely formatted (though fake, as you can tell by the date) forecast card with the spinner disabled, like this:
 
@@ -254,7 +255,7 @@ User preferences, like the list of cities a user has subscribed to, should be st
 First, let's add the code required to save user preferences. Find the following TODO comment in your code.
 
 ```
-  // TODO add saveSelectedCites function here
+  // TODO add saveSelectedCities function here
 ```
 
 And add the following code below the comment.
@@ -350,7 +351,7 @@ The new additions are the initialization of `app.selectedCities` if it doesn't e
 
 Progressive Web Apps have to be fast, and installable, which means that they work online, offline, and on intermittent, slow connections. To achieve this, we need to cache our app shell using service worker, so that it's always available quickly and reliably.
 
-If you're unfamiliar with service workers, you can get a basic understanding by reading  [Introduction To Service Workers](https://developers.google.com/web/fundamentals/primers/service-worker/) about what they can do, how their lifecycle works and more.
+If you're unfamiliar with service workers, you can get a basic understanding by reading  [Introduction To Service Workers](https://developers.google.com/web/fundamentals/primers/service-worker/) about what they can do, how their lifecycle works and more. Once you've completed this code lab, be sure to check out the  [Debugging Service Workers code lab](http://goo.gl/jhXCBy) for a more indepth look at how to work with service workers.
 
 Features provided via service workers should be considered a progressive enhancement, and added only if supported by the browser. For example, with service workers you can cache the app shell and data for your app, so that it's available even when the network isn't. When service workers aren't supported, the offline code isn't called, and the user gets a basic experience. Using feature detection to provide progressive enhancement has little overhead and it won't break in older browsers that don't support that feature.
 
@@ -410,7 +411,7 @@ Now, reload your page. The Service Worker pane should now look like this.
 
 When you see information like this, it means the page has a service worker running.
 
-OK, now we're are going to take a brief detour and demonstrate a gotcha that you may encounter when developing service workers. To demonstrate, let's add an `activate` event listener below the `install` event listener. 
+OK, now we're are going to take a brief detour and demonstrate a gotcha that you may encounter when developing service workers. To demonstrate, let's add an `activate` event listener below the `install` event listener in your `service-worker.js` file. 
 
 ```
 self.addEventListener('activate', function(e) {
@@ -420,13 +421,17 @@ self.addEventListener('activate', function(e) {
 
 The `activate` event is fired when the service worker starts up.
 
-Open up the DevTools Console and reload your page. You expect to see the `[ServiceWorker] Activate` message logged to the console, but it didn't happen. Check out your Service Worker pane and you can see that the new service worker (that includes the activate event listener) appears to be in a "waiting" state.
+Open up the DevTools Console and reload the page, switch to the Service Worker pane in the Application panel and click inspect on the activated service worker. You expect to see the `[ServiceWorker] Activate` message logged to the console, but it didn't happen. Check out your Service Worker pane and you can see that the new service worker (that includes the activate event listener) appears to be in a "waiting" state.
 
 ![1f454b6807700695.png](img/1f454b6807700695.png)
 
 Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you  *could * close and re-open the page or press the __skipWaiting __button, but a longer-term solution is to just enable the __Update on Reload __checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.
 
 Enable the __update on reload __checkbox now and reload the page to confirm that the new service worker gets activated.
+
+__Note:__ You may see an error in the Service Worker pane of the Application panel similar to the one below, it's __safe__ to ignore this error.
+
+![b1728ef310c444f5.png](img/b1728ef310c444f5.png)
 
 That's all for now regarding inspecting and debugging service workers in DevTools. We'll show you some more tricks later. Let's get back to building your app.
 
@@ -526,6 +531,8 @@ Check out the `else` clause in `app.getForecast()` to understand why the app is 
 
 The next step is to modify the app and service worker logic to be able to cache weather data, and return the most recent data from the cache when the app is offline.
 
+__Tip:__ To start fresh and clear all saved data (localStoarge, indexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
+
 [](https://weather-pwa-sample.firebaseapp.com/step-06/)
 
 ### Beware of the edge cases
@@ -556,10 +563,13 @@ So how do we avoid these edge cases? Use a library like  [sw-precache](https://g
 
 Debugging service workers can be a challenge, and when it involves caching, things can become even more of a nightmare if the cache isn't updated when you expect it. Between the typical service worker life cycle and bug in your code, you may become quickly frustrated. But don't. There are some tools you can use to make your life easier.
 
-Some tips:
+#### Start Fresh
+
+In some cases, you may find yourself loading cached data or that things aren't updated as you expect. To clear all saved data (localStoarge, indexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
+
+Some other tips:
 
 * Once a service worker has been unregistered, it may remain listed until its containing browser window is closed.
-* Chrome occasionally displays a console error when trying to retrieve the service worker, this is safe to ignore.
 * If multiple windows to your app are open, the new service worker will not take effect until they've all been reloaded and updated to the latest service worker.
 * Unregistering a service worker does not clear the cache, so it may be possible you'll still get old data if the cache name hasn't changed.
 * If a service worker exists and a new service worker is registered, the new service worker won't take control until the page is reloaded, unless you take  [immediate control](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker/immediate-control).
@@ -590,7 +600,13 @@ Add the following line to the top of your `service-worker.js` file:
 var dataCacheName = 'weatherData-v1';
 ```
 
-Next, update the `fetch` event handler to handle requests to the data API separately from other requests.
+Next, update the `activate` event handler so that it doesn't delete the data cache when it cleans up the app shell cache.
+
+```
+if (key !== cacheName && key !== dataCacheName) {
+```
+
+Finally, update the `fetch` event handler to handle requests to the data API separately from other requests.
 
 ```
 self.addEventListener('fetch', function(e) {
@@ -649,7 +665,7 @@ To do this, we need to:
 
 #### Get data from the cache
 
-Next, we need to check if the `caches` object exists and request the latest data from it. Find the `TODO` comment in `app.getForecast()`, and then add the code below under the comment.
+Next, we need to check if the `caches` object exists and request the latest data from it. Find the `TODO add cache logic here` comment in `app.getForecast()`, and then add the code below under the comment.
 
 ```
     if ('caches' in window) {
@@ -692,7 +708,11 @@ Every time that a card is updated, the app stores the timestamp of the data on a
 
 ### Test it out
 
-The app should be completely offline-functional now. Save a couple of cities and press the refresh button on the app to get fresh weather data, and then go offline and reload the page. You should still see the latest weather data for all of your saved cities.
+The app should be completely offline-functional now. Save a couple of cities and press the refresh button on the app to get fresh weather data, and then go offline and reload the page. 
+
+Then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. Expand the section and you should see the name of your app shell and data cache listed on the left-hand side. Opening the data cache should should the data stored for each city.
+
+![cf095c2153306fa7.png](img/cf095c2153306fa7.png)
 
 [](https://weather-pwa-sample.firebaseapp.com/step-07/)
 
@@ -741,11 +761,11 @@ Create a file named `manifest.json` in your `work` folder and copy/paste the fol
       "sizes": "152x152",
       "type": "image/png"
     }, {
-      "src": "images/touch/icon-192x192.png",
+      "src": "images/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     }, {
-      "src": "images/touch/icon-256x256.png",
+      "src": "images/icons/icon-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     }],
@@ -873,7 +893,6 @@ Further reading:  [Firebase Hosting Guide](https://www.firebase.com/docs/hosting
 
 
 
-
 ## Found an issue, or have feedback? {: .hide-from-toc }
-
-Help us make our code labs better by submitting an [issue](https://github.com/googlecodelabs/your-first-pwapp/issues) today. And thanks!
+Help us make our code labs better by submitting an 
+[issue](https://github.com/googlecodelabs/your-first-pwapp/issues) today. And thanks!

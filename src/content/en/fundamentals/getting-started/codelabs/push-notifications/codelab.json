@@ -26,5 +26,6 @@
   ],
   "feedback": "https://github.com/GoogleChrome/push-notifications/issues",
   "ga": "UA-56283364-1",
-  "url": "push-notifications"
+  "url": "push-notifications",
+  "wfProcessed": true
 }

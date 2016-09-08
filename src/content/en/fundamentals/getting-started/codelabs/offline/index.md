@@ -4,13 +4,13 @@ description: Learn how to integrate a service worker into an existing applicatio
 
 {# wf_updated_on: 2016-07-18T20:46:36Z #}
 
-# Adding a Service Worker and Offline into your Web App {: .page-title }
+
+# Adding a Service Worker and Offline into your Web App {: page-title }
 
 
 
 ## Overview
 
-*Duration is 1 min*
 
 
 ![9246b0abd8d860da.png](img/9246b0abd8d860da.png)
@@ -34,7 +34,6 @@ In this codelab, you learn how to integrate a service worker into an existing ap
 
 ## Get the sample code
 
-*Duration is 1 min*
 
 
 Clone the GitHub repository from the command line over SSH:
@@ -48,7 +47,6 @@ Or HTTPS:
 
 ## Run the sample app
 
-*Duration is 2 min*
 
 
 First, let's see what the finished sample app looks like (hint: it's amazing). 
@@ -67,7 +65,6 @@ Open up the site in Chrome. You should see: ![9246b0abd8d860da.png](img/9246b0ab
 
 ## Test the app
 
-*Duration is 1 min*
 
 
 Click the horn. It should make a sound.
@@ -89,7 +86,6 @@ The reason this works offline is the basis of this codelab: offline support with
 
 ## Build the starter app
 
-*Duration is 2 min*
 
 
 You are now going to remove all offline support from the application and you are going to learn how to use a service worker to add the offline support back into the application
@@ -123,7 +119,6 @@ Now, before you reload the site, make sure that you're still using DevTools to s
 
 ## Register a service worker on the site
 
-*Duration is 3 min*
 
 
 Now it's time to add offline support back into the app. This consists of two steps:
@@ -166,7 +161,6 @@ If you ever want to inspect the currently-installed service worker for a page, c
 
 ## Install the site assets
 
-*Duration is 2 min*
 
 
 With the service worker registered, the first time a user hits the page an `install` event is triggered. This event is where you want to cache your page assets.
@@ -180,7 +174,6 @@ The next step is to program our service worker to return the intercept the reque
 
 ## Intercept the web page requests
 
-*Duration is 10 min*
 
 
 One powerful feature of service workers is that, once a service worker controls a page, it can intercept every request that the page makes and decide what to do with the request. In this section you are going to program your service worker to intercept requests and return the cached versions of assets, rather than going to the network to retrieve them.
@@ -224,7 +217,6 @@ This is the simplest case; there are many other caching scenarios. For example, 
 
 ## Congratulations!
 
-*Duration is 1 min*
 
 
 You now have offline support. Reload your page while still online to update your service worker to the latest version, and then use DevTools to go into offline mode. Reload your page again, and you should have a fully-functional offline air horn!
@@ -248,7 +240,6 @@ You now have offline support. Reload your page while still online to update your
 
 
 
-
 ## Found an issue, or have feedback? {: .hide-from-toc }
-
-Help us make our code labs better by submitting an [issue](https://github.com/googlesamples/io2015-codelabs/issues) today. And thanks!
+Help us make our code labs better by submitting an 
+[issue](https://github.com/googlesamples/io2015-codelabs/issues) today. And thanks!

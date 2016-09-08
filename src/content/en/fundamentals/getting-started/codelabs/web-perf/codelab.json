@@ -24,5 +24,6 @@
     "web"
   ],
   "feedback": "https://github.com/google/SAMPLE-REPO/issues ??? TBD",
-  "url": "web-perf"
+  "url": "web-perf",
+  "wfProcessed": true
 }
