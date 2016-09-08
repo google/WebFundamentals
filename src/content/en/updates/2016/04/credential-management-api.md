@@ -365,4 +365,4 @@ You may override `navigator.credentials` and hook it to your Chrome Extension to
 `get()` or  `store()` credentials.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

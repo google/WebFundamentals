@@ -22,4 +22,4 @@ When you are viewing a selector in the Styles Pane, comma separated selector por
 </ul>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

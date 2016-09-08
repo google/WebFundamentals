@@ -33,4 +33,4 @@ The `dialog` element now supports:
 Turn it on by enabling "Enable experimental Web Platform features" in about://flags.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

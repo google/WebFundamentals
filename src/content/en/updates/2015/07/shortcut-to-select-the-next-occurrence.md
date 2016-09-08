@@ -22,4 +22,4 @@ In the Sources Panel editor, you can select the next occurrence with <kbd class=
 		
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

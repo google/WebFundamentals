@@ -122,4 +122,4 @@ The `requestAutocomplete()` function allowed forms to be filled out on demand by
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

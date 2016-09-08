@@ -97,4 +97,4 @@ in hearing what developers think, and in seeing the creative things you can do
 with it.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

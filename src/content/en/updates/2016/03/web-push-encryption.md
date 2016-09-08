@@ -398,4 +398,4 @@ right track.
 Note: Be sure to check out the full documentation including best practices for using [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

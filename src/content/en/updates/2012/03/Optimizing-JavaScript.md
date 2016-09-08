@@ -21,4 +21,4 @@ JavaScript is relatively fast, but it can always go faster. Read more about how 
 * [From Console to Chrome - HTML5 and JavaScript for game developers](http://www.youtube.com/watch?v=XAqIpGU8ZZk) from Lilli Thompson, Chrome Games engineer.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

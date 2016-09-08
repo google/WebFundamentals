@@ -53,4 +53,4 @@ top center of the red box.
 <img src="/web/updates/images/2016/06/absolute-positioned-children/legacy-behavior.png"/>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

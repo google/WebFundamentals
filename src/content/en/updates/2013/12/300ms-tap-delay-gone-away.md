@@ -60,4 +60,4 @@ No. Pinch zoom continues to work, and OS features cater for users who find this 
 <p>Adding a <code>touchstart</code> listener to everything has a performance impact, because lower-level interactions such as scrolling are delayed by calling the listener to see if it <code>event.preventDefault()</code>s. Thankfully, FastClick will avoid setting listeners in cases where the browser already removes the 300ms delay, so you get the best of both!</p>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

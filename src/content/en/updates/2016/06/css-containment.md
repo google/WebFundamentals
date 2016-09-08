@@ -149,4 +149,4 @@ Containment is a great way to start indicating to the browser what you intend to
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

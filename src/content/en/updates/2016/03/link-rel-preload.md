@@ -67,4 +67,4 @@ which was never implemented in browsers other than Chrome. As such, Chrome 50
 `<link rel="subresource">`.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

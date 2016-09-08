@@ -120,4 +120,4 @@ We learnt many things from this talk: Jake doesn’t wear shoes when presenting;
 + If you have an offline experience, don’t wait for the network to fail before you show it, as this can take ages
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

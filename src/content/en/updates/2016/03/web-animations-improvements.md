@@ -93,4 +93,4 @@ browsers implementations and more compliant with the specification which all
 helps simplify web page content authoring for better interoperability.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

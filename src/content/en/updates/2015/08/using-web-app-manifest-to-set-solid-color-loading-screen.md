@@ -62,4 +62,4 @@ and add it to your home screen and then launch it. Or look at the <a href="https
   the user adds the site to the home screen.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

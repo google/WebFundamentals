@@ -43,4 +43,4 @@ Inspired by the fantastic [devtoolstips.com](http://devtoolstips.com/) and [Umar
 Let us know what you think and come by often!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

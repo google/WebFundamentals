@@ -54,4 +54,4 @@ We welcome your feedback on the MediaSession API. You can follow the <a href="ht
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

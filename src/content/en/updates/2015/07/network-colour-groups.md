@@ -29,4 +29,4 @@ Each of Scripts, Stylesheets, documents, fonts and more will be coloured based o
 		
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

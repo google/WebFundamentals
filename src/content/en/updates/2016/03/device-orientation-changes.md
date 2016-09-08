@@ -101,4 +101,4 @@ to a more accurate virtual reality experience for your users.
 * [A `deviceorientation` diagnostics page](https://timvolodine.github.io/deviceorientation-test/)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -19,4 +19,4 @@ More awesome libraries popping up all over the place:
 - [canvas-toBlob.js](https://github.com/eligrey/canvas-toBlob.js) - Polyfill for HTML5 canvas's `toBlob()` method, which is not implemented by any browsers.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

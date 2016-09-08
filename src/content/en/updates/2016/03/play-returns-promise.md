@@ -70,4 +70,4 @@ interface. Be forewarned: the page will automatically play music when you visit 
 course, it doesn’t!)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -160,4 +160,4 @@ majority of your performance logic in your web app.
 * [https://w3c.github.io/resource-timing/](https://w3c.github.io/resource-timing/) 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

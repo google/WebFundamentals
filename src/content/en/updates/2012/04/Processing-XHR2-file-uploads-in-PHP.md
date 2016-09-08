@@ -17,4 +17,4 @@ This server is trivial but it demonstrates two things. The first is sending a fi
 Note: the sample has been removed.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

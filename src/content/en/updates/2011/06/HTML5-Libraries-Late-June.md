@@ -19,4 +19,4 @@ Some exciting libraries have cropped up lately:
 <a href="http://www.idangero.us/cs/">Chop Slider</a> - making heavy use of CSS transitions and effects to get impressive transitions between states.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

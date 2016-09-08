@@ -17,4 +17,4 @@ description: Get and debug event listeners in DevTools with these console comman
 You can use <code>getEventListeners(node)</code> in the Console Panel to retrieve registered event listeners on the passed in DOM node. In addition to that, the video clip shows <code>debug(fn)</code> invoking the debugger when <code>fn</code> is called.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

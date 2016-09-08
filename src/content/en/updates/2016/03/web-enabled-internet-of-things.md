@@ -550,4 +550,4 @@ refer to the Edison and breadboard sketch below:
 ![Sketch](/web/updates/images/2016/03/web-enabled-internet-of-things/sketch.png)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

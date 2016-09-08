@@ -86,4 +86,4 @@ I've put together a photo gallery demo to demonstrate these different techniques
 To learn more about the HTML5 Filesystem API, see [Exploring the Filesystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

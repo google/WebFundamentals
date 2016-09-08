@@ -17,4 +17,4 @@ Multi-tab browsing is now the norm, so you can't assume the user is watching you
 If you're interested in giving this a whirl, check out <a href="https://github.com/evilmartians/visibility.js">visibility.js</a> which adds a little bit of sugar on the API to make watching these interactions a bit more fun.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

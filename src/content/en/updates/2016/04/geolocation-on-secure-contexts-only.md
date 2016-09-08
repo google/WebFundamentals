@@ -131,4 +131,4 @@ _strongly recommend_ that the best path to ensure ongoing access to geolocation
 is to move to HTTPS.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

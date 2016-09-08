@@ -96,4 +96,4 @@ book_path: /web/updates/_book.yaml
 </ul>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

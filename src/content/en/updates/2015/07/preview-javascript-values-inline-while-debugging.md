@@ -23,4 +23,4 @@ To enable this feature (if it's not already):
 </ol>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

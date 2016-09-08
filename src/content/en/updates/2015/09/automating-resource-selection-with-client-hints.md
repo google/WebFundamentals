@@ -337,4 +337,4 @@ management capabilities on the client. This is the extensible web in action.
    feedback or other questions.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

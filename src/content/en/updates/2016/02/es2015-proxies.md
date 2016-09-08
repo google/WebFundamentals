@@ -303,4 +303,4 @@ Google has released a [limited polyfill for Proxy](https://github.com/GoogleChro
 * [ES6 everyday Reflect](http://www.loganfranken.com/blog/902/es6-everyday-reflect/)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

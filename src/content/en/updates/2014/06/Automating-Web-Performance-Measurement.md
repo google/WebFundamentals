@@ -139,4 +139,4 @@ Solutions like PSI can keep an eye on your web performance on desktop and mobile
 We're eager to hear of any feedback you might have and hope PSI helps improve the performance culture on your team.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

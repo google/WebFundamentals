@@ -29,4 +29,4 @@ We hope this sample, along with the other resources available on the web, yields
 _Thanks to [Erik Arvidsson](https://twitter.com/ErikArvidsson) for his help reviewing this article._
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

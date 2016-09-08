@@ -49,4 +49,4 @@ book_path: /web/updates/_book.yaml
 <kbd class="kbd">Cmd + K</kbd> (Ctrl + L on Windows)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -161,4 +161,4 @@ This spec is a critical part in bringing Web Apps to all users and we need your 
 *  [Contribute to the specification](https://w3c.github.io/manifest/) and give the team feedback.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

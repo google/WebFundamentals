@@ -27,4 +27,4 @@ Changing it to the following should do the trick:
     
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

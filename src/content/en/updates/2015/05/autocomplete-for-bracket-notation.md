@@ -19,4 +19,4 @@ Autocomplete in the Console Panel not only works with regular dot notation (e.g.
 Even if you have an array, you get autocomplete for the index e.g. <code>arr[0</code> → <code>arr[0]</code>.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

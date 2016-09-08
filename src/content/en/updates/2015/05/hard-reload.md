@@ -16,4 +16,4 @@ With DevTools opened, click and hold the reload button to see more options.
 <video src="/web/updates/videos/hold_refresh.mp4" autoplay loop muted></video>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

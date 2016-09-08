@@ -32,4 +32,4 @@ It's worth noting that Firefox has had `navigator.registerProtocolHandler` imple
 More information on this API can be found on the [MDN article](https://developer.mozilla.org/En/DOM/Window.navigator.registerProtocolHandler).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

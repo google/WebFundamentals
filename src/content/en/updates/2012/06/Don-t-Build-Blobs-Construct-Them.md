@@ -56,4 +56,4 @@ Handy! So now, instead of appending to a `BlobBuilder`, we can simply create the
 Also note that the second object param is optional. For more info on these changes, see the [MDN docs on Blob](https://developer.mozilla.org/en/DOM/Blob).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

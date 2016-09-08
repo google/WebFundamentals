@@ -28,4 +28,4 @@ You'll also notice it has multi-line editing and confirmation for exit-without-s
 Snippets source: <a href="https://github.com/bgrins/devtools-snippets">https://github.com/bgrins/devtools-snippets</a>
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -223,4 +223,4 @@ If you’re already considering using service workers in your app, take a look a
 _With thanks to our reviewers: Jeff Posnick, Paul Lewis, Alex Russell, Seth Thompson, Rob Dodson, Taylor Savage and Joe Medley._
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

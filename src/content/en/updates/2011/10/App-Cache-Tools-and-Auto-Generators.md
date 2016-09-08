@@ -23,4 +23,4 @@ Some options include:
 Give them a shot, let us know in the comments how they work for you.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

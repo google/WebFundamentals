@@ -17,4 +17,4 @@ description: Learn how to to multi-cursor editing in the DevTools sources panel.
 You can <kbd class="kbd">CMD + click</kbd> to add multiple cursors in the Sources Panel. You can also <strong>undo</strong> your last selection with <kbd class="kbd">CMD + U</kbd>.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

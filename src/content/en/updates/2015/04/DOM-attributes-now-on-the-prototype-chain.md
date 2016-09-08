@@ -195,4 +195,4 @@ Great question.  Most issues with sites will be based on the fact a site has cho
 * [Code Review](https://codereview.chromium.org/984523003/) for commit
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

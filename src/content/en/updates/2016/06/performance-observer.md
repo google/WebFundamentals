@@ -130,4 +130,4 @@ should open the door to more efficient performance tooling for web apps.
 [measure]: https://developer.mozilla.org/en-US/docs/Web/API/Performance/measure
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

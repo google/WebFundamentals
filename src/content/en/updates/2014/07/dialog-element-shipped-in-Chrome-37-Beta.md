@@ -22,4 +22,4 @@ There are a few changes applied to the implementation since [the last announceme
 If you are curious about further details on the spec update, check out diffs [here](http://html5.org/r/8448) and [here](http://html5.org/r/8457).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

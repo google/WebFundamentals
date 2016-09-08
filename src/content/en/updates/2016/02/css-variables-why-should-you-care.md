@@ -361,4 +361,4 @@ and you can keep tab on their progress in other browsers over on
 [chromestatus.com](https://www.chromestatus.com/features/6401356696911872).
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

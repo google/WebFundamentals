@@ -395,4 +395,4 @@ If you want to get involved, there’s always the [Houdini mailing list].
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

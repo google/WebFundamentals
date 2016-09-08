@@ -25,4 +25,4 @@ There are a few keyboard shortcuts when dealing with the debugger. A few are:
 Also, you may notice from a few Dev Tips ago (<a href="https://umaar.com/dev-tips/21-highlight-paused-statement/">21. highlight paused statement</a>) that when you navigate through the call stack, the exact column is highlighted.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

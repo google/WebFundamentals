@@ -30,4 +30,4 @@ Also note, when you do this, a small orange indicator appears to the left of the
 		
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

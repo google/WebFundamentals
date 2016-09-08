@@ -17,4 +17,4 @@ You can check out [this example](http://fhtr.org/gravityring/sprites.html) for t
 There are still some rough edges in the acceleration implementation, so you may see performance degradation in some use cases (please let the Chrome team know through [new.crbug.com](http://new.crbug.com) so that we can fix them!)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

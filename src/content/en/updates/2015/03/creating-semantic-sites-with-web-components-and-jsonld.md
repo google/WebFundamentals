@@ -117,4 +117,4 @@ Check the [Structured Data documentation](https://developers.google.com/structur
 Consider submitting your shiny new elements to [customelements.io](http://customelements.io/) for others to enjoy and give us a shout at [@polymer](https://twitter.com/intent/follow?screen_name=polymer) or [+Polymer community](https://plus.google.com/communities/115626364525706131031) to show off the awesomeness!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

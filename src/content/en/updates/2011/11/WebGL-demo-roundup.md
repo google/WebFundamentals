@@ -15,4 +15,4 @@ Developers keep pushing the boundaries of what's possible to do in the browser. 
 In other news, the Google Data Arts Team launched a [workshop page](http://workshop.chromeexperiments.com/) to share the technology they've used to build some amazing demos. The page has a great tutorial on using dat.GUI, go check it out!
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

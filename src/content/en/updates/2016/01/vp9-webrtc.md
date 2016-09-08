@@ -86,4 +86,4 @@ live
 * [test.webrtc.org](http://test.webrtc.org): open source device and network testing tools and bug reporting framework
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

@@ -32,4 +32,4 @@ If you have a `File` object (say, one stored using the [FileSystem API](http://w
     
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

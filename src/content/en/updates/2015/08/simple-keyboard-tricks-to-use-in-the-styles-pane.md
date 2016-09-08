@@ -31,4 +31,4 @@ If you start typing out a new property (like <code>back</code>), you might rely 
 While on the subject, you can delete a declaration (the property + value) by hitting backspace in either the property or value field and then hitting enter.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

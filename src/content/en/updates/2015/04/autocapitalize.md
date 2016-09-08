@@ -133,4 +133,4 @@ there are a number of places where helping the user enter text provides great va
 * [Original implmentation proposal by Mounir Lamouri](https://github.com/mounirlamouri/html-autocapitalize/blob/master/proposal.md)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

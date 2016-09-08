@@ -34,4 +34,4 @@ Finally, I execute that changed block of code so I have <code>foo</code> and <co
 		
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

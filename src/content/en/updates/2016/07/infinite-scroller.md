@@ -244,4 +244,4 @@ All the code can be found in our [repository][Infscroller Code]. We have done ou
 [Compositor Worklet]: https://developers.google.com/web/updates/2016/05/houdini?hl=en
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

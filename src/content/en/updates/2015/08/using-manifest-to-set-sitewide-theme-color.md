@@ -60,4 +60,4 @@ and add it to your home screen. Or look at the <a href="https://airhorner.com/ma
   the user adds the site to the home screen.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

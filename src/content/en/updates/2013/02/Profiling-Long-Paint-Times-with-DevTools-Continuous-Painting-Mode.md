@@ -192,4 +192,4 @@ Click below for a demo where Paul Irish uses continuous painting to identify a u
 {% ytvideo FY5iiuQRyEE?start=683&end=788 %}
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

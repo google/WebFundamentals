@@ -26,4 +26,4 @@ Check out the demos in action either through a [video](http://protothon.com/blog
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

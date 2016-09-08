@@ -70,4 +70,4 @@ In fact, we've connected with Wilson and the Financial Times Labs team and, as a
 ![](/web/updates/images/2013/10/flexbox/forced-sync-layout-popup.png)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

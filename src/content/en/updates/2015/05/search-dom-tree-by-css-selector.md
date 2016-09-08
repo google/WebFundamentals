@@ -18,4 +18,4 @@ When browsing the DOM with the Elements panel, try searching for nodes via <kbd 
 
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

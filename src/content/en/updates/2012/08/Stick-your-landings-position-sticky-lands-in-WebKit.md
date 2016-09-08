@@ -88,4 +88,4 @@ Unfortunately, there isn't a spec for this one. It was [proposed on www-style](h
 Support right now is Chrome 23.0.1247.0+ (current Canary) and WebKit nightly.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

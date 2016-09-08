@@ -21,4 +21,4 @@ To force-enable SwiftShader for testing purposes, start Chrome from the command 
 You can read more about Chrome 18's new graphics features (including GPU-accelerated 2D canvas) at the [Chromium Blog](http://blog.chromium.org/2012/02/gpu-accelerating-2d-canvas-and-enabling.html)
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}

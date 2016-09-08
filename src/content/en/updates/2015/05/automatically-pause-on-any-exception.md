@@ -19,4 +19,4 @@ In DevTools, you can automatically pause on any exception (especially useful for
 This means the debugger will pause <em>before</em> that red message appears in the Console and you get a chance to inspect what may have gone wrong.
 
 
-{# wf_add_comment_widget #}
+{% include "comment-widget.html" %}
