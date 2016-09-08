@@ -16,7 +16,7 @@ Hallo! It's [Kayce](https://twitter.com/kaycebasques) again, tech writer for Dev
 
 All features are already in Chrome Stable unless noted otherwise.
 
-## CPU Throttling for a Mobile-First World
+## CPU throttling for a mobile-first world
 
 *Available in Chrome 54, which is currently 
 [Canary](https://www.google.com/chrome/browser/canary.html).*
@@ -35,7 +35,7 @@ Some notes about CPU throttling:
 
 With that said, combine CPU Throttling with [Network Throttling](/web/tools/chrome-devtools/profile/network-performance/network-conditions) and [Device Mode](/web/tools/chrome-devtools/iterate/device-mode/), and you start to get a much better picture about how your site will look and perform on mobile devices, right from the convenience of your development machine browser.
 
-## Network View in Timeline Recordings
+## Network view in timeline recordings
 
 Enable the **Network** checkbox next time you take a Timeline recording to analyze how your page downloaded its resources. Click on a resource to view more information about it in the Summary pane.
 
@@ -43,7 +43,7 @@ Enable the **Network** checkbox next time you take a Timeline recording to analy
 
 The **Initiator** field in the summary is particularly useful. This field tells you where the resource is being requested.
 
-## Passive Event Listeners
+## Passive event listeners
 
 Passive event listeners are an emerging standard to improve scroll performance. Check out this article by yours truly to learn more:
 
@@ -71,13 +71,13 @@ I'll wrap this section up with a little tip. Enable the **Scrolling Performance 
 
 ![Scrolling performance issues demo](/web/updates/images/2016/09/scroll-perf.gif)
 
-## Group by Activity
+## Group by activity
 
 Back in mid-June the **Call Tree** pane on the Timeline panel got a new sorting category: Group by Activity. This grouping lets you view how much time your page spent parsing HTML, evaluating scripts, painting, and so on.
 
 ![Group by activity](/web/updates/images/2016/09/group.png)
 
-## Timeline Stats in the Sources Panel
+## Timeline stats in the sources panel
 
 Create a Timeline recording with the **JS Profile** option enabled, and you can see a function-by-function breakdown of execution times in the Sources panel.
 
