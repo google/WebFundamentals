@@ -1,7 +1,7 @@
 ---
 layout: shared/narrow
 title: "Prerequisites"
-description: "Before we do anything else, let's make sure we have the right technoloy."
+description: "Before we do anything else, let's make sure we have the right technology."
 published_on: 2014-12-01
 updated_on: 2016-02-04
 translation_priority: 0

@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Shadow DOM v1: self-contained web components"
 description: "Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components"
 published_on: 2016-08-02
-updated_on: 2016-08-02
+updated_on: 2016-08-22
 authors:
   - ericbidelman
 translation_priority: 1
@@ -666,7 +666,7 @@ As an example, let's say your shadow DOM looks like this:
 
 Answering the reverse question is also possible. `element.assignedSlot` tells you which of the component slots your element is assigned to.
 
-### The Shadow DOM event model {#events}
+#### The Shadow DOM event model {#events}
 
 When an event bubbles up from shadow DOM it's target is adjusted to maintain the encapsulation that shadow DOM provides. That is, events are re-targeted to look like they've come from the component rather than internal elements within your shadow DOM. Some events do not even propagate out of shadow DOM.
 
@@ -689,21 +689,120 @@ If the shadow tree is open, calling `event.composedPath()` will return an array 
 Custom DOM events which are fired on internal nodes in a shadow tree do not bubble
 out of the shadow boundary unless the event is created using the `composed: true` flag:
 
-    // Inside <fancy-tab> custom element class definition:
-    selectTab() {
-      const tabs = this.shadowRoot.querySelector('#tabs');
-      tabs.dispatchEvent(new Event('tab-select', {bubbles: true, composed: true}));
-    }
+{% highlight javascript %}
+// Inside <fancy-tab> custom element class definition:
+selectTab() {
+  const tabs = this.shadowRoot.querySelector('#tabs');
+  tabs.dispatchEvent(new Event('tab-select', {bubbles: true, composed: true}));
+}
+{% endhighlight %}
 
 If `composed: false` (default), consumers won't be able to listen for the event outside of your shadow root.
 
-    <fancy-tabs></fancy-tabs>
-    <script>
-      const tabs = document.querySelector('fancy-tabs');
-      tabs.addEventListener('tab-select', e => {
-        // won't fire if `tab-select` wasn't created with `composed: true`.
-      });
-    </script>
+{% highlight html %}
+<fancy-tabs></fancy-tabs>
+<script>
+  const tabs = document.querySelector('fancy-tabs');
+  tabs.addEventListener('tab-select', e => {
+    // won't fire if `tab-select` wasn't created with `composed: true`.
+  });
+</script>
+{% endhighlight %}
+
+### Handling focus {#focus}
+
+If you recall from [shadow DOM's event model](#events), events that are fired inside shadow DOM are adjusted to look like they come from the hosting element. For example, let's say you click an `<input>` inside a shadow root:
+
+{% highlight html %}
+<x-focus>
+  #shadow-root
+    <input type="text" placeholder="Input inside shadow dom">
+{% endhighlight %}
+
+ The `focus` event will look like it came from `<x-focus>`, not the `<input>`. Similarly, `document.activeElement` will be `<x-focus>`. If the shadow root was created with `mode:'open'` (see [closed mode](#closed)), you'll also be able access the internal node that gained focus:
+
+    document.activeElement.shadowRoot.activeElement // only works with open mode.
+
+If there are multiple levels of shadow DOM at play (say a custom element within another custom element), you need to recursively drill into the shadow roots to find the `activeElement`:
+
+{% highlight javascript %}
+function deepActiveElement() {
+  let a = document.activeElement;
+  while (a && a.shadowRoot && a.shadowRoot.activeElement) {
+    a = a.shadowRoot.activeElement;
+  }
+  return a;
+}
+{% endhighlight %}
+
+Another option for focus is the `delegatesFocus: true` option, which expands the focus behavior of element's within a shadow tree:
+
+- If you click on a node inside shadow DOM and the node is not a focusable area, the first focusable area becomes focused.
+- When a node inside shadow DOM gains focus, `:focus` applies to the host in addition to the focused element.
+
+**Example** - how `delegatesFocus: true` changes focus behavior
+
+{% highlight html %}
+<style>
+  :focus {
+    outline: 2px solid red;
+  }
+</style>
+
+<x-focus></x-focus>
+
+<script>
+customElements.define('x-focus', class extends HTMLElement {
+  constructor() {
+    super(); // always call super() first in the ctor.
+
+    const root = this.attachShadow({mode: 'open', delegatesFocus: true});
+    root.innerHTML = `
+      <style>
+        :host {
+          display: flex;
+          border: 1px dotted black;
+          padding: 16px;
+        }
+        :focus {
+          outline: 2px solid blue;
+        }
+      </style>
+      <div>Clickable Shadow DOM text</div>
+      <input type="text" placeholder="Input inside shadow dom">`;
+
+    // Know the focused element inside shadow DOM:
+    this.addEventListener('focus', function(e) {
+      console.log('Active element (inside shadow dom):',
+                  this.shadowRoot.activeElement);
+    });
+  }
+});
+</script>
+{% endhighlight %}
+
+**Result**
+
+<img src="images/delegateFocusTrue.png" title="delegatesFocus: true behavior">
+
+Above is the result when `<x-focus>` is focused (user click, tabbed into, `focus()`, etc.), "Clickable Shadow DOM text" is clicked, or the internal `<input>` is focused (including `autofocus`).
+
+If you were to set `delegatesFocus: false`, here's what you would see instead:
+
+<figure>
+  <img src="images/delegateFocusFalse.png">
+  <figcaption><code>delegateFocus: false</code> and the internal <code>&lt;input></code> is focused.</figcaption>
+</figure>
+
+<figure>
+  <img src="images/delegateFocusFalseFocus.png">
+  <figcaption><code>delegateFocus: false</code> and <code>&lt;x-focus></code> gains focus (e.g. it has <code>tabindex="0"</code>).</figcaption>
+</figure>
+
+<figure>
+  <img src="images/delegateFocusNothing.png">
+  <figcaption><code>delegateFocus: false</code> and "Clickable Shadow DOM text" is clicked (or other empty area within the element's shadow DOM is clicked).</figcaption>
+</figure>
 
 ## Tips & Tricks {#tricks}
 

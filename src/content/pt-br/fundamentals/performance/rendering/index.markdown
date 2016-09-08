@@ -1,6 +1,6 @@
 ---
-title: "Rendering Performance"
-description: "O usuário percebem se os sites e aplicativos não funcionam bem, portanto, otimizar o desempenho da renderização é fundamental."
+title: "Desempenho da renderização"
+description: "Os usuários percebem se os sites e aplicativos não funcionam bem, portanto, otimizar o desempenho da renderização é fundamental."
 updated_on: 2015-03-20
 notes:
   csstriggers:
@@ -73,4 +73,3 @@ O desempenho é a arte de evitar trabalho e fazer com que qualquer trabalho real
 Vamos detalhar as diferentes partes do pipeline. Olharemos os problemas comuns e também como diagnosticar e corrigi-los.
 
 {% include fundamentals/udacity_course.liquid uid=page.udacity.id title=page.udacity.title image=page.udacity.image description=page.udacity.description %}
-

@@ -304,8 +304,9 @@ navigator.bluetooth.requestDevice({ filters: [{ services: ['heart_rate'] }] })
 
 function handleCharacteristicValueChanged(event) {
   var value = event.target.value;
-  var textDecoder = new TextDecoder(); // Used to convert bytes to UTF-8 string.
-  console.log('Received ' + textDecoder.decode(value));
+  console.log('Received ' + value);
+  // TODO: Parse Heart Rate Measurement value.
+  // See https://github.com/WebBluetoothCG/demos/blob/gh-pages/heart-rate-sensor/heartRateSensor.js
 }
 {% endhighlight %}
 
@@ -377,6 +378,7 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 ## Libraries
 
 - [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API.
+- [web-bluetooth-utils](https://www.npmjs.com/package/web-bluetooth-utils) is a npm module that adds some convenience functions to the API.
 
 ## Tools
 

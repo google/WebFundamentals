@@ -3,7 +3,7 @@ title: "Debugando com Breakpoints"
 description: "O Chrome DevTools inclui recursos poderosos de breakpoint que auxiliam á descobrir e solucionar erros de lógica no seu código JavaScript."
 updated_on: 2015-04-14
 translators:
-  - alan
+  - alansilva
 translation_priority: 0
 ---
 

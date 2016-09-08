@@ -520,7 +520,7 @@ But this doesn't mean you have to define + register a custom element all in one 
 
 **Custom elements can be used _before_ their definition is registered**.
 
-Progressive enhancement is a feature of custom elements. In other words, you can declare a bunch of `<app-drawer>` elements on the page and never invoke `customElements.define('app-drawer', ...)` until much later. This is because the browser treats potential custom elements differently thank [unknown tags](#unknown). The process of calling `define()` and endowing an existing element with a class definition is called "element upgrades".
+Progressive enhancement is a feature of custom elements. In other words, you can declare a bunch of `<app-drawer>` elements on the page and never invoke `customElements.define('app-drawer', ...)` until much later. This is because the browser treats potential custom elements differently thanks to [unknown tags](#unknown). The process of calling `define()` and endowing an existing element with a class definition is called "element upgrades".
 
 To know when a tag name becomes defined, you can use `window.customElements.whenDefined()`.
 It vends a Promise that resolves when the element becomes defined.

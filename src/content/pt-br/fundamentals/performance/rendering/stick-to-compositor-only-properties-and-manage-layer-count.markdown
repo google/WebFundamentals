@@ -1,5 +1,5 @@
 ---
-title: "Stick to compositor-only properties and manage layer count"
+title: "Atenha-se a propriedades de compositor-unico e gerencia a contagem de camada"
 description: "Composição é onde as partes pintadas da página são agrupadas para exibição na tela."
 updated_on: 2015-03-20
 notes:
