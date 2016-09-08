@@ -48,7 +48,6 @@ def checkForRedirect(requestedPath, lang, useMemcache):
     except Exception as e:
       logging.exception('checkForRedirect Failed')
 
-
   for redirect in redirects:
     redirectTo = None
     if requestedPath == redirect['from']:
@@ -60,7 +59,7 @@ def checkForRedirect(requestedPath, lang, useMemcache):
         if redirectTo.endswith('/...'):
           redirectTo = redirect['to'].replace('...', '')
           redirectTo = requestedPath.replace(redirectFrom, redirectTo)
-      return redirectTo
+        return redirectTo
   return None
 
 
@@ -172,7 +171,6 @@ def renderDevSiteContent(content, lang='en'):
     fbContent = re.search(r'^({%[ ]?framebox .+%})(.*?){%[ ]?endframebox[ ]?%}(?ms)', framebox)
     fbOpenTag = fbContent.group(1)
     fbHeight = re.search(r'height="(.*?)"', fbContent.group(1))
-    logging.info(fbHeight.group(1))
     fbContent = fbContent.group(2)
     fbMemcacheKey = '/framebox/' + hashlib.md5(fbContent).hexdigest()
     replaceWith = '<iframe class="framebox inherit-locale" '
@@ -204,7 +202,10 @@ def getInclude(includeTag, lang='en'):
   fileName = fileName.replace('"', '')
   fileName = fileName.replace('\'', '')
   fileName = fileName.strip()
-  result = readFile(fileName, lang)
+  if fileName == 'comment-widget.html':
+    result = readFile('../templates/comment-widget.html', '')
+  else:
+    result = readFile(fileName, lang)
   if result is None:
     return 'Warning: Unable to find include <code>' + fileName + '</code>'
   return result

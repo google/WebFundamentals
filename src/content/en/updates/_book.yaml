@@ -15,4 +15,6 @@ upper_tabs:
         - include: /web/updates/2013/_toc.yaml
         - include: /web/updates/2012/_toc.yaml
         - include: /web/updates/2011/_toc.yaml
+        - title: Tags
+          path: /web/updates/tags/
   - include: /web/_upper_tabs-Showcase.yaml
