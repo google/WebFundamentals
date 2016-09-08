@@ -2,12 +2,12 @@
 
 var gulp = require('gulp');
 var path = require('path');
-var gutil = require('gulp-util');
 var runSequence = require('run-sequence');
 var wfHelper = require('./wfHelper');
 var wfContributors = require('./wfContributors');
 var wfTemplateHelper = require('./wfTemplateHelper');
 var wfYouTubeShows = require('./wfYouTubeShows');
+var wfCodeLabHelper = require('./wfCodeLabHelper');
 
 gulp.task('build:contributors', function() {
   wfContributors.build();
@@ -23,8 +23,7 @@ gulp.task('build:fundamentals', function() {
     outputPath: baseOutputPath
   };
   var startPath = path.join(GLOBAL.WF.src.content, section);
-  var filesToIgnore = ['index.md', '_template.md', '_generated.md'];
-  var files = wfHelper.getFileList(startPath, true, filesToIgnore);
+  var files = wfHelper.getFileList(startPath, ['**/*.md']);
   files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateFeeds(files, options);
 });
@@ -39,8 +38,8 @@ gulp.task('build:showcase', function() {
     outputPath: baseOutputPath
   };
   var startPath = path.join(GLOBAL.WF.src.content, 'showcase');
-  var filesToIgnore = ['index.md', '_template.md', '_generated.md'];
-  var files = wfHelper.getFileList(startPath, true, filesToIgnore);
+  var patterns = ['**/*.md', '!**/index.md'];
+  var files = wfHelper.getFileList(startPath, patterns);
   files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateIndex(files, options);
   wfTemplateHelper.generateFeeds(files, options);
@@ -68,8 +67,7 @@ gulp.task('build:tools', function() {
     outputPath: baseOutputPath
   };
   var startPath = path.join(GLOBAL.WF.src.content, section);
-  var filesToIgnore = ['index.md', '_template.md', '_generated.md'];
-  var files = wfHelper.getFileList(startPath, true, filesToIgnore);
+  var files = wfHelper.getFileList(startPath, ['**/*.md']);
   files.sort(wfHelper.updatedComparator);
   wfTemplateHelper.generateFeeds(files, options);
 });
@@ -84,8 +82,8 @@ gulp.task('build:updates', function() {
     outputPath: baseOutputPath
   };
   var startPath = path.join(GLOBAL.WF.src.content, section);
-  var filesToIgnore = ['index.md', '_template.md', '_generated.md'];
-  var files = wfHelper.getFileList(startPath, true, filesToIgnore);
+  var patterns = ['**/*.md', '!tags/*', '!**/index.md'];
+  var files = wfHelper.getFileList(startPath, patterns);
   files.sort(wfHelper.publishedComparator);
   wfTemplateHelper.generateIndex(files, options);
   wfTemplateHelper.generateFeeds(files, options);
@@ -101,11 +99,15 @@ gulp.task('build:updates', function() {
   });
 });
 
+gulp.task('build:codelabs', function() {
+  var startPath = path.join(GLOBAL.WF.src.content, 'fundamentals/getting-started/codelabs');
+  wfCodeLabHelper.migrate(startPath);
+});
+
 gulp.task('build:sitelevel', function() {});
 
 gulp.task('build', function(cb) {
   runSequence(
-    'clean',
     [
       'build:contributors',
       'build:fundamentals',
