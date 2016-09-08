@@ -2,11 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to set up CSS & JS preprocessors to help you code more efficiently.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-08-03 #}
 {# wf_published_on: 2015-08-03 #}
 
-# Set Up CSS & JS Preprocessors {: .page-title }
+# Set Up CSS and JS Preprocessors {: .page-title }
 
 {% include "_shared/contributors/pbakaus.html" %}
 {% include "_shared/contributors/megginkearney.html" %}
@@ -15,8 +14,8 @@ CSS preprocessors such as Sass, as well as JS preprocessors and transpilers can 
 
 
 ## TL;DR
-- 'Preprocessors let you use features in CSS and JavaScript that your browser doesn''t support natively, for example, CSS variables.'
-- 'If you''re using preprocessors, map your original source files to the rendered output using Source Maps.'
+- Preprocessors let you use features in CSS and JavaScript that your browser doesn't support natively, for example, CSS variables.
+- If you're using preprocessors, map your original source files to the rendered output using Source Maps.
 - Make sure your web server can serve Source Maps.
 - Use a supported preprocessor to automatically generate Source Maps.
 
@@ -45,39 +44,36 @@ For each CSS file it produces, a CSS preprocessor generates a source map file (.
 
 Each CSS file contains an annotation that specifies the URL of its source map file, embedded in a special comment on the last line of the file:
 
-{% highlight css %}/*# sourceMappingURL=<url> */{% endhighlight %}
+    /*# sourceMappingURL=<url> */
 
 For instance, given an Sass source file named **styles.scss**:
 
-{% highlight scss %}$textSize: 26px;
-$fontColor: red;
-$bgColor: whitesmoke;
-h2 {
-    font-size: $textSize;
-    color: $fontColor;
-    background: $bgColor;
-}
-{% endhighlight %}
+    %$textSize: 26px;
+    $fontColor: red;
+    $bgColor: whitesmoke;
+    h2 {
+        font-size: $textSize;
+        color: $fontColor;
+        background: $bgColor;
+    }
 
 Sass generates a CSS file, **styles.css**, with the sourceMappingURL annotation:
 
-{% highlight css %}h2 {
-  font-size: 26px;
-  color: red;
-  background-color: whitesmoke;
-}
-/*# sourceMappingURL=styles.css.map */
-{% endhighlight %}
+    h2 {
+      font-size: 26px;
+      color: red;
+      background-color: whitesmoke;
+    }
+    /*# sourceMappingURL=styles.css.map */
 
 Below is an example source map file:
 
-{% highlight json %}{
-  "version": "3",
-  "mappings":"AAKA,EAAG;EACC,SAAS,EANF,IAAI;EAOX,KAAK"
-  "sources": ["sass/styles.scss"],
-  "file": "styles.css"
-}
-{% endhighlight %}
+    {
+      "version": "3",
+      "mappings":"AAKA,EAAG;EACC,SAAS,EANF,IAAI;EAOX,KAAK"
+      "sources": ["sass/styles.scss"],
+      "file": "styles.css"
+    }
 
 ## Verify web server can serve Source Maps
 
@@ -87,7 +83,7 @@ Some web servers, like Google App Engine for example, require explicit configura
 
 If you don't want an extra comment in your file, use an HTTP header field on the minified JavaScript file to tell DevTools where to find the source map. This requires configuration or customization of your web server and is beyond the scope of this document.
 
-{% highlight css %}X-SourceMap: /path/to/file.js.map{% endhighlight %}
+    X-SourceMap: /path/to/file.js.map
 
 Like the comment, this tells DevTools and other tools where to look for the source map associated with a JavaScript file. This header also gets around the issue of referencing Source Maps in languages that don't support single-line comments.
 

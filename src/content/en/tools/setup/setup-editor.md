@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Your code editor is your main development tool; you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2014-05-28 #}
 
@@ -16,7 +15,7 @@ Your code editor is your main development tool; you use it to write and save lin
 
 ## TL;DR
 - Choose an editor that lets you customize shortcuts and has lots of plugins to help you write better code.
-- 'Make use of the package manager to make it easier to discover, install, and update plugins.'
+- Make use of the package manager to make it easier to discover, install, and update plugins.
 - Install plugins that help keep you productive during development; start with the recommendations in this guide.
 
 
