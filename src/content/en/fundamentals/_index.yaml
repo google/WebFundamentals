@@ -12,19 +12,24 @@ landing_page:
 
   rows:
 
-  - heading: What's The Most Hot Thing Right Now?
+  - heading: Web Push Notifications, a new way to engage users
     classname: devsite-landing-row-67 devsite-landing-row-no-image-background
     items:
     - description: >
-        This is an early mock of the new Web<b>Fundamentals</b> landing page.
-        I'm still undecided about what type of content goes at the top, but in
-        the mean time, the link below takes you to a sample article so you can
-        see the left hand nav, how content will generally look and the TOC on
-        the right. This also includes an updated IA.
-      image_path: https://placehold.it/1600x900
+        <p>Web push notifications makes it easy to re-engage with users by
+        showing relevant, timely, and contextual notifications to the user, 
+        even when the browser is closed!</p>
+
+        <p>Web push notifications allow users to opt-in to timely updates from
+        sites they love and allow you to effectively re-engage them with
+        customized, relevant content.</p>
+
+        <p>The Push API and Notification API open a whole new set of
+        possibilities for you to re-engage with your users.</p>
+      image_path: /web/fundamentals/images/web-push-notification.png
       buttons:
-      - label: See sample doc
-        path: performance/
+      - label: Get started
+        path: engage-and-retain/push-notifications/
 
   - heading: Latest Updates for Web Developers
     columns:
@@ -46,15 +51,6 @@ landing_page:
 
   - heading: Ways to Enhance Your Site (aka the Hot Stuff)
     items:
-    - heading: The New Information Architecture
-      description: >
-        Here's a look at the new information architecture. It's really just
-        a minor set of tweaks to what we have already in order to get the 
-        open things up to new stuff.
-      image_path: https://placehold.it/1600x900
-      buttons:
-      - label: New IA
-        path: http://shortn/_MZeS6CkWno
 
     - heading: Progressive Web Apps
       description: >
@@ -62,31 +58,40 @@ landing_page:
         started building one? In this step-by-step guide, you'll build your
         own Progressive Web App and learn the fundamentals needed for building
         Progressive Web Apps.
-      image_path: https://placehold.it/1600x900
+      image_path: /web/fundamentals/images/ic_important_devices_black_48dp.png
       buttons:
       - label: Get Started
-        path: /web/progressive-web-apps/
+        path: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
 
-
-    - heading: Add Push Notifications
+    - heading: Reliable and Instant Loading
       description: >
-        Learn how to add Push Notifications to your web applications to
-        re-engage users with breaking news and information about new content.
-      image_path: https://placehold.it/1600x900
+        Service workers are a programmable proxy sitting between the network
+        and the browser. Using a service worker, you get to decide what gets
+        cached, how it's cached and how it should be returned to the user.
+      image_path: /web/fundamentals/images/ic_thumb_up_black_48dp.png
+      buttons:
+      - label: The Offline Cookbook
+        path: /web/fundamentals/instant-and-offline/offline-cookbook/
+
+    - heading: Add to Home Screen
+      description: >
+        App install banners make it easy for users to add your app to their
+        home screen with a single click, and is an indication to the user that
+        the app their adding, meets an important quality bar.
+      image_path: /web/fundamentals/images/ic_home_black_48dp.png
       buttons:
       - label: Learn more
-        path: /web/fundamentals/engage-and-retain/push-notifications/
-
+        path: /web/fundamentals/engage-and-retain/app-install-banners/
 
     - heading: Move to HTTPS
       description: >
         HTTPS allows users to securely connect to your website or app. Set up
         HTTPS to protect the integrity of your site, and the security of your
         users.
-      image_path: https://placehold.it/1600x900
+      image_path: /web/fundamentals/images/ic_https_black_48dp.png
       buttons:
       - label: Learn more
-        path: /web/fundamentals/security/
+        path: /web/fundamentals/encrypt-in-transit/why-https
 
 
   - heading: Ready, Set, Code
@@ -104,8 +109,8 @@ landing_page:
       - icon:
           icon_name: network_check
         path: /web/fundamentals/instant-and-offline/
-        heading: "Instant & Offline Loading"
-        description: "Lorem ipsum, something, this that and the other thing."
+        heading: "Instant and Reliable Loading"
+        description: "Users expect their experiences to work instantly, and reliably."
 
       - icon:
           icon_name: security
