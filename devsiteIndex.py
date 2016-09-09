@@ -59,6 +59,11 @@ def parseIndexYamlItems(yamlItems):
         item += yamlItem['icon']['icon_name']
         item += '</div>'
         descriptionClasses.append('devsite-landing-row-item-icon-description')
+      if 'path' in yamlItem['icon']:
+        item += '<img class="devsite-landing-row-item-icon" src="'
+        item += yamlItem['icon']['path']
+        item += '">'
+        descriptionClasses.append('devsite-landing-row-item-icon-description')
       if link:
         item += '</a>' 
     if 'image_path' in yamlItem:
