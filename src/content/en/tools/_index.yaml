@@ -51,7 +51,7 @@ landing_page:
         description: "An opinionated starting point for building Polymer 1.0 web apps that work great across different devices."
 
       - icon:
-          icon_name: security
+          path: https://www.gstatic.com/images/icons/material/system/2x/material_design_grey600_24dp.png
         path: https://www.getmdl.io/
         heading: "Material Design Lite"
         description: "TBD"
@@ -61,7 +61,7 @@ landing_page:
 
     - items:
       - icon:
-          icon_name: web
+          icon_name: polymer
         path: https://www.polymer-project.org
         heading: "Polymer"
         description: "TBD"

@@ -2,105 +2,87 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Polymer Starter Kit.
 
-{# wf_review_required #}
-
 # Polymer Starter Kit {: .page-title }
 
-<div class="wf-subheading">
-  <div class="page-content mdl-typography--text-center mdl-grid">
-    <div class="mdl-cell mdl-cell--1-col"></div>
-    <div class="mdl-cell mdl-cell--10-col">
-      <h3>Set up for success using Polymer in production.</h3>
-      <p>
-        Start your project with the Polymer Starter Kit to get the most out of 
-        the library, elements built with Polymer, and Polymer-related tools.
-      </p>
-      <a class="mdl-button mdl-js-button mdl-button--raised" href="https://github.com/polymerelements/polymer-starter-kit/releases">Download Polymer Starter Kit 1.0</a>
-    </div>
-    <div class="mdl-cell mdl-cell--1-col"></div>
-  </div>
-</div>
+[Download Polymer Starter Kit](https://github.com/polymerelements/polymer-starter-kit/releases){: .button .button-primary .attempt-right }
 
-{% include page-structure/site-promo-banner.liquid %}
+<span style="font-size:x-large">
+Set up for success using Polymer in production.
+</span>
 
-<div class="page-content">
-  <div class="mdl-grid mdl-typography--text-center">
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/code.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Components for nearly any app, out of the box</h3>
-      <p>Get started quickly with the complete set of the same paper and iron elements used by Google products.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/build-chain.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Complete build chain</h3>
-      <p>Build your app using a suite of gulp tasks that leverage the full range of Polymer-related tools, such as vulcanize, crisper, and more.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/testing.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Testing made easy</h3>
-      <p>Test your app and all of its components using the built-in and pre-configured Web Component Tester.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/theming.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Flexible app theming</h3>
-      <p>Easily theme your entire application, including the built-in elements, using app-level Custom CSS Properties.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/star.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Framework-free, or framework-compatible</h3>
-      <p>Build your app out of elements, or wire in an external framework to handle business logic. It's up to you!</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {% include svgs/responsive.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Responsive app layout boilerplate</h3>
-      <p>Start off mobile-friendly with the included layout boilerplate.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/live-reload.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Live Browser Reloading</h3>
-      <p>Reload the browser in real-time anytime an edit is made, without the need for an extension.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/tick.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Material design ready</h3>
-      <p>Use the built-in paper elements to create a full material design-style app.</p>
-    </div>
-  </div>
+Start your project with the Polymer Starter Kit to get the most out of 
+the library, elements built with Polymer, and Polymer-related tools.
 
+## What is the Polymer Starter Kit?
 
-  <div class="mdl-grid">
-    <figure class="mdl-cell mdl-cell--6-col">
-      <img src="../imgs/psk-desktop.png">
-    </figure>
-    <figure class="mdl-cell mdl-cell--6-col">
-      <img src="../imgs/psk-mobile.png">
-    </figure>
-  </div>
-
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
+    <img src="../imgs/psk-desktop.png">
+    <figcaption>
       <h3 class="mdl-typography--headline">Built for elements</h3>
       <p>Easily add in additional elements, either by building them yourself or installing them with bower. Browse the <a href="https://elements.polymer-project.org">catalog of elements built by the Polymer team</a> for inspiration.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
+    </figcaption>
+  </figure>
+</div>
+
+<div class="attempt-right">
+  <figure>
+    <img src="../imgs/psk-mobile.png">
+    <figcaption>
       <h3 class="mdl-typography--headline">Tooled for production</h3>
       <p>Polymer starter kit links up all of the powerful Polymer-centric tooling out of the box to easily minify and vulcanize your app.</p>
-    </div>
-  </div>
+    </figcaption>
+  </figure>
 </div>
+
+<div style="clear:both;"></div>
+
+## Why use the Polymer Starter Kit?
+
+### Components for nearly any app, out of the box
+<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/code_grey600_24dp.png">
+Get started quickly with the complete set of the same paper and iron elements used by Google products.
+
+<div style="clear:both;"></div>
+
+### Complete build chain
+<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/call_merge_grey600_24dp.png">
+Build your app using a suite of gulp tasks that leverage the full range of Polymer-related tools, such as vulcanize, crisper, and more.
+
+<div style="clear:both;"></div>
+
+### Testing made easy
+<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/done_all_grey600_24dp.png">
+Test your app and all of its components using the built-in and pre-configured Web Component Tester.
+
+<div style="clear:both;"></div>
+
+### Flexible app theming
+<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/format_color_fill_grey600_24dp.png">
+Easily theme your entire application, including the built-in elements, using app-level Custom CSS Properties.
+
+<div style="clear:both;"></div>
+
+### Framework-free, or framework-compatible
+<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/star_grey600_24dp.png">
+Build your app out of elements, or wire in an external framework to handle business logic. It's up to you!
+
+<div style="clear:both;"></div>
+
+### Responsive app layout boilerplate
+<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/devices_grey600_24dp.png">
+Start off mobile-friendly with the included layout boilerplate.
+
+<div style="clear:both;"></div>
+
+### Live Browser Reloading
+<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/autorenew_grey600_24dp.png">
+Reload the browser in real-time anytime an edit is made, without the need for an extension.
+
+<div style="clear:both;"></div>
+
+### Material design ready
+<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/material_design_grey600_24dp.png">
+Use the built-in paper elements to create a full material design-style app.
+
+<div style="clear:both;"></div>
