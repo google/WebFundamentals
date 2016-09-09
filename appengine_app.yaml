@@ -54,9 +54,12 @@ handlers:
   secure: always
 
 skip_files:
+- ^\..*
+- ^gulp-tasks/.*
+- ^node_modules/.*
+- ^scratch/.*
+- ^tools/.*
 - ^(.*/)?.*\.psd$
 - ^(.*/)?.*\.pxm$
-- ^node_modules/.*
-- ^tools/.*
-- ^\..*
 - ^(.*/)?.*\.pyc$
+- ^(.*/)?.*\.sh$
