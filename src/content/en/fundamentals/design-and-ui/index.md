@@ -37,6 +37,8 @@ and devices?
   </p>
 </div>
 
+<div style="clear:both;"></div>
+
 <div class="attempt-left">
   <h2>Icons &amp; Browser Colors</h2>
   <a href="tbd">
