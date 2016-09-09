@@ -4,85 +4,96 @@ description: Polymer Starter Kit.
 
 # Polymer Starter Kit {: .page-title }
 
-[Download Polymer Starter Kit](https://github.com/polymerelements/polymer-starter-kit/releases){: .button .button-primary .attempt-right }
-
-<span style="font-size:x-large">
-Set up for success using Polymer in production.
-</span>
-
-Start your project with the Polymer Starter Kit to get the most out of 
-the library, elements built with Polymer, and Polymer-related tools.
-
 ## What is the Polymer Starter Kit?
 
-<div class="attempt-left">
-  <figure>
-    <img src="../imgs/psk-desktop.png">
-    <figcaption>
-      <h3 class="mdl-typography--headline">Built for elements</h3>
-      <p>Easily add in additional elements, either by building them yourself or installing them with bower. Browse the <a href="https://elements.polymer-project.org">catalog of elements built by the Polymer team</a> for inspiration.</p>
-    </figcaption>
-  </figure>
-</div>
+[Download Polymer Starter Kit](https://github.com/polymerelements/polymer-starter-kit/releases){: .button .button-primary .attempt-right }
 
-<div class="attempt-right">
-  <figure>
-    <img src="../imgs/psk-mobile.png">
-    <figcaption>
-      <h3 class="mdl-typography--headline">Tooled for production</h3>
-      <p>Polymer starter kit links up all of the powerful Polymer-centric tooling out of the box to easily minify and vulcanize your app.</p>
-    </figcaption>
-  </figure>
-</div>
+The [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit)
+is a starting point for building apps using a drawer-based layout. The layout 
+is provided by `app-layout` elements.
 
-<div style="clear:both;"></div>
+This template, along with the `polymer-cli` toolchain, also demonstrates use
+of the "PRPL pattern" This pattern allows fast first delivery and interaction with
+the content at the initial route requested by the user, along with fast subsequent
+navigation by pre-caching the remaining components required by the app and
+progressively loading them on-demand as the user navigates through the app.
 
-## Why use the Polymer Starter Kit?
+The PRPL pattern, in a nutshell:
 
-### Components for nearly any app, out of the box
-<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/code_grey600_24dp.png">
-Get started quickly with the complete set of the same paper and iron elements used by Google products.
+* **Push** components required for the initial route
+* **Render** initial route ASAP
+* **Pre-cache** components for remaining routes
+* **Lazy-load** and progressively upgrade next routes on-demand
 
-<div style="clear:both;"></div>
+### Migrating from Polymer Starter Kit v1?
 
-### Complete build chain
-<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/call_merge_grey600_24dp.png">
-Build your app using a suite of gulp tasks that leverage the full range of Polymer-related tools, such as vulcanize, crisper, and more.
+[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html)
 
-<div style="clear:both;"></div>
+## Setup
 
-### Testing made easy
-<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/done_all_grey600_24dp.png">
-Test your app and all of its components using the built-in and pre-configured Web Component Tester.
+### Prerequisites
 
-<div style="clear:both;"></div>
+Install [polymer-cli](https://github.com/Polymer/polymer-cli):
 
-### Flexible app theming
-<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/format_color_fill_grey600_24dp.png">
-Easily theme your entire application, including the built-in elements, using app-level Custom CSS Properties.
+    npm install -g polymer-cli
 
-<div style="clear:both;"></div>
+### Initialize project from template
 
-### Framework-free, or framework-compatible
-<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/star_grey600_24dp.png">
-Build your app out of elements, or wire in an external framework to handle business logic. It's up to you!
+    mkdir my-app
+    cd my-app
+    polymer init starter-kit
 
-<div style="clear:both;"></div>
+### Start the development server
 
-### Responsive app layout boilerplate
-<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/devices_grey600_24dp.png">
-Start off mobile-friendly with the included layout boilerplate.
+This command serves the app at `http://localhost:8080` and provides basic URL
+routing for the app:
 
-<div style="clear:both;"></div>
+    polymer serve --open
 
-### Live Browser Reloading
-<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/autorenew_grey600_24dp.png">
-Reload the browser in real-time anytime an edit is made, without the need for an extension.
 
-<div style="clear:both;"></div>
+### Build
 
-### Material design ready
-<img class="attempt-left" src="https://www.gstatic.com/images/icons/material/system/2x/material_design_grey600_24dp.png">
-Use the built-in paper elements to create a full material design-style app.
+This command performs HTML, CSS, and JS minification on the application
+dependencies, and generates a service-worker.js file with code to pre-cache the
+dependencies based on the entrypoint and fragments specified in `polymer.json`.
+The minified files are output to the `build/unbundled` folder, and are suitable
+for serving from a HTTP/2+Push compatible server.
 
-<div style="clear:both;"></div>
+In addition the command also creates a fallback `build/bundled` folder,
+generated using fragment bundling, suitable for serving from non
+H2/push-compatible servers or to clients that do not support H2/Push.
+
+    polymer build
+
+### Preview the build
+
+This command serves the minified version of the app at `http://localhost:8080`
+in an unbundled state, as it would be served by a push-compatible server:
+
+    polymer serve build/unbundled
+
+This command serves the minified version of the app at `http://localhost:8080`
+generated using fragment bundling:
+
+    polymer serve build/bundled
+
+### Run tests
+
+This command will run
+[Web Component Tester](https://github.com/Polymer/web-component-tester) against the
+browsers currently installed on your machine.
+
+    polymer test
+
+### Adding a new view
+
+You can extend the app by adding more views that will be demand-loaded
+e.g. based on the route, or to progressively render non-critical sections
+of the application.  Each new demand-loaded fragment should be added to the
+list of `fragments` in the included `polymer.json` file.  This will ensure
+those components and their dependencies are added to the list of pre-cached
+components (and will have bundles created in the fallback `bundled` build).
+
+## Next Steps
+
+Check out the [getting started guide](https://www.polymer-project.org/1.0/start/toolbox/set-up)
