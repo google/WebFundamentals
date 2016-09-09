@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features will rely on.
+description: Rich offline experiences, periodic background syncs, push notifications&mdash;functionality that would normally require a native application&mdash;are coming to the web. Service workers provide the technical foundation that all these features rely on.
 
 {# wf_published_on: 2014-12-01 #}
 {# wf_updated_on: 2016-01-18 #}
@@ -10,31 +10,31 @@ description: Rich offline experiences, periodic background syncs, push notificat
 {% include "_shared/contributors/mattgaunt.html" %}
 
 Rich offline experiences, periodic background syncs, push
-notifications&mdash; functionality that would normally require a native
+notifications&mdash;functionality that would normally require a native
 application&mdash;are coming to the web. Service workers provide the technical
-foundation that all these features will rely on.
+foundation that all these features rely on.
 
 ## What is a Service Worker
 
-A service worker is a script that is run by your browser in the background,
-separate from a web page, opening the door to features which don't need a web
+A service worker is a script that your browser runs in the background,
+separate from a web page, opening the door to features that don't need a web
 page or user interaction. Today, they already include features like 
 [push notifications](/web/updates/2015/03/push-notifications-on-the-open-web) 
 and [background sync](/web/updates/2015/12/background-sync). In the future 
-service workers will support other things like periodic sync, or geofencing. 
+service workers will support other things like periodic sync or geofencing. 
 The core feature discussed in this tutorial is the ability to intercept and 
 handle network requests, including programmatically managing a cache of 
 responses.
 
 The reason this is such an exciting API is that it allows you to support offline
-experiences, giving developers complete control over what exactly that
-experience is.
+experiences, giving developers complete control over the
+experience.
 
-Before service worker there was one other API that would give users an offline
+Before service worker, there was one other API that gave users an offline
 experience on the web called [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/). 
-The major issue with App Cache is the [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag) 
-that exist as well as the design working particularly well for single page web 
-apps, but not for multi-page sites. Service workers have been designed to 
+The major issues with AppCache are the [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag) 
+that exist as well as the fact that while the design works particularly well for single page web 
+apps, it's not so good with for multi-page sites. Service workers have been designed to 
 avoid these common pain points.
 
 Things to note about a service worker:

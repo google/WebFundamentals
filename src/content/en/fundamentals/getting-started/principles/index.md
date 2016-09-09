@@ -18,7 +18,7 @@ The study was held through 119 hour-long, in-person usability sessions with
 participants in the US. Participants were asked to perform key tasks across a
 diverse set of mobile sites. iOS and Android users were included, and users
 tested the sites on their own phones. For each site, participants were asked
-to voice their thoughts aloud as they completed conversion-focused tasks, like
+to voice their thoughts aloud as they completed conversion-focused tasks like
 making a purchase or booking a reservation.
 
 The study uncovered 25 mobile site design principles, grouped into five
@@ -81,13 +81,13 @@ without sacrificing usability.
 </div>
 
 Users expect to go back to the homepage when they tap the logo in the top-left
-of a mobile page, and they become frustrated when it isn’t available, or doesn’t work.
+of a mobile page, and they become frustrated when it isn’t available or doesn’t work.
 
 <div style="clear:both;"></div>
 
 ### Don't let promotions steal the show
 
-Large app install interstitials (e.g. full-page promotions that hide content
+Large app install interstitials (e.g., full-page promotions that hide content
 and prompt users to install an app) annoy users and make it difficult to
 perform tasks. On top of annoying users, sites that use app install interstitials
 fail the
@@ -207,7 +207,7 @@ many results will be returned when a specific filter is applied.
 </div>
 
 For sites with diverse customer segments, ask a few questions before presenting
-the search box and use the customer’s responses as search query filters to
+the search box, and use the customer’s responses as search query filters to
 ensure that users get results from the most relevant segment.
 
 <div style="clear:both;"></div>
@@ -243,7 +243,7 @@ result in fewer registrations.
 <div style="clear:both;"></div>
 
 
-### Let users purchase as a guest
+### Let users purchase as guests
 
 <div class="attempt-right">
   <figure id="fig1">
@@ -294,7 +294,7 @@ or by letting users email themselves links from directly within the site.
 
 <div style="clear:both;"></div>
 
-## Form Entry
+## Form entry
 
 Success: Provide a seamless, frictionless conversion experience with usable forms.
 
@@ -351,7 +351,7 @@ and billing addresses, try to use
 [`requestAutocomplete`](/web/fundamentals/design-and-ui/input/forms/use-request-auto-complete)
 or enable users to copy their shipping address to their billing address (or vice versa). 
 
-## Usability and Form Factor
+## Usability and form factor
 
 Success: Delight your mobile users with small things that enhance their experiences.
 
@@ -366,10 +366,10 @@ harder to use than desktop-only sites.
 
 Users are comfortable with scrolling sites vertically, but not horizontally. 
 Avoid large, fixed-width elements. Use
-[CSS media queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
+[CSS media queries](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)
 to apply different stylings for different screens. Don’t create content that
 only displays well at a particular
-[viewport width](/web/fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport).
+[viewport width](/web/fundamentals/design-and-ui/responsive/#set-the-viewport).
 Sites that force users to horizontally scroll fail the
 [Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/),
 which may negatively impact their search rankings.
@@ -386,7 +386,7 @@ which may negatively impact their search rankings.
 </div>
 
 Retail customers expect sites to let them
-[view high resolution closeups](/web/fundamentals/design-and-ui/media/images/)
+[view high resolution closeups](/web/fundamentals/design-and-ui/media/images#make-product-images-expandable)
 of products. Study participants got frustrated when they weren’t able to see
 what they were buying.
 
@@ -431,11 +431,11 @@ sites for deals.
 
 <div style="clear:both;"></div>
 
-### Avoid 'full site' labeling
+### Avoid "full site" labeling
 
-When study participants saw an option for a ‘full site’ (i.e. desktop site)
-versus a ‘mobile site’, they thought the mobile site lacked content and chose
-the ‘full’ one instead, directing them to the desktop site.
+When study participants saw an option for a "full site" (i.e., desktop site)
+versus a "mobile site", they thought the mobile site lacked content and chose
+the "full" one instead, directing them to the desktop site.
 
 
 ### Be clear why you need a user's location
