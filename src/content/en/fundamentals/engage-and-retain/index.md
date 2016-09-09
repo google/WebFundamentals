@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Connect with your users and keep them coming back. Use any to improve your site. Use all if you're working towards a progressive web app.
 
-{# wf_updated_on: 2016-08-25 #}
+{# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Enage and Retain Users {: .page-title }
