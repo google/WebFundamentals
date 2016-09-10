@@ -1,9 +1,9 @@
 ---
-layout: shared/narrow-subdirectories-list
-title: "Security and identity"
-description: "Know who your users are and keep their information safe."
-published_on: 2015-07-21
-updated_on: 2015-07-21
-translation_priority: 0
-order: 4
+布局: 共享/窄-子目录-列表
+标题: "安全性和身份"
+描述: "了解你的用户是谁，并保持他们的信息安全"
+发布日期: 2015-07-21
+更新日期: 2015-07-21
+优先翻译: 0
+顺序: 4
 ---
