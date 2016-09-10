@@ -22,7 +22,7 @@ toc:
     - title: Principles of Site Design
       path: /web/fundamentals/getting-started/principles/
     - title: Asking Permission Respectfully
-      path: /web/fundamentals/getting-started/permission/
+      path: /web/fundamentals/getting-started/primers/permission
     - title: Service Workers - an Introduction
       path: /web/fundamentals/getting-started/primers/service-workers
     - title: JavaScript Promises - an Introduction

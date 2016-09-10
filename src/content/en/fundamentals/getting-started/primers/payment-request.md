@@ -19,7 +19,7 @@ Buying goods online is a convenient but often frustrating experience, particular
 
 *Why users abandon mobile purchase forms*
 
-Online purchase forms are user-intensive, difficult to use, slow to load and refresh, and require multiple steps to complete. This is because two primary components of online payments -- security and convenience -- often work at cross-purposes; more of one typically means less of the other.
+Online purchase forms are user-intensive, difficult to use, slow to load and refresh, and require multiple steps to complete. This is because two primary components of online payments&mdash;security and convenience&mdash;often work at cross-purposes; more of one typically means less of the other.
 
 Most of the problems that lead to abandonment can be directly traced to purchase forms. Each app or site has its own data entry and validation process, and users often find they must enter the same information at every app's purchase point. Also, application developers struggle to create purchase flows that support multiple unique payment methods; even small differences in payment method requirements can complicate the form completion and submission process.
 
@@ -32,7 +32,7 @@ The Payment Request API is a system that is meant to *eliminate checkout forms*.
 * To let the browser act as intermediary among merchants, users, and payment methods
 * To standardize the payment communication flow as much as possible
 * To seamlessly support different secure payment methods
-* To work on any browser, device, or platform -- mobile or otherwise
+* To work on any browser, device, or platform&mdash;mobile or otherwise
 
 The Payment Request API is an open and cross-browser standard that replaces traditional checkout flows by allowing merchants to request and accept any payment in a single API call. The PaymentRequest API allows the web page to exchange information with the user agent while the user is providing input, before approving or denying a payment request.
 
@@ -60,7 +60,7 @@ The browser then presents the payments UI to the user, who selects a payment met
 PaymentRequest can also be extended to return additional information, such as shipping addresses and options, payer email, and payer phone. This allows you to get all the information you need to finalize a payment without ever showing the user a checkout form.
 
 
-The beauty of the new process is threefold: from the user's perspective, all the previously tedious interaction -- request, authorization, payment, and result -- now takes place in a single step; from the web site's perspective, it requires only a single JavaScript API call; from the payment method's perspective, there is no process change whatsoever.
+The beauty of the new process is threefold: from the user's perspective, all the previously tedious interaction&mdash;request, authorization, payment, and result&mdash;now takes place in a single step; from the web site's perspective, it requires only a single JavaScript API call; from the payment method's perspective, there is no process change whatsoever.
 
 <div style="clear:both;"></div>
 
@@ -179,7 +179,7 @@ Activate the `PaymentRequest` interface by calling its [`show`](https://www.w3.o
 *PaymentRequest show method*
 
 ### Abort a PaymentRequest {: #abort-paymentrequest }
-You can intentionally abort a `PaymentRequest` by calling its [`abort`](https://www.w3.org/TR/payment-request/#abort) method. Use this method if the app needs to cancel the payment request after the `show` method has been called but before the promise has been resolved -- for example, if an item is no longer available, or the user fails to confirm the purchase within an allotted amount of time.
+You can intentionally abort a `PaymentRequest` by calling its [`abort`](https://www.w3.org/TR/payment-request/#abort) method. Use this method if the app needs to cancel the payment request after the `show` method has been called but before the promise has been resolved&mdash;for example, if an item is no longer available, or the user fails to confirm the purchase within an allotted amount of time.
 
 If you abort a request, you'll need to create a new instance of `PaymentRequest` before you can call `show` again.
 
