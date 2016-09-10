@@ -67,6 +67,7 @@ The **Overview** pane consists of three graphs:
 
    Bars are color coded as follows:
    <!-- source: https://goo.gl/eANVFf -->
+   
    * HTML files are **<span style="color:hsl(214, 67%, 66%)">blue</span>**.
    * Scripts are **<span style="color:hsl(43, 83%, 64%)">yellow</span>**.
    * Stylesheets are **<span style="color:hsl(256, 67%, 70%)">purple</span>**.
