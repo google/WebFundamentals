@@ -229,8 +229,7 @@ report on the user's current location.
 
 If this is the first time that an application on this domain has requested
 permissions, the browser will typically check for user consent. Depending on
-the browser, there may also be preferences to always allow - or disallow -
-permission lookups, in which case the confirmation process will be bypassed.
+the browser, there may also be preferences to always allow&mdash;or disallow&mdash;permission lookups, in which case the confirmation process will be bypassed.
 
 Depending on the location device your browser is using, the position object
 might actually contain a lot more than just latitude and longitude; for
@@ -368,7 +367,7 @@ Unless you set a timeout, your request to get the current position might never r
     };
 
 
-### Prefer a coarse location over a fine grained location
+### Prefer a coarse location over a fine-grained location
 
 If you want to find the nearest store to a user, it's unlikely that you need
 1-meter precision to work that out. The API is designed to give a coarse 
