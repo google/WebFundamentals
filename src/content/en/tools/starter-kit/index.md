@@ -4,11 +4,11 @@ description: Web Starter Kit is boilerplate and tooling for multi-device develop
 
 # Web Starter Kit {: .page-title }
 
+[Download Web Starter Kit (beta)](https://github.com/google/web-starter-kit/releases/latest){: .button .button-primary }
+
 ## What is Web Starter Kit?
 
-[Download Web Starter Kit (beta)](https://github.com/google/web-starter-kit/releases/latest){: .button .button-primary .attempt-right }
-
-[Web Starter Kit](https://github.com/google/web-starter-kit/) is an opinionated boilerplate for web development. Tools for building a great experience across many devices and [performance oriented](#web-performance). Helping you to stay productive following the best practices outlined in Google's [Web Fundamentals](https://developers.google.com/web/fundamentals/). A solid starting point for both professionals and newcomers to the industry.
+[Web Starter Kit](https://github.com/google/web-starter-kit) is an opinionated boilerplate for web development. Tools for building a great experience across many devices and [performance oriented](#web-performance). Helping you to stay productive following the best practices outlined in Google's [Web Fundamentals](/web/fundamentals/). A solid starting point for both professionals and newcomers to the industry.
 
 ### Features
 
@@ -27,7 +27,9 @@ description: Web Starter Kit is boilerplate and tooling for multi-device develop
 
 ## Quickstart
 
-[Download](https://github.com/google/web-starter-kit/releases/latest) the kit or clone this repository and build on what is included in the `app` directory.
+[Download](https://github.com/google/web-starter-kit/releases/latest) the kit
+or clone [the](https://github.com/google/web-starter-kit) repository and build
+on what is included in the `app` directory.
 
 There are two HTML starting points, from which you can choose:
 
@@ -73,6 +75,8 @@ If you would prefer not to use any of our tooling, delete the following files fr
 
 Web Starter Kit is inspired by [Mobile HTML5 Boilerplate](https://html5boilerplate.com/mobile/) and Yeoman's [generator-gulp-webapp](https://github.com/yeoman/generator-webapp), having taken input from contributors to both projects during development. Our [FAQs](https://github.com/google/web-starter-kit/wiki/FAQ) attempt to answer commonly asked questions about the project.
 
-## Contributing
 
-Contributions, questions and comments are all welcome and encouraged. For code contributions to Web Starter Kit, please see our [Contribution guide](https://github.com/google/web-starter-kit/blob/master/CONTRIBUTING.md) in our GitHub repo before submitting a pull request. 
+## Learn More
+
+To learn more, see the code, submit an issue, or to get involved, check out
+our Git repo at [https://github.com/google/web-starter-kit](https://github.com/google/web-starter-kit)

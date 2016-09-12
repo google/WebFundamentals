@@ -4,11 +4,11 @@ description: Polymer Starter Kit.
 
 # Polymer Starter Kit {: .page-title }
 
+[Download Polymer Starter Kit](https://github.com/polymerelements/polymer-starter-kit/releases){: .button .button-primary }
+
 ## What is the Polymer Starter Kit?
 
-[Download Polymer Starter Kit](https://github.com/polymerelements/polymer-starter-kit/releases){: .button .button-primary .attempt-right }
-
-The [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit)
+The [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit){: .external }
 is a starting point for building apps using a drawer-based layout. The layout 
 is provided by `app-layout` elements.
 
@@ -27,13 +27,13 @@ The PRPL pattern, in a nutshell:
 
 ### Migrating from Polymer Starter Kit v1?
 
-[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html)
+[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html){: .external }
 
 ## Setup
 
 ### Prerequisites
 
-Install [polymer-cli](https://github.com/Polymer/polymer-cli):
+Install [polymer-cli](https://github.com/Polymer/polymer-cli){: .external }:
 
     npm install -g polymer-cli
 
@@ -80,7 +80,7 @@ generated using fragment bundling:
 ### Run tests
 
 This command will run
-[Web Component Tester](https://github.com/Polymer/web-component-tester) against the
+[Web Component Tester](https://github.com/Polymer/web-component-tester){: .external } against the
 browsers currently installed on your machine.
 
     polymer test
@@ -96,4 +96,9 @@ components (and will have bundles created in the fallback `bundled` build).
 
 ## Next Steps
 
-Check out the [getting started guide](https://www.polymer-project.org/1.0/start/toolbox/set-up)
+Check out the [getting started guide](https://www.polymer-project.org/1.0/start/toolbox/set-up){: .external }
+
+## Learn More
+
+To learn more, see the code, submit an issue, or to get involved, check out
+our Git repo at [https://github.com/polymerelements/polymer-starter-kit](https://github.com/polymerelements/polymer-starter-kit){: .external }
