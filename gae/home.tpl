@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="/wf-local/styles/devsite-google-blue.css">
     <title>{{ title }}</title>
     {% autoescape off %}{{ customcss }}{% endautoescape %}
+    <style>
+      .wf-stage-warning { 
+        color: white !important;
+        font-weight: bold !important;
+      }
+      .wf-stage-warning .material-icons { vertical-align: middle; }
+    </style>
   </head>
   <body class="devsite-chekov devsite-landing-page devsite-header-no-lower-tabs" id="top_of_page">
     <div class="devsite-wrapper">
@@ -52,6 +59,13 @@
                     <li class="devsite-doc-set-nav-tab-container">
                       <a href="/web/showcase/" class="devsite-doc-set-nav-tab">
                         Case Studies
+                      </a>
+                    </li>
+                    <li class="devsite-doc-set-nav-tab-container" style="float:right;">
+                      <a href="https://github.com/google/WebFundamentals" class="devsite-doc-set-nav-tab wf-stage-warning">
+                        <span class="material-icons">warning</span>
+                        STAGING
+                        <span class="material-icons">warning</span>
                       </a>
                     </li>
                   </ul>

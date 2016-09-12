@@ -10,6 +10,11 @@
       video {
         max-width: 100%;
       }
+      .wf-stage-warning { 
+        color: white !important;
+        font-weight: bold !important;
+      }
+      .wf-stage-warning .material-icons { vertical-align: middle; }
     </style>
     <title>{{ title }}</title>
   </head>
@@ -58,8 +63,16 @@
                         Case Studies
                       </a>
                     </li>
+                    <li class="devsite-doc-set-nav-tab-container" style="float:right;">
+                      <a href="https://github.com/google/WebFundamentals" class="devsite-doc-set-nav-tab wf-stage-warning">
+                        <span class="material-icons">warning</span>
+                        STAGING
+                        <span class="material-icons">warning</span>
+                      </a>
+                    </li>
                   </ul>
                 </nav>
+
               </div>
             </div>
           </div>
