@@ -5,7 +5,7 @@
     <meta name="robots" content="noindex">
     <link rel="canonical" href="https://developers.google.com/web/{{requestPath}}">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons">
-    <link rel="stylesheet" href="https://developers.google.com/_static/css/devsite-google-blue.css">
+    <link rel="stylesheet" href="/wf-local/styles/devsite-google-blue.css">
     <title>{{ title }}</title>
     {% autoescape off %}{{ customcss }}{% endautoescape %}
   </head>
@@ -16,7 +16,7 @@
           <div class="devsite-top-logo-row-wrapper">
             <div class="devsite-top-logo-row devsite-full-site-width">
               <div class="devsite-product-name-wrapper">
-                <a class="devsite-product-name-link" href="https://developers.google.com/web/">
+                <a class="devsite-product-name-link" href="/web/">
                   <div class="devsite-product-logo-container">
                     <img src="https://www.gstatic.com/images/branding/product/2x/google_developers_64dp.png" class="devsite-product-logo" alt="Web">
                   </div>
@@ -75,5 +75,8 @@
       </div>
     </div>
   </body>
-  <script async defer src="/devsite.js"></script>
+  <script async defer src="/wf-local/scripts/devsite.js"></script>
+  <!-- loads the code prettifier -->
+  <script async src="/wf-local/scripts/prettify-bundle.js" onload="prettyPrint();">
+  </script>
 </html>

@@ -19,10 +19,8 @@ toc:
         path: /web/fundamentals/getting-started/web-starter-kit/
       - title: Your First Multi-Device Site
         path: /web/fundamentals/getting-started/your-first-multi-screen-site/
-    - title: Principles of Site Design
+    - title: What Makes a Good Mobile Site?
       path: /web/fundamentals/getting-started/principles/
-    - title: Asking Permission Respectfully
-      path: /web/fundamentals/getting-started/permission/
     - title: Service Workers - an Introduction
       path: /web/fundamentals/getting-started/primers/service-workers
     - title: JavaScript Promises - an Introduction

@@ -26,7 +26,7 @@ landing_page:
 
         <p>The Push API and Notification API open a whole new set of
         possibilities for you to re-engage with your users.</p>
-      image_path: /web/fundamentals/images/web-push-notification.png
+      image_path: /web/images/common/push-notification-16x9.png
       buttons:
       - label: Get started
         path: engage-and-retain/push-notifications/

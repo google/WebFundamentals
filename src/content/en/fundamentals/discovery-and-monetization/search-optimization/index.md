@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-08-30 #}
 
@@ -17,13 +16,10 @@ Websites are visited not only by humans, but also by search engine web crawlers.
 - Responsive design is most recommended
 - Use <code>rel='canonical'</code> + <code>rel='alternate'</code> for separate desktop/mobile sites
 - Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs
-- No robots.txt, no robots meta tags required for fully accessible pages
-- Use noindex for pages for which you want to limit access to those who know the URL
-- Use the relevant authentication mechanism for pages you want to keep private
+- Use <code>noindex</code> for pages you want to limit access to those who know the URL
+- Use relevant authentication mechanism for pages you want to keep private
 
-## Give search engines your site structure
-
-{% include "_shared/contributors/agektmr.html" %}
+## Give Search Engines Your Site Structure
 
 How your website appears in search results is important to multi-device site design. This guide helps you optimize your website for search engines based on its URL structure.
 
@@ -37,19 +33,18 @@ optimizing your website for search engines.
 There are several ways to serve content to different devices. The three most
 common methods are:
 
-**Responsive web design:** serves the same HTML from one URL and uses CSS
-media queries to determine how the content is rendered on the client side.  
-ex) Desktop and Mobile: http://www.example.com/
+**Responsive Web Design:** serves the same HTML from one URL and uses CSS
+media queries to determine how the content is rendered on the client side.
+For example, Desktop and Mobile: http://www.example.com/
 
 **Separate mobile site:** redirects users to a different URL depending on the
-user-agent.  
-ex) Desktop: http://www.example.com/ Mobile: http://m.example.com/
+user-agent. For example, Desktop: http://www.example.com/
+Mobile: http://m.example.com/
 
 **Dynamic serving:** serves different HTML from one URL depending on the user-
-agent.  
-ex) Desktop and Mobile: http://www.example.com/
+agent. For example: Desktop and Mobile: http://www.example.com/
 
-The best approach in our opinion is responsive web design, though many websites
+The best approach is to use **responsive web design**, though many websites
 exist that use the other methods.
  
 Determine which URL structure suits your webpage. Then try the respective best
@@ -59,15 +54,17 @@ practices to optimize it for search engines.
 
 The benefit of making your website responsive are:
 
+<img class="attempt-right" src="imgs/responsive-2x.png" srcset="imgs/responsive.png 1x, imgs/responsive-2x.png 2x" >
+
 * Friendlier for user sharing
 * Quicker page load without redirects
 * A single URL for search results
 
-<img src="imgs/responsive-2x.png" srcset="imgs/responsive.png 1x, imgs/responsive-2x.png 2x" >
+<div style="clear:both;"></div>
   
 Learn to build websites with responsive web design at [Responsive Layouts](/web/fundamentals/design-and-ui/responsive/).
 
-### Use link[rel=canonical] and link[rel=alternate] when serving separate URLs
+### Use `link[rel=canonical]` and `link[rel=alternate]` when serving separate URLs
 
 Serving similar contents on a desktop version and a mobile version at different
 URLs may cause confusion for both users and search engines because it's not

@@ -35,3 +35,9 @@ h2.wf-header-title {
 .wf-pwa-in-action .devsite-landing-row-item {
   text-align:center;
 }
+
+.wf-small-logos img {
+  max-width: 300px;
+  margin-left:auto;
+  margin-right:auto;
+}

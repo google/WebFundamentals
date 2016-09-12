@@ -2,8 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Improving performance starts with minimizing, or at lease, optimizing the data that users download. Understanding how a browser renders those resources is a prerequisite for improving code efficiency. After improving it, you need a way to test it. 
 
-{# wf_review_required #}
-{# wf_updated_on: 2015-09-08 #}
+{# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Performance {: .page-title }
