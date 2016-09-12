@@ -115,6 +115,7 @@ def generateYaml(lang, requestPath, rawYaml):
   page = parsedYaml['landing_page']
   rows = page['rows']
   title = 'Web'
+  banner = devsiteHelper.getAnnouncementBanner(lang)
   header = 'Generic Page Header Here'
   customCss = ''
   if 'custom_css_path' in page:
@@ -154,6 +155,7 @@ def generateYaml(lang, requestPath, rawYaml):
     content += section
   text = render('gae/home.tpl', {
                 'title': title,
+                'announcementBanner': banner,
                 'requestPath': requestPath,
                 'customcss': customCss,
                 'header': header,

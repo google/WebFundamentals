@@ -10,7 +10,7 @@ description:
 The Chrome DevTools are a set of web authoring and debugging tools built
 into Google Chrome. Use the DevTools to iterate, debug and profile your site.
 
-Note: Looking for the latest, [Chrome Canary](https://tools.google.com/dlpage/chromesxs) always has the latest DevTools.
+Dogfood: Looking for the latest, [Chrome Canary](https://tools.google.com/dlpage/chromesxs) always has the latest DevTools.
 
 ## Opening the Chrome DevTools
 

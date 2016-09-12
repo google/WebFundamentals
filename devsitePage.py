@@ -25,6 +25,7 @@ def getPage(requestPath, lang):
   title = 'Web Fundamentals'
   leftNav = '- No Left Nav Found - '
   toc = '- No TOC Found - '
+  banner = devsiteHelper.getAnnouncementBanner(lang)
   fileLocations = [
     os.path.join(SOURCE_PATH, lang, requestPath) + '.md',
     os.path.join(SOURCE_PATH, 'en', requestPath) + '.md',
@@ -106,6 +107,7 @@ def getPage(requestPath, lang):
       # Renders the content into the template
       response = render('gae/article.tpl', {
         'title': title,
+        'announcementBanner': banner,
         'requestPath': requestPath.replace('index', ''),
         'leftNav': leftNav,
         'content': content,

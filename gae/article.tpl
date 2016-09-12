@@ -68,6 +68,7 @@
       </header>
       <div id="gc-wrapper">
         <div class="devsite-main-content clearfix">
+          {% autoescape off %}{{ announcementBanner }}{% endautoescape %}
           <nav class="devsite-section-nav devsite-nav nocontent">
             {% autoescape off %}
               {{ leftNav }}

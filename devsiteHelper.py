@@ -5,6 +5,7 @@ import yaml
 import hashlib
 import logging
 import textwrap
+from datetime import date, datetime
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
@@ -237,4 +238,27 @@ def getIncludeCode(includeTag, lang='en'):
   if dedentRegEx and dedentRegEx.group(1) == 'auto':
     result = textwrap.dedent(result)
   return cgi.escape(result)
+
+
+def getAnnouncementBanner(lang='en'):
+  # Returns the announcement banner
+  result = ''
+  projectFile = os.path.join(SOURCE_PATH, lang, '_project.yaml')
+  raw = open(projectFile, 'r').read().decode('utf8')
+  project = yaml.load(raw)
+  if 'announcement' in project:
+    startBanner = project['announcement']['start']
+    startBanner = datetime.strptime(startBanner, '%Y-%m-%dT%H:%M:%SZ')
+    endBanner = project['announcement']['end']
+    endBanner = datetime.strptime(endBanner, '%Y-%m-%dT%H:%M:%SZ')
+    if startBanner < datetime.now() < endBanner:
+      result = '<div class="devsite-banner devsite-banner-announcement">\n'
+      result += '<div class="devsite-banner-inner">\n'
+      result += project['announcement']['description']
+      result += '\n</div>\n'
+      result += '</div>'
+    else:
+      logging.warn('Announcement in _project.yaml expired: not shown')
+  return result
+
 
