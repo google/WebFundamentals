@@ -1,8 +1,12 @@
 toc:
   - title: Chrome DevTools
     section:
-    - title: Overview
+    - title: Overview (option 1)
       path: /web/tools/chrome-devtools/
+    - title: Overview (option 2)
+      path: /web/tools/chrome-devtools/landing-2
+    - title: Overview (option 3)
+      path: /web/tools/chrome-devtools/landing-3
     - title: Configure and Customize DevTools
       path: /web/tools/chrome-devtools/settings
     - title: Inspect and Edit Pages and Styles
@@ -131,3 +135,14 @@ toc:
         path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
       - title: Use the Allocation Profiler
         path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
+    - title: Extend the Chrome DevTools
+      section:
+      - title: Integrating with DevTools and Chrome
+        path: https://developer.chrome.com/devtools/docs/integrating
+        status: external
+      - title: DevTools Extensions API
+        path: https://developer.chrome.com/extensions/devtools
+        status: external
+      - title: Debugger Protocol
+        path: https://developer.chrome.com/devtools/docs/debugger-protocol
+        status: external

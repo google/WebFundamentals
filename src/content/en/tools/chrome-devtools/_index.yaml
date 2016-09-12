@@ -45,6 +45,7 @@ landing_page:
               <li><a href="/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports">Test Responsive and Device-specific Viewports</a></li>
               <li><a href="/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors">Emulate Sensors: Geolocation &amp; Accelerometer</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
           <article class="selected">
             <header>Elements</header>
@@ -55,6 +56,7 @@ landing_page:
               <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles">Edit Styles</a></li>
               <li><a href="/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom">Edit the DOM</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
           <article>
             <header>Console</header>
@@ -64,6 +66,7 @@ landing_page:
               <li><a href="/web/tools/chrome-devtools/debug/console/">Using the Console</a></li>
               <li><a href="/web/tools/chrome-devtools/debug/command-line/">Interact from Command Line</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
           <article>
             <header>Sources</header>
@@ -74,6 +77,7 @@ landing_page:
               <li><a href="/web/tools/chrome-devtools/debug/readability/">Debug Obfuscated Code</a></li>
               <li><a href="/web/tools/setup/setup-workflow">Set Up Persistence with DevTools Workspaces</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
           <article>
             <header>Network</header>
@@ -84,6 +88,7 @@ landing_page:
               <li><a href="/web/tools/chrome-devtools/profile/network-performance/understanding-resource-timing">Understanding Resource Timing</a></li>
               <li><a href="/web/tools/chrome-devtools/profile/network-performance/network-conditions">Network Throttling</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
           <article>
             <header>Timeline</header>
@@ -94,6 +99,7 @@ landing_page:
               <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime">Analyze runtime performance</a></li>
               <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts">Diagnose Forced Synchronous Layouts</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
           <article>
             <header>Profiles</header>
@@ -103,6 +109,7 @@ landing_page:
               <li><a href="/web/tools/chrome-devtools/profile/rendering-tools/js-execution">JavaScript CPU Profiler</a></li>
               <li><a href="/web/tools/chrome-devtools/profile/memory-problems">Heap Profiler</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
           <article>
             <header>Application</header>
@@ -111,6 +118,7 @@ landing_page:
             <ul>
               <li><a href="/web/tools/chrome-devtools/iterate/manage-data/">Manage data</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
           <article>
             <header>Security</header>
@@ -119,6 +127,7 @@ landing_page:
             <ul>
               <li><a href="/web/tools/chrome-devtools/security/">Security</a></li>
             </ul>
+            <div style="clear:both;"></div>
           </article>
         </section>
 
@@ -137,35 +146,25 @@ landing_page:
 
   - heading: Get Involved
     items:
-    - heading: Connect
-      description: ""
-      buttons:
-      - label: Twitter
-        path: https://twitter.com/ChromeDevTools
-        classname: button button-white block
-      - label: Stack Overflow
-        path: https://stackoverflow.com/questions/tagged/google-chrome-devtools
-        classname: button button-white block
-      - label: Slack
-        path: https://chromiumdev.slack.com/messages/devtools/
-        classname: button button-white block
-    - heading: Contribute
-      description: ""
-      buttons:
-      - label: File a Bug
-        path: https://crbug.com/new
-        classname: button button-white block
-      - label: How to Contribute
-        path: https://developer.chrome.com/devtools/docs/contributing
-        classname: button button-white block
-    - heading: Extend
-      description: ""
-      buttons:
-      - label: Integrating with DevTools and Chrome
-        path: https://developer.chrome.com/devtools/docs/integrating
-      - label: DevTools Extension APIs
-        path: https://developer.chrome.com/extensions/devtools
-      - label: Debugger Protocol
-        path: https://developer.chrome.com/devtools/docs/debugger-protocol
+    - custom_html: >
+        <h3>Connect</h3>
+        <ul>
+          <li><a href="https://twitter.com/ChromeDevTools">Twitter</a></li>
+          <li><a href="https://stackoverflow.com/questions/tagged/google-chrome-devtools">StackOverflow</a></li>
+          <li><a href="https://chromiumdev.slack.com/messages/devtools/">Slack</a></li>
+        </ul>
+    - custom_html: >
+        <h3>Contribute</h3>
+        <ul>
+          <li><a href="https://crbug.com/new">File a bug</a></li>
+          <li><a href="https://developer.chrome.com/devtools/docs/contributing">How to Contribute</a></li>
+        </ul>
+    - custom_html: >
+        <h3>Extend</h3>
+        <ul>
+          <li><a href="https://developer.chrome.com/devtools/docs/integrating">Integrating with DevTools and Chrome</a></li>
+          <li><a href="https://developer.chrome.com/extensions/devtools">DevTools Extensions API</a></li>
+          <li><a href="https://developer.chrome.com/devtools/docs/debugger-protocol">Debugger protocol</a></li>
+        </ul>
 
 
