@@ -563,10 +563,7 @@ We always go to the network & update a cache as we go.
       );
     });
 
-Note: The above doesn't work in Chrome yet, as we've yet to expose `fetch` and
-`caches` to pages 
-([ticket #1](https://code.google.com/p/chromium/issues/detail?id=436770),
-[ticket #2](https://code.google.com/p/chromium/issues/detail?id=439389)).
+Note: The above doesn't work in Chrome yet, as we've yet to expose `fetch` and `caches` to pages ([ticket #1](https://code.google.com/p/chromium/issues/detail?id=436770), [ticket #2](https://code.google.com/p/chromium/issues/detail?id=439389)).
 
 In [trained-to-thrill][ttt] I worked around this by
 using [XHR instead of fetch](https://github.com/jakearchibald/trained-to-thrill/blob/3291dd40923346e3cc9c83ae527004d502e0464f/www/static/js-unmin/utils.js#L3),
@@ -720,9 +717,9 @@ And thanks to [Jeff Posnick](https://twitter.com/jeffposnick) for catching many 
 before I hit "publish".
 
 ### Further reading
-* [Intro to ServiceWorkers][sw_primer]
+* [ServiceWorkers - an Introduction][sw_primer]
 * [Is ServiceWorker ready?][is_sw_ready] - track the implementation status across the main browsers
-* [JavaScript promises, there and back again](/web/fundamentals/getting-started/primers/promises) - guide to promises
+* [JavaScript Promises - an Introduction](/web/fundamentals/getting-started/primers/promises) - guide to promises
 
 
 [ttt]: https://jakearchibald.github.io/trained-to-thrill/
