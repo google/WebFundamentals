@@ -14,7 +14,7 @@ notifications&mdash;functionality that would normally require a native
 application&mdash;are coming to the web. Service workers provide the technical
 foundation that all these features rely on.
 
-## What is a Service Worker
+## What is a service worker
 
 A service worker is a script that your browser runs in the background,
 separate from a web page, opening the door to features that don't need a web
@@ -46,7 +46,7 @@ Things to note about a service worker:
   interface, and those pages can manipulate the DOM if needed.
 * Service worker is a programmable network proxy, allowing you to control how 
   network requests from your page are handled.
-* It will be terminated when not in use, and restarted when it's next needed, 
+* It's terminated when not in use, and restarted when it's next needed, 
   so you cannot rely on global state within a service worker's `onfetch` and 
   `onmessage` handlers. If there is information that you need to persist and 
   reuse across restarts, service workers do have access to the 
@@ -55,9 +55,9 @@ Things to note about a service worker:
   then you should stop reading this and check out 
   [Promises, an introduction](/web/fundamentals/getting-started/primers/promises).
 
-## The Service Worker Life Cycle
+## The service worker life cycle
 
-A service worker has a lifecycle which is completely separate from your web page.
+A service worker has a lifecycle that is completely separate from your web page.
 
 To install a service worker for your site, you need to register it, which you do
 in your page's JavaScript. Registering a service worker will cause the browser
@@ -78,7 +78,7 @@ After the activation step, the service worker will control all pages that fall
 under its scope, though the page that registered the service worker for the
 first time won't be controlled until it's loaded again. Once a service worker is
 in control, it will be in one of two states: either the service worker will be
-terminated to save memory, or it will handle fetch and message events which
+terminated to save memory, or it will handle fetch and message events that
 occur when a network request or message is made from your page.
 
 Below is an overly simplified version of the service worker lifecycle on its
@@ -89,7 +89,7 @@ first installation.
 
 ## Prerequisites
 
-### Browser Support
+### Browser support
 
 Browser options are growing. Service workers are suppported by Firefox and
 Opera. Microsoft Edge is now 
@@ -119,7 +119,7 @@ so check your server's documentation and be sure to check out
 [Mozilla's SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/) 
 for best practices.
 
-## Register A Service Worker
+## Register A service worker
 
 To install a service worker you need to kick start the process by
 **registering** it in your page. This tells the browser where your
@@ -168,7 +168,7 @@ affect the new window. Any registrations and caches created from within an
 Incognito window will be cleared out once that window is closed.
 
 
-## Install A Service Worker
+## Install a service worker
 
 After a controlled page kicks off the registration process, let's shift to the
 point of view of the service worker script, which handles the `install` event.
@@ -225,7 +225,7 @@ installed.
 This is just one example, you can perform other tasks in the `install` event or
 avoid setting an `install` event listener altogether.
 
-## Cache and Return Requests
+## Cache and return requests
 
 Now that you've installed a service worker, you probably want to 
   return one of your cached responses, right?
@@ -320,7 +320,7 @@ What we are doing is this:
    as pass it to the cache to use, we need to clone it so we can send one to 
    the browser and one to the cache.
 
-## Update A Service Worker
+## Update a service worker
 
 There will be a point in time where your service worker will 
 need updating. When that time comes, you'll need to follow these steps:
@@ -351,7 +351,7 @@ This means in the install step we'd create two caches, `'pages-cache-v1'` and
 `'my-site-cache-v1'`.
 
 The following code would do this by looping through all of the caches in the
-service worker and deleting any caches which aren't defined in the cache
+service worker and deleting any caches that aren't defined in the cache
 whitelist.
 
 
@@ -372,14 +372,14 @@ whitelist.
       );
     });
 
-## Rough Edges and Gotchas
+## Rough edges and gotchas
 
 This stuff is really new. Here's a collection of issues that 
 get in the way. Hopefully this section can be deleted soon, but for now 
 these are worth being mindful of.
 
 
-### If Installation Fails, We're Not so Good at Telling You About It
+### If installation fails, we're not so good at telling you about it
 
 If a worker registers, but then doesn't appear in `chrome://inspect/#service-workers` 
 or `chrome://serviceworker-internals`, it's likely failed to
@@ -393,9 +393,9 @@ This, along with <a href="https://developer.chrome.com/devtools/docs/javascript-
 should reveal the issue.
 
 
-### The Defaults of fetch()
+### The defaults of fetch()
 
-#### No Credentials by Default
+#### No credentials by default
 
 When you use `fetch`, by default, requests won't contain credentials such as 
 cookies. If you want credentials, instead call:
@@ -411,7 +411,7 @@ otherwise. Fetch's behaviour is more like other CORS requests, such as `<img
 crossorigin>`, which never sends cookies unless you opt-in with `<img
 crossorigin="use-credentials">`.
 
-#### Non-CORS Fail by Default
+#### Non-CORS fail by default
 
 By default, fetching a resource from a third party URL will fail if it doesn't
 support CORS. You can add a `no-CORS` option to the Request to overcome this,
@@ -425,7 +425,7 @@ tell if the response was successful or not.
     });
 
 
-### Handling Responsive Images
+### Handling responsive images
 
 The `srcset` attribute or the `<picture>` element will select the most
 appropriate image asset at run time and make a network request.
@@ -461,7 +461,7 @@ In a `srcset` image, we'd have some markup like this:
 
 If we are on a 2x display, then the browser will opt to download `image-2x.png`,
 if we are offline you could `.catch()` this request and return `image-src.png`
-instead if it's cached, however the browser will expect an image which takes
+instead if it's cached, however the browser will expect an image that takes
 into account the extra pixels on a 2x screen, so the image will appear as
 200x200 CSS pixels instead of 400x400 CSS pixels. The only way around this is to
 set a fixed height and width on the image.
@@ -475,13 +475,13 @@ For `<picture>` elements being used for art direction, this becomes considerably
 more difficult and will depend heavily on how your images are created and used,
 but you may be able to use a similar approach to srcset.
 
-## Learn More
+## Learn more
 
 There is a list of documentation on service worker being maintained at 
 [https://jakearchibald.github.io/isserviceworkerready/resources](https://jakearchibald.github.io/isserviceworkerready/resources.html)
 that you may find useful.
 
-## Get Help
+## Get help
 
 If you get stuck then please post your questions on Stackoverflow and use the 
 '[service-worker](http://stackoverflow.com/questions/tagged/service-worker)' 
