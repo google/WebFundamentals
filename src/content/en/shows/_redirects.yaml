@@ -17,15 +17,20 @@ redirects:
 
 - from: /web/shows/cds/2014/...
   to: https://www.youtube.com/playlist?list=PLOU2XLYxmsILE0KnGTKKj2SsOtxsK_y_d
-  
+
 - from: /web/shows/cds/2015/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICcHeQY02XLvoGL34rZFWZn
 
-- from: /web/shows/google-io/...
-  to: /web/shows/google-io/
-
 - from: /web/shows/devbytes/...
   to: https://www.youtube.com/user/ChromeDevelopers/
+
+# TODO
+- from: /web/shows/google-io/2014/
+  to: /web/shows/google-io/2014/
+
+# TODO
+- from: /web/shows/google-io/2015/
+  to: /web/shows/google-io/2015/
 
 - from: /web/shows/http203/...
   to: /web/shows/http203/
@@ -33,8 +38,14 @@ redirects:
 - from: /web/shows/lazyweb/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAphRfFANEdt5WTb87aZZDk
 
+- from: /web/shows/new-in-chrome/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
+
 - from: /web/shows/polycasts/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDdS7HWIC_BYRunV6MHs5xo
+
+- from: /web/shows/pwa-devsummit/...
+  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb
 
 - from: /web/shows/supercharged/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBz9ACEQRmO9Lw8PW7vn0lr
@@ -42,11 +53,5 @@ redirects:
 - from: /web/shows/ttt/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIB3ci6nwNyLYNU6RDOU3YyL
 
-- from: /web/shows/new-in-chrome/...
-  to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
-
 - from: /web/shows/webrtc/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcICT_h7pn39XpU4JkqOja3p-
-
-- from: /web/shows/...
-  to: /web/shows/
