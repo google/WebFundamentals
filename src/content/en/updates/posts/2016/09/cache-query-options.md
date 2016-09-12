@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "CacheQueryOptions arrive in Chrome 54"
-description: "The full set of CacheQueryOptions are supported, making it easier to find the cached responses you're looking for."
+description: "The full set of <code>CacheQueryOptions</code> are supported, making it easier to find the cached responses you're looking for."
 published_on: 2016-09-12
 updated_on: 2016-09-12
 authors:
@@ -9,11 +9,11 @@ authors:
 tags:
   - chrome54
   - serviceworker
-  - cachestorage
+  - cache
 featured_image: /web/updates/images/2016/09/cache-query-options.png
 ---
 
-If you use the [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage), either within a service worker or directly from web apps via [`window.caches`](https://developer.mozilla.org/en-US/docs/Web/API/Window/caches), there's some good news: starting in Chrome 54, the full set of [`CacheQueryOptions`](https://w3c.github.io/ServiceWorker/spec/service_worker/#dictdef-cache-cachequeryoptions) are supported, making it easier to find the cached responses you're looking for.
+If you use the [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage), either within a service worker or directly from web apps via [`window.caches`](https://developer.mozilla.org/en-US/docs/Web/API/Window/caches), there's some good news: starting in Chrome 54, the full set of [`CacheQueryOptions`](https://w3c.github.io/ServiceWorker/spec/service_worker/#dictdef-cache-cachequeryoptions) is supported, making it easier to find the cached responses you're looking for.
 
 # What options are available?
 
@@ -49,7 +49,7 @@ caches.match(event.request, {ignoreSearch: true})
 
 ## cacheName
 
-`cacheName` comes in handy when you have multiple caches and you want a response that's stored in one specific cache. Using it can make your queries more efficient (since the browser only has to check inside one cache, instead of all of them) and allows you to retrieve a specific response for a given URL when multiple caches might have that URL as a key. cacheName only has an effect when used with [`CacheStrorage.match()`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match), not [`Cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match), because <code>Cache.match()</code> already operates on a single, named cached.
+`cacheName` comes in handy when you have multiple caches and you want a response that's stored in one specific cache. Using it can make your queries more efficient (since the browser only has to check inside one cache, instead of all of them) and allows you to retrieve a specific response for a given URL when multiple caches might have that URL as a key. `cacheName` only has an effect when used with [`CacheStrorage.match()`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match), not [`Cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match), because <code>Cache.match()</code> already operates on a single, named cached.
 
 {% highlight javascript %}
 // The following are functionally equivalent:
@@ -62,7 +62,7 @@ caches.match('index.html', {cacheName: 'my-cache'});
 
 ## ignoreMethod and ignoreVary
 
-`ignoreMethod` and `ignoreVary` are a bit more niche than `ignoreSearch` and `cacheName`, but they do serve specific purposes.
+`ignoreMethod` and `ignoreVary` are a bit more niche than `ignoreSearch` and `cacheName`, but they serve specific purposes.
 
 `ignoreMethod` allows you to pass in a [`Request`](https://developer.mozilla.org/en-US/docs/Web/API/Request) object that has any [`method`](https://developer.mozilla.org/en-US/docs/Web/API/Request/method) (<code>POST</code>, <code>PUT</code>, etc.) as the first parameter to <code>match()</code>. Normally, only <code>GET</code> or <code>HEAD</code> requests are allowed.
 
