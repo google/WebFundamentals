@@ -166,9 +166,9 @@ def renderDevSiteContent(content, lang='en'):
     content = content.replace(include, getInclude(include, lang))
 
   # Replaces frameboxes with the iframe it needs
-  frameboxes = re.findall(r'^{%[ ]?framebox .+%}.*?{%[ ]?endframebox[ ]?%}(?ms)', content)
+  frameboxes = re.findall(r'{%[ ]?framebox.+%}.*?{%[ ]?endframebox[ ]?%}(?ms)', content)
   for framebox in frameboxes:
-    fbContent = re.search(r'^({%[ ]?framebox .+%})(.*?){%[ ]?endframebox[ ]?%}(?ms)', framebox)
+    fbContent = re.search(r'({%[ ]?framebox.+%})(.*?){%[ ]?endframebox[ ]?%}(?ms)', framebox)
     fbOpenTag = fbContent.group(1)
     fbHeight = re.search(r'height="(.*?)"', fbContent.group(1))
     fbContent = fbContent.group(2)

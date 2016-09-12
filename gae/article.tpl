@@ -116,4 +116,6 @@
   <script async src="/wf-local/scripts/prettify-bundle.js" onload="prettyPrint();">
   </script>
   <script async defer src="/wf-local/scripts/devsite.js"></script>
+  <script async src="/wf-local/scripts/footer-closure.js" onload="devsite.kennedy.InitializeTabbars();">
+  </script>
 </html>
