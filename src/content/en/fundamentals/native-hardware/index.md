@@ -1,23 +1,24 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Make your web sites and apps more like native applications.
+description: Give your website access to native hardware like geolocation, device orientation, click to call and more.
 
-{# wf_review_required #}
-{# wf_updated_on: 2015-09-08 #}
+{# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Accessing Native Hardware {: .page-title }
 
-Make your web sites and apps more like native applications.
+Give your website access to native hardware like geolocation, device
+orientation, click to call and more.
 
 
 <div class="attempt-left">
   <h2>User Location</h2>
   <a href="user-location/">
-    <img src="https://placehold.it/321x213">
+    <img src="images/geoloc.png">
   </a>
   <p>
-    Access the device's location to guide users to a destination, geo-tag user-created content, or provide up-to-date local information.
+    Access the device's location to guide users to a destination, geo-tag
+    user-created content, or provide up-to-date local information.<br>
     <a href="user-location/">Get Started</a>
   </p>
 </div>
@@ -25,21 +26,38 @@ Make your web sites and apps more like native applications.
 <div class="attempt-right">
   <h2>Device Orientation &amp; Motion</h2>
   <a href="device-orientation/">
-    <img src="https://placehold.it/321x213">
+    <img src="images/device-orientation.png">
   </a>
   <p>
-    Use a mobile devince's accelerometer, gyroscope, and compass. In gaming control the direction or action of a character. With geolocation, create more accurate turn-by-turn navigation or provide information about a specific location.
+    Use a mobile devince's accelerometer, gyroscope, and compass. In gaming
+    control the direction or action of a character. With geolocation, create
+    more accurate turn-by-turn navigation or provide information about a
+    specific location.<br>
     <a href="device-orientation/">Learn More</a>
   </p>
 </div>
 
+<div style="clear:both;"></div>
+
 <div class="attempt-left">
   <h2>Click to Call</h2>
   <a href="click-to-call/">
-    <img src="https://placehold.it/321x213">
+    <img src="images/click-to-call.png">
   </a>
   <p>
-	Let users directly connect with you by tapping a phone number.
+	   Let users directly connect with you by tapping a phone number.<br>
     <a href="click-to-call/">Get Started</a>
   </p>
 </div>
+
+
+<div style="clear:both;"></div>
+
+## Related Resources
+
+### Chrome DevTools
+
+* [Emulate Sensors: Geolocation and Accelerometer](/web/tools/chrome-devtools/device-mode/device-input-and-sensors)
+
+
+<div style="clear:both;"></div>

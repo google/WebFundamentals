@@ -2,105 +2,103 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Polymer Starter Kit.
 
-{# wf_review_required #}
-
 # Polymer Starter Kit {: .page-title }
 
-<div class="wf-subheading">
-  <div class="page-content mdl-typography--text-center mdl-grid">
-    <div class="mdl-cell mdl-cell--1-col"></div>
-    <div class="mdl-cell mdl-cell--10-col">
-      <h3>Set up for success using Polymer in production.</h3>
-      <p>
-        Start your project with the Polymer Starter Kit to get the most out of 
-        the library, elements built with Polymer, and Polymer-related tools.
-      </p>
-      <a class="mdl-button mdl-js-button mdl-button--raised" href="https://github.com/polymerelements/polymer-starter-kit/releases">Download Polymer Starter Kit 1.0</a>
-    </div>
-    <div class="mdl-cell mdl-cell--1-col"></div>
-  </div>
-</div>
+[Download Polymer Starter Kit](https://github.com/polymerelements/polymer-starter-kit/releases){: .button .button-primary }
 
-{% include page-structure/site-promo-banner.liquid %}
+## What is the Polymer Starter Kit?
 
-<div class="page-content">
-  <div class="mdl-grid mdl-typography--text-center">
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/code.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Components for nearly any app, out of the box</h3>
-      <p>Get started quickly with the complete set of the same paper and iron elements used by Google products.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/build-chain.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Complete build chain</h3>
-      <p>Build your app using a suite of gulp tasks that leverage the full range of Polymer-related tools, such as vulcanize, crisper, and more.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/testing.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Testing made easy</h3>
-      <p>Test your app and all of its components using the built-in and pre-configured Web Component Tester.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/theming.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Flexible app theming</h3>
-      <p>Easily theme your entire application, including the built-in elements, using app-level Custom CSS Properties.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/star.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Framework-free, or framework-compatible</h3>
-      <p>Build your app out of elements, or wire in an external framework to handle business logic. It's up to you!</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {% include svgs/responsive.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Responsive app layout boilerplate</h3>
-      <p>Start off mobile-friendly with the included layout boilerplate.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/live-reload.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Live Browser Reloading</h3>
-      <p>Reload the browser in real-time anytime an edit is made, without the need for an extension.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--4-col">
-      <div class="icon">
-        {%include svgs/tick.svg %}
-      </div>
-      <h3 class="mdl-typography--title">Material design ready</h3>
-      <p>Use the built-in paper elements to create a full material design-style app.</p>
-    </div>
-  </div>
+The [Polymer Starter Kit](https://github.com/PolymerElements/polymer-starter-kit){: .external }
+is a starting point for building apps using a drawer-based layout. The layout 
+is provided by `app-layout` elements.
+
+This template, along with the `polymer-cli` toolchain, also demonstrates use
+of the "PRPL pattern" This pattern allows fast first delivery and interaction with
+the content at the initial route requested by the user, along with fast subsequent
+navigation by pre-caching the remaining components required by the app and
+progressively loading them on-demand as the user navigates through the app.
+
+The PRPL pattern, in a nutshell:
+
+* **Push** components required for the initial route
+* **Render** initial route ASAP
+* **Pre-cache** components for remaining routes
+* **Lazy-load** and progressively upgrade next routes on-demand
+
+### Migrating from Polymer Starter Kit v1?
+
+[Check out our blog post that covers what's changed in PSK2 and how to migrate!](https://www.polymer-project.org/1.0/blog/2016-08-18-polymer-starter-kit-or-polymer-cli.html){: .external }
+
+## Setup
+
+### Prerequisites
+
+Install [polymer-cli](https://github.com/Polymer/polymer-cli){: .external }:
+
+    npm install -g polymer-cli
+
+### Initialize project from template
+
+    mkdir my-app
+    cd my-app
+    polymer init starter-kit
+
+### Start the development server
+
+This command serves the app at `http://localhost:8080` and provides basic URL
+routing for the app:
+
+    polymer serve --open
 
 
-  <div class="mdl-grid">
-    <figure class="mdl-cell mdl-cell--6-col">
-      <img src="../imgs/psk-desktop.png">
-    </figure>
-    <figure class="mdl-cell mdl-cell--6-col">
-      <img src="../imgs/psk-mobile.png">
-    </figure>
-  </div>
+### Build
 
-  <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--6-col">
-      <h3 class="mdl-typography--headline">Built for elements</h3>
-      <p>Easily add in additional elements, either by building them yourself or installing them with bower. Browse the <a href="https://elements.polymer-project.org">catalog of elements built by the Polymer team</a> for inspiration.</p>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-      <h3 class="mdl-typography--headline">Tooled for production</h3>
-      <p>Polymer starter kit links up all of the powerful Polymer-centric tooling out of the box to easily minify and vulcanize your app.</p>
-    </div>
-  </div>
-</div>
+This command performs HTML, CSS, and JS minification on the application
+dependencies, and generates a service-worker.js file with code to pre-cache the
+dependencies based on the entrypoint and fragments specified in `polymer.json`.
+The minified files are output to the `build/unbundled` folder, and are suitable
+for serving from a HTTP/2+Push compatible server.
+
+In addition the command also creates a fallback `build/bundled` folder,
+generated using fragment bundling, suitable for serving from non
+H2/push-compatible servers or to clients that do not support H2/Push.
+
+    polymer build
+
+### Preview the build
+
+This command serves the minified version of the app at `http://localhost:8080`
+in an unbundled state, as it would be served by a push-compatible server:
+
+    polymer serve build/unbundled
+
+This command serves the minified version of the app at `http://localhost:8080`
+generated using fragment bundling:
+
+    polymer serve build/bundled
+
+### Run tests
+
+This command will run
+[Web Component Tester](https://github.com/Polymer/web-component-tester){: .external } against the
+browsers currently installed on your machine.
+
+    polymer test
+
+### Adding a new view
+
+You can extend the app by adding more views that will be demand-loaded
+e.g. based on the route, or to progressively render non-critical sections
+of the application.  Each new demand-loaded fragment should be added to the
+list of `fragments` in the included `polymer.json` file.  This will ensure
+those components and their dependencies are added to the list of pre-cached
+components (and will have bundles created in the fallback `bundled` build).
+
+## Next Steps
+
+Check out the [getting started guide](https://www.polymer-project.org/1.0/start/toolbox/set-up){: .external }
+
+## Learn More
+
+To learn more, see the code, submit an issue, or to get involved, check out
+our Git repo at [https://github.com/polymerelements/polymer-starter-kit](https://github.com/polymerelements/polymer-starter-kit){: .external }

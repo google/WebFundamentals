@@ -4,13 +4,7 @@ toc:
     - title: Overview
       path: /web/fundamentals/discovery-and-monetization/
     - title: Search Optimization
-      section:
-      - title: Overview
-        path: /web/fundamentals/discovery-and-monetization/search-optimization/
-      - title: Give Search Engines Your Site Structure
-        path: /web/fundamentals/discovery-and-monetization/search-optimization/url-structure
-      - title: Control Crawling and Indexing from Search Engines
-        path: /web/fundamentals/discovery-and-monetization/search-optimization/control-crawling-and-indexing
+      path: /web/fundamentals/discovery-and-monetization/search-optimization/
     - title: Social Discovery
       path: /web/fundamentals/discovery-and-monetization/social-discovery/
     - title: Monetization with Ads

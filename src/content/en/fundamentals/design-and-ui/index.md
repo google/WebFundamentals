@@ -1,9 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: esign and UI encopases a few broad areas. What does a web page look like and hat's in it? How does it behave?
+description: Web design and UI encompases a few broad areas. What does it look like? How does it behave? How does it respond to different screen sizes, input types and devices?
 
-{# wf_review_required #}
-{# wf_updated_on: 2015-09-08 #}
+{# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Design & UI {: .page-title }

@@ -2,80 +2,86 @@
 
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
+
 landing_page:
+  custom_css_path: /web/styles/wf-root.css
 
   header:
     description: >
-      Discover our tools and kickstart your development.
+      Discover our tools that can help you kickstart your development.
 
   rows:
 
-  - heading: PLACE HOLDER PAGE
+  - heading: Chrome DevTools
     classname: devsite-landing-row-67 devsite-landing-row-no-image-background
     items:
     - description: >
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-        ac congue metus. Fusce tristique pellentesque magna a facilisis. Nunc
-        maximus, lacus at condimentum pellentesque, eros urna finibus ante, et
-        condimentum augue eros eget ipsum. Etiam porta tortor eget dolor porta
-        commodo. Nulla et efficitur nisl. Nullam a convallis erat. Vivamus
-        erat ligula, pulvinar vel metus ut, vestibulum tincidunt ligula.
-        Cras et augue faucibus, dapibus sapien posuere, placerat urna. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Praesent at dolor eget lacus efficitur rutrum.
-        Phasellus urna felis, fringilla sed felis ut, sodales pretium augue.
-        Phasellus sodales bibendum nibh, sed aliquam nunc dictum eu. Aliquam
-        at est facilisis nibh egestas hendrerit. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit. Duis sodales at lacus in aliquet.
-      image_path: https://placehold.it/1600x900
-
-
-  - columns:
-    - items:
-      - icon:
-          icon_name: web
+        The Chrome DevTools are a set of web authoring and debugging tools
+        built into Google Chrome. Use the DevTools to iterate, debug and
+        profile your site.
+      image_path: images/chrome-devtools.png
+      buttons:
+      - label: Get Started
         path: /web/tools/chrome-devtools/
-        heading: "Chrome DevTools"
-        description: "TBD"
+        classname: button button-primary
 
-      - icon:
-          icon_name: trending_up
-        path: /web/tools/starter-kit/
-        heading: "Web Starter Kit"
-        description: "Let us do the bootstrapping, and you focus on what you'd like to build."
+  - heading: Libraries
+    items:
+    - heading: Service Worker Libraries
+      description: >
+        Our Service Worker Libraries are provided to help simplify your
+        development experience, that free your app from the network, without
+        having to write any boilerplate service worker code!
+      buttons:
+      - label: Service Worker Toolbox
+        path: service-worker-libraries/#service-worker-toolbox
+      - label: Service Worker Precache
+        path: service-worker-libraries/#service-worker-precache
+    - heading: Material Design Lite
+      description: >
+        Material Design Lite lets you add a Material Design look and feel to
+        your websites. It doesn’t rely on any JavaScript frameworks and aims
+        to optimize for cross-device use, gracefully degrade in older browsers,
+        and offer an experience that is immediately accessible.
+      buttons:
+      - label: Learn more
+        path: https://getmdl.io/
 
-      - icon:
-          icon_name: network_check
-        path: /web/tools/polymer-starter-kit/
-        heading: "Polymer Starter Kit"
-        description: "An opinionated starting point for building Polymer 1.0 web apps that work great across different devices."
+  - heading: Frameworks
+    classname: devsite-landing-row-no-image-background wf-small-logos
+    items:
+    - description: >
+        The Polymer Project helps you deliver amazing user experiences by
+        unlocking the full potential of the web platform. Polymer makes the
+        most of Web Components, a powerful new platform feature for extending
+        HTML and componentizing your apps, allowing you to build cutting-edge
+        Progressive Web Apps that load quickly, respond instantly and work
+        from anywhere.
+      image_path: images/polymer.svg
+      buttons:
+      - label: Learn more
+        path: https://www.polymer-project.org/
+    - description: >
+        AngularJS lets you write client-side web applications as if you had a
+        smarter browser. It lets you use good old HTML (or HAML, Jade and
+        friends!) as your template language and lets you extend HTML’s syntax
+        to express your application’s components clearly and succinctly.
+      image_path: images/angularjs.png
+      buttons:
+      - label: Learn more
+        path: https://angularjs.org/
 
-      - icon:
-          icon_name: security
-        path: https://www.getmdl.io/
-        heading: "Material Design Lite"
-        description: "TBD"
-
-
-
-
-    - items:
-      - icon:
-          icon_name: web
-        path: https://www.polymer-project.org
-        heading: "Polymer"
-        description: "TBD"
-
-      - icon:
-          icon_name: group_add
-        path: /web/tools/service-worker-libraries/
-        heading: "Service Worker Libraries"
-        description: "TBD"
-
-      - icon:
-          icon_name: find_in_page
-        path: /speed/pagespeed/module
-        heading: "Page Speed Module"
-        description: "Maximize discoverability for your users and your revenue."
+  - heading: Other Tools
+    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+    items:
+    - heading: PageSpeed Module
+      description: >
+        The PageSpeed modules are open-source server modules that optimize
+        your site automatically.
+      image_path: images/pagespeed.png
+      buttons:
+      - label: Learn more
+        path: https://developers.google.com/speed/pagespeed/module/
+    
 
 

@@ -1,0 +1,69 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+# application: petele-scratch
+# version: wf-devsite
+
+handlers:
+- url: /robots.txt
+  static_files: gae/robots.txt
+  upload: gae/robots.txt
+
+- url: /wf-local/scripts/
+  static_dir: gae/scripts/
+
+- url: /wf-local/styles/
+  static_dir: gae/styles/
+
+- url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3))
+  static_files: src/content/en/\1
+  expiration: 1d
+  upload: src/content/en/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3))
+
+- url: /(.*\.ico)
+  static_files: src/content/en/images/\1
+  expiration: 7d
+  upload: src/content/en/images/(.*\.ico)
+
+- url: /web/manifest.json
+  static_files: src/content/en/manifest.json
+  expiration: 1d
+  upload: src/content/en/manifest.json
+
+- url: /web/(.*\.(js|css))
+  static_files: src/content/en/\1
+  expiration: 1d
+  upload: src/content/en/(.*\.(js|css))
+  http_headers:
+    Access-Control-Allow-Origin: https://developers.google.com
+  application_readable: true
+
+- url: /web/(.*\.(woff|eot|ttf))
+  static_files: \1
+  expiration: 1d
+  upload: (.*\.(woff|eot|ttf))
+  http_headers:
+    Access-Control-Allow-Origin: https://developers.google.com
+
+# This is simply a redirect from index to /web
+- url: /(.*)
+  script: appengine_main.app
+  secure: always
+
+skip_files:
+- ^(gulp-tasks/.*)
+- ^(node_modules/.*)
+- ^(scratch/.*)
+- ^(tools/.*)
+- ^(src/data/.*)
+- ^(src/templates/.*)
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.DS_Store$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?.*\.psd$
+- ^(.*/)?.*\.pxm$
+- ^(.*/)?.*\.pyc$
+- ^(.*/)?.*\.sh$
+- ^(.*/)?\..*$

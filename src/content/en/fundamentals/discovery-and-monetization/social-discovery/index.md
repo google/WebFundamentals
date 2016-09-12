@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-11-08 #}
 {# wf_published_on: 2014-10-07 #}
 
@@ -10,14 +9,16 @@ description: You can influence the way your site appears when shared via social 
 
 {% include "_shared/contributors/agektmr.html" %}
 
-You can influence the way your site appears when shared via social media by adding a few lines of code to each page. This can help bring more people to your site by providing previews with richer information than would otherwise be available.
+You can influence the way your site appears when shared via social media by
+adding a few lines of code to each page. This can help bring more people to
+your site by providing previews with richer information than would otherwise
+be available.
 
 
 ## TL;DR
-- 'Use schema.org microdata to provide page title, description and an image for Google+.'
-- 'Use Open Graph Protocol (OGP) to provide page title, description and an image for Facebook.'
-- 'Use Twitter Cards to provide page title, description, an image and a Twitter id for Twitter.'
-
+- Use schema.org microdata to provide page title, description and an image for Google+.
+- Use Open Graph Protocol (OGP) to provide page title, description and an image for Facebook.
+- Use Twitter Cards to provide page title, description, an image and a Twitter id for Twitter.
 
 You can influence the way your site appears when shared via social media by
 adding a few lines of code to each page. This can help increase engagement by
@@ -29,25 +30,29 @@ Which one do you think is more likely to be clicked? People are drawn to images
 and feel more confident they'll like what they find when they have an early
 preview.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6-col">
+<div class="attempt-left">
+  <figure>
     <img src="imgs/gplus-snippet-2.png" srcset="imgs/gplus-snippet-2.png 1x,
       imgs/gplus-snippet-2-2x.png 2x" />
-    <figcaption class="wf-figcaption-good">
+    <figcaption class="success">
       With the appropriate markup, the correct title, a short
       description and an image are included. Adding these items can help
       increase engagement.
-    </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="imgs/gplus-snippet-1.png" srcset="imgs/gplus-snippet-1.png 1x,
-      imgs/gplus-snippet-1-2x.png 2x" />
-    <figcaption class="wf-figcaption-bad">
-      Without the proper mark up, only the page title is
-      included.
-    </figcaption>
+     </figcaption>
   </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="imgs/gplus-snippet-1.png" srcset="imgs/gplus-snippet-1.png 1x,
+      imgs/gplus-snippet-1-2x.png 2x" />
+    <figcaption class="warning">
+      Without the proper mark up, only the page title is
+      included.
+     </figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 When someone on a social network wants to share your website with his friends,
 he would probably add some notes explaining how awesome it is, and share it.
@@ -61,6 +66,7 @@ image. This means they don't have to spend valuable time (or characters)
 describing the link.
 
 ## Use schema.org + microdata to provide rich snippets on Google+
+
 Crawlers use many methods to parse a page and understand its content. By using
 [microdata](http://www.w3.org/TR/microdata/), and
 [schema.org](https://schema.org/) vocabulary, you help social sites and search
@@ -69,7 +75,7 @@ engines better understand the contents of the page.
 Here's an example:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" %}
+{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
 </pre>
 
 While most metadata are embedded in the head section of a webpage, microdata
@@ -105,17 +111,14 @@ In order to validate rich snippets on Google+, you can use tools such as:
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
-* [Semantic inspector](https://chrome.google.com/webstore/detail/semantic-inspector/jobakbebljifplmcapcooffdbdmfdbjh/reviews) - Chrome Extension  
-
-<img src="imgs/semantic-inspector.png" srcset="imgs/semantic-inspector.png 1x, imgs/semantic-inspector-2x.png 2x" />
-
 ## Use Open Graph Protocol (OGP) to provide rich snippets on Facebook
+
 The [Open Graph Protocol (OGP)](http://ogp.me/) provides Facebook with the
 metadata necessary to allow web pages to have the same functionality as other
 Facebook objects.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" %}
+{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
 </pre>
 
 When included in the head section of your page, this metadata is used for rich
@@ -125,11 +128,7 @@ snippet information when the page is shared.
 A `meta` tag consists of a `property` attribute and a `content` attribute.
 Properties and contents may take the following values:
 
-<table class="mdl-data-table mdl-js-data-table">
-  <colgroup>
-    <col span="1">
-    <col span="1">
-  </colgroup>
+<table>
   <thead>
     <tr>
       <th data-th="Property">Property</th>

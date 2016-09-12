@@ -1,9 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: ecurity is a big topic, bigger than we can conver in this section. We've provided a few things to get you started. 
+description: Security is a big topic, learn about HTTPS, why it's important and how you can deploy it to your servers.
 
-{# wf_review_required #}
-{# wf_updated_on: 2015-09-08 #}
+{# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Security and Identity {: .page-title }
