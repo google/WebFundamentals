@@ -25,7 +25,7 @@
                   <ul class="devsite-breadcrumb-list">
                     <li class="devsite-breadcrumb-item">
                       <a href="/web/" class="devsite-breadcrumb-link">
-                        <h1 class="devsite-product-name">Web</h1>
+                        <h1 class="devsite-product-name">{{ title }}</h1>
                       </a>
                     </li>
                   </ul>

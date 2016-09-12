@@ -114,6 +114,7 @@ def generateYaml(lang, requestPath, rawYaml):
   parsedYaml = yaml.load(rawYaml)
   page = parsedYaml['landing_page']
   rows = page['rows']
+  title = 'Web'
   header = 'Generic Page Header Here'
   customCss = ''
   if 'custom_css_path' in page:
@@ -123,6 +124,8 @@ def generateYaml(lang, requestPath, rawYaml):
   if 'header' in page:
     if 'description' in page['header']:
       header = page['header']['description']
+    if 'name' in page['header']:
+      title = page['header']['name']
   for row in rows:
     sectionClass = ['devsite-landing-row']
     section = '<section class="[[SECTION_CLASSES]]">'
@@ -150,7 +153,7 @@ def generateYaml(lang, requestPath, rawYaml):
     section = section.replace('[[SECTION_CLASSES]]', ' '.join(sectionClass))
     content += section
   text = render('gae/home.tpl', {
-                'title': 'Web',
+                'title': title,
                 'requestPath': requestPath,
                 'customcss': customCss,
                 'header': header,
