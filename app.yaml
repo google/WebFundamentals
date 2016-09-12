@@ -1,22 +1,19 @@
 runtime: python27
 api_version: 1
 threadsafe: true
-# application: petele-scratch
-# version: wf-devsite
+application: petele-scratch
+version: wf-devsite
 
-#default_expiration: "1d"
 handlers:
 - url: /robots.txt
   static_files: gae/robots.txt
   upload: gae/robots.txt
 
-- url: /devsite.js
-  static_files: gae/devsite.js
-  upload: gae/devsite.js
+- url: /wf-local/scripts/
+  static_dir: gae/scripts/
 
-- url: /web/imgs
-  static_dir: imgs
-  expiration: 1d
+- url: /wf-local/styles/
+  static_dir: gae/styles/
 
 - url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3))
   static_files: src/content/en/\1
@@ -54,12 +51,19 @@ handlers:
   secure: always
 
 skip_files:
-- ^\..*
-- ^gulp-tasks/.*
-- ^node_modules/.*
-- ^scratch/.*
-- ^tools/.*
+- ^(gulp-tasks/.*)
+- ^(node_modules/.*)
+- ^(scratch/.*)
+- ^(tools/.*)
+- ^(src/data/.*)
+- ^(src/templates/.*)
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.DS_Store$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
 - ^(.*/)?.*\.psd$
 - ^(.*/)?.*\.pxm$
 - ^(.*/)?.*\.pyc$
 - ^(.*/)?.*\.sh$
+- ^(.*/)?\..*$
