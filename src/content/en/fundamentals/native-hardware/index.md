@@ -28,7 +28,7 @@ Make your web sites and apps more like native applications.
     <img src="https://placehold.it/321x213">
   </a>
   <p>
-    Use a mobile devince's accelerometer, gyroscope, and compass. In gaming control the direction or action of a character. With geolocation, create more accurate turn-by-turn navigation or provide information about a specific location.
+    Use a mobile device's accelerometer, gyroscope, and compass. In gaming, control the direction or action of a character. With geolocation, create more accurate turn-by-turn navigation or provide information about a specific location.
     <a href="device-orientation/">Learn More</a>
   </p>
 </div>

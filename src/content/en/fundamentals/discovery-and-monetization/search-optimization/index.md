@@ -6,7 +6,7 @@ description: Websites are visited not only by humans, but also by search engine 
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-08-30 #}
 
-# Search optimization {: .page-title }
+# Search Optimization {: .page-title }
 
 {% include "_shared/contributors/agektmr.html" %}
 
@@ -17,19 +17,19 @@ Websites are visited not only by humans, but also by search engine web crawlers.
 - Responsive design is most recommended
 - Use <code>rel='canonical'</code> + <code>rel='alternate'</code> for separate desktop/mobile sites
 - Use <code>Vary HTTP</code> header for a single URL dynamically serving separate desktop/mobile HTMLs
-- 'No robots.txt, no robots meta tags required for fully accessible pages'
-- Use noindex for pages you want to limit access to those who know the URL
-- Use relevant authentication mechanism for pages you want to keep private
+- No robots.txt, no robots meta tags required for fully accessible pages
+- Use noindex for pages for which you want to limit access to those who know the URL
+- Use the relevant authentication mechanism for pages you want to keep private
 
-## Give Search Engines Your Site Structure {: .page-title }
+## Give search engines your site structure
 
 {% include "_shared/contributors/agektmr.html" %}
 
 How your website appears in search results is important to multi-device site design. This guide helps you optimize your website for search engines based on its URL structure.
 
-Are you planning to build a responsive webpage? Is there a mobile specific
+Are you planning to build a responsive webpage? Is there a mobile-specific
 version with a separate URL? Are you serving both the desktop version and the
-mobile version from the same URL? Regardless you can always do a better job of
+mobile version from the same URL? Regardless, you can always do a better job of
 optimizing your website for search engines.
 
 ### Give your site a URL structure
@@ -37,7 +37,7 @@ optimizing your website for search engines.
 There are several ways to serve content to different devices. The three most
 common methods are:
 
-**Responsive Web Design:** serves the same HTML from one URL and uses CSS
+**Responsive web design:** serves the same HTML from one URL and uses CSS
 media queries to determine how the content is rendered on the client side.  
 ex) Desktop and Mobile: http://www.example.com/
 
@@ -52,10 +52,10 @@ ex) Desktop and Mobile: http://www.example.com/
 The best approach in our opinion is responsive web design, though many websites
 exist that use the other methods.
  
-Determine which URL structure suits your webpage. Then try respective best
+Determine which URL structure suits your webpage. Then try the respective best
 practices to optimize it for search engines.
 
-### We recommend Responsive Web Design
+### We recommend responsive web design
 
 The benefit of making your website responsive are:
 
@@ -146,14 +146,14 @@ contents gracefully.
 To learn more about building URL structure across desktop and mobile, read [Building Smartphone-Optimized Websites](https://developers.google.com/webmasters/smartphone-sites/).
 
 
-## Control Crawling and Indexing from Search Engines
+## Control crawling and indexing from search engines
 
 Being listed properly on search engines is critical to delivering your website
 to the world, but poor configuration may cause unexpected content to be included
 in the results. This section helps you avoid such problems by explaining how
 crawlers work and how they index websites.
 
-Sharing information has no better place than the web. Once you publish a
+Sharing information has no better place than the web. When you publish a
 document, it's immediately available to the entire world. The page will be
 visible to anyone who knows the URL. That's where search engines come in. To be
 available to the world, search engines need to find your website.
@@ -164,7 +164,7 @@ admin page is something only certain people should have access to. There's no
 benefit to letting people find those pages through search engines.
 
 In this section, you'll also learn how to inform search engines that you want
-certain pages not appear in the search results.
+certain pages to not appear in the search results.
 
 
 ### The difference between "crawl" and "index"
@@ -173,11 +173,11 @@ Before learning how to control search results, understanding how search engines 
 
 **Crawling** is when a search engine bot fetches your webpage to analyse its content. The content will be stored in the search engine's database and may be used for populating search result details, ranking pages, and discovering new pages by following links.  
 
-**Indexing** is when a search engine stores a website's URL and any associated information in their database so it will be ready to be served as a search result.  
+**Indexing** is when a search engine stores a website's URL and any associated information in its database so it will be ready to be served as a search result.  
 
 <!-- TODO: Verify note type! --> 
 Note: Many people confuses crawling and indexing. Prohibiting crawling doesn't
-mean the page won't show up in the search results. For example, if a third party
+mean the page won't show up in the search results. For example, if a third-party
 website has a link to one of your webpages it may still be indexed even though
 it's blocked from crawling. In that case, the search result will lack a detailed
 description.
@@ -192,7 +192,7 @@ robots.txt. Imagine that anyone can create their own stray crawlers.)
 Place `robots.txt` at the root directory of your website's host. For example,
 if your site's host is `http://pages.example.com/`, then the robots.txt file
 should be located at `http://pages.example.com/robots.txt`. If the domain has
-different schema, subdomains or other ports, they will be considered as
+different schema, subdomains, or other ports, they will be considered as
 different hosts and you should have `robots.txt` for each of their root
 directories.
 
@@ -219,14 +219,14 @@ You can specify the behavior per bot (user agents) by indicating a user-agent
 name. In the above case, you are disallowing the user agent called `Googlebot`
 from crawling `/nogooglebot/` and all contents below the directory.  
 
-Learn more about each search engines' bots at their help pages:
+Learn more about each search engine's bots at their help pages:
 
 * [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt)
 * [Bing](http://www.bing.com/webmaster/help/how-to-create-a-robots-txt-file-cb7c31ec)
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
 
 <!-- TODO: Verify note type! -->
-Note: <code>robots.txt</code> is only required <b>if</b> you want to control the way your site is crawled. Do not to return response code 500 for the url: <code>/robots.txt</code>. That will terminate all subsequent crawls for the entire host resulting in empty search result details.
+Note: <code>robots.txt</code> is only required <b>if</b> you want to control the way your site is crawled. Do not return response code 500 for the url: <code>/robots.txt</code>. That will terminate all subsequent crawls for the entire host resulting in empty search result details.
 
 #### Test robots.txt
 
@@ -261,7 +261,7 @@ By changing the value of the `name` attribute to a specific user agent name, you
     <meta name="googlebot" content="noindex" />
     
 
-Other options for robots meta tag can be found here:  
+Other options for the robots meta tag can be found here:  
 
 * [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240)
@@ -280,7 +280,7 @@ files to be indexed, add `X-Robots-Tag: noindex` in an HTTP header.
     Content-Type: text/html; charset=UTF-8
     
 
-If you want to narrow the scope to a specific user agent, insert user agent name before `noindex`.  
+If you want to narrow the scope to a specific user agent, insert the user agent name before `noindex`.  
 
 
     HTTP/1.1 200 OK
@@ -300,12 +300,11 @@ Don't expect robots.txt to control search indexes.
 
 ### Examples by content type
 
-What are the best solutions to control crawling and indexing? Let's have a look
-at example solutions for different types of pages.
+What are the best solutions to control crawling and indexing? Here are some example solutions for different types of pages.
 
 #### Fully accessible and searchable by anyone
 
-Most of pages on the web are usually of this type.  
+Most of the pages on the web are usually of this type.  
 
 * No robots.txt required.
 * No robots meta tags required.
@@ -324,7 +323,7 @@ In this case, you don't want search engines to index those pages.
 * Use `X-Robots-Tag: noindex` for non HTML resources (images, pdf, etc).
 
 <!-- TODO: Verify note type! -->
-Note: Wondering if you should prohibit crawling JavaScript and Stylesheet files?<a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google tries its best to understand them</a> so that it can find contents available through modern technologies such as AJAX. You should definitely allow crawlers to crawl JavaScript.
+Note: Wondering if you should prohibit crawling JavaScript and Stylesheet files? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google tries its best to understand them</a> so that it can find contents available through modern technologies such as AJAX. You should definitely allow crawlers to crawl JavaScript.
 
 #### Restricted access from authorized people
 
@@ -337,13 +336,13 @@ In these types of pages, search engines should neither crawl nor index them.
 
 * Return response code 401 "Unauthorised" for an access without a proper
 credential (or redirect the user to a login page).
-* Do not use robots.txt to disallow crawling these pages. Otherwise 401 can't be detected.
+* Do not use robots.txt to disallow crawling these pages. Otherwise, 401 can't be detected.
 
 The restriction mechanism here can be an IP address, a Cookie, Basic Auth,
-OAuth, etc. How to implement such authentication / authorization depends on your
+OAuth, etc. How to implement such authentication/authorization depends on your
 infrastructure and is out of this article's scope.
 
-### Request a page removal from a search engines
+### Request a page removal from a search engine
 
 There are cases where you want to remove a search result. For example:  
 
@@ -351,18 +350,18 @@ There are cases where you want to remove a search result. For example:
 * A page was accidentally indexed that includes confidential information.
 
 
-Major search engines provide a way to send a request to remove such pages. The process usually takes following:  
+Major search engines provide a way to send a request to remove such pages. The process usually takes the following:  
 
 1. Make sure the page you want removed:
-    * is already deleted from your server and returns 404
-    * is configured not to be indexed (ex: noindex)
+    * Is already deleted from your server and returns 404
+    * Is configured not to be indexed (ex: noindex)
 
 1. Go to the request page on each search engine. (Google and Bing require you to register and validate ownership of your website.)
 1. Send a request.
 
 <img src="imgs/remove-urls.png" srcset="imgs/remove-urls-2x.png 2x, imgs/remove-urls.png 1x">
 
-Check out concrete steps at respective search engines' help pages:  
+Check out concrete steps at the respective search engines' help pages:  
 
 * [Google](https://support.google.com/webmasters/answer/1663419)
 * [Bing](http://www.bing.com/webmaster/help/bing-content-removal-tool-cb6c294d)

@@ -30,7 +30,7 @@ For many, online advertisements are the first thing that comes to mind when cons
     <img src="https://placehold.it/321x213">
   </a>
   <p>
-    A few lines of code on each page an bring more people to your site by providing previews with rich information.
+    A few lines of code on each page can bring more people to your site by providing previews with rich information.
     <a href="social-discovery/">Learn More</a>
   </p>
 </div>
