@@ -4,76 +4,77 @@ description: "内容是任何网站最重要的部分。在这个手册中，我
 notes:
   styling:
     - 样式很快就能看到
-updated_on: 2014-04-23
+updated_on: 2016-09-10
 translators:
   - samchen
+  - wangyu
 related-guides:
   create-amazing-forms:
     -
       title: 创建出彩的表单
-      href: fundamentals/input/form/
+      href: fundamentals/design-and-ui/input/forms/
       section:
         id: user-input
         title: "表单"
-        href: fundamentals/input/form/
+        href: fundamentals/design-and-ui/input/forms/
     -
       title: 给输入框正确的标签及命名
-      href: fundamentals/input/form/label-and-name-inputs
+      href: fundamentals/design-and-ui/input/forms/label-and-name-inputs
       section:
         id: user-input
         title: "表单"
-        href: fundamentals/input/form/
+        href: fundamentals/design-and-ui/input/forms/
     -
       title: 选择最佳的输入框类型
-      href: fundamentals/input/form/choose-the-best-input-type
+      href: fundamentals/design-and-ui/input/form/choose-the-best-input-type
       section:
         id: user-input
         title: "表单"
-        href: fundamentals/input/form/
+        href: fundamentals/design-and-ui/input/forms/
   video:
     -
       title: 有效利用视频
-      href: fundamentals/media/video/
+      href: fundamentals/design-and-ui/media/video/
       section:
         id: introduction-to-media
         title: "视频"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
     -
       title: 改变起始播放位置
-      href: fundamentals/media/video/add-a-video#specify-a-start-and-end-time
+      href: fundamentals/design-and-ui/media/video/add-a-video#specify-a-start-and-end-time
       section:
         id: introduction-to-media
         title: "视频"
         href: fundamentals/media/
     -
-      title: 包含招贴画
-      href: fundamentals/media/video/add-a-video#include-a-poster-image
+      title: 包含一副海报
+      href: fundamentals/design-and-ui/media/video/add-a-video#include-a-poster-image
       section:
         id: introduction-to-media
         title: "视频"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
   images:
     -
       title: 有效利用图片
-      href: fundamentals/media/images/
+      href: fundamentals/design-and-ui/media/images/
       section:
         id: introduction-to-media
         title: "图片"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
     -
-      title:  标记中图片的正确使用
-      href: fundamentals/media/images/images-in-markup
+      title:  在标记中正确使用图片
+      href: fundamentals/design-and-ui/media/images/images-in-markup
       section:
         id: introduction-to-media
         title: "图片"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
     -
       title: 图片优化
       href: fundamentals/performance/optimizing-content-efficiency/image-optimization
       section:
         id: introduction-to-media
         title: "图片"
-        href: fundamentals/media/
+        href: fundamentals/design-and-ui/media/
 
 key-takeaways:
   content-critical:
@@ -83,7 +84,7 @@ key-takeaways:
 ---
 
 <p class="intro">
-  内容是任何网站最重要的部分。所以让我们为内容而设计，而不要让设计支配内容。在这个手册中，我们首先确定我们需要的内容，基于这个内容创建一个页面结构，然后在简单的线性布局里呈现页面，无论窄、宽视口，均能运行良好。
+内容对任何网站而言都是最重要的部分。所以让我们为内容而设计，而不要让设计决定内容。在这个手册中，我们首先确定我们需要的内容，基于这个内容创建一个页面结构，然后在简单的线性布局里呈现页面，无论窄、宽视口，均能运行良好。
 </p>
 
 {% include shared/toc.liquid %}
@@ -103,11 +104,11 @@ key-takeaways:
 我们也拿出了窄、宽视口下粗略的信息架构和布局。
 
 <div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="窄视口 IA">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="宽视口 IA">
+  <img class="g-wide--1 g-medium--half" src="images/narrowviewport.png" alt="窄视口 IA">
+  <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/wideviewport.png" alt="宽视口 IA">
 </div>
 
-这就可以轻松转化出基础页面的大体分块，我们将在这个项目的剩下部分使用。
+这就可以轻松转化出基础页面的大体分块，我们将在这个项目的接下来的步骤中使用它。
 
 {% include_code src=_code/addstructure.html snippet=structure %}
 
@@ -131,9 +132,14 @@ key-takeaways:
 
 我们将添加语义化类型的输入框，用户在移动设备上可以更快、更便捷地输入内容。比如说，输入电话号码时，用户只需要看见拨号面板。
 
+{% include_code src=_code/addform.html snippet=form %}
+
+{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+
+
 ### 创建视频和信息分块
 
-内容的视频和信息分块较为深入。它有一个列表，点出我们的产品特性，还包括一个视频，展示我们的产品怎样适用用户。
+视频和信息分块这部分的内容较为深入。它有一个列表，列出我们的产品特性，还包括一个视频，展示用户使用我们的产品的场景。
 
 {% include_code src=_code/addcontent.html snippet=section1 %}
 
@@ -142,7 +148,7 @@ key-takeaways:
 跟随以下最佳实践，你能轻松把视频整合到网站上：
 
 *  添加 `controls` 属性，让用户轻松播放视频。
-*  添加 `poster` 图片，让用户预览到内容。 
+*  添加 `poster` 图片，让用户预览到内容。
 *  根据所支持的视频格式添加多个 `<source>` 元素。
 *  添加备选文本，如果用户在窗口中无法播放视频，就让他们下载。
 
@@ -157,7 +163,7 @@ key-takeaways:
 *  内容图片 &mdash; 内联在文档中，用于传达内容的额外信息。
 *  样式图片 &mdash; 用于点缀站点，让站点更好看的图片；通常是背景图片，图案和渐变。我们将在[下一节]({{page.nextPage.relative_url}})聊到。
 
-我们的页面的图片分块是一些内容图片。
+我们页面的图片分块是一些内容图片。
 
 内容图片在传达页面意思时至关重要。把它们想象成新闻中的图片。我们用到的图片，是项目的导师照片：Chris Wilson, Peter Lubbers and Sean Bennet。
 
@@ -191,11 +197,9 @@ key-takeaways:
 
 我们已经构建好站点轮廓，也已确认所有主要的结构元素。还确保我们的所有相关内容准备就绪，能够满足我们的商业需求。
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="Content">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
+<div class="clear">
+  <img class="g-wide--2 g-medium--half" src="images/content.png" alt="Content" style="max-width: 100%;">
+  <img  class="g-wide--2 g-wide--last g-medium--half g--last" src="images/narrowsite.png" alt="" style="max-width: 100%;">
 </div>
 
 你会注意到，现在页面看起来非常糟糕；这其实是故意的。内容是所有页面最重要的组成，我们需要确保我们有一个坚实的信息架构和密度。本手册给我们打下良好的基础。我们将在下一节中样式化内容。
-
-
