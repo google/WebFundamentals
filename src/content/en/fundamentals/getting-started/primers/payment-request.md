@@ -5,7 +5,7 @@ description: Payment Request API is for fast, easy payments on the web.
 {# wf_published_on: 2016-07-25 #}
 {# wf_updated_on: 2016-08-18 #}
 
-# Payment Request API: An Integration Guide {: .page-title }
+# Payment Request API: an Integration Guide {: .page-title }
 
 {% include "_shared/contributors/agektmr.html" %}
 {% include "_shared/contributors/dgash.html" %}
