@@ -8,7 +8,7 @@ description: Afin de fournir un premier affichage le plus rapidement possible, n
 
 # Optimiser le chemin critique du rendu {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

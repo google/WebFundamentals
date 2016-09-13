@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # App Cache Tools and Auto-Generators {: .page-title }
 
-{% include "_shared/contributors/sethladd.html" %}
+{% include "web/_shared/contributors/sethladd.html" %}
 
 
 As you know, the Application Cache helps you run your web app offline, significantly speeds up startup time, and reduces bandwidth bills.  All good things to the HTML5 developer!

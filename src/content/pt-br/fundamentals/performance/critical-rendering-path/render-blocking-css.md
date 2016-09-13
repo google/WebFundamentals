@@ -8,7 +8,7 @@ description: Por padrão, o CSS é tratado como um recurso bloqueador de renderi
 
 # CSS bloqueador de renderização {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

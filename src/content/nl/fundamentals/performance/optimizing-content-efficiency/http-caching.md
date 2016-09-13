@@ -8,7 +8,7 @@ description: Iets via het netwerk ophalen kost tijd en geld: zoekopdrachten met 
 
 # HTTP-caching {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

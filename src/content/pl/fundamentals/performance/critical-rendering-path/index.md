@@ -8,7 +8,7 @@ description: Optymalizacja krytycznej ścieżki renderowania obejmuje nadanie r�
 
 # Krytyczna ścieżka renderowania {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Optymalizacja krytycznej ścieżki renderowania ma kluczowe znaczenie dla wydajności naszych stron: naszym celem jest nadanie różnych priorytetów wyświetlanej treści zależnie od tego, jakie działania na stronie chce głównie podejmować użytkownik.

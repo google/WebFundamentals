@@ -8,7 +8,7 @@ description: There are right ways of using notifications, and ways of using them
 
 # What makes a good notification? {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 <figure class="attempt-right">
   <img src="images/tpnr.png" alt="Timely, precise, and relevant">

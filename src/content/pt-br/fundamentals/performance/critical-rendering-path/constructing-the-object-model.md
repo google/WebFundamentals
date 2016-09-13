@@ -8,7 +8,7 @@ description: Antes de o navegador renderizar conteúdo para a tela, ele precisa 
 
 # Criação do modelo de objeto {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Antes de o navegador renderizar a página, ele precisa criar as árvores DOM e CSSOM. Para isso, precisamos garantir que o HTML e o CSS sejam entregues ao navegador o mais rápido possível.

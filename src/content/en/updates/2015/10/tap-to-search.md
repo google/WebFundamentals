@@ -9,7 +9,7 @@ description: Understanding when and how Touch to Search is triggered
 
 # Manage the triggering of Touch to Search {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

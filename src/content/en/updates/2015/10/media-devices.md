@@ -9,7 +9,7 @@ description: The MediaDevices interface gives access to input and output devices
 
 # Choose cameras, microphones & speakers from your web app {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 Modern browsers make it possible to select input and output devices including cameras, microphones and speakers. 
 

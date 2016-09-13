@@ -8,7 +8,7 @@ description: Touchscreens are available on more and more devices,  from phones u
 
 # Add touch to your site {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Rwc4fHUnGuU"

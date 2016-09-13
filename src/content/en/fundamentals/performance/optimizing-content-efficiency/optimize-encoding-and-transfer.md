@@ -8,7 +8,7 @@ description: Next to eliminating unnecessary resource downloads, the best thing 
 
 # Optimizing Encoding and Transfer Size of Text-Based Assets {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 Next to eliminating unnecessary resource downloads, the best thing you can do to improve page-load speed is to minimize the overall download size by optimizing and compressing the remaining resources.
 

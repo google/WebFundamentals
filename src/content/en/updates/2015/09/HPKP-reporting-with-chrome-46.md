@@ -8,7 +8,7 @@ description: Chrome 46 ships with a feature called HPKP reporting, which can hel
 
 # Rolling out Public Key Pinning with HPKP Reporting {: .page-title }
 
-{% include "_shared/contributors/emilystark.html" %}
+{% include "web/_shared/contributors/emilystark.html" %}
 
 
 

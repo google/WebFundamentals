@@ -11,7 +11,7 @@ description: 크롬 버전 46 에서 캐쉬 관리에 대한 새로운 메서드
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

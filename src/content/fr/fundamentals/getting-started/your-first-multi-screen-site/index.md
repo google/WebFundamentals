@@ -8,7 +8,7 @@ description: Le Web est accessible à un très large éventail d'appareils, depu
 
 # Votre premier site multi-appareil {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

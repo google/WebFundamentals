@@ -8,7 +8,7 @@ description: Вы готовы выполнить все важные шаги, 
 
 # Включение HTTPS на ваших серверах {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

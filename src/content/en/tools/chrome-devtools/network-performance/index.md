@@ -7,7 +7,7 @@ description: Test how your pages load in varying network conditions. Offer users
 
 # Page Load Performance {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Test how your pages load in varying network conditions. Offer users the best possible experience despite network connectivity.
 

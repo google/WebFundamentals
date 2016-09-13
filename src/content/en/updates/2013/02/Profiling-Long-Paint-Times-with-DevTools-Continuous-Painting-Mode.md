@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Profiling Long Paint Times with DevTools' Continuous Painting Mode {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 

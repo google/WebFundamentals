@@ -8,12 +8,12 @@ description: 用户输入事件处理函数是一个可能会导致web应用性�
 
 # 对用户输入事件的处理去抖动 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 用户输入事件处理函数是一个可能会导致web应用性能问题的因素，因为它们在运行时会阻塞帧的渲染，并且会导致额外且不必要的布局的发生。

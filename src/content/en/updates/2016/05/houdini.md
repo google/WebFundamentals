@@ -9,7 +9,7 @@ description: Houdini is a collection of APIs that expose the CSS engine’s inte
 
 # Houdini – Demystifying CSS {: .page-title }
 
-{% include "_shared/contributors/surma.html" %}
+{% include "web/_shared/contributors/surma.html" %}
 
 Dogfood: I have updated each section of this article with the
 current state of the respective spec.

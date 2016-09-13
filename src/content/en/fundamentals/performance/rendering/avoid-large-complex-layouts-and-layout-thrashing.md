@@ -4,7 +4,7 @@ description: JavaScript is often the trigger for visual changes.
 
 # Reduce the Scope and Complexity of Style Calculations {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 Layout is where the browser figures out the geometric information for 
 elements: their size and location in the page. Each element will have 

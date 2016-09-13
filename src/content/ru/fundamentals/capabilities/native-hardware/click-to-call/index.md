@@ -8,7 +8,7 @@ description: В устройствах с возможностями телеф�
 
 # Звонок щелчком {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

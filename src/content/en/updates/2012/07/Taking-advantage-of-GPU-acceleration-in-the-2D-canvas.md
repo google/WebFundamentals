@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Taking advantage of GPU acceleration in the 2D canvas {: .page-title }
 
-{% include "_shared/contributors/ilmariheikkinen.html" %}
+{% include "web/_shared/contributors/ilmariheikkinen.html" %}
 
 
 The 2D canvas in Chrome got some hardware acceleration love back in February. The acceleration makes drawing 2D sprites really fast, as the implementation is using the GPU to do drawImage.

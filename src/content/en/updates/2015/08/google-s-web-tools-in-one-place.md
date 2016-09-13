@@ -9,7 +9,7 @@ description: We've moved into our shiny new home at <a href='/web/tools/chrome-d
 
 # A new home for DevTools {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 You might already have experienced [Google's new one-stop destination for everything web-related](/web) from browsing [Web Fundamentals](/web/fundamentals), the [Showcase](/web/showcase) or [Shows](/web/shows). Today, we are welcoming [DevTools](/web/tools/chrome-devtools) to the party and are concentrating all of our web-related tools [in one place](/web/tools).

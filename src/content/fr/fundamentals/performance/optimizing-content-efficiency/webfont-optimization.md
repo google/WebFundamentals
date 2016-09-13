@@ -8,7 +8,7 @@ description: La typographie est essentielle pour la qualité du design, de la ma
 
 # Optimisation des polices Web {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

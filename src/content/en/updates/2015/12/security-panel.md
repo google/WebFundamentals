@@ -9,7 +9,7 @@ description: Learn all about the new Security Panel in Chrome DevTools.
 
 # Security Panel debuts in Chrome DevTools {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="9WuP4KcDBpI"

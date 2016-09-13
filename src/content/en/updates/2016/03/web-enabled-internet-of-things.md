@@ -9,7 +9,7 @@ description: Internet of Things is really on everyone's lips these days, but wha
 
 # Creating a Web-enabled IoT device with Intel Edison {: .page-title }
 
-{% include "_shared/contributors/kenchris.html" %}
+{% include "web/_shared/contributors/kenchris.html" %}
 
 
 The Internet of Things is on everyone's lips these days, and

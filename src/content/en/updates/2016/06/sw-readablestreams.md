@@ -9,7 +9,7 @@ description: Start processing your service worker responses ASAP, thanks to Read
 
 # Stream Your Way to Immediate Responses {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 

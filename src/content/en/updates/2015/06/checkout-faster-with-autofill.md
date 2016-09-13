@@ -8,7 +8,7 @@ description: Help users checkout faster with Autofill. We’ve found that by cor
 
 # Help users checkout faster with Autofill {: .page-title }
 
-{% include "_shared/contributors/greenido.html" %}
+{% include "web/_shared/contributors/greenido.html" %}
 
 <img src="/web/updates/images/2015-06-05-checkout-faster-with-autofill/autofill-1.gif" alt="autofill git to show the power of fast and easy form filling" class="attempt-right">
 

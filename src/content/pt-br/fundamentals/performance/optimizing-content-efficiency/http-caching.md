@@ -8,7 +8,7 @@ description: Buscar alguma coisa na rede é um processo lento e caro: respostas 
 
 # Armazenar HTTP em cache {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

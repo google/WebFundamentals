@@ -8,7 +8,7 @@ description: A whirlwind tour of Web Components, Polymer and front-end tooling f
 
 # Yo Polymer – A Whirlwind Tour Of Web Component Tooling {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 <div class="video-wrapper">

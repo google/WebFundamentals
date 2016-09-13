@@ -8,7 +8,7 @@ description: 対称性を破ることによって、プロジェクトにコン�
 
 # Asymmetric Animation Timing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 アニメーションの継続時間の非対称性によって、個性を表現できるようになり、ユーザー エクスペリエンスに影響を及ぼします。同時に、ユーザーの迅速な操作も促します。 また、コントラストが高まり、インターフェースをより魅力的に見えるようにします。

@@ -8,7 +8,7 @@ description: En los dispositivos con capacidades de telefonía, permita que los 
 
 # Clic para llamar {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

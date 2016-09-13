@@ -6,7 +6,7 @@ book_path: /web/fundamentals/_book.yaml
 
 # The Offline Cookbook {: .page-title }
 
-{% include "_shared/contributors/jakearchibald.html" %}
+{% include "web/_shared/contributors/jakearchibald.html" %}
 
 When AppCache arrived on the scene it gave us a couple of patterns to make
 content work offline. If those were the patterns you needed, congratulations,

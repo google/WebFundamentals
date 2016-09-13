@@ -8,7 +8,7 @@ description: 打破對稱性，可為您的專案帶來對比和吸引力。 瞭
 
 # 非對稱式的動畫計時 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 為您動畫持續時間加入非對稱式，有助於您的使用者體驗，讓您在表達個性的同時，還能快速回應使用者互動。 它還能為操作感提供對比效果，讓互動更具視覺吸引力。

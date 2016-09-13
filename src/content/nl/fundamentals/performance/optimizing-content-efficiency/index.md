@@ -8,7 +8,7 @@ description: De hoeveelheid gegevens die door elke app wordt gedownload, blijft 
 
 # Inhoudsefficiëntie optimaliseren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

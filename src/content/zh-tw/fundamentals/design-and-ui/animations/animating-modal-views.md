@@ -8,7 +8,7 @@ description: 學習如何在您應用程式中動畫處理強制回應檢視。
 
 # 動畫處理強制回應檢視 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 強制回應檢視是針對重要訊息使用，而且您必須有很好的理由，才能如此封鎖使用者介面。 慎用之，因為它們具有中斷性，過度使用的話，很容易破壞使用者體驗。 但在某些情況下，這卻是該使用的正確檢視方式，而且加入動畫會帶來一些活力。

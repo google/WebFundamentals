@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Defining Scope In IndexedDB Transactions {: .page-title }
 
-{% include "_shared/contributors/greenido.html" %}
+{% include "web/_shared/contributors/greenido.html" %}
 
 
 What is IndexedDB?

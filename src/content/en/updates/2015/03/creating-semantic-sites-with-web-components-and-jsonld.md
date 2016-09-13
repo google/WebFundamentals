@@ -9,7 +9,7 @@ description: Add schema.org markup to your components and make them search engin
 
 # Creating semantic sites with Web Components and JSON-LD {: .page-title }
 
-{% include "_shared/contributors/ewagasperowicz.html" %}
+{% include "web/_shared/contributors/ewagasperowicz.html" %}
 
 
 With the rising popularity of [web components](http://webcomponents.org/) and supporting libraries like [Polymer](https://www.polymer-project.org/), [custom elements](http://w3c.github.io/webcomponents/spec/custom/) become an attractive way to build UI features. The default encapsulation of custom elements makes them especially useful for creating independent widgets.

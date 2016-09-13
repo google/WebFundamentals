@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # datalist landed in Chrome Canary {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 Filling out forms sometimes feel like cumbersome thing. Giving users multiple choice yet enabling them to type freely is important. The `datalist` element (which just landed on Chrome Canary (M20) makes this a breeze.

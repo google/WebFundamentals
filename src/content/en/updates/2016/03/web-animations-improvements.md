@@ -8,7 +8,7 @@ description: Better specification compliance and new features coming in Chrome 5
 
 # Web Animations Improvements in Chrome 50 {: .page-title }
 
-{% include "_shared/contributors/alexdanilo.html" %}
+{% include "web/_shared/contributors/alexdanilo.html" %}
 
 
 

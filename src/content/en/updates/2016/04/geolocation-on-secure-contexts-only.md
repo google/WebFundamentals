@@ -9,7 +9,7 @@ description: Starting with Chrome version 50, Chrome no longer supports the HTML
 
 # Geolocation API removed from unsecured origins in Chrome 50 {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

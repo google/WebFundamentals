@@ -7,8 +7,8 @@ description: Remote debug live content on an Android device from a Windows,  Mac
 
 # Remote Debugging Android Devices {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Remote debug live content on an Android device from your 
 Windows, Mac, or Linux computer.

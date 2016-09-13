@@ -7,7 +7,7 @@ description: Use the allocation profiler tool to find objects that aren't being 
 
 # How to Use the Allocation Profiler Tool {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 Use the allocation profiler tool to find objects that aren't being properly garbage collected, and continue to retain memory.
 
 

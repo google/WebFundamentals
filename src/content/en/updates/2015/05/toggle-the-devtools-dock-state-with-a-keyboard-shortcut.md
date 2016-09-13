@@ -9,7 +9,7 @@ description: Use <kbd class='kbd'>Cmd + Shift + D</kbd> to toggle the DevTools d
 
 # Toggle the DevTools dock state with a keyboard shortcut {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-toggle-the-devtools-dock-state-with-a-keyboard-shortcut/dock-undock-shortcut.gif" alt="Toggle the DevTools dock state with a keyboard shortcut">

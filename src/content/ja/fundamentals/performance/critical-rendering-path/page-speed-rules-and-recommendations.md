@@ -8,7 +8,7 @@ description: コンテキストに応じた PageSpeed Insights ルール: いつ
 
 # PageSpeed ルールとおすすめの方法 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 コンテキストに応じた PageSpeed Insights ルール: いつクリティカル レンダリング パスを最適化するのか、なぜ最適化するのか、どのような点に注意すればよいのか。

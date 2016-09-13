@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # navigator.onLine in Chrome Dev channel {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 With the [offline APIs](http://www.html5rocks.com/features/offline) in HTML5, there's no excuse not to provide a flawless offline experience for users. One thing that can help this story is the `navigator.onLine` property; a feature that recently landed in Chrome dev channel. This property returns `true` or `false` depending on whether or not the app has network connectivity:

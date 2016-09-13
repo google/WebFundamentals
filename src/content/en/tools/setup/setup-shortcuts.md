@@ -7,8 +7,8 @@ description: Set up shortcuts for the command line tasks you use over and over a
 
 # Set Up Command Line Shortcuts {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that.
 

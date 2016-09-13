@@ -8,7 +8,7 @@ description: Have you ever created your own modal dialog box? Soon, you won't ne
 
 # dialog element: Modals made easy {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 Chrome Canary has landed support for the [dialog element](http://www.whatwg.org/specs/web-apps/current-work/multipage/commands.html#the-dialog-element) behind a flag. The `dialog` element can be used for popups in a web page.

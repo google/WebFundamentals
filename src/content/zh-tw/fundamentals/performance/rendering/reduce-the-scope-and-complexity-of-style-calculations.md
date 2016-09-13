@@ -8,7 +8,7 @@ description: 透過新增和移除元素、變更屬性、類別，或透過動�
 
 # 減少樣式計算的範圍與複雜性 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 透過新增和移除元素、變更屬性、類別，或透過動畫來變更 DOM ，都會導致瀏覽器重新計算元素樣式 -- 在許多情況下 -- 為網頁或部分網頁執行版面配置 (或自動重排) 。 這個過程叫做<em>已運算樣式計算</em>。

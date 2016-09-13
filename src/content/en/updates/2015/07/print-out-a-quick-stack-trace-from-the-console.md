@@ -9,7 +9,7 @@ description: You can use console.trace() to get a quick and easy stack trace to 
 
 # Print out a quick stack trace from the Console {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-14-print-out-a-quick-stack-trace-from-the-console/console-trace.gif" alt="Print out a quick stack trace from the Console">

@@ -7,7 +7,7 @@ description: Finding and fixing mixed content is an important task, but it can b
 
 # Preventing Mixed Content {: .page-title }
 
-{% include "_shared/contributors/johyphenel.html" %}
+{% include "web/_shared/contributors/johyphenel.html" %}
 
 Success: Supporting HTTPS for your website is an important step to protecting your site and your users from attack, but mixed content can render that protection useless. To protect your site and your users, it is very important to find and fix mixed content issues.
 

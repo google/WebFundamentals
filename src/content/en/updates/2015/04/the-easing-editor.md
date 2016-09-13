@@ -9,7 +9,7 @@ description: Select an easing CSS property to get a visual animated preview for 
 
 # The easing editor {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-select-an-easing-to-get-a-visual-animated-preview-for-how-it-behaves/easing-preview.gif" alt="Select an easing to get a visual animated preview for how it behaves">

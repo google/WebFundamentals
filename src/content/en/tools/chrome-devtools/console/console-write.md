@@ -8,9 +8,9 @@ description: Console logging is a powerful way to inspect what your page or appl
 
 # Diagnose and Log to Console {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/flaviocopes.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/flaviocopes.html" %}
 Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
 
 

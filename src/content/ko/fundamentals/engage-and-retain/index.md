@@ -12,6 +12,6 @@ description: 사용자와 늘 관계를 유지하고 다시 돌아오게 한다.
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 

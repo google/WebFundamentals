@@ -8,7 +8,7 @@ description: 版面配置是瀏覽器弄清楚元素幾何形狀資訊之處：�
 
 # 避免大型、複雜的版面配置和版面配置輾轉 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 版面配置是瀏覽器弄清楚元素幾何形狀資訊之處：也就是它們在頁面中的大小和位置。 根據使用的 CSS、元素內容，或父系元素，每個元素將具有明確或隱含的大小資訊。 在 Chrome、Opera、Safari 和 Internet Explorer 中，這個過程叫做版面配置。 在 Firefox 中，它被稱為自動重排，但實際上過程都是相同的。

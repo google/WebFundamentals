@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # WebRTC: RTCDataChannel demo, API changes... and Chrome talks to Firefox! {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 <p>More good news from our old friend <a href="http://www.webrtc.org" title="webrtc.org website">WebRTC</a>...</p>

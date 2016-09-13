@@ -8,7 +8,7 @@ description: A brand new API is in the works to help measure frames per second i
 
 # Developer feedback needed: Frame Timing API {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

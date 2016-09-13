@@ -8,7 +8,7 @@ description: Tarayıcının içeriği ekranda oluşturabilmesi için önce DOM v
 
 # Nesne Modelini Oluşturma {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Tarayıcının sayfayı oluşturabilmesi için önce DOM ve CSSOM ağaçlarını oluşturması gerekir. Sonuç olarak, HTML ve CSS'yi tarayıcıya mümkün olduğunca hızlı bir şekilde sağladığımızdan emin olmamız gerekir.

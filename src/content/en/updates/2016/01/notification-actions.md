@@ -9,7 +9,7 @@ description: Users can interact with your site without opening up the page by us
 
 # Notification Actions in Chrome 48 {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

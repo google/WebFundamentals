@@ -8,7 +8,7 @@ description: تحسين مسار العرض الحرج من خلال وضع عر
 
 # مسار العرض الحرج {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 يعد تحسين مسار العرض الحرج أمرًا ضروريًا لتحسين أداء الصفحات: والهدف هو وضع عرض المحتوى المتعلق بالإجراء الأساسي الذي يريد المستخدم وضعه على الصفحة في الأولوية.

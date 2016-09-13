@@ -7,7 +7,7 @@ description: This guide examines PageSpeed Insights rules in context: what to pa
 
 # PageSpeed Rules and Recommendations {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 This guide examines PageSpeed Insights rules in context: what to pay attention to when optimizing the critical rendering path, and why.
 

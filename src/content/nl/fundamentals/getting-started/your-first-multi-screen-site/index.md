@@ -8,7 +8,7 @@ description: Internet is toegankelijk op tal van apparaten, van telefoons met kl
 
 # Uw eerste website voor meerdere apparaten {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

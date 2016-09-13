@@ -9,7 +9,7 @@ description: Payment Request is a new API for the open web that makes checkout f
 
 # Bringing easy and fast checkout with Payment Request API {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 

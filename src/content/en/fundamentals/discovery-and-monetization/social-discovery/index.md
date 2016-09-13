@@ -7,7 +7,7 @@ description: You can influence the way your site appears when shared via social 
 
 # Social discovery {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 You can influence the way your site appears when shared via social media by
 adding a few lines of code to each page. This can help bring more people to

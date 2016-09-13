@@ -8,7 +8,7 @@ description: Às vezes, a parte mais difícil de um novo projeto é começar. O 
 
 # Start Your Site with Web Starter Kit {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

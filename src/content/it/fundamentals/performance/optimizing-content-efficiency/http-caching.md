@@ -8,7 +8,7 @@ description: Recuperare qualcosa dalla rete è un'azione lenta e costosa: rispos
 
 # Caching HTTP {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: يتطلب التعرف على نقاط التكدس في أداء 
 
 # تحليل أداء مسار العرض الحرج {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 يتطلب التعرف على نقاط التكدس في أداء مسار العرض الحرج وحلها معرفة جيدة بالمخاطر الشائعة. يمكننا الآن تنفيذ جولة عملية واستخلاص أنماط الأداء الشائعة التي تساعدك في تحسين صفحاتك.

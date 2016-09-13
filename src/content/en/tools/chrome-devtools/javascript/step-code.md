@@ -7,9 +7,9 @@ description: By executing code one line or one function at a time, you can obser
 
 # How to step through your code {: .page-title }
 
-{% include "_shared/contributors/dgash.html" %}
-{% include "_shared/contributors/pbakaus.html" %}
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening. You can also modify data values used by the script, and you can even modify the script itself.
 
 *Why is this variable value 20 instead of 30? Why doesn't that line of code seem to have any effect? Why is this flag true when it should be false?* Every developer faces these questions, and steps through code to find out.

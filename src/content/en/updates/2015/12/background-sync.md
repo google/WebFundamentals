@@ -9,7 +9,7 @@ description: Background sync is a new web API that lets you defer actions until 
 
 # Introducing Background Sync {: .page-title }
 
-{% include "_shared/contributors/jakearchibald.html" %}
+{% include "web/_shared/contributors/jakearchibald.html" %}
 
 
 

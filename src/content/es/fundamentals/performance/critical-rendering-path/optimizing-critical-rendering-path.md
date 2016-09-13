@@ -8,7 +8,7 @@ description: Para acelerar todo lo posible la primera renderización, debemos op
 
 # Optimizar la ruta de renderización importante {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

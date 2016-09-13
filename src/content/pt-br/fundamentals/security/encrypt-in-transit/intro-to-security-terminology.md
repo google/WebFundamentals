@@ -8,8 +8,8 @@ description: Ao migrar para HTTPS, um dos obstáculos que os operadores de site 
 
 # Intro to Security Terminology {: .page-title }
 
-{% include "_shared/contributors/chrispalmer.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Round-up of Web Browser Internals Resources {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 

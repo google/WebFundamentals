@@ -8,7 +8,7 @@ description: タイポグラフィは、優れたデザイン、ブランディ�
 
 # ウェブフォントの最適化 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

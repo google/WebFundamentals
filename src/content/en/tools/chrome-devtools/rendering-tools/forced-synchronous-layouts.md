@@ -7,8 +7,8 @@ description: Follow along with this interactive guide to learn how to use  DevTo
 
 # Diagnose Forced Synchronous Layouts {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Learn how to use DevTools to diagnose forced synchronous 
 layouts.

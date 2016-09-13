@@ -7,7 +7,7 @@ description: Use the Chrome DevTools Timeline panel to record and analyze  all t
 
 # How to Use the Timeline Tool {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Use the Chrome DevTools <em>Timeline</em> panel to record 
 and analyze all the activity in your application as it runs. It's the best 

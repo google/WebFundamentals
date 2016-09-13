@@ -9,7 +9,7 @@ description: Web App Manifest ✔︎, Service Worker ✔.Get ready for Web App I
 
 # Increasing Engagement with Web App Install Banners {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 <img src="/web/updates/images/2015-03-03/add-to-home-screen.gif" alt="IO Site with install banner" class="attempt-right" />

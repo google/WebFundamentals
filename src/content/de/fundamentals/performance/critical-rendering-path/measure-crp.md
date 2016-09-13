@@ -8,7 +8,7 @@ description: Sie können nicht optimieren, was Sie nicht messen können. Mit dem
 
 # Den kritischen Rendering-Pfad mit Navigation Timing messen {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Sie können nicht optimieren, was Sie nicht messen können. Mit dem Navigation Timing API verfügen wir jedoch über alle notwendigen Tools zum Messen der einzelnen Schritte des kritischen Rendering-Pfads (Critical Rendering Path, CRP)!

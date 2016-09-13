@@ -8,7 +8,7 @@ description: Si se modifica el DOM (Modelo de objetos de documento), mediante la
 
 # Reducción del alcance y la complejidad de los cálculos de estilo {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Si se modifica el DOM (Modelo de objetos de documento), mediante la adición y la eliminación de elementos, la modificación de los atributos o las clases, o a través de la animación, el navegador recalculará los estilos de los elementos y, en muchos casos, el diseño (o la redistribución) de la página o partes de esta. Este proceso de denomina <em>cálculo de estilo computarizado</em>.

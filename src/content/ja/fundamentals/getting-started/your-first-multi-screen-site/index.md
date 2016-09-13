@@ -8,12 +8,12 @@ description: ウェブは小さな携帯端末から大きなテレビまで、�
 
 # はじめてのマルチデバイス サイト {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 

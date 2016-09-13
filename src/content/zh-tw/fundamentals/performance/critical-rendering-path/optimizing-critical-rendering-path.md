@@ -8,7 +8,7 @@ description: 為儘快完成初次轉譯，我們需要將下列三種變數最�
 
 # 最佳化關鍵轉譯路徑 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

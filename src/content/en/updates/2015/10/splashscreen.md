@@ -9,7 +9,7 @@ description: Chrome 47 introduces a splash screen to web apps added to the home 
 
 # Adding a Splash screen for installed web apps in Chrome 47 {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

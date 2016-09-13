@@ -8,7 +8,7 @@ description: Nach der Entfernung aller unnötigen Ressourcen besteht der nächst
 
 # Codierung und Übertragungsgröße textbasierter Ressourcen optimieren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

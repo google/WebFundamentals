@@ -8,7 +8,7 @@ description: Mudando o DOM, através da adição e remoção de elementos, mudan
 
 # Reduce the scope and complexity of style calculations {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Mudando o DOM, através da adição e remoção de elementos, mudando atributos, classes ou através da animação, fará com que o navegador recalcule estilos de elemento e, em vários casos, o layout (ou refluxo) da página ou partes dela. Esse processo é chamado de <em>cálculo de estilo computado</em>.

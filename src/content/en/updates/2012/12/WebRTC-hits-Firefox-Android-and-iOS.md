@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # WebRTC hits Firefox, Android and iOS {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 <p>A <strong>lot</strong> has happened with WebRTC over the last few weeks. Time for an update!</p>

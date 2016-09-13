@@ -8,7 +8,7 @@ description: The support for cut and copy commands allows you to programmaticall
 
 # Cut and Copy Commands {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

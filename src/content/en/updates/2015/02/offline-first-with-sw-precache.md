@@ -9,7 +9,7 @@ description: Add service worker-powered offline capabilities to your site with t
 
 # Offline-first, fast, with the sw-precache module {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 You can’t [read about service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)

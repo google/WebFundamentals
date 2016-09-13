@@ -8,7 +8,7 @@ description: Informazioni su come aggiungere in modo semplice video al tuo sito 
 
 # Video {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

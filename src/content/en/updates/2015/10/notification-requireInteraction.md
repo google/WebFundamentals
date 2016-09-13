@@ -9,7 +9,7 @@ description: Notifications on desktop will be automatically dismissed after a sh
 
 # Notification requireInteraction - A smoother notification UX on desktop {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 We've learnt a lot since Notifications and Push Messaging landed in Chrome. One
 specific piece of feedback about Desktop-class devices was that notifications

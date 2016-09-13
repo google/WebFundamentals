@@ -9,7 +9,7 @@ description: You can easily change the DOM without having to edit the HTML as a 
 
 # Easily duplicate DOM nodes {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-08-10-duplicate-dom-nodes/duplicate-dom.gif" alt="Duplicate DOM nodes">

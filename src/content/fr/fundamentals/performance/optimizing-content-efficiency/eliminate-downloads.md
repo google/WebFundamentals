@@ -8,7 +8,7 @@ description: La ressource la plus rapide et la mieux optimisée est une ressourc
 
 # Éliminer les téléchargements inutiles {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

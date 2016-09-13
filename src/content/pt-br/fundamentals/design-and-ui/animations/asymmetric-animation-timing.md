@@ -8,7 +8,7 @@ description: A quebra de simetria proporciona contraste e atração aos seus pro
 
 # Asymmetric Animation Timing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

@@ -7,7 +7,7 @@ description: Device motion and orientation events provide access to the built in
 
 # Device Orientation & Motion {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Device motion and orientation events provide access to the built-in
 accelerometer, gyroscope, and compass in mobile devices.

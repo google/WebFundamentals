@@ -8,7 +8,7 @@ description: حتى نتمكن من الحصول على أسرع عرض أول �
 
 # تحسين مسار العرض الحرج {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

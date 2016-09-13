@@ -8,7 +8,7 @@ description: 電話機能を備えた端末では、電話番号をタップす�
 
 # Click to Call {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

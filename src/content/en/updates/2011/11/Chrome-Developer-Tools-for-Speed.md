@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Chrome Developer Tools for Speed {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 I spoke at Velocity a little bit ago and talked about the Developer Tools in Chrome to improve the speed of your apps. I covered the Task Manager, <code>window.performance</code>, onerror event, <code>console.profile()</code>, <code>console.markTimeline()</code> <small>(now called <code>console.timeStamp()</code>)</small>, Timeline view, <a href="http://gent.ilcore.com/2011/08/finding-memory-leaks.html">Chrome's Heap Profiler</a>, and remote debugging. 9 minutes.

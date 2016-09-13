@@ -9,7 +9,7 @@ description: Learn how to show the function definition of a registered event lis
 
 # Easily jump to event listeners {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-show-the-function-definition-of-a-registered-event-listener-on-any-node/view-event-listeners.gif" alt="Show the function definition of a registered event listener on any node">

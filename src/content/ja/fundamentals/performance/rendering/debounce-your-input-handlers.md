@@ -8,7 +8,7 @@ description: 入力ハンドラは、アプリ内のパフォーマンスの問�
 
 # Debounce your input handlers {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 入力ハンドラは、アプリ内のパフォーマンスの問題の潜在的な原因となります。これらはフレームを完了ブロックする可能性があり、追加の (不要な) レイアウト作業の原因になります。

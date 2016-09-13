@@ -8,7 +8,7 @@ description: Polymer is a gateway into the amazing future of Web Components.  Le
 
 # Chrome Dev Summit: Polymer declarative, encapsulated, reusable components {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="DH1vTVkqCDQ"

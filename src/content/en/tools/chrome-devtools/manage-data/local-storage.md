@@ -8,7 +8,7 @@ description: Inspect and manage storage, databases, and caches from the Applicat
 
 # Inspect and Manage Storage, Databases, and Caches {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 Inspect and manage storage, databases, and caches from the
 <strong>Application</strong> panel.
 

@@ -69,9 +69,12 @@ def readFile(requestedFile, lang='en'):
   # the English version. If neither exist, it returns None
   #originalPathToFile = pathToFile
   requestedFile = re.sub(r'^/?web/', '', requestedFile)
+  logging.info('1 - ' + requestedFile)
   workingFile = os.path.join(SOURCE_PATH, lang, requestedFile)
+  logging.info('2 - ' + workingFile)
   if not os.path.isfile(workingFile):
     workingFile = os.path.join(SOURCE_PATH, 'en', requestedFile)
+    logging.info('3 - ' + workingFile)
   if os.path.isfile(workingFile):
     try:
       result = open(workingFile, 'r').read()

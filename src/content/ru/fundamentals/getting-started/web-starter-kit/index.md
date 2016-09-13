@@ -8,7 +8,7 @@ description: Порой самое сложное в новом проекте �
 
 # Начните создавать свой сайт с помощью веб-помощника {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

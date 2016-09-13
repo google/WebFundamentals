@@ -8,12 +8,12 @@ description: 渲染层的合并，就是把页面中完成了绘制过程的部�
 
 # 优先使用渲染层合并属性、控制层数量 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 渲染层的合并，就是把页面中完成了绘制过程的部分合并成一层，然后显示在屏幕上。

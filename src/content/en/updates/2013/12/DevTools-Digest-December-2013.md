@@ -8,7 +8,7 @@ description: The latest update for changes to the Chrome DevTools.
 
 # DevTools Digest December 2013 {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 A number of updated features have made it into the Chrome DevTools recently, some small, some big. We'll start out with the Element panel's updates and move on to talk about Console, Timeline, and more.

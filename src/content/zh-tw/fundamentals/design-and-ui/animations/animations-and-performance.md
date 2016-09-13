@@ -8,8 +8,8 @@ description: 動畫效能必須良好，否則會負面影響使用者體驗。
 
 # 動畫和效能 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 製作動畫時，必須注意保持 60 fps，因為任何斷斷續續或停頓對使用者都很明顯，並負面影響他們的使用體驗。

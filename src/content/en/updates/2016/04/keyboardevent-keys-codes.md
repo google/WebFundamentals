@@ -9,7 +9,7 @@ description: Two new attributes bring consistent keyboard event handling to the 
 
 # What’s New with KeyboardEvents? Keys and Codes! {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 

@@ -8,8 +8,8 @@ description: CSS 또는 JavaScript로 애니메이션을 만들 수 있습니다
 
 # CSS 애니메이션과 JavaScript 애니메이션 비교 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 웹에서 CSS와 JavaScript로 애니메이션을 만들 수 있습니다. 어느 것을 사용할지는 프로젝트의 기타 종속성과 원하는 효과의 종류에 따라 결정됩니다.

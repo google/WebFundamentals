@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Downloading resources in HTML5: a[download] {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 Chrome now supports the HTML spec's new `download` attribute to `a` elements. When used, this attribute signifies that the resource it points to should be downloaded by the browser rather than navigating to it.

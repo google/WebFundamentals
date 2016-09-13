@@ -7,7 +7,7 @@ book_path: /web/fundamentals/_book.yaml
 
 # Перенаправление с HTTP на HTTPS {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

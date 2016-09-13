@@ -9,7 +9,7 @@ description: Try undocking DevTools to a separate window so the record button is
 
 # Easy timeline recording {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-easy-timeline-recording/record-timeline-undocked.gif" alt="DevTools - Easy timeline recording">

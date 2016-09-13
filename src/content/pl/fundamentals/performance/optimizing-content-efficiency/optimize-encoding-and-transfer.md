@@ -8,7 +8,7 @@ description: Po wyeliminowaniu wszystkich zbędnych zasobów następnym krokiem 
 
 # Optymalizacja kodowania i rozmiaru transferu zasobów tekstowych {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Live Web Audio Input Enabled! {: .page-title }
 
-{% include "_shared/contributors/chriswilson.html" %}
+{% include "web/_shared/contributors/chriswilson.html" %}
 
 
 <p>I'm really excited by a new feature that went in to yesterday's Chrome Canary build (23.0.1270.0) - the ability to get low-latency access to live audio from a microphone or other audio input on OSX!  (This has not yet been enabled on Windows - but don't worry, we're working on it!)</p>

@@ -8,7 +8,7 @@ description: 在移动设备上填写表单很困难。 输入操作最少的表
 
 # 创建出色的表单 {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

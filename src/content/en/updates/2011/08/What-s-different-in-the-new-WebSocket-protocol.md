@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # What's different in the new WebSocket protocol {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 The WebSocket protocol specification has recently been updated to solve previous security concerns and is largely stable. Below is a summary of the changes involved, along with some notes on current implementations.

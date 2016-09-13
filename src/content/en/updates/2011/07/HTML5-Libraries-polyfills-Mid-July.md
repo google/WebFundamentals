@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # HTML5 Libraries/polyfills - Mid July {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 More awesome libraries popping up all over the place:

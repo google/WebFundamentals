@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # sourceMappingURL and sourceURL syntax changed {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 If you use either sourcemaps or sourceURL (both covered in the [HTML5 Rocks Primer on Sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)), then you may see a warning in Chrome console like `"/*@ sourceMappingURL=" source mapping URL declaration is deprecated, "/*# sourceMappingURL=" declaration should be used instead.`

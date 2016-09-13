@@ -8,7 +8,7 @@ description: An implementation of Web Animations 1.0 has landed in Blink powerin
 
 # New Web Animations engine in Blink drives CSS Animations & Transitions {: .page-title }
 
-{% include "_shared/contributors/alexdanilo.html" %}
+{% include "web/_shared/contributors/alexdanilo.html" %}
 
 
 Users expect smooth 60fps animations in modern multi-device UIs. Achieving that level of performance with the web’s current animation primitives can be difficult. Fortunately we’re working on a new Blink animation implementation that just shipped in Chrome Canary!

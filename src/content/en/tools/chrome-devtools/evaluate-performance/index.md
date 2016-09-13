@@ -7,7 +7,7 @@ description: Focus on the user first. How users perceive delays far outweighs an
 
 # How to Look at Performance {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Don't assume performance is as simple as following a simple set of dos and don'ts. Rules can change, and it's easy to use rules incorrectly. Focus on the user first. How users perceive delays far outweighs any performance guidelines.
 

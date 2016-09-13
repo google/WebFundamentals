@@ -8,8 +8,8 @@ description: Chrome DevTools includes powerful breakpoint features that help you
 
 # Debug with Breakpoints {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
 
 Chrome DevTools includes powerful breakpoint features that help you find and fix logic errors in your JavaScript code. Use different breakpoint types to control exactly what conditions can trigger a pause in script execution.
 

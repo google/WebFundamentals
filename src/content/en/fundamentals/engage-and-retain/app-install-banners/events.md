@@ -8,8 +8,8 @@ description: You can defer or cancel the app install banner, and understand how 
 
 # App Install Banner Events {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 Chrome provides an easy mechanism to determine how the user responded to the
 app install banner and even cancel or defer it until a more convenient time.

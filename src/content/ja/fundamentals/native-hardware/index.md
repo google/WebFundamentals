@@ -8,7 +8,7 @@ description: ユーザーの端末上で機能を統合したりアクセスす�
 
 # 端末アクセスと統合 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: CSS Grid Layout is a new CSS3 module that provides new layout primi
 
 # Get on the CSS Grid! {: .page-title }
 
-{% include "_shared/contributors/alexdanilo.html" %}
+{% include "web/_shared/contributors/alexdanilo.html" %}
 
 
 When building a Web Application, one of the first things that's needed is a way to lay out the content of your app.

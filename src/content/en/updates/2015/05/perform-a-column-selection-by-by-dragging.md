@@ -9,7 +9,7 @@ description: You can make a column selection in the Sources Panel editor by hold
 
 # Perform a column selection by by dragging {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-perform-a-column-selection-by-by-dragging/drag-select.gif" alt="DevTools Perform a column selection by by dragging">

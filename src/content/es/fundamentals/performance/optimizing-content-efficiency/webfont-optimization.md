@@ -8,7 +8,7 @@ description: La tipografía es fundamental para un buen diseño, para la inclusi
 
 # Optimizar fuentes web {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

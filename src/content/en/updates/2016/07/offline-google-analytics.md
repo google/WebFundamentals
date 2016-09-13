@@ -9,7 +9,7 @@ description: The sw-offline-google-analytics library gives you everything you ne
 
 # Offline Google Analytics Made Easy {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 

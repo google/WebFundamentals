@@ -7,7 +7,7 @@ description: RAIL is a user-centric performance model. Every web app has these f
 
 # The RAIL Performance Model {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways:
 

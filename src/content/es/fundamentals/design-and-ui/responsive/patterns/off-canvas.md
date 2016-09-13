@@ -8,7 +8,7 @@ description: Los patrones de diseño web receptivos evolucionan rápidamente, pe
 
 # Off canvas {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

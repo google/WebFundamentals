@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # How to measure browser graphics performance {: .page-title }
 
-{% include "_shared/contributors/ilmariheikkinen.html" %}
+{% include "web/_shared/contributors/ilmariheikkinen.html" %}
 
 
 Benchmarking browser graphics in a nutshell: draw as much as you can while maintaining a smooth frame rate. Once your framerate drops, you know how much you can draw per frame. End of post. ...No? Ok, I'll explain some more.

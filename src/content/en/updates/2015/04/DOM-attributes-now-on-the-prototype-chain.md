@@ -8,7 +8,7 @@ description: Chrome is becoming in line with the spec. Check your sites if you a
 
 # DOM Attributes now on the prototype chain {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

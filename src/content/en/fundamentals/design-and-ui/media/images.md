@@ -7,7 +7,7 @@ description: A picture is worth 1000 words, and images play an integral part of 
 
 # Images {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Responsive web design means that not only can our layouts change based on device

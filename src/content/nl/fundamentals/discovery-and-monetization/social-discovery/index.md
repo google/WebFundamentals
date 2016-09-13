@@ -8,12 +8,12 @@ description: Je kan beinvloeden hoe jouw site wordt weergegeven wanneer het gede
 
 # Controle over je weergave op sociale media {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/yvoschaap.html" %}
+{% include "web/_shared/contributors/yvoschaap.html" %}
 
 
 

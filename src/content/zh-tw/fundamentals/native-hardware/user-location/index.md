@@ -8,7 +8,7 @@ description: 大多數瀏覽器和裝置可以存取使用者的地理位置。 
 
 # 使用者位置 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

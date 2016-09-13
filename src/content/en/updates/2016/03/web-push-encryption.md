@@ -8,7 +8,7 @@ description: Web Push now supports payloads! Find out how to take advantage of t
 
 # Web Push Payload Encryption {: .page-title }
 
-{% include "_shared/contributors/mscales.html" %}
+{% include "web/_shared/contributors/mscales.html" %}
 
 
 Prior to Chrome 50, [push messages](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web) 

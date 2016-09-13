@@ -8,7 +8,7 @@ description: 學習如何在您的應用程式的兩個檢視之間執行動畫�
 
 # 檢視之間的動畫處理 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 您可能常常會想要在應用程式中，讓使用者於檢視之間移動 -- 無論是前往詳細資料檢視的清單，或是顯示側邊欄導覽。 檢視之間的動畫處理能讓使用者不至於分心，並為專案增添更多的活力。

@@ -8,7 +8,7 @@ description: JavaScript는 종종 시각적 변화를 유발합니다. 어떤 �
 
 # JavaScript 예외 최적화 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 JavaScript는 종종 시각적 변화를 유발합니다. 어떤 경우에는 직접 스타일 조작을 통해, 어떤 경우에는 데이터 검색 또는 정렬과 같은 시각적 변화를 일으키는 계산을 통해 이를 구현합니다. 비효율적으로 시간을 소모하거나 오래 실행되는 JavaScript는 성능 문제의 일반적인 원인이며 가급적 이러한 영향을 최소화할 수 있는 방법을 찾아야 합니다.

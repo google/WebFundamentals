@@ -8,12 +8,12 @@ description: Als je website meerdere apparaten ondersteunt, dan is hoe deze in d
 
 # Instrueer zoekmachines hoe jou pagina verschillende type apparaten ondersteunt {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/yvoschaap.html" %}
+{% include "web/_shared/contributors/yvoschaap.html" %}
 
 
 Als je website meerdere apparaten ondersteunt, dan is hoe deze in de zoekresultaten wordt weergeven een belangrijk onderdeel van het ontwerp van jouw site. Deze gids helpt je jouw site te optimaliseren voor zoekmachines gegeven de URL structuur.

@@ -9,7 +9,7 @@ description: Chrome 50 adds support for rel='preload', and deprecates rel='subre
 
 # Prioritizing Your Resources with `<link rel='preload'>` {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 Have you ever wanted to let the browser know about an important font, script, or
 other resource that will be needed by the page, without delaying the page's

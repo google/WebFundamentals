@@ -8,7 +8,7 @@ description: ペイントは、最終的にユーザの画面に合成される�
 
 # Simplify paint complexity and reduce paint areas {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 ペイントは、最終的にユーザの画面に合成されるピクセルを書き込む処理です。 通常、ペイントはパイプライン内のすべてのタスクのうちで最も長く実行されるため、可能な限り避ける必要があります。

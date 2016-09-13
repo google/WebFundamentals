@@ -8,7 +8,7 @@ description: Media Source Extensions (MSE) provide extended buffering and playba
 
 # Media Source Extensions for Audio {: .page-title }
 
-{% include "_shared/contributors/dalecurtis.html" %}
+{% include "web/_shared/contributors/dalecurtis.html" %}
 
 # Introduction
 

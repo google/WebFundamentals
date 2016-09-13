@@ -8,7 +8,7 @@ description: Learn how to animate modal views in your apps.
 
 # Animating Modal Views {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 <div class="attempt-right">
   <figure>

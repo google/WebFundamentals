@@ -8,7 +8,7 @@ description: You and your users want mobile web apps that react and scroll smoot
 
 # A More Compatible, Smoother Touch {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 You and your users want mobile web apps that react and scroll smoothly to the

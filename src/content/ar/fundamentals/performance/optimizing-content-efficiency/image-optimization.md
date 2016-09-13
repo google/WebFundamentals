@@ -8,7 +8,7 @@ description: غالبًا ما تكون الصور مسؤولة عن معظم و
 
 # تحسين الصور {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

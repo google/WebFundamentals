@@ -8,7 +8,7 @@ description: 1 枚の写真は 1000 語にも匹敵します。画像すべて�
 
 # 画像 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -7,7 +7,7 @@ description: Snippets are small scripts that you can author and execute within t
 
 # Run snippets of code from any page {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Snippets are small scripts that you can author and execute 
 within the Sources panel of Chrome DevTools. You can access and run them 

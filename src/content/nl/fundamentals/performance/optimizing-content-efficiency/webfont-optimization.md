@@ -8,7 +8,7 @@ description: Typografie is een fundamenteel onderdeel van goed design, merkbeken
 
 # Optimalisatie van weblettertypen {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

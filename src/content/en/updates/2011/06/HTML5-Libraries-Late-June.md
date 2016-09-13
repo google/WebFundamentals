@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # HTML5 Libraries - Late June {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 Some exciting libraries have cropped up lately:

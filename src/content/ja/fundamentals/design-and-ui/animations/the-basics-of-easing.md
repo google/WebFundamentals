@@ -8,7 +8,7 @@ description: アニメーションをソフトにして重みを与える方法�
 
 # The Basics of Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 自然界の中で、一地点から別の場所に直線的に移動するものは何もありません。 実際には、移動すると加速または減速する傾向があります。 私たちの脳は、この種の動きを予測るように配線されているので、アニメーション化するときはこれを活用する必要があります。 自然な動きはより快適に感じ、全体的なエクスペリエンスの向上につながります。

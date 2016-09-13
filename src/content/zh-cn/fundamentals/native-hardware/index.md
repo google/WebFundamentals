@@ -8,7 +8,7 @@ description: 有很多种方法可用来与用户设备上的功能集成或访�
 
 # 设备访问与集成 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

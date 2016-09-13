@@ -8,7 +8,7 @@ book_path: /web/updates/_book.yaml
 
 # Five tricks to use in the Console Panel {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-08-10-5-tricks-to-use-in-the-console-panel/five-console-tricks.gif" alt="Five tricks to use in the Console Panel">

@@ -8,7 +8,7 @@ description: イージング イン、アウト、または両方の中から、
 
 # Choosing the Right Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 アニメーションのイージングのさまざまなオプションの利用について説明しましたが、どの種類をプロジェクトで使用するか、また、アニメーションの継続時間についても考慮する必要があります。

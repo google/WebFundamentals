@@ -8,7 +8,7 @@ description: Existe una cantidad sorprendente de maneras de integrar y acceder a
 
 # Integración y acceso a dispositivos {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

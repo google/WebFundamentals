@@ -8,7 +8,7 @@ description: Aprenda como animar entre duas visualizações em seus aplicativos.
 
 # Animating Between Views {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

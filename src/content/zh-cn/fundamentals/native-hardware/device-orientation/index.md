@@ -8,7 +8,7 @@ description: 设备动作和方向事件可访问移动设备上的 内置加速
 
 # 设备方向 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 设备动作和方向事件可访问移动设备上的 内置加速度计、陀螺仪和罗盘。

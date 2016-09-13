@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # insertAdjacentHTML Everywhere {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 <p>If we want to insert content in a HTML document we have three ways to do it:</p>

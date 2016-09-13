@@ -8,7 +8,7 @@ description: 폰 기능이 있는 장치에서 사용자가 전화번호를 눌�
 
 # 클릭투콜(Click to call) {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

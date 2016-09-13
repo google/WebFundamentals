@@ -7,8 +7,8 @@ description: Users expect pages to be interactive and smooth. Each stage in  the
 
 # Analyze Runtime Performance {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Users expect pages to be interactive and smooth. Each stage 
 in the pixel pipeline represents an opportunity to introduce jank. Learn about 

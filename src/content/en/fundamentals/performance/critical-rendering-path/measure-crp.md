@@ -7,7 +7,7 @@ description: Learn to measure the critical rendering path.
 
 # Measuring the Critical Rendering Path with Navigation Timing {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 You can't optimize what you can't measure. Thankfully, the Navigation 
 Timing API gives us all the necessary tools to measure each step of the 

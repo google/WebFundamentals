@@ -8,12 +8,12 @@ description: 앱 설치 배너를 지연시키거나 취소할 수 있습니다.
 
 # 앱 설치 배너 추가작업 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

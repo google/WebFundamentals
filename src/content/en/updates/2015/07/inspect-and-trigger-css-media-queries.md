@@ -9,7 +9,7 @@ description: The Device Mode has a media query inspector built-in that allows fo
 
 # Inspect and trigger CSS media queries {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-20-inspect-and-trigger-css-media-queries-also-locate-them-in-code/media-query-inspector.gif" alt="Inspect and trigger CSS media queries, also locate them in code">

@@ -8,12 +8,12 @@ description: 불필요한 리소스 다운로딩을 하지 않는 것과 함께,
 
 # 인코딩과 텍스트 기반 리소스의 전송 크기 최적화 하기 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

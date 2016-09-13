@@ -8,7 +8,7 @@ description: 在預設情況下，CSS 會被視為禁止轉譯的資源，只要
 
 # 禁止轉譯的 CSS {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 在預設情況下，CSS 會被視為禁止轉譯的資源，只要 CSSOM 還未建構完成，即使內容已經過處理，瀏覽器也不會進行轉譯。請務必保持 CSS 簡潔、儘快提供 CSS，並使用媒體類型和媒體查詢來解除對轉譯作業的禁止令。

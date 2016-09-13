@@ -8,7 +8,7 @@ description: Aby maksymalnie skrócić czas wymagany do przeprowadzenia pierwsze
 
 # Optymalizacja krytycznej ścieżki renderowania {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

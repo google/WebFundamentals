@@ -8,7 +8,7 @@ description: 앱에서 두 보기 사이에 애니메이션을 적용하는 방�
 
 # 보기 간 애니메이션 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 애플리케이션에서 목록 보기와 세부정보 보기 등 두 보기 사이를 이동하거나 사이드바 탐색을 표시하는 경우가 많이 있습니다. 보기 간 애니메이션은 사용자의 몰입도를 유지하고 프로젝트에 생명력을 불어넣는 뛰어난 방법입니다.

@@ -4,7 +4,7 @@ description: Input handlers are a potential cause of performance problems in you
 
 # Debounce Your Input Handlers {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 Input handlers are a potential cause of performance problems in your apps, as
 they can block frames from completing, and can cause additional and unnecessary

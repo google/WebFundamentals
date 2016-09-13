@@ -9,7 +9,7 @@ description: Some appearance preferences are now persisted through to incognito 
 
 # Better Incognito DevTools {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-some-appearance-preferences-are-now-persisted-through-to-incognito-windows/incognito-preference-persist.gif" alt="Some appearance preferences are now persisted through to incognito windows">

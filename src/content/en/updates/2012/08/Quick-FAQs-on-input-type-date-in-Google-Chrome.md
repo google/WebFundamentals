@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Quick FAQs on input[type=date] in Google Chrome {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 * This article is written by a Chrome software engineer [Kent Tamura](https://plus.google.com/104770450049736549185/about).

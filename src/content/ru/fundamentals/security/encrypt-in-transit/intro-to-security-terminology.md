@@ -8,8 +8,8 @@ description: При переходе к протоколу HTTPS на лице �
 
 # Введение в терминологию обеспечения безопасности {: .page-title }
 
-{% include "_shared/contributors/chrispalmer.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

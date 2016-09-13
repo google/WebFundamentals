@@ -7,8 +7,8 @@ description: Keep your client-side code readable and debuggable even after you'v
 
 # Map Preprocessed Code to Source Code {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 Keep your client-side code readable and debuggable even after you've combined, minified or compiled it. Use source maps to map your source code to your compiled code.
 

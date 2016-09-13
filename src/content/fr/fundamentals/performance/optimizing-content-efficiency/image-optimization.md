@@ -8,7 +8,7 @@ description: Les images représentent souvent la majorité des octets téléchar
 
 # Optimisation de l'image {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

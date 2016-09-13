@@ -8,7 +8,7 @@ description: La quantità di dati scaricati da ogni app cresce costantemente. Pe
 
 # Ottimizzazione dell'efficienza dei contenuti {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

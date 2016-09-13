@@ -8,8 +8,8 @@ description: Сойдите с наезженной дороги и создай
 
 # Изменение скорости при нестандартной анимации {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 Иногда не хочется использовать ключевые слова изменения скорости, имеющиеся в CSS, или же используется библиотека анимации на основе JavaScript. В обоих случаях, как правило, можно определить собственные кривые (или формулы), а это позволяет в значительной степени влиять на ощущение, которое будет создавать анимация в вашем проекте

@@ -8,7 +8,7 @@ description: 通过网络获取内容既缓慢，成本又高：大的响应需�
 
 # HTTP 缓存 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

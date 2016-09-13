@@ -8,7 +8,7 @@ description: 2 new API's have been added in Chrome 44 which makes using Notifica
 
 # Notifying you of Changes to Notifications {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 Firstly, I apologise for that awful title, but I couldn't not.
 

@@ -8,7 +8,7 @@ description: A maioria dos navegadores e dispositivos tem acesso à localizaçã
 
 # User Location {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

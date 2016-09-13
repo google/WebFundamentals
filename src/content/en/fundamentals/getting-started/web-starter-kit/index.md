@@ -9,7 +9,7 @@ description: Sometimes the hardest part of a new project is getting started. Web
 
 Caution: This article has not been updated in a while and may not reflect reality. Be sure to check the Web Starter Kit [documentation](https://github.com/google/web-starter-kit/) for the latest details.
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 <img src="images/wsk-on-pixel-n5.png" class="attempt-right">
 

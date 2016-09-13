@@ -9,7 +9,7 @@ description: Infinite scrollers are a common UI pattern. Here we explore how to 
 
 # Complexities of an infinite scroller {: .page-title }
 
-{% include "_shared/contributors/surma.html" %}
+{% include "web/_shared/contributors/surma.html" %}
 
 
 

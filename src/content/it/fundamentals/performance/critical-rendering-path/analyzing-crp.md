@@ -8,7 +8,7 @@ description: L'identificazione e la risoluzione dei colli di bottiglia della per
 
 # Analisi della performance del percorso di rendering critico {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 L'identificazione e la risoluzione dei colli di bottiglia della performance del percorso di rendering critico richiede una buona conoscenza delle insidie comuni. Facciamo un tour pratico ed estraiamo i pattern di performance comuni che faciliteranno l'ottimizzazione delle tue pagine.

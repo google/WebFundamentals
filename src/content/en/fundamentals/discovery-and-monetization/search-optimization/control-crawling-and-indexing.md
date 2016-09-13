@@ -8,7 +8,7 @@ description: Being listed properly on search engines is critical to delivering y
 
 # Control Crawling and Indexing from Search Engines {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 Being listed properly on search engines is critical to delivering your website to the world, but poor configuration may cause unexpected content to be included in the results. Learn how crawlers work and how they index your website in order to avoid such problems.
 

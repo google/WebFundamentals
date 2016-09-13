@@ -7,7 +7,7 @@ description: Rich offline experiences, periodic background syncs, push notificat
 
 # Service Workers: an Introduction {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 Rich offline experiences, periodic background syncs, push
 notifications&mdash;functionality that would normally require a native

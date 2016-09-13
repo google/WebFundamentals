@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Voice Driven Web Apps: Introduction to the Web Speech API {: .page-title }
 
-{% include "_shared/contributors/glenshires.html" %}
+{% include "web/_shared/contributors/glenshires.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: 整合與存取使用者裝置上功能的方法數量驚人，例�
 
 # 裝置存取和整合 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

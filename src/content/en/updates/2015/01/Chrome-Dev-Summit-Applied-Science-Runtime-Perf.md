@@ -8,7 +8,7 @@ description: The story of building the Chrome Dev Summit site.
 
 # Chrome Dev Summit 2014: The Applied Science of Runtime Performance {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 <img src="/web/updates/images/2015-05-01/takeover.gif" alt="The card takeover effect" class="attempt-right" />
 

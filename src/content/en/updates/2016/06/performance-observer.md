@@ -8,7 +8,7 @@ description: New in Chrome 52, the Performance Observer interface provides more 
 
 # Performance Observer - Efficient Access to Performance Data {: .page-title }
 
-{% include "_shared/contributors/mco.html" %}
+{% include "web/_shared/contributors/mco.html" %}
 
 
 

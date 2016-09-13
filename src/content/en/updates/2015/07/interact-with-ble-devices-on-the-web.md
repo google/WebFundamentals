@@ -9,7 +9,7 @@ description: A Web API has been added to Chrome that makes it possible for websi
 
 # Interact with Bluetooth devices on the Web {: .page-title }
 
-{% include "_shared/contributors/beaufortfrancois.html" %}
+{% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 
 

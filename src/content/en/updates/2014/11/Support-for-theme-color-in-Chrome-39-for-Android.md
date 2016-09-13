@@ -9,7 +9,7 @@ description: Use theme-color to set the toolbar color in Chrome for Android.
 
 # Support for theme-color in Chrome 39 for Android {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 <img src="/web/updates/images/2014/11/theme-color-ss.png" alt="Screenshot of phone showing theme-color" class="attempt-right" />
 

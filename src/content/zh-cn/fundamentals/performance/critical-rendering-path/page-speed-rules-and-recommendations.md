@@ -8,7 +8,7 @@ description: PageSpeed Insights 规则使用背景：优化关键呈现路径时
 
 # PageSpeed 规则和建议 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: Tipografi; iyi tasarim, marka bilinci olusturma, okunabilirlik ve e
 
 # Web yazi tipi optimizasyonu {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

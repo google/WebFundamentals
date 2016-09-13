@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # What's the CSS :scope pseudo-class for? {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 `:scope` is defined in [CSS Selectors 4](http://www.w3.org/TR/selectors4/#scope-pseudo) as:

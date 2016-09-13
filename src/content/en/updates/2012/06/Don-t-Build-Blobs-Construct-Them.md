@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Don't Build Blobs, Construct Them {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 Here's a heads up to all you [BlobBuilder](https://developer.mozilla.org/en/DOM/BlobBuilder) fans...it's going bye bye!

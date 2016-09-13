@@ -9,7 +9,7 @@ description: Did you know you can inspect your DevTools with DevTools?
 
 # Who inspects the inspector? {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-13-perform-inspector-inception-by-inspecting-devtools/inspect-the-inspector.gif" alt="Perform Inspector inception by inspecting DevTools">

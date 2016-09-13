@@ -9,7 +9,7 @@ description: The MediaRecorder API enables you to record audio and video from a 
 
 # Record audio and video with MediaRecorder {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <style>
 @media screen and (max-width: 500px) {

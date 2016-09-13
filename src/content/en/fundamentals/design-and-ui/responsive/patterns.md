@@ -7,7 +7,7 @@ description: Responsive web design patterns are quickly evolving, but there are 
 
 # Responsive web design patterns {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices.
 

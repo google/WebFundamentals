@@ -8,7 +8,7 @@ description: 繪製是填入最終會合成到使用者螢幕上的像素之過�
 
 # 簡化繪製複雜性並降低繪製區域 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 繪製是填入最終會合成到使用者螢幕上的像素之過程。 這往往是管道中所有任務耗時最長的一項，也是該儘可能避免的一項。

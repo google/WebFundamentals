@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Debugging the Filesystem API {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 The [HTML5 Filesystem](http://www.html5rocks.com/tutorials/file/filesystem/) is a powerful API. With power, comes complexity. With complexity, comes more debugging frustrations. It's an unfortunate fact that the Chrome [DevTools](/web/tools/chrome-devtools) currently do not have support for the Filesystem API. It makes debugging it more difficult than it should be. By difficult, I mean being required to write code to list/remove files in the filesystem.

@@ -8,7 +8,7 @@ description: Web Fundamentals を日本語化したい人は、誰でも Contrib
 
 # 翻訳手順 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

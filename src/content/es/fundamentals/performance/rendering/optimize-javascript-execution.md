@@ -8,7 +8,7 @@ description: JavaScript suele ser el desencadenador de los cambios visuales. Alg
 
 # Optimización de la ejecución de JavaScript {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 JavaScript suele ser el desencadenador de los cambios visuales. Algunas veces, esto se hace directamente mediante manipulaciones de estilo y, otras veces, mediante cálculos que darán como resultado cambios visuales, como buscar o clasificar algunos datos. El JavaScript sincronizado incorrectamente o de larga ejecución puede ser una causa común de los problemas de rendimiento, y debe intentar minimizar su impacto siempre que sea posible.

@@ -8,8 +8,8 @@ description: Chrome DevTools has several built-in shortcut keys that developers 
 
 # Keyboard & UI Shortcuts Reference {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 Chrome DevTools has several built-in shortcut keys that
 can save you time in your daily workflows.
 

@@ -8,7 +8,7 @@ description: Learn how to improve your front-end productivity with tools for wor
 
 # The Landscape Of Front-end Development Automation (Slides) {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 Note: Speaker deck preso moved.

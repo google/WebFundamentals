@@ -7,8 +7,8 @@ description: The Chrome DevTools Command Line API offers various ways to observe
 
 # Monitor Events {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/flaviocopes.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/flaviocopes.html" %}
 The Chrome DevTools Command Line API offers various ways to observe and inspect event listeners. JavaScript plays a central role in interactive pages, and the browser provides you some useful tools to debug events and event handlers.
 
 

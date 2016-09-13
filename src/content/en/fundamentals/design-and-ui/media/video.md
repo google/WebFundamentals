@@ -7,7 +7,7 @@ description: Learn about the simplest ways to add video to your site and ensure 
 
 # Video {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"

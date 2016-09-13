@@ -8,8 +8,8 @@ description: 不走寻常路，为项目创建完全自定义的动画。
 
 # 自定义缓动 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 有时您不想使用 CSS 随附的缓动关键字，或者要使用基于 JavaScript 的动画库。 在这两种情况下，一般可以定义自己的曲线（或公式），这让您能更好地控制项目动画的感觉。

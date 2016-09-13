@@ -8,7 +8,7 @@ description: 更好地了解动画及其在现代应用和网站中的用途。
 
 # 动画 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 动画是使 Web 应用和网站吸引人的重要因素。 用户希望有快速响应和高度交互的用户界面。 但是，为界面设置动画未必很简单。 什么应设置动画，何时显示，以及动画应有哪种感觉？

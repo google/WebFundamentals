@@ -8,7 +8,7 @@ description: Building apps, the Polymer way.
 
 # Chrome Dev Summit 2014: Let's build some apps with Polymer! {: .page-title }
 
-{% include "_shared/contributors/robdodson.html" %}
+{% include "web/_shared/contributors/robdodson.html" %}
 
 
 

@@ -4,7 +4,7 @@ description: JavaScript is often the trigger for visual changes. Sometimes that'
 
 # Optimize JavaScript Execution {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 JavaScript is often the trigger for visual changes. Sometimes that's 
 directly through style manipulations, and sometimes it's calculations that 

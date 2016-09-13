@@ -8,7 +8,7 @@ description: Скачивать ресурсы страницы заново п�
 
 # HTTP-кеширование {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

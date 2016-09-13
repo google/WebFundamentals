@@ -7,7 +7,7 @@ description: Much of the web isn't optimized for those multi-device experiences.
 
 # Responsive web design basics {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 The use of mobile devices to surf the web is growing at an astronomical pace, 
 but unfortunately much of the web isn't optimized for those mobile devices. 

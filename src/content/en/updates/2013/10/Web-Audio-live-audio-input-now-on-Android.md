@@ -8,7 +8,7 @@ description: Chrome for Android (v31.0.1650+) has just landed support for audio 
 
 # Web Audio live audio input - now on Android! {: .page-title }
 
-{% include "_shared/contributors/chriswilson.html" %}
+{% include "web/_shared/contributors/chriswilson.html" %}
 
 
 One of the consistent questions I keep fielding over on [Stack Overflow](http://stackoverflow.com/questions/tagged/web-audio) is "why doesn't audio input work?" - to which the answer kept turning out to be "because you're testing on Android, and we don't have it hooked up yet."

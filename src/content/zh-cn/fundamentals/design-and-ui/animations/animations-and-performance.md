@@ -8,8 +8,8 @@ description: 动画必须表现良好，否则将对用户体验产生负面影�
 
 # 动画与性能 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 每次在设置动画时必须注意保持 60fps，因为任何卡顿或停顿都会引起用户注意，并对体验产生负面影响。

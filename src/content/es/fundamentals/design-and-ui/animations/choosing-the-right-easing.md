@@ -8,7 +8,7 @@ description: Elija la aceleración adecuada para su proyecto, ya sea entrada len
 
 # Elección de la aceleración adecuada {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Ahora que ya analizamos las diferentes opciones disponibles para acelerar las animaciones, ¿qué tipo debería utilizar en sus proyectos y qué tipos de duraciones deben tener sus animaciones?

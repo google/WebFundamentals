@@ -8,7 +8,7 @@ description: 图片通常占据网页上下载字节的绝大部分，通常，�
 
 # 图片优化 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -7,7 +7,7 @@ description: Shadow DOM allows web developers to create compartmentalized DOM an
 
 # Shadow DOM v1: self-contained web components {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 <!-- <script>
 function supportsShadowDOM() {

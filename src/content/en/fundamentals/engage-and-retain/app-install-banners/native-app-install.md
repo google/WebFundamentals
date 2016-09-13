@@ -8,8 +8,8 @@ description: Native App install banners are similar to Web app install banners, 
 
 # Native app Install Banners {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 <div class="attempt-right">
   <figure>

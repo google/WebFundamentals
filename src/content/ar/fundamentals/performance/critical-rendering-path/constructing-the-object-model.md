@@ -8,7 +8,7 @@ description: حتى يتمكن المتصفح من عرض المحتوى على 
 
 # إنشاء نموذج الهدف {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 حتى يتمكن المتصفح من عرض الصفحة يلزم إنشاء شجرتي DOM وCSSOM. ونتيجة لذلك، يلزم التأكد من توفير كل من HTML وCSS للمتصفح في أقرب وقت ممكن.

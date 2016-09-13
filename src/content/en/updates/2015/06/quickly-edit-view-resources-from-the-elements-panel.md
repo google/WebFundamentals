@@ -8,7 +8,7 @@ book_path: /web/updates/_book.yaml
 
 # Quickly edit/view resources from the Elements panel {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-06-18-quickly-view-edit-css-or-javascript-resources-from-the-elements-panel/open-in-sources-from-elements.gif" alt="Quickly view/edit CSS or JavaScript resources from the Elements panel.">

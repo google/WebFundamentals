@@ -7,7 +7,7 @@ description: This section describes common terms used in memory analysis, and is
 
 # Memory Terminology {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 This section describes common terms used in memory analysis, and is applicable to a variety of memory profiling tools for different languages.
 

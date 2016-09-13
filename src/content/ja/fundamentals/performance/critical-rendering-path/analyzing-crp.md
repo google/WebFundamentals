@@ -8,7 +8,7 @@ description: クリティカル レンダリング パスのパフォーマン�
 
 # クリティカル レンダリング パスのパフォーマンスを分析する {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 クリティカル レンダリング パスのパフォーマンスに対するボトルネックを特定し、解決するには、さまざまなよくある落とし穴に関する正しい理解が必要となります。実践的なツアーを通じ、ページの最適化につながるパフォーマンス パターンの定型を見いだしましょう。

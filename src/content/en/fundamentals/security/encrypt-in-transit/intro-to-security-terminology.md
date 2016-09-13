@@ -7,8 +7,8 @@ description: Two of the hurdles developers face when migrating to HTTPS are conc
 
 # Important Security Terminology {: .page-title }
 
-{% include "_shared/contributors/chrispalmer.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
   
 ## TL;DR
 

@@ -7,7 +7,7 @@ description: JavaScript allows us to modify just about every aspect of the page:
 
 # Adding Interactivity with JavaScript {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 JavaScript allows us to modify just about every aspect of the page: content,
 styling, and its response to user interaction. However, JavaScript can also

@@ -8,7 +8,7 @@ description: PageSpeed Insights-Regeln im Kontext: worauf bei der Optimierung de
 
 # PageSpeed-Regeln und Empfehlungen {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

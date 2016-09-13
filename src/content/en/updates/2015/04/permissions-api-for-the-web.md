@@ -8,7 +8,7 @@ description: The Permissions API gives you a central place to check the permissi
 
 # Permissions API for the Web {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 If you've worked with the [Geolocation
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)

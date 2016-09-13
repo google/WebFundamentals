@@ -8,7 +8,7 @@ description: La quantité de données téléchargée par chaque application ne c
 
 # Optimiser le contenu de façon efficace {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

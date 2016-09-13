@@ -9,7 +9,7 @@ description: The new CSS Containment property lets developers limit the scope of
 
 # CSS Containment in Chrome 52 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 <style>

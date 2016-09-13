@@ -8,8 +8,8 @@ description: Vá além e crie animações totalmente personalizadas para os seus
 
 # Custom Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 Algumas vezes você não deseja usar as palavras-chave de easing incluídas com o CSS ou usa uma biblioteca de animação baseada em JavaScript. Em ambos os casos, você geralmente pode definir suas próprias curvas (ou equações) o que proporciona maior controle sobre as animações do seu projeto.

@@ -8,7 +8,7 @@ description: Performance Matters
 
 # Chrome Dev Summit: Performance Summary {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 ## #perfmatters: Tooling techniques for the performance ninja
 

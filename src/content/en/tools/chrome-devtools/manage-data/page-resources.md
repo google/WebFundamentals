@@ -8,7 +8,7 @@ description: Organize resources by frame, domain, type, or other criteria.
 
 # Inspect Resources {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Organize resources by frame, domain, type, or other
 criteria.

@@ -9,7 +9,7 @@ description: Big themes and trends for DevTools in 2016 and beyond.
 
 # DevTools Digest: DevTools in 2016 and Beyond {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="x8u0n4dT-WI"

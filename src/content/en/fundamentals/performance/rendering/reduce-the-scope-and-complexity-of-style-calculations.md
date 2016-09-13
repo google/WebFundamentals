@@ -4,7 +4,7 @@ description: JavaScript is often the trigger for visual changes. Sometimes that'
 
 # Reduce the Scope and Complexity of Style Calculations {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 Changing the DOM, through adding and removing elements, changing attributes, 
 classes, or through animation, will all cause the browser to recalculate 

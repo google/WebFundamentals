@@ -9,7 +9,7 @@ description: URLSearchParams trivial access and manipulation of the URL's query 
 
 # Easy URL manipulation with URLSearchParams {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: JavaScript を利用すると、コンテンツやスタイル、�
 
 # JavaScript のインタラクティブ機能を追加する {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 JavaScript を利用すると、コンテンツやスタイル、ユーザー操作に対する挙動など、ページの大部分の要素を変更できるようになります。ただし、JavaScript は DOM 構築をブロックし、ページのレンダリング時に遅延を引き起こすことがあります。JavaScript を非同期化して、クリティカル レンダリング パスから不要な JavaScript を取り除き、最適なパフォーマンスを実現するようにします。

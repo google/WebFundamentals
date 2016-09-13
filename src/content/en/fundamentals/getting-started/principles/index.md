@@ -7,7 +7,7 @@ description: Google and AnswerLab undertook a study examining how users interact
 
 # What Makes a Good Mobile Site? {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Google and AnswerLab conducted a [research study](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) to answer this question. 
 

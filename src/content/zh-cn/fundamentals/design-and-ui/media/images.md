@@ -8,12 +8,12 @@ description: 一图胜千言，另外图片也是每个页面不可或缺的组�
 
 # 图片 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 

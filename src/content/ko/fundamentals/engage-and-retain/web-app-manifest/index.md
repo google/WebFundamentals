@@ -8,13 +8,13 @@ description: 웹 앱 매니페스트 파일은 네이티브 앱에서 볼법한 
 
 # 웹 앱 매니페스트 파일로 사용자 경험 향상시키기 {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

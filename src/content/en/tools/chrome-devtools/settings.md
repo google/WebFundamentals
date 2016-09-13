@@ -8,7 +8,7 @@ description: Change the appearance of DevTools and access hidden features.
 
 # Configure and Customize DevTools {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Change the appearance of DevTools and access hidden 
 features.

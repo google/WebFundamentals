@@ -4,7 +4,7 @@ description: Paint is the process of filling in pixels that eventually get compo
 
 # Simplify Paint Complexity and Reduce Paint Areas {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 Paint is the process of filling in pixels that eventually get composited to 
 the users' screens. It is often the longest-running of all tasks in the 

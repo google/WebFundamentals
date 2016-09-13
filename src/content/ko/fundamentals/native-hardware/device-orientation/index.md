@@ -8,7 +8,7 @@ description: 장치 모션 및 방향 이벤트는 모바일 장치에 기본 �
 
 # 장치 방향 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 장치 모션 및 방향 이벤트는 모바일 장치에 기본 제공된 가속도계, 자이로스코프 및 나침반에 대한 액세스를 제공합니다.

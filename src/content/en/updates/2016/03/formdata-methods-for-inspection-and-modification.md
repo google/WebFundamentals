@@ -9,7 +9,7 @@ description: In Chrome 50, you can now interact with your FormData instances bef
 
 # FormData methods for inspection and modification {: .page-title }
 
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 

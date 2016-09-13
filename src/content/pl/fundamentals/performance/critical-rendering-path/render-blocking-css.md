@@ -8,7 +8,7 @@ description: Domyślnie kod CSS jest traktowany jako zasób blokujący renderowa
 
 # Kod CSS blokujący renderowanie {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Domyślnie kod CSS jest traktowany jako zasób blokujący renderowanie, co oznacza, że przeglądarka wstrzymuje renderowanie przetwarzanej treści do utworzenia modelu CSSOM. Pamiętaj, by maksymalnie uprościć znaczniki CSS, dostarczyć je możliwie najszybciej i korzystać z mediów takich typów oraz takich zapytań o media, by nie blokowały renderowania.

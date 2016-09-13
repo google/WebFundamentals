@@ -8,7 +8,7 @@ description: Gereksiz kaynaklari çikardiktan sonraki adim, tarayicinin indirmes
 
 # Metin tabanli varliklarin kodlamasini ve aktarim boyutunu optimize etme {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

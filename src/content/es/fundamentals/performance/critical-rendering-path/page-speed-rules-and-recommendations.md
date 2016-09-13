@@ -8,7 +8,7 @@ description: Reglas de PageSpeed Insights en contexto: en qué centrarnos para o
 
 # Reglas y recomendaciones de PageSpeed {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Reglas de PageSpeed Insights en contexto: en qué centrarnos para optimizar la ruta de renderización importante y por qué

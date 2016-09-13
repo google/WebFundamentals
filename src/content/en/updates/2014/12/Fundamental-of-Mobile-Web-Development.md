@@ -8,7 +8,7 @@ description: A quick look at some of the efforts the Chrome team are doing to he
 
 # Fundamentals of Mobile Web Development {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 At [Chrome Dev Summit 2014](https://developer.chrome.com/devsummit/) there was a
 whole host of topics and brand spanking new API's covered, but its not all about

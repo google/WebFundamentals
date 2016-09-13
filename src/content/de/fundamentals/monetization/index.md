@@ -8,7 +8,7 @@ description: Erfahren Sie, wie Sie Ihre Einnahmen geräteübergreifend maximiere
 
 # Monetarisierung {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

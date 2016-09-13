@@ -8,7 +8,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 # 回應式網頁設計模式 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

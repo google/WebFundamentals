@@ -8,7 +8,7 @@ description: Push notifications are one of the most valuable capabilities of nat
 
 # Push Notifications: Timely, Relevant, and Precise {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 
 <img src="images/joe-asked-contextual.png" alt="Example Notification" class="attempt-right">

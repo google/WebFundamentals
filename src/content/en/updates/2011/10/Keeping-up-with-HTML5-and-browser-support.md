@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Keeping up with HTML5 and browser support {: .page-title }
 
-{% include "_shared/contributors/sethladd.html" %}
+{% include "web/_shared/contributors/sethladd.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: In response to developer feedback, some upcoming features of Web An
 
 # Simplified Concepts in Web Animations Naming {: .page-title }
 
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 

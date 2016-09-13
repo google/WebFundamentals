@@ -9,7 +9,7 @@ description: In the DevTools, you can automatically pause on any exception (espe
 
 # Automatically pause on any exception {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-20-automatically-pause-on-any-exception/pause-on-exception.gif" alt="Automatically pause on any exception">

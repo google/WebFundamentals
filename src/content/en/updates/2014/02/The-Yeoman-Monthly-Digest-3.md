@@ -8,7 +8,7 @@ description: A monthly digest of high-quality Yeoman articles, generators and pr
 
 # The Yeoman Monthly Digest #3 {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 Allo! Allo! This past month saw the Yeoman community grow to [472](http://yeoman.io/community-generators.html) generators. We’re excited to see so much passion for project scaffolding and are working on some new features to enable generators to extend and build on top of each other.

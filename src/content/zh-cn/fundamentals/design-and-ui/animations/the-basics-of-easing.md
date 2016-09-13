@@ -8,7 +8,7 @@ description: 了解如何缓和或加强您的动画。
 
 # 缓动的基础知识 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 自然界中没有东西是从一点呈线性地移动到另一点。 现实中，事物在移动时可能加速或减速。 我们的大脑习惯于期待这种运动，因此在做动画时，应利用此规律。 自然的运动将使用户对您的应用感觉更舒适，从而产生更好的总体体验。

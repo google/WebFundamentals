@@ -7,7 +7,7 @@ description: CSS Containment という新しい仕様によって、ブラウザ
 
 
 Translated By: 
-{% include "_shared/contributors/myakura.html" %}
+{% include "web/_shared/contributors/myakura.html" %}
 
 
 <style>

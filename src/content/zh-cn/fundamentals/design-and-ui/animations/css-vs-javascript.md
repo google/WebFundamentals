@@ -8,8 +8,8 @@ description: 您可以通过 CSS 或 JavaScript 编写动画。 应使用哪种�
 
 # CSS 对比 JavaScript 动画 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 有两种主要方法在网页上创建动画：使用 CSS 和使用 JavaScript。 您选择哪种方法实际上取决于项目的其他依赖关系，以及您尝试实现什么类型的效果。

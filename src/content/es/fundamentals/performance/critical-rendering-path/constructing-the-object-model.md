@@ -8,7 +8,7 @@ description: Antes de que el navegador pueda publicar contenido en pantalla, tie
 
 # Crear el modelo de objetos {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Antes de que el navegador pueda publicar la página, tiene que crear los árboles DOM y CSSOM. Por eso, tenemos que asegurarnos de proporcionar tanto el archivo HTML como el CSS al navegador lo antes posible.

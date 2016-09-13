@@ -7,7 +7,7 @@ description: Inspect and modify animations with the Chrome DevTools  Animation I
 
 # Inspect animations {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Inspect and modify animations with the Chrome DevTools
 Animation Inspector.

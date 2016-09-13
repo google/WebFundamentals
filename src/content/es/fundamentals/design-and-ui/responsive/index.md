@@ -8,7 +8,7 @@ description: Gran parte de la Web no está optimizada para varios dispositivos. 
 
 # Conceptos básicos de diseño web adaptable {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 El uso de los dispositivos móviles para navegar por la Web está creciendo de forma astronómica y, sin embargo, la mayoría de la Web no está optimizada para estos dispositivos. Los dispositivos móviles suelen tener un tamaño de pantalla limitado y debería cambiar la forma de presentar el contenido en estas pantallas.

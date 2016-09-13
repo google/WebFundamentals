@@ -8,8 +8,8 @@ description: Animações devem ter um bom desempenho, caso contrário, impactar�
 
 # Animations and Performance {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 Deve-se ter cuidado para manter 60 fps sempre que você estiver animando, porque qualquer salto ou tremida será observada pelos seus usuários e impactará negativamente a experiência.

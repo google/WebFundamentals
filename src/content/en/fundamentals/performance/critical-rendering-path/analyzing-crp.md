@@ -7,7 +7,7 @@ description: Learn to identify and resolve critical rendering path performance b
 
 # Analyzing Critical Rendering Path Performance {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 Identifying and resolving critical rendering path performance bottlenecks 
 requires good knowledge of the common pitfalls. Let's take a hands-on tour 

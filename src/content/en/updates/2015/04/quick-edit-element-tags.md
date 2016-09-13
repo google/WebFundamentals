@@ -9,7 +9,7 @@ description: You can double click on the opening tag name of a node in the Eleme
 
 # Quick-edit element tags {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-quick-edit-the-html-element-tag/quick-edit-element.gif" alt="Quick-edit the HTML Element tag">

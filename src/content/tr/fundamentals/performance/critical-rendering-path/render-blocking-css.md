@@ -8,7 +8,7 @@ description: Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak isl
 
 # Olusturmayi Engelleyen CSS {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSSOM olusturuluncaya kadar tarayicinin islenmis herhangi bir içerigin olusturulmasini bekletecegi anlamina gelir. CSS'nizi küçük tuttugunuzdan, mümkün olan en hizli sekilde sagladiginizdan ve olusturmayi engellemeyecek medya türleri ve sorgulari kullandiginizdan emin olun.

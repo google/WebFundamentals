@@ -8,7 +8,7 @@ description: Die schnellste und am besten optimierte Ressource ist eine Ressourc
 
 # Unnötige Downloads vermeiden {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

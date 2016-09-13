@@ -8,7 +8,7 @@ description: 無論是小螢幕手機或是大螢幕電視，使用者都能透�
 
 # 您的第一個多裝置網站 {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

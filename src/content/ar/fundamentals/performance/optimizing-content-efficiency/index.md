@@ -8,7 +8,7 @@ description: لا يزال حجم البيانات التي يتم تنزيله�
 
 # تحسين كفاءة المحتوى {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

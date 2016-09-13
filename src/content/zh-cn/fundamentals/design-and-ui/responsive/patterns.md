@@ -8,7 +8,7 @@ description: 响应式网页设计模式正在快速发展，但只有少数几�
 
 # 响应式网页设计模式 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

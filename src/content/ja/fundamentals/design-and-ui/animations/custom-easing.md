@@ -8,8 +8,8 @@ description: オフロードに移動して、プロジェクトのために完�
 
 # Custom Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 場合によっては、CSS に含まれているイージング キーワードを使用したくなかったり、JavaScript ベースのアニメーション ライブラリを使用することがあるでしょう。」 どちらの場合も、通常は独自の曲線 (または式) を定義することができ、これによって、プロジェクトのアニメーションの感触を制御できます。

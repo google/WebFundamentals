@@ -9,7 +9,7 @@ description: How to set a breakpoint and navigate through the call stack with ke
 
 # Use keyboard to navigate through callstack {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-set-a-breakpoint-and-navigate-through-the-call-stack-with-keyboard-shortcuts/debugger-shortcuts.gif" alt="Set a breakpoint and navigate through the call stack with keyboard shortcuts">

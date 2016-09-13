@@ -6,9 +6,9 @@ description: Use the Console API to write information to the console,  create Ja
 
 # Console API Reference {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 Use the Console API to write information to the console, 
 create JavaScript profiles, and start a debugging session.

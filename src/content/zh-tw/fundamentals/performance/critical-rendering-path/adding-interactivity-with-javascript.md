@@ -8,7 +8,7 @@ description: 透過 JavaScript，我們可以修改網頁的各個層面，例�
 
 # 使用 JavaScript 新增互動功能 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 透過 JavaScript，我們可以修改網頁的各個方面，例如內容、樣式以及與使用者互動的行為。但是，JavaScript 也會禁止 DOM 建構，並導致網頁轉譯時間出現延遲。請採用 JavaScript 的非同步功能，藉此消除關鍵轉譯路徑中不必要的 JavaScript，以便提供最佳效能。

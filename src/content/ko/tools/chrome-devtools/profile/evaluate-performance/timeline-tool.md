@@ -8,12 +8,12 @@ description: 크롬 데브툴의 타임라인 패널로 어플리케이션의 �
 
 # 타임라인 툴 사용하기 {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

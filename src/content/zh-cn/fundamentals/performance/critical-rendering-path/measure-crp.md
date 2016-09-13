@@ -8,7 +8,7 @@ description: 无法评估就谈不上优化。幸运的是，Navigation Timing A
 
 # 使用 Navigation Timing 评估关键呈现路径 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

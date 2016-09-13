@@ -8,7 +8,7 @@ description: 지리적 위치 정보 및 장치 방향, 다이얼 및 SMS와 같
 
 # 장치 액세스 및 통합 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

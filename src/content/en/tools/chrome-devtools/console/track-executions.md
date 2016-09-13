@@ -7,9 +7,9 @@ description: Take advantage of the Console API to measure execution times and co
 
 # Measure and count executions {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/flaviocopes.html" %}
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/flaviocopes.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 Take advantage of the Console API to measure execution times and count statement executions.
 

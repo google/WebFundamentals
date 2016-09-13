@@ -7,8 +7,8 @@ description: It’s easy to overlook the network conditions your users will face
 
 # Optimize Performance Under Varying Network Conditions {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/jonathangarbee.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/jonathangarbee.html" %}
 
 It’s easy to overlook the network conditions your users will face on mobile. Use DevTools to emulate different network conditions. Fix any load time issues and your users will thank you.
 

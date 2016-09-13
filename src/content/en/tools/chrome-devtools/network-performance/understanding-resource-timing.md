@@ -6,7 +6,7 @@ description: It is crucial to understand the phases in which resources are gathe
 
 # Understanding Resource Timing {: .page-title }
 
-{% include "_shared/contributors/jonathangarbee.html" %}
+{% include "web/_shared/contributors/jonathangarbee.html" %}
 
 It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 

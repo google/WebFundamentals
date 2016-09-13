@@ -8,7 +8,7 @@ description: Los eventos de movimiento y orientación del dispositivo proporcion
 
 # Orientación del dispositivo {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Los eventos de movimiento y orientación del dispositivo proporcionan acceso al acelerómetro, el giroscopio y la brújula incorporados en los dispositivos móviles.

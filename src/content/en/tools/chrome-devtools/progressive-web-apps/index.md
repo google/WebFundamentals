@@ -7,7 +7,7 @@ description: Use the Application panel to inspect, modify, and debug web app man
 
 # Debug Progressive Web Apps {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Use the <strong>Application</strong> panel to inspect, modify,
 and debug web app manifests, service workers, and service worker caches.

@@ -8,7 +8,7 @@ description: Den kritischen Rendering-Pfad über die Priorisierung der Anzeige v
 
 # Kritischer Rendering-Pfad {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Die Optimierung des kritischen Rendering-Pfads ist für die Verbesserung der Leistung unserer Seiten entscheidend: Unser Ziel ist es, die Inhalte zu priorisieren und darzustellen, die sich auf die primäre Aktion beziehen, die der Nutzer auf einer Seite durchführen möchte.

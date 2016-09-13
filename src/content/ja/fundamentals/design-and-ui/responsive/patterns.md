@@ -8,7 +8,7 @@ description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만
 
 # 반응형 웹 디자인 패턴 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

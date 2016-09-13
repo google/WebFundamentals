@@ -8,7 +8,7 @@ description: Пользоваться Интернетом можно с пом�
 
 # Ваш первый сайт для различных устройств {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

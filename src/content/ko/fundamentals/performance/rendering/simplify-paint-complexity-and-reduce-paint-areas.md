@@ -8,7 +8,7 @@ description: 그림 그리기(paint)는 최종적으로 사용자의 화면에 �
 
 # 그림 그리기 복잡성 단순화 및 그림 그리기 영역 줄이기 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 그림 그리기(paint)는 최종적으로 사용자의 화면에 합성되는 픽셀을 채우는 과정입니다. 대체로 파이프라인의 모든 작업 중 가장 오래 실행되는 과정으로 가급적 피해야 합니다.

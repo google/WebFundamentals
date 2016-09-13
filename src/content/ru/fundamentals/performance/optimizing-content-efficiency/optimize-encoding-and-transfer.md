@@ -8,7 +8,7 @@ description: Удалив все ненужные ресурсы, перейде
 
 # Оптимизация кодировки и размера передаваемых текстовых ресурсов {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

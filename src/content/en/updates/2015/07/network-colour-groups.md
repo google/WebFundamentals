@@ -9,7 +9,7 @@ description: Learn about which colors match to which resource type to easy ident
 
 # Network colour groups {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-08-use-network-colour-groups-to-easily-identify-a-resource-type/network-colour-group.gif" alt="Use Network colour groups to easily identify a resource type">

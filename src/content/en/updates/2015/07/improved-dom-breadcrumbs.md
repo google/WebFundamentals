@@ -9,7 +9,7 @@ description: Did you know the Elements Panel has a <em>Breadcrumb trail</em>?
 
 # Improved DOM breadcrumbs {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-24-an-improved-breadcrumb-trail-for-the-dom/better-breadcrumbs.gif" alt="An improved breadcrumb trail for the DOM">

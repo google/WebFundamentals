@@ -8,7 +8,7 @@ description: Inspect and delete cookies from the Application panel.
 
 # Inspect and Delete Cookies {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Inspect and delete cookies from the
 <strong>Application</strong> panel.

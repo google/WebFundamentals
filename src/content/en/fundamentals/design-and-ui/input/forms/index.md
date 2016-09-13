@@ -7,7 +7,7 @@ description: Forms are hard to fill out on mobile. The best forms are the ones w
 
 # Create amazing forms {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 <div class="video-wrapper">

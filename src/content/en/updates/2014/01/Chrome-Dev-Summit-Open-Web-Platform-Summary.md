@@ -8,7 +8,7 @@ description: The capabilities of the Open Web Platform is accelerating at a pace
 
 # Chrome Dev Summit: Open Web Platform Summary {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 ## Blink

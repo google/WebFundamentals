@@ -8,8 +8,8 @@ description: 프로젝트에 대한 사용자 지정 easing 애니메이션을 �
 
 # 사용자 지정 Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 CSS에 포함된 easing 키워드를 사용하지 않거나 JavaScript 기반 애니메이션 라이브러리를 사용할 수 있습니다. 두 경우 모두 일반적으로 고유한 곡선(또는 방정식)을 정의하여 프로젝트에서 애니메이션의 느낌을 많이 제어할 수 있습니다.

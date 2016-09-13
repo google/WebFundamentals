@@ -9,7 +9,7 @@ description: Use the web app manifest to control how your web app launches
 
 # Installable Web Apps with the Web App Manifest in Chrome for Android {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 For Web Apps to be successful, they need to work how the user would expect a native application to work. The ability for the developer to control how their web app is launched is just one part of UX that needs to be solved.
 

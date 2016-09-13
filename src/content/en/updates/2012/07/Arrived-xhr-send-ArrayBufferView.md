@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Arrived! xhr.send(ArrayBufferViews) {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 And here you thought we were done improving XHR!

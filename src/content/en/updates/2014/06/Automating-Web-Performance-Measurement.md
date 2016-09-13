@@ -8,7 +8,7 @@ description: Use PSI to get web performance metrics into your build process.
 
 # Automating Web Performance Measurement {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 Web performance can have a huge impact on your [entire](http://programming.oreilly.com/2014/01/web-performance-is-user-experience.html) user experience. If you’ve been looking at improving your own site’s perf lately, you’ve probably heard of [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) - a tool that analyzes pages and offers advice on how to make them faster based on best practices for mobile and desktop web performance.

@@ -8,7 +8,7 @@ description: JavaScript possibilita alterar praticamente todos os aspectos da p�
 
 # Adição de interatividade com JavaScript {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 JavaScript possibilita alterar praticamente todos os aspectos da página: conteúdo, estilo e seu comportamento, mediante interações do usuário. No entanto, JavaScript também pode bloquear a criação e o atraso de DOM quando a página é renderizada. Transforme seu JavaScript em assíncrono e elimine qualquer JavaScript desnecessário do caminho de processamento essencial para atingir um desempenho otimizado.

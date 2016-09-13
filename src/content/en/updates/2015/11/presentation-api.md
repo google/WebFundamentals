@@ -9,7 +9,7 @@ description: Chrome on Android now allows mobile sites to present to Google Cast
 
 # Google Cast for Chrome on Android {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

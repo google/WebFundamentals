@@ -8,7 +8,7 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 
 # 動画 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

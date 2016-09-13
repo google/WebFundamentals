@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Optimizing JavaScript {: .page-title }
 
-{% include "_shared/contributors/sethladd.html" %}
+{% include "web/_shared/contributors/sethladd.html" %}
 
 
 JavaScript is relatively fast, but it can always go faster. Read more about how to optimize your JavaScript for performance.

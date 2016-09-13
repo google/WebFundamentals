@@ -4,7 +4,7 @@ description: Compositing is where the painted parts of the page are put together
 
 # Stick to Compositor-Only Properties and Manage Layer Count {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 Compositing is where the painted parts of the page are put together for 
 displaying on screen.

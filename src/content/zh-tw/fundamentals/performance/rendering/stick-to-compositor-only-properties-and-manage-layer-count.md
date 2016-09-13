@@ -8,7 +8,7 @@ description: 合成是指組合網頁上的繪製部分，以用於在螢幕上�
 
 # 堅守純合成器屬性和管理圖層數目 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 合成是指組合網頁上的繪製部分，以用於在螢幕上顯示。

@@ -9,7 +9,7 @@ description: The fetch() API is landing in the window object and is looking to r
 
 # Introduction to fetch() {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 *So long XMLHttpRequest*
 

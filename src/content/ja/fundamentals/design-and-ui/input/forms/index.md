@@ -8,7 +8,7 @@ description: フォームをモバイルに記入するのは困難です。 最
 
 # Create Amazing Forms {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

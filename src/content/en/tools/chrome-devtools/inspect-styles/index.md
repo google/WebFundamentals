@@ -8,8 +8,8 @@ description: Inspect and edit the HTML and CSS of your pages.
 
 # Inspect and Edit Pages and Styles {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Inspect and live-edit the HTML and CSS of a page using 
 the Chrome DevTools Elements panel.

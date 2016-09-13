@@ -8,7 +8,7 @@ description: Improve your perceived loading performance for web apps launched fr
 
 # Using the web app manifest to create a solid color loading screen {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

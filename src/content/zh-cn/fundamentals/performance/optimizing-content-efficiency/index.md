@@ -8,7 +8,7 @@ description: 每个应用所下载的数据数量不断增加。为了提供卓�
 
 # 优化内容效率 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

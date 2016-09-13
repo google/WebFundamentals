@@ -8,7 +8,7 @@ description: レイアウトは、要素の幾何学的情報、要素のサイ�
 
 # Avoid large, complex layouts and layout thrashing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 レイアウトは、要素の幾何学的情報、要素のサイズ、ページでの位置をブラウザによって管理する場所です。 個々の要素は、使用された CSS、要素の内容、親要素に基づいて、明示的または暗黙的なサイジング情報を持ちます。 プロセスは、Chrome、Opera、Safari、および Internet Explorer で、Layout と呼ばれます。 Firefox では Reflow と呼ばれますが、実際にはプロセスは同じです。

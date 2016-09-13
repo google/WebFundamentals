@@ -8,7 +8,7 @@ description: Selecione o easing adequado para seu projeto, seja easing in, out o
 
 # Choosing the Right Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Já discutimos as várias opções disponíveis para easing em animações, então qual o tipo ideal para seus projetos e qual será a duração das animações?

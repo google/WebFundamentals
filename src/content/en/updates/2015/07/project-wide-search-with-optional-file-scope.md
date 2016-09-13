@@ -9,7 +9,7 @@ description: Learn the secret commands to search like a pro in DevTools.
 
 # Project wide search with optional file scope {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-09-a-project-wide-search-with-an-optional-file-scope/project-search-with-file-scope.gif" alt="A project wide search with an optional file scope">

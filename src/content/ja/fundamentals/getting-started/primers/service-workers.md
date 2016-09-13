@@ -7,12 +7,12 @@ description: リッチなオフライン体験、定期的なバックグラウ�
 
 # Service Worker の紹介 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/myakura.html" %}
+{% include "web/_shared/contributors/myakura.html" %}
 
 
 

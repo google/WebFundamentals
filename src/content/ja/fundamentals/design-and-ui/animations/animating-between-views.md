@@ -8,7 +8,7 @@ description: アプリ内の 2 つのビュー間にアニメーションを付�
 
 # ビュー間のアニメーション {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 詳細ビューへのリストの場合やサイドバー ナビゲーションを表示する場合など、アプリケーション内の複数のビュー間でユーザを移動したいことがよくあります。 これらのビュー間のアニメーションは、ユーザの興味を保つのに非常に効果的であり、プロジェクトの活力を高めることになります。

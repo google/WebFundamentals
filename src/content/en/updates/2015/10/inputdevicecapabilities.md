@@ -9,7 +9,7 @@ description: A simpler method to rationalize your mouse and touch logic for when
 
 # Input Device Capabilities {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

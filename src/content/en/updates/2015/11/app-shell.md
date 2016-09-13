@@ -9,8 +9,8 @@ description: Application shell architecture is a method of building progressive 
 
 # Instant Loading Web Apps with An Application Shell Architecture {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 An **application shell** is the minimal HTML, CSS, and JavaScript powering a user interface. The application shell should:

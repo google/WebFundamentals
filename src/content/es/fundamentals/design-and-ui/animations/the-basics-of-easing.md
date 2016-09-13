@@ -8,7 +8,7 @@ description: Aprenda a lograr que sus animaciones sean suaves pero interesantes.
 
 # Principios básicos de la aceleración {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

@@ -8,7 +8,7 @@ book_path: /web/updates/_book.yaml
 
 # Alt + Click to expand all child nodes {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-alt-click-to-expand-all-child-nodes/alt-click-expand-node.gif" alt="Alt + Click to expand all child nodes">

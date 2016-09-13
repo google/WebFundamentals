@@ -8,7 +8,7 @@ description: If you can't measure the performance of your requests in a service 
 
 # Measuring Performance in a Service Worker {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

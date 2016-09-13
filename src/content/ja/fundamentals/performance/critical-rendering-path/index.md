@@ -8,7 +8,7 @@ description: ユーザーがページ上で行う中核的操作に関係する�
 
 # クリティカル レンダリング パス {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 クリティカル レンダリング パスの最適化は、ページのパフォーマンスを高める上で極めて重要な意味を持ちます。目標は、ユーザーがページ上で行う中核的操作に関係するコンテンツを優先して表示させることです。

@@ -8,12 +8,12 @@ description: API 입문서를 통해 API와 관련된 주요한 개념들을 이
 
 # API 입문서 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

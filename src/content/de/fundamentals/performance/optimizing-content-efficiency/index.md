@@ -8,7 +8,7 @@ description: Die Menge der Daten, die von den einzelnen Anwendungen heruntergela
 
 # Effizienz der Inhalte optimieren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

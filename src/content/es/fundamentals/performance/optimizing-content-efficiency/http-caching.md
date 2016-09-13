@@ -8,7 +8,7 @@ description: La tarea de obtener un elemento de la red es lenta y cara: las resp
 
 # Almacenar HTTP en caché {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

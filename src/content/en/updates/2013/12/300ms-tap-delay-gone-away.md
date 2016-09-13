@@ -8,7 +8,7 @@ description: Every click interaction in mobile browsers is hampered with a 300ms
 
 # 300ms tap delay, gone away {: .page-title }
 
-{% include "_shared/contributors/jakearchibald.html" %}
+{% include "web/_shared/contributors/jakearchibald.html" %}
 
 <style>
 .phone-screenshot {

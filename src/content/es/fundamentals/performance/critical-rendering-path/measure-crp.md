@@ -8,7 +8,7 @@ description: No es posible optimizar lo que no podemos medir. Afortunadamente, e
 
 # Medir la ruta de renderización importante con el tiempo de navegación {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 No es posible optimizar lo que no podemos medir. Afortunadamente, el API de Navigation Timing proporciona las herramientas necesarias para medir cada paso de la ruta de renderización importante.

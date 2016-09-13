@@ -8,7 +8,7 @@ description: Een foto is evenveel waard als 1000 woorden. Afbeeldingen vormen da
 
 # Afbeeldingen {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

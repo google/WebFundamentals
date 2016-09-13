@@ -8,7 +8,7 @@ description: Optimización de la ruta de renderización importante dando priorid
 
 # Ruta de renderización importante {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 La optimización de la ruta de renderización importante es fundamental para mejorar el rendimiento de las páginas. Nuestro objetivo es priorizar y mostrar el contenido relacionado con la acción principal que el usuario quiere realizar en una página.

@@ -9,7 +9,7 @@ description: The new Save-Data client hint request header available in Chrome, O
 
 # Delivering Fast and Light Applications with Save-Data {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 Hundreds of millions of users are relying on proxy browsers and various
 transcoding services to access the web on a daily basis. For some, these

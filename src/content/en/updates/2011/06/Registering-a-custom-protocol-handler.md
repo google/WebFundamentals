@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Registering a custom protocol handler {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 Chrome 13 finally includes `navigator.registerProtocolHandler`. This API allows web apps to register themselves as possible handlers for particular protocols. For example, users could select your application to handle "mailto" links.

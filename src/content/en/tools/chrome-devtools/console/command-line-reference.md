@@ -7,8 +7,8 @@ description: TODO
 
 # Command Line API Reference {: .page-title }
 
-{% include "_shared/contributors/andismith.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/andismith.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 The Command Line API contains a collection of convenience functions for performing common tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and starting the profiler, and monitoring DOM events.
 

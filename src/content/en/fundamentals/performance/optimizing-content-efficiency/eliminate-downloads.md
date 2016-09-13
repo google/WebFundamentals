@@ -8,7 +8,7 @@ description: You should audit your resources periodically to ensure that each re
 
 # Eliminating Unnecessary Downloads {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 ## TL;DR
 * Inventory your own assets and third-party assets on your pages.

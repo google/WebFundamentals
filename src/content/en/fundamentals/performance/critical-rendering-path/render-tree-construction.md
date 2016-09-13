@@ -7,7 +7,7 @@ description: TODO
 
 # Render-tree Construction, Layout, and Paint {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 The CSSOM and DOM trees are combined into a render tree, which is then used 
 to compute the layout of each visible element and serves as an input to the 

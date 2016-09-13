@@ -7,7 +7,7 @@ description: "Promises simplify deferred and asynchronous computations. A promis
 
 # JavaScript Promises: an Introduction {: .page-title }
 
-{% include "_shared/contributors/jakearchibald.html" %}
+{% include "web/_shared/contributors/jakearchibald.html" %}
 
 Ladies and gentlemen, prepare yourself for a pivotal moment in the history of
 web development.

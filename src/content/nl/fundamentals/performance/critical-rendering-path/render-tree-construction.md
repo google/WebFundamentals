@@ -8,7 +8,7 @@ description: De CSSOM- en DOM-boomstructuren worden gecombineerd in een weergave
 
 # De opbouw van de weergaveboomstructuur, de opmaak en het kleuren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 De CSSOM- en DOM-boomstructuren worden gecombineerd in een weergaveboomstructuur. Deze nieuwe structuur wordt vervolgens gebruikt om de opmaak van elk zichtbaar element te berekenen en biedt invoer voor het kleurproces waarbij pixels op het scherm worden weergegeven. Het is cruciaal om elk van deze stappen te optimaliseren voor een optimale weergaveprestatie.

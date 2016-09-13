@@ -11,8 +11,8 @@ description: 給所有能訪問到 web 的設備構建運行良好的網站和�
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
 
 
 

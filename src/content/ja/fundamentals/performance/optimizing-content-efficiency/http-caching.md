@@ -8,7 +8,7 @@ description: ネットワーク経由で情報を取得することは時間も�
 
 # HTTP キャッシュの作成 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

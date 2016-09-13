@@ -8,7 +8,7 @@ description: A árvore do CSSOM e do DOM se combinam em uma árvore de renderiza
 
 # Construção, layout e pintura da árvore de renderização {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 A árvore do CSSOM e do DOM se combinam em uma árvore de renderização, que é usada para computar o layout de cada elemento visível e serve como entrada para o processo de pintura, que renderiza os pixels na tela. A otimização de cada uma dessas etapas é essencial para obter um ótimo desempenho de renderização.

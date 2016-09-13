@@ -9,7 +9,7 @@ description: The new font-display descriptor for @font-face lets developers deci
 
 # Controlling Font Performance with font-display {: .page-title }
 
-{% include "_shared/contributors/robdodson.html" %}
+{% include "web/_shared/contributors/robdodson.html" %}
 
 
 

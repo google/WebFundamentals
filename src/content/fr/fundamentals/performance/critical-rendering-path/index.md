@@ -8,7 +8,7 @@ description: Optimisation du chemin critique du rendu en affichant en priorité 
 
 # Chemin critique du rendu {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 L'optimisation du chemin critique du rendu est essentielle pour améliorer les performances de nos pages : notre objectif est de donner la priorité et d'afficher le contenu associé à la première action que l'utilisateur souhaite effectuer sur une page.

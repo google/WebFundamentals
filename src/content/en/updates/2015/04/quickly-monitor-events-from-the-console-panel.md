@@ -9,7 +9,7 @@ description: You can log all the events dispatched to an object using the Comman
 
 # Quickly monitor events from the Console Panel {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-quickly-monitor-events-from-the-console-panel/monitor-events.gif" alt="DevTools Quickly monitor events from the Console Panel">

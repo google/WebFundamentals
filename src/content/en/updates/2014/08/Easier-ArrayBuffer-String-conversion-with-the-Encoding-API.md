@@ -8,7 +8,7 @@ description: The native Encoding API offers a straightforward way to convert bet
 
 # Easier ArrayBuffer <-> String conversion with the Encoding API {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 Over two years ago, [Renato Mangini](http://www.html5rocks.com/en/profiles/#renatomangini) described a [method](http://updates.html5rocks.com/2012/06/How-to-convert-ArrayBuffer-to-and-from-String) for converting between raw [ArrayBuffers](https://developer.mozilla.org/en-US/docs/Web/API/ArrayBuffer) and the corresponding string representation of that data. At the end of the post, Renato mentioned that an official standardized API to handle the conversion was in the process of being drafted. The [specification](http://encoding.spec.whatwg.org/) has now matured, and both [Firefox](https://developer.mozilla.org/en-US/Firefox/Releases/18) and [Google Chrome](http://www.chromestatus.com/feature/5714368087982080) have added native support for the [TextDecoder](http://encoding.spec.whatwg.org/#interface-textdecoder) and [TextEncoder](http://encoding.spec.whatwg.org/#interface-textencoder) interfaces.

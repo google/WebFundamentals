@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Content Security Policy 1.0 is officially awesome. {: .page-title }
 
-{% include "_shared/contributors/mikewest.html" %}
+{% include "web/_shared/contributors/mikewest.html" %}
 
 
 It's official! The W3C has advanced the [Content Security Policy 1.0 specification][csp10] from Working Draft to Candidate Recommendation, and [issued a call for implementations][impl]. Cross-site scripting attacks are one step closer to being (mostly) a thing of the past.

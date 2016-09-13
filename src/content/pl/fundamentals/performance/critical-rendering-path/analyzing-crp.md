@@ -8,7 +8,7 @@ description: Wykrywanie i usuwanie wąskich gardeł ograniczających wydajność
 
 # Analiza wydajności krytycznej ścieżki renderowania {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Wykrywanie i usuwanie wąskich gardeł ograniczających wydajność krytycznej ścieżki renderowania wymaga dobrej znajomości typowych problemów. Ten praktyczny przewodnik pomaga określić typowe schematy wydajności i zoptymalizować strony.

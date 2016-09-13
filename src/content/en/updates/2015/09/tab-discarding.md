@@ -9,7 +9,7 @@ description: Reducing Chrome's memory footprint is one of the team's top priorit
 
 # Tab Discarding in Chrome: a Memory-Saving Experiment {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 

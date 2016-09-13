@@ -8,7 +8,7 @@ description: Ilość danych pobieranych przez każdą aplikację cały czas roś
 
 # Optymalizacja wydajności związanej z treścią {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

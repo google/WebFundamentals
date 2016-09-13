@@ -8,8 +8,8 @@ description: 在迁移到 HTTPS 时，网站运营商面对的一个难题是概
 
 # 安全术语简介 {: .page-title }
 
-{% include "_shared/contributors/chrispalmer.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

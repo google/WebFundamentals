@@ -7,7 +7,7 @@ description: By default CSS is treated as a render blocking resource. Learn how 
 
 # Render Blocking CSS {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 By default, CSS is treated as a render blocking resource, which means that the
 browser won't render any processed content until the CSSOM is

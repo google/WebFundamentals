@@ -8,7 +8,7 @@ description: As imagens geralmente são responsáveis pela maior parte dos bytes
 
 # Otimização de imagens {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

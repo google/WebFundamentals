@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # SwiftShader brings software 3D rendering to Chrome {: .page-title }
 
-{% include "_shared/contributors/ilmariheikkinen.html" %}
+{% include "web/_shared/contributors/ilmariheikkinen.html" %}
 
 
 [SwiftShader](http://transgaming.com/business/swiftshader) is a software 3D renderer used in Chrome 18 that lets you use CSS 3D and WebGL even on blacklisted GPUs. SwiftShader is available only on Windows and kicks in when you visit a site that uses 3D graphics features.

@@ -8,7 +8,7 @@ description: Вопрос обеспечения безопасности пол
 
 # Безопасность с протоколом HTTPS {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

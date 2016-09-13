@@ -8,8 +8,8 @@ description: There are two types of app install banners: <i>web</i> app install 
 
 # Using App Install Banners {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 <div class="attempt-right">

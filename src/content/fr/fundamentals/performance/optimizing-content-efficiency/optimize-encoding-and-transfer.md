@@ -8,7 +8,7 @@ description: Une fois que nous avons éliminé toutes les ressources inutiles, l
 
 # Optimiser l'encodage et la taille de transfert des éléments de texte {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

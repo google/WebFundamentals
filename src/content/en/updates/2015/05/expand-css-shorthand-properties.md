@@ -9,7 +9,7 @@ description: In the styles pane, you can expand CSS shorthand properties like <c
 
 # Expand CSS shorthand properties {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-expand-css-shorthand-properties/expand-shorthand-properties.gif" alt="Expand CSS shorthand properties">

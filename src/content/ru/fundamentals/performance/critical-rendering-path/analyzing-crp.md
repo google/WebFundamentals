@@ -8,7 +8,7 @@ description: В этой статье мы рассмотрим нескольк
 
 # Анализ процесса визуализации {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 В этой статье мы рассмотрим несколько примеров из практики, которые помогут вам оптимизировать процесс визуализации, т. е. находить и устранять замедляющие ее помехи.

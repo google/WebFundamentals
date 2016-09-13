@@ -8,7 +8,7 @@ description: How to convert ArrayBuffer to and from String
 
 # How to convert ArrayBuffer to and from String {: .page-title }
 
-{% include "_shared/contributors/renatomangini.html" %}
+{% include "web/_shared/contributors/renatomangini.html" %}
 
 
 ArrayBuffers are used to transport raw data and several new APIs rely on them, including [WebSockets](http://www.html5rocks.com/en/tutorials/websockets/basics/), [Web Intents](http://webintents.org), [XMLHttpRequest version 2](http://www.html5rocks.com/en/tutorials/file/xhr2/) and [WebWorkers](http://www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted-workercomm). However, because they recently landed in the JavaScript world, sometimes they are misinterpreted or misused.

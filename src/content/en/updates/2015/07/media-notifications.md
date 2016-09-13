@@ -8,7 +8,7 @@ description: When audio or video is playing on a web page, a notification showin
 
 # Media playback notifications for Chrome on Android {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

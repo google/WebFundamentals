@@ -8,7 +8,7 @@ description: Zanim przeglądarka zacznie renderować treść na ekranie, musi ut
 
 # Tworzenie modelu obiektowego {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Zanim przeglądarka zacznie renderować stronę, musi utworzyć drzewa DOM i CSSOM. Dlatego musimy dopilnować, by znaczniki HTML i CSS zostały przekazane do przeglądarki możliwie najszybciej.

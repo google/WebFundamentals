@@ -7,8 +7,8 @@ description: Learn how to set up CSS & JS preprocessors to help you code more ef
 
 # Set Up CSS and JS Preprocessors {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 CSS preprocessors such as Sass, as well as JS preprocessors and transpilers can greatly accelerate your development when used correctly. Learn how to set them up.
 

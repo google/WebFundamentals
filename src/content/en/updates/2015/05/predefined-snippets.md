@@ -9,7 +9,7 @@ description: How to run predefined snippets of code on any web page.
 
 # Predefined snippets {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-run-predefined-snippets-of-code-on-any-web-page/snippets.gif" alt="DevTools - Run predefined snippets of code on any web page">

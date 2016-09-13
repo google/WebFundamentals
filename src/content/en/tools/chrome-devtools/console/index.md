@@ -7,7 +7,7 @@ description: The Chrome DevTools Console panel is your focal point for direct in
 
 # Using the Console {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 The Chrome DevTools Console panel is your focal point for direct interaction with a page in real time.
 

@@ -9,7 +9,7 @@ description: How to view and change your DOM breakpoints with the Breakpoints pa
 
 # View and change your DOM breakpoints {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-20-view-and-change-your-dom-breakpoints-with-the-breakpoints-pane/dom-breakpoint-pane.gif" alt="View and change your DOM breakpoints with the breakpoints pane">

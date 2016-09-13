@@ -8,7 +8,7 @@ description: CSSOM 樹狀結構和 DOM 樹狀結構會結合成轉譯樹狀結�
 
 # 轉譯樹狀結構的建構、版面配置和繪製 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 CSSOM 樹狀結構和 DOM 樹狀結構會結合成轉譯樹狀結構，用於計算每個可視元素的版面配置，並作為繪製過程的輸入參數，在螢幕上轉譯各個像素。 如要達成最佳轉譯成效，關鍵就在於確實執行最佳化流程的每個步驟。

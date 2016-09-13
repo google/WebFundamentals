@@ -8,7 +8,7 @@ description: Template String literals with embedded expressions. We've been wait
 
 # Getting Literal With ES6 Template Strings {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 

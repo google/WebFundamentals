@@ -9,7 +9,7 @@ description: Find out which third-party scripts cause perf issues with the Aggre
 
 # DevTools Digest: Aggregated Timeline Details, Color Palettes and More {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

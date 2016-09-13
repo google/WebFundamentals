@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # CSS layout gets smarter with calc() {: .page-title }
 
-{% include "_shared/contributors/alexdanilo.html" %}
+{% include "web/_shared/contributors/alexdanilo.html" %}
 
 
 Creating a nice CSS layout starts with assigning sizes for all the things being placed in a web application. One highly requested feature has always been the ability to specify sizes using a mixture of sizing units. For example, it’d be nice to be able to reserve 50% of an area plus a fixed amount of space, say 10px. Well you can do that right now using the [`calc()`](http://www.w3.org/TR/css3-values/#calc) property. You can use this feature anywhere a length or number is used, so you can use it for positioning things, or in `rgb()` color values as well, so it has lots of great uses in a style sheet.

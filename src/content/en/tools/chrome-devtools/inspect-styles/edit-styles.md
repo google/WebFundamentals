@@ -8,8 +8,8 @@ description: Use the Styles pane in Chrome DevTools to inspect and modify the CS
 
 # Edit Styles {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Use the <strong>Styles</strong> pane to modify the CSS
 styles associated to an element.

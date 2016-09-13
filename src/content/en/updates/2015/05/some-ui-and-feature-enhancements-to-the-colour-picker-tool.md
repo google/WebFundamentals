@@ -8,7 +8,7 @@ book_path: /web/updates/_book.yaml
 
 # Some UI and feature enhancements to the Colour Picker tool {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-some-ui-and-feature-enhancements-to-the-colour-picker-tool/colour-picker-upgrade.gif" alt="Some UI and feature enhancements to the Colour Picker tool">

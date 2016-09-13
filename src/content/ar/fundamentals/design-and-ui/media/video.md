@@ -8,7 +8,7 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 
 # الفيديو {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

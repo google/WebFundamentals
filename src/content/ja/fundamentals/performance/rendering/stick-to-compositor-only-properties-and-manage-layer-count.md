@@ -8,7 +8,7 @@ description: コンポジットは、ページのペイント部分を画面に�
 
 # Stick to compositor-only properties and manage layer count {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 コンポジットは、ページのペイント部分を画面に一緒に置かれている場所です。

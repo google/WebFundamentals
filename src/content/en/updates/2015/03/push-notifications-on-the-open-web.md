@@ -9,7 +9,7 @@ description: Push Messaging and Notifications are Landing in Chrome 42.
 
 # Push Notifications on the Open Web {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 Warning: This blog post is getting a bit old. If you are looking to learn more about implementing push, check out our [Web Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/) documentation.
 

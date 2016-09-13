@@ -8,7 +8,7 @@ description: Obraz jest wart tysiąc słów, a grafiki są nieodłączną częś
 
 # Obrazy {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

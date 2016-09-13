@@ -8,7 +8,7 @@ description: 有时，新项目的最难部分是开头。 Web Starter Kit 为�
 
 # 使用 Web Starter Kit 开始制作您的网站 {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

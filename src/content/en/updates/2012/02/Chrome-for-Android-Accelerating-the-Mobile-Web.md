@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Chrome for Android: Accelerating the Mobile Web {: .page-title }
 
-{% include "_shared/contributors/borissmus.html" %}
+{% include "web/_shared/contributors/borissmus.html" %}
 
 
 You've probably already heard that Chrome for Android Beta launched today. This

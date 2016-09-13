@@ -7,8 +7,8 @@ description: Measure the network performance of your web application  using the 
 
 # Measure Resource Loading Times {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Measure the network performance of your site using the 
 <strong>Network</strong> panel.

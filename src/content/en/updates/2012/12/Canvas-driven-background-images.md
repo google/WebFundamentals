@@ -8,7 +8,7 @@ description: Powering a css background using canvas or webgl
 
 # Canvas-driven background images {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 ### Programmatically animating background images

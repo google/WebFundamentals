@@ -8,7 +8,7 @@ description: A small set of changes have landed in Chrome 45 that will make it e
 
 # Using rotationAngle and touchRadius {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: Pobieranie przez sieć jest powolne i kosztowne: długie odpowiedzi
 
 # Buforowanie HTTP {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

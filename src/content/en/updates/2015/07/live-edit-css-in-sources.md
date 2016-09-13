@@ -9,7 +9,7 @@ description: Did you know you can live edit CSS in Sources and have it update th
 
 # Live-edit CSS in Sources {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-24-live-edit-css-in-sources-and-increment-values-easily/live-edit-css-sources.gif" alt="Live Edit CSS in Sources and increment values easily">

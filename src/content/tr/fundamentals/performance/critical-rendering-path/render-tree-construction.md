@@ -8,7 +8,7 @@ description: CSSOM ve DOM agaçlari, bir olusturma agacinda birlestirilir. Bu ag
 
 # Olusturma agaci yapimi, Yer paylasimi ve Boyama {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 CSSOM ve DOM agaçlari, bir olusturma agacinda birlestirilir. Bu agaç daha sonra, görünür her bir ögenin yer paylasimini hesaplamak için kullanilir ve ekranda pikselleri olusturan boyama isleminde giris görevi görür. Bu adimlarin her birinin optimize edilmesi, en iyi olusturma performansinin gerçeklestirilmesi açisindan kritik öneme sahiptir.

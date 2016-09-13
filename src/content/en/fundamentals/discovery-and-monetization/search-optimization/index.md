@@ -7,7 +7,7 @@ description: Websites are visited not only by humans, but also by search engine 
 
 # Search Optimization {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.
 

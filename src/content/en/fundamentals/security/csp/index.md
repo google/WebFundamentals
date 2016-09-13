@@ -7,8 +7,8 @@ description: Content Security Policy can significantly reduce the risk and impac
 
 # Content Security Policy {: .page-title }
 
-{% include "_shared/contributors/mikewest.html" %}
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/mikewest.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 The web's security model is rooted in the
 [_same-origin policy_](http://en.wikipedia.org/wiki/Same-origin_policy). Code

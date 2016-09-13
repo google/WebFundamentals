@@ -8,7 +8,7 @@ description: Regels van PageSpeed Insights in context: waar moet u op letten bij
 
 # Regels en aanbevelingen voor PageSpeed {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Regels van PageSpeed Insights in context: waar moet u op letten bij het optimaliseren van het kritieke weergavepad en waarom.

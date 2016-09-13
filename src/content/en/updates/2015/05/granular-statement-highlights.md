@@ -9,7 +9,7 @@ description: See the exact executed statement with granular highlighting.
 
 # Granular statement highlights {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-see-the-exact-statement-which-executed-with-granular-highlighting/highlight-paused-statement.gif" alt="See the exact statement which executed with granular highlighting">

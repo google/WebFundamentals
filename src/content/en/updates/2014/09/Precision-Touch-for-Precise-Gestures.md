@@ -8,7 +8,7 @@ description: TouchEvents have changed in Chrome to return float values, instead 
 
 # Precision Touch for Precise Gestures {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 A [change landed](https://code.google.com/p/chromium/issues/detail?id=323935) in

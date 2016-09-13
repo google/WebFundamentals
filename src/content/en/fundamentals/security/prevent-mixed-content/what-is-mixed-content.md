@@ -7,7 +7,7 @@ description: Mixed occurs when initial HTML is loaded over a secure HTTPS connec
 
 # What Is Mixed Content? {: .page-title }
 
-{% include "_shared/contributors/johyphenel.html" %}
+{% include "web/_shared/contributors/johyphenel.html" %}
 
 **Mixed content** occurs when initial HTML is loaded over a secure HTTPS
 connection, but other resources (such as images, videos, stylesheets, scripts)

@@ -9,7 +9,7 @@ description: Resources and more for the Web Animations API
 
 # Web Animations Resources {: .page-title }
 
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 The Web Animations API provides powerful primitives to describe imperative animations from JavaScript - but what does that mean?

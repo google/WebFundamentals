@@ -8,7 +8,7 @@ description: O volume de dados transferidos por aplicativos continua a crescer. 
 
 # Otimização da eficiência do conteúdo {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

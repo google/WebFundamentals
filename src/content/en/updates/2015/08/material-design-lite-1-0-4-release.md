@@ -8,7 +8,7 @@ description: There is a new release of Material Design Lite, bringing a host of 
 
 # New Release of Material Design Lite - 1.0.4 {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 ![](/web/updates/images/2015-08-21-new-mdl-release/mdlsite.jpg)

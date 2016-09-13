@@ -8,7 +8,7 @@ description: アプリ内のモーダル ビューにアニメーションを付
 
 # Animating Modal Views {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 モーダル ビューは、重要なメッセージのためのものであり、ユーザー インターフェースをブロックする必要があります。 それらは破壊的であり、過剰に使用するとユーザーの操作を台無しにしてしまうため、使用するときは注意する必要があります。 しかし、特定の環境では適切なビューであり、いくつかのアニメーションを追加することによって活用できます。

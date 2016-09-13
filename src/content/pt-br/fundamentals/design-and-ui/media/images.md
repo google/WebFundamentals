@@ -8,7 +8,7 @@ description: Uma imagem vale por mil palavras, e as imagens desempenham uma fun√
 
 # Imagens {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

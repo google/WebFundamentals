@@ -8,8 +8,8 @@ description: Анимация обязательно должна работат
 
 # Анимация и производительность {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 Частота кадров любой анимации должна составлять 60 кадров в секунду, поскольку пользователи заметят любые подвисания или задержки и воспримут это отрицательно

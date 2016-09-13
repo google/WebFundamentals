@@ -7,7 +7,7 @@ description: Learn how to record heap snapshots with the Chrome DevTools heap pr
 
 # How to Record Heap Snapshots {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks.
 

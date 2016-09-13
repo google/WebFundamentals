@@ -7,8 +7,8 @@ description: Compare similar data objects using the <code>table()<code> method.
 
 # Compare Similar Data Objects {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 View structured data and compare data objects using the table() method.
 
 The `table()` method provides an easy way to view objects and arrays that include similar data. When called, it will take the properties of an object and create a header. The row data then comes from each index's properties value.

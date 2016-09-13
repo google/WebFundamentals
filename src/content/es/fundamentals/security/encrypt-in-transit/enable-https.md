@@ -7,7 +7,7 @@ description: Enabling HTTPS on your servers is critical to securing your webpage
 
 # Enabling HTTPS on Your Server {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 ## Generación de claves y solicitudes de firma de certificados 
 

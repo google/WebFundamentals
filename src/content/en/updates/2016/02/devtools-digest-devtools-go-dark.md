@@ -9,7 +9,7 @@ description: Learn how DevTools makes you type less with smarter Console autocom
 
 # DevTools go dark, @keyframe editing and smarter autocomplete {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

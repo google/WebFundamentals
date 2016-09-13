@@ -8,7 +8,7 @@ description: 輸入處理常式可能是您的應用程式效能問題的潛在�
 
 # 解彈跳您的輸入處理常式 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 輸入處理常式可能是您的應用程式效能問題的潛在原因，因為它們可以阻止畫面完成，也會導致額外的 (且不必要的) 版面配置工作。

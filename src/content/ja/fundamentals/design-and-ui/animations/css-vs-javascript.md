@@ -8,8 +8,8 @@ description: CSS または JavaScript でアニメーション化することが
 
 # CSS 対 JavaScript のアニメーション {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 ウェブ上でアニメーションを作成するには、主に 2 通りの方法（CSS の使用および JavaScript の使用）があります。 どちらの方法を選択するのかは、プロジェクトの他の従属関係、および実現しようとする効果の種類に大きく依存します。

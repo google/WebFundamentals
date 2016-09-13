@@ -8,7 +8,7 @@ description: 了解如何在应用的两个视图之间设置动画。
 
 # 在视图之间设置动画 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 很多时候您需要让用户在应用的各视图之间切换，不管是从列表换到详情视图，还是显示侧栏导航。 这些视图之间的动画对于吸引用户很有用，并给您的项目增加更多活力。

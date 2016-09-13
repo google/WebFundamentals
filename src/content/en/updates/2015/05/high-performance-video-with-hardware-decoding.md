@@ -8,7 +8,7 @@ description: Hardware video support brings efficient decoding to plugins as well
 
 # High performance video with hardware decoding {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

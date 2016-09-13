@@ -7,8 +7,8 @@ description: Host a site on a development machine web server, and then access th
 
 # Access Local Servers {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Host a site on a development machine web server, then 
 access the content from an Android device.

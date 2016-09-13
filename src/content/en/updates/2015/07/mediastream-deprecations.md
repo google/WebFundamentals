@@ -8,7 +8,7 @@ description: The MediaStream API represents synchronized streams of audio or vid
 
 # MediaStream Deprecations {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

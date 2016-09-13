@@ -9,7 +9,7 @@ description: Visually navigate the network panel and view captured screenshots d
 
 # Film strips in Network panel {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-what-would-you-like-to-see-next-in-dev-tips-daily/network-filmstrip.gif" alt="Visually navigate the network panel and view captured screenshots during page load">

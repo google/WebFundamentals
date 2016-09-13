@@ -8,7 +8,7 @@ description: Composição é onde as partes pintadas da página são agrupadas p
 
 # Stick to compositor-only properties and manage layer count {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Composição é onde as partes pintadas da página são agrupadas para exibição na tela.

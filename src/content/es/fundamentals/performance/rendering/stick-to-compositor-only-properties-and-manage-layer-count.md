@@ -8,7 +8,7 @@ description: Composición hace referencia al proceso en el que las partes pintad
 
 # Limítese solo a las propiedades del compositor y administre el recuento de capas {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Composición hace referencia al proceso en el que las partes pintadas de la página se unen para mostrarlas en la pantalla.

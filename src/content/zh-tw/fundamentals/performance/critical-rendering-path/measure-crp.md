@@ -8,7 +8,7 @@ description: 無法評估就談不上最佳化。幸運的是，Navigation Timin
 
 # 使用 Navigation Timing 評估關鍵轉譯路徑 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 無法評估就談不上最佳化。幸運的是，Navigation Timing API 提供了所有必備工具來評估關鍵轉譯路徑的每個步驟！

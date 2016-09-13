@@ -7,10 +7,10 @@ description: Learn how to navigate the Chrome DevTools JavaScript Console.
 
 # Navigating the Console {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/andismith.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/andismith.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 Learn how to: open the DevTools Console, stack redundant 
 messages or display them on their own lines, clear or persist 

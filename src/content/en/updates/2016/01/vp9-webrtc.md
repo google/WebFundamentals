@@ -9,7 +9,7 @@ description: From Chrome 48 on desktop and Android, VP9 will be an optional vide
 
 # VP9 is now available in WebRTC {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

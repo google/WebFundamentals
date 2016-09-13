@@ -12,8 +12,8 @@ description: 성능이라는 요소는 기능임과 동시에 #perfmatters 입�
 
 Translated By: 
 
-{% include "_shared/contributors/jeokrang.html" %}
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/jeokrang.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

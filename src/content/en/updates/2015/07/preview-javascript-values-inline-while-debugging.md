@@ -9,7 +9,7 @@ description: Learn how to preview the values of JavaScript variables in DevTools
 
 # Preview JavaScript values inline while debugging {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-07-preview-javascript-values-inline-while-debugging/inline-js-values.gif" alt="Preview JavaScript values inline while debugging">
