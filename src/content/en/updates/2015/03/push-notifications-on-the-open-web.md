@@ -900,7 +900,7 @@ There are a few limitations outlined in this post:
 The
 [Permission API](https://w3c.github.io/permissions/) is implemented in Chrome,
 but it's not necessarily going to be available in all browsers. [You can
-learn more here]({{WFBaseUrl}}/updates/2015/04/permissions-api-for-the-web).
+learn more here](/web/updates/2015/04/permissions-api-for-the-web).
 
 ### Why doesn't Chrome open up the previous tab when I click a notification?
 

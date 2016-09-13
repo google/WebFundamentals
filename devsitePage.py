@@ -64,6 +64,10 @@ def getPage(requestPath, lang):
         if re.search(tag, content) is not None:
           logging.warn(' - Unsupported class: ' + tag)
 
+      # Show warning for template tags
+      if re.search('{{', content) is not None:
+        logging.warn(' - Warning: possible unescaped template tag')
+
       # Render any DevSite specific tags
       content = devsiteHelper.renderDevSiteContent(content, lang)
 

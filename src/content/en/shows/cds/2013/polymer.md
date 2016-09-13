@@ -44,8 +44,10 @@ Take the humble `<select>` element. There is a ton of functionality built into t
 
 Or [responsive elements](http://html5-demos.appspot.com/static/cds2013/index.html#44) that data-bind to a `queryMatches` attribute:
 
-
-    <polymer-media-query query="max-width:640px" queryMatches="{{isPhone}}"></…
+<pre class="prettyprint">
+&lt;polymer-media-query query="max-width:640px" queryMatches="&#123;{isPhone}}">&lt;/…
+</pre>
+    
     
 
 This is exactly the approach we're taking in Polymer. Instead of building monolithic JavaScript-based web apps, let's create reusable elements. Over time, an entire app grows out of composing smaller elements together. Heck, and entire app could be an element:
@@ -62,8 +64,8 @@ Polymer contains a [number of conveniences](http://html5-demos.appspot.com/stati
 
 - Declarative element registration: `<polymer-element>`
 - Declarative inheritance: `<polymer-element extends="...">`
-- Declarative two-way data-binding: `<input id="input" value="{{foo}}">`
-- Declarative event handlers: `<button on-click="{{handleClick}}">`
+- Declarative two-way data-binding: <code>&lt;input id="input" value="&#123;{foo}}"></code>
+- Declarative event handlers: <code>&lt;button on-click="&#123;{handleClick}}"></code>
 - Published properties: `xFoo.bar = 5` <-> `<x-foo bar="5">`
 - Property observeration: `barChanged: function() {...}`
 - PointerEvents / PointerGestures by default

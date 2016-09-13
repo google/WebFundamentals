@@ -106,7 +106,7 @@ Loading an insecure script from an HTTPS page.
 Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html)&mdash;includes an **HTTP** script tag which attempts to load mixed content. 
 
 <pre class="prettyprint">
-{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/simple-example.html %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/simple-example.html" %}
 </pre>
 
 In this example, the script `simple-example.js` is loaded with an **HTTP** URL. This is the simplest case of mixed content. When the browser requests the `simple-example.js` file, an attacker can inject code into the returned content 
@@ -150,7 +150,7 @@ Loading insecure images with jQuery lightbox.
 When viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html)&mdash;initially it does not have any mixed content problems; however, when the thumbnail image is clicked, a full size mixed content image is loaded over **HTTP**. 
 
 <pre class="prettyprint">
-{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" %}
 </pre>
 
 Image galleries often rely on the `<img>` tag `src` attribute to display 

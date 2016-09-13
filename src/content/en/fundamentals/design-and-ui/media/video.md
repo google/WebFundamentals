@@ -320,13 +320,13 @@ Caution: Don't force element sizing that results in an aspect ratio different fr
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling" adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
 Compare the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/responsive_embed.html">responsive sample</a> to the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/unyt.html">unresponsive version</a>.
@@ -470,7 +470,7 @@ It's very easy to add captions to your video &ndash; simply add a track
 element as a child of the video element:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
 The track element `src` attribute gives the location of the track file.

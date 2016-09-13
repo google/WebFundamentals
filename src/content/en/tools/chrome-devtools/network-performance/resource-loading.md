@@ -174,7 +174,7 @@ resource within the **Timeline** graph.
 
 ![timing data for one resource in timeline](imgs/timeline-view-hover.png)
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.timing %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.timing #}
 
 Related Guides:
 

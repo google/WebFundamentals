@@ -45,7 +45,7 @@ our UI for each of these states, we need to apply styles to the following
 pseudo classes `:hover`, `:focus` and `:active` as shown below:
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
 See [Pseudo classes for touch states](#pseudo-classes-for-touch-states):
@@ -116,7 +116,7 @@ Safari and Chrome add a tap highlight color which can be prevented with the
 `-webkit-tap-highlight-color` CSS property:
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
 Internet Explorer on Windows Phone has a similar behavior, but is suppressed
@@ -135,7 +135,7 @@ If you are using a `<button>` element, you get a gradient applied to your
 button which you can remove by setting `background-image: none`.
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
 ##### Override Element Outline in Focus State
@@ -279,7 +279,7 @@ opportunity to catch and interpret the events (`true` means we want the event
 before other elements).
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
 This code first checks to see if Pointer Events are supported by testing for
@@ -319,14 +319,14 @@ Below is a snippet of our `handleGestureStart` method which adds the move
 and end events to the document:
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
 The end callback we add is `handleGestureEnd` which removes the move
 and end events from the document when the gesture has finished:
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
 
 Mouse events follow this same pattern since it’s easy for a user to
@@ -357,14 +357,14 @@ Since we only wish to track touches on a particular element, we can add the
 move and end listeners for touch and pointer events to the element straight away:
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="addlisteners" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
 In our `handleGestureStart` and `handleGestureEnd` function, we add and
 remove the mouse event listeners to the document.
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="handle-gestures" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="handle-gestures" adjust_indentation="auto" %}
 </pre>
 
 ### Responding to Touch Efficiently

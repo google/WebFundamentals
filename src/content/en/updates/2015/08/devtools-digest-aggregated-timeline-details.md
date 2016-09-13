@@ -42,7 +42,7 @@ facebook.net or twitter.com.
 
 ## New, dedicated main menu
 
-<img src="/web/updates/images/2015-08-24-devtools-digest/new_main_menu.png" alt="New main menu" style="float: left;max-width: 230px;margin-right: 1em;margin-bottom: 1em;width: 40%;">To unclutter the main toolbar, we've moved drawer, settings and docking icons 
+<img src="/web/updates/images/2015-08-24-devtools-digest/new_main_menu.png" alt="New main menu" class="attempt-left">To unclutter the main toolbar, we've moved drawer, settings and docking icons 
 into a new, dedicated main menu.
 
 In particular docking got much simpler. Instead of having to long-press on the 
@@ -51,6 +51,8 @@ previous icon, each docking position features it's own icon.
 In addition to docking, we've added quick access file search, shortcuts and help 
 (which leads to [our new 
 homepage](/web/tools/chrome-devtools/)).
+
+<div class="clearfix"></div>
 
 ## Discover DevTools through improved tooltips
 
@@ -76,7 +78,8 @@ do any of those things.
 
 ## Automatic, Material and custom color palettes
 
-{% animation /web/updates/images/2015-08-24-devtools-digest/color_palettes.mp4 %}
+<video autoplay muted src="/web/updates/images/2015-08-24-devtools-digest/color_palettes.mp4">
+</video>
 
 Whether you want to recreate [the colors of 
 magic](http://www.colourlovers.com/blog/2008/04/19/octarine-the-imaginary-color-of-magic) 

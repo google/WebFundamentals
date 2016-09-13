@@ -25,7 +25,7 @@ provided.
 To include an author or translator attribution, use:
 
 <pre class="prettyprint">
-&#123;% include "_shared/contributors/petelepage.html" %}
+&#123;% include "web/_shared/contributors/petelepage.html" %}
 </pre>
 
 ## YAML Front Matter
@@ -226,6 +226,22 @@ $(document).ready(function() {
 });
 </script>
 {% endhtmlescape %}&#123;% endframebox %}</pre>
+
+### Special Case: Templates -  &#123;&#123;}}
+
+If you need to include templates in your code samples, be sure to escape them.
+
+For example:
+<pre class="prettyprint">
+&lt;pre class="prettyprint">
+&amp;lt;polymer-media-query query="max-width:640px" queryMatches="&amp;#123;{isPhone}}">
+&lt;/pre>
+</pre>
+
+If it's inline, you'll need to wrap it in a `<code>` block instead of backticks.
+<pre class="prettyprint">
+* Declarative two-way data-binding: &lt;code>&lt;input id="input" value="&amp;#123;{foo}}">&lt;/code>
+</pre>
 
 ## Images
 
@@ -533,8 +549,8 @@ reuse, you can use a set of pre-created related guides.
 
 Will render as:
 
-{% include "_shared/related-guides/heading.html" %}
-{% include "_shared/related-guides/service-workers.html" %}
+{% include "web/_shared/related-guides/heading.html" %}
+{% include "web/_shared/related-guides/service-workers.html" %}
 
 ## User Comment Blocks
 

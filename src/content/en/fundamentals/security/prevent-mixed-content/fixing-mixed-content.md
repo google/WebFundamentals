@@ -152,7 +152,7 @@ load the HTTP resource specified by the `href` attribute into a lightbox display
 on the page, causing a mixed content problem. 
 
 <pre class="prettyprint">
-{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html region_tag=snippet1 adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" region_tag=snippet1 adjust_indentation="auto" %}
 </pre>
 
 In the code above, it may seem safe to leave the `<a>` tags href as `http://`; 

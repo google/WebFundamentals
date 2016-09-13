@@ -69,4 +69,4 @@ panel.
 Use the **Network** panel to filter resources by name, type, and a whole range
 of other criteria. Check out the guide below to learn more.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.filter %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.filter #}
