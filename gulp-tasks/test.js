@@ -9,15 +9,6 @@ var wfHelper = require('./wfHelper');
 var runSequence = require('run-sequence');
 
 var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md', '!**/tags/*', '!**/codelabs/*/*'];
-// var RE_UPDATED = /{# wf_updated_on: (.*?) #}/;
-// var RE_PUBLISHED = /{# wf_published_on: (.*?) #}/;
-// var RE_DESCRIPTION = /^description: (.*)/m;
-var RE_TITLE = /^# (.*) {: .page-title }/m;
-// var RE_TAGS = /{# wf_tags: (.*?) #}/;
-var RE_IMAGE = /{# wf_featured_image: (.*?) #}/;
-var RE_SNIPPET = /{# wf_featured_snippet: (.*?) #}/;
-var RE_AUTHOR = /{%[ ]?include "web\/_shared\/contributors\/(.*?)\.html"[ ]?%}/;
-
 var MAX_DESCRIPTION_LENGTH = 475;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
 var BAD_STRINGS = [
@@ -26,11 +17,13 @@ var BAD_STRINGS = [
   'mdl-data-table',
   'mdl-js-data-table',
   '{% include_code',
-  '{% link_sample_button',
-  '{{'
+  '{% link_sample',
+  '{% highlight',
+  '{{',
 ];
 
 function testMarkdownFile(fileName) {
+  var tags;
   var errors = [];
   var warnings = [];
   var fileContent = fs.readFileSync(fileName, 'utf8');
@@ -51,6 +44,10 @@ function testMarkdownFile(fileName) {
       errors.push({msg: 'description exceeds maximum length', param: description.length});
     }
   }
+  // Check if it has review required
+  if (wfHelper.getRegEx(/{# (wf_review_required) #}/, fileContent)) {
+    warnings.push({msg: 'Has wf_review_required tag', param: ''});
+  }
   // Validate wf_updated and wf_published
   if (wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, fileContent, null) === null) {
     warnings.push({msg: 'Missing wf_updated_on tag', param: ''});
@@ -59,7 +56,7 @@ function testMarkdownFile(fileName) {
     warnings.push({msg: 'Missing wf_published_on tag', param: ''});
   }
   // Check for uncommon tags
-  var tags = wfHelper.getRegEx(/{# wf_tags: (.*?) #}/, fileContent);
+  tags = wfHelper.getRegEx(/{# wf_tags: (.*?) #}/, fileContent);
   if (tags) {
     tags.split(',').forEach(function(tag) {
       if (VALID_TAGS.indexOf(tag.trim()) === -1) {
@@ -73,25 +70,55 @@ function testMarkdownFile(fileName) {
       errors.push({msg: 'Bad string found', param: str});
     }
   });
+  // Look for invalid tags in includecode
+  tags = fileContent.match(/{% includecode (.*?) %}/g);
+  if (tags) {
+    tags.forEach(function(tag) {
+      if (tag.indexOf('lang=') >= 0) {
+        errors.push({msg: 'lang=xx attribute in includecode', param: tag});
+      }
+    });
+  }
+  tags = fileContent.match(/{% include (.*?) %}/g);
+  if (tags) {
+    tags.forEach(function(tag) {
+      if (tag.indexOf('inline=') >= 0) {
+        errors.push({msg: 'inline=xx attribute in include', param: tag});
+      }
+    });
+  }
   return {file: fileName, errors: errors, warnings: warnings};
 }
 
 gulp.task('test', function(cb) {
   var opts = {
-    srcBase: GLOBAL.WF.src.content,
+    srcBase: 'src/content/en',
     prefixBase: true
   };
   var files = glob.find(['**/*.md'], STD_EXCLUDES, opts);
+  files.sort();
+  var warnings = 0;
+  var errors = 0;
+  var filesWithIssues = 0;
   files.forEach(function(fileObj) {
     var r = testMarkdownFile(fileObj);
     if (r.warnings.length > 0 || r.errors.length > 0) {
+      filesWithIssues++;
       gutil.log(r.file);
       r.warnings.forEach(function(warning) {
+        warnings++;
         gutil.log(' ', gutil.colors.yellow('WARNING'), warning.msg, gutil.colors.cyan(warning.param));
       });
       r.errors.forEach(function(error) {
+        errors++;
         gutil.log(' ', gutil.colors.red('ERROR'), error.msg, gutil.colors.cyan(error.param));
       });
     }
   });
+  gutil.log('');
+  gutil.log('Test Completed.');
+  gutil.log('Files checked: ', gutil.colors.blue(files.length));
+  gutil.log(' - with issues:', gutil.colors.yellow(filesWithIssues));
+  gutil.log(' - warnings:   ', gutil.colors.yellow(warnings));
+  gutil.log(' - errors:     ', gutil.colors.red(errors));
 });
