@@ -21,13 +21,13 @@ toc:
         path: /web/fundamentals/getting-started/your-first-multi-screen-site/
     - title: What Makes a Good Mobile Site?
       path: /web/fundamentals/getting-started/principles/
-    - title: Service Workers - an Introduction
+    - title: "Service Workers: an Introduction"
       path: /web/fundamentals/getting-started/primers/service-workers
-    - title: JavaScript Promises - an Introduction
+    - title: "JavaScript Promises: an Introduction"
       path: /web/fundamentals/getting-started/primers/promises
     - title: "Shadow DOM v1: Self-Contained Web Components"
       path: /web/fundamentals/getting-started/primers/shadowdom
     - title: "Custom Elements v1: Reusable Web Components"
       path: /web/fundamentals/getting-started/primers/customelements
-    - title: "Payment Request API: An Integration Guide"
+    - title: "Payment Request API: an Integration Guide"
       path: /web/fundamentals/getting-started/primers/payment-request

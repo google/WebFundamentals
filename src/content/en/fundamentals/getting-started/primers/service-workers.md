@@ -5,7 +5,7 @@ description: Rich offline experiences, periodic background syncs, push notificat
 {# wf_published_on: 2014-12-01 #}
 {# wf_updated_on: 2016-01-18 #}
 
-# Service Workers - an Introduction {: .page-title }
+# Service Workers: an Introduction {: .page-title }
 
 {% include "_shared/contributors/mattgaunt.html" %}
 
