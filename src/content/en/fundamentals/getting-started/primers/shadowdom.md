@@ -34,11 +34,11 @@ You don't have to author web components that use shadow DOM. But when you do, yo
 
 Shadow DOM is designed as a tool for building component-based apps. Therefore, it brings solutions for common problems in web development:
 
-- **Isolated DOM**: a component's DOM is self-contained (e.g. `document.querySelector()` won't return nodes in the component's shadow DOM).
-- **Scoped CSS**: CSS defined inside shadow DOM is scoped to it. Styles rules don't leak out and page styles don't bleed in.
-- **Composition**: design a declarative, markup-based API for your component.
-- **Simplifies CSS** - scoped DOM means you can use simple CSS selectors, more generic id/class names, and not worry about naming conflicts.
-- **Productivity tool** - think of apps in chunks of DOM rather than one large (global) page.
+- **Isolated DOM**: A component's DOM is self-contained (e.g. `document.querySelector()` won't return nodes in the component's shadow DOM).
+- **Scoped CSS**: CSS defined inside shadow DOM is scoped to it. Style rules don't leak out and page styles don't bleed in.
+- **Composition**: Design a declarative, markup-based API for your component.
+- **Simplifies CSS** - Scoped DOM means you can use simple CSS selectors, more generic id/class names, and not worry about naming conflicts.
+- **Productivity** - Think of apps in chunks of DOM rather than one large (global) page.
 
 Although you can use the shadow DOM API and its benefits outside of web components, I'm only going to focus on examples that build on custom elements. I'll be using the custom elements v1 API in all examples.
 {: .wf-talkinghead }
@@ -68,7 +68,7 @@ When the browser loads a web page it does a bunch of interesting stuff. One of t
     document.body.appendChild(header);
     
 
-produces the equivalent of the following HTML markup:
+produces the following HTML markup:
 
 
     <body>
@@ -78,7 +78,7 @@ produces the equivalent of the following HTML markup:
     </body>
     
 
-OK, all that is well and good. Then what the heck is _shadow DOM_?
+All that is well and good. Then what the heck is _shadow DOM_?
 
 #### DOM...in the shadows {#sddom}
 
