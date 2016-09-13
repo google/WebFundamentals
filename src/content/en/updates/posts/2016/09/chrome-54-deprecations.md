@@ -46,7 +46,7 @@ these posts. We will also try to summarize some of the changes, reasoning, and m
 
 ## HTTP/0.9 deprecated
 
-**TL;DR:** HTTP/0.9 is deprecated. Developers should move to a later version, preferably HTTP/2
+**TL;DR:** HTTP/0.9 is deprecated. Developers should move to a later version, preferably HTTP/2.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/OdKnpLlvVUo/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/features/5633064474509312) &#124;
@@ -71,8 +71,8 @@ has been deprecated in favor of the
 [`constructor`](https://w3c.github.io/touch-events/#touch-interface) to improve
 spec compliance and will be removed altogether in Chrome 54.
 
-[Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dqlJguVuIHs)
-[Chromestatus Tracker](https://www.chromestatus.com/features/5730982598541312)
+[Intent to Remove](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/dqlJguVuIHs) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/features/5730982598541312) &#124;
 [CRBug Issue](https://code.google.com/p/chromium/issues/detail?id=522100)
 
 For a long time developers have been able to create synthetic touch events in Chrome
