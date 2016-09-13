@@ -18,7 +18,7 @@ var RE_TITLE = /^# (.*) {: .page-title }/m;
 var RE_TAGS = /{# wf_tags: (.*?) #}/;
 var RE_IMAGE = /{# wf_featured_image: (.*?) #}/;
 var RE_SNIPPET = /{# wf_featured_snippet: (.*?) #}/;
-var RE_AUTHOR = /{%[ ]?include "_shared\/contributors\/(.*?)\.html"[ ]?%}/;
+var RE_AUTHOR = /{%[ ]?include "web\/_shared\/contributors\/(.*?)\.html"[ ]?%}/;
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
@@ -121,6 +121,7 @@ function splitByYear(files) {
   return result;
 }
 
+exports.getRegEx = getRegEx;
 exports.getFileList = getFileList;
 exports.publishedComparator = publishedComparator;
 exports.updatedComparator = updatedComparator;

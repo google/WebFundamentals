@@ -9,9 +9,7 @@ from google.appengine.ext.webapp.template import render
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 UNSUPPORTED_TAGS = [
   r'{% link_sample_button .+%}',
-  r'{% include_code (.+)%}',
-  r'{% comment %}',
-  r'{% endcomment %}'
+  r'{% include_code (.+)%}'
 ]
 UNSUPPORTED_CLASSES = [
   r'mdl-grid',
