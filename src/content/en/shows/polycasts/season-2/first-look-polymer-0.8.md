@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Polymer 0.8 has landed and with it come some major changes and performance improvements!
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-15 #}
 {# wf_published_on: 2015-04-15 #}
 {# wf_youtube_id: cyf-17lWkYE #}

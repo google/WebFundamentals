@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The amount of data downloaded by apps continues to increase over time. To deliver great performance you must optimize data delivery as much as possible.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -16,7 +16,7 @@ What does a modern web application look like? [HTTP Archive](http://httparchive.
 
 <img src="images/http-archive-trends.png"  alt="HTTP Archive trends">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table class="">
 <colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>

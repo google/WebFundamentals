@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: We’re trying something new here on Polycasts. If you have questions for the team send them in on a social network of your choosing with the hashtag #AskPolymer and we’ll try to answer them on air!
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-09-29 #}
 {# wf_published_on: 2015-09-29 #}
 {# wf_youtube_id: D7ZSMw_qm8Q #}

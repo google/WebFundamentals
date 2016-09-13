@@ -3,6 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
 {# wf_updated_on: 2016-03-21 #}
+{# wf_published_on: 2016-03-21 #}
 
 # Console API Reference {: .page-title }
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Routing in Polymer, revealed! Get on the path to single page app goodness with this nugget of wisdom.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-05 #}
 {# wf_published_on: 2015-03-05 #}
 {# wf_youtube_id: iDQqP5Yyczg #}

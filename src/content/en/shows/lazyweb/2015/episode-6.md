@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Ember ships Glimmer into Canary, Senongo Akpem explores non-linear narratives, Web Pages break the 2mb limit, Firefox 38 is released, Chrome gets a developer channel on Android, and programmatic copy/paste is coming to Firefox.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-06-16 #}
 {# wf_published_on: 2015-05-18 #}
 {# wf_youtube_id: s12cZ7UAKFQ #}

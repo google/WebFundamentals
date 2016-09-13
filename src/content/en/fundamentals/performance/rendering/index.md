@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Users notice if sites and apps don't run well, so optimizing rendering performance is crucial!
 
+{# wf_updated_on: 2015-03-20 #}
+{# wf_published_on: 2015-03-20 #}
+
 # Rendering Performance {: .page-title }
 
 Users of today’s web

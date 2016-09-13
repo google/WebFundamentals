@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: We're connected with our laptops, phones and tablets, and probably soon enough with personal devices and accessories. We access the internet from untrusted and sometimes even hostile networks. With so much of our lives moving online, it's imperative we take steps to protect our data and our users' data.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: sJ8EX61fFWQ #}

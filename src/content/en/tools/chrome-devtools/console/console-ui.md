@@ -118,11 +118,10 @@ expression, or by hiding network messages.
 
 Filtering by severity level is equivalent to the following:
 
-<table class="mdl-data-table">
+<table class="responsive">
   <thead>
      <tr>
-      <th>Option</th>
-      <th>Shows</th>
+      <th colspan="2">Option &amp; Shows</th>
     </tr>   
   </thead>
   <tbody>
@@ -160,11 +159,10 @@ the **Console** section for further Console settings.
 
 ![Console settings](images/console-settings.png)
 
-<table class="mdl-data-table">
+<table class="responsive">
   <thead>
      <tr>
-      <th>Setting</th>
-      <th>Description</th>
+      <th colspan="2">Setting &amp; Description</th>
     </tr>   
   </thead>
   <tbody>

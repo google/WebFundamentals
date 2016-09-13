@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Compositing is where the painted parts of the page are put together for displaying on screen.
 
+{# wf_updated_on: 2015-03-20 #}
+{# wf_published_on: 2015-03-20 #}
+
 # Stick to Compositor-Only Properties and Manage Layer Count {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}

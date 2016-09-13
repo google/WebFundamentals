@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Input handlers are a potential cause of performance problems in your apps, as they can block frames from completing, and can cause additional and unnecessary layout work.
 
+{# wf_updated_on: 2015-10-06 #}
+{# wf_published_on: 2015-03-20 #}
+
 # Debounce Your Input Handlers {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}

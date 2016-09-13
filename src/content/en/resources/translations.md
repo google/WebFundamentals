@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: "If you want to translate Web Fundamentals to other languages, anyone can contribute."
 
+{# wf_updated_on: 2016-09-13 #}
+{# wf_published_on: 2016-09-13 #}
+
 # Translations {: .page-title }
 
 All article sources are in `src/content`. The base content is in English

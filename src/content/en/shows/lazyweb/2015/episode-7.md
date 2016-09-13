@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Building your first app in Angular 2, Addy Osmani and Matt Gaunt show off Subime Text plugins, Time Travel debugging in Microsoft Edge, a voice recorder for the mobile web, filmstrip view in Chrome DevTools, and HTTP203 with Paul Lewis and Jake Archibald is back.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-05-26 #}
 {# wf_published_on: 2015-05-26 #}
 {# wf_youtube_id: M6ZRJX-3Exw #}

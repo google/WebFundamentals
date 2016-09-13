@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Chrome 42 lands with Push notifications, Jacob Kaplan-Moss debunks myths about programmers, protocol relative URLs are now anti-patterns, the mobile friendly badge hits Google, git tips with First Aid Git, and optimizing your app with RAIL.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-27 #}
 {# wf_published_on: 2015-04-27 #}
 {# wf_youtube_id: voo5mxStFKg #}

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TCP and how it’s a lot like junior high, sitespeed.io releases an open source perf dashboard, Sky lets you write Dart apps for mobile, Scott Jehl demonstrates how to load pages quickly (even if they’re heavy), and Chrome’s new scheduler let’s priority tasks jump the queue.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-05-11 #}
 {# wf_published_on: 2015-05-11 #}
 {# wf_youtube_id: ZY_zpMlpqLM #}

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Caching and reusing previously fetched resources is a critical aspect of optimizing for performance.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-08-30 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -76,12 +75,10 @@ This directive specifies the maximum time in seconds that the fetched response i
 
 Follow the decision tree above to determine the optimal caching policy for a particular resource, or a set of resources, that your application uses. Ideally, you should aim to cache as many responses as possible on the client for the longest possible period, and provide validation tokens for each response to enable efficient revalidation.
 
-<table class="mdl-data-table mdl-js-data-table">
-<colgroup><col span="1"><col span="1"></colgroup>
+<table class="responsive">
 <thead>
   <tr>
-    <th width="30%">Cache-Control directives</th>
-    <th>Explanation</th>
+    <th colspan="2">Cache-Control directives &amp; Explanation</th>
   </tr>
 </thead>
 <tr>

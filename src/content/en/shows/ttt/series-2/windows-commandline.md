@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Windows Tooling: If you develop for the web on Windows, this is the tooling video for you. Addy looks at the web front end tooling landscape for Windows covering the tools he uses.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-11-10 #}
 {# wf_published_on: 2015-11-10 #}
 {# wf_youtube_id: msCUKTdBzg4 #}

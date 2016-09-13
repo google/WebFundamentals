@@ -1,7 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-05-18 #}
 {# wf_published_on: 2016-05-18 #}
 {# wf_youtube_id: YMfW1bfyGSY #}

@@ -43,11 +43,10 @@ If there's a single suggestion,
 
 Use the following shortcuts to select elements:
 
-<table class="mdl-data-table">
+<table class="responsive">
   <thead>
     <tr>
-      <th>Shortcut</th>
-      <th>Description</th>
+      <th colspan="2">Shortcut &amp; Description</th>
     </tr>
   </thead>
   <tbody>

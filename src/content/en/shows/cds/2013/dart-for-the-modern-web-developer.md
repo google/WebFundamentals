@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Watch Dart co-founder Kasper Lund explain how the dart2js compiler performs local and global optimizations to emit fast and semantically correct JavaScript code. With tree shaking, type inference, and minification, Dart can help you optimize your web app.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: FqsU3TbUw_s #}

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Web Animations are a new set of standards to unify CSS and JavaScript animations. With Web Animations you get the power of animating on the GPU while maintaining the control of working in JavaScript.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-08-11 #}
 {# wf_published_on: 2015-08-11 #}
 {# wf_youtube_id: https://youtu.be/Lwvi1u4XXzc #}

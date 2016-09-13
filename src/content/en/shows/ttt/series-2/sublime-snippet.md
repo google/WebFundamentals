@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: In this a-maz-ing TTT video Matt and Addy look at Sublime snippets, what they are and why they're good.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-10-13 #}
 {# wf_published_on: 2015-10-13 #}
 {# wf_youtube_id: EkX_nX3tEJk #}

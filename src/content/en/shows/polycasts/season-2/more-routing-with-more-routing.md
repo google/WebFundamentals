@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Last week you learned how to use a router in your Polymer app. This week we're doing it again, using nothing but HTML!
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-05 #}
 {# wf_published_on: 2015-03-05 #}
 {# wf_youtube_id: -67kb7poIT8 #}
