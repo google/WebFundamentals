@@ -9,11 +9,13 @@ description: Shadow DOM allows web developers to create compartmentalized DOM an
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
-<!-- <script>
+{% comment %}
+<script>
 function supportsShadowDOM() {
   return !!HTMLElement.prototype.attachShadow;
 }
-</script> -->
+</script>
+{% endcomment %}
 
 
 Note: **Already familiar with Shadow DOM?** This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
@@ -821,7 +823,8 @@ Inheritable styles (`background`, `color`, `font`, `line-height`, etc.) continue
     </script>
     
 
-<!-- <div class="demoarea">
+{% comment %}
+<div class="demoarea">
   <style>
     #initialdemo {
       padding: 10px;
@@ -855,7 +858,8 @@ if (supportsShadowDOM()) {
     <slot></slot>
   `;
 }
-</script> -->
+</script>
+{% endcomment %}
 
 ### Finding all the custom elements used by a page {#findall}
 
@@ -885,7 +889,7 @@ Sometimes it's useful to find custom elements used on the page. To do so, you ne
     findAllCustomElements(document.querySelectorAll('*'));
     
 
-<!--
+{% comment %}
 Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySelectorAll()`:
 
 
@@ -896,7 +900,7 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
     
 
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
--->
+{% endcomment %}
 
 ### Creating elements from a &lt;template> {#fromtemplate}
 
@@ -966,14 +970,16 @@ Nope! You don't have to create web components that use shadow DOM. However, auth
 See [Closed shadow roots](#closed).
 
 
-<!-- <script>
+{% comment %}
+<script>
 if (!supportsShadowDOM()) {
   const demos = document.querySelectorAll('.demoarea');
   Array.from(demos).forEach(function(demo) {
     demo.hidden = true;
   });
 }
-</script> -->
+</script>
+{% endcomment %}
 
 [ce_spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [ce_article]: (/web/fundamentals/getting-started/primers/customelements)

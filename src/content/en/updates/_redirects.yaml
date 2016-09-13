@@ -1,8 +1,5 @@
 redirects:
 
-  - from: /web/updates/devtools/...
-    to: /web/updates/devtools/
-
   - from: /web/updates/news/...
     to: /web/updates/
 

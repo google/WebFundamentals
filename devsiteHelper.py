@@ -225,9 +225,9 @@ def getIncludeCode(includeTag, lang='en'):
   # Returns the contents of an includecode file. If the file is not found,
   # it returns a warning into the doc. Otherwise it returns the file.
   # It also handles start and end regions and can unindent code as requested
-  fileRegEx = re.search(r"content_path=['\"]?(.+?)['\" ]", includeTag)
-  regionRegEx = re.search(r"region_tag=['\"]?(.+?)['\" ]", includeTag)
-  dedentRegEx = re.search(r"adjust_indentation=['\"]?(.+?)['\" ]", includeTag)
+  fileRegEx = re.search(r"content_path=\"(.+?)\"", includeTag)
+  regionRegEx = re.search(r"region_tag=\"(.+?)\"", includeTag)
+  dedentRegEx = re.search(r"adjust_indentation=\"(.+?)\"", includeTag)
   if fileRegEx is None:
     msg = 'Error: No <code>content_path</code> specified for ' + includeTag
     logging.error(' - ' + msg)

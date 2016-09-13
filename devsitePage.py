@@ -50,6 +50,7 @@ def getPage(requestPath, lang):
 
       # Remove any comments {# something #} from the markdown
       content = re.sub(r'{#.+?#}', '', content)
+      content = re.sub(r'{% comment %}.*?{% endcomment %}(?ms)', '', content)
 
       # Show warning for unsupported elements
       for tag in UNSUPPORTED_TAGS:

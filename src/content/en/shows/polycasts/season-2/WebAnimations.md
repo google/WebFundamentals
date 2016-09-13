@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
-description: Web Animations are a new set of standards to unify CSS and JavaScript animations. With Web Animations you get the power of animating on the GPU while maintaining the control of working in JavaScript. But coordinating all these animations is no easy task and thankfully there’s an element for that—well a behavior actually but stay with me! In this episode I’ll teach you how to use the neon-animation behaviors from the Polymer Element catalog to mixing slick animation behavior without the hassle of managing everything yourself. And with this knowledge we’re all setup to learn about the legendary neon-animated-pages element in a following episode.
+description: Web Animations are a new set of standards to unify CSS and JavaScript animations. With Web Animations you get the power of animating on the GPU while maintaining the control of working in JavaScript.
 
 {# wf_review_required #}
 {# wf_updated_on: 2015-08-11 #}

@@ -173,7 +173,7 @@ Set DOM breakpoints to debug complex JavaScript applications.
 For example, if your JavaScript is changing the styling of a DOM element,
 set a DOM breakpoint to fire when the element's attributes are modified. Trigger a breakpoint on one of the following DOM changes: subtree change, attribute change, node removal.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.breakpoints %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.breakpoints #}
 
 ### Subtree Modifications
 

@@ -4,12 +4,6 @@ redirects:
 - from: /web/fundamentals/engage-and-retain/simplified-app-installs/...
   to: /web/fundamentals/engage-and-retain/app-install-banners/
 
-- from: /web/tools/chrome-devtools/iterate/device-mode/media-queries
-  to: /web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports
-
-- from: /web/tools/chrome-devtools/iterate/inspect-styles/basics
-  to: /web/tools/chrome-devtools/iterate/inspect-styles
-
 - from: /web/fundamentals/device-access/click-to-call/...
   to: /web/fundamentals/native-hardware/click-to-call/
 
@@ -67,9 +61,6 @@ redirects:
 - from: /web/fundamentals/layouts/navigation-patterns/...
   to: /web/fundamentals/design-and-ui/responsive/
 
-- from: /web/fundamentals/layouts/principles/...
-  to: /web/fundamentals/getting-started/principles/
-
 - from: /web/fundamentals/layouts/rwd-fundamentals/...
   to: /web/fundamentals/design-and-ui/responsive/fundamentals/...
 
@@ -115,8 +106,3 @@ redirects:
 - from: /web/fundamentals/performance/optimizing-networking/
   to: /web/fundamentals/performance/
 
-- from: /web/fundamentals/principles/...
-  to: /web/fundamentals/getting-started/principles/
-
-- from: /web/fundamentals/getting-started/principles/...
-  to: /web/fundamentals/getting-started/principles/
