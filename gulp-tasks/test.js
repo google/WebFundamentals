@@ -11,16 +11,19 @@ var runSequence = require('run-sequence');
 var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md', '!**/tags/*', '!**/codelabs/*/*'];
 var MAX_DESCRIPTION_LENGTH = 475;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
-var BAD_STRINGS = [
-  'mdl-grid',
-  'mdl-cell',
-  'mdl-data-table',
-  'mdl-js-data-table',
+var ERROR_STRINGS = [
   '{% include_code',
   '{% link_sample',
   '{% highlight',
   '{{',
 ];
+var WARNING_STRINGS = [
+  'mdl-grid',
+  'mdl-cell',
+  'mdl-data-table',
+  'mdl-js-data-table',
+];
+
 
 function testMarkdownFile(fileName) {
   var tags;
@@ -65,7 +68,12 @@ function testMarkdownFile(fileName) {
     });
   }
   // Look for bad strings
-  BAD_STRINGS.forEach(function(str) {
+  WARNING_STRINGS.forEach(function(str) {
+    if (fileContent.indexOf(str) >= 0) {
+      warnings.push({msg: 'Potentially bad string found', param: str});
+    }
+  });
+  ERROR_STRINGS.forEach(function(str) {
     if (fileContent.indexOf(str) >= 0) {
       errors.push({msg: 'Bad string found', param: str});
     }
@@ -92,7 +100,7 @@ function testMarkdownFile(fileName) {
 
 gulp.task('test', function(cb) {
   var opts = {
-    srcBase: 'src/content/en',
+    srcBase: 'src/content/de',
     prefixBase: true
   };
   var files = glob.find(['**/*.md'], STD_EXCLUDES, opts);
