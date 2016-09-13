@@ -41,6 +41,13 @@ def getPage(requestPath, lang):
       if fileLocation.endswith('.jshtml'):
         return content
 
+      dateUpdated = re.search(r"{# wf_updated_on:[ ]?(.*)[ ]?#}", content)
+      if dateUpdated is None:
+        logging.warn('Missing wf_updated_on tag.')
+        dateUpdated = 'Unknown'
+      else:
+        dateUpdated = dateUpdated.group(1)
+
       # Remove any comments {# something #} from the markdown
       content = re.sub(r'{#.+?#}', '', content)
 
@@ -112,6 +119,7 @@ def getPage(requestPath, lang):
         'leftNav': leftNav,
         'content': content,
         'toc': toc,
+        'dateUpdated': dateUpdated,
         'lang': lang}
       )
       break

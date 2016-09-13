@@ -244,6 +244,8 @@ def getAnnouncementBanner(lang='en'):
   # Returns the announcement banner
   result = ''
   projectFile = os.path.join(SOURCE_PATH, lang, '_project.yaml')
+  if not os.path.isfile(projectFile):
+    projectFile = os.path.join(SOURCE_PATH, 'en', '_project.yaml')
   raw = open(projectFile, 'r').read().decode('utf8')
   project = yaml.load(raw)
   if 'announcement' in project:

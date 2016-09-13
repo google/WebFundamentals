@@ -87,6 +87,118 @@
             </article>
           </article>
         </div>
+        <footer class="devsite-footer-promos nocontent">
+          <nav class="devsite-full-site-width">
+            <ul class="devsite-footer-promos-list">
+              <li class="devsite-footer-promo">
+                <a href="#" class="devsite-footer-promo-title">
+                  <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/system/2x/stars_black_48dp.png">
+                  Title
+                </a>
+                <div class="devsite-footer-promo-description">
+                  Lorem ipsum something this that or the other thing.
+                </div>
+              </li>
+              <li class="devsite-footer-promo">
+                <a href="#" class="devsite-footer-promo-title">
+                  <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/system/2x/thumb_up_black_48dp.png">
+                  Title
+                </a>
+                <div class="devsite-footer-promo-description">
+                  Lorem ipsum something this that or the other thing.
+                </div>
+              </li>
+              <li class="devsite-footer-promo">
+                <a href="#" class="devsite-footer-promo-title">
+                  <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/system/2x/pets_black_48dp.png">
+                  Title
+                </a>
+                <div class="devsite-footer-promo-description">
+                  Lorem ipsum something this that or the other thing.
+                </div>
+              </li>
+              <li class="devsite-footer-promo">
+                <a href="#" class="devsite-footer-promo-title">
+                  <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/system/2x/favorite_black_48dp.png">
+                  Title
+                </a>
+                <div class="devsite-footer-promo-description">
+                  Lorem ipsum something this that or the other thing.
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </footer>
+        <footer class="devsite-footer-linkboxes nocontent">
+          <nav class="devsite-full-site-width">
+            <ul class="devsite-footer-linkboxes-list">
+              <li class="devsite-footer-linkbox">
+                <h3 class="devsite-footer-linkbox-heading">Heading</h3>
+                <ul class="devsite-footer-linkbox-list">
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                </ul>
+              </li>
+              <li class="devsite-footer-linkbox">
+                <h3 class="devsite-footer-linkbox-heading">Heading</h3>
+                <ul class="devsite-footer-linkbox-list">
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                </ul>
+              </li>
+              <li class="devsite-footer-linkbox">
+                <h3 class="devsite-footer-linkbox-heading">Heading</h3>
+                <ul class="devsite-footer-linkbox-list">
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                </ul>
+              </li>
+              <li class="devsite-footer-linkbox">
+                <h3 class="devsite-footer-linkbox-heading">Heading</h3>
+                <ul class="devsite-footer-linkbox-list">
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </footer>
+        <footer class="devsite-utility-footer">
+          <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
+            <span class="devsite-utility-footer-links">
+              <a href="https://developers.google.com/site-terms/">Terms</a> |
+              <a href="https://www.google.com/intl/en/privacy/">Privacy</a>
+            </span>
+            <form class="devsite-utility-footer-language">
+              <select id="select" class="kd-select">
+                <option value="ar">العربية‬</option>
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="it">Italiano</option>
+                <option value="iw">עִבְרִית</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="nl">Nederlands</option>
+                <option value="pl">Polski</option>
+                <option value="pt-br">Português (Brasil)</option>
+                <option value="ru">Pусский</option>
+                <option value="tr">Türkçe</option>
+                <option value="zh-cn">中文 (简体)</option>
+                <option value="zh-tw">中文（繁體）</option>
+              </select>
+            </form>
+          </nav>
+        </footer>
       </div>
     </div>
   </body>
