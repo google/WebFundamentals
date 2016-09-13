@@ -127,7 +127,7 @@ Loading insecure data with XMLHttpRequest.
 Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html)&mdash;includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
 
 <pre class="prettyprint">
-{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html" %}
 </pre>
 
 Here the **HTTP** URL is constructed dynamically in JavaScript, and is eventually 
@@ -200,7 +200,7 @@ they view based on images or other resources that the browser loads.
 The following is an example of passive mixed content: 
 
 <pre class="prettyprint">
-{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/passive-mixed-content.html %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/passive-mixed-content.html" %}
 </pre>
 
 Most browsers still render this type of mixed content to the user, however a 
@@ -228,7 +228,7 @@ versions.
 The following contains examples of active mixed content:
 
 <pre class="prettyprint">
-{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/active-mixed-content.html %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/active-mixed-content.html" %}
 </pre>
 
 <figure>

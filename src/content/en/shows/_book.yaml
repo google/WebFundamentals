@@ -28,7 +28,6 @@ upper_tabs:
           - title: Polymer Summit 2015
             path: https://www.youtube.com/playlist?list=PLNYkxOF6rcICdISJclfQhj2S8QZGjXV8J
             status: external
-        - include: /web/shows/devbytes/_toc.yaml
         - include: /web/shows/google-io/_toc.yaml
         - include: /web/shows/lazyweb/_toc.yaml
         - include: /web/shows/polycasts/_toc.yaml

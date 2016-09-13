@@ -231,7 +231,7 @@ include:
 </table>
 
 **Note**  
-If you prefer, you can add a [Sublime package to do the auto-prefixing](/web/tools/setup/setup-editor.html#autoprefixer) for
+If you prefer, you can add a [Sublime package to do the auto-prefixing](/web/tools/setup/setup-editor#autoprefixer) for
 you.
 
 ### Never leave your text editor with live reloading

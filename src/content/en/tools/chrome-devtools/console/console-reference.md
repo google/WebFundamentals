@@ -148,7 +148,7 @@ You can also nest groups:
 
 ![nested console.group() example](images/nested-group.png)
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.organizing %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.organizing #}
 
 ## console.groupCollapsed(object[, object, ...])
 

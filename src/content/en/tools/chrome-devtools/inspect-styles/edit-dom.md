@@ -26,7 +26,8 @@ The DOM tree view in the Chrome DevTools Elements panel displays the DOM structu
 Use the **Elements panel** to inspect all elements in your page in one
 DOM tree. Select any element and inspect the styles applied to it.
 
-{% animation animations/inspect-element.mp4 %}
+<video autoplay muted src="animations/inspect-element.mp4">
+</video>
 
 There are several ways to inspect an element:
 
@@ -110,7 +111,8 @@ To edit a DOM node name or attribute:
 
 The closing tag is automatically updated when you're finished.
 
-{% animation animations/edit-element-name.mp4 %}
+<video autoplay muted src="animations/edit-element-name.mp4">
+</video>
 
 ### Edit DOM node and its children as HTML
 
@@ -128,7 +130,8 @@ To edit a DOM node and its children as HTML:
 
 Click, hold, and drag a node to move it.
 
-{% animation animations/move-node.mp4 %}
+<video autoplay muted src="animations/move-node.mp4">
+</video>
 
 ## Delete DOM node
 
