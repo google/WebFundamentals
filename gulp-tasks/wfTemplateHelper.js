@@ -9,6 +9,7 @@ var fs = require('fs');
 var path = require('path');
 var moment = require('moment');
 var marked = require('marked');
+var mkdirp = require('mkdirp');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var Handlebars = require('handlebars');
@@ -18,6 +19,7 @@ function renderTemplate(templateFile, context, outputFile) {
   var ts = fs.readFileSync(templateFile, 'utf8');
   var template = Handlebars.compile(ts);
   var result = template(context);
+  mkdirp.sync(path.dirname(outputFile));
   fs.writeFileSync(outputFile, result);
 }
 

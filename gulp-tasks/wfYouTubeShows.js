@@ -13,7 +13,13 @@ var moment = require('moment');
 var wfTemplateHelper = require('./wfTemplateHelper');
 
 function buildFeeds() {
-  var apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
+  var apiKey;
+  try {
+    apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
+  } catch (ex) {
+    gutil.log(' ', 'Error, unable to read YouTube API key.', ex);
+    return;
+  }
   var youtube = google.youtube({version: 'v3', auth: apiKey});
   var opts = {
     maxResults: 25,
