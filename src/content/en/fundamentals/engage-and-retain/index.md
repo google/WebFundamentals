@@ -5,16 +5,16 @@ description: Connect with your users and keep them coming back. Use any to impro
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
-# Enage and Retain Users {: .page-title }
+# Engage and Retain Users {: .page-title }
 
 Connect with your users and keep them coming back. Use any to improve your
-site. Use **all** if you're working towards a
+site. Use **all** if you're working toward a
 [progressive web app](/web/progressive-web-apps/).
 
-Foundational to many of these features is the [web app manifest](web-app-manifest/),
-if your site doesn't have one, consider adding it. It's a simple file that let's
+Foundational to many of these features is the [web app manifest](web-app-manifest/).
+If your site doesn't have one, consider adding it. It's a simple file that lets
 you control how your app appears to the user in areas where they would expect
-to see apps (for example the mobile home screen), direct what the user can 
+to see apps (for example, the mobile home screen), direct what the user can 
 launch, and define its appearance at launch.
 
 <div class="attempt-left">
@@ -44,18 +44,18 @@ launch, and define its appearance at launch.
 
 <div style="clear:both;"></div>
 
-## Related Resources
+## Related resources
 
-### Code Labs
+### Code labs
 
 [Your First Progressive Web App](/web/fundamentals/getting-started/codelabs/your-first-pwapp/)<br>
-This codelab will walk you through creating your own Progressive Web App,
+This codelab walks you through creating your own Progressive Web App,
 including the design considerations, as well as implementation details to
 ensure that your app meets the key principles of a Progressive Web App.
 
 [Your First Web Push Notification](/web/fundamentals/getting-started/codelabs/push-notifications/)<br>
 In this codelab, you'll learn how to add Push Notifications to web
-applications. This will enable you to re-engage users with breaking news and
+applications. This enables you to re-engage users with breaking news and
 information about new content. You'll also learn the basics of Service Workers.
 
 ### Chrome DevTools
@@ -63,11 +63,11 @@ information about new content. You'll also learn the basics of Service Workers.
 * [Debug Progressive Web Apps](/web/tools/chrome-devtools/progressive-web-apps/)
 
 
-### Udacity Courses
+### Udacity courses
 
 [Progressive Web App Fundamentals](https://udacity.com/ud811)<br>
-In this course you’ll get started working on your very first Progressive Web
-App - a web app that can take advantage of many of the features native
+In this course, you’ll get started working on your very first Progressive Web
+App&mdash;a web app that can take advantage of many of the features native
 applications have enjoyed. You’ll also get more experience in creating a web
 app that works offline using Service Workers. Finally, you’ll make your app
 installable to the user’s home screen with the Web App Manifest file.
