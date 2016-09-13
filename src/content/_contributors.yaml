@@ -5,7 +5,7 @@
 ##
 
 # EXAMPLE
-# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors 
+# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors
 #   name:
 #     given: First # Required
 #     family: Last # Required
@@ -1122,3 +1122,15 @@ maciejzasada:
   email: maciej@unit9.com
 
 
+wangyu:
+  name:
+    given: Yu
+    family: Wang
+  country: CN
+  role:
+    - translator
+  homepage: 'http://wangyu.name'
+  twitter: wangyu_it
+  email: nameiswangyu@gmail.com
+  description:
+    en: WangYu is Front End Developer

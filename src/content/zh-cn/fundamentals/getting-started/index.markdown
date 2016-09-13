@@ -1,11 +1,10 @@
 ---
-title: "入门指导"
-description: "给所有能访问到 web 的设备构建运行良好的网站和体验，通常让人望而却步。不过别担心，我们提供了一些指导帮助你上手。"
+title: "开始"
+description: "分步教程帮你一步步学会你需要的东西。"
+updated_on: 2016-09-09
+translation_priority: 0
 translators:
   - samchen
   - henrylim
+  - wangyu
 ---
-
-{% comment %}
-Guide list content will be output by the landing layout based on the article collection matching page.id
-{% endcomment %}
