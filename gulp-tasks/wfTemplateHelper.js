@@ -167,12 +167,15 @@ function generateTagPages(files, options) {
     tags: Object.keys(allTags).sort(),
     section: options.section
   };
-  var tmplIndex = path.join(GLOBAL.WF.src.templates, 'tag-index.md');
+  var tmpl = path.join(GLOBAL.WF.src.templates, 'updates', 'tag-index.md');
   var outputFile = path.join(options.outputPath, 'index.md');
-  renderTemplate(tmplIndex, context, outputFile);
+  renderTemplate(tmpl, context, outputFile);
+  tmpl = path.join(GLOBAL.WF.src.templates, 'updates' ,'_tag_toc.yaml');
+  outputFile = path.join(options.outputPath, '_toc.yaml');
+  renderTemplate(tmpl, context, outputFile);
   Object.keys(allTags).forEach(function(key) {
     var opts = {
-      title: 'All Updates tagged: `' + key + '`',
+      title: 'All Updates tagged: ' + key + '',
       section: options.section,
       outputFile: path.join(options.outputPath, key + '.md')
     };
