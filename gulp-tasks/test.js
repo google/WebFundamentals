@@ -16,12 +16,15 @@ var ERROR_STRINGS = [
   '{% link_sample',
   '{% highlight',
   '{{',
+  '{% include "web/_shared/contributors/TODO.html" %}'
 ];
 var WARNING_STRINGS = [
   'mdl-grid',
   'mdl-cell',
   'mdl-data-table',
   'mdl-js-data-table',
+  '<!-- TODO: Verify note type! -->',
+  '<!-- TODO: Verify Udacity course fits here -->'
 ];
 
 
@@ -100,7 +103,7 @@ function testMarkdownFile(fileName) {
 
 gulp.task('test', function(cb) {
   var opts = {
-    srcBase: 'src/content/de',
+    srcBase: 'src/content/en',
     prefixBase: true
   };
   var files = glob.find(['**/*.md'], STD_EXCLUDES, opts);
