@@ -21,7 +21,7 @@ Animation Inspector.
 - Modify animations by changing their timing, delay, duration, or keyframe offsets.
 
 
-## Overview {#overview}
+## Overview {:#overview}
 
 The Chrome DevTools Animation Inspector has two main purposes. 
 
@@ -83,7 +83,7 @@ reloading the page.
 <video src="animations/capture-animations.mp4"
        autoplay loop muted controls></video>
 
-## Inspect animations {#inspect}
+## Inspect animations {:#inspect}
 
 Once you've captured an animation, there are a few ways to replay it:
 
@@ -127,7 +127,7 @@ as do the `div.feet::before` and `div.feet::after` elements.
 
 ![color-coded animations](imgs/color-coded-animations.png)
 
-## Modify animations {#modify}
+## Modify animations {:#modify}
 
 There are three ways you can modify an animation with the Animation Inspector:
 

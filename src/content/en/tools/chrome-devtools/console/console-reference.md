@@ -15,7 +15,7 @@ Use the Console API to write information to the console,
 create JavaScript profiles, and start a debugging session.
 
 
-## console.assert(expression, object) {#assert}
+## console.assert(expression, object) {:#assert}
 
 Writes an [error](#error) to the console when the evaluated expression is 
 `false`. 
@@ -29,7 +29,7 @@ Writes an [error](#error) to the console when the evaluated expression is
 
 ![console.assert() example](images/assert.png)
 
-## console.clear() {#clear}
+## console.clear() {:#clear}
 
 Clears the console.
 
@@ -45,7 +45,7 @@ focus still works.
 
 See [Clearing the console](console-ui#clearing) for more information.
 
-## console.count(label) {#count}
+## console.count(label) {:#count}
 
 Writes the the number of times that `count()` has been invoked at the same 
 line and with the same label.
@@ -66,7 +66,7 @@ See [Counting Statement Executions][cse] for more examples.
 
 Identical to [`console.log()`](#log).
 
-## console.dir(object) {#dir}
+## console.dir(object) {:#dir}
 
 Prints a JavaScript representation of the specified object. If the object 
 being logged is an HTML element, then the properties of its DOM representation 
@@ -95,7 +95,7 @@ on HTML and XML elements is equivalent to calling [`console.log()`](#log).
 
 ![console.dirxml() example](images/dirxml.png)
 
-## console.error(object [, object, ...]) {#error}
+## console.error(object [, object, ...]) {:#error}
 
 Prints a message similar to [`console.log()`](#log), styles the 
 message like an error, and includes a stack trace from where the method was 
@@ -161,7 +161,7 @@ Creates a new logging group that is initially collapsed instead of open.
     console.groupEnd();
     
 
-## console.groupEnd() {#groupend}
+## console.groupEnd() {:#groupend}
 
 Closes a logging group. See [`console.group`](#group) for an example.
 
@@ -170,7 +170,7 @@ Closes a logging group. See [`console.group`](#group) for an example.
 Prints a message like [`console.log()`](#log) but also shows an icon (blue
 circle with white "i") next to the output. 
 
-## console.log(object [, object, ...]) {#log}
+## console.log(object [, object, ...]) {:#log}
 
 Displays a message in the console. Pass one or more objects to this method.
 Each object is evaluated and concatenated into a space-delimited string.
@@ -179,7 +179,7 @@ Each object is evaluated and concatenated into a space-delimited string.
     console.log('Hello, Logs!');
     
 
-### Format specifiers {#format-specifiers}
+### Format specifiers {:#format-specifiers}
 
 The first object you pass can contain one or more **format specifiers**. A
 format specifier is composed of the percent sign (`%`) followed by a letter
@@ -189,7 +189,7 @@ Related Guides:
 
 * [Organizing Console Output](console-write)
 
-## console.profile([label]) {#profile}
+## console.profile([label]) {:#profile}
 
 Starts a JavaScript CPU profile with an optional label. To complete the 
 profile, call `console.profileEnd()`. Each profile is added to the **Profiles**
@@ -203,14 +203,14 @@ panel.
     }
     
 
-## console.profileEnd() {#profileend}
+## console.profileEnd() {:#profileend}
 
 Stops the current JavaScript CPU profiling session if one is in progress and 
 prints the report to the **Profiles** panel.
 
 See [`console.profile()`](#profile) for an example.
 
-## console.time(label) {#time}
+## console.time(label) {:#time}
 
 Starts a new timer with an associated label. When `console.timeEnd()` is 
 called with the same label, the timer is stopped and the elapsed time is
@@ -229,14 +229,14 @@ will not finish.
 
 ![console.time() example](images/time.png)
 
-## console.timeEnd(label) {#timeend}
+## console.timeEnd(label) {:#timeend}
 
 Stops the current timer if one is in progress and prints the timer label 
 followed by the elapsed time to the Console. 
 
 See [`console.time()`](#time) for an example. 
 
-## console.timeStamp([label]) {#timestamp}
+## console.timeStamp([label]) {:#timestamp}
 
 Adds an event to the **Timeline** during a recording session. 
 
@@ -251,7 +251,7 @@ Related Guides:
 * [Using the Timeline
   Tool](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 
-## console.trace(object) {#trace}
+## console.trace(object) {:#trace}
 
 Prints a stack trace from the point where the method was called. 
 
@@ -259,7 +259,7 @@ Prints a stack trace from the point where the method was called.
 
 ![console.trace() example](images/trace.png)
 
-## console.warn(object [, object, ...]) {#warn}
+## console.warn(object [, object, ...]) {:#warn}
 
 Prints a message like [`console.log()`](#log), but also displays a yellow 
 warning icon next to the logged message.

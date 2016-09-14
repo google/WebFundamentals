@@ -21,7 +21,7 @@ Inspect and delete cookies from the
 - Delete a single cookie, cookies from a selected domain, or all cookies from all domains.
 
 
-## Overview {#cookies}
+## Overview {:#cookies}
 
 Use the **Cookies** pane to view and delete cookies. You cannot modify cookie
 values.
@@ -38,7 +38,7 @@ this grouping to be aware of:
 
 [cookies]: /web/tools/chrome-devtools/manage-data/imgs/cookies.png
 
-## Fields {#fields}
+## Fields {:#fields}
 
 The following fields are provided for each cookie:
 
@@ -84,7 +84,7 @@ The following fields are provided for each cookie:
   </tbody>
 </table>
 
-## Delete cookies {#delete}
+## Delete cookies {:#delete}
 
 There are a few ways you can delete cookies:
 

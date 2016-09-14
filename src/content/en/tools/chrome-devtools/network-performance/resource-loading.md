@@ -86,7 +86,7 @@ When it's grey (![record button off](imgs/record-off.png){:.inline}), DevTools
 is not recording. Click this button to start or stop recording, or press 
 the keyboard shortcut <kbd>cmd</kbd>+<kbd>e</kbd>.
 
-## Capture screenshots during recording {#filmstrip}
+## Capture screenshots during recording {:#filmstrip}
 
 The **Network** panel can capture screenshots during a page load. This feature
 is known as the **Filmstrip**. 
@@ -275,7 +275,7 @@ Messages are color-coded according to their type:
   resource name on the left.
 * Only the last 100 `WebSocket` messages are preserved by the **Frames** table.
 
-## View resource initiators and dependencies {#initiators-dependencies}
+## View resource initiators and dependencies {:#initiators-dependencies}
 
 Hold <kbd>Shift</kbd> and hover over a resource to view its initiators
 and dependencies. This section refers to the resource that you are 

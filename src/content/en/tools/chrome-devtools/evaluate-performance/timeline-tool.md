@@ -24,7 +24,7 @@ application.
 - Zoom in on a section of a recording to make analysis easier.
 
 
-## Timeline panel overview {#timeline-overview}
+## Timeline panel overview {:#timeline-overview}
 
 The Timeline panel consists of four panes:
 
@@ -124,7 +124,7 @@ reference][event reference] for details on each record type.
 
 [event reference]: /web/tools/chrome-devtools/profile/evaluate-performance/performance-reference
 
-## Capture screenshots during recording {#filmstrip}
+## Capture screenshots during recording {:#filmstrip}
 
 The **Timeline** panel can capture screenshots during a page load. This feature
 is known as the **Filmstrip**.
@@ -141,7 +141,7 @@ right to simulate an animation of the recording.
 
 <video src="animations/hover.mp4" autoplay muted loop controls></video>
 
-## Profile JavaScript {#profile-js}
+## Profile JavaScript {:#profile-js}
 
 Enable the **JS Profile** checkbox before you take a recording to capture 
 JavaScript stacks in your timeline recording. When the JS profiler is 
@@ -149,7 +149,7 @@ enabled, your flame chart shows every JavaScript function that was called.
 
 ![flame chart with JS profile enabled](imgs/js-profile.png)
 
-## Profile painting {#profile-painting}
+## Profile painting {:#profile-painting}
 
 Enable the **Paint** checkbox before you take a recording to gain more insight
 into **Paint** events. When paint profiling is enabled and you click
@@ -158,7 +158,7 @@ on a **Paint** event, a new **Paint Profiler** tab is displayed in the
 
 ![paint profiler](imgs/paint-profiler.png)
 
-### Rendering settings {#rendering-settings}
+### Rendering settings {:#rendering-settings}
 
 Open the main DevTools menu and select **More tools** > **Rendering settings**
 to access rendering settings that may be helpful when debugging paint issues.
@@ -188,7 +188,7 @@ on an event in the **Flame Chart**.
 
 ![find toolbar](imgs/find-toolbar.png)
 
-## Zoom in on a Timeline section {#zoom}
+## Zoom in on a Timeline section {:#zoom}
 
 You can zoom in on a section of a recording to make analysis easier. You use
 the **Overview** pane to zoom in on a section of the recording. After zooming,

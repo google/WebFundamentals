@@ -20,7 +20,7 @@ features.
 - Access hidden features.
 
 
-## Open the Main Menu {#main-menu}
+## Open the Main Menu {:#main-menu}
 
 The **Main Menu** of DevTools is a dropdown menu for configuring how
 DevTools looks, accessing additionals tools, opening the Settings, and more.
@@ -30,12 +30,12 @@ of the DevTools window.
 
 ![main menu](images/main-menu.png)
 
-## Open the Settings {#settings}
+## Open the Settings {:#settings}
 
 To open the DevTools Settings, press <kbd>F1</kbd> while DevTools is in focus,
 or [open the Main Menu](#main-menu) and then select **Settings**.
 
-## Open the Command Menu {#command-menu}
+## Open the Command Menu {:#command-menu}
 
 Press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Mac) or
 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> (Windows, Linux) to open the
@@ -43,7 +43,7 @@ Command Menu.
 
 ![command menu](images/command-menu.png)
 
-## Reorder panel tabs {#panel-tabs}
+## Reorder panel tabs {:#panel-tabs}
 
 Click, hold, and drag a panel tab to change its ordering. Your custom tab order
 persists across DevTools sessions.
@@ -56,7 +56,7 @@ You can drag it to any position, such as the first to the left.
 
 ![after reorder](images/after-reorder.png)
 
-## Customize DevTools placement {#placement}
+## Customize DevTools placement {:#placement}
 
 You can dock DevTools on the bottom of the page, to right of the page, or 
 you can open it in a new window. 
@@ -71,7 +71,7 @@ button, or
 (![dock to right button](images/dock-right.png){:.inline})
 button. 
 
-## Use dark theme {#dark-theme}
+## Use dark theme {:#dark-theme}
 
 To use a dark DevTools theme, [open DevTools' Settings](#settings),
 go to the **Preferences** page, find the **Appearance** section, and then
@@ -79,7 +79,7 @@ select **Dark** from the **Theme** dropdown menu.
 
 ![dark theme](images/dark-theme.png)
 
-## Open and close drawer tabs {#drawer-tabs}
+## Open and close drawer tabs {:#drawer-tabs}
 
 Press <kbd>Esc</kbd> to open and close the DevTools **Drawer**. The screenshot
 below shows an example of the **Elements** panel while the **Console** Drawer
@@ -98,7 +98,7 @@ other tabs.
 
 ![drawer tabs menu](images/drawer-tabs.png)
 
-## Enable experiments {#experiments}
+## Enable experiments {:#experiments}
 
 When DevTools Experiments is enabled, a new page called **Experiments**
 shows up in the DevTools Settings. From this page you can enable and disable
@@ -113,7 +113,7 @@ Settings.
 
 ![DevTools Experiments](images/experiments.png)
 
-## Emulate print media {#emulate-print-media}
+## Emulate print media {:#emulate-print-media}
 
 To view a page in print preview mode, [open the DevTools main 
 menu](#main-menu), select **More Tools** > **Rendering Settings**, and then 

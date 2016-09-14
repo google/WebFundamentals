@@ -77,7 +77,7 @@ below the mouse is hovering over the selector
 **Note**: this feature only highlights elements in the viewport; it's possible 
 that other elements outside of the viewport are also affected by the selector. 
 
-## Add, enable, and disable CSS classes {#classes}
+## Add, enable, and disable CSS classes {:#classes}
 
 Click on the **.cls** button to view all of the CSS classes associated to the
 currently selected element. From there, you can:
@@ -124,7 +124,7 @@ new CSS rule.
 
 Click and hold the button to choose which stylesheet the rule is added to. 
 
-## Add or remove dynamic styles (pseudo-classes) {#pseudo-classes}
+## Add or remove dynamic styles (pseudo-classes) {:#pseudo-classes}
 
 You can manually set dynamic pseudo-class selectors (such as `:active`, 
 `:focus`, `:hover`, and `:visited`) on elements. 
@@ -159,7 +159,7 @@ or a `background-color` declaration (![add background-color
 declaration](imgs/add-background-color.png){:.inline}). Click on one of these
 buttons to add the declaration to the style rule. 
 
-## Modify colors with the Color Picker {#color-picker}
+## Modify colors with the Color Picker {:#color-picker}
 
 To open the **Color Picker**, find a CSS declaration in the **Styles** pane 
 that defines a color (such as `color: blue`). To the left of the declaration 
@@ -187,7 +187,7 @@ You can interact with the **Color Picker** in multiple ways:
 
 [md]: https://www.google.com/design/spec/style/color.html)
 
-### Eyedropper {#eyedropper}
+### Eyedropper {:#eyedropper}
 
 Click on the **eyedropper** button so that it is enabled
 (![enabled eyedropper](imgs/eyedropper-enabled.png){:.inline}), hover over a
@@ -196,7 +196,7 @@ declaration value to the color that you're hovering over.
 
 ![the eyedropper in action](imgs/eyedropper.jpg)
 
-### Color palettes {#color-palettes}
+### Color palettes {:#color-palettes}
 
 The **Color Picker** provides the following color palettes:
 
@@ -207,7 +207,7 @@ The **Color Picker** provides the following color palettes:
 * **Custom**. A set of any colors you choose. DevTools saves your custom 
   palette, even across pages, until you delete it. 
 
-#### Modifying a custom color palette {#custom-color-palette}
+#### Modifying a custom color palette {:#custom-color-palette}
 
 Press the **plus sign** button to add the current color to the palette. 
 Click and hold on a color to drag it to a different position, or drag it 
@@ -217,7 +217,7 @@ all of the colors to the right of the currently selected color. Right-click
 anywhere within the color palette region and select **Clear template** to 
 delete all of the template's colors.
 
-## View and edit CSS custom properties (CSS variables) {#custom-properties}
+## View and edit CSS custom properties (CSS variables) {:#custom-properties}
 
 You can view and edit declarations that define or use [CSS custom 
 properties][intro] (informally known as CSS variables) just like any other 

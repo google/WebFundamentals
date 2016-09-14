@@ -21,7 +21,7 @@ Inspect and manage storage, databases, and caches from the
 - 'Clear all storage, databases, caches, and service workers with a single button click.'
 
 
-## Local storage {#local-storage}
+## Local storage {:#local-storage}
 
 If you're using [local storage][ls] to store key-value pairs (KVPs), you can
 inspect, modify, and delete these KVPs from the **Local Storage** pane.
@@ -43,7 +43,7 @@ inspect, modify, and delete these KVPs from the **Local Storage** pane.
 [refresh]: /web/tools/chrome-devtools/manage-data/imgs/refresh.png
 [delete]: /web/tools/chrome-devtools/manage-data/imgs/delete.png
 
-## Session storage {#session-storage}
+## Session storage {:#session-storage}
 
 The **Session Storage** pane works the same as the **Local Storage**
 pane. Check out the [Local storage](#local-storage) section above to learn how
@@ -51,7 +51,7 @@ to view and edit [session storage][ss].
 
 [ss]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 
-## IndexedDB {#indexeddb}
+## IndexedDB {:#indexeddb}
 
 Use the **IndexedDB** pane to inspect, modify, and delete IndexedDB data.
 
@@ -99,7 +99,7 @@ a single click from the [**Clear storage** pane](#clear-storage).
 [idb-filter]: /web/tools/chrome-devtools/manage-data/imgs/idb-filter.png
 [cos]: /web/tools/chrome-devtools/manage-data/imgs/clear-object-store.png
 
-## Web SQL {#web-sql}
+## Web SQL {:#web-sql}
 
 Use the **Web SQL** pane to query and modify Web SQL databases.
 
@@ -124,7 +124,7 @@ Click on a database table to view that table's data.
 [wsc]: /web/tools/chrome-devtools/manage-data/imgs/web-sql-console.png
 [wst]: /web/tools/chrome-devtools/manage-data/imgs/web-sql-table.png
 
-## Application Cache {#application-cache}
+## Application Cache {:#application-cache}
 
 Use the **Application Cache** pane to inspect resources and rules that have
 been created via the [Application Cache API][appcache-api].
@@ -156,7 +156,7 @@ can have the following statuses:
 [appcache-api]: https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache
 [appcache]: /web/tools/chrome-devtools/manage-data/imgs/appcache.png
 
-## Service Worker Caches {#service-worker-caches}
+## Service Worker Caches {:#service-worker-caches}
 
 The **Cache Storage** pane on the **Application** panel lets you inspect,
 modify, and debug caches created with the (service worker) Cache API. Check
@@ -164,7 +164,7 @@ out the guide below for more help.
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.pwa #}
 
-## Clear service workers, storage, databases, and caches {#clear-storage}
+## Clear service workers, storage, databases, and caches {:#clear-storage}
 
 Sometimes you just need to wipe all of the data for a given origin. The **Clear
 Storage** pane on the **Application** panel lets you selectively unregister

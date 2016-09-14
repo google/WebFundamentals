@@ -21,7 +21,7 @@ The DOM tree view in the Chrome DevTools Elements panel displays the DOM structu
 - Watch for changes to the DOM using DOM breakpoints.
 
 
-## Inspect an element {#inspect-an-element}
+## Inspect an element {:#inspect-an-element}
 
 Use the **Elements panel** to inspect all elements in your page in one
 DOM tree. Select any element and inspect the styles applied to it.
@@ -142,7 +142,7 @@ To delete a DOM node:
 
 Note: If you delete a node by accident, <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (or <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> on Mac) to undo your last action.
 
-## Show more actions menu {#more-actions}
+## Show more actions menu {:#more-actions}
 
 The **more actions** menu lets you interact with a DOM node in a variety
 of ways. To view the menu, right-click on a node, or select a node
