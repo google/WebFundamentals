@@ -38,7 +38,7 @@ description: Событие 'изменение ориентации устро�
 принимающему события `deviceorientation`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
 </pre>
 
 ## Обработка событий "изменение ориентации устройства"

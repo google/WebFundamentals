@@ -272,13 +272,13 @@ Note: Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu aya
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">Duyarli örnegi</a>, <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">duyarli olmayan sürümle</a> karsilastirin.
@@ -394,7 +394,7 @@ Izleme ögesi kullanildiginda altyazilar sunun gibi görünür:
 Videonuza altyazi eklemek çok kolaydir. Bunun için video ögesinin alt ögesi olarak bir parça ögesi eklemeniz yeterlidir:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
 </pre>
 
 Parça ögesinin `src` özelligi, parça dosyasinin konumunu verir.

@@ -769,7 +769,7 @@ JavaScript 结合，只在用户已访问此字段时才显示无效的样式。
 <img src="imgs/rac_flow.png" class="center" alt="请求自动完成流程">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
 </pre>
 
 `form` 元素上的 `requestAutocomplete` 函数向浏览器表明
@@ -779,7 +779,7 @@ JavaScript 结合，只在用户已访问此字段时才显示无效的样式。
 哪些详细信息。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
 </pre>
 
 在完成 `requestAutocomplete` 时，如果此函数成功完成，则会触发

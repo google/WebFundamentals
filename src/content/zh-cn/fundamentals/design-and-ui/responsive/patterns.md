@@ -66,7 +66,7 @@ Mostly fluid 模式主要由流动网格组成。  在较大和中等屏幕上 �
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -102,7 +102,7 @@ Mostly fluid 模式主要由流动网格组成。  在较大和中等屏幕上 �
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -137,7 +137,7 @@ Layout shifter 模式是响应最快的模式，在多种屏幕宽度上采用 �
  * [Andersson-Wise Architects](http://www.anderssonwise.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -168,7 +168,7 @@ Tiny tweaks 只对布局进行小更改，例如调整字号 、调整图片大�
  * [Future Friendly](http://futurefriendlyweb.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -204,7 +204,7 @@ off canvas 模式不是垂直排列内容，而是将不 常用的内容（可�
  * [Facebook 移动网站](https://m.facebook.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
 </pre>
 
 

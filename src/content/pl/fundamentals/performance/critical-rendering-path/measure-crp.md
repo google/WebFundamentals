@@ -45,7 +45,7 @@ Specyfikacja HTML określa szczegóły odnośnie do występowania każdego ze zd
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Na pierwszy rzut oka powyższy przykład może wydawać się nieco zniechęcający, ale w rzeczywistości jest całkiem prosty. Interfejs API Navigation Timing przechwytuje wszystkie odpowiednie sygnatury czasowe, a nasz kod po prostu czeka na wyzwolenie zdarzenia `onload` &ndash; przypominamy, że zdarzenie onload jest generowane po zdarzeniu domInteractive, domContentLoaded i domComplete &ndash; następnie obliczana jest różnica czasu między różnymi sygnaturami czasowymi.

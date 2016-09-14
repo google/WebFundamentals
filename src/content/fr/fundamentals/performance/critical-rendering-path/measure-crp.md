@@ -45,7 +45,7 @@ La spécification du modèle HTML dicte les conditions spécifiques pour chaque 
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 L'exemple ci-dessus peut semble un peu intimidant de prime abord, mais il est en réalité assez simple. L'API Navigation Timing capture tous les horodatages concernés, et notre code attend simplement le déclenchement de l'événement `onload`. N'oubliez pas que l'événement `onload` est déclenché après domInteractive, domContentLoaded et domComplete. L'API calcule alors la différence entre les différents horodatages.

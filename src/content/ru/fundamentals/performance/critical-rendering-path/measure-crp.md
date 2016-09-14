@@ -45,7 +45,7 @@ description: Оптимизация невозможна без анализа �
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Этот код на первый взгляд может показаться пугающим, однако на самом деле все очень просто! Navigation Timing API записывает нужные временные отметки, дожидается инициации события `onload` (после завершения этапов domInteractive, domContentLoaded и domComplete) и вычисляет разницу во времени между отметками.

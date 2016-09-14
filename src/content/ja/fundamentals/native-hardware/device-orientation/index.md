@@ -135,7 +135,7 @@ device orientation イベントにはいくつかの用途があります。  �
 オブジェクトにイベント リスナーを添付します。 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
 </pre>
 
 ### device orientation イベントの扱い
@@ -187,7 +187,7 @@ device orientation イベントは、端末が移動したり、向きが
 オブジェクトにイベント リスナーを添付します。 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
 </pre>
 
 ### 端末モーション イベントの扱い
@@ -290,7 +290,7 @@ device orientation イベントは、端末が移動したり、向きが
 最大加速度です。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
 </pre>
 
 [Go!] ボタンをタップした後、ユーザーにジャンプを指示します。この間、

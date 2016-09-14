@@ -73,7 +73,7 @@ JavaScript 是一门运行在浏览器上的动态语言，它允许我们修改
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 你觉得我们使用 `<script>` 标签代替内联 JavaScript 代码段，执行顺序会有所不同吗？答案是不会，因为这些代码是一样的，所以结果会一样。在两个示例中，浏览器均须先暂停，然后执行脚本，之后才能处理文档的剩余部分。只不过说，**在外部 JavaScript 文件情况中，浏览器必须暂停，然后等待脚本从磁盘、缓存或远程服务器中取回，这就又可能给我们的关键渲染路径增加了数以万毫秒计的延迟。**

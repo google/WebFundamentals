@@ -277,13 +277,13 @@ Note: 请勿强制调整元素尺寸，否则会使宽高比异于原始视频�
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
 对比<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">自适应示例</a>和<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">非自适应版本</a>。
@@ -399,7 +399,7 @@ Note: Android 版 Chrome、iOS Safari 以及当前的所有桌面版浏览器（
 您可以轻松为视频添加字幕，只需添加一个跟踪元素作为视频元素的子元素即可：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
 </pre>
 
 跟踪元素的 src 属性决定跟踪文件的位置。

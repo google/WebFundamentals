@@ -68,7 +68,7 @@ script タグを通じて組み込まれたスクリプトの場合は、どう�
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 インライン JavaScript コードの代わりに `<script>` タグを使用した場合、実行順序に違いは生じるでしょうか。もちろん、答えは「いいえ」で、まったく同じように処理されます。どちらの場合でも、ブラウザが一時中断したあと、スクリプトが実行され、その後でドキュメントの残りの部分が処理されます。ただし、**外部 JavaScript ファイルの場合、ブラウザが一時中断した後、ディスクやキャッシュ、リモート サーバーからスクリプトが取得されるのを待つ必要があります。その結果、クリティカル レンダリング パスには、ミリ秒レベルとしてはかなりの量の遅延が追加されることになります。**

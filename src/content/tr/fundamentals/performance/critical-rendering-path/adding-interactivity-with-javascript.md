@@ -68,7 +68,7 @@ Bir script etiketi araciligiyla eklenecek komut dosyalarina ne dersiniz? Önceki
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Satir içi JavaScript snippet'i kullanmak yerine bir `<script>` etiketi kullandigimizda yürütme sirasinin farkli olmasini bekler misiniz? Elbette, bunlar ayni olduklari ve ayni sekilde davranmalari gerektigi için yanit `hayir` olacaktir. Her iki durumda da tarayicinin duraklamasi ve dokümanin geri kalanini islemek için komut dosyasini yürütmesi gerekecektir. Bununla birlikte, **bir harici JavaScript dosyasinin olmasi durumunda, tarayicinin yine duraklamasi ve komut dosyasinin diskten, önbellekten veya bir uzak sunucudan getirilmesini beklemesi gerekir. Bu da kritik olusturma yoluna binlerce milisaniyeye varan bir gecikme ekleyebilir.**

@@ -324,7 +324,7 @@ Além de escolher os principais pontos de quebra quando o layout é alterado de 
 Começaremos otimizando o layout de tela pequena.  Neste caso, aumentaremos a fonte quando a largura da janela de visualização for maior de 360 px.  Em segundo lugar, quando houver espaço suficiente, poderemos separar as previsões de temperatura alta e baixa para que elas fiquem na mesma linha, em vez de uma sobre a outra.  E vamos aumentar levemente os ícones da página.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -340,7 +340,7 @@ Começaremos otimizando o layout de tela pequena.  Neste caso, aumentaremos a fo
 Para telas grandes, é mais indicado definir a largura máxima do painel de previsão para que ele não ocupe toda a largura da tela.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ## Otimize o texto para aumentar a legibilidade
@@ -360,7 +360,7 @@ A teoria clássica da legibilidade sugere que uma coluna ideal deve conter 70 a 
 Vamos analisar em mais detalhes o exemplo de postagem de blog acima.  Em telas pequenas, a fonte Roboto com um em funciona de forma otimizada, formando dez palavras por linha, mas telas maiores exigem um ponto de quebra. Nesse caso, se a largura do navegador for superior a 575 px, a largura ideal para o conteúdo é 550 px.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Nunca esconda totalmente o conteúdo

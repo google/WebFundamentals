@@ -122,7 +122,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 *  윈도우 내에서 비디오를 재생할 수 없을 경우 다운로드할 수 있도록 해주는 대체 텍스트 추가하기
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -140,7 +140,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 콘텐츠 이미지들은 페이지의 의미를 전달하기 위해 중요합니다. 이들을 신문 기사에서 사용되는 이미지로써 생각해봅시다. 이 프로젝트에서 사용되는 이미지들은 Chris Wilson, Peter Lubbers 그리고 Sean Benner과 같은 강사들의 사진입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
 </pre>
 
 이미지들은 화면 폭의 100%로 스케일이 설정될 것입니다. 이는 좁은 뷰포트를 가진 디바이스에서 잘 동작하지만 (데스크탑과 같은) 넓은 뷰포트를 가진 디바이스에서는 그리 멋지게 동작하지는 않습니다. 이는 반응형 디자인에서 다시 다룰 것입니다.
@@ -337,11 +337,11 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
 </pre>
 
 ### 패딩 바꾸기와 텍스트 크기 줄이기
@@ -353,7 +353,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 우리는 상품 페이지에서 섹션 엘리먼트들의 패딩을 폭(Width)의 5%로 설정하여 통해 여백이 늘어나도록 할 것입니다. 또한 각 섹션에 대한 헤더 크기도 증가시킬 것입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 ### 넓은 뷰포트에 대한 엘리먼트 적용하기
@@ -375,11 +375,11 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -397,7 +397,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 비디오 엘리먼트는 좁은 뷰포트에서는 수직 형태의 흐름으로 구성될 필요가 있으며 넓은 뷰포트에서는 콘텐츠의 항목 리스트와 나란히 보여져야 할 것입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
 </pre>
 
 #### 이미지를 이용한 타일 구성하기
@@ -410,7 +410,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
 </pre>
 
 #### 이미지를 DPI에 반응형으로 만들기
@@ -451,7 +451,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 이는 깔끔하고 일관적인 분할을 할 수 있도록 해줍니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
 </pre>
 
 ### 정리

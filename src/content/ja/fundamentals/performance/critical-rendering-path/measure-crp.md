@@ -45,7 +45,7 @@ HTML 仕様では、イベントを発行する際に満たすべき条件など
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 上記のサンプルでは、やや複雑に見えますが、実は非常にシンプルです。Navigation Timing API がすべての関連タイムスタンプを取得し、コードは単に "onload" イベントが発行されるのを待ちます（onload イベントは、domInteractive、domContentLoaded、domComplete の後に発行されます）。そして、さまざまなタイムスタンプの相違が計算されます。

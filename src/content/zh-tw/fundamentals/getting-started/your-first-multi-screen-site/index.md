@@ -112,7 +112,7 @@ Note: 樣式以後還會來
 *  新增備用文字告知使用者，當無法在視窗中播放影片時，可自行下載。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -129,7 +129,7 @@ Note: 樣式以後還會來
 如要有效傳達網頁涵義，絕對少不了內容圖片。 想想報紙中的圖片就不難瞭解這類圖片的重要性。 我們使用的是專案教練 Chris Wilson、Peter Lubbers 和 Sean Bennet 的圖片。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
 </pre>
 
 這些圖片都已設為可放大成螢幕寬度。 這項設定非常適合檢視區較窄的裝置，但在檢視區較寬的裝置 (例如桌上型電腦)上效果較差。在探討回應式設計時，我們將會處理這項問題。
@@ -322,11 +322,11 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
 </pre>
 
 ### 修改間隙並縮小文字大小
@@ -338,7 +338,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 在我們的產品網頁中，我們會將間隙保持在寬度的 5%，藉此增加區段元素之間的空隙。我們也會增加每個區段標題的大小。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 ### 依照寬檢視區調整元素
@@ -359,11 +359,11 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 為了妥善運用水平螢幕空間，我們需要打破標題中的線性流程，並將表單和清單放在一起。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -381,7 +381,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 影片元素必須從窄檢視區的垂直流程移出，並與寬檢視區中的內容項目符號列表放在一起。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
 </pre>
 
 #### 拼貼圖片
@@ -393,7 +393,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
 </pre>
 
 #### 讓圖片回應 DPI
@@ -430,7 +430,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 如此一來，該中斷的地方都會精確一致。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
 </pre>
 
 ### 總結

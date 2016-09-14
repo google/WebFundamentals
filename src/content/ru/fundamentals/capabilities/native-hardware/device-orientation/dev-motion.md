@@ -39,7 +39,7 @@ description: Движение устройства дает информацию
 принимающему события `devicemotion`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
 </pre>
 
 ## Обработка событий "движение устройства"
@@ -142,7 +142,7 @@ description: Движение устройства дает информацию
 человека в прыжке.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
 </pre>
 
 После касания кнопки Go! пользователю предлагается подпрыгнуть!  В течение этого времени

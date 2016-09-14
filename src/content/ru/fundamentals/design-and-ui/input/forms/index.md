@@ -770,7 +770,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 <img src="imgs/rac_flow.png" class="center" alt="Поток операций запроса автозаполнения">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
 </pre>
 
 Наличие функции `requestAutocomplete` в элементе `form` указывает браузеру,
@@ -780,7 +780,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 которые он хочет указать.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
 </pre>
 
 По завершении функция `requestAutocomplete` вызовет событие

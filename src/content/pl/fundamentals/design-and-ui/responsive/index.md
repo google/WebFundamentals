@@ -327,7 +327,7 @@ Oprócz głównych punktów granicznych, przy których układ znacznie się zmie
 Zacznijmy od zoptymalizowania układu na małym ekranie. Gdy szerokość widocznego obszaru przekroczy 360&nbsp;pikseli, powiększymy czcionkę. Jeśli na ekranie będzie dość miejsca, rozdzielimy najniższą i najwyższą temperaturę &ndash; będą w tym samym wierszu zamiast jedna nad drugą. Powiększymy też nieco ikony symbolizujące warunki pogodowe.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -343,7 +343,7 @@ Zacznijmy od zoptymalizowania układu na małym ekranie. Gdy szerokość widoczn
 Podobnie na dużych ekranach warto ograniczyć maksymalną szerokość panelu prognozy, by nie zajął całej szerokości ekranu.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Zoptymalizuj tekst do czytania
@@ -363,7 +363,7 @@ Według klasycznych zasad gwarantujących czytelność tekstu idealna szpalta po
 Przyjrzyjmy się dokładniej powyższemu przykładowi posta na blogu. Na mniejszych ekranach czcionka Roboto o rozmiarze 1&nbsp;em działa idealnie, dając 10&nbsp;wyrazów w wierszu, ale na większych wymaga punktu granicznego. Jeśli szerokość przeglądarki przekroczy 575&nbsp;pikseli, idealna szerokość treści to 550&nbsp;pikseli.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Nigdy nie ukrywaj zupełnie treści

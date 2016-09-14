@@ -112,7 +112,7 @@ Note: О стиле мы напишем позже
 *  для случаев, когда браузер не может проигрывать видео на странице, добавьте фолбэк-текст со ссылкой на скачивание видеоролика.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -129,7 +129,7 @@ Note: О стиле мы напишем позже
 Такие картинки крайне важны для передачи информации. Например, невозможно представить себе газеты и журналы без фотографий и рисунков. В этом курсе мы используем фотографии преподавателей Криса Уилсона, Питера Лубберса и Шона Беннета.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
 </pre>
 
 Эти изображения расположены так, чтобы заполнить экран по широкой стороне. Такую верстку удобнее всего использовать для устройств с узким экраном. На мониторах стационарных компьютеров она выглядит хуже. Подробнее о том, как сделать верстку удобной для разных экранов, мы поговорим в разделе `Отзвычивый дизайн`.
@@ -322,11 +322,11 @@ auto. В результате на широких экранах контент 
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
 </pre>
 
 ### Изменение отступа и уменьшение размера текста
@@ -338,7 +338,7 @@ auto. В результате на широких экранах контент 
 На нашей странице мы увеличим отступ до 5% от общей ширины. Также мы увеличим размер текста заголовка в каждом разделе.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 ### Адаптирование элементов для устройств с широким экраном
@@ -359,11 +359,11 @@ auto. В результате на широких экранах контент 
 Чтобы эффективно использовать пространство на широком экране, необходимо разбить на части контент в заголовке и поместить форму рядом со списком.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -381,7 +381,7 @@ auto. В результате на широких экранах контент 
 Поэтому необходимо поместить его на одном уровне со списком, а не после него.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
 </pre>
 
 #### Размещение изображений друг за другом
@@ -393,7 +393,7 @@ auto. В результате на широких экранах контент 
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
 </pre>
 
 #### Адаптирование параметров изображения в соответствии с разрешением экрана
@@ -430,7 +430,7 @@ auto. В результате на широких экранах контент 
 Таким образом, получается отдельный раздел.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
 </pre>
 
 ### Завершение работы

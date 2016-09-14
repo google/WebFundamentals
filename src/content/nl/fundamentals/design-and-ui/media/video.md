@@ -270,13 +270,13 @@ Note: Forceer het aanpassen van de grootte van het element niet als dit resultee
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
 Vergelijk het <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">responsieve voorbeeld</a> met de <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">niet-responsieve versie</a>.
@@ -392,7 +392,7 @@ Als u het track-element gebruikt, worden ondertitels als volgt weergegeven:
 Het toevoegen van ondertitels aan uw video is erg gemakkelijk &ndash; voeg een track-element gewoon toe als onderliggend element van het video-element:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
 </pre>
 
 Het `src`-kenmerk van het track-element geeft de locatie van het trackbestand.

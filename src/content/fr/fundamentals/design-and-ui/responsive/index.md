@@ -329,7 +329,7 @@ Outre la sélection de points de rupture majeurs lors de modifications important
 Commençons par optimiser la disposition du petit écran. Dans ce cas, nous allons augmenter la taille de police lorsque la largeur de la fenêtre d'affichage est supérieure à 360 pixels. Ensuite, s'il y a suffisamment d'espace, nous pouvons séparer les températures maximale et minimale, de sorte qu'elles se trouvent sur la même ligne, au lieu d'être affichées l'une au-dessus de l'autre. Nous allons également agrandir légèrement les icônes illustrant les conditions météo.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -345,7 +345,7 @@ Commençons par optimiser la disposition du petit écran. Dans ce cas, nous allo
 De même, dans le cas des écrans de grande taille, il est préférable de limiter la largeur maximale du panneau de prévision, de telle sorte qu'il n'occupe pas tout l'écran.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Optimiser le texte pour la lecture
@@ -365,7 +365,7 @@ Si l'on se base sur la théorie de lisibilité standard, la colonne idéale doit
 Examinons de plus près l'article de blog ci-dessus.  Sur les écrans plus petits, l'utilisation de la police Roboto avec une taille de 1 em fonctionne parfaitement et génère 10 mots par ligne. Cependant, un point de rupture est nécessaire sur les écrans plus grands. Dans ce cas, si la largeur du navigateur est supérieure à 575 pixels, la largeur idéale du contenu est de 550 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Ne jamais masquer complètement le contenu

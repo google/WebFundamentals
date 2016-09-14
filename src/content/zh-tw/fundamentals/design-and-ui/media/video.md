@@ -272,13 +272,13 @@ Note: 請勿將元素大小強制調整為不同於原始影片的長寬比。�
 **CSS：**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
 **HTML：**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
 請嘗試比較<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">回應式示例</a>和<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">非回應式版本</a>有何不同。
@@ -394,7 +394,7 @@ Note: Android 版 Chrome、iOS Safari 和目前所有的電腦瀏覽器 (Firefox
 只要為 video 元素新增一個 track 子元素，即可輕鬆在影片中新增字幕：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
 </pre>
 
 track 元素的 `src` 屬性會指定字幕軌檔案的位置。

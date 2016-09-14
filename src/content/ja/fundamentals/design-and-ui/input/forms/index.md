@@ -770,7 +770,7 @@ HTML5 には複数の新しい疑似クラスも用意されています。こ�
 <img src="imgs/rac_flow.png" class="center" alt="オートコンプリート リクエストのフロー">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
 </pre>
 
 `requestAutocomplete` 要素上の `form` 関数は、ブラウザに
@@ -780,7 +780,7 @@ HTML5 には複数の新しい疑似クラスも用意されています。こ�
 詳細を設定する内容を指定します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
 </pre>
 
 `requestAutocomplete` が完了したら、正常な場合は

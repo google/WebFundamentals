@@ -771,7 +771,7 @@ o resto.
 <img src="imgs/rac_flow.png" class="center" alt="Fluxo da solicitação de preenchimento automático">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
 </pre>
 
 A função `requestAutocomplete` no elemento `form` indica que o
@@ -781,7 +781,7 @@ mostrada pedindo a permissão do usuário para preencher os campos e quais detal
 ele deseja utilizar.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
 </pre>
 
 Depois da conclusão do `requestAutocomplete`, a função acionará o evento

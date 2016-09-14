@@ -68,7 +68,7 @@ De forma predeterminada, la ejecución de JavaScript supone un `bloqueo del anal
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 ¿Es previsible que el orden de ejecución sea diferente cuando usamos una etiqueta `<script>` en vez de un fragmento JavaScript integrado? Por supuesto que no, ya que son idénticos y deberían tener el mismo comportamiento. En ambos casos el navegador se tendrá que detener y ejecutar la secuencia de comandos antes de poder procesar el resto del documento. Sin embargo, **en caso de que usemos un archivo JavaScript externo, el navegador también tendrá que detenerse y esperar a que se obtenga la secuencia de comandos del disco, de la memoria caché o de un servidor remoto, de modo que el retraso puede suponer decenas de milisegundos más en la ruta de publicación importante.**

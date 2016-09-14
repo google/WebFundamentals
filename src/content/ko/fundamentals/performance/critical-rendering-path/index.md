@@ -104,7 +104,7 @@ DOM 트리가 준비되었으니 이제 페이지를 하면에 렌더링 할 수
 브라우저는 DOM을 구축하면서 문서의 head에 있는 외부 CSS 스타일시트를 참조하는 link 태그를 만납니다. 페이지를 렌더링하는 데 이 자원이 필요할 것이라고 판단한 브라우저는 즉각 자원을 요청하고, 요청의 결과로 아래의 콘텐츠가 돌아옵니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 물론 HTLM 마크업 내에 직접(inline) 스타일을 선언할 수도 있지만, CSS를 HTML에서 분리해서 콘텐츠와 디자인을 별도의 관심사로 처리할 수 있습니다. 이렇게 함으로써 디자이너는 CSS, 개발자는 HTML 등 디자인이 아닌 다른 부분에 집중할 수 있습니다.
@@ -342,7 +342,7 @@ Translated By:
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 우리가 인라인 자바스크립트 조각을 사용하는 대신 `<script>`를 사용하면 실행 순서가 달라질 것이라 기대하시나요? 물론 대답은 "아니요"입니다. 그것들은 동일하며 같은 방식으로 동작 해야 합니다. 두가지 경우 모두 브라우저는 문서의 나머지 부분을 프로세스 하기 전에 정지하고 자바스크립트를 실행합니다. 그러나, **브라우저의 외부 자바스크립트파일인 경우에도 마찬가지로 정지하고 스크립트가 원격 서버 또는 캐쉬, 디스크로 부터 받아오기 까지 기다립니다. 그것들은 크리티컬 렌더링 패스에 몇 초의 시간을 더할 수도 있습니다.**
@@ -403,7 +403,7 @@ HTML 명세서는 각각의 모든 이벤트에 대해서 언제 발생되어야
 <span></span>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 위의 예제는 처음 보면 조금은 벅차보일 수 있지만, 사실은 매우 간단합니다. 네비게이션 타이밍 API는 모든 관련있는 타임스탬프를 캡쳐하고 우리의 코드는 `onload` 이벤트가 발생하기를 기다립니다. `onload` 이벤트는 `domInteractive`, `domContentLoaded` 그리고 `domComplete` 이벤트 후에 오는것을 상기하세요. 그리고 다양한 타임스탬프 사이의 차이점을 계산합니다.

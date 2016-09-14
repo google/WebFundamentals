@@ -59,7 +59,7 @@ Con la struttura DOM pronta, disponiamo di informazioni a sufficienza per esegui
 Mentre il browser stava costruendo il DOM della nostra pagina semplice, ha incontrato un tag di collegamento nella sezione dell'intestazione del documento che faceva riferimento a un foglio di stile CSS esterno: style.css. Prevedendo che sia necessaria questa risorsa per eseguire il rendering della pagina, invia immediatamente una richiesta per la risorsa, che gli restituisce il seguente contenuto:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Ovviamente, avremmo potuto dichiarare i nostri stili direttamente all'interno del markup HTML (inline), ma mantenere il nostro CSS indipendente da HTML ci consente di trattare il contenuto e il design come due questioni separate: i progettisti possono lavorare su CSS, gli sviluppatori possono concentrarsi su HTML e così via.

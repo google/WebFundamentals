@@ -59,7 +59,7 @@ Com a árvore de DOM criada, será que temos informações o suficiente para ren
 Enquanto o navegador criava o DOM de nossa página simples, ele encontrou uma tag de link na seção de cabeçalho do documento fazendo referência a uma folha de estilos CSS externa: style.css. Ao perceber que precisaria desse recurso para renderizar a página, o navegador imediatamente envia uma solicitação para esse recurso, que volta com o seguinte conteúdo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Poderíamos ter declarado nossos estilos diretamente na marcação de HTML (in-line), mas manter a CSS independente do HTML nos possibilita abordar conteúdo e design como preocupações distintas: os designers podem trabalhar em CSS enquanto os desenvolvedores podem focar-se em HTML e assim por diante.

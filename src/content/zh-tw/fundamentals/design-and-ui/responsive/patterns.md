@@ -66,7 +66,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -102,7 +102,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -137,7 +137,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
  * [Andersson-Wise Architects](http://www.anderssonwise.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -168,7 +168,7 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
  * [Future Friendly](http://futurefriendlyweb.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -204,7 +204,7 @@ iOS 6 版本 Safari 和 Android 瀏覽器不支援 `flexbox` 的 `flex-flow: row
  * [臉書行動版網站](https://m.facebook.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
 </pre>
 
 

@@ -328,7 +328,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 まず、小さい画面のレイアウトを最適化します。このケースでは、ビューポートの幅が 360px を超えた際にフォントを大きくするようにします。次に、十分なスペースがある場合に、2 段重ねで表示されている最高気温と最低気温を分割し、同じ行に横に並べて表示します。また、天気のアイコンを少し大きくします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -344,7 +344,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 大きい画面の場合も同様に、予報パネルが画面幅いっぱいまで広がらないよう、予報パネルの最大幅を制限することをおすすめします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### テキストを読みやすいよう最適化する
@@ -364,7 +364,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 上記のブログ記事の例を詳しく見てみましょう。小さい画面では、1em の Roboto フォントで 1 行あたりの語数がちょうど 10 語になりますが、大きい画面ではブレークポイントが必要となります。この例では、ブラウザの幅が 575px を超えた場合の最適なコンテンツの幅は 550px です。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### コンテンツを完全に非表示にしないようにする

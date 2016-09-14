@@ -328,7 +328,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 Начнем с оптимизации макета для небольших экранов.  В данном случае мы увеличим шрифт для ширины области просмотра, превышающей 360 пикселей.  Теперь, когда места достаточно, мы можем расположить минимальную температуру на одной линии с максимальной, а не под ней.  Также немного увеличим значки погодных явлений.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -344,7 +344,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 Этим же способом можно ограничить размер панели прогноза погоды для больших экранов, чтобы она не занимала всю доступную ширину.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Оптимизация текста для чтения
@@ -364,7 +364,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 Рассмотрим подробнее приведенный выше пример записи в блоге.  На маленьком экране отлично помещаются строки длиной в 10 слов шрифтом Roboto с размером 1em, но для экранов большего размера необходимо установить контрольную точку. В этом случае для окна просмотра браузера размером больше 575 пикселей оптимальная ширина контента равна 550 пикселям.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Никогда не скрывайте контент полностью

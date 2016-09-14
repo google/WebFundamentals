@@ -57,7 +57,7 @@ DOM ağacı hazır olduğunda, sayfayı ekranda oluşturmak için yeterli bilgiy
 Tarayıcı, basit sayfamızın DOM'sini oluştururken, dokümanın başlık bölümünde harici bir CSS stil sayfasına (style.css) başvuruda bulunan bir bağlantı etiketiyle karşılaştı. Sayfayı oluşturmak için bu kaynağa ihtiyacı olacağını tahmin ederek hemen bu kaynak için bir istek gönderir ve istek, aşağıdaki içerikle geri gelir:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Elbette, stillerimizi doğrudan HTML biçimlendirmesinin içinde (satır içi) açıklayabilirdik, ancak CSS'mizi HTML'den bağımsız tutmamız içeriği ve tasarımı ayrı konular olarak ele almamıza olanak tanır: Tasarımcılar CSS üzerinde çalışırken, geliştiriciler de HTML üzerine odaklanabilir.

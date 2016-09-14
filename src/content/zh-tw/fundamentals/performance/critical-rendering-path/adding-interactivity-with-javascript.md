@@ -68,7 +68,7 @@ JavaScript 是一種在瀏覽器執行的動態語言，可讓我們修改網頁
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 當我們使用 `<script>` 標記代替內嵌 JavaScript 程式碼片段時，執行順序會有所不同嗎？ 當然不會，這些標記是一樣的，因此應該會以相同的方式運作。在這兩個情況中，瀏覽器都必須先暫停，執行完指令碼後，才能處理文件的剩餘部分。**即使是外部 JavaScript 檔案，瀏覽器也必須暫停，並等待系統從硬碟、快取或遠端伺服器中擷取指令碼，這可能會導致關鍵轉譯路徑的延遲時間增加數萬毫秒。**

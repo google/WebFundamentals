@@ -59,7 +59,7 @@ Une fois l'arborescence du DOM prête, disposons-nous de suffisamment d'informat
 Pendant la construction du DOM de notre page simple, le navigateur a rencontré une balise de lien dans la section `head` du document, faisant référence à une feuille de style CSS externe : style.css. Anticipant le fait que cette ressource sera nécessaire pour afficher la page, le navigateur envoie immédiatement une demande pour cette ressource, qui est renvoyée avec le contenu suivant :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Évidemment, nous aurions pu déclarer nos styles directement au sein du balisage HTML (intégré). Toutefois, le fait de séparer le CSS du code HTML nous permet de traiter le contenu et le graphisme comme deux choses distinctes : les graphistes peuvent travailler sur le CSS, les développeurs peuvent se concentrer sur le code HTML, et ainsi de suite.

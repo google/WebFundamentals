@@ -68,7 +68,7 @@ Co w przypadku skryptów dołączanych w tagu script? Weźmy poprzedni przykład
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Czy kolejność wykonywania będzie inna, gdy zamiast wbudowanego fragmentu kodu JavaScript użyjemy tagu `<script>`? Odpowiedź to oczywiście `nie`. Kod w obu rozwiązaniach ma jednakowy układ i działa tak samo. Przeglądarka musi wstrzymać pracę i wykonać skrypt, zanim przetworzy resztę dokumentu. Jeśli jednak **przeglądarka będzie musiała dodatkowo czekać, aż zewnętrzny plik JavaScript zostanie odczytany z dysku, pamięci podręcznej czy zdalnego serwera, to opóźni realizację krytycznej ścieżki renderowania o kolejne dziesiątki lub nawet tysiące milisekund.**

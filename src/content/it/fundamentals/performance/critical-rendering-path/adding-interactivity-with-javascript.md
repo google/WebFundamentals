@@ -68,7 +68,7 @@ Per quanto riguarda gli script inclusi tramite tag script? Prendiamo il nostro e
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Ti aspetteresti che l'ordine di esecuzione fosse diverso utilizzando un tag `<script>` invece di uno snippet inline JavaScript? Ovviamente, la risposta è "no" dato che sono identici e devono comportarsi nello stesso modo. In entrambi i casi, il browser dovrà fermarsi ed eseguire lo script prima di poter elaborare la parte restante del documento. Tuttavia, **nel caso di un file JavaScript esterno, il browser dovrà anche sospendere e attendere che lo script sia recuperato dal disco, dalla cache o da un server remoto, il che può aggiungere decine di migliaia di millisecondi di ritardo al percorso di rendering critico.**

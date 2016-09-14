@@ -68,7 +68,7 @@ Hoe zit het met scripts die via een scripttag zijn toegevoegd? Laten we ons eerd
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Verwacht u dat de uitvoervolgorde anders zou zijn wanneer we een `<script>`-tag gebruiken in plaats van een inline JavaScript-snippet? Het antwoord is natuurlijk `nee` aangezien deze identiek zijn en zich op dezelfde manier zouden gedragen. In beiden gevallen moet de browser pauzeren en het script uitvoeren voordat de browser de rest van het document kan verwerken. Maar **in het geval van een extern JavaScript-bestand moet de browser ook pauzeren en wachten tot het script van de schijf, cache of externe server wordt opgehaald. Dit voegt tien tot duizenden milliseconden vertraging toe aan het kritieke weergavepad.**

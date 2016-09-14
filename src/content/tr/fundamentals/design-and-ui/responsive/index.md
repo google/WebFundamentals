@@ -327,7 +327,7 @@ Yerlesim önemli ölçüde degistiginde ana kesme noktalari seçmeye ek olarak, 
 Küçük ekran yerlesimini optimize ederek baslayalim.  Bu örnekte, görüntü alani genisligi 360 pikselden büyük oldugunda yazi tipini artiralim.  Ikinci olarak, yeterli alan oldugunda yüksek ve düsük sicakliklari ayirabiliriz; böylece, birbirinin üzerinde görüneceklerine ayni satirda görünürler.  Hava durumu simgelerini de biraz genisletelim.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -343,7 +343,7 @@ Küçük ekran yerlesimini optimize ederek baslayalim.  Bu örnekte, görüntü 
 Benzer bir sekilde, tüm ekran genisligini tüketmemesi için genis ekranlarda tahmin panelinin maksimum genisligini sinirlamak en dogru karar olacaktir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Metni okuma için optimize etme
@@ -363,7 +363,7 @@ Klasik okunabilirlik teorisi, ideal bir sütunun satir basina 70 ile 80 karakter
 Yukaridaki blog yayini örnegine daha ayrintili bir sekilde bakalim.  Küçük ekranlarda, 1em büyüklügündeki Roboto yazi tipi mükemmel bir sekilde satir basina 10 kelime verir, ancak genis ekranlarda bir kesme noktasi gerektirir. Bu durumda, tarayici genisligi 575 pikselden büyükse ideal içerik genisligi 550 piksel olur.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Hiçbir zaman içerigi tam olarak gizlemeyin

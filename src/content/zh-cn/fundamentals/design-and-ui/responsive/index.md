@@ -318,7 +318,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 首先优化小屏幕版式。在本例中，当视口宽度超过 360 像素时，我们来增加字体大小。接下来，当有足够的空间时，我们可以将高温和低温分隔开，使其在同一行中显示，而不是以上下排列的形式显示。然后，我们来调大天气图标。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -334,7 +334,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 同样，如果是大屏幕，我们最好限制天气预报面板的宽度，使其不会占用整个屏幕宽度。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### 优化文本，提高可读性
@@ -354,7 +354,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 我们来深入分析一下上述博文示例。在较小的屏幕上，大小为 1em 的 Roboto 字体可以使每行完美地呈现 10 个单词，而在较大的屏幕上就需要添加断点了。在本例中，如果浏览器宽度超过了 575 像素，那么内容的理想宽度是 550 像素。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### 绝不能完全隐藏内容

@@ -57,7 +57,7 @@ Czy po przygotowaniu drzewa DOM mamy dostatecznie wiele informacji, by zrenderow
 Gdy przeglądarka tworzyła model DOM naszej prostej strony, napotkała w sekcji nagłówka dokumentu na tag linka odwołujący się do zewnętrznego arkusza stylów CSS: style.css. Przewidując, że zasób ten będzie wymagany do renderowania strony, natychmiast wysłała żądanie odnośnie do tego zasobu, a otrzymana odpowiedź zawierała poniższą treść:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Możemy oczywiście zadeklarować nasze style bezpośrednio w znacznikach HTML (tzn. inline), ale rozdzielenie znaczników CSS od znaczników HTML umożliwia rozdzielenie treści od stylizacji: projektanci mogą pracować nad znacznikami CSS, a programiści mogą się skupić na znacznikach HTML.

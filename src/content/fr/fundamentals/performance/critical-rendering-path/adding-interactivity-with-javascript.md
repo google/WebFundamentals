@@ -68,7 +68,7 @@ Qu'en est-il des scripts inclus via une balise de script ? Prenons l'exemple pr�
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 Vous attendez-vous à ce que l'ordre d'exécution soit différent lorsque nous utilisons une balise `<script>` à la place d'un extrait JavaScript intégré ? Bien sûr, la réponse est `non`, car ils sont identiques et doivent se comporter de la même manière. Dans les deux cas, le navigateur devra suspendre sa tâche et exécuter le script avant de pouvoir traiter le reste du document. Cependant, **dans le cas d'un fichier JavaScript externe, le navigateur devra également suspendre sa tâche et attendre que le script soit récupéré sur le disque, le cache ou un serveur distant. Cette attente peut ajouter entre des dizaines et des milliers de millisecondes de retard au chemin critique du rendu.**

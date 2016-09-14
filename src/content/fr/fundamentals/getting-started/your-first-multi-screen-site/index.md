@@ -111,7 +111,7 @@ L'application des bonnes pratiques vous permet d'intégrer aisément du contenu 
 * Ajoutez du texte de remplacement pour permettre aux utilisateurs de télécharger la vidéo s'il s'avère impossible de la lire dans la fenêtre.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -128,7 +128,7 @@ La section 'Images' de notre page est un ensemble d'images de contenu.
 Les images de contenu sont essentielles pour transmettre le sens de la page. On peut les comparer aux images utilisées dans des articles de journaux. Les images que nous utilisons sont les photos des formateurs du projet, à savoir : Chris Wilson, Peter Lubbers et Sean Bennet.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
 </pre>
 
 Les images sont définies sur une échelle de 100 % de la largeur de l'écran. Cela fonctionne très bien sur les appareils présentant une fenêtre d'affichage étroite, mais moins bien sur une fenêtre d'affichage large (un ordinateur de bureau, par exemple). Nous traiterons ce point dans la section relative à la conception de sites Web adaptatifs.
@@ -320,11 +320,11 @@ Le conteneur sera un simple élément `div` sous la forme suivante :
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container"   adjust_indentation="auto" %}
 </pre>
 
 ### Modifier le remplissage et réduire la taille du texte
@@ -336,7 +336,7 @@ Dans le cas d'une fenêtre d'affichage plus grande, nous devons tenir compte du 
 Dans notre page de produit, nous allons augmenter le remplissage des éléments de section pour qu'il reste sur une valeur équivalant à 5 % de la largeur. Nous allons également augmenter la taille des en-têtes de chacune des sections.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 ### Adapter les éléments à la fenêtre d'affichage large
@@ -357,11 +357,11 @@ La fenêtre d'affichage étroite nous offre beaucoup moins d'espace horizontal p
 Pour utiliser plus efficacement cet espace horizontal, il convient de fractionner le flux linéaire de l'en-tête, et de rapprocher le formulaire de la liste.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat"   adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding"   adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -379,7 +379,7 @@ La vidéo présente dans l'interface de la fenêtre d'affichage étroite est con
 L'élément vidéo doit être éliminé du flux vertical de la fenêtre d'affichage étroite et affiché au côté de la liste à puces de contenu sur une fenêtre d'affichage large.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo"   adjust_indentation="auto" %}
 </pre>
 
 #### Disposer les images en mosaïque
@@ -391,7 +391,7 @@ Pour remédier à ce problème, elles sont étendues à 30 % de la largeur du co
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages"   adjust_indentation="auto" %}
 </pre>
 
 #### Faire en sorte que les images s'adaptent à la résolution (PPP)
@@ -428,7 +428,7 @@ Lorsque vous développez du contenu selon le principe Mobile First, il est plus 
 Cela permet de créer une séparation claire et cohérente.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css"   adjust_indentation="auto" %}
 </pre>
 
 ### Récapitulation

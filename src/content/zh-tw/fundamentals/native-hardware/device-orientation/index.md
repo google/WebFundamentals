@@ -135,7 +135,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
  物件，接聽 `deviceorientation` 物件。 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
 </pre>
 
 ### 處理裝置定位事件
@@ -187,7 +187,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
  物件，接聽 `devicemotion` 物件。 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
 </pre>
 
 ### 處理裝置動作事件
@@ -290,7 +290,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
 </pre>
 
 在點選「執行！」按鈕後，使用者被告知要跳躍！在這段時間中，

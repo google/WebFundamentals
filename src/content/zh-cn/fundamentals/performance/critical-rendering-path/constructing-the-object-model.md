@@ -63,7 +63,7 @@ DOM 树准备就绪后，我们是否就有足够信息在屏幕上渲染页面�
 浏览器在构建我们的简单页面 DOM 时，在文档的 head 部分碰上一个 link 标签，引用了外部 CSS 样式表 style.css。浏览器预见到它会需要这个资源来渲染页面，因此会立即发出一个该资源的请求，该请求返回以下内容：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
 </pre>
 
 当然，我们本可以在 HTML 标记中直接声明样式（内联），但是，将 CSS 与 HTML 分开，我们就可以分离关注点：设计人员处理 CSS，开发人员关注 HTML，等等。
