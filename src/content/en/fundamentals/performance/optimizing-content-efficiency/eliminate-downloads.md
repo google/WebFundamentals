@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You should audit your resources periodically to ensure that each resource is helping deliver a better user experience.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-08-29 #}
 {# wf_published_on: 2014-03-31 #}
 
