@@ -17,7 +17,7 @@ If you use the [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/
 
 # What options are available?
 
-The following options can be set in any call to [`CacheStrorage.match()`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match) or [`Cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match). When not set, they all default to <code>false</code> (or `undefined` for <code>cacheName</code>), and you can use multiple options in a single call to <code>match()</code>.
+The following options can be set in any call to [`CacheStorage.match()`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match) or [`Cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match). When not set, they all default to <code>false</code> (or `undefined` for <code>cacheName</code>), and you can use multiple options in a single call to <code>match()</code>.
 
 ## ignoreSearch
 
@@ -49,7 +49,7 @@ caches.match(event.request, {ignoreSearch: true})
 
 ## cacheName
 
-`cacheName` comes in handy when you have multiple caches and you want a response that's stored in one specific cache. Using it can make your queries more efficient (since the browser only has to check inside one cache, instead of all of them) and allows you to retrieve a specific response for a given URL when multiple caches might have that URL as a key. `cacheName` only has an effect when used with [`CacheStrorage.match()`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match), not [`Cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match), because <code>Cache.match()</code> already operates on a single, named cached.
+`cacheName` comes in handy when you have multiple caches and you want a response that's stored in one specific cache. Using it can make your queries more efficient (since the browser only has to check inside one cache, instead of all of them) and allows you to retrieve a specific response for a given URL when multiple caches might have that URL as a key. `cacheName` only has an effect when used with [`CacheStorage.match()`](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage/match), not [`Cache.match()`](https://developer.mozilla.org/en-US/docs/Web/API/Cache/match), because <code>Cache.match()</code> already operates on a single, named cached.
 
 {% highlight javascript %}
 // The following are functionally equivalent:
