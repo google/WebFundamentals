@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and manage storage, caches, and resources.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-07-28 #}
 {# wf_published_on: 2015-04-13 #}
 
@@ -10,7 +9,16 @@ description: Inspect and manage storage, caches, and resources.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Use the **Application** panel to inspect and
-manage storage, caches, and resources.
+## Overview
 
-Note: The **Resources** panel has been renamed to the **Application** panel. All of the features from the Resources panel are still available in the Application panel.
+Use the **Application** panel to inspect and
+manage:
+
+* [Local Storage](local-storage#local-storage)
+* [Session Storage](local-storage#session-storage)
+* [Web SQL Databases](local-storage#web-sql)
+* [IndexedDB Databases](local-storage#indexeddb)
+* [Application Caches](local-storage#application-cache)
+* [Service Worker Caches](local-storage#service-worker-caches)
+* [Cookies](cookies)
+* [Resources](page-resources)
