@@ -29,7 +29,7 @@ guides](#other).
 - Unregister a service worker and clear all storage and caches with a single button click from the <strong>Clear Storage</strong> pane.
 
 
-## Web app manifest {#manifest}
+## Web app manifest {:#manifest}
 
 If you want your users to be able to add your app to their mobile homescreens,
 you need a web app manifest. The manifest defines how the app appears on the
@@ -58,7 +58,7 @@ Once you've got your manifest set up, you can use the **Manifest** pane of the
 
 [manifest]: images/manifest.png
 
-### Simulate Add to Homescreen events {#add-to-homescreen}
+### Simulate Add to Homescreen events {:#add-to-homescreen}
 
 A web app can only be added to a homescreen when the site is visited at
 least twice, with at least five minutes between visits. While developing or
@@ -92,7 +92,7 @@ to trigger the "add to homescreen" prompt on the connected mobile device.
 [shelf]: images/io.png
 [remote debugging]: /web/tools/chrome-devtools/debug/remote-debugging/remote-debugging
 
-## Service workers {#service-workers}
+## Service workers {:#service-workers}
 
 Service workers are a fundamental technology in the future web platform. They
 are scripts that the browser runs in the background, separate from a web page.
@@ -155,7 +155,7 @@ up.
 [tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages?hl=en#ways-to-send
 [errors]: images/sw-error.png
 
-## Service worker caches {#caches}
+## Service worker caches {:#caches}
 
 The **Cache Storage** pane provides a read-only list of resources that have
 been cached using the (service worker) [Cache API][sw-cache].
@@ -174,7 +174,7 @@ If you've got two or more caches open, you'll see them listed below the
 [sw-cache-pane]: images/sw-cache.png
 [multiple-caches]: images/multiple-caches.png
 
-## Clear storage {#clear-storage}
+## Clear storage {:#clear-storage}
 
 The **Clear Storage** pane is a very useful feature when
 developing progressive web apps. This pane lets you unregister service workers
@@ -186,7 +186,7 @@ Related Guides:
 * [Clear
   Storage](/web/tools/chrome-devtools/iterate/manage-data/local-storage#clear-storage)
 
-## Other Application panel guides {#other}
+## Other Application panel guides {:#other}
 
 Check out the guides below for more help on the other panes of the
 **Application** panel.

@@ -21,7 +21,7 @@ criteria.
 - Filter resources by name or other criteria in the <strong>Network</strong> panel.
 
 
-## Organize resources by frame {#frames}
+## Organize resources by frame {:#frames}
 
 Use the **Frames** pane on the **Application** panel for a frame-organized
 representation of your page's resources.
@@ -57,14 +57,14 @@ The resources will be listed by frame only.
 [frames]: /web/tools/chrome-devtools/manage-data/imgs/frames.png
 [resource]: /web/tools/chrome-devtools/manage-data/imgs/resource.png
 
-## Organize resources by domain and folder {#sources}
+## Organize resources by domain and folder {:#sources}
 
 To view resources organized by domain and directory, use the **Sources**
 panel.
 
 ![sources panel](imgs/sources.png)
 
-## Filter resources by name, type, or other criteria {#filter}
+## Filter resources by name, type, or other criteria {:#filter}
 
 Use the **Network** panel to filter resources by name, type, and a whole range
 of other criteria. Check out the guide below to learn more.

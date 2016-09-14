@@ -34,7 +34,7 @@ Executing this line of code in your JavaScript:
 Will output this in the Console:
 ![Log Multiple](images/console-write-log-multiple.png)
 
-## Autocompleting commands {#autocomplete}
+## Autocompleting commands {:#autocomplete}
 
 When you type in the Console, the Console automatically displays an 
 autocomplete dropdown menu of relevant methods that match the text that 
@@ -42,7 +42,7 @@ you have already typed. This includes previous commands that you executed.
 
 ![example of autocomplete](images/autocomplete.png)
 
-## Organizing Console output {#organizing}
+## Organizing Console output {:#organizing}
 
 ### Group messages together
 

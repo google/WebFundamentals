@@ -21,7 +21,7 @@ Profiler.
 - Vizualize your profiles as a flame chart.
 
 
-## Record a CPU profile {#record-profile}
+## Record a CPU profile {:#record-profile}
 
 If you’re noticing jank in your JavaScript, collect a JavaScript CPU profile.
 CPU profiles show where execution time is spent in your page’s functions.
@@ -38,7 +38,7 @@ from the command line.
 
 [profile]: /web/tools/chrome-devtools/debug/command-line/command-line-reference#profilename-and-profileendname
 
-## View CPU profile {#view-profile}
+## View CPU profile {:#view-profile}
 
 When you finish recording, DevTools automatically populates the Profile panel
 with the data from your recording. 
@@ -47,7 +47,7 @@ The default view is **Heavy (Bottom Up)**. This view enables you to see
 which functions had the most impact on performance and examine the calling
 paths to those functions. 
 
-### Change sort order {#sort}
+### Change sort order {:#sort}
 
 To change the sorting order, click on the dropdown menu next to the 
 **focus selected function** icon
@@ -68,7 +68,7 @@ starting at the top of the call stack.
 
 ![tree chart](imgs/tree.png)
 
-### Exclude functions {#exclude}
+### Exclude functions {:#exclude}
 
 To exclude a function from your CPU profile, click on it to select it and 
 then press the **exclude selected function** icon 
@@ -79,7 +79,7 @@ Click the **restore all functions** icon
 (![restore all functions icon](imgs/restore.png){:.inline})
 to restore all excluded functions back into the recording.
 
-## View CPU profile as Flame Chart {#flame-chart}
+## View CPU profile as Flame Chart {:#flame-chart}
 
 The Flame Chart view provides a visual representation of the CPU profile over
 time.
@@ -110,7 +110,7 @@ A tall call stack is not necessarily significant, it just means that a lot of
 functions were called. But a wide bar means that a call took a long time to 
 complete. These are candidates for optimization. 
 
-### Zoom in on specific parts of recording {#zoom}
+### Zoom in on specific parts of recording {:#zoom}
 
 Click, hold, and drag your mouse left and right across the overview to zoom in
 on particular parts of the call stack. After you zoom, the call stack 
@@ -118,7 +118,7 @@ automatically displays the portion of the recording that you've selected.
 
 ![flame chart zoomed](imgs/benchmark-zoom.png)
 
-### View function details {#flame-chart-function-details}
+### View function details {:#flame-chart-function-details}
 
 Click on a function to view its definition in the **Sources** panel.
 
