@@ -1,8 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: There are two types of app install banners: <i>web</i> app install banners and <i>native</i> app install banners. They give you the ability to let users quickly and seamlessly add your web or native app to their home screens without leaving the browser.
+description: There are two types of app install banners: web app install banners and native app install banners. They give you the ability to let users quickly and seamlessly add your web or native app to their home screens without leaving the browser.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-02-11 #}
 {# wf_published_on: 2014-12-16 #}
 
@@ -29,6 +28,8 @@ with details about your app.
 
 Chrome then uses a set of criteria and visit frequency heuristics to determine
 when to show the banner. Read on for more details.
+
+<div class="clearfix"></div>
 
 ## What are the criteria?
 

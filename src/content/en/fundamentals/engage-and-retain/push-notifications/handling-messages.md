@@ -2,8 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You've seen what makes a good notification. Now let's see how to implement them.
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2016-09-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # Handling messages {: .page-title }

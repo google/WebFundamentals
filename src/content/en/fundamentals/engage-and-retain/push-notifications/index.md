@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Push notifications are one of the most valuable capabilities of native apps, and this capability is now available on the web. To get the most out of them, notifications need to be timely, precise, and relevant.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-06-30 #}
 {# wf_published_on: 2016-06-30 #}
 

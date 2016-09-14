@@ -2,8 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are right ways of using notifications, and ways of using them better. Learn what makes a good notification. We won't just show you what to do. We'll show you how to do it.
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-06-30 #}
+{# wf_updated_on: 2016-09-12 #}
 {# wf_published_on: 2016-06-30 #}
 
 # What makes a good notification? {: .page-title }

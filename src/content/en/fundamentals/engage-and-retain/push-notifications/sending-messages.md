@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: There are two servers involved in sending a message: your server and a third party messaging server. You keep track of who to send messages to. The third party server handles the routing.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2016-06-30 #}
 {# wf_published_on: 2016-06-30 #}
 

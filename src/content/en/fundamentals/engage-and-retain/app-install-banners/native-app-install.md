@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Native App install banners are similar to Web app install banners, but instead of adding to the home screen will let the user install your native app without leaving your site.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-09-29 #}
 {# wf_published_on: 2014-12-16 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Requesting permission for and subscribing users to notifications requires as  light a touch as showing them notifications.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-06-30 #}
 {# wf_published_on: 2016-06-30 #}
 
