@@ -62,7 +62,7 @@ On hover the **Edit** and **Delete** icons are shown to the right of the entry.
 Now you may close the settings dialog.
 Your new custom profiles will be shown under the **custom** header to select a condition.
 
-## Open the network conditions drawer {#network-conditions}
+## Open the network conditions drawer {:#network-conditions}
 
 You can access network functions while other DevTools panels are open with
 the **Network conditions** drawer. 

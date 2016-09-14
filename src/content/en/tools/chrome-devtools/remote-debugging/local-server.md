@@ -22,7 +22,7 @@ machine and then view the site on an Android device.
 - If your web server is using a custom domain, you can set up your Android device to access the content at that domain with custom domain mapping.
 
 
-## Set up port forwarding {#port-forwarding}
+## Set up port forwarding {:#port-forwarding}
 
 Port forwarding enables your Android device to access content that's being
 hosted on your development machine's web server. Port forwarding works by
@@ -61,7 +61,7 @@ the `localhost` port that you specified in the **Device port** field. For
 example, if you entered `5000` in the field, then you would go to 
 `localhost:5000`. 
 
-## Map to custom local domains {#custom-domains}
+## Map to custom local domains {:#custom-domains}
 
 Custom domain mapping enables you to view content on an Android device
 from a web server on your development machine that is using a custom domain.

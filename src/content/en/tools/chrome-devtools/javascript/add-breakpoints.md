@@ -23,7 +23,7 @@ code](step-code).
 - You can also set breakpoints that are triggered when general conditions are met, such as an event, a DOM change, or an uncaught exception.
 
 
-## Set a breakpoint on a particular line of code {#line-number}
+## Set a breakpoint on a particular line of code {:#line-number}
 
 Setting a breakpoint on a particular line of code is useful when you know
 what statement you want to investigate. For example, if your
@@ -114,7 +114,7 @@ breakpoints** button
 [bp]: imgs/breakpoints-pane.png
 [dbb]: imgs/deactivate-breakpoints-button.png
 
-## Set a breakpoint on DOM change {#dom}
+## Set a breakpoint on DOM change {:#dom}
 
 Setting a breakpoint on DOM changes is useful when a DOM node is being added,
 deleted, or modified in an unexpected way, and you don't know what script is
@@ -192,7 +192,7 @@ in the textfield and press <kbd>Enter</kbd> to save it.
 **Tip**: Click the plus sign and then immediately press <kbd>Enter</kbd> to
 trigger a breakpoint before any XHR is sent.
 
-## Break when an event is fired {#events}
+## Break when an event is fired {:#events}
 
 Use the **Event Listener Breakpoints** pane on the **Sources** panel to
 break when a certain event (e.g. `click`) or category of events (e.g. any
@@ -213,7 +213,7 @@ event belongs to, and then enable the checkbox next to your target event.
 
 [eelbp]: imgs/expanded-event-listener-breakpoints-pane.png
 
-## Break on uncaught exceptions {#exceptions}
+## Break on uncaught exceptions {:#exceptions}
 
 If your code is throwing exceptions, and you don't know where they're coming
 from, press the **pause on exception** button 
