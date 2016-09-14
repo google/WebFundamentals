@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
+description: In this code lab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the home screen, and loads as a top-level, full screen experience.
 
 {# wf_updated_on: 2016-09-02T20:34:34Z #}
 
@@ -20,20 +20,21 @@ description: In this codelab, you'll build a Progressive Web App, which loads qu
 
 A Progressive Web App is:
 
-* __Progressive__ - Works for every user, regardless of browser choice because it's built with progressive enhancement as a core tenet.
-* __Responsive__ - Fits any form factor: desktop, mobile, tablet, or whatever is next.
-* __Connectivity independent__ - Enhanced with service workers to work offline or on low-quality networks.
-* __App-like__ - Feels like an app to the user with app-style interactions and navigation because it's built on the app shell model.
-* __Fresh__ - Always up-to-date thanks to the service worker update process.
-* __Safe__ - Served via HTTPS to prevent snooping and to ensure content hasn't been tampered with.
-* __Discoverable__ - Is identifiable as an "application" thanks to W3C manifest and service worker registration scope, allowing search engines to find it.
-* __Re-engageable__ - Makes re-engagement easy through features like push notifications.
-* __Installable__ - Allows users to "keep" apps they find most useful on their home screen without the hassle of an app store.
-* __Linkable__ - Easily share via URL, does not require complex installation.
+* __Progressive__&mdash;Works for every user, regardless of browser choice because it's built with progressive enhancement as a core tenet.
+* __Responsive__&mdash;Fits any form factor: desktop, mobile, tablet, or whatever is next.
+* __Connectivity independent__&mdash;Enhanced with service workers to work offline or on low-quality networks.
+* __App-like__&mdash;Feels like an app to the user with app-style interactions and navigation because it's built on the app shell model.
+* __Fresh__&mdash;Always up-to-date thanks to the service worker update process.
+* __Safe__&mdash;Served via HTTPS to prevent snooping and to ensure content hasn't been tampered with.
+* __Discoverable__&mdash;Is identifiable as an "application" thanks to W3C manifest and service worker registration scope, allowing search engines to find it.
+* __Re-engageable__&mdash;Makes re-engagement easy through features like push notifications.
+* __Installable__&mdash;Allows users to "keep" apps they find most useful on their home screen without the hassle of an app store.
+* __Linkable__&mdash;Easily share via URL, does not require complex installation.
 
-This codelab will walk you through creating your own Progressive Web App, including the design considerations, as well as implementation details to ensure that your app meets the key principles of a Progressive Web App.
 
-### What are we going to be building?
+### What you'll build
+
+This code lab walks you through creating your own Progressive Web App, including the design considerations, as well as implementation details to ensure that your app meets the key principles of a Progressive Web App.
 
 ### What you'll learn
 
@@ -49,7 +50,7 @@ This codelab will walk you through creating your own Progressive Web App, includ
 * A text editor
 * Basic knowledge of HTML, CSS, JavaScript, and Chrome DevTools
 
-This codelab is focused on Progressive Web Apps. Non-relevant concepts and code blocks are glossed over and are provided for you to simply copy and paste.
+This code lab is focused on Progressive Web Apps. Non-relevant concepts and code blocks are glossed over and are provided for you to simply copy and paste.
 
 
 ## Getting set up
@@ -57,27 +58,27 @@ This codelab is focused on Progressive Web Apps. Non-relevant concepts and code 
 
 
 
-### Download the Code
+### Download the code
 
-Click the following button to download all the code for this codelab:
+Click the following button to download all the code for this code lab:
 
 [](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
-Unpack the downloaded zip file. This will unpack a root folder (`your-first-pwapp-master`), which contains one folder for each step of this codelab, along with all of the resources you will need.
+Unpack the downloaded zip file. This will unpack a root folder (`your-first-pwapp-master`), which contains one folder for each step of this code lab, along with all of the resources you will need.
 
-The `step-NN` folders contain the desired end state of each step of this codelab. They are there for reference. We'll be doing all our coding work in a directory called `work`.
+The `step-NN` folders contain the desired end state of each step of this code lab. They are there for reference. We'll be doing all our coding work in a directory called `work`.
 
 ### Install and verify web server
 
-While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
+While you're free to use your own web server, this code lab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
 [](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
+After installing the Web Server for Chrome app, click the Apps shortcut on the bookmarks bar: 
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-In the ensuing window, click on the Web Server icon: 
+In the ensuing window, click the Web Server icon: 
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -102,7 +103,7 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 Obviously, this app is not yet doing anything interesting - so far, it's just a minimal skeleton with a spinner we're using to verify your web server functionality. We'll add functionality and UI features in subsequent steps. 
 
 
-## Architect your App Shell
+## Architect your app shell
 
 
 
@@ -121,7 +122,7 @@ Put another way, the app shell is similar to the bundle of code that you'd publi
 
 Using the app shell architecture allows you to focus on speed, giving your Progressive Web App similar properties to native apps: instant loading and regular updates, all without the need of an app store.
 
-### Design the App Shell 
+### Design the app shell 
 
 The first step is to break the design down into its core components.
 
@@ -136,14 +137,14 @@ We're going to create a Weather app as our first Progressive Web App. The key co
 When designing a more complex app, content that isn't needed for the initial load can be requested later and then cached for future use. For example, we could defer the loading of the New City dialog until after we've rendered the first run experience and have some idle cycles available.
 
 
-## Implement your App Shell
+## Implement your app shell
 
 
 
 
 There are multiple ways to get started with any project, and we generally recommend using Web Starter Kit. But, in this case, to keep our project as simple as possible and concentrate on Progressive Web Apps, we've provided you with all of the resources you'll need.
 
-### Create the HTML for the App Shell
+### Create the HTML for the app shell
 
 Now we'll add the core components we discussed in  [Architect the App Shell](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/step-01).
 
@@ -212,7 +213,7 @@ Your work directory also already includes the app code (`scripts/app.js`), in it
 * A method to iterate the current cards and call `app.getForecast` to get the latest forecast data (`app.updateForecasts`).
 * Some fake data (`initialWeatherForecast`) you can use to quickly test how things render.
 
-### Test it out
+### Test it
 
 Now that you've got the core HTML, styles and JavaScript, it's time to test the app.
 
@@ -281,7 +282,7 @@ And add the following code below this comment:
    *
    * Code required to start the app
    *
-   * NOTE: To simplify this codelab, we've used localStorage.
+   * NOTE: To simplify this code lab, we've used localStorage.
    *   localStorage is a synchronous API and has serious performance
    *   implications. It should not be used in production applications!
    *   Instead, check out IDB (https://www.npmjs.com/package/idb) or
@@ -335,7 +336,7 @@ document.getElementById('butAddCity').addEventListener('click', function() {
 
 The new additions are the initialization of `app.selectedCities` if it doesn't exist, and the calls to `app.selectedCities.push()` and `app.saveSelectedCities()`.
 
-### Test it out
+### Test it
 
 * When first run, your app should immediately show the user the forecast from `initialWeatherForecast`.
 * Add a new city (by clicking the + icon on the upper right) and verify that two cards are shown.
@@ -344,7 +345,7 @@ The new additions are the initialization of `app.selectedCities` if it doesn't e
 [](https://weather-pwa-sample.firebaseapp.com/step-05/)
 
 
-## Use service workers to pre-cache the App Shell
+## Use service workers to pre-cache the app shell
 
 
 
@@ -425,9 +426,9 @@ Open up the DevTools Console and reload the page, switch to the Service Worker p
 
 ![1f454b6807700695.png](img/1f454b6807700695.png)
 
-Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you  *could * close and re-open the page or press the __skipWaiting __button, but a longer-term solution is to just enable the __Update on Reload __checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.
+Basically, the old service worker continues to control the page as long as there is a tab open to the page. So, you  *could* close and re-open the page or press the __skipWaiting__ button, but a longer-term solution is to just enable the __Update on Reload__ checkbox on the Service Worker pane of DevTools. When this checkbox is enabled, the service worker is forcibly updated every time that the page reloads.
 
-Enable the __update on reload __checkbox now and reload the page to confirm that the new service worker gets activated.
+Enable the __update on reload__ checkbox now and reload the page to confirm that the new service worker gets activated.
 
 __Note:__ You may see an error in the Service Worker pane of the Application panel similar to the one below, it's __safe__ to ignore this error.
 
@@ -511,11 +512,11 @@ self.addEventListener('fetch', function(e) {
 
 Stepping from inside, out, `caches.match()` evaluates the web request that triggered the  [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) event, and checks to see if it's available in the cache. It then either responds with the cached version, or uses `fetch` to get a copy from the network. The `response` is passed back to the web page with `e.respondWith()`.
 
-### Test it out
+### Test it
 
 Your app is now offline-capable! Let's try it out.
 
-Reload your page and then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. Expand the section and you should see the name of your app shell cache listed on the left-hand side. When you click on your app shell cache you can see all of the resources that it has currently cached.
+Reload your page and then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. Expand the section and you should see the name of your app shell cache listed on the left-hand side. When you click your app shell cache you can see all of the resources that it has currently cached.
 
 ![ab9c361527825fac.png](img/ab9c361527825fac.png)
 
@@ -563,7 +564,7 @@ So how do we avoid these edge cases? Use a library like  [sw-precache](https://g
 
 Debugging service workers can be a challenge, and when it involves caching, things can become even more of a nightmare if the cache isn't updated when you expect it. Between the typical service worker life cycle and bug in your code, you may become quickly frustrated. But don't. There are some tools you can use to make your life easier.
 
-#### Start Fresh
+#### Start fresh
 
 In some cases, you may find yourself loading cached data or that things aren't updated as you expect. To clear all saved data (localStoarge, indexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
 
@@ -706,7 +707,7 @@ Notice how the cache request and the XHR request both end with a call to update 
 
 Every time that a card is updated, the app stores the timestamp of the data on a hidden attribute on the card. The app just bails if the timestamp that already exists on the card is newer than the data that was passed to the function.
 
-### Test it out
+### Test it
 
 The app should be completely offline-functional now. Save a couple of cities and press the refresh button on the app to get fresh weather data, and then go offline and reload the page. 
 
@@ -724,7 +725,7 @@ Then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. 
 
 Nobody likes to have to type in long URLs on a mobile keyboard if they don't need to. With the Add To home screen feature, your users can choose to add a shortcut link to their device just as they would install a native app from a store, but with a lot less friction.
 
-### Web App Install Banners and Add to Homescreen for Chrome on Android
+### Web app install banners and add to home screen for Chrome on Android
 
 Web app install banners give you the ability to let your users quickly and seamlessly add your web app to their home screen, making it easy to launch and return to your app. Adding app install banners is easy, and Chrome handles most of the heavy lifting for you. We simply need to include a web app manifest file with details about the app.
 
@@ -740,7 +741,7 @@ Using the web app manifest, your web app can:
 * Be launched in full-screen mode on Android with no URL bar
 * Control the screen orientation for optimal viewing
 * Define a "splash screen" launch experience and theme color for the site
-* Track whether you're launched from the home screen or URL bar
+* Track whether you launched from the home screen or URL bar
 
 Create a file named `manifest.json` in your `work` folder and copy/paste the following contents:
 
@@ -788,7 +789,7 @@ Now add the following line to the bottom of the `<head>` element in your `index.
 <link rel="manifest" href="/manifest.json">
 ```
 
-#### Best Practices
+#### Best practices
 
 * Place the manifest link on all your site's pages, so it will be retrieved by Chrome right when the user first visits, no matter what page they land on.
 * The `short_name` is preferred on Chrome and will be used if present over the name field.
@@ -799,7 +800,7 @@ Further Reading:
 
 [Using app install banners](https://developers.google.com/web/fundamentals/engage-and-retain/simplified-app-installs/)
 
-### Add to Homescreen elements for Safari on iOS
+### Add to home screen elements for Safari on iOS
 
 In your `index.html`, add the following to the bottom of the `<head>` element:
 
@@ -811,7 +812,7 @@ In your `index.html`, add the following to the bottom of the `<head>` element:
   <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
 ```
 
-### Tile Icon for Windows
+### Tile icon for Windows
 
 In your `index.html`, add the following to the bottom of the `<head>` element:
 
@@ -820,17 +821,17 @@ In your `index.html`, add the following to the bottom of the `<head>` element:
   <meta name="msapplication-TileColor" content="#2F3BA2">
 ```
 
-### Test it out
+### Test it
 
 In this section we'll show you a couple of ways to test your web app manifest.
 
-The first way is DevTools. Open up the __Manifest __pane on the __Application __panel. If you've added the manifest information correctly, you'll be able to see it parsed and displayed in a human-friendly format on this pane.
+The first way is DevTools. Open up the __Manifest__ pane on the __Application__ panel. If you've added the manifest information correctly, you'll be able to see it parsed and displayed in a human-friendly format on this pane.
 
-You can also test the add to homescreen feature from this pane. Click on the __Add to homescreen __button. You should see a "add this site to your shelf" message below your URL bar, like in the screenshot below.
+You can also test the add to home screen feature from this pane. Click the __Add to homescreen__ button. You should see a "add this site to your shelf" message below your URL bar, like in the screenshot below.
 
 ![cbfdd0302b611ab0.png](img/cbfdd0302b611ab0.png)
 
-This is the desktop equivalent of mobile's add to homescreen feature. If you can successfully trigger this prompt on desktop, then you can be assured that mobile users can add your app to their devices.
+This is the desktop equivalent of mobile's add to home screen feature. If you can successfully trigger this prompt on desktop, then you can be assured that mobile users can add your app to their devices.
 
 The second way to test is via Web Server for Chrome. With this approach, you expose your local development server (on your desktop or laptop) to other computers, and then you just access your progressive web app from a real mobile device.
 
@@ -844,9 +845,9 @@ Now, access your site from a mobile device, using the new URL.
 
 You will see service worker errors in the console when testing this way because the service worker is not being served over HTTPS.
 
-Using Chrome from an Android device, try adding the app to the homescreen and verifying that the launch screen appears properly and the right icons are used.
+Using Chrome from an Android device, try adding the app to the home screen and verifying that the launch screen appears properly and the right icons are used.
 
-On Safari and Internet Explorer, you can also manually add the app to your homescreen.
+On Safari and Internet Explorer, you can also manually add the app to your home screen.
 
 [](https://weather-pwa-sample.firebaseapp.com/step-08/)
 
@@ -883,11 +884,11 @@ Once your account has been created and you've signed in, you're ready to deploy!
 
 Further reading:  [Firebase Hosting Guide](https://www.firebase.com/docs/hosting/guide/)
 
-### Test it out
+### Test it
 
-* Try adding the app to your home screen then disconnect the network and verify the app works offline as expected.
+Add the app to your home screen; then disconnect the network and verify that the app works offline as expected.
 
-[](https://weather-pwa-sample.firebaseapp.com/final/)
+It should look something [like this](https://weather-pwa-sample.firebaseapp.com/final/).
 
 
 
