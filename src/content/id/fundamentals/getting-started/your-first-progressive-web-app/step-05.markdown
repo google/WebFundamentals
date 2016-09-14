@@ -2,6 +2,8 @@
 
 title: "Gunakan Service Worker untuk Meng-Cache-kan Data Aplikasi"
 description: "Gunakan service worker untuk meng-cache-kan data aplikasi dalam progressive web app"
+translators:
+  - abdshomad
 ---
 
 <p class="intro">

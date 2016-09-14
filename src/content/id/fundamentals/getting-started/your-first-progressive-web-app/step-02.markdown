@@ -1,6 +1,8 @@
 ---
 title: "Mengimplementasikan App Shell"
 description: "Bagaimana cara menggunakan App Shell dalam Progressive Web App?"
+translators:
+  - abdshomad
 notes:
   learn-about-wsk: "Pelajari lebih lanjut tentang <a href='https://developers.google.com/web/tools/starter-kit/'>Web Starter Kit</a>"
   image-sprite: "Menentukan setiap ikon satu per satu mungkin terlihat kurang efisien dibandingkan dengan menggunakan sprite image. Kita akan meng-cache nanti sebagai bagian dari App Shell, memastikan agar ikon-ikon ini selalu tersedia, tanpa perlu membuat ulang permintaan ke web server."

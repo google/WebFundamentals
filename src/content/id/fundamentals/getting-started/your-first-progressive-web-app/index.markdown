@@ -2,6 +2,8 @@
 
 title: "Progressive Web App Anda yang Pertama"
 description: "Progressive Web Apps menciptakan pengalaman terbaik dari penggabungan web dan aplikasi. Dalam panduan langkah-demi-langkah ini, Anda akan dipandu untuk membangun *Progressive Web Apps* dan mempelajari dasar-dasar yang diperlukan untuk membangun Progressive Web Apps, termasuk mempelajari model *App Shell*, cara menggunakan *service workers* untuk menyimpan data aplikasi di *cache* dan lebih banyak lagi."
+translators:
+  - abdshomad
 notes:
   devsummit-video: "Mencari yang lain? Saksikan Alex Russell berbicara tentang <a href='https://www.youtube.com/watch?v=MyQ8mtR9WxI'>Progressive Web Apps</a> dari episode Summit Dev Chrome 2015"
 ---

@@ -1,6 +1,8 @@
 ---
 
 title: "Deploy ke Secure Host dan Rayakan!"
+translators:
+  - abdshomad
 ---
 
 <p class="intro">

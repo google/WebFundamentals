@@ -2,6 +2,8 @@
 
 title: "Dukungan Integrasi Native"
 description: "Gunakan Add to Home Screen dan integrasikan Progressive Web App Anda dengan platform native."
+translators:
+  - abdshomad
 
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: "Mulailah dengan Pemuatan Pertama yang Cepat"
 description: "Pemutan Pertama yang Cepat dengan Progressive Web Apps dan model App Shell."
+translators:
+  - abdshomad
 notes:
   extra-credit: "Untuk kredit tambahan, gantikan implementasi <code>localStorage</code> dengan <a href='https://www.npmjs.com/package/idb'>idb</a>"
 ---

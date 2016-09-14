@@ -1,6 +1,8 @@
 ---
 title: "Arsitektur App Shell"
 description: "Apa itu shell app dan bagaimana Anda mendesain aplikasi web dengan menggunakan model app shell?"
+translators:
+  - abdshomad
 ---
 
 <p class="intro">

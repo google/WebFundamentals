@@ -1,6 +1,8 @@
 ---
 title: "Gunakan Service Workers untuk melakukan Pre-cache App Shell"
 description: "Gunakan service worker untuk menerapkan pre-cache app shell terhadap Progressive Web App."
+translators:
+  - abdshomad
 
 notes:
   sw-intro: "Jika Anda belum terbiasa dengan service worker, Anda bisa memperoleh dasar pemahaman dengan membaca <a href='http://www.html5rocks.com/en/tutorials/service-worker/introduction/'>Pengenalan Service Worker</ a> tentang apa yang bisa mereka lakukan, siklus hidup dan batasan-batasannya."
