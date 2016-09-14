@@ -1,16 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Die Typografie ist eine grundlegende Voraussetzung für gutes Design und Branding sowie Lesbarkeit und Zugänglichkeit. Webschriftarten erfüllen die obigen Bedingungen und bieten noch mehr: Der Text ist skalierbar, kann durchsucht, vergrößert und verkleinert werden und unterstützt hohe DPI-Werte. Außerdem liefern diese Schriftarten eine konstante und scharfe Textdarstellung unabhängig von der Bildschirmgröße und -auflösung. Webschriftarten sind für gutes Design, gute Nutzererfahrung und hohe Leistung erforderlich.
+description: Die Typografie ist eine grundlegende Voraussetzung für gutes Design und Branding sowie Lesbarkeit und Zugänglichkeit. Webschriftarten erfüllen die obigen Bedingungen und bieten noch mehr: Der Text ist skalierbar, kann durchsucht, vergrößert und verkleinert werden und unterstützt hohe DPI-Werte. Außerdem liefern diese Schriftarten eine konstante und scharfe Textdarstellung unabhängig von der Bildschirmgröße und -auflösung. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Optimierung von Webschriftarten {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
 
 Die Typografie ist eine grundlegende Voraussetzung für gutes Design und Branding sowie Lesbarkeit und Zugänglichkeit. Webschriftarten erfüllen die obigen Bedingungen und bieten noch mehr: Der Text ist skalierbar, kann durchsucht, vergrößert und verkleinert werden und unterstützt hohe DPI-Werte. Außerdem liefern diese Schriftarten eine konstante und scharfe Textdarstellung unabhängig von der Bildschirmgröße und -auflösung. Webschriftarten sind für gutes Design, gute Nutzererfahrung und hohe Leistung erforderlich.
 
@@ -21,7 +18,7 @@ Die Optimierung von Webschriftarten ist ein entscheidender Bestandteil der gesam
 
 ## TL;DR {: .hide-from-toc }
 - Unicode-Schriftarten können Tausende von Glyphen enthalten.
-- 'Es gibt vier Schriftformate: WOFF2, WOFF, EOT und TTF.'
+- Es gibt vier Schriftformate: WOFF2, WOFF, EOT und TTF.
 - Einige Schriftformate erfordern die GZIP-Komprimierung.
 
 
@@ -45,7 +42,6 @@ Was bedeutet das für uns? Es gibt kein einziges Format, das in allen Browsern f
 * Liefern Sie die EOT-Variante für alte IE-Browser (vor IE9).
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Eigentlich gibt es auch den <a href='http://caniuse.com/svg-fonts'>SVG-Schriftart-Container</a>, aber dieser wurde nie von IE oder Firefox unterstützt und mittlerweile auch nicht mehr von Chrome. Deshalb hat er nur eingeschränkten Nutzen und wird in diesem Leitfaden nicht behandelt.
 
 ### Schriftgröße per Komprimierung reduzieren
@@ -58,15 +54,14 @@ Eine Schriftart ist eine Sammlung von Glyphen, von denen jede eine Reihe von Pfa
 
 Darüber hinaus ist es beachtenswert, dass einige Schriftartformate zusätzliche Metadaten wie zum Beispiel Informationen zum [Hinting](http://http://de.wikipedia.org/wiki/Hint) und zur [Unterschneidung](http://http://de.wikipedia.org/wiki/Unterschneidung_%28Typografie%29) beinhalten, die auf manchen Plattformen nicht benötigt werden, was eine weitere Optimierung der Dateigröße ermöglicht. Informieren Sie sich über die verfügbaren Optimierungsoptionen Ihres Schriftart-Komprimierungsprogramms und achten Sie darauf, wenn Sie diesen Weg verfolgen, dass Sie über die geeignete Infrastruktur zum Testen und zur Übermittlung dieser optimierten Schriftarten an die einzelnen Browser verfügen, z. B. stellt Google Fonts mehr als 30 optimierte Varianten für jede Schriftart bereit und erkennt und liefert die optimale Variante für jede Plattform und jeden Browser.
 
-<!-- TODO: Verify note type! -->
 Note: Ziehen Sie die Verwendung der <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli-Komprimierung</a> für die Formate EOT, TTF und WOFF in Betracht. Zopfli ist ein mit ZLIB kompatibles Komprimierungsprogramm, das die Dateigröße gegenüber GZIP um ca. weitere 5 % reduziert.
 
 ## Schriftartfamilie mit @font-face definieren
 
 ## TL;DR {: .hide-from-toc }
-- 'Verwenden Sie den Hinweis `format()`, um mehrere Schriftformate anzugeben.'
-- 'Unterteilen Sie große Unicode-Schriftarten, um die Leistung zu verbessern: Nutzen Sie die Unicode-Bereichsunterteilung und sehen Sie eine manuelle Ausweichlösung zur Unterteilung für ältere Browser vor.'
-- 'Reduzieren Sie die Zahl der stilistischen Schriftvarianten, um die Leistung bei der Seiten- und Textwiedergabe zu verbessern.'
+- Verwenden Sie den Hinweis `format()`, um mehrere Schriftformate anzugeben.
+- Unterteilen Sie große Unicode-Schriftarten, um die Leistung zu verbessern: Nutzen Sie die Unicode-Bereichsunterteilung und sehen Sie eine manuelle Ausweichlösung zur Unterteilung für ältere Browser vor.
+- Reduzieren Sie die Zahl der stilistischen Schriftvarianten, um die Leistung bei der Seiten- und Textwiedergabe zu verbessern.
 
 
 Die CSS-at-Regel @font-face gestattet es, den Speicherort einer bestimmten Schriftartressource, deren Style-Eigenschaften und die Unicode-Codepoints festzulegen, für die sie verwendet werden soll. Über eine Kombination solcher @font-face-Deklarationen kann eine `Schriftartfamilie` erstellt werden, die der Browser zur Beurteilung heranzieht, welche Schriftartressourcen herunterzuladen sind und auf die aktuelle Seite angewendet werden müssen. Wir wollen uns nun genauer ansehen, wie das intern vor sich geht.
@@ -75,37 +70,36 @@ Die CSS-at-Regel @font-face gestattet es, den Speicherort einer bestimmten Schri
 
 Jede @font-face-Deklaration beinhaltet den Namen der Schriftartfamilie, die eine logische Gruppe aus mehreren Deklarationen darstellt, außerdem die [Schriftarteigenschaften](http://www.w3.org/TR/css3-fonts/#font-prop-desc) wie Stil, Stärke und Streckung sowie den [SRC-Descriptor](http://www.w3.org/TR/css3-fonts/#src-desc), der eine priorisierte Liste der Speicherorte für die Schriftartressource angibt.
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
+
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 Beachten Sie zunächst, dass in den obigen Beispielen eine einzige Schriftartfamilie _Awesome Font_ mit zwei Schriftstilen (normal und _italic_) definiert wird, die jeweils auf eine andere Gruppe an Schriftartressourcen verweisen. Jeder SRC-Descriptor enthält wiederum eine priorisierte, kommagetrennte Liste mit Ressourcenvarianten: 
 
 * Mithilfe der Anweisung `local()` können wir lokal installierte Schriftarten referenzieren, laden und verwenden.
 * Mithilfe der Anweisung `url()` können wir externe Schriftarten laden und einen optionalen Hinweis `format()` aufnehmen, der das Format der Schriftart angibt, auf die die vorgesehene URL verweist.
 
-^
-<!-- TODO: Verify note type! -->
+
 Note: Wenn Sie nicht auf einen der Standard-Systemschriftarten zurückgreifen, haben die Nutzer in der Praxis die entsprechenden Schriftarten selten lokal installiert, insbesondere auf Mobilgeräten, wo es faktisch unmöglich ist, zusätzliche Schriftarten zu `installieren`. Aus diesem Grund sollten Sie stets eine Liste mit externen Speicherorten für Schriftarten bereitstellen.
 
 Wenn der Browser feststellt, dass die Schriftart benötigt wird, arbeitet er die bereitgestellte Ressourcenliste in der angegebenen Reihenfolge ab und versucht, die entsprechende Ressource zu laden. Gemäß dem obigen Beispiel geschieht das wie folgt:
@@ -118,7 +112,6 @@ Wenn der Browser feststellt, dass die Schriftart benötigt wird, arbeitet er die
 
 Die Kombination aus lokalen und externen Anweisungen mit entsprechenden Formathinweisen ermöglicht es uns, alle verfügbaren Schriftartformate anzugeben und dem Browser die übrige Arbeit zu überlassen: Der Browser ermittelt, welche Ressourcen erforderlich sind und wählt das optimale Format aus.
 
-<!-- TODO: Verify note type! -->
 Note: Es kommt auf die Reihenfolge an, in der die Schriftvarianten angegeben werden. Der Browser wählt das erste unterstützte Format aus. Wenn Sie also wünschen, dass die neueren Browser WOFF2 verwenden, ist die WOFF2-Deklaration vor WOFF anzuordnen und so weiter.
 
 ### Unterteilung in Unicode-Bereiche
@@ -159,7 +152,7 @@ Wir können unsere Schriftart _Awesome Font_ zum Beispiel in lateinische und jap
     }
     
 
-<!-- TODO: Verify note type! -->
+
 Note: Die Unterteilung in Unicode-Bereiche ist besonders für asiatische Sprachen wichtig, bei denen die Anzahl der Glyphen wesentlich höher ist als in westlichen Sprachen und eine typische `komplette` Schriftart oftmals in Megabyte anstatt in Kilobyte angegeben wird!
 
 Mithilfe von Unicode-Bereichsuntergruppen und separaten Dateien für jede stilistische Variante der Schriftart können wir eine kombinierte Schriftartfamilie definieren, die schneller und effizienter heruntergeladen werden kann. Die Besucher laden dann nur die Varianten und Untergruppen herunter, die diese Schriftartfamilie benötigt, und sie sind nicht gezwungen, Untergruppen herunterzuladen, die sie womöglich auf der Seite niemals sehen oder verwenden. 
@@ -184,13 +177,9 @@ Jede Schriftartfamilie besteht aus mehreren stilistischen Varianten (normal, fet
 
 Das Diagramm oben zeigt zum Beispiel eine Schriftartfamilie mit drei unterschiedlichen Schriftstärken: 400 (normal), 700 (fett) und 900 (extra fett). Alle anderen Varianten dazwischen (grau dargestellt) werden vom Browser automatisch der ähnlichsten Variante zugeordnet. 
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Wenn eine Stärke angegeben ist, für die keine Schrift vorhanden ist, wird eine Schrift mit ähnlicher Stärke verwendet. Grundsätzlich werden Fettformatierungen Schriften mit höherer Stärke und helle Formatierungen Schriften mit geringerer Stärke zugeordnet.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algorithmus für CSS3-Schriftartenzuordnung</a></p>
-    </blockquote>
-  </div>
-</div>
+
+> Wenn eine Stärke angegeben ist, für die keine Schrift vorhanden ist, wird eine Schrift mit ähnlicher Stärke verwendet. Grundsätzlich werden Fettformatierungen Schriften mit höherer Stärke und helle Formatierungen Schriften mit geringerer Stärke zugeordnet.
+> > <a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algorithmus für CSS3-Schriftartenzuordnung</a>
 
 Die entsprechende Logik gilt für kursive Varianten. Der Schriftart-Designer steuert, welche Varianten erstellt werden, und wir steuern, welche Varianten wir auf der Seite verwenden. Da jede Variante einen separaten Download darstellt, empfiehlt es sich, die Zahl der Varianten zu begrenzen. Wir können zum Beispiel zwei Fettschrift-Varianten für unsere Schriftartfamilie _Awesome Font_ festlegen: 
 
@@ -227,25 +216,20 @@ Mit dem obigen Beispiel wird die Schriftartfamilie _Awesome Font_ deklariert, di
 
 <img src="images/font-synthesis.png" class="center" alt="Schriftartsynthese">
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Die Autoren sollten sich darüber im Klaren sein, dass synthetisierte Ansätze sich womöglich für Skripte in kyrillischer Schrift nicht eignen, bei denen die kursiven Formen stark abweichen. Es ist immer besser, eine originale Kursivschrift zu verwenden, als auf eine synthetische Version zurückzugreifen.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3-Schriftartstil</a></p>
-    </blockquote>
-  </div>
-</div>
+> Die Autoren sollten sich darüber im Klaren sein, dass synthetisierte Ansätze sich womöglich für Skripte in kyrillischer Schrift nicht eignen, bei denen die kursiven Formen stark abweichen. Es ist immer besser, eine originale Kursivschrift zu verwenden, als auf eine synthetische Version zurückzugreifen.
+> > <a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3-Schriftartstil</a>
+
 
 Im obigen Beispiel wird der Unterschied zwischen originalen und synthetisierten Schriftartresultaten für Open-Sans aufgezeigt. Alle synthetisierten Varianten wurden dabei aus einer einzigen Schrift mit der Stärke 400 erzeugt. Wie Sie sehen, bestehen bei den Ergebnissen keine erkennbaren Unterschiede. Die Erzeugung von fetten und kursiven Varianten ist nicht im Detail vorgegeben. Deshalb unterscheiden sich die Resultate bei den verschiedenen Browsern und hängen außerdem stark von der jeweiligen Schriftart ab.
 
-<!-- TODO: Verify note type! -->
 Note: Im Sinne einer optimalen Konsistenz und bestmöglicher visueller Resultate sollten Sie sich nicht auf die Schriftartsynthese verlassen. Minimieren Sie stattdessen die Anzahl der verwendeten Schriftvarianten und geben Sie deren Speicherort an, damit der Browser diese herunterladen kann, wenn sie auf der Seite benötigt werden. Unter Berücksichtigung der obigen Ausführungen <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>kann in manchen Fällen eine synthetisierte Variante eine gangbare Option darstellen</a>. Dies ist allerdings sorgfältig zu prüfen.
 
 
 ## Laden und Rendern optimieren
 
 ## TL;DR {: .hide-from-toc }
-- 'Schriftartanforderungen werden verzögert, bis die Rendering-Baumstruktur erstellt ist, was zu einer verzögerten Textwiedergabe führen kann.'
-- 'Das Font Loading API ermöglicht die Implementierung von Strategien zum Laden und Rendern von Schriftarten, die das standardmäßige langsame Laden (Lazy Loading) von Schriftarten umgehen.'
+- Schriftartanforderungen werden verzögert, bis die Rendering-Baumstruktur erstellt ist, was zu einer verzögerten Textwiedergabe führen kann.
+- Das Font Loading API ermöglicht die Implementierung von Strategien zum Laden und Rendern von Schriftarten, die das standardmäßige langsame Laden (Lazy Loading) von Schriftarten umgehen.
 - Mit der Inline-Ersetzung kann das standardmäßige Lazy Loading von Schriftarten in älteren Browsern umgangen werden.
 
 
@@ -309,7 +293,6 @@ Weil wir den Schriftstatus mit der Methode [check()](http://dev.w3.org/csswg/css
 
 Das Beste ist: Wir können die obigen Strategien auch mischen und an unterschiedliche Seiteninhalte anpassen, z. B. das Text-Rendering in bestimmten Bereichen bis zur Verfügbarkeit der Schriftart anhalten, eine Ausweich-Schriftart nutzen und dann erneut rendern, sobald der Schriftartdownload abgeschlossen ist, verschiedene Zeitlimits festlegen und so weiter. 
 
-<!-- TODO: Verify note type! -->
 Note: Das Font Loading API <a href='http://caniuse.com/#feat=font-loading'>ist für manche Browser noch in der Entwicklungsphase</a>. Ziehen Sie die Verwendung des <a href='https://github.com/bramstein/fontloader'>FontLoader-Polyfills</a> oder der <a href='https://github.com/typekit/webfontloader'>Webfontloader-Bibliothek</a> in Betracht, um eine ähnliche Funktionalität bereitzustellen, allerdings mit dem Nachteil einer zusätzlichen JavaScript-Abhängigkeit.
 
 ### Schriftart-Rendering durch Inline-Ersetzung optimieren
@@ -321,7 +304,6 @@ Eine einfache alternative Strategie, um mithilfe des Font Loading API das `Leert
 
 Zwar ist die Inlining-Strategie nicht so flexibel und gestattet es uns nicht, benutzerdefinierte Zeitlimits oder Rendering-Ansätze für unterschiedliche Inhalte zu definieren, aber es ist eine einfache und robuste Lösung, die mit allen Browsern funktioniert. Isolieren Sie für optimale Resultate die Inline-Schriftarten in ein eigenständiges Stylesheet und stellen Sie sie mit einer langen Ablaufdauer (max-age) bereit. Auf diese Weise zwingen Sie die Besucher bei der Aktualisierung Ihres CSS nicht dazu, die Schriftarten erneut herunterzuladen. 
 
-<!-- TODO: Verify note type! -->
 Note: Nutzen Sie die Inline-Ersetzung selektiv! Vergegenwärtigen Sie sich, dass der Grund, warum @font-face ein Lazy Loading-Verhalten nutzt, die Vermeidung des Downloads unnötiger Schriftvarianten und Untergruppen ist. Ebenso wird das Anwachsen Ihres CSS-Codes über eine aggressive Inline-Ersetzung sich negativ auf den <a href='/web/fundamentals/performance/critical-rendering-path/'>kritischen Rendering-Pfad</a> auswirken - der Browser müssen den gesamten CSS-Code herunterladen, bevor er das CSSOM erstellt, die Rendering-Baumstruktur erzeugt und den Seiteninhalt auf dem Bildschirm darstellt.
 
 ### Wiederverwendung von Schriftarten mit HTTP-Caching optimieren

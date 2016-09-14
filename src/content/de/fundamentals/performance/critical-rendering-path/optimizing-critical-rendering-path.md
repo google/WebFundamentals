@@ -2,15 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Im Sinne der kürzestmöglichen Zeit bis zum ersten Rendern sind drei Variablen zu optimieren. Konkret muss die Anzahl der kritischen Ressourcen, die Zahl der kritischen Bytes und die Länge des kritischen Pfads minimiert werden.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Kritischen Rendering-Pfad optimieren {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
 
 Im Sinne der kürzestmöglichen Zeit bis zum ersten Rendern sind drei Variablen zu optimieren:
 

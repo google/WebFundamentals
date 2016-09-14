@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Sie können nicht optimieren, was Sie nicht messen können. Mit dem Navigation Timing API verfügen wir jedoch über alle notwendigen Tools zum Messen der einzelnen Schritte des kritischen Rendering-Pfads (Critical Rendering Path, CRP)!
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -16,7 +15,7 @@ Sie können nicht optimieren, was Sie nicht messen können. Mit dem Navigation T
 
 ## TL;DR {: .hide-from-toc }
 - Navigation Timing liefert hochauflösende Zeitstempel für die Messung des CRP.
-- 'Der Browser gibt Serien verarbeitbarer Ereignisse aus, die verschiedene Phasen des CRP erfassen.'
+- Der Browser gibt Serien verarbeitbarer Ereignisse aus, die verschiedene Phasen des CRP erfassen.
 
 
 Die Grundlagen einer soliden Leistungsstrategie sind gute Messungen und eine geeignete Instrumentierung. Das Navigation Timing API stellt genau das zur Verfügung.
@@ -42,10 +41,9 @@ Die HTML-Spezifikation gibt die Bedingungen für jedes einzelne Ereignis vor: wa
     * Wenn kein Parser vorhanden ist, der JavaScript blockiert, dann wird _DOMContentLoaded_ unmittelbar nach _domInteractive_ gestartet.
 * **domComplete** markiert den Zeitpunkt, zu dem die Seite und alle ihre Unterressourcen einsatzbereit sind.
 
-^
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Das obige Beispiel erscheint vielleicht ein wenig einschüchternd, ist in Wirklichkeit jedoch ziemlich einfach.  Die Navigation Timing API erfasst alle relevanten Zeitstempel und unser Code wartet einfach auf den Start des `onload`-Ereignisses und berechnet die Differenz zwischen den verschiedenen Zeitstempeln. Beachten Sie, dass das onload-Ereignis nach domInteractive, domContentLoaded und domComplete ausgelöst wird.

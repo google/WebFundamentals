@@ -178,7 +178,7 @@ Inhalte sind der wichtigste Aspekt jeder Website und wir mussten sichergehen, da
 Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Bildschirmen bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Jedes dieser Geräte bringt eigene Vorteile, jedoch auch Einschränkungen mit sich. Als Webentwickler wird von Ihnen erwartet, sämtliche Geräte zu unterstützen.
 
 
-Wir erstellen eine Website, die auf Bildschirmen verschiedener Größe und verschiedenen Gerätetypen funktioniert. Im [vorherigen Artikel]({{page.previousPage.relative_url}}) haben wir die Informationsarchitektur der Seite entworfen und eine Grundstruktur erstellt.
+Wir erstellen eine Website, die auf Bildschirmen verschiedener Größe und verschiedenen Gerätetypen funktioniert. Im [vorherigen Artikel](#) haben wir die Informationsarchitektur der Seite entworfen und eine Grundstruktur erstellt.
 In diesem Leitfaden nehmen wir unsere Grundstruktur mit Inhalten und verwandeln diese in eine schöne Seite, die auf einer breiten Palette an Bildschirmgrößen responsiv ist.
 
 
@@ -280,7 +280,7 @@ Das Design sieht ab 600 Pixeln in der Breite unvorteilhaft aus. In unserem Fall 
   </p>
 </video>
 
-600 Pixel stellen eine gute Stelle für den ersten Übergangspunkt dar, da wir nun genug Platz haben, Elemente neu zu positionieren, damit sie besser auf den Bildschirm passen. Wir können dies mithilfe einer Technologie namens [Medienabfragen]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) tun.
+600 Pixel stellen eine gute Stelle für den ersten Übergangspunkt dar, da wir nun genug Platz haben, Elemente neu zu positionieren, damit sie besser auf den Bildschirm passen. Wir können dies mithilfe einer Technologie namens [Medienabfragen](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness) tun.
 
 
     @media (min-width: 600px) {

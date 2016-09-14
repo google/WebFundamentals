@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Die CSSOM- und DOM-Baumstrukturen werden in einer Rendering-Baumstruktur zusammengefasst, die dann zur Berechnung des Layouts eines jeden sichtbaren Elements verwendet wird und als Eingabe für den Paint-Prozess dient, der die Pixel auf dem Bildschirm darstellt. Die Optimierung jedes einzelnen dieser Schritte ist für die bestmögliche Rendering-Leistung entscheidend.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -10,15 +9,13 @@ description: Die CSSOM- und DOM-Baumstrukturen werden in einer Rendering-Baumstr
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-
-
 Die CSSOM- und DOM-Baumstrukturen werden in einer Rendering-Baumstruktur zusammengefasst, die dann zur Berechnung des Layouts eines jeden sichtbaren Elements verwendet wird und als Eingabe für den Paint-Prozess dient, der die Pixel auf dem Bildschirm darstellt. Die Optimierung jedes einzelnen dieser Schritte ist für die bestmögliche Rendering-Leistung entscheidend.
 
 Im vorherigen Abschnitt über die Erstellung des Objektmodells erstellten wir die DOM- und CSSOM-Baumstrukturen basierend auf den HTML- und CSS-Eingaben. Allerdings handelt es sich bei letzteren um unabhängige Objekte, die verschiedene Aspekte des Dokuments abdecken: eines beschreibt den Inhalt und das andere die Formatierungsregeln, die auf das Dokument anzuwenden sind. Wie werden beide Objekttypen zusammengeführt und bewirken, dass der Browser Pixel auf dem Bildschirm darstellt?
 
 ## TL;DR {: .hide-from-toc }
 - Die DOM- und CSSOM-Baumstrukturen bilden gemeinsam die Rendering-Baumstruktur.
-- 'Die Rendering-Baumstruktur enthält nur die Knoten, für das Rendern der Seite erforderlich sind.'
+- Die Rendering-Baumstruktur enthält nur die Knoten, für das Rendern der Seite erforderlich sind.
 - Beim Layout werden die exakte Position und Größe eines jeden Objekts berechnet.
 - Beim Paint als letztem Schritt werden die Pixel auf dem Bildschirm basierend auf der finalen Rendering-Baumstruktur dargestellt.
 
@@ -35,17 +32,16 @@ Bei der Erstellung der Rendering-Baumstruktur geht der Browser grob wie folgt vo
 1. Für jeden sichtbaren Knoten werden die entsprechenden CSSOM-Regeln gesucht und darauf angewendet.
 2. Die sichtbaren Knoten werden mit ihrem Inhalt und ihren berechneten Styles ausgegeben.
 
-<!-- TODO: Verify note type! -->
 Note: Wir weisen darauf hin, dass `visibility: hidden` sich von `display: none` unterscheidet. Ersteres macht das Element unsichtbar, aber das Element belegt weiterhin Platz im Layout, d. h., es wird als leeres Feld wiedergegeben, während letzteres das Element vollständig aus der Rendering-Baumstruktur entfernt, sodass das Element unsichtbar und nicht mehr Teil des Layouts ist.
 
 Das finale Rendering enthält sowohl die Inhalte als auch die Formatinformationen aller sichtbaren Inhalte auf dem Bildschirm - wir haben es fast geschafft! **Da die Rendering-Baumstruktur nun eingerichtet ist, können wir mit der `Layout`-Phase fortfahren.**
 
-Bis zu diesem Punkt haben wir analysiert, welche Knoten sichtbar sein sollten und ihre Formatierung umgesetzt, allerdings haben wir ihre exakte Position und Größe im [Anzeigebereich]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) des Geräts nicht berechnet - dies geschieht in der Layout-Phase, die gelegentlich auch als `Reflow` bezeichnet wird.
+Bis zu diesem Punkt haben wir analysiert, welche Knoten sichtbar sein sollten und ihre Formatierung umgesetzt, allerdings haben wir ihre exakte Position und Größe im [Anzeigebereich](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) des Geräts nicht berechnet - dies geschieht in der Layout-Phase, die gelegentlich auch als `Reflow` bezeichnet wird.
 
 Mit der Ermittlung der exakten Größe und Position der einzelnen Objekte beginnt der Browser im Stammverzeichnis der Rendering-Baumstruktur und arbeitet diese ab, um die Geometrie eines jeden Objekts auf der Seite zu berechnen. Sehen wir uns ein einfaches praktisches Beispiel an:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Im Textkörper (body) der obigen Seite sind zwei verschachtelte div-Einträge vorhanden: Das erste (übergeordnete) div-Element legt die Anzeigegröße des Knotens auf 50 % der Breite des Anzeigebereichs fest und mit dem zweiten div-Element innerhalb des übergeordneten Elements wird dessen Breite auf 50 % des übergeordneten Elements gesetzt, d. h. auf 25 % der Breite des Anzeigebereichs!

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Die schnellste und am besten optimierte Ressource ist eine Ressource, die gar nicht übertragen wird. Haben Sie Ihre Ressourcen vor Kurzem überprüft? Holen Sie dies ggf. nach und tun Sie es regelmäßig, um dafür zu sorgen, dass jede Ressource zu einer besseren Nutzererfahrung beiträgt.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -11,14 +10,13 @@ description: Die schnellste und am besten optimierte Ressource ist eine Ressourc
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
-
 Die schnellste und am besten optimierte Ressource ist eine Ressource, die gar nicht übertragen wird. Haben Sie Ihre Ressourcen vor Kurzem überprüft? Holen Sie dies ggf. nach und tun Sie es regelmäßig, um dafür zu sorgen, dass jede Ressource zu einer besseren Nutzererfahrung beiträgt.
 
 
 ## TL;DR {: .hide-from-toc }
 - Führen Sie eine Bestandsaufnahme aller eigenen und fremden Inhalte auf Ihren Seiten durch.
-- 'Messen Sie die Leistung eines jeden Inhaltselements: den Wert und die technische Leistungsfähigkeit.'
-- 'Ermitteln Sie, ob die Ressourcen ausreichenden Nutzen bringen.'
+- Messen Sie die Leistung eines jeden Inhaltselements: den Wert und die technische Leistungsfähigkeit.
+- Ermitteln Sie, ob die Ressourcen ausreichenden Nutzen bringen.
 
 
 Die schnellste und am besten optimierte Ressource ist eine Ressource, die gar nicht übertragen wird. Dies scheint offensichtlich zu sein, wird in der Praxis jedoch häufig übersehen. Als leistungsorientierter Entwickler ist es Ihre Aufgabe, jede Gelegenheit für die Entfernung unnötiger Ressourcen aus Ihrer Anwendung zu erkennen. Es hat sich bewährt, die impliziten und expliziten Annahmen im Team in Frage zu stellen und regelmäßig auf den Prüfstand zu stellen. Einige Beispiele:

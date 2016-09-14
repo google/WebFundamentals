@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Der Abruf von Inhalten über das Netzwerk ist sowohl langwierig als auch kostspielig: Umfangreiche Antworten erfordern viele Paketumläufe zwischen Client und Server, was die Verfügbarkeit und Verarbeitung durch den Browser verzögert und zudem zu Datenkosten für den Besucher führt. Aus diesem Grund stellt die Fähigkeit, zuvor abgerufene Ressourcen im Cache zwischenzuspeichern und wiederzuverwenden, einen kritischen Aspekt der Leistungsoptimierung dar.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -10,15 +9,12 @@ description: Der Abruf von Inhalten über das Netzwerk ist sowohl langwierig als
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-
-
 Der Abruf von Inhalten über das Netzwerk ist sowohl langwierig als auch kostspielig: Umfangreiche Antworten erfordern viele Paketumläufe zwischen Client und Server, was die Verfügbarkeit und Verarbeitung durch den Browser verzögert und zudem zu Datenkosten für den Besucher führt. Aus diesem Grund stellt die Fähigkeit, zuvor abgerufene Ressourcen im Cache zwischenzuspeichern und wiederzuverwenden, einen kritischen Aspekt der Leistungsoptimierung dar.
 
 
 
 Es ist einfach großartig, dass jeder Browser über die Implementierung eines HTTP-Cachespeichers verfügt! Es muss nur noch sichergestellt werden, dass jede Serverantwort korrekte HTTP-Header-Anweisungen beinhaltet, die dem Browser mitteilen, wann und für wie lange die Antwort zwischengespeichert werden kann.
 
-<!-- TODO: Verify note type! -->
 Note: Wenn Sie eine Webansicht zum Abrufen und Anzeigen von Webinhalten in Ihrer Anwendung nutzen, ist es eventuell nötig, zusätzliche Konfigurationsmerker vorzusehen, damit der HTTP-Cachespeicher aktiviert, seine Größe an Ihren Anwendungsfall angepasst und seine Persistenz abgesichert wird. Überprüfen Sie Ihre Einstellungen anhand der Plattformdokumentation!
 
 <img src="images/http-request.png" class="center" alt="HTTP-Anfrage">
@@ -30,7 +26,7 @@ Wenn der Server eine Antwort zurücksendet, übermittelt er auch eine Sammlung v
 
 ## TL;DR {: .hide-from-toc }
 - Ein Validierungstoken wird vom Server über den ETag-HTTP-Header übertragen.
-- 'Ein Validierungstoken ermöglicht effiziente Aktualisierungsprüfungen von Ressourcen. Es werden keine Daten übertragen, wenn sich die Ressource nicht geändert hat.'
+- Ein Validierungstoken ermöglicht effiziente Aktualisierungsprüfungen von Ressourcen. Es werden keine Daten übertragen, wenn sich die Ressource nicht geändert hat.
 
 
 Nehmen wir an, dass seit unserem ursprünglichen Abruf 120 Sekunden verstrichen sind und der Browser eine neue Anfrage für dieselbe Ressource eingeleitet hat. Zunächst überprüft der Browser den lokalen Cachespeicher und findet dort die vorherige Antwort. Allerdings kann er diese leider nicht verwenden, da sie mittlerweile `abgelaufen` ist. Zu diesem Zeitpunkt könnte einfach eine neue Anfrage gesendet und die neue vollständige Antwort abgerufen werden, aber das wäre ineffizient, weil sich die Ressource nicht geändert hat und kein Grund vorliegt, genau dieselben Bytes erneut herunterzuladen, die sich bereits im Cachespeicher befinden!
@@ -43,7 +39,6 @@ Im obigen Beispiel überträgt der Client das ETag-Token automatisch im HTTP-Anf
 
 Wie profitieren Sie als Webentwickler von einer effizienten Revalidierung? Der Browser nimmt uns alle Arbeit ab: Er erkennt automatisch, ob zuvor ein Validierungstoken spezifiziert wurde, er hängt es an eine ausgehende Anfrage an und er aktualisiert ggf. die Cache-Zeitstempel auf Basis der empfangenen Antwort vom Server. **Wir haben nur noch sicherzustellen, dass der Server tatsächlich die notwendigen ETag-Token bereitstellt. Schlagen Sie die benötigten Konfigurationsmerker in der Serverdokumentation nach.**
 
-<!-- TODO: Verify note type! -->
 Note: Tipp: Das Projekt `HTML5 Boilerplate` enthält <a href='https://github.com/h5bp/server-configs'>Beispiel-Konfigurationsdateien</a> für alle populären Server mit detaillierten Kommentaren zu jedem Konfigurationsmerker und jeder Einstellung. Navigieren Sie in der Liste zu Ihrem bevorzugten Server, sehen Sie sich die passenden Einstellungen an und kopieren bzw. überprüfen Sie diese, um sicherzugehen, dass Ihr Server mit den empfohlenen Einstellungen konfiguriert ist.
 
 
@@ -51,12 +46,12 @@ Note: Tipp: Das Projekt `HTML5 Boilerplate` enthält <a href='https://github.com
 
 ## TL;DR {: .hide-from-toc }
 - Für jede Ressource können die Caching-Richtlinien per Cache-Control-HTTP-Header definiert werden.
-- 'Mit Cache-Control-Anweisungen wird geregelt, wer die Antwort im Cachespeicher ablegen kann, unter welchen Bedingungen und über welchen Zeitraum.'
+- Mit Cache-Control-Anweisungen wird geregelt, wer die Antwort im Cachespeicher ablegen kann, unter welchen Bedingungen und über welchen Zeitraum.
 
 
 Die beste Anfrage ist eine Anfrage, für die keine Kommunikation mit dem Server erforderlich ist. Eine lokale Kopie der Antwort ermöglicht es uns, sämtliche Netzwerklatenz zu eliminieren und Gebühren für die Datenübertragung zu vermeiden. Zu diesem Zweck gestattet die HTTP-Spezifikation dem Server, eine [Anzahl unterschiedlicher Cache-Control-Anweisungen](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) zurückzusenden, die regeln, wie und für wie lange eine einzelne Antwort vom Browser und anderen dazwischen geschalteten Cachespeichern zwischengespeichert werden kann.
 
-<!-- TODO: Verify note type! -->
+
 Note: Der Cache-Control-Header wurde im Rahmen der HTTP/1.1-Spezifikation definiert und ersetzt bisherige Header, z. B. Expires, die zur Festlegung von Caching-Richtlinien für Antworten verwendet wurden. Alle modernen Browser unterstützen Cache-Control, deshalb reicht dies aus.
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="Beispiel für HTTP-Cache-Control">
@@ -113,8 +108,8 @@ Laut HTTP Archive können bei den 300.000 beliebtesten Websites (Alexa-Rangliste
 ## Zwischengespeicherte Antworten annullieren und aktualisieren
 
 ## TL;DR {: .hide-from-toc }
-- 'Die Antworten im lokalen Cachespeicher werden so lange verwendet, bis die Ressource `abgelaufen` ist.'
-- 'Die Einbettung eines Fingerabdrucks des Dateiinhalts in die URL ermöglicht es, den Client zur einer Aktualisierung auf eine neue Version der Antwort zu zwingen.'
+- Die Antworten im lokalen Cachespeicher werden so lange verwendet, bis die Ressource `abgelaufen` ist.
+- Die Einbettung eines Fingerabdrucks des Dateiinhalts in die URL ermöglicht es, den Client zur einer Aktualisierung auf eine neue Version der Antwort zu zwingen.
 - In jeder Anwendung muss eine eigene Cachehierarchie für die optimale Leistung festgelegt werden.
 
 

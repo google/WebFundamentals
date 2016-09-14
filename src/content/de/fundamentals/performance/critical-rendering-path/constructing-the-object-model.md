@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Bevor der Browser Inhalte auf dem Bildschirm darstellen kann, müssen die DOM- und CSSOM-Baumstrukturen erstellt werden. Deshalb sind sowohl die HTML- als auch die CSS-Elemente dem Browser unverzüglich zur Verfügung zu stellen.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -16,16 +15,17 @@ Bevor der Browser die Seite darstellen kann, müssen die DOM- und CSSOM-Baumstru
 
 
 ## TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
+- Bytes → Zeichen → Token → Knoten → Objektmodell
+- Das HTML-Markup wird in ein Document Object Model (DOM), das CSS-Markup in ein CSS Object Model (CSSOM) umgewandelt.
+- DOM und CSSOM sind unabhängige Datenstrukturen.
+- Chrome DevTools Timeline ermöglicht die Erfassung und Kontrolle der Erstellungs- und Verarbeitungskosten von DOM und CSSOM.
 
 
 ## Document Object Model (DOM)
 
-{% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Beginnen wir mit dem einfachsten Fall: eine reine HTML-Seite mit Text und einem Bild. Was benötigt der Browser, um diese einfache Seite zu verarbeiten?
@@ -45,7 +45,7 @@ Jedes Mal, wenn der Browser HTML-Markup verarbeiten muss, sind alle obigen Schri
 
 <img src="images/dom-timeline.png" class="center" alt="DOM-Erstellung in DevTools verfolgen">
 
-<!-- TODO: Verify note type! -->
+
 Note: Wir gehen davon aus, dass Sie mit den Chrome DevTools grundlegend vertraut sind, d. h., Sie wissen, wie eine Netzwerkkaskade erfasst oder eine Zeitleiste aufgezeichnet wird. Wenn Sie eine Auffrischung benötigen, lesen Sie die <a href='https://developer.chrome.com/devtools'>Chrome DevTools-Dokumentation</a>. Sollten Sie sich erstmalig mit DevTools befassen, empfehlen wir den Codeschool-Kurs <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> (DevTools entdecken).
 
 Wenn Sie Chrome DevTools öffnen und eine Zeitleiste aufzeichnen, während eine Seite geladen wird, können Sie die Zeit sehen, die für die Durchführung dieses Schritts benötigt wird. Im obigen Beispiel dauerte es circa 5 ms, um eine Anzahl von HTML-Bytes in eine DOM-Baumstruktur umzuwandeln. Wenn die Seite größer ist, was in der Regel zutrifft, kann dieser Vorgang erheblich länger dauern. In den nächsten Abschnitten über die Erstellung flüssiger Animationen werden Sie feststellen, wie leicht die Verarbeitung großer HTML-Mengen durch den Browser zu Engpässen führen kann.
@@ -57,7 +57,7 @@ Verfügen wir nach Fertigstellung der DOM-Baumstruktur über genügend Informati
 Bei der Erstellung des DOM unserer einfachen Seite im Browser wurde ein Link-Tag im Kopfteil des Dokuments festgestellt, das auf ein externes CSS-Stylesheet verwies: style.css. In der Annahme, dass diese Ressource zur Darstellung der Seite benötigt wird, wurde diese Ressource umgehend angefordert und mit dem folgenden Inhalt zurückgesendet:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Natürlich hätten wir unsere Styles direkt im HTML-Markup (inline) deklarieren können, aber wenn unser CSS unabhängig von HTML bleibt, ist es möglich, die Inhalte und das Layout getrennt zu behandeln und die Grafiker können am CSS arbeiten, die Entwickler sich auf HTML konzentrieren und so weiter.

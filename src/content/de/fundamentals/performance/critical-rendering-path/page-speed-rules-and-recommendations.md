@@ -2,14 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: PageSpeed Insights-Regeln im Kontext: worauf bei der Optimierung des kritischen Rendering-Pfads zu achten ist und warum
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
 # PageSpeed-Regeln und Empfehlungen {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
 
 
 PageSpeed Insights-Regeln im Kontext: worauf bei der Optimierung des kritischen Rendering-Pfads zu achten ist und warum
@@ -40,7 +38,7 @@ CSS wird für die Erstellung der Rendering-Baumstruktur benötigt und JavaScript
 
 ### **CSS in den Dokumentenkopf einfügen**
 
-Sämtliche CSS-Ressourcen sollten innerhalb des HTML-Dokuments so bald wie möglich spezifiziert werden, damit der Browser die <link>-Tags möglichst frühzeitig erkennen und die CSS-Anforderung ausgeben kann.
+Sämtliche CSS-Ressourcen sollten innerhalb des HTML-Dokuments so bald wie möglich spezifiziert werden, damit der Browser die `<link>`-Tags möglichst frühzeitig erkennen und die CSS-Anforderung ausgeben kann.
 
 ### **CSS-Importe vermeiden**
 

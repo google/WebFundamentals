@@ -1,16 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Bilder stellen oftmals den größten Teil der heruntergeladenen Bytes auf einer Webseite dar und belegen zudem einen erheblichen Teil des sichtbaren Bereichs. Deshalb lassen sich mit der Optimierung von Bildern häufig die größten Bytemengen einsparen und die bedeutendsten Leistungsverbesserungen für eine Website erzielen. Je weniger Bytes der Browser herunterladen muss, desto weniger umkämpft ist die Bandbreite des Clients und desto schneller kann der Browser nützliche Inhalte herunterladen und auf dem Bildschirm darstellen.
+description: Bilder stellen oftmals den größten Teil der heruntergeladenen Bytes auf einer Webseite dar und belegen zudem einen erheblichen Teil des sichtbaren Bereichs. Deshalb lassen sich mit der Optimierung von Bildern häufig die größten Bytemengen einsparen und die bedeutendsten Leistungsverbesserungen für eine Website erzielen. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Bildoptimierung {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
 
 Bilder stellen oftmals den größten Teil der heruntergeladenen Bytes auf einer Webseite dar und belegen zudem einen erheblichen Teil des sichtbaren Bereichs. Deshalb lassen sich mit der Optimierung von Bildern häufig die größten Bytemengen einsparen und die bedeutendsten Leistungsverbesserungen für eine Website erzielen. Je weniger Bytes der Browser herunterladen muss, desto weniger umkämpft ist die Bandbreite des Clients und desto schneller kann der Browser nützliche Inhalte herunterladen und auf dem Bildschirm darstellen.
 
@@ -23,7 +20,7 @@ Die Bildoptimierung hat sowohl einen künstlerischen als auch einen wissenschaft
 ## TL;DR {: .hide-from-toc }
 - Eliminieren Sie unnötige Bildressourcen.
 - Nutzen Sie wo immer möglich CSS3-Effekte.
-- 'Verwenden Sie Webschriftarten, anstatt Text in Bildern zu codieren.'
+- Verwenden Sie Webschriftarten, anstatt Text in Bildern zu codieren.
 
 
 Als Erstes sollten Sie sich fragen, ob ein Bild tatsächlich benötigt wird, um die gewünschte Wirkung zu erzielen. Eine gute Gestaltung ist immer einfach und liefert darüber hinaus die beste Leistung. Wenn es möglich ist, eine Bildressource zu entfernen, die häufig eine große Zahl von Bytes im Zusammenhang mit HTML-, CSS-, JavaScript- und anderen Elementen auf der Seite erfordert, stellt dies stets die beste Optimierungsstrategie dar. Andererseits kann ein gut platziertes Bild auch mehr Informationen vermitteln als tausend Wörter - es ist Ihre Aufgabe, hier abzuwägen.
@@ -39,26 +36,24 @@ Fall Sie sich dabei ertappen, dass Sie Text in einem Bildobjekt codieren, halten
 ## Vektor- und Rastergrafiken im Vergleich
 
 ## TL;DR {: .hide-from-toc }
-- 'Vektorgrafiken eignen sich ideal für Bilder, die aus geometrischen Formen bestehen.'
+- Vektorgrafiken eignen sich ideal für Bilder, die aus geometrischen Formen bestehen.
 - Vektorgrafiken sind unabhängig von Zoomfaktor und Auflösung.
 - Für komplexe Darstellungen mit vielen unregelmäßigen Formen und Details sollten Rastergrafiken verwendet werden.
 
 
 Wenn Sie festgestellt haben, dass Sie die gewünschte Wirkung am besten mit einem Bild erzielen, besteht der nächste Schritt in der Auswahl des passenden Formats:
 
-&nbsp;
+<figure class="attempt-left">
+  <img class="center" src="images/vector-zoom.png" alt="Vergrößerte Vektorgrafik">
+  <figcaption>Vektor</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/raster-zoom.png" alt="Vergrößerte Rastergrafik">
+  <figcaption>Raster</figcaption>
+</figure>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Vektor</b>
-    <img class="center" src="images/vector-zoom.png" alt="Vergrößerte Vektorgrafik">
-  </div>
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Raster</b>
-    <img src="images/raster-zoom.png" alt="Vergrößerte Rastergrafik">
-  </div>
-</div>
 
 * [Vektorgrafiken](http://de.wikipedia.org/wiki/Vektorgrafik) nutzen Linien, Punkte und Vielecke zur Darstellung eines Bildes.
 * [Rastergrafiken](http://de.wikipedia.org/wiki/Rastergrafik) codieren die einzelnen Werte eines jeden Pixels innerhalb eines rechteckigen Rasters zur Darstellung eines Bildes.
@@ -162,9 +157,7 @@ Intern ordnet der Browser jedem Kanal 256 Werte (Schattierungen) zu, was umgerec
 * 10.000 Pixel x 4 Bytes = 40.000 Bytes
 * 40.000 Bytes / 1024 = 39 KB
 
-^
 
-<!-- TODO: Verify note type! -->
 Note: Übrigens belegt jedes Pixel stets 4 Bytes im Speicher - unabhängig vom Bildformat, das zur Übertragung der Daten vom Server zum Client verwendet wird, wenn das Bild vom Browser decodiert wird. Das kann bei großen Bildern und Geräten, die über keinen großen Speicher verfügen, z. B. einfachen Mobilgeräten, eine bedeutende Einschränkung darstellen.
 
 <table>
@@ -210,7 +203,6 @@ Eine einfache Strategie bestünde darin, die `Bittiefe` des Bildes von 8 Bits pr
 
 <img src="images/artifacts.png" class="center" alt="Komprimierungsartefakte">
 
-<!-- TODO: Verify note type! -->
 Note: Von links nach rechts (PNG): 32-Bit (16 Mio. Farben), 7-Bit (128 Farben), 5-Bit (32 Farben). Komplexe Darstellungen mit graduellen Farbverläufen (Gradienten, Himmel usw.) erfordern größere Farbpaletten zur Vermeidung von visuellen Artefakten wie dem verpixelten Himmel im 5-Bit-Objekt. Wenn im Bild andererseits nur wenige Farben verwendet werden, dann werden mit einer großen Palette nur wertvolle Bits verschwendet!
 
 Nachdem wir die in einzelnen Pixeln gespeicherten Daten jetzt optimiert haben, können wir uns als Nächstes auch mit den angrenzenden Pixeln befassen. Dabei stellt sich heraus, dass viele Bilder, insbesondere Fotos, zahlreiche angrenzende Pixel mit ähnlichen Farben aufweisen, z. B. den Himmel, sich wiederholende Texturen und so weiter. Diese Informationen können wir nutzen, indem wir das Komprimierungsprogramm anweisen, die `[Deltacodierung](http://en.wikipedia.org/wiki/Delta_encoding)` anzuwenden, bei der anstelle der Speicherung der einzelnen Werte für jedes Pixel der Unterschied zwischen angrenzenden Pixeln gespeichert wird.  Wenn die benachbarten Pixel identisch sind, beträgt der Deltawert null und es muss nur ein einzelnes Bit gespeichert werden! Doch warum sollten wir uns damit zufrieden geben...
@@ -248,15 +240,14 @@ Welches ist nun die `optimale` Konfiguration bezüglich der verlustbehafteten un
 
 Bei Verwendung eines verlustbehafteten Formats wie JPEG steht im Komprimierungsprogramm im Regelfall eine anpassbare `Qualitätseinstellung` zur Verfügung, z. B. in Form eines Schiebereglers der Funktion `Save for Web` (Für das Web speichern) in Adobe Photoshop. Dabei handelt es sich typischerweise um eine Zahl von 1 bis 100, mit der die interne Funktionalität der jeweiligen Zusammenstellung von verlustbehafteten und verlustfreien Algorithmen gesteuert wird. Experimentieren Sie mit verschiedenen Qualitätseinstellungen für Ihre Bilder und schrecken Sie nicht davor zurück, die Qualität herabzusetzen: Die visuellen Resultate sind oftmals sehr gut und die Verringerung der Dateigröße kann erheblich sein.
 
-<!-- TODO: Verify note type! -->
 Note: Beachten Sie, dass Qualitätsstufen für unterschiedliche Bildformate aufgrund der verschiedenen Algorithmen zur Codierung der Bilder nicht direkt vergleichbar sind: JPEG mit Qualitätsstufe 90 unterscheidet sich erheblich von WebP mit Qualitätsstufe 90. Tatsächlich kann auch eine Qualitätsstufe für dasselbe Bildformat aufgrund der Implementierung des Komprimierungsprogramms zu einem visuell unterschiedlichen Ergebnis führen!
 
 
 ## Das richtige Bildformat auswählen
 
 ## TL;DR {: .hide-from-toc }
-- 'Beginnen Sie mit der Auswahl des richtigen universellen Formats: GIF, PNG, JPEG.'
-- 'Experimentieren Sie und wählen Sie dann die besten Einstellungen für die einzelnen Formate aus: Qualität, Palettengröße usw.'
+- Beginnen Sie mit der Auswahl des richtigen universellen Formats: GIF, PNG, JPEG.
+- Experimentieren Sie und wählen Sie dann die besten Einstellungen für die einzelnen Formate aus: Qualität, Palettengröße usw.
 - Erwägen Sie das Hinzufügen von WebP- und JPEG XR-Ressourcen für skalierte Bilder auf modernen Clients
 
 
@@ -369,7 +360,7 @@ Schrecken Sie nicht davor zurück, mit den Parametern der einzelnen Komprimierun
 
 ## TL;DR {: .hide-from-toc }
 - Die Bereitstellung skalierter Bilder stellt eine der einfachsten und effektivsten Optimierungsmethoden dar.
-- 'Achten Sie auf große Objekte, weil diese hohe Unkosten verursachen.'
+- Achten Sie auf große Objekte, weil diese hohe Unkosten verursachen.
 - Reduzieren Sie die Anzahl unnötiger Pixel über die Skalierung Ihrer Bilder auf Darstellungsgröße.
 
 
@@ -379,7 +370,6 @@ Aus diesem Grund besteht eine der einfachsten und effektivsten Bildoptimierungsm
 
 <img src="images/resized-image.png" class="center" alt="Bild mit geänderter Größe">
 
-<!-- TODO: Verify note type! -->
 Note: Wenn die Maus über das Bildelement in Chrome DevTools bewegt wird, werden die `originale` und die `dargestellte` Größe des Bildobjekts eingeblendet. Im obigen Beispiel wird das Bild mit 300 x 260 Pixeln heruntergeladen, aber für die Anzeige auf dem Client auf 245 x 212 herunterskaliert.
 
 Die Übertragung unnötiger Pixel, die der Browser unseretwegen umskalieren muss, stellt eine verpasste Chance dar, die Gesamtzahl der Bytes zu reduzieren und zu optimieren, die für das Rendern der Seite erforderlich sind. Beachten Sie außerdem, dass bei einer Verkleinerung nicht nur die Pixelzahl des Bildes verringert wird, sondern dass dabei auch die ursprüngliche Bildgröße herabgesetzt wird.

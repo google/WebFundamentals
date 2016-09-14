@@ -2,15 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Nach der Entfernung aller unnötigen Ressourcen besteht der nächste Schritt in der Minimierung der Gesamtgröße der verbleibenden Ressourcen, die der Browser herunterladen muss, d. h. in deren Komprimierung über die Anwendung inhaltstypspezifischer und allgemeiner Komprimierungsalgorithmen (GZip).
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Codierung und Übertragungsgröße textbasierter Ressourcen optimieren {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
 
 Die Webanwendungen werden immer umfangreicher, ehrgeiziger und funktionsreicher - das ist eine gute Sache. Allerdings bewirkt die ungebremste Entwicklung hin zu einem üppigerem Web einen weiteren Trend: die Datenmengen, die von den einzelnen Anwendungen heruntergeladen werden, nehmen kontinuierlich zu. Im Sinne einer hohen Leistungsfähigkeit muss die Bereitstellung eines jeden Datenbytes optimiert werden!
 
@@ -25,7 +22,7 @@ Für die bestmögliche Leistung ist eine Kombination all dieser Verfahren erford
 - Komprimierung bezeichnet die Codierung von Informationen unter Verwendung von weniger Bits.
 - Mit der Entfernung unnötiger Daten werden stets die besten Resultate erzielt.
 - Es gibt viele verschiedene Komprimierungsmethoden und -algorithmen.
-- 'Sie benötigen eine Auswahl an Techniken, um die beste Komprimierung zu erreichen.'
+- Sie benötigen eine Auswahl an Techniken, um die beste Komprimierung zu erreichen.
 
 
 Die Reduzierung der Datenmenge wird als `Datenkomprimierung` bezeichnet und stellt einen eigenen Forschungsbereich dar: Viele Menschen verbrachten ihre komplette Berufslaufbahn mit der Arbeit an Algorithmen, Verfahren und Optimierungen zur Verbesserung des Komprimierungsverhältnisses, der Geschwindigkeit und der Speicheranforderungen diverser Komprimierungsprogramme. Im Rahmen dieser Ausführungen kann dieses Thema selbstverständlich nicht erschöpfend behandelt werden, aber ein grundsätzliches Verständnis der Funktionsweise von Komprimierungen und der verfügbaren Methoden zur Reduzierung der Größe der verschiedenen Ressourcen, die von unseren Seiten benötigt werden, ist dennoch wichtig.
@@ -71,7 +68,7 @@ Sie werden sich fragen: Das ist ja alles prima, aber wie hilft es uns dabei, uns
 Die beste Vorgehensweise bei der Komprimierung redundanter und unnötiger Daten besteht darin, diese ganz zu entfernen. Natürlich können wir nicht einfach willkürlich Daten löschen, aber in manchen Szenarien, wo wir über inhaltsspezifische Kenntnisse des Datenformats und dessen Eigenschaften verfügen, ist es häufig möglich, die Menge der Nutzdaten ohne Auswirkung auf den Sinn erheblich zu reduzieren.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Betrachten Sie die einfache HTML-Seite oben und ihre drei unterschiedlichen Inhaltstypen: HTML-Markup, CSS-Styles und JavaScript. Für jeden dieser Inhaltstypen gibt es unterschiedliche Regeln darüber, welches Markup, welche Styles bzw. welche Inhalte zulässig sind, wie Kommentare zu kennzeichnen sind und so weiter. Wie können wir die Größe dieser Seite verringern?
@@ -80,7 +77,7 @@ Betrachten Sie die einfache HTML-Seite oben und ihre drei unterschiedlichen Inha
 * Ein `intelligentes` CSS-Komprimierungsprogramm könnte feststellen, dass wir die Regeln für `.awesome-container` ineffizient verwenden und es könnte die beiden Deklarationen ohne Auswirkung auf andere Styles zu einer zusammenfassen. Auf diese Weise ließen sich noch mehr Bytes einsparen.
 * Leerraum (Leerzeichen und Tabulatoren) ist nur bei der Entwicklung von HTML-, CSS- und JavaScript-Code hilfreich. Mit einem zusätzlichen Komprimierungsprogramm können alle diese Tabulatoren und Leerzeichen entfernt werden.
 
-^
+
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
@@ -89,7 +86,6 @@ Mit der Anwendung der obigen Schritte können wir unsere Seite von 406 auf 150 Z
 
 Wenn wir einen Schritt zurückgehen, zeigt das obige Beispiel einen wichtigen Punkt auf: Ein Allzweck-Komprimierungsprogramm, z. B. eines für die Komprimierung von beliebigem Text, könnte die obige Seite wahrscheinlich recht gut komprimieren, aber es wäre damit niemals möglich, Kommentare zu entfernen, die CSS-Regeln zusammenzufassen oder Dutzende andere inhaltsspezifischer Optimierungen durchzuführen. Aus diesem Grund ist die Kombination aus Vorverabeitung, Minimierung und kontextspezifischer Optimierung so leistungsstark.
 
-<!-- TODO: Verify note type! -->
 Note: Fallbeispiel: Die unkomprimierte Entwicklungsversion der JQuery-Bibliothek nähert sich mittlerweile der Größe von 300 KB an. Dieselbe Bibliothek in minimierter Form, d. h. ohne Kommentare usw., ist ungefähr 3 mal kleiner: ca. 100 KB.
 
 Auf ähnliche Weise können die obigen Verfahren über rein textbasierte Ressourcen hinaus angewendet werden. Bilder, Videos und andere Inhaltstypen beinhalten alle eigene Arten von Metadaten und verschiedene Nutzdaten. Wenn Sie zum Beispiel ein Bild mit einer Kamera aufnehmen, enthält das Foto üblicherweise eine Menge zusätzlicher Informationen: Kameraeinstellungen, Ort und so weiter. Je nach Anwendung können diese Daten kritisch, z. B. bei einer Foto-Sharing-Website, oder komplett nutzlos sein und Sie sollten die Entfernung in Betracht ziehen. In der Praxis können diese Metadaten bei jedem Bild eine zweistellige Zahl an Kilobytes ausmachen!
@@ -99,7 +95,7 @@ Kurze Zusammenfassung: Machen Sie als ersten Schritt bei der Optimierung der Eff
 ## Textkomprimierung mit GZIP
 
 ## TL;DR {: .hide-from-toc }
-- 'GZIP ist am leistungsstärksten bei textbasierten Ressourcen: CSS, JavaScript, HTML.'
+- GZIP ist am leistungsstärksten bei textbasierten Ressourcen: CSS, JavaScript, HTML.
 - Alle modernen Browser unterstützen die GZIP-Komprimierung und fordern sie automatisch an.
 - Ihr Server muss für die Aktivierung der GZIP-Komprimierung konfiguriert sein.
 - Bei manchen CDNs sind besondere Maßnahmen für die Aktivierung von GZIP erforderlich.
@@ -184,7 +180,6 @@ Welches ist die beste Konfiguration für Ihren Server? Das Projekt `HTML5 Boiler
 
 Eine schnelle und einfache Möglichkeit, GZIP in Aktion zu erleben, besteht darin, die Chrome DevTools zu öffnen und sich die Spalte `Size/Content` (Größe/Inhalt) im Netzwerk-Steuerfeld anzusehen: `Size` gibt die Übertragungsgröße der Ressource an und `Content` die unkomprimierte Größe der Ressource. Bei der HTML-Ressource im obigen Beispiel wurden mit GZIP während der Übertragung 24,8 KB eingespart!
 
-<!-- TODO: Verify note type! -->
 Note: Es gibt in der Tat Fälle, in denen GZIP eine Ressource vergrößern kann. Dies tritt typischerweise dann ein, wenn die Ressource sehr klein ist und die Daten des GZIP-Wörterbuchs die Einsparungen durch die Komprimierung übertreffen bzw. wenn die Ressource bereits gut komprimiert ist. Manche Server gestatten die Vorgabe einer Mindestdateigröße zur Vermeidung dieses Problems.
 
 Schließlich noch ein Hinweis: Während die meisten Server die Ressourcen im Zuge der Bereitstellung für den Nutzer automatisch komprimieren, erfordern einige CDNs einen zusätzlichen Konfigurationsaufwand, um sicherzustellen, dass GZIP wieeingestellt aktiv wird. Überprüfen Sie Ihre Website, um sicherzustellen, dass Ihre Ressourcen tatsächlich [komprimiert werden](http://www.whatsmyip.org/http-compression-test/)!

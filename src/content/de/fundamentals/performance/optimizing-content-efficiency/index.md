@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Die Menge der Daten, die von den einzelnen Anwendungen heruntergeladen wird, steigt beständig an. Im Sinne einer hohen Leistungsfähigkeit muss die Bereitstellung eines jeden Bytes optimiert werden!
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

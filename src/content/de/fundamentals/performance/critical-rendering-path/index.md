@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Den kritischen Rendering-Pfad über die Priorisierung der Anzeige von Inhalten optimieren, die sich auf die primäre Aktion beziehen, die der Nutzer auf einer Seite durchführen möchte
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -23,7 +22,6 @@ Die Leistungsoptimierung setzt das Verstehen der Vorgänge zwischen dem Empfang 
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

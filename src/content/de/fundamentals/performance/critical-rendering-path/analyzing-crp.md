@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Zur Erkennung und Behebung von Leistungsengpässen beim kritischen Rendering-Pfad müssen Sie die häufigen Probleme kennen. Bei unserer interaktiven Tour picken wir häufige Leistungsmuster heraus, die Ihnen bei der Optimierung Ihrer Seiten helfen.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -26,7 +25,7 @@ Noch eine letzte Anmerkung, bevor es losgeht: Bisher haben wir ausschließlich d
 ## Das `Hallo Welt`-Erlebnis
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Wir beginnen ganz unkompliziert mit grundlegendem HTML-Markup und einem einzelnen Bild - ohne CSS oder JavaScript. Nun öffnen wir unsere Netzwerkzeitachse in den Chrome-Entwicklertools und sehen uns den daraus resultierenden Ressourcenwasserfall an:
@@ -47,7 +46,7 @@ Das Ladeereignis - auch bekannt als `onload` - für das Bild wird blockiert: Lau
 Unsere `'Hallo Welt'-Erlebnis`-Seite sieht zwar auf den ersten Blick einfach aus, es steckt jedoch eine Menge dahinter! In der Praxis benötigen wir mehr als nur HTML: Wahrscheinlich haben wir ein CSS-Stylesheet und ein oder mehrere Skripts, um unsere Seite interaktiver zu gestalten. Fügen wir beides hinzu und sehen, was passiert:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _Vor dem Hinzufügen von JavaScript und CSS:_
@@ -80,7 +79,7 @@ Trotz einer Anforderung weniger sind die Zeiten für `onload` und `domContentLoa
 Zunächst rufen wir uns noch einmal ins Gedächtnis, dass alle Inline-Skripts den Parser blockieren, wir für externe Skripts die Blockierung des Parsers durch Hinzufügen des Schlüsselworts `async` jedoch verhindern können. Machen wir das Inlining also rückgängig und versuchen es:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _Externes JavaScript mit Parser-Blockierung:_
@@ -96,7 +95,7 @@ Viel besser! Das domContentLoaded-Ereignis wird unmittelbar nach Parsen der HTML
 Alternativ hätten wir einen anderen Ansatz versuchen und CSS und JavaScript inline bereitstellen können:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, Inline-CSS, Inline-JS" class="center">
@@ -113,7 +112,7 @@ Lassen Sie uns vor diesem Hintergrund einen Schritt zurückgehen und versuchen, 
 Die einfachste Seite besteht lediglich aus dem HTML-Markup: weder CSS noch JavaScript oder andere Arten von Ressourcen. Zum Rendern dieser Seite muss der Browser die Anforderung initiieren, auf das Eintreffen de HTML-Dokuments warten, es parsen, das DOM erstellen und es schließlich auf dem Bildschirm rendern:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt=""Hallo Welt" - kritischer Rendering-Pfad" class="center">
@@ -123,7 +122,7 @@ Die einfachste Seite besteht lediglich aus dem HTML-Markup: weder CSS noch JavaS
 Sehen wir uns einmal die gleiche Seite mit einer externen CSS-Datei an:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM - kritischer Rendering-Pfad" class="center">
@@ -150,7 +149,7 @@ Wir benötigen HTML und CSS, um die Renderstruktur zu erstellen, daher sind beid
 Nun bringen wir noch eine zusätzliche JavaScript-Datei ins Spiel!
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Wir haben `app.js` hinzugefügt, eine externe JavaScript-Ressource auf der Seite, und wie wir jetzt wissen, handelt es sich hierbei um eine Ressource, die den Parser blockiert, also eine kritische Ressource. Schlimmer noch: Zum Ausführen der JavaScript-Datei müssen wir auch das CSSOM blockieren und darauf warten. Noch einmal zur Erinnerung: JavaScript kann das CSSOM abfragen, wodurch der Browser solange pausiert, bis `style.css` heruntergeladen und das CSSOM erstellt wurde.
@@ -168,7 +167,7 @@ Nun haben wir drei kritische Ressourcen und insgesamt 11 KB kritische Bytes, wä
 Bei einem Gespräch mit unseren Website-Entwicklern haben wir herausgefunden, dass der JavaScript-Inhalt, den wir auf unserer Seite eingefügt haben, keine Blockierungsfunktion übernehmen muss: Der darin befindliche Analyse- und sonstige Code erfordert keine Blockierung des Renderings unserer Seite. Vor diesem Hintergrund können wir dem Skript-Tag das Attribut `async` hinzufügen, um die Blockierung des Parsers aufzuheben:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="DOM, CSSOM, asynchrones JavaScript - kritischer Rendering-Pfad" class="center">
@@ -184,7 +183,7 @@ Infolgedessen ist unsere optimierte Seite wieder bei zwei kritischen Ressourcen 
 Nehmen wir zuletzt an, das CSS-Stylesheet wurde nur zum Drucken benötigt. Wie würde das aussehen?
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, CSS ohne Blockierungsfunktion, asynchrones JavaScript - kritischer Rendering-Pfad" class="center">
