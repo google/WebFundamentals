@@ -49,6 +49,9 @@ function testMarkdownFile(fileName) {
     } else if (description.length > MAX_DESCRIPTION_LENGTH) {
       errors.push({msg: 'description exceeds maximum length', param: description.length});
     }
+    if (description.indexOf('<') >= 0 || description.indexOf('`') >= 0) {
+      warnings.push({msg: 'description should not contain HTML tags', param: description});
+    }
   }
   // Check if it has review required
   if (GLOBAL.WF.options.skipReviewRequired === false) {
@@ -71,6 +74,17 @@ function testMarkdownFile(fileName) {
         warnings.push({msg: 'Uncommon tag found', param: tag.trim()});
       }
     });
+  }
+  // Verify page has a title
+  var title = fileContent.match(/^# (.*) {: .page-title }/m);
+  if (title) {
+    if (title.length > 2) {
+      errors.push({msg: 'Page has multiple title tags', param: title.join(',')});
+    } else if (title[1].indexOf('<') >= 0 || title[1].indexOf('`') >= 0) {
+      errors.push({msg: 'Title should not contain HTML', param: title[1]});
+    }
+  } else {
+    errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title}'});
   }
   // Look for bad strings
   WARNING_STRINGS.forEach(function(str) {
