@@ -2,6 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Your job doesn't end with ensuring your site runs great across Chrome and Android. Even though Device Mode can simulate a range of other devices like iPhones, we encourage you to check out other browsers solutions for emulation.
 
+{# wf_review_required #}
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2015-04-13 #}
 
@@ -45,57 +46,50 @@ Device simulators and emulators simulate not just the browser environment but th
 
 ### Android Emulator
 
-<div class="mdl-grid">
- <div class="mdl-cell mdl-cell--8-col">
-  <p>At the moment, there is no way to install Chrome on an Android emulator. However, you can use the Android Browser, the Chromium Content Shell and Firefox for Android which we'll cover later in this guide. Chromium Content Shell uses the same Chrome rendering engine, but comes without any of the browser specific features.</p>
+<figure class="attempt-right">
+  <img src="imgs/android-emulator-stock-browser.png" alt="Android Emulator Stock Browser">
+  <figcaption>Stock Browser in Android Emulator</figcaption>
+</figure>
 
-  <p>The Android emulator comes with the Android SDK which you need to <a href="http://developer.android.com/sdk/installing/studio.html">download from
-here</a>. Then follow the instructions to <a href="http://developer.android.com/tools/devices/managing-avds.html">setup a virtual device</a> and <a href="http://developer.android.com/tools/devices/emulator.html">start the emulator</a>.</p>
+At the moment, there is no way to install Chrome on an Android emulator. However, you can use the Android Browser, the Chromium Content Shell and Firefox for Android which we'll cover later in this guide. Chromium Content Shell uses the same Chrome rendering engine, but comes without any of the browser specific features.
 
-  <p>Once your emulator is booted, click on the Browser icon and you'll be able to test your site on the old Stock Browser for Android.</p>
- </div>
- <figure class="mdl-cell mdl-cell--4-col">
-   <img src="imgs/android-emulator-stock-browser.png" alt="Android Emulator Stock Browser">
-   <figcaption>Stock Browser in Android Emulator</figcaption>
- </figure>
-</div>
+The Android emulator comes with the Android SDK which you need to <a href="http://developer.android.com/sdk/installing/studio.html">download from
+here</a>. Then follow the instructions to <a href="http://developer.android.com/tools/devices/managing-avds.html">setup a virtual device</a> and <a href="http://developer.android.com/tools/devices/emulator.html">start the emulator</a>.
+
+Once your emulator is booted, click on the Browser icon and you'll be able to test your site on the old Stock Browser for Android.
 
 #### Chromium Content Shell on Android
 
-<div class="mdl-grid">
- <div class="mdl-cell mdl-cell--8-col">
-  <p>To install the Chromium Content Shell for Android, leave your emulator running
-and run the following commands at a command prompt:</p>
+<figure class="attempt-right">
+  <img src="imgs/android-avd-contentshell.png" alt="Android Emulator Content Shell">
+  <figcaption>Android Emulator Content Shell</figcaption>
+</figure>
 
-  <pre>git clone https://github.com/PaulKinlan/chromium-android-installer.git
+To install the Chromium Content Shell for Android, leave your emulator running
+and run the following commands at a command prompt:
+
+    git clone https://github.com/PaulKinlan/chromium-android-installer.git
     chmod u+x ./chromium-android-installer/\*.sh
-    ./chromium-android-installer/install-chromeandroid.sh</pre>
+    ./chromium-android-installer/install-chromeandroid.sh
 
-  <p>Now you can test your site with the Chromium Content Shell.</p>
- </div>
- <figure class="mdl-cell mdl-cell--4-col">
-   <img src="imgs/android-avd-contentshell.png" alt="Android Emulator Content Shell">
-   <figcaption>Android Emulator Content Shell</figcaption>
- </figure>
-</div>
+Now you can test your site with the Chromium Content Shell.
+
 
 #### Firefox on Android
 
-<div class="mdl-grid">
- <div class="mdl-cell mdl-cell--8-col">
-    <p>Similar to Chromium's Content Shell, you can get an APK to install Firefox onto the emulator.</p>
+<figure class="attempt-right">
+  <img src="imgs/ff-on-android-emulator.png" alt="Firefox Icon on Android Emulator">
+  <figcaption>Firefox Icon on Android Emulator</figcaption>
+</figure>
 
-    <p>Download the right .apk file from <a href="https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/">https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/</a>.</p>
+Similar to Chromium's Content Shell, you can get an APK to install Firefox onto the emulator.
 
-    <p>From here, you can install the file onto an open emulator or connected Android device with the following command:</p>
+Download the right .apk file from <a href="https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/">https://ftp.mozilla.org/pub/mozilla.org/mobile/releases/latest/</a>.
 
-    <pre>adb install &lt;path to APK&gt;/fennec-XX.X.XX.android-arm.apk</pre>
- </div>
- <figure class="mdl-cell mdl-cell--4-col">
-   <img src="imgs/ff-on-android-emulator.png" alt="Firefox Icon on Android Emulator">
-   <figcaption>Firefox Icon on Android Emulator</figcaption>
- </figure>
-</div>
+From here, you can install the file onto an open emulator or connected Android device with the following command:
+
+    adb install &lt;path to APK&gt;/fennec-XX.X.XX.android-arm.apk
+
 
 ### iOS Simulator
 
@@ -104,23 +98,17 @@ App Store](https://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12).
 
 When you're done, learn how to work with the simulator through [Apple's documentation](https://developer.apple.com/library/prerelease/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html).
 
-**Tip**  
-To avoid having to open Xcode every time you want to use the iOS
-Simulator, open it, then right click the iOS Simulator
-icon in your dock and select `Keep in Dock`. Now just click this icon whenever you
-need it.
+Note: To avoid having to open Xcode every time you want to use the iOS Simulator, open it, then right click the iOS Simulator icon in your dock and select `Keep in Dock`. Now just click this icon whenever you need it.
 
 ### Modern.IE
 
-<div class="mdl-grid">
- <div class="mdl-cell mdl-cell--8-col">
-    <p>Modern.IE Virtual Machines let you access different versions of IE on your computer via VirtualBox (or VMWare). Choose a virtual machine on the <a href="https://modern.ie/en-us/virtualization-tools#downloads">download page here</a>.</p>
- </div>
- <figure class="mdl-cell mdl-cell--4-col">
-   <img src="imgs/modern-ie-simulator.png" alt="Modern IE VM">
-   <figcaption>Modern IE VM</figcaption>
- </figure>
-</div>
+<figure class="attempt-right">
+  <img src="imgs/modern-ie-simulator.png" alt="Modern IE VM">
+  <figcaption>Modern IE VM</figcaption>
+</figure>
+
+Modern.IE Virtual Machines let you access different versions of IE on your computer via VirtualBox (or VMWare). Choose a virtual machine on the <a href="https://modern.ie/en-us/virtualization-tools#downloads">download page here</a>.
+
 
 ## Cloud-based emulators and simulators
 
