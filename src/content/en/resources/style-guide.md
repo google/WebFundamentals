@@ -581,11 +581,42 @@ Will render as:
 {% include "web/_shared/related-guides/heading.html" %}
 {% include "web/_shared/related-guides/service-workers.html" %}
 
+## Custom attributes and named anchors 
+
+Markdown supports custom markup attributes for block level HTML elements and
+headers.
+
+The format for this allows for a custom class, a custom ID, and/or custom
+attribute/value pairs in the same statement:
+
+    This is a paragraph.
+    {: .customClass #custom_id attribute='value' }
+
+This generates this HTML:
+
+    <p class="customClass" id="custom_id" attribute="value">This is a paragraph.</p>
+
+### Custom attributes on headers
+
+As headers can only be defined in one line, the attributes list should be
+defined at the end of the header definition:
+
+    ## Header with custom ID {: #custom_id }
+
+Generates:
+
+    <h2 id="custom_id">Header with custom ID</h2>
+
 ## Block quote
+
+    > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et libero eget nibh porttitor maximus ac ut urna. Suspendisse interdum orci nec posuere scelerisque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec leo nunc, convallis eget lacus vitae, malesuada porttitor sapien. Vivamus dapibus bibendum nulla eget elementum. Quisque sollicitudin semper turpis, suscipit sodales massa tempor ac. Vivamus ut consectetur nisl.
+
+
+
 
 ## User comments
 

@@ -125,6 +125,7 @@ function generateListPage(files, options) {
 function generateTOCbyMonth(files, options) {
   gutil.log(' ', 'Generating _toc.yaml for', options.title);
   var context = {
+    year: options.year,
     title: options.title,
     section: options.section,
     months: splitArticlesByMonth(files).reverse()

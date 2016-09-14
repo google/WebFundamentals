@@ -45,6 +45,7 @@ gulp.task('build:showcase', function() {
   wfTemplateHelper.generateFeeds(files, options);
   var filesByYear = wfHelper.splitByYear(files);
   Object.keys(filesByYear).forEach(function(year) {
+    options.year = year;
     options.outputPath = path.join(baseOutputPath, year);
     options.title = 'Showcase (' + year + ')';
     wfTemplateHelper.generateListPage(filesByYear[year], options);
@@ -92,6 +93,7 @@ gulp.task('build:updates', function() {
   var filesByYear = wfHelper.splitByYear(files);
   Object.keys(filesByYear).forEach(function(year) {
     options.outputPath = path.join(baseOutputPath, year);
+    options.year = year;
     options.title = 'Web Updates (' + year + ')';
     wfTemplateHelper.generateListPage(filesByYear[year], options);
     options.title = year;

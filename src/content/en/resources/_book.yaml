@@ -11,6 +11,8 @@ upper_tabs:
       other:
       - name: Resources
         contents:
+        - title: Overview
+          path: /web/resources/
         - title: Writing an Article
           path: /web/resources/writing-an-article
         - title: Writing an Update or Case Study
