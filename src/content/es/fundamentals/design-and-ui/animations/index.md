@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obtenga más información sobre las animaciones y su uso en las aplicaciones y los sitios modernos.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -16,7 +15,7 @@ Las animaciones son una parte muy importante para lograr que las aplicaciones y 
 ## TL;DR {: .hide-from-toc }
 - Utilice las animaciones como una forma de darle vida a sus proyectos.
 - Las animaciones deben ser coherentes con la interacción del usuario.
-- 'Tenga precaución con las propiedades que anima: algunas son más costosas que otras.'
+- Tenga precaución con las propiedades que anima: algunas son más costosas que otras.
 
 
 ## Elección de los objetos adecuados para animar
@@ -33,7 +32,7 @@ Si hay algo peor que las animaciones colocadas en el lugar incorrecto, de seguro
 
 Algunas propiedades son más costosas para cambiar que otras, y es por eso que algunas pueden verse entrecortadas. Entonces, por ejemplo, si cambia la propiedad `box-shadow` de un elemento, deberá realizar una operación de pintura mucho más costosa que si solo cambia el color del texto. Es probable que cambiar la propiedad `width` de un elemento sea más costoso que cambiar su `transform`.
 
-Podrá obtener más información sobre las consideraciones de rendimiento de las animaciones en la guía [Animaciones y rendimiento](animations-and-performance.html), pero si desea que la propiedad TL;DR se adhiera a la propiedad transforms y que la propiedad opacity cambie, utilice `will-change`. Si desea saber exactamente cuál es el trabajo que se desencadena al animar una determinada propiedad, consulte [Desencadenadores de CSS](http://csstriggers.com).
+Podrá obtener más información sobre las consideraciones de rendimiento de las animaciones en la guía [Animaciones y rendimiento](animations-and-performance), pero si desea que la propiedad TL;DR se adhiera a la propiedad transforms y que la propiedad opacity cambie, utilice `will-change`. Si desea saber exactamente cuál es el trabajo que se desencadena al animar una determinada propiedad, consulte [Desencadenadores de CSS](http://csstriggers.com).
 
 
 

@@ -2,15 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A veces, la parte más difícil de un proyecto nuevo es comenzar. Web Starter Kit le proporciona una base sólida con una serie de herramientas que le resultarán útiles a lo largo del proceso de desarrollo.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-07-16 #}
 
 # Inicio del sitio con Web Starter Kit {: .page-title }
 
+Caution: This article has not been updated in a while and may not reflect reality. Be sure to check the Web Starter Kit [documentation](https://github.com/google/web-starter-kit/) for the latest details.
+
 {% include "web/_shared/contributors/mattgaunt.html" %}
-
-
 
 En esta guía, le explicaremos el proceso de crear un sitio nuevo con Web Starter Kit y le brindaremos información para que aproveche al máximo las herramientas que posee esta aplicación.
 
@@ -240,7 +240,6 @@ npm.
 ¡Listo! Ahora, ya tiene todo lo necesario para utilizar las herramientas de Gulp en el Web Starter
 Kit.
 
-<!-- TODO: Verify note type! -->
 Note: Si el sistema le arroja errores de permiso o acceso, como <code>EPERM</code> o <code>EACCESS</code>, no utilice <code>sudo</code> a modo de solución temporal. Consulte <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>esta página</a> para obtener una solución más eficiente.
 
 En la siguiente sección de esta guía, hablaremos sobre cómo utilizar Gulp, pero si desea

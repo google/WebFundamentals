@@ -2,15 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Se puede acceder a la Web desde una amplia gama de dispositivos, desde teléfonos de pantalla pequeña a televisores de pantalla gigante. Aprende a crear un sitio que funcione bien en todos los dispositivos.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Tu primer sitio multidispositivo {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
-
-
 
 Crear experiencias multipantalla es más fácil de lo que parece. En esta guía, aprenderemos a crear una página de destino de ejemplo para nuestro <a href='https://www.udacity.com/course/cs256'>curso `CS256: Desarrollo web para móviles`</a> que funcione bien en dispositivos de todo tipo.
 
@@ -52,22 +49,22 @@ Ya sabemos lo que necesitamos:
 
 Además, ya hemos pensando en una arquitectura de información y en un diseño generales tanto para las ventanas gráficas estrechas como para las anchas.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="AI para ventanas gráficas estrechas">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="AI para ventanas gráficas anchas">
-</div>
+<img class="attempt-left" src="images/narrowviewport.png" alt="AI para ventanas gráficas estrechas">
+<img  class="attempt-right" src="images/wideviewport.png" alt="AI para ventanas gráficas anchas">
+
+<div class="clearfix"></div>
+
 
 Esta podría ser perfectamente la estructura básica de la página que usaremos durante el proyecto.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Añadir contenido a la página
 
 Ya hemos acabado con la estructura básica del sitio. Ya sabemos qué secciones necesitamos, qué contenido se mostrará en estas secciones y en qué lugar de la arquitectura de información general colocarlo. Ha llegado el momento de crear el sitio.
 
-<!-- TODO: Verify note type! -->
 Note: Estilo vendrá después
 
 #### Crear el título y el formulario
@@ -77,7 +74,7 @@ El título y el formulario de notificación de solicitudes son componentes esenc
 En el título, basta con añadir un texto que describa el curso:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 También debemos rellenar el formulario.
@@ -88,10 +85,8 @@ Todos los formularios deberían contener etiquetas y marcadores de posición par
 Añadiremos tipos semánticos para que los usuarios puedan introducir contenido en un dispositivo móvil de forma rápida y sencilla.  Por ejemplo, al introducir un número de teléfono, el usuario debería ver un panel con números.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
 
 #### Crear una sección con vídeos e información
 
@@ -99,7 +94,7 @@ La sección de contenido con vídeos e información debe contener más detalles.
 Tendrá una lista de viñetas con las características de nuestros productos, además de un marcador de posición en formato de vídeo que muestre cómo se usa nuestro producto.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Los vídeos suelen usarse para describir contenido de manera más interactiva y presentar un producto o un concepto.
@@ -112,29 +107,26 @@ Es posible integrar vídeo en tu sitio siguiendo las recomendaciones siguientes:
 *  Añade texto de respaldo para que los usuarios puedan descargar el vídeo si no pudieran reproducirlo en la ventana.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
 
 #### Crear la sección de imágenes
 
 Los sitios sin imágenes pueden resultar aburridos. Hay dos tipos de imágenes:
 
 *  Imágenes de contenido: imágenes que se muestran junto al contenido del documento para presentar información adicional relacionada con el contenido.
-*  Imágenes con fines estéticos: imágenes que se usan para mejorar el aspecto del sitio; suelen ser imágenes de fondo, patrones y gradientes.  Trataremos este tema en el [artículo siguiente]({{page.nextPage.relative_url}}).
+*  Imágenes con fines estéticos: imágenes que se usan para mejorar el aspecto del sitio; suelen ser imágenes de fondo, patrones y gradientes.  Trataremos este tema en el [artículo siguiente](#).
 
 La sección de imágenes de nuestra página es una colección de imágenes de contenido.
 
 Estas imágenes son importantes para darle significado a la página; son como las imágenes de los artículos de un periódico. Las imágenes que usamos son imágenes de los tutores del proyecto: Chris Wilson, Peter Lubbers y Sean Bennet.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
 </pre>
 
 Las imágenes están configuradas para ajustar su tamaño al 100% del ancho de la pantalla. Esto es ideal en dispositivos con una ventana gráfica estrecha, y no tanto en aquellos con ventana gráfica ancha (como un ordenador).  Veremos este tema en la sección de diseño adaptable.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
 
 Hay muchos usuarios que no pueden ver imágenes y usan tecnologías de apoyo como lectores de pantalla que procesan los datos de la página y leérselos al usuario.  Deberías asegurarte de que todas las imágenes de contenido tengan una etiqueta `alt` descriptiva para que el lector de pantalla pueda leer el texto de la etiqueta al usuario.
 
@@ -147,7 +139,7 @@ La última sección no es más que una tabla que refleja estadísticas específi
 Las tablas solo deben usarse para incluir datos tabulados, como matrices de información.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Añadir un pie de página
@@ -157,17 +149,19 @@ En la mayoría de los sitios es necesario un pie de página para incluir los té
 En nuestro sitio, solo enlazaremos a los términos y condiciones, a una página de contacto y a nuestros perfiles en los medios sociales.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Resumen
 
 Hemos creado un borrador del sitio y hemos identificado los elementos principales de su estructura.  Además, nos hemos asegurado de redactar todo el contenido relevante y de colocarlo en el lugar que más se adecúe a nuestros objetivos comerciales.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="Contenido">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+
+<img class="attempt-left" src="images/content.png" alt="Contenido">
+<img  class="attempt-right" src="images/narrowsite.png" alt="">
+
+<div class="clearfix"></div>
+
 
 Verás que la página ahora mismo tiene un aspecto horrible. Lo hemos hecho a propósito. 
 El contenido es el aspecto más importante de cualquier sitio, y debíamos asegurarnos de contar con una arquitectura de información completa y abundante. Esta guía nos ha proporcionado los cimientos necesarios para crear nuestro sitio. Aplicaremos estilos a nuestro contenido en la siguiente guía.
@@ -184,19 +178,20 @@ El contenido es el aspecto más importante de cualquier sitio, y debíamos asegu
 Se puede acceder a la Web desde una amplia gama de dispositivos, desde teléfonos de pantalla pequeña a televisiones de grandes dimensiones. Cada dispositivo presenta ciertas ventajas propias, pero también limitaciones. Como desarrollador web, el público espera que crees sitios compatibles con todas las gamas de dispositivos.
 
 
-Vamos a crear un sitio que funciona en varios tamaños de pantalla y tipos de dispositivo. En el [artículo anterior]({{page.previousPage.relative_url}}), creamos la arquitectura de información de la página y creamos una estructura básica.
+Vamos a crear un sitio que funciona en varios tamaños de pantalla y tipos de dispositivo. En el [artículo anterior](#), creamos la arquitectura de información de la página y creamos una estructura básica.
 En esta guía, vamos a utilizar esa estructura básica con contenido y la vamos a convertir en una atractiva página que se adapte a un gran número de tamaños de pantalla.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Contenido">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenido y estructura </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Sitio finalizado </a> </figcaption>
-  </figure>
-</div>
+
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="Contenido">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenido y estructura </a> </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Sitio finalizado </a> </figcaption>
+</figure>
+
+<div class="clearfix"></div>
 
 Siguiendo los principios del desarrollo web Mobile First, vamos a empezar con una ventana gráfica estrecha (parecida a un dispositivo móvil) y vamos a desarrollar primero para esa experiencia.
 Después ampliaremos el tamaño para dispositivos más grandes.
@@ -221,12 +216,10 @@ Sin ella, el sitio no funcionará bien en un dispositivo móvil.
 La ventana gráfica indica al navegador que el tamaño de la página se tiene que adaptar a la pantalla.  Puede que haya muchas configuraciones diferentes que puedes especificar para que la ventana gráfica controle la visualización de la página.  De forma predeterminada, recomendamos esta configuración:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 La ventana gráfica reside en el encabezamiento del documento y solo se tiene que declarar una vez.
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
 
 ### Aplicar un estilo sencillo 
 
@@ -253,9 +246,9 @@ En la guía anterior, hemos añadido imágenes llamadas `imágenes de contenido`
 
 Un buen ejemplo sería una imagen de título para el contenido situado en la mitad superior de la página. A menudo se utiliza para atraer al usuario para que obtenga más información del producto.
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="Sitio diseñado">
-</div>
+
+<img  src="images/narrowsite.png" alt="Sitio diseñado">
+
 
 Incluirlas puede ser muy sencillo. En nuestro caso, va a hacer de fondo del encabezado y la vamos a aplicar con un CSS sencillo.
 
@@ -271,7 +264,7 @@ Incluirlas puede ser muy sencillo. En nuestro caso, va a hacer de fondo del enca
 
 Hemos elegido una imagen de fondo sencilla que está difuminada para que no interfiera con el contenido. Además, hemos establecido que ocupe todo el elemento, así se amplía sin modificar la relación de aspecto.
 
-<br style="clear: both;">
+<div class="clearfix"></div>
 
 ### Establezca su primer punto de interrupción
 
@@ -285,17 +278,17 @@ El diseño empieza a perder calidad a los 600 px de ancho.  En nuestro caso, la 
   </p>
 </video>
 
-Parece que los 600 px es un buen sitio para crear el primer punto de interrupción, ya que nos proporcionará el punto de mira para recolocar elementos y que así se ajusten mejor a la pantalla.  Para crearlo, podemos utilizar una tecnología llamada [consultas multimedia]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+Parece que los 600 px es un buen sitio para crear el primer punto de interrupción, ya que nos proporcionará el punto de mira para recolocar elementos y que así se ajusten mejor a la pantalla.  Para crearlo, podemos utilizar una tecnología llamada [consultas multimedia](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {
     
     }
-    
+
 
 En las pantallas de mayor tamaño hay más espacio, así que también hay más flexibilidad en cuanto a la forma de mostrar contenido.
 
-<!-- TODO: Verify note type! -->
+
 Note: No tienes que mover todos los elementos a la vez, sino que, si es necesario, puedes hacer ajustes menores.
 
 En el contexto de nuestra página de producto, parece necesario:
@@ -306,7 +299,6 @@ En el contexto de nuestra página de producto, parece necesario:
 *  establecer que el vídeo flote alrededor del contenido,
 *  reducir el tamaño de las imágenes y definir que aparezcan según una cuadrícula más atractiva.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
 
 ### Restringir el ancho máximo del diseño
 
@@ -318,14 +310,16 @@ Para lograrlo, tenemos que restringir el ancho y centrar los elementos.  Tenemos
 
 El contenedor será un atributo `div` sencillo con la forma siguiente:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    </div>
+
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" adjust_indentation="auto" %}
 </pre>
 
 ### Modificar el espaciado interno y reducir el tamaño de texto
@@ -337,7 +331,7 @@ Si la ventana gráfica es más ancha, tenemos que tener en cuenta que es más pr
 En nuestra página de producto, para aumentar el espaciado interno de los elementos de la sección, estableceremos que el ancho del contenido siga estando a un 5%.  También aumentaremos el tamaño de los encabezados de cada sección.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto"%}
 </pre>
 
 ### Adaptar elementos a una ventana gráfica ancha
@@ -358,11 +352,11 @@ Al tener una ventana gráfica estrecha, tenemos disponible mucho menos espacio h
 Para utilizar el espacio horizontal de la pantalla de forma más eficiente, tenemos que romper el flujo lineal del encabezado y mover el formulario y la lista para que estén uno al lado del otro.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -380,7 +374,7 @@ El vídeo de la interfaz de ventana gráfica estrecha está diseñado para que o
 El elemento de vídeo se tiene que sacar del flujo vertical de la ventana gráfica estrecha y se tiene que mostrar en paralelo a la lista con viñetas de contenido de una ventana gráfica ancha.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" adjust_indentation="auto" %}
 </pre>
 
 #### Titular las imágenes
@@ -392,7 +386,7 @@ Para que el aspecto de las imágenes sea correcto, se amplían un 30% del ancho 
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" adjust_indentation="auto" %}
 </pre>
 
 #### Definir que las imágenes se adapten a los puntos por pulgada
@@ -407,8 +401,6 @@ En el caso de los navegadores compatibles, puedes mostrar una imagen de alta den
 
     <img src="photo.png" srcset="photo@2x.png 2x">
     
-
-{% include shared/related_guides.liquid list=page.related-guides.images %}
 
 #### Tablas
 
@@ -429,7 +421,7 @@ Como al crear primero para un dispositivo móvil es más difícil deshacer los e
 Así obtenemos una interrupción clara y constante.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" adjust_indentation="auto" %}
 </pre>
 
 ### Conclusión

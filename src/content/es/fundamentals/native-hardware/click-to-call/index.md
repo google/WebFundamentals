@@ -2,21 +2,18 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: En los dispositivos con capacidades de telefonía, permita que los usuarios se comuniquen directamente con usted de una forma fácil que consiste en hacer clic en un número de teléfono. Esta función, a menudo, se conoce como clic para llamar.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-10-20 #}
 
 # Clic para llamar {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
+{% include "web/_shared/contributors/petelepage.html" %}
 
 En los dispositivos con capacidades de telefonía, permita que los usuarios se comuniquen directamente con usted de una forma fácil que consiste en hacer clic en un número de teléfono. Esta función, a menudo, se conoce como clic para llamar.
 
 
 ## TL;DR {: .hide-from-toc }
-- 'Agrupe todos los números telefónicos en hipervínculos con el esquema <code>tel:</code>.'
+- Agrupe todos los números telefónicos en hipervínculos con el esquema <code>tel:</code>.
 - Utilice siempre el formato internacional de marcación.
 
 
@@ -38,7 +35,7 @@ El resultado es el siguiente:
 
 Servicio telefónico de la hora del día del NIST <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
 
-<img src="images/click-to-call_framed.jpg" class="center" alt="Click to call example.">
+<img src="images/click-to-call_framed.jpg" class="attempt-right" alt="Click to call example.">
 
 En la mayoría de los dispositivos con capacidades telefónicas, el usuario recibirá una
 confirmación antes de que se marque el número, con el fin de garantizar que no se engañe a los usuarios 

@@ -2,15 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Una imagen vale más que mil palabras, y juegan un papel importante en cada página. Sin embargo, las imágenes también son la causa de que se descarguen tantos bytes.  Al usar un diseño web adaptable, no solo puede cambiar el diseño según las características del dispositivo, sino que las imágenes también pueden cambiar.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-04-29 #}
 
 # Imágenes {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Una imagen vale más que mil palabras, y juegan un papel importante en cada página. Sin embargo, las imágenes también son la causa de que se descarguen tantos bytes.  Al usar un diseño web adaptable, no solo puede cambiar el diseño según las características del dispositivo, sino que las imágenes también pueden cambiar.
 
@@ -28,7 +25,6 @@ Otras veces, la imagen puede necesitar cambios más drásticos: modificar las pr
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">
@@ -56,7 +52,7 @@ El elemento <code>img</code> es muy útil (descarga, descodifica y muestra conte
 
 ### TL;DR {: .hide-from-toc }
 - Utiliza tamaños relativos para las imágenes a fin de evitar que se salgan del contenedor por accidente.
-- 'Utiliza el elemento <code>picture</code> cuando quieras especificar diferentes imágenes en función de las características del dispositivo (es decir, dirección de recursos gráficos).'
+- Utiliza el elemento <code>picture</code> cuando quieras especificar diferentes imágenes en función de las características del dispositivo (es decir, dirección de recursos gráficos).
 - Utiliza el atributo <code>srcset</code> y el descriptor <code>x</code> en el elemento <code>img</code> para dar pistas al navegador sobre la imagen que es mejor utilizar cuando elija entre varias densidades.
 
 
@@ -77,21 +73,16 @@ Asegúrate de proporcionar descripciones pertinentes con el atributo `alt` de lo
 
 ### Optimizar los elementos `img` con el atributo `srcset` para dispositivos con alta proporción de puntos por pulgada
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      El atributo <code>srcset</code> mejora el comportamiento del elemento <code>img</code>, de modo que es más fácil proporcionar varios archivos de imagen para diferentes características de los dispositivos. De modo similar a la <a href="images-in-css.html#use-image-set-to-provide-high-res-images">función CSS</a> <code>image-set</code> que pertenece a CSS, el atributo <code>srcset</code> permite que el navegador elija la mejor imagen en función de las características del dispositivo. Por ejemplo, utiliza una imagen 2x en una pantalla 2x y quizás, en el futuro, una imagen 1x en un dispositivo 2x con una red de ancho de banda limitado.
-    </p>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Pzc5Dly_jEM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+El atributo <code>srcset</code> mejora el comportamiento del elemento <code>img</code>, de modo que es más fácil proporcionar varios archivos de imagen para diferentes características de los dispositivos. De modo similar a la <a href="images-in-css.html#use-image-set-to-provide-high-res-images">función CSS</a> <code>image-set</code> que pertenece a CSS, el atributo <code>srcset</code> permite que el navegador elija la mejor imagen en función de las características del dispositivo. Por ejemplo, utiliza una imagen 2x en una pantalla 2x y quizás, en el futuro, una imagen 1x en un dispositivo 2x con una red de ancho de banda limitado.
+
+
+<div class="clearfix"></div>
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
@@ -108,26 +99,26 @@ La modificación de las imágenes en función de las características del dispos
 <img class="center" src="img/art-direction.png" alt="Ejemplo de dirección de recursos gráficos"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-<!-- TODO: Verify note type! -->
-Note: El elemento <code>picture</code> se empieza a utilizar en navegadores. Aunque aún no está disponible en todos los navegadores, recomendamos su uso por la amplia compatibilidad con versiones anteriores y el posible uso del <a href="http://picturefill.responsiveimages.org/">polyfill de Picturefill</a>. Consulta el sitio de <a href="http://responsiveimages.org/#implementation">ResponsiveImages.org</a> para obtener más información.
+<div class="clearfix"></div>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      El elemento <code>picture</code> se debe utilizar cuando exista un recurso de imagen con varias densidades o cuando un diseño adaptable determine una imagen con ciertas diferencias en algunos tipos de pantallas.  De modo similar al elemento <code>video</code>, se pueden incluir varios elementos <code>source</code>, así se pueden especificar varios archivos de imagen en consultas multimedia o en el formato de imagen.
-    </p>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+<div class="clearfix"></div>
+
+
+Note: El elemento <code>picture</code> se empieza a utilizar en navegadores. Aunque aún no está disponible en todos los navegadores, recomendamos su uso por la amplia compatibilidad con versiones anteriores y el posible uso del <a href="http://picturefill.responsiveimages.org/">polyfill de Picturefill</a>. Consulta el sitio de <a href="http://responsiveimages.org/#implementation">ResponsiveImages.org</a> para obtener más información.
+
+El elemento <code>picture</code> se debe utilizar cuando exista un recurso de imagen con varias densidades o cuando un diseño adaptable determine una imagen con ciertas diferencias en algunos tipos de pantallas.  De modo similar al elemento <code>video</code>, se pueden incluir varios elementos <code>source</code>, así se pueden especificar varios archivos de imagen en consultas multimedia o en el formato de imagen.
+
+<div class="clearfix"></div>
+
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 En el ejemplo anterior, si el ancho del navegador tiene un valor mínimo de 800 px, se utilizarán `head.jpg` o `head-2x.jpg`, en función de la resolución del dispositivo. Si el navegador admite entre 450 px y 800 px, se utilizarán `head-small.jpg` o `head-small-2x.jpg`, una vez más, en función de la resolución del dispositivo. En el caso de las pantallas con un ancho inferior a 450 px y compatibilidad con versiones anteriores en las que no se admita el elemento `picture`, el navegador hará efectivo el elemento `img`. Por eso, siempre se debe incluir.
@@ -139,7 +130,7 @@ Cuando no se conoce el tamaño final de la imagen, puede resultar difícil espec
 En vez de proporcionar tamaños y densidades de imagen fijos, el tamaño de cada imagen se puede especificar añadiendo un descriptor de anchura junto con el tamaño del elemento de imagen, de modo que el navegador puede calcular automáticamente la densidad de píxeles eficiente y puede elegir la imagen que es mejor descargar.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/sizes.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 En el ejemplo anterior se muestra una imagen que ocupa la mitad del ancho de ventana gráfica (`sizes='50vw'`) y, en función del ancho de navegador y la relación de píxeles del dispositivo), se permite que el navegador elija la imagen correcta independientemente del tamaño de la ventana del navegador.  Por ejemplo, en la tabla siguiente se muestra qué imagen elegiría el navegador:
@@ -199,7 +190,7 @@ En el ejemplo anterior se muestra una imagen que ocupa la mitad del ancho de ven
 En muchos casos, el tamaño o la imagen pueden variar en función de los puntos de interrupción del diseño del sitio.  Por ejemplo, en una pantalla pequeña, puede que quieras que la imagen ocupe todo el ancho de la ventana gráfica, mientras que en las pantallas grandes quizá solo quieras que ocupe una parte pequeña.  
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/breakpoints.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 El atributo `sizes` del ejemplo anterior utiliza varias consultas multimedia para especificar el tamaño de la imagen.  Cuando el ancho del navegador es superior a 600 px, la imagen ocupa el 25% del ancho de la ventana gráfica; cuando se encuentra entre 500 px y 600 px, la imagen ocupa el 50% del ancho de ventana gráfica; y por debajo de 500 px, ocupa todo el ancho.
@@ -226,7 +217,7 @@ de imagen de compresión](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">Mostrar ejemplo</a>
 
-<!-- TODO: Verify note type! -->
+
 Note: Ten cuidado con la técnica de compresión, porque aumenta el uso de memoria y supone costes adicionales de descodificación.  La adaptación de imágenes grandes para que quepan en pantallas más pequeñas es cara y puede ser una tarea especialmente ardua en los dispositivos de gama baja en los que la memoria y la capacidad de procesamiento son limitadas.
 
 #### Sustitución de la imagen JavaScript
@@ -249,9 +240,9 @@ La propiedad `background` de CSS es un método eficaz de añadir imágenes compl
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Usa la imagen que mejor se adapte a las características de la pantalla, teniendo en cuenta el tamaño de la pantalla, la resolución del dispositivo y el diseño de la página.'
-- 'Cambia la propiedad <code>background-image</code> en CSS para las pantallas con muchos puntos por pulgada. Para ello, usa consultas de medios con <code>min-resolution</code> y <code>-webkit-min-device-pixel-ratio</code>.'
-- 'Usa `srcset` para mostrar imágenes de alta resolución, además de la imagen en tamaño normal en el lenguaje de marcado.'
+- Usa la imagen que mejor se adapte a las características de la pantalla, teniendo en cuenta el tamaño de la pantalla, la resolución del dispositivo y el diseño de la página.
+- Cambia la propiedad <code>background-image</code> en CSS para las pantallas con muchos puntos por pulgada. Para ello, usa consultas de medios con <code>min-resolution</code> y <code>-webkit-min-device-pixel-ratio</code>.
+- Usa `srcset` para mostrar imágenes de alta resolución, además de la imagen en tamaño normal en el lenguaje de marcado.
 - Ten en cuenta los costes de rendimiento al usar técnicas de sustitución de imágenes de JavaScript o al mostrar imágenes de alta resolución muy comprimidas en dispositivos de menor resolución.
 
 
@@ -262,7 +253,7 @@ Las consultas de medios no solo afectan al diseño de la página, sino que tambi
 Por ejemplo, en el siguiente ejemplo, solo se descarga `small.png` y se aplica al `div` de contenido en las pantallas más pequeñas. En cambio, en pantallas más grandes, se aplica `background-image: url(body.png)` al cuerpo, y `background-image: url(large.png)` al `div` de contenido.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/conditional-mq.html" region_tag="conditional" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
 ### Usar `image-set` para mostrar imágenes de alta resolución
@@ -282,7 +273,7 @@ según sea necesario. Es decir, el navegador interpreta que las imágenes que du
 La compatibilidad con `image-set()` aún es reciente y solo es compatible en Chrome y en Safari con el prefijo de proveedor `-webkit`.  Se debe tomar la precaución de incluir una imagen de respaldo para cuando no se admita `image-set()`, por ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-set.html" region_tag="imageset" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
 El ejemplo anterior cargará los recursos apropiados en los navegadores que sean compatibles con `image-set()` y, si no fuera posible, mostrará el recurso en tamaño normal. La desventaja obvia de este método es que la compatibilidad del navegador con `image-set()` es poco frecuente, por lo que la mayoría de los navegadores mostrarán el recurso en tamaño normal.
@@ -302,7 +293,7 @@ Las consultas de medios pueden crear normas basadas en la [relación de píxeles
 Chrome, Firefox y Opera son compatibles con la sintaxis `(min-resolution: 2dppx)`, aunque Safari y el navegador de Android requieren la sintaxis anterior del proveedor con sufijo, pero sin la unidad `dppx`.  Recuerda que estos estilos solo se cargan si el dispositivo coincide con la consulta de medios y que debe especificar estilos para el caso básico.  Con esto también se garantiza que se muestre un elemento si el navegador no es compatible con la resolución especificada en las consultas de medios.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media-query-dppx.html" region_tag="mqdppx" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
 Además, puedes usar la sintaxis `min-width` para mostrar imágenes alternativas en función del tamaño de la ventana gráfica.  Esta técnica tiene la ventaja de que la imagen no se descarga si la consulta de medios no coincide.  Por ejemplo, solo se descarga y se aplica `bg.png` en `body` si el ancho del navegador es de 500 píxeles como mínimo:
@@ -356,10 +347,9 @@ Cuando los requisitos de iconos son más complejos, se recomienda usar iconos SV
 * Son semánticas.
 * Permiten una mayor accesibilidad con los atributos adecuados.
 
-&nbsp;
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/icon-svg.html" region_tag="iconsvg" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
 ### Usar fuentes de iconos con precaución
@@ -373,13 +363,11 @@ Las fuentes de icono son populares y pueden usarse fácilmente, pero tienen algu
 * Salvo que se delimiten de forma adecuada, pueden resultar en un archivo muy grande para solo usar un pequeño subconjunto de los iconos disponibles. 
 
 
-{% link_sample _code/icon-font.html %}
-<img src="img/icon-fonts.png" class="center"
-srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
-alt="Ejemplo de página que usa FontAwesome para sus iconos de fuente.">
-{% endlink_sample %}
+
+<img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="Ejemplo de página que usa FontAwesome para sus iconos de fuente.">
+
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/icon-font.html" region_tag="iconfont" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
 Hay cientos de fuentes de icono gratis y de pago, incluidas [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) y [Glyphicons](http://glyphicons.com/).
@@ -402,7 +390,7 @@ Las imágenes suelen ser las responsables de la mayoría de los bytes descargado
 - No elijas un formato de imagen al azar; usa el formato más óptimo.
 - Incluye herramientas de optimización de imágenes y de compresión en el flujo de trabajo para reducir el tamaño de los archivos.
 - Reduce el número de solicitudes HTTP situando las imágenes más usadas en sprites de imagen.
-- 'Procura cargar las imágenes solo cuando el usuario llegue a la sección en que se encuentran. De este modo, se mejora el tiempo de carga inicial de la página y se reduce el peso inicial de esta.'
+- Procura cargar las imágenes solo cuando el usuario llegue a la sección en que se encuentran. De este modo, se mejora el tiempo de carga inicial de la página y se reduce el peso inicial de esta.
 
 
 ### Elegir el formato adecuado
@@ -434,8 +422,9 @@ Hay varias herramientas disponibles que comprimen aun más las imágenes, sin p�
 El uso de sprites en CSS es una técnica en la que varias imágenes se combinan en una sola imagen `sprite sheet`. Con esta técnica, cada imagen puede usarse para especificar la imagen de fondo de un elemento (la hoja de sprites) y un desplazamiento para mostrar la parte correcta.
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Hoja de sprites de imágenes usada en el ejemplo"></a>
+
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
 El uso de sprites tiene la ventaja de reducir el número de descargas necesarias para obtener varias imágenes y, a la vez, habilitar el almacenamiento en caché.
@@ -445,12 +434,6 @@ El uso de sprites tiene la ventaja de reducir el número de descargas necesarias
 La carga inteligente permite aumentar la velocidad de carga de páginas extensas con muchas imágenes en la mitad inferior, ya que carga las imágenes según sean necesarias o cuando el contenido principal se haya cargado y mostrado.  Además de mejorar el rendimiento, el uso de la carga inteligente permite crear páginas con desplazamiento infinito.
 
 Ten cuidado al crear estas páginas, ya que el contenido se carga a medida que se visualiza, y es posible que los motores de búsqueda nunca detecten ese contenido.  Además, los usuarios que busquen el tipo de información que suele incluirse en un pie de página, nunca verán ese pie de página, ya que se carga contenido nuevo de manera continua.
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.optimize %}
-
-
-
-
 
 
 ## Evitar las imágenes por completo 
@@ -464,7 +447,7 @@ A veces, la mejor imagen no es una imagen. Siempre que sea posible, usa la capac
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Evita las imágenes siempre que sea posible y, en su lugar, usa las funciones del navegador para aplicar sombras, gradientes, esquinas redondeadas, etc.'
+- Evita las imágenes siempre que sea posible y, en su lugar, usa las funciones del navegador para aplicar sombras, gradientes, esquinas redondeadas, etc.
 
 
 ### Colocar texto en el lenguaje de marcado, no en imágenes

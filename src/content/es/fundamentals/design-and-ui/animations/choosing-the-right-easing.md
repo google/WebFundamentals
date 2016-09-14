@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Elija la aceleración adecuada para su proyecto, ya sea entrada lenta, salida lenta o ambos. ¡Sea flexible y pruebe nuevos efectos!
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -14,15 +13,15 @@ description: Elija la aceleración adecuada para su proyecto, ya sea entrada len
 Ahora que ya analizamos las diferentes opciones disponibles para acelerar las animaciones, ¿qué tipo debería utilizar en sus proyectos y qué tipos de duraciones deben tener sus animaciones?
 
 ## TL;DR {: .hide-from-toc }
-- 'Utilice las animaciones de salida lenta para los elementos de la IU; una salida lenta Quintic es una aceleración muy atractiva, aunque enérgica.'
-- "Asegúrese de utilizar la duración de la animación. Las salidas lentas y las entradas lentas deben ser de entre 200\_ms y 500\_ms, mientras que los rebotes y las aceleraciones elásticas deben tener una duración más prolongada de entre 800\_ms y 1.200\_ms."
+- Utilice las animaciones de salida lenta para los elementos de la IU; una salida lenta Quintic es una aceleración muy atractiva, aunque enérgica.
+- Asegúrese de utilizar la duración de la animación. Las salidas lentas y las entradas lentas deben ser de entre 200\_ms y 500\_ms, mientras que los rebotes y las aceleraciones elásticas deben tener una duración más prolongada de entre 800\_ms y 1.200\_ms.
 
 
 En términos generales, una **salida lenta** será la llamada correcta y, sin dudas, un buen parámetro predeterminado. Se inicia rápidamente, y sus animaciones ofrecerán un aspecto de receptividad (que es lo ideal), pero con una agradable reducción de la velocidad al final.
 
 Existe un grupo de ecuaciones de salida lenta reconocidas que van más allá de la especificada en la palabra clave `ease-out` de las CSS, las cuales varían en cuanto a niveles de ‘agresividad’. Para aplicar un efecto de salida lenta súper enérgica, considere la idea de utilizar una [salida Quintic](http://easings.net/#easeOutQuint).
 
-<img src="imgs/quintic-ease-out-markers.png" alt="A Quintic ease-out animation curve" style="max-width: 300px"/>
+<img src="images/quintic-ease-out-markers.png" alt="A Quintic ease-out animation curve" style="max-width: 300px"/>
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Ver una animación de salida lenta Quintic</a>
 

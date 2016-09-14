@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Romper la simetría les proporciona contraste a sus proyectos y los hace atractivos. Aprenda cuándo y cómo aplicarlo en sus proyectos.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -15,7 +14,7 @@ Gracias a la asimetría de la duración de las animaciones, se mejora la experie
 
 ## TL;DR {: .hide-from-toc }
 - Utilice las animaciones asimétricas para agregarles personalidad y contraste a sus trabajos.
-- 'Siempre debe favorecer la interacción del usuario. Para ello, utilice duraciones más cortas cuando deba dar una respuesta a las pulsaciones o los clics, y reserve las duraciones más lentas para los momentos en los que no debe hacerlo.'
+- Siempre debe favorecer la interacción del usuario. Para ello, utilice duraciones más cortas cuando deba dar una respuesta a las pulsaciones o los clics, y reserve las duraciones más lentas para los momentos en los que no debe hacerlo.
 
 
 Al igual que la mayoría de las "reglas" de animación, debe probar qué funciona mejor para su aplicación, pero cuando se hace referencia a los aspectos de la experiencia del usuario, está a la vista que los usuarios son impacientes. La regla de oro es que **siempre se debe responder rápidamente a la interacción del usuario**. Dicho esto, la mayoría del tiempo, la acción del usuario es asimétrica, por lo que la animación también puede ser asimétrica.

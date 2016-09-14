@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprenda a lograr que sus animaciones sean suaves pero interesantes.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -11,20 +10,19 @@ description: Aprenda a lograr que sus animaciones sean suaves pero interesantes.
 {% include "web/_shared/contributors/paullewis.html" %}
 
 
-
 Nada de lo que se encuentra en la naturaleza se mueve de forma lineal desde un punto hacia otro. En la realidad, los objetos tienden a acelerar o desacelerar a medida que se mueven. Nuestros cerebros están configurados para esperar este tipo de movimiento, por lo que, al realizar animaciones, debe utilizar esto a su favor. Si los movimientos son naturales, los usuarios se sentirán más cómodos con sus aplicaciones, lo que, a su vez, derivará en una mejor experiencia general.
 
 ## TL;DR {: .hide-from-toc }
-- 'Gracias a la aceleración, sus animaciones se ven más naturales.'
+- Gracias a la aceleración, sus animaciones se ven más naturales.
 - Seleccione animaciones de salida lenta para los elementos de las IU.
-- 'Evite las animaciones de entradas lentas o de entradas y salidas lentas, a menos que sean breves, ya que generalmente les parecen muy lentas a los usuarios finales.'
+- Evite las animaciones de entradas lentas o de entradas y salidas lentas, a menos que sean breves, ya que generalmente les parecen muy lentas a los usuarios finales.
 
 
 En la animación clásica, el término para el movimiento que comienza lentamente y luego se acelera se denomina “aceleración”, y el movimiento que comienza rápidamente y luego se desacelera se conoce como “desaceleración”, pero los términos más usados en la web son “entrada lenta” y “salida lenta”, respectivamente. A veces, las dos se combinan, lo que se denomina “entrada y salida lentas”. Por consiguiente, la aceleración es el proceso de hacer que la animación sea menos intensa o pronunciada.
 
 ## Palabras clave de la aceleración
 
-Tanto las transiciones como las animaciones de las CSS (Hoja de estilos en cascada) le permiten [elegir el tipo de aceleración que desea utilizar en sus animaciones]({{site.fundamentals}}/look-and-feel/animations/choosing-the-right-easing.html). Puede utilizar las palabras clave que afectan la aceleración (o, según se denomina comúnmente, la sincronización) de la animación en cuestión. También puede [realizar una personalización completa mediante la aceleración]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html), lo que le permite expresar más libremente la personalidad de su aplicación.
+Tanto las transiciones como las animaciones de las CSS (Hoja de estilos en cascada) le permiten [elegir el tipo de aceleración que desea utilizar en sus animaciones](choosing-the-right-easing). Puede utilizar las palabras clave que afectan la aceleración (o, según se denomina comúnmente, la sincronización) de la animación en cuestión. También puede [realizar una personalización completa mediante la aceleración](custom-easing), lo que le permite expresar más libremente la personalidad de su aplicación.
 
 A continuación, presentamos algunas de las palabras clave que puede utilizar en las CSS:
 
@@ -41,7 +39,7 @@ También puede utilizar la palabra clave `steps`, la cual le permite crear trans
 
 Las animaciones sin ningún tipo de aceleración se conocen como **lineales**. Los gráficos de las transiciones lineales se ven de la siguiente manera:
 
-<img src="imgs/linear.png" style="max-width: 300px" alt="Linear ease animation curve." />
+<img src="images/linear.png" style="max-width: 300px" alt="Linear ease animation curve." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html">Ver una animación lineal</a>
 
@@ -58,7 +56,7 @@ Independientemente de si codifica sus animaciones mediante CSS o JavaScript, des
 
 En las salidas lentas, la animación comienza más rápido que en las animaciones lineales y también presenta desaceleración al final.
 
-<img src="imgs/ease-out.png" style="max-width: 300px" alt="Ease-out animation curve." />
+<img src="images/ease-out.png" style="max-width: 300px" alt="Ease-out animation curve." />
 
 Existen muchas maneras diferentes de lograr un efecto de salida lenta, pero la más simple es usar la palabra clave `ease-out` en las CSS:
 
@@ -74,7 +72,7 @@ Por lo general, la salida lenta es la mejor opción para el trabajo de las inter
 
 Las animaciones de entrada lenta comienzan lentamente y finalizan rápidamente, lo contrario de la salida lenta.
 
-<img src="imgs/ease-in.png" style="max-width: 300px" alt="Ease-in animation curve." />
+<img src="images/ease-in.png" style="max-width: 300px" alt="Ease-in animation curve." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html">Ver una animación de entrada lenta</a>
 
@@ -92,7 +90,7 @@ Sin embargo, desde el punto de vista de la interacción, las entradas lentas son
 
 El hecho de incluir tanto entradas como salidas lentas es similar a un auto que acelera y desacelera y, si se las usa juiciosamente, puede proporcionar un efecto más dramático que si solo se utilizaran salidas lentas.
 
-<img src="imgs/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out animation curve." />
+<img src="images/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out animation curve." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Ver una animación de entrada y salida lentas</a>
 

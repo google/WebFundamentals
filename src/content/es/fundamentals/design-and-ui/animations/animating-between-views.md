@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprenda a colocar animaciones entre dos vistas en sus aplicaciones.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -11,29 +10,27 @@ description: Aprenda a colocar animaciones entre dos vistas en sus aplicaciones.
 {% include "web/_shared/contributors/paullewis.html" %}
 
 
-
 Muchas veces querrá llevar a los usuarios de una vista a la otra dentro de su aplicación, ya sea de una vista de lista a una vista de detalles, o mostrar una barra lateral de navegación. Las animaciones entre estas vistas resultan eficientes para mantener la atención del usuario y agregarle incluso más vida a sus proyectos.
 
 ## TL;DR {: .hide-from-toc }
-- 'Utilice transiciones para desplazarse entre las vistas; evite utilizar`left`, `top` u otras propiedades que desencadenen diseños.'
+- Utilice transiciones para desplazarse entre las vistas; evite utilizar `left`, `top` u otras propiedades que desencadenen diseños.
 - Asegúrese de que las animaciones que utilice sean ingeniosas y breves.
 - Tenga en cuenta que las animaciones y los diseños pueden cambiar a medida que aumentan los tamaños de las pantallas; lo que funciona correctamente en una pantalla más chica puede verse extraño en un contexto de escritorio.
 
 
 El aspecto y el comportamiento de las transiciones de esta vista dependerán, en mayor medida, del tipo de vistas con las que está trabajando; por ejemplo, animar una superposición modal sobre una vista debe ser una experiencia diferente de la de realizar una transición entre una vista de lista y una vista de detalles.
 
-<!-- TODO: Verify note type! -->
-Note: El objetivo debe ser mantener 60 fotograma/s para todas las animaciones. De ese modo, sus usuarios no experimentarán animaciones entrecortadas que los saquen de la experiencia. Mucho antes de que se inicie la animación, asegúrese de que will-change esté establecido en todos los elementos de las animaciones para todo lo que desea modificar. Para las transiciones de vistas, es muy probable que desee utilizar <code>will-change: transform</code>.
+Note: El objetivo debe ser mantener 60 fotograma/s para todas las animaciones. De ese modo, sus usuarios no experimentarán animaciones entrecortadas que los saquen de la experiencia. Mucho antes de que se inicie la animación, asegúrese de que will-change esté establecido en todos los elementos de las animaciones para todo lo que desea modificar. Para las transiciones de vistas, es muy probable que desee utilizar `will-change: transform`.
 
 ## Use traslaciones para desplazarse entre vistas
 
 Para hacerlo simple, supongamos que hay dos vistas: una vista de lista y una vista de detalles. Cuando el usuario presione un elemento de la lista que se encuentra dentro de la vista de lista, aparecerá la vista de detalles y desaparecerá la vista de lista.
 
-<img src="imgs/gifs/view-translate.gif" alt="Translating between two views" />
+<img src="images/view-translate.gif" alt="Translating between two views" />
 
 Para lograr este efecto, necesitará un contenedor para ambas vistas con el parámetro `overflow: hidden` configurado. De este modo, las dos vistas pueden estar dentro del contenedor una al lado de la otra, sin mostrar barras de desplazamiento horizontal, y cada vista se puede deslizar de lado a lado dentro del contenedor según sea necesario.
 
-<img src="imgs/container-two-views.svg" alt="View hierarchy." />
+<img src="images/container-two-views.svg" alt="View hierarchy." />
 
 La CSS para el contenedor es la siguiente:
 
@@ -123,7 +120,6 @@ Finalmente, agregamos las declaraciones de CSS para esas clases.
 
 Podría expandir esto para que abarcara múltiples vistas, y el concepto básico seguiría siendo el mismo: cada vista no visible debe estar fuera de la pantalla y debe aparecer cuando sea necesario, y la pantalla que se muestra actualmente debe dejar de mostrarse.
 
-<!-- TODO: Verify note type! -->
 Note: El uso de este tipo de jerarquía entre exploradores puede ser todo un desafío. Por ejemplo, en iOS se requiere una propiedad adicional de CSS: <code>-webkit-overflow-scrolling: touch</code> para ‘volver a habilitar’ el desplazamiento, pero esto no permite tener control sobre el eje en el que se aplica, tal como se puede hacer con la propiedad estándar de desbordamiento. Asegúrese de probar la implementación en diferentes dispositivos.
 
 Además de realizar transiciones entre las vistas, esta técnica también se puede aplicar a otros elementos de deslizamiento, como los elementos de navegación de la barra lateral. La única diferencia real es que no sería necesario desplazar las otras vistas.
@@ -132,6 +128,6 @@ Además de realizar transiciones entre las vistas, esta técnica también se pue
 
 En el caso de las pantallas más grandes, debe mantener la vista de lista a mano todo el tiempo en lugar de retirarla, y deslizar la vista de detalles hacia adentro desde la derecha. Es más o menos lo mismo que utilizar una vista de navegación.
 
-<img src="imgs/container-two-views-ls.svg" alt="View hierarchy on a large screen." />
+<img src="images/container-two-views-ls.svg" alt="View hierarchy on a large screen." />
 
 

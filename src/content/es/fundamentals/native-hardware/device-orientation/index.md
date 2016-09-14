@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Los eventos de movimiento y orientación del dispositivo proporcionan acceso al acelerómetro, el giroscopio y la brújula incorporados en los dispositivos móviles.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Orientación del dispositivo {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Los eventos de movimiento y orientación del dispositivo proporcionan acceso al acelerómetro, el giroscopio y la brújula incorporados en los dispositivos móviles.
@@ -18,7 +17,6 @@ controlar la dirección del personaje o para determinar la altura
 a la que debe saltar. Si se los utiliza junto con la función de geolocalización, se puede crear un sistema de navegación 
 paso a paso más preciso o proporcionar información sobre la ubicación de una tienda.
 
-<!-- TODO: Verify note type! -->
 Note: Tenga <b>mucho</b> cuidado si decide utilizar los eventos de movimiento u orientación del dispositivo.Desafortunadamente, no todos los navegadores utilizan el mismo sistema de coordenadas, y podrían informar diferentes valores en situaciones idénticas.
 
 ## ¿Qué extremo se encuentra orientado hacia arriba?
@@ -77,27 +75,25 @@ Los datos de rotación se proporcionan como [ángulos de Euler](http://en.wikipe
 que representan la cantidad de grados de diferencia entre el marco de coordenadas del dispositivo
 y el marco de coordenadas de la Tierra.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="images/alpha.png"><br>
-    <b>alpha:</b> valor de rotación en torno al eje z; es de 0&deg; cuando la parte superior del dispositivo
- apunta directamente hacia el norte.  A medida que el dispositivo se rota en sentido contrario a las agujas del reloj,
- el valor `alpha` aumenta.
-  </div>
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="images/beta.png"><br>
-    <b>beta:</b> valor de rotación en torno al eje x; es de 0&deg; cuando la partes superior e 
- inferior del dispositivo se encuentran a la misma distancia de la superficie de la Tierra. El valor
- aumenta a medida que la parte superior del dispositivo se apunta hacia la superficie de la Tierra.
-  </div>
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="images/gamma.png"><br>
-    <b>gamma:</b> valor de rotación en torno al eje y; es de 0&deg; cuando las partes izquierda y 
- derecha del dispositivo se encuentran a la misma distancia de la superficie de la Tierra.  El valor
- aumenta a medida que la parte derecha del dispositivo se apunta hacia la superficie de la tierra. 
-  </div>
-</div>
-
+<figure class="attempt-left">
+  <img src="images/alpha.png">
+  <figcaption>
+    <b>alpha:</b> valor de rotación en torno al eje z; es de 0&deg; cuando la parte superior del dispositivo apunta directamente hacia el norte.  A medida que el dispositivo se rota en sentido contrario a las agujas del reloj, el valor `alpha` aumenta.
+  </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/beta.png">
+  <figcaption>
+    <b>beta:</b> valor de rotación en torno al eje x; es de 0&deg; cuando la partes superior e  inferior del dispositivo se encuentran a la misma distancia de la superficie de la Tierra. El valor  aumenta a medida que la parte superior del dispositivo se apunta hacia la superficie de la Tierra.
+  </figcaption>
+</figure>
+<div class="clearfix"></div>
+<figure>
+  <img src="images/gamma.png">
+  <figcaption>
+    <b>gamma:</b> valor de rotación en torno al eje y; es de 0&deg; cuando las partes izquierda y  derecha del dispositivo se encuentran a la misma distancia de la superficie de la Tierra.  El valor aumenta a medida que la parte derecha del dispositivo se apunta hacia la superficie de la tierra. 
+  </figcaption>
+</figure>
 
 
 ## Orientación del dispositivo 
@@ -111,18 +107,17 @@ En el evento de orientación del dispositivo, se proporcionan datos de la rotaci
 ### TL;DR {: .hide-from-toc }
 - Utilícelo con moderación.
 - Pruébelo para ver si es compatible.
-- 'No actualice la IU en cada evento de orientación; en su lugar, realice la sincronización con <code>requestAnimationFrame</code>.'
+- No actualice la IU en cada evento de orientación; en su lugar, realice la sincronización con <code>requestAnimationFrame</code>.
 
 
 ### Cuándo se deben utilizar los eventos de orientación del dispositivo
 
 Los eventos de orientación del dispositivo se pueden utilizar de diferentes maneras.  Por ejemplo:
 
-<ul>
-  <li>Actualizar un mapa mientras el usuario se desplaza</li>
-  <li>Realizar pequeños ajustes en la IU; por ejemplo, agregar efectos de paralaje</li>
-  <li>Si se lo combina con la función de geolocalización, se puede utilizar para la navegación paso a paso.</li>
-</ul>
+* Actualizar un mapa mientras el usuario se desplaza
+* Realizar pequeños ajustes en la IU; por ejemplo, agregar efectos de paralaje
+* Si se lo combina con la función de geolocalización, se puede utilizar para la navegación paso a paso.
+
 
 ### Verificación de la compatibilidad y escucha de eventos
 
@@ -131,7 +126,7 @@ son compatibles con el navegador.  Luego, coloque un agente de escucha en el obj
 que escucha los eventos de `deviceorientation`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" adjust_indentation="auto" %}
 </pre>
 
 ### Manejo de los eventos de orientación del dispositivo
@@ -170,11 +165,10 @@ A través de la función Movimiento del dispositivo se proporciona información 
 
 Los eventos de movimiento del dispositivo se pueden utilizar de diferentes maneras.  Por ejemplo:
 
-<ul>
-  <li>Un gesto de sacudida para actualizar los datos</li>
-  <li>En los juegos, para hacer que los personajes salten o se muevan</li>
-  <li>En aplicaciones relacionadas con la salud y el estado físico</li>
-</ul>
+* Un gesto de sacudida para actualizar los datos
+* En los juegos, para hacer que los personajes salten o se muevan
+* En aplicaciones relacionadas con la salud y el estado físico
+
 
 ### Verificación de la compatibilidad y escucha de eventos
 
@@ -183,7 +177,7 @@ son compatibles con el navegador.  Luego, coloque un agente de escucha en el obj
 que escucha los eventos de `devicemotion`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" adjust_indentation="auto" %}
 </pre>
 
 ### Manejo de los eventos de movimiento del dispositivo
@@ -286,7 +280,7 @@ de un objeto.  Por ejemplo, cuál es la aceleración máxima de una persona
 que está saltando.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" adjust_indentation="auto" %}
 </pre>
 
 Luego de presionar el botón Go!, se le indica al usuario que salte.  Durante ese tiempo,

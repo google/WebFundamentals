@@ -2,23 +2,23 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprende los métodos más sencillos para añadir vídeos en tu sitio y asegurarte de que los usuarios disfruten de la mejor experiencia posible en cualquier dispositivo.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Vídeo {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-A los usuarios les gusta los vídeos, que pueden ser divertidos e informativos. En los dispositivos móviles, los vídeos pueden ser el modo más fácil de consumir información. Pero consumen ancho de banda y no siempre funcionan de la misma forma en cada plataforma. A los usuarios no les gusta esperar a que carguen los vídeos, o pulsar el botón de reproducción y que no pase nada. Aprende los métodos más sencillos para añadir vídeos en tu sitio y asegurarte de que los usuarios disfruten de la mejor experiencia posible en cualquier dispositivo.
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+A los usuarios les gusta los vídeos, que pueden ser divertidos e informativos. En los dispositivos móviles, los vídeos pueden ser el modo más fácil de consumir información. Pero consumen ancho de banda y no siempre funcionan de la misma forma en cada plataforma. A los usuarios no les gusta esperar a que carguen los vídeos, o pulsar el botón de reproducción y que no pase nada. Aprende los métodos más sencillos para añadir vídeos en tu sitio y asegurarte de que los usuarios disfruten de la mejor experiencia posible en cualquier dispositivo.
+
+
 
 
 ## Añadir un vídeo 
@@ -60,7 +60,7 @@ El elemento `<source>` permite especificar varios formatos de respaldo en caso d
 Por ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Cuando el navegador procesa las etiquetas `<source>`, usa el atributo `type` opcional para decidir qué archivo se descargará y se reproducirá. Si el navegador es compatible con WebM, reproducirá chrome.webm. De lo contrario, comprobará si puede reproducir vídeos MPEG-4.
@@ -97,14 +97,14 @@ Para añadir un fragmento de medios, solo tienes que añadir "#t=[start_time][,e
 
 Además, puedes usar el API de Media Fragments para ofrecer varias vistas de un mismo vídeo (como pies de entrada en un DVD) sin necesidad de codificar y usar varios archivos.
 
-<!-- TODO: Verify note type! -->
+
 Note: - 'El API de Media Fragments es compatible con la mayoría de las plataformas, pero no con iOS.'
 - 'Asegúrate de que las solicitudes de intervalo de bytes sean compatibles con tu servidor. Las solicitudes de intervalo se habilitan de manera predeterminada en la mayoría de los servidores, pero algunos servicios de alojamiento pueden inhabilitarlas.'
 
 
 Al usar las herramientas de navegador para desarrolladores, comprueba que se incluya `Accept Ranges: bytes` en las cabeceras de respuesta:
 
-<img class="center" alt="Captura de pantalla de herramientas de Chrome para desarrolladores: "Accept-Ranges: bytes"" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Captura de pantalla de herramientas de Chrome para desarrolladores: "Accept-Ranges: bytes"" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Incluir un póster
 
@@ -120,20 +120,14 @@ También puede haber un póster de respaldo en caso de que el video `src` deje d
 
 A continuación, ofrecemos una comparativa de vídeos sin póster y con póster (el póster aparece en escala de grises para demostrar que no se trata del vídeo):
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Captura de pantalla de Android Chrome, modo retrato: sin póster" src="images/Chrome-Android-video-no-poster.png">
-  </div>
+<img class="attempt-left" alt="Captura de pantalla de Android Chrome, modo retrato: sin póster" src="img/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Captura de pantalla de Android Chrome, modo retrato: con póster" src="img/Chrome-Android-video-poster.png">
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Captura de pantalla de Android Chrome, modo retrato: con póster" src="images/Chrome-Android-video-poster.png">
-  </div>
-</div>
+<div class="clearfix"></div>
+
 
 
 ## Ofrecer alternativas para plataformas anteriores 
-
-
 
 
 No todos los formatos vídeo son compatibles en todas las plataformas. Comprueba qué formatos son compatibles en las plataformas principales y asegúrate de que el vídeo funcione en cada una de ellas.
@@ -253,32 +247,31 @@ Para comprobar el tamaño codificado de un vídeo, usa las propiedades de elemen
 Cuando los elementos de vídeo son demasiado grandes para la ventana gráfica, es posible que sobrepasen el tamaño del contenedor, lo cual imposibilita que el usuario vea el contenido o use
 los controles.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Captura de pantalla de Chrome en Android, modo retrato: elemento de vídeo sin estilos que supera el tamaño de la ventana gráfica" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Captura de pantalla de Chrome en Android, modo apaisado: elemento de vídeo sin estilos que supera el tamaño de la ventana gráfica" src="images/Chrome-Android-landscape-video-unstyled.png">
-</div>
+<img class="attempt-left" alt="Captura de pantalla de Chrome en Android, modo retrato: elemento de vídeo sin estilos que supera el tamaño de la ventana gráfica" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Captura de pantalla de Chrome en Android, modo apaisado: elemento de vídeo sin estilos que supera el tamaño de la ventana gráfica" src="img/Chrome-Android-landscape-video-unstyled.png">
+
+<div class="clearfix"></div>
+
 
 Puedes controlar las dimensiones del vídeo con JavaScript o con CSS. Las bibliotecas y complementos de JavaScript como [FitVids](//fitvidsjs.com/) permiten mantener un tamaño y una relación de aspecto adecuados, incluso en vídeos Flash de YouTube y de otras fuentes.
 
-Usa [consultas de medios en CSS](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) para especificar el tamaño de los elementos que dependen de las dimensiones de la ventana gráfica; `max-width: 100%` siempre es útil en estos casos.
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+Usa [consultas de medios en CSS](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness) para especificar el tamaño de los elementos que dependen de las dimensiones de la ventana gráfica; `max-width: 100%` siempre es útil en estos casos.
 
 Para mostrar contenido multimedia en iframes (como en vídeos de YouTube), prueba con el diseño adaptable (como el [que propone John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
 
-<!-- TODO: Verify note type! -->
+
 Note: No fuerces el tamaño de los elementos cuando este resulte en una relación de aspecto distinta a la del vídeo original. Los elementos achatados o estirados no quedan bien.
 
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling" adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
 Compara el <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">ejemplo adaptable</a> con la <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">versión no adaptable</a>.
@@ -301,16 +294,17 @@ La orientación de dispositivo no representa ningún problema en monitores de or
 
 Safari en iPhone cambia correctamente la orientación de pantalla de modo retrato a modo apaisado:
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Captura de pantalla de la reproducción de un vídeo en Safari de iPhone, modo retrato" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Captura de pantalla de la reproducción de un vídeo en Safari de iPhone, modo apaisado" src="images/iPhone-video-playing-landscape.png">
-</div>
+
+<img class="attempt-left" alt="Captura de pantalla de la reproducción de un vídeo en Safari de iPhone, modo retrato" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Captura de pantalla de la reproducción de un vídeo en Safari de iPhone, modo apaisado" src="img/iPhone-video-playing-landscape.png">
+
+<div class="clearfix"></div>
+
 
 La orientación de dispositivo puede dar problemas en iPad y en Chrome para Android.
 Por ejemplo, un vídeo sin personalizar reproduciéndose en un iPad en modo apaisado tiene el siguiente aspecto:
 
-<img class="center" alt="Captura de pantalla de la reproducción de un vídeo en Safari de iPad Retina, modo apaisado"
-src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Captura de pantalla de la reproducción de un vídeo en Safari de iPad Retina, modo apaisado" src="img/iPad-Retina-landscape-video-playing.png">
 
 Al establecer el ancho del vídeo con `width: 100%` o con `max-width: 100%` en CSS, se resuelven muchos problemas de diseño a la hora de cambiar la orientación del dispositivo. Además, puedes tener en cuenta otras alternativas a la pantalla completa.
 
@@ -318,15 +312,15 @@ Al establecer el ancho del vídeo con `width: 100%` o con `max-width: 100%` en C
 
 Cada plataforma muestra el vídeo de una forma distinta. Safari en iPhone muestra un elemento de vídeo junto al contenido en una página web, pero reproduce el vídeo en pantalla completa:
 
-<img class="center" alt="Captura de pantalla del elemento de vídeo en iPhone, modo retrato" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="Captura de pantalla del elemento de vídeo en iPhone, modo retrato" src="img/iPhone-video-with-poster.png">
 
 En Android, los usuarios pueden elegir el modo de pantalla completa haciendo clic en el icono de pantalla completa, aunque el modo predeterminado es reproducir el vídeo junto al contenido:
 
-<img class="center" alt="Captura de pantalla de la reproducción de un vídeo en Chrome de Android, modo retrato" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Captura de pantalla de la reproducción de un vídeo en Chrome de Android, modo retrato" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 Safari para iPad reproduce los vídeos junto al contenido:
 
-<img class="center" alt="Captura de pantalla de la reproducción de un vídeo en Safari de iPad Retina, modo apaisado" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Captura de pantalla de la reproducción de un vídeo en Safari de iPad Retina, modo apaisado" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### Control del modo de pantalla completa del contenido
 
@@ -382,19 +376,18 @@ La accesibilidad no es una característica. Los usuarios sordos o invidentes no 
 
 Para que los medios sean más accesibles en los dispositivos móviles, incluye subtítulos o descripciones mediante el elemento de pista.
 
-<!-- TODO: Verify note type! -->
 Note: El elemento de pista es compatible con Chrome para Android, con iOS Safari y con todos los navegadores actuales de ordenador, excepto con Firefox (consulta <a href="http://caniuse.com/track" title="Estado de compatibilidad del elemento de pista">caniuse.com/track</a>). También hay varios Polyfill disponibles. Recomendamos <a href='//www.delphiki.com/html5/playr/' title='Polyfill de elemento de pista de Playr'>Playr</a> o <a href='//captionatorjs.com/' title='Pista de Captionator'>Captionator</a>.
 
 Al usar el elemento de pista, los subtítulos quedan así:
 
- <img class="center" alt="Captura de pantalla de un vídeo con subtítulos mostrados mediante el elemento de pista de Chrome en Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Captura de pantalla de un vídeo con subtítulos mostrados mediante el elemento de pista de Chrome en Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Añadir un elemento de pista
 
 Es muy sencillo añadir subtítulos en tu vídeo; solo tienes que añadir un elemento de pista como elemento secundario del elemento de vídeo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
 El atributo `src` del elemento de pista asigna una ubicación al archivo de pista.

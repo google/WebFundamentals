@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Las animaciones deben funcionar correctamente; de lo contrario, tendrán un impacto negativo en la experiencia del usuario.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -17,7 +16,7 @@ Cada vez que se hace una animación, se deben mantener 60 fotogramas/s, ya que 
 ## TL;DR {: .hide-from-toc }
 - Debe procurar que sus animaciones no causen problemas de rendimiento. Asegúrese de conocer el impacto de animar una determinada propiedad de la CSS (hoja de estilos en cascada).
 - Las propiedades de animación que modifican las características geométricas de la página (diseño) o que generan efectos de pintura son particularmente costosas.
-- 'Siempre que pueda, limítese a realizar cambios en las propiedades transforms y opacity.'
+- Siempre que pueda, limítese a realizar cambios en las propiedades transforms y opacity.
 - Utilice <code>will-change</code> para asegurarse de que el navegador sepa lo que desea animar.
 
 
@@ -26,8 +25,6 @@ La animación de propiedades no es gratuita, y algunas propiedades son menos cos
 Siempre que sea posible, debe evitar animar propiedades que requieran diseños o pintura. En el caso de los navegadores más modernos, esto significa limitar las animaciones a `opacity` o `transform`, ya que ambas propiedades se pueden optimizar, en gran medida, a través del navegador, independientemente de si la animación se utiliza mediante JavaScript o CSS.
 
 Podrá encontrar una lista completa de los trabajos generados mediante propiedades individuales de CSS en [Desencadenadores de CSS](http://csstriggers.com), y podrá encontrar una guía completa sobre cómo crear [Animaciones de alto rendimiento en HTML5 Rocks](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css %}
 
 ### Uso de la propiedad will-change
 

@@ -5,7 +5,7 @@ description: Responsive web design patterns are quickly evolving, but there are 
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-04-29 #}
 
-# Responsive web design patterns {: .page-title }
+# Responsive Web Design Patterns {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 

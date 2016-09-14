@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Desvíese de lo común y cree animaciones totalmente personalizadas para sus proyectos.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -11,14 +10,12 @@ description: Desvíese de lo común y cree animaciones totalmente personalizadas
 {% include "web/_shared/contributors/paullewis.html" %}
 {% include "web/_shared/contributors/samthorogood.html" %}
 
-
-
 En algunos casos, no querrá utilizar las palabras clave de aceleración que se incluyen con CSS, o bien utilizará una biblioteca de animaciones basadas en JavaScript. Generalmente, en ambos casos puede definir sus propias curvas (o ecuaciones), y esto le proporcionará mucho control sobre el aspecto de las animaciones de su proyecto.
 
 ## TL;DR {: .hide-from-toc }
 - La aceleración personalizada le permitirá darle más personalidad a sus proyectos.
 - 'Puede crear curvas Bézier cúbicas similares a las curvas de animación predeterminadas (salida lenta, entrada lenta, etc.), pero con énfasis en diferentes lugares.'
-- "Utilice JavaScript cuando necesite tener más control sobre la sincronización y el comportamiento de las animaciones; p.\_ej., animaciones elásticas o de rebote."
+- Utilice JavaScript cuando necesite tener más control sobre la sincronización y el comportamiento de las animaciones; p.\_ej., animaciones elásticas o de rebote.
 
 
 Si realiza animaciones con CSS, descubrirá que puede definir curvas Bézier cúbicas para definir la sincronización. De hecho, las palabras clave `ease`, `ease-in`, `ease-out` y `linear` se asignan a curvas Bézier predefinidas, las cuales se detallan en las [especificaciones de transiciones de CSS](http://www.w3.org/TR/css3-transitions/).
@@ -29,8 +26,8 @@ Si se cambian los valores X e Y de cada punto de control, se obtiene una curva m
 
 A modo de comparación, presentamos dos curvas: una curva típica de entrada y salida lenta, y una curva personalizada:
 
-<img src="imgs/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Ease-in-out animation curve." />
-<img src="imgs/custom.png" style="display: inline; max-width: 300px" alt="Custom animation curve." />
+<img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Ease-in-out animation curve." />
+<img src="images/custom.png" style="display: inline; max-width: 300px" alt="Custom animation curve." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-custom-curve.html">Ver una animación con aceleración personalizada</a>
 

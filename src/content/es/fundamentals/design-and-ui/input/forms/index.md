@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-04-30 #}
 
@@ -10,30 +9,27 @@ description: Es complicado completar formularios desde el celular. Los mejores f
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-
-
-Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas. En los buenos formularios, se proporcionan tipos de entradas semánticas. Las claves deben cambiar para que coincidan con los tipos de entradas de los usuarios; los usuarios eligen una fecha en un calendario. Mantenga a su usuario informado. En las herramientas de validación, se le debe informar al usuario lo que debe hacer antes de enviar el formulario.
-
-Para obtener una descripción general de estas guías sobre cómo crear formularios asombrosos, consulte el siguiente video.
-
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="iYYHRwLqrKM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
+Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas. En los buenos formularios, se proporcionan tipos de entradas semánticas. Las claves deben cambiar para que coincidan con los tipos de entradas de los usuarios; los usuarios eligen una fecha en un calendario. Mantenga a su usuario informado. En las herramientas de validación, se le debe informar al usuario lo que debe hacer antes de enviar el formulario.
+
+Para obtener una descripción general de estas guías sobre cómo crear formularios asombrosos, consulte el siguiente video.
+
+<div class="clearfix"></div>
 
 
 ## Diseño de formularios eficientes 
-
-
 
 
 Para diseñar formularios eficientes, evite las acciones repetidas, solicite solo la información necesaria y oriente a los usuarios al mostrarles en qué instancia se encuentran en los formularios que tienen muchas partes.
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Utilice los datos existentes para completar previamente los campos, y asegúrese de habilitar la compleción automática.'
+- Utilice los datos existentes para completar previamente los campos, y asegúrese de habilitar la compleción automática.
 - Utilice barras de progreso claramente etiquetadas para ayudar a los usuarios a avanzar en los formularios que tienen varias partes.
 - Proporcione un calendario visual para que los usuarios no tengan que abandonar su sitio para visitar la aplicación de calendario en sus teléfonos inteligentes.
 
@@ -111,7 +107,7 @@ que se muestran en pantalla.  Para los usuarios, será más simple ingresar la i
 cambiar el teclado y si solo ven las teclas adecuadas para ese tipo de
 entrada.
 
-<table class="table-2 inputtypes">
+<table>
   <thead>
     <tr>
       <th data-th="Input type">Tipo de <code>entrada</code></th>
@@ -244,45 +240,14 @@ listas, el elemento`datalist` proporciona sugerencias a medida que el usuario es
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
-<!-- TODO: Verify note type! -->
 Note: Los valores de <code>datalist</code> se proporcionan como sugerencias, y los usuarios no están limitados a las sugerencias ofrecidas.
 
 
----
-title: "Etiquete y nombre las entradas correctamente"
-updated_on: 2015-03-27
-translation_priority: 0
-key-takeaways:
-  label-and-name:
-    - "Siempre utilice <code>label</code> en las entradas de los formularios y asegúrese de que sean visibles cuando el campo esté en foco."
-    - "Utilice <code>placeholder</code> para proporcionar orientación sobre lo que espera."
-    - "Con el fin de asistir al navegador en la compleción automática, utilice los atributos <code>name</code> establecidos para los elementos e incluya el atributo <code>autocomplete</code>."
-notes:
-  use-placeholders:
-    - "Los marcadores de posición desaparecen tan pronto como el usuario comienza a escribir en un elemento, por lo que no reemplazan a las etiquetas.  Se deben utilizar como ayuda para guiar a los usuarios sobre el formato y el contenido requeridos."
-  recommend-input:
-    - "Utilice únicamente <code>street-address</code> o tanto <code>address-line1</code> como <code>address-line2</code>."
-    - "<code>address-level1</code> y <code>address-level2</code> son solo necesarios si se deben utilizar en el formato de su dirección."
-  use-datalist:
-    - "Los valores de <code>datalist</code> se proporcionan como sugerencias, y los usuarios no están limitados a las sugerencias ofrecidas."
-  provide-real-time-validation:
-    - "Incluso si se posee la validación de entrada de parte del cliente, siempre es importante validar los datos en el servidor para garantizar la coherencia y la seguridad de sus datos."
-  show-all-errors:
-    - "Debe mostrarle al usuario todos los campos del formulario de una sola vez, en lugar de mostrárselos uno por uno."
-  request-auto-complete-flow:
-    - "Si solicita algún tipo de información personal o datos de tarjetas de crédito, asegúrese de que el servicio de la página se ofrezca a través de SSL.  De lo contrario, en el cuadro de diálogo se le advertirá al usuario que su información puede no estar segura."
-comments:
-  # NOTE: If the section titles or URL changes the following shortlinks must be updated
-  - g.co/mobilesiteprinciple17a
----
-<p class="intro">
-  Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas. En los buenos formularios, se proporcionan tipos de entradas semánticas. Las claves deben cambiar para que coincidan con los tipos de entradas de los usuarios; los usuarios eligen una fecha en un calendario. Mantenga a su usuario informado. En las herramientas de validación, se le debe informar al usuario lo que debe hacer antes de enviar el formulario.
-</p>
+## Etiquete y nombre las entradas correctamente
 
+Es complicado completar formularios desde el celular. Los mejores formularios son aquellos que poseen menos entradas. En los buenos formularios, se proporcionan tipos de entradas semánticas. Las claves deben cambiar para que coincidan con los tipos de entradas de los usuarios; los usuarios eligen una fecha en un calendario. Mantenga a su usuario informado. En las herramientas de validación, se le debe informar al usuario lo que debe hacer antes de enviar el formulario.
 
-{% include shared/takeaway.liquid list=page.key-takeaways.label-and-name %}
-
-#### La importancia de las etiquetas
+### La importancia de las etiquetas
 
 A través del elemento `label`, se le proporcionan instrucciones al usuario sobre la
 información que se necesita en el elemento de un formulario.  Cada `label` se asocia con un
@@ -291,7 +256,9 @@ elemento de entrada al colocarla adentro del elemento `label` o al utilizar el a
 del objetivo táctil: el usuario puede tocar tanto la etiqueta como la entrada para
 enfocarse en el elemento de entrada.
 
-{% include_code src=_code/order.html snippet=labels %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
+</pre>
 
 #### Colocación y ajuste del tamaño de las etiquetas
 
@@ -310,12 +277,9 @@ comienza a escribir en el elemento.
 
 <input type="text" placeholder="MM-YYYY">
 
-{% highlight html%}
-<input type="text" placeholder="MM-YYYY" ...>
-{% endhighlight %}
 
+    <input type="text" placeholder="MM-YYYY" ...>
 
-{% include shared/remember.liquid title="Remember" list=page.notes.use-placeholders %}
 
 #### Uso de metadatos para habilitar la compleción automática
 
@@ -334,8 +298,9 @@ autocomplete en cada elemento de entrada.
 Por ejemplo, para indicarle al navegador que debe completar automáticamente el formulario con
 los nombres, las direcciones de correo electrónico y el número telefónico de los usuarios, debe utilizar lo siguiente:
 
-{% include_code src=_code/order.html snippet=autocomplete %}
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
+</pre>
 
 #### Valores de los atributos `name` y `autocomplete` de entrada recomendados
 
@@ -447,7 +412,6 @@ Los atributos `autocomplete` pueden ir acompañados del nombre de una sección, 
   </tbody>
 </table>
 
-{% include shared/remember.liquid list=page.remember.recommend-input %}
 
 #### El atributo `autofocus`
 
@@ -462,9 +426,8 @@ Tenga precaución al utilizar el atributo autofocus porque el teclado dejará de
 y, posiblemente, el carácter de retroceso no se podrá utilizar para la
 navegación.
 
-{% highlight html %}
-<input type="text" autofocus ...>
-{% endhighlight %}
+
+    <input type="text" autofocus ...>
 
 
 
@@ -478,9 +441,9 @@ La validación de datos en tiempo real no solo le permite mantener sus datos lim
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Aproveche los atributos de validación incorporados de los navegadores, como <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc.'
+- Aproveche los atributos de validación incorporados de los navegadores, como <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc.
 - Utilice JavaScript y la API de validación de restricciones para los requisitos de validación más complejos.
-- 'Esto le permitirá mostrar los errores de validación en tiempo real y, si el usuario intenta enviar un formulario no válido, podrá mostrarle todos los campos que debe corregir.'
+- Esto le permitirá mostrar los errores de validación en tiempo real y, si el usuario intenta enviar un formulario no válido, podrá mostrarle todos los campos que debe corregir.
 
 
 #### Uso de atributos para validar la entrada
@@ -600,7 +563,6 @@ las API de JavaScript también podrá verificar si el formulario es válido.
     </form>
     
 
-<!-- TODO: Verify note type! -->
 Note: Incluso si se posee la validación de entrada de parte del cliente, siempre es importante validar los datos en el servidor para garantizar la coherencia y la seguridad de sus datos.
 
 #### Uso de JavaScript para validación más compleja en tiempo real
@@ -651,7 +613,7 @@ en la segunda entrada para validar las dos entradas y configurar la respuesta
 apropiada.  Por ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
 ##### Evite el envío de formularios que no son válidos
@@ -661,7 +623,7 @@ datos no válidos, debe filtrar el evento de envío y utilizar `checkValidity()`
 en el elemento del formulario para determinar si el formulario es válido.  Por ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto"  %}
 </pre>
 
 #### Muestra de comentarios en tiempo real
@@ -713,13 +675,13 @@ el estilo no válido mientras escribe. Para evitar esto, puede combinar la CSS (
 JavaScript para mostrar solo los estilos no válidos cuando el usuario ya visitó el campo.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" lang=css %}
-</pre>
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" adjust_indentation="auto" %}
 </pre>
 
-<!-- TODO: Verify note type! -->
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
+</pre>
+
 Note: Debe mostrarle al usuario todos los problemas del formulario de una sola vez, en lugar de mostrárselos uno por uno.
 
 
@@ -735,7 +697,7 @@ Aunque `requestAutocomplete` se diseñó para ayudar a los usuarios a completar 
 
 ### TL;DR {: .hide-from-toc }
 - <code>requestAutocomplete</code>puede simplificar en gran medida el proceso de finalización del pago y mejorar la experiencia del usuario.
-- 'Si <code>requestAutocomplete</code> está disponible, oculte el formulario de finalización de pago y dirija a los usuarios directamente a la página de confirmación.'
+- Si <code>requestAutocomplete</code> está disponible, oculte el formulario de finalización de pago y dirija a los usuarios directamente a la página de confirmación.
 - Asegúrese de que en los campos de entrada se incluya el atributo adecuado de compleción automática.
 
 
@@ -749,40 +711,5 @@ tarjeta de crédito) desde el navegador, el cual los almacenan opcionalmente
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-
-#### Flujo de `requestAutocomplete`
-
-En la experiencia ideal, se mostrará el cuadro de diálogo`requestAutocomplete` en lugar de cargar la
-página en la que se muestra el formulario de finalización de pago. Si todo funciona correctamente, el usuario no debería ver
-el formulario.  Puede agregar fácilmente `requestAutocomplete` a los formularios existentes
-sin tener que cambiar los nombres de los campos.  Simplemente, agregue el atributo `autocomplete`
-a cada elemento del formulario que posea el valor adecuado y agregue la función
-`requestAutocomplete()` en el elemento del formulario. El navegador se encargará
-del resto.
-
-<img src="imgs/rac_flow.png" class="center" alt="Request autocomplete flow">
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
-</pre>
-
-La función `requestAutocomplete` que aparece en el elemento del `form` le indica al
-navegador que debe completar el formulario.  Como característica de seguridad, la función
-se debe activar a través de un gesto del usuario, como un toque o un clic con el mouse. Luego, se muestra un cuadro de diálogo
-en el que se solicita el permiso del usuario para completar los campos y para saber qué detalles
-desea incluir en el formulario.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
-</pre>
-
-Cuando `requestAutocomplete` finalice, la función ejecutará el evento
-`autocomplete` si se completó de forma exitosa, o bien `autocompleteerror` si no
-pudo completar el formulario.  Si se completó exitosamente y el formulario
-valida sus necesidades, simplemente envíelo y pase a la confirmación
-final.
-
-<!-- TODO: Verify note type! -->
-Note: Si solicita algún tipo de información personal o datos de tarjetas de crédito, asegúrese de que el servicio de la página se ofrezca a través de SSL.  De lo contrario, en el cuadro de diálogo se le advertirá al usuario que su información puede no estar segura.
 
 

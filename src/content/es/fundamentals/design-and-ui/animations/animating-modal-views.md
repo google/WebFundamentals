@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprenda a animar vistas modales en sus aplicaciones.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -14,12 +13,12 @@ description: Aprenda a animar vistas modales en sus aplicaciones.
 Las vistas modales se utilizan para mensajes importantes, y se pueden utilizar para bloquear la interfaz del usuario. Se debe tener precaución al utilizarlas, ya que pueden ser perturbadoras y pueden arruinar fácilmente la experiencia del usuario si se las usa en exceso. Sin embargo, en algunos casos son las vistas adecuadas, ya que cobran vida cuando se les agrega algún tipo de animación.
 
 ## TL;DR {: .hide-from-toc }
-- 'Las vistas modales se deben utilizar de forma moderada, ya que los usuarios se frustrarán si interrumpe su experiencia innecesariamente.'
+- Las vistas modales se deben utilizar de forma moderada, ya que los usuarios se frustrarán si interrumpe su experiencia innecesariamente.
 - Se puede agregar una escala a la animación para lograr un agradable efecto de 'colocación'.
-- 'Asegúrese de hacer desaparecer rápidamente la vista modal cuando el usuario la descarta, pero debe hacerla aparecer en la pantalla un poco más lentamente para que el usuario no se sorprenda.'
+- Asegúrese de hacer desaparecer rápidamente la vista modal cuando el usuario la descarta, pero debe hacerla aparecer en la pantalla un poco más lentamente para que el usuario no se sorprenda.
 
 
-<img src="imgs/gifs/dont-press.gif" alt="Animating a modal view." />
+<img src="images/dont-press.gif" alt="Animating a modal view." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">Ver el ejemplo</a>
 
@@ -40,7 +39,7 @@ La superposición modal debe estar alineada con la ventanilla, por lo que el atr
     }
     
 
-Este atributo posee un valor inicial de 0 de `opacity`, y por ello está oculto, pero luego también se deberá configurar `pointer-events` en `none` para que se puedan ejecutar los clics y los toques. Si esto no se realiza, se bloquearán todas las interacciones, y la página completa dejará de responder. Finalmente, puesto que se animarán los atributos `opacity` y `transform`, estos deberán marcarse con`will-change` como modificaciones (consulte también [Uso de la propiedad will-change]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#using-the-will-change-property)).
+Este atributo posee un valor inicial de 0 de `opacity`, y por ello está oculto, pero luego también se deberá configurar `pointer-events` en `none` para que se puedan ejecutar los clics y los toques. Si esto no se realiza, se bloquearán todas las interacciones, y la página completa dejará de responder. Finalmente, puesto que se animarán los atributos `opacity` y `transform`, estos deberán marcarse con`will-change` como modificaciones (consulte también [Uso de la propiedad will-change](animations-and-performance#using-the-will-change-property)).
 
 Cuando la vista esté visible, esta deberá aceptar las interacciones y deberá tener un valor de 1 de `opacity`:
 
@@ -58,7 +57,7 @@ Ahora bien, cada vez que se requiera la vista modal, podrá utilizar JavaScript 
     
 
 En este punto, la vista modal aparecerá sin ninguna animación, por lo que ahora se podrá agregar 
-(consulte también [Aceleración personalizada]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html)):
+(consulte también [Aceleración personalizada](custom-easing)):
 
 
     .modal {
