@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Go offroad and create totally custom animations for your projects.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-08-23 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -29,12 +28,12 @@ For comparison, here are two curves: a typical ease-in-out curve and a custom cu
 
 <div class="attempt-left">
   <figure>
-    <img src="imgs/ease-in-out-markers.png" alt="Ease-in-out animation curve." />
+    <img src="images/ease-in-out-markers.png" alt="Ease-in-out animation curve." />
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img src="imgs/custom.png" alt="Custom animation curve." />
+    <img src="images/custom.png" alt="Custom animation curve." />
   </figure>
 </div>
 

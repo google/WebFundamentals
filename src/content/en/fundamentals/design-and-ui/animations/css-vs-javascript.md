@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: You can animate with CSS or JavaScript. Which should you use, and why?
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-08-25 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -32,6 +31,8 @@ Most basic animations can be created with either CSS or JavaScript, but the amou
 </div>
 
 Alternatively, if you're already using a JavaScript framework that includes animation functionality, such as via jQuery's [`.animate()`](https://api.jquery.com/animate/) method or [GreenSock's TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), then you may find it more convenient overall to stick with that for your animations.
+
+<div class="clearfix"></div>
 
 ## Animate with CSS
 

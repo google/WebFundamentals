@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to animate modal views in your apps.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-08-24 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -26,6 +25,7 @@ Modal views are for important messages, and for which you have very good reasons
 * Adding scale to the animation gives a nice "drop on" effect.
 * Get rid of the modal view quickly when the user dismisses it. However, bring the modal view onto the screen a little more slowly so that it doesn't surprise the user.
 
+<div class="clearfix"></div>
 
 The modal overlay should be aligned to the viewport, so set its `position` to `fixed`:
 

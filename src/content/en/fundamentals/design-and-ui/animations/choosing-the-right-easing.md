@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Choose the appropriate easing for your project, whether that's easing in, out, or both. Maybe even use bounces for extra fun!
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-08-23 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -17,11 +16,13 @@ Having discussed the various options available for easing in animations, what ki
 * Be sure to use the animation duration; ease-outs and ease-ins should be 200ms-500ms, whereas bounces and elastic eases should clock in a longer duration of 800ms-1200ms.
 
 
+<img src="images/quintic-ease-out-markers.png" alt="A Quintic ease-out animation curve" style="max-width: 300px" class="attempt-right"/>
+
 Generally speaking, an **ease-out** will be the right call, and certainly a good default. It is quick to start, giving your animations a feeling of responsiveness, which is desirable, but with a nice slowdown at the end.
 
 There is a group of well-known ease-out equations beyond the one specified with the `ease-out` keyword in CSS, which range in their "aggressiveness." For a fast ease-out effect, consider a [Quintic ease-out](http://easings.net/#easeOutQuint).
 
-<img src="images/quintic-ease-out-markers.png" alt="A Quintic ease-out animation curve" style="max-width: 300px"/>
+
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">See a Quintic ease-out animation.</a>
 

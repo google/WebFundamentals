@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Touchscreens are available on more and more devices,  from phones up to desktop screens. Your app should respond to their touch  in intuitive and beautiful ways.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-06 #}
 {# wf_published_on: 2014-01-01 #}
 
@@ -17,6 +16,8 @@ description: Touchscreens are available on more and more devices,  from phones u
 </div>
 
 Touchscreens are available on more and more devices, ranging from phones up to desktop screens. When your users choose to interact with your UI, your app should respond to their touch in intuitive and beautiful ways.
+
+<div class="clearfix"></div>
 
 ## Stateful elements respond to touch 
 
@@ -34,7 +35,7 @@ Simply altering the color of elements as users touch parts of your UI gives a ba
 The fastest way to support touch is to change the UI in response to a DOM
 element’s change in state.
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 - Make your site feel snappy and responsive: change the UI for each state <code>:hover</code>, <code>:active</code> and <code>:focus</code>.
 - Don’t override a browser’s default responses to touch and focus unless you are implementing your own UI changes.
 - Disable text selection on elements users will touch, unless there’s a good reason why users might need to copy / select the text.
@@ -104,7 +105,7 @@ Once you add styles for the different states, you'll notice that most browsers
 implement their own styles to respond to a user’s touch, you should override
 these defaults when you've added your own styles.
 
-Warning: Only override browser styles if you are implementing your own!
+Caution: Only override browser styles if you are implementing your own!
 
 
 ##### Override Tap Highlight Styles
@@ -231,18 +232,23 @@ one of two camps:
 
 There are trade offs to be had with both.
 
+![Example GIF of touch on document](images/touch-document-level.gif){: .attempt-right }
+
 If the user will only be able to interact with one element, you might want
 all touch events to be given to that one element, as long as the gesture
 initially started on the element itself. For example, moving a finger off
 the swipable element can still control the element.
 
-![Example GIF of touch on document](images/touch-document-level.gif)
+<div class="clearfix"></div>
+
+![Example GIF of touch on element](images/touch-element-level.gif){: .attempt-right }
 
 If, however, you expect users to interact with multiple elements at the same
 time (using multi-touch), you should restrict the touch to the specific
 element.
 
-![Example GIF of touch on element](images/touch-element-level.gif)
+<div class="clearfix"></div>
+
 
 ### TL;DR
 - For full device support, handle touch, mouse and Pointer Events.
@@ -339,12 +345,13 @@ feature in Chrome DevTools to show how the touch events behave:
 
 <img src="images/scroll-bottleneck-devtool.png" alt="Enable Scroll Bottleneck in DevTools">
 
+![Illustrating Binding Touch Events to Document in touchstart](images/scroll-bottleneck.gif){: .attempt-right }
+
 With this enabled you can see where touch events are bound and ensure your logic for adding
 and removing listeners is working as you'd expect.
 
-![Illustrating Binding Touch Events to Document in touchstart](images/scroll-bottleneck.gif)
+<div class="clearfix"></div>
 
-<div style="clear: both;"></div>
 
 ### Handle Multi-Element Interaction
 

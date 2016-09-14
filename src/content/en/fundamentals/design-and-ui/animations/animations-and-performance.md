@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Animations must perform well, otherwise they will negatively impact the user experience.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-08-23 #}
 {# wf_published_on: 2014-08-08 #}
 
