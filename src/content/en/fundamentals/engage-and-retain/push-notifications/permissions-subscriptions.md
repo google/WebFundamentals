@@ -12,7 +12,7 @@ description: Requesting permission for and subscribing users to notifications re
 Requesting permission for and subscribing users to notifications requires as
 light a touch as showing them notifications.
 
-## Check permissions {#check-permissions}
+## Check permissions {: #check-permissions }
 
 Always check for an existing permission when the page loads. If the permission
 has already been granted you'll be able to start sending notifications
@@ -44,7 +44,7 @@ Note: For the sake of clarity, this example excludes a number of feature checks 
     }
     
 
-## Avoid page-load subscription requests {#avoid-page-load-requests}
+## Avoid page-load subscription requests {: #avoid-page-load-requests }
 
 Notice one thing the previous example does _not_ do. It does not call 
 `pushManager.subscribe()`, though this would seem to be the logical response to
@@ -53,7 +53,7 @@ But, since you don't yet know anything about your users, and they may not
 know anything about you, it's difficult to send them pricise or relevant
 messages.
 
-## Requesting permission {#requesting-permission}
+## Requesting permission {: #requesting-permission }
 
 <figure class="attempt-right">
   <img src="images/news-prompt.png" alt="First ask before sending notifications and explain why.">
@@ -98,7 +98,7 @@ This is the result in Chrome.
 
 ![Chrome prompts for permissions.](images/news-permissions.png){:width="296px"}
 
-## Trigger from a specific action {#trigger-from-action}
+## Trigger from a specific action {: #trigger-from-action }
 
 <figure class="attempt-right">
   <img src="images/airline-prompt.png" alt="A prompt with a specific action.">
@@ -115,7 +115,7 @@ notification permissions after the user chooses to opt in.
 
 <div style="clear:both;"></div>
 
-## Provide a place to manage notifications {#manage-notifications}
+## Provide a place to manage notifications {: #manage-notifications }
 
 Make it easy for users to change and even disable notifications for your site.
 It prevents users from killing notifications at the browser or device level.
@@ -144,7 +144,7 @@ orbit of a Soyuz capsule.
 <div style="clear:both;"></div>
 
 
-## Passing a subscription to the server {#passing-subscription}
+## Passing a subscription to the server {: #passing-subscription }
 
 After getting a user's permission to send notifications and setting the state of
 related controls, you need to send the subscription information (called the
