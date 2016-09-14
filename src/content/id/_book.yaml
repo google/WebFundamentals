@@ -1,0 +1,23 @@
+# ATTENTION - changes made to this file not in GitHub will be over written! 
+upper_tabs:
+  - name: Fundamentals
+    heading: Dasar-Dasar Web
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/fundamentals/
+  - name: Tools
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/tools/
+  - name: Updates
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/updates/
+  - name: Studi Kasus
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/showcase/
