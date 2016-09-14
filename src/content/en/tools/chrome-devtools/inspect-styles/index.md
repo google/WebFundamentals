@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Inspect and edit the HTML and CSS of your pages.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-01-28 #}
 {# wf_published_on: 2015-04-13 #}
 
@@ -26,8 +25,6 @@ the Chrome DevTools Elements panel.
 
 ## Live-edit a DOM node
 
-{# wf_related_guide "Edit the DOM" #}
-
 To live-edit a DOM node, simply double-click a 
 [selected element](#inspect-an-element) and make changes:
 
@@ -40,8 +37,6 @@ you can modify the DOM tree using JavaScript; the browser engine can try
 to correct invalid author markup and produce an unexpected DOM.
 
 ## Live-edit a style
-
-{# wf_related_guide "Edit Styles" #}
 
 Live-edit style property names and values in the **Styles** pane. All
 styles are editable, except the ones that are greyed out (as is the case

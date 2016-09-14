@@ -15,3 +15,7 @@ The network is the infrastructure between the servers hosting content and the cl
 While the server has a big connection most clients are limited in theirs.
 The total network connection is limited to the slowest point in the entire infrastructure between two points.
 Network issues are often seen in the form of a slow or staggered load.
+
+* [Measure Resource Loading Times](resource-loading)
+* [Understand Resource Timing](understanding-resource-timing)
+* [Optimize Performance Under Varying Network Conditions](network-conditions)

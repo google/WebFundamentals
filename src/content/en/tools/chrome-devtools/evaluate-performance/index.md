@@ -9,6 +9,18 @@ description: Focus on the user first. How users perceive delays far outweighs an
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Don't assume performance is as simple as following a simple set of dos and don'ts. Rules can change, and it's easy to use rules incorrectly. Focus on the user first. How users perceive delays far outweighs any performance guidelines.
+## RAIL
 
 RAIL is a user-centric performance model and stands for Response, Animation, Idle, and Load. Learn how to test performance following the RAIL model and using your browser profiling tools.
+
+* [The RAIL Performance Model](rail)
+
+## Timeline Recordings
+
+The Timeline panel is the main tool in DevTools for analyzing performance.
+Basically, you start a Timeline recording, perform the actions that you want
+to analyze, stop recording, and then use the Timeline panel's detailed
+information to optimize your page.
+
+* [How to Use the Timeline Tool](timeline-tool)
+* [Timeline Event Reference](performance-reference)

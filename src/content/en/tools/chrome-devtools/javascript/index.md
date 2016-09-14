@@ -2,25 +2,43 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools includes powerful breakpoint features that help you find and fix logic errors in your JavaScript code.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2015-04-13 #}
 
-# Debug with Breakpoints {: .page-title }
+# Inspect and Debug JavaScript {: .page-title }
 
-{% include "web/_shared/contributors/megginkearney.html" %}
-{% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
-Chrome DevTools includes powerful breakpoint features that help you find and fix logic errors in your JavaScript code. Use different breakpoint types to control exactly what conditions can trigger a pause in script execution.
+## Debug JavaScript
 
-As you develop your web page,
-you will want to locate and correct bugs in your JavaScript.
-But in an executing script,
-the erroneous code will almost certainly be processed
-before you can identify it.
+When your JavaScript is buggy, you can set breakpoints to pause execution
+of your code, and then use DevTools' debugger to step through your code
+one statement at a time. You can also use the Watch Variables feature to
+monitor the value of specific variables over time.
 
-Pause running JavaScript at various points
-so you can determine its progress or examine its variable values.
-Chrome DevTools breakpoints let you pause your code
-without having to use brute-force statements
-such as `alert("ok so far")` or `alert("x = " + x)`.
+Related Guides:
+
+* [Set Breakpoints](add-breakpoints)
+* [Step Through Code](step-code)
+* [Watch Variables](watch-variables)
+
+## Improve readability
+
+Many sites use minification to reduce the network payload of their
+JavaScript files at the expense of readability. DevTools has a
+pretty-print utility that reformats minified code into a more readable
+format.
+
+Related Guides:
+
+* [Pretty-Print Minified JavaScript](pretty-print)
+
+## Run snippets of JavaScript from any page
+
+Many developers use bookmarklets to run small snippets of utility code from
+any page. Another approach is Snippets, which you author and run from within
+DevTools.
+
+Related Guides:
+
+* [Run Snippets of Code From Any Page](snippets)
