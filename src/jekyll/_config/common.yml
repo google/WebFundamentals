@@ -70,6 +70,6 @@ github:
   root: https://github.com/Google/WebFundamentals
   content: tree/master/src
 custom:
-langs_available: ['ar', 'de', 'es', 'fr', 'it', 'iw', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
+langs_available: ['ar', 'de', 'es', 'fr', 'id', 'it', 'iw', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
 # primary language, source of translations.
 primary_lang: en
