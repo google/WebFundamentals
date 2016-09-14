@@ -40,7 +40,7 @@ Here's a simple example letting you autocapitalize sentences in a text area:
 
 The following table shows the different states that an input element can be in:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table class="">
 <thead>
 <tr>
 <th></th>

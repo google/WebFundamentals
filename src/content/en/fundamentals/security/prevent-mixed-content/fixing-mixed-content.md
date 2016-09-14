@@ -3,7 +3,7 @@ book_path: /web/fundamentals/_book.yaml
 description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 
 {# wf_published_on: 2015-09-28 #}
-{# updated_on: 2016-08-24 #}
+{# wf_updated_on: 2016-08-24 #}
 
 # Preventing Mixed Content {: .page-title }
 
@@ -16,8 +16,8 @@ Finding and fixing mixed content is an important task, but it can be time-consum
 ## TL;DR {: .hide-from-toc }
 
 * Always use https:// URLs when loading resources on your page.
-* Use the <code>Content-Security-Policy-Report-Only</code> header to monitor mixed content errors on your site.
-* Use the <code>upgrade-insecure-requests</code> CSP directive to protect your visitors from insecure content.
+* Use the `Content-Security-Policy-Report-Only` header to monitor mixed content errors on your site.
+* Use the `upgrade-insecure-requests` CSP directive to protect your visitors from insecure content.
 
 ## Find and fix mixed content 
 

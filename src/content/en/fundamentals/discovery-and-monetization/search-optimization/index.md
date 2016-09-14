@@ -170,9 +170,8 @@ Before learning how to control search results, understanding how search engines 
 
 **Crawling** is when a search engine bot fetches your webpage to analyse its content. The content will be stored in the search engine's database and may be used for populating search result details, ranking pages, and discovering new pages by following links.  
 
-**Indexing** is when a search engine stores a website's URL and any associated information in its database so it will be ready to be served as a search result.  
+**Indexing** is when a search engine stores a website's URL and any associated information in its database so it will be ready to be served as a search result. 
 
-<!-- TODO: Verify note type! --> 
 Note: Many people confuses crawling and indexing. Prohibiting crawling doesn't
 mean the page won't show up in the search results. For example, if a third-party
 website has a link to one of your webpages it may still be indexed even though
@@ -222,8 +221,8 @@ Learn more about each search engine's bots at their help pages:
 * [Bing](http://www.bing.com/webmaster/help/how-to-create-a-robots-txt-file-cb7c31ec)
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
 
-<!-- TODO: Verify note type! -->
-Note: <code>robots.txt</code> is only required <b>if</b> you want to control the way your site is crawled. Do not return response code 500 for the url: <code>/robots.txt</code>. That will terminate all subsequent crawls for the entire host resulting in empty search result details.
+
+Note: `robots.txt` is only required **if** you want to control the way your site is crawled. Do not return response code 500 for the url: `/robots.txt`. That will terminate all subsequent crawls for the entire host resulting in empty search result details.
 
 #### Test robots.txt
 
@@ -290,8 +289,7 @@ To learn more about X-Robots-Tag:
 * [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
-<!-- TODO: Verify note type! -->
-Note: If you disallow crawls using robots.txt,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your webpages by following links from other websites.</li><li>Search engines can't detect <code>noindex</code> because it can't crawl.</li></ul>
+Note: If you disallow crawls using `robots.txt`,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your webpages by following links from other websites.</li><li>Search engines can't detect <code>noindex</code> because it can't crawl.</li></ul>
 
 Don't expect robots.txt to control search indexes.
 
@@ -319,7 +317,6 @@ In this case, you don't want search engines to index those pages.
 * Use `noindex` meta tags for HTML pages.
 * Use `X-Robots-Tag: noindex` for non HTML resources (images, pdf, etc).
 
-<!-- TODO: Verify note type! -->
 Note: Wondering if you should prohibit crawling JavaScript and Stylesheet files? <a href='http://googlewebmastercentral.blogspot.com/2014/05/understanding-web-pages-better.html' target='_blank'>Google tries its best to understand them</a> so that it can find contents available through modern technologies such as AJAX. You should definitely allow crawlers to crawl JavaScript.
 
 #### Restricted access from authorized people

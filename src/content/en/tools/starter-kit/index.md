@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Web Starter Kit is boilerplate and tooling for multi-device development
 
+{# wf_published_on: 2015-01-01 #}
+{# wf_updated_on: 2016-09-12 #}
+
 # Web Starter Kit {: .page-title }
 
 [Download Web Starter Kit (beta)](https://github.com/google/web-starter-kit/releases/latest){: .button .button-primary }

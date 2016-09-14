@@ -5,7 +5,7 @@ description: Push Messaging and Notifications are Landing in Chrome 42.
 
 {# wf_updated_on: 2015-10-15 #}
 {# wf_published_on: 2015-03-11 #}
-{# wf_tags: news,pushmessaging,notifications,serviceworker #}
+{# wf_tags: news,webpush,notifications,serviceworker #}
 
 # Push Notifications on the Open Web {: .page-title }
 

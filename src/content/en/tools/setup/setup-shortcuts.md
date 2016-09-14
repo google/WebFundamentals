@@ -41,15 +41,10 @@ aliases](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.
 
 These are a few commands that you may find useful.
 
-<table class="mdl-data-table tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Command">Command</th>
-      <th data-th="Alias">Alias</th>
+      <th colspan="2" data-th="Command">Command &amp; Alias</th>
     </tr>
   </thead>
   <tbody>

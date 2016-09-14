@@ -4,7 +4,7 @@ description: The support for cut and copy commands allows you to programmaticall
 
 {# wf_updated_on: 2015-04-14 #}
 {# wf_published_on: 2015-04-14 #}
-{# wf_tags: news,cutandcopy,execCommand #}
+{# wf_tags: news,cutandcopy,execcommand #}
 
 # Cut and Copy Commands {: .page-title }
 

@@ -93,7 +93,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
 
 ### JavaScript
 
-<table class="mdl-data-table">
+<table>
   <thead>
     <tr>
       <th width="20%" data-th="Compiler">Compiler</th>
@@ -132,7 +132,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
 
 ### CSS
 
-<table class="mdl-data-table">
+<table>
   <thead>
     <tr>
       <th width="20%" data-th="Compiler">Compiler</th>

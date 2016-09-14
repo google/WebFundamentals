@@ -10,8 +10,7 @@ description: Inspect and manage storage, caches, and resources.
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Use the <strong>Application</strong> panel to inspect and
+Use the **Application** panel to inspect and
 manage storage, caches, and resources.
 
-<!-- TODO: Verify note type! -->
-Note: The <strong>Resources</strong> panel has been renamed to the <strong>Application</strong> panel. All of the features from the Resources panel are still available in the Application panel.
+Note: The **Resources** panel has been renamed to the **Application** panel. All of the features from the Resources panel are still available in the Application panel.

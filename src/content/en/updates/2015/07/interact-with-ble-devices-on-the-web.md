@@ -4,7 +4,7 @@ description: A Web API has been added to Chrome that makes it possible for websi
 
 {# wf_updated_on: 2016-07-26 #}
 {# wf_published_on: 2015-07-21 #}
-{# wf_tags: news,Bluetooth,IoT,WebBluetooth,PhysicalWeb,origintrials #}
+{# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
 
 # Interact with Bluetooth devices on the Web {: .page-title }

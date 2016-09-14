@@ -10,6 +10,7 @@ description: By executing code one line or one function at a time, you can obser
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/pbakaus.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
 By executing code one line or one function at a time, you can observe changes in the data and in the page to understand exactly what is happening. You can also modify data values used by the script, and you can even modify the script itself.
 
 *Why is this variable value 20 instead of 30? Why doesn't that line of code seem to have any effect? Why is this flag true when it should be false?* Every developer faces these questions, and steps through code to find out.
@@ -29,7 +30,7 @@ After [setting breakpoints](add-breakpoints), return to the page and use it norm
 
 All step options are represented through clickable icons ![Breakpoints button bar](imgs/image_7.png){:.inline} in the sidebar, but can also be triggered via shortcut. Here's the rundown:
 
-<table class="mdl-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Icon/Button">Icon/Button</th>
@@ -86,14 +87,14 @@ Near the top of the sidebar is the **Call Stack** section. When the code is paus
 
 ### Example
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="imgs/image_15.png" alt="Call stack">
-  </div>
-  <div class="mdl-cell mdl-cell--8-col">
-    An initial onclick event at line 50 in the <strong>index.html</strong> file called the <code>setone()</code> function at line 18 in the <strong>dgjs.js</strong> JavaScript file, which then called the <code>setall()</code> function at line 4 in the same file, where execution is paused at the current breakpoint.
-  </div>
-</div>
+<img src="imgs/image_15.png" alt="Call stack" class="attempt-left">
+
+An initial onclick event at line 50 in the `index.html` file called the 
+`setone()` function at line 18 in the `dgjs.js` JavaScript file, which then
+called the `setall()` function at line 4 in the same file, where execution is
+paused at the current breakpoint.
+
+<div class="clearfix"></div>
 
 ### Enable the async call stack
 
@@ -133,12 +134,13 @@ exact functioning of the code is not important, what is important is
 that the code in the first screenshot uses anonymous functions, while
 the second uses named functions.
 
-In the call stack in the first screenshot, the top two functions are both just titled
-`(anonymous function)`. In the second screenshot, the top two functions
-are named, which makes it easier to understand the program flow at a glance.
-When you are working with numerous script files, including third-party
-libraries and frameworks, and your call stack is five or ten calls deep,
-it is much easier to understand the call stack flow when functions are named.
+In the call stack in the first screenshot, the top two functions are both
+just titled `(anonymous function)`. In the second screenshot, the top two
+functions are named, which makes it easier to understand the program flow at
+a glance. When you are working with numerous script files, including
+third-party libraries and frameworks, and your call stack is five or ten
+calls deep, it is much easier to understand the call stack flow when
+functions are named.
 
 Call stack with anonymous functions:
 
@@ -202,14 +204,12 @@ Try modifying values, then continue execution to see how it changes the outcome 
 
 #### Example
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="imgs/image_17.png" alt="Console Drawer">
-  </div>
-  <div class="mdl-cell mdl-cell--8-col">
-    We reveal that the value of the parameter `dow` is currently 2, but manually change it to 3 before resuming execution.
-  </div>
-</div>
+<img src="imgs/image_17.png" alt="Console Drawer" class="attempt-left">
+
+We reveal that the value of the parameter `dow` is currently 2, but manually
+change it to 3 before resuming execution.
+
+<div class="clearfix"></div>
 
 ## Live editing
 
@@ -221,14 +221,11 @@ Now, you can resume execution; your modified script will execute in place of the
 
 #### Example
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="imgs/image_18.png" alt="Live Editing" >
-  </div>
-  <div class="mdl-cell mdl-cell--8-col">
-    We suspect that the parameter <code>dow</code> is, in every case, off by +1 when it is passed to the function <code>setone()</code> – that is, the value of <code>dow</code>, as received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly test whether decrementing the passed value confirms that this is the problem, we add line 17 at the beginning of the function, commit with <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd>  and resume.
-  </div>
-</div>
+<img src="imgs/image_18.png" alt="Live Editing" class="attempt-left">
 
-
-
+We suspect that the parameter `dow` is, in every case, off by +1 when it is
+passed to the function `setone()` – that is, the value of `dow<`, as 
+received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly 
+test whether decrementing the passed value confirms that this is the problem,
+we add line 17 at the beginning of the function, commit with 
+<kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd>  and resume.

@@ -4,7 +4,7 @@ description: A small set of changes have landed in Chrome 45 that will make it e
 
 {# wf_updated_on: 2015-07-20 #}
 {# wf_published_on: 2015-07-20 #}
-{# wf_tags: news,Android,touch #}
+{# wf_tags: news,android,touch #}
 
 # Using rotationAngle and touchRadius {: .page-title }
 

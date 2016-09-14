@@ -333,7 +333,6 @@ to hide or display the **Filters** pane.
 Use the content type buttons to only display resources of the selected 
 content type. 
 
-<!-- TODO: Verify note type! -->
 Note: Hold <kbd>Cmd</kbd> (Mac) or <kbd>Ctrl</kbd> (Windows/Linux) and then click to enable multiple filters simultaneously.
 
 ![multiple content type filters selected 

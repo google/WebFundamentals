@@ -60,7 +60,6 @@ The memory graph starts with a root, which may be the `window` object of the bro
 
 Whatever is not reachable from the root gets GC.
 
-<!-- TODO: Verify note type! -->
 Note: Both the Shallow and Retained size columns represent data in bytes.
 
 ## Objects retaining tree

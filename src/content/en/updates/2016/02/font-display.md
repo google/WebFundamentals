@@ -33,7 +33,7 @@ To mitigate some of the risk of a slow font download, most browsers implement a
 timeout after which a fallback font will be used. This is a useful technique but
 unfortunately browsers differ on the actual implementation.
 
-<table class="mdl-data-table mdl-js-data-table" style="width: 100%">
+<table>
   <thead>
     <tr>
       <th data-th="Browser">Browser</th>

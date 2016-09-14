@@ -33,7 +33,6 @@ GPS chips and accelerometers can be difficult to test since most desktops don't 
   </div>
 </div>
 
-<!-- TODO: Verify note type! -->
 Note: If your app detects sensors onload using JavaScript (such as Modernizr), make sure that you reload the page after enabling sensor emulators.
 
 ## Override geolocation data

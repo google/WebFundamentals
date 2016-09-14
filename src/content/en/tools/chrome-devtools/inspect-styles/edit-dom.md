@@ -15,9 +15,9 @@ The DOM tree view in the Chrome DevTools Elements panel displays the DOM structu
 
 
 ## TL;DR
-- 'The DOM defines your page structure. Each DOM node is a page element, for example, a header node, paragraph node.'
+- The DOM defines your page structure. Each DOM node is a page element, for example, a header node, paragraph node.
 - Live-edit the content and structure of your pages through the rendered DOM.
-- 'But remember, you can''t modify source files through DOM changes in the Elements panel. Reloading the page erases any DOM tree modifications.'
+- But remember, you can't modify source files through DOM changes in the Elements panel. Reloading the page erases any DOM tree modifications.
 - Watch for changes to the DOM using DOM breakpoints.
 
 
@@ -140,7 +140,6 @@ To delete a DOM node:
 * Open the [more actions menu](#more-actions) and select **Delete Node**.
 * Select the node and press the <kbd>Delete</kbd> key.
 
-<!-- TODO: Verify note type! -->
 Note: If you delete a node by accident, <kbd class='kbd'>Ctrl</kbd> + <kbd class='kbd'>Z</kbd> (or <kbd class='kbd'>Cmd</kbd> + <kbd class='kbd'>Z</kbd> on Mac) to undo your last action.
 
 ## Show more actions menu {#more-actions}
@@ -245,11 +244,10 @@ same element, the element is listed repeatedly.
 
 Click the expander arrow next to an element identifier to see the properties of the event handler. The Event Listeners pane lists the following properties for each listener:
 
-<table class="mdl-data-table">
+<table class="responsive">
   <thead>
     <tr>
-      <th>Event Listener Properties</th>
-      <th>Description</th>
+      <th colspan="2">Event Listener Properties &amp; Description</th>
     </tr>
   </thead>
   <tbody>
@@ -264,8 +262,7 @@ Click the expander arrow next to an element identifier to see the properties of 
   </tbody>
 </table>
 
-<!-- TODO: Verify note type! -->
-Note: Many Chrome extensions add their own event listeners onto the DOM. If you see a number of event listeners that aren't set by your code, you may want to reopen your page in an <a href='https://support.google.com/chrome/answer/95464?hl=en'>Incognito window</a>. Incognito windows prevent extensions from running by default.
+Note: Many Chrome extensions add their own event listeners onto the DOM. If you see a number of event listeners that aren't set by your code, you may want to reopen your page in an [Incognito window](https://support.google.com/chrome/answer/95464). Incognito windows prevent extensions from running by default.
 
 ### View ancestor event listeners
 

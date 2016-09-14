@@ -4,7 +4,7 @@ description: Web Push now supports payloads! Find out how to take advantage of t
 
 {# wf_updated_on: 2016-03-13 #}
 {# wf_published_on: 2016-03-13 #}
-{# wf_tags: notifications,pushmessaging,webpush,payload,encryption,chrome50 #}
+{# wf_tags: notifications,webpush,payload,encryption,chrome50 #}
 
 # Web Push Payload Encryption {: .page-title }
 

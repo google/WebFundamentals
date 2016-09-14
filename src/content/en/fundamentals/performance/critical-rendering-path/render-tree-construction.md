@@ -42,8 +42,7 @@ To construct the render tree, the browser roughly does the following:
 1. For each visible node, find the appropriate matching CSSOM rules and apply them.
 1. Emit visible nodes with content and their computed styles.
 
-<!-- TODO: Verify note type! -->
-Note: As a brief aside, note that "visibility: hidden" is different from "display: none". The former makes the element invisible, but the element still occupies space in the layout (that is, it's rendered as an empty box), whereas the latter (display: none) removes the element entirely from the render tree such that the element is invisible and is not part of the layout.
+Note: As a brief aside, note that `visibility: hidden` is different from `display: none`. The former makes the element invisible, but the element still occupies space in the layout (that is, it's rendered as an empty box), whereas the latter (`display: none`) removes the element entirely from the render tree such that the element is invisible and is not part of the layout.
 
 The final output is a render that contains both the content and style information of all the visible content on the screen.  **With the render tree in place, we can proceed to the "layout" stage.**
 

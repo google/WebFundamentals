@@ -4,7 +4,7 @@ description: Chrome on Android now allows mobile sites to present to Google Cast
 
 {# wf_updated_on: 2015-12-17 #}
 {# wf_published_on: 2015-12-17 #}
-{# wf_tags: news,audio,video,media,second_screen #}
+{# wf_tags: news,audio,video,media,secondscreen #}
 {# wf_featured_image: /web/updates/images/2015/11/presentation-api/featured.jpg #}
 
 # Google Cast for Chrome on Android {: .page-title }

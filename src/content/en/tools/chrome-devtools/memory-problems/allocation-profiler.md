@@ -24,7 +24,6 @@ The tool takes heap snapshots periodically throughout the recording (as frequent
 
 ![Allocation profiler](imgs/object-tracker.png)
 
-<!-- TODO: Verify note type! -->
 Note: The number after the @ is an object ID that persists among multiple snapshots taken. This allows precise comparison between heap states. Displaying an object's address makes no sense, as objects are moved during garbage collections.
 
 ## Enable allocation profiler
