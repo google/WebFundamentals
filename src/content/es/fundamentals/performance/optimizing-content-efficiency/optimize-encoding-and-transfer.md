@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Una vez eliminados todos los recursos innecesarios, hay que reducir el tamaño total del resto de recursos que el navegador tiene que descargar. Para la compresión se pueden utilizar algoritmos de compresión (GZip) genéricos y específicos del tipo de contenido.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -81,7 +80,7 @@ Piensa en la página HTML sencilla que hemos visto anteriormente y en los tres t
 * Un compresor de CSS `inteligente` podría detectar que estamos utilizando una forma poco eficaz de definir reglas para `.awesome-container` y reducir las dos declaraciones en una sin afectar a ningún otro estilo, con lo que aún ahorraríamos más bytes.
 * El espacio en blanco (espacios y tabulaciones) es una convención de los desarrolladores en HTML, CSS y JavaScript. Un compresor adicional podría quitar todas las tabulaciones y todos los espacios.
 
-^
+
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La tarea de obtener un elemento de la red es lenta y cara: las respuestas de gran tamaño suponen muchos recorridos de ida y vuelta entre el cliente y el servidor, y el proceso se dilata cuando están disponibles y el navegador puede procesarlas. Además, suponen costes de datos para el visitante. Por lo tanto, la capacidad de almacenar en memoria caché y reutilizar recursos obtenidos anteriormente es un aspecto esencial para optimizar el rendimiento.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 

@@ -1,15 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A menudo la mayoría de bytes descargados en las páginas web se corresponden a imágenes, que frecuentemente también ocupan una gran cantidad de espacio visual. Por lo tanto, la optimización de las imágenes aporta el máximo ahorro de bytes y permite mejorar al máximo el rendimiento en el sitio web: cuantos menos bytes tenga que descargar el navegador, menos competencia se producirá en el ancho de banda del cliente y más rápidamente podrá el navegador renderizar contenido útil en la pantalla.
+description: A menudo la mayoría de bytes descargados en las páginas web se corresponden a imágenes, que frecuentemente también ocupan una gran cantidad de espacio visual. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Optimizar imágenes {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
 
 
 A menudo la mayoría de bytes descargados en las páginas web se corresponden a imágenes, que frecuentemente también ocupan una gran cantidad de espacio visual. Por lo tanto, la optimización de las imágenes aporta el máximo ahorro de bytes y permite mejorar al máximo el rendimiento en el sitio web: cuantos menos bytes tenga que descargar el navegador, menos competencia se producirá en el ancho de banda del cliente y más rápidamente podrá el navegador renderizar contenido útil en la pantalla.
@@ -48,17 +46,17 @@ Si llegas a la conclusión de que la mejor forma de conseguir el efecto deseado 
 
 &nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Imagen vectorial</b>
-    <img class="center" src="images/vector-zoom.png" alt="Ampliación de una imagen vectorial">
-  </div>
+<figure class="attempt-left">
+  <img  src="images/vector-zoom.png" alt="Ampliación de una imagen vectorial">
+  <figcaption>Imagen vectorial</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/raster-zoom.png" alt="Ampliación de una imagen de mapa de bits">
+  <figcaption>Imagen de mapa de bits</figcaption>
+</figure>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Imagen de mapa de bits</b>
-    <img src="images/raster-zoom.png" alt="Ampliación de una imagen de mapa de bits">
-  </div>
-</div>
+<div class="clearfix"></div>
+
 
 * Los [gráficos vectoriales](http://es.wikipedia.org/wiki/Gr%C3%A1fico_vectorial) utilizan líneas, puntos y polígonos para representar una imagen.
 * Las [imágenes de mapa de bits](http://es.wikipedia.org/wiki/Imagen_de_mapa_de_bits) representan una imagen mediante la codificación de los valores concretos de cada píxel dentro de una cuadrícula rectangular.

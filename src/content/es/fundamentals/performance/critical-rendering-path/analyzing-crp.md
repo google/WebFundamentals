@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Para identificar y resolver los embudos de rendimiento de la ruta de publicación importante, es necesario conocer a fondo las dificultades habituales. Vamos a realizar un análisis práctico para extraer patrones de rendimiento habituales que te ayudarán a optimizar las páginas.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

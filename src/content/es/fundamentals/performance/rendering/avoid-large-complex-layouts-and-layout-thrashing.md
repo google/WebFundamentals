@@ -1,8 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: El diseño es la parte donde el navegador descifra la información geométrica de los elementos: su tamaño y ubicación en la página. Cada elemento posee información explícita o implícita sobre el tamaño, según la CSS (Hoja de estilos en cascada) que se utilizó, los contenidos del elemento o un elemento principal. Este proceso se denomina Diseño en los navegadores Blink, WebKit e Internet Explorer. En los navegadores basados en Gecko, como Firefox, esto se denomina Redistribución, pero los procesos, en realidad, son los mismos.
-
-{# wf_review_required #}
+description: El diseño es la parte donde el navegador descifra la información geométrica de los elementos: su tamaño y ubicación en la página. Cada elemento posee información explícita o implícita sobre el tamaño, según la CSS (Hoja de estilos en cascada) que se utilizó, los contenidos del elemento o un elemento principal. 
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

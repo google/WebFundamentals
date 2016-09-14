@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Si se modifica el DOM (Modelo de objetos de documento), mediante la adición y la eliminación de elementos, la modificación de los atributos o las clases, o a través de la animación, el navegador recalculará los estilos de los elementos y, en muchos casos, el diseño (o la redistribución) de la página o partes de esta. Este proceso se denomina cálculo de estilo computarizado.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

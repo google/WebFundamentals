@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La cantidad de datos descargados por cada aplicación va en aumento. Para ofrecer un buen rendimiento, debemos optimizar el envío de cada byte.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

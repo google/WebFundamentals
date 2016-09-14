@@ -1,8 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: La tipografía es fundamental para un buen diseño, para la inclusión de marca, la legibilidad y la accesibilidad. Las fuentes web permiten hacer todo esto y más: permiten seleccionar el texto, hacer búsquedas y hacer zoom, y admiten muchos puntos por pulgada, con lo que se consigue un texto preciso y coherente que se renderiza independientemente del tamaño de la pantalla y de la resolución. Las fuentes web son básicas para conseguir un diseño, una experiencia de usuario y un rendimiento satisfactorios.
+description: La tipografía es fundamental para un buen diseño, para la inclusión de marca, la legibilidad y la accesibilidad. Las fuentes web permiten hacer todo esto y más: permiten seleccionar el texto, hacer búsquedas y hacer zoom, y admiten muchos puntos por pulgada, con lo que se consigue un texto preciso y coherente que se renderiza independientemente del tamaño de la pantalla y de la resolución. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
@@ -45,7 +44,7 @@ Hoy en día se utilizan cuatro formatos de contenedor de fuentes en la Web: [EOT
 * Utilizar una variante de EOT para los navegadores IE antiguos (anteriores a IE9)
 ^
 
-Note: Técnicamente también existe el <a href='http://caniuse.com/svg-fonts'>contenedor de fuentes SVG</a>, pero no es compatible con IE ni con Firefox, y ahora Chrome tampoco lo admite. Por lo tanto, su uso está limitado y por eso lo omitimos de forma intencionada en esta guía.
+Note: Técnicamente también existe el <a href="http://caniuse.com/svg-fonts">contenedor de fuentes SVG</a>, pero no es compatible con IE ni con Firefox, y ahora Chrome tampoco lo admite. Por lo tanto, su uso está limitado y por eso lo omitimos de forma intencionada en esta guía.
 
 ### Reducir el tamaño de fuente mediante la compresión
 
@@ -57,7 +56,7 @@ Cada fuente está formada por varios glifos, cada uno de los cuales es un conjun
 
 Por último, cabe apuntar que algunos formatos de fuente contienen metadatos adicionales, como información de la [optimización de fuentes](http://en.wikipedia.org/wiki/Font_hinting) y del [interletraje](http://es.wikipedia.org/wiki/Interletraje) que puede no ser necesaria en algunas plataformas. De esta forma se puede optimizar aún más el tamaño de archivo. Consulta las opciones de optimización que tienes disponibles en tu compresor de fuentes y, si eliges esta ruta, asegúrate de que tienes la infraestructura adecuada para probar y proporcionar estas fuentes optimizadas en cada navegador concreto. Por ejemplo, {\f3 (c)}{\f2321   Google} Fonts conserva más de 30 variantes optimizadas para cada fuente y detecta y proporciona automáticamente la variante óptima para cada plataforma y para cada navegador.
 
-Note: Puedes usar la <a href='http://en.wikipedia.org/wiki/Zopfli'>compresión Zopfli</</a>> para los formatos EOT, TTF y WOFF. Zopfli es un compresor compatible con zlib que proporciona una reducción del tamaño de archivo aproximada del 5% mediante gzip.
+Note: Puedes usar la <a href='http://en.wikipedia.org/wiki/Zopfli'>compresión Zopfli</a> para los formatos EOT, TTF y WOFF. Zopfli es un compresor compatible con zlib que proporciona una reducción del tamaño de archivo aproximada del 5% mediante gzip.
 
 ## Definir la familia de fuentes con @font-face
 
@@ -73,36 +72,35 @@ La regla arroba de CSS @font-face permite definir la ubicación de un recurso de
 
 Cada declaración @font-face proporciona el nombre de la familia de fuentes, que funciona como un grupo lógico de diferentes declaraciones, [propiedades de fuentes](http://www.w3.org/TR/css3-fonts/#font-prop-desc), como estilo, grosor y extensión, y el [descriptor src](http://www.w3.org/TR/css3-fonts/#src-desc), que especifica una lista prioritaria de ubicaciones para el recurso de fuente.
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
+
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 En primer lugar, ten en cuenta que los ejemplos anteriores definen una única familia _Awesome Font_ con dos estilos (normal y _cursiva_), cada uno de los cuales hace referencia a un conjunto distinto de recursos de fuente. A su vez, cada descriptor `src` contiene una lista prioritaria y separada por comas de las variantes del recurso: 
 
 * La directiva `local()` permite hacer referencia a fuentes instaladas localmente, cargarlas y utilizarlas.
 * La directiva `url()` permite cargar fuentes externas y puede contener una optimización `format()` opcional que indica el formato de la fuente a la que hace referencia la URL proporcionada.
 
-^
 Note: A menos que hagas referencia a fuentes del sistema predeterminadas, debes proporcionar una lista de ubicaciones de fuentes externas, porque no es habitual que el usuario las tenga instaladas localmente, especialmente en dispositivos móviles, en los que es materialmente imposible `instalar` fuentes adicionales.
 
 Si el navegador determina que se necesita la fuente, recurre a la lista de recursos proporcionada en el orden especificado e intenta cargar el recurso apropiado. Por ejemplo, siguiendo el ejemplo anterior:

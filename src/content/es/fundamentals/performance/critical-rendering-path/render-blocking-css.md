@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: De forma predeterminada, el código CSS se considera un recurso que puede retrasar la visualización del sitio. Esto quiere decir que el navegador solo mostrará el contenido cuando se haya construido el CSSOM. Asegúrate de reducir al mínimo los estilos CSS, de activarlos lo antes posible y de usar tipos y consultas de medios para acelerar la renderización del contenido.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -18,37 +17,22 @@ De forma predeterminada, el código CSS se considera un recurso que puede retras
 En la sección anterior, vimos que la ruta de renderización importante exige que el DOM y el CSSOM construyan el árbol de visualización, lo cual implica algo que puede afectar negativamente al rendimiento: **los recursos HTML y CSS pueden retrasar la renderización del contenido ** Ya sabíamos esto del HTML, porque sin el DOM no podría mostrarse nada, pero que los estilos CSS se comportan también de esta manera es menos obvio. ¿Qué pasaría si intentamos mostrar una página cualquiera sin que el CSS retrasara su visualización?
 
 ## TL;DR {: .hide-from-toc }
-- 'De forma predeterminada, los estilos CSS se consideran un recurso que puede retrasar la renderización del sitio.'
+- De forma predeterminada, los estilos CSS se consideran un recurso que puede retrasar la renderización del sitio.
 - Los tipos y las consultas de medios permiten indicar que algunos recursos CSS no bloquean la renderización del contenido.
-- 'Todos los recursos CSS, independientemente de que retrasen la visualización del contenido o no, los descarga el navegador.'
+- Todos los recursos CSS, independientemente de que retrasen la visualización del contenido o no, los descarga el navegador.
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>NYTimes con CSS</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="NYTimes con CSS">
 
-  </div>
+<figure class="attempt-left">
+  <img src="images/nytimes-css-device.png" alt="NYTimes con CSS">
+  <figcaption>NYTimes con CSS</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/nytimes-nocss-device.png" alt="NYTimes sin CSS">
+  <figcaption>NYTimes sin CSS (durante un instante se muestra contenido sin estilos)</figcaption>
+</figure>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>NYTimes sin CSS (durante un instante se muestra contenido sin estilos)</b>
-    <img src="images/nytimes-nocss-device.png" alt="NYTimes sin CSS">
-
-  </div>
-</div>
-
-{% comment %}
-<table>
-<tr>
-<td>NYTimes con CSS</td>
-<td>NYTimes sin CSS (durante un instante se muestra contenido sin estilos)</td>
-</tr>
-<tr>
-<td><img src="images/nytimes-css-device.png" alt="NYTimes con CSS" class="center"></td>
-<td><img src="images/nytimes-nocss-device.png" alt="NYTimes sin CSS" class="center"></td>
-</tr>
-</table>
-{% endcomment %}
+<div class="clearfix"></div>
 
 En el ejemplo anterior, donde mostramos el sitio web del NYTimes con y sin estilos CSS, se demuestra por qué se bloquea la visualización de la página hasta que el CSS está disponible: sin los estilos CSS, la página quedaría inutilizable. De hecho, en la imagen de la derecha vemos que, durante un instante, se muestra contenido sin estilos. Como resultado, el navegador bloqueará la visualización hasta crear el DOM y el CSSOM.
 

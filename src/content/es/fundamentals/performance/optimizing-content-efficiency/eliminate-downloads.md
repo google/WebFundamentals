@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: El recurso más rápido y optimizado es el que no se envía. ¿Has supervisado el rendimiento de tus recursos recientemente? Deberías hacerlo cada cierto tiempo para garantizar que cada recurso contribuya a ofrecer la mejor experiencia posible al usuario.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

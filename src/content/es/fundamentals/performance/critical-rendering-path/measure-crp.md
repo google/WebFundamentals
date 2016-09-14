@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: No es posible optimizar lo que no podemos medir. Afortunadamente, el API de Navigation Timing proporciona las herramientas necesarias para medir cada paso de la ruta de renderización importante.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -42,7 +41,6 @@ La especificación HTML requiere condiciones específicas para cada evento: cuá
     * Si ningún analizador bloquea el código JavaScript , `_DOMContentLoaded_` se activará justo después de `_domInteractive_`.
 * **domComplete** indica cuándo están listos la página y todos sus recursos.
 
-^
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full"   adjust_indentation="auto" %}

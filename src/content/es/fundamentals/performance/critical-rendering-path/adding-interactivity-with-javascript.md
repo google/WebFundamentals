@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript nos permite modificar casi cualquier aspecto de la página: el contenido, el estilo y su comportamiento según las interacciones del usuario. Sin embargo, JavaScript también puede bloquear la creación de DOM y retrasar la visualización de la página. Para ofrecer un rendimiento óptimo, define que JavaScript sea asíncrono y elimina todo el contenido JavaScript innecesario de la ruta de publicación importante.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 

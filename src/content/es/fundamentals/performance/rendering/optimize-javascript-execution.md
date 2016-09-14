@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript suele ser el desencadenador de los cambios visuales. Algunas veces, esto se hace directamente mediante manipulaciones de estilo y, otras veces, mediante cálculos que darán como resultado cambios visuales, como buscar o clasificar algunos datos. El JavaScript sincronizado incorrectamente o de larga ejecución puede ser una causa común de los problemas de rendimiento, y debe intentar minimizar su impacto siempre que sea posible.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
