@@ -25,21 +25,21 @@ you to re-engage with your users.
 
 <div style="clear:both;"></div>
 
-## Are service workers involved? {#service-worker-involved}
+## Are service workers involved? {: #service-worker-involved }
 
 Yes! If you're not familiar with them, check out the 
 [service worker introduction](/web/fundamentals/getting-started/primers/service-workers).
 We will use service worker code in later sections when we show you how to
 implement pushes and notifications.
 
-## Two technologies {#two-technologies}
+## Two technologies {: #two-technologies }
 
 Push and notification are different, but complementary, features: a **push** is
 the action of the server supplying information to a service worker; a
 **notification** is the action of a service worker or web page showing the
 information to a user.
 
-## A little notification anatomy {#anatomy}
+## A little notification anatomy {: #anatomy }
 
 In the next section we're going to throw a bunch of pictures at you, but we
 promised code. So, here it is. With a service worker registration you call
