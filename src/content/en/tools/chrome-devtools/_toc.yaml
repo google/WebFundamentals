@@ -37,16 +37,18 @@ toc:
         path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
       - title: Emulate and Test Other Browsers
         path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
-    - title: Remote Debugging
+    - title: Remote Debugging Android Devices
       section:
-      - title: Remote Debugging Android Devices
-        path: /web/tools/chrome-devtools/remote-debugging/remote-debugging
+      - title: Overview
+        path: /web/tools/chrome-devtools/remote-debugging/
       - title: Access Local Servers
         path: /web/tools/chrome-devtools/remote-debugging/local-server
       - title: Remote Debugging WebViews
         path: /web/tools/chrome-devtools/remote-debugging/webviews
     - title: Inspect and Debug JavaScript
       section:
+      - title: Overview
+        path: /web/tools/chrome-devtools/javascript/
       - title: Run Snippets of Code From Any Page
         path: /web/tools/chrome-devtools/javascript/snippets
       - title: Pretty-Print Minified JavaScript
@@ -71,8 +73,6 @@ toc:
       section:
       - title: Overview
         path: /web/tools/chrome-devtools/console/
-      - title: Navigating the Console
-        path: /web/tools/chrome-devtools/console/console-ui
       - title: Diagnose and Log to the Console
         path: /web/tools/chrome-devtools/console/console-write
       - title: Compare Similar Data Objects
@@ -99,12 +99,10 @@ toc:
         path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
       - title: Timeline Event Reference
         path: /web/tools/chrome-devtools/evaluate-performance/performance-reference
-    - title: Runtime Performance
+    - title: Analyze Runtime Performance
       section:
       - title: Overview
         path: /web/tools/chrome-devtools/rendering-tools/
-      - title: Analyze Runtime Performance
-        path: /web/tools/chrome-devtools/rendering-tools/analyze-runtime
       - title: Speed Up JavaScript Execution
         path: /web/tools/chrome-devtools/rendering-tools/js-execution
       - title: Diagnose Forced Synchronous Layouts
@@ -123,8 +121,6 @@ toc:
       section:
       - title: Overview
         path: /web/tools/chrome-devtools/memory-problems/
-      - title: Find Common Memory Issues
-        path: /web/tools/chrome-devtools/memory-problems/memory-diagnosis
       - title: Understand Memory Terminology
         path: /web/tools/chrome-devtools/memory-problems/memory-101
       - title: Record Heap Snapshots
