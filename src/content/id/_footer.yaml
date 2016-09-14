@@ -1,0 +1,48 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+footer:
+- promos:
+  - title: Blog Chromium
+    description: Berita terbaru di blog Chromium
+    icon: https://www.gstatic.com/images/icons/material/product/2x/chrome_chromium_64dp.png
+    path: https://blog.chromium.org
+  - title: GitHub
+    description: Fork contoh kode API kami dan beberapa proyek open-source lainnya.
+    path: https://github.com/googlechrome
+    icon: /site-assets/logo-github.svg
+  - title: Twitter
+    description: Sambungkan dengan @ChromiumDev di Twitter
+    icon: /site-assets/logo-twitter.svg
+    path: https://twitter.com/chromiumdev
+  - title: Video
+    description: Simak kanal YouTube Team Web Developer Relations
+    icon: https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png
+    path: https://www.youtube.com/user/chromedevelopers
+- linkboxes:
+  - name: Sumber Terkait
+    icon_name: link
+    contents:
+    - title: Chrome DevTools
+      path: /web/tools/devtools
+    - title: Dokumentasi Chrome Extension
+      path: https://developers.chrome.com/extensions/api_index
+    - title: Pelacak Issue Chromium 
+      path: https://crbug.com/
+    - title: Laboratorium Kode
+      path: https://codelabs.developers.google.com/?cat=Web
+    - title: Membangun untuk Miliaran (Building for Billions)
+      path: /web/billions/
+    - title: Web Fisikal (Physical Web)
+      path: https://google.github.io/physical-web/
+  - name: Belajar dengan Udacity
+    icon_name: school
+    contents:
+    - title: Aplikasi web Offline
+      path: https://www.udacity.com/courses/ud899
+    - title: Perangkat Web dan Otomasi
+      path: https://www.udacity.com/courses/ud892
+    - title: Optimisasi Rendering Browser
+      path: https://www.udacity.com/courses/ud860
+    - title: Optimisasi Kehandalan Performancsi Website
+      path: https://www.udacity.com/courses/ud884
+    - title: Dasar-Dasar Responsive Web Design
+      path: https://www.udacity.com/courses/ud893
