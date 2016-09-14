@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: In the DevTools, you can automatically pause on any exception (especially useful for <em>uncaught</em> exceptions).
+description: In the DevTools, you can automatically pause on any exception (especially useful for uncaught exceptions).
 
 {# wf_updated_on: 2015-05-19 #}
 {# wf_published_on: 2015-05-16 #}

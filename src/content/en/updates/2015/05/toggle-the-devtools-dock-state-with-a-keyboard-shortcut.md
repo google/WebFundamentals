@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Use <kbd class='kbd'>Cmd + Shift + D</kbd> to toggle the DevTools dock state between the last two recently used states.
+description: Use Cmd + Shift + D to toggle the DevTools dock state between the last two recently used states.
 
 {# wf_updated_on: 2015-05-18 #}
 {# wf_published_on: 2015-05-18 #}

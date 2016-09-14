@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: You can log all the events dispatched to an object using the Command Line API method <strong>monitorEvents(object [, events])</strong>.
+description: You can log all the events dispatched to an object using the Command Line API method monitorEvents(object [, events]).
 
 {# wf_updated_on: 2015-05-19 #}
 {# wf_published_on: 2015-04-25 #}

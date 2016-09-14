@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: You can use the <code>Is:running</code> Advanced Network Filter to see unfinished network requests (e.g. running requests).
+description: You can use the Is:running Advanced Network Filter to see unfinished network requests (e.g. running requests).
 
 {# wf_updated_on: 2015-05-19 #}
 {# wf_published_on: 2015-04-19 #}

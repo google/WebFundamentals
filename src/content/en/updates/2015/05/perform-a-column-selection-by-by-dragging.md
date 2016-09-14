@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: You can make a column selection in the Sources Panel editor by holding <kbd class='kbd'>Alt</kbd> while dragging the mouse.
+description: You can make a column selection in the Sources Panel editor by holding Alt while dragging the mouse.
 
 {# wf_updated_on: 2015-05-19 #}
 {# wf_published_on: 2015-05-01 #}

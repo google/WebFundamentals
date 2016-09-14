@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: In the styles pane, you can expand CSS shorthand properties like <code>flex</code> or <code>padding</code> and see the full range of properties which are defined for you.
+description: In the styles pane, you can expand CSS shorthand properties like flex or padding and see the full range of properties which are defined for you.
 
 {# wf_updated_on: 2015-05-19 #}
 {# wf_published_on: 2015-05-10 #}

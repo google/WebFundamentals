@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Compare similar data objects using the <code>table()<code> method.
+description: Compare similar data objects using the table() method.
 
 {# wf_updated_on: 2015-05-11 #}
 {# wf_published_on: 2015-04-13 #}

@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Your cursor position history is preserved in the Sources Panel, allowing you to cycle through previous editing locations with <kbd class='kbd'>Alt-</kbd> (backwards) or <kbd class='kbd'>Alt+</kbd> (forwards).﻿
+description: Your cursor position history is preserved in the Sources Panel, allowing you to cycle through previous editing locations with Alt+(backwards) or Alt+(forwards).﻿
 
 {# wf_updated_on: 2015-05-19 #}
 {# wf_published_on: 2015-05-03 #}

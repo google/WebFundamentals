@@ -1,8 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 
-{# wf_updated_on: 2016-09-13 #}
-{# wf_published_on: 2016-09-13 #}
+{# wf_updated_on: 1900-01-01 #}
+{# wf_published_on: 1900-01-01 #}
 
 <style>
 .wf-byline h3 {margin: 0;}

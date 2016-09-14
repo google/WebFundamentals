@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: When browsing the DOM with the Elements panel, try searching for nodes via <kbd class=kbd>CMD/Ctrl+F</kbd> by their CSS selectors.
+description: When browsing the DOM with the Elements panel, try searching for nodes via CMD/Ctrl+F by their CSS selectors.
 
 {# wf_updated_on: 2015-05-18 #}
 {# wf_published_on: 2015-05-10 #}

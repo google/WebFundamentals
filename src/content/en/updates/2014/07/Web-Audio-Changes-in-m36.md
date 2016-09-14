@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Description of Web Audio standards cleanup work in m36
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-07-24 #}
 {# wf_published_on: 2014-07-24 #}
 {# wf_tags: news,webaudio #}
