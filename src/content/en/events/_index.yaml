@@ -2,29 +2,20 @@ project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
   custom_css_path: /web/events/events.css
+  header:
+    description: Attend A Developer Event And Get Hacking
 
   rows:
-
-  - heading: Attend A Developer Event And Get Hacking
-    classname: devsite-landing-row-67
-    items:
-    - description: >
-        Events are run by local Google Developer Groups or other
-        developer meetups. Each event is a little different, but generally, an
-        event can include a tech talk, series of code labs, and time for
-        personal coding.
-
-  - items:
-    - custom_html: <hr>
 
   - heading: Find Events Near You
     classname: find-events
     items:
     - description: >
         <p>
-          Level up your skills at a local event. Events consist of code labs
-          and talks by leading domain experts. Find one in your area or start
-          your own!
+          Events are run by Googlers, local Google Developer Groups or other
+          developer meetups. Each event is a little different, but generally, an
+          event can include a tech talk, series of code labs, and time for
+          personal coding. Find one in your area or start your own!
         </p>
 
         <p>
@@ -35,13 +26,19 @@ landing_page:
         </p>
 
     - custom_html: >
-        <div class="doc-iframe-container">
-          <iframe class="link-analytics map-frame"
-            data-src="/web/events/embeds/combined-event-map"
-            scrolling="no"
-            frameborder="0">
-          </iframe>
-        </div>
+        {% framebox height="500px" %}
+          <link rel="stylesheet" href="/web/events/embeds/event-map.css">
+          <div id="map" data-tags="pwaroadshow,polymer"></div>
+          <div id="map-key">
+            <span class="map-key-event sponsored-pwa">= Google Organized PWA Road Show</span>
+            <span class="map-key-event pwa">= PWA Road Show</span>
+            <span class="map-key-event polymer">= Polymer Polytechnic</span>
+          </div>
+
+          <script src="/web/events/embeds/event-map.js"></script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap"
+              async defer></script>
+        {% endframebox %}
 
 
   - items:
@@ -55,7 +52,7 @@ landing_page:
         need to start creating Progressive Web Apps. Progressive Web Apps take
         advantage of new technologies to bring the best of mobile sites and
         native applications to users.
-      image_path: /web/events/images/landing-hero-forgetinfra.png
+      image_path: /web/events/images/pwa-roadshow-item.jpg
       buttons:
       - label: Learn More About Progressive Web App Events
         path: /web/events/pwaroadshow
@@ -65,7 +62,7 @@ landing_page:
         developers learn Polymer. Built atop Web Components, Polymer let's
         developers extend HTML! Come enjoy talks and hacking sessions to get
         familiar with this new technology.
-      image_path: /web/events/images/landing-hero-datadriven.png
+      image_path: /web/events/images/polytechnic-item.jpg
       buttons:
       - label: Learn More About Polytechnic Events
         path: /web/events/polytechnic

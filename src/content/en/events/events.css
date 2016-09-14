@@ -1,41 +1,15 @@
+:link, :visited {
+  color: #1976D2; /* Meets WCAG 2.0 contrast minimums */
+}
+
 .devsite-main-content {
   margin-bottom: 160px;
-}
-
-.doc-iframe-container {
-  width: 100%;
-  height: 500px;
-}
-
-.map-frame {
-  width: 100%;
-  height: 100%;
 }
 
 /* This fullbleed code is taken from firebase.google.com */
 .devsite-landing-row-fullbleed {
   margin: 0 -10000px;
   padding: 64px 10000px 40px;
-}
-
-.devsite-landing-row-fullbleed h3 {
-  font-size: 32px;
-}
-
-.devsite-landing-row-fullbleed .devsite-landing-row-item-image {
-  background: transparent;
-}
-
-.devsite-landing-row-fullbleed .devsite-landing-row-item-description {
-  padding-top: 24px;
-}
-
-.primary-featured-event {
-  margin-top: 60px;
-}
-
-.light-background {
-  background: #EBEFF2;
 }
 
 .dark-background {
@@ -47,14 +21,20 @@
   color: #FFF;
 }
 
+.dark-background a {
+  color: #F48FB1;
+}
+
 .faq {
   margin-top: 100px;
+  margin-bottom: -160px;
   padding-top: 16px;
   padding-bottom: 100px;
 }
 
 .faq-question {
   font-size: 28px;
+  line-height: 1.2;
 }
 
 .faq-answer {

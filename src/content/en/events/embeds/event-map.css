@@ -33,6 +33,10 @@ html, body {
   background: grey;
 }
 
+.map-key-event.sponsored-pwa::before {
+  background: #FFC107;
+}
+
 .map-key-event.pwa::before {
   background: #00C1D6;
 }
