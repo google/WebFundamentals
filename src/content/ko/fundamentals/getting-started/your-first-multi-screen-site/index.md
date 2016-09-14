@@ -75,7 +75,6 @@ Translated By:
 
 이제 사이트의 기본 구조는 정리되었습니다. 우리는 필요한 섹션들과 섹션들 내에서 보여줄 콘텐츠 그리고 이들이 전체적인 정보구조 내에서 어떻게 위치해야 하는지를 알고 있으므로 이제 사이트 구축을 시작할 수 있을 것입니다.
 
-<!-- TODO: Verify note type! -->
 Note: 스타일링은 이후에 진행할 것입니다.
 
 #### 헤드라인과 폼 생성하기
@@ -101,7 +100,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### 비디오와 정보 섹션의 생성
 
@@ -125,7 +124,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### 이미지 섹션 생성하기
 
@@ -145,7 +144,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 
 이미지들은 화면 폭의 100%로 스케일이 설정될 것입니다. 이는 좁은 뷰포트를 가진 디바이스에서 잘 동작하지만 (데스크탑과 같은) 넓은 뷰포트를 가진 디바이스에서는 그리 멋지게 동작하지는 않습니다. 이는 반응형 디자인에서 다시 다룰 것입니다.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 많은 사람들이 이미지를 보거나 스크린 리더와 같은 페이지의 데이터를 파싱하고 축약한 뒤 사용자에게 제공하는 보조 기술들을 사용하는데 익숙하지는 않습니다. 우리는 스크린 리더가 사용자에게 설명할 수 있도록 콘텐츠의 모든 이미지들이 서술적인 `alt` 태그를 가지도록 해야 합니다.
 
@@ -238,7 +237,7 @@ Translated By:
 
 뷰포트는 문서의 head 내에 존재하며 딱 한번만 정의하면 됩니다.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### 간단한 스타일 적용하기
 
@@ -310,7 +309,6 @@ Translated By:
 
 더 큰 화면은 더 많은 여백이 존재하므로 어떻게 콘텐츠를 보여줄 것인지에 대해 더욱 더 유연합니다.
 
-<!-- TODO: Verify note type! -->
 Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요하다면 더 작은 단위의 조정을 할 수 있을 것입니다.
 
 우리 상품 페이지의 흐름 상 다음과 같은 것들이 필요할 것으로 보입니다.
@@ -321,7 +319,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 *  비디오를 콘텐츠 주변에 배치하도록 만들기
 *  이미지의 사이즈를 줄이기와 보다 나은 그리드 내에 나타나도록 만들기
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### 디자인의 최대 폭 제한하기
 
@@ -427,7 +425,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### 테이블
 

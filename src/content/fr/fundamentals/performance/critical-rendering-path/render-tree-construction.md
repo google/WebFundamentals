@@ -35,12 +35,11 @@ Pour construire l'arborescence d'affichage, le navigateur procède à peu près 
 1. Pour chaque nœud visible, trouvez les règles CSSOM et appliquez-les.
 2. Émettez les nœuds visibles avec leur contenu et leurs styles calculés.
 
-<!-- TODO: Verify note type! -->
 Note: Notez que la propriété <code>visibility: hidden</code> est différente de la propriété <code>display: none</code>. La première rend l'élément invisible, mais celui-ci occupe toujours de l'espace dans la mise en page, c'est-à-dire qu'il est affiché sous la forme d'une case vide. La seconde <code>display: none</code> supprime totalement l'élément de l'arborescence d'affichage, afin que celui-ci soit invisible et ne fasse pas partie de la mise en page.
 
 La sortie finale est un affichage qui contient à la fois les informations sur le contenu et sur le style de tout le contenu visible à l'écran. Nous avons presque terminé ! **Une fois l'arborescence d'affichage en place, nous pouvons passer à l'étape de 'mise en page'.**
 
-Jusqu'à maintenant, nous avons calculé quels nœuds doivent être visibles, ainsi que leurs styles calculés. Toutefois, nous n'avons pas calculé leur position et leur taille exactes dans la [fenêtre]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) de l'appareil. C'est l'étape de 'mise en page', parfois appelée 'ajustement de la mise en page'.
+Jusqu'à maintenant, nous avons calculé quels nœuds doivent être visibles, ainsi que leurs styles calculés. Toutefois, nous n'avons pas calculé leur position et leur taille exactes dans la [fenêtre](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) de l'appareil. C'est l'étape de 'mise en page', parfois appelée 'ajustement de la mise en page'.
 
 Pour définir la taille et la position exactes de chaque objet, le navigateur commence à la racine de l'arborescence d'affichage et la traverse pour calculer la géométrie de chaque objet sur la page. Prenons un exemple simple et concret :
 

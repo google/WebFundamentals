@@ -34,7 +34,6 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">

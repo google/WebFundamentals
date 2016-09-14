@@ -90,7 +90,6 @@ Yukaridaki adimlari uyguladiktan sonra sayfamiz 406 karakterden 150 karaktere d�
 
 Bir adim geri çekildigimizde, yukaridaki örnek önemli bir noktayi gösterir: Genel amaçli bir sikistirici da (örnegin, rastgele metni sikistirmak üzere tamamlanmis bir tanesi) yukaridaki sayfayi sikistirirken büyük olasilikla oldukça ise yarayabilirdi, ancak yorumlari çikaracagini, CSS kurallarini daraltmayi veya içerige özel diger onlarca optimizasyonu hiçbir zaman bilemezdi. Bu nedenle ön isleme / küçültme / baglama duyarli optimizasyon güçlü bir araç olabilir.
 
-<!-- TODO: Verify note type! -->
 Note: Tipik bir örnekte JQuery kitapliginin sikistirilmamis gelistirme sürümü artik 300 KB boyuta yaklasmaktadir. Ayni kitapligin küçültülmüs (yorumlar kaldirilmis vb.) sürümü yaklasik 3 kat daha küçüktür: Yaklasik 100 KB.
 
 Benzer bir sekilde, yukaridaki teknikler yalnizca metin tabanli varliklarin ötesine genisletilebilir. Resimler, video ve diger içerik türlerinin tümü, kendi meta veri biçimlerini ve çesitli veri yüklerini içerir. Örnegin, bir kamerayla resim çektiginizde, fotograf genellikle fazladan birçok bilgi yerlestirir: Kamera ayarlari, konum vb. Uygulamaniza bagli olarak bu veriler kritik öneme sahip olabilir (ör. bir fotograf paylasim sitesi) veya tamamiyla yararsiz olduklarindan bunlari kaldirmaya degip degmeyecegini düsünmeniz gerekir. Uygulamada, bu meta veriler her resim için onlarca kilobayt edebilir!
@@ -185,7 +184,6 @@ Sunucunuz için en iyi yapilandirma nedir? HTML5 Standart Metin projesi, her bir
 
 GZIP'i uygulamada görmenin hizli ve basit bir yolu Chrome DevTools'u açip Ag panelinde `Boyut / Içerik` sütununu incelemektir: `Boyut`, varligin aktarim boyutunu, `Içerik` ise varligin sikistirilmamis boyutunu belirtir. Yukaridaki örnekte yer alan HTML varligi için GZIP, aktarim sirasinda 24,8 KB tasarruf etmistir!
 
-<!-- TODO: Verify note type! -->
 Note: Ister inanin ister inanmayin, GZIP'in varligin boyutunu artirabildigi durumlar söz konusudur. Bu genellikle varlik çok küçük ve GZIP sözlügünün ek yükü sikistirma tasarrufundan yüksek oldugunda veya kaynak zaten iyi bir sekilde sikistirilmissa görülür. Bazi sunucular, bu sorunu önlemek için bir `minimum dosya boyutu esigi` belirlemenize olanak tanir.
 
 Son olarak, bir uyarimiz var: Çogu sunucu, varliklari sizin için otomatik olarak sikistirir, ancak bunlari kullaniciya sunarken bazi CDN'ler, GZIP ögesinin sunuldugundan emin olmak için ekstra özen ve manuel çalismagerektirir. Sitenizi denetleyin ve varliklarinizin gerçekten [sikistirildigindan](http://www.whatsmyip.org/http-compression-test/) emin olun!

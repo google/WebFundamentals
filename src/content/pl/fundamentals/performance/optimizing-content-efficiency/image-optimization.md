@@ -164,7 +164,6 @@ Wewnętrznie przeglądarka przydziela do każdego kanału 256 wartości (odcieni
 
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Na marginesie: niezależnie od formatu obrazu zastosowanego do transferu danych z serwera do klienta, po zdekodowaniu obrazu przez przeglądarkę każdy piksel zajmuje zawsze 4 bajty pamięci. Może to narzucać poważne ograniczenia w przypadku dużych obrazów i urządzeń z niewielką ilością dostępnej pamięci &ndash; np. mniej zaawansowanych urządzeń mobilnych.
 
 <table>
@@ -210,7 +209,6 @@ Jednym z prostszych sposobów jest zredukowanie `głębokości bitowej` obrazu z
 
 <img src="images/artifacts.png" class="center" alt="Artefakty spowodowane przez kompresję">
 
-<!-- TODO: Verify note type! -->
 Note: Od lewej do prawej (format PNG): 32-bitowy (16 milionów kolorów), 7-bitowy (128 kolorów), 5-bitowy (32 kolory). Złożone sceny ze stopniowymi gradacjami kolorów (przejścia tonalne, niebo itp.) wymagają bardziej licznych palet kolorów, co pozwala uniknąć artefaktów wizualnych, takich jak pikselizacja nieba (obecna przy 5-bitowej palecie kolorów). Z drugiej strony, jeśli obraz zawiera tylko kilka kolorów, liczna paleta to po prostu marnotrawstwo cennych bitów.
 
 Po zoptymalizowaniu danych zapisanych w poszczególnych pikselach możemy przyjrzeć się dokładniej sąsiednim pikselom: okazuje się, że na wielu obrazach, a szczególnie na zdjęciach, piksele mają zbliżone kolory &ndash; w przypadku nieba, powtarzających się wzorów i tak dalej. Wykorzystanie tego spostrzeżenia w algorytmie kompresji może polegać na zastosowaniu `[kodowania delta](http://en.wikipedia.org/wiki/Delta_encoding)`. Zamiast przechowywać wartości każdego z pikseli, przechowuje się wartości różnic pomiędzy sąsiednimi pikselami: jeśli sąsiednie piksele są identyczne, różnica wynosi zero i trzeba przechować tylko jeden bit. Ale czemu nie pójść dalej...
@@ -248,7 +246,6 @@ Więc jaka konfiguracja optymalizacji stratnej i bezstratnej jest najlepsza? Odp
 
 Praktyczny przykład: dla formatu stratnego, takiego jak JPEG, można zazwyczaj zmienić ustawienie `jakości` algorytmu kompresji (np. suwak jakości funkcji `Save for Web` (Publikuj dla Internetu) w programie Adobe Photoshop). Jest ono zazwyczaj liczbą z zakresu od 1 do 100 wpływającą na sposób działania zestawu algorytmów stratnych i bezstratnych. Aby uzyskać najlepsze wyniki, sprawdź różne ustawienia jakości obrazów i nie obawiaj się znacznie zmniejszyć jakości &ndash; rezultaty wizualne są często bardzo dobre, a redukcja rozmiaru pliku znaczna.
 
-<!-- TODO: Verify note type! -->
 Note: Zwróć uwagę, że poziomów jakości obrazów w różnych formatach nie można porównywać bezpośrednio z powodu odmienności algorytmów kodowania obrazów: jakość 90 dla formatu JPEG daje zupełnie inne wyniki od jakości 90 dla formatu WebP. Nawet ten sam poziom jakości dla tego samego formatu obrazu może prowadzić do widocznie różnego obrazu wyjściowego, ponieważ implementacje algorytmów kompresji są różne.
 
 
@@ -381,7 +378,6 @@ Dlatego jedna z najprostszych i najbardziej efektywnych technik optymalizacji ob
 
 <img src="images/resized-image.png" class="center" alt="Przeskalowany obraz">
 
-<!-- TODO: Verify note type! -->
 Note: Przesunięcie kursora myszy nad element obrazu w Narzędziach Chrome dla programistów pozwala uzyskać informacje o rozmiarze "naturalnym" i rozmiarze "wyświetlania" zasobu obrazu. W powyższym przykładzie pobierany jest obraz o rozdzielczości 300x260 pikseli, który przy wyświetlaniu jest zmniejszany przez klienta do rozdzielczości 245x212.
 
 Przesyłanie zbędnych pikseli, tylko po to, by przeglądarka wyręczyła nas w zmianie skali obrazu, to utracona okazja do redukcji łącznej liczby bajtów wymaganych do renderowania strony. Jak widać, zmiana rozmiaru nie wynika po prostu z liczby pikseli, o które redukuje się rozmiar obrazu, ale również od jego rozmiaru naturalnego.

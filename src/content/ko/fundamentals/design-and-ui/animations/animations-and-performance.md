@@ -27,7 +27,7 @@ description: 애니메이션은 성능이 우수해야 합니다. 그렇지 않�
 
 개별 CSS 속성에 의해 트리거되는 작업의 전체 목록은 [CSS 트리거](http://csstriggers.com)을 참조하십시오. [HTML5 Rocks에서 고성능 애니메이션](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) 생성에 대한 전체 가이드도 참조하십시오.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css #}
 
 ### will-change 속성 사용
 

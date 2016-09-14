@@ -18,7 +18,6 @@ controlar a direção da personagem ou determinar a altura na qual uma personage
 deve pular. Quando usado com a Geolocalização, pode criar um sistema de navegação 
 giro a giro mais preciso ou fornecer informações sobre onde fica uma loja.
 
-<!-- TODO: Verify note type! -->
 Note: Tenha <b>muito</b> cuidado ao decidir usar os eventos de orientação ou movimento do dispositivo.  Infelizmente, nem todos os navegadores usam o mesmo sistema de coordenadas e podem relatar valores diferentes em situações idênticas.
 
 ## Qual objetivo é utilizado?

@@ -97,7 +97,6 @@ type 属性を指定しないと、複数のソースの中にサポートされ
 
 また、Media Fragments API を使用すると、DVD のキューポイントのように同じ動画の複数のビューを配信することができ、複数のファイルをエンコードして配信する必要はありません。
 
-<!-- TODO: Verify note type! -->
 Note: - Media Fragments API は、ほとんどのプラットフォームでサポートされていますが、iOS ではサポートされていません。
 - お使いのサーバーで Range リクエストがサポートされていることを確認してください。ほとんどのサーバーで Range リクエストはデフォルトで有効になっていますが、一部のホスティング サーバーでは無効になっている場合があります。
 
@@ -261,11 +260,10 @@ JavaScript または CSS を使用して動画のサイズを制御できます�
 
 [CSS メディア クエリ](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)を使用して、ビューポートのサイズに応じた要素のサイズを指定できます。max-width: 100% と指定することをおすすめします。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 フレーム内のメディア コンテンツ（YouTube 動画など）には、レスポンシブな手法をお試しください（[John Surdakowski 氏が提唱している手法など](//avexdesigns.com/responsive-youtube-embed/)）。
 
-<!-- TODO: Verify note type! -->
 Note: 要素のサイズ設定で、元の動画と異なるアスペクト比を使用しないでください。画面を縮めたり引き延ばしたりすると、動画の表示が崩れます。
 
 **CSS:**
@@ -381,7 +379,6 @@ extra code for full cross browser compatibility.
 
 携帯端末でメディアを利用しやすくするには、トラック要素を使用してキャプションまたは説明を表示します。
 
-<!-- TODO: Verify note type! -->
 Note: トラック要素は、Firefox を除き、Chrome for Android、iOS Safari、および現在デスクトップで使用されているすべてのブラウザでサポートされています（<a href='http://caniuse.com/track' title='トラック要素のサポート状況'>caniuse.com/track</a> をご覧ください）。polyfill も使用できます。Google では、<a href='//www.delphiki.com/html5/playr/' title='Playr トラック要素の polyfill'>Playr</a> または <a href='//captionatorjs.com/' title='Captionator トラック'>Captionator</a> をおすすめします。
 
 トラック要素を使用すると、次のようにキャプションが表示されます。

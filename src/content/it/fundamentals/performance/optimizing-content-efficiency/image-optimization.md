@@ -164,7 +164,6 @@ Internamente, il browser attribuisce 256 valori (colori) a ogni canale, che si t
 
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Oltre a ciò, indipendentemente dal formato immagine utilizzato per il trasferimento dei dati dal server al client, quando l'immagine viene decodificata dal browser, ogni pixel occupa sempre 4 byte di memoria. Ciò può rappresentare un limite notevole per le immagini di grandi dimensioni e i dispositivi che non dispongono di memoria sufficiente, come ad esempio i dispositivi mobili entry level.
 
 <table>
@@ -210,7 +209,6 @@ Una strategia semplice consiste nel ridurre la profondità di bit (bit depth) de
 
 <img src="images/artifacts.png" class="center" alt="Artefatti di compressione">
 
-<!-- TODO: Verify note type! -->
 Note: Da sinistra a destra (PNG): 32-bit (16M di colori), 7-bit (128 colori), 5-bit (32 colori). Immagini complesse con transizioni di colore graduali (gradienti, cielo, ecc... ) richiedono palette di colori più ampie per evitare artefatti visivi come l'effetto pixel del cielo nella visualizzazione a 5 bit. Al contrario, se l'immagine utilizza soltanto alcuni colori, una palette ampia spreca soltanto bit preziosi!
 
 Una volta ottimizzati i dati memorizzati nei singoli pixel, possiamo farci ancora più furbi e osservare anche i pixel vicini: scopriremo così che molte immagini, in particolare le foto, hanno molti pixel vicini con colori simili, ad esempio per il cielo, per trame ripetitive, e così via. Utilizzando queste informazioni a nostro vantaggio, il compressore può applicare una '[codifica delta](http://en.wikipedia.org/wiki/Delta_encoding)', grazie alla quale, invece di immagazzinare i singoli valori per ogni pixel, possiamo immagazzinare la differenza tra pixel vicini: se i pixel adiacenti sono uguali, delta sarà 'zero', e dovremo immagazzinare un solo bit! Ma perché fermarsi qui?
@@ -248,7 +246,6 @@ Dunque, qual è la configurazione 'ottimale' dell'ottimizzazione lossy e lossles
 
 Per dare un esempio pratico, quando si utilizza un formato lossy come il JPEG, il compressore di norma offre un'impostazione 'qualità' personalizzabile (ad es. lo slider Qualità offerto dalla funzione 'Save for Web' in Adobe Photoshop), che di norma è un numero compreso tra 1 e 100 che controlla il funzionamento interno dell'insieme specifico di algoritmi lossy e lossless. Per un risultato migliore, prova a testare diverse impostazioni di qualità sulle tue immagini, e non temere di diminuirla: i risultati visivi sono spesso ottimi e le dimensioni del file possono ridursi notevolmente.
 
-<!-- TODO: Verify note type! -->
 Note: Nota che la qualità dei diversi formati immagine non è direttamente paragonabile per via delle differenze presenti tra gli algoritmi utilizzati per la codificazione delle immagini: una qualità 90 JPEG produrrà un risultato molto diverso da una qualità 90 WebP. Di fatto, persino i livelli di qualità relativi al medesimo formato immagine possono produrre risultati visibilmente diversi in base al compressore utilizzato.
 
 
@@ -379,7 +376,6 @@ Di conseguenza, una delle tecniche di ottimizzazione delle immagini più semplic
 
 <img src="images/resized-image.png" class="center" alt="Immagine ridimensionata">
 
-<!-- TODO: Verify note type! -->
 Note: Scorrendo il mouse sull'immagine in Chrome DevTools, verranno visualizzate le dimensioni sia 'natural' che 'display' dell'immagine. Nell'esempio precedente, l'immagine da 300x260 pixel viene scaricata per poi essere tuttavia downscaled (ridotta) sul client alla visualizzazione.
 
 L'utilizzo di pixel non necessari solo per lasciare al browser lo scaling dell'immagine al posto nostro si traduce in un'enorme opportunità mancata di ridurre e ottimizzare il numero di byte totali richiesti per il rendering della pagina. Nota inoltre che il ridimensionamento non interessa solo il numero di pixel di cui l'immagine viene ridotta, ma anche le sue dimensioni 'natural'.

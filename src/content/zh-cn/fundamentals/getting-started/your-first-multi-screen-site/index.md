@@ -75,7 +75,6 @@ Translated By:
 
 页面的基本结构已经完成。我们也知道自己需要哪些分块，分块要展示哪些内容，以及整体信息架构中怎样摆放分块。现在我们可以开始扩建站点了。
 
-<!-- TODO: Verify note type! -->
 Note: 样式很快就能看到
 
 #### 创建标题与表单
@@ -115,7 +114,7 @@ Note: 样式很快就能看到
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### 创建图片分块
 
@@ -134,7 +133,7 @@ Note: 样式很快就能看到
 
 图片被设置为 100% 屏幕宽度。在窄视口设备上，这效果不差，但宽视口 (比如桌面) 中效果就会不佳。我们会在响应式设计中解决这个。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 有许多人视力有障碍看不见图片，通常他们会使用辅助技术，比如屏幕阅读器来分析页面数据，然后语音读出。你应该确保你所有的内容图片都带有一个描述性的 `alt` 标签，屏幕阅读器可以读给用户。
 
@@ -222,7 +221,7 @@ viewport 指示浏览器，页面需要缩放以适应屏幕。有许多不同�
 
 viewport 放在文档的头部，只需要声明一次。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### 应用简单的样式
 
@@ -291,7 +290,6 @@ viewport 放在文档的头部，只需要声明一次。
 
 更大的屏幕上，有更多的空间，内容的摆放也就有更多的自由度。
 
-<!-- TODO: Verify note type! -->
 Note: 你不需要一次移动所有元素，可以按需要做小的调整。
 
 在我们的产品页下，看起来我们需要：
@@ -302,7 +300,7 @@ Note: 你不需要一次移动所有元素，可以按需要做小的调整。
 *  让视频浮动起来，内容环绕。
 *  缩小图片尺寸，在一个更佳的网格中显示。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### 限制设计的最大宽度
 
@@ -403,7 +401,7 @@ web 为 96dpi 的屏幕而建。但是随着移动设备的引入，我们看到
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### 表格
 

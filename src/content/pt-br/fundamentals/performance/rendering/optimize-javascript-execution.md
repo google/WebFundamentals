@@ -22,7 +22,6 @@ JavaScript é geralmente o acionador de mudanças visuais. Algumas vezes de form
 
 O perfil de desempenho do JavaScript pode ser algo complexo, porque o JavaScript que você escreve não se parece em nada com o código que é realmente executado. Navegadores modernos usam compiladores JIT e todas as formas de otimizações e truques para testar e proporcionar a execução mais rápida possível o que muda muito a dinâmica do código.
 
-<!-- TODO: Verify note type! -->
 Note: Para conhecer o funcionamento do JIT, veja <a href='http://mrale.ph/irhydra/2/'>IRHydra<sup>2</sup> por Vyacheslav Egorov</a>. Mostra o estado intermediário do código do JavaScript quando o mecanismo JavaScript do Chrome, V8, o otimiza.
 
 No entanto, há algumas coisas que podem ser feitas para melhorar a execução do JavaScript em seus aplicativos.

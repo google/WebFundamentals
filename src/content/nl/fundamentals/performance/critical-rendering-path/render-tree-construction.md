@@ -35,12 +35,11 @@ Kort gezegd doet de browser het volgende om de weergaveboomstructuur op te bouwe
 1. Voor elke zichtbare node worden de van toepassing zijnde CSSOM-regels gezocht en deze regels worden toegepast.
 2. Zichtbare nodes met inhoud en de berekende stijlen worden uitgezonden.
 
-<!-- TODO: Verify note type! -->
 Note: Een kleine kanttekening: Let op dat 'visibility: hidden' niet hetzelfde is als 'display: none'. Het eerste zorgt ervoor dat het element onzichtbaar is, maar het element neemt nog altijd ruimte in de opmaak in (dat wil zeggen dat dit wordt weergegeven als een leeg vak), terwijl het laatste (display: none) het element volledig uit de weergaveboomstructuur verwijderd, waardoor het element onzichtbaar is en geen deel uitmaakt van de opmaak.
 
 De uiteindelijke uitvoer is een weergaveboomstructuur die zowel de inhoud als de stijlinformatie voor alle zichtbare inhoud op het scherm bevat. We zijn er nog niet helemaal, maar het begint er al op te lijken.  **Wanneer de weergaveboomstructuur af is, kunnen we verder gaan met de 'opmaak'-fase.**
 
-Tot nu toe hebben we berekend welke nodes en de bijbehorende berekende stijlen zichtbaar moeten zijn, maar we hebben de exacte positie en grootte binnen de [viewport]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) van het apparaat niet berekend. Dit is de 'opmaak'-fase, ook wel bekend als de 'reflow'.
+Tot nu toe hebben we berekend welke nodes en de bijbehorende berekende stijlen zichtbaar moeten zijn, maar we hebben de exacte positie en grootte binnen de [viewport](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) van het apparaat niet berekend. Dit is de 'opmaak'-fase, ook wel bekend als de 'reflow'.
 
 De browser begint aan de root van de weergaveboomstructuur en loopt de hele structuur af om de geometrie van elk object op de pagina te berekenen om de precieze grootte en positie ervan uit te zoeken. Laten we een eenvoudig praktijkvoorbeeld bekijken:
 

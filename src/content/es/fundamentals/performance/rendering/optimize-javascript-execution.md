@@ -22,7 +22,6 @@ JavaScript suele ser el desencadenador de los cambios visuales. Algunas veces, e
 
 La generación de perfiles de rendimiento de JavaScript se puede considerar una obra de arte, ya que el JavaScript que usted escribe no es para nada similar al código que en realidad se ejecuta. En los navegadores modernos, se utilizan los compiladores JIT y todos los tipos de optimizaciones y trucos posibles para realizar pruebas y proporcionarle una ejecución lo más rápida posible, y esto modifica en gran medida la dinámica del código.
 
-<!-- TODO: Verify note type! -->
 Note: -" Si realmente desea ver cómo funciona JIT, debe consultar <a href='http://mrale.ph/irhydra/2/'>IRHydra<sup>2</sup> de Vyacheslav Egorov</a>. Allí se muestra el estado intermedio del código de JavaScript cuando el motor JavaScript de Chrome, V8, lo está optimizando."
 
 Dicho todo esto, sin embargo, existen algunas medidas que definitivamente puede aplicar para que en sus aplicaciones JavaScript se ejecute correctamente.

@@ -66,7 +66,6 @@ To wszystko można łatwo przekształcić w główne sekcje schematycznej strony
 
 Podstawowa struktura witryny jest gotowa. Wiemy już, jakie sekcje są potrzebne, co się w nich znajdzie i gdzie umieścimy je w ogólnej architekturze informacji. Możemy zacząć tworzenie witryny.
 
-<!-- TODO: Verify note type! -->
 Note: Stylizacja przyjdzie później
 
 #### Tworzenie nagłówka i formularza
@@ -90,7 +89,7 @@ Dodamy typy semantyczne, by przyspieszyć i uprościć wpisywanie wartości prze
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### Tworzenie sekcji z filmem i informacjami
 
@@ -114,7 +113,7 @@ Aby bez problemów umieścić film na stronie, postępuj zgodnie ze sprawdzonymi
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### Tworzenie sekcji z obrazami
 
@@ -133,7 +132,7 @@ Obrazy treści odgrywają kluczową rolę w przekazywaniu sensu strony. Potraktu
 
 Ustawiliśmy skalowanie obrazów do 100% szerokości ekranu. Takie rozwiązanie działa dobrze na urządzeniach z wąskim widocznym obszarem, ale gorzej na tych z obszarem szerokim (np. na komputerach). Zajmiemy się tym w artykule o projektowaniu elastycznym.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 Wiele osób nie może oglądać obrazów i często korzysta z takich technologii wspomagających jak czytnik ekranu, który analizuje dane na stronie i przekazuje je użytkownikowi głosowo. Musisz upewnić się, że wszystkie obrazy treści mają opisowy tag `alt`, którego zawartość czytnik ekranu będzie mógł na głos odczytać użytkownikowi.
 
@@ -225,7 +224,7 @@ Tag viewport informuje przeglądarkę, że stronę trzeba przeskalować, dopasow
 
 Tag viewport należy do nagłówka dokumentu. Wystarczy zadeklarować go tylko raz.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### Zastosuj prostą stylizację 
 
@@ -294,7 +293,6 @@ Projekt zaczyna wyglądać źle przy szerokości około 600&nbsp;pikseli. W nasz
 
 Dzięki swoim rozmiarom większy ekran daje więcej swobody przy wyborze sposobu prezentowania treści.
 
-<!-- TODO: Verify note type! -->
 Note: Nie musisz przesuwać wszystkich elementów jednocześnie. W razie potrzeby możesz wprowadzać mniejsze poprawki.
 
 W kontekście naszej strony o usłudze musimy wykonać te czynności:
@@ -305,7 +303,7 @@ W kontekście naszej strony o usłudze musimy wykonać te czynności:
 *  Przesunąć film, tak by znalazł się obok informacji.
 *  Zmniejszyć rozmiar obrazów i ładnie je ułożyć.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### Ograniczyć maksymalną szerokość projektu
 
@@ -408,7 +406,7 @@ W przeglądarkach, które mają tę funkcję, na wyświetlaczu o wysokiej gęsto
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### Tabele
 

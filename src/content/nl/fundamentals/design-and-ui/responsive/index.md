@@ -24,7 +24,6 @@ Het gebruik van mobiele apparaten om op internet te browsen neemt enorm snel toe
 
 
 ## Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -91,7 +90,6 @@ Door het gebruik van de metawaarde voor viewport `width=device-width` krijgt de 
 
 Wanneer naar de liggende modus wordt geschakeld, behouden sommige browsers de breedte van de pagina en zoomen ze in op de inhoud in plaats van deze dynamisch aan te passen om het scherm te vullen. Het kenmerk `initial-scale=1` geeft browsers de instructie om een 1:1-verhouding in te stellen tussen CSS-pixels en apparaatonafhankelijke pixels, ongeacht de apparaatoriëntatie. De pagina kan dan optimaal gebruikmaken van de volledige liggende breedte.
 
-<!-- TODO: Verify note type! -->
 Note: Gebruik een komma voor het scheiden van kenmerken, zodat ook oudere browsers de kenmerken goed kunnen parseren.
 
 ## Zorg voor een toegankelijke viewport

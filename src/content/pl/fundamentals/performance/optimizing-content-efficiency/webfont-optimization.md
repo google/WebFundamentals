@@ -45,7 +45,6 @@ Co to dla nas oznacza? Nie istnieje jeden format obsługiwany przez wszystkie pr
 * Przesyłaj wariant EOT do starszych przeglądarek IE (starszych od wersji 9)
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Prawdę powiedziawszy, istnieje również <a href='http://caniuse.com/svg-fonts'>kontener czcionek SVG</a>, ale nigdy nie obsługiwała go ani przeglądarka IE, ani Firefox, a obecnie oznaczono go jako przestarzały w przeglądarce Chrome. Z tego względu ma on ograniczone zastosowanie i nie będzie omawiany w tym przewodniku.
 
 ### Redukcja rozmiaru czcionki dzięki kompresji
@@ -58,7 +57,6 @@ Czcionka to zbiór glifów, z których każdy stanowi kolekcję ścieżek opisuj
 
 Warto również wspomnieć, że niektóre formaty czcionek zawierają dodatkowe metadane, np. odnoszące się do [hintingu](http://pl.wikipedia.org/wiki/Hinting) i [kerningu](http://pl.wikipedia.org/wiki/Kerning), które mogą być zbędne na niektórych platformach, co umożliwia dalszą optymalizację. Sprawdź w dokumentacji algorytmu kompresji czcionek, jakie opcje optymalizacji są dostępne, i upewnij się, że dysponujesz odpowiednią infrastrukturą do testowania i dostarczania takich zoptymalizowanych czcionek dla każdej przeglądarki &ndash; np. Google Fonts utrzymuje ponad 30 zoptymalizowanych wariantów dla każdej czcionki i automatycznie wykrywa i dostarcza optymalny wariant dla każdej platformy i przeglądarki.
 
-<!-- TODO: Verify note type! -->
 Note: Zastanów się nad wykorzystaniem <a href='http://en.wikipedia.org/wiki/Zopfli'>kompresji Zopfli</a> do optymalizacji czcionek w formatach EOT, TTF i WOFF. Zopfli to kompresor zgodny z formatem zlib, zapewniający redukcję rozmiaru pliku o ok. 5% w stosunku do kompresji gzip.
 
 ## Określanie rodziny czcionek regułą @font-face
@@ -105,7 +103,6 @@ Przede wszystkim zwróć uwagę, że w powyższych przykładach określono jedn�
 * Dyrektywa `url()` umożliwia wczytywanie czcionek zewnętrznych. Można do niej dołączyć opcjonalną wskazówkę `format()` w celu opisania formatu czcionki opisanej podanym adresem URL.
 
 ^
-<!-- TODO: Verify note type! -->
 Note: Jeśli strona nie odwołuje się do jednej z domyślnych czcionek systemowych, w praktyce rzadko są one zainstalowane lokalnie, zwłaszcza w przypadku urządzeń mobilnych, na których instalacja dodatkowych czcionek jest w zasadzie niemożliwa. Z tego powodu należy zawsze udostępniać listę zewnętrznych lokalizacji czcionek.
 
 Gdy przeglądarka ustali, że dana czcionka jest potrzebna, odczytuje w określonej kolejności podaną listę zasobów i próbuje wczytać odpowiedni zasób. Korzystając z powyższego przykładu:
@@ -118,7 +115,6 @@ Gdy przeglądarka ustali, że dana czcionka jest potrzebna, odczytuje w określo
 
 Połączenie dyrektyw lokalnych i zewnętrznych z odpowiednimi wskazówkami opisującymi format pozwala określić wszystkie dostępne formaty czcionek i powierzyć przeglądarce pozostałe czynności: stwierdzenie, które zasoby są wymagane, i wybór ich optymalnego formatu.
 
-<!-- TODO: Verify note type! -->
 Note: Kolejność podania kolejnych wariantów czcionek ma znaczenie. Przeglądarka wybiera pierwszy obsługiwany format. Dlatego jeśli w nowszych przeglądarkach powinien być używany format WOFF2, deklarację czcionki w tym formacie należy umieścić przed deklaracją czcionki w formacie WOFF i tak dalej.
 
 ### Wydzielanie zakresów Unicode
@@ -159,7 +155,6 @@ Na przykład naszą rodzinę czcionek _Awesome Font_ możemy rozdzielić na podz
     }
     
 
-<!-- TODO: Verify note type! -->
 Note: Wydzielanie zakresów Unicode ma szczególne znaczenie w przypadku języków azjatyckich, ponieważ liczba glifów jest o wiele większa niż w językach europejskich, a typowy pełny zbiór czcionek mierzy się w megabajtach, a nie w dziesiątkach kilobajtów.
 
 Użycie podzbiorów zakresów Unicode i osobnych plików dla każdego wariantu stylistycznego czcionki pozwala utworzyć złożoną rodzinę czcionek, co zwiększa zarówno prędkość, jak i efektywność pobierania &ndash; użytkownik będzie pobierać tylko potrzebne warianty i podzbiory, a nie te, których być może nigdy nie zobaczy lub nie wykorzysta na stronie. 
@@ -237,7 +232,6 @@ W powyższym przykładzie zadeklarowano rodzinę czcionek _Awesome Font_ składa
 
 Powyższy przykład ilustruje różnicę pomiędzy rzeczywistą i zsyntetyzowaną czcionką Open-Sans &ndash; wszystkie zsyntetyzowane warianty wygenerowano z jednej czcionki o grubości 400. Jak widać, różnice są zauważalne. Nie określono żadnych szczegółowych wytycznych generowania wariantów pogrubionych i skośnych. Dlatego wyniki mogą być różne dla różnych przeglądarek, zależą również w dużym stopniu od konkretnej czcionki.
 
-<!-- TODO: Verify note type! -->
 Note: Aby uzyskać jak najlepszy wygląd i zachować spójność wyświetlania, nie dopuszczaj do syntezy czcionek. Zamiast tego zmniejsz liczbę używanych wariantów czcionek i określ ich lokalizacje, dzięki czemu przeglądarka będzie mogła je pobrać, gdy okażą się potrzebne. Pamiętając o tym ostrzeżeniu, trzeba wiedzieć, że w niektórych przypadkach warianty uzyskane w drodze syntezy <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>mogą spełniać wymagania</a> &ndash; jednak należy stosować je z rozwagą.
 
 
@@ -309,7 +303,6 @@ Ponadto (dzięki metodzie [check()](http://dev.w3.org/csswg/css-font-loading/#fo
 
 Najlepsze jest jednak to, że dla różnych typów treści na stronie można łączyć powyższe strategie &ndash; np. wstrzymanie renderowania tekstu w niektórych sekcjach, aż czcionka stanie się dostępna; użycie czcionki zastępczej i ponowne renderowanie po zakończeniu pobierania czcionek; określenie różnych limitów czasu oczekiwania i tak dalej. 
 
-<!-- TODO: Verify note type! -->
 Note: W przypadku niektórych przeglądarek interfejs API Font Loading jest wciąż w fazie <a href='http://caniuse.com/#feat=font-loading'>prac rozwojowych</a>. Rozważ użycie biblioteki <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a> lub <a href='https://github.com/typekit/webfontloader'>webfontloader</a>, by zapewnić podobną funkcjonalność, chociaż za cenę dołączenia dodatkowego zasobu JavaScript.
 
 ### Optymalizacja renderowania czcionek przez zamieszczanie czcionek w kodzie
@@ -321,7 +314,6 @@ Jeśli nie można skorzystać z interfejsu API Font Loading, `problem pustego te
 
 Strategia zamieszczania w kodzie nie jest aż tak elastyczna i nie umożliwia określania niestandardowych czasów oczekiwania oraz strategii renderowania dla różnych typów treści, ale jest to proste i wszechstronne rozwiązanie, działające we wszystkich przeglądarkach. Najlepsze wyniki daje umieszczenie czcionek zamieszczonych w kodzie w osobnych arkuszach stylów i określenie ich długiego okresu ważności max-age &ndash; dzięki temu w przypadku aktualizacji arkusza CSS użytkownicy nie będą musieli ponownie pobierać czcionek. 
 
-<!-- TODO: Verify note type! -->
 Note: Z umiarem zamieszczaj czcionki w kodzie strony. Pamiętaj, że przyczyną leniwego wczytywania czcionek określonych dyrektywą @font-face jest chęć uniknięcia pobierania zbędnych wariantów i podzbiorów czcionek. Ponadto zwiększenie rozmiaru kodu CSS przez agresywne stosowanie zasady umieszczania czcionek w kodzie negatywnie wpływa na <a href='/web/fundamentals/performance/critical-rendering-path/'>krytyczną ścieżkę renderowania</a> &ndash; przeglądarka musi pobrać cały kod CSS przed utworzeniem modelu CSSOM, zbudowaniem drzewa renderowania i zrenderowaniem treści strony na ekranie.
 
 ### Optymalizacja ponownego użycia czcionek dzięki buforowaniu HTTP

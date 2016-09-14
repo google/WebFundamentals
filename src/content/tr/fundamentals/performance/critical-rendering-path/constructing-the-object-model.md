@@ -45,7 +45,6 @@ Tarayıcının HTML biçimlendirmesini işlemesinin gerektiği her defasında, t
 
 <img src="images/dom-timeline.png" class="center" alt="DOM yapımını DevTools'ta takip etme">
 
-<!-- TODO: Verify note type! -->
 Note: Chrome DevTools ile ilgili temel bilgilere sahip olduğunuzu (ör. bir ağ şelalesini nasıl yakalayacağınızı veya bir zaman çizelgesini kaydetmeyi bildiğinizi) varsayacağız. Hızlı bir hatırlatmaya gereksinim duyarsanız <a href='https://developer.chrome.com/devtools'>Chrome DevTools dokümanlarına</a> bakabilirsiniz veya DevTools'u yeni kullanmaya başladıysanız Codeschool <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> kursunu almanızı öneririz.
 
 Chrome DevTools'u açar ve sayfa yüklenirken bir zaman çizelgesi kaydederseniz bu adımın gerçekleştirilmesinin gerçekte ne kadar sürdüğünü görebilirsiniz. Yukarıdaki örnekte, HTML bayt parçasının DOM ağacına dönüştürülmesi yaklaşık 5 ms sürmüştür. Elbette, sayfa, çoğu sayfada olduğu gibi daha geniş olsaydı bu süreç çok daha uzun sürebilirdi. Akıcı animasyonlar oluşturmayla ilgili ilerideki bölümlerimizde, tarayıcının büyük miktarlarda HTML işlemesi gerekirse bunun kolayca tıkanabileceğiniz bir nokta olacağını göreceksiniz.

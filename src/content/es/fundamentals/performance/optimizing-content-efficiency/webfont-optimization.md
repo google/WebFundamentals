@@ -45,7 +45,6 @@ Hoy en día se utilizan cuatro formatos de contenedor de fuentes en la Web: [EOT
 * Utilizar una variante de EOT para los navegadores IE antiguos (anteriores a IE9)
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Técnicamente también existe el <a href='http://caniuse.com/svg-fonts'>contenedor de fuentes SVG</a>, pero no es compatible con IE ni con Firefox, y ahora Chrome tampoco lo admite. Por lo tanto, su uso está limitado y por eso lo omitimos de forma intencionada en esta guía.
 
 ### Reducir el tamaño de fuente mediante la compresión
@@ -58,7 +57,6 @@ Cada fuente está formada por varios glifos, cada uno de los cuales es un conjun
 
 Por último, cabe apuntar que algunos formatos de fuente contienen metadatos adicionales, como información de la [optimización de fuentes](http://en.wikipedia.org/wiki/Font_hinting) y del [interletraje](http://es.wikipedia.org/wiki/Interletraje) que puede no ser necesaria en algunas plataformas. De esta forma se puede optimizar aún más el tamaño de archivo. Consulta las opciones de optimización que tienes disponibles en tu compresor de fuentes y, si eliges esta ruta, asegúrate de que tienes la infraestructura adecuada para probar y proporcionar estas fuentes optimizadas en cada navegador concreto. Por ejemplo, {\f3 (c)}{\f2321   Google} Fonts conserva más de 30 variantes optimizadas para cada fuente y detecta y proporciona automáticamente la variante óptima para cada plataforma y para cada navegador.
 
-<!-- TODO: Verify note type! -->
 Note: Puedes usar la <a href='http://en.wikipedia.org/wiki/Zopfli'>compresión Zopfli</</a>> para los formatos EOT, TTF y WOFF. Zopfli es un compresor compatible con zlib que proporciona una reducción del tamaño de archivo aproximada del 5% mediante gzip.
 
 ## Definir la familia de fuentes con @font-face
@@ -105,7 +103,6 @@ En primer lugar, ten en cuenta que los ejemplos anteriores definen una única fa
 * La directiva `url()` permite cargar fuentes externas y puede contener una optimización `format()` opcional que indica el formato de la fuente a la que hace referencia la URL proporcionada.
 
 ^
-<!-- TODO: Verify note type! -->
 Note: A menos que hagas referencia a fuentes del sistema predeterminadas, debes proporcionar una lista de ubicaciones de fuentes externas, porque no es habitual que el usuario las tenga instaladas localmente, especialmente en dispositivos móviles, en los que es materialmente imposible `instalar` fuentes adicionales.
 
 Si el navegador determina que se necesita la fuente, recurre a la lista de recursos proporcionada en el orden especificado e intenta cargar el recurso apropiado. Por ejemplo, siguiendo el ejemplo anterior:
@@ -118,7 +115,6 @@ Si el navegador determina que se necesita la fuente, recurre a la lista de recur
 
 Al combinar las directivas locales y externas con las optimizaciones de formato adecuadas podemos especificar todos los formatos de fuente disponibles y podemos dejar que el navegador se encargue del resto: el navegador deduce qué recursos se requieren y selecciona el formato óptimo por nosotros.
 
-<!-- TODO: Verify note type! -->
 Note: El orden de especificación de las variedades de fuentes juega un papel importante. El navegador selecciona el primer formato que admite. Por lo tanto, si quieres que los navegadores más nuevos utilicen WOFF2, debes ubicar la declaración WOFF2 encima de WOFF, etc.
 
 ### Subconjunto de la gama unicode
@@ -159,7 +155,6 @@ Por ejemplo, podemos dividir la familia _Awesome Font_ en subconjuntos latinos y
     }
     
 
-<!-- TODO: Verify note type! -->
 Note: El subconjunto de fuentes unicode es particularmente importante para los idiomas asiáticos, que contienen una cantidad de glifos mucho mayor que los idiomas occidentales y en los que la fuente `completa` se acostumbra a medir en megabytes en vez de hacerlo en decenas de kilobytes.
 
 El uso de subconjuntos de la gama unicode y de archivos independientes de cada variante estilística de la fuente permite definir una familia de fuentes compuesta, que se descarga de forma más rápida y más eficaz. De esta forma, el visitante solo tendrá que descargar las variantes y los subconjuntos que necesite, y no estará obligado a descargar subconjuntos que nunca verá ni utilizará en la página. 
@@ -237,7 +232,6 @@ En el ejemplo anterior podemos ver que la familia _Awesome Font_ está formada p
 
 En el ejemplo anterior se muestra la diferencia entre los resultados de fuentes reales y sintetizadas de Open-Sans. Todas las variantes sintetizadas se generan a partir de una fuente de grosor 400. Como puedes ver, hay una diferencia significativa en los resultados. La información para generar las variantes en negrita y en cursiva no se especifica. Por lo tanto, los resultados variarán de un navegador a otro y también dependerán mucho de la fuente.
 
-<!-- TODO: Verify note type! -->
 Note: Para conseguir la máxima coherencia y los mejores resultados visuales, no confíes ciegamente en la síntesis de fuentes. Lo que sí te será útil es reducir la cantidad de variantes de fuentes utilizadas y especificar sus ubicaciones para que el navegador pueda descargarlas cuando vaya a utilizarlas en la página. Dicho esto, en algunos casos puede ser que la variante sintetizada <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>sea una opción viable</a>. Utilízala con precaución.
 
 
@@ -309,7 +303,6 @@ Además, como podemos comprobar el estado de la fuente (mediante el método [che
 
 Lo mejor de todo es que también podemos combinar las estrategias anteriores en distintos contenidos de la página. Por ejemplo, se puede retener la renderización de texto en algunas secciones hasta que la fuente esté disponible, utilizar una fuente alternativa y después volver a renderizar cuando la descarga de la fuente haya terminado, especificar recesos diferentes, etc. 
 
-<!-- TODO: Verify note type! -->
 Note: <a href='http://caniuse.com/#feat=font-loading'>Algunos navegadores aún están desarrollando</a> la API de carga de fuentes. Plantéate utilizar <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a> o la <a href='https://github.com/typekit/webfontloader'>biblioteca de carga de fuentes web</a> para conseguir una funcionalidad similar pero con el coste general de una dependencia de JavaScript adicional.
 
 ### Optimizar la renderización de fuentes mediante la incrustación
@@ -321,7 +314,6 @@ Una sencilla estrategia alternativa para usar la API de carga de fuentes para el
 
 La estrategia de incrustación no es tan flexible y no nos permite definir recesos personalizados ni estrategias de renderización en diferente contenido, sino que es una solución sencilla y potente que funciona en todos los navegadores. Para obtener mejores resultados, separa las fuentes incrustadas en una hoja de estilos independiente y proporciónalas con un parámetro max-age grande. De esta forma, al actualizar el CSS no obligas a los visitantes a volver a descargar las fuentes. 
 
-<!-- TODO: Verify note type! -->
 Note: Utiliza la incrustación de forma selectiva. Recuerda que el motivo por el que la carga de @font-face es lenta es para evitar la descarga de variantes y subconjuntos de fuentes innecesarios. Además, aumentar el tamaño del CSS mediante una incrustación excesiva influye de forma negativa a la <a href='/web/fundamentals/performance/critical-rendering-path/'>ruta de renderización importante</a>, ya que el navegador debe descargar todos los CSS para poder construir el CSSOM, crear el árbol de renderización y renderizar el contenido de la página en la pantalla.
 
 ### Optimizar la reutilización de fuentes mediante el almacenamiento en la memoria caché HTTP

@@ -90,7 +90,6 @@ Po zastosowaniu wszystkich powyższych zaleceń rozmiar strony zmniejsza się z 
 
 Cofnijmy się na chwilę. Powyższy przykład ilustruje ważny fakt: algorytm kompresji ogólnego przeznaczenia &ndash; np. zaprojektowany do kompresji dowolnego tekstu &ndash; zapewne mógłby całkiem zadowalająco skompresować powyższą stronę, ale nie usunąłby komentarzy, nie zwinąłby reguł w kodzie CSS i nie przeprowadziłby wielu innych optymalizacji zależnych od kontekstu. Właśnie dlatego przetwarzanie wstępne / kompaktowanie / optymalizacja zależna od kontekstu stanowią tak potężną metodę.
 
-<!-- TODO: Verify note type! -->
 Note: Najlepszym przykładem jest rozmiar nieskompresowanej wersji rozwojowej biblioteki JQuery, który teraz dochodzi do ok. 300 KB. Ta sama biblioteka po skompaktowaniu (usunięciu komentarzy itp.) ma około 3x mniejszy rozmiar: ok. 100 KB.
 
 Powyższe techniki można rozszerzyć na zasoby inne niż tekstowe. Grafika, filmy wideo i inne typy treści zawierają metadane. Różnią się one od siebie użytecznymi danymi. Na przykład przy wykonywaniu zdjęć aparat dołącza wiele dodatkowych informacji: o swoich ustawieniach, lokalizacji i tak dalej. Zależnie od zastosowania dane te mogą mieć kluczowe znaczenie (np. w przypadku witryn umożliwiających udostępnianie zdjęć) lub być kompletnie bezużyteczne i wtedy należy rozważyć ich usunięcie. W praktyce te metadane mogą zwiększać rozmiar każdego obrazu nawet o kilkadziesiąt kilobajtów.
@@ -185,7 +184,6 @@ Jaka konfiguracja jest najlepsza dla Twojego serwera? Projekt HTML5 Boilerplate 
 
 Wyniki działania kompresji GZIP można łatwo i szybko ocenić, otwierając Narzędzia Chrome dla programistów i sprawdzając wartości w kolumnie "Size / Content" na panelu Network: "Size" oznacza rozmiar przesyłania, a "Content" oznacza rozmiar zasobu przed kompresją. Dla zasobu HTML w powyższym przykładzie dzięki kompresji GZIP zaoszczędzono podczas przesyłania 24,8 KB.
 
-<!-- TODO: Verify note type! -->
 Note: Może to się wydawać niewiarygodne, ale są przypadki, w których kompresja GZIP powoduje zwiększenie rozmiaru zasobu. Dzieje się tak zazwyczaj, gdy zasób jest bardzo mały i narzut związany z dodaniem słownika GZIP jest większy niż redukcja rozmiaru albo zasób jest już dobrze skompresowany. Możliwość określenia 'minimalnego rozmiaru pliku' w niektórych serwerach pozwala uniknąć tego problemu.
 
 Na koniec ostrzeżenie: większość serwerów udostępnia zasoby użytkownikowi po ich automatycznym skompresowaniu, jednak niektóre sieci CDN wymagają dodatkowych czynności i ręcznej zmiany ustawień, by kompresja GZIP byłastosowana zgodnie z założeniami. Audyt Twojej witryny pozwoli sprawdzić, czy zasoby są rzeczywiście [kompresowane](http://www.whatsmyip.org/http-compression-test/).

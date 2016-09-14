@@ -17,7 +17,7 @@ El recurso más rápido y optimizado es que no se envía. ¿Has supervisado el r
 
 ## TL;DR {: .hide-from-toc }
 - Hacer un inventario con todos los elementos propios y de terceros en tus páginas
-- 'Medir el rendimiento de cada elemento: su valor y rendimiento técnico'
+- Medir el rendimiento de cada elemento: su valor y rendimiento técnico
 - Determinar si los recursos ofrecen suficiente valor
 
 

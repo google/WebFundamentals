@@ -45,7 +45,6 @@ Wat houdt dit voor ons in? Er is geen enkele indeling die in alle browsers werkt
 * Bied EOT aan als variant voor verouderde IE-browsers (lager dan IE9)
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Er is in principe ook nog de <a href='http://caniuse.com/svg-fonts'>SVG `font container`</a>, maar deze werd nooit ondersteund in IE of Firefox, en wordt nu ook afgewezen in Chrome. Deze is daarom van weining praktisch nut en wordt in deze leidraad weggelaten.
 
 ### De omvang van lettertypen verlagen door compressie
@@ -58,7 +57,6 @@ Een lettertype is een verzameling gliefen, die elk bestaan uit paden die de vorm
 
 Sommige lettertype-indelingen bevatten extra metadata, zoals informatie voor [hinten](http://nl.wikipedia.org/wiki/Hinten) en [overhang](http://nl.wikipedia.org/wiki/Overhang_(typografie)) die niet noodzakelijk is op sommige platformen, waardoor de bestandsgrootte verder kan worden geoptimaliseerd. Controleer uw lettertypecompressor op beschikbare optimalisatie-opties en zorg dat u over de juiste infrastructuur beschikt om deze geoptimaliseerde lettertypen aan elke afzonderlijke browser te leveren. Google Fonts bevat bijvoorbeeld meer dan 30 geoptimaliseerde varianten voor elk lettertype en ontdekt en levert automatisch de optimale variant voor elk platform en elke browser.
 
-<!-- TODO: Verify note type! -->
 Note: Gebruik <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli-compressie</a> voor de bestandsindelingen EOT, TTF en WOFF. Zopfli is een compressor die geschikt is voor zlib en biedt een ongeveer 5% grotere reductie in bestandsgrootte dan Gzip.
 
 ## De lettertypefamilie definiëren met @font-face
@@ -105,7 +103,6 @@ In bovenstaand voorbeeld wordt een enkele _Awesome Font-familie weergegeven met 
 * de regel `url()` laat ons externe lettertypen laden die de optionele hint `format()` kunnen hebben om de bestandsindeling van het lettertype aan te geven waarnaar in de URL wordt verwezen.
 
 ^
-<!-- TODO: Verify note type! -->
 Note: Tenzij u verwijst naar een van de standaard systeemlettertypen, komt het zelden voor dat gebruikers Zopfli hebben geïnstalleerd, met name op mobiele apparaten waarop het onmogelijk is om extra lettertypen te installeren. U moet daarom altijd een lijst verstrekken met de locatie van externe lettertypen.
 
 Wanneer de browser vaststelt dat het lettertype nodig is, gaat deze de lijst met hulpbronnen in de aangegeven volgorde af en probeert de browser de juiste hulpbron te laden. Zoals in bovenstaand voorbeeld:
@@ -118,7 +115,6 @@ Wanneer de browser vaststelt dat het lettertype nodig is, gaat deze de lijst met
 
 Dankzij de combinatie van lokale en externe regels met hints voor de juiste bestandsindeling kunnen we alle beschikbare lettertype-indelingen specificeren en doet de browser de rest: de browser stelt vast welke hulpbronnen nodig zijn en selecteert voor ons de optimale bestandsindeling.
 
-<!-- TODO: Verify note type! -->
 Note: De volgorde waarin de verschillende lettertypen worden genoemd is van belang. De browser kiest namelijk het eerste lettertype dat wordt ondersteund. Wanneer u wilt dat nieuwe browsers WOFF2 gebruiken, moet u WOFF2 boven WOFF plaatsen, enzovoort.
 
 ### Deelverzameling Unicode-bereik
@@ -159,7 +155,6 @@ We kunnen onze _Awesome Font-familie bijvoorbeeld opsplitsen in Latijnse en Japa
     }
     
 
-<!-- TODO: Verify note type! -->
 Note: Deelverzamelingen voor unicode-lettertypen zijn met name belangrijk voor Aziatische talen. Het aantal gliefen is namelijk een stuk groter dan in Westerse talen en een volledig lettertype neemt al gauw enkele megabytes in beslag, in plaats van enkele tientallen kilobytes.
 
 Omdat we deelverzamelingen voor Unicode-bereik en aparte bestanden gebruiken voor elke stilistische variant van het lettertype, kunnen we een lettertypefamilie gebruiken die zowel sneller, als efficiënter kan worden gedownload - de bezoeker downloadt alleen de varianten en deelverzamelingen die nodig zijn en hoeft geen deelverzamelingen te downloaden die hij of zij toch nooit ziet of gebruikt op de pagina. 
@@ -237,7 +232,6 @@ Bovenstaand voorbeeld beschrijft de _Awesome Font-familie die is samengesteld ui
 
 Bovenstaand voorbeeld toont het verschil tussen het echte en synthetische lettertype Open-Sans. Alle synthetische varianten zijn gebaseerd op een enkel lettertype met een gewicht van 400. Zoals u ziet is er een groot verschil tussen de twee versies. Er is geen informatie gespecificeerd voor de vette en schuine varianten. De resultaten zullen daarom van de ene tot de andere browser verschillen, en hangen sterk af van het lettertype.
 
-<!-- TODO: Verify note type! -->
 Note: Voor de beste consistentie en visuele resultaten kunt u beter geen gebruikmaken van lettertype-synthese. Beperk het aantal gebruikte lettertypen en geef de locatie van de lettertypen op, zodat de browser de lettertypen kan downloaden wanneer deze op de pagina worden gebruikt. In sommige gevallen kan een synthetische variant <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>een optie zijn</a> - gebruik deze met zorg.
 
 
@@ -309,7 +303,6 @@ Voorts kunnen we de status van het lettertype controleren (via [check()](http://
 
 We kunnen bovenstaande strategieën bovendien ook combineren voor verschillende inhoud op de pagina - bijv. tekstweergave onderbreken in sommige onderdelen tot het lettertype beschikbaar is, een handmatig lettertype gebruiken en de tekst opnieuw weergeven wanneer het nieuwe lettertype is gedownload, verschillende time-outs opgeven, enzovoort. 
 
-<!-- TODO: Verify note type! -->
 Note: Font Loading API is <a href='http://caniuse.com/#feat=font-loading'>voor sommige browsers nog in ontwikkeling</a>. Gebruik de <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a>, of de <a href='https://github.com/typekit/webfontloader'>webfontloader-bibliotheek</a> om vergelijkbare functionaliteit te leveren, met als nadeel dat u afhankelijk bent van JavaScript.
 
 ### Tekstweergave optimaliseren met `inlining`
@@ -321,7 +314,6 @@ Een eenvoudige alternatieve strategie voor Font Loading API om lege tekst op te 
 
 De invoerstrategie is niet zo flexibel en we kunnen geen aangepaste time-outs instellen of weergavestrategieën maken voor verschillende inhoud, maar het is een eenvoudige en degelijke oplossing die werkt voor alle browsers. Voor het beste resultaat werkt u ingevoerde lettertypen uit op zelfstandige stylesheets en biedt u deze aan met een lange `max-age` - zo dwingt u uw bezoekers niet om de lettertypen opnieuw te downloaden wanneer u uw CSS bijwerkt. 
 
-<!-- TODO: Verify note type! -->
 Note: Maak selectief gebruik van `inlining`. De reden dat @font-face gebruikmaakt van `lazyload` is om downloaden van overbodige lettertypevarianten en deelverzamelingen te voorkomen. Als u de omvang van uw CSS via agressieve `inlining` vergroot, heeft dit negatieve gevolgen voor uw <a href='/web/fundamentals/performance/critical-rendering-path/'>kritieke render-pad</a> - de browser moet alle CSS downloaden voordat deze de CSSOM en render-boom kan opstellen, en pagina-inhoud op het scherm kan weergeven.
 
 ### Hergebruik van lettertypen optimaliseren met HTTP-caching

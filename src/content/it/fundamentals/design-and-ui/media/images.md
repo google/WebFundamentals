@@ -29,7 +29,6 @@ In altre circostanze potrebbe essere necessario modificare drasticamente l'immag
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">
@@ -109,7 +108,6 @@ La modifica delle immagini in base alle caratteristiche del dispositivo, detta a
 <img class="center" src="img/art-direction.png" alt="Esempio di direzione artistica"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-<!-- TODO: Verify note type! -->
 Note: L'elemento <code>picture</code> inizia a essere supportato dai browser. Anche se non è disponibile in tutti i browser, è consigliabile utilizzarlo grazie alla retroattività e alla possibilità di utilizzare una <a href='http://picturefill.responsiveimages.org/'>polilinea Picturefill</a>. Consulta il sito <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a> per maggiori informazioni.
 
 <div class="mdl-grid">
@@ -227,7 +225,6 @@ delle immagini] (http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">Vedi esempio</a>
 
-<!-- TODO: Verify note type! -->
 Note: Utilizza con parsimonia le tecniche di compressione, poiché aumentano i costi in termini di decodifica e memoria. Il ridimensionamento delle immagini di grandi dimensioni per gli schermi di dimensioni ridotte è un'attività costosa che riduce le prestazioni dei dispositivi di fascia bassa con limiti di memoria e di capacità di calcolo.
 
 #### Sostituzione dell'immagine JavaScript
@@ -447,7 +444,7 @@ Il caricamento ritardato velocizza il caricamento delle pagine di grandi dimensi
 
 Attenzione nel creare pagine a scorrimento infinito, poiché i contenuti vengono caricati al momento della visualizzazione e i motori di ricerca potrebbero non indicizzarli. Inoltre, gli utenti in cerca delle informazioni visualizzate nei piè di pagina non riusciranno a visualizzare questa parte della pagina a causa del continuo caricamento dei nuovi contenuti.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.optimize %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.optimize #}
 
 
 

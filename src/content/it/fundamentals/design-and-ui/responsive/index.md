@@ -24,7 +24,6 @@ L'impiego di dispositivi mobili per la navigazione sul Web è in forte aumento, 
 
 
 ### Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -90,7 +89,6 @@ Il valore meta viewport `width=device-width` garantisce la corrispondenza della 
 
 In caso di rotazione orizzontale, alcuni browser mantengono costante la larghezza della pagina eseguendo uno zoom invece di riordinare i contenuti su schermo. L'attributo `initial-scale=1` impone al browser di definire una relazione univoca fra i pixel del CSS e quelli indipendenti dal dispositivo con qualsiasi orientamento, consentendo alla pagina di sfruttare appieno la larghezza orizzontale.
 
-<!-- TODO: Verify note type! -->
 Note: Utilizza virgole per separare gli attributi per consentire anche ai browser meno aggiornati di analizzarli in modo corretto.
 
 ### Garantire l'accessibilità del viewport

@@ -45,7 +45,6 @@ description: 如要打造出優異的設計、品牌宣傳、可讀性和無障�
 * 將 EOT 變體提供給舊版 IE (IE9 之下) 瀏覽器
 ^
 
-<!-- TODO: Verify note type! -->
 Note: 就技術方面來說，其實還有<a href='http://caniuse.com/svg-fonts'>SVG 字型容器</a>，但 IE 和 Firefox 從未提供支援，現在 Chrome 也不再提供支援了。因為用途不大，我們在這份指南並未加以說明。
 
 ### 透過壓縮縮減字型大小
@@ -58,7 +57,6 @@ Note: 就技術方面來說，其實還有<a href='http://caniuse.com/svg-fonts'
 
 最後，值得注意的是某些字型格式包含額外的中繼資料，例如 [字型提示](http://en.wikipedia.org/wiki/Font_hinting)和[字距調整](http://en.wikipedia.org/wiki/Kerning)資訊，這些資訊在某些平台上可能不是必要的，這樣就可以進一步最佳化檔案大小。查詢您的字型壓縮工具是否有可用的最佳化選項，而如果您這樣做了，請確保您有適合的基礎架構來測試這些最佳化的字型並提供給每個特定瀏覽器，例如 Google 字型為每個字型保留 30 種以上的 最佳化變體，並會自動偵測及提供適合每種平台和瀏覽器的最佳變體。
 
-<!-- TODO: Verify note type! -->
 Note: 請考慮使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 壓縮</a>處理 EOT、TTF 和 WOFF 格式。Zopfli 是與 zlib 相容的壓縮工具，可透過 gzip 提供 ~5% 的檔案大小縮減。
 
 ## 使用 @font-face 定義字型系列
@@ -105,7 +103,6 @@ Note: 請考慮使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 壓�
 * 透過 `url ()` 指令，我們可以載入外部字型，而且該指令可以包含一個可選的 `format ()` 提示，指示由提供的網址所參照的字型格式。
 
 ^
-<!-- TODO: Verify note type! -->
 Note: 除非您要參照其中一種預設系統字型，使用者實際上很少將其安裝在本機，特別是行動裝置，因為使用者根本無法在行動裝置上「安裝」附加的字型。因此，請務必提供一份外部字型位置清單。
 
 當瀏覽器確定需要的字型之後，就會依照指定的順序在提供的資源清單中反覆運算，並嘗試載入適合的資源。例如，接著上面的示例：
@@ -118,7 +115,6 @@ Note: 除非您要參照其中一種預設系統字型，使用者實際上很�
 
 使用具有適當格式提示的本地和外部指令的組合，我們只要指定所有可用的字型格式，其他的事務就交給瀏覽器處理：瀏覽器會確定需要哪些資源，並代表我們選擇最佳格式。
 
-<!-- TODO: Verify note type! -->
 Note: 指定的字型變體的順序很重要。瀏覽器將選取支援的第一種格式。因此，如果您希望較新的瀏覽器使用 WOFF2，那麼您應該將 WOFF2 聲明置於 WOFF 之上，以此類推。
 
 ### Unicode-range 子集擷取
@@ -159,7 +155,6 @@ Note: 指定的字型變體的順序很重要。瀏覽器將選取支援的第�
     }
     
 
-<!-- TODO: Verify note type! -->
 Note: Unicode-range 子集內嵌對於亞洲語言特別重要，在亞洲語言中，字符的數量要比西方語言中多得多，一種典型的「完整」字型經常以 MB 來衡量，而不是數十 KB！
 
 透過使用 unicode range 子集以及為字型的每種樣式變體使用單獨的檔案，我們可以定義一個複合字型系列，該系列下載起來更快、更有效。訪客只需要下載變體及變體所需的子集，系統不會強制他們下載網頁上不會看到或使用的子集。
@@ -237,7 +232,6 @@ Note: Unicode-range 子集內嵌對於亞洲語言特別重要，在亞洲語言
 
 上面的示例說明了 Open-Sans 的實際字型與合成字型結果之間的不同，所有合成變體都是從單個 400 粗細字型產生的。您也可以看出來，結果存在顯著差異。此處並未詳細說明如何產生加粗和傾斜變體。因此，瀏覽器不同，結果將會有差異，而且結果還會與字型高度相關。
 
-<!-- TODO: Verify note type! -->
 Note: 為獲得最好的一致性和視覺效果，請勿依賴字型合成。相反地，請儘量使用最少的字型變體並指定其位置，這樣當網頁使用這些字型時，瀏覽器才可以下載。話說回來，在某些情況下，某個合成的變體<a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>可能是可行的選擇</a>，但請小心使用。
 
 
@@ -309,7 +303,6 @@ Note: 為獲得最好的一致性和視覺效果，請勿依賴字型合成。�
 
 最重要的是，我們還可以為網頁上的不同內容混合及比對上述策略，例如，在字型可用之前在某些部分暫停文字呈現，使用備用字型然後在字型下載完成之後重新呈現，指定不同的逾時，等等。
 
-<!-- TODO: Verify note type! -->
 Note: 在某些瀏覽器中，Font Loading API <a href='http://caniuse.com/#feat=font-loading'>仍處於開發階段</a>。請考慮使用 <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a> 或 <a href='https://github.com/typekit/webfontloader'>webfontloader 程式庫</a>以提供相似的功能，雖然這樣會因為依賴 JavaScript 而產生額外間接成本。
 
 ### 使用內嵌方式將字型轉譯最佳化
@@ -321,7 +314,6 @@ Note: 在某些瀏覽器中，Font Loading API <a href='http://caniuse.com/#feat
 
 內嵌策略不是很靈活，不允許我們定義自訂逾時或為不同的內容呈現策略，但該策略是在所有瀏覽器上都可以使用的一個簡單而可靠的解決方案。為獲得最佳效果，請將內嵌字型分成獨立的樣式表並提供較長的 max-age。如此一來，更新 CSS 時，就不會強制訪客重新下載字型。
 
-<!-- TODO: Verify note type! -->
 Note: 請謹慎使用內嵌方法！ 回想一下，@font-face 使用延遲載入行為是為了避免下載不必要的字型變體和子集。另外，透過主動式內嵌增加您的 CSS 的大小將對您的<a href='/web/fundamentals/performance/critical-rendering-path/'>關鍵轉譯路徑</a>產生負面影響 - 瀏覽器必須首先下載所有 CSS，然後才可以構造 CSSOM，建構轉譯樹狀結構，並將網頁內容呈現到螢幕。
 
 ### 使用 HTTP 快取將字型重複使用最佳化

@@ -39,7 +39,6 @@ Progressive Web Apps 是:
 
 這指南引導將會引導你完成你自己的Progressive Web App，這也包括網頁設計考量以及確保你的應用程序符合Progressive Web App的關鍵原則。
 
-<!-- TODO: Verify note type! -->
 Note: Looking for more? Watch Alex Russell talk about <a href='https://www.youtube.com/watch?v=MyQ8mtR9WxI'>Progressive Web Apps</a> from the 2015 Chrome Dev Summit
 
 ## 我們將會做什麽

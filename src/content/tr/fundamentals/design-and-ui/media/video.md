@@ -97,7 +97,6 @@ Bir medya parçasi eklemek için medya URL'sine yalnizca `#t=[start_time][,end_t
 
 Medya Parçalari API'sini, birden çok dosyayi kodlayip sunmak zorunda kalmadan ayni videoda birden çok görünüm sunmak (DVD'lerdeki bölüm baslangiçlari gibi) için de kullanabilirsiniz.
 
-<!-- TODO: Verify note type! -->
 Note: - 'Medya Parçalari API''si çogu platformda desteklenir, ancak iOS''ta desteklenmez.'
 - 'Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.'
 
@@ -262,11 +261,10 @@ Video boyutlarini JavaScript veya CSS'yi kullanarak kontrol edebilirsiniz. JavaS
 
 Görüntü alani boyutlarina bagli olarak ögelerin boyutunu belirtmek için [CSS medya sorgularini](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) kullanin; `max-width: 100%` sizin dostunuzdur.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 iframe içindeki medya içerigi (YouTube videolari gibi) için duyarli bir yaklasim deneyin ([John Surdakowski'nin önerdigi](//avexdesigns.com/responsive-youtube-embed/) gibi bir yaklasim).
 
-<!-- TODO: Verify note type! -->
 Note: Orijinal videodan farkli bir en boy oraniyla sonuçlanacak öge boyutu ayarlamasini zorlamayin. Basik veya uzamis video kötü görünür.
 
 **CSS:**
@@ -382,7 +380,6 @@ Erisilebilirlik bir özellik degildir. Duyamayan veya göremeyen kullanicilar, b
 
 Medyanin mobil cihazlarda daha erisilebilir olmasini saglamak için parça ögesini kullanarak altyazilar veya açiklamalar ekleyin.
 
-<!-- TODO: Verify note type! -->
 Note: Izleme ögesi Android için Chrome'da, iOS Safari'de ve Firefox haricinde geçerli tüm masaüstü tarayicilarda desteklenir (bkz. <a href='http://caniuse.com/track' title='Izleme ögesi destek durumu'>caniuse.com/track</a>). Çesitli çoklu dolgular da kullanilmaktadir. <a href='//www.delphiki.com/html5/playr/' title='Playr parça ögesi çoklu dolgusu'>Playr</a> veya <a href='//captionatorjs.com/' title='Captionator parça'>Captionator</a> kullanmanizi öneririz.
 
 Izleme ögesi kullanildiginda altyazilar sunun gibi görünür:

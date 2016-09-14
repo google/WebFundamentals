@@ -23,7 +23,6 @@ description: ユーザーがページ上で行う中核的操作に関係する�
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

@@ -76,7 +76,6 @@ Translated By:
 
 サイトの基本構造は完成しました。必要なセクション、各セクションに表示するコンテンツ、情報アーキテクチャ内のどこにコンテンツを配置すべきかがわかりました。これで、サイト構築を開始できます。
 
-<!-- TODO: Verify note type! -->
 Note: スタイルは後に来る
 
 #### ヘッドラインとフォームを作る
@@ -100,7 +99,7 @@ Note: スタイルは後に来る
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### 動画と情報のセクションを作る
 
@@ -124,7 +123,7 @@ Note: スタイルは後に来る
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### 画像のセクションを作る
 
@@ -143,7 +142,7 @@ Note: スタイルは後に来る
 
 画像は画面の幅 100% にスケーリングするよう設定されています。この設定は狭いビューポートのデバイスではうまく機能しますが、広いビューポートのデバイス（パソコンなど）では適切に機能しません。この問題はレスポンシブ デザインのセクションで対処します。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 画像を見ることができないユーザーも少なくありません。そうしたユーザーは多くの場合、ページ上のデータを解析してその情報をユーザーに言葉で伝えるスクリーンリーダーなどの支援技術を利用します。スクリーン リーダーを使用するユーザーに画像の内容を言葉で確実に伝えられるよう、すべてのコンテンツ画像のタグに alt 属性でわかりやすい代替テキストを設定する必要があります。
 
@@ -239,7 +238,7 @@ Translated By:
 
 ビューポートはドキュメントの head 部に配置します。宣言が必要なのは 1 回のみです。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### シンプルなスタイリングを適用します
 
@@ -308,7 +307,6 @@ Translated By:
 
 大きな画面の場合はより多くのスペースがあるため、コンテンツをより柔軟な方法で表示できます。
 
-<!-- TODO: Verify note type! -->
 Note: すべての要素を一度に移動する必要はありません。必要に応じて細かい調整を加えることができます。
 
 今回の商品ページでは、次の作業が必要と考えられます。
@@ -319,7 +317,7 @@ Note: すべての要素を一度に移動する必要はありません。必�
 *  動画をコンテンツに回り込ませる。
 *  画像のサイズを縮小し、見栄えよく並べて表示する。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### デザインの最大幅を抑制する
 
@@ -422,7 +420,7 @@ auto を適用する必要があります。これにより、画面が大きく
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### 表
 

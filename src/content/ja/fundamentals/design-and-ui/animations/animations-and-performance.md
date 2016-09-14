@@ -27,7 +27,7 @@ description: アニメーションは快適に実行される必要がありま�
 
 個々の CSS プロパティによってトリガーされる作業の完全なリストは、[CSS Triggers](http://csstriggers.com) にあり、[High Performance Animations on HTML5 Rocks](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) 作成の完全なガイドを参照できます。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css #}
 
 ### will-change プロパティの使用
 

@@ -97,7 +97,6 @@ Para adicionar um fragmento de mídia, adicione `#t=[start_time][,end_time]` ao 
 
 A API dos fragmentos de mídia também pode ser usada para fornecer diversas visualizações do mesmo vídeo, como pontos de marcação em um DVD, sem ter que codificar e veicular diversos arquivos.
 
-<!-- TODO: Verify note type! -->
 Note: - 'A API dos fragmentos de mídia é compatível com a maioria das plataformas, mas não com iOS.'
 - 'Certifique-se de que as solicitações de faixa sejam compatíveis com seu servidor. As solicitações de faixa são habilitadas por padrão na maioria dos servidores, mas alguns serviços de hospedagem podem desativá-las.'
 
@@ -262,11 +261,10 @@ Controle as dimensões do vídeo usando o JavaScript e CSS. As bibliotecas e os 
 
 Use [consultas de mídia CSS](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) para especificar o tamanho dos elementos dependendo das dimensões da janela de visualização: `max-width: 100%` é seu braço direito.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 Para conteúdo de mídia em iframe (como vídeos do YouTube), tente uma abordagem ágil (como a que foi [proposta por John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
 
-<!-- TODO: Verify note type! -->
 Note: Não force o dimensionamento de elementos se isso resultar em uma proporção diferente do vídeo original. Uma imagem achatada ou alongada tem aparência feia.
 
 **CSS:**
@@ -382,7 +380,6 @@ A acessibilidade não é um recurso. Os usuários com dificuldades de visão e e
 
 Para tornar os recursos de mídia mais acessíveis nos dispositivos móveis, inclua legendas ou descrições usando o elemento de faixa.
 
-<!-- TODO: Verify note type! -->
 Note: O elemento de faixa é aceito no Google Chrome para Android, Safari (iOS) e em todos os navegadores atuais para computador, exceto Firefox (veja <a href='http://caniuse.com/track' title='Track element support status'>caniuse.com/track</a>). Também existem diversas opções de polyfill disponíveis. Recomendamos o <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> ou o <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
 
 Com o elemento de faixa, as legendas aparecem desta forma:

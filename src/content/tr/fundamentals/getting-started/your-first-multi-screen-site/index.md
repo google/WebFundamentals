@@ -66,7 +66,6 @@ Bu, projenin geri kalaninda kullanacagimiz iskelet sayfanin kaba bölümlerine k
 
 Sitenin temel yapisi tamamlandi. Ihtiyacimiz olan bölümleri, bu bölümlerde görüntülenecek içerigi ve genel bilgi mimarisi içinde bunu nereye yerlestirecegimizi biliyoruz. Artik sitemizi olusturmaya baslayabiliriz.
 
-<!-- TODO: Verify note type! -->
 Note: Stil daha sonra gelecektir
 
 #### Baslik ve formu olusturma
@@ -90,7 +89,7 @@ Kullanicilarin bir mobil cihazda içerigi hizli ve basit bir sekilde girebilmele
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### Video ve Bilgi bölümünü olusturma
 
@@ -114,7 +113,7 @@ En iyi uygulamalari izleyerek videoyu sitenize kolayca entegre edebilirsiniz:
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### Resimler Bölümünü Olusturma
 
@@ -133,7 +132,7 @@ Içerik resimleri, sayfanin anlamini aktarma açisindan önemlidir. Bunlari, gaz
 
 Resimler, ekran genisliginin %100 ölçegine ayarlanmistir. Bu, dar görüntü alani olan cihazlarda iyi bir sekilde çalisir, ancak genis görüntü alanina sahip cihazlarda (masaüstü bilgisayarlar gibi) çok iyi görünmez.  Bunu, duyarli tasarim bölümünde ele alacagiz.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 Birçok kisi, resimleri görüntüleyemez ve genellikle, sayfadaki verileri ayristiran ve bunu kullaniciya sözlü olarak aktaran ekran okuyucu gibi bir yardimci teknoloji kullanir.  Tüm içerik resimlerinizde, ekran okuyucunun resmi kullaniciya açiklayabilmesi için bir tanimlayici `alt` etiketinin bulundugundan emin olun.
 
@@ -225,7 +224,7 @@ Görüntü alani, tarayiciya sayfanin ekrana sigmasi için ölçeklenmesi gerekt
 
 Görüntü alani, dokümanin basinda yer alir ve yalnizca bir kez açiklanmasi gerekir.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### Basit stil uygula 
 
@@ -294,7 +293,6 @@ Tasarim, yaklasik 600 piksel genisliginde kötü görünmeye basliyor.  Bizim ö
 
 Daha genis bir ekranda daha fazla alan vardir, dolayisiyla içerigin nasil görüntülenebilecegi konusunda daha esnek olunabilir.
 
-<!-- TODO: Verify note type! -->
 Note: Tüm ögeleri ayni anda tasimaniz gerekmez, gerektikçe küçük ayarlamalar yapabilirsiniz.
 
 Ürün sayfamiz baglaminda görünüse göre sunlari yapmamiz gerekecek:
@@ -305,7 +303,7 @@ Note: Tüm ögeleri ayni anda tasimaniz gerekmez, gerektikçe küçük ayarlamal
 *  Videonun içerik çevresinde hareket etmesini saglama.
 *  Resimlerin boyutunu küçültme ve daha hos bir tabloda görünmelerini saglama.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### Tasarimin maksimum genisligini sinirlama
 
@@ -407,7 +405,7 @@ Bunu destekleyen tarayicilarda, yüksek yogunluga sahip bir ekranda yüksek yogu
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### Tablolar
 

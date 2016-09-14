@@ -90,7 +90,6 @@ Après avoir appliqué les étapes ci-dessus, notre page passe de 406 à 150 car
 
 Prenons un instant et remarquons que l'exemple ci-dessus illustre un point important : un logiciel de compression d'utilisation générale, disons conçu pour compresser du texte aléatoire, pourrait probablement compresser de façon efficace la page ci-dessus, mais ne saurait pas supprimer les commentaires, réduire les règles CSS, ou encore effectuer des dizaines d'autres optimisations spécifiques au contexte. C'est pour cela que l'optimisation de prétraitement, de réduction de la taille et en fonction du contexte peut être un outil très puissant.
 
-<!-- TODO: Verify note type! -->
 Note: Dans ce cas, la version du développement non compressé de la bibliothèque JQuery approche maintenant les 300 Ko. La même bibliothèque, une fois réduite (commentaires supprimés, etc.) est environ 3x plus petite : ~100 Ko.
 
 De même, les techniques ci-dessus peuvent être appliquées à d'autres éléments que le texte. Images, vidéos et autres types de contenu contiennent tous leurs propres formes de métadonnées et différentes données utiles. Par exemple, lorsque vous prenez une photo avec un appareil photo, la photo contient généralement un grand nombre d'informations supplémentaires : paramètres de l'appareil photo, localisation, etc. Selon votre application, ces données peuvent être essentielles (par exemple sur un site de partage de photos) ou complètement inutile. Vous devez donc vous demander s'il est possible de les supprimer. En pratique, ces métadonnées peuvent représenter jusqu'à des dizaines de kilo-octets pour chaque image !
@@ -185,7 +184,6 @@ Quelle est la meilleure configuration pour votre serveur ? Le projet HTML5 Boile
 
 Un moyen simple et rapide de voir GZIP en action consiste à ouvrir Chrome DevTools et a consulter la colonne 'Taille/Contenu' dans le panneau Réseau : 'Taille' indique la taille de transfert de l'élément, et 'Contenu' la taille non compressée de l'élément. Pour l'élément HTML dans l'exemple ci-dessus, GZIP a économisé 24,8 Ko pendant le transfert !
 
-<!-- TODO: Verify note type! -->
 Note: Croyez-le ou non, dans certains cas la compression GZIP peut augmenter la taille de l'élément. Cela se produit généralement lorsque l'élément est très petit et que le temps système du dictionnaire GZIP est supérieur à l'économie réalisée par la compression, ou lorsque la ressource est déjà bien compressée. Certains serveurs vous permettent de définir un 'seuil de taille de fichier minimal' afin d'éviter ce problème.
 
 Pour finir, un mot d'avertissement : si la plupart des serveurs compressent automatiquement les éléments pour vous lorsque vous les mettez à la disposition des utilisateurs, certains CDN nécessitent une attention particulière et une action manuelle pour s'assurer que l'élément GZIP est diffusé. Auditez votre site et assurez-vous que vos éléments sont bien [compressés](http://www.whatsmyip.org/http-compression-test/) !

@@ -24,7 +24,6 @@ description: Большинство интернет-ресурсов не оп�
 
 
 ## Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">

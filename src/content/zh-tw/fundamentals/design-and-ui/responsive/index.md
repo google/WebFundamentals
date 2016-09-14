@@ -24,7 +24,6 @@ description: 大多數的網站並未針對多裝置體驗進行最佳化。快�
 
 
 ### Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -91,7 +90,6 @@ Explore what makes a site responsive and how some common responsive design patte
 
 當裝置變為橫向模式時，部分瀏覽器不會將內容重新編排以符合螢幕大小，而是維持網頁寬度並進行縮放。新增 `initial-scale=1` 屬性可指示瀏覽器在 CSS 像素和裝置獨立像素之間建立 1:1 的關係 (無論裝置方向為何)，並允許網頁充分運用橫向寬度。
 
-<!-- TODO: Verify note type! -->
 Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖析屬性。
 
 ### 確認檢視區可供使用

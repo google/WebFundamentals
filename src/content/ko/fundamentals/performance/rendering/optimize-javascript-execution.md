@@ -22,7 +22,6 @@ JavaScript는 종종 시각적 변화를 유발합니다. 어떤 경우에는 �
 
 작성하는 JavaScript가 실제로 실행되는 코드가 아닐 수도 있기 때문에 JavaScript 성능 프로파일링은 약간 복잡할 수 있습니다. 최신 브라우저는 가급적 가장 빠른 실행 성능을 제공하기 위해 JIT 컴파일러 및 모든 최적화 방법과 기술을 사용하며, 이로 인해 코드의 동적인 기능이 변경됩니다.
 
-<!-- TODO: Verify note type! -->
 Note: 실행 중인 JIT를 보려면 <a href='http://mrale.ph/irhydra/2/'>Vyacheslav Egorov가 만든 IRHydra<sup>2</sup></a>를 참조하십시오. 이는 Chrome의 JavaScript 엔진 V8이 JavaScript 코드를 최적화 중일 때 코드의 중간 상태를 보여줍니다.
 
 하지만 이와 더불어 앱이 JavaScript를 제대로 실행하도록 명확히 수행할 수 있는 일부 기능들이 있습니다.

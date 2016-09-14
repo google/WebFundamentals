@@ -66,7 +66,6 @@ U kunt dit gemakkelijk converteren naar de onbewerkte gedeelten van een geraamte
 
 De basisstructuur van de website is klaar. We weten welke gedeelten we nodig hebben, de inhoud die we in deze gedeelten willen weergeven en waar we deze in de algemene informatie-architectuur willen plaatsen. We kunnen nu beginnen aan het bouwen van de website.
 
-<!-- TODO: Verify note type! -->
 Note: stijl komt later
 
 #### De kop en het formulier maken
@@ -90,7 +89,7 @@ We voegen semantische typen toe zodat gebruikers snel en eenvoudig inhoud kunnen
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### Het gedeelte Video en informatie
 
@@ -114,7 +113,7 @@ Door de best practices te volgen kunt u video gemakkelijk in uw website integrer
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### Het gedeelte Afbeeldingen maken
 
@@ -133,7 +132,7 @@ Inhoudsafbeeldingen zijn heel belangrijk om de betekenis van de pagina weer te g
 
 De afbeeldingen zijn ingesteld om aan te passen naar 100% van de breedte van het scherm. Dit werkt goed op apparaten met een smalle viewport, maar minder goed op apparaten met een brede viewport (bijvoorbeeld een desktop). We bespreken dit in het gedeelte over responsive design.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 Vaak kunnen mensen geen afbeeldingen weergeven en gebruiken ze een ondersteunende technologie zoals een schermlezer die de gegevens op de pagina parseert en verbaal aan de gebruiker doorgeeft. U moet ervoor zorgen dat al uw inhoudsafbeeldingen een beschrijvende `alt`-tag hebben die de schermlezer aan de gebruiker kan doorgeven.
 
@@ -225,7 +224,7 @@ De viewport vertelt de browser dat de pagina moet worden aangepast om in het sch
 
 De viewport bevindt zich in de kop van het document en moet slechts eenmaal worden gedeclareerd.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### Pas eenvoudige stijl toe
 
@@ -294,7 +293,6 @@ Het ontwerp ziet er pas slecht uit vanaf een breedte van 600 pixels. In ons voor
 
 Er is meer ruimte op een groter scherm, waardoor u flexibeler kunt zijn in de manier waarop inhoud wordt weergegeven.
 
-<!-- TODO: Verify note type! -->
 Note: U hoeft niet alle elementen tegelijk te verplaatsen. U kunt zo nodig kleine aanpassingen doorvoeren.
 
 In de context van onze productpagina moeten we:
@@ -305,7 +303,7 @@ In de context van onze productpagina moeten we:
 *  De video rond de inhoud laten zweven.
 *  Het formaat van de afbeeldingen verkleinen en ze in een mooier rooster weergeven.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### De maximale breedte van het ontwerp beperken
 
@@ -408,7 +406,7 @@ Voor browsers die het ondersteunen, kunt u een afbeelding met hoge dichtheid wee
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### Tabellen
 

@@ -23,7 +23,6 @@ Ao otimizar o caminho de processamento essencial, é possível melhorar signific
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

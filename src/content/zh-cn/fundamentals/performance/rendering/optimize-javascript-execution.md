@@ -27,7 +27,6 @@ Translated By:
 
 JavaScript性能分析是一门艺术活，因为你所写的JavaScript代码跟实际执行的代码完全是两回事。现代浏览器都会使用JIT编译器和其他优化手段来使你的JavaScript代码能尽可能执行得更快，这个编译和优化的过程会对代码产生极大的改动。
 
-<!-- TODO: Verify note type! -->
 Note: 如果你想看看JIT到底长什么样，请参考：<a href="http://mrale.ph/irhydra/2/">IRHydra<sup>2</sup> by Vyacheslav Egorov</a>。这篇文章讲解了页面中的JavaScript代码在Chrome的V8引擎中被优化时的中间状态。
 
 尽管如此，在优化JavaScript程序的执行速度方面，还是有一些你力所能及的事。

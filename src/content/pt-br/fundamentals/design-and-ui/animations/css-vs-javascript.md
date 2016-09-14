@@ -74,7 +74,6 @@ O JavaScript necessário para executar o final de uma transição será:
 
 Além de usar transições CSS, você também pode usar animações CSS, que permitirão maior controle sobre quadros-chave de animação individuai, durações e interações.
 
-<!-- TODO: Verify note type! -->
 Note: Se for novo nesta área, quadro-chave é um termo antigo para animações desenhadas à mão. Os animadores criavam quadros específicos para um segmento de ação chamado de quadro-chave, que capturava o final de um movimento, por exemplo, e começava a desenhar todos os quadros individuais entre os quadros-chave. Hoje temos um processo semelhante com animações CSS: informamos ao navegador os valores das propriedades CSS necessários em determinados pontos e ele preenche as lacunas.
 
 Por exemplo, você pode animar a caixa da mesma forma que anima transições, mas precisará fazê-lo sem qualquer interação do usuário como clicar, e com infinitas repetições. Você também pode alterar várias propriedades ao mesmo tempo:
@@ -134,7 +133,6 @@ As Animações CSS ainda são geralmente prefixadas pelo fabricante, com `-webki
 
 Criar animações com JavaScript é mais complexo do que escrever transições ou animações CSS, mas geralmente proporciona muito mais poder a você como desenvolvedor. A abordagem mais comum é usar `requestAnimationFrame` e, em cada frame de animação, determinar manualmente o valor de cada propriedade do elemento que está sendo animado.
 
-<!-- TODO: Verify note type! -->
 Note: Você pode ver código na Web que usa setInterval ou setTimeout para animações. Essa é uma péssima ideia, porque a animação não estará sincronizada na taxa de atualização da tela e provavelmente trepidará e pulará. Você sempre deve evitar esse código e usar requestAnimationFrame, que é sincronizado corretamente.
 
 Abaixo está o JavaScript que você precisará escrever para recriar a transição CSS discutida anteriormente.

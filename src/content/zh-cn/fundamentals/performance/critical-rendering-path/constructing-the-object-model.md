@@ -51,7 +51,6 @@ Warning: A tag here did NOT convert properly, please fix! ''
 
 <img src="images/dom-timeline.png" class="center" alt="在 DevTools 中跟踪 DOM 的构建">
 
-<!-- TODO: Verify note type! -->
 Note: 我们假定您对 Chrome DevTools 有基本了解 - 也就是说，您知道如何捕获网络瀑布图，或是录制时间轴。如果您需要快速重温，请访问 <a href="https://developer.chrome.com/devtools">Chrome DevTools 文档</a>，又或您是首次使用 DevTools，我们建议学习 Codeschool <a href="http://discover-devtools.codeschool.com/">发现 DevTools</a> 课程。
 
 如果您打开 Chrome DevTools，并在页面加载时录制时间轴，你可以看到执行这一步骤所需的实际时间 &mdash; 在上例中，将一堆 HTML 字节转换为 DOM 树大约需要 5 毫秒。当然，如果页面更大（大多数页面都是如此），这个过程需要的时间估计会更多。在后面创建流畅动画的章节中，您会看到，如果浏览器必须处理大量 HTML，这很可能变成你的瓶颈。

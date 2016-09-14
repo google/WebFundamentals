@@ -64,11 +64,11 @@ Los tipos y las consultas de medios nos permiten gestionar estos casos:
     <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
     
 
-Una [consulta de medios]({{site.fundamentals}}/layouts/rwd-fundamentals/use-media-queries.html) consiste en un tipo de medio y cero o más impresiones que comprueban las condiciones de características particulares de los medios. Por ejemplo, nuestra primera declaración en la hoja de estilos no proporciona ningún tipo ni consulta de medios, por lo que se aplicará en todos los casos. Es decir, siempre retrasará la visualización de la página. Por otra parte, la segunda hoja de estilos solo se aplicará cuando se imprima el contenido (quizás quieras reorganizar el diseño, cambiar las fuentes, etc.), por lo que no es necesario bloquear la visualización de la página cuando cargue por primera vez. Por último, la última declaración en la hoja de estilos proporciona una consulta de medios que la ejecuta el navegador: si se cumplen las condiciones, el navegador bloqueará la visualización hasta que la hoja de estilos se descargue y se procese.
+Una [consulta de medios](/web/fundamentals/design-and-ui/responsive/#use-media-queries) consiste en un tipo de medio y cero o más impresiones que comprueban las condiciones de características particulares de los medios. Por ejemplo, nuestra primera declaración en la hoja de estilos no proporciona ningún tipo ni consulta de medios, por lo que se aplicará en todos los casos. Es decir, siempre retrasará la visualización de la página. Por otra parte, la segunda hoja de estilos solo se aplicará cuando se imprima el contenido (quizás quieras reorganizar el diseño, cambiar las fuentes, etc.), por lo que no es necesario bloquear la visualización de la página cuando cargue por primera vez. Por último, la última declaración en la hoja de estilos proporciona una consulta de medios que la ejecuta el navegador: si se cumplen las condiciones, el navegador bloqueará la visualización hasta que la hoja de estilos se descargue y se procese.
 
 Al usar consultas de medios, nuestra presentación puede adaptarse a casos específicos, como visualizar e imprimir, y también para condiciones dinámicas como cambios en la orientación de la pantalla, cambios de tamaño de los eventos, etc. **Al declarar los elementos de la hoja de estilos, presta atención a los tipos y a las consultas de medios, ya que tendrán un impacto importante en el rendimiento durante la ruta de renderización importante.**
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media-queries %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media-queries #}
 
 Veamos algunos ejemplos prácticos:
 

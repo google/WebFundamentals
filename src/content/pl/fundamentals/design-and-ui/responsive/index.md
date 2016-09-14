@@ -24,7 +24,6 @@ Liczba urządzeń mobilnych używanych do surfowania po sieci rośnie w astronom
 
 
 ## Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -91,7 +90,6 @@ Wartość metatagu viewport `width=device-width` powoduje, że strona dopasowuje
 
 Niektóre przeglądarki utrzymują stałą szerokość strony podczas obrotu do trybu poziomego i powiększają widok zamiast na nowo ułożyć zawartość na ekranie. Atrybut `initial-scale=1` poleca przeglądarce ustanowić relację 1:1 między pikselami CSS a pikselami niezależnymi od urządzenia, bez względu na jego orientację. To pozwala wykorzystać pełną szerokość strony w trybie poziomym.
 
-<!-- TODO: Verify note type! -->
 Note: Atrybuty rozdziel przecinkami, by starsze przeglądarki analizowały je prawidłowo.
 
 ## Ułatwianie dostępu do treści w widocznym obszarze

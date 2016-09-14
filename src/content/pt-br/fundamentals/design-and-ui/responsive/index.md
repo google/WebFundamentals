@@ -24,7 +24,6 @@ O uso de dispositivos móveis para navegar pela Web está aumentando em ritmo as
 
 
 ### Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -88,7 +87,6 @@ Ao usar o valor meta de janela de visualização `width=device-width`, você faz
 
 Alguns navegadores mantêm a largura da página constante, aumentando o zoom em vez de mudar a organização do conteúdo para preencher a tela no modo paisagem. O atributo `initial-scale=1` orienta os navegadores a estabelecer uma relação de 1:1 entre os pixels do código CSS e os pixels independentes do dispositivo, seja qual for a orientação da tela. Isso permite que a página aproveite a largura total do modo paisagem.
 
-<!-- TODO: Verify note type! -->
 Note: Use uma vírgula para separar atributos e garantir que os navegadores mais antigos possam analisá-los corretamente.
 
 ### Estabeleça uma janela de visualização acessível

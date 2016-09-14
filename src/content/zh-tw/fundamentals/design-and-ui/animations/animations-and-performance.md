@@ -27,7 +27,7 @@ description: 動畫效能必須良好，否則會負面影響使用者體驗。
 
 至於可由個別 CSS 屬性觸發的行為之完整清單，可查閱 [CSS 觸發器](http://csstriggers.com)，而且在 [HTML5 高效能動畫萬歲] (High Performance Animations on HTML5 Rocks)(http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)上，您可以找到完整指南。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css #}
 
 ### 使用 will-change 屬性
 

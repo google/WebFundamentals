@@ -90,7 +90,6 @@ Onze pagina wordt na bovenstaande stappen teruggebracht van 406 naar 150 tekens 
 
 Dit voorbeeld toont aan dat een universele compressor, bijv. een die is ontwikkeld om willekeurige tekst te comprimeren, bovenstaande pagina waarschijnlijk ook best goed kan comprimeren, maar deze zou niet het commentaar kunnen verwijderen, de CSS-regels kunnen samenvoegen, naast tientallen andere inhoudspecifieke optimalisaties. Hierom is voorverwerking, verkleining en contextspecifieke optimalisatie zo nuttig.
 
-<!-- TODO: Verify note type! -->
 Note: De ongecomprimeerde ontwikkelaarsversie van de JQuery-bibliotheek neemt op dit moment ongeveer 300 KB in beslag. De verkleinde versie van dezelfde bibliotheek (zonder commentaar, enzovoort) is ongeveer 3x zo klein: 100 KB.
 
 Bovenstaande technieken kunnen op meer dan alleen tekstitems worden toegepast. Afbeeldingen, video en andere inhoudstypen bevatten allemaal hun eigen vorm van metadata en payloads. Wanneer u bijvoorbeeld een foto maakt met een camera, wordt er naast de foto ook veel extra informatie opgeslagen: camera-instelling, locatie, enzovoort. Deze gegevens kunnen, afhankelijk van uw applicatie, belangrijk zijn (bijv. voor het delen van foto`s op een website), of overbodig. Het is aan u om te bepalen of het de moeite waard is deze gegevens te verwijderen. De metadata kunnen in de praktijk neerkomen op tientallen kilobytes per foto.
@@ -185,7 +184,6 @@ Wat is de beste configuratie voor uw server? Het project HTML5 Boilerplate bevat
 
 Een snelle en eenvoudige manier om GZIP in actie te zien, is door Chrome DevTools te openen en de kolom `Size` / `Content` te inspecteren in het netwerkpaneel; onder `Size` vindt u de overdrachtsgrootte van het item en onder `Content` vindt u de ongecomprimeerde grootte van het item. Voor het HTML-item in bovenstaand voorbeeld bespaarde GZIP tijdens de overdracht 24,8 KB.
 
-<!-- TODO: Verify note type! -->
 Note: Er zijn gevallen waar GZIP de omvang van het item kan doen toenemen. Dit komt meestal voor wanneer het item erg klein is en het overschot aan informatie in het GZIP-woordenboek groter is dan het aantal bytes dat wordt bespaard door compressie, of als de hulpbron al goed is gecomprimeerd. Op sommige servers kunt u een `minimum gegevensomvang` instellen om dit probleem te vermijden.
 
 Ten slotte een waarschuwing: de meeste servers comprimeren de items automatisch voor u wanneer deze aan gebruikers worden aangeboden, maar voor sommige CDN`s moeten handmatige stappen worden uitgevoerd om te garanderen dat items met GZIP als set worden aangeboden. Controleer uw site en zorg ervoor dat uw items daadwerkelijk [worden gecomprimeerd](http://www.whatsmyip.org/http-compression-test/).

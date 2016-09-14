@@ -23,7 +23,6 @@ Kritik olusturma yolunu optimize ederek, sayfalarimizin ilk olusturma süresini 
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

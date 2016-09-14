@@ -97,7 +97,6 @@ Per aggiungere un 'media fragment', è sufficiente inserire `#t=[start_time][,en
 
 Inoltre, è possibile utilizzare l'API Media Fragments per creare diverse visualizzazioni dello stesso video (es. i cue point di un DVD) senza codificare e distribuire diversi file.
 
-<!-- TODO: Verify note type! -->
 Note: - 'Gran parte delle piattaforme supporta l''API Media Fragments, a eccezione di iOS.'
 - 'Verifica che le range request siano supportate dal server in uso. Le range request vengono attivate per impostazione predefinita su gran parte dei server, anche se potrebbero essere assenti su alcuni servizi di hosting.'
 
@@ -260,11 +259,10 @@ Puoi controllare le dimensioni del video con JavaScript o CSS. Le librerie e i p
 
 Utilizza [query supporti CSS](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) per specificare la dimensione degli elementi in base alle dimensioni del riquadro di visualizzazione; `max-width: 100%` è ideale.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 Per contenuti multimediali in iframes (come i video di YouTube), opta per un approccio reattivo (come quello [proposto da by John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
 
-<!-- TODO: Verify note type! -->
 Note: Non forzare il ridimensionamento dell'elemento, poiché potresti alterarne le proporzioni rispetto al video originale. Un video appiattito o allungato è sgradevole.
 
 **CSS:**
@@ -380,7 +378,6 @@ L'accessibilità è fondamentale. Gli utenti audiolesi o ipovedenti non possono 
 
 Per aumentare l'accessibilità degli elementi multimediali sui dispositivi mobili, inserisci didascalie o descrizioni mediante l'elemento di tracciamento.
 
-<!-- TODO: Verify note type! -->
 Note: Chrome per Android, Safari per iOS e tutti i browser per PC desktop a eccezione di Firefox supportano gli elementi di tracciamento (vedi <a href='http://caniuse.com/track' title='Stato del supporto degli elementi di tracciamento'>caniuse.com/track</a>). Sono disponibili anche diverse polilinee. È consigliabile l'utilizzo di <a href='//www.delphiki.com/html5/playr/' title='Polilinea dell'elemento di tracciamento Playr'>Playr</a> o <a href='//captionatorjs.com/'' title='Traccia del sottotitolatore'>Sottotitolatore</a>.
 
 L'elemento di tracciamento visualizza le didascalie nel modo seguente:

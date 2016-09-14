@@ -53,7 +53,6 @@ Se não for possível evitar o layout, então a solução é usar novamente o Ch
 
 Ao detalhar o frame do exemplo acima, vemos que mais de 20 ms são gastos dentro do layout. Quando temos 16 ms para exibir um frame na tela em uma animação, esse valor é muito alto. Você também pode ver que o DevTools dirá o tamanho da árvore (1.618 elementos nesse caso) e quantos nós precisaram de layout.
 
-<!-- TODO: Verify note type! -->
 Note: Deseja uma lista definitiva de quais propriedades CSS acionam o layout, pintura ou composição? Veja <a href='http://csstriggers.com/''>Acionadores CSS</a>.
 
 ## Use o flexbox em modelos de layout mais antigos

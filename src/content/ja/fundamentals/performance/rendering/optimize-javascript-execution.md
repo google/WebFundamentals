@@ -22,7 +22,6 @@ JavaScript はよく視覚変化の切っ掛けになります。 視覚変化�
 
 ユーザが書く JavaScript は実際に実行されるコードとは異なるため、JavaScript パフォーマンス プロファイリングは若干便利な技術と言えます。 最近のブラウザは JIT コンパイラおよび多様な最適化とトリックを使用して、可能な限り高速の実行を実現しようとします。これ によって、コードの動態が大きく変わります。
 
-<!-- TODO: Verify note type! -->
 Note: JIT の動作を確認したい場合は、<a href="http://mrale.ph/irhydra/2/">IRHydra<sup>2</sup> by Vyacheslav Egorov</a> を参照してください。 Chrome の JavaScript エンジン V8 による最適化のときの、JavaScript コードの中間状態が示されています。
 
 ただし、そうは言っても、アプリケーションで JavaScript を的確に実行するための工夫がいくつかあります。

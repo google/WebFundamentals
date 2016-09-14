@@ -32,7 +32,6 @@ Para lograrlo, debe limitarse a las propiedades de cambio que se pueden manejar 
 
 La advertencia sobre el uso de transforms y opacity es que el elemento en el que cambiará estas propiedades se debe encontrar en _la capa de su propio compositor_. Para poder crear una capa, debe promover el elemento. Hablaremos de esto a continuación.
 
-<!-- TODO: Verify note type! -->
 Note: Si le preocupa no poder limitar las animaciones a estas propiedades, consulte el<a href='http://aerotwist.com/blog/flip-your-animations'>principio FLIP (Primero, Último, Invertir, Reproducir)</a>, que puede ayudarlo a reasignar las animaciones a los cambios de las propiedades transforms y opacity desde propiedades más costosas.
 
 ## Promoción de los elementos que desea animar

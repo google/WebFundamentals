@@ -23,7 +23,6 @@ description: 透過優先顯示與使用者要在網頁上執行的主要操作�
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

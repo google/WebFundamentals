@@ -97,7 +97,6 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 
 您還可以使用 Media Fragments API 提供同一部影片的多個畫面 (如 DVD 中的提示點)，完全不需要編碼及提供多個檔案。
 
-<!-- TODO: Verify note type! -->
 Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 - 請確認您的伺服器支援「範圍請求」。在預設情況下，大部分伺服器中的「範圍請求」都會處於啟用狀態。不過，有些託管服務可能會關閉這項功能。
 
@@ -262,11 +261,10 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 使用 [CSS 媒體查詢](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)，即可根據檢視區尺寸指定元素大小；`max-width: 100%` 是您的最佳幫手。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 對於 iframe 中的媒體內容 (例如 YouTube 影片)，請嘗試使用回應式方法(例如 [John Surdakowski 提出的方法](//avexdesigns.com/responsive-youtube-embed/))。
 
-<!-- TODO: Verify note type! -->
 Note: 請勿將元素大小強制調整為不同於原始影片的長寬比。過度擠壓或延展都會導致不佳的視覺效果。
 
 **CSS：**
@@ -382,7 +380,6 @@ extra code for full cross browser compatibility.
 
 如果希望媒體在行動裝置上更容易使用，請採用 track 元素新增字幕或說明。
 
-<!-- TODO: Verify note type! -->
 Note: Android 版 Chrome、iOS Safari 和目前所有的電腦瀏覽器 (Firefox 除外) 都支援 track 元素 (請參閱 <a href="http://caniuse.com/track" title="Track 元素支援狀態">caniuse.com/track</a>)。此外，還有一些 polyfill。我們建議您使用 <a href='//www.delphiki.com/html5/playr/' title='Playr track 元素 polyfill'>Playr</a> 或 <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>。
 
 使用 track 元素後，字幕看起來像這樣：

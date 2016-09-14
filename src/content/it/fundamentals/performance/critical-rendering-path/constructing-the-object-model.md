@@ -47,7 +47,6 @@ Ogni volta che il browser deve elaborare il markup HTML deve superare tutti i pa
 
 <img src="images/dom-timeline.png" class="center" alt="Analisi della costruzione DOM in DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: Presumiamo che tu conosca le basi di Chrome DevTools: sai come registrare una sequenza di rete o come registrare una barra temporale. Se ti serve un rapido ripasso, dai uno sguardo alla <a href='https://developer.chrome.com/devtools'>documentazione di Chrome DevTools</a>, oppure, se non conosci bene DevTools, ti consigliamo di seguire il corso Codeschool <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a>.
 
 Se apri Chrome DevTools e registri una barra temporale mentre la pagina viene caricata, potrai vedere il tempo effettivo richiesto all'esecuzione del passaggio &mdash; nell'esempio di cui sopra, abbiamo impiegato ~5 ms a convertire un blocco di byte HTML in una struttura DOM. Ovviamente, se la pagina fosse più grande, come nella maggioranza delle pagine, questo processo potrebbe richiedere molto più tempo. Nelle sezioni future relative alla creazione di animazioni fluide vedrai che questo può facilmente diventare un collo di bottiglia, se il browser deve elaborare grandi quantitativi di HTML.

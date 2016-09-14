@@ -63,11 +63,11 @@ Os "tipos de mídia" e "consultas de mídia" do CSS permitem abordar estes casos
     <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
     
 
-Uma [consulta de mídia]({{site.fundamentals}}/layouts/rwd-fundamentals/use-media-queries.html) consiste em um tipo de mídia e zero ou mais expressões que verifiquem as condições dos recursos dessa mídia específica. Por exemplo, nossa primeira declaração da folha de estilo não fornece tipos ou consultas de mídia, portanto se aplica em todos os casos, ou seja, é sempre bloqueadora de renderização. Por outro lado, a segunda folha de estilos se aplica apenas quando o conteúdo está sendo impresso. Talvez você queira reorganizar o layout, alterar as fontes etc. por isso, essa planilha não precisa bloquear a renderização da página quando é carregada pela primeira vez. Finalmente, a última declaração da folha de estilos proporciona uma `consulta de mídia`, que é executada pelo navegador: se as condições forem correspondentes, o navegador bloqueará a renderização até que a folha de estilos seja transferida e processada.
+Uma [consulta de mídia](/web/fundamentals/design-and-ui/responsive/#use-media-queries) consiste em um tipo de mídia e zero ou mais expressões que verifiquem as condições dos recursos dessa mídia específica. Por exemplo, nossa primeira declaração da folha de estilo não fornece tipos ou consultas de mídia, portanto se aplica em todos os casos, ou seja, é sempre bloqueadora de renderização. Por outro lado, a segunda folha de estilos se aplica apenas quando o conteúdo está sendo impresso. Talvez você queira reorganizar o layout, alterar as fontes etc. por isso, essa planilha não precisa bloquear a renderização da página quando é carregada pela primeira vez. Finalmente, a última declaração da folha de estilos proporciona uma `consulta de mídia`, que é executada pelo navegador: se as condições forem correspondentes, o navegador bloqueará a renderização até que a folha de estilos seja transferida e processada.
 
 Usando consultas de mídia, nossa apresentação pode ser ajustada a casos de uso específicos no lugar da impressão e também para dinamizar as condições, como alterações na orientação da tela, redimensionar eventos e muito mais. **Ao fazer a declaração de seus recursos da folha de estilo, preste atenção no tipo de mídia e nas consultas, pois elas têm um grande impacto sobre o desempenho do caminho de processamento essencial.**
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media-queries %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media-queries #}
 
 Analisaremos alguns exemplos práticos:
 

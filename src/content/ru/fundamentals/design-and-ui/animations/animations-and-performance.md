@@ -27,7 +27,7 @@ description: Анимация обязательно должна работат
 
 Полный список действий, вызываемых отдельными свойствами CSS, приведен в разделе [Срабатывание событий при изменении CSS](http://csstriggers.com), также имеется полное руководство по созданию [высокопроизводительной анимации в HTML5](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css #}
 
 ### Использование свойства will-change
 

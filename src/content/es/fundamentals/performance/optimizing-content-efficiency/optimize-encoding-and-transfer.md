@@ -90,7 +90,6 @@ Después de aplicar los pasos anteriores, la página pasa de 406 a 150 caractere
 
 Si volvemos al ejemplo anterior, podemos llegar a la conclusión de que un compresor general, por ejemplo uno diseñado para comprimir texto arbitrario, probablemente podría hacer un trabajo de compresión bastante bueno, pero no podría quitar los comentarios, reducir las reglas CSS o docenas de otras optimizaciones específicas del contenido. Este es el motivo por el que la optimización de preprocesamiento, de minificación y en función del contexto puede ser una herramienta tan útil.
 
-<!-- TODO: Verify note type! -->
 Note: Veamos un caso de ejemplo: la versión de desarrollo descomprimida de la biblioteca JQuery ocupa casi 300 KB. La misma biblioteca minificada (con los comentarios suprimidos, etc.) se ha reducido a un tercio y ocupa aproximadamente 100 KB.
 
 Asimismo, las técnicas anteriores se pueden aplicar más allá de los recursos basados en texto. Tanto las imágenes como los vídeos y otro tipo de contenido contienen sus propias formas de metadatos y cargas varias. Por ejemplo, al hacer una foto con la cámara, se acostumbra a incrustar mucha información adicional en la foto: configuración de la cámara, ubicación, etc. Según la aplicación que se vaya a utilizar, estos datos pueden ser muy importantes (p. ej. un sitio para compartir fotos) o completamente inútiles. Puedes plantearte si merece la pena eliminar esta información. En la práctica, estos metadatos pueden añadir decenas de kilobytes a las imágenes.
@@ -185,7 +184,6 @@ Lo mejor es que habilitar GZIP es una de las mayores optimizaciones de carga que
 
 Una forma rápida y sencilla de ver GZIP en acción es abrir Chrome DevTools y consultar la columna `Tamaño/Contenido` del panel Red: en `Tamaño` se indica el tamaño de transferencia del recurso y en `Contenido` el tamaño descomprimido del recurso. Con el recurso HTML del ejemplo anterior, GZIP permitió ahorrar 24,8 KB durante la transferencia.
 
-<!-- TODO: Verify note type! -->
 Note: Por increíble que parezca, en algunos casos GZIP puede aumentar el tamaño del recurso. Normalmente esto sucede cuando el recurso es muy pequeño y el coste global del diccionario GZIP es superior al ahorro de compresión o si el recurso ya está comprimido. Algunos servidores permiten especificar un `límite mínimo de tamaño de archivo` para evitar este problema.
 
 Y un recordatorio para terminar: aunque muchos servidores comprimen automáticamente los recursos por ti al mostrarlos al usuario, hay que prestar más atención en el caso de ciertos CDN, en los que deberás hacer un trabajo manual para garantizar que se muestra el recurso GZIP. Audita tu sitio y comprueba que tus recursos se estén [comprimiendo](http://www.whatsmyip.org/http-compression-test/) correctamente.

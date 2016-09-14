@@ -66,7 +66,6 @@ Isso pode ser facilmente convertido nas seções básicas da estrutura de uma p�
 
 A estrutura básica do site está completa. Sabemos quais seções são necessárias, o conteúdo que será exibido nessas seções e onde ele deve ser posicionado na arquitetura geral de informações. Agora podemos desenvolver nosso site.
 
-<!-- TODO: Verify note type! -->
 Note: Estilo virá mais tarde
 
 #### Crie o título e o formulário
@@ -90,7 +89,7 @@ Adicionaremos tipos de semântica para agilizar e simplificar a inserção de da
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### Crie a seção `Vídeo e informações`
 
@@ -114,7 +113,7 @@ Ao seguir as práticas recomendadas, você conseguirá integrar vídeos ao seu s
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### Crie a seção `Imagens`
 
@@ -133,7 +132,7 @@ As imagens de conteúdo são importantes para transmitir o significado da págin
 
 As imagens são dimensionadas em 100% da largura da tela. Essa formatação funciona com eficiência em dispositivos com tela estreita e não apresenta a mesma eficácia em janelas de visualização largas (como computadores).  Essa questão será abordada na seção de design ágil.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 Muitas pessoas não conseguem visualizar as imagens e precisam fazer uso de tecnologias de assistência, como leitores de tela, que analisam os dados na página e transmitem verbalmente essas informações ao usuário.  É preciso incluir uma tag `alt` de descrição das imagens de conteúdo que possa ser informada pelo leitor de tela ao usuário.
 
@@ -225,7 +224,7 @@ A janela de visualização indica ao navegador que a página precisa ser redimen
 
 A janela de visualização fica no título do documento e só precisa ser informada uma vez.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### Aplicar um estilo simples 
 
@@ -294,7 +293,6 @@ Em 600 pixels, podemos criar nosso primeiro ponto de quebra para reposicionar os
 
 Existe mais espaço disponível em uma tela mais larga e, consequentemente, há uma maior flexibilidade quanto à forma como o conteúdo pode ser exibido.
 
-<!-- TODO: Verify note type! -->
 Note: Não é preciso mover todos os elementos ao mesmo tempo, ou seja, é possível fazer ajustes menores quando necessário.
 
 No contexto da página do nosso produto, parece que precisaremos:
@@ -305,7 +303,7 @@ No contexto da página do nosso produto, parece que precisaremos:
 *  Fazer o vídeo flutuar conforme o conteúdo.
 *  Reduzir o tamanho das imagens e fazer com que elas sejam exibidas em uma grade mais agradável.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### Limitar a largura máxima do layout
 
@@ -407,7 +405,7 @@ Para os navegadores que oferecem esse tipo de suporte, é possível exibir uma i
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### Tabelas
 

@@ -18,7 +18,6 @@ Bir seyin ag üzerinden getirilmesi yavas ve pahalidir: Büyük yanitlar, istemc
 
 Güzel bir haberimiz var, her tarayici bir HTTP önbellegi uygulamasiyla saglanir! Bizim tüm yapmamiz gereken, her bir sunucu yanitinin ne zaman ve ne kadar süreyle tarayici tarafindan önbellege alinabilecegini tarayiciya bildirmek için dogru HTTP üstbilgi yönergelerinin saglandigindan emin olmaktir.
 
-<!-- TODO: Verify note type! -->
 Note: Uygulamanizdaki web içerigini getirmek ve görüntülemek için bir Webview kullaniyorsaniz HTTP önbelleginin etkinlestirildiginden, boyutunun kullanim örneginizle eslesecek makul bir degere ayarlandigindan ve önbellegin kalici duruma getirildiginden emin olmak için ek yapilandirma isaretleri saglamaniz gerekebilir. Platform dokümanlarini kontrol edin ve ayarlarinizi onaylayin!
 
 <img src="images/http-request.png" class="center" alt="HTTP istegi">
@@ -43,7 +42,6 @@ Yukaridaki örnekte istemci, ETag belirtecini `If-None-Match` HTTP istegi üstbi
 
 Bir web gelistiricisi olarak verimli yeniden dogrulamanin avantajini nasil buluyorsunuz? Tarayici, bizim adimiza tüm isi yapar: Önceden bir dogrulama belirtecinin belirtilip belirtilmedigini otomatik olarak algilar, bunu bir giden istege ekler ve sunucudan aldigi yanita göre önbellek zaman damgalarini gereken sekilde günceller. **Bizim yapmamiz için kalan tek sey sunucunun gerçekten gerekli ETag belirteçlerini sagladigindan emin olmaktir: Gerekli yapilandirma isaretleri için sunucu dokümanlarinizi kontrol edin.**
 
-<!-- TODO: Verify note type! -->
 Note: Ipucu: HTML5 Standart Metin projesi, her bir yapilandirma isareti ve ayari için ayrintili açiklamalarla birlikte en popüler sunucularin tümü için <a href='https://github.com/h5bp/server-configs'>örnek yapilandirma dosyalari</a> içerir: Listede favori sunucunuzu bulun, uygun ayarlari arayin ve yapilandirmalari kopyalayip sunucunuzun önerilen ayarlarla yapilandirildigini onaylayin.
 
 
@@ -56,7 +54,6 @@ Note: Ipucu: HTML5 Standart Metin projesi, her bir yapilandirma isareti ve ayari
 
 En iyi istek, sunucuyla iletisim gerektirmeyen istektir: Yanitin bir yerel kopyasi, tüm ag gecikmesini ortadan kaldirmamiza ve veri aktarimi için ödenecek veri ücretlerinden kurtulmamiza olanak tanir. Bunu yapmak için HTTP belirtimi, sunucunun [farkli Cache-Control yönergeleri](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) döndürmesine olanak tanir. Bu yönergeler, bagimsiz yanitin tarayici ve diger araci önbellekleri tarafindan nasil ve ne kadar süreyle önbellege alinabilecegini kontrol eder.
 
-<!-- TODO: Verify note type! -->
 Note: Cache-Control üstbilgisi, HTTP/1.1 teknik özelliginin parçasi olarak tanimlanmistir ve yanit önbellege alma politikalarini tanimlamak için kullanilan önceki üstbilgilerin (Süresi Dolan) yerini alir. Tüm modern tarayicilar Cache-Control protokolünü desteklediginden, tüm ihtiyacimiz olan budur.
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="HTTP Cache-Control örnegi">

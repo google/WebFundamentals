@@ -18,7 +18,6 @@ Buscar alguma coisa na rede é um processo lento e caro: respostas amplas exigem
 
 Boas notícias, todos os navegadores vêm com uma implementação de cache HTTP. Só precisamos garantir que a resposta de cada servidor forneça diretivas de cabeçalho HTTP corretas para informar ao navegador quando e por quanto tempo a resposta pode ser armazenada em cache.
 
-<!-- TODO: Verify note type! -->
 Note: Se estiver usando um Modo de exibição da Web para buscar e exibir conteúdo da Web em seu aplicativo, pode ser necessário fornecer mais sinalizadores de configuração para garantir que o cache de HTTP seja habilitado, que seu tamanho seja suficiente para seu caso de uso e que o cache seja persistente. Verifique a documentação da plataforma e confirme suas configurações.
 
 <img src="images/http-request.png" class="center" alt="Solicitação HTTP">
@@ -43,7 +42,6 @@ No exemplo acima, o cliente fornece automaticamente o token ETag no cabeçalho d
 
 Como desenvolvedor Web, como você aproveita a revalidação eficiente? O navegador faz todo o trabalho para você: ele detecta automaticamente se um token de validação foi especificado anteriormente, acrescenta-o à solicitação enviada e atualiza os carimbos de data/hora conforme necessário, com base na resposta recebida do servidor. **Nós só precisamos garantir que o servidor esteja fornecendo os tokens ETag necessários: verifique a documentação de seu servidor para saber quais são os sinalizadores de configuração necessários.**
 
-<!-- TODO: Verify note type! -->
 Note: Dica: o projeto de texto clichê HTML5 contém <a href='https://github.com/h5bp/server-configs'>modelos de arquivos de configuração</a> para a maioria dos servidores mais conhecidos, com comentários detalhados para cada sinalizador de configuração e configuração. Encontre o servidor de sua preferência na lista, procure as configurações apropriadas e copie/confirme que seu servidor esteja com as configurações recomendadas.
 
 
@@ -56,7 +54,6 @@ Note: Dica: o projeto de texto clichê HTML5 contém <a href='https://github.com
 
 A melhor solicitação é uma solicitação que não precise se comunicar com o servidor: uma cópia local da resposta permite eliminar toda a latência de rede e evita cargas de dados para a transferência de dados. Para isso, a especificação HTTP permite que o servidor retorne um [número de diretivas diferentes de Controle de cache](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) que controlam como e por quanto tempo cada resposta pode ser armazenada em cache pelo navegador e outros caches intermediários.
 
-<!-- TODO: Verify note type! -->
 Note: O cabeçalho Controle de cache foi definido como parte da especificação HTTP/1.1 e substitui cabeçalhos anteriores (por exemplo, Vencimento) usados para definir políticas de resposta do armazenamento em cache. Todos os navegadores atuais são compatíveis com Controle de cache, portanto só precisaremos disso.
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="Exemplo de Controle de cache HTTP">

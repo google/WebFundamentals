@@ -45,7 +45,6 @@ Warning: A tag here did NOT convert properly, please fix! ''
 
 <img src="images/dom-timeline.png" class="center" alt="在 DevTools 中追蹤 DOM 建構流程">
 
-<!-- TODO: Verify note type! -->
 Note: 我們假設您對 Chrome DevTools 有基本的瞭解，也就是說，您知道如何捕捉網路瀑布流或記錄時間軸。如果您需要快速重溫相關知識，請參閱 <a href="https://developer.chrome.com/devtools">Chrome DevTools 文件</a>。如果您是第一次使用 DevTools，建議先完成 Codeschool 的 <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a> 課程。
 
 如果您開啟 Chrome DevTools，並在網頁載入時記錄時間軸，就可以看到執行這個步驟所需的實際時間。在上例中，將 HTML 位元組轉換為 DOM 樹狀結構大約需要 5 毫秒。當然，如果網頁更大 (大多數網頁都是如此)，這個過程需要的時間可能會明顯拉長。在後續關於建立流暢動畫的章節中，您會看到如果瀏覽器必須處理大量 HTML，這很容易就演變成效能瓶頸的問題。

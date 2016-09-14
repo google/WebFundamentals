@@ -45,7 +45,6 @@ Peki bu bizim açimizdan ne anlama geliyor? Tüm tarayicilarda çalisan tek bir 
 * Eski IE (IE9 altindaki) tarayicilara EOT çesidini sunun
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Teknik olarak, <a href='http://caniuse.com/svg-fonts'>SVG yazi tipi kapsayicisi</a> da vardir, ancak bu kapsayici hiçbir zaman IE veya Firefox tarafindan desteklenmemistir ve simdi Chrome'da kullanimdan kaldirilmistir. Böyle olunca da kullanimi sinirli olmustur. Bu kapsayiciyi, bu kilavuzda da özellikle atliyoruz.
 
 ### Sikistirmayla yazi tipi boyutunu küçültme
@@ -58,7 +57,6 @@ Yazi tipi, gliflerden olusan bir koleksiyondur. Gliflerin her biri, harf biçimi
 
 Son olarak, bazi yazi tiplerinin bazi platformlar için gerekli olmayabilecek [yazi tipi ipucu](http://en.wikipedia.org/wiki/Font_hinting) ve [aralik birakma](http://en.wikipedia.org/wiki/Kerning) bilgileri içerdigini unutmamakta fayda vardir. Bu, daha fazla dosya boyutu optimizasyonuna olanak tanir. Kullanabileceginiz optimizasyon seçenekleri için yazi tipi sikistiriciniza danisin ve bu yolu seçerseniz, optimize edilen bu yazi tiplerini test edecek ve her bir ilgili tarayiciya saglayacak uygun altyapiya sahip oldugunuzdan emin olun. Örnegin, Google Yazi Tipleri her bir yazi tipi için 30'un üzerinde optimize edilmis çesit saglar ve her bir platform ve tarayici için en uygun çesidi otomatik olarak algilayip teslim eder.
 
-<!-- TODO: Verify note type! -->
 Note: EOT, TTF ve WOFF biçimleri için <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli sikistirmasini</a> kullanmayi düsünebilirsiniz. Zopfli, gzip'e göre yaklasik olarak %5 dosya boyutu küçültmesi saglayan, zlib uyumlu bir sikistiricidir.
 
 ## Yazi tipi ailesini @font-face ile tanimlama
@@ -105,7 +103,6 @@ Ilk olarak, yukaridaki örnekte iki stili (normal ve _italic_) olan tek bir _Awe
 * `url()` yönergesi, harici yazi tiplerini yüklememize olanak tanir ve saglanan URL'nin basvuruda bulundugu yazi tipinin biçimini belirten, istege bagli bir `format()` ipucu içermesine izin verilir.
 
 ^
-<!-- TODO: Verify note type! -->
 Note: Varsayilan sistem yazi tiplerinden birine basvuruda bulunmuyorsaniz, pratikte kullanicinin, özellikle de ek yazi tiplerinin `yüklenmesinin` gerçekten imkansiz oldugu mobil cihazlarda bunu yerel olarak yüklemis olmasi nadir görülen bir durumdur. Sonuç olarak, her zaman harici yazi tipi konumlarinin bir listesini saglamaniz gerekir.
 
 Tarayici yazi tipinin gerektigini belirlediginde, saglanan kaynak listesini belirtilen sirada tekrarlar ve uygun kaynagi yüklemeye çalisir. Örnegin, yukaridaki örnegi izlersek:
@@ -118,7 +115,6 @@ Tarayici yazi tipinin gerektigini belirlediginde, saglanan kaynak listesini beli
 
 Uygun biçim ipuçlariyla yerel ve harici yönergelerin kombinasyonu, kullanilabilir tüm yazi tipi biçimlerini belirtebilmemizi ve geri kalani tarayicinin gerçeklestirmesini saglar: Tarayici, hangi kaynaklarin gerekli oldugunu belirler ve en uygun biçimi bizim adimiza seçer.
 
-<!-- TODO: Verify note type! -->
 Note: Yazi tipi çesitlerinin belirtildigi sira önemlidir. Tarayici, destekledigi ilk biçimi seçer. Dolayisiyla, yeni tarayicilarin WOFF2 kullanmasini istiyorsaniz, WOFF2 bildirimini WOFF üzerine yerlestirmeniz gerekir.
 
 ### Unicode araligi alt kümesi olusturma
@@ -159,7 +155,6 @@ Stil, agirlik ve uzatma gibi yazi tipi özelliklerine ek olarak, @font-face kura
     }
     
 
-<!-- TODO: Verify note type! -->
 Note: Unicode araligi alt kümesi özellikle Asya dilleri için önemlidir. Bu dillerdeki glif sayisi, bati dillerinden çok daha fazladir ve tipik bir `tam` yazi tipi genellikle onlarca kilobayt yerine megabaytlarla ölçülür!
 
 Unicode araligi alt kümelerinin ve her bir biçimsel yazi tipi çesidi için ayri dosyalarin kullanilmasi, hem daha hizli hem de daha verimli bir sekilde indirilen bir bilesik yazi tipi ailesi tanimlamamiza olanak tanir. Ziyaretçi yalnizca gereksinim duydugu çesitleri ve alt kümeleri indirir ve sayfada hiç görmeyecegi veya kullanmayacagi alt kümeleri indirmeye zorlanmaz. 
@@ -237,7 +232,6 @@ Yukaridaki örnekte, ayni Latin glif kümesini kapsayan, ancak iki farkli `agirl
 
 Yukaridaki örnekte, Open-Sans için gerçek ve sentezlenmis yazi tipi sonuçlari arasindaki fark gösterilmektedir. Sentezlenmis tüm çesitler 400 agirlikli tek bir yazi tipinden olusturulmustur. Sizin de görebileceginiz gibi, sonuçlar arasinda dikkat çekici bir fark vardir. Kalin ve yatik çesitlerin nasil olusturulacagina iliskin ayrintilar belirtilmemistir. Dolayisiyla, sonuçlar tarayicidan tarayiciya degistir ve ayrica, yazi tipine son derece baglidir.
 
-<!-- TODO: Verify note type! -->
 Note: En iyi tutarlilik ve görsel sonuçlar için yazi tipi sentezine güvenmemeniz gerekir. Bunun yerine, kullanilan yazi tipi çesitlerinin sayisini en aza indirin ve konumlarini belirtin. Bu sekilde, tarayici sayfada kullanildiklarinda bunlari indirebilir. Bununla birlikte, bazi durumlarda sentezlenmis bir çesit <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>uygun bir seçenek olabilir</a>; bunu kullanirken dikkatli olun.
 
 
@@ -309,7 +303,6 @@ Bunun ötesinde, yazi tipi durumunu ([check()](http://dev.w3.org/csswg/css-font-
 
 En iyisi, sayfadaki farkli içerik için yukaridaki stratejileri karistirip eslestirebiliriz; diger bir deyisle, bazi bölümlerde yazi tipi kullanilabilir duruma gelene kadar metin olusturmayi bekletip bir yedek kullanabilir ve yazi tipi indirme islemi bittikten sonra yeniden olusturabilir, farkli zaman asimlari belirleyebilir ve baska islemler yapabiliriz. 
 
-<!-- TODO: Verify note type! -->
 Note: Yazi Tipi Yükleme API'si <a href='http://caniuse.com/#feat=font-loading'>bazi tarayicilarda hâlâ gelistirme asamasindadir</a>. Benzer bir islevsellik saglamak için <a href='https://github.com/bramstein/fontloader'>FontLoader çoklu dolgusunu</a> veya <a href='https://github.com/typekit/webfontloader'>webfontloader kitapligini</a> kullanmayi düsünebilirsiniz; ancak bunlar, bir JavaScript bagimliligi ek yükü de getirir.
 
 ### Satir içi kullanimla yazi tipi olusturmayi optimize etme
@@ -321,7 +314,6 @@ Note: Yazi Tipi Yükleme API'si <a href='http://caniuse.com/#feat=font-loading'>
 
 Satir içinde kullanma stratejisi çok esnek degildir ve farkli içerik için özel zaman asimlari veya olusturma stratejileri tanimlamamiza olanak tanimaz, ancak tüm tarayicilarda çalisan basit ve saglam bir çözümdür. En iyi sonuçlar için satir içinde kullanilan yazi tiplerini bagimsiz bir stil sayfasina ayirin ve bunlari uzun bir max-age degeriyle sunun. Bu sekilde, CSS'nizi güncellediginizde ziyaretçileri bu yazi tiplerini yeniden indirmeye zorlamamis olursunuz. 
 
-<!-- TODO: Verify note type! -->
 Note: Satir içi kullanirken seçici olun! @font-face kuralinin geç yükleme davranisini kullanma nedeninin, gereksiz yazi tipi çesitlerini ve alt kümelerini indirmekten kaçinmak oldugunu unutmayin. Ayrica, CSS dosyanizin boyutunu agresif satir içi kullanimla büyütmek <a href='/web/fundamentals/performance/critical-rendering-path/'>kritik olusturma yolunuzu</a> olumsuz bir sekilde etkiler. Tarayicinin CSSOM'yi, olusturma agacini ve ekranda sayfa içerigini olusturmadan önce tüm CSS'yi indirmesi gerekir.
 
 ### HTTP Önbellege Alma özelligiyle yazi tipi yeniden kullanimini optimize etme

@@ -18,7 +18,6 @@ La tarea de obtener un elemento de la red es lenta y cara: las respuestas de gra
 
 Te alegrará saber que todos los navegadores se suministran con una implementación de una memoria caché HTTP. Lo único que tenemos que hacer es asegurarnos de que todas las respuestas del servidor proporcionen directivas correctas de encabezado HTTP que indiquen al navegador cuándo y durante cuánto tiempo puede almacenar la respuesta en memoria caché.
 
-<!-- TODO: Verify note type! -->
 Note: Si utilizas una vista web para obtener y mostrar contenido web en la aplicación, puede que tengas que proporcionar marcas de configuración adicionales para garantizar que la memoria caché HTTP esté habilitada, que su tamaño se haya establecido en un valor razonable para tu caso de uso y que la memoria caché se almacene. Consulta la documentación de la plataforma y verifica tu configuración.
 
 <img src="images/http-request.png" class="center" alt="Solicitud HTTP">
@@ -43,7 +42,6 @@ En el ejemplo anterior, el cliente proporciona automáticamente el token de `ETa
 
 Como desarrollador web, ¿cómo sacas aprovecho de una revalidación eficiente? El navegador hace todo el trabajo por ti: detecta automáticamente si se ha especificado un token de validación anteriormente, lo añade a una solicitud saliente y actualiza las marcas de tiempo de la memoria caché según sea necesario en función de la respuesta recibida del servidor. **Lo único que nos queda por hacer es asegurarnos de que el servidor proporcione los tokens de `ETag` necesarios. Para ello, revisa la documentación del servidor sobre marcas de configuración necesarias.**
 
-<!-- TODO: Verify note type! -->
 Note: Consejo: El proyecto HTML5 Boilerplate contiene <a href='https://github.com/h5bp/server-configs'>archivos de configuración de muestra</a> para todos los servidores más utilizados con comentarios detallados para cada marca y parámetro de configuración. Localiza tu servidor preferido en la lista, busca la configuración adecuada y cópiala o verifica que el servidor esté configurado con los parámetros recomendados.
 
 
@@ -56,7 +54,6 @@ Note: Consejo: El proyecto HTML5 Boilerplate contiene <a href='https://github.co
 
 La mejor solicitud es aquella no que no necesita comunicarse con el servidor. Una copia local de la respuesta nos permite eliminar toda la latencia de red y evitar costes de datos para la transferencia de datos. Para lograrlo, la especificación HTTP permite que el servidor ofrezca una [serie de diferentes directivas de `Cache-Control`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) que controlan cómo y durante cuánto tiempo el navegador y otras memorias caché intermedias pueden almacenar la respuesta concreta en memoria caché.
 
-<!-- TODO: Verify note type! -->
 Note: El encabezado `Cache-Control` se ha definido como parte de la especificación HTTP/1.1 y sustituye los encabezados anteriores (por ejemplo, `Expires`) que se utilizaban para definir las políticas de almacenamiento de respuestas en memoria caché. Todos los navegadores modernos son compatibles con `Cache-Control`, así que eso es todo lo que necesitamos.
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="Ejemplo de `Cache-Control` HTTP">

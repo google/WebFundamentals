@@ -35,12 +35,11 @@ Para construir a árvore de renderização, o navegador basicamente faz o seguin
 1. Para cada nó visível, encontra as regras do CSSOM apropriadas e as aplica.
 2. Emite nós visíveis com conteúdo e seus estilos computados.
 
-<!-- TODO: Verify note type! -->
 Note: Observação: `visibilidade: oculta` é diferente de `exibir: nenhum'`. O primeiro torna o elemento invisível, mas o elemento ainda ocupa espaço no layout (por exemplo, ele é renderizado como uma caixa vazia), enquanto o segundo (exibir: nenhum) remove o elemento totalmente da árvore de renderização, de forma que ele fique invisível e não faça parte do layout.
 
 O resultado final é uma renderização que contém as informações de conteúdo e de estilo de todo o conteúdo visível na tela. Estamos quase lá.  **Com a árvore de renderização pronta, podemos passar para a etapa do `layout`.**
 
-Nesse momento, já calculamos que nós devem ser visíveis e seus estilos computados, mas ainda não calculamos sua posição e tamanho exatos dentro do [viewport]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) do dispositivo: a etapa de `layout`, também conhecida como `refluxo`.
+Nesse momento, já calculamos que nós devem ser visíveis e seus estilos computados, mas ainda não calculamos sua posição e tamanho exatos dentro do [viewport](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) do dispositivo: a etapa de `layout`, também conhecida como `refluxo`.
 
 Para determinar o tamanho e a posição exata de cada objeto, o navegador começa na raiz da árvore de renderização e a analisa para computar a geometria de cada objeto da página. Analisaremos um exemplo prático:
 

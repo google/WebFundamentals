@@ -45,7 +45,6 @@ Então em que pé estamos? Não há um formato único que funcione em todos os n
 * Fornecer a variante EOT a navegadores IE antigos (anteriores ao IE9)
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Tecnicamente, há também o <a href='http://caniuse.com/svg-fonts'>contêiner de fontes SVG</a>, mas ele não é compatível com IE ou Firefox e foi desativado no Google Chrome. Assim, seu uso é limitado e sua omissão neste guia é intencional.
 
 ### Redução do tamanho da fonte pela compactação
@@ -58,7 +57,6 @@ Uma fonte é uma coleção de glifos, os quais cada um é um conjunto de caminho
 
 Por último, vale salientar que alguns formatos de fonte contêm metadados adicionais, como [font hinting](http://en.wikipedia.org/wiki/Font_hinting, em inglês) e informações de [kerning](http://en.wikipedia.org/wiki/Kerning, em inglês) que podem não ser necessárias em algumas plataformas, o que possibilita maior otimização de tamanho de arquivo. Consulte seu compactador de fontes para ver as opções de otimização e, se você escolher essa opção, verifique se possui a infraestrutura adequada para testar e fornecer essas fontes otimizadas a cada navegador específico. Por exemplo, o Google Fonts mantém mais de 30 variantes otimizadas para cada fonte e detecta e fornece automaticamente a variante otimizada para cada plataforma e navegador.
 
-<!-- TODO: Verify note type! -->
 Note: Considere o uso da <a href='http://en.wikipedia.org/wiki/Zopfli'>compactação Zopfli</a> para os formatos EOT, TTF e WOFF. Zopfli é um compactador compatível com zlib que fornece aproximadamente 5% a mais de redução nos tamanhos de arquivos em relação ao gzip.
 
 ## Como definir a família da fonte com @font-face
@@ -105,7 +103,6 @@ Os exemplos acima definem uma única família _Awesome Font_ com dois estilos (n
 * A diretiva `url()` possibilita carregar fontes externas e tem permissão para conter uma dica opcional `format()`, indicando o formato da fonte referenciada pelo URL fornecido.
 
 ^
-<!-- TODO: Verify note type! -->
 Note: A menos que você faça referência a uma das fontes padrão do sistema, na prática, é raro que o usuário o tenha instalado localmente, especialmente em dispositivos móveis, onde é efetivamente impossível `instalar` fontes adicionais. Assim, você sempre deve fornecer uma lista de locais externos de fontes.
 
 Quando o navegador determina que a fonte é necessária, ele percorre a lista de recursos fornecida na ordem especificada e tenta carregar o recurso adequado. Seguindo o exemplo acima:
@@ -118,7 +115,6 @@ Quando o navegador determina que a fonte é necessária, ele percorre a lista de
 
 A combinação de diretivas locais e externas com as dicas de formato adequadas possibilita especificar todos os formatos de fonte disponíveis e permite que o navegador manipule o restante: ele detecta os recursos necessários e seleciona o formato otimizado em nosso nome.
 
-<!-- TODO: Verify note type! -->
 Note: A ordem na qual as variantes das fontes são especificadas é importante. O navegador escolherá o primeiro formato com o qual ele é compatível. Por isso, se você deseja que os novos navegadores usem WOFF2, você precisa aplicar a declaração WOFF2 acima de WOFF e assim por diante.
 
 ### Agrupamento de subconjuntos de alcance de unicode
@@ -159,7 +155,6 @@ Por exemplo, podemos dividir nossa família _Awesome Font_ em subconjuntos de la
     }
     
 
-<!-- TODO: Verify note type! -->
 Note: O agrupamento em subconjuntos de alcance de unicode é especialmente importante para idiomas asiáticos, em que o número de glifos é muito maior que nos idiomas ocidentais e uma fonte típica `full` (completa) geralmente é medida em megabytes em vez de dezenas de kilobytes.
 
 O uso de subconjuntos de alcance de unicode e de arquivos separados para cada variante estilística da fonte possibilita definir uma família de fonte composta que seja rápida e mais eficiente para o download. O visitante só fará o download das variantes e subconjuntos de que ele precisar e não precisará fazer o download de subconjuntos cuja visualização ou uso pode nunca ocorrer na página. 
@@ -237,7 +232,6 @@ O exemplo acima declara a família _Awesome Font_, que é composta de dois recur
 
 O exemplo acima ilustra a diferença entre os resultados de fonte reais vs. sintetizadas para Open-Sans. Todas as variantes sintéticas são geradas a partir de uma única fonte de peso 400. Como é possível observar, há uma diferença notável nos resultados. Os detalhes de como gerar as variantes bold e oblique não são especificados. Por isso, os resultados irão variar de navegador para navegador, e também dependerão muito da fonte.
 
-<!-- TODO: Verify note type! -->
 Note: Para atingir os melhores resultados em consistência e visual, procure não confiar na síntese de fontes. Em vez disso, minimize o número de variantes de fonte usadas e especifique seus locais, de forma que o navegador possa fazer o download das fontes e elas sejam usadas na página. Em alguns casos, uma variante sintetizada <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>pode ser uma opção viável</a>. Use-a com cautela.
 
 
@@ -309,7 +303,6 @@ Além disso, como é possível verificar o status da fonte (pelo método [check(
 
 E o melhor de tudo, também podemos combinar as estratégias acima para diferentes conteúdos na página, por exemplo, reter a renderização do texto em algumas seções até que a fonte esteja disponível, usar uma fonte substituta e renderizar novamente quando o download estiver concluído, especificar diferentes tempos limite e assim por diante. 
 
-<!-- TODO: Verify note type! -->
 Note: A API de carregamento de fontes ainda está <a href='http://caniuse.com/#feat=font-loading'>em desenvolvimento para alguns navegadores</a>. Considere usar o <a href='https://github.com/bramstein/fontloader'>polyfill FontLoader</a> ou a <a href='https://github.com/typekit/webfontloader'>biblioteca webfontloader</a> para uma funcionalidade semelhante, embora com a sobrecarga de uma dependência JavaScript adicional.
 
 ### Como otimizar a renderização de fontes com a colocação in-line
@@ -321,7 +314,6 @@ Uma estratégia alternativa simples ao uso da API de carregamento de fontes para
 
 A estratégia de colocação in-line não é tão flexível e não permite definir tempos limite personalizados ou estratégias de renderização para conteúdos diferentes, mas é uma solução simples e sólida que funciona em todos os navegadores. Para resultados ainda melhores, separe as fontes in-line em uma folha de estilos autônoma e as exiba com um grande max-age. Dessa forma, ao atualizar sua CSS, você não força os visitantes a fazer um novo download das fontes. 
 
-<!-- TODO: Verify note type! -->
 Note: Use a colocação in-line de forma seletiva. Lembre-se de que @font-face usa o comportamento lazyload para evitar o download de variantes e subconjuntos de fontes desnecessários. Além disso, aumentar o tamanho de seu CSS por meio de uma colocação in-line agressiva impactará negativamente sobre seu <a href='/web/fundamentals/performance/critical-rendering-path/'>caminho de processamento essencial</a>. O navegador deve fazer o download de todas as CSS antes de criar o CSSOM e a árvore de renderização e de renderizar os conteúdos da página para a tela.
 
 ### Como otimizar a reutilização de fontes com o cache de HTTP

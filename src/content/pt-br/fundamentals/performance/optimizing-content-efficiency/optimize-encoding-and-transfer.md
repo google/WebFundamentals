@@ -90,7 +90,6 @@ Após executar as etapas acima, nossa página passou de 406 para 150 caracteres:
 
 Recapitulando, o exemplo acima ilustra uma questão importante: um compactador genérico (do tipo desenvolvido para compactar textos aleatórios) também poderia realizar uma boa compactação da página acima. No entanto, ele nunca seria capaz de remover os comentários, recolher as regras CSS ou realizar as várias otimizações específicas para o tipo de conteúdo. É por isso que o pré-processamento, a minificação e a otimização voltada para o contexto podem ser ferramentas poderosas.
 
-<!-- TODO: Verify note type! -->
 Note: Atualmente a versão de desenvolvimento descompactada da biblioteca JQuery se aproxima de 300 KB. A mesma biblioteca, porém reduzida (com comentários removidos etc.) é cerca de 3 x menor: ~100 KB.
 
 Da mesma forma, as técnicas acima podem ser ampliadas para além dos recursos baseados em texto. Imagens, vídeos e outros tipos de conteúdo também têm suas próprias formas de metadados e várias cargas. Por exemplo, sempre que você fotografa com uma câmera, a foto normalmente agrega várias informações adicionais: configuração da câmera, localização etc. Dependendo do seu aplicativo, esses dados podem ser essenciais (por exemplo, um site de compartilhamento de fotos) ou completamente inúteis, e você deve considerar se vale a pena removê-los. Na prática, esses metadados podem adicionar até dezenas de kilobytes em cada imagem.
@@ -185,7 +184,6 @@ Qual é a melhor configuração para seu servidor? O projeto HTML5 Boilerplate c
 
 Uma forma simples e rápida de ver o GZIP em ação é abrir o Chrome DevTools e inspecionar a coluna `Tamanho / Conteúdo` no painel de Rede: `tamanho` indica o tamanho de transferência do recurso e `conteúdo` indica o tamanho descompactado. Para o recurso HTML do exemplo acima, o GZIP gerou uma redução de 24,8 KB durante a transferência.
 
-<!-- TODO: Verify note type! -->
 Note: Surpreendentemente, há casos em que o GZIP pode até aumentar o tamanho do recurso. Normalmente, isso acontece quando o recurso é muito pequeno e a sobrecarga do dicionário do GZIP é mais alta do que a redução alcançada pela compactação. Isso também pode ocorrer quando o recurso já está bem compactado. Alguns servidores permitem que você especifique um `limite mínimo de tamanho do arquivo` para evitar esse problema.
 
 Por fim, embora a maioria dos navegadores faça a compactação automática dos recursos ao exibi-los para o usuário, algumas CDNs exigem maiores cuidados e ações manuais para garantir que o recurso compactado pelo GZIPseja exibido. Faça uma auditoria no seu site para verificar se seus recursos estão realmente [compactados](http://www.whatsmyip.org/http-compression-test/).

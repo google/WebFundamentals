@@ -45,7 +45,6 @@ Cada vez que el navegador tiene que procesar el marcado HTML, tiene que pasar po
 
 <img src="images/dom-timeline.png" class="center" alt="Hacer el seguimiento de la creación de DOM en DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: Supondremos que estás familiarizado con los conceptos básicos de Chrome DevTools. Es decir, sabes cómo capturar una cascada de red o registrar una cronología. Si necesitas refrescar rápidamente los conceptos, consulta la <a href='https://developer.chrome.com/devtools'>documentación de Chrome DevTools</a> o, si no conoces DevTools, te recomendamos que participes en el curso sobre cómo <a href='http://discover-devtools.codeschool.com/'>descubrir DevTools</a> ofrecido por Codeschool.
 
 Si abres Chrome DevTools y registras una cronología mientras se carga la página, puedes ver el tiempo real que se tarda en realizar este paso (en el ejemplo anterior nos ha costado unos 5 ms convertir un conjunto de bytes HTML en un árbol DOM). Por supuesto, si la página fuera más grande (como la mayoría), puede que este proceso se alargara considerablemente. En futuras secciones sobre cómo crear animaciones uniformes verás que es muy fácil que este proceso se convierta en tu embudo si el navegador tiene que procesar grandes cantidades de HTML.

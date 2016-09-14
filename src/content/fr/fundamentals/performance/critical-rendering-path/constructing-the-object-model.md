@@ -47,7 +47,6 @@ Chaque fois que le navigateur doit traiter le balisage HTML, il doit suivre tout
 
 <img src="images/dom-timeline.png" class="center" alt="Effectuer le suivi de la construction du DOM dans DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: Nous supposons que vous connaissez les principes de base de Chrome DevTools, c'est-à-dire que vous savez comment capturer une suite de réseaux ou enregistrer une chronologie. Si vous avez besoin de vous rafraîchir la mémoire, consultez la <a href='https://developer.chrome.com/devtools'>documentation Chrome DevTools</a>, ou si vous découvrez DevTools pour la première fois, nous vous conseillons de suivre le cours Codeschool <a href='http://discover-devtools.codeschool.com/'>Découvrir DevTools</a>.
 
 Si vous ouvrez Chrome DevTools et enregistrez une chronologie lors du chargement de la page, vous pouvez voir la durée de cette étape. Dans l'exemple ci-dessus, il nous a fallu environ 5 ms pour convertir un fragment d'octets HTML en une arborescence de DOM. Bien sûr, pour une page plus importante, comme le sont la plupart des pages, le traitement peut être beaucoup plus long. Dans les prochaines sections qui décrivent comment créer des animations fluides, vous verrez que cette étape peut rapidement devenir votre goulot d'étranglement si le navigateur doit traiter de grandes quantités de code HTML.

@@ -102,7 +102,6 @@ Translated By:
 
 您还可以使用 Media Fragments API 提供有关同一个视频的多个视图（如 DVD 中的插入点），而无需编码和提供多个文件。
 
-<!-- TODO: Verify note type! -->
 Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 - 请确保您的服务器支持'范围请求'。默认情况下，多数服务器中的'范围请求'处于启用状态，不过，有些托管服务可能会将其关闭。
 
@@ -267,11 +266,10 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 
 使用 [CSS 媒体查询](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) 来根据视口尺寸指定元素大小；max-width: 100% 是您的最佳帮手。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 对于 iframe 中的媒体内容（如 YouTube 视频），请尝试使用自适应方法（如 [John Surdakowski 提出的方法](//avexdesigns.com/responsive-youtube-embed/)）。
 
-<!-- TODO: Verify note type! -->
 Note: 请勿强制调整元素尺寸，否则会使宽高比异于原始视频。挤压或拉伸都会造成较差的视觉效果。
 
 **CSS:**
@@ -387,7 +385,6 @@ extra code for full cross browser compatibility.
 
 要使媒体在移动设备上更易访问，请使用跟踪元素添加字幕或说明。
 
-<!-- TODO: Verify note type! -->
 Note: Android 版 Chrome、iOS Safari 以及当前的所有桌面版浏览器（Firefox 除外）均支持跟踪元素（请参阅 <a href="http://caniuse.com/track" title="Track element support status">caniuse.com/track</a>）。此外，还有一些 polyfill。我们建议您使用 <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> 或 <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>。
 
 使用跟踪元素后，字幕会如下所示：

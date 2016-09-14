@@ -96,7 +96,6 @@ Als u een mediafragment wilt toevoegen, hoeft u slechts `#t=[start_time][,end_ti
 
 U kunt de Media Fragments API ook gebruiken voor het leveren van meerdere weergaven op dezelfde video &ndash; zoals cue points in een dvd &ndash; zonder meerdere bestanden te hoeven coderen en uitvoeren.
 
-<!-- TODO: Verify note type! -->
 Note: - 'De Media Fragments API wordt door de meeste platforms ondersteund, maar niet door iOS.'
 - 'Controleer of bereikaanvragen door uw server worden ondersteund. Bereikaanvragen worden op de meeste servers standaard ingeschakeld, maar ze kunnen door bepaalde hostingservices worden uitgeschakeld.'
 
@@ -260,11 +259,10 @@ U kunt de afmetingen van uw video regelen met JavaScript of CSS. Met behulp van 
 
 Gebruik [CSS-mediaquery`s](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) om het formaat van elementen op te geven afhankelijk van de afmetingen van de viewport; `max-width: 100%` is uw vriend.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 Probeer voor media-inhoud in iframes (zoals YouTube-video`s) een responsieve aanpak te hanteren (zoals de aanpak [van John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
 
-<!-- TODO: Verify note type! -->
 Note: Forceer het aanpassen van de grootte van het element niet als dit resulteert in een beeldverhouding die afwijkt van de oorspronkelijke video. Samengeperste of uitgerekte beelden zien er slecht uit.
 
 **CSS:**
@@ -380,7 +378,6 @@ Toegankelijkheid is geen functie. Gebruikers met een visuele beperking of beperk
 
 Als u media toegankelijker wilt maken op mobiele telefoons, kunt u ondertitels of beschrijvingen toevoegen.
 
-<!-- TODO: Verify note type! -->
 Note: Het track-element wordt ondersteund door Chrome voor Android, iOS Safari en alle bekende browsers op desktop met uitzondering van Firefox (zie <a href='http://caniuse.com/track' title='Track element support status'>caniuse.com/track</a>). Ook zijn er verschillende polyfills beschikbaar. We kunnen <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> of <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a> aanbevelen.
 
 Als u het track-element gebruikt, worden ondertitels als volgt weergegeven:

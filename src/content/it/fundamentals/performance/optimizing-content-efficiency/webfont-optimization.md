@@ -45,7 +45,6 @@ Dunque, come dobbiamo muoverci? Non esiste un unico formato che funzioni in tutt
 * Offrire la variante EOT ai vecchi browser IE (precedenti a IE9)
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Tecnicamente esiste anche l'<a href='http://caniuse.com/svg-fonts'>SVG font container</a>, ma non è mai stato supportato né in IE, né in Firefox e non è approvato in Chrome. Di conseguenza, ha un utilizzo limitato e lo ometteremo intenzionalmente nella presente guida.
 
 ### Riduzione delle dimensioni del font tramite compressione
@@ -58,7 +57,6 @@ Un font è una raccolta di glifi, ciascuno dei quali è composto da un insieme d
 
 Vale infine la pena notare che alcuni formati font contengono metadati aggiuntivi, quali informazioni di  [font hinting](http://en.wikipedia.org/wiki/Font_hinting) e [kerning](http://en.wikipedia.org/wiki/Kerning) che possono non essere necessarie su alcune piattaforme, ma che consentono un'ulteriore ottimizzazione delle dimensioni file. Consulta le opzioni di ottimizzazione messe a disposizione dal tuo compressore font e, se scegli questo percorso, assicurati di disporre delle infrastrutture adatte per testare e utilizzare tali font ottimizzati in ogni browser. Ad es., Google Fonts offre più di 30 varianti ottimizzate per ogni font, individuando e fornendo automaticamente la variabile ottimale per ogni piattaforma e browser.
 
-<!-- TODO: Verify note type! -->
 Note: Valuta l'utilizzo della <a href='http://en.wikipedia.org/wiki/Zopfli'>compressione Zopfli</a> per i formati EOT, TTF e WOFF. Zopfli è un compressore compatibile con zlib che offre una riduzione delle dimensioni file ~5% superiore a gzip.
 
 ## Definire una famiglia di font con @font-face
@@ -105,7 +103,6 @@ Nota innanzitutto che gli esempi precedenti definiscono un'unica famiglia _Aweso
 * La direttiva `url()` dci consente di caricare font esterni, che possono contenere un suggerimento `format()` aggiuntivo che indichi il formato del font cui fa riferimento l'URL fornito.
 
 ^
-<!-- TODO: Verify note type! -->
 Note: A meno che non faccia riferimento a uno dei font di sistema predefiniti, nella realtà è raro che l'utente l'abbia installato localmente, soprattutto su dispositivi mobili, dove è di fatto impossibile 'installare' font aggiuntivi. Di conseguenza, dovrai sempre fornire un elenco di percorsi font esterni.
 
 Quando stabilisce che il font è necessario, il browser scorre l'elenco di risorse fornito nell'ordine specificato e prova a caricare la risorsa corretta. Ad esempio, seguendo l'esempio precedente:
@@ -118,7 +115,6 @@ Quando stabilisce che il font è necessario, il browser scorre l'elenco di risor
 
 La combinazione di direttive interne ed esterne con format hint idonei ci consente di specificare tutti i formati font disponibili e lasciare al browser la scelta: il browser definisce le risorse necessarie e seleziona il formato ottimale per nostro conto.
 
-<!-- TODO: Verify note type! -->
 Note: L'ordine di specifica delle varianti del font ha una data importanza. Il browser sceglierà il primo formato supportato. Di conseguenza, se desideri che i browser più recenti utilizzino WOFF2, dovrai posizionare il riferimento WOFF2 sopra WOFF, e così via.
 
 ### Subset Unicode-range
@@ -159,7 +155,6 @@ Ad esempio, possiamo suddividere la nostra famiglia _Awesome Font_ nei subset La
     }
     
 
-<!-- TODO: Verify note type! -->
 Note: I subset unicode-range sono particolarmente importanti per le lingue asiatiche, il cui numero di glifi è molto più elevato rispetto alle lingue occidentali e un tipico font 'intero' è spesso misurato in megabyte, invece che in decine di kilobyte!
 
 L'utilizzo di subset unicode-range e di file distinti per ogni variante stilistica del font ci consente di definire una famiglia di font composita più rapida ed efficiente da scaricare; il visitatore dovrà infatti scaricare soltanto le varianti e i subset necessari, senza essere obbligato a scaricare subset che potrebbe non utilizzare mai né visualizzare sulla pagina. 
@@ -237,7 +232,6 @@ Nell'esempio precedente, la famiglia _Awesome Font_ risulta composta da due riso
 
 L'esempio precedente illustra le differenze tra font reale e sintetizzato per Open-Sans; tutte le varianti sintetizzate sono generate dal medesimo font con spessore 400. Come puoi vedere, i risultati sono notevolmente diversi. I dettagli di generazioni delle varianti grassetto e diagonale non sono specificati. I risultati varieranno quindi da browser a browser, e dipenderanno anche molto dal font.
 
-<!-- TODO: Verify note type! -->
 Note: Per una maggiore coerenza nei risultati visivi, non affidarti alla font-synthesis. Minimizza invece il numero di varianti del font utilizzate e specificane il percorso, in modo che il browser possa scaricarle quando sono utilizzate nella pagina. Detto ciò, in alcuni casi una variante synthesized <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>può rappresentare un'opzione valida</a> - utilizzala con cautela.
 
 
@@ -309,7 +303,6 @@ inoltre, potendo verificare lo stato del font (tramite [check()](http://dev.w3.o
 
 La cosa migliore è mixare e combinare le strategie precedenti per i diversi contenuti della pagina; ad esempio, bloccare il rendering di alcune sezioni fino a quando il font non è disponibile, utilizzare un font alternativo e poi renderizzarlo una volta terminato il download del font, specificare timeout diversi, e così via. 
 
-<!-- TODO: Verify note type! -->
 Note: Font Loading API è ancora <a href='http://caniuse.com/#feat=font-loading'>in fase di sviluppo in alcuni browser</a>. Valuta l'utilizzo del <a href='https://github.com/bramstein/fontloader'>FontLoader polyfill</a> o della <a href='https://github.com/typekit/webfontloader'>webfontloader library</a> per ottenere funzionalità simili, sebbene con un'ulteriore dipendenza da JavaScript.
 
 ### Ottimizzazione del rendering con inlining
@@ -321,7 +314,6 @@ Una semplice strategia alternativa per utilizzare Font Loading API consiste nell
 
 La strategia di inlining non è flessibile e non ci consente di definire alcun timeout personalizzato o strategia di rendering per contenuti diversi, ma rappresenta comunque una soluzione semplice ed efficace in tutti i browser. Per ottenere migliori risultati, separa i font sottoposti ad inlining in stylesheet separati e imposta una proprietà max-age lunga; in tal modo, all'aggiornamento del CSS, non obbligherai i visitatori a riscaricare i font. 
 
-<!-- TODO: Verify note type! -->
 Note: Utilizza l'inlining con criterio selettivo! Ricorda che@font-face utilizza il lazy load per evitare di scaricare varianti e subset di font non necessari. Inoltre, l'aumento delle dimensioni del tuo CSS con un inlining aggressivo avrà un impatto negativo sul <a href='/web/fundamentals/performance/critical-rendering-path/'>percorso di rendering critico</a> - il  browser deve scaricare l'intero CSS prima di costruire il CSSOM e il render tree e visualizzare i contenuti della pagina sullo schermo.
 
 ### Ottimizzazione per il riutilizzo con HTTP Caching

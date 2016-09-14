@@ -24,7 +24,6 @@ description: ほとんどのウェブサイトは、マルチデバイスのエ�
 
 
 ## Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -91,7 +90,6 @@ meta viewport の値 width=device-width を使用すると、画面の幅をデ�
 
 一部のブラウザでは、横向きモードに回転した際もページが同じ幅に保たれ、リフローではなくズームによってコンテンツを画面サイズに合わせます。属性 initial-scale=1 を追加すると、デバイスの向きに関係なく CSS ピクセルとデバイス非依存ピクセルとの間に 1:1 の関係を確立するようブラウザに指示が与えられます。これにより、横向きにした場合にページ幅全体を利用できるようになります。
 
-<!-- TODO: Verify note type! -->
 Note: 属性の区切りにはカンマを使用して、古いブラウザでも属性を正確に解釈できるようにする。
 
 ## ビューポートに確実にアクセスできるようにする

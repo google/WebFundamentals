@@ -18,7 +18,6 @@ description: 通过网络获取内容既缓慢，成本又高：大的响应需�
 
 好消息是每个浏览器都实现了 HTTP 缓存！ 我们所要做的就是，确保每个服务器响应都提供正确的 HTTP 头指令，以指导浏览器何时可以缓存响应以及可以缓存多久。
 
-<!-- TODO: Verify note type! -->
 Note: 如果在应用中使用 Webview 来获取和显示网页内容，可能需要提供额外的配置标志，以确保启用了 HTTP 缓存，并根据用途设置了合理的缓存大小，同时，确保缓存持久化。查看平台文档并确认您的设置！
 
 <img src="images/http-request.png" class="center" alt="HTTP 请求">
@@ -43,7 +42,6 @@ Note: 如果在应用中使用 Webview 来获取和显示网页内容，可能�
 
 作为网络开发人员，您如何利用高效的重新验证？ 浏览器代替我们完成了所有的工作：自动检测是否已指定了验证令牌，并会将验证令牌附加到发出的请求上，根据从服务器收到的响应，在必要时更新缓存时间戳。**实际上，我们唯一要做的就是确保服务器提供必要的 ETag 令牌：查看服务器文档中是否有必要的配置标志。**
 
-<!-- TODO: Verify note type! -->
 Note: 提示：HTML5 Boilerplate 项目包含了所有最流行的服务器的<a href='https://github.com/h5bp/server-configs'>配置文件样例</a>，并且为每个配置标志和设置都提供了详细的注释：在列表中找到您喜欢的服务器，查找适合的设置，然后复制/确认您的服务器配置了推荐的设置。
 
 
@@ -56,7 +54,6 @@ Note: 提示：HTML5 Boilerplate 项目包含了所有最流行的服务器的<a
 
 最好的请求是不必与服务器进行通信的请求：通过响应的本地副本，我们可以避免所有的网络延迟以及数据传输的数据成本。为此，HTTP 规范允许服务器返回 [一系列不同的 Cache-Control 指令](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)，控制浏览器或者其他中继缓存如何缓存某个响应以及缓存多长时间。
 
-<!-- TODO: Verify note type! -->
 Note: Cache-Control 头在 HTTP/1.1 规范中定义，取代了之前用来定义响应缓存策略的头（例如 Expires）。当前的所有浏览器都支持 Cache-Control，因此，使用它就够了。
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="HTTP Cache-Control 示例">

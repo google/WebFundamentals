@@ -243,7 +243,6 @@ HTML5 導入了數種新輸入類型。 這些新的輸入類型可以提示瀏�
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
-<!-- TODO: Verify note type! -->
 Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
 
 
@@ -782,7 +781,6 @@ HTML5 還導入了數個虛擬類別，
 只要提交表單並繼續到最終確認步驟即可。
 
 
-<!-- TODO: Verify note type! -->
 Note: 如果您要求任何種類的個人資訊或信用卡資料，確保是透過 SSL 提供頁面。  否則對話方塊中將警告使用者，他們的資訊可能不安全。
 
 

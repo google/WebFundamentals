@@ -239,7 +239,6 @@ npm.
 Pronto! Agora você tem tudo que precisa para usar as ferramentas Gulp no Web Starter
 Kit.
 
-<!-- TODO: Verify note type! -->
 Note: Em caso de erros de permissão ou acesso como <code>EPERM</code> ou <code>EACCESS</code>, não use o <code>sudo</code> como uma solução alternativa. Consulte <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>esta página</a> para obter uma solução mais adequada.
 
 A próxima seção deste guia aborda como usar o Gulp. Mas se você desejar ver

@@ -24,7 +24,6 @@ Web'de sörf yapmak için mobil cihazlarin kullanilmasi çok büyük bir hizla a
 
 
 ### Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -91,7 +90,6 @@ En iyi deneyimi saglama çabasiyla mobil tarayicilar, sayfayi bir masaüstü ekr
 
 Bazi tarayicilar, yatay moda dönerken sayfanin genisligini sabit tutar ve ekrani doldurmak için yeniden düzenlemek yerine zum yapar. `initial-scale=1` özelligi eklendiginde, tarayiciya CSS pikselleri ile cihazdan bagimsiz pikseller arasinda, cihazin yönü ne olursa olsun 1:1 iliski olusturmasi talimati verilir ve sayfanin tam yatay genislikten yararlanmasi saglanir.
 
-<!-- TODO: Verify note type! -->
 Note: Eski tarayicilarin özellikleri dogru bir sekilde ayristirabileceklerinden emin olmak üzere özellikleri birbirinden ayirmak için virgül kullanin.
 
 ### Erisilebilir görüntü alani saglama

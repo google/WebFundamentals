@@ -40,7 +40,6 @@ Translated By:
 
 上述过程的每一步中都有发生jank的可能，因此一定要弄清楚你的代码将会运行在哪一步。
 
-<!-- TODO: Verify note type! -->
 Note: 你可能听说过 "rasterize" 这个术语，它通常被用在绘制过程中。绘制过程本身包含两步: ：1）创建一系列draw调用；2）填充像素。
 第二步的过程被称作 "rasterization" 。因此当你在DevTools中查看页面的paint记录时，你可以认为它已经包含了 rasterization。（有些浏览器会使用不同的线程来完成这两步，不过这也不是web开发者能控制的了）
 
@@ -66,7 +65,6 @@ Note: 你可能听说过 "rasterize" 这个术语，它通常被用在绘制过�
 
 第三种方式在性能上是最理想的，对于动画和滚动这种负荷很重的渲染，我们要争取使用第三种渲染流程。
 
-<!-- TODO: Verify note type! -->
 Note: 如果你想对哪些属性会触发<a href="http://csstriggers.com">CSS Triggers</a>和高性能动画方面了解更多，请参考：<a href="stick-to-compositor-only-properties-and-manage-layer-count">使用渲染层合并属性</a>。
 
 性能优化是一门做减法的艺术。我们首要要尽力简化页面渲染过程，然后要使渲染过程的每一步都尽量高效。在很多时候，我们需要跟浏览器一起努力来创建高性能web应用，而不是跟浏览器对着干。要记住，以上列举的流水线中的每一步，在时间消耗上是各不相同的，有些步骤是相对更费时的。
@@ -75,7 +73,6 @@ Note: 如果你想对哪些属性会触发<a href="http://csstriggers.com">CSS T
 
 
 ## 浏览器渲染优化
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/rp-udacity.jpg">

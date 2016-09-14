@@ -45,7 +45,6 @@ Zawsze gdy przeglądarka przetwarza znaczniki HTML, musi wykonać wszystkie powy
 
 <img src="images/dom-timeline.png" class="center" alt="Śledzenie tworzenia modelu DOM w narzędziach DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: Zakładamy, że dysponujesz podstawową znajomością Narzędzi Chrome dla programistów &ndash; tzn. umiesz przechwycić wykres działania sieci i zapisać oś czasu. Jeśli potrzebujesz szybkiego przypomnienia, zapoznaj się z <a href='https://developer.chrome.com/devtools'>dokumentacją Narzędzi Chrome dla programistów</a>, a jeśli dopiero chcesz je poznać, skorzystaj z kursu <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> (Odkryj Narzędzia dla programistów) w szkole kodowania.
 
 Po otworzeniu Narzędzi Chrome dla programistów i zapisaniu osi czasu wczytywania strony można przeanalizować rzeczywisty czas wymagany do wykonania tego kroku &ndash; w powyższym przykładzie przekształcenie zestawu bajtów znaczników HTML na drzewo DOM zajęło ok. 5 ms. Oczywiście jeśli strona będzie miała większą objętość, jak w przypadku większości stron, ta procedura potrwa znacznie dłużej. W kolejnych rozdziałach opisujących tworzenie płynnych animacji zauważysz, że przetwarzanie dużych ilości znaczników HTML może stanowić wąskie gardło.

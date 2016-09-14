@@ -23,7 +23,6 @@ Ottimizzando il percorso di rendering critico, possiamo migliorare in modo signi
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

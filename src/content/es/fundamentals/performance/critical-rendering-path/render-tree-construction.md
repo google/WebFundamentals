@@ -35,12 +35,11 @@ Para construir el árbol de visualización, el navegador, por lo general, hace l
 1. En cada nodo visible, busca las reglas de CSSOM apropiadas y las aplica.
 2. Emite nodos visibles con contenido y con los estilos que se aplicarán.
 
-<!-- TODO: Verify note type! -->
 Note: Como nota aparte, recuerda que <code>visibility: hidden</code> no es lo mismo que <code>display: none</code>. El primero hace que el elemento sea invisible, pero este seguirá ocupando espacio en el diseño (por ejemplo, se muestra como un cuadro vacío). En cambio, el segundo <code>display: none</code> elimina el elemento por completo del árbol de visualización, por lo que deja de formar parte del diseño.
 
 El resultado final es una página que incluye contenido e información de los estilos en todo el contenido visible de la pantalla. Ya falta menos.  **Una vez que tenemos el árbol de visualización, podemos pasar a la fase de diseño.**
 
-Hasta el momento, hemos calculado qué nodos deberían ser visibles y qué estilos se aplicarán, pero no hemos calculado su posición exacta en la [ventana gráfica]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) del dispositivo. Esto se lleva a cabo en la fase de diseño.
+Hasta el momento, hemos calculado qué nodos deberían ser visibles y qué estilos se aplicarán, pero no hemos calculado su posición exacta en la [ventana gráfica](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) del dispositivo. Esto se lleva a cabo en la fase de diseño.
 
 Para calcular el tamaño y la posición exactos de cada objeto, el navegador empieza por el nivel superior del árbol de visualización y pasa de nodo en nodo analizando la geometría de cada objeto de la página. Veamos un ejemplo práctico:
 

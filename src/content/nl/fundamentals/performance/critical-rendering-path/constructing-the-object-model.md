@@ -47,7 +47,6 @@ Elke keer dat een browser de HTML-opmaak moet verwerken, moet deze alle bovensta
 
 <img src="images/dom-timeline.png" class="center" alt="DOM-opbouw volgen in DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: We gaan ervan uit dat u beschikt over de basisvaardigheden voor Chrome DevTools, dat wil zeggen dat u weet hoe u een netwerkwaterval moet vastleggen of een tijdlijn moet opnemen. Als u uw kennis snel wilt opfrissen, kunt u de cursus <a href='https://developer.chrome.com/devtools'>Chrome DevTools documentation</a>, or if you're new to DevTools, we recommend taking the Codeschool <a href='http://discover-devtools.codeschool.com/'>Chrome DevTools ontdekken</a> bekijken.
 
 Als u Chrome DevTools opent en een tijdlijn opneemt terwijl de pagina wordt geladen, kunt u de werkelijke tijd zien die nodig is om deze stap uit te voeren: in het bovenstaande voorbeeld kostte het ongeveer 5 ms om een stuk HTML-bytes te converteren naar een DOM-boomstructuur. Als de pagina natuurlijk groter was geweest, zoals de meeste pagina`s zijn, kan dit proces aanzienlijk langer duren. In de volgende onderdelen zult u zien hoe u vloeiendere animaties kunt maken, aangezien dit al snel een knelpunt kan worden wanneer de browser grote hoeveelheden HTML moet verwerken.

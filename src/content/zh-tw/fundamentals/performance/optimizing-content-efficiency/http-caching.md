@@ -18,7 +18,6 @@ description: 透過網路取得內容的做法不僅緩慢，成本也很高：�
 
 好消息是每個瀏覽器都內建了 HTTP 快取！ 我們所要做的就是，確保每個伺服器回應都提供正確的 HTTP 標題指令，以指示瀏覽器快取回應的時機和時限。
 
-<!-- TODO: Verify note type! -->
 Note: 如果在應用程式中使用 Webview 來擷取及顯示網頁內容，可能需要提供額外的配置旗標，以確保啟用 HTTP 快取，並根據用途設定合理的快取大小，同時也可延長快取的效期。請查看平台文件並確認您的設定！
 
 <img src="images/http-request.png" class="center" alt="HTTP 請求">
@@ -43,7 +42,6 @@ Note: 如果在應用程式中使用 Webview 來擷取及顯示網頁內容，�
 
 網路開發人員應如何利用高效率的重新驗證機制？ 瀏覽器代替我們完成了所有的工作：自動檢測是否已指定了驗證權杖，並會將驗證權杖附加到發出的請求上，根據從伺服器收到的回應，在必要時更新快取時間戳記。**實際上，我們唯一要做的就是確保伺服器提供必要的 ETag 權杖：查看伺服器文件中是否有必要的設定旗標。**
 
-<!-- TODO: Verify note type! -->
 Note: 提示：HTML5 Boilerplate 專案包含了所有主流伺服器的<a href='https://github.com/h5bp/server-configs'>設定檔範例</a>，並且為每個配置旗標和設定都提供了詳細的備註：請在清單中找到您喜歡的伺服器，尋找適合的設定，然後複製/確認您的伺服器配置了推薦的設定。
 
 
@@ -56,7 +54,6 @@ Note: 提示：HTML5 Boilerplate 專案包含了所有主流伺服器的<a href=
 
 最好的請求是不必與伺服器進行通訊的請求：透過回應的本機複本，我們可以避免所有的網路延遲以及傳輸資料的數據連線成本。有鑑於此，HTTP 規範允許伺服器傳回[一系列不同的 Cache-Control 指令](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9)，控制瀏覽器或者其他中繼快取如何快取某個回應以及快取的期限。
 
-<!-- TODO: Verify note type! -->
 Note: Cache-Control 標題的定義詳列於 HTTP/1.1 規範中，取代了之前用來定義回應快取策略的標題 (例如 Expires)。現今所有的瀏覽器都支援 Cache-Control，因此我們有這個標題就夠了。
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="HTTP Cache-Control 示例">

@@ -239,7 +239,6 @@ Web Starter Kit 建置工具需要 Node 和 NPM。 Node 用於執行任務執行
 好了！您現在已擁有所有必要的條件，
 以在 Web Starter Kit 中使用 Gulp 工具
 
-<!-- TODO: Verify note type! -->
 Note: 如果您看到像 <code>EPERM</code> 的權限或存取錯誤 或 <code>EACCESS</code>，請不要使用 <code>sudo</code> 作為變通辦法。請參閱此頁，<a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>取得更強固的解決方案。</a>
 
 本指南的下一節將討論如何使用 Gulp，

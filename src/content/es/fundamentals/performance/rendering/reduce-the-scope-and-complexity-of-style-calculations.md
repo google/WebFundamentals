@@ -64,12 +64,10 @@ Otra consideración de rendimiento, que es generalmente _el factor más importan
 
 En términos generales, el peor costo de calcular el estilo computarizado de los elementos es la cantidad de elementos multiplicados por el conteo del selector, debido a que cada elemento se debe revisar al menos una vez con cada estilo para ver si coinciden.
 
-<!-- TODO: Verify note type! -->
 Note: Anteriormente, si se modificaba una clase en, por ejemplo, el elemento del cuerpo, se debían recalcular los estilos computarizados de todos los elementos secundarios de la página. Afortunadamente, esto ya no sucede porque, en su lugar, algunos navegadores mantienen una pequeña colección de reglas exclusivas de cada elemento que, si se modifican, hacen que los estilos del elemento se recalculen. Eso significa que puede o no ser necesario recalcular un elemento según el lugar que ocupa en el árbol y de lo que se cambió específicamente.
 
 A menudo, los cálculos de estilo se pueden dirigir directamente a unos pocos elementos en lugar de invalidar la página completa. En los navegadores modernos, esto ya no es un problema importante porque el navegador no necesariamente debe verificar todos los elementos que podrían haber resultado afectados por un cambio. Por otro lado, los navegadores más viejos no siempre están tan optimizados para estas tareas. Where you can you should **reduce the number of invalidated elements**.
 
-<!-- TODO: Verify note type! -->
 Note: Si se encuentra en Web Components, es importante notar que los cálculos de estilo aquí son diferentes, ya que, de manera predeterminada, los estilos no atraviesan el límite de Shadow DOM, y su ámbito se define en relación con los componentes individuales en lugar de hacerlo con respecto al árbol en general. Sin embargo, en general, se sigue aplicando el mismo concepto: los árboles más pequeños con reglas más simples se procesan más eficientemente que los árboles grandes o las reglas complejas.
 
 ## Medición del costo de recalcular el estilo

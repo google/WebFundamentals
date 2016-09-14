@@ -72,7 +72,6 @@ meta viewport의 `width=device-width` 값은 페이지가 특정 기기 크기�
 
 몇몇 브라우저는 landscape 모드로 전환할 때 페이지 너비를 일정하게 하고, 화면 크기를 맞추기 위해 다시 그리기 보다 줌을 합니다. `initial-scale=1` 속성은 브라우저가 CSS 픽셀과 기기 오리엔테이션과 관계 없는 특정 기기 사이즈와의 1:1 관계를 맺게합니다. 또한, 페이지가 landscape 시에도 꽉찬 화면을 사용할 수 있도록 합니다.
 
-<!-- TODO: Verify note type! -->
 Note: 콤마를 사용하여 attributes를 분리하고, 오래된 브라우저들이 적절하게 그 attributes를 파싱할 수 있도록 하세요.
 
 ### 접근 가능한 viewport 설정

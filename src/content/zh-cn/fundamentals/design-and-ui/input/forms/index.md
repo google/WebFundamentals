@@ -243,7 +243,6 @@ HTML5 引入了大量新的输入类型。 这些新输入类型可以提示
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
-<!-- TODO: Verify note type! -->
 Note: <code>datalist</code> 值是提供的建议值，并不意味着用户 只能选择所提供的建议值。
 
 
@@ -788,7 +787,6 @@ JavaScript 结合，只在用户已访问此字段时才显示无效的样式。
 则可以提交表单并进入最终
 确认。
 
-<!-- TODO: Verify note type! -->
 Note: 如果要求输入任何类型的个人信息或信用卡 数据，请确保通过 SSL 提供页面。  否则对话框将 警告用户，他们的信息可能不安全。
 
 

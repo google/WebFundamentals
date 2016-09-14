@@ -47,7 +47,6 @@ description: ブラウザは、コンテンツを画面にレンダリングす�
 
 <img src="images/dom-timeline.png" class="center" alt="DevTools で DOM 構築をトレースする">
 
-<!-- TODO: Verify note type! -->
 Note: ここでは、Chrome DevTools の基本については理解していることを前提としています。つまり、ネットワーク ウォーターフォールの取得方法やタイムラインの記録方法について理解していることが前提となります。簡単な復習が必要な場合、<a href="https://developer.chrome.com/devtools">Chrome DevTools ドキュメント</a>をご覧ください。DevTools がまったく初めての場合、Code School の <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a> コースを受けることをおすすめします。
 
 Chrome DevTools を開き、ページの読み込み時にタイムラインを記録すると、このステップを実行する上で必要とされた実際の時間を知ることができます。上記のサンプルの場合、HTML のバイトのかたまりを DOM ツリーに変換するのに、約 5 ms かかります。多くのページが実際そうであるように、ページが大規模になると、このプロセスにかかる時間は大幅に長くなります。後のセクションでは、スムーズなアニメーションを作成するので、ブラウザが大規模な HTML を処理しなければならない場合に、容易にボトルネックになることが実感できるでしょう。

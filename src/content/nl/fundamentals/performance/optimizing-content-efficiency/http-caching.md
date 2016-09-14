@@ -18,7 +18,6 @@ Iets via het netwerk ophalen kost tijd en geld: zoekopdrachten met veel resultat
 
 Elke browser beschikt over een implementatie van een HTTP-cache. We hoeven er alleen voor te zorgen dat elke keer dat een server een antwoord verstuurt, dit de juiste HTTP-header bevat met aanwijzingen over hoe lang de browser het antwoord kan opslaan in het cachegeheugen.
 
-<!-- TODO: Verify note type! -->
 Note: Als u een Webview gebruikt om inhoud van internet in uw applicatie weer te geven, zijn er mogelijk extra configuratiestappen nodig om HTTP-caching in te schakelen, de omvang van het cachegeheugen te bepalen en om in te stellen hoe lang de gegevens worden bewaard. Raadpleeg de documentatie voor het betreffende platform en controleer uw instellingen.
 
 <img src="images/http-request.png" class="center" alt="HTTP-verzoek">
@@ -43,7 +42,6 @@ In bovenstaand voorbeeld verstrekt de client de ETag bij het verzoek automatisch
 
 Hoe maakt u als webontwikkelaar gebruik van efficiënte revalidatie? De browser doet al het werk voor ons: de browser detecteert automatisch of een validatietoken al eerder is gepecificeerd, koppelt het aan een uitgaand verzoek en werkt de tijdstempels in het cachegeheugen bij op basis van het ontvangen antwoord van de server. **Het enige dat wij nog moeten doen, is garanderen dat de server de benodigde ETags verstrekt. Raadpleeg de serverdocumentatie voor de vereiste configuratiestappen.**
 
-<!-- TODO: Verify note type! -->
 Note: Tip: het project HTML5 Boilerplate bevat <a href='https://github.com/h5bp/server-configs'>voorbeelden van configuratiebestanden</a> voor de meest gebruikte servers met gedetailleerde beschrijvingen voor elke configuratiestap. Zoek de gewenste server op in de lijst en neem de vermelde instellingen over op uw server, zodat deze is geconfigureerd met de aanbevolen instellingen.
 
 
@@ -56,7 +54,6 @@ Note: Tip: het project HTML5 Boilerplate bevat <a href='https://github.com/h5bp/
 
 Het beste verzoek is een verzoek waarvoor niet met de server hoeft te worden gecommuniceerd: een lokaal opgeslagen antwoord voorkomt netwerkvertragingen en datakosten voor de gegevensoverdracht. Om dit te realiseren, staat de HTTP-specificatie toe dat de server [een aantal verschillende Cache-Control-instructies] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) terugstuurt die bepalen hoe en hoe lang dit specifieke antwoord door de browser of de tussenopslag in het cachegeheugen mag worden bewaard.
 
-<!-- TODO: Verify note type! -->
 Note: De header Cache-Control is onderdeel van de specificaties voor HTTP/1.1. Deze header vervangt voorgaande headers (bijv. Expires) die worden gebruikt in het cachebeleid voor antwoorden. Alle moderne browsers ondersteunen Cache-Control, dus dit is de enige header die we nodig hebben.
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="Voorbeeld HTTP Cache-Control">

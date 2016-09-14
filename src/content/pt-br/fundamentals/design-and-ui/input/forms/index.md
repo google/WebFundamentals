@@ -243,7 +243,6 @@ listas, o elemento `datalist` fornece dicas conforme o usuário digita.
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
-<!-- TODO: Verify note type! -->
 Note: Os valores <code>datalist</code> são fornecidos como sugestões e o usuário não fica restrito às sugestões fornecidas.
 
 
@@ -790,7 +789,6 @@ não foi possível preencher o formulário.  Se for concluído com êxito e o fo
 estiver de acordo com as suas necessidades, basta enviá-lo e continuar com a confirmação
 final.
 
-<!-- TODO: Verify note type! -->
 Note: Ao solicitar qualquer tipo de informação pessoal ou dados de cartão de crédito, certifique-se de que a página é disponibilizada via SSL.  Caso contrário, o diálogo avisará o usuário que suas informações podem não estar seguras.
 
 

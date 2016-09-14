@@ -23,7 +23,6 @@ En optimisant le chemin critique du rendu, nous pouvons améliorer de façon sig
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

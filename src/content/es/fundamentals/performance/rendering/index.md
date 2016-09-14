@@ -35,7 +35,6 @@ Existen cinco áreas principales que debe conocer y tener en cuenta cuando traba
 
 Cada una de estas partes del proceso representa una oportunidad para introducir un bloqueo, por eso es importante comprender exactamente cuáles son las partes del proceso que su código desencadena.
 
-<!-- TODO: Verify note type! -->
 Note: En algunos casos, tal vez escuche el término "rasterizar", que se utiliza junto con el término pintura. Esto se debe a que el proceso de pintura está formado por dos tareas: 1) creación de una lista de llamadas de dibujo y 2) relleno de los píxeles.
 La última tarea se denomina "rasterización", por lo que, cada vez que vea registros de pintura en DevTools, debe tener en cuenta que incluyen rasterización. (En algunas arquitecturas, la creación de la lista de llamadas de dibujo y la rasterización se llevan a cabo en diferentes cadenas, pero el desarrollador no tiene control sobre esto).
 
@@ -61,7 +60,6 @@ Si modifica una propiedad en la que no se requiere diseño ni pintura, el navega
 
 Esta versión final es la más económica y la ideal para los puntos de presión alta del ciclo de vida de la aplicación, como las animaciones o el desplazamiento.
 
-<!-- TODO: Verify note type! -->
 Note: Si desea saber cuál de las tres versiones anteriores que cambia cualquier propiedad determinada de las CSS (Hoja de estilos en cascada) se desencadenará, visite<a href='http://csstriggers.com'>Desencadenadores de CSS</a>. Y si desea aprender rápidamente a realizar animaciones de alto rendimiento, lea la sección sobre<a href='stick-to-compositor-only-properties-and-manage-layer-count'>cómo cambiar las propiedades exclusivas del compositor</a>.
 
 El rendimiento es el arte de evitar trabajo y de realizar el trabajo lo más eficientemente posible. En muchos casos, se trata de trabajar junto con el navegador, no en su contra. Es importante tener en cuenta que el trabajo que se menciona anteriormente en el proceso difiere en cuanto al costo de cálculos. Algunas tareas son más costosas que otras.
@@ -70,7 +68,6 @@ Analicemos las diferentes partes del proceso. Hablaremos sobre los problemas com
 
 
 ## Optimización de la representación del navegador
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/rp-udacity.jpg">

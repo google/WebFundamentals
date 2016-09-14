@@ -97,7 +97,6 @@ Aby umieścić na stronie fragment multimediów, wystarczy dodać `#t=[start_tim
 
 Interfejs API Media Fragments pozwala udostępniać wiele widoków tego samego filmu (podobnie do wyboru scen na płycie DVD) bez konieczności kodowania i przesyłania wielu plików.
 
-<!-- TODO: Verify note type! -->
 Note: - Interfejs API Media Fragments działa na większości platform z wyjątkiem iOS.
 - 'Upewnij się, że Twój serwer odpowiada na żądania zakresu. Na większości serwerów ta funkcja jest domyślnie włączona, ale niektórzy administratorzy usług hostingowych ją wyłączają.'
 
@@ -261,11 +260,10 @@ Do kontrolowania wymiarów elementu video możesz używać JavaScriptu lub CSS. 
 
 Użyj [zapytań o media CSS](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness), by określić wymiary elementów w zależności od wielkości widocznego obszaru. Świetnie sprawdza się `max-width: 100%`.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 W przypadku treści multimedialnych w elementach iframe (np. filmów z YouTube) zastosuj rozwiązanie elastyczne &ndash; takie jak [proponowane przez Johna Surdakowskiego](//avexdesigns.com/responsive-youtube-embed/)).
 
-<!-- TODO: Verify note type! -->
 Note: Nie wymuszaj rozmiarów, które nadają elementowi inny współczynnik proporcji niż ma pierwotny film. Obraz ściśnięty lub rozciągnięty źle wygląda.
 
 **CSS:**
@@ -381,7 +379,6 @@ Ułatwienia dostępu to nie dodatkowa funkcja. Użytkownicy, którzy nie widzą 
 
 Aby poprawić dostępność multimediów na urządzeniach mobilnych, dodaj napisy i opisy, korzystając z elementu track.
 
-<!-- TODO: Verify note type! -->
 Note: Element track działa w Chrome na Androida, Safari na iOS i wszystkich współczesnych przeglądarkach na komputerach z wyjątkiem Firefoksa (zobacz na <a href='http://caniuse.com/track' title='Stan obsługi elementu track'>caniuse.com/track</a>). Jest też dostępnych kilka rozwiązań polyfill. Zalecamy <a href='//www.delphiki.com/html5/playr/' title='Polyfill elementu track Playr'>Playr</a> i <a href='//captionatorjs.com/' title='Element track Captionator'>Captionator</a>.
 
 Tak wyglądają napisy z elementu track:

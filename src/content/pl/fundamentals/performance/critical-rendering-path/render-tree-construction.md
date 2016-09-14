@@ -35,12 +35,11 @@ Aby utworzyć drzewo renderowania, przeglądarka wykonuje z grubsza następując
 1. Znalezienie dla każdego widocznego węzła pasujących reguł modelu CSSOM i ich zastosowanie.
 2. Wygenerowanie widocznych węzłów z treścią, przy uwzględnieniu wyznaczonych dla nich stylów.
 
-<!-- TODO: Verify note type! -->
 Note: Na marginesie: pamiętaj, że atrybut <code>visibility: hidden</code> różni się od atrybutu <code>display: none</code>. Pierwszy z nich powoduje, że element jest niewidoczny, ale nadal zajmuje miejsce w układzie strony (tzn. jest renderowany jako puste pole), a drugi <code>display: none</code> powoduje całkowite usunięcie elementu z drzewa renderowania, przez co element staje się niewidoczny i przestaje należeć do układu strony.
 
 Końcowym efektem jest obraz zrenderowany na ekranie z odwzorowaniem zarówno całej widocznej treści, jak i jej stylów &ndash; zbliżamy się do celu.  **Po przygotowaniu drzewa renderowania możemy przejść do etapu wyznaczania `układu strony`.**
 
-Do tej chwili określaliśmy, które węzły powinny być widoczne, oraz ich style. Nie wyznaczaliśmy ich dokładnego położenia w [widocznym obszarze]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) urządzenia &ndash; to etap znajdowania `układu strony`, określanego również pojęciem `rozmieszczenia elementów`.
+Do tej chwili określaliśmy, które węzły powinny być widoczne, oraz ich style. Nie wyznaczaliśmy ich dokładnego położenia w [widocznym obszarze](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) urządzenia &ndash; to etap znajdowania `układu strony`, określanego również pojęciem `rozmieszczenia elementów`.
 
 Przeglądarka rozpoczyna wyznaczanie dokładnego rozmiaru i położenia każdego obiektu od korzenia drzewa renderowania i przeszukuje całe drzewo, obliczając geometrię każdego obiektu na stronie. Oto prosty przykład:
 

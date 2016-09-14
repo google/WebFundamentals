@@ -164,7 +164,6 @@ Dahili olarak, tarayici her bir kanal için 256 deger (gölgeler) ayirir. Bu da 
 
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Bu arada, verileri sunucudan istemciye aktarmak için kullanilan resim biçiminden bagimsiz olarak, resmin kodu tarayici tarafindan çözüldügünde her bir piksel her zaman 4 bayt bellek kullanir. Bu, büyük resimler ve kullanilabilir bellegi çok fazla olmayan cihazlar (ör. alt sinif mobil cihazlar) için önemli bir kisitlama olabilir.
 
 <table>
@@ -210,7 +209,6 @@ Bir basit strateji, resmin 'bit derinligi'ni kanal basina 8 bitten daha küçük
 
 <img src="images/artifacts.png" class="center" alt="Sikistirma yapay nesneleri">
 
-<!-- TODO: Verify note type! -->
 Note: Soldan saga (PNG): 32 bit (16M renk), 7 bit (128 renk), 5 bit (32 renk). Kademeli renk geçisleri olan karmasik sahneler (gradyanlar, gökyüzü vb.), 5 bit varlikta piksellestirilmis gökyüzü gibi görsel yapay nesneleri önlemek için daha genis renk paletleri gerektirir. Diger yandan, resim yalnizca birkaç renk kullaniyorsa, genis bir palet yalnizca degerli bitlerin harcanmasi anlamina gelir!
 
 Bagimsiz piksellerde saklanan verileri optimize ettikten sonra, daha akilli olabilir ve yakindaki piksellere de bakabilirdik: Görünüse göre birçok resmin, özellikle de fotograflarin benzer renklere sahip birçok yakin pikseli var (ör. gökyüzü, tekrar eden dokular vb.). Sikistirici, bu bilgileri avantajimiza kullanarak '[delta kodlamasini](http://en.wikipedia.org/wiki/Delta_encoding)' uygulayabilir. Bu durumda, her bir pikselin bagimsiz degerlerini saklamak yerine yakindaki pikseller arasindaki farki saklayabiliriz: Bitisik pikseller ayniysa delta 'sifir' olur ve yalnizca tek bir biti saklamamiz gerekir! Peki ama neden orada duralim?
@@ -248,7 +246,6 @@ Dolayisiyla, kayipli ve kayipsiz optimizasyonun 'en iyi' yapilandirmasi nedir? Y
 
 Uygulamali örnek olarak, JPEG gibi kayipli bir biçimi kullanirken sikistirici genellikle özellestirilebilir `kalite` ayarini açar (ör. Adobe Photoshop'taki 'Web için Kaydet' islevinin sagladigi kalite kaydirma çubugu). Bu genellikle kayipli ve kayipsiz algoritmalarin belirli bir koleksiyonunun iç çalismalarini kontrol eden 1 ile 100 arasinda bir sayi olur. En iyi sonuçlar için resimlerinizi çesitli kalite ayarlariyla deneyin ve kaliteyi düsürmekten korkmayin. Görsel sonuçlar genellikle çok iyi olur ve dosya boyutu tasarruflari oldukça büyük olabilir.
 
-<!-- TODO: Verify note type! -->
 Note: Farkli resim biçimlerinin kalite düzeylerinin, resmi kodlamak için kullanilan algoritmalardaki farkliliklar nedeniyle dogrudan karsilastirilamadigini unutmayin: 90 kaliteli JPEG, 90 kaliteli bir WebP'den çok farkli bir sonuç olusturur. Aslinda, ayni resim biçiminin kalite düzeyleri bile sikistiricinin uygulamasina bagli olarak görünür sekilde farkli çikis üretebilir!
 
 
@@ -379,7 +376,6 @@ Sonuç olarak, en basit ve en etkili resim optimizasyon tekniklerinden biri, var
 
 <img src="images/resized-image.png" class="center" alt="Yeniden boyutlandirilmis resim">
 
-<!-- TODO: Verify note type! -->
 Note: Chrome DevTools'ta imleci resim ögesinin üzerinde beklettiginizde, resim varliginin 'dogal' ve 'ekran' boyutlari görünür. Yukaridaki örnekte 300x260 piksellik resim indirilir, ancak görüntülenirken istemcide ölçegi küçültülür (245x212).
 
 Yalnizca resmi bizim adimiza tarayicinin yeniden ölçeklemesini saglamak adina gereksiz piksellerin gönderilmesinin getirdigi ek yük, sayfayi olusturmak için gereken toplam bayt sayisini azaltmak ve optimize etmek için büyük bir firsatin kaçmasidir. Bununla birlikte, yeniden boyutlandirma islevinin yalnizca resmin küçültüldügü piksel sayisiyla ilgili olmadigini, ayni zamanda dogal boyutunun küçültülmesiyle de ilgili oldugunu unutmayin.

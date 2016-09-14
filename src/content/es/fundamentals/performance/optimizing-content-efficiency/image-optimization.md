@@ -164,7 +164,6 @@ El navegador asigna internamente 256 valores (sombras) a cada canal, lo que se t
 
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Ten en cuenta que, independientemente del formato de imagen utilizado para transferir los datos del servidor al cliente, cada píxel utilizado durante la descodificación de la imagen por parte del navegador ocupa 4 bytes de memoria. Esto puede suponer una restricción importante en el caso de imágenes grandes y de dispositivos que no tienen demasiada memoria disponible (p. ej. los dispositivos móviles de baja gama).
 
 <table>
@@ -210,7 +209,6 @@ Una forma fácil de hacerlo es reducir la `profundidad de bits` de la imagen, de
 
 <img src="images/artifacts.png" class="center" alt="Herramientas de compresión">
 
-<!-- TODO: Verify note type! -->
 Note: De izquierda a derecha (PNG): 32 bits (16 millones de colores), 7 bits (128 colores), 5 bits (32 colores). Las imágenes complejas con transiciones de color graduales (gradientes, cielo, etc.) requieren paletas de color más grandes para evitar problemas visuales, como el pixelado del cielo que se aprecia en la imagen de 5 bits. En cambio, si la imagen solo dispone de unos cuantos colores y se utiliza una paleta mayor, estamos malgastando bits muy valiosos.
 
 A continuación, cuando hayamos optimizado los datos almacenados en píxeles individuales, podremos ir más allá y observar los píxeles adyacentes: resulta que el color de los píxeles de muchas imágenes, especialmente en las fotos, es muy similar al de los píxeles más cercanos (p. ej., el cielo, las texturas repetidas, etc.). Si aprovechamos esta información, el compresor puede aplicar `[codificación delta](http://en.wikipedia.org/wiki/Delta_encoding)` de forma que, en vez de almacenar los valores individuales de cada píxel, almacenamos la diferencia respecto de los píxeles cercanos: si los píxeles adyacentes son iguales, delta es `cero` y solo se almacena un bit. Pero por qué vamos a detenernos aquí...
@@ -248,7 +246,6 @@ Así pues, ¿cuál es la configuración `óptima` de la optimización con y sin 
 
 Un ejemplo práctico: al usar un formato con pérdida, como JPEG, el compresor acostumbra a exponer una configuración de `calidad` personalizable (p. ej., el conmutador de calidad proporcionado por la funcionalidad `Guardar para Web` de Adobe Photoshop), que acostumbra a ser un número entre 1 y 100 que controla el funcionamiento interno de la colección concreta de algoritmos con y sin pérdida. Para obtener los mejores resultados, prueba varias configuraciones de calidad para las imágenes y no dudes en reducir la calidad; los resultados visuales acostumbran a ser muy buenos y la reducción del tamaño de archivo puede ser bastante grande.
 
-<!-- TODO: Verify note type! -->
 Note: Ten en cuenta que no se pueden comparar directamente los niveles de calidad de diferentes formatos de imagen porque los algoritmos utilizados para codificar la imagen también son distintos: el resultado de un archivo JPEG con una calidad de 90 será muy diferente del de un archivo WebP con una calidad de 90. De hecho, incluso los niveles de calidad del mismo formato de imagen pueden tener resultados visiblemente diferentes en función de la implementación del compresor.
 
 
@@ -379,7 +376,6 @@ Por lo tanto, una de las técnicas de optimización de imágenes más sencilla y
 
 <img src="images/resized-image.png" class="center" alt="Imagen con cambio de tamaño">
 
-<!-- TODO: Verify note type! -->
 Note: Al pasar el cursor por encima del elemento de imagen en Chrome DevTools se muestra el tamaño `real` y el de `visualización` del recurso de imagen. En el ejemplo anterior, se descarga la imagen de 300 x 260 píxeles y, a continuación, se reduce de forma escalada (245 x 212) al mostrarse en el cliente.
 
 El coste general que resulta de enviar más píxeles de los necesarios y de hacer que sea el navegador el que escale la imagen puede suponer la pérdida de una gran oportunidad para reducir y optimizar el número de bytes total necesario para renderizar la página. Además, ten en cuenta que el cambio de tamaño no depende solamente del número de píxeles al que se reduce la imagen, sino también de su tamaño real.

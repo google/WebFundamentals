@@ -66,7 +66,6 @@ Abbiamo delineato anche una bozza dell'Information Architecture (IA) e della dis
 
 La struttura di base del sito è completa. Conosciamo le sezioni necessarie, i contenuti da visualizzare in ciascuna di esse e il punto in cui posizionarli nell'Information Architecture complessiva. Adesso possiamo iniziare a sviluppare il sito.
 
-<!-- TODO: Verify note type! -->
 Note: Styling verrà più tardi
 
 #### Creazione di titolo e modulo
@@ -90,7 +89,7 @@ Aggiungiamo aree semantiche per aiutare gli utenti a velocizzare e semplificare 
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### Creazione delle sezioni Video e Informazioni
 
@@ -114,7 +113,7 @@ Rispettando le best practice puoi integrare facilmente i video nel tuo sito:
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### Creazione della sezione Immagini
 
@@ -133,7 +132,7 @@ La sezione Immagini della pagina è una raccolta di immagini di contenuto
 
  che è possibile scalare al 100% della larghezza dello schermo, condizione ideale per i dispositivi con viewport ristretto ma non per quelli con viewport ampio (come i PC desktop). Questo problema è l'oggetto della sezione sul responsive design.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 Alcune persone non riescono a visualizzare le immagini e utilizzano quindi una tecnologia di assistenza come gli screen reader, che analizzano i dati sulla pagina per restituirli in forma verbale. Verifica che tutte le immagini di contenuto siano dotate di un tag descrittivo `alt`, utile allo screen reader per la lettura dei dati all'utente.
 
@@ -225,7 +224,7 @@ Il viewport consente al browser di scalare la pagina per adattarla allo schermo.
 
 Il viewport risiede nella sezione `head` del documento e deve essere dichiarato una sola volta.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### Applicare uno stile semplice 
 
@@ -294,7 +293,6 @@ La qualità visiva del progetto inizia a diminuire usando circa 600 pixel di lar
 
 Uno schermo più grande offre maggiore spazio e flessibilità di visualizzazione dei contenuti.
 
-<!-- TODO: Verify note type! -->
 Note: Non spostare tutti gli elementi contemporaneamente, ma apporta piccole modifiche.
 
 Nel contesto della nostra pagina di prodotto occorre:
@@ -305,7 +303,7 @@ Nel contesto della nostra pagina di prodotto occorre:
 *  Fare in modo che il video si sposti intorno ai contenuti.
 *  Ridurre le dimensioni delle immagini e visualizzarle in una griglia dall'aspetto più gradevole.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### Limitare la larghezza massima del design
 
@@ -407,7 +405,7 @@ Segue una soluzione ancora non particolarmente diffusa.
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### Tabelle
 

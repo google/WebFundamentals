@@ -164,7 +164,6 @@ Internamente, o navegador aloca 256 valores (tons) para cada canal, que se conve
 
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Além disso, independentemente do formato de imagem usado para transferir os dados do servidor para o cliente, quando a imagem é decodificada pelo navegador, cada pixel ocupa sempre 4 bytes de memória. Isso pode ser uma limitação importante para imagens grandes e dispositivos que não têm muita memória disponível, como dispositivos móveis mais antigos.
 
 <table>
@@ -210,7 +209,6 @@ Uma estratégia simples é reduzir a `profundidade de bits` da imagem de 8 bits 
 
 <img src="images/artifacts.png" class="center" alt="Artefatos de compactação">
 
-<!-- TODO: Verify note type! -->
 Note: Da esquerda para a direita (PNG): 32 bits (16 milhões de cores), 7 bits (128 cores), 5 bits (32 cores). Cenas complexas com transições graduais de cor (gradientes, céu etc.) exigem paletas com mais cores para evitar artefatos visuais como um céu pixelado em um recurso de 5 bits. Por outro lado, se a imagem usa poucas cores, então uma paleta com muitas cores seria um desperdício de bits.
 
 Em seguida, depois de otimizar os dados armazenados em pixels individuais, podemos começar a tratar os pixels adjacentes. Muitas imagens, principalmente as fotos, têm vários pixels adjacentes com cores semelhantes (por exemplo, o céu, texturas repetidas etc.). Com essa informação ao nosso favor, o compactador pode aplicar a `[codificação delta] (http://en.wikipedia.org/wiki/Delta_encoding)`, que em vez armazenar os valores individuais de cada pixel, armazena a diferença entre pixels adjacentes. Se os pixels adjacentes forem iguais, o delta é igual a `zero` e só é preciso armazenar um bit. Não pararemos por aqui...
@@ -248,7 +246,6 @@ Qual é a configuração ideal para a otimização com perdas e sem perdas? A re
 
 Por exemplo, ao usar um formato com perdas, como o JPEG, o compactador geralmente exibe uma opção de configuração personalizável de `qualidade` (como o seletor de qualidade oferecido pela função `Salvar para a Web` do Adobe Photoshop) que normalmente é um número entre 1 e 100 que controla como os algoritmos com perdas e sem perdas irão se comportar internamente. Para conseguir os melhores resultados, faça testes em suas imagens com várias configurações diferentes e não hesite em reduzir a qualidade, pois geralmente o resultado visual é muito bom e a redução no tamanho do arquivo pode ser enorme.
 
-<!-- TODO: Verify note type! -->
 Note: Os níveis de qualidade de formatos de imagens diferentes não são diretamente comparáveis devido às variações entre os algoritmos usados para codificar a imagem: um JPEG com 90% de qualidade será bem diferente de um WebP com 90% de qualidade. Na verdade, até os níveis de qualidade do mesmo formato de imagem podem gerar resultados visivelmente diferentes dependendo da implementação do compactador.
 
 
@@ -379,7 +376,6 @@ Consequentemente, uma das técnicas mais fáceis e eficientes é garantir que n�
 
 <img src="images/resized-image.png" class="center" alt="Imagem redimensionada">
 
-<!-- TODO: Verify note type! -->
 Note: Passar o cursor sobre o elemento de imagem no Chrome DevTools revela o tamanho "natural" e o tamanho de "exibição" do recurso de imagem. No exemplo acima, a imagem de 300 x 260 pixels é transferida, mas depois é redimensionada (245 x 212) no cliente quando é exibida.
 
 A sobrecarga do envio de pixels desnecessários com o propósito de que o navegador faça o redimensionamento por nós, representa uma oportunidade desperdiçada de reduzir e otimizar o número total de bytes necessários para exibir a página. Além disso, o redimensionamento não é somente uma função do número de pixels subtraídos da imagem, mas também dos pixels subtraídos do tamanho natural.

@@ -67,7 +67,6 @@ description: 無論是小螢幕手機或是大螢幕電視，使用者都能透�
 
 網站的基本架構已完成。 我們知道所需的區段、其中要顯示的內容，以及內容在整體資訊架構中的位置。 現在就讓我們著手打造網站吧！
 
-<!-- TODO: Verify note type! -->
 Note: 樣式以後還會來
 
 #### 建立標題和表單
@@ -91,7 +90,7 @@ Note: 樣式以後還會來
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### 建立影片和資訊區段
 
@@ -115,7 +114,7 @@ Note: 樣式以後還會來
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### 建立圖片區段
 
@@ -134,7 +133,7 @@ Note: 樣式以後還會來
 
 這些圖片都已設為可放大成螢幕寬度。 這項設定非常適合檢視區較窄的裝置，但在檢視區較寬的裝置 (例如桌上型電腦)上效果較差。在探討回應式設計時，我們將會處理這項問題。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 許多視障使用者無法看到圖片，通常需要借助螢幕閱讀器等輔助技術剖析網頁資料，才可藉由語音解讀網頁。請確認所有的內容圖片都具有包含描述字詞的 `alt` 標記，方便螢幕閱讀器為使用者朗讀。
 
@@ -226,7 +225,7 @@ Note: 樣式以後還會來
 
 檢視區位於文件的開頭，而且只需要宣告一次。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### 運用簡單的樣式
 
@@ -295,7 +294,6 @@ Note: 樣式以後還會來
 
 較大的螢幕擁有更充裕的空間，因此顯示網頁時也會有較大的彈性。
 
-<!-- TODO: Verify note type! -->
 Note: 您不需要一次移動所有元素，可視情況進行微幅調整。
 
 就我們的產品網頁來說，看來我們需要：
@@ -306,7 +304,7 @@ Note: 您不需要一次移動所有元素，可視情況進行微幅調整。
 *  讓影片隨內容浮動。
 *  縮減圖片大小，以便顯示在更美觀的範圍內。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### 限制設計的寬度上限
 
@@ -409,7 +407,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### 表格
 

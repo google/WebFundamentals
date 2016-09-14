@@ -24,7 +24,6 @@ L'utilisation d'appareils mobiles pour naviguer sur le Web connaît un développ
 
 
 ## Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -91,7 +90,6 @@ La valeur Meta `width=device-width` de fenêtre d'affichage indique à la page d
 
 Certains navigateurs conservent une largeur de page constante lors de la rotation du contenu en mode paysage et préfèrent le zoom à l'ajustement de la mise en page pour occuper tout l'écran. L'ajout de l'attribut `initial-scale=1` indique au navigateur d'établir une relation de type 1:1 entre les pixels CSS et les pixels indépendants de l'appareil, quelle que soit l'orientation de ce dernier, et permet à la page de tirer parti de toute la largeur de l'écran en mode paysage.
 
-<!-- TODO: Verify note type! -->
 Note: Séparez les attributs à l'aide d'une virgule, afin de permettre une analyse correcte par les navigateurs plus anciens.
 
 ### Garantir l'accessibilité de la fenêtre d'affichage

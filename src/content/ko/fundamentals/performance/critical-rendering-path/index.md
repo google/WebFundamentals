@@ -27,7 +27,6 @@ Translated By:
   </div>
   
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">
@@ -92,7 +91,6 @@ Translated By:
 
 <img src="images/dom-timeline.png" class="center" alt="Tracing DOM construction in DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: 이 글은 독자가 크롬 개발자 도구를 이용해서 네트워크 워터폴 차트를 수집하거나 타임라인을 기록하는 등의 기본적인 사용법을 알고 있다고 가정하고 있습니다. 빠르게 다시 한 번 개발자 도구 사용법을 보고 싶다면 <a href='https://developer.chrome.com/devtools'>크롬 개발자 도구 문서</a>를 확인하세요. 개발자 도구를 처음 다뤄본다면 Codeschool이 제공하는 <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> 코스를 학습할 것을 추천합니다.
 
 브라우저가 페이지를 불러오는 동안에 크롬 개발자 도구를 열어서 타임라인을 기록해보면, 실제 이 작업 수행시간을 확인할 수 있습니다. 위에 있는 예제 HTML 마크업을 HTML 바이트에서 DOM 트리로 변환하는 데는 5ms가 걸렸습니다. 물론 페이지가 더 컸다면 수행 시간은 더 길어졌을 겁니다. 브라우저가 처리해야하는 HTML의 양이 많을 때 애니메이션은 쉽게 병목을 일으킵니다. 뒤에 나올 섹션에서 애니메이션을 부드럽게 만드는 방법을 살펴봅니다.
@@ -164,12 +162,11 @@ Translated By:
 1. 위에서 찾은 노드에 적합한 CSSOM 규칙을 찾아서 적용합니다.
 1. 계산한 스타일(computed style) 정보와 콘텐츠를 가지고 있는 노드를 렌더 트리에 넣습니다.
 
-<!-- TODO: Verify note type! -->
 Note: 여기서 잠깐, 'visibility: hidden'과 'display: none'이 다르다는 것에 주의하세요. 전자(visibility: hidden)는 엘리먼트를 화면에서 감추기만 할 뿐 레이아웃에서 제거하지는 않습니다(비어있는 공간으로 존재). 반면에 후자(display:none)는 엘리먼트를 화면에서 감추고, 레이아웃에서도 분리함으로써 엘리먼트를 렌더 트리에서 완전히 제거합니다.
 
 최종 결과물인 렌더트리는 화면에 보이는 모든 콘텐츠의 내용과 스타일 정보를 가지고 있습니다. **렌더 트리를 만들었으니 "레이아웃" 단계로 넘어갈 수 있습니다.**
 
-지금까지 화면에 출력해야 할 노드를 결정하고, 해당 노드의 스타일 값을 계산했습니다. 하지만 단말기의 [뷰포트(viewport)]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) 안에서 노드가 가져야 할 정확한 위치와 크기는 계산하지 않았습니다. 이게 레이아웃 단계에서 할 일입니다. 레이아웃은 리플로우(reflow)라고 알려져 있기도 합니다.
+지금까지 화면에 출력해야 할 노드를 결정하고, 해당 노드의 스타일 값을 계산했습니다. 하지만 단말기의 [뷰포트(viewport)](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) 안에서 노드가 가져야 할 정확한 위치와 크기는 계산하지 않았습니다. 이게 레이아웃 단계에서 할 일입니다. 레이아웃은 리플로우(reflow)라고 알려져 있기도 합니다.
 
 객체의 정확한 크기와 위치를 파악하기 위해서 브라우저는 렌더 트리의 루트에서부 각 노드를 순회하면서 페이지에 있는 각 객체의 형상을 계산합니다. 간단한 실습 예제를 살펴봅시다.
 

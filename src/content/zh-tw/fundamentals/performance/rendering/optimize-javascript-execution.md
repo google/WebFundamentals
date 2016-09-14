@@ -22,7 +22,6 @@ JavaScript 往往是視覺變更的觸發器。 有時是直接透過樣式操�
 
 JavaScript 效能分析可能稱得上是一門藝術，因為您撰寫的 JavaScript 程式碼一點也不像實際執行的程式碼。 最新的瀏覽器使用 JIT 編譯器和各式各樣的最佳化和技巧，以試圖給您儘可能最快的執行速度，這大幅變更了程式碼的動力。
 
-<!-- TODO: Verify note type! -->
 Note: 如果您真的想要看到作用中的 JIT，應該要看看<a href="http://mrale.ph/irhydra/2/">IRHydra<sup>2</sup> by Vyacheslav Egorov</a>。 這會顯示當 Chrome 的 JavaScript 引擎 V8 正在將之最佳化時的 JavaScript 程式碼之中繼狀態。
 
 不過話雖如此，您還是可以做一些努力，以協助您的應用程式成功執行 JavaScript。

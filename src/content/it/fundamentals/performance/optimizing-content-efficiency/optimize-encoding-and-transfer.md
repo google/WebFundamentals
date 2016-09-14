@@ -90,7 +90,6 @@ Una volta applicate tali procedure, la nostra pagina passerà da 406 a 150 carat
 
 Facendo un passo indietro, l'esempio precedente illustra un punto importante: anche un compressore con finalità generiche, diciamo ideato per comprimere del testo qualsiasi, potrebbe svolgere un ottimo lavoro per comprimere la pagina di esempio, ma non saprebbe certo come eliminare i commenti, raggruppare le regole CSS o effettuare decine di altre procedure di ottimizzazione specifiche. Ecco perché pre-elaborazione / minimizzazione / ottimizzazione basata sul contesto possono rivelarsi strumenti tanto potenti.
 
-<!-- TODO: Verify note type! -->
 Note: Nel caso specifico, la development version estratta della libreria JQuery ha adesso una dimensione di ~300 KB. La stessa libreria minimizzata (commenti rimossi, ecc...) è circa 3x più piccola: ~100 KB
 
 Allo stesso modo, le tecniche precedenti possono essere estese a risorse non basate sul solo testo. Immagini, video e altri tipi di contenuti contengono tutti i propri metadati e diversi payload. Ad esempio, ogni volta che scatti una foto con la tua fotocamera, la foto contiene di norma numerose altre informazioni: le impostazioni della fotocamera, il luogo, ecc... A seconda della tua applicazione, tali dati possono essere fondamentali (ad es. il sito di condivisione della foto) o perfettamente inutili; dovrai quindi valutare se non valga la pena rimuoverli. In pratica, tali metadati possono aggiungere decine di kylobite per ogni immagine!
@@ -185,7 +184,6 @@ Qual è la configurazione migliore per il tuo server? Il progetto HTML5 Boilerpl
 
 Un modo semplice e rapido di vedere GZIP in azione consiste nell'aprire Chrome DevTools e controllare la colonna 'Dimensioni/Contenuto' nella scheda Rete: 'Dimensioni' indica le dimensioni di trasferimento della risorsa, mentre 'Content' indica le dimensioni espanse della risorsa. Per la risorsa HTML dell'esempio precedente, GZIP ha risparmiato 24,8 KB durante il trasferimento!
 
-<!-- TODO: Verify note type! -->
 Note: Che tu ci creda o meno, in alcuni casi GZIP può aumentare le dimensioni di una risorsa. Di norma, ciò accade quando la risorsa è molto piccola e l'overhead del dizionario GZIP è maggiore del risparmio consentito dalla compressione, o se la risorsa è già compressa al massimo. Alcuni server consentono di specificare una 'dimensione minima' per evitare tale problema.
 
 Infine, ti invitiamo a fare attenzione: mentre la maggior parte dei server comprime automaticamente le risorse al posto tuo prima di presentarle all'utente, alcuni CDN richiedono particolare attenzione e un'azione manuale per garantire che GZIP mantengale impostazioni predefinite. Verifica che le risorse presenti sul tuo sito vengano effettivamente [compresse](http://www.whatsmyip.org/http-compression-test/)!

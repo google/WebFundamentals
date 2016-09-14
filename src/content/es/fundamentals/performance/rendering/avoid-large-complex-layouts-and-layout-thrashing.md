@@ -53,7 +53,6 @@ Si no es posible evitar el diseño, la clave es, nuevamente, utilizar DevTools d
 
 Si analizamos el marco del ejemplo anterior, vemos que más de 20 ms se destinan al diseño interior, un valor que es demasiado elevado si necesitamos 16 ms para que en una animación aparezca un marco en la pantalla. También podrá ver que DevTools le indicará el tamaño del árbol (1.618 elementos en este caso) y cuántos nodos necesitaban diseño.
 
-<!-- TODO: Verify note type! -->
 Note: ¿Desea obtener una lista definitiva de las propiedades de la CSS que desencadenan el diseño, la pintura o la composición? Consulte <a href='http://csstriggers.com/''>Desencadenadores de CSS</a>.
 
 ## Uso de Flexbox sobre los modelos de diseño anteriores

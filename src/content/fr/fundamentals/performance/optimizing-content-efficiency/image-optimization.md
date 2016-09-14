@@ -164,7 +164,6 @@ En interne, le navigateur attribue 256 valeurs (nuances) à chaque canal, ce qui
 
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Notez que quel que soit le format d'image utilisé pour transférer les données du serveur au client, lorsque l'image est décodée par le navigateur, chaque pixel occupe toujours 4 octets de mémoire. Cela peut représenter une contrainte importante pour les grandes images et les appareils qui ne disposent pas de beaucoup de mémoire, par exemple les appareils mobiles bas de gamme.
 
 <table>
@@ -210,7 +209,6 @@ Une simple stratégie consiste à réduire la 'profondeur de bit' de l'image de 
 
 <img src="images/artifacts.png" class="center" alt="Artéfacts de compression">
 
-<!-- TODO: Verify note type! -->
 Note: De gauche à droite (PNG) : 32 bits (16 000 couleurs), 7 bits (128 couleurs), 5 bits (32 couleurs). Les scènes complexes avec des transitions de couleur graduelles (dégradés, ciel, etc.) nécessitent des palettes de couleurs plus larges pour éviter les artéfacts visuels tels que le ciel pixellisé dans l'élément à 5 bits. D'un autre côté, si l'image n'utilise que quelques couleurs, une large palette est un gaspillage de bits précieux !
 
 Ensuite, maintenant que nous avons optimisé les données stockées dans les pixels individuels, nous pourrions être encore plus malins et nous intéresser aux pixels à proximité : on s'aperçoit alors que dans de nombreuses images, en particulier les photos, beaucoup de pixels proches les uns des autres ont des couleurs similaires, par exemple le ciel, les textures répétitives, etc. Utilisant cette information à notre avantage, le logiciel de compression peut appliquer un '[codage différentiel](http://fr.wikipedia.org/wiki/Codage_différentiel)', avec lequel au lieu de stocker les valeurs individuelles de chaque pixel, nous pouvons stocker la différence entre les pixels proches les uns des autres : si les pixels adjacents sont identiques, la différence est de 'zéro' et il n'est alors nécessaire de stocker qu'un seul bit ! Mais ne nous arrêtons pas en si bon chemin...
@@ -248,7 +246,6 @@ Alors, quelle est la configuration 'optimale' de l'optimisation avec et sans per
 
 Prenons un exemple concret. Lorsqu'on utilise un format avec perte comme JPEG, le logiciel de compression expose généralement un paramètre de 'qualité' (par exemple la barre de défilement fournie par la fonctionnalité 'Enregistrer pour le Web' dans Adobe Photoshop), le plus souvent un nombre entre 1 et 100 qui contrôle le fonctionnement interne d'un ensemble spécifique d'algorithmes avec et sans perte. Pour obtenir les meilleurs résultats, testez plusieurs paramètres de qualité pour vos images, et n'ayez pas peur d'en réduire la qualité : les résultats visuels sont souvent très bons et les économies en termes de taille de fichier peuvent être assez importantes.
 
-<!-- TODO: Verify note type! -->
 Note: Notez qu'il est impossible de comparer directement les niveaux de qualité des différents formats d'image, en raison des différences dans les algorithmes utilisés pour encoder l'image : la qualité 90 JPEG produit un résultat très différent de la qualité 90 WebP. En fait, même des niveaux de qualité pour le même format d'image peuvent produire des résultats visiblement selon la mise en œuvre du logiciel de compression !
 
 
@@ -379,7 +376,6 @@ Par conséquent, l'une des techniques d'optimisation d'image les plus simples et
 
 <img src="images/resized-image.png" class="center" alt="Images redimensionnées">
 
-<!-- TODO: Verify note type! -->
 Note: Le fait de passer la souris sur l'élément de l'image dans Chrome DevTools révèle les tailles 'naturelle' et 'd'affichage' de celui-ci. Dans l'exemple ci-dessus, l'image de 300 x 260 pixels est téléchargée, mais son échelle est ensuite réduite (245 x 212) sur le client lorsqu'elle est affichée.
 
 Le temps système créé pour l'expédition de pixels inutiles, simplement pour que le navigateur redimensionne l'image pour vous, est une occasion manquée de réduire et d'optimiser le nombre total d'octets requis pour afficher la page. En outre, notez que le redimensionnement ne dépend pas que du nombre de pixels retirés de l'image, mais également de sa taille naturelle.

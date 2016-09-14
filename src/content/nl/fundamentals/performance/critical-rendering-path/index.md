@@ -23,7 +23,6 @@ Door het kritieke weergavepad te optimaliseren kunnen we de tijd om onze pagina`
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

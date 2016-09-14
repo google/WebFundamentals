@@ -70,11 +70,11 @@ CSS 「媒体类型」和「媒体查询」允许我们解决这类情况：
     <link href="other.css" rel="stylesheet" media="(min-width: 40em)">
     
 
-[媒体查询]({{site.fundamentals}}/layouts/rwd-fundamentals/use-media-queries.html)由媒体类型以及零个或多个检查特定媒体特征的表达式组成。例如，我们的第一个样式表声明没有提供任何媒体类型或媒体查询，因此，将适用所有情况 - 换句话说，始终会阻塞渲染。另一方面，第二个样式表将只适用内容打印 - 也许您希望重排布局、更改字体，等等 - 因此，在页面首次加载时，这个样式表不需要阻塞渲染。最后一个样式表声明提供了媒体查询，由浏览器判定：如果条件符合，则在该样式表下载并处理完以前，浏览器阻塞渲染。
+[媒体查询](/web/fundamentals/design-and-ui/responsive/#use-media-queries)由媒体类型以及零个或多个检查特定媒体特征的表达式组成。例如，我们的第一个样式表声明没有提供任何媒体类型或媒体查询，因此，将适用所有情况 - 换句话说，始终会阻塞渲染。另一方面，第二个样式表将只适用内容打印 - 也许您希望重排布局、更改字体，等等 - 因此，在页面首次加载时，这个样式表不需要阻塞渲染。最后一个样式表声明提供了媒体查询，由浏览器判定：如果条件符合，则在该样式表下载并处理完以前，浏览器阻塞渲染。
 
 通过使用媒体查询，我们的外观可以根据不同使用场景定制，比如显示或打印，也可以根据不同情况比如屏幕方向改变、尺寸调整事件等定制。**在声明样式表资源时，一定要多注意媒体类型和媒体查询，因为它们对关键渲染路径有极大的性能影响！**
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media-queries %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media-queries #}
 
 下面就让我们看一些简单例子：
 

@@ -29,7 +29,6 @@ Outras vezes, talvez seja necessário alterar a imagem de forma mais drástica: 
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">

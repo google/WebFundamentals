@@ -97,7 +97,6 @@ Pour ajouter un fragment média, il vous suffit d'ajouter #t=[start_time][,end_t
 
 Vous pouvez également utiliser l'API Media Fragments pour fournir plusieurs vues de la même vidéo, comme des marqueurs temporels sur un DVD, sans avoir besoin d'encoder ni de traiter plusieurs fichiers.
 
-<!-- TODO: Verify note type! -->
 Note: - 'L''API Media Fragments est compatible avec la plupart des plates-formes, à l''exception d''iOS.'
 - 'Assurez-vous que les demandes de type ''Range'' sont compatibles avec votre serveur. Elles sont activées par défaut sur la plupart des serveurs. Cependant, il arrive qu''elles soient désactivées sur certains services d''hébergement.'
 
@@ -260,11 +259,10 @@ Vous pouvez contrôler les dimensions de la vidéo dans JavaScript ou CSS. Les b
 
 Utilisez les [requêtes média CSS](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) pour spécifier la taille d'éléments en fonction des dimensions de la fenêtre d'affichage. Dans ce cas, nous vous conseillons d'utiliser `max-width: 100%`.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 Pour le contenu multimédia intégré dans des cadres iFrame, comme les vidéos YouTube, tentez d'avoir une approche de type adaptatif. Consultez celle qui est [proposée par John Surdakowski](//avexdesigns.com/responsive-youtube-embed/).
 
-<!-- TODO: Verify note type! -->
 Note: Ne forcez pas la taille d'un élément générant un format d'image différent de celui de la vidéo d'origine. Les vidéos écrasées ou étirées donnent une mauvaise image du site.
 
 **CSS:**
@@ -380,7 +378,6 @@ L'accessibilité n'est pas une fonctionnalité. Les utilisateurs malentendants o
 
 Pour améliorer l'accessibilité des médias sur mobile, ajoutez des sous-titres ou des descriptions à l'aide de l'élément de suivi.
 
-<!-- TODO: Verify note type! -->
 Note: L'élément de suivi est compatible avec Chrome pour Android, Safari pour iOS, ainsi que tous les navigateurs actuels pour ordinateur de bureau, sauf Firefox (voir <a href='http://caniuse.com/track' title='État de compatibilité d&apos;un élément de suivi'>caniuse.com/track</a>). Plusieurs polyfills sont également disponibles. Nous vous recommandons d'utiliser l'<a href='//www.delphiki.com/html5/playr/' title='élément de suivi polyfill Playr'>Playr</a> ou le<a href='//captionatorjs.com/' title='suivi Captionator'>Captionator</a>.
 
 Lorsque vous utilisez l'élément de suivi, les sous-titres ont l'apparence suivante :

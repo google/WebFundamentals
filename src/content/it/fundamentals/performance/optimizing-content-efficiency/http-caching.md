@@ -18,7 +18,6 @@ Recuperare qualcosa dalla rete è un'azione lenta e costosa: risposte consistent
 
 Grande novità: ogni browser attuale viene fornito con una cache HTTP integrata! Tutto ciò che dobbiamo fare è assicurarci che ogni risposta del server fornisca l'intestazione HTTP corretta per comunicare al browser quando e per quanto tempo la risposta può essere messa in cache.
 
-<!-- TODO: Verify note type! -->
 Note: Se utilizzi una Webview per recuperare e visualizzare contenuti web nella tua applicazione, è possibile che tu debba fornire ulteriori flag di configurazione per garantire che la cache HTTP sia attiva, le dimensioni impostate siano idonee per l'utilizzo e la cache sia persistente. Consulta la documentazione relativa alla piattaforma e salva le impostazioni!
 
 <img src="images/http-request.png" class="center" alt="Richiesta HTTP">
@@ -43,7 +42,6 @@ Nell'esempio precedente, il client fornisce automaticamente il token ETag nell'i
 
 In qualità di web developer, in che modo puoi trarre vantaggio da una riconvalida efficace? Il browser esegue tutto il lavoro per conto nostro: individua automaticamente ogni token di convalida già specificato in precedenza, lo aggiunge a una richiesta in corso e aggiorna la timestamp della cache in base alla risposta ricevuta dal server. **L'unica cosa che ci resta da fare è assicurarci che il server stia effettivamente fornendo i token ETag necessari: per le flag di configurazione necessarie, consulta la documentazione del tuo server.**
 
-<!-- TODO: Verify note type! -->
 Note: Suggerimento: il progetto HTML5 Boilerplate contiene <a href='https://github.com/h5bp/server-configs'>dei file di configurazione di esempio</a> per tutti i principali server, con commenti dettagliati per ogni flag e impostazione di configurazione: cerca il server desiderato nell'elenco, individua le impostazioni idonee e copiale/conferma che il server è configurato come raccomandato.
 
 
@@ -56,7 +54,6 @@ Note: Suggerimento: il progetto HTML5 Boilerplate contiene <a href='https://gith
 
 La richiesta migliore è quella che non deve comunicare con il server: una copia locale della risposta ci consente di eliminare qualsiasi latenza di rete ed evitare eventuali sovraccarichi nel trasferimento dei dati. A tal fine, la specifica HTTP consente al server di inviare [diverse direttive Cache-Control] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) che controllano come e per quanto tempo ogni singola risposta può essere messa in cache dal browser e altre cache intermedie.
 
-<!-- TODO: Verify note type! -->
 Note: L'intestazione Cache-Control è stata definita all'interno delle specifiche HTTP/1.1 e sostituisce ogni intestazione precedente (ad es. Expires) utilizzate per definire le policy di caching delle risposte. Cache-Control è supportato da tutti gli attuali browser; non abbiamo quindi bisogno di altro.
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="Esempio di Cache-Control HTTP">

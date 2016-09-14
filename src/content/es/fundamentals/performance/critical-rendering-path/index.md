@@ -23,7 +23,6 @@ Al optimizar la ruta de renderización importante, podemos mejorar significativa
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

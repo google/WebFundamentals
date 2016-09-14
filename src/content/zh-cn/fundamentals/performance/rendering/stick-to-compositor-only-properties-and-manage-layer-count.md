@@ -37,7 +37,6 @@ Translated By:
 
 上图底部的那句提示语的意思是，应用了transforms/opacity属性的元素必须_独占一个渲染层_。为了对这个元素创建一个自有的渲染层，你必须提升该元素。接下来我们来看看如何把一个元素提升到单独的渲染层中。
 
-<!-- TODO: Verify note type! -->
 Note: 如果你担心无法仅靠那些transform/opacity属性来实现你需要的动画效果，也许这篇文章能帮帮你：<a href="http://aerotwist.com/blog/flip-your-animations">FLIP principle</a>。
 
 ## 提升动画效果中的元素

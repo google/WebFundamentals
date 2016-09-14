@@ -29,7 +29,6 @@ Soms moeten afbeeldingen misschien wat drastischer worden gewijzigd: de proporti
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">

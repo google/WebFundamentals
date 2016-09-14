@@ -66,7 +66,6 @@ Une conversion peut être effectuée facilement dans les sections rudimentaires 
 
 La structure de base de ce site est terminée. Nous connaissons les sections dont nous avons besoin, le contenu à y afficher, ainsi que la position du contenu dans l'architecture d'information globale. Nous pouvons donc passer maintenant à la création du site.
 
-<!-- TODO: Verify note type! -->
 Note: Style viendra plus tard 
 
 #### Créer le titre et le formulaire
@@ -90,7 +89,7 @@ Des types sémantiques seront ajoutés pour permettre aux utilisateurs de saisir
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### Créer la section 'Vidéo et informations'
 
@@ -114,7 +113,7 @@ L'application des bonnes pratiques vous permet d'intégrer aisément du contenu 
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### Créer la section 'Images'
 
@@ -133,7 +132,7 @@ Les images de contenu sont essentielles pour transmettre le sens de la page. On 
 
 Les images sont définies sur une échelle de 100 % de la largeur de l'écran. Cela fonctionne très bien sur les appareils présentant une fenêtre d'affichage étroite, mais moins bien sur une fenêtre d'affichage large (un ordinateur de bureau, par exemple). Nous traiterons ce point dans la section relative à la conception de sites Web adaptatifs.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 De nombreux utilisateurs n'ont pas la possibilité d'afficher des images et ont souvent recours à une technologie assistive, telle qu'un lecteur d'écran qui analyse les données de la page et les leur transmet verbalement. Vous devez vous assurer que toutes vos images de contenu comportent une balise `alt` que le lecteur d'écran peut lire à l'utilisateur.
 
@@ -225,7 +224,7 @@ Cette fenêtre d'affichage indique au navigateur que la page doit être adaptée
 
 La fenêtre d'affichage réside dans l'en-tête du document et ne doit être déclarée qu'une seule fois.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### Appliquer un style simple 
 
@@ -294,7 +293,6 @@ La conception commence à se dégrader visuellement à partir d'une largeur appr
 
 Il y a davantage d'espace sur un grand écran, ce qui se traduit par une souplesse accrue au niveau de l'affichage du contenu.
 
-<!-- TODO: Verify note type! -->
 Note: Il n'est pas nécessaire de déplacer tous les éléments en même temps. Vous pouvez, au besoin, effectuer des ajustements mineurs.
 
 S'agissant de notre page de produit, il convient de tenir compte de certaines exigences :
@@ -305,7 +303,7 @@ S'agissant de notre page de produit, il convient de tenir compte de certaines ex
 * Faire en sorte que la vidéo flotte dans le contenu.
 * Réduire la taille des images et les faire apparaître dans une plus belle grille.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### Limiter la largeur maximale de la conception
 
@@ -407,7 +405,7 @@ Pour les navigateurs compatibles, vous pouvez afficher une image en haute densit
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### Tableaux
 

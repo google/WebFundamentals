@@ -18,7 +18,6 @@ Pobieranie przez sieć jest powolne i kosztowne: długie odpowiedzi na zapytania
 
 Dobra wiadomość &ndash; w każdej przeglądarce zaimplementowano pamięć podręczną HTTP. Tak więc wystarczy, że upewnimy się, że w każdej odpowiedzi serwera zamieszczane są poprawne dyrektywy nagłówka HTTP, a przeglądarka będzie wiedzieć, kiedy i jak długo buforować odpowiedź.
 
-<!-- TODO: Verify note type! -->
 Note: Jeśli do pobierania i wyświetlania treści w swojej aplikacji używasz widoku Webview, może być konieczne określenie dodatkowych ustawień konfiguracji zapewniających, że buforowanie HTTP jest włączone, jego rozmiar jest uzasadniony w danym zastosowaniu, a pamięć podręczna zostanie utrwalona. Zapoznaj się z dokumentacją platformy i upewnij się, że ustawienia są poprawne.
 
 <img src="images/http-request.png" class="center" alt="Żądanie HTTP">
@@ -43,7 +42,6 @@ W powyższym przykładzie klient automatycznie zapewnia token ETag w nagłówku 
 
 W jaki sposób jako programista witryn internetowych możesz efektywnie wykorzystać ponowną walidację? Przeglądarka wykonuje całą pracę za nas: automatycznie wykrywa, czy poprzednio określono token walidacji i dołącza go do żądania wychodzącego, a następnie w oparciu o odpowiedź z serwera aktualizuje sygnatury czasowe pamięci podręcznej. **Musimy jedynie zapewnić, że serwer rzeczywiście wysyła wymagane tokeny ETag: w dokumentacji sprawdź, jakie ustawienia konfiguracji są wymagane.**
 
-<!-- TODO: Verify note type! -->
 Note: Wskazówka: projekt HTML5 Boilerplate zawiera <a href='https://github.com/h5bp/server-configs'>przykładowe pliki konfiguracyjne</a> dla wszystkich najpopularniejszych serwerów. Zawierają one szczegółowe komentarze odnośnie do każdego znacznika i ustawienia konfiguracji: znajdź stosowny serwer na liście, wyszukaj odpowiednie ustawienia i je skopiuj albo upewnij się, że serwer jest skonfigurowany z użyciem zalecanych ustawień.
 
 
@@ -56,7 +54,6 @@ Note: Wskazówka: projekt HTML5 Boilerplate zawiera <a href='https://github.com/
 
 Najlepszym żądaniem jest żądanie, które nie wymaga komunikacji z serwerem: lokalna kopia odpowiedzi pozwala wyeliminować czas oczekiwania na odpowiedź przez sieć i uniknąć opłat za transfer danych. Specyfikacja HTTP pozwala serwerowi zwrócić [kilka różnych dyrektyw Cache-Control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) umożliwiających kontrolę sposobu i długości buforowania poszczególnych odpowiedzi przez przeglądarkę i inne bufory pośredniej pamięci podręcznej.
 
-<!-- TODO: Verify note type! -->
 Note: Definicję nagłówka Cache-Control określono w specyfikacji HTTP/1.1. Zastępuje on wcześniejsze nagłówki (np. Expires) służące do określania polityki buforowania odpowiedzi. Wszystkie nowoczesne przeglądarki obsługują nagłówek Cache-Control, dlatego stanowi on wszystko, czego będziemy potrzebować.
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="Przykład dyrektywy Cache-Control protokołu HTTP">

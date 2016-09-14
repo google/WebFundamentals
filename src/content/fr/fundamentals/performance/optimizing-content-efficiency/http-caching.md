@@ -18,7 +18,6 @@ Récupérer quelque chose sur le réseau coûte du temps et de l'argent : les r�
 
 Excellente nouvelle : chaque navigateur est fourni avec une mise en œuvre d'un cache HTTP ! Il nous suffit donc de nous assurer que la réponse de chaque serveur fournit des directives d'en-tête HTTP correctes pour indiquer au navigateur quand et pendant combien de temps il peut mettre la réponse en cache.
 
-<!-- TODO: Verify note type! -->
 Note: Si vous utilisez un affichage Web pour récupérer et afficher du contenu en ligne dans votre application, vous aurez peut-être besoin de fournir des indicateurs de configuration supplémentaires pour vous assurer que le cache HTTP est activé, que sa taille est adaptée à votre situation et que le cache est conservé. Consultez la documentation de la plate-forme et confirmez vos paramètres !
 
 <img src="images/http-request.png" class="center" alt="Requête HTTP">
@@ -43,7 +42,6 @@ Dans l'exemple ci-dessus, le client fournit automatiquement le jeton ETag dans l
 
 En tant que développeur Web, comment tirez-vous profit de cette nouvelle validation efficace ? Le navigateur fait tout le travail pour vous : il détecte automatiquement si un jeton de validation a déjà été spécifié, l'ajoute à une requête envoyée, et met à jour les horodatages du cache si nécessaire en fonction de la réponse du serveur. **Il ne nous reste plus qu'à nous assurer que le serveur fournit bien les jetons ETag nécessaires : consultez la documentation de votre serveur pour connaître les indicateurs de configuration nécessaires.**
 
-<!-- TODO: Verify note type! -->
 Note: Conseil : le projet HTML5 Boilerplate contient des <a href='https://github.com/h5bp/server-configs'>exemples de fichiers de configuration</a> pour tous les serveurs les plus populaires, ainsi que des commentaires détaillés pour chaque indicateur et paramètre de configuration : recherchez votre serveur de prédilection dans la liste, recherchez les paramètres concernés, et copiez les paramètres recommandés ou vérifiez qu'ils sont configurés pour votre serveur.
 
 
@@ -56,7 +54,6 @@ Note: Conseil : le projet HTML5 Boilerplate contient des <a href='https://github
 
 La meilleure requête est une requête qui n'a pas besoin de communiquer avec le serveur : une copie locale de la réponse nous permet d'éliminer toute latence sur le réseau et d'éviter les frais de données pour le transfert de données. Pour y parvenir, la spécification HTTP autorise le serveur à renvoyer [plusieurs directives Cache-Control différentes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) qui contrôlent comment et pendant combien de temps la réponse individuelle peut être mise en cache par le navigateur et autres caches intermédiaires.
 
-<!-- TODO: Verify note type! -->
 Note: L'en-tête Cache-Control a été défini dans le cadre de la spécification HTTP/1.1 et remplace les en-têtes précédents (par exemple Expires) utilisés pour définir les règles de mise en cache de la réponse. Tous les navigateurs modernes sont compatibles avec Cache-Control. Nous n'avons donc besoin de rien d'autre.
 
 <img src="images/http-cache-control-highlight.png" class="center" alt="Exemple de Cache-Control HTTP">

@@ -28,7 +28,6 @@ Czasami obraz trzeba zmienić w większym stopniu &ndash; dopasować proporcje, 
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">

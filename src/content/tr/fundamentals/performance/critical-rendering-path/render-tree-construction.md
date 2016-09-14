@@ -35,12 +35,11 @@ Olusturma agacini olusturmak için tarayici kabaca asagidakileri yapar:
 1. Görünür her bir dügüm için eslesen uygun CSSOM kurallarini bulun ve bunlari uygulayin.
 2. Görünür dügümleri, içerik ve hesaplanan stilleriyle yayinlayin.
 
-<!-- TODO: Verify note type! -->
 Note: Kisa bir not olarak, `visibility: hidden` degerinin `display: none` degerinden farkli oldugunu unutmayin. Ilki ögeyi görünmez yapar, ancak öge yer paylasiminda alan kaplamaya devam eder (bos kutu olarak olusturulur), buna karsilik ikincisi (display: none) ögeyi, öge görünmezmis ve yer paylasiminin bir parçasi degilmis gibi olusturma agacindan tamamiyla çikarir.
 
 Son çikti, hem içerigi hem de ekranda görünen tüm içerigin stil bilgilerini içeren bir olusturmadir. Yaklasiyoruz!  **Olusturma agaci tamamlandiginda, 'yer paylasimi' asamasina geçebiliriz.**
 
-Bu noktaya kadar, hangi dügümlerin görünür olmasi gerektigini ve bunlarin hesaplanan stillerini hesapladik, ancak cihazin [görüntü alani]({{site.fundamentals}}/layouts/rwd-fundamentals/set-the-viewport.html) içindeki tam konumlarini ve boyutlarini hesaplamadik. Bu, 'yer paylasimi' asamasidir; bazen 'yeniden düzenleme' olarak da bilinir.
+Bu noktaya kadar, hangi dügümlerin görünür olmasi gerektigini ve bunlarin hesaplanan stillerini hesapladik, ancak cihazin [görüntü alani](/web/fundamentals/design-and-ui/responsive/#set-the-viewport) içindeki tam konumlarini ve boyutlarini hesaplamadik. Bu, 'yer paylasimi' asamasidir; bazen 'yeniden düzenleme' olarak da bilinir.
 
 Her bir nesnenin kesin boyutunu ve konumunu belirlemek için tarayici, olusturma agacinin kökünden baslar ve sayfadaki her bir nesnenin geometrisini hesaplamak için üzerinden geçer. Basit bir uygulama örnegini degerlendirelim:
 

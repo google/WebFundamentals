@@ -84,7 +84,6 @@ Se você promoveu um elemento a uma nova camada, use DevTools para confirmar que
 
 No entanto, algumas vezes, apesar de promover elementos, o trabalho de pintura ainda é necessário. Um grande desafio de problemas de pintura é que os navegadores reúnem duas áreas que precisam de pintura, o que pode resultar na repintura de toda a tela. Portanto se houver um cabeçalho fixo no topo da página e algo estiver sendo pintado na parte inferior da página, toda a tela pode acabar sendo repintada.
 
-<!-- TODO: Verify note type! -->
 Note: Em telas de alto DPI, elementos com posição fixa são promovidos automaticamente para sua própria camada de compositor. Esse não é o caso em dispositivos de DPI baixo porque a promoção altera a renderização do texto de subpixel para escala de cinza e a promoção da camada precisa ser realizada manualmente.
 
 Reduzir as áreas de pintura é geralmente uma questão de coordenar animações e transições para não se sobreporem demais ou encontrar formas de evitar a animação de determinadas partes da página.

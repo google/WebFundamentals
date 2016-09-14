@@ -236,7 +236,6 @@ HTML5에서 다양한 새 입력 유형이 도입되었습니다. 이러한 새 
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
-<!-- TODO: Verify note type! -->
 Note: <code>datalist</code> 값은 제안으로 제공되므로 사용자가 그 제안을 꼭 선택할 필요는 없습니다.
 
 ## 올바른 레이블 및 이름 입력 
@@ -286,7 +285,6 @@ Note: <code>datalist</code> 값은 제안으로 제공되므로 사용자가 그
 {% endhighlight %}
 
 
-<!-- TODO: Verify note type! -->
 Note: 자리 표시자는 사용자가 요소를 입력하기 시작하면 즉시 사라지므로 레이블을 대체하는 데 사용되지 않습니다. 자리 표시자는 필요한 형식과 콘텐츠를 사용자에게 안내하는 도우미로 사용되어야 합니다.
 
 ### 메타데이터를 사용하여 자동완성 활성화
@@ -421,7 +419,6 @@ Note: 자리 표시자는 사용자가 요소를 입력하기 시작하면 즉�
   </tbody>
 </table>
 
-<!-- TODO: Verify note type! -->
 Note: - <code>street-address</code>만 사용하거나 <code>address-line1</code> 및 <code>address-line2</code>를 모두 사용하십시오.
 - <code>address-level1</code> 및 <code>address-level2</code>는 주소 형식에서 요구하는 경우에만 필요합니다.
 
@@ -574,7 +571,6 @@ autofocus 특성은 키보드 포커스를 가로채서 잠재적으로 백스�
     </form>
     
 
-<!-- TODO: Verify note type! -->
 Note: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관성과 보안을 보장하기 위해 서버 데이터 유효성을 검사하는 것은 항상 중요합니다.
 
 ### 더욱 복잡한 실시간 유효성 검사에 JavaScript 사용
@@ -693,7 +689,6 @@ HTML5에서 값이나 특성에 따라 입력 스타일을 지정하는 데 사�
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs"   adjust_indentation="auto" %}
 </pre>
 
-<!-- TODO: Verify note type! -->
 Note: 양식의 모든 문제를 한 번에 하나씩 표시하지 말고 한꺼번에 사용자에게 보여줘야 합니다.
 
 ## requestAutocomplete API로 결제 단순화 
@@ -751,5 +746,4 @@ Note: 양식의 모든 문제를 한 번에 하나씩 표시하지 말고 한꺼
 
 
 
-<!-- TODO: Verify note type! -->
 Note: 각종 개인 정보 또는 신용 카드 데이터를 요청하는 페이지는 SSL을 통해 제공해야 합니다. 그렇지 않은 경우 정보가 안전하지 않다는 경고 대화 상자가 표시됩니다.

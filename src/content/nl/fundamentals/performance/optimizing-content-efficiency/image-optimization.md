@@ -164,7 +164,6 @@ De browser kent aan elk kanaal 256 kleuren (tinten) toe. Dit zijn 8 bits per kan
 
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Ongeacht de bestandsindeling van de afbeelding die van de server naar de client wordt gedownload, neemt elke pixel tijdens decodering door de browser altijd 4 bytes aan geheugen in beslag. Dit kan een belangrijke beperking zijn voor grote afbeeldingen of voor apparaten die niet veel geheugen hebben, bijv. eenvoudige mobiele telefoons.
 
 <table>
@@ -210,7 +209,6 @@ Een eenvoudige strategie is om de bitdiepte van de afbeelding van 8-bits per kan
 
 <img src="images/artifacts.png" class="center" alt="Vervorming door compressie">
 
-<!-- TODO: Verify note type! -->
 Note: Links naar rechts (PNG): 32-bits (16 M kleuren), 7-bits (128 kleuren), 5-bits (32 kleuren). Voor complexe scenes met geleidelijk kleurverloop (overgangen, lucht, enzovoort) is een groter kleurenspectrum vereist om vervorming zoals de geblokte lucht in het 5-bits item te voorkomen. Als in de afbeelding echter slechts een paar kleuren aanwezig zijn, is het zonde van de extra bits om een groot kleurenspectrum te gebruiken.
 
 Wanneer we de opgeslagen gegevens in afzonderlijke pixels hebben geoptimaliseerd, dienen we ook naar naburige pixels te kijken: veel afbeeldingen, inclusief foto`s, hebben veel naburige pixels met vergelijkbare kleuren, zoals afbeeldingen van de lucht, herhaalde texturen, enzovoort. We kunnen hiervan profiteren door de compressor `[delta-coderen](http://en.wikipedia.org/wiki/Delta_encoding)` toe te laten passen, waarbij niet de individuele waarden voor elke pixel worden opgeslagen, maar het verschil tussen naburige pixels. Als de naburige pixels hetzelfde zijn, is de delta `nul` en hoeven we slechts een enkele bit op te slaan. Maar er is meer...
@@ -245,7 +243,6 @@ Wat is de optimale configuratie voor optimalisatie met en zonder verlies? Het an
 
 Als u bijvoorbeeld een bestandsindeling met verlies kiest, zoals JPEG, kunt u het kwaliteitsniveau handmatig instellen (bijv. met behulp van de schuifbalk voor de functie `Opslaan voor internet` in Adobe Photoshop). Dit is meestal een getal tussen 1 en 100 waarmee tussen een aantal algoritmen met en zonder verlies wordt gekozen. Voor de beste resultaten kunt u experimenteren met verschillende kwaliteitsinstellingen voor uw afbeeldingen. Probeer gerust de kwaliteit te verlagen - het zichtbare resultaat is vaak erg goed en u kunt de bestandsgrootte flink verkleinen.
 
-<!-- TODO: Verify note type! -->
 Note: U kunt kwaliteitsniveaus van verschillende bestandsindelingen niet met elkaar vergelijken, vanwege de verschillende algoritmes die worden gebruikt om de afbeelding te coderen: een JPEG-afbeelding met kwaliteit 90 levert een heel ander resultaat op dan een WebP-afbeelding met kwaliteit 90. Zelfs gelijke kwaliteitsniveaus voor dezelfde bestandsindeling kunnen met dezelfde compressor zichtbaar andere resultaten opleveren.
 
 
@@ -378,7 +375,6 @@ Een van de eenvoudigste en meest effectieve optimalisatietechnieken is daarom er
 
 <img src="images/resized-image.png" class="center" alt="Verkleinde afbeelding">
 
-<!-- TODO: Verify note type! -->
 Note: Als u in Chrome DevTools de muiscursor op de afbeelding plaatst, worden de "natuurlijke" en de "scherm"grootte van het afbeeldingitem getoond. In bovenstaand voorbeeld wordt een afbeelding met 300x260 pixels gedownload en vervolgens verkleind naar 245x212 pixels op de client waarop de afbeelding wordt weergegeven.
 
 Wanneer we overbodige pixels leveren die vervolgens door de browser voor ons worden verwijderd, lopen we een grote kans mis om het totale aantal vereiste bytes te verlagen en optimaliseren. Verkleinen heeft niet alleen te maken met het aantal pixels waarmee de omvang van de afbeelding wordt teruggebracht, maar ook met de natuurlijke grootte van de afbeelding.

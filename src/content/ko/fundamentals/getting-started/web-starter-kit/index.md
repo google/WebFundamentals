@@ -240,7 +240,6 @@ install 스크립트를 실행합니다.
 이것으로 끝입니다! 이제 Web Starter Kit의 Gulp 도구를 사용하는 데 필요한 모든 것을
 갖추었습니다.
 
-<!-- TODO: Verify note type! -->
 Note: <code>EPERM</code> 또는 <code>EACCESS</code>와 같은 사용 권한 또는 액세스 오류가 표시되는 경우 해결 방법으로 <code>sudo</code>를 사용하지 마십시오. <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>이 페이지</a>에서 더욱 강력한 해결 방법을 확인할 수 있습니다.
 
 이 가이드의 다음 절에서는 Gulp를 사용하는 방법에 대해 설명하지만,

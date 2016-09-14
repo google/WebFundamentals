@@ -239,7 +239,6 @@ NodeJS や NPM を所有しているかどうか分からない場合は、コ�
 そうです!これで Web Starter 
 Kit で Gulp ツールを使用する準備が整いました。
 
-<!-- TODO: Verify note type! -->
 Note: 許可または <code>EPERM</code>、<code>EACCESS</code> のようなアクセス エラーが表示された場合は、<code>sudo</code> を回避策として使用しないでください。このページ <a href='https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md'>に問い合わせて、</a> より堅牢な解決策を入手してください。
 
 このガイドの次のセクションでは、Gulp を使用する方法について説明しますが、どのように見えるか確認したい場合は、

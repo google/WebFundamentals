@@ -45,7 +45,6 @@ Alors que nous reste-t-il ? Il n'existe par un format unique qui fonctionne sur 
 * Diffuser une variante EOT pour les anciens navigateurs IE (avant IE9).
 ^
 
-<!-- TODO: Verify note type! -->
 Note: Techniquement, il existe également le <a href='http://caniuse.com/svg-fonts'>conteneur de police SVG</a>, mais il n'a jamais été compatible avec IE ni Firefox, et est maintenant obsolète dans Chrome. Son utilité est donc limitée, et nous l'omettons volontairement dans ce guide.
 
 ### Réduire la taille de police avec la compression
@@ -58,7 +57,6 @@ Une police est une collection de glyphes, et chaque glyphe est un ensemble de ch
 
 Enfin il est important de noter que certains formats contiennent des métadonnées supplémentaires, telles que des informations d'[optimisation de rendu](http://fr.wikipedia.org/wiki/Font_hinting) et de [crénage](http://fr.wikipedia.org/wiki/Crénage) qui peuvent être inutiles sur certaines plateformes, ce qui permet d'optimiser encore davantage la taille du fichier. Consultez votre logiciel de compression des polices pour connaître les options d'optimisation disponibles, et si vous choisissez cette voie, assurez-vous que vous disposez d'une infrastructure adaptée pour tester et proposer ces polices optimisées à chaque navigateur. Par exemple, Google Fonts possède plus de 30 variantes optimisées pour chaque police, et détecte et fournit automatiquement la variante optimale pour chaque plateforme et navigateur.
 
-<!-- TODO: Verify note type! -->
 Note: Pensez à utiliser la <a href='http://en.wikipedia.org/wiki/Zopfli'>compression Zopfli</a> pour les formats EOT, TTF et WOFF. Zopfli est un logiciel de compression compatible avec les données zlib, qui propose une réduction de la taille des fichiers supplémentaire d'environ 5 % par rapport à gzip.
 
 ## Définir une famille de polices avec @font-face
@@ -105,7 +103,6 @@ Tout d'abord, notez que les exemples ci-dessus définissent une seule famille _A
 * La directive `url()` nous permet de charger des polices externes, et peuvent contenir un algorithme d'optimisation `format()` facultatif indiquant le format de la police référencée par l'URL fournie.
 
 ^
-<!-- TODO: Verify note type! -->
 Note: À moins que vous référenciez l'une des polices système par défaut, en pratique il est rare que l'utilisateur l'ait installé localement, en particulier sur les appareils mobiles, où il est concrètement impossible 'd'installer' des polices supplémentaires. En conséquence, vous devez toujours fournir une liste d'emplacements pour les polices externes.
 
 Lorsque le navigateur détermine que la police est nécessaire, il consulte la liste de ressources fournir dans l'ordre indiqué et tente de charger la ressource adaptée. Considérons l'exemple ci-dessus :
@@ -118,7 +115,6 @@ Lorsque le navigateur détermine que la police est nécessaire, il consulte la l
 
 La combinaison de directives locales et externes avec les algorithmes d'optimisation de format adaptés nous permet de spécifier tous les formats de police disponibles, et laisse le navigateur gérer le reste : le navigateur définit quelles ressources sont nécessaires et sélectionne pour nous le format le mieux adapté.
 
-<!-- TODO: Verify note type! -->
 Note: L'ordre dans lequel les variantes d'une police sont spécifiées est important. Le navigateur choisit le premier format compatible. Par conséquent, si vous souhaitez que les navigateurs les plus récents utilisent WOFF2, vous devez placer la déclaration WOFF2 au-dessus de WOFF, et ainsi de suite.
 
 ### Créer des sous ensembles unicode-range
@@ -159,7 +155,6 @@ Par exemple, nous pouvons diviser notre famille _Awesome Font_ en sous ensembles
     }
     
 
-<!-- TODO: Verify note type! -->
 Note: Les sous-ensembles unicode-range sont particulièrement importants pour les langues asiatiques, dans lesquelles le nombre de glyphes est beaucoup plus important que dans les langues occidentales, et pour lesquelles une police 'complète' est souvent mesurée en mégaoctets et non pas en dizaines de kilo-octets !
 
 L'utilisation de sous-ensembles unicode-range et de fichiers distincts pour chaque variante stylistique de la police nous permet de définir une famille de polices composite, à la fois plus rapide et plus efficace à télécharger : le visiteur ne télécharge que les variantes et sous-ensembles dont il a besoin, et n'est pas obligé de télécharger des sous-ensembles qu'il ne verra ou n'utilisera peut-être jamais sur la page. 
@@ -237,7 +232,6 @@ L'exemple ci-dessus déclare que la famille _Awesome Font_ est composée de deux
 
 Les exemples ci-dessus illustrent la différence entre les résultats des polices réelles et synthétiques pour Open-Sans. Toutes les variantes synthétiques sont générées à partir d'une seule police ayant un poids de 400. Comme vous pouvez le voir, les résultats sont très différents. Les détails de la création des variantes en gras et en italique ne sont pas spécifiés. Par conséquent, les résultats varient en fonction du navigateur, et dépendent également beaucoup de la police.
 
-<!-- TODO: Verify note type! -->
 Note: Pour une meilleure cohérence et de meilleurs résultats visuels, ne vous fiez pas à la synthèse des polices. Réduisez le nombre de variantes de police utilisé et spécifiez leur emplacement, afin que le navigateur puisse les télécharger lorsqu'elles sont utilisées sur la page. Cela étant dit, dans certain cas une variante synthétisée <a href='https://www.igvita.com/2014/09/16/optimizing-webfont-selection-and-synthesis/'>peut être une bonne option</a>. Mais utilisez-la avec précaution.
 
 
@@ -309,7 +303,6 @@ De plus, comme nous pouvons contrôler la méthode du statut de la police (via l
 
 Encore mieux, nous pouvons aussi mélanger toutes les stratégies ci-dessus pour les différents contenus sur la page. Nous pouvons différer l'affichage du texte pour certaines sections jusqu'à ce que la police soit disponible, utiliser une police de rechange, puis afficher à nouveau le texte lorsque la police est téléchargée, définir des délais d'expiration différents, etc. 
 
-<!-- TODO: Verify note type! -->
 Note: L'API Font Loading est toujours <a href='http://caniuse.com/#feat=font-loading'>en cours de développement dans certains navigateurs</a>. Pensez donc à utiliser l'<a href='https://github.com/bramstein/fontloader'>émulateur de navigateur Web FontLoader</a>, ou la <a href='https://github.com/typekit/webfontloader'>bibliothèque webfontloader</a>, afin de proposer des fonctionnalités similaires, que ce soit avec un temps système ou une dépendance JavaScript supplémentaires.
 
 ### Optimiser l'affichage des polices avec l'intégration
@@ -321,7 +314,6 @@ Une stratégie alternative simple à l'utilisation de l'API Font Loading pour é
 
 La stratégie d'intégration n'est pas aussi flexible, et ne nous permet pas de définir des délais d'expiration ou des stratégies d'affichage personnalisés pour les différents contenus, mais c'est une solution simple et fiable qui fonctionne sur tous les navigateurs. Pour obtenir les meilleurs résultats, séparez les polices intégrées en plusieurs feuilles de styles indépendantes et diffusez-les avec une directive `max-age` longue. Ainsi, lorsque vous mettez à jour votre code CSS, vous ne forcez pas vos visiteurs à télécharger à nouveau les polices. 
 
-<!-- TODO: Verify note type! -->
 Note: Utilisez l'intégration de façon sélective ! Souvenez-vous que @font-face utilise le comportement de chargement inactif pour éviter de télécharger des variantes et sous-ensembles de police inutiles. De plus, l'augmentation de la taille de votre CSS par une intégration agressive aura un impact négatif sur votre <a href='/web/fundamentals/performance/critical-rendering-path/'>chemin critique du rendu</a> : le navigateur doit télécharger tout le code CSS avant de pouvoir construire le modèle CSSOM, créer l'arborescence d'affichage et afficher le contenu de la page d'affichage à l'écran.
 
 ### Optimiser la réutilisation des polices avec la mise en cache HTTP

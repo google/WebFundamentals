@@ -35,7 +35,6 @@ Há cinco grandes áreas que você precisa conhecer e considerar enquanto trabal
 
 Cada uma dessas partes do pipeline representa uma oportunidade para introduzir jank. Portanto, é importante compreender exatamente quais partes do pipeline seu código aciona.
 
-<!-- TODO: Verify note type! -->
 Note: Algumas vezes você ouve o termo 'rasterizar' usadc em conjunto com tinta. Isso ocorre porque a pintura é composta realmente por duas tarefas: 1) criar uma lista de todas as chamadas de desenho e 2) preencher os pixels.
 O último é chamado de 'rasterização' e, portanto, sempre que você vê registros de tinta no DevTools, considere como inclusão de rasterização. (Em algumas arquiteturas, a criação de uma lista de chamadas de desenho e rasterização acontece em diferentes threads, mas isso não é algo que foge ao controle do desenvolvedor.)
 
@@ -61,7 +60,6 @@ Se alterar uma propriedade que não exige layout ou pintura. o navegador pula ap
 
 Essa versão final é a mais barata e desejada para pontos de alta pressão em um ciclo de vida do aplicativo, como animações ou rolagem.
 
-<!-- TODO: Verify note type! -->
 Note: Para saber qual das três versões acima que está alterando qualquer propriedade CSS acionará o cabeçalho para <a href='http://csstriggers.com'>Acionadores CSS</a>. Se deseja um atalho para animações de alto desempenho, leia a seção sobre <a href='stick-to-compositor-only-properties-and-manage-layer-count'>como alterar as propriedades compositor-only</a>.
 
 O desempenho é a arte de evitar trabalho e fazer com que qualquer trabalho realizado seja o mais eficiente possível. Em muitos casos, basta trabalhar a favor do navegador, não contra ele. É importante lembrar que o trabalho listado acima, no pipeline, é diferente em termos de custo computacional; algumas tarefas são mais caras do que outras.
@@ -70,7 +68,6 @@ Vamos detalhar as diferentes partes do pipeline. Olharemos os problemas comuns e
 
 
 ## Otimização da Renderização do Navegador
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/rp-udacity.jpg">

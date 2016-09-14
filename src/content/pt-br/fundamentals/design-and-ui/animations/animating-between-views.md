@@ -22,7 +22,6 @@ Muitas vezes os usuários deverão passar por diferentes visualizações no seu 
 
 A aparência e desempenho dessas transições de visualização dependerão muito do tipo de visualização com o qual você está trabalhando. Por exemplo, animar uma superposição modal em cima de uma visualização deve ser uma experiência diferente da transição entre uma visualização de lista e detalhes.
 
-<!-- TODO: Verify note type! -->
 Note: Você deve procurar manter 60 fps para todas as suas animações. Dessa forma, seus usuários não verão animações oscilantes que prejudicará a experiência. Certifique-se de que qualquer elemento de animação tenha will-change definido para tudo que você planeja alterar bem antes de começar a animação. Para transições de visualização, você provavelmente usará <code>will-change: transform</code>.
 
 ## Use alternância para mover entre visualizações
@@ -123,7 +122,6 @@ Por fim, adicionamos as declarações CSS para essas classes.
 
 Você pode expandir para cobrir várias visualizações e o conceito básico deverá permanecer o mesmo; cada visualização não visível deve estar fora da tela e trazida conforme necessário e a visualização atualmente na tela deve ser removida.
 
-<!-- TODO: Verify note type! -->
 Note: Criar este tipo de hierarquia entre vários navegadores pode ser um desafio. Por exemplo, o iOS exige uma propriedade CSS adicional, <code>-webkit-overflow-scrolling: touch</code>, para ‘reabilitar’ a rolagem corrente, mas você não pode controlar para qual eixo, como você faz com a propriedade overflow padrão. Certifique-se de testar sua implementação em vários dispositivos!
 
 Além da transição entre visualizações, essa técnica também pode ser aplicada a outros elementos de deslizamento, como os elementos de navegação da barra lateral. A única diferença real é que você não precisará mover as outras visualizações.

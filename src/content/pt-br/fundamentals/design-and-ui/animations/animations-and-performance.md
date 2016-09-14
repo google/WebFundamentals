@@ -27,7 +27,7 @@ Onde possível, evite animar propriedades que acionam layout ou pintura. Para a 
 
 Obtenha uma lista completa do trabalho acionado por propriedades CSS individuais em [Acionadores CSS](http://csstriggers.com) e encontre um guia completo sobre como criar [Animações de alto desempenho no HTML5 Rocks](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css #}
 
 ### Usando a propriedade will-change
 

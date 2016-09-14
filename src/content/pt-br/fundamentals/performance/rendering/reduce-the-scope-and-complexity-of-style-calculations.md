@@ -64,12 +64,10 @@ Outra consideração de desempenho, que é geralmente _o fator mais importante p
 
 Em termos gerais, o pior caso de custo de cálculo de estilo dos elementos computados é o número de elementos multiplicado pela contagem do seletor, porque cada elemento precisa ser verificado pelo menos uma vez em cada estilo para ver se corresponde.
 
-<!-- TODO: Verify note type! -->
 Note: Anteriormente, se fosse feita uma mudança de classe no elemento do corpo, todos os estilos computados dos filhos na página precisavam ser recalculados. Felizmente, esse não é mais o caso. Alguns navegadores mantêm uma pequena coleção de regras exclusivas para cada elemento que, se mudada, efetua o recálculo dos estilos do elemento. Isso significa que um elemento pode ou não precisar ser recalculado dependendo de onde ele está na árvore e do que foi mudado especificamente.
 
 Geralmente, os cálculos de estilo podem enfatizar alguns elementos diretamente em vez de invalidar a página toda. Em navegadores modernos, isso não tende a ser um problema, porque ele não precisa verificar todos os elementos possivelmente afetados por uma mudança. Por outro lado, navegadores mais antigos não são necessariamente otimizados para essas tarefas. Onde possível, **reduza o número de elementos invalidados**.
 
-<!-- TODO: Verify note type! -->
 Note: Se estiver utilizando o Web Components, note que os cálculos de estilo são um pouco diferentes, pois os estilos padrões não cruzam o limite do Shadow DOM e são planejados para componentes individuais em vez da árvore como um todo. Em linhas gerais, contudo, o mesmo conceito é aplicado: árvores menores com regras mais simples são processadas de forma mais eficaz do que árvores grandes ou regras complexas.
 
 ## Meça seu custo de recálculo de estilo

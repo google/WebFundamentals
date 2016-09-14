@@ -84,7 +84,6 @@ Si promovió un elemento a una capa nueva, utilice DevTools para confirmar que, 
 
 En algunos casos, no obstante, aunque se promuevan los elementos, aún es necesario realizar trabajos de pintura. Un gran desafío en relación con la pintura es que los navegadores unen dos áreas que necesitan pintura, y el resultado de esto podría ser que se vuelva a pintar toda la pantalla. Entonces, por ejemplo, si posee un encabezado fijo en la parte superior de la página y un elemento que se está pintando en la parte inferior de la pantalla, es posible que se termine pintando nuevamente toda la pantalla.
 
-<!-- TODO: Verify note type! -->
 Note: Los elementos de las pantallas con valores altos de PPP (Puntos por pulgada) que están en una posición fija se promueven automáticamente a su propia capa del compositor. Esto no es así en los dispositivos con valores bajos  de PPP, debido a que la promoción modifica la representación de los textos desde subpíxeles a escala de grises, y la promoción de las capas debe hacerse manualmente.
 
 Reducir las áreas de pintura suele consistir en orquestrar sus animaciones y transiciones para que no se superpongan demasiado, o en una forma de encontrar estrategias para evitar animar ciertas partes de la página.

@@ -74,7 +74,6 @@ Warning: A tag here did NOT convert properly, please fix! ''
 
 המבנה הבסיסי של האתר הושלם. אנחנו יודעים את הסעיפים שאנחנו צריכים, תוכן שניתן להציג בסעיפים אלו, והיכן למקם אותו בכללי ארכיטקטורת מידע. כעת אנו יכולים להתחיל לבנות את האתר.
 
-<!-- TODO: Verify note type! -->
 Note: הסטייל יגיע מאוחר יותר.
 
 #### צור את הכותרת והטופס
@@ -97,7 +96,7 @@ Note: הסטייל יגיע מאוחר יותר.
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
 
 #### צור את חלק הוידאו והמידע
 
@@ -120,7 +119,7 @@ Note: הסטייל יגיע מאוחר יותר.
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
 
 #### צור את חלק התמונות
 
@@ -139,7 +138,7 @@ Note: הסטייל יגיע מאוחר יותר.
 
 התמונות מוגדרות בקנה מידה לרוחב של המסך 100%. זה עובד גם על מכשירים עם viewport צר, אבל פחות טוב באלה עם viewport רחב (כמו שולחן עבודה). אנחנו ננהל את זה בסעיף responsive design.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 ישנם אנשים רבים אשר לא יכולים לראות את התמונות ומשתמשים לעתים קרובות בעזר כגון קורא מסך כדי לנתח את הנתונים בדף וטכנולוגיה להעביר את זה למשתמש באופן מילולי. אתה צריך לוודא שכל התוכן של התמונות יכלול את התג התיאורי `alt` שהקורא המסך יכול לדבר אל המשתמש.
 
@@ -229,7 +228,7 @@ Viewport מציין לדפדפן שהדף צריך להיות בקנה מידה 
 
 Viewport מתגורר בראש המסמך, ורק צריך להיות מוכלל פעם אחת.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.responsive #}
 
 ### קבע סגנון פשוט
 
@@ -301,7 +300,6 @@ Viewport מתגורר בראש המסמך, ורק צריך להיות מוכלל
 
 יש יותר מקום על מסך גדול יותר כך יש יותר גמישות עם איך ניתן להציג תוכן.
 
-<!-- TODO: Verify note type! -->
 Note: אתה לא צריך להעביר את כל האלמנטים בבת אחת, אתה יכול לבצע התאמות קטנות יותר במידת צורך..
 
 בהקשר של דף המוצר שלנו, נראה שאנחנו זקוקים למספר דברים:
@@ -312,7 +310,7 @@ Note: אתה לא צריך להעביר את כל האלמנטים בבת אחת
 * הפוך את הווידאו לצף סביב התוכן. 
 * הקטן את הגודל של התמונות וישר אותם לפי הרשת.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point #}
 
 ### הגבל את הרוחב המירבי של העיצוב
 
@@ -415,7 +413,7 @@ Viewport רחב נותן לנו שטח נוסף לשימוש כדי להציג �
     <img src="photo.png" srcset="photo@2x.png 2x">
     
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.images #}
 
 #### אבלאות
 

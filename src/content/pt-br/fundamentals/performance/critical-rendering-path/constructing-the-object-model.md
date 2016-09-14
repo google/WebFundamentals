@@ -47,7 +47,6 @@ Sempre que o navegador tem de processar a marcação HTML, ele precisa concluir 
 
 <img src="images/dom-timeline.png" class="center" alt="Como mapear a criação do DOM no DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: Suporemos que você sabe um pouco de Chrome DevTools, ou seja, que sabe como capturar uma cascata de rede ou gravar uma linha do tempo. Se você precisa de um atualizador rápido, confira a <a href='https://developer.chrome.com/devtools'>documentação do Chrome DevTools</a>, ou se você é novo no DevTools, recomendamos fazer o curso <a href='http://discover-devtools.codeschool.com/'>Explore e domine Chrome DevTools</a>, da Codeschool.
 
 Se você abrir o Chrome DevTools e gravar uma linha do tempo enquanto a página é carregada, poderá ver o tempo real necessário para que essa etapa seja realizada. No exemplo acima, levamos aproximadamente 5 ms para converter um bloco de bytes de HTML em uma árvore de DOM. Logicamente, se a página fosse maior, como a maioria das páginas costuma ser, esse processo poderia levar muito mais tempo. Você verá em nossas sessões futuras sobre a criação de animações suaves que isso pode se tornar um recurso de afunilamento se o navegador tiver de processar grandes quantidades de HTML.

@@ -247,7 +247,6 @@ Web Starter Kit 的构建工具需要 Node 和 NPM。 Node 用于运行 Gulp，�
 这样就行了！现在您已具备在 Web Starter
 Kit 中使用 Gulp 工具所需的所有条件。
 
-<!-- TODO: Verify note type! -->
 Note: 如果您看到许可或权限错误，例如 <code>EPERM</code>  或 <code>EACCESS</code>，不要使用 <code>sudo</code> 作为解决方法。 请参考 <a href="https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md">此页</a>了解更可靠的解决方法。
 
 本指南的下一部分介绍了如何使用 Gulp，但如果您想看看

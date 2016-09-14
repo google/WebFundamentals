@@ -96,7 +96,6 @@ description: Узнайте, как легко и просто добавить 
 
 Вы также можете использовать Media Fragments API для просмотра различных фрагментов одного и того же видео (например, как на DVD) без кодирования и загрузки нескольких файлов.
 
-<!-- TODO: Verify note type! -->
 Note: - Media Fragments API поддерживается большинством платформ за исключением iOS.
 - 'Убедитесь, что ваш сервер поддерживает запросы с диапазонами. Запросы с диапазонами по умолчанию включены на большинстве серверов, однако некоторые хостинги отключают их.'
 
@@ -259,11 +258,10 @@ Warning: A tag here did NOT convert properly, please fix! ''
 
 Используйте [медиа-запросыCSS](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness), чтобы определить размер элементов в зависимости от размера области просмотра. `max-width: 100%` - отличный вариант!
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 Для медиаконтента в окнах iframe (в частности, видео на YouTube) попробуйте отзывчивый подход (например, [предложенный Джоном Сурдаковски](//avexdesigns.com/responsive-youtube-embed/)).
 
-<!-- TODO: Verify note type! -->
 Note: При изменении размеров элемента не нарушайте изначального соотношения ширины и высоты видео. Сплющенное или вытянутое изображение выглядит не лучшим образом.
 
 **CSS:**
@@ -379,7 +377,6 @@ extra code for full cross browser compatibility.
 
 Чтобы с видео могли ознакомиться все пользователи мобильных устройств, добавьте субтитры или голосовое описание при помощи элемента track.
 
-<!-- TODO: Verify note type! -->
 Note: Элементы track поддерживаются в Chrome для Android, iOS Safari и всех существующих в настоящее время браузерах для ПК за исключением Firefox (более подробную информацию вы найдете по адресу <a href='http://caniuse.com/track' title='Браузеры, поддерживающие элементы track'>caniuse.com/track</a>). Вы также можете использовать полизаполнения. Мы рекомендуем <a href='//www.delphiki.com/html5/playr/' title='Полизаполнение Playr'>Playr</a> или <a href='//captionatorjs.com/' title='Полизаполнение Captionator'>Captionator</a>.
 
 При использовании элемента track субтитры будут выглядеть следующим образом:

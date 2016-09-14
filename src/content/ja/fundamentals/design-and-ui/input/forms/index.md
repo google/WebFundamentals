@@ -243,7 +243,6 @@ HTML5 は多くの新しい入力タイプを導入しました。 これらの�
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
-<!-- TODO: Verify note type! -->
 Note: <code>datalist</code> の値は候補として提供され、ユーザーは提供された提案に限定されるものではありません。
 
 
@@ -789,7 +788,6 @@ HTML5 には複数の新しい疑似クラスも用意されています。こ�
 フィームは必要事項を検証し、フォームを送信して、
 最終確認に進みます。
 
-<!-- TODO: Verify note type! -->
 Note: 個人情報やクレジット カードなどのデータを求められた場合 ページが SSL で保存されることを確認してください。  そうでない場合、ダイアログは、情報が安全ではない可能性があることをユーザーに警告します。
 
 

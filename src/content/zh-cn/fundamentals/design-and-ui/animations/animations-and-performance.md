@@ -27,7 +27,7 @@ description: 动画必须表现良好，否则将对用户体验产生负面影�
 
 有关单个 CSS 属性触发的动作的完整列表，请参考[CSS触发器](http://csstriggers.com)，还可以[在 HTML5 Rocks 上找到有关创建高性能动画](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)的完整指南。
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css #}
 
 ### 使用 will-change 属性
 

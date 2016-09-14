@@ -28,7 +28,6 @@ Dans d'autres cas, il se peut que l'image doive subir des modifications plus imp
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">
@@ -108,7 +107,6 @@ La modification d'images sur la base des caractéristiques de l'appareil (opéra
 <img class="center" src="img/art-direction.png" alt="Exemple d'art direction"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-<!-- TODO: Verify note type! -->
 Note: L'élément <code>picture</code> commence à faire son apparition dans les navigateurs. Bien que cet élément ne soit pas encore disponible dans tous les navigateurs, il est conseillé de l'utiliser en raison de sa puissante rétrocompatibilité et de l'utilisation potentielle du <a href='http://picturefill.responsiveimages.org/'>polyfill Picturefill</a>. Pour plus d'informations, rendez-vous sur le site <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
 <div class="mdl-grid">
@@ -226,7 +224,6 @@ compressible](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) d
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">      Voir l'exemple</a>
 
-<!-- TODO: Verify note type! -->
 Note: Soyez prudent lorsque vous utilisez la technique de compression, en raison des exigences supplémentaires sur le plan de la mémoire et du décodage. Le redimensionnement d'images sur des écrans de petite taille est une opération exigeante qui peut se révéler particulièrement laborieuse sur des appareils d'entrée de gamme disposant d'une mémoire et d'une puissance de traitement limitées.
 
 #### Remplacement d'images JavaScript
@@ -446,7 +443,7 @@ La technique de Lazy Loading permet d'accélérer sensiblement le chargement des
 
 Soyez prudent lorsque vous créez des pages en défilement infini. En effet, puisque le contenu est chargé à mesure qu'il devient visible, il se peut que les moteurs de recherche ne le détectent jamais. De plus, les utilisateurs qui s'attendent à trouver des informations dans le pied de page ne les verront jamais, car du nouveau contenu est chargé en permanence.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.optimize %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.optimize #}
 
 
 

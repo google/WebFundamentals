@@ -24,7 +24,6 @@ Translated By:
   </div>
   
 ## Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="fundamentals/imgs/udacity-rwd.png">
@@ -83,7 +82,6 @@ Explore what makes a site responsive and how some common responsive design patte
 
 有些浏览器会在旋转到横向模式时保持固定的网页宽度，然后通过缩放（而不是重排）填满屏幕。添加属性 initial-scale=1 会指示浏览器在不考虑设备方向的情况下，指示浏览器将 CSS 像素与设备无关像素的比例设为 1:1，并允许网页完全占用横向宽度。
 
-<!-- TODO: Verify note type! -->
 Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析相关属性。
 
 ### 确保视口可以访问
