@@ -8,7 +8,7 @@ description: Bilder stellen oftmals den größten Teil der heruntergeladenen Byt
 
 # Bildoptimierung {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

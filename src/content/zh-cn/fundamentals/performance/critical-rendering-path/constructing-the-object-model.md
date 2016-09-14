@@ -8,12 +8,12 @@ description: 浏览器要在屏幕上渲染内容，需要先构建 DOM 与 CSSO
 
 # 构建对象模型 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 

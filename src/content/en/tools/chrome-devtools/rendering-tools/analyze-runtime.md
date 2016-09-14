@@ -7,8 +7,8 @@ description: Users expect pages to be interactive and smooth. Each stage in  the
 
 # Analyze Runtime Performance {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Users expect pages to be interactive and smooth. Each stage 
 in the pixel pipeline represents an opportunity to introduce jank. Learn about 
@@ -49,7 +49,7 @@ Learn how to create CPU profiles in [Speed Up JavaScript Execution][cpu].
 
 The following table describes some common JavaScript problems and potential solutions:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Problem</th>
       <th>Example</th>
@@ -118,7 +118,7 @@ To reduce the impact of **Recalculate Style** events:
 The following table describes some common style problems and potential 
 solutions:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Problem</th>
       <th>Example</th>
@@ -183,7 +183,7 @@ warnings (as in the screenshot above).
 The following table describes some common layout problems and potential 
 solutions:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Problem</th>
       <th>Example</th>
@@ -232,7 +232,7 @@ configurations that can help diagnose paint problems.
 
 The following table describes some common paint and composite problems and potential solutions:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Problem</th>
       <th>Example</th>

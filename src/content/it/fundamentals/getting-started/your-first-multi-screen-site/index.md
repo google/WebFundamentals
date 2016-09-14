@@ -8,7 +8,7 @@ description: È possibile accedere al Web con numerosi dispositivi che spaziano 
 
 # Il tuo primo sito per dispositivi multipli {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

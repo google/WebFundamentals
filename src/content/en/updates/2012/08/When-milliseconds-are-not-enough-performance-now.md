@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # When milliseconds are not enough: performance.now {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 The [High Resolution Timer](http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HighResolutionTime/Overview.html) was added by the [WebPerf Working Group](http://www.w3.org/2010/webperf/) to allow measurement in the Web Platform that's more precise than what we've had with `+new Date` and the newer `Date.now()`.

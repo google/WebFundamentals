@@ -8,7 +8,7 @@ description: Приемы отзывчивого веб-дизайна быст�
 
 # Приемы отзывчивого веб-дизайна {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

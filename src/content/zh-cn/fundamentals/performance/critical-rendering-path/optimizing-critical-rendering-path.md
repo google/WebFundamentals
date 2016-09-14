@@ -8,7 +8,7 @@ description: 为了尽快完成首次呈现，我们需要优化下列三种变�
 
 # 优化关键呈现路径 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

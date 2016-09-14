@@ -8,8 +8,8 @@ description: アニメーションは快適に実行される必要がありま�
 
 # Animations and Performance {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 アニメーション化する度に、60 fps を維持するように注意してください。スタッターやストールが目立ちすぎると、ユーザーにネガティブな印象を与えます。

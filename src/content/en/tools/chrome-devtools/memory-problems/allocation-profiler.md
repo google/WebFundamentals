@@ -7,7 +7,7 @@ description: Use the allocation profiler tool to find objects that aren't being 
 
 # How to Use the Allocation Profiler Tool {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 Use the allocation profiler tool to find objects that aren't being properly garbage collected, and continue to retain memory.
 
 
@@ -24,7 +24,6 @@ The tool takes heap snapshots periodically throughout the recording (as frequent
 
 ![Allocation profiler](imgs/object-tracker.png)
 
-<!-- TODO: Verify note type! -->
 Note: The number after the @ is an object ID that persists among multiple snapshots taken. This allows precise comparison between heap states. Displaying an object's address makes no sense, as objects are moved during garbage collections.
 
 ## Enable allocation profiler

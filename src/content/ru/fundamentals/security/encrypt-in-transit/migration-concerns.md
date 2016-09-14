@@ -7,7 +7,7 @@ book_path: /web/fundamentals/_book.yaml
 
 # Вопросы миграции {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Scrolling at 60fps doesn't have to be a feat of engineering! With core-list you can scroll through thousands of items and never miss a beat.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-22 #}
 {# wf_published_on: 2015-03-22 #}
 {# wf_youtube_id: 2UKPRbrw3Kk #}

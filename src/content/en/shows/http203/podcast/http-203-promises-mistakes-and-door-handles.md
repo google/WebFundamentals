@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Paul and Jake talk about how to Promisify Node, the sins of CSS, and how hard it can be to find a door handle.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-02-24 #}
 {# wf_published_on: 2016-02-24 #}
 {# wf_audio_url: https://storage.googleapis.com/http-203-podcast/episode-4.mp3 #}

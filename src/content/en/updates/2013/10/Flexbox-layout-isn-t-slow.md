@@ -8,7 +8,7 @@ description: Good news: new flexbox (display: flex) is 2.3x faster than old flex
 
 # Flexbox layout isn't slow {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 Success: Old flexbox (`display: box`) is 2.3x **slower** than new flexbox (`display: flex`).

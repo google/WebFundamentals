@@ -8,8 +8,8 @@ description: 另闢蹊徑，為您的專案建立完全自訂的動畫。
 
 # 自訂緩動 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 有時您不會想使用 CSS 內建的緩動關鍵字，或您將會使用 JavaScript 架構的動畫程式庫。 在這兩種情況，通常可以定義您自己的曲線 (或方程式)，而這可讓您高度控制您專案動畫的操作感。

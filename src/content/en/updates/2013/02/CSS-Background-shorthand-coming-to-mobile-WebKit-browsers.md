@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # CSS Background shorthand coming to mobile WebKit browsers {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Earlier this year, WebKit [updated the behavior](https://bugs.webkit.org/show_bug.cgi?id=27577) of the CSS `background` shorthand property.  With this change, the `background` shorthand property will reset the `background-size` to its default value of `auto auto` if it’s not set in the shorthand declaration.  This change brings Chrome and other WebKit browsers in compliance with the specification and matches the behavior of Firefox, Opera and Internet Explorer.

@@ -8,7 +8,7 @@ description: アニメーションをより理解し、現代のアプリやサ�
 
 # Animations {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 アニメーションは、魅力的なウェブ アプリケーションとサイトを作る上で大きな役割を果たします。 ユーザーは、応答性の高いインタラクティブなユーザー インターフェースを期待しています。 しかし、インターフェイスのアニメーション化は、必ずしも簡単ではありません。 アニメーション化の対象、タイミング、アニメーション感触などを考慮する必要があります。

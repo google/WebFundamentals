@@ -7,7 +7,7 @@ book_path: /web/fundamentals/_book.yaml
 
 # Получение согласия пользователя на использование данных о его местоположении {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

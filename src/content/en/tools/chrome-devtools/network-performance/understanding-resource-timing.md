@@ -3,10 +3,11 @@ book_path: /web/tools/_book.yaml
 description: It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 
 {# wf_published_on: 2016-02-03 #}
+{# wf_updated_on: 2016-02-03 #}
 
 # Understanding Resource Timing {: .page-title }
 
-{% include "_shared/contributors/jonathangarbee.html" %}
+{% include "web/_shared/contributors/jonathangarbee.html" %}
 
 It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 

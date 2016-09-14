@@ -8,7 +8,7 @@ description: Le risorse più veloci e ottimizzate sono quelle non inviate. Hai v
 
 # Eliminazione dei download non necessari {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

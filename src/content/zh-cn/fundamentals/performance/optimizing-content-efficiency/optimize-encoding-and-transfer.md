@@ -8,7 +8,7 @@ description: 在我们消除了任何不必要的资源之后，下一步就是�
 
 # 优化基于文本的资产的编码和传输大小 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

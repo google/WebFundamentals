@@ -8,12 +8,12 @@ description: 创建灵活设计，而不是固定的设计,布局。并且能够
 
 # 响应用户界面 {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
 
 
 
@@ -41,7 +41,7 @@ Explore what makes a site responsive and how some common responsive design patte
 
 ## 设置视口 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 对于针对各种设备优化过的网页，其文档标头中必须包含元视口元素。元视口代码会指示浏览器如何对网页尺寸和缩放比例进行控制。

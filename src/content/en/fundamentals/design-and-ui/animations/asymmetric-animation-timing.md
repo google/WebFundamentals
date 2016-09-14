@@ -8,7 +8,7 @@ description: Breaking symmetry provides contrast and appeal to your projects. Le
 
 # Asymmetric animation timing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 Asymmetric animation timing improves the user experience by allowing you to express personality while at the same time respond quickly to user interactions. It also provides contrast to the feel, which makes the interface more visually appealing.
 

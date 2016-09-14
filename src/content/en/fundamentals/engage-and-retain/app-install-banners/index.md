@@ -8,8 +8,8 @@ description: There are two types of app install banners: <i>web</i> app install 
 
 # Using App Install Banners {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 <div class="attempt-right">
@@ -32,14 +32,14 @@ when to show the banner. Read on for more details.
 
 ## What are the criteria?
 
-Chrome will automatically display the banner when your app meets the following
+Chrome automatically displays the banner when your app meets the following
 criteria:
 
 * Has a [web app manifest](../web-app-manifest/) file with:
-    - a `short_name` (used on the home screen)
-    - a `name` (used in the banner)
-    - a 144x144 png icon (the icon declarations must include a mime type of `image/png`)
-    - a `start_url` that loads
+    - A `short_name` (used on the home screen)
+    - A `name` (used in the banner)
+    - A 144x144 png icon (the icon declarations must include a mime type of `image/png`)
+    - A `start_url` that loads
 * Has a [service worker](/web/fundamentals/primers/service-worker/)
   registered on your site.
 * Is served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/)
@@ -53,5 +53,5 @@ twice within 5 minutes. You can disable the visit frequency check by enabling
 the Chrome flag `#bypass-app-banner-engagement-checks`. You can also enable the
 Chrome flag `#enable-add-to-shelf` to test on desktop Chrome.
 
-Then, as long as you have a manifest (configured correctly), are on HTTPS (or `localhost`)
+Then, as long as you have a manifest (configured correctly), are on HTTPS (or `localhost`),
 and have a service worker, you should see the install prompt.

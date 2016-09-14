@@ -9,7 +9,7 @@ description: Discover the new film strip functionality and more in this first of
 
 # DevTools Digest: Film strip and a new home for throttling {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 ## DevTools news, as fresh as it gets

@@ -8,7 +8,7 @@ description: Le immagini costituiscono la maggior parte dei byte scaricati su un
 
 # Ottimizzazione delle immagini {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

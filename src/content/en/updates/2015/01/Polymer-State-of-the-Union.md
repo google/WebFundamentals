@@ -8,7 +8,7 @@ description: The state of the Polymer Union.
 
 # Chrome Dev Summit 2014: Polymer - State of the Union {: .page-title }
 
-{% include "_shared/contributors/robdodson.html" %}
+{% include "web/_shared/contributors/robdodson.html" %}
 
 
 

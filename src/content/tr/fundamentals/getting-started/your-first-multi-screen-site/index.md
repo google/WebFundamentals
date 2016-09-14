@@ -8,7 +8,7 @@ description: Web'e, küçük ekranli telefonlardan genis ekranli televizyonlara 
 
 # Ilk Çoklu Cihaz Siteniz {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

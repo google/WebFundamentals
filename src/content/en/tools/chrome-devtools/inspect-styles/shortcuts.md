@@ -8,8 +8,9 @@ description: Chrome DevTools has several built-in shortcut keys that developers 
 
 # Keyboard & UI Shortcuts Reference {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+
 Chrome DevTools has several built-in shortcut keys that
 can save you time in your daily workflows.
 
@@ -30,7 +31,7 @@ To access the DevTools, on any web page or app in Google Chrome:
 
 On the keyboard:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Access DevTools</th>
       <th>On Windows</th>
@@ -39,8 +40,8 @@ On the keyboard:
   <tbody>
     <tr>
       <td data-th="Launch DevTools">Open Developer Tools</td>
-	  <td data-th="Windows"><kbd class="kbd">F12</kbd>, <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">I</kbd></td>
-	  <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Opt</kbd> + <kbd class="kbd">I</kbd></td>
+      <td data-th="Windows"><kbd class="kbd">F12</kbd>, <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">I</kbd></td>
+      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Opt</kbd> + <kbd class="kbd">I</kbd></td>
     </tr>
     <tr>
       <td data-th="Launch DevTools">Open / switch from inspect element mode and browser window</td>
@@ -64,7 +65,7 @@ On the keyboard:
 
 The following keyboard shortcuts are available in all DevTools panels:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Global Shortcut</th>
       <th>Windows</th>
@@ -196,7 +197,7 @@ Right-clicking on console:
 
 ### Elements
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Elements Panel</th>
       <th>Windows</th>
@@ -255,7 +256,7 @@ Right-clicking on console:
 
 Shortcuts available in the Styles sidebar:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Styles Sidebar</th>
       <th>Windows</th>
@@ -322,7 +323,7 @@ Shortcuts available in the Styles sidebar:
 
 ### Sources
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Sources Panel</th>
       <th>Windows</th>
@@ -429,7 +430,7 @@ Shortcuts available in the Styles sidebar:
 
 #### Within the code editor
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Code Editor</th>
       <th>Windows</th>
@@ -471,7 +472,7 @@ Shortcuts available in the Styles sidebar:
 
 ### Timeline
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Timeline Panel</th>
       <th>Windows</th>
@@ -498,7 +499,7 @@ Shortcuts available in the Styles sidebar:
 
 ### Profiles
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Profiles Panel</th>
       <th>Windows</th>
@@ -515,7 +516,7 @@ Shortcuts available in the Styles sidebar:
 
 ### Console
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Console Shortcuts</th>
       <th>Windows</th>
@@ -562,7 +563,7 @@ Shortcuts available in the Styles sidebar:
 
 ### Device mode
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Device Mode Shortcuts</th>
       <th>Windows</th>
@@ -579,7 +580,7 @@ Shortcuts available in the Styles sidebar:
 
 #### When screencasting
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>Screencasting Shortcuts</th>
       <th>Windows</th>
@@ -603,7 +604,7 @@ Shortcuts available in the Styles sidebar:
 
 Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](https://goo.gl/PsTNm) for Windows, Mac, and Linux:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>More Chrome Shortcuts</th>
       <th>Windows</th>

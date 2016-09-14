@@ -8,7 +8,7 @@ description: 애니메이션을 부드럽게 하고 가중치를 주는 방법�
 
 # easing의 기본 사항 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 본질적으로 어떤 것도 한 지점에서 다른 지점으로 선형 이동하지 않습니다. 실제로 물건이 이동할 때 가속하거나 감속하는 경향이 있습니다. 우리의 뇌는 이러한 종류의 모션을 예상하므로 애니메이션을 만들 때 이러한 모션을 활용해야 합니다. 자연스러운 모션은 앱 사용자에게 편안한 느낌을 주고 전반적인 사용 환경을 개선해 줍니다.

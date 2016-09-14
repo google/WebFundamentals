@@ -8,7 +8,7 @@ description: С помощью API геолокации можно опреде�
 
 # Отслеживание местоположения пользователя {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

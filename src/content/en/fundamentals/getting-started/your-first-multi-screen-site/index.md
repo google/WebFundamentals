@@ -9,7 +9,7 @@ description: The web is accessible on a huge range of devices, from small-screen
 
 Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 <img src="images/finaloutput-2x.jpg" alt="many devices showing the final project" class="attempt-right">
 

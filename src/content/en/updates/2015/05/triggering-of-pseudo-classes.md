@@ -9,7 +9,7 @@ description: Learn how to trigger pseudo classes such as :active to properly deb
 
 # Triggering of pseudo classes {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-12-devtools-triggering-of-pseudo-classes/pseudo-trigger.gif">

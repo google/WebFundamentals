@@ -9,7 +9,7 @@ description: Say goodbye to automatic playback uncertainty! play() now returns a
 
 # `HTMLMediaElement.play()` Returns a Promise {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 

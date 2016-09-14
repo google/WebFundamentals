@@ -8,7 +8,7 @@ description: Движение устройства дает информацию
 
 # Движение устройства {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

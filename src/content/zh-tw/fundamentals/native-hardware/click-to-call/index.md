@@ -8,7 +8,7 @@ description: 在具有電話功能的裝置上，方便使用者可輕易點選�
 
 # 按一下撥號 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

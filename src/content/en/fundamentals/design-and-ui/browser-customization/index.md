@@ -8,7 +8,7 @@ description: Modern browsers make it easy to customize certain components, like 
 
 # Icons & Browser Colors {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 Modern browsers make it easy to customize certain components, like icons, the address bar color, and even add things like custom tiles. These simple tweaks can increase engagement and bring users back to your site.
 

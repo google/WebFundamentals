@@ -8,7 +8,7 @@ description: Aprenda mais sobre animações e sua utilização em aplicativos e 
 
 # Animations {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Animações são uma parte enorme da criação de aplicativos e sites atraentes. O usuário espera interfaces altamente responsivas e interativas. No entanto, animar sua interface não é simples. O que deve ser animado, quando e qual tipo de efeito a animação deve produzir?

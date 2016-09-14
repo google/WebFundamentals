@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Stacking Changes Coming to position:fixed elements {: .page-title }
 
-{% include "_shared/contributors/tomwiltzius.html" %}
+{% include "web/_shared/contributors/tomwiltzius.html" %}
 
 
 In Chrome 22 the layout behavior of `position:fixed` elements is slightly different than previous versions. All `position:fixed` elements now form new stacking contexts. This will change the stacking order of some pages, which has the potential to break page layouts. The new behavior matches the behavior of WebKit browsers on mobile devices (iOS Safari and Chrome for Android).

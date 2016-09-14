@@ -8,7 +8,7 @@ description: Regras do PageSpeed Insights em contexto: em que prestar atenção 
 
 # Regras e recomendações de PageSpeed {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Regras do PageSpeed Insights em contexto: em que prestar atenção ao otimizar o caminho de processamento essencial e por quê.

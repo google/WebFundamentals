@@ -8,7 +8,7 @@ description: На мобильных устройствах заполнять �
 
 # Создание потрясающих форм {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

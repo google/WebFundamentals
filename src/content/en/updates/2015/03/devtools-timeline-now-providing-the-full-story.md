@@ -10,7 +10,7 @@ description: We've upgraded the Timeline panel for Chrome DevTools to give devel
 
 # DevTools Timeline: Now Providing the Full Story {: .page-title }
 
-{% include "_shared/contributors/heathermahan.html" %}
+{% include "web/_shared/contributors/heathermahan.html" %}
 
 
 The DevTools [Timeline panel](https://developer.chrome.com/devtools/docs/timeline) has always been the best first stop on the path to performance optimization. This centralized overview of your app’s activity helps you analyze where time is spent on loading, scripting, rendering, and painting. Recently, we’ve upgraded the Timeline with more instrumentation so that you can see a more in-depth view of your app’s performance.

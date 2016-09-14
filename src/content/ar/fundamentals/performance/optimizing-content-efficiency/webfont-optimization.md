@@ -8,7 +8,7 @@ description: يعد أسلوب الطباعة أمرًا أساسيًا للحص
 
 # تحسين خط الويب {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

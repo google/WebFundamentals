@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Workers ♥ ArrayBuffer {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 As of <strike>[crbug.com/73313](https://crbug.com/73313)</strike>, Chrome 13 and FF5 support sending an `ArrayBuffer` (or Typed Array) to/from a Web Worker. For example:

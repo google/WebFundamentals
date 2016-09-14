@@ -9,7 +9,7 @@ description: Reveal DOM nodes in the Elements panel from the Console.
 
 # Reveal in Elements panel {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-reveal-dom-nodes-in-the-elements-panel-from-the-console/reveal-in-elements.gif" alt="Reveal DOM nodes in the Elements panel from the Console">

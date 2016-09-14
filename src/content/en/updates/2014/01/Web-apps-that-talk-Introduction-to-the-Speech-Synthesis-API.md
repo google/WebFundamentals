@@ -8,7 +8,7 @@ description: Introduction to the Web Speech API's synthesis feature.
 
 # Web apps that talk - Introduction to the Speech Synthesis API {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 The [Web Speech API](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html) adds [voice recognition](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#speechreco-section) (speech to text) and [speech synthesis](https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html#tts-section) (text to speech) to JavaScript. The post briefly covers the latter, as the API recently landed in Chrome 33 (mobile and desktop). If you're interested in speech recognition, [Glen Shires](http://www.html5rocks.com/en/profiles/#glenshires) had a great writeup a while back on the voice recognition feature, "[Voice Driven Web Apps: Introduction to the Web Speech API](http://updates.html5rocks.com/2013/01/Voice-Driven-Web-Apps-Introduction-to-the-Web-Speech-API)".
 

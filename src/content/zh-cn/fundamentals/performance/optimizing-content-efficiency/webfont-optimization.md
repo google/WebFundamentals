@@ -8,7 +8,7 @@ description: 字体设计是良好的设计、品牌塑造、可读性和可访�
 
 # 网页字体优化 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: 了解如何柔化並為您的動畫加權。
 
 # 緩動基礎 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 自然界中沒有樣一東西是從一個點直線移動到另一個點。 在現實中，事物在移動時總會加速或減速。 我們的大腦設計會期待這類動作，所以在動畫處理時，應該加以利用它。 自然動作會讓您的使用者更適應您的應用程式，反過來會帶來更好的整體使用者體驗。

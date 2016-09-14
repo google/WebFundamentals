@@ -8,12 +8,12 @@ description: 默认情况下，CSS 被视为阻塞渲染的资源，这意味着
 
 # 阻塞渲染的 CSS {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 

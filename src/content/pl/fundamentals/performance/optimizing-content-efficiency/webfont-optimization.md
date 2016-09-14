@@ -8,7 +8,7 @@ description: Zagadnienie typografii ma kluczowe znaczenie w dążeniu do poprawn
 
 # Optymalizacja czcionek sieci web {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

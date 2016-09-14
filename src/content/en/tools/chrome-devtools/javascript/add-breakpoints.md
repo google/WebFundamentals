@@ -7,7 +7,7 @@ description: Use breakpoints to pause your JavaScript code and investigate the v
 
 # How to set breakpoints {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Use breakpoints to pause your JavaScript code and investigate
 the values of variables and the call stack at that particular moment in

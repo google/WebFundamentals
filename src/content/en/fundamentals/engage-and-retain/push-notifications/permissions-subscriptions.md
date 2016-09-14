@@ -8,7 +8,7 @@ description: Requesting permission for and subscribing users to notifications re
 
 # Requesting permission and subscribing users {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 Requesting permission for and subscribing users to notifications requires as
 light a touch as showing them notifications.

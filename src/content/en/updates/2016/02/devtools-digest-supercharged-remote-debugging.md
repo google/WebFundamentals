@@ -9,7 +9,7 @@ description: Learn all about the revamped “Inspect Devices” UI, toggle class
 
 # Supercharged Remote Debugging, Class Toggles and Our Own Late Night Show?! {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

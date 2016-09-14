@@ -7,8 +7,8 @@ description: Identify expensive functions using the Chrome DevTools  CPU Profile
 
 # Speed Up JavaScript Execution {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Identify expensive functions using the Chrome DevTools CPU 
 Profiler.

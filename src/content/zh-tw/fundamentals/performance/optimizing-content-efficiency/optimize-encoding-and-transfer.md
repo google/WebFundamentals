@@ -8,7 +8,7 @@ description: 在我們消除了任何不必要的資源之後，下一步就是�
 
 # 最佳化文字資產的編碼和傳輸大小 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

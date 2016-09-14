@@ -8,7 +8,7 @@ description: 每個應用程式所下載的資料數量不斷增加。為了提�
 
 # 最佳化內容效率 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

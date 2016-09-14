@@ -1,8 +1,8 @@
 runtime: python27
 api_version: 1
 threadsafe: true
-# application: petele-scratch
-# version: wf-devsite
+application: petele-scratch
+version: wf-devsite
 
 handlers:
 - url: /robots.txt
@@ -51,12 +51,12 @@ handlers:
   secure: always
 
 skip_files:
-- ^(gulp-tasks/.*)
-- ^(node_modules/.*)
-- ^(scratch/.*)
-- ^(tools/.*)
-- ^(src/data/.*)
-- ^(src/templates/.*)
+- ^gulp-tasks/.*
+- ^node_modules/.*
+- ^scratch/.*
+- ^tools/.*
+- ^src/data/.*
+- ^src/templates/.*
 - ^(.*/)?#.*#$
 - ^(.*/)?.*~$
 - ^(.*/)?.*\.DS_Store$

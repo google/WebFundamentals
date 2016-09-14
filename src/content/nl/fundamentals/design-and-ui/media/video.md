@@ -8,7 +8,7 @@ description: Lees wat de eenvoudigste manieren zijn om video toe te toevoegen aa
 
 # Video {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: You've seen what makes a good notification. Now let's see how to im
 
 # Handling messages {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 <figure class="attempt-right">
   <img src="images/joe-asked.png" alt="The example notification.">

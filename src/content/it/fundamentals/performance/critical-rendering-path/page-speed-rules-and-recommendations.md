@@ -8,7 +8,7 @@ description: Regole di PageSpeed Insights nel contesto: a cosa prestare attenzio
 
 # Regole e consigli per PageSpeed {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Regole di PageSpeed Insights nel contesto: a cosa prestare attenzione quando si ottimizza il percorso di rendering critico e perché.

@@ -8,7 +8,7 @@ description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋�
 
 # 멋진 양식 만들기 {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

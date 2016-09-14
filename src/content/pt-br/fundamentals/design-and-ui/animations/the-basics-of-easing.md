@@ -8,7 +8,7 @@ description: Aprenda a suavizar e dar peso às suas animações.
 
 # The Basics of Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Nada na natureza se move linearmente de um ponto para o outro. Na realidade, as coisas tendem a acelerar ou desacelerar conforme se movem. Nossos cérebros esperam esse tipo de movimento, portanto, ao criar uma animação, isso essa informação a seu favor. O movimento natural fará com que o usuário se sinta mais confortável com seus aplicativos, que por sua vez levará a uma melhor experiência geral.

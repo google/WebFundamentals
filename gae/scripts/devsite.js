@@ -13,6 +13,35 @@
     });
   }
 
+  function initLangSelector() {
+    var currentLang = 'en';
+    var langSelector = document.querySelector('#langSelector');
+    var queryParams = window.location.search;
+    if (queryParams.length > 0) {
+      queryParams = queryParams.substring(1).split('&');
+      for (var i = 0; i < queryParams.length; i++) {
+        var qp = queryParams[i];
+        if (qp.indexOf('hl=') === 0) {
+          currentLang = qp.replace('hl=', '');
+          break;
+        }
+      }
+    }
+    var langOptions = langSelector.querySelectorAll('option');
+    langOptions.forEach(function(opt) {
+      if (opt.value === currentLang) {
+        opt.setAttribute('selected', true);
+      }
+    });
+    langSelector.addEventListener('change', function(evt) {
+      var newLang = langSelector.selectedOptions[0].value;
+      var newUrl = window.location.origin + window.location.pathname;
+      newUrl += '?hl=' + newLang;
+      newUrl += window.location.hash;
+      window.location = newUrl;
+    });
+  }
+
   /* Expand/Collapses the Primary Left Hand Nav */
   function toggleNav(event) {
     var srcElement = event.srcElement;
@@ -98,4 +127,5 @@
   highlightActiveNavElement();
   initYouTubeVideos();
   initFeed();
+  initLangSelector();
 })();

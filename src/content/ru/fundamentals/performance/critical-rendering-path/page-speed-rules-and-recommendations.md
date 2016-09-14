@@ -8,7 +8,7 @@ description: Правила PageSpeed Insights: на что обращать в�
 
 # Правила и рекомендации PageSpeed {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Правила PageSpeed Insights: на что обращать внимание при оптимизации процесса визуализации и почему.

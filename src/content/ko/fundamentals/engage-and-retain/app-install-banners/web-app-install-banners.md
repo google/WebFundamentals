@@ -8,12 +8,12 @@ description: 당신의 앱이 요건을 모두 충족하면 크롬이 배너를 
 
 # 인스톨 배너를 표시하기 위한 조건은 무엇인가요? {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

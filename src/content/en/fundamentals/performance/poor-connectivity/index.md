@@ -8,7 +8,7 @@ description: It's important to understand what your app or site feels like when 
 
 # Understanding Low Bandwidth and High Latency {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
 

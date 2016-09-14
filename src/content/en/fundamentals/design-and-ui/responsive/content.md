@@ -7,7 +7,7 @@ description: Consider content as well as layout and graphic design when building
 
 # Multi-device content {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 ## How people read on the web
 

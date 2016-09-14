@@ -8,7 +8,7 @@ description: 最快最好的最佳化資源是不需要下載的資源。最近�
 
 # 刪除不必要的下載 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

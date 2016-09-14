@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # The amazing powers of CSS {: .page-title }
 
-{% include "_shared/contributors/ilmariheikkinen.html" %}
+{% include "web/_shared/contributors/ilmariheikkinen.html" %}
 
 
 Yesterday at the office, we were coming up with strange and magical CSS tricks. Take this one for instance, it makes empty links very visible:

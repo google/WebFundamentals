@@ -8,7 +8,7 @@ description: 您需要瞭解很多常見問題，才可確定並解決關鍵轉�
 
 # 分析關鍵轉譯路徑效能 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 您需要瞭解很多常見問題，才可確定並解決關鍵轉譯路徑效能方面的瓶頸。現在就讓我們開始實作之旅，找出常見的效能模式，以便您將網頁最佳化。

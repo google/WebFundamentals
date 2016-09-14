@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Chrome Apps provide the power and user experience of native apps with the development simplicity and security of the Web, and integrate seamlessly with Google services like Drive. Chrome Apps run on Mac, Windows, Linux, and ChromeOS, as well as iOS and Android, right out of the box.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: f3NctLbtsNE #}

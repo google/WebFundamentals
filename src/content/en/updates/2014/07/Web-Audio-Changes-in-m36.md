@@ -9,7 +9,7 @@ description: Description of Web Audio standards cleanup work in m36
 
 # Web Audio Changes in m36 {: .page-title }
 
-{% include "_shared/contributors/chriswilson.html" %}
+{% include "web/_shared/contributors/chriswilson.html" %}
 
 
 Web Audio changes

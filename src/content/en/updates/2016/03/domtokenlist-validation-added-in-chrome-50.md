@@ -8,7 +8,7 @@ description: Check support for various features directly in code, coming in Chro
 
 # DOMTokenList Validation Added in Chrome 50 {: .page-title }
 
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 

@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # A New Experimental Feature: scoped stylesheets {: .page-title }
 
-{% include "_shared/contributors/alexdanilo.html" %}
+{% include "web/_shared/contributors/alexdanilo.html" %}
 
 
 Chromium recently implemented a new feature from HTML5: scoped stylesheets, aka.

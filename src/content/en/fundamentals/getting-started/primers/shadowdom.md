@@ -7,13 +7,15 @@ description: Shadow DOM allows web developers to create compartmentalized DOM an
 
 # Shadow DOM v1: self-contained web components {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
-<!-- <script>
+{% comment %}
+<script>
 function supportsShadowDOM() {
   return !!HTMLElement.prototype.attachShadow;
 }
-</script> -->
+</script>
+{% endcomment %}
 
 
 Note: **Already familiar with Shadow DOM?** This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
@@ -34,11 +36,11 @@ You don't have to author web components that use shadow DOM. But when you do, yo
 
 Shadow DOM is designed as a tool for building component-based apps. Therefore, it brings solutions for common problems in web development:
 
-- **Isolated DOM**: a component's DOM is self-contained (e.g. `document.querySelector()` won't return nodes in the component's shadow DOM).
-- **Scoped CSS**: CSS defined inside shadow DOM is scoped to it. Styles rules don't leak out and page styles don't bleed in.
-- **Composition**: design a declarative, markup-based API for your component.
-- **Simplifies CSS** - scoped DOM means you can use simple CSS selectors, more generic id/class names, and not worry about naming conflicts.
-- **Productivity tool** - think of apps in chunks of DOM rather than one large (global) page.
+- **Isolated DOM**: A component's DOM is self-contained (e.g. `document.querySelector()` won't return nodes in the component's shadow DOM).
+- **Scoped CSS**: CSS defined inside shadow DOM is scoped to it. Style rules don't leak out and page styles don't bleed in.
+- **Composition**: Design a declarative, markup-based API for your component.
+- **Simplifies CSS** - Scoped DOM means you can use simple CSS selectors, more generic id/class names, and not worry about naming conflicts.
+- **Productivity** - Think of apps in chunks of DOM rather than one large (global) page.
 
 Although you can use the shadow DOM API and its benefits outside of web components, I'm only going to focus on examples that build on custom elements. I'll be using the custom elements v1 API in all examples.
 {: .wf-talkinghead }
@@ -68,7 +70,7 @@ When the browser loads a web page it does a bunch of interesting stuff. One of t
     document.body.appendChild(header);
     
 
-produces the equivalent of the following HTML markup:
+produces the following HTML markup:
 
 
     <body>
@@ -78,7 +80,7 @@ produces the equivalent of the following HTML markup:
     </body>
     
 
-OK, all that is well and good. Then what the heck is _shadow DOM_?
+All that is well and good. Then what the heck is _shadow DOM_?
 
 #### DOM...in the shadows {#sddom}
 
@@ -821,7 +823,8 @@ Inheritable styles (`background`, `color`, `font`, `line-height`, etc.) continue
     </script>
     
 
-<!-- <div class="demoarea">
+{% comment %}
+<div class="demoarea">
   <style>
     #initialdemo {
       padding: 10px;
@@ -855,7 +858,8 @@ if (supportsShadowDOM()) {
     <slot></slot>
   `;
 }
-</script> -->
+</script>
+{% endcomment %}
 
 ### Finding all the custom elements used by a page {#findall}
 
@@ -885,7 +889,7 @@ Sometimes it's useful to find custom elements used on the page. To do so, you ne
     findAllCustomElements(document.querySelectorAll('*'));
     
 
-<!--
+{% comment %}
 Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySelectorAll()`:
 
 
@@ -896,7 +900,7 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
     
 
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
--->
+{% endcomment %}
 
 ### Creating elements from a &lt;template> {#fromtemplate}
 
@@ -966,14 +970,16 @@ Nope! You don't have to create web components that use shadow DOM. However, auth
 See [Closed shadow roots](#closed).
 
 
-<!-- <script>
+{% comment %}
+<script>
 if (!supportsShadowDOM()) {
   const demos = document.querySelectorAll('.demoarea');
   Array.from(demos).forEach(function(demo) {
     demo.hidden = true;
   });
 }
-</script> -->
+</script>
+{% endcomment %}
 
 [ce_spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [ce_article]: (/web/fundamentals/getting-started/primers/customelements)

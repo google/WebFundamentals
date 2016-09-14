@@ -9,7 +9,7 @@ description: Firefox 48 joins Chrome in shipping a native implementation of the 
 
 # Web Animations API hits cross-browser milestone {: .page-title }
 
-{% include "_shared/contributors/alexdanilo.html" %}
+{% include "web/_shared/contributors/alexdanilo.html" %}
 
 
 

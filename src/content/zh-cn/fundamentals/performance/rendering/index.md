@@ -12,7 +12,7 @@ description: 页面渲染性能的优化非常重要！如果你的网站渲染�
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 用户都 <a href=\"http://paul.kinlan.me/what-news-readers-want/\">希望他们访问的web应用是可交互且运行流畅的</a>。因此，作为web开发者，你也要在这方面多花点功夫。你所做的页面，不但要能被快速加载，还要能流畅运行：页面的滚动要快速响应手指的动作，动画和交互效果更要如丝般顺滑。

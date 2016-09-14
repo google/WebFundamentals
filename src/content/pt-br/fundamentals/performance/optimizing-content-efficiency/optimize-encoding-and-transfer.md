@@ -8,7 +8,7 @@ description: Após eliminar todos os recursos desnecessários, a próxima etapa 
 
 # Otimização da codificação e do tamanho de transferência de recursos baseados em texto {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

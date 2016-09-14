@@ -24,16 +24,14 @@ redirects:
 - from: /web/shows/devbytes/...
   to: https://www.youtube.com/user/ChromeDevelopers/
 
-# TODO
 - from: /web/shows/google-io/2014/
-  to: /web/shows/google-io/2014/
+  to: /web/shows/google-io/
 
-# TODO
 - from: /web/shows/google-io/2015/
-  to: /web/shows/google-io/2015/
+  to: /web/shows/google-io/
 
-- from: /web/shows/http203/...
-  to: /web/shows/http203/
+- from: /web/shows/google-io/2016/
+  to: /web/shows/google-io/
 
 - from: /web/shows/lazyweb/...
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAphRfFANEdt5WTb87aZZDk

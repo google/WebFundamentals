@@ -7,6 +7,6 @@ description: このサイトの構築方法を学ぶのに役立つリソース�
 
 # リソース {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 

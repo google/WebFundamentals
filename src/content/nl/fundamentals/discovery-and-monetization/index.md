@@ -7,12 +7,12 @@ book_path: /web/fundamentals/_book.yaml
 
 # Ontdekken en Distributie {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/yvoschaap.html" %}
+{% include "web/_shared/contributors/yvoschaap.html" %}
 
 
 

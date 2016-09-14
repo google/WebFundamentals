@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Paul and Jake talk about physics-based animation, asking the browser for permanent storage space, and how to find where a Chrome bug was created.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-07-03 #}
 {# wf_published_on: 2016-07-03 #}
 {# wf_audio_url: https://storage.googleapis.com/http-203-podcast/epsiode-5.mp3 #}

@@ -4,12 +4,12 @@ description: Internet of Things is really on everyone's lips these days, but wha
 
 {# wf_updated_on: 2016-04-04 #}
 {# wf_published_on: 2016-03-19 #}
-{# wf_tags: news,Bluetooth,IoT,WebBluetooth,PhysicalWeb,Edison #}
+{# wf_tags: news,iot,webbluetooth,physicalweb,edison #}
 {# wf_featured_image: /web/updates/images/2016/03/web-enabled-internet-of-things/board.jpg #}
 
 # Creating a Web-enabled IoT device with Intel Edison {: .page-title }
 
-{% include "_shared/contributors/kenchris.html" %}
+{% include "web/_shared/contributors/kenchris.html" %}
 
 
 The Internet of Things is on everyone's lips these days, and

@@ -8,7 +8,7 @@ description: Layout é onde o navegador descobre a informação geométrica para
 
 # Avoid large, complex layouts and layout thrashing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Layout é onde o navegador descobre a informação geométrica para os elementos: seu tamanho e localização na página. Cada elemento terá uma informação de dimensionamento explícita ou implícita com base no CSS que foi usado, o conteúdo do elemento ou um elemento principal. O processo é chamado Layout no Chrome, Opera, Safari e Internet Explorer. No Firefox, é chamado de Reflow, mas na realidade o processo é o mesmo.

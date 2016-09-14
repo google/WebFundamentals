@@ -8,8 +8,8 @@ description: 當移轉至 HTTPS 時，網站營運者經常面臨的障礙之一
 
 # 安全性術語簡介 {: .page-title }
 
-{% include "_shared/contributors/chrispalmer.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

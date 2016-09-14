@@ -7,7 +7,7 @@ description: Debug WebViews in your native Android apps using Chrome Developer T
 
 # Remote Debugging WebViews {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Debug WebViews in your native Android apps using Chrome Developer Tools.
 

@@ -8,7 +8,7 @@ description: easing in, easing out 및 easing in out 중에 프로젝트에 적�
 
 # 적합한 easing 선택 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 애니메이션에 사용할 수 있는 다양한 easing 옵션을 살펴보고 프로젝트에 어떤 종류를 사용하고 애니메이션에 어떤 종류의 기간을 사용해야 하는지 설명합니다.

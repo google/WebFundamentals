@@ -9,7 +9,7 @@ description: Learn how to debug a network request from the command line.
 
 # Replay a network request in cURL {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-15-devtools-replay-a-network-request-in-curl/copy-as-curl.gif">

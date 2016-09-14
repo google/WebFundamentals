@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # CSS Filter Effects Landing in WebKit {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 ### Background

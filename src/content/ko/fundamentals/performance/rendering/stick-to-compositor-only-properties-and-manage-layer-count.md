@@ -8,7 +8,7 @@ description: 합성(compositing)은 화면에 표시하기 위해 페이지의 �
 
 # 컴포지터(compositor) 전용 속성 고수 및 레이어 수 관리 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 합성(compositing)은 화면에 표시하기 위해 페이지의 그림 그린 부분을 합치는 과정입니다.

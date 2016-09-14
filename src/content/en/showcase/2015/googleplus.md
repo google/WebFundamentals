@@ -120,7 +120,7 @@ with rich UI. The site is now faster and leaner than ever before.
 > We hit our goal of never downloading more than 60k of HTML, 60k of 
 > JavaScript and 60k of CSS at any one time!
 
-<table class="mdl-data-table mdl-js-data-table">
+<table class="">
   <thead>
     <tr>
       <th></th>

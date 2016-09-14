@@ -7,7 +7,7 @@ description: Memory loss occurs when a program repeatedly fails to return memory
 
 # Fix Memory Problems {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Memory loss occurs when a program repeatedly fails to return memory it has obtained for temporary use. Watch out for memory leaks, bloat, and forced garbage collection.
 

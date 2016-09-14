@@ -8,7 +8,7 @@ description: With Chrome 52, we’re introducing the ability to make storage per
 
 # Persistent Storage {: .page-title }
 
-{% include "_shared/contributors/chriswilson.html" %}
+{% include "web/_shared/contributors/chriswilson.html" %}
 
 
 

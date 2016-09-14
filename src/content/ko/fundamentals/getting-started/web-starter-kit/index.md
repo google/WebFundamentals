@@ -8,7 +8,7 @@ description: 새 프로젝트는 시작하는 것이 가장 어려울 수 있습
 
 # Web Starter Kit를 사용하여 사이트 시작 {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

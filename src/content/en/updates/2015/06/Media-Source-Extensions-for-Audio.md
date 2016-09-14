@@ -4,11 +4,11 @@ description: Media Source Extensions (MSE) provide extended buffering and playba
 
 {# wf_updated_on: 2015-06-21 #}
 {# wf_published_on: 2015-06-11 #}
-{# wf_tags: news,audio,codecs,MediaSourceExtensions,MSE #}
+{# wf_tags: news,audio,codecs,mse #}
 
 # Media Source Extensions for Audio {: .page-title }
 
-{% include "_shared/contributors/dalecurtis.html" %}
+{% include "web/_shared/contributors/dalecurtis.html" %}
 
 # Introduction
 

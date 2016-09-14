@@ -9,7 +9,7 @@ description: Do you frequently emulate devices of a certain dimension? In DevToo
 
 # Add a new custom device as a preset {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-22-add-a-new-custom-device-as-a-preset/add-new-device.gif" alt="Add a new custom device as a preset">

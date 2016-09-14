@@ -9,7 +9,7 @@ description: You can use the <code>Is:running</code> Advanced Network Filter to 
 
 # Unfinished network requests {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-see-unfinished-network-requests-with-the-is-running-network-filter/is-running.gif" alt="See unfinished network requests with the is:running network filter">

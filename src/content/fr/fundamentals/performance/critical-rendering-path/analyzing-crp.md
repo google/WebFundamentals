@@ -8,7 +8,7 @@ description: Identifier et résoudre les problèmes de chemin critique du rendu 
 
 # Analyser la performance du chemin critique du rendu {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Identifier et résoudre les problèmes de chemin critique du rendu nécessite une bonne connaissance des pièges habituels. Nous allons étudier la question sous un angle pratique pour en tirer les modèles de performance courants qui vous permettront d'optimiser vos pages.

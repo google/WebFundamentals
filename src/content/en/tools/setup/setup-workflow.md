@@ -7,9 +7,9 @@ description: Set up persistent authoring in Chrome DevTools so you can both see 
 
 # Set Up Persistence with DevTools Workspaces {: .page-title }
 
-{% include "_shared/contributors/dgash.html" %}
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Set up persistent authoring in Chrome DevTools so you can both see your changes immediatedly and save those changes to disk.
 

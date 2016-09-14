@@ -8,7 +8,7 @@ description: Os padrões de design da Web responsivos estão evoluindo rapidamen
 
 # Responsive Web Design Patterns {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Processing XHR2 file uploads in PHP {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 My article "[New Tricks in XMLHttpRequest2](http://www.html5rocks.com/tutorials/file/xhr2/)" has many fine examples, but what it doesn't have is any server code to illustrate how to handle files. If you're curious how to process a file upload using `xhr.send(FormData)`, here's a quick example of an image upload in PHP.

@@ -8,7 +8,7 @@ description: Aprenda como animar visualizações modais em seus aplicativos.
 
 # Animating Modal Views {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 As visualizações modais são para mensagens importantes e, por isso, você tem bons motivos para bloquear a interface do usuário. Deve-se tomar cuidado ao usá-las pois elas incomodam podem e facilmente arruinar a experiência do usuário se utilizadas em excesso. Mas, em algumas situações, são a alternativa correta e um pouco de animação dará vida às visualizações.

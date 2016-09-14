@@ -9,7 +9,7 @@ description: Right click on an image preview within the Resources Panel to copy 
 
 # Copy image as data URI {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-copy-image-as-data-uri/copy-as-data-uri.gif" alt="DevTools - Copy image as data URI">

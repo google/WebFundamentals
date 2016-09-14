@@ -8,7 +8,7 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 
 # 圖片最佳化 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

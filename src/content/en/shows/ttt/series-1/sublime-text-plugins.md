@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: The minute you start developing a site, the first tool you’ll use is a text editor, whether it’s as simple as notepad or a full-blown IDE. In this episode, Addy & Matt look at their collection of plugins for Sublime Text and discuss how each one helps with their workflow.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-05-19 #}
 {# wf_published_on: 2015-05-19 #}
 {# wf_youtube_id: 2eu23_if6Lw #}

@@ -8,7 +8,7 @@ description: Pixelation of the nation. Now in Chrome 41
 
 # image-rendering: pixelated {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

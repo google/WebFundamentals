@@ -4,13 +4,13 @@ description: Web push has had a few updates in recent versions of Chrome. GCM no
 
 {# wf_updated_on: 2016-07-27 #}
 {# wf_published_on: 2016-07-27 #}
-{# wf_tags: web,push,notifications #}
+{# wf_tags: webpush,notifications #}
 {# wf_featured_image: /web/updates/images/2016/07/web-push-interop-wins/featured-image.png #}
 
 # Web Push Interoperability Wins {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 When Chrome first supported the Web Push API, it relied on the non-standard
 Google Cloud Messaging (GCM) sender ID and it's protocol. Although it was

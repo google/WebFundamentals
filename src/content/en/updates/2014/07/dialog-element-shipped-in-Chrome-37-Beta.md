@@ -8,7 +8,7 @@ description: Chrome Beta has landed its native support for &lt;dialog&gt; elemen
 
 # dialog element shipped in Chrome 37 Beta {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 Chrome Beta has landed its native support for &lt;dialog&gt; element without needing "Enable experimental Web Platform features." flag turned on.

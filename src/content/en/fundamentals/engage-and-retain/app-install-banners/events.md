@@ -8,8 +8,8 @@ description: You can defer or cancel the app install banner, and understand how 
 
 # App Install Banner Events {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 Chrome provides an easy mechanism to determine how the user responded to the
 app install banner and even cancel or defer it until a more convenient time.
@@ -46,16 +46,16 @@ install prompt.
 
 ## Deferring or cancelling the prompt
 
-Chrome manages when to trigger the prompt but for some sites this might not 
+Chrome manages when to trigger the prompt, but for some sites this might not 
 be ideal. You can defer the prompt to a later time in the app's usage or 
 even cancel it. 
 
-When Chrome decides to prompt the user to install the app you 
-can prevent the default action and store the event for later. Then when 
-the user has a positive interaction with your site you can then re-trigger 
+When Chrome decides to prompt the user to install the app, you 
+can prevent the default action and store the event for later. Then, when 
+the user has a positive interaction with your site, you can then re-trigger 
 the prompt by calling `prompt()` on the stored event. 
 
-This causes Chrome to show the banner and all the Promise attributes 
+This causes Chrome to show the banner, and all the Promise attributes 
 such as `userChoice` will be available to bind to so that you can understand 
 what action the user took.
     
@@ -89,7 +89,7 @@ what action the user took.
             console.log('User added to home screen');
           }
           
-          // We no longer need the prompt.  Clear it up.
+          // We no longer need the prompt. Clear it up.
           deferredPrompt = null;
         });
       }

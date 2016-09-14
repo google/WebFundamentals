@@ -8,7 +8,7 @@ description: Kullanicinin bir sayfada gerçeklestirmek istedigi birincil eylemle
 
 # Kritik Olusturma Yolu {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Kritik olusturma yolunun optimize edilmesi sayfalarimizin performansini iyilestirme açisindan kritik öneme sahiptir: Amacimiz, kullanicinin bir sayfada gerçeklestirmek istediginiz birincil eylemle ilgili içerige öncelik tanimak ve bu içerigi görüntülemektir.

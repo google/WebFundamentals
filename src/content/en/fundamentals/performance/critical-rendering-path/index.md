@@ -7,7 +7,7 @@ description: Optimizing the critical rendering path refers to prioritizing the d
 
 # Critical Rendering Path {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 _Optimizing the critical rendering path_ refers to prioritizing the display of

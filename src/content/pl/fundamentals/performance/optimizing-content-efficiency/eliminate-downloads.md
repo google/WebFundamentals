@@ -8,7 +8,7 @@ description: Najszybszym i najbardziej optymalnym zasobem jest zasób, którego 
 
 # Eliminowanie niepotrzebnych pobrań {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: Событие 'изменение ориентации устро�
 
 # Ориентация устройства {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

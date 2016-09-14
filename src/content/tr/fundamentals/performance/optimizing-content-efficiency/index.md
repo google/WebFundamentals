@@ -8,7 +8,7 @@ description: Her bir uygulama tarafindan indirilen veri miktari artmaya devam et
 
 # Içerik Verimliligini Optimize Etme {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

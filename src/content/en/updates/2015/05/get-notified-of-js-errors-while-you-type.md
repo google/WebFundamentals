@@ -9,7 +9,7 @@ description: If you get an error in the console panel, click it to reveal the li
 
 # Get notified of JS errors while you type {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-get-notified-of-js-errors-while-you-type/inline-js-errors.gif" alt="Get notified of JS errors while you type">

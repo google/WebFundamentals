@@ -8,7 +8,7 @@ description: Par défaut, le code CSS est traité comme ressource empêchant l'a
 
 # Code CSS empêchant l'affichage {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Par défaut, le code CSS est traité comme ressource empêchant l'affichage, ce qui signifie que le navigateur suspend l'affichage de tout contenu traité jusqu'à ce que le modèle CSSOM soit construit. Assurez-vous de conserver un code CSS simple, faites en sorte qu'il soit transmis le plus vite possible, et utilisez des types et requêtes de média pour débloquer l'affichage.

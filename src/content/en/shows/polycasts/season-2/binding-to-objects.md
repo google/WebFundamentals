@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Binding to objects and subproperties has always confused me. Until now! Today on Polycasts I’ll show you what’s going on under-the-hood when Polymer tries to bind to a property of an object.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-10-20 #}
 {# wf_published_on: 2015-10-20 #}
 {# wf_youtube_id: 0GxteaIaj2Q #}

@@ -8,7 +8,7 @@ description: Es complicado completar formularios desde el celular. Los mejores f
 
 # Creación de formularios asombrosos {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

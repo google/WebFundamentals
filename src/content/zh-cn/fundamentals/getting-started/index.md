@@ -11,8 +11,8 @@ description: 给所有能访问到 web 的设备构建运行良好的网站和�
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
 
 
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: It might seem crazy, but using an element for AJAX is actually pretty great! In this episode I’ll show you how to build a simple GitHub issue fetcher, using primarily HTML. When you combine data providers with the magic of bindings, you can remove most of the JavaScript in your app, and that makes things much easier to maintain!
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-10-13 #}
 {# wf_published_on: 2015-10-13 #}
 {# wf_youtube_id: ImvMVR-l374 #}

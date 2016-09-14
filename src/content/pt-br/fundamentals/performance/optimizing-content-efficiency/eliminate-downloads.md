@@ -8,7 +8,7 @@ description: O recurso mais rápido e mais otimizado é um recurso não enviado.
 
 # Eliminar downloads desnecessários {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

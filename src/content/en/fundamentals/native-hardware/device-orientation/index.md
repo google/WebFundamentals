@@ -7,7 +7,7 @@ description: Device motion and orientation events provide access to the built in
 
 # Device Orientation & Motion {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Device motion and orientation events provide access to the built-in
 accelerometer, gyroscope, and compass in mobile devices.
@@ -277,13 +277,7 @@ screen facing up.
 Conversely, if the phone were held so the screen was perpendicular to the
 ground, and was directly visible to the viewer:
 
-<table class="mdl-data-table mdl-js-data-table">
-  <colgroup>
-    <col span="1">
-    <col span="1">
-    <col span="1">
-    <col span="1">
-  </colgroup>
+<table>
   <thead>
     <tr>
       <th data-th="State">State</th>

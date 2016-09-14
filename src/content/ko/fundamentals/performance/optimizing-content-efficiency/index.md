@@ -8,12 +8,12 @@ description: 애플리케이션이 다운로드하는 데이터량은 시간이 
 
 # 콘텐츠 효율 최적화 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/jeokrang.html" %}
+{% include "web/_shared/contributors/jeokrang.html" %}
 
 
 

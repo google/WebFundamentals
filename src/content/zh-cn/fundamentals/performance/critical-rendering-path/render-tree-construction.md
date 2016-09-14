@@ -8,12 +8,12 @@ description: CSSOM 树与 DOM 树融合成一棵渲染树，随后计算每个�
 
 # 渲染树构建、布局及绘制 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: Como otimizar o caminho de processamento essencial ao priorizar a e
 
 # Caminho de processamento essencial {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Otimizar o caminho de processamento essencial é muito importante para melhorar o desempenho de nossas páginas: a meta é priorizar e exibir o conteúdo relacionado à ação primária que o usuário deseja realizar na página.

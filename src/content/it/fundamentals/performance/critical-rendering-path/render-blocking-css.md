@@ -8,7 +8,7 @@ description: Per impostazione predefinita, CSS viene trattato come risorsa di bl
 
 # CSS del blocco di rendering {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Per impostazione predefinita, CSS viene trattato come risorsa di blocco del rendering, il che significa che il browser sospenderà il rendering di qualsiasi contenuto elaborato fino alla costruzione di CSSOM. Assicurarsi di mantenere il CSS snello, di fornirlo il più rapidamente possibile e di utilizzare i tipi di supporti e le query supporti per sbloccare il rendering.

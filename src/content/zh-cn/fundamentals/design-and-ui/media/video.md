@@ -8,12 +8,12 @@ description: 学习给网站添加视频的最简方法，确保用户在任何�
 
 # 视频 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: 确定并解决关键呈现路径性能方面的瓶颈需要了解�
 
 # 分析关键呈现路径性能 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: 最初のレンダリングをできる限り早くするには、�
 
 # クリティカル レンダリング パスを最適化する {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

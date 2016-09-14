@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # 7 minute videos: Javascript Console Protips & newish DOM APIs {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 <p>I recently recorded some videos from the comfy red chair in our office. Probably some useful things here to learn.</p>

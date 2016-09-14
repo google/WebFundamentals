@@ -8,7 +8,7 @@ description: Nadat we alle overbodige hulpbronnen hebben verwijderd, moeten we d
 
 # Codering en omvang van tekstitems optimaliseren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: В данном разделе для генерации откры
 
 # Генерация ключей и запросы на получение сертификата {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

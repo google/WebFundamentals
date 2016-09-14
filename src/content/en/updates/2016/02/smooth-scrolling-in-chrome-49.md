@@ -9,7 +9,7 @@ description: Tired of jittery scrolling? Great, because Chrome 49 is shipping wi
 
 # Smooth Scrolling in Chrome 49 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

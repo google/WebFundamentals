@@ -8,7 +8,7 @@ description: Les images font justement partie intégrante de chaque page. Cepend
 
 # Images {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

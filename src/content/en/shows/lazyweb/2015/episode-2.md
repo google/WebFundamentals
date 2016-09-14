@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Service workers hit Firefox Nightly, daily DevTools tips in your inbox, debugging IE in Chrome, using Flexbox for RWD, saving the universe with 1k of JavaScript, and generators are in the works for IE and Spartan.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-20 #}
 {# wf_published_on: 2015-04-20 #}
 {# wf_youtube_id: j9i4Eq9_S5Y #}

@@ -8,7 +8,7 @@ description: Le strutture CSSOM e DOM vengono unite in una struttura di renderin
 
 # Costruzione della struttura di rendering, layout e disegno {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Le strutture CSSOM e DOM vengono unite in una struttura di rendering, che viene poi utilizzata per calcolare il layout di ciascun elemento visibile e che serve da input al processo di disegno che esegue il rendering dei pixel sullo schermo. Ottimizzare ciascuno di questi passaggi è cruciale per ottenere una performance di rendering ottimale.

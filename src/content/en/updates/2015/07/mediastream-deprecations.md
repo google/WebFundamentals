@@ -4,11 +4,11 @@ description: The MediaStream API represents synchronized streams of audio or vid
 
 {# wf_updated_on: 2015-07-21 #}
 {# wf_published_on: 2015-07-21 #}
-{# wf_tags: news,audio,video,media,MediaStream,MediaStreamTrack,getUserMedia,RTCPeerConnection,WebRTC #}
+{# wf_tags: news,audio,video,media,mediastream,mediastreamtrack,getusermedia,rtcpeerconnection,webrtc #}
 
 # MediaStream Deprecations {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

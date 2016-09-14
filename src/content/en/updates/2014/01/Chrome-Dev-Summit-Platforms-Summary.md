@@ -8,7 +8,7 @@ description: Platforms
 
 # Chrome Dev Summit: Platforms Summary {: .page-title }
 
-{% include "_shared/contributors/sethladd.html" %}
+{% include "web/_shared/contributors/sethladd.html" %}
 
 
 # Dart

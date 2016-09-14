@@ -8,7 +8,7 @@ description: An introduction to Mutation Observers.
 
 # Detect DOM changes with Mutation Observers {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Back in 2000, the [Mutation Events API was specified](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-eventgroupings-mutationevents) to make it easy for developers to react to changes in a DOM (e.g. DOMNodeRemoved, DOMAttrModified, etc).

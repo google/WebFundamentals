@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: It’s neon-animated-pages time! This is probably one of the most requested videos so I’m really glad I could finally talk about it. Now that you understand behaviors, neon-animations, and how the iron-pages element works, we can finally tie it all together to start working with neon-animated-pages. Hope you enjoy!
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-09-07 #}
 {# wf_published_on: 2015-09-07 #}
 {# wf_youtube_id: wMhq1o0DULM #}

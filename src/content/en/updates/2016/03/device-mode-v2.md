@@ -9,7 +9,7 @@ description: Learn all about Chrome DevTools' new, refreshed Device Mode introdu
 
 # A new Device Mode for a mobile-first generation {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

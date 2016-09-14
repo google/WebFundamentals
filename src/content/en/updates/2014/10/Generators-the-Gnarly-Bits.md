@@ -8,7 +8,7 @@ description: An exploration of ES6 Generators.
 
 # Generators: the Gnarly Bits {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 The [ECMAScript 6 draft specification](http://people.mozilla.org/~jorendorff/es6-draft.html) has already yielded many sources of joy for the modern JavaScript developer. We covered some new collections classes and `for..of` iteration loops in a [previous post](http://updates.html5rocks.com/2014/08/Collecting-and-Iterating-the-ES6-Way). In this post, we’re going to talk about something that goes hand-in-hand with `for..of` loops: [generator functions](https://people.mozilla.org/~jorendorff/es6-draft.html#sec-generator-function-definitions).
 

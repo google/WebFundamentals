@@ -8,7 +8,7 @@ description: Voordat de inhoud op het scherm kan worden weergegeven, moet de bro
 
 # Het Objectmodel opbouwen {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Voordat de inhoud op het scherm kan worden weergegeven, moet de browser de DOM- en CSSOM-boomstructuren opbouwen. Daarom moeten we ervoor zorgen dat zowel de HTML als het CSS zo snel mogelijk aan de browser worden geleverd.

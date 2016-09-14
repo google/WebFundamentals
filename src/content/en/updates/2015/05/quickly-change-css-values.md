@@ -9,7 +9,7 @@ description: Quickly change CSS values with the keyboard or mousewheel
 
 # Quickly change CSS values {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-20-quickly-change-css-values-with-the-keyboard-or-mousewheel/quick-change-css-values.gif" alt="Quickly change CSS values with the keyboard or mousewheel">

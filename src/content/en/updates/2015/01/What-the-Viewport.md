@@ -8,7 +8,7 @@ description: The virtual viewport seperates layout and viewing of the viewport.
 
 # What the Virtual Viewport? {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

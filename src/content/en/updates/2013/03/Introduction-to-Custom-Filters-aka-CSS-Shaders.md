@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Introduction to Custom Filters (aka CSS Shaders) {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="WmwZqVFLRoA"

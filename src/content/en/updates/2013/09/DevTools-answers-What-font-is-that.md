@@ -8,7 +8,7 @@ description: Ever wondered which font is actually being used to render text? Won
 
 # DevTools answers: What font is that?  {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 Chrome DevTools can [now](http://crbug.com/135489) tell you **exactly what typeface is being used to render text**.

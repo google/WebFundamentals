@@ -7,8 +7,8 @@ description: Transform your JavaScript into a more readable form by clicking  th
 
 # Make JavaScript Look Pretty {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 When viewing a script in the **Sources** panel, click the **Pretty-Print**
 ![the pretty-print icon](imgs/prettyprint-icon.png){:.inline} 

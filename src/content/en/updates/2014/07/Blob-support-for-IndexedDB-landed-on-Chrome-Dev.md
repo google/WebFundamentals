@@ -8,7 +8,7 @@ description: Long awaited feature for Chrome, Blob support on IndexedDB landed i
 
 # Blob support for IndexedDB landed on Chrome Dev {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 Chrome Dev has landed support for Blob on IndexedDB.

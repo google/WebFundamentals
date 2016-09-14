@@ -8,7 +8,7 @@ description: デフォルトでは、CSS はレンダリング ブロック リ�
 
 # レンダリング ブロック CSS {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 デフォルトでは、CSS はレンダリング ブロック リソースとして扱われます。つまり、ブラウザは、CSSOM の構築が完了するまで、処理済みコンテンツのレンダリングを保留します。CSS をシンプルにして、できる限り早く配信されるようにし、メディアタイプやメディアクエリを利用して、レンダリングをブロックしないようにします。

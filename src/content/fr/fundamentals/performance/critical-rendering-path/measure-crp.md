@@ -8,7 +8,7 @@ description: Vous ne pouvez pas optimiser ce que vous ne pouvez pas mesurer. Heu
 
 # Mesurer le chemin critique du rendu avec Navigation Timing {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Vous ne pouvez pas optimiser ce que vous ne pouvez pas mesurer. Heureusement, l'API Navigation Timing offre tous les outils nécessaires pour mesurer chaque étape du chemin critique du rendu.

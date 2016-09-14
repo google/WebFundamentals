@@ -8,7 +8,7 @@ description: PageSpeed Insights 規則使用背景：最佳化關鍵轉譯路徑
 
 # PageSpeed 規則和建議 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 PageSpeed Insights 規則使用背景：最佳化關鍵轉譯路徑時需要注意的地方及其原因。

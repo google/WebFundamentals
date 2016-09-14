@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Inheritance in HTML?! Yep! Not only is it possible with Web Components, it's super useful for working with forms and accessibility.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-05-03 #}
 {# wf_published_on: 2015-05-03 #}
 {# wf_youtube_id: OV8BvxpNQOs #}

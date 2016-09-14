@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # [datalist] for range/color inputs offer some default choices   {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 Chrome started to support `datalist` for `input[type=text]` in Chrome 20. `datalist` helps developers provide recommended values, while allowing users the liberty to write arbitrary values at the same time. Beginning with Chrome 23, you can use `datalist` for `input[type=range]` and `input[type=color]` as well!

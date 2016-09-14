@@ -8,9 +8,7 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 
 # الفيديو {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
-
-
+{% include "web/_shared/contributors/samdutton.html" %}
 
 يفضل المستخدمون مشاهدة مقاطع الفيديو نظرًا لأنها تمثل عنصر تسلية وإفادة. على أجهزة الجوّال، يمكن أن تكون مقاطع الجوّال الوسيلة الأسهل للاستفادة من المعلومات. إلا أن مقاطع الفيديو تستهلك معدل نقل بيانات، كما أنها لا تعمل بطريقة واحدة على جميع أنظمة التشغيل. لا يفضل المستخدمون الانتظار حتى تحميل مقاطع الفيديو، أو عند الضغط على التشغيل وعدم تلقي أي شيء. يمكنك الاطلاع على مزيد من المعلومات لمعرفة أسهل طرق إضافة فيديو إلى موقعك على الويب والتأكد من ترك أفضل انطباع لدى المستخدمين على أي جهاز.
 
@@ -60,7 +58,7 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 على سبيل المثال:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 عندما يحلل المتصفح علامات `<source>`، فإنه يستخدم السمة الاختيارية `type` للمساعدة في تحديد الملف المطلوب تنزيله وتشغيله. إذا كان المتصفح يتوافق مع WebM، فسيتم تشغيل chrome.webm، وإلا، فسيتم التحقق مما إذا كان يمكن تشغيل مقاطع فيديو MPEG-4.
@@ -97,7 +95,6 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 
 يمكنك أيضًا استخدام واجهة برمجة تطبيقات Media Fragments لتقديم عدة عروض على مقطع الفيديو نفسه - مثل نقاط التلميح في DVD - بدون الاضطرار إلى ترميز عدة ملفات وعرضها.
 
-<!-- TODO: Verify note type! -->
 Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع معظم أنظمة التشغيل، وليس iOS.
 - تأكد من أن طلبات النطاق متوافقة مع خادمك. يتم تمكين طلبات النطاق افتراضيًا على معظم الخوادم، إلا أن بعض خدمات الاستضافة قد تعطلها.
 
@@ -120,15 +117,9 @@ Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع �
 
 وفي ما يلي مقارنة لمقطعي فيديو جنبًا إلى جنب أحدهما بدون صورة ملصق والآخر مزود بصورة ملصق، وقد وضعنا صورة الملصق على تدرج رمادي للإشارة إلى أنه لا يمثل الفيديو:
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png">
-  </div>
-</div>
+<img class="center" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png" class="attempt-left">
+<img class="center" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png" class="attempt-right">
+<div class="clearfix"></div>
 
 
 ## توفير خيارات بديلة لأنظمة التشغيل القديمة 
@@ -144,7 +135,7 @@ Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع �
 
 يمكنك استخدام `canPlayType()` للبحث عن تنسيقات الفيديو المتوافقة. وتحتاج هذه الطريقة إلى وسيط سطر ثابت من `mime-type` وبرامج ترميز اختيارية للخروج بإحدى القيم التالية:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>القيمة المعروضة</th>
@@ -174,7 +165,7 @@ Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع �
 في ما يلي بعض الأمثلة على وسيطات `canPlayType()` والقيم الناتجة عند التشغيل في Chrome:
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>النوع</th>
@@ -253,32 +244,30 @@ Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع �
 عندما تكون عناصر الفيديو كبيرة جدًا مقارنة بإطار العرض، فقد يتم تجاوز حدود الحاوية، مما يجعل من المستحيل على المستخدم مشاهدة المحتوى أو استخدام
 عناصر التحكم.
 
-<div class="mdl-grid">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
-</div>
+<img class="attempt-left" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
+<div style="clear:both;"></div>
 
 يمكنك التحكم في أبعاد الفيديو باستخدام جافا سكريبت أو CSS. تتيح مكتبات جافا سكريبت والمكوِّنات الإضافية أيضًا مثل [FitVids](//fitvidsjs.com/) إمكانية الحفاظ على الحجم ونسبة العرض إلى الارتفاع المناسبة، حتى بالنسبة إلى مقاطع فيديو Flash من YouTube والصادر الأخرى.
 
 يمكنك استخدام [استعلامات وسائط CSS](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) لتحديد حجم العناصر بناءً على أبعاد إطار العرض؛ ويعتبر `max-width: 100%` الخيار الصديق.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 بالنسبة إلى محتوى الوسائط في إطارات iframes (مثل مقاطع فيديو YouTube)، جرب طريقة الاستجابة السريعة (على غرار ما يقترحه جون سورداكوسكي](//avexdesigns.com/responsive-youtube-embed/)).
 
-<!-- TODO: Verify note type! -->
 Note: لا تفرض حجمًا للعنصر قد يؤدي إلى نسبة عرض إلى ارتفاع مختلفة عن الفيديو الأصلي. ذلك أن التكديس أو التمديد قد يبدو أمرًا سيئًا.
 
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" %}
 </pre>
 
 قارن <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">النموذج سريع الاستجابة</a> بـ <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">النسخة بطيئة الاستجابة</a>.
@@ -301,10 +290,9 @@ Note: لا تفرض حجمًا للعنصر قد يؤدي إلى نسبة عرض
 
 يؤدي متصفح Safari على iPhone مهمة رائعة من خلال التبديل بين الاتجاه العمودي والأفقي:
 
-<div class="mdl-grid">
-    <img class="mdl-cell mdl-cell--6--col" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه العمودي" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه الأفقي" src="images/iPhone-video-playing-landscape.png">
-</div>
+<img class="attempt-left" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه العمودي" src="images/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه الأفقي" src="images/iPhone-video-playing-landscape.png">
+<div style="clear:both;"></div>
 
 قد يتسبب اتجاه الجهاز على جهاز iPad وعلى Chrome لجهاز Android في حدوث مشكلات.
 على سبيل المثال، بدون أي تخصيص، قد يظهر الفيديو الذي يتم تشغيله على جهاز iPad في الاتجاه الأفقي على النحو التالي:
@@ -364,8 +352,7 @@ src="images/iPad-Retina-landscape-video-playing.png">
 
 للاطلاع على ذلك عمليًا، راجع <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">demo</a>.
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
-extra code for full cross browser compatibility.
+Note: `requestFullScreen()` is currently vendor prefixed and may require extra code for full cross browser compatibility.
 
 
 ## المسائل المتعلقة بإمكانية الوصول 
@@ -380,19 +367,18 @@ extra code for full cross browser compatibility.
 
 حتى تصبح الوسائط أسهل في الوصول على الجوَّال، يمكنك تضمين التسميات التوضيحية أو الأوصاف باستخدام عنصر المسار الصوتي.
 
-<!-- TODO: Verify note type! -->
 Note: يتوافق عنصر المسار الصوتي على Chrome لنظام Android وiOS Safari وجميع المتصفحات الحالية على سطح المكتب باستثناء Firefox (راجع <a href="http://caniuse.com/track" title="حالة التوافق مع عنصر المسار الصوتي">caniuse.com/track</a>). هناك عدة ترميزات بوليفيل متاحة كذلك. نوصي باستخدام <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> أو <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
 
 باستخدام عنصر المسار الصوتي، تظهر التسميات التوضيحية على النحو التالي:
 
- <img class="center" alt="لقطة شاشة تعرض تسميات توضيحية تظهر باستخدام عنصر المسار الصوتي في Chrome على Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
+<img class="center" alt="لقطة شاشة تعرض تسميات توضيحية تظهر باستخدام عنصر المسار الصوتي في Chrome على Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
 
 ### إضافة عنصر مسار صوتي
 
 من السهل جدًا إضافة تسميات توضيحية إلى الفيديو؛ وذلك من خلال إضافة عنصر مسار صوتي كفرع لعنصر الفيديو:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" %}
 </pre>
 
 توفر سمة عنصر المسار الصوتي `src` موقع ملف المسار الصوتي.
@@ -425,7 +411,7 @@ Note: يتوافق عنصر المسار الصوتي على Chrome لنظام A
 
 للحصول على القائمة الكاملة بسمات عنصر الفيديو وتعريفاتها، يمكنك الاطلاع على [مواصفات عنصر الفيديو](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>السمة</th>
       <th>مدى التوفر</th>
@@ -482,7 +468,7 @@ Note: يتوافق عنصر المسار الصوتي على Chrome لنظام A
 
 توفر السمة `preload` تلميحًا يعرف من خلاله المتصفح مقدار البيانات أو المحتوى الذي يجب تحميله مسبقًا.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>القيمة</th>
@@ -514,7 +500,7 @@ Note: يتوافق عنصر المسار الصوتي على Chrome لنظام A
 
 #### الخصائص
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>الخاصية</th>
       <th>الوصف</th>
@@ -559,7 +545,7 @@ Note: يتوافق عنصر المسار الصوتي على Chrome لنظام A
 
 #### الطرق
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>الطريقة</th>
     <th>الوصف</th>
@@ -591,7 +577,7 @@ Note: يتوافق عنصر المسار الصوتي على Chrome لنظام A
 
 هناك مجموعة فرعية فقط من أحداث الوسائط التي يمكن تشغيلها. راجع صفحة [أحداث الوسائط](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) على شبكة مطوِّري برامج Mozilla للحصول على قائمة كاملة.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>الحدث</th>
       <th>الوصف</th>

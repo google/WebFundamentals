@@ -8,7 +8,7 @@ description: JavaScript é geralmente o acionador de mudanças visuais. Algumas 
 
 # Optimize JavaScript Execution {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 JavaScript é geralmente o acionador de mudanças visuais. Algumas vezes de forma direta, através de manipulações de estilo, outras, seu cálculos resultarão em mudanças visuais, como pesquisa ou classificação de algum dado. O JavaScript mal cronometrado ou de longa execução pode ser uma causa comum de problemas de desempenho, então minimize seu impacto sempre que possível.

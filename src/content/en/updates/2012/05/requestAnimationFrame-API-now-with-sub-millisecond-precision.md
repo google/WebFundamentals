@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # requestAnimationFrame API: now with sub-millisecond precision {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 If you've been using `requestAnimationFrame` you've enjoyed seeing your paints synchronized to the refresh rate of the screen, resulting in the most high-fidelity animations possible. Plus, you're saving your users CPU fan noise and battery-power when they switch to another tab.

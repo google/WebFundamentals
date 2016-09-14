@@ -8,7 +8,7 @@ description: CSSOM ツリーと DOM ツリーを組み合わせたものがレ�
 
 # レンダーツリーの作成、レイアウト、ペインティング {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 CSSOM ツリーと DOM ツリーを組み合わせたものがレンダーツリーです。このツリーを使って、各表示要素のレイアウトを計算します。また、このツリーは画面にピクセルをレンダリングするペインティング処理の入力としても使用されます。レンダリングのパフォーマンスを最適化するには、手順それぞれを最適化することが必要です。

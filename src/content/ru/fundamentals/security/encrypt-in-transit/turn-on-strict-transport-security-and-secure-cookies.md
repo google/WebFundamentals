@@ -7,7 +7,7 @@ book_path: /web/fundamentals/_book.yaml
 
 # Включение строгой безопасности транспорта и использование защищенных файлов cookie {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: 一張圖片勝過千言萬語，而圖片在每個網頁上都是�
 
 # 圖片 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

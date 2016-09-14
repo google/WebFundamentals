@@ -9,7 +9,7 @@ description: Support for canvas.toBlob set to land in Chrome 50.
 
 # Canvas `toBlob()` support added in Chrome 50 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

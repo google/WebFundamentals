@@ -8,7 +8,7 @@ description: 了解如何给应用的模态视图设置动画。
 
 # 给模态视图设置动画 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 模态视图用于重要消息，并且您有很好的理由来阻止用户界面。 在使用此类视图时必须注意，因为它们会导致中断，如果过度使用，可能容易损害用户体验。 但是，在某些情况下，它们是适合使用的视图，并且加上一些动画将使其变得生动。

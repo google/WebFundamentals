@@ -7,8 +7,8 @@ description: The web app manifest is a JSON file that gives you the ability to c
 
 # The Web App Manifest {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 The [web app manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in areas where they would expect to see apps (for example the mobile home screen), direct what the user can launch, and define its appearance at launch.
 

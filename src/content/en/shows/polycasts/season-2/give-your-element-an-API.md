@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Today I'm going to show you how to add public properties and methods to a Polymer element. This will give your tag a programmable interface so it can be manipulated with JavaScript.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-05-18 #}
 {# wf_published_on: 2015-05-18 #}
 {# wf_youtube_id: 7jolqbtIdiY #}

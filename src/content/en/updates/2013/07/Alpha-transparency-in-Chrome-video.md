@@ -8,7 +8,7 @@ description: WebM just added alpha transparency, and support for it has landed i
 
 # Alpha transparency in Chrome video {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 ## Alpha transparency in Chrome video

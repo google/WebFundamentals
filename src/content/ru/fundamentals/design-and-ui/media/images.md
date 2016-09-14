@@ -8,7 +8,7 @@ description: Изображение - важный элемент любой в�
 
 # Изображения {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

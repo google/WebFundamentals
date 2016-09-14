@@ -8,7 +8,7 @@ description: Prima che il browser possa eseguire il rendering del contenuto sull
 
 # Costruzione di modello a oggetti {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Prima che il browser possa eseguire il rendering della pagina, deve costruire le strutture DOM e CSSOM. Di conseguenza, dobbiamo assicurarci di fornire al browser sia HTML che CSS nel più breve tempo possibile.

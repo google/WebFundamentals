@@ -7,7 +7,7 @@ book_path: /web/fundamentals/_book.yaml
 
 # Video: Web Push Notifications (I/O 2016) {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="_dXBibRO0SM"

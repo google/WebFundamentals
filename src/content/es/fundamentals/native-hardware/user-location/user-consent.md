@@ -8,7 +8,7 @@ description: TODO
 
 # Cómo lograr que el usuario dé su consentimiento para que se comparta su ubicación {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

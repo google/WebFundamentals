@@ -8,7 +8,7 @@ description: 打破对称可使项目产生对比和吸引力。 了解何时应
 
 # 不对称的动画定时 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 使动画持续时间不对称，可让您表达个性的同时快速响应用户交互，从而有助于提升用户体验。 还能使感觉出现对比，使界面在视觉上更吸引人。

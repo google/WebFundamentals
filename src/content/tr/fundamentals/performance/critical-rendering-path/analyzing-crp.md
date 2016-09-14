@@ -8,7 +8,7 @@ description: Kritik olusturma yolu performans tikanikliklarinin tanimlanmasi ve 
 
 # Kritik Olusturma Yolu Performansini Analiz Etme {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Kritik olusturma yolu performans tikanikliklarinin tanimlanmasi ve çözülmesi, yaygin görülen güçlüklerle ilgili iyi bilgi sahibi olunmasini gerektirir. Simdi baslangiç turumuzu gerçeklestirelim ve sayfalarinizi optimize etmenize yardimci olacak, yaygin görülen performans kaliplarini çikartalim.

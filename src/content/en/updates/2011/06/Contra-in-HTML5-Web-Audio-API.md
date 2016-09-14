@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Contra in HTML5 + Web Audio API {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 Thanks to the power of GWT, HTML5, and the [Web Audio API](https://chromium.googlecode.com/svn/trunk/samples/audio/specification/specification.html) we can build the originator of everyone's favorite cheat code, Contra: [http://nes-sound.brad-rydzewski.appspot.com/](http://nes-sound.brad-rydzewski.appspot.com/)

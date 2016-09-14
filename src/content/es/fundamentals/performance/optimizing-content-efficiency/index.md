@@ -8,7 +8,7 @@ description: La cantidad de datos descargados por cada aplicación va en aumento
 
 # Optimizar la eficacia del contenido {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

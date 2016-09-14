@@ -8,7 +8,7 @@ description: セキュリティは、ユーザーを保護するための、ウ�
 
 # HTTPS によるセキュリティ {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: DOM 변경, 요소 추가 및 제거, 특성 변경, 클래스 또�
 
 # 스타일 계산의 범위와 복잡성 줄이기 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 DOM 변경, 요소 추가 및 제거, 특성 변경, 클래스 또는 애니메이션은 모두 브라우저가 요소 스타일을 재계산하고 많은 경우에 페이지 또는 페이지 일부를 레이아웃(또는 재배치)하게 만듭니다. 이 프로세스를 <em>컴퓨팅 스타일 계산</em>이라고 합니다.

@@ -7,8 +7,8 @@ description: Chrome DevTools provides tools to help you fix web pages throwing e
 
 # Exception and Error Handling {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/flaviocopes.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/flaviocopes.html" %}
 Chrome DevTools provides tools to help you fix web pages throwing exceptions and debug errors in your JavaScript.
 
 Page exceptions and JavaScript errors are actually quite useful - if you can get to the details behind them. When a page throws an exception or a script produces an error, the Console provides specific, reliable information to help you locate and correct the problem. 

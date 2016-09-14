@@ -8,7 +8,7 @@ description: أصبح بإمكان عدد هائل من الأجهزة الوص�
 
 # أول موقع ويب تنشئه لأجهزة متعددة {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

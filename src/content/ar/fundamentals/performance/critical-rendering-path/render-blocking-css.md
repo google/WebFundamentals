@@ -8,7 +8,7 @@ description: يتم افتراضيًا التعامل مع CSS باعتباره 
 
 # CSS الذي يحظر العرض {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 يتم افتراضيًا التعامل مع CSS باعتباره موردًا لحظر العرض، أي أن المتصفح سيمنع عرض أي محتوى تمت معالجته حتى يتم إنشاء CSSOM. تأكد من أن CSS ليِّن، واعرضه في أسرع وقت ممكن، واستخدم أنواع الوسائط والاستعلامات لإلغاء حظر العرض.

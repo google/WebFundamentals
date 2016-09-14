@@ -7,12 +7,11 @@ description: TODO
 
 # Command Line API Reference {: .page-title }
 
-{% include "_shared/contributors/andismith.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/andismith.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 The Command Line API contains a collection of convenience functions for performing common tasks: selecting and inspecting DOM elements, displaying data in readable format, stopping and starting the profiler, and monitoring DOM events.
 
-<!-- TODO: Verify note type! -->
 Note: This API is only available from within the console itself. You cannot access the Command Line API from scripts on the page.
 
 
@@ -75,7 +74,6 @@ The following example returns a reference to the currently selected element and 
 
 ![Example of $('img').src](images/selector-img-src.png)
 
-<!-- TODO: Verify note type! -->
 Note: If you are using a library such as jQuery that uses <code>$</code>, this functionality will be overwritten, and <code>$</code> will correspond to that library's implementation.
 
 ## $$(selector)
@@ -96,7 +94,6 @@ displays the value of each element's `src` property:
 
 ![Example of using $$() to select all images in the document and display their sources.](images/all-selector.png)
 
-<!-- TODO: Verify note type! -->
 Note: Press <kbd class='kbd'>Shift</kbd> + <kbd class='kbd'>Enter</kbd> in the console to start a new line without executing the script.
 
 ## $x(path)
@@ -270,11 +267,10 @@ strings that map to predefined sets of events.
 The table below lists the available event types and
 their associated event mappings:
 
-<table class="mdl-data-table">
+<table class="responsive">
 	<thead>
 		<tr>
-			<th>Event type</th>
-			<th>Corresponding mapped events</th>
+			<th colspan="2">Event type &amp; Corresponding mapped events</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -334,7 +330,7 @@ Result in the profiles panel:
 
 ![Grouped profiles](images/grouped-profiles.png)
 
-<!-- TODO: Verify note type! -->
+
 Note: Multiple CPU profiles can operate at once and you aren't required to close them out in creation order.
 
 ## table(data[, columns])

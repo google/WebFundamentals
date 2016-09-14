@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Using Cross-domain images in WebGL {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 <p>WebGL specification has an important update on how to request images, cross-domain. The feature has already been implemented in Chrome 13 and is coming soon to Firefox 5.</p>

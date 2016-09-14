@@ -8,7 +8,7 @@ description: An round up of the deprecations and API removals in Chrome to help 
 
 # API Deprecations and Removals in Chrome 49  {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 In nearly every version of Chrome we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the web

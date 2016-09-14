@@ -8,7 +8,7 @@ description: JavaScript pozwala zmienić niemal każdy aspekt strony &ndash; tre
 
 # Dodawanie funkcji interaktywnych w JavaScripcie {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 JavaScript pozwala zmienić niemal każdy aspekt strony &ndash; treść, styl oraz sposób interakcji z użytkownikiem. Może jednak blokować tworzenie modelu DOM i opóźniać renderowanie strony. Aby uzyskać optymalną wydajność, oznacz kod JavaScript jako asynchroniczny i usuń niepotrzebne funkcje z krytycznej ścieżki renderowania.

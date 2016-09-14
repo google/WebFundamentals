@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Polymer Starter Kit is full of amazing tricks! Let’s do a quick introduction and see how to update the theme with custom properties.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-06-14 #}
 {# wf_published_on: 2015-06-14 #}
 {# wf_youtube_id: xz-yixRxZN8 #}

@@ -9,7 +9,7 @@ description: To provide a sophisticated user experience, it's important to help 
 
 # Streamlining the Sign-in Flow Using Credential Management API {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
 
 
 To provide a sophisticated user experience, it's important to help users

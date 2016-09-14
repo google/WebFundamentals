@@ -8,7 +8,7 @@ description: بعد التخلص من أية موارد غير لازمة، تأ
 
 # تحسين الترميز وحجم نقل الأصول القائمة على نصوص {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

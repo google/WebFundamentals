@@ -9,7 +9,7 @@ description: Image optimization is hard and automation is the key to success.
 
 # Automating resource selection with Client Hints {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

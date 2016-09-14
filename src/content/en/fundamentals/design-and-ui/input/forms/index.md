@@ -7,7 +7,7 @@ description: Forms are hard to fill out on mobile. The best forms are the ones w
 
 # Create amazing forms {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 <div class="video-wrapper">
@@ -638,7 +638,7 @@ event on the second input to validate the two inputs and set the appropriate
 response.  For example:
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
 
@@ -650,7 +650,7 @@ is invalid data, you should catch the submit event, and use the `checkValidity()
 on the form element to determine if the form is valid.  For example:
 
 <pre class="prettyprint">
-{% includecode content_path="/web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
 
 ### Show feedback in real-time

@@ -9,7 +9,7 @@ description: Learn how to to multi-cursor editing in the DevTools sources panel.
 
 # Command click to add multiple cursors in the Sources Panel {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-command-click-to-add-multiple-cursors-in-the-sources-panel/multiple-cursors.gif" alt="DevTools - Command click to add multiple cursors in the Sources Panel">

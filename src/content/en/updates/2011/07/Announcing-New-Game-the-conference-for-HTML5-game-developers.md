@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Announcing New Game, the conference for HTML5 game developers {: .page-title }
 
-{% include "_shared/contributors/sethladd.html" %}
+{% include "web/_shared/contributors/sethladd.html" %}
 
 
 Please join us at [New Game](http://newgameconf.com), to be held November 1-2, 2011 in San Francisco, CA.  New Game is the first HTML5 game conference for North America.

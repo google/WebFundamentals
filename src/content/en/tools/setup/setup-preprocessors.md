@@ -7,8 +7,8 @@ description: Learn how to set up CSS & JS preprocessors to help you code more ef
 
 # Set Up CSS and JS Preprocessors {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 CSS preprocessors such as Sass, as well as JS preprocessors and transpilers can greatly accelerate your development when used correctly. Learn how to set them up.
 
@@ -93,7 +93,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
 
 ### JavaScript
 
-<table class="mdl-data-table">
+<table>
   <thead>
     <tr>
       <th width="20%" data-th="Compiler">Compiler</th>
@@ -132,7 +132,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
 
 ### CSS
 
-<table class="mdl-data-table">
+<table>
   <thead>
     <tr>
       <th width="20%" data-th="Compiler">Compiler</th>

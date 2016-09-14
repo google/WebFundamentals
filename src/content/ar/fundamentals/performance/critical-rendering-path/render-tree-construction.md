@@ -8,7 +8,7 @@ description: يتم جمع شجرتي CSSOM وDOM في شجرة عرض ليتم 
 
 # إنشاء شجرة العرض، والتنسيق والطباعة {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 يتم جمع شجرتي CSSOM وDOM في شجرة عرض ليتم استخدامها بعد ذلك في حساب تنسيق كل عنصر مرئي وعرضه كإدخال لعملية الرسم التي تعرض وحدات بكسل على الشاشة. ويعد تحسين كل خطوة من هذه الخطوات أمرًا لا بد منه لتحقيق مستوى الأداء المثالي للعرض.

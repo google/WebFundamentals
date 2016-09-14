@@ -3,10 +3,11 @@ book_path: /web/tools/_book.yaml
 description: Chrome DevTools allows you to easily see multiple variables throughout your application.
 
 {# wf_published_on: 2016-02-11 #}
+{# wf_updated_on: 2016-02-11 #}
 
 # Watch variables in Sources {: .page-title }
 
-{% include "_shared/contributors/jonathangarbee.html" %}
+{% include "web/_shared/contributors/jonathangarbee.html" %}
 
 Chrome DevTools allows you to easily see multiple variables throughout your application.
 Watching variables within Sources keeps you out of the console and focused on improving your code.

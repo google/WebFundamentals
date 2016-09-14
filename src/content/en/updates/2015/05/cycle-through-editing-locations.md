@@ -9,7 +9,7 @@ description: Your cursor position history is preserved in the Sources Panel, all
 
 # Cycle through editing locations {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-cycle-through-editing-locations/editing-locations.gif" alt="DevTools - Cycle through editing locations">

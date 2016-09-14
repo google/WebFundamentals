@@ -8,7 +8,7 @@ description: المورد الأسرع والأفضل هو المورد الذي
 
 # التخلص من التنزيلات غير اللازمة {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

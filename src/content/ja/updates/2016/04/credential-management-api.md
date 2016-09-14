@@ -8,7 +8,7 @@ description: 洗練されたユーザ体験を提供するために、あなた�
 
 
 Translated By: 
-{% include "_shared/contributors/yoichiro.html" %}
+{% include "web/_shared/contributors/yoichiro.html" %}
 
 
 洗練されたユーザ体験を提供するために、ウェブサイト上でユーザ認証を手助けすることは非常に重要なことです。

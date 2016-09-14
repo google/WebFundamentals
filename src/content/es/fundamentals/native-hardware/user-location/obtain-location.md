@@ -8,7 +8,7 @@ description: La API (Interfaz de programación de aplicaciones) de geolocalizaci
 
 # Obtención de la ubicación actual del usuario {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

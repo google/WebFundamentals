@@ -8,7 +8,7 @@ description: Choose the appropriate easing for your project, whether that's easi
 
 # Choosing the Right Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 Having discussed the various options available for easing in animations, what kind should you use in your projects, and what kind of durations should your animations have?
 

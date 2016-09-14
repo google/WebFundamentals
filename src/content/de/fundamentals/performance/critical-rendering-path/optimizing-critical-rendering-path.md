@@ -8,7 +8,7 @@ description: Im Sinne der kürzestmöglichen Zeit bis zum ersten Rendern sind dr
 
 # Kritischen Rendering-Pfad optimieren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

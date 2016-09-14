@@ -1,12 +1,8 @@
 toc:
   - title: Chrome DevTools
     section:
-    - title: Overview (option 1)
+    - title: Overview
       path: /web/tools/chrome-devtools/
-    - title: Overview (option 2)
-      path: /web/tools/chrome-devtools/landing-2
-    - title: Overview (option 3)
-      path: /web/tools/chrome-devtools/landing-3
     - title: Configure and Customize DevTools
       path: /web/tools/chrome-devtools/settings
     - title: Inspect and Edit Pages and Styles

@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Page Visibility API: Have I got your attention?  {: .page-title }
 
-{% include "_shared/contributors/mikemahemoff.html" %}
+{% include "web/_shared/contributors/mikemahemoff.html" %}
 
 
 Multi-tab browsing is now the norm, so you can't assume the user is watching your app just because it's running. Fortunately, the new [Page Visibility API](http://code.google.com/chrome/whitepapers/pagevisibility.html) lets your app discover if it's visible or not. You could use the API to cut down on unnecessary network activity and computation.

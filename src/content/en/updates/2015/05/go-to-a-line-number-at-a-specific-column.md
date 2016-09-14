@@ -9,7 +9,7 @@ description: Learn how to jump to specific line numbers in the Sources panel.
 
 # Go to a line number at a specific column {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-go-to-a-line-number-at-a-specific-column/go-to-column.gif" alt="DevTools - Go to a line number at a specific column">

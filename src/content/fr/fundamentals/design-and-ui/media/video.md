@@ -8,7 +8,7 @@ description: Découvrez les méthodes les plus simples pour ajouter des vidéos 
 
 # Vidéo {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

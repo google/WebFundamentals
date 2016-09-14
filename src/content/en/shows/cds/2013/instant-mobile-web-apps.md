@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Bryan talked through how the team at Google went through the process of identifying and prioritizing the assets for the PageSpeed Insights website, taking it from a 20 second load time to just over 1 second!
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: VKTWdaupft0 #}

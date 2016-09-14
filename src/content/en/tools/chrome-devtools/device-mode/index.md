@@ -8,7 +8,7 @@ description: Use virtual devices in Chrome's Device Mode to build mobile-first w
 
 # Simulate Mobile Devices with Device Mode {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 Use Chrome DevTools' Device Mode to build mobile-first, fully responsive web sites. Learn how to use it to simulate a wide range of devices and their capabilities.
 
@@ -31,5 +31,5 @@ To use this shortcut your mouse needs to be focused on your DevTools window.
 If it's focused on your viewport, you'll trigger [Chrome's switch user
 shortcut](https://support.google.com/chrome/answer/157179?hl=en).
 
-<!-- TODO: Verify note type! -->
+
 Note: Device Mode does a whole lot to give you an experience as close as possible compared to the real deal, but keep in mind that you'll still need to test on real devices to get the full picture (we can't yet emulate the performance characteristics of a real device).

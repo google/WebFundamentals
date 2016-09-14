@@ -9,7 +9,7 @@ description: Re-order DevTools tabs which ever way suits you best and see exactl
 
 # DevTools Digest: Tab reordering, Console is #2 and framework event listeners {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

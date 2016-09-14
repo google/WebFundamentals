@@ -8,7 +8,7 @@ description: El recurso más rápido y optimizado es el que no se envía. ¿Has 
 
 # Eliminar las descargas innecesarias {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

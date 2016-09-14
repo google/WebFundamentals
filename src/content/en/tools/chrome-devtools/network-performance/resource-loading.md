@@ -7,8 +7,8 @@ description: Measure the network performance of your web application  using the 
 
 # Measure Resource Loading Times {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Measure the network performance of your site using the 
 <strong>Network</strong> panel.
@@ -174,7 +174,7 @@ resource within the **Timeline** graph.
 
 ![timing data for one resource in timeline](imgs/timeline-view-hover.png)
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.timing %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.timing #}
 
 Related Guides:
 
@@ -333,7 +333,6 @@ to hide or display the **Filters** pane.
 Use the content type buttons to only display resources of the selected 
 content type. 
 
-<!-- TODO: Verify note type! -->
 Note: Hold <kbd>Cmd</kbd> (Mac) or <kbd>Ctrl</kbd> (Windows/Linux) and then click to enable multiple filters simultaneously.
 
 ![multiple content type filters selected 

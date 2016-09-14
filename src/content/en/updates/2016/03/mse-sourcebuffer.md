@@ -9,7 +9,7 @@ description: The Media Source API enables JavaScript to construct media streams 
 
 # Media Source API: Automatically Ensure Seamless Playback of Media Segments in Append Order {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

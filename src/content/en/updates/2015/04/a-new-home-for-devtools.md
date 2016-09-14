@@ -8,7 +8,7 @@ description: We've moved into a shiny new home at developer.google.com/web have 
 
 # A new home for DevTools {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

@@ -8,12 +8,12 @@ description: JavaScript 允许我们修改页面的方方面面：内容、样�
 
 # 使用 JavaScript 添加交互 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 JavaScript 允许我们修改页面的方方面面：内容、样式以及它如何响应用户交互。但是，JavaScript 也会阻塞 DOM 构建，延缓页面渲染。我们可以让我们的 JavaScript 异步加载，消除关键渲染路径中不必要的 JavaScript，来提供更佳性能。

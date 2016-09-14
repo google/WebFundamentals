@@ -8,7 +8,7 @@ description: 대부분의 브라우저와 장치는 사용자의 지리적 위�
 
 # 사용자 위치 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

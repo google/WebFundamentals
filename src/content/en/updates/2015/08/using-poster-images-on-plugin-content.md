@@ -8,7 +8,7 @@ description: Chrome can now add custom poster images to object elements to impro
 
 # Using poster images on plugin content {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

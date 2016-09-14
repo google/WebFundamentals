@@ -7,7 +7,7 @@ description: Learn to measure the critical rendering path.
 
 # Measuring the Critical Rendering Path with Navigation Timing {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 You can't optimize what you can't measure. Thankfully, the Navigation 
 Timing API gives us all the necessary tools to measure each step of the 
@@ -46,12 +46,11 @@ The HTML specification dictates specific conditions for each and every event: wh
     * If there is no parser blocking JavaScript then `DOMContentLoaded` will fire immediately after `domInteractive`.
 * `domComplete` marks when the page and all of its subresources are ready.
 
-<!-- Span required to prevent rest of page from being indented.
-  https://github.com/google/WebFundamentals/issues/1873 -->
-<span></span>
+
+<div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" %}
 </pre>
 
 The above example may seem a little daunting on first sight, but in reality it is actually pretty simple. The Navigation Timing API captures all the relevant timestamps and our code simply waits for the `onload` event to fire &mdash; recall that `onload` event fires after `domInteractive`, `domContentLoaded` and `domComplete` &mdash; and computes the difference between the various timestamps.

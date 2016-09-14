@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Blink is Chrome's open-source rendering engine. The Blink team is evolving the web and addressing the issues encountered by developers, learn more about how in this video.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: 392VTLQyKDc #}

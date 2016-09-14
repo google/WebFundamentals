@@ -8,7 +8,7 @@ description: 手機上很難填寫表單。 最好的表單是輸入量最少的
 
 # 建立令人驚艷的表單 {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

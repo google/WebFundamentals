@@ -8,8 +8,8 @@ description: 애니메이션은 성능이 우수해야 합니다. 그렇지 않�
 
 # 애니메이션 및 성능 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 애니메이션을 만들 때마다 60fps를 유지하도록 신경을 써야 합니다. 애니메이션이 버벅거리거나 정지하면 사용자의 눈에 띄고 거부감을 줄 수 있습니다.

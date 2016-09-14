@@ -7,8 +7,8 @@ description: Explore the state of any item on your page from the DevTools consol
 
 # Evaluate Expressions {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 Explore the state of any item on your page from the DevTools console using one of its evaluation capabilities.
 
 The DevTools console allows you to learn the state of items
@@ -43,11 +43,10 @@ If there's a single suggestion,
 
 Use the following shortcuts to select elements:
 
-<table class="mdl-data-table">
+<table class="responsive">
   <thead>
     <tr>
-      <th>Shortcut</th>
-      <th>Description</th>
+      <th colspan="2">Shortcut &amp; Description</th>
     </tr>
   </thead>
   <tbody>

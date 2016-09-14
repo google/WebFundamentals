@@ -9,7 +9,7 @@ description: Support for image decoding in workers set to land in Chrome 50.
 
 # Chrome Supports `createImageBitmap()` in Chrome 50 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

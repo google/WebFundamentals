@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Microsoft shows off Project Spartan, Beacons by Blesh connect the physical world to your phone, React Native goes open source, a11y-wins.tumblr.com catalogs great accessibility, Polymer 0.8 hits the airwaves, and preload links get an intent to implemnt
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-14 #}
 {# wf_published_on: 2015-04-14 #}
 {# wf_youtube_id: REAnmF5FHUA #}

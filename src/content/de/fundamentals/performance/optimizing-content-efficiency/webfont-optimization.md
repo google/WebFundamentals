@@ -8,7 +8,7 @@ description: Die Typografie ist eine grundlegende Voraussetzung für gutes Desig
 
 # Optimierung von Webschriftarten {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -9,7 +9,7 @@ description: Read about DevTools' new command menu and its over 60 actions that 
 
 # DevTools Digest: More power with the new Command Menu {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: With the introduction of a Chromium powered WebView in Android 4.4 (KitKat) developers now have a huge range of new tools at their disposal to build great native apps using the WebView.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: BTlzw5UAjQs #}

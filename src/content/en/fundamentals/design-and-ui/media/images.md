@@ -7,7 +7,7 @@ description: A picture is worth 1000 words, and images play an integral part of 
 
 # Images {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Responsive web design means that not only can our layouts change based on device
@@ -173,7 +173,7 @@ depending on media queries or image format.
 <div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 In the above example, if the browser width is at least 800px, then either
@@ -197,7 +197,7 @@ size of the image element, allowing the browser to automatically calculate
 the effective pixel density and choose the best image to download.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/sizes.html" region_tag="picture" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 The above example renders an image that is half of the viewport width
@@ -264,7 +264,7 @@ span the full width of the viewport, while on larger screens, it should only
 take a small proportion.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/breakpoints.html" region_tag="picture" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 The `sizes` attribute in the above example uses several media queries to
@@ -476,7 +476,7 @@ downloaded and applied to the content `div`, while on larger screens,
 url(large.png)` is applied to the content `div`.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional" lang=css  adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
 ### Use image-set to provide high res images
@@ -504,7 +504,7 @@ Safari with the `-webkit` vendor prefix.  Care must also be taken to include a
 fallback image for when `image-set()` is not supported, for example:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
 The above will load the appropriate asset in browsers that support image-set,
@@ -533,7 +533,7 @@ also provides the benefit of ensuring something will be rendered if the browser
 doesn't support resolution specific media queries.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media-query-dppx.html" region_tag="mqdppx" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
 You can also use the min-width syntax to display alternative images depending on
@@ -596,7 +596,7 @@ raster images:
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-svg.html" region_tag="iconsvg" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
 ### Use icon fonts with caution
@@ -626,7 +626,7 @@ compared to SVG icons.
 <div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" lang=html adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
 There are hundreds of free and paid icon fonts available including [Font
@@ -718,7 +718,7 @@ correct part.
 <div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
 Spriting has the advantage of reducing the number of downloads required to get

@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Getting Gmail to handle all mailto: links with registerProtocolHandler {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 
 <p>If you use Gmail you may become frustrated when you click a <code>mailto:</code> link by accident and now your desktop client of Outlook or Mail starts up.

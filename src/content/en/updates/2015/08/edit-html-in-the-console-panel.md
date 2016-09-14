@@ -9,7 +9,7 @@ description: The DOM node context menu, which you may recognize from the element
 
 # Edit HTML in the Console Panel {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-08-10-edit-html-in-the-console-panel-of-devtools/console-edit-html.gif" alt="Edit HTML in the Console Panel of DevTools">

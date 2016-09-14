@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Multiplayer Audio Fun {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Using the Web Audio API, WebSockets and a very nice designed UI here comes a <a href="http://labs.dinahmoe.com/plink">demo</a> where you can generante notes on the fly and with other people in real time.

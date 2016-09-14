@@ -8,7 +8,7 @@ description: New to Chrome 51, passive event listeners provide a major potential
 
 # Improving scroll performance with passive event listeners {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 
 

@@ -2,9 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript is often the trigger for visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that will result in visual changes, like searching or sorting some data. Badly-timed or long-running JavaScript can be a common cause of performance issues, and you should look to minimize its impact where you can.
 
+{# wf_updated_on: 2015-03-20 #}
+{# wf_published_on: 2015-03-20 #}
+
 # Optimize JavaScript Execution {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 JavaScript is often the trigger for visual changes. Sometimes that's 
 directly through style manipulations, and sometimes it's calculations that 

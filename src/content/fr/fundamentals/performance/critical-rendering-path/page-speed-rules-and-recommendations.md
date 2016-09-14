@@ -8,7 +8,7 @@ description: Règles PageSpeed Insights en contexte : à quoi vous devez faire a
 
 # Règles et recommandations PageSpeed {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Règles PageSpeed Insights en contexte : à quoi vous devez faire attention lorsque vous optimisez le chemin critique du rendu, et pourquoi.

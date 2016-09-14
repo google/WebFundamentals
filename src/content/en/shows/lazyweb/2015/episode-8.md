@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Alex Sexton extolls the virtues of building your own components, David DeSandro teaches physics in 5 minutes, a crash course in Angular 2 forms, Notifications get an update, and inline JS debugging hits the Chrome DevTools.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-06-16 #}
 {# wf_published_on: 2015-06-01 #}
 {# wf_youtube_id: u1RjWga2ks4 #}

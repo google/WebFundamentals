@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # HTML5 `<audio>` and the Web Audio API are BFFs! {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 <figure><a href="http://html5-demos.appspot.com/static/webaudio/createMediaSourceElement.html"><img src="/web/updates/images/2012-02-03-html5-audio-and-the-web-audio-api-are-bffs/media-source-element-demo.jpg" style="max-width:100%"></a><figcaption><a href="http://html5-demos.appspot.com/static/webaudio/createMediaSourceElement.html">DEMO</a></figcaption></figure>

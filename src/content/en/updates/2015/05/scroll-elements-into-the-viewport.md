@@ -9,7 +9,7 @@ description: If an element you're inspecting is out of view, here's how to bring
 
 # Scroll elements into the viewport {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-20-scroll-elements-into-the-viewport/scroll-into-view.gif" alt="Scroll elements into the viewport">

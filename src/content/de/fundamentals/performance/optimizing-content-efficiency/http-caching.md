@@ -8,7 +8,7 @@ description: Der Abruf von Inhalten über das Netzwerk ist sowohl langwierig als
 
 # HTTP-Caching {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

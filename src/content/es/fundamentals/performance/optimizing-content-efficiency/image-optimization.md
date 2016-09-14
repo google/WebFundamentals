@@ -8,7 +8,7 @@ description: A menudo la mayoría de bytes descargados en las páginas web se co
 
 # Optimizar imágenes {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: Научитесь выбирать оптимальный поря
 
 # Процесс визуализации {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Оптимизация помогает ускорить загрузку страниц. Наша цель - выбрать оптимальный порядок отображения контента в зависимости от его важности для пользователя.

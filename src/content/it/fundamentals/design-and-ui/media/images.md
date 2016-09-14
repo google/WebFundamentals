@@ -8,7 +8,7 @@ description: Un'immagine vale più di mille parole e ricopre un ruolo chiave per
 
 # Immagini {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

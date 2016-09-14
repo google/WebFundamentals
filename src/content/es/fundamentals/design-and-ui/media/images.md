@@ -8,7 +8,7 @@ description: Una imagen vale más que mil palabras, y juegan un papel importante
 
 # Imágenes {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

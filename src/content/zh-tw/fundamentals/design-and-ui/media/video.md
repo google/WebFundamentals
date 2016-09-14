@@ -8,7 +8,7 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 
 # 影片 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

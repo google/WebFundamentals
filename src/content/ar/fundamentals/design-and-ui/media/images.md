@@ -8,7 +8,7 @@ description: يمكن للصورة أن تنوب عن 1000 كلمة، ولذلك
 
 # الصور {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -28,7 +28,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
+
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">
@@ -40,15 +40,7 @@ Learn how to work with images on the modern web, so that your images look great 
 [View Course](https://udacity.com/ud882){: .external }
 
 
-
-
-
-
-
 ## الصور في الترميز 
-
-
-
 
 يتميز العنصر <code>img</code> بأهميته الكبيرة؛ نظرًا لأنه يساعد على التنزيل وفك الترميز وعرض المحتوى، ولذلك تتوافق المتصفحات الحديثة مع عدد مختلف من تنسيقات الصور.  لا يختلف تضمين الصور التي تعمل على مختلف الأجهزة عن المخصصة لأجهزة سطح المكتب، ولن يلزم سوى بعض التغييرات الطفيفة لتوفير انطباع جيد.
 
@@ -76,21 +68,13 @@ Learn how to work with images on the modern web, so that your images look great 
 
 ### تحسين`img` باستخدام `srcset` للعمل على الأجهزة مرتفعة نسبة DPI
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      تحسِّن السمة <code>srcset</code> من سلوك العنصر <code>img</code>، مما يسهل توفير عدة ملفات صور لميزات أجهزة مختلفة. وكما هو الحال في <code>image-set</code> <a href="images-in-css.html#use-image-set-to-provide-high-res-images">وظيفية CSS</a>، الأصلية في CSS، تتيح <code>srcset</code> للمتصفح اختيار أفضل صورة بناءً على ميزات الجهاز، على سبيل المثال باستخدام صورة 2x على شاشة 2x، وربما في المستقبل، صورة 1x على جهاز 2x عند استخدام شبكة معدل نقل بيانات محدودة.
-    </p>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Pzc5Dly_jEM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+تحسِّن السمة `srcset` من سلوك العنصر `img`، مما يسهل توفير عدة ملفات صور لميزات أجهزة مختلفة. وكما هو الحال في `image-set` [وظيفية CSS](#use-image-set-to-provide-high-res-images)، الأصلية في CSS، تتيح `srcset` للمتصفح اختيار أفضل صورة بناءً على ميزات الجهاز، على سبيل المثال باستخدام صورة 2x على شاشة 2x، وربما في المستقبل، صورة 1x على جهاز 2x عند استخدام شبكة معدل نقل بيانات محدودة.
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
@@ -107,26 +91,18 @@ Learn how to work with images on the modern web, so that your images look great 
 <img class="center" src="img/art-direction.png" alt="مثال على الإخراج الفني"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-<!-- TODO: Verify note type! -->
 Note: يبدأ العنصر  <code>picture</code> الوصول إلى المتصفحات. وعلى الرغم من أنه ليس متوفرًا في جميع المتصفحات إلى الآن، نوصي باستخدامه نظرًا لإمكانية التوافق مع إصدارات أقدم وإمكانية الاستفادة من <a href="http://picturefill.responsiveimages.org/">Picturefill polyfill</a>. راجع موقع <a href="http://responsiveimages.org/#implementation">ResponsiveImages.org</a> للحصول على مزيد من التفاصيل.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      يجب استخدام العنصر <code>picture</code> عندما يكون مصدر الصورة متوفرًا بمستوى كثافة متعدد، أو عندما يكتشف التصميم سريع الاستجابة صورة مختلفة بعض الشيء عن بعض أنواع الشاشات.  وكما هو الحال في العنصر <code>video</code>، يمكن تضمين عدة عناصر <code>source</code>، مما يتيح تحديد ملفات صور مختلفة بناءً على استعلامات الوسائط أو تنسيق الصور.
-    </p>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+يجب استخدام العنصر <code>picture</code> عندما يكون مصدر الصورة متوفرًا بمستوى كثافة متعدد، أو عندما يكتشف التصميم سريع الاستجابة صورة مختلفة بعض الشيء عن بعض أنواع الشاشات.  وكما هو الحال في العنصر <code>video</code>، يمكن تضمين عدة عناصر <code>source</code>، مما يتيح تحديد ملفات صور مختلفة بناءً على استعلامات الوسائط أو تنسيق الصور.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/media.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media.html" region_tag="picture" %}
 </pre>
 
 في المثال الوارد أعلاه، إذا كانت قيمة عرض المتصفح 800 بكسل على الأقل، فسيتم استخدام `head.jpg` أو `head-2x.jpg`، بناءً على دقة الجهاز. وإذا كانت قيمة المتصفح بين 450 بكسل و800 بكسل، فسيتم استخدام `head-small.jpg` أو `head-small-2x.jpg` بناءً على دقة الجهاز أيضًا. وبالنسبة إلى قيم عرض الشاشة الأقل من 450 بكسل ومدى التوافق مع الإصدارات الأقدم الذي لا يوفر العنصر `picture`، سيعرض المتصفح العنصر `img` بدلاً من ذلك، ويجب تضمينه دائمًا.
@@ -138,13 +114,13 @@ Note: يبدأ العنصر  <code>picture</code> الوصول إلى المتص
 وبدلاً من توفير أحجام صور وقيم كثافة ثابتة، يمكن تحديد حجم كل صورة يتم تقديمها من خلال إضافة كلمة وصفية إلى حجم عنصر الصورة، مما يتيح للمتصفح تلقائيًا حساب كثافة وحدات بكسل اللازمة واختيار الصورة الأفضل التي يمكن تنزيلها.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/sizes.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/sizes.html" region_tag="picture" %}
 </pre>
 
 يعرض المثال الموضح أعلاه صورة تحتل نصف قيمة عرض الإطار (`sizes=`50vw``)، وبناءً على قيمة عرض المتصفح ونسبة وحدات بكسل في الجهاز، يتم السماح للمتصفح باختيار الصورة المناسبة بغض النظر عن حجم نافذة المتصفح إذا كانت كبيرة.  على سبيل المثال، يعرض الجدول الوارد أدناه الصورة التي يمكن للمتصفح اختيارها:
 
-<table class="mdl-data-table mdl-js-data-table">
-    <thead>
+<table>
+  <thead>
     <tr>
       <th data-th="عرض المتصفح">عرض المتصفح</th>
       <th data-th="معدل وحدات بكسل في الجهاز">معدل وحدات بكسل في الجهاز</th>
@@ -198,7 +174,7 @@ Note: يبدأ العنصر  <code>picture</code> الوصول إلى المتص
 في العديد من الحالات، قد يتغير الحجم أو تتغير الصورة بناءً على نقاط فصل تنسيق الموقع.  على سبيل المثال، في الشاشة الصغيرة، قد تحتاج إلى أن تمتد الصورة على عرض الإطار بالكامل، بينما يجب ألا تأخذ الصورة في الشاشات الكبيرة سوى مساحة صغيرة.  
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/breakpoints.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/breakpoints.html" region_tag="picture" %}
 </pre>
 
 تستخدم السمة `sizes` في المثال السابق عدة استعلامات وسائط لتحديد حجم الصورة.  عندما تكون قيمة عرض المتصفح أكبر من 600 بكسل، ستظهر الصورة بنسبة 25% من عرض الإطار، وعندما تتراوح قيمتها بين 500 بكسل و600 بكسل، فستظهر بنسبة 50% من عرض الإطار، أما إذا كانت أقل من 500 بكسل، فستظهر بملء العرض.
@@ -225,7 +201,6 @@ Note: يبدأ العنصر  <code>picture</code> الوصول إلى المتص
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">      انظر المثال</a>
 
-<!-- TODO: Verify note type! -->
 Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للتكاليف الزائدة التي يتسبب فيها بسبب الذاكرة وإلغاء الترميز.  يعد تغيير حجم الصور الكبيرة لتناسب الشاشات الصغيرة أمرًا مكلفًا وقد يتسبب في إزعاج خاصة على الأجهزة محدودة التكلفة حيث يكون كل من الذاكرة والمعالج محدودين.
 
 #### استبدال صور جافا سكريبت
@@ -234,17 +209,9 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 
 إحدى العقبات الكبيرة التي تواجه هذا الأسلوب أن استخدام جافا سكريبت يعني أنك ستؤجل تحميل الصورة حتى انتهاء المحلل المقدم على الأقل. وهذا يعني أن الصور لن تبدأ في التنزيل حتى بعد بدء حدث `pageload`. علاوة على ذلك، سيتولى المتصفح في الغالب تنزيل كل من صور 1x و2x، مما يؤدي إلى زيادة في وزن الصفحة.
 
-
-
-
-
 ## الصور في  CSS 
 
-
-
-
 يعد العنصر `background` في CSS `أداة مفيدة لإضافة صور معقدة إلى العناصر، مما يسهل إضافة عدة صور ويساعد على تكرارها وغير ذلك الكثير.  عند اقتران عنصر الخلفية باستعلامات الوسائط، يصبح أكثر فائدة، ويمكن الصور الشرطية من التحميل بناءً على دقة الشاشة وحجم إطار العرض وغير ذلك الكثير.
-
 
 
 ### TL;DR {: .hide-from-toc }
@@ -261,7 +228,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 على سبيل المثال، يظهر في المثال الوارد أدناه على الشاشات الصغيرة يتم تنزيل `small.png` فقط ويتم تطبيقها على المحتوى `div`، أما الشاشات الكبيرة، فيتم فيها تطبيق `background-image: url(body.png)` على النص الأساسي و`background-image: url(large.png)` على المحتوى `div`.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/conditional-mq.html" region_tag="conditional" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/conditional-mq.html" region_tag="conditional" %}
 </pre>
 
 ### استخدام مجموعة صور لتوفير صور عالية الدقة
@@ -281,7 +248,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 لا يزال التوافق مع `image-set()` أمرًا مستحدثًا ولا يتوفر إلا في Chrome وSafari مع بادئة مقدم الخدمة `-webkit`.  ويجب الاهتمام بتضمين صورة ترجيع عندما لا يكون `image-set()` متوافقًا، على سبيل المثال:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/image-set.html" region_tag="imageset" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-set.html" region_tag="imageset" %}
 </pre>
 
 سيؤدي ما تمت الإشارة إليه أعلاه إلى تحميل الأصل المناسب في المتصفحات التي تتوافق مع image-set، والترجيع إلى الأصل 1x خلافًا لذلك. الأمر الخطير الذي يجب الانتباه إليه أنه على الرغم من أن توافق متصفح `image-set()` يعد منخفضًا، ستحصل معظم المتصفحات على الأصل 1x.
@@ -301,7 +268,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 يتوافق كل من Chrome وFirefox وOpera مع المعيار `(min-resolution: 2dppx)`، بينما يتطلب كل من Safari ومتصفح Android أن تكون بنية مقدم الخدمة المثبتة مسبقًا والأقدم بدون وحدة `dppx`.  لا تنس أن هذه الأنماط يتم تحميلها إذا كان الجهاز يتوافق مع استعلام الوسائط، ويجب تحديد أنماط للحالة الأساسية.  كما يوفر هذا ميزة التأكد من أنه سيتم عرض شيء ما إذا لم يتوافق المتصفح مع استعلامات وسائط بدقة محددة.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/media-query-dppx.html" region_tag="mqdppx" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media-query-dppx.html" region_tag="mqdppx" %}
 </pre>
 
 كما يمكنك استخدام بنية الحد الأدنى لقيمة العرض ليتم عرض الصور البديلة بناءً على حجم إطار العرض.  ويتميز هذا الأسلوب بأنه لا يتم تنزيل الصورة إذا لم يتطابق استعلام الوسائط.  على سبيل المثال، لا يتم تنزيل `bg.png` وتطبيقه إلا على `body` إذا كانت قيمة العرض في المتصفح تساوي 500 بكسل أو تزيد عنها:
@@ -313,15 +280,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
       }
     }
     	
-
-
-
-
-
 ## استخدام SVG مع الرموز 
-
-
-
 
 عند إضافة رموز إلى الصفحة، يمكنك استخدام رموز SVG قدر الإمكان أو رموز الترميز الموحد في بعض الحالات.
 
@@ -354,10 +313,9 @@ You're a super &#9733;
 * تتميز صور SVG بدلالتها.
 * توفير إمكانية وصول أفضل باستخدام السمات المناسبة.
 
-&nbsp;
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/icon-svg.html" region_tag="iconsvg" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/icon-svg.html" region_tag="iconsvg" %}
 </pre>
 
 ### الحذر عند استخدام خطوط الرموز
@@ -371,13 +329,10 @@ You're a super &#9733;
 * ما لم يتم تحديد الهدف منها على نحو سليم، قد تؤدي هذه الصور إلى زيادة حجم الملف بسبب استخدام مجموعة فرعية صغيرة فقط من الرموز المتاحة. 
 
 
-{% link_sample _code/icon-font.html %}
-<img src="img/icon-fonts.png" class="center"
-srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
-alt="مثال على صفحة تستخدم FontAwesome مع رموز الخط.">
-{% endlink_sample %}
+<img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="مثال على صفحة تستخدم FontAwesome مع رموز الخط.">
+
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/icon-font.html" region_tag="iconfont" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/icon-font.html" region_tag="iconfont" %}
 </pre>
 
 هناك المئات من خطوط الرموز المجانية ومدفوعة المقابل المتاحة، من بينها [Font Awesome](http://fortawesome.github.io/Font-Awesome/) و[Pictos](http://pictos.cc/) و [Glyphicons](http://glyphicons.com/).
@@ -433,7 +388,7 @@ alt="مثال على صفحة تستخدم FontAwesome مع رموز الخط.">
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="استخدام ورقة النقوش المتحركة في المثال"></a>
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite" %}
 </pre>
 
 تساعد النقوش المتحركة في خفض عدد مرات التنزيل المطلوبة للحصول على عدة صور، بدون تعطيل ذاكرة التخزين المؤقت.
@@ -444,7 +399,7 @@ alt="مثال على صفحة تستخدم FontAwesome مع رموز الخط.">
 
 توخ الحذر عند إنشاء صفحات تمرير لا نهائية، نظرًا لأنه يتم تحميل المحتوى عندما يكون مرئيًا، ولن يظهر هذا المحتوى أبدًا لمحركات البحث.  بالإضافة إلى ذلك، لن يظهر تذييل الصفحة أبدًا للمستخدمين الذين يبحثون عن معلومات يتوقعون ظهورها في تذييل الصفحة نظرًا لأنه يتم تحميل محتوى جديد باستمرار.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.optimize %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.optimize #}
 
 
 
@@ -458,11 +413,6 @@ alt="مثال على صفحة تستخدم FontAwesome مع رموز الخط.">
 
 أحيانًا تكون أفضل صورة ليست صورة إطلاقًا. ومتى أمكن، استخدم الميزات الأصلية للمتصفح لتوفير الوظائف نفسها أو أخرى شبيهة.  تنشئ المتصفحات مواد مصورة كان يلزمها في السابق توفير صور.   وهذا يعني أن المتصفحات لم تعد بحاجة إلى تنزيل ملفات صور منفصلة وأنها تحجب الصور المعدلة من حيث الحجم تعديلاً غير ملائم.  يمكن عرض الرموز باستخدام ترميز موحد أو خطوط رموز خاصة.
 
-
-
-### TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
 
 
 ### وضع النصوص في ترميز، وليست مضمنة في صور

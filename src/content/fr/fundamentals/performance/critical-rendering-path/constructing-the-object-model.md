@@ -8,7 +8,7 @@ description: Avant que le navigateur puisse afficher le contenu sur l'écran, le
 
 # Construire le modèle d'objet {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Avant que le navigateur puisse afficher la page, les arborescences DOM et CSSOM doivent être créées. Nous devons donc nous assurer que le code HTML et CSS est transmis au navigateur le plus rapidement possible.

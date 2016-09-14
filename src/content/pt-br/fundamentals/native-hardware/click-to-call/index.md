@@ -8,7 +8,7 @@ description: Em dispositivos com a função telefone, facilita que usuários lig
 
 # Click to call {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

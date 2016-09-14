@@ -8,7 +8,7 @@ description: Aprenda a colocar animaciones entre dos vistas en sus aplicaciones.
 
 # Animaciones entre vistas {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

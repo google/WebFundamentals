@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: CSS Custom properties are incredibly powerful. Check out how you can use them to style and theme your Polymer elements.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-06-01 #}
 {# wf_published_on: 2015-06-01 #}
 {# wf_youtube_id: omASiF85JzI #}

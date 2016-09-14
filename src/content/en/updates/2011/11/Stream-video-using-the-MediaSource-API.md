@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # "Stream" video using the MediaSource API {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 The [MediaSource API](http://html5-mediasource-api.googlecode.com/svn/trunk/draft-spec/mediasource-draft-spec.html) extends the `HTMLMediaElement` to allow JavaScript to generate media streams for playback. Allowing JavaScript to generate streams facilitates a variety of use cases like adaptive streaming and time shifting live streams.

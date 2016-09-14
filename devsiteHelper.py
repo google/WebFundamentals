@@ -204,7 +204,16 @@ def getInclude(includeTag, lang='en'):
   fileName = fileName.replace('\'', '')
   fileName = fileName.strip()
   if fileName == 'comment-widget.html':
-    result = readFile('../templates/comment-widget.html', '')
+    result = '<style>'
+    result += '#gplus-comment-container { border: 1px solid #c5c5c5; }'
+    result += '#gplus-comment-container > div { padding: 24px; }'
+    result += '#gplus-title { background-color: #f5f5f5; }'
+    result += '</style>'
+    result += '<div id="gplus-comment-container">'
+    result += '<div id="gplus-title">No comments yet</div>'
+    result += '<div id="gplus-comments">'
+    result += 'Comments aren\'t supported in the development or staging environment, sorry.'
+    result += '</div></div>'
   else:
     result = readFile(fileName, lang)
   if result is None:
@@ -216,12 +225,12 @@ def getIncludeCode(includeTag, lang='en'):
   # Returns the contents of an includecode file. If the file is not found,
   # it returns a warning into the doc. Otherwise it returns the file.
   # It also handles start and end regions and can unindent code as requested
-  fileRegEx = re.search(r"content_path=['\"]?(.+?)['\" ]", includeTag)
-  regionRegEx = re.search(r"region_tag=['\"]?(.+?)['\" ]", includeTag)
-  dedentRegEx = re.search(r"adjust_indentation=['\"]?(.+?)['\" ]", includeTag)
+  fileRegEx = re.search(r"content_path=\"(.+?)\"", includeTag)
+  regionRegEx = re.search(r"region_tag=\"(.+?)\"", includeTag)
+  dedentRegEx = re.search(r"adjust_indentation=\"(.+?)\"", includeTag)
   if fileRegEx is None:
-    msg = 'Warning: No <code>content_path</code> specified for ' + includeTag
-    logging.warn(' - ' + msg)
+    msg = 'Error: No <code>content_path</code> specified for ' + includeTag
+    logging.error(' - ' + msg)
     return msg
   fileName = fileRegEx.group(1)
   result = readFile(fileName, lang)
@@ -244,6 +253,8 @@ def getAnnouncementBanner(lang='en'):
   # Returns the announcement banner
   result = ''
   projectFile = os.path.join(SOURCE_PATH, lang, '_project.yaml')
+  if not os.path.isfile(projectFile):
+    projectFile = os.path.join(SOURCE_PATH, 'en', '_project.yaml')
   raw = open(projectFile, 'r').read().decode('utf8')
   project = yaml.load(raw)
   if 'announcement' in project:

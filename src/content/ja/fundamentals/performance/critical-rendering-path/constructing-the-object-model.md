@@ -8,7 +8,7 @@ description: ブラウザは、コンテンツを画面にレンダリングす�
 
 # オブジェクト モデルを構築する {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 ブラウザは、ページをレンダリングする前に、DOM ツリーと CSSOM ツリーを構築する必要があります。そのため、HTML と CSS の両方をできる限り早くブラウザに渡す必要があります。

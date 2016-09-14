@@ -8,12 +8,12 @@ description: 풍부한 오프라인 경험, 주기적 백그라운드 동기화,
 
 # 서비스워커 소개 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

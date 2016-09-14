@@ -8,7 +8,7 @@ description: JavaScript はよく視覚変化の切っ掛けになります。 �
 
 # JavaScript 実行の最適化 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 JavaScript はよく視覚変化の切っ掛けになります。 視覚変化はスタイル操作を通じて直接行われることもあれば、データの検索やソートのように、計算が最終的に視覚変化につながることもあります。 タイミングの悪い JavaScript や長時間実行される JavaScript はパフォーマンス低下の一般的な原因になり得るため、可能な限り JavaScript の影響を最小限に抑える必要があります。

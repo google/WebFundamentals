@@ -8,7 +8,7 @@ description: Красивый и удобный шрифт - неотъемле�
 
 # Оптимизация шрифтов {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

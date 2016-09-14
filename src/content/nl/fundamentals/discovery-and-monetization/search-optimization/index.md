@@ -8,12 +8,12 @@ description: Websites worden niet alleen door mensen bekeken, maar ook door zoge
 
 # Optimalisaties voor Crawlers {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/yvoschaap.html" %}
+{% include "web/_shared/contributors/yvoschaap.html" %}
 
 
 

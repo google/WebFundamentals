@@ -7,12 +7,12 @@ book_path: /web/fundamentals/_book.yaml
 
 # 불필요한 다운로드 제거하기 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

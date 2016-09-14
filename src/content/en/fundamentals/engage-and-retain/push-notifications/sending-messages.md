@@ -8,7 +8,7 @@ description: There are two servers involved in sending a message: your server an
 
 # Sending messages {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 It's easy to assume that sending messages must involve
 building a complex messaging system on the server. That's not quite right. There

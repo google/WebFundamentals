@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Use mediump precision in WebGL when possible {: .page-title }
 
-{% include "_shared/contributors/ilmariheikkinen.html" %}
+{% include "web/_shared/contributors/ilmariheikkinen.html" %}
 
 
 Heads-up from our friends at Opera, who have been testing WebGL on actual OpenGL ES 2.0 hardware: many demos and applications use highp precision in fragment shaders when it's not really warranted.

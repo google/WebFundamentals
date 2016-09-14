@@ -8,12 +8,12 @@ description: 상당히 많은 웹들이 여러 디바이스 사용성을 고려�
 
 # 반응형 웹 디자인 기본 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: 앱에서 모달 보기 애니메이션 방법을 알아봅니다.
 
 # 모달 보기 애니메이션 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 모달 보기는 중요한 메시지를 전달하고 사용자 인터페이스를 차단해야 하는 경우에 적합합니다. 이 보기는 방해가 되고 남용할 경우 사용자에게 거부감을 쉽게 줄 수 있으므로 사용 시 주의해야 합니다. 하지만 일부 경우에는 이 보기를 사용하는 것이 합리적이고 애니메이션을 추가하면 생명력을 불어넣을 수 있습니다.

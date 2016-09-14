@@ -8,7 +8,7 @@ description: La mayoría de los navegadores y dispositivos tienen acceso a la ub
 
 # Ubicación del usuario {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

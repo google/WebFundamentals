@@ -8,7 +8,7 @@ description: Przeczytaj, jak w prosty sposób umieścić film na stronie i upewn
 
 # Wideo {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

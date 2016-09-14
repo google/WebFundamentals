@@ -8,7 +8,7 @@ description: Baglamla ilgili PageSpeed Insights kurallari: Kritik Olusturma Yolu
 
 # PageSpeed Kurallari ve Önerileri {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Baglamla ilgili PageSpeed Insights kurallari: Kritik Olusturma Yolunu optimize neye önem verilmeli ve neden.

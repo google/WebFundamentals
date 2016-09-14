@@ -7,7 +7,7 @@ description: Use the Security Panel to ensure that all resources on your  site a
 
 # Understand security issues {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 HTTPS provides [critical security and data integrity][why-https] 
 both for your websites and for the people that entrust your websites 

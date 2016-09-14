@@ -8,12 +8,12 @@ description: 웹은 작은 화면을 가진 전화기부터 커다한 화면을 
 
 # 멀티 디바이스용 사이트로의 첫걸음 {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/cwdoh.html" %}
+{% include "web/_shared/contributors/cwdoh.html" %}
 
 
 

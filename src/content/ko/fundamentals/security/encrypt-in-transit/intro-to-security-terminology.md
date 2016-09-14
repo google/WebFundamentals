@@ -8,8 +8,8 @@ description: HTTPS로 마이그레이션할 때 사이트 운영자는 진행 �
 
 # 보안 용어 소개 {: .page-title }
 
-{% include "_shared/contributors/chrispalmer.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

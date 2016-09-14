@@ -8,7 +8,7 @@ description: Ottimizzazione del percorso di rendering critico attraverso l'asseg
 
 # Percorso di rendering critico {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 L'ottimizzazione del percorso di rendering critico è cruciale per il miglioramento delle prestazioni delle nostre pagine: il nostro scopo è assegnare priorità e visualizzare il contenuto relativo all'azione principale che l'utente vuole eseguire sulla pagina.

@@ -7,7 +7,7 @@ description: You should always protect all of your websites with HTTPS, even if 
 
 # Why HTTPS Matters {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="9WuP4KcDBpI"

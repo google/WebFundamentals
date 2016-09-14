@@ -8,14 +8,13 @@ description: لم تتم تهيئة معظم محتوى الويب للعمل ع
 
 # أساسيات تصميم شبكة ويب سريعة الاستجابة {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 تتزايد نسبة استخدام أجهزة الجوّال في تصفح الويب بقدر هائل، ولكن للأسف لم يتم تحسين قدر كبير من محتوى الويب بحيث يعمل على أجهزة الجوّال. وتواجه أجهزة الجوّال في بعض الأحيان قيودًا بسبب حجم الشاشة وتتطلب منهجًا مختلفًا لكيفية ظهور المحتوى على الشاشة.
 
 
 ### Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -30,12 +29,10 @@ Explore what makes a site responsive and how some common responsive design patte
 
 هناك عدد كبير من أحجام الشاشات المختلفة على الهواتف، وما بات يُعرف مؤخرًا باسم `فابلت` والأجهزة اللوحية وأجهزة سطح المكتب ووحدات التحكم في الألعاب وأجهزة التلفزيون والأجهزة القابلة للارتداء.  ستظل أحجام الشاشات في تغير دائم، ولذلك من الضروري أن يكون بإمكان موقعك التوافق مع أي حجم شاشة، اليوم وفي المستقبل.
 
-{% link_sample _code/weather.html %}
-  <video autoplay loop controls class="responsiveVideo">
-    <source src="videos/resize.webm" type="video/webm">
-    <source src="videos/resize.mp4" type="video/mp4">
-  </video>
-{% endlink_sample %}
+<video autoplay loop controls class="responsiveVideo">
+  <source src="videos/resize.webm" type="video/webm">
+  <source src="videos/resize.mp4" type="video/mp4">
+</video>
 
 وقد ظهر تصميم الويب سريع الاستجابة، الذي وضع تعريفه الأصلي[إيثان ماركوت في مقالة A List Apart](http://alistapart.com/article/responsive-web-design/) ، ليلبي احتياجات المستخدمين والأجهزة التي يستخدمونها.  ويتغير التنسيق بتغير حجم الجهاز وإمكانياته.  على سبيل المثال، يظهر للمستخدمين على الهاتف المحتوى في طريقة عرض عمود واحد، وقد يعرض الجهاز اللوحي المحتوى نفسه في عمودين.
 
@@ -62,24 +59,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 يؤدي استخدام قيمة meta viewport `width=device-width` إلى توجيه الصفحة لمطابقة عرض الشاشة مع وحدات بكسل المستقلة للجهاز. يتيح هذا للصفحة إعادة تدفيق المحتوى ليتطابق مع أحجام الشاشات المختلفة، سواء تم العرض على هاتف جوّال صغير أم شاشة جهاز سطح مكتب كبيرة.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="الصفحة التي لم يتم تعيين إطار عرض لها">
-      انظر المثال
-    {% endlink_sample %}
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="الصفحة التي تم تعيين إطار عرض لها">
-      انظر المثال
-    {% endlink_sample %}
-  </div>
-</div>
+
+<img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="الصفحة التي لم يتم تعيين إطار عرض لها" class="attempt-left">
+<img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="الصفحة التي تم تعيين إطار عرض لها" class="attempt-right">
 
 تحافظ بعض المتصفحات على أن يكون عرض الصفحة ثابتًا عند التدوير إلى الوضع الأفقي، والتكبير/التصغير بدلاً من إعادة التدفق لملء الشاشة. تؤدي إضافة السمة `initial-scale=1` إلى توجيه المتصفحات لإنشاء علاقة من طرف إلى طرف بين وحدات بكسل في CSS ووحدات بكسل المستقلة للجهاز بغض النظر عن توجه الجهاز، كما يتيح ذلك للصفحة الاستفادة من العرض الأفقي الكامل.
 
-<!-- TODO: Verify note type! -->
 Note: استخدم فاصلة لفصل السمات لضمان تمكن المتصفحات القديمة من تحليل السمات تحليلاً سليمًا.
 
 ### ضمان إمكانية الدخول إلى إطار العرض
@@ -110,21 +95,10 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 
 سيؤدي تعيين قيم عرض CSS مطلقة لعناصر الصفحة (كما هو موضح في المثال أدناه) إلى أن يكون `div` عريضًا جدًا على إطار العرض في الجهاز الأكثر ضيقًا (مثل الجهاز الذي يتضمن وحدات بكسل CSS قيمتها 320، مثل جهاز iPhone). بدلاً من ذلك، يمكنك استخدام قيم العرض ذات الصلة، مثل `width: 100%`.  وبالمثل، توخ الحذر عند استخدام قيم مواضع كبيرة ومطلقة لأن ذلك قد يؤدي إلى خروج العنصر من إطار العرض على الشاشات الصغيرة.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="صفحة تتضمن عنصر عرض ثابتًا بقيمة 344 بكسل على جهاز iPhone.">
-      انظر المثال
-    {% endlink_sample %}
-  </div>
+<img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="صفحة تتضمن عنصر عرض ثابتًا بقيمة 344 بكسل على جهاز iPhone." class="attempt-left">
+<img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="صفحة تتضمن عنصر عرض ثابتًا بقيمة 344 بكسل على جهاز Nexus 5." class="attempt-right">
 
-  <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="صفحة تتضمن عنصر عرض ثابتًا بقيمة 344 بكسل على جهاز Nexus 5.">
-      انظر المثال
-    {% endlink_sample %}
-  </div>
-</div>
+<div style="clear:both;"></div>
 
 ## استخدام استعلامات وسائط CSS للحصول على سرعة استجابة 
 
@@ -144,7 +118,7 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
     <link rel="stylesheet" href="print.css" media="print">
     
 
-بالإضافة إلى استخدام السمة `media` في رابط ورقة الأنماط، هناك طريقتان لتطبيق طلبات الوسائط التي يمكن تضمينها في ملف CSS وهما: `@media` و`@import`.  لأغراض الأداء، يوصى باستخدام أي من الطريقتين الأوليين بدلاً من البنية `@import` (راجع [تجنب عمليات استيراد CSS]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
+بالإضافة إلى استخدام السمة `media` في رابط ورقة الأنماط، هناك طريقتان لتطبيق طلبات الوسائط التي يمكن تضمينها في ملف CSS وهما: `@media` و`@import`.  لأغراض الأداء، يوصى باستخدام أي من الطريقتين الأوليين بدلاً من البنية `@import` (راجع [تجنب عمليات استيراد CSS](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
 
 
     @media print {
@@ -169,7 +143,7 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 وعلى الرغم من أن هناك عدة عناصر مختلفة يمكننا الاستعلام عنها، فإن العناصر المستخدمة كثيرًا لتصميم الويب سريع الاستجابة هي `min-width` و`max-width` و`min-height` و`max-height`.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="السمة">السمة</th>
@@ -207,13 +181,11 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 في ما يلي مثال على ذلك:
 
 <figure>
-  {% link_sample _code/media-queries.html %}
-    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="عاين إحدى الصفحات باستخدام استعلامات الوسائط لتغيير الخصائص عند إعادة ضبط حجمها.">
-  {% endlink_sample %}
+  <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="عاين إحدى الصفحات باستخدام استعلامات الوسائط لتغيير الخصائص عند إعادة ضبط حجمها.">
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * عندما تكون قيمة عرض المتصفح بين <b>0 بكسل</b> و <b>640 بكسل</b>، سيتم تطبيق `max-640px.css`.
@@ -239,22 +211,22 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 
 علاوة على ذلك، يتيح استخدام الوحدات النسبية للمتصفحات عرض المحتوى بناءً على مستوى التكبير/التصغير المستخدم بدون الحاجة إلى إضافة أشرطة تمرير أفقية إلى الصفحة.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+<span class="compare-worse">Not recommended</span> — fixed width
+
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+
+
 
 
 ## كيفية اختيار نقاط الفصل 
@@ -273,21 +245,17 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 
 صمم المحتوى بحيث يتناسب مع حجم الشاشة الصغير أولاً، ثم وسع الشاشة حتى تصبح نقطة الفصل ضرورية.  وهذا سيتيح لك تحسين نقاط الفصل بناءً على المحتوى والحفاظ على أقل عدد ممكن من نقاط الفصل.
 
-دعونا نتناول المثال الذي رأيناه في البداية، وهو [النشرة الجوية]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html).
+دعونا نتناول المثال الذي رأيناه في البداية، وهو [النشرة الجوية](/web/fundamentals/layouts/rwd-fundamentals/index.html).
 الخطوة الأولى هي عرض النشرة على الشاشة في شكل جيد.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="عاين النشرة الجوية المعروضة على شاشة صغيرة.">
-  {% endlink_sample %}
+  <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="عاين النشرة الجوية المعروضة على شاشة صغيرة.">
 </figure>
 
 بعد ذلك غير حجم المتصفح حتى تكون هناك مسافة بيضاء كبيرة بين العناصر وحتى تظهر النشرة في شكل جيد.  يكون القرار غير موضوعي إلى حد ما، ولكن من المؤكد أن تكون القيمة 600 بكسل واسعة جدًا.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="عاين النشرة الجوية بعد أن تصبح الصفحة أوسع.">
-  {% endlink_sample %}
+  <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="عاين النشرة الجوية بعد أن تصبح الصفحة أوسع.">
 </figure>
 
 لإدراج نقطة فصل عند القيمة 600 بكسل، أنشئ ورقتي أنماط جديدتين، واحدة للاستخدام عندما تكون قيمة المتصفح 600 بكسل، والأخرى عندما تكون أوسع من ذلك.
@@ -299,9 +267,7 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 في النهاية، أعد بناء التعليمة البرمجية لشفرة CSS.  في هذا المثال، وضعنا الأنماط الشائعة مثل الخطوط والرموز والوضعية الأساسية والألوان في `weather.css`.  بعد ذلك سيتم وضع تنسيقات محددة للشاشة الصغيرة في `weather-small.css` وأنماط الشاشة الكبيرة في `weather-large.css`.
 
 <figure>
-  {% link_sample _code/weather-2.html %}
-    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
+  <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
 </figure>
 
 ### تحديد نقاط الفصل الصغيرة عند اللزوم
@@ -311,43 +277,34 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 لنبدأ بتحسين تنسيق الشاشة الصغيرة.  في هذه الحالة، سنحسن الخط عندما يكون عرض إطار العرض أكبر من 360 بكسل.  ثانيًا، عندما تكون هناك مساحة كافية، يمكننا الفصل بين درجة الحرارة العالية والمنخفضة حتى تكونا في سطر واحد، بدلاً من وضعهما فوق بعضهما.  ودعونا كذلك نكبِّر رموز الطقس أيضًا.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
-</div>
+<img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints." class="attempt-left">
+<img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints." class="attempt-right">
+
+<div class="clearfix"></div>
 
 بالمثل، وبالنسبة إلى الشاشات الكبيرة، من الأفضل تقييد الحد الأقصى لعرض لوحة النشرة حتى لا تستهلك عرض الشاشة بالكامل.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" %}
 </pre>
 
 ### تحسين النص للقراءة
 
 تقترح نظرية سهولة القراءة التقليدية أن العمود المثالي يجب أن يحتوي على عدد يتراوح بين 70 و80 حرفًا في السطر (أي من 8 إلى 10 كلمات بالإنجليزية)، ولذلك عندما يكبر عرض النص ويتجاوز 10 كلمات، يجب التفكير في وضع نقطة فصل.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="قبل إضافة نقاط فصر صغيرة.">
-  </div>
+<img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="قبل إضافة نقاط فصر صغيرة." class="attempt-left">
+<img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="بعد إضافة نقاط فصل صغيرة." class="attempt-right">
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="بعد إضافة نقاط فصل صغيرة.">
-  </div>
-</div>
+<div class="clearfix"></div>
 
 لنلق نظرة متعمقة الآن على نموذج مشاركة المدونة الواردة أعلاه.  على الشاشات الصغيرة، يظهر الخط Roboto بقياس 1em على نحو رائع بالنسبة إلى طريقة وضع 10 كلمات في كل سطر، إلا أن الشاشات الأكبر ستتطلب وجود نقطة فصل. وفي هذه الحالة، إذا كان عرض المتصفح أكبر من 575 بكسل، فسيكون العرض المثالي للمحتوى 550 بكسل.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" %}
 </pre>
 
 ### احذر إخفاء المحتوى تمامًا

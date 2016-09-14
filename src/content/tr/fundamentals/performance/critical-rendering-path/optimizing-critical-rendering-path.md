@@ -8,7 +8,7 @@ description: Ilk olusturmada mümkün olan en hizli süreyi saglamak için üç 
 
 # Kritik Olusturma Yolunu Optimize Etme {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

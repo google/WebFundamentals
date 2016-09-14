@@ -8,7 +8,7 @@ description: Non puoi ottimizzare ciò che non puoi misurare. Fortunatamente, la
 
 # Misurazione del percorso di rendering critico con Navigation Timing {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Non puoi ottimizzare ciò che non puoi misurare. Fortunatamente, Navigation Timing API ci offre tutti gli strumenti necessari per misurare ciascun passaggio del percorso di rendering critico.

@@ -8,7 +8,7 @@ description: JavaScript ci consente di modificare praticamente qualsiasi aspetto
 
 # Aggiunta di interattività con JavaScript {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 JavaScript ci consente di modificare praticamente qualsiasi aspetto della pagina: contenuto, stile e il relativo comportamento in seguito alle interazioni degli utenti. Tuttavia, JavaScript può anche bloccare la costruzione DOM e ritardare quando la pagina viene sottoposta a rendering. Per fornire performance ottimali, rendi asincrono JavaScript ed elimina tutti i JavaScript superflui dal percorso di rendering critico.

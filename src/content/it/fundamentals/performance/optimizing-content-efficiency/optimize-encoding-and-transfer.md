@@ -8,7 +8,7 @@ description: Dopo aver eliminato le risorse non necessarie, il passo successivo 
 
 # Ottimizzazione della codifica e delle dimensioni di trasferimento delle risorse di testo {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

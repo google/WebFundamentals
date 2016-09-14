@@ -9,7 +9,7 @@ description: Learn how to get started building Progressive Web Apps
 
 # Getting Started with Progressive Web Apps {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 

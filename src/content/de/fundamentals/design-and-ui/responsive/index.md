@@ -8,7 +8,7 @@ description: Ein großer Teil des Webs ist nicht für Erfahrungen auf verschiede
 
 # Responsives Webdesign: Grundlagen {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: Inspect and delete cookies from the Application panel.
 
 # Inspect and Delete Cookies {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Inspect and delete cookies from the
 <strong>Application</strong> panel.
@@ -17,8 +17,8 @@ Inspect and delete cookies from the
 
 
 ## TL;DR
-- 'View detailed information about a cookie, such as its name, value, domain, size, and more.'
-- 'Delete a single cookie, cookies from a selected domain, or all cookies from all domains.'
+- View detailed information about a cookie, such as its name, value, domain, size, and more.
+- Delete a single cookie, cookies from a selected domain, or all cookies from all domains.
 
 
 ## Overview {#cookies}
@@ -42,11 +42,10 @@ this grouping to be aware of:
 
 The following fields are provided for each cookie:
 
-<table class="mdl-data-table">
+<table class="responsive">
   <thead>
     <tr>
-      <th>Cookie Field</th>
-      <th>Description</th>
+      <th colspan="2">Cookie Field &amp; Description</th>
     </tr>
   </thead>
   <tbody>

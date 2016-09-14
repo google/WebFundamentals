@@ -8,7 +8,7 @@ description: A regular round-up of articles, videos and talks authored by the Ye
 
 # The Yeoman Monthly Digest #1 {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 <style>.external-domain{color:#ccc;}</style>

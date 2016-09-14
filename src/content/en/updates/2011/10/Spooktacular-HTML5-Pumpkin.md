@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Spooktacular HTML5 Pumpkin {: .page-title }
 
-{% include "_shared/contributors/sethladd.html" %}
+{% include "web/_shared/contributors/sethladd.html" %}
 
 
 <p>A fun Halloween treat.</p>

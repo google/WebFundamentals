@@ -8,7 +8,7 @@ description: ほとんどのブラウザおよび端末は、ユーザーの地�
 
 # User Location {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -8,8 +8,8 @@ description: Go offroad and create totally custom animations for your projects.
 
 # Custom Easing {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 Sometimes you won't want to use the easing keywords that are included with CSS, or you will be using Web Animations or a JavaScript framework. In these cases, you can typically define your own curves (or equations), and this provides a lot of control over the feel of your project's animations.
 

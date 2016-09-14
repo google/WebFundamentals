@@ -3,11 +3,11 @@ book_path: /web/fundamentals/_book.yaml
 description: Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools that are available to help with the process.
 
 {# wf_published_on: 2015-09-28 #}
-{# updated_on: 2016-08-24 #}
+{# wf_updated_on: 2016-08-24 #}
 
 # Preventing Mixed Content {: .page-title }
 
-{% include "_shared/contributors/johyphenel.html" %}
+{% include "web/_shared/contributors/johyphenel.html" %}
 
 Success: Supporting HTTPS for your website is an important step to protecting your site and your users from attack, but mixed content can render that protection useless. To protect your site and your users, it is very important to find and fix mixed content issues.
 
@@ -16,8 +16,8 @@ Finding and fixing mixed content is an important task, but it can be time-consum
 ## TL;DR {: .hide-from-toc }
 
 * Always use https:// URLs when loading resources on your page.
-* Use the <code>Content-Security-Policy-Report-Only</code> header to monitor mixed content errors on your site.
-* Use the <code>upgrade-insecure-requests</code> CSP directive to protect your visitors from insecure content.
+* Use the `Content-Security-Policy-Report-Only` header to monitor mixed content errors on your site.
+* Use the `upgrade-insecure-requests` CSP directive to protect your visitors from insecure content.
 
 ## Find and fix mixed content 
 
@@ -152,7 +152,7 @@ load the HTTP resource specified by the `href` attribute into a lightbox display
 on the page, causing a mixed content problem. 
 
 <pre class="prettyprint">
-{% includecode content_path=web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html region_tag=snippet1 adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" region_tag="snippet1" adjust_indentation="auto" %}
 </pre>
 
 In the code above, it may seem safe to leave the `<a>` tags href as `http://`; 

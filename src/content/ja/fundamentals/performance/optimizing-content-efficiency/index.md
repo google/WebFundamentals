@@ -8,7 +8,7 @@ description: アプリでダウンロードされるデータの量は増え続�
 
 # コンテンツの効率性の最適化 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

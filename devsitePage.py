@@ -9,9 +9,7 @@ from google.appengine.ext.webapp.template import render
 SOURCE_PATH = os.path.join(os.path.dirname(__file__), 'src/content/')
 UNSUPPORTED_TAGS = [
   r'{% link_sample_button .+%}',
-  r'{% include_code (.+)%}',
-  r'{% comment %}',
-  r'{% endcomment %}'
+  r'{% include_code (.+)%}'
 ]
 UNSUPPORTED_CLASSES = [
   r'mdl-grid',
@@ -41,8 +39,16 @@ def getPage(requestPath, lang):
       if fileLocation.endswith('.jshtml'):
         return content
 
+      dateUpdated = re.search(r"{# wf_updated_on:[ ]?(.*)[ ]?#}", content)
+      if dateUpdated is None:
+        logging.warn('Missing wf_updated_on tag.')
+        dateUpdated = 'Unknown'
+      else:
+        dateUpdated = dateUpdated.group(1)
+
       # Remove any comments {# something #} from the markdown
       content = re.sub(r'{#.+?#}', '', content)
+      content = re.sub(r'{% comment %}.*?{% endcomment %}(?ms)', '', content)
 
       # Show warning for unsupported elements
       for tag in UNSUPPORTED_TAGS:
@@ -56,6 +62,10 @@ def getPage(requestPath, lang):
       for tag in UNSUPPORTED_CLASSES:
         if re.search(tag, content) is not None:
           logging.warn(' - Unsupported class: ' + tag)
+
+      # Show warning for template tags
+      if re.search('{{', content) is not None:
+        logging.warn(' - Warning: possible unescaped template tag')
 
       # Render any DevSite specific tags
       content = devsiteHelper.renderDevSiteContent(content, lang)
@@ -112,6 +122,7 @@ def getPage(requestPath, lang):
         'leftNav': leftNav,
         'content': content,
         'toc': toc,
+        'dateUpdated': dateUpdated,
         'lang': lang}
       )
       break

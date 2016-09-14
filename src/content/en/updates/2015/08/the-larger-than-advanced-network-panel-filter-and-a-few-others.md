@@ -9,7 +9,7 @@ description: Did you know that the filter in the Network panel supports a few ni
 
 # The larger-than advanced Network Panel filter, and a few others {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-08-21-the-larger-than-advanced-network-panel-filter-and-a-few-others/network-advanced-filter.gif" alt="The larger-than advanced Network Panel filter, and a few others">

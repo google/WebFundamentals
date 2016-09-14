@@ -8,7 +8,7 @@ description: Чтобы добиться скорейшей загрузки с�
 
 # Оптимизация процесса визуализации {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

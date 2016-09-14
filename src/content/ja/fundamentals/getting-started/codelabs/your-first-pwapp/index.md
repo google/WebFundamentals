@@ -8,12 +8,12 @@ description: プログレッシブ ウェブアプリはウェブとアプリの
 
 # はじめてのプログレッシブ ウェブアプリ {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/yoichiro.html" %}
+{% include "web/_shared/contributors/yoichiro.html" %}
 
 
 

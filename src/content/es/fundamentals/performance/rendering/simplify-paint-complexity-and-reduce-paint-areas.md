@@ -8,7 +8,7 @@ description: La pintura es el proceso de rellenar los píxeles que, finalmente, 
 
 # Simplificación de la complejidad de la pintura y reducción de las áreas de pintura {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 La pintura es el proceso de rellenar los píxeles que, finalmente, se convierten en una composición en las pantallas de los usuarios. A menudo, es la tarea del proceso que más tiempo se ejecuta, y la que se debe evitar siempre que sea posible.

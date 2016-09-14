@@ -9,7 +9,7 @@ description: ES2015 Proxies (in Chrome 49 and later) provide JavaScript with an 
 
 # Introducing ES2015 Proxies {: .page-title }
 
-{% include "_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/addyosmani.html" %}
 
 
 

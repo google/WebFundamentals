@@ -8,7 +8,7 @@ description: Chrome 46 brought new methods to caches, as does Chrome 47, and pro
 
 # Updates to the service worker cache API {: .page-title }
 
-{% include "_shared/contributors/jakearchibald.html" %}
+{% include "web/_shared/contributors/jakearchibald.html" %}
 
 I’ve been asked to write this post on a fairly minor update to the service worker cache API. I didn’t think it warranted its own article, but after a long debate that eventually came down to a game of rock-paper-scissors, I lost, so here it is.
 

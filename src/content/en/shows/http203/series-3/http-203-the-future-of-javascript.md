@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: This week, Paul & Jake talk about the future of JavaScript: ES6 and beyond.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2015-10-05 #}
 {# wf_youtube_id: pLLLf1QPgoU #}

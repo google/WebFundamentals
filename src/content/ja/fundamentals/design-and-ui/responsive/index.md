@@ -8,7 +8,7 @@ description: ほとんどのウェブサイトは、マルチデバイスのエ�
 
 # レスポンシブ ウェブデザインの基礎 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 携帯端末からのウェブへのアクセスは急増し続けていますが、ウェブサイトのほとんどはそうした携帯端末向けに最適化されていません。多くの場合、携帯端末はディスプレイのサイズによる制約を受けるため、画面上でのコンテンツの配置の仕方には別のアプローチが必要です。

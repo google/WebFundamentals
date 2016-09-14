@@ -8,7 +8,7 @@ description: Manipuladores de entrada são uma possível causa de problemas em s
 
 # Debounce your input handlers {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout.

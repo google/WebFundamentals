@@ -8,7 +8,7 @@ description: Bir seyin ag üzerinden getirilmesi yavas ve pahalidir: Büyük yan
 
 # HTTP'yi önbellege alma {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

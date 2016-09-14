@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Interactive Globe with CSS shaders & Google Maps {: .page-title }
 
-{% include "_shared/contributors/paulirish.html" %}
+{% include "web/_shared/contributors/paulirish.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="NZRqnohI3m4"

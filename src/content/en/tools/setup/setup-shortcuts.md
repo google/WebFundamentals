@@ -7,8 +7,8 @@ description: Set up shortcuts for the command line tasks you use over and over a
 
 # Set Up Command Line Shortcuts {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that.
 
@@ -41,15 +41,10 @@ aliases](https://msdn.microsoft.com/en-us/library/windows/desktop/ms682057(v=vs.
 
 These are a few commands that you may find useful.
 
-<table class="mdl-data-table tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Command">Command</th>
-      <th data-th="Alias">Alias</th>
+      <th colspan="2" data-th="Command">Command &amp; Alias</th>
     </tr>
   </thead>
   <tbody>

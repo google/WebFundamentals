@@ -8,7 +8,7 @@ description: Als het niet meetbaar is, kan het ook niet geoptimaliseerd worden. 
 
 # Het kritieke weergavepad meten met navigatietiming {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Als het niet meetbaar is, kan het ook niet geoptimaliseerd worden. Gelukkig geeft de Navigation Timing API ons alle nodige hulpmiddelen om elke stap van het kritieke weergavepad te meten.

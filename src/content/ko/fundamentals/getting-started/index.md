@@ -11,7 +11,7 @@ description: 웹에 접근 가능한 모든 디바이스들에서 동작하는 �
 
 Translated By: 
 
-{% include "_shared/contributors/cwdoh.html" %}
+{% include "web/_shared/contributors/cwdoh.html" %}
 
 
 

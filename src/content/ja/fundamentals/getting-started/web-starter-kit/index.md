@@ -8,7 +8,7 @@ description: 新しいプロジェクトの最も難しい部分は、開始時�
 
 # Web Starter Kit でサイトをスタート {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

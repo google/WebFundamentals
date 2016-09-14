@@ -8,8 +8,8 @@ description: Cuando se realiza una migración hacia HTTPS, uno de los obstáculo
 
 # Introducción a la terminología de seguridad {: .page-title }
 
-{% include "_shared/contributors/chrispalmer.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

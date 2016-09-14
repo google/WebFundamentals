@@ -8,8 +8,8 @@ description: 您可以用 CSS 或 JavaScript 進行動畫處理。 您應該使�
 
 # CSS vs JavaScript 動畫 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 網頁環境中，有兩種主要方式可以建立動畫：以 CSS 或 JavaScript。 選擇哪一種取決於您專案的相依性，以及您想實現的效果。

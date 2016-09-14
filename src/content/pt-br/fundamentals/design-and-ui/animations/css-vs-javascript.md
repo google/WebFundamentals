@@ -8,8 +8,8 @@ description: Você pode animar com CSS ou JavaScript. Qual deles usar e por quê
 
 # CSS vs JavaScript Animations {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 

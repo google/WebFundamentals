@@ -9,7 +9,7 @@ description: Detecting if a web app is launched from the home screen
 
 # Detecting if a Web App is Launched from the Home Screen {: .page-title }
 
-{% include "_shared/contributors/kenchris.html" %}
+{% include "web/_shared/contributors/kenchris.html" %}
 
 
 

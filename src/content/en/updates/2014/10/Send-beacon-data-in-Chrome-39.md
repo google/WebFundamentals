@@ -8,7 +8,7 @@ description: Chrome 39 implements the Beacon API, which allows to send small asy
 
 # Send beacon data in Chrome 39 {: .page-title }
 
-{% include "_shared/contributors/ewagasperowicz.html" %}
+{% include "web/_shared/contributors/ewagasperowicz.html" %}
 
 Sometimes it is handy to send some data from a web page to a web server
 without the need to wait for a reply. For example, we might want

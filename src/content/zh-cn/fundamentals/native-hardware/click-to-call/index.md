@@ -8,7 +8,7 @@ description: 在有电话功能的设备上，使用户只需点击 电话号码
 
 # 一键通话 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

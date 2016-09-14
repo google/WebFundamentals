@@ -8,7 +8,7 @@ description: Resimler genellikle bir web sayfasinda indirilen baytlarin çogunlu
 
 # Resim optimizasyonu {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -9,7 +9,7 @@ description: Scroll anchoring stops a web page from moving once you've started r
 
 # Experiment Time: Scroll Anchoring {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

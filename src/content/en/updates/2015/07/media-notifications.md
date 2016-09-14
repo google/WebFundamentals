@@ -4,11 +4,11 @@ description: When audio or video is playing on a web page, a notification showin
 
 {# wf_updated_on: 2015-07-20 #}
 {# wf_published_on: 2015-07-20 #}
-{# wf_tags: news,audio,video,Android,notifications #}
+{# wf_tags: news,audio,video,android,notifications #}
 
 # Media playback notifications for Chrome on Android {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

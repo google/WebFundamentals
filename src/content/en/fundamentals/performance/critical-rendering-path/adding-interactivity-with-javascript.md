@@ -7,7 +7,7 @@ description: JavaScript allows us to modify just about every aspect of the page:
 
 # Adding Interactivity with JavaScript {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 JavaScript allows us to modify just about every aspect of the page: content,
 styling, and its response to user interaction. However, JavaScript can also
@@ -67,7 +67,7 @@ What about scripts included via a script tag? Let's take our previous example an
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" %}
 </pre>
 
 Whether we use a &lt;script&gt; tag or an inline JavaScript snippet, you'd

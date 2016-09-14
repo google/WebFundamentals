@@ -7,8 +7,8 @@ description: Touch screens, GPS chips, and accelerometers can be difficult to te
 
 # Emulate Sensors: Geolocation and Accelerometer {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 GPS chips and accelerometers can be difficult to test since most desktops don't have them. The Chrome DevTools Sensors emulation pane reduces the overhead of testing by emulating common mobile device sensors.
 
@@ -33,7 +33,6 @@ GPS chips and accelerometers can be difficult to test since most desktops don't 
   </div>
 </div>
 
-<!-- TODO: Verify note type! -->
 Note: If your app detects sensors onload using JavaScript (such as Modernizr), make sure that you reload the page after enabling sensor emulators.
 
 ## Override geolocation data

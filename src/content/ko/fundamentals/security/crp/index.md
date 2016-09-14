@@ -8,12 +8,12 @@ description: 콘텐츠 보안 정책은 현대 브라우저에서 크로스 사�
 
 # 콘텐츠 보안 정책 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

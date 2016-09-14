@@ -8,7 +8,7 @@ description: Internet jest dostępny na szerokiej gamie urządzeń &ndash; od te
 
 # Pierwsza witryna na różne urządzenia {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

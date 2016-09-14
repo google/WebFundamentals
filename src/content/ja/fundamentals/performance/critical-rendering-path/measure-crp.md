@@ -8,7 +8,7 @@ description: 最適化するには、測定できなければなりません。�
 
 # ナビゲーション タイミングを用いてクリティカル レンダリング パスを測定する {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 最適化するには、測定できなければなりません。幸運なことに、Navigation Timing API によって、クリティカル レンダリング パスの各ステップを測定する上で必要なツールがすべて手に入ります。

@@ -8,7 +8,7 @@ description: A round up of some of the latest editions to the Web Audio API in C
 
 # Web Audio Updates in Chrome 49 {: .page-title }
 
-{% include "_shared/contributors/chriswilson.html" %}
+{% include "web/_shared/contributors/chriswilson.html" %}
 
 Chrome has been consistently and quietly improving its support for the [Web
 Audio API](https://webaudio.github.io/web-audio-api/).  In Chrome 49 (Beta as of Feb 2016,

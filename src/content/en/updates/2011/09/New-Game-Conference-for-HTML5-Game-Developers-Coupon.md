@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # New Game Conference for HTML5 Game Developers Coupon {: .page-title }
 
-{% include "_shared/contributors/sethladd.html" %}
+{% include "web/_shared/contributors/sethladd.html" %}
 
 
 <p>

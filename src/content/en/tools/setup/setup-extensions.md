@@ -7,8 +7,8 @@ description: Out of the box, every desktop browser comes with a set of developer
 
 # Set Up Browser Extensions {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 Out of the box, every desktop browser comes with a set of developer tools, you can extend and add to these with extensions or plugins for your browser.
 

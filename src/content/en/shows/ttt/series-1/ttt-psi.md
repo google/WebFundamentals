@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: A quick tip looking at Page Speed Insights and how it can improve your site's performance.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-07-07 #}
 {# wf_published_on: 2015-07-07 #}
 {# wf_youtube_id: bDUDuQy3R7Y #}

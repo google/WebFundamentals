@@ -9,7 +9,7 @@ description: Learn how to effectively navigate the Styles Pane with a few useful
 
 # Simple keyboard tricks to use in the Styles Pane {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-08-21-simple-keyboard-tricks-to-use-in-the-styles-pane/styles-pane-keyboard-tricks.gif" alt="Simple keyboard tricks to use in the Styles Pane">

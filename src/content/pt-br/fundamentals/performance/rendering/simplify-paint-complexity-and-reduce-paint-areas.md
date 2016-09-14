@@ -8,7 +8,7 @@ description: A pintura é o processo de preenchimento em pixels que é composto 
 
 # Simplify paint complexity and reduce paint areas {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 A pintura é o processo de preenchimento em pixels que é composto nas telas dos usuários. Geralmente é a execução mais longa de todas as tarefas no pipeline e que deve ser evitada sempre que possível.

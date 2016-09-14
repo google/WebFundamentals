@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Writing a flippable book using CSS Regions and 3D transforms {: .page-title }
 
-{% include "_shared/contributors/ilmariheikkinen.html" %}
+{% include "web/_shared/contributors/ilmariheikkinen.html" %}
 
 
 So. The day has come. You have finally grown bored of long scrolls of text and are looking for a new format. Something elegant. Something compact. Something that takes the long scroll, cuts it into neat little rectangles and binds them together. I call this invention the "book".

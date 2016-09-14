@@ -8,7 +8,7 @@ description: 進一步瞭解最新應用程式和網站中的動畫和其用途�
 
 # 動畫 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 動畫是做出引人注目的網頁應用程式和網站的重要一部分。 使用者已變得會期望擁有高度回應性與互動式的使用者介面。 然而，您的介面的動畫處理過程，倒是不一定直接了當。 該動畫處理的目標物、時機，以及動畫應該採用哪一種操作感？

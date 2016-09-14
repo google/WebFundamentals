@@ -9,7 +9,7 @@ description: Use the shortcut <kbd class='kbd'>Ctrl + Shift + E</kbd> to run a b
 
 # Select and execute a block of code in the Sources Panel {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-17-select-and-execute-a-block-of-code-in-the-sources-panel/run-highlighted-code-block.gif" alt="Select and execute a block of code in the Sources Panel">

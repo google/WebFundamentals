@@ -8,7 +8,7 @@ description: Ölçemediginiz bir seyi optimize edemezsiniz. Neyse ki, Gezinme Za
 
 # Kritik Olusturma Yolunu Gezinme Zamanlamasiyla Ölçme {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Ölçemediginiz bir seyi optimize edemezsiniz. Neyse ki, Gezinme Zamanlamasi API'si bize kritik olusturma yolunun her bir adimini ölçmemiz için gereken tüm araçlari veriyor!

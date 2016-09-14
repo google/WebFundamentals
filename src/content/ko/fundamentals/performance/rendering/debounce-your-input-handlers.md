@@ -8,7 +8,7 @@ description: 입력 핸들러는 프레임 완성을 차단할 수 있기 때문
 
 # 입력 핸들러 디바운스 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 입력 핸들러는 프레임 완성을 차단할 수 있기 때문에 앱에서 성능 문제를 일으키고 추가적인 (그리고 불필요한) 레이아웃 작업을 유발할 수 있습니다.

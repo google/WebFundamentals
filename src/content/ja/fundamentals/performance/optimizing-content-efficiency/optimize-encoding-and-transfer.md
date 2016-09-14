@@ -8,7 +8,7 @@ description: 不要なリソースを取り除いたら、次の手順はブラ�
 
 # テキストベースのアセットのエンコードと転送サイズの最適化 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

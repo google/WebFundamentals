@@ -8,7 +8,7 @@ description: CSS wordt standaard behandeld als een weergaveblokkerende bron. Dit
 
 # Weergaveblokkerende CSS {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 CSS wordt standaard behandeld als een weergaveblokkerende bron. Dit betekent dat de browser wacht met het weergeven van de verwerkte inhoud totdat het CSSOM is opgebouwd. Zorg dat uw CSS bondig is, lever het zo snel mogelijk en gebruik mediatypen en -query's om de weergave te deblokkeren.

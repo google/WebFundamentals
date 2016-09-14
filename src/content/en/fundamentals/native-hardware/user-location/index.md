@@ -7,7 +7,7 @@ description: Most browsers and devices have access to the user's geographic loca
 
 # User Location {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 The Geolocation API lets you find out, with the user's consent, where the user
 is located. This functionality could be used as part of user queries; for

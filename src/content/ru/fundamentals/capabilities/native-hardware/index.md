@@ -8,7 +8,7 @@ description: Существует удивительно много способ
 
 # Доступ к устройству и интеграция {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

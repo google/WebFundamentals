@@ -8,8 +8,8 @@ description: An round up of the deprecations and API removals in Chrome to help 
 
 # API Deprecations and Removals in Chrome 50 {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 
 

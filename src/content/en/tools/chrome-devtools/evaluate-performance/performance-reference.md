@@ -7,8 +7,8 @@ description: The timeline events mode displays all events triggered while making
 
 # Timeline Event Reference {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/flaviocopes.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/flaviocopes.html" %}
 
 The timeline events mode displays all events triggered while making a recording. Use the timeline event reference to learn more about each timeline event type.
 

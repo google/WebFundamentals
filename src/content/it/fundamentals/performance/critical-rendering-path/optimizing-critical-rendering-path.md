@@ -8,7 +8,7 @@ description: Per fornire il tempo più rapido possibile al primo rendering, dobb
 
 # Ottimizzazione del percorso di rendering critico {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

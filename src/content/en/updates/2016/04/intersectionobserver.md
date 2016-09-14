@@ -8,7 +8,7 @@ description: IntersectionObservers let you know when an observed element enters 
 
 # IntersectionObserver’s Coming into View {: .page-title }
 
-{% include "_shared/contributors/surma.html" %}
+{% include "web/_shared/contributors/surma.html" %}
 
 
 

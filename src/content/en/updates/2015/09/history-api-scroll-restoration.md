@@ -9,7 +9,7 @@ description: An update to the History API to prevent unsightly scroll jumping.
 
 # History API: Scroll Restoration {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 Using the [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) to manage your URLs is awesome and, as it happens, a crucial feature of good web apps. One of its downsides, however, is that scroll positions are stored and then, more importantly, _restored_ whenever you traverse the history. This often means unsightly jumps as the scroll position changes automatically, and especially so if your app does transitions, or changes the contents of the page in any way. Ultimately this leads to an horrible user experience.
 

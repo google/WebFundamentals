@@ -8,7 +8,7 @@ description: Récupérer quelque chose sur le réseau coûte du temps et de l'ar
 
 # Mise en cache HTTP {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

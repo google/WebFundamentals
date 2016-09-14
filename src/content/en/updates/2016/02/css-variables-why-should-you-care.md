@@ -9,7 +9,7 @@ description: CSS variables, more accurately known as CSS custom properties, are 
 
 # CSS Variables: Why Should You Care? {: .page-title }
 
-{% include "_shared/contributors/robdodson.html" %}
+{% include "web/_shared/contributors/robdodson.html" %}
 
 
 

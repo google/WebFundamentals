@@ -8,7 +8,7 @@ description: PageSpeed Insights في السياق: ما يجب الانتباه 
 
 # قواعد وتوصيات PageSpeed {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 PageSpeed Insights في السياق: ما يجب الانتباه له عند تحسين مسار العرض الحرج وسبب ذلك.

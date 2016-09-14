@@ -9,7 +9,7 @@ description: When you are viewing a selector in the Styles Pane, comma separated
 
 # See matching selectors {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-see-matching-selectors-based-on-the-color/selector-matching.gif" alt="See matching selectors based on the color">

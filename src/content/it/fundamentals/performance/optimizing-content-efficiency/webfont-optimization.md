@@ -8,7 +8,7 @@ description: La tipografia è fondamentale per un design, un branding, una leggi
 
 # Ottimizzazione dei font web {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -9,7 +9,7 @@ description: Use the DOM panel’s new context menu to efficiently edit nodes. D
 
 # DevTools Digest: Efficient element edits, service worker debugging, and Material Design shades {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

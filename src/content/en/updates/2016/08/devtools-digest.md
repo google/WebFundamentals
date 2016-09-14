@@ -9,7 +9,7 @@ description: What happened to the Resources panel, new features, and community a
 
 # DevTools Digest, August 2016 {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 
 

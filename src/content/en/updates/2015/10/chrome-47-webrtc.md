@@ -4,12 +4,12 @@ description: Chrome 47 has several significant WebRTC enhancements and updates i
 
 {# wf_updated_on: 2015-11-23 #}
 {# wf_published_on: 2015-11-23 #}
-{# wf_tags: news,audio,video,media,WebRTC,getUserMedia #}
+{# wf_tags: news,audio,video,media,webrtc,getusermedia #}
 {# wf_featured_image: /web/updates/images/2015-10-28-chrome-47-webrtc/featured.jpg #}
 
 # Chrome 47 WebRTC: media recording, secure origins & proxy handling {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 Chrome 47 includes several significant WebRTC enhancements and updates.
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Pointer Events (no, not the CSS ones, the other ones!) are set to unite input across devices. Jake has a little bit of news for Paul about them.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-02-24 #}
 {# wf_published_on: 2015-02-24 #}
 {# wf_youtube_id: ngBy0H_q-GY #}

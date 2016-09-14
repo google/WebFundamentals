@@ -9,7 +9,7 @@ description: Learn how DevTools is going mobile first with a new, streamlined De
 
 # DevTools Digest (CDS Edition): A glimpse into the future + RAIL Profiling {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 

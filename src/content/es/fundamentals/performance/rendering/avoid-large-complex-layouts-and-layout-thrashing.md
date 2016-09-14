@@ -8,7 +8,7 @@ description: El diseño es la parte donde el navegador descifra la información 
 
 # Evite los diseños grandes y complejos, y la hiperpaginación de diseños {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 El diseño es la parte donde el navegador descifra la información geométrica de los elementos: su tamaño y ubicación en la página. Cada elemento posee información explícita o implícita sobre el tamaño, según la CSS (Hoja de estilos en cascada) que se utilizó, los contenidos del elemento o un elemento principal. El proceso se denomina Diseño en Chrome, Opera, Safari e Internet Explorer. En Firefox, se denomina Redistribución, pero el proceso, en realidad, es el mismo.

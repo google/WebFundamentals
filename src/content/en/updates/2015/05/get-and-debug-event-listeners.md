@@ -9,7 +9,7 @@ description: Get and debug event listeners in DevTools with these console comman
 
 # Get and debug event listeners {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-20-get-and-debug-event-listeners/get-debug-event-listeners.gif" alt="Get and debug event listeners">

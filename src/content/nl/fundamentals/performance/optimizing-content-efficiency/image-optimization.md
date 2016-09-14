@@ -8,7 +8,7 @@ description: Afbeeldingen nemen vaak het grootste aantal gedownloade bytes op ee
 
 # Beeldoptimalisatie {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

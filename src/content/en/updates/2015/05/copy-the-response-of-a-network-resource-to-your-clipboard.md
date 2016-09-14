@@ -9,7 +9,7 @@ description: In addition to copying the <strong>request/response</strong> header
 
 # Copy the response of a network resource to your clipboard {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-copy-the-response-of-a-network-resource-to-your-clipboard/copy-response.gif" alt="DevTools - Copy the response of a network resource to your clipboard">

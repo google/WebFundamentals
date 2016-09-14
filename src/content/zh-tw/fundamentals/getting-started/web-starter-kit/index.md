@@ -8,7 +8,7 @@ description: 有時候一個新專案最難的部分是入門。  Web Starter Ki
 
 # 以 Web Starter Kit 開始您的網站 {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

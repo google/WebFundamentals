@@ -1,5 +1,11 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/iterate/device-mode/media-queries
+  to: /web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports
+
+- from: /web/tools/chrome-devtools/iterate/inspect-styles/basics
+  to: /web/tools/chrome-devtools/iterate/inspect-styles
+
 - from: /web/tools/iterate/inspect-styles/media-queries
   to: /web/tools/chrome-devtools/iterate/device-mode/media-queries
 

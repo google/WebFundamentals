@@ -9,7 +9,7 @@ description: In the Sources Panel editor, you can select the next occurrence wit
 
 # Shortcut to select the next occurrence {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-20-shortcut-to-select-the-next-occurrence/select-next-occurrence.gif" alt="Shortcut to select the next occurrence">

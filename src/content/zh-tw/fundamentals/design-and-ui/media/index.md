@@ -8,11 +8,11 @@ description: 只使用能快速加載的媒體。
 
 # 圖片, 視頻和音頻 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
 
 

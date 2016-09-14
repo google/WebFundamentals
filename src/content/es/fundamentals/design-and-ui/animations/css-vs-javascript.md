@@ -8,8 +8,8 @@ description: Puede realizar animaciones con CSS o con JavaScript. ¿Cuál debe u
 
 # Animaciones de CSS en comparación con las de JavaScript {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 Existen dos formas principales de crear animaciones en la web: CSS y JavaScript. La elección de una u otra dependerá principalmente de las otras dependencias de su proyecto y de los tipos de efectos que intenta lograr.

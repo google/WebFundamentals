@@ -8,7 +8,7 @@ description: Não é possível otimizar o que não é possível medir. Felizment
 
 # Como medir o caminho de processamento essencial com o tempo de navegação {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Não é possível otimizar o que você não pode medir. Felizmente, a API de tempo de navegação oferece todas as ferramentas necessárias para medir cada etapa do caminho de processamento essencial.

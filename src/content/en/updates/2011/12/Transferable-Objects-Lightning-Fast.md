@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Transferable Objects: Lightning Fast! {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 Chrome 13 introduced sending `ArrayBuffer`s to/from a Web Worker using an algorithm called [structured cloning](http://updates.html5rocks.com/2011/09/Workers-ArrayBuffer). This allowed the `postMessage()` API to accept messages that were not just strings, but complex types like `File`, `Blob`, `ArrayBuffer`, and JSON objects. Structured cloning is also supported in later versions of Firefox.

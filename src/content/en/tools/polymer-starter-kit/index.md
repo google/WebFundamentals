@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Polymer Starter Kit.
 
+{# wf_published_on: 2015-01-01 #}
+{# wf_updated_on: 2016-09-12 #}
+
 # Polymer Starter Kit {: .page-title }
 
 [Download Polymer Starter Kit](https://github.com/polymerelements/polymer-starter-kit/releases){: .button .button-primary }

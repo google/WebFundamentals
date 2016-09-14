@@ -8,7 +8,7 @@ description: 最も時間がかからず、最も最適化されたリソース�
 
 # 不要なダウンロードの除外 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

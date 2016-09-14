@@ -9,7 +9,7 @@ description: When you set a breakpoint, you can make it conditional based on the
 
 # Set a breakpoint based on a certain condition {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-17-set-a-breakpoint-based-on-a-certain-condition/conditional-breakpoint.gif" alt="Set a breakpoint based on a certain condition">

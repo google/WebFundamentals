@@ -5,12 +5,12 @@ description: "Promises simplify deferred and asynchronous computations. A promis
 {# wf_published_on: 2013-12-16 #}
 {# wf_updated_on: 2014-01-29 #}
 
-# JavaScript Promises - an Introduction {: .page-title }
+# JavaScript Promises: an Introduction {: .page-title }
 
-{% include "_shared/contributors/jakearchibald.html" %}
+{% include "web/_shared/contributors/jakearchibald.html" %}
 
 Ladies and gentlemen, prepare yourself for a pivotal moment in the history of
-web development…
+web development.
 
 <em>[Drumroll begins]</em>
 
@@ -22,11 +22,11 @@ At this point you fall into one of these categories:
 
 * People are cheering around you, but you're not sure what all the fuss is about. Maybe you're not even sure what a "promise" is. You'd shrug, but the weight of glittery paper is weighing down on your shoulders. If so, don't worry about it, it took me ages to work out why I should care about this stuff. You probably want to begin at the [beginning](#whats-all-the-fuss-about).
 * You punch the air! About time right? You've used these Promise things before but it bothers you that all implementations have a slightly different API. What's the API for the official JavaScript version? You probably want to begin with the [terminology](#promise-terminology).
-* You knew about this already and you scoff at those who are jumping up and down like it's news to them. Take a moment to bask in your own superiority, then head straight to the [API reference](#promise-api-reference)
+* You knew about this already and you scoff at those who are jumping up and down like it's news to them. Take a moment to bask in your own superiority, then head straight to the [API reference](#promise-api-reference).
 
 ## What's all the fuss about?
 
-JavaScript is single threaded, meaning that two bits of script cannot run at the same time, they have to run one after another. In browsers, JavaScript shares a thread with a load of other stuff. What that stuff is differs from browser to browser, but typically JavaScript is in the same queue as painting, updating styles, and handling user actions (such as highlighting text and interacting with form controls). Activity in one of these things delays the others.
+JavaScript is single threaded, meaning that two bits of script cannot run at the same time; they have to run one after another. In browsers, JavaScript shares a thread with a load of other stuff that differs from browser to browser. But typically JavaScript is in the same queue as painting, updating styles, and handling user actions (such as highlighting text and interacting with form controls). Activity in one of these things delays the others.
 
 As a human being, you're multithreaded. You can type with multiple fingers, you can drive and hold a conversation at the same time. The only blocking function we have to deal with is sneezing, where all current activity must be suspended for the duration of the sneeze. That's pretty annoying, especially when you're driving and trying to hold a conversation. You don't want to write code that's sneezy.
 
@@ -64,12 +64,12 @@ Unfortunately, in the example above, it's possible that the events happened befo
       // argh everything's broken
     });
 
-This doesn't catch images that error'd before we got a chance to listen for them, unfortunately the DOM doesn't give us a way to do that. Also, this is loading one image, things get even more complex if we want to know when a set of images have loaded.
+This doesn't catch images that error'd before we got a chance to listen for them; unfortunately the DOM doesn't give us a way to do that. Also, this is loading one image, things get even more complex if we want to know when a set of images have loaded.
 
 
 ## Events aren't always the best way
 
-Events are great for things that can happen multiple times on the same object — keyup, touchstart etc. With those events you don't really care about what happened before you attached the listener. But when it comes to async success/failure, ideally you want something like:
+Events are great for things that can happen multiple times on the same object&mdash;keyup, touchstart etc. With those events you don't really care about what happened before you attached the listener. But when it comes to async success/failure, ideally you want something like this:
 
     img1.callThisIfLoadedOrWhenLoaded(function() {
       // loaded
@@ -84,7 +84,7 @@ Events are great for things that can happen multiple times on the same object �
       // one or more failed
     });
 
-This is what promises do, but with better naming. If HTML image elements had a "ready" method that returned a promise, we could do:
+This is what promises do, but with better naming. If HTML image elements had a "ready" method that returned a promise, we could do this:
 
     img1.ready().then(function() {
       // loaded
@@ -102,8 +102,8 @@ This is what promises do, but with better naming. If HTML image elements had a "
 
 At their most basic, promises are a bit like event listeners except:
 
-* A promise can only succeed or fail once. It cannot succeed or fail twice, neither can it switch from success to failure or vice versa
-* If a promise has succeeded or failed and you later add a success/failure callback, the correct callback will be called, even though the event took place earlier
+* A promise can only succeed or fail once. It cannot succeed or fail twice, neither can it switch from success to failure or vice versa.
+* If a promise has succeeded or failed and you later add a success/failure callback, the correct callback will be called, even though the event took place earlier.
 
 This is extremely useful for async success/failure, because you're less interested in the exact time something became available, and more interested in reacting to the outcome.
 
@@ -181,13 +181,13 @@ To bring browsers that lack a complete promises implementation up to spec compli
 
 The JavaScript promises API will treat anything with a `then` method as promise-like (or `thenable` in promise-speak _sigh_), so if you use a library that returns a Q promise, that's fine, it'll play nice with the new JavaScript promises.
 
-Although, as I mentioned, jQuery's Deferreds are a bit… unhelpful. Thankfully you can cast them to standard promises, which is worth doing as soon as possible:
+Although, as I mentioned, jQuery's Deferreds are a bit … unhelpful. Thankfully you can cast them to standard promises, which is worth doing as soon as possible:
 
 
     var jsPromise = Promise.resolve($.ajax('/whatever.json'))
 
 
-Here, jQuery's `$.ajax` returns a Deferred. Since it has a "then" method, `Promise.resolve` can turn it into a JavaScript promise. However, sometimes deferreds pass multiple arguments to their callbacks, eg:
+Here, jQuery's `$.ajax` returns a Deferred. Since it has a "then" method, `Promise.resolve` can turn it into a JavaScript promise. However, sometimes deferreds pass multiple arguments to their callbacks, for example:
 
     var jqDeferred = $.ajax('/whatever.json');
 
@@ -210,7 +210,7 @@ Whereas JS promises ignore all but the first:
 
 
 
-…thankfully this is usually what you want, or at least gives you access to what you want. Also, be aware that jQuery doesn't follow the convention of passing Error objects into rejections.
+Thankfully this is usually what you want, or at least gives you access to what you want. Also, be aware that jQuery doesn't follow the convention of passing Error objects into rejections.
 
 
 ## Complex async code made easier
@@ -224,7 +224,7 @@ Right, let's code some things. Say we want to:
 1. Add the story to the page
 1. Stop the spinner
 
-…but also tell the user if something went wrong along the way. We'll want to stop the spinner at that point too, else it'll keep on spinning, get dizzy, and crash into some other UI.
+… but also tell the user if something went wrong along the way. We'll want to stop the spinner at that point too, else it'll keep on spinning, get dizzy, and crash into some other UI.
 
 Of course, you wouldn't use JavaScript to deliver a story, [serving as HTML is faster](https://jakearchibald.com/2013/progressive-enhancement-is-faster/), but this pattern is pretty common when dealing with APIs: Multiple data fetches, then do something when it's all done.
 
@@ -326,7 +326,7 @@ Since `JSON.parse` takes a single argument and returns a transformed value, we c
     })
 
 
-[Click here to see that in action](_code/story.json), check the console in DevTools to see the result. In fact, we could make a `getJSON` function really easily:
+[See that in action here](_code/story.json), check the console in DevTools to see the result. In fact, we could make a `getJSON` function really easily:
 
 
     function getJSON(url) {
@@ -488,7 +488,7 @@ With our story and chapters, we can use catch to display an error to the user:
 
 
 
-If fetching `story.chapterUrls[0]` fails (eg http 500 or user is offline), it'll skip all following success callbacks, which includes the one in `getJSON` which tries to parse the response as JSON, and also skips the callback that adds chapter1.html to the page. Instead it moves onto the catch callback. As a result, "Failed to show chapter" will be added to the page if any of the previous actions failed.
+If fetching `story.chapterUrls[0]` fails (e.g., http 500 or user is offline), it'll skip all following success callbacks, which includes the one in `getJSON` which tries to parse the response as JSON, and also skips the callback that adds chapter1.html to the page. Instead it moves onto the catch callback. As a result, "Failed to show chapter" will be added to the page if any of the previous actions failed.
 
 Like JavaScript's try/catch, the error is caught and subsequent code continues, so the spinner is always hidden, which is what we want. The above becomes a non-blocking async version of:
 
@@ -518,7 +518,7 @@ You may want to "catch" simply for logging purposes, without recovering from the
 So we've managed to fetch one chapter, but we want them all. Let's make that happen.
 
 
-## Parallelism and sequencing - Getting the best of both
+## Parallelism and sequencing: getting the best of both
 
 
 Thinking async isn't easy. If you're struggling to get off the mark, try writing the code as if it were synchronous. In this case:
@@ -576,7 +576,7 @@ But how can we loop through the chapter urls and fetch them in order? This **doe
 
 
 
-`forEach` isn't async-aware, so our chapters would appear in whatever order they download, which is basically how Pulp Fiction was written. This isn't Pulp Fiction, so let's fix it…
+`forEach` isn't async-aware, so our chapters would appear in whatever order they download, which is basically how Pulp Fiction was written. This isn't Pulp Fiction, so let's fix it.
 
 
 ### Creating a sequence
@@ -597,7 +597,7 @@ We want to turn our `chapterUrls` array into a sequence of promises. We can do t
 
 
 
-This is the first time we've seen `Promise.resolve`, which creates a promise that resolves to whatever value you give it. If you pass it an instance of `Promise` it'll simply return it (**note:** this is a change to the spec that some implementations don't yet follow). If you pass it something promise-like (has a 'then' method), it creates a genuine `Promise` that fulfills/rejects in the same way. If you pass in any other value, eg `Promise.resolve('Hello')`, it creates a promise that fulfills with that value. If you call it with no value, as above, it fulfills with "undefined".
+This is the first time we've seen `Promise.resolve`, which creates a promise that resolves to whatever value you give it. If you pass it an instance of `Promise` it'll simply return it (**note:** this is a change to the spec that some implementations don't yet follow). If you pass it something promise-like (has a 'then' method), it creates a genuine `Promise` that fulfills/rejects in the same way. If you pass in any other value, e.g., `Promise.resolve('Hello')`, it creates a promise that fulfills with that value. If you call it with no value, as above, it fulfills with "undefined".
 
 
 There's also `Promise.reject(val)`, which creates a promise that rejects with the value you give it (or undefined).
@@ -620,7 +620,7 @@ We can tidy up the above code using [`array.reduce`](https://developer.mozilla.o
 
 This is doing the same as the previous example, but doesn't need the separate "sequence" variable. Our reduce callback is called for each item in the array. "sequence" is `Promise.resolve()` the first time around, but for the rest of the calls "sequence" is whatever we returned from the previous call. `array.reduce` is really useful for boiling an array down to a single value, which in this case is a promise.
 
-Let's put it all together…
+Let's put it all together:
 
     getJSON('story.json').then(function(story) {
       addHtmlToPage(story.heading);
@@ -743,15 +743,15 @@ And there we go ([see example](_code/async-best-example.html)), the best of both
 In this trivial example, all of the chapters arrive around the same time, but the benefit of displaying one at a time will be exaggerated with more, larger chapters.
 
 
-Doing the above with [Node.js-style callbacks or events](https://gist.github.com/jakearchibald/0e652d95c07442f205ce) is around double the code, but more importantly isn't as easy to follow. However, this isn't the end of the story for promises, when combined with other ES6 features they get even easier…
+Doing the above with [Node.js-style callbacks or events](https://gist.github.com/jakearchibald/0e652d95c07442f205ce) is around double the code, but more importantly isn't as easy to follow. However, this isn't the end of the story for promises, when combined with other ES6 features they get even easier.
 
 
-## Bonus round: Promises and Generators
+## Bonus round: promises and generators
 
 
 This next bit involves a whole bunch of new ES6 features, but it's not something you need to understand to use promises in your code today. Treat it like a movie trailer for some upcoming blockbuster features.
 
-ES6 also gives us [generators](http://wiki.ecmascript.org/doku.php?id=harmony:generators), which allow functions to exit at a particular point, like "return", but later resume from the same point and state. Eg:
+ES6 also gives us [generators](http://wiki.ecmascript.org/doku.php?id=harmony:generators), which allow functions to exit at a particular point, like "return", but later resume from the same point and state, for example:
 
 
 
@@ -773,7 +773,7 @@ Notice the star before the function name, this makes it a generator. The yield k
     adder.next(50).value; // 65
 
 
-But what does this mean for promises? Well, you can use this return/resume behaviour to write async code that looks like (and is as easy to follow as) synchronous code. Don't worry too much about understanding it line-for-line, but here's a helper function that lets us use 'yield' to wait for promises to settle:
+But what does this mean for promises? Well, you can use this return/resume behaviour to write async code that looks like (and is as easy to follow as) synchronous code. Don't worry too much about understanding it line-for-line, but here's a helper function that lets us use "yield" to wait for promises to settle:
 
     function spawn(generatorFunc) {
       function continuer(verb, arg) {
@@ -796,7 +796,7 @@ But what does this mean for promises? Well, you can use this return/resume behav
     }
 
 
-…which I pretty much [lifted verbatim from Q](https://github.com/kriskowal/q/blob/db9220d714b16b96a05e9a037fa44ce581715e41/q.js#L500), but adapted for JavaScript promises. With this, we can take our final best-case chapter example, mix it with a load of new ES6 goodness, and turn it into:
+… which I pretty much [lifted verbatim from Q](https://github.com/kriskowal/q/blob/db9220d714b16b96a05e9a037fa44ce581715e41/q.js#L500), but adapted for JavaScript promises. With this, we can take our final best-case chapter example, mix it with a load of new ES6 goodness, and turn it into:
 
     spawn(function *() {
       try {
@@ -827,7 +827,7 @@ But what does this mean for promises? Well, you can use this return/resume behav
 
 
 
-This works exactly as before, but so much easier to read. This works in Chrome and Opera today ([see example](_code/async-generators-example.html)), and works in Microsoft Edge by going to `about:flags` and turning on the **Enable experimental Javascript features** setting. This will be enabled by default in an upcoming version.
+This works exactly as before but is so much easier to read. This works in Chrome and Opera today ([see example](_code/async-generators-example.html)), and works in Microsoft Edge by going to `about:flags` and turning on the **Enable experimental Javascript features** setting. This will be enabled by default in an upcoming version.
 
 
 This throws together a lot of new ES6 stuff: promises, generators, let, for-of. When we yield a promise, the spawn helper waits for the promise to resolve and returns the final value. If the promise rejects, spawn causes our yield statement to throw an exception, which we can catch with normal JavaScript try/catch. Amazingly simple async coding!
@@ -836,7 +836,7 @@ This throws together a lot of new ES6 stuff: promises, generators, let, for-of. 
 This pattern is so useful, it's coming to ES7 in the form of [async functions](https://jakearchibald.com/2014/es7-async-functions/). It's pretty much the same as above, but no need for a `spawn` method.
 
 
-## Promise API Reference
+## Promise API reference
 
 All methods work in Chrome, Opera, Firefox, Microsoft Edge, and Safari unless otherwise noted. [The polyfill](https://github.com/jakearchibald/ES6-Promises#readme) provides the below for all browers.
 
@@ -897,7 +897,7 @@ Note: I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposit
     <p>
       <code>reject(obj)</code><br>
       Your promise is rejected with <code>obj</code>. For consistency and 
-      debugging (eg stack traces), obj should be an <code>instanceof Error</code>.
+      debugging (e.g., stack traces), obj should be an <code>instanceof Error</code>.
       Any errors thrown in the constructor callback will be implicitly passed
       to <code>reject()</code>.
     </p>

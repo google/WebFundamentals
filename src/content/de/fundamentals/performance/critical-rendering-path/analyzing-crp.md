@@ -8,7 +8,7 @@ description: Zur Erkennung und Behebung von Leistungsengpässen beim kritischen 
 
 # Leistung des kritischen Rendering-Pfads analysieren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Zur Erkennung und Behebung von Leistungsengpässen beim kritischen Rendering-Pfad müssen Sie die häufigen Probleme kennen. Bei unserer interaktiven Tour picken wir häufige Leistungsmuster heraus, die Ihnen bei der Optimierung Ihrer Seiten helfen.

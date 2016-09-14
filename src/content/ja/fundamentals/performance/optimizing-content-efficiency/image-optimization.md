@@ -8,7 +8,7 @@ description: ウェブページ上のダウンロード容量の大半は画像�
 
 # 画像の最適化 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

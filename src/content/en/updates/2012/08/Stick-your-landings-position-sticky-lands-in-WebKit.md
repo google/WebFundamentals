@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Stick your landings! position: sticky lands in WebKit {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 `position: sticky` is a new way to position elements and is conceptually similar to `position: fixed`. The difference is that an element with `position: sticky` behaves like `position: relative`  within its parent, until a given offset threshold is met in the viewport.

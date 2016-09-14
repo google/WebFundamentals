@@ -8,7 +8,7 @@ description: Er moeten drie variabelen worden geoptimaliseerd om de snelste init
 
 # Het kritieke weergavepad optimaliseren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

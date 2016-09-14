@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Big boost to DOM performance - WebKit's innerHTML is 240% faster {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 <p>We're very happy to see that some common DOM operations have just skyrocketed in speed. The changes were at the WebKit level, boosting performance for both Safari (JavaScriptCore) and Chrome (V8).</p>

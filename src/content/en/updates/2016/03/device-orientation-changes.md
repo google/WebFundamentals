@@ -9,7 +9,7 @@ description: DeviceOrientationEvent uses relative degrees, and there's a new Dev
 
 # Device Orientation Changes Are Coming to Chrome 50 {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 

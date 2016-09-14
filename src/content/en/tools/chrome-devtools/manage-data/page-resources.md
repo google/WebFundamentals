@@ -8,7 +8,7 @@ description: Organize resources by frame, domain, type, or other criteria.
 
 # Inspect Resources {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Organize resources by frame, domain, type, or other
 criteria.
@@ -69,4 +69,4 @@ panel.
 Use the **Network** panel to filter resources by name, type, and a whole range
 of other criteria. Check out the guide below to learn more.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.filter %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.filter #}

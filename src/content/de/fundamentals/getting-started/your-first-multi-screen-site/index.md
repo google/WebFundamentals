@@ -8,7 +8,7 @@ description: Heute kann über eine extreme Vielfalt an Geräten auf das Web zuge
 
 # Ihre erste Website für verschiedene Geräte {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

@@ -8,7 +8,7 @@ description: 如要打造出優異的設計、品牌宣傳、可讀性和無障�
 
 # 網頁字型最佳化 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -7,8 +7,8 @@ description: Enabling HTTPS on your servers is critical to securing your webpage
 
 # Enabling HTTPS on Your Servers {: .page-title }
 
-{% include "_shared/contributors/chrispalmer.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 ## TL;DR
 

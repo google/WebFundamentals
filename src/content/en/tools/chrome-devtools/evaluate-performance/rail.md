@@ -2,12 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways: Response, Animation, Idle, Load.
 
+{# wf_review_required #}
 {# wf_updated_on: 2015-06-07 #}
 {# wf_published_on: 2015-06-07 #}
 
 # The RAIL Performance Model {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways:
 
@@ -29,10 +30,9 @@ The majority of time users spend in your site isn't waiting for it to load,
 but waiting for it to respond while using it.
 Understand how users perceive performance delays:
 
-<table class="mdl-data-table">
+<table class="responsive">
   <thead>
-      <th>Delay</th>
-      <th>User Reaction</th>
+      <th colspan="2">Delay &amp; User Reaction</th>
   </thead>
   <tbody>
     <tr>
@@ -77,8 +77,7 @@ If possible, do work in the background.
 
 For actions that take longer than 500ms to complete, always provide feedback.
 
-<!-- TODO: Verify note type! -->
-Note: Respond to user's touchmoves and scrolling in under 16ms.
+Success: Respond to user's touchmoves and scrolling in under 16ms.
 
 ## Animation: render frames every 16ms
 
@@ -124,7 +123,7 @@ You don't have to load everything in under 1 second to produce the perception of
 
 To evaluate your site against RAIL metrics, use the Chrome DevTools [Timeline tool](/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool) to record user actions. Then check the recording times in the Timeline against these key rail metrics:
 
-<table class="mdl-data-table">
+<table>
   <thead>
       <th>RAIL Step</th>
       <th>Key Metric</th>

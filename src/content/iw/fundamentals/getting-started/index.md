@@ -11,7 +11,7 @@ description: זה יכול לעתים קרובות להיראות מרתיע ל�
 
 Translated By: 
 
-{% include "_shared/contributors/greenido.html" %}
+{% include "web/_shared/contributors/greenido.html" %}
 
 
 

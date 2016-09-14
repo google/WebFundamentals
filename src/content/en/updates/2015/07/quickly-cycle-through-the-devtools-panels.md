@@ -9,7 +9,7 @@ description: You can use <kbd class='kbd'>Cmd + ]</kbd> (or <kbd class='kbd'>Cmd
 
 # Quickly cycle through the DevTools panels {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-07-15-cycle-through-the-devtools-panels-with-a-keyboard-shortcut/cycle-panel-shortcut.gif" alt="Cycle through the DevTools panels with a keyboard shortcut">

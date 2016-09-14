@@ -8,13 +8,13 @@ description: 사용자가 페이지에서 행하는 주요 동작과 관련있�
 
 # 크리티컬 렌더링 패스(Critical Rendering Path) {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/jeokrang.html" %}
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/jeokrang.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

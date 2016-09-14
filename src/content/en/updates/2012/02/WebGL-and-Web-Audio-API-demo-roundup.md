@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # WebGL and Web Audio API demo roundup {: .page-title }
 
-{% include "_shared/contributors/ilmariheikkinen.html" %}
+{% include "web/_shared/contributors/ilmariheikkinen.html" %}
 
 
 Here's a look at some cool WebGL and Web Audio API demos that I've seen over the past couple weeks.

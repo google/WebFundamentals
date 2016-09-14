@@ -9,8 +9,8 @@ description: Introducing a proof of concept design to persist sessions using the
 
 # Goodbye Short Sessions: a proposal for using service-workers to improve cookie management on the web {: .page-title }
 
-{% include "_shared/contributors/wdenniss.html" %}
-{% include "_shared/contributors/owencm.html" %}
+{% include "web/_shared/contributors/wdenniss.html" %}
+{% include "web/_shared/contributors/owencm.html" %}
 
 
 

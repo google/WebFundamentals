@@ -8,7 +8,7 @@ description: 瀏覽器需要先建構 DOM 和 CSSOM 樹狀結構，才能在螢�
 
 # 建構物件模型 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 瀏覽器需要先建構 DOM 和 CSSOM 樹狀結構，才能轉譯網頁。因此，我們必須儘快將 HTML 和 CSS 提供給瀏覽器。

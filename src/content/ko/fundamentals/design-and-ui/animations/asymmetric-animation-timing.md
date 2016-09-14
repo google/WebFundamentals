@@ -8,7 +8,7 @@ description: 대칭을 파괴하면 프로젝트의 대비가 뚜렷하고 매�
 
 # 비대칭 애니메이션 타이밍 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 애니메이션 기간의 비대칭은 개성을 표현하면서 동시에 사용자 상호작용에 빠르게 응답하여 사용자에게 만족감을 줍니다. 또한 대비감을 제공하여 인터페이스를 시각적으로 더욱 매력적으로 보이게 만듭니다.

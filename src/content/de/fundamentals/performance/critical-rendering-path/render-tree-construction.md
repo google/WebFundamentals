@@ -8,7 +8,7 @@ description: Die CSSOM- und DOM-Baumstrukturen werden in einer Rendering-Baumstr
 
 # Erstellung der Rendering-Baumstruktur, Layout, und Paint {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

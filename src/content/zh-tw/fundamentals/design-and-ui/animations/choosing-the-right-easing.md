@@ -8,7 +8,7 @@ description: 為您的專案選擇適當的緩動，無論是緩入、緩出或�
 
 # 選擇正確的緩動 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 在討論了動畫中緩入的各種選項之後，您在專案中應該使用哪一種，以及您動畫應該使用哪一種持續時間？

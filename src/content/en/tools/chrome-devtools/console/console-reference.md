@@ -3,12 +3,13 @@ book_path: /web/tools/_book.yaml
 description: Use the Console API to write information to the console,  create JavaScript profiles, and start a debugging session.
 
 {# wf_updated_on: 2016-03-21 #}
+{# wf_published_on: 2016-03-21 #}
 
 # Console API Reference {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 Use the Console API to write information to the console, 
 create JavaScript profiles, and start a debugging session.
@@ -148,7 +149,7 @@ You can also nest groups:
 
 ![nested console.group() example](images/nested-group.png)
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.organizing %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.organizing #}
 
 ## console.groupCollapsed(object[, object, ...])
 

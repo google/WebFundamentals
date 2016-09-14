@@ -7,8 +7,8 @@ description: Your code editor is your main development tool; you use it to write
 
 # Set Up Your Editor {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 Your code editor is your main development tool; you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins.
 
@@ -27,7 +27,6 @@ manager that makes it easy to install plugins and add new functionality.
 
 There are currently two download options for Sublime Text, either [version 2](http://www.sublimetext.com/2) or [version 3](http://www.sublimetext.com/3). Version 3 is pretty stable and will give you access to packages not available in Sublime Text 2, however you may find version 2 more reliable.
 
-<!-- TODO: Verify note type! -->
 Note: Rob Dodson's <a href='http://robdodson.me/blog/2012/06/23/sublime-text-2-tips-and-shortcuts/'>blog post</a> on how to get to know and love Sublime is a great reference for getting the most out of your editor. The concepts are relevant to any text editor, not just Sublime.
 
 ## Why use a package manager?
@@ -72,7 +71,7 @@ Write CSS, ignoring vendor prefixes and when you want to add them, hit
 `ctrl+shift+p` and type `Autoprefix CSS`.
 
 [We cover how you can automate this in your build
-process]({{site.WFBaseUrl}}/tools/setup/setup-buildtools.html),
+process](/web/tools/setup/setup-buildtools),
 that way your CSS stays lean and you don't need to remember to hit
 `ctrl+shift+p`.
 

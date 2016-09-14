@@ -2,13 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools.
 
+{# wf_review_required #}
 {# wf_updated_on: 2015-04-13 #}
 {# wf_published_on: 2014-09-24 #}
 
 # Set Up Your Build Tools {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 Build your multi-device site from the ground up. Learn how to speed up development and create a fast loading site with a set of build process tools. Every site should have a development version and a production version.<br /><br />The development version has all the HTML, CSS, JS and image files that make up your site in a clean format that you are happy to work on.<br /><br />A production version will take these files, minify them, concatenate / merge them and optimise files like images.
 
 Web developers have to think about a million things at once and the build step
@@ -49,15 +50,10 @@ you do the same.
 There are tools which have GUIs and may be a bit easier to get to grips with but
 will be less flexible.
 
-<table class="mdl-data-table tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Supported Platforms">Supported Platforms</th>
-      <th data-th="Tool Name">Tool Name</th>
+      <th colspan="2">Supported Platforms &amp; Tool Name</th>
     </tr>
   </thead>
   <tbody>
@@ -113,12 +109,7 @@ makes the file size smaller, leading to faster downloads.
 
 For minification, use the following:
 
-<table class="mdl-data-table tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
+<table>
   <thead>
     <tr>
       <th data-th="Type of File">Type of File</th>
@@ -147,12 +138,7 @@ For minification, use the following:
 
 For concatentation, use the following:
 
-<table class="mdl-data-table tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
+<table>
   <thead>
     <tr>
       <th data-th="Type of File">Type of File</th>
@@ -186,15 +172,10 @@ image, for example, information about the camera used to take the photo.
 
 For optimizing images, you can use these modules.
 
-<table class="mdl-data-table tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Gulp">Gulp</th>
-      <th data-th="Grunt">Grunt</th>
+      <th colspan="2">Gulp &amp; Grunt</th>
     </tr>
   </thead>
   <tbody>
@@ -211,15 +192,10 @@ It can often become a bit tedious to include all the vendor prefixes for the CSS
 you use. Use an auto-prefixer to automatically add the prefixes you need to
 include:
 
-<table class="mdl-data-table tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Gulp">Gulp</th>
-      <th data-th="Grunt">Grunt</th>
+      <th colspan="2">Gulp vs Grunt</th>
     </tr>
   </thead>
   <tbody>
@@ -231,7 +207,7 @@ include:
 </table>
 
 **Note**  
-If you prefer, you can add a [Sublime package to do the auto-prefixing]({{site.WFBaseUrl}}/tools/setup/setup-editor.html#autoprefixer) for
+If you prefer, you can add a [Sublime package to do the auto-prefixing](/web/tools/setup/setup-editor#autoprefixer) for
 you.
 
 ### Never leave your text editor with live reloading
@@ -241,15 +217,10 @@ After using it once, you won't be able to live without it.
 
 Web Starter Kit uses browser-sync for Live Reload support.
 
-<table class="mdl-data-table tc-heavyright">
-  <colgroup>
-    <col span="1" />
-    <col span="1" />
-  </colgroup>
+<table class="responsive">
   <thead>
     <tr>
-      <th data-th="Gulp">Gulp</th>
-      <th data-th="Grunt">Grunt</th>
+      <th colspan="2">Gulp vs Grunt</th>
     </tr>
   </thead>
   <tbody>
@@ -260,10 +231,4 @@ Web Starter Kit uses browser-sync for Live Reload support.
   </tbody>
 </table>
 
-**Note**  
-If you like the idea of Live Reloading, but don't want to have a build
-process, [Addy Osmani's write up on
-HTML5Rocks](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/)
-covers a range of alternatives (some free and some commercial).
-
-
+Note: If you like the idea of Live Reloading, but don't want to have a build process, [Addy Osmani's write up on HTML5Rocks](http://www.html5rocks.com/en/tutorials/tooling/synchronized-cross-device-testing/) covers a range of alternatives (some free and some commercial).

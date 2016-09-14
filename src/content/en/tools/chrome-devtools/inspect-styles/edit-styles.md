@@ -8,8 +8,8 @@ description: Use the Styles pane in Chrome DevTools to inspect and modify the CS
 
 # Edit Styles {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Use the <strong>Styles</strong> pane to modify the CSS
 styles associated to an element.
@@ -18,8 +18,8 @@ styles associated to an element.
 
 
 ## TL;DR
-- 'The styles pane lets you change your CSS in as many ways as possible, locally, including editing existing styles, adding new styles, adding rules for styles.'
-- 'If you want styles to persist (so they don''t go away on a reload), you need to persist them to your development workspace.'
+- The styles pane lets you change your CSS in as many ways as possible, locally, including editing existing styles, adding new styles, adding rules for styles.
+- If you want styles to persist (so they don't go away on a reload), you need to persist them to your development workspace.
 
 
 ## Inspect styles applied to an element
@@ -114,7 +114,6 @@ Click an empty space within an editable CSS rule to create a new declaration.
 Type it out, or paste the CSS into the **Styles** pane. Properties and their 
 values are parsed and entered into the correct fields.
 
-<!-- TODO: Verify note type! -->
 Note: To enable or disable a style declaration, check or uncheck the checkbox next to it.
 
 ## Add a style rule

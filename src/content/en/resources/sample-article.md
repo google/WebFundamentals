@@ -2,10 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: This is the page description placed in the head.
 
+{# wf_updated_on: 2016-09-13 #}
+{# wf_published_on: 2016-09-13 #}
 
 # Sample Article {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 This is the intro paragraph. It's the equivalent of the old
 `introduction` yaml attribute, but instead of living in the YAML
@@ -25,7 +27,7 @@ provided.
 To include an author or translator attribution, use:
 
 <pre class="prettyprint">
-&#123;% include "_shared/contributors/petelepage.html" %}
+&#123;% include "web/_shared/contributors/petelepage.html" %}
 </pre>
 
 ## YAML Front Matter
@@ -226,6 +228,22 @@ $(document).ready(function() {
 });
 </script>
 {% endhtmlescape %}&#123;% endframebox %}</pre>
+
+### Special Case: Templates -  &#123;&#123;}}
+
+If you need to include templates in your code samples, be sure to escape them.
+
+For example:
+<pre class="prettyprint">
+&lt;pre class="prettyprint">
+&amp;lt;polymer-media-query query="max-width:640px" queryMatches="&amp;#123;{isPhone}}">
+&lt;/pre>
+</pre>
+
+If it's inline, you'll need to wrap it in a `<code>` block instead of backticks.
+<pre class="prettyprint">
+* Declarative two-way data-binding: &lt;code>&lt;input id="input" value="&amp;#123;{foo}}">&lt;/code>
+</pre>
 
 ## Images
 
@@ -533,8 +551,8 @@ reuse, you can use a set of pre-created related guides.
 
 Will render as:
 
-{% include "_shared/related-guides/heading.html" %}
-{% include "_shared/related-guides/service-workers.html" %}
+{% include "web/_shared/related-guides/heading.html" %}
+{% include "web/_shared/related-guides/service-workers.html" %}
 
 ## User Comment Blocks
 

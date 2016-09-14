@@ -12,7 +12,7 @@ description: 讓你的網頁看起來更加漂亮。
 
 Translated By: 
 
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
 
 透過行動裝置上網的使用者數量正以難以想像的速度暴增，但是大多數的網站並未針對行動裝置進行最佳化。礙於行動裝置的螢幕大小，開發人員必須針對行動裝置螢幕上的內容另行編排。
 
@@ -56,7 +56,7 @@ Explore what makes a site responsive and how some common responsive design patte
 
 # 設定檢視區 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 在針對多種裝置最佳化的網頁中，文件的標題必須包含中繼檢視區元素。中繼檢視區標記可指示瀏覽器如何控制網頁的大小和縮放。
@@ -115,7 +115,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 # 依照檢視區大小調整內容 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 使用者習慣在桌上型電腦和行動裝置上垂直捲動網站，如果強迫使用者以水平捲動或縮放的方式瀏覽整個網頁，將會導致不良的使用者體驗。
@@ -153,7 +153,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 # 使用 CSS 媒體查詢提升回應成效 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 媒體查詢是可套用到 CSS 樣式的簡易篩選器。透過媒體查詢即可輕鬆依據顯示內容的裝置特性 (包括顯示器類型、寬度、高度、方向，甚至是解析度) 變更樣式。

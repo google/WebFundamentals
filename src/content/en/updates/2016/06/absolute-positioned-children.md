@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Flexbox gets new behavior for absolute-positioned children {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
 
 
 

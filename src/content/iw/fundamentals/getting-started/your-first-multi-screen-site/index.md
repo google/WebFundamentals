@@ -8,12 +8,12 @@ description: האינטרנט נגיש במגוון עצום של מכשירים
 
 # האתר הראשון שלך שמותאם למגוון מכשירים {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/greenido.html" %}
+{% include "web/_shared/contributors/greenido.html" %}
 
 
 

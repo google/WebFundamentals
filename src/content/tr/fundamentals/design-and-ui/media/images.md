@@ -8,7 +8,7 @@ description: Bir resim 1000 kelimeye bedeldir ve resimler, her sayfanin ayrilmaz
 
 # Resimler {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

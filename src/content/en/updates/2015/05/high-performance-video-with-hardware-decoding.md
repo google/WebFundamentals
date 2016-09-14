@@ -4,11 +4,11 @@ description: Hardware video support brings efficient decoding to plugins as well
 
 {# wf_updated_on: 2015-05-06 #}
 {# wf_published_on: 2015-05-06 #}
-{# wf_tags: news,video,flash,shaka-player,EME,MSE,hardware-decoding,codecs #}
+{# wf_tags: news,video,flash,shaka-player,eme,mse,hardware-decoding,codecs #}
 
 # High performance video with hardware decoding {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 

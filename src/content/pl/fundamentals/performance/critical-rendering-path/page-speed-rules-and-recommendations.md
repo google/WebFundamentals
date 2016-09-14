@@ -8,7 +8,7 @@ description: Reguły PageSpeed Insights w kontekście: na co zwracać uwagę pod
 
 # Reguły i zalecenia na temat PageSpeed Insights {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Reguły PageSpeed Insights w kontekście: na co zwracać uwagę podczas optymalizacji krytycznej ścieżki renderowania i dlaczego.

@@ -8,7 +8,7 @@ description: Het kritieke weergavepad optimaliseren door de weergave prioriteit 
 
 # Het kritieke weergavepad {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Het optimaliseren van het kritieke weergavepad is cruciaal voor het verbeteren van de prestaties van onze pagina's: ons doel is om die inhoud prioriteit te geven en weer te geven die verband houd met de primaire actie die een gebruiker op een pagina wil uitvoeren.

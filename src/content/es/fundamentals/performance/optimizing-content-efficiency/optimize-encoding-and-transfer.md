@@ -8,7 +8,7 @@ description: Una vez eliminados todos los recursos innecesarios, hay que reducir
 
 # Optimizar la codificación y el tamaño de transferencia de los recursos basados en texto {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

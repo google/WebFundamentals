@@ -8,12 +8,12 @@ description: 網頁基礎提供你多設備網頁開發的綜合資源。
 
 # 網頁基礎 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
 
 
 

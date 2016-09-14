@@ -7,7 +7,7 @@ description: Learn the key factors in optimizing the critical rendering path.
 
 # Optimizing the Critical Rendering Path {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
   To deliver the fastest possible time to first render, we need 

@@ -8,7 +8,7 @@ description: Inspect and manage storage, databases, and caches from the Applicat
 
 # Inspect and Manage Storage, Databases, and Caches {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 Inspect and manage storage, databases, and caches from the
 <strong>Application</strong> panel.
 
@@ -162,7 +162,7 @@ The **Cache Storage** pane on the **Application** panel lets you inspect,
 modify, and debug caches created with the (service worker) Cache API. Check
 out the guide below for more help.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.pwa %}
+{# include shared/related_guides.liquid inline=true list=page.related-guides.pwa #}
 
 ## Clear service workers, storage, databases, and caches {#clear-storage}
 

@@ -8,7 +8,7 @@ description: Het identificeren en oplossen van knelpunten in de prestatie van he
 
 # Het kritieke weergavepad analyseren {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

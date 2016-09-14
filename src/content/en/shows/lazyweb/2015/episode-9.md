@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Jake Archibald takes on Lie-Fi: first render before JavaScript, offline-first with service worker, Streams API, server-side rendering. Paul Lewis bemoans tooling complexity: NPM, Grunt, Gulp, Bower, Browserify, Git.... fallen.io counts the cost of conflict with stunning interactive infographics. Chris Lowis explains 808 drum synthesis with the Web Audio API. Plus: good form design and BASIC programming for the Commodore 64.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-06-16 #}
 {# wf_published_on: 2015-06-08 #}
 {# wf_youtube_id: oRcxExzWlc0 #}

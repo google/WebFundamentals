@@ -8,7 +8,7 @@ description: Learn about Web Animation Playback
 
 # Web Animations Playback Control in Chrome 39 {: .page-title }
 
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 Earlier this year, [Chrome 36 landed the element.animate method](http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36) as a part of the broader [Web Animations spec](http://w3c.github.io/web-animations/). This allows for efficient, native animations written imperatively - giving developers the choice to build their animations and transitions with the most suitable approach for them.
 

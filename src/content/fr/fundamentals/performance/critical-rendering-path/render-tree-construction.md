@@ -8,7 +8,7 @@ description: Les arborescences des modèles CSSOM et DOM sont combinées pour fo
 
 # Construction, mise en page et peinture de l'arborescence d'affichage {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Les arborescences des modèles CSSOM et DOM sont combinées pour former une arborescence d'affichage, qui est ensuite utilisée pour calculer la mise en page de chaque élément visible et fait office de données d'entrée pour le processus de peinture qui affiche les pixels à l'écran. L'optimisation de chacune de ces étapes est essentielle pour obtenir des performances d'affichage optimales.

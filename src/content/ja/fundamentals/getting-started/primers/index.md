@@ -7,7 +7,7 @@ description: API 入門は API の重要な概念について理解するのを�
 
 # API 入門 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

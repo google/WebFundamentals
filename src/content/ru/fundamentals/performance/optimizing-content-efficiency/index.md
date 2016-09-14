@@ -8,7 +8,7 @@ description: Объем скачиваемых приложениями данн
 
 # Оптимизация контента {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

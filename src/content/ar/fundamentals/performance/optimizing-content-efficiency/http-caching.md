@@ -8,7 +8,7 @@ description: يعد جلب شيء ما على الشبكة أمرًا بطيئً
 
 # ذاكرة التخزين المؤقت فيHTTP  {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

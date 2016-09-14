@@ -8,7 +8,7 @@ description: There are lots of great new features in Chrome 50 for Notifications
 
 # Web Notification Improvements in Chrome 50: Icons, Close Events, Renotify Preferences and Timestamps {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 
@@ -44,13 +44,13 @@ etc.. Now you don't have to worry: with [this
 recent addition](https://bugs.chromium.org/p/chromium/issues/detail?id=581336)
 you can now specify an image on the action button:
 
-{%highlight javascript%}
-self.registration.showNotification('New message from Alice', {
-  actions: [
-   {action: 'like', title: 'Like', icon: 'https://example/like.png'},
-   {action: 'reply', title: 'Reply', icon: 'https://example/reply.png'}]
-});
-{%endhighlight%}
+
+    self.registration.showNotification('New message from Alice', {
+      actions: [
+       {action: 'like', title: 'Like', icon: 'https://example/like.png'},
+       {action: 'reply', title: 'Reply', icon: 'https://example/reply.png'}]
+    });
+
 
 <img src="/web/updates/images/2016/03/notifications/desktop.png" />
 

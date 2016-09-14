@@ -2,13 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The amount of data downloaded by apps continues to increase over time. To deliver great performance you must optimize data delivery as much as possible.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Optimizing Content Efficiency {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 Our web applications continue to grow in their scope, ambition, and functionality -- that's a good thing. However, the relentless march toward a richer web is driving another trend: the amount of data downloaded by each application continues to increase at a steady pace. To deliver great performance we need to optimize delivery of each and every byte!
 
@@ -16,7 +16,7 @@ What does a modern web application look like? [HTTP Archive](http://httparchive.
 
 <img src="images/http-archive-trends.png"  alt="HTTP Archive trends">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table class="">
 <colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>

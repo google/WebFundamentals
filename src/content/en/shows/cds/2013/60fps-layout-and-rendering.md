@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Hitting 60fps in your projects directly correlates to user engagement and is crucial to its success. In this talk Nat and Tom talked about Chrome’s rendering pipeline, some common causes of dropped frames and how to avoid them.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-02-23 #}
 {# wf_published_on: 2015-02-23 #}
 {# wf_youtube_id: YyQYhhy1dZI #}

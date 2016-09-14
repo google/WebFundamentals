@@ -8,7 +8,7 @@ description: Узнайте, как легко и просто добавить 
 
 # Видео {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -7,7 +7,7 @@ description: Responsive web design patterns are quickly evolving, but there are 
 
 # Responsive web design patterns {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices.
 
@@ -55,7 +55,7 @@ Sites using this pattern include:
  * [SimpleBits](http://simplebits.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/mostly-fluid.html" region_tag="mfluid" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/mostly-fluid.html" region_tag="mfluid" adjust_indentation="auto" %}
 </pre>
 
 
@@ -84,7 +84,7 @@ Sites using this pattern include:
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
 </pre>
 
 
@@ -114,7 +114,7 @@ Sites using this pattern include:
  * [Andersson-Wise Architects](http://www.anderssonwise.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter" adjust_indentation="auto" %}
 </pre>
 
 
@@ -140,7 +140,7 @@ Sites using this pattern include:
  * [Future Friendly](http://futurefriendlyweb.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" adjust_indentation="auto" %}
 </pre>
 
 
@@ -171,5 +171,5 @@ Sites using this pattern include:
  * [Facebook's Mobile Site](https://m.facebook.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas" lang=css adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}
 </pre>

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Presto Change-O! Update the sections in your single page app using core-pages.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-05 #}
 {# wf_published_on: 2015-03-05 #}
 {# wf_youtube_id: 6x2A9UgLqEw #}

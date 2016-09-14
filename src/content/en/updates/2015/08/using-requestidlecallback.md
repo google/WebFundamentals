@@ -9,7 +9,7 @@ description: <code>requestIdleCallback</code> is new performance API for schedul
 
 # Using requestIdleCallback {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 

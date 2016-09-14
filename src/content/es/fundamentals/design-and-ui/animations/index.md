@@ -8,7 +8,7 @@ description: Obtenga más información sobre las animaciones y su uso en las apl
 
 # Animaciones {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Las animaciones son una parte muy importante para lograr que las aplicaciones y los sitios web sean cautivadores. Los usuarios desean utilizar interfaces de usuario altamente receptivas e interactivas. Sin embargo, animar su interfaz no es necesariamente una tarea fácil. ¿Qué se debe animar? ¿Cuándo se debe hacer? ¿Qué tipo de apariencia debe tener la animación?

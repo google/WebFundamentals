@@ -8,7 +8,7 @@ description: 大多数浏览器和设备可访问用户的地理位置。 了解
 
 # 用户位置 {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

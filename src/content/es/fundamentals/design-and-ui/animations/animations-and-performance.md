@@ -8,8 +8,8 @@ description: Las animaciones deben funcionar correctamente; de lo contrario, ten
 
 # Animaciones y rendimiento {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 Cada vez que se hace una animación, se deben mantener 60 fotogramas/s, ya que los usuarios notarán los parpadeos o las obstrucciones, y esto tendrá un impacto negativo en sus experiencias.

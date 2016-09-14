@@ -8,7 +8,7 @@ description: A Web pode ser acessada por uma grande variedade de dispositivos, d
 
 # Seu primeiro site para múltiplos dispositivos {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

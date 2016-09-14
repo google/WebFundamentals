@@ -8,7 +8,7 @@ description: Jeśli czegoś nie da się zmierzyć, nie można tego zoptymalizowa
 
 # Pomiar krytycznej ścieżki renderowania za pomocą interfejsu Navigation Timing {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Jeśli czegoś nie da się zmierzyć, nie można tego zoptymalizować. Na szczęście interfejs API Navigation Timing zapewnia nam wszystkie narzędzia do pomiarów na każdym etapie krytycznej ścieżki renderowania.

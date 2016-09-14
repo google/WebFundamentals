@@ -8,7 +8,7 @@ description: Ein Bild sagt mehr als 1000 Worte, und Bilder spielen eine sehr wic
 
 # Bilder {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

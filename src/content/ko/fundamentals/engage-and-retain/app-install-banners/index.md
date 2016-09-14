@@ -8,13 +8,13 @@ description: 앱 인스톨 배너에는 <i>web</i>과 <i>native</i> 두가지 �
 
 # 앱 인스톨 배너 이용하기 {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 
 
 

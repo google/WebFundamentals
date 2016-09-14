@@ -8,7 +8,7 @@ description: Se puede acceder a la Web desde una amplia gama de dispositivos, de
 
 # Tu primer sitio multidispositivo {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

@@ -2,6 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Service Worker Libraries.
 
+{# wf_published_on: 2015-01-01 #}
+{# wf_updated_on: 2016-09-12 #}
+
 # Service Worker Libraries {: .page-title }
 
 ## What are the Service Worker Libraries?

@@ -9,7 +9,7 @@ description: With DevTools opened, click and hold the reload button to see more 
 
 # Hard reload {: .page-title }
 
-{% include "_shared/contributors/pbakaus.html" %}
+{% include "web/_shared/contributors/pbakaus.html" %}
 
 
 With DevTools opened, click and hold the reload button to see more options.

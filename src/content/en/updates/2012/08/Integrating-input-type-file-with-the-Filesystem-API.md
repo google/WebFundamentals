@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Integrating input[type=file] with the Filesystem API {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 Let's say you have a photo editing app and you'd like users to be able to drag in hundreds of photos and copy them into your app. Ok, what do you do?

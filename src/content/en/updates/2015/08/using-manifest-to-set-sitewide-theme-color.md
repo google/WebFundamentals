@@ -8,7 +8,7 @@ description: Set a theme-color in the manifest and have it available to all page
 
 # Using the web app manifest to specify a site wide theme colour {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

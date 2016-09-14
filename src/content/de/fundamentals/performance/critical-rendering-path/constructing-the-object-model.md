@@ -8,7 +8,7 @@ description: Bevor der Browser Inhalte auf dem Bildschirm darstellen kann, müss
 
 # Objektmodell erstellen {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Bevor der Browser die Seite darstellen kann, müssen die DOM- und CSSOM-Baumstrukturen erstellt werden. Deshalb sind sowohl die HTML- als auch die CSS-Elemente dem Browser unverzüglich zur Verfügung zu stellen.

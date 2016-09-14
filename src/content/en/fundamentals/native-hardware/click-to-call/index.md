@@ -7,7 +7,7 @@ description: On devices with phone capabilities, make it easy for users to direc
 
 # Click to Call {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 On devices with phone capabilities, make it easy for users to directly connect
 with you by simply tapping a phone number, more commonly known as click to call.

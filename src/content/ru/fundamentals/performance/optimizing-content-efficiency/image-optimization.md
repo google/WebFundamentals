@@ -8,7 +8,7 @@ description: Изображения - те ресурсы, которые час
 
 # Оптимизация изображений {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/shows/_book.yaml
 description: Today we’re traveling back in time to update one of our old episodes. The iron-iconset-svg element lets you build your own custom icon sets which can be SUPER important if you want to make sure your site is as small and performant as possible.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-07-28 #}
 {# wf_published_on: 2015-07-28 #}
 {# wf_youtube_id: tjmRUgUca1g #}

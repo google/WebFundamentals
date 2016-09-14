@@ -4,11 +4,11 @@ description: 2 new API's have been added in Chrome 44 which makes using Notifica
 
 {# wf_updated_on: 2015-07-16 #}
 {# wf_published_on: 2015-05-21 #}
-{# wf_tags: news,pushmessaging,notifications,data #}
+{# wf_tags: news,webpush,notifications,data #}
 
 # Notifying you of Changes to Notifications {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 Firstly, I apologise for that awful title, but I couldn't not.
 

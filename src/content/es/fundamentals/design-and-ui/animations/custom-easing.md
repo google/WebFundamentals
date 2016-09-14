@@ -8,8 +8,8 @@ description: Desvíese de lo común y cree animaciones totalmente personalizadas
 
 # Aceleración personalizada {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
-{% include "_shared/contributors/samthorogood.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/samthorogood.html" %}
 
 
 

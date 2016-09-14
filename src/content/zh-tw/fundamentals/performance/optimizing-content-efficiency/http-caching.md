@@ -8,7 +8,7 @@ description: 透過網路取得內容的做法不僅緩慢，成本也很高：�
 
 # HTTP 快取 {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

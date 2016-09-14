@@ -9,7 +9,7 @@ description: Local modifications lets you see what changes have been made (via D
 
 # Local Modifications {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-19-devtools-local-modifications/local-mods.gif" alt="DevTools - Local Modifications">

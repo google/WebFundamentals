@@ -9,7 +9,7 @@ description: Did you know you can autocomplete bracket notation in the Sources p
 
 # Autocomplete for bracket notation {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 <img src="/web/updates/images/2015-05-20-console-panel-autocomplete-with-properties-bracket-or-dot-notation/console-autocomplete.gif" alt="Console Panel autocomplete with properties (bracket or dot notation)">

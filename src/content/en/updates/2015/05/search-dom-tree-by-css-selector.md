@@ -9,7 +9,7 @@ description: When browsing the DOM with the Elements panel, try searching for no
 
 # Search DOM tree by CSS selector {: .page-title }
 
-{% include "_shared/contributors/umarhansa.html" %}
+{% include "web/_shared/contributors/umarhansa.html" %}
 
 
 When browsing the DOM with the Elements panel, try searching for nodes via <kbd class="kbd">CMD/Ctrl+F</kbd> by their CSS selectors.

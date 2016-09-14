@@ -8,7 +8,7 @@ description: Aprende los métodos más sencillos para añadir vídeos en tu siti
 
 # Vídeo {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 

@@ -7,7 +7,7 @@ description: Learn how to use Chrome and DevTools to find memory issues that aff
 
 # Find common memory issues {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 Learn how to use Chrome and DevTools to find memory issues
 that affect page performance, including memory leaks, memory bloat, and

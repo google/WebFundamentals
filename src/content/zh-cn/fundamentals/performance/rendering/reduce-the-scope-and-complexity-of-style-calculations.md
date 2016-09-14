@@ -8,12 +8,12 @@ description: 添加或移除一个DOM元素、修改元素属性和样式类、�
 
 # 降低样式计算的范围和复杂度 {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 添加或移除一个DOM元素、修改元素属性和样式类、应用动画效果等操作，都会引起DOM结构的改变，从而导致浏览器需要重新计算每个元素的样式、对页面或其一部分重新布局（多数情况下）。这就是所谓的样式计算。

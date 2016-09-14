@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Screensharing with WebRTC {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 <p><a href="http://updates.html5rocks.com/2012/12/WebRTC-hits-Firefox-Android-and-iOS">As we reported last week</a>, there's been a <strong>lot</strong> happening lately with our old friend <a href="http://www.html5rocks.com/en/tutorials/webrtc/basics/">WebRTC</a>.</p>

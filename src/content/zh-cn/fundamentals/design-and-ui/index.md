@@ -12,6 +12,6 @@ description: 让你的网页看起来更加漂亮。
 
 Translated By: 
 
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
 
 

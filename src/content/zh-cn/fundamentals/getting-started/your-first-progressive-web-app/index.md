@@ -8,12 +8,12 @@ description: Progressive Web Apps是个结合了网页和应用程序的最好�
 
 # 你的首个Progressive Web App {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
 
 
 

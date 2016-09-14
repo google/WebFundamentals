@@ -8,12 +8,12 @@ description: 从小屏幕手机到大屏幕电视，许多设备都能访问 web
 
 # 你的首个多设备站点 {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Translated By: 
 
-{% include "_shared/contributors/samchen.html" %}
+{% include "web/_shared/contributors/samchen.html" %}
 
 
 

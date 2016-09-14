@@ -8,7 +8,7 @@ description: JavaScript biedt ons de mogelijkheid om vrijwel elk onderdeel van d
 
 # Interactiviteit toevoegen met JavaScript {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 JavaScript biedt ons de mogelijkheid om vrijwel elk onderdeel van de pagina aan te passen: inhoud, vormgeving en de reactie op interactie van gebruikers. Maar JavaScript kan ook de DOM-opbouw blokkeren en vertragen wanneer een pagina wordt weergegeven. Zorg dat uw JavaScript asynchroon is en verwijder alle onnodige JavaScript uit het kritieke weergavepad om optimale prestaties te leveren.

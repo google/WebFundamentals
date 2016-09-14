@@ -9,7 +9,7 @@ description: Find out when events occur with microsecond precision, thanks to DO
 
 # High Resolution Timestamps for Events {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 

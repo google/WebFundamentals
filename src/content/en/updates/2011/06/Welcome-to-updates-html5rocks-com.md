@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 
 # Welcome to updates.html5rocks.com! {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 The open web platform is changing at an ever increasing rate. Many developers find it hard to keep up with the pace the browsers are implementing new HTML5 features, including ourselves. There are a ton of new APIs, demos, libraries, and announcements, every day. 

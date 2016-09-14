@@ -8,7 +8,7 @@ description: Romper la simetría les proporciona contraste a sus proyectos y los
 
 # Sincronización asimétrica de las animaciones {: .page-title }
 
-{% include "_shared/contributors/paullewis.html" %}
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 Gracias a la asimetría de la duración de las animaciones, se mejora la experiencia del usuario, ya que esto le permite expresar su personalidad y, al mismo tiempo, responder rápidamente a las interacciones del usuario. Además, se genera un contraste en la apariencia, lo que hace que la interfaz sea más atractiva.

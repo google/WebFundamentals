@@ -8,7 +8,7 @@ description: Para que a primeira renderização aconteça o mais rápido possív
 
 # Como otimizar o caminho de processamento essencial {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 

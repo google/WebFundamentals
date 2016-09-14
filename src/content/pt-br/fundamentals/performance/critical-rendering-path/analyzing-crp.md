@@ -8,7 +8,7 @@ description: Identificar e resolver afunilamentos de desempenho do caminho de pr
 
 # Análise de desempenho do caminho de processamento essencial {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Identificar e resolver afunilamentos de desempenho do caminho de processamento essencial requer um bom conhecimento das ciladas comuns. Façamos um tour prático para extrair padrões comuns de desempenho que ajudarão a otimizar suas páginas.

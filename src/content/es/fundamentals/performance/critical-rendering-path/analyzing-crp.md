@@ -8,7 +8,7 @@ description: Para identificar y resolver los embudos de rendimiento de la ruta d
 
 # Analizar el rendimiento de la ruta de publicación importante {: .page-title }
 
-{% include "_shared/contributors/ilyagrigorik.html" %}
+{% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
 Para identificar y resolver los embudos de rendimiento de la ruta de publicación importante, es necesario conocer a fondo las dificultades habituales. Vamos a realizar un análisis práctico para extraer patrones de rendimiento habituales que te ayudarán a optimizar las páginas.

@@ -8,7 +8,7 @@ description: Os eventos de orientação e movimento do dispositivo oferecem aces
 
 # Device Orientation {: .page-title }
 
-{% include "_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/TODO.html" %}
 
 
 Os eventos de orientação e movimento do dispositivo oferecem acesso ao acelerômetro integrado, giroscópio e compasso em dispositivos móveis.

@@ -2,12 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks.
 
+{# wf_review_required #}
 {# wf_updated_on: 2015-08-03 #}
 {# wf_published_on: 2015-06-08 #}
 
 # How to Record Heap Snapshots {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
 
 Learn how to record heap snapshots with the Chrome DevTools heap profiler and find memory leaks.
 
@@ -33,7 +34,6 @@ the number below the snapshot title appears and shows the total size of the
 
 ![Total size of reachable objects](imgs/total-size.png)
 
-<!-- TODO: Verify note type! -->
 Note: Only reachable objects are included in snapshots. Also, taking a snapshot always starts with a garbage collection.
 
 ## Clear snapshots
@@ -66,7 +66,6 @@ To switch between views, use the selector at the bottom of the view:
 
 ![Switch views selector](imgs/switch-views.png)
 
-<!-- TODO: Verify note type! -->
 Note: Not all properties are stored on the JavaScript heap. Properties implemented using getters that execute native code aren't captured. Also, non-string values such as numbers are not captured.
 
 ### Summary view
@@ -236,7 +235,9 @@ Consider the following sample - when is the #tree GC?
       //#NOW can be #tree GC
     
 
-<code>#leaf</code> maintains a reference to it's parent (parentNode) and recursively up to <code>#tree</code>, so only when leafRef is nullified is the WHOLE tree under <code>#tree</code> a candidate for GC.
+`#leaf` maintains a reference to it's parent (parentNode) and recursively up
+to `#tree`, so only when leafRef is nullified is the WHOLE tree under
+`#tree` a candidate for GC.
 
 ![DOM subtrees](imgs/treegc.png)
 
