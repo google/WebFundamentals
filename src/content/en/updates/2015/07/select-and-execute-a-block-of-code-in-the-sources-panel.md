@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Use the shortcut <kbd class='kbd'>Ctrl + Shift + E</kbd> to run a blockof highlighted code in the Sources Panel.
+description: Use the shortcut Ctrl + Shift + E to run a block of highlighted code in the Sources Panel.
 
 {# wf_updated_on: 2015-07-16 #}
 {# wf_published_on: 2015-07-16 #}

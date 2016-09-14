@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use <code>SourceBuffer</code> <em>sequence</em> mode to ensure media segments are automatically relocated in the timeline in the order they were appended, without gaps between them.
+description: The Media Source API enables JavaScript to construct media streams for playback. From Chrome 50, it's possible to use SourceBuffer sequence mode to ensure media segments are automatically relocated in the timeline in the order they were appended, without gaps between them.
 
 {# wf_updated_on: 2016-03-14 #}
 {# wf_published_on: 2016-03-14 #}

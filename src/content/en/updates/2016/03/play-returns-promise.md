@@ -7,7 +7,7 @@ description: Say goodbye to automatic playback uncertainty! play() now returns a
 {# wf_tags: promises,play,video,audio,chrome50 #}
 {# wf_featured_image: /web/updates/images/2016/03/play-returns-promise/ic_play_circle_outline_black.png #}
 
-# `HTMLMediaElement.play()` Returns a Promise {: .page-title }
+# HTMLMediaElement.play() Returns a Promise {: .page-title }
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 

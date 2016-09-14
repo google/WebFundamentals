@@ -7,7 +7,7 @@ description: Support for image decoding in workers set to land in Chrome 50.
 {# wf_tags: images,performance,workers,chrome50 #}
 {# wf_featured_image: /web/updates/images/2016/03/createimagebitmap-in-chrome-50/workflow.jpg #}
 
-# Chrome Supports `createImageBitmap()` in Chrome 50 {: .page-title }
+# Chrome Supports createImageBitmap() in Chrome 50 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 

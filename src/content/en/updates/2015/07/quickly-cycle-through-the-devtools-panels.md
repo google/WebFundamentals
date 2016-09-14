@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: You can use <kbd class='kbd'>Cmd + ]</kbd> (or <kbd class='kbd'>Cmd + [</kbd>) to cycle through the panels in the DevTools.
+description: You can use Cmd+] (or Cmd+[) to cycle through the panels in the DevTools.
 
 {# wf_updated_on: 2015-07-14 #}
 {# wf_published_on: 2015-07-14 #}

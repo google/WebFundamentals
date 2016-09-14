@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: We've moved into our shiny new home at <a href='/web/tools/chrome-devtools'>developers.google.com/web/tools/chrome-devtools</a> and have great new tutorials and tips for you.
+description: We've moved into our shiny new home at developers.google.com/web/tools/chrome-devtools and have great new tutorials and tips for you.
 
 {# wf_updated_on: 2015-08-06 #}
 {# wf_published_on: 2015-08-06 #}

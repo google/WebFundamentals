@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Learn how DevTools makes you type less with smarter Console autocomplete, how to edit <code>@keyframe</code> rules directly in the Styles pane, how to have fun with CSS Custom Variables and how to join the dark side.
+description: Learn how DevTools makes you type less with smarter Console autocomplete, how to edit @keyframe rules directly in the Styles pane, how to have fun with CSS Custom Variables and how to join the dark side.
 
 {# wf_updated_on: 2016-02-09 #}
 {# wf_published_on: 2016-02-09 #}

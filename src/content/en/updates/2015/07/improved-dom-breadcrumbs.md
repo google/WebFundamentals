@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Did you know the Elements Panel has a <em>Breadcrumb trail</em>?
+description: Did you know the Elements Panel has a Breadcrumb trail?
 
 {# wf_updated_on: 2015-07-23 #}
 {# wf_published_on: 2015-07-23 #}

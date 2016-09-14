@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: In the Sources Panel editor, you can select the next occurrence with <kbd class='kbd'>Cmd + D</kbd>.
+description: In the Sources Panel editor, you can select the next occurrence with Cmd + D.
 
 {# wf_updated_on: 2015-07-19 #}
 {# wf_published_on: 2015-07-19 #}
