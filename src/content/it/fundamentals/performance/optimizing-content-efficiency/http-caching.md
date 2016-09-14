@@ -84,7 +84,7 @@ Questa direttiva specifica il tempo massimo espresso in secondi durante il quale
 
 Segui l'albero decisionale sopra riportato per definire il metodo di caching ottimale per una determinata risorsa o un insieme di risorse utilizzate dalla tua applicazione. Idealmente, lo scopo dovrebbe essere quello di mettere in cache più risposte possibili sul client per il periodo più lungo possibile, nonché fornire dei token di convalida per ogni risposta per consentire una riconvalida efficace.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Direttive di Cache-Control</th>

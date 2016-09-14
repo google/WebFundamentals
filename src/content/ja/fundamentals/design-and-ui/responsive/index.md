@@ -184,7 +184,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 さまざまなアイテムをクエリすることができますが、レスポンシブ ウェブデザインでは、min-width、max-width、min-height、max-height がよく使用されます。
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="attribute">属性</th>

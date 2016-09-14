@@ -143,7 +143,7 @@ Niet alle video-indelingen worden op alle platforms ondersteund. Controleer welk
 
 Gebruik `canPlayType()` om te controleren welke video-indelingen worden ondersteund. De methode kijkt naar een tekenreeksargument die bestaat uit een `mime-type` en optionele codecs en retourneert een van de volgende waarden:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Retourwaarde</th>
@@ -173,7 +173,7 @@ Gebruik `canPlayType()` om te controleren welke video-indelingen worden onderste
 Hier volgen enkele voorbeelden van `canPlayType()`-argumenten en retourwaarden bij uitvoering in Chrome:
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Type</th>
@@ -424,7 +424,7 @@ Een handig overzicht van eigenschappen in het video-element.
 
 Ga voor een volledig overzicht van de kenmerken van video-elementen en de beschrijving hiervan naar [specificaties video-element](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>Kenmerk</th>
       <th>Beschikbaarheid</th>
@@ -481,7 +481,7 @@ Standaard staat deze optie ingesteld op `true`, maar een WebView-app kan ervoor 
 
 Het kenmerk `preload` vertelt de browser in hoeverre informatie of inhoud moet worden geladen bij het openen van de pagina.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Waarde</th>
@@ -513,7 +513,7 @@ In Chrome bijvoorbeeld wordt in een desktopomgeving 25 seconden beeld gebufferd,
 
 #### Eigenschappen
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Eigenschap</th>
       <th>Beschrijving</th>
@@ -558,7 +558,7 @@ Afspeelsnelheid (<a href="https://googlesamples.github.io/web-fundamentals/sampl
 
 #### Methodes
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Methode</th>
     <th>Beschrijving</th>
@@ -590,7 +590,7 @@ ze worden aangeroepen in reactie op een gebruikersactie, zoals het klikken op ee
 
 Dit is alleen een subset van de mediagebeurtenissen die mogelijk worden geactiveerd. Ga naar de pagina [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) op het Mozilla Developer Network voor een volledig overzicht.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Event</th>
       <th>Beschrijving</th>

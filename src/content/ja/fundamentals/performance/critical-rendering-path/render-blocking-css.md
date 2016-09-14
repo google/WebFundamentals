@@ -38,7 +38,7 @@ description: デフォルトでは、CSS はレンダリング ブロック リ�
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>CSS のある NYTimes</td>
 <td>CSS のない NYTimes（FOUC）</td>

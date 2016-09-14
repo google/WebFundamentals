@@ -111,7 +111,7 @@ Inventariseer daarom als eerste stap voor de optimalisatie van de efficiëntie v
 Alle moderne browser ondersteunen GZIP en gebruiken deze compressor standaard voor alle HTTP-verzoeken: het is aan ons om ervoor te zorgen dat de server juist is geconfigureerd, zodat de gecomprimeerde hulpbron aangeboden kan worden wanneer de client erom vraagt.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Bibliotheek</th>

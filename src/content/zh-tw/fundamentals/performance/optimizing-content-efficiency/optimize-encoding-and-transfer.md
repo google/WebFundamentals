@@ -111,7 +111,7 @@ Note: 提供一個典型的例證，JQuery 程式庫的未壓縮開發版本現�
 所有現代瀏覽器都支援並會自動協定將 GZIP 壓縮用於所有 HTTP 請求：我們的工作是確保伺服器得到正確設定，以在用戶端請求時提供壓縮的資源。
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>程式庫</th>

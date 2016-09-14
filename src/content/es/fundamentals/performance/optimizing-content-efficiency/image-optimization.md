@@ -86,7 +86,7 @@ Las pantallas con muchos DPI (HiDPI) tienen una resolución muy buena, pero exis
 
 En cambio, las imágenes de mapa de bits suponen un reto mucho mayor, porque codifican datos de imagen por píxel. Por lo tanto, cuantos más píxeles se utilicen mayor será el tamaño de archivo de una imagen de mapa de bits. Por ejemplo, pensemos en la diferencia entre un recurso de foto mostrado con píxeles 100 x 100 (CSS):
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Resolución de la pantalla</th>
@@ -167,7 +167,7 @@ El navegador asigna internamente 256 valores (sombras) a cada canal, lo que se t
 <!-- TODO: Verify note type! -->
 Note: Ten en cuenta que, independientemente del formato de imagen utilizado para transferir los datos del servidor al cliente, cada píxel utilizado durante la descodificación de la imagen por parte del navegador ocupa 4 bytes de memoria. Esto puede suponer una restricción importante en el caso de imágenes grandes y de dispositivos que no tienen demasiada memoria disponible (p. ej. los dispositivos móviles de baja gama).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Dimensiones</th>
@@ -263,7 +263,7 @@ Note: Ten en cuenta que no se pueden comparar directamente los niveles de calida
 Además de diferentes algoritmos de compresión con y sin pérdida, existen diferentes formatos de imagen que admiten funciones distintas, como los canales de animación y transparencia (alfa). Por lo tanto, la elección del `formato correcto` para una imagen concreta es el resultado de la combinación de los resultados visuales deseados y de los requisitos funcionales.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Formato</th>
@@ -334,7 +334,7 @@ Por último, ten en cuenta que si utilizas un visualizador web para renderizar c
 
 No hay ningún formato de imagen perfecto, ninguna herramienta ni ningún conjunto de parámetros de optimización que sea válido para todas las imágenes. Para obtener los mejores resultados, tendrás que seleccionar el formato y su configuración en función del contenido de la imagen, de sus requisitos visuales y de otros requisitos técnicos.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Herramienta</th>
@@ -384,7 +384,7 @@ Note: Al pasar el cursor por encima del elemento de imagen en Chrome DevTools se
 
 El coste general que resulta de enviar más píxeles de los necesarios y de hacer que sea el navegador el que escale la imagen puede suponer la pérdida de una gran oportunidad para reducir y optimizar el número de bytes total necesario para renderizar la página. Además, ten en cuenta que el cambio de tamaño no depende solamente del número de píxeles al que se reduce la imagen, sino también de su tamaño real.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Tamaño real</th>

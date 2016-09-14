@@ -33,7 +33,7 @@ Você pode agora seletivamente executar o código e examinar seus dados, passo a
 Todas as opções de passo são representadas através de ícones clicáveis ![Breakpoints button bar](imgs/image_7.png){:.inline} no sidebar, mas pode também ser acionada via teclas de atalho.
 Aqui está o resumo:
 
-<table class="mdl-data-table">
+<table class="">
   <thead>
     <tr>
       <th data-th="Icon/Button">Ícone/Botão</th>

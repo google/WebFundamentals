@@ -84,7 +84,7 @@ Note: Cache-Control 头在 HTTP/1.1 规范中定义，取代了之前用来定�
 
 按照上面的决策树来确定您的应用使用的特定资源或一组资源的最优缓存策略。理想情况下，目标应该是在客户端上缓存尽可能多的响应、缓存尽可能长的时间，并且为每个响应提供验证令牌，以便进行高效的重新验证。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Cache-Control 指令</th>

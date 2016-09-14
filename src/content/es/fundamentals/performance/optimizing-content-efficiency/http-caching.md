@@ -84,7 +84,7 @@ Esta directiva especifica en segundos el tiempo máximo durante el que se puede 
 
 Sigue el árbol de decisiones anterior para determinar la política de almacenamiento en memoria caché que resulte óptima para un recurso concreto o para un conjunto de recursos que tu aplicación utilice. Lo ideal es que te marques como objetivo almacenar en memoria caché tantas respuestas como sea posible en el cliente durante el periodo más largo posible, y que proporciones tokens de validación para cada respuesta a fin de poder ofrecer una revalidación eficiente.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Directivas de `Cache-Control`</th>

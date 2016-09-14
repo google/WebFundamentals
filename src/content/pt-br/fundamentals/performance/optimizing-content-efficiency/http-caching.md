@@ -84,7 +84,7 @@ Essa diretiva especifica o tempo máximo em segundos em que a resposta buscada p
 
 Siga a árvore de decisão acima para determinar a política de armazenamento em cache ideal para um determinado recurso ou conjunto de recursos utilizados por seu aplicativo. O ideal é que você armazene o maior número de respostas possível no cliente pelo maior período possível e que forneça tokens de validação para cada resposta para permitir que a revalidação seja eficiente.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Diretivas de controle de cache</th>

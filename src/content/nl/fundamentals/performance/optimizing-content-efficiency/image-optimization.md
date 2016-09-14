@@ -86,7 +86,7 @@ Schermen met hoge resolutie leveren prachtige beelden, maar dit houdt wel in dat
 
 Rasterafbeeldingen vormen een groter probleem, omdat de afbeelding pixel voor pixel moet worden gecodeerd. Hoe groter het aantal pixels, des te groter het bestand wordt. Laten we als voorbeeld het verschil bekijken voor een foto-item met 100x100 (CSS) pixels:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Schermresolutie</th>
@@ -167,7 +167,7 @@ De browser kent aan elk kanaal 256 kleuren (tinten) toe. Dit zijn 8 bits per kan
 <!-- TODO: Verify note type! -->
 Note: Ongeacht de bestandsindeling van de afbeelding die van de server naar de client wordt gedownload, neemt elke pixel tijdens decodering door de browser altijd 4 bytes aan geheugen in beslag. Dit kan een belangrijke beperking zijn voor grote afbeeldingen of voor apparaten die niet veel geheugen hebben, bijv. eenvoudige mobiele telefoons.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Afmetingen</th>
@@ -263,7 +263,7 @@ Note: U kunt kwaliteitsniveaus van verschillende bestandsindelingen niet met elk
 Naast verschillende algoritmen met en zonder verlies ondersteunen verschillende bestandsindelingen andere functies, zoals animatie- en transparatie (alfa) kanalen. De keuze voor de `juiste` bestandsindeling is dan ook een combinatie van het gewenste visuele effect en de vereiste functionaliteit.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Bestandsindeling</th>
@@ -334,7 +334,7 @@ Indien u een Webview gebruikt om inhoud op uw applicatie te renderen, heeft u vo
 
 Er is geen perfecte bestandsindeling voor afbeeldingen, geen perfecte tool of perfecte verzameling optimalisatieparameters die voor alle afbeeldingen werken. Voor het beste resultaat moet u de bestandsindeling en instellingen kiezen die het beste passen bij de inhoud van de afbeelding en de visuele en andere technische vereisten.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Tool</th>
@@ -383,7 +383,7 @@ Note: Als u in Chrome DevTools de muiscursor op de afbeelding plaatst, worden de
 
 Wanneer we overbodige pixels leveren die vervolgens door de browser voor ons worden verwijderd, lopen we een grote kans mis om het totale aantal vereiste bytes te verlagen en optimaliseren. Verkleinen heeft niet alleen te maken met het aantal pixels waarmee de omvang van de afbeelding wordt teruggebracht, maar ook met de natuurlijke grootte van de afbeelding.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Natuurlijke grootte</th>

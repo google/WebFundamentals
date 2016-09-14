@@ -144,7 +144,7 @@ No todos los formatos vídeo son compatibles en todas las plataformas. Comprueba
 
 Usa `canPlayType()` para averiguar qué formatos de vídeo son compatibles. El método usa un argumento de cadena coherente con un `mime-type` y códecs opcionales, y devuelve uno de los siguientes valores:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Valor devuelto</th>
@@ -174,7 +174,7 @@ Usa `canPlayType()` para averiguar qué formatos de vídeo son compatibles. El m
 A continuación, mostramos algunos ejemplos de argumentos `canPlayType()` y de valores devueltos cuando se ejecutan en Chrome:
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Tipo</th>
@@ -427,7 +427,7 @@ Un resumen de las propiedades del elemento de vídeo
 
 Para ver una lista completa de los atributos del elemento de vídeo y de sus definiciones, consulta las [especificaciones del elemento de vídeo](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>Atributo</th>
       <th>Disponibilidad</th>
@@ -484,7 +484,7 @@ El valor predeterminado es `true` pero se puede inhabilitar con una aplicación 
 
 El atributo `preload` indica al navegador cuánta información o contenido debería cargarse previamente.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Valor</th>
@@ -516,7 +516,7 @@ Por ejemplo, Chrome almacena en el búfer 25 segundos de vídeo en ordenadores, 
 
 #### Propiedades
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Propiedad</th>
     <th>Descripción</th>
@@ -561,7 +561,7 @@ Por ejemplo, Chrome almacena en el búfer 25 segundos de vídeo en ordenadores, 
 
 #### Métodos
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Método</th>
     <th>Descripción</th>
@@ -593,7 +593,7 @@ se llamen en respuesta de una acción del usuario, como hacer clic en un botón.
 
 Solo hay un subconjunto de eventos de medios que pueden activarse. Consulta la página [Eventos de medios](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) en Mozilla Developer Network para obtener una lista completa.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Evento</th>
     <th>Descripción</th>

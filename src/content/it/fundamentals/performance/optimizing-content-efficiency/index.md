@@ -19,7 +19,7 @@ Come appare una moderna applicazione web? [HTTP Archive](http://httparchive.org/
 
 <img src="images/http-archive-trends.png" class="center" alt="Trend HTTP Archive">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

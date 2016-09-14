@@ -86,7 +86,7 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 
 另一方面，點陣圖片面臨的挑戰更大，因為這類圖片會將資料嵌入每個像素中。像素愈多，點陣圖片的檔案大小就愈大。讓我們以 100x100 (CSS) 像素顯示的相片資產為例，看看其中的差異：
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>螢幕解析度</th>
@@ -167,7 +167,7 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 <!-- TODO: Verify note type! -->
 Note: 順帶一提，無論使用哪種圖片格式將伺服器傳輸到用戶端，當圖片經過瀏覽器解碼後，每個像素一律會佔用 4 位元組的記憶體。對於大型圖片和可用記憶體有限的裝置 (例如低階行動裝置) 來說，這是重要的考量因素。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>維度</th>
@@ -266,7 +266,7 @@ Note: 請注意，如果使用不同的演算法將圖片編碼，則無法直�
 除了不同的失真壓縮演算法和無失真壓縮演算法之外，不同的圖片格式支援不同的功能，例如動畫和透明度 (alpha) 頻道。因此，為特定圖片選擇「正確的格式」時，必須同時考量預期視覺效果和功能兩方面的要求。
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>格式</th>
@@ -337,7 +337,7 @@ Note: 請注意，如果使用不同的演算法將圖片編碼，則無法直�
 
 天底下並沒有任何適用於所有圖片的完美圖片格式、工具或最佳化參數集。為了獲得最佳效果，您必須根據圖片內容、視覺和其他技術要求，選擇格式及其設定。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>工具</th>
@@ -386,7 +386,7 @@ Note: 將游標懸停在 Chrome DevTools 中的圖片 image 元素，即可同�
 
 提供超額的像素不僅會導致額外的間接成本，通常最後下場都是讓瀏覽器代替我們重新縮放圖片，而我們也因此錯失絕佳機會，無法縮減及最佳化轉譯網頁所需得總位元組數。另外請注意，大小調整不僅是減少圖片像素數的功能，同時也可以縮減自然大。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>自然大小</th>

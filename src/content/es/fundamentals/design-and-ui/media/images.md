@@ -144,7 +144,7 @@ En vez de proporcionar tamaños y densidades de imagen fijos, el tamaño de cada
 
 En el ejemplo anterior se muestra una imagen que ocupa la mitad del ancho de ventana gráfica (`sizes='50vw'`) y, en función del ancho de navegador y la relación de píxeles del dispositivo), se permite que el navegador elija la imagen correcta independientemente del tamaño de la ventana del navegador.  Por ejemplo, en la tabla siguiente se muestra qué imagen elegiría el navegador:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Ancho del navegador">Ancho del navegador</th>

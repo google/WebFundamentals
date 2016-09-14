@@ -110,7 +110,7 @@ HTML5 引入了大量新的输入类型。 这些新输入类型可以提示
 所需的信息，并且只看到该输入类型
 的相应按键。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Input type">输入 <code>type</code></th>
@@ -342,7 +342,7 @@ comments:
 
 `autocomplete` 属性可以附带分区名称，例如 **`shipping `**`given-name` 或 **`billing `**`street-address`。 浏览器将单独自动完成不同的分区，而不是将其作为一个连续表单。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Content type">内容类型</th>
@@ -513,7 +513,7 @@ comments:
 
 ###### 常用的正则表达式模式
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Description">描述</th>
@@ -627,7 +627,7 @@ JavaScript API 仍将允许您检查表单是否通过验证。
 例如设置自定义错误，检查一个元素是否有效，并确定
 元素无效的原因：
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="API">API</th>
@@ -683,7 +683,7 @@ JavaScript API 仍将允许您检查表单是否通过验证。
 HTML5 也引入了很多新的伪类，可以用于根据输入值或属性来设置
 输入的样式。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Pseudo-class">伪类</th>

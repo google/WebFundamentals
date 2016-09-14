@@ -111,7 +111,7 @@ En résumé, la première étape de l'optimisation de l'efficacité de vos élé
 Tous les navigateurs modernes sont compatibles avec la compression GZIP et l'effectue de façon automatique pour toutes les requêtes HTTP : notre travail consiste à nous assurer que le serveur est correctement configuré pour diffuser la ressource compressée lorsque le client la demande.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Bibliothèque</th>

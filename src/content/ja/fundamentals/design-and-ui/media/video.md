@@ -144,7 +144,7 @@ Note: - Media Fragments API は、ほとんどのプラットフォームでサ�
 
 サポートされている動画形式を検出するには、canPlayType() を使用します。このメソッドは、mime-type とオプションのコーデックで構成された文字列引数を受け取り、次のいずれかの値を返します。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>戻り値</th>
@@ -174,7 +174,7 @@ Note: - Media Fragments API は、ほとんどのプラットフォームでサ�
 Chrome で実行する場合の canPlayType() の引数と戻り値の例は次のとおりです。
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>タイプ</th>
@@ -426,7 +426,7 @@ Note: トラック要素は、Firefox を除き、Chrome for Android、iOS Safar
 
 動画要素の属性の詳細な一覧とその定義については、[動画要素の仕様](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element)をご覧ください。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>属性</th>
       <th>使用可能状況</th>
@@ -483,7 +483,7 @@ autoplay を使用できるプラットフォームでも、有効にすべき�
 
 preload 属性を使用すると、事前に読み込む情報またはコンテンツの量に関する情報をブラウザに知らせることができます。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>値</th>
@@ -515,7 +515,7 @@ preload 属性の効果は、プラットフォームによって異なります
 
 #### プロパティ
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>プロパティ</th>
     <th>説明</th>
@@ -560,7 +560,7 @@ playbackRate（<a href="https://googlesamples.github.io/web-fundamentals/samples
 
 #### メソッド
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>メソッド</th>
     <th>説明</th>
@@ -592,7 +592,7 @@ playbackRate（<a href="https://googlesamples.github.io/web-fundamentals/samples
 
 以下のイベントは、発生する可能性があるメディア イベントの一部です。完全な一覧については、Mozilla Developer Network の[メディア イベント](//developer.mozilla.org/docs/Web/Guide/Events/Media_events)に関するページ（英語）をご覧ください。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>イベント</th>
     <th>説明</th>

@@ -84,7 +84,7 @@ Note: Cache-Control 標題的定義詳列於 HTTP/1.1 規範中，取代了之�
 
 還在為您的應用程式所使用的特定資源或一組資源煩惱嗎？快按照上面的決策樹確定這些資源的最佳快取策略。在理想情況下，您的目標應該是可在用戶端長時間快取最多的回應，並且為每個回應提供驗證權杖，讓重新驗證流程以高效率完成。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Cache-Control 指令</th>

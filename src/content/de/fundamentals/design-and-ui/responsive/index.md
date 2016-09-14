@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ein großer Teil des Webs ist nicht für Erfahrungen auf verschiedenen Geräten optimiert. Erlernen Sie die Grundlagen, mit denen Ihre Website auf Mobilgeräten, Desktopcomputern und jeglichen anderen Geräten mit einem Bildschirm funktioniert.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Responsives Webdesign: Grundlagen {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -16,7 +15,6 @@ Die Nutzung von Mobilgeräten für das Internet steigt auch weiterhin mit ungehe
 
 
 ## Responsive Web Design Fundamentals
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="imgs/udacity-rwd.png">
@@ -28,16 +26,13 @@ Explore what makes a site responsive and how some common responsive design patte
 [View Course](https://udacity.com/ud893){: .external }
 
 
-
-
 Telefone, Phablets, Tablets, Desktopcomputer, Spielekonsolen, Fernseher und sogar Wearables weisen eine extreme Vielfalt an verschiedenen Bildschirmgrößen auf. Bildschirmgrößen verändern sich ständig, weshalb es besonders wichtig ist, dass sich Ihre Website an diese anpassen kann, ob heute oder in der Zukunft.
 
-{% link_sample _code/weather.html %}
-  <video autoplay loop controls class="responsiveVideo">
-    <source src="videos/resize.webm" type="video/webm">
-    <source src="videos/resize.mp4" type="video/mp4">
-  </video>
-{% endlink_sample %}
+<video autoplay loop controls class="responsiveVideo">
+  <source src="videos/resize.webm" type="video/webm">
+  <source src="videos/resize.mp4" type="video/mp4">
+</video>
+
 
 Responsives Webdesign, ursprünglich von [Ethan Marcotte in A List Apart](http://alistapart.com/article/responsive-web-design/) definiert, reagiert auf die Bedürfnisse der Nutzer und der Geräte, die sie verwenden. Das Layout verändert sich auf Grundlage der Größe und der Funktionen des Geräts. Wenn Nutzer mit einem Telefon Inhalte zum Beispiel in einer einzelnen Spaltenansicht sehen, könnte der gleiche Inhalt auf einem Tablet in zwei Spalten erscheinen.
 
@@ -50,8 +45,8 @@ Für verschiedene Geräte optimierte Seiten müssen ein Darstellungsbereich-Meta
 ### TL;DR {: .hide-from-toc }
 - Verwenden Sie das Darstellungsbereich-Meta-Tag zur Steuerung der Breite und Skalierung des Darstellungsbereichs im Browser.
 - Verwenden Sie <code>width=device-width</code> zur Abstimmung auf die Breite des Bildschirms in geräteunabhängigen Pixeln.
-- 'Verwenden Sie <code>initial-scale=1</code>, um eine 1:1-Beziehung zwischen CSS-Pixeln und geräteunabhängigen Pixeln zu gewährleisten.'
-- 'Stellen Sie sicher, dass Ihre Seite zugänglich ist, indem Sie die Nutzerskalierung beibehalten.'
+- Verwenden Sie <code>initial-scale=1</code>, um eine 1:1-Beziehung zwischen CSS-Pixeln und geräteunabhängigen Pixeln zu gewährleisten.
+- Stellen Sie sicher, dass Ihre Seite zugänglich ist, indem Sie die Nutzerskalierung beibehalten.
 
 
 Beim Versuch, die möglichst beste Erfahrung zu gewährleisten, stellen mobile Browser die Seite mit der Breite eines Desktopbildschirms dar, in der Regel etwa 980 Pixel, wobei sich dies von Gerät zu Gerät unterscheiden kann. Anschließend versucht der Browser, die Inhalte optisch ansprechender zu machen, indem er die Schriftgröße erhöht und die Inhalte so skaliert, dass sie den Bildschirm füllen. Für Nutzer bedeutet das, dass die Darstellung der Schriftgrößen inkonsistent ist und sie Inhalte doppelt antippen oder die Finger zusammenziehen müssen, um diese richtig sehen und damit interagieren zu können.
@@ -63,25 +58,20 @@ Beim Versuch, die möglichst beste Erfahrung zu gewährleisten, stellen mobile B
 
 Wenn Sie den Darstellungsbereich-Meta-Wert ``width=device-width`` verwenden, geben Sie der Seite die Anweisung, die Breite des Bildschirms in geräteunabhängigen Pixeln zu nutzen. Dies ermöglicht der Seite, Inhalte neu anzuordnen und sich so an verschiedene Bildschirmgrößen anzupassen, egal ob an das kleine Display eines Mobiltelefons oder den großen Bildschirm eines Desktopcomputers.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Seite ohne festgelegten Darstellungsbereich">
-      Siehe Beispiel
-    {% endlink_sample %}
-  </div>
+<figure class="attempt-left">
+  <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Seite ohne festgelegten Darstellungsbereich">
+  <figcaption>Siehe Beispiel</figcaption>
+</figure>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Seite mit festgelegtem Darstellungsbereich">
-      Siehe Beispiel
-    {% endlink_sample %}
-  </div>
-</div>
+<figure class="attempt-right">
+  <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Seite mit festgelegtem Darstellungsbereich">
+  <figcaption>Siehe Beispiel</figcaption>
+</figure>
+
+<div class="clearfix"></div>
 
 Manche Browser behalten die Breite der Seite beim Drehen in das Querformat bei und zoomen, statt die Inhalte zum Füllen des Bildschirms neu anzuordnen. Indem Sie das Attribut initial-scale=1 verwenden, weisen Sie den Browser an, eine 1:1-Beziehung zwischen CSS-Pixeln und geräteunabhängigen Pixeln zu gewährleisten, unabhängig von der Geräteausrichtung. Somit kann die Seite die volle Breite im Querformat nutzen.
 
-<!-- TODO: Verify note type! -->
 Note: Verwenden Sie Kommas zum Trennen von Attributen, damit gewährleistet ist, dass auch ältere Browser diese Attribute richtig verarbeiten können.
 
 ### Zugänglichen Darstellungsbereich gewährleisten
@@ -94,7 +84,7 @@ Zusätzlich zur Festlegung von `initial-scale` können Sie die folgenden Attribu
 
 Wenn festgelegt, können diese verhindern, dass der Nutzer den Darstellungsbereich heranzoomt, wodurch Probleme bei der Zugänglichkeit entstehen können.
 
-## Größe der Inhalte an Darstellungsbereich anpassen {: .page-title }
+## Größe der Inhalte an Darstellungsbereich anpassen
 
 Sowohl auf Desktopcomputern als auch Mobilgeräten sind Nutzer daran gewöhnt, auf Websites vertikal und nicht horizontal zu scrollen. Sie dazu zu zwingen, in der Horizontalen zu scrollen oder herauszoomen zu müssen, um die ganze Seite zu sehen, führt zu einer negativen Nutzererfahrung.
 
@@ -110,20 +100,18 @@ Da sich die Bildschirmabmessungen und die Breite in CSS-Pixeln stark bei Geräte
 
 Das Festlegen von absoluten CSS-Breiten für Seitenelemente, wie etwa im Beispiel unten, führt dazu, dass der `div`-Bereich für den Darstellungsbereich auf schmaleren Geräten zu breit ausfällt, zum Beispiel bei einer Breite von 320 CSS-Pixeln auf iPhones. Verwenden Sie stattdessen relative Werte für die Breite, zum Beispiel `width: 100%`. Ebenso sollten Sie vorsichtig bei der Verwendung von großen absoluten Positionierungswerten sein, die möglicherweise dazu führen, dass das Element auf kleinen Bildschirmen aus dem Darstellungsbereich fällt.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Seite mit einem Element mit einer festen Breite von 344 Pixeln auf einem iPhone">
-      Siehe Beispiel
-    {% endlink_sample %}
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Seite mit einem Element mit einer festen Breite von 344 Pixeln auf Nexus 5">
-      Siehe Beispiel
-    {% endlink_sample %}
-  </div>
-</div>
+
+<figure class="attempt-left">
+  <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Seite mit einem Element mit einer festen Breite von 344 Pixeln auf einem iPhone">
+  <figcaption>Seite mit einem Element mit einer festen Breite von 344 Pixeln auf einem iPhone</figcaption>
+</figure>
+
+<figure class="attempt-right">
+  <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Seite mit einem Element mit einer festen Breite von 344 Pixeln auf Nexus 5">
+  <figcaption>Seite mit einem Element mit einer festen Breite von 344 Pixeln auf Nexus 5</figcaption>
+</figure>
+
+<div class="clearfix"></div>
 
 
 ## CSS-Medienabfragen für Responsivität verwenden
@@ -133,9 +121,9 @@ Medienabfragen sind einfache Filter, die auf CSS-Stile angewendet werden können
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Medienabfragen können dazu verwendet werden, Stile auf Grundlage von Gerätecharakteristiken anzuwenden.'
-- 'Verwenden Sie <code>min-width</code> statt <code>min-device-width</code>, um möglichst viele Breiten abzudecken.'
-- 'Verwenden Sie relative Größen für Elemente, damit das Layout harmonisch bleibt.'
+- Medienabfragen können dazu verwendet werden, Stile auf Grundlage von Gerätecharakteristiken anzuwenden.
+- Verwenden Sie <code>min-width</code> statt <code>min-device-width</code>, um möglichst viele Breiten abzudecken.
+- Verwenden Sie relative Größen für Elemente, damit das Layout harmonisch bleibt.
 
 
 Beispielsweise können Sie alle Stile, die zum Drucken notwendig sind, in eine Druckmedienabfrage einfügen:
@@ -144,7 +132,7 @@ Beispielsweise können Sie alle Stile, die zum Drucken notwendig sind, in eine D
     <link rel="stylesheet" href="print.css" media="print">
     
 
-Zusätzlich zur Nutzung des Attributs `media` im Stylesheet-Link gibt es zwei weitere Möglichkeiten, Medienabfragen anzuwenden, die in eine CSS-Datei eingebettet werden können: `@media` und `@import`. Aus Leistungsgründen werden die ersten beiden Methoden statt der `@import`-Syntax empfohlen, siehe [CSS-Importe vermeiden]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html).
+Zusätzlich zur Nutzung des Attributs `media` im Stylesheet-Link gibt es zwei weitere Möglichkeiten, Medienabfragen anzuwenden, die in eine CSS-Datei eingebettet werden können: `@media` und `@import`. Aus Leistungsgründen werden die ersten beiden Methoden statt der `@import`-Syntax empfohlen, siehe [CSS-Importe vermeiden](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations).
 
 
     @media print {
@@ -168,7 +156,7 @@ Medienabfragen ermöglichen uns, eine responsive Erfahrung zu schaffen, bei der 
 
 Wir können zwar für viele verschiedene Elemente Abfragen erstellen, diejenigen, die am häufigsten beim responsiven Webdesign zum Einsatz kommen, sind jedoch `min-width`, `max-width`, `min-height` und `max-height`.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Attribut">Attribut</th>
@@ -205,14 +193,11 @@ Wir können zwar für viele verschiedene Elemente Abfragen erstellen, diejenigen
 
 Sehen wir uns ein Beispiel an:
 
-<figure>
-  {% link_sample _code/media-queries.html %}
-    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Vorschau einer Seite, bei der zum Ändern der Eigenschaften auf Medienabfragen zurückgegriffen wird, während ihre Größe geändert wird">
-  {% endlink_sample %}
-</figure>
+<img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Vorschau einer Seite, bei der zum Ändern der Eigenschaften auf Medienabfragen zurückgegriffen wird, während ihre Größe geändert wird">
+
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * Wenn der Browser zwischen <b>0 px</b> und <b>640 px</b> breit ist, kommt `max-640px.css` zum Einsatz.
@@ -238,23 +223,22 @@ So gewährleistet die Verwendung von `width: 100%` für einen `div`-Container au
 
 Hinzu kommt, dass die Nutzung relativer Einheiten Browsern erlaubt, Inhalte auf Grundalge der Zoomstufe des jeweiligen Nutzers darzustellen und das Hinzufügen horizontaler Scrollbalken zur Seite nicht nötig ist.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
+<span class="compare-worse">Not recommended</span> — fixed width
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+
+
 
 
 ## Übergangspunkte festlegen
@@ -263,45 +247,38 @@ Zwar kann es hilfreich sein, über Übergangspunkte auf Grundlage von Gerätekla
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Erstellen Sie Übergangspunkte auf Grundlage der Inhalte und niemals auf Grundlage bestimmter Geräte, Produkte oder Marken.'
-- 'Erstellen Sie das Design zuerst für die kleinsten Mobilgeräte und erweitern Sie die Erfahrung anschließend auf den zusätzlichen Platz, der auf größeren Anzeigen verfügbar ist.'
-- 'Achten Sie darauf, dass Zeilen immer maximal 70 bis 80 Zeichen enthalten.'
+- Erstellen Sie Übergangspunkte auf Grundlage der Inhalte und niemals auf Grundlage bestimmter Geräte, Produkte oder Marken.
+- Erstellen Sie das Design zuerst für die kleinsten Mobilgeräte und erweitern Sie die Erfahrung anschließend auf den zusätzlichen Platz, der auf größeren Anzeigen verfügbar ist.
+- Achten Sie darauf, dass Zeilen immer maximal 70 bis 80 Zeichen enthalten.
 
 
 ### Bei der Auswahl von primären Übergangspunkten klein beginnen und nach oben arbeiten
 
 Erstellen Sie Inhalte zunächst so, dass sie auf kleine Bildschirme passen, und erweitern Sie den Bildschirm anschließend, bis ein Übergangspunkt erforderlich wird. So können Sie Übergangspunkte auf Grundlage der Inhalte optimieren und die erforderliche Anzahl dieser Punkte so gering wie möglich halten.
 
-Gehen wir das Beispiel durch, das Sie zu Anfang gesehen haben, die [Wettervorhersage]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html).
+Gehen wir das Beispiel durch, das Sie zu Anfang gesehen haben, die [Wettervorhersage](/web/fundamentals/design-and-ui/responsive/).
 Im ersten Schritte sorgen wir dafür, dass die Vorhersage auf kleinen Bildschirmen gut aussieht.
 
-<figure>
-  {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Vorschau der Wettervorhersage auf einem kleinen Bildschirm">
-  {% endlink_sample %}
-</figure>
+
+<img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Vorschau der Wettervorhersage auf einem kleinen Bildschirm">
+
 
 Ändern Sie anschließend die Größe des Browsers, bis zu viel leere Fläche zwischen den Elementen ist und die Vorschau einfach nicht mehr gut aussieht. Diese Entscheidung ist auch eine Geschmacksfrage, ab 600 Pixeln werden die Abstände jedoch definitiv zu groß.
 
-<figure>
-  {% link_sample _code/weather-1.html %}
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Vorschau der Wettervorhersage bei einer zunehmend breiteren Seite">
-  {% endlink_sample %}
-</figure>
+<img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Vorschau der Wettervorhersage bei einer zunehmend breiteren Seite">
+
 
 Fügen Sie einen Übergangspunkt bei 600 Pixeln ein, indem Sie zwei neue Stylesheets erstellen. Eines davon kommt zum Einsatz, wenn der Browser 600 Pixel oder weniger in der Breite aufweist, das andere, wenn das Browserfenster über 600 Pixel breit ist.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 Gestalten Sie die CSS-Datei anschließend um. In diesem Beispiel haben wir die gängigen Stile wie Schriftarten, Symbole, grundlegende Platzierung, Farben usw. in `weather.css` zusammengefasst. Spezielle Layouts für kleine Bildschirme werden anschließend in `weather-small.css`, solche für große Bildschirme in `weather-large.css` platziert.
 
-<figure>
-  {% link_sample _code/weather-2.html %}
-    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
-</figure>
+
+<img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
+
 
 ### Bei Bedarf sekundäre Übergangspunkte bestimmen
 
@@ -310,43 +287,38 @@ Zusätzlich zu den primären Übergangspunkten, die zum Einsatz kommen, wenn sic
 Beginnen wir mit der Optimierung des Layouts für kleine Bildschirme. Erhöhen wir in diesem Fall die Schriftgröße, wenn die Breite des Darstellungsbereichs 360 Pixel übersteigt. Als Zweites können wir die Höchst- und Mindesttemperatur trennen, wenn genug Platz ist, damit sie in derselben Zeile und nicht übereinander erscheinen. Darüber hinaus können wir die Wettersymbole etwas vergrößern.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm" adjust_indentation="auto" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
-</div>
+<img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints." class="attempt-left">
+<img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints." class="attempt-right">
+
+<div class="clearfix"></div>
+
 
 Für große Bildschirme sollte zudem die maximale Breite des Vorhersagefensters begrenzt werden, damit es nicht die gesamte Breite ausfüllt.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg" adjust_indentation="auto" %}
 </pre>
 
 ### Text zum lesen optimieren
 
 Die klassische Theorie zur Lesbarkeit besagt, dass die ideale Spalte 70 bis 80 Zeichen pro Zeile enthalten sollte, was etwa sieben Wörtern in der deutschen Sprache entspricht. Daher sollte immer dann, wenn die Breite eines Textbausteins sieben Wörter übersteigt, ein Übergangspunkt in Betracht gezogen werden.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Vor dem Hinzufügen sekundärer Übergangspunkte">
-  </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Nach dem Hinzufügen sekundärer Übergangspunkte">
-  </div>
-</div>
+<img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Vor dem Hinzufügen sekundärer Übergangspunkte" class="attempt-left">
+
+<img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Nach dem Hinzufügen sekundärer Übergangspunkte" class="attempt-right">
+
+<div class="clearfix"></div>
+
 
 Sehen wir uns das vorherige Beispiel eines Blogposts etwas genauer an. Auf kleineren Bildschirmen funktioniert die Roboto-Schriftart mit 1 em bei sieben Wörtern pro Zeile perfekt, für größere Bildschirme ist jedoch ein Übergangspunkt erforderlich. Wenn die Breite des Browsers 575 Pixel übersteigt, stellen in diesem Fall 550 Pixel die ideale Breite für den Inhalt dar.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
 </pre>
 
 ### Inhalte niemals vollständig ausblenden

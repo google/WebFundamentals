@@ -86,7 +86,7 @@ Les écrans à ppp élevé (HiDPI) offrent un résultat esthétique, mais avec u
 
 D'un autre côté, les images matricielles offrent un défi bien plus important, car elles encodent les données de l'image pixel par pixel. Par conséquent, plus il y a de pixels, plus la taille de fichier de l'image matricielle sera importante. Considérons par exemple la différence entre un élément photographique affiché à 100 x 100 pixels (CSS) :
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Résolution d'écran</th>
@@ -167,7 +167,7 @@ En interne, le navigateur attribue 256 valeurs (nuances) à chaque canal, ce qui
 <!-- TODO: Verify note type! -->
 Note: Notez que quel que soit le format d'image utilisé pour transférer les données du serveur au client, lorsque l'image est décodée par le navigateur, chaque pixel occupe toujours 4 octets de mémoire. Cela peut représenter une contrainte importante pour les grandes images et les appareils qui ne disposent pas de beaucoup de mémoire, par exemple les appareils mobiles bas de gamme.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Dimensions</th>
@@ -263,7 +263,7 @@ Note: Notez qu'il est impossible de comparer directement les niveaux de qualité
 Outre différents algorithme de compression avec et sans perte, les différents formats d'image sont compatibles avec différentes fonctionnalités, telles que les animations et les canaux de transparence (alpha). En conséquence, le choix du 'bon format' pour une image spécifique dépend du résultat visuel souhaité et des exigences fonctionnelles.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Format</th>
@@ -334,7 +334,7 @@ Enfin, notez que si vous utilisez un affichage Web pour afficher le contenu dans
 
 Il n'existe pas un format d'image, un outil ou un ensemble de paramètres d'optimisation parfait, qui s'applique à toutes les images. Pour obtenir les meilleurs résultats, vous devez choisir le format et ses paramètres en fonction du contenu de l'image et de ses exigences visuelles et techniques.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Outil</th>
@@ -384,7 +384,7 @@ Note: Le fait de passer la souris sur l'élément de l'image dans Chrome DevTool
 
 Le temps système créé pour l'expédition de pixels inutiles, simplement pour que le navigateur redimensionne l'image pour vous, est une occasion manquée de réduire et d'optimiser le nombre total d'octets requis pour afficher la page. En outre, notez que le redimensionnement ne dépend pas que du nombre de pixels retirés de l'image, mais également de sa taille naturelle.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Taille naturelle</th>

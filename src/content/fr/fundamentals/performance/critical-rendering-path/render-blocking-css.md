@@ -38,7 +38,7 @@ Dans la section précédente, nous avons vu que le chemin critique du rendu néc
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>NYTimes avec code CSS</td>
 <td>NYTimes sans code CSS (FOUC)</td>

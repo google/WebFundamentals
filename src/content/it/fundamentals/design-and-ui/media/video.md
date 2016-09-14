@@ -143,7 +143,7 @@ Non tutte le piattaforme supportano qualsiasi formato video. Verifica i formati 
 
 Utilizza `canPlayType()` per trovare i formati video supportati. Questo metodo accetta un argomento stringa costituito da codec di `tipo MIME` e da codec facoltativi e restituisce uno dei seguenti valori:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Valore restituito</th>
@@ -173,7 +173,7 @@ Utilizza `canPlayType()` per trovare i formati video supportati. Questo metodo a
 Di seguito sono riportati alcuni esempi di argomenti `canPlayType()` e di valori restituiti tramite l'utilizzo di Chrome:
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Tipo</th>
@@ -425,7 +425,7 @@ Una rapida panoramica sulle proprietà dell'elemento video.
 
 Per l'elenco completo degli attributi dell'elemento video e delle relative definizioni, vedi [le specifiche dell'elemento video](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>Attributo</th>
       <th>Disponibilità</th>
@@ -482,7 +482,7 @@ L'impostazione true è predefinita, ma con l'app WebView hai la possibilità di 
 
 L'attributo `precaricamento` suggerisce al browser il quantitativo di informazioni o contenuti da precaricare.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Valore</th>
@@ -514,7 +514,7 @@ Ad esempio, mentre sui computer desktop Chrome esegue il buffering di 25 secondi
 
 #### Proprietà
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Proprietà</th>
       <th>Descrizione</th>
@@ -559,7 +559,7 @@ I dispositivi mobili non supportano playbackRate (<a href="https://googlesamples
 
 #### Metodi
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Metodo</th>
       <th>Descrizione</th>
@@ -591,7 +591,7 @@ siano attivati dall'utente, ad esempio facendo clic su un pulsante; vedi <a href
 
 Esiste un unico sottoinsieme di eventi multimediali che può essere attivato. Per un elenco completo, fai riferimento alla [Eventi multimediali](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) pagina di Mozilla Developer Network.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Evento</th>
       <th>Descrizione</th>

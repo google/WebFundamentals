@@ -86,7 +86,7 @@ Ekrany o wysokiej rozdzielczości DPI (HiDPI) wyświetlają olśniewający obraz
 
 Obrazy rastrowe stanowią dużo większe wyzwanie, ponieważ każdy piksel jest kodowany osobno. Stąd duża liczba pikseli i większy rozmiar pliku obrazu rastrowego. Rozważmy na przykład zdjęcie wyświetlane w rozdzielczości 100x100 pikseli (CSS):
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Rozdzielczość ekranu</th>
@@ -167,7 +167,7 @@ Wewnętrznie przeglądarka przydziela do każdego kanału 256 wartości (odcieni
 <!-- TODO: Verify note type! -->
 Note: Na marginesie: niezależnie od formatu obrazu zastosowanego do transferu danych z serwera do klienta, po zdekodowaniu obrazu przez przeglądarkę każdy piksel zajmuje zawsze 4 bajty pamięci. Może to narzucać poważne ograniczenia w przypadku dużych obrazów i urządzeń z niewielką ilością dostępnej pamięci &ndash; np. mniej zaawansowanych urządzeń mobilnych.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Wymiary</th>
@@ -266,7 +266,7 @@ Note: Zwróć uwagę, że poziomów jakości obrazów w różnych formatach nie 
 Oprócz zastosowania odmiennych algorytmów stratnych i bezstratnych formaty obrazów różnią się obsługą funkcji, takich jak animacje i kanały przezroczystości (alfa). Dlatego wybór formatu odpowiedniego dla konkretnego obrazu zależy nie tylko od potrzebnych rezultatów wizualnych, lecz również od wymagań funkcjonalnych.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Format</th>
@@ -337,7 +337,7 @@ Nie zapomnij, że jeśli do renderowania swojej aplikacji używasz widoku Webvie
 
 Nie istnieje jeden doskonały format obrazu, narzędzie lub zestaw parametrów optymalizacyjnych, które można zastosować do wszystkich obrazów. Najlepsze wyniki uzyskuje się dzięki wybraniu formatu oraz jego ustawień przy uwzględnieniu zawartości obrazu i wymagań wizualnych, jak również innych wymagań technicznych.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Narzędzie</th>
@@ -386,7 +386,7 @@ Note: Przesunięcie kursora myszy nad element obrazu w Narzędziach Chrome dla p
 
 Przesyłanie zbędnych pikseli, tylko po to, by przeglądarka wyręczyła nas w zmianie skali obrazu, to utracona okazja do redukcji łącznej liczby bajtów wymaganych do renderowania strony. Jak widać, zmiana rozmiaru nie wynika po prostu z liczby pikseli, o które redukuje się rozmiar obrazu, ale również od jego rozmiaru naturalnego.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Rozmiar naturalny</th>

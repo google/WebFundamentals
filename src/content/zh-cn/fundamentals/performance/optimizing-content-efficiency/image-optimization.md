@@ -86,7 +86,7 @@ description: 图片通常占据网页上下载字节的绝大部分，通常，�
 
 另一方面，因为光栅图是为每个像素编码图片数据，所以，面临的挑战会大得多。因此，像素数越多，光栅图的文件就越大。例如，让我们看一下以 100 x 100 (CSS) 像素显示的照片资源之间的差异：
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>屏幕分辨率</th>
@@ -167,7 +167,7 @@ description: 图片通常占据网页上下载字节的绝大部分，通常，�
 <!-- TODO: Verify note type! -->
 Note: 简单提一句，无论将数据从服务器传输到客户端时使用哪种图片格式，在浏览器对图片进行解码时，每个像素始终占用 4 个字节的内存。对于较大的图片以及可用内存不足的设备（例如低端移动设备）来说，这可能是一个重要的约束条件。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Dimensions</th>
@@ -266,7 +266,7 @@ Note: 注意，因为对图片进行编码所使用的算法不同，所以，�
 除了不同的有损压缩算法和无损压缩算法之外，不同的图片格式支持不同的特征（例如动画和透明度 (alpha) 通道）。因此，为特定图片选择'正确的格式'是所需的视觉效果要求和功能要求的组合。
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>格式</th>
@@ -337,7 +337,7 @@ Note: 注意，因为对图片进行编码所使用的算法不同，所以，�
 
 不存在任何适用于所有图片的完美的图片格式、工具或优化参数集。为了获得最佳效果，必须根据图片内容及其视觉要求和其他技术要求，选择格式及其设置。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>工具</th>
@@ -386,7 +386,7 @@ Note: 在 Chrome DevTools 中将光标置于图片元素上，会显示该图片
 
 提供不必要的像素会产生额外开销，而只是让浏览器代替我们重新缩放图片，这就错过了减少和优化呈现网页所需总字节数的绝好机会。另外，请注意，尺寸调整不仅是图片减少的像素数的函数，也是自然尺寸减少的像素数的函数。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>自然尺寸</th>

@@ -162,7 +162,7 @@ stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 C
 쿼리에 적용할 수 있는 속성들이 여러가지가 있지만, 그 중에서도 `min-width`, `max-width`, `min-height`, `max-height` 가 가장 흔하게 사용됩니다.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <colgroup>
     <col span="1">
     <col span="1">

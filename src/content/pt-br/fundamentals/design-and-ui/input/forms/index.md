@@ -110,7 +110,7 @@ na tela.  Os usuários podem inserir mais facilmente a informação solicitada s
 precisar alterar seu teclado e ver apenas as teclas adequadas para esse tipo de
 entrada.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Input type">Entrada <code>type</code></th>
@@ -342,7 +342,7 @@ Os valores de atributo `autocomplete` fazem parte do [Padrão HTML WHATWG] atual
 
 Os atributos `autocomplete` podem vir acompanhados de um nome de seção, como **`shipping `**`given-name` ou **`billing `**`street-address`. O navegador preencherá automaticamente diferentes seções separadamente e não como formulário contínuo.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Content type">Tipo de conteúdo</th>
@@ -514,7 +514,7 @@ a seguir:
 
 ###### Padrões de expressão regular comum
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Description">Descrição</th>
@@ -628,7 +628,7 @@ uma excelente ferramenta para lidar com validação personalizada.  A API permit
 como definir um erro personalizado, verificar se um elemento é válido e determinar o
 motivo pelo qual um elemento é inválido:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="API">API</th>
@@ -684,7 +684,7 @@ o usuário concluiu o formulário corretamente antes de enviar.
 O HTML5 também introduz uma variedade de pseudo-classes que podem ser usadas para entradas de
 estilo com base em seu valor ou atributos.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Pseudo-class">Pseudo-classe</th>

@@ -84,7 +84,7 @@ Dit is een instructie voor de maximale periode in seconden dat het opgehaalde an
 
 Gebruik de bovenstaande beslissingenboom om het optimale cachebeleid voor een bepaalde hulpbron of een verzameling hulpbronnen te bepalen die door uw applicatie wordt of worden gebruikt. De ideale strategie is om zoveel mogelijk antwoorden zo lang mogelijk op de client op te slaan en voor elk antwoord een validatietoken te verstrekken voor efficiënte revalidatie.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Cache-Control-instructies</th>

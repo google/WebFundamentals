@@ -206,7 +206,7 @@ device orientation イベントは、端末が移動したり、向きが
 たとえば、平らなテーブルの上に画面を上にして置かれている
 携帯電話で見てみましょう。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">状態</th>
@@ -246,7 +246,7 @@ device orientation イベントは、端末が移動したり、向きが
 逆に、携帯電話の画面が地面に対して垂直になるよう
 に保持し、直接画面を視ることができる場合:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">状態</th>

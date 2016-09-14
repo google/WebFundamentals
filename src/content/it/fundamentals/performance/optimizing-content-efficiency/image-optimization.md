@@ -86,7 +86,7 @@ I monitor High DPI (HiDPI) offrono risultati straordinari, ma ad un ovvio compro
 
 Dall'altro lato, le immagini raster presentano una sfida molto più ampia, poiché codifica i dati immagine sulla base del singolo pixel. Di conseguenza, maggiore è il numero di pixel, maggiori sono le dimensioni file di un'immagine raster. Prendiamo ad esempio la differenza tra una foto visualizzata a 100x100 (CSS) pixel:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Risoluzione monitor</th>
@@ -167,7 +167,7 @@ Internamente, il browser attribuisce 256 valori (colori) a ogni canale, che si t
 <!-- TODO: Verify note type! -->
 Note: Oltre a ciò, indipendentemente dal formato immagine utilizzato per il trasferimento dei dati dal server al client, quando l'immagine viene decodificata dal browser, ogni pixel occupa sempre 4 byte di memoria. Ciò può rappresentare un limite notevole per le immagini di grandi dimensioni e i dispositivi che non dispongono di memoria sufficiente, come ad esempio i dispositivi mobili entry level.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Dimensioni</th>
@@ -263,7 +263,7 @@ Note: Nota che la qualità dei diversi formati immagine non è direttamente para
 Oltre ai vari algoritmi di compressione lossy e lossless, formati immagine diversi supportano funzioni diverse, quali i canali di animazione e trasparenza (alfa). Di conseguenza, la scelta del 'formato giusto' per una data immagine risulta dalla combinazione tra i risultati visivi e i requisiti funzionali desiderati.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Formato</th>
@@ -334,7 +334,7 @@ Ricorda infine che, se stai utilizzando una Webview per il rendering dei contenu
 
 Non esiste un formato immagine, uno strumento o un insieme di parametri di ottimizzazione perfetto, applicabile a qualunque immagine. Per ottenere risultati migliori, dovrai scegliere il formato e le relative impostazioni in base ai contenuti dell'immagine, nonché ai relativi requisiti visivi e tecnici.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Strumento</th>
@@ -384,7 +384,7 @@ Note: Scorrendo il mouse sull'immagine in Chrome DevTools, verranno visualizzate
 
 L'utilizzo di pixel non necessari solo per lasciare al browser lo scaling dell'immagine al posto nostro si traduce in un'enorme opportunità mancata di ridurre e ottimizzare il numero di byte totali richiesti per il rendering della pagina. Nota inoltre che il ridimensionamento non interessa solo il numero di pixel di cui l'immagine viene ridotta, ma anche le sue dimensioni 'natural'.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Dimensioni "natural"</th>

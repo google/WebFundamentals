@@ -176,7 +176,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 尽管我们可以查询多个不同的项目，但自适应网页设计最常使用的项目为：min-width、max-width、min-height 和 max-height。
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="属性">属性</th>

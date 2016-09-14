@@ -103,7 +103,7 @@ HTML5에서 다양한 새 입력 유형이 도입되었습니다. 이러한 새 
 
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Input type">입력 <code>type</code></th>
@@ -318,7 +318,7 @@ Note: 자리 표시자는 사용자가 요소를 입력하기 시작하면 즉�
 
 `autocomplete` 특성은 **`shipping `**`given-name` 또는 **`billing `**`street-address`와 같은 섹션 이름과 함께 사용될 수 있습니다. 브라우저는 여러 섹션을 연속적인 방식이 아니라 개별적으로 자동완성합니다.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Content type">콘텐츠 유형</th>
@@ -470,7 +470,7 @@ autofocus 특성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 ##### 일반적인 정규식 패턴
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Description">설명</th>
@@ -585,7 +585,7 @@ Note: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관�
 
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="API">API</th>
@@ -645,7 +645,7 @@ Note: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관�
 HTML5에서 값이나 특성에 따라 입력 스타일을 지정하는 데 사용할 수 있는 다수의 의사 클래스가 새로 소개되었습니다.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Pseudo-class">의사 클래스</th>

@@ -38,7 +38,7 @@ description: Когда браузер находит в документе сс
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>"Нью-Йорк таймс" с CSS</td>
 <td>"Нью-Йорк таймс" без CSS</td>

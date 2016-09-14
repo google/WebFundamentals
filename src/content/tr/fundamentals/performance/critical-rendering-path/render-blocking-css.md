@@ -38,7 +38,7 @@ Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSS
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>CSS ile NYTimes</td>
 <td>CSS olmadan NYTimes (FOUC)</td>

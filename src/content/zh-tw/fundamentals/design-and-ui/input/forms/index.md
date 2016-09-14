@@ -110,7 +110,7 @@ HTML5 導入了數種新輸入類型。 這些新的輸入類型可以提示瀏�
 並只看到該輸入類型所需的適當按鍵時，
 使用者能更輕鬆地輸入所需的資訊。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Input type">輸入 <code>type</code></th>
@@ -339,7 +339,7 @@ notes:
 
 `autocomplete` 屬性可以伴隨區段名稱，如 **`shipping `**`given-name` 或 **`billing `**`street-address`。 瀏覽器將個別自動完成不同的區段，而非視為連續的表單。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Content type">內容類型</th>
@@ -507,7 +507,7 @@ notes:
 
 ###### 常見的規則運算式模式
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Description">描述</th>
@@ -621,7 +621,7 @@ notes:
 檢查元素是否有效，
 並判斷元素無效的原因等動作：
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="API">API</th>
@@ -677,7 +677,7 @@ notes:
 HTML5 還導入了數個虛擬類別，
 可根據其值或屬性用在樣式輸入上。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Pseudo-class">虛擬類別</th>

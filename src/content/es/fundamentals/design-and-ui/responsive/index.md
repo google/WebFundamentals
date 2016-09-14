@@ -187,7 +187,7 @@ Las consultas de medios nos permiten crear una experiencia para varios dispositi
 Si bien hay varios elementos que podemos usar para estas consultas, los más usados para el diseño web adaptable son `min-width`, `max-width`, `min-height` y `max-height`.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="attribute">atributo</th>

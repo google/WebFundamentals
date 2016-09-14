@@ -19,7 +19,7 @@ Las aplicaciones web siguen creciendo en posibilidades, ambición y funcionalida
 
 <img src="images/http-archive-trends.png" class="center" alt="Tendencias en HTTP Archive">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

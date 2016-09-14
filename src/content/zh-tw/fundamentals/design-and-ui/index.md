@@ -199,7 +199,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 雖然我們可以查詢很多不同的項目，但是回應式網頁設計最常用的是 `min-width`、`max-width`、`min-height` 和 `max-height`。
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="屬性">屬性</th>

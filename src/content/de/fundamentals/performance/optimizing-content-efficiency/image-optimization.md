@@ -86,7 +86,7 @@ High DPI (HiDPI)-Bildschirme liefern wunderschöne Resultate, haben jedoch einen
 
 Auf der anderen Seite stellen Rastergrafiken eine wesentlich größere Herausforderung dar, weil sie Bilddaten pixelspezifisch codieren. Aus diesem Grund nimmt die Anzahl der Pixel mit der Dateigröße einer Rastergrafik zu. Zur Veranschaulichung wollen wir den Unterschied bei einem Fotoobjekt betrachten, das mit 100 x 100 (CSS) Pixeln dargestellt wird:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Bildschirmauflösung</th>
@@ -167,7 +167,7 @@ Intern ordnet der Browser jedem Kanal 256 Werte (Schattierungen) zu, was umgerec
 <!-- TODO: Verify note type! -->
 Note: Übrigens belegt jedes Pixel stets 4 Bytes im Speicher - unabhängig vom Bildformat, das zur Übertragung der Daten vom Server zum Client verwendet wird, wenn das Bild vom Browser decodiert wird. Das kann bei großen Bildern und Geräten, die über keinen großen Speicher verfügen, z. B. einfachen Mobilgeräten, eine bedeutende Einschränkung darstellen.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Abmessungen</th>
@@ -263,7 +263,7 @@ Note: Beachten Sie, dass Qualitätsstufen für unterschiedliche Bildformate aufg
 Neben unterschiedlichen verlustbehafteten und verlustfreien Komprimierungsalgorithmen unterstützen die verschiedenen Bildformate Funktionsmerkmale wie Animations- und Transparenz- (Alpha) Kanäle. Die Wahl des `richtigen Formats` für ein Bild ist folglich immer ein Kompromiss zwischen gewünschten visuellen Ergebnissen und funktionellen Anforderungen.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Format</th>
@@ -334,7 +334,7 @@ Wenn Sie schließlich eine Webansicht zur Darstellung von Inhalten in Ihrer nati
 
 Es gibt kein perfektes Bildformat oder Tool und keine ideale Zusammenstellung von Optimierungsparametern, die auf alle Bilder anwendbar sind. Für optimale Ergebnisse sind das Format und die Einstellungen je nach Inhalt des Bildes sowie dessen visuellen und anderen technischen Anforderungen auszuwählen.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Tool</th>
@@ -384,7 +384,7 @@ Note: Wenn die Maus über das Bildelement in Chrome DevTools bewegt wird, werden
 
 Die Übertragung unnötiger Pixel, die der Browser unseretwegen umskalieren muss, stellt eine verpasste Chance dar, die Gesamtzahl der Bytes zu reduzieren und zu optimieren, die für das Rendern der Seite erforderlich sind. Beachten Sie außerdem, dass bei einer Verkleinerung nicht nur die Pixelzahl des Bildes verringert wird, sondern dass dabei auch die ursprüngliche Bildgröße herabgesetzt wird.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Ursprüngliche Größe</th>

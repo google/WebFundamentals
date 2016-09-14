@@ -206,7 +206,7 @@ que exclui os efeitos da gravidade,
 Por exemplo, vamos analisar um telefone deixado sobre uma mesa plana
 com a tela virada para cima.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">Estado</th>
@@ -246,7 +246,7 @@ com a tela virada para cima.
 Por outro lado, se o telefone fosse segurado com a tela perpendicular ao
 chão e diretamente visível para quem olha:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">Estado</th>

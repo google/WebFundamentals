@@ -38,7 +38,7 @@ Nella sezione precedente, abbiamo notato che il percorso di rendering critico ri
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>NYTimes con CSS</td>
 <td>NYTimes senza CSS (FOUC)</td>

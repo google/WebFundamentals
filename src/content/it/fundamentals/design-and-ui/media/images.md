@@ -145,7 +145,7 @@ Invece di indicare densità e dimensioni fisse dell'immagine, è possibile speci
 
 Nell'esempio precedente viene eseguito il rendering di un'immagine di dimensione pari alla metà della larghezza del viewport (sizes="50vw"), basata sulla larghezza del browser e sulle proporzioni in pixel del dispositivo, consentendo al browser di utilizzare l'immagine corretta indipendentemente dalla larghezza della finestra del browser. Ad esempio, la tabella sottostante indica l'immagine che verrà utilizzata dal browser:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Browser width">Larghezza del browser</th>

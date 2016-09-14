@@ -144,7 +144,7 @@ Nem todos os formatos de vídeo são compatíveis com todas as plataformas. Veri
 
 Use `canPlayType()` para descobrir quais formatos de vídeo são compatíveis. O método usa um argumento de string que consiste em um `mime-type` e codecs opcionais e retorna um dos seguintes valores:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Valor retornado</th>
@@ -174,7 +174,7 @@ Use `canPlayType()` para descobrir quais formatos de vídeo são compatíveis. O
 Veja alguns exemplos de argumentos `canPlayType()` e valores retornados quando executados no Google Chrome:
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Tipo</th>
@@ -427,7 +427,7 @@ Uma visão geral rápida das propriedades do elemento de vídeo.
 
 Para ver uma lista completa de atributos de elementos de vídeo e suas definições, veja [the video element spec](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>Atributo</th>
       <th>Disponibilidade</th>
@@ -484,7 +484,7 @@ O padrão é verdadeiro, mas um aplicativo da WebView pode oferecer a opção de
 
 O atributo `preload` informa ao navegador quanto de informação ou conteúdo deve ser pré-carregado.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Valor</th>
@@ -516,7 +516,7 @@ Por exemplo, o Google Chrome armazena em buffer 25 segundos do vídeo em um comp
 
 #### Propriedades
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Propriedade</th>
       <th>Descrição</th>
@@ -561,7 +561,7 @@ Tanto playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/sa
 
 #### Métodos
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Método</th>
     <th>Descrição</th>
@@ -593,7 +593,7 @@ sejam chamados em resposta a uma ação do usuário, como clicar em um botão. V
 
 Esses são os únicos subconjuntos de eventos de mídia que podem ser acionados. Consulte a página [eventos de mídia](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) no Mozilla Developer Network para ver uma listagem completa.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Evento</th>
       <th>Descrição</th>

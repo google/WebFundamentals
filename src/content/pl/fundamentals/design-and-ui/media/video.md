@@ -144,7 +144,7 @@ Nie wszystkie formaty wideo działają na każdej platformie. Sprawdź, które f
 
 Aby dowiedzieć się, które formaty wideo działają, użyj metody `canPlayType()`. Przyjmuje ona argument w postaci ciągu znaków, który zawiera `mime-type` i opcjonalne kodeki, po czym zwraca jedną z tych wartości:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Zwracana wartość</th>
@@ -174,7 +174,7 @@ Aby dowiedzieć się, które formaty wideo działają, użyj metody `canPlayType
 Poniżej znajdziesz kilka przykładowych argumentów metody `canPlayType()` i wartości zwracane po uruchomieniu jej w Chrome:
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Typ</th>
@@ -426,7 +426,7 @@ Poniżej znajdziesz krótki przegląd właściwości elementu video.
 
 Pełną listę atrybutów elementu video i ich definicji znajdziesz w [specyfikacji elementu video](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>Atrybut</th>
       <th>Dostępność</th>
@@ -483,7 +483,7 @@ Domyślnie jest ono włączone, ale w aplikacji WebView można je wyłączyć.
 
 Atrybut `preload` podpowiada przeglądarce, ile informacji lub treści należy wstępnie wczytać.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Wartość</th>
@@ -515,7 +515,7 @@ Na przykład Chrome na komputerze buforuje 25&nbsp;sekund filmu, a w iOS oraz An
 
 #### Właściwości
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Właściwość</th>
     <th>Opis</th>
@@ -560,7 +560,7 @@ Właściwości playbackRate (<a href="https://googlesamples.github.io/web-fundam
 
 #### Metody
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Metoda</th>
     <th>Opis</th>
@@ -592,7 +592,7 @@ są wywoływane w odpowiedzi na działanie użytkownika, np. kliknięcie przycis
 
 To tylko niektóre z wywoływanych zdarzeń multimedialnych. Pełną listę znajdziesz na stronie [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) w Mozilla Developer Network.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Zdarzenie</th>
     <th>Opis</th>

@@ -2,17 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Hier erfahren Sie, wie Sie Videoinhalte ganz einfach zu Ihrer Website hinzufügen und den Nutzern die bestmögliche Nutzererfahrung bieten können - egal auf welchem Gerät.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-04-28 #}
 
 # Video {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-Nutzer mögen Videos. Sie können lustig und gleichzeitig informativ sein. Auf Mobilgeräten lassen sich Informationen in Form von Videos meist einfacher konsumieren. Aber Videos verbrauchen Bandbreite und funktionieren je nach Plattform unterschiedlich gut. Nutzer mögen es nicht, wenn ein Video ewig lädt oder beim Drücken der Wiedergabetaste nichts passiert. Hier erfahren Sie, wie Sie Ihrer Website Videoinhalte ganz einfach hinzufügen und den Nutzern die bestmögliche Nutzererfahrung bieten können - egal auf welchem Gerät.
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"
@@ -20,6 +15,11 @@ Nutzer mögen Videos. Sie können lustig und gleichzeitig informativ sein. Auf M
   </iframe>
 </div>
 
+Nutzer mögen Videos. Sie können lustig und gleichzeitig informativ sein. Auf Mobilgeräten lassen sich Informationen in Form von Videos meist einfacher konsumieren. Aber Videos verbrauchen Bandbreite und funktionieren je nach Plattform unterschiedlich gut. Nutzer mögen es nicht, wenn ein Video ewig lädt oder beim Drücken der Wiedergabetaste nichts passiert. Hier erfahren Sie, wie Sie Ihrer Website Videoinhalte ganz einfach hinzufügen und den Nutzern die bestmögliche Nutzererfahrung bieten können - egal auf welchem Gerät.
+
+
+
+<div class="clearfix"></div>
 
 ## Video hinzufügen 
 
@@ -31,9 +31,9 @@ Hier erfahren Sie, wie Sie Videoinhalte ganz einfach zu Ihrer Website hinzufüge
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Verwenden Sie das Videoelement zum Laden, Decodieren und Abspielen von Videos auf Ihrer Website.'
-- 'Erstellen Sie die Videoinhalte in verschiedenen Formaten, um eine Reihe mobiler Plattformen abzudecken.'
-- 'Achten Sie auf die richtige Größe der Videos, damit diese nicht ihre Container sprengen.'
+- Verwenden Sie das Videoelement zum Laden, Decodieren und Abspielen von Videos auf Ihrer Website.
+- Erstellen Sie die Videoinhalte in verschiedenen Formaten, um eine Reihe mobiler Plattformen abzudecken.
+- Achten Sie auf die richtige Größe der Videos, damit diese nicht ihre Container sprengen.
 - Achten Sie auf Zugänglichkeit. Fügen Sie das Track-Element hinzu und ordnen Sie es dem Videoelement unter.
 
 
@@ -60,10 +60,10 @@ Mithilfe des `<source>`-Elements können Sie mehrere Formate als Ausweichmöglic
 Beispiel:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
-Beim Parsen der <source>-Tags durch den Browser wird anhand des optionalen Attributs `type` ermittelt, welche Datei heruntergeladen und wiedergegeben werden soll. Wenn der Browser WebM unterstützt, spielt er die Datei `chrome.webm` ab, andernfalls wird überprüft, ob MPEG-4-Videos abgespielt werden können.
+Beim Parsen der `<source>`-Tags durch den Browser wird anhand des optionalen Attributs `type` ermittelt, welche Datei heruntergeladen und wiedergegeben werden soll. Wenn der Browser WebM unterstützt, spielt er die Datei `chrome.webm` ab, andernfalls wird überprüft, ob MPEG-4-Videos abgespielt werden können.
 Weitere Informationen dazu, wie Video- und Audioinhalte im Web funktionieren, finden Sie unter <a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital video'>A Digital Media Primer for Geeks</a>  (Leitfaden zu digitalen Medien für Computerfreaks).
 
 Dieser Ansatz bietet mehrere Vorteile im Vergleich zu verschiedenen HTML-Standards oder serverseitigen Skripts, besonders im Hinblick auf Mobilgeräte:
@@ -79,7 +79,7 @@ Der Verzicht auf ein Type-Attribut kann sich im Falle mehrerer Quellen mit nicht
 Vergleichen Sie anhand der Entwicklertools für Ihren mobilen Browser die Netzwerkaktivität <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/video-main.html">mit</a> und <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/notype.html">ohne Type-Attribute</a>.
 Darüber hinaus sollten Sie die Antwortheader in den Entwicklertools für Ihren Browser überprüfen, um [sicherzustellen, dass Ihr Server den richtigen MIME-Typ zurückgibt](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types). Andernfalls lässt sich nicht überprüfen, um welche Art von Videoquelle es sich handelt.
 
-##Start- und Endzeit festlegen
+## Start- und Endzeit festlegen
 
 Sparen Sie Bandbreite und machen Sie Ihre Website reaktionsschneller, indem Sie dem Videoelement mithilfe der Media Fragments-API eine Start- und Endzeit hinzufügen.
 
@@ -97,14 +97,13 @@ Zum Hinzufügen eines Medienfragments fügen Sie der Medien-URL einfach `#t=[sta
 
 Mithilfe der Media Fragments-API können Sie auch mehrere Ansichten desselben Videos bereitstellen - ähnlich wie Cue-Punkte bei einer DVD - ohne mehrere Dateien codieren und bereitstellen zu müssen.
 
-<!-- TODO: Verify note type! -->
 Note: - Die Media Fragments-API wird auf den meisten Plattformen mit Ausnahme von iOS unterstützt.
 - 'Vergewissern Sie sich, dass Ihr Server Bereichsanforderungen unterstützt. Bereichsanforderungen sind auf den meisten Servern standardmäßig aktiviert, einige Hostingdienste können diese jedoch deaktivieren.'
 
 
 Suchen Sie mithilfe der Entwicklertools für Ihren Browser in den Antwortheadern nach `Accept-Ranges: bytes`:
 
-<img class="center" alt="Screenshot der Chrome-Entwicklertools: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Screenshot der Chrome-Entwicklertools: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Posterbild hinzufügen
 
@@ -120,15 +119,12 @@ Ein Poster kann auch eine Ausweichmöglichkeit sein, falls das Attribut `src` de
 
 Hier sehen Sie eine Gegenüberstellung von Videos mit und ohne Posterbild. Wir haben das Posterbild grau dargestellt, um deutlich zu machen, dass es sich nicht um das Video handelt:
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android Chrome-Screenshot, Hochformat: ohne Poster" src="images/Chrome-Android-video-no-poster.png">
-  </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android Chrome-Screenshot, Hochformat: mit Poster" src="images/Chrome-Android-video-poster.png">
-  </div>
-</div>
+
+<img class="attempt-left" alt="Android Chrome-Screenshot, Hochformat: ohne Poster" src="img/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Android Chrome-Screenshot, Hochformat: mit Poster" src="img/Chrome-Android-video-poster.png">
+
+<div class="clearfix"></div>
 
 
 ## Alternativen für veraltete Plattformen anbieten 
@@ -144,7 +140,7 @@ Nicht alle Videoformate werden auf allen Plattformen unterstützt. Informieren S
 
 Mit `canPlayType()` können Sie herausfinden, welche Videoformate unterstützt werden. Bei dieser Methode wird auf der Grundlage eines Zeichenfolgenarguments bestehend aus `mime-type` und optionalen Codecs einer der folgenden Werte zurückgegeben:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Zurückgegebener Wert</th>
@@ -174,7 +170,7 @@ Mit `canPlayType()` können Sie herausfinden, welche Videoformate unterstützt w
 Im Folgenden finden Sie einige Beispiele für `canPlayType()`-Argumente und zurückgegebene Werte in Chrome:
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Typ</th>
@@ -252,32 +248,31 @@ Die codierte Größe eines Videos lässt sich anhand der Eigenschaften `videoWid
 Wenn Videoelemente für den Darstellungsbereich zu groß sind, sprengen sie möglicherweise die Größe der Container. Die Folge: Nutzer können sich weder den Inhalt ansehen noch
 die Steuerelemente nutzen.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Screenshot von Chrome für Android, Hochformat: Größe des Videoelements ohne CSS übersteigt Darstellungsbereich" src="images/Chrome-Android-portrait-video-unstyled.png">
-  <img class="mdl-cell mdl-cell--6--col" alt="Screenshot von Chrome für Android, Querformat: Größe des Videoelements ohne CSS übersteigt Darstellungsbereich" src="images/Chrome-Android-landscape-video-unstyled.png">
-</div>
+
+<img class="attempt-left" alt="Screenshot von Chrome für Android, Hochformat: Größe des Videoelements ohne CSS übersteigt Darstellungsbereich" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Screenshot von Chrome für Android, Querformat: Größe des Videoelements ohne CSS übersteigt Darstellungsbereich" src="img/Chrome-Android-landscape-video-unstyled.png">
+
+<div class="clearfix"></div>
+
 
 Die Videogröße lässt sich mit JavaScript oder CSS steuern. JavaScript-Bibliotheken und Plug-ins wie [FitVids](//fitvidsjs.com/) ermöglichen die Beibehaltung der richtigen Größe und des richtigen Formats, selbst für Flash-Videos von YouTube und anderen Quellen.
 
 Mithilfe von [CSS-Medienabfragen](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) lässt sich die Größe von Elementen je nach Größe des Darstellungsbereichs angeben. Mit `max-width: 100%` liegen Sie nie falsch.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.media %}
-
 Für Medieninhalte in iframes, zum Beispiel YouTube-Videos, sollten Sie einen responsiven Ansatz wie den von [John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)) versuchen.
 
-<!-- TODO: Verify note type! -->
 Note: Erzwingen Sie keine Größenanpassung von Elementen, wenn das daraus resultierende Seitenverhältnis vom Originalvideo abweicht. Ein gestauchtes oder gestrecktes Bild sieht nicht schön aus.
 
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling" adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
 Vergleichen Sie das Beispiel <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">mit</a> und ohne <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">Responsive Webdesign</a>.
@@ -300,32 +295,33 @@ Bei Desktopmonitoren oder Laptops ist die Geräteausrichtung kein Thema. Anders 
 
 Safari auf dem iPhone schaltet gut zwischen Hoch- und Querformat um:
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Hochformat" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Querformat" src="images/iPhone-video-playing-landscape.png">
-</div>
+
+<img class="attempt-left" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Hochformat" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Screenshot einer Videowiedergabe in Safari auf dem iPhone, Querformat" src="img/iPhone-video-playing-landscape.png">
+
+<div class="clearfix"></div>
+
 
 Auf einem iPad und in Chrome unter Android kann die Geräteausrichtung hingegen problematisch sein.
 Zum Beispiel sieht eine Videowiedergabe ohne jegliche Anpassung auf einem iPad im Querformat so aus:
 
-<img class="center" alt="Screenshot einer Videowiedergabe in Safari auf einem iPad mit Retina-Display, Querformat"
-src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Screenshot einer Videowiedergabe in Safari auf einem iPad mit Retina-Display, Querformat" src="img/iPad-Retina-landscape-video-playing.png">
 
 Durch Verwendung von `width: 100%` oder `max-width: 100%` in CSS lassen sich viele Layoutprobleme in Verbindung mit der Geräteausrichtung lösen. Darüber hinaus sollten Sie eventuell auch Vollbildalternativen in Betracht ziehen.
 
-##Inline- oder Vollbildanzeige
+## Inline- oder Vollbildanzeige
 
 Videos werden je nach Plattform unterschiedlich dargestellt. In Safari auf einem iPhone wird ein Videoelement inline auf einer Webseite angezeigt, die Wiedergabe erfolgt jedoch im Vollbildmodus:
 
-<img class="center" alt="Screenshot eines Videoelements auf dem iPhone, Hochformat" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="Screenshot eines Videoelements auf dem iPhone, Hochformat" src="img/iPhone-video-with-poster.png">
 
 Unter Android können Nutzer den Vollbildmodus durch Klicken auf das entsprechende Symbol auswählen. Die Inline-Anzeige ist jedoch bei der Videowiedergabe Standard:
 
-<img class="center" alt="Screenshot einer Videowiedergabe in Chrome unter Android, Hochformat" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Screenshot einer Videowiedergabe in Chrome unter Android, Hochformat" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 In Safari auf einem iPad erfolgt die Videowiedergabe inline:
 
-<img class="center" alt="Screenshot einer Videowiedergabe in Safari auf einem iPad mit Retina-Display, Querformat" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Screenshot einer Videowiedergabe in Safari auf einem iPad mit Retina-Display, Querformat" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### Vollbildansicht von Inhalten steuern
 
@@ -381,19 +377,18 @@ Zugänglichkeit ist keine Funktion. Nutzer, die nicht hören oder sehen können,
 
 Um Medien auf Mobilgeräten besser zugänglich zu machen, fügen Sie Untertitel oder Beschreibungen mithilfe des Track-Elements hinzu.
 
-<!-- TODO: Verify note type! -->
 Note: Das Track-Element wird in Chrome für Android, iOS Safari sowie allen aktuellen Desktop-Browsern mit Ausnahme von Firefox (siehe <a href='http://caniuse.com/track' title='Track element support status'>caniuse.com/track</a>) unterstützt. Darüber hinaus sind auch mehrere Polyfiller verfügbar. Wir empfehlen <a href='//www.delphiki.com/html5/playr/' title='Playr track element polyfill'>Playr</a> oder <a href='//captionatorjs.com/' title='Captionator track'>Captionator</a>.
 
 Bei Verwendung des Track-Elements sehen die Untertitel wie folgt aus:
 
- <img class="center" alt="Screenshot mit Untertiteln, die unter Verwendung des Track-Elements in Chrome für Android angezeigt werden" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Screenshot mit Untertiteln, die unter Verwendung des Track-Elements in Chrome für Android angezeigt werden" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Track-Element hinzufügen
 
 Es ist ganz einfach, Ihr Video mit Untertiteln zu versehen - Sie müssen lediglich ein Track-Element hinzufügen, das dem Videoelement untergeordnet ist:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
 Das Attribut `src` des Track-Elements enthält den Speicherort der Track-Datei.
@@ -426,7 +421,7 @@ Hier finden Sie eine kurze Übersicht über die Eigenschaften des Videoelements.
 
 Eine vollständige Liste der Attribute des Videoelements samt Definitionen finden Sie in den [Spezifikationen zum Videoelement](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>Attribut</th>
       <th>Verfügbarkeit</th>
@@ -483,7 +478,7 @@ Standardmäßig ist `true` festgelegt, die Option kann jedoch von einer WebView-
 
 Das Attribut `preload` gibt dem Browser Auskunft darüber, wie viele Informationen oder Inhalte vorab geladen werden sollten.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Wert</th>
@@ -515,7 +510,7 @@ Auf Desktopgeräten puffert Chrome zum Beispiel 25 Sekunden des Videos, unter iO
 
 #### Eigenschaften
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Eigenschaft</th>
       <th>Beschreibung</th>
@@ -560,7 +555,7 @@ Auf Mobilgeräten werden `playbackRate` (<a href="https://googlesamples.github.i
 
 #### Methoden
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Methode</th>
     <th>Beschreibung</th>
@@ -592,7 +587,7 @@ wenn eine Aktion des Nutzers vorausgegangen ist, etwa das Klicken auf eine Schal
 
 Es kann nur ein Teil der Medienereignisse ausgelöst werden. Eine vollständige Liste finden Sie auf der Seite [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) (Medienereignisse) im Mozilla Developer Network.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Ereignis</th>
       <th>Beschreibung</th>

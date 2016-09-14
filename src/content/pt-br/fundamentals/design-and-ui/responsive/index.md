@@ -181,7 +181,7 @@ As consultas de mídia permitem criar uma experiência responsiva, em que estilo
 Embora existam diversos itens sobre os quais podem ser criadas consultas, `min-width`, `max-width`, `min-height` e `max-height` são utilizados com mais frequência para a criação de Web design responsivo.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="atributo">atributo</th>

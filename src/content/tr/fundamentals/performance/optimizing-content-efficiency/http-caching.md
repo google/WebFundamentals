@@ -84,7 +84,7 @@ Bu yönerge, istek zamanindan baslayarak getirilen yanitin yeniden kullanilmasin
 
 Belirli bir kaynaga veya uygulamaniz tarafindan kullanilan bir kaynak kümesine iliskin en iyi önbellege alma politikasini belirlemek için yukaridaki karar agacini izleyin. Ideal kosullarda, istemcide mümkün oldugunca çok yaniti mümkün olan en uzun süre için önbellege almayi ve verimli yeniden dogrulama için her bir yanitin dogrulama belirteçlerini saglamayi amaçlamaniz gerekir.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Cache-Control yönergeleri</th>

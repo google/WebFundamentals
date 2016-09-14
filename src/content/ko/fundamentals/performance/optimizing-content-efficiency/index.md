@@ -23,7 +23,7 @@ Translated By:
 
 <img src="images/http-archive-trends.png" class="center" alt="HTTP Archive trends">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>

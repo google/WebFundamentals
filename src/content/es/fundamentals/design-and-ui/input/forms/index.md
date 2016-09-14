@@ -344,7 +344,7 @@ Los valores del atributo `autocomplete` son una parte del [HTML estándar de WHA
 
 Los atributos `autocomplete` pueden ir acompañados del nombre de una sección, como **`shipping `**`given-name` o **`billing `**`street-address`. En el navegador, las diferentes secciones se completarán automáticamente por separado, y no de forma continua.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Content type">Tipo de contenido</th>
@@ -499,7 +499,7 @@ manera:
 
 ###### Patrones de expresión regulares comunes
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Description">Descripción</th>
@@ -611,7 +611,7 @@ una herramienta eficiente para ejecutar la validación personalizada.  La API le
 configurar un error personalizado, verificar si un elemento es válido y determinar el
 motivo por el que un elemento no es válido:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="API">API</th>
@@ -671,7 +671,7 @@ el usuario completó el formulario correctamente antes de enviarlo.
 En HTML5, también se introducen una serie de seudoclases que se pueden utilizar para darle estilo a las
 entradas sobre la base de su valor o atributos.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th data-th="Pseudo-class">Seudoclase</th>

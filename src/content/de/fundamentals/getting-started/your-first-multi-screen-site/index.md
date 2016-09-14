@@ -2,14 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Displays bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Erfahren Sie, wie Sie eine Website erstellen, die auf allen Geräten gut funktioniert.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Ihre erste Website für verschiedene Geräte {: .page-title }
 
-{% include "web/_shared/contributors/paulkinlan.html" %}
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
 
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Erfahrungen für verschiedene Geräte zu kreieren ist nicht so schwer, wie es sich anhört. In diesem Leitfaden erstellen wir als Beispiel eine Produktzielseite für unseren <a href="https://www.udacity.com/course/cs256">Kurs CS256: Für das mobile Web entwickeln</a>, der auf sämtlichen Gerätetypen gut funktioniert.
@@ -44,29 +44,30 @@ Wir kommen zu dem Schluss, dass wir die folgenden Inhalte benötigen:
 5. eine Datentabelle mit Informationen zur Untermauerung unserer Behauptungen.
 
 ### TL;DR {: .hide-from-toc }
-- 'Inhalte ermitteln, die Sie zuerst benötigen'
+- Inhalte ermitteln, die Sie zuerst benötigen
 - Informationsarchitektur(IA)-Entwurf für schmale und breite Darstellungsbereiche erarbeiten
 - Seitenstrukturansicht mit Inhalten und ohne Stile erstellen
 
 
 Darüber hinaus haben wir eine Rohversion der Informationsarchitektur und ein grobes Layout für schmale und breite Darstellungsbereiche ausgearbeitet.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="IA für schmale Darstellungsbereiche">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="IA für breite Darstellungsbereiche">
-</div>
+<img class="attempt-left" src="images/narrowviewport.png" alt="IA für schmale Darstellungsbereiche">
+<img  class="attempt-right" src="images/wideviewport.png" alt="IA für breite Darstellungsbereiche">
+
+<div class="clearfix"></div>
+
 
 Diese können einfach in die vorläufigen Abschnitte einer Seitenstruktur ohne Stile umgewandelt werden, auf die wir im weiteren Verlauf dieses Projekts zurückgreifen werden.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Der Seite Inhalte hinzufügen
 
 Die Grundstruktur der Website ist fertig. Wir wissen, welche Abschnitte wir brauchen, welche Inhalte in diesen Abschnitten erscheinen und wo sie in der gesamten Informationsarchitektur positioniert werden sollen. Nun können wir mit der Erweiterung der Website beginnen.
 
-<!-- TODO: Verify note type! -->
+
 Note: Styling kommt später
 
 #### Titel und Formular erstellen
@@ -76,7 +77,7 @@ Der Titel und das Anfragebenachrichtigungsformular sind die kritischen Komponent
 Geben Sie als Titel einen einfachen Text zur Beschreibung des Kurses ein:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 Darüber hinaus müssen wir das Formular ausfüllen.
@@ -87,10 +88,9 @@ Alle Formulare sollten über Beschriftungen und Platzhalter verfügen, damit Nut
 Wir fügen semantische Typen hinzu, damit Nutzer Angaben auf Mobilgeräten schnell und einfach eingeben können. Beispielsweise sollte dem Nutzer beim Eingeben einer Telefonnummer lediglich eine Wähltastatur angezeigt werden.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
 
 #### Video- und Informationsabschnitt erstellen
 
@@ -98,7 +98,7 @@ Der Video- und Informationsabschnitt der Inhalte ist etwas ausführlicher.
 Er enthält eine Liste der Funktionen unserer Produkte und darüber hinaus einen Videoplatzhalter, in dem Nutzern die Funktionsweise unseres Produkts vorgeführt wird.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Videos kommen oft zum Einsatz, um Inhalte auf eine interaktivere Art zu beschreiben. Meistens finden Sie Verwendung, um eine Demonstration eines Produkts oder Konzepts zu geben.
@@ -111,29 +111,27 @@ Orientieren Sie sich an den Best Practices, um Videos einfach in Ihre Website zu
 * Fügen Sie Hinweistext hinzu, über den Nutzer das Video herunterladen können, falls die Wiedergabe im Fenster nicht möglich ist.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
 
 #### Bildabschnitt erstellen
 
 Websites ohne Bilder können etwas langweilig sein. Es gibt zwei Bildtypen:
 
 * Bilder zum Inhalt: Bilder, die sich im Text im Dokument befinden und dazu dienen, zusätzliche Informationen zum Inhalt zu vermitteln.
-* Stilistische Bilder: Bilder, die dazu dienen, das Erscheinungsbild zu verbessern. Solche Bilder sind häufig Hintergrundbilder, Muster und Farbverläufe. Weitere Informationen hierzu finden Sie im [nächsten Artikel]({{page.nextPage.relative_url}}).
+* Stilistische Bilder: Bilder, die dazu dienen, das Erscheinungsbild zu verbessern. Solche Bilder sind häufig Hintergrundbilder, Muster und Farbverläufe. Weitere Informationen hierzu finden Sie im [nächsten Artikel](#).
 
 Im Bildabschnitt unserer Seite befindet sich eine Anzahl an Bildern zum Inhalt.
 
 Bilder zum Inhalt sind sehr wichtig, um die Bedeutung der Seite zu vermitteln. Stellen Sie sich diese wie die Bilder in Zeitungsartikeln vor. Die Bilder, die wir verwenden, sind Bilder der Lehrer dieses Projekts: Chris Wilson, Peter Lubbers und Sean Bennet.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
 </pre>
 
 Die Bilder sind so eingestellt, dass sie sich über 100 % der Bildschirmbreite erstrecken. Dieser Ansatz funktioniert gut auf Geräten, die einen schmalen Darstellungsbereich haben, allerdings weniger gut auf solchen mit einem breiten Darstellungsbereich, etwa auf Desktopcomputern. Dieses Problem wird im Abschnitt für responsives Design behandelt.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
 
 Viele Nutzer können sich Bilder nicht ansehen und greifen auf Hilfstechnologien wie eine Bildschirmsprachausgabe zurück, die die Daten auf der Seite analysieren und anschließend in verbaler Form ausgeben. Vergewissern Sie sich daher, dass alle Ihre Bilder zum Inhalt ein beschreibendes ``alt``-Tag aufweisen, die die Sprachausgabe dem Nutzer vorlesen kann.
 
@@ -146,7 +144,7 @@ Der letzte Abschnitt ist eine einfache Tabelle mit bestimmten Produktdaten.
 Tabellen sollten nur für Tabellendaten verwendet werden, also Informationsmatrizen.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Fußnote hinzufügen
@@ -156,28 +154,25 @@ Für die meisten Websites ist eine Fußnote erforderlich, in der sich Inhalte wi
 Auf unserer Website verlinken wir einfach auf die Nutzungsbedingungen, eine Kontaktseite und unsere Profile in den sozialen Medien.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Zusammenfassung
 
 Wir haben einen Entwurf der Website ausgearbeitet und die wichtigsten strukturellen Elemente ermittelt. Darüber hinaus haben wir uns vergewissert, dass alle relevanten Inhalte fertig sind und für unsere geschäftlichen Anforderungen bereitstehen.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="Inhalt">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+<img class="attempt-left" src="images/content.png" alt="Inhalt">
+<img  class="attempt-right" src="images/narrowsite.png" alt="">
+
+<div class="clearfix"></div>
+
 
 Sie werden nun vielleicht denken, dass die Seite gar nicht gut aussieht. Das ist jedoch Absicht. 
 Inhalte sind der wichtigste Aspekt jeder Website und wir mussten sichergehen, dass wir eine gute und solide Informationsarchitektur und Informationsdichte haben. Anhand dieses Leitfadens haben wir uns eine ausgezeichnete Grundlage geschaffen, auf der wir nun aufbauen können. Die Formatierung unserer Inhalte wird im nächsten Leitfaden behandelt.
 
 
 
-
-
 ## Responsiv machen 
-
-
 
 
 Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werden, von Telefonen mit sehr kleinen Bildschirmen bis hin zu Fernsehern mit riesigen Bildschirmdiagonalen. Jedes dieser Geräte bringt eigene Vorteile, jedoch auch Einschränkungen mit sich. Als Webentwickler wird von Ihnen erwartet, sämtliche Geräte zu unterstützen.
@@ -186,16 +181,18 @@ Heute kann über eine extreme Vielfalt an Geräten auf das Web zugegriffen werde
 Wir erstellen eine Website, die auf Bildschirmen verschiedener Größe und verschiedenen Gerätetypen funktioniert. Im [vorherigen Artikel]({{page.previousPage.relative_url}}) haben wir die Informationsarchitektur der Seite entworfen und eine Grundstruktur erstellt.
 In diesem Leitfaden nehmen wir unsere Grundstruktur mit Inhalten und verwandeln diese in eine schöne Seite, die auf einer breiten Palette an Bildschirmgrößen responsiv ist.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Inhalt">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Inhalte und Struktur </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Fertige Website </a> </figcaption>
-  </figure>
-</div>
+
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="Inhalt">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Inhalte und Struktur </a> </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Fertige Website </a> </figcaption>
+</figure>
+
+<div class="clearfix"></div>
+
 
 Gemäß den Prinzipien der "Mobile First"-Webentwicklung, wonach zuerst für Mobilgeräte entwickelt wird, beginnen wir mit einem schmalen Darstellungsbereich, ähnlich dem Bildschirm eines Mobiltelefons.
 Anschließend skalieren wir für größere Geräteklassen nach oben.
@@ -207,7 +204,7 @@ Dazu müssen wir uns auf Grundlage dessen, wie die Inhalte auf den jeweiligen Bi
 ### TL;DR {: .hide-from-toc }
 - Immer einen Darstellungsbereich verwenden
 - Immer mit einem schmalen Darstellungsbereich beginnen und nach oben skalieren
-- 'Übergangspunkte außerhalb platzieren, wenn Inhalte angepasst werden müssen'
+- Übergangspunkte außerhalb platzieren, wenn Inhalte angepasst werden müssen
 - Allgemeinen Entwurf Ihres Layouts über alle primären Übergangspunkte hinweg erstellen
 
 
@@ -220,12 +217,10 @@ Ohne ihn funktioniert Ihre Website auf Mobilgeräten nicht besonders gut.
 Der Darstellungsbereich signalisiert dem Browser, dass die Seite skaliert werden muss, damit sie auf den Bildschirm passt. Es gibt viele verschiedene Konfigurationen, die Sie für Ihren Darstellungsbereich zur Steuerung der Seitendarstellung festlegen können. Wir empfehlen folgenden Standard:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 Der Darstellungsbereich befindet sich in der Kopfzeile des Dokuments und muss nur einmal deklariert werden.
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
 
 ### Einfaches Styling anwenden
 
@@ -252,9 +247,9 @@ Im vorherigen Leitfaden haben wir inhaltliche Bilder hinzugefügt, die wichtig f
 
 Ein gutes Beispiel hierfür ist ein Titelbild für den Inhalt, der ohne Scrollen sichtbar ist. Dieses wird häufig dazu genutzt, Nutzer dafür zu gewinnen, mehr über das Produkt zu lesen.
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="Website mit Design">
-</div>
+
+<img  src="images/narrowsite.png" alt="Website mit Design">
+
 
 Solche Bilder können sehr einfach hinzugefügt werden. In unserem Fall fügen wir eines als Hintergrund für die Kopfzeile ein und wenden es mithilfe von ein wenig einfachem CSS-Code an.
 
@@ -270,7 +265,8 @@ Solche Bilder können sehr einfach hinzugefügt werden. In unserem Fall fügen w
 
 Wir haben ein einfaches Hintergrundbild ausgewählt, das unscharf ist, damit es nicht vom Inhalt ablenkt. Wir haben es so konfiguriert, dass es sich stets über das gesamte Element erstreckt und dabei immer das richtige Seitenverhältnis aufweist.
 
-<br style="clear: both;">
+<div class="clearfix"></div>
+
 
 ### Legen Sie Ihren ersten Übergangspunkt an
 
@@ -294,7 +290,6 @@ Das Design sieht ab 600 Pixeln in der Breite unvorteilhaft aus. In unserem Fall 
 
 Auf einem größeren Bildschirm ist mehr Platz, womit mehr Flexibilität bei der Darstellung von Inhalten gegeben ist.
 
-<!-- TODO: Verify note type! -->
 Note: Sie müssen nicht alle Elemente auf einmal verschieben, sondern können bei Bedarf kleinere Anpassungen vornehmen.
 
 Im Kontext unserer Produktseite müssen wir Folgendes tun:
@@ -305,7 +300,6 @@ Im Kontext unserer Produktseite müssen wir Folgendes tun:
 * das Video so konfigurieren, dass es sich um die Inhalte herum ausrichtet, und
 * die Größe der Bilder reduzieren und sie in einem optisch ansprechenderen Raster erscheinen lassen.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
 
 ### Die maximale Breite des Designs einschränken
 
@@ -317,14 +311,16 @@ Dazu müssen wir die Breite einschränken und die Elemente zentrieren. Wir müss
 
 Bei dem Container handelt es sich um ein einfaches ``div``-Tag-Paar, das die folgende Form aufweist:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    </div>
+
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" adjust_indentation="auto" %}
 </pre>
 
 ### Abstände ändern und Textgröße reduzieren
@@ -336,7 +332,7 @@ Bei größeren Darstellungsbereichen müssen wir beachten, dass Nutzer zwar eine
 Auf unserer Produktseite erhöhen wir die Abstände für die Abschnittselemente, indem wir sie darauf einstellen, stets 5 % der Breite einzuhalten. Darüber hinaus vergrößern wir die Kopfzeilen der Abschnitte.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
 ### Elemente an breiten Darstellungsbereich anpassen
@@ -357,11 +353,11 @@ Bei einem schmalen Darstellungsbereich haben wir sehr viel weniger Platz in der 
 Damit wir die Horizontale effektiver nutzen können, müssen wir die lineare Darstellung der Kopfzeile auflösen und das Formular und die Liste verschieben, damit sie nebeneinander erscheinen.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -379,7 +375,7 @@ Das Video auf der Oberfläche für den schmalen Darstellungsbereich ist so einge
 Das Videoelement muss aus dem vertikalen Fluss des schmalen Darstellungsbereichs herausgenommen werden und auf einem breiten Darstellungsbereich neben der Inhaltsliste erscheinen.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" adjust_indentation="auto" %}
 </pre>
 
 #### Bilder gekachelt darstellen
@@ -388,10 +384,10 @@ Die Bilder sind für schmale Darstellungsbereiche, in der Regel die Bildschirme 
 
 Damit die Bilder in breiten Darstellungsbereichen richtig erscheinen, werden sie auf 30 % der Container-Breite skaliert und horizontal statt vertikal ausgerichtet, wie es in schmalen Darstellungsbereichen der Fall ist. Darüber hinaus fügen wir eine Umrandung und Schlagschatten hinzu, um die Optik der Bilder zusätzlich zu verbessern.
 
-<img src="images/imageswide.png" style="width:100%">
+<img src="images/imageswide.png" >
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" adjust_indentation="auto" %}
 </pre>
 
 #### Bilder für DPI-Werte responsiv machen
@@ -406,8 +402,6 @@ In Browsern, die dies unterstützen, können Sie Bilder mit hoher Pixeldichte an
 
     <img src="photo.png" srcset="photo@2x.png 2x">
     
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
 
 #### Tabellen
 
@@ -428,7 +422,7 @@ Wenn Sie zuerst für Mobilgeräte entwickeln, ist es schwieriger, angewendete St
 Dadurch sorgen wir für einen klaren und konsequenten Übergang.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" adjust_indentation="auto" %}
 </pre>
 
 ### Abschluss

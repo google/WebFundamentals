@@ -202,7 +202,7 @@ El evento proporciona cuatro propiedades:
 Por ejemplo, miremos el teléfono apoyado sobre una mesa plana,
 con la pantalla hacia arriba.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">Estado</th>
@@ -242,7 +242,7 @@ con la pantalla hacia arriba.
 Por el contrario, si el teléfono se colocara con la pantalla en posición perpendicular al
 piso, y el espectador lo pudiera visualizar directamente:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">Estado</th>

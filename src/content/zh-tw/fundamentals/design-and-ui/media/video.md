@@ -144,7 +144,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 使用 `canPlayType()` 找出支援的影片格式。這個方法採用與 `mime-type` 一致的字串引數和可選轉碼器，並會傳回下列其中一個值：
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>傳回值</th>
@@ -174,7 +174,7 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 以下提供一些示例，說明在 Chrome 中執行 `canPlayType()` 時的引數和傳回值：
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>類型</th>
@@ -427,7 +427,7 @@ video 元素各項屬性的快速概覽。
 
 如要查看 video 元素屬性的完整清單及定義，請參閱[video 元素規格](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element)。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>屬性</th>
       <th>適用範圍</th>
@@ -484,7 +484,7 @@ video 元素各項屬性的快速概覽。
 
 `preload` 屬性會提示瀏覽器應預先載入的資訊或內容量。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>值</th>
@@ -516,7 +516,7 @@ video 元素各項屬性的快速概覽。
 
 #### 屬性
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>屬性</th>
     <th>說明</th>
@@ -561,7 +561,7 @@ playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/samples/
 
 #### 方法
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>方法</th>
     <th>說明</th>
@@ -593,7 +593,7 @@ playbackRate (<a href="https://googlesamples.github.io/web-fundamentals/samples/
 
 以下只是部分可能會觸發的媒體事件。如需完整清單，請參閱 Mozilla 開發人員網路上的[媒體事件](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) 頁面。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>事件</th>
     <th>說明</th>

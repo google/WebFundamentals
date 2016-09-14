@@ -111,7 +111,7 @@ En resumen, como primer paso para optimizar la eficacia de los recursos debes cr
 Todos los navegadores modernos admiten y negocian automáticamente con la compresión GZIP para todas las solicitudes de HTTP: nuestro trabajo es asegurarnos de que el servidor esté bien configurado para ofrecer el recurso comprimido cuando el cliente lo solicite.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Biblioteca</th>

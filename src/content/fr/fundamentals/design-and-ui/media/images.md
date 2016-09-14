@@ -144,7 +144,7 @@ Au lieu de fournir des densités et des tailles d'image fixes, vous pouvez spéc
 
 L'exemple ci-dessus affiche une image dont la largeur équivaut à la moitié de celle de la fenêtre d'affichage (sizes='50vw') et, en fonction de la largeur du navigateur et du rapport de pixel de l'appareil, permet au navigateur de choisir l'image appropriée, quelle que soit la taille de la fenêtre du navigateur. Le tableau ci-dessous illustre l'image qui sera choisie par le navigateur :
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Largeur du navigateur">Largeur du navigateur</th>

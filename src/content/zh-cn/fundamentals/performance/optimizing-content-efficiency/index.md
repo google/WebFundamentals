@@ -19,7 +19,7 @@ description: 每个应用所下载的数据数量不断增加。为了提供卓�
 
 <img src="images/http-archive-trends.png" class="center" alt="HTTP 归档趋势">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

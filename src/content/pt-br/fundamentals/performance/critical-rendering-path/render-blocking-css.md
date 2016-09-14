@@ -37,7 +37,7 @@ Na seção anterior, vimos que o caminho de processamento essencial exige que te
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>NYTimes com CSS</td>
 <td>NYTimes sem CSS (FOUC)</td>

@@ -206,7 +206,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 例如，讓我們看看手機放在平坦桌面上，
 螢幕朝上。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">狀態</th>
@@ -246,7 +246,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 反之，如果手持電話時，螢幕垂直於地面，
 並直接面對檢視者：
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">狀態</th>

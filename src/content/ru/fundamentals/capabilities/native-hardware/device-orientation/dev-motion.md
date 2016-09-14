@@ -58,7 +58,7 @@ description: Движение устройства дает информацию
 Например, рассмотрим телефон, лежащий на горизонтальном столе
 экраном вверх.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">Состояние</th>
@@ -98,7 +98,7 @@ description: Движение устройства дает информацию
 В отличие от этого, если экран телефона расположен перпендикулярно к земле
 и виден наблюдателю:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">Состояние</th>

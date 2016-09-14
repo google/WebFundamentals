@@ -38,7 +38,7 @@ In het vorige gedeelte zagen we dat het kritieke weergavepad zowel de DOM- als d
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>New York Times met CSS</td>
 <td>New York Times zonder CSS (FOUC, flash of unstyled content)</td>

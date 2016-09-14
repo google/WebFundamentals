@@ -19,7 +19,7 @@ Nos applications Web continuent de se développer en termes de portée, d'ambiti
 
 <img src="images/http-archive-trends.png" class="center" alt="Tendances HTTP Archive">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

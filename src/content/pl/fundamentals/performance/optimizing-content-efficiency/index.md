@@ -19,7 +19,7 @@ Jak wygląda nowoczesna aplikacja internetowa? Projekt [HTTP Archive](http://htt
 
 <img src="images/http-archive-trends.png" class="center" alt="Trendy zarejestrowane w projekcie HTTP Archive">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

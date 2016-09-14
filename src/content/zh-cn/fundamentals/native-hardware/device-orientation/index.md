@@ -206,7 +206,7 @@ device orientation 事件有多种用途。  例如：
 例如，我们来看看手机放在平坦桌面上，
 其屏幕朝上。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">状态</th>
@@ -246,7 +246,7 @@ device orientation 事件有多种用途。  例如：
 反过来，如果放置手机时屏幕与地面垂直
 ，并且观看者可直接看到屏幕：
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">状态</th>

@@ -184,7 +184,7 @@ Medya sorgulari; küçük, büyük ve aradaki ekranlara belirli stillerin uygula
 Sorgulayabilecegimiz farkli ögeler söz konusudur, ancak duyarli web tasarimi için en sik kullanilanlar `min-width`, `max-width`, `min-height` ve `max-height` ögeleridir.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="özellik">özellik</th>

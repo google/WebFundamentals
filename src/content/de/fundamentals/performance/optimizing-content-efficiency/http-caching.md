@@ -84,7 +84,7 @@ Mit dieser Anweisung wird der maximale Zeitraum in Sekunden vorgegeben, während
 
 Gehen Sie nach dem obigen Entscheidungsbaum vor, um die optimale Caching-Richtlinie für eine bestimmte Ressource oder eine Gruppe von Ressourcen festzulegen, die von Ihrer Anwendung verwendet werden. Es empfiehlt sich, so viele Antworten wie möglich über den maximalen Zeitraum auf dem Client zwischenzuspeichern und im Sinne einer effizienten Revalidierung Validierungstoken für jede Antwort vorzusehen.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Cache-Control-Anweisungen</th>

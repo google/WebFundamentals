@@ -86,7 +86,7 @@ Yüksek DPI'ya sahip (HiDPI) ekranlar güzel sonuçlar üretir, ancak bunun içi
 
 Diger yandan, tarama resimler, resim verilerini piksel temelinde kodladiklari için çok daha büyük bir zorluga neden olur. Dolayisiyla, piksel sayisi arttikça, bir tarama resmin dosya boyutu da büyür. Örnek olarak, 100x100 (CSS) pikselde görüntülenen bir fotograf varligi arasindaki farki düsünelim:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Ekran çözünürlügü</th>
@@ -167,7 +167,7 @@ Dahili olarak, tarayici her bir kanal için 256 deger (gölgeler) ayirir. Bu da 
 <!-- TODO: Verify note type! -->
 Note: Bu arada, verileri sunucudan istemciye aktarmak için kullanilan resim biçiminden bagimsiz olarak, resmin kodu tarayici tarafindan çözüldügünde her bir piksel her zaman 4 bayt bellek kullanir. Bu, büyük resimler ve kullanilabilir bellegi çok fazla olmayan cihazlar (ör. alt sinif mobil cihazlar) için önemli bir kisitlama olabilir.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Boyutlar</th>
@@ -263,7 +263,7 @@ Note: Farkli resim biçimlerinin kalite düzeylerinin, resmi kodlamak için kull
 Farkli kayipli ve kayipsiz sikistirma algoritmalarina ek olarak, farkli resim biçimleri animasyon ve seffaflik (alfa) kanallari gibi farkli özellikleri destekler. Sonuç olarak, belirli bir resme iliskin `dogru biçim` seçimi, istediginiz görsel sonuçlar ile islevsel gereksinimlerin bir birlesimidir.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Biçim</th>
@@ -334,7 +334,7 @@ Son olarak, yerel uygulamanizda içerik olusturmak için bir Webview kullaniyors
 
 Tek bir mükemmel resim biçimi, araç veya tüm resimler için geçerli bir optimizasyon parametreleri kümesi yoktur. En iyi sonuçlar için biçimi ve ayarlarini resmin içerigi ile görsel ve diger teknik gereksinimlerine göre sizin seçmeniz gerekir.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Araç</th>
@@ -384,7 +384,7 @@ Note: Chrome DevTools'ta imleci resim ögesinin üzerinde beklettiginizde, resim
 
 Yalnizca resmi bizim adimiza tarayicinin yeniden ölçeklemesini saglamak adina gereksiz piksellerin gönderilmesinin getirdigi ek yük, sayfayi olusturmak için gereken toplam bayt sayisini azaltmak ve optimize etmek için büyük bir firsatin kaçmasidir. Bununla birlikte, yeniden boyutlandirma islevinin yalnizca resmin küçültüldügü piksel sayisiyla ilgili olmadigini, ayni zamanda dogal boyutunun küçültülmesiyle de ilgili oldugunu unutmayin.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Dogal boyut</th>

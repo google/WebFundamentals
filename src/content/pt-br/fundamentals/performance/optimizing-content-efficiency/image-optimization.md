@@ -86,7 +86,7 @@ Telas com alto DPI (HiDPI) exibem resultados incríveis, mas há um ponto negati
 
 Por outro lado, as imagens de varredura impõem um desafio muito maior, pois codificam os dados da imagem pixel por pixel. Portanto, quanto maior o número de pixels, maior o tamanho do arquivo da imagem de varredura. Como exemplo, considere a diferença entre um recurso de foto exibido na resolução de 100 x 100 pixels (CSS):
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Resolução da tela</th>
@@ -167,7 +167,7 @@ Internamente, o navegador aloca 256 valores (tons) para cada canal, que se conve
 <!-- TODO: Verify note type! -->
 Note: Além disso, independentemente do formato de imagem usado para transferir os dados do servidor para o cliente, quando a imagem é decodificada pelo navegador, cada pixel ocupa sempre 4 bytes de memória. Isso pode ser uma limitação importante para imagens grandes e dispositivos que não têm muita memória disponível, como dispositivos móveis mais antigos.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Dimensões</th>
@@ -263,7 +263,7 @@ Note: Os níveis de qualidade de formatos de imagens diferentes não são direta
 Além das diferenças entre os vários algoritmos de compactação com perdas e sem perdas, os vários formatos de imagem são compatíveis com diferentes recursos, como canais de transparência (alfa) e animação. Consequentemente, escolher o `formato correto` para uma determinada imagem é uma combinação dos resultados visuais desejados e dos requisitos funcionais.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Formato</th>
@@ -334,7 +334,7 @@ Finalmente, se você usar um Webview para exibir o conteúdo no seu aplicativo n
 
 Não há um formato de imagem, uma ferramenta ou um conjunto de parâmetros de otimização perfeito para todas as imagens. Para conseguir os melhores resultados, é preciso escolher o formato e suas configurações com base no conteúdo da imagem, nos seus requisitos visuais e em outros requisitos técnicos.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Ferramenta</th>
@@ -384,7 +384,7 @@ Note: Passar o cursor sobre o elemento de imagem no Chrome DevTools revela o tam
 
 A sobrecarga do envio de pixels desnecessários com o propósito de que o navegador faça o redimensionamento por nós, representa uma oportunidade desperdiçada de reduzir e otimizar o número total de bytes necessários para exibir a página. Além disso, o redimensionamento não é somente uma função do número de pixels subtraídos da imagem, mas também dos pixels subtraídos do tamanho natural.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Tamanho natural</th>

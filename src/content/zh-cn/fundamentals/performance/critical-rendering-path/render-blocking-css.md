@@ -44,7 +44,7 @@ Translated By:
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>有 CSS 的纽约时报</td>
 <td>没有 CSS 的纽约时报</td>

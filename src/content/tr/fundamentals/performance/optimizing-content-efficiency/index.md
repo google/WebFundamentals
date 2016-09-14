@@ -19,7 +19,7 @@ Modern bir web uygulamasi nasil görünür? [HTTP Archive](http://httparchive.or
 
 <img src="images/http-archive-trends.png" class="center" alt="HTTP Archive trendleri">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

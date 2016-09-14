@@ -184,7 +184,7 @@ Zapytania o media umożliwiają tworzenie elastycznych interfejsów, w których 
 Jest kilka różnych elementów, których może dotyczyć zapytanie, jednak przy elastycznym projektowaniu witryn najczęściej używa się `min-width`, `max-width`, `min-height` i `max-height`.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Atrybut">Atrybut</th>

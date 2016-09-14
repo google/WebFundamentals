@@ -111,7 +111,7 @@ O [GZIP](http://en.wikipedia.org/wiki/Gzip) é um compactador genérico que pode
 Todos os navegadores modernos oferecem suporte e negociam automaticamente a compactação com GZIP para todas as solicitações HTTP. Nosso trabalho é garantir que o servidor esteja configurado corretamente para exibir o recurso compactado quando ele for solicitado pelo cliente.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Biblioteca</th>

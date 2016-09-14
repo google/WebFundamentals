@@ -19,7 +19,7 @@ Wie sieht eine moderne Webanwendung aus? Das [HTTP Archive](http://httparchive.o
 
 <img src="images/http-archive-trends.png" class="center" alt="Trends laut HTTP Archive">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

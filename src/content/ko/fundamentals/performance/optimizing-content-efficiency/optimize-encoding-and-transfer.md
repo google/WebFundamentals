@@ -114,7 +114,7 @@ Note: 압축이 안된 JQuery 라이브러리는 현재 300KB 정도 크기다. 
 모든 최신 브라우저들은 모든 HTTP 요청에 대한 GZIP 압축을 지원합니다: 우리의 할 일은 클라이언트의 요청을 받았을 때, 서버가 압축된 리소스을 다룰 수 있도록 적절하게 서버를 구성하는 것 입니다.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>

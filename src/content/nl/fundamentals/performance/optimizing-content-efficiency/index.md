@@ -19,7 +19,7 @@ Hoe ziet een moderne internetapplicatie eruit? [HTTP Archive](http://httparchive
 
 <img src="images/http-archive-trends.png" class="center" alt="Trends opgesteld door HTTP Archive">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

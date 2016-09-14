@@ -38,7 +38,7 @@ description: 在預設情況下，CSS 會被視為禁止轉譯的資源，只要
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>具備 CSS 的 NYTimes</td>
 <td>不具備 CSS 的 NYTimes (FOUC)</td>

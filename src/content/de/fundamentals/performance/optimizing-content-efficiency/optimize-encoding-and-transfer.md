@@ -110,7 +110,7 @@ Kurze Zusammenfassung: Machen Sie als ersten Schritt bei der Optimierung der Eff
 Alle modernen Browser unterstützen und handeln die GZIP-Komprimierung bei sämtlichen HTTP-Anfragen aus. Unsere Aufgabe besteht darin, den Server ordnungsgemäß zu konfigurieren, damit er die komprimierte Ressource bereitstellt, wenn diese vom Client angefordert wird.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Bibliothek</th>

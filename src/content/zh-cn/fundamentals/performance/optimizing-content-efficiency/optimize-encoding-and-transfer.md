@@ -111,7 +111,7 @@ Note: 典型的例证是，JQuery 库的未压缩开发版本现在即将达到 
 所有现代浏览器都支持并自动商定将 GZIP 压缩用于所有 HTTP 请求：我们的工作是确保服务器得到正确配置，以在客户端请求时提供压缩的资源。
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>库</th>

@@ -144,7 +144,7 @@ Tüm video biçimleri tüm platformlarda desteklenmez. Büyük platformlarda des
 
 Hangi video biçimlerinin desteklendigini ögrenmek için `canPlayType()` islevini kullanin. Yöntem; bir `mime-type` ve istege bagli codec'lerden olusan bir dize bagimsiz degiskeni alir ve asagidaki degerlerin birini döndürür:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Dönüs degeri</th>
@@ -174,7 +174,7 @@ Hangi video biçimlerinin desteklendigini ögrenmek için `canPlayType()` islevi
 Burada bazi `canPlayType()` bagimsiz degisken örneklerini ve Chrome'da çalistirildiklarinda gelen dönüs degerlerini bulabilirsiniz:
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Tür</th>
@@ -427,7 +427,7 @@ Video ögesiyle ilgili özelliklere hizli, genel bir bakis.
 
 Video ögesi özelliklerinin ve tanimlarinin tam listesi için [video ögesi teknik özelliklerine](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element) bakin.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>Özellik</th>
       <th>Kullanilabilirlik</th>
@@ -484,7 +484,7 @@ Varsayilan olarak true degerine ayarlanir, ancak bir WebView uygulamasi bunu dev
 
 `preload` özelligi, tarayiciya ne kadar bilginin veya içerigin önceden yüklenmesi gerektigi konusunda bir ipucu saglar.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Deger</th>
@@ -516,7 +516,7 @@ Varsayilan olarak true degerine ayarlanir, ancak bir WebView uygulamasi bunu dev
 
 #### Özellikler
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Özellik</th>
     <th>Açiklama</th>
@@ -561,7 +561,7 @@ PlaybackRate (<a href="https://googlesamples.github.io/web-fundamentals/samples/
 
 #### Yöntemler
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Yöntem</th>
     <th>Açiklama</th>
@@ -593,7 +593,7 @@ dügmeyi tiklama gibi kullanici eylemlerine yanit olarak çagrilmadikça çalism
 
 Bunlar, etkinlesebilecek medya olaylarinin yalnizca bir alt kümesidir. Tam liste için Mozilla Developer Network'te [Medya olaylari](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) sayfasina bakin.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Olay</th>
     <th>Açiklama</th>

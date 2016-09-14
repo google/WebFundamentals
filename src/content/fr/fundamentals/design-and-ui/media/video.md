@@ -143,7 +143,7 @@ Certains formats vidéos ne sont pas compatibles avec toutes les plates-formes. 
 
 Utilisez l'attribut `canPlayType()` pour savoir quels formats vidéos sont compatibles. La méthode nécessite un argument de chaîne composé d'un `type MIME` et de codecs facultatifs. Elle renvoie ensuite l'une des valeurs suivantes :
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Valeur renvoyée</th>
@@ -173,7 +173,7 @@ Utilisez l'attribut `canPlayType()` pour savoir quels formats vidéos sont compa
 Voici quelques exemples d'arguments `canPlayType()` et de valeurs renvoyées lors de l'exécution dans Chrome :
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Type</th>
@@ -425,7 +425,7 @@ Brève présentation des propriétés de l'élément vidéo
 
 Pour obtenir la liste complète des attributs d'élément vidéo et de leurs définitions, consultez la page relative à la [norme de l'élément vidéo](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element).
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>Attribut</th>
       <th>Disponibilité</th>
@@ -482,7 +482,7 @@ Par défaut, ce comportement est défini sur la valeur `true`, mais il peut êtr
 
 L'attribut `preload` indique au navigateur la quantité d'informations ou de contenu à précharger.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>Valeur</th>
@@ -514,7 +514,7 @@ L'article relatif à la [vidéo du site HTML5 Rocks](//www.html5rocks.com/en/tut
 
 #### Propriétés
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Propriété</th>
     <th>Description</th>
@@ -559,7 +559,7 @@ Les propriétés "playbackRate" (<a href="https://googlesamples.github.io/web-fu
 
 #### Méthodes
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Méthode</th>
     <th>Description</th>
@@ -591,7 +591,7 @@ elles sont appelées en réponse à une action de l'internaute, un clic, par exe
 
 Les événements répertoriés ci-dessous ne représentent qu'une partie des événements multimédia qui peuvent être mis en œuvre. Consultez la page [Media events](//developer.mozilla.org/docs/Web/Guide/Events/Media_events) du site Mozilla Developer Network pour obtenir une liste complète.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>Événement</th>
     <th>Description</th>

@@ -206,7 +206,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 예를 들어, 화면이 위를 향한 상태로 평평한 테이블에 폰이 놓여
 있는 경우는 다음과 같습니다.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">상태</th>
@@ -246,7 +246,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 역으로, 화면이 지면에 수직이고 뷰어에서 바로 볼 수 있도록 폰이
 고정된 경우는 다음과 같습니다.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="State">상태</th>

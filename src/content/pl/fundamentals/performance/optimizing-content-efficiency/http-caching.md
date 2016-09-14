@@ -84,7 +84,7 @@ Ta dyrektywa określa maksymalny czas trwania zezwolenia na ponowne wykorzystani
 
 Postępując według powyższego schematu decyzji, ustal optymalną politykę buforowania dla konkretnego zasobu lub zestawu zasobów wymaganych przez Twoją aplikację. W idealnym przypadku powinno buforować się jak najwięcej odpowiedzi u klienta, przez najdłuższy możliwy okres czasu i udostępniać tokeny walidacji dla każdej odpowiedzi w celu zagwarantowania efektywnej ponownej walidacji.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Dyrektywy Cache-Control</th>

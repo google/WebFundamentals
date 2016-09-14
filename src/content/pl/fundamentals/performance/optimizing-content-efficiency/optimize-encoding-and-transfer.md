@@ -111,7 +111,7 @@ W skrócie: pierwszym krokiem do optymalizacji wydajności zasobów jest utworze
 Wszystkie nowoczesne przeglądarki obsługują i automatycznie negocjują kompresję GZIP dla wszystkich żądań HTTP: naszym zadaniem jest zapewnienie poprawnej konfiguracji serwera tak, by po otrzymaniu żądania klienta był przesyłany skompresowany zasób.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Biblioteka</th>

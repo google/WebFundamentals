@@ -111,7 +111,7 @@ Kisacasi, varliklarinizin verimliligini optimize ederken ilk adim olarak farkli 
 Tüm modern tarayicilar GZIP'i destekler ve tüm HTTP istekleri için GZIP sikistirmasini otomatik olarak görüsür: Bizim isimiz, sunucunun istemci tarafindan istendiginde sikistirilmis kaynak sunmak üzere dogru bir sekilde yapilandirildigindan emin olmaktir.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Kitaplik</th>

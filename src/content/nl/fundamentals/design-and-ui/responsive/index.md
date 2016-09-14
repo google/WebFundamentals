@@ -184,7 +184,7 @@ Met mediaquery`s kunt u een responsieve ervaring creëren, waarbij bepaalde stij
 Er zijn verschillende items waarvoor een query kan worden uitgevoerd, maar de meestgebruikte in webdesign zijn `min-width`, `max-width`, `min-height` en `max-height`
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="kenmerk">kenmerk</th>

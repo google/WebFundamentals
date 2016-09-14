@@ -38,7 +38,7 @@ En la sección anterior, vimos que la ruta de renderización importante exige qu
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>NYTimes con CSS</td>
 <td>NYTimes sin CSS (durante un instante se muestra contenido sin estilos)</td>

@@ -185,7 +185,7 @@ Les requêtes média permettent de créer du contenu adaptatif, des styles spéc
 Bien que plusieurs éléments différents puissent faire l'objet de requêtes, ceux qui sont utilisés le plus souvent dans le cadre de la conception de sites Web adaptatifs sont `min-width`, `max-width`, `min-height` et 'max-height`.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="attribut">attribut</th>

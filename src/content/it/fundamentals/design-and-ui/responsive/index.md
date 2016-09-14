@@ -183,7 +183,7 @@ Le media query offrono un'esperienza reattiva con l'applicazione di stili specif
 Anche se esistono diversi elementi a cui applicare le query, i più adatti all'ottimizzazione dei tempi di risposta della grafica web sono `min-width`, `max-width`, `min-height` e `max-height`.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="attribute">attributo</th>

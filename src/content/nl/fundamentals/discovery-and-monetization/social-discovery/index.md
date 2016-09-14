@@ -101,7 +101,7 @@ Wanneer dit in de <em>head</em> sectie van jouw pagina zit, wordt deze metadata 
 ### Gebruik `og:` namespaced `meta` tags om metadata te omschrijven
 Een `meta` tag bevat een `property` attribuut en een `content` attribuut.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Property">Waarde</th>

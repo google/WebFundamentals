@@ -38,7 +38,7 @@ W poprzedniej sekcji dowiedzieliśmy się, że tworzenie drzewa renderowania w k
 </div>
 
 {% comment %}
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <tr>
 <td>Gazeta NYTimes ze stylami CSS</td>
 <td>Gazeta NYTimes bez stylów CSS</td>

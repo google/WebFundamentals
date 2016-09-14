@@ -84,7 +84,7 @@ Cette directive indique la durée maximale en secondes pendant laquelle la répo
 
 Suivez l'arborescence de décision ci-dessus pour déterminer les règles de mise en cache optimales pour une ressource particulière ou un ensemble de ressources utilisés par votre application. Idéalement, vous devez essayer de mettre en cache autant de réponses que possible sur le client, le plus longtemps possible, et de fournir des jetons de validation pour chaque réponse, afin de permettre une revalidation efficace.
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th width="30%">Directives Cache-Control</th>

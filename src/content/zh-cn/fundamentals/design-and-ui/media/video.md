@@ -149,7 +149,7 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 
 使用 canPlayType() 找出支持的视频格式。该方法采用与 mime-type 一致的字符串参数和可选编解码器，会返回以下某个值：
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>返回值</th>
@@ -179,7 +179,7 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 以下是一些 canPlayType() 参数示例和在 Chrome 中运行时的返回值：
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>类型</th>
@@ -432,7 +432,7 @@ Note: Android 版 Chrome、iOS Safari 以及当前的所有桌面版浏览器（
 
 要查看视频元素属性的完整列表及其定义，请参阅[视频元素规范](//www.w3.org/TR/html5/embedded-content-0.html#the-video-element)。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
       <th>属性</th>
       <th>适用范围</th>
@@ -489,7 +489,7 @@ Note: Android 版 Chrome、iOS Safari 以及当前的所有桌面版浏览器（
 
 preload 属性会指示浏览器应预加载的信息或内容量。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <tr>
       <th>值</th>
@@ -521,7 +521,7 @@ preload 属性在不同平台中的效果不同。
 
 #### 属性
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>属性</th>
       <th>说明</th>
@@ -566,7 +566,7 @@ preload 属性在不同平台中的效果不同。
 
 #### 方法
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>方法</th>
     <th>说明</th>
@@ -598,7 +598,7 @@ preload 属性在不同平台中的效果不同。
 
 以下只是部分可能会触发的媒体事件。请参阅 Mozilla 开发者网络上的[媒体事件](//developer.mozilla.org/docs/Web/Guide/Events/Media_events)页面，查看完整列表。
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
   <thead>
     <th>事件</th>
       <th>说明</th>

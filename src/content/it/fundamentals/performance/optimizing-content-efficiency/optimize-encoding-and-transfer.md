@@ -111,7 +111,7 @@ In breve, come primo passo nell'ottimizzazione dell'efficienza delle nostre riso
 Tutti gli attuali browser supportano ed eseguono automaticamente la compressione GZIP per ogni richiesta HTTP: il nostro lavoro consiste nel garantire che il server sia configurato correttamente per fornire la risorsa compressa quando viene richiesta dal client.
 
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th>Libreria</th>
