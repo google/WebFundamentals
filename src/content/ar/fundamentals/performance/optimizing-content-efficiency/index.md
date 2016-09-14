@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: لا يزال حجم البيانات التي يتم تنزيلها بواسطة كل تطبيق في تزايد. وللحصول على أداء رائع، يلزمنا تحسين عرض كل بايت على حدة.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -19,7 +18,7 @@ description: لا يزال حجم البيانات التي يتم تنزيله�
 
 <img src="images/http-archive-trends.png" class="center" alt="مؤشرات أرشيف HTTP">
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
 <thead>
   <tr>
     <th></th>

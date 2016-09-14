@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: يتطلب التعرف على نقاط التكدس في أداء مسار العرض الحرج وحلها معرفة جيدة بالمخاطر الشائعة. يمكننا الآن تنفيذ جولة عملية واستخلاص أنماط الأداء الشائعة التي تساعدك في تحسين صفحاتك.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -27,7 +26,7 @@ description: يتطلب التعرف على نقاط التكدس في أداء 
 ## تجربة Hello World
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 سنبدأ بترميز HTML الأساسي وصورة واحدة - بدون استخدام CSS أو جافا سكريبت - حتى يكون الأمر أكثر بساطة. والآن يمكننا فتح مخطط زمني للشبكة في Chrome DevTools وفحص تدفق الموارد الناتجة:
@@ -48,7 +47,7 @@ description: يتطلب التعرف على نقاط التكدس في أداء 
 قد تبدو صفحة `تجربة Hello World` بسيطة على السطح، ولكن هناك الكثير من التفاصيل التي تؤدي إلى ظهور النتيجة في النهاية. ولذلك سنحتاج عمليًا إلى أكثر من مجرد HTML: ربما نحتاج إلى ورقة أنماط CSS ونص برمجي واحد أو أكثر لإضافة بعض التفاعل على الصفحة. والآن يمكننا إضافتهما إلى المزيج لنرى ما سيحدث:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _قبل إضافة جافا سكريبت و CSS:_
@@ -81,7 +80,7 @@ _جافا سكريبت مضمنة:_
 أولاً، تذكر أن جميع النصوص البرمجية المضمَّنة تؤدي إلى حظر المحلل، ولكن بالنسبة إلى النصوص البرمجية الخارجية، يمكننا إضافة الكلمة الرئيسية `async` لإلغاء حظر المحلل. سنتراجع الآن عن التضمين ونجرب ذلك:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _جافا سكريبت (الخارجي) لحظر المحلل:_
@@ -97,7 +96,7 @@ _جافا سكريبت (الخارجي) غير المتزامن:_
 بدلاً من ذلك، فقد تمكنا من تجربة طريقة أخرى وضمَّنا كلاً من CSS وجافا سكريبت:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM وتضمين CSS وتضمين جافا سكريبت" class="center">
@@ -114,7 +113,7 @@ _جافا سكريبت (الخارجي) غير المتزامن:_
 تتكون أبسط صفحة من ترميز HTML: بدون CSS أو جافا سكريبت أو أي نوع آخر من الموارد. ولعرض هذه الصفحة، يتعين على المتصفح بدء الطلب، وانتظار وصول مستند HTML، وتحليله، وتصميم DOM، وفي النهاية عرضه على الشاشة:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Hello world CRP" class="center">
@@ -124,7 +123,7 @@ _جافا سكريبت (الخارجي) غير المتزامن:_
 والآن، يمكننا التفكير في الصفحة نفسها ولكن بملف CSS خارجي:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
@@ -151,7 +150,7 @@ _جافا سكريبت (الخارجي) غير المتزامن:_
 والآن يمكننا إضافة ملف جافا سكريبت إضافي في المزيج.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 لقد أضفنا app.js، الذي يعد أصلاً خارجيًا من أصول جافا سكريبت على الصفحة، وكما نعرف من الآن، فهو مورد يحظر المحلل (أي حرج). والأسوأ من ذلك، حتى يمكننا تنفيذ ملف جافا سكريبت، يجب أيضًا أن نحظر CSSOM وننتظره - تذكر أنه يمكن لجافا سكريبت الاستعلام عن CSSOM ومن ثم سيتوقف المتصفح مؤقتًا حتى يتم تنزيل `style.css` ويتم إنشاء CSSOM.
@@ -169,7 +168,7 @@ _جافا سكريبت (الخارجي) غير المتزامن:_
 بعد طرح الأمر على أحد مطوِّري الموقع اكتشفنا أن جافا سكريبت الذي ضمَّناه في الصفحة لا يحتاج إلى الحظر: ذلك أن لدينا بعض الإحصاءات وشفرة أخرى لا تحتاج إلى حظر عرض الصفحة. وبمعرفة ذلك، أصبح بإمكاننا إضافة السمة `async` إلى علامة النص البرمجي لإلغاء حظر المحلل:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="DOM وCSSOM وasync JavaScript CRP" class="center">
@@ -185,7 +184,7 @@ _جافا سكريبت (الخارجي) غير المتزامن:_
 وفي الختام، هل يمكن القول بأن ورقة أنماط CSS لم تكن لازمة إلا للطباعة فقط؟ كيف كان سيبدو ذلك؟
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" class="center">

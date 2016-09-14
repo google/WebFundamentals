@@ -2,14 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: تحسين مسار العرض الحرج من خلال وضع عرض المحتوى المتعلق بالإجراء الأساسي الذي يريد المستخدم وضعه على الصفحة في الأولوية.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
 # مسار العرض الحرج {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
 
 يعد تحسين مسار العرض الحرج أمرًا ضروريًا لتحسين أداء الصفحات: والهدف هو وضع عرض المحتوى المتعلق بالإجراء الأساسي الذي يريد المستخدم وضعه على الصفحة في الأولوية.
 
@@ -23,7 +21,6 @@ description: تحسين مسار العرض الحرج من خلال وضع عر
 
 
 ## Website Performance Optimization
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="images/crp-udacity.png">

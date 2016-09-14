@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: المورد الأسرع والأفضل هو المورد الذي لم يتم إرساله. هل سبقت لك مراجعة مواردك مؤخرًا؟ يجب إجراء ذلك من آن لآخر لضمان تمكن كل مورد من ترك أفضل انطباع لدى المستخدم.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

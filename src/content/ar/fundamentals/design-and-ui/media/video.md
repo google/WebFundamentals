@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: تعرف على أسهل طرق إضافة الفيديو إلى موقعك وتأكد من ترك أفضل انطباع لدى المستخدمين على أي جهاز.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -58,7 +58,7 @@ description: تعرف على أسهل طرق إضافة الفيديو إلى م
 على سبيل المثال:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 عندما يحلل المتصفح علامات `<source>`، فإنه يستخدم السمة الاختيارية `type` للمساعدة في تحديد الملف المطلوب تنزيله وتشغيله. إذا كان المتصفح يتوافق مع WebM، فسيتم تشغيل chrome.webm، وإلا، فسيتم التحقق مما إذا كان يمكن تشغيل مقاطع فيديو MPEG-4.
@@ -101,7 +101,7 @@ Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع �
 
 باستخدام أدوات مطوِّري برامج المتصفح، راجع `Accept-Ranges: bytes` في رؤوس الاستجابة:
 
-<img class="center" alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome Dev Tools screenshot: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### تضمين صورة ملصق
 
@@ -117,8 +117,8 @@ Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع �
 
 وفي ما يلي مقارنة لمقطعي فيديو جنبًا إلى جنب أحدهما بدون صورة ملصق والآخر مزود بصورة ملصق، وقد وضعنا صورة الملصق على تدرج رمادي للإشارة إلى أنه لا يمثل الفيديو:
 
-<img class="center" alt="Android Chrome screenshot, portrait: no poster" src="images/Chrome-Android-video-no-poster.png" class="attempt-left">
-<img class="center" alt="Android Chrome screenshot, portrait: with poster" src="images/Chrome-Android-video-poster.png" class="attempt-right">
+<img class="center" alt="Android Chrome screenshot, portrait: no poster" src="img/Chrome-Android-video-no-poster.png" class="attempt-left">
+<img class="center" alt="Android Chrome screenshot, portrait: with poster" src="img/Chrome-Android-video-poster.png" class="attempt-right">
 <div class="clearfix"></div>
 
 
@@ -244,8 +244,8 @@ Note: - تتوافق واجهة برمجة تطبيقات Media Fragments مع �
 عندما تكون عناصر الفيديو كبيرة جدًا مقارنة بإطار العرض، فقد يتم تجاوز حدود الحاوية، مما يجعل من المستحيل على المستخدم مشاهدة المحتوى أو استخدام
 عناصر التحكم.
 
-<img class="attempt-left" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="images/Chrome-Android-portrait-video-unstyled.png">
-<img class="attempt-right" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="images/Chrome-Android-landscape-video-unstyled.png">
+<img class="attempt-left" alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="img/Chrome-Android-landscape-video-unstyled.png">
 <div style="clear:both;"></div>
 
 يمكنك التحكم في أبعاد الفيديو باستخدام جافا سكريبت أو CSS. تتيح مكتبات جافا سكريبت والمكوِّنات الإضافية أيضًا مثل [FitVids](//fitvidsjs.com/) إمكانية الحفاظ على الحجم ونسبة العرض إلى الارتفاع المناسبة، حتى بالنسبة إلى مقاطع فيديو Flash من YouTube والصادر الأخرى.
@@ -261,13 +261,13 @@ Note: لا تفرض حجمًا للعنصر قد يؤدي إلى نسبة عرض
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling" adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
 قارن <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">النموذج سريع الاستجابة</a> بـ <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">النسخة بطيئة الاستجابة</a>.
@@ -290,15 +290,15 @@ Note: لا تفرض حجمًا للعنصر قد يؤدي إلى نسبة عرض
 
 يؤدي متصفح Safari على iPhone مهمة رائعة من خلال التبديل بين الاتجاه العمودي والأفقي:
 
-<img class="attempt-left" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه العمودي" src="images/iPhone-video-playing-portrait.png">
-<img class="attempt-right" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه الأفقي" src="images/iPhone-video-playing-landscape.png">
+<img class="attempt-left" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه العمودي" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPhone في الاتجاه الأفقي" src="img/iPhone-video-playing-landscape.png">
 <div style="clear:both;"></div>
 
 قد يتسبب اتجاه الجهاز على جهاز iPad وعلى Chrome لجهاز Android في حدوث مشكلات.
 على سبيل المثال، بدون أي تخصيص، قد يظهر الفيديو الذي يتم تشغيله على جهاز iPad في الاتجاه الأفقي على النحو التالي:
 
 <img class="center" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPad Retina في الاتجاه الأفقي"
-src="images/iPad-Retina-landscape-video-playing.png">
+src="img/iPad-Retina-landscape-video-playing.png">
 
 يمكن أن يؤدي إعداد الفيديو `width: 100%` أو `max-width: 100%` مع CSS إلى حل العديد من مشكلات تنسيق اتجاه الجهاز. قد تحتاج أيضًا إلى التفكير في بدائل ملء الشاشة.
 
@@ -306,15 +306,15 @@ src="images/iPad-Retina-landscape-video-playing.png">
 
 تعرض أنظمة التشغيل المختلفة مقطع الفيديو على نحو مختلف. يعرض متصفح Safari على iPhone عنصر الفيديو مضمَّنًا على صفحة الويب، ولكن يشغِّل الفيديو في وضع ملء الشاشة:
 
-<img class="center" alt="لقطة شاشة لعنصر الفيديو على iPhone في الاتجاه العمودي" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="لقطة شاشة لعنصر الفيديو على iPhone في الاتجاه العمودي" src="img/iPhone-video-with-poster.png">
 
 على Android، يمكن للمستخدمين طلب وضع ملء الشاشة من خلال النقر على رمز ملء الشاشة. ولكن الإعداد الافتراضي هو تشغيل الفيديو مضمَّنًا:
 
-<img class="center" alt="لقطة شاشة لمقطع فيديو يعمل على متصفح Chrome لجهاز Android في الاتجاه العمودي" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="لقطة شاشة لمقطع فيديو يعمل على متصفح Chrome لجهاز Android في الاتجاه العمودي" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 يشغِّل متصفح Safari على iPad الفيديو مضمَّنًا:
 
-<img class="center" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPad Retina في الاتجاه الأفقي" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="لقطة شاشة لفيديو يعمل على متصفح Safari لجهاز iPad Retina في الاتجاه الأفقي" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### التحكم في ملء الشاشة بالمحتوى
 
@@ -371,14 +371,14 @@ Note: يتوافق عنصر المسار الصوتي على Chrome لنظام A
 
 باستخدام عنصر المسار الصوتي، تظهر التسميات التوضيحية على النحو التالي:
 
-<img class="center" alt="لقطة شاشة تعرض تسميات توضيحية تظهر باستخدام عنصر المسار الصوتي في Chrome على Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
+<img class="center" alt="لقطة شاشة تعرض تسميات توضيحية تظهر باستخدام عنصر المسار الصوتي في Chrome على Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### إضافة عنصر مسار صوتي
 
 من السهل جدًا إضافة تسميات توضيحية إلى الفيديو؛ وذلك من خلال إضافة عنصر مسار صوتي كفرع لعنصر الفيديو:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
 
 توفر سمة عنصر المسار الصوتي `src` موقع ملف المسار الصوتي.

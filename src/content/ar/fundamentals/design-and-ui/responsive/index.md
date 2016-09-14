@@ -2,9 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: لم تتم تهيئة معظم محتوى الويب للعمل على هذه التجارب متعددة الأجهزة. إلا أنه يمكنك التعرف على أساسيات تصميم موقع ويب يمكنه العمل على أجهزة الجوّال وسطح المكتب وأي جهاز آخر يتضمن شاشة.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-04-29 #}
 
 # أساسيات تصميم شبكة ويب سريعة الاستجابة {: .page-title }
 
@@ -185,7 +184,7 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * عندما تكون قيمة عرض المتصفح بين <b>0 بكسل</b> و <b>640 بكسل</b>، سيتم تطبيق `max-640px.css`.
@@ -261,7 +260,7 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 لإدراج نقطة فصل عند القيمة 600 بكسل، أنشئ ورقتي أنماط جديدتين، واحدة للاستخدام عندما تكون قيمة المتصفح 600 بكسل، والأخرى عندما تكون أوسع من ذلك.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 في النهاية، أعد بناء التعليمة البرمجية لشفرة CSS.  في هذا المثال، وضعنا الأنماط الشائعة مثل الخطوط والرموز والوضعية الأساسية والألوان في `weather.css`.  بعد ذلك سيتم وضع تنسيقات محددة للشاشة الصغيرة في `weather-small.css` وأنماط الشاشة الكبيرة في `weather-large.css`.
@@ -277,7 +276,7 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 لنبدأ بتحسين تنسيق الشاشة الصغيرة.  في هذه الحالة، سنحسن الخط عندما يكون عرض إطار العرض أكبر من 360 بكسل.  ثانيًا، عندما تكون هناك مساحة كافية، يمكننا الفصل بين درجة الحرارة العالية والمنخفضة حتى تكونا في سطر واحد، بدلاً من وضعهما فوق بعضهما.  ودعونا كذلك نكبِّر رموز الطقس أيضًا.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm" adjust_indentation="auto" %}
 </pre>
 
 
@@ -289,7 +288,7 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 بالمثل، وبالنسبة إلى الشاشات الكبيرة، من الأفضل تقييد الحد الأقصى لعرض لوحة النشرة حتى لا تستهلك عرض الشاشة بالكامل.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg" adjust_indentation="auto" %}
 </pre>
 
 ### تحسين النص للقراءة
@@ -304,7 +303,7 @@ Note: استخدم فاصلة لفصل السمات لضمان تمكن المت
 لنلق نظرة متعمقة الآن على نموذج مشاركة المدونة الواردة أعلاه.  على الشاشات الصغيرة، يظهر الخط Roboto بقياس 1em على نحو رائع بالنسبة إلى طريقة وضع 10 كلمات في كل سطر، إلا أن الشاشات الأكبر ستتطلب وجود نقطة فصل. وفي هذه الحالة، إذا كان عرض المتصفح أكبر من 575 بكسل، فسيكون العرض المثالي للمحتوى 550 بكسل.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
 </pre>
 
 ### احذر إخفاء المحتوى تمامًا

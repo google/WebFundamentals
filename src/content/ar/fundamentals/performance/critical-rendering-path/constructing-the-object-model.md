@@ -2,14 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: حتى يتمكن المتصفح من عرض المحتوى على الشاشة يلزم إنشاء شجرتي DOM وCSSOM. ونتيجة لذلك، يلزم التأكد من توفير كل من HTML وCSS للمتصفح في أقرب وقت ممكن.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
 # إنشاء نموذج الهدف {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
 
 حتى يتمكن المتصفح من عرض الصفحة يلزم إنشاء شجرتي DOM وCSSOM. ونتيجة لذلك، يلزم التأكد من توفير كل من HTML وCSS للمتصفح في أقرب وقت ممكن.
 
@@ -24,10 +22,8 @@ description: حتى يتمكن المتصفح من عرض المحتوى على 
 
 ## نموذج هدف المستند (DOM)
 
-{% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
-
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 دعونا نبدأ بأبسط حالة ممكنة: صفحة HTML بسيطة تتضمن نصوصًا وصورة واحدة. ما الذي يحتاج إليه المتصفح لمعالجة هذه الصفحة البسيطة؟
@@ -47,7 +43,6 @@ description: حتى يتمكن المتصفح من عرض المحتوى على 
 
 <img src="images/dom-timeline.png" class="center" alt="تتبع إنشاء DOM في DevTools">
 
-<!-- TODO: Verify note type! -->
 Note: سنفترض أن لديك معرفة أساسية بـ Chrome DevTools - أي أنك تعرف كيفية تحديد تدفق الشبكة أو تسجيل المخطط الزمني. وإذا كنت تريد الحصول على تذكير سريع، فيمكنك الاطلاع على <a href="https://developer.chrome.com/devtools">مستندات Chrome DevTools</a>، وإذا كنت مستجدًا على DevTools، فنوصيك بالحصول على دورة Codeschool <a href="http://discover-devtools.codeschool.com/">Discover DevTools</a>.
 
 إذا فتحت Chrome DevTools وسجلت مخططًا زمنيًا أثناء تحميل الصفحة، فيمكنك الاطلاع على الوقت الفعلي المستخدم في تنفيذ هذه الخطوة &mdash; وقد احتجنا في المثال أعلاه إلى 5 ملي ثانية تقريبًا لتحويل عدد من وحدات بايت في HTML إلى شجرة DOM. وإذا كانت الصفحة أكبر، كما هو الحال في معظم الصفحات، فقد تستغرق هذه العملية وقتًا أطول بشكل ملحوظ. ومن خلال الأقسام اللاحقة التي تتناول إنشاء رسوم متحركة بسيطة أن هذا قد يصبح بسهولة عقبة إذا كان يتعين على المتصفح معالجة قدر كبير من HTML.
@@ -59,7 +54,7 @@ Note: سنفترض أن لديك معرفة أساسية بـ Chrome DevTools - 
 على الرغم من أن المتصفح كان ينشئ DOM للصفحة البسيطة، فقد واجه علامة رابط في القسم الأساسي للمستند يشير إلى ورقة أنماط CSS خارجية: style.css. ومن خلال توقع أن هذا المورد سيحتاج إلى عرض الصفحة، فقد أرسل في الحال طلبًا إلى هذا المورد، جاءت نتيجته بالمحتوى التالي:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 بالطبع كان يمكننا الإعلان عن الأنماط مباشرة داخل ترميز HTML (المضمَّن)، ولكن يتيح لنا الفصل بين CSS وHTML معاملة المحتوى والتصميم على نحو منفصل: يمكن للمصممين العمل على CSS، كما يمكن للمطوِّرين التركيز على HTML وهكذا.

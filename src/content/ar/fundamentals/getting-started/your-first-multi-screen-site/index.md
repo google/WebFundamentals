@@ -2,15 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: أصبح بإمكان عدد هائل من الأجهزة الوصول إلى شبكة الإنترنت بدءًا من الهواتف ذات الشاشة الصغيرة وانتهاءً بأجهزة التلفزيون ذات الشاشة الكبيرة. ويمكنك التعرف على كيفية تصميم موقع ويب يعمل جيدًا على جميع هذه الأجهزة.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
 # أول موقع ويب تنشئه لأجهزة متعددة {: .page-title }
 
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
+
 {% include "web/_shared/contributors/paulkinlan.html" %}
-
-
 
 لا يمثل تصميم تجارب تتوافق مع عدة أجهزة صعوبة كبيرة كما قد يبدو ذلك للوهلة الأولى. وباتباع الإرشادات الواردة في هذا الدليل سنحاول تصميم نموذج لصفحة مقصودة لمنتج ما ألا وهو <a href='https://www.udacity.com/course/cs256'>دورة `CS256: تصميم الويب للجوّال`</a> بحيث تعمل هذه الصفحة على مختلف أنواع الأجهزة.
 
@@ -51,22 +50,21 @@ description: أصبح بإمكان عدد هائل من الأجهزة الوص�
 
 كما توصلنا إلى بنية معلوماتية تقريبية وتنسيق لإطارات العرض الواسعة والضيقة على حد سواء.
 
-<div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="البنية المعلوماتية لإطار العرض الضيق">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="البنية المعلوماتية لإطار العرض الواسع">
-</div>
+<img class="attempt-left" src="images/narrowviewport.png" alt="البنية المعلوماتية لإطار العرض الضيق">
+<img  class="attempt-right" src="images/wideviewport.png" alt="البنية المعلوماتية لإطار العرض الواسع">
+
+<div class="clearfix"></div>
 
 يمكن تحويل ذلك بسهولة إلى أقسام تقريبية لصفحة الهيكل التي سنستخدمها في الجزء المتبقي من المشروع.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### إضافة محتوى إلى الصفحة
 
 اكتمل الهيكل الأساسي للموقع. ونحن نعرف الأقسام التي نحتاج إليها والمحتوى المطلوب عرضه في هذه الأقسام والمكان الذي يمكن وضعه فيه ضمن البنية العامة للمعلومات. والآن يمكننا بدء تصميم موقع الويب.
 
-<!-- TODO: Verify note type! -->
 Note: سيأتي التصميم في وقت لاحق
 
 #### إنشاء العنوان والنموذج
@@ -76,7 +74,7 @@ Note: سيأتي التصميم في وقت لاحق
 في العنوان، يمكنك إضافة نموذج نص يصف الدورة:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 كما نحتاج إلى ملء النموذج.
@@ -87,10 +85,8 @@ Note: سيأتي التصميم في وقت لاحق
 سنضيف أنواعًا دلالية لنسهل على المستخدمين الوصول إلى المحتوى على أجهزة الجوّال بسرعة.  على سبيل المثال، عند إدخال رقم هاتف، يجب ألا يظهر للمستخدم سوى لوحة اتصال فقط.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
 
 #### إنشاء قسم الفيديو والمعلومات
 
@@ -98,7 +94,7 @@ Note: سيأتي التصميم في وقت لاحق
 سيتضمن قائمة نقطية بميزات المنتجات، كما يتضمن علامة موضعية للفيديو تعرض المنتج أثناء عمله للمستخدم.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 يتم كثيرًا الاستعانة بمقاطع الفيديو لوصف المحتوى بطريقة أكثر تفاعلاً، كما يتم استخدامها كثيرًا لتقديم عرض توضيحي للمنتج أو الفكرة.
@@ -111,29 +107,26 @@ Note: سيأتي التصميم في وقت لاحق
 *  إضافة نص تراجع يسمح للمستخدمين بتنزيل الفيديو إذا لم يكن بإمكانهم تشغيله في النافذة.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
 
 #### إنشاء قسم الصور
 
 قد تبدو المواقع التي لا تتضمن صورًا مملة بعض الشيء. وهناك نوعان من الصور:
 
 *  صور المحتوى &mdash; هي صور تتناسب مع المستند ويتم استخدامها في توفير مزيد من المعلومات حول المحتوى.
-*  الصور الأسلوبية &mdash; هي صور يتم استخدامها لإضفاء طابع أفضل على الصور، وغالبًا ما تكون صور خلفية وأنماطًا وتدرجات.  سنتناول ذلك في [المقالة التالية]({{page.nextPage.relative_url}}).
+*  الصور الأسلوبية &mdash; هي صور يتم استخدامها لإضفاء طابع أفضل على الصور، وغالبًا ما تكون صور خلفية وأنماطًا وتدرجات.  سنتناول ذلك في [المقالة التالية](#).
 
 يتضمن قسم الصور في صفحتنا مجموعة من صور المحتوى.
 
 وتكمن أهمية صور المحتوى في إمكانية استخدامها لتوضيح المقصود من الصفحة. ويمكنك النظر إلى هذه الصور باعتبارها مقالات صحفية. وتعد الصور التي نستخدمها صور دروس المدرسين المشاركين في المشروع: كريس ويلسون وبيتر لوبيرز وسيان بينيت.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
 </pre>
 
 وقد تم تعيين الصور بحيث تظهر بعرض 100% من الشاشة. ويتناسب هذا مع الأجهزة ذات إطار العرض الضيق، بينما يكون أقل جودة مع إطار العرض الواسع (مثل جهاز سطح المكتب).  وسنتناول ذلك في قسم التصميم سريع الاستجابة.
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
 
 لا تتوفر لدى العديد من المستخدمين إمكانية الاطلاع على الصور وغالبًا ما يستخدمون تكنولوجيا مساعدة مثل قارئ الشاشة لتحليل البيانات التي تظهر على الصفحة وينقلون ذلك إلى المستخدم شفهيًا.  ولذلك يجب التأكد من أن جميع صور المحتوى تتضمن علامة `alt` الوصفية التي يمكن لقارئ الشاشة قراءتها للمستخدم.
 
@@ -146,7 +139,7 @@ Note: سيأتي التصميم في وقت لاحق
 ويجب عدم استخدام الجداول إلا مع البيانات المجدولة، مثل قوالب المعلومات.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### إضافة تذييل صفحة
@@ -156,21 +149,21 @@ Note: سيأتي التصميم في وقت لاحق
 وفي موقعنا على الويب، سنكتفي بوضع رابط إلى البنود والشروط وصفحة الاتصال وملفاتنا الشخصية على الشبكات الاجتماعية.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### ملخص
 
 لقد أنشأنا مخططًا لموقع الويب وحددنا جميع العناصر الرئيسية لهيكل الموقع.  كما تأكدنا من أن جميع المحتوى وثيق الصلة قد أصبح جاهزًا لتلبية احتياجات نشاطنا التجاري.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="محتوى">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+<img class="attempt-left" src="images/content.png" alt="محتوى">
+<img  class="attempt-right" src="images/narrowsite.png" alt="">
+
 
 ستلاحظ أن الصفحة لا تبدو مطمئنة في الوقت الحالي؛ ولكن هناك غرض من ذلك.
 يعد المحتوى أهم عنصر من عناصر موقع الويب، ويجب أن نتأكد من أن بنية المعلومات المقدمة والكثافة تتميز بالثبات. حصلنا من خلال هذا الدليل على أساس ممتاز يمكن الاعتماد عليه. وسنهتم في الدليل التالي بوضع تنسيق المحتوى.
 
+<div class="clearfix"></div>
 
 ## تصميم موقع ويب سريع الاستجابة 
 
@@ -180,19 +173,19 @@ Note: سيأتي التصميم في وقت لاحق
 أصبح بإمكان عدد هائل من الأجهزة الوصول إلى شبكة الإنترنت بدءًا من الهواتف ذات الشاشة الصغيرة وانتهاءً بأجهزة التلفزيون ذات الشاشة الكبيرة. ويتضمن كل جهاز ميزاته وعيوبه الخاصة. وبصفتك أحد مطوِّري الويب، يجب أن تهتم بتصميم موقع يتوافق مع جميع أشكال الأجهزة.
 
 
-نحن بصدد تصميم موقع ويب يمكن استعراضه على أحجام شاشات مختلفة وأنواع أجهزة متنوعة. وفي  [المقالة السابقة]({{page.previousPage.relative_url}})، تمكنا من إعداد البنية المعلوماتية للصفحة وأنشأنا هيكلاً أساسيًا.
+نحن بصدد تصميم موقع ويب يمكن استعراضه على أحجام شاشات مختلفة وأنواع أجهزة متنوعة. وفي  [المقالة السابقة](#)، تمكنا من إعداد البنية المعلوماتية للصفحة وأنشأنا هيكلاً أساسيًا.
 وفي هذا الدليل سنتناول الهيكل الأساسي مع المحتوى ونحوله إلى صفحة رائعة تكون سريعة  الاستجابة على عدد كبير من أحجام الشاشات.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="المحتوى">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> المحتوى والهيكل </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> موقع الويب النهائي </a> </figcaption>
-  </figure>
-</div>
+
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="المحتوى">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> المحتوى والهيكل </a> </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> موقع الويب النهائي </a> </figcaption>
+</figure>
+
 
 وفقًا لمبادئ `تصميم ويب الجوّال لأول مرة`، سنبدأ باستخدام إطار العرض الضيق &mdash; كما هو الحال في الهاتف الجوّال &mdash; والتصميم لهذه التجربة أولاً.
 بعد ذلك سنضبط الحجم بحيث يتناسب مع فئات الأجهزة الأكبر.
@@ -200,6 +193,9 @@ Note: سيأتي التصميم في وقت لاحق
 
 سبق أن أنشأنا مجموعة مختلفة من تصميمات المستوى العالي لطريقة ظهور المحتوى. والآن يلزمنا ضبط الصفحة بحيث تتناسب مع هذه التنسيقات المختلفة.
 وسنتمكن من تنفيذ ذلك من خلال اتخاذ قرار بشأن مكان نقاط الفصل &mdash; نقاط تغير التنسيق والأنماط &mdash; بناءً على مدى تناسب المحتوى مع حجم الشاشة.
+
+<div class="clearfix"></div>
+
 
 ### TL;DR {: .hide-from-toc }
 - استخدم إطار عرض دائمًا.
@@ -217,12 +213,11 @@ Note: سيأتي التصميم في وقت لاحق
 يشير إطار العرض إلى المتصفح الذي تحتاج إليه الصفحة ليتم ضبط حجمها بحيث تتناسب مع الشاشة.  وهناك العديد من التهيئات المختلفة التي يمكنك استخدامها في إطار العرض لضبط طريقة ظهور الصفحة.  إلا أننا نوصي باستخدام الإعدادات الافتراضية التالية:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 يظهر إطار العرض في رأس المستند ولن نحتاج إلى الإعلان عنه سوى مرة واحدة فقط.
 
-{% include shared/related_guides.liquid inline=true list=page.related-guides.responsive %}
 
 ### تطبيق التصميم البسيط
 
@@ -245,15 +240,16 @@ Note: سيأتي التصميم في وقت لاحق
 
 #### إضافة الصور الأسلوبية
 
+<img  src="images/narrowsite.png" alt="موقع الويب المصمم" class="attempt-right">
+
 أضفنا في الدليل السابق صورًا تُعرف باسم `صور المحتوى`.  وتتمثل أهمية هذه الصور في سردها لقصة المنتج.  ولا تكمن أهمية الصور الأسلوبية في أنها تمثل جزءًا من المحتوى الأساسي بل لأنها توفر عنصرًا مرئيًا أو دليلاً لتوجيه انتباه المستخدم إلى محتوى بعينه.
 
 وهناك مثال معبر عن ذلك وهو صورة العنوان لمحتوى `الجزء المرئي من الصفحة`. هذا المحتوى يُستخدم غالبًا لإثارة المستخدم وتشجيعه على الاطلاع على مزيد من المعلومات حول المنتج.
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="موقع الويب المصمم">
-</div>
 
 يمكن تضمينه ببساطة شديدة. وفي حالتنا هذه، سنستخدمه خلفية للعنوان ونضعه من خلال محتوى CSS بسيط.
+
+<div class="clearfix"></div>
 
 
     #headline {
@@ -267,7 +263,6 @@ Note: سيأتي التصميم في وقت لاحق
 
 لقد اخترنا صورة خلفية بسيطة تم تعتيمها حتى لا تؤثر في المحتوى وتم تعيينها بحيث `تغطي` العنصر تمامًا؛ وبذلك سيتم تمديدها دائمًا مع الحفاظ على نسبة العرض إلى الارتفاع المناسبة.
 
-<br style="clear: both;">
 
 ### تحديد نقطة الأولى
 
@@ -281,7 +276,7 @@ Note: سيأتي التصميم في وقت لاحق
   </p>
 </video>
 
-يبدو أن القيمة 600 بكسل جيدة لإنشاء أول نقطة فصل لأنها ستمنحنا هدفًا لعناصر تغيير الموضع للوصول إلى وضع يتناسب مع الشاشة بشكل أفضل.  ويمكننا تنفيذ ذلك باستخدام تقنية تُعرف باسم [طلبات بحث الوسائط]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+يبدو أن القيمة 600 بكسل جيدة لإنشاء أول نقطة فصل لأنها ستمنحنا هدفًا لعناصر تغيير الموضع للوصول إلى وضع يتناسب مع الشاشة بشكل أفضل.  ويمكننا تنفيذ ذلك باستخدام تقنية تُعرف باسم [طلبات بحث الوسائط](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {
@@ -291,7 +286,6 @@ Note: سيأتي التصميم في وقت لاحق
 
 توجد مساحة أكبر على الشاشة الكبيرة ولذلك فإنها توفر مرونة في كيفية ظهور المحتوى.
 
-<!-- TODO: Verify note type! -->
 Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، ويمكنك إجراء تعديلات صغيرة عند اللزوم.
 
 في سياق صفحة المنتج، سيبدو أننا سنحتاج إلى ما يلي:
@@ -301,8 +295,6 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 *  نقل النموذج لتعويمه بحيث يحاذي محتوى العنوان.
 *  تعويم الفيديو حول المحتوى.
 *  تقليل حجم الصور وإظهارها في شبكة لطيفة.
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.first-break-point %}
 
 ### تقييد الحد الأقصى لعرض التصميم
 
@@ -315,14 +307,16 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 
 وستكون الحاوية عنصر `div` بسيطًا في النموذج التالي:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+
+    <div class="container">
+    </div>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" adjust_indentation="auto" %}
 </pre>
 
 ### تغيير المساحة المتروكة وتقليل حجم النص
@@ -334,7 +328,7 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 في صفحة المنتج، سنزيد المساحة المتروكة لعناصر القسم من خلال تعيينها لتبقى عند القيمة 5% من العرض.  كما سنزيد حجم رؤوس الصفحة لكل قسم من الأقسام.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
 ### ضبط العناصر على إطار العرض الواسع
@@ -355,11 +349,11 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 وللوصول إلى طريقة استخدام أكثر كفاءة لمساحة الشاشة الأفقية، يلزمنا تقسيم التدفق الخطي لرأس الصفحة ونقل النموذج والقائمة بحيث يصير كل منهما بجانب الآخر.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" adjust_indentation="auto" %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" adjust_indentation="auto" %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -377,7 +371,7 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 يجب نقل عنصر الفيديو خارج التدفق العمودي لإطار العرض الضيق ويجب عرضه جنبًا إلى جنب مع القائمة النقطية للمحتوى على إطار عرض واسع.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" adjust_indentation="auto" %}
 </pre>
 
 #### ترتيب الصور
@@ -386,10 +380,10 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 
 وحتى تظهر الصور على نحو سليم في إطار العرض الواسع، يتم تعيين حجمها على 30% من عرض الحاوية ويتم وضعها أفقيًا (وليس عموديًا في إطار العرض الضيق). سنضيف كذلك نصف قطر للحد وظلاً مربعًا لجعل الصور تبدو أكثر جاذبية.
 
-<img src="images/imageswide.png" style="width:100%">
+<img src="images/imageswide.png">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" adjust_indentation="auto" %}
 </pre>
 
 #### جعل الصور أكثر سرعة في الاستجابة لمستوى عدد النقاط في البوصة
@@ -404,8 +398,6 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 
     <img src="photo.png" srcset="photo@2x.png 2x">
     
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.images %}
 
 #### الجداول
 
@@ -426,7 +418,7 @@ Note: لن تضطر إلى نقل جميع العناصر مرة واحدة، و
 وبذلك نحصل على فصل واضح وثابت.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" adjust_indentation="auto" %}
 </pre>
 
 ### الملخص

@@ -2,15 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: حتى نتمكن من الحصول على أسرع عرض أول ممكن، يلزمنا تحسين ثلاثة متغيرات: الوصول إلى أقل عدد من الموارد الحرجة، والوصول إلى أقل عدد من وحدات بايت الحرجة، والوصول إلى أقل وقت للمسار الحرج.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
 # تحسين مسار العرض الحرج {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
 
 
  حتى نتمكن من الحصول على أسرع عرض أول ممكن، يلزمنا تحسين ثلاثة متغيرات:
