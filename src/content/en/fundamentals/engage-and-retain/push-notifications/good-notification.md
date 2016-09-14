@@ -33,13 +33,13 @@ about.
 <div style="clear:both;"></div>
 
 
-## Timely {#timely}
+## Timely {: #timely }
 
 A timely notification is a notification that appears when users want it and
 when it matters to them. Timely means timely to the user, not necessarily timely
 to you.
 
-### Make it available regardless of connectivity {#make-it-available}
+### Make it available regardless of connectivity {: #make-it-available }
 
 You'll want to show most notices right away. There are reasons to hold on to a
 notice before showing it, the least of which is that push payloads may not be
@@ -77,7 +77,7 @@ of the network is irrelevant.
     }); 
     
 
-### Use vibration judiciously {#vibrate-judiciously}
+### Use vibration judiciously {: #vibrate-judiciously }
 
 Vibration may seem like an odd thing to list under timely. In fact, it's closely
 related and there are several issues.
@@ -99,7 +99,7 @@ different vibration patterns.
 Finally, remember that to vibrate a mobile device has to run a motor and motors
 use more power than an on-screen notification.
 
-## Precise {#precise}
+## Precise {: #precise }
 
 A precise notification is one that has specific information that can be acted on
 immediately. Consider the image from the anatomy lesson again.
@@ -113,7 +113,7 @@ It tells you:
 * Since the notification is a question, you can turn him down with as little
   effort as is humanly possible.
 
-### Offer enough information that the user doesn't need to visit your site {#offer-enough}
+### Offer enough information that the user doesn't need to visit your site {: #offer-enough }
 
 This may not be appropriate in every case, but if the information is simple
 enough to convey in a small space, don't make users open your web site to read
@@ -157,7 +157,7 @@ This is especially important for critical information.
 
 <div style="clear:both;"></div>
 
-### Put actions right in the notification {#offer-actions}
+### Put actions right in the notification {: #offer-actions }
 
 We've seen this a few times already and the anatomy lesson even showed how to
 add them to a notification. The service worker needs to process those actions.
@@ -177,7 +177,7 @@ Do this in the `notificationclick` event.
     }, false);
     
 
-### Make the title and content specific {#specific-title}
+### Make the title and content specific {: #specific-title }
 
 Make the title relevant to the context of the message and include something
 specific from the message. Content the recipient already knows, such as the name
@@ -224,7 +224,7 @@ might put the name of the sender at the top and left.
 </div>
 <div style="clear:both;"></div>
 
-### Keep the message short {#keep-it-short}
+### Keep the message short {: #keep-it-short }
 
 Notifications aren't emails. The intent of notifications is to tease users so
 they'll open your app. The `PushMessageData` object lets you send data to the
@@ -232,18 +232,18 @@ user immediately, but   you may not want to show all of that data to the user,
 especially if additional   data could accumulate on the server after the
 notification is sent.
 
-## Relevant {#relevant}
+## Relevant {: #relevant }
 
 A relevant message is one about people or subjects the user cares about.
 
-### Prefer logged-in users {#prefer-logged}
+### Prefer logged-in users {: #prefer-logged }
 
 Only ask for notification permissions from users who are logged in.
 If you don't know who your users are it's hard to send them relevant
 notifications. And if notifications aren't relevant, users might  call them
 spam.
 
-### Don't repeat information {#dont-repeat}
+### Don't repeat information {: #dont-repeat }
 
 You have little space to convey much information. Don't waste it by duplicating
 information between parts of the notification. The duplicate information may be
@@ -269,7 +269,7 @@ don't also list it in the body.
 Also, if the app is open, it's possible the new information is already on the
 screen. Instead of a notification, use the application UI to notify the user.
 
-### Don't advertise your native app {#dont-advertise-native}
+### Don't advertise your native app {: #dont-advertise-native }
 
 The point of service workers, the technology behind push notifications, is that
 you can avoid the time and expense of writing an application separate from your
@@ -277,13 +277,13 @@ website. A user who has both your service worker and your native app may get
 duplicate notifications unless you write server-side code to prevent it. You can 
 avoid the problem completely; don't encourage users to run both.
 
-### Don't advertise {#dont-advertise}
+### Don't advertise {: #dont-advertise }
 
 You'll have opportunities to monetize the user experience once they're in your
 app. Don't blow it by spamming your users when they're not. If you spam your
 users with notifications, you may lose them altogether.
 
-### Don't Include your Website Name or Domain {#no-website}
+### Don't Include your Website Name or Domain {: #no-website }
 
 Notifications already contain your domain name, and space is tight anyway.
 
@@ -299,7 +299,7 @@ Notifications already contain your domain name, and space is tight anyway.
 </div>
 <div style="clear:both;"></div>
 
-### Make the icon contextual {#contextual-icon}
+### Make the icon contextual {: #contextual-icon }
 
 <figure class="attempt-right">
   <img src="images/still-up.png">
