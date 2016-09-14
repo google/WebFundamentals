@@ -21,7 +21,7 @@ you enough information for it to be useful. That's what this section is about.
 
 <div style="clear:both;"></div>
 
-## More notification anatomy {#more-anatomy}
+## More notification anatomy {: #more-anatomy }
 
 When a notification is received from the server, it's intercepted by a service
 worker using the push event. It's basic structure is this.
@@ -69,7 +69,7 @@ Finally, we'll process the user's response using the `notificationclick` and
 
 Everything else is just an elaboration of these basic ideas.
 
-## Preparing message content {#preparing-messages}
+## Preparing message content {: #preparing-messages }
 
 As we said earlier, your server sends two kinds of messages. 
 
@@ -144,7 +144,7 @@ self.addEventListener('push', event => {
 });
 </pre>
 
-## Combine similar notifications {#combine-similar-notes}
+## Combine similar notifications {: #combine-similar-notes }
 
 <figure class="attempt-right">
   <img src="images/combined-notes-mobile.png" alt="Combine messages from the same sender.">
@@ -264,7 +264,7 @@ self.addEventListener('push', function(event) {
 });
 </pre>
 
-## Put actions on the notification {#notification-actions}
+## Put actions on the notification {: #notification-actions }
 
 We've already seen examples of notifications with actions built into them. Let's 
 look at how they're implemented and how to respond to them.
