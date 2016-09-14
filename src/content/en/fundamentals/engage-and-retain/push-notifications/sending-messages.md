@@ -18,7 +18,7 @@ specific endpoints on the messaging server. The messaging server handles the
 routing. 
 
 
-## Anatomy of a subscription object {#subscription-anatomy}
+## Anatomy of a subscription object {: #subscription-anatomy }
 
 In [the last section](permissions-subscriptions#passing-subscription) we said
 that a subscription object must be stringified and passed to the server. The
@@ -44,7 +44,7 @@ server.
 **keys** —Encryption keys used for encrypting data passed to the service worker
 messages.
 
-## Encrypting a message {#encrypting}
+## Encrypting a message {: #encrypting }
 
 You must encrypt all messages before sending them. Encryption is enough of a
 specialty, even within software development, that we don't recommend writing
@@ -52,7 +52,7 @@ your own encryption system. Fortunately, there are [a range of push
 libraries](https://github.com/web-push-libs) including our own [Push Encryption
 Library](https://github.com/GoogleChrome/web-push-encryption).
 
-## Two ways to send a push message {#ways-to-send}
+## Two ways to send a push message {: #ways-to-send }
 
 When implementing server code there are two methods of sending messages to
 consider.
@@ -73,7 +73,7 @@ Technically, there's another reason which is that browser capabilities may vary
 for a while yet, but the two main reasons will likely always apply. If the
 browser doesn't support payloads, the subscription object won't contain keys.
 
-## Sending messages {#sending-messages}
+## Sending messages {: #sending-messages }
 
 To send a push to a client, send a PUT request to the push service endpoint.
 
