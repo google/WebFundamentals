@@ -62,7 +62,7 @@ function buildFeeds() {
       var context = {
         videos: response.items
       };
-      var template = path.join(GLOBAL.WF.src.templates, 'shows', '_index.yaml');
+      var template = path.join(GLOBAL.WF.src.templates, 'shows', 'index.yaml');
       var outputFile = path.join(GLOBAL.WF.src.content, 'shows', '_index.yaml');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 

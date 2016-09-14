@@ -129,7 +129,7 @@ function generateTOCbyMonth(files, options) {
     section: options.section,
     months: splitArticlesByMonth(files).reverse()
   };
-  var template = path.join(GLOBAL.WF.src.templates, '_toc-month.yaml');
+  var template = path.join(GLOBAL.WF.src.templates, 'toc-month.yaml');
   var outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(template, context, outputFile);
 }
@@ -141,7 +141,7 @@ function generateIndex(files, options) {
     section: options.section,
     articles: files
   };
-  var template = path.join(GLOBAL.WF.src.templates, '_index.yaml');
+  var template = path.join(GLOBAL.WF.src.templates, 'index.yaml');
   var outputFile = path.join(options.outputPath, '_index.yaml');
   renderTemplate(template, context, outputFile);
 }
@@ -170,7 +170,7 @@ function generateTagPages(files, options) {
   var tmpl = path.join(GLOBAL.WF.src.templates, 'updates', 'tag-index.md');
   var outputFile = path.join(options.outputPath, 'index.md');
   renderTemplate(tmpl, context, outputFile);
-  tmpl = path.join(GLOBAL.WF.src.templates, 'updates' ,'_tag_toc.yaml');
+  tmpl = path.join(GLOBAL.WF.src.templates, 'updates' ,'tag_toc.yaml');
   outputFile = path.join(options.outputPath, '_toc.yaml');
   renderTemplate(tmpl, context, outputFile);
   Object.keys(allTags).forEach(function(key) {

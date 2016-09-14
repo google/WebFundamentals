@@ -54,7 +54,7 @@ the CLA.
 
 ### Article Styles
 
-Looking for the a [sample article](sample-article) and style guide, this is it.
+Looking for the [sample article](writing-an-article) and [style guide](style-guide), this is it.
 
 ### Code Styles
 
