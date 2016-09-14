@@ -288,7 +288,7 @@ screens, tablets and smaller, where floating right would cause problems. Also
 available is `class="attempt-left"`. To use `attempt-left` and `attempt-right`
 together, make sure the `attempt-left` element comes first.
 
-<div style="clear:both;"></div>
+<div class="clearfix"></div>
 
     <div class="attempt-right">
       <figure>
@@ -297,7 +297,7 @@ together, make sure the `attempt-left` element comes first.
       </figure>
     </div>
 
-Caution: When using `attempt-left` and `attempt-right`, it may be necessary to include a `<div style="clear:both;"></div>` block.
+Caution: When using `attempt-left` and `attempt-right`, it may be necessary to include a `<div class="clearfix"></div>` block.
 
 ### Do and Do Not Images
 
@@ -322,7 +322,7 @@ to indicate a good or bad example.
   </figure>
 </div>
 
-<div style="clear:both;"></div>
+<div class="clearfix"></div>
 
     <div class="attempt-left">
       <figure>

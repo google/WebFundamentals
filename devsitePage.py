@@ -11,12 +11,6 @@ UNSUPPORTED_TAGS = [
   r'{% link_sample_button .+%}',
   r'{% include_code (.+)%}'
 ]
-UNSUPPORTED_CLASSES = [
-  r'mdl-grid',
-  r'mdl-cell',
-  r'mdl-data-table',
-  r'mdl-js-data-table'
-]
 
 def getPage(requestPath, lang):
   response = None
@@ -53,15 +47,10 @@ def getPage(requestPath, lang):
       # Show warning for unsupported elements
       for tag in UNSUPPORTED_TAGS:
         if re.search(tag, content) is not None:
-          logging.warn(' - Unsupported tag: ' + tag)
+          logging.error(' - Unsupported tag: ' + tag)
           replaceWith = '<aside class="warning">Web<strong>Fundamentals</strong>: '
           replaceWith += '<span>Unsupported tag: <code>' + tag + '</code></span></aside>'
           content = re.sub(tag, replaceWith, content)
-
-      # Show warning for unsupported classes
-      for tag in UNSUPPORTED_CLASSES:
-        if re.search(tag, content) is not None:
-          logging.warn(' - Unsupported class: ' + tag)
 
       # Show warning for template tags
       if re.search('{{', content) is not None:
