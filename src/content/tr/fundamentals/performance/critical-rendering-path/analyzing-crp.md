@@ -27,7 +27,7 @@ Son olarak, baslamadan önce son bir noktayi belirtmek istiyoruz... Simdiye kada
 ## Herkese Merhaba deneyimi
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 Mümkün olan en basit örnek olmasi için temel HTML biçimlendirmesi ve tek bir resimle baslayacagiz, CSS veya JavaScript olmayacak. Simdi, Chrome DevTools'ta Ag zaman çizelgemizi açip kaynak selalemizi inceleyim:
@@ -48,7 +48,7 @@ Bununla birlikte, `yükleme` olayi (`onload` olarak da bilinir) resimde engellen
 `Herkese Merhaba deneyimi` sayfamiz, yüzeyde basit görünebilir, ancak bunun olmasini saglamak için sahne arkasinda birçok sey olup bitmektedir! Bununla birlikte, uygulamada yalnizca HTML'den daha fazlasina da ihtiyacimiz olacaktir: Muhtemelen bir CSS stil sayfamiz ve sayfamiza biraz etkilesim eklemek için bir veya daha fazla komut dosyamiz olur. Simdi bunlarin her ikisini de karisimimiza ekleyip neler oldugunu görelim:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
 </pre>
 
 _JavaScript ve CSS eklemeden önce:_
@@ -81,7 +81,7 @@ Bir tane daha az istekte bulunuyoruz, ancak onload ve domContentLoaded süreleri
 Öncelikle, tüm satir içi komut dosyalarinin ayristiriciyi engelledigini, ancak harici komut dosyalarina, ayristiricinin engellemesini kaldirmak için `async` anahtar kelimesini ekleyebildigimizi hatirlayin. Simdi satir içine yerlestirmemizi geri alip bunu bir deneyelim:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
 </pre>
 
 _Ayristirici engelleyen (harici) JavaScript:_
@@ -97,7 +97,7 @@ _Zaman uyumsuz (harici) JavaScript:_
 Alternatif olarak, farkli bir yaklasim deneyip hem CSS'yi hem de JavaScript'i satir içine yerlestirebilirdik:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, satir içi CSS, satir içi JS" class="center">
@@ -114,7 +114,7 @@ Bunlarin isiginda, geri çekilip bazi genel performans kaliplarini tanimlayip ta
 Mümkün olan en basit sayfa yalnizca HTML biçimlendirmesinden olusur: CSS, JavaScript veya baska kaynak türlerini içermez. Bu sayfayi olusturmak için tarayicinin istegi baslatmasi, HTML dokümaninin ulasmasini beklemesi, bunu ayristirmasi, DOM'yi olusturmasi ve son olarak, sayfayi ekranda olusturmasi gerekir:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Herkese merhaba CRP" class="center">
@@ -124,7 +124,7 @@ Mümkün olan en basit sayfa yalnizca HTML biçimlendirmesinden olusur: CSS, Jav
 Simdi, ayni sayfayi bir harici CSS dosyasiyla düsünelim:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
@@ -151,7 +151,7 @@ Olusturma agacini olusturmak için hem HTML hem de CSS'ye ihtiyacimiz oldugundan
 Tamam, simdi karisima fazladan bir JavaScript dosyasi ekleyelim!
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
 </pre>
 
 Sayfada harici bir JavaScript varligi olan app.js dosyasini ekledik ve simdiye kadar ögrendigimiz gibi bu ayristirici engelleyen (ör. kritik) bir kaynaktir. Daha da kötüsü, JavaScript dosyasinin yürütülebilmesi için islemi engelleyip CSSOM'yi beklememiz gerekir. JavaScript'in CSSOM'yi sorgulayabildigini, dolayisiyla tarayicinin `style.css` indirilip CSSOM olusturuluncaya kadar bekleyecegini hatirlayin.
@@ -169,7 +169,7 @@ Artik toplam 11 KB kritik bayt olan üç kritik kaynagimiz vardir, ancak kritik 
 Site gelistiricilerimizle sohbet ettikten sonra, JavaScript'i engellenmesi gerekmeyen sayfamiza ekledigimizi fark ettik: Burada, sayfamizin olusturulmasini engellemesi gerekmeyen bazi analizlerimiz ve baska kodlarimiz bulunuyor. Bu bilgiyle, ayristiricinin engellemesini kaldirmak için script etiketine `async` özelligini ekleyebiliriz:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="DOM, CSSOM, zaman uyumsuz JavaScript CRP" class="center">
@@ -185,7 +185,7 @@ Sonuç olarak, optimize edilmis sayfamiz simdi tekrar iki kritik kaynaktir (HTML
 Son olarak, CSS stil sayfasinin yalnizca yazdirma için gerektigini düsünelim. Nasil görünürdü?
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, engelleme olmayan CSS ve zaman uyumsuz JavaScript CRP" class="center">

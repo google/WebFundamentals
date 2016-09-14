@@ -25,7 +25,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 Beginnen wir mit dem einfachsten Fall: eine reine HTML-Seite mit Text und einem Bild. Was benötigt der Browser, um diese einfache Seite zu verarbeiten?
@@ -57,7 +57,7 @@ Verfügen wir nach Fertigstellung der DOM-Baumstruktur über genügend Informati
 Bei der Erstellung des DOM unserer einfachen Seite im Browser wurde ein Link-Tag im Kopfteil des Dokuments festgestellt, das auf ein externes CSS-Stylesheet verwies: style.css. In der Annahme, dass diese Ressource zur Darstellung der Seite benötigt wird, wurde diese Ressource umgehend angefordert und mit dem folgenden Inhalt zurückgesendet:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 Natürlich hätten wir unsere Styles direkt im HTML-Markup (inline) deklarieren können, aber wenn unser CSS unabhängig von HTML bleibt, ist es möglich, die Inhalte und das Layout getrennt zu behandeln und die Grafiker können am CSS arbeiten, die Entwickler sich auf HTML konzentrieren und so weiter.

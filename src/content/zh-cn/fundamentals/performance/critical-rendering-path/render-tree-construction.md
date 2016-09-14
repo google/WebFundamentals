@@ -51,7 +51,7 @@ Note: 简单提一句，注意 `visibility: hidden` 与 `display: none` 是不�
 为弄清每个对象的准确尺寸和位置，浏览器从渲染树的根节点开始遍历，以计算页面上每个对象的几何信息。下面就让我们动手做个简单例子：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
 </pre>
 
 上面页面的 body 包含两个嵌套 div：第一个 div（父元素）将节点尺寸设置为视口宽度的 50%，第二个包含在父元素中的 div 宽度为父元素的 50%，即视口宽度的 25%！

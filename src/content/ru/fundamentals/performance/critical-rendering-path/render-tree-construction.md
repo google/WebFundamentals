@@ -45,7 +45,7 @@ Note: Обратите внимание, что параметры `visibility: 
 Для этого браузер вычисляет геометрическую форму объектов, анализируя модель визуализации с самого начала. Рассмотрим простой пример:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
 </pre>
 
 В теле этой страницы есть два блока div. Ширина родительского блока - 50% от области просмотра, а вложенного - 50% от родительского, т. е. 25% экрана.

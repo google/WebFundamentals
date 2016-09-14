@@ -60,7 +60,7 @@ El elemento `<source>` permite especificar varios formatos de respaldo en caso d
 Por ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 Cuando el navegador procesa las etiquetas `<source>`, usa el atributo `type` opcional para decidir qué archivo se descargará y se reproducirá. Si el navegador es compatible con WebM, reproducirá chrome.webm. De lo contrario, comprobará si puede reproducir vídeos MPEG-4.
@@ -272,13 +272,13 @@ Note: No fuerces el tamaño de los elementos cuando este resulte en una relació
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
 </pre>
 
 Compara el <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">ejemplo adaptable</a> con la <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">versión no adaptable</a>.
@@ -394,7 +394,7 @@ Al usar el elemento de pista, los subtítulos quedan así:
 Es muy sencillo añadir subtítulos en tu vídeo; solo tienes que añadir un elemento de pista como elemento secundario del elemento de vídeo:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
 </pre>
 
 El atributo `src` del elemento de pista asigna una ubicación al archivo de pista.

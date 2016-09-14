@@ -60,7 +60,7 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 次に例を示します。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 ブラウザは <source> タグを解析する際に、オプションの type 属性を使用して、どのファイルをダウンロードして再生するかを判断します。ブラウザが WebM をサポートしている場合は chrome.webm を再生し、サポートしていない場合は MPEG-4 動画を再生できます。
@@ -271,13 +271,13 @@ Note: 要素のサイズ設定で、元の動画と異なるアスペクト比�
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
 </pre>
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">レスポンシブなサンプル</a>と<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">レスポンシブではないサンプル</a>を比較してみましょう。
@@ -393,7 +393,7 @@ Note: トラック要素は、Firefox を除き、Chrome for Android、iOS Safar
 動画にキャプションを追加するのは非常に簡単です。動画要素の子としてトラック要素を追加するだけです。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
 </pre>
 
 トラック要素の src 属性では、トラック ファイルの場所を指定します。

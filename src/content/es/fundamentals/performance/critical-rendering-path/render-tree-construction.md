@@ -45,7 +45,7 @@ Hasta el momento, hemos calculado qué nodos deberían ser visibles y qué estil
 Para calcular el tamaño y la posición exactos de cada objeto, el navegador empieza por el nivel superior del árbol de visualización y pasa de nodo en nodo analizando la geometría de cada objeto de la página. Veamos un ejemplo práctico:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
 </pre>
 
 El cuerpo de la página anterior contiene dos elementos `div` anidados: el primer `div` (el principal) establece el tamaño de pantalla del nodo en un 50% del ancho de la ventana gráfica; y el segundo, dentro del `div` principal, establece el ancho en un 50% del `div` principal (que puede ocupar un 25% del ancho de la ventana gráfica)

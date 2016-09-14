@@ -27,7 +27,7 @@ Prima che il browser possa eseguire il rendering della pagina, deve costruire le
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 Iniziamo con il caso più semplice possibile: una pagina HTML semplice con un po' di testo e una singola immagine. Cosa deve fare il browser per elaborare questa semplice pagina?
@@ -59,7 +59,7 @@ Con la struttura DOM pronta, disponiamo di informazioni a sufficienza per esegui
 Mentre il browser stava costruendo il DOM della nostra pagina semplice, ha incontrato un tag di collegamento nella sezione dell'intestazione del documento che faceva riferimento a un foglio di stile CSS esterno: style.css. Prevedendo che sia necessaria questa risorsa per eseguire il rendering della pagina, invia immediatamente una richiesta per la risorsa, che gli restituisce il seguente contenuto:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 Ovviamente, avremmo potuto dichiarare i nostri stili direttamente all'interno del markup HTML (inline), ma mantenere il nostro CSS indipendente da HTML ci consente di trattare il contenuto e il design come due questioni separate: i progettisti possono lavorare su CSS, gli sviluppatori possono concentrarsi su HTML e così via.

@@ -27,7 +27,7 @@ Uma última coisa antes de começarmos... Até agora, nos focamos exclusivamente
 ## A experiência `Olá, mundo`
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 Começamos com uma marcação HTML básica e uma única imagem, sem CSS ou JavaScript, a estrutura mais simples possível. Agora, abrimos a linha do tempo da rede no Chrome DevTools e inspecionamos a cascata de recursos resultante:
@@ -48,7 +48,7 @@ Dito isso, o evento `load` (também conhecido comumente como `onload`), é bloqu
 Nossa página `experiência Olá, mundo` pode parecer simples por fora, mas há mil coisas acontecendo nos bastidores para que ela esteja ativa. Na prática, também precisaremos de algo mais além do HTML: provavelmente teremos uma folha de estilos CSS e um ou mais scripts para adicionar interatividade à página. Vamos adicionar ambos à combinação e ver o que acontece:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
 </pre>
 
 _Antes de adicionar JavaScript e CSS:_
@@ -81,7 +81,7 @@ Estamos fazendo uma solicitação a menos, mas nossos tempos de onload e domCont
 Primeiro, lembre-se de que todos os scripts in-line bloqueiam o analisador, mas, para os scripts externos, podemos adicionar a palavra-chave `async` para desbloquear o analisador. Vamos desfazer a colocação in-line e tentar isso:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
 </pre>
 
 _JavaScript bloqueador do analisador (externo):_
@@ -97,7 +97,7 @@ Muito melhor. O evento domContentLoaded é acionado logo depois da análise do H
 Como alternativa, podíamos ter tentado uma abordagem diferente e colocado CSS e JavaScript in-line:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, CSS in-line, JS in-line" class="center">
@@ -114,7 +114,7 @@ Vejamos se é possível voltar algumas etapas e identificar alguns padrões gera
 A página mais simples conta apenas com a marcação de HTML: não contém CSS, JavaScript nem outros tipos de recursos. Para renderizar essa página, o navegador precisa iniciar a solicitação, aguardar a chegada do documento HTML, analisá-lo, criar o DOM e, por último, renderizá-lo na tela:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="CRP Olá, mundo" class="center">
@@ -124,7 +124,7 @@ A página mais simples conta apenas com a marcação de HTML: não contém CSS, 
 Agora, consideremos a mesma página, mas como um arquivo CSS externo:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CRP CSSOM" class="center">
@@ -151,7 +151,7 @@ Precisamos do HTML e do CSS para criar a árvore de renderização e, como resul
 OK, vamos adicionar um arquivo JavaScript extra à combinação
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
 </pre>
 
 Adicionamos app.js, que é um recurso JavaScript externo na página e, como já sabemos, é um recurso de bloqueio do analisador (ou seja, essencial). Para poder executar o arquivo JavaScript, também teremos de fazer o bloqueio e aguardar o CSSOM: lembre-se de que o JavaScript pode consultar o CSSOM e, por isso, o navegador será interrompido até que `style.css` seja transferido e o CSSOM seja criado.
@@ -169,7 +169,7 @@ Agora, temos três recursos essenciais que somam até 11 KB de bytes essenciais,
 Depois de conversar com nossos desenvolvedores de sites, percebemos que o JavaScript que incluímos na página não precisa ser do tipo bloqueador: temos algumas análises e outros códigos que não precisam bloquear a renderização da página. Sabendo isso, é possível adicionar o atributo `async` à tag de script para desbloquear o analisador:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="CRP de DOM, CSSOM e JavaScript assíncrono" class="center">
@@ -185,7 +185,7 @@ Como resultado, nossa página otimizada volta a dois recursos essenciais (HTML e
 Por último, digamos que a folha de estilos de CSS foi necessária apenas para impressão. Como isso seria?
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, CSS sem bloqueio e CRP de JavaScript assíncrono" class="center">

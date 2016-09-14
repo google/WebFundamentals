@@ -98,7 +98,7 @@ description: Большинство интернет-ресурсов не оп�
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * При ширине браузера от <b>0 пикс.</b> до <b>640 пикс.</b> применяется max-640px.css.

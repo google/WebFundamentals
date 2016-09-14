@@ -25,7 +25,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 Vamos a empezar con el caso más sencillo posible: una página HTML sencilla con algo de texto y una sola imagen. ¿Qué tiene que hacer el navegador para procesar esta sencilla página?
@@ -57,7 +57,7 @@ Cuando ya tenemos preparado el árbol DOM, ¿tenemos bastante información para 
 Cuando el navegador estaba creando el DOM en nuestra sencilla página, se ha topado con una etiqueta de enlace en la sección de encabezamiento del documento que hacía referencia a una hoja de estilo CSS externa: style.css. Como entiende que va a necesitar este recurso para publicar la página, envía de inmediato una solicitud para este recurso, que se devuelve con el siguiente contenido:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 Por supuesto que podríamos haber declarado nuestros estilos directamente dentro del marcado HTML (integrado), pero mantener el CSS independiente del HTML nos permite tratar el contenido y el diseño como cuestiones separadas: los diseñadores pueden trabajar en el CSS, los desarrolladores se centran en el HTML, etc.

@@ -72,7 +72,7 @@ Y ahora debes estar pensando: `Esto está muy bien, ¿pero cómo nos ayuda en la
 La mejor forma de comprimir datos redundantes o innecesarios es eliminarlos completamente. Es obvio que no podemos limitarnos a eliminar los datos arbitrarios, pero en los casos en los que podamos conocer específicamente el contenido del formato de datos y sus propiedades, probablemente podremos reducir significativamente el tamaño de la carga sin afectar al significado real.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
 </pre>
 
 Piensa en la página HTML sencilla que hemos visto anteriormente y en los tres tipos de contenido distintos que se muestran: marcas HTML, estilos CSS y JavaScript. Cada uno de estos tipos de contenido tiene diferentes reglas para constituir marcas HTML válidas, reglas CSS o contenido JavaScript, reglas distintas para indicar comentarios, etc. ¿Cómo podemos reducir el tamaño de la página?
@@ -83,7 +83,7 @@ Piensa en la página HTML sencilla que hemos visto anteriormente y en los tres t
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
 
 Después de aplicar los pasos anteriores, la página pasa de 406 a 150 caracteres (el ahorro conseguido con la compresión es del 63%). Es cierto que no es muy cómodo de leer, pero tampoco es necesario que lo sea: podemos conservar la página original como nuestra `versión de desarrollo` y aplicar los pasos anteriores cuando estemos listos par publicar la página en nuestro sitio web.

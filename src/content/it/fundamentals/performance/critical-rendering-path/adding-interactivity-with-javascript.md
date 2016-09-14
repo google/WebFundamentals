@@ -24,7 +24,7 @@ JavaScript ci consente di modificare praticamente qualsiasi aspetto della pagina
 JavaScript è un linguaggio dinamico che viene eseguito nel browser e ci consente di alterare praticamente qualsiasi aspetto del comportamento di una pagina: possiamo modificare il contenuto della pagina attraverso l'aggiunta o rimozione di elementi dalla struttura DOM, possiamo cambiare le proprietà CSSOM di ciascun elemento, possiamo gestire l'input dell'utente e molto altro ancora. Per illustrare questa procedura in azione, aggiungiamo al nostro esempio precedente 'Ciao mondo' un semplice script inline:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
 </pre>
 
 * JavaScript ci permette di accedere al DOM e di estrarre il nodo span nascosto: il nodo potrebbe non essere visibile nella struttura di rendering, ma è ancora presente nel DOM. Quindi, una volta che siamo in possesso del riferimento, ne possiamo modificare il testo (tramite .textContent) e quindi sostituire la proprietà di stile di visualizzazione calcolata da `none` a `inline`. Alla fine dell'operazione, la nostra pagina visualizzerà '**Ciao studenti interattivi.**'.
@@ -62,13 +62,13 @@ Per impostazione predefinita, l'esecuzione di JavaScript è 'blocco parser': qua
 Per quanto riguarda gli script inclusi tramite tag script? Prendiamo il nostro esempio precedente ed estraiamo il nostro codice in un file separato:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
 </pre>
 
 Ti aspetteresti che l'ordine di esecuzione fosse diverso utilizzando un tag `<script>` invece di uno snippet inline JavaScript? Ovviamente, la risposta è "no" dato che sono identici e devono comportarsi nello stesso modo. In entrambi i casi, il browser dovrà fermarsi ed eseguire lo script prima di poter elaborare la parte restante del documento. Tuttavia, **nel caso di un file JavaScript esterno, il browser dovrà anche sospendere e attendere che lo script sia recuperato dal disco, dalla cache o da un server remoto, il che può aggiungere decine di migliaia di millisecondi di ritardo al percorso di rendering critico.**
@@ -78,7 +78,7 @@ Detto questo, buone notizie, abbiamo una scappatoia. Per impostazione predefinit
 Quindi come otteniamo questo risultato? È molto semplice, contrassegniamo il nostro script come _async_:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
 </pre>
 
 Aggiungendo la parola chiave async al tag script, questo informa il browser che non deve bloccare la costruzione del DOM mentre attende che lo script divenga disponibile, questa è un'ottima vittoria per la performance.

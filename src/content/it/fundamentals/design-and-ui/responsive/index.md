@@ -227,7 +227,7 @@ Di seguito viene indicato un esempio:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Se il browser ha una dimensione compresa fra <b>0 pixel</b> e <b>640 pixel</b> viene applicato `max-640px.css`.
@@ -309,7 +309,7 @@ Quindi, ridimensiona lo schermo fino a visualizzare un eccesso di spazio bianco 
 Per inserire un breakpoint a 600 pixel, crea due nuovi fogli di stile, uno per il browser con dimensioni massime di 600 pixel e l'altro per le dimensioni superiori ai 600 pixel.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Infine, esegui il refactoring del CSS. In questo esempio, in `weather.css` abbiamo inserito stili comuni quali caratteri, icone, posizionamento di base e colori. Le disposizioni specifiche per gli schermi di piccole dimensioni sono state posizionate in `weather-small.css`, mentre quelle per gli schermi di grandi dimensioni in `weather-large.css`.
@@ -327,7 +327,7 @@ I breakpoint principali sono adatti a eseguire cambiamenti sostanziali della dis
 Iniziamo ottimizzando la disposizione per gli schermi di piccole dimensioni. In questo caso aumentiamo il carattere se la larghezza del viewport supera i 360 pixel.  Una volta ottenuto spazio a sufficienza è possibile separare la temperatura massima e minima in modo da inserirle sulla stessa riga e non più in pila. Ingrandiamo anche le icone del meteo.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
 </pre>
 
 <div class="mdl-grid">
@@ -343,7 +343,7 @@ Iniziamo ottimizzando la disposizione per gli schermi di piccole dimensioni. In 
 In maniera analoga, usando schermi più grandi possiamo limitare la larghezza massima del riquadro delle previsioni in modo che non occupi tutta la larghezza dello schermo.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
 </pre>
 
 ### Ottimizzazione del testo per la lettura
@@ -363,7 +363,7 @@ Secondo la teoria classica della leggibilità, una colonna dovrebbe contenere da
 Osserviamo attentamente il post del blog dell'esempio precedente. Su schermi piccoli, il carattere Roboto a 1 em offre una resa ottimale con 10 parole per linea, anche se con schermi più grandi occorre un breakpoint. In questo caso, con una larghezza del browser superiore a 575 pixel, la larghezza ideale dei contenuti è di 550 pixel.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
 </pre>
 
 ### Mai nascondere completamente i contenuti

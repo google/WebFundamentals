@@ -27,7 +27,7 @@ description: 您需要瞭解很多常見問題，才可確定並解決關鍵轉�
 ## Hello World 體驗
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 我們將從基本的 HTML 標記和單一圖片開始，沒有 CSS 或 JavaScript，就是這麼簡單。現在，我們在 Chrome DevTools 中開啟網路時間軸，並檢查產生的資源瀑布：
@@ -48,7 +48,7 @@ HTML 內容準備就緒後，瀏覽器必須剖析位元組、將其轉換為權
 我們的「Hello World 體驗」頁面表面看起來好像非常簡單，但背後需要完成大量的工作才能呈現出這種成效！ 不過在實際使用時，我們還需要 HTML 以外的許多資源：我們可能需要 CSS 樣式表以及一個或多個新增網頁互動性的指令碼。我們將兩者搭配使用，看看會產生什麼結果：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
 </pre>
 
 _新增 JavaScript 和 CSS 之前：_
@@ -81,7 +81,7 @@ _內嵌 JavaScript：_
 首先回想一下，所有內嵌指令碼都會禁止剖析器，但是對於外部指令碼來說，我們可以新增「async」關鍵字來取消禁止剖析器。讓我們取消內嵌，並嘗試上述方法：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
 </pre>
 
 _禁止剖析器的 (外部) JavaScript：_
@@ -97,7 +97,7 @@ _非同步 (外部) JavaScript：_
 此外，我們也可以嘗試另一種方法，也就是同時內嵌 CSS 和 JavaScript：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM、內嵌 CSS 和內嵌 JS" class="center">
@@ -114,7 +114,7 @@ _非同步 (外部) JavaScript：_
 只要使用 HTML 標記就可組成最簡單的可用網頁：沒有 CSS、JavaScript 或其他類型的資源。如要轉譯此網頁，瀏覽器必須發出請求、等待 HTML 文件準備就緒、進行剖析、建構 DOM，最後再顯示在螢幕上：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Hello world CRP" class="center">
@@ -124,7 +124,7 @@ _非同步 (外部) JavaScript：_
 現在，讓我們看看帶有外部 CSS 檔案的相同網頁：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
@@ -151,7 +151,7 @@ _非同步 (外部) JavaScript：_
 現在我們再於組合中新增一個額外的 JavaScript 檔案！
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
 </pre>
 
 我們新增了 app.js (網頁上的外部 JavaScript 資源)，而且據我們目前所瞭解，這是一種剖析器禁止 (即關鍵) 資源。更糟的是，為了執行 JavaScript 檔案，我們還必須禁止並等待 CSSOM。請注意，在「style.css」下載和 CSSOM 建構完成之前，瀏覽器將會暫停。
@@ -169,7 +169,7 @@ _非同步 (外部) JavaScript：_
 與網站開發人員交流之後，我們發現網頁中新增的 JavaScript 不必是禁止指令碼：我們的某些分析和其他程式碼不需要禁止網頁轉譯。瞭解這些要點後，我們就可以在指令碼標記中新增「async」屬性，取消對剖析器的禁止令：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="DOM、CSSOM 和非同步 JavaScript CRP" class="center">
@@ -185,7 +185,7 @@ _非同步 (外部) JavaScript：_
 最後，假設只有在列印時才需要用到 CSS 樣式表， 網頁看起來又會如何呢？
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM、非禁止性 CSS 和非同步 JavaScript CRP" class="center">

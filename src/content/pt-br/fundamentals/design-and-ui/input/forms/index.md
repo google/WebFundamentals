@@ -240,7 +240,7 @@ listas para encontrar o valor que estão procurando e os limita apenas a essas
 listas, o elemento `datalist` fornece dicas conforme o usuário digita.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
 <!-- TODO: Verify note type! -->
@@ -771,7 +771,7 @@ o resto.
 <img src="imgs/rac_flow.png" class="center" alt="Fluxo da solicitação de preenchimento automático">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
 </pre>
 
 A função `requestAutocomplete` no elemento `form` indica que o
@@ -781,7 +781,7 @@ mostrada pedindo a permissão do usuário para preencher os campos e quais detal
 ele deseja utilizar.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
 </pre>
 
 Depois da conclusão do `requestAutocomplete`, a função acionará o evento

@@ -72,7 +72,7 @@ U vraagt zich misschien af wat we hieraan hebben voor optimalisatie van onze int
 De beste manier om overbodige of dubbele gegevens te comprimeren, is deze in zijn geheel te verwijderen. We kunnen natuurlijk niet zomaar willekeurige gegevens verwijderen, maar in sommige contexten beschikken we over kennis van de gegevensindeling en de eigenschappen en is het vaak mogelijk om de omvang van de payload aanzienlijk te reduceren, zonder de de betekenis negatief te beïnvloeden.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
 </pre>
 
 Kijk eens naar de eenvoudige HTML-pagina hierboven en de drie verschillende inhoudstypen die op de pagina voorkomen: HTML-opmaak, CSS-stijlen en JavaScript. Elk van deze inhoudstypen heeft andere regels die bepalen wat geldige HTML-opmaak is, CSS-regels of JavaScript-inhoud, regels voor het aanduiden van commentaar, enzovoort. Hoe kunnen we omvang van deze pagina reduceren?
@@ -83,7 +83,7 @@ Kijk eens naar de eenvoudige HTML-pagina hierboven en de drie verschillende inho
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
 
 Onze pagina wordt na bovenstaande stappen teruggebracht van 406 naar 150 tekens - een besparing van 63%. Het resultaat is niet erg leesbaar, maar dat is ook niet nodig: we kunnen de oorspronkelijke pagina houden als onze `ontwikkelaarsversie` en vervolgens bovenstaande stappen toepassen waneer we de pagina willen publiceren op onze website.

@@ -127,7 +127,7 @@ Note: El elemento <code>picture</code> se empieza a utilizar en navegadores. Aun
 </div>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/media.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media.html" region_tag="picture" lang=html %}
 </pre>
 
 En el ejemplo anterior, si el ancho del navegador tiene un valor mínimo de 800 px, se utilizarán `head.jpg` o `head-2x.jpg`, en función de la resolución del dispositivo. Si el navegador admite entre 450 px y 800 px, se utilizarán `head-small.jpg` o `head-small-2x.jpg`, una vez más, en función de la resolución del dispositivo. En el caso de las pantallas con un ancho inferior a 450 px y compatibilidad con versiones anteriores en las que no se admita el elemento `picture`, el navegador hará efectivo el elemento `img`. Por eso, siempre se debe incluir.
@@ -139,7 +139,7 @@ Cuando no se conoce el tamaño final de la imagen, puede resultar difícil espec
 En vez de proporcionar tamaños y densidades de imagen fijos, el tamaño de cada imagen se puede especificar añadiendo un descriptor de anchura junto con el tamaño del elemento de imagen, de modo que el navegador puede calcular automáticamente la densidad de píxeles eficiente y puede elegir la imagen que es mejor descargar.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/sizes.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/sizes.html" region_tag="picture" lang=html %}
 </pre>
 
 En el ejemplo anterior se muestra una imagen que ocupa la mitad del ancho de ventana gráfica (`sizes='50vw'`) y, en función del ancho de navegador y la relación de píxeles del dispositivo), se permite que el navegador elija la imagen correcta independientemente del tamaño de la ventana del navegador.  Por ejemplo, en la tabla siguiente se muestra qué imagen elegiría el navegador:
@@ -199,7 +199,7 @@ En el ejemplo anterior se muestra una imagen que ocupa la mitad del ancho de ven
 En muchos casos, el tamaño o la imagen pueden variar en función de los puntos de interrupción del diseño del sitio.  Por ejemplo, en una pantalla pequeña, puede que quieras que la imagen ocupe todo el ancho de la ventana gráfica, mientras que en las pantallas grandes quizá solo quieras que ocupe una parte pequeña.  
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/breakpoints.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/breakpoints.html" region_tag="picture" lang=html %}
 </pre>
 
 El atributo `sizes` del ejemplo anterior utiliza varias consultas multimedia para especificar el tamaño de la imagen.  Cuando el ancho del navegador es superior a 600 px, la imagen ocupa el 25% del ancho de la ventana gráfica; cuando se encuentra entre 500 px y 600 px, la imagen ocupa el 50% del ancho de ventana gráfica; y por debajo de 500 px, ocupa todo el ancho.
@@ -262,7 +262,7 @@ Las consultas de medios no solo afectan al diseño de la página, sino que tambi
 Por ejemplo, en el siguiente ejemplo, solo se descarga `small.png` y se aplica al `div` de contenido en las pantallas más pequeñas. En cambio, en pantallas más grandes, se aplica `background-image: url(body.png)` al cuerpo, y `background-image: url(large.png)` al `div` de contenido.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/conditional-mq.html" region_tag="conditional" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/conditional-mq.html" region_tag="conditional" lang=css %}
 </pre>
 
 ### Usar `image-set` para mostrar imágenes de alta resolución
@@ -282,7 +282,7 @@ según sea necesario. Es decir, el navegador interpreta que las imágenes que du
 La compatibilidad con `image-set()` aún es reciente y solo es compatible en Chrome y en Safari con el prefijo de proveedor `-webkit`.  Se debe tomar la precaución de incluir una imagen de respaldo para cuando no se admita `image-set()`, por ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/image-set.html" region_tag="imageset" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-set.html" region_tag="imageset" lang=css %}
 </pre>
 
 El ejemplo anterior cargará los recursos apropiados en los navegadores que sean compatibles con `image-set()` y, si no fuera posible, mostrará el recurso en tamaño normal. La desventaja obvia de este método es que la compatibilidad del navegador con `image-set()` es poco frecuente, por lo que la mayoría de los navegadores mostrarán el recurso en tamaño normal.
@@ -302,7 +302,7 @@ Las consultas de medios pueden crear normas basadas en la [relación de píxeles
 Chrome, Firefox y Opera son compatibles con la sintaxis `(min-resolution: 2dppx)`, aunque Safari y el navegador de Android requieren la sintaxis anterior del proveedor con sufijo, pero sin la unidad `dppx`.  Recuerda que estos estilos solo se cargan si el dispositivo coincide con la consulta de medios y que debe especificar estilos para el caso básico.  Con esto también se garantiza que se muestre un elemento si el navegador no es compatible con la resolución especificada en las consultas de medios.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/media-query-dppx.html" region_tag="mqdppx" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media-query-dppx.html" region_tag="mqdppx" lang=css %}
 </pre>
 
 Además, puedes usar la sintaxis `min-width` para mostrar imágenes alternativas en función del tamaño de la ventana gráfica.  Esta técnica tiene la ventaja de que la imagen no se descarga si la consulta de medios no coincide.  Por ejemplo, solo se descarga y se aplica `bg.png` en `body` si el ancho del navegador es de 500 píxeles como mínimo:
@@ -359,7 +359,7 @@ Cuando los requisitos de iconos son más complejos, se recomienda usar iconos SV
 &nbsp;
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/icon-svg.html" region_tag="iconsvg" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/icon-svg.html" region_tag="iconsvg" lang=html %}
 </pre>
 
 ### Usar fuentes de iconos con precaución
@@ -379,7 +379,7 @@ srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Ejemplo de página que usa FontAwesome para sus iconos de fuente.">
 {% endlink_sample %}
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/icon-font.html" region_tag="iconfont" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/icon-font.html" region_tag="iconfont" lang=html %}
 </pre>
 
 Hay cientos de fuentes de icono gratis y de pago, incluidas [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) y [Glyphicons](http://glyphicons.com/).
@@ -435,7 +435,7 @@ El uso de sprites en CSS es una técnica en la que varias imágenes se combinan 
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Hoja de sprites de imágenes usada en el ejemplo"></a>
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite" lang=css %}
 </pre>
 
 El uso de sprites tiene la ventaja de reducir el número de descargas necesarias para obtener varias imágenes y, a la vez, habilitar el almacenamiento en caché.

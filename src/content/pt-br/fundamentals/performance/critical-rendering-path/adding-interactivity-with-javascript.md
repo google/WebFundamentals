@@ -24,7 +24,7 @@ JavaScript possibilita alterar praticamente todos os aspectos da página: conte�
 JavaScript é uma linguagem dinâmica executada no navegador e que permite alterar praticamente todos os aspectos do comportamento da página: é possível modificar o conteúdo na página adicionando ou removendo elementos da árvore DOM, modificar as propriedades de CSSOM de cada elemento, manipular a entrada do usuário e muito mais. Para ilustrar isso em uma ação, vamos incrementar o exemplo anterior `Olá, mundo` com um script in-line:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
 </pre>
 
 * JavaScript possibilita chegar ao DOM e extrair a referência ao nó de dimensão oculto. O nó pode não estar visível na árvore de renderização, mas ainda está no DOM. Assim, depois de coletar a referência, é possível alterar o texto (via .textContent) e até substituir a propriedade de estilo de exibição calculada de `none` para `inline`. Depois de concluído, a página exibirá `**Olá, estudantes interativos.**`.
@@ -62,13 +62,13 @@ Por padrão, a execução de JavaScript bloqueia o analisador: quando o navegado
 E quanto aos scripts incluídos por meio de uma tag de script? Vamos tomar o exemplo anterior e extrair o código em um arquivo separado:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
 </pre>
 
 Você esperaria que a ordem de execução fosse diferente ao usar uma tag `<script>` em vez de um snippet JavaScript in-line? Logicamente, a resposta é `não`, pois eles são idênticos e devem se comportar da mesma forma. Em ambos os casos, o navegador precisa ser interrompido e executar o script antes de poder processar o restante do documento. No entanto, **no caso de um arquivo JavaScript externo, o navegador também terá de parar e esperar o script ser buscado a partir do disco, cache ou de um servidor remoto, o que pode adicionar um atraso de dezenas a milhares de milésimos de segundos ao caminho de processamento essencial.**
@@ -78,7 +78,7 @@ Dito isso, boas notícias: há, sim, uma saída. Por padrão, todo JavaScript bl
 Então, como conseguimos isso? É bem simples, podemos marcar o script como _async_:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
 </pre>
 
 Adicionar a palavra-chave assíncrona à tag do script informa ao navegador que ele não deve bloquear a criação do DOM enquanto espera pela disponibilização do script. Essa é uma grande vitória em termos de desempenho.

@@ -60,7 +60,7 @@ L'élément <source> vous permet d'indiquer plusieurs formats, dans le cas où l
 Par exemple :
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 Lorsque le navigateur analyse les balises <source>, l'attribut facultatif `type` lui permet de sélectionner le fichier à télécharger et à lire. Si le navigateur est compatible avec WebM, le format de fichier chrome.webm est lu. Dans le cas contraire, une vérification est lancée, pour savoir si la lecture de vidéos au format MPEG-4 est possible.
@@ -270,13 +270,13 @@ Note: Ne forcez pas la taille d'un élément générant un format d'image diffé
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
 </pre>
 
 Comparez l'<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">exemple adaptatif</a> avec la <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">version non-adaptative</a>.
@@ -392,7 +392,7 @@ Lorsque vous utilisez l'élément de suivi, les sous-titres ont l'apparence suiv
 Il est très facile d'ajouter des sous-titres à une vidéo. Il vous suffit d'ajouter un élément de suivi en tant qu'élément enfant de l'élément vidéo :
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
 </pre>
 
 L'attribut d'élément de suivi `src` indique l'emplacement du fichier de suivi.

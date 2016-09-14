@@ -59,7 +59,7 @@ Abbiamo delineato anche una bozza dell'Information Architecture (IA) e della dis
 È possibile convertirla facilmente nelle bozze delle sezioni di una struttura di pagina da utilizzare per il resto del progetto.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
 </pre>
 
 ### Aggiunta di contenuti alla pagina
@@ -76,7 +76,7 @@ Il titolo e il modulo di notifica delle richieste sono i componenti principali d
 Nel titolo, inserisci un testo semplice per descrivere il corso:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
 </pre>
 
 Compila anche il modulo.
@@ -87,7 +87,7 @@ Tutti i moduli devono contenere etichette e segnaposto, in modo da consentire ag
 Aggiungiamo aree semantiche per aiutare gli utenti a velocizzare e semplificare l'immissione dei contenuti usando dispositivi mobili. Ad esempio, durante la digitazione di un numero telefonico, l'utente dovrebbe visualizzare il solo tastierino numerico.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
@@ -98,7 +98,7 @@ Le sezioni dei contenuti Video e Informazioni richiedono maggiore attenzione.
 Segue un elenco delle funzionalità e un segnaposto video che consente di ammirare i nostri prodotti in funzione.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
 </pre>
 
 Spesso i video vengono utilizzati per descrivere i contenuti in maniera più interattiva e illustrano la dimostrazione di un prodotto o concetto.
@@ -111,7 +111,7 @@ Rispettando le best practice puoi integrare facilmente i video nel tuo sito:
 * Inserisci un testo alternativo per scaricare il video in caso di impossibilità di riproduzione in finestra.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -128,7 +128,7 @@ La sezione Immagini della pagina è una raccolta di immagini di contenuto
  che consentono di convogliare il significato della pagina. Sono simili alle fotografie usate negli articoli dei giornali. Utilizziamo fotografie dei tutor del progetto Chris Wilson, Peter Lubbers e Sean Bennet
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
 </pre>
 
  che è possibile scalare al 100% della larghezza dello schermo, condizione ideale per i dispositivi con viewport ristretto ma non per quelli con viewport ampio (come i PC desktop). Questo problema è l'oggetto della sezione sul responsive design.
@@ -146,7 +146,7 @@ L'ultima sezione è una semplice tabella per presentare le caratteristiche tecni
 Usa le tabelle solo per dati come ad esempio le matrici di informazioni.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
 </pre>
 
 #### Aggiunta di un footer
@@ -156,7 +156,7 @@ La maggior parte dei siti deve contenere un footer per la visualizzazione di con
 Nel nostro sito inseriamo solo i link alla sezione di termini e condizioni, a una pagina di contatti e ai nostri profili sui social media.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
 </pre>
 
 ### Riepilogo
@@ -220,7 +220,7 @@ Senza di esso il sito non funzionerà al meglio sui dispositivi mobili.
 Il viewport consente al browser di scalare la pagina per adattarla allo schermo. Esistono diverse configurazioni per usare il viewport per la visualizzazione della pagina. Seguono alcuni suggerimenti di default:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
 </pre>
 
 Il viewport risiede nella sezione `head` del documento e deve essere dichiarato una sola volta.
@@ -320,11 +320,11 @@ Il contenitore sarà un semplice `div` nel seguente modulo:
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
 </pre>
 
 ### Modifica del padding e riduzione delle dimensioni del testo
@@ -336,7 +336,7 @@ Con un viewport più ampio è opportuno supporre che l'utente disponga di uno sc
 Nella nostra pagina del prodotto aumenteremo il padding degli elementi della sezione mantenendolo al 5% della larghezza. Aumenteremo anche le dimensioni delle intestazioni di ciascuna sezione.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 ### Adattamento degli elementi al viewport ampio
@@ -357,11 +357,11 @@ Il viewport ristretto offre un minore spazio orizzontale per il posizionamento o
 Per utilizzare al meglio lo spazio orizzontale dello schermo, occorre interrompere il flusso lineare dell'intestazione e avvicinare modulo ed elenco.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -379,7 +379,7 @@ Nell'interfaccia del viewport ristretto, il video occupa l'intera larghezza dell
 Allontana l'elemento video dal flusso verticale del viewport ristretto e posizionalo a fianco dell'elenco puntato dei contenuti nel viewport ampio.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
 </pre>
 
 #### Inserimento delle immagini nei riquadri
@@ -391,7 +391,7 @@ Per visualizzare correttamente le immagini in un viewport ampio, scalale al 30% 
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
 </pre>
 
 #### Aumento della reattività delle immagini nei confronti dei DPI
@@ -428,7 +428,7 @@ Nello sviluppo incentrato sui dispositivi mobili è difficile annullare gli stil
 Così facendo si ottiene un'interruzione chiara e coerente.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
 </pre>
 
 ### In conclusione

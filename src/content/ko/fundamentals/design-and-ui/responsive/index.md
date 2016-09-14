@@ -210,7 +210,7 @@ stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 C
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * 브라우저가 <b>0px</b> 와 <b>640px</b> 사이 너비일 때, `max-640px.css`가 적용됩니다.

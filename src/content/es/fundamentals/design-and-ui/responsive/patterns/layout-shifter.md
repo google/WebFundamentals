@@ -36,7 +36,7 @@ Entre los sitios que utilizan este patrón, se incluyen los siguientes:
  * [Andersson-Wise Architects](http://www.anderssonwise.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter" lang=css %}
 </pre>
 
 

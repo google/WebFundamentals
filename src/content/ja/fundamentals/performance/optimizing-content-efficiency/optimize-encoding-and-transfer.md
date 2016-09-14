@@ -73,7 +73,7 @@ description: 不要なリソースを取り除いたら、次の手順はブラ�
 冗長なデータや不要なデータを圧縮する最も良い方法は、一緒に取り除くことです。もちろん、データをやたらに削除することはできませんが、データ形式とそのプロパティについてコンテンツ別の知識があれば、実際の意味に影響を与えることなくペイロードのサイズを大幅に削減することが可能です。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
 </pre>
 
 上記のシンプルな HTML ページと、そのページに含まれる 3 つの異なるコンテンツの種類（HTML マークアップ、CSS スタイル、JavaScript）を考えてみましょう。コンテンツの種類ごとに、有効な HTML マークアップを作成するためのルール、CSS のルール、JavaScript コンテンツのルールや、コメントを示すためのルールなどは異なります。このページのサイズを縮小するにはどうすればよいでしょうか。
@@ -84,7 +84,7 @@ description: 不要なリソースを取り除いたら、次の手順はブラ�
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
 
 上記の手順を適用すれば、ページは最終的に 406 文字から 150 文字に減ります。圧縮率 63% です。確かにあまり読みやすくはありませんが、読みやすくする必要もありません。元のページは「開発バージョン」として保存しておき、ページをウェブサイトに公開できる準備ができたらいつでも上記の手順を適用できます。

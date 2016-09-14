@@ -24,7 +24,7 @@ JavaScript pozwala zmienić niemal każdy aspekt strony &ndash; treść, styl or
 JavaScript to język dynamiczny, który działa w przeglądarce i pozwala zmieniać niemal każdy aspekt funkcjonowania strony. Możesz dostosować jej treść, dodając lub usuwając elementy w drzewie DOM, zaktualizować właściwości CSSOM każdego elementu, obsługiwać wprowadzanie danych przez użytkownika itp. Aby pokazać, jak to działa, uzupełnimy poprzedni przykład `Witaj Świecie` o prosty wbudowany skrypt:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
 </pre>
 
 * JavaScript pozwala sięgnąć do modelu DOM i pobrać odwołanie do ukrytego węzła span, który może nie być widoczny w drzewie renderowania, ale wciąż jest w modelu DOM. Po uzyskaniu odwołania możemy zmienić tekst elementu (używając właściwości .textContent), a nawet zastąpić automatycznie określoną wartość właściwości display stylu z `none` na `inline`. Po zakończeniu działania skryptu na stronie pojawi się tekst `**Hello interactive students!**` (Witajcie interaktywni uczniowie!).
@@ -62,13 +62,13 @@ Domyślnie JavaScript jest wykonywany w trybie blokowania parsera: gdy przegląd
 Co w przypadku skryptów dołączanych w tagu script? Weźmy poprzedni przykład i wydzielmy nasz kod do osobnego pliku:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
 </pre>
 
 Czy kolejność wykonywania będzie inna, gdy zamiast wbudowanego fragmentu kodu JavaScript użyjemy tagu `<script>`? Odpowiedź to oczywiście `nie`. Kod w obu rozwiązaniach ma jednakowy układ i działa tak samo. Przeglądarka musi wstrzymać pracę i wykonać skrypt, zanim przetworzy resztę dokumentu. Jeśli jednak **przeglądarka będzie musiała dodatkowo czekać, aż zewnętrzny plik JavaScript zostanie odczytany z dysku, pamięci podręcznej czy zdalnego serwera, to opóźni realizację krytycznej ścieżki renderowania o kolejne dziesiątki lub nawet tysiące milisekund.**
@@ -78,7 +78,7 @@ Na szczęście mamy wyjście awaryjne. Domyślnie JavaScript zawsze blokuje pars
 Jak to osiągnąć? To proste &ndash; oznaczymy skrypt atrybutem _async_:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
 </pre>
 
 Słowo kluczowe async w tagu script informuje przeglądarkę, że nie powinna blokować tworzenia modelu DOM w oczekiwaniu na udostępnienie skryptu. To znacznie poprawia wydajność.

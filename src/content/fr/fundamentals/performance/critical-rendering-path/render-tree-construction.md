@@ -45,7 +45,7 @@ Jusqu'à maintenant, nous avons calculé quels nœuds doivent être visibles, ai
 Pour définir la taille et la position exactes de chaque objet, le navigateur commence à la racine de l'arborescence d'affichage et la traverse pour calculer la géométrie de chaque objet sur la page. Prenons un exemple simple et concret :
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
 </pre>
 
 Le corps de la page ci-dessus contient deux éléments DIV imbriqués : le premier élément DIV (parent) définit la taille d'affichage du nœud à 50 % de la largeur de la fenêtre, et le second élément DIV contenu par le parent définit sa largeur à 50 % de cette du parent, soit 25 % de la largeur de la fenêtre !

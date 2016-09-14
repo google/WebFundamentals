@@ -241,7 +241,7 @@ listas para encontrar el valor que buscan, y deben limitarse solo a esas
 listas, el elemento`datalist` proporciona sugerencias a medida que el usuario escribe.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
 <!-- TODO: Verify note type! -->
@@ -651,7 +651,7 @@ en la segunda entrada para validar las dos entradas y configurar la respuesta
 apropiada.  Por ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" lang=javascript %}
 </pre>
 
 ##### Evite el envío de formularios que no son válidos
@@ -661,7 +661,7 @@ datos no válidos, debe filtrar el evento de envío y utilizar `checkValidity()`
 en el elemento del formulario para determinar si el formulario es válido.  Por ejemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" lang=javascript %}
 </pre>
 
 #### Muestra de comentarios en tiempo real
@@ -713,10 +713,10 @@ el estilo no válido mientras escribe. Para evitar esto, puede combinar la CSS (
 JavaScript para mostrar solo los estilos no válidos cuando el usuario ya visitó el campo.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" lang=css %}
 </pre>
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" lang=javascript %}
 </pre>
 
 <!-- TODO: Verify note type! -->
@@ -763,7 +763,7 @@ del resto.
 <img src="imgs/rac_flow.png" class="center" alt="Request autocomplete flow">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
 </pre>
 
 La función `requestAutocomplete` que aparece en el elemento del `form` le indica al
@@ -773,7 +773,7 @@ en el que se solicita el permiso del usuario para completar los campos y para sa
 desea incluir en el formulario.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
 </pre>
 
 Cuando `requestAutocomplete` finalice, la función ejecutará el evento

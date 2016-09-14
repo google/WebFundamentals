@@ -46,7 +46,7 @@ HTML 规范中指明了每一个事件的具体条件：什么时候触发，什
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
 </pre>
 
 上面的例子乍一看可能有点晕，但是它确实已经很简单了。Navigation Timing API 捕获所有相关的时间戳，而我们的代码只是等待 `onload` 事件触发 - 回忆一下，onLoad 事件在 domInteractive、domContentLoaded 和 domComplete 之后触发 - 然后计算各个时间戳之间的间隔。

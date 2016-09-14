@@ -72,7 +72,7 @@ Translated By:
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 아주 간단한 예제를 가지고 이야기해 봅시다. 어떤 텍스트와 간단한 이미지가 있는 단순한 HTML 페이지가 있습니다. 이 페이지를 브라우저는 어떻게 처리할까요?
@@ -104,7 +104,7 @@ DOM 트리가 준비되었으니 이제 페이지를 하면에 렌더링 할 수
 브라우저는 DOM을 구축하면서 문서의 head에 있는 외부 CSS 스타일시트를 참조하는 link 태그를 만납니다. 페이지를 렌더링하는 데 이 자원이 필요할 것이라고 판단한 브라우저는 즉각 자원을 요청하고, 요청의 결과로 아래의 콘텐츠가 돌아옵니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 물론 HTLM 마크업 내에 직접(inline) 스타일을 선언할 수도 있지만, CSS를 HTML에서 분리해서 콘텐츠와 디자인을 별도의 관심사로 처리할 수 있습니다. 이렇게 함으로써 디자이너는 CSS, 개발자는 HTML 등 디자인이 아닌 다른 부분에 집중할 수 있습니다.
@@ -174,7 +174,7 @@ Note: 여기서 잠깐, 'visibility: hidden'과 'display: none'이 다르다는 
 객체의 정확한 크기와 위치를 파악하기 위해서 브라우저는 렌더 트리의 루트에서부 각 노드를 순회하면서 페이지에 있는 각 객체의 형상을 계산합니다. 간단한 실습 예제를 살펴봅시다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
 </pre>
 
 위에 있는 예제의 body는 두 개의 중첩 div를 가지고 있습니다. 첫번째 부모 div의 width는 뷰포트 width의 50%입니다. 자식 div의 width는 부모가 가지고 있는 width의 50%입니다. 즉, 뷰포트 width의 25%인 셈이죠.
@@ -298,7 +298,7 @@ Translated By:
 자바스크립트는 브라우저에서 실행되고 페이지 동작에 관한 모든 면에 대해 수정이 가능한 동적인 언어입니다. 우리는 DOM 트리로부터 요소를 추가하거나 삭제함으로서 페이지 컨텐츠를 수정할 수 있고 각 요소의 CSSOM 속성들을 수정할 수 있습니다. 그리고 유저의 입력을 다루거나 더 많은 것들도 할 수 있습니다. 이러한 동작을 보여주기 위해, 예전의 " Hello world" 인라인 스크립트 예제를 더 확장시켜 봅시다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
 </pre>
 
 * 자바스크립트는 우리가 DOM에 접근할 수 있게 해주고 숨겨진 span 노드도 참조할 수 있도록 해줍니다. 그 숨겨진 노드는 아마 렌더트리에서 보이지 않을것 입니다. 그러나 DOM에는 여전히 존재합니다. 그렇게 한번 참조를 가지게 되면, 우리는 텍스트도 수정하고(.textContent를 통해) 심지어 계산된 디스플레이 스타일 속성도 'none'에서 'inline'으로 덮어쓰기 할 수 있습니다. 한번에 모든것이 말한대로 되었다면, 우리의 페이지는 "**Hello interactive students!**" 를 보여줄 것 입니다.
@@ -336,13 +336,13 @@ Translated By:
 스크립트 태그를 통해 포함된 스크립트는 어떨까요? 우리의 이전 예제를 별도의 파일이 되도록 코드를 분리해보겠습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
 </pre>
 
 우리가 인라인 자바스크립트 조각을 사용하는 대신 `<script>`를 사용하면 실행 순서가 달라질 것이라 기대하시나요? 물론 대답은 "아니요"입니다. 그것들은 동일하며 같은 방식으로 동작 해야 합니다. 두가지 경우 모두 브라우저는 문서의 나머지 부분을 프로세스 하기 전에 정지하고 자바스크립트를 실행합니다. 그러나, **브라우저의 외부 자바스크립트파일인 경우에도 마찬가지로 정지하고 스크립트가 원격 서버 또는 캐쉬, 디스크로 부터 받아오기 까지 기다립니다. 그것들은 크리티컬 렌더링 패스에 몇 초의 시간을 더할 수도 있습니다.**
@@ -352,7 +352,7 @@ Translated By:
 그래서 어떻게 이러한 트릭을 적용할까요? 매우 간단합니다 우리의 스크립트를 _async_ 표시해주면 됩니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
 </pre>
 
 비동기 키워드를 스크립트에 추가하는 것은 스크립트를 다운로드 받고 이용가능할 때 까지 기다리는 동안 DOM 생성을 막지 말라고 브라우저에게 말해주는것 입니다. 이것이 성능의 커다란 개선을 가져다 줍니다.
@@ -403,7 +403,7 @@ HTML 명세서는 각각의 모든 이벤트에 대해서 언제 발생되어야
 <span></span>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
 </pre>
 
 위의 예제는 처음 보면 조금은 벅차보일 수 있지만, 사실은 매우 간단합니다. 네비게이션 타이밍 API는 모든 관련있는 타임스탬프를 캡쳐하고 우리의 코드는 `onload` 이벤트가 발생하기를 기다립니다. `onload` 이벤트는 `domInteractive`, `domContentLoaded` 그리고 `domComplete` 이벤트 후에 오는것을 상기하세요. 그리고 다양한 타임스탬프 사이의 차이점을 계산합니다.
@@ -442,7 +442,7 @@ Translated By:
 ### Hello World 경험하기
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 간단하게 기본적인 HTML 마크업과 한 개 이미지 파일로 시작을 합니다. - CSS랑 Javascript는 포함하지 않습니다 -
@@ -465,7 +465,7 @@ HTML 컨텐츠를 사용할 수 있게되면, 브라우저는 바이트를 토�
 "Hello World experience" 페이지의 화면은 간단해 보일지 모릅니다. 하지만, 이 화면을 그리기 위해 겉에서 보이지 않지만 브라우저 내에서 많은 것들이 동작을 하고 있습니다. 이처럼, 실습에서는 HTML외에 다른 것도 필요합니다: CSS 스타일시트와 페이지에 상호 인터렉션을 추가하기 위해 한 개 이상의 스크립트가 필요합니다. 두 개 모두 페이지에 추가해보고 어떤 일이 일어나는지 화인해봅니다:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
 </pre>
 
 _Javascript와 CSS를 추가하기 전:_
@@ -505,7 +505,7 @@ _인라인 Javascript:_
 첫 번째, 모든 인라인 스크립트가 parser blocking 이라는 것을 기억하세요. 하지만 외장 스크립트에 "async" 키워드를 추가하면 parser를 방해하지 않습니다. 인라인 스크립트를 취소하고 이렇게 한번 해볼까요.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
 </pre>
 
 _Parser-blocking (외장) JavaScript:_
@@ -521,7 +521,7 @@ _Async (외장) JavaScript:_
 대안으로, 다른 방법으로 접근하여 인라인 CSS, Javascript를 사용할 수 있습니다:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, inline CSS, inline JS" class="center">
@@ -538,7 +538,7 @@ _Async (외장) JavaScript:_
 이 페이지를 렌더링 하기 위해서 브라우저는 요청을 초기화 하고, HTML 다큐멘트가 다운될 때 까지 기다리고, 파싱하고, DOM을 생성하고, 마지막으로 화면에 뿌려줍니다:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Hello world CRP" class="center">
@@ -548,7 +548,7 @@ _Async (외장) JavaScript:_
 자 이제 같은 구조에서 외장 CSS 파일만 추가된 페이지를 봅시다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
@@ -578,7 +578,7 @@ CSS는 브라우저가 HTML 다큐멘트를 처리한 후에만 페치됩니다,
 자 이제 Javascript 파일을 여기에 추가해봅시다!
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
 </pre>
 
 페이지에 외부 Javascript 자원인 app.js를 추가하였습니다, 아마 다들 아시겠지만 이건 parser blocking (달리 말하면, 크리티컬 리소스) 입니다.
@@ -602,7 +602,7 @@ CSS는 브라우저가 HTML 다큐멘트를 처리한 후에만 페치됩니다,
 그 중 한 가지가 "async" 속성을 스크립트 태그에 추가하여 파싱을 방해하지 않도록 하는 것입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="DOM, CSSOM, async JavaScript CRP" class="center">
@@ -618,7 +618,7 @@ CSS는 브라우저가 HTML 다큐멘트를 처리한 후에만 페치됩니다,
 마지막으로, CSS 스타일시트가 프린트 할 시에만 필요하다고 하면 어떻게 될까요?
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" class="center">

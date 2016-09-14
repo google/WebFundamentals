@@ -45,7 +45,7 @@ HTML belirtimi, her olay için belirli kosullar getirir: Olayin ne zaman etkinle
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
 </pre>
 
 Yukaridaki örnek ilk bakista biraz ürkütücü görünebilir, ancak gerçekte oldukça basittir. Gezinme Zamanlamasi API'si, ilgili tüm zaman damgalarini yakalar ve bizim kodumuz yalnizca `onload` olayinin etkinlesmesini bekler. Onload olayinin domInteractive, domContentLoaded ve domComplete olaylarindan sonra etkinlestigini hatirlayin. Kodumuz, daha sonra çesitli zaman damgalari arasindaki farki hesaplar.

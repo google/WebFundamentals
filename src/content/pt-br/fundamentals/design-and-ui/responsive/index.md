@@ -225,7 +225,7 @@ Vamos analisar um exemplo:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Quando o navegador tiver entre <b>0 px</b> e <b>640 px</b> de largura, o atributo `max-640px.css` será aplicado.
@@ -306,7 +306,7 @@ Em seguida, redimensione o navegador até que haja muitos espaços em branco ent
 Para inserir um ponto de quebra em 600 pixels, crie duas novas planilhas de estilo, uma para usar quando o navegador tiver 600 px ou menos, outra para quando ele tiver mais de 600 px.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Por fim, configure novamente o código CSS.  Neste exemplo, colocamos os estilos comuns como fontes, ícones, posicionamento básico e cores em `weather.css`.  Os layouts específicos para a tela pequena são colocados em `weather-small.css`, e os estilos definidos para a tela grande são inseridos em `weather-large.css`.
@@ -324,7 +324,7 @@ Além de escolher os principais pontos de quebra quando o layout é alterado de 
 Começaremos otimizando o layout de tela pequena.  Neste caso, aumentaremos a fonte quando a largura da janela de visualização for maior de 360 px.  Em segundo lugar, quando houver espaço suficiente, poderemos separar as previsões de temperatura alta e baixa para que elas fiquem na mesma linha, em vez de uma sobre a outra.  E vamos aumentar levemente os ícones da página.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
 </pre>
 
 <div class="mdl-grid">
@@ -340,7 +340,7 @@ Começaremos otimizando o layout de tela pequena.  Neste caso, aumentaremos a fo
 Para telas grandes, é mais indicado definir a largura máxima do painel de previsão para que ele não ocupe toda a largura da tela.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
 </pre>
 
 ## Otimize o texto para aumentar a legibilidade
@@ -360,7 +360,7 @@ A teoria clássica da legibilidade sugere que uma coluna ideal deve conter 70 a 
 Vamos analisar em mais detalhes o exemplo de postagem de blog acima.  Em telas pequenas, a fonte Roboto com um em funciona de forma otimizada, formando dez palavras por linha, mas telas maiores exigem um ponto de quebra. Nesse caso, se a largura do navegador for superior a 575 px, a largura ideal para o conteúdo é 550 px.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
 </pre>
 
 ### Nunca esconda totalmente o conteúdo

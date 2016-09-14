@@ -45,7 +45,7 @@ Die HTML-Spezifikation gibt die Bedingungen für jedes einzelne Ereignis vor: wa
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
 </pre>
 
 Das obige Beispiel erscheint vielleicht ein wenig einschüchternd, ist in Wirklichkeit jedoch ziemlich einfach.  Die Navigation Timing API erfasst alle relevanten Zeitstempel und unser Code wartet einfach auf den Start des `onload`-Ereignisses und berechnet die Differenz zwischen den verschiedenen Zeitstempeln. Beachten Sie, dass das onload-Ereignis nach domInteractive, domContentLoaded und domComplete ausgelöst wird.

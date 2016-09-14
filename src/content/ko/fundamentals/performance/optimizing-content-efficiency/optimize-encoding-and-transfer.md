@@ -75,7 +75,7 @@ Translated By:
 불필요한 데이터와 중복 데이터를 압축하는 최선의 방법은 그 것들을 모두 제거하는 것입니다. 물론, 우리가 그냥 임의의 데이터를 지울 수는 없습니다. 하지만, 특정 데이터 형식과 속성을 알 수 있는 특정 컨텍스트에서, 실제 의미에 영향을 주지 않고도 페이로드의 크기를 상당하게 줄일 수 있습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
 </pre>
 
 위 간단한 HTML 페이지를 보면, HTML 마크업, CSS 스타일, Javascript 와 같이 세개의 다른 컨텐츠 타입이 포함되어 있습니다. HTML 마크업, CSS 규칙, Javascript 콘텐츠를 유효하게 하려면 각기 다른 규칙들을 사용합니다, 주석처리와 기타도 마찬가지입니다. 우리가 어떻게 이 페이지의 크기를 줄일 수 있을까요?
@@ -86,7 +86,7 @@ Translated By:
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
 
 위 스텝들을 적용하고 나니, 페이지의 문자수가 406에서 150으로 감소되었습니다 - 약 63%의 압축이 된 것이다! 분명히, 이건 가독성이 좋지 않습니다. 하지만, 꼭 가독성을 고려할 필요는 없습니다: 원래의 페이지를 "개발용" 으로 유지하고, 우리가 페이지를 웹사이트에 릴리즈 할 때 마다 위 스텝처럼 최적화 작업을 하면 됩니다.

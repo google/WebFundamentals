@@ -25,7 +25,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 首先，我們從最簡單的情況開始講解：一個純 HTML 網頁，只包含一些文字和一張圖片。瀏覽器需要做什麼才能處理這個簡單的網頁呢？
@@ -57,7 +57,7 @@ DOM 樹狀結構準備就緒後，我們是否就有足夠的資訊在螢幕上�
 瀏覽器建構這個簡單網頁的 DOM 時，在文件的 head 區段會遇到一個 link 標記，用於參照外部 CSS 樣式表 style.css。瀏覽器預期將會需要這項資源來轉譯網頁，因此會立即發出對這項資源的請求，而系統會傳回以下內容：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 當然，我們本來可以直接在 HTML 標記中聲明樣式 (內嵌)，但是如果將 CSS 與 HTML 分開，我們就可以將內容和設計分別進行處理：設計人員可以處理 CSS，開發人員則可以處理 HTML 等等。

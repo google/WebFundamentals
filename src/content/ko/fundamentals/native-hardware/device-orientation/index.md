@@ -135,7 +135,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 개체에 연결합니다. 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
 </pre>
 
 ### 장치 방향 이벤트 처리
@@ -187,7 +187,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 개체에 연결합니다. 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
 </pre>
 
 ### 장치 모션 이벤트 처리
@@ -290,7 +290,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 계산합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
 </pre>
 
 시작! 버튼을 누른 후 사용자에게 점프하라고 지시합니다!  그 동안

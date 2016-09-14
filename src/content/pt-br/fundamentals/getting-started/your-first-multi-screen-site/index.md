@@ -59,7 +59,7 @@ Também criamos uma arquitetura básica de informações e um layout para janela
 Isso pode ser facilmente convertido nas seções básicas da estrutura de uma página que usaremos em todo este projeto.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
 </pre>
 
 ### Adicione conteúdo à página
@@ -76,7 +76,7 @@ O título e o formulário de notificação de solicitação são os componentes 
 No título, adicione texto simples para descrever o curso:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
 </pre>
 
 Também é necessário preencher o formulário.
@@ -87,7 +87,7 @@ Todos os formulários devem ter rótulos e marcadores de posição para que os u
 Adicionaremos tipos de semântica para agilizar e simplificar a inserção de dados pelos usuários em dispositivos móveis.  Por exemplo, ao inserir o número de telefone, o usuário verá apenas o teclado numérico.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
@@ -98,7 +98,7 @@ A seção `Vídeo e informações` incluirá um conteúdo mais detalhado.
 Ela oferecerá uma lista de recursos do nosso produto e um marcador de posição de vídeo que mostra aos usuários a utilização do produto.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
 </pre>
 
 Os vídeos são muito usados para descrever conteúdo de forma mais interativa e também para demonstrar um produto ou conceito.
@@ -111,7 +111,7 @@ Ao seguir as práticas recomendadas, você conseguirá integrar vídeos ao seu s
 * Adicione um texto substituto para permitir que os visitantes façam o download do vídeo se não conseguirem visualizá-lo na janela.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -128,7 +128,7 @@ A seção `Imagens` da nossa página é um conjunto de imagens de conteúdo.
 As imagens de conteúdo são importantes para transmitir o significado da página. Pense nelas como as imagens usadas em artigos de jornais. As imagens usadas são fotos dos tutores do projeto: Chris Wilson, Peter Lubbers e Sean Bennet.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
 </pre>
 
 As imagens são dimensionadas em 100% da largura da tela. Essa formatação funciona com eficiência em dispositivos com tela estreita e não apresenta a mesma eficácia em janelas de visualização largas (como computadores).  Essa questão será abordada na seção de design ágil.
@@ -146,7 +146,7 @@ A última seção é uma tabela simples que usamos para mostrar dados estatísti
 As tabelas devem ser usadas unicamente para apresentar dados, por exemplo, em matrizes de informações.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
 </pre>
 
 #### Adicione um rodapé
@@ -156,7 +156,7 @@ A maioria dos sites precisa de um rodapé para exibir informações como Termos 
 Em nosso site, incluiremos links para os Termos e Condições, uma página com informações de contato e nossos perfis nas mídias sociais.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
 </pre>
 
 ### Índice
@@ -220,7 +220,7 @@ Sem ela, o site não funcionará de forma eficaz em um dispositivo móvel.
 A janela de visualização indica ao navegador que a página precisa ser redimensionada para se ajustar ao tamanho da tela.  Existem várias configurações de janela de visualização que podem ser especificadas para controlar a exibição da página. Por padrão, recomendamos:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
 </pre>
 
 A janela de visualização fica no título do documento e só precisa ser informada uma vez.
@@ -320,11 +320,11 @@ O recipiente será um `div` simples na seguinte forma:
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
 </pre>
 
 ### Altere o espaçamento e reduza o tamanho do texto
@@ -336,7 +336,7 @@ Em uma janela de visualização maior, é preciso considerar que o usuário prov
 Na página do produto, aumentaremos o espaçamento dos elementos da seção. Para isso, manteremos o espaçamento em 5% da largura.  Também aumentaremos o tamanho dos cabeçalhos de cada uma das seções.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 ### Adapte os elementos à janela de visualização mais larga
@@ -357,11 +357,11 @@ A janela de visualização estreita significa que temos menos espaço horizontal
 Para fazer um uso mais efetivo do espaço horizontal disponível, precisamos quebrar o fluxo linear do cabeçalho e mover o formulário e a lista para que fiquem lado a lado.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -379,7 +379,7 @@ O vídeo na interface da janela de visualização estreita foi projetado para oc
 O elemento de vídeo precisa sair do fluxo vertical da janela de visualização estreita e ser exibido lado a lado com a lista do conteúdo em uma janela de visualização larga.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
 </pre>
 
 #### Divida as imagens em blocos
@@ -391,7 +391,7 @@ Para fazer com que as imagens sejam exibidas de forma correta em uma janela de v
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
 </pre>
 
 #### Torne as imagens mais responsivas ao DPI
@@ -428,7 +428,7 @@ Ao criar conteúdo primeiramente para dispositivos móveis, é mais difícil rem
 Dessa forma, temos uma quebra limpa e consistente.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
 </pre>
 
 ### Finalização

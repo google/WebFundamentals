@@ -24,7 +24,7 @@ JavaScript, sayfanin neredeyse her yönünü degistirmemize olanak tanir: içeri
 JavaScript, tarayicinin içinde çalisan dinamik bir dildir ve sayfa davranisiyla ilgili neredeyse her unsuru degistirmemize olanak tanir: DOM agacindan ögeler ekleyerek veya bu ögeleri kaldirarak sayfadaki içerigi degistirebiliriz, her bir ögenin CSSOM özelliklerini degistirebiliriz, kullanici girisini isleyebiliriz ve daha birçok islem yapabiliriz. Bunu çalisirken göstermek için önceki `Herkese Merhaba` örnegimizi basit bir satir içi komut dosyasiyla genisletelim:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
 </pre>
 
 * JavaScript, DOM'ye erismemize ve gizli span dügümüne referansi çikarmamiza olanak tanir. Dügüm, olusturma agacinda görünmeyebilir, ancak DOM'de bulunmaya devam eder! Daha sonra, referansi aldigimizda metnini (.textContent araciligiyla) degistirebilir, hatta hesaplanmis görüntü stili özelligini geçersiz kilip `none` yerine `inline` degerine ayarlayabiliriz. Her seyin sonunda, sayfamiz artik `**Merhaba etkilesimli ögrenciler!**` mesajini görüntüleyecek.
@@ -62,13 +62,13 @@ Varsayilan olarak, JavaScript yürütmesi `ayristirici engellemesi`dir: Tarayici
 Bir script etiketi araciligiyla eklenecek komut dosyalarina ne dersiniz? Önceki örnegimizi alalim ve kodumuzu ayri bir dosyaya çikartalim:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
 </pre>
 
 Satir içi JavaScript snippet'i kullanmak yerine bir `<script>` etiketi kullandigimizda yürütme sirasinin farkli olmasini bekler misiniz? Elbette, bunlar ayni olduklari ve ayni sekilde davranmalari gerektigi için yanit `hayir` olacaktir. Her iki durumda da tarayicinin duraklamasi ve dokümanin geri kalanini islemek için komut dosyasini yürütmesi gerekecektir. Bununla birlikte, **bir harici JavaScript dosyasinin olmasi durumunda, tarayicinin yine duraklamasi ve komut dosyasinin diskten, önbellekten veya bir uzak sunucudan getirilmesini beklemesi gerekir. Bu da kritik olusturma yoluna binlerce milisaniyeye varan bir gecikme ekleyebilir.**
@@ -78,7 +78,7 @@ Ancak iyi bir haberimiz var, bunun için bir imdat çikisimiz bulunuyor! Varsayi
 Peki, bu hileyi nasil gerçeklestirecegiz? Oldukça basit, komut dosyamizi _async_ olarak isaretleyebiliriz:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
 </pre>
 
 async (zaman uyumsuz) anahtar kelimesinin komut dosyasina eklenmesi tarayiciya, komut dosyasinin kullanilabilir hale gelmeyi beklerken DOM yapimini engellememesi gerektigini bildirir. Bu, büyük bir performans kazanci saglar!

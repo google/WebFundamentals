@@ -45,7 +45,7 @@ A especificação de HTML determina as condições específicas de cada evento: 
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
 </pre>
 
 O exemplo acima pode parecer intimidante à primeira vista, mas na verdade ele é bastante simples. A API de tempo de navegação captura todos os carimbos de data e hora relevantes, e nosso código simplesmente espera que o evento `onload` seja acionado &mdash; lembre que o evento onload é acionado depois de domInteractive, domContentLoaded e domComplete &mdash; e computa a diferença entre os diferentes carimbos de data e hora.

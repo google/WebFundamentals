@@ -228,7 +228,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * ブラウザの幅が <b>0px</b>～<b>640px</b> の場合、max-640px.css が適用されます。
@@ -310,7 +310,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 600px にブレークポイントを設定するには、2 つのスタイルシートを新たに作成して、そのうちの 1 つをブラウザの幅が 600px 以下の場合に使用し、もう 1 つを 600px より広い場合に使用します。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 最後に、CSS をリファクタリングします。この例では、フォント、アイコン、基本的な配置、色などの共通のスタイルが weather.css に記述されています。そのうえで、小さい画面用の具体的なレイアウトが weather-small.css に、大きい画面用のスタイルが weather-large.css に記述されています。
@@ -328,7 +328,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 まず、小さい画面のレイアウトを最適化します。このケースでは、ビューポートの幅が 360px を超えた際にフォントを大きくするようにします。次に、十分なスペースがある場合に、2 段重ねで表示されている最高気温と最低気温を分割し、同じ行に横に並べて表示します。また、天気のアイコンを少し大きくします。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
 </pre>
 
 <div class="mdl-grid">
@@ -344,7 +344,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 大きい画面の場合も同様に、予報パネルが画面幅いっぱいまで広がらないよう、予報パネルの最大幅を制限することをおすすめします。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
 </pre>
 
 ### テキストを読みやすいよう最適化する
@@ -364,7 +364,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 上記のブログ記事の例を詳しく見てみましょう。小さい画面では、1em の Roboto フォントで 1 行あたりの語数がちょうど 10 語になりますが、大きい画面ではブレークポイントが必要となります。この例では、ブラウザの幅が 575px を超えた場合の最適なコンテンツの幅は 550px です。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
 </pre>
 
 ### コンテンツを完全に非表示にしないようにする

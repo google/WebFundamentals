@@ -59,7 +59,7 @@ We hebben ook een architectuur van onbewerkte informatie en lay-out verkregen vo
 U kunt dit gemakkelijk converteren naar de onbewerkte gedeelten van een geraamtepagina die we voor de rest van het project zullen gebruiken.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
 </pre>
 
 ### Inhoud aan de pagina toevoegen
@@ -76,7 +76,7 @@ De kop en het aanmeldingsformulier vormen de essentiële onderdelen van onze pag
 Voeg aan de kop eenvoudige tekst toe om de cursus te beschrijven:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
 </pre>
 
 We moeten ook het formulier invullen.
@@ -87,7 +87,7 @@ Alle formulieren moeten labels en placeholders bevatten zodat gebruikers zich ge
 We voegen semantische typen toe zodat gebruikers snel en eenvoudig inhoud kunnen invoeren op een mobiel apparaat. Wanneer de gebruiker bijvoorbeeld een telefoonnummer invoert, wordt alleen een toetsenblok weergegeven.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
@@ -98,7 +98,7 @@ Het gedeelte Video en informatie van inhoud is meer uitgebreid.
 Het bevat een lijst met opsommingstekens van kenmerken van onze producten en ook een placeholder voor video die weergeeft hoe ons product voor de gebruiker werkt.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
 </pre>
 
 Video`s worden vaak gebruikt om inhoud op een interactievere manier te beschrijven en om een product of een concept te demonstreren.
@@ -111,7 +111,7 @@ Door de best practices te volgen kunt u video gemakkelijk in uw website integrer
 *  Voeg `fall-back`-tekst toe zodat gebruikers de video kunnen downloaden als ze deze niet in het venster kunnen afspelen.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -128,7 +128,7 @@ Het gedeelte Afbeeldingen in onze pagina is een verzameling van inhoudsafbeeldin
 Inhoudsafbeeldingen zijn heel belangrijk om de betekenis van de pagina weer te geven. Vergelijk ze met de afbeeldingen die in krantenartikelen worden gebruikt. De afbeeldingen die we gebruiken zijn foto`s van de lesgevers van het project: Chris Wilson, Peter Lubbers en Sean Bennet.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
 </pre>
 
 De afbeeldingen zijn ingesteld om aan te passen naar 100% van de breedte van het scherm. Dit werkt goed op apparaten met een smalle viewport, maar minder goed op apparaten met een brede viewport (bijvoorbeeld een desktop). We bespreken dit in het gedeelte over responsive design.
@@ -146,7 +146,7 @@ Het laatste gedeelte is een eenvoudige tabel die wordt gebruikt om specifieke st
 Tabellen mogen alleen worden gebruikt voor tabelgegevens, bijvoorbeeld matrices van informatie.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
 </pre>
 
 #### Een voettekst toevoegen
@@ -156,7 +156,7 @@ De meeste websites hebben een voettekst nodig voor inhoud zoals Algemene voorwaa
 Op onze website maken we gewoon een koppeling naar Algemene voorwaarden, een pagina Contact en onze sociale mediaprofielen.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
 </pre>
 
 ### Samenvatting
@@ -220,7 +220,7 @@ Zonder viewport werkt uw website niet goed op een mobiel apparaat.
 De viewport vertelt de browser dat de pagina moet worden aangepast om in het scherm te passen. Er zijn veel verschillende configuraties voor uw viewport die u kunt gebruiken zodat u de weergave van de pagina kunt beheren. Standaard raden we het volgende aan:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
 </pre>
 
 De viewport bevindt zich in de kop van het document en moet slechts eenmaal worden gedeclareerd.
@@ -321,11 +321,11 @@ De container is een eenvoudige `div` in het volgende formulier:
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
 </pre>
 
 ### De vulling aanpassen en de tekstgrootte verkleinen
@@ -337,7 +337,7 @@ Bij een bredere viewport moeten we er rekening mee houden dat de gebruiker waars
 Op onze productpagina verhogen we de vulling van de elementen in het gebied door in te stellen dat deze altijd 5% van de breedte behoudt. Bovendien vergroten we de grootte van de koppen voor elk gedeelte.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 ### Elementen aan een brede viewport aanpassen
@@ -358,11 +358,11 @@ De smalle viewport biedt ons veel minder horizontale ruimte om elementen op het 
 Om op een efficiëntere manier gebruik te maken van de horizontale ruimte van het scherm moeten we de lineaire flow van de kop doorbreken en het formulier en de lijst naast elkaar plaatsen.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -380,7 +380,7 @@ De video in de interface met smalle viewport is ontworpen zodat deze de volledig
 Het video-element moet in een brede viewport uit de verticale flow van de smalle viewport worden gehaald en naast de lijst met opsommingstekens van inhoud worden weergegeven.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
 </pre>
 
 #### De afbeeldingen naast elkaar plaatsen
@@ -392,7 +392,7 @@ Opdat de afbeeldingen er goed uitzien in een brede viewport, worden ze aangepast
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
 </pre>
 
 #### Afbeeldingen responsief voor dpi maken
@@ -429,7 +429,7 @@ Wanneer u eerst voor een mobiel apparaat bouwt, is het moeilijker om toegepaste 
 We verkrijgen dan een duidelijke en consistente onderbreking.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
 </pre>
 
 ### Afronden

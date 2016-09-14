@@ -58,7 +58,7 @@ Crawlers gebruiken meerdere methoden om een pagina te kunnen lezen en begrijpen.
 Hier is een voorbeeld:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/discovery-and-distribution/optimizing-social-discovery/_code/social-sites.html" region_tag="microdata" %}
+{% includecode content_path="web/fundamentals/discovery-and-distribution/optimizing-social-discovery/_code/social-sites.html" region_tag="microdata" %}
 </pre>
 
 De meeste metadata wordt geplaatst in de head van een pagina, maar microdata zit waar de context bestaat.
@@ -93,7 +93,7 @@ Om rich snippets te valideren op Google+ kan je deze tools gebruiken:
 De [Open Graph Protocol (OGP)](http://ogp.me/) levert Facebook de nodige metadata om web pagina's dezelfde functionaliteit te geven als andere Facebook objecten.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/discovery-and-distribution/optimizing-social-discovery/_code/social-sites.html" region_tag="ogp" %}
+{% includecode content_path="web/fundamentals/discovery-and-distribution/optimizing-social-discovery/_code/social-sites.html" region_tag="ogp" %}
 </pre>
 
 Wanneer dit in de <em>head</em> sectie van jouw pagina zit, wordt deze metadata gebruikt voor rich snippet informatie wanneer de pagina wordt gedeeld.
@@ -153,7 +153,7 @@ Om Twitter Card werkend te krijgen [moet je domein zijn goedgekeurd](https://dev
 Hier is een kort voorbeeld:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/discovery-and-distribution/optimizing-social-discovery/_code/social-sites.html" region_tag="twitter" %}
+{% includecode content_path="web/fundamentals/discovery-and-distribution/optimizing-social-discovery/_code/social-sites.html" region_tag="twitter" %}
 </pre>
 
 Door het toevoegen van de Twitter id aan twitter:site, zal Twitter deze informatie implementeren bij een gedeelde link.
@@ -174,7 +174,7 @@ Om je opmaak te valideren levert Twitter:
 Gegeven deze drie opties wordt in de praktijk meestal alle drie tegelijk geintegreerd in de webpagina. Hier is een voorbeeld:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/discovery-and-distribution/optimizing-social-discovery/_code/social-sites2.html" region_tag="best_practice" %}
+{% includecode content_path="web/fundamentals/discovery-and-distribution/optimizing-social-discovery/_code/social-sites2.html" region_tag="best_practice" %}
 </pre>
 
 Merk op dat microdata en OGP bepaalde opmaak delen:

@@ -68,7 +68,7 @@ Translated By:
 这就可以轻松转化出基础页面的大体分块，我们将在这个项目的剩下部分使用。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
 </pre>
 
 ### 添加页面内容
@@ -85,7 +85,7 @@ Note: 样式很快就能看到
 在标题中，添加简单文本来描述课程：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
 </pre>
 
 我们也需要填好表单。这是一个简单的表单，用于收集用户的名字，电话号码，以及何时回复他们。
@@ -99,7 +99,7 @@ Note: 样式很快就能看到
 内容的视频和信息分块较为深入。它有一个列表，点出我们的产品特性，还包括一个视频，展示我们的产品怎样适用用户。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
 </pre>
 
 视频在叙述内容时，通常交互性更强，因此经常用来展示产品或概念演示。
@@ -112,7 +112,7 @@ Note: 样式很快就能看到
 *  添加备选文本，如果用户在窗口中无法播放视频，就让他们下载。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -129,7 +129,7 @@ Note: 样式很快就能看到
 内容图片在传达页面意思时至关重要。把它们想象成新闻中的图片。我们用到的图片，是项目的导师照片：Chris Wilson, Peter Lubbers and Sean Bennet。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
 </pre>
 
 图片被设置为 100% 屏幕宽度。在窄视口设备上，这效果不差，但宽视口 (比如桌面) 中效果就会不佳。我们会在响应式设计中解决这个。
@@ -147,7 +147,7 @@ Note: 样式很快就能看到
 表格仅应该用于展示列表数据，即矩阵数据。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
 </pre>
 
 #### 添加一个页脚
@@ -157,7 +157,7 @@ Note: 样式很快就能看到
 我们的站点上，我们链接一个条款声明，一个联系页面，以及我们的社交媒体资料。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
 </pre>
 
 ### 总结
@@ -217,7 +217,7 @@ web 可以被各种设备访问，从小屏幕手机到大屏幕电视。每个�
 viewport 指示浏览器，页面需要缩放以适应屏幕。有许多不同的配置项供你指定给 viewport，用于控制页面显示。我们推荐一个默认值：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
 </pre>
 
 viewport 放在文档的头部，只需要声明一次。
@@ -317,11 +317,11 @@ Note: 你不需要一次移动所有元素，可以按需要做小的调整。
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
 </pre>
 
 ### 修改元素的内边距，减小文字大小
@@ -333,7 +333,7 @@ Note: 你不需要一次移动所有元素，可以按需要做小的调整。
 在我们的产品页中，我们将增加 section 元素的内边距，让它保持在宽度的 5%。我们同时也增加各分块头部的字体大小。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 ### 调整元素，适应宽视口
@@ -354,11 +354,11 @@ Note: 你不需要一次移动所有元素，可以按需要做小的调整。
 为了更有效地利用水平方向的屏幕空间，我们需要打破页头的线性流，移动表单，让它与列表并排。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -376,7 +376,7 @@ Note: 你不需要一次移动所有元素，可以按需要做小的调整。
 video 元素需要从窄视口的竖直流中移出，与列表内容并排显示。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
 </pre>
 
 #### 拼贴图片
@@ -388,7 +388,7 @@ video 元素需要从窄视口的竖直流中移出，与列表内容并排显�
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
 </pre>
 
 #### 让图片响应 DPI 
@@ -422,7 +422,7 @@ web 为 96dpi 的屏幕而建。但是随着移动设备的引入，我们看到
 在我们的站点中，我们为表格内容额外创建了一个断点。在移动先行的构建中，很难取消已经应用的样式。所以我们需要把窄视口的表格样式与宽视口的样式区分开来。这使得断点更为清晰，也更一致。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
 </pre>
 
 ### 尾声

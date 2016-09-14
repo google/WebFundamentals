@@ -240,7 +240,7 @@ description: На мобильных устройствах заполнять �
 списка, элемент `datalist` выдает подсказки по мере того, как пользователь выполняет ввод.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
 <!-- TODO: Verify note type! -->
@@ -770,7 +770,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 <img src="imgs/rac_flow.png" class="center" alt="Поток операций запроса автозаполнения">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
 </pre>
 
 Наличие функции `requestAutocomplete` в элементе `form` указывает браузеру,
@@ -780,7 +780,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 которые он хочет указать.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
 </pre>
 
 По завершении функция `requestAutocomplete` вызовет событие

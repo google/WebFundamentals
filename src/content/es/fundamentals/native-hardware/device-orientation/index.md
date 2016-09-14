@@ -131,7 +131,7 @@ son compatibles con el navegador.  Luego, coloque un agente de escucha en el obj
 que escucha los eventos de `deviceorientation`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
 </pre>
 
 ### Manejo de los eventos de orientación del dispositivo
@@ -183,7 +183,7 @@ son compatibles con el navegador.  Luego, coloque un agente de escucha en el obj
 que escucha los eventos de `devicemotion`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
 </pre>
 
 ### Manejo de los eventos de movimiento del dispositivo
@@ -286,7 +286,7 @@ de un objeto.  Por ejemplo, cuál es la aceleración máxima de una persona
 que está saltando.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
 </pre>
 
 Luego de presionar el botón Go!, se le indica al usuario que salte.  Durante ese tiempo,

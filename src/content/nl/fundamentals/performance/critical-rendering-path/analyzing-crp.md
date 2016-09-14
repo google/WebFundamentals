@@ -28,7 +28,7 @@ Tot slot nog één ding voordat we van start gaan... Tot nu toe hebben we ons en
 ## De Hallo wereld-ervaring
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 We beginnen met basis HTML-opmaak en een enkele afbeelding, geen CSS of JavaScript. Dit is het meest eenvoudige voorbeeld. Laten we nu de `Network timeline` (Netwerktijdlijn) openen in Chrome DevTools en de volgende bronwaterval bekijken:
@@ -49,7 +49,7 @@ De gebeurtenis `load` (ook bekend als `onload`) wordt geblokkeerd bij de afbeeld
 Onze pagina `Hallo Wereld-ervaring` ziet er misschien eenvoudig uit aan de oppervlakte, maar voordat de pagina wordt weergeven, worden er een heleboel stappen uitgevoerd die u niet kunt zien. In de praktijk hebben we ook meer nodig dan alleen de HTML: het is waarschijnlijk dat we een CCS-stijldocument en één of meer scripts hebben om enige interactie aan onze pagina toe te voegen. Laten beide aan de mix toevoegen en kijken wat er gebeurt:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
 </pre>
 
 _Voor het toevoegen van JavaScript en CSS:_
@@ -82,7 +82,7 @@ Er wordt één aanvraag minder gedaan, maar onze `onload`- en `DOMContentLoaded`
 Bedenk ten eerste dat alle inline scripts parserblokkerend zijn, maar dat we voor externe scripts het sleutelwoord `async` kunnen zetten om de parser te deblokkeren. Laten we het inline script eruit halen en dit eens proberen:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
 </pre>
 
 _Parserblokkerend (extern) JavaScript:_
@@ -98,7 +98,7 @@ Dat is veel beter. De gebeurtenis domContentLoaded begint kort nadat de HTML is 
 Er is ook nog een andere aanpak die we kunnen proberen: zowel CCS als JavaScript inline toevoegen:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, inline CSS, inline JS" class="center">
@@ -115,7 +115,7 @@ Laten we nu kijken of we een stap terug kunnen nemen en een aantal algemene pres
 De meest eenvoudige pagina bestaat enkel uit HTML-opmaak: geen CSS, geen JavaScript of andere soorten bronnen. Om deze pagina weer te geven moet de browser de aanvraag starten, wachten tot het HTML-bestand binnenkomt, dit parseren, het DOM opbouwen en tot slot de pagina weergeven op het scherm:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Hallo wereld CRP" class="center">
@@ -125,7 +125,7 @@ De meest eenvoudige pagina bestaat enkel uit HTML-opmaak: geen CSS, geen JavaScr
 Laten we nu dezelfde pagina bekijken, maar met een extern CSS-bestand:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
@@ -152,7 +152,7 @@ We hebben zowel de HTML als het CSS nodig om de weergaveboomstructuur op te bouw
 Laten we nu een extra JavaScript-bestand aan de mix toevoegen.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
 </pre>
 
 We hebben app.js toegevoegd. Dit is een extern JavaScript-item op de pagina en zoals we weten, is dit een parserblokkerende (dat wil zeggen kritieke) bron. Het is zelfs nog erger: om het JavaScript-bestand uit te voeren, wordt het proces weer geblokkeerd terwijl we wachten op het CSSOM. Onthoud dat JavaScript het CSSOM kan aanvragen en dat de browser daarom pauzeert totdat `style.css` is gedownload en het CSSOM is opgebouwd.
@@ -170,7 +170,7 @@ We hebben nu drie kritieke bronnen die in het totaal 11 KB aan kritieke bytes op
 Na het gesprek met de site-ontwikkelaars begrepen we dat het JavaScript dat we aan onze pagina hebben toegevoegd, niet blokkerend hoeft te zijn: we hebben een aantal analyses en andere code tot onze beschikking die de weergave van onze pagina helemaal niet hoeven te blokkeren. Nu we dit weten, kunnen we het kenmerk 'async' aan de scripttag toevoegen om de parser te deblokkeren:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="DOM, CSSOM, asynchroon JavaScript CRP" class="center">
@@ -186,7 +186,7 @@ Hierdoor heeft onze geoptimaliseerde pagina opnieuw maar twee kritieke bronnen (
 Laten we tot slot zeggen dat het CSS-stijlblad alleen nodig was voor het afdrukken. Wat zou dat betekenen?
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, niet-blokkerende CSS en asynchroon JavaScript CRP" class="center">

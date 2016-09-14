@@ -32,7 +32,7 @@ Entre los sitios que utilizan este patrón, se incluyen los siguientes:
  * [Future Friendly](http://futurefriendlyweb.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks" lang=css %}
 </pre>
 
 

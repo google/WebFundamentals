@@ -60,7 +60,7 @@ description: 無論是小螢幕手機或是大螢幕電視，使用者都能透�
 這份文件可輕鬆轉換成網頁骨架中的粗略區段，後續在這個專案中都會用到。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
 </pre>
 
 ### 將內容新增到網頁
@@ -77,7 +77,7 @@ Note: 樣式以後還會來
 在標題中，請簡單描述課程內容：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
 </pre>
 
 我們也需要填寫表單。
@@ -88,7 +88,7 @@ Note: 樣式以後還會來
 為方便使用者在行動裝置上輕鬆快速地輸入內容，我們會新增語意類型。舉例來說，當使用者輸入電話號碼時，應會看到撥號鍵盤。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
@@ -99,7 +99,7 @@ Note: 樣式以後還會來
 其中會顯示產品功能的項目符號列表，也會包含影片預留位置，讓使用者觀看產品實際運作的情形。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
 </pre>
 
 我們通常會透過影片以互動的方式說明內容，也常常使用影片示範產品使用方式或概念。
@@ -112,7 +112,7 @@ Note: 樣式以後還會來
 *  新增備用文字告知使用者，當無法在視窗中播放影片時，可自行下載。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -129,7 +129,7 @@ Note: 樣式以後還會來
 如要有效傳達網頁涵義，絕對少不了內容圖片。 想想報紙中的圖片就不難瞭解這類圖片的重要性。 我們使用的是專案教練 Chris Wilson、Peter Lubbers 和 Sean Bennet 的圖片。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
 </pre>
 
 這些圖片都已設為可放大成螢幕寬度。 這項設定非常適合檢視區較窄的裝置，但在檢視區較寬的裝置 (例如桌上型電腦)上效果較差。在探討回應式設計時，我們將會處理這項問題。
@@ -147,7 +147,7 @@ Note: 樣式以後還會來
 請在需要顯示表列式資料時 (例如格狀資訊) 才使用表格。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
 </pre>
 
 #### 新增頁尾
@@ -157,7 +157,7 @@ Note: 樣式以後還會來
 在我們的網站中，我們會提供《條款及細則》、聯絡資訊網頁和社交媒體個人資料頁面的連結。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
 </pre>
 
 ### 摘要
@@ -221,7 +221,7 @@ Note: 樣式以後還會來
 檢視區的作用是告知瀏覽器依據螢幕大小縮放網頁。您可以透過多項檢視區設定來控制網頁的顯示方式。我們建議您採用下列預設設定：
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
 </pre>
 
 檢視區位於文件的開頭，而且只需要宣告一次。
@@ -322,11 +322,11 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
 </pre>
 
 ### 修改間隙並縮小文字大小
@@ -338,7 +338,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 在我們的產品網頁中，我們會將間隙保持在寬度的 5%，藉此增加區段元素之間的空隙。我們也會增加每個區段標題的大小。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 ### 依照寬檢視區調整元素
@@ -359,11 +359,11 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 為了妥善運用水平螢幕空間，我們需要打破標題中的線性流程，並將表單和清單放在一起。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -381,7 +381,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 影片元素必須從窄檢視區的垂直流程移出，並與寬檢視區中的內容項目符號列表放在一起。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
 </pre>
 
 #### 拼貼圖片
@@ -393,7 +393,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
 </pre>
 
 #### 讓圖片回應 DPI
@@ -430,7 +430,7 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 如此一來，該中斷的地方都會精確一致。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
 </pre>
 
 ### 總結

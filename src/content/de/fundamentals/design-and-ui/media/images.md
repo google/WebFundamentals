@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ein Bild sagt mehr als 1000 Worte, und Bilder spielen eine sehr wichtige Rolle auf jeder einzelnen Seite. Leider stellen sie aber ebenso einen Großteil des Volumens dar, das heruntergeladen wird. Mit einem responsiven Webdesign können sich nicht nur unsere Layouts Gerätecharakteristiken anpassen, sondern ebenso die Bilder.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-04-29 #}
 
 # Bilder {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -28,7 +27,6 @@ In anderen Fällen sind möglicherweise noch drastischere Änderungen erforderli
 
 
 ## Responsive Images
-<!-- TODO: Verify Udacity course fits here -->
 <div class="attempt-right">
   <figure>
     <img src="img/udacity-ri.jpg">
@@ -41,23 +39,16 @@ Learn how to work with images on the modern web, so that your images look great 
 
 
 
-
-
-
-
 ## Bilder im Markup 
-
-
-
 
 Das `img`-Element erfüllt viele Funktionen. Es lädt Inhalte herunter, decodiert sie und zeigt sie an. Darüber hinaus unterstützen moderne Browser eine große Anzahl an Bildformaten. Die Nutzung von Bildern, die auf allen Geräten funktionieren, unterscheidet sich im Vergleich zu Desktopcomputern nicht. Es sind lediglich ein paar kleinere Handgriffe nötig, um eine gute Erfahrung zu gewährleisten.
 
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Nutzen Sie relative Größen für Bilder, um zu verhindern, dass diese sich versehentlich über die Container-Grenzen hinweg erstrecken.'
-- 'Verwenden Sie das <code>picture</code>-Element, wenn Sie verschiedene Bilder auf Grundlage von Gerätecharakteristiken festlegen, auch Art Direction genannt.'
-- 'Verwenden Sie <code>srcset</code> und den <code>x</code>-Deskriptor im <code>img</code>-Element, um den Browser darauf hinzuweisen, welches das am besten geeignete Bild bei der Auswahl aus verschiedenen Pixeldichten ist.'
+- Nutzen Sie relative Größen für Bilder, um zu verhindern, dass diese sich versehentlich über die Container-Grenzen hinweg erstrecken.
+- Verwenden Sie das <code>picture</code>-Element, wenn Sie verschiedene Bilder auf Grundlage von Gerätecharakteristiken festlegen, auch Art Direction genannt.
+- Verwenden Sie <code>srcset</code> und den <code>x</code>-Deskriptor im <code>img</code>-Element, um den Browser darauf hinzuweisen, welches das am besten geeignete Bild bei der Auswahl aus verschiedenen Pixeldichten ist.
 
 
 
@@ -77,21 +68,16 @@ Achten Sie darauf, dem `alt`-Attribut des `img`-Elements aussagekräftige Beschr
 
 ### Bilddarstellung mit `srcset` auf Geräten mit hohem DPI-Wert verbessern
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      Das <code>srcset</code>-Attribut erweitert das <code>img</code>-Element, indem es dafür sorgt, dass auf einfache Weise mehrere Bilddateien für verschiedene Gerätecharakteristiken bereitgestellt werden können. Ähnlich wie die native <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS-Funktion</a> <code>image-set</code> erlaubt <code>srcset</code> Browsern, abhängig von den Charakteristiken des jeweiligen Geräts das beste Bild auszuwählen, zum Beispiel ein 2x-Bild für ein 2x-Display, und in Zukunft möglicherweise auch ein 1x-Bild für ein 2x-Gerät, wenn nur eine geringe Bandbreite zur Verfügung steht.
-    </p>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Pzc5Dly_jEM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+Das <code>srcset</code>-Attribut erweitert das <code>img</code>-Element, indem es dafür sorgt, dass auf einfache Weise mehrere Bilddateien für verschiedene Gerätecharakteristiken bereitgestellt werden können. Ähnlich wie die native <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS-Funktion</a> <code>image-set</code> erlaubt <code>srcset</code> Browsern, abhängig von den Charakteristiken des jeweiligen Geräts das beste Bild auszuwählen, zum Beispiel ein 2x-Bild für ein 2x-Display, und in Zukunft möglicherweise auch ein 1x-Bild für ein 2x-Gerät, wenn nur eine geringe Bandbreite zur Verfügung steht.
+
+<div class="clearfix"></div>
+
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
@@ -108,26 +94,21 @@ Das Ändern von Bildern auf Grundlage von Gerätecharakteristiken ist auch als A
 <img class="center" src="img/art-direction.png" alt="Beispiel für Art Direction"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-<!-- TODO: Verify note type! -->
+
 Note: Das <code>picture</code>-Element wird von Browsern zunehmend unterstützt. Es ist zwar noch nicht in allen Browsern verfügbar, wir empfehlen aufgrund seiner guten Rückwärtskompatibilität und der möglichen Nutzung von <a href='http://picturefill.responsiveimages.org/'>Picturefill/Polyfill</a> aber dennoch seinen Einsatz. Weitere Informationen erhalten Sie auf der Website <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      Das <code>picture</code>-Element sollte verwendet werden, wenn eine Bildquelle mit verschiedenen Pixeldichten verfügbar ist oder ein responsives Design nach leicht unterschiedlichen Bildern auf einigen Bildschirmarten verlangt. Ähnlich wie beim <code>video</code>-Element können mehrere <code>source</code>-Elemente verwendet werden, wodurch abhängig von Medienabfragen oder dem Bildformat die Angabe verschiedener Bilddateien möglich wird.
-    </p>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+Das <code>picture</code>-Element sollte verwendet werden, wenn eine Bildquelle mit verschiedenen Pixeldichten verfügbar ist oder ein responsives Design nach leicht unterschiedlichen Bildern auf einigen Bildschirmarten verlangt. Ähnlich wie beim <code>video</code>-Element können mehrere <code>source</code>-Elemente verwendet werden, wodurch abhängig von Medienabfragen oder dem Bildformat die Angabe verschiedener Bilddateien möglich wird.
+
+<div class="clearfix"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/media.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 Im vorherigen Beispiel wird bei einer Browserbreite von mindestens 800 Pixeln entweder `head.jpg` oder `head-2x.jpg` verwendet, abhängig von der Auflösung des Geräts. Wenn der Browser zwischen 450 und 800 Pixeln breit ist, kommt entweder `head-small.jpg` oder `head-small-2x.jpg` zum Einsatz, wieder abhängig von der Auflösung des Geräts. Für Bildschirmbreiten mit weniger als 450 Pixeln und Rückwärtskompatibilität, bei denen das `picture`-Element nicht unterstützt wird, stellt der Browser stattdessen das `img`-Element dar, das immer verwendet werden sollte.
@@ -139,12 +120,12 @@ Wenn die endgültige Größe des Bilds nicht bekannt ist, kann es schwierig sein
 Statt eine feste Größe und Pixeldichte für Bilder festzulegen, kann die Größe aller bereitgestellten Bilder über das Hinzufügen eines Breitendeskriptors zusammen mit der Größe des Bildelements angegeben werden. So kann der Browser die effektive Pixeldichte automatisch berechnen und das beste Bild zum Herunterladen auswählen.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/sizes.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 Im vorherigen Beispiel wird ein Bild dargestellt, das die Hälfte der Breite des Darstellungsbereichs (sizes=50vw) aufweist. Abhängig von der Breite des Browsers und seinem Gerätepixelverhältnis wird ihm ermöglicht, das richtige Bild unabhängig davon auszuwählen, wie groß das Browserfenster ist. In der folgenden Tabelle ist zu sehen, welches Bild er Browser auswählen würde:
 
-<table class="mdl-data-table mdl-js-data-table">
+<table>
     <thead>
     <tr>
       <th data-th="Browserbreite">Browserbreite</th>
@@ -199,7 +180,7 @@ Im vorherigen Beispiel wird ein Bild dargestellt, das die Hälfte der Breite des
 In vielen Fällen ändert sich die Größe oder das Bild abhängig von den Layoutübergangspunkten der Website. So kann es bei kleinen Bildschirmen wünschenswert sein, die volle Breite des Darstellungsbereichs mit einem Bild abzudecken, während auf größeren Bildschirmen nur ein kleiner proportionaler Teil genutzt werden sollte. 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/breakpoints.html" region_tag="picture" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 Das `sizes`-Attribut im vorherigen Beispiel nutzt mehrere Medienabfragen, um die Größe des Bilds festzulegen. Wenn die Breite des Browsers über 600 Pixeln liegt, wird das Bild mit 25 % der Breite des Darstellungsbereichs angezeigt. Bei einer Breite zwischen 500 und 600 Pixeln nimmt es 50 % der Breite des Darstellungsbereichs ein. Unter 500 Pixeln wird die volle Breite in Anspruch genommen.
@@ -224,9 +205,8 @@ Ein gutes Beispiel für ein maximierbares Bild, das angetippt werden kann, läss
 Die [Methode für Komprimierte
 Bilder](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) stellt ein stark komprimiertes 2x-Bild für alle Geräte bereit, unabhängig von den tatsächlichen Funktionen des Geräts. Abhängig vom Bildtyp und der Komprimierungsstufe ist möglicherweise keine Veränderung am Bild wahrnehmbar, die Dateigröße verringert sich jedoch beträchtlich.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">      Siehe Beispiel</a>
+<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/compressive.html">Siehe Beispiel</a>
 
-<!-- TODO: Verify note type! -->
 Note: Bei der Nutzung der Komprimierung ist aufgrund der erhöhten Speicherbelastung und des erhöhten Aufwands beim Codieren Vorsicht geboten. Die Änderung der Größe für kleinere Bildschirme ist rechenintensiv und kann besonders auf Low-End-Geräten mit wenig Speicher und geringer Rechenkapazität Probleme verursachen.
 
 #### JavaScript-Bildersetzung
@@ -249,8 +229,8 @@ Die CSS-Eigenschaft `background` ist ein leistungsstarkes Tool für das Hinzufü
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Verwenden Sie das am besten zu den Charakteristiken der Anzeige passende Bild. Berücksichtigen Sie die Bildschirmgröße, die Geräteauflösung und das Seitenlayout.'
-- 'Ändern Sie für Anzeigen mit hohem DPI-Wert die <code>background-image</code>-Eigenschaft in CSS, indem Sie Medienabfragen mit <code>min-resolution</code> und <code>-webkit-min-device-pixel-ratio</code> verwenden.'
+- Verwenden Sie das am besten zu den Charakteristiken der Anzeige passende Bild. Berücksichtigen Sie die Bildschirmgröße, die Geräteauflösung und das Seitenlayout.
+- Ändern Sie für Anzeigen mit hohem DPI-Wert die <code>background-image</code>-Eigenschaft in CSS, indem Sie Medienabfragen mit <code>min-resolution</code> und <code>-webkit-min-device-pixel-ratio</code> verwenden.
 - Verwenden Sie `srcset` zur Bereitstellung von Bildern mit hoher Auflösung zusätzlich zu den 1x-Bildern im Markup.
 - Berücksichtigen Sie den Berechnungsaufwand beim Einsatz von JavaScript-Methoden zum Ersetzen von Bildern oder der Bereitstellung von stark komprimierten Bildern mit hoher Auflösung auf Geräten mit geringerer Auflösung.
 
@@ -262,7 +242,7 @@ Medienabfragen wirken sich nicht nur auf das Seitenlayout aus, sondern können a
 So wird im folgenden Beispiel für kleinere Bildschirme nur `small.png` heruntergeladen und auf die Inhalte des `div`-Containers angewendet, während für größere `background-image: url(body.png)` auf den Hauptteil und `background-image: url(large.png)` auf den Inhalt im `div`-Container angewendet wird.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/conditional-mq.html" region_tag="conditional" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
 ### `image-set` zur Bereitstellung von Bildern mit hoher Auflösung verwenden
@@ -282,7 +262,7 @@ entsprechend. Anders ausgedrückt: Der Browser geht davon aus, dass 2x-Bilder do
 Die Unterstützung für `image-set()` ist relativ neu und wird aktuell nur von Chrome und Safari mit dem Anbieterpräfix `-webkit` unterstützt. Darüber hinaus muss Sorge dafür getragen werden, dass ein Ersatzbild zur Verfügung steht, falls `image-set()` nicht unterstützt wird. Beispiel:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/image-set.html" region_tag="imageset" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
 Im vorherigen Beispiel wird das passende Element in Browsern, die `image-set` unterstützen, und ansonsten das 1x-Element geladen. Das Problem hierbei ist natürlich, dass in den meisten Browsern das 1x-Element geladen wird, solange die `image-set()`-Unterstützung bei Browsern gering ist.
@@ -302,7 +282,7 @@ Medienabfragen können Regeln auf Grundlage des [Gerätepixelverhältnisses](htt
 Chrome, Firefox und Opera unterstützen alle standardmäßig `(min-resolution: 2dppx)`, während Safari und Android-Browser beide die ältere Syntax mit Anbieterpräfix ohne `dppx`-Einheit benötigen. Denken Sie daran, dass diese Stile nur dann geladen werden, wenn das Gerät der Medienabfrage entspricht, und Sie Stile für den Grundfall festlegen müssen. Dies hat den Vorteil, dass eine Darstellung auch in dem Fall gewährleistet ist, dass der Browser keine auflösungsspezifischen Medienabfragen unterstützt.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/media-query-dppx.html" region_tag="mqdppx" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
 Sie können auch die `min-width`-Syntax nutzen, um abhängig von der Größe des Darstellungsbereichs alternative Bilder anzeigen zu lassen. Der Vorteil bei dieser Methode ist, dass das Bild nicht heruntergeladen wird, wenn keine Übereinstimmung mit der Medienabfrage gegeben ist. So wird `bg.png` nur dann heruntergeladen und auf das `body`-Element angewendet, wenn die Browserbreite mindestens 500 Pixel beträgt:
@@ -358,7 +338,7 @@ Für komplexere Symbolanforderungen eignen sich SVG-Symbole. Sie sind in der Reg
 &nbsp;
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/icon-svg.html" region_tag="iconsvg" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
 ### Symbolschriften mit Vorsicht verwenden
@@ -372,13 +352,13 @@ Symbolschriften sind zwar beliebt und leicht anwendbar, einige bergen jedoch im 
 * Wenn der Bereich nicht ordnungsgemäß festgelegt ist, kann die Datei riesig werden, obwohl nur eine kleine Teilmenge der verfügbaren Symbole verwendet wird. 
 
 
-{% link_sample _code/icon-font.html %}
+
 <img src="img/icon-fonts.png" class="center"
 srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Beispiel einer Seite, die Font Awesome für die Schriftartensymbole verwendet">
-{% endlink_sample %}
+
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/icon-font.html" region_tag="iconfont" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
 Es gibt Hunderte kostenloser und kostenpflichtiger Symbolschriften, darunter [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) und [Glyphicons](http://glyphicons.com/).
@@ -399,9 +379,9 @@ Bilder belegen in der Regel die meiste Bandbreite und darüber hinaus oft auch e
 
 ### TL;DR {: .hide-from-toc }
 - Verwenden Sie nicht einfach irgendein Bildformat. Setzen Sie sich mit den verschiedenen verfügbaren Formaten auseinander und nutzen Sie das am besten geeignete.
-- 'Nehmen Sie Schritte zur Bildoptimierung und -komprimierung in Ihren Prozess auf, um die Größe der Dateien zu reduzieren.'
-- 'Reduzieren Sie die Anzahl an HTTP-Anfragen, indem Sie häufig genutzte Bilder in Bild-Sprites platzieren.'
-- 'Ziehen Sie in Betracht, Bilder erst dann laden zu lassen, wenn sie sichtbar sind. So kann die Seite schneller geladen werden und belegt zu Anfang weniger Speicher.'
+- Nehmen Sie Schritte zur Bildoptimierung und -komprimierung in Ihren Prozess auf, um die Größe der Dateien zu reduzieren.
+- Reduzieren Sie die Anzahl an HTTP-Anfragen, indem Sie häufig genutzte Bilder in Bild-Sprites platzieren.
+- Ziehen Sie in Betracht, Bilder erst dann laden zu lassen, wenn sie sichtbar sind. So kann die Seite schneller geladen werden und belegt zu Anfang weniger Speicher.
 
 
 ### Das richtige Format wählen
@@ -432,9 +412,10 @@ Viele Tools bieten die Möglichkeit, eine weitere, verlustfreie Komprimierung f�
 
 CSS-Spriting ist eine Methode, bei der eine Anzahl an Bildern zu einem einzelnen Sprite-Block zusammengefügt wird. Einzelne Bilder können anschließend verwendet werden, indem das Hintergrundbild - der Sprite-Block - für ein Element angegeben und um eine Positionsangabe ergänzt wird, damit der richtige Abschnitt erscheint.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Im Beispiel verwendeter Sprite-Block"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Im Beispiel verwendeter Sprite-Block"></a>
+
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
 Spriting hat den Vorteil, dass die Anzahl an einzelnen Downloads reduziert wird, die bei mehreren Bildern anfallen, während eine Zwischenspeicherung weiterhin möglich ist.
@@ -444,11 +425,6 @@ Spriting hat den Vorteil, dass die Anzahl an einzelnen Downloads reduziert wird,
 Lazy Loading kann die Ladezeiten für lange Seiten mit vielen Bildern, die nur beim Scrollen sichtbar werden, stark reduzieren, indem Bilder entweder nur bei Bedarf oder erst dann geladen werden, wenn die Hauptinhalte fertig heruntergeladen und dargestellt wurden. Zusätzlich zur Leistungsverbesserung kann Lazy Loading Erfahrungen bieten, bei denen unbegrenztes Scrollen möglich ist.
 
 Achten Sie beim Erstellen von Seiten mit unbegrenztem Scrollen jedoch darauf, dass Inhalte erst dann geladen werden, wenn sie sichtbar werden. Suchmaschinen finden diese Inhalte möglicherweise nicht. Zudem bekommen Nutzer, die nach Informationen in der Fußzeile suchen, diese nie zu Gesicht, da ständig weitere Inhalte geladen werden.
-
-{% include shared/related_guides.liquid inline=true list=page.related-guides.optimize %}
-
-
-
 
 
 
@@ -463,7 +439,7 @@ Manchmal ist es besser, Bilder gar nicht zu nutzen. Verwenden Sie wann immer mö
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Verzichten Sie wann immer möglich auf Bilder und nutzen Sie stattdessen Browserfunktionen für Schatten, Farbverläufe, abgerundete Ecken usw.'
+- Verzichten Sie wann immer möglich auf Bilder und nutzen Sie stattdessen Browserfunktionen für Schatten, Farbverläufe, abgerundete Ecken usw.
 
 
 ### Text in Markup statt auf eingebetteten Bildern platzieren

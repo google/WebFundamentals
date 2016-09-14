@@ -228,7 +228,7 @@ Een voorbeeld:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Als de browser tussen <b>0px</b> en <b>640px</b> breed is, wordt `max-640px.css` toegepast.
@@ -309,7 +309,7 @@ Pas vervolgens de grootte van de browser aan tot er te veel witruimte is tussen 
 Als u op 600 pixels een breekpunt wilt invoegen, maakt u twee nieuwe stylesheets, één om te gebruiken wanneer de browser 600 pixels en kleiner is, en één wanneer de browser breder is dan 600 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Ten slotte moet u de CSS herstructureren. In dit voorbeeld hebben we de meest gebruikte stijlen, zoals lettertypen, pictogrammen, basisplaatsing, kleuren in `weather.css` geplaatst. Specifieke lay-outs voor het kleine scherm worden dan in `weather-small.css` geplaatst en stijlen voor grote schermen worden in `weather-large.css` geplaatst.
@@ -327,7 +327,7 @@ Wanneer de lay-out aanzienlijk verandert, kunt u voor grote breekpunten kiezen. 
 Laten we beginnen met het optimaliseren van de lay-out voor het kleine scherm. In dit geval kunnen we het lettertype versterken wanneer de viewport breder is dan 360 pixels. Wanneer er genoeg ruimte is, kunnen we daarna de hoge en lage temperatuur van elkaar scheiden zodat ze zich op dezelfde regel bevinden, in plaats van boven elkaar. Bovendien kunnen we de weerspictogrammen een beetje groter maken.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
 </pre>
 
 <div class="mdl-grid">
@@ -343,7 +343,7 @@ Laten we beginnen met het optimaliseren van de lay-out voor het kleine scherm. I
 Voor de grote schermen beperkt u de maximale breedte van het paneel met de voorspelling zodat dit niet de hele breedte van het scherm inneemt.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
 </pre>
 
 ### Optimaliseer tekst voor het lezen
@@ -363,7 +363,7 @@ Volgens de klassieke theorie over leesbaarheid moet een ideale kolom 70 tot 80 t
 Laten we het bovenstaande blogbericht nader bekijken. Op kleinere schermen werkt het lettertype Roboto perfect: we zien 10 woorden per regel. Op grotere schermen is er echter een breekpunt nodig. Als de browser breder is dan 575 pixels, is de ideale breedte voor de inhoud 550 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
 </pre>
 
 ### Verberg inhoud nooit helemaal

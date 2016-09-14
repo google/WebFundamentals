@@ -45,7 +45,7 @@ Nesse momento, já calculamos que nós devem ser visíveis e seus estilos comput
 Para determinar o tamanho e a posição exata de cada objeto, o navegador começa na raiz da árvore de renderização e a analisa para computar a geometria de cada objeto da página. Analisaremos um exemplo prático:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
 </pre>
 
 O corpo da página acima contém dois divs aninhados: o primeiro div (primário) define o tamanho da exibição do nó como 50% da largura da janela de visão, e o segundo div contido pelo primário define sua largura como 50% da largura do primário, ou seja 25% da largura da janela de visão.

@@ -212,7 +212,7 @@ Sehen wir uns ein Beispiel an:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Wenn der Browser zwischen <b>0 px</b> und <b>640 px</b> breit ist, kommt `max-640px.css` zum Einsatz.
@@ -292,7 +292,7 @@ Im ersten Schritte sorgen wir dafür, dass die Vorhersage auf kleinen Bildschirm
 Fügen Sie einen Übergangspunkt bei 600 Pixeln ein, indem Sie zwei neue Stylesheets erstellen. Eines davon kommt zum Einsatz, wenn der Browser 600 Pixel oder weniger in der Breite aufweist, das andere, wenn das Browserfenster über 600 Pixel breit ist.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Gestalten Sie die CSS-Datei anschließend um. In diesem Beispiel haben wir die gängigen Stile wie Schriftarten, Symbole, grundlegende Platzierung, Farben usw. in `weather.css` zusammengefasst. Spezielle Layouts für kleine Bildschirme werden anschließend in `weather-small.css`, solche für große Bildschirme in `weather-large.css` platziert.
@@ -310,7 +310,7 @@ Zusätzlich zu den primären Übergangspunkten, die zum Einsatz kommen, wenn sic
 Beginnen wir mit der Optimierung des Layouts für kleine Bildschirme. Erhöhen wir in diesem Fall die Schriftgröße, wenn die Breite des Darstellungsbereichs 360 Pixel übersteigt. Als Zweites können wir die Höchst- und Mindesttemperatur trennen, wenn genug Platz ist, damit sie in derselben Zeile und nicht übereinander erscheinen. Darüber hinaus können wir die Wettersymbole etwas vergrößern.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
 </pre>
 
 <div class="mdl-grid">
@@ -326,7 +326,7 @@ Beginnen wir mit der Optimierung des Layouts für kleine Bildschirme. Erhöhen w
 Für große Bildschirme sollte zudem die maximale Breite des Vorhersagefensters begrenzt werden, damit es nicht die gesamte Breite ausfüllt.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
 </pre>
 
 ### Text zum lesen optimieren
@@ -346,7 +346,7 @@ Die klassische Theorie zur Lesbarkeit besagt, dass die ideale Spalte 70 bis 80 Z
 Sehen wir uns das vorherige Beispiel eines Blogposts etwas genauer an. Auf kleineren Bildschirmen funktioniert die Roboto-Schriftart mit 1 em bei sieben Wörtern pro Zeile perfekt, für größere Bildschirme ist jedoch ein Übergangspunkt erforderlich. Wenn die Breite des Browsers 575 Pixel übersteigt, stellen in diesem Fall 550 Pixel die ideale Breite für den Inhalt dar.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
 </pre>
 
 ### Inhalte niemals vollständig ausblenden

@@ -69,7 +69,7 @@ Translated By:
 この情報アーキテクチャは、このプロジェクトの残りの部分で使うスケルトン ページの大まかな各セクションへと簡単に転換できます。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
 </pre>
 
 ### ページにコンテンツを追加する
@@ -86,7 +86,7 @@ Note: スタイルは後に来る
 ヘッドラインには、コースを説明する簡単なテキストを追加します。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
 </pre>
 
 また、フォームも作成する必要があります。
@@ -97,7 +97,7 @@ Note: スタイルは後に来る
 ユーザーが携帯端末で素早く簡単にコンテンツを入力できるよう、適切な入力タイプを設定します。たとえば、電話番号を入力する際には、ダイヤルパッドが表示されるようにします。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
@@ -108,7 +108,7 @@ Note: スタイルは後に来る
 商品の特徴の箇条書きリストと、商品がユーザーにとって役立つことを示す動画のプレースホルダを含めます。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
 </pre>
 
 動画は、コンテンツをよりインタラクティブに説明する手段として、コンセプトや商品のデモンストレーションによく利用されます。
@@ -121,7 +121,7 @@ Note: スタイルは後に来る
 *  ユーザーがウィンドウ内で動画を再生できない場合に動画をダウンロードできるよう、代替テキストを追加します。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -138,7 +138,7 @@ Note: スタイルは後に来る
 コンテンツ画像はページの内容を伝えるうえで不可欠です。新聞記事で使用される画像と同じ役割があると考えてください。ここでは、プロジェクトの講師である Chris Wilson、Peter Lubbers、Sean Bennet の写真の画像を使用します。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
 </pre>
 
 画像は画面の幅 100% にスケーリングするよう設定されています。この設定は狭いビューポートのデバイスではうまく機能しますが、広いビューポートのデバイス（パソコンなど）では適切に機能しません。この問題はレスポンシブ デザインのセクションで対処します。
@@ -156,7 +156,7 @@ Note: スタイルは後に来る
 表は、表組みのデータ（つまり、行と列で構成される情報）にのみ使用してください。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
 </pre>
 
 #### フッターを追加する
@@ -166,7 +166,7 @@ Note: スタイルは後に来る
 今回のサイトでは、利用規約、お問い合わせページ、ソーシャル メディアのプロフィールへのリンクのみを掲載します。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
 </pre>
 
 ### まとめ
@@ -234,7 +234,7 @@ Translated By:
 ビューポートは、画面に収めるためにページをスケーリングする必要があることをブラウザに通知します。ビューポートでページの表示を制御するために指定できる設定項目は数多くありますが、デフォルトとして、次のように設定することをおすすめします。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
 </pre>
 
 ビューポートはドキュメントの head 部に配置します。宣言が必要なのは 1 回のみです。
@@ -335,11 +335,11 @@ auto を適用する必要があります。これにより、画面が大きく
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
 </pre>
 
 ### パディングを変更してテキストのサイズを小さくする
@@ -351,7 +351,7 @@ auto を適用する必要があります。これにより、画面が大きく
 今回の商品ページでは、セクションの各要素のパディングを幅の 5% に設定することで、パディングを増やします。また、各セクションの見出しのサイズも大きくします。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 ### 広いビューポートに要素を適合させる
@@ -372,11 +372,11 @@ auto を適用する必要があります。これにより、画面が大きく
 横方向の画面スペースを有効利用するために、ヘッドラインのコンテンツを直線的に配置せずに、フォームとリストが隣り合わせになるよう移動させる必要があります。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -394,7 +394,7 @@ auto を適用する必要があります。これにより、画面が大きく
 広いビューポートでは、動画要素を狭いビューポートでの縦に表示するフローから外して、コンテンツの箇条書きリストの隣に表示する必要があります。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
 </pre>
 
 #### 画像をタイル表示する
@@ -406,7 +406,7 @@ auto を適用する必要があります。これにより、画面が大きく
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
 </pre>
 
 #### DPI に応じて画像をレスポンシブにする
@@ -443,7 +443,7 @@ auto を適用する必要があります。これにより、画面が大きく
 これにより、明確で一貫したスタイルの変更が可能になります。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
 </pre>
 
 ### まとめ

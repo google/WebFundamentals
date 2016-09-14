@@ -37,7 +37,7 @@ description: Приемы отзывчивого веб-дизайна быст�
  * [Сайт Facebook для мобильных устройств](https://m.facebook.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas" lang=css %}
 </pre>
 
 

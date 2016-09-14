@@ -45,7 +45,7 @@ De HTML-specificatie geeft bepaalde voorwaarden voor elke gebeurtenis: wanneer d
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
 </pre>
 
 Het bovenstaande voorbeeld lijkt op het eerste gezicht een behoorlijke uitdaging, maar in werkelijkheid is het vrij simpel. De Navigation Timing API legt alle relevante tijdstempels vast en onze code wacht gewoon tot de gebeurtenis `onload` wordt gelanceerd (onthoud dat de gebeurtenis `onload` na domInteractive, domContentLoaded en domComplete wordt gelanceerd). Daarnaast berekent de Navigation Timing API het verschil tussen de verschillende tijdstempels.

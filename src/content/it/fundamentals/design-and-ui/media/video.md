@@ -60,7 +60,7 @@ L'elemento `<source>` consente di specificare diversi formati sostitutivi nel ca
 Ad esempio:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 Se il browser analizza i tag `<source>` utilizza l'attributo `type` opzionale per individuare il file da scaricare e riprodurre. Se il browser supporta WebM, riprodurrà chrome.webm. In alternativa, verifica la possibilità di riprodurre video MPEG-4.
@@ -270,13 +270,13 @@ Note: Non forzare il ridimensionamento dell'elemento, poiché potresti alterarne
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
 </pre>
 
 Confronta l'<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">esempio reattivo</a> con <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">con la versione non reattiva</a>.
@@ -392,7 +392,7 @@ L'elemento di tracciamento visualizza le didascalie nel modo seguente:
 È molto semplice aggiungere didascalie ai video: è sufficiente inserire un elemento di tracciamento come elemento secondario di un video.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
 </pre>
 
 L'attributo dell'elemento della traccia `src` indica la posizione del file di tracciamento.

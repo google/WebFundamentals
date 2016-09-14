@@ -27,7 +27,7 @@ Voordat de inhoud op het scherm kan worden weergegeven, moet de browser de DOM- 
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 Laten we beginnen met het meest eenvoudige geval: een platte HTML-pagina met een beetje tekst en één afbeelding. Wat heeft de browser nodig om deze eenvoudige pagina te verwerken?
@@ -59,7 +59,7 @@ Hebben we genoeg informatie om de pagina op het scherm weer te geven wanneer de 
 Terwijl de browser de DOM-boomstructuur van onze eenvoudige pagina heeft opgebouwd, kwam deze een linktag in het hoofdgedeelte van het document tegen, die verwees naar een extern CSS-stijlblad: style.css. De browser ging ervan uit dat deze bron nodig was om de pagina weer te geven en heeft daarom gelijk een aanvraag voor dit document uitgezonden. Deze aanvraag kwam met de volgende inhoud terug:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 We hadden onze stijlen direct in de HTML-opmaak (inline) kunnen opgeven, maar door het CSS onafhankelijk van de HTML te houden, kunnen we de inhoud en het ontwerp als afzonderlijke taken behandelen: ontwerpers kunnen werken aan het CSS en ontwikkelaars kunnen zich richten op de HTML.

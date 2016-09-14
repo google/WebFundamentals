@@ -66,7 +66,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid" lang=css %}
 </pre>
 
 
@@ -102,7 +102,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop" lang=css %}
 </pre>
 
 
@@ -137,7 +137,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Andersson-Wise Architects](http://www.anderssonwise.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter" lang=css %}
 </pre>
 
 
@@ -168,7 +168,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Future Friendly](http://futurefriendlyweb.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks" lang=css %}
 </pre>
 
 
@@ -204,7 +204,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Facebook's Mobile Site](https://m.facebook.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas" lang=css %}
 </pre>
 
 

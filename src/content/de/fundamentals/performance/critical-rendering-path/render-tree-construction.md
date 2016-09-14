@@ -45,7 +45,7 @@ Bis zu diesem Punkt haben wir analysiert, welche Knoten sichtbar sein sollten un
 Mit der Ermittlung der exakten Größe und Position der einzelnen Objekte beginnt der Browser im Stammverzeichnis der Rendering-Baumstruktur und arbeitet diese ab, um die Geometrie eines jeden Objekts auf der Seite zu berechnen. Sehen wir uns ein einfaches praktisches Beispiel an:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
 </pre>
 
 Im Textkörper (body) der obigen Seite sind zwei verschachtelte div-Einträge vorhanden: Das erste (übergeordnete) div-Element legt die Anzeigegröße des Knotens auf 50 % der Breite des Anzeigebereichs fest und mit dem zweiten div-Element innerhalb des übergeordneten Elements wird dessen Breite auf 50 % des übergeordneten Elements gesetzt, d. h. auf 25 % der Breite des Anzeigebereichs!

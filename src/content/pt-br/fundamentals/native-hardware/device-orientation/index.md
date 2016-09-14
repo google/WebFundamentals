@@ -135,7 +135,7 @@ suportados pelo navegador.  Em seguida, anexe o escutador de eventos ao objeto `
 para ouvir os eventos `deviceorientation`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" lang=javascript %}
 </pre>
 
 ### Lidar com eventos de orientação do dispositivo
@@ -187,7 +187,7 @@ suportados pelo navegador.  Em seguida, anexe o escutador de eventos ao objeto `
  para ouvir eventos `devicemotion`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot" lang=javascript %}
 </pre>
 
 ### Lide com eventos de movimentação do dispositivo
@@ -290,7 +290,7 @@ de um objeto.  Por exemplo, qual é a aceleração máxima de uma pessoa
 pulando.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
+{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand" lang=javascript %}
 </pre>
 
 Depois de tocar no botão Go!, o usuário é solicitado a pular!  Nesse momento,

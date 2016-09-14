@@ -68,7 +68,7 @@ Translated By:
 이는 프로젝트의 나머지 부분에서 사용할 페이지 뼈대 내의 대략적인 구역들로 쉽게 변환해 넣을 수 있습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
 </pre>
 
 ### 콘텐츠를 페이지에 추가하기
@@ -85,7 +85,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 헤드라인 내에 다음과 같이 강좌를 설명하기 위한 간단한 텍스트를 추가해봅시다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
 </pre>
 
 우리는 또한 폼을 채울 필요가 있습니다.
@@ -98,7 +98,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms %}
@@ -109,7 +109,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 이는 상품 기능의 목록들을 포함하고 또한 상품을 사용자에게 보여줄 비디오 플레이스홀더(Placeholder)를 가질 것입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
 </pre>
 
 비디오들은 종종 보다 인터랙티브한 방식으로 콘텐츠를 기술하는데 사용되며 상품이나 컨셉의 데모를 보여주기 위해 빈번하게 사용됩니다.
@@ -122,7 +122,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 *  윈도우 내에서 비디오를 재생할 수 없을 경우 다운로드할 수 있도록 해주는 대체 텍스트 추가하기
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" lang=html %}
 </pre>
 
 {% include shared/related_guides.liquid inline=true list=page.related-guides.video %}
@@ -140,7 +140,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 콘텐츠 이미지들은 페이지의 의미를 전달하기 위해 중요합니다. 이들을 신문 기사에서 사용되는 이미지로써 생각해봅시다. 이 프로젝트에서 사용되는 이미지들은 Chris Wilson, Peter Lubbers 그리고 Sean Benner과 같은 강사들의 사진입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" lang=html %}
 </pre>
 
 이미지들은 화면 폭의 100%로 스케일이 설정될 것입니다. 이는 좁은 뷰포트를 가진 디바이스에서 잘 동작하지만 (데스크탑과 같은) 넓은 뷰포트를 가진 디바이스에서는 그리 멋지게 동작하지는 않습니다. 이는 반응형 디자인에서 다시 다룰 것입니다.
@@ -158,7 +158,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 테이블은 (행렬 형태로 구성된 정보와 같은) 표 데이터를 위해서만 사용되어야 합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
 </pre>
 
 #### 꼬리말(Footer) 추가하기
@@ -168,7 +168,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 우리 사이트에서는 사용 조건, 연락처 페이지 그리고 소셜 미디어 프로필 정도를 링크할 것입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
 </pre>
 
 ### 요약
@@ -233,7 +233,7 @@ Translated By:
 뷰포트는 페이지가 화면에 어떻게 맞춰져야 하는지를 브라우저에게 알려줍니다. 페이지 표현를 제어하기 위한 뷰포트를 정의할 수 있는 방법은 다양합니다. 기본적으로는 다음을 권장합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
 </pre>
 
 뷰포트는 문서의 head 내에 존재하며 딱 한번만 정의하면 됩니다.
@@ -337,11 +337,11 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml" lang=html %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="container" lang=css %}
 </pre>
 
 ### 패딩 바꾸기와 텍스트 크기 줄이기
@@ -353,7 +353,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 우리는 상품 페이지에서 섹션 엘리먼트들의 패딩을 폭(Width)의 5%로 설정하여 통해 여백이 늘어나도록 할 것입니다. 또한 각 섹션에 대한 헤더 크기도 증가시킬 것입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 ### 넓은 뷰포트에 대한 엘리먼트 적용하기
@@ -375,11 +375,11 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="formfloat" lang=css %}
 </pre>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="padding" lang=css %}
 </pre>
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
@@ -397,7 +397,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 비디오 엘리먼트는 좁은 뷰포트에서는 수직 형태의 흐름으로 구성될 필요가 있으며 넓은 뷰포트에서는 콘텐츠의 항목 리스트와 나란히 보여져야 할 것입니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="floatvideo" lang=css %}
 </pre>
 
 #### 이미지를 이용한 타일 구성하기
@@ -410,7 +410,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 <img src="images/imageswide.png" style="width:100%">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="tileimages" lang=css %}
 </pre>
 
 #### 이미지를 DPI에 반응형으로 만들기
@@ -451,7 +451,7 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 이는 깔끔하고 일관적인 분할을 할 수 있도록 해줍니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/content-with-styles.html" region_tag="table-css" lang=css %}
 </pre>
 
 ### 정리

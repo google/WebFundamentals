@@ -45,7 +45,7 @@ La especificación HTML requiere condiciones específicas para cada evento: cuá
 ^
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" lang=html %}
 </pre>
 
 El ejemplo anterior puede resultar algo complejo a primera vista, pero en realidad es muy simple. El API de Navigation Timing detecta todas las marcas de tiempo relevantes, y nuestro código tan solo espera a que se active el evento `onload` (que se activa después de `domInteractive`, `domContentLoaded` y `domComplete`) y calcula la diferencia entre las distintas marcas de tiempo.

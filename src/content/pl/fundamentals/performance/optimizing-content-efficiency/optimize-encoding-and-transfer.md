@@ -72,7 +72,7 @@ Możesz się jednak zastanawiać, jak to przekłada się na optymalizację naszy
 Najlepszym sposobem kompresji powtarzających się i zbędnych danych jest ich całkowita eliminacja. Nie można oczywiście usuwać dowolnych danych, ale w niektórych kontekstach możemy wykorzystać wiedzę o treści, formacie danych i jego właściwościach do znacznej redukcji rozmiaru użytecznych danych bez przekłamywania ich znaczenia.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
 </pre>
 
 Rozważmy prostą stronę HTML powyżej i trzy różne typy treści na niej obecne: kod HTML, CSS i JavaScript. Do każdego typu treści odnoszą się różne zasady poprawności (dla znaczników HTML i CSS oraz kodu JavaScript), różne zasady wyróżniania komentarzy i tak dalej. Jak można zredukować rozmiar tej strony?
@@ -83,7 +83,7 @@ Rozważmy prostą stronę HTML powyżej i trzy różne typy treści na niej obec
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
 
 Po zastosowaniu wszystkich powyższych zaleceń rozmiar strony zmniejsza się z 406 do 150 znaków &ndash; redukcja rozmiaru o 63%! To prawda, że kod strony traci na czytelności, ale to nie problem: możemy zachować oryginalną stronę jako "wersję rozwojową" i wykonywać powyższe czynności za każdym razem, gdy konieczne będzie umieszczenie nowej wersji strony w witrynie.

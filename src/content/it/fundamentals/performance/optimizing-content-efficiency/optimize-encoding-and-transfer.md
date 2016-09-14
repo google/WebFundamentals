@@ -72,7 +72,7 @@ Naturalmente, ti chiederai, tutto ciò è fantastico, ma come può aiutarci ad o
 Il modo migliore per comprimere dati ridondanti o non necessari consiste nell'eliminarli in un'unica soluzione. Naturalmente, non possiamo semplicemente eliminare dei dati a caso, ma in alcuni contesti in cui disponiamo di una conoscenza specifica del contenuto dei dati e delle relative proprietà, è spesso possibile ridurre significativamente le dimensioni del payload senza inficiarne il significato.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
 </pre>
 
 Considera la semplice pagina HTML precedente e i suoi tre diversi tipi di contenuto: markup HTML, stili CSS e JavaScript. Ciascuno di essi dispone di norme diverse per quanto riguarda ciò che rappresenta un markup valido, norme CSS o contenuti JavaScript, regole diverse per indicare i commenti, e così via. Come potremmo ridurre le dimensioni di questa pagina?
@@ -83,7 +83,7 @@ Considera la semplice pagina HTML precedente e i suoi tre diversi tipi di conten
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
 
 Una volta applicate tali procedure, la nostra pagina passerà da 406 a 150 caratteri, riducendosi del 63%! Molto probabilmente non sarà molto leggibile, ma d'altronde non deve neanche esserlo: possiamo mantenere la pagina originale come 'development version' e poi applicare le procedure precedenti quando saremo pronti a inserire la pagina sul nostro sito web.

@@ -25,7 +25,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 Mümkün olan en basit örnekle başlayalım: biraz metin ve tek bir resim içeren sade bir HTML sayfası. Bu basit sayfayı işlemek için tarayıcının ne yapması gerekir?
@@ -57,7 +57,7 @@ DOM ağacı hazır olduğunda, sayfayı ekranda oluşturmak için yeterli bilgiy
 Tarayıcı, basit sayfamızın DOM'sini oluştururken, dokümanın başlık bölümünde harici bir CSS stil sayfasına (style.css) başvuruda bulunan bir bağlantı etiketiyle karşılaştı. Sayfayı oluşturmak için bu kaynağa ihtiyacı olacağını tahmin ederek hemen bu kaynak için bir istek gönderir ve istek, aşağıdaki içerikle geri gelir:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 Elbette, stillerimizi doğrudan HTML biçimlendirmesinin içinde (satır içi) açıklayabilirdik, ancak CSS'mizi HTML'den bağımsız tutmamız içeriği ve tasarımı ayrı konular olarak ele almamıza olanak tanır: Tasarımcılar CSS üzerinde çalışırken, geliştiriciler de HTML üzerine odaklanabilir.

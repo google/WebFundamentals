@@ -228,7 +228,7 @@ Birlikte bir örnege bakalim:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Tarayici genisligi <b>0p</b> ile <b>640p</b> arasinda oldugunda, `max-640px.css` uygulanir.
@@ -309,7 +309,7 @@ Daha sonra, ögeler arasinda çok fazla beyaz bosluk oluncaya ve tahmin kötü g
 600 piksel noktasinda bir kesme noktasi eklemek için iki yeni stil sayfasi olusturun. Bunlarin birini tarayici 600 piksel ve altindayken, digerini de 600 pikselden genis oldugunda kullanacaksiniz.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Son olarak, CSS'yi yeniden yazin.  Bu örnekte, `weather.css` dosyasina yazi tipleri, simgeler, temel konumlandirma ve renkler gibi genel stilleri yerlestirdik.  Daha sonra, küçük ekrana iliskin belirli yerlesimler `weather-small.css` ve genis ekran stilleri `weather-large.css` dosyasina yerlestirilir.
@@ -327,7 +327,7 @@ Yerlesim önemli ölçüde degistiginde ana kesme noktalari seçmeye ek olarak, 
 Küçük ekran yerlesimini optimize ederek baslayalim.  Bu örnekte, görüntü alani genisligi 360 pikselden büyük oldugunda yazi tipini artiralim.  Ikinci olarak, yeterli alan oldugunda yüksek ve düsük sicakliklari ayirabiliriz; böylece, birbirinin üzerinde görüneceklerine ayni satirda görünürler.  Hava durumu simgelerini de biraz genisletelim.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
 </pre>
 
 <div class="mdl-grid">
@@ -343,7 +343,7 @@ Küçük ekran yerlesimini optimize ederek baslayalim.  Bu örnekte, görüntü 
 Benzer bir sekilde, tüm ekran genisligini tüketmemesi için genis ekranlarda tahmin panelinin maksimum genisligini sinirlamak en dogru karar olacaktir.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
 </pre>
 
 ### Metni okuma için optimize etme
@@ -363,7 +363,7 @@ Klasik okunabilirlik teorisi, ideal bir sütunun satir basina 70 ile 80 karakter
 Yukaridaki blog yayini örnegine daha ayrintili bir sekilde bakalim.  Küçük ekranlarda, 1em büyüklügündeki Roboto yazi tipi mükemmel bir sekilde satir basina 10 kelime verir, ancak genis ekranlarda bir kesme noktasi gerektirir. Bu durumda, tarayici genisligi 575 pikselden büyükse ideal içerik genisligi 550 piksel olur.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
 </pre>
 
 ### Hiçbir zaman içerigi tam olarak gizlemeyin

@@ -25,7 +25,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 Zacznijmy od najprostszego możliwego przypadku: zwykłej strony HTML z tekstem i jednym obrazem. Co musi zrobić przeglądarka, by przetworzyć tę prostą stronę?
@@ -57,7 +57,7 @@ Czy po przygotowaniu drzewa DOM mamy dostatecznie wiele informacji, by zrenderow
 Gdy przeglądarka tworzyła model DOM naszej prostej strony, napotkała w sekcji nagłówka dokumentu na tag linka odwołujący się do zewnętrznego arkusza stylów CSS: style.css. Przewidując, że zasób ten będzie wymagany do renderowania strony, natychmiast wysłała żądanie odnośnie do tego zasobu, a otrzymana odpowiedź zawierała poniższą treść:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 Możemy oczywiście zadeklarować nasze style bezpośrednio w znacznikach HTML (tzn. inline), ale rozdzielenie znaczników CSS od znaczników HTML umożliwia rozdzielenie treści od stylizacji: projektanci mogą pracować nad znacznikami CSS, a programiści mogą się skupić na znacznikach HTML.

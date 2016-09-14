@@ -37,7 +37,7 @@ Entre los sitios que utilizan este patrón, se incluyen los siguientes:
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop" lang=css %}
 </pre>
 
 

@@ -27,7 +27,7 @@ Avant que le navigateur puisse afficher la page, les arborescences DOM et CSSOM 
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 Commençons par un exemple le plus simple possible : une page en HTML brut avec du texte et une seule image. Que doit faire le navigateur pour traiter cette page simple ?
@@ -59,7 +59,7 @@ Une fois l'arborescence du DOM prête, disposons-nous de suffisamment d'informat
 Pendant la construction du DOM de notre page simple, le navigateur a rencontré une balise de lien dans la section `head` du document, faisant référence à une feuille de style CSS externe : style.css. Anticipant le fait que cette ressource sera nécessaire pour afficher la page, le navigateur envoie immédiatement une demande pour cette ressource, qui est renvoyée avec le contenu suivant :
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 Évidemment, nous aurions pu déclarer nos styles directement au sein du balisage HTML (intégré). Toutefois, le fait de séparer le CSS du code HTML nous permet de traiter le contenu et le graphisme comme deux choses distinctes : les graphistes peuvent travailler sur le CSS, les développeurs peuvent se concentrer sur le code HTML, et ainsi de suite.

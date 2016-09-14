@@ -72,7 +72,7 @@ Bien sûr, vous vous dites peut-être que c'est très bien, mais comment cela no
 Le meilleur moyen de compresser les données redondantes ou inutiles est de les supprimer totalement. Bien sûr, nous ne pouvons pas simplement supprimer des données au hasard. Mais dans certains contextes permettant d'avoir des connaissances spécifiques au contexte sur le format des données et leurs propriétés, il est souvent possible de réduire de façon importante la taille des données utiles sans affecter leur signification réelle.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
 </pre>
 
 Considérez la page simple HTML ci-dessus et les trois différents types de contenu qui la composent : balisage HTML, styles CSS et JavaScript. Chaque type de contenu a des règles différentes pour définir ce qui constitue un balisage HTML valide, des règles CSS ou du contenu JavaScript, des règles différentes pour indiquer les commentaires, etc. Comment faire pour réduire la taille de cette page ?
@@ -83,7 +83,7 @@ Considérez la page simple HTML ci-dessus et les trois différents types de cont
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
 
 Après avoir appliqué les étapes ci-dessus, notre page passe de 406 à 150 caractères, soit une compression de 63 % ! Soit, elle n'est pas très lisible. Mais elle n'a pas besoin de l'être : nous pouvons conserver la page originale comme 'version de développement', puis appliquer les étapes ci-dessus lorsque nous serons prêts à publier la page sur notre site Web.

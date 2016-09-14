@@ -231,7 +231,7 @@ Veamos el siguiente ejemplo:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Cuando la ventana del navegador tenga un tamaño de entre <b>0 px</b> y <b>640 px</b> de ancho, se aplicará·`max-640px.css`.
@@ -312,7 +312,7 @@ A continuación, cambia el tamaño de la ventana del navegador hasta que quede d
 Para insertar un punto de interrupción a los 600 píxeles, crea dos hojas de estilo: una para cuando la ventana del navegador tenga un tamaño de 600 píxeles como máximo, y otra para cuando supere ese tamaño.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Por último, refactoriza el código CSS.  En este ejemplo, hemos colocado los estilos comunes, como las fuentes, los iconos, las posiciones básicas o los colores, en `weather.css`.  Los diseños específicos para pantallas pequeñas se encuentran en `weather-small.css`, mientras que los estilos para pantallas grandes se encuentran en `weather-large.css`.
@@ -330,7 +330,7 @@ Además de elegir los puntos de interrupción principales para cuando el diseño
 Empezaremos optimizando el diseño para pantallas pequeñas.  En este caso, ampliaremos la fuente cuando el ancho de la ventana gráfica supere los 360 píxeles.  En segundo lugar, cuando haya suficiente espacio, podemos separar la temperatura más alta y la más baja para que queden en la misma línea, en lugar de una encima de la otra.  Además, nos aseguraremos de que los iconos del tiempo sean un poco más grandes.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm" lang=css %}
 </pre>
 
 <div class="mdl-grid">
@@ -346,7 +346,7 @@ Empezaremos optimizando el diseño para pantallas pequeñas.  En este caso, ampl
 Del mismo modo, para pantallas grandes, lo mejor es limitar el ancho máximo del panel de previsión para que no ocupe todo el ancho de la pantalla.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg" lang=css %}
 </pre>
 
 ### Optimiza el texto para una lectura adecuada
@@ -366,7 +366,7 @@ Según la teoría clásica de la legibilidad, una columna debería contener de 7
 Veamos de forma más detallada el ejemplo anterior de la entrada de blog.  En pantallas más pequeñas, la fuente Roboto con tamaño de 1em funciona bien, ya que permite diez palabras en cada línea. En cambio, necesitará un punto de interrupción en pantallas más grandes. En este caso, si el ancho de la ventana del navegador es superior a 575 píxeles, el ancho ideal para el contenido sería de 550 píxeles.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading" lang=css %}
 </pre>
 
 ### Nunca ocultes el contenido completamente

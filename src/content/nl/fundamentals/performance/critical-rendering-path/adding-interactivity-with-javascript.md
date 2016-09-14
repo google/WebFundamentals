@@ -24,7 +24,7 @@ JavaScript biedt ons de mogelijkheid om vrijwel elk onderdeel van de pagina aan 
 JavaScript is een dynamische taal die in de browser wordt uitgevoerd. Met JavaScript kan vrijwel elk onderdeel van het gedrag van de pagina worden aangepast: we kunnen inhoud op de pagina wijzigen door elementen uit de DOM-boomstructuur te verwijderen of eraan toe te voegen, we kunnen de CSSOM-eigenschappen van elk element aanpassen, we kunnen gebruikersinvoer verwerken en nog veel meer. Laten we ter verduidelijking ons eerdere voorbeeld `Hallo wereld` aanvullen met een eenvoudig inline script:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
 </pre>
 
 * Met JavaScript kunnen we in de DOM werken en de referentie naar de verborgen span-node eruit halen. Deze node is misschien niet zichtbaar in de weergaveboomstructuur, maar de node zit nog wel in het DOM. Zodra we deze referentie hebben, kunnen we de tekst ervan (via .textContent) wijzigen en zelfs de berekende weergavestijleigenschap overschrijven van `none` naar `inline`. En wanneer we klaar zijn, zal onze pagina het volgende weergeven: `**Hallo interactieve studenten!**`.
@@ -62,13 +62,13 @@ De JavaScript-uitvoer is standaard `parserblokkerend`: wanneer de browser een sc
 Hoe zit het met scripts die via een scripttag zijn toegevoegd? Laten we ons eerdere voorbeeld nemen en onze code in een apart bestand weergeven:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
 </pre>
 
 Verwacht u dat de uitvoervolgorde anders zou zijn wanneer we een `<script>`-tag gebruiken in plaats van een inline JavaScript-snippet? Het antwoord is natuurlijk `nee` aangezien deze identiek zijn en zich op dezelfde manier zouden gedragen. In beiden gevallen moet de browser pauzeren en het script uitvoeren voordat de browser de rest van het document kan verwerken. Maar **in het geval van een extern JavaScript-bestand moet de browser ook pauzeren en wachten tot het script van de schijf, cache of externe server wordt opgehaald. Dit voegt tien tot duizenden milliseconden vertraging toe aan het kritieke weergavepad.**
@@ -78,7 +78,7 @@ Gelukkig is er ook goed nieuws: er is een noodoplossing. JavaScript is standaard
 Dus de vraag is, hoe krijgen we dit voor elkaar? Het is eigenlijk vrij simpel, we kunnen ons script markeren als _async:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
 </pre>
 
 Het toegevoegde sleutelwoord `async` aan de scripttag vertelt de browser dat deze de DOM-opbouw niet moet blokkeren terwijl er wordt gewacht tot het script beschikbaar is. En dat zorgt voor een enorm verschil in de prestatie.

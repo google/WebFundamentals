@@ -27,7 +27,7 @@ description: Перед тем как вывести страницу на эк�
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 Возьмем самую простую веб-станицу с текстом без форматирования и одним изображением и посмотрим, как она обрабатывается в браузере.
@@ -59,7 +59,7 @@ Note: Мы предполагаем, что вы немного знакомы �
 При формировании DOM браузер обнаружил в документе ссылку на таблицу стилей (style.css). Поскольку она необходима для визуализации страницы, браузер мгновенно отправляет на сервер запрос и получает в ответ следующий код:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 Конечно, стили можно обозначать прямо в разметке. Однако поместив их в CSS-файл, мы разделяем задачи и позволяем дизайнерам работать над CSS, пока разработчики сосредоточены на HTML.

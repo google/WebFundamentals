@@ -27,7 +27,7 @@ description: ブラウザは、コンテンツを画面にレンダリングす�
 {% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
 </pre>
 
 まず、ごく基本的なケースから始めましょう。シンプルな HTML ページにテキストが少し、画像が 1 つあるとします。このシンプルなページを処理する際、ブラウザはどのような作業を必要とするでしょうか？
@@ -59,7 +59,7 @@ DOM ツリーの準備が整うと、ページを画面にレンダリングす�
 ブラウザがシンプルなサンプルページの DOM を構築している間、ドキュメントの head セクションで link タグに遭遇します。このタグは、外部の CSS スタイルシート「style.css」を参照しています。ブラウザは、ページのレンダリングにはこのリソースが必要であると想定しつつ、すぐにこのリソースに対してリクエストをディスパッチします。すると、次のコンテンツが返ってきます。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" lang=css %}
 </pre>
 
 もちろん、HTML マークアップの内部で直接スタイルを宣言することもできますが（インライン）、CSS を HTML から独立させておくことで、コンテンツの問題とデザインの問題を別個のものとして扱うことができます。たとえば、デザイナーは CSS について作業を行い、デベロッパーは HTML に集中するといった分業が可能になります。

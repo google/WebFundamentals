@@ -24,7 +24,7 @@ Mit JavaScript lässt sich nahezu jeder Aspekt einer Seite anpassen: vom Inhalt 
 JavaScript ist eine dynamische Sprache, die im Browser ausgeführt wird. Damit lassen sich nahezu alle Verhaltensaspekte einer Seite ändern, zum Beispiel können wir den Inhalt einer Seite anpassen, indem wir Elemente aus der DOM-Struktur entfernen oder ihr Elemente hinzufügen. Darüber hinaus lassen sich die CSSOM-Eigenschaften der einzelnen Elemente ändern, die Nutzereingabe handhaben und vieles mehr. Als Praxisbeispiel erweitern wir unser vorheriges `Hallo Welt`-Beispiel durch ein einfaches Inline-Skript:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
 </pre>
 
 * Mit JavaScript erhalten wir Zugriff auf das DOM und können den Verweis auf den ausgeblendeten Span-Knoten abrufen. Dieser ist zwar in der Renderstruktur möglicherweise nicht sichtbar, aber dennoch im DOM vorhanden! Sobald wir diesen Verweis haben, können wir den Text über `.textContent` anpassen und sogar die berechnete Eigenschaft für den Anzeigestil von `none` in `inline` ändern. Anschließend wird auf unserer Seite `**Hello interactive students!**` angezeigt.
@@ -62,13 +62,13 @@ Durch die Ausführung von JavaScript wird generell das Parsing blockiert: Findet
 Wie sieht es mit Skripts aus, die über ein Skript-Tag eingefügt werden? Nehmen wir unser vorheriges Beispiel und extrahieren unseren Code in eine separate Datei:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
 </pre>
 
 Würde sich die Reihenfolge bei der Ausführung Ihrer Ansicht nach ändern, wenn wir anstelle eines Inline-JavaScript-Snippets ein `<script>`-Tag verwenden würden? Natürlich lautet die Antwort nein, da beide identisch sind und das gleiche bewirken sollten. In beiden Fällen muss der Browser pausieren und das Skript ausführen, bevor er das restliche Dokument verarbeiten kann. **Im Falle einer externen JavaScript-Datei muss der Browser jedoch ebenfalls pausieren und warten, bis das Skript von der Festplatte, einem Remote-Server oder aus dem Cache abgerufen wurde, was weitere Dutzende bis Tausende Millisekunden Verzögerung für den kritischen Rendering-Pfad bedeuten kann.**
@@ -78,7 +78,7 @@ Die gute Nachricht: Wir haben einen Rettungsanker! JavaScript blockiert generell
 Wie funktioniert das? Ganz einfach! Wir können unser Skript als _async_ kennzeichnen:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
 </pre>
 
 Durch Hinzufügen des Schlüsselworts `async` zum Skript-Tag weiß der Browser, dass die DOM-Erstellung nicht blockiert werden soll, während auf die Verfügbarkeit des Skripts gewartet wird. Das ist ein großer Leistungsgewinn!

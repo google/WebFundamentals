@@ -45,7 +45,7 @@ Tot nu toe hebben we berekend welke nodes en de bijbehorende berekende stijlen z
 De browser begint aan de root van de weergaveboomstructuur en loopt de hele structuur af om de geometrie van elk object op de pagina te berekenen om de precieze grootte en positie ervan uit te zoeken. Laten we een eenvoudig praktijkvoorbeeld bekijken:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
 </pre>
 
 De body van de pagina hierboven bevat twee geneste div-elementen: de eerste (ouder-)div stelt de weergavegrootte van de node in op 50% van de viewportbreedte en de tweede div die door de ouder wordt omvat, stelt de breedte in op 50% van de breedte van de ouder, dat wil zeggen 25% van de viewportbreedte.

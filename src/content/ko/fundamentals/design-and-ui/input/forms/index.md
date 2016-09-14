@@ -233,7 +233,7 @@ HTML5에서 다양한 새 입력 유형이 도입되었습니다. 이러한 새 
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
 <!-- TODO: Verify note type! -->
@@ -261,7 +261,7 @@ Note: <code>datalist</code> 값은 제안으로 제공되므로 사용자가 그
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" %}
 </pre>
 
 ### 레이블 크기 조정 및 배치
@@ -307,7 +307,7 @@ Note: 자리 표시자는 사용자가 요소를 입력하기 시작하면 즉�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" %}
 </pre>
 
 
@@ -625,7 +625,7 @@ Note: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관�
   예:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" lang=javascript %}
 </pre>
 
 #### 유효하지 않은 양식의 제출 차단
@@ -635,7 +635,7 @@ Note: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관�
   예:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" lang=javascript %}
 </pre>
 
 ### 실시간으로 피드백 표시
@@ -687,10 +687,10 @@ HTML5에서 값이나 특성에 따라 입력 스타일을 지정하는 데 사�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" lang=css %}
 </pre>
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" lang=javascript %}
 </pre>
 
 <!-- TODO: Verify note type! -->
@@ -732,7 +732,7 @@ Note: 양식의 모든 문제를 한 번에 하나씩 표시하지 말고 한꺼
 <img src="imgs/rac_flow.png" class="center" alt="자동완성 흐름 요청">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
 </pre>
 
 `form` 요소의 `requestAutocomplete` 함수는 브라우저에게 양식을 채우도록 지시합니다.
@@ -742,7 +742,7 @@ Note: 양식의 모든 문제를 한 번에 하나씩 표시하지 말고 한꺼
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
 </pre>
 
 `requestAutocomplete`가 성공적으로 완료되면 

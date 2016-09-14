@@ -37,7 +37,7 @@ CSS order.  На экране шириной более 800 пикселей о�
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop" lang=css %}
 </pre>
 
 

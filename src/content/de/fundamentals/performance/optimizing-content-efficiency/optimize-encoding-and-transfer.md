@@ -71,7 +71,7 @@ Sie werden sich fragen: Das ist ja alles prima, aber wie hilft es uns dabei, uns
 Die beste Vorgehensweise bei der Komprimierung redundanter und unnötiger Daten besteht darin, diese ganz zu entfernen. Natürlich können wir nicht einfach willkürlich Daten löschen, aber in manchen Szenarien, wo wir über inhaltsspezifische Kenntnisse des Datenformats und dessen Eigenschaften verfügen, ist es häufig möglich, die Menge der Nutzdaten ohne Auswirkung auf den Sinn erheblich zu reduzieren.
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
 </pre>
 
 Betrachten Sie die einfache HTML-Seite oben und ihre drei unterschiedlichen Inhaltstypen: HTML-Markup, CSS-Styles und JavaScript. Für jeden dieser Inhaltstypen gibt es unterschiedliche Regeln darüber, welches Markup, welche Styles bzw. welche Inhalte zulässig sind, wie Kommentare zu kennzeichnen sind und so weiter. Wie können wir die Größe dieser Seite verringern?
@@ -82,7 +82,7 @@ Betrachten Sie die einfache HTML-Seite oben und ihre drei unterschiedlichen Inha
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
 </pre>
 
 Mit der Anwendung der obigen Schritte können wir unsere Seite von 406 auf 150 Zeichen reduzieren - das ist eine Einsparung von 63 %! Zugegeben, man kann den Code nicht gut lesen, aber das ist auch nicht nötig: Wir können die ursprüngliche Seite als `Entwicklungsversion` behalten und immer dann die obigen Schritte anwenden, wenn wir die Seite auf unserer Website freigeben wollen.

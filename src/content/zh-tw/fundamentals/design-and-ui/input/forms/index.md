@@ -240,7 +240,7 @@ HTML5 導入了數種新輸入類型。 這些新的輸入類型可以提示瀏�
 `datalist` 元素會在使用者輸入時提供提示。
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
 <!-- TODO: Verify note type! -->
@@ -763,7 +763,7 @@ HTML5 還導入了數個虛擬類別，
 <img src="imgs/rac_flow.png" class="center" alt="請求自動完成流程">
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac" lang=javascript %}
 </pre>
 
 `form` 元素上的 `requestAutocomplete` 函數向瀏覽器指示，
@@ -773,7 +773,7 @@ HTML5 還導入了數個虛擬類別，
 
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac" lang=javascript %}
 </pre>
 
 在 `requestAutocomplete` 完成的同時，此函數將觸發 

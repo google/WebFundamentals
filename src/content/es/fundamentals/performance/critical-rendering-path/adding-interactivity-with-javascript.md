@@ -24,7 +24,7 @@ JavaScript nos permite modificar casi cualquier aspecto de la página: el conten
 JavaScript es un lenguaje dinámico que se ejecuta en el navegador y nos permite modificar casi cualquier aspecto del comportamiento de la página: podemos añadir o suprimir elementos del árbol DOM para modificar el contenido de la página, podemos modificar las propiedades CSSOM de cada elemento, podemos gestionar la información introducida del usuario y mucho más. Para ilustrar esta acción, vamos a ampliar nuestro ejemplo anterior de `Hola, mundo` con una secuencia de comandos integrada sencilla:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
 </pre>
 
 * JavaScript nos permite echar mano de DOM y obtener la referencia al nodo de alcance oculto. Puede que el nodo no se muestre en el árbol de publicación, pero aun así sabemos que se encuentra en DOM. Después, una vez obtenida la referencia, podemos cambiar el texto (con `.textContent`) e incluso anular la propiedad de estilo de visualización calculada de `none` (ninguna) a `inline` (integrada). Una vez finalizada esta modificación, en nuestra página se mostrará el texto `**Hello interactive students!`.**
@@ -62,13 +62,13 @@ De forma predeterminada, la ejecución de JavaScript supone un `bloqueo del anal
 ¿Qué pasa con las secuencias de comandos incluidas mediante una etiqueta de secuencia de comandos? Vamos a echar mano del ejemplo anterior para extraer el código y copiarlo en un archivo diferente:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" lang=javascript %}
 </pre>
 
 ¿Es previsible que el orden de ejecución sea diferente cuando usamos una etiqueta `<script>` en vez de un fragmento JavaScript integrado? Por supuesto que no, ya que son idénticos y deberían tener el mismo comportamiento. En ambos casos el navegador se tendrá que detener y ejecutar la secuencia de comandos antes de poder procesar el resto del documento. Sin embargo, **en caso de que usemos un archivo JavaScript externo, el navegador también tendrá que detenerse y esperar a que se obtenga la secuencia de comandos del disco, de la memoria caché o de un servidor remoto, de modo que el retraso puede suponer decenas de milisegundos más en la ruta de publicación importante.**
@@ -78,7 +78,7 @@ De todas formas, tenemos una escotilla de emergencia. De forma predeterminada, t
 Entonces, ¿cómo llevamos a cabo este truco? Es muy sencillo: hay que marcar la secuencia de comandos como asíncrona (`_async_:`).
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
 </pre>
 
 Si añadimos la palabra clave `async` a la etiqueta de secuencia de comandos, se informa al navegador de que no bloquee la creación de DOM mientras espera a que la secuencia de comandos esté disponible. El rendimiento se mejora en gran medida.

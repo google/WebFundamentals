@@ -60,7 +60,7 @@ Mithilfe des `<source>`-Elements können Sie mehrere Formate als Ausweichmöglic
 Beispiel:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 Beim Parsen der <source>-Tags durch den Browser wird anhand des optionalen Attributs `type` ermittelt, welche Datei heruntergeladen und wiedergegeben werden soll. Wenn der Browser WebM unterstützt, spielt er die Datei `chrome.webm` ab, andernfalls wird überprüft, ob MPEG-4-Videos abgespielt werden können.
@@ -271,13 +271,13 @@ Note: Erzwingen Sie keine Größenanpassung von Elementen, wenn das daraus resul
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
 </pre>
 
 Vergleichen Sie das Beispiel <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">mit</a> und ohne <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">Responsive Webdesign</a>.
@@ -393,7 +393,7 @@ Bei Verwendung des Track-Elements sehen die Untertitel wie folgt aus:
 Es ist ganz einfach, Ihr Video mit Untertiteln zu versehen - Sie müssen lediglich ein Track-Element hinzufügen, das dem Videoelement untergeordnet ist:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
 </pre>
 
 Das Attribut `src` des Track-Elements enthält den Speicherort der Track-Datei.

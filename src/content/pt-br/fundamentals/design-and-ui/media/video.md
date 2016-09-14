@@ -60,7 +60,7 @@ O elemento `<source>` permite especificar múltiplos formatos como opções de s
 Por exemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 Ao analisar as tags `<source>`, o navegador usa o atributo `type` opcional para decidir qual arquivo deve ser acessado por download e reproduzido. Se o navegador for compatível com WebM, ele reproduzirá chrome.webm. Caso contrário, ele verificará se é possível reproduzir vídeos em MPEG-4.
@@ -272,13 +272,13 @@ Note: Não force o dimensionamento de elementos se isso resultar em uma proporç
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling" lang=css %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup" lang=html %}
 </pre>
 
 Compare a <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">amostra ágil</a> com a <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">versão não ágil</a>.
@@ -394,7 +394,7 @@ Com o elemento de faixa, as legendas aparecem desta forma:
 É fácil adicionar legendas a um vídeo, basta adicionar um elemento de faixa como derivado do elemento de vídeo:
 
 <pre class="prettyprint">
-{% includecode content_path="web..//fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track" lang=html %}
 </pre>
 
 O atributo "src" do elemento de faixa fornece a localização do arquivo de faixa.
