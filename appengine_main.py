@@ -25,6 +25,7 @@ import devsiteHelper
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
+DEFAULT_LANG = 'en'
 DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 USE_MEMCACHE = not DEVENV
 
@@ -51,7 +52,7 @@ class Framebox(webapp2.RequestHandler):
 class DevSitePages(webapp2.RequestHandler):
     def get(self, path):
         response = None
-        lang = self.request.get('hl', 'en')
+        lang = self.request.get('hl', DEFAULT_LANG)
         fullPath = self.request.path
         memcacheKey = fullPath + '?hl=' + lang
         logging.info('GET ' + memcacheKey)
