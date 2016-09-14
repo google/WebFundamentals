@@ -8,6 +8,7 @@ var gutil = require('gulp-util');
 var wfHelper = require('./wfHelper');
 var runSequence = require('run-sequence');
 
+var TEST_ROOT = 'src/content/';
 var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md', '!**/tags/*', '!**/codelabs/*/*'];
 var MAX_DESCRIPTION_LENGTH = 475;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
@@ -26,7 +27,6 @@ var WARNING_STRINGS = [
   '<!-- TODO: Verify note type! -->',
   '<!-- TODO: Verify Udacity course fits here -->'
 ];
-
 
 function testMarkdownFile(fileName) {
   var tags;
@@ -51,8 +51,10 @@ function testMarkdownFile(fileName) {
     }
   }
   // Check if it has review required
-  if (wfHelper.getRegEx(/{# (wf_review_required) #}/, fileContent)) {
-    warnings.push({msg: 'Has wf_review_required tag', param: ''});
+  if (GLOBAL.WF.options.skipReviewRequired === false) {
+    if (wfHelper.getRegEx(/{# (wf_review_required) #}/, fileContent)) {
+      warnings.push({msg: 'Has wf_review_required tag', param: ''});
+    }
   }
   // Validate wf_updated and wf_published
   if (wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, fileContent, null) === null) {
@@ -101,15 +103,22 @@ function testMarkdownFile(fileName) {
   return {file: fileName, errors: errors, warnings: warnings};
 }
 
-gulp.task('test', function(cb) {
+gulp.task('test', function(callback) {
   var opts = {
-    srcBase: 'src/content/en',
+    srcBase: TEST_ROOT,
     prefixBase: true
   };
+  if (GLOBAL.WF.options.lang !== null) {
+    opts.srcBase = path.join(TEST_ROOT, GLOBAL.WF.options.lang);
+  }
+  gutil.log('Base directory:', gutil.colors.cyan(opts.srcBase));
+  gutil.log('Skipping wf_review_required tags:', gutil.colors.cyan(GLOBAL.WF.options.skipReviewRequired));
+  gutil.log('Warn only:', gutil.colors.cyan(GLOBAL.WF.options.testWarnOnly));
   var files = glob.find(['**/*.md'], STD_EXCLUDES, opts);
   files.sort();
   var warnings = 0;
   var errors = 0;
+  var errorList = ['The following errors were found:'];
   var filesWithIssues = 0;
   files.forEach(function(fileObj) {
     var r = testMarkdownFile(fileObj);
@@ -123,6 +132,7 @@ gulp.task('test', function(cb) {
       r.errors.forEach(function(error) {
         errors++;
         gutil.log(' ', gutil.colors.red('ERROR'), error.msg, gutil.colors.cyan(error.param));
+        errorList.push(r.file + ': ' + error.msg + ' -- ' + error.param);
       });
     }
   });
@@ -132,4 +142,10 @@ gulp.task('test', function(cb) {
   gutil.log(' - with issues:', gutil.colors.yellow(filesWithIssues));
   gutil.log(' - warnings:   ', gutil.colors.yellow(warnings));
   gutil.log(' - errors:     ', gutil.colors.red(errors));
+  if (GLOBAL.WF.options.testWarnOnly === true) {
+    callback();
+  } else if (errors > 0) {
+    var err = new gutil.PluginError('Tests failed', errorList.join('\n'));
+    callback(err);
+  }
 });

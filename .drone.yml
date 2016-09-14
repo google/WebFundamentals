@@ -12,7 +12,7 @@ build:
   commands:
     - pip install markdown -t ./gae/lib
     - npm install
-    - ./build-all.sh
+    - gulp deploy
 deploy:
   wf:
     image: crhym3/drone-plugin-wf
