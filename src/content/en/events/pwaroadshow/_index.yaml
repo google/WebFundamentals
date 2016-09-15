@@ -31,6 +31,10 @@ landing_page:
         {% framebox height="500px" %}
           <link rel="stylesheet" href="/web/events/embeds/event-map.css">
           <div id="map" data-tags="pwaroadshow"></div>
+          <div id="map-key">
+            <span class="map-key-event sponsored-pwa">= Google Organized PWA Road Show</span>
+            <span class="map-key-event pwa">= PWA Road Show</span>
+          </div>
 
           <script src="/web/events/embeds/event-map.js"></script>
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap"
@@ -54,14 +58,14 @@ landing_page:
           icon_name: assignment
           is_white: True
         description:
-            <a href="#">Event Guide</a>
+            <a href="https://drive.google.com/open?id=1VM9sBu1T2FGEWGeluuQtrqNviiDvhC7nLwyibhXO-Q4">Event Guide</a>
             &mdash; Understand how to plan your event.<br />
       - heading: Tech Talk
         icon:
           icon_name: lightbulb_outline
           is_white: True
         description: >
-          <a href="https://drive.google.com/open?id=0B3OFWl-Xh_b-QzRJTUdhNjdFMGM">Speaker Decks</a> &mdash; Start with the basics!<br />
+          <a href="https://drive.google.com/open?id=0B55wxScz_BJtVk1ScDJWS1N2VHM">Speaker Decks</a> &mdash; Start with the basics!<br />
           <a href="#">Training Video (coming soon)</a> &mdash; Learn from the team.
       - heading: Curriculum
         icon:
@@ -75,8 +79,8 @@ landing_page:
           icon_name: collections
           is_white: True
         description: >
-          <a href="https://drive.google.com/open?id=0B3OFWl-Xh_b-ODRKSUdwZjU2VnM">PWA Sticker</a> &mdash; Decorate your laptops.<br />
-          <a href="https://drive.google.com/open?id=0B3OFWl-Xh_b-R1NxS0pjQVFhNm8">PWA Shirt</a> &mdash; Dress for success.
+          <a href="https://drive.google.com/open?id=0B55wxScz_BJtMmdfQ2tiV1hKVlE">PWA Sticker</a> &mdash; Decorate your laptops.<br />
+          <a href="https://drive.google.com/open?id=0B55wxScz_BJtUkRNNUNsX0luN0U">PWA Shirt</a> &mdash; Dress for success.
       - heading: PWA Experts
         icon:
           icon_name: supervisor_account
@@ -88,10 +92,7 @@ landing_page:
           icon_name: question_answer
           is_white: True
         description: >
-          <a href="#">PWA Slack</a> &mdash; Discuss in realtime.<br />
-          <a href="#">PWA G+</a> &mdash; Coordinate with other organizers<br />
-          <a href="#">Mailing List</a> &mdash; Get answers in your inbox.
-
+          <a href="https://chromiumdev-slack.herokuapp.com">ChromiumDev Slack</a> &mdash; Discuss in realtime.<br />
 
   - classname: devsite-landing-row-fullbleed faq dark-background
     heading: Frequently Asked Questions

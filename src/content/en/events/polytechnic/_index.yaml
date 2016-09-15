@@ -28,6 +28,9 @@ landing_page:
         {% framebox height="500px" %}
           <link rel="stylesheet" href="/web/events/embeds/event-map.css">
           <div id="map" data-tags="polymer"></div>
+          <div id="map-key">
+            <span class="map-key-event polymer">= Polymer Polytechnic</span>
+          </div>
 
           <script src="/web/events/embeds/event-map.js"></script>
           <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIJ9XX2ZvRKCJcFRrl-lRanEtFUow4piM&callback=initMap"
