@@ -21,13 +21,8 @@ La primera parte de los estilos computarizados consiste en crear un conjunto de 
 
 La segunda parte del proceso consiste en recopilar todas las reglas de estilo de los selectores de coincidencias y descifrar los estilos finales del elemento. En Blink (motor de representación de Chrome y Opera), estos procesos son, al menos en la actualidad, bastante equivalentes en costo:
 
-<div class="quote" style="margin-top: 30px;">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Aproximadamente, el 50 % del tiempo que se utiliza para calcular el estilo computarizado de un elemento se destina a los selectores de coincidencias, y la otra mitad del tiempo se utiliza para crear el RenderStyle (representación del estilo computarizado) a partir de las reglas que coinciden.
-    <p>Rune Lillesveen, Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Invalidación de estilos en Blink</a></p>
-    </blockquote>
-  </div>
-</div>
+> Aproximadamente, el 50 % del tiempo que se utiliza para calcular el estilo computarizado de un elemento se destina a los selectores de coincidencias, y la otra mitad del tiempo se utiliza para crear el RenderStyle (representación del estilo computarizado) a partir de las reglas que coinciden.
+> > Rune Lillesveen, Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Invalidación de estilos en Blink</a>
 
 
 ## Reducción de la complejidad de sus selectores

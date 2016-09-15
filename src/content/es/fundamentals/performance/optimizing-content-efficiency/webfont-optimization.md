@@ -62,7 +62,7 @@ Note: Puedes usar la <a href='http://en.wikipedia.org/wiki/Zopfli'>compresión Z
 
 ## TL;DR {: .hide-from-toc }
 - Utiliza la opción format() para especificar varios formatos de fuente
-- 'Crea subconjuntos de fuentes unicode grandes para mejorar el rendimiento: utiliza los subconjuntos de la gama unicode y proporciona manualmente un subconjunto alternativo para los navegadores más antiguos'
+- Crea subconjuntos de fuentes unicode grandes para mejorar el rendimiento: utiliza los subconjuntos de la gama unicode y proporciona manualmente un subconjunto alternativo para los navegadores más antiguos
 - Reduce el número de opciones de estilo de las fuentes para mejorar el rendimiento de la renderización de la página y del texto
 
 
@@ -177,13 +177,8 @@ Cada familia de fuentes está formada por diferentes variantes estilísticas (no
 
 Por ejemplo, el diagrama anterior ilustra una familia de fuentes con tres grosores de negrita distintos disponibles: 400 (normal), 700 (negrita) y 900 (negrita extra). El navegador asigna automáticamente todas las demás variantes intermedias (en gris) a la variante más cercana. 
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Al especificar un grosor para el que no existe ninguna fuente, se utiliza una fuente con un grosor similar. Por lo general, el grosor de las negritas se asigna a fuentes más densas, mientras que los grosores menos densos se asignan a fuentes menos gruesas.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algoritmo de concordancia de fuentes CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Al especificar un grosor para el que no existe ninguna fuente, se utiliza una fuente con un grosor similar. Por lo general, el grosor de las negritas se asigna a fuentes más densas, mientras que los grosores menos densos se asignan a fuentes menos gruesas.
+> > <a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algoritmo de concordancia de fuentes CSS3</a>
 
 Para las variantes en _cursiva_ se utiliza una lógica similar. El diseñador de la fuente controla de qué variantes dispondrá y nosotros controlamos qué variantes utilizaremos en la página. Puesto que cada variante comporta una descarga distinta, se recomienda no tener una cantidad excesiva de variantes. Por ejemplo, podemos definir dos variantes de negrita para nuestra familia _Awesome Font_: 
 
@@ -220,13 +215,9 @@ En el ejemplo anterior podemos ver que la familia _Awesome Font_ está formada p
 
 <img src="images/font-synthesis.png" class="center" alt="Síntesis de fuentes">
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Los autores deben tener en cuenta que puede ser que las opciones sintetizadas no sean adecuadas para alfabetos como el cirílico, en los que las formas en cursiva tienen una forma muy distinta. Siempre es mejor utilizar fuentes en cursiva reales que depender de las versiones sintetizadas.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">Estilo de fuente CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Los autores deben tener en cuenta que puede ser que las opciones sintetizadas no sean adecuadas para alfabetos como el cirílico, en los que las formas en cursiva tienen una forma muy distinta. Siempre es mejor utilizar fuentes en cursiva reales que depender de las versiones sintetizadas.
+> > <a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">Estilo de fuente CSS3</a>
+
 
 En el ejemplo anterior se muestra la diferencia entre los resultados de fuentes reales y sintetizadas de Open-Sans. Todas las variantes sintetizadas se generan a partir de una fuente de grosor 400. Como puedes ver, hay una diferencia significativa en los resultados. La información para generar las variantes en negrita y en cursiva no se especifica. Por lo tanto, los resultados variarán de un navegador a otro y también dependerán mucho de la fuente.
 
@@ -236,7 +227,7 @@ Note: Para conseguir la máxima coherencia y los mejores resultados visuales, no
 ## Optimizar la carga y la renderización
 
 ## TL;DR {: .hide-from-toc }
-- 'Las solicitudes de fuentes se retrasan hasta que se construye el árbol de visualización, lo que puede retardar la renderización del texto'
+- Las solicitudes de fuentes se retrasan hasta que se construye el árbol de visualización, lo que puede retardar la renderización del texto
 - La API de carga de fuentes permite implementar estrategias de carga y renderización de fuentes personalizadas que sustituyen la carga de fuentes lenta predeterminada
 - La incrustación de fuentes permite sustituir la carga de fuentes lenta predeterminada en los navegadores antiguos
 
