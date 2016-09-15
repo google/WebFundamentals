@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ユーザーがページ上で行う中核的操作に関係するコンテンツを優先して表示させることで、クリティカル レンダリング パスを最適化します。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

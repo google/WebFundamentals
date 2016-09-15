@@ -78,17 +78,17 @@ Note: 如果你对Web Components很感兴趣，那这篇文章对你就没什么
 ## 评估样式计算的成本
 最简单最好的评估样式计算成本的方式就是使用Chrome DevTools的Timeline功能。打开DevTools，选择Timeline标签，点击左上角红色record按钮，然后在页面上做一些互动操作。再点击一次那个红色按钮结束记录，你就会看到类似下图的画面：
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg" class="g--centered" alt="DevTools showing long-running style calculations.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="DevTools showing long-running style calculations.">
 
 顶部的横线表示该页面每秒渲染的帧数，如果你看到有柱状条超过了下面的那条横线，也就是表示60fps的那条线，那就说明你的页面里有运行时间过长的帧。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" class="g--centered" alt="Zooming in on a trouble area in Chrome DevTools.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg"  alt="Zooming in on a trouble area in Chrome DevTools.">
 
 如果页面在与用户交互的过程（比如页面滚动）中有运行时间过长的帧，那么我们就得对这些帧好好分析一下了。
 
 如果你看到了很高的紫色柱状条，就像下图所示。那么点击那个紫色条，你会看到更多细节信息。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" class="g--centered" alt="Getting the details of long-running style calculations.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="Getting the details of long-running style calculations.">
 
 在细节信息中，我们可以看到一个耗时很长的样式计算事件，该事件的执行耗时超过了18毫秒。不巧的是，它正好是在页面滚动过程中发生的，因此给用户带来了一个很明显的卡顿效果。
 

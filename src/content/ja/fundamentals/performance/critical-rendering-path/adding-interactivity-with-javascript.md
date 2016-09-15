@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript を利用すると、コンテンツやスタイル、ユーザー操作に対する挙動など、ページの大部分の要素を変更できるようになります。ただし、JavaScript は DOM 構築をブロックし、ページのレンダリング時に遅延を引き起こすことがあります。JavaScript を非同期化して、クリティカル レンダリング パスから不要な JavaScript を取り除き、最適なパフォーマンスを実現するようにします。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -24,7 +23,7 @@ JavaScript を利用すると、コンテンツやスタイル、ユーザー操
 JavaScript は、ブラウザ内で実行される動的言語で、ページの挙動に関する大部分の要素を変更可能にします。DOM ツリーに対して要素の追加や削除を行うことでページのコンテンツを変更したり、各要素の CSSOM プロパティを変更したり、ユーザー入力を処理したり、さまざまなことが可能になります。実践的に理解するため、以前使用した「Hello World」サンプルにシンプルなインライン スクリプトを追加してみましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto %}
 </pre>
 
 * JavaScript により、DOM に到達し、隠れた span ノードへの参照を引き出すことができます。このノードはレンダリング ツリーでは見えませんが、確かに DOM の中に存在しています。参照を取得したら、そのテキストを変更できます（.textContent 経由）。さらに、計算処理済みの表示スタイル プロパティを「none」から「inline」にオーバーライドすることもできます。すべての記述と作業が完了すると、サンプルページには「**Hello interactive students!**」と表示されます。
@@ -62,13 +61,13 @@ JavaScript は、ブラウザ内で実行される動的言語で、ページの
 script タグを通じて組み込まれたスクリプトの場合は、どうなるでしょうか。上記のサンプルを利用して、コードを個別ファイルに抽出してみましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto %}
 </pre>
 
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 インライン JavaScript コードの代わりに `<script>` タグを使用した場合、実行順序に違いは生じるでしょうか。もちろん、答えは「いいえ」で、まったく同じように処理されます。どちらの場合でも、ブラウザが一時中断したあと、スクリプトが実行され、その後でドキュメントの残りの部分が処理されます。ただし、**外部 JavaScript ファイルの場合、ブラウザが一時中断した後、ディスクやキャッシュ、リモート サーバーからスクリプトが取得されるのを待つ必要があります。その結果、クリティカル レンダリング パスには、ミリ秒レベルとしてはかなりの量の遅延が追加されることになります。**
@@ -78,7 +77,7 @@ script タグを通じて組み込まれたスクリプトの場合は、どう�
 この巧みな方法は、どのようにすれば実現できるでしょうか。非常に簡単です。スクリプトを _async_ としてマーキングすればいいのです。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 async キーワードを script タグに追加することで、ブラウザに対して、「スクリプトの準備が整うのを待つ間、DOM 構築をブロックしないように」と伝えることができます。この方法は、パフォーマンスの大幅な改善につながります。

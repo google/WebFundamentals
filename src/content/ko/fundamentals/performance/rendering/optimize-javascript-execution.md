@@ -44,7 +44,7 @@ Note: 실행 중인 JIT를 보려면 <a href='http://mrale.ph/irhydra/2/'>Vyache
 
 프레임워크 또는 샘플에서 `setTimeout` 또는 `setInterval`을 사용하여 애니메이션과 같은 시각적 변화를 수행할 수도 있지만, 이 경우 문제는 콜백이 프레임에서 _특정 시점_(종료 시)에 실행되고, 종종 프레임이 누락되어 jank가 발생할 수 있다는 점입니다.
 
-<img src="images/optimize-javascript-execution/settimeout.jpg" class="g--centered" alt="브라우저에서 프레임 누락을 일으키는 setTimeout">
+<img src="images/optimize-javascript-execution/settimeout.jpg"  alt="브라우저에서 프레임 누락을 일으키는 setTimeout">
 
 실제로 jQuery의 기본 `animate` 동작은 현재 `setTimeout`을 사용하는 것입니다! [이를 패치하여 `requestAnimationFrame`을 사용](https://github.com/gnarf/jquery-requestAnimationFrame)할 수 있는데, 이 방법을 강력히 권장합니다.
 
@@ -103,15 +103,15 @@ JavaScript를 언제 얼마나 오래 실행할지 전략을 수립해야 합니
 
 JavaScript의 비용 및 성능 프로필을 측정하는 가장 좋은 방법은 Chrome DevTools를 사용하는 것입니다. 일반적으로 다음과 같은 낮은 수준의 세부정보 레코드를 얻을 수 있습니다.
 
-<img src="images/optimize-javascript-execution/low-js-detail.jpg" class="g--centered" alt="낮은 수준의 JS 실행 세부정보를 제공하는 Chrome DevTools의 Timeline">
+<img src="images/optimize-javascript-execution/low-js-detail.jpg"  alt="낮은 수준의 JS 실행 세부정보를 제공하는 Chrome DevTools의 Timeline">
 
 오래 실행되는 JavaScript를 발견하면 DevTools 사용자 인터페이스의 상단에 있는 JavaScript 프로파일러를 활성화할 수 있습니다.
 
-<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" class="g--centered" alt="DevTools에서 JS 프로파일러 활성화">
+<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg"  alt="DevTools에서 JS 프로파일러 활성화">
 
 이 방법으로 JavaScript를 프로파일링하는 데 따르는 오버헤드가 있으므로 JavaScript 런타임 특성을 더 세부적으로 파악하려는 경우에만 활성화하십시오. 이제 확인란이 활성화된 상태에서 동일한 작업을 수행하고 JavaScript에서 호출된 함수에 대해 휠씬 더 많은 정보를 얻을 수 있습니다.
 
-<img src="images/optimize-javascript-execution/high-js-detail.jpg" class="g--centered" alt="높은 수준의 JS 실행 세부정보를 제공하는 Chrome DevTools의 Timeline">
+<img src="images/optimize-javascript-execution/high-js-detail.jpg"  alt="높은 수준의 JS 실행 세부정보를 제공하는 Chrome DevTools의 Timeline">
 
 이 정보를 사용하여 JavaScript가 애플리케이션에 미치는 성능 영향을 평가하고, 함수 실행에 너무 오랜 시간이 걸리는 핫스팟을 찾아 수정하기 시작할 수 있습니다. 이전에 언급한 것처럼 오래 실행되는 JavaScript를 찾아 제거하거나, Web Worker로 이전하여(JavaScript를 제거할 수 없는 경우) 기본 스레드의 여유 공간을 확보하여 다른 작업을 계속 수행할 수 있도록 해야 합니다.
 

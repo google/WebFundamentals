@@ -18,7 +18,8 @@ var WARNING_STRINGS = [
   {label: 'TODO: Verify note type!', regEx: /<!-- TODO: Verify note type! -->/},
   {label: 'TODO: Verify Udacity', regEx: /<!-- TODO: Verify Udacity course fits here -->/},
   {label: 'quote__content', regEx: /quote__content/},
-  {label: 'g-(wide|medium)--(push|pull)-x', regEx: /g-(wide|medium)--(push|pull)-\d/}
+  {label: 'g-(wide|medium)--(push|pull)-x', regEx: /g-(wide|medium)--(push|pull)-\d/},
+  {label: 'g--', regEx: /g--/}
 ];
 var ERROR_STRINGS = [
   {label: 'Possible template tag ({{)', regEx: /{{/},

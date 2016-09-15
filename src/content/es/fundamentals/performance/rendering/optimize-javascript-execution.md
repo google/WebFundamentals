@@ -43,7 +43,7 @@ Cuando se producen cambios visuales en la pantalla, usted desea hacer su trabajo
 
 En los marcos o las muestras se puede utilizar `setTimeout` o `setInterval` para introducir cambios visuales, como animaciones, pero el problema es que la llamada de retorno se ejecutará en _algún momento_ en el marco, posiblemente justo al final, y eso, a menudo, puede causar la pérdida de un marco, lo que da como resultado un bloqueo.
 
-<img src="images/optimize-javascript-execution/settimeout.jpg" class="g--centered" alt="setTimeout causing the browser to miss a frame.">
+<img src="images/optimize-javascript-execution/settimeout.jpg"  alt="setTimeout causing the browser to miss a frame.">
 
 De hecho, en la actualidad, el comportamiento predeterminado de `animate` en jQuery es utilizar `setTimeout`. Puede [realizar revisiones para utilizar `requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame), algo que se recomienda enfáticamente.
 
@@ -102,15 +102,15 @@ Cuando evalúa un marco, una biblioteca o su propio código, es importante evalu
 
 La mejor manera de medir el perfil de rendimiento y el costo de su JavaScript es utilizar DevTools de Chrome. Generalmente, obtendrá registros con pocos detalles que se ven de la siguiente manera:
 
-<img src="images/optimize-javascript-execution/low-js-detail.jpg" class="g--centered" alt="Chrome DevTools' Timeline providing low JS execution detail.">
+<img src="images/optimize-javascript-execution/low-js-detail.jpg"  alt="Chrome DevTools' Timeline providing low JS execution detail.">
 
 Si descubre que posee JavaScript de larga ejecución, puede habilitar el generador de perfiles de JavaScript en la parte superior de la interfaz de usuario de DevTools:
 
-<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" class="g--centered" alt="Enabling the JS profiler in DevTools.">
+<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg"  alt="Enabling the JS profiler in DevTools.">
 
 De este modo, se produce una sobrecarga de generación de perfiles en JavaScript, por lo que debe asegurarse de habilitarlo únicamente cuando desee obtener más detalles sobre las características del tiempo de ejecución de JavaScript. Con la casilla de verificación marcada, ahora puede realizar las mismas acciones y obtener mucha más información sobre las funciones que se ejecutaron en su JavaScript:
 
-<img src="images/optimize-javascript-execution/high-js-detail.jpg" class="g--centered" alt="Chrome DevTools' Timeline providing high JS execution detail.">
+<img src="images/optimize-javascript-execution/high-js-detail.jpg"  alt="Chrome DevTools' Timeline providing high JS execution detail.">
 
 Con esta información en sus manos, puede evaluar el impacto del rendimiento de JavaScript en su aplicación, y comenzar a encontrar y solucionar las zonas activas en las que las funciones demoran demasiado en ejecutarse. Como mencionamos anteriormente, debe intentar eliminar el JavaScript de larga ejecución o, si esto no fuera posible, moverlo hacia el Web Worker para liberar la cadena principal y continuar con otras tareas.
 

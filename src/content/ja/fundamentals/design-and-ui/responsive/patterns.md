@@ -1,64 +1,53 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만, 데스크톱 및 모바일 장치에서 잘 작동하는 확립된 패턴은 소수입니다.
+description: レスポンシブ ウェブ デザイン パターンは急速に進化していますが、 デスクトップとモバイル端末間でうまく動作する 確立されたパターンは限られています。
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-10-20 #}
 
-# 반응형 웹 디자인 패턴 {: .page-title }
+# Responsive Web Design Patterns {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "_shared/contributors/petelepage.html" %}
 
-
-
-반응형 웹 디자인 패턴은 빠르게 진화하고 있지만, 데스크톱 및 모바일 장치에서 잘 작동하는 확립된 패턴은 소수입니다.
+レスポンシブ ウェブ デザイン パターンは急速に進化していますが、 デスクトップとモバイル端末間でうまく動作する 確立されたパターンは限られています。
 
 
-반응형 웹 페이지에 사용되는 대부분의 레이아웃은 유동형, 열 끌어놓기, 레이아웃 시프터, 미세 조정 및 오프 캔버스라는 5가지 패턴 중 하나로 분류될 수 있습니다.
+レスポンシブ ウェブ ページで使用されるほとんどのレイアウトは、5 つのパターンのいずれかに分類することができます。
+主にfluid、column drop、layout shifter、tiny tweaks、および off canvas です。
+いくつかのケースでは、ページはパターンの組み合わせを使用します。たとえば、
+column drop と off canvas の組み合わせです。  これらのパターンは本来 [Luke
+Wroblewski](http://www.lukew.com/ff/entry.asp?1514)によって認識され、
+レスポンシブ ページの起点を提供します。
 
-일부 경우에 페이지에서 패턴 조합(예: 열 끌어놓기 + 오프 캔버스)을 사용할 수
-있습니다.  [Luke
-Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 이러한 패턴은 모든 반응형
-페이지에 강력한 시작점을 제공합니다.
+## パターン
 
-## 패턴
+シンプルで分かりやすいサンプルを作成するために、
+以下の各サンプルは、
+[`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)を使用して、実際のマークアップで作成されました。
+一般的に 3 つのコンテンツ `div` はプライマリ コンテナの中に含まれています。
+ 各サンプルは、最初に最小のビューで書き始められ、ブレークポイント
+が必要に応じて追加されました。  最新のブラウザ向けに [flexbox レウアウトは適切に
+サポートされていますが](http://caniuse.com/#search=flexbox)最適なサポートのためには
+ベンダーのプレフィックスがまだ必要です。
 
-간단하고 이해하기 쉬운 패턴을 생성하기 위해, [`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)을 사용하여 아래의 각 샘플을 생성했습니다. 이때 일반적으로 기본 컨테이너 `div`에 3개의 콘텐츠 `div`가 포함됩니다.
+## Mostly fluid 
 
+ｊほとんどの fluid パターンは、主に fluid グリッドで構成されています。  大画面または 中画面では、通常は同じサイズを保ち、より広い画面  で余白を調整ます。
 
+小さな画面では、fluid グリッドはリフローするメインコンテンツを引き起こし、
+列は垂直方向に積層されます。  このパターンの主な利点の 1 つは、
+通常、小画面と大画面の間に 1 つの
+ブレークポイントだけが必要であることです。
 
- 각 샘플은 먼저 가장 작은 보기부터 작성하고 필요한 경우 중단점을 추가했습니다.
-  최적의 지원을 위해 공급업체 접두어가 필요할 수도 있지만 최신 브라우저에서 [flexbox 레이아웃 모드가 잘 지원됩니다](http://caniuse.com/#search=flexbox).
+<img src="imgs/mostly-fluid.svg">
 
+最小ビューでは、各コンテンツ`div`は垂直に積層されます。  画面の幅が 600px になった場合
+、プライマリ コンテンツ `div` は `width: 100%` にとどまり、
+セカンダリ `div` はプライマリ `div` の下に 2 列で表示されます。  800px 
+を超える場合、コンテナ `div` は固定幅となり、画面の中央に配置されます。
 
-
-
-
-
-## 유동형(Mostly fluid) 
-
-
-
-
-유동형 패턴은 주로 유동형 그리드로 구성됩니다.  더 넓은 화면에서는 여백만 조정하므로 대형 화면이나 중형 화면에서 이 패턴은 일반적으로 동일한 크기를 유지합니다.
-
-더 작은 화면에서는 열이 수직 방향으로 쌓이면서 기본 콘텐츠가 재배치됩니다.
-  이 패턴의 한 가지 주요 이점은 대개 소형 화면과 대형 화면에서 하나의 중단점만 필요하다는 것입니다.
-
-
-
-
-  <img src="imgs/mostly-fluid.svg">
-  체험해 보기
-
-
-가장 작은 보기에서 각 콘텐츠 `div`가 수직으로 쌓입니다.  화면 너비가 600px에 도달하면 기본 콘텐츠 `div`가 `width: 100%`로 유지되지만 보조 `div`는 기본 `div` 아래 2열로 나타납니다.
-
-  
-800px를 넘으면 컨테이너 `div`는 너비가 고정되고 화면 중앙에 배치됩니다.
-
-다음은 이 패턴을 사용하는 사이트의 예입니다.
+このパターンを使用するサイトには以下が含まれます。
 
  * [A List Apart](http://mediaqueri.es/ala/)
  * [Media Queries](http://mediaqueri.es/)
@@ -66,70 +55,52 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/mostly-fluid.html" region_tag="mfluid" adjust_indentation="auto" %}
 </pre>
 
+## Column Drop
+
+全幅マルチ カラム レイアウトでは、ウィンドウ幅がコンテンツに合わせて狭くなりすぎないように、 列のドロップは単純に列を垂直にスタックします。  
+
+最終的にこの結果は、
+すべての列で垂直にスタックされます。  このレイアウト パターンのための
+ブレークポイントの選択は、コンテンツに依存しており、
+各デザインで変更されます。
+
+<img src="imgs/column-drop.svg">
 
 
+主に fluid サンプルでは、コンテンツは最小ビューで垂直にスタックされますが
+、画面が 600px 以上になった場合、プライマリおよびセカンダリ コンテンツ
+`div`は、画面の幅いっぱいになります。  `div` の順番はオーダー CSS プロパティで
+設定されます。  800px で、すべてのコンテンツ `div` が表示され、
+全画面幅が使用されます。
 
-## 열 끌어놓기(Column Drop) 
-
-
-
-
-전체 너비가 가득 찬 다중 열 레이아웃의 경우 열 끌어놓기는 창 너비가 콘텐츠에 비해 너무 좁아지면 열을 수직으로 쌓습니다.
-
-결국 모든 열이 수직으로 쌓이게 됩니다.
-  이 레이아웃 패턴의 중단점 선택은 콘텐츠에 따라 다르며 디자인에 따라 변할 수 있습니다.
-
-
-
-
-  <img src="imgs/column-drop.svg">
-  체험해 보기
-
-
-
-유동형 샘플처럼 콘텐츠는 가장 작은 보기에서 수직으로 쌓이지만, 화면이 600px 이상으로 커지면 기본 및 보조 콘텐츠 `div`가 화면의 전체 너비를 차지합니다.
-
-  `div`의 순서는 order CSS 속성을 사용하여 설정됩니다.
-  800px에서는 전체 화면 너비에 3개의 콘텐츠 `div`가 모두 표시됩니다.
-
-
-다음은 이 패턴을 사용하는 사이트의 예입니다.
+このパターンを使用するサイトには以下が含まれます。
 
  * [Modernizr](http://modernizr.com/)
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
 </pre>
 
+## Layout shifter
 
+layout shifter パターンは、複数の画面の幅にわたって複数のブレークポイントを有する、 レスポンシブ パターンの代表例です。
 
+このレイアウトの鍵は、リフローや他の列の下へのドロップではなく、
+コンテンツの移動です。  各主要ブレイクポイント間の大きな差によって、維持が複雑になり、
+全体的なコンテンツのレイアウトだけでなく、要素内の変化が
+含まれる可能性があります。
 
-## 레이아웃 시프터(Layout shifter) 
+<img src="imgs/layout-shifter.svg">
 
+この簡単な例では、ayout shifter パターンを示しています。
+小さな画面ではコンテンツは垂直にスタックされますが、
+画面が大きくなるにつれて大幅に変化します。左に `div` および右に 2 つのスタックされた `div` を持ちます。
 
-
-
-레이아웃 시프터 패턴은 반응성이 가장 뛰어난 패턴이며 여러 화면 너비에 복수의 중단점을 가집니다.
-
-이 레이아웃의 핵심은 다른 열 아래로 이동 및 재배치하는 방식이 아니라 콘텐츠의 자리 이동 방식에 있습니다.
-  각 주요 중단점 간의 현저한 차이로 인해 유지 관리하기가 훨씬 복잡하고 전체 콘텐츠 레이아웃뿐만 아니라 요소 내의 변경도 포함합니다.
-
-
-
-
-  <img src="imgs/layout-shifter.svg">
-  체험해 보기
-
-
-이 간단한 레이아웃 시프터 패턴의 예를 보면 작은 화면에서 콘텐츠가 수직으로 쌓이지만 화면이 커짐에 따라 한 `div`는 왼쪽에, 두 `div`는 오른쪽에 쌓이게 되는 큰 변화가 일어납니다.
-
-
-
-다음은 이 패턴을 사용하는 사이트의 예입니다.
+このパターンを使用するサイトには以下が含まれます。
 
  * [Food Sense](http://foodsense.is/)
  * [Seminal Responsive Design
@@ -137,74 +108,55 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Andersson-Wise Architects](http://www.anderssonwise.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter" adjust_indentation="auto" %}
 </pre>
 
+## Tiny tweaks
 
+Tiny tweaks はレイアウトのための小さな変更を行います。非常にマイナーなフォント サイズの調整、画像サイズの変更、コンテンツの移動などです。
 
+これは、1 ページの線形ウェブ サイト、テキストの多い記事のような、
+単一列のレイアウトに適しています。
 
-## 미세 조정(Tiny tweaks) 
+<img src="imgs/tiny-tweaks.svg">
 
+名前からわかるように、このサンプルでは、画面サイズの変化など少しだけの変更です。
+画面の幅が大きくなるにつれて、フォントサイズやパディングを行います。
 
-
-
-미세 조정은 글꼴 크기 미세 조정, 이미지 크기 미세 변경 또는 콘텐츠 미세 이동 등과 같이 레이아웃을 약간 변경합니다.
-
-이 패턴은 1페이지 선형 웹사이트, 텍스트가 많은 문서 등 단일 열 레이아웃에서 잘 작동합니다.
-
-
-
-  <img src="imgs/tiny-tweaks.svg">
-  체험해 보기
-
-
-이름에서 알 수 있듯이 이 샘플은 화면 크기의 변화에 비해 거의 변화가 없습니다.
-화면 너비가 커질수록 글꼴 크기와 여백도 커집니다.
-
-다음은 이 패턴을 사용하는 사이트의 예입니다.
+このパターンを使用するサイトには以下が含まれます。
 
  * [Opera's Shiny Demos](http://shinydemos.com/)
  * [Ginger Whale](http://gingerwhale.com/)
  * [Future Friendly](http://futurefriendlyweb.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" adjust_indentation="auto" %}
 </pre>
 
+## Off canvas
 
 
 
-## 오프 캔버스(Off canvas) 
+縦にコンテンツをスタックするよりも、オフキャンバス パターンは、使用頻度の低いコンテンツを配置します。おそらくナビゲーションやアプリ メニューでオフキャンバスになり、画面サイズが十分に大きい場合にのみ表示され、小さい画面ではコンテンツはクリックでが離れます。
 
+<img src="imgs/off-canvas.svg">
 
+縦にコンテンツをスタックするよりも、このサンプルでは `transform: translate(-250px, 0)` を使用して、コンテンツ
+`div` の 2 つを非表示にします。  JavaScript を使用して、
+オープンクラスを追加することで  div を表示し、要素を可視化します。  画面の幅が大きくなるにつれて、
+オフスクリーンの位置は要素から除去され
+可視ビューポート内に表示されます。
 
+このサンプルでは、Safari for iOS 6 および Android Browser は `flexbox` の
+`flex-flow: row nowrap` 機能をサポートしないことに注意してください。
+このため、絶対位置にフォールバックしなければなりませんでした。
 
-오프 캔버스 패턴은 콘텐츠를 수직으로 쌓지 않고 사용 빈도가 낮은 콘텐츠(예: 탐색 또는 앱 메뉴)를 화면 밖에 배치하고, 화면 크기가 충분히 커지면 표시하고, 작은 화면에서는 클릭했을 때만 보여줍니다.
+このパターンを使用するサイトには以下が含まれます。
 
-
-  <img src="imgs/off-canvas.svg">
-  체험해 보기
-
-
-이 샘플은 콘텐츠를 수직으로 쌓지 않고 `transform: translate(-250px, 0)`을 사용하여 두 개의 콘텐츠
-`div`를 화면에서 숨깁니다.  JavaScript로 열린 클래스를 요소에 추가하여 보이게 만드는 방식으로 div를 표시할 수 있습니다.
-  화면이 넓어짐에 따라 요소의 화면 밖 위치가 없어지고 가시적인 뷰포트 내에 표시됩니다.
-
-
-
-이 샘플에서 Safari for iOS 6 및 Android Browser는 `flexbox`의 `flex-flow: row nowrap` 기능을 지원하지 않으므로 절대 위치로 대체했어야 합니다.
-
-
-
-다음은 이 패턴을 사용하는 사이트의 예입니다.
-
- * [HTML5Rocks
-  Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
+ * [HTML5Rocks Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
  * [Google Nexus](http://www.google.com/nexus/)
  * [Facebook's Mobile Site](https://m.facebook.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}
 </pre>
-
-

@@ -44,7 +44,7 @@ Quando mudanças visuais estão acontecendo na tela, recomenda-se fazer o trabal
 
 Frameworks ou amostras podem usar `setTimeout` ou `setInterval` para realizar mudanças visuais, como animações, mas o retorno de chamada será executado em _algum ponto_ no frame, possivelmente no final, o que pode causar a perda de um frame, e consequentemente um jank.
 
-<img src="images/optimize-javascript-execution/settimeout.jpg" class="g--centered" alt="setTimeout fazendo o navegador perder um frame.">
+<img src="images/optimize-javascript-execution/settimeout.jpg"  alt="setTimeout fazendo o navegador perder um frame.">
 
 Na verdade, o comportamento padrão do `animate` do jQuery hoje é usar `setTimeout`! Você pode [corrigi-lo para usar `requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame), o que é recomendado.
 
@@ -103,15 +103,15 @@ Ao avaliar um framework, biblioteca ou seu próprio código, é importante avali
 
 A melhor forma de medir seu perfil de custo e desempenho do JavaScript é usando Chrome DevTools. Geralmente você receberá registros de detalhes baixos como:
 
-<img src="images/optimize-javascript-execution/low-js-detail.jpg" class="g--centered" alt="Linha cronológica do Chrome DevTools fornecendo detalhes de baixa execução JS.">
+<img src="images/optimize-javascript-execution/low-js-detail.jpg"  alt="Linha cronológica do Chrome DevTools fornecendo detalhes de baixa execução JS.">
 
 Se descobrir que tem um JavaScript de longa execução, é possível habilitar o gerador de perfis do JavaScript no alto interface do usuário do DevTools:
 
-<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" class="g--centered" alt="Habilitando o gerador de perfis JS no DevTools.">
+<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg"  alt="Habilitando o gerador de perfis JS no DevTools.">
 
 Há uma sobrecarga no perfil do JavaScript desta forma, portanto, certifique-se de habilitar apenas quando desejar dicas sobre as características de tempo de execução do JavaScript. Com a caixa de seleção habilitada, você pode realizar as mesmas ações e receberá muito mais informações sobre quais funções foram chamadas no seu JavaScript:
 
-<img src="images/optimize-javascript-execution/high-js-detail.jpg" class="g--centered" alt="Linha cronológica do Chrome DevTools fornecendo detalhes de alta execução JS.">
+<img src="images/optimize-javascript-execution/high-js-detail.jpg"  alt="Linha cronológica do Chrome DevTools fornecendo detalhes de alta execução JS.">
 
 Com essa informação você pode avaliar o impacto do desempenho do JavaScript no seu aplicativo e começar a localizar e corrigir qualquer ponto de acesso onde as funções estão levando muito tempo para serem executadas. Como mencionado anteriormente, recomenda-se remover o JavaScript de longa execução ou, se não for possível, movê-lo para um Web Worker liberando o thread principal para continuar com outras tarefas.
 

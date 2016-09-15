@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ブラウザは、コンテンツを画面にレンダリングする前に、DOM ツリーと CSSOM ツリーを構築する必要があります。そのため、HTML と CSS の両方をできる限り早くブラウザに渡す必要があります。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -26,7 +25,7 @@ description: ブラウザは、コンテンツを画面にレンダリングす�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 まず、ごく基本的なケースから始めましょう。シンプルな HTML ページにテキストが少し、画像が 1 つあるとします。このシンプルなページを処理する際、ブラウザはどのような作業を必要とするでしょうか？
@@ -57,7 +56,7 @@ DOM ツリーの準備が整うと、ページを画面にレンダリングす�
 ブラウザがシンプルなサンプルページの DOM を構築している間、ドキュメントの head セクションで link タグに遭遇します。このタグは、外部の CSS スタイルシート「style.css」を参照しています。ブラウザは、ページのレンダリングにはこのリソースが必要であると想定しつつ、すぐにこのリソースに対してリクエストをディスパッチします。すると、次のコンテンツが返ってきます。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 もちろん、HTML マークアップの内部で直接スタイルを宣言することもできますが（インライン）、CSS を HTML から独立させておくことで、コンテンツの問題とデザインの問題を別個のものとして扱うことができます。たとえば、デザイナーは CSS について作業を行い、デベロッパーは HTML に集中するといった分業が可能になります。

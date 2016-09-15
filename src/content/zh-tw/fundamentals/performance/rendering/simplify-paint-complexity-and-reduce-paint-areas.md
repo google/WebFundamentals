@@ -21,33 +21,33 @@ description: 繪製是填入最終會合成到使用者螢幕上的像素之過�
 
 如果您觸發版面配置，就 _一定會觸發器繪製_，因為變更任何元素的幾何形狀代表其像素需要修正！
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg" class="g--centered" alt="完整的像素管道。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg"  alt="完整的像素管道。">
 
 如果您變更非幾何形狀的屬性，如背景、文字顏色或陰影，也可能會觸發繪製。 在這些情況下不需要版面配置，而管道看起來會像這樣：
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg" class="g--centered" alt="無版面配置的像素管道。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg"  alt="無版面配置的像素管道。">
 
 ## 使用 Chrome DevTools，以迅速識別出繪製瓶頸
 
 您可以使用 Chrome DevTools 以快速識別正在被繪製的區域。 前往 DevTools 並按您鍵盤上的 Esc 鍵。 前往出現的面板中的轉譯標籤，並選擇「顯示繪製長方形」：
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg" class="g--centered" alt="這會在 DevTools 中顯示繪製長方形選項。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg"  alt="這會在 DevTools 中顯示繪製長方形選項。">
 
 在此選項開啟的情況下，每當發生繪製時，Chrome 都會閃綠色螢幕。 如果您看到整個螢幕閃綠色，或是看到您認為不應繪製的螢幕區域，那麼您應該再深入探究問題。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg" class="g--centered" alt="每當繪製時，網頁就會閃綠色。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg"  alt="每當繪製時，網頁就會閃綠色。">
 
 Chrome DevTools 的時間軸中有一個選項會提供您更多資訊：繪製分析工具。 若要啟用它，前往「時間軸」，並核取頂部的「繪製」方塊。 _只有試圖分析繪製問題時，才開啟此功能_，因為這麼做會帶來額外負荷，並扭曲您的效能分析，這點很重要。 當您想進一步瞭解正在繪製的內容時，最適合使用它。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg" class="g--centered" alt="啟用 Chrome DevTools 中繪製分析的切換。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg"  alt="啟用 Chrome DevTools 中繪製分析的切換。">
 
 從這裡，您現在可以執行「時間軸」錄製，而繪製記錄將提供多出許多的詳細資料。 點擊在一個畫面中的繪製記錄，現在您可以存取得該畫面的繪製分析工具：
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg" class="g--centered" alt="叫出繪製分析工具的按鈕。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg"  alt="叫出繪製分析工具的按鈕。">
 
 按一下繪製分析工具會叫出檢視，讓您看到正在繪製什麼、其所費時間，以及所需的個別繪製呼叫：
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg" class="g--centered" alt="Chrome DevTools Paint Profiler。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg"  alt="Chrome DevTools Paint Profiler。">
 
 此分析工具會讓您瞭解區域和複雜性 (事實上是繪製的所費時間) ，要是無法避免繪製，這兩個都是您可以試圖修正的地方。
 
@@ -55,7 +55,7 @@ Chrome DevTools 的時間軸中有一個選項會提供您更多資訊：繪製�
 
 繪製不一定是儲存至記憶體中的單一影像中。 事實上，有必要的話，有可能瀏覽器會繪製進多個影像中 -- 或稱合成器層。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg" class="g--centered" alt="合成器層的代表。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg"  alt="合成器層的代表。">
 
 這種方法的好處在於，元素會定期重新繪製，或帶變形在螢幕上移動的元素，可以在不影響其他元素的情況下進行處理。 這是跟美術套裝程式一樣，如 Sketch、GIMP 或 Photoshop ，個別層可在其他層之上處理和合成，以建立最終的影像。
 
@@ -90,7 +90,7 @@ Note: 「在固定的高 DPI 螢幕元素上，位置會自動升階至本身的
 ## 簡化繪製複雜性 
  提到繪製的過程，有些項目比其他項目來得高成本。 例如，任何涉及模糊 (像陰影) 的項目會花更長時間才能繪製 -- 例如 -- 繪製一個紅色方塊。 就 CSS 而言，這個現象不一定顯而易見：`background: red;` 和 `box-shadow: 0, 4px, 4px, rgba(0,0,0,0.5);` 看起來不一定有相當大的效能特性，但實際上卻是。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg" class="g--centered" alt="繪製螢幕一部分所需的時間。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg"  alt="繪製螢幕一部分所需的時間。">
 
 以上的繪製分析工具可讓您判斷，是否需要尋找其他方式來達到您的最終效果。 問問您自己，是否可以使用更低成本的一組樣式或替代方式，實現您的最終結果。
 

@@ -2,19 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: リッチなオフライン体験、定期的なバックグラウンド同期、プッシュ通知など、これまでネイティブアプリを必要としていた機能が Web にもやってきます。Service Worker はそれらの機能を提供する基盤技術です。
 
-{# wf_review_required #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_updated_on: 2016-08-16 #}
+{# wf_published_on: 2014-12-01 #}
 
 # Service Worker の紹介 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/myakura.html" %}
-
-
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 リッチなオフライン体験、定期的なバックグラウンド同期、プッシュ通知など、これまでネイティブアプリを必要としていた機能が Web にもやってきます。Service Worker はそれらの機能を提供する基盤技術です。
 
@@ -37,12 +30,6 @@ Service Worker について、知っておきたいことは次のとおりで�
 ## Service Worker のライフサイクル 
 
 
-
-Translated By: 
-
-
-
-
 Service Worker は Web ページとはまったく異なるライフサイクルで動作します。
 
 Service Worker を Web ページにインストールするには、ページの JavaScript から登録しなければいけません。Service Worker の登録をすると、ブラウザは Service Worker のインストール処理をバックグラウンドで実行します。
@@ -55,16 +42,10 @@ Service Worker を Web ページにインストールするには、ページの
 
 次の図は最初のインストール後の Service Worker のライフサイクルをおおまかに図示したものです。
 
-![service worker lifecydle](images/sw-lifecycle.png)
+![service worker lifecydle](imgs/sw-lifecycle.png)
 
 
 ## はじめる前に 
-
-
-
-Translated By: 
-
-
 
 
 はじめる前に、まずちゃんとした環境を整えているかを確かめましょう。
@@ -98,12 +79,7 @@ Service Worker を使うと接続へのハイジャック、改ざん、フィ�
 
 
 
-Translated By: 
-
-
-
-
-<p class="intro">Service Worker をインストールするには、ページから Service Worker を<strong>登録</strong>しなければいけません。登録によって、ブラウザに Service Worker の JavaScript ファイルの場所を知らせられます。
+Service Worker をインストールするには、ページから Service Worker を<strong>登録</strong>しなければいけません。登録によって、ブラウザに Service Worker の JavaScript ファイルの場所を知らせられます。
 
 
     if ('serviceWorker' in navigator) {
@@ -125,7 +101,7 @@ Translated By:
 
 Service Worker が有効になっているかは、`chrome://inspect/#service-workers` にある自分のサイトからわかります。
 
-![Service Worker の調査](images/sw-chrome-inspect.png)
+![Service Worker の調査](imgs/sw-chrome-inspect.png)
 
 Service Worker が Chrome で実装された当初は、`chrome://serviceworker-internals` からその詳細を確認できました。これも Service Worker のライフサイクルを知りたいというだけの場合には有用かもしれません。ただもし今後 `chrome://inspect/#service-workers` に置き換わってもびっくりしないでくださいね。
 
@@ -133,11 +109,6 @@ Service Worker のテストはシークレットウインドウで行うと便�
 
 
 ## Service Worker のインストール 
-
-
-
-Translated By: 
-
 
 
 
@@ -185,11 +156,6 @@ Translated By:
 
 
 ## リクエストをキャッシュして返す 
-
-
-
-Translated By: 
-
 
 
 
@@ -273,12 +239,6 @@ Service Worker がインストールされた状態で、他のページヘ移�
 ## Service Worker の更新 
 
 
-
-Translated By: 
-
-
-
-
 開発が進むと、Service Worker を更新しなければいけない時が来るでしょう。更新は以下の手順で行います。
 
 1. Service Worker の JavaScript ファイルを更新します。ユーザーがあなたのサイトに移動してきた時、ブラウザは Service Worker を定義する JavaScript ファイルを再度ダウンロードしようとします。現在ブラウザが保持しているファイルとダウンロードしようとするファイルにバイト差異がある場合、それは「新しいもの」と認識されます
@@ -314,11 +274,6 @@ Translated By:
 
 
 ## つまづきポイント 
-
-
-
-Translated By: 
-
 
 
 
@@ -397,11 +352,6 @@ Service Worker のインストール時に画像をキャッシュさせたい�
 
 
 
-Translated By: 
-
-
-
-
 ### もっと知る
 
 Service Worker についてのドキュメンテーションは [https://jakearchibald.github.io/isserviceworkerready/resources](https://jakearchibald.github.io/isserviceworkerready/resources.html) にまとめられています。
@@ -409,3 +359,7 @@ Service Worker についてのドキュメンテーションは [https://jakearc
 ### ヘルプ
 
 もしつまづいた場合、Stack Overflow に質問してみてください。また '[service-worker](http://stackoverflow.com/questions/tagged/service-worker)' タグを使ってください。また、お互いに助けあったりもしてくださいね。
+
+
+Translated By: 
+{% include "web/_shared/contributors/myakura.html" %}

@@ -3,6 +3,7 @@ book_path: /web/updates/_book.yaml
 description: 洗練されたユーザ体験を提供するために、あなたのウェブサイトでユーザの認証を手助けすることは重要なことです。しかし、特にモバイル環境においては、パスワードの作成、記憶、そして打ち込みは、エンドユーザにとって面倒に感じる傾向があります。
 
 {# wf_updated_on: 2016-05-07 #}
+{# wf_published_on: 2016-05-07 #}
 
 # Credential Management API を使ったサインインフローの効率化 {: .page-title }
 

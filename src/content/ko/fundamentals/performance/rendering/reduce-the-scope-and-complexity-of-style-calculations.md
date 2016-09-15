@@ -73,17 +73,17 @@ Note: 웹 구성요소를 들여다보면 기본적으로 스타일은 Shadow DO
 ## 스타일 재계산 비용 측정
 스타일 재계산 비용을 가장 쉽게 측정하는 최선의 방법은 Chrome DevTools의 Timeline 모드를 사용하는 것입니다. 시작하려면 DevTools를 열고 Timeline 탭으로 가서 레코드를 선택하고 사이트와 상호작용합니다. 레코딩을 중단하면 아래와 유사한 이미지가 나타납니다.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg" class="g--centered" alt="DevTools에서 오래 실행되는 스타일 계산 표시">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="DevTools에서 오래 실행되는 스타일 계산 표시">
 
 상단의 스트립은 초당 프레임(fps)을 나타냅니다. 하단의 60fps 라인 위에 막대가 나타나면 오래 실행되는 프레임이 있습니다.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" class="g--centered" alt="Chrome DevTools에서 문제 영역 확대">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg"  alt="Chrome DevTools에서 문제 영역 확대">
 
 스크롤 등과 같은 상호작용 동안 오래 실행되는 프레임이 있으면 추가 확인이 필요합니다.
 
 위의 경우처럼 큰 자주색 블록이 있는 경우 레코드를 클릭하면 더 자세한 정보를 볼 수 있습니다.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" class="g--centered" alt="오래 실행되는 스타일 계산에 대한 세부정보 얻기">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="오래 실행되는 스타일 계산에 대한 세부정보 얻기">
 
 위의 이미지에는 18ms 이상 걸리는 오래 실행되는 Recalculate Style 이벤트가 있습니다. 이 이벤트는 스크롤 동안 발생하며 뚜렷한 떨림 현상을 유발합니다.
 

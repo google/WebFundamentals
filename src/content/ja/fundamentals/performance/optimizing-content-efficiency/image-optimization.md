@@ -2,14 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ウェブページ上のダウンロード容量の大半は画像に相当し、画像が表示スペースの大部分を占有することも少なくありません。そのため、画像を最適化することはウェブサイトの容量の大幅な削減とパフォーマンスの改善につながります。ブラウザでダウンロードする必要がある容量が少ないほど、クライアントの帯域幅の競合は減り、ブラウザが有効なコンテンツをダウンロードして画面に表示するまでの時間も短縮されます。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
 # 画像の最適化 {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
 
 
 ウェブページ上のダウンロード容量の大半は画像に相当し、画像が表示スペースのかなりの部分を占有することも少なくありません。そのため、画像を最適化することはウェブサイトの容量の大幅な削減とパフォーマンスの改善につながります。ブラウザでダウンロードする必要がある容量が少ないほど、クライアントの帯域幅の競合は減り、ブラウザが有効なコンテンツをダウンロードして画面に表示するまでの時間も短縮されます。
@@ -49,20 +47,19 @@ description: ウェブページ上のダウンロード容量の大半は画像�
 
 &nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>ベクター</b>
-    <img class="center" src="images/vector-zoom.png" alt="ベクター画像の拡大図">
-  </div>
+<figure class="attempt-left">
+  <img src="images/vector-zoom.png" alt="ベクター画像の拡大図">
+  <figcaption>ベクター</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/raster-zoom.png" alt="ラスター画像の拡大図">
+  <figcaption>ラスター</figcaption>
+</figure>
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>ラスター</b>
-    <img src="images/raster-zoom.png" alt="ラスター画像の拡大図">
-  </div>
-</div>
 
-* [ベクター形式](http://en.wikipedia.org/wiki/Vector_graphics)では、線、点、ポリゴンを使って画像を表します。
-* [ラスター形式](http://en.wikipedia.org/wiki/Raster_graphics)では、長方形のグリッド内の各ピクセルの値を個々にエンコードすることで画像を表します。
+* [ベクター形式](https://en.wikipedia.org/wiki/Vector_graphics)では、線、点、ポリゴンを使って画像を表します。
+* [ラスター形式](https://en.wikipedia.org/wiki/Raster_graphics)では、長方形のグリッド内の各ピクセルの値を個々にエンコードすることで画像を表します。
 
 形式ごとに長所と短所があります。ベクター形式は、単純な幾何学的図形（ロゴ、テキスト、アイコンなど）で構成される画像に最適です。解像度とズームの設定にかかわらず鮮明に結果が出力されるため、高解像度画面やさまざまなサイズで表示する必要があるアセットに理想的な形式です。
 

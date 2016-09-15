@@ -27,33 +27,33 @@ Translated By:
 
 如果布局被触发，那么接下来绘制_一定_会被触发。因为改变一个元素的几何属性就意味着该元素的所有像素都需要重新渲染！
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg" class="g--centered" alt="The full pixel pipeline.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg"  alt="The full pixel pipeline.">
 
 除此之外，如果改变元素的非几何属性，也可能触发绘制，比如背景、文字颜色或者阴影效果，尽管这些属性的改变不会触发布局。整个渲染流水线会像下图所示：
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg" class="g--centered" alt="The pixel pipeline without layout.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg"  alt="The pixel pipeline without layout.">
 
 ## 使用Chrome DevTools来迅速定位绘制过程中的性能瓶颈
 
 使用Chrome DevTools能够迅速定位出当前页面中正在进行绘制的区域。打开DevTools，按下键盘的ESC键。在弹出的面板中，选中rendering选项卡，然后选中“Show paint rectangles”：
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg" class="g--centered" alt="The show paint rectangles option in DevTools.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg"  alt="The show paint rectangles option in DevTools.">
 
 打开了Chrome的这个选项之后，每当页面中有绘制发生时，屏幕上就会闪现绿色的方框。如果你看到绿色方框覆盖了整个屏幕，或者覆盖了一些你觉得不应该发生绘制的区域，那么很可能这次绘制是可以被优化的，你就需要看看这次绘制的更多细节了。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg" class="g--centered" alt="The page flashing green whenever painting occurs.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg"  alt="The page flashing green whenever painting occurs.">
 
 Chrome DevTools中有一个选项能让你看到更多关于绘制的细节：paint profiler。打开DevTools的Timeline选项卡，选中面板顶部的“Paint”选项，你就开启了paint profiler。需要注意的是，请务必_仅在需要分析绘制问题的时候才开启该选项_。因为运行paint profiler本身也会耗费浏览器的资源，对页面性能的结果多少会有点影响。最好是按需启用它，而不是一直让它开启着。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg" class="g--centered" alt="The toggle to enable paint profiling in Chrome DevTools.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg"  alt="The toggle to enable paint profiling in Chrome DevTools.">
 
 完成了上述设置之后，你就可以对页面进行绘制性能分析了。运行Timeline记录功能，你就会记录到相当详细的绘制分析信息。在某一帧的记录上点击paint记录，你就会看到这一帧的绘制分析结果：
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg" class="g--centered" alt="The button to bring up the paint profiler.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg"  alt="The button to bring up the paint profiler.">
 
 点击paint profiler，会打开一个视图，里面会显示绘制了哪些元素、花了多长时间、以及每个具体的paint调用：
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg" class="g--centered" alt="Chrome DevTools Paint Profiler.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg"  alt="Chrome DevTools Paint Profiler.">
 
 这个分析器能让你了解绘制区域和绘制复杂度（体现为花费了多长时间），这两个方面正好是你可以对绘制做优化的地方（当然我们首先得努力避免绘制的发生，在无法避免的情况下才对绘制做优化）。
 
@@ -61,7 +61,7 @@ Chrome DevTools中有一个选项能让你看到更多关于绘制的细节：pa
 
 绘制并非总是在内存中的单层画面里完成的。实际上，浏览器在必要时将会把一帧画面绘制成多层画面，然后将这若干层画面合并成一张图片显示到屏幕上。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg" class="g--centered" alt="A representation of compositor layers.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg"  alt="A representation of compositor layers.">
 
 这种绘制方式的好处是，使用tranforms来实现移动效果的元素将会被正常绘制，同时不会触发对其他元素的绘制。这种处理方式和思想跟图像处理软件（比如Sketch/GIMP/Photoshop）是一致的，它们都是可以在图像中的某个单个图层上做操作，最后合并所有图层得到最终的图像。
 
@@ -96,7 +96,7 @@ Note: 在DPI较高的屏幕上，固定定位的元素会自动地被提升到�
 ## 简化绘制的复杂度
 在绘制所涉及的一些问题中，有些问题是相对更耗费昂贵的。比如，绘制一个blur效果（比如阴影）就比绘制其他效果（比如一个红色方框）更费时。然而，在CSS方面，这些问题并非都是显而易见的：`background: red`和`box-shadow: 0, 4px, 4px, rgba(0,0,0,0.5);`可能看上去在性能方面没有太大的差别，但事实却并非如此。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg" class="g--centered" alt="The time taken to paint part of the screen.">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg"  alt="The time taken to paint part of the screen.">
 
 上面提到的paint profiler能让你意识到是否该问问自己：有没有其他的方式（比如其他的样式修改方案）来实现同样的效果的同时，却能达到更好的性能。
 

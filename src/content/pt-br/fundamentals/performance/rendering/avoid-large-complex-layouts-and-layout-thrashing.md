@@ -49,7 +49,7 @@ Quando você muda de estilos, o navegador verifica se alguma mudança exige que 
 
 Se não for possível evitar o layout, então a solução é usar novamente o Chrome DevTools para ver quanto tempo está levando e determinar se o layout é a causa do estrangulamento. Primeiro, abra o DevTools, vá para a guia Linha cronológica, clique em registro e interaja com o seu site. Quando você parar de gravar, verá um detalhamento da execução do seu site:
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" class="g--centered" alt="DevTools mostrando um tempo longo no Layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg"  alt="DevTools mostrando um tempo longo no Layout" />
 
 Ao detalhar o frame do exemplo acima, vemos que mais de 20 ms são gastos dentro do layout. Quando temos 16 ms para exibir um frame na tela em uma animação, esse valor é muito alto. Você também pode ver que o DevTools dirá o tamanho da árvore (1.618 elementos nesse caso) e quantos nós precisaram de layout.
 
@@ -60,11 +60,11 @@ A Web tem uma variedade de modelos de layout, alguns suportados mais amplamente 
 
 A captura de tela abaixo mostra o custo de layout ao usar flutuações em 1.300 caixas. É realmente um elemento artificial, porque a maioria dos aplicativos usarão vários meios para posicionar elementos.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" class="g--centered" alt="Usando flutuações como layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg"  alt="Usando flutuações como layout" />
 
 Se atualizarmos a amostra para usar o Flexbox, uma adição mais recente à plataforma da Web, veremos uma imagem diferente:
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" class="g--centered" alt="Usando o flexbox como layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg"  alt="Usando o flexbox como layout" />
 
 Agora gastamos muito menos tempo (3,5 ms vs 14 ms nesse caso) no layout para o _mesmo número de elementos_ e o mesmo visual. É importante lembrar que para alguns contextos, você talvez não poderá selecionar o Flexbox, porque ele é [menos suportado do que as flutuações](http://caniuse.com/#search=flexbox), mas onde puder, deve pelo menos investigar o impacto do modelo de layout no seu desempenho e escolher aquele que reduz o custo de execução.
 
@@ -73,7 +73,7 @@ Em qualquer caso, selecionando o Flexbox ou não, você ainda deve **testar e ev
 ## Evite layouts sincronizados forçados
 Enviar um frame para a tela tem a seguinte ordem:
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" class="g--centered" alt="Usando o flexbox como layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg"  alt="Usando o flexbox como layout" />
 
 Primeiro, o JavaScript é executado, _em seguida_ os cálculos de estilo _e depois_ o layout. No entanto, é possível forçar um navegador a realizar o layout antes com o JavaScript. É chamado de**layout sincronizado forçado**.
 

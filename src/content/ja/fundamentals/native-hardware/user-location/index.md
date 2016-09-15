@@ -2,14 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ほとんどのブラウザおよび端末は、ユーザーの地理的位置を検知することができます。 お使いのサイトやアプリ内でユーザーの場所を使って作業する方法を学習します。
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-06-06 #}
 
 # User Location {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 Geolocation API では、ユーザーの場所を確認できますが、これは常にユーザーの 同意を得て行います。」 この機能は、ユーザーのクエリの一部として使用することができます。たとえば、 目的地点に人を案内するなどです。 また、「ジオ タグ」ユーザーが作成したいくつかのコンテンツに使用することができます。たとえば、 写真を撮った場所に印を付ける などです。
@@ -73,20 +72,17 @@ Geolocation API を使用する際には多くの注意が必要ですが、こ�
 利点があるかを、ユーザーが理解できるようにします。  
 サイトが読み込まれると同時に、ホームページで位置情報を求めることは、あまり良くないユーザー エクスペリエンスを与える結果になります。
 
-<div class="clear g-wide--pull-1">
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
-      <figcaption>サイトが読み込まれると同時に、ホームページで位置情報を求めることは、あまり良くないユーザー エクスペリエンスを与える結果になります。</figcaption>
-    </figure>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
-      <figcaption> 常に、ユーザーの操作時に位置情報へのアクセスをリクエストします。</figcaption>
-      </figure>
-  </div>
-</div>
+
+<figure class="attempt-left">
+  <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
+  <figcaption>サイトが読み込まれると同時に、ホームページで位置情報を求めることは、あまり良くないユーザー エクスペリエンスを与える結果になります。</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
+  <figcaption> 常に、ユーザーの操作時に位置情報へのアクセスをリクエストします。</figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 代わりに、ユーザーに対して明確なアクションを要求する、または
 ユーザーの操作が位置情報へのアクセスを必要としていることを示します。  すると、ユーザーは、
@@ -127,6 +123,7 @@ Geolocation API を使用する際には多くの注意が必要ですが、こ�
 4.  タイマーがタイムアウトしても望む応答が得られない場合は、ユーザーに通知を表示します。
 5.  応答が遅れて得られ、通知がまだ表示されている場合は、その通知を画面から消去します。
 
+<div class="clearfix"></div>
 
     button.onclick = function() {
       var startPos;
@@ -167,8 +164,6 @@ Geolocation API を使用する際には多くの注意が必要ですが、こ�
 
 
 ## Obtain the user's current location 
-
-
 
 
 Geolocation API では、ユーザーの場所を確認できますが、これは常にユーザーの同意を得て行います。 この機能は、ユーザーのクエリの一部として使用することができます。たとえば、目的地点に人を案内するなどです。 また、ユーザーが作成したいくつかのコンテンツの「ジオタグ」に使用することができます。たとえば、写真を撮った場所に印を付けるなどです。
@@ -388,9 +383,6 @@ Wifi の三角測量や GPS などのジオロケーション
 
 ## Monitor the user's location 
 
-
-
-
 Geolocation API では、ユーザーの場所を確認でき、移動するにつれてタブを保持できますが、これらは常にユーザーの同意を得て行います。
 
 
@@ -427,6 +419,7 @@ Geolocation API を使用すると、`getCurrentPosition()` に一度コール�
 1.  利用者のより正確なロックを取得します。
 2.  ユーザーの位置が変わります。
  
+<div class="clearfix"></div>
 
     var watchId = navigator.geolocation.watchPosition(function(position) {
       document.getElementById('currentLat').innerHTML = position.coords.latitude;
@@ -451,6 +444,8 @@ GeoLocation システムをオフにしてください。
 あるいはユーザーが場所の検索を突然無効にした可能性があります。 2 つめの
 任意の getCurrentPosition() の引数は、エラー発生時に呼び出され、
 コールバックの内部をユーザーに通知することができます。
+
+<div class="clearfix"></div>
 
 
     window.onload = function() {

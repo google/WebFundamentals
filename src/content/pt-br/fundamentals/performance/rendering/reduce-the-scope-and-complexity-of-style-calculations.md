@@ -73,17 +73,17 @@ Note: Se estiver utilizando o Web Components, note que os cálculos de estilo s�
 ## Meça seu custo de recálculo de estilo
 A melhor forma e também a mais fácil de medir o custo de recálculos de estilo é usar o modo Linha cronológica do Chrome DevTools. Para começar, abra o DevTools, vá para a guia Linha cronológica, clique em registro e interaja com o seu site. Quando parar de gravar, uma imagem como esta será exibida.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg" class="g--centered" alt="DevTools mostrando cálculos de estilo de longa execução.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="DevTools mostrando cálculos de estilo de longa execução.">
 
 A faixa no topo indica frames por segundo e, se houver barras acima da linha inferior, a linha de 60 fps, serão frames de longa execução.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" class="g--centered" alt="Ampliando uma área de problemas no Chrome DevTools.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg"  alt="Ampliando uma área de problemas no Chrome DevTools.">
 
 Se você tiver um frame de longa duração durante uma interação, como rolagem ou alguma outra interação, ele traz uma análise mais profunda.
 
 Se você tiver um grande bloco roxo, como no caso acima, clique no registro e você receberá mais detalhes.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" class="g--centered" alt="Obtendo detalhes de cálculos de estilo de longa execução.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="Obtendo detalhes de cálculos de estilo de longa execução.">
 
 Neste ponto, há um evento Recalcular Estilo, de longa execução, que leva um pouco mais de 18 ms e está ocorrendo justamente durante uma rolagem, causando uma trepidação perceptível na experiência.
 

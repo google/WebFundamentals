@@ -2,19 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: プログレッシブ ウェブアプリはウェブとアプリの両方の利点を兼ね備えたアプリです。このステップバイステップガイドでは、あなた自身のプログレッシブ ウェブアプリを構築し、そしてプログレッシブウェブアプリの開発で必要とされる基礎を学ぶことになります。それは、App Shellモデルや、App ShellやあなたのアプリケーションのキーデータなどをキャッシュするためのService Workerの使い方を含みます。
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-04-06 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2016-02-04 #}
 
 # はじめてのプログレッシブ ウェブアプリ {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/yoichiro.html" %}
-
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 <a href="/web/progressive-web-apps">プログレッシブ ウェブアプリ</a>はウェブとアプリの両方の利点を兼ね備えたアプリです。ブラウザのタブで表示してすぐに利用することができ、インストールの必要はありません。使い続けてユーザーとの関係性が構築されていくにつれ、より強力なアプリとなります。不安定なネットワークでも迅速に起動し、関連性の高いプッシュ通知を送信することができます。また、ホーム画面にアイコンを表示することができ、トップレベルの全画面表示で読み込むことができます。
@@ -49,53 +42,33 @@ Note: さらに詳しくは、2015 年の Chrome Dev Summit で Alex Russell が
 
 ## 作成するもの
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <p>
-      このコードラボでは、プログレッシブ ウェブアプリの技法を使って
-      お天気ウェブアプリを作成します。
-    </p>
-    <p>
-      プログレッシブ ウェブアプリの特徴を基に考えてみましょう。
-      <ul>
-        <li><b>段階的</b> - 徐々に機能が強化されていくようにします。</li>
-        <li><b>レスポンシブ</b> - あらゆるフォームファクタに適合するようにします。</li>
-        <li><b>ネットワーク接続に依存しない</b> - Service Worker で App Shell をキャッシュします。</li>
-        <li><b>アプリ感覚</b> - アプリと同様の操作で、都市の追加やデータの更新を行えるようにします。</li>
-        <li><b>常に最新</b> - Service Worker で最新のデータをキャッシュします。</li>
-        <li><b>安全</b> - HTTPS 対応のホストにアプリを実装します。</li>
-        <li><b>発見しやすい</b> / インストール可能 - マニフェストを指定し、検索エンジンでアプリを簡単に見つけられるようにします。</li>
-        <li><b>リンク可能</b> - ウェブページとして活用できるようにします。</li>
-      </ul>
-    </p>
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-    <a href="https://weather-pwa-sample.firebaseapp.com/final/">
-      <img src="images/weather-ss.png">
-    </a>
-    <p>
-      <a href="https://weather-pwa-sample.firebaseapp.com/final/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Try it</a>
-    </p>
-  </div>
+<div class="attempt-right">
+  <a href="https://weather-pwa-sample.firebaseapp.com/final/">
+    <img src="img/weather-ss.png">
+  </a>
+  <a href="https://weather-pwa-sample.firebaseapp.com/final/">Try it</a>
 </div>
+
+このコードラボでは、プログレッシブ ウェブアプリの技法を使って
+お天気ウェブアプリを作成します。
+
+* <b>段階的</b> - 徐々に機能が強化されていくようにします。
+* <b>レスポンシブ</b> - あらゆるフォームファクタに適合するようにします。
+* <b>ネットワーク接続に依存しない</b> - Service Worker で App Shell をキャッシュします。
+* <b>アプリ感覚</b> - アプリと同様の操作で、都市の追加やデータの更新を行えるようにします。
+* <b>常に最新</b> - Service Worker で最新のデータをキャッシュします。
+* <b>安全</b> - HTTPS 対応のホストにアプリを実装します。
+* <b>発見しやすい</b> / インストール可能 - マニフェストを指定し、検索エンジンでアプリを簡単に見つけられるようにします。
+* <b>リンク可能</b> - ウェブページとして活用できるようにします。
+
+<div class="clearfix"></div>
+
 
 ## 学習する内容
 
 * 「App Shell」方式に基づいてアプリを設計し構築する方法
 * アプリをオフラインで動作可能にする方法
 * データを保存し、後からオフラインで使用できるようにする方法
-
-## カバーされるトピック
-
-<ol>
-{% for pageInSection in page.context.pages %}
-  <li>
-    <a href="{{pageInSection.relative_url }}">
-      {{pageInSection.title}}
-    </a>
-  </li>
-{% endfor %}
-</ol>
 
 ## 必要なもの
 
@@ -106,14 +79,7 @@ Note: さらに詳しくは、2015 年の Chrome Dev Summit で Alex Russell が
 概念については説明を省略しています。また、単にコピーして貼り付けるだけの
 コードブロック（スタイルや関連性のない JavaScript）を用意している箇所もあります。
 
-
 ## App Shellを構築する 
-
-
-
-Translated By: 
-
-
 
 
 App Shell とは、プログレッシブ ウェブアプリのユーザー インターフェースが機能する
@@ -128,9 +94,8 @@ App Shell のアーキテクチャでは、アプリケーションの核とな�
 ので、以降の読み込み時にはすべてを読み込まなくても必要なデータだけを取得すればよい
 ことになります。
 
-<figure>
-  <img src="images/appshell.jpg" />
-</figure>
+<img src="img/appshell.jpg" />
+
 
 App Shell は、ネイティブ アプリの作成時にアプリストアに公開するコードバンドルの
 ようなもの、と言うこともできます。これはアプリを起動するために必要な基本の構成要素
@@ -155,20 +120,15 @@ App Shell アーキテクチャを採用すると、スピードを追及でき�
 これから最初のプログレッシブ ウェブアプリとして、お天気アプリを作ります。
 主要な構成要素は次のとおりです。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <ul>
-      <li>タイトル ヘッダー、追加 / 更新ボタン</li>
-      <li>予報カードのコンテナ</li>
-      <li>予報カードのテンプレート</li>
-      <li>都市の追加用ダイアログ ボックス</li>
-      <li>読み込みインジケータ</li>
-    </ul>
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-    <img src="images/weather-ss.png">
-  </div>
-</div>
+<img src="img/weather-ss.png" class="attempt-right">
+
+* タイトル ヘッダー、追加 / 更新ボタン
+* 予報カードのコンテナ
+* 予報カードのテンプレート
+* 都市の追加用ダイアログ ボックス
+* 読み込みインジケータ
+
+<div class="clearfix"></div>
 
 より複雑なアプリを設計する場合は、最初に読み込む必要のないコンテンツは後でリクエスト
 するようにできます。読み込んだコンテンツは、今後の使用に備えてキャッシュします。
@@ -177,13 +137,6 @@ App Shell アーキテクチャを採用すると、スピードを追及でき�
 
 
 ## App Shell を実装する 
-
-
-
-Translated By: 
-
-
-
 
 どのようなプロジェクトでも開始にはいくつかの方法がありますが、通常は
 Web Starter Kit の利用をおすすめしています。ただし今回は、プロジェクトをできるだけ
@@ -200,7 +153,7 @@ Web Starter Kit の利用をおすすめしています。ただし今回は、�
 ### App Shell の HTML を作成する
 
 可能な限りクリーンな状態で始めることを確認するために、ブランドの新しい`index.html`
-ファイルから始めて、[App Shell を構築する](step-01)で取り上げた中心的な構成要素を
+ファイルから始めて、[App Shell を構築する](#step-01)で取り上げた中心的な構成要素を
 追加しましょう。
 
 今回の構成要素をもう一度挙げます。
@@ -210,6 +163,8 @@ Web Starter Kit の利用をおすすめしています。ただし今回は、�
 * 予報カードのテンプレート
 * 都市の追加用ダイアログ ボックス
 * 読み込みインジケータ
+
+<div class="clearfix"></div>
 
 
     <!DOCTYPE html>
@@ -321,14 +276,10 @@ JavaScript コードを追加してください。
 
 `app.updateForecastCard(fakeForecast);`
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-03/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">試す</a>
+[試す](https://weather-pwa-sample.firebaseapp.com/step-03/)
 
 
 ## 最初の読み込みを高速に行えるようにする 
-
-
-
-Translated By: 
 
 
 
@@ -446,15 +397,10 @@ Note: 補習: <code>localstorage</code> の実装を <a href='https://www.npmjs.
 * 右上の + アイコンをクリックして都市を追加し、2 つのカードが表示されることを確認します。
 * ブラウザを更新して、アプリに両方の予報が読み込まれ最新情報が表示されることを確認します。
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-04/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">試す</a>
+[試す](https://weather-pwa-sample.firebaseapp.com/step-04/)
 
 
 ## Service Worker を使って App Shell を事前キャッシュする 
-
-
-
-Translated By: 
-
 
 
 
@@ -710,17 +656,10 @@ Chrome の Service Worker  ページ（`chrome://serviceworker-internals`）を
 キャッシュされていることを確認します。
 * `cacheName` を変更してみて、キャッシュが適切に更新されることを確認します。
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-05/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">試す</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/step-05/">試す</a>
 
 
 ## Service Worker を使ってアプリケーション データをキャッシュする 
-
-
-
-Translated By: 
-
-
-
 
 データに正しいキャッシュ戦略を選択することは重要であり、これはアプリで提供する
 データの種類によって決まります。たとえば、天気情報や株価など時間の経過とともに
@@ -770,21 +709,21 @@ App Shell を切り離せるように設定しましょう。こうすると、A
 次に、`fetch` イベント ハンドラに変更を加え、データ API へのリクエストを他の
 リクエストと別に処理できるようにする必要があります。
 
-{% highlight javascript hl_lines="3 4 5 6" %}
-self.addEventListener('fetch', function(e) {
-  console.log('[ServiceWorker] Fetch', e.request.url);
-  var dataUrl = 'https://publicdata-weather.firebaseio.com/';
-  if (e.request.url.indexOf(dataUrl) === 0) {
-    // Put data handler code here
-  } else {
-    e.respondWith(
-      caches.match(e.request).then(function(response) {
-        return response || fetch(e.request);
-      })
-    );
-  }
-});
-{% endhighlight %}
+
+    self.addEventListener('fetch', function(e) {
+      console.log('[ServiceWorker] Fetch', e.request.url);
+      var dataUrl = 'https://publicdata-weather.firebaseio.com/';
+      if (e.request.url.indexOf(dataUrl) === 0) {
+        // Put data handler code here
+      } else {
+        e.respondWith(
+          caches.match(e.request).then(function(response) {
+            return response || fetch(e.request);
+          })
+        );
+      }
+    });
+
 
 このコードでは、リクエストを傍受し、URL の先頭が Weather API のアドレスかどうかを
 確認します。URL の先頭が Weather API のアドレスであれば、`fetch` を使用して
@@ -879,4 +818,7 @@ self.addEventListener('fetch', function(e) {
 を停止し、ネットワークの接続を切断して、アプリを実行してみてください。App Shell
 とデータの両方がキャッシュから配信されるようになります。
 
-<a href="https://weather-pwa-sample.firebaseapp.com/step-07/" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">試す</a>
+<a href="https://weather-pwa-sample.firebaseapp.com/step-07/">試す</a>
+
+Translated By: 
+{% include "web/_shared/contributors/yoichiro.html" %}

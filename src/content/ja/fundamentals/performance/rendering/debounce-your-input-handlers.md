@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 入力ハンドラは、アプリ内のパフォーマンスの問題の潜在的な原因となります。これらはフレームを完了ブロックする可能性があり、追加の (不要な) レイアウト作業の原因になります。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

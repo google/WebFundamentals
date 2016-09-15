@@ -2,14 +2,10 @@ project_path: /web/_project.yaml
 book_path: /web/resources/_book.yaml
 description: Web Fundamentals を日本語化したい人は、誰でも Contribute することができます。
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-07-04 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 翻訳手順 {: .page-title }
-
-{% include "web/_shared/contributors/TODO.html" %}
-
 
 
 # Web Fundamentals の日本語翻訳手順

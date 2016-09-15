@@ -54,7 +54,7 @@ Translated By:
 
 如果确实无法避免布局的发生，那么同样，你应该使用Chrome的DevTools来分析一下它到底耗费了多长时间，从而判断布局过程是否是页面性能的瓶颈。首先，打开DevTools，选择Timeline标签，，点击左上角红色record按钮，然后在页面上做一些互动操作。再点击一次那个红色按钮结束记录，你就会看到页面性能的分解图：
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" class="g--centered" alt="DevTools showing a long time in Layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg"  alt="DevTools showing a long time in Layout" />
 
 我们再仔细分析一下上面的例子，会发现布局耗费的时间超过20毫秒。前面已经说过，为了保障流畅的动画效果，我们需要控制每一帧的时间消耗在16毫秒以内，而现在这个消耗显然太长了。我们还可以看到其他一些细节，比如布局树的大小（此例中为1618个节点）、需要布局的DOM节点数量。
 
@@ -65,11 +65,11 @@ web页面有许多种布局模型，浏览器对它们的支持程度各不相�
 
 下图显示了对页面中1300个盒对象使用浮动布局的时间消耗分析。当然这个例子有点极端，因为它只用了一种定位方式，而在大多数实际应用中会混用多种定位方式。
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" class="g--centered" alt="Using floats as layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg"  alt="Using floats as layout" />
 
 如果我们对这个示例中的元素使用Flexbox的布局方式（这是web平台上最近新添加的一种布局方式），我们将得到一张完全不同的布局时间消耗图：
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" class="g--centered" alt="Using flexbox as layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg"  alt="Using flexbox as layout" />
 
 可以看到，对_同样数量的元素_改用Flexbox布局之后，达到了同样的显示效果，但是时间消耗却得到大幅改进（由14毫秒减少到3.5毫秒）。同时需要注意的是，在有些场景下你可能无法使用Flexbox布局方式，因为它[不像浮动布局那样被浏览器广泛支持](http://caniuse.com/#search=flexbox)。但不管怎样，至少你得在对页面布局模型的性能分析的基础之上，来选择一种性能最优的布局方式，而不是随意地选择布局方式。
 
@@ -78,7 +78,7 @@ web页面有许多种布局模型，浏览器对它们的支持程度各不相�
 ## 避免强制同步布局事件的发生
 将一帧画面渲染到屏幕上的处理顺序如下所示：
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" class="g--centered" alt="Using flexbox as layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg"  alt="Using flexbox as layout" />
 
 首先是执行JavaScript脚本，_然后_是样式计算，_然后_是布局。但是，我们还可以强制浏览器在执行JavaScript脚本之前先执行布局过程，这就是所谓的**强制同步布局**。
 

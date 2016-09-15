@@ -24,11 +24,11 @@ description: 합성(compositing)은 화면에 표시하기 위해 페이지의 �
 ## 애니메이션에 변형 및 불투명도 변경 사용
 가장 잘 수행되는 픽셀 파이프라인 버전은 레이아웃과 그림 그리기를 모두 피하고 합성 변경만 요구합니다.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg" class="g--centered" alt="레이아웃과 그림 그리기가 없는 픽셀 파이프라인">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="레이아웃과 그림 그리기가 없는 픽셀 파이프라인">
 
 이를 달성하기 위해 컴포지터가 단독으로 처리할 수 있는 변경 속성을 고수해야 합니다. 현재 부합되는 속성으로는 **transform** 및 **opacity**라는 두 개의 속성만 있습니다.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg" class="g--centered" alt="레이아웃 또는 그림 그리기를 트리거하지 않고 애니메이션을 적용할 수 있는 속성">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="레이아웃 또는 그림 그리기를 트리거하지 않고 애니메이션을 적용할 수 있는 속성">
 
 변형 및 불투명도 사용 시 주의할 점은 이러한 속성을 변경하는 요소가 _자체 컴포지터 레이어_에 있어야 한다는 것입니다. 레이어를 만들기 위해 요소를 승격해야 합니다. 이에 대해서는 다음 절에서 설명합니다.
 
@@ -73,19 +73,19 @@ Note: 애니메이션을 해당 속성으로 제한할 수 없을지도 모른�
 
 요소가 레이어를 가지는 이유와 애플리케이션의프로필프로필프로필프로필 레이어를 이해하려면 Chrome DevTools의 Timeline에서 페인트 프로파일러를 활성화해야 합니다.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg" class="g--centered" alt="Chrome DevTools에서 페인트 프로파일러 전환">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg"  alt="Chrome DevTools에서 페인트 프로파일러 전환">
 
 이 기능이 활성화된 상태에서 레코딩을 수행해야 합니다. 레코딩이 완료되면 개별 프레임을 클릭할 수 있습니다. 이 프레임은 초당 프레임 막대와 세부정보 사이에 있습니다.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg" class="g--centered" alt="개발자가 프로파일링할 프레임">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="개발자가 프로파일링할 프레임">
 
 이 항목을 클릭하면 세부정보: 레이어 탭에 새 옵션이 제공됩니다.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg" class="g--centered" alt="Chrome DevTools의 레이어 탭 버튼">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="Chrome DevTools의 레이어 탭 버튼">
 
 이 옵션은 각 레이어가 생성된 이유와 함께 해당 프레임 동안 모든 레이어에서 이동, 스캔 및 확대/축소를 수행할 수 있는 새 보기를 표시합니다.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg" class="g--centered" alt="Chrome DevTools의 레이어 보기">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg"  alt="Chrome DevTools의 레이어 보기">
 
 이 보기를 사용하여 레이어 수를 추적할 수 있습니다. 스크롤이나 전환처럼 성능이 중요한 작업 동안 합성에 많은 시간을 소모한 경우(약 **4-5ms**를 목표로 설정해야 함), 여기에 나오는 정보를 사용하여 몇 개의 레이어가 있는지, 왜 생성되었는지 확인하여 앱에서 레이어 수를 관리할 수 있습니다.
 

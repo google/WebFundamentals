@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 要素の追加と削除を通じた DOM の変更、アニメーションを通じた属性とクラスの変更を行うと、ブラウザで要素スタイルの再計算が発生するほか、多くの場合、ページ全体またはページの一部のレイアウト（またはリフロー）が発生します。 このプロセスはスタイル計算と呼ばれます。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -22,13 +21,8 @@ description: 要素の追加と削除を通じた DOM の変更、アニメー�
 
 このプロセスの次の段階では、適合セレクターからすべてのスタイル ルールを取り出し、要素の最終的なスタイルを確定します。 Blink (Chrome と Opera のレンダリング エンジン) では、現在少なくとも、これらのプロセスのコストはほぼ同じです。
 
-<div class="quote" style="margin-top: 30px;">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">要素のスタイル計算に必要な時間の約 50% は適合セレクターを見つけるのに使用され、残りの時間は適合ルールから RenderStyle (計算されたスタイル表現) を構築するのに使用されます。
-    <p>Rune Lillesveen, Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Style Invalidation in Blink</a></p>
-    </blockquote>
-  </div>
-</div>
+> 要素のスタイル計算に必要な時間の約 50% は適合セレクターを見つけるのに使用され、残りの時間は適合ルールから RenderStyle (計算されたスタイル表現) を構築するのに使用されます。
+> > Rune Lillesveen, Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Style Invalidation in Blink</a>
 
 
 ## セレクターの複雑性の軽減
@@ -73,17 +67,17 @@ Note: ウェブ コンポーネントの場合、スタイル計算の動作が�
 ## スタイル再計算コストの計測
  スタイル再計算のコストを計測する最も容易で最適な方法は、Chrome DevTool のタイムライン モードを使用することです。 最初に、DevTool を開き、タイムライン タブに移動し、レコーディングを開始してサイトを操作します。 レコーディングを停止すると、下記のような画像がが表示されます。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg" class="g--centered" alt="長時間実行されているスタイル計算を示す DevTool">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="長時間実行されているスタイル計算を示す DevTool">
 
 最上部の細長い帯は 1 秒あたりのフレーム数を示します。バーが下部の線 (60fps の線) より上に表示されている場合、長時間実行されているフレームがあります。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" class="g--centered" alt="Chrome DevTool でのトラブル領域の拡大表示">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" alt="Chrome DevTool でのトラブル領域の拡大表示">
 
 スクロールのような特定のインタラクション、または他のインタラクションの間に、長時間実行されているフレームがある場合、そのフレームを詳細に調査する必要があります。
 
 上記の例のように、大きい紫色のブロックがある場合は、[レコード] をクリックすると、詳細情報が表示されます。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" class="g--centered" alt="長時間実行されているスタイル計算の詳細の表示">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" alt="長時間実行されているスタイル計算の詳細の表示">
 
 この例では、長時間 (18ms 超にわたり) 実行されているスタイル再計算イベントがあります。偶然、このイベントはスクロールの最中に発生しており、ユーザは明確な激しい震動を感じることになります。
 

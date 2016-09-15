@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript はよく視覚変化の切っ掛けになります。 視覚変化はスタイル操作を通じて直接行われることもあれば、データの検索やソートのように、計算が最終的に視覚変化につながることもあります。 タイミングの悪い JavaScript や長時間実行される JavaScript はパフォーマンス低下の一般的な原因になり得るため、可能な限り JavaScript の影響を最小限に抑える必要があります。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -44,7 +43,7 @@ Note: JIT の動作を確認したい場合は、<a href="http://mrale.ph/irhydr
 
 フレームワークまたはサンプルでは、アニメーションのような視覚変化を実現するために `setTimeout` または `setInterval` を使用する場合がありますが、これの問題はコールバックがフレームの任意の位置で (おそらくフレームの最後のほうで) 実行されることです。そのため、しばしばフレームを見落とすという不適切な結果に終わることがあります。
 
-<img src="images/optimize-javascript-execution/settimeout.jpg" class="g--centered" alt="ブラウザでフレームの見落としを発生させる setTimeout">
+<img src="images/optimize-javascript-execution/settimeout.jpg"  alt="ブラウザでフレームの見落としを発生させる setTimeout">
 
 実際、jQuery のデフォルト `animate` 動作では `setTimeout` が使用されます。[`requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame) を使用するように、この動作を修正できます (この修正を強く推奨します)。
 
@@ -103,15 +102,15 @@ JavaScript を実行するタイミングと実行時間は十分に考慮する
 
 JavaScript のコストとパフォーマンス プロファイルを計測する最適な方法は、Chrome DevTool を使用することです。 通常、次のような概略情報のみが表示されます。
 
-<img src="images/optimize-javascript-execution/low-js-detail.jpg" class="g--centered" alt="JavaScript 実行の概略情報を示す Chrome DevTool のタイムライン">
+<img src="images/optimize-javascript-execution/low-js-detail.jpg"  alt="JavaScript 実行の概略情報を示す Chrome DevTool のタイムライン">
 
 長時間実行されている JavaScript を見つけた場合は、DevTool のユーザ インタフェースの最上部で JavaScript プロファイラを有効化することができます。
 
-<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" class="g--centered" alt="DevTool での JavaScript プロファイラの有効化">
+<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" alt="DevTool での JavaScript プロファイラの有効化">
 
 この方法で JavaScript をプロファイリングするには負荷がかかるため、JavaScript の実行時特性を詳細に分析する場合に限り、プロファイラを有効化してください。 チェックボックスをオンにしても、同じ機能を実行でき、JavaScript で呼び出された関数に関する極めて詳細な情報を参照できます。
 
-<img src="images/optimize-javascript-execution/high-js-detail.jpg" class="g--centered" alt="JavaScript 実行の詳細情報を示す Chrome DevTool のタイムライン">
+<img src="images/optimize-javascript-execution/high-js-detail.jpg"  alt="JavaScript 実行の詳細情報を示す Chrome DevTool のタイムライン">
 
 この情報を活用して、アプリケーションに対する JavaScript のパフォーマンス影響を評価し、関数の実行に時間がかかりすぎているホット スポットの検出と修正を開始することができます。 前述のとおり、長時間実行される JavaScript は削除するか、それが不可能な場合は、他のタスクを続行するために JavaScript を Web Worker に移動してメイン スレッドを開放する必要があります。
 

@@ -2,20 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ウェブは小さな携帯端末から大きなテレビまで、さまざまな画面サイズのデバイスからアクセスできます。これらすべてのデバイスに対応したサイトの構築方法について学びましょう。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
 # はじめてのマルチデバイス サイト {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/agektmr.html" %}
-
-
 
 マルチデバイス サイトを構築するのは、思ったほど大変ではありません。このガイドでは、<a href='https://www.udacity.com/course/cs256'>CS256 モバイルサイト構築コース</a>の商品ランディング ページを例に、さまざまなデバイスに対応したランディング ページを作成していきます。
 
@@ -32,12 +24,6 @@ Translated By:
 
 
 ## コンテンツと構造を作成する 
-
-
-
-Translated By: 
-
-
 
 
 コンテンツは、すべてのサイトにおいて最も重要な側面です。デザインにコンテンツを規定させるのではなく、コンテンツに合わせてデザインしましょう。このガイドでは、まず必要なコンテンツを特定し、そのコンテンツを基にページ構造を作成してから、狭いビューポートと広いビューポートの両方に対応したシンプルなリニア レイアウトでページを表示します。
@@ -61,15 +47,16 @@ Translated By:
 
 また、狭いビューポートと広いビューポートの両方について、大まかな情報アーキテクチャとレイアウトを作成しました。
 
-<div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="狭いビューポートの IA">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="広いビューポートの IA">
-</div>
+
+<img class="attempt-right" src="images/narrowviewport.png" alt="狭いビューポートの IA">
+<img  class="attempt-left" src="images/wideviewport.png" alt="広いビューポートの IA">
+<div class="clearfix"></div>
+
 
 この情報アーキテクチャは、このプロジェクトの残りの部分で使うスケルトン ページの大まかな各セクションへと簡単に転換できます。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### ページにコンテンツを追加する
@@ -85,7 +72,7 @@ Note: スタイルは後に来る
 ヘッドラインには、コースを説明する簡単なテキストを追加します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline"  adjust_indentation="auto" %}
 </pre>
 
 また、フォームも作成する必要があります。
@@ -96,7 +83,7 @@ Note: スタイルは後に来る
 ユーザーが携帯端末で素早く簡単にコンテンツを入力できるよう、適切な入力タイプを設定します。たとえば、電話番号を入力する際には、ダイヤルパッドが表示されるようにします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form"  adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -107,7 +94,7 @@ Note: スタイルは後に来る
 商品の特徴の箇条書きリストと、商品がユーザーにとって役立つことを示す動画のプレースホルダを含めます。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 動画は、コンテンツをよりインタラクティブに説明する手段として、コンセプトや商品のデモンストレーションによく利用されます。
@@ -120,7 +107,7 @@ Note: スタイルは後に来る
 *  ユーザーがウィンドウ内で動画を再生できない場合に動画をダウンロードできるよう、代替テキストを追加します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
@@ -155,7 +142,7 @@ Note: スタイルは後に来る
 表は、表組みのデータ（つまり、行と列で構成される情報）にのみ使用してください。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### フッターを追加する
@@ -165,17 +152,17 @@ Note: スタイルは後に来る
 今回のサイトでは、利用規約、お問い合わせページ、ソーシャル メディアのプロフィールへのリンクのみを掲載します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### まとめ
 
 サイトの概略を作成し、主な構成要素をすべて特定しました。また、ビジネスのニーズを満たすための、すべての関連コンテンツを用意して配置しました。
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="コンテンツ">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+<img class="attempt-left" src="images/content.png" alt="コンテンツ">
+<img  class="attempt-right" src="images/narrowsite.png" alt="">
+<div class="clearfix"></div>
+
 
 現時点ではページの見栄えが良くありませんが、これは意図的なものです。
 コンテンツはすべてのサイトにおいて最も重要な側面であるため、まずしっかりとした情報アーキテクチャと密度を確実に構築する必要がありました。このガイドによって適切な構築の基礎が得られました。次のガイドでは、コンテンツにスタイルを適用します。
@@ -188,27 +175,22 @@ Note: スタイルは後に来る
 
 
 
-Translated By: 
-
-
-
-
 ウェブは小さな携帯端末から大きなテレビまで、さまざまな画面サイズのデバイスからアクセスできます。各デバイスにはそれぞれのメリットと制約があります。ウェブデベロッパーは、あらゆるデバイスに対応させることが求められます。
 
 
 複数の画面サイズやデバイスの種類に対応できるサイトを構築します。[前の記事](#)では、ページの情報アーキテクチャを策定し、基本構造を作成しました。
 このガイドでは、コンテンツを含んだページの基本構造について取り上げ、さまざまな画面サイズに対応するレスポンシブな洗練されたページへと変えます。
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="コンテンツ">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> コンテンツと構造 </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> 最終的なサイト </a> </figcaption>
-  </figure>
-</div>
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="コンテンツ">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> コンテンツと構造 </a> </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> 最終的なサイト </a> </figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 ウェブ開発におけるモバイル ファーストの原則に従い、携帯端末のような狭いビューポートから作業を開始し、まず狭いビューポート用のエクスペリエンスを構築します。
 そのうえで、より大きなデバイスのクラスへとスケールを拡大します。
@@ -233,7 +215,7 @@ Translated By:
 ビューポートは、画面に収めるためにページをスケーリングする必要があることをブラウザに通知します。ビューポートでページの表示を制御するために指定できる設定項目は数多くありますが、デフォルトとして、次のように設定することをおすすめします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 ビューポートはドキュメントの head 部に配置します。宣言が必要なのは 1 回のみです。
@@ -265,9 +247,8 @@ Translated By:
 
 スタイル用画像のわかりやすい例としては、「サイトの一面」のコンテンツのヘッドライン画像があります。商品の詳細情報へとユーザーを誘導する目的でヘッドライン画像が使用されていることがよくあります。
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="デザインされたサイト">
-</div>
+<img  src="images/narrowsite.png" alt="デザインされたサイト">
+
 
 スタイル用画像は簡単に追加できます。今回の例では、ヘッドラインの背景にスタイル用画像を使用し、簡単な CSS で画像を適用します。
 
@@ -283,7 +264,8 @@ Translated By:
 
 コンテンツよりも目立たないよう、ぼかしの入ったシンプルな背景画像を選び、要素全体にフィット（cover）するよう設定しました。これにより、画像は常に正しいアスペクト比を保ちつつ画面いっぱいに表示されます。
 
-<br style="clear: both;">
+<div class="clearfix"></div>
+
 
 ### あなたの最初のブレークポイントを設定します
 
@@ -460,3 +442,5 @@ auto を適用する必要があります。これにより、画面が大きく
 
 
 
+Translated By: 
+{% include "web/_shared/contributors/agektmr.html" %}

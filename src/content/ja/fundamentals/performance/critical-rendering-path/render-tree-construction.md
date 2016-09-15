@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: CSSOM ツリーと DOM ツリーを組み合わせたものがレンダーツリーです。このツリーを使って、各表示要素のレイアウトを計算します。また、このツリーは画面にピクセルをレンダリングするペインティング処理の入力としても使用されます。レンダリングのパフォーマンスを最適化するには、手順それぞれを最適化することが必要です。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -44,7 +43,7 @@ Note: 余談ですが、「visibility: hidden」と「display: none」は異な�
 各オブジェクトの正確なサイズと位置を判断するため、ブラウザはレンダーツリーのルートから順にオブジェクトを確認し、ページ上の各オブジェクトの形状を計算します。簡単な実践的な例を考えてみましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 上記のページの本体にはネストされた 2 つの div があります。1 つ目（親）の div はノードの表示サイズをビューポートの幅の 50% に設定し、2 つ目（子）の div はその幅を親の 50%、つまりビューポートの幅の 25% に設定します。

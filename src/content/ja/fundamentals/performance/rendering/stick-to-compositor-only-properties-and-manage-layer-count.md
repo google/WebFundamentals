@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: コンポジットは、ページのペイント部分を画面に一緒に置かれている場所です。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -24,11 +23,11 @@ description: コンポジットは、ページのペイント部分を画面に�
 ## 形状と不透明度の変更をアニメーションにしようしてます
 ピクセル パイプラインの最適パフォーマンス バージョンは、レイアウト、ペイントの両方を回避し、コンポジットの変更だけを要します。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg" class="g--centered" alt="レイアウトまたはペイントなしのピクセル パイプライン。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="レイアウトまたはペイントなしのピクセル パイプライン。">
 
 これを達成するために、コンポジタで扱うことができる変化の特性に固執する必要があります。 現在は**transforms** および**opacity**の 2 つのプロパティだけがあります。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg" class="g--centered" alt="プロパティは、レイアウトやペイントを起動することなく、アニメーション化することができます。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="プロパティは、レイアウトやペイントを起動することなく、アニメーション化することができます。">
 
 形状と不透明度を使用するための注意点は、これらのプロパティを変更するに要素が自身コンポジタのレイヤーでなければならないということです。 レイヤーを作成するためには、次の要素をプロモートしなければなりません。
 
@@ -73,19 +72,19 @@ Note: これらのプロパティだけにアニメーションを制限する�
 
 アプリ内の各レイヤーを理解し、その要素がなぜレイヤーを有しているかを知るために、Chrome DevTools の  Timeline でペイント プロファイラを有効にする必要があります。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg" class="g--centered" alt="Chrome DevTools のペイント プロファイラ用のトグル。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg"  alt="Chrome DevTools のペイント プロファイラ用のトグル。">
 
 切り替えると記録を取ることができます。 記録が終了したら、個々のフレームをクリックすることができるようになります。これは frames-per-second バーと詳細の間にあります。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg" class="g--centered" alt="フレーム開発者は、プロファイリングに関心があります。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="フレーム開発者は、プロファイリングに関心があります。">
 
 これをクリックすると、新しいオプションの詳細が提供されます: レイヤー タブ。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg" class="g--centered" alt="レイヤー タブ ボタンは Chrome DevTools にあります。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="レイヤー タブ ボタンは Chrome DevTools にあります。">
 
 このオプションでは新しいビューが表示されます。これによって、各レイヤーが作成された理由とともに、フレームの間に全てのレイヤーをパン、スキャン、およびズームインすることができます。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg" class="g--centered" alt="Chrome DevTools のレイヤー ビュー。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg"  alt="Chrome DevTools のレイヤー ビュー。">
 
 このビューを使用すると、すでにあるレイヤーの数を追跡することができます。 スクロールやトランジションなどのパフォーマンスが重要なアクションの間に合成に多くの時間を費やしている場合 (目標は**4-5 ミリ秒**)、この情報を使用して、自分のアプリでレイヤ数を管理することができます。
 

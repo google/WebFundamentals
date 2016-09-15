@@ -2,23 +2,22 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 動画をサイトに追加して、どのデバイスでも最高のユーザー エクスペリエンスを実現する方法について説明します。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 動画 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-ユーザーは動画を好みます。面白く、ためになるからです。携帯端末では、動画の方が情報を理解しやすい場合があります。しかし動画は帯域幅を必要とするため、すべてのプラットフォームで常に同じように視聴できるとは限りません。動画の読み込みで待たされたり、[再生] を押して何も起こらなかったりすると、ユーザーは不快に感じます。動画をサイトに追加して、どのデバイスでも最高のユーザー エクスペリエンスを実現する方法をご確認ください。
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+ユーザーは動画を好みます。面白く、ためになるからです。携帯端末では、動画の方が情報を理解しやすい場合があります。しかし動画は帯域幅を必要とするため、すべてのプラットフォームで常に同じように視聴できるとは限りません。動画の読み込みで待たされたり、[再生] を押して何も起こらなかったりすると、ユーザーは不快に感じます。動画をサイトに追加して、どのデバイスでも最高のユーザー エクスペリエンスを実現する方法をご確認ください。
+
+<div class="clearfix"></div>
 
 
 ## 動画を追加する 
@@ -60,10 +59,10 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 次に例を示します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
-ブラウザは <source> タグを解析する際に、オプションの type 属性を使用して、どのファイルをダウンロードして再生するかを判断します。ブラウザが WebM をサポートしている場合は chrome.webm を再生し、サポートしていない場合は MPEG-4 動画を再生できます。
+ブラウザは `<source>` タグを解析する際に、オプションの type 属性を使用して、どのファイルをダウンロードして再生するかを判断します。ブラウザが WebM をサポートしている場合は chrome.webm を再生し、サポートしていない場合は MPEG-4 動画を再生できます。
 ウェブで動画と音声を使用する方法については、<a href='//www.xiph.org/video/vid1.shtml' title='デジタル動画に関する、楽しくてためになる解説動画'>A Digital Media Primer for Geeks</a>（英語）をご覧ください。
 
 このアプローチは、特に携帯端末でさまざまな HTML やサーバー側スクリプトを配信する場合に、次のようなメリットがあります。
@@ -103,7 +102,7 @@ Note: - Media Fragments API は、ほとんどのプラットフォームでサ�
 
 ブラウザ デベロッパー ツールを使用して、レスポンス ヘッダーの Accept-Ranges: bytes を確認します。
 
-<img class="center" alt="Chrome デベロッパー ツールのスクリーンショット: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome デベロッパー ツールのスクリーンショット: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### ポスター画像を含める
 
@@ -119,15 +118,10 @@ Note: - Media Fragments API は、ほとんどのプラットフォームでサ�
 
 次に、ポスター画像がある場合とない場合を並べて比較してみましょう。動画ではないことを証明するため、グレースケールのポスター画像を使用しています。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="縦向きの Android Chrome のスクリーンショット、ポスターなし" src="images/Chrome-Android-video-no-poster.png">
-  </div>
+<img class="attempt-left" alt="縦向きの Android Chrome のスクリーンショット、ポスターなし" src="img/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="縦向きの Android Chrome のスクリーンショット、ポスターあり" src="img/Chrome-Android-video-poster.png">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="縦向きの Android Chrome のスクリーンショット、ポスターあり" src="images/Chrome-Android-video-poster.png">
-  </div>
-</div>
 
 
 ## レガシー プラットフォーム用の代替手段を提供する 
@@ -234,9 +228,6 @@ JavaScript では、動画の currentSrc プロパティを使用して、使用
 ユーザーに楽しんでいただくためには、サイズの設定が重要です。
 
 
-### TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
 
 
 
@@ -251,14 +242,14 @@ Warning: A tag here did NOT convert properly, please fix! ''
 動画要素がビューポートよりも大きすぎると、コンテナからはみ出し、コンテンツを表示できなかったり、
 コントロールを使用できない場合があります。
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="縦向きの Android Chrome のスクリーンショット。スタイルが未設定の動画要素がビューポートからはみ出している" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="横向きの Android Chrome のスクリーンショット。スタイルが未設定の動画要素がビューポートからはみ出している" src="images/Chrome-Android-landscape-video-unstyled.png">
-</div>
+<img class="attempt-left" alt="縦向きの Android Chrome のスクリーンショット。スタイルが未設定の動画要素がビューポートからはみ出している" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="横向きの Android Chrome のスクリーンショット。スタイルが未設定の動画要素がビューポートからはみ出している" src="img/Chrome-Android-landscape-video-unstyled.png">
+<div class="clearfix"></div>
+
 
 JavaScript または CSS を使用して動画のサイズを制御できます。[FitVids](//fitvidsjs.com/) などの JavaScript ライブラリとプラグインによって、YouTube やその他のソースから取得した Flash 動画でも、適切なサイズとアスペクト比を維持することができます。
 
-[CSS メディア クエリ](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)を使用して、ビューポートのサイズに応じた要素のサイズを指定できます。max-width: 100% と指定することをおすすめします。
+[CSS メディア クエリ](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)を使用して、ビューポートのサイズに応じた要素のサイズを指定できます。max-width: 100% と指定することをおすすめします。
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
@@ -298,16 +289,16 @@ Note: 要素のサイズ設定で、元の動画と異なるアスペクト比�
 
 iPhone の Safari は、縦向きと横向きでの切り替えが非常にスムーズです。
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="縦向きの iPhone の Safari で再生している動画のスクリーンショット" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="横向きの iPhone の Safari で再生している動画のスクリーンショット" src="images/iPhone-video-playing-landscape.png">
-</div>
+<img class="attempt-left" alt="縦向きの iPhone の Safari で再生している動画のスクリーンショット" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="横向きの iPhone の Safari で再生している動画のスクリーンショット" src="img/iPhone-video-playing-landscape.png">
+<div class="clearfix"></div>
+
 
 iPad や Android の Chrome では、デバイスの向きが問題になることがあります。
 たとえば、横向きの iPad での動画の再生をカスタマイズしないと、次のように表示されます。
 
 <img class="center" alt="横向きの iPad Retina の Safari で再生している動画のスクリーンショット"
-src="images/iPad-Retina-landscape-video-playing.png">
+src="img/iPad-Retina-landscape-video-playing.png">
 
 CSS で width: 100% または max-width: 100% と設定すると、デバイスの向きによるレイアウトの問題の多くは解決できます。また、フルスクリーンの代替手段も検討した方がよい場合があります。
 
@@ -315,15 +306,15 @@ CSS で width: 100% または max-width: 100% と設定すると、デバイス�
 
 動画の表示はプラットフォームによって異なります。iPhone の Safari では、動画要素をウェブページ内で表示しますが、再生するときはフルスクリーン モードになります。
 
-<img class="center" alt="縦向きの iPhone に表示された動画要素のスクリーンショット" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="縦向きの iPhone に表示された動画要素のスクリーンショット" src="img/iPhone-video-with-poster.png">
 
 Android では、フルスクリーン アイコンをクリックすることでフルスクリーン モードをリクエストできますが、デフォルトではインラインで動画を再生します。
 
-<img class="center" alt="縦向きの Android の Chrome で再生している動画のスクリーンショット" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="縦向きの Android の Chrome で再生している動画のスクリーンショット" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 iPad の Safari では動画をインラインで再生します。
 
-<img class="center" alt="横向きの iPad Retina の Safari で再生している動画のスクリーンショット" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="横向きの iPad Retina の Safari で再生している動画のスクリーンショット" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### コンテンツのフルスクリーン表示の制御
 
@@ -383,7 +374,7 @@ Note: トラック要素は、Firefox を除き、Chrome for Android、iOS Safar
 
 トラック要素を使用すると、次のようにキャプションが表示されます。
 
- <img class="center" alt="Android の Chrome でトラック要素を使用して表示されているキャプションを示すスクリーンショット" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Android の Chrome でトラック要素を使用して表示されているキャプションを示すスクリーンショット" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### トラック要素を追加する
 
@@ -467,7 +458,7 @@ Note: トラック要素は、Firefox を除き、Chrome for Android、iOS Safar
 
 デスクトップでは、autoplay によって、すぐに動画をダウンロードしてできるだけ早く再生するようブラウザに指示することができます。iOS および Chrome for Android では、autoplay は機能しません。動画を再生するには画面をタップする必要があります。
 
-autoplay を使用できるプラットフォームでも、有効にすべきかどうかを検討する必要があります。
+`autoplay` を使用できるプラットフォームでも、有効にすべきかどうかを検討する必要があります。
 
 * データの使用量が増えてコストがかかる場合があります。
 * ユーザーに確認せずにいきなりダウンロードと再生を開始すると、予想以上に帯域幅と CPU を独占し、ページのレンダリングに時間がかかる場合があります。

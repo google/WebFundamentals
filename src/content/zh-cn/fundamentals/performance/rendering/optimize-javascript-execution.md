@@ -49,7 +49,7 @@ Note: 如果你想看看JIT到底长什么样，请参考：<a href="http://mral
 
 很多框架和示例代码都是用`setTimeout`或`setInterval`来实现页面中的动画效果。这种实现方式的问题是，你在`setTimeout`或`setInterval`中指定的回调函数的执行时机是无法保证的。它将在这一帧动画的_某个时间点_被执行，很可能是在帧结束的时候。这就意味这我们可能失去这一帧的信息，也就是发生jank。
 
-<img src="images/optimize-javascript-execution/settimeout.jpg" class="g--centered" alt="setTimeout causing the browser to miss a frame.">
+<img src="images/optimize-javascript-execution/settimeout.jpg"  alt="setTimeout causing the browser to miss a frame.">
 
 事实上，jQuery中`animate`函数就是用`setTimeout`来实现的动画的！我建议你去给它打个补丁，用[`requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame)来取代`setTimeout`。
 
@@ -108,15 +108,15 @@ JavaScript代码是运行在浏览器的主线程上的。与此同时，浏览�
 
 对于JavaScript代码的性能分析，最好的方式就是使用Chrom的DevTools。一般来说，通过它你能获取到这些细节：
 
-<img src="images/optimize-javascript-execution/low-js-detail.jpg" class="g--centered" alt="Chrome DevTools' Timeline providing low JS execution detail.">
+<img src="images/optimize-javascript-execution/low-js-detail.jpg"  alt="Chrome DevTools' Timeline providing low JS execution detail.">
 
 如果你发现了运行时间很长的JavaScript代码，那么你可以开启DevTools中顶部的JavaScript profiler选项：
 
-<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" class="g--centered" alt="Enabling the JS profiler in DevTools.">
+<img src="images/optimize-javascript-execution/js-profiler-toggle.jpg"  alt="Enabling the JS profiler in DevTools.">
 
 但是，这个选项本身的运行也会有一些消耗。因此，确保只有在你需要查看更多运行时细节的时候才开启它。开启这个选项之后，再执行一次页面分析动作，你会看到更多细节：
 
-<img src="images/optimize-javascript-execution/high-js-detail.jpg" class="g--centered" alt="Chrome DevTools' Timeline providing high JS execution detail.">
+<img src="images/optimize-javascript-execution/high-js-detail.jpg"  alt="Chrome DevTools' Timeline providing high JS execution detail.">
 
 有了这些信息，你就能分析出JavaScript代码对于页面渲染性能的影响了，从而发现并修复JavaScript代码中性能低下的部分。至于如何修复，就像前面说的，你可以删除它或者把它放到Web Worker中去，以释放主线程来响应其他任务。
 

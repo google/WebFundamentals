@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: タイポグラフィは、優れたデザイン、ブランディング、読みやすさ、ユーザー補助にとって重要です。ウェブフォントを使うとこれらすべての品質をさらに高めることができます。テキストの選択、検索、拡大が可能になるほか、高精度の DPI に対応できるようになり、画面のサイズや解像度にかかわらず一貫性のある見栄えの良いテキスト表示になります。優れたデザイン、ユーザー エクスペリエンス、そしてパフォーマンスを実現するうえで、ウェブフォントはとても重要です。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
@@ -73,36 +72,35 @@ CSS アットルールの @font-face を使うと、特定のフォント リソ
 
 それぞれの @font-face 宣言によってフォント ファミリの名前が提供されますが、それらは複数の宣言の論理的なグループである[フォント プロパティ](http://www.w3.org/TR/css3-fonts/#font-prop-desc)（リンク先は英語）として機能します。これには、スタイル、ウェイト、ストレッチ、そして、フォント リソースの場所の優先順位付きリストを指定する [src ディスクリプタ](http://www.w3.org/TR/css3-fonts/#src-desc)（リンク先は英語）などがあります。
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 最初に、前の例では _Awesome Font_ という単一のファミリを定義しています。このファミリには 2 つのスタイル（normal と _italic_）があり、それぞれが異なるフォント リソース セットを指し示しています。さらに、それぞれの「src」ディスクリプタには、カンマで区切られた派生リソースの優先順位付きリストが含まれています:
 
 * 「local()」ディレクティブを使うと、ローカルにインストールされているフォントの参照、読み込み、使用ができます。
 * 「url()」ディレクティブを使うと、外部フォントの読み込みができます。また、オプションの「format()」ヒントを含めることで、指定した URL によって参照されるフォントの形式を指定できます。
 
-^
+
 Note: デフォルトのシステム フォントについては、そのいずれかを参照することがない限り、ユーザーがローカルにインストールすることは実用上はまれです。特に携帯端末では、追加のフォントを「インストール」することは実質的に不可能です。そのため、常に外部フォントの場所のリストを提供するようにしてください。
 
 ブラウザは、フォントが必要であると判断すると、指定されたリソース リストを指定された順序で調べ、該当するリソースの読み込みを試みます。たとえば前の例では次のようになります:
@@ -179,13 +177,8 @@ unicode-range によるサブセットを使い、スタイル別の派生フォ
 
 たとえば上の図は、400（標準）、700（太字）、900（極太）の 3 つの異なる太字ウェイトを提供するフォント ファミリを表しています。それ以外のウェイトの派生フォント（グレーで表示）はすべて、ブラウザによって最も近い派生フォントに自動的にマッピングされます。
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">指定されたウェイトに対応するフェイスが存在しない場合は、それに近いウェイトのフェイスが使用されます。一般に、太字のウェイトは、より重いウェイトのフェイスにマッピングされ、細字のウェイトは、より軽いウェイトのフェイスにマッピングされます。
-    <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">CSS3 のフォント マッチング アルゴリズム</a></p>（リンク先は英語）
-    </blockquote>
-  </div>
-</div>
+> 指定されたウェイトに対応するフェイスが存在しない場合は、それに近いウェイトのフェイスが使用されます。一般に、太字のウェイトは、より重いウェイトのフェイスにマッピングされ、細字のウェイトは、より軽いウェイトのフェイスにマッピングされます。
+> > <a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">CSS3 のフォント マッチング アルゴリズム</a>
 
 _italic_ の派生フォントにも同様のロジックが適用されます。フォント デザイナーはどの派生フォントを生成するのかをコントロールし、ユーザーはどの派生フォントをページ上で使用するのかをコントロールします。派生フォントはそれぞれ別々のダウンロードになるため、派生フォントの数は少なく保つことをおすすめします。たとえば、_Awesome Font_ ファミリ用に 2 つの太字の派生フォントを定義できます: 
 
@@ -222,13 +215,8 @@ _italic_ の派生フォントにも同様のロジックが適用されます�
 
 <img src="images/font-synthesis.png" class="center" alt="フォントの合成">
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">斜体の形状が非常に異なるキリルなどの文字では合成による方法が適さない場合があることにも注意する必要があります。合成フォントに頼るよりも実際の斜体フォントを使用する方が常に優れています。
-    <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3 の font-style</a></p>（リンク先は英語）
-    </blockquote>
-  </div>
-</div>
+> 斜体の形状が非常に異なるキリルなどの文字では合成による方法が適さない場合があることにも注意する必要があります。合成フォントに頼るよりも実際の斜体フォントを使用する方が常に優れています。
+> > <a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3 の font-style</a>
 
 前の例では、Open-Sans の場合における実際のフォントと合成フォントの違いを示しています。合成の派生フォントはすべて、1 つの 400 ウェイトのフォントから生成されます。ご覧のように、著しい違いが見られます。太字とオブリークの派生フォントについては、生成方法の詳細が指定されていません。したがって、その結果はブラウザごとに異なり、またフォントに大きく依存します。
 
