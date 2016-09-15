@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: イージング イン、アウト、または両方の中から、プロジェクトに適したイージングを選択します。 多少快活にするのもよいでしょう!
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -22,7 +21,7 @@ description: イージング イン、アウト、または両方の中から、
 
 CSS の `ease-out` キーワードで指定されたものを超える周知の ease-out 方程式のグループがありますが、これらは ‘aggressiveness’ の範疇に入ります。 極めて快活な ease-out 効果については、[Quintic ease-out](http://easings.net/#easeOutQuint) を検討してください。
 
-<img src="imgs/quintic-ease-out-markers.png" alt="Quintic ease-out のアニメーション曲線" style="max-width: 300px"/>
+<img src="images/quintic-ease-out-markers.png" alt="Quintic ease-out のアニメーション曲線" style="max-width: 300px"/>
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Quintic ease-out のアニメーションをご覧ください。</a>
 

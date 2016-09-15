@@ -20,7 +20,7 @@ description: 您可以通过 CSS 或 JavaScript 编写动画。 应使用哪种�
 - 如果选择使用 JavaScript 来编写动画，可选用 TweenMax，或者如果想要更轻量的解决方案，则使用 TweenLite。
 
 
-大多数基本动画可以使用 CSS 或 JavaScript 来创建，但工作量和时间将有所不同 (另请参考[CSS 对比 JavaScript 性能]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#css-vs-javascript-performance))。 每种方法都各有利弊，但是以下是很好的经验法则：
+大多数基本动画可以使用 CSS 或 JavaScript 来创建，但工作量和时间将有所不同 (另请参考[CSS 对比 JavaScript 性能](/web/fundamentals/design-and-ui/animations/animations-and-performance#css-vs-javascript-performance))。 每种方法都各有利弊，但是以下是很好的经验法则：
 
 * **当您为 UI 元素采用较小的独立状态时，使用 CSS。** CSS 转换和动画非常适合于从侧面引入导航菜单，或显示工具提示。 最终，可以使用 JavaScript 来控制状态，但动画本身是采用 CSS。
 * **在需要对动画进行大量控制时，使用 JavaScript。** 动态跟踪触摸位置的动画，或需要停止、暂停、减速或倒退的动画一般需要使用 JavaScript。

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: アプリ内のモーダル ビューにアニメーションを付ける方法の学習
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -19,7 +19,7 @@ description: アプリ内のモーダル ビューにアニメーションを付
 - ユーザーが受け付けない場合はすぐにモーダル ビューを除外し、ユーザーが驚かないようにもう少しゆっくりと画面に表示させるようにしてください。
 
 
-<img src="imgs/gifs/dont-press.gif" alt="モーダルビューをアニメーション化。" />
+<img src="images/dont-press.gif" alt="モーダルビューをアニメーション化。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">サンプルを参照してください。</a>
 
@@ -40,7 +40,7 @@ description: アプリ内のモーダル ビューにアニメーションを付
     }
     
 
-初期には 0 の `opacity` があるため、ビューでは非表示になっています。しかし、承認をクリックしてタッチできるよう、`pointer-events` を `none` に設定する必要もあります。 これを行わないとすべての相互操作がブロックされ、ページ全体の応答がなくなります。 最後に、これは `opacity` および `transform` をアニメーション化するため、`will-change` で変更されたマークが必要です。([Using the will-change property]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#using-the-will-change-property) も参照してください)。
+初期には 0 の `opacity` があるため、ビューでは非表示になっています。しかし、承認をクリックしてタッチできるよう、`pointer-events` を `none` に設定する必要もあります。 これを行わないとすべての相互操作がブロックされ、ページ全体の応答がなくなります。 最後に、これは `opacity` および `transform` をアニメーション化するため、`will-change` で変更されたマークが必要です。([Using the will-change property](/web/fundamentals/design-and-ui/animations/animations-and-performance#using-the-will-change-property) も参照してください)。
 
 ビューが表示されているときは、相互操作に同意し、1 の`opacity` を保持する必要があります。
 
@@ -58,7 +58,7 @@ description: アプリ内のモーダル ビューにアニメーションを付
     
 
 この時点でモーダル ビューは、アニメーションなしで表示され、
-に追加されます ([Custom Easing]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html) も参照してください)。
+に追加されます ([Custom Easing](/web/fundamentals/design-and-ui/animations/custom-easing) も参照してください)。
 
 
     .modal {

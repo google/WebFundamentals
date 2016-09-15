@@ -40,7 +40,7 @@ description: 앱에서 모달 보기 애니메이션 방법을 알아봅니다.
     }
     
 
-초기 `opacity`가 0이므로 보기에서 숨겨지지만, 클릭과 터치가 통과하도록 `pointer-events`를 `none`으로 설정해야 합니다. 그렇지 않으면 모든 상호작용이 차단되고 전체 페이지가 응답하지 않습니다. 마지막으로, `opacity` 및 `transform`을 애니메이션하기 때문에 `will-change`로 변경으로 표시해야 합니다([will-change 속성 사용]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#using-the-will-change-property) 참조).
+초기 `opacity`가 0이므로 보기에서 숨겨지지만, 클릭과 터치가 통과하도록 `pointer-events`를 `none`으로 설정해야 합니다. 그렇지 않으면 모든 상호작용이 차단되고 전체 페이지가 응답하지 않습니다. 마지막으로, `opacity` 및 `transform`을 애니메이션하기 때문에 `will-change`로 변경으로 표시해야 합니다([will-change 속성 사용](/web/fundamentals/design-and-ui/animations/animations-and-performance#using-the-will-change-property) 참조).
 
 보기가 표시되면 상호작용을 허용해야 하며 `opacity`가 1이어야 합니다.
 
@@ -57,7 +57,7 @@ description: 앱에서 모달 보기 애니메이션 방법을 알아봅니다.
     modal.classList.add('visible');
     
 
-이때 모달 보기는 애니메이션 없이 나타나므로 추가할 수 있습니다([사용자 지정 Easing]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html) 참조).
+이때 모달 보기는 애니메이션 없이 나타나므로 추가할 수 있습니다([사용자 지정 Easing](/web/fundamentals/design-and-ui/animations/custom-easing) 참조).
 
 
 

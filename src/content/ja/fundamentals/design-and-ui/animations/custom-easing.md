@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: オフロードに移動して、プロジェクトのために完全なカスタムア ニメーションを作成します。
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -28,8 +28,8 @@ CSS では、これらのベジェ曲線は 4 つの値、または数字の 2 �
 
 比較のために 2 つの曲線を示します。典型的な ease-in-out 曲線とカスタム カーブです。
 
-<img src="imgs/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Ease-in-out のアニメーション曲線。" />
-<img src="imgs/custom.png" style="display: inline; max-width: 300px" alt="カスタム アニメーション曲線" />
+<img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Ease-in-out のアニメーション曲線。" />
+<img src="images/custom.png" style="display: inline; max-width: 300px" alt="カスタム アニメーション曲線" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-custom-curve.html">カスタム イージングのアニメーションを参照。</a>
 

@@ -21,7 +21,7 @@ Há duas formas principais de criar animações na Web: com CSS e com JavaScript
 - 'Se optar pelo JavaScript, utilize o TweenMax ou, se deseja uma solução mais leve, use o TweenLite.'
 
 
-A maioria das animações básicas pode ser criada com CSS ou JavaScript, mas a quantidade de esforço e tempo exigidos será diferente (veja também [Desempenho do CSS vs JavaScript]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#css-vs-javascript-performance)). Cada um tem seus prós e contras, mas as regras gerais são:
+A maioria das animações básicas pode ser criada com CSS ou JavaScript, mas a quantidade de esforço e tempo exigidos será diferente (veja também [Desempenho do CSS vs JavaScript](/web/fundamentals/design-and-ui/animations/animations-and-performance#css-vs-javascript-performance)). Cada um tem seus prós e contras, mas as regras gerais são:
 
 * **Use CSS quando você tiver estados menores e autocontidos para elementos da interface do usuário.** Transições e animações CSS são ideais para exibir um menu de navegação da lateral ou mostrar uma descrição. Você pode acabar usando o JavaScript para controlar os estados, mas as animações estarão em seu CSS.
 * **Use JavaScript quando precisar de maior controle sobre suas animações.** Elementos que localizam dinamicamente uma posição de toque ou uma animação que você precise parar, pausar, desacelerar ou inverter geralmente exigem o uso do JavaScript.

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: CSS または JavaScript でアニメーション化することができます。 どちらを使いますか? またその理由は ?」
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -20,7 +19,7 @@ description: CSS または JavaScript でアニメーション化することが
 - JavaScript によるアニメーションを選択した場合は、TweenMax を使用します。または、簡易版のソリューションが望ましい場合は、TweenLite を使用します。
 
 
-ほとんどの基本アニメーションは CSS または JavaScript で作成できますが、作業負荷と時間は異なります (参照 [CSS 対 JavaScript のパフォーマンス]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#css-vs-javascript-performance))。 各方法には長所と短所がありますが、適切な経験則は次のとおりです。
+ほとんどの基本アニメーションは CSS または JavaScript で作成できますが、作業負荷と時間は異なります (参照 [CSS 対 JavaScript のパフォーマンス](/web/fundamentals/design-and-ui/animations/animations-and-performance#css-vs-javascript-performance))。 各方法には長所と短所がありますが、適切な経験則は次のとおりです。
 
 * ** より単純で自己充足的な状態を UI 要素に持たせる場合は、CSS を使用します。** 側面からナビゲーション メニューを取り込んだり、ツールヒントを表示したりするには、CSS 遷移とアニメーションが理想的です。 状態を制御するために最終的に JavaScript を使用することになっても、アニメーション自身は CSS 内にあります。
 * ** アニメーションを細かく制御する必要がある場合は、JavaScript を使用します。** タッチ位置を動的に追跡する場合や、停止/一時停止/スローダウン/逆再生を行うアニメーションを作成する場合は、通常、JavaScript を使用する必要があります。

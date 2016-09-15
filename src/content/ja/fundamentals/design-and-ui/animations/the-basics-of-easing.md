@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: アニメーションをソフトにして重みを与える方法について説明します。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -23,7 +22,7 @@ description: アニメーションをソフトにして重みを与える方法�
 
 ## イージングのキーワード
 
-CSS トランジションとアニメーションから次のことがわかります[choose the kind of easing you want to use for your animations]({{site.fundamentals}}/look-and-feel/animations/choosing-the-right-easing.html)。 当該の動画のイージングに影響するキーワードを使用することができます (タイミングともいいます)。 また、次のことも可能です [go completely custom with your easing]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html)、これによって、アプリの個性を表現する方法により多くの自由を与えます。
+CSS トランジションとアニメーションから次のことがわかります[choose the kind of easing you want to use for your animations](/web/fundamentals/design-and-ui/animations/choosing-the-right-easing)。 当該の動画のイージングに影響するキーワードを使用することができます (タイミングともいいます)。 また、次のことも可能です [go completely custom with your easing](/web/fundamentals/design-and-ui/animations/custom-easing)、これによって、アプリの個性を表現する方法により多くの自由を与えます。
 
 CSS で使用できるキーワードの一部は以下のとおりです。
 
@@ -40,7 +39,7 @@ Source: [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition
 
 イージングが何もないアニメーションは**linear**と呼ばれます。 リニア推移のグラフは次のようになります。
 
-<img src="imgs/linear.png" style="max-width: 300px" alt="リニア イーズのアニメーション曲線。" />
+<img src="images/linear.png" style="max-width: 300px" alt="リニア イーズのアニメーション曲線。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html"> リニア アニメーションを参照。</a>
 
@@ -57,7 +56,7 @@ Source: [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition
 
 Easing out では、アニメーションは線形のものよりも早く開始し、最後に減速します。
 
-<img src="imgs/ease-out.png" style="max-width: 300px" alt="Ease-out のアニメーション曲線。" />
+<img src="images/ease-out.png" style="max-width: 300px" alt="Ease-out のアニメーション曲線。" />
 
 Ease out 効果を使う多くの方法がありますが、最も単純なのは CSS の`ease-out` キーワードです。
 
@@ -73,7 +72,7 @@ Easing out は一般的に、ユーザー·インターフェースの作業に�
 
 Ease-in アニメーションは、ゆっくり始まり、最後に高速になります。つまり ease-out と逆です。
 
-<img src="imgs/ease-in.png" style="max-width: 300px" alt="Ease-in のアニメーション曲線。" />
+<img src="images/ease-in.png" style="max-width: 300px" alt="Ease-in のアニメーション曲線。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html"> Ease-in アニメーションを参照。</a>
 
@@ -91,7 +90,7 @@ ease-in アニメーションを使用するには、ease-out やリニア ア�
 
  Ease-in-out は、車は加速と減速で慎重に使用するべきです。ease out よりも劇的な効果をもたらします。
 
-<img src="imgs/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out のアニメーション曲線。" />
+<img src="images/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out のアニメーション曲線。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">ease-in-out アニメーションを参照。</a>
 

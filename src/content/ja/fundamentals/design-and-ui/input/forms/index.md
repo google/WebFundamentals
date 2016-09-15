@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: フォームをモバイルに記入するのは困難です。 最高のフォームは入力の数が最も少ないものです。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-04-30 #}
 
@@ -10,23 +9,19 @@ description: フォームをモバイルに記入するのは困難です。 最
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-
-
-フォームをモバイルに記入するのは困難です。 最高のフォームは入力の数が最も少ないものです。 良いフォームは意味のある入力タイプを提供します。 キーはユーザーの入力タイプと一致するように変更する必要があります。ユーザーはカレンダー上の日付を選択します。 ユーザーに通知してください。 検証ツールは、フォームを送信する前に必要なことをユーザーに伝える必要があります。
-
-見栄えの良いフォームの作成について説明したこれらのガイドの概要については、下のビデオをチェックしてください。
-
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="iYYHRwLqrKM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
+フォームをモバイルに記入するのは困難です。 最高のフォームは入力の数が最も少ないものです。 良いフォームは意味のある入力タイプを提供します。 キーはユーザーの入力タイプと一致するように変更する必要があります。ユーザーはカレンダー上の日付を選択します。 ユーザーに通知してください。 検証ツールは、フォームを送信する前に必要なことをユーザーに伝える必要があります。
 
+見栄えの良いフォームの作成について説明したこれらのガイドの概要については、下のビデオをチェックしてください。
+
+<div class="clearfix"></div>
 
 ## Design efficient forms 
-
-
 
 
 繰り返しのアクションを回避し、必要な情報のみを要求し、どこまでマルチ パート フォームに沿うかを示すことによってユーザーをガイドすることにより、効率的なフォームを設計します。
@@ -110,7 +105,7 @@ HTML5 は多くの新しい入力タイプを導入しました。 これらの�
 入力タイプの適切なキーを見るだけで、
 必要な情報をより簡単に入力することができます。
 
-<table class="table-2 inputtypes">
+<table>
   <thead>
     <tr>
       <th data-th="Input type">入力 <code>タイプ</code></th>
@@ -240,45 +235,14 @@ HTML5 は多くの新しい入力タイプを導入しました。 これらの�
 要素はユーザー タイプに応じてヒントを提要します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
 Note: <code>datalist</code> の値は候補として提供され、ユーザーは提供された提案に限定されるものではありません。
 
+## Label and name inputs properly
 
----
-title: "Label and name inputs properly"
-updated_on: 2015-03-27
-key-takeaways:
-  label-and-name:
-    - 常に<code>label</code> をフォーム入力に使用し、フィールトがフォーカスされているときに 見えるようにしてください。
-    - <code>placeholder</code> を使用して、期待するものについてのガイダンスを提供します。
-    - ブラウザがフォームをオートコンプリートできるようにするために、要素に確立された<code>name</code> を使用し、<code>autocomplete</code> 属性を含めてください。
-notes:
-  use-placeholders:
-    - プレースホルダーは、ユーザーが要素内に入力を開始するとすぐに消えます。つまり、ラベルの交換はありません。  これらは、必要な形式とコンテンツについてユーザーを支援するための 補助として使用します。
-  recommend-input:
-    - <code>street-address</code> のみか、 <code>address-line1</code> と
-      <code>address-line2</code> の両方を使用してください
-    - <code>address-level1</code> および <code>address-level2</code> は、アドレス形式に必要な場合にのみ使用します。
-  use-datalist:
-    - <code>datalist</code> の値は候補として提供され、ユーザは提供された提案に限定されるものではありません。
-  provide-real-time-validation:
-    - クライアント側の入力検証においても、データの一貫性とセキュリティを確保するためにサーバー上のデータを検証することは常に重要です。
-  show-all-errors:
-    - ユーザーに問題を 1 つずつ表示するよりも、フォーム上にすべての問題を一度に表示する必要があります。
-  request-auto-complete-flow:
-    - 個人情報やクレジット カードなどのデータを求められた場合 ページが SSL で保存されることを確認してください。 そうでない場合、ダイアログは、情報が安全ではない可能性があることをユーザーに警告します。
-comments:
-  # 注:セクション タイトルまたは URL を変更した場合、以下のショートリンクを更新する必要があります
-  - g.co/mobilesiteprinciple17a
----
-<p class="intro">
-  フォームをモバイルに記入するのは困難です。 最高のフォームは入力の数が最も少ないものです。 良いフォームは意味のある入力タイプを提供します。 キーはユーザーの入力タイプと一致するように変更する必要があります。ユーザーはカレンダー上の日付を選択します。 ユーザーに通知してください。 検証ツールは、フォームを送信する前に必要なことをユーザーに伝える必要があります。
-</p>
-
-
-{% include shared/takeaway.liquid list=page.key-takeaways.label-and-name %}
+フォームをモバイルに記入するのは困難です。 最高のフォームは入力の数が最も少ないものです。 良いフォームは意味のある入力タイプを提供します。 キーはユーザーの入力タイプと一致するように変更する必要があります。ユーザーはカレンダー上の日付を選択します。 ユーザーに通知してください。 検証ツールは、フォームを送信する前に必要なことをユーザーに伝える必要があります。
 
 #### ラベルの重要性
 
@@ -289,7 +253,9 @@ comments:
 改善するのに役立ちます。
 tユーザーは、入力要素にフォーカスを配置するためにラベルまたは入力のいずれかをtタッチすることができます。
 
-{% include_code src=_code/order.html snippet=labels %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
+</pre>
 
 #### ラベルのサイズと配置
 
@@ -308,12 +274,12 @@ tユーザーは、入力要素にフォーカスを配置するためにラベ�
 
 <input type="text" placeholder="MM-YYYY">
 
-{% highlight html%}
-<input type="text" placeholder="MM-YYYY" ...>
-{% endhighlight %}
+
+    <input type="text" placeholder="MM-YYYY" ...>
 
 
-{% include shared/remember.liquid title="Remember" list=page.notes.use-placeholders %}
+Note: プレースホルダーは、ユーザーが要素内に入力を開始するとすぐに消えます。つまり、ラベルの交換はありません。  これらは、必要な形式とコンテンツについてユーザーを支援するための 補助として使用します。
+
 
 #### オートコンプリートを有効にするためにメタデータを使用
 
@@ -322,9 +288,7 @@ tユーザーは、入力要素にフォーカスを配置するためにラベ�
 これは潜在的な入力ミスを減らすのに役立ち、
 特に仮想キーボードや小さな端末で便利です。
 
-ブラウザは、[auto-populate](https://support.google.com/chrome/answer/142893) [based on
-previously specified data by the
-user](https://support.google.com/chrome/answer/142893) 
+ブラウザは、[auto-populate](https://support.google.com/chrome/answer/142893) [based on previously specified data by the user](https://support.google.com/chrome/answer/142893) 
 を判断するために多くのヒューリスティックを使用します。
 また、属性と各入力要素のオートコンプリート属性の両方を提供することで、
 ブラウザにヒントを与えることができます。
@@ -332,8 +296,9 @@ user](https://support.google.com/chrome/answer/142893)
 たとえば、ユーザー名、電子メールアドレス、電話番号を使用してフォームを
 オートコンプリートするブラウザにヒントを与えるには、次のように使用します。
 
-{% include_code src=_code/order.html snippet=autocomplete %}
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
+</pre>
 
 #### 推奨入力`name` および `autocomplete` 属性値
 
@@ -342,7 +307,7 @@ user](https://support.google.com/chrome/answer/142893)
 
 `autocomplete` 属性は**`shipping `**`given-name` または **`billing `**`street-address`などのセクション名を伴うことができます。 ブラウザは、継続的なフォームではなく、異なるセクションを個別にオートコンプリートします。
 
-<table class="table-3 autocompletes">
+<table>
     <thead>
     <tr>
       <th data-th="Content type">コンテンツの種類</th>
@@ -445,7 +410,7 @@ user](https://support.google.com/chrome/answer/142893)
   </tbody>
 </table>
 
-{% include shared/remember.liquid title="Remember" list=page.remember.recommend-input %}
+Success: <code>street-address</code> のみか、 <code>address-line1</code> と <code>address-line2</code> の両方を使用してください <code>address-level1</code> および <code>address-level2</code> は、アドレス形式に必要な場合にのみ使用します。
 
 #### `autofocus` 属性
 
@@ -460,42 +425,10 @@ Google のホームページなどのフォームで、ユーザーが特定の
 キーボード フォーカスを妨げ、ナビゲーションに使用されるのバックスペース文字
 を潜在的に防止するためです。
 
-{% highlight html %}
-<input type="text" autofocus ...>
-{% endhighlight %}
 
+    <input type="text" autofocus ...>
 
----
-title: "リアルタイム検証の実施"
-updated_on: 2014-10-21
-key-takeaways:
-  provide-real-time-validation:
-    - "次のようなブラウザの組み込み検証属性を活用します。<code>pattern</code>、<code>required</code>、<code>min</code>、<code>max</code>、その他。"
-    - より複雑な検証要件には、JavaScript と Constraints Validation API を使用します。
-    - リアルタイムで検証エラーを表示し、ユーザが無効なフォームを送信しようとすると、修正する必要のあるすべてのフィールドを示します。
-notes:
-  use-placeholders:
-    - プレースホルダーは、フォーカスが要素内に配置されるとすぐに消えます。つまり、ラベルの交換はありません。 これらは、必要な形式とコンテンツについてユーザーを支援するための補助として使用します。
-  recommend-input:
-    - オートコンプリートは、フォームのメソッドが POST である場合にのみ機能します。
-  use-datalist:
-    - <code>datalist</code> の値は候補として提供され、ユーザは提供された提案に限定されるものではありません。
-  provide-real-time-validation:
-    - クライアント側の入力検証においても、データの一貫性とセキュリティを確保するためにサーバー上のデータを検証することは常に重要です。
-  show-all-errors:
-    - ユーザーに問題を 1 つずつ表示するよりも、フォーム上にすべての問題を一度に表示する必要があります。
-  request-auto-complete-flow:
-    - 個人情報やクレジット カードなどのデータを求められた場合 ページが SSL で保存されることを確認してください。  そうでない場合、ダイアログは、情報が安全ではない可能性があることをユーザに警告します。
-comments:
-  # 注:セクション タイトルまたは URL を変更した場合、以下のショートリンクを更新する必要があります
-  - g.co/mobilesiteprinciple17b
----
-<p class="intro">
-  リアルタイム データ検証は、データを明確に保つだけではなく、ユーザ経験を改善するのにも役立ちます。  最近のブラウザにはリアルタイム データ検証の実施に役立つ複数のツールが組み込まれており、ユーザが無効なフォームを送信するのを回避することができます。  フォームが正しく記入されたかどうかを示すには、視覚的な指示を使用する必要があります。
-</p>
-
-
-{% include shared/takeaway.liquid list=page.key-takeaways.provide-real-time-validation %}
+## リアルタイム検証の実施
 
 #### これらの属性を使用して、入力を検証します。
 
@@ -507,13 +440,11 @@ comments:
 ダッシュと追加の 4 桁が続く場合がある) を検証するには、`pattern` を
 次のように設定します。
 
-{% highlight html %}
-<input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-{% endhighlight %}
+    <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
 
 ###### 一般的な正規表現パターン
 
-<table class="table-2 tc-heavyright">
+<table>
   <thead>
     <tr>
       <th data-th="Description">説明</th>
@@ -565,9 +496,9 @@ comments:
 フォームを送信する前に、フィールドに値が含まれている必要があります。 たとえば、郵便番号を必須にするには、
 単に必須属性を追加します。
 
-{% highlight html %}
-<input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-{% endhighlight %}
+
+    <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
+
 
 ##### `min`、`max` および `step` 属性
 
@@ -577,9 +508,9 @@ comments:
 靴のサイズの入力については、最小サイズを 1、最大サイズを 13、
 刻み値を 0.5 に設定します。
 
-{% highlight html %}
-<input type="number" min="1" max="13" step="0.5" ...>
-{% endhighlight %}
+
+    <input type="number" min="1" max="13" step="0.5" ...>
+
 
 ##### `maxlength` 属性
 
@@ -588,9 +519,9 @@ comments:
 ユーザが指定できる情報の長さを制限する場合に便利です。 たとえば、ファイル名の長さを 12 文字に制限する場合は、
 次のように使用できます。
 
-{% highlight html %}
-<input type="text" id="83filename" maxlength="12" ...>
-{% endhighlight %}
+
+    <input type="text" id="83filename" maxlength="12" ...>
+
 
 ##### `minlength` 属性
 
@@ -599,9 +530,9 @@ comments:
 ユーザが入力する必要のある最小長を指定する場合に便利です。 たとえば、ファイル名の最小長を 
 8 文字と指定する場合は、次のように使用できます。
 
-{% highlight html %}
-<input type="text" id="83filename" minlength="8" ...>
-{% endhighlight %}
+
+    <input type="text" id="83filename" minlength="8" ...>
+
 
 ##### `novalidate` 属性
 
@@ -610,14 +541,13 @@ comments:
 要素、または個々の入力フィールドに `novalidate` 属性を追加します。 その場合、すべての疑似クラスと 
 JavaScript API では、依然としてフォームが正しいかどうかをチェックできます。
 
-{% highlight html %}
-<form role="form" novalidate>
-  <label for="inpEmail">Email address</label>
-  <input type="email" ...>
-</form>
-{% endhighlight %}
 
-{% include shared/remember.liquid title="Remember" list=page.notes.provide-real-time-validation %}
+    <form role="form" novalidate>
+      <label for="inpEmail">Email address</label>
+      <input type="email" ...>
+    </form>
+
+Note: クライアント側の入力検証においても、データの一貫性とセキュリティを確保するためにサーバー上のデータを検証することは常に重要です。
 
 #### JavaScript を使用した複雑なリアルタイム検証
 
@@ -627,7 +557,7 @@ JavaScript API では、依然としてフォームが正しいかどうかを�
 独自のエラーの設定や、要素が有効かどうかのチェックなどの処理を実行でき、
 要素が無効である理由を判定できます。
 
-<table class="table-2 tc-heavyright">
+<table>
   <thead>
     <tr>
       <th data-th="API">API</th>
@@ -666,7 +596,9 @@ JavaScript API では、依然としてフォームが正しいかどうかを�
  イベントを使用して 2 つの入力を検証し、適切な
 応答メッセージを設定します。  例： 
 
-{% include_code src=_code/order.html snippet=customvalidation lang=javascript %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
+</pre>
 
 ##### 無効なフォームの送信の禁止
 
@@ -674,7 +606,9 @@ JavaScript API では、依然としてフォームが正しいかどうかを�
 無効なデータが入力されている場合に、すべてのブラウザがユーザによるフォームの送信を禁止するわけではないため、送信イベントを捕捉し、フォーム要素で `checkValidity()`
  を使用して、フォームが有効かどうかを判定する必要があります。  例： 
 
-{% include_code src=_code/order.html snippet=preventsubmission lang=javascript %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
+</pre>
 
 #### フィードバックのリアルタイム表示
 
@@ -683,7 +617,7 @@ JavaScript API では、依然としてフォームが正しいかどうかを�
 HTML5 には複数の新しい疑似クラスも用意されています。これらのクラスを使用すると、入力値または属性に基づいて
 入力をスタイル化できます。
 
-<table class="table-2 tc-heavyright">
+<table>
   <thead>
     <tr>
       <th data-th="Pseudo-class">疑似クラス</th>
@@ -724,70 +658,12 @@ HTML5 には複数の新しい疑似クラスも用意されています。こ�
 無効なスタイルが示されることがあります。 これを避けるために、CSS と
  JavaScript を組み合わせて、ユーザがフィールドを操作したときのみ、無効なスタイルを示すことができます。
 
-{% include_code src=_code/order.html snippet=invalidstyle lang=css %}
-{% include_code src=_code/order.html snippet=initinputs lang=javascript %}
-
-{% include shared/remember.liquid title="Important" list=page.remember.show-all-errors %}
-
-
-
-
-## Simplify checkout with requestAutocomplete API 
-
-
-
-<code>requestAutocomplete</code> はユーザーが任意のフォームに必要事項を入力するために設計されましたが、現在では主に eCommerce で使用されます。モバイル ウェブ上のショッピングカートなどで、<a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>97%</a> ほどの高い使用率があります。」 スーパーマーケットにいる 97% の人を想像してみてください。ほしいもので満たされたカートを引きずり満足げな人々です。
-
-
-### TL;DR {: .hide-from-toc }
-- <code>requestAutocomplete</code> はチェックアウト処理を大幅に簡略化し、ユーザー エクスペリエンスを向上させます。
-- <code>requestAutocomplete</code> が利用可能な場合は、チェックアウト フォームを非表示にし、確認ページに直接人を移動します。
-- 入力フィールドには適切なオートコンプリート属性が含まれていることを確認してください。
-
-
-特定の支払プロバイダに頼るサイトよりも、
-`requestAutocomplete` はブラウザから支払いの詳細を要求します (氏名、住所、クレジット
- カード情報など）。これらは他のオートコンプリート フィールドと同様に、必要に応じてブラウザによって
-保存されています。
-
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="ljYeHwGgzQk"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-
-#### `requestAutocomplete` フロー
-
-チェックアウト フォームを表示するページをロードする代わりに、
-理想的な経験が `requestAutocomplete` ダイアログに表示されます。 うまくいった場合は、ユーザーは他の
-フォームを目にしません。  既存のフォームに `requestAutocomplete` を容易に追加でき、
-フィールド名を変える必要はありません。  各フォームに適切な値の `autocomplete` 属性を追加し
-、フォーム要素に 
-`requestAutocomplete()` 関数を追加します。 ブラウザは
-残りの部分を処理します。
-
-<img src="imgs/rac_flow.png" class="center" alt="オートコンプリート リクエストのフロー">
-
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" adjust_indentation="auto" %}
 </pre>
-
-`requestAutocomplete` 要素上の `form` 関数は、ブラウザに
-フォームを設定することを示します。  セキュリティ機能として、
-関数はタッチやマウスクリックなどのユーザー ジェスチャーを介して呼び出す必要があります。 次にダイアログが表示され、
-フィールドを設定するためのユーザー権限がリクエストされ、
-詳細を設定する内容を指定します。
-
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
-
-`requestAutocomplete` が完了したら、正常な場合は
-`autocomplete` が起動し、失敗した場合は `autocompleteerror` 
-が起動します。  正常に終了した場合、
-フィームは必要事項を検証し、フォームを送信して、
-最終確認に進みます。
-
-Note: 個人情報やクレジット カードなどのデータを求められた場合 ページが SSL で保存されることを確認してください。  そうでない場合、ダイアログは、情報が安全ではない可能性があることをユーザーに警告します。
+Note: ユーザーに問題を 1 つずつ表示するよりも、フォーム上にすべての問題を一度に表示する必要があります。
 
 

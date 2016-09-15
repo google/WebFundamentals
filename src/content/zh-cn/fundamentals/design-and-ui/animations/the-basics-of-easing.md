@@ -23,7 +23,7 @@ description: 了解如何缓和或加强您的动画。
 
 ## 缓动关键字
 
-CSS 变换和动画都允许您[选择要为动画使用的缓动类型]({{site.fundamentals}}/look-and-feel/animations/choosing-the-right-easing.html)。 您可以使用影响相关动画的缓动（或有时称为定时）的关键字。 还可以[完全自定义您的缓动]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html)，使您能更自由地表达应用的个性。
+CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fundamentals/design-and-ui/animations/choosing-the-right-easing)。 您可以使用影响相关动画的缓动（或有时称为定时）的关键字。 还可以[完全自定义您的缓动](/web/fundamentals/design-and-ui/animations/custom-easing)，使您能更自由地表达应用的个性。
 
 以下是可在 CSS 中使用的一些关键字：
 

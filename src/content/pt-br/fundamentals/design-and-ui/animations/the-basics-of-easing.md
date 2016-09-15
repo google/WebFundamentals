@@ -23,7 +23,7 @@ Na animação clássica, os termos para movimentos que começam lentamente e ace
 
 ## Palavras-chaves de easing
 
-As transições e animações CSS permitem [escolher o tipo de easing a ser usado em animações]({{site.fundamentals}}/look-and-feel/animations/choosing-the-right-easing.html). Palavras-chave que afetam o easing (ou timing, como é chamado às vezes) da animação em questão podem ser usadas. Pode-se também [personalizar completamente um easing]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html), o que proporciona mais liberdade para expressar a personalidade do seu aplicativo.
+As transições e animações CSS permitem [escolher o tipo de easing a ser usado em animações](/web/fundamentals/design-and-ui/animations/choosing-the-right-easing). Palavras-chave que afetam o easing (ou timing, como é chamado às vezes) da animação em questão podem ser usadas. Pode-se também [personalizar completamente um easing](/web/fundamentals/design-and-ui/animations/custom-easing), o que proporciona mais liberdade para expressar a personalidade do seu aplicativo.
 
 Estas são algumas palavras-chave que podem ser usadas em CSS:
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: アプリ内の 2 つのビュー間にアニメーションを付ける方法の学習
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -27,11 +27,11 @@ Note: すべてのアニメーションについて 60fps を維持するよう�
 
 少し簡潔化するために、リストビューおよび詳細ビューの 2 つのビューがあると想定します。 ユーザがリストビュー内のリスト項目をタップすると、詳細ビューがスライドインして、リストビューがスライドアウトします。
 
-<img src="imgs/gifs/view-translate.gif" alt="2 つのビュー間の移動" />
+<img src="images/view-translate.gif" alt="2 つのビュー間の移動" />
 
 この効果を実現するには、`overflow: hidden` が設定されたコンテナが 2 つのビューのために必要です。 こうすると、水平スクロールバーを表示しなくても、2 つのビューを各ビューの内部に並べて入れることができます。また、必要に応じて、各ビューをコンテナの内部に並べてスライドさせることができます。
 
-<img src="imgs/container-two-views.svg" alt="階層を表示します。" />
+<img src="images/container-two-views.svg" alt="階層を表示します。" />
 
 コンテナの CSS は次のとおり:
 
@@ -60,7 +60,7 @@ Note: すべてのアニメーションについて 60fps を維持するよう�
     }
     
 
-`transform` プロパティに `transition` を追加すると、良好なスライド効果が得られます。 実感を高めるために、カスタム `cubic-bezier` 曲線を使用しています。これについては、[Custom Easing guide](custom-easing.html) で説明しています。
+`transform` プロパティに `transition` を追加すると、良好なスライド効果が得られます。 実感を高めるために、カスタム `cubic-bezier` 曲線を使用しています。これについては、[Custom Easing guide](custom-easing) で説明しています。
 
 
     .view {
@@ -129,6 +129,6 @@ Note: 複数のブラウザ間でこの種の階層を作成するのは困難�
 
 大きい画面の場合は、リストビューを移動するのではなく常時維持して、詳細ビューを右側からスライドインさせます。 これはナビゲーション ビューの操作とよく似ています。
 
-<img src="imgs/container-two-views-ls.svg" alt="階層を大きい画面に表示します。" />
+<img src="images/container-two-views-ls.svg" alt="階層を大きい画面に表示します。" />
 
 

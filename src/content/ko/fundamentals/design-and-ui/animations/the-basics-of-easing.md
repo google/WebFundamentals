@@ -23,7 +23,7 @@ description: 애니메이션을 부드럽게 하고 가중치를 주는 방법�
 
 ## easing 키워드
 
-CSS 전환 및 애니메이션을 통해 [애니메이션에 사용할 easing 종류를 선택]({{site.fundamentals}}/look-and-feel/animations/choosing-the-right-easing.html)할 수 있습니다. 애니메이션의 easing(타이밍이라고도 함)에 영향을 주는 키워드를 사용할 수 있습니다. 또한 [easing을 완전히 사용자 지정]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html)하여 앱의 개성을 더욱 자유롭게 표현할 수 있습니다.
+CSS 전환 및 애니메이션을 통해 [애니메이션에 사용할 easing 종류를 선택](/web/fundamentals/design-and-ui/animations/choosing-the-right-easing)할 수 있습니다. 애니메이션의 easing(타이밍이라고도 함)에 영향을 주는 키워드를 사용할 수 있습니다. 또한 [easing을 완전히 사용자 지정](/web/fundamentals/design-and-ui/animations/custom-easing)하여 앱의 개성을 더욱 자유롭게 표현할 수 있습니다.
 
 다음은 CSS에서 사용할 수 있는 키워드 중 일부입니다.
 

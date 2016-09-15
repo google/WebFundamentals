@@ -20,7 +20,7 @@ description: CSS 또는 JavaScript로 애니메이션을 만들 수 있습니다
 - JavaScript로 애니메이션 만들 경우 TweenMax 또는 TweenLite(더 가벼운 솔루션을 원할 경우)를 사용합니다.
 
 
-대부분의 기본 애니메이션은 CSS 또는 JavaScript로 만들 수 있지만 투자하는 노력과 시간은 다릅니다([CSS와 JavaScript의 성능 비교]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#css-vs-javascript-performance) 참조). 각각 장단점이 있지만 다음과 같은 규칙이 적용됩니다.
+대부분의 기본 애니메이션은 CSS 또는 JavaScript로 만들 수 있지만 투자하는 노력과 시간은 다릅니다([CSS와 JavaScript의 성능 비교](/web/fundamentals/design-and-ui/animations/animations-and-performance#css-vs-javascript-performance) 참조). 각각 장단점이 있지만 다음과 같은 규칙이 적용됩니다.
 
 * **UI 요소에 대해 작고 자체적으로 포함된 상태가 있는 경우 CSS를 사용합니다.** CSS 전환 및 애니메이션은 측면에 탐색 메뉴를 나타내거나 툴팁을 표시하는 데 적합합니다. JavaScript를 사용하여 상태를 제어할 수 있지만 애니메이션 자체는 CSS에 있게 됩니다.
 * **애니메이션을 세밀하게 제어해야 하는 경우에 JavaScript를 사용합니다.** 터치 위치를 동적으로 추적하거나, 중지, 일시 중지, 감속 또는 거꾸로 재생해야 하는 경우 주로 JavaScript를 사용해야 합니다.

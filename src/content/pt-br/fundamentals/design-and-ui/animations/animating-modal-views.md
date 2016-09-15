@@ -40,7 +40,7 @@ A sobreposição modal deve ser alinhada com a porta de visualização, portanto
     }
     
 
-Tem um `opacity` inicial de 0, portanto, está oculto na visualização. Mas também precisará de `pointer-events` definido para `none` para que o clique e o toque sejam transmitidos. Sem isso, todas as interações serão bloqueadas e a página ficará sem resposta. Por fim, como seu `opacity` e `transform` serão animados, eles precisam ser marcados como mudando com `will-change` (veja também [Usando a propriedade will-change]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#using-the-will-change-property)).
+Tem um `opacity` inicial de 0, portanto, está oculto na visualização. Mas também precisará de `pointer-events` definido para `none` para que o clique e o toque sejam transmitidos. Sem isso, todas as interações serão bloqueadas e a página ficará sem resposta. Por fim, como seu `opacity` e `transform` serão animados, eles precisam ser marcados como mudando com `will-change` (veja também [Usando a propriedade will-change](/web/fundamentals/design-and-ui/animations/animations-and-performance#using-the-will-change-property)).
 
 Quando a visualização estiver visível, as interações precisarão ser aceitas e um `opacity` de 1 será necessário:
 
@@ -58,7 +58,7 @@ Agora, sempre que a visualização modal for necessária, você pode usar o Java
     
 
 Neste ponto, a visualização modal aparecerá sem qualquer animação. Portanto, agora ela poderá ser adicionada
-(veja também [Easing personalizado]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html)):
+(veja também [Easing personalizado](/web/fundamentals/design-and-ui/animations/custom-easing)):
 
 
     .modal {

@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 1 枚の写真は 1000 語にも匹敵します。画像すべてのページにおいて不可欠です。一方で、ダウンロードされるデータ量のほとんどを画像が占めることも少なくありません。レスポンシブ ウェブデザインでは、レイアウトだけでなく画像もデバイスの特性に応じて変えることができます。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-04-29 #}
 
 # 画像 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
