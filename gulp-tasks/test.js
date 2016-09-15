@@ -12,20 +12,36 @@ var TEST_ROOT = 'src/content/';
 var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md', '!**/tags/*', '!**/codelabs/*/*'];
 var MAX_DESCRIPTION_LENGTH = 475;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
-var ERROR_STRINGS = [
-  '{% include_code',
-  '{% link_sample',
-  '{% highlight',
-  '{{',
-  '{% include "web/_shared/contributors/TODO.html" %}'
-];
+// var ERROR_STRINGS = [
+//   '{% include_code',
+//   '{% link_sample',
+//   '{% highlight',
+//   '{{',
+//   '{% include "web/_shared/contributors/TODO.html" %}'
+// ];
+// var WARNING_STRINGS = [
+//   'mdl-grid',
+//   'mdl-cell',
+//   'mdl-data-table',
+//   'mdl-js-data-table',
+//   '<!-- TODO: Verify note type! -->',
+//   '<!-- TODO: Verify Udacity course fits here -->'
+// ];
 var WARNING_STRINGS = [
-  'mdl-grid',
-  'mdl-cell',
-  'mdl-data-table',
-  'mdl-js-data-table',
-  '<!-- TODO: Verify note type! -->',
-  '<!-- TODO: Verify Udacity course fits here -->'
+  {label: 'mdl-grid', regEx: /mdl-grid/},
+  {label: 'mdl-cell', regEx: /mdl-cell/},
+  {label: 'mdl-data-table', regEx: /mdl-data-table/},
+  {label: 'mdl-js-data-table', regEx: /mdl-js-data-table/},
+  {label: 'TODO: Verify note type!', regEx: /<!-- TODO: Verify note type! -->/},
+  {label: 'TODO: Verify Udacity', regEx: /<!-- TODO: Verify Udacity course fits here -->/}
+];
+var ERROR_STRINGS = [
+  {label: 'Possible template tag ({{)', regEx: /{{/},
+  {label: 'Old style include {% include_code', regEx: /{%[ ]?include_code/},
+  {label: 'Old style link_sample {% link_sample', regEx: /{%[ ]?link_sample/},
+  {label: 'Old style highlight {% highlight', regEx: /{%[ ]?highlight/},
+  {label: 'Contributor is TODO', regEx: /{%[ ]?include.*web\/_shared\/contributors\/TODO.html/},
+  {label: 'Invalid named anchor', regEx: /{#\w+}/m},
 ];
 
 function testMarkdownFile(fileName) {
@@ -76,11 +92,11 @@ function testMarkdownFile(fileName) {
     });
   }
   // Verify page has a title
-  var title = fileContent.match(/^# (.*) {: .page-title }/m);
+  var title = fileContent.match(/^# (.*) {: .page-title }/gm);
   if (title) {
-    if (title.length > 2) {
+    if (title.length > 1) {
       errors.push({msg: 'Page has multiple title tags', param: title.join(',')});
-    } else if (title[1].indexOf('<code>') >= 0 || title[1].indexOf('`') >= 0) {
+    } else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
       errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
     }
   } else {
@@ -88,13 +104,13 @@ function testMarkdownFile(fileName) {
   }
   // Look for bad strings
   WARNING_STRINGS.forEach(function(str) {
-    if (fileContent.indexOf(str) >= 0) {
-      warnings.push({msg: 'Potentially bad string found', param: str});
+    if (fileContent.search(str.regEx) >= 0) {
+      warnings.push({msg: 'Potentially bad string found', param: str.label});
     }
   });
   ERROR_STRINGS.forEach(function(str) {
-    if (fileContent.indexOf(str) >= 0) {
-      errors.push({msg: 'Bad string found', param: str});
+    if (fileContent.search(str.regEx) >= 0) {
+      errors.push({msg: 'Bad string found', param: str.label});
     }
   });
   // Look for invalid tags in includecode

@@ -21,14 +21,14 @@ function supportsShadowDOM() {
 Note: **Already familiar with Shadow DOM?** This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
 
 
-### TL;DR {#tldr .hide-from-toc}
+### TL;DR {: #tldr .hide-from-toc}
 
 Shadow DOM removes the brittleness of building web apps. The brittleness comes from the global nature of HTML, CSS, and JS. Over the years we've invented an exorbitant [number](http://getbem.com/introduction/) [of](https://github.com/css-modules/css-modules) [tools](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/) to circumvent the issues. For example, when you use a new HTML id/class, there's no telling if it will conflict with an existing name used by the page. [Subtle bugs](http://www.2ality.com/2012/08/ids-are-global.html) creep up, CSS specificity becomes a huge issue (`!important` all the things!), style selectors grow out of control, and [performance can suffer](https://developers.google.com/web/updates/2016/06/css-containment). The list goes on.
 
 **Shadow DOM fixes CSS and DOM**. It introduces **scoped styles** to the web platform. Without tools or naming conventions, you can **bundle CSS with markup**, hide implementation details, and **author self-contained components** in vanilla JavaScript.
 
 
-## Introduction {#intro}
+## Introduction {: #intro}
 
 Shadow DOM is one of the four Web Component standards: [HTML Templates](http://www.html5rocks.com/en/tutorials/webcomponents/template/), [Shadow DOM][sd_spec_whatwg], [Custom elements](/web/fundamentals/getting-started/primers/customelements) and [HTML Imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/).
 
@@ -45,7 +45,7 @@ Shadow DOM is designed as a tool for building component-based apps. Therefore, i
 Although you can use the shadow DOM API and its benefits outside of web components, I'm only going to focus on examples that build on custom elements. I'll be using the custom elements v1 API in all examples.
 {: .wf-talkinghead }
 
-#### &lt;fancy-tabs&gt; demo {#demo}
+#### &lt;fancy-tabs&gt; demo {: #demo}
 
 Throughout this article, I'll be referring to a demo component (`<fancy-tabs>`) and referencing code snippets from it. If your browser supports the APIs, you should see a live demo of it just below. Otherwise, check out the <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">full source on Github</a>.
 
@@ -54,9 +54,9 @@ Throughout this article, I'll be referring to a demo component (`<fancy-tabs>`) 
   <figcaption><a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">View source on Github</a></figcaption>
 </figure>
 
-## What is shadow DOM? {#what}
+## What is shadow DOM? {: #what}
 
-#### Background on DOM {#sdbackground}
+#### Background on DOM {: #sdbackground}
 
 HTML powers the web because it's easy to work with. By declaring a few tags, you can author a page in seconds that has both presentation and structure. However, by itself HTML isn't all that useful. It's easy for humans to understand a text-based language, but machines need something more. Enter the Document Object Model, or DOM.
 
@@ -82,11 +82,11 @@ produces the following HTML markup:
 
 All that is well and good. Then what the heck is _shadow DOM_?
 
-#### DOM...in the shadows {#sddom}
+#### DOM...in the shadows {: #sddom}
 
 Shadow DOM is just normal DOM with two differences: 1) how it's created/used and 2) how it behaves in relation to the rest of the page. Normally, you create DOM nodes and append them as children of another element. With shadow DOM, you create a scoped DOM tree that's attached to the element, but separate from its actual children. This scoped subtree is called a **shadow tree**. The element it's attached to is its **shadow host**. Anything you add in the shadows becomes local to the hosting element, including `<style>`. This is how shadow DOM achieves CSS style scoping.
 
-## Creating shadow DOM {#create}
+## Creating shadow DOM {: #create}
 
 A **shadow root** is a document fragment that gets attached to a “host” element. The act of attaching a shadow root is how the element gains its shadow DOM. To create shadow DOM for an element, call `element.attachShadow()`:
 
@@ -113,7 +113,7 @@ For example, this doesn't work:
     // Error. `<input>` cannot host shadow dom.
     
 
-### Creating shadow DOM for a custom element {#elements}
+### Creating shadow DOM for a custom element {: #elements}
 
 Shadow DOM is particularly useful when creating [custom elements](/web/fundamentals/getting-started/primers/customelements). Use shadow DOM to compartmentalize an element's HTML, CSS, and JS, thus producing a "web component".
 
@@ -141,13 +141,13 @@ There are a couple of interesting things going on here. The first is that the cu
 When you try to run this example, you'll probably notice that nothing renders. The user's markup seemingly disappears! That's because the **element's shadow DOM is rendered in place of its children**. If you want to display the children, you need to tell the browser where to render them by placing a [`<slot>` element](#slots) in your shadow DOM. More on that [later](#composition_slot).
 {: .wf-talkinghead }
 
-## Composition and slots {#composition_slot}
+## Composition and slots {: #composition_slot}
 
 Composition is one of the least understood features of shadow DOM, but it's arguably the most important.
 
 In our world of web development, composition is how we construct apps, declaratively out of HTML. Different building blocks (`<div>`s, `<header>`s, `<form>`s, `<input>`s) come together to form apps. Some of these tags even work with each other. Composition is why native elements like `<select>`, `<details>`, `<form>`, and `<video>` are so flexible. Each of those tags accepts certain HTML as children and does something special with them. For example, `<select>` knows how to render `<option>` and `<optgroup>` into dropdown and multi-select widgets. The `<details>` element renders `<summary>` as a expandable arrow. Even `<video>` knows how to deal with certain children: `<source>` elements don't get rendered, but they do affect the video's behavior. What magic!
 
-### Terminology: light DOM vs. shadow DOM {#lightdom}
+### Terminology: light DOM vs. shadow DOM {: #lightdom}
 
 Shadow DOM composition introduces a bunch of new fundamentals in web development. Before getting into the weeds, let's standardize on some terminology so we're speaking the same lingo.
 
@@ -193,7 +193,7 @@ The result of the browser distributing the user's light DOM into your shadow DOM
     </button>
     
 
-### The &lt;slot&gt; element {#slots}
+### The &lt;slot&gt; element {: #slots}
 
 Shadow DOM composes different DOM trees together using the `<slot>` element. **Slots are placeholders inside your component that users _can_ fill with their own markup**. By defining one or more slots, you invite outside markup to render in your component's shadow DOM. Essentially, you're saying _"Render the user's markup over here"_.
 
@@ -277,11 +277,11 @@ And if you're wondering, the composed tree looks something like this:
 
 Notice our component is able to handle different configurations, but the composed DOM remains the same. We can also switch from `<button>` to `<h2>`. This component was authored to handle different types of children...just like `<select>` does!
 
-## Styling  {#styling}
+## Styling  {: #styling}
 
 There are many options for styling web components. A component that uses shadow DOM can be styled by the main page, define its own styles, or provide hooks (in the form of [CSS custom properties][css_props]) for users to override defaults.
 
-### Component-defined styles {#host}
+### Component-defined styles {: #host}
 
 Hands down the most useful feature of shadow DOM is **scoped CSS**:
 
@@ -379,7 +379,7 @@ The functional form of `:host(<selector>)` allows you to target the host if it m
     </style>
     
 
-### Styling based on context {#contextstyling}
+### Styling based on context {: #contextstyling}
 
 `:host-context(<selector>)` matches the component if it or any of its ancestors matches `<selector>`. A common use for this is theming based on a component's surroundings. For example, many people do theming by applying a class to `<html>` or `<body>`:
 
@@ -402,7 +402,7 @@ The functional form of `:host(<selector>)` allows you to target the host if it m
 
 `:host-context()` can be useful for theming, but an even better approach is to [create style hooks using CSS custom properties](#stylehooks).
 
-### Styling distributed nodes {#stylinglightdom}
+### Styling distributed nodes {: #stylinglightdom}
 
 `::slotted(<compound-selector>)` matches nodes that are distributed into a `<slot>`.
 
@@ -485,7 +485,7 @@ Another, more in-depth example from `<fancy-tabs>`:
 
 In this example, there are two slots: a named slot for the tab titles, a named slot for the  tabs content. When the user selects a tab, we bold their selection and reveal its panel. That's done by selecting distributed nodes that have the `selected` attribute. The custom element's JS (not shown here) adds that attribute at the correct time.
 
-### Styling a component from the outside {#stylefromoutside}
+### Styling a component from the outside {: #stylefromoutside}
 
 There are a couple of ways to style a component from the outside. The easiest way is to use the tag name as a selector:
 
@@ -503,7 +503,7 @@ There are a couple of ways to style a component from the outside. The easiest wa
 
 Style the component itself will only get you so far. But what happens if you want to style the internals of a component? For that, we need CSS custom properties.
 
-#### Creating style hooks using CSS custom properties {#stylehooks}
+#### Creating style hooks using CSS custom properties {: #stylehooks}
 
 Users can tweak internal styles if the component's author provides styling hooks using [CSS custom properties][css_props]. Conceptually, the idea is similar to `<slot>`. You create "style placeholders" for users to override.
 
@@ -535,9 +535,9 @@ In this case, the component will use `black` as the background value since the u
 As the component author, you're responsible for letting developers know about CSS custom properties they can use. Consider it part of your component's public interface. Make sure to document styling hooks!
 {: .wf-talkinghead }
 
-## Advanced topics {#advanced}
+## Advanced topics {: #advanced}
 
-### Creating closed shadow roots (should avoid) {#closed}
+### Creating closed shadow roots (should avoid) {: #closed}
 
 There's another flavor of shadow DOM is called "closed" mode. When you create a closed shadow tree, outside JavaScript won't be able to access the internal DOM of your component. This is similar to how native elements like `<video>` work. JavaScript cannot access the shadow DOM of `<video>` because the browser implements it using a closed-mode shadow root.
 
@@ -580,11 +580,11 @@ Here's my summary of why you should never create web components with `{mode: 'cl
 
 3. **Closed mode makes your component less flexible for end users**. As you build web components, there will come a time when you forget to add a feature. A configuration option. A use case the user wants. A common example is forgetting to include adequate styling hooks for internal nodes. With closed mode, there's no way for users to override defaults and tweak styles. Being able to access the component's internals is super helpful. Ultimately, users will fork your component, find another, or create their own if it doesn't do what they want :(
 
-### Working with slots in JS {#workwithslots}
+### Working with slots in JS {: #workwithslots}
 
 The shadow DOM API provides utilities for working with slots and distributed nodes. These come in handy when authoring a custom element.
 
-#### slotchange event {#slotchange}
+#### slotchange event {: #slotchange}
 
 The `slotchange` event fires when a slot's distributed nodes changes. For example, if the user adds/removes children from the light DOM.
 
@@ -599,7 +599,7 @@ The `slotchange` event fires when a slot's distributed nodes changes. For exampl
 
 To monitor other types of changes to light DOM, you can setup a [`MutationObserver`](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) in your element's constructor.
 
-#### What elements are being rendering in a slot? {#slotnodes}
+#### What elements are being rendering in a slot? {: #slotnodes}
 
 Sometimes it's useful to know what elements are associated with a slot. Call `slot.assignedNodes()` to find which elements the slot is rendering. The `{flatten: true}` option will also return a slot's fallback content (if no nodes are being distributed).
 
@@ -626,11 +626,11 @@ As an example, let's say your shadow DOM looks like this:
   </tr>
 </table>
 
-#### What slot is an element assigned to? {#assignedslot}
+#### What slot is an element assigned to? {: #assignedslot}
 
 Answering the reverse question is also possible. `element.assignedSlot` tells you which of the component slots your element is assigned to.
 
-#### The Shadow DOM event model {#events}
+#### The Shadow DOM event model {: #events}
 
 When an event bubbles up from shadow DOM it's target is adjusted to maintain the encapsulation that shadow DOM provides. That is, events are re-targeted to look like they've come from the component rather than internal elements within your shadow DOM. Some events do not even propagate out of shadow DOM.
 
@@ -648,7 +648,7 @@ The events that **do** cross the shadow boundary are:
 
 If the shadow tree is open, calling `event.composedPath()` will return an array of nodes that the event traveled through.
 
-### Using custom events {#customevents}
+### Using custom events {: #customevents}
 
 Custom DOM events which are fired on internal nodes in a shadow tree do not bubble
 out of the shadow boundary unless the event is created using the `composed: true` flag:
@@ -673,7 +673,7 @@ If `composed: false` (default), consumers won't be able to listen for the event 
     </script>
     
 
-### Handling focus {#focus}
+### Handling focus {: #focus}
 
 If you recall from [shadow DOM's event model](#events), events that are fired inside shadow DOM are adjusted to look like they come from the hosting element. For example, let's say you click an `<input>` inside a shadow root:
 
@@ -768,11 +768,11 @@ If you were to set `delegatesFocus: false`, here's what you would see instead:
   <figcaption><code>delegateFocus: false</code> and "Clickable Shadow DOM text" is clicked (or other empty area within the element's shadow DOM is clicked).</figcaption>
 </figure>
 
-## Tips & Tricks {#tricks}
+## Tips & Tricks {: #tricks}
 
 Over the years I've learned a thing or two about authoring web components. I think you'll find some of these tips useful for authoring components and debugging shadow DOM.
 
-### Use CSS containment {#containment}
+### Use CSS containment {: #containment}
 
 Typically, a web component's layout/style/paint is fairly self-contained. Use [CSS containment](https://developers.google.com/web/updates/2016/06/css-containment) in `:host` for a perf win:
 
@@ -785,7 +785,7 @@ Typically, a web component's layout/style/paint is fairly self-contained. Use [C
     </style>
     
 
-### Resetting inheritable styles {#reset}
+### Resetting inheritable styles {: #reset}
 
 Inheritable styles (`background`, `color`, `font`, `line-height`, etc.) continue to inherit in shadow DOM. That is, they pierce the shadow DOM boundary by default. If you want to start with a fresh slate, use `all: initial;` to reset inheritable styles to their initial value when they cross the shadow boundary.
 
@@ -861,7 +861,7 @@ if (supportsShadowDOM()) {
 </script>
 {% endcomment %}
 
-### Finding all the custom elements used by a page {#findall}
+### Finding all the custom elements used by a page {: #findall}
 
 Sometimes it's useful to find custom elements used on the page. To do so, you need to recursively traverse the shadow DOM of all elements used on the page.
 
@@ -902,20 +902,20 @@ Some browsers also support using shadow DOM v0's `/deep/` combinator in `querySe
 For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs.chromium.org/p/chromium/issues/detail?id=633007).
 {% endcomment %}
 
-### Creating elements from a &lt;template> {#fromtemplate}
+### Creating elements from a &lt;template> {: #fromtemplate}
 
 Instead of populating a shadow root using `.innerHTML`, we can use a declarative `<template>`. Templates are an ideal placeholder for declaring the structure of a web component.
 
 See the example in "[Custom elements: building reusable web components](/web/fundamentals//getting-started/primers/customelements)".
 
-## History & browser support {#historysupport}
+## History & browser support {: #historysupport}
 
 If you've been following web components for the last couple of years, you'll know that
 Chrome 35+/Opera have been shipping an older version of shadow DOM for some time. Blink will continue to support both versions in parallel for some time. The v0 spec provided a different method to create a shadow root (`element.createShadowRoot` instead of v1's `element.attachShadow`). Calling the older method continues to create a shadow root with v0 semantics, so existing v0 code won't break.
 
 If you happen to be interested in the old v0 spec, check out the html5rocks articles: [1](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/), [2](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/), [3](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/). There's also a great comparison of the [differences between shadow DOM v0 and v1][differences].
 
-### Browser support {#support}
+### Browser support {: #support}
 
 Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)), Opera 40, and Safari 10 are shipping shadow DOM v1. Edge is under consideration [with high priority](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=811542) to implement.
 
