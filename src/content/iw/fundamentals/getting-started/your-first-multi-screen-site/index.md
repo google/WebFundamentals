@@ -2,20 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: האינטרנט נגיש במגוון עצום של מכשירים. מטלפונים עם מסך קטן ועד לטלביזיות ענק. למד כיצד לבנות אתר שעובד היטב על פני כל המכשירים הללו.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
 # האתר הראשון שלך שמותאם למגוון מכשירים {: .page-title }
 
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
+
 {% include "web/_shared/contributors/paulkinlan.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/greenido.html" %}
-
-
 
 בניית חוויה ״רב מכשירית״ היא לא קשה כמו שזה נשמע. על ידי מעבר על מדריך זה, נוכל לבנות דף נחיתה למוצר <a href='https://www.udacity.com/course/cs256'>CS256 קורס לפיתוח לאתרים ניידים</a><br>שיעבוד היטב על פני מגוון רחב של מכשירים
 
@@ -33,12 +27,6 @@ Translated By:
 ## צור את התוכן והמבנה 
 
 
-
-Translated By: 
-
-
-
-
 תוכן הוא ההיבט החשוב ביותר של כל אתר. אז רצוי לעצב עבור התוכן ולא לתת לעיצוב להכתיב את התוכן. במדריך זה, אנו מזהים את התוכן שאנחנו צריכים בעדיפות ראשונה, ליצור מבנה דף המבוסס עליו ולאחר מכן, תציג את הדף בפריסה ליניארית שעובדת היטב על viewports הצר ורחב.
 
 
@@ -52,22 +40,19 @@ Translated By:
 4. תמונות שמראות את המוצר בפעולה
 5. טבלת הנתונים עם מידע כדי לגבות את הטענות
 
-### TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
 
 
 אנחנו גם צריכים לבוא עם ארכיטקטורת מידע ופריסה עבור שני viewports הצר ורחב.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="Narrow Viewport IA">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="Wide Viewport IA">
-</div>
+<img class="attempt-left" src="images/narrowviewport.png" alt="Narrow Viewport IA">
+<img  class="attempt-right" src="images/wideviewport.png" alt="Wide Viewport IA">
+<div class="clearfix"></div>
+
 
 זה ניתן להמיר בקלות לחלקים של דף שלד שאנו נשתמש לשאר הפרויקט הזה.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### הוסף תוכן לדף
@@ -83,7 +68,7 @@ Note: הסטייל יגיע מאוחר יותר.
 בכותרת, הוסף טקסט פשוט כדי לתאר את המהלך:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 אנחנו צריכים גם למלא את הטופס. זה יהיה טופס פשוט שאוסף שמות של המשתמשים, מספרי הטלפון שלהם, וזמן נוח להם להתקשרות.
@@ -93,7 +78,7 @@ Note: הסטייל יגיע מאוחר יותר.
 אנחנו נוסיף סוגים סמנטיים כדי לעשות את זה מהיר ופשוט למשתמשים להיות מסוגלים להזין תוכן במכשיר נייד. לדוגמא, בעת הזנת טלפון מספר, המשתמש צריך רק לראות לוח מקשי חיוג.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -103,7 +88,7 @@ Note: הסטייל יגיע מאוחר יותר.
 החלק בדף של הוידאו והמידע יכיל יותר עומק. תהיה לה רשימה של התכונות של המוצרים שלנו והחלק הזה, גם יכיל מציין מיקום לוידאו שמראה את המוצר שלנו עובד עבור המשתמש.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 סרטי וידאו משמשים לעתים קרובות כדי לתאר את התוכן באופן אינטראקטיבי, והם משמשים לעתים קרובות כדי להראות הדגמה של מוצר או רעיון.
@@ -116,7 +101,7 @@ Note: הסטייל יגיע מאוחר יותר.
 *  הוספת טקסט התאמה לאחור כדי לאפשר לאנשים להוריד את הווידאו, אם הם לא יכולים לראות אותו. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
@@ -133,7 +118,7 @@ Note: הסטייל יגיע מאוחר יותר.
 תמונות תוכן הן קריטיות להעברת המשמעות של הדף. תחשוב עליהם כמו על התמונות אשר נמצאות בשימוש במאמרי עיתונות. התמונות שאנו משתמשים הן תמונות של המורים על הפרויקט: כריס ווילסון, פיטר לוברס ושון בנט.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
 </pre>
 
 התמונות מוגדרות בקנה מידה לרוחב של המסך 100%. זה עובד גם על מכשירים עם viewport צר, אבל פחות טוב באלה עם viewport רחב (כמו שולחן עבודה). אנחנו ננהל את זה בסעיף responsive design.
@@ -151,7 +136,7 @@ Note: הסטייל יגיע מאוחר יותר.
 יש להשתמש בטבלאות רק לנתונים טבלאיים, כלומר, מטריצות של מידע.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### הוסף את החלק התחתון (Footer)
@@ -161,29 +146,22 @@ Note: הסטייל יגיע מאוחר יותר.
 באתר שלנו, אנו רק מקשרים לתנאי שימוש, דף יצירת קשר, ופרופילי המדיה החברתית שלנו.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### סיכום
 
 אנחנו יצרנו את קווי המתאר של האתר וזיהינו את כל האלמנטים מבניים הראשיים. בנוסף, גם דאגנו לכך שיש לנו את כל התוכן העיקרי מוכן ובמקום כדי לספק את הצרכים העסקיים שלנו.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="Content">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+<img class="attempt-left" src="images/content.png" alt="Content">
+<img  class="attempt-right" src="images/narrowsite.png" alt="">
+<div class="clearfix"></div>
+
 
 תוכל להבחין כי העמוד נראה נורא עכשיו; זה הוא מכוון. תוכן הוא ההיבט החשוב ביותר של כל אתר ואנחנו צריכים לוודא שיש לנו את האדריכלות הטובה ביותר להצפת המידע. מדריך זה נתן לנו בסיס מצוין לבנות עליו. אנו נשפר את הסטייל של התוכן שלנו במדריך הבא.
 
 
-
-
 ## הפוך את זה למגיב 
-
-
-
-Translated By: 
-
 
 
 
@@ -192,16 +170,16 @@ Translated By:
 
 אנחנו בונים אתר שפועל על פני מסך בגדלים שונים ובמגוון מכשירים. [בארכיטקטורת](#)  המידע של הדף ויצרה מבנה בסיסי. במדריך זה, אנחנו ניקח את המבנה הבסיסי שלנו עם תוכן ולהפוך אותו לדף יפה שמגיב למספר רב של גדלי מסך.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Content">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Content and structure </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Final site </a> </figcaption>
-  </figure>
-</div>
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="Content">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Content and structure </a> </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Final site </a> </figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 בעקבות העקרונות של פיתוח רשת עם מחשבה על ניידים בתחילה, אנחנו מתחילים עם viewport צר &mdash; בדומה לטלפון נייד &mdash; אנו בונים עבור חווית משתמש כזו בתחילה.
 לאחר מכן, אנו עולים למכשירים גדולים יותר.
@@ -223,7 +201,7 @@ Translated By:
 Viewport מציין לדפדפן שהדף צריך להיות בקנה מידה מסויים כדי להתאים המסך. ישנן תצורות רבות ושונות שניתן לציין ל viewport שלך כדי לשלוט בתצוגה של הדף. בתור ברירת מחדל, אנו ממליצים:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 Viewport מתגורר בראש המסמך, ורק צריך להיות מוכלל פעם אחת.
@@ -255,9 +233,9 @@ Viewport מתגורר בראש המסמך, ורק צריך להיות מוכלל
 
 דוגמא טובה לכך היא תמונת כותרת לתוכן "מעל לקפל" (אותו קו שהמשתמש רואה תמיד). הוא משמש לעתים קרובות כדי לפתות את המשתמשים לגלול ולקרוא עוד על המוצר..
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="Designed site">
-</div>
+
+<img  src="images/narrowsite.png" alt="Designed site">
+
 
 הם יכולים להיות פשוטים מאוד להכללה על הדף. במקרה שלנו, זה יהיה הרקע לכותרת ואנו נחיל אותו באמצעות כמה חוקי CSS פשוטים.
 
@@ -273,8 +251,8 @@ Viewport מתגורר בראש המסמך, ורק צריך להיות מוכלל
 
 בחרנו תמונת רקע פשוטה שמטושטשת, כך שהיא לא לוקחת מהתוכן ויש לנו להגדיר אותה כ 'cover` על כל האלמנט; באופן שתמיד מותח אוה תוך שמירה על יחס ממדים נכון.
 
+<div class="clearfix"></div>
 
-<br style="clear: both;">
 
 ### קבע את נקודת השבירה הראשונה 
 
@@ -289,8 +267,6 @@ Viewport מתגורר בראש המסמך, ורק צריך להיות מוכלל
 </video>
 
 600px נראה מקום טוב כדי לקבוע נקודת העצירה הראשונה שלנו מפני שהוא ייתן לנו מרווח כדי לשנות את מיקום אלמנטים כדי להפוך אותם מותאמים טוב יותר למסך. אנחנו יכולים לעשות את זה באמצעות טכנולוגיה המכונות [שאילתות מדיה(Media Queries)](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)
-
-
 
 
     @media (min-width: 600px) {
@@ -452,4 +428,7 @@ Viewport רחב נותן לנו שטח נוסף לשימוש כדי להציג �
 4.  ברגע שיש לך החוויה הניידת, תוכל להגדיל את הרוחב של התצוגה עד שזה לא נראה טוב ולהגדיר נקודת העצירה שם.
 5.  המשך לנסות ולהתאים
 
+
+Translated By: 
+{% include "web/_shared/contributors/greenido.html" %}
 
