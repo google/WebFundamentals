@@ -44,6 +44,17 @@ try to summarize some of the changes, reasoning, and migration paths in
 these posts. We will also try to summarize some of the changes, reasoning, and migration paths in these posts.
 
 
+## Disable navigations in the unload handler
+
+**TL;DR:** All cross-origin navigations will be disallowed in `window.onunload` event handlers to bring Chrome inline with the HTML spec as well as Firefox and Safari.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/VfItzNe3WO0/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5655310928707584) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=613244)
+
+Previous versions of Chrome allowed cross-origin navigation to be interrupted inside `window.onunload`. by setting `window.location.href = '#fragment'`.  [According to the HTML spec](https://html.spec.whatwg.org/multipage/browsers.html#navigate), only in-page navigations are allowed in the unload handlers, and in previous versions of Chrome other methods of navigating were blocked as required by the spec. Starting in Chrome 54, such navigations will be disallowed to bring us in line with the spec as well as Firefox and Safari.
+
+
 ## HTTP/0.9 deprecated
 
 **TL;DR:** HTTP/0.9 is deprecated. Developers should move to a later version, preferably HTTP/2.
