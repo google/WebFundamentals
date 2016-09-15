@@ -5,6 +5,10 @@ toc:
       path: /web/tools/chrome-devtools/
     - title: Configure and Customize DevTools
       path: /web/tools/chrome-devtools/settings
+    - title: Debug Progressive Web Apps
+      path: /web/tools/chrome-devtools/progressive-web-apps
+    - title: Understand Security Issues
+      path: /web/tools/chrome-devtools/security
     - title: Inspect and Edit Pages and Styles
       section:
       - title: Overview
@@ -19,8 +23,6 @@ toc:
         path: /web/tools/chrome-devtools/inspect-styles/shortcuts
     - title: Inspect and Manage Storage, Caches, and Resources
       section:
-      - title: Overview
-        path: /web/tools/chrome-devtools/manage-data/
       - title: Inspect and Manage Storage, Databases, and Caches
         path: /web/tools/chrome-devtools/manage-data/local-storage
       - title: Inspect and Delete Cookies
@@ -47,8 +49,10 @@ toc:
         path: /web/tools/chrome-devtools/remote-debugging/webviews
     - title: Inspect and Debug JavaScript
       section:
-      - title: Overview
-        path: /web/tools/chrome-devtools/javascript/
+      - title: Set Breakpoints
+        path: /web/tools/chrome-devtools/javascript/add-breakpoints
+      - title: Step Through Code
+        path: /web/tools/chrome-devtools/javascript/step-code
       - title: Run Snippets of Code From Any Page
         path: /web/tools/chrome-devtools/javascript/snippets
       - title: Pretty-Print Minified JavaScript
@@ -57,18 +61,6 @@ toc:
         path: /web/tools/chrome-devtools/javascript/watch-variables
       - title: Map Preprocessed Code to Source Code
         path: /web/tools/chrome-devtools/javascript/source-maps
-      - title: Set Breakpoints
-        path: /web/tools/chrome-devtools/javascript/add-breakpoints
-      - title: Step Through Code
-        path: /web/tools/chrome-devtools/javascript/step-code
-    - title: Debug Progressive Web Apps
-      section: 
-      - title: Overview
-        path: /web/tools/chrome-devtools/progressive-web-apps/
-    - title: Understand Security Issues
-      section:
-      - title: Overview
-        path: /web/tools/chrome-devtools/security/
     - title: Using the Console
       section:
       - title: Overview
@@ -91,8 +83,6 @@ toc:
         path: /web/tools/chrome-devtools/console/command-line-reference
     - title: How to Look at Performance
       section:
-      - title: Overview
-        path: /web/tools/chrome-devtools/evaluate-performance/
       - title: The RAIL Performance Model
         path: /web/tools/chrome-devtools/evaluate-performance/rail
       - title: How to Use the Timeline Tool
@@ -107,10 +97,8 @@ toc:
         path: /web/tools/chrome-devtools/rendering-tools/js-execution
       - title: Diagnose Forced Synchronous Layouts
         path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
-    - title: Page Load Performance
+    - title: Measure Network Performance
       section:
-      - title: Overview
-        path: /web/tools/chrome-devtools/network-performance/
       - title: Measure Resource Loading Times
         path: /web/tools/chrome-devtools/network-performance/resource-loading
       - title: Understand Resource Timing
