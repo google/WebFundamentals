@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 學習如何在您的應用程式的兩個檢視之間執行動畫處理。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-08-08 #}
 

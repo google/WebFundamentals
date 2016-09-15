@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 為您的專案選擇適當的緩動，無論是緩入、緩出或兩者。 也許甚至帶點彈性，以求趣味效果！
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 

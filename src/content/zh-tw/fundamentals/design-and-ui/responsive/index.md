@@ -1,14 +1,13 @@
-roject_path: /web/_project.yaml
+project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 大多數的網站並未針對多裝置體驗進行最佳化。快來瞭解基礎知識，讓您的網站適用於行動裝置、桌上型電腦或任何附有螢幕的裝置。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 回應式網頁設計基礎 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 透過行動裝置上網的使用者數量正以難以想像的速度暴增，但是大多數的網站並未針對行動裝置進行最佳化。礙於行動裝置的螢幕大小，開發人員必須針對行動裝置螢幕上的內容另行編排。

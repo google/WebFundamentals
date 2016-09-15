@@ -8,7 +8,7 @@ description: 裝置動作和定位事件能存取行動裝置中內建的加速�
 
 # 裝置定向 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 裝置動作和定位事件能存取行動裝置中內建的加速計、陀螺儀和羅盤。

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 透過新增和移除元素、變更屬性、類別，或透過動畫來變更 DOM ，都會導致瀏覽器重新計算元素樣式 -- 在許多情況下 -- 為網頁或部分網頁執行版面配置 (或自動重排) 。 這個過程叫做已運算樣式計算。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 手機上很難填寫表單。 最好的表單是輸入量最少的表單。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-04-30 #}
 
@@ -285,7 +284,9 @@ notes:
 使用者可以輕觸標籤或輸入，以將焦點放在輸入元素上。
 
 
-{% include_code src=_code/order.html snippet=labels %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
+</pre>
 
 #### 標籤調整大小和放置
 
@@ -304,12 +305,10 @@ notes:
 
 <input type="text" placeholder="MM-YYYY">
 
-{% highlight html%}
-<input type="text" placeholder="MM-YYYY" ...>
-{% endhighlight %}
+    <input type="text" placeholder="MM-YYYY" ...>
 
 
-{% include shared/remember.liquid title="Remember" list=page.notes.use-placeholders %}
+一旦焦點放在元素中時，預留位置就會消失，因此預留位置不可取代標籤。  預留位置應該當做輔助工具，協助指導使用者使用所需的格式和內容。
 
 #### 使用中繼資料來啟用自動完成
 
@@ -328,8 +327,9 @@ notes:
 例如要提示瀏覽器，它應該以使用者名稱、電子郵件地址和電話號碼自動完成表單時，
 您應該使用：
 
-{% include_code src=_code/order.html snippet=autocomplete %}
-
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
+</pre>
 
 #### 建議輸入 `name` 和 `autocomplete` 屬性值
 
@@ -441,7 +441,7 @@ notes:
   </tbody>
 </table>
 
-{% include shared/remember.liquid title="Remember" list=page.remember.recommend-input %}
+當表單方法為 post 時，自動完成才有效。
 
 #### `autofocus` 屬性
 
@@ -456,9 +456,7 @@ notes:
 因為它可能偷走鍵盤焦點，
 並防止倒退鍵字元用於導覽。
 
-{% highlight html %}
-<input type="text" autofocus ...>
-{% endhighlight %}
+    <input type="text" autofocus ...>
 
 
 ---
@@ -487,8 +485,7 @@ notes:
   即時資料驗證不但能協助保持您的資料乾淨，還有助於改善使用者體驗。  最新瀏覽器具有幾個內建工具，可協助提供即時資料驗證，以防止使用者提交無效的表單。  應使用視覺提示，以表明一張表單是否已正確完成。
 </p>
 
-
-{% include shared/takeaway.liquid list=page.key-takeaways.provide-real-time-validation %}
+即使以用戶端輸入驗證，需記得一件非常重要的事，請驗證伺服器上的資料，以確保您資料的一致性和安全性。
 
 #### 使用這些屬性來驗證輸入
 
@@ -500,9 +497,7 @@ notes:
  (5 位數，有時候是再加一個短破折號與額外的 4 位數字)，我們會設定 `pattern` 如下：
 
 
-{% highlight html %}
-<input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-{% endhighlight %}
+    <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
 
 ###### 常見的規則運算式模式
 
@@ -558,9 +553,7 @@ notes:
 則提交表單之前，欄位必須包含一個值。 例如，要讓郵遞區號成為必要條件，
 我們只要新增必要的屬性：
 
-{% highlight html %}
-<input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-{% endhighlight %}
+    <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
 
 ##### `min`、`max`和`step`屬性
 
@@ -570,9 +563,7 @@ notes:
 最大值為 13，級距為 0.5
 
 
-{% highlight html %}
-<input type="number" min="1" max="13" step="0.5" ...>
-{% endhighlight %}
+    <input type="number" min="1" max="13" step="0.5" ...>
 
 ##### `maxlength` 屬性
 
@@ -581,9 +572,7 @@ notes:
  例如，如果您想要限制檔案名稱為最多 12 個字元之內，
 您可以使用以下。
 
-{% highlight html %}
-<input type="text" id="83filename" maxlength="12" ...>
-{% endhighlight %}
+    <input type="text" id="83filename" maxlength="12" ...>
 
 ##### `minlength` 屬性
 
@@ -592,9 +581,7 @@ notes:
  例如，如果您想要指定檔案名稱為至少需要 8 個字元時，
 您可以使用以下。
 
-{% highlight html %}
-<input type="text" id="83filename" minlength="8" ...>
-{% endhighlight %}
+    <input type="text" id="83filename" minlength="8" ...>
 
 ##### `novalidate` 屬性
 
@@ -603,14 +590,12 @@ notes:
 或個別輸入欄位中。 在這種情況下，
 所有虛擬類別與 JavaScript API 將仍然可讓您檢查表單是否通過驗證。
 
-{% highlight html %}
-<form role="form" novalidate>
-  <label for="inpEmail">Email address</label>
-  <input type="email" ...>
-</form>
-{% endhighlight %}
+    <form role="form" novalidate>
+      <label for="inpEmail">Email address</label>
+      <input type="email" ...>
+    </form>
 
-{% include shared/remember.liquid title="Remember" list=page.notes.provide-real-time-validation %}
+即使以用戶端輸入驗證，需記得一件非常重要的事，請驗證伺服器上的資料，以確保您資料的一致性和安全性。
 
 #### 針對更複雜的即時驗證，請使用 JavaScript
 
@@ -659,7 +644,9 @@ notes:
 事件，以驗證這兩個輸入，並設定適當的
 回應。  例如：
 
-{% include_code src=_code/order.html snippet=customvalidation lang=javascript %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
+</pre>
 
 ##### 避免無效表單的表單提交
 
@@ -667,7 +654,9 @@ notes:
 避免使用者提交表單，您應該擷取提交事件，並對表單元素使用 `checkValidity()`
 ，以確定表單是否有效。  例如：
 
-{% include_code src=_code/order.html snippet=preventsubmission lang=javascript %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
+</pre>
 
 #### 即時顯示回饋
 
@@ -717,10 +706,14 @@ HTML5 還導入了數個虛擬類別，
 就會看到無效的樣式。 為了避免這種情況，您可以結合 CSS 與 JavaScript，
 以在使用者造訪該欄位後，僅顯示無效樣式。
 
-{% include_code src=_code/order.html snippet=invalidstyle lang=css %}
-{% include_code src=_code/order.html snippet=initinputs lang=javascript %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" adjust_indentation="auto" %}
+</pre>
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
+</pre>
 
-{% include shared/remember.liquid title="Important" list=page.remember.show-all-errors %}
+您應該向使用者一次性顯示表單上的所有問題，而非一次展示一個問題。
 
 
 

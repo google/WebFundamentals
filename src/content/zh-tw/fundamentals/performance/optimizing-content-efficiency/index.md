@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 每個應用程式所下載的資料數量不斷增加。為了提供卓越的效能，我們需要從小處著手，確保每一個位元組的放送過程最佳化！
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 在預設情況下，CSS 會被視為禁止轉譯的資源，只要 CSSOM 還未建構完成，即使內容已經過處理，瀏覽器也不會進行轉譯。請務必保持 CSS 簡潔、儘快提供 CSS，並使用媒體類型和媒體查詢來解除對轉譯作業的禁止令。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 為儘快完成初次轉譯，我們需要將下列三種變數最佳化：儘可能減少關鍵資源數量、儘可能減少關鍵位元組數以及儘量縮短關鍵路徑的長度。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

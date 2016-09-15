@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 讓你的網頁看起來更加漂亮。
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-05-13 #}
 {# wf_published_on: 2015-09-08 #}
 
@@ -51,11 +50,8 @@ Explore what makes a site responsive and how some common responsive design patte
 
 回應式網頁設計最早是由 [A List Apart 的 Ethan Marcotte](http://alistapart.com/article/responsive-web-design/) 所定義，這項設計可針對使用者的需求和其所使用的裝置做出回應。版面配置會隨著裝置的螢幕大小和功能變動。舉例來說，使用者在手機上會看到以一欄顯示的內容；在平板電腦上則會看到以兩欄顯示的相同內容。
 
-==
+## 設定檢視區 
 
-# 設定檢視區 {: .page-title }
-
-{% include "web/_shared/contributors/TODO.html" %}
 
 
 在針對多種裝置最佳化的網頁中，文件的標題必須包含中繼檢視區元素。中繼檢視區標記可指示瀏覽器如何控制網頁的大小和縮放。
@@ -63,7 +59,7 @@ Explore what makes a site responsive and how some common responsive design patte
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 使用中繼檢視區標記控制瀏覽器檢視區寬度和縮放比例。
 - 納入 <code>width=device-width</code> 即可運用裝置獨立像素配合螢幕寬度。
 - '納入 <code>initial-scale=1</code> 即可在 CSS 像素和裝置獨立像素之間建立 1:1 的關係。'
@@ -109,17 +105,13 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 設定完成後，這些屬性可能會停用使用者縮放檢視區的權限，導致協助工具發生問題。
 
-==
-
-# 依照檢視區大小調整內容 {: .page-title }
-
-{% include "web/_shared/contributors/TODO.html" %}
+## 依照檢視區大小調整內容 
 
 
 使用者習慣在桌上型電腦和行動裝置上垂直捲動網站，如果強迫使用者以水平捲動或縮放的方式瀏覽整個網頁，將會導致不良的使用者體驗。
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 請勿使用大型固定寬度元素。
 - 應避免內容必須依賴特定檢視區寬度才能正常顯示的情況。
 - 使用 CSS 媒體查詢以針對不同大小的螢幕套用不同的樣式。
@@ -147,11 +139,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
   </div>
 </div>
 
-==
-
-# 使用 CSS 媒體查詢提升回應成效 {: .page-title }
-
-{% include "web/_shared/contributors/TODO.html" %}
+## 使用 CSS 媒體查詢提升回應成效 
 
 
 媒體查詢是可套用到 CSS 樣式的簡易篩選器。透過媒體查詢即可輕鬆依據顯示內容的裝置特性 (包括顯示器類型、寬度、高度、方向，甚至是解析度) 變更樣式。
@@ -159,7 +147,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 媒體查詢可用來依據裝置特性套用樣式。
 - 使用 <code>min-width</code> (而不是 <code>min-device-width</code>) 以確保獲得最通用的體驗。
 - 針對元素使用相對大小，避免版面走樣。
@@ -184,7 +172,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 媒體查詢的邏輯並不是互相排斥的，而且對於任何符合條件的篩選器，查詢到的 CSS 區塊都會使用標準的 CSS 運算順序套用。
 
-## 根據檢視區大小套用媒體查詢
+### 根據檢視區大小套用媒體查詢
 
 媒體查詢可讓我們建立回應式的體驗，也就是針對各種大小的螢幕套用特定的樣式。媒體查詢的語法可讓我們建立依據裝置特性套用的規則。
 
@@ -251,7 +239,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 * 當瀏覽器<b>高度大於寬度</b>，將會套用 `portrait.css`。
 
 
-##`min-device-width` 注意事項
+###`min-device-width` 注意事項
 
 您也可以依據 `*-device-width` 建立查詢 (但我們**非常不建議**這麼做)。
 
@@ -259,7 +247,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 此外，使用 `*-device-width` 可以防止內容在允許變更視窗大小的桌上型電腦或其他裝置上隨之調整，因為查詢是依據實際的裝置大小，而不是瀏覽器視窗的大小。
 
-## 使用相對單元
+### 使用相對單元
 
 不同於固定寬度版面配置，回應式網頁設計背後的主要概念著重於流暢度和完美比例。使用相對單位進行評估，有助於簡化版面配置並防止意外建立超過檢視區大小的元件。
 
@@ -270,18 +258,18 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
     <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
     <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
+    div.fullWidth {
+      width: 100%;
+    }
   </div>
 </div>
 
