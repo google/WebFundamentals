@@ -41,7 +41,6 @@ landing_page:
               <a class="link"><header></header></a>
               <article class="entry-content" data-truncate="50w"></article>
               <div>
-                By <span class="vcard author" rel="author"></span>,
                 <a class="link"><time class="updated published"></time></a>
               </div>
             </article>
@@ -52,7 +51,7 @@ landing_page:
   - heading: Ways to Enhance Your Site (aka the Hot Stuff)
     items:
 
-    - heading: Progressive Web Apps
+    - heading: Build a Progressive Web App
       description: >
         What is a Progressive Web App and what do you need to know to get
         started building one? In this step-by-step guide, you'll build your
@@ -63,7 +62,7 @@ landing_page:
       - label: Get Started
         path: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
 
-    - heading: Reliable and Instant Loading
+    - heading: Make Your Site Instant and Reliable
       description: >
         Service workers are a programmable proxy sitting between the network
         and the browser. Using a service worker, you get to decide what gets
@@ -73,7 +72,7 @@ landing_page:
       - label: The Offline Cookbook
         path: /web/fundamentals/instant-and-offline/offline-cookbook/
 
-    - heading: Add to Home Screen
+    - heading: Enable Add to Home Screen
       description: >
         App install banners make it easy for users to add your app to their
         home screen with a single click, and is an indication to the user that
@@ -101,6 +100,12 @@ landing_page:
   - columns:
     - items:
       - icon:
+          icon_name: whatshot
+        path: /web/fundamentals/getting-started/
+        heading: Getting Started
+        description: New to web development, or an old pro? We've got resources for both.
+
+      - icon:
           icon_name: trending_up
         path: /web/fundamentals/performance/
         heading: "Performance"
@@ -118,14 +123,20 @@ landing_page:
         heading: "Security & Identity"
         description: "Know who your users are and keep their information safe."
 
+      # - icon:
+      #     icon_name: accessibility
+      #   path: /web/fundamentals/accessibility/
+      #   heading: "Accessibility"
+      #   description: "Make your site accessible to everone."
+
+
+    - items:
       - icon:
           icon_name: web
         path: /web/fundamentals/design-and-ui/
         heading: "Design & UI"
         description: "Make your projects look great and interact beautifully."
 
-
-    - items:
       - icon:
           icon_name: group_add
         path: /web/fundamentals/engage-and-retain/
@@ -143,9 +154,3 @@ landing_page:
         path: /web/fundamentals/native-hardware/
         heading: "Accessing Native Hardware"
         description: "Access native device hardware to level-up your experience."
-
-      - icon:
-          icon_name: accessibility
-        path: /web/fundamentals/accessibility/
-        heading: "Accessibility"
-        description: "Make your site accessible to everone."
