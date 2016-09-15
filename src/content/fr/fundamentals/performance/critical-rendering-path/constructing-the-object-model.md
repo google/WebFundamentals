@@ -2,18 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Avant que le navigateur puisse afficher le contenu sur l'écran, les arborescences DOM et CSSOM doivent être créées. Nous devons donc nous assurer que le code HTML et CSS est transmis au navigateur le plus rapidement possible.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Construire le modèle d'objet {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
 Avant que le navigateur puisse afficher la page, les arborescences DOM et CSSOM doivent être créées. Nous devons donc nous assurer que le code HTML et CSS est transmis au navigateur le plus rapidement possible.
-
-
 
 ## TL;DR {: .hide-from-toc }
 - Octets → caractères → jetons → nœuds → modèle d'objet.
@@ -24,7 +19,6 @@ Avant que le navigateur puisse afficher la page, les arborescences DOM et CSSOM 
 
 ## Modèle d'objet de document (DOM)
 
-{% include fundamentals/udacity_player.liquid title="Learn about DOM construction" link="" videos="%5B%7B%22id%22%3A%20%22qjEyIpm6D_Q%22%7D%2C%20%7B%22id%22%3A%22jw4tVn7CRcI%22%7D%2C%20%7B%22id%22%3A%20%22oJQf6OGzVWs%22%2C%20%22autoPause%22%3A%20true%7D%2C%20%7B%22id%22%3A%22tJvAsE6UwoQ%22%2C%20%22autoPause%22%3A%20true%7D%5D" %}
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}

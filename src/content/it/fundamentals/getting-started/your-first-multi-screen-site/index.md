@@ -120,7 +120,7 @@ Rispettando le best practice puoi integrare facilmente i video nel tuo sito:
 I siti privi di immagini sono poco attraenti. Esistono due tipi di immagini:
 
 * Immagini di contenuto, che vengono inserite nel documento per fornire con informazioni aggiuntive.
-* Immagini di stile, per abbellire l'aspetto del sito spesso attraverso immagini di sfondo, pattern e gradienti. Affronteremo questo argomento nel [prossimo articolo]({{page.nextPage.relative_url}}).
+* Immagini di stile, per abbellire l'aspetto del sito spesso attraverso immagini di sfondo, pattern e gradienti. Affronteremo questo argomento nel [prossimo articolo](#).
 
 La sezione Immagini della pagina è una raccolta di immagini di contenuto
 
@@ -182,7 +182,7 @@ I contenuti sono l'aspetto più importante di ogni sito, ma occorreva prima disp
 È possibile accedere al Web con numerosi dispositivi che spaziano dai telefoni ai televisori e con dimensioni dello schermo molto diverse fra loro. Ciascun dispositivo offre vantaggi e limiti. Quale web developer devi supportare tutti i tipi di dispositivo.
 
 
-Stiamo creando un sito adatto ai diversi formati dello schermo e tipi di dispositivo. Nell'[articolo precedente]({{page.previousPage.relative_url}}) abbiamo assemblato la Information Architecture della pagina e creato una struttura di base.
+Stiamo creando un sito adatto ai diversi formati dello schermo e tipi di dispositivo. Nell'[articolo precedente](#) abbiamo assemblato la Information Architecture della pagina e creato una struttura di base.
 In questa guida trasformeremo la struttura di base in una pagina gradevole e reattiva con numerosi formati dello schermo.
 
 <div class="mdl-grid">
@@ -283,7 +283,7 @@ La qualità visiva del progetto inizia a diminuire usando circa 600 pixel di lar
   </p>
 </video>
 
-600 pixel sono perfetti per creare il nostro primo breakpoint grazie a uno spazio sufficiente per riposizionare gli elementi e adattarli al meglio allo schermo. A tale scopo, utilizziamo la tecnologia [media query]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+600 pixel sono perfetti per creare il nostro primo breakpoint grazie a uno spazio sufficiente per riposizionare gli elementi e adattarli al meglio allo schermo. A tale scopo, utilizziamo la tecnologia [media query](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {
@@ -315,7 +315,9 @@ A tale scopo, occorre limitare la larghezza e centrare gli elementi. Occorre cre
 
 Il contenitore sarà un semplice `div` nel seguente modulo:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

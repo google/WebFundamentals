@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Une fois que nous avons éliminé toutes les ressources inutiles, l'étape suivante consiste à réduire la taille totale des ressources restantes que le navigateur doit télécharger, c'est-à-dire les compresser en appliquant des algorithmes (GZip) de compression spécifiques au type de contenu et génériques.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 

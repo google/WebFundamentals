@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Afin de fournir un premier affichage le plus rapidement possible, nous devons optimiser trois variables : réduire le nombre de ressources critiques, réduire le nombre d'octets critiques et réduire la longueur du chemin critique.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

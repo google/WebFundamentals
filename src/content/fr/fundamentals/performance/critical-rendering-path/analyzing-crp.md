@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Identifier et résoudre les problèmes de chemin critique du rendu nécessite une bonne connaissance des pièges habituels. Nous allons étudier la question sous un angle pratique pour en tirer les modèles de performance courants qui vous permettront d'optimiser vos pages.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

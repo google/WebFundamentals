@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Vous ne pouvez pas optimiser ce que vous ne pouvez pas mesurer. Heureusement, l'API Navigation Timing offre tous les outils nécessaires pour mesurer chaque étape du chemin critique du rendu.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -41,8 +40,6 @@ La spécification du modèle HTML dicte les conditions spécifiques pour chaque 
 * **domContentLoaded** indique généralement quand [les modèles DOM et CSSOM sont prêts tous les deux](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
     * Si aucun analyseur ne bloque le JavaScript, alors _DOMContentLoaded_ est déclenché immédiatement après _domInteractive_.
 * **domComplete** indique quand la page et toutes ses sous-ressources sont prêtes.
-
-^
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full"   adjust_indentation="auto" %}

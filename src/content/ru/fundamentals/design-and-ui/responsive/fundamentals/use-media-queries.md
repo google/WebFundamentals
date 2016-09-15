@@ -29,7 +29,7 @@ description: Большинство интернет-ресурсов не оп�
     <link rel="stylesheet" href="print.css" media="print">
     
 
-Кроме использования атрибут media в ссылке на таблицу стилей существует ещё два способа применить медиазапросы @media и @import, которые можно встроить в файл CSS:  Приоритет отдается первым двум методам, более эффективным, чем синтаксис @import (см. [Избегайте правила @import]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
+Кроме использования атрибут media в ссылке на таблицу стилей существует ещё два способа применить медиазапросы @media и @import, которые можно встроить в файл CSS:  Приоритет отдается первым двум методам, более эффективным, чем синтаксис @import (см. [Избегайте правила @import](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations)).
 
 
     @media print {
@@ -98,7 +98,7 @@ description: Большинство интернет-ресурсов не оп�
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * При ширине браузера от <b>0 пикс.</b> до <b>640 пикс.</b> применяется max-640px.css.
@@ -124,23 +124,21 @@ description: Большинство интернет-ресурсов не оп�
 
 Кроме того, использование относительных единиц позволяет браузерам отображать контент, исходя из пользовательского масштаба. Это значит, что горизонтальная панель прокрутки на странице не понадобится.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
+<span class="compare-worse">Not recommended</span> — fixed width
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+
 
 
 

@@ -106,7 +106,7 @@ Add a marker in the gutter wherever there is a change made to a file.
 
 ### Gutter Color
 
-**Note:** This is only available in Sublime Text 3
+Note: This is only available in Sublime Text 3
 
 Gutter Color shows you a small color sample next to your CSS.
 

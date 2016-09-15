@@ -362,7 +362,7 @@ iPad 版 Safari 以內嵌模式播放影片：
 
 如要瞭解這項操作的實際運作情況，請觀看<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">示範</a>。
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 

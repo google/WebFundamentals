@@ -120,7 +120,7 @@ Aby bez problemów umieścić film na stronie, postępuj zgodnie ze sprawdzonymi
 Witryny pozbawione grafiki mogą trochę nudzić. Na stronach występują dwa typy obrazów:
 
 *  Obrazy treści &ndash; są częścią dokumentu i zawierają dodatkowe informacje związane z jego treścią.
-*  Obrazy stylistyczne &ndash; poprawiają wygląd strony. Należą do nich obrazy tła, wzory i gradienty. Omówimy je w [następnym artykule]({{page.nextPage.relative_url}}).
+*  Obrazy stylistyczne &ndash; poprawiają wygląd strony. Należą do nich obrazy tła, wzory i gradienty. Omówimy je w [następnym artykule](#).
 
 Sekcja z obrazami na naszej stronie to kolekcja obrazów treści.
 
@@ -182,7 +182,7 @@ Treści to najważniejszy element każdej witryny. Po nich należy opracować w�
 Internet jest dostępny na szerokiej gamie urządzeń &ndash; od telefonów z małymi ekranami aż po ogromne telewizory. Każde urządzenie ma własne, unikalne zalety i ograniczenia. Jako programista witryn internetowych musisz postarać się, by działały one na wszystkich rodzajach urządzeń.
 
 
-Tworzymy witrynę, która działa na ekranach o różnym rozmiarze i wielu rodzajach urządzeń. W [poprzednim artykule]({{page.previousPage.relative_url}}) opracowaliśmy architekturę informacji na stronie i przygotowaliśmy podstawową strukturę.
+Tworzymy witrynę, która działa na ekranach o różnym rozmiarze i wielu rodzajach urządzeń. W [poprzednim artykule](#) opracowaliśmy architekturę informacji na stronie i przygotowaliśmy podstawową strukturę.
 W tym przewodniku przekształcimy naszą podstawową strukturę i treść w atrakcyjną stronę, która działa elastycznie na ekranach rozmaitej wielkości.
 
 <div class="mdl-grid">
@@ -283,7 +283,7 @@ Projekt zaczyna wyglądać źle przy szerokości około 600&nbsp;pikseli. W nasz
   </p>
 </video>
 
-600&nbsp;pikseli to dobre miejsce na pierwszy punkt graniczny, który pozwala nam zmienić położenie elementów, by lepiej pasowały do ekranu. Możemy do tego użyć technologii nazywanej [zapytaniami o media]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+600&nbsp;pikseli to dobre miejsce na pierwszy punkt graniczny, który pozwala nam zmienić położenie elementów, by lepiej pasowały do ekranu. Możemy do tego użyć technologii nazywanej [zapytaniami o media](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {
@@ -316,7 +316,9 @@ auto`. Dzięki temu nawet na większym ekranie treści pozostaną wyśrodkowane,
 
 Kontenerem będzie prosty element "div" w tej postaci:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

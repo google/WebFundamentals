@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Optimisation du chemin critique du rendu en affichant en priorité le contenu associé à la première action que l'utilisateur souhaite effectuer sur une page.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

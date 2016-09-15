@@ -359,7 +359,7 @@ Auf Geräten, die die Fullscreen-API unterstützen, sollten Sie die Verwendung v
 
 In dieser <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">Demo</a> erfahren Sie, wie das Ganze in der Praxis aussieht.
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 

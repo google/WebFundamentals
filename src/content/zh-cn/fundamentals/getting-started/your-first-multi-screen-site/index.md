@@ -121,7 +121,7 @@ Note: 样式很快就能看到
 一个没有图片的站点会有些无趣。有两类图片：
 
 *  内容图片 &mdash; 内联在文档中，用于传达内容的额外信息。
-*  样式图片 &mdash; 用于点缀站点，让站点更好看的图片；通常是背景图片，图案和渐变。我们将在[下一节]({{page.nextPage.relative_url}})聊到。
+*  样式图片 &mdash; 用于点缀站点，让站点更好看的图片；通常是背景图片，图案和渐变。我们将在[下一节](#)聊到。
 
 我们的页面的图片分块是一些内容图片。
 
@@ -185,7 +185,7 @@ Translated By:
 web 可以被各种设备访问，从小屏幕手机到大屏幕电视。每个设备都有它独有的优势，约束亦然。作为一个 web 开发者，人们期望你能支持各类设备。
 
 
-我们正在创建一个多种设备屏幕大小、多种屏幕类型上均可运行良好的站点。在[上一节]({{page.previousPage.relative_url}})，我们制订了页面信息架构，并创建一个基本结构。在这个手册里，我们将带着结构和内容，将其变成一个漂亮的页面，在各种屏幕大小上均能自在适应。
+我们正在创建一个多种设备屏幕大小、多种屏幕类型上均可运行良好的站点。在[上一节](#)，我们制订了页面信息架构，并创建一个基本结构。在这个手册里，我们将带着结构和内容，将其变成一个漂亮的页面，在各种屏幕大小上均能自在适应。
 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6--col">
@@ -280,7 +280,7 @@ viewport 放在文档的头部，只需要声明一次。
   </p>
 </video>
 
-600px 看起来是创建我们第一个断点的好地方，它给了我们空间，来重新定位元素，使它们更好地适应屏幕。我们通过[媒体查询]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)技术来达到目的：
+600px 看起来是创建我们第一个断点的好地方，它给了我们空间，来重新定位元素，使它们更好地适应屏幕。我们通过[媒体查询](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)技术来达到目的：
 
 
     @media (min-width: 600px) {
@@ -312,7 +312,9 @@ Note: 你不需要一次移动所有元素，可以按需要做小的调整。
 
 包含块是以下形式的一个简单 `div`：
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

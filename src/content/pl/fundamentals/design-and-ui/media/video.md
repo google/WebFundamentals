@@ -361,7 +361,7 @@ Na urządzeniach, które obsługują interfejs API Fullscreen, możesz użyć ob
 
 Aby zobaczyć, jak to działa, skorzystaj ze <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">strony demonstracyjnej</a>.
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 

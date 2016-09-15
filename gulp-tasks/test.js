@@ -12,28 +12,18 @@ var TEST_ROOT = 'src/content/';
 var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md', '!**/tags/*', '!**/codelabs/*/*'];
 var MAX_DESCRIPTION_LENGTH = 475;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
-// var ERROR_STRINGS = [
-//   '{% include_code',
-//   '{% link_sample',
-//   '{% highlight',
-//   '{{',
-//   '{% include "web/_shared/contributors/TODO.html" %}'
-// ];
-// var WARNING_STRINGS = [
-//   'mdl-grid',
-//   'mdl-cell',
-//   'mdl-data-table',
-//   'mdl-js-data-table',
-//   '<!-- TODO: Verify note type! -->',
-//   '<!-- TODO: Verify Udacity course fits here -->'
-// ];
+
+//quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1
+
 var WARNING_STRINGS = [
   {label: 'mdl-grid', regEx: /mdl-grid/},
   {label: 'mdl-cell', regEx: /mdl-cell/},
   {label: 'mdl-data-table', regEx: /mdl-data-table/},
   {label: 'mdl-js-data-table', regEx: /mdl-js-data-table/},
   {label: 'TODO: Verify note type!', regEx: /<!-- TODO: Verify note type! -->/},
-  {label: 'TODO: Verify Udacity', regEx: /<!-- TODO: Verify Udacity course fits here -->/}
+  {label: 'TODO: Verify Udacity', regEx: /<!-- TODO: Verify Udacity course fits here -->/},
+  {label: 'quote__content', regEx: /quote__content/},
+  {label: 'g-*--push|pull-x', regEx: /g-(wide|medium)--(push|pull)-\d/}
 ];
 var ERROR_STRINGS = [
   {label: 'Possible template tag ({{)', regEx: /{{/},

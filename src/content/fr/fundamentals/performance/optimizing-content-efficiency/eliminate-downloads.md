@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La ressource la plus rapide et la mieux optimisée est une ressource qui n'est pas envoyée. Avez-vous audité vos ressources récemment ? Vous devez le faire régulièrement pour vous assurer que chaque ressource permet d'offrir une meilleure expérience à l'utilisateur.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

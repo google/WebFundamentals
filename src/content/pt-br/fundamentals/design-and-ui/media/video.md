@@ -362,7 +362,7 @@ Nos dispositivos compatíveis com a API de tela cheia, considere o uso de imagen
 
 Para ver isto em ação, confira a <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">demonstração</a>.
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 

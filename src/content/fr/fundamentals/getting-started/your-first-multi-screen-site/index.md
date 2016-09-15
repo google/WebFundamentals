@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Le Web est accessible à un très large éventail d'appareils, depuis les téléphones équipés de petits écrans jusqu'aux téléviseurs au format XXL. Découvrez comment créer un site qui fonctionne parfaitement sur tous ces appareils.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -51,10 +50,10 @@ Nous avons identifié nos besoins :
 
 Nous vous proposons également une disposition et une architecture d'information rudimentaires pour les fenêtres d'affichage larges et étroites.
 
-<div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="Architecture d'information pour les fenêtres d'affichage étroites">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="Architecture d'information pour les fenêtres d'affichage larges">
-</div>
+<img class="attempt-left" src="images/narrowviewport.png" alt="Architecture d'information pour les fenêtres d'affichage étroites">
+<img  class="attempt-right" src="images/wideviewport.png" alt="Architecture d'information pour les fenêtres d'affichage larges">
+<div class="clearfix"></div>
+
 
 Une conversion peut être effectuée facilement dans les sections rudimentaires d'une page schématique que nous utiliserons pour le reste de ce projet.
 
@@ -120,7 +119,7 @@ L'application des bonnes pratiques vous permet d'intégrer aisément du contenu 
 Un site sans images peut être pour le moins ennuyeux. Il existe deux types d'images :
 
 * Images de contenu : il s'agit d'images intégrées au document, utilisées pour véhiculer des informations supplémentaires sur le contenu.
-* Images stylistiques : images utilisées pour embellir le site. Il s'agit généralement d'images d'arrière-plan, de motifs et de dégradés. Ces images seront traitées dans l'[article suivant]({{page.nextPage.relative_url}}).
+* Images stylistiques : images utilisées pour embellir le site. Il s'agit généralement d'images d'arrière-plan, de motifs et de dégradés. Ces images seront traitées dans l'[article suivant](#).
 
 La section 'Images' de notre page est un ensemble d'images de contenu.
 
@@ -162,10 +161,9 @@ Notre site comportera simplement des liens vers les conditions d'utilisation, un
 
 Nous avons créé la structure du site et identifié tous les principaux éléments structuraux. Nous nous sommes également assurés que tout le contenu pertinent était prêt et disponible pour satisfaire nos besoins.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="Content">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+<img class="attempt-left" src="images/content.png" alt="Content">
+<img  class="attempt-right" src="images/narrowsite.png" alt="">
+
 
 Comme vous pouvez le constater, la page n'a pas fière allure. Ne vous inquiétez pas, c'est voulu ! 
 Le contenu est l'élément le plus important d'un site, et nous devions nous assurer que nous disposions d'une densité et d'une architecture d'information robuste. Ce guide nous a donné un excellent point de départ. Dans le guide suivant, nous nous chargerons du style de contre contenu.
@@ -182,19 +180,17 @@ Le contenu est l'élément le plus important d'un site, et nous devions nous ass
 Le Web est accessible à un très large éventail d'appareils, depuis les téléphones équipés de petits écrans jusqu'aux téléviseurs au format XXL. Chaque appareil présente ses propres avantages et contraintes. En tant que développeur Web, vous êtes censé accepter toutes les gammes d'appareils.
 
 
-Le site que nous développons sera compatible avec plusieurs types d'appareil et tailles d'écran. Dans l'[article précédent]({{page.previousPage.relative_url}}), nous avons réalisé l'architecture d'information de la page et créé une structure de base.
+Le site que nous développons sera compatible avec plusieurs types d'appareil et tailles d'écran. Dans l'[article précédent](#), nous avons réalisé l'architecture d'information de la page et créé une structure de base.
 Dans ce guide, nous allons utiliser notre structure de base avec du contenu et la transformer en une superbe page capable de s'adapter à un large éventail de formats d'écran.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Contenu">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenu et structure </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Site définitif </a> </figcaption>
-  </figure>
-</div>
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="Contenu">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenu et structure </a> </figcaption>
+</figure>
+<figure class="attempt-left">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Site définitif </a> </figcaption>
+</figure>
 
 Conformément au principe de développement Web Mobile First, nous allons commencer par une fenêtre d'affichage étroite (semblable à celle d'un téléphone mobile) et nous concentrer sur ce format.
 Nous évoluerons ensuite vers des appareils de plus grande taille.
@@ -251,9 +247,8 @@ Dans le guide précédent, nous avons ajouté des images dites de 'contenu'. Ell
 
 Une image de titre destinée à la partie au-dessus de la ligne de flottaison constitue un excellent exemple. Elle est souvent utilisée pour inciter les utilisateurs à en savoir plus sur le produit.
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="Site après conception">
-</div>
+<img  src="images/narrowsite.png" alt="Site après conception">
+
 
 L'intégration de ces images peut s'avérer relativement simple. Dans le cas présent, il s'agira de l'arrière-plan de l'en-tête et l'image sera appliquée au moyen d'une feuille de style CSS simple.
 
@@ -283,7 +278,7 @@ La conception commence à se dégrader visuellement à partir d'une largeur appr
   </p>
 </video>
 
-'600 pixels' semble être la valeur idéale pour créer notre premier point de rupture. Cette valeur nous donne l'étendue nécessaire pour repositionner les éléments afin de mieux les adapter à l'écran. Pour ce faire, nous allons utiliser une technologie appelée [Requêtes média]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+'600 pixels' semble être la valeur idéale pour créer notre premier point de rupture. Cette valeur nous donne l'étendue nécessaire pour repositionner les éléments afin de mieux les adapter à l'écran. Pour ce faire, nous allons utiliser une technologie appelée [Requêtes média](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {
@@ -315,7 +310,9 @@ Pour parvenir à ce résultat, nous devons limiter la largeur et centrer les él
 
 Le conteneur sera un simple élément `div` sous la forme suivante :
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}
@@ -431,7 +428,7 @@ Cela permet de créer une séparation claire et cohérente.
 
 ### Récapitulation
 
-**FÉLICITATIONS.** Au moment où vous lirez ces lignes, vous aurez terminé la création de votre premier exemple de page de destination de produit compatible avec un large éventail d'appareils, de formats et de tailles d'écran.
+Note: Au moment où vous lirez ces lignes, vous aurez terminé la création de votre premier exemple de page de destination de produit compatible avec un large éventail d'appareils, de formats et de tailles d'écran.
 
 Pour prendre un bon départ, suivez donc ces quelques consignes :
 

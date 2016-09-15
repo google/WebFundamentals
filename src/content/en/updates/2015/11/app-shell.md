@@ -169,12 +169,12 @@ Understandably, your server-side setup may drastically differ from the one we us
 * Endpoints are defined for three parts of your application: the user facing URL’s (index/wildcard), the application shell (service worker) and your HTML partials.
 
 * Each endpoint has a controller that pulls in a [handlebars](https://www.npmjs.com/package/handlebars-layouts) layout which in turn can pull in handlebar partials and views. Simply put, partials are views that are chunks of HTML that are copied into the final page. 
-**Note:** JavaScript frameworks that do more advanced data synchronization are often way easier to port to an Application Shell architecture. They tend to use data-binding and sync rather than partials.
+Note: JavaScript frameworks that do more advanced data synchronization are often way easier to port to an Application Shell architecture. They tend to use data-binding and sync rather than partials.
 
 * The user is initially served a static page with content. This page registers a service worker, if it’s supported, which caches the application shell and everything it depends on (CSS, JS etc).
 
 * The app shell will then act as a single page web app, using javascript to XHR in the content for a specific URL. The XHR calls are made to a /partials* endpoint which returns the small chunk of HTML, CSS and JS needed to display that content. 
-**Note:** There are many ways to approach this and XHR is just one of them. Some applications will inline their data (maybe using JSON) for initial render and therefore aren’t "static" in the flattened HTML sense.
+Note: There are many ways to approach this and XHR is just one of them. Some applications will inline their data (maybe using JSON) for initial render and therefore aren’t "static" in the flattened HTML sense.
 
 * Browsers **without** service worker support should always be served a fall-back experience. In our demo, we fall back to basic static server-side rendering, but this is only one of many options. The service worker aspect provides you with new opportunities for enhancing the performance of your Single-page Application style app using the cached application shell.
 
@@ -190,7 +190,7 @@ One question that arises is how to handle file versioning and updating. This is 
 
 For the application shell itself, a cache-first approach should be taken for your service worker setup. If you aren’t caching the application shell, you haven’t properly adopted the architecture.
 
-**Note:** The application shell sample does not (at the time of writing) use file versioning for the assets referenced in the static render, often used for cache busting. **We hope to add this in the near future.** The service worker is otherwise versioned by sw-precache (covered in the [Tooling](#tooling) section).
+Note: The application shell sample does not (at the time of writing) use file versioning for the assets referenced in the static render, often used for cache busting. **We hope to add this in the near future.** The service worker is otherwise versioned by sw-precache (covered in the [Tooling](#tooling) section).
 
 ### Tooling
 

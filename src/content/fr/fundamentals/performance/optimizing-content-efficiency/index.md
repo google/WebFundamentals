@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La quantité de données téléchargée par chaque application ne cesse d'augmenter. Pour offrir d'excellentes performances, nous devons optimiser la livraison de chaque octet !
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

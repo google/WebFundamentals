@@ -1,15 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: La typographie est essentielle pour la qualité du design, de la marque, de la lisibilité et de l'accessibilité. Les polices Web offrent tout ceci et plus encore : elles permettent de sélectionner le texte, de le rechercher, de l'agrandir, et de le rendre adapté aux appareils avec un ppp élevé, offrant un affichage du texte cohérent et net quelles que soient la taille de l'écran et la résolution. Les polices Web sont essentielles pour obtenir un design, un UX et des performances de qualité.
+description: La typographie est essentielle pour la qualité du design, de la marque, de la lisibilité et de l'accessibilité. Les polices Web offrent tout ceci et plus encore : elles permettent de sélectionner le texte, de le rechercher, de l'agrandir, et de le rendre adapté aux appareils avec un ppp élevé, offrant un affichage du texte cohérent et net quelles que soient la taille de l'écran et la résolution. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Optimisation des polices Web {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
 
 
 La typographie est essentielle pour la qualité du design, de la marque, de la lisibilité et de l'accessibilité. Les polices Web offrent tout ceci et plus encore : elles permettent de sélectionner le texte, de le rechercher, de l'agrandir, et de le rendre adapté aux appareils avec un ppp élevé, offrant un affichage du texte cohérent et net quelles que soient la taille de l'écran et la résolution. Les polices Web sont essentielles pour obtenir un design, un UX et des performances de qualité.
@@ -43,7 +41,7 @@ Alors que nous reste-t-il ? Il n'existe par un format unique qui fonctionne sur 
 * Diffuser une variante WOFF pour la majorité des navigateurs.
 * Diffuser une variante TTF pour les anciens navigateurs Android (avant 4.4).
 * Diffuser une variante EOT pour les anciens navigateurs IE (avant IE9).
-^
+
 
 Note: Techniquement, il existe également le <a href='http://caniuse.com/svg-fonts'>conteneur de police SVG</a>, mais il n'a jamais été compatible avec IE ni Firefox, et est maintenant obsolète dans Chrome. Son utilité est donc limitée, et nous l'omettons volontairement dans ce guide.
 
@@ -63,7 +61,7 @@ Note: Pensez à utiliser la <a href='http://en.wikipedia.org/wiki/Zopfli'>compre
 
 ## TL;DR {: .hide-from-toc }
 - Utilisez l'algorithme d'optimisation format() pour spécifier plusieurs formats de police
-- 'Définissez des sous-ensembles pour les polices Unicode volumineuses pour améliorer les performances : utilisez les sous-paramètres unicode-range et fournissez un sous-paramètre de rechange manuel pour les navigateurs plus anciens'
+- Définissez des sous-ensembles pour les polices Unicode volumineuses pour améliorer les performances: utilisez les sous-paramètres unicode-range et fournissez un sous-paramètre de rechange manuel pour les navigateurs plus anciens
 - Réduisez le nombre de variantes de police stylistique afin d'améliorer les performances d'affichage de la page et du texte
 
 
@@ -73,36 +71,36 @@ La règle `at-rule` CSS @font-face nous permet de définir l'emplacement d'une r
 
 Chaque déclaration @font-face fournit le nom de la famille de polices, qui joue le rôle de groupe logique de plusieurs déclarations, des [propriétés de police](http://www.w3.org/TR/css3-fonts/#font-prop-desc) telles que le style, le poids et l'étendue, et le [descripteur src](http://www.w3.org/TR/css3-fonts/#src-desc) qui spécifie une liste d'emplacements classés par priorité pour la ressource de la police.
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
+
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 Tout d'abord, notez que les exemples ci-dessus définissent une seule famille _Awesome Font_ avec deux styles (normal et _italic_), chacun indiquant un ensemble de ressources de police différent. Ensuite, chaque descripteur `src` contient une liste de variantes de ressources, classées par priorité et séparées par une virgule : 
 
 * La directive `local()` nous permet de référencer, charger et utiliser les polices installées localement.
 * La directive `url()` nous permet de charger des polices externes, et peuvent contenir un algorithme d'optimisation `format()` facultatif indiquant le format de la police référencée par l'URL fournie.
 
-^
+
 Note: À moins que vous référenciez l'une des polices système par défaut, en pratique il est rare que l'utilisateur l'ait installé localement, en particulier sur les appareils mobiles, où il est concrètement impossible 'd'installer' des polices supplémentaires. En conséquence, vous devez toujours fournir une liste d'emplacements pour les polices externes.
 
 Lorsque le navigateur détermine que la police est nécessaire, il consulte la liste de ressources fournir dans l'ordre indiqué et tente de charger la ressource adaptée. Considérons l'exemple ci-dessus :
@@ -164,11 +162,11 @@ Cela dit, il y a un petit inconvénient avec unicode-range : [il n'est pas compa
 Parce que les anciens navigateurs ne sont pas assez intelligents pour ne sélectionner que les sous-ensembles nécessaires et ne peuvent pas construire une police composite, nous devons revenir à l'ancienne méthode : fournir une seule ressource de police qui contient tous les sous-ensembles nécessaires, et masquer le reste pour le navigateur. Par exemple, si la page n'utilise que des caractères latins, nous pouvons supprimer les autres glyphes et diffuser ce sous-ensemble particulier comme ressource autonome. 
 
 1. **Comment pouvons-nous déterminer quels sous-ensembles sont nécessaires ?** 
-  - Si le navigateur est compatible avec le sous-ensemble unicode-range, le navigateur sélectionne automatiquement le bon sous-ensemble. La page doit simplement fournir les fichiers du sous-ensemble et spécifier les unicode-ranges adaptés dans les règles @font-face.
-  - Si le navigateur n'est pas compatible avec unicode-range, la page doit masquer tous les sous-ensembles inutiles. C'est-à-dire que le développeur doit spécifier les sous-ensembles requis.
+    - Si le navigateur est compatible avec le sous-ensemble unicode-range, le navigateur sélectionne automatiquement le bon sous-ensemble. La page doit simplement fournir les fichiers du sous-ensemble et spécifier les unicode-ranges adaptés dans les règles @font-face.
+    - Si le navigateur n'est pas compatible avec unicode-range, la page doit masquer tous les sous-ensembles inutiles. C'est-à-dire que le développeur doit spécifier les sous-ensembles requis.
 2. **Comment pouvons-nous générer des sous-ensembles de police ?**
-  - Utilisez l'[outil Open Source pyftsubset](https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py#L16) pour créer des sous-ensembles et optimiser vos polices.
-  - Certains services des polices permettent de créer des sous-ensembles manuellement via des paramètres de requête personnalisés, que vous pouvez utiliser pour spécifier manuellement le sous-ensemble requis pour votre page. Consultez la documentation de votre fournisseur de police.
+    - Utilisez l'[outil Open Source pyftsubset](https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py#L16) pour créer des sous-ensembles et optimiser vos polices.
+    - Certains services des polices permettent de créer des sous-ensembles manuellement via des paramètres de requête personnalisés, que vous pouvez utiliser pour spécifier manuellement le sous-ensemble requis pour votre page. Consultez la documentation de votre fournisseur de police.
 
 
 ### Sélection de police et synthèse
@@ -179,13 +177,8 @@ Chaque famille de police est composée de plusieurs variantes stylistiques (norm
 
 Par exemple, le diagramme ci-dessus illustre une famille de polices qui propose trois poids de caractères gras différents : 400 (normal), 700 (gras), and 900 (extra gras). Toutes les autres variantes intermédiaires, indiquées en gris, sont automatiquement mappées à la variante la plus proche par le navigateur. 
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Lorsqu'un poids est spécifié pour lequel il n'existe pas de face, une face avec un poids approchant est utilisée. En général, les poids gras sont mappés à des faces avec des poids plus importants, et les poids légers sont mappés à des faces avec des poids plus légers.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algorithme de correspondance de police CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Lorsqu'un poids est spécifié pour lequel il n'existe pas de face, une face avec un poids approchant est utilisée. En général, les poids gras sont mappés à des faces avec des poids plus importants, et les poids légers sont mappés à des faces avec des poids plus légers.
+> > <a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algorithme de correspondance de police CSS3</a>
 
 Une logique similaire s'applique aux variantes _italic_. Le concepteur de polices contrôle les variantes qu'il produit, et nous contrôlons les variantes que nous utilisons sur la page. Puisque chaque variante est téléchargée séparément, il est conseillé d'en utiliser le moins possible ! Par exemple, nous pouvons définit deux variantes de gras pour notre famille _Awesome Font_ : 
 
@@ -222,13 +215,8 @@ L'exemple ci-dessus déclare que la famille _Awesome Font_ est composée de deux
 
 <img src="images/font-synthesis.png" class="center" alt="Synthèse des polices">
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Les auteurs doivent également être conscients que les approches synthétisées peuvent ne pas être adaptées à des scripts comme le cyrillique, pour lequel les formes en italique ont un aspect très différent. Il est toujours préférable d'utiliser une police italique réelle plutôt que de se fier à une version synthétique.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">Style de police CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Les auteurs doivent également être conscients que les approches synthétisées peuvent ne pas être adaptées à des scripts comme le cyrillique, pour lequel les formes en italique ont un aspect très différent. Il est toujours préférable d'utiliser une police italique réelle plutôt que de se fier à une version synthétique.
+> ><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">Style de police CSS3</a>
 
 Les exemples ci-dessus illustrent la différence entre les résultats des polices réelles et synthétiques pour Open-Sans. Toutes les variantes synthétiques sont générées à partir d'une seule police ayant un poids de 400. Comme vous pouvez le voir, les résultats sont très différents. Les détails de la création des variantes en gras et en italique ne sont pas spécifiés. Par conséquent, les résultats varient en fonction du navigateur, et dépendent également beaucoup de la police.
 
@@ -238,7 +226,7 @@ Note: Pour une meilleure cohérence et de meilleurs résultats visuels, ne vous 
 ## Optimiser le chargement et l'affichage
 
 ## TL;DR {: .hide-from-toc }
-- 'Les demandes de police sont retardées jusqu''à ce que l''arborescence d''affichage soit construite, ce qui a pour conséquence un retard de l''affichage du texte'
+- Les demandes de police sont retardées jusqu'à ce que l'arborescence d'affichage soit construite, ce qui a pour conséquence un retard de l'affichage du texte'
 - L'API Font Loading nous permet de mettre en œuvre des stratégies de chargement et d'affichage des polices personnalisées qui remplacent le chargement de police inactif par défaut
 - L'intégration de police nous permet de remplacer le chargement de police inactif par défaut dans les navigateurs les plus anciens
 

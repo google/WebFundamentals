@@ -131,7 +131,7 @@ Note: 스타일링은 이후에 진행할 것입니다.
 이미지가 없는 사이트는 조금 지루할 수 있습니다. 여기 다음과 같은 두가지 형태의 이미지가 있습니다.
 
 *  콘텐츠 이미지들(Content Images) &mdash; 문서 내에 나열되어 콘텐츠에 대한 추가적인 정보를 전달하기 위해 사용되는 이미지들
-*  스타일 이미지들(Stylistic Image) &mdash; 사이트를 더 멋지게 보이도록 만들기 위해 사용하는 이미지들로써 대개 배경 이미지들, 패턴 및 그레이디언트들입니다. 우리는 이를 [다음 글]({{page.nextPage.relative_url}})에서 이를 다룰 것입니다.
+*  스타일 이미지들(Stylistic Image) &mdash; 사이트를 더 멋지게 보이도록 만들기 위해 사용하는 이미지들로써 대개 배경 이미지들, 패턴 및 그레이디언트들입니다. 우리는 이를 [다음 글](#)에서 이를 다룰 것입니다.
 
 
 우리 페이지에서 이미지 섹션은 콘텐츠 이미지들의 집합입니다.
@@ -197,7 +197,7 @@ Translated By:
 웹은 작은 화면의 전화기부터 커다란 화면의 텔레비전까지 폭넓은 범주의 디바이스에서 접근이 가능합니다. 각 디바이스는 자체적인 장점들과 더불어 단점들을 가지고 있습니다. 웹 개발자로서의 여러분은 모든 범주의 디바이스를 지원하기를 원할 것입니다.
 
 
-현재 여러분은 여러가지 화면 크기들과 형태의 디바이스들에서 동작하는 사이트를 구축하고 있습니다. [이전 글]({{page.previousPage.relative_url}})에서 우리는 페이지의 정보구조를 만들고 기초적인 형태를 생성했습니다. 이 가이드에서 여러분은 콘텐츠를 포함한 기초적인 형태를 가지게 될 것이며 이를 대다수의 화면 크기에 반응하는 아름다운 페이지로 만들어 낼 것입니다.
+현재 여러분은 여러가지 화면 크기들과 형태의 디바이스들에서 동작하는 사이트를 구축하고 있습니다. [이전 글](#)에서 우리는 페이지의 정보구조를 만들고 기초적인 형태를 생성했습니다. 이 가이드에서 여러분은 콘텐츠를 포함한 기초적인 형태를 가지게 될 것이며 이를 대다수의 화면 크기에 반응하는 아름다운 페이지로 만들어 낼 것입니다.
 
 <div class="mdl-grid">
   <figure class="mdl-cell mdl-cell--6--col">
@@ -297,7 +297,7 @@ Translated By:
   </p>
 </video>
 
-화면에 더 잘 맞도록 엘리먼트들의 위치들을 변경하기에는 600px이 유리할 것이므로 첫번째 분할지점(Breakpoint)를 설정하기에 좋은 위치로 보입니다. 이는 [미디어 쿼리(Media Queries)]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)로 불리는 기술을 사용하여 처리할 수 있습니다.
+화면에 더 잘 맞도록 엘리먼트들의 위치들을 변경하기에는 600px이 유리할 것이므로 첫번째 분할지점(Breakpoint)를 설정하기에 좋은 위치로 보입니다. 이는 [미디어 쿼리(Media Queries)](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)로 불리는 기술을 사용하여 처리할 수 있습니다.
 
 
 
@@ -332,7 +332,9 @@ Note: 한번에 모든 엘리먼트들을 이동할 필요는 없으며, 필요�
 
 컨테이너는 다음과 같이 간단한 `div`가 될 것입니다.
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

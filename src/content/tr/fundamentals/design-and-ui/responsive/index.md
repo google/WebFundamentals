@@ -157,7 +157,7 @@ Medya sorgulari, CSS stillerine uygulanabilecek basit filtrelerdir.  Içerigi ol
     <link rel="stylesheet" href="print.css" media="print">
     
 
-Stil sayfasi baglantisinda `media` özelligini kullanmaya ek olarak, bir CSS dosyasina yerlestirilebilecek medya sorgularini uygulamanin iki yolu daha vardir: `@media` ve `@import`.  Performans nedeniyle `@import` sözdizimi yerine ilk iki yöntemden biri önerilir (bkz. [CSS içe aktarmalarindan kaçinma]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
+Stil sayfasi baglantisinda `media` özelligini kullanmaya ek olarak, bir CSS dosyasina yerlestirilebilecek medya sorgularini uygulamanin iki yolu daha vardir: `@media` ve `@import`.  Performans nedeniyle `@import` sözdizimi yerine ilk iki yöntemden biri önerilir (bkz. [CSS içe aktarmalarindan kaçinma](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations)).
 
 
     @media print {
@@ -226,7 +226,7 @@ Birlikte bir örnege bakalim:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Tarayici genisligi <b>0p</b> ile <b>640p</b> arasinda oldugunda, `max-640px.css` uygulanir.
@@ -252,23 +252,21 @@ Duyarli tasarimin arkasindaki önemli bir kavram, sabit genislikli yerlesimlere 
 
 Buna ek olarak, göreli birimlerin kullanilmasi, tarayicilarin sayfaya yatay kaydirma çubuklari eklemesine gerek kalmadan içerigi kullanicilarin zum düzeyine dayali olarak olusturmalarina olanak tanir.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
+<span class="compare-worse">Not recommended</span> — fixed width
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+
 
 
 ## Kesme noktalari nasil seçilir?
@@ -287,7 +285,7 @@ Kesme noktalarini cihaz siniflarina göre tanimlamayi düsünmeniz yararli olabi
 
 Içerigi ilk olarak küçük bir ekran boyutuna sigacak sekilde tasarlayin, daha sonra bir kesme noktasi gerekinceye kadar ekrani genisletin. ·  Bu, kesme noktalarini içerige göre optimize etmenize ve mümkün oldugunca az sayida kesme noktasi olusturmaniza olanak tanir.
 
-Baslangiçta gördügümüz [hava durumu tahmini]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html) örnegi üzerinden çalismaya baslayalim.
+Baslangiçta gördügümüz [hava durumu tahmini](/web/fundamentals/design-and-ui/responsive/) örnegi üzerinden çalismaya baslayalim.
 Ilk adimimiz, tahminin küçük bir ekranda iyi görünmesini saglamak olacak.
 
 <figure>
@@ -307,7 +305,7 @@ Daha sonra, ögeler arasinda çok fazla beyaz bosluk oluncaya ve tahmin kötü g
 600 piksel noktasinda bir kesme noktasi eklemek için iki yeni stil sayfasi olusturun. Bunlarin birini tarayici 600 piksel ve altindayken, digerini de 600 pikselden genis oldugunda kullanacaksiniz.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Son olarak, CSS'yi yeniden yazin.  Bu örnekte, `weather.css` dosyasina yazi tipleri, simgeler, temel konumlandirma ve renkler gibi genel stilleri yerlestirdik.  Daha sonra, küçük ekrana iliskin belirli yerlesimler `weather-small.css` ve genis ekran stilleri `weather-large.css` dosyasina yerlestirilir.
@@ -325,7 +323,7 @@ Yerlesim önemli ölçüde degistiginde ana kesme noktalari seçmeye ek olarak, 
 Küçük ekran yerlesimini optimize ederek baslayalim.  Bu örnekte, görüntü alani genisligi 360 pikselden büyük oldugunda yazi tipini artiralim.  Ikinci olarak, yeterli alan oldugunda yüksek ve düsük sicakliklari ayirabiliriz; böylece, birbirinin üzerinde görüneceklerine ayni satirda görünürler.  Hava durumu simgelerini de biraz genisletelim.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -341,7 +339,7 @@ Küçük ekran yerlesimini optimize ederek baslayalim.  Bu örnekte, görüntü 
 Benzer bir sekilde, tüm ekran genisligini tüketmemesi için genis ekranlarda tahmin panelinin maksimum genisligini sinirlamak en dogru karar olacaktir.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Metni okuma için optimize etme
@@ -361,7 +359,7 @@ Klasik okunabilirlik teorisi, ideal bir sütunun satir basina 70 ile 80 karakter
 Yukaridaki blog yayini örnegine daha ayrintili bir sekilde bakalim.  Küçük ekranlarda, 1em büyüklügündeki Roboto yazi tipi mükemmel bir sekilde satir basina 10 kelime verir, ancak genis ekranlarda bir kesme noktasi gerektirir. Bu durumda, tarayici genisligi 575 pikselden büyükse ideal içerik genisligi 550 piksel olur.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Hiçbir zaman içerigi tam olarak gizlemeyin

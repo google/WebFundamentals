@@ -360,7 +360,7 @@ Op apparaten die de Fullscreen API ondersteunen, kunt u miniatuurafbeeldingen ge
 
 Bekijk de demo <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html"></a> om te zien hoe dit in het echt werkt.
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 

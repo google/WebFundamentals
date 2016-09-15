@@ -157,7 +157,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
     <link rel="stylesheet" href="print.css" media="print">
     
 
-除了在樣式表連結中使用 `media` 屬性以外，您還可透過其他兩種方法套用可嵌入 CSS 檔案的媒體查詢：`@media` 和 `@import`。基於成效考量，建議您優先使用前兩個方法，盡量避免使用 `@import` 語法 (請參閱 [避免 CSS 匯入]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html))。
+除了在樣式表連結中使用 `media` 屬性以外，您還可透過其他兩種方法套用可嵌入 CSS 檔案的媒體查詢：`@media` 和 `@import`。基於成效考量，建議您優先使用前兩個方法，盡量避免使用 `@import` 語法 (請參閱 [避免 CSS 匯入](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations))。
 
 
     @media print {
@@ -226,7 +226,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * 當瀏覽器寬度介於 <b>0px</b> 和 <b>640px</b>，將會套用 `max-640px.css`。
@@ -252,20 +252,18 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 此外，使用相對單位也可讓瀏覽器依據使用者的縮放比例顯示內容，不需在網頁上新增水平捲動軸。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
+<span class="compare-worse">Not recommended</span> — fixed width
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+

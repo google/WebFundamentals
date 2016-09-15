@@ -362,7 +362,7 @@ Tam Ekran API'sini destekleyen cihazlarda, video için yer tutucu olarak küçü
 
 Bunu çalisirken görmek için <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">demoya</a> göz atin.
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 

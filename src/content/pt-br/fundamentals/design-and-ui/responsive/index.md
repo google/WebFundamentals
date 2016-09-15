@@ -154,7 +154,7 @@ Por exemplo, é possível incluir todos os estilos necessários para impressão 
     <link rel="stylesheet" href="print.css" media="print">
     
 
-Além de usar o atributo `media` no link da planilha de estilo, existem duas outras formas de aplicar consultas de mídia que podem ser incorporadas em um arquivo CSS: `@media` e `@import`.  Para fins de desempenho, qualquer um desses dois métodos é mais indicado que a sintaxe `@import` (veja [Evite importações de CSS]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
+Além de usar o atributo `media` no link da planilha de estilo, existem duas outras formas de aplicar consultas de mídia que podem ser incorporadas em um arquivo CSS: `@media` e `@import`.  Para fins de desempenho, qualquer um desses dois métodos é mais indicado que a sintaxe `@import` (veja [Evite importações de CSS](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations)).
 
 
     @media print {
@@ -223,7 +223,7 @@ Vamos analisar um exemplo:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Quando o navegador tiver entre <b>0 px</b> e <b>640 px</b> de largura, o atributo `max-640px.css` será aplicado.
@@ -249,23 +249,21 @@ Por exemplo, ao definir a largura em 100% em um div de nível superior, você ga
 
 Além disso, a utilização de unidades relativas permite aos navegadores processar o conteúdo com base no nível de zoom dos usuários, sem a necessidade de adicionar à página barras de rolagem horizontais.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
+<span class="compare-worse">Not recommended</span> — fixed width
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+
 
 
 ## Como escolher os pontos de quebra 
@@ -284,7 +282,7 @@ Embora possa ser útil pensar nos tipos de dispositivo como base para definir os
 
 Projete o layout do conteúdo para adequar-se inicialmente a uma tela pequena, depois amplie a tela até que seja necessário usar um ponto de quebra.  Com isso, será possível otimizar os pontos de quebra com base no conteúdo e manter o menor número possível de pontos de quebra.
 
-Vamos trabalhar no exemplo que vimos anteriormente, a [previsão do tempo]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html).
+Vamos trabalhar no exemplo que vimos anteriormente, a [previsão do tempo](/web/fundamentals/design-and-ui/responsive/).
 O primeiro passo é fazer com que a previsão seja exibida de forma adequada em uma tela pequena.
 
 <figure>
@@ -304,7 +302,7 @@ Em seguida, redimensione o navegador até que haja muitos espaços em branco ent
 Para inserir um ponto de quebra em 600 pixels, crie duas novas planilhas de estilo, uma para usar quando o navegador tiver 600 px ou menos, outra para quando ele tiver mais de 600 px.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Por fim, configure novamente o código CSS.  Neste exemplo, colocamos os estilos comuns como fontes, ícones, posicionamento básico e cores em `weather.css`.  Os layouts específicos para a tela pequena são colocados em `weather-small.css`, e os estilos definidos para a tela grande são inseridos em `weather-large.css`.
@@ -322,7 +320,7 @@ Além de escolher os principais pontos de quebra quando o layout é alterado de 
 Começaremos otimizando o layout de tela pequena.  Neste caso, aumentaremos a fonte quando a largura da janela de visualização for maior de 360 px.  Em segundo lugar, quando houver espaço suficiente, poderemos separar as previsões de temperatura alta e baixa para que elas fiquem na mesma linha, em vez de uma sobre a outra.  E vamos aumentar levemente os ícones da página.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -338,7 +336,7 @@ Começaremos otimizando o layout de tela pequena.  Neste caso, aumentaremos a fo
 Para telas grandes, é mais indicado definir a largura máxima do painel de previsão para que ele não ocupe toda a largura da tela.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ## Otimize o texto para aumentar a legibilidade
@@ -358,7 +356,7 @@ A teoria clássica da legibilidade sugere que uma coluna ideal deve conter 70 a 
 Vamos analisar em mais detalhes o exemplo de postagem de blog acima.  Em telas pequenas, a fonte Roboto com um em funciona de forma otimizada, formando dez palavras por linha, mas telas maiores exigem um ponto de quebra. Nesse caso, se a largura do navegador for superior a 575 px, a largura ideal para o conteúdo é 550 px.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Nunca esconda totalmente o conteúdo

@@ -120,7 +120,7 @@ Door de best practices te volgen kunt u video gemakkelijk in uw website integrer
 Websites zonder afbeeldingen kunnen saai zijn. Er zijn twee soorten afbeeldingen:
 
 *  Inhoudsafbeeldingen &mdash; afbeeldingen die in het document staan en worden gebruikt om extra informatie over de inhoud weer te geven.
-*  Stilistische afbeeldingen &mdash; afbeeldingen die worden gebruikt om de website mooier te maken. Dit zijn vaak achtergrondafbeeldingen, patronen en kleurovergangen. We bespreken dit in het [volgende artikel]({{page.nextPage.relative_url}}).
+*  Stilistische afbeeldingen &mdash; afbeeldingen die worden gebruikt om de website mooier te maken. Dit zijn vaak achtergrondafbeeldingen, patronen en kleurovergangen. We bespreken dit in het [volgende artikel](#).
 
 Het gedeelte Afbeeldingen in onze pagina is een verzameling van inhoudsafbeeldingen.
 
@@ -182,7 +182,7 @@ Inhoud is het belangrijkste aspect van een website en we moesten ervoor zorgen d
 Internet is toegankelijk op tal van apparaten, van telefoons met kleine schermen tot televisies met grote schermen. Elk apparaat biedt eigen unieke voordelen en beperkingen. Als webontwikkelaar wordt van u verwacht dat u voor alle soorten apparaten ondersteuning kunt bieden.
 
 
-We bouwen een website die werkt op verschillende schermformaten en uiteenlopende apparaten. In het [vorige artikel]({{page.previousPage.relative_url}}) vormden we de informatiearchitectuur van de pagina en maakten we een basisstructuur.
+We bouwen een website die werkt op verschillende schermformaten en uiteenlopende apparaten. In het [vorige artikel](#) vormden we de informatiearchitectuur van de pagina en maakten we een basisstructuur.
 In deze gids toveren we onze basisstructuur met inhoud om tot een mooie pagina die responsief is op een groot aantal schermformaten.
 
 <div class="mdl-grid">
@@ -283,7 +283,7 @@ Het ontwerp ziet er pas slecht uit vanaf een breedte van 600 pixels. In ons voor
   </p>
 </video>
 
-600 pixels blijkt een goede plaats voor ons eerste breekpunt, want het biedt ons het bereik om elementen te verplaatsen zodat ze beter op het scherm passen. We kunnen dit met behulp van de technologie [Mediaquery`s]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+600 pixels blijkt een goede plaats voor ons eerste breekpunt, want het biedt ons het bereik om elementen te verplaatsen zodat ze beter op het scherm passen. We kunnen dit met behulp van de technologie [Mediaquery`s](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {
@@ -316,7 +316,9 @@ auto` toepassen. Hierdoor kan het scherm groter worden maar blijft de inhoud gec
 
 De container is een eenvoudige `div` in het volgende formulier:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

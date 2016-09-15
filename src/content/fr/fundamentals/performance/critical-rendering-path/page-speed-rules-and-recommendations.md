@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Règles PageSpeed Insights en contexte : à quoi vous devez faire attention lorsque vous optimisez le chemin critique du rendu, et pourquoi.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

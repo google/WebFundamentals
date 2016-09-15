@@ -359,7 +359,7 @@ Safari для iPad воспроизводит видео как встроенн
 
 Хотите посмотреть, как это работает? Тогда вам <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">сюда</a>.
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 

@@ -130,7 +130,7 @@ Note: スタイルは後に来る
 画像を使用しないと、やや退屈なサイトになりかねません。画像には次の 2 つの種類があります。
 
 *  コンテンツ画像 &mdash; ドキュメントにインラインで表示され、コンテンツに関する追加情報を伝える画像。
-*  スタイル用画像 &mdash; サイトの外観の向上を目的として使用される画像。多くの場合、背景画像、パターン、グラデーションの画像を指す。スタイル画像については、[次の記事]({{page.nextPage.relative_url}})で説明します。
+*  スタイル用画像 &mdash; サイトの外観の向上を目的として使用される画像。多くの場合、背景画像、パターン、グラデーションの画像を指す。スタイル画像については、[次の記事](#)で説明します。
 
 ページの画像セクションは、コンテンツ画像の集合で構成されます。
 
@@ -196,7 +196,7 @@ Translated By:
 ウェブは小さな携帯端末から大きなテレビまで、さまざまな画面サイズのデバイスからアクセスできます。各デバイスにはそれぞれのメリットと制約があります。ウェブデベロッパーは、あらゆるデバイスに対応させることが求められます。
 
 
-複数の画面サイズやデバイスの種類に対応できるサイトを構築します。[前の記事]({{page.previousPage.relative_url}})では、ページの情報アーキテクチャを策定し、基本構造を作成しました。
+複数の画面サイズやデバイスの種類に対応できるサイトを構築します。[前の記事](#)では、ページの情報アーキテクチャを策定し、基本構造を作成しました。
 このガイドでは、コンテンツを含んだページの基本構造について取り上げ、さまざまな画面サイズに対応するレスポンシブな洗練されたページへと変えます。
 
 <div class="mdl-grid">
@@ -297,7 +297,7 @@ Translated By:
   </p>
 </video>
 
-画面に合うよう要素を再配置する機会となることから、600px は最初のブレークポイントの作成に適したサイズと思われます。ブレークポイントは、[メディア クエリ]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)というテクノロジーを使用することで作成できます。
+画面に合うよう要素を再配置する機会となることから、600px は最初のブレークポイントの作成に適したサイズと思われます。ブレークポイントは、[メディア クエリ](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)というテクノロジーを使用することで作成できます。
 
 
     @media (min-width: 600px) {
@@ -330,7 +330,9 @@ auto を適用する必要があります。これにより、画面が大きく
 
 コンテナには、次のような形式のシンプルな div を使用します。
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

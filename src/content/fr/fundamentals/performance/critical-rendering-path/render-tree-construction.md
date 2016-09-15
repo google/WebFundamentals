@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Les arborescences des modèles CSSOM et DOM sont combinées pour former une arborescence d'affichage, qui est ensuite utilisée pour calculer la mise en page de chaque élément visible et fait office de données d'entrée pour le processus de peinture qui affiche les pixels à l'écran. L'optimisation de chacune de ces étapes est essentielle pour obtenir des performances d'affichage optimales.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

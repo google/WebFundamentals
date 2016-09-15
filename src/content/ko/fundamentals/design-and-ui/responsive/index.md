@@ -209,7 +209,7 @@ stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 C
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * 브라우저가 <b>0px</b> 와 <b>640px</b> 사이 너비일 때, `max-640px.css`가 적용됩니다.
@@ -239,22 +239,21 @@ stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 C
 
 또한, 상대적 단위를 사용하면 브라우저가 페이지를 수평으로 스크롤 할 필요 없이 사용자의 줌 레벨에 맞춰 컨텐츠가 그려질 것입니다.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    <h2>YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-  <div class="mdl-cell mdl-cell--6-col">
-    <h2>NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
-</div>
+<span class="compare-worse">Not recommended</span> — fixed width
+
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+
 
 ## How to choose breakpoints 
 

@@ -121,7 +121,7 @@ Note: 樣式以後還會來
 沒有圖片的網站會顯得乏味。 圖片類型共有兩種：
 
 *  內容圖片 &mdash; 穿插在內容當中的圖片，通常用來傳達額外的資訊。
-*  美觀圖片 &mdash; 這類圖片的用途是美化網站，通常是背景圖片、花樣和漸層。我們將在[下一篇文章]({{page.nextPage.relative_url}})詳細說明。
+*  美觀圖片 &mdash; 這類圖片的用途是美化網站，通常是背景圖片、花樣和漸層。我們將在[下一篇文章](#)詳細說明。
 
 在我們的網頁中，圖片區段匯集了許多內容圖片。
 
@@ -183,7 +183,7 @@ Note: 樣式以後還會來
 無論是小螢幕手機或是大螢幕電視，使用者都能透過各式各類的裝置造訪網站。 不過，每種裝置都各有優點和限制。 網站開發人員的職責就是確保網站可以在所有裝置上正常運作。
 
 
-我們正在打造適用於多種螢幕大小和裝置類型的網站。 在[previous article]({{page.previousPage.relative_url}})中，我們已擬妥網頁的資訊架構並建立了基本架構。
+我們正在打造適用於多種螢幕大小和裝置類型的網站。 在[previous article](#)中，我們已擬妥網頁的資訊架構並建立了基本架構。
 在這份指南中，我們將沿用包含內容的基本架構，著手將網頁改造為可依多數螢幕大小靈活調整的萬人迷。
 
 <div class="mdl-grid">
@@ -284,7 +284,7 @@ Note: 樣式以後還會來
   </p>
 </video>
 
-對我們來說，600px 看來很適合建立第一個中斷點，因為我們可以藉此獲得理想範圍重新安排各項元素，以便更加符合螢幕大小。我們可以透過名為 [Media Queries]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)的技術輕鬆完成修正。
+對我們來說，600px 看來很適合建立第一個中斷點，因為我們可以藉此獲得理想範圍重新安排各項元素，以便更加符合螢幕大小。我們可以透過名為 [Media Queries](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness)的技術輕鬆完成修正。
 
 
     @media (min-width: 600px) {
@@ -317,7 +317,9 @@ auto`。 如此一來，即使螢幕變大，內容仍會維持在螢幕中心�
 
 容器其實就是簡單的 `div`，格式如下:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

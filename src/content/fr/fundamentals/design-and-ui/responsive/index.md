@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La majeure partie du Web n'est pas optimisée pour un affichage sur plusieurs appareils. Découvrez les principes fondamentaux pour rendre votre site compatible avec un appareil mobile, un ordinateur de bureau ou, plus généralement, tout dispositif équipé d'un écran.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-04-29 #}
 
 # Principes de base de la conception de sites Web adaptatifs {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 L'utilisation d'appareils mobiles pour naviguer sur le Web connaît un développement phénoménal. Malheureusement, force est de constater que la majeure partie du Web n'est pas optimisée pour les terminaux de ce type. Les appareils mobiles sont souvent limités par la taille d'affichage et une approche différente s'avère nécessaire quant à la disposition du contenu à l'écran.
@@ -59,7 +58,7 @@ Dans le cas des pages optimisées pour un large éventail d'appareils, l'en-têt
 ### TL;DR {: .hide-from-toc }
 - Utilisez la balise Meta `viewport` pour contrôler la largeur et le dimensionnement de la fenêtre d'affichage du navigateur.
 - Insérez le code <code>width=device-width</code> pour établir une correspondance avec la largeur de l'écran en pixels indépendants de l'appareil.
-- 'Insérez le code <code>initial-scale=1</code> pour établir une relation de type 1:1 entre les pixels CSS et les pixels indépendants de l''appareil.'
+- Insérez le code <code>initial-scale=1</code> pour établir une relation de type 1:1 entre les pixels CSS et les pixels indépendants de l'appareil.
 - Assurez-vous que l'accès à votre page est possible sans désactiver le redimensionnement utilisateur.
 
 
@@ -72,21 +71,10 @@ Pour offrir aux internautes une expérience optimale, les navigateurs mobiles af
 
 La valeur Meta `width=device-width` de fenêtre d'affichage indique à la page d'établir une correspondance avec la largeur de l'écran en pixels indépendants de l'appareil. Cela permet à la page d'ajuster le contenu selon différentes tailles d'écran, qu'il soit affiché sur un petit smartphone ou sur un grand écran d'ordinateur.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page sans fenêtre d'affichage">
-      Voir l'exemple
-    
-  </div>
+<img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page sans fenêtre d'affichage">
+<img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page sur laquelle une fenêtre d'affichage est définie">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page sur laquelle une fenêtre d'affichage est définie">
-      Voir l'exemple
-    
-  </div>
-</div>
 
 Certains navigateurs conservent une largeur de page constante lors de la rotation du contenu en mode paysage et préfèrent le zoom à l'ajustement de la mise en page pour occuper tout l'écran. L'ajout de l'attribut `initial-scale=1` indique au navigateur d'établir une relation de type 1:1 entre les pixels CSS et les pixels indépendants de l'appareil, quelle que soit l'orientation de ce dernier, et permet à la page de tirer parti de toute la largeur de l'écran en mode paysage.
 
@@ -121,21 +109,9 @@ Dans la mesure où les dimensions et la largeur de l'écran, exprimées en pixel
 
 Si vous définissez une largeur CSS absolue élevée pour des éléments de page (comme dans l'exemple ci-dessous), la valeur `div` sera trop large pour la fenêtre d'affichage sur un appareil plus étroit (c'est le cas, par exemple, d'un appareil ayant une largeur de 320 pixels CSS, comme un iPhone). Optez plutôt pour des valeurs de largeur relatives, comme `width: 100%`. Prenez également garde aux valeurs de positionnement absolues élevées, susceptibles de rejeter l'élément hors de la fenêtre d'affichage sur des écrans de petite taille.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page avec un élément de largeur fixe de 344 pixels sur un iPhone.">
-      Voir l'exemple
-    
-  </div>
+<img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page avec un élément de largeur fixe de 344 pixels sur un iPhone." class="attempt-left">
+<img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page avec un élément de largeur fixe de 344 pixels sur un Nexus 5." class="attempt-right">
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page avec un élément de largeur fixe de 344 pixels sur un Nexus 5.">
-      Voir l'exemple
-    
-  </div>
-</div>
 
 ## Utiliser des requêtes média CSS pour la réactivité du contenu 
 
@@ -158,7 +134,7 @@ Vous pouvez, par exemple, placer tous les styles nécessaires à l'impression da
     <link rel="stylesheet" href="print.css" media="print">
     
 
-Outre l'utilisation de l'attribut `media` dans le lien de la feuille de style, deux autres méthodes permettent d'appliquer des requêtes média qui peuvent être intégrées dans un fichier CSS, à savoir : `@media` et `@import`. Pour des raisons de performances, il est préférable d'utiliser l'une des deux premières méthodes plutôt que la syntaxe `@import` (voir la section [Éviter les importations CSS]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html).
+Outre l'utilisation de l'attribut `media` dans le lien de la feuille de style, deux autres méthodes permettent d'appliquer des requêtes média qui peuvent être intégrées dans un fichier CSS, à savoir : `@media` et `@import`. Pour des raisons de performances, il est préférable d'utiliser l'une des deux premières méthodes plutôt que la syntaxe `@import` (voir la section [Éviter les importations CSS](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations).
 
 
     @media print {
@@ -220,14 +196,11 @@ Bien que plusieurs éléments différents puissent faire l'objet de requêtes, c
 
 Prenons un exemple :
 
-<figure>
-  
-    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Aperçu d'une page qui utilise des requêtes média pour modifier des propriétés lors du redimensionnement.">
-  
-</figure>
+<img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Aperçu d'une page qui utilise des requêtes média pour modifier des propriétés lors du redimensionnement.">
+
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * Lorsque la largeur du navigateur est comprise entre <b>0 pixel</b> et <b>640 pixels</b>, `max-640px.css` est appliqué.
@@ -253,23 +226,21 @@ Par exemple, en définissant la valeur `width: 100%` sur un élément `div` de n
 
 De plus, l'utilisation d'unités relatives permet aux navigateurs d'afficher le contenu sur la base du niveau de zoom des utilisateurs, sans qu'il faille ajouter de barres de défilement horizontal à la page.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
+<span class="compare-worse">Not recommended</span> — fixed width
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+
 
 
 ## Choisir des points de rupture 
@@ -280,8 +251,8 @@ S'il peut être utile de définir des points de rupture en fonction des catégor
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Créez des points de rupture en fonction du contenu et jamais sur la base d''appareils, de produits ou de marques spécifiques.'
-- 'Concevez tout d''abord votre contenu pour l''appareil mobile le plus petit, puis améliorez progressivement l''expérience des visiteurs à mesure que la surface d''écran disponible augmente.'
+- Créez des points de rupture en fonction du contenu et jamais sur la base d''appareils, de produits ou de marques spécifiques.
+- Concevez tout d'abord votre contenu pour l'appareil mobile le plus petit, puis améliorez progressivement l'expérience des visiteurs à mesure que la surface d'écran disponible augmente.
 - Limitez la taille des lignes de texte à 70 ou 80 caractères.
 
 
@@ -289,36 +260,26 @@ S'il peut être utile de définir des points de rupture en fonction des catégor
 
 Concevez le contenu pour qu'il s'adapte d'abord aux écrans de petite taille, puis élargissez l'écran jusqu'à ce qu'un point de rupture soit nécessaire. Cela vous permettra d'optimiser les points de rupture en fonction du contenu et de maintenir leur nombre à un niveau minimum.
 
-Examinons l'exemple de [prévision météorologique]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html) que nous avons utilisé au début du cours.
+Examinons l'exemple de [prévision météorologique](/web/fundamentals/design-and-ui/responsive/) que nous avons utilisé au début du cours.
 La première étape consiste à soigner la présentation des prévisions sur un petit écran.
 
-<figure>
-  
-    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Aperçu des prévisions météorologiques sur un petit écran.">
-  
-</figure>
+<img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Aperçu des prévisions météorologiques sur un petit écran.">
+
 
 Redimensionnez ensuite le navigateur jusqu'à ce qu'il y ait trop d'espace entre les éléments et que la qualité d'affichage des prévisions ne soit plus optimale. Cette décision est subjective, mais considérez qu'au-delà de 600 pixels, la largeur limite a été atteinte .
 
-<figure>
-  
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Aperçu des prévisions météorologiques à mesure que la page est agrandie.">
-  
-</figure>
+<img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Aperçu des prévisions météorologiques à mesure que la page est agrandie.">
+
 
 Pour insérer un point de rupture à 600 pixels, créez deux feuilles de style ; l'une à utiliser lorsque la taille du navigateur est inférieure ou égale à 600 pixels, et l'autre pour une taille supérieure à 600 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 Pour terminer, restructurez la feuille de style en cascade (CSS). Dans cet exemple, les styles courants, tels que les polices, les icônes, les couleurs et le positionnement de base, ont été placés dans le fichier 'weather.css'. Les dispositions spécifiques relatives au petit écran sont ensuite placées dans le fichier 'weather-small.css', tandis que les styles pour grand écran sont placés dans 'weather-large.css'.
 
-<figure>
-  
-    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  
-</figure>
+<img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
 
 ### Choisir des points de rupture mineurs lorsque cela s'avère nécessaire
 
@@ -327,43 +288,34 @@ Outre la sélection de points de rupture majeurs lors de modifications important
 Commençons par optimiser la disposition du petit écran. Dans ce cas, nous allons augmenter la taille de police lorsque la largeur de la fenêtre d'affichage est supérieure à 360 pixels. Ensuite, s'il y a suffisamment d'espace, nous pouvons séparer les températures maximale et minimale, de sorte qu'elles se trouvent sur la même ligne, au lieu d'être affichées l'une au-dessus de l'autre. Nous allons également agrandir légèrement les icônes illustrant les conditions météo.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
+<img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints." class="attempt-left">
+<img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints." class="attempt-right">
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
-</div>
+<div class="clearfix"></div>
+
 
 De même, dans le cas des écrans de grande taille, il est préférable de limiter la largeur maximale du panneau de prévision, de telle sorte qu'il n'occupe pas tout l'écran.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### Optimiser le texte pour la lecture
 
 Si l'on se base sur la théorie de lisibilité standard, la colonne idéale doit contenir entre 70 et 80 caractères par ligne (soit entre 8 et 10 mots en anglais). Dès lors, chaque fois que la largeur d'un bloc de texte augmente d'environ 10 mots, l'utilisation d'un point de rupture doit être envisagée.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Avant d'ajouter des points de rupture mineurs">
-  </div>
+<img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Avant d'ajouter des points de rupture mineurs" class="attempt-left">
+<img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Après avoir ajouté des points de rupture mineurs" class="attempt-right">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Après avoir ajouté des points de rupture mineurs">
-  </div>
-</div>
 
 Examinons de plus près l'article de blog ci-dessus.  Sur les écrans plus petits, l'utilisation de la police Roboto avec une taille de 1 em fonctionne parfaitement et génère 10 mots par ligne. Cependant, un point de rupture est nécessaire sur les écrans plus grands. Dans ce cas, si la largeur du navigateur est supérieure à 575 pixels, la largeur idéale du contenu est de 550 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### Ne jamais masquer complètement le contenu

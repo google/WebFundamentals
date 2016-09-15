@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Récupérer quelque chose sur le réseau coûte du temps et de l'argent : les réponses volumineuses peuvent nécessiter de nombreux allers-retours entre le client et le serveur, ce qui retarde leur mise à disposition et leur traitement par le navigateur. Cela a également un coût en termes de données pour le visiteur. En conséquence, la capacité à mettre en cache et à réutiliser des ressources récupérées précédemment est un aspect essentiel de l'optimisation des performances.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 

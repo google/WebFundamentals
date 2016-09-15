@@ -149,7 +149,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
     <link rel="stylesheet" href="print.css" media="print">
     
 
-除了在样式表链接中使用 media 属性之外，我们还可以通过另外两种方法应用可以嵌入 CSS 文件的媒体查询：@media 和 @import。出于性能方面的考虑，我们建议开发者优先考虑使用前两种方法，尽量避免使用 @import 语法（请参阅[避免 CSS 导入]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)）。
+除了在样式表链接中使用 media 属性之外，我们还可以通过另外两种方法应用可以嵌入 CSS 文件的媒体查询：@media 和 @import。出于性能方面的考虑，我们建议开发者优先考虑使用前两种方法，尽量避免使用 @import 语法（请参阅[避免 CSS 导入](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations)）。
 
 
     @media print {
@@ -218,7 +218,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * 当浏览器宽度介于 <b>0 像素</b>和 <b>640 像素</b>之间时，系统将会应用 max-640px.css。
@@ -244,23 +244,21 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 
 此外，使用相对单位可让浏览器根据用户缩放程度呈现内容，而无需为网页添加横向滚动条。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
+<span class="compare-worse">Not recommended</span> — fixed width
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
+
 
 ## 如何选择断点
 
@@ -278,7 +276,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 
 先针对小屏幕尺寸进行内容设计，然后扩展至不同尺寸的屏幕，直到必须添加断点为止。如此一来，您便可以根据内容优化断点，并使断点数量降至最低。
 
-我们来分析一下在开头部分看到的示例[天气预报]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html)。
+我们来分析一下在开头部分看到的示例[天气预报](/web/fundamentals/design-and-ui/responsive/)。
 首先使天气预报在较小的屏幕上呈现效果良好。
 
 <figure>
@@ -298,7 +296,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 要在 600 像素处插入断点，请新建两个样式表，一个在浏览器不超过 600 像素时使用，另一个在超过 600 像素时使用。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 最后，重新设计 CSS。在本例中，我们已将常用的样式（例如字体、图标、基本定位和颜色）放入 weather.css。然后，针对小屏幕的特定版式会放入 weather-small.css，而大屏幕样式则放入 weather-large.css。
@@ -316,7 +314,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 首先优化小屏幕版式。在本例中，当视口宽度超过 360 像素时，我们来增加字体大小。接下来，当有足够的空间时，我们可以将高温和低温分隔开，使其在同一行中显示，而不是以上下排列的形式显示。然后，我们来调大天气图标。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -332,7 +330,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 同样，如果是大屏幕，我们最好限制天气预报面板的宽度，使其不会占用整个屏幕宽度。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### 优化文本，提高可读性
@@ -352,7 +350,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 我们来深入分析一下上述博文示例。在较小的屏幕上，大小为 1em 的 Roboto 字体可以使每行完美地呈现 10 个单词，而在较大的屏幕上就需要添加断点了。在本例中，如果浏览器宽度超过了 575 像素，那么内容的理想宽度是 550 像素。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### 绝不能完全隐藏内容

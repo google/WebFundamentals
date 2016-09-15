@@ -120,7 +120,7 @@ En iyi uygulamalari izleyerek videoyu sitenize kolayca entegre edebilirsiniz:
 Resim bulunmayan siteler biraz sikici olabilir. Iki tür resim vardir:
 
 *  Içerik resimleri: Dokümanla ayni dogrultuda olan ve içerikle ilgili fazladan bilgileri aktarmak için kullanilan resimler.
-*  Biçimsel resimler: Sitenin daha iyi görünmesi için kullanilan resimler; bunlar genellikle arka plan resimleri, kaliplar ve renk geçisleri seklindedir.  Bu konuyu [sonraki makale]({{page.nextPage.relative_url}}) baslikli makalede ele alacagiz.
+*  Biçimsel resimler: Sitenin daha iyi görünmesi için kullanilan resimler; bunlar genellikle arka plan resimleri, kaliplar ve renk geçisleri seklindedir.  Bu konuyu [sonraki makale](#) baslikli makalede ele alacagiz.
 
 Sayfamizdaki Resimler bölümü, içerik resimlerinden olusan bir koleksiyondur.
 
@@ -182,7 +182,7 @@ Içerik, bir sitenin en önemli ögesidir ve saglam bir bilgi mimarisine ve yogu
 Web'e, küçük ekranli telefonlardan genis ekranli televizyonlara kadar çok çesitli cihazlardan erisilebilir. Her bir cihaz kendi benzersiz avantajlarina, ayni zamanda kisitlamalarina sahiptir. Bir web gelistiricisi olarak tüm cihazlari desteklemeniz beklenir.
 
 
-Birden çok ekran boyutunda ve cihaz türünde çalisacak bir site olusturuyoruz. [Önceki makale]({{page.previousPage.relative_url}}) baslikli makalede, sayfanin Bilgi Mimarisi'ni isledik ve bir temel yapi olusturduk.
+Birden çok ekran boyutunda ve cihaz türünde çalisacak bir site olusturuyoruz. [Önceki makale](#) baslikli makalede, sayfanin Bilgi Mimarisi'ni isledik ve bir temel yapi olusturduk.
 Bu kilavuzda, içerikle temel yapimizi alip çok sayida ekran boyutuna duyarli güzel bir sayfaya dönüstürecegiz.
 
 <div class="mdl-grid">
@@ -283,7 +283,7 @@ Tasarim, yaklasik 600 piksel genisliginde kötü görünmeye basliyor.  Bizim ö
   </p>
 </video>
 
-600 piksel, ilk kesme noktamizi olusturmak için iyi bir yer gibi görünüyor. Bu, ögeleri ekrana daha iyi sigmalari amaciyla yeniden konumlandirmamiz için gereken alani saglayacak.  Bunu, [Medya Sorgulari]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) adli bir teknolojiyi kullanarak yapabiliriz.
+600 piksel, ilk kesme noktamizi olusturmak için iyi bir yer gibi görünüyor. Bu, ögeleri ekrana daha iyi sigmalari amaciyla yeniden konumlandirmamiz için gereken alani saglayacak.  Bunu, [Medya Sorgulari](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness) adli bir teknolojiyi kullanarak yapabiliriz.
 
 
     @media (min-width: 600px) {
@@ -315,7 +315,9 @@ Bunu gerçeklestirmek için genisligi sinirlandirmamiz ve ögeleri ortalamamiz g
 
 Kapsayici, asagidaki biçimde basit bir `div` ögesi olacak:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

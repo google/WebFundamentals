@@ -1,15 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Les images représentent souvent la majorité des octets téléchargés sur une page Web, et occupent également une grande partie de l'espace visuel. En conséquence, l'optimisation des images permet souvent de réaliser les économies en octets et les améliorations des performances les plus importantes pour votre site Web : moins le navigateur doit télécharger d'octets, moins il y a de compétition pour la bande passante du client, et plus vite le navigateur peut télécharger et afficher le contenu utile à l'écran.
+description: Les images représentent souvent la majorité des octets téléchargés sur une page Web, et occupent également une grande partie de l'espace visuel. En conséquence, l'optimisation des images permet souvent de réaliser les économies en octets et les améliorations des performances les plus importantes pour votre site.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
 # Optimisation de l'image {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
 
 
 Les images représentent souvent la majorité des octets téléchargés sur une page Web, et occupent également une grande partie de l'espace visuel. En conséquence, l'optimisation des images permet souvent de réaliser les économies en octets et les améliorations des performances les plus importantes pour votre site Web : moins le navigateur doit télécharger d'octets, moins il y a de compétition pour la bande passante du client, et plus vite le navigateur peut télécharger et afficher le contenu utile à l'écran.
@@ -46,19 +44,15 @@ Si vous devez encoder du texte dans une image, réfléchissez-y à deux fois. Un
 
 Une fois que vous avez déterminé qu'une image est bien le format optimal pour obtenir l'effet souhaité, il est ensuite essentiel de choisir un format adapté :
 
-&nbsp;
-
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Image vectorielle</b>
-    <img class="center" src="images/vector-zoom.png" alt="Image vectorielle agrandie">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Image matricielle</b>
-    <img src="images/raster-zoom.png" alt="Image matricielle agrandie">
-  </div>
-</div>
+<figure class="attempt-left">
+  <img src="images/vector-zoom.png" alt="Image vectorielle agrandie">
+  <figcaption>Image vectorielle</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/raster-zoom.png" alt="Image matricielle agrandie">
+  <figcaption>Image matricielle</figcaption>
+</figure>
+<div class="clearfix"></div>
 
 * Les [images vectorielles](http://fr.wikipedia.org/wiki/Image_vectorielle) utilisent des lignes, des points et des polygones pour représenter une image.
 * Les [images matricielles](http://fr.wikipedia.org/wiki/Image_matricielle) représentent une image en encodant les valeurs individuelles de chaque pixel dans une grille rectangulaire.
@@ -162,8 +156,6 @@ En interne, le navigateur attribue 256 valeurs (nuances) à chaque canal, ce qui
 * 10 000 pixels x 4 octets = 40 000 octets
 * 40 000 octets / 1 024 = 39 Ko
 
-^
-
 Note: Notez que quel que soit le format d'image utilisé pour transférer les données du serveur au client, lorsque l'image est décodée par le navigateur, chaque pixel occupe toujours 4 octets de mémoire. Cela peut représenter une contrainte importante pour les grandes images et les appareils qui ne disposent pas de beaucoup de mémoire, par exemple les appareils mobiles bas de gamme.
 
 <table>
@@ -225,10 +217,10 @@ Mais une fois encore, tout ceci est très intéressant, mais très théorique : 
 ## Compression d'image avec et sans perte
 
 ## TL;DR {: .hide-from-toc }
-- 'En raison de la façon dont fonctionnent nos yeux, les images sont d''excellentes candidates pour la compression avec perte.'
+- En raison de la façon dont fonctionnent nos yeux, les images sont d''excellentes candidates pour la compression avec perte.
 - L'optimisation des images est une fonction de la compression avec et sans perte.
 - Les différences de format des images sont dues à la différence de façon et à quels algorithmes avec et sans perte sont utilisés pour optimiser l'image.
-- 'Il n''existe pas un seul format idéal ou ''paramètre de qualité pour toutes les images'' : chaque combinaison de logiciel de compression spécifique et de contenu d''image produit un résultat unique.'
+- Il n'existe pas un seul format idéal ou 'paramètre de qualité pour toutes les images': chaque combinaison de logiciel de compression spécifique et de contenu d'image produit un résultat unique.
 
 
 Pour certains types de données, tels que le code source d'une page ou un fichier exécutable, il est essentiel qu'un logiciel de compression n'endommage et ne perde aucune des informations d'origine : un seul octet manquant ou incorrect peut modifier complètement la signification des contenus du fichier ou pire, le détruire totalement. Pour certains autres types de données, telles que les images, les fichiers audio et les vidéos, il peut être parfaitement acceptable de fournir une représentation 'approximative' des données d'origine.
@@ -252,8 +244,8 @@ Note: Notez qu'il est impossible de comparer directement les niveaux de qualité
 ## Sélectionner le bon format d'image
 
 ## TL;DR {: .hide-from-toc }
-- 'Commencez par sélectionner un format universel adapté : GIF, PNG, JPEG.'
-- 'Expérimentez et sélectionnez les meilleurs paramètres pour chaque format : qualité, taille de la palette, etc.'
+- Commencez par sélectionner un format universel adapté : GIF, PNG, JPEG.
+- Expérimentez et sélectionnez les meilleurs paramètres pour chaque format: qualité, taille de la palette, etc.
 - Envisagez la possibilité d'ajouter des éléments WebP et JPEG XR pour les images à l'échelle de clients modernes
 
 
@@ -366,7 +358,7 @@ N'ayez pas peur de tester les paramètres de chaque logiciel de compression. Dim
 
 ## TL;DR {: .hide-from-toc }
 - La production d'éléments à l'échelle est l'une des optimisations les plus simples et les plus efficaces.
-- 'Accordez une attention particulière aux éléments volumineux, car ils produisent un temps système élevé.'
+- Accordez une attention particulière aux éléments volumineux, car ils produisent un temps système élevé.
 - Réduisez le nombre de pixels inutiles en mettant vos images à l'échelle de leur taille d'affichage.
 
 

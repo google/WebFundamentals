@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Par défaut, le code CSS est traité comme ressource empêchant l'affichage, ce qui signifie que le navigateur suspend l'affichage de tout contenu traité jusqu'à ce que le modèle CSSOM soit construit. Assurez-vous de conserver un code CSS simple, faites en sorte qu'il soit transmis le plus vite possible, et utilisez des types et requêtes de média pour débloquer l'affichage.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -13,8 +12,6 @@ description: Par défaut, le code CSS est traité comme ressource empêchant l'a
 
 Par défaut, le code CSS est traité comme ressource empêchant l'affichage, ce qui signifie que le navigateur suspend l'affichage de tout contenu traité jusqu'à ce que le modèle CSSOM soit construit. Assurez-vous de conserver un code CSS simple, faites en sorte qu'il soit transmis le plus vite possible, et utilisez des types et requêtes de média pour débloquer l'affichage.
 
-
-
 Dans la section précédente, nous avons vu que le chemin critique du rendu nécessite de disposer des modèles DOM et CSSOM pour construire l'arborescence d'affichage, ce qui crée une implication importante des performances : **Les balisages HTML et CSS sont des ressources empêchant l'affichage.** C'est évident pour le code HTML, puisque sans le modèle DOM nous n'aurions rien à afficher. Toutefois, cette exigence pour le code CSS peut être moins évidente. Que ce passerait-il si nous tentions d'afficher une page classique sans que le code CSS empêche l'affichage ?
 
 ## TL;DR {: .hide-from-toc }
@@ -23,32 +20,15 @@ Dans la section précédente, nous avons vu que le chemin critique du rendu néc
 - 'Toutes les ressources CSS, qu''elles empêchent ou non l''affichage, sont téléchargées par le navigateur.'
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>NYTimes avec code CSS</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="NYTimes avec code CSS">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>NYTimes sans code CSS (FOUC)</b>
-    <img src="images/nytimes-nocss-device.png" alt="NYTimes sans code CSS">
-
-  </div>
-</div>
-
-{% comment %}
-<table>
-<tr>
-<td>NYTimes avec code CSS</td>
-<td>NYTimes sans code CSS (FOUC)</td>
-</tr>
-<tr>
-<td><img src="images/nytimes-css-device.png" alt="NYTimes avec code CSS" class="center"></td>
-<td><img src="images/nytimes-nocss-device.png" alt="NYTimes sans code CSS" class="center"></td>
-</tr>
-</table>
-{% endcomment %}
+<figure class="attempt-left">
+  <img src="images/nytimes-css-device.png" alt="NYTimes avec code CSS">
+  <figcaption>NYTimes avec code CSS</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/nytimes-nocss-device.png" alt="NYTimes sans code CSS">
+  <figcaption>NYTimes sans code CSS (FOUC)</figcaption>
+</figure>
+<div class="clearfix"></div>
 
 L'exemple ci-dessus, montrant le site Web NYTimes avec et sans code CSS, démontre pourquoi l'affichage est bloqué jusqu'à ce que le code CSS soit disponible. En effet, sans code CSS, la page est inutilisable. En fait l'expérience de droite est souvent appelée FOUC ('Flash of Unstyled Content', soit 'Flash de contenu sans style'). En conséquence, le navigateur empêche l'affichage jusqu'à ce qu'il dispose à la fois du modèle DOM et du modèle CSSOM.
 

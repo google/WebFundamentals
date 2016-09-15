@@ -120,7 +120,7 @@ Ao seguir as práticas recomendadas, você conseguirá integrar vídeos ao seu s
 Os sites sem imagem geralmente são mais entediantes. Existem dois tipos de imagens:
 
 *  Imagens de conteúdo &mdash; são adicionadas de forma in-line ao documento e usadas para fornecer informações adicionais sobre o conteúdo.
-*  Imagens de estilo &mdash; em sua maioria, são posicionadas em segundo plano, com padrões e gradientes, e usadas para deixar o site mais atraente.  Essas imagens serão abordadas no [próximo artigo]({{page.nextPage.relative_url}}).
+*  Imagens de estilo &mdash; em sua maioria, são posicionadas em segundo plano, com padrões e gradientes, e usadas para deixar o site mais atraente.  Essas imagens serão abordadas no [próximo artigo](#).
 
 A seção `Imagens` da nossa página é um conjunto de imagens de conteúdo.
 
@@ -182,7 +182,7 @@ O conteúdo é o aspecto mais importante de qualquer site, e precisamos garantir
 A Web pode ser acessada por uma grande variedade de dispositivos, de celulares com telas minúsculas a TVs com telas enormes. Cada dispositivo oferece benefícios e limitações específicos. Como desenvolvedor da Web, você precisa oferecer suporte a todos os tipos de dispositivos.
 
 
-Desenvolveremos um site que funcione em todos os tamanhos de tela e tipos de dispositivos. No [artigo anterior]({{page.previousPage.relative_url}}), projetamos a arquitetura de informações da página e definimos a estrutura básica.
+Desenvolveremos um site que funcione em todos os tamanhos de tela e tipos de dispositivos. No [artigo anterior](#), projetamos a arquitetura de informações da página e definimos a estrutura básica.
 Neste guia, aproveitaremos a estrutura básica e o conteúdo e os transformaremos em uma página incrível que será responsiva em um grande número de tamanhos de tela.
 
 <div class="mdl-grid">
@@ -283,7 +283,7 @@ O design começa a apresentar um aspecto desagradável por volta de 600 px de la
   </p>
 </video>
 
-Em 600 pixels, podemos criar nosso primeiro ponto de quebra para reposicionar os elementos a fim de adequá-los à tela de forma mais eficiente.  Para fazer isso, usamos uma tecnologia chamada [consultas de mídia]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness).
+Em 600 pixels, podemos criar nosso primeiro ponto de quebra para reposicionar os elementos a fim de adequá-los à tela de forma mais eficiente.  Para fazer isso, usamos uma tecnologia chamada [consultas de mídia](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness).
 
 
     @media (min-width: 600px) {
@@ -315,7 +315,9 @@ Para conseguir isso, precisamos limitar a largura e centralizar os elementos.  �
 
 O recipiente será um `div` simples na seguinte forma:
 
-{% highlight html %}<div class="container">...</div>{% endhighlight %}
+    <div class="container">
+    ...
+    </div>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/fixingfirstbreakpoint.html" region_tag="containerhtml"   adjust_indentation="auto" %}

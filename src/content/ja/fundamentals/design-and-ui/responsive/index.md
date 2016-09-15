@@ -157,7 +157,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
     <link rel="stylesheet" href="print.css" media="print">
     
 
-スタイルシートのリンクで media 属性を使用する方法のほかに、CSS ファイル内に @media または @import を挿入する方法でもメディア クエリを適用できます。パフォーマンス上の理由から、@import 構文ではなく、最初の 2 つの方法のいずれかを使用するようおすすめします（[CSS のインポートを避ける]({{site.fundamentals}}/performance/critical-rendering-path/page-speed-rules-and-recommendations.html）をご覧ください）。
+スタイルシートのリンクで media 属性を使用する方法のほかに、CSS ファイル内に @media または @import を挿入する方法でもメディア クエリを適用できます。パフォーマンス上の理由から、@import 構文ではなく、最初の 2 つの方法のいずれかを使用するようおすすめします（[CSS のインポートを避ける](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations）をご覧ください）。
 
 
     @media print {
@@ -226,7 +226,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
 </pre>
 
 * ブラウザの幅が <b>0px</b>～<b>640px</b> の場合、max-640px.css が適用されます。
@@ -252,23 +252,20 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 
 また、相対的な単位を使用することで、ブラウザがページに横スクロールバーを追加することなく、ユーザーのズームレベルに基づいてコンテンツを表示できます。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-danger text-center">NO</h2>
-{% highlight css %}div.fullWidth {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}{% endhighlight %}
-  </div>
+<span class="compare-worse">Not recommended</span> — fixed width
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <h2 class="text-success text-center">YES</h2>
-{% highlight css %}div.fullWidth {
-  width: 100%;
-}{% endhighlight %}
-  </div>
-</div>
+    div.fullWidth {
+      width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+<span class="compare-better">Recommended</span> — responsive width
+
+    div.fullWidth {
+      width: 100%;
+    }
 
 
 
@@ -288,7 +285,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 
 まずコンテンツが小さな画面にコンテンツが収まるようにデザインし、そのうえで、ブレークポイントが必要となるまで画面を広げていきます。こうすることで、コンテンツに基づいてブレークポイントを最適化するとともに、ブレークポイントの数を最小限に抑えることができます。
 
-最初に紹介した例（[天気予報]({{site.fundamentals}}/layouts/rwd-fundamentals/index.html））で作業していきます。
+最初に紹介した例（[天気予報](/web/fundamentals/design-and-ui/responsive/））で作業していきます。
 まず、小さい画面での予報の外観を整えます。
 
 <figure>
@@ -308,7 +305,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 600px にブレークポイントを設定するには、2 つのスタイルシートを新たに作成して、そのうちの 1 つをブラウザの幅が 600px 以下の場合に使用し、もう 1 つを 600px より広い場合に使用します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
 </pre>
 
 最後に、CSS をリファクタリングします。この例では、フォント、アイコン、基本的な配置、色などの共通のスタイルが weather.css に記述されています。そのうえで、小さい画面用の具体的なレイアウトが weather-small.css に、大きい画面用のスタイルが weather-large.css に記述されています。
@@ -326,7 +323,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 まず、小さい画面のレイアウトを最適化します。このケースでは、ビューポートの幅が 360px を超えた際にフォントを大きくするようにします。次に、十分なスペースがある場合に、2 段重ねで表示されている最高気温と最低気温を分割し、同じ行に横に並べて表示します。また、天気のアイコンを少し大きくします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
 <div class="mdl-grid">
@@ -342,7 +339,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 大きい画面の場合も同様に、予報パネルが画面幅いっぱいまで広がらないよう、予報パネルの最大幅を制限することをおすすめします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
 </pre>
 
 ### テキストを読みやすいよう最適化する
@@ -362,7 +359,7 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 上記のブログ記事の例を詳しく見てみましょう。小さい画面では、1em の Roboto フォントで 1 行あたりの語数がちょうど 10 語になりますが、大きい画面ではブレークポイントが必要となります。この例では、ブラウザの幅が 575px を超えた場合の最適なコンテンツの幅は 550px です。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/fundamentals/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
 </pre>
 
 ### コンテンツを完全に非表示にしないようにする

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript nous permet de modifier pratiquement chaque aspect de la page : le contenu, le style et le comportement en réponse aux interactions de l'internaute. Cependant, JavaScript peut également bloquer la construction DOM et retarder l'affichage de la page. Pour obtenir une performance optimale, utilisez un fichier JavaScript asynchrone et éliminez tout fichier JavaScript inutile du chemin critique du rendu.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 

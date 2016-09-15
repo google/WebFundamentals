@@ -361,7 +361,7 @@ Fullscreen API をサポートしているデバイスでは、動画のプレ�
 
 実際の動作を確認するには、こちらの<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">デモ</a>をご覧ください。
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 
