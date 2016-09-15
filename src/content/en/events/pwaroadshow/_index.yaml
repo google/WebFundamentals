@@ -23,7 +23,7 @@ landing_page:
 
         <p>
           Check the map to see if there's a PWA Roadshow happening near you. Can't find one?
-          Don't worry! <a href="#run-your-own-event">We have all the material you
+          Don't worry! <a href="#run-your-own-pwa-roadshow">We have all the material you
           need to run your own event or learn in your own time</a>.
         </p>
 
@@ -72,7 +72,7 @@ landing_page:
           icon_name: school
           is_white: True
         description: >
-          <a href="#">Code Labs</a> &mdash; Get Hacking!
+          <a href="https://codelabs.developers.google.com/pwa-roadshow">Code Labs</a> &mdash; Get Hacking!
     - items:
       - heading: Graphic Assets
         icon:

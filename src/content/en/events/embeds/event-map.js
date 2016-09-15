@@ -37,6 +37,19 @@ EventMap.prototype.createMarkers = function(map, markerData) {
       // TODO: Track an error to notify the event organizers
       return;
     }
+
+    if (!event.defaultEventUrl) {
+      // TODO: Track an error to notify the event organizers
+      return;
+    }
+
+    // Not all events are hosted on devsite (Google run PWA roadshows link out
+    // to DefJam). But events coming from the GDG Dashboard always start
+    // with '/'
+    if (event.defaultEventUrl.substring(0, 1) === '/') {
+      event.defaultEventUrl = 'https://developers.google.com' + event.defaultEventUrl;
+    }
+
     // Create a marker on the map
     var marker = new google.maps.Marker({
       position: {
@@ -49,7 +62,7 @@ EventMap.prototype.createMarkers = function(map, markerData) {
     });
     // Create an InfoWindow for the marker
     var contentString = '<h3 class="event-title">' +
-                          '<a target="_blank" href="https://developers.google.com'+event.defaultEventUrl+'">'+event.name+'</a>' +
+                          '<a target="_blank" href="'+event.defaultEventUrl+'">'+event.name+'</a>' +
                         '</h3>' +
                         '<p class="event-location">'+event.location+'</p>';
     var infowindow = new google.maps.InfoWindow({
