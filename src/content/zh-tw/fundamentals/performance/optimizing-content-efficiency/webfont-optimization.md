@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 如要打造出優異的設計、品牌宣傳、可讀性和無障礙程度，絕對不能忽視字型編排。選用網頁字型即可達成上述各項目標，甚至還有更多優點，例如文字可供使用者選取、搜尋及縮放，而且支援高 DPI。無論螢幕大小和解析度為何，都能呈現一致且清晰銳利的文字。網頁字型對於良好的設計、使用者體驗和效能是非常關鍵的一環。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
@@ -73,29 +72,29 @@ Note: 請考慮使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 壓�
 
 每個 @font-face 聲明提供了字型系列的名稱，可當做多個聲明、[字型屬性](http://www.w3.org/TR/css3-fonts/#font-prop-desc) (例如樣式、粗細和延伸)，以及為字型資源指定位置優先順序清單的 [src 描述元](http://www.w3.org/TR/css3-fonts/#src-desc)的邏輯群組。
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
+
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 首先，請注意上述示例使用兩種樣式 (normal 和 _italic_) 定義單個 _Awesome Font_ 系列，分別指向一個不同的字型資源集。同樣地，每個 `src` 描述元包含一個已排定優先順序的逗號分隔資源變體清單： 
 

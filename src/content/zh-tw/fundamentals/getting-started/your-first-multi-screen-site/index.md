@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 無論是小螢幕手機或是大螢幕電視，使用者都能透過各式各類的裝置造訪網站。 快來瞭解如何打造適用於所有裝置的網站。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 

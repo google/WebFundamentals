@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 了解如何柔化並為您的動畫加權。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -23,7 +22,7 @@ description: 了解如何柔化並為您的動畫加權。
 
 ## 緩動關鍵字
 
-CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類]({{site.fundamentals}}/look-and-feel/animations/choosing-the-right-easing.html)。 您可以使用影響動畫的緩動 (或有時候稱為計時) 之關鍵字。 您還可以 [完全自訂您的緩動](\{\{site.fundamentals}}/look-and-feel/animations/custom-easing.html)，給您更多自由以表達您應用程式的個性。
+CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](choosing-the-right-easing)。 您可以使用影響動畫的緩動 (或有時候稱為計時) 之關鍵字。 您還可以 [完全自訂您的緩動](\{\{site.fundamentals}}/look-and-feel/animations/custom-easing.html)，給您更多自由以表達您應用程式的個性。
 
 以下是您可以在 CSS 中使用的關鍵字：
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 無法評估就談不上最佳化。幸運的是，Navigation Timing API 提供了所有必備工具來評估關鍵轉譯路徑的每個步驟！
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

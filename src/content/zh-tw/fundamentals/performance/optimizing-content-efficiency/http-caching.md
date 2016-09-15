@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 透過網路取得內容的做法不僅緩慢，成本也很高：大型回應需要在用戶端和伺服器之間進行多次往返通訊，因此拖延了瀏覽器可以使用及處理內容的時間，同時也增加了訪客的行動數據傳輸費用。因此，如果能夠快取及重複使用先前取得的資源，對於將效能最佳化將是非常關鍵的一環。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 

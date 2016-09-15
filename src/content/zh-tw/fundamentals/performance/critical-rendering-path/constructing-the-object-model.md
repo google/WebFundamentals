@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 瀏覽器需要先建構 DOM 和 CSSOM 樹狀結構，才能在螢幕上轉譯內容。因此，我們必須儘快將 HTML 和 CSS 提供給瀏覽器。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 

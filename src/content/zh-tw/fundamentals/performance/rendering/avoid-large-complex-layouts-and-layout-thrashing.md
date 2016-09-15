@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 版面配置是瀏覽器弄清楚元素幾何形狀資訊之處：也就是它們在頁面中的大小和位置。 根據使用的 CSS、元素內容，或父系元素，每個元素將具有明確或隱含的大小資訊。 在 Blink、WebKit 瀏覽器和 Internet Explorer 中，這個過程叫做版面配置。 在例如 Firefox 的 Gecko 架構瀏覽器中，它被稱為自動重排，但實際上這些過程都是相同的。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

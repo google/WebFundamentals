@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 繪製是填入最終會合成到使用者螢幕上的像素之過程。 這往往是管道中所有任務耗時最長的一項，也是該儘可能避免的一項。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

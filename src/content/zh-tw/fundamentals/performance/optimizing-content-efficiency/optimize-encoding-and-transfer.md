@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 在我們消除了任何不必要的資源之後，下一步就是將瀏覽器必須下載的剩餘資源總大小縮減至最小，也就是透過套用內容類型專用和通用的壓縮 (GZip) 演算法，壓縮這些資源。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 

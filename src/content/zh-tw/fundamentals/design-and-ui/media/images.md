@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 一張圖片勝過千言萬語，而圖片在每個網頁上都是不可或缺的一環。但是，大部分的下載位元組通常都是圖片。有了回應式網頁設計，不僅版面配置可以根據裝置特性變更，圖片也可以靈活變動。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 圖片 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 輸入處理常式可能是您的應用程式效能問題的潛在原因，因為它們可以阻止畫面完成，也會導致額外的 (且不必要的) 版面配置工作。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

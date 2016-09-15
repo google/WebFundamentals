@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 最快最好的最佳化資源是不需要下載的資源。最近是否曾檢查您的資源？ 這是務必要定期執行的工作，如此才可確保每種資源都能為使用者提供更優異的體驗。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 您需要瞭解很多常見問題，才可確定並解決關鍵轉譯路徑效能方面的瓶頸。現在就讓我們開始實作之旅，找出常見的效能模式，以便您將網頁最佳化。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

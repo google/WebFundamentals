@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 透過 JavaScript，我們可以修改網頁的各個層面，例如內容、樣式以及與使用者互動的行為。但是，JavaScript 也會禁止 DOM 建構，並導致網頁轉譯時間出現延遲。請採用 JavaScript 的非同步功能，藉此消除關鍵轉譯路徑中不必要的 JavaScript，以便提供最佳效能。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript 往往是視覺變更的觸發器。 有時是直接透過樣式操作，有時是計算造成視覺變更，例如搜尋或排序一些資料。 時機不對或長時間執行的 JavaScript 可能是常見的效能問題導因，您應該儘量減少它的影響。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
