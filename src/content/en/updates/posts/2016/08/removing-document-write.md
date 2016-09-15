@@ -123,7 +123,7 @@ send a heads-up to your analytic or Real User Metrics (RUM) systems.
 {% highlight javascript %}
 if(navigator.connection &&
    navigator.connection.type === 'cellular' &&
-   navigator.connection.downlinkMax <= 0.115)
+   navigator.connection.downlinkMax <= 0.115) {
   // Notify your service to indicate that you might be affected by this restriction.
 }
 {% endhighlight %}
