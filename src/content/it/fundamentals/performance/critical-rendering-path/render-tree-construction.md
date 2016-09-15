@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Le strutture CSSOM e DOM vengono unite in una struttura di rendering, che viene poi utilizzata per calcolare il layout di ciascun elemento visibile e che serve da input al processo di disegno che esegue il rendering dei pixel sullo schermo. Ottimizzare ciascuno di questi passaggi è cruciale per ottenere una performance di rendering ottimale.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -44,7 +43,7 @@ Fino ad adesso abbiamo calcolato i nodi che devono essere visibili e i relativi 
 Per individuare le dimensioni e posizione esatta di ciascun oggetto, il browser inizia dalla radice della struttura di rendering e la attraversa per calcolare la geometria di ogni oggetto sulla pagina. Analizziamo un semplice esempio pratico:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Il corpo della pagina di cui sopra contiene due div nidificati: il primo div (padre) imposta le dimensioni del display del nodo al 50% della larghezza del riquadro di visualizzazione e il secondo div contenuto dal padre ne imposta la larghezza al 50% del padre, dunque al 25% della larghezza del riquadro di visualizzazione.

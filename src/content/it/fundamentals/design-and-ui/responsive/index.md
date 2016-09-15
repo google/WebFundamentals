@@ -2,25 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Gran parte del Web non è ottimizzata per l'utilizzo di dispositivi multipli. Apprendi i concetti fondamentali e ottimizza il sito per dispositivi mobili, PC desktop o su qualsiasi altro dispositivo dotato di schermo.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Nozioni di base sul Responsive Web Design {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 L'impiego di dispositivi mobili per la navigazione sul Web è in forte aumento, ma gran parte del Web non è ancora ottimizzata in tal senso. Spesso i dispositivi mobili soffrono di limitazioni in termini di formato dello schermo e richiedono un nuovo approccio per la disposizione dei contenuti.
-
-
-{% comment %}
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="oK09n_PGhTo"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-{% endcomment %}
 
 
 ### Responsive Web Design Fundamentals
@@ -58,7 +48,7 @@ Le pagine ottimizzate per dispositivi multipli devono contenere un elemento meta
 ### TL;DR {: .hide-from-toc }
 - Utilizza i meta viewport tag per controllare larghezza e scala dei viewport dei browser.
 - Inserisci <code>width=device-width</code> per ottenere una corrispondenza con la larghezza dello schermo in pixel indipendenti dal dispositivo.
-- 'Inserisci <code>initial-scale=1</code> per stabilire una relazione 1:1 fra i pixel del CSS e quelli indipendenti dal dispositivo.'
+- Inserisci <code>initial-scale=1</code> per stabilire una relazione 1:1 fra i pixel del CSS e quelli indipendenti dal dispositivo.
 - Controlla l'accessibilità della pagina senza disabilitare l'opzione di scalabilità dell'utente.
 
 
@@ -71,21 +61,10 @@ Per ottenere un'esperienza ideale, i browser mobili effettuano il rendering dell
 
 Il valore meta viewport `width=device-width` garantisce la corrispondenza della pagina alla larghezza dello schermo in pixel indipendenti dal dispositivo. Pertanto, la pagina potrà riordinare il contenuto in modo da adattarlo ai diversi formati dello schermo, da quello di piccole dimensioni dei cellulari ai monitor desktop più ampi.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Pagina senza viewport">
-      Vedi esempio
-    
-  </div>
+<img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Pagina senza viewport">
+<img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Pagina con viewport">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Pagina con viewport">
-      Vedi esempio
-    
-  </div>
-</div>
 
 In caso di rotazione orizzontale, alcuni browser mantengono costante la larghezza della pagina eseguendo uno zoom invece di riordinare i contenuti su schermo. L'attributo `initial-scale=1` impone al browser di definire una relazione univoca fra i pixel del CSS e quelli indipendenti dal dispositivo con qualsiasi orientamento, consentendo alla pagina di sfruttare appieno la larghezza orizzontale.
 
@@ -119,21 +98,10 @@ A causa della variabilità di dimensioni e larghezza dello schermo in pixel CSS 
 
 L'assegnazione di elevate larghezze CSS assolute agli elementi della pagina (come nell'esempio sottostante) produrranno un `div` troppo ampio per i viewport dei dispositivi più piccoli (es. quelli con larghezza di 320 pixel CSS come i primi iPhone). Piuttosto, utilizza valori di larghezza relativi come `width: 100%`. Fai attenzione anche nell'utilizzo dei valori di posizionamento assoluti che potrebbero causare la fuoriuscita dell'elemento dal viewport degli schermi di piccole dimensioni.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Pagina con un elemento con larghezza fissa di 344 pixel in uno dei primi iPhone.">
-      Vedi esempio
-    
-  </div>
+<img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Pagina con un elemento con larghezza fissa di 344 pixel in uno dei primi iPhone." class="attempt-left">
+<img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Pagina con un elemento a larghezza fissa di 344 pixel di un Nexus 5." class="attempt-right">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Pagina con un elemento a larghezza fissa di 344 pixel di un Nexus 5.">
-      Vedi esempio
-    
-  </div>
-</div>
 
 
 ### Utilizzo delle media query CSS per ridurre i tempi di risposta 
@@ -218,11 +186,8 @@ Anche se esistono diversi elementi a cui applicare le query, i più adatti all'o
 
 Di seguito viene indicato un esempio:
 
-<figure>
-  
-    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Anteprima di una pagina che utilizza le media query per la modifica delle proprietà con il progressivo ridimensionamento.">
-  
-</figure>
+<img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Anteprima di una pagina che utilizza le media query per la modifica delle proprietà con il progressivo ridimensionamento.">
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
@@ -276,8 +241,8 @@ Anche se può essere utile definire i breakpoint in base alle classi dei disposi
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Crea breakpoint in base ai contenuti e non a dispositivi, prodotti o brand specifici.'
-- 'Progetta per i dispositivi mobili più piccoli, quindi incrementa l''esperienza con la progressiva disponibilità di spazio su schermo.'
+- Crea breakpoint in base ai contenuti e non a dispositivi, prodotti o brand specifici.
+- Progetta per i dispositivi mobili più piccoli, quindi incrementa l''esperienza con la progressiva disponibilità di spazio su schermo.
 - Mantieni le linee di testo a un massimo di 70 o 80 caratteri.
 
 
@@ -288,19 +253,12 @@ Progetta i contenuti in funzione degli schermi di piccole dimensioni, quindi esp
 Passiamo all'esempio preso in esame all'inizio, le [previsioni del tempo](/web/fundamentals/design-and-ui/responsive/).
 Innanzitutto, occorre conferire un aspetto gradevole alle previsioni su schermo.
 
-<figure>
-  
-    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Anteprima delle previsioni del tempo su schermo di piccole dimensioni.">
-  
-</figure>
+<img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Anteprima delle previsioni del tempo su schermo di piccole dimensioni.">
 
 Quindi, ridimensiona lo schermo fino a visualizzare un eccesso di spazio bianco fra gli elementi. In questo caso le previsioni assumono un aspetto poco gradevole.  600 pixel sono una dimensione eccessiva, anche se si tratta di un aspetto opinabile.
 
-<figure>
-  
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Anteprima delle previsioni del tempo con l'aumento dell'ampiezza della pagina.">
-  
-</figure>
+<img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Anteprima delle previsioni del tempo con l'aumento dell'ampiezza della pagina.">
+
 
 Per inserire un breakpoint a 600 pixel, crea due nuovi fogli di stile, uno per il browser con dimensioni massime di 600 pixel e l'altro per le dimensioni superiori ai 600 pixel.
 
@@ -310,11 +268,8 @@ Per inserire un breakpoint a 600 pixel, crea due nuovi fogli di stile, uno per i
 
 Infine, esegui il refactoring del CSS. In questo esempio, in `weather.css` abbiamo inserito stili comuni quali caratteri, icone, posizionamento di base e colori. Le disposizioni specifiche per gli schermi di piccole dimensioni sono state posizionate in `weather-small.css`, mentre quelle per gli schermi di grandi dimensioni in `weather-large.css`.
 
-<figure>
-  
-    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  
-</figure>
+<img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
+
 
 ### Selezione dei breakpoint secondari secondo necessità
 
@@ -326,15 +281,11 @@ Iniziamo ottimizzando la disposizione per gli schermi di piccole dimensioni. In 
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
-</div>
+<img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints." class="attempt-left">
+<img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints." class="attempt-right">
+<div class="clearfix"></div>
+
 
 In maniera analoga, usando schermi più grandi possiamo limitare la larghezza massima del riquadro delle previsioni in modo che non occupi tutta la larghezza dello schermo.
 
@@ -346,15 +297,10 @@ In maniera analoga, usando schermi più grandi possiamo limitare la larghezza ma
 
 Secondo la teoria classica della leggibilità, una colonna dovrebbe contenere da 70 a 80 caratteri per linea (circa 8-10 parole in italiano). Pertanto, quando un blocco di testo supera le 10 parole occorre inserire un breakpoint.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Prima dell'aggiunta di breakpoint minori.">
-  </div>
+<img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Prima dell'aggiunta di breakpoint minori." class="attempt-left">
+<img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Dopo l'aggiunta di breakpoint minori." class="attempt-right">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Dopo l'aggiunta di breakpoint minori.">
-  </div>
-</div>
 
 Osserviamo attentamente il post del blog dell'esempio precedente. Su schermi piccoli, il carattere Roboto a 1 em offre una resa ottimale con 10 parole per linea, anche se con schermi più grandi occorre un breakpoint. In questo caso, con una larghezza del browser superiore a 575 pixel, la larghezza ideale dei contenuti è di 550 pixel.
 

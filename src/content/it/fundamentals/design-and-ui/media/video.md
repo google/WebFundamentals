@@ -2,23 +2,22 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Informazioni su come aggiungere in modo semplice video al tuo sito e assicurare la migliore esperienza agli utenti, su qualsiasi dispositivo.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Video {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-Gli utenti amano i video; possono essere divertenti e informativi. Sui dispositivi mobili, i video possono essere un modo più immediato per acquisire informazioni. Tuttavia, i video consumano larghezza di banda e non funzionano allo stesso modo su tutte le piattaforme. Agli utenti non piace attendere troppo durante il caricamento dei video o premere Riproduci senza che nulla accada. Scopri di più sul modo più semplice per aggiungere video al tuo sito e assicurare la migliore esperienza agli utenti su qualsiasi dispositivo.
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+Gli utenti amano i video; possono essere divertenti e informativi. Sui dispositivi mobili, i video possono essere un modo più immediato per acquisire informazioni. Tuttavia, i video consumano larghezza di banda e non funzionano allo stesso modo su tutte le piattaforme. Agli utenti non piace attendere troppo durante il caricamento dei video o premere Riproduci senza che nulla accada. Scopri di più sul modo più semplice per aggiungere video al tuo sito e assicurare la migliore esperienza agli utenti su qualsiasi dispositivo.
+
+
 
 
 ## Aggiungere un video 
@@ -31,10 +30,10 @@ Scopri i modi più semplici per aggiungere video al tuo sito e offrire agli uten
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Utilizza elementi video per caricare, decodificare e riprodurre i video del tuo sito.'
+- Utilizza elementi video per caricare, decodificare e riprodurre i video del tuo sito.
 - Crea video in diversi formati per una vasta gamma di piattaforme mobili.
 - Dimensiona i video al meglio evitando l'overflow dei relativi contenitori.
-- 'L''accessibilità è importante: aggiungi gli elementi di tracciamento come elementi secondari di quelli video.'
+- L'accessibilità è importante: aggiungi gli elementi di tracciamento come elementi secondari di quelli video.
 
 
 ### Aggiunta di elementi video
@@ -103,7 +102,7 @@ Note: - 'Gran parte delle piattaforme supporta l''API Media Fragments, a eccezio
 
 Usando gli strumenti di sviluppo del tuo browser, controlla la presenza di `Accept-Ranges: bytes` nelle intestazioni della risposta:
 
-<img class="center" alt="Schermata degli strumenti di sviluppo di Chrome: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Schermata degli strumenti di sviluppo di Chrome: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Inserimento di un'immagine poster
 
@@ -119,15 +118,10 @@ Inoltre, è possibile utilizzare un poster come elemento sostitutivo in caso di 
 
 Segue un confronto diretto dei video con e senza immagine poster, visualizzata in bianco e nero per dimostrarne la diversa natura rispetto al video:
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Schermata di Chrome per Android, verticale: senza poster" src="images/Chrome-Android-video-no-poster.png">
-  </div>
+<img class="attempt-left" alt="Schermata di Chrome per Android, verticale: senza poster" src="img/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Schermata di Chrome per Android, verticale: con poster" src="img/Chrome-Android-video-poster.png">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Schermata di Chrome per Android, verticale: con poster" src="images/Chrome-Android-video-poster.png">
-  </div>
-</div>
 
 ## Offerta di alternative per piattaforme legacy 
 
@@ -233,12 +227,6 @@ Per un esempio pratico, dai un'occhiata <a href="https://googlesamples.github.io
 Per ottenere un prodotto che piaccia agli utenti, le proporzioni hanno un loro peso.
 
 
-### TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
-
-
-
 ### Verifica le dimensioni del video
 
 Le dimensioni effettive del video codificato potrebbero non corrispondere alle dimensioni dell'elemento video (come nel caso di un'immagine che non può essere visualizzata utilizzando le sue dimensioni reali).
@@ -250,10 +238,10 @@ Per verificare le dimensioni codificate di un video, utilizza le proprietà dell
 Quando gli elementi video sono troppo grandi per il riquadro di visualizzazione, possono eccedere dai rispettivi contenitori, impedendo la visualizzazione e 
 l'utilizzo dei controlli da parte degli utenti.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Screenshot verticale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Screenshot orizzontale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="images/Chrome-Android-landscape-video-unstyled.png">
-</div>
+<img class="attempt-left" alt="Screenshot verticale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Screenshot orizzontale di Android Chrome: l'elemento video senza stile supera il riquadro di visualizzazione" src="img/Chrome-Android-landscape-video-unstyled.png">
+<div class="clearfix"></div>
+
 
 Puoi controllare le dimensioni del video con JavaScript o CSS. Le librerie e i plugin di JavaScript, come [FitVids](//fitvidsjs.com/), consentono di rispettare le dimensioni e le proporzioni corrette, anche nel caso dei video Flash di YouTube e di altre fonti.
 
@@ -297,16 +285,16 @@ L'orientamento del dispositivo non è un problema per i PC desktop o portatili, 
 
 Safari per iPhone commuta in maniera eccellente l'orientamento verticale e orizzontale:
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Schermata di un video riprodotto da Safari per iPhone, in verticale" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Schermata di un video riprodotto da Safari per iPhone, in orizzontale" src="images/iPhone-video-playing-landscape.png">
-</div>
+<img class="attempt-left" alt="Schermata di un video riprodotto da Safari per iPhone, in verticale" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Schermata di un video riprodotto da Safari per iPhone, in orizzontale" src="img/iPhone-video-playing-landscape.png">
+<div class="clearfix"></div>
+
 
 L'orientamento del dispositivo su iPad e Chrome per Android può diventare un problema.
 Ad esempio, la riproduzione di un video su un iPad con orientamento orizzontale senza alcuna personalizzazione produce quanto segue:
 
 <img class="center" alt="Schermata di un video riprodotto con Safari per iPad Retina, in orizzontale"
-src="images/iPad-Retina-landscape-video-playing.png">
+src="img/iPad-Retina-landscape-video-playing.png">
 
 Impostando `width: 100%` o `max-witdh: 100%` sul video usando i CSS è possibile risolvere diversi problemi della disposizione dell'orientamento del dispositivo. È possibile anche prendere in considerazione alternative a schermo intero.
 
@@ -314,15 +302,15 @@ Impostando `width: 100%` o `max-witdh: 100%` sul video usando i CSS è possibile
 
 Le diverse piattaforme visualizzano i video in modo diverso. Safari per iPhone visualizza un elemento video inline in una pagina web, ma il video viene riprodotto in modalità a schermo intero:
 
-<img class="center" alt="Schermata di elementi video su iPhone, in verticale" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="Schermata di elementi video su iPhone, in verticale" src="img/iPhone-video-with-poster.png">
 
 Su Android, è possibile attivare la modalità a schermo intero facendo clic sulla relativa icona. Tuttavia, l'impostazione predefinita prevede la riproduzione inline del video:
 
-<img class="center" alt="Schermata di un video riprodotto con Safari per iPhone, in verticale" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Schermata di un video riprodotto con Safari per iPhone, in verticale" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 Safari per iPad prevede la riproduzione inline del video:
 
-<img class="center" alt="Schermata di un video riprodotto con Safari per iPad Retina, in orizzontale" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Schermata di un video riprodotto con Safari per iPad Retina, in orizzontale" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### Controllo della visualizzazione a schermo intero dei contenuti
 
@@ -382,7 +370,7 @@ Note: Chrome per Android, Safari per iOS e tutti i browser per PC desktop a ecce
 
 L'elemento di tracciamento visualizza le didascalie nel modo seguente:
 
- <img class="center" alt="Schermata con didascalie visualizzate con l'elemento di tracciamento in Chrome per Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Schermata con didascalie visualizzate con l'elemento di tracciamento in Chrome per Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Aggiungere l'elemento di tracciamento
 

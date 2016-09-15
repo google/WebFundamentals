@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La quantità di dati scaricati da ogni app cresce costantemente. Per garantire prestazioni ottimali dobbiamo ottimizzare l'utilizzo di ogni singolo byte!
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -70,7 +69,7 @@ I dati precedenti definiscono il trend di crescita del numero di byte scaricati 
 
 Un sito medio all'inizio del 2014 è composto da 75 richieste che aggiungono fino a 1054 KB di byte trasferiti totali, e il numero totale di byte (e richieste) è aumentato a ritmo costante nel corso dell'anno precedente. Tale dato da solo non sarebbe così sorprendente, ma comporta delle importanti implicazioni prestazionali: è vero, la velocità di internet sta aumentando sempre di più, ma aumenta in modo diverso in paesi diversi, e molti utenti sono ancora soggetti a limiti per il download di dati e piani tariffari costosi, specialmente su dispositivi mobili.
 
-A differenza delle controparti desktop, le applicazioni web non richiedono una procedura di installazione distinta: basta inserire l'URL ed ecco che possiamo navigare. Questa è una delle funzioni chiave del web. Tuttavia, perché ciò sia possibile, dobbiamo spesso recuperare dozzine, talvolta centinaia di risorse disparate, che aggiungono tutte megabyte di dati e devono essere individuate in centinaia di millisecondi per consentirci di vivere l'esperienza web istantanea che ci aspettiamo.**
+A differenza delle controparti desktop, le applicazioni web non richiedono una procedura di installazione distinta: basta inserire l'URL ed ecco che possiamo navigare. Questa è una delle funzioni chiave del web. Tuttavia, perché ciò sia possibile, dobbiamo spesso recuperare dozzine, talvolta centinaia di risorse disparate, che aggiungono tutte megabyte di dati e devono essere individuate in centinaia di millisecondi per consentirci di vivere l'esperienza web istantanea che ci aspettiamo.
 
 Poter vivere un'esperienza simile conoscendo tali requisiti non è cosa da poco; ecco perché l'ottimizzazione dell'efficienza dei contenuti è fondamentale, eliminando i download non necessari, ottimizzando la codifica dei dati trasferiti per ogni risorsa tramite diverse tecniche di compressione e avvalendosi del caching, laddove possibile, per eliminare eventuali download ridondanti.
 

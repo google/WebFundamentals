@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dopo aver eliminato le risorse non necessarie, il passo successivo è minimizzare le dimensioni totali delle risorse restanti che il browser deve scaricare, ad esempio comprimendole attraverso l'applicazione di algoritmi di compressione specifici e generici per i contenuti (GZip).
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -72,7 +71,7 @@ Naturalmente, ti chiederai, tutto ciò è fantastico, ma come può aiutarci ad o
 Il modo migliore per comprimere dati ridondanti o non necessari consiste nell'eliminarli in un'unica soluzione. Naturalmente, non possiamo semplicemente eliminare dei dati a caso, ma in alcuni contesti in cui disponiamo di una conoscenza specifica del contenuto dei dati e delle relative proprietà, è spesso possibile ridurre significativamente le dimensioni del payload senza inficiarne il significato.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Considera la semplice pagina HTML precedente e i suoi tre diversi tipi di contenuto: markup HTML, stili CSS e JavaScript. Ciascuno di essi dispone di norme diverse per quanto riguarda ciò che rappresenta un markup valido, norme CSS o contenuti JavaScript, regole diverse per indicare i commenti, e così via. Come potremmo ridurre le dimensioni di questa pagina?
@@ -81,9 +80,9 @@ Considera la semplice pagina HTML precedente e i suoi tre diversi tipi di conten
 * Un compressore CSS 'intelligente' potrebbe notare che stiamo utilizzando un metodo inefficace di definizione di regole per `.awesome-container` e accorpare i due periodi in uno senza influenzare altri stili, risparmiando altri byte.
 * Gli whitespace (spazi vuoti e tab) sono utilizzati per comodità dai developer in HTML, CSS e JavaScript. Un ulteriore compressore potrebbe eliminare ogni spazio e tab.
 
-^
+
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Una volta applicate tali procedure, la nostra pagina passerà da 406 a 150 caratteri, riducendosi del 63%! Molto probabilmente non sarà molto leggibile, ma d'altronde non deve neanche esserlo: possiamo mantenere la pagina originale come 'development version' e poi applicare le procedure precedenti quando saremo pronti a inserire la pagina sul nostro sito web.

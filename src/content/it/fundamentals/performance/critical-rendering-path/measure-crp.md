@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Non puoi ottimizzare ciò che non puoi misurare. Fortunatamente, la Navigation Timing API ci offre tutti gli strumenti necessari per misurare ciascun passaggio del percorso di rendering critico.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

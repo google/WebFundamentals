@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Prima che il browser possa eseguire il rendering del contenuto sullo schermo, deve costruire le strutture DOM e CSSOM. Di conseguenza, dobbiamo assicurarci di fornire al browser sia HTML che CSS nel più breve tempo possibile.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -17,7 +16,7 @@ Prima che il browser possa eseguire il rendering della pagina, deve costruire le
 
 ## TL;DR {: .hide-from-toc }
 - Byte → caratteri → token → nodi → modello a oggetti.
-- 'Il markup HTML viene trasformato in Document Object Model (DOM), il markup CSS invece in un CSS Object Model (CSSOM).'
+- Il markup HTML viene trasformato in Document Object Model (DOM), il markup CSS invece in un CSS Object Model (CSSOM).
 - DOM e CSSOM rappresentano strutture dati indipendenti.
 - La barra temporale di Chrome DevTools ci consente di acquisire e ispezionare i costi di costruzione ed elaborazione di DOM e CSSOM.
 
@@ -26,7 +25,7 @@ Prima che il browser possa eseguire il rendering della pagina, deve costruire le
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Iniziamo con il caso più semplice possibile: una pagina HTML semplice con un po' di testo e una singola immagine. Cosa deve fare il browser per elaborare questa semplice pagina?

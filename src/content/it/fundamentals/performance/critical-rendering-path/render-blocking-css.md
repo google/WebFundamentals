@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Per impostazione predefinita, CSS viene trattato come risorsa di blocco del rendering, il che significa che il browser sospenderà il rendering di qualsiasi contenuto elaborato fino alla costruzione di CSSOM. Assicurarsi di mantenere il CSS snello, di fornirlo il più rapidamente possibile e di utilizzare i tipi di supporti e le query supporti per sbloccare il rendering.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -18,37 +17,20 @@ Per impostazione predefinita, CSS viene trattato come risorsa di blocco del rend
 Nella sezione precedente, abbiamo notato che il percorso di rendering critico richiede di disporre sia di DOM che di CSSOM per costruire la struttura di rendering, il che crea un'importante implicazione per la performance: **sia HTML che CSS sono risorse che bloccano il rendering.** HTML è ovvio, dato che senza DOM non avremmo niente di cui eseguire il rendering, ma il requisito CSS potrebbe essere meno immediato. Cosa accadrebbe se cercassimo di eseguire il rendering di una pagina tipica senza bloccarlo su CSS?
 
 ## TL;DR {: .hide-from-toc }
-- 'Per impostazione predefinita, CSS viene trattato come risorsa con blocco rendering.'
+- Per impostazione predefinita, CSS viene trattato come risorsa con blocco rendering.
 - I tipi di supporti e le query supporti ci consentono di segnare alcune risorse CSS non bloccano il rendering.
-- 'Tutte le risorse CSS, a prescindere del comportamento di blocco o meno, sono scaricate dal browser.'
+- Tutte le risorse CSS, a prescindere del comportamento di blocco o meno, sono scaricate dal browser.
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>NYTimes con CSS</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="NYTimes con CSS">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>NYTimes senza CSS (FOUC)</b>
-    <img src="images/nytimes-nocss-device.png" alt="NYTimes senza CSS">
-
-  </div>
-</div>
-
-{% comment %}
-<table>
-<tr>
-<td>NYTimes con CSS</td>
-<td>NYTimes senza CSS (FOUC)</td>
-</tr>
-<tr>
-<td><img src="images/nytimes-css-device.png" alt="NYTimes con CSS" class="center"></td>
-<td><img src="images/nytimes-nocss-device.png" alt="NYTimes senza CSS" class="center"></td>
-</tr>
-</table>
-{% endcomment %}
+<figure class="attempt-left">
+  <img class="center" src="images/nytimes-css-device.png" alt="NYTimes con CSS">
+  <figcaption>NYTimes con CSS</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/nytimes-nocss-device.png" alt="NYTimes senza CSS">
+  <figcaption>NYTimes senza CSS (FOUC)</figcaption>
+</figure>
+<div class="clearfix"></div>
 
 L'esempio di cui sopra mostra il sito web di NYTimes con e senza CSS, dimostra il motivo per cui il rendering è bloccato finché CSS è disponibile, senza CSS la pagina è in realtà inutilizzabile. In effetti, l'esperienza alla destra viene spesso definita come 'Flash of Unstyled Content' (FOUC). Di conseguenza, il browser bloccherà il rendering finché non disporrà sia di DOM che di CSSOM.
 

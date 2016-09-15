@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Un'immagine vale più di mille parole e ricopre un ruolo chiave per tutte le pagine. Tuttavia, le immagini richiedono il download di numerosi dati. Il Web design reattivo consente di modificare disposizione e immagini in base alle caratteristiche del dispositivo.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Immagini {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -25,7 +24,7 @@ Il Web design reattivo consente di modificare disposizione e contenuti in base a
 <img class="center" src="img/art-direction.png" alt="Esempio di direzione artistica"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-In altre circostanze potrebbe essere necessario modificare drasticamente l'immagine, come ad esempio ridimensionarla, ritagliarla o persino sostituirla. In questi casi, le modifiche all'immagine vengono definite 'direzione artistica'. Consulta [responsiveimages.org/demos/] (http://responsiveimages.org/demos/) per ulteriori esempi.
+In altre circostanze potrebbe essere necessario modificare drasticamente l'immagine, come ad esempio ridimensionarla, ritagliarla o persino sostituirla. In questi casi, le modifiche all'immagine vengono definite 'direzione artistica'. Consulta [responsiveimages.org/demos/](http://responsiveimages.org/demos/) per ulteriori esempi.
 
 
 ## Responsive Images
@@ -77,21 +76,16 @@ Inserisci descrizioni dettagliate con l'attributo `alt` degli elementi `img` per
 
 ### Ottimizzazione di `img` con `srcset` per dispositivi a DPI elevati
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      L'attributo <code>srcset</code> ottimizza l'azione dell'elemento <code>img</code> semplificando la fornitura di diversi file di immagine in base alle caratteristiche dei dispositivi. In maniera analoga alla funzione nativa CSS <code>image-set</code> <a href='images-in-css.html#use-image-set-to-provide-high-res-images'> </a>, <code>srcset</code> indica al browser l'immagine ottimale in base alle caratteristiche del dispositivo, ad esempio un'immagine 2x su un display 2x e un'immagine 1x su dispositivi 2x con limiti di larghezza di banda.
-    </p>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Pzc5Dly_jEM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+L'attributo <code>srcset</code> ottimizza l'azione dell'elemento <code>img</code> semplificando la fornitura di diversi file di immagine in base alle caratteristiche dei dispositivi. In maniera analoga alla funzione nativa CSS <code>image-set</code> <a href='images-in-css.html#use-image-set-to-provide-high-res-images'> </a>, <code>srcset</code> indica al browser l'immagine ottimale in base alle caratteristiche del dispositivo, ad esempio un'immagine 2x su un display 2x e un'immagine 1x su dispositivi 2x con limiti di larghezza di banda.
+
+<div class="clearfix"></div>
+
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
@@ -110,20 +104,16 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Note: L'elemento <code>picture</code> inizia a essere supportato dai browser. Anche se non è disponibile in tutti i browser, è consigliabile utilizzarlo grazie alla retroattività e alla possibilità di utilizzare una <a href='http://picturefill.responsiveimages.org/'>polilinea Picturefill</a>. Consulta il sito <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a> per maggiori informazioni.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      Utilizzare l'elemento <code>picture</code> quando esiste un'origine dell'immagine a densità multiple o quando una grafica reattiva impone l'utilizzo di un'immagine diversa su alcuni tipi di schermi. Così come avviene per l'elemento <code>video</code>, è possibile inserire diversi elementi <code>source</code> per specificare diversi file d'immagine in base alle media query o al formato dell'immagine.
-    </p>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+Utilizzare l'elemento <code>picture</code> quando esiste un'origine dell'immagine a densità multiple o quando una grafica reattiva impone l'utilizzo di un'immagine diversa su alcuni tipi di schermi. Così come avviene per l'elemento <code>video</code>, è possibile inserire diversi elementi <code>source</code> per specificare diversi file d'immagine in base alle media query o al formato dell'immagine.
+
+<div class="clearfix"></div>
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture"   adjust_indentation="auto" %}
@@ -221,7 +211,7 @@ Il sito di J. Crews è un buon esempio di immagini interattive e dotate di funzi
 #### Compressione delle immagini
 
 La [tecnica di compressione
-delle immagini] (http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) invia un'immagine 2x a elevata compressione a tutti i dispositivi, indipendentemente dalle funzionalità. In base al tipo d'immagine e al livello di compressione, la qualità dell'immagine potrebbe restare inalterata anche con una significativa riduzione delle dimensioni del file.
+delle immagini](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) invia un'immagine 2x a elevata compressione a tutti i dispositivi, indipendentemente dalle funzionalità. In base al tipo d'immagine e al livello di compressione, la qualità dell'immagine potrebbe restare inalterata anche con una significativa riduzione delle dimensioni del file.
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">Vedi esempio</a>
 
@@ -247,9 +237,9 @@ La proprietà 'background' CSS è un potente strumento per l'aggiunta di immagin
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Utilizza immagini adatte alle caratteristiche del display, prendendo in considerazione dimensioni dello schermo, risoluzione del dispositivo e disposizione della pagina.'
+- Utilizza immagini adatte alle caratteristiche del display, prendendo in considerazione dimensioni dello schermo, risoluzione del dispositivo e disposizione della pagina.
 - Modifica la proprietà <code>background-image</code> dei CSS per i display ad alta risoluzione utilizzando le media query con <code>min-resolution</code> e <code>-webkit-min-device-pixel-ratio</code>.
-- Utilizza 'scrset' per fornire immagini ad alta risoluzione oltre all'immagine 1x nel markup.
+- Utilizza `scrset` per fornire immagini ad alta risoluzione oltre all'immagine 1x nel markup.
 - Valuta i costi in termini di rendimento dovuti all'utilizzo di tecniche di sostituzione delle immagini via JavaScript o di immagini compresse ad alta risoluzione per i dispositivi a risoluzioni inferiori.
 
 
@@ -354,7 +344,6 @@ Per creare icone più complesse, SVG offre un risultato più leggero, intuitivo 
 * È un formato semantico.
 * Offrono un'accessibilità ottimale con gli i corretti attributi.
 
-&nbsp;
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-svg.html" region_tag="iconsvg"   adjust_indentation="auto" %}
@@ -372,15 +361,14 @@ I caratteri per icone sono diffusi e intuitivi, ma presentano alcuni svantaggi r
 
 
 
-<img src="img/icon-fonts.png" class="center"
-srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
+<img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Esempio di pagina che utilizza FontAwesome come icone dei caratteri.">
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont"   adjust_indentation="auto" %}
 </pre>
 
-Esistono diversi caratteri per icone gratuiti e a pagamento come [Font Awesome] (http://fortawesome.github.io/Font-Awesome/), [Pictos] (http://pictos.cc/) e [Glyphicons] (http://glyphicons.com/).
+Esistono diversi caratteri per icone gratuiti e a pagamento come [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) e [Glyphicons](http://glyphicons.com/).
 
 Equilibra il peso delle richieste HTTP aggiuntive e le dimensioni del file con le esigenze in termini di icone. Ad esempio, se occorrono poche icone è consigliabile l'utilizzo di un'immagine o di uno sprite di immagine.
 
@@ -397,10 +385,10 @@ Spesso le immagini richiedono il download di molti dati e occupano una parte ril
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Non scegliere un formato a caso per le immagini, ma analizza quelli disponibili e utilizza il più adatto alle tue esigenze.'
+- Non scegliere un formato a caso per le immagini, ma analizza quelli disponibili e utilizza il più adatto alle tue esigenze.
 - Inserisci strumenti di ottimizzazione delle immagini e compressione al flusso di lavoro per la riduzione delle dimensioni dei file.
 - Riduci il numero delle richieste HTTP inserendo immagini di utilizzo comune negli sprite immagine.
-- 'Valuta se caricare le immagini solo al momento della visualizzazione, in modo da ottimizzare tempi di caricamento e peso iniziale della pagina.'
+- Valuta se caricare le immagini solo al momento della visualizzazione, in modo da ottimizzare tempi di caricamento e peso iniziale della pagina.
 
 
 ### Scelta del formato corretto
@@ -425,7 +413,7 @@ Per scegliere il formato corretto attieniti alle linee guida seguenti:
 
 È possibile ridurre le dimensioni del file utilizzando il 'post-processing' una volta concluso il salvataggio. Esistono diversi strumenti per la compressione delle immagini: con o senza perdita di informazioni, online, GUI e con riga di comando. È consigliabile eseguire un'ottimizzazione automatizzata dell'immagine come elemento principale del flusso di lavoro in uso.
 
-Esistono diversi strumenti per eseguire un'ulteriore compressione senza perdita di informazioni dei file JPG e PNG senza compromettere la qualità dell'immagine. Per il formato JPG, prova [jpegtran](http://jpegclub.org/) o [jpegoptim](http://freshmeat.net/projects/jpegoptim/), disponibile solo su Linux e da eseguire con l'opzione `strip-all`. Per il formato PNG, prova [OptiPNG] (http://optipng.sourceforge.net/) o [PNGOUT] (http://www.advsys.net/ken/util/pngout.htm).
+Esistono diversi strumenti per eseguire un'ulteriore compressione senza perdita di informazioni dei file JPG e PNG senza compromettere la qualità dell'immagine. Per il formato JPG, prova [jpegtran](http://jpegclub.org/) o [jpegoptim](http://freshmeat.net/projects/jpegoptim/), disponibile solo su Linux e da eseguire con l'opzione `strip-all`. Per il formato PNG, prova [OptiPNG](http://optipng.sourceforge.net/) o [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
 
 ##Utilizzo degli sprite immagine
 
@@ -460,10 +448,6 @@ In alcuni casi, è consigliabile evitare l'utilizzo delle immagini. Se possibile
 
 
 
-
-### TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
 
 
 ### Posiziona i testi in un markup senza incorporarli nelle immagini

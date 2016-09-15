@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Le risorse più veloci e ottimizzate sono quelle non inviate. Hai verificato le tue risorse di recente? Dovresti farlo periodicamente, per assicurarti che tutte le risorse consentano di offrire all'utente un'esperienza migliore.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -11,13 +10,12 @@ description: Le risorse più veloci e ottimizzate sono quelle non inviate. Hai v
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
 
-
 Le risorse più veloci e ottimizzate sono quelle non inviate. Hai verificato le tue risorse di recente? Dovresti farlo periodicamente, per assicurarti che tutte le risorse consentano di offrire all'utente un'esperienza migliore.
 
 
 ## TL;DR {: .hide-from-toc }
-- 'Inventariare tutte le risorse, proprie e di terzi, sulle proprie pagine'
-- 'Valutare il rendimento di ogni risorsa: opzioni e performance tecniche'
+- Inventariare tutte le risorse, proprie e di terzi, sulle proprie pagine
+- Valutare il rendimento di ogni risorsa: opzioni e performance tecniche
 - Stabilire se le risorse offrono opzioni sufficienti
 
 

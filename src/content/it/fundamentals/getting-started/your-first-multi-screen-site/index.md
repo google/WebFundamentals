@@ -2,15 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: È possibile accedere al Web con numerosi dispositivi che spaziano dai telefoni ai televisori e con dimensioni dello schermo molto diverse fra loro. Scopri come costruire un sito utilizzabile al meglio con numerosi dispositivi.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Il tuo primo sito per dispositivi multipli {: .page-title }
 
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
+
 {% include "web/_shared/contributors/paulkinlan.html" %}
-
-
 
 La creazione delle esperienze per dispositivi multipli non è un'operazione molto difficile. Seguendo questa guida creeremo la pagina di destinazione di un prodotto di esempio per il nostro<a href='https://www.udacity.com/course/cs256'>Corso di sviluppo Web per dispositivi mobili CS256</a> adattabile a tutti i tipi di dispositivo.
 
@@ -51,15 +50,16 @@ Abbiamo individuato il necessario:
 
 Abbiamo delineato anche una bozza dell'Information Architecture (IA) e della disposizione dei viewport estesi in entrambe le dimensioni.
 
-<div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="IA per viewport ristretti">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="IA per viewport ampi">
-</div>
+
+<img class="attempt-left" src="images/narrowviewport.png" alt="IA per viewport ristretti">
+<img  class="attempt-right" src="images/wideviewport.png" alt="IA per viewport ampi">
+<div class="clearfix"></div>
+
 
 È possibile convertirla facilmente nelle bozze delle sezioni di una struttura di pagina da utilizzare per il resto del progetto.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Aggiunta di contenuti alla pagina
@@ -75,7 +75,7 @@ Il titolo e il modulo di notifica delle richieste sono i componenti principali d
 Nel titolo, inserisci un testo semplice per descrivere il corso:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 Compila anche il modulo.
@@ -86,7 +86,7 @@ Tutti i moduli devono contenere etichette e segnaposto, in modo da consentire ag
 Aggiungiamo aree semantiche per aiutare gli utenti a velocizzare e semplificare l'immissione dei contenuti usando dispositivi mobili. Ad esempio, durante la digitazione di un numero telefonico, l'utente dovrebbe visualizzare il solo tastierino numerico.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -97,7 +97,7 @@ Le sezioni dei contenuti Video e Informazioni richiedono maggiore attenzione.
 Segue un elenco delle funzionalità e un segnaposto video che consente di ammirare i nostri prodotti in funzione.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Spesso i video vengono utilizzati per descrivere i contenuti in maniera più interattiva e illustrano la dimostrazione di un prodotto o concetto.
@@ -110,7 +110,7 @@ Rispettando le best practice puoi integrare facilmente i video nel tuo sito:
 * Inserisci un testo alternativo per scaricare il video in caso di impossibilità di riproduzione in finestra.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
@@ -127,7 +127,7 @@ La sezione Immagini della pagina è una raccolta di immagini di contenuto
  che consentono di convogliare il significato della pagina. Sono simili alle fotografie usate negli articoli dei giornali. Utilizziamo fotografie dei tutor del progetto Chris Wilson, Peter Lubbers e Sean Bennet
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
 </pre>
 
  che è possibile scalare al 100% della larghezza dello schermo, condizione ideale per i dispositivi con viewport ristretto ma non per quelli con viewport ampio (come i PC desktop). Questo problema è l'oggetto della sezione sul responsive design.
@@ -145,7 +145,7 @@ L'ultima sezione è una semplice tabella per presentare le caratteristiche tecni
 Usa le tabelle solo per dati come ad esempio le matrici di informazioni.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Aggiunta di un footer
@@ -155,17 +155,17 @@ La maggior parte dei siti deve contenere un footer per la visualizzazione di con
 Nel nostro sito inseriamo solo i link alla sezione di termini e condizioni, a una pagina di contatti e ai nostri profili sui social media.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Riepilogo
 
 Abbiamo delineato il sito e individuato tutti i principali elementi strutturali. Abbiamo verificato anche la presenza di contenuti pertinenti e della loro collocazione ottimale per la soddisfazione delle esigenze aziendali.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="Contenuto">
- <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+<img class="attempt-left" src="images/content.png" alt="Contenuto">
+<img  class="attempt-right" src="images/narrowsite.png" alt="">
+<div class="clearfix"></div>
+
 
 Al momento la pagina offre un aspetto poco gradevole. Si tratta tuttavia di una scelta intenzionale. 
 I contenuti sono l'aspetto più importante di ogni sito, ma occorreva prima disporre di Information Architecture e densità di tipo corretto. La guida è stata un'ottima base per iniziare. Nella prossima guida assegneremo uno stile ai nostri contenuti.
@@ -185,16 +185,16 @@ I contenuti sono l'aspetto più importante di ogni sito, ma occorreva prima disp
 Stiamo creando un sito adatto ai diversi formati dello schermo e tipi di dispositivo. Nell'[articolo precedente](#) abbiamo assemblato la Information Architecture della pagina e creato una struttura di base.
 In questa guida trasformeremo la struttura di base in una pagina gradevole e reattiva con numerosi formati dello schermo.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Contenuti">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenuti e struttura </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Sito definitivo </a> </figcaption>
-  </figure>
-</div>
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="Contenuti">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenuti e struttura </a> </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Sito definitivo </a> </figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 Seguendo i principi dello sviluppo Web per piattaforme mobili, abbiamo iniziato lo sviluppo per un viewport ristretto e simile a quello di un telefono cellulare.
 Quindi abbiamo scalato il tutto per i dispositivi di formato maggiore.
@@ -219,7 +219,7 @@ Senza di esso il sito non funzionerà al meglio sui dispositivi mobili.
 Il viewport consente al browser di scalare la pagina per adattarla allo schermo. Esistono diverse configurazioni per usare il viewport per la visualizzazione della pagina. Seguono alcuni suggerimenti di default:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 Il viewport risiede nella sezione `head` del documento e deve essere dichiarato una sola volta.
@@ -251,9 +251,9 @@ Nella guida precedente abbiamo aggiunto le immagini 'di contenuto', ovvero eleme
 
 Ad esempio, come per l'immagine del titolo dei contenuti 'above the fold'. Queste immagini vengono spesso utilizzate per incoraggiare l'utente a cercare ulteriori informazioni sul prodotto.
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="Sito progettato">
-</div>
+
+<img src="images/narrowsite.png" alt="Sito progettato">
+
 
 Sono molto facili da inserire. Nel nostro caso useremo lo sfondo dell'intestazione, applicato mediante un semplice CSS.
 
@@ -269,7 +269,8 @@ Sono molto facili da inserire. Nel nostro caso useremo lo sfondo dell'intestazio
 
 Abbiamo scelto un'immagine di sfondo semplice e sfumata per non distrarre l'utente, impostandola in modo da coprire l'intero elemento e adattarsi alle dimensioni della finestra mantenendo le corrette proporzioni.
 
-<br style="clear: both;">
+<div class="clearfix"></div>
+
 
 ### Impostare il primo breakpoint 
 

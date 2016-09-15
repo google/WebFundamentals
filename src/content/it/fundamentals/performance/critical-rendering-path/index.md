@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ottimizzazione del percorso di rendering critico attraverso l'assegnazione di priorità alla visualizzazione del contenuto che è correlato all'azione principale che l'utente vuole effettuare sulla pagina.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

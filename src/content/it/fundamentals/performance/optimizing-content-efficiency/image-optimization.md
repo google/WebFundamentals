@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Le immagini costituiscono la maggior parte dei byte scaricati su una pagina Web e occupano spesso una parte significativa di spazio visivo. Di conseguenza, ottimizzare le immagini consente spesso di risparmiare byte e migliorare le prestazioni del sito Web: meno byte deve scaricare il browser, meno traffico si crea sulla larghezza di banda del client, più rapidamente il browser è in grado di scaricare e renderizzare contenuti utili sul monitor.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
@@ -22,7 +21,7 @@ L'ottimizzazione delle immagini è al contempo un'arte e una scienza: è un'arte
 
 ## TL;DR {: .hide-from-toc }
 - Eliminare immagini non necessarie
-- 'Sfruttare effetti CSS3, laddove possibile'
+- Sfruttare effetti CSS3, laddove possibile
 - Utilizzare font web invece di codificare il testo in immagini
 
 
@@ -41,24 +40,20 @@ Ogni volta che ti trovi a codificare del testo in immagine, fermati e rifletti. 
 ## TL;DR {: .hide-from-toc }
 - Le immagini vettoriali sono ideali per le forme geometriche
 - Le immagini vettoriali sono indipendenti da zoom e risoluzione
-- 'Le immagini raster sono consigliabili per visualizzazioni complesse e dettagliate, contenenti numerose forme irregolari'
+- Le immagini raster sono consigliabili per visualizzazioni complesse e dettagliate, contenenti numerose forme irregolari
 
 
 Una volta stabilito che il formato ottimale per ottenere l'effetto desiderato è un'immagine, la successiva scelta critica riguarda la selezione del formato idoneo:
 
-&nbsp;
-
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Vettoriale</b>
-    <img class="center" src="images/vector-zoom.png" alt="Immagine vettoriale ingrandita">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Raster</b>
-    <img src="images/raster-zoom.png" alt="Immagine raster ingrandita">
-  </div>
-</div>
+<figure class="attempt-left">
+  <img src="images/vector-zoom.png" alt="Immagine vettoriale ingrandita">
+  <figcaption>Vettoriale</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/raster-zoom.png" alt="Immagine raster ingrandita">
+  <figcaption>Raster</figcaption>
+</figure>
+<div class="clearfix"></div>
 
 * La [grafica vettoriale](http://en.wikipedia.org/wiki/Vector_graphics) utilizza linee, punti e poligoni per creare un'immagine.
 * La [grafica raster](http://en.wikipedia.org/wiki/Raster_graphics) crea un'immagine codificando i singoli valori di ogni pixel entro una griglia rettangolare.
@@ -75,7 +70,7 @@ Le immagini raster non dispongono della medesima, comoda indipendenza da risoluz
 ## TL;DR {: .hide-from-toc }
 - Le risoluzioni più alte del monitor contengono più device pixel per CSS pixel
 - Le immagini ad alta risoluzione richiedono un numero significativamente più alto di pixel e byte
-- 'Le tecniche di ottimizzazione delle immagini sono le stesse, indipendentemente dalla risoluzione'
+- Le tecniche di ottimizzazione delle immagini sono le stesse, indipendentemente dalla risoluzione
 
 
 Quando si parla di pixel immagine, dobbiamo fare una distinzione tra diversi tipi di pixel: CSS pixel e device pixel. Un solo CSS pixel può contenere più device pixel; ad esempio, un solo CSS pixel può corrispondere a un unico device pixel o a più device pixel. Qual è la differenza? Più device pixel ci sono, maggiore è il dettaglio dei contenuti visualizzati sul monitor.
@@ -151,7 +146,7 @@ Nel caso illustrato, svgo riduce le dimensioni del file SVG generato con Illustr
 ## TL;DR {: .hide-from-toc }
 - Un'immagine raster è costituita da una griglia di pixel
 - Ogni pixel contiene informazioni sul colore e la trasparenza
-- 'I compressori di immagini si avvalgono di diverse tecniche per ridurre il numero di bit necessari per pixel, riducendo quindi le dimensioni del file immagine'
+- I compressori di immagini si avvalgono di diverse tecniche per ridurre il numero di bit necessari per pixel, riducendo quindi le dimensioni del file immagine
 
 
 Un'immagine raster consiste semplicemente in una griglia bidimensionale di singoli 'pixel'; ad es., un'immagine di 100x100 pixel è una sequenza di 10.000 pixel. Ogni pixel contiene a sua volta i valori '[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)': (R) canale rosso (red channel), (G) canale verde (green channel), (B) canale blu (blue channel e (A) canale alfa (della trasparenza - alpha channel).
@@ -162,7 +157,6 @@ Internamente, il browser attribuisce 256 valori (colori) a ogni canale, che si t
 * 10.000 pixel x 4 byte = 40.000 byte
 * 40.000 byte / 1024 = 39 KB
 
-^
 
 Note: Oltre a ciò, indipendentemente dal formato immagine utilizzato per il trasferimento dei dati dal server al client, quando l'immagine viene decodificata dal browser, ogni pixel occupa sempre 4 byte di memoria. Ciò può rappresentare un limite notevole per le immagini di grandi dimensioni e i dispositivi che non dispongono di memoria sufficiente, come ad esempio i dispositivi mobili entry level.
 
@@ -225,10 +219,10 @@ In conclusione, ci troviamo di nuovo davanti ad argomenti molto interessanti ma 
 ## Compressione delle immagini lossless vs lossy
 
 ## TL;DR {: .hide-from-toc }
-- 'In base al funzionamento della nostra vista, le immagini sono perfette per la compressione lossy'
+- In base al funzionamento della nostra vista, le immagini sono perfette per la compressione lossy'
 - L'ottimizzazione delle immagini è una funzione di compressione lossy e lossless
 - Le differenze tra i diversi formati immagine sono dovute alle diverse modalità e tipologie di algoritmi lossy e lossless utilizzati per l'ottimizzazione
-- 'Non esiste un formato o un ''quality setting'' migliore in assoluto per tutte le immagini: ogni combinazione tra compressore e immagini produce un risultato unico'
+- Non esiste un formato o un ''quality setting'' migliore in assoluto per tutte le immagini: ogni combinazione tra compressore e immagini produce un risultato unico'
 
 
 Per alcuni tipi di dati, quali il codice sorgente di una pagina o un file eseguibile, è fondamentale che un compressore non alteri né perda alcuna informazione originale: un singolo bit di dati mancante o sbagliato può modificare completamente il contenuto del file o, ancora peggio, corromperlo irrimediabilmente. Per alcuni altri tipi di dati, quali immagini, audio e video, può essere assolutamente sufficiente fornire una rappresentazione 'approssimativa' dei dati originali.
@@ -252,8 +246,8 @@ Note: Nota che la qualità dei diversi formati immagine non è direttamente para
 ## Selezione del formato immagine corretto
 
 ## TL;DR {: .hide-from-toc }
-- 'Selezione iniziale del formato universale corretto: GIF, PNG, JPEG'
-- 'Test e selezione delle impostazioni idonee per ogni formato: qualità, dimensioni palette, ecc...'
+- Selezione iniziale del formato universale corretto: GIF, PNG, JPEG'
+- Test e selezione delle impostazioni idonee per ogni formato: qualità, dimensioni palette, ecc...'
 - Eventuale aggiunta di risorse WebP e JPEG XR per le immagini scalate per i client attuali
 
 

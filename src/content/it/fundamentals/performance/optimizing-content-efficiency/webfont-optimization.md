@@ -2,14 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: La tipografia è fondamentale per un design, un branding, una leggibilità e accessibilità idonei. I font web consentono di ottenere tutto ciò, e non solo: il testo è selezionabile, ricercabile, ingrandibile e ampiamente DPI friendly, offrendo un rendering coerente e conciso, indipendentemente dalle dimensioni e dalla risoluzione del monitor. I font web sono fondamentali per ottenere design, UX e prestazioni ottimali.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
 # Ottimizzazione dei font web {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
 
 
 La tipografia è fondamentale per un design, un branding, una leggibilità e accessibilità idonei. I font web consentono di ottenere tutto ciò, e non solo: il testo è selezionabile, ricercabile, ingrandibile e ampiamente DPI friendly, offrendo un rendering coerente e conciso, indipendentemente dalle dimensioni e dalla risoluzione del monitor. I font web sono fondamentali per ottenere design, UX e prestazioni ottimali.
@@ -21,7 +19,7 @@ L'ottimizzazione dei font web rappresenta una fase critica nell'intera strategia
 
 ## TL;DR {: .hide-from-toc }
 - I font Unicode possono contenere migliaia di glifi
-- 'I formati dei font sono quattro: WOFF2, WOFF, EOT, TTF'
+- I formati dei font sono quattro: WOFF2, WOFF, EOT, TTF
 - Per alcuni formati font è necessario utilizzare una compressione GZIP
 
 
@@ -63,7 +61,7 @@ Note: Valuta l'utilizzo della <a href='http://en.wikipedia.org/wiki/Zopfli'>comp
 
 ## TL;DR {: .hide-from-toc }
 - Utilizza il <code>format()</code> hint per specificare più formati font
-- 'Raggruppa i font unicode più ampi in subset per migliorare le prestazioni: utilizza subset unicode-range e consenti in alternativa un subsetting manuale per versioni precedenti dei browser'
+- Raggruppa i font unicode più ampi in subset per migliorare le prestazioni: utilizza subset unicode-range e consenti in alternativa un subsetting manuale per versioni precedenti dei browser
 - Riduci il numero di varianti dei font di stile per migliorare le prestazioni della pagina e il rendering del testo
 
 
@@ -73,29 +71,29 @@ L'at-rule nel CSS @font-face ci consente di definire il percorso di un determina
 
 Ogni dichiarazione @font-face fornisce il nome della famiglia di font, utilizzato come gruppo logico di dichiarazioni multiple, le [proprietà del font](http://www.w3.org/TR/css3-fonts/#font-prop-desc) quali stile, spessore ed estensione, e lo [src descriptor](http://www.w3.org/TR/css3-fonts/#src-desc), che specifica un elenco prioritario di percorsi per il font.
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
+
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 Nota innanzitutto che gli esempi precedenti definiscono un'unica famiglia _Awesome Font_ con due stili (normale e _itaic_), ciascuno dei quali si riferisce a un insieme diverso di font. Ogni `src` descriptor contiene un elenco prioritario, separato da virgole, di varianti: 
 
@@ -179,13 +177,8 @@ Ogni famiglia di font è composta da diverse varianti stilistiche (normale, gras
 
 Ad esempio, il diagramma precedente illustra una famiglia di font che offre tre diversi spessori per il grassetto: 400 (normale), 700 (grassetto) e 900 (extra bold). Tutte le varianti intermedie (indicate in grigio) sono mappate automaticamente dal browser in base alla variante più prossima. 
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Quando è specificato uno spessore per cui non esiste font-face, ne verrà utilizzata una con spessore simile. In generale, i caratteri in grassetto vengono associati a font-face con spessore maggiore e quelli normali a font face con spessore minore.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algoritmo di corrispondenza dei font CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Quando è specificato uno spessore per cui non esiste font-face, ne verrà utilizzata una con spessore simile. In generale, i caratteri in grassetto vengono associati a font-face con spessore maggiore e quelli normali a font face con spessore minore.
+> > <a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algoritmo di corrispondenza dei font CSS3</a>
 
 Un'operazione logica simile si applica alle varianti _italic_. Il font designer controlla quali varianti produrrà, mentre noi verifichiamo le varianti che useremo sulla pagina. Visto che ogni variante prevede un download separato, è buona norma scaricarne un numero esiguo! Ad esempio, possiamo definire due varianti di grassetto per la nostra famiglia _Awesome Font_: 
 
@@ -222,13 +215,8 @@ Nell'esempio precedente, la famiglia _Awesome Font_ risulta composta da due riso
 
 <img src="images/font-synthesis.png" class="center" alt="Font synthesis">
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Gli autori devono sempre tenere a mente che tale approccio può non essere idoneo per alcuni caratteri, ad es. il cirillico, in cui il corsivo ha forme molto diverse. È sempre meglio utilizzare un font corsivo reale piuttosto che una versione sintetizzata.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3 font-style</a></p>
-    </blockquote>
-  </div>
-</div>
+> Gli autori devono sempre tenere a mente che tale approccio può non essere idoneo per alcuni caratteri, ad es. il cirillico, in cui il corsivo ha forme molto diverse. È sempre meglio utilizzare un font corsivo reale piuttosto che una versione sintetizzata.
+> > <a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3 font-style</a>
 
 L'esempio precedente illustra le differenze tra font reale e sintetizzato per Open-Sans; tutte le varianti sintetizzate sono generate dal medesimo font con spessore 400. Come puoi vedere, i risultati sono notevolmente diversi. I dettagli di generazioni delle varianti grassetto e diagonale non sono specificati. I risultati varieranno quindi da browser a browser, e dipenderanno anche molto dal font.
 

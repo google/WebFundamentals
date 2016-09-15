@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Recuperare qualcosa dalla rete è un'azione lenta e costosa: risposte consistenti richiedono numerosi scambi tra client e server, rallentandone la disponibilità ed elaborazione da parte del browser, oltre a comportare dei costi per il visitatore. Di conseguenza, la possibilità di mettere in cache e riutilizzare risorse recuperate in precedenza costituisce un aspetto fondamentale nell'ottimizzazione delle prestazioni.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript ci consente di modificare praticamente qualsiasi aspetto della pagina: contenuto, stile e il relativo comportamento in seguito alle interazioni degli utenti. Tuttavia, JavaScript può anche bloccare la costruzione e ritardare quando la pagina viene sottoposta a rendering. Per fornire performance ottimali, rendi asincrono JavaScript ed elimina tutti i JavaScript superflui dal percorso di rendering critico.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -18,13 +17,13 @@ JavaScript ci consente di modificare praticamente qualsiasi aspetto della pagina
 ## TL;DR {: .hide-from-toc }
 - JavaScript può eseguire query e modificare DOM e CSSOM.
 - L'esecuzione di JavaScript blocca CSSOM.
-- 'JavaScript blocca la costruzione DOM, salvo esplicitamente dichiarata come asincrono.'
+- JavaScript blocca la costruzione DOM, salvo esplicitamente dichiarata come asincrono.
 
 
 JavaScript è un linguaggio dinamico che viene eseguito nel browser e ci consente di alterare praticamente qualsiasi aspetto del comportamento di una pagina: possiamo modificare il contenuto della pagina attraverso l'aggiunta o rimozione di elementi dalla struttura DOM, possiamo cambiare le proprietà CSSOM di ciascun elemento, possiamo gestire l'input dell'utente e molto altro ancora. Per illustrare questa procedura in azione, aggiungiamo al nostro esempio precedente 'Ciao mondo' un semplice script inline:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * JavaScript ci permette di accedere al DOM e di estrarre il nodo span nascosto: il nodo potrebbe non essere visibile nella struttura di rendering, ma è ancora presente nel DOM. Quindi, una volta che siamo in possesso del riferimento, ne possiamo modificare il testo (tramite .textContent) e quindi sostituire la proprietà di stile di visualizzazione calcolata da `none` a `inline`. Alla fine dell'operazione, la nostra pagina visualizzerà '**Ciao studenti interattivi.**'.
@@ -62,7 +61,7 @@ Per impostazione predefinita, l'esecuzione di JavaScript è 'blocco parser': qua
 Per quanto riguarda gli script inclusi tramite tag script? Prendiamo il nostro esempio precedente ed estraiamo il nostro codice in un file separato:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**
@@ -78,7 +77,7 @@ Detto questo, buone notizie, abbiamo una scappatoia. Per impostazione predefinit
 Quindi come otteniamo questo risultato? È molto semplice, contrassegniamo il nostro script come _async_:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Aggiungendo la parola chiave async al tag script, questo informa il browser che non deve bloccare la costruzione del DOM mentre attende che lo script divenga disponibile, questa è un'ottima vittoria per la performance.
