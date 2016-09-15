@@ -1,21 +1,21 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Web design and UI encompases a few broad areas. What does it look like? How does it behave? How does it respond to different screen sizes, input types and devices?
+description: Web design and UI encompasses a few broad areas. What does it look like? How does it behave? How does it respond to different screen sizes, input types, and devices?
 
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Design & UI {: .page-title }
 
-Web design and UI encompases a few broad areas. What does it look like? How 
-does it behave? How does it respond to different screen sizes, input types 
+Web design and UI encompasses a few broad areas. What does it look like? How 
+does it behave? How does it respond to different screen sizes, input types, 
 and devices?
 
 <div class="attempt-left">
-  <h2>Responsive Design</h2>
+  <h2>Responsive design</h2>
   <img src="/web/images/md-icons/devices-short.png">
   <p>{# TODO FIX THIS #}
-    Web surfing on mobile is growing astronomically. Unfortunately much of the
+    Web surfing on mobile is growing astronomically. Unfortunately, much of the
     web isn't optimized for mobile devices, which are often constrained by
     display size and require a different approach to content layout.<br>
     <a href="responsive/">Learn more</a>
@@ -23,7 +23,7 @@ and devices?
 </div>
 
 <div class="attempt-right">
-  <h2>User Input</h2>
+  <h2>User input</h2>
   <a href="imput/forms/">
     <img src="/web/images/md-icons/touch-short.png">
   </a>
@@ -67,12 +67,12 @@ and devices?
 <div style="clear:both;"></div>
 
 
-## Related Resources
+## Related resources
 
-### Code Labs
+### Code labs
 
 [Your First Multi-Device Site](/web/fundamentals/getting-started/your-first-multi-screen-site/) <br>
-It is not as hard to build fully responsive sites as you think, and to show you, this guide takes you through the steps that you can use to get started
+It's not as hard to build fully responsive sites as you think, and to show you, this guide takes you through the steps that you can use to get started.
 
 ### Chrome DevTools
 
@@ -80,15 +80,14 @@ It is not as hard to build fully responsive sites as you think, and to show you,
 * [Simulate Mobile Devices with Device Mode](/web/tools/chrome-devtools/device-mode/)
 
 
-### Udacity Courses
+### Udacity courses
 
 [Responsive Web Design Fundamentals](https://udacity.com/ud893)<br>
-In this course you'll learn the fundamentals of responsive web design.
-You'll create your own responsive web page that works well on any device -
-phone, tablet, desktop or anything in between.
+In this course, you'll learn the fundamentals of responsive web design.
+You'll create your own responsive web page that works well on any device&mdash;phone, tablet, desktop, or anything in between.
 
 [Responsive Images](https://udacity.com/ud882)<br>
-In this course you will learn how to work with images on the modern web, so
+In this course, you'll learn how to work with images on the modern web, so
 that your images look great and load quickly on any device.
 
 <div style="clear:both;"></div>

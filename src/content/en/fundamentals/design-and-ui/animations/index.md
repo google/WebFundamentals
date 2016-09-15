@@ -15,7 +15,7 @@ Animations are a huge part of making compelling web applications and sites. User
 ## TL;DR
 * Use animations as a way to add life to your projects.
 * Animations should be in support of user interaction.
-* Be careful which properties you animate; some are more expensive than others!
+* Be careful which properties you animate; some are more expensive than others.
 
 
 ## Choose the right things to animate
