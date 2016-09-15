@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-05-11 #}
 {# wf_published_on: 2015-04-13 #}
 

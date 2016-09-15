@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-04-29 #}
 {# wf_published_on: 2015-04-29 #}
 

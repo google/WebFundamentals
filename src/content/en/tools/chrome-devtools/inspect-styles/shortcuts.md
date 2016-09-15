@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-01-27 #}
 {# wf_published_on: 2015-04-29 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Organize resources by frame, domain, type, or other criteria.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-07-28 #}
 {# wf_published_on: 2015-04-13 #}
 

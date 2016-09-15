@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: Change the appearance of DevTools and access hidden features.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-07-26 #}
 {# wf_published_on: 2016-03-28 #}
 
