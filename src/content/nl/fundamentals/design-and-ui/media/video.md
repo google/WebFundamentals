@@ -59,7 +59,7 @@ Met het element `<source>` kunt u meerdere formaten opgeven als oplossing voor h
 Bijvoorbeeld:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 Als de browser de `<source>` tags parseert, wordt via het optionele kenmerk `type` bepaald welk bestand moet worden gedownload en afgespeeld. Als de browser WebM ondersteunt, wordt chrome.webm afgespeeld. In het andere geval wordt er gecontroleerd of MPEG-4-video`s kunnen worden afgespeeld.
@@ -268,13 +268,13 @@ Note: Forceer het aanpassen van de grootte van het element niet als dit resultee
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
 Vergelijk het <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">responsieve voorbeeld</a> met de <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">niet-responsieve versie</a>.
@@ -389,7 +389,7 @@ Als u het track-element gebruikt, worden ondertitels als volgt weergegeven:
 Het toevoegen van ondertitels aan uw video is erg gemakkelijk &ndash; voeg een track-element gewoon toe als onderliggend element van het video-element:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
 </pre>
 
 Het `src`-kenmerk van het track-element geeft de locatie van het trackbestand.

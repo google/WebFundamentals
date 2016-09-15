@@ -28,17 +28,17 @@ description: Большинство интернет-ресурсов не оп�
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на iPhone.">
       См. пример
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на Nexus 5.">
       См. пример
-    {% endlink_sample %}
+    
   </div>
 </div>
 

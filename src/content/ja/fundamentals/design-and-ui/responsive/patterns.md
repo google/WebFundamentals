@@ -48,10 +48,10 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 
-{% link_sample _code/mostly-fluid.html %}
+
   <img src="imgs/mostly-fluid.svg">
   체험해 보기
-{% endlink_sample %}
+
 
 가장 작은 보기에서 각 콘텐츠 `div`가 수직으로 쌓입니다.  화면 너비가 600px에 도달하면 기본 콘텐츠 `div`가 `width: 100%`로 유지되지만 보조 `div`는 기본 `div` 아래 2열로 나타납니다.
 
@@ -84,10 +84,10 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 
-{% link_sample _code/column-drop.html %}
+
   <img src="imgs/column-drop.svg">
   체험해 보기
-{% endlink_sample %}
+
 
 
 유동형 샘플처럼 콘텐츠는 가장 작은 보기에서 수직으로 쌓이지만, 화면이 600px 이상으로 커지면 기본 및 보조 콘텐츠 `div`가 화면의 전체 너비를 차지합니다.
@@ -120,10 +120,10 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 
-{% link_sample _code/layout-shifter.html %}
+
   <img src="imgs/layout-shifter.svg">
   체험해 보기
-{% endlink_sample %}
+
 
 이 간단한 레이아웃 시프터 패턴의 예를 보면 작은 화면에서 콘텐츠가 수직으로 쌓이지만 화면이 커짐에 따라 한 `div`는 왼쪽에, 두 `div`는 오른쪽에 쌓이게 되는 큰 변화가 일어납니다.
 
@@ -153,10 +153,10 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 이 패턴은 1페이지 선형 웹사이트, 텍스트가 많은 문서 등 단일 열 레이아웃에서 잘 작동합니다.
 
 
-{% link_sample _code/tiny-tweaks.html %}
+
   <img src="imgs/tiny-tweaks.svg">
   체험해 보기
-{% endlink_sample %}
+
 
 이름에서 알 수 있듯이 이 샘플은 화면 크기의 변화에 비해 거의 변화가 없습니다.
 화면 너비가 커질수록 글꼴 크기와 여백도 커집니다.
@@ -181,10 +181,10 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 오프 캔버스 패턴은 콘텐츠를 수직으로 쌓지 않고 사용 빈도가 낮은 콘텐츠(예: 탐색 또는 앱 메뉴)를 화면 밖에 배치하고, 화면 크기가 충분히 커지면 표시하고, 작은 화면에서는 클릭했을 때만 보여줍니다.
 
-{% link_sample _code/off-canvas.html %}
+
   <img src="imgs/off-canvas.svg">
   체험해 보기
-{% endlink_sample %}
+
 
 이 샘플은 콘텐츠를 수직으로 쌓지 않고 `transform: translate(-250px, 0)`을 사용하여 두 개의 콘텐츠
 `div`를 화면에서 숨깁니다.  JavaScript로 열린 클래스를 요소에 추가하여 보이게 만드는 방식으로 div를 표시할 수 있습니다.

@@ -39,12 +39,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 Er bestaan heel veel verschillende schermformaten op telefoons, `phablets`, tablets, desktops, gameconsoles, tv`s, zelfs wearables. De schermformaten zullen altijd wijzigen en daarom is het belangrijk dat uw website zich aan elk formaat kan aanpassen, nu en in de toekomst.
 
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 
 Responsive webdesign, oorspronkelijk gedefinieerd door [Ethan Marcotte in A List Apart](http://alistapart.com/article/responsive-web-design/) beantwoordt aan de behoeften van de gebruikers en de apparaten die zij gebruiken. De lay-out verandert op basis van de grootte en mogelijkheden van het apparaat. Op een telefoon zien gebruikers inhoud bijvoorbeeld in één kolom, terwijl een tablet dezelfde inhoud misschien in twee kolommen weergeeft.
 
@@ -74,17 +74,17 @@ Door het gebruik van de metawaarde voor viewport `width=device-width` krijgt de 
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Pagina waarvoor geen viewport is ingesteld">
       Voorbeeld bekijken
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Pagina waarvoor een viewport is ingesteld">
       Voorbeeld bekijken
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -122,17 +122,17 @@ Als u voor pagina-elementen grote absolute CSS-breedtes instelt (zoals het onder
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Pagina met een element met vaste breedte van 344 pixels op een iPhone.">
       Voorbeeld bekijken
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Pagina met een element met vaste breedte van 344 pixels op een Nexus 5.">
       Voorbeeld bekijken
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -220,9 +220,9 @@ Er zijn verschillende items waarvoor een query kan worden uitgevoerd, maar de me
 Een voorbeeld:
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Met behulp van mediaquery's een voorbeeld bekijken van een pagina om eigenschappen te kunnen wijzigen tijdens het aanpassen van de grootte.">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">
@@ -291,17 +291,17 @@ Laten we eens kijken naar het voorbeeld dat we in het begin hebben gezien, de [w
 In de eerste stap moeten we ervoor zorgen dat de weersvoorspelling er goed uitzien op een klein scherm.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Voorbeeld van de weersvoorspelling op een klein scherm.">
-  {% endlink_sample %}
+  
 </figure>
 
 Pas vervolgens de grootte van de browser aan tot er te veel witruimte is tussen de elementen en de weersvoorspelling er gewoon niet meer goed uitziet. Deze beslissing is enigszins subjectief, maar vanaf 600 pixels is echt te breed.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Voorbeeld van de weersvoorspelling terwijl de pagina breder wordt.">
-  {% endlink_sample %}
+  
 </figure>
 
 Als u op 600 pixels een breekpunt wilt invoegen, maakt u twee nieuwe stylesheets, één om te gebruiken wanneer de browser 600 pixels en kleiner is, en één wanneer de browser breder is dan 600 pixels.
@@ -313,9 +313,9 @@ Als u op 600 pixels een breekpunt wilt invoegen, maakt u twee nieuwe stylesheets
 Ten slotte moet u de CSS herstructureren. In dit voorbeeld hebben we de meest gebruikte stijlen, zoals lettertypen, pictogrammen, basisplaatsing, kleuren in `weather.css` geplaatst. Specifieke lay-outs voor het kleine scherm worden dan in `weather-small.css` geplaatst en stijlen voor grote schermen worden in `weather-large.css` geplaatst.
 
 <figure>
-  {% link_sample _code/weather-2.html %}
+  
     <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
+  
 </figure>
 
 ### Kies zo nodig voor kleinere breekpunten

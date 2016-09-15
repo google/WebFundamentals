@@ -60,7 +60,7 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 舉例來說：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 在剖析 `<source>` 標記時，瀏覽器會使用可選的 `type` 屬性來判定要下載及播放的檔案。如果瀏覽器支援 WebM，則會播放 chrome.webm。否則，瀏覽器會檢查是否可以播放 MPEG-4 影片。
@@ -270,13 +270,13 @@ Note: 請勿將元素大小強制調整為不同於原始影片的長寬比。�
 **CSS：**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
 **HTML：**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
 請嘗試比較<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">回應式示例</a>和<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">非回應式版本</a>有何不同。
@@ -391,7 +391,7 @@ Note: Android 版 Chrome、iOS Safari 和目前所有的電腦瀏覽器 (Firefox
 只要為 video 元素新增一個 track 子元素，即可輕鬆在影片中新增字幕：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
 </pre>
 
 track 元素的 `src` 屬性會指定字幕軌檔案的位置。

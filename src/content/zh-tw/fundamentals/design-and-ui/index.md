@@ -42,12 +42,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 手機、平板手機、平板電腦、桌上型電腦、遊戲機、電視，甚至是穿戴式裝置的螢幕大小五花八門，各有不同。螢幕大小總是日新月異，因此您的網站如何在今日或未來隨時因應調整，顯得更為重要。
 
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 
 回應式網頁設計最早是由 [A List Apart 的 Ethan Marcotte](http://alistapart.com/article/responsive-web-design/) 所定義，這項設計可針對使用者的需求和其所使用的裝置做出回應。版面配置會隨著裝置的螢幕大小和功能變動。舉例來說，使用者在手機上會看到以一欄顯示的內容；在平板電腦上則會看到以兩欄顯示的相同內容。
 
@@ -81,17 +81,17 @@ Explore what makes a site responsive and how some common responsive design patte
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="未設定檢視區的網頁">
       查看示例
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="設定檢視區的網頁">
       查看示例
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -133,17 +133,17 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone 上顯示包含 344px 固定寬度元素的網頁。">
       查看示例
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5 上顯示包含 344px 固定寬度元素的網頁。">
       查看示例
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -235,9 +235,9 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 讓我們看看示例：
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="當網頁大小變更時，使用媒體查詢變更屬性的預覽畫面">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">

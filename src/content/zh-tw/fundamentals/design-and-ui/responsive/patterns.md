@@ -48,10 +48,10 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 只需要一個中斷點。
 
 
-{% link_sample _code/mostly-fluid.html %}
+
   <img src="imgs/mostly-fluid.svg">
   嘗試一下
-{% endlink_sample %}
+
 
 在最小的檢視中，每個內容 `div` 都垂直堆疊。  一旦螢幕寬度達到 600px，
 主要內容 `div` 會保持在 `width: 100%`，
@@ -84,10 +84,10 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 視內容而定，也會因每一種設計而變動。
 
 
-{% link_sample _code/column-drop.html %}
+
   <img src="imgs/column-drop.svg">
   嘗試一下
-{% endlink_sample %}
+
 
 
 就像主體為流動的範例，
@@ -120,10 +120,10 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 它的維護更複雜，並可能涉及元素內的變更，
 而非整體的內容版面配置。
 
-{% link_sample _code/layout-shifter.html %}
+
   <img src="imgs/layout-shifter.svg">
   嘗試一下
-{% endlink_sample %}
+
 
 以下的簡化範例會顯示版面配置位移模式。
 在較小的螢幕上，內容會垂直堆疊，
@@ -153,10 +153,10 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 它適用於單欄版面配置，例如單網頁線性網站、大量文字
 的文章。
 
-{% link_sample _code/tiny-tweaks.html %}
+
   <img src="imgs/tiny-tweaks.svg">
   嘗試一下
-{% endlink_sample %}
+
 
 顧名思義，螢幕大小變更時，此範例也沒什麼變化。
 螢幕寬度越大，字型和邊框間距也是如此。
@@ -181,10 +181,10 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 它不會垂直堆疊內容，畫布外空間利用模式會將較不常用的內容 -- 可能是導覽或應用程式功能表 -- 放在螢幕外，當螢幕足夠大時才顯示，而且在較小的螢幕上，內容只需按一下就會顯示。
 
-{% link_sample _code/off-canvas.html %}
+
   <img src="imgs/off-canvas.svg">
   嘗試一下
-{% endlink_sample %}
+
 
 不垂直堆疊內容，本範例使用一個 `transform: translate(-250px, 0)`，
 以將兩個內容 `div` 隱藏於螢幕之外。  透過新增一個開放類別給元素，

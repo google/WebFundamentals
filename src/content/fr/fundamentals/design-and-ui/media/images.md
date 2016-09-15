@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Les images font justement partie intégrante de chaque page. Cependant, elles constituent également la majorité des octets téléchargés. La conception de sites Web adaptatifs permet non seulement d'adapter les dispositions aux caractéristiques de l'appareil, mais aussi les images.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
-{# wf_published_on: 2000-01-01 #}
+{# wf_published_on: 2014-04-29 #}
 
 # Images {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -76,21 +75,15 @@ Veillez à fournir des descriptions explicites au moyen de l'attribut `alt` sur 
 
 ### Améliorer les éléments `img` avec l'attribut `srcset` pour les écrans à haute densité de pixels
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      L'attribut <code>srcset</code> améliore le comportement de l'élément <code>img</code>, facilitant ainsi la diffusion de plusieurs fichiers image pour différentes caractéristiques d'appareil. À l'instar de la <code>image-set</code> <a href="images-in-css.html#use-image-set-to-provide-high-res-images">fonction CSS</a> native de CSS, l'attribut <code>srcset</code> permet au navigateur de choisir l'image idéale en fonction des caractéristiques de l'appareil ; par exemple, une image 2x sur un écran 2x et, à l'avenir, une image 1x sur un appareil 2x sur un réseau à faible débit.
-    </p>
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Pzc5Dly_jEM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+L'attribut <code>srcset</code> améliore le comportement de l'élément <code>img</code>, facilitant ainsi la diffusion de plusieurs fichiers image pour différentes caractéristiques d'appareil. À l'instar de la <code>image-set</code> <a href="images-in-css.html#use-image-set-to-provide-high-res-images">fonction CSS</a> native de CSS, l'attribut <code>srcset</code> permet au navigateur de choisir l'image idéale en fonction des caractéristiques de l'appareil ; par exemple, une image 2x sur un écran 2x et, à l'avenir, une image 1x sur un appareil 2x sur un réseau à faible débit.
+
+<div class="clearfix"></div>
 
 
     <img src="photo.png" srcset="photo@2x.png 2x" ...>
@@ -109,23 +102,18 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Note: L'élément <code>picture</code> commence à faire son apparition dans les navigateurs. Bien que cet élément ne soit pas encore disponible dans tous les navigateurs, il est conseillé de l'utiliser en raison de sa puissante rétrocompatibilité et de l'utilisation potentielle du <a href='http://picturefill.responsiveimages.org/'>polyfill Picturefill</a>. Pour plus d'informations, rendez-vous sur le site <a href='http://responsiveimages.org/#implementation'>ResponsiveImages.org</a>.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <p>
-      L'élément <code>picture</code> doit être utilisé lorsqu'une source d'image est présente dans plusieurs densités ou lorsque la conception de sites Web adaptatifs impose une image quelque peu différente sur certains types d'écrans. Comme c'est le cas pour l'élément <code>video</code>, plusieurs éléments <code>source</code> peuvent être inclus, ce qui permet de spécifier différents fichiers image en fonction des requêtes média ou du format d'image.
-    </p>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <div class="video-wrapper">
+<div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
-  </div>
-</div>
+
+L'élément <code>picture</code> doit être utilisé lorsqu'une source d'image est présente dans plusieurs densités ou lorsque la conception de sites Web adaptatifs impose une image quelque peu différente sur certains types d'écrans. Comme c'est le cas pour l'élément <code>video</code>, plusieurs éléments <code>source</code> peuvent être inclus, ce qui permet de spécifier différents fichiers image en fonction des requêtes média ou du format d'image.
+
+<div class="clearfix"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media.html" region_tag="picture"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture"   adjust_indentation="auto" %}
 </pre>
 
 Dans l'exemple ci-dessus, si la largeur du navigateur est d'au moins 800 pixels, le fichier `head.jpg` ou `head-2x.jpg` est utilisé suivant la résolution de l'appareil. Si la largeur du navigateur est comprise entre 450 pixels et 800 pixels, le fichier `head-small.jpg` ou `head-small-2x.jp` est utilisé, une fois encore en fonction de la résolution de l'appareil. Pour les largeurs d'écran inférieures à 450 pixels et pour offrir une rétrocompatibilité lorsque l'élément `picture` n'est pas accepté, le navigateur affiche plutôt l'élément `img`, lequel doit toujours être inclus.
@@ -137,7 +125,7 @@ Si la taille définitive de l'image est inconnue, il peut s'avérer difficile de
 Au lieu de fournir des densités et des tailles d'image fixes, vous pouvez spécifier la taille de chaque image diffusée en ajoutant un descripteur de largeur avec la taille de l'élément d'image. Cela permet au navigateur de calculer automatiquement la densité de pixels effective et de choisir la meilleure image à télécharger.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/sizes.html" region_tag="picture"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/sizes.html" region_tag="picture"   adjust_indentation="auto" %}
 </pre>
 
 L'exemple ci-dessus affiche une image dont la largeur équivaut à la moitié de celle de la fenêtre d'affichage (sizes='50vw') et, en fonction de la largeur du navigateur et du rapport de pixel de l'appareil, permet au navigateur de choisir l'image appropriée, quelle que soit la taille de la fenêtre du navigateur. Le tableau ci-dessous illustre l'image qui sera choisie par le navigateur :
@@ -197,7 +185,7 @@ L'exemple ci-dessus affiche une image dont la largeur équivaut à la moitié de
 Dans la plupart des cas, il se peut que la taille ou l'image change en fonction des points de rupture de la mise en page du site. Sur un petit écran, par exemple, vous souhaitez que l'image occupe toute la largeur de la fenêtre d'affichage, alors qu'elle n'occupera qu'une petite partie sur un écran de plus grande dimension. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/breakpoints.html" region_tag="picture"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/breakpoints.html" region_tag="picture"   adjust_indentation="auto" %}
 </pre>
 
 L'attribut `sizes` dans l'exemple ci-dessus utilise plusieurs requêtes média pour spécifier la taille de l'image. Si la largeur du navigateur est supérieure à 600 pixels, l'image équivaut à 25 % de la largeur de la fenêtre d'affichage. Si elle est comprise entre 500 pixels et 600 pixels, l'image équivaut à 25 % de la largeur de la fenêtre d'affichage. En-dessous de 500 pixels, elle occupe toute la largeur.
@@ -222,7 +210,7 @@ Le site J. Crew constitue un excellent exemple de source d'images extensibles su
 La [technique d'image
 compressible](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) diffuse des images 2x fortement compressées vers tous les appareils, quelles qu'en soient les capacités réelles. En fonction du type d'image et du niveau de compression, la qualité d'image peut paraître inchangée, mais la taille du fichier diminue de manière significative.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">      Voir l'exemple</a>
+<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">Voir l'exemple</a>
 
 Note: Soyez prudent lorsque vous utilisez la technique de compression, en raison des exigences supplémentaires sur le plan de la mémoire et du décodage. Le redimensionnement d'images sur des écrans de petite taille est une opération exigeante qui peut se révéler particulièrement laborieuse sur des appareils d'entrée de gamme disposant d'une mémoire et d'une puissance de traitement limitées.
 
@@ -246,8 +234,8 @@ La propriété CSS 'background' constitue un puissant outil pour ajouter des ima
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Utilisez l''image la mieux adaptée aux caractéristiques de l''écran en tenant compte de la taille de l''écran, de la résolution de l''appareil et de la mise en page.'
-- 'Dans le cas des écrans à haute densité de pixels, modifiez la propriété <code>background-image</code> dans la feuille de style à l''aide de requêtes média avec <code>min-resolution</code> et <code>-webkit-min-device-pixel-ratio</code>.'
+- Utilisez l'image la mieux adaptée aux caractéristiques de l'écran en tenant compte de la taille de lécran, de la résolution de l''appareil et de la mise en page.
+- Dans le cas des écrans à haute densité de pixels, modifiez la propriété <code>background-image</code> dans la feuille de style à l'aide de requêtes média avec <code>min-resolution</code> et <code>-webkit-min-device-pixel-ratio</code>.
 - Utilisez l'attribut 'srcset' pour fournir des images en haute résolution en plus de l'image 1x dans le balisage.
 - Tenez compte des critères de performances lors de l'utilisation de techniques de remplacement d'images JavaScript ou lors de la diffusion d'images haute résolution utilisant un taux de compression élevé sur des appareils de plus faible résolution.
 
@@ -259,7 +247,7 @@ Les requêtes média n'affectent pas seulement la mise en page. Vous pouvez éga
 Dans l'exemple ci-dessous, seul le fichier `small.png` est téléchargé et appliqué à l'élément `div` de contenu sur les écrans de plus petite taille, tandis que, sur les écrans plus grands, `background-image: url(body.png)` est appliqué à `body` et `background-image: url(large.png)`, à l'élément `div` de contenu.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/conditional-mq.html" region_tag="conditional"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional"   adjust_indentation="auto" %}
 </pre>
 
 ### Utiliser la fonction image-set pour fournir des images haute résolution
@@ -279,12 +267,12 @@ comme il se doit. En d'autres termes, le navigateur suppose que les images 2x so
 La fonction `image-set()` est relativement récente et seuls les navigateurs Chrome et Safari l'acceptent actuellement avec le préfixe fournisseur `-webkit`. Il convient également de veiller à inclure une image de substitution lorsque la fonction `image-set()` n'est pas acceptée. Par exemple :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-set.html" region_tag="imageset"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset"   adjust_indentation="auto" %}
 </pre>
 
 Dans l'exemple ci-dessus, l'élément approprié est chargé dans les navigateurs compatibles avec la fonction `image-set`, tandis que l'élément 1x est utilisé dans les autres cas. Notons toutefois une restriction, et elle est de taille : dans la mesure où peu de navigateurs sont compatibles avec la fonction `image-set()`, la plupart d'entre eux recevront l'élément 1x.
 
-      ## Utiliser des requêtes média pour fournir des images haute résolution ou changer les images en fonction des caractéristiques de l'appareil ('art direction')
+## Utiliser des requêtes média pour fournir des images haute résolution ou changer les images en fonction des caractéristiques de l'appareil ('art direction')
 
 Les requêtes média peuvent créer des règles sur la base du [rapport de pixel de l'appareil](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg), ce qui permet de spécifier des images différentes pour les écrans 2x et 1x.
 
@@ -299,7 +287,7 @@ Les requêtes média peuvent créer des règles sur la base du [rapport de pixel
 Les navigateurs Chrome, Firefox et Opera acceptent tous la syntaxe `(min-resolution: 2dppx)` standard. Pour Safari et Android, en revanche, l'ancienne syntaxe sans `dppx` est requise. Pour rappel, ces styles ne sont chargés que si l'appareil correspond à la requête média. En outre, vous devez spécifier des styles pour le scénario de base. Cette méthode offre également l'avantage d'afficher quelque chose si le navigateur n'accepte pas les requêtes média spécifiques à la résolution.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/media-query-dppx.html" region_tag="mqdppx"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media-query-dppx.html" region_tag="mqdppx"   adjust_indentation="auto" %}
 </pre>
 
 Vous pouvez également utiliser la syntaxe `min-width` pour afficher d'autres images en fonction de la taille de la fenêtre d'affichage. L'avantage de cette technique est de ne pas télécharger l'image si la requête média ne correspond pas. Par exemple, le fichier `bg.png` n'est téléchargé et appliqué à l'élément `body` que si la largeur du navigateur est supérieure ou égale à 500 pixels :
@@ -356,7 +344,7 @@ Pour les icônes dont les besoins sont plus complexes, les icônes SVG sont gén
 &nbsp;
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/icon-svg.html" region_tag="iconsvg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-svg.html" region_tag="iconsvg"   adjust_indentation="auto" %}
 </pre>
 
 ### Utiliser les polices d'icônes avec précaution
@@ -370,13 +358,13 @@ Les polices d'icône sont populaires et peuvent être faciles à utiliser. En re
 * Si elles ne sont pas conçues correctement, elles peuvent générer un fichier de taille importante pour une utilisation limitée à un petit sous-groupe d'icônes, parmi celles qui sont disponibles. 
 
 
-{% link_sample _code/icon-font.html %}
+
 <img src="img/icon-fonts.png" class="center"
 srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x"
 alt="Exemple de page dans laquelle FontAwesome a été utilisé pour les icônes de type police.">
-{% endlink_sample %}
+
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/icon-font.html" region_tag="iconfont"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont"   adjust_indentation="auto" %}
 </pre>
 
 Des centaines de polices d'icônes gratuites et payantes existent, notamment [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) et [Glyphicons](http://glyphicons.com/).
@@ -432,7 +420,7 @@ La création de sprites CSS est une technique par laquelle plusieurs images sont
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=""Sprite sheet" utilisée comme exemple"></a>
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/images/_code/image-sprite.html" region_tag="sprite"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite"   adjust_indentation="auto" %}
 </pre>
 
 L'avantage de cette technique est de réduire le nombre de téléchargements requis pour obtenir plusieurs images, tout en permettant la mise en cache.

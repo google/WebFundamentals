@@ -38,12 +38,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 I formati dello schermo utilizzati da telefoni, 'phablet', tablet, desktop, console per videogiochi, TV e dispositivi indossabili sono molteplici. I formati dello schermo sono in continua evoluzione ed è quindi importante creare un sito capace di adattarsi a qualsiasi formato futuro.
 
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 
 Il Responsive Web Design, creato da [Ethan Marcotte in A List Apart](http://alistapart.com/article/responsive-web-design/) risponde alle esigenze di utenti e dispositivi impiegati. La disposizione dei contenuti varia in base alle dimensioni e alle caratteristiche del dispositivo. Ad esempio, un telefono visualizza i contenuti su una sola colonna mentre un tablet ne adopera due.
 
@@ -73,17 +73,17 @@ Il valore meta viewport `width=device-width` garantisce la corrispondenza della 
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Pagina senza viewport">
       Vedi esempio
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Pagina con viewport">
       Vedi esempio
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -121,17 +121,17 @@ L'assegnazione di elevate larghezze CSS assolute agli elementi della pagina (com
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Pagina con un elemento con larghezza fissa di 344 pixel in uno dei primi iPhone.">
       Vedi esempio
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Pagina con un elemento a larghezza fissa di 344 pixel di un Nexus 5.">
       Vedi esempio
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -219,9 +219,9 @@ Anche se esistono diversi elementi a cui applicare le query, i più adatti all'o
 Di seguito viene indicato un esempio:
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Anteprima di una pagina che utilizza le media query per la modifica delle proprietà con il progressivo ridimensionamento.">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">
@@ -291,17 +291,17 @@ Passiamo all'esempio preso in esame all'inizio, le [previsioni del tempo]({{site
 Innanzitutto, occorre conferire un aspetto gradevole alle previsioni su schermo.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Anteprima delle previsioni del tempo su schermo di piccole dimensioni.">
-  {% endlink_sample %}
+  
 </figure>
 
 Quindi, ridimensiona lo schermo fino a visualizzare un eccesso di spazio bianco fra gli elementi. In questo caso le previsioni assumono un aspetto poco gradevole.  600 pixel sono una dimensione eccessiva, anche se si tratta di un aspetto opinabile.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Anteprima delle previsioni del tempo con l'aumento dell'ampiezza della pagina.">
-  {% endlink_sample %}
+  
 </figure>
 
 Per inserire un breakpoint a 600 pixel, crea due nuovi fogli di stile, uno per il browser con dimensioni massime di 600 pixel e l'altro per le dimensioni superiori ai 600 pixel.
@@ -313,9 +313,9 @@ Per inserire un breakpoint a 600 pixel, crea due nuovi fogli di stile, uno per i
 Infine, esegui il refactoring del CSS. In questo esempio, in `weather.css` abbiamo inserito stili comuni quali caratteri, icone, posizionamento di base e colori. Le disposizioni specifiche per gli schermi di piccole dimensioni sono state posizionate in `weather-small.css`, mentre quelle per gli schermi di grandi dimensioni in `weather-large.css`.
 
 <figure>
-  {% link_sample _code/weather-2.html %}
+  
     <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
+  
 </figure>
 
 ### Selezione dei breakpoint secondari secondo necessità

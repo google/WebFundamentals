@@ -2,23 +2,21 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Découvrez les méthodes les plus simples pour ajouter des vidéos à votre site et pour garantir aux internautes la meilleure expérience possible sur tous les appareils.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Vidéo {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-Les internautes apprécient les vidéos. Elles peuvent être amusantes et instructives. Sur les appareils mobiles, les vidéos permettent d'accéder plus facilement à des informations. En revanche, elles prennent de la bande passante et ne fonctionnent pas toujours de manière identique sur chaque plate-forme. Les internautes n'aiment pas attendre qu'une vidéo charge, ni que rien ne se produise lorsqu'ils appuient sur le bouton de lecture. Consultez les articles suivants pour découvrir les méthodes les plus simples pour ajouter des vidéos à votre site et pour garantir aux internautes la meilleure expérience possible sur tous les appareils.
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+Les internautes apprécient les vidéos. Elles peuvent être amusantes et instructives. Sur les appareils mobiles, les vidéos permettent d'accéder plus facilement à des informations. En revanche, elles prennent de la bande passante et ne fonctionnent pas toujours de manière identique sur chaque plate-forme. Les internautes n'aiment pas attendre qu'une vidéo charge, ni que rien ne se produise lorsqu'ils appuient sur le bouton de lecture. Consultez les articles suivants pour découvrir les méthodes les plus simples pour ajouter des vidéos à votre site et pour garantir aux internautes la meilleure expérience possible sur tous les appareils.
 
 
 ## Ajouter une vidéo 
@@ -31,7 +29,7 @@ Découvrez les méthodes les plus simples pour ajouter des vidéos à votre site
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Utilisez l''élément vidéo pour importer, décoder et lire des contenus vidéos sur votre site.'
+- Utilisez l'élément vidéo pour importer, décoder et lire des contenus vidéos sur votre site.
 - Produisez des vidéos de plusieurs formats pour couvrir une gamme de plates-formes mobiles.
 - Définissez correctement la taille des vidéos. Veillez à ce qu'elles ne débordent pas de leurs contenants.
 - L'accessibilité est importante. Ajoutez l'élément de suivi en tant qu'élément enfant de l'élément vidéo.
@@ -60,10 +58,10 @@ L'élément <source> vous permet d'indiquer plusieurs formats, dans le cas où l
 Par exemple :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
-Lorsque le navigateur analyse les balises <source>, l'attribut facultatif `type` lui permet de sélectionner le fichier à télécharger et à lire. Si le navigateur est compatible avec WebM, le format de fichier chrome.webm est lu. Dans le cas contraire, une vérification est lancée, pour savoir si la lecture de vidéos au format MPEG-4 est possible.
+Lorsque le navigateur analyse les balises `<source>`, l'attribut facultatif `type` lui permet de sélectionner le fichier à télécharger et à lire. Si le navigateur est compatible avec WebM, le format de fichier chrome.webm est lu. Dans le cas contraire, une vérification est lancée, pour savoir si la lecture de vidéos au format MPEG-4 est possible.
 Consultez la page <a href='//www.xiph.org/video/vid1.shtml' title='Highly entertaining and informative video guide to digital video'>A Digital Media Primer for Geeks (Une première approche des médias numériques pour les geeks)</a> pour découvrir le fonctionnement des contenus vidéo et audio sur le Web.
 
 Cette approche comporte plusieurs avantages par rapport aux différentes méthodes d'établissement de scripts via HTML ou côté serveur, en particulier sur les plates-formes mobiles :
@@ -97,13 +95,12 @@ Pour ajouter un fragment média, il vous suffit d'ajouter #t=[start_time][,end_t
 
 Vous pouvez également utiliser l'API Media Fragments pour fournir plusieurs vues de la même vidéo, comme des marqueurs temporels sur un DVD, sans avoir besoin d'encoder ni de traiter plusieurs fichiers.
 
-Note: - 'L''API Media Fragments est compatible avec la plupart des plates-formes, à l''exception d''iOS.'
-- 'Assurez-vous que les demandes de type ''Range'' sont compatibles avec votre serveur. Elles sont activées par défaut sur la plupart des serveurs. Cependant, il arrive qu''elles soient désactivées sur certains services d''hébergement.'
+Note: - L'API Media Fragments est compatible avec la plupart des plates-formes, à l'exception d'iOS. Assurez-vous que les demandes de type `Range` sont compatibles avec votre serveur. Elles sont activées par défaut sur la plupart des serveurs. Cependant, il arrive qu'elles soient désactivées sur certains services d'hébergement.'
 
 
-À l'aide des outils pour les développeurs de votre navigateur, vérifiez la présence de la `chaîne Accept-Ranges: bytes` dans les en-têtes de réponse :
+À l'aide des outils pour les développeurs de votre navigateur, vérifiez la présence de la `chaîne Accept-Ranges: bytes` dans les en-têtes de réponse:
 
-<img class="center" alt="Capture d'écran des outils pour les développeurs De Chrome : Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Capture d'écran des outils pour les développeurs De Chrome : Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ##Inclure une affiche
 
@@ -119,15 +116,11 @@ Une affiche constitue également une solution de repli, si l'attribut `src` de l
 
 Voici la comparaison de deux vidéos, avec et sans affiche. L'affiche est représentée en échelle de gris, pour montrer qu'il ne s'agit pas de la vidéo :
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Capture d'écran Android Chrome, format portrait : sans affiche" src="images/Chrome-Android-video-no-poster.png">
-  </div>
+<img class="attempt-left" alt="Capture d'écran Android Chrome, format portrait : sans affiche" src="img/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Capture d'écran Android Chrome, format portrait : avec affiche" src="img/Chrome-Android-video-poster.png">
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Capture d'écran Android Chrome, format portrait : avec affiche" src="images/Chrome-Android-video-poster.png">
-  </div>
-</div>
+<div class="clearfix"></div>
+
 
 ## Offrir des solutions pour les anciennes plates-formes 
 
@@ -233,11 +226,6 @@ Pour regarder une démonstration, <a href="https://googlesamples.github.io/web-f
 La taille des vidéos est importante  lorsqu'il s'agit de satisfaire les internautes.
 
 
-### TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
-
-
 
 ### Vérifier la taille de la vidéo
 
@@ -250,16 +238,16 @@ Pour vérifier la taille encodée d'une vidéo, utilisez les propriétés d'él�
 Lorsque l'élément vidéo est trop grand pour la fenêtre d'affichage, il risque de déborder et d'empêcher l'internaute de voir le contenu ou
 d'utiliser les commandes.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Capture d'écran Android Chrome, en mode portrait : l'élément vidéo n'a pas été mis en forme et déborde de la fenêtre d'affichage" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Capture d'écran Android Chrome, en mode paysage : l'élément vidéo n'a pas été mis en forme et déborde de la fenêtre d'affichage" src="images/Chrome-Android-landscape-video-unstyled.png">
-</div>
+<img class="attempt-left" alt="Capture d'écran Android Chrome, en mode portrait : l'élément vidéo n'a pas été mis en forme et déborde de la fenêtre d'affichage" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Capture d'écran Android Chrome, en mode paysage : l'élément vidéo n'a pas été mis en forme et déborde de la fenêtre d'affichage" src="img/Chrome-Android-landscape-video-unstyled.png">
+
+<div class="clearfix"></div>
+
 
 Vous pouvez contrôler les dimensions de la vidéo dans JavaScript ou CSS. Les bibliothèques et les plug-ins JavaScript, comme [FitVids](//fitvidsjs.com/), par exemple, permettent de conserver la taille et le format d'image appropriés, même pour les vidéos Flash de YouTube et d'autres sources.
 
 Utilisez les [requêtes média CSS](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) pour spécifier la taille d'éléments en fonction des dimensions de la fenêtre d'affichage. Dans ce cas, nous vous conseillons d'utiliser `max-width: 100%`.
 
-{# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
 Pour le contenu multimédia intégré dans des cadres iFrame, comme les vidéos YouTube, tentez d'avoir une approche de type adaptatif. Consultez celle qui est [proposée par John Surdakowski](//avexdesigns.com/responsive-youtube-embed/).
 
@@ -268,13 +256,13 @@ Note: Ne forcez pas la taille d'un élément générant un format d'image diffé
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
 Comparez l'<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">exemple adaptatif</a> avec la <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">version non-adaptative</a>.
@@ -297,16 +285,16 @@ L'orientation de l'appareil ne pose pas de problème en ce qui concerne les ordi
 
 Safari, sur l'iPhone, passe parfaitement bien du mode portrait au mode paysage :
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Capture d'écran de lecture d'une vidéo dans Safari sur iPhone, en mode portrait" src="images/iPhone-video-playing-portrait.png">
-   <img class="mdl-cell mdl-cell--6--col" alt="Capture d'écran de lecture d'une vidéo dans Safari sur iPhone, en mode paysage" src="images/iPhone-video-playing-landscape.png">
-</div>
+
+<img class="attempt-left" alt="Capture d'écran de lecture d'une vidéo dans Safari sur iPhone, en mode portrait" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Capture d'écran de lecture d'une vidéo dans Safari sur iPhone, en mode paysage" src="img/iPhone-video-playing-landscape.png">
+<div class="clearfix"></div>
+
 
 L'orientation de l'appareil peut néanmoins être problématique sur un iPad et sur Chrome pour Android.
 Par exemple, en l'absence de personnalisation, une vidéo lue sur un iPad en mode paysage a l'apparence suivante :
 
-<img class="center" alt="Capture d'écran d'une vidéo lue dans Safari sur un iPad Retina, en mode paysage"
-src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Capture d'écran d'une vidéo lue dans Safari sur un iPad Retina, en mode paysage" src="img/iPad-Retina-landscape-video-playing.png">
 
 L'utilisation des paramètres de largeur "width: 100%" ou "max-width: 100%" avec CSS permet de résoudre de nombreux problèmes de présentation liés à l'orientation de l'appareil. Vous pouvez également recourir aux solutions d'affichage en mode plein écran.
 
@@ -314,15 +302,15 @@ L'utilisation des paramètres de largeur "width: 100%" ou "max-width: 100%" avec
 
 L'affichage des vidéos varie d'une plate-forme à l'autre. Dans Safari pour iPhone, l'affichage de l'élément vidéo est intégré à la page Web, mais la vidéo est lue en mode plein écran :
 
-<img class="center" alt="Capture d'écran d'un élément vidéo sur iPhone, en mode portrait" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="Capture d'écran d'un élément vidéo sur iPhone, en mode portrait" src="img/iPhone-video-with-poster.png">
 
 Sur Android, l'internaute peut passer en mode plein écran en cliquant sur l'icône Plein écran. Mais par défaut, la lecture est intégrée à la page :
 
-<img class="center" alt="   Capture d'écran de lecture d'une vidéo dans Chrome sur Android, en mode portrait" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Capture d'écran de lecture d'une vidéo dans Chrome sur Android, en mode portrait" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 La lecture de vidéos dans Safari pour iPad s'effectue sur la page Web :
 
-<img class="center" alt="Capture d'écran d'une vidéo lue dans Safari sur un iPad Retina, en mode paysage" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Capture d'écran d'une vidéo lue dans Safari sur un iPad Retina, en mode paysage" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### Contrôler l'affichage en mode plein écran du contenu
 
@@ -360,7 +348,7 @@ Sur les appareils compatibles avec l'API Fullscreen, il peut être judicieux d'u
 
 Pour voir comment cette vidéo s'affiche en plein écran, regardez la <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">démonstration</a>.
 
-**NOTE:** `requestFullScreen()` is currently vendor prefixed and may require
+NOTE: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
 
 
@@ -382,14 +370,14 @@ Note: L'élément de suivi est compatible avec Chrome pour Android, Safari pour 
 
 Lorsque vous utilisez l'élément de suivi, les sous-titres ont l'apparence suivante :
 
- <img class="center" alt="Capture d'écran montrant les sous-titres affichés à l'aide de l'élément de suivi dans Chrome sur Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Capture d'écran montrant les sous-titres affichés à l'aide de l'élément de suivi dans Chrome sur Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ##Ajouter un élément de suivi
 
 Il est très facile d'ajouter des sous-titres à une vidéo. Il vous suffit d'ajouter un élément de suivi en tant qu'élément enfant de l'élément vidéo :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
 </pre>
 
 L'attribut d'élément de suivi `src` indique l'emplacement du fichier de suivi.

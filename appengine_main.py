@@ -25,7 +25,7 @@ import devsiteHelper
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'fr'
 DEVENV = os.environ['SERVER_SOFTWARE'].startswith('Dev')
 USE_MEMCACHE = not DEVENV
 

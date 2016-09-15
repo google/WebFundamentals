@@ -48,10 +48,10 @@ enquanto as colunas são empilhadas verticalmente.  Uma grande vantagem desse pa
 que geralmente exige apenas um ponto de interrupção entre telas pequenas e telas
 grandes.
 
-{% link_sample _code/mostly-fluid.html %}
+
   <img src="imgs/mostly-fluid.svg">
   Tente
-{% endlink_sample %}
+
 
 Na exibição menor, cada conteúdo `div` é empilhado verticalmente.  Quando a largura da
 tela atinge 600px, o conteúdo principal `div` permanece em `width: 100%`, enquanto o 
@@ -84,10 +84,10 @@ isso resultará em todas as colunas empilhadas verticalmente.  Selecionar
 pontos de interrupção para este padrão de layout depende do conteúdo e é muda de acordo com
  o design.
 
-{% link_sample _code/column-drop.html %}
+
   <img src="imgs/column-drop.svg">
   Tente
-{% endlink_sample %}
+
 
 
 Como a amostra mais fluida, o conteúdo é empilhado verticalmente na menor
@@ -120,10 +120,10 @@ cair abaixo de outras colunas.  Devido às diferenças significativas entre cada
 ponto de interrupção principal, é mais complexo de se manter e provavelmente envolve mudanças
 dentro dos elementos, não apenas no layout de conteúdo geral.
 
-{% link_sample _code/layout-shifter.html %}
+
   <img src="imgs/layout-shifter.svg">
   Tente
-{% endlink_sample %}
+
 
 Este exemplo simplificado mostra o padrão de mudança de layout, o conteúdo é empilhado verticalmente
 em telas menores, mas muda significantemente conforme a tela 
@@ -153,10 +153,10 @@ Pequenos ajustes simples fazem pequenas mudanças no layout, como ajustar o tama
 Funciona bem em layouts de coluna única como sites de uma página linear, artigos
 de texto pesado.
 
-{% link_sample _code/tiny-tweaks.html %}
+
   <img src="imgs/tiny-tweaks.svg">
   Tente
-{% endlink_sample %}
+
 
 Como o nome já diz, pequenas mudanças nesta amostra pois o tamanho da tela muda.
 Conforme a largura da tela fica maior, também aumenta o tamanho da fonte e o preenchimento.
@@ -181,10 +181,10 @@ Estes são alguns dos sites que usam esse padrão:
 
 Em vez de empilhar o conteúdo verticalmente, o padrão off canvas remove o conteúdo usado com menos frequência, como menus de navegação ou de aplicativo, mostrando-os apenas quando o tamanho da tela for suficiente. Em telas menores, o conteúdo pode ser visto com um clique apenas.
 
-{% link_sample _code/off-canvas.html %}
+
   <img src="imgs/off-canvas.svg">
   Tente
-{% endlink_sample %}
+
 
 Em vez de empilhar conteúdo verticalmente, essa amostra oculta dois
 `div` de conteúdo da tela usando um `transform: translate(-250px, 0)`.  O JavaScript é usado

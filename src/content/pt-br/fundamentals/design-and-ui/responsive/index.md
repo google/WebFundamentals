@@ -39,12 +39,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 Existem inúmeros tamanhos de tela em diferentes celulares, `phablets`, tablets, computadores, consoles de videogame, TVs e até mesmo telas incorporadas em acessórios pessoais.  Os tamanhos das telas estão em constante evolução, por isso, é importante que seu site possa se adaptar a qualquer tamanho disponível hoje e no futuro.
 
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 
 Web design responsivo, definido originalmente por [Ethan Marcotte in A List Apart](http://alistapart.com/article/responsive-web-design/), relaciona-se às necessidades dos usuários e aos dispositivos que eles usam.  O layout é alterado de acordo com o tamanho e os recursos do dispositivo.  Por exemplo, em um celular, os usuários veem o conteúdo disposto em uma única coluna. Um tablet possivelmente exibirá o mesmo conteúdo em duas colunas.
 
@@ -71,17 +71,17 @@ Ao usar o valor meta de janela de visualização `width=device-width`, você faz
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Página sem uma janela de segmentação definida">
       Ver o exemplo
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Página com uma janela de segmentação definida">
       Ver o exemplo
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -119,17 +119,17 @@ A definição de elementos com grandes larguras absolutas no código CSS (como n
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Página com um elemento fixo de 344 px de largura em um iPhone.">
       Ver o exemplo
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Página com um elemento fixo de 344 px em um Nexus 5.">
       Ver o exemplo
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -217,9 +217,9 @@ Embora existam diversos itens sobre os quais podem ser criadas consultas, `min-w
 Vamos analisar um exemplo:
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Visualização de uma página com consultas de mídia para alterar suas propriedades à medida que for redimensionada.">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">
@@ -288,17 +288,17 @@ Vamos trabalhar no exemplo que vimos anteriormente, a [previsão do tempo]({{sit
 O primeiro passo é fazer com que a previsão seja exibida de forma adequada em uma tela pequena.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Visualização da previsão do tempo exibida em uma tela pequena.">
-  {% endlink_sample %}
+  
 </figure>
 
 Em seguida, redimensione o navegador até que haja muitos espaços em branco entre os elementos e a previsão esteja desagradável visualmente.  A decisão é relativamente subjetiva, mas acima de 600 px a página fica excessivamente larga.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Visualização da previsão do tempo à medida que a página fica mais larga.">
-  {% endlink_sample %}
+  
 </figure>
 
 Para inserir um ponto de quebra em 600 pixels, crie duas novas planilhas de estilo, uma para usar quando o navegador tiver 600 px ou menos, outra para quando ele tiver mais de 600 px.
@@ -310,9 +310,9 @@ Para inserir um ponto de quebra em 600 pixels, crie duas novas planilhas de esti
 Por fim, configure novamente o código CSS.  Neste exemplo, colocamos os estilos comuns como fontes, ícones, posicionamento básico e cores em `weather.css`.  Os layouts específicos para a tela pequena são colocados em `weather-small.css`, e os estilos definidos para a tela grande são inseridos em `weather-large.css`.
 
 <figure>
-  {% link_sample _code/weather-2.html %}
+  
     <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
+  
 </figure>
 
 ### Escolha pontos de quebra menores, quando necessário

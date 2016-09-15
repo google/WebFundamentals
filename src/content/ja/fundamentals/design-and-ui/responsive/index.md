@@ -39,12 +39,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 携帯電話、「ファブレット」、タブレット、パソコン、ゲーム機、テレビ、そしてウェアラブルに至るまで、数多くの画面サイズが存在します。画面サイズは常に変わり続けているため、現在だけでなく将来のあらゆる画面サイズに対応できるウェブサイトを構築することが重要です。
 
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 
 レスポンシブ ウェブデザイン（[A List Apart の Ethan Marcotte](http://alistapart.com/article/responsive-web-design/)（リンク先は英語）が最初に定義）によって、ユーザーとその使用デバイスのニーズに対応することができます。デバイスのサイズと機能に基づいてレイアウトが変化します。たとえば、携帯電話ではコンテンツが 1 カラムのビューで表示され、タブレットでは同じコンテンツが 2 カラムで表示されます。
 
@@ -74,17 +74,17 @@ meta viewport の値 width=device-width を使用すると、画面の幅をデ�
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="ビューポートが設定されていないページ">
       例を表示する
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="ビューポートが設定されたページ">
       例を表示する
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -121,17 +121,17 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="固定幅 344px の要素を持つページを iPhone で表示した場合の例。">
       例を表示する
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="固定幅 344px の要素を持つページを Nexus 5 で表示した場合の例。">
       例を表示する
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -220,9 +220,9 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 以下の例で説明します。
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="メディア クエリを使用してサイズ変更時にプロパティを変更するページのプレビュー。">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">
@@ -292,17 +292,17 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 まず、小さい画面での予報の外観を整えます。
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="小さい画面に表示された天気予報のプレビュー。">
-  {% endlink_sample %}
+  
 </figure>
 
 次に、要素の間の空白が広くなりすぎて予報が見づらくなるまで、ブラウザのサイズを大きくします。やや主観的な判断になりますが、サイズが 600px を超えると余白は明らかに広すぎます。
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="ページの幅を広げた天気予報のプレビュー。">
-  {% endlink_sample %}
+  
 </figure>
 
 600px にブレークポイントを設定するには、2 つのスタイルシートを新たに作成して、そのうちの 1 つをブラウザの幅が 600px 以下の場合に使用し、もう 1 つを 600px より広い場合に使用します。
@@ -314,9 +314,9 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 最後に、CSS をリファクタリングします。この例では、フォント、アイコン、基本的な配置、色などの共通のスタイルが weather.css に記述されています。そのうえで、小さい画面用の具体的なレイアウトが weather-small.css に、大きい画面用のスタイルが weather-large.css に記述されています。
 
 <figure>
-  {% link_sample _code/weather-2.html %}
+  
     <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
+  
 </figure>
 
 ### 必要に応じてマイナー ブレークポイントを設定する

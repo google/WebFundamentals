@@ -39,12 +39,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 Téléphones, "phablettes", tablettes, ordinateurs, consoles de jeu, téléviseurs et même accessoires connectés, il existe aujourd'hui une multitude de tailles d'écran différentes. Dans ce domaine, le changement est la norme. Il est donc important que votre site puisse s'adapter à tous les formats, que ce soit aujourd'hui ou demain.
 
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 
 La conception de sites web adaptatifs (ou RWD, Responsive Web Design, en anglais), est un concept défini à l'origine par [Ethan Marcotte dans 'A List Apart'](http://alistapart.com/article/responsive-web-design/). Ce concept répond aux besoins des utilisateurs et des appareils qu'ils utilisent. La disposition change en fonction de la taille et des fonctionnalités de l'appareil. Sur un téléphone, par exemple, le contenu s'affichera dans une seule colonne, alors qu'il apparaîtra dans deux colonnes sur une tablette.
 
@@ -74,17 +74,17 @@ La valeur Meta `width=device-width` de fenêtre d'affichage indique à la page d
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page sans fenêtre d'affichage">
       Voir l'exemple
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page sur laquelle une fenêtre d'affichage est définie">
       Voir l'exemple
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -123,17 +123,17 @@ Si vous définissez une largeur CSS absolue élevée pour des éléments de page
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page avec un élément de largeur fixe de 344 pixels sur un iPhone.">
       Voir l'exemple
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page avec un élément de largeur fixe de 344 pixels sur un Nexus 5.">
       Voir l'exemple
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -221,9 +221,9 @@ Bien que plusieurs éléments différents puissent faire l'objet de requêtes, c
 Prenons un exemple :
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Aperçu d'une page qui utilise des requêtes média pour modifier des propriétés lors du redimensionnement.">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">
@@ -293,17 +293,17 @@ Examinons l'exemple de [prévision météorologique]({{site.fundamentals}}/layou
 La première étape consiste à soigner la présentation des prévisions sur un petit écran.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Aperçu des prévisions météorologiques sur un petit écran.">
-  {% endlink_sample %}
+  
 </figure>
 
 Redimensionnez ensuite le navigateur jusqu'à ce qu'il y ait trop d'espace entre les éléments et que la qualité d'affichage des prévisions ne soit plus optimale. Cette décision est subjective, mais considérez qu'au-delà de 600 pixels, la largeur limite a été atteinte .
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Aperçu des prévisions météorologiques à mesure que la page est agrandie.">
-  {% endlink_sample %}
+  
 </figure>
 
 Pour insérer un point de rupture à 600 pixels, créez deux feuilles de style ; l'une à utiliser lorsque la taille du navigateur est inférieure ou égale à 600 pixels, et l'autre pour une taille supérieure à 600 pixels.
@@ -315,9 +315,9 @@ Pour insérer un point de rupture à 600 pixels, créez deux feuilles de style ;
 Pour terminer, restructurez la feuille de style en cascade (CSS). Dans cet exemple, les styles courants, tels que les polices, les icônes, les couleurs et le positionnement de base, ont été placés dans le fichier 'weather.css'. Les dispositions spécifiques relatives au petit écran sont ensuite placées dans le fichier 'weather-small.css', tandis que les styles pour grand écran sont placés dans 'weather-large.css'.
 
 <figure>
-  {% link_sample _code/weather-2.html %}
+  
     <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
+  
 </figure>
 
 ### Choisir des points de rupture mineurs lorsque cela s'avère nécessaire

@@ -39,12 +39,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 Существует множество различных устройств с экранами всевозможных размеров: телефоны, `фаблеты`, планшетные и домашние ПК, игровые консоли, телевизоры и даже электронные аксессуары, которые можно носить прямо на себе.  Размеры экранов постоянно меняются, поэтому важно, чтобы сайт мог адаптироваться к любому из них - не только сейчас, но и в будущем.
 
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 
 Об отзывчивом веб-дизайне впервые написал [Итан Маркотт в статье журнала A List Apart](http://alistapart.com/article/responsive-web-design/). Это именно то, чего так не хватало устройствам и их пользователям.  Макет подстраивается под устройство, исходя из его возможностей и размера.  К примеру, определенный контент на телефоне располагается в одной колонке, а на планшете - в двух.
 

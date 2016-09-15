@@ -48,10 +48,10 @@ Mostly fluid 模式主要由流动网格组成。  在较大和中等屏幕上 �
 在小屏幕和大屏幕之间通常只需要一个
 视图断点。
 
-{% link_sample _code/mostly-fluid.html %}
+
   <img src="imgs/mostly-fluid.svg">
   试一下
-{% endlink_sample %}
+
 
 在最小的视图中，每个内容 `div` 都垂直排列。  在屏幕
 宽度达到 600px 时，主要内容 `div` 保持 `width: 100%`，而辅助
@@ -84,10 +84,10 @@ Mostly fluid 模式主要由流动网格组成。  在较大和中等屏幕上 �
 选择视图断点时要依据内容，并且将针对每种设计
 而改变。
 
-{% link_sample _code/column-drop.html %}
+
   <img src="imgs/column-drop.svg">
   试一下
-{% endlink_sample %}
+
 
 
 与 Mostly fluid 示例类似，内容在最小视图中垂直
@@ -120,10 +120,10 @@ Layout shifter 模式是响应最快的模式，在多种屏幕宽度上采用 �
 其维护更复杂，并且可能涉及元素
 内的更改，而不只是总体内容布局的更改。
 
-{% link_sample _code/layout-shifter.html %}
+
   <img src="imgs/layout-shifter.svg">
   试一下
-{% endlink_sample %}
+
 
 这个简化示例显示了　Layout shifter 模式，在较小的屏幕上
 内容垂直排列，但在屏幕变大时显著改变，
@@ -153,10 +153,10 @@ Tiny tweaks 只对布局进行小更改，例如调整字号 、调整图片大�
 它在单列布局上表现很好，例如单页面线性网站、
 文本为主的文章。
 
-{% link_sample _code/tiny-tweaks.html %}
+
   <img src="imgs/tiny-tweaks.svg">
   试一下
-{% endlink_sample %}
+
 
 正如其名所示，在屏幕大小改变时，本示例的变化很小。
 当屏幕宽度增加时，字号和行距也变大。
@@ -181,10 +181,10 @@ Tiny tweaks 只对布局进行小更改，例如调整字号 、调整图片大�
 
 off canvas 模式不是垂直排列内容，而是将不 常用的内容（可能是导航或应用的菜单）放在屏幕之外，只在屏幕足够大时才显示。在较小屏幕上，只需点击 就能显示内容。
 
-{% link_sample _code/off-canvas.html %}
+
   <img src="imgs/off-canvas.svg">
   试一下
-{% endlink_sample %}
+
 
 此示例不是垂直排列内容，而是使用`transform: translate(-250px, 0)` 将两个内容
 `div`隐藏在屏幕之外。  然后通过给元素添加 Open 类来使其可见，使用 JavaScript 

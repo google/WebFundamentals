@@ -92,9 +92,9 @@ description: Большинство интернет-ресурсов не оп�
 Рассмотрим пример:
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Просмотр страницы, использующей медиазапросы джля корректировки при изменении размеров.">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">

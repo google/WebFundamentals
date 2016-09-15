@@ -39,12 +39,12 @@ Explore what makes a site responsive and how some common responsive design patte
 
 Ekrany mogą być w wielu różnych rozmiarach &ndash; na telefonach, `fabletach`, tabletach, komputerach, konsolach do gier, telewizorach, a nawet urządzeniach do noszenia. Zawsze będą pojawiać się nowe, dlatego witryna powinna dostosowywać się do każdego rozmiaru ekranu &ndash; teraz i w przyszłości.
 
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 
 Elastyczne projektowanie witryn, pierwotnie zdefiniowane przez [Ethana Marcotte`a w czasopiśmie A List Apart](http://alistapart.com/article/responsive-web-design/) to odpowiedź na potrzeby użytkowników i ich urządzeń. Układ strony zmienia się w zależności od rozmiaru i możliwości urządzenia. Na przykład na telefonie użytkownik widzi treści w jednej kolumnie. Z kolei na tablecie te same treści są już wyświetlane w dwóch kolumnach.
 
@@ -74,17 +74,17 @@ Wartość metatagu viewport `width=device-width` powoduje, że strona dopasowuje
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Strona bez ustawionego tagu viewport">
       Zobacz przykład
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Strona z ustawionym tagiem viewport">
       Zobacz przykład
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -122,17 +122,17 @@ Ustawienie dużych bezwzględnych szerokości CSS elementów strony (tak jak w p
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Strona z elementem o stałej szerokości 344&nbsp;pikseli na iPhonie">
       Zobacz przykład
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Strona z elementem o stałej szerokości 344&nbsp;pikseli na Nexusie 5.">
       Zobacz przykład
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -220,9 +220,9 @@ Jest kilka różnych elementów, których może dotyczyć zapytanie, jednak przy
 Przyjrzyjmy się przykładowi:
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Podgląd strony, która korzysta z zapytań o media, by zmieniać właściwości podczas skalowania widoku.">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">
@@ -291,17 +291,17 @@ Opracujmy przykład pokazany na początku &ndash; [prognozę pogody]({{site.fund
 W pierwszej kolejności postaraj się, by prognoza dobrze wyglądała na małym ekranie.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Podgląd prognozy pogody na małym ekranie.">
-  {% endlink_sample %}
+  
 </figure>
 
 Następnie powiększaj okno przeglądarki, aż między poszczególnymi elementami będzie tyle pustego miejsca, że prognoza przestanie wyglądać dobrze. Ocena jest dość subiektywna, ale ponad 600&nbsp;pikseli szerokości to z pewnością za dużo.
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Podgląd prognozy pogody po poszerzeniu strony">
-  {% endlink_sample %}
+  
 </figure>
 
 Aby wstawić punkt graniczny przy 600&nbsp;pikselach, utwórz dwa nowe arkusze stylów: jeden stosowany wtedy, gdy szerokość przeglądarki nie przekracza 600&nbsp;pikseli, a drugi &ndash; powyżej tej wartości.
@@ -313,9 +313,9 @@ Aby wstawić punkt graniczny przy 600&nbsp;pikselach, utwórz dwa nowe arkusze s
 Na koniec popraw style CSS. W tym przykładzie umieściliśmy wspólne style (takie jak czcionki, ikony, podstawowe pozycjonowanie oraz kolory) w pliku `weather.css`. Konkretne układy na mały ekran są w pliku `weather-small.css`, a style na duży &ndash; w pliku `weather-large.css`.
 
 <figure>
-  {% link_sample _code/weather-2.html %}
+  
     <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
+  
 </figure>
 
 ### W razie potrzeby określ dodatkowe punkty graniczne

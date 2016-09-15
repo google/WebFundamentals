@@ -59,7 +59,7 @@ description: Узнайте, как легко и просто добавить 
 Ниже приведен пример.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
 </pre>
 
 Когда браузер анализирует теги <source>, он использует дополнительный атрибут type для определения, какой файл загрузить и воспроизвести. Если браузер поддерживает формат WebM, он воспроизведет файл chrome.webm. Если нет, браузер попытается вопроизвести видеофайлы в формате MPEG-4.
@@ -267,13 +267,13 @@ Note: При изменении размеров элемента не нару�
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
 Сравните <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">образец видео, настроенного в соответствии с концепцией отзывчивого дизайна</a>, с <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">видео, не учитывающим этой концепции</a>.
@@ -388,7 +388,7 @@ Note: Элементы track поддерживаются в Chrome для Andro
 Вставить субтитры легко - просто добавьте track как дочерний элемент video:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/video/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track"   adjust_indentation="auto" %}
 </pre>
 
 Атрибут src элемента track определеяет местоположение файла с треком.

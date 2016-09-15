@@ -22,12 +22,12 @@ Translated By:
 패블릿, 태블릿, 데스크탑, 게임콘솔, 티비, 웨어러블 기기 등등 정말 다양한 화면 크기가 있습니다. 화면 크기는 언제나 변하기 때문에 당신의 사이트는 어떤 화면 크기에도 언제나 적응 가능하도록 설계되어야 합니다.
 
 {% comment %}
-{% link_sample _code/weather.html %}
+
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
-{% endlink_sample %}
+
 {% endcomment %}
 
 원래 [Ethan Marcotte in A List
@@ -56,17 +56,17 @@ meta viewport의 `width=device-width` 값은 페이지가 특정 기기 크기�
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
       See example
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6-col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
       See example
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -103,17 +103,17 @@ Note: 콤마를 사용하여 attributes를 분리하고, 오래된 브라우저�
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6-col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone.">
       See example
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6-col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5.">
       See example
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -203,9 +203,9 @@ stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 C
 아래 예제를 봅시다:
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Preview of a page using media queries to change properties as it is resized.">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">

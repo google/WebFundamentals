@@ -66,17 +66,17 @@ Explore what makes a site responsive and how some common responsive design patte
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-no.html %}
+    
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="未设置视口的网页">
       查看示例
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp.html %}
+    
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="已设置视口的网页">
       查看示例
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -114,17 +114,17 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone 上带有 344 像素的固定宽度元素的网页。">
       查看示例
-    {% endlink_sample %}
+    
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    {% link_sample _code/vp-fixed.html %}
+    
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5 上带有 344 像素的固定宽度元素的网页。">
       查看示例
-    {% endlink_sample %}
+    
   </div>
 </div>
 
@@ -212,9 +212,9 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 我们通过一个示例了解一下：
 
 <figure>
-  {% link_sample _code/media-queries.html %}
+  
     <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="预览使用媒体查询的网页，以便在调整尺寸时更改属性。">
-  {% endlink_sample %}
+  
 </figure>
 
 <pre class="prettyprint">
@@ -282,17 +282,17 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 首先使天气预报在较小的屏幕上呈现效果良好。
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="在较小的屏幕上预览天气预报的显示效果。">
-  {% endlink_sample %}
+  
 </figure>
 
 接下来，调整浏览器大小，直到元素之间的空间过大，天气预报根本无法正常显示为止。具体应调整到多大是由自己主观决定的，但超过 600 像素肯定就过宽了。
 
 <figure>
-  {% link_sample _code/weather-1.html %}
+  
     <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="在网页逐渐变宽时预览天气预报的显示效果。">
-  {% endlink_sample %}
+  
 </figure>
 
 要在 600 像素处插入断点，请新建两个样式表，一个在浏览器不超过 600 像素时使用，另一个在超过 600 像素时使用。
@@ -304,9 +304,9 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 最后，重新设计 CSS。在本例中，我们已将常用的样式（例如字体、图标、基本定位和颜色）放入 weather.css。然后，针对小屏幕的特定版式会放入 weather-small.css，而大屏幕样式则放入 weather-large.css。
 
 <figure>
-  {% link_sample _code/weather-2.html %}
+  
     <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  {% endlink_sample %}
+  
 </figure>
 
 ### 必要时选择小断点
