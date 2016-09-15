@@ -145,6 +145,15 @@ landing_page:
           the Short event schedule, and adding more detail.
         </p>
         <p class="faq-question">
+          How do I add my event to the map?
+        </p>
+        <p class="faq-answer">
+          If you’re already part of a Google Developer Group you’ll want to add
+          your event to the <a href="https://developers.google.com/events">GDG
+          Calendar</a> and use the tag “pwa roadshow”. For non-GDG events, we’ll
+          be rolling out a sign up process in the very near future. Stay tuned!
+        </p>
+        <p class="faq-question">
           I’m excited about learning about Progressive Web Apps right now, and
           don’t want to wait for a PWA Roadshow event. What should I do?
         </p>
