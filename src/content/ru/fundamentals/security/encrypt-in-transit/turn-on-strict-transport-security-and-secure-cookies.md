@@ -1,14 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Включение строгой безопасности транспорта и использование защищенных файлов cookie {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 ### TL;DR {: .hide-from-toc }

@@ -2,13 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: В данном разделе для генерации открытых/закрытых ключей и запросов на получение сертификата CSR используется консольная программа openssl, стандартная для большинства операционных систем Linux, BSD и Mac OS X.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Генерация ключей и запросы на получение сертификата {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 

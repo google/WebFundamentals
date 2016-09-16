@@ -1,14 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Вопросы миграции {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 В этом разделе рассматриваются вопросы о переходе на HTTPS, которые могут возникнуть у операторов.
@@ -57,7 +56,7 @@ HTTP/2. Об этом говорил Крис Палмер [в своем выс
 Поскольку поисковые системы переходят на HTTPS, не исключено, что к моменту, когда вы перейдете на HTTPS,
 заголовков источников ссылок будет _больше_, чем сейчас.
 
-<blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Клиентам НЕ СЛЕДУЕТ включать поле заголовка источника ссылки в запросы HTTP (по незащищенному протоколу), если для передачи страницы с исходной ссылкой использовался защищенный протокол.<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">В соответствии с требованиями стандарта RFC для HTTP</a></p></blockquote>
+<blockquote>Клиентам НЕ СЛЕДУЕТ включать поле заголовка источника ссылки в запросы HTTP (по незащищенному протоколу), если для передачи страницы с исходной ссылкой использовался защищенный протокол.<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">В соответствии с требованиями стандарта RFC для HTTP</a></p></blockquote>
 
 ## Доход от рекламы
 
