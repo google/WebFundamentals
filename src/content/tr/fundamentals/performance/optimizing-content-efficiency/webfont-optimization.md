@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Tipografi; iyi tasarim, marka bilinci olusturma, okunabilirlik ve erisilebilirlik özelliklerinin temelini olusturur. Web yazi tipleri yukaridakilerin tümünü ve daha fazlasini saglar: Metin seçilebilir, aranabilir, zum yapilabilir ve yüksek DPI dostudur, ekran boyutu ve çözünürlükten bagimsiz olarak tutarli ve net metin olusturmasi saglar. Web yazi tipleri iyi tasarim, UX ve performans için kritik öneme sahiptir.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
@@ -73,29 +72,27 @@ Note: EOT, TTF ve WOFF biçimleri için <a href='http://en.wikipedia.org/wiki/Zo
 
 Her bir @font-face bildirimi, yazi tipi ailesinin adini saglar. Yazi tipi ailesi birden çok bildirimin, stil, agirlik ve uzatma gibi [yazi tipi özelliklerinin](http://www.w3.org/TR/css3-fonts/#font-prop-desc) ve yazi tipi kaynagina iliskin öncelikli bir konum listesini belirten [src tanimlayicisindan](http://www.w3.org/TR/css3-fonts/#src-desc) olusan bir mantiksal grup gibi hareket eder.
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
 
 Ilk olarak, yukaridaki örnekte iki stili (normal ve _italic_) olan tek bir _Awesome Font_ ailesinin tanimlandigina ve her bir stilin farkli bir yazi tipi kaynak kümesini isaret ettigine dikkat edin. Dolayisiyla, her bir `src` tanimlayicisi öncelikli, virgülle ayrilmis bir kaynak çesitleri listesi içerir: 
 
@@ -181,7 +178,7 @@ Her bir yazi tipi ailesi birden çok biçimsel çesit (normal, kalin, italik) ve
 
 <div class="quote">
   <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Yüzü olmayan bir agirlik belirtildiginde, yakin bir agirliga sahip baska bir yüz kullanilir. Genel olarak, kalin agirliklar daha büyük agirliklara sahip yüzlerle ve hafif agirliklar, daha hafif agirliklara sahip yüzlerle eslestirilir.
+    <blockquote>Yüzü olmayan bir agirlik belirtildiginde, yakin bir agirliga sahip baska bir yüz kullanilir. Genel olarak, kalin agirliklar daha büyük agirliklara sahip yüzlerle ve hafif agirliklar, daha hafif agirliklara sahip yüzlerle eslestirilir.
     <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">CSS3 yazi tipi eslestirme algoritmasi</a></p>
     </blockquote>
   </div>
@@ -224,7 +221,7 @@ Yukaridaki örnekte, ayni Latin glif kümesini kapsayan, ancak iki farkli `agirl
 
 <div class="quote">
   <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Yazarlar, sentezlenmis yaklasimlarin Kiril gibi, italik biçimlerin sekil olarak çok farkli oldugu komut dosyalari için uygun olamayacagi konusunda dikkatli olmalidir. Bir sentetik sürüme güvenmek yerine gerçek bir italik yazi tipinin kullanilmasi her zaman için daha iyidir.
+    <blockquote>Yazarlar, sentezlenmis yaklasimlarin Kiril gibi, italik biçimlerin sekil olarak çok farkli oldugu komut dosyalari için uygun olamayacagi konusunda dikkatli olmalidir. Bir sentetik sürüme güvenmek yerine gerçek bir italik yazi tipinin kullanilmasi her zaman için daha iyidir.
     <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3 yazi tipi stili</a></p>
     </blockquote>
   </div>

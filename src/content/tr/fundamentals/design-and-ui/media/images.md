@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Bir resim 1000 kelimeye bedeldir ve resimler, her sayfanin ayrilmaz bir parçasidir. Ayni zamanda indirilen baytlarin çogunlugundan genellikle bunlar sorumludur.  Duyarli web tasarimiyla, cihaz özelliklerine dayali olarak yalnizca yer paylasimlarimiz degil, ayni zamanda resimler de degisebiliyor.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Resimler {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

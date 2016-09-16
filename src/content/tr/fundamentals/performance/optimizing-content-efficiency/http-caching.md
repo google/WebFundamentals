@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Bir seyin ag üzerinden getirilmesi yavas ve pahalidir: Büyük yanitlar, istemci ile sunucu arasinda çok sayida gelis gidis gerçeklestirmesini gerektirdiginden kullanilabilir duruma gelmeleri ve tarayici tarafindan islenebilmeleri gecikir, ayrica ziyaretçi için veri maliyetleri olur. Sonuç olarak, önceden getirilen kaynaklari önbellege alma ve yeniden kullanma yetenegi, performansi optimize etmenin önemli bir unsurudur.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 

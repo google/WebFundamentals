@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Kritik olusturma yolu performans tikanikliklarinin tanimlanmasi ve çözülmesi, yaygin görülen güçlüklerle ilgili iyi bilgi sahibi olunmasini gerektirir. Simdi baslangiç turumuzu gerçeklestirelim ve sayfalarinizi optimize etmenize yardimci olacak, yaygin görülen performans kaliplarini çikartalim.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

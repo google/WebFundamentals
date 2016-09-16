@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Her bir uygulama tarafindan indirilen veri miktari artmaya devam etmektedir. Harika bir performans saglamak için her baytin teslimini optimize etmemiz gerekir!
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Resimler genellikle bir web sayfasinda indirilen baytlarin çogunlugundan sorumlu olur ve siklikla görsel alanin önemli bir kismini kaplar. Sonuç olarak, resimlerin optimize edilmesi genellikle en büyük bayt tasarruflarindan ve web sitenizdeki en iyi performans iyilestirmelerinden bazilarini saglayabilir: Tarayicinin indirmesi gereken bayt miktari azaldikça, istemci bant genisligi için daha az rekabet olur ve tarayici, yararli içerigi daha hizli indirip ekranda olusturabilir.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
@@ -48,17 +47,20 @@ Bir resmin gerçekte istediginiz etkiyi gerçeklestirmek için en uygun biçim o
 
 &nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Vektör</b>
-    <img class="center" src="images/vector-zoom.png" alt="Zum yapilmis vektör resim">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Tarama</b>
-    <img src="images/raster-zoom.png" alt="Zum yapilmis tarama resim">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/vector-zoom.png" alt="Zum yapilmis vektör resim">
+    <figcaption>Zoomed-in vector image</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/raster-zoom.png" alt="Zum yapilmis tarama resim">
+    <figcaption>Zoomed-in raster image</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 * [Vektör grafikler](http://en.wikipedia.org/wiki/Vector_graphics), bir resmi yansitmak için çizgiler, noktalar ve çokgenler kullanir.
 * [Tarama grafikler](http://en.wikipedia.org/wiki/Raster_graphics), bir resmi, dikdörtgen sekilli bir kilavuzun içindeki her bir pikselin tek tek degerlerini kodlayarak yansitir.

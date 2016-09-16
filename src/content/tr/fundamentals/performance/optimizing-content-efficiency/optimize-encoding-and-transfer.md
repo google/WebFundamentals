@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Gereksiz kaynaklari çikardiktan sonraki adim, tarayicinin indirmesi gereken kalan kaynaklarin toplam boyutunu en aza indirmek; diger bir deyisle, bunlara içerik türüne özel ve genel sikistirma (GZip) algoritmalari uygulayarak sikistirmaktir.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 

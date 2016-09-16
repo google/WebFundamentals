@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: CSSOM ve DOM agaçlari, bir olusturma agacinda birlestirilir. Bu agaç daha sonra, görünür her bir ögenin yer paylasimini hesaplamak için kullanilir ve ekranda pikselleri olusturan boyama isleminde giris görevi görür. Bu adimlarin her birinin optimize edilmesi, en iyi olusturma performansinin gerçeklestirilmesi açisindan kritik öneme sahiptir.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

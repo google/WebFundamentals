@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Web'in çogunlugu bu çoklu cihaz deneyimleri için optimize edilmemistir. Sitenizin mobil cihazlarda, masaüstü bilgisayarlarda veya ekrani olan herhangi bir seyde çalismasini saglamak için gereken temel bilgileri edinin.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Duyarli Web Tasarimi Temel Bilgileri {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Web'de sörf yapmak için mobil cihazlarin kullanilmasi çok büyük bir hizla artmaktadir, ancak ne yazik ki web'in çogunlugu bu mobil cihazlar için optimize edilmemistir. Mobil cihazlar genellikle ekran boyutuna göre sinirlanir ve içerigin ekrana yerlestirilme sekliyle ilgili farkli bir yaklasim gereklidir.
@@ -72,20 +71,25 @@ En iyi deneyimi saglama çabasiyla mobil tarayicilar, sayfayi bir masaüstü ekr
 
 `width=device-width` meta görüntü alani degeri kullanildiginda, cihazdan bagimsiz piksel sayisi kullanilarak sayfanin ekranin genisligiyle eslestirilmesi talimati verilir. Bu, ister küçük bir cep telefonunda isterse de genis bir masaüstü monitöründe olusturulmus olsun, sayfanin içerigi yeniden düzenleyerek farkli ekran boyutlariyla eslestirmesine olanak tanir.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Görüntü alani ayari olmayan sayfa">
-      Örnege bakin
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Görüntü alani ayari olan sayfa">
-      Örnege bakin
-    
-  </div>
+<div class="attempt-left">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-no.html">
+  <figure>
+    <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Görüntü alani ayari olmayan sayfa">
+    <figcaption>
+      Page without a viewport set
+     </figcaption>
+  </figure>
+  </a>
+</div>
+<div class="attempt-right">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp.html">
+  <figure>
+    <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Görüntü alani ayari olan sayfa">
+    <figcaption>
+      Page with a viewport set
+     </figcaption>
+  </figure>
+  </a>
 </div>
 
 Bazi tarayicilar, yatay moda dönerken sayfanin genisligini sabit tutar ve ekrani doldurmak için yeniden düzenlemek yerine zum yapar. `initial-scale=1` özelligi eklendiginde, tarayiciya CSS pikselleri ile cihazdan bagimsiz pikseller arasinda, cihazin yönü ne olursa olsun 1:1 iliski olusturmasi talimati verilir ve sayfanin tam yatay genislikten yararlanmasi saglanir.
@@ -120,22 +124,26 @@ Ekran boyutlari ve CSS piksellerindeki genislik, cihazlar arasinda (ör. telefon
 
 Sayfa ögeleri için genis mutlak CSS genisliklerinin ayarlanmasi (asagidaki örnekte oldugu gibi), dar bir cihazda (ör. iPhone gibi 320 CSS pikseli genisligi olan bir cihazda) `div` ögesinin görüntü alani için çok genis olmasina neden olur. Bunun yerine, `width: 100%` gibi göreli genislik degerleri kullanmayi düsünebilirsiniz.  Benzer bir sekilde, ögenin küçük ekranlarda görüntü alaninin disinda kalmasina neden olabilecek genis mutlak konumlandirma degerleri kullanmaktan kaçinin.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone'da 344 piksel sabit genislikli bir öge içeren sayfa.">
-      Örnege bakin
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5'te 344 piksel sabit genislikli bir öge içeren sayfa.">
-      Örnege bakin
-    
-  </div>
+<div class="attempt-left">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <figure>
+    <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone'da 344 piksel sabit genislikli bir öge içeren sayfa.">
+    <figcaption>
+      iPhone'da 344 piksel sabit genislikli bir öge içeren sayfa.
+     </figcaption>
+  </figure>
+  </a>
 </div>
-
+<div class="attempt-right">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <figure>
+    <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5'te 344 piksel sabit genislikli bir öge içeren sayfa.">
+    <figcaption>
+      Nexus 5'te 344 piksel sabit genislikli bir öge içeren sayfa.
+     </figcaption>
+  </figure>
+  </a>
+</div>
 
 ## Duyarlilik için CSS medya sorgularini kullanma
 
@@ -326,15 +334,26 @@ Küçük ekran yerlesimini optimize ederek baslayalim.  Bu örnekte, görüntü 
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" class="attempt-left"  srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" class="attempt-right"  srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
+    <figcaption>
+      Before adding minor breakpoints.
+     </figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
+    <figcaption>
+      After adding minor breakpoints.
+     </figcaption>
+  </figure>
+</div>
+
+
+<div style="clear:both;"></div>
+
 
 Benzer bir sekilde, tüm ekran genisligini tüketmemesi için genis ekranlarda tahmin panelinin maksimum genisligini sinirlamak en dogru karar olacaktir.
 
@@ -346,15 +365,20 @@ Benzer bir sekilde, tüm ekran genisligini tüketmemesi için genis ekranlarda t
 
 Klasik okunabilirlik teorisi, ideal bir sütunun satir basina 70 ile 80 karakter içermesi gerektigini (Ingilizcede yaklasik 8 ile 10 kelime) söyler, dolayisiyla bir metin blogunun genisligi yaklasik 10 kelimeyi geçecek sekilde büyüdügünde bir kesme noktasinin kullanilmasi düsünülebilir.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" class="attempt-left"  srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Küçük kesme noktalari eklemeden önce.">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" class="attempt-right"  srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Küçük kesme noktalari ekledikten sonra.">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Küçük kesme noktalari eklemeden önce.">
+    <figcaption>Küçük kesme noktalari eklemeden önce.</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Küçük kesme noktalari ekledikten sonra.">
+    <figcaption>Küçük kesme noktalari ekledikten sonra.</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 Yukaridaki blog yayini örnegine daha ayrintili bir sekilde bakalim.  Küçük ekranlarda, 1em büyüklügündeki Roboto yazi tipi mükemmel bir sekilde satir basina 10 kelime verir, ancak genis ekranlarda bir kesme noktasi gerektirir. Bu durumda, tarayici genisligi 575 pikselden büyükse ideal içerik genisligi 550 piksel olur.
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSSOM olusturuluncaya kadar tarayicinin islenmis herhangi bir içerigin olusturulmasini bekletecegi anlamina gelir. CSS'nizi küçük tuttugunuzdan, mümkün olan en hizli sekilde sagladiginizdan ve olusturmayi engellemeyecek medya türleri ve sorgulari kullandiginizdan emin olun.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -23,19 +22,20 @@ Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSS
 - Engelleyen veya engelleme yapmayan davranisindan bagimsiz olarak tüm CSS kaynaklari tarayici tarafindan indirilir.
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>CSS ile NYTimes</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="CSS ile NYTimes">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>CSS olmadan NYTimes (FOUC)</b>
-    <img src="images/nytimes-nocss-device.png" alt="CSS olmadan NYTimes">
-
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/nytimes-css-device.png" alt="CSS ile NYTimes">
+    <figcaption>The New York Times with CSS</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/nytimes-nocss-device.png" alt="CSS olmadan NYTimes">
+    <figcaption>The New York Times without CSS (FOUC)</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 {% comment %}
 <table>

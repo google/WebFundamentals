@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Web'e, küçük ekranli telefonlardan genis ekranli televizyonlara kadar çok çesitli cihazlardan erisilebilir. Tüm bu cihazlarda iyi bir sekilde çalisacak bir siteyi nasil olusturacaginizi ögrenin.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -162,9 +161,21 @@ Bizim sitemizde, yalnizca Sartlar ve Kosullar'a, bir Iletisim sayfasina ve sosya
 
 Sitenin ana hatlarini olusturduk ve ana yapisal ögelerin tümünü tanimladik.  Ayrica, ilgili tüm içerigin is gereksinimlerimizi karsilamak üzere hazir ve yerinde oldugundan emin olduk.
 
-<div class="mdl-grid">
-  <img class="attempt-left" src="images/content.png" alt="içerik">
-  <img class="attempt-right" src="images/narrowsite.png" alt="">
+<div class="attempt-left">
+  <figure>
+    <img src="images/content.png" alt="Içerik">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Içerik ve yapi</a>
+    </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Son site </a>
+    </figcaption>
+  </figure>
 </div>
 
 Sayfanin su anda kötü göründügünü fark etmissinizdir; bunu bilinçli olarak böyle yaptik. 
@@ -185,14 +196,20 @@ Web'e, küçük ekranli telefonlardan genis ekranli televizyonlara kadar çok ç
 Birden çok ekran boyutunda ve cihaz türünde çalisacak bir site olusturuyoruz. [Önceki makale](#) baslikli makalede, sayfanin Bilgi Mimarisi'ni isledik ve bir temel yapi olusturduk.
 Bu kilavuzda, içerikle temel yapimizi alip çok sayida ekran boyutuna duyarli güzel bir sayfaya dönüstürecegiz.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Içerik">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Içerik ve yapi</a> </figcaption>
+<div class="attempt-left">
+  <figure>
+    <img src="images/content.png" alt="Içerik">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Içerik ve yapi</a>
+    </figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Son site </a> </figcaption>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Son site </a>
+    </figcaption>
   </figure>
 </div>
 
@@ -251,9 +268,7 @@ Stil kilavuzu, sayfanin görsel gösterimini bir üst düzeyde anlamanin yararli
 
 Buna iyi bir örnek, "ekranin üst kismi"ndaki içerik için bir manset resmi kullanilmasi olabilir. Genellikle, kullaniciyi ürünle ilgili daha fazla bilgi okumaya ikna etmek için kullanilir.
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="Tasarlanmis site">
-</div>
+<img  src="images/narrowsite.png" alt="Tasarlanmis site"  class="attempt-right" />
 
 Eklenmeleri çok basit olabilir. Bizim örnegimizde, bu basligin arka plani olacaktir ve bazi basit CSS'ler araciligiyla uygulanacaktir.
 

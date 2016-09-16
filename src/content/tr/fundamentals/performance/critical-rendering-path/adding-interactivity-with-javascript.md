@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript, sayfanin neredeyse her yönünü degistirmemize olanak tanir: içerik, stil ve kullanici etkilesimlerine karsi davranisi. Bununla birlikte , JavaScript DOM yapimini engelleyebilir ve sayfanin olusturulma zamanini geciktirebilir. En iyi performansi sunmak için JavaScript'inizi zaman uyumsuz yapin ve önemli olusturma yolundaki gereksiz JavaScript kodlarini kaldirin.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 
