@@ -20,7 +20,7 @@ a page, including detailed timing data, HTTP request and response
 headers, cookies, and more.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Use the Network panel to record and analyze network activity.
 - View load information in aggregate or for individual resources.
 - Filter and sort how resources are dispalyed.

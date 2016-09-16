@@ -17,7 +17,7 @@ application.
 ![Timeline tool](imgs/timeline-panel.png)
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Make a Timeline recording to analyze every event that occurred  after a page load or a user interaction.
 - View FPS, CPU, and network requests in the Overview pane.
 - Click on an event within the Flame Chart to view details about it.

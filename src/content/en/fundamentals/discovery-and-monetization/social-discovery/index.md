@@ -15,7 +15,7 @@ your site by providing previews with richer information than would otherwise
 be available.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Use schema.org microdata to provide page title, description and an image for Google+.
 - Use Open Graph Protocol (OGP) to provide page title, description and an image for Facebook.
 - Use Twitter Cards to provide page title, description, an image and a Twitter id for Twitter.
@@ -190,7 +190,7 @@ contain a meta tag that has `twitter:card` as the `name` attribute instead of
 Here's a quick example:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" %}
+{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="twitter" adjust_indentation="auto" %}
 </pre>
 
 By assigning the Twitter id to the value of twitter:site, Twitter embeds this
@@ -214,7 +214,7 @@ Given all three options, the best thing you can do is to include them all in
 your webpage. Here's an example:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" %}
+{% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
 </pre>
 
 Notice that microdata and OGP share some markup:

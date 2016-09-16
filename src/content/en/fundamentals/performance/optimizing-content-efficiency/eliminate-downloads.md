@@ -9,7 +9,7 @@ description: You should audit your resources periodically to ensure that each re
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Inventory your own assets and third-party assets on your pages.
 * Measure the performance of each asset: its value and its technical performance.
 * Determine if the resources are providing sufficient value.

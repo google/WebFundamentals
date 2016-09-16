@@ -20,7 +20,7 @@ description: Learn how to animate modal views in your apps.
 
 Modal views are for important messages, and for which you have very good reasons to block the user interface. Use them carefully, because they're disruptive and can easily ruin the user’s experience if overused. But, in some circumstances, they’re the right views to use, and adding some animation will bring them to life.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Use modal views sparingly; users get frustrated if you interrupt their experience unnecessarily.
 * Adding scale to the animation gives a nice "drop on" effect.
 * Get rid of the modal view quickly when the user dismisses it. However, bring the modal view onto the screen a little more slowly so that it doesn't surprise the user.

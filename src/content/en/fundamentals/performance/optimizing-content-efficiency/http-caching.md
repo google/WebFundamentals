@@ -23,7 +23,7 @@ When the server returns a response, it also emits a collection of HTTP headers, 
 
 ## Validating cached responses with ETags
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 * The server uses the ETag HTTP header to communicate a validation token.
 * The validation token enables efficient resource update checks: no data is transferred if the resource has not changed.
 
@@ -42,7 +42,7 @@ Note: Tip: The HTML5 Boilerplate project contains <a href='https://github.com/h5
 
 ## Cache-Control
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 * Each resource can define its caching policy via the Cache-Control HTTP header.
 * Cache-Control directives control who can cache the response, under which conditions, and for how long.
 
@@ -101,7 +101,7 @@ According to HTTP Archive, among the top 300,000 sites (by Alexa rank), the brow
 
 ## Invalidating and updating cached responses
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 * Locally cached responses are used until the resource "expires."
 * Embedding a file content fingerprint in the URL enables you to force the client to update to a new version of the response.
 * Each application needs to define its own cache hierarchy for optimal performance.

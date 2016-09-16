@@ -12,7 +12,7 @@ Inspect and manage storage, databases, and caches from the
 <strong>Application</strong> panel.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - View and edit local and session storage.
 - Inspect and modify IndexedDB databases.
 - Execute statements on a Web SQL database.

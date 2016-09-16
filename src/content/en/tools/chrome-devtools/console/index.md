@@ -17,7 +17,7 @@ messages or display them on their own lines, clear or persist
 output or save it to a file, filter output, and access additional
 Console settings.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Open the Console as a dedicated panel or as a drawer next to any other panel.
 - Stack redundant messages, or display them on their own lines.
 - Clear or persist output between pages, or save it to a file.

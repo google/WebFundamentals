@@ -21,7 +21,7 @@ Note: If you really want to see JIT in action you should check out <a href='http
 
 With all that said, however, there are some things you can definitely do to help your apps execute JavaScript well.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Avoid setTimeout or setInterval for visual updates; always use requestAnimationFrame instead.
 * Move long-running JavaScript off the main thread to Web Workers.

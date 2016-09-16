@@ -12,7 +12,7 @@ description: Custom elements allow web developers to define new HTML tags, exten
 Note: This article describes the new <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">Custom Elements v1 spec</a>. If you've been using custom elements, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4642138092470272">v0 version shipped in Chrome 33</a>. The concepts are the same, but the v1 spec has important API differences. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.</p>
 
 
-## TL;DR {: #tldr }
+### TL;DR {: .hide-from-toc } {: #tldr }
 
 With [Custom Elements][spec], web developers can **create new HTML tags**,
 beef-up existing HTML tags, or extend the components other developers have authored.

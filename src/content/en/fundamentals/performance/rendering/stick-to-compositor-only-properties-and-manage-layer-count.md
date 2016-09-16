@@ -14,7 +14,7 @@ displaying on screen.
 
 There are two key factors in this area that affect page performance: the number of compositor layers that need to be managed, and the properties that you use for animations.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Stick to transform and opacity changes for your animations.
 * Promote moving elements with `will-change` or `translateZ`.

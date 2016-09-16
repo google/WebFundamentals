@@ -12,7 +12,7 @@ description: How to set up a high FPS WebGL project with Polymer.
 
 <img src="images/lightsaber/hilt_framed-n5x-sm.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 How we used Polymer to create a high-performance WebGL mobile controlled
 Lightsaber that is modular and configurable. We review some of the key details

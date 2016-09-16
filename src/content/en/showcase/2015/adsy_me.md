@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/adsy_me/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Adsy.me](http://adsy.me/) is a super quick and easy way to build mobile
 micro sites.

@@ -21,7 +21,7 @@ Similarly to style calculations, the immediate concerns for layout cost are:
 1. The number of elements that require layout.
 2. The complexity of those layouts.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Layout is normally scoped to the whole document.
 * The number of DOM elements will affect performance; you should avoid triggering layout wherever possible.

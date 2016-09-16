@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/flipkart/flipkart.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Flipkart, India’s largest e-commerce site, decided to combine their web
 presence and native app into a Progressive Web Application that has resulted

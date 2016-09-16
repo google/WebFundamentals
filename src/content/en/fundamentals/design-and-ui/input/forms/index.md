@@ -25,7 +25,7 @@ Forms are hard to fill out on mobile. The best forms are the ones with the fewes
 Design efficient forms by avoiding repeated actions, asking for only the necessary information and guide users by showing them how far along they are in multi-part forms.
 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Use existing data to pre-populate fields and be sure to enable auto-fill.
 - Use clearly-labeled progress bars to help users get through multi-part forms.
 - Provide visual calendar so users don’t have to leave your site and jump to the calendar app on their smartphones.
@@ -90,7 +90,7 @@ start and end dates.
 Streamline information entry by using the right input type. Users appreciate websites that automatically present number pads for entering phone numbers, or automatically advance fields as they entered them. Look for opportunities to eliminate wasted taps in your forms.
 
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 - Choose the most appropriate input type for your data to simplify input.
 - Offer suggestions as the user types with the <code>datalist</code> element.
 
@@ -243,7 +243,7 @@ Note: The <code>datalist</code> values are provided as suggestions, and users ar
 Forms are hard to fill out on mobile. The best forms are the ones with the fewest inputs. Good forms provide semantic input types. Keys should change to match the user's input type; users pick a date in a calendar. Keep your user informed. Validation tools should tell the user what they need to do before submitting the form.
 
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 - Always use <code>label</code>s on form inputs, and ensure they're visible when the field is in focus.
 - Use <code>placeholder</code>s to provide guidance about what you expect.
 - To help the browser auto-complete the form, use established <code>name</code>'s for elements and include the <code>autocomplete</code> attribute.
@@ -465,7 +465,7 @@ navigation.
 Real-time data validation doesn't just help to keep your data clean, but it also helps improve the user experience.  Modern browsers have several built-in tools to help provide real-time data validation and may prevent the user from submitting an invalid form.  Visual cues should be used to indicate whether a form has been completed properly.
 
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 - Leverage the browser's built-in validation attributes like <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc.
 - Use JavaScript and the Constraints Validation API for more complex validation requirements.
 - Show validation errors in real time, and if the user tries to submit an invalid form, show all fields they need to fix.

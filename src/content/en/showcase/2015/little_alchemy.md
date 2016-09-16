@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/little_alchemy/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Little Alchem](http://littlealchemy.com/): A fun, mobile-friendly combination
 game inspired by its bigger brother Alchemy.

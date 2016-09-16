@@ -13,7 +13,7 @@ description: The DOM tree view in the Chrome DevTools Elements panel displays th
 The DOM tree view in the Chrome DevTools Elements panel displays the DOM structure of the current web page. Live-edit the content and structure of your page through DOM updates.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - The DOM defines your page structure. Each DOM node is a page element, for example, a header node, paragraph node.
 - Live-edit the content and structure of your pages through the rendered DOM.
 - But remember, you can't modify source files through DOM changes in the Elements panel. Reloading the page erases any DOM tree modifications.

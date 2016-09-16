@@ -13,7 +13,7 @@ Paint is the process of filling in pixels that eventually get composited to
 the users' screens. It is often the longest-running of all tasks in the 
 pipeline, and one to avoid if at all possible.
 
-## TL;DR 
+### TL;DR {: .hide-from-toc } 
 
 * Changing any property apart from transforms or opacity always triggers paint.
 * Paint is often the most expensive part of the pixel pipeline; avoid it where you can.

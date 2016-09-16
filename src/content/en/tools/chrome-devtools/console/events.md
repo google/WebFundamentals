@@ -12,7 +12,7 @@ description: The Chrome DevTools Command Line API offers various ways to observe
 The Chrome DevTools Command Line API offers various ways to observe and inspect event listeners. JavaScript plays a central role in interactive pages, and the browser provides you some useful tools to debug events and event handlers.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Listen to events of a certain type using <code>monitorEvents()</code>.
 - Use <code>unmonitorEvents()</code> to stop listening.
 - Get listeners of a DOM element using <code>getEventListeners()</code>.

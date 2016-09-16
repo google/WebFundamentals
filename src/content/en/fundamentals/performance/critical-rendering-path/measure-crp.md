@@ -13,7 +13,7 @@ You can't optimize what you can't measure. Thankfully, the Navigation
 Timing API gives us all the necessary tools to measure each step of the 
 critical rendering path!
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Navigation Timing provides high resolution timestamps for measuring CRP.
 - Browser emits series of consumable events which capture various stages of the CRP.
 
@@ -50,7 +50,7 @@ The HTML specification dictates specific conditions for each and every event: wh
 <div style="clear:both;"></div>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 The above example may seem a little daunting on first sight, but in reality it is actually pretty simple. The Navigation Timing API captures all the relevant timestamps and our code simply waits for the `onload` event to fire &mdash; recall that `onload` event fires after `domInteractive`, `domContentLoaded` and `domComplete` &mdash; and computes the difference between the various timestamps.

@@ -11,7 +11,7 @@ description: Websites are visited not only by humans, but also by search engine 
 
 Websites are visited not only by humans, but also by search engine web crawlers. Learn how to improve search accuracy and ranking for your website.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Determine the URL structure of your webpage
 - Responsive design is most recommended
 - Use <code>rel='canonical'</code> + <code>rel='alternate'</code> for separate desktop/mobile sites

@@ -13,7 +13,7 @@ description: Your code editor is your main development tool; you use it to write
 Your code editor is your main development tool; you use it to write and save lines of code. Write better code faster by learning your editor's shortcuts and installing key plugins.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Choose an editor that lets you customize shortcuts and has lots of plugins to help you write better code.
 - Make use of the package manager to make it easier to discover, install, and update plugins.
 - Install plugins that help keep you productive during development; start with the recommendations in this guide.

@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/hn_premii/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Hacker News Reader](http://hn.premii.com/): An amazing optimized reader
 for Hacker News.

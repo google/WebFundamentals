@@ -17,7 +17,7 @@ Evaluate any expression you can type using a combination
 of your knowledge of JavaScript and several features that support it.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Evaluate an expression just by typing it.
 - Select elements using one of the shortcuts.
 - Inspect DOM elements and JavaScript heap objects using <code>inspect()</code>.

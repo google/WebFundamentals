@@ -22,7 +22,7 @@ the sites you create already follow all the best practices from the
 minute you start.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Your build process tools must optimise for performance; they should automatically minify and concatenate JavaScript, CSS, HTML, and images.
 - Use tools like LiveReload to make your development process smoother.
 

@@ -16,7 +16,7 @@ Webfont optimization is a critical piece of the overall performance strategy. Ea
 
 ## Anatomy of a webfont
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 * Unicode fonts can contain thousands of glyphs.
 * There are four font formats: WOFF2, WOFF, EOT, and TTF.
 * Some font formats require the use of GZIP compression.
@@ -57,7 +57,7 @@ Note: Consider using <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli compre
 
 ## Defining font family with @font-face
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 * Use the <code>format()</code> hint to specify multiple font formats.
 * Subset large Unicode fonts to improve performance. Use Unicode-range subsetting and provide a manual subsetting fallback for older browsers.
 * Reduce the number of stylistic font variants to improve the page- and text-rendering performance.
@@ -244,7 +244,7 @@ Note: For best consistency and visual results, don't rely on font synthesis. Ins
 
 ## Optimizing loading and rendering
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 * Font requests are delayed until the render tree is constructed, which can result in delayed text rendering.
 * The Font Loading API allows you to implement custom font loading and rendering strategies that override default lazyload font loading.
 * Font inlining allows you to override default lazyload font loading in older browsers.

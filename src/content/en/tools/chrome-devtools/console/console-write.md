@@ -13,7 +13,7 @@ description: Console logging is a powerful way to inspect what your page or appl
 Console logging is a powerful way to inspect what your page or application does. Let's start with console.log() and explore other advanced usage.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolelogobject--object-''>console.log()</a> for basic logging
 - Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consoleerrorobject--object-''>console.error()</a> and <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolewarnobject--object-''>console.warn()</a> for eye-catching stuff
 - Use <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupobject-object-''>console.group()</a> and <a href=''/web/tools/chrome-devtools/debug/console/console-reference#consolegroupend''>console.groupEnd()</a> to group related messages and avoid clutter

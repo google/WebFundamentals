@@ -12,7 +12,7 @@ description: Animations must perform well, otherwise they will negatively impact
 
 Maintain 60fps whenever you are animating, because any less results in stutters or stalls that will be noticeable to your users and negatively impact their experiences.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Take care that your animations don’t cause performance issues; ensure that you know the impact of animating a given CSS property.
 * Animating properties that change the geometry of the page (layout) or cause painting are particularly expensive.
 * Where you can, stick to changing transforms and opacity.

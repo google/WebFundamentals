@@ -12,7 +12,7 @@ description: Go offroad and create totally custom animations for your projects.
 
 Sometimes you won't want to use the easing keywords that are included with CSS, or you will be using Web Animations or a JavaScript framework. In these cases, you can typically define your own curves (or equations), and this provides a lot of control over the feel of your project's animations.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Custom easing allows you to give more personality to your projects.
 * You can create cubic Bézier curves that resemble the default animation curves (ease-out, ease-in, etc.), but with emphasis in different places.
 * Use JavaScript when you need more control over the animation timing and behavior, for example, elastic or bounce animations.

@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/hummingbirdlibrary/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Hummingbird Library](http://hummingbirdlibrary.com/): A refreshingly new
 frontend to Hummingbird, a popular anime watch-tracker and discovery site.

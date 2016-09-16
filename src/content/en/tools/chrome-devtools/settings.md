@@ -13,7 +13,7 @@ Change the appearance of DevTools and access hidden
 features.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Open the Main and Settings menus.
 - Customize the appearance of DevTools.
 - Access hidden features.

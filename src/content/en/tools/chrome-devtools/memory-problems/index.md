@@ -14,7 +14,7 @@ that affect page performance, including memory leaks, memory bloat, and
 frequent garbage collections.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Find out how much memory your page is currently using with the Chrome Task Manager.
 - Visualize memory usage over time with Timeline recordings.
 - Identify detached DOM trees (a common cause of memory leaks) with Heap Snapshots.

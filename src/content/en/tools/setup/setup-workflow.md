@@ -24,7 +24,7 @@ Map resources served from a local web server to files on a disk
 and view changes made to those files as if they were being served.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Don't manually copy changes to local files. Use workspaces to persist changes made in DevTools to your local resources.
 - Stage your local files to your browser. Map files to URLs.
 - Once persistent workspaces are set-up, style changes made in the Elements panel are persisted automatically; DOM changes aren't. Persist element changes in the Sources panel instead.

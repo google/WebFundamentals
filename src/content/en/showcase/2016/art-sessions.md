@@ -11,7 +11,7 @@ description: Six artists were invited to paint, design, and sculpt in VR.
 
 <img src="images/art-sessions/device.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Six artists were invited to paint, design, and sculpt in VR. This is the
 process for how we recorded their sessions, converted the data, and presented

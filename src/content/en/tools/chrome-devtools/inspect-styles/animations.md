@@ -15,7 +15,7 @@ Animation Inspector.
 ![animation inspector](imgs/animation-inspector.png)
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Capture animations by opening the Animation Inspector. It automatically detects animations and sorts them into groups.
 - Inspect animations by slowing them down, replaying them, or viewing their source code.
 - Modify animations by changing their timing, delay, duration, or keyframe offsets.

@@ -11,7 +11,7 @@ description: Learn how to animate between two views in your apps.
 
 Often, you want to move users between views in your application, whether that's from a list to a details view, or show a sidebar navigation. Animations between these views keep the user engaged and add even more life to your projects.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Use translations to move between views; avoid using `left`, `top`, or any other property that triggers layout.
 * Ensure that any animations you use are snappy and the durations are kept short.
 * Consider how your animations and layouts change as the screen sizes go up; what works for a smaller screen may look odd when used in a desktop context.

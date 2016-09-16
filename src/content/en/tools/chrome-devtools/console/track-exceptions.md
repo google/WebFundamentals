@@ -16,7 +16,7 @@ Page exceptions and JavaScript errors are actually quite useful - if you can get
 In the Console you can track exceptions and trace the execution path that led to them, explicitly or implicitly catch them (or ignore them), and even set error handlers to automatically collect and process exception data.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Turn on Pause on Exceptions to debug the code context when the exception triggered.
 - Print current JavaScript call stack using <code>console.trace</code>.
 - Place assertions in your code and throw exceptions using <code>console.assert()</code>.

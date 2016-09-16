@@ -14,7 +14,7 @@ description: >
 
 <img src="images/chrome-dev-summit/screenshot-portrait.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Built in-house by our own Paul Lewis, the CDS website showed how to build a
 great mobile web experience for conference visitors.

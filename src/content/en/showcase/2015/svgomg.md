@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/svgomg/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [SVGOMG](https://jakearchibald.github.io/svgomg/): A beautiful, material,
 responsive frontend for SVGO.

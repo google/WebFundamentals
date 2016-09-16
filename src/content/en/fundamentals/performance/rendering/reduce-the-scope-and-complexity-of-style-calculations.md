@@ -21,7 +21,7 @@ The second part of the process involves taking all the style rules from the matc
 > Roughly 50% of the time used to calculate the computed style for an element is used to match selectors, and the other half of the time is used for constructing the RenderStyle (computed style representation) from the matched rules.
 > Rune Lillesveen, Opera / [Style Invalidation in Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/view)
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Reduce the complexity of your selectors; use a class-centric methodology like BEM.
 * Reduce the number of elements on which style calculation must be calculated.

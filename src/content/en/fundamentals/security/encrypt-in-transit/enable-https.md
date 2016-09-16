@@ -10,7 +10,7 @@ description: Enabling HTTPS on your servers is critical to securing your webpage
 {% include "web/_shared/contributors/chrispalmer.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Create a 2048-bit RSA public/private key pair.
 * Generate a certificate signing request (CSR) that embeds your public key.

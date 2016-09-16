@@ -13,7 +13,7 @@ description: It’s easy to overlook the network conditions your users will face
 It’s easy to overlook the network conditions your users will face on mobile. Use DevTools to emulate different network conditions. Fix any load time issues and your users will thank you.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Without affecting traffic to other tabs, evaluate your site''s performance using the Chrome DevTools network emulator.
 - Use custom profiles that are specific to your audiences network conditions.
 

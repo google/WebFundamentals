@@ -12,7 +12,7 @@ description: On devices with phone capabilities, make it easy for users to direc
 On devices with phone capabilities, make it easy for users to directly connect
 with you by simply tapping a phone number, more commonly known as click to call.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Wrap all phone numbers in hyperlinks with the <code>tel:</code> schema.
 * Always use the international dialing format.

@@ -12,7 +12,7 @@ description: You can animate with CSS or JavaScript. Which should you use, and w
 
 There are two primary ways to create animations on the web: with CSS and with JavaScript. Which one you choose really depends on the other dependencies of your project, and what kinds of effects you're trying to achieve.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Use CSS animations for simpler "one-shot" transitions, like toggling UI element states.
 * Use JavaScript animations when you want to have advanced effects like bouncing, stop, pause, rewind, or slow down.
 * If you choose to animate with JavaScript, use the Web Animations API or a modern framework that you're comfortable with.

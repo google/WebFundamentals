@@ -13,7 +13,7 @@ description: Learn how to set up CSS & JS preprocessors to help you code more ef
 CSS preprocessors such as Sass, as well as JS preprocessors and transpilers can greatly accelerate your development when used correctly. Learn how to set them up.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Preprocessors let you use features in CSS and JavaScript that your browser doesn't support natively, for example, CSS variables.
 - If you're using preprocessors, map your original source files to the rendered output using Source Maps.
 - Make sure your web server can serve Source Maps.

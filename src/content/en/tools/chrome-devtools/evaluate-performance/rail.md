@@ -14,7 +14,7 @@ RAIL is a user-centric performance model. Every web app has these four distinct 
 ![RAIL performance model](imgs/rail.png)
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Focus on the user; the end goal isn't to make your site perform fast on any specific device, it''s to ultimately make users happy.
 - Respond to users immediately; acknowledge user input in under 100ms.
 - Render each frame in under 16ms and aim for consistency; users notice 'jank'.

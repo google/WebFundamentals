@@ -11,7 +11,7 @@ description: Learn how to soften and give weighting to your animations.
 
 Nothing in nature moves linearly from one point to another. In reality, things tend to accelerate or decelerate as they move. Our brains are wired to expect this kind of motion, so when animating you should use this to your advantage. Natural motion makes your users feel more comfortable with your apps, which in turn leads to a better overall experience.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Easing makes your animations feel more natural.
 * Choose ease-out animations for UI elements.
 * Avoid ease-in or ease-in-out animations unless you can keep them short; they tend to feel sluggish to end users.

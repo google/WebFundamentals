@@ -35,7 +35,7 @@ Simply altering the color of elements as users touch parts of your UI gives a ba
 The fastest way to support touch is to change the UI in response to a DOM
 element’s change in state.
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Make your site feel snappy and responsive: change the UI for each state <code>:hover</code>, <code>:active</code> and <code>:focus</code>.
 - Don’t override a browser’s default responses to touch and focus unless you are implementing your own UI changes.
 - Disable text selection on elements users will touch, unless there’s a good reason why users might need to copy / select the text.
@@ -250,7 +250,7 @@ element.
 <div class="clearfix"></div>
 
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 - For full device support, handle touch, mouse and Pointer Events.
 - Always bind start event listeners to the element itself.
 - If you want the user to interact with one particular element, bind your move and end listeners to the document in the touchstart method; ensure you unbind them from the document in the end listener.

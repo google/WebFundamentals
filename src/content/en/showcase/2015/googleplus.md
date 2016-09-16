@@ -11,7 +11,7 @@ description: We hit our goal of never downloading more than 60k of HTML, 60k of 
 
 <img src="images/gplus/main.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Google+](https://plus.google.com) goes completely responsive.
 

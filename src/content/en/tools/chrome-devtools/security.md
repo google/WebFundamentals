@@ -16,7 +16,7 @@ to debug security issues and ensure that you have properly implemented
 HTTPS on your websites.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Use the Security Overview to instantly find out whether the current page is secure or non-secure.
 - Inspect individual origins to view connection and certificate details (for secure origins) or to find out exactly which requests are unprotected (for non-secure origins).
 

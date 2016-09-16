@@ -12,7 +12,7 @@ description: Beyond the Rack re-engages users on the mobile web, increasing reve
 
 <img src="images/beyond-the-rack/btr-1.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Beyond the Rack](https://www.beyondtherack.com) re-engages users on the
 mobile web, increasing revenue per visit by 26% with push notifications.

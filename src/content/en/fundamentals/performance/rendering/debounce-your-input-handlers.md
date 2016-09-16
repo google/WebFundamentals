@@ -13,7 +13,7 @@ Input handlers are a potential cause of performance problems in your apps, as
 they can block frames from completing, and can cause additional and unnecessary
 layout work.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Avoid long-running input handlers; they can block scrolling.
 * Do not make style changes in input handlers.

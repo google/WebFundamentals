@@ -18,7 +18,7 @@ and investigate your variables and call stacks in [How to step through your
 code](step-code).
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - The most basic way to set a breakpoint is to manually add one on a specific line of code. You can configure these breakpoints to only get triggered when a certain condition is met.
 - You can also set breakpoints that are triggered when general conditions are met, such as an event, a DOM change, or an uncaught exception.
 

@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/adventuremachine/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Madeon Adventure Machine](http://www.madeon.fr/adventuremachine/) is a clever
 promotion for Madeon's new album that is a fun drum machine.

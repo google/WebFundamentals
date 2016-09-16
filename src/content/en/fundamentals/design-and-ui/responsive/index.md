@@ -48,7 +48,7 @@ responsive layouts and experiment with breakpoints, and optimizing text and more
 
 Pages optimized for a variety of devices must include a meta viewport element in the head of the document.  A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling.
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Use the meta viewport tag to control the width and scaling of the browser's viewport.
 - Include `width=device-width` to match the screen's width in device-independent pixels.
 - Include `initial-scale=1` to establish a 1:1 relationship between CSS pixels and device-independent pixels.
@@ -117,7 +117,7 @@ When set, these can disable the user's ability to zoom the viewport, potentially
 
 On both desktop and mobile devices, users are used to scrolling websites vertically but not horizontally, and forcing the user to scroll horizontally or to zoom out in order to see the whole page results in a poor user experience.
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Do not use large fixed width elements.
 - Content should not rely on a particular viewport width to render well.
 - Use CSS media queries to apply different styling for small and large screens.
@@ -171,7 +171,7 @@ the content, including the display type, width, height, orientation and even
 resolution.
 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Media queries can be used to apply styles based on device characteristics.
 - Use `min-width` over `min-device-width` to ensure the broadest experience.
 - Use relative sizes for elements to avoid breaking layout.
@@ -340,7 +340,7 @@ in a maintenance nightmare. Instead, the content itself should determine how
 the layout adjusts to its container.
 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - 'Create breakpoints based on content, never on specific devices, products, or brands.'
 - 'Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.'
 - Keep lines of text to a maximum of around 70 or 80 characters.

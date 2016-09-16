@@ -25,7 +25,7 @@ experience on any device.
 
 ## Add a video 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Use the `video` element to load, decode, and play video on your site.
 - Produce video in multiple formats to cover a range of mobile platforms.
 - Size videos correctly; ensure they don't overflow their containers.
@@ -262,7 +262,7 @@ In JavaScript, use the video's `currentSrc` property to return the source used.
 When it comes to keeping your users happy, file size is important.
 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Don't serve videos with a larger frame size or higher quality than the platform can handle.
 - Don't make your videos any longer than they need be.
 - Long videos can cause hiccups with download and seeking; some browsers may have to wait until the video downloads before beginning playback.

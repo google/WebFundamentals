@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/extra/extra_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 United eXtra Electronics grows eCommerce sales by 100% with Web Push Notifications
 

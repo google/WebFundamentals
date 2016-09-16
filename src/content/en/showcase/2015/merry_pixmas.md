@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/merry_pixmas/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Merry Pixmas](http://merrypixmas.com): Christmas fun with 3D CSS Transforms.
 

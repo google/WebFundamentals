@@ -16,7 +16,7 @@ styles associated to an element.
 ![Styles pane](imgs/styles-pane.png)
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - The styles pane lets you change your CSS in as many ways as possible, locally, including editing existing styles, adding new styles, adding rules for styles.
 - If you want styles to persist (so they don't go away on a reload), you need to persist them to your development workspace.
 

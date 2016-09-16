@@ -18,7 +18,7 @@ img.screenshot {
 }
 </style>
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 The new CSS Containment property lets developers limit the scope of the browser's styles, layout and paint work.
 
 <img class="screenshot" src="/web/updates/images/2016/06/containment.jpg" alt="CSS Containment. Before: layout takes 59.6ms. After: layout takes 0.05ms" />

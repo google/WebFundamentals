@@ -17,7 +17,7 @@ and the initial request was secure over HTTPS. Modern browsers display warnings
 about this type of content to indicate to the user that this page contains
 insecure resources.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * HTTPS is important to protect both your site and your users from attack.
 * Mixed content degrades the security and user experience of your HTTPS site.
@@ -106,7 +106,7 @@ Loading an insecure script from an HTTPS page.
 Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html)&mdash;includes an **HTTP** script tag which attempts to load mixed content. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/simple-example.html" %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/simple-example.html" adjust_indentation="auto" %}
 </pre>
 
 In this example, the script `simple-example.js` is loaded with an **HTTP** URL. This is the simplest case of mixed content. When the browser requests the `simple-example.js` file, an attacker can inject code into the returned content 
@@ -127,7 +127,7 @@ Loading insecure data with XMLHttpRequest.
 Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html)&mdash;includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html" %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html" adjust_indentation="auto" %}
 </pre>
 
 Here the **HTTP** URL is constructed dynamically in JavaScript, and is eventually 
@@ -150,7 +150,7 @@ Loading insecure images with jQuery lightbox.
 When viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html)&mdash;initially it does not have any mixed content problems; however, when the thumbnail image is clicked, a full size mixed content image is loaded over **HTTP**. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" adjust_indentation="auto" %}
 </pre>
 
 Image galleries often rely on the `<img>` tag `src` attribute to display 
@@ -200,7 +200,7 @@ they view based on images or other resources that the browser loads.
 The following is an example of passive mixed content: 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/passive-mixed-content.html" %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/passive-mixed-content.html" adjust_indentation="auto" %}
 </pre>
 
 Most browsers still render this type of mixed content to the user, however a 
@@ -228,7 +228,7 @@ versions.
 The following contains examples of active mixed content:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/active-mixed-content.html" %}
+{% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/active-mixed-content.html" adjust_indentation="auto" %}
 </pre>
 
 <figure>

@@ -11,7 +11,7 @@ description: Net-A-Porter saves development time with Google's Polymer Library
 
 <img src="images/net-a-porter/net-a-porter-device.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Net-A-Porter](https://www.net-a-porter.com/) saves development time with
 Google's Polymer Library

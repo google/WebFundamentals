@@ -70,7 +70,7 @@ work across devices is no different than for desktop, and only requires a few
 minor tweaks to create a good experience.
 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 
 - Use relative sizes for images to prevent them from accidentally overflowing the container.
 - Use the `picture` element when you want to specify different images depending on device characteristics (a.k.a. art direction).
@@ -457,7 +457,7 @@ even more powerful, enabling conditional image loading based on screen
 resolution, viewport size and more.
 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Use the best image for the characteristics of the display, consider screen size, device resolution and page layout.
 - Change the `background-image` property in CSS for high DPI displays using media queries with `min-resolution` and `-webkit-min-device-pixel-ratio`.
 - Use srcset to provide high resolution images in addition to the 1x image in markup.
@@ -556,7 +556,7 @@ When adding icons to your page, use SVG icons where possible or in some
 cases, unicode characters.
 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Use SVG or unicode for icons instead of raster images.
 
 
@@ -648,7 +648,7 @@ the less competition there is for client's bandwidth and the faster the
 browser can download and display all the assets.
 
 
-### TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc } {: .hide-from-toc }
 - Don't just randomly choose an image format, understand the different formats available, and use the format best suited.
 - Include image optimization and compression tools into your workflow to reduce file sizes.
 - Reduce the number of http requests by placing frequently used images into image sprites.

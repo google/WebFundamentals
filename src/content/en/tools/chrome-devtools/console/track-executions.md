@@ -14,7 +14,7 @@ description: Take advantage of the Console API to measure execution times and co
 Take advantage of the Console API to measure execution times and count statement executions.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Use <code>console.time()</code> and <code>console.timeEnd()</code> to track time elapsed between code execution points.
 - Use <code>console.count()</code> to count how many times the same string is passed to a function.
 

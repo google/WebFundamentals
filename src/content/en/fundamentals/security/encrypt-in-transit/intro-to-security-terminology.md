@@ -10,7 +10,7 @@ description: Two of the hurdles developers face when migrating to HTTPS are conc
 {% include "web/_shared/contributors/chrispalmer.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
   
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Public/private keys are used to sign and decrypt messages between the browser and the server.
 * A certificate authority (CA) is an organization that vouches for the mapping between the public keys and public DNS names (such as "www.foobar.com").

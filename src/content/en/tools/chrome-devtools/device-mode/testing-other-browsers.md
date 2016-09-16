@@ -13,7 +13,7 @@ description: Your job doesn't end with ensuring your site runs great across Chro
 Your job doesn't end with ensuring your site runs great across Chrome and Android. Even though Device Mode can simulate a range of other devices like iPhones, we encourage you to check out other browsers solutions for emulation.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - When you don’t have a particular device, or want to do a spot check on something, the best option is to emulate the device right inside your browser.
 - Device emulators and simulators let you mimic your development site on a range of devices from your workstation.
 - Cloud-based emulators let you automate unit tests for your site across different platforms.

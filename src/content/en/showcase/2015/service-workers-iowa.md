@@ -11,7 +11,7 @@ description: The Google I/O 2015 Web App
 
 <img src="images/service-workers-iowa/screenshot-portrait.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Learn how we used service worker libraries to make the Google I/O 2015 web app
 fast, and offline-first.

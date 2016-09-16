@@ -11,7 +11,7 @@ description: Choose the appropriate easing for your project, whether that's easi
 
 Having discussed the various options available for easing in animations, what kind should you use in your projects, and what kind of durations should your animations have?
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Use ease-out animations for UI elements; a Quintic ease-out is a very nice, albeit quick, ease.
 * Be sure to use the animation duration; ease-outs and ease-ins should be 200ms-500ms, whereas bounces and elastic eases should clock in a longer duration of 800ms-1200ms.
 

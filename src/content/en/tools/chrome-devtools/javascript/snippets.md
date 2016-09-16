@@ -20,7 +20,7 @@ You can also use snippets as an alternative to
 [bookmarklets](https://en.wikipedia.org/wiki/Bookmarklet).
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Snippets are small scripts that you can run from any page (similar to bookmarklets).
 - Run portions of snippets in the Console with the "Evaluate in Console" feature.
 - Remember that popular features from the Sources panel, like breakpoints, also work with snippets.

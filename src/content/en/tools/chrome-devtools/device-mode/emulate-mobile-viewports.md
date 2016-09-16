@@ -14,7 +14,7 @@ description: Chrome DevTools' Device Mode lets you mimic how your development  s
 The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-first DevTools and extends the main DevTools bar. Learn how to use its controls to simulate a wide range of devices or go fully responsive.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Test your site's responsiveness using the Device Mode's screen emulator.
 - Save custom presets so you can easily access them later.
 - Device mode isn't a replacement for real device testing. Be aware of  its limitations.

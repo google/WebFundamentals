@@ -12,7 +12,7 @@ description: Get a better understanding of animations and their use in modern ap
 Animations are a huge part of making compelling web applications and sites. Users have come to expect highly responsive and interactive user interfaces. Animating your interface, however, is not necessarily straightforward. What should be animated, when, and what kind of feel should the animation have?
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 * Use animations as a way to add life to your projects.
 * Animations should be in support of user interaction.
 * Be careful which properties you animate; some are more expensive than others.

@@ -18,7 +18,7 @@ By executing code one line or one function at a time, you can observe changes in
 After [setting breakpoints](add-breakpoints), return to the page and use it normally until a breakpoint is reached. This pauses all JavaScript on the page, focus shifts to the DevTools Sources panel, and the breakpoint is highlighted. You can now selectively execute code and examine its data, step by step.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Step through code to observe issues before or while they happen and test out changes through live editing.
 - Prefer stepping over console logging, as logged data is already stale the moment it arrives in the console.
 - Enable the 'Async call stack' feature to gain greater visibility into the call stack of asynchronous functions.

@@ -13,7 +13,7 @@ description: Touch screens, GPS chips, and accelerometers can be difficult to te
 GPS chips and accelerometers can be difficult to test since most desktops don't have them. The Chrome DevTools Sensors emulation pane reduces the overhead of testing by emulating common mobile device sensors.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Emulate geolocation coordinates to test geolocation overrides.
 - Simulate device orientation to test accelerometer data.
 

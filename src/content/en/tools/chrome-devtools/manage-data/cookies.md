@@ -15,7 +15,7 @@ Inspect and delete cookies from the
 ![cookies pane](imgs/cookies.png)
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - View detailed information about a cookie, such as its name, value, domain, size, and more.
 - Delete a single cookie, cookies from a selected domain, or all cookies from all domains.
 

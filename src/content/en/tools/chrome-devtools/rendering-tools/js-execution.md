@@ -16,7 +16,7 @@ Profiler.
 ![CPU profile](imgs/cpu-profile.png)
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Record exactly which functions were called and how long each took with the CPU Profiler.
 - Vizualize your profiles as a flame chart.
 

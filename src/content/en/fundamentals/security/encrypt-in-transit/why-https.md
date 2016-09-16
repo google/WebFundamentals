@@ -21,7 +21,7 @@ integrity for both your websites and your users' personal information, HTTPS is
 a requirement for many new browser features, particularly those required for
 [progressive web apps](../progressive-web-apps/).
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 * Intruders both malignant and benign exploit every unprotected resource between your websites and users.
 * Many intruders look at aggregate behaviors to identify your users. 

@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/web_filter/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Web Filters](http://exp.bartekdrozdz.com/app/webfilter/): Fast, quick and
 dirty camera filters.

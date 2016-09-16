@@ -16,7 +16,7 @@ Windows, Mac, or Linux computer.
 ![remote debugging illustration](imgs/remote-debugging.png)
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Set up your Android device for remote debugging, and discover it from your development machine.
 - Inspect and debug live content on your Android device from your development machine.
 - Screencast content from your Android device into DevTools.

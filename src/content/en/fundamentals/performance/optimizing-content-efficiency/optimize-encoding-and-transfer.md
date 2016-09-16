@@ -18,7 +18,7 @@ After you’ve eliminated any unnecessary resources, the next step is to compres
 
 Delivering the best performance requires a combination of all of these techniques.
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 * Compression is the process of encoding information using fewer bits.
 * Eliminating unnecessary data always yields the best results.
 * There are many different compression techniques and algorithms.
@@ -59,7 +59,7 @@ This is all great, but how does this help us optimize our web pages? We’re not
 
 ## Minification: preprocessing & context-specific optimizations
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 - Content-specific optimizations can significantly reduce the size of delivered resources.
 - Content-specific optimizations are best applied as part of your build/release cycle.
 
@@ -92,7 +92,7 @@ In short, as a first step in optimizing the efficiency of your assets, build an 
 
 ## Text compression with GZIP
 
-### TL;DR
+### TL;DR {: .hide-from-toc }
 - GZIP performs best on text-based assets: CSS, JavaScript, HTML.
 - All modern browsers support GZIP compression and will automatically request it.
 - Your server must be configured to enable GZIP compression.

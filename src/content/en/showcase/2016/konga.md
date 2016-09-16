@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/konga/konga_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Konga cuts data usage 92% with new Progressive Web App
 

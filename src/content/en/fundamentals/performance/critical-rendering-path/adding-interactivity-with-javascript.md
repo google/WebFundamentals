@@ -15,7 +15,7 @@ block DOM construction and delay when the page is rendered. To deliver optimal
 performance, make your JavaScript async and eliminate any unnecessary JavaScript
 from the critical rendering path.
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - JavaScript can query and modify the DOM and the CSSOM.
 - JavaScript execution blocks on the CSSOM.
 - JavaScript blocks DOM construction unless explicitly declared as async.
@@ -67,7 +67,7 @@ What about scripts included via a script tag? Let's take our previous example an
 **app.js**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/app.js" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Whether we use a &lt;script&gt; tag or an inline JavaScript snippet, you'd

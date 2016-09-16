@@ -16,7 +16,7 @@ the Chrome DevTools Elements panel.
 ![Chrome DevTools Elements panel](imgs/elements-panel.png)
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Inspect and edit on the fly any element in the DOM tree in the  Elements panel.
 - View and change the CSS rules applied to any selected element in  the Styles pane.
 - View and edit a selected element's box model in the Computed pane.

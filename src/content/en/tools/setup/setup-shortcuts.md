@@ -13,7 +13,7 @@ description: Set up shortcuts for the command line tasks you use over and over a
 Set up shortcuts for the command line tasks you use over and over again. If you find yourself typing the same thing in your command line repeatedly, this will alleviate that.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Make the command line work for you; create aliases that are easy to remember and fast to type.
 - Give Github dotfiles a try to save, share and sync up your command line shortcuts.
 

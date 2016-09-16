@@ -12,7 +12,7 @@ description: It is crucial to understand the phases in which resources are gathe
 It is crucial to understand the phases in which resources are gathered over the network. This is the foundation for fixing load issues.
 
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 - Understand the phases of resource timing.
 - Know what each phase provides to the Resource Timing API.
 - Realize different indicators of performance problems in the timeline graph. Such as series of transparent bars or large green chunks.
