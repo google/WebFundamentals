@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 为项目选择合适的缓动，无论是缓入、缓出还是缓入缓出。 甚至可能进行弹跳，实现额外的把戏！
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 用户输入事件处理函数是一个可能会导致web应用性能问题的因素，因为它们在运行时会阻塞帧的渲染，并且会导致额外且不必要的布局的发生。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

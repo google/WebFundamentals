@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 字体设计是良好的设计、品牌塑造、可读性和可访问性的基础。网页字体支持所有上述各项及更多项目：文本可选取、可搜索、可缩放并支持高 DPI，提供一致、鲜明的文字呈现，而不管屏幕大小和分辨率如何。网页字体对于良好的设计、UX 和性能很重要。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
@@ -73,29 +72,27 @@ Note: 考虑使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 压缩</
 
 每个 @font-face 声明提供字体系列的名称，它充当多个声明的逻辑组，[字体属性](http://www.w3.org/TR/css3-fonts/#font-prop-desc) 比如样式、粗细和拉伸，以及为字体资源指定位置优先级列表的 [src 描述符](http://www.w3.org/TR/css3-fonts/#src-desc)。
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
 
 首先，请注意上述示例使用两种样式（常规和 _italic_）定义单个 _Awesome Font_ 系列，其中每个指向一个不同的字体资源集。反过来，每个`src`描述符包含一个已排定优先级的、用逗号分隔的资源变体列表： 
 
@@ -181,7 +178,7 @@ Note: Unicode-range 子集内嵌对于亚洲语言特别重要，在亚洲语言
 
 <div class="quote">
   <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">如果指定的某个粗细不存在任何字体，则会使用相近粗细的字体。通常，加粗粗细映射到粗细较粗的字体，而较细粗细会映射到粗细较细的字体。
+    <blockquote>如果指定的某个粗细不存在任何字体，则会使用相近粗细的字体。通常，加粗粗细映射到粗细较粗的字体，而较细粗细会映射到粗细较细的字体。
     <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">CSS3 字体匹配算法</a></p>
     </blockquote>
   </div>
@@ -224,7 +221,7 @@ Note: Unicode-range 子集内嵌对于亚洲语言特别重要，在亚洲语言
 
 <div class="quote">
   <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">字体创建者也应该知道合成的过程可能不适合像西里尔文那样的标记，在这些标记中斜体形式在形状方面非常不同。使用某种实际的倾斜字体总是比依赖某个合成版本要好。
+    <blockquote>字体创建者也应该知道合成的过程可能不适合像西里尔文那样的标记，在这些标记中斜体形式在形状方面非常不同。使用某种实际的倾斜字体总是比依赖某个合成版本要好。
     <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3 font-style</a></p>
     </blockquote>
   </div>

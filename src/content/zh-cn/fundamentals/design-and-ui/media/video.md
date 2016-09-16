@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 学习给网站添加视频的最简方法，确保用户在任何设备上均可获得最佳体验。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 视频 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 Translated By: 
@@ -124,15 +123,24 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 
 下图对不含海报图片的视频和具有海报图片的视频进行了并排比较，我们已将海报图片设为灰色，以指明它不是视频：
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
+<div class="attempt-left">
+  <figure>
     <img class="center" alt="Android 版 Chrome（纵向）屏幕截屏：没有海报" src="img/Chrome-Android-video-no-poster.png">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android 版 Chrome（纵向）屏幕截图：有海报" src="img/Chrome-Android-video-poster.png">
-  </div>
+    <figcaption>
+      Android Chrome screenshot, portrait: no poster
+     </figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img class="center" alt="Android 版 Chrome（纵向）屏幕截图：有海报" src="img/Chrome-Android-video-poster.png">
+    <figcaption>
+      Android Chrome screenshot, portrait: with poster
+     </figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 
 ## 为旧版平台提供替代方案 
@@ -257,10 +265,24 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 如果视频元素过大，不适合当前视口，则可能会从容器中溢出，从而使用户无法观看内容或使用
 控件。
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Android 版 Chrome（纵向）屏幕截图：未设置样式的视频元素从视口溢出" src="img/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android 版 Chrome（横向）屏幕截图：未设置样式的视频元素从视口溢出" src="img/Chrome-Android-landscape-video-unstyled.png">
+<div class="attempt-left">
+  <figure>
+    <img alt="Android 版 Chrome（纵向）屏幕截图：未设置样式的视频元素从视口溢出" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <figcaption>
+      Android Chrome screenshot, portrait: unstyled video element overflows viewport
+    </figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img alt="Android 版 Chrome（横向）屏幕截图：未设置样式的视频元素从视口溢出" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <figcaption>
+      Android Chrome screenshot, landscape: unstyled video element overflows viewport
+    </figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 您可以使用 JavaScript 或 CSS 控制视频尺寸。JavaScript 图库和插件（如 [FitVids](//fitvidsjs.com/)）可以维持合适的视频大小及宽高比，即使是 YouTube 和其他来源中的 Flash 视频也不例外。
 
@@ -304,11 +326,21 @@ Note: 请勿强制调整元素尺寸，否则会使宽高比异于原始视频�
 
 iPhone 版 Safari 可以在横向和纵向之间自由转换：
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="在 iPhone（纵向）版 Safari 中播放视频的屏幕截图" src="img/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="在 iPhone（横向）版 Safari 中播放视频的屏幕截图" src="img/iPhone-video-playing-landscape.png">
+<div class="attempt-left">
+  <figure>
+    <img  alt="在 iPhone（纵向）版 Safari 中播放视频的屏幕截图" src="img/iPhone-video-playing-portrait.png">
+    <figcaption>Screenshot of video playing in Safari on iPhone, portrait</figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img alt="在 iPhone（横向）版 Safari 中播放视频的屏幕截图" src="img/iPhone-video-playing-landscape.png">
+    <figcaption>Screenshot of video playing in Safari on iPhone, landscape</figcaption>
+  </figure>
 </div>
 
+<div style="clear:both;"></div>
+git 
 iPad 和 Android 版 Chrome 中的设备方向问题十分棘手。
 例如，在未进行自定义设置的情况下，iPad 上横向播放的视频如下所示：
 

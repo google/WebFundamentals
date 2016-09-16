@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 设备动作和方向事件可访问移动设备上的 内置加速度计、陀螺仪和罗盘。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 设备方向 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 设备动作和方向事件可访问移动设备上的 内置加速度计、陀螺仪和罗盘。
@@ -77,19 +76,19 @@ Note: 在决定使用设备动作或设备方向事件时，务必<b>非常</b> 
 之间的差异度数。
 
 <div>
-  <div class="g--third">
+  <div>
     <img src="images/alpha.png"><br>
     <b>alpha:</b> 围绕 Z 轴的旋转，当设备的顶部指向
 正北时其值为 0&deg;。  当设备逆时针旋转时，
 `alpha` 值增加。
   </div>
-  <div class="g--third">
+  <div>
     <img src="images/beta.png"><br>
     <b>beta:</b> 围绕 X 轴的旋转，当设备的顶部和底部与
 地球表面等距时其值为 0&deg;。 当设备的顶部倾向地球表面时，此值
 增加。
   </div>
-  <div class="g--third g--last">
+  <div>
     <img src="images/gamma.png"><br>
     <b>gamma:</b> 围绕 Y 轴的旋转，当设备的右侧和右侧与地球表面等距时
 其值为 0&deg;。  当设备的右侧倾向地球表面时，此值

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 浏览器要在屏幕上渲染内容，需要先构建 DOM 与 CSSOM 树。因此，我们需要确保将 HTML 和 CSS 尽可能快地提供给浏览器。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 

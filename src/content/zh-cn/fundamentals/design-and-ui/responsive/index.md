@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 创建灵活设计，而不是固定的设计,布局。并且能够在任何尺寸的屏幕正常运行。
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-05-13 #}
 {# wf_published_on: 2014-04-29 #}
 
@@ -17,8 +16,8 @@ Translated By:
 
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
+<div>
+  <div class="attempt-right">
     创建灵活设计，而不是固定的设计,布局。并且能够在任何尺寸的屏幕正常运行。
 
   </div>
@@ -38,9 +37,7 @@ Explore what makes a site responsive and how some common responsive design patte
 </div>
 
 
-## 设置视口 {: .page-title }
-
-{% include "web/_shared/contributors/TODO.html" %}
+## 设置视口 
 
 
 对于针对各种设备优化过的网页，其文档标头中必须包含元视口元素。元视口代码会指示浏览器如何对网页尺寸和缩放比例进行控制。
@@ -64,20 +61,25 @@ Explore what makes a site responsive and how some common responsive design patte
 
 使用元视口值 width=device-width 指示网页与屏幕宽度（以设备无关像素为单位）进行匹配。这样一来，网页便可以重排内容，使之适合不同的屏幕大小（从较小的手机到较大的桌面设备显示器，不一而足）。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="未设置视口的网页">
-      查看示例
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="已设置视口的网页">
-      查看示例
-    
-  </div>
+<div class="attempt-left">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-no.html">
+  <figure>
+    <img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="未设置视口的网页">
+    <figcaption>
+          查看示例
+     </figcaption>
+  </figure>
+  </a>
+</div>
+<div class="attempt-right">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp.html">
+  <figure>
+<img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="已设置视口的网页">
+    <figcaption>
+          查看示例
+     </figcaption>
+  </figure>
+  </a>
 </div>
 
 有些浏览器会在旋转到横向模式时保持固定的网页宽度，然后通过缩放（而不是重排）填满屏幕。添加属性 initial-scale=1 会指示浏览器在不考虑设备方向的情况下，指示浏览器将 CSS 像素与设备无关像素的比例设为 1:1，并允许网页完全占用横向宽度。
@@ -112,20 +114,25 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 
 为网页元素设置较大的 CSS 绝对宽度（如下例所示）会导致 div 因过宽而不适合窄视口设备（例如，iPhone 等宽度为 320 CSS 像素的设备）。因此，请改为使用相对宽度值，例如 width: 100%。同样请注意，使用较大的绝对定位值可能会使元素脱离小屏幕上的视口。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
+<div class="attempt-left">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <figure>
       <img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone 上带有 344 像素的固定宽度元素的网页。">
+    <figcaption>
       查看示例
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    
+     </figcaption>
+  </figure>
+  </a>
+</div>
+<div class="attempt-right">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <figure>
       <img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5 上带有 344 像素的固定宽度元素的网页。">
+    <figcaption>
       查看示例
-    
-  </div>
+     </figcaption>
+  </figure>
+  </a>
 </div>
 
 
@@ -317,15 +324,25 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" class="attempt-left"  srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" class="attempt-right"  srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
+    <figcaption>
+      Before adding minor breakpoints.
+     </figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
+    <figcaption>
+      After adding minor breakpoints.
+     </figcaption>
+  </figure>
+</div>
+
+
+<div style="clear:both;"></div>
 
 同样，如果是大屏幕，我们最好限制天气预报面板的宽度，使其不会占用整个屏幕宽度。
 
@@ -337,15 +354,20 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 
 传统的可读性理论建议：理想栏目的每一行应该包含 70 到 80 个字符（大约 8 到 10 个英文单词），因此，每次文本块宽度超过 10 个单词时，就应考虑添加断点。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" class="attempt-left"  srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="添加小断点之前。">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" class="attempt-right"  srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="添加小断点之后。">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="添加小断点之前。">
+    <figcaption>Before adding minor breakpoints.</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="添加小断点之后。">
+    <figcaption>After adding minor breakpoints.</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 我们来深入分析一下上述博文示例。在较小的屏幕上，大小为 1em 的 Roboto 字体可以使每行完美地呈现 10 个单词，而在较大的屏幕上就需要添加断点了。在本例中，如果浏览器宽度超过了 575 像素，那么内容的理想宽度是 550 像素。
 

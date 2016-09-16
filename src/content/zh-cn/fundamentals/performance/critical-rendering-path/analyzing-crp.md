@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 确定并解决关键呈现路径性能方面的瓶颈需要了解很多常见问题。让我们开始实践之旅，并找出常用的性能模式，从而帮助您优化网页。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

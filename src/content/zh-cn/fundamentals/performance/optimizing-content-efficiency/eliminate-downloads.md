@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 最快和最好的优化资源是不需要下载的资源。您最近是否审查过资源？ 您应该这么做，而且应该定期这么做，以确保每个资源都有助于提供更好的用户体验。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

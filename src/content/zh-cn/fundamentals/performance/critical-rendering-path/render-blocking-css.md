@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 默认情况下，CSS 被视为阻塞渲染的资源，这意味着在 CSSOM 构建完成前，浏览器会暂停渲染任何已处理的内容。确保精减你的 CSS，尽快传送它，并使用媒体类型与媒体查询来解除阻塞。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -29,19 +28,20 @@ Translated By:
 - 所有的 CSS 资源，不论阻塞或不阻塞，浏览器都会下载。
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>有 CSS 的纽约时报</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="有 CSS 的纽约时报">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>没有 CSS 的纽约时报 (FOUC)</b>
-    <img src="images/nytimes-nocss-device.png" alt="没有 CSS 的纽约时报">
-
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/nytimes-css-device.png" alt="NYTimes with CSS">
+    <figcaption>The New York Times with CSS</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS">
+    <figcaption>The New York Times without CSS (FOUC)</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 {% comment %}
 <table>

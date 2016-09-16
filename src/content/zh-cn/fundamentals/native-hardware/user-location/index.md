@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 大多数浏览器和设备可访问用户的地理位置。 了解如何在您的网站和应用中使用用户的位置。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 用户位置 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 
@@ -73,20 +72,24 @@ description: 大多数浏览器和设备可访问用户的地理位置。 了解
 对他们有什么好处。  在网站加载首页时立即请求提供位置
 会导致不好的用户体验。
 
-<div class="clear g-wide--pull-1">
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
-      <figcaption>在网站加载首页时立即请求提供位置会导致不好的用户体验。</figcaption>
-    </figure>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
-      <figcaption> 始终在手势操作时请求用户的位置。</figcaption>
-      </figure>
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/sw-navigation-good.png">
+    <figcaption class="success">
+      <b>DO</b>: Always request access to location on a user gesture.
+     </figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/sw-navigation-bad.png">
+    <figcaption class="warning">
+      <b>DON'T</b>: Ask for it immediately on the homepage as the site loads; it results in a poor user experience.
+    </figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 相反，应当为用户提供明确的操作请求或指示
 ，说明某操作将需要访问其位置。  然后用户能够

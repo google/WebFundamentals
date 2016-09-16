@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 在迁移到 HTTPS 时，网站运营商面对的一个难题是概念：究竟发生了什么事？所有加密术语是什么意思？在此部分，我们将进行简要介绍。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2015-03-27 #}
 
