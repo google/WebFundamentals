@@ -45,7 +45,7 @@ Nous avons identifié nos besoins :
 ### TL;DR {: .hide-from-toc }
 - Identifiez le contenu dont vous avez besoin en premier.
 - Esquissez l'architecture d'information (AI) nécessaire pour les fenêtres d'affichage larges et étroites.
-- 'Créez une vue schématique de la page avec le contenu, mais sans les styles.'
+- Créez une vue schématique de la page avec le contenu, mais sans les styles.
 
 
 Nous vous proposons également une disposition et une architecture d'information rudimentaires pour les fenêtres d'affichage larges et étroites.
@@ -201,7 +201,7 @@ Pour ce faire, il convient de déterminer l'emplacement des points de rupture, c
 
 ### TL;DR {: .hide-from-toc }
 - Toujours utiliser une fenêtre d'affichage.
-- 'Toujours commencer par une fenêtre d''affichage étroite, puis la faire évoluer.'
+- Toujours commencer par une fenêtre d''affichage étroite, puis la faire évoluer.
 - Utiliser des points de rupture lorsqu'il s'avère nécessaire d'adapter le contenu.
 - Créer une vision de haut niveau de votre disposition sur des points de rupture majeurs.
 

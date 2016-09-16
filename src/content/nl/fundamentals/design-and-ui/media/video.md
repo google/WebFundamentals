@@ -28,7 +28,7 @@ Bekijk informatie over hoe u video aan uw site toevoegt en ervoor zorgt dat gebr
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Gebruik het video-element om video op uw site te laden, decoderen en af te spelen.'
+- Gebruik het video-element om video op uw site te laden, decoderen en af te spelen.
 - Maak video's in meerdere indelingen zodat ze op allerlei verschillende mobiele platforms kunnen worden afgespeeld.
 - Maak video's met het juiste formaat; zorg ervoor dat ze niet overlopen tot buiten de container.
 - Toegankelijkheid is belangrijk; voeg het track-element toe als onderliggend element van het video-element.

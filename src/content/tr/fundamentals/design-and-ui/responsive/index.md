@@ -60,7 +60,7 @@ Ilk olarak [A List Apart baslikli makalede Ethan Marcotte](http://alistapart.com
 - Tarayici görüntü alaninin genisligini ve ölçeklemesini kontrol etmek için meta görünüm etiketini kullanin.
 - Ekranin genisligini cihazdan bagimsiz pikseller seklinde eslestirmek için <code>width=device-width</code>kodunu ekleyin.
 - CSS pikselleri ile cihazdan bagimsiz pikseller arasinda bire bir iliski olusturmak için <code>initial-scale=1</code> kodunu ekleyin.
-- 'Sayfaniza, kullanici ölçeklemesini devre disi birakmadan erisilebildiginden emin olun.'
+- Sayfaniza, kullanici ölçeklemesini devre disi birakmadan erisilebildiginden emin olun.
 
 
 En iyi deneyimi saglama çabasiyla mobil tarayicilar, sayfayi bir masaüstü ekran genisliginde (genellikle 980 piksel civarinda, ancak bu deger cihazlar arasinda degisiklik gösterir) olusturur ve daha sonra, yazi tipi boyutlarini artirip içerigi ekrana sigdirmak için ölçekleyerek içerigin daha iyi görünmesine çalisir.  Kullanicilar için bu, yazi tipi boyutlarinin tutarsiz görünebilmesi ve içerigi görmek ve içerikle etkilesimde bulunabilmek için ekrana iki kez hafifçe vurmalari veya parmaklarini sikistirarak zum yapmak zorunda kalmalari anlamina gelir.
@@ -276,8 +276,8 @@ Kesme noktalarini cihaz siniflarina göre tanimlamayi düsünmeniz yararli olabi
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Kesme noktalarini içerige göre olusturun, hiçbir zaman belirli cihazlara, ürünlere veya markalara göre olusturmayin.'
-- 'Ilk olarak en küçük mobil cihaz için tasarim yapin, daha sonra daha fazla ekran kullanima sunuldukça deneyimi artan bir sekilde gelistirin.'
+- Kesme noktalarini içerige göre olusturun, hiçbir zaman belirli cihazlara, ürünlere veya markalara göre olusturmayin.
+- Ilk olarak en küçük mobil cihaz için tasarim yapin, daha sonra daha fazla ekran kullanima sunuldukça deneyimi artan bir sekilde gelistirin.
 - Metin satirlarini en fazla 70 veya 80 karakter civarinda tutun.
 
 

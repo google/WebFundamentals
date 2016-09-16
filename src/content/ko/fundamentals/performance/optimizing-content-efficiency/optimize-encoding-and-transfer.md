@@ -95,7 +95,7 @@ Note: 압축이 안된 JQuery 라이브러리는 현재 300KB 정도 크기다. 
 ## GZIP을 이용한 텍스트 압축
 
 ### TL;DR {: .hide-from-toc }
-- 'GZIP은 CSS, Javascript, HTML와 같은 텍스트 기반 리소스에서 가장 잘 수행된다.'
+- GZIP은 CSS, Javascript, HTML와 같은 텍스트 기반 리소스에서 가장 잘 수행된다.
 - 대부분의 최신 브라우저들은 GZIP 압축을 지원하고 자동으로 요청한다.
 - GZIP 압축을 사용할 수 있도록 서버를 구성해야 한다.
 - 몇몇의 CDNs는 GZIP 사용을 위한 추가적인 관리가 필요하다.

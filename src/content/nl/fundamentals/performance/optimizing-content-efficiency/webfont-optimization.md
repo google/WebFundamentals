@@ -20,7 +20,7 @@ De optimalisatie van lettertypen is een essentieel onderdeel van het algehele re
 
 ### TL;DR {: .hide-from-toc }
 - Unicode-lettertypes kunnen duizenden gliefen bevatten
-- 'Er zijn vier bestandsindelingen voor lettertypen: WOFF2, WOFF, EOT, TTF'
+- Er zijn vier bestandsindelingen voor lettertypen: WOFF2, WOFF, EOT, TTF
 - Voor sommige lettertype-indelingen is compressie met GZIP nodig
 
 
@@ -63,7 +63,7 @@ Note: Gebruik <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli-compressie</a
 ### TL;DR {: .hide-from-toc }
 - Gebruik de hint format() om meerdere lettertype-indelingen aan te geven
 - Deel grote unicode-lettertypen in in deelverzamelingen en houd een handmatig in te stellen reservedeelverzameling achter de hand voor oudere browsers
-- 'Verlaag het aantal stilistische lettertypen, zodat pagina''s en tekst beter kan worden weergegeven'
+- Verlaag het aantal stilistische lettertypen, zodat pagina''s en tekst beter kan worden weergegeven
 
 
 Met de @font-face CSS-regel kunnen we de locatie van een bepaalde lettertype-hulpbron definiëren, samen met de stijleigenschappen en de Unicode-codepoints waarvoor de hulpbron dient te worden gebruikt. Een combinatie van dergelijke @font-face-regels kan worden gebruikt om een `lettertypefamilie` samen te stellen die de browser gebruikt om vast te stellen welke lettertype-hulpbronnen moeten worden gedownload en toegepast op de actuele pagina. Laten we hier nader op ingaan.
@@ -227,7 +227,7 @@ Note: Voor de beste consistentie en visuele resultaten kunt u beter geen gebruik
 ## Laden en renderen optimaliseren
 
 ### TL;DR {: .hide-from-toc }
-- 'Verzoeken om lettertypen worden pas behandeld wanneer de render-boom is opgebouwd, wat tot vertraagde tekstweergave kan leiden'
+- Verzoeken om lettertypen worden pas behandeld wanneer de render-boom is opgebouwd, wat tot vertraagde tekstweergave kan leiden
 - In de Font Loading API kunnen we strategieën voor aangepaste lettertypen en rendering implementeren die voorrang krijgen boven standaard 'lazyload' laden van lettertypen
 - Met `inlining` van lettertypen kunnen we standaard `lazyload` laden in oudere browsers overschrijven
 

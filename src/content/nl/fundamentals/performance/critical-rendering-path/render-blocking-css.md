@@ -19,7 +19,7 @@ In het vorige gedeelte zagen we dat het kritieke weergavepad zowel de DOM- als d
 ### TL;DR {: .hide-from-toc }
 - CSS wordt standaard behandeld als een weergaveblokkerende bron.
 - Mediatypen en -query's maken het mogelijk om bepaalde CSS-bronnen te markeren als niet-weergaveblokkerend.
-- 'Alle CSS-bronnen, onafhankelijk van blokkerend of niet-blokkerend gedrag, worden gedownload door de browser.'
+- Alle CSS-bronnen, onafhankelijk van blokkerend of niet-blokkerend gedrag, worden gedownload door de browser.
 
 
 <figure class="attempt-left">

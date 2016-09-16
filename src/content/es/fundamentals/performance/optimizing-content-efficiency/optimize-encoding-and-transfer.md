@@ -98,7 +98,7 @@ En resumen, como primer paso para optimizar la eficacia de los recursos debes cr
 ## Compresión de texto con GZIP
 
 ### TL;DR {: .hide-from-toc }
-- 'GZIP funciona mejor en recursos basados en texto: CSS, JavaScript, HTML'
+- GZIP funciona mejor en recursos basados en texto: CSS, JavaScript, HTML
 - Todos los navegadores modernos admiten compresión GZIP y la solicitan automáticamente
 - Hay que configurar el servidor para que admita la compresión GZIP
 - Hay que prestar una atención especial a algunos CDN para garantizar que se habilita GZIP

@@ -742,7 +742,7 @@ Embora o <code>requestAutocomplete</code> tenha sido criado para ajudar o usuár
 
 ### TL;DR {: .hide-from-toc }
 - O <code>requestAutocomplete</code> pode simplificar muito o processo de finalização da compra e melhorar a experiência do usuário.
-- 'Se <code>requestAutocomplete</code> estiver disponível, oculte o formulário de finalização da compra e direcione o usuário diretamente para a página de confirmação.'
+- Se <code>requestAutocomplete</code> estiver disponível, oculte o formulário de finalização da compra e direcione o usuário diretamente para a página de confirmação.
 - Certifique-se de que os campos de entrada incluem o atributo autocomplete adequado.
 
 

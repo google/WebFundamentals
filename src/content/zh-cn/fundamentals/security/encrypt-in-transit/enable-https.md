@@ -25,7 +25,7 @@ description: 安全是 Web 保护用户的重要部分，并且需要完善 TLS 
 此部分使用 openssl 命令行程序（大部分 Linux、BSD 和 Mac OS X 系统均附带此程序）来生成私钥/公钥和 CSR。
 
 ### TL;DR {: .hide-from-toc }
-- '您需要创建一个 2,048 位 RSA 公钥和私钥对。'
+- 您需要创建一个 2,048 位 RSA 公钥和私钥对。
 - 生成一个嵌入您的公钥的证书签名请求 (CSR)。
 - 将 CSR 与证书颁发机构 (CA) 共享以接收最终证书或证书链。
 - 将最终证书安装在非 Web 可访问的位置，例如 /etc/ssl (Linux 和 Unix) 或 IIS 需要它们的位置 (Windows)。

@@ -15,8 +15,8 @@ Jeśli czegoś nie da się zmierzyć, nie można tego zoptymalizować. Na szczę
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Interfejs Navigation Timing udostępnia sygnatury o wysokiej rozdzielczości czasowej, umożliwiające pomiar krytycznej ścieżki renderowania.'
-- 'Na różnych etapach krytycznej ścieżki renderowania przeglądarka generuje serię zdarzeń, które można następnie przechwycić.'
+- Interfejs Navigation Timing udostępnia sygnatury o wysokiej rozdzielczości czasowej, umożliwiające pomiar krytycznej ścieżki renderowania.
+- Na różnych etapach krytycznej ścieżki renderowania przeglądarka generuje serię zdarzeń, które można następnie przechwycić.
 
 
 Podstawą każdej solidnej strategii optymalizacji wydajności jest poprawny pomiar i dobre narzędzia. Właśnie to zapewnia interfejs API Navigation Timing.

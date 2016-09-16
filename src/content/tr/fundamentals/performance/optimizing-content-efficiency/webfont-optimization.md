@@ -21,7 +21,7 @@ Web yazi tipi optimizasyonu, genel performans stratejisinin kritik bir parçasid
 
 ### TL;DR {: .hide-from-toc }
 - Unicode yazi tipleri binlerce glif içerebilir
-- 'Dört yazi tipi biçimi vardir: WOFF2, WOFF, EOT, TTF'
+- Dört yazi tipi biçimi vardir: WOFF2, WOFF, EOT, TTF
 - Bazi yazi tipi biçimleri GZIP sikistirmasinin kullanilmasini gerektirir
 
 
@@ -63,7 +63,7 @@ Note: EOT, TTF ve WOFF biçimleri için <a href='http://en.wikipedia.org/wiki/Zo
 
 ### TL;DR {: .hide-from-toc }
 - Birden çok yazi tipi biçimi belirtmek için format() ipucunu kullanin
-- 'Performansi iyilestirmek için genis unicode yazi tiplerinin alt kümelerini olusturun: Unicode araligi alt kümesi olusturun ve eski tarayicilar için bir manuel alt küme yedegi saglayin'
+- Performansi iyilestirmek için genis unicode yazi tiplerinin alt kümelerini olusturun: Unicode araligi alt kümesi olusturun ve eski tarayicilar için bir manuel alt küme yedegi saglayin
 - Sayfa ve metin olusturma performansini iyilestirmek için biçimsel yazi tipi çesitlerinin sayisini azaltin
 
 
@@ -238,9 +238,9 @@ Note: En iyi tutarlilik ve görsel sonuçlar için yazi tipi sentezine güvenmem
 ## Yükleme ve olusturmayi optimize etme
 
 ### TL;DR {: .hide-from-toc }
-- 'Yazi tipi istekleri, olusturma agaci olusturuluncaya kadar geciktirilir. Bu, metin olusturmasinin gecikmesine neden olabilir'
-- 'Yazi Tipi Yükleme API''si, varsayilan yazi tipinin geç yüklenmesi yöntemini geçersiz kilan özel yazi tipi yükleme ve olusturma stratejileri uygulamamiza olanak tanir'
-- 'Yazi tipini satir içinde kullanma, eski tarayicilardaki varsayilan yazi tipinin geç yüklenmesi yöntemini geçersiz kilmamiza olanak tanir'
+- Yazi tipi istekleri, olusturma agaci olusturuluncaya kadar geciktirilir. Bu, metin olusturmasinin gecikmesine neden olabilir
+- Yazi Tipi Yükleme API''si, varsayilan yazi tipinin geç yüklenmesi yöntemini geçersiz kilan özel yazi tipi yükleme ve olusturma stratejileri uygulamamiza olanak tanir
+- Yazi tipini satir içinde kullanma, eski tarayicilardaki varsayilan yazi tipinin geç yüklenmesi yöntemini geçersiz kilmamiza olanak tanir
 
 
 Ihtiyacimiz olmayabilecek tüm biçimsel çesitleri ve kullanilmayabilecek tüm glifleri içeren bir `tam` web yazi tipi, kolayca megabaytlarca büyüklükte bir indirmeyle sonuçlanabilir. Bunu ele almak için @font-face CSS kurali, özellikle yazi tipi ailesini bir kaynak koleksiyonuna bölmemize olanak taniyacak sekilde tasarlanmistir: Unicode alt kümeler, ayri stil çesitleri vb. 

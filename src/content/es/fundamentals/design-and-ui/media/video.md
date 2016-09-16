@@ -98,8 +98,8 @@ Para añadir un fragmento de medios, solo tienes que añadir "#t=[start_time][,e
 Además, puedes usar el API de Media Fragments para ofrecer varias vistas de un mismo vídeo (como pies de entrada en un DVD) sin necesidad de codificar y usar varios archivos.
 
 
-Note: - 'El API de Media Fragments es compatible con la mayoría de las plataformas, pero no con iOS.'
-- 'Asegúrate de que las solicitudes de intervalo de bytes sean compatibles con tu servidor. Las solicitudes de intervalo se habilitan de manera predeterminada en la mayoría de los servidores, pero algunos servicios de alojamiento pueden inhabilitarlas.'
+Note: - El API de Media Fragments es compatible con la mayoría de las plataformas, pero no con iOS.
+- Asegúrate de que las solicitudes de intervalo de bytes sean compatibles con tu servidor. Las solicitudes de intervalo se habilitan de manera predeterminada en la mayoría de los servidores, pero algunos servicios de alojamiento pueden inhabilitarlas.
 
 
 Al usar las herramientas de navegador para desarrolladores, comprueba que se incluya `Accept Ranges: bytes` en las cabeceras de respuesta:

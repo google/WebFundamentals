@@ -16,8 +16,8 @@ Algumas vezes você não deseja usar as palavras-chave de easing incluídas com 
 
 ### TL;DR {: .hide-from-toc }
 - O easing personalizado confere mais personalidade a seus projetos.
-- 'Você pode criar curvas de bézier cúbicas que se parecem com as curvas de animação padrão <code>(ease-out</code>, <code>ease-in</code>, etc.), mas com ênfase em locais diferentes.'
-- 'Use JavaScript quando precisar de mais controle sobre o tempo e comportamento da animação, por exemplo, animações elásticas ou saltitantes.'
+- Você pode criar curvas de bézier cúbicas que se parecem com as curvas de animação padrão <code>(ease-out</code>, <code>ease-in</code>, etc.), mas com ênfase em locais diferentes.
+- Use JavaScript quando precisar de mais controle sobre o tempo e comportamento da animação, por exemplo, animações elásticas ou saltitantes.
 
 
 Se está animando com CSS, você pode estabelecer curvas de bézier cúbicas para definir o tempo. Na verdade, as palavras-chave `ease`, `ease-in`, `ease-out` e `linear` mapeiam para curvas de bézier predefinidas, que são detalhadas na [Especificação das transições CSS](http://www.w3.org/TR/css3-transitions/).

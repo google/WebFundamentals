@@ -223,7 +223,7 @@ De CSS-eigenschap `background` is een krachtige tool waarmee u complexe afbeeldi
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Gebruik de beste afbeelding voor de kenmerken van de display, houd rekening met het formaat van het scherm, de resolutie van het apparaat en de paginalay-out.'
+- Gebruik de beste afbeelding voor de kenmerken van de display, houd rekening met het formaat van het scherm, de resolutie van het apparaat en de paginalay-out.
 - Wijzig de eigenschap <code>background-image</code> in CSS voor high-DPI-beeldschermen via mediaquery`s met <code>min-resolution</code> en <code>-webkit-min-device-pixel-ratio</code>.
 - Gebruik srcset voor afbeeldingen met hoge resolutie naast de 1x afbeelding in opmaak.
 - Houd rekening met de prestatiekosten wanneer u JavaScript-technieken gebruikt voor vervanging van afbeeldingen of wanneer u zwaar gecomprimeerde afbeeldingen met hoge resolutie op apparaten met een lagere resolutie plaatst.
@@ -358,7 +358,7 @@ Afbeeldingen zijn meestal verantwoordelijk voor de meeste gedownloade bytes en n
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Kies niet zomaar een afbeeldingsindeling, maar probeer inzicht te krijgen in de verschillende indelingen die beschikbaar zijn en gebruik de meest geschikte indeling.'
+- Kies niet zomaar een afbeeldingsindeling, maar probeer inzicht te krijgen in de verschillende indelingen die beschikbaar zijn en gebruik de meest geschikte indeling.
 - Gebruik ook tools voor afbeeldingsoptimalisatie en compressie in uw workflow om de grootte van bestanden te verkleinen.
 - Verlaag het aantal http-verzoeken door veelgebruikte afbeeldingen in afbeeldingssprites te plaatsen.
 - Denk eraan dat u afbeeldingen pas laadt nadat ze zichtbaar zijn in de weergave. Zo verbetert u de laadtijd van de eerste pagina en maakt u deze pagina minder zwaar.
@@ -414,7 +414,7 @@ Soms is de beste afbeelding geen afbeelding. Gebruik waar mogelijk de systeemeig
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Vermijd waar mogelijk het gebruik van afbeeldingen. Benut liever de mogelijkheden die de browser biedt voor het maken van schaduwen, kleurovergangen, afgeronde hoeken, enzovoort.'
+- Vermijd waar mogelijk het gebruik van afbeeldingen. Benut liever de mogelijkheden die de browser biedt voor het maken van schaduwen, kleurovergangen, afgeronde hoeken, enzovoort.
 
 
 ### Plaats tekst in markeringen, in plaats van ingesloten in afbeeldingen

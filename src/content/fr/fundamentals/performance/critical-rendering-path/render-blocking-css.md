@@ -15,9 +15,9 @@ Par défaut, le code CSS est traité comme ressource empêchant l'affichage, ce 
 Dans la section précédente, nous avons vu que le chemin critique du rendu nécessite de disposer des modèles DOM et CSSOM pour construire l'arborescence d'affichage, ce qui crée une implication importante des performances : **Les balisages HTML et CSS sont des ressources empêchant l'affichage.** C'est évident pour le code HTML, puisque sans le modèle DOM nous n'aurions rien à afficher. Toutefois, cette exigence pour le code CSS peut être moins évidente. Que ce passerait-il si nous tentions d'afficher une page classique sans que le code CSS empêche l'affichage ?
 
 ### TL;DR {: .hide-from-toc }
-- 'Par défaut, le code CSS est traité comme ressource empêchant l''affichage.'
+- Par défaut, le code CSS est traité comme ressource empêchant l''affichage.
 - Les types de média et les requêtes média nous permettent de marquer certaines ressources CSS comme n'empêchant pas l'affichage.
-- 'Toutes les ressources CSS, qu''elles empêchent ou non l''affichage, sont téléchargées par le navigateur.'
+- Toutes les ressources CSS, qu''elles empêchent ou non l''affichage, sont téléchargées par le navigateur.
 
 
 <figure class="attempt-left">

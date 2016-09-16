@@ -28,7 +28,7 @@ Cuando el servidor ofrece una respuesta, también emite una colección de encabe
 
 ### TL;DR {: .hide-from-toc }
 - El servidor informa del token de validación mediante el encabezado HTTP `ETag`.
-- 'El token de validación posibilita las comprobaciones de actualizaciones eficientes: si el recurso no ha cambiado, no se transfieren datos.'
+- El token de validación posibilita las comprobaciones de actualizaciones eficientes: si el recurso no ha cambiado, no se transfieren datos.
 
 
 Supongamos que han pasado 120 segundos desde nuestra tarea de obtención inicial y que el navegador ha iniciado una solicitud nueva para el mismo recurso. En primer lugar, el navegador comprueba la memoria caché local y detecta la respuesta anterior. Por desgracia, no puede utilizarla porque ha `caducado`. Llegado este momento, podría emitir una solicitud nueva y obtener la nueva respuesta completa, pero sería de dudosa eficiencia hacerlo porque, si el recurso no ha cambiado, no hay motivo para descargar los mismos bytes que ya se encuentran en la memoria caché.
@@ -48,7 +48,7 @@ Note: Consejo: El proyecto HTML5 Boilerplate contiene <a href='https://github.co
 
 ### TL;DR {: .hide-from-toc }
 - Cada recurso puede definir su política de almacenamiento en memoria caché mediante el encabezado HTTP `Cache-Control`.
-- 'Las directivas de `Cache-Control` controlan quién puede almacenar la respuesta en memoria caché, en qué condiciones y durante cuánto tiempo.'
+- Las directivas de `Cache-Control` controlan quién puede almacenar la respuesta en memoria caché, en qué condiciones y durante cuánto tiempo.
 
 
 La mejor solicitud es aquella no que no necesita comunicarse con el servidor. Una copia local de la respuesta nos permite eliminar toda la latencia de red y evitar costes de datos para la transferencia de datos. Para lograrlo, la especificación HTTP permite que el servidor ofrezca una [serie de diferentes directivas de `Cache-Control`](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) que controlan cómo y durante cuánto tiempo el navegador y otras memorias caché intermedias pueden almacenar la respuesta concreta en memoria caché.

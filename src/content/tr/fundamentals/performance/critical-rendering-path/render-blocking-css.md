@@ -18,8 +18,8 @@ Varsayilan olarak CSS, olusturmayi engelleyen bir kaynak olarak islenir. Bu, CSS
 Önceki bölümde, olusturma agacinin yapimi için kritik olusturma yolunun hem DOM'yi hem de CSSOM'yi gerektirdigini ve bunun, performans üzerinde önemli bir sonucunun oldugunu gördük: **Hem HTML hem de CSS, olusturmayi engelleyen kaynaklardir.** DOM olmadan olusturacak bir seyimiz olmayacagi için HTML gereksinimi açiktir, ancak CSS gereksinimi o kadar açik olmayabilir. CSS'de olusturmayi engellemeden tipik bir sayfayi olusturmayi denersek ne olur?
 
 ### TL;DR {: .hide-from-toc }
-- 'Varsayilan olarak CSS, bir olusturma engelleyen kaynak olarak islenir.'
-- 'Medya türleri ve medya sorgulari, bazi CSS kaynaklarini olusturmayi engellemeyen olarak isaretlememize olanak tanir.'
+- Varsayilan olarak CSS, bir olusturma engelleyen kaynak olarak islenir.
+- Medya türleri ve medya sorgulari, bazi CSS kaynaklarini olusturmayi engellemeyen olarak isaretlememize olanak tanir.
 - Engelleyen veya engelleme yapmayan davranisindan bagimsiz olarak tüm CSS kaynaklari tarayici tarafindan indirilir.
 
 

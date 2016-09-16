@@ -16,7 +16,7 @@ description: CSS 또는 JavaScript로 애니메이션을 만들 수 있습니다
 
 ### TL;DR {: .hide-from-toc }
 - UI 요소 상태 전환과 같은 간단한 '단일 쇼트(one-shot)' 전환에 CSS 애니메이션을 사용합니다.
-- '바운스, 중지, 일시 중지, 되감기 또는 감속과 같은 고급 효과를 원할 경우에 JavaScript 애니메이션을 사용합니다.'
+- 바운스, 중지, 일시 중지, 되감기 또는 감속과 같은 고급 효과를 원할 경우에 JavaScript 애니메이션을 사용합니다.
 - JavaScript로 애니메이션 만들 경우 TweenMax 또는 TweenLite(더 가벼운 솔루션을 원할 경우)를 사용합니다.
 
 

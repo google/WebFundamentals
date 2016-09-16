@@ -40,7 +40,7 @@ description: 웹은 작은 화면을 가진 전화기부터 커다한 화면을 
 
 ### TL;DR {: .hide-from-toc }
 - 가장 필요한 콘텐츠 정의하기.
-- '좁고 넓은 뷰포트에 대한 대략적인 정보구조(Information Architecture, IA) 구성하기.'
+- 좁고 넓은 뷰포트에 대한 대략적인 정보구조(Information Architecture, IA) 구성하기.
 - 스타일 없이 콘텐츠를 가진 페이지 뷰의 뼈대 만들기
 
 

@@ -50,7 +50,7 @@ Pagina's die voor verschillende apparaten zijn geoptimaliseerd moeten een meta-v
 ### TL;DR {: .hide-from-toc }
 - Gebruik metatags voor de viewport om de breedte en schaling van de browserviewport te bepalen.
 - Neem <code>width=device-width</code> op om de breedte van het scherm af te stemmen in apparaatonafhankelijke pixels.
-- 'Neem <code>initial-scale=1</code> op om een 1:1-verhouding te verkrijgen tussen CSS-pixels en apparaatonafhankelijke pixels.'
+- Neem <code>initial-scale=1</code> op om een 1:1-verhouding te verkrijgen tussen CSS-pixels en apparaatonafhankelijke pixels.
 - Zorg ervoor dat uw pagina toegankelijk is door schaling voor gebruikers niet uit te schakelen.
 
 
@@ -243,7 +243,7 @@ Het mag dan wel handig zijn om na te denken over het bepalen van breekpunten op 
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Maak breekpunten altijd op basis van de inhoud, en niet op basis van apparaten, producten of merken.'
+- Maak breekpunten altijd op basis van de inhoud, en niet op basis van apparaten, producten of merken.
 - Begin uw ontwerp eerst voor het kleinste mobiele apparaat en breid daarna steeds verder uit naarmate er meer schermruimte beschikbaar is.
 - Beperk tekstregels tot een maximum van ongeveer 70 tot 80 tekens.
 

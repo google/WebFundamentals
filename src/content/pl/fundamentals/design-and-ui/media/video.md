@@ -30,9 +30,9 @@ Przeczytaj, jak w prosty sposób umieścić film na stronie i upewnić się, że
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Użyj elementu video, by wczytywać, dekodować i odtwarzać filmy w swojej witrynie.'
-- 'Przygotuj film w wielu formatach, by można było oglądać go na wielu platformach mobilnych.'
-- 'Ustaw prawidłowy rozmiar filmu. Upewnij się, że nie będzie on wystawać poza swój kontener.'
+- Użyj elementu video, by wczytywać, dekodować i odtwarzać filmy w swojej witrynie.
+- Przygotuj film w wielu formatach, by można było oglądać go na wielu platformach mobilnych.
+- Ustaw prawidłowy rozmiar filmu. Upewnij się, że nie będzie on wystawać poza swój kontener.
 - Ułatwienia dostępu są ważne. Dodaj element track jako podrzędny elementu video.
 
 
@@ -97,7 +97,7 @@ Aby umieścić na stronie fragment multimediów, wystarczy dodać `#t=[start_tim
 Interfejs API Media Fragments pozwala udostępniać wiele widoków tego samego filmu (podobnie do wyboru scen na płycie DVD) bez konieczności kodowania i przesyłania wielu plików.
 
 Note: - Interfejs API Media Fragments działa na większości platform z wyjątkiem iOS.
-- 'Upewnij się, że Twój serwer odpowiada na żądania zakresu. Na większości serwerów ta funkcja jest domyślnie włączona, ale niektórzy administratorzy usług hostingowych ją wyłączają.'
+- Upewnij się, że Twój serwer odpowiada na żądania zakresu. Na większości serwerów ta funkcja jest domyślnie włączona, ale niektórzy administratorzy usług hostingowych ją wyłączają.
 
 
 Użyj narzędzi dla programistów w przeglądarce, by znaleźć ciąg `Accept-Ranges: bytes` w nagłówkach odpowiedzi:

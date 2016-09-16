@@ -31,7 +31,7 @@ Conheça as maneiras mais simples de adicionar vídeos ao seu site e garantir qu
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Use o elemento de vídeo para carregar, decodificar e reproduzir vídeos no seu site.'
+- Use o elemento de vídeo para carregar, decodificar e reproduzir vídeos no seu site.
 - Produza vídeos em diversos formatos para disponibilizá-los em várias plataformas de dispositivos móveis.
 - Dimensione os vídeos corretamente e assegure-se de que eles não transbordem os recipientes.
 - A acessibilidade é importante. Adicione o elemento de faixa como um derivado do elemento de vídeo.
@@ -97,8 +97,8 @@ Para adicionar um fragmento de mídia, adicione `#t=[start_time][,end_time]` ao 
 
 A API dos fragmentos de mídia também pode ser usada para fornecer diversas visualizações do mesmo vídeo, como pontos de marcação em um DVD, sem ter que codificar e veicular diversos arquivos.
 
-Note: - 'A API dos fragmentos de mídia é compatível com a maioria das plataformas, mas não com iOS.'
-- 'Certifique-se de que as solicitações de faixa sejam compatíveis com seu servidor. As solicitações de faixa são habilitadas por padrão na maioria dos servidores, mas alguns serviços de hospedagem podem desativá-las.'
+Note: - A API dos fragmentos de mídia é compatível com a maioria das plataformas, mas não com iOS.
+- Certifique-se de que as solicitações de faixa sejam compatíveis com seu servidor. As solicitações de faixa são habilitadas por padrão na maioria dos servidores, mas alguns serviços de hospedagem podem desativá-las.
 
 
 Com as ferramentas para desenvolvedores do seu navegador, verifique `Accept-Ranges: bytes` nos cabeçalhos de resposta:

@@ -226,7 +226,7 @@ Todo esto está muy bien una vez más, pero sigue siendo muy teórico: ¿cómo i
 - El funcionamiento de nuestros ojos permite obtener buenos resultados al someter las imágenes a una compresión con pérdida
 - La optimización de imágenes es una función de la compresión con y sin pérdida
 - Las diferencias en los formatos de imagen se deben a la forma de utilizar los algoritmos con o sin pérdida y a cuáles se utilizan para optimizar la imagen
-- 'No existe una `configuración de calidad` o un formato mejor para todas las imágenes: cada combinación de compresor y contenidos de imagen tiene un resultado único'
+- No existe una `configuración de calidad` o un formato mejor para todas las imágenes: cada combinación de compresor y contenidos de imagen tiene un resultado único
 
 
 Para algunos tipos de datos, como los códigos fuente de páginas o los archivos ejecutables, es fundamental que el compresor no altere ni pierda información original: si falta un solo bit de datos o es incorrecto, el significado del contenido del archivo puede cambiar completamente o, lo que es peor, estropearse por completo. Para otros tipos de datos, como imágenes, audio y vídeo, una representación `aproximada` de los datos originales puede ser suficiente.
@@ -250,8 +250,8 @@ Note: Ten en cuenta que no se pueden comparar directamente los niveles de calida
 ## Seleccionar el formato de imagen correcto
 
 ### TL;DR {: .hide-from-toc }
-- 'Empieza por seleccionar el formato universal adecuado: GIF, PNG, JPEG'
-- 'Haz pruebas y selecciona la mejor configuración para cada formato: calidad, medidas de la paleta, etc.'
+- Empieza por seleccionar el formato universal adecuado: GIF, PNG, JPEG
+- Haz pruebas y selecciona la mejor configuración para cada formato: calidad, medidas de la paleta, etc.
 - Plantéate añadir recursos WebP y JPEG XR en las imágenes escaladas para los clientes modernos.
 
 
@@ -365,7 +365,7 @@ No dudes en experimentar con los parámetros de los diferentes compresores. Redu
 ### TL;DR {: .hide-from-toc }
 - Una de las optimizaciones más sencillas y eficaces es utilizar recursos escalados
 - Presta atención a los recursos grandes porque suponen un gran coste general
-- 'Para reducir el número de píxeles innecesarios, escala las imágenes en función del tamaño de visualización'
+- Para reducir el número de píxeles innecesarios, escala las imágenes en función del tamaño de visualización
 
 
 La optimización de imágenes se reduce a dos criterios: optimización del número de bytes utilizado para codificar cada píxel de imagen y optimización del número total de píxeles. El tamaño de archivo de la imagen es el resultado de multiplicar el número total de píxeles por el número de bytes utilizado para codificar cada píxel. Ni más ni menos.

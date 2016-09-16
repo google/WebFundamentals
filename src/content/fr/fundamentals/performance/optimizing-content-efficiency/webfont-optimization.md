@@ -19,7 +19,7 @@ L'optimisation de police Web est un élément essentiel de la stratégie de perf
 
 ### TL;DR {: .hide-from-toc }
 - Les polices Unicode peuvent contenir des milliers de glyphes
-- 'Il existe quatre formats de police : WOFF2, WOFF, EOT et TTF'
+- Il existe quatre formats de police : WOFF2, WOFF, EOT et TTF
 - Certains formats de police nécessitent l'utilisation de la compression GZIP
 
 

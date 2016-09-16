@@ -20,7 +20,7 @@ W poprzedniej sekcji dowiedzieliśmy się, że tworzenie drzewa renderowania w k
 ### TL;DR {: .hide-from-toc }
 - Domyślnie kod CSS jest traktowany jako zasób blokujący renderowanie.
 - Dzięki typom mediów i zapytaniom o media możemy oznaczyć niektóre zasoby CSS jako nieblokujące renderowanie.
-- 'Przeglądarka pobiera wszystkie zasoby CSS, niezależnie od ich własności blokujących lub nieblokujących.'
+- Przeglądarka pobiera wszystkie zasoby CSS, niezależnie od ich własności blokujących lub nieblokujących.
 
 
 <figure class="attempt-left">

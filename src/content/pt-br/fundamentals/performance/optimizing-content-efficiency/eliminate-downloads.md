@@ -17,7 +17,7 @@ O recurso mais rápido e mais otimizado é um recurso não enviado. Você fez a 
 
 ### TL;DR {: .hide-from-toc }
 - Faça o inventário de todos os recursos próprios e de terceiros em suas páginas
-- 'Meça o desempenho de cada recurso: seu valor e seu desempenho técnico'
+- Meça o desempenho de cada recurso: seu valor e seu desempenho técnico
 - Determine se os recursos estão oferecendo valor suficiente
 
 

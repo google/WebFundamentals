@@ -17,7 +17,7 @@ Antes de o navegador renderizar a página, ele precisa criar as árvores DOM e C
 
 ### TL;DR {: .hide-from-toc }
 - Bytes → caracteres → tokens → nós → modelo de objeto.
-- 'A marcação HTML é transformada em um modelo de objeto de documento (DOM, na sigla em inglês), a marcação CSS é transformada em um modelo de objeto de CSS (CSSOM, na sigla em inglês).'
+- A marcação HTML é transformada em um modelo de objeto de documento (DOM, na sigla em inglês), a marcação CSS é transformada em um modelo de objeto de CSS (CSSOM, na sigla em inglês).
 - DOM e CSSOM são estruturas de dados independentes.
 - O Chrome DevTools Timeline possibilita capturar e inspecionar os custos de criação e processamento de DOM e CSSOM.
 

@@ -16,7 +16,7 @@ As visualizações modais são para mensagens importantes e, por isso, você tem
 ### TL;DR {: .hide-from-toc }
 - As visualizações modais devem ser usadas com moderação; os usuários ficarão frustrados se você interromper a experiência deles desnecessariamente.
 - Adicionar escala à animação proporciona um bom efeito de ‘queda’.
-- 'Certifique-se de remover a visualização modal rapidamente quando o usuário descartá-la, mas ela deve ser exibida na tela um pouco mais lentamente para não surpreender o usuário.'
+- Certifique-se de remover a visualização modal rapidamente quando o usuário descartá-la, mas ela deve ser exibida na tela um pouco mais lentamente para não surpreender o usuário.
 
 
 <img src="imgs/gifs/dont-press.gif" alt="Animando uma visualização modal." />

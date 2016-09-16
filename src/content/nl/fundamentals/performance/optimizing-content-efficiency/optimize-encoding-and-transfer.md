@@ -63,7 +63,7 @@ U vraagt zich misschien af wat we hieraan hebben voor optimalisatie van onze int
 ## Verkleinen: voorverwerking en inhoudspecifieke optimalisatie
 
 ### TL;DR {: .hide-from-toc }
-- 'Met optimalisatie die op de inhoud is aangepast, kunt u de omvang van geleverde hulpbronnen aanzienlijk terugbrengen'
+- Met optimalisatie die op de inhoud is aangepast, kunt u de omvang van geleverde hulpbronnen aanzienlijk terugbrengen
 - Inhoudspecifieke optimalisatie kunt u het beste tijdens de samenstelling/publicatie van de hulpbron toepassen
 
 
@@ -97,7 +97,7 @@ Inventariseer daarom als eerste stap voor de optimalisatie van de efficiëntie v
 ## Tekstcompressie met GZIP
 
 ### TL;DR {: .hide-from-toc }
-- 'GZIP werkt het beste met tekstitems: CSS, JavaScript, HTML'
+- GZIP werkt het beste met tekstitems: CSS, JavaScript, HTML
 - Alle moderne browsers ondersteunen GZIP-compressie en passen deze standaard toe
 - GZIP moet zijn ingeschakeld in de configuratie van uw server
 - Voor sommige CDN's zijn speciale stappen nodig om GZIP in te schakelen

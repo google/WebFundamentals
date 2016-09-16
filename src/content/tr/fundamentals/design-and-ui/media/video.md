@@ -31,10 +31,10 @@ Sitenize video eklemenin ve kullanicilarin tüm cihazlarda mümkün olan en iyi 
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Sitenizde video yüklemek, kodunu çözmek ve oynatmak için video ögesini kullanin.'
+- Sitenizde video yüklemek, kodunu çözmek ve oynatmak için video ögesini kullanin.
 - Çesitli mobil platformlari kapsamak için videoyu birden çok biçimde olusturun.
 - Videolarin boyutunu dogru bir sekilde ayarlayin; kapsayicilarindan tasmadiklarindan emin olun.
-- 'Erisilebilirlik önemlidir; parça ögesini, video ögesinin alt ögesi olarak ekleyin.'
+- Erisilebilirlik önemlidir; parça ögesini, video ögesinin alt ögesi olarak ekleyin.
 
 
 ### Video ögesini ekleme
@@ -97,8 +97,8 @@ Bir medya parçasi eklemek için medya URL'sine yalnizca `#t=[start_time][,end_t
 
 Medya Parçalari API'sini, birden çok dosyayi kodlayip sunmak zorunda kalmadan ayni videoda birden çok görünüm sunmak (DVD'lerdeki bölüm baslangiçlari gibi) için de kullanabilirsiniz.
 
-Note: - 'Medya Parçalari API''si çogu platformda desteklenir, ancak iOS''ta desteklenmez.'
-- 'Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.'
+Note: - Medya Parçalari API''si çogu platformda desteklenir, ancak iOS''ta desteklenmez.
+- Aralik Isteklerinin sunucunuzda desteklendiginden emin olun. Aralik Istekleri, çogu sunucuda varsayilan olarak etkindir, ancak bazi barindirma hizmetleri bunlari kapatabilir.
 
 
 Tarayici gelistirme araçlarinizi kullanarak yanit üstbilgilerindeki `Accept-Ranges: bytes` dizesini kontrol edin:
@@ -236,8 +236,8 @@ Kullanicilarinizin memnuniyeti söz konusu oldugunda boyut önemlidir.
 
 ### TL;DR {: .hide-from-toc }
 - Platformun isleyebileceginden daha genis çerçeve boyutuna veya daha yüksek kaliteye sahip videolar sunmayin.
-- 'Videolarinizi, olmalari gerekenden daha uzun yapmayin.'
-- 'Uzun videolar, indirme ve aramada kesintilere neden olabilir; bazi tarayicilar videoyu oynatmaya baslamak için indirme isleminin bitmesini bekleyebilir.'
+- Videolarinizi, olmalari gerekenden daha uzun yapmayin.
+- Uzun videolar, indirme ve aramada kesintilere neden olabilir; bazi tarayicilar videoyu oynatmaya baslamak için indirme isleminin bitmesini bekleyebilir.
 
 
 

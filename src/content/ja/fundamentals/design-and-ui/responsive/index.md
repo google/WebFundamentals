@@ -49,7 +49,7 @@ Explore what makes a site responsive and how some common responsive design patte
 ### TL;DR {: .hide-from-toc }
 - meta viewport タグを使用して、ブラウザのビューポートの幅とスケーリングを制御する。
 - <code>width=device-width</code> を追加して、画面の幅をデバイス非依存ピクセルに合わせる。
-- '<code>initial-scale=1</code> を追加して、CSS ピクセルとデバイス非依存ピクセルの間に 1:1 の関係を確立する。'
+- <code>initial-scale=1</code> を追加して、CSS ピクセルとデバイス非依存ピクセルの間に 1:1 の関係を確立する。
 - ユーザーによるスケーリングを無効にせず、ページに確実にアクセスできるようにする。
 
 

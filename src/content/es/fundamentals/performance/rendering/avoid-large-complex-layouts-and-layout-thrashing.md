@@ -13,8 +13,8 @@ El diseño es la parte donde el navegador descifra la información geométrica d
 
 ### TL;DR {: .hide-from-toc }
 - El diseño generalmente se aplica en todo el documento.
-- 'La cantidad de elementos del DOM afectará al rendimiento; por eso, debe evitar el desencadenamiento de diseño siempre que sea posible.'
-- 'Evalúe el rendimiento del modelo de diseño: los nuevos modelos Flexbox generalmente son más rápidos que los modelos Flexbox anteriores o que los modelos de diseño flotantes.'
+- La cantidad de elementos del DOM afectará al rendimiento; por eso, debe evitar el desencadenamiento de diseño siempre que sea posible.
+- Evalúe el rendimiento del modelo de diseño: los nuevos modelos Flexbox generalmente son más rápidos que los modelos Flexbox anteriores o que los modelos de diseño flotantes.
 - Evite los diseños sincrónicos forzados y la hiperpaginación de diseños; lea los valores de estilo y luego realice los cambios en el estilo.
 
 

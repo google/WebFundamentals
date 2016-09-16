@@ -15,7 +15,7 @@ Já discutimos as várias opções disponíveis para easing em animações, ent�
 
 ### TL;DR {: .hide-from-toc }
 - Use animações ease-out para elementos de interface de usuários; o Quintic é um ease-out ótimo e rápido.
-- 'Certifique-se de usar a duração da animação; ease-outs e ease-ins devem ter de 200 ms a 500 ms, enquanto eases bounces e elastic devem ter duração mais longa, de 800 ms a 1200 ms.'
+- Certifique-se de usar a duração da animação; ease-outs e ease-ins devem ter de 200 ms a 500 ms, enquanto eases bounces e elastic devem ter duração mais longa, de 800 ms a 1200 ms.
 
 
 No geral, um **ease-out** será a escolha correta e certamente um bom padrão. De início rápido, confere às animações capacidade de resposta, o que é desejável, seguido de certa desaceleração no final.

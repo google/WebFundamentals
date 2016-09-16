@@ -17,7 +17,7 @@ En hizli ve en iyi optimize edilmis kaynak, gönderilmemis kaynaktir. Kaynaklari
 
 ### TL;DR {: .hide-from-toc }
 - Sayfalarinizdaki kendi varliklarinizin ve üçüncü taraf varliklarinin tamaminin envanterini yapin
-- 'Her bir varligin performansini ölçün: Degeri ve teknik performansi'
+- Her bir varligin performansini ölçün: Degeri ve teknik performansi
 - Kaynaklarin yeterli deger saglayip saglamadigini belirleyin
 
 

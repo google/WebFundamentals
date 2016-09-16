@@ -16,7 +16,7 @@ La ressource la plus rapide et la mieux optimisée est une ressource qui n'est p
 
 ### TL;DR {: .hide-from-toc }
 - Inventorier tous vos éléments et tous les éléments tiers sur vos pages
-- 'Mesurer les performances de chaque élément : sa valeur et ses performances techniques'
+- Mesurer les performances de chaque élément : sa valeur et ses performances techniques
 - Déterminer si les ressources offrent une valeur suffisante
 
 

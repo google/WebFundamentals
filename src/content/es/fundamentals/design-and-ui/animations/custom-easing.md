@@ -14,7 +14,7 @@ En algunos casos, no querrá utilizar las palabras clave de aceleración que se 
 
 ### TL;DR {: .hide-from-toc }
 - La aceleración personalizada le permitirá darle más personalidad a sus proyectos.
-- 'Puede crear curvas Bézier cúbicas similares a las curvas de animación predeterminadas (salida lenta, entrada lenta, etc.), pero con énfasis en diferentes lugares.'
+- Puede crear curvas Bézier cúbicas similares a las curvas de animación predeterminadas (salida lenta, entrada lenta, etc.), pero con énfasis en diferentes lugares.
 - Utilice JavaScript cuando necesite tener más control sobre la sincronización y el comportamiento de las animaciones; p.\_ej., animaciones elásticas o de rebote.
 
 

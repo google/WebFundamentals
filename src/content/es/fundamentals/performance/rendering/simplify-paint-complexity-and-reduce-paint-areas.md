@@ -13,8 +13,8 @@ description: La pintura es el proceso de rellenar los píxeles que, finalmente, 
 La pintura es el proceso de rellenar los píxeles que, finalmente, se convierten en una composición en las pantallas de los usuarios. A menudo, es la tarea del proceso que más tiempo se ejecuta, y la que se debe evitar siempre que sea posible.
 
 ### TL;DR {: .hide-from-toc }
-- 'Si se cambia alguna propiedad que no sea transforms u opacity, siempre se desencadena la función de pintura.'
-- 'La pintura es, generalmente, la parte más costosa de la canalización de píxeles; evítela siempre que sea posible.'
+- Si se cambia alguna propiedad que no sea transforms u opacity, siempre se desencadena la función de pintura.
+- La pintura es, generalmente, la parte más costosa de la canalización de píxeles; evítela siempre que sea posible.
 - Reduzca las áreas de pintura mediante la promoción de las capas y la orquestación de las animaciones.
 - Utilice el generador de perfiles de pintura de DevTools de Chrome para evaluar la complejidad y el costo de la pintura; reduzca su uso siempre que sea posible.
 

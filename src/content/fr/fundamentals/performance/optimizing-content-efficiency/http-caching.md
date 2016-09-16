@@ -28,7 +28,7 @@ Chaque fois que le serveur renvoie une réponse, il émet également une collect
 
 ### TL;DR {: .hide-from-toc }
 - Le jeton de validation est communiqué par le serveur via l'en-tête HTTP ETag
-- 'Le jeton de validation permet de contrôler la mise à jour des ressources de façon efficace : aucun transfert de données n''est effectué si la ressource n''a pas changé.'
+- Le jeton de validation permet de contrôler la mise à jour des ressources de façon efficace : aucun transfert de données n''est effectué si la ressource n''a pas changé.
 
 
 Supposons que 120 secondes se sont écoulées depuis notre récupération initiale, et que le navigateur a lancé une nouvelle requête pour la même ressource. Tout d'abord, le navigateur contrôle le cache local et y trouve la réponse précédente. Il ne peut malheureusement pas l'utiliser, car celle-ci a 'expiré'. À ce stade, il pourrait simplement envoyer une nouvelle requête et récupérer la nouvelle réponse complète, mais cette méthode est inefficace, car si la ressource n'a pas changé, il n'y a pas de raison de télécharger exactement les mêmes octets que ceux qui se trouvent déjà dans le cache !
@@ -48,7 +48,7 @@ Note: Conseil : le projet HTML5 Boilerplate contient des <a href='https://github
 
 ### TL;DR {: .hide-from-toc }
 - Chaque ressource peut définir ses règles de mises en cache via l'en-tête HTTP Cache-Control
-- 'Les directives Cache-Control contrôlent qui peut mettre en cache la réponse, à quelles conditions et pour combien de temps'
+- Les directives Cache-Control contrôlent qui peut mettre en cache la réponse, à quelles conditions et pour combien de temps
 
 
 La meilleure requête est une requête qui n'a pas besoin de communiquer avec le serveur : une copie locale de la réponse nous permet d'éliminer toute latence sur le réseau et d'éviter les frais de données pour le transfert de données. Pour y parvenir, la spécification HTTP autorise le serveur à renvoyer [plusieurs directives Cache-Control différentes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) qui contrôlent comment et pendant combien de temps la réponse individuelle peut être mise en cache par le navigateur et autres caches intermédiaires.

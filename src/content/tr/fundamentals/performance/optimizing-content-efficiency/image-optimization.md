@@ -39,9 +39,9 @@ Kendinizi bir resim varliginin içine metin kodlarken bulursaniz durun ve yenide
 ## Vektör ve Tarama resimler
 
 ### TL;DR {: .hide-from-toc }
-- 'Vektör resimler, geometrik sekillerden olusan resimler için idealdir'
+- Vektör resimler, geometrik sekillerden olusan resimler için idealdir
 - Vektör resimler zum ve çözünürlükten bagimsizdir
-- 'Tarama resimler, birçok düzensiz sekil ve ayrinti bulunan karmasik sahneler için kullanilmalidir'
+- Tarama resimler, birçok düzensiz sekil ve ayrinti bulunan karmasik sahneler için kullanilmalidir
 
 
 Bir resmin gerçekte istediginiz etkiyi gerçeklestirmek için en uygun biçim oldugunu belirledikten sonraki kritik seçim, uygun biçimin seçilmesidir:
@@ -74,8 +74,8 @@ Tarama resimler, çözünürlükten veya zumdan bagimsiz olma gibi hos özellikl
 
 ### TL;DR {: .hide-from-toc }
 - Yüksek çözünürlüklü ekranlarin CSS pikseli basinda birden çok cihaz pikseli vardir
-- 'Yüksek çözünürlüklü resimler, önemli ölçüde daha fazla piksel ve bayt gerektirir'
-- 'Resim optimizasyon teknikleri, çözünürlükten bagimsiz olarak aynidir'
+- Yüksek çözünürlüklü resimler, önemli ölçüde daha fazla piksel ve bayt gerektirir
+- Resim optimizasyon teknikleri, çözünürlükten bagimsiz olarak aynidir
 
 
 Resim piksellerinden söz ettigimizde, farkli piksel türlerini birbirinden ayirt etmemiz gerekir: CSS pikselleri ve cihaz pikselleri. Tek bir CSS pikseli birden çok cihaz pikseli içerebilir. Örnegin, tek bir CSS pikseli dogrudan tek bir cihaz pikseline karsilik gelebilir veya birden çok cihaz pikseli tarafindan desteklenebilir. Bunun amaci nedir? Ne kadar çok cihaz pikseli olursa ekranda görüntülenen içerigin ayrintisi da o kadar ince olur.
@@ -121,7 +121,7 @@ Bu, uygulamada ne anlama gelir? Yüksek çözünürlüklü ekranlar, güzel resi
 ## Vektör resimleri optimize etme
 
 ### TL;DR {: .hide-from-toc }
-- 'SVG, XML tabanli bir resim biçimidir'
+- SVG, XML tabanli bir resim biçimidir
 - Boyutlarinin azaltilmasi için SVG dosyalari küçültülmelidir
 - SVG dosyalari GZIP ile sikistirilmalidir
 
@@ -149,9 +149,9 @@ Tipik bir örnek olarak svgo, Illustrator tarafindan olusturulan yukaridaki SVG 
 ## Tarama resimleri optimize etme
 
 ### TL;DR {: .hide-from-toc }
-- 'Tarama resmi, piksellerden olusmus bir kilavuzdur'
-- 'Her bir piksel, renk ve seffaflik bilgilerini kodlar'
-- 'Resim sikistiricilari, resmin dosya boyutunu küçültmek için piksel basina gereken bit sayisini azaltmak üzere çesitli teknikler kullanir'
+- Tarama resmi, piksellerden olusmus bir kilavuzdur
+- Her bir piksel, renk ve seffaflik bilgilerini kodlar
+- Resim sikistiricilari, resmin dosya boyutunu küçültmek için piksel basina gereken bit sayisini azaltmak üzere çesitli teknikler kullanir
 
 
 Bir tarama resim, bagimsiz `piksel`lerden olusan 2 boyutlu bir kilavuzdur. Örnegin, 100x100 piksellik bir resim, 10.000 piksellik bir siradir. Bununla birlikte, her bir piksel "[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)" degerlerini saklar: (R) kirmizi kanal, (G) yesil kanal, (B) mavi kanal ve (A) alfa (seffaflik) kanali.
@@ -225,10 +225,10 @@ Bir kez daha, bunlarin hesap harika, ama ayni zamanda çok akademik: Bu, sayfala
 ## Kayipsiz ve kayipli resim sikistirma
 
 ### TL;DR {: .hide-from-toc }
-- 'Gözlerimizin çalisma seklinde dolayi, resimler kayipli sikistirma için mükemmel adaylardir'
-- 'Resim optimizasyonu, bir kayipli ve kayipsiz sikistirma islevidir'
-- 'Resim biçimlerindeki farklar, resmi optimize etmek için kullanilan kayipli ve kayipsiz algoritmalardan ve bu algoritmalarin kullanimlarindaki farkliliklardan kaynaklanir'
-- 'Tüm resimler için geçerli tek bir en iyi biçim veya ''kalite ayari'' yoktur: Belirli sikistirici ve resim içeriklerinin her bir kombinasyonu benzersiz bir çikis olusturur'
+- Gözlerimizin çalisma seklinde dolayi, resimler kayipli sikistirma için mükemmel adaylardir
+- Resim optimizasyonu, bir kayipli ve kayipsiz sikistirma islevidir
+- Resim biçimlerindeki farklar, resmi optimize etmek için kullanilan kayipli ve kayipsiz algoritmalardan ve bu algoritmalarin kullanimlarindaki farkliliklardan kaynaklanir
+- Tüm resimler için geçerli tek bir en iyi biçim veya ''kalite ayari'' yoktur: Belirli sikistirici ve resim içeriklerinin her bir kombinasyonu benzersiz bir çikis olusturur
 
 
 Bir sayfanin kaynak kodu veya bir yürütülebilir dosya gibi belirli veri türleri için bir sikistiricinin orijinal bilgileri degistirmemesi veya kaybetmemesi kritik öneme sahiptir: Tek bir eksik veya yanlis veri biti, dosya içeriginin anlamini tamamiyla degistirebilir veya daha kötüsü, tümüyle bozabilir. Resimler, ses ve video gibi diger bazi veri türleri için orijinal verilerin bir 'yaklasik' yansimasinin saglanmasi mükemmel bir sekilde kabul edilebilir.
@@ -252,8 +252,8 @@ Note: Farkli resim biçimlerinin kalite düzeylerinin, resmi kodlamak için kull
 ## Dogru resim biçimini seçme
 
 ### TL;DR {: .hide-from-toc }
-- 'Dogru evrensel biçimi seçerek baslayin: GIF, PNG, JPEG'
-- 'Her bir biçim için en iyi ayarlari deneyip seçin: Kalite, palet boyutu vb.'
+- Dogru evrensel biçimi seçerek baslayin: GIF, PNG, JPEG
+- Her bir biçim için en iyi ayarlari deneyip seçin: Kalite, palet boyutu vb.
 - Modern istemciler için WebP ve JPEG XR varliklari eklemeyi düsünebilirsiniz ölçeklenmis-resimler
 
 
@@ -365,7 +365,7 @@ Her bir sikistiricinin parametreleriyle deneyler yapmaktan korkmayin. Kaliteyi d
 ## Ölçeklenmis resim varliklari saglama
 
 ### TL;DR {: .hide-from-toc }
-- 'Ölçeklenmis varliklar saglama, en basit ve en etkili optimizasyonlardan biridir'
+- Ölçeklenmis varliklar saglama, en basit ve en etkili optimizasyonlardan biridir
 - Büyük varliklar yüksek ek yüke neden oldugundan bunlarla ilgili dikkatli olun
 - Resimlerinizi ekran boyutuna ölçekleyerek gereksiz piksel sayisini azaltin
 

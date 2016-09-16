@@ -315,7 +315,7 @@ Lorsque vous ajoutez des icônes à une page, utilisez des icônes SVG dans la m
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Pour les icônes, utilisez des images SVG ou des symboles Unicode à la place des images matricielles.'
+- Pour les icônes, utilisez des images SVG ou des symboles Unicode à la place des images matricielles.
 
 
 ### Remplacer les icônes simples par des symboles Unicode
@@ -384,7 +384,7 @@ Les images comptent souvent pour la majorité des octets téléchargés. De plus
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Ne choisissez pas un format d''image au hasard, mais tâchez d''utiliser le format le mieux adapté en parfaite connaissance de cause.'
+- Ne choisissez pas un format d''image au hasard, mais tâchez d''utiliser le format le mieux adapté en parfaite connaissance de cause.
 - Intégrez des outils de compression et d'optimisation d'images dans votre flux de travail afin de réduire la taille des fichiers.
 - Placez les images fréquemment utilisées dans des sprites d'image en vue de réduire le nombre de requêtes HTTP.
 - Il est judicieux de ne charger les images qu'après leur défilement afin d'accélérer le chargement initial de la page et de réduire son poids initial.
@@ -449,7 +449,7 @@ Dans certains cas, l'image idéale n'est, en réalité, pas du tout une image. D
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Évitez d''utiliser des images lorsque cela s''avère possible. Utilisez plutôt les fonctionnalités offertes par le navigateur pour les ombres, les dégradés, les coins arrondis, etc.'
+- Évitez d''utiliser des images lorsque cela s''avère possible. Utilisez plutôt les fonctionnalités offertes par le navigateur pour les ombres, les dégradés, les coins arrondis, etc.
 
 
 ### Placer du texte dans des balises plutôt que l'intégrer dans des images

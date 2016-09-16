@@ -146,7 +146,7 @@ In unserem Fall reduziert SVGO die Größe der obigen von Illustrator erzeugten 
 ### TL;DR {: .hide-from-toc }
 - Eine Rastergrafik besteht aus einem Raster aus Pixeln.
 - In jedem Pixel sind Farb- und Transparenzinformationen codiert.
-- 'Bildkomprimierer nutzen eine Vielzahl von Methoden zur Reduktion der Anzahl der erforderlichen Bits pro Pixel, um die Dateigröße von Bildern zu verkleinern.'
+- Bildkomprimierer nutzen eine Vielzahl von Methoden zur Reduktion der Anzahl der erforderlichen Bits pro Pixel, um die Dateigröße von Bildern zu verkleinern.
 
 
 Bei einer Rastergrafik handelt es sich einfach um ein zweidimensionales Raster aus einzelnen `Pixeln`. So besteht eine Pixelgrafik mit 100 x 100 Pixeln beispielsweise aus einer Abfolge von 10.000 Pixeln. In jedem Pixel sind wiederum die `[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)`-Werte gespeichert: roter Kanal (R), grüner Kanal (G), blauer Kanal (B) und der Alpha- oder Transparenzkanal (A).
@@ -221,7 +221,7 @@ Das klingt ja wieder alles ganz gut, ist aber sehr theoretisch. Wie kann uns die
 ### TL;DR {: .hide-from-toc }
 - Aufgrund der Funktionsweise unserer Augen eignen sich Bilder hervorragend für die verlustbehaftete Komprimierung.
 - Bei der Bildoptimierung werden die verlustbehaftete und die verlustfreie Komprimierung gemeinsam angewendet.
-- 'Unterschiede bei Bildformaten beruhen darauf, welche unterschiedlichen verlustbehafteten und verlustfreien Algorithmen angewendet und wie sie zur Optimierung der Bilder eingesetzt werden.'
+- Unterschiede bei Bildformaten beruhen darauf, welche unterschiedlichen verlustbehafteten und verlustfreien Algorithmen angewendet und wie sie zur Optimierung der Bilder eingesetzt werden.
 - Es gibt nicht das beste Format oder die beste Qualitätseinstellung für alle Bilder. Jede Kombination eines bestimmten Komprimierungsprogramms mit spezifischen Bildinhalten führt zu einem einmaligen Ergebnis.
 
 

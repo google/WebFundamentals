@@ -20,7 +20,7 @@ La optimización de fuentes web es una parte fundamental de la estrategia de ren
 
 ### TL;DR {: .hide-from-toc }
 - Las fuentes unicode pueden contener miles de glifos
-- 'Existen cuatro formatos de fuente: WOFF2, WOFF, EOT y TTF'
+- Existen cuatro formatos de fuente: WOFF2, WOFF, EOT y TTF
 - Algunos formatos de fuente requieren el uso de compresión GZIP
 
 

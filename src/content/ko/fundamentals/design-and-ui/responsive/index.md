@@ -31,7 +31,7 @@ Apart](http://alistapart.com/article/responsive-web-design/) 에 정의된 반�
 ### TL;DR {: .hide-from-toc }
 - meta viewport 태그를 사용하여 브라우저 뷰포트의 너비와 스케일링을 조절합니다.
 - <code>width=device-width</code> 를 이용하여 기기 너비에 맞춰 화면의 크기를 맞춥니다.
-- '<code>initial-scale=1</code> 를 이용하여 CSS 픽셀과 기기 종속적인 픽셀 간의 1:1 관계를 형성합니다.'
+- <code>initial-scale=1</code> 를 이용하여 CSS 픽셀과 기기 종속적인 픽셀 간의 1:1 관계를 형성합니다.
 - 당신의 페이지는 사용자가 크기를 조정할 수 있도록 해야합니다.
 
 
@@ -225,8 +225,8 @@ the layout adjusts to its container.
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Create breakpoints based on content, never on specific devices, products, or brands.'
-- 'Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.'
+- Create breakpoints based on content, never on specific devices, products, or brands.
+- Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.
 - Keep lines of text to a maximum of around 70 or 80 characters.
 
 

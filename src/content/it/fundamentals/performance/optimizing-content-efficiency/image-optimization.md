@@ -360,7 +360,7 @@ Non avere timore di sperimentare diversi parametri per ogni compressore. Riduci 
 
 ### TL;DR {: .hide-from-toc }
 - L'utilizzo di immagini scalate rappresenta una delle modalità di ottimizzazione più semplice ed efficace
-- 'Fai molta attenzione alle risorse consistenti, che possono comportare costi elevati'
+- Fai molta attenzione alle risorse consistenti, che possono comportare costi elevati
 - Riduci il numero di pixel non necessari scalando le immagini in base alle dimensioni del display
 
 

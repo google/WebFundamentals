@@ -99,7 +99,7 @@ Resumindo, o primeiro passo para otimizar a eficiência dos seus recursos é cri
 ## Compactação de texto com o GZIP
 
 ### TL;DR {: .hide-from-toc }
-- 'O GZIP funciona melhor em recursos baseados em texto: CSS, JavaScript e HTML'
+- O GZIP funciona melhor em recursos baseados em texto: CSS, JavaScript e HTML
 - Todos os navegadores modernos aceitam a compactação com o GZIP e a solicitam automaticamente
 - É preciso configurar o servidor para ativar a compactação com o GZIP
 - Algumas CDNs exigem cuidados especiais para ativar o GZIP

@@ -17,7 +17,7 @@ JavaScript pozwala zmienić niemal każdy aspekt strony &ndash; treść, styl or
 ### TL;DR {: .hide-from-toc }
 - JavaScript pozwala odczytywać i zmieniać modele DOM oraz CSSOM.
 - Wykonanie kodu JavaScript jest blokowane do chwili utworzenia modelu CSSOM.
-- 'JavaScript blokuje tworzenie modelu DOM, chyba że zostanie wyraźnie zadeklarowany jako asynchroniczny.'
+- JavaScript blokuje tworzenie modelu DOM, chyba że zostanie wyraźnie zadeklarowany jako asynchroniczny.
 
 
 JavaScript to język dynamiczny, który działa w przeglądarce i pozwala zmieniać niemal każdy aspekt funkcjonowania strony. Możesz dostosować jej treść, dodając lub usuwając elementy w drzewie DOM, zaktualizować właściwości CSSOM każdego elementu, obsługiwać wprowadzanie danych przez użytkownika itp. Aby pokazać, jak to działa, uzupełnimy poprzedni przykład `Witaj Świecie` o prosty wbudowany skrypt:

@@ -19,7 +19,7 @@ Dans la section précédente sur la construction du modèle d'objet, nous avons 
 - Les arborescences des modèles DOM et CSSOM sont combinées pour former l'arborescence d'affichage.
 - L'arborescence d'affichage ne contient que les nœuds nécessaires pour afficher la page.
 - La mise en page calcule la position et la taille exactes de chaque objet.
-- 'La peinture est la dernière étape, et affiche les pixels à l''écran à partir de l''arborescence d''affichage finale.'
+- La peinture est la dernière étape, et affiche les pixels à l''écran à partir de l''arborescence d''affichage finale.
 
 
 La première étape consiste à faire en sorte que le navigateur associe les modèles DOM et CSSOM pour former une 'arborescence d'affichage' qui capture tout le contenu DOM visible sur la page, ainsi que toutes les informations de style du modèle CSSOM pour chaque nœud.

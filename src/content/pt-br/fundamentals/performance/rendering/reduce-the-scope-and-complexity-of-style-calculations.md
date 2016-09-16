@@ -14,7 +14,7 @@ description: Mudando o DOM, através da adição e remoção de elementos, mudan
 Mudando o DOM, através da adição e remoção de elementos, mudando atributos, classes ou através da animação, fará com que o navegador recalcule estilos de elemento e, em vários casos, o layout (ou refluxo) da página ou partes dela. Esse processo é chamado de <em>cálculo de estilo computado</em>.
 
 ### TL;DR {: .hide-from-toc }
-- 'Reduza a complexidade dos seus seletores; use uma metodologia orientada para classe, como o BEM.'
+- Reduza a complexidade dos seus seletores; use uma metodologia orientada para classe, como o BEM.
 - Reduza o número de elementos em que o cálculo de estilo deve ser calculado.
 
 

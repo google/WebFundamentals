@@ -43,9 +43,9 @@ Ustaliliśmy, że potrzebujemy tych elementów:
 5.  Tabelę danych, które potwierdzają, że warto odbyć kurs
 
 ### TL;DR {: .hide-from-toc }
-- 'Najpierw ustal, jakich treści potrzebujesz.'
+- Najpierw ustal, jakich treści potrzebujesz.
 - Naszkicuj architekturę informacji (AI) w obszarze wąskim i szerokim.
-- 'Utwórz schematyczny widok strony z zawartością, ale bez stylów.'
+- Utwórz schematyczny widok strony z zawartością, ale bez stylów.
 
 
 Opracowaliśmy też wstępną architekturę informacji oraz układy w wąskim i szerokim widocznym obszarze.
@@ -206,7 +206,7 @@ Sprawdzimy, jak treści pasują do rozmiaru ekranu, i we właściwy sposób rozm
 ### TL;DR {: .hide-from-toc }
 - Zawsze używaj tagu viewport.
 - Zawsze zaczynaj od wąskiego widocznego obszaru i zwiększaj skalę.
-- 'Gdy musisz dostosować wygląd treści, ustaw odpowiednio punkty graniczne.'
+- Gdy musisz dostosować wygląd treści, ustaw odpowiednio punkty graniczne.
 - Stwórz ogólną wizję układu strony obejmującą główne punkty graniczne.
 
 

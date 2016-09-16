@@ -16,7 +16,7 @@ Nada na natureza se move linearmente de um ponto para o outro. Na realidade, as 
 ### TL;DR {: .hide-from-toc }
 - Easing deixa suas animações mais naturais.
 - Selecione animações ease-out para elementos da interface do usuário.
-- 'Evite animações ease-in ou ease-in-out, a não menos que sejam curtas; elas tendem a parecer lentas para os usuários finais.'
+- Evite animações ease-in ou ease-in-out, a não menos que sejam curtas; elas tendem a parecer lentas para os usuários finais.
 
 
 Na animação clássica, os termos para movimentos que começam lentamente e aceleram é “acelerar” e aqueles que começam rapidamente e desaceleram são chamados de “desacelerar”. Mas a terminologia mais comum na Web é “ease in” e “ease out”, respectivamente. Algumas vezes os dois são combinados, o que é chamado de “ease in out”. Portanto, easing é na verdade o processo de tornar a animação menos dura ou marcada.

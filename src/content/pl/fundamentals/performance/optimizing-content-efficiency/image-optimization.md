@@ -22,7 +22,7 @@ Optymalizacja obrazów to zarówno sztuka, jak i nauka: sztuka, ponieważ nie ma
 
 ### TL;DR {: .hide-from-toc }
 - Wyeliminuj niepotrzebne obrazy
-- 'Wykorzystaj efekty CSS3 wszędzie tam, gdzie to możliwe'
+- Wykorzystaj efekty CSS3 wszędzie tam, gdzie to możliwe
 - Zastosuj czcionki sieci web zamiast kodowania tekstu na obrazach
 
 
@@ -150,7 +150,7 @@ Rzeczywiście, narzędzie svgo redukuje rozmiar powyższego pliku SVG z programu
 ### TL;DR {: .hide-from-toc }
 - Obraz rastrowy to matryca pikseli
 - Dla każdego piksela kodowane są informacje o kolorze i przezroczystości
-- 'W algorytmach kompresji obrazów stosuje się wiele różnych technik umożliwiających redukcję liczby bitów na piksel, co pozwala zmniejszyć rozmiar pliku obrazu'
+- W algorytmach kompresji obrazów stosuje się wiele różnych technik umożliwiających redukcję liczby bitów na piksel, co pozwala zmniejszyć rozmiar pliku obrazu
 
 
 Obraz rastrowy stanowi po prostu 2-wymiarową matrycę poszczególnych pikseli &ndash; np. obraz o rozdzielczości 100x100 pikseli zawiera sekwencję 10 000 pikseli. Z kolei w każdym pikselu zapisywane są wartości `[RGBA](http://pl.wikipedia.org/wiki/RGBA)`: (R) dla kanału koloru czerwonego, (G) dla kanału koloru zielonego, (B) dla kanału koloru niebieskiego i (A) dla kanału alfa (przezroczystości).
@@ -251,12 +251,12 @@ Note: Zwróć uwagę, że poziomów jakości obrazów w różnych formatach nie 
 ## Wybór odpowiedniego formatu
 
 ### TL;DR {: .hide-from-toc }
-- 'Rozpocznij od wyboru odpowiedniego formatu uniwersalnego: GIF, PNG, JPEG'
-- 'Dla każdego formatu metodą prób i błędów dobierz najlepsze ustawienia: jakość, rozmiar palety itp.'
+- Rozpocznij od wyboru odpowiedniego formatu uniwersalnego: GIF, PNG, JPEG
+- Dla każdego formatu metodą prób i błędów dobierz najlepsze ustawienia: jakość, rozmiar palety itp.
 - Rozważ dodanie zasobów WebP i JPEG XR dla nowoczesnych klientów obrazy skalowane: null
 - Zastosowanie grafiki skalowanej jest jednym z najprostszych i najbardziej efektywnych sposobów optymalizacji
-- 'Szczególnie uważaj na duże grafiki, ponieważ odpowiadają one za odczuwalny spadek wydajności'
-- 'Wyeliminuj niepotrzebne piksele, dostosowując rozdzielczość obrazów do ich rozmiaru na ekranie'
+- Szczególnie uważaj na duże grafiki, ponieważ odpowiadają one za odczuwalny spadek wydajności
+- Wyeliminuj niepotrzebne piksele, dostosowując rozdzielczość obrazów do ich rozmiaru na ekranie
 
 
 Oprócz zastosowania odmiennych algorytmów stratnych i bezstratnych formaty obrazów różnią się obsługą funkcji, takich jak animacje i kanały przezroczystości (alfa). Dlatego wybór formatu odpowiedniego dla konkretnego obrazu zależy nie tylko od potrzebnych rezultatów wizualnych, lecz również od wymagań funkcjonalnych.

@@ -98,7 +98,7 @@ Zum Hinzufügen eines Medienfragments fügen Sie der Medien-URL einfach `#t=[sta
 Mithilfe der Media Fragments-API können Sie auch mehrere Ansichten desselben Videos bereitstellen - ähnlich wie Cue-Punkte bei einer DVD - ohne mehrere Dateien codieren und bereitstellen zu müssen.
 
 Note: - Die Media Fragments-API wird auf den meisten Plattformen mit Ausnahme von iOS unterstützt.
-- 'Vergewissern Sie sich, dass Ihr Server Bereichsanforderungen unterstützt. Bereichsanforderungen sind auf den meisten Servern standardmäßig aktiviert, einige Hostingdienste können diese jedoch deaktivieren.'
+- Vergewissern Sie sich, dass Ihr Server Bereichsanforderungen unterstützt. Bereichsanforderungen sind auf den meisten Servern standardmäßig aktiviert, einige Hostingdienste können diese jedoch deaktivieren.
 
 
 Suchen Sie mithilfe der Entwicklertools für Ihren Browser in den Antwortheadern nach `Accept-Ranges: bytes`:
@@ -232,9 +232,9 @@ Für die Zufriedenheit der Nutzer spielt die Größe eine wichtige Rolle.
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Achten Sie darauf, dass Framegröße und Qualität Ihrer Videos nicht die Möglichkeiten der Plattform übersteigen.'
+- Achten Sie darauf, dass Framegröße und Qualität Ihrer Videos nicht die Möglichkeiten der Plattform übersteigen.
 - Machen Sie Ihre Videos nicht länger als unbedingt nötig.
-- 'Lange Videos können beim Download und bei der Suche zu Problemen führen. Einige Browser müssen unter Umständen warten, bis das Video heruntergeladen wurde, bevor sie es abspielen können.'
+- Lange Videos können beim Download und bei der Suche zu Problemen führen. Einige Browser müssen unter Umständen warten, bis das Video heruntergeladen wurde, bevor sie es abspielen können.
 
 
 ### Videogröße ermitteln

@@ -98,7 +98,7 @@ En résumé, la première étape de l'optimisation de l'efficacité de vos élé
 ## Compression de texte avec GZIP
 
 ### TL;DR {: .hide-from-toc }
-- 'GZIP offre les meilleures performances sur les éléments à base de texte : CSS, JavaScript, HTML.'
+- GZIP offre les meilleures performances sur les éléments à base de texte : CSS, JavaScript, HTML.
 - Tous les navigateurs modernes sont compatibles avec la compression GZIP et la demandent automatiquement.
 - Votre serveur doit être configuré pour autoriser la compression GZIP.
 - Certains CDN nécessitent une attention particulière pour s'assurer que GZIP est activé.

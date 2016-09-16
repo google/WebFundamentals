@@ -13,9 +13,9 @@ Je kan beinvloeden hoe jouw site wordt weergegeven wanneer het gedeeld wordt via
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Gebruik schema.org microdata om pagina titel, beschrijving en afbeelding te specificeren voor Google+.'
-- 'Gebruik Open Graph Protocol (OGP) om pagina titel, beschrijving en afbeelding te specificeren voor Facebook.'
-- 'Gebruik Twitter Cards om pagina titel, beschrijving, afbeelding en Twitter ID te specificeren voor Twitter.'
+- Gebruik schema.org microdata om pagina titel, beschrijving en afbeelding te specificeren voor Google+.
+- Gebruik Open Graph Protocol (OGP) om pagina titel, beschrijving en afbeelding te specificeren voor Facebook.
+- Gebruik Twitter Cards om pagina titel, beschrijving, afbeelding en Twitter ID te specificeren voor Twitter.
 
 
 Je kan beinvloeden hoe jouw site wordt weergegeven wanneer het gedeeld wordt via sociale media door het plaatsen van een aantal regels HTML op iedere pagina. Dit kan leiden tot betere toegankelijkheid door het voorbeeld rijkere informatie te bieden. Zonder dit, zullen sociale media website alleen de basis informatie tonen, zonder afbeeldingen of andere handige informatie.

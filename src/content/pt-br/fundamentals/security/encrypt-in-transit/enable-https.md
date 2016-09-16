@@ -216,7 +216,7 @@ sempre melhoram!)
 Agora que você está disponibilizando seu site em HTTP e HTTPS, ele precisa funcionar o mais tranquilamente possível independente do protocolo.
 
 ### TL;DR {: .hide-from-toc }
-- 'Certifique-se de que as URLs entre sites e URLs externas são independentes do protocolo, isto é, certifique-se de usar caminhos relativos ou deixar o protocolo de fora, como em //exemplo.com/algo.js'
+- Certifique-se de que as URLs entre sites e URLs externas são independentes do protocolo, isto é, certifique-se de usar caminhos relativos ou deixar o protocolo de fora, como em //exemplo.com/algo.js
 
 
 

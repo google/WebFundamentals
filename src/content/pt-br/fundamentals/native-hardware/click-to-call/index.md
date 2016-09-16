@@ -16,7 +16,7 @@ Em dispositivos com a função telefone, facilita que usuários liguem diretamen
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Agrupe todos os números de telefone em hyperlinks com o esquema <code>tel:</code>.'
+- Agrupe todos os números de telefone em hyperlinks com o esquema <code>tel:</code>.
 - Sempre use o formato de discagem internacional.
 
 

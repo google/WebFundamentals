@@ -244,11 +244,11 @@ Note: U kunt kwaliteitsniveaus van verschillende bestandsindelingen niet met elk
 ## De juiste bestandsindeling voor uw afbeelding kiezen
 
 ### TL;DR {: .hide-from-toc }
-- 'Begin met selectie van de juiste algemene bestandsindeling: GIF, PNG, JPEG'
-- 'Experimenteer met de instellingen voor elke bestandsindeling en selecteer de beste instellingen: voor kwaliteit, kleurenspectrum, enzovoort.'
+- Begin met selectie van de juiste algemene bestandsindeling: GIF, PNG, JPEG
+- Experimenteer met de instellingen voor elke bestandsindeling en selecteer de beste instellingen: voor kwaliteit, kleurenspectrum, enzovoort.
 - U kunt overwegen om WebP- en JPEG XR-items toe te voegen aan geschaalde afbeeldingen voor moderne clients: null
 - Items schalen is een van de eenvoudigste en effectiefste optimalisatiemethoden
-- 'Let goed op met grote items, omdat deze tot een aanzielijk overschot kunnen leiden'
+- Let goed op met grote items, omdat deze tot een aanzielijk overschot kunnen leiden
 - Verlaag het aantal overbodige pixels door uw afbeeldingen te verkleinen naar de schaal waarop ze worden weergegeven op het scherm
 
 

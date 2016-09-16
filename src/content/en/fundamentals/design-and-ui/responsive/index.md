@@ -341,8 +341,8 @@ the layout adjusts to its container.
 
 
 ### TL;DR {: .hide-from-toc } {: .hide-from-toc }
-- 'Create breakpoints based on content, never on specific devices, products, or brands.'
-- 'Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.'
+- Create breakpoints based on content, never on specific devices, products, or brands.
+- Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.
 - Keep lines of text to a maximum of around 70 or 80 characters.
 
 

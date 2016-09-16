@@ -15,8 +15,8 @@ description: Ölçemediginiz bir seyi optimize edemezsiniz. Neyse ki, Gezinme Za
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Gezinme Zamanlamasi, CRP ölçümü için yüksek çözünürlüklü zaman damgalari saglar.'
-- 'Tarayici, CRP''nin çesitli asamalarini yakalayan bir tüketilir olaylar serisi yayinlar.'
+- Gezinme Zamanlamasi, CRP ölçümü için yüksek çözünürlüklü zaman damgalari saglar.
+- Tarayici, CRP''nin çesitli asamalarini yakalayan bir tüketilir olaylar serisi yayinlar.
 
 
 Her saglam performans stratejisinin temeli, iyi ölçüme ve araçlarla is yapmaya dayanir. Görünüse göre, Gezinme Zamanlamasi API'sinin tam olarak sagladigi da budur.

@@ -15,9 +15,9 @@ description: 브라우저는 화면에 콘텐츠를 렌더링 하기 전에 DOM�
 
 ### TL;DR {: .hide-from-toc }
 - 바이트 → 문자 → 토큰 → 노드 → 객체 모델.
-- 'HTML 마크업을 문서 객체 모델(DOM)로, CSS 마크업을 CSS 객체 모델(CSSOM)로 변환합니다.'
+- HTML 마크업을 문서 객체 모델(DOM)로, CSS 마크업을 CSS 객체 모델(CSSOM)로 변환합니다.
 - DOM과 CSSOM은 서로 별개로 존재하는 데이터 구조입니다.
-- '크롬 개발자 도구 타임라인을 이용해서 DOM과 CSSOM 구축, 처리 비용에 대한 데이터를 수집하고 검사할 수 있습니다.'
+- 크롬 개발자 도구 타임라인을 이용해서 DOM과 CSSOM 구축, 처리 비용에 대한 데이터를 수집하고 검사할 수 있습니다.
 
 
 ## 문서 객체 모델(Document Object Model, DOM)

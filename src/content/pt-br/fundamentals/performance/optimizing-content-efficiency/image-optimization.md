@@ -151,7 +151,7 @@ Nesse contexto, o svgo diminui em 58% o tamanho do arquivo SVG gerado pelo Illus
 ### TL;DR {: .hide-from-toc }
 - Uma imagem de varredura é uma grade de pixels
 - Cada pixel codificar informações de cor e transparência
-- 'Os compactadores de imagem usam várias técnicas para diminuir o número de bits por pixel necessários e, consequentemente, reduzir o tamanho do arquivo de imagem'
+- Os compactadores de imagem usam várias técnicas para diminuir o número de bits por pixel necessários e, consequentemente, reduzir o tamanho do arquivo de imagem
 
 
 Uma imagem vetorial é somente uma grade bidimensional de `pixels` individuais, ou seja, uma imagem de 100 x 100 pixels é uma sequência de 10.000 pixels. Cada pixel, por sua vez, armazena os valores `[ÓRGÃO](http://en.wikipedia.org/wiki/RGBA_color_espaço): (R) canal vermelho, (G) canal verde, (B) canal azul e (A) canal alfa (transparência).
@@ -225,10 +225,10 @@ Tudo isso é ótimo, porém muito acadêmico: como isso ajuda a otimizar imagens
 ## Compactação sem perdas vs. com perdas
 
 ### TL;DR {: .hide-from-toc }
-- 'Devido à forma como nossa visão funciona, as imagens são ótimas candidatas à compactação com perdas'
+- Devido à forma como nossa visão funciona, as imagens são ótimas candidatas à compactação com perdas
 - A otimização de imagens é uma relação entre a compactação com perdas e sem perdas
 - A escolha e o uso dos algoritmos com ou sem perdas e a forma como eles são usados determinam as diferenças nos formatos das imagens
-- 'Não há um formato ou `configuração de qualidade` ideal para todas as imagens: cada combinação entre o conteúdo da imagem e o compactador usado gera resultados diferentes'
+- Não há um formato ou `configuração de qualidade` ideal para todas as imagens: cada combinação entre o conteúdo da imagem e o compactador usado gera resultados diferentes
 
 
 Para certos tipos de dados, como o código-fonte de uma página ou um arquivo executável, é essencial que o compactador não altere nem perca nenhuma informação original. Qualquer bit ausente ou incorreto pode modificar completamente o significado do conteúdo do arquivo ou, ainda pior, torná-lo completamente inválido. Para outros tipos de dados, como imagens, áudio e vídeo, pode ser perfeitamente aceitável exibir uma representação `aproximada` dos dados originais.
@@ -252,8 +252,8 @@ Note: Os níveis de qualidade de formatos de imagens diferentes não são direta
 ## Como selecionar o formato de imagem correto
 
 ### TL;DR {: .hide-from-toc }
-- 'Comece selecionando o formato universal correto: GIF, PNG, JPEG'
-- 'Faça testes e selecione a melhor configuração para cada formato: qualidade, tamanho da paleta etc.'
+- Comece selecionando o formato universal correto: GIF, PNG, JPEG
+- Faça testes e selecione a melhor configuração para cada formato: qualidade, tamanho da paleta etc.
 - Considere incluir recursos em WebP e JPEG XR para imagens dimensionadas de clientes modernos
 
 
@@ -366,7 +366,7 @@ Não hesite em testar os parâmetros de cada compactador. Diminua a qualidade, v
 
 ### TL;DR {: .hide-from-toc }
 - A exibição de recursos dimensionados é uma das formas mais simples e eficazes de otimização
-- 'Esteja atento a recursos muito grandes, pois eles resultam em alta sobrecarga'
+- Esteja atento a recursos muito grandes, pois eles resultam em alta sobrecarga
 - Reduza o número de pixels desnecessários dimensionando suas imagens de acordo com o tamanho de exibição
 
 

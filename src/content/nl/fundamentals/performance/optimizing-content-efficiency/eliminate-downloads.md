@@ -16,7 +16,7 @@ De snelste en best geoptimaliseerde hulpbron is een hulpbron die niet verstuurd 
 
 ### TL;DR {: .hide-from-toc }
 - Inventariseer alle items van uzelf en van derde partijen op uw pagina's
-- 'Meet hoe goed elk item het doet: de meerwaarde en de technische resultaten'
+- Meet hoe goed elk item het doet: de meerwaarde en de technische resultaten
 - Bepaal of elke hulpbron voldoende meerwaarde heeft
 
 

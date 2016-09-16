@@ -44,7 +44,7 @@ Identificamos o que é necessário:
 5. Uma tabela de dados com informações que comprovem o que foi dito
 
 ### TL;DR {: .hide-from-toc }
-- 'Primeiramente, identifique o conteúdo de que você precisa.'
+- Primeiramente, identifique o conteúdo de que você precisa.
 - Faça um esboço da arquitetura de informações para janelas de visualização largas e estreitas.
 - Crie uma visualização básica da página que inclua o conteúdo sem detalhes de estilo.
 

@@ -46,7 +46,7 @@ Asagidakilere ihtiyacimiz oldugunu belirledik:
 ### TL;DR {: .hide-from-toc }
 - Öncelikle ihtiyaciniz olan içerigi tanimlayin.
 - Dar ve genis görüntü alanlari için Bilgi Mimarisi`ni (IA) tasarlayin.
-- 'Stil olmadan, içerikle birlikte sayfanin bir iskelet görünümünü olusturun.'
+- Stil olmadan, içerikle birlikte sayfanin bir iskelet görünümünü olusturun.
 
 
 Ayrica, hem dar hem de genis görüntü alanlari için kaba bir bilgi mimarisi ve yerlesim de olusturduk.

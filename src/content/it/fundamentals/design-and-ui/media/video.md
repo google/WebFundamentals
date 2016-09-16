@@ -96,8 +96,8 @@ Per aggiungere un 'media fragment', è sufficiente inserire `#t=[start_time][,en
 
 Inoltre, è possibile utilizzare l'API Media Fragments per creare diverse visualizzazioni dello stesso video (es. i cue point di un DVD) senza codificare e distribuire diversi file.
 
-Note: - 'Gran parte delle piattaforme supporta l''API Media Fragments, a eccezione di iOS.'
-- 'Verifica che le range request siano supportate dal server in uso. Le range request vengono attivate per impostazione predefinita su gran parte dei server, anche se potrebbero essere assenti su alcuni servizi di hosting.'
+Note: - Gran parte delle piattaforme supporta l''API Media Fragments, a eccezione di iOS.
+- Verifica che le range request siano supportate dal server in uso. Le range request vengono attivate per impostazione predefinita su gran parte dei server, anche se potrebbero essere assenti su alcuni servizi di hosting.
 
 
 Usando gli strumenti di sviluppo del tuo browser, controlla la presenza di `Accept-Ranges: bytes` nelle intestazioni della risposta:

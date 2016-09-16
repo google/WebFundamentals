@@ -20,7 +20,7 @@ W poprzedniej sekcji zawierającej opis tworzenia modelu obiektowego tworzyliśm
 - Drzewo renderowania powstaje z połączenia drzew CSSOM i DOM.
 - Drzewo renderowania zawiera tylko węzły wymagane do renderowania strony.
 - W trakcie wyznaczania rozmieszczenia na stronie obliczane jest dokładne położenie i rozmiar każdego obiektu.
-- 'Malowanie to ostatni krok, w którym na podstawie finalnego drzewa renderowania przeprowadza się renderowanie pikseli na ekranie.'
+- Malowanie to ostatni krok, w którym na podstawie finalnego drzewa renderowania przeprowadza się renderowanie pikseli na ekranie.
 
 
 Pierwszym krokiem jest połączenie drzew DOM i CSSOM w jedno `drzewo renderowania` zawierające opis całej zawartości DOM widocznej na stronie. Do każdego węzła dołączane są informacje o stylach z drzewa CSSOM.

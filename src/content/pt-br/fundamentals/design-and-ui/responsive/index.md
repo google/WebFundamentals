@@ -55,8 +55,8 @@ Web design responsivo, definido originalmente por [Ethan Marcotte in A List Apar
 
 ### TL;DR {: .hide-from-toc }
 - Use uma metatag de janela de visualização para controlar a largura e o dimensionamento da janela de visualização dos navegadores.
-- 'Inclua <code>width=device-width</code> para corresponder à largura da tela em número de pixels, independentemente do dispositivo.'
-- 'Inclua <code>initial-scale=1</code> para estabelecer uma relação de 1:1 entre os pixels do CSS e os pixels independentes do dispositivo.'
+- Inclua <code>width=device-width</code> para corresponder à largura da tela em número de pixels, independentemente do dispositivo.
+- Inclua <code>initial-scale=1</code> para estabelecer uma relação de 1:1 entre os pixels do CSS e os pixels independentes do dispositivo.
 - Mantenha ativo o redimensionamento de usuários para garantir que a página seja acessível.
 
 
@@ -273,7 +273,7 @@ Embora possa ser útil pensar nos tipos de dispositivo como base para definir os
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Crie pontos de quebra com base no conteúdo, nunca em dispositivos, marcas ou produtos específicos.'
+- Crie pontos de quebra com base no conteúdo, nunca em dispositivos, marcas ou produtos específicos.
 - Elabore o projeto primeiramente para o menor dispositivo móvel e amplie a experiência de modo progressivo à medida que ela for disponibilizada em telas maiores.
 - Mantenha as linhas de texto em no máximo 70 ou 80 caracteres.
 

@@ -17,7 +17,7 @@ Inspect and manage storage, databases, and caches from the
 - Inspect and modify IndexedDB databases.
 - Execute statements on a Web SQL database.
 - View Application and Service Worker Caches.
-- 'Clear all storage, databases, caches, and service workers with a single button click.'
+- Clear all storage, databases, caches, and service workers with a single button click.
 
 
 ## Local storage {:#local-storage}

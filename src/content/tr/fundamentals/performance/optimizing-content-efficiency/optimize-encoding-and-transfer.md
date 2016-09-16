@@ -23,7 +23,7 @@ Gereksiz dosyalari çikardiktan sonraki adim, tarayicinin indirmesi gereken kala
 En iyi performansin saglanmasi, tüm bu tekniklerin kombinasyonunu gerektirir.
 
 ### TL;DR {: .hide-from-toc }
-- 'Sikistirma, kodlama bilgilerinin daha az sayida bit kullanilarak islenmesidir'
+- Sikistirma, kodlama bilgilerinin daha az sayida bit kullanilarak islenmesidir
 - Gereksiz verilerin çikarilmasi her zaman en iyi sonuçlari saglar
 - Birçok farkli sikistirma teknigi ve algoritmasi vardir
 - En iyi sikistirmayi gerçeklestirmek için çesitli teknikleri kullanmaniz gerekecektir
@@ -65,8 +65,8 @@ Elbette, sunu merak ediyor olabilirsiniz: Tüm bunlar harika, ama bunun web sayf
 ## Küçültme: Ön isleme ve baglama özel optimizasyonlar
 
 ### TL;DR {: .hide-from-toc }
-- 'Içerige özel optimizasyonlar, teslim edilen kaynaklarin boyutunu önemli ölçüde azaltabilir.'
-- 'Içerige özel optimizasyonlar, olusturma/yayinlama döngünüzün bir parçasi olduklarinda en iyi sekilde uygulanirlar.'
+- Içerige özel optimizasyonlar, teslim edilen kaynaklarin boyutunu önemli ölçüde azaltabilir.
+- Içerige özel optimizasyonlar, olusturma/yayinlama döngünüzün bir parçasi olduklarinda en iyi sekilde uygulanirlar.
 
 
 Yedek veya gereksiz verileri sikistirmanin en iyi yolu bunlari tümüyle çikarmaktir. Elbette, yalnizca rastgele verileri silemeyiz, ancak veri biçiminin içerige özel bilgisine ve özelliklerine sahip olabilecegimiz bazi baglamlarda, gerçek anlamini etkilemeden veri yükünün boyutunu önemli ölçüde küçültmek genellikle mümkündür.
@@ -99,10 +99,10 @@ Kisacasi, varliklarinizin verimliligini optimize ederken ilk adim olarak farkli 
 ## GZIP ile metin sikistirma
 
 ### TL;DR {: .hide-from-toc }
-- 'GZIP, en iyi performansini metin tabanli varliklar üzerinde gösterir: CSS, JavaScript, HTML'
+- GZIP, en iyi performansini metin tabanli varliklar üzerinde gösterir: CSS, JavaScript, HTML
 - Tüm modern tarayicilar GZIP sikistirmasini destekler ve otomatik olarak bunu ister
 - Sunucunuzun GZIP sikistirmasi saglayacak sekilde yapilandirilmasi gerekir
-- 'Bazi CDN''ler, GZIP''in etkinlestirilmesine özel önem verir'
+- Bazi CDN''ler, GZIP''in etkinlestirilmesine özel önem verir
 
 
 [GZIP](http://en.wikipedia.org/wiki/Gzip), herhangi bir bayt akisina uygulanabilecek genel bir sikistiricidir: Içine bakildiginda önceden görülen içerigin bir kismini hatirlar ve yinelenen veri parçalarini verimli bir sekilde bulup degistirmeyi dener. Meraklilar, [GZIP'in düsük seviyeli harika bir açiklamasi için buraya](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s) bakabilir. Bununla birlikte, GZIP uygulamada en iyi performansini metne dayali içerikte göstererek büyük dosyalar için %70-90'a varan sikistirma oranlari gerçeklestirebilir. Diger yandan GZIP'in alternatif algoritmalarla önceden sikistirilmis varliklar (ör. çogu resim biçimi) üzerinde çalistirilmasi hemen hemen hiç iyilestirme saglamaz.

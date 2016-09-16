@@ -13,7 +13,7 @@ description: JavaScript suele ser el desencadenador de los cambios visuales. Alg
 JavaScript suele ser el desencadenador de los cambios visuales. Algunas veces, esto se hace directamente mediante manipulaciones de estilo y, otras veces, mediante cálculos que darán como resultado cambios visuales, como buscar o clasificar algunos datos. El JavaScript sincronizado incorrectamente o de larga ejecución puede ser una causa común de los problemas de rendimiento, y debe intentar minimizar su impacto siempre que sea posible.
 
 ### TL;DR {: .hide-from-toc }
-- 'Evite utilizar setTimeout o setInterval para realizar actualizaciones visuales. En su lugar, utilice siempre requestAnimationFrame.'
+- Evite utilizar setTimeout o setInterval para realizar actualizaciones visuales. En su lugar, utilice siempre requestAnimationFrame.
 - Desplace JavaScript de larga ejecución fuera de la cadena principal y hacia los Web Workers.
 - Utilice microtareas para realizar cambios en el DOM (Modelo de objetos del documento) en varios marcos.
 - Utilice la escala de tiempo de DevTools de Chrome y el generador de perfiles de JavaScript para evaluar el impacto de JavaScript.

@@ -17,8 +17,8 @@ Najszybszym i najbardziej optymalnym zasobem jest zasób, którego w ogóle nie 
 
 ### TL;DR {: .hide-from-toc }
 - Inwentaryzuj wszystkie swoje i zewnętrzne zasoby na swoich stronach
-- 'Określ wydajność związaną z każdym zasobem: jego znaczenie i techniczną wydajność'
-- 'Ustal, czy zasoby zapewniają odpowiednią wartość'
+- Określ wydajność związaną z każdym zasobem: jego znaczenie i techniczną wydajność
+- Ustal, czy zasoby zapewniają odpowiednią wartość
 
 
 Najszybszym i optymalnym zasobem jest zasób, którego w ogóle nie trzeba przesyłać. Poniższe stwierdzenie może wydawać się banalne, ale zbyt często nie stosuje się go w praktyce: a tymczasem inżynier ds. wydajności powinien zachować krytyczne spojrzenie i zawsze korzystać z okazji do wyeliminowania zbędnych zasobów z aplikacji. Dobrą praktyką jest dyskusja i okresowa weryfikacja jawnych i domniemanych założeń odnoszących się do zasobów. Oto kilka przykładów:

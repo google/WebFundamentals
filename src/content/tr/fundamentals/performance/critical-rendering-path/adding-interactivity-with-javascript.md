@@ -18,7 +18,7 @@ JavaScript, sayfanin neredeyse her yönünü degistirmemize olanak tanir: içeri
 ### TL;DR {: .hide-from-toc }
 - JavaScript; DOM ve CSSOM'yi sorgulayip degistirebilir.
 - JavaScript yürütmesi CSSOM'de engelleme yapar.
-- 'JavaScript, açik bir sekilde zaman uyumsuz oldugu açiklanmazsa DOM yapisini engeller.'
+- JavaScript, açik bir sekilde zaman uyumsuz oldugu açiklanmazsa DOM yapisini engeller.
 
 
 JavaScript, tarayicinin içinde çalisan dinamik bir dildir ve sayfa davranisiyla ilgili neredeyse her unsuru degistirmemize olanak tanir: DOM agacindan ögeler ekleyerek veya bu ögeleri kaldirarak sayfadaki içerigi degistirebiliriz, her bir ögenin CSSOM özelliklerini degistirebiliriz, kullanici girisini isleyebiliriz ve daha birçok islem yapabiliriz. Bunu çalisirken göstermek için önceki `Herkese Merhaba` örnegimizi basit bir satir içi komut dosyasiyla genisletelim:

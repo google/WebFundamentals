@@ -28,7 +28,7 @@ Quando il server invia una risposta, genera contemporaneamente un certo numero d
 
 ### TL;DR {: .hide-from-toc }
 - Il token di convalida è comunicato dal server tramite l'intestazione HTTP ETag
-- 'Il token di convalida consente di effettuare una verifica efficiente dell''aggiornamento delle risorse: nessun dato viene trasferito se la risorsa non ha subito modifiche.'
+- Il token di convalida consente di effettuare una verifica efficiente dell''aggiornamento delle risorse: nessun dato viene trasferito se la risorsa non ha subito modifiche.
 
 
 Supponiamo che siano trascorsi 120 secondi dal recupero e che il browser abbia inviato una nuova richiesta per la medesima risorsa. Il browser verifica innanzitutto la cache locale e individua la risposta precedente; sfortunatamente però non può utilizzarla, poiché ormai 'scaduta'. A questo punto, il browser può semplicemente inviare una nuova richiesta e recuperare la nuova risposta, ma ciò non sarà sufficiente, poiché, se la risposta non è cambiata, non c'è motivo di scaricare gli stessi byte già in cache!
@@ -48,7 +48,7 @@ Note: Suggerimento: il progetto HTML5 Boilerplate contiene <a href='https://gith
 
 ### TL;DR {: .hide-from-toc }
 - La modalità di caching di ogni risorsa può essere definita tramite l'intestazione HTTP Cache-Control
-- 'Le direttive Cache-Control determinano chi può mettere in cache la risposta, a quali condizioni e per quanto tempo'
+- Le direttive Cache-Control determinano chi può mettere in cache la risposta, a quali condizioni e per quanto tempo
 
 
 La richiesta migliore è quella che non deve comunicare con il server: una copia locale della risposta ci consente di eliminare qualsiasi latenza di rete ed evitare eventuali sovraccarichi nel trasferimento dei dati. A tal fine, la specifica HTTP consente al server di inviare [diverse direttive Cache-Control] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) che controllano come e per quanto tempo ogni singola risposta può essere messa in cache dal browser e altre cache intermedie.

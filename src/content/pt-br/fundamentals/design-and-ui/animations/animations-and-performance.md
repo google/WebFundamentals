@@ -17,7 +17,7 @@ Deve-se ter cuidado para manter 60 fps sempre que você estiver animando, porque
 ### TL;DR {: .hide-from-toc }
 - Tome cuidado para que suas animações não causem problemas de desempenho; certifique-se de saber o impacto da animação de uma determinada propriedade CSS.
 - Animar propriedades que mudam a geometria da página (layout) ou causam pinturas são particularmente caras.
-- 'Onde possível, opte pela mudança de transforms e opacity.'
+- Onde possível, opte pela mudança de transforms e opacity.
 - Use <code>will-change</code> para garantir que o navegador saiba o que você planeja animar.
 
 

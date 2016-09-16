@@ -28,8 +28,8 @@ Sunucu bir yanit döndürdügünde, HTTP üstbilgilerinden olusan ve içerik tü
 ## Önbellege alinan yanitlari ETag ögeleriyle dogrulama
 
 ### TL;DR {: .hide-from-toc }
-- 'Dogrulama belirteci, ETag HTTP üstbilgisi araciligiyla sunucu tarafindan iletilir'
-- 'Dogrulama belirteci, verimli kaynak güncelleme kontrolleri saglar: Kaynak degismediyse veri aktarimi gerçeklestirilmez.'
+- Dogrulama belirteci, ETag HTTP üstbilgisi araciligiyla sunucu tarafindan iletilir
+- Dogrulama belirteci, verimli kaynak güncelleme kontrolleri saglar: Kaynak degismediyse veri aktarimi gerçeklestirilmez.
 
 
 Ilk getirmemizden bu yana 120 saniyenin geçtigini ve tarayicinin, ayni kaynak için yeni bir istek baslattigini düsünelim. Ilk olarak tarayici yerel önbellegi kontrol eder ve önceki yaniti bulur. Yanitin artik `süresi doldugu` için ne yazik ki bunu kullanamaz. Bu noktada, yeni bir istek gönderip yeni tam yaniti getirebilir, ancak kaynak degismediyse zaten önbellekte olan ayni baytlari indirmek için bir neden olmadigindan bu verimsiz bir uygulama olur!
@@ -48,8 +48,8 @@ Note: Ipucu: HTML5 Standart Metin projesi, her bir yapilandirma isareti ve ayari
 ## Cache-Control
 
 ### TL;DR {: .hide-from-toc }
-- 'Her bir kaynak, Cache-Control HTTP üstbilgisi araciligiyla kendi önbellege alma politikasini tanimlayabilir'
-- 'Cache-Control yönergeleri yaniti kimin, hangi kosullar altinda ve ne kadar süreyle önbellege alabilecegini kontrol eder'
+- Her bir kaynak, Cache-Control HTTP üstbilgisi araciligiyla kendi önbellege alma politikasini tanimlayabilir
+- Cache-Control yönergeleri yaniti kimin, hangi kosullar altinda ve ne kadar süreyle önbellege alabilecegini kontrol eder
 
 
 En iyi istek, sunucuyla iletisim gerektirmeyen istektir: Yanitin bir yerel kopyasi, tüm ag gecikmesini ortadan kaldirmamiza ve veri aktarimi için ödenecek veri ücretlerinden kurtulmamiza olanak tanir. Bunu yapmak için HTTP belirtimi, sunucunun [farkli Cache-Control yönergeleri](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) döndürmesine olanak tanir. Bu yönergeler, bagimsiz yanitin tarayici ve diger araci önbellekleri tarafindan nasil ve ne kadar süreyle önbellege alinabilecegini kontrol eder.
@@ -110,8 +110,8 @@ HTTP Archive sitesine göre (Alexa siralamasi temelinde) ilk 300.000 site arasin
 ## Önbellege alinan yanitlari geçersiz kilma ve güncelleme
 
 ### TL;DR {: .hide-from-toc }
-- 'Yerel olarak önbellege alinan yanitlar, kaynagin ''kullanim süresi sona erinceye'' kadar kullanilir'
-- 'URL''ye bir dosya içerigi parmak izi yerlestirmemiz, istemciyi yanitin yeni bir sürümüne güncellemeye zorlayabilmemizi saglar'
+- Yerel olarak önbellege alinan yanitlar, kaynagin ''kullanim süresi sona erinceye'' kadar kullanilir
+- URL''ye bir dosya içerigi parmak izi yerlestirmemiz, istemciyi yanitin yeni bir sürümüne güncellemeye zorlayabilmemizi saglar
 - En iyi performans için her bir uygulamanin kendi önbellek hiyerarsisini tanimlamasi gerekir
 
 

@@ -57,10 +57,10 @@ Strony zoptymalizowane pod kątem działania na rozmaitych urządzeniach muszą 
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Użyj metatagu viewport, by sterować szerokością i skalowaniem widocznego obszaru w przeglądarkach.'
-- 'Dołącz tag <code>width=device-width</code>, by dopasować stronę do szerokości ekranu w pikselach niezależnych od urządzenia.'
-- 'Dołącz tag <code>initial-scale=1</code>, by utworzyć relację 1:1 między pikselami CSS a pikselami niezależnymi od urządzenia.'
-- 'Nie wyłączaj skalowania strony przez użytkownika, by nie ograniczać jej dostępności.'
+- Użyj metatagu viewport, by sterować szerokością i skalowaniem widocznego obszaru w przeglądarkach.
+- Dołącz tag <code>width=device-width</code>, by dopasować stronę do szerokości ekranu w pikselach niezależnych od urządzenia.
+- Dołącz tag <code>initial-scale=1</code>, by utworzyć relację 1:1 między pikselami CSS a pikselami niezależnymi od urządzenia.
+- Nie wyłączaj skalowania strony przez użytkownika, by nie ograniczać jej dostępności.
 
 
 Aby strona działała jak najlepiej, przeglądarki mobilne renderują ją w szerokości ekranu komputera (zwykle około 980&nbsp;pikseli, choć zdarzają się też inne wartości), a potem próbują poprawić wygląd treści, zwiększając czcionki i skalując zawartość, by pasowała do ekranu. W takiej sytuacji rozmiary czcionek mogą być niespójne, a użytkownik musi kliknąć dwukrotnie lub inaczej zmienić powiększenie, by zobaczyć treści i wejść z nimi w interakcję.
@@ -100,7 +100,7 @@ Zarówno na komputerach, jak i urządzeniach mobilnych użytkownicy są przyzwyc
 ### TL;DR {: .hide-from-toc }
 - Nie używaj dużych elementów o stałej szerokości.
 - Prawidłowe renderowanie treści nie powinno zależeć od konkretnej szerokości widocznego obszaru.
-- 'Użyj zapytań o media CSS, by zastosować różne style na małych i dużych ekranach.'
+- Użyj zapytań o media CSS, by zastosować różne style na małych i dużych ekranach.
 
 
 Podczas tworzenia witryny mobilnej z metatagiem `viewport` łatwo przypadkowo dodać do strony treści, które nie pasują do określonego widocznego obszaru. Na przykład obraz szerszy niż widoczny obszar powoduje konieczność przewijania w poziomie. Elementy tego typu trzeba dopasować do szerokości widocznego obszaru, tak by użytkownik nie musiał przewijać ich w bok.
@@ -123,9 +123,9 @@ Zapytania o media to proste filtry, które można zastosować do stylów CSS. U�
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Zapytań o media możesz używać, by stosować style na podstawie cech urządzenia.'
-- 'Użyj <code>min-width</code> zamiast <code>min-device-width</code>, by interfejs był jak najszerszy.'
-- 'Użyj względnych rozmiarów elementów, by uniknąć zniekształcenia układu.'
+- Zapytań o media możesz używać, by stosować style na podstawie cech urządzenia.
+- Użyj <code>min-width</code> zamiast <code>min-device-width</code>, by interfejs był jak najszerszy.
+- Użyj względnych rozmiarów elementów, by uniknąć zniekształcenia układu.
 
 
 
@@ -254,9 +254,9 @@ Podczas definiowania punktów granicznych można kierować się klasami urządze
 
 
 ### TL;DR {: .hide-from-toc }
-- 'Utwórz punkty graniczne na podstawie treści, nigdy pod konkretne urządzenia, produkty czy marki.'
-- 'Projektowanie zacznij od najmniejszego urządzenia mobilnego, a potem stopniowo powiększaj interfejs wraz ze wzrostem rozmiaru ekranów.'
-- 'Postaraj się, by długość wierszy tekstu nie przekraczała 70-80&nbsp;znaków.'
+- Utwórz punkty graniczne na podstawie treści, nigdy pod konkretne urządzenia, produkty czy marki.
+- Projektowanie zacznij od najmniejszego urządzenia mobilnego, a potem stopniowo powiększaj interfejs wraz ze wzrostem rozmiaru ekranów.
+- Postaraj się, by długość wierszy tekstu nie przekraczała 70-80&nbsp;znaków.
 
 
 ### Określ główne punkty graniczne, zaczynając od małego rozmiaru i stopniowo go powiększając

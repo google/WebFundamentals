@@ -20,7 +20,7 @@ Na seção anterior sobre a construção do modelo do objeto, construímos as á
 - A árvore do DOM e do CSSOM se combinam para formar a árvore de renderização.
 - A árvore de renderização contém apenas os nós necessários para renderizar a página.
 - O layout computa a posição e o tamanho exatos de cada objeto.
-- 'A pintura é a última etapa, que capta a árvore de renderização final e renderiza os pixels na tela.'
+- A pintura é a última etapa, que capta a árvore de renderização final e renderiza os pixels na tela.
 
 
 A primeira etapa é que o navegador combine o DOM e o CSSOM em uma `árvore de renderização` que capture todo o conteúdo do DOM visível na página, além de toda a informação de estilo do SDDOM para cada nó.

@@ -29,7 +29,7 @@ Gdy serwer zwraca odpowiedź, przesyła również zestaw nagłówków HTTP z opi
 
 ### TL;DR {: .hide-from-toc }
 - Token walidacji jest przekazywany przez serwer za pomocą nagłówka ETag HTTP
-- 'Token walidacji umożliwia efektywne sprawdzanie, czy zasób zaktualizowano: transfer danych nie następuje, jeśli zasób się nie zmienił.'
+- Token walidacji umożliwia efektywne sprawdzanie, czy zasób zaktualizowano: transfer danych nie następuje, jeśli zasób się nie zmienił.
 
 
 Załóżmy, że od pierwszego pobrania upłynęło 120 sekund i przeglądarka chce wysłać nowe żądanie pobrania tego samego zasobu. Najpierw przeglądarka sprawdzi lokalną pamięć podręczną i znajdzie poprzednią odpowiedź, której niestety nie można użyć, ponieważ już `wygasła`. W tej chwili mogłaby po prostu wysłać nowe żądanie i pobrać nową pełną odpowiedź, ale to sposób nieefektywny, ponieważ jeśli zasób nie uległ zmianie, nie ma potrzeby pobierania dokładnie tych samych danych, już obecnych w pamięci podręcznej.
@@ -49,7 +49,7 @@ Note: Wskazówka: projekt HTML5 Boilerplate zawiera <a href='https://github.com/
 
 ### TL;DR {: .hide-from-toc }
 - Każdy zasób może określić swoją politykę buforowania za pomocą nagłówka Cache-Control protokołu HTTP
-- 'Dyrektywy Cache-Control kontrolują, kto może buforować odpowiedź, w jakich warunkach i jak długo'
+- Dyrektywy Cache-Control kontrolują, kto może buforować odpowiedź, w jakich warunkach i jak długo
 
 
 Najlepszym żądaniem jest żądanie, które nie wymaga komunikacji z serwerem: lokalna kopia odpowiedzi pozwala wyeliminować czas oczekiwania na odpowiedź przez sieć i uniknąć opłat za transfer danych. Specyfikacja HTTP pozwala serwerowi zwrócić [kilka różnych dyrektyw Cache-Control](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) umożliwiających kontrolę sposobu i długości buforowania poszczególnych odpowiedzi przez przeglądarkę i inne bufory pośredniej pamięci podręcznej.
@@ -112,7 +112,7 @@ Według projektu HTTP Archive, wśród najpopularniejszych 300 000 witryn (wedł
 ### TL;DR {: .hide-from-toc }
 - Lokalnie zbuforowane odpowiedzi są używane do momentu `wygaśnięcia` zasobu
 - Umieszczenie odcisku cyfrowego zawartości pliku w adresie URL pozwala wymusić u klienta aktualizację do nowej wersji odpowiedzi
-- 'Aplikacja może uzyskać najwyższą wydajność, określając własną hierarchię buforowania'
+- Aplikacja może uzyskać najwyższą wydajność, określając własną hierarchię buforowania
 
 
 Wszystkie żądania HTTP generowane przez przeglądarkę są najpierw kierowane do pamięci podręcznej przeglądarki, co umożliwia sprawdzenie obecności w pamięci podręcznej ważnej odpowiedzi, której można użyć w odpowiedzi na żądanie HTTP. Po znalezieniu pasującej odpowiedzi jest ona odczytywana z pamięci podręcznej; w ten sposób eliminuje się opóźnienia przesyłania przez sieć i opłaty za transfer danych. **Jednak co zrobić, jeśli chcemy zaktualizować lub unieważnić odpowiedź w pamięci podręcznej?**

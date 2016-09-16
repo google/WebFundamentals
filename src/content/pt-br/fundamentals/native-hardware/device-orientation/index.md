@@ -114,7 +114,7 @@ O evento de orientação do dispositivo retorna dados de rotação, que inclui q
 ### TL;DR {: .hide-from-toc }
 - Use com moderação.
 - Teste por suporte.
-- 'Não atualize a interface do usuário em cada evento de orientação; em vez disso, sincronize para requestAnimationFrame.'
+- Não atualize a interface do usuário em cada evento de orientação; em vez disso, sincronize para requestAnimationFrame.
 
 
 ### Quando usar eventos de orientação do dispositivo

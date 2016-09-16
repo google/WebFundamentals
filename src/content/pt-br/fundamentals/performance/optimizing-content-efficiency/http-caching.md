@@ -29,7 +29,7 @@ Quando o servidor retorna uma resposta, ele também emite um conjunto de cabeça
 
 ### TL;DR {: .hide-from-toc }
 - O token de validação é comunicado pelo servidor por meio do cabeçalho HTTP ETag
-- 'O token de validação permite verificar a atualização de recursos com eficiência: não há transferência de dados se o recurso não foi modificado.'
+- O token de validação permite verificar a atualização de recursos com eficiência: não há transferência de dados se o recurso não foi modificado.
 
 
 Digamos que 120 segundos tenham passado desde a busca inicial e que o navegador tenha iniciado uma nova solicitação para o mesmo recurso. Primeiro, o navegador verifica o cache local e encontra a resposta anterior. Ele não pode usá-la, pois ela está `expirada`. Nesse momento, ele poderia simplesmente emitir uma nova solicitação e buscar a nova resposta completa, mas esse processo é ineficiente porque, se o recurso não foi alterado, não é necessário fazer o download dos mesmos bytes que já estão em cache.
@@ -49,7 +49,7 @@ Note: Dica: o projeto de texto clichê HTML5 contém <a href='https://github.com
 
 ### TL;DR {: .hide-from-toc }
 - Cada recurso pode definir sua política de armazenamento em cache por meio do cabeçalho HTTP Controle de cache
-- 'As diretivas do Controle de cache controlam quem pode armazenar a resposta em cache, em que condições e por quanto tempo'
+- As diretivas do Controle de cache controlam quem pode armazenar a resposta em cache, em que condições e por quanto tempo
 
 
 A melhor solicitação é uma solicitação que não precise se comunicar com o servidor: uma cópia local da resposta permite eliminar toda a latência de rede e evita cargas de dados para a transferência de dados. Para isso, a especificação HTTP permite que o servidor retorne um [número de diretivas diferentes de Controle de cache](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) que controlam como e por quanto tempo cada resposta pode ser armazenada em cache pelo navegador e outros caches intermediários.

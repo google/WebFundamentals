@@ -58,7 +58,7 @@ Explore what makes a site responsive and how some common responsive design patte
 ### TL;DR {: .hide-from-toc }
 - 使用中繼檢視區標記控制瀏覽器檢視區寬度和縮放比例。
 - 納入 <code>width=device-width</code> 即可運用裝置獨立像素配合螢幕寬度。
-- '納入 <code>initial-scale=1</code> 即可在 CSS 像素和裝置獨立像素之間建立 1:1 的關係。'
+- 納入 <code>initial-scale=1</code> 即可在 CSS 像素和裝置獨立像素之間建立 1:1 的關係。
 - 啟用允許使用者縮放的功能，確認您的網頁可供存取。
 
 

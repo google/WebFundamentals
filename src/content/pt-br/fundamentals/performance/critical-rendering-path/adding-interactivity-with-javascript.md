@@ -18,7 +18,7 @@ JavaScript possibilita alterar praticamente todos os aspectos da página: conte�
 ### TL;DR {: .hide-from-toc }
 - JavaScript pode consultar e modificar DOM e CSSOM.
 - Blocos de execução de JavaScript no CSSOM.
-- 'JavaScript bloqueia a criação de DOM, a menos que isso seja explicitamente declarado como assíncrono.'
+- JavaScript bloqueia a criação de DOM, a menos que isso seja explicitamente declarado como assíncrono.
 
 
 JavaScript é uma linguagem dinâmica executada no navegador e que permite alterar praticamente todos os aspectos do comportamento da página: é possível modificar o conteúdo na página adicionando ou removendo elementos da árvore DOM, modificar as propriedades de CSSOM de cada elemento, manipular a entrada do usuário e muito mais. Para ilustrar isso em uma ação, vamos incrementar o exemplo anterior `Olá, mundo` com um script in-line:

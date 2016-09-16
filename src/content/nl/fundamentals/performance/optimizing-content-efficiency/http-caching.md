@@ -29,7 +29,7 @@ Wanneer de server dit verzoek beantwoordt, stuurt deze tevens een aantal HTTP-he
 
 ### TL;DR {: .hide-from-toc }
 - Validatietoken wordt door de server gecommuniceerd via de HTTP-header ETag
-- 'Validatietoken maakt efficiënte updatecontroles voor hulpbronnen mogelijk: geen gegevensoverdracht wanneer de hulpbron niet is gewijzigd.'
+- Validatietoken maakt efficiënte updatecontroles voor hulpbronnen mogelijk: geen gegevensoverdracht wanneer de hulpbron niet is gewijzigd.
 
 
 Laten we ervan uitgaan dat er 120 seconden zijn verstreken sinds ons eerste verzoek en dat de browser een nieuw verzoek voor dezelfde hulpbron heeft verstuurd. De browser controleert eerst het lokale cachegeheugen en vindt het eerste antwoord. Omdat het antwoord is `vervallen` kan het niet meer worden gebruikt. De browser kan nu een nieuw verzoek versturen en het volledige antwoord ophalen, maar als de hulpbron niet is gewijzigd, is het overbodig om dezelfde bytes die zich in het cachegeheugen bevinden nogmaals te downloaden.
@@ -49,7 +49,7 @@ Note: Tip: het project HTML5 Boilerplate bevat <a href='https://github.com/h5bp/
 
 ### TL;DR {: .hide-from-toc }
 - Het cachebeleid voor elke hulpbron kan worden ingesteld via de HTTP-header Cache-Control
-- 'De configuratie van Cache-Control bepaalt wie het antwoord van de server kan opslaan in het cachegeheugen, onder welke voorwaarden en hoe lang de gegevens worden bewaard'
+- De configuratie van Cache-Control bepaalt wie het antwoord van de server kan opslaan in het cachegeheugen, onder welke voorwaarden en hoe lang de gegevens worden bewaard
 
 
 Het beste verzoek is een verzoek waarvoor niet met de server hoeft te worden gecommuniceerd: een lokaal opgeslagen antwoord voorkomt netwerkvertragingen en datakosten voor de gegevensoverdracht. Om dit te realiseren, staat de HTTP-specificatie toe dat de server [een aantal verschillende Cache-Control-instructies] (http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) terugstuurt die bepalen hoe en hoe lang dit specifieke antwoord door de browser of de tussenopslag in het cachegeheugen mag worden bewaard.
@@ -111,7 +111,7 @@ Volgens HTTP Archive kan voor de 300.000 grootste websites (op basis van de rang
 
 ### TL;DR {: .hide-from-toc }
 - Lokaal opgeslagen zoekopdrachten worden gebruikt totdat de hulpbron 'vervalt'
-- 'We kunnen een vingerafdruk voor de bestandsinhoud in de URL integreren, waardoor de client wordt gedwongen om het antwoord bij te werken'
+- We kunnen een vingerafdruk voor de bestandsinhoud in de URL integreren, waardoor de client wordt gedwongen om het antwoord bij te werken
 - Voor optimale resultaten moet voor elke applicatie een eigen cache-hiërarchie worden ingesteld
 
 

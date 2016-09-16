@@ -25,7 +25,7 @@ Per garantire le prestazioni migliori, è necessaria una combinazione delle dive
 - La compressione è una procedura di codifica delle informazioni che utilizza un numero inferiore di bit
 - L'eliminazione dei dati non necessari consente sempre di raggiungere i risultati migliori
 - Esistono numerose tecniche e algoritmi di compressione diversi
-- 'Per ottenere la compressione ottimale, dovrai avvalerti di più tecniche'
+- Per ottenere la compressione ottimale, dovrai avvalerti di più tecniche
 
 
 La procedura di riduzione delle dimensioni dei dati, nota come 'compressione dei dati', è un vasto campo di ricerca: in molti hanno trascorso l'intera carriera ad elaborare algoritmi, tecniche e procedure di ottimizzazione per migliorare le percentuali, la velocità di compressione e i requisiti di memoria dei diversi compressori. Inutile dire che una discussione approfondita su tale argomento esula dal nostro ambito, ma è comunque importante comprendere ad un certo livello come funziona la compressione e le tecniche che abbiamo a disposizione per ridurre le dimensioni di diverse risorse presenti nelle nostre pagine.
@@ -98,7 +98,7 @@ In breve, come primo passo nell'ottimizzazione dell'efficienza delle nostre riso
 ## Compressione del testo con GZIP
 
 ### TL;DR {: .hide-from-toc }
-- 'GZIP funziona meglio su risorse di testo: CSS, JavaScript, HTML'
+- GZIP funziona meglio su risorse di testo: CSS, JavaScript, HTML
 - Tutti gli attuali browser supportano la compressione con GZIP e la richiedono automaticamente
 - Il tuo server deve essere configurato per consentire la compressione con GZIP
 - Alcuni CDN richiedono particolare attenzione per assicurarsi che GZIP sia abilitato

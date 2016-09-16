@@ -51,7 +51,7 @@ Explore what makes a site responsive and how some common responsive design patte
 ### TL;DR {: .hide-from-toc }
 - 使用元视口代码控制浏览器视口的宽度和缩放比例。
 - 添加 <code>width=device-width</code> 以便与屏幕宽度（以设备无关像素为单位）进行匹配。
-- '添加 <code>initial-scale=1</code> 以便将 CSS 像素与设备无关像素的比例设为 1:1。'
+- 添加 <code>initial-scale=1</code> 以便将 CSS 像素与设备无关像素的比例设为 1:1。
 - 确保在不停用用户缩放功能的情况下，您的网页也可以访问。
 
 

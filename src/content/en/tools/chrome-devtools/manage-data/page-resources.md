@@ -16,7 +16,7 @@ criteria.
 ### TL;DR {: .hide-from-toc }
 - Use the <strong>Frames</strong> pane of the <strong>Application</strong> panel to organize resources by frame.
 - You can also view resources by frame from the <strong>Sources</strong> panel by disabling the <strong>group by folder</strong> option.
-- 'To view resources by domain and folder, use the <strong>Sources</strong> panel.'
+- To view resources by domain and folder, use the <strong>Sources</strong> panel.
 - Filter resources by name or other criteria in the <strong>Network</strong> panel.
 
 
