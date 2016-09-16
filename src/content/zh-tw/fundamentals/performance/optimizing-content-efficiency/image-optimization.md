@@ -47,16 +47,17 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 
 &nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>向量</b>
-    <img class="center" src="images/vector-zoom.png" alt="放大的向量圖片">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>點陣</b>
-    <img src="images/raster-zoom.png" alt="放大的點陣圖片">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/vector-zoom.png" alt="Zoomed-in vector image">
+    <figcaption>Zoomed-in vector image</figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/raster-zoom.png" alt="Zoomed-in raster image">
+    <figcaption>Zoomed-in raster image</figcaption>
+  </figure>
 </div>
 
 * [向量圖片](http://en.wikipedia.org/wiki/Vector_graphics)會使用線條、圓點和多邊形呈現圖片。

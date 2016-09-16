@@ -19,7 +19,7 @@ description: 您可以用 CSS 或 JavaScript 進行動畫處理。 您應該使�
 - 如果您選擇使用 JavaScript 進行動畫處理，請採用 TweenMax，或者較輕量級的解決方案 TweenLite。
 
 
-最基本的動畫可以使用 CSS 或 JavaScript 建立，但差別在於投入的時間和精力多寡 (也請參閱 [CSS vs JavaScript 效能]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#css-vs-javascript-performance))。 兩種各有其優點和缺點，但以下是經驗法則：
+最基本的動畫可以使用 CSS 或 JavaScript 建立，但差別在於投入的時間和精力多寡 (也請參閱 [CSS vs JavaScript 效能](animations-and-performance#css-vs-javascript-performance))。 兩種各有其優點和缺點，但以下是經驗法則：
 
 * **針對 UI 元素若是擁有較小、自成一體的狀態，使用 CSS。** CSS 轉換和動畫最適合從側面帶進導覽功能表，或顯示工具提示。 您最終可能會使用 JavaScript 來控制狀態，但動畫本身會存在於您的 CSS 內。
 * **當您想有效控制您的動畫時，請使用 JavaScript。** 會動態追蹤一輕觸位置的東西，您必須停止、暫停、減速或倒轉的動畫，通常會要求您使用 JavaScript。
