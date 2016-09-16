@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Kullanicinin bir sayfada gerçeklestirmek istedigi birincil eylemle ilgili içerigin görüntülenmesine öncelik taniyarak kritik olusturma yolunu optimize etme.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

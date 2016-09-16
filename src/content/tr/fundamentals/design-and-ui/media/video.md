@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Sitenize video eklemenin ve kullanicilarin tüm cihazlarda mümkün olan en iyi deneyimi yasamalarini saglamanin en basit yollarini ögrenin.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Video {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 
@@ -119,16 +118,24 @@ Poster, video `src` ögesi bozulursa veya saglanan video biçimlerinin hiçbiri 
 
 Burada, poster resmi olmayan ve poster resmi olan videolarin yan yana karsilastirmasini bulabilirsiniz. Poster resmi, bunun video olmadigini göstermek için gri tonlarinda yaptik:
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android Chrome ekran görüntüsü, dikey: poster yok" src="img/Chrome-Android-video-no-poster.png">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android Chrome ekran görüntüsü, dikey: poster resimli" src="img/Chrome-Android-video-poster.png">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img alt="Android Chrome ekran görüntüsü, dikey: poster yok" src="img/Chrome-Android-video-no-poster.png">
+    <figcaption>
+      Android Chrome ekran görüntüsü, dikey: poster yok
+     </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img alt="Android Chrome ekran görüntüsü, dikey: poster resimli" src="img/Chrome-Android-video-poster.png">
+    <figcaption>
+      Android Chrome ekran görüntüsü, dikey: poster resimli
+     </figcaption>
+  </figure>
 </div>
 
+<div style="clear:both;"></div>
 
 ## Eski platformlar için alternatifler saglama 
 
@@ -252,10 +259,25 @@ Bir videonun kodlandigi boyutu kontrol etmek için video ögesinin `videoWidth` 
 Video ögeleri görüntü alani için çok büyük olduklarinda, kapsayicilarindan tasip kullanicinin içerigi görmesini veya denetimleri kullanmasini
 imkansiz hale getirebilirler.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome ekran görüntüsü, dikey: biçimlendirilmemis video ögesi görüntü alanindan tasar" src="img/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome ekran görüntüsü, yatay: biçimlendirilmemis video ögesi görüntü alanindan tasar" src="img/Chrome-Android-landscape-video-unstyled.png">
+<div class="attempt-left">
+  <figure>
+    <img alt="Android Chrome ekran görüntüsü, dikey: biçimlendirilmemis video ögesi görüntü alanindan tasar" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <figcaption>
+      Android Chrome ekran görüntüsü, dikey: biçimlendirilmemis video ögesi görüntü alanindan tasar
+    </figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img alt="Android Chrome ekran görüntüsü, yatay: biçimlendirilmemis video ögesi görüntü alanindan tasar">
+    <figcaption>
+      Android Chrome ekran görüntüsü, yatay: biçimlendirilmemis video ögesi görüntü alanindan tasar
+    </figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
+
 
 Video boyutlarini JavaScript veya CSS'yi kullanarak kontrol edebilirsiniz. JavaScript kitapliklari ve [FitVids](//fitvidsjs.com/) gibi eklentiler, YouTube ve diger kaynaklardaki Flash videolar için bile uygun boyutun ve en boy oraninin korunmasini mümkün kilmaktadir.
 
@@ -299,10 +321,20 @@ Cihaz yönü masaüstü monitörler veya dizüstü bilgisayarlar için bir sorun
 
 iPhone'daki Safari, dikey ve yatay yönler arasinda geçis yapmada basarilidir:
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, dikey" src="img/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, yatay" src="img/iPhone-video-playing-landscape.png">
+<div class="attempt-left">
+  <figure>
+    <img  alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, dikey" src="img/iPhone-video-playing-portrait.png">
+    <figcaption>iPhone'daki Safari'de oynayan videonun ekran görüntüsü, dikey</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, yatay" src="img/iPhone-video-playing-landscape.png">
+    <figcaption>iPhone'daki Safari'de oynayan videonun ekran görüntüsü, yatay</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 iPad'de ve Android için Chrome'da cihaz yönü sorunlu olabilir.
 Örnegin, hiç özellestirme yapilmadan, yatay yöndeki bir iPad'de oynayan bir video sunun gibi görünür:

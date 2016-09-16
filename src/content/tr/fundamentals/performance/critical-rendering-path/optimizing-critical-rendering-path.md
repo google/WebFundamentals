@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ilk olusturmada mümkün olan en hizli süreyi saglamak için üç degiskeni optimize etmemiz gerekir: Kritik kaynaklarin sayisini en aza indirme, kritik baytlarin sayisini en aza indirme ve kritik yol uzunlugunu en aza indirme.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

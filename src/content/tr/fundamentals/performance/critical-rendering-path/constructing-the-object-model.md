@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Tarayıcının içeriği ekranda oluşturabilmesi için önce DOM ve CSSOM ağaçlarını oluşturması gerekir. Sonuç olarak, HTML ve CSS'yi tarayıcıya mümkün olduğunca hızlı bir şekilde sağladığımızdan emin olmamız gerekir.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
