@@ -41,9 +41,7 @@ So, where does that leave us? There isn't a single format that works in all brow
 * Serve TTF variant to old Android (below 4.4) browsers.
 * Serve EOT variant to old IE (below IE9) browsers.
 
-Note: There's technically another container format, the <a href='http://caniuse.com/svg-fonts'>SVG font container</a>, 
-but IE and Firefox never supported it, and it is now deprecated in Chrome. As
-such, it's of limited use and it's intentionally omitted it in this guide.
+Note: There's technically another container format, the <a href='http://caniuse.com/svg-fonts'>SVG font container</a>, but IE and Firefox never supported it, and it is now deprecated in Chrome. As such, it's of limited use and it's intentionally omitted it in this guide.
 
 ### Reducing font size with compression
 

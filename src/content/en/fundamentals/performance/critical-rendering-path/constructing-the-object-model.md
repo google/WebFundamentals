@@ -30,7 +30,7 @@ Let’s start with the simplest possible case: a plain HTML page with some text 
 <img src="images/full-process.png" alt="DOM construction process">
 
 1. **Conversion:** The browser reads the raw bytes of HTML off the disk or network, and translates them to individual characters based on specified encoding of the file (for example, UTF-8).
-1. **Tokenizing:** The browser converts strings of characters into distinct tokens---as specified by the [W3C HTML5 standard](http://www.w3.org/TR/html5/); for example, "&lt;html&gt;", "&lt;body&gt;"---and other strings within angle brackets. Each token has a special meaning and its own set of rules.
+1. **Tokenizing:** The browser converts strings of characters into distinct tokens&mdash;as specified by the [W3C HTML5 standard](http://www.w3.org/TR/html5/); for example, "&lt;html&gt;", "&lt;body&gt;"&mdash;and other strings within angle brackets. Each token has a special meaning and its own set of rules.
 1. **Lexing:** The emitted tokens are converted into "objects," which define their properties and rules.
 1. **DOM construction:** Finally, because the HTML markup defines relationships between different tags (some tags are contained within other tags) the created objects are linked in a tree data structure that also captures the parent-child relationships defined in the original markup: the _HTML_ object is a parent of the _body_ object, the _body_ is a parent of the _paragraph_ object, and so on.
 
@@ -68,12 +68,12 @@ The CSS bytes are converted into characters, then tokens, then nodes, and finall
 
 Why does the CSSOM have a tree structure? When computing the final set of styles for any object on the page, the browser starts with the most general rule applicable to that node (for example, if it is a child of a body element, then all body styles apply) and then recursively refines the computed styles by applying more specific rules; that is, the rules "cascade down."
 
-To make it more concrete, consider the CSSOM tree above. Any text contained within the _span_ tag that is placed within the body element, has a font size of 16 pixels and has red text---the font-size directive cascades down from the body to the span. However, if a span tag is child of a paragraph (p) tag, then its contents are not displayed.
+To make it more concrete, consider the CSSOM tree above. Any text contained within the _span_ tag that is placed within the body element, has a font size of 16 pixels and has red text&mdash;the font-size directive cascades down from the body to the span. However, if a span tag is child of a paragraph (p) tag, then its contents are not displayed.
 
-Also, note that the above tree is not the complete CSSOM tree and only shows the styles we decided to override in our stylesheet. Every browser provides a default set of styles also known as "user agent styles"---that’s what we see when we don’t provide any of our own-- and our styles simply override these defaults (for example, [default IE styles](http://www.iecss.com/)).
+Also, note that the above tree is not the complete CSSOM tree and only shows the styles we decided to override in our stylesheet. Every browser provides a default set of styles also known as "user agent styles"&mdash;that’s what we see when we don’t provide any of our own&mdash;and our styles simply override these defaults (for example, [default IE styles](http://www.iecss.com/)).
 
 To find out how long the CSS processing takes you can record a timeline in DevTools and look for "Recalculate Style" event: unlike DOM parsing, the timeline doesn’t show a separate "Parse CSS" entry, and instead captures parsing and CSSOM tree construction, plus the recursive calculation of computed styles under this one event.
 
 <img src="images/cssom-timeline.png"  alt="Tracing CSSOM construction in DevTools">
 
-Our trivial stylesheet takes ~0.6ms to process and affects eight elements on the page -- not much, but once again, not free. However, where did the eight elements come from? The CSSOM and DOM are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the [render tree](http://localhost:8080/web/fundamentals/performance/critical-rendering-path/render-tree-construction) that links the DOM and CSSOM together.
+Our trivial stylesheet takes ~0.6ms to process and affects eight elements on the page&mdash;not much, but once again, not free. However, where did the eight elements come from? The CSSOM and DOM are independent data structures! Turns out, the browser is hiding an important step. Next, lets talk about the [render tree](http://localhost:8080/web/fundamentals/performance/critical-rendering-path/render-tree-construction) that links the DOM and CSSOM together.
