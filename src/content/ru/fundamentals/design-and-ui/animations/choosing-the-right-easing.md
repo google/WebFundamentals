@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Выбирайте подходящее изменение скорости для своего проекта. Это может быть ускорение, замедление либо и ускорение, и замедление. Здесь можно даже немножко пошалить!
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 

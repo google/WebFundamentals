@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Узнайте, как обеспечить плавный переход с использованием анимации между двумя представлениями в приложениях
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-08-08 #}
 
