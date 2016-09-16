@@ -24,11 +24,11 @@ description: Компоновка – это процесс, который св
 ## Для достижения анимационного эффекта изменяйте свойства transform и opacity
 В самой производительной версии конвейера пикселей отсутствует перерасчет макета и прорисовка. В ней выполняется только изменение компоновки:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg" class="g--centered" alt="Конвейер пикселей без перерасчета макета или прорисовки.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="Конвейер пикселей без перерасчета макета или прорисовки.">
 
 Чтобы добиться этого, необходимо будет изменять только те свойства, которые могут обрабатываться исключительно компоновщиком. На сегодня таких свойств только два: **transform** и **opacity**:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg" class="g--centered" alt="Свойства, которые можно анимировать без перерасчета макета или прорисовки.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="Свойства, которые можно анимировать без перерасчета макета или прорисовки.">
 
 Помните, что для использования свойств transform и opacity, элемент, для которого вы изменяете эти свойства, должен находиться на _собственном слое_. Чтобы создать слой, необходимо переместить на него элемент, о чем мы поговорим далее.
 
@@ -73,19 +73,19 @@ Note: Если вы беспокоитесь о том, что не сможет
 
 Чтобы понять, как работают слои в приложении и почему элемент размещен на отдельном слое, необходимо включить средство профилирования прорисовки на шкале времени Chrome DevTools:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg" class="g--centered" alt="Включение средства профилирования прорисовки в Chrome DevTools.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg"  alt="Включение средства профилирования прорисовки в Chrome DevTools.">
 
 Затем выполните запись. После завершения записи вы сможете щелкать отдельные кадры, которые находятся между столбцами, обозначающими количество кадров в секунду, и получать подробные сведения:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg" class="g--centered" alt="Кадр, профилирование которого требуется разработчику.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="Кадр, профилирование которого требуется разработчику.">
 
 После щелчка кадра в подробных сведениях появится новый элемент – вкладка слоев.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg" class="g--centered" alt="Кнопка вкладки слоев в Chrome DevTools.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="Кнопка вкладки слоев в Chrome DevTools.">
 
 При нажатии этой кнопки открывается новое представление, в котором можно панорамировать, сканировать и изменить масштаб отображения на всех слоях в течение последнего кадра, а также просматривать причины создания каждого слоя.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg" class="g--centered" alt="Представление слоев в Chrome DevTools.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg"  alt="Представление слоев в Chrome DevTools.">
 
 С помощью этого представления можно определить имеющееся количество слоев. Если у вас уходит много времени на компоновку при выполнении таких критически важных с точки зрения производительности действий, как прокрутка или переходы (целевой показатель равен **4–5 мс**), то с помощью приведенной здесь информации можно определить, сколько у вас слоев, почему они были созданы, а затем уже заняться контролем числа слоев в приложении.
 

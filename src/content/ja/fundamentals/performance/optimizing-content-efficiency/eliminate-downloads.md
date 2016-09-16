@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 最も時間がかからず、最も最適化されたリソースとは、送信しないリソースです。最近、リソースを監査しましたか。各リソースがユーザー エクスペリエンスの向上に貢献するよう、リソースは必ず定期的に監査してください。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

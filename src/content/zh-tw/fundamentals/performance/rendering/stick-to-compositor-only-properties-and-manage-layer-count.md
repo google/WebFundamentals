@@ -23,11 +23,11 @@ description: 合成是指組合網頁上的繪製部分，以用於在螢幕上�
 ##針對動畫使用變形和透明度變更 
  表現最佳的像素管道版本會避免版面配置和繪製，並只需要合成變更：
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg" class="g--centered" alt="無版面配置或繪製的像素管道。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="無版面配置或繪製的像素管道。">
 
 為實現此目標，您需要堅守只需合成器即可處理的變更屬性。 時下只有兩個屬性才是真的：**變形** 和 **透明度**：
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg" class="g--centered" alt="您可以不觸發版面配置或繪製而動畫處理的屬性。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="您可以不觸發版面配置或繪製而動畫處理的屬性。">
 
 使用變形和透明度需要注意的是，您變更這些屬性的所在元素應該要在 _它本身的合成器層上_。 要製作合成器層，您必須將元素升階，這部分我們將在稍後討論。
 
@@ -72,19 +72,19 @@ Note: undefined
 
 要瞭解您應用程式中的層，以及元素具有一個層的原因，您必須在 Chrome DevTools 的 Timeline 中，啟用繪製分析工具：
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg" class="g--centered" alt="Chrome DevTools 的繪製分析工具切換">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg"  alt="Chrome DevTools 的繪製分析工具切換">
 
 開啟繪製分析工具後，您應進行一段錄製。 錄製完畢後，您將能夠點擊個別畫面 -- 這可以在每秒畫面列和詳細資料之間找到：
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg" class="g--centered" alt="開發人員在分析中感興趣的一個畫面">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="開發人員在分析中感興趣的一個畫面">
 
 按一下這個，即可在詳細資料中提供您一個新選項：層標籤。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg" class="g--centered" alt="Chrome DevTools 中的層標籤按鈕。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="Chrome DevTools 中的層標籤按鈕。">
 
 此選項將叫出一個新檢視，讓您可針對該畫面中的所有層進行平移、掃描和放大，並提供每一層建立的原因。
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg" class="g--centered" alt="Chrome DevTools 中的層檢視。">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg"  alt="Chrome DevTools 中的層檢視。">
 
 使用此檢視，您可以追蹤您擁有的層數目。 如果您在例如捲動或轉換等效能關鍵行為期間，花了很多時間在合成上 (以約 **4-5ms** 為目標)，您可以使用此處的資訊來查看您有多少層、其建立的原因，並從那裡管理您應用程式中的層數目。
 

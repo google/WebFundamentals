@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: レイアウトは、要素の幾何学的情報、要素のサイズ、ページでの位置をブラウザによって管理する場所です。 個々の要素は、使用された CSS、要素の内容、親要素に基づいて、明示的または暗黙的なサイジング情報を持ちます。 プロセスは、Blink、WebKit ブラウザ、および Internet Explorer で、Layout と呼ばれます。 Firefox などの Gecko ベースのブラウザでは Reflow と呼ばれますが、実際にはこれらのプロセスは同じです。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -49,7 +48,7 @@ description: レイアウトは、要素の幾何学的情報、要素のサイ�
 
 レイアウトを避けることができない場合は、再び Chrome DevTool を使用して必要な時間を確認し、レイアウトが問題の原因であるかどうかを判定することが重要になります。 最初に、DevTool を開き、タイムライン タブに移動し、レコーディングを開始してサイトを操作します。 レコーディングを停止すると、サイトのパフォーマンスの分解が表示されます。
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" class="g--centered" alt="長時間のレイアウト処理を表示する DevTool" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg"  alt="長時間のレイアウト処理を表示する DevTool" />
 
 上記の例でフレームを詳しく分析すると、レイアウト内部で 20ms 超の時間が費やされていることが分かります。アニメーションでフレームを画面に表示する時間が 16ms であるのと比べて、これは長すぎます。 また、DevTool では、ツリーのサイズ (この例では 1,618 要素) と、レイアウトで必要とされたノードの数も分かります。
 
@@ -60,11 +59,11 @@ Note: どの CSS プロパティによってレイアウト、ペイント、コ
 
 下記の画面ショットは、1,300 個のボックスでフロートを使用するときのレイアウトコストを示しています。 大部分のアプリケーションではさまざまな手法を使用して要素を配置するため、これは明らかに不自然な例です。
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" class="g--centered" alt="フロートをレイアウトとして使用" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" alt="フロートをレイアウトとして使用" />
 
 ウェブ プラットフォームに最近追加された Flexbox を使用するように例を変更すると、状況は変わってきます。
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" class="g--centered" alt="Flexbox をレイアウトとして使用" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" alt="Flexbox をレイアウトとして使用" />
 
 同じ数の要素と同じ外観に対して、レイアウトで費やされる時間はずっと短くなります (この例では 3.5ms 対 14ms)。 Flexbox は [フロートよりもサポート範囲が狭いため](http://caniuse.com/#search=flexbox)、一部のコンテキストでは Flexbox を選択できないことに注意するのが重要です。ただし、可能な場合は、少なくともパフォーマンスに対するレイアウト モデルの影響を検証して、パフォーマンス コストを最小限に抑える手法を採用する必要があります。
 
@@ -73,7 +72,7 @@ Flexbox を選択する場合でも選択しない場合でも、アプリケー
 ## 強制的な同期レイアウトの回避
 フレームを画面に配置する順序は次のとおり:
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" class="g--centered" alt="Flexbox をレイアウトとして使用" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" alt="Flexbox をレイアウトとして使用" />
 
 最初に JavaScript を実行した後、スタイル計算、次にレイアウト。 ただし、JavaScript を使用してブラウザでレイアウトを先に実行することもできます。 これは **強制的な同期レイアウト** と呼ばれます。
 

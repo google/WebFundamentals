@@ -47,7 +47,7 @@ Cuando modifica los estilos, el navegador verifica si alguno de los cambios requ
 
 Si no es posible evitar el diseño, la clave es, nuevamente, utilizar DevTools de Chrome para ver cuánto tiempo se demora y determinar si el diseño es la causa del cuello de botella. En primer lugar, abra DevTools, vaya a la pestaña Timeline, presione Record e interactúe con el sitio. Cuando haya dejado de grabar, verá un desglose del rendimiento de su sitio:
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" class="g--centered" alt="DevTools showing a long time in Layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg"  alt="DevTools showing a long time in Layout" />
 
 Si analizamos el marco del ejemplo anterior, vemos que más de 20 ms se destinan al diseño interior, un valor que es demasiado elevado si necesitamos 16 ms para que en una animación aparezca un marco en la pantalla. También podrá ver que DevTools le indicará el tamaño del árbol (1.618 elementos en este caso) y cuántos nodos necesitaban diseño.
 
@@ -58,11 +58,11 @@ En la web, existe una amplia variedad de modelos de diseño, y algunos son más 
 
 En la captura de pantalla que se muestra a continuación, se presenta el costo del diseño si se utiliza el diseño flotante en 1.300 cuadros. Es cierto que este es un ejemplo forzado, ya que en la mayoría de las aplicaciones se utilizarán diferentes medios para posicionar los elementos.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" class="g--centered" alt="Using floats as layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg"  alt="Using floats as layout" />
 
 Si actualizamos el ejemplo para utilizar Flexbox, una adición más reciente a la plataforma web, obtenemos una imagen diferente:
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" class="g--centered" alt="Using flexbox as layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg"  alt="Using flexbox as layout" />
 
 Ahora, destinamos mucho menos tiempo (3,5 ms en comparación con 14 ms en este caso) al diseño para la _misma cantidad de elementos_ y la misma apariencia visual. Es importante recordar que, en algunos contextos, tal vez no pueda seleccionar Flexbox, ya que es [mucho menos compatible que los diseños flotantes](http://caniuse.com/#search=flexbox). Sin embargo, siempre que sea posible debe, al menos, investigar el impacto del modelo de diseño en su rendimiento y elegir el que minimice el costo de ejecutarlo.
 
@@ -71,7 +71,7 @@ Cualquiera sea el caso, independientemente de si elige Flexbox o no, de todos mo
 ## Evite los diseños sincrónicos forzados
 El envío de un marco a la pantalla se realiza en este orden:
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" class="g--centered" alt="Using flexbox as layout" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg"  alt="Using flexbox as layout" />
 
 En primer lugar, se ejecuta JavaScript, _luego_ se realizan los cálculos de estilo y _luego_ se aplica el diseño. Sin embargo, es posible forzar a un navegador para que realice el diseño antes con JavaScript. Esto se denomina **diseño sincrónico forzado**.
 

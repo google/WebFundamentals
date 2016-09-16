@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 不要なリソースを取り除いたら、次の手順はブラウザがダウンロードしなければならない残りのリソースの合計サイズを最小限に抑えることです。つまり、コンテンツ種類別の圧縮アルゴリズムと汎用の圧縮アルゴリズム（GZip）を適用してリソースを圧縮します。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -73,7 +72,7 @@ description: 不要なリソースを取り除いたら、次の手順はブラ�
 冗長なデータや不要なデータを圧縮する最も良い方法は、一緒に取り除くことです。もちろん、データをやたらに削除することはできませんが、データ形式とそのプロパティについてコンテンツ別の知識があれば、実際の意味に影響を与えることなくペイロードのサイズを大幅に削減することが可能です。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 上記のシンプルな HTML ページと、そのページに含まれる 3 つの異なるコンテンツの種類（HTML マークアップ、CSS スタイル、JavaScript）を考えてみましょう。コンテンツの種類ごとに、有効な HTML マークアップを作成するためのルール、CSS のルール、JavaScript コンテンツのルールや、コメントを示すためのルールなどは異なります。このページのサイズを縮小するにはどうすればよいでしょうか。
@@ -82,9 +81,8 @@ description: 不要なリソースを取り除いたら、次の手順はブラ�
 * 「スマート」な CSS 圧縮ツールがあれば、「.awesome-container」のルール」が効率よく定義されていないことが認識され、他のスタイルに影響を与えずに 2 つの宣言を 1 つにできるため、バイト数はさらに削減されます。
 * 空白（スペースとタブ）は、デベロッパーが HTML、CSS、JavaScript で便宜上使っているものです。タブとスペースをすべて削除できる圧縮ツールもあります。
 
-^
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 上記の手順を適用すれば、ページは最終的に 406 文字から 150 文字に減ります。圧縮率 63% です。確かにあまり読みやすくはありませんが、読みやすくする必要もありません。元のページは「開発バージョン」として保存しておき、ページをウェブサイトに公開できる準備ができたらいつでも上記の手順を適用できます。

@@ -48,7 +48,7 @@ description: 版面配置是瀏覽器弄清楚元素幾何形狀資訊之處：�
 
 如果不可能避開版面配置，那麼關鍵在於再度使用 Chrome DevTools，來查看它需要多長時間，並判斷版面配置是否是瓶頸的原因所在。 首先，開啟 DevTools、前往「時間軸」標籤、點擊「錄製」，並和您的網站互動。 當停止錄製時，您會看到您網站效能的分類細項：
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" class="g--centered" alt="DevTools 在版面配置中顯示出一段長時間" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg"  alt="DevTools 在版面配置中顯示出一段長時間" />
 
 當探究上例的框架時，我們發現到版面配置內花了超過 20ms 的時間；但我們在動畫內只有 16ms 的時間來將一個畫面放上螢幕，20ms 太高了。 您還可以看到，DevTools 會告訴您樹狀結構大小 (在本例中的 1,618 個元素)，以及多少節點需要版面配置。
 
@@ -59,11 +59,11 @@ Note: 需要哪些 CSS 屬性會觸發版面配置、繪製或合成的明確清
 
 以下的螢幕擷取畫面顯示出在 1,300 個方塊上使用浮動時的版面配置成本。 無可否認，這是一個很特意的例子，因為大多數應用程式會使用不同方法來定位元素。
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" class="g--centered" alt="使用浮動做為版面配置" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg"  alt="使用浮動做為版面配置" />
 
 如果我們更新範例以使用彈性方塊 (網頁平台的最新功能)，我們會得到不同的畫面：
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" class="g--centered" alt="使用彈性方塊做為版面配置" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg"  alt="使用彈性方塊做為版面配置" />
 
 針對 _相同數目的元素_ 和相同的視覺外觀，現在我們在版面配置中所花的時間少多了 (此例中為 3.5ms 對 14ms) 很重要的是要記住，在某些情況下，您可能無法選擇彈性方塊，因為它 [比浮動的支援度低](http://caniuse.com/#search=flexbox)，不過您應該儘可能地至少探究一下版面配置模型對您的效能的影響，然後選擇能將執行成本降至最低的方案。
 
@@ -72,7 +72,7 @@ Note: 需要哪些 CSS 屬性會觸發版面配置、繪製或合成的明確清
 ## 避免強制性同步版面配置
 將一個畫面送到螢幕上的順序如下：
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" class="g--centered" alt="使用彈性方塊做為版面配置" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg"  alt="使用彈性方塊做為版面配置" />
 
 首先是 JavaScript 執行、_然後_ 樣式計算，_然後_ 版面配置。 然而，是可以利用 JavaScript 強制瀏覽器早一點執行版面配置。 它稱為 **強制性同步版面配置**。
 

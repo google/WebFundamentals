@@ -43,7 +43,7 @@ Note: 如果您真的想要看到作用中的 JIT，應該要看看<a href="http
 
 架構或範例可以像動畫一樣，使用 `setTimeout` 或 `setInterval` 做視覺變更，但這種方式的問題在於，回呼會在畫面的 _某一點_ 執行，可能就在結束之時，如此往往造成我們遺漏一個畫面的效果，從而導致閃避現象。
 
-<img src="images/optimize-javascript-execution/settimeout.jpg" class="g--centered" alt="setTimeout 導致瀏覽器遺漏一個畫面。">
+<img src="images/optimize-javascript-execution/settimeout.jpg"  alt="setTimeout 導致瀏覽器遺漏一個畫面。">
 
 事實上，時下 jQuery 的預設 `animate` 行為是使用 `setTimeout`！您可以 [修補它以使用 `requestAnimationFrame`](https://github.com/gnarf/jquery-requestAnimationFrame)，強烈建議使用者採用。
 
@@ -102,15 +102,15 @@ JavaScript 是在瀏覽器的主執行緒上運作，就連同樣式計算、版
 
 測量您 JavaScript 成本和效能設定檔的最佳方法，是使用 Chrome DevTools。 基本上，您將取得看起來像以下的低詳細資料記錄：
 
-<img src="images/optimize-javascript-execution/low-js-detail.jpg" class="g--centered" alt="Chrome DevTools 的 Timeline 提供低 JS 執行詳細資料。">
+<img src="images/optimize-javascript-execution/low-js-detail.jpg"  alt="Chrome DevTools 的 Timeline 提供低 JS 執行詳細資料。">
 
 如果您發現您有長時間執行的 JavaScript，您可以啟用 DevTools 使用者介面頂部的 JavaScript 分析工具：
 
-啟用 DevTools 中的 JS 分析工具。"><img src="images/optimize-javascript-execution/js-profiler-toggle.jpg" class="g--centered" alt="
+啟用 DevTools 中的 JS 分析工具。"><img src="images/optimize-javascript-execution/js-profiler-toggle.jpg"  alt="
 
 以這種方式分析 JavaScript 會帶有額外負荷，所以當您想要更深入瞭解 JavaScript 執行期特性時，要確定只啟用此功能。 啟用核取方塊之後，您現在可以執行相同的行為，對於您 JavaScript 呼叫了哪些功能，您會得到多出許多的相關資訊：
 
-<img src="images/optimize-javascript-execution/high-js-detail.jpg" class="g--centered" alt="Chrome DevTools 的 Timeline 提供高 JS 執行詳細資料。">
+<img src="images/optimize-javascript-execution/high-js-detail.jpg"  alt="Chrome DevTools 的 Timeline 提供高 JS 執行詳細資料。">
 
 持有這項資訊，您可以評估 JavaScript 對您的應用程式的效能影響，並開始尋找並修復功能執行所需時間太長的任何熱點。 正如之前所述，您應設法刪除長時間執行的 JavaScript，若不可能的話，就將之移動到 Web Worker ，騰出主執行緒去執行其它任務。
 

@@ -367,10 +367,10 @@ function migrate(lang, section, directory, recursive) {
   });
 }
 
-var lang = 'zh-tw';
-var section = 'tools';
-var directory = '';
-var recursive = true;
+var lang = 'ja';
+var section = 'fundamentals';
+var directory = 'security/encrypt-in-transit';
+var recursive = false;
 migrate(lang, section, directory, recursive);
 
 

@@ -67,17 +67,17 @@ Note: Si se encuentra en Web Components, es importante notar que los cálculos d
 ## Medición del costo de recalcular el estilo
 La forma más simple y eficiente de medir el costo de recalcular el estilo es utilizar el modo Timeline de DevTools de Chrome. Para comenzar, abra DevTools, vaya a la pestaña Timeline, presione Record e interactúe con el sitio. Cuando haya dejado de grabar, verá algo similar a lo que se muestra en la imagen.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg" class="g--centered" alt="DevTools showing long-running style calculations.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="DevTools showing long-running style calculations.">
 
 En la franja de la parte superior se muestran los marcos por segundo y, si ve barras que pasan por encima de la línea inferior (la línea de 60 fotogramas/s), esto significa que posee marcos de larga ejecución.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" class="g--centered" alt="Zooming in on a trouble area in Chrome DevTools.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg"  alt="Zooming in on a trouble area in Chrome DevTools.">
 
 Si posee un marco de larga ejecución durante algún tipo de interacción, como el desplazamiento o algún otro tipo de interacción, entonces es necesario realizar un examen más profundo.
 
 Si le aparece un bloque grande color morado, como se muestra anteriormente, haga clic en el registro para obtener más detalles.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" class="g--centered" alt="Getting the details of long-running style calculations.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="Getting the details of long-running style calculations.">
 
 En esta captura, se muestra un evento Recalcular estilo de larga ejecución que solo demora poco más de 18 ms y que se lleva a cabo durante un desplazamiento, lo que provoca una sacudida notable en la experiencia.
 

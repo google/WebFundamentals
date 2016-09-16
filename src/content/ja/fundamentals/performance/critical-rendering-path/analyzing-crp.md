@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: クリティカル レンダリング パスのパフォーマンスに対するボトルネックを特定し、解決するには、さまざまなよくある落とし穴に関する正しい理解が必要となります。実践的なツアーを通じ、ページの最適化につながるパフォーマンス パターンの定型を見いだしましょう。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -27,7 +26,7 @@ description: クリティカル レンダリング パスのパフォーマン�
 ## Hello World サンプル
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 まず、可能な限りシンプルなケースとして、基本的な HTML マークアップと 1 つの画像から開始します。CSS や JavaScript はありません。 Chrome DevTools でネットワーク タイムラインを開き、リソース ウォーターフォールを調査します。
@@ -81,7 +80,7 @@ _インライン JavaScript:_
 まず、インライン スクリプトは常にパーサー ブロックですが、外部スクリプトは、async キーワードを追加することで、パーサーをブロックしないように設定できます。インライン化を元に戻し、試してみましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto %}
 </pre>
 
 _パーサー ブロック（外部）JavaScript:_
@@ -97,7 +96,7 @@ _非同期（外部）JavaScript:_
 別の方法として、CSS と JavaScript を両方ともインライン化するというアプローチがあります。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM、インライン CSS、インライン JavaScript" class="center">
@@ -114,7 +113,7 @@ _domContentLoaded_ 時間は、前のサンプルとほとんど同じですが�
 最もシンプルなページとして、HTML マークアップだけのページを想定します。CSS や JavaScript といった他のリソースは存在しません。このページをレンダリングするには、ブラウザは、リクエストを開始し、HTML ドキュメントが到着するのを待ち、それを解析し、DOM を構築し、最後に画面上にレンダリングします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Hello World CRP" class="center">
@@ -124,7 +123,7 @@ _domContentLoaded_ 時間は、前のサンプルとほとんど同じですが�
 同じページで、外部 CSS ファイルを使用するケースを想定します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
@@ -151,7 +150,7 @@ HTML ドキュメントを取得するためのネットワーク ラウンド�
 では、外部 JavaScript ファイルを組み込んでみましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 ページの外部 JavaScript アセットとして app.js を追加しました。これはパーサー ブロック リソースであり、クリティカル リソースとなります。さらに、JavaScript ファイルを実行するには、ブロックして、CSSOM を待つ必要があります。説明したとおり、JavaScript は CSSOM に対してクエリを行う可能性があるため、ブラウザは、「style.css」のダウンロードが完了して CSSOM が構築されるまで、一時中断します。
@@ -169,7 +168,7 @@ HTML ドキュメントを取得するためのネットワーク ラウンド�
 サイト デベロッパーと相談したところ、ページに組み込んだ JavaScript によるブロックが不要であることが判明しました。アナリティクスや他のコードがあり、この場合は、ページのレンダリングをブロックする必要はありません。そこで、script タグに async 属性を追加し、パーサーをブロックしないようにします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="DOM、CSSOM、非同期 JavaScript CRP" class="center">
@@ -185,7 +184,7 @@ HTML ドキュメントを取得するためのネットワーク ラウンド�
 最後に、CSS スタイルシートが印刷時にのみ必要なケースを考えてみましょう。どのようになるでしょうか。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM、非ブロック CSS、非同期 JavaScript CRP" class="center">

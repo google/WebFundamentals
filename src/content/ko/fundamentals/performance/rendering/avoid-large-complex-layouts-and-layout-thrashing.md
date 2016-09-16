@@ -49,7 +49,7 @@ description: 레이아웃은 브라우저가 요소의 기하학적 정보(페�
 
 레이아웃을 피할 수 없는 경우 Chrome DevTools를 다시 사용하여 시간이 얼마나 걸리는지 확인하고 레이아웃이 병목 현상의 원인인지 여부를 파악하는 것이 중요합니다. 먼저 DevTools를 열고 Timeline 탭으로 가서 레코드를 누르고 사이트와 상호작용합니다. 레코딩을 중단하면 사이트에서 수행된 분석 정보가 표시됩니다.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg" class="g--centered" alt="DevTools에서 장시간 레이아웃 표시" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/big-layout.jpg"  alt="DevTools에서 장시간 레이아웃 표시" />
 
 위 예의 프레임을 분석하면 레이아웃 내부에서 20ms 이상 소요된 것을 확인할 수 있습니다. 이는 애니메이션의 화면에서 프레임에 16ms가 필요한 경우 이에 비해 훨씬 높은 값입니다. 또한 DevTools에서 트리 크기(이 예에서는 1,618 요소) 및 레이아웃에 필요한 노드 수도 확인할 수 있습니다.
 
@@ -60,11 +60,11 @@ Note: 레이아웃, 그림 그리기 또는 합성을 트리거하는 명확한 
 
 아래의 스크린샷은 1,300개의 상자에서 부동 요소를 사용할 경우 레이아웃 비용을 보여줍니다. 대부분의 애플리케이션은 다양한 방법을 사용하여 요소를 배치하기 때문에 이 예는 부자연스러운 점이 있습니다.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg" class="g--centered" alt="부동 요소를 레이아웃으로 사용" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-float.jpg"  alt="부동 요소를 레이아웃으로 사용" />
 
 더 최근에 웹 플랫폼에 추가된 Flexbox를 사용하도록 샘플을 업데이트하면 다른 결과를 얻게 됩니다.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg" class="g--centered" alt="Flexbox를 레이아웃으로 사용" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/layout-flex.jpg"  alt="Flexbox를 레이아웃으로 사용" />
 
 이제 _동일한 수의 요소_에 대해 레이아웃 시간을 훨씬 덜 소모하고(이 경우 14ms에서 3.5ms로 단축) 동일한 시각적 모양을 나타낼 수 있습니다. 일부 경우에 [부동 요소보다 덜 지원](http://caniuse.com/#search=flexbox)되기 때문에 Flexbox를 선택할 수 없지만, 최소한 레이아웃 모델의 성능에 미치는 영향을 조사하고 수행 비용을 최소화할 수 있는 레이아웃 모델을 사용해야 합니다.
 
@@ -73,7 +73,7 @@ Note: 레이아웃, 그림 그리기 또는 합성을 트리거하는 명확한 
 ## 강제 동기 레이아웃 피하기
 화면에 프레임을 추가하는 순서는 다음과 같습니다.
 
-<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg" class="g--centered" alt="Flexbox를 레이아웃으로 사용" />
+<img src="images/avoid-large-complex-layouts-and-layout-thrashing/frame.jpg"  alt="Flexbox를 레이아웃으로 사용" />
 
 JavaScript를 실행한 _후_ 스타일 계산한 _후_에 레이아웃을 실행합니다. 하지만 JavaScript를 사용하여 브라우저가 레이아웃을 더 일찍 수행하도록 하는 것도 가능합니다. 이를 **강제 동기 레이아웃**이라고 합니다.
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: デフォルトでは、CSS はレンダリング ブロック リソースとして扱われます。つまり、ブラウザは、CSSOM の構築が完了するまで、処理済みコンテンツのレンダリングを保留します。CSS をシンプルにして、できる限り早く配信されるようにし、メディアタイプやメディアクエリを利用して、レンダリングをブロックしないようにします。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -23,32 +22,16 @@ description: デフォルトでは、CSS はレンダリング ブロック リ�
 - CSS リソースは、ブロック リソースであるか非ブロック リソースであるかにかかわらず、すべてブラウザによってダウンロードされます。
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-<b>CSS のある NYTimes</b>
-<img class="center" src="images/nytimes-css-device.png" alt="CSS のある NYTimes">
+<figure class="attempt-left">
+  <img class="center" src="images/nytimes-css-device.png" alt="CSS のある NYTimes">
+  <figcaption>CSS のある NYTimes</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/nytimes-nocss-device.png" alt="CSS のない NYTimes">
+  <figcaption>CSS のない NYTimes（FOUC</figcaption>
+</figure>
+<div class="clearfix"></div>
 
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-<b>CSS のない NYTimes（FOUC）</b>
-<img src="images/nytimes-nocss-device.png" alt="CSS のない NYTimes">
-
-  </div>
-</div>
-
-{% comment %}
-<table>
-<tr>
-<td>CSS のある NYTimes</td>
-<td>CSS のない NYTimes（FOUC）</td>
-</tr>
-<tr>
-<td><img src="images/nytimes-css-device.png" alt="CSS のある NYTimes" class="center"></td>
-<td><img src="images/nytimes-nocss-device.png" alt="CSS のない NYTimes" class="center"></td>
-</tr>
-</table>
-{% endcomment %}
 
 上記のサンプルは、NYTimes のウェブサイトを例に CSS があるバージョンと CSS がないバージョンを示しています。なぜ CSS の準備が整うまでレンダリングがブロックされるのか、これでわかります。CSS がない場合、ページは実質的に利用不可能です。右側のような状態は「FOUC（Flash of Unstyled Content）」と呼ばれます。そのため、ブラウザは、DOM と CSSOM の両方が揃うまでレンダリングをブロックします。
 

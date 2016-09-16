@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: アプリでダウンロードされるデータの量は増え続けています。パフォーマンスを最適にするには、バイト 1 つ 1 つの配信を最適化する必要があります。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

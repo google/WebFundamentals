@@ -73,17 +73,17 @@ Note: Если вы занимаетесь веб-компонентами, то
 ## Оценивайте затраты на перерасчет стилей
 Проще и лучше всего оценить затраты на перерасчет стилей можно с помощью шкалы времени в программе Chrome DevTools. Для начала откройте DevTools, перейдите на вкладку Timeline, запустите запись и начните взаимодействовать со своим сайтом. После того как запись будет остановлена, программа выдаст экран, похожий на приведенный далее:
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg" class="g--centered" alt="Программа DevTools, информирующая о длительном вычислении стилей.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="Программа DevTools, информирующая о длительном вычислении стилей.">
 
 Полоса вверху обозначает количество кадров в секунду. Если вы видите, что столбцы уходят выше нижней линии (60 кадров в секунду), значит, у вас есть длительные кадры.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" class="g--centered" alt="Проблемная область, выделенная в Chrome DevTools.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg"  alt="Проблемная область, выделенная в Chrome DevTools.">
 
 При наличии длительных кадров в моменты, когда пользователь выполняет такие действия, как прокрутка или др., необходимо провести тщательный анализ.
 
 Если же есть большой фиолетовый блок (как на приведенном выше примере), щелкните запись, и программа выдаст более подробные сведения.
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" class="g--centered" alt="Получение подробных сведений о длительных вычислениях стилей.">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="Получение подробных сведений о длительных вычислениях стилей.">
 
 В данном случае у нас имеется длительное событие перерасчета стилей, которое занимает чуть более 18 мс и происходит во время прокрутки, из-за чего пользователь наблюдает значительное дрожание изображения.
 

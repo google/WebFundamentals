@@ -23,11 +23,11 @@ En esta área, hay dos factores clave que afectan el rendimiento de la página: 
 ## Uso de los cambios en las propiedades transform y opacity para las animaciones
 En la versión con mejor rendimiento de la canalización de píxeles, se evitan tanto el diseño como la pintura, y solo se deben realizar cambios en la composición:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg" class="g--centered" alt="The pixel pipeline with no layout or paint.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-no-layout-paint.jpg"  alt="The pixel pipeline with no layout or paint.">
 
 Para lograrlo, debe limitarse a las propiedades de cambio que se pueden manejar mediante el compositor. En la actualidad, esto se aplica solo a dos propiedades: **transforms** y **opacity**:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg" class="g--centered" alt="The properties you can animate without triggering layout or paint.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/safe-properties.jpg"  alt="The properties you can animate without triggering layout or paint.">
 
 La advertencia sobre el uso de transforms y opacity es que el elemento en el que cambiará estas propiedades se debe encontrar en _la capa de su propio compositor_. Para poder crear una capa, debe promover el elemento. Hablaremos de esto a continuación.
 
@@ -72,19 +72,19 @@ En resumenn, **no promueva elementos innecesariamente**.
 
 Para poder comprender las capas de su aplicación y por qué un elemento posee una capa, debe habilitar el generador de perfiles Paint en la sección Timeline de DevTools de Chrome:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg" class="g--centered" alt="The toggle for the paint profiler in Chrome DevTools.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/paint-profiler.jpg"  alt="The toggle for the paint profiler in Chrome DevTools.">
 
 Cuando se active esta herramienta, debe iniciar una grabación. Cuando la grabación haya finalizado, podrá hacer clic en cada uno de los marcos, que se encuentran entre las barras de marcos por segundos y los detalles:
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg" class="g--centered" alt="A frame the developer is interested in profiling.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="A frame the developer is interested in profiling.">
 
 Si hace clic aquí, aparecerá una nueva opción en los detalles: la pestaña Layer.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg" class="g--centered" alt="The layer tab button in Chrome DevTools.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-tab.jpg"  alt="The layer tab button in Chrome DevTools.">
 
 A través de esta opción, se generará una nueva vista que le permitirá hacer una panorámica, analizar y agrandar todas las capas durante dicho marco, junto con los motivos por los que se creó cada capa.
 
-<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg" class="g--centered" alt="The layer view in Chrome DevTools.">
+<img src="images/stick-to-compositor-only-properties-and-manage-layer-count/layer-view.jpg"  alt="The layer view in Chrome DevTools.">
 
 Si utiliza esta vista, podrá realizar un seguimiento del número de capas que posee. Si demora mucho tiempo en la composición durante acciones críticas para el rendimiento, como el desplazamiento o las transiciones (debe intentar lograr, aproximadamente, **4 o 5 ms**), puede utilizar esta información para saber cuántas capas tiene y por qué se crearon, y, a partir de allí, administrar el recuento de capas en su aplicación.
 

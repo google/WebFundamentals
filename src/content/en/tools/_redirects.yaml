@@ -1,5 +1,17 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/network-performance/
+  to: /web/tools/chrome-devtools/network-performance/resource-loading
+
+- from: /web/tools/chrome-devtools/evaluate-performance/
+  to: /web/tools/chrome-devtools/evaluate-performance/rail
+
+- from: /web/tools/chrome-devtools/javascript/
+  to: /web/tools/chrome-devtools/javascript/add-breakpoints
+
+- from: /web/tools/chrome-devtools/manage-data/
+  to: /web/tools/chrome-devtools/manage-data/local-storage
+
 - from: /web/tools/chrome-devtools/iterate/device-mode/media-queries
   to: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
 
@@ -71,6 +83,12 @@ redirects:
 
 - from: /web/tools/chrome-devtools/debug/watch-variables/
   to: /web/tools/chrome-devtools/javascript/watch-variables
+
+- from: /web/tools/chrome-devtools/progressive-web-apps/
+  to: /web/tools/chrome-devtools/progressive-web-apps
+
+- from: /web/tools/chrome-devtools/security/
+  to: /web/tools/chrome-devtools/security
 
 - from: /web/tools/chrome-devtools/profile/memory-problems/memory-diagnosis
   to: /web/tools/chrome-devtools/memory-problems/

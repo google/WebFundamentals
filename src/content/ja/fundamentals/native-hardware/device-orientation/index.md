@@ -2,13 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 端末モーションと画面の向きのイベントによって、モバイルデバイスに組み込まれた加速度計、ジャイロスコープ、およびコンパスへアクセスすることができます。
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 端末画面の向き {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 端末モーションと画面の向きのイベントによって、モバイルデバイスに組み込まれた加速度計、ジャイロスコープ、およびコンパスへアクセスすることができます。
@@ -76,31 +76,32 @@ device orientation イベントや motion イベントによって返された�
 これは、端末の座標フレームと地球は座標フレーム間の
 f差異度の数を表します。
 
-<div>
-  <div class="g--third">
-    <img src="images/alpha.png"><br>
+<figure>
+  <img src="images/alpha.png">
+  <figcaption>
     <b>アルファ:</b> Z 軸周りの回転は、端末上部が
-真北に向いている場合 0 &deg;です。  端末が反時計回りに回転するにつれて
+    真北に向いている場合 0 &deg;です。  端末が反時計回りに回転するにつれて
     `alpha` 値が増加します。
-  </div>
-  <div class="g--third">
-    <img src="images/beta.png"><br>
+  </figcaption>
+</figure>
+<figure>
+  <img src="images/beta.png">
+  <figcaption>
     <b>ベータ:</b> X 軸周りの回転は、端末の上部と底部が地球の
-表面から等距離にある場合 0 &deg;です。 端末の上部が
-地球の表面に向かって傾斜するにつれて、値が増加します。
-  </div>
-  <div class="g--third g--last">
-    <img src="images/gamma.png"><br>
+    表面から等距離にある場合 0 &deg;です。 端末の上部が
+    地球の表面に向かって傾斜するにつれて、値が増加します。
+  </figcaption>
+</figure>
+<figure>
+  <img src="images/gamma.png"><br>
+  <figcaption>
     <b>ガンマ:</b> Y 軸周りの回転は、端末の左端と右端が地球の
-表面から等距離にある場合 0 &deg;です。  端末の右端が
-地球の表面に向かって傾斜するにつれて、値が増加します。 
-  </div>
-</div>
+    表面から等距離にある場合 0 &deg;です。  端末の右端が
+    地球の表面に向かって傾斜するにつれて、値が増加します。 
+  </figcaption>
+</figure>
 
-<div style="clear:both;"></div>
-
-
-
+<div class="clearfix"></div>
 
 
 ## 端末画面の向き 
@@ -121,11 +122,10 @@ f差異度の数を表します。
 
 device orientation イベントにはいくつかの用途があります。  次に例を示します。
 
-<ul>
-  <li>ユーザーの移動に伴いマップをアップデートします。</li>
-  <li>視差効果の追加など、UI の微妙な調整を行います。</li>
-  <li>GeoLocation と組み合わせて、ターンバイターン ナビゲーションに使用します。</li>
-</ul>
+* ユーザーの移動に伴いマップをアップデートします。
+* 視差効果の追加など、UI の微妙な調整を行います
+* GeoLocation と組み合わせて、ターンバイターン ナビゲーションに使用します。
+
 
 ### サポートを確認して、イベントをリッスンする
 
@@ -134,20 +134,20 @@ device orientation イベントにはいくつかの用途があります。  �
 オブジェクトにイベント リスナーを添付します。 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori" adjust_indentation="auto" %}
 </pre>
 
 ### device orientation イベントの扱い
 
 device orientation イベントは、端末が移動したり、向きが
-変わったときに起動します。  このイベントは、<a href="index.html#earth-coordinate-frame"> に関連して、
+変わったときに起動します。  このイベントは、<a href="#earth-coordinate-frame"> に関連して、
 現在の位置にある端末との間の差分データを返します。
 地球の座標フレーム</a>。
 
 このイベントは通常 3 つのプロパティを返します。 
-<a href="index.html#rotation-data">`alpha`</a>、
-<a href="index.html#rotation-data">`beta`</a>、および 
-<a href="index.html#rotation-data">`gamma`</a>です。  Mobile Safari では、
+<a href="#rotation-data">`alpha`</a>、
+<a href="#rotation-data">`beta`</a>、および 
+<a href="#rotation-data">`gamma`</a>です。  Mobile Safari では、
 別のパラメータ<a href="https://developer.apple.com/library/safari/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">`webkitCompassHeading`</a> がコンパスの
 ヘッダーとともに返されます。
 
@@ -173,11 +173,10 @@ device orientation イベントは、端末が移動したり、向きが
 
 端末モーション イベントにはいくつかの用途があります。  次に例を示します。
 
-<ul>
-  <li>データをリフレッシュためのシェイク操作。</li>
-  <li>ゲームでキャラクターをジャンプさせたり動かす。</li>
-  <li>健康およびフィットネス用アプリ</li>
-</ul>
+* データをリフレッシュためのシェイク操作。
+* ゲームでキャラクターをジャンプさせたり動かす。
+* 健康およびフィットネス用アプリ
+
 
 ### サポートを確認して、イベントをリッスンする
 
@@ -186,7 +185,7 @@ device orientation イベントは、端末が移動したり、向きが
 オブジェクトにイベント リスナーを添付します。 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
 </pre>
 
 ### 端末モーション イベントの扱い
@@ -197,8 +196,8 @@ device orientation イベントは、端末が移動したり、向きが
 ハードウェアを備えていません。
 
 イベントは 4 つのプロパティを返します。 
-<a href="index.html#device-frame-coordinate">`accelerationIncludingGravity`</a>、 
-<a href="index.html#device-frame-coordinate">`acceleration`</a>、 
+<a href="#device-frame-coordinate">`accelerationIncludingGravity`</a>、 
+<a href="#device-frame-coordinate">`acceleration`</a>、 
 重力の影響を排除、 
 <a href="index.html#rotation-data">`rotationRate`</a> および `interval` です。
 
@@ -289,7 +288,7 @@ device orientation イベントは、端末が移動したり、向きが
 最大加速度です。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
 </pre>
 
 [Go!] ボタンをタップした後、ユーザーにジャンプを指示します。この間、

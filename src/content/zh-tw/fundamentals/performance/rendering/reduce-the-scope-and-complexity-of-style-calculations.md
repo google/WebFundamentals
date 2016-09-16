@@ -72,17 +72,17 @@ Note: 如果您有研究 Web Components 的話，值得注意的是此處的樣�
 ## 測量您的樣式重新計算成本 
  測量樣式重新計算成本的最簡單且最好的方法是使用 Chrome DevTools 的「時間軸」模式。 若要開始，開啟 DevTools、前往「時間軸」標籤、點擊「錄製」，並與你的網站互動。 當停止錄製時，您會看到如下圖所示。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg" class="g--centered" alt="DevTools 顯示長時間執行的樣式計算。">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/long-running-style.jpg"  alt="DevTools 顯示長時間執行的樣式計算。">
 
 頂部的長條表示每秒畫面，如您見到長條位在較低線之上 -- 60fps 線 -- 那麼您則有長時間執行的畫面。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg" class="g--centered" alt="在 Chrome DevTools 中放大問題區域。">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/frame-selection.jpg"  alt="在 Chrome DevTools 中放大問題區域。">
 
 如果您在如捲動的某個互動中遇到長時間執行的畫面，或某個其他互動，那麼這就值得進一步審查。
 
 如上述情況，如果您有一個很大的紫色區塊，按一下錄製，您就會得到更多的詳細資料。
 
-<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg" class="g--centered" alt="取得長時間執行樣式計算的詳細資訊。">
+<img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="取得長時間執行樣式計算的詳細資訊。">
 
 在這次擷取中，出現了花費剛超過 18ms 的長時間執行「重新計算樣式」事件，而它剛好在捲動時發生，造成體驗中出現明顯的顫動。
 

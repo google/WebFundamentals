@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ペイントは、最終的にユーザの画面に合成されるピクセルを書き込む処理です。 通常、ペイントはパイプライン内のすべてのタスクのうちで最も長く実行されるため、可能な限り避ける必要があります。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -21,33 +20,33 @@ description: ペイントは、最終的にユーザの画面に合成される�
 
 任意の要素の形状を変更すると要素のピクセルの修正が必要になるため、レイアウトをトリガーすると、常にペイントがトリガーされます。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg" class="g--centered" alt="フル ピクセル パイプライン。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame.jpg"  alt="フル ピクセル パイプライン。">
 
 背景、テキスト色、シャドウなどの非形状プロパティを変更した場合も、ペイントをトリガーすることができます。 これらのケースではレイアウトが必要とされず、パイプラインは次のようになります。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg" class="g--centered" alt="レイアウトなしのピクセル パイプライン。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/frame-no-layout.jpg" alt="レイアウトなしのピクセル パイプライン。">
 
 ## Chrome DevTools を使用して、ペイントのボトルネックを迅速に識別することができます。
 
 Chrome DevTools を使用して、ペイントされた領域を迅速に識別することができます。 DevTools に移動して、キーボードの Esc キーを押します。 表示されるパネルの [レンダリング] タブに移動し、[Show paint rectangles] を選択します。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg" class="g--centered" alt="DevTools の show paint rectangles オプション。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles.jpg"  alt="DevTools の show paint rectangles オプション。">
 
 Chrome で切り替えられるこのオプションを使用すると、ペイントが発生するたびに画面が緑色で点滅します。 画面の全体、またはペイントされるべきではなかった画面領域が緑色で点滅する場合は、その原因を詳しく調査する必要があります。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg" class="g--centered" alt="ペイントが発生するたびに画面が緑色で点滅します。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/show-paint-rectangles-green.jpg"  alt="ペイントが発生するたびに画面が緑色で点滅します。">
 
 Chrome DevTools タイムラインのオプションで、ペイント プロファイラの多くの情報が提供されます。 これを有効にするには、タイムラインに移動し、上部の [ペイント] ボックスを選択します。 このオプションはオーバーヘッドを伴い、パフォーマンス プロファイリングをゆがめるため、ペイント問題のプロファイルングを行うときのみ、有効にするよう留意してください。 実際にペイントされている対象を詳しく分析したいときに、このオプションを使用するのが最適です。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg" class="g--centered" alt="Chrome DevTools でペイント プロファイリングを有効にするトグル。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-toggle.jpg"  alt="Chrome DevTools でペイント プロファイリングを有効にするトグル。">
 
 ここからタイムライン レコーディングを実行できます。これにより、ペイント レコードはかなり詳細な情報を持つようになります。 フレーム内のペイント レコードをクリックすることで、そのフレームのペイント プロファイラにアクセスできます。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg" class="g--centered" alt="ペイント プロファイラを起動するボタン。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler-button.jpg"  alt="ペイント プロファイラを起動するボタン。">
 
 ペイント プロファイラをクリックすると、ビューが表示されます。このビューでは、ペイントされたもの、ペイントにかかった時間、必要であった個々のペイント コールを確認することができます。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg" class="g--centered" alt="Chrome DevTools ペイント プロファイラ。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/paint-profiler.jpg"  alt="Chrome DevTools ペイント プロファイラ。">
 
 このプロファイラでは、エリアと複雑性 (実際にはペイントにかかる時間) を分析し、ペイントを回避できない場合に修正個所を確定することができます。
 
@@ -55,7 +54,7 @@ Chrome DevTools タイムラインのオプションで、ペイント プロフ
 
 ペイントは常にメモリ内の単一の画像に対して行われるわけではありません。 実際、ブラウザは複数の画像、必要な場合はコンポジ層に対してペイントを行うことができます。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg" class="g--centered" alt="コンポジ層の表現">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/layers.jpg"  alt="コンポジ層の表現">
 
 このアプローチの利点は、通常は再ペイントされる要素、または変換によって画面上を移動する要素を、他の要素に影響を与えないで処理できることです。 これは Sketch、GIMP、Photoshop などのアート パッケージの手法と同じであり、個々のレイヤーを他のレイヤーに対して相互に処理および合成して最終的な画像を作成することができます。
 
@@ -90,7 +89,7 @@ Note: 位置が固定されている高 DPI 画面の要素は、自動的に独
 ## ペイントの複雑性の簡素化
 ペイントを実行しようとすると、特定の処理が他の処理よりも高価になります。 たとえば、ブラーを必要とする処理 (シャドウなど) は、赤いボックスの描画などよりもペイントに長い時間がかかります。 ただし、CSS に関して、これは必ずしも明白でありません。従来は非常に異なるパフォーマンス特性を示した `background: red;` と `box-shadow: 0, 4px, 4px, rgba(0,0,0,0.5);` が、現在も必ずそうであるとは限りません。
 
-<img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg" class="g--centered" alt="画面の一部をペイントする時間。">
+<img src="images/simplify-paint-complexity-and-reduce-paint-areas/profiler-chart.jpg"  alt="画面の一部をペイントする時間。">
 
 上記のペイント プロファイラを使用すると、効果を実現する他の方法を探す必要があるかどうかを判断できます。 より安価なスタイル集合を使用すること、または目的の結果を実現する他の手法を採用することが可能かどうかを検討してください。
 

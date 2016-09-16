@@ -2,25 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: ほとんどのウェブサイトは、マルチデバイスのエクスペリエンスに最適化されていません。モバイルやパソコンのほか、画面を持つすべてのデバイスでサイトを正しく表示できるようにするための基礎を学びます。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # レスポンシブ ウェブデザインの基礎 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 携帯端末からのウェブへのアクセスは急増し続けていますが、ウェブサイトのほとんどはそうした携帯端末向けに最適化されていません。多くの場合、携帯端末はディスプレイのサイズによる制約を受けるため、画面上でのコンテンツの配置の仕方には別のアプローチが必要です。
-
-
-{% comment %}
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="oK09n_PGhTo"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-{% endcomment %}
 
 
 ## Responsive Web Design Fundamentals
@@ -34,16 +24,17 @@ Explore what makes a site responsive and how some common responsive design patte
 
 [View Course](https://udacity.com/ud893){: .external }
 
+<div class="clearfix"></div>
 
 
 
 携帯電話、「ファブレット」、タブレット、パソコン、ゲーム機、テレビ、そしてウェアラブルに至るまで、数多くの画面サイズが存在します。画面サイズは常に変わり続けているため、現在だけでなく将来のあらゆる画面サイズに対応できるウェブサイトを構築することが重要です。
 
 
-  <video autoplay loop controls class="responsiveVideo">
-    <source src="videos/resize.webm" type="video/webm">
-    <source src="videos/resize.mp4" type="video/mp4">
-  </video>
+<video autoplay loop controls class="responsiveVideo">
+  <source src="videos/resize.webm" type="video/webm">
+  <source src="videos/resize.mp4" type="video/mp4">
+</video>
 
 
 レスポンシブ ウェブデザイン（[A List Apart の Ethan Marcotte](http://alistapart.com/article/responsive-web-design/)（リンク先は英語）が最初に定義）によって、ユーザーとその使用デバイスのニーズに対応することができます。デバイスのサイズと機能に基づいてレイアウトが変化します。たとえば、携帯電話ではコンテンツが 1 カラムのビューで表示され、タブレットでは同じコンテンツが 2 カラムで表示されます。
@@ -52,7 +43,6 @@ Explore what makes a site responsive and how some common responsive design patte
 ## ビューポートを設定する 
 
 ページをさまざまなデバイス向けに最適化するには、ドキュメントの head 部に meta viewport 要素を含める必要があります。meta viewport タグは、ページのサイズとスケーリングの制御方法についてブラウザに指示を与えます。
-
 
 
 
@@ -72,21 +62,10 @@ Explore what makes a site responsive and how some common responsive design patte
 
 meta viewport の値 width=device-width を使用すると、画面の幅をデバイス非依存ピクセルで合わせるようページに指示が与えられます。これにより、小さい携帯端末と大きいパソコン用モニターのどちらでレンダリングするかを問わず、さまざまな画面サイズに合わせてページのコンテンツをリフローすることができます。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="ビューポートが設定されていないページ">
-      例を表示する
-    
-  </div>
+<img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="ビューポートが設定されていないページ">
+<img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="ビューポートが設定されたページ">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="ビューポートが設定されたページ">
-      例を表示する
-    
-  </div>
-</div>
 
 一部のブラウザでは、横向きモードに回転した際もページが同じ幅に保たれ、リフローではなくズームによってコンテンツを画面サイズに合わせます。属性 initial-scale=1 を追加すると、デバイスの向きに関係なく CSS ピクセルとデバイス非依存ピクセルとの間に 1:1 の関係を確立するようブラウザに指示が与えられます。これにより、横向きにした場合にページ幅全体を利用できるようになります。
 
@@ -119,22 +98,9 @@ meta viewport タグを設定したモバイルサイトを構築する際、指
 
 CSS でページ要素の width に大きな絶対値を設定すると（以下の例を参照）、幅の狭い端末（iPhone などの、幅が 320 CSS ピクセルの端末）のビューポートでは div が広くなりすぎます。代わりに、width: 100% などの相対的な幅の値を使用してください。同様に、位置指定に大きな絶対値を使用すると、小さい画面では要素がビューポートの外に出てしまう可能性があるため注意が必要です。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="固定幅 344px の要素を持つページを iPhone で表示した場合の例。">
-      例を表示する
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="固定幅 344px の要素を持つページを Nexus 5 で表示した場合の例。">
-      例を表示する
-    
-  </div>
-</div>
-
+<img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="固定幅 344px の要素を持つページを iPhone で表示した場合の例。" class="attempt-left">
+<img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="固定幅 344px の要素を持つページを Nexus 5 で表示した場合の例。" class="attempt-right">
+<div class="clearfix"></div>
 
 
 ## CSS メディア クエリを使用してレスポンシブにする 
@@ -219,14 +185,11 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 
 以下の例で説明します。
 
-<figure>
-  
-    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="メディア クエリを使用してサイズ変更時にプロパティを変更するページのプレビュー。">
-  
-</figure>
+<img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="メディア クエリを使用してサイズ変更時にプロパティを変更するページのプレビュー。">
+
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * ブラウザの幅が <b>0px</b>～<b>640px</b> の場合、max-640px.css が適用されます。
@@ -288,33 +251,24 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 最初に紹介した例（[天気予報](/web/fundamentals/design-and-ui/responsive/））で作業していきます。
 まず、小さい画面での予報の外観を整えます。
 
-<figure>
-  
-    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="小さい画面に表示された天気予報のプレビュー。">
-  
-</figure>
+<img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="小さい画面に表示された天気予報のプレビュー。">
+
 
 次に、要素の間の空白が広くなりすぎて予報が見づらくなるまで、ブラウザのサイズを大きくします。やや主観的な判断になりますが、サイズが 600px を超えると余白は明らかに広すぎます。
 
-<figure>
-  
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="ページの幅を広げた天気予報のプレビュー。">
-  
-</figure>
+<img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="ページの幅を広げた天気予報のプレビュー。">
+
 
 600px にブレークポイントを設定するには、2 つのスタイルシートを新たに作成して、そのうちの 1 つをブラウザの幅が 600px 以下の場合に使用し、もう 1 つを 600px より広い場合に使用します。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 最後に、CSS をリファクタリングします。この例では、フォント、アイコン、基本的な配置、色などの共通のスタイルが weather.css に記述されています。そのうえで、小さい画面用の具体的なレイアウトが weather-small.css に、大きい画面用のスタイルが weather-large.css に記述されています。
 
-<figure>
-  
-    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  
-</figure>
+<img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
+
 
 ### 必要に応じてマイナー ブレークポイントを設定する
 
@@ -323,43 +277,32 @@ CSS でページ要素の width に大きな絶対値を設定すると（以下
 まず、小さい画面のレイアウトを最適化します。このケースでは、ビューポートの幅が 360px を超えた際にフォントを大きくするようにします。次に、十分なスペースがある場合に、2 段重ねで表示されている最高気温と最低気温を分割し、同じ行に横に並べて表示します。また、天気のアイコンを少し大きくします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"  adjust_indentation="auto" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
+<img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints." class="attempt-left">
+<img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints." class="attempt-right">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
-</div>
 
 大きい画面の場合も同様に、予報パネルが画面幅いっぱいまで広がらないよう、予報パネルの最大幅を制限することをおすすめします。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg" adjust_indentation="auto" %}
 </pre>
 
 ### テキストを読みやすいよう最適化する
 
 従来より、読みやすいカラム幅とするには、1 行あたりの文字数を 70～80 文字（英単語で約 8～10 語）とすることが理想とされています。従って、テキスト ブロックの幅が約 10 語分広がるごとにブレークポイントの設定を検討する必要があります。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="マイナー ブレークポイントを追加する前。">
-  </div>
+<img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="マイナー ブレークポイントを追加する前。" class="attempt-left">
+<img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="マイナー ブレークポイントを追加した後。" class="attempt-right">
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="マイナー ブレークポイントを追加した後。">
-  </div>
-</div>
 
 上記のブログ記事の例を詳しく見てみましょう。小さい画面では、1em の Roboto フォントで 1 行あたりの語数がちょうど 10 語になりますが、大きい画面ではブレークポイントが必要となります。この例では、ブラウザの幅が 575px を超えた場合の最適なコンテンツの幅は 550px です。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading" adjust_indentation="auto" %}
 </pre>
 
 ### コンテンツを完全に非表示にしないようにする

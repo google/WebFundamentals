@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 最初のレンダリングをできる限り早くするには、クリティカル リソース数の最小化、クリティカル バイト数の最小化、クリティカル パス長の最小化という 3 つの点で最適化を行う必要があります。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

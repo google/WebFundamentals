@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 最適化するには、測定できなければなりません。幸運なことに、Navigation Timing API によって、クリティカル レンダリング パスの各ステップを測定する上で必要なツールがすべて手に入ります。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

@@ -2,12 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: CSS Containment という新しい仕様によって、ブラウザが行うスタイル、レイアウト、描画の範囲を制限できるようになります。
 
+{# wf_published_on: 2016-06-01 #}
+{# wf_updated_on: 2016-06-01 #}
 
 # Chrome 52 に CSS Containment が導入 {: .page-title }
 
 
-Translated By: 
-{% include "web/_shared/contributors/myakura.html" %}
+
 
 
 <style>
@@ -150,3 +151,6 @@ CSS Containment は `contain` という新しいプロパティに以下の値�
 * [CSS Containment 仕様](https://drafts.csswg.org/css-containment/)
   * [CSS Containment 仕様 日本語訳](http://triple-underscore.github.io/css-containment-ja.html)
 * [Chrome Statusでのステータス](https://www.chromestatus.com/features/6522186978295808)
+
+Translated By: 
+{% include "web/_shared/contributors/myakura.html" %}
