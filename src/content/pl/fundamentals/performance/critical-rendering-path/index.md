@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Optymalizacja krytycznej ścieżki renderowania obejmuje nadanie różnych priorytetów wyświetlanej treści zależnie od tego, jakie działania na stronie chce głównie podejmować użytkownik.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

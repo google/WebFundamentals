@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Drzewo renderowania powstaje z połączenia drzew CSSOM i DOM. Wykorzystuje się je do wyznaczania rozmieszczenia każdego widocznego elementu na stronie, na jego podstawie procedura malowania renderuje piksele na ekranie. Aby osiągnąć najwyższą wydajność renderowania, ważne jest wykonanie optymalizacji każdego z powyższych etapów.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -44,7 +44,7 @@ Do tej chwili określaliśmy, które węzły powinny być widoczne, oraz ich sty
 Przeglądarka rozpoczyna wyznaczanie dokładnego rozmiaru i położenia każdego obiektu od korzenia drzewa renderowania i przeszukuje całe drzewo, obliczając geometrię każdego obiektu na stronie. Oto prosty przykład:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Sekcja body powyższej strony zawiera dwa zagnieżdżone elementy div: pierwszy (nadrzędny) element div określa wartość rozmiaru wyświetlania jako 50% szerokości widocznego obszaru, drugi (zawarty w nadrzędnym elemencie div) określa szerokość jako 50% elementu nadrzędnego &ndash; tzn. 25% szerokości widocznego obszaru.

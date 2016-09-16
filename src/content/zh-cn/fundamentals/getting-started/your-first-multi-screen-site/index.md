@@ -61,8 +61,8 @@ Translated By:
 我们也拿出了窄、宽视口下粗略的信息架构和布局。
 
 <div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="窄视口 IA">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="宽视口 IA">
+  <img class="attempt-left" src="images/narrowviewport.png" alt="窄视口 IA">
+  <img  class="attempt-right" src="images/wideviewport.png" alt="宽视口 IA">
 </div>
 
 这就可以轻松转化出基础页面的大体分块，我们将在这个项目的剩下部分使用。
@@ -164,8 +164,8 @@ Note: 样式很快就能看到
 我们已经构建好站点轮廓，也已确认所有主要的结构元素。还确保我们的所有相关内容准备就绪，能够满足我们的商业需求。
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="Content">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
+  <img class="attempt-left" src="images/content.png" alt="Content">
+  <img class="attempt-right" src="images/narrowsite.png" alt="">
 </div>
 
 你会注意到，现在页面看起来非常糟糕；这其实是故意的。内容是所有页面最重要的组成，我们需要确保我们有一个坚实的信息架构和密度。本手册给我们打下良好的基础。我们将在下一节中样式化内容。

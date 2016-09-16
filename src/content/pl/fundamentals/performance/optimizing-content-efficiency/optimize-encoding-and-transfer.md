@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Po wyeliminowaniu wszystkich zbędnych zasobów następnym krokiem jest minimalizacja łącznego rozmiaru pozostałych do pobrania zasobów &ndash; tzn. ich kompresja z użyciem algorytmów dostosowanych do treści i algorytmów ogólnego przeznaczenia (GZip).
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -72,7 +72,7 @@ Możesz się jednak zastanawiać, jak to przekłada się na optymalizację naszy
 Najlepszym sposobem kompresji powtarzających się i zbędnych danych jest ich całkowita eliminacja. Nie można oczywiście usuwać dowolnych danych, ale w niektórych kontekstach możemy wykorzystać wiedzę o treści, formacie danych i jego właściwościach do znacznej redukcji rozmiaru użytecznych danych bez przekłamywania ich znaczenia.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Rozważmy prostą stronę HTML powyżej i trzy różne typy treści na niej obecne: kod HTML, CSS i JavaScript. Do każdego typu treści odnoszą się różne zasady poprawności (dla znaczników HTML i CSS oraz kodu JavaScript), różne zasady wyróżniania komentarzy i tak dalej. Jak można zredukować rozmiar tej strony?
@@ -81,9 +81,9 @@ Rozważmy prostą stronę HTML powyżej i trzy różne typy treści na niej obec
 * Inteligentny algorytm kompresji kodu CSS może zaobserwować, że dla elementu ".awesome-container" użyto nieefektywnego sposobu określania reguł i zwinąć dwie deklaracje do jednej bez zmiany żadnych innych stylów. Pozwoli to wyeliminować jeszcze więcej danych.
 * Znaki niedrukowalne (spacje i tabulatory) zwiększają komfort pracy programisty ze znacznikami HTML i CSS oraz kodem JavaScript. Kolejny algorytm kompresji mógłby usunąć wszystkie te spacje i tabulatory.
 
-^
+
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Po zastosowaniu wszystkich powyższych zaleceń rozmiar strony zmniejsza się z 406 do 150 znaków &ndash; redukcja rozmiaru o 63%! To prawda, że kod strony traci na czytelności, ale to nie problem: możemy zachować oryginalną stronę jako "wersję rozwojową" i wykonywać powyższe czynności za każdym razem, gdy konieczne będzie umieszczenie nowej wersji strony w witrynie.

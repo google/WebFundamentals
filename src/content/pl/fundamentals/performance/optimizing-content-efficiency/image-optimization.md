@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Obrazy często stanowią większość danych pobieranych przez stronę, jak również zajmują dużo miejsca na stronie. Z tego względu optymalizacja obrazów może często przynosić największe oszczędności w zakresie ilości pobranych danych i najwyższe wzrosty wydajności wczytywania stron witryny: im mniej danych musi pobrać przeglądarka, tym mniejsza konkurencja o pasmo u klienta i tym szybciej przeglądarka może pobierać i renderować użyteczną treść na ekranie.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
@@ -46,19 +46,18 @@ Jeśli kiedykolwiek zaczniesz kodować tekst na obrazie, wstrzymaj się i poświ
 
 Po ustaleniu, że to właśnie obraz pozwoli osiągnąć zamierzony efekt, następnym ważnym krokiem jest wybór odpowiedniego formatu:
 
-&nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Grafika wektorowa</b>
-    <img class="center" src="images/vector-zoom.png" alt="Powiększony obraz wektorowy">
-  </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Grafika rastrowa</b>
-    <img src="images/raster-zoom.png" alt="Powiększony obraz rastrowy">
-  </div>
-</div>
+<figure class="attempt-left">
+  <img class="center" src="images/vector-zoom.png" alt="Powiększony obraz wektorowy">
+  <figcaption>Grafika wektorowa</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/raster-zoom.png" alt="Powiększony obraz rastrowy">
+  <figcaption>Grafika rastrowa</figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 * W przypadku [grafiki wektorowej](http://pl.wikipedia.org/wiki/Grafika_wektorowa) obraz jest reprezentowany przez linie, punkty i wielokąty.
 * W przypadku [grafiki rastrowej](http://pl.wikipedia.org/wiki/Grafika_rastrowa) wartości każdego z pikseli są kodowane w prostokątnej matrycy.
@@ -367,9 +366,6 @@ Nie bój się eksperymentować z parametrami każdego z programów do kompresji.
 
 ## Przesyłanie skalowanych obrazów
 
-## TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
 
 
 Optymalizacja obrazów sprowadza się do dwóch kroków: optymalizacji liczby bajtów służących do zakodowania każdego z pikseli obrazu i optymalizacji łącznej liczby pikseli: rozmiar pliku obrazu zależy od łącznej liczby pikseli pomnożonej przez liczbę bajtów wymaganych do zakodowania każdego z pikseli. Ni mniej, ni więcej.

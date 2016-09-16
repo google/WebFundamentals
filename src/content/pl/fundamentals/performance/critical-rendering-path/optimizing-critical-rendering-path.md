@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aby maksymalnie skrócić czas wymagany do przeprowadzenia pierwszego renderowania strony, musimy zminimalizować trzy zmienne: liczbę krytycznych zasobów, liczbę krytycznych bajtów i długość ścieżki krytycznej.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

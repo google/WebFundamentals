@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Domyślnie kod CSS jest traktowany jako zasób blokujący renderowanie, co oznacza, że przeglądarka wstrzymuje renderowanie przetwarzanej treści do utworzenia modelu CSSOM. Pamiętaj, by maksymalnie uprościć znaczniki CSS, dostarczyć je możliwie najszybciej i korzystać z mediów takich typów oraz takich zapytań o media, by nie blokowały renderowania.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -23,32 +23,15 @@ W poprzedniej sekcji dowiedzieliśmy się, że tworzenie drzewa renderowania w k
 - 'Przeglądarka pobiera wszystkie zasoby CSS, niezależnie od ich własności blokujących lub nieblokujących.'
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Gazeta NYTimes ze stylami CSS</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="Gazeta NYTimes bez stylów CSS">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Gazeta NYTimes bez stylów CSS (FOUC)</b>
-    <img src="images/nytimes-nocss-device.png" alt="Gazeta NYTimes bez stylów CSS">
-
-  </div>
-</div>
-
-{% comment %}
-<table>
-<tr>
-<td>Gazeta NYTimes ze stylami CSS</td>
-<td>Gazeta NYTimes bez stylów CSS</td>
-</tr>
-<tr>
-<td><img src="images/nytimes-css-device.png" alt="Gazeta NYTimes ze stylami CSS" class="center"></td>
-<td><img src="images/nytimes-nocss-device.png" alt="Gazeta NYTimes bez stylów CSS" class="center"></td>
-</tr>
-</table>
-{% endcomment %}
+<figure class="attempt-left">
+  <img class="center" src="images/nytimes-css-device.png" alt="Gazeta NYTimes bez stylów CSS">
+  <figcaption>Gazeta NYTimes ze stylami CSS</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/nytimes-nocss-device.png" alt="Gazeta NYTimes bez stylów CSS">
+  <figcaption>Gazeta NYTimes bez stylów CSS (FOUC)</figcaption>
+</figure>
+<div class="clearfix"></div>
 
 W powyższym przykładzie witryny gazety NYTimes z i bez użycia stylów CSS zademonstrowano, dlaczego renderowanie jest blokowane do momentu udostępnienia arkuszy CSS &ndash; bez arkuszy CSS strona jest w zasadzie niezdatna do użytku. Sposób wyświetlania przedstawiony po prawej stronie często nazywa się widokiem FOUC (Flash of Unstyled Content). Z tego względu przeglądarka blokuje renderowanie, aż obydwa modele &ndash; DOM i CSSOM &ndash; staną się dostępne.
 

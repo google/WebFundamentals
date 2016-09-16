@@ -2,23 +2,22 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Przeczytaj, jak w prosty sposób umieścić film na stronie i upewnić się, że użytkownicy będą mogli wygodnie go oglądać na dowolnym urządzeniu.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Wideo {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-Użytkownicy lubią filmy, bo zwykle są one ciekawe i treściwe. Na urządzeniach mobilnych filmy pozwalają przystępnie prezentować wiele informacji. Obciążają jednak łącze i nie zawsze działają tak samo na każdej platformie. Oczekiwanie na załadowanie filmu irytuje użytkowników, podobnie jak brak reakcji na kliknięcie przycisku odtwarzania. Przeczytaj, jak w prosty sposób umieścić film na stronie i upewnić się, że użytkownicy będą mogli wygodnie go oglądać na dowolnym urządzeniu.
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+Użytkownicy lubią filmy, bo zwykle są one ciekawe i treściwe. Na urządzeniach mobilnych filmy pozwalają przystępnie prezentować wiele informacji. Obciążają jednak łącze i nie zawsze działają tak samo na każdej platformie. Oczekiwanie na załadowanie filmu irytuje użytkowników, podobnie jak brak reakcji na kliknięcie przycisku odtwarzania. Przeczytaj, jak w prosty sposób umieścić film na stronie i upewnić się, że użytkownicy będą mogli wygodnie go oglądać na dowolnym urządzeniu.
+
+<div class="clearfix"></div>
 
 
 ## Dodawanie filmu 
@@ -60,7 +59,7 @@ Element `<source>` pozwala określić wiele formatów zastępczych, jeśli przeg
 Na przykład:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Podczas analizowania tagów `<source>` przeglądarka korzysta z opcjonalnego atrybutu `type`, by ustalić, który plik ma pobrać i odtworzyć. Jeśli przeglądarka obsługuje WebM, odtworzy plik chrome.webm. W przeciwnym razie sprawdzi, czy może odtworzyć film w formacie MPEG-4.
@@ -103,7 +102,7 @@ Note: - Interfejs API Media Fragments działa na większości platform z wyjątk
 
 Użyj narzędzi dla programistów w przeglądarce, by znaleźć ciąg `Accept-Ranges: bytes` w nagłówkach odpowiedzi:
 
-<img class="center" alt="Zrzut ekranu z Narzędziami Chrome dla programistów &ndash; `Accept-Ranges: bytes`" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Zrzut ekranu z Narzędziami Chrome dla programistów &ndash; `Accept-Ranges: bytes`" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Dołączanie obrazu plakatu
 
@@ -119,15 +118,10 @@ Plakat może też być obrazem zastępczym, gdy atrybut `src` elementu video jes
 
 Tak wygląda porównanie filmu z obrazem plakatu i bez niego (plakat jest w odcieniach szarości na dowód, że nie jest to film):
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Zrzut ekranu Chrome na Androida, orientacja pionowa &ndash; bez plakatu" src="images/Chrome-Android-video-no-poster.png">
-  </div>
+<img class="attempt-left" alt="Zrzut ekranu Chrome na Androida, orientacja pionowa &ndash; bez plakatu" src="img/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Zrzut ekranu Chrome na Androida, orientacja pionowa &ndash; z plakatem" src="img/Chrome-Android-video-poster.png">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Zrzut ekranu Chrome na Androida, orientacja pionowa &ndash; z plakatem" src="images/Chrome-Android-video-poster.png">
-  </div>
-</div>
 
 
 ## Alternatywne rozwiązania na starsze platformy 
@@ -234,11 +228,6 @@ Aby zobaczyć, jak to działa, skorzystaj z <a href="https://googlesamples.githu
 Dla użytkowników wielkość ma znaczenie.
 
 
-### TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
-
-
 
 ### Sprawdzanie rozmiaru wideo
 
@@ -251,10 +240,10 @@ Aby sprawdzić rozmiar, w którym film został zakodowany, użyj właściwości 
 Gdy elementy video nie mieszczą się w widocznym obszarze, mogą wyjść poza swój kontener, uniemożliwiając użytkownikowi obejrzenie filmu i skorzystanie
 z elementów sterujących.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Zrzut ekranu z Chrome na Androida, orientacja pionowa: pozbawiony stylu element video wychodzi poza widoczny obszar" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Zrzut ekranu z Chrome na Androida, orientacja pozioma: pozbawiony stylu element video wychodzi poza widoczny obszar" src="images/Chrome-Android-landscape-video-unstyled.png">
-</div>
+<img class="attempt-left" alt="Zrzut ekranu z Chrome na Androida, orientacja pionowa: pozbawiony stylu element video wychodzi poza widoczny obszar" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Zrzut ekranu z Chrome na Androida, orientacja pozioma: pozbawiony stylu element video wychodzi poza widoczny obszar" src="img/Chrome-Android-landscape-video-unstyled.png">
+<div class="clearfix"></div>
+
 
 Do kontrolowania wymiarów elementu video możesz używać JavaScriptu lub CSS. Biblioteki i wtyczki JavaScript takie jak [FitVids](//fitvidsjs.com/) pozwalają zachować odpowiedni współczynnik proporcji i rozmiar nawet w przypadku filmów Flash z YouTube lub innych źródeł.
 
@@ -298,16 +287,16 @@ Orientacja urządzenia nie jest problemem na monitorach komputerowych ani laptop
 
 Safari na iPhonie dobrze sobie radzi z przełączaniem się między orientacją pionową i poziomą:
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPhonie, orientacja pionowa" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPhonie, orientacja pozioma" src="images/iPhone-video-playing-landscape.png">
-</div>
+<img class="attempt-left" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPhonie, orientacja pionowa" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPhonie, orientacja pozioma" src="img/iPhone-video-playing-landscape.png">
+<div class="clearfix"></div>
+
 
 Na iPadzie oraz w Chrome na Androida orientacja urządzenia może stanowić problem.
 Na przykład niedostosowany film odtwarzany na iPadzie w orientacji poziomej wygląda tak:
 
 <img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPadzie Retina, orientacja pozioma"
-src="images/iPad-Retina-landscape-video-playing.png">
+src="img/iPad-Retina-landscape-video-playing.png">
 
 Aby rozwiązać wiele problemów z układem związanych z orientacją urządzenia, przypisz elementowi video styl CSS z ustawieniem `width: 100%` lub `max-width: 100%`. Możesz też zastanowić się nad wykorzystaniem pełnego ekranu.
 
@@ -315,15 +304,15 @@ Aby rozwiązać wiele problemów z układem związanych z orientacją urządzeni
 
 Na poszczególnych platformach filmy są odtwarzane w różny sposób. Safari na iPhonie wyświetla element video w treści strony internetowej, ale film odtwarza w trybie pełnoekranowym:
 
-<img class="center" alt="Zrzut ekranu z elementem video na iPhonie, orientacja pionowa" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="Zrzut ekranu z elementem video na iPhonie, orientacja pionowa" src="img/iPhone-video-with-poster.png">
 
 W Androidzie użytkownicy mogą włączyć tryb pełnoekranowy, klikając jego ikonę. Domyślnie film jest odtwarzany w treści strony:
 
-<img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Chrome na Androida, orientacja pionowa" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Chrome na Androida, orientacja pionowa" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 Safari na iPadzie odtwarza film w treści strony:
 
-<img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPadzie Retina, orientacja pozioma" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Zrzut ekranu z filmem odtwarzanym w Safari na iPadzie Retina, orientacja pozioma" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### Sterowanie wyświetlaniem treści na pełnym ekranie
 
@@ -383,7 +372,7 @@ Note: Element track działa w Chrome na Androida, Safari na iOS i wszystkich wsp
 
 Tak wyglądają napisy z elementu track:
 
- <img class="center" alt="Zrzut ekranu z napisami z elementu track w Chrome na Androida" src="images/Chrome-Android-track-landscape-5x3.jpg">
+<img class="center" alt="Zrzut ekranu z napisami z elementu track w Chrome na Androida" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Dodawanie elementu track
 

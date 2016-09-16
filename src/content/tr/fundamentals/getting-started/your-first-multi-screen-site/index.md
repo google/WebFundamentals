@@ -52,8 +52,8 @@ Asagidakilere ihtiyacimiz oldugunu belirledik:
 Ayrica, hem dar hem de genis görüntü alanlari için kaba bir bilgi mimarisi ve yerlesim de olusturduk.
 
 <div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="Dar Görüntü Alani IA">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="Genis Görüntü Alani IA">
+  <img class="attempt-left" src="images/narrowviewport.png" alt="Dar Görüntü Alani IA">
+  <img  class="attempt-right" src="images/wideviewport.png" alt="Genis Görüntü Alani IA">
 </div>
 
 Bu, projenin geri kalaninda kullanacagimiz iskelet sayfanin kaba bölümlerine kolayca dönüstürülebilir.
@@ -163,8 +163,8 @@ Bizim sitemizde, yalnizca Sartlar ve Kosullar'a, bir Iletisim sayfasina ve sosya
 Sitenin ana hatlarini olusturduk ve ana yapisal ögelerin tümünü tanimladik.  Ayrica, ilgili tüm içerigin is gereksinimlerimizi karsilamak üzere hazir ve yerinde oldugundan emin olduk.
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="içerik">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
+  <img class="attempt-left" src="images/content.png" alt="içerik">
+  <img class="attempt-right" src="images/narrowsite.png" alt="">
 </div>
 
 Sayfanin su anda kötü göründügünü fark etmissinizdir; bunu bilinçli olarak böyle yaptik. 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Wykrywanie i usuwanie wąskich gardeł ograniczających wydajność krytycznej ścieżki renderowania wymaga dobrej znajomości typowych problemów. Ten praktyczny przewodnik pomaga określić typowe schematy wydajności i zoptymalizować strony.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -27,7 +27,7 @@ Jeszcze jedna rzecz, zanim rozpoczniemy. Dotychczas koncentrowaliśmy się tylko
 ## Strona `Witaj Świecie`
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Zaczynamy od podstawowych znaczników HTML i jednego obrazu, bez CSS czy JavaScriptu. To najprostsza wersja. Otwieramy oś czasu sieci w Narzędziach Chrome dla programistów i sprawdzamy uzyskany wykres zasobów:
@@ -48,7 +48,7 @@ Zdarzenie `load` (nazywane też `onload`) zostaje zablokowane w przypadku obrazu
 Nasza strona `Witaj Świecie` z zewnątrz może wydawać się prosta, ale w środku sporo się dzieje, by mogła działać. W praktyce potrzebujemy czegoś więcej niż tylko kodu HTML &ndash; zwykle przydaje się arkusz stylów CSS i co najmniej jeden skrypt, który zwiększa interaktywność strony. Dodajemy oba te elementy i oceniamy wyniki:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _Przed dodaniem JavaScriptem i CSS: _
@@ -81,7 +81,7 @@ Wysyłamy jedno żądanie mniej, ale czasy zdarzeń onload i domContentLoaded s�
 Po pierwsze, wszystkie skrypty wbudowane blokują parser, ale przy zewnętrznych możemy dodać słowo kluczowe `async`, by go odblokować. Rezygnujemy z wbudowanego kodu i sprawdzamy wyniki:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _JavaScript, który blokuje parser (zewnętrzny):_
@@ -97,7 +97,7 @@ Znacznie lepiej. Zdarzenie domContentLoaded następuje krótko po przeanalizowan
 Kolejne rozwiązanie to wbudować zarówno kod JavaScript, jak i CSS:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, wbudowany CSS, wbudowany JS" class="center">
@@ -114,7 +114,7 @@ Teraz cofniemy się i spróbujemy określić ogólne schematy wydajności...
 Najprostsza możliwa strona składa się tylko ze znaczników HTML &ndash; bez CSS, JavaScriptu czy innych typów zasobów. Aby ją wyświetlić, przeglądarka musi wysłać żądanie, poczekać, aż otrzyma dokument HTML, przeanalizować go, utworzyć model DOM, a na koniec wyrenderować go na ekranie:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Krytyczna ścieżka renderowania: `Witaj Świecie`" class="center">
@@ -124,7 +124,7 @@ Najprostsza możliwa strona składa się tylko ze znaczników HTML &ndash; bez C
 Teraz przyjrzymy się tej samej stronie, ale z zewnętrznym plikiem CSS:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="Krytyczna ścieżka renderowania: DOM + CSSOM" class="center">
@@ -151,7 +151,7 @@ Do utworzenia drzewa renderowania potrzebujemy zarówno pliku HTML, jak i CSS, w
 Teraz dodamy do strony plik JavaScript.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Dodaliśmy plik app.js, który jest zewnętrznym zasobem JavaScript na stronie. Wiemy już, że blokuje on parser (czyli to zasób krytyczny). Co gorsza, przed wykonaniem kodu JavaScript przeglądarka musi wstrzymać działanie i poczekać na model CSSOM. JavaScript może go odczytywać, więc przeglądarka najpierw pobiera plik `style.css` i tworzy CSSOM.
@@ -169,7 +169,7 @@ Mamy teraz trzy zasoby krytyczne, które łącznie dają 11&nbsp;KB danych kryty
 Po rozmowie z programistami witryny stwierdzamy, że plik JavaScript dodany do strony nie wymaga wstrzymywania pracy przeglądarki. Zawarty w nim kod do analityki itp. nie musi blokować renderowania strony. Dzięki temu możemy dodać atrybut `async` do tagu script, by odblokować parser:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="Krytyczna ścieżka renderowania: DOM, CSSOM, asynchroniczny JavaScript" class="center">
@@ -185,7 +185,7 @@ W wyniku tego strona znowu ma tylko dwa zasoby krytyczne (HTML i CSS), minimalna
 Na koniec przypuśćmy, że arkusz stylów CSS jest potrzebny tylko do drukowania. Jak zmieni się ścieżka?
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="Krytyczna ścieżka renderowania: DOM, nieblokujący CSS i asynchroniczny JavaScript" class="center">

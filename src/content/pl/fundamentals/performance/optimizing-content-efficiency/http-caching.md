@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Pobieranie przez sieć jest powolne i kosztowne: długie odpowiedzi na zapytania wymagają od klienta i serwera wielu kolejnych cykli wymiany danych, co blokuje na pewien czas przeglądarkę, ponadto przyczynia się do zwiększenia opłat za transfer. Z tego względu zdolność do buforowania i ponownego wykorzystania poprzednio pobranych zasobów jest kluczowym aspektem optymalizacji wydajności.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 

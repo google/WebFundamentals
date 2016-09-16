@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Najszybszym i najbardziej optymalnym zasobem jest zasób, którego w ogóle nie trzeba przesyłać. Czy pamiętasz o audytowaniu swoich zasobów? Regularnie audytuj swoje zasoby, by zagwarantować, że każdy zapewnia użytkownikom najwyższy poziom wygody.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

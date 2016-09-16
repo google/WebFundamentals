@@ -1,8 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Zagadnienie typografii ma kluczowe znaczenie w dążeniu do poprawności w projektowaniu, budowaniu marki, czytelności i dostępności dla niepełnosprawnych. Czcionki sieci web pozwalają osiągnąć powyższe cele i zwiększyć funkcjonalność tekstu: taki tekst można zaznaczać, wyszukiwać, dowolnie powiększać, jest przyjazny dla urządzeń o wysokiej rozdzielczości, zapewnia ostrość renderowania niezależnie od rozmiaru i rozdzielczości ekranu. Czcionki sieci web mają kluczowe znaczenie dla dobrej praktyki projektowania oraz zagwarantowania użytkownikom wygody i wydajności.
+description: Zagadnienie typografii ma kluczowe znaczenie w dążeniu do poprawności w projektowaniu, budowaniu marki, czytelności i dostępności dla niepełnosprawnych. Czcionki sieci web pozwalają osiągnąć powyższe cele i zwiększyć funkcjonalność tekstu: taki tekst można zaznaczać, wyszukiwać, dowolnie powiększać, jest przyjazny dla urządzeń o wysokiej rozdzielczości, zapewnia ostrość renderowania niezależnie od rozmiaru i rozdzielczości ekranu. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
@@ -43,7 +42,7 @@ Co to dla nas oznacza? Nie istnieje jeden format obsługiwany przez wszystkie pr
 * Przesyłaj wariant WOFF do większości przeglądarek
 * Przesyłaj wariant TTF do starszych przeglądarek na Androidzie (starszych od wersji 4.4)
 * Przesyłaj wariant EOT do starszych przeglądarek IE (starszych od wersji 9)
-^
+
 
 Note: Prawdę powiedziawszy, istnieje również <a href='http://caniuse.com/svg-fonts'>kontener czcionek SVG</a>, ale nigdy nie obsługiwała go ani przeglądarka IE, ani Firefox, a obecnie oznaczono go jako przestarzały w przeglądarce Chrome. Z tego względu ma on ograniczone zastosowanie i nie będzie omawiany w tym przewodniku.
 
@@ -73,36 +72,36 @@ Note: Zastanów się nad wykorzystaniem <a href='http://en.wikipedia.org/wiki/Zo
 
 W każdej deklaracji reguły @font-face określa się nazwę rodziny czcionek, dzięki której może ona pełnić rolę logicznej grupy wielu deklaracji, [własności czcionki](http://www.w3.org/TR/css3-fonts/#font-prop-desc), takie jak styl, grubość, rozciągnięcie i [deskryptor źródłowy](http://www.w3.org/TR/css3-fonts/#src-desc) zawierający uporządkowaną według ważności listę lokalizacji tego zasobu czcionki.
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
+
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 Przede wszystkim zwróć uwagę, że w powyższych przykładach określono jedną rodzinę czcionek _Awesome Font_ o dwóch stylach (normalny i _kursywa_), z których każdy jest skojarzony z innym zestawem zasobów czcionek. Z kolei każdy deskryptor `src` zawiera uporządkowaną według ważności, rozdzieloną przecinkami, listę wariantów zasobu: 
 
 * Dyrektywa `local()` umożliwia odwoływanie się, wczytywanie i używanie czcionek zainstalowanych lokalnie.
 * Dyrektywa `url()` umożliwia wczytywanie czcionek zewnętrznych. Można do niej dołączyć opcjonalną wskazówkę `format()` w celu opisania formatu czcionki opisanej podanym adresem URL.
 
-^
+
 Note: Jeśli strona nie odwołuje się do jednej z domyślnych czcionek systemowych, w praktyce rzadko są one zainstalowane lokalnie, zwłaszcza w przypadku urządzeń mobilnych, na których instalacja dodatkowych czcionek jest w zasadzie niemożliwa. Z tego powodu należy zawsze udostępniać listę zewnętrznych lokalizacji czcionek.
 
 Gdy przeglądarka ustali, że dana czcionka jest potrzebna, odczytuje w określonej kolejności podaną listę zasobów i próbuje wczytać odpowiedni zasób. Korzystając z powyższego przykładu:
@@ -179,13 +178,9 @@ Każda rodzina czcionek składa się z wielu wariantów stylistycznych (normalne
 
 Powyższa ilustracja przedstawia rodzinę czcionek o trzech różnych grubościach: 400 (normalna), 700 (pogrubiona) i 900 (bardzo pogrubiona). Wszystkie inne (oznaczone kolorem szarym) warianty pomiędzy powyższymi są automatycznie mapowane przez przeglądarkę do najbliższego dostępnego wariantu. 
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Po określeniu grubości, dla której nie istnieje dedykowana czcionka, używana jest czcionka o najbliższej grubości. Generalnie warianty pogrubione są mapowane do wariantów o większych grubościach, a warianty normalne do wariantów o mniejszych grubościach.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algorytm dopasowywania czcionek CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Po określeniu grubości, dla której nie istnieje dedykowana czcionka, używana jest czcionka o najbliższej grubości. Generalnie warianty pogrubione są mapowane do wariantów o większych grubościach, a warianty normalne do wariantów o mniejszych grubościach.
+> > <a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algorytm dopasowywania czcionek CSS3</a>
+
 
 Podobna procedura obowiązuje dla różnych wariantów _kursywy_. Projektant czcionek ma kontrolę nad tym, które warianty zostaną utworzone, a my mamy kontrolę nad tym, których wariantów użyjemy na stronie &ndash; a ponieważ każdy wariant wymaga osobnego pobierania, dobrze jest ograniczyć ich liczbę do minimum. Na przykład możemy określić dwa warianty naszej rodziny czcionek _Awesome Font_: 
 
@@ -222,13 +217,8 @@ W powyższym przykładzie zadeklarowano rodzinę czcionek _Awesome Font_ składa
 
 <img src="images/font-synthesis.png" class="center" alt="Synteza czcionek">
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Autorzy stron powinni mieć świadomość, że syntetyzowane czcionki mogą być zupełnie nieodpowiednie, np. w przypadku cyrylicy wersje z kursywą są zupełnie odmienne od normalnych. Zawsze lepiej jest polegać na rzeczywiście pobranej czcionce kursywy, niż na wersji zsyntetyzowanej.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">Styl czcionki CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Autorzy stron powinni mieć świadomość, że syntetyzowane czcionki mogą być zupełnie nieodpowiednie, np. w przypadku cyrylicy wersje z kursywą są zupełnie odmienne od normalnych. Zawsze lepiej jest polegać na rzeczywiście pobranej czcionce kursywy, niż na wersji zsyntetyzowanej.
+> > <a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">Styl czcionki CSS3</a>
 
 Powyższy przykład ilustruje różnicę pomiędzy rzeczywistą i zsyntetyzowaną czcionką Open-Sans &ndash; wszystkie zsyntetyzowane warianty wygenerowano z jednej czcionki o grubości 400. Jak widać, różnice są zauważalne. Nie określono żadnych szczegółowych wytycznych generowania wariantów pogrubionych i skośnych. Dlatego wyniki mogą być różne dla różnych przeglądarek, zależą również w dużym stopniu od konkretnej czcionki.
 

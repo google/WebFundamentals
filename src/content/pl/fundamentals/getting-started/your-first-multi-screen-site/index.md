@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Internet jest dostępny na szerokiej gamie urządzeń &ndash; od telefonów z małymi ekranami aż po ogromne telewizory. Przeczytaj, jak stworzyć witrynę, która dobrze działa na wszystkich tych urządzeniach.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -51,15 +50,14 @@ Ustaliliśmy, że potrzebujemy tych elementów:
 
 Opracowaliśmy też wstępną architekturę informacji oraz układy w wąskim i szerokim widocznym obszarze.
 
-<div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="AI w obszarze wąskim">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="AI w obszarze szerokim">
-</div>
+<img class="attempt-left" src="images/narrowviewport.png" alt="AI w obszarze wąskim">
+<img  class="attempt-right" src="images/wideviewport.png" alt="AI w obszarze szerokim">
+<div class="clearfix"></div>
 
 To wszystko można łatwo przekształcić w główne sekcje schematycznej strony, której będziemy używać w tym projekcie.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Dodawanie treści do strony
@@ -75,7 +73,7 @@ Nagłówek i formularz kontaktowy to kluczowe komponenty strony. Użytkownik mus
 W nagłówku umieść prosty tekst z opisem kursu:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 Musimy też utworzyć formularz.
@@ -86,7 +84,7 @@ Wszystkie formularze powinny mieć etykiety i elementy zastępcze, które pomaga
 Dodamy typy semantyczne, by przyspieszyć i uprościć wpisywanie wartości przez użytkowników urządzeń mobilnych. Na przykład podczas podawania numeru telefonu użytkownikowi powinna wyświetlić się klawiatura numeryczna.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -97,7 +95,7 @@ Sekcja z filmem i informacjami będzie zawierać nieco bardziej szczegółowe tr
 Znajdą się tam lista punktowana z zaletami naszej usługi oraz element zastępczy filmu pokazującego korzyści, jakie odniesie użytkownik.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Filmy często wykorzystuje się do przedstawienia treści w bardziej interaktywny sposób oraz zaprezentowania produktu lub pomysłu.
@@ -110,7 +108,7 @@ Aby bez problemów umieścić film na stronie, postępuj zgodnie ze sprawdzonymi
 *  Dodaj tekst zastępczy, który pozwoli użytkownikom pobrać film, jeśli nie będą mogli odtworzyć go w oknie.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
@@ -145,7 +143,7 @@ Ostatnia sekcja to prosta tabela z konkretnymi statystykami związanymi z naszą
 W tabelach umieszczaj tylko dane tabelaryczne, tzn. zestawy informacji w wierszach i kolumnach.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Dodawanie stopki
@@ -155,17 +153,18 @@ Stopka na większości stron zawiera takie informacje jak warunki korzystania z 
 Na naszej stronie podamy tylko linki do warunków korzystania z usługi, strony kontaktowej oraz profilów w mediach społecznościowych.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Podsumowanie
 
 Utworzyliśmy szkic strony i określiliśmy poszczególne główne elementy struktury. Przygotowaliśmy i rozmieściliśmy wszystkie odpowiednie treści zgodnie z naszymi celami biznesowymi.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="zawartość">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+
+<img class="attempt-left" src="images/content.png" alt="zawartość">
+<img class="attempt-right" src="images/narrowsite.png" alt="">
+<div class="clearfix"></div>
+
 
 Na razie strona wygląda fatalnie, ale to celowe. 
 Treści to najważniejszy element każdej witryny. Po nich należy opracować właściwą architekturę informacji i układ elementów. Ten przewodnik pozwolił nam stworzyć solidną podstawę do dalszej rozbudowy witryny. W następnym dodamy style do treści.
@@ -185,16 +184,17 @@ Internet jest dostępny na szerokiej gamie urządzeń &ndash; od telefonów z ma
 Tworzymy witrynę, która działa na ekranach o różnym rozmiarze i wielu rodzajach urządzeń. W [poprzednim artykule](#) opracowaliśmy architekturę informacji na stronie i przygotowaliśmy podstawową strukturę.
 W tym przewodniku przekształcimy naszą podstawową strukturę i treść w atrakcyjną stronę, która działa elastycznie na ekranach rozmaitej wielkości.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Treść">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Treść i struktura </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Gotowa strona </a> </figcaption>
-  </figure>
-</div>
+
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="Treść">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Treść i struktura </a> </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Gotowa strona </a> </figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 Zgodnie z zasadą `najpierw mobilne` zaczynamy od wąskiego widocznego obszaru (takiego jak na telefonach komórkowych) i budujemy dostosowany do niego interfejs.
 Następnie skalujemy stronę na potrzeby większych urządzeń.
@@ -219,7 +219,7 @@ Bez niego witryna nie będzie dobrze działać na urządzeniach mobilnych.
 Tag viewport informuje przeglądarkę, że stronę trzeba przeskalować, dopasowując do rozmiarów ekranu. Jest wiele konfiguracji, które możesz określić w tym tagu, by sterować wyświetlaniem strony. Jako domyślne zalecamy to ustawienie:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 Tag viewport należy do nagłówka dokumentu. Wystarczy zadeklarować go tylko raz.
@@ -251,9 +251,9 @@ W poprzednim przewodniku dodaliśmy `obrazy treści`, czyli grafiki, które zawi
 
 Dobry przykład to grafika w nagłówku ilustrująca treści widoczne na ekranie po wejściu na stronę. Często zachęca użytkownika, by dowiedział się więcej o usłudze.
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="Zaprojektowana strona">
-</div>
+
+<img  src="images/narrowsite.png" alt="Zaprojektowana strona">
+
 
 Dodawanie takich obrazów jest bardzo łatwe. My na przykład umieścimy tło w nagłówku, używając do tego stylu CSS.
 

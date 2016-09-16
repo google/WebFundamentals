@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript pozwala zmienić niemal każdy aspekt strony &ndash; treść, styl oraz sposób interakcji z użytkownikiem. Może jednak blokować tworzenie modelu DOM i opóźniać renderowanie strony. Aby uzyskać optymalną wydajność, oznacz kod JavaScript jako asynchroniczny i usuń niepotrzebne funkcje z krytycznej ścieżki renderowania.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -24,7 +23,7 @@ JavaScript pozwala zmienić niemal każdy aspekt strony &ndash; treść, styl or
 JavaScript to język dynamiczny, który działa w przeglądarce i pozwala zmieniać niemal każdy aspekt funkcjonowania strony. Możesz dostosować jej treść, dodając lub usuwając elementy w drzewie DOM, zaktualizować właściwości CSSOM każdego elementu, obsługiwać wprowadzanie danych przez użytkownika itp. Aby pokazać, jak to działa, uzupełnimy poprzedni przykład `Witaj Świecie` o prosty wbudowany skrypt:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * JavaScript pozwala sięgnąć do modelu DOM i pobrać odwołanie do ukrytego węzła span, który może nie być widoczny w drzewie renderowania, ale wciąż jest w modelu DOM. Po uzyskaniu odwołania możemy zmienić tekst elementu (używając właściwości .textContent), a nawet zastąpić automatycznie określoną wartość właściwości display stylu z `none` na `inline`. Po zakończeniu działania skryptu na stronie pojawi się tekst `**Hello interactive students!**` (Witajcie interaktywni uczniowie!).
@@ -62,7 +61,7 @@ Domyślnie JavaScript jest wykonywany w trybie blokowania parsera: gdy przegląd
 Co w przypadku skryptów dołączanych w tagu script? Weźmy poprzedni przykład i wydzielmy nasz kod do osobnego pliku:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**
@@ -78,7 +77,7 @@ Na szczęście mamy wyjście awaryjne. Domyślnie JavaScript zawsze blokuje pars
 Jak to osiągnąć? To proste &ndash; oznaczymy skrypt atrybutem _async_:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Słowo kluczowe async w tagu script informuje przeglądarkę, że nie powinna blokować tworzenia modelu DOM w oczekiwaniu na udostępnienie skryptu. To znacznie poprawia wydajność.

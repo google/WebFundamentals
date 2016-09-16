@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Jeśli czegoś nie da się zmierzyć, nie można tego zoptymalizować. Na szczęście interfejs API Navigation Timing zapewnia nam wszystkie narzędzia do pomiarów na każdym etapie krytycznej ścieżki renderowania.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

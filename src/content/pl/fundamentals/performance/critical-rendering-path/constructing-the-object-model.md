@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Zanim przeglądarka zacznie renderować treść na ekranie, musi utworzyć drzewa DOM i CSSOM. Dlatego musimy dopilnować, by znaczniki HTML i CSS zostały przekazane do przeglądarki możliwie najszybciej.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -15,16 +15,11 @@ Zanim przeglądarka zacznie renderować stronę, musi utworzyć drzewa DOM i CSS
 
 
 
-## TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
-
-
 ## Model DOM (Document Object Model)
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Zacznijmy od najprostszego możliwego przypadku: zwykłej strony HTML z tekstem i jednym obrazem. Co musi zrobić przeglądarka, by przetworzyć tę prostą stronę?
@@ -55,7 +50,7 @@ Czy po przygotowaniu drzewa DOM mamy dostatecznie wiele informacji, by zrenderow
 Gdy przeglądarka tworzyła model DOM naszej prostej strony, napotkała w sekcji nagłówka dokumentu na tag linka odwołujący się do zewnętrznego arkusza stylów CSS: style.css. Przewidując, że zasób ten będzie wymagany do renderowania strony, natychmiast wysłała żądanie odnośnie do tego zasobu, a otrzymana odpowiedź zawierała poniższą treść:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Możemy oczywiście zadeklarować nasze style bezpośrednio w znacznikach HTML (tzn. inline), ale rozdzielenie znaczników CSS od znaczników HTML umożliwia rozdzielenie treści od stylizacji: projektanci mogą pracować nad znacznikami CSS, a programiści mogą się skupić na znacznikach HTML.

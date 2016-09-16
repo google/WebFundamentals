@@ -52,8 +52,8 @@ Identificamos o que é necessário:
 Também criamos uma arquitetura básica de informações e um layout para janelas de visualização largas e estreitas.
 
 <div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="Janela estreita IA">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="Janela larga IA">
+  <img class="attempt-left" src="images/narrowviewport.png" alt="Janela estreita IA">
+  <img  class="attempt-right" src="images/wideviewport.png" alt="Janela larga IA">
 </div>
 
 Isso pode ser facilmente convertido nas seções básicas da estrutura de uma página que usaremos em todo este projeto.
@@ -163,8 +163,8 @@ Em nosso site, incluiremos links para os Termos e Condições, uma página com i
 Criamos o esboço do site e identificamos todos os principais elementos estruturais.  Também verificamos se todo o conteúdo relevante está pronto e adequado para atender às nossas necessidades comerciais.
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="Content">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
+  <img class="attempt-left" src="images/content.png" alt="Content">
+  <img class="attempt-right" src="images/narrowsite.png" alt="">
 </div>
 
 Você perceberá que a página ainda não está visualmente agradável, mas isso é algo intencional. 
