@@ -2,14 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Вы готовы выполнить все важные шаги, чтобы включить HTTPS на ваших серверах
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Включение HTTPS на ваших серверах {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 Вы готовы выполнить все важные шаги, чтобы включить HTTPS на ваших серверах
