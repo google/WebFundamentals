@@ -16,7 +16,7 @@ Die Optimierung von Webschriftarten ist ein entscheidender Bestandteil der gesam
 
 ## Aufbau einer Webschriftart
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Unicode-Schriftarten können Tausende von Glyphen enthalten.
 - Es gibt vier Schriftformate: WOFF2, WOFF, EOT und TTF.
 - Einige Schriftformate erfordern die GZIP-Komprimierung.
@@ -58,7 +58,7 @@ Note: Ziehen Sie die Verwendung der <a href='http://en.wikipedia.org/wiki/Zopfli
 
 ## Schriftartfamilie mit @font-face definieren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Verwenden Sie den Hinweis `format()`, um mehrere Schriftformate anzugeben.
 - Unterteilen Sie große Unicode-Schriftarten, um die Leistung zu verbessern: Nutzen Sie die Unicode-Bereichsunterteilung und sehen Sie eine manuelle Ausweichlösung zur Unterteilung für ältere Browser vor.
 - Reduzieren Sie die Zahl der stilistischen Schriftvarianten, um die Leistung bei der Seiten- und Textwiedergabe zu verbessern.
@@ -227,7 +227,7 @@ Note: Im Sinne einer optimalen Konsistenz und bestmöglicher visueller Resultate
 
 ## Laden und Rendern optimieren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Schriftartanforderungen werden verzögert, bis die Rendering-Baumstruktur erstellt ist, was zu einer verzögerten Textwiedergabe führen kann.
 - Das Font Loading API ermöglicht die Implementierung von Strategien zum Laden und Rendern von Schriftarten, die das standardmäßige langsame Laden (Lazy Loading) von Schriftarten umgehen.
 - Mit der Inline-Ersetzung kann das standardmäßige Lazy Loading von Schriftarten in älteren Browsern umgangen werden.

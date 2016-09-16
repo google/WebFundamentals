@@ -27,7 +27,7 @@ Note: 如果在应用中使用 Webview 来获取和显示网页内容，可能�
 
 ## 使用 ETag 验证缓存的响应
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 服务器通过 ETag HTTP 头传递验证令牌
 - 通过验证令牌可以进行高效的资源更新检查：如果资源未更改，则不会传输任何数据。
 
@@ -47,7 +47,7 @@ Note: 提示：HTML5 Boilerplate 项目包含了所有最流行的服务器的<a
 
 ## Cache-Control
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 每个资源都可以通过 Cache-Control HTTP 头来定义自己的缓存策略
 - Cache-Control 指令控制谁在什么条件下可以缓存响应以及可以缓存多久
 
@@ -111,7 +111,7 @@ Note: Cache-Control 头在 HTTP/1.1 规范中定义，取代了之前用来定�
 
 ## 废弃和更新已缓存的响应
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 在资源"过期"之前，将一直使用本地缓存的响应
 - 通过将文件内容指纹码嵌入网址，我们可以强制客户端更新到新版的响应
 - 为了获得最佳性能，每个应用需要定义自己的缓存层级

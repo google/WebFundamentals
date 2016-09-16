@@ -17,7 +17,7 @@ L'ottimizzazione dei font web rappresenta una fase critica nell'intera strategia
 
 ## Anatomia di un font web
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - I font Unicode possono contenere migliaia di glifi
 - I formati dei font sono quattro: WOFF2, WOFF, EOT, TTF
 - Per alcuni formati font è necessario utilizzare una compressione GZIP
@@ -59,7 +59,7 @@ Note: Valuta l'utilizzo della <a href='http://en.wikipedia.org/wiki/Zopfli'>comp
 
 ## Definire una famiglia di font con @font-face
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Utilizza il <code>format()</code> hint per specificare più formati font
 - Raggruppa i font unicode più ampi in subset per migliorare le prestazioni: utilizza subset unicode-range e consenti in alternativa un subsetting manuale per versioni precedenti dei browser
 - Riduci il numero di varianti dei font di stile per migliorare le prestazioni della pagina e il rendering del testo
@@ -225,7 +225,7 @@ Note: Per una maggiore coerenza nei risultati visivi, non affidarti alla font-sy
 
 ## Ottimizzazione di caricamento e rendering
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Le richieste di font vengono ritardate sino alla costruzione del render tree; ciò può comportare un ritardo nel rendering del testo
 - Il Font Loading API ci consente di caricare font e applicare strategie di rendering personalizzate al posto del font loading in lazy load predefinito
 - Il Font inlining ci consente di sovrascrivere il fontloading in lazy load predefinito in versioni precedenti dei browser

@@ -14,7 +14,7 @@ description: El recurso más rápido y optimizado es el que no se envía. ¿Has 
 El recurso más rápido y optimizado es que no se envía. ¿Has supervisado el rendimiento de tus recursos recientemente? Deberías hacerlo cada cierto tiempo para garantizar que cada recurso contribuya a ofrecer la mejor experiencia posible al usuario.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Hacer un inventario con todos los elementos propios y de terceros en tus páginas
 - Medir el rendimiento de cada elemento: su valor y rendimiento técnico
 - Determinar si los recursos ofrecen suficiente valor

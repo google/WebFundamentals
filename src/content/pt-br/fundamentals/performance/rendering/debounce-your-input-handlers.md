@@ -13,7 +13,7 @@ description: Manipuladores de entrada são uma possível causa de problemas em s
 
 Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Evite manipuladores de entrada de longa execução; eles podem bloquear a rolagem.
 - Não faça mudanças de estilo nos manipuladores de entrada.
 - Atrase seus manipuladores; armazene valores de evento e lide com as mudanças de estilo no próximo retorno de chamada requestAnimationFrame.

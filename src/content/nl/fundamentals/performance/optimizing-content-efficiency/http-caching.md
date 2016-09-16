@@ -27,7 +27,7 @@ Wanneer de server dit verzoek beantwoordt, stuurt deze tevens een aantal HTTP-he
 
 ## Antwoorden in het cachegeheugen valideren met ETags
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Validatietoken wordt door de server gecommuniceerd via de HTTP-header ETag
 - 'Validatietoken maakt efficiënte updatecontroles voor hulpbronnen mogelijk: geen gegevensoverdracht wanneer de hulpbron niet is gewijzigd.'
 
@@ -47,7 +47,7 @@ Note: Tip: het project HTML5 Boilerplate bevat <a href='https://github.com/h5bp/
 
 ## Cache-Control
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Het cachebeleid voor elke hulpbron kan worden ingesteld via de HTTP-header Cache-Control
 - 'De configuratie van Cache-Control bepaalt wie het antwoord van de server kan opslaan in het cachegeheugen, onder welke voorwaarden en hoe lang de gegevens worden bewaard'
 
@@ -109,7 +109,7 @@ Volgens HTTP Archive kan voor de 300.000 grootste websites (op basis van de rang
 
 ## Antwoorden in het cachegeheugen ongeldig maken en bijwerken
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Lokaal opgeslagen zoekopdrachten worden gebruikt totdat de hulpbron 'vervalt'
 - 'We kunnen een vingerafdruk voor de bestandsinhoud in de URL integreren, waardoor de client wordt gedwongen om het antwoord bij te werken'
 - Voor optimale resultaten moet voor elke applicatie een eigen cache-hiërarchie worden ingesteld

@@ -13,7 +13,7 @@ Die CSSOM- und DOM-Baumstrukturen werden in einer Rendering-Baumstruktur zusamme
 
 Im vorherigen Abschnitt über die Erstellung des Objektmodells erstellten wir die DOM- und CSSOM-Baumstrukturen basierend auf den HTML- und CSS-Eingaben. Allerdings handelt es sich bei letzteren um unabhängige Objekte, die verschiedene Aspekte des Dokuments abdecken: eines beschreibt den Inhalt und das andere die Formatierungsregeln, die auf das Dokument anzuwenden sind. Wie werden beide Objekttypen zusammengeführt und bewirken, dass der Browser Pixel auf dem Bildschirm darstellt?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Die DOM- und CSSOM-Baumstrukturen bilden gemeinsam die Rendering-Baumstruktur.
 - Die Rendering-Baumstruktur enthält nur die Knoten, für das Rendern der Seite erforderlich sind.
 - Beim Layout werden die exakte Position und Größe eines jeden Objekts berechnet.

@@ -19,7 +19,7 @@ Beeldoptimalisatie is zowel een kunst als een wetenschap: een kunst omdat er gee
 
 ## Afbeeldingen uitsluiten en vervangen
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Verwijder overbodige beeldbronnen
 - Pas waar mogelijk CSS3-effecten toe
 - Gebruik weblettertypes in plaats van gecodeerde tekst in afbeeldingen
@@ -37,7 +37,7 @@ Als u ooit tekst moet coderen voor een afbeeldingitem, is het waarschijnlijk een
 
 ## Vector- en rasterafbeeldingen
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Vectorafbeeldingen zijn ideaal voor afbeeldingen van geometrische vormen
 - Vectorafbeeldingen zijn afhankelijk van zoomfactor en resolutie
 - Gebruik rasterafbeeldingen voor complexe scenes met veel onregelmatige vormen en details
@@ -67,7 +67,7 @@ Rasterafbeeldingen zijn in tegenstelling tot vectorafbeeldingen wel gevoelig voo
 
 ## Gevolgen van schermen met hoge resoluties
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Schermen met hoge resolutie hebben meerdere apparaatpixels per CSS-pixel
 - Afbeeldingen met een hoge resolutie hebben een aanzienlijk hoger aantal pixels en bytes
 - Optimalisatietechnieken voor afbeeldingen zijn hetzelfde voor lage en hoge resolutie
@@ -115,7 +115,7 @@ Wat houdt dit in de praktijk in? Schermen met een hoge resolutie leveren prachti
 
 ## Vectorafbeeldingen optimaliseren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - SVG is een bestandsindeling voor XML-afbeeldingen
 - SVG-bestanden moeten worden verkleind om de omvang te reduceren
 - SVG-bestanden moeten worden gecomprimeerd met GZIP
@@ -143,7 +143,7 @@ In dit geval kan het SVG-bestand uit Illustrator met 58% worden verkleind en wor
 
 ## Rasterafbeeldingen optimaliseren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Een rasterafbeelding is een raster met pixels
 - Elke pixel bevat informatie over kleur en transparantie
 - Programma's voor beeldcompressie gebruiken verscheidene technieken om het aantal benodigde bits per pixel te verlagen en zo de omvang van de afbeelding te verkleinen
@@ -219,7 +219,7 @@ Dit is allemaal erg interessant, maar ook vrij wetenschappelijk: hoe kunnen we i
 
 ## Compressie met en zonder verlies
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Vanwege de werking van onze ogen kunnen afbeeldingen goed met verlies worden gecomprimeerd - Beeldoptimalisatie wordt bereikt door compressietechnieken met en zonder verlies - De bestandsindeling van geoptimaliseerde afbeeldingen is afhankelijk van de algoritmen die worden gebruikt om de afbeeldingen te comprimeren - Er bestaat geen universele beste bestandsindeling of `kwaliteitsinstelling` die voor alle afbeeldingen werkt. Elke combinatie van compressievoorkeur en afbeelding levert een uniek resultaat op
 
 
@@ -243,7 +243,7 @@ Note: U kunt kwaliteitsniveaus van verschillende bestandsindelingen niet met elk
 
 ## De juiste bestandsindeling voor uw afbeelding kiezen
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Begin met selectie van de juiste algemene bestandsindeling: GIF, PNG, JPEG'
 - 'Experimenteer met de instellingen voor elke bestandsindeling en selecteer de beste instellingen: voor kwaliteit, kleurenspectrum, enzovoort.'
 - U kunt overwegen om WebP- en JPEG XR-items toe te voegen aan geschaalde afbeeldingen voor moderne clients: null

@@ -13,7 +13,7 @@ description: Aprenda a suavizar e dar peso às suas animações.
 
 Nada na natureza se move linearmente de um ponto para o outro. Na realidade, as coisas tendem a acelerar ou desacelerar conforme se movem. Nossos cérebros esperam esse tipo de movimento, portanto, ao criar uma animação, isso essa informação a seu favor. O movimento natural fará com que o usuário se sinta mais confortável com seus aplicativos, que por sua vez levará a uma melhor experiência geral.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Easing deixa suas animações mais naturais.
 - Selecione animações ease-out para elementos da interface do usuário.
 - 'Evite animações ease-in ou ease-in-out, a não menos que sejam curtas; elas tendem a parecer lentas para os usuários finais.'

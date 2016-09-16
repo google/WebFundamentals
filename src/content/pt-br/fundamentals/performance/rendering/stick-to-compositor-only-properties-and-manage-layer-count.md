@@ -13,7 +13,7 @@ description: Composição é onde as partes pintadas da página são agrupadas p
 
 Composição é onde as partes pintadas da página são agrupadas para exibição na tela.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Atenha-se à mudanças de transforms e opacity para suas animações.
 - Promova elementos de movimentação com will-change ou translateZ.
 - Evite usar muitas regras de promoção; as camadas exigem mais memória e gerenciamento.

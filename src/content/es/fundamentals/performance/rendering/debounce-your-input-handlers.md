@@ -12,7 +12,7 @@ description: Los controladores de entrada son una posible causa de problemas de 
 
 Los controladores de entrada son una posible causa de problemas de rendimiento en sus aplicaciones, ya que pueden bloquear la compleción de los marcos y causar trabajo de diseño adicional (e innecesario).
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Evite los controladores de entrada de larga ejecución, ya que pueden bloquear el desplazamiento.
 - No realice cambios de estilo en los controladores de entrada.
 - Evite el efecto de rebote en los controladores. Almacene los valores de los eventos y realice los cambios de estilo en la próxima llamada de retorno requestAnimationFrame.

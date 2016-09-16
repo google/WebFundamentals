@@ -15,7 +15,7 @@ description: O recurso mais rápido e mais otimizado é um recurso não enviado.
 O recurso mais rápido e mais otimizado é um recurso não enviado. Você fez a auditoria de seus recursos recentemente? Você deveria fazer isso periodicamente para garantir que todos os recursos ajudem a oferecer uma experiência melhor para o usuário.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Faça o inventário de todos os recursos próprios e de terceiros em suas páginas
 - 'Meça o desempenho de cada recurso: seu valor e seu desempenho técnico'
 - Determine se os recursos estão oferecendo valor suficiente

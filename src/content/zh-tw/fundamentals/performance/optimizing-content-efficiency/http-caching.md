@@ -26,7 +26,7 @@ Note: 如果在應用程式中使用 Webview 來擷取及顯示網頁內容，�
 
 ## 使用 ETag 驗證快取的回應
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 伺服器透過 ETag HTTP 標題傳遞驗證權杖
 - 您可以透過驗證權杖進行高效率的資源更新檢查：如果資源未變更，則不會傳輸任何資料。
 
@@ -46,7 +46,7 @@ Note: 提示：HTML5 Boilerplate 專案包含了所有主流伺服器的<a href=
 
 ## Cache-Control
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 每個資源都可以透過 Cache-Control HTTP 標題來定義專屬的快取策略
 - Cache-Control 指令負責管控可快取回應的使用者、條件和快取時限
 
@@ -108,7 +108,7 @@ Note: Cache-Control 標題的定義詳列於 HTTP/1.1 規範中，取代了之�
 
 ## 作廢及更新已快取的回應
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 在資源「過期」之前，將一直使用本地快取的回應
 - 透過將檔案內容指紋碼嵌入網址，我們可以強制使用者端更新到新版的回應
 - 為了獲得最佳效能，每個應用程式需要定義專屬的快取階層

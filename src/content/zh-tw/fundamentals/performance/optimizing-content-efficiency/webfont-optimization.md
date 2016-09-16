@@ -18,7 +18,7 @@ description: 如要打造出優異的設計、品牌宣傳、可讀性和無障�
 
 ## 網頁字型解析
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Unicode 字型可包含數千種字符
 - 有四種字型格式：WOFF2、WOFF、EOT、TTF
 - 某些字型格式需要使用 GZIP 壓縮
@@ -60,7 +60,7 @@ Note: 請考慮使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 壓�
 
 ## 使用 @font-face 定義字型系列
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 使用 format () 提示指定多種字型格式
 - 對大型 unicode 字型進行子集擷取以提高效能：使用 unicode-range 子集擷取，並為較舊的瀏覽器提供手動子集擷取備援功能
 - 減少風格字型變體的數量以改進網頁和文字顯示效能
@@ -236,7 +236,7 @@ Note: 為獲得最好的一致性和視覺效果，請勿依賴字型合成。�
 
 ## 最佳化載入和轉譯
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 轉譯樹狀結構建構完成之前，會先延遲字型請求，這可能會導致文字延遲顯示
 - 透過 Font Loading API，我們可以執行自訂字型載入和轉譯策略，覆寫預設的延遲載入字型機制
 - 透過字型內嵌，我們可以覆寫舊版瀏覽器的延遲載入字型機制

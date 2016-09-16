@@ -18,7 +18,7 @@ L'optimisation d'image est à la fois un art et une science : c'est un art, car 
 
 ## Éliminer et remplacer les images
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Éliminez les ressources images inutiles.
 - Utilisez les effets CSS3 chaque fois que c'est possible.
 - Utilisez les polices du Web au lieu d'encoder le texte en images.
@@ -36,7 +36,7 @@ Si vous devez encoder du texte dans une image, réfléchissez-y à deux fois. Un
 
 ## Images vectorielles ou matricielles
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Les images vectorielles sont idéales pour les images composées de formes géométriques.
 - Les images vectorielles sont indépendantes du zoom et de la résolution.
 - Les images matricielles doivent être utilisées pour les scènes complexes avec beaucoup de formes irrégulières et de détails.
@@ -66,7 +66,7 @@ Les images matricielles n'offrent pas les mêmes propriétés : elles ne sont pa
 
 ## Implications des écrans haute résolution
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Les écrans haute résolution ont plusieurs pixels d'appareil par pixel CSS.
 - Les images haute résolution nécessitent un nombre beaucoup plus important de pixels et d'octets.
 - Les techniques d'optimisation de l'image sont les mêmes quelle que soit la résolution.
@@ -114,7 +114,7 @@ Qu'est-ce que cela signifie concrètement ? Les écrans haute résolution nous p
 
 ## Optimiser les images vectorielles
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - SVG est un format d'image basé sur le balisage XML.
 - Les fichiers SVG doivent être réduits pour réduire leur taille.
 - Les fichiers SVG doivent être compressés avec GZIP.
@@ -142,7 +142,7 @@ Dans ce cas, svgo réduit la taille du fichier ci-dessus généré par Illustrat
 
 ## Optimiser les images matricielles
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Une image matricielle est une grille de pixels.
 - Chaque pixel encode des informations sur la couleur et la transparence.
 - Les logiciels de compression d'image utilisent différentes techniques pour réduire le nombre de bits requis pas pixel afin de réduire la taille de fichier de l'image.
@@ -216,7 +216,7 @@ Mais une fois encore, tout ceci est très intéressant, mais très théorique : 
 
 ## Compression d'image avec et sans perte
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - En raison de la façon dont fonctionnent nos yeux, les images sont d''excellentes candidates pour la compression avec perte.
 - L'optimisation des images est une fonction de la compression avec et sans perte.
 - Les différences de format des images sont dues à la différence de façon et à quels algorithmes avec et sans perte sont utilisés pour optimiser l'image.
@@ -243,7 +243,7 @@ Note: Notez qu'il est impossible de comparer directement les niveaux de qualité
 
 ## Sélectionner le bon format d'image
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Commencez par sélectionner un format universel adapté : GIF, PNG, JPEG.
 - Expérimentez et sélectionnez les meilleurs paramètres pour chaque format: qualité, taille de la palette, etc.
 - Envisagez la possibilité d'ajouter des éléments WebP et JPEG XR pour les images à l'échelle de clients modernes
@@ -356,7 +356,7 @@ N'ayez pas peur de tester les paramètres de chaque logiciel de compression. Dim
 
 ## Afficher des éléments d'image à l'échelle
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - La production d'éléments à l'échelle est l'une des optimisations les plus simples et les plus efficaces.
 - Accordez une attention particulière aux éléments volumineux, car ils produisent un temps système élevé.
 - Réduisez le nombre de pixels inutiles en mettant vos images à l'échelle de leur taille d'affichage.

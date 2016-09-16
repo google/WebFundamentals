@@ -14,7 +14,7 @@ description: Jeśli czegoś nie da się zmierzyć, nie można tego zoptymalizowa
 Jeśli czegoś nie da się zmierzyć, nie można tego zoptymalizować. Na szczęście interfejs API Navigation Timing zapewnia nam wszystkie narzędzia do pomiarów na każdym etapie krytycznej ścieżki renderowania.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Interfejs Navigation Timing udostępnia sygnatury o wysokiej rozdzielczości czasowej, umożliwiające pomiar krytycznej ścieżki renderowania.'
 - 'Na różnych etapach krytycznej ścieżki renderowania przeglądarka generuje serię zdarzeń, które można następnie przechwycić.'
 

@@ -16,7 +16,7 @@ De forma predeterminada, el código CSS se considera un recurso que puede retras
 
 En la sección anterior, vimos que la ruta de renderización importante exige que el DOM y el CSSOM construyan el árbol de visualización, lo cual implica algo que puede afectar negativamente al rendimiento: **los recursos HTML y CSS pueden retrasar la renderización del contenido ** Ya sabíamos esto del HTML, porque sin el DOM no podría mostrarse nada, pero que los estilos CSS se comportan también de esta manera es menos obvio. ¿Qué pasaría si intentamos mostrar una página cualquiera sin que el CSS retrasara su visualización?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - De forma predeterminada, los estilos CSS se consideran un recurso que puede retrasar la renderización del sitio.
 - Los tipos y las consultas de medios permiten indicar que algunos recursos CSS no bloquean la renderización del contenido.
 - Todos los recursos CSS, independientemente de que retrasen la visualización del contenido o no, los descarga el navegador.

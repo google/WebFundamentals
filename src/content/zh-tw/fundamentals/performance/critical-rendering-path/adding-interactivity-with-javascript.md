@@ -14,7 +14,7 @@ description: 透過 JavaScript，我們可以修改網頁的各個層面，例�
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript 可以查詢及修改 DOM 和 CSSOM。
 - CSSOM 執行完畢後，JavaScript 才會執行。
 - 除非明確聲明 DOM 建構為非同步，否則 JavaScript 會禁止這項程序。

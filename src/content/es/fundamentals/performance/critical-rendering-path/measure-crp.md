@@ -13,7 +13,7 @@ description: No es posible optimizar lo que no podemos medir. Afortunadamente, e
 No es posible optimizar lo que no podemos medir. Afortunadamente, el API de Navigation Timing proporciona las herramientas necesarias para medir cada paso de la ruta de renderización importante.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - El tiempo de navegación proporciona marcas de tiempo de alta resolución para medir la ruta de renderización importante.
 - El navegador emite una serie de eventos consumibles que capturan varias etapas de la ruta de renderización importante.
 

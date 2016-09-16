@@ -17,7 +17,7 @@ Domyślnie kod CSS jest traktowany jako zasób blokujący renderowanie, co oznac
 
 W poprzedniej sekcji dowiedzieliśmy się, że tworzenie drzewa renderowania w krytycznej ścieżce renderowania wymaga obecności zarówno drzewa DOM, jak i drzewa CSSOM. Ma to kluczowe znaczenie dla wydajności: **zarówno znaczniki HTML, jak i znaczniki CSS, są zasobami blokującymi renderowanie.** Jest to oczywiste dla znaczników HTML, ponieważ bez drzewa DOM nie byłoby elementów do renderowania, ale w przypadku znaczników CSS może tak się nie wydawać. Co by się stało, gdyby spróbować zrenderować typową stronę po zniesieniu blokady renderowania przez kod CSS?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Domyślnie kod CSS jest traktowany jako zasób blokujący renderowanie.
 - Dzięki typom mediów i zapytaniom o media możemy oznaczyć niektóre zasoby CSS jako nieblokujące renderowanie.
 - 'Przeglądarka pobiera wszystkie zasoby CSS, niezależnie od ich własności blokujących lub nieblokujących.'

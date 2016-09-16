@@ -22,7 +22,7 @@ Após eliminar todos os recursos desnecessários, a próxima etapa é minimizar 
 
 Proporcionar o melhor desempenho possível depende da combinação de todas essas técnicas.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - A compactação é o processo de codificar informações usando menos bits
 - Eliminar dados desnecessários sempre leva aos melhores resultados
 - Há vários algoritmos e técnicas de compactação diferentes
@@ -64,7 +64,7 @@ Talvez você esteja se perguntando como isso pode ajudar a otimizar suas página
 
 ## Minificação: processamento e otimizações baseadas no contexto
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - As otimizações específicas para cada tipo de conteúdo podem reduzir de maneira significativa o tamanho dos recursos exibidos.
 - As otimizações específicas para cada tipo de conteúdo são mais bem aplicadas como parte de nosso ciclo de criação/lançamento.
 
@@ -98,7 +98,7 @@ Resumindo, o primeiro passo para otimizar a eficiência dos seus recursos é cri
 
 ## Compactação de texto com o GZIP
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'O GZIP funciona melhor em recursos baseados em texto: CSS, JavaScript e HTML'
 - Todos os navegadores modernos aceitam a compactação com o GZIP e a solicitam automaticamente
 - É preciso configurar o servidor para ativar a compactação com o GZIP

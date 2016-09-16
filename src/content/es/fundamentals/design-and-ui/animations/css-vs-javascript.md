@@ -13,7 +13,7 @@ description: Puede realizar animaciones con CSS o con JavaScript. ¿Cuál debe u
 
 Existen dos formas principales de crear animaciones en la web: CSS y JavaScript. La elección de una u otra dependerá principalmente de las otras dependencias de su proyecto y de los tipos de efectos que intenta lograr.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Utilice animaciones de CSS para realizar transiciones más simples de “una sola acción”, como alternar los estados de los elementos de la IU.
 - Utilice las animaciones de JavaScript cuando desee agregar efectos avanzados como rebotes, detenciones, pausas, rebobinados o disminuciones de velocidad.
 - Si decide animar con JavaScript, utilice TweenMax o, si desea utilizar una solución más liviana, TweenLite.

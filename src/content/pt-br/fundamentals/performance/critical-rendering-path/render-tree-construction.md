@@ -16,7 +16,7 @@ A árvore do CSSOM e do DOM se combinam em uma árvore de renderização, que é
 
 Na seção anterior sobre a construção do modelo do objeto, construímos as árvores do DOM e do CSSOM com base nas entradas HTML e CSS. No entanto, ambos são objetos independentes, que capturam diferentes aspectos do documento: um descreve o conteúdo e o outro, as regras de estilo que devem ser aplicadas ao documento. Como combinamos os dois e fazemos com que o navegador renderize pixels na tela?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - A árvore do DOM e do CSSOM se combinam para formar a árvore de renderização.
 - A árvore de renderização contém apenas os nós necessários para renderizar a página.
 - O layout computa a posição e o tamanho exatos de cada objeto.

@@ -13,7 +13,7 @@ description: Aprenda mais sobre animações e sua utilização em aplicativos e 
 
 Animações são uma parte enorme da criação de aplicativos e sites atraentes. O usuário espera interfaces altamente responsivas e interativas. No entanto, animar sua interface não é simples. O que deve ser animado, quando e qual tipo de efeito a animação deve produzir?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Use animações como uma forma de dar vida aos seus projetos.
 - As animações devem auxiliar na interação do usuário.
 - Tenha cuidado com quais propriedades animar; algumas são mais caras do que outras!

@@ -14,7 +14,7 @@ description: La ressource la plus rapide et la mieux optimisée est une ressourc
 La ressource la plus rapide et la mieux optimisée est une ressource qui n'est pas envoyée. Avez-vous audité vos ressources récemment ? Vous devez le faire régulièrement pour vous assurer que chaque ressource permet d'offrir une meilleure expérience à l'utilisateur.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Inventorier tous vos éléments et tous les éléments tiers sur vos pages
 - 'Mesurer les performances de chaque élément : sa valeur et ses performances techniques'
 - Déterminer si les ressources offrent une valeur suffisante

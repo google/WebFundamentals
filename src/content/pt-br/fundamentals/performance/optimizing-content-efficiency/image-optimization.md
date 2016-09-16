@@ -20,7 +20,7 @@ A otimização de imagens é uma arte e uma ciência: é uma arte porque não h�
 
 ## Como eliminar e substituir imagens
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Elimine recursos de imagem desnecessários
 - Utilize efeitos CSS3 sempre que possível
 - Use fontes da Web em vez de incorporar texto em imagens por meio de código
@@ -38,7 +38,7 @@ Pense duas vezes antes de incorporar texto por meio de código em uma imagem. A 
 
 ## Imagens vetoriais vs. imagens de varredura
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Imagens vetoriais são ideais para representar formas geométricas
 - Imagens vetoriais são independentes de resolução e zoom
 - Imagens de varredura devem ser usadas para cenas complexas com muitos detalhes e formas irregulares
@@ -72,7 +72,7 @@ As imagens de varredura não são independentes de resolução e zoom, ou seja, 
 
 ## Implicações das telas de resolução alta
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Telas de alta resolução têm vários pixels físicos por pixel CSS
 - Imagens de alta resolução exigem um número bem maior de pixels e bytes
 - As técnicas de otimização de imagens são iguais independentemente da resolução
@@ -120,7 +120,7 @@ O que isso significa na prática? Uma das melhores características das telas de
 
 ## Otimização de imagens vetoriais
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - O formato de imagem SVG é baseado em XML
 - Os arquivos SVG devem ser reduzidos para ficarem menores
 - Os arquivos SVG devem ser compactados com GZIP
@@ -148,7 +148,7 @@ Nesse contexto, o svgo diminui em 58% o tamanho do arquivo SVG gerado pelo Illus
 
 ## Otimização de imagens de varredura
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Uma imagem de varredura é uma grade de pixels
 - Cada pixel codificar informações de cor e transparência
 - 'Os compactadores de imagem usam várias técnicas para diminuir o número de bits por pixel necessários e, consequentemente, reduzir o tamanho do arquivo de imagem'
@@ -224,7 +224,7 @@ Tudo isso é ótimo, porém muito acadêmico: como isso ajuda a otimizar imagens
 
 ## Compactação sem perdas vs. com perdas
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Devido à forma como nossa visão funciona, as imagens são ótimas candidatas à compactação com perdas'
 - A otimização de imagens é uma relação entre a compactação com perdas e sem perdas
 - A escolha e o uso dos algoritmos com ou sem perdas e a forma como eles são usados determinam as diferenças nos formatos das imagens
@@ -251,7 +251,7 @@ Note: Os níveis de qualidade de formatos de imagens diferentes não são direta
 
 ## Como selecionar o formato de imagem correto
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Comece selecionando o formato universal correto: GIF, PNG, JPEG'
 - 'Faça testes e selecione a melhor configuração para cada formato: qualidade, tamanho da paleta etc.'
 - Considere incluir recursos em WebP e JPEG XR para imagens dimensionadas de clientes modernos
@@ -364,7 +364,7 @@ Não hesite em testar os parâmetros de cada compactador. Diminua a qualidade, v
 
 ## Exibição de recursos de imagem dimensionados
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - A exibição de recursos dimensionados é uma das formas mais simples e eficazes de otimização
 - 'Esteja atento a recursos muito grandes, pois eles resultam em alta sobrecarga'
 - Reduza o número de pixels desnecessários dimensionando suas imagens de acordo com o tamanho de exibição

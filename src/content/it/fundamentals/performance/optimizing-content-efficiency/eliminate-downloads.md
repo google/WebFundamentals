@@ -13,7 +13,7 @@ description: Le risorse più veloci e ottimizzate sono quelle non inviate. Hai v
 Le risorse più veloci e ottimizzate sono quelle non inviate. Hai verificato le tue risorse di recente? Dovresti farlo periodicamente, per assicurarti che tutte le risorse consentano di offrire all'utente un'esperienza migliore.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Inventariare tutte le risorse, proprie e di terzi, sulle proprie pagine
 - Valutare il rendimento di ogni risorsa: opzioni e performance tecniche
 - Stabilire se le risorse offrono opzioni sufficienti

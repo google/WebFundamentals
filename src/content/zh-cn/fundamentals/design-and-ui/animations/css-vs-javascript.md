@@ -14,7 +14,7 @@ description: 您可以通过 CSS 或 JavaScript 编写动画。 应使用哪种�
 
 有两种主要方法在网页上创建动画：使用 CSS 和使用 JavaScript。 您选择哪种方法实际上取决于项目的其他依赖关系，以及您尝试实现什么类型的效果。
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 使用 CSS 动画来实现较简单的“一次性”转换，例如切换 UI 元素状态。
 - 当您想要高级效果时，例如弹跳、停止、暂停、倒退或减速，则使用 JavaScript 动画。
 - 如果选择使用 JavaScript 来编写动画，可选用 TweenMax，或者如果想要更轻量的解决方案，则使用 TweenLite。

@@ -18,7 +18,7 @@ Optymalizacja czcionek sieci web jest kluczowym elementem strategii zwiększania
 
 ## Budowa czcionki sieci web
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Czcionki Unicode mogą zawierać tysiące glifów
 - 'Stosuje się czcionki w czterech formatach: WOFF2, WOFF, EOT, TTF'
 - Niektóre formaty czcionek wymagają zastosowania kompresji GZIP
@@ -60,7 +60,7 @@ Note: Zastanów się nad wykorzystaniem <a href='http://en.wikipedia.org/wiki/Zo
 
 ## Określanie rodziny czcionek regułą @font-face
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Formaty czcionek możesz określić za pomocą wskazówki format()
 - 'Aby zwiększyć wydajność, wydzielaj podzbiory z obszernych zbiorów czcionek Unicode: stosuj wydzielanie zakresów Unicode i ręczne wydzielanie podzbiorów w przypadku starszych przeglądarek'
 - 'Ograniczaj liczbę różnych wariantów stylistycznych czcionek, by zwiększyć wydajność wczytywania i renderowania stron'
@@ -227,7 +227,7 @@ Note: Aby uzyskać jak najlepszy wygląd i zachować spójność wyświetlania, 
 
 ## Optymalizacja wczytywania i renderowania
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Żądania pobrania czcionek są odkładane do zakończenia tworzenia drzewa renderowania, co może prowadzić do opóźnienia renderowania tekstu'
 - Interfejs API Font Loading pozwala wdrożyć własne strategie wczytywania i renderowania czcionek zastępujące domyślne procedury leniwego wczytywania czcionek
 - Zamieszczanie czcionek w kodzie umożliwia zastępowanie domyślnego sposobu leniwego wczytywania czcionek w starszych przeglądarkach

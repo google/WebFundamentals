@@ -12,7 +12,7 @@ description: Aprenda a colocar animaciones entre dos vistas en sus aplicaciones.
 
 Muchas veces querrá llevar a los usuarios de una vista a la otra dentro de su aplicación, ya sea de una vista de lista a una vista de detalles, o mostrar una barra lateral de navegación. Las animaciones entre estas vistas resultan eficientes para mantener la atención del usuario y agregarle incluso más vida a sus proyectos.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Utilice transiciones para desplazarse entre las vistas; evite utilizar `left`, `top` u otras propiedades que desencadenen diseños.
 - Asegúrese de que las animaciones que utilice sean ingeniosas y breves.
 - Tenga en cuenta que las animaciones y los diseños pueden cambiar a medida que aumentan los tamaños de las pantallas; lo que funciona correctamente en una pantalla más chica puede verse extraño en un contexto de escritorio.

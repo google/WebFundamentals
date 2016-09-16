@@ -15,7 +15,7 @@ Voordat de inhoud op het scherm kan worden weergegeven, moet de browser de DOM- 
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Bytes → tekens → tokens → nodes → objectmodel.
 - HTML-opmaak wordt verwerkt in een Documentobjectmodel (DOM), CSS-opmaak wordt verwerkt in een CSS-objectmodel (CSSOM).
 - DOM en CSSOM zijn onafhankelijke gegevensstructuren.

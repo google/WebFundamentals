@@ -13,7 +13,7 @@ description: Layout é onde o navegador descobre a informação geométrica para
 
 Layout é onde o navegador descobre a informação geométrica para os elementos: seu tamanho e localização na página. Cada elemento terá uma informação de dimensionamento explícita ou implícita com base no CSS que foi usado, o conteúdo do elemento ou um elemento principal. O processo é chamado Layout no Chrome, Opera, Safari e Internet Explorer. No Firefox, é chamado de Reflow, mas na realidade o processo é o mesmo.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - O layout é normalmente delimitado para todo o documento.
 - O número de elementos DOM afetará o desempenho; você deve evitar acionar o layout sempre que possível.
 - Avalie o desempenho do modelo de layout; o novo Flexbox é geralmente mais rápido do que o Flexbox mais antigo ou modelos de layout baseados em flutuação.

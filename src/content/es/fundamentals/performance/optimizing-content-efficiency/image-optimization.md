@@ -18,7 +18,7 @@ La optimización de imágenes es un arte y una ciencia al mismo tiempo: un arte 
 
 ## Eliminar y sustituir imágenes
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Eliminar recursos de imagen innecesarios
 - Utilizar efectos CSS3 siempre que sea posible
 - Utilizar fuentes web en vez de texto de codificación en las imágenes
@@ -36,7 +36,7 @@ Si estás pensando en codificar texto en un recurso de imagen, detente y consid�
 
 ## Imágenes vectoriales en comparación con imágenes de mapa de bits
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Las imágenes vectoriales son ideales para las imágenes compuestas por formas geométricas
 - Las imágenes vectoriales son independientes del zoom y de la resolución
 - Las imágenes de mapa de bits son útiles para imágenes complejas con muchos detalles y formas irregulares
@@ -70,7 +70,7 @@ Las imágenes de mapa de bits no tienen las mismas propiedades que las que son i
 
 ## Implicaciones de las pantallas en alta resolución
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Las pantallas de alta resolución tienen varios píxeles de dispositivo por píxel CSS
 - Las imágenes a alta resolución requieren una cantidad de píxeles y de bytes significativamente mayor
 - Las técnicas de optimización de imágenes son las mismas independientemente de la resolución
@@ -118,7 +118,7 @@ Al doblar la resolución de la pantalla física, el número total de píxeles au
 
 ## Optimizar imágenes vectoriales
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - SVG es un formato de imagen basado en XML
 - Los archivos SVG se deben minificar para reducir su tamaño
 - Los archivos SVG se deben comprimir con GZIP
@@ -146,7 +146,7 @@ Por ejemplo, svgo reduce el tamaño del archivo SVG anterior generado por Illust
 
 ## Optimizar imágenes de mapa de bits
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Una imagen de mapa de bits es una cuadrícula de píxeles
 - Cada píxel codifica información de color y de transparencia
 - Los compresores de imagen utilizan una serie de técnicas para reducir la cantidad de bits necesarios por píxel para reducir el tamaño de archivo de la imagen
@@ -222,7 +222,7 @@ Todo esto está muy bien una vez más, pero sigue siendo muy teórico: ¿cómo i
 
 ## Compresión de imágenes con y sin pérdida
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - El funcionamiento de nuestros ojos permite obtener buenos resultados al someter las imágenes a una compresión con pérdida
 - La optimización de imágenes es una función de la compresión con y sin pérdida
 - Las diferencias en los formatos de imagen se deben a la forma de utilizar los algoritmos con o sin pérdida y a cuáles se utilizan para optimizar la imagen
@@ -249,7 +249,7 @@ Note: Ten en cuenta que no se pueden comparar directamente los niveles de calida
 
 ## Seleccionar el formato de imagen correcto
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Empieza por seleccionar el formato universal adecuado: GIF, PNG, JPEG'
 - 'Haz pruebas y selecciona la mejor configuración para cada formato: calidad, medidas de la paleta, etc.'
 - Plantéate añadir recursos WebP y JPEG XR en las imágenes escaladas para los clientes modernos.
@@ -362,7 +362,7 @@ No dudes en experimentar con los parámetros de los diferentes compresores. Redu
 
 ## Publicar recursos de imagen escalados
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Una de las optimizaciones más sencillas y eficaces es utilizar recursos escalados
 - Presta atención a los recursos grandes porque suponen un gran coste general
 - 'Para reducir el número de píxeles innecesarios, escala las imágenes en función del tamaño de visualización'

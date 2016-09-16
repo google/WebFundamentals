@@ -97,7 +97,7 @@ Une fois ces attributs définis, il se peut que l'utilisateur ne soit plus en me
 Le défilement est devenu un geste naturel pour l'utilisateur, que ce soit sur l'écran d'un ordinateur de bureau ou d'un appareil mobile. Aussi, l'obliger à faire défiler la page horizontalement ou à effectuer un zoom arrière pour afficher toute la page dégrade sérieusement son confort d'utilisation.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - N'utilisez pas d'éléments de largeur fixe de grande taille.
 - Ne liez pas le rendu correct du contenu à une largeur de fenêtre d'affichage spécifique.
 - Utilisez des requêtes média CSS pour appliquer des styles différents aux grands et aux petits écrans.

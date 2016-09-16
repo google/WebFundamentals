@@ -14,7 +14,7 @@ description: A quebra de simetria proporciona contraste e atração aos seus pro
 
 A assimetria da duração da sua animação ajuda a experiência do usuário permitindo que você expresse personalidade enquanto ao mesmo tempo responde rapidamente às interações do usuário. Também proporciona um sensação de contraste, o que torna a interface mais visualmente atraente.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Use temporização da animação assimétrica para proporcionar personalidade e contraste ao seu trabalho.
 - Sempre favoreça a interação do usuário; use durações curtas ao responder a toques ou cliques e reserve durações mais lentas para quando não houver resposta.
 

@@ -20,7 +20,7 @@ Optymalizacja obrazów to zarówno sztuka, jak i nauka: sztuka, ponieważ nie ma
 
 ## Eliminowanie i zastępowanie obrazów
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Wyeliminuj niepotrzebne obrazy
 - 'Wykorzystaj efekty CSS3 wszędzie tam, gdzie to możliwe'
 - Zastosuj czcionki sieci web zamiast kodowania tekstu na obrazach
@@ -38,7 +38,7 @@ Jeśli kiedykolwiek zaczniesz kodować tekst na obrazie, wstrzymaj się i poświ
 
 ## Grafika wektorowa a rastrowa
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Grafika wektorowa spisuje się idealnie w przypadku obrazów zawierających kształty geometryczne
 - Grafika wektorowa zachowuje ostrość niezależnie od rozdzielczości i stopnia powiększenia
 - Grafikę rastrową stosuje się w przypadku złożonych scen z wieloma nieregularnymi kształtami i detalami
@@ -71,7 +71,7 @@ Obrazy rastrowe nie gwarantują niezależności od rozdzielczości i stopnia pow
 
 ## Konsekwencje stosowania ekranów o wysokiej rozdzielczości
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Na ekranach o wysokiej rozdzielczości na jeden piksel CSS przypada wiele pikseli urządzenia
 - Obrazy o wysokiej rozdzielczości wymagają znacznie większej liczby pikseli i ilości danych
 - Techniki optymalizacji obrazów są takie same niezależnie od rozdzielczości
@@ -119,7 +119,7 @@ Co to oznacza w praktyce? Ekrany o wysokiej rozdzielczości wyświetlają olśni
 
 ## Optymalizacja obrazów wektorowych
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - SVG to format obrazu oparty na XML
 - Kompaktowanie plików SVG pozwala zmniejszyć ich rozmiar
 - Pliki SVG należy kompresować do formatu GZIP
@@ -147,7 +147,7 @@ Rzeczywiście, narzędzie svgo redukuje rozmiar powyższego pliku SVG z programu
 
 ## Optymalizacja obrazów rastrowych
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Obraz rastrowy to matryca pikseli
 - Dla każdego piksela kodowane są informacje o kolorze i przezroczystości
 - 'W algorytmach kompresji obrazów stosuje się wiele różnych technik umożliwiających redukcję liczby bitów na piksel, co pozwala zmniejszyć rozmiar pliku obrazu'
@@ -223,7 +223,7 @@ Nasza dyskusja przybrała charakter akademicki, ale jak to przekłada się na mo
 
 ## Stratna a bezstratna kompresja obrazów
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Sposób działania naszych oczu umożliwia stosowanie kompresji stratnej
 - Optymalizacja obrazu to połączenie kompresji stratnej i bezstratnej
 - Formaty obrazów różnią się algorytmami kompresji stratnej i bezstratnej użytymi do optymalizacji obrazu
@@ -250,7 +250,7 @@ Note: Zwróć uwagę, że poziomów jakości obrazów w różnych formatach nie 
 
 ## Wybór odpowiedniego formatu
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Rozpocznij od wyboru odpowiedniego formatu uniwersalnego: GIF, PNG, JPEG'
 - 'Dla każdego formatu metodą prób i błędów dobierz najlepsze ustawienia: jakość, rozmiar palety itp.'
 - Rozważ dodanie zasobów WebP i JPEG XR dla nowoczesnych klientów obrazy skalowane: null

@@ -14,7 +14,7 @@ Mit JavaScript lässt sich nahezu jeder Aspekt einer Seite anpassen: vom Inhalt 
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript kann das DOM und CSSOM abfragen und ändern.
 - Die Ausführung von JavaScript blockiert das CSSOM.
 - JavaScript blockiert die DOM-Erstellung, sofern es nicht explizit als asynchron festgelegt wird.

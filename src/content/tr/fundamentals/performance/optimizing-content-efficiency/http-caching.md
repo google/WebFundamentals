@@ -27,7 +27,7 @@ Sunucu bir yanit döndürdügünde, HTTP üstbilgilerinden olusan ve içerik tü
 
 ## Önbellege alinan yanitlari ETag ögeleriyle dogrulama
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Dogrulama belirteci, ETag HTTP üstbilgisi araciligiyla sunucu tarafindan iletilir'
 - 'Dogrulama belirteci, verimli kaynak güncelleme kontrolleri saglar: Kaynak degismediyse veri aktarimi gerçeklestirilmez.'
 
@@ -47,7 +47,7 @@ Note: Ipucu: HTML5 Standart Metin projesi, her bir yapilandirma isareti ve ayari
 
 ## Cache-Control
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Her bir kaynak, Cache-Control HTTP üstbilgisi araciligiyla kendi önbellege alma politikasini tanimlayabilir'
 - 'Cache-Control yönergeleri yaniti kimin, hangi kosullar altinda ve ne kadar süreyle önbellege alabilecegini kontrol eder'
 
@@ -109,7 +109,7 @@ HTTP Archive sitesine göre (Alexa siralamasi temelinde) ilk 300.000 site arasin
 
 ## Önbellege alinan yanitlari geçersiz kilma ve güncelleme
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Yerel olarak önbellege alinan yanitlar, kaynagin ''kullanim süresi sona erinceye'' kadar kullanilir'
 - 'URL''ye bir dosya içerigi parmak izi yerlestirmemiz, istemciyi yanitin yeni bir sürümüne güncellemeye zorlayabilmemizi saglar'
 - En iyi performans için her bir uygulamanin kendi önbellek hiyerarsisini tanimlamasi gerekir

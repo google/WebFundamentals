@@ -13,7 +13,7 @@ description: Vous ne pouvez pas optimiser ce que vous ne pouvez pas mesurer. Heu
 Vous ne pouvez pas optimiser ce que vous ne pouvez pas mesurer. Heureusement, l'API Navigation Timing offre tous les outils nécessaires pour mesurer chaque étape du chemin critique du rendu.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Navigation Timing fournit des horodatages haute résolution pour la mesure du chemin critique du rendu.
 - Le navigateur émet une série d'événements consommables qui capturent les différentes étapes du chemin critique du rendu.
 

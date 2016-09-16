@@ -12,7 +12,7 @@ description: JavaScript 往往是視覺變更的觸發器。 有時是直接透�
 
 JavaScript 往往是視覺變更的觸發器。 有時是直接透過樣式操作，有時是計算造成視覺變更，例如搜尋或排序一些資料。 時機不對或長時間執行的 JavaScript 可能是常見的效能問題導因，您應該儘量減少它的影響。
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 針對視覺更新避免 setTimeout 或 setInterval；一律改為使用 requestAnimationFrame。
 - 將長時間執行的 JavaScript 從主執行緒移動至 Web Worker。
 - 使用微任務，以讓 DOM 在多個畫面內變更。

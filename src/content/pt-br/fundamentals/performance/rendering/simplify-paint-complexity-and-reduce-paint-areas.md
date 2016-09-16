@@ -13,7 +13,7 @@ description: A pintura é o processo de preenchimento em pixels que é composto 
 
 A pintura é o processo de preenchimento em pixels que é composto nas telas dos usuários. Geralmente é a execução mais longa de todas as tarefas no pipeline e que deve ser evitada sempre que possível.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Alterar qualquer propriedade além de transforms ou opacity sempre aciona a pintura.
 - A pintura é frequentemente a parte mais cara do pixel pipeline; evite-a se puder.
 - Reduza áreas de pintura pela camada de promoção e orquestração das animações.

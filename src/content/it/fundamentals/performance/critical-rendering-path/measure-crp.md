@@ -13,7 +13,7 @@ description: Non puoi ottimizzare ciò che non puoi misurare. Fortunatamente, la
 Non puoi ottimizzare ciò che non puoi misurare. Fortunatamente, Navigation Timing API ci offre tutti gli strumenti necessari per misurare ciascun passaggio del percorso di rendering critico.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Navigation Timing offre informazioni cronologiche ad alta risoluzione per la misurazione di CRP.
 - Il browser emette una serie di eventi non riproducibili che registrano varie fasi di CRP.
 

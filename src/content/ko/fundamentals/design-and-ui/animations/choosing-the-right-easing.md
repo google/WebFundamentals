@@ -12,7 +12,7 @@ description: easing in, easing out 및 easing in out 중에 프로젝트에 적�
 
 애니메이션에 사용할 수 있는 다양한 easing 옵션을 살펴보고 프로젝트에 어떤 종류를 사용하고 애니메이션에 어떤 종류의 기간을 사용해야 하는지 설명합니다.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - UI 요소에 ease-out 애니메이션을 사용합니다. Quintic ease-out은 빠르고 매우 멋진 ease입니다.
 - '애니메이션 기간을 사용합니다. ease-out 및 ease-in은 200ms - 500ms여야 하며, 바운스 및 elastic ease는 800ms - 1200ms여야 합니다.'
 

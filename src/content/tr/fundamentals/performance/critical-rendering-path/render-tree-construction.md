@@ -16,7 +16,7 @@ CSSOM ve DOM agaçlari, bir olusturma agacinda birlestirilir. Bu agaç daha sonr
 
 Nesne modelinin olusturulmasina iliskin önceki bölümde, HTML ve CSS girislerine dayanarak DOM ve CSSOM agaçlari olusturmustuk. Bununla birlikte, bunlarin her ikisi de dokümanin farkli unsurlarini yakalayan bagimsiz nesnelerdir: Biri, içerigi açiklarken digeri, dokümana uygulanmasi gereken stil kurallarini açiklar. Ikisini nasil birlestiririz ve ekranda pikselleri olusturmak için tarayiciya aliriz?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'DOM ve CSSOM agaçlari, olusturma agacini olusturmak üzere birlestirilir.'
 - Olusturma agaci yalnizca sayfanin olusturulmasi için gereken dügümleri içerir.
 - 'Yer paylasimi, her bir nesnenin tam konumunu ve boyutunu hesaplar.'

@@ -27,7 +27,7 @@ Quando o servidor retorna uma resposta, ele também emite um conjunto de cabeça
 
 ## Validar respostas armazenadas em cache com ETags
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - O token de validação é comunicado pelo servidor por meio do cabeçalho HTTP ETag
 - 'O token de validação permite verificar a atualização de recursos com eficiência: não há transferência de dados se o recurso não foi modificado.'
 
@@ -47,7 +47,7 @@ Note: Dica: o projeto de texto clichê HTML5 contém <a href='https://github.com
 
 ## Controle de cache
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Cada recurso pode definir sua política de armazenamento em cache por meio do cabeçalho HTTP Controle de cache
 - 'As diretivas do Controle de cache controlam quem pode armazenar a resposta em cache, em que condições e por quanto tempo'
 
@@ -109,7 +109,7 @@ De acordo com o HTTP Archive, entre os principais 300.000 sites (pela classifica
 
 ## Invalidar e atualizar respostas armazenadas em cache
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Respostas armazenadas em cache localmente são usadas até que o recurso `expire`
 - Integrar a impressão digital de conteúdo de um arquivo ao URL permite forçar o cliente a fazer a atualização para uma nova versão da resposta
 - Cada aplicativo precisa definir a própria hieraraquia de cache para o desempenho ideal

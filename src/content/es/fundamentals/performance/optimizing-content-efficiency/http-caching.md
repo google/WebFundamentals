@@ -26,7 +26,7 @@ Cuando el servidor ofrece una respuesta, también emite una colección de encabe
 
 ## Validar respuestas almacenadas en memoria caché con `ETags`
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - El servidor informa del token de validación mediante el encabezado HTTP `ETag`.
 - 'El token de validación posibilita las comprobaciones de actualizaciones eficientes: si el recurso no ha cambiado, no se transfieren datos.'
 
@@ -46,7 +46,7 @@ Note: Consejo: El proyecto HTML5 Boilerplate contiene <a href='https://github.co
 
 ## `Cache-Control`
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Cada recurso puede definir su política de almacenamiento en memoria caché mediante el encabezado HTTP `Cache-Control`.
 - 'Las directivas de `Cache-Control` controlan quién puede almacenar la respuesta en memoria caché, en qué condiciones y durante cuánto tiempo.'
 
@@ -108,7 +108,7 @@ Según el archivo HTTP, entre los 300.000 sitios más importantes (según la cla
 
 ## Invalidar y actualizar las respuestas almacenadas en memoria caché
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Las repuestas almacenadas en la memoria caché del dispositivo se utilizan hasta que el recurso `caduca`.
 - La capacidad de insertar una huella de contenido de archivo en la URL nos permite obligar al cliente a actualizar a una versión nueva de la respuesta.
 - Cada aplicación tiene que definir su propia jerarquía de memoria caché a fin de optimizar el rendimiento.

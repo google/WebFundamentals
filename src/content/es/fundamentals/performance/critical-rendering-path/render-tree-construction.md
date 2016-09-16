@@ -15,7 +15,7 @@ Los árboles de CSSOM y de DOM se combinan en el árbol de visualización, que s
 
 En la sección anterior sobre la construcción del modelo de objetos, creamos los árboles de DOM y de CSSOM según las indicaciones del código HTML y de los estilos CSS. Sin embargo, ambos son objetos independientes que interpretan aspectos distintos del documento: uno describe el contenido, y el otro las reglas de estilo que deben aplicarse al documento. ¿Cómo combinamos los dos para hacer que el navegador muestre los píxeles correspondientes en la pantalla?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Los árboles de DOM y de CSSOM se combinan para formar el árbol de visualización.
 - El árbol de visualización solo contiene los nodos necesarios para mostrar la página.
 - El diseño calcula la posición y el tamaño exactos de cada objeto.

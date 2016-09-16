@@ -19,7 +19,7 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 
 ##清除及取代圖片
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 消除不必要的圖片資源
 - 儘量運用 CSS3 效果
 - 使用網路字型，避免在圖片中將文字編碼
@@ -37,7 +37,7 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 
 ## 向量和點陣圖片
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 向量圖片非常適用於由幾何圖形組成的圖片
 - 向量圖片不受縮放和解析度的影響
 - 如果複雜的畫面中包含許多不規則的圖形和細節，請使用點陣圖片
@@ -72,7 +72,7 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 
 ## 高解析度螢幕的意涵
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 在高解析度螢幕中，每個 CSS 像素具有多個裝置像素
 - 高解析度圖片需要非常多的像素和位元組
 - 無論解析度高低，圖片最佳化技術都一樣
@@ -120,7 +120,7 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 
 ## 最佳化向量圖片
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - SVG 是一種 XML 圖片格式
 - 請將 SVG 檔案迷你化，以便縮減檔案大小
 - 請使用 GZIP 壓縮 SVG 檔案
@@ -148,7 +148,7 @@ description: 網頁上大部分的下載位元組通常都是圖片，而且圖�
 
 ## 最佳化點陣圖片
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 點陣圖片是一格像素
 - 每個像素都會包含顏色和透明度資訊
 - 圖片壓縮器會使用多種技術縮減每個像素所需的位元數，藉此降低圖片的檔案大小
@@ -224,7 +224,7 @@ Note: 由左至右 (PNG)：32 位元 (1600 百萬色)、7 位元 (128 色)、5 �
 
 ## 失真和無失真圖片壓縮
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 因為人類眼睛運作機制的緣故，圖片非常適合採用失真壓縮
 - 圖片最佳化是失真和無失真壓縮的一項功能
 - 將圖片最佳化時，使用失真或無失真演算法會造成圖片格式略有不同
@@ -251,7 +251,7 @@ Note: 請注意，如果使用不同的演算法將圖片編碼，則無法直�
 
 ##選擇正確的圖片格式
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 請先選取通用的格式：GIF、PNG、JPEG
 - 反覆實驗後，為每種格式選取最佳設定：品質、調色盤大小等
 - 考慮為現代用戶端新增 WebP 和 JPEG XR 資產 scaled-images: null
@@ -367,7 +367,7 @@ Note: 請注意，如果使用不同的演算法將圖片編碼，則無法直�
 
 ## 提供縮放的圖片資產
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 {# wf_TODO #}
 Warning: A tag here did NOT convert properly, please fix! ''
 

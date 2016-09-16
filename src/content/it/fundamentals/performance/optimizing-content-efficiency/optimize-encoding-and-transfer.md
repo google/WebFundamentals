@@ -21,7 +21,7 @@ Una volta eliminate tutte le risorse non necessarie, è necessario minimizzare l
 
 Per garantire le prestazioni migliori, è necessaria una combinazione delle diverse tecniche.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - La compressione è una procedura di codifica delle informazioni che utilizza un numero inferiore di bit
 - L'eliminazione dei dati non necessari consente sempre di raggiungere i risultati migliori
 - Esistono numerose tecniche e algoritmi di compressione diversi
@@ -63,7 +63,7 @@ Naturalmente, ti chiederai, tutto ciò è fantastico, ma come può aiutarci ad o
 
 ## Minimizzazione: pre-elaborazione e ottimizzazione specifica per il contesto
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Un'ottimizzazione specifica in base ai contenuti può ridurre considerevolmente le dimensioni delle risorse offerte.
 - Un'ottimizzazione specifica in base ai contenuti si applica meglio nel ciclo di build/release.
 
@@ -97,7 +97,7 @@ In breve, come primo passo nell'ottimizzazione dell'efficienza delle nostre riso
 
 ## Compressione del testo con GZIP
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'GZIP funziona meglio su risorse di testo: CSS, JavaScript, HTML'
 - Tutti gli attuali browser supportano la compressione con GZIP e la richiedono automaticamente
 - Il tuo server deve essere configurato per consentire la compressione con GZIP

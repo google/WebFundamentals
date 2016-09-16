@@ -19,7 +19,7 @@ description: 字体设计是良好的设计、品牌塑造、可读性和可访�
 
 ## 网页字体解析
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Unicode 字体可以包含数千种字形
 - 有四种字体格式：WOFF2、WOFF、EOT、TTF
 - 某些字体格式需要使用 GZIP 压缩
@@ -61,7 +61,7 @@ Note: 考虑使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 压缩</
 
 ## 使用 @font-face 定义字体系列
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 使用 format() 提示指定多种字体格式
 - 对大型 unicode 字体进行子集内嵌以提高性能：使用 unicode-range 子集内嵌，并为较旧的浏览器提供手动子集内嵌回退
 - 减少风格字体变体的数量以改进网页和文本呈现性能
@@ -237,7 +237,7 @@ Note: 为获得最好的一致性和视觉效果，您不应该依赖字体合�
 
 ## 优化加载和呈现
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 在构造呈现树之前，会延迟字体请求，这可能会导致文本呈现延迟
 - 通过字体加载 API，我们可以执行自定义字体加载和覆盖默认延迟加载字体加载的呈现策略
 - 通过字体内联，我们可以在较旧的浏览器中覆盖默认延迟加载字体加载

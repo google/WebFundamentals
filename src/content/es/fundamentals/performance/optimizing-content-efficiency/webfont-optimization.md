@@ -18,7 +18,7 @@ La optimización de fuentes web es una parte fundamental de la estrategia de ren
 
 ## Anatomía de una fuente web
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Las fuentes unicode pueden contener miles de glifos
 - 'Existen cuatro formatos de fuente: WOFF2, WOFF, EOT y TTF'
 - Algunos formatos de fuente requieren el uso de compresión GZIP
@@ -60,7 +60,7 @@ Note: Puedes usar la <a href='http://en.wikipedia.org/wiki/Zopfli'>compresión Z
 
 ## Definir la familia de fuentes con @font-face
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Utiliza la opción format() para especificar varios formatos de fuente
 - Crea subconjuntos de fuentes unicode grandes para mejorar el rendimiento: utiliza los subconjuntos de la gama unicode y proporciona manualmente un subconjunto alternativo para los navegadores más antiguos
 - Reduce el número de opciones de estilo de las fuentes para mejorar el rendimiento de la renderización de la página y del texto
@@ -226,7 +226,7 @@ Note: Para conseguir la máxima coherencia y los mejores resultados visuales, no
 
 ## Optimizar la carga y la renderización
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Las solicitudes de fuentes se retrasan hasta que se construye el árbol de visualización, lo que puede retardar la renderización del texto
 - La API de carga de fuentes permite implementar estrategias de carga y renderización de fuentes personalizadas que sustituyen la carga de fuentes lenta predeterminada
 - La incrustación de fuentes permite sustituir la carga de fuentes lenta predeterminada en los navegadores antiguos

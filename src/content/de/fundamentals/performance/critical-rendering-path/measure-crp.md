@@ -13,7 +13,7 @@ description: Sie können nicht optimieren, was Sie nicht messen können. Mit dem
 Sie können nicht optimieren, was Sie nicht messen können. Mit dem Navigation Timing API verfügen wir jedoch über alle notwendigen Tools zum Messen der einzelnen Schritte des kritischen Rendering-Pfads (Critical Rendering Path, CRP)!
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Navigation Timing liefert hochauflösende Zeitstempel für die Messung des CRP.
 - Der Browser gibt Serien verarbeitbarer Ereignisse aus, die verschiedene Phasen des CRP erfassen.
 

@@ -15,7 +15,7 @@ description: 폰 기능이 있는 장치에서 사용자가 전화번호를 눌�
 클릭투콜(click to call)이라고 합니다.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - <code>tel:</code> 스키마를 사용하여 하이퍼링크에 모든 전화번호를 래핑합니다.
 - 항상 국제 전화번호 형식을 사용합니다.
 

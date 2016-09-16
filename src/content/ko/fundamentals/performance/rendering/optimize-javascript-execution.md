@@ -12,7 +12,7 @@ description: JavaScript는 종종 시각적 변화를 유발합니다. 어떤 �
 
 JavaScript는 종종 시각적 변화를 유발합니다. 어떤 경우에는 직접 스타일 조작을 통해, 어떤 경우에는 데이터 검색 또는 정렬과 같은 시각적 변화를 일으키는 계산을 통해 이를 구현합니다. 비효율적으로 시간을 소모하거나 오래 실행되는 JavaScript는 성능 문제의 일반적인 원인이며 가급적 이러한 영향을 최소화할 수 있는 방법을 찾아야 합니다.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 시각적 업데이트에 setTimeout 또는 setInterval을 피하고 대신 항상 requestAnimationFrame을 사용합니다.
 - 기본 스레드를 벗어나 오래 실행되는 JavaScript를 Web Workers로 이전합니다.
 - 마이크로 작업을 사용하여 여러 프레임에서 DOM을 변경합니다.

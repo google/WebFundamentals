@@ -26,7 +26,7 @@ Quando il server invia una risposta, genera contemporaneamente un certo numero d
 
 ##Convalida di risposte messe in cache con ETag
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Il token di convalida è comunicato dal server tramite l'intestazione HTTP ETag
 - 'Il token di convalida consente di effettuare una verifica efficiente dell''aggiornamento delle risorse: nessun dato viene trasferito se la risorsa non ha subito modifiche.'
 
@@ -46,7 +46,7 @@ Note: Suggerimento: il progetto HTML5 Boilerplate contiene <a href='https://gith
 
 ## Cache-Control
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - La modalità di caching di ogni risorsa può essere definita tramite l'intestazione HTTP Cache-Control
 - 'Le direttive Cache-Control determinano chi può mettere in cache la risposta, a quali condizioni e per quanto tempo'
 
@@ -108,7 +108,7 @@ Secondo HTTP Archive, tra i principali 300.000 siti (valutazione Alexa), [circa 
 
 ## Annullare e aggiornare le risposte in cache
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Le risposte messe nella cache locale vengono utilizzate fino a 'scadenza' della risorsa
 - L'inclusione della fingerprint di un file nell'URL consente di forzare il client ad aggiornare la risposta
 - Ogni applicazione deve definire gerarchicamente la propria cache per garantire prestazioni ottimali

@@ -13,7 +13,7 @@ description: Las animaciones deben funcionar correctamente; de lo contrario, ten
 
 Cada vez que se hace una animación, se deben mantener 60 fotogramas/s, ya que los usuarios notarán los parpadeos o las obstrucciones, y esto tendrá un impacto negativo en sus experiencias.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Debe procurar que sus animaciones no causen problemas de rendimiento. Asegúrese de conocer el impacto de animar una determinada propiedad de la CSS (hoja de estilos en cascada).
 - Las propiedades de animación que modifican las características geométricas de la página (diseño) o que generan efectos de pintura son particularmente costosas.
 - Siempre que pueda, limítese a realizar cambios en las propiedades transforms y opacity.

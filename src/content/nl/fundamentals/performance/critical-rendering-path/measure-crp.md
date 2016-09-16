@@ -13,7 +13,7 @@ description: Als het niet meetbaar is, kan het ook niet geoptimaliseerd worden. 
 Als het niet meetbaar is, kan het ook niet geoptimaliseerd worden. Gelukkig geeft de Navigation Timing API ons alle nodige hulpmiddelen om elke stap van het kritieke weergavepad te meten.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Navigation Timing biedt gedetailleerde tijdstempels voor het meten van het CRP (Critical Rendering Pad, kritieke weergavepad).
 - De browser zendt een aantal bruikbare gebeurtenissen uit waarin de verschillende fasen van het CRP worden vastgelegd.
 

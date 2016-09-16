@@ -12,7 +12,7 @@ description: Composición hace referencia al proceso en el que las partes pintad
 
 Composición hace referencia al proceso en el que las partes pintadas de la página se unen para mostrarlas en la pantalla.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Limítese a los cambios de transform y opacity para sus animaciones.
 - Promueva el movimiento de los elementos con las propiedades will-change o translateZ.
 - Evite usar en exceso las reglas de promoción; las capas requieren memoria y administración.

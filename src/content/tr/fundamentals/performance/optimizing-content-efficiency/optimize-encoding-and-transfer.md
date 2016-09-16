@@ -22,7 +22,7 @@ Gereksiz dosyalari çikardiktan sonraki adim, tarayicinin indirmesi gereken kala
 
 En iyi performansin saglanmasi, tüm bu tekniklerin kombinasyonunu gerektirir.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Sikistirma, kodlama bilgilerinin daha az sayida bit kullanilarak islenmesidir'
 - Gereksiz verilerin çikarilmasi her zaman en iyi sonuçlari saglar
 - Birçok farkli sikistirma teknigi ve algoritmasi vardir
@@ -64,7 +64,7 @@ Elbette, sunu merak ediyor olabilirsiniz: Tüm bunlar harika, ama bunun web sayf
 
 ## Küçültme: Ön isleme ve baglama özel optimizasyonlar
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Içerige özel optimizasyonlar, teslim edilen kaynaklarin boyutunu önemli ölçüde azaltabilir.'
 - 'Içerige özel optimizasyonlar, olusturma/yayinlama döngünüzün bir parçasi olduklarinda en iyi sekilde uygulanirlar.'
 
@@ -98,7 +98,7 @@ Kisacasi, varliklarinizin verimliligini optimize ederken ilk adim olarak farkli 
 
 ## GZIP ile metin sikistirma
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'GZIP, en iyi performansini metin tabanli varliklar üzerinde gösterir: CSS, JavaScript, HTML'
 - Tüm modern tarayicilar GZIP sikistirmasini destekler ve otomatik olarak bunu ister
 - Sunucunuzun GZIP sikistirmasi saglayacak sekilde yapilandirilmasi gerekir

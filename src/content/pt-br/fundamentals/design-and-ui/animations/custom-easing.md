@@ -14,7 +14,7 @@ description: Vá além e crie animações totalmente personalizadas para os seus
 
 Algumas vezes você não deseja usar as palavras-chave de easing incluídas com o CSS ou usa uma biblioteca de animação baseada em JavaScript. Em ambos os casos, você geralmente pode definir suas próprias curvas (ou equações) o que proporciona maior controle sobre as animações do seu projeto.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - O easing personalizado confere mais personalidade a seus projetos.
 - 'Você pode criar curvas de bézier cúbicas que se parecem com as curvas de animação padrão <code>(ease-out</code>, <code>ease-in</code>, etc.), mas com ênfase em locais diferentes.'
 - 'Use JavaScript quando precisar de mais controle sobre o tempo e comportamento da animação, por exemplo, animações elásticas ou saltitantes.'

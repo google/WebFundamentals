@@ -12,7 +12,7 @@ description: 합성(compositing)은 화면에 표시하기 위해 페이지의 �
 
 합성(compositing)은 화면에 표시하기 위해 페이지의 그림 그린 부분을 합치는 과정입니다.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 애니메이션의 변형 및 불투명도 변경을 살펴봅니다.
 - will-change 또는 translateZ를 사용하여 이동 요소를 승격합니다.
 - 승격 규칙의 남용을 피합니다. 레이어는 메모리와 관리가 필요합니다.

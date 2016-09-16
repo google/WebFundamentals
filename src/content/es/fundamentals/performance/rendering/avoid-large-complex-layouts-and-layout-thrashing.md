@@ -11,7 +11,7 @@ description: El diseño es la parte donde el navegador descifra la información 
 
 El diseño es la parte donde el navegador descifra la información geométrica de los elementos: su tamaño y ubicación en la página. Cada elemento posee información explícita o implícita sobre el tamaño, según la CSS (Hoja de estilos en cascada) que se utilizó, los contenidos del elemento o un elemento principal. El proceso se denomina Diseño en Chrome, Opera, Safari e Internet Explorer. En Firefox, se denomina Redistribución, pero el proceso, en realidad, es el mismo.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - El diseño generalmente se aplica en todo el documento.
 - 'La cantidad de elementos del DOM afectará al rendimiento; por eso, debe evitar el desencadenamiento de diseño siempre que sea posible.'
 - 'Evalúe el rendimiento del modelo de diseño: los nuevos modelos Flexbox generalmente son más rápidos que los modelos Flexbox anteriores o que los modelos de diseño flotantes.'

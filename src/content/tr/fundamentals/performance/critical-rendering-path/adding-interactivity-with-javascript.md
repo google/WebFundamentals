@@ -15,7 +15,7 @@ JavaScript, sayfanin neredeyse her yönünü degistirmemize olanak tanir: içeri
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript; DOM ve CSSOM'yi sorgulayip degistirebilir.
 - JavaScript yürütmesi CSSOM'de engelleme yapar.
 - 'JavaScript, açik bir sekilde zaman uyumsuz oldugu açiklanmazsa DOM yapisini engeller.'

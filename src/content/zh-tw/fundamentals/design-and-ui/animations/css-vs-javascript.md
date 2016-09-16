@@ -13,7 +13,7 @@ description: 您可以用 CSS 或 JavaScript 進行動畫處理。 您應該使�
 
 網頁環境中，有兩種主要方式可以建立動畫：以 CSS 或 JavaScript。 選擇哪一種取決於您專案的相依性，以及您想實現的效果。
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 針對簡單的「一次性」轉換，像切換 UI 元素狀態等，請使用 CSS 動畫。
 - 當您想要擁有進階的效果，像彈跳、停止、暫停、倒帶或減速時，請使用 JavaScript 動畫。
 - 如果您選擇使用 JavaScript 進行動畫處理，請採用 TweenMax，或者較輕量級的解決方案 TweenLite。

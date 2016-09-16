@@ -26,7 +26,7 @@ Chaque fois que le serveur renvoie une réponse, il émet également une collect
 
 ## Valider les réponses mises en cache avec ETags
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Le jeton de validation est communiqué par le serveur via l'en-tête HTTP ETag
 - 'Le jeton de validation permet de contrôler la mise à jour des ressources de façon efficace : aucun transfert de données n''est effectué si la ressource n''a pas changé.'
 
@@ -46,7 +46,7 @@ Note: Conseil : le projet HTML5 Boilerplate contient des <a href='https://github
 
 ## Cache-Control
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Chaque ressource peut définir ses règles de mises en cache via l'en-tête HTTP Cache-Control
 - 'Les directives Cache-Control contrôlent qui peut mettre en cache la réponse, à quelles conditions et pour combien de temps'
 
@@ -108,7 +108,7 @@ Selon HTTP Archive, parmi les 300 000 premiers sites (classement Alexa rank), [p
 
 ## Invalider et mettre à jour les réponses mises en cache
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Les réponses mises en cache de façon locale sont utilisées jusqu'à `expiration` de la ressource
 - L'intégration d'une empreinte digitale de contenu de fichier dans l'URL nous permet de forcer le client à mettre à jour la réponse avec une nouvelle version
 - Chaque application doit définir sa propre hiérarchie de mise en cache pour des performances optimales

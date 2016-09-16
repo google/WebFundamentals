@@ -20,7 +20,7 @@ Nadat we alle overbodige hulpbronnen hebben verwijderd, moeten we de totale omva
 
 Het beste resultaat bereiken we door al deze methoden te combineren.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Compressie is de codering van informatie waardoor minder bits nodig zijn
 - Het beste resultaat krijgen we altijd door overbodige gegevens te verwijderen
 - Er bestaan veel verschillende compressiemethoden en -algoritmen
@@ -62,7 +62,7 @@ U vraagt zich misschien af wat we hieraan hebben voor optimalisatie van onze int
 
 ## Verkleinen: voorverwerking en inhoudspecifieke optimalisatie
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Met optimalisatie die op de inhoud is aangepast, kunt u de omvang van geleverde hulpbronnen aanzienlijk terugbrengen'
 - Inhoudspecifieke optimalisatie kunt u het beste tijdens de samenstelling/publicatie van de hulpbron toepassen
 
@@ -96,7 +96,7 @@ Inventariseer daarom als eerste stap voor de optimalisatie van de efficiëntie v
 
 ## Tekstcompressie met GZIP
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'GZIP werkt het beste met tekstitems: CSS, JavaScript, HTML'
 - Alle moderne browsers ondersteunen GZIP-compressie en passen deze standaard toe
 - GZIP moet zijn ingeschakeld in de configuratie van uw server

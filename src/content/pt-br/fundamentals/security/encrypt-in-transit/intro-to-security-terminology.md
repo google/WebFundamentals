@@ -15,7 +15,7 @@ description: Ao migrar para HTTPS, um dos obstáculos que os operadores de site 
 
 Ao migrar para HTTPS, um dos obstáculos que os operadores de site enfrentam é conceitual: O que está acontecendo exatamente? O que toda terminologia de criptografia significa? Nesta seção, daremos uma breve visão geral.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Chaves públicas/privadas são usadas para assinar e criptografar mensagens entre o navegador e o servidor
 - Uma autoridade de certificado (CA) é uma organização que confirma o mapeamento entre as chaves públicas e os nomes DNS públicos (como 'www.foobar.com')
 - Uma solicitação de assinatura de certificado (CSR) é um formato de dados que agrupa uma chave pública com alguns metadados sobre a entidade que possui a chave

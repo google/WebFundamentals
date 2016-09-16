@@ -14,7 +14,7 @@ description: Animações devem ter um bom desempenho, caso contrário, impactar�
 
 Deve-se ter cuidado para manter 60 fps sempre que você estiver animando, porque qualquer salto ou tremida será observada pelos seus usuários e impactará negativamente a experiência.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Tome cuidado para que suas animações não causem problemas de desempenho; certifique-se de saber o impacto da animação de uma determinada propriedade CSS.
 - Animar propriedades que mudam a geometria da página (layout) ou causam pinturas são particularmente caras.
 - 'Onde possível, opte pela mudança de transforms e opacity.'

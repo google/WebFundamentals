@@ -21,7 +21,7 @@ Una vez eliminados todos los recursos innecesarios, hay que reducir el tamaño t
 
 Para obtener el mejor resultado posible hay que combinar todas estas técnicas.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - La compresión es el proceso de codificar información utilizando menos bits
 - Al eliminar los datos innecesarios se consiguen mejores resultados
 - Hay muchas técnicas y muchos algoritmos de compresión distintos
@@ -63,7 +63,7 @@ Y ahora debes estar pensando: `Esto está muy bien, ¿pero cómo nos ayuda en la
 
 ## Minificar: optimizaciones de preprocesamiento y específicas del contexto
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Las optimizaciones específicas del contenido pueden reducir significativamente el tamaño de los recursos entregados.
 - Las optimizaciones específicas del contenido funcionan mejor si se aplican durante el período de creación/lanzamiento.
 
@@ -97,7 +97,7 @@ En resumen, como primer paso para optimizar la eficacia de los recursos debes cr
 
 ## Compresión de texto con GZIP
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'GZIP funciona mejor en recursos basados en texto: CSS, JavaScript, HTML'
 - Todos los navegadores modernos admiten compresión GZIP y la solicitan automáticamente
 - Hay que configurar el servidor para que admita la compresión GZIP

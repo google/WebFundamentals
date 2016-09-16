@@ -16,7 +16,7 @@ CSS wordt standaard behandeld als een weergaveblokkerende bron. Dit betekent dat
 
 In het vorige gedeelte zagen we dat het kritieke weergavepad zowel de DOM- als de CSSOM-boomstructuur nodig heeft om de weergaveboomstructuur te kunnen opbouwen. Dit zorgt voor een groot gevolg voor de prestatie: **zowel HTML als CSS zijn weergaveblokkerende bronnen.** De HTML is voor de hand liggend, aangezien we zonder het DOM niets hebben om weer te geven, maar het CSS is misschien minder duidelijk. Wat zou er gebeuren als we proberen een gewone pagina weer te geven zonder een weergaveblokkering op CSS?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - CSS wordt standaard behandeld als een weergaveblokkerende bron.
 - Mediatypen en -query's maken het mogelijk om bepaalde CSS-bronnen te markeren als niet-weergaveblokkerend.
 - 'Alle CSS-bronnen, onafhankelijk van blokkerend of niet-blokkerend gedrag, worden gedownload door de browser.'

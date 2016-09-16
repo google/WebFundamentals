@@ -12,7 +12,7 @@ description: Aprenda a lograr que sus animaciones sean suaves pero interesantes.
 
 Nada de lo que se encuentra en la naturaleza se mueve de forma lineal desde un punto hacia otro. En la realidad, los objetos tienden a acelerar o desacelerar a medida que se mueven. Nuestros cerebros están configurados para esperar este tipo de movimiento, por lo que, al realizar animaciones, debe utilizar esto a su favor. Si los movimientos son naturales, los usuarios se sentirán más cómodos con sus aplicaciones, lo que, a su vez, derivará en una mejor experiencia general.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Gracias a la aceleración, sus animaciones se ven más naturales.
 - Seleccione animaciones de salida lenta para los elementos de las IU.
 - Evite las animaciones de entradas lentas o de entradas y salidas lentas, a menos que sean breves, ya que generalmente les parecen muy lentas a los usuarios finales.

@@ -15,7 +15,7 @@ description: 无法评估就谈不上优化。幸运的是，Navigation Timing A
 无法评估就谈不上优化。幸运的是，Navigation Timing API 提供了所有必备工具来评估关键呈现路径的每个步骤！
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Navigation Timing 为评估关键呈现路径提供了细粒度的时间戳。
 - 浏览器发出一系列可捕获的事件，捕获关键呈现路径的不同阶段。
 

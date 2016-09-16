@@ -24,7 +24,7 @@ Wenn der Server eine Antwort zurücksendet, übermittelt er auch eine Sammlung v
 
 ## Zwischengespeicherte Antworten mit ETags validieren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Ein Validierungstoken wird vom Server über den ETag-HTTP-Header übertragen.
 - Ein Validierungstoken ermöglicht effiziente Aktualisierungsprüfungen von Ressourcen. Es werden keine Daten übertragen, wenn sich die Ressource nicht geändert hat.
 
@@ -44,7 +44,7 @@ Note: Tipp: Das Projekt `HTML5 Boilerplate` enthält <a href='https://github.com
 
 ## Cache-Control
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Für jede Ressource können die Caching-Richtlinien per Cache-Control-HTTP-Header definiert werden.
 - Mit Cache-Control-Anweisungen wird geregelt, wer die Antwort im Cachespeicher ablegen kann, unter welchen Bedingungen und über welchen Zeitraum.
 
@@ -107,7 +107,7 @@ Laut HTTP Archive können bei den 300.000 beliebtesten Websites (Alexa-Rangliste
 
 ## Zwischengespeicherte Antworten annullieren und aktualisieren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Die Antworten im lokalen Cachespeicher werden so lange verwendet, bis die Ressource `abgelaufen` ist.
 - Die Einbettung eines Fingerabdrucks des Dateiinhalts in die URL ermöglicht es, den Client zur einer Aktualisierung auf eine neue Version der Antwort zu zwingen.
 - In jeder Anwendung muss eine eigene Cachehierarchie für die optimale Leistung festgelegt werden.

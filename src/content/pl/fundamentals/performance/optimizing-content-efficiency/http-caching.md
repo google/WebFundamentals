@@ -27,7 +27,7 @@ Gdy serwer zwraca odpowiedź, przesyła również zestaw nagłówków HTTP z opi
 
 ## Walidacja buforowanych odpowiedzi za pomocą tokenów ETag
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Token walidacji jest przekazywany przez serwer za pomocą nagłówka ETag HTTP
 - 'Token walidacji umożliwia efektywne sprawdzanie, czy zasób zaktualizowano: transfer danych nie następuje, jeśli zasób się nie zmienił.'
 
@@ -47,7 +47,7 @@ Note: Wskazówka: projekt HTML5 Boilerplate zawiera <a href='https://github.com/
 
 ## Dyrektywa Cache-Control
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Każdy zasób może określić swoją politykę buforowania za pomocą nagłówka Cache-Control protokołu HTTP
 - 'Dyrektywy Cache-Control kontrolują, kto może buforować odpowiedź, w jakich warunkach i jak długo'
 
@@ -109,7 +109,7 @@ Według projektu HTTP Archive, wśród najpopularniejszych 300 000 witryn (wedł
 
 ## Unieważnianie i aktualizacja zbuforowanych odpowiedzi
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Lokalnie zbuforowane odpowiedzi są używane do momentu `wygaśnięcia` zasobu
 - Umieszczenie odcisku cyfrowego zawartości pliku w adresie URL pozwala wymusić u klienta aktualizację do nowej wersji odpowiedzi
 - 'Aplikacja może uzyskać najwyższą wydajność, określając własną hierarchię buforowania'

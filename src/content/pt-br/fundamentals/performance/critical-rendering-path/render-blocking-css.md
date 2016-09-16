@@ -16,7 +16,7 @@ Por padrão, o CSS é tratado como um recurso bloqueador de renderização. Isso
 
 Na seção anterior, vimos que o caminho de processamento essencial exige que tenhamos o DOM e o CSSOM para construir a árvore de renderização. Isso gera uma consequência importante para o desempenho: **tanto HTML quanto CSS são recursos bloqueadores.** O HTML é óbvio, já que sem o DOM não teríamos nada para renderizar, mas a necessidade do CSS pode ser menos óbvia. O que aconteceria se tentássemos renderizar uma página típica sem bloquear a renderização de CSS?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Por padrão, o CSS é tratado como um recurso bloqueador de renderização.'
 - Os tipos de mídia e consultas de mídia permitem marcar alguns recursos do CSS como não bloqueadores de renderização.
 - 'Todos os recursos do CSS, independentemente do comportamento bloqueador ou não bloqueador, são transferidos pelo navegador.'

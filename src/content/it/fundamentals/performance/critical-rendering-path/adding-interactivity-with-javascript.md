@@ -14,7 +14,7 @@ JavaScript ci consente di modificare praticamente qualsiasi aspetto della pagina
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript può eseguire query e modificare DOM e CSSOM.
 - L'esecuzione di JavaScript blocca CSSOM.
 - JavaScript blocca la costruzione DOM, salvo esplicitamente dichiarata come asincrono.

@@ -12,7 +12,7 @@ description: 合成是指組合網頁上的繪製部分，以用於在螢幕上�
 
 合成是指組合網頁上的繪製部分，以用於在螢幕上顯示。
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 針對您的動畫，堅守變形和透明度變更。
 - 以 will-change 或 translateZ 將移動元素升階。
 - 避免過度使用升階規則；圖層需要記憶體和管理。

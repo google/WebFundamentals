@@ -15,7 +15,7 @@ JavaScript biedt ons de mogelijkheid om vrijwel elk onderdeel van de pagina aan 
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript kan DOM en CSSOM opvragen en aanpassen.
 - JavaScript-uitvoer wordt geblokkeerd bij CSSOM.
 - JavaScript blokkeert DOM-opbouw tenzij expliciet aangegeven als asynchroon.

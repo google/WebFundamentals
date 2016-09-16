@@ -18,7 +18,7 @@ Nachdem alle unnötigen Ressourcen entfernt wurden, besteht der nächste Schritt
 
 Für die bestmögliche Leistung ist eine Kombination all dieser Verfahren erforderlich.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Komprimierung bezeichnet die Codierung von Informationen unter Verwendung von weniger Bits.
 - Mit der Entfernung unnötiger Daten werden stets die besten Resultate erzielt.
 - Es gibt viele verschiedene Komprimierungsmethoden und -algorithmen.
@@ -60,7 +60,7 @@ Sie werden sich fragen: Das ist ja alles prima, aber wie hilft es uns dabei, uns
 
 ## Minimierung: Vorverarbeitung und kontextspezifische Optimierungen
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Mit inhaltsspezifischen Optimierungen kann die Größe der übertragenen Ressourcen erheblich reduziert werden.
 - Inhaltsspezifische Optimierungen werden am besten im Rahmen des Build-/Release-Zyklus durchgeführt.
 
@@ -94,7 +94,7 @@ Kurze Zusammenfassung: Machen Sie als ersten Schritt bei der Optimierung der Eff
 
 ## Textkomprimierung mit GZIP
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - GZIP ist am leistungsstärksten bei textbasierten Ressourcen: CSS, JavaScript, HTML.
 - Alle modernen Browser unterstützen die GZIP-Komprimierung und fordern sie automatisch an.
 - Ihr Server muss für die Aktivierung der GZIP-Komprimierung konfiguriert sein.

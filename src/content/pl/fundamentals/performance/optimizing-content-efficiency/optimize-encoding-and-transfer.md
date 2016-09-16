@@ -22,7 +22,7 @@ Po wyeliminowaniu wszystkich zbędnych zasobów następnym krokiem jest minimali
 
 Osiągnięcie najwyższej wydajności wymaga połączenia wszystkich tych technik.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Kompresja to proces kodowania informacji, w wyniku którego zajmują one mniej bitów'
 - Najlepsze wyniki przynosi zawsze eliminacja zbędnych danych
 - Istnieje wiele różnych technik i algorytmów kompresji
@@ -64,7 +64,7 @@ Możesz się jednak zastanawiać, jak to przekłada się na optymalizację naszy
 
 ## Kompaktowanie: przetwarzanie wstępne i optymalizacje zależne od kontekstu
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Optymalizacje dostosowane do treści mogą znacznie zredukować rozmiar przesyłanych zasobów.
 - Optymalizacje dostosowane do treści najlepiej stosować w cyklu kompilacji/aktualizacji kodu.
 
@@ -98,7 +98,7 @@ W skrócie: pierwszym krokiem do optymalizacji wydajności zasobów jest utworze
 
 ## Kompresja tekstu za pomocą kompresora GZIP
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Format GZIP osiąga najlepsze wyniki dla zasobów tekstowych: CSS, JavaScript, HTML'
 - Wszystkie nowoczesne przeglądarki obsługują kompresję GZIP i automatycznie jej żądają
 - Włączenie kompresji GZIP wymaga odpowiedniego skonfigurowania serwera

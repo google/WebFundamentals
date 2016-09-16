@@ -14,7 +14,7 @@ CSS wird standardmäßig als rendering-blockierende Ressource behandelt, d. h., 
 
 Im vorherigen Abschnitt haben wir festgestellt, dass es für den kritischen Rendering-Pfad notwendig ist, die Rendering-Verzeichnisstruktur sowohl mit dem DOM als auch mit dem CSSOM zu erstellen. Dies führt uns zu einer wichtigen Schlussfolgerung bezüglich der Leistung: **Sowohl HTML als auch CSS sind Ressourcen, die das Rendering blockieren.** In Bezug auf HTML ist dies offensichtlich, denn ohne das DOM wäre nichts zum Rendern vorhanden, aber die Notwendigkeit von CSS ist womöglich weniger einleuchtend. Was würde geschehen, wenn wir versuchten, eine typische Seite zu rendern, ohne das Rendern im CSS-Code zu blockieren?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Standardmäßig wird CSS als Ressource behandelt, die das Rendering blockiert.
 - Mittels Medientypen und Medienabfragen ist es möglich, manche CSS-Ressourcen als das Rendering nicht blockierend zu kennzeichnen.
 - Alle CSS-Ressourcen, sowohl blockierende als auch nicht blockierende, werden vom Browser heruntergeladen.

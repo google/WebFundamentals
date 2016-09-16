@@ -14,7 +14,7 @@ JavaScript を利用すると、コンテンツやスタイル、ユーザー操
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript は、DOM と CSSOM のクエリと変更を行うことができます。
 - JavaScript の実行は CSSOM をブロックします。
 - JavaScript は、明示的に非同期化を宣言していない場合、DOM 構築をブロックします。

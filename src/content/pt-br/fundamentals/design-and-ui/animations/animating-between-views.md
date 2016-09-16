@@ -14,7 +14,7 @@ description: Aprenda como animar entre duas visualizações em seus aplicativos.
 
 Muitas vezes os usuários deverão passar por diferentes visualizações no seu aplicativo, seja uma lista para uma visualização de detalhes ou mostrar uma navegação de barra lateral. Animações entre essas visualizações são ótimas para prender a atenção do usuário e dar ainda mais vida aos seus projetos.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Use transições para se mover entre visualizações; evite usar <code>left</code>, <code>top</code> ou qualquer outra propriedade que acione o layout.'
 - Certifique-se de que as animações usadas sejam alegres e de curta duração.
 - Leve em consideração como suas animações e layouts mudam conforme o tamanho da tela aumenta; o que funciona para uma tela pequena pode parecer estranho quando usado em um contexto de desktop.

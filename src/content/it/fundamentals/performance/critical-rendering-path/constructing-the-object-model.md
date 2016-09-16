@@ -14,7 +14,7 @@ Prima che il browser possa eseguire il rendering della pagina, deve costruire le
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Byte → caratteri → token → nodi → modello a oggetti.
 - Il markup HTML viene trasformato in Document Object Model (DOM), il markup CSS invece in un CSS Object Model (CSSOM).
 - DOM e CSSOM rappresentano strutture dati indipendenti.

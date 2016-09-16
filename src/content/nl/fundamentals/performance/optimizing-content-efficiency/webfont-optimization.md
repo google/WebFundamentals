@@ -18,7 +18,7 @@ De optimalisatie van lettertypen is een essentieel onderdeel van het algehele re
 
 ## Anatomie van een weblettertype
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Unicode-lettertypes kunnen duizenden gliefen bevatten
 - 'Er zijn vier bestandsindelingen voor lettertypen: WOFF2, WOFF, EOT, TTF'
 - Voor sommige lettertype-indelingen is compressie met GZIP nodig
@@ -60,7 +60,7 @@ Note: Gebruik <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli-compressie</a
 
 ## De lettertypefamilie definiëren met @font-face
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Gebruik de hint format() om meerdere lettertype-indelingen aan te geven
 - Deel grote unicode-lettertypen in in deelverzamelingen en houd een handmatig in te stellen reservedeelverzameling achter de hand voor oudere browsers
 - 'Verlaag het aantal stilistische lettertypen, zodat pagina''s en tekst beter kan worden weergegeven'
@@ -226,7 +226,7 @@ Note: Voor de beste consistentie en visuele resultaten kunt u beter geen gebruik
 
 ## Laden en renderen optimaliseren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Verzoeken om lettertypen worden pas behandeld wanneer de render-boom is opgebouwd, wat tot vertraagde tekstweergave kan leiden'
 - In de Font Loading API kunnen we strategieën voor aangepaste lettertypen en rendering implementeren die voorrang krijgen boven standaard 'lazyload' laden van lettertypen
 - Met `inlining` van lettertypen kunnen we standaard `lazyload` laden in oudere browsers overschrijven

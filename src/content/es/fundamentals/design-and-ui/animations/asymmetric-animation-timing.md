@@ -12,7 +12,7 @@ description: Romper la simetría les proporciona contraste a sus proyectos y los
 
 Gracias a la asimetría de la duración de las animaciones, se mejora la experiencia del usuario, ya que esto le permite expresar su personalidad y, al mismo tiempo, responder rápidamente a las interacciones del usuario. Además, se genera un contraste en la apariencia, lo que hace que la interfaz sea más atractiva.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Utilice las animaciones asimétricas para agregarles personalidad y contraste a sus trabajos.
 - Siempre debe favorecer la interacción del usuario. Para ello, utilice duraciones más cortas cuando deba dar una respuesta a las pulsaciones o los clics, y reserve las duraciones más lentas para los momentos en los que no debe hacerlo.
 

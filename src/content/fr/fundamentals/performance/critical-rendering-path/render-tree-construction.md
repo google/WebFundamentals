@@ -15,7 +15,7 @@ Les arborescences des modèles CSSOM et DOM sont combinées pour former une arbo
 
 Dans la section précédente sur la construction du modèle d'objet, nous avons créé les arborescences des modèles DOM et CSSOM en fonction des données HTML et CSS. Cependant, il s'agit d'objets indépendants qui capturent différents aspects du document : l'un décrit le contenu et l'autre les règles de style qui doivent être appliquées au document. Comment pouvons-nous fusionner les deux pour que le navigateur affiche les pixels à l'écran ?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Les arborescences des modèles DOM et CSSOM sont combinées pour former l'arborescence d'affichage.
 - L'arborescence d'affichage ne contient que les nœuds nécessaires pour afficher la page.
 - La mise en page calcule la position et la taille exactes de chaque objet.

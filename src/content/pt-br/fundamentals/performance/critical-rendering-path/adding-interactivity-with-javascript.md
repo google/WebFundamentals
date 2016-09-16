@@ -15,7 +15,7 @@ JavaScript possibilita alterar praticamente todos os aspectos da página: conte�
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript pode consultar e modificar DOM e CSSOM.
 - Blocos de execução de JavaScript no CSSOM.
 - 'JavaScript bloqueia a criação de DOM, a menos que isso seja explicitamente declarado como assíncrono.'

@@ -12,7 +12,7 @@ description: En los dispositivos con capacidades de telefonía, permita que los 
 En los dispositivos con capacidades de telefonía, permita que los usuarios se comuniquen directamente con usted de una forma fácil que consiste en hacer clic en un número de teléfono. Esta función, a menudo, se conoce como clic para llamar.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Agrupe todos los números telefónicos en hipervínculos con el esquema <code>tel:</code>.
 - Utilice siempre el formato internacional de marcación.
 

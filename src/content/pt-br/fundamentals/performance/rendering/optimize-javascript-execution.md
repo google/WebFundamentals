@@ -13,7 +13,7 @@ description: JavaScript é geralmente o acionador de mudanças visuais. Algumas 
 
 JavaScript é geralmente o acionador de mudanças visuais. Algumas vezes de forma direta, através de manipulações de estilo, outras, seu cálculos resultarão em mudanças visuais, como pesquisa ou classificação de algum dado. O JavaScript mal cronometrado ou de longa execução pode ser uma causa comum de problemas de desempenho, então minimize seu impacto sempre que possível.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Evite setTimeout ou setInterval para atualizações de visual; sempre use requestAnimationFrame.
 - Remova o JavaScript de longa duração do thread principal para o Web Workers.
 - Use microtarefas para realizar mudanças do DOM em vários frames.

@@ -14,7 +14,7 @@ JavaScript pozwala zmienić niemal każdy aspekt strony &ndash; treść, styl or
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript pozwala odczytywać i zmieniać modele DOM oraz CSSOM.
 - Wykonanie kodu JavaScript jest blokowane do chwili utworzenia modelu CSSOM.
 - 'JavaScript blokuje tworzenie modelu DOM, chyba że zostanie wyraźnie zadeklarowany jako asynchroniczny.'

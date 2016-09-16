@@ -17,7 +17,7 @@ L'optimisation de police Web est un élément essentiel de la stratégie de perf
 
 ## Anatomie d'une police Web
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Les polices Unicode peuvent contenir des milliers de glyphes
 - 'Il existe quatre formats de police : WOFF2, WOFF, EOT et TTF'
 - Certains formats de police nécessitent l'utilisation de la compression GZIP
@@ -59,7 +59,7 @@ Note: Pensez à utiliser la <a href='http://en.wikipedia.org/wiki/Zopfli'>compre
 
 ## Définir une famille de polices avec @font-face
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Utilisez l'algorithme d'optimisation format() pour spécifier plusieurs formats de police
 - Définissez des sous-ensembles pour les polices Unicode volumineuses pour améliorer les performances: utilisez les sous-paramètres unicode-range et fournissez un sous-paramètre de rechange manuel pour les navigateurs plus anciens
 - Réduisez le nombre de variantes de police stylistique afin d'améliorer les performances d'affichage de la page et du texte
@@ -225,7 +225,7 @@ Note: Pour une meilleure cohérence et de meilleurs résultats visuels, ne vous 
 
 ## Optimiser le chargement et l'affichage
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Les demandes de police sont retardées jusqu'à ce que l'arborescence d'affichage soit construite, ce qui a pour conséquence un retard de l'affichage du texte'
 - L'API Font Loading nous permet de mettre en œuvre des stratégies de chargement et d'affichage des polices personnalisées qui remplacent le chargement de police inactif par défaut
 - L'intégration de police nous permet de remplacer le chargement de police inactif par défaut dans les navigateurs les plus anciens

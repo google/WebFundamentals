@@ -15,7 +15,7 @@ De CSSOM- en DOM-boomstructuren worden gecombineerd in een weergaveboomstructuur
 
 In het vorige gedeelte over het opbouwen van het objectmodel hebben we de DOM- en de CSSOM-boomstructuren opgebouwd op basis van de HTML- en CSS-invoer. Maar beide structuren zijn onafhankelijke objecten die de verschillende aspecten van het document vastleggen: de een beschrijft de inhoud en de ander de stijlregels die moeten worden toegepast op het document. Hoe brengen we deze twee structuren samen en zorgen we dat de browser pixels op het scherm weergeeft?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - De DOM- en CSSOM-boomstructuren worden gecombineerd om de weergaveboomstructuur op te bouwen.
 - De weergaveboomstructuur bevat alleen nodes die nodig zijn om de pagina weer te geven.
 - De opmaak berekent de precieze positie en grootte van elk object.

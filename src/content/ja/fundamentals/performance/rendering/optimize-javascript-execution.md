@@ -12,7 +12,7 @@ description: JavaScript はよく視覚変化の切っ掛けになります。 �
 
 JavaScript はよく視覚変化の切っ掛けになります。 視覚変化はスタイル操作を通じて直接行われることもあれば、データの検索やソートのように、計算が最終的に視覚変化につながることもあります。 タイミングの悪い JavaScript や長時間実行される JavaScript はパフォーマンス低下の一般的な原因になり得るため、可能な限り JavaScript の影響を最小限に抑える必要があります。
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 視覚的更新のために setTimeout または setInterval を使用するのを避けて、常に requestAnimationFrame を使用するようにします。
 - 長時間実行される JavaScript はメインスレッドから Web Worker に移動します。
 - マイクロ タスクを使用して、複数のフレームに対する DOM 変更を行います。

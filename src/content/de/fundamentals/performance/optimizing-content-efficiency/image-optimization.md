@@ -17,7 +17,7 @@ Die Bildoptimierung hat sowohl einen künstlerischen als auch einen wissenschaft
 
 ## Bilder entfernen und ersetzen
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Eliminieren Sie unnötige Bildressourcen.
 - Nutzen Sie wo immer möglich CSS3-Effekte.
 - Verwenden Sie Webschriftarten, anstatt Text in Bildern zu codieren.
@@ -35,7 +35,7 @@ Fall Sie sich dabei ertappen, dass Sie Text in einem Bildobjekt codieren, halten
 
 ## Vektor- und Rastergrafiken im Vergleich
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Vektorgrafiken eignen sich ideal für Bilder, die aus geometrischen Formen bestehen.
 - Vektorgrafiken sind unabhängig von Zoomfaktor und Auflösung.
 - Für komplexe Darstellungen mit vielen unregelmäßigen Formen und Details sollten Rastergrafiken verwendet werden.
@@ -67,7 +67,7 @@ Rastergrafiken haben den Nachteil, dass sie nicht auflösungs- oder zoomunabhän
 
 ## Implikationen hochauflösender Bildschirme
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Hochauflösende Monitore verfügen über mehrere Gerätepixel pro CSS-Pixel.
 - Hochauflösende Bilder erfordern eine erheblich größere Anzahl von Pixel und Bytes.
 - Die Verfahren zur Bildoptimierung sind für jede Auflösung gleich.
@@ -115,7 +115,7 @@ Was bedeutet dies für die Praxis? Hochauflösende Bildschirme ermöglichen die 
 
 ## Vektorgrafiken optimieren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - SVG ist ein XML-basiertes Bildformat.
 - SVG-Dateien sollten zur Verkleinerung minimiert werden.
 - SVG-Dateien sollten mit GZIP komprimiert werden.
@@ -143,7 +143,7 @@ In unserem Fall reduziert SVGO die Größe der obigen von Illustrator erzeugten 
 
 ## Rastergrafiken optimieren
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Eine Rastergrafik besteht aus einem Raster aus Pixeln.
 - In jedem Pixel sind Farb- und Transparenzinformationen codiert.
 - 'Bildkomprimierer nutzen eine Vielzahl von Methoden zur Reduktion der Anzahl der erforderlichen Bits pro Pixel, um die Dateigröße von Bildern zu verkleinern.'
@@ -218,7 +218,7 @@ Das klingt ja wieder alles ganz gut, ist aber sehr theoretisch. Wie kann uns die
 
 ## Verlustfreie und verlustbehaftete Komprimierung im Vergleich
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Aufgrund der Funktionsweise unserer Augen eignen sich Bilder hervorragend für die verlustbehaftete Komprimierung.
 - Bei der Bildoptimierung werden die verlustbehaftete und die verlustfreie Komprimierung gemeinsam angewendet.
 - 'Unterschiede bei Bildformaten beruhen darauf, welche unterschiedlichen verlustbehafteten und verlustfreien Algorithmen angewendet und wie sie zur Optimierung der Bilder eingesetzt werden.'
@@ -245,7 +245,7 @@ Note: Beachten Sie, dass Qualitätsstufen für unterschiedliche Bildformate aufg
 
 ## Das richtige Bildformat auswählen
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Beginnen Sie mit der Auswahl des richtigen universellen Formats: GIF, PNG, JPEG.
 - Experimentieren Sie und wählen Sie dann die besten Einstellungen für die einzelnen Formate aus: Qualität, Palettengröße usw.
 - Erwägen Sie das Hinzufügen von WebP- und JPEG XR-Ressourcen für skalierte Bilder auf modernen Clients
@@ -358,7 +358,7 @@ Schrecken Sie nicht davor zurück, mit den Parametern der einzelnen Komprimierun
 
 ## Skalierte Bildobjekte bereitstellen
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Die Bereitstellung skalierter Bilder stellt eine der einfachsten und effektivsten Optimierungsmethoden dar.
 - Achten Sie auf große Objekte, weil diese hohe Unkosten verursachen.
 - Reduzieren Sie die Anzahl unnötiger Pixel über die Skalierung Ihrer Bilder auf Darstellungsgröße.

@@ -12,7 +12,7 @@ description: Si se modifica el DOM (Modelo de objetos de documento), mediante la
 
 Si se modifica el DOM (Modelo de objetos de documento), mediante la adición y la eliminación de elementos, la modificación de los atributos o las clases, o a través de la animación, el navegador recalculará los estilos de los elementos y, en muchos casos, el diseño (o la redistribución) de la página o partes de esta. Este proceso de denomina <em>cálculo de estilo computarizado</em>.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Reduzca la complejidad de sus selectores; utilice una metodología centrada en la clase, como BEM (Bloque, elemento, modificador).'
 - Reduzca la cantidad de elementos en los que se deben realizar cálculos de estilo.
 

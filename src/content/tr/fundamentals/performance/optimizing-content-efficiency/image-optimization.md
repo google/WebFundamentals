@@ -20,7 +20,7 @@ Resim optimizasyonu hem bir sanat hem de bilimdir: Tek bir resmin en iyi nasil s
 
 ## Resimleri çikarma ve degistirme
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Gereksiz resim kaynaklarini çikarin
 - Mümkün oldugunda CSS3 efektlerinden yararlanin
 - Resimlerde metin kodlamak yerine web yazi tiplerini kullanin
@@ -38,7 +38,7 @@ Kendinizi bir resim varliginin içine metin kodlarken bulursaniz durun ve yenide
 
 ## Vektör ve Tarama resimler
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Vektör resimler, geometrik sekillerden olusan resimler için idealdir'
 - Vektör resimler zum ve çözünürlükten bagimsizdir
 - 'Tarama resimler, birçok düzensiz sekil ve ayrinti bulunan karmasik sahneler için kullanilmalidir'
@@ -72,7 +72,7 @@ Tarama resimler, çözünürlükten veya zumdan bagimsiz olma gibi hos özellikl
 
 ## Yüksek çözünürlüklü ekranlarin çikarimlari
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Yüksek çözünürlüklü ekranlarin CSS pikseli basinda birden çok cihaz pikseli vardir
 - 'Yüksek çözünürlüklü resimler, önemli ölçüde daha fazla piksel ve bayt gerektirir'
 - 'Resim optimizasyon teknikleri, çözünürlükten bagimsiz olarak aynidir'
@@ -120,7 +120,7 @@ Bu, uygulamada ne anlama gelir? Yüksek çözünürlüklü ekranlar, güzel resi
 
 ## Vektör resimleri optimize etme
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'SVG, XML tabanli bir resim biçimidir'
 - Boyutlarinin azaltilmasi için SVG dosyalari küçültülmelidir
 - SVG dosyalari GZIP ile sikistirilmalidir
@@ -148,7 +148,7 @@ Tipik bir örnek olarak svgo, Illustrator tarafindan olusturulan yukaridaki SVG 
 
 ## Tarama resimleri optimize etme
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Tarama resmi, piksellerden olusmus bir kilavuzdur'
 - 'Her bir piksel, renk ve seffaflik bilgilerini kodlar'
 - 'Resim sikistiricilari, resmin dosya boyutunu küçültmek için piksel basina gereken bit sayisini azaltmak üzere çesitli teknikler kullanir'
@@ -224,7 +224,7 @@ Bir kez daha, bunlarin hesap harika, ama ayni zamanda çok akademik: Bu, sayfala
 
 ## Kayipsiz ve kayipli resim sikistirma
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Gözlerimizin çalisma seklinde dolayi, resimler kayipli sikistirma için mükemmel adaylardir'
 - 'Resim optimizasyonu, bir kayipli ve kayipsiz sikistirma islevidir'
 - 'Resim biçimlerindeki farklar, resmi optimize etmek için kullanilan kayipli ve kayipsiz algoritmalardan ve bu algoritmalarin kullanimlarindaki farkliliklardan kaynaklanir'
@@ -251,7 +251,7 @@ Note: Farkli resim biçimlerinin kalite düzeylerinin, resmi kodlamak için kull
 
 ## Dogru resim biçimini seçme
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Dogru evrensel biçimi seçerek baslayin: GIF, PNG, JPEG'
 - 'Her bir biçim için en iyi ayarlari deneyip seçin: Kalite, palet boyutu vb.'
 - Modern istemciler için WebP ve JPEG XR varliklari eklemeyi düsünebilirsiniz ölçeklenmis-resimler
@@ -364,7 +364,7 @@ Her bir sikistiricinin parametreleriyle deneyler yapmaktan korkmayin. Kaliteyi d
 
 ## Ölçeklenmis resim varliklari saglama
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Ölçeklenmis varliklar saglama, en basit ve en etkili optimizasyonlardan biridir'
 - Büyük varliklar yüksek ek yüke neden oldugundan bunlarla ilgili dikkatli olun
 - Resimlerinizi ekran boyutuna ölçekleyerek gereksiz piksel sayisini azaltin

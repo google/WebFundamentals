@@ -42,7 +42,7 @@ Explore what makes a site responsive and how some common responsive design patte
 يجب أن تتضمن الصفحات المحسنة للعمل على مجموعة متنوعة من الأجهزة عنصر meta viewport في رأس المستند.  وتوفر علامة meta viewport إرشادات المتصفح حول كيفية التحكم في أبعاد الصفحة وحجمها.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - يمكنك استخدام علامة meta viewport للتحكم في العرض وضبط إطار عرض المتصفحات.
 - ضمِّن <code>width=device-width</code> لمطابقة عرض الشاشة بوحدات بكسل المستقلة للجهاز.
 - ضمِّن <code>initial-scale=1</code> لإنشاء علاقة من طرف لطرف بين وحدات بكسل CSS ووحدات بكسل المستقلة للجهاز.

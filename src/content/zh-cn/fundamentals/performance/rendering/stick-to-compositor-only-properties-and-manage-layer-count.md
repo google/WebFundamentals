@@ -18,7 +18,7 @@ Translated By:
 
 渲染层的合并，就是把页面中完成了绘制过程的部分合并成一层，然后显示在屏幕上。
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 只使用transform/opacity来实现动画效果
 - 用`will-change`/`translateZ`属性把动画元素提升到单独的渲染层中
 - 避免滥用渲染层提升：更多的渲染层需要更多的内存和更复杂的管理

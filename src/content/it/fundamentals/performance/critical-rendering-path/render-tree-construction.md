@@ -15,7 +15,7 @@ Le strutture CSSOM e DOM vengono unite in una struttura di rendering, che viene 
 
 Nella sezione precedente sulla costruzione del modello oggetto, abbiamo costruito le strutture DOM e CSSOM sulla base dell'input HTML e CSS. Tuttavia, entrambi sono oggetti indipendenti che possono registrare aspetti diversi del documento: uno descrive il contenuto e l'altro che regole di stile che devono esservi applicate. Come uniamo i due e portiamo il browser a eseguire il rendering dei pixel sullo schermo?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Le strutture DOM e CSSOM vengono unite per formare la struttura di rendering.
 - La struttura di rendering contiene solo i nodi richiesti per eseguire il rendering della pagina.
 - Il layout calcola la posizione e dimensione esatta di ogni oggetto.

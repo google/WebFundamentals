@@ -14,7 +14,7 @@ Bevor der Browser die Seite darstellen kann, müssen die DOM- und CSSOM-Baumstru
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Bytes → Zeichen → Token → Knoten → Objektmodell
 - Das HTML-Markup wird in ein Document Object Model (DOM), das CSS-Markup in ein CSS Object Model (CSSOM) umgewandelt.
 - DOM und CSSOM sind unabhängige Datenstrukturen.

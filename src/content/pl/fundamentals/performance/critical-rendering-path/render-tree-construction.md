@@ -16,7 +16,7 @@ Drzewo renderowania powstaje z połączenia drzew CSSOM i DOM. Wykorzystuje się
 
 W poprzedniej sekcji zawierającej opis tworzenia modelu obiektowego tworzyliśmy drzewa DOM i CSSOM w oparciu o dane wejściowe HTML i CSS. Jednak są one niezależnymi od siebie obiektami, charakteryzującymi różne aspekty dokumentu: jeden opisuje treść, drugi reguły stylu mające zastosowanie do dokumentu. W jaki sposób można je połączyć tak, by przeglądarka zrenderowała piksele na ekranie?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Drzewo renderowania powstaje z połączenia drzew CSSOM i DOM.
 - Drzewo renderowania zawiera tylko węzły wymagane do renderowania strony.
 - W trakcie wyznaczania rozmieszczenia na stronie obliczane jest dokładne położenie i rozmiar każdego obiektu.

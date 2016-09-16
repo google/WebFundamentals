@@ -14,7 +14,7 @@ description: De snelste en best geoptimaliseerde hulpbron is een hulpbron die ni
 De snelste en best geoptimaliseerde hulpbron is een hulpbron die niet verstuurd wordt. Heeft u uw hulpbronnen onlangs gecontroleerd? Dit dient u regelmatig te doen om te garanderen dat elke hulpbron bijdraagt aan het gebruiksgemak.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Inventariseer alle items van uzelf en van derde partijen op uw pagina's
 - 'Meet hoe goed elk item het doet: de meerwaarde en de technische resultaten'
 - Bepaal of elke hulpbron voldoende meerwaarde heeft

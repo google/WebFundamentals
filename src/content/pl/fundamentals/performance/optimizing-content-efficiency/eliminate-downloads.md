@@ -15,7 +15,7 @@ description: Najszybszym i najbardziej optymalnym zasobem jest zasób, którego 
 Najszybszym i najbardziej optymalnym zasobem jest zasób, którego w ogóle nie trzeba przesyłać. Czy pamiętasz o audytowaniu swoich zasobów? Regularnie audytuj swoje zasoby, by zagwarantować, że każdy zapewnia użytkownikom najwyższy poziom wygody.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Inwentaryzuj wszystkie swoje i zewnętrzne zasoby na swoich stronach
 - 'Określ wydajność związaną z każdym zasobem: jego znaczenie i techniczną wydajność'
 - 'Ustal, czy zasoby zapewniają odpowiednią wartość'

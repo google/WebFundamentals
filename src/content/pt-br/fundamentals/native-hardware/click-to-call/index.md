@@ -15,7 +15,7 @@ description: Em dispositivos com a função telefone, facilita que usuários lig
 Em dispositivos com a função telefone, facilita que usuários liguem diretamente para você apenas tocando em um número de telefone, comumente conhecido como clique para chamar.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Agrupe todos os números de telefone em hyperlinks com o esquema <code>tel:</code>.'
 - Sempre use o formato de discagem internacional.
 

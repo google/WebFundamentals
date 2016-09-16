@@ -13,7 +13,7 @@ description: Die schnellste und am besten optimierte Ressource ist eine Ressourc
 Die schnellste und am besten optimierte Ressource ist eine Ressource, die gar nicht übertragen wird. Haben Sie Ihre Ressourcen vor Kurzem überprüft? Holen Sie dies ggf. nach und tun Sie es regelmäßig, um dafür zu sorgen, dass jede Ressource zu einer besseren Nutzererfahrung beiträgt.
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Führen Sie eine Bestandsaufnahme aller eigenen und fremden Inhalte auf Ihren Seiten durch.
 - Messen Sie die Leistung eines jeden Inhaltselements: den Wert und die technische Leistungsfähigkeit.
 - Ermitteln Sie, ob die Ressourcen ausreichenden Nutzen bringen.

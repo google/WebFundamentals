@@ -10,7 +10,7 @@ description: Avant que le navigateur puisse afficher le contenu sur l'écran, le
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 Avant que le navigateur puisse afficher la page, les arborescences DOM et CSSOM doivent être créées. Nous devons donc nous assurer que le code HTML et CSS est transmis au navigateur le plus rapidement possible.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Octets → caractères → jetons → nœuds → modèle d'objet.
 - Le balisage HTML est transformé en DOM (modèle d'objet de document) et le balisage CSS est transformé en CSSOM (modèle d'objet CSS).
 - Les modèles DOM et CSSOM sont des structures de données indépendantes.

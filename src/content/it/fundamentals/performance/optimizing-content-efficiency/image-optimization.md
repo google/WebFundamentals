@@ -19,7 +19,7 @@ L'ottimizzazione delle immagini è al contempo un'arte e una scienza: è un'arte
 
 ## Eliminazione e sostituzione di immagini
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Eliminare immagini non necessarie
 - Sfruttare effetti CSS3, laddove possibile
 - Utilizzare font web invece di codificare il testo in immagini
@@ -37,7 +37,7 @@ Ogni volta che ti trovi a codificare del testo in immagine, fermati e rifletti. 
 
 ## Immagini vettoriali vs. immagini raster
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Le immagini vettoriali sono ideali per le forme geometriche
 - Le immagini vettoriali sono indipendenti da zoom e risoluzione
 - Le immagini raster sono consigliabili per visualizzazioni complesse e dettagliate, contenenti numerose forme irregolari
@@ -67,7 +67,7 @@ Le immagini raster non dispongono della medesima, comoda indipendenza da risoluz
 
 ## Implicazioni dei monitor ad alta risoluzione
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Le risoluzioni più alte del monitor contengono più device pixel per CSS pixel
 - Le immagini ad alta risoluzione richiedono un numero significativamente più alto di pixel e byte
 - Le tecniche di ottimizzazione delle immagini sono le stesse, indipendentemente dalla risoluzione
@@ -115,7 +115,7 @@ Che cosa significa dunque in pratica? I monitor ad alta risoluzione ci consenton
 
 ## Ottimizzazione di immagini vettoriali
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - SVG è un formato immagine basato su XML
 - È consigliabile minimizzare i file SVG per ridurne le dimensioni
 - È consigliabile comprimere i file SVG con GZIP
@@ -143,7 +143,7 @@ Nel caso illustrato, svgo riduce le dimensioni del file SVG generato con Illustr
 
 ## Ottimizzazione di immagini raster
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Un'immagine raster è costituita da una griglia di pixel
 - Ogni pixel contiene informazioni sul colore e la trasparenza
 - I compressori di immagini si avvalgono di diverse tecniche per ridurre il numero di bit necessari per pixel, riducendo quindi le dimensioni del file immagine
@@ -218,7 +218,7 @@ In conclusione, ci troviamo di nuovo davanti ad argomenti molto interessanti ma 
 
 ## Compressione delle immagini lossless vs lossy
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - In base al funzionamento della nostra vista, le immagini sono perfette per la compressione lossy'
 - L'ottimizzazione delle immagini è una funzione di compressione lossy e lossless
 - Le differenze tra i diversi formati immagine sono dovute alle diverse modalità e tipologie di algoritmi lossy e lossless utilizzati per l'ottimizzazione
@@ -245,7 +245,7 @@ Note: Nota che la qualità dei diversi formati immagine non è direttamente para
 
 ## Selezione del formato immagine corretto
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Selezione iniziale del formato universale corretto: GIF, PNG, JPEG'
 - Test e selezione delle impostazioni idonee per ogni formato: qualità, dimensioni palette, ecc...'
 - Eventuale aggiunta di risorse WebP e JPEG XR per le immagini scalate per i client attuali
@@ -358,7 +358,7 @@ Non avere timore di sperimentare diversi parametri per ogni compressore. Riduci 
 
 ## Utilizzo di immagini scalate
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - L'utilizzo di immagini scalate rappresenta una delle modalità di ottimizzazione più semplice ed efficace
 - 'Fai molta attenzione alle risorse consistenti, che possono comportare costi elevati'
 - Riduci il numero di pixel non necessari scalando le immagini in base alle dimensioni del display

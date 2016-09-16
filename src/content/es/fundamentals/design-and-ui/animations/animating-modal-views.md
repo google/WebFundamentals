@@ -12,7 +12,7 @@ description: Aprenda a animar vistas modales en sus aplicaciones.
 
 Las vistas modales se utilizan para mensajes importantes, y se pueden utilizar para bloquear la interfaz del usuario. Se debe tener precaución al utilizarlas, ya que pueden ser perturbadoras y pueden arruinar fácilmente la experiencia del usuario si se las usa en exceso. Sin embargo, en algunos casos son las vistas adecuadas, ya que cobran vida cuando se les agrega algún tipo de animación.
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Las vistas modales se deben utilizar de forma moderada, ya que los usuarios se frustrarán si interrumpe su experiencia innecesariamente.
 - Se puede agregar una escala a la animación para lograr un agradable efecto de 'colocación'.
 - Asegúrese de hacer desaparecer rápidamente la vista modal cuando el usuario la descarta, pero debe hacerla aparecer en la pantalla un poco más lentamente para que el usuario no se sorprenda.

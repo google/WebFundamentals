@@ -14,7 +14,7 @@ description: Ölçemediginiz bir seyi optimize edemezsiniz. Neyse ki, Gezinme Za
 Ölçemediginiz bir seyi optimize edemezsiniz. Neyse ki, Gezinme Zamanlamasi API'si bize kritik olusturma yolunun her bir adimini ölçmemiz için gereken tüm araçlari veriyor!
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Gezinme Zamanlamasi, CRP ölçümü için yüksek çözünürlüklü zaman damgalari saglar.'
 - 'Tarayici, CRP''nin çesitli asamalarini yakalayan bir tüketilir olaylar serisi yayinlar.'
 

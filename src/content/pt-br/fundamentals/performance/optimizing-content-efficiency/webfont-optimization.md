@@ -19,7 +19,7 @@ A otimização das fontes da Web é uma tática fundamental para a estratégia g
 
 ## Anatomia de uma fonte da Web
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - As fontes unicode podem conter milhares de glifos
 - 'Há quatro formatos de fonte: WOFF2, WOFF, EOT, TTF'
 - Alguns formatos de fonte exigem o uso da compactação GZIP
@@ -61,7 +61,7 @@ Note: Considere o uso da <a href='http://en.wikipedia.org/wiki/Zopfli'>compacta�
 
 ## Como definir a família da fonte com @font-face
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Use a dica format() para especificar vários formatos de fonte
 - 'Forme subconjuntos de grandes conjuntos de fontes unicode para aprimorar o desempenho: use o agrupamento de alcance unicode e forneça uma substituta manual de um subgrupo para navegadores mais antigos'
 - Reduza o número de variantes estilísticas de fontes para melhorar o desempenho de renderização da página e do texto
@@ -237,7 +237,7 @@ Note: Para atingir os melhores resultados em consistência e visual, procure nã
 
 ## Como otimizar o carregamento e a renderização
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'As solicitações das fontes são atrasadas até que a árvore de renderização seja criada, o que pode resultar em atraso na renderização do texto'
 - 'A API de carregamento de fontes possibilita a implementação de estratégias de carregamento e renderização de fontes personalizadas, que substituem o carregamento de fontes lazyload padrão'
 - A colocação de fontes in-line possibilita a substituição do carregamento de fontes lazyload padrão em navegadores mais antigos

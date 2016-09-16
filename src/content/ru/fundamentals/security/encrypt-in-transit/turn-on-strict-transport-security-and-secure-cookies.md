@@ -11,7 +11,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - 'Необходимо использовать механизм HTTP Strict Transport Security (HSTS), чтобы избежать затрат, связанных с кодом перенаправления 301.'
 - Всегда устанавливайте флаг Secure для файлов cookie.
 

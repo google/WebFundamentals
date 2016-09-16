@@ -16,7 +16,7 @@ Per impostazione predefinita, CSS viene trattato come risorsa di blocco del rend
 
 Nella sezione precedente, abbiamo notato che il percorso di rendering critico richiede di disporre sia di DOM che di CSSOM per costruire la struttura di rendering, il che crea un'importante implicazione per la performance: **sia HTML che CSS sono risorse che bloccano il rendering.** HTML è ovvio, dato che senza DOM non avremmo niente di cui eseguire il rendering, ma il requisito CSS potrebbe essere meno immediato. Cosa accadrebbe se cercassimo di eseguire il rendering di una pagina tipica senza bloccarlo su CSS?
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Per impostazione predefinita, CSS viene trattato come risorsa con blocco rendering.
 - I tipi di supporti e le query supporti ci consentono di segnare alcune risorse CSS non bloccano il rendering.
 - Tutte le risorse CSS, a prescindere del comportamento di blocco o meno, sono scaricate dal browser.

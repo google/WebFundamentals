@@ -13,7 +13,7 @@ description: 無法評估就談不上最佳化。幸運的是，Navigation Timin
 無法評估就談不上最佳化。幸運的是，Navigation Timing API 提供了所有必備工具來評估關鍵轉譯路徑的每個步驟！
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Navigation Timing 為評估關鍵轉譯路徑提供了高解析度的時間戳記。
 - 瀏覽器發出一系列可採用的事件，藉此捕捉關鍵轉譯路徑的不同階段。
 

@@ -20,7 +20,7 @@ JavaScript 允许我们修改页面的方方面面：内容、样式以及它如
 
 
 
-## TL;DR {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - JavaScript 可以查询、修改 DOM 与 CSSOM。
 - JavaScript 的执行因 CSSOM 而阻塞。
 - 除非明确声明 DOM 构建为异步，否则 JavaScript 会阻塞这一流程。
