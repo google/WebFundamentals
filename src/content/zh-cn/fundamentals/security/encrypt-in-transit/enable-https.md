@@ -2,14 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 安全是 Web 保护用户的重要部分，并且需要完善 TLS 支持以便在将来使用更出色的新 API。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2000-01-01 #}
 
 # HTTPS 安全 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 {% comment %}
@@ -430,7 +429,7 @@ HTTPS 网站链接到其他 HTTP 网站时，用户代理不会发送引用站�
 由于各搜索引擎正在迁移到 HTTPS，当您迁移到 HTTPS 时，可能会看到比现在_更多的_ 引用站点
 标头。
 
-<blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">如果引用页面是通过安全协议传输的，则客户端不能在（非安全）HTTP 请求中包括引用站点标头字段。<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">根据 HTTP RFC 所写</a></p></blockquote>
+<blockquote>如果引用页面是通过安全协议传输的，则客户端不能在（非安全）HTTP 请求中包括引用站点标头字段。<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">根据 HTTP RFC 所写</a></p></blockquote>
 
 ### 广告收入
 

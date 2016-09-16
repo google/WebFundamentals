@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 在移动设备上填写表单很困难。 输入操作最少的表单就是最好的表单。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-04-30 #}
 
@@ -288,7 +287,9 @@ comments:
 目标的大小：用户可以触摸标签或输入框，以将焦点置于
 输入元素中。
 
-{% include_code src=_code/order.html snippet=labels %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
+</pre>
 
 #### 标签大小和放置
 
@@ -307,12 +308,10 @@ comments:
 
 <input type="text" placeholder="MM-YYYY">
 
-{% highlight html%}
-<input type="text" placeholder="MM-YYYY" ...>
-{% endhighlight %}
+    <input type="text" placeholder="MM-YYYY" ...>
 
 
-{% include shared/remember.liquid title="Remember" list=page.notes.use-placeholders %}
+当焦点处于元素中时，占位符立即消失，因此 它们不能代替标签。  应使用占位符 作为辅助，引导用户注意所需的格式和内容。
 
 #### 使用元数据来实现自动完成
 
@@ -331,7 +330,9 @@ comments:
 例如，要提示浏览器应给表单自动填写
 用户名、电子邮件地址和电话号码，应当使用：
 
-{% include_code src=_code/order.html snippet=autocomplete %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
+</pre>
 
 
 #### 建议的输入 `name` 和 `autocomplete` 属性值
@@ -459,9 +460,7 @@ comments:
 并且可能阻止使用退格符
 来进行导航。
 
-{% highlight html %}
-<input type="text" autofocus ...>
-{% endhighlight %}
+    <input type="text" autofocus ...>
 
 
 ---
@@ -506,9 +505,7 @@ comments:
 后面有一个破折号和另外 4 位数），我们将 `pattern` 设置为如下
 ：
 
-{% highlight html %}
-<input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-{% endhighlight %}
+    <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
 
 ###### 常用的正则表达式模式
 
@@ -564,9 +561,7 @@ comments:
 提交表单。 例如，要使邮编为必填值，
 只需加上 required 属性：
 
-{% highlight html %}
 <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-{% endhighlight %}
 
 ##### `min`、`max` 和 `step` 属性
 
@@ -576,9 +571,7 @@ comments:
 鞋码输入将设置最小码 1 和最大码 13，递增或递减单位
 为 0.5
 
-{% highlight html %}
 <input type="number" min="1" max="13" step="0.5" ...>
-{% endhighlight %}
 
 ##### `maxlength` 属性
 
@@ -587,9 +580,7 @@ comments:
 很有用。 例如，如果要将文件名限制为 12 个字符，
 可以使用以下方法。
 
-{% highlight html %}
-<input type="text" id="83filename" maxlength="12" ...>
-{% endhighlight %}
+    <input type="text" id="83filename" maxlength="12" ...>
 
 ##### `minlength` 属性
 
@@ -598,9 +589,7 @@ comments:
 很有用。 例如，如果要指定文件名需要至少
 8 个字符，可以使用以下方法。
 
-{% highlight html %}
-<input type="text" id="83filename" minlength="8" ...>
-{% endhighlight %}
+    <input type="text" id="83filename" minlength="8" ...>
 
 ##### `novalidate` 属性
 
@@ -609,12 +598,10 @@ comments:
 属性。 在这种情况下，所有伪类和 
 JavaScript API 仍将允许您检查表单是否通过验证。
 
-{% highlight html %}
-<form role="form" novalidate>
-  <label for="inpEmail">Email address</label>
-  <input type="email" ...>
-</form>
-{% endhighlight %}
+    <form role="form" novalidate>
+      <label for="inpEmail">Email address</label>
+      <input type="email" ...>
+    </form>
 
 {% include shared/remember.liquid title="Remember" list=page.notes.provide-real-time-validation %}
 
@@ -665,7 +652,9 @@ JavaScript API 仍将允许您检查表单是否通过验证。
 事件，以验证两个输入值，并设置相应的
 响应。  例如：
 
-{% include_code src=_code/order.html snippet=customvalidation lang=javascript %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
+</pre>
 
 ##### 阻止提交无效的表单
 
@@ -673,7 +662,9 @@ JavaScript API 仍将允许您检查表单是否通过验证。
 因此您应当捕获提交事件，并对表单元素使用 `checkValidity()`
 以确定表单是否有效。  例如：
 
-{% include_code src=_code/order.html snippet=preventsubmission lang=javascript %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
+</pre>
 
 #### 实时显示反馈
 
@@ -723,8 +714,12 @@ HTML5 也引入了很多新的伪类，可以用于根据输入值或属性来�
 提示样式无效。 为防止此问题，可以将 CSS 与
 JavaScript 结合，只在用户已访问此字段时才显示无效的样式。
 
-{% include_code src=_code/order.html snippet=invalidstyle lang=css %}
-{% include_code src=_code/order.html snippet=initinputs lang=javascript %}
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" adjust_indentation="auto" %}
+</pre>
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
+</pre>
 
 {% include shared/remember.liquid title="Important" list=page.remember.show-all-errors %}
 

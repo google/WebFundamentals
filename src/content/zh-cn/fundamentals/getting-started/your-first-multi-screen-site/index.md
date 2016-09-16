@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 从小屏幕手机到大屏幕电视，许多设备都能访问 web。学习怎样构建一个在所有这些设备上均运行良好的站点。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -163,9 +162,21 @@ Note: 样式很快就能看到
 
 我们已经构建好站点轮廓，也已确认所有主要的结构元素。还确保我们的所有相关内容准备就绪，能够满足我们的商业需求。
 
-<div class="mdl-grid">
-  <img class="attempt-left" src="images/content.png" alt="Content">
-  <img class="attempt-right" src="images/narrowsite.png" alt="">
+<div class="attempt-left">
+  <figure>
+    <img src="images/content.png" alt="Content">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
+    </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
+    </figcaption>
+  </figure>
 </div>
 
 你会注意到，现在页面看起来非常糟糕；这其实是故意的。内容是所有页面最重要的组成，我们需要确保我们有一个坚实的信息架构和密度。本手册给我们打下良好的基础。我们将在下一节中样式化内容。
@@ -177,8 +188,6 @@ Note: 样式很快就能看到
 
 
 
-Translated By: 
-
 
 
 
@@ -187,14 +196,20 @@ web 可以被各种设备访问，从小屏幕手机到大屏幕电视。每个�
 
 我们正在创建一个多种设备屏幕大小、多种屏幕类型上均可运行良好的站点。在[上一节](#)，我们制订了页面信息架构，并创建一个基本结构。在这个手册里，我们将带着结构和内容，将其变成一个漂亮的页面，在各种屏幕大小上均能自在适应。
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Content">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> 内容和结构 </a> </figcaption>
+<div class="attempt-left">
+  <figure>
+    <img src="images/content.png" alt="Content">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
+    </figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> 最终站点 </a> </figcaption>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
+    </figcaption>
   </figure>
 </div>
 
@@ -248,9 +263,7 @@ viewport 放在文档的头部，只需要声明一次。
 
 一个较好的例子是“第一屏”内容的标题图片。通常用来诱惑用户更多地注意到产品。
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="设计的站点">
-</div>
+<img  src="images/narrowsite.png" alt="Designed site"  class="attempt-right" />
 
 要使用它们非常简单。在我们的案例中，它是个标题背景，我们通过简单的 CSS 就可以应用。
 

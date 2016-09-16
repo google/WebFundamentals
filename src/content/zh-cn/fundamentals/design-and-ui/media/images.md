@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 一图胜千言，另外图片也是每个页面不可或缺的组成。只是它们通常也要对大部分的下载字节负责。有了响应式 web 设计，不仅我们的布局能基于设备特征变化，图片也能。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 图片 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Translated By: 

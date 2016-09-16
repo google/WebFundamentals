@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: CSSOM 树与 DOM 树融合成一棵渲染树，随后计算每个可见元素的布局，并输出给绘制过程，在屏幕上渲染像素。优化这里的每一步对实现最佳渲染性能至关重要。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

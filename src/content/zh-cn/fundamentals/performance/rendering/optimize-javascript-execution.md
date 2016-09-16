@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 页面里的动画效果大多是通过JavaScript触发的。有些是直接修改DOM元素样式属性而产生的，有些则是由数据计算而产生的，比如搜索或排序。错误的执行时机和太长的时间消耗，是常见的导致JavaScript性能低下的原因。你需要尽量减少这两方面对你的JavaScript代码带来的执行性能的影响。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 在有电话功能的设备上，使用户只需点击 电话号码，即可直接联系您，通常称为一键通话。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 一键通话 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 

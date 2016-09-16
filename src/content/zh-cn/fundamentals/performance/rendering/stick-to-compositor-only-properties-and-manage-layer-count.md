@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 渲染层的合并，就是把页面中完成了绘制过程的部分合并成一层，然后显示在屏幕上。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

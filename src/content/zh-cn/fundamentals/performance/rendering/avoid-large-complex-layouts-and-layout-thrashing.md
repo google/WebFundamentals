@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 布局，就是浏览器计算DOM元素的几何信息的过程：元素大小和在页面中的位置。每个元素都有一个显式或隐式的大小信息，决定于其CSS属性的设置、或是元素本身内容的大小、抑或是其父元素的大小。在Blink/WebKit内核的浏览器和IE中，这个过程称为布局。在基于Gecko的浏览器（比如Firefox）中，这个过程称为Reflow。虽然称呼不一样，但二者在本质上是一样的。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

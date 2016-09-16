@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 无法评估就谈不上优化。幸运的是，Navigation Timing API 提供了所有必备工具来评估关键呈现路径的每个步骤！
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

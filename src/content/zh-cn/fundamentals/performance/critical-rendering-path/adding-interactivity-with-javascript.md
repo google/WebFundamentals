@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: JavaScript 允许我们修改页面的方方面面：内容、样式以及它如何响应用户交互。但是，JavaScript 也会阻塞 DOM 构建，延缓页面渲染。我们可以让我们的 JavaScript 异步加载，消除关键渲染路径中不必要的 JavaScript，来提供更佳性能。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2013-12-31 #}
 

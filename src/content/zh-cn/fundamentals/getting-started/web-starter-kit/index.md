@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 有时，新项目的最难部分是开头。 Web Starter Kit 为您提供一个坚实的基础，提供一系列工具来帮助您 完成开发过程。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-07-16 #}
 

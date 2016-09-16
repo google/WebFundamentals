@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 图片通常占据网页上下载字节的绝大部分，通常，也占据了大量的视觉空间。因此，优化图片通常可以最大程度地减少网站下载的字节数以及提高性能：浏览器下载的字节数越少，占用客户端的带宽就越少，浏览器下载并在屏幕上呈现有用内容的速度就越快。
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
@@ -48,17 +47,20 @@ description: 图片通常占据网页上下载字节的绝大部分，通常，�
 
 &nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>矢量</b>
-    <img class="center" src="images/vector-zoom.png" alt="放大的矢量图">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>光栅</b>
-    <img src="images/raster-zoom.png" alt="放大的光栅图">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/vector-zoom.png" alt="Zoomed-in vector image">
+    <figcaption>Zoomed-in vector image</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/raster-zoom.png" alt="Zoomed-in raster image">
+    <figcaption>Zoomed-in raster image</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 * [矢量图](http://en.wikipedia.org/wiki/Vector_graphics) 使用线、点和多边形来展示图片。
 * [光栅图](http://en.wikipedia.org/wiki/Raster_graphics) 通过对矩形栅格内每个像素的值进行编码来展示图片。
