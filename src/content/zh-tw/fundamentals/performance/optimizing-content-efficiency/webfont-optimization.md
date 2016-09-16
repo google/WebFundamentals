@@ -180,7 +180,7 @@ Note: Unicode-range 子集內嵌對於亞洲語言特別重要，在亞洲語言
 
 <div class="quote">
   <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">如果指定的某個粗細不存在任何字型，則會使用相近粗細的字型。通常，加粗粗細會對應到較粗的字型，而較細粗細會對應到較細的字型。
+    <blockquote>如果指定的某個粗細不存在任何字型，則會使用相近粗細的字型。通常，加粗粗細會對應到較粗的字型，而較細粗細會對應到較細的字型。
     <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">CSS3 字型比對演算法</a></p>
     </blockquote>
   </div>
@@ -223,7 +223,7 @@ Note: Unicode-range 子集內嵌對於亞洲語言特別重要，在亞洲語言
 
 <div class="quote">
   <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">字型建立者也應該知道西里爾文這類的文字並不適合透過合成的過程產生，因為在這些文字中，斜體形式非常與眾不同。使用某種實際的傾斜字型總是比依賴某個合成版本還要理想。
+    <blockquote>字型建立者也應該知道西里爾文這類的文字並不適合透過合成的過程產生，因為在這些文字中，斜體形式非常與眾不同。使用某種實際的傾斜字型總是比依賴某個合成版本還要理想。
     <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3 font-style</a></p>
     </blockquote>
   </div>

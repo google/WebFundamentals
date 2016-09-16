@@ -118,16 +118,22 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 
 下圖對是否包含海報圖片的影片進行了並排比較，我們已將海報圖片設為灰色，以便與影片區隔：
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android 版 Chrome (縱向) 螢幕擷圖：不含海報" src="images/Chrome-Android-video-no-poster.png">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android 版 Chrome (縱向) 螢幕截圖：包含海報" src="images/Chrome-Android-video-poster.png">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img alt="Android Chrome screenshot, portrait: no poster" src="img/Chrome-Android-video-no-poster.png">
+    <figcaption>
+      Android Chrome screenshot, portrait: no poster
+     </figcaption>
+  </figure>
 </div>
-
+<div class="attempt-right">
+  <figure>
+    <img alt="Android Chrome screenshot, portrait: with poster" src="img/Chrome-Android-video-poster.png">
+    <figcaption>
+      Android Chrome screenshot, portrait: with poster
+     </figcaption>
+  </figure>
+</div>
 
 ## 為舊版平台提供替代方案 
 
@@ -251,11 +257,24 @@ Note: - 大部分的行動平台 (iOS 除外) 都支援 Media Fragments API。
 如果影片元素對於目前檢視區來說太大，則可能會超出容器，導致使用者無法觀看內容或使用
 控制項。
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Android 版 Chrome 螢幕截圖：未設定樣式的影片元素超出檢視區 (縱向)" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android 版 Chrome 螢幕截圖：未設定樣式的影片元素超出檢視區 (橫向)" src="images/Chrome-Android-landscape-video-unstyled.png">
+<div class="attempt-left">
+  <figure>
+    <img alt="Android Chrome screenshot, portrait: unstyled video element overflows viewport" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <figcaption>
+      Android Chrome screenshot, portrait: unstyled video element overflows viewport
+    </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img alt="Android Chrome screenshot, landscape: unstyled video element overflows viewport" src="img/Chrome-Android-landscape-video-unstyled.png">
+    <figcaption>
+      Android Chrome screenshot, landscape: unstyled video element overflows viewport
+    </figcaption>
+  </figure>
 </div>
 
+<div style="clear:both;"></div>
 您可以使用 JavaScript 或 CSS 控制影片尺寸。JavaScript 程式庫和 [FitVids](//fitvidsjs.com/) 等外掛程式可協助您維持合適的影片大小及長寬比，即使是 YouTube 和其他來源中的 Flash 影片也不例外。
 
 使用 [CSS 媒體查詢](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)，即可根據檢視區尺寸指定元素大小；`max-width: 100%` 是您的最佳幫手。
@@ -298,10 +317,20 @@ Note: 請勿將元素大小強制調整為不同於原始影片的長寬比。�
 
 iPhone 版 Safari 可以在橫向和縱向之間自由轉換：
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="在 iPhone 版 Safari 中播放影片的螢幕截圖 (縱向)" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="在 iPhone 版 Safari 中播放影片的螢幕截圖 (橫向)" src="images/iPhone-video-playing-landscape.png">
+<div class="attempt-left">
+  <figure>
+    <img  alt="Screenshot of video playing in Safari on iPhone, portrait" src="img/iPhone-video-playing-portrait.png">
+    <figcaption>Screenshot of video playing in Safari on iPhone, portrait</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img alt="Screenshot of video playing in Safari on iPhone, landscape" src="img/iPhone-video-playing-landscape.png">
+    <figcaption>Screenshot of video playing in Safari on iPhone, landscape</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 iPad 和 Android 版 Chrome 中的裝置方向問題十分棘手。
 舉例來說，如果沒有特別設定，在 iPad 上橫向播放的影片看起來是這樣的：

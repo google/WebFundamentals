@@ -51,9 +51,21 @@ description: 無論是小螢幕手機或是大螢幕電視，使用者都能透�
 
 我們也已草擬一份寬窄檢視區都適用的資訊架構和版面配置。
 
-<div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="窄檢視區資訊架構">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="寬檢視區資訊架構">
+<div class="attempt-left">
+  <figure>
+    <img src="images/narrowviewport.png" alt="Narrow Viewport IA">
+    <figcaption>
+      Narrow Viewport IA
+     </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/wideviewport.png" alt="Wide Viewport IA">
+    <figcaption>
+      Wide Viewport IA
+     </figcaption>
+  </figure>
 </div>
 
 這份文件可輕鬆轉換成網頁骨架中的粗略區段，後續在這個專案中都會用到。
@@ -162,9 +174,21 @@ Note: 樣式以後還會來
 
 到目前為止，我們已建立了網站的雛型，並確定了所有的主要架構元素。此外，我們也確認所有相關內容都已就緒，可符合我們的業務需求。
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="內容">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
+<div class="attempt-left">
+  <figure>
+    <img src="images/content.png" alt="Content">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
+    </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
+    </figcaption>
+  </figure>
 </div>
 
 您也許注意到網頁外觀目前有些慘不忍睹，但我們是刻意的。 
@@ -185,14 +209,20 @@ Note: 樣式以後還會來
 我們正在打造適用於多種螢幕大小和裝置類型的網站。 在[previous article](#)中，我們已擬妥網頁的資訊架構並建立了基本架構。
 在這份指南中，我們將沿用包含內容的基本架構，著手將網頁改造為可依多數螢幕大小靈活調整的萬人迷。
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="內容">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> 內容和架構 </a> </figcaption>
+<div class="attempt-left">
+  <figure>
+    <img src="images/content.png" alt="Content">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
+    </figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> 完成後的網站 </a> </figcaption>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
+    <figcaption>
+      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
+    </figcaption>
   </figure>
 </div>
 
@@ -251,9 +281,7 @@ Note: 樣式以後還會來
 
 位於「不需捲動位置」內容的標題圖片就是一個很好的例子。 這類圖片的用意是吸引使用者進一步閱讀產品內容。
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="經過設計的網站">
-</div>
+<img  src="images/narrowsite.png" alt="Designed site"  class="attempt-right" />
 
 您可輕鬆加入這類圖片。 就我們的例子來說，我們會透過簡單的 CSS 將圖片設為標題的背景。
 

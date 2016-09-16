@@ -430,7 +430,7 @@ Google 也發行一份指南，教導
 因為各大搜尋引擎正在移轉至 HTTPS，當您移轉到 HTTPS 時，
 有可能會看到比現在 _更多的_ 參照者標頭。
 
-<blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">如果參照頁面是以安全通訊協定傳輸，用戶端不應該在 (非安全) HTTP 要求中包含一參照者標頭欄位。<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">根據 HTTP RFC</a></p></blockquote>
+<blockquote>如果參照頁面是以安全通訊協定傳輸，用戶端不應該在 (非安全) HTTP 要求中包含一參照者標頭欄位。<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">根據 HTTP RFC</a></p></blockquote>
 
 ### 廣告營收
 
