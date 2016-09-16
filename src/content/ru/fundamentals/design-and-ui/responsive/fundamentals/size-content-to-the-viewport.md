@@ -29,14 +29,14 @@ description: Большинство интернет-ресурсов не оп�
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на iPhone.">
+      <img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на iPhone.">
       См. пример
     
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на Nexus 5.">
+      <img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на Nexus 5.">
       См. пример
     
   </div>

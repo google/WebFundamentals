@@ -35,14 +35,14 @@ description: Большинство интернет-ресурсов не оп�
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Страница без настройки области просмотра">
+      <img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Страница без настройки области просмотра">
       См. пример
     
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Страница с настроенной областью просмотра">
+      <img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Страница с настроенной областью просмотра">
       См. пример
     
   </div>

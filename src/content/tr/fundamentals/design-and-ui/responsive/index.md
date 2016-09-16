@@ -75,14 +75,14 @@ En iyi deneyimi saglama çabasiyla mobil tarayicilar, sayfayi bir masaüstü ekr
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Görüntü alani ayari olmayan sayfa">
+      <img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Görüntü alani ayari olmayan sayfa">
       Örnege bakin
     
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Görüntü alani ayari olan sayfa">
+      <img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Görüntü alani ayari olan sayfa">
       Örnege bakin
     
   </div>
@@ -123,14 +123,14 @@ Sayfa ögeleri için genis mutlak CSS genisliklerinin ayarlanmasi (asagidaki ör
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone'da 344 piksel sabit genislikli bir öge içeren sayfa.">
+      <img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone'da 344 piksel sabit genislikli bir öge içeren sayfa.">
       Örnege bakin
     
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5'te 344 piksel sabit genislikli bir öge içeren sayfa.">
+      <img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5'te 344 piksel sabit genislikli bir öge içeren sayfa.">
       Örnege bakin
     
   </div>
@@ -328,11 +328,11 @@ Küçük ekran yerlesimini optimize ederek baslayalim.  Bu örnekte, görüntü 
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
+    <img src="imgs/weather-4-l.png" class="attempt-left"  srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
+    <img src="imgs/weather-4-r.png" class="attempt-right"  srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
   </div>
 </div>
 
@@ -348,11 +348,11 @@ Klasik okunabilirlik teorisi, ideal bir sütunun satir basina 70 ile 80 karakter
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Küçük kesme noktalari eklemeden önce.">
+    <img src="imgs/reading-ph.png" class="attempt-left"  srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Küçük kesme noktalari eklemeden önce.">
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Küçük kesme noktalari ekledikten sonra.">
+    <img src="imgs/reading-de.png" class="attempt-right"  srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Küçük kesme noktalari ekledikten sonra.">
   </div>
 </div>
 

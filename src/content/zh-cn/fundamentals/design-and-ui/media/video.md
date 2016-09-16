@@ -108,7 +108,7 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 
 使用浏览器开发者工具检查响应标头中的 Accept-Ranges: bytes：
 
-<img class="center" alt="Chrome 开发者工具屏幕截图：Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome 开发者工具屏幕截图：Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### 添加海报图片
 
@@ -126,11 +126,11 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android 版 Chrome（纵向）屏幕截屏：没有海报" src="images/Chrome-Android-video-no-poster.png">
+    <img class="center" alt="Android 版 Chrome（纵向）屏幕截屏：没有海报" src="img/Chrome-Android-video-no-poster.png">
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android 版 Chrome（纵向）屏幕截图：有海报" src="images/Chrome-Android-video-poster.png">
+    <img class="center" alt="Android 版 Chrome（纵向）屏幕截图：有海报" src="img/Chrome-Android-video-poster.png">
   </div>
 </div>
 
@@ -258,8 +258,8 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 控件。
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Android 版 Chrome（纵向）屏幕截图：未设置样式的视频元素从视口溢出" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android 版 Chrome（横向）屏幕截图：未设置样式的视频元素从视口溢出" src="images/Chrome-Android-landscape-video-unstyled.png">
+  <img class="mdl-cell mdl-cell--6--col" alt="Android 版 Chrome（纵向）屏幕截图：未设置样式的视频元素从视口溢出" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img class="mdl-cell mdl-cell--6--col" alt="Android 版 Chrome（横向）屏幕截图：未设置样式的视频元素从视口溢出" src="img/Chrome-Android-landscape-video-unstyled.png">
 </div>
 
 您可以使用 JavaScript 或 CSS 控制视频尺寸。JavaScript 图库和插件（如 [FitVids](//fitvidsjs.com/)）可以维持合适的视频大小及宽高比，即使是 YouTube 和其他来源中的 Flash 视频也不例外。
@@ -305,15 +305,15 @@ Note: 请勿强制调整元素尺寸，否则会使宽高比异于原始视频�
 iPhone 版 Safari 可以在横向和纵向之间自由转换：
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="在 iPhone（纵向）版 Safari 中播放视频的屏幕截图" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="在 iPhone（横向）版 Safari 中播放视频的屏幕截图" src="images/iPhone-video-playing-landscape.png">
+  <img class="mdl-cell mdl-cell--6--col" alt="在 iPhone（纵向）版 Safari 中播放视频的屏幕截图" src="img/iPhone-video-playing-portrait.png">
+    <img class="mdl-cell mdl-cell--6--col" alt="在 iPhone（横向）版 Safari 中播放视频的屏幕截图" src="img/iPhone-video-playing-landscape.png">
 </div>
 
 iPad 和 Android 版 Chrome 中的设备方向问题十分棘手。
 例如，在未进行自定义设置的情况下，iPad 上横向播放的视频如下所示：
 
 <img class="center" alt="iPad Retina（横向）版 Safari 的视频播放的屏幕截图"
-src="images/iPad-Retina-landscape-video-playing.png">
+src="img/iPad-Retina-landscape-video-playing.png">
 
 使用 CSS 设置视频 width: 100% 或 max-width: 100% 可解决许多设备方向版式方面的问题。您还可以考虑将全屏模式用作替代方案。
 
@@ -321,15 +321,15 @@ src="images/iPad-Retina-landscape-video-playing.png">
 
 不同的平台展示视频的方式也不相同。iPhone 版 Safari 会在网页中内联显示视频元素，却会以全屏模式播放视频：
 
-<img class="center" alt="iPhone（纵向）中的视频元素屏幕截图" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="iPhone（纵向）中的视频元素屏幕截图" src="img/iPhone-video-with-poster.png">
 
 在 Android 设备中，用户可以通过点击全屏图标来请求全屏模式。但是默认情况下，浏览器以内联模式播放视频：
 
-<img class="center" alt="Android 版 Chrome（纵向）中播放视频的屏幕截图" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Android 版 Chrome（纵向）中播放视频的屏幕截图" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 iPad 版 Safari 以内联模式播放视频：
 
-<img class="center" alt="iPad Retina（横向）版 Safari 的视频播放的屏幕截图" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="iPad Retina（横向）版 Safari 的视频播放的屏幕截图" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### 控制内容的全屏模式
 
@@ -389,7 +389,7 @@ Note: Android 版 Chrome、iOS Safari 以及当前的所有桌面版浏览器（
 
 使用跟踪元素后，字幕会如下所示：
 
- <img class="center" alt="展示在 Android 版 Chrome 中使用跟踪元素时所显示的字幕的屏幕截图" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="展示在 Android 版 Chrome 中使用跟踪元素时所显示的字幕的屏幕截图" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### 添加跟踪元素
 

@@ -103,7 +103,7 @@ Note: - 'Medya Parçalari API''si çogu platformda desteklenir, ancak iOS''ta de
 
 Tarayici gelistirme araçlarinizi kullanarak yanit üstbilgilerindeki `Accept-Ranges: bytes` dizesini kontrol edin:
 
-<img class="center" alt="Chrome Dev Tools ekran görüntüsü: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Chrome Dev Tools ekran görüntüsü: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Bir poster resmi ekleme
 
@@ -121,11 +121,11 @@ Burada, poster resmi olmayan ve poster resmi olan videolarin yan yana karsilasti
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android Chrome ekran görüntüsü, dikey: poster yok" src="images/Chrome-Android-video-no-poster.png">
+    <img class="center" alt="Android Chrome ekran görüntüsü, dikey: poster yok" src="img/Chrome-Android-video-no-poster.png">
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Android Chrome ekran görüntüsü, dikey: poster resimli" src="images/Chrome-Android-video-poster.png">
+    <img class="center" alt="Android Chrome ekran görüntüsü, dikey: poster resimli" src="img/Chrome-Android-video-poster.png">
   </div>
 </div>
 
@@ -253,8 +253,8 @@ Video ögeleri görüntü alani için çok büyük olduklarinda, kapsayicilarind
 imkansiz hale getirebilirler.
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome ekran görüntüsü, dikey: biçimlendirilmemis video ögesi görüntü alanindan tasar" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome ekran görüntüsü, yatay: biçimlendirilmemis video ögesi görüntü alanindan tasar" src="images/Chrome-Android-landscape-video-unstyled.png">
+  <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome ekran görüntüsü, dikey: biçimlendirilmemis video ögesi görüntü alanindan tasar" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome ekran görüntüsü, yatay: biçimlendirilmemis video ögesi görüntü alanindan tasar" src="img/Chrome-Android-landscape-video-unstyled.png">
 </div>
 
 Video boyutlarini JavaScript veya CSS'yi kullanarak kontrol edebilirsiniz. JavaScript kitapliklari ve [FitVids](//fitvidsjs.com/) gibi eklentiler, YouTube ve diger kaynaklardaki Flash videolar için bile uygun boyutun ve en boy oraninin korunmasini mümkün kilmaktadir.
@@ -300,15 +300,15 @@ Cihaz yönü masaüstü monitörler veya dizüstü bilgisayarlar için bir sorun
 iPhone'daki Safari, dikey ve yatay yönler arasinda geçis yapmada basarilidir:
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, dikey" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, yatay" src="images/iPhone-video-playing-landscape.png">
+  <img class="mdl-cell mdl-cell--6--col" alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, dikey" src="img/iPhone-video-playing-portrait.png">
+    <img class="mdl-cell mdl-cell--6--col" alt="iPhone'daki Safari'de oynayan videonun ekran görüntüsü, yatay" src="img/iPhone-video-playing-landscape.png">
 </div>
 
 iPad'de ve Android için Chrome'da cihaz yönü sorunlu olabilir.
 Örnegin, hiç özellestirme yapilmadan, yatay yöndeki bir iPad'de oynayan bir video sunun gibi görünür:
 
 <img class="center" alt="iPad Retina'daki Safari'de oynayan videonun ekran görüntüsü, yatay"
-src="images/iPad-Retina-landscape-video-playing.png">
+src="img/iPad-Retina-landscape-video-playing.png">
 
 Videoyu CSS ile `width: 100%` veya `max-width: 100%` degerine ayarlamak, birçok cihaz yönü yer paylasimi sorununu çözebilir. Tam ekran alternatiflerini de degerlendirmek isteyebilirsiniz.
 
@@ -316,15 +316,15 @@ Videoyu CSS ile `width: 100%` veya `max-width: 100%` degerine ayarlamak, birçok
 
 Farkli platformlar videoyu farkli sekilde görüntüler. iPhone'daki Safari, web sayfasindaki bir video ögesini satir içinde görüntüler, ancak videoyu tam ekran modunda oynatir:
 
-<img class="center" alt="iPhone'da video ögesinin ekran görüntüsü, dikey" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="iPhone'da video ögesinin ekran görüntüsü, dikey" src="img/iPhone-video-with-poster.png">
 
 Android'de, kullanicilar tam ekran simgesini tiklayarak tam ekran moduna geçmek için istekte bulunabilir. Ancak, varsayilan deger videonun satir içinde oynatilmasidir:
 
-<img class="center" alt="Android için Chrome'da oynayan videonun ekran görüntüsü, dikey" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Android için Chrome'da oynayan videonun ekran görüntüsü, dikey" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 iPad'deki Safari, videoyu satir içinde oynatir:
 
-<img class="center" alt="iPad Retina'daki Safari'de oynayan videonun ekran görüntüsü, yatay" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="iPad Retina'daki Safari'de oynayan videonun ekran görüntüsü, yatay" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### Içerigin tam ekran olmasini kontrol etme
 
@@ -384,7 +384,7 @@ Note: Izleme ögesi Android için Chrome'da, iOS Safari'de ve Firefox haricinde 
 
 Izleme ögesi kullanildiginda altyazilar sunun gibi görünür:
 
- <img class="center" alt="Android için Chrome'da parça ögesi kullanilarak görüntülenen altyazilarin gösterildigi ekran görüntüsü" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Android için Chrome'da parça ögesi kullanilarak görüntülenen altyazilarin gösterildigi ekran görüntüsü" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Parça ögesi ekleme
 

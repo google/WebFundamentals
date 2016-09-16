@@ -103,7 +103,7 @@ Note: - 'A API dos fragmentos de mídia é compatível com a maioria das platafo
 
 Com as ferramentas para desenvolvedores do seu navegador, verifique `Accept-Ranges: bytes` nos cabeçalhos de resposta:
 
-<img class="center" alt="Captura de tela das ferramentas para desenvolvedores do Google Chrome: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Captura de tela das ferramentas para desenvolvedores do Google Chrome: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Inclua uma imagem em formato pôster
 
@@ -121,11 +121,11 @@ Veja uma comparação de vídeos sem e com uma imagem de pôster. A imagem está
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Captura de tela do Google Chrome para Android, orientação retrato: sem imagem de pôster" src="images/Chrome-Android-video-no-poster.png">
+    <img class="center" alt="Captura de tela do Google Chrome para Android, orientação retrato: sem imagem de pôster" src="img/Chrome-Android-video-no-poster.png">
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Captura de tela do Google Chrome para Android, orientação retrato: com imagem de pôster" src="images/Chrome-Android-video-poster.png">
+    <img class="center" alt="Captura de tela do Google Chrome para Android, orientação retrato: com imagem de pôster" src="img/Chrome-Android-video-poster.png">
   </div>
 </div>
 
@@ -253,8 +253,8 @@ Quando os elementos de vídeos são muito grandes para a janela de visualizaçã
 os controles.
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela do Google Chrome para Android, retrato. O elemento de vídeo não estilizado ultrapassa o tamanho da janela de visualização" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela do Google Chrome para Android, paisagem. O elemento de vídeo não estilizado ultrapassa o tamanho da janela de visualização" src="images/Chrome-Android-landscape-video-unstyled.png">
+  <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela do Google Chrome para Android, retrato. O elemento de vídeo não estilizado ultrapassa o tamanho da janela de visualização" src="img/Chrome-Android-portrait-video-unstyled.png">
+    <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela do Google Chrome para Android, paisagem. O elemento de vídeo não estilizado ultrapassa o tamanho da janela de visualização" src="img/Chrome-Android-landscape-video-unstyled.png">
 </div>
 
 Controle as dimensões do vídeo usando o JavaScript e CSS. As bibliotecas e os plug-ins do JavaScript como [FitVids](//fitvidsjs.com/) possibilitam manter o tamanho e a proporção adequados, até mesmo para vídeos em Flash do YouTube e outras fontes.
@@ -300,15 +300,15 @@ A orientação dos dispositivos não é um problema relacionado a laptops e a mo
 O Safari do iPhone executa com eficiência a alternância entre as orientações de retrato e paisagem:
 
 <div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela de um vídeo reproduzido no Safari do iPhone em modo retrato" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela de um vídeo reproduzido no Safari do iPhone em modo paisagem" src="images/iPhone-video-playing-landscape.png">
+  <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela de um vídeo reproduzido no Safari do iPhone em modo retrato" src="img/iPhone-video-playing-portrait.png">
+    <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela de um vídeo reproduzido no Safari do iPhone em modo paisagem" src="img/iPhone-video-playing-landscape.png">
 </div>
 
 A orientação no iPad e no Google Chrome para Android pode ser problemática.
 Por exemplo, sem qualquer personalização, um vídeo reproduzido no iPad em modo paisagem tem esta aparência:
 
 <img class="center" alt="Captura de tela de um vídeo reproduzido no Safari do iPad Retina em modo paisagem"
-src="images/iPad-Retina-landscape-video-playing.png">
+src="img/iPad-Retina-landscape-video-playing.png">
 
 Definir o vídeo com `width: 100%` ou `max-width: 100%` com CSS pode resolver diversos problemas de layout nas orientações dos dispositivos. Também recomendamos levar em consideração opções de tela cheia.
 
@@ -316,15 +316,15 @@ Definir o vídeo com `width: 100%` ou `max-width: 100%` com CSS pode resolver di
 
 Plataformas diferentes exibem os vídeos de maneiras diferentes. O Safari em um iPhone exibe um elemento de vídeo in-line em uma página da Web, mas reproduz o vídeo em modo tela cheia.
 
-<img class="center" alt="Captura de tela de um elemento de vídeo no iPhone em modo retrato" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="Captura de tela de um elemento de vídeo no iPhone em modo retrato" src="img/iPhone-video-with-poster.png">
 
 No Android, os usuários podem ativar o modo tela cheia clicando no ícone de tela cheia. No entanto, o padrão é reproduzir o vídeo in-line:
 
-<img class="center" alt="Captura de tela de um vídeo reproduzido no Google Chrome do Android em modo retrato" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Captura de tela de um vídeo reproduzido no Google Chrome do Android em modo retrato" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 O Safari em um iPad reproduz os vídeos in-line:
 
-<img class="center" alt="Captura de tela de um vídeo reproduzido no Safari do iPad Retina em modo paisagem" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Captura de tela de um vídeo reproduzido no Safari do iPad Retina em modo paisagem" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### Controle a exibição de conteúdo em tela cheia
 
@@ -384,7 +384,7 @@ Note: O elemento de faixa é aceito no Google Chrome para Android, Safari (iOS) 
 
 Com o elemento de faixa, as legendas aparecem desta forma:
 
- <img class="center" alt="Captura de tela mostrando as legendas em exibição com o elemento de faixa no Google Chrome para Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Captura de tela mostrando as legendas em exibição com o elemento de faixa no Google Chrome para Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Adicione o elemento de faixa
 

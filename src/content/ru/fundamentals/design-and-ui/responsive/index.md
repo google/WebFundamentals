@@ -75,14 +75,14 @@ Explore what makes a site responsive and how some common responsive design patte
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Страница без настройки области просмотра">
+      <img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Страница без настройки области просмотра">
       См. пример
     
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Страница с настроенной областью просмотра">
+      <img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Страница с настроенной областью просмотра">
       См. пример
     
   </div>
@@ -123,14 +123,14 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на iPhone.">
+      <img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на iPhone.">
       См. пример
     
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
     
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на Nexus 5.">
+      <img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Страница с элементом фиксированной ширины (344 пикс.) на Nexus 5.">
       См. пример
     
   </div>
@@ -331,11 +331,11 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
+    <img src="imgs/weather-4-l.png" class="attempt-left"  srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
+    <img src="imgs/weather-4-r.png" class="attempt-right"  srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
   </div>
 </div>
 
@@ -351,11 +351,11 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 
 <div class="mdl-grid">
   <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Без второстепенных контрольных точек">
+    <img src="imgs/reading-ph.png" class="attempt-left"  srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Без второстепенных контрольных точек">
   </div>
 
   <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="После добавления второстепенных контрольных точек">
+    <img src="imgs/reading-de.png" class="attempt-right"  srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="После добавления второстепенных контрольных точек">
   </div>
 </div>
 
