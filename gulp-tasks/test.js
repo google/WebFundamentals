@@ -119,15 +119,15 @@ function testMarkdownFile(fileName) {
       }
     });
   }
-  // tags = fileContent.match(/^#+ TL;DR.*\n/gm);
-  // if (tags) {
-  //   tags.forEach(function(tag) {
-  //     if (tag.indexOf('### ') === -1 || tag.indexOf('.hide-from-toc') === -1) {
-  //       tag = tag.replace('\n', '');
-  //       warnings.push({msg: 'TL;DRs should be H3 and inclue {: .hide-from-toc }', param: tag});
-  //     }
-  //   });
-  // }
+  tags = fileContent.match(/^#+ TL;DR.*\n/gm);
+  if (tags) {
+    tags.forEach(function(tag) {
+      if (tag.indexOf('### ') === -1 || tag.indexOf('.hide-from-toc') === -1) {
+        tag = tag.replace('\n', '');
+        warnings.push({msg: 'TL;DRs should be H3 and inclue {: .hide-from-toc }', param: tag});
+      }
+    });
+  }
   return {file: fileName, errors: errors, warnings: warnings};
 }
 
