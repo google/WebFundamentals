@@ -85,9 +85,10 @@ function replaceIncludeCode(markdown, lang, dir) {
   if (items) {
     items.forEach(function(item) {
       var sourceItem = item;
-      item = item.replace('include_code', 'includecode');
+      item = item.replace('include_code', 'includecode adjust_indentation="auto" ');
       item = item.replace(/src=['"]?(.*?)['" ]/, 'content_path="' + relPath + '$1" ');
       item = item.replace(/snippet=['"]?(.*?)['" ]/, 'region_tag="$1" ');
+      item = item.replace(/lang=['"]?(.*?)['" ]/, '');
       item = '<pre class="prettyprint">\n' + item + '\n</pre>';
       markdown = markdown.replace(sourceItem, item);
     });
@@ -367,9 +368,9 @@ function migrate(lang, section, directory, recursive) {
   });
 }
 
-var lang = 'ja';
+var lang = 'ko';
 var section = 'fundamentals';
-var directory = 'security/encrypt-in-transit';
+var directory = 'performance/critical-rendering-path';
 var recursive = false;
 migrate(lang, section, directory, recursive);
 
