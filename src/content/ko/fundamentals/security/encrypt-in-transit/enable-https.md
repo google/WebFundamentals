@@ -2,19 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 보안은 사용자를 보호하는 데 필요한 중요한 웹 요소입니다. 미래에 새롭고 흥미로운 API를 사용하기 위해서는 TLS 지원을 강화해야 합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2000-01-01 #}
 
 # HTTPS 보안 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-{% comment %}
-가이드 목록 콘텐츠는 page.id와 일치하는 기사 컬렉션에 기반한 방문 페이지 레이아웃에 따라 출력됩니다.
-{% endcomment %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 ## 키 및 CSR(인증서 서명 요청) 생성하기 
@@ -337,9 +331,8 @@ HTML 페이지뿐만 아니라 스타일시트, JavaScript, 리디렉션 규칙,
 
 
 
-이제 HTTPS 사용을 "락인(lock in)"할 준비가 되었습니다. 먼저, [STS(Strict
-Transport
-Security)](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)를 사용하여
+이제 HTTPS 사용을 "락인(lock in)"할 준비가 되었습니다. 먼저,
+[STS(Strict Transport Security)](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)를 사용하여
 http:// 참조를 따르는 경우에도 항상 HTTPS를 통해 서버에
 연결해야 함을 클라이언트에 지시합니다. 이를 통해 [SSL
 스트라이핑](http://www.thoughtcrime.org/software/sslstrip/)과 같은 공격이 차단되고,
@@ -356,9 +349,7 @@ _[하드 실패](https://tools.ietf.org/html/rfc6797#section-12.1)_할
 HSTS를 활성화하지 마십시오.
 
 Strict-Transport-Security 헤더를 설정하여 HSTS(HTTP Strict Transport Security)를
-설정하십시오. [OWASP의 HSTS 페이지에 다양한 서버
-소프트웨어에 대한 지침 링크가
-나와 있습니다](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security).
+설정하십시오. [OWASP의 HSTS 페이지에 다양한 서버 소프트웨어에 대한 지침 링크가 나와 있습니다](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security).
 
 대부분의 웹 서버는 사용자 지정 헤더를 추가하기 위한 유사한 기능을 제공합니다.
 
@@ -430,7 +421,8 @@ HTTP 사이트에 접속할 때 참조자 헤더를 전송하지 않습니다. �
 검색 엔진이 HTTPS로 마이그레이션하는 중이기 때문에 HTTPS로 마이그레이션하면 현재보다 _더 많은_ 참조자
 헤더를 볼 가능성이 높습니다.
 
-<blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">클라이언트는 참조 페이지가 보안 프로토콜로 이전된 경우 참조자 헤더 필드를 (보안이 유지되지 않는) HTTP 요청에 포함하지 않아야 합니다.<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">HTTP RFC 준수</a></p></blockquote>
+> 클라이언트는 참조 페이지가 보안 프로토콜로 이전된 경우 참조자 헤더 필드를 (보안이 유지되지 않는) HTTP 요청에 포함하지 않아야 합니다.
+> > <a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">HTTP RFC 준수</a>
 
 ### 광고 수익
 

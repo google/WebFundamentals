@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 애니메이션을 부드럽게 하고 가중치를 주는 방법을 배웁니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -40,7 +39,7 @@ CSS 전환 및 애니메이션을 통해 [애니메이션에 사용할 easing �
 
 easing을 사용하지 않은 애니메이션을 **선형(linear)**이라고 합니다. 선형 전환의 그래프는 다음과 유사합니다.
 
-<img src="imgs/linear.png" style="max-width: 300px" alt="선형 ease 애니메이션 곡선" />
+<img src="images/linear.png" style="max-width: 300px" alt="선형 ease 애니메이션 곡선" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html"> 선형 애니메이션을 참조하십시오.</a>
 
@@ -57,7 +56,7 @@ easing을 사용하지 않은 애니메이션을 **선형(linear)**이라고 합
 
 Easing out은 선형보다 더 빠르게 애니메이션을 시작하며 마지막에 감속합니다.
 
-<img src="imgs/ease-out.png" style="max-width: 300px" alt="Ease-out 애니메이션 곡선" />
+<img src="images/ease-out.png" style="max-width: 300px" alt="Ease-out 애니메이션 곡선" />
 
 ease out 효과를 달성하는 많은 방법이 있지만 가장 간단한 방법은 CSS의 `ease-out` 키워드입니다.
 
@@ -73,7 +72,7 @@ Easing out은 빠른 시작으로 애니메이션에 반응 효과를 주면서�
 
 Ease-in 애니메이션은 ease-out과 반대로 느리게 시작했다가 빠르게 끝납니다.
 
-<img src="imgs/ease-in.png" style="max-width: 300px" alt="Ease-in 애니메이션 곡선" />
+<img src="images/ease-in.png" style="max-width: 300px" alt="Ease-in 애니메이션 곡선" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html">ease-in 애니메이션을 참조하십시오.</a>
 
@@ -91,7 +90,7 @@ ease-in 애니메이션을 사용하려면 ease-out 및 선형 애니메이션�
 
 Easing in과 easing out은 차량의 가속 및 감속과 유사하며, 적절히 조합하여 사용하면 easing out만 사용하는 것보다 더욱 드라마틱한 효과를 제공할 수 있습니다.
 
-<img src="imgs/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out 애니메이션 곡선" />
+<img src="images/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out 애니메이션 곡선" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Ease-in-out 애니메이션을 참조하십시오.</a>
 

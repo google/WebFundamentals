@@ -2,18 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 앱 설치 배너를 지연시키거나 취소할 수 있습니다. 사용자가 배너에 어떻게 응답하는지 이해합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-02-11 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 앱 설치 배너 추가작업 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 
@@ -103,4 +98,6 @@ Translated By:
       e.preventDefault();
       return false;
     });
-    
+
+Translated By:    
+{% include "web/_shared/contributors/captainpangyo.html" %}

@@ -2,33 +2,23 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 상당히 많은 웹들이 여러 디바이스 사용성을 고려하여 최적화 되어 있지 않다. 당신의 사이트를 모바일, 데스크탑 또는 어떠한 스크린에서도 동작할 수 있도록 기본을 배워보자
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 반응형 웹 디자인 기본 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/captainpangyo.html" %}
-
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 웹 서핑을 위한 모바일 기기의 사용은 천문학 적인 속도로 증가하고 있지만, 안타깝게도 많은 웹 사이트들이 모바일 기기를 위한 최적화가 되어 있지 않다. 모바일 기기들은 보통 화면 크기에 제약이 있고, 화면에 어떤식으로 내용들을 나타낼지에 대한 접근방식이 다르다.
 
 패블릿, 태블릿, 데스크탑, 게임콘솔, 티비, 웨어러블 기기 등등 정말 다양한 화면 크기가 있습니다. 화면 크기는 언제나 변하기 때문에 당신의 사이트는 어떤 화면 크기에도 언제나 적응 가능하도록 설계되어야 합니다.
 
-{% comment %}
-
   <video autoplay loop controls class="responsiveVideo">
     <source src="videos/resize.webm" type="video/webm">
     <source src="videos/resize.mp4" type="video/mp4">
   </video>
 
-{% endcomment %}
 
 원래 [Ethan Marcotte in A List
 Apart](http://alistapart.com/article/responsive-web-design/) 에 정의된 반응형 웹 디자인은 그들이 사용하는 기기와 사용자의 니즈에 맞춰졌습니다. 레이아웃은 기기의 특징과 크기에 따라 변합니다. 예를 들어, 핸드폰에서 사용자들이 컨텐츠를 1줄 뷰로 본다면, 태블릿에서는 2줄 뷰로 컨텐츠를 보는 것처럼 말이죠.
@@ -54,21 +44,9 @@ Apart](http://alistapart.com/article/responsive-web-design/) 에 정의된 반�
 
 meta viewport의 `width=device-width` 값은 페이지가 특정 기기 크기에 맞춰 화면의 너비를 조정하게 합니다. 이것은 또한 페이지가 작은 모바일 폰이든 큰 데스크탑 모니터든 화면 크기에 따라 컨텐츠를 다시 그릴 수 있게 합니다.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
-      See example
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6-col">
-    
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
-      See example
-    
-  </div>
-</div>
+<img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
+<img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
+<div class="clearfix"></div>
 
 몇몇 브라우저는 landscape 모드로 전환할 때 페이지 너비를 일정하게 하고, 화면 크기를 맞추기 위해 다시 그리기 보다 줌을 합니다. `initial-scale=1` 속성은 브라우저가 CSS 픽셀과 기기 오리엔테이션과 관계 없는 특정 기기 사이즈와의 1:1 관계를 맺게합니다. 또한, 페이지가 landscape 시에도 꽉찬 화면을 사용할 수 있도록 합니다.
 
@@ -101,21 +79,9 @@ Note: 콤마를 사용하여 attributes를 분리하고, 오래된 브라우저�
 
 페이지 요소에 절대값이 큰 CSS 너비를 설정하면 폭이 좁은 기기에서 `div` 가 너무 넓게 나타날 수 있습니다. (예를 들어, iPhone 같이 320 CSS pixels 너비의 기기). 대신, 너비에 `width: 100%` 와 같은 상대적 값을 사용해보세요. 비슷하게, 위치 값에 큰 절대 값을 사용하면 작은 화면에서 그 요소가 나타나지 않을 수 있습니다.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone.">
-      See example
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6-col">
-    
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5.">
-      See example
-    
-  </div>
-</div>
+<img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone." class="attempt-left">
+<img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5." class="attempt-right">
+<div class="clearfix"></div>
 
 
 ## 반응형 디자인을 위한 CSS 미디어쿼리 사용하기 
@@ -162,10 +128,6 @@ stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 C
 
 
 <table>
-  <colgroup>
-    <col span="1">
-    <col span="1">
-  </colgroup>
   <thead>
     <tr>
       <th data-th="attribute">attribute</th>
@@ -203,13 +165,11 @@ stylesheet link 에 `media` 속성을 사용하는 방법과 함께, 내장된 C
 아래 예제를 봅시다:
 
 <figure>
-  
-    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Preview of a page using media queries to change properties as it is resized.">
-  
+  <img src="imgs/mq.png"  srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Preview of a page using media queries to change properties as it is resized.">
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * 브라우저가 <b>0px</b> 와 <b>640px</b> 사이 너비일 때, `max-640px.css`가 적용됩니다.
@@ -345,7 +305,7 @@ same line, instead of on top of each other.  And let's also make the weather
 icons a bit larger.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"  adjust_indentation="auto"  adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"  adjust_indentation="auto" %}
 </pre>
 
 <div class="attempt-left">
@@ -367,7 +327,6 @@ icons a bit larger.
 
 
 <div style="clear:both;"></div>
-
 
 Similarly, for the large screens, it's best to limit to maximum width of the
 forecast panel so it doesn't consume the whole screen width.
@@ -415,3 +374,5 @@ eliminating the pollen count from the weather forecast could be a serious issue
 for spring time allergy sufferers who need the information to determine if they
 can go outside or not.
 
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}

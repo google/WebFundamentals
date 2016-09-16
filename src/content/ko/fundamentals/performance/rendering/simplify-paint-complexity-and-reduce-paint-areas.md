@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 그림 그리기(paint)는 최종적으로 사용자의 화면에 합성되는 픽셀을 채우는 과정입니다. 대체로 파이프라인의 모든 작업 중 가장 오래 실행되는 과정으로 가급적 피해야 합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

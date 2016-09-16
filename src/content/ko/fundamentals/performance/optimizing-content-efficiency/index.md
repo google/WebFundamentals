@@ -2,18 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 애플리케이션이 다운로드하는 데이터량은 시간이 지나면서 계속 증가합니다. 따라서 최고의 성능을 자랑하는 애플리케이션을 만들고 싶다면, 데이터 전송을 가능한 최적화해야 합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
 # 콘텐츠 효율 최적화 {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/jeokrang.html" %}
 
 
 
@@ -24,7 +18,6 @@ Translated By:
 <img src="images/http-archive-trends.png" class="center" alt="HTTP Archive trends">
 
 <table>
-<colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th></th>
@@ -78,3 +71,7 @@ Translated By:
 데스크톱 환경과는 다르게, 웹 애플리케이션은 따로 설치할 필요가 없습니다. 그저 사용자는 url을 입력하는 걸로 사이트를 실행할 수 있습니다. 이는 웹의 핵심 기능입니다. 하지만 이를 위해서 **수십 개, 때로는 수백 개의 다양한 자원을 가져와야 합니다. 이러한 자원의 크기는 모두 합쳐서 몇 메가 바이트에 달할 수도 있습니다. 이 모든 것을 수백 밀리 초 내에 가져올 수 있어야 우리가 목표로 하는, 즉시 반응하는 웹 환경을 사용자에게 제공할 수 있습니다.**
 
 이러한 요구를 반영하여 빠르게 실행되는 웹 경험을 만들기란 쉬운 일이 아닙니다. 불필요한 다운로드를 제거하고, 다양한 압축 기술로 각 자원의 전송 인코딩을 최적화하고, 캐시를 활용하여 불필요한 다운로드를 제거함으로써 콘텐츠 효율을 최적화해야합니다. 
+
+
+Translated By:
+{% include "web/_shared/contributors/jeokrang.html" %}

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: DOM 변경, 요소 추가 및 제거, 특성 변경, 클래스 또는 애니메이션은 모두 브라우저가 요소 스타일을 재계산하고 많은 경우에 페이지 또는 페이지 일부를 레이아웃(또는 재배치)하게 만듭니다. 이 프로세스를 컴퓨팅 스타일 계산이라고 합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -22,13 +21,8 @@ DOM 변경, 요소 추가 및 제거, 특성 변경, 클래스 또는 애니메�
 
 프로세스의 두 번째 부분에는 매칭 선택기에서 모든 스타일 규칙을 가져와서 요소의 마지막 스타일을 계산하는 과정이 포함됩니다. Blink(Chrome 및 Opera의 렌더링 엔진)에서 이 두 프로세스의 비용은 현재 비슷합니다.
 
-<div class="quote" style="margin-top: 30px;">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">요소의 컴퓨팅 스타일을 계산하는 데 사용되는 시간의 약 50%는 선택기를 매칭하는 데 사용되고 나머지 절반은 매칭하는 규칙에서 RenderStyle(컴퓨팅 스타일 표현)을 생성하는 데 사용됩니다.
-    <p>Rune Lillesveen, Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Blink에서 스타일 무효화</a></p>
-    </blockquote>
-  </div>
-</div>
+> 요소의 컴퓨팅 스타일을 계산하는 데 사용되는 시간의 약 50%는 선택기를 매칭하는 데 사용되고 나머지 절반은 매칭하는 규칙에서 RenderStyle(컴퓨팅 스타일 표현)을 생성하는 데 사용됩니다.
+> > Rune Lillesveen, Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Blink에서 스타일 무효화</a>
 
 
 ## 선택기의 복잡성 줄이기

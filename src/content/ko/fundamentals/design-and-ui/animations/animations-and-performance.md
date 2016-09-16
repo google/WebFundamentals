@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 애니메이션은 성능이 우수해야 합니다. 그렇지 않으면 사용자에게 거부감을 줄 수 있습니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 

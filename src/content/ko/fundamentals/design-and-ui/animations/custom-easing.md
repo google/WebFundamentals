@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 프로젝트에 대한 사용자 지정 easing 애니메이션을 만듭니다.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -28,8 +28,8 @@ CSS에서 이러한 베지어 곡선은 4개의 값, 즉 2쌍의 숫자를 취�
 
 다음은 일반적인 ease-in-out 곡선과 사용자 지정 곡선의 비교입니다.
 
-<img src="imgs/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Ease-in-out 애니메이션 곡선" />
-<img src="imgs/custom.png" style="display: inline; max-width: 300px" alt="사용자 지정 애니메이션 곡선" />
+<img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Ease-in-out 애니메이션 곡선" />
+<img src="images/custom.png" style="display: inline; max-width: 300px" alt="사용자 지정 애니메이션 곡선" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-custom-curve.html">사용자 지정 easing 애니메이션을 참조하십시오.</a>
 

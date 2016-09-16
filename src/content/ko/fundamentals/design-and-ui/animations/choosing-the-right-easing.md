@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: easing in, easing out 및 easing in out 중에 프로젝트에 적합한 easing을 선택합니다. 바운스도 선택해야 할 수도 있습니다!
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -22,7 +21,7 @@ description: easing in, easing out 및 easing in out 중에 프로젝트에 적�
 
 CSS에서`ease-out` 키워드로 지정된 것을 넘어 '공격성'의 범위에 드는 잘 알려진 ease-out 방정식 그룹이 있습니다 . 매우 빠른 ease-out 효과를 내려면 [Quintic ease-out](http://easings.net/#easeOutQuint)을 고려하십시오.
 
-<img src="imgs/quintic-ease-out-markers.png" alt="Quintic ease-out 애니메이션 곡선" style="max-width: 300px"/>
+<img src="images/quintic-ease-out-markers.png" alt="Quintic ease-out 애니메이션 곡선" style="max-width: 300px"/>
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Quintic ease-out 애니메이션을 참조하십시오.</a>
 

@@ -2,15 +2,14 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 새 프로젝트는 시작하는 것이 가장 어려울 수 있습니다. Web Starter Kit는 개발 프로세스를 진행하는 데 도움이 되는 다양한 도구를 제공합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-07-16 #}
 
 # Web Starter Kit를 사용하여 사이트 시작 {: .page-title }
 
+Caution: This article has not been updated in a while and may not reflect reality. Be sure to check the Web Starter Kit [documentation](https://github.com/google/web-starter-kit/) for the latest details.
+
 {% include "web/_shared/contributors/mattgaunt.html" %}
-
-
 
 이 가이드는 Web Starter Kit를 사용하여 새로운 사이트를 빌드하는 프로세스를 단계별로 안내하며 Web Starter Kit의 도구를 최대한 활용하는 방법을 설명합니다.
 
@@ -62,6 +61,9 @@ CTRL-R을 누른 후 페이지가 다시 로드될 때까지 기다리는 등 �
 이 기능은 `gulp serve`를 사용하여 사이트를 실행할 때만 작동합니다. `gulp serve`를 실행하고
 URL을 두 개의 브라우저 창에 나란히 연 후 페이지 중 하나를
 스크롤해 보십시오.
+
+<div class="clearfix"></div>
+
 
 #### 접두사 지정 자동화하기
 

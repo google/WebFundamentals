@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: HTTPS로 마이그레이션할 때 사이트 운영자는 진행 중인 프로세스와 각종 암호화 용어의 의미 등 개념 관련 걸림돌에 직면하게 됩니다. 이 절에서는 이에 대해 아주 간단하게 설명합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2015-03-27 #}
 

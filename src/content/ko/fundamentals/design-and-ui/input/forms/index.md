@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋은 양식은 가장 적게 입력하는 양식입니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-04-30 #}
 
@@ -10,17 +9,15 @@ description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋�
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-
-
-모바일에서는 양식을 작성하기 힘듭니다. 가장 좋은 양식은 가장 적게 입력하는 양식입니다. 좋은 양식은 문맥에 맞는 입력 유형을 제공합니다. 키는 사용자 입력 유형과 일치하도록 변경해야 합니다. 사용자가 달력에서 날짜를 선택합니다. 사용자에게 계속 정보를 제공하십시오. 유효성 검사 도구는 양식을 제출하기 전에 수행할 작업을 사용자에게 알려줘야 합니다.
-
-멋진 양식 만들기에 대한 이 가이드의 개요는 아래 동영상을 참조하십시오.
-
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="iYYHRwLqrKM"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+모바일에서는 양식을 작성하기 힘듭니다. 가장 좋은 양식은 가장 적게 입력하는 양식입니다. 좋은 양식은 문맥에 맞는 입력 유형을 제공합니다. 키는 사용자 입력 유형과 일치하도록 변경해야 합니다. 사용자가 달력에서 날짜를 선택합니다. 사용자에게 계속 정보를 제공하십시오. 유효성 검사 도구는 양식을 제출하기 전에 수행할 작업을 사용자에게 알려줘야 합니다.
+
+멋진 양식 만들기에 대한 이 가이드의 개요는 아래 동영상을 참조하십시오.
 
 
 ## 효과적인 양식 디자인 
@@ -233,7 +230,7 @@ HTML5에서 다양한 새 입력 유형이 도입되었습니다. 이러한 새 
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
 Note: <code>datalist</code> 값은 제안으로 제공되므로 사용자가 그 제안을 꼭 선택할 필요는 없습니다.
@@ -260,7 +257,7 @@ Note: <code>datalist</code> 값은 제안으로 제공되므로 사용자가 그
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
 
 ### 레이블 크기 조정 및 배치
@@ -280,9 +277,7 @@ Note: <code>datalist</code> 값은 제안으로 제공되므로 사용자가 그
 
 <input type="text" placeholder="MM-YYYY">
 
-{% highlight html%}
-<input type="text" placeholder="MM-YYYY" ...>
-{% endhighlight %}
+    <input type="text" placeholder="MM-YYYY" ...>
 
 
 Note: 자리 표시자는 사용자가 요소를 입력하기 시작하면 즉시 사라지므로 레이블을 대체하는 데 사용되지 않습니다. 자리 표시자는 필요한 형식과 콘텐츠를 사용자에게 안내하는 도우미로 사용되어야 합니다.
@@ -305,7 +300,7 @@ Note: 자리 표시자는 사용자가 요소를 입력하기 시작하면 즉�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
 
@@ -419,8 +414,7 @@ Note: 자리 표시자는 사용자가 요소를 입력하기 시작하면 즉�
   </tbody>
 </table>
 
-Note: - <code>street-address</code>만 사용하거나 <code>address-line1</code> 및 <code>address-line2</code>를 모두 사용하십시오.
-- <code>address-level1</code> 및 <code>address-level2</code>는 주소 형식에서 요구하는 경우에만 필요합니다.
+Note: <code>street-address</code>만 사용하거나 <code>address-line1</code> 및 <code>address-line2</code>를 모두 사용하십시오. <code>address-level1</code> 및 <code>address-level2</code>는 주소 형식에서 요구하는 경우에만 필요합니다.
 
 
 ### `autofocus` 특성
@@ -446,7 +440,7 @@ autofocus 특성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 
 ### TL;DR {: .hide-from-toc }
-- '<code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code> 등과 같은 브라우저의 내장 유효성 검사 특성을 활용합니다.'
+- <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code> 등과 같은 브라우저의 내장 유효성 검사 특성을 활용합니다.
 - 유효성 검사 요구사항이 더 복잡한 경우 JavaScript 및 Constraints Validation API를 사용합니다.
 - 실시간으로 유효성 검사 오류를 표시하고 사용자가 유효하지 않은 양식을 제출하려고 하면 수정해야 하는 모든 필드를 표시합니다.
 
@@ -577,7 +571,7 @@ Note: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관�
 
 기본 제공되는 유효성 검사와 정규식만으로 충분하지 않은 경우, 사용자 지정 유효성 검사를 처리하는 강력한 도구인 [Constraint Validation API](http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation)를 사용할 수 있습니다.
 
-  이 API를 사용하여 사용자 지정 오류 설정, 요소의 유효성 확인, 요소가 유효하지 않은 이유 확인 등과 같은 작업을 수행할 수 있습니다.
+이 API를 사용하여 사용자 지정 오류 설정, 요소의 유효성 확인, 요소가 유효하지 않은 이유 확인 등과 같은 작업을 수행할 수 있습니다.
 
 
 
@@ -618,7 +612,7 @@ Note: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관�
   예를 들어, 등록 양식에서 확인을 위해 사용자에게 이메일 주소를 두 번 입력하도록 요구할 수 있습니다.
   두 번째 입력에서 blur 이벤트를 사용하여 두 입력의 유효성을 검사하고 적합한 응답을 설정합니다.
 
-  예:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation"   adjust_indentation="auto" %}
@@ -628,7 +622,7 @@ Note: 클라이언트측 입력 유효성 검사 시에도 데이터의 일관�
 
 양식에 유효하지 않은 데이터가 있더라도 일부 브라우저는 사용자가 양식을 제출하는 것을 차단하지 못하기 때문에 개발자는 제출 이벤트를 캐치하고 양식 요소에 `checkValidity()`를 사용하여 양식의 유효성을 확인해야 합니다.
 
-  예:
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission"   adjust_indentation="auto" %}
@@ -678,72 +672,17 @@ HTML5에서 값이나 특성에 따라 입력 스타일을 지정하는 데 사�
 
 유효성 검사는 즉시 발생합니다. 즉, 사용자가 아직 필드를 채울 기회를 갖지 못했더라도 페이지가 로드될 때 필드가 유효하지 않음으로 표시될 수 있습니다.
 
-  또한 사용자가 입력할 때 잘못된 스타일이 표시될 수도 있음을 의미합니다.
- 이를 방지하기 위해 CSS와 JavaScript를 조합하여 사용자가 필드를 선택한 경우에만 잘못된 스타일을 표시하도록 할 수 있습니다.
+또한 사용자가 입력할 때 잘못된 스타일이 표시될 수도 있음을 의미합니다.
+이를 방지하기 위해 CSS와 JavaScript를 조합하여 사용자가 필드를 선택한 경우에만 잘못된 스타일을 표시하도록 할 수 있습니다.
 
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle"   adjust_indentation="auto" %}
 </pre>
+
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs"   adjust_indentation="auto" %}
 </pre>
 
 Note: 양식의 모든 문제를 한 번에 하나씩 표시하지 말고 한꺼번에 사용자에게 보여줘야 합니다.
 
-## requestAutocomplete API로 결제 단순화 
-
-
-<code>requestAutocomplete</code>는 사용자가 양식을 작성하는 데 도움이 되도록 고안되었지만, 장바구니 포기율이 <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>97%에 이를 수 있는</a> 모바일 웹 전자상거래에 현재 가장 많이 사용되고 있습니다 . 슈퍼마켓에서 원하는 물건을 카트에 가득 채운 고객 중 97%가  카트의 물건을 제자리에 되돌려 놓고 나가는 모습을 상상해 보십시오.
-
-
-### TL;DR {: .hide-from-toc }
-- <code>requestAutocomplete</code>는 결제 과정을 휠씬 단순화하고 사용자 경험을 개선할 수 있습니다.
-- <code>requestAutocomplete</code>를 제공하면 결제 양식을 숨기고 바로 확인 페이지를 표시할 수 있습니다.
-- 입력 필드에 적합한 자동완성 특성을 포함합니다.
-
-
-사이트가 특정 지불 제공업체에 의존하지 않고, `requestAutocomplete`가 브라우저에서 지불 세부정보(예: 이름, 주소 및 신용 카드 정보 등)를 요청하며, 다른 자동완성 필드와 마찬가지로 이러한 세부정보가 브라우저를 통해 선택적으로 저장됩니다.
-
-
-
-
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="ljYeHwGgzQk"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-
-### `requestAutocomplete` 흐름
-
-결제 양식을 표시하는 페이지를 로드하는 대신 `requestAutocomplete` 대화 상자를 표시하는 것이 좋습니다.
- 순조롭게 진행되면 양식이 표시되지 않습니다.
-  필드 이름을 변경하지 않고 기존 양식에 `requestAutocomplete`를 쉽게 추가할 수 있습니다.
-  각 양식 요소에 `autocomplete` 특성을 적합한 값으로 간단히 추가하고 양식 요소에 `requestAutocomplete()` 함수를 추가합니다.
-
- 그러면 브라우저가 나머지를 처리합니다.
-
-
-<img src="imgs/rac_flow.png" class="center" alt="자동완성 흐름 요청">
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
-</pre>
-
-`form` 요소의 `requestAutocomplete` 함수는 브라우저에게 양식을 채우도록 지시합니다.
-  보안상 이 함수는 터치나 마우스 클릭과 같은 사용자 제스처를 통해 호출해야 합니다.
- 그런 다음 필드를 채울 수 있는 사용자 권한과 필드에 채울 세부정보를 묻는 대화 상자가 표시됩니다.
-
-
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
-</pre>
-
-`requestAutocomplete`가 성공적으로 완료되면 
-`autocomplete` 이벤트가 발생하고, 양식을 완료하지 못한 경우에는 `autocompleteerror` 이벤트가 발생합니다.
-  이 과정이 성공적으로 완료되고 양식의 유효성이 검사되면 양식을 제출하고 최종 확인을 진행합니다.
-
-
-
-Note: 각종 개인 정보 또는 신용 카드 데이터를 요청하는 페이지는 SSL을 통해 제공해야 합니다. 그렇지 않은 경우 정보가 안전하지 않다는 경고 대화 상자가 표시됩니다.

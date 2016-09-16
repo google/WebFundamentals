@@ -2,20 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 불필요한 리소스 다운로딩을 하지 않는 것과 함께, 페이시 로딩 속도를 향상 시킬 수 있는 최선의 방법은 리소스을 최적화 하고 압축하여 전체적인 다운로드 사이즈를 최소화 하는 것입니다.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2015-10-05 #}
 {# wf_published_on: 2014-03-31 #}
 
 # 인코딩과 텍스트 기반 리소스의 전송 크기 최적화 하기 {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/captainpangyo.html" %}
-
-
 
 불필요한 리소스 다운로딩을 하지 않는 것과 함께, 페이시 로딩 속도를 향상 시킬 수 있는 최선의 방법은 리소스을 최적화 하고 압축하여 전체적인 다운로드 사이즈를 최소화 하는 것입니다.
 
@@ -75,7 +68,7 @@ Translated By:
 불필요한 데이터와 중복 데이터를 압축하는 최선의 방법은 그 것들을 모두 제거하는 것입니다. 물론, 우리가 그냥 임의의 데이터를 지울 수는 없습니다. 하지만, 특정 데이터 형식과 속성을 알 수 있는 특정 컨텍스트에서, 실제 의미에 영향을 주지 않고도 페이로드의 크기를 상당하게 줄일 수 있습니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 위 간단한 HTML 페이지를 보면, HTML 마크업, CSS 스타일, Javascript 와 같이 세개의 다른 컨텐츠 타입이 포함되어 있습니다. HTML 마크업, CSS 규칙, Javascript 콘텐츠를 유효하게 하려면 각기 다른 규칙들을 사용합니다, 주석처리와 기타도 마찬가지입니다. 우리가 어떻게 이 페이지의 크기를 줄일 수 있을까요?
@@ -86,7 +79,7 @@ Translated By:
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 위 스텝들을 적용하고 나니, 페이지의 문자수가 406에서 150으로 감소되었습니다 - 약 63%의 압축이 된 것이다! 분명히, 이건 가독성이 좋지 않습니다. 하지만, 꼭 가독성을 고려할 필요는 없습니다: 원래의 페이지를 "개발용" 으로 유지하고, 우리가 페이지를 웹사이트에 릴리즈 할 때 마다 위 스텝처럼 최적화 작업을 하면 됩니다.
@@ -114,7 +107,6 @@ Note: 압축이 안된 JQuery 라이브러리는 현재 300KB 정도 크기다. 
 
 
 <table>
-<colgroup><col span="1"><col span="1"><col span="1"><col span="1"></colgroup>
 <thead>
   <tr>
     <th>Library</th>
@@ -191,3 +183,6 @@ GZIP의 실행을 확인하는 가장 쉽고 빠른 방법은 Chrome DevTools에
 Note: 믿거나 말거나, GZIP가 리소스의 크기를 늘릴 수 있는 경우가 있다. 일반적으로, 리소스이 매우 작거나 GZIP 사전의 오버헤드가 압축으로 절약할 수 있는 양보다 높을 경우 일어난다, 또한 만약 리소스이 이미 잘 압축이 되어 있는 경우도 포함된다. 몇몇 서버는 이러한 문제를 방지하기 위해 “최소 파일 크기 한계점” 을 정의하도록 요구한다.
 
 마지막으로 주의할 점 : 대부분의 서버들이 사용자에게 서비스를 제공할 때, 자동적으로 리소스들을 압축하는 반면에, 몇몇 CDNs 는 GZIP 리소스이 제공될 수 있도록 추가적인 관리와 수작업이 필요합니다. 당신의 사이트를 점검해보고, 리소스들이 올바르게 압축되고 있는지 한번 확인해보세요!
+
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}

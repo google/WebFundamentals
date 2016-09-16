@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 대칭을 파괴하면 프로젝트의 대비가 뚜렷하고 매력적입니다. 이를 프로젝트에 언제 어떻게 적용하는지 배웁니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 입력 핸들러는 프레임 완성을 차단할 수 있기 때문에 앱에서 성능 문제를 일으키고 추가적인 (그리고 불필요한) 레이아웃 작업을 유발할 수 있습니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

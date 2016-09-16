@@ -2,18 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: 크롬 버전 46 에서 캐쉬 관리에 대한 새로운 메서드가 추가 되었습니다. 크롬 47 도 추가된 것 처럼, 48 도 그렇게 되겠지요. 절대 멈추지 않습니다!
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2016-06-23 #}
+{# wf_published_on: 2015-09-02 #}
 {# wf_tags: news,serviceworker,cache #}
+
 
 # 서비스워커 cache API 업데이트 {: .page-title }
 
-
-Translated By: 
-
-{% include "web/_shared/contributors/captainpangyo.html" %}
-
-
+{% include "web/_shared/contributors/jakearchibald.html" %}
 
 요즘 서비스워커 캐쉬 API 작은 업데이트에 대해서 글을 써달라고 부탁을 받았습니다.
 그렇다고 해서 기사를 써야하는 건 아닌거 같았지만 긴 토론 끝에 결국 가위바위보 게임으로 넘어왔고,
@@ -125,3 +122,7 @@ Firefox 는 이미 이들을 지원합니다. [Ben Kelly](https://twitter.com/wa
 만약 캐쉬 쿼리 옵션을 어떻게 크롬이 구현하는지 알고 싶으시다면, [crbug.com/426309](https://code.google.com/p/chromium/issues/detail?id=426309)를 확인하세요.
 
 “what we implemented in the cache API” 챕터로 다시 찾아뵙겠습니다!
+
+
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}

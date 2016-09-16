@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 네이티브 앱 설치 배너는 웹 앱 설치 배너와 비슷하지만, 홈 스크린에 추가하는 대신에 사용자가 사이트를 떠나지 않고도 네이티브 앱을 설치하도록 지원합니다.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2015-09-29 #}
 {# wf_published_on: 2014-12-16 #}
 
@@ -11,30 +11,23 @@ description: 네이티브 앱 설치 배너는 웹 앱 설치 배너와 비슷�
 {% include "web/_shared/contributors/mattgaunt.html" %}
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
+<figure class="attempt-right">
+  <img src="images/native-app-install-banner.gif" alt="Native app install banner">
+  <figcaption>네이티브 앱 설치 배너 흐름</figcaption>
+</figure>
 
-Translated By: 
 
-{% include "web/_shared/contributors/captainpangyo.html" %}
+네이티브 앱 설치 배너는 웹 앱 설치 배너와 비슷하지만, 홈 스크린에 추가하는 대신에 사용자가 사이트를 떠나지 않고도 네이티브 앱을 설치하도록 지원합니다.
 
+<div class="clearfix"></div>
 
-
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6-col">
-    네이티브 앱 설치 배너는 웹 앱 설치 배너와 비슷하지만, 홈 스크린에 추가하는 대신에 사용자가 사이트를 떠나지 않고도 네이티브 앱을 설치하도록 지원합니다.
-
-  </div>
-  <figure class="mdl-cell mdl-cell--6-col">
-    <img src="images/native-app-install-banner.gif" alt="Native app install banner">
-    <figcaption>네이티브 앱 설치 배너 흐름</figcaption>
-  </figure>
-</div>
 
 ## 배너를 표시하기 위한 조건
 
 서비스워커가 필요한 부분을 제외하고는 네이티브 앱 설치 배너는 웹 앱 설치 배너와 비슷합니다.
 사이트에서 아래의 항목을 포함해야 합니다:
 
-* [web app manifest](.) 파일에 아래 속성이 포함되야 합니다:
+* [web app manifest](/web/fundamentals/engage-and-retain/web-app-manifest/) 파일에 아래 속성이 포함되야 합니다:
   - `short_name`
   - 배너 실행창에서 사용될 `name`
   - 144x144 png 형식의 아이콘 (아이콘 정의에 mime type의 `image/png`를 꼭 지정)
@@ -67,3 +60,5 @@ Translated By:
       }
     ]
     
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}

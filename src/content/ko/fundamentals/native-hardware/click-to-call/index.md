@@ -2,14 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 폰 기능이 있는 장치에서 사용자가 전화번호를 눌러 여러분과 쉽게 직접 연결하도록 할 수 있는데 이 기능을 흔히 클릭투콜(click to call)이라고 합니다.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 클릭투콜(Click to call) {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 폰 기능이 있는 장치에서 사용자가 전화번호를 눌러 여러분과 쉽게 직접 연결하도록 할 수 있는데 이 기능을 흔히
@@ -17,7 +16,7 @@ description: 폰 기능이 있는 장치에서 사용자가 전화번호를 눌�
 
 
 ## TL;DR {: .hide-from-toc }
-- '<code>tel:</code> 스키마를 사용하여 하이퍼링크에 모든 전화번호를 래핑합니다.'
+- <code>tel:</code> 스키마를 사용하여 하이퍼링크에 모든 전화번호를 래핑합니다.
 - 항상 국제 전화번호 형식을 사용합니다.
 
 
@@ -39,7 +38,7 @@ description: 폰 기능이 있는 장치에서 사용자가 전화번호를 눌�
 
 NIST Telephone Time-of-Day Service <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
 
-<img src="images/click-to-call_framed.jpg" class="center" alt="클릭투콜의 예.">
+<img src="images/click-to-call_framed.jpg" class="attempt-right" alt="클릭투콜의 예.">
 
 전화 기능이 있는 대부분의 장치에서 사용자는 전화를 걸기 전에
  확인 메시지가 표시되므로 속아서 비싼 장거리 전화나

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 레이아웃은 브라우저가 요소의 기하학적 정보(페이지에서 차지하는 크기 및 위치)를 파악하는 장소입니다. 각 요소는 사용한 CSS, 요소의 콘텐츠 또는 상위 요소에 따라 명시적 또는 암시적 크기 지정 정보를 갖게 됩니다. 이 프로세스는 Blink, WebKit 브라우저 및 Internet Explorer에서 레이아웃이라고 합니다. Firefox와 같은 Gecko 기반 브라우저에서는 재배치(reflow)라고 하지만 실제로 동일합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

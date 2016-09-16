@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 앱에서 모달 보기 애니메이션 방법을 알아봅니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -19,7 +18,7 @@ description: 앱에서 모달 보기 애니메이션 방법을 알아봅니다.
 - '사용자가 모달 보기를 해제할 때 재빨리 모달 보기를 제거해야 하지만, 사용자가 놀라지 않도록 약간 더 느리게 화면으로 가져와야 합니다.'
 
 
-<img src="imgs/gifs/dont-press.gif" alt="모달 보기 애니메이션" />
+<img src="images/dont-press.gif" alt="모달 보기 애니메이션" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">샘플 보기</a>
 

@@ -2,13 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 장치 모션 및 방향 이벤트는 모바일 장치에 기본 제공된 가속도계, 자이로스코프 및 나침반에 대한 액세스를 제공합니다.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 장치 방향 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 장치 모션 및 방향 이벤트는 모바일 장치에 기본 제공된 가속도계, 자이로스코프 및 나침반에 대한 액세스를 제공합니다.
@@ -76,28 +76,32 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 사이의 각도 차이를 나타내는 [오일러각](http://en.wikipedia.org/wiki/Euler_angles)으로
 반환됩니다.
 
-<div>
-  <div class="g--third">
-    <img src="images/alpha.png"><br>
+<figure>
+  <img src="images/alpha.png">
+  <figcaption>
     <b>알파:</b> z축을 기준으로 한 회전이며, 장치 상단이 정북향을 가리킬 때
     0&deg;입니다.  장치가 시계 반대 방향으로 회전할수록
     `alpha` 값이 증가합니다.
-  </div>
-  <div class="g--third">
-    <img src="images/beta.png"><br>
+  </figcaption>
+</figure>
+<figure>
+  <img src="images/beta.png">
+  <figcaption>
     <b>베타:</b> x축을 기준으로 한 회전이며, 장치 상단과 하단이 지면에서 등거리에 
     있을 때 0&deg;입니다. 장치의
     상단이 지면을 향해 기울어질수록 값이 증가합니다.
-  </div>
-  <div class="g--third g--last">
-    <img src="images/gamma.png"><br>
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="images/gamma.png">
+  <figcaption>
     <b>감마:</b> y축을 기준으로 한 회전이며, 장치 왼쪽과 오른쪽이 지면에서 등거리에
     있을 때 0&deg;입니다.  장치의
     오른쪽이 지면을 향해 기울어질수록 값이 증가합니다. 
-  </div>
-</div>
+  </figcaption>
+</figure>
 
-<div style="clear:both;"></div>
 
 
 
@@ -121,11 +125,10 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 
 장치 방향 이벤트의 용도는 몇 가지가 있습니다.  예:
 
-<ul>
-  <li>사용자의 움직임에 따라 지도를 업데이트합니다.</li>
-  <li>UI를 미세하게 조정합니다(예: 시차 효과(paralax effect) 추가).</li>
-  <li>GeoLocation과 결합하여 턴바이턴 내비게이션에 사용할 수 있습니다.</li>
-</ul>
+* 사용자의 움직임에 따라 지도를 업데이트합니다.
+* UI를 미세하게 조정합니다(예: 시차 효과(paralax effect) 추가).
+* GeoLocation과 결합하여 턴바이턴 내비게이션에 사용할 수 있습니다.
+
 
 ### 지원 확인 및 이벤트 수신 대기
 
@@ -134,7 +137,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 개체에 연결합니다. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
 </pre>
 
 ### 장치 방향 이벤트 처리
@@ -173,11 +176,10 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 
 장치 모션 이벤트를 사용하는 활용 사례로는 몇 가지가 있습니다.  예를 들면 다음과 같습니다.
 
-<ul>
-  <li>흔들기 제스처를 통해 데이터 새로 고침</li>
-  <li>게임에서 캐릭터의 점프 또는 이동</li>
-  <li>건강 및 피트니스 앱용</li>
-</ul>
+* 흔들기 제스처를 통해 데이터 새로 고침
+* 게임에서 캐릭터의 점프 또는 이동
+* 건강 및 피트니스 앱용
+
 
 ### 지원 확인 및 이벤트 수신 대기
 
@@ -186,7 +188,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 개체에 연결합니다. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
 </pre>
 
 ### 장치 모션 이벤트 처리
@@ -197,10 +199,10 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 없습니다.
 
 이 이벤트는 
-<a href="index.html#device-frame-coordinate">`accelerationIncludingGravity`</a>, 
-<a href="index.html#device-frame-coordinate">`acceleration`</a>
+<a href="#device-frame-coordinate">`accelerationIncludingGravity`</a>, 
+<a href="#device-frame-coordinate">`acceleration`</a>
 (중력 효과 배제), 
-<a href="index.html#rotation-data">`rotationRate`</a> 및 `interval` 등 4가지 속성을 반환합니다.
+<a href="#rotation-data">`rotationRate`</a> 및 `interval` 등 4가지 속성을 반환합니다.
 
 예를 들어, 화면이 위를 향한 상태로 평평한 테이블에 폰이 놓여
 있는 경우는 다음과 같습니다.
@@ -289,7 +291,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 계산합니다.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
 </pre>
 
 시작! 버튼을 누른 후 사용자에게 점프하라고 지시합니다!  그 동안

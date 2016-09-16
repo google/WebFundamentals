@@ -2,19 +2,22 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 사용자는 사이트와 앱의 실행 성능에 주의하므로 렌더링 성능 최적화는 중요합니다!
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 렌더링 성능 {: .page-title }
 
+{% include "web/_shared/contributors/paullewis.html" %}
+
+<img src="images/intro/response.jpg" class="attempt-right" alt="웹사이트와 사용자 상호작용">
 
 
 오늘날 웹 사용자는 <a href="http://paul.kinlan.me/what-news-readers-want/">방문하는 페이지가 대화형이고 원활히 작동할 것으로 기대</a>하므로 개발자는 여기에 시간과 노력을 집중해야 합니다. 페이지는 빠르게 로드될 뿐만 아니라 원활히 실행되어야 합니다. 가벼운 손가락 동작만으로 빠르게 스크롤할 수 있고 애니메이션과 상호작용이 매끄러워야 합니다.
 
-<img src="images/intro/response.jpg" class="center" alt="웹사이트와 사용자 상호작용">
-
 성능이 우수한 사이트와 앱을 작성하려면 브라우저가 HTML, JavaScript 및 CSS를 처리하는 방법을 이해하고 작성하는 코드와 포함된 타사 코드가 최대한 효율적으로 실행되도록 보장해야 합니다.
+
+<div class="clearfix"></div>
+
 
 ## 60fps 및 장치 새로 고침 빈도
 

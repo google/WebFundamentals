@@ -1,19 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 
 # 불필요한 다운로드 제거하기 {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/captainpangyo.html" %}
-
 
 
 가장 빠르고 최적화가 잘되어 있는 자원은 전송되지 않은 자원이다. 당신의 자원을 최근에 점검해보셨나요? 각 자원이 보다 나은 사용자 경험을 돕고 있는지 확인하기 위해 자원을 주기적을 점검하셔야 합니다.
@@ -38,3 +31,6 @@ Translated By:
     * **질문:** 얼마나 많은 방문자들이 이 위젯을 사용하는지? 또는 그 위젯에서 제공하는 컨텐츠가 얼마나 클릭 되는지 측정 해본적이 있습니까? 이 위젯에 의해 생성된 효과가 그 오버헤드를 감당할 만한 이유가 있나요?
 
 이처럼, 불필요한 다운로드를 제거하는 것이 매우 흔한 일인 것처럼 보이지만, 실제로는 그 것이 종종 구현되어야 하는 이유를 많이 생각해보게 하고, 측정을 요하게 하는 일입니다. 사실 최상의 결과를 위해서는 주기적으로 목록을 관리하고, 페이지의 모든 자원들에 대해 각각 이 질문들을 해봐야 합니다.
+
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}

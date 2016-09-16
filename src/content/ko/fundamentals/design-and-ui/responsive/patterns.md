@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만, 데스크톱 및 모바일 장치에서 잘 작동하는 확립된 패턴은 소수입니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 반응형 웹 디자인 패턴 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -17,10 +16,9 @@ description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만
 
 반응형 웹 페이지에 사용되는 대부분의 레이아웃은 유동형, 열 끌어놓기, 레이아웃 시프터, 미세 조정 및 오프 캔버스라는 5가지 패턴 중 하나로 분류될 수 있습니다.
 
-일부 경우에 페이지에서 패턴 조합(예: 열 끌어놓기 + 오프 캔버스)을 사용할 수
-있습니다.  [Luke
-Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 이러한 패턴은 모든 반응형
-페이지에 강력한 시작점을 제공합니다.
+일부 경우에 페이지에서 패턴 조합(예: 열 끌어놓기 + 오프 캔버스)을 사용할 수 있습니다.
+[Luke Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한
+이러한 패턴은 모든 반응형 페이지에 강력한 시작점을 제공합니다.
 
 ## 패턴
 
@@ -49,8 +47,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 
-  <img src="imgs/mostly-fluid.svg">
-  체험해 보기
+<img src="imgs/mostly-fluid.svg">
 
 
 가장 작은 보기에서 각 콘텐츠 `div`가 수직으로 쌓입니다.  화면 너비가 600px에 도달하면 기본 콘텐츠 `div`가 `width: 100%`로 유지되지만 보조 `div`는 기본 `div` 아래 2열로 나타납니다.
@@ -66,7 +63,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/mostly-fluid.html" region_tag="mfluid"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -85,8 +82,8 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 
-  <img src="imgs/column-drop.svg">
-  체험해 보기
+<img src="imgs/column-drop.svg">
+
 
 
 
@@ -102,7 +99,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -121,8 +118,8 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 
-  <img src="imgs/layout-shifter.svg">
-  체험해 보기
+<img src="imgs/layout-shifter.svg">
+
 
 
 이 간단한 레이아웃 시프터 패턴의 예를 보면 작은 화면에서 콘텐츠가 수직으로 쌓이지만 화면이 커짐에 따라 한 `div`는 왼쪽에, 두 `div`는 오른쪽에 쌓이게 되는 큰 변화가 일어납니다.
@@ -137,7 +134,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Andersson-Wise Architects](http://www.anderssonwise.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -154,8 +151,8 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 
 
 
-  <img src="imgs/tiny-tweaks.svg">
-  체험해 보기
+<img src="imgs/tiny-tweaks.svg">
+
 
 
 이름에서 알 수 있듯이 이 샘플은 화면 크기의 변화에 비해 거의 변화가 없습니다.
@@ -168,7 +165,7 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Future Friendly](http://futurefriendlyweb.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -182,8 +179,8 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
 오프 캔버스 패턴은 콘텐츠를 수직으로 쌓지 않고 사용 빈도가 낮은 콘텐츠(예: 탐색 또는 앱 메뉴)를 화면 밖에 배치하고, 화면 크기가 충분히 커지면 표시하고, 작은 화면에서는 클릭했을 때만 보여줍니다.
 
 
-  <img src="imgs/off-canvas.svg">
-  체험해 보기
+<img src="imgs/off-canvas.svg">
+
 
 
 이 샘플은 콘텐츠를 수직으로 쌓지 않고 `transform: translate(-250px, 0)`을 사용하여 두 개의 콘텐츠
@@ -204,7 +201,9 @@ Wroblewski](http://www.lukew.com/ff/entry.asp?1514)가 처음으로 식별한 �
  * [Facebook's Mobile Site](https://m.facebook.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
 </pre>
 
 
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}

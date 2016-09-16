@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: CSS 또는 JavaScript로 애니메이션을 만들 수 있습니다. 어떤 애니메이션을 왜 사용해야 하나요?
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 

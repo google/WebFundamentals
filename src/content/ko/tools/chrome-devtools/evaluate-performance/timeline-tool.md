@@ -2,19 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
 description: 크롬 데브툴의 타임라인 패널로 어플리케이션의 모든 활동들을 레코딩하고 분석할 수 있습니다. 타임라인 패널은 어플리케이션에서 감지된 성능 이슈들을 조사하는데 가장 최적의 장소입니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-03-07 #}
 {# wf_published_on: 2015-06-08 #}
 
 # 타임라인 툴 사용하기 {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/captainpangyo.html" %}
-
 
 
 크롬 데브툴의 <em>타임라인 패널</em>로 어플리케이션의 모든 활동들을 레코딩하고 분석할 수 있습니다.
@@ -30,7 +23,7 @@ Translated By:
 - 빠른 분석을 위해 레코딩의 부분을 확대할 수 있다.
 
 
-## 타임라인 패널 개요 {#timeline-overview}
+## 타임라인 패널 개요 {: #timeline-overview}
 
 타임라인 패널은 4개의 구역으로 구성되어 있습니다:
 
@@ -114,7 +107,7 @@ Translated By:
 
 [event reference]: /web/tools/chrome-devtools/profile/evaluate-performance/performance-reference
 
-## 레코딩 중 스크린샷 캡쳐하기 {#filmstrip}
+## 레코딩 중 스크린샷 캡쳐하기 {: #filmstrip}
 
 **Timeline** 패널은 페이지 로딩중에 스크린샷을 캡쳐할 수 있습니다.
 이 기능은 **Filmstrip** 라고 합니다.
@@ -129,14 +122,14 @@ Translated By:
 
 {% animation animations/hover.mp4 %}
 
-## Javascript 프로파일링 {#profile-js}
+## Javascript 프로파일링 {: #profile-js}
 
 Javascript 스택 캡쳐를 위한 레코딩을 하기 전에 타임라인 레코딩에서 **JS Profile** 체크박스를 활성화합니다.
 JS 프로파일러가 활성화 되면, 프레임 차트가 호출된 모든 Javascript 함수를 표시합니다.
 
 ![flame chart with JS profile enabled](imgs/js-profile.png)
 
-## 프로파일 페인팅 {#profile-painting}
+## 프로파일 페인팅 {: #profile-painting}
 
 **Paint** 이벤트에 대해 더 많이 알고 싶으면 레코딩하기 전에 **Paint** 체크박스를 활성화합니다.
 페인트 프로파일링이 활성화되고 **Paint** 이벤트를 클릭하면, **Paint Profiler** 탭이 **Details** 칸에 나타납니다.
@@ -144,7 +137,7 @@ JS 프로파일러가 활성화 되면, 프레임 차트가 호출된 모든 Jav
 
 ![paint profiler](imgs/paint-profiler.png)
 
-### 렌더링 설정 {#rendering-settings}
+### 렌더링 설정 {: #rendering-settings}
 
 DevTool 메인 메뉴를 열고 **More tools** > **Rendering settings** 를 선택하여
 페인팅 이슈를 디버깅 할 때 도움이 되는 렌더링 세팅에 접근합니다.
@@ -169,7 +162,7 @@ DevTool 메인 메뉴를 열고 **More tools** > **Rendering settings** 를 선�
 
 ![find toolbar](imgs/find-toolbar.png)
 
-## 타임 라인 영역에서 줌하기 {#zoom}
+## 타임 라인 영역에서 줌하기 {: #zoom}
 
 레코딩의 부분을 확대해서 분석을 더 쉽게 할 수 있습니다. **Overview** 영역을 사용하면 레코딩의 일부분을 확대할 수 있습니다.
 확대 후에는 **Flame Chart** 가 자동으로 해당 부분을 맞춰서 보여줍니다.
@@ -191,3 +184,6 @@ DevTool 메인 메뉴를 열고 **More tools** > **Rendering settings** 를 선�
 **Overview** 또는 **Flame Chart** 에서 오른쪽 클릭하면 레코딩을 저장하거나 열 수 있습니다.
 
 ![save and open recordings](imgs/save-open.png)
+
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}

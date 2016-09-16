@@ -2,13 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 대부분의 브라우저와 장치는 사용자의 지리적 위치 정보에 액세스할 수 있습니다. 사이트 및 앱에서 사용자의 위치를 활용하는 방법을 살펴봅니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 사용자 위치 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 
@@ -73,20 +72,17 @@ Geolocation API를 사용할 때 알아야 하는 것이 많이 있는데 이 �
 사용자에게 확실히 이해시켜야 합니다.  사이트가 로드하자마자 홈 페이지에서 사용자 위치
 정보를 요청하면 사용자는 거부감을 갖게 됩니다.
 
-<div class="clear g-wide--pull-1">
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
-      <figcaption>사이트가 로드하자마자 홈 페이지에서 사용자 위치 정보를 요청하면 사용자는 거부감을 갖게 됩니다.</figcaption>
-    </figure>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
-      <figcaption>사용자 제스처 시 위치에 대한 액세스를 항상 요청합니다.</figcaption>
-      </figure>
-  </div>
-</div>
+
+<figure class="attempt-left">
+  <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
+  <figcaption>사이트가 로드하자마자 홈 페이지에서 사용자 위치 정보를 요청하면 사용자는 거부감을 갖게 됩니다.</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
+  <figcaption>사용자 제스처 시 위치에 대한 액세스를 항상 요청합니다.</figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 대신 작업을 수행하는 데 사용자 위치에 대한 액세스가 필요함을 사용자에게 알리는 설명 또는 
 명확한 동작 호출을 제공해야 합니다.  그러면 사용자는
@@ -126,6 +122,8 @@ Geolocation API를 사용할 때 알아야 하는 것이 많이 있는데 이 �
 3.  긍정적인 응답을 얻은 경우 타이머를 해제하고 결과를 처리합니다.
 4.  시간이 초과된 후에 긍정적인 응답을 얻지 못한 경우 사용자에게 알림 메시지를 표시합니다.
 5.  그 후에 응답을 얻었는데 알림이 계속 표시되어 있을 경우 화면에서 알림을 제거합니다.
+
+<div class="clearfix"></div>
 
 
     button.onclick = function() {
@@ -455,7 +453,7 @@ getCurrentPosition()의 두 번째 인수(선택 항목)가 호출되므로
 
     window.onload = function() {
       var startPos;
-      var geoSuccess = function(position) {
+      var geoSuccess f= function(position) {
         startPos = position;
         document.getElementById('startLat').innerHTML = startPos.coords.latitude;
         document.getElementById('startLon').innerHTML = startPos.coords.longitude;

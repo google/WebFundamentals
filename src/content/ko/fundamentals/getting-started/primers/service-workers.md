@@ -2,20 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 풍부한 오프라인 경험, 주기적 백그라운드 동기화, 푸쉬 알림&mdash;네이티브 어플리케이션이 일반적으로 요구하는 기능&mdash; 이 웹으로 오고 있습니다. 서비스워커는 이 모든 특징들이 기댈 수 있는 기술적 기반을 제공합니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2016-01-17 #}
 {# wf_published_on: 2000-01-01 #}
 
 # 서비스워커 소개 {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-Translated By: 
-
-{% include "web/_shared/contributors/captainpangyo.html" %}
-
-
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 풍부한 오프라인 경험, 주기적 백그라운드 동기화, 푸쉬 알림&mdash;네이티브 어플리케이션에서 일반적으로 필요한 기능들&mdash; 이 앞으로 웹에서 지원이 가능합니다. 서비스워커는 이 모든 특징들이 구현 가능하도록 기술적 기반을 제공합니다.
 
@@ -43,13 +35,6 @@ Translated By:
 
 ## 서비스워커 라이프싸이클 
 
-
-
-Translated By: 
-
-
-
-
 서비스워커는 웹 페이지와 완전 별개의 라이프싸이클을 갖고 있습니다.
 
 서비스워커를 사이트에 설치하기 위해서는 페이지에서 자바스크립트를 이용하여 등록해야 합니다.
@@ -71,16 +56,10 @@ fetch나 message event를 처리하는 형태의 2가지 상태 중 하나가 �
 
 아래는 처음 설치 단계에서의 서비스워커 라이프싸이클을 단순화한 형태입니다.
 
-![service worker lifecycle](images/sw-lifecycle.png)
+![service worker lifecycle](imgs/sw-lifecycle.png)
 
 
 ## 전제 조건 
-
-
-
-Translated By: 
-
-
 
 
 다음으로 넘어가기 전에 우리가 알맞은 기술환경을 가지고 있는지 확인합니다.
@@ -123,13 +102,6 @@ Safari는 향후 서비스워커를 [지원할 계획](https://trac.webkit.org/w
 
 ## 서비스워커 등록하기 
 
-
-
-Translated By: 
-
-
-
-
 서비스워커를 설치하려면 페이지에서 <b>등록</b>을 해야합니다. 이 과정에서 브라우저는 서비스워커 자바스크립트의 위치를 파악합니다.
 
 
@@ -156,7 +128,7 @@ Translated By:
 
 주소창에 `chrome://inspect/#service-workers`를 입력하면 사이트에서 실행되고 있는 서비스워커를 확인할 수 있습니다.
 
-![Inspect service workers](images/sw-chrome-inspect.png)
+![Inspect service workers](imgs/sw-chrome-inspect.png)
 
 서비스워커가 처음 실행되고 있을 때 주소창에 `chrome://serviceworker-internals` 을 입력하면 서비스워커 상세 정보를 확인할 수 있습니다.
 서비스워커의 라이프싸이클만 확인 하는 것이면 유용할지 모르나, `chrome://inspect/#service-workers`가 곧 완전히 이 자리를 대체할 것입니다.
@@ -166,13 +138,6 @@ Incognito 윈도우에서는 이전 서비스워커가 새로운 윈도우에 �
 
 
 ## 서비스워커 설치하기 
-
-
-
-Translated By: 
-
-
-
 
 페이지가 등록 절차를 시작하면 `install` 이벤트를 처리하는 서비스워커 스크립트를 봅니다.
 
@@ -223,12 +188,6 @@ Translated By:
 
 
 ## 캐쉬와 리턴 요청 
-
-
-
-Translated By: 
-
-
 
 
 서비스워커를 설치했으니 캐쉬된 응답을 돌려줘야 할 차례입니다.
@@ -319,12 +278,6 @@ Translated By:
 ## 서비스워커 업데이트 하기 
 
 
-
-Translated By: 
-
-
-
-
 서비스워커 업데이트가 필요한 경우 아래의 절차를 따릅니다:
 
 1. 서비스워커 자바스크립트 파일을 업데이트 합니다.
@@ -367,12 +320,6 @@ Translated By:
 
 
 ## 다듬어지지 않은 부분들과 배울점 
-
-
-
-Translated By: 
-
-
 
 
 아래에 나와 있는 몇가지 이슈들은 최신 정보들입니다. 아래 내용이 빨리 없어졌으면 좋겠지만 일단 지금으로선 알아놓으면 도움이 될 것입니다.
@@ -461,12 +408,6 @@ Fetch 동작은 `<img crossorigin="use-credentials">`을 추가하지 않는 이
 ## 더 알아보기; 도움 얻기 
 
 
-
-Translated By: 
-
-
-
-
 ### 더 알아보기
 
 서비스워커에 관련 문서는 여기서 확인하세요.[https://jakearchibald.github.io/isserviceworkerready/resources](https://jakearchibald.github.io/isserviceworkerready/resources.html)
@@ -474,3 +415,8 @@ Translated By:
 ### 도움 얻기
 
 만약 하다가 막히는 부분이 있다면 Stackoverflow 에 질문을 올리고 '[service-worker](http://stackoverflow.com/questions/tagged/service-worker)' 태그를 달아주세요. 이 태그가 달린 이슈들을 최대한 모니터링해서 도움을 드리도록 하겠습니다.
+
+
+Translated By:
+{% include "web/_shared/contributors/captainpangyo.html" %}
+

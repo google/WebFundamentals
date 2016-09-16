@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 앱에서 두 보기 사이에 애니메이션을 적용하는 방법을 알아봅니다.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -27,11 +26,11 @@ Note: 모든 애니메이션에서 60fps를 유지하도록 해야 합니다. �
 
 단순화하여 목록 보기와 세부정보 보기라는 두 보기가 있다고 가정합시다. 사용자가 목록 보기 내의 목록 항목을 누르면 세부정보 보기가 슬라이드인하고 목록 보기가 슬라이드아웃합니다.
 
-<img src="imgs/gifs/view-translate.gif" alt="두 보기 간 좌표 이동" />
+<img src="images/view-translate.gif" alt="두 보기 간 좌표 이동" />
 
 이 효과를 달성하려면 두 보기에 대해 `overflow: hidden`으로 설정된 컨테이너가 필요합니다. 이러한 방식으로 두 보기는 가로 스크롤바를 표시하지 않고 컨테이너 내부에 나란히 있을 수 있고, 각 보기는 필요에 따라 컨테이너 내부에서 나란히 슬라이드할 수 있습니다.
 
-<img src="imgs/container-two-views.svg" alt="보기 계층 구조" />
+<img src="images/container-two-views.svg" alt="보기 계층 구조" />
 
 다음은 컨테이너용 CSS입니다.
 
@@ -129,6 +128,6 @@ Note: 이러한 종류의 계층 구조를 다중 브라우저(cross-browser) �
 
 더 큰 화면의 경우 목록 보기를 제거하지 않고 항상 유지하고 세부정보 보기를 오른쪽에서 슬라이드합니다. 탐색 보기를 다루는 것과 거의 동일합니다.
 
-<img src="imgs/container-two-views-ls.svg" alt="큰 화면에서 계층 구조 보기" />
+<img src="images/container-two-views-ls.svg" alt="큰 화면에서 계층 구조 보기" />
 
 
