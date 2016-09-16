@@ -75,29 +75,29 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 代表裝置的座標框架與地球座標框架之間差異的角度數字。
 
 
-<div>
-  <div class="g--third">
-    <img src="images/alpha.png"><br>
+<figure>
+  <img src="images/alpha.png">
+  <figcaption>
     <b>alpha:</b> 繞著 z 軸的旋轉角度，在裝置頂部直接指北時為 0&deg;。
-  逆時針方向旋轉的設備價值就增加了。
-`alpha`
-  </div>
-  <div class="g--third">
-    <img src="images/beta.png"><br>
+  逆時針方向旋轉的設備價值就增加了。`alpha`
+  </figcaption>
+</figure>
+<figure>
+  <img src="images/beta.png">
+  <figcaption>
     <b>beta:</b> 繞著 x 軸的旋轉，在裝置頂部與底部和地球表面等距時為 0&deg;。
  裝置頂部倒向地球表面時，
 此值會增加。
-  </div>
-  <div class="g--third g--last">
-    <img src="images/gamma.png"><br>
+  </figcaption>
+</figure>
+<figure>
+  <img src="images/gamma.png">
+  <figcaption>
     <b>gamma:</b> 繞著 y 軸的旋轉，當裝置左右側和地球表面等距時為 0&deg;。
   右側倒向地球表面時，
 此值會增加。 
-  </div>
-</div>
-
-<div style="clear:both;"></div>
-
+  </figcaption>
+</figure>
 
 
 

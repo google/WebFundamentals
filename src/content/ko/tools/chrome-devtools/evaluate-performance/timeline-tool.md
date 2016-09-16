@@ -120,7 +120,8 @@ description: 크롬 데브툴의 타임라인 패널로 어플리케이션의 �
 레코딩에서 캡쳐한 스크린샷을 확대해서 보려면 **Screenshots** 또는 **Overview** 영역에 커서를 위치합니다.
 마우스를 왼쪽 오른쪽으로 움직여 레코딩 애니메이션을 시뮬레이션 합니다.
 
-{% animation animations/hover.mp4 %}
+<video src="animations/hover.mp4">
+</video>
 
 ## Javascript 프로파일링 {: #profile-js}
 
