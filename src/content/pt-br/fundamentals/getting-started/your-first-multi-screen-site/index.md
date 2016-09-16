@@ -59,7 +59,7 @@ Também criamos uma arquitetura básica de informações e um layout para janela
 Isso pode ser facilmente convertido nas seções básicas da estrutura de uma página que usaremos em todo este projeto.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Adicione conteúdo à página
@@ -75,7 +75,7 @@ O título e o formulário de notificação de solicitação são os componentes 
 No título, adicione texto simples para descrever o curso:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 Também é necessário preencher o formulário.
@@ -86,7 +86,7 @@ Todos os formulários devem ter rótulos e marcadores de posição para que os u
 Adicionaremos tipos de semântica para agilizar e simplificar a inserção de dados pelos usuários em dispositivos móveis.  Por exemplo, ao inserir o número de telefone, o usuário verá apenas o teclado numérico.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -97,7 +97,7 @@ A seção `Vídeo e informações` incluirá um conteúdo mais detalhado.
 Ela oferecerá uma lista de recursos do nosso produto e um marcador de posição de vídeo que mostra aos usuários a utilização do produto.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Os vídeos são muito usados para descrever conteúdo de forma mais interativa e também para demonstrar um produto ou conceito.
@@ -145,7 +145,7 @@ A última seção é uma tabela simples que usamos para mostrar dados estatísti
 As tabelas devem ser usadas unicamente para apresentar dados, por exemplo, em matrizes de informações.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Adicione um rodapé
@@ -155,7 +155,7 @@ A maioria dos sites precisa de um rodapé para exibir informações como Termos 
 Em nosso site, incluiremos links para os Termos e Condições, uma página com informações de contato e nossos perfis nas mídias sociais.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Índice
@@ -219,7 +219,7 @@ Sem ela, o site não funcionará de forma eficaz em um dispositivo móvel.
 A janela de visualização indica ao navegador que a página precisa ser redimensionada para se ajustar ao tamanho da tela.  Existem várias configurações de janela de visualização que podem ser especificadas para controlar a exibição da página. Por padrão, recomendamos:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 A janela de visualização fica no título do documento e só precisa ser informada uma vez.

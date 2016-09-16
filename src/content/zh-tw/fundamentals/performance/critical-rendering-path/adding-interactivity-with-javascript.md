@@ -23,7 +23,7 @@ description: 透過 JavaScript，我們可以修改網頁的各個層面，例�
 JavaScript 是一種在瀏覽器執行的動態語言，可讓我們修改網頁行為方式的各個層面。透過在 DOM 樹狀結構新增或從中移除元素，我們可以修改網頁內容。我們也可以修改每個元素的 CSSOM 屬性，還可以處理使用者輸入等更多層面。為了實際說明 JavaScript 的功能，我們要用簡單的內嵌指令碼擴充先前的「Hello World」示例：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * 透過 JavaScript，我們可以存取 DOM，並提取對隱藏的 span 節點的參照資源。該節點可能不會出現在轉譯樹狀結構中，但仍然會在 DOM 中！ 獲得參照資源之後，我們就可以變更其中的文字 (透過 .textContent)，甚至可以將經過計算的顯示樣式屬性從「none」改為「inline」。完成上述所有步驟後，我們的頁面將會顯示「**Hello interactive students!**」。
@@ -61,7 +61,7 @@ JavaScript 是一種在瀏覽器執行的動態語言，可讓我們修改網頁
 透過指令碼標記新增的指令碼會如何？ 讓我們以先前的示例做為分析物件，並將程式碼擷取到單獨的檔案中：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**
@@ -77,7 +77,7 @@ JavaScript 是一種在瀏覽器執行的動態語言，可讓我們修改網頁
 我們要如何變出這個小把戲呢？ 很簡單，我們可以將指令碼標記為 _async_：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 將非同步關鍵字新增到指令碼標記中，就是告訴瀏覽器，在等待指令碼準備就緒之前不應禁止 DOM 建構作業，這將可大幅提升效能！

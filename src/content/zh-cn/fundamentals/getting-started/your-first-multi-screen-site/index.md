@@ -68,7 +68,7 @@ Translated By:
 这就可以轻松转化出基础页面的大体分块，我们将在这个项目的剩下部分使用。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### 添加页面内容
@@ -84,7 +84,7 @@ Note: 样式很快就能看到
 在标题中，添加简单文本来描述课程：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 我们也需要填好表单。这是一个简单的表单，用于收集用户的名字，电话号码，以及何时回复他们。
@@ -98,7 +98,7 @@ Note: 样式很快就能看到
 内容的视频和信息分块较为深入。它有一个列表，点出我们的产品特性，还包括一个视频，展示我们的产品怎样适用用户。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 视频在叙述内容时，通常交互性更强，因此经常用来展示产品或概念演示。
@@ -146,7 +146,7 @@ Note: 样式很快就能看到
 表格仅应该用于展示列表数据，即矩阵数据。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### 添加一个页脚
@@ -156,7 +156,7 @@ Note: 样式很快就能看到
 我们的站点上，我们链接一个条款声明，一个联系页面，以及我们的社交媒体资料。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### 总结
@@ -216,7 +216,7 @@ web 可以被各种设备访问，从小屏幕手机到大屏幕电视。每个�
 viewport 指示浏览器，页面需要缩放以适应屏幕。有许多不同的配置项供你指定给 viewport，用于控制页面显示。我们推荐一个默认值：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 viewport 放在文档的头部，只需要声明一次。

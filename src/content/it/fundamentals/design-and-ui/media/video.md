@@ -59,7 +59,7 @@ L'elemento `<source>` consente di specificare diversi formati sostitutivi nel ca
 Ad esempio:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Se il browser analizza i tag `<source>` utilizza l'attributo `type` opzionale per individuare il file da scaricare e riprodurre. Se il browser supporta WebM, riprodurrà chrome.webm. In alternativa, verifica la possibilità di riprodurre video MPEG-4.

@@ -22,7 +22,7 @@ Before the browser can render the page, it needs to construct the DOM and CSSOM 
 ## Document Object Model (DOM)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Let’s start with the simplest possible case: a plain HTML page with some text and a single image. How does the browser process this page?

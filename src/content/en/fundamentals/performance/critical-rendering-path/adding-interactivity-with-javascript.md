@@ -24,7 +24,7 @@ from the critical rendering path.
 JavaScript is a dynamic language that runs in a browser and allows us to alter just about every aspect of how the page behaves: we can modify content by adding and removing elements from the DOM tree; we can modify the CSSOM properties of each element; we can handle user input; and much more. To illustrate this, let's augment our previous "Hello World" example with a simple inline script:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * JavaScript allows us to reach into the DOM and pull out the reference to the hidden span node; the node may not be visible in the render tree, but it's still there in the DOM. Then, when we have the reference, we can change its text (via .textContent), and even override its calculated display style property from "none" to "inline." Now our page displays "**Hello interactive students!**".
@@ -61,7 +61,7 @@ By default, JavaScript execution is "parser blocking": when the browser encounte
 What about scripts included via a script tag? Let's take our previous example and extract the code into a separate file:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**
@@ -83,7 +83,7 @@ By default all JavaScript is parser blocking. Because the browser does not know 
 To achieve this, we mark our script as _async_:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Adding the async keyword to the script tag tells the browser not to block DOM construction while it waits for the script to become available, which can significantly improve performance.

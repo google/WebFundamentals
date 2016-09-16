@@ -24,7 +24,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Mümkün olan en basit örnekle başlayalım: biraz metin ve tek bir resim içeren sade bir HTML sayfası. Bu basit sayfayı işlemek için tarayıcının ne yapması gerekir?

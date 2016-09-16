@@ -17,7 +17,7 @@ img.screenshot {
 }
 </style>
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 CSS Containment という新しい仕様によって、ブラウザが行うスタイル、レイアウト、描画の範囲を制限できるようになります。
 

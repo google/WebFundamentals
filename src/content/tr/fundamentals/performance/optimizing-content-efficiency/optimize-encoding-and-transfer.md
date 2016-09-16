@@ -72,7 +72,7 @@ Elbette, sunu merak ediyor olabilirsiniz: Tüm bunlar harika, ama bunun web sayf
 Yedek veya gereksiz verileri sikistirmanin en iyi yolu bunlari tümüyle çikarmaktir. Elbette, yalnizca rastgele verileri silemeyiz, ancak veri biçiminin içerige özel bilgisine ve özelliklerine sahip olabilecegimiz bazi baglamlarda, gerçek anlamini etkilemeden veri yükünün boyutunu önemli ölçüde küçültmek genellikle mümkündür.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Yukaridaki basit HTML sayfasini ve içerdigi üç farkli içerik türünü düsünün: HTML biçimlendirmesi, CSS stilleri ve JavaScript. Bu içerik türlerinin her biri geçerli HTML biçimlendirmesini, CSS kurallarini veya JavaScript içerigini olusturan ögeler için farkli kurallara, yorumlari belirtmek ve diger seyler için de farkli kurallara sahiptir. Bu sayfanin boyutunu nasil küçültebiliriz?
@@ -83,7 +83,7 @@ Yukaridaki basit HTML sayfasini ve içerdigi üç farkli içerik türünü düs�
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Yukaridaki adimlari uyguladiktan sonra sayfamiz 406 karakterden 150 karaktere düser ve %63 sikistirma tasarrufu saglamis oluruz! Evet kabul ediyorum, çok okunabilir degil, ama öyle olmasi da gerekmiyor: Orijinal sayfayi `gelistirme sürümümüz` olarak tutabilir ve daha sonra, sayfayi web sitemizde yayinlamaya hazir oldugumuzda yukaridaki adimlari uygulayabiliriz.

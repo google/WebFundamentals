@@ -218,7 +218,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * 当浏览器宽度介于 <b>0 像素</b>和 <b>640 像素</b>之间时，系统将会应用 max-640px.css。
@@ -296,7 +296,7 @@ Note: 使用英文逗号分隔属性，确保旧版浏览器可以准确解析�
 要在 600 像素处插入断点，请新建两个样式表，一个在浏览器不超过 600 像素时使用，另一个在超过 600 像素时使用。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 最后，重新设计 CSS。在本例中，我们已将常用的样式（例如字体、图标、基本定位和颜色）放入 weather.css。然后，针对小屏幕的特定版式会放入 weather-small.css，而大屏幕样式则放入 weather-large.css。

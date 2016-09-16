@@ -223,7 +223,7 @@ Vamos analisar um exemplo:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * Quando o navegador tiver entre <b>0 px</b> e <b>640 px</b> de largura, o atributo `max-640px.css` será aplicado.
@@ -302,7 +302,7 @@ Em seguida, redimensione o navegador até que haja muitos espaços em branco ent
 Para inserir um ponto de quebra em 600 pixels, crie duas novas planilhas de estilo, uma para usar quando o navegador tiver 600 px ou menos, outra para quando ele tiver mais de 600 px.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 Por fim, configure novamente o código CSS.  Neste exemplo, colocamos os estilos comuns como fontes, ícones, posicionamento básico e cores em `weather.css`.  Os layouts específicos para a tela pequena são colocados em `weather-small.css`, e os estilos definidos para a tela grande são inseridos em `weather-large.css`.

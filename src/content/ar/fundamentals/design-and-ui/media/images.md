@@ -104,7 +104,7 @@ Note: يبدأ العنصر  <code>picture</code> الوصول إلى المتص
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 في المثال الوارد أعلاه، إذا كانت قيمة عرض المتصفح 800 بكسل على الأقل، فسيتم استخدام `head.jpg` أو `head-2x.jpg`، بناءً على دقة الجهاز. وإذا كانت قيمة المتصفح بين 450 بكسل و800 بكسل، فسيتم استخدام `head-small.jpg` أو `head-small-2x.jpg` بناءً على دقة الجهاز أيضًا. وبالنسبة إلى قيم عرض الشاشة الأقل من 450 بكسل ومدى التوافق مع الإصدارات الأقدم الذي لا يوفر العنصر `picture`، سيعرض المتصفح العنصر `img` بدلاً من ذلك، ويجب تضمينه دائمًا.
@@ -116,7 +116,7 @@ Note: يبدأ العنصر  <code>picture</code> الوصول إلى المتص
 وبدلاً من توفير أحجام صور وقيم كثافة ثابتة، يمكن تحديد حجم كل صورة يتم تقديمها من خلال إضافة كلمة وصفية إلى حجم عنصر الصورة، مما يتيح للمتصفح تلقائيًا حساب كثافة وحدات بكسل اللازمة واختيار الصورة الأفضل التي يمكن تنزيلها.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/sizes.html" region_tag="picture" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 يعرض المثال الموضح أعلاه صورة تحتل نصف قيمة عرض الإطار (`sizes=`50vw``)، وبناءً على قيمة عرض المتصفح ونسبة وحدات بكسل في الجهاز، يتم السماح للمتصفح باختيار الصورة المناسبة بغض النظر عن حجم نافذة المتصفح إذا كانت كبيرة.  على سبيل المثال، يعرض الجدول الوارد أدناه الصورة التي يمكن للمتصفح اختيارها:
@@ -176,7 +176,7 @@ Note: يبدأ العنصر  <code>picture</code> الوصول إلى المتص
 في العديد من الحالات، قد يتغير الحجم أو تتغير الصورة بناءً على نقاط فصل تنسيق الموقع.  على سبيل المثال، في الشاشة الصغيرة، قد تحتاج إلى أن تمتد الصورة على عرض الإطار بالكامل، بينما يجب ألا تأخذ الصورة في الشاشات الكبيرة سوى مساحة صغيرة.  
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/breakpoints.html" region_tag="picture" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
 تستخدم السمة `sizes` في المثال السابق عدة استعلامات وسائط لتحديد حجم الصورة.  عندما تكون قيمة عرض المتصفح أكبر من 600 بكسل، ستظهر الصورة بنسبة 25% من عرض الإطار، وعندما تتراوح قيمتها بين 500 بكسل و600 بكسل، فستظهر بنسبة 50% من عرض الإطار، أما إذا كانت أقل من 500 بكسل، فستظهر بملء العرض.
@@ -230,7 +230,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 على سبيل المثال، يظهر في المثال الوارد أدناه على الشاشات الصغيرة يتم تنزيل `small.png` فقط ويتم تطبيقها على المحتوى `div`، أما الشاشات الكبيرة، فيتم فيها تطبيق `background-image: url(body.png)` على النص الأساسي و`background-image: url(large.png)` على المحتوى `div`.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
 ### استخدام مجموعة صور لتوفير صور عالية الدقة
@@ -250,7 +250,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 لا يزال التوافق مع `image-set()` أمرًا مستحدثًا ولا يتوفر إلا في Chrome وSafari مع بادئة مقدم الخدمة `-webkit`.  ويجب الاهتمام بتضمين صورة ترجيع عندما لا يكون `image-set()` متوافقًا، على سبيل المثال:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
 سيؤدي ما تمت الإشارة إليه أعلاه إلى تحميل الأصل المناسب في المتصفحات التي تتوافق مع image-set، والترجيع إلى الأصل 1x خلافًا لذلك. الأمر الخطير الذي يجب الانتباه إليه أنه على الرغم من أن توافق متصفح `image-set()` يعد منخفضًا، ستحصل معظم المتصفحات على الأصل 1x.
@@ -270,7 +270,7 @@ Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للت
 يتوافق كل من Chrome وFirefox وOpera مع المعيار `(min-resolution: 2dppx)`، بينما يتطلب كل من Safari ومتصفح Android أن تكون بنية مقدم الخدمة المثبتة مسبقًا والأقدم بدون وحدة `dppx`.  لا تنس أن هذه الأنماط يتم تحميلها إذا كان الجهاز يتوافق مع استعلام الوسائط، ويجب تحديد أنماط للحالة الأساسية.  كما يوفر هذا ميزة التأكد من أنه سيتم عرض شيء ما إذا لم يتوافق المتصفح مع استعلامات وسائط بدقة محددة.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media-query-dppx.html" region_tag="mqdppx" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
 </pre>
 
 كما يمكنك استخدام بنية الحد الأدنى لقيمة العرض ليتم عرض الصور البديلة بناءً على حجم إطار العرض.  ويتميز هذا الأسلوب بأنه لا يتم تنزيل الصورة إذا لم يتطابق استعلام الوسائط.  على سبيل المثال، لا يتم تنزيل `bg.png` وتطبيقه إلا على `body` إذا كانت قيمة العرض في المتصفح تساوي 500 بكسل أو تزيد عنها:
@@ -317,7 +317,7 @@ You're a super &#9733;
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-svg.html" region_tag="iconsvg" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-svg.html" region_tag="iconsvg" adjust_indentation="auto" %}
 </pre>
 
 ### الحذر عند استخدام خطوط الرموز
@@ -334,7 +334,7 @@ You're a super &#9733;
 <img src="img/icon-fonts.png" class="center" srcset="img/icon-fonts.png 1x, img/icon-fonts-2x.png 2x" alt="مثال على صفحة تستخدم FontAwesome مع رموز الخط.">
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" adjust_indentation="auto" %}
 </pre>
 
 هناك المئات من خطوط الرموز المجانية ومدفوعة المقابل المتاحة، من بينها [Font Awesome](http://fortawesome.github.io/Font-Awesome/) و[Pictos](http://pictos.cc/) و [Glyphicons](http://glyphicons.com/).
@@ -390,7 +390,7 @@ You're a super &#9733;
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="استخدام ورقة النقوش المتحركة في المثال"></a>
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>
 
 تساعد النقوش المتحركة في خفض عدد مرات التنزيل المطلوبة للحصول على عدة صور، بدون تعطيل ذاكرة التخزين المؤقت.

@@ -43,7 +43,7 @@ Note: 順帶一提，請注意「visibility: hidden」和「display: none」不�
 為了計算出每個物件的準確大小和位置，瀏覽器從轉譯樹狀結構的根節點開始瀏覽，以計算網頁上每個物件的幾何形狀。 下面就讓我們看一個簡單的例子：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 以上網頁的內文包含兩個巢狀嵌套的 div：第一個 div (上層元素) 將節點的顯示大小設定為檢視區寬度的 50%，第二個 div (包含在上層元素中) 將寬度設定為上層元素的 50%，即檢視區寬度的 25%！

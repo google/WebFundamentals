@@ -72,7 +72,7 @@ description: Удалив все ненужные ресурсы, перейде
 Лучший способ сжать избыточные или ненужные данные - это удалить их. Конечно, мы не можем просто так стирать информацию, но в некоторых случаях, зная о формате данных и его свойствах, всегда можно значительно снизить размер ресурса, не меняя его суть.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Посмотрите на простую HTML-страницу сверху и на три типа контента, которые в ней содержатся: HTML-разметка, CSS-стили и JavaScript. Для всех этих типов есть разные правила написания, обозначения комментариев и т. д. Как уменьшить размер такой страницы? 
@@ -83,7 +83,7 @@ description: Удалив все ненужные ресурсы, перейде
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 После применения этих шагов страница уменьшилась с 406 до 150 символов. Мы сэкономили целых 63%! Конечно, теперь прочитать код непросто, но это и не нужно. Мы можем сохранить оригинальную страницу в качестве версии для разработчика и применить описанные выше шаги, когда мы захотим опубликовать ее на сайте.

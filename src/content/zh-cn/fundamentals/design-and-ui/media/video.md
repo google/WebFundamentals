@@ -65,7 +65,7 @@ Translated By:
 例如：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 浏览器在解析 <source> 代码时，会使用可选的 type 属性来帮助确定要下载并播放的文件。如果浏览器支持 WebM，则会播放 chrome.webm，否则，浏览器会检查自己是否可以播放 MPEG-4 视频。

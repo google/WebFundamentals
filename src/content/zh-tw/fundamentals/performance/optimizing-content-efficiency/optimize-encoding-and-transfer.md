@@ -71,7 +71,7 @@ description: 在我們消除了任何不必要的資源之後，下一步就是�
 當您要壓縮多餘或不必要的資料時，最佳方式是直接消除。當然，我們不能只是隨意刪除資料。但在某些情況下，我們可能清楚掌握資料格式及其屬性的內容專屬資訊，這時刪除資料經常可能顯著縮減裝載的大小，且不影響其實際意義。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 請想想上述的簡單 HTML 網頁和其中包含的三種內容類型：HTML 標記、CSS 樣式和 JavaScript。對於構成有效 HTML 標記、CSS 規則和 JavaScript 內容的元素，其中每種內容類型都有不同的規則，用於指示註解的規則也各有不同。我們如何可以縮減這個網頁的大小？
@@ -82,7 +82,7 @@ description: 在我們消除了任何不必要的資源之後，下一步就是�
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 在套用上述步驟之後，我們的網頁從 406 個字元變為 150 個字元，達到 63% 的壓縮比例！ 確實，我們因此犧牲了訊息可讀性，但其實也不一定要這樣：我們可以保留原始網頁做為我們的「開發版本」，當我們準備在網站上發佈該網頁時，再套用上述步驟。

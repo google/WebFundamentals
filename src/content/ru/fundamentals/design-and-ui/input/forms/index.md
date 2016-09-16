@@ -240,7 +240,7 @@ description: На мобильных устройствах заполнять �
 списка, элемент `datalist` выдает подсказки по мере того, как пользователь выполняет ввод.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
 Note: Значения <code>datalist</code> выдаются в качестве подсказки, пользователи при этом не ограничены предоставленными подсказками.

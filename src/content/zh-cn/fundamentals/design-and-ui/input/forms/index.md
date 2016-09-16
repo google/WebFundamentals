@@ -240,7 +240,7 @@ HTML5 引入了大量新的输入类型。 这些新输入类型可以提示
 这些选项，此元素在用户输入时提供提示。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
 Note: <code>datalist</code> 值是提供的建议值，并不意味着用户 只能选择所提供的建议值。

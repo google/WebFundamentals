@@ -71,7 +71,7 @@ description: 無論是小螢幕手機或是大螢幕電視，使用者都能透�
 這份文件可輕鬆轉換成網頁骨架中的粗略區段，後續在這個專案中都會用到。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### 將內容新增到網頁
@@ -87,7 +87,7 @@ Note: 樣式以後還會來
 在標題中，請簡單描述課程內容：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 我們也需要填寫表單。
@@ -98,7 +98,7 @@ Note: 樣式以後還會來
 為方便使用者在行動裝置上輕鬆快速地輸入內容，我們會新增語意類型。舉例來說，當使用者輸入電話號碼時，應會看到撥號鍵盤。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -109,7 +109,7 @@ Note: 樣式以後還會來
 其中會顯示產品功能的項目符號列表，也會包含影片預留位置，讓使用者觀看產品實際運作的情形。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 我們通常會透過影片以互動的方式說明內容，也常常使用影片示範產品使用方式或概念。
@@ -157,7 +157,7 @@ Note: 樣式以後還會來
 請在需要顯示表列式資料時 (例如格狀資訊) 才使用表格。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### 新增頁尾
@@ -167,7 +167,7 @@ Note: 樣式以後還會來
 在我們的網站中，我們會提供《條款及細則》、聯絡資訊網頁和社交媒體個人資料頁面的連結。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### 摘要
@@ -249,7 +249,7 @@ Note: 樣式以後還會來
 檢視區的作用是告知瀏覽器依據螢幕大小縮放網頁。您可以透過多項檢視區設定來控制網頁的顯示方式。我們建議您採用下列預設設定：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 檢視區位於文件的開頭，而且只需要宣告一次。

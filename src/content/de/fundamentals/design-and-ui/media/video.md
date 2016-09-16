@@ -60,7 +60,7 @@ Mithilfe des `<source>`-Elements können Sie mehrere Formate als Ausweichmöglic
 Beispiel:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Beim Parsen der `<source>`-Tags durch den Browser wird anhand des optionalen Attributs `type` ermittelt, welche Datei heruntergeladen und wiedergegeben werden soll. Wenn der Browser WebM unterstützt, spielt er die Datei `chrome.webm` ab, andernfalls wird überprüft, ob MPEG-4-Videos abgespielt werden können.

@@ -200,7 +200,7 @@ Prenons un exemple :
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * Lorsque la largeur du navigateur est comprise entre <b>0 pixel</b> et <b>640 pixels</b>, `max-640px.css` est appliqué.
@@ -274,7 +274,7 @@ Redimensionnez ensuite le navigateur jusqu'à ce qu'il y ait trop d'espace entre
 Pour insérer un point de rupture à 600 pixels, créez deux feuilles de style ; l'une à utiliser lorsque la taille du navigateur est inférieure ou égale à 600 pixels, et l'autre pour une taille supérieure à 600 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 Pour terminer, restructurez la feuille de style en cascade (CSS). Dans cet exemple, les styles courants, tels que les polices, les icônes, les couleurs et le positionnement de base, ont été placés dans le fichier 'weather.css'. Les dispositions spécifiques relatives au petit écran sont ensuite placées dans le fichier 'weather-small.css', tandis que les styles pour grand écran sont placés dans 'weather-large.css'.

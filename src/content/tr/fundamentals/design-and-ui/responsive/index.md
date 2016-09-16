@@ -226,7 +226,7 @@ Birlikte bir örnege bakalim:
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * Tarayici genisligi <b>0p</b> ile <b>640p</b> arasinda oldugunda, `max-640px.css` uygulanir.
@@ -305,7 +305,7 @@ Daha sonra, ögeler arasinda çok fazla beyaz bosluk oluncaya ve tahmin kötü g
 600 piksel noktasinda bir kesme noktasi eklemek için iki yeni stil sayfasi olusturun. Bunlarin birini tarayici 600 piksel ve altindayken, digerini de 600 pikselden genis oldugunda kullanacaksiniz.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 Son olarak, CSS'yi yeniden yazin.  Bu örnekte, `weather.css` dosyasina yazi tipleri, simgeler, temel konumlandirma ve renkler gibi genel stilleri yerlestirdik.  Daha sonra, küçük ekrana iliskin belirli yerlesimler `weather-small.css` ve genis ekran stilleri `weather-large.css` dosyasina yerlestirilir.

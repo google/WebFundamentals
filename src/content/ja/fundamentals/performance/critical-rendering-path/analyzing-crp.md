@@ -47,7 +47,7 @@ HTML コンテンツの準備が整うと、ブラウザは、バイトを解析
 「Hello World サンプル」ページは、表面上はシンプルに見えましたが、内部ではさまざまな処理が実行されていました。ただし、現実世界では、HTML だけで済むことはあまりありません。CSS スタイルシートや 1 つまたは複数のスクリプトを組み込むことで、ページのインタラクティブ機能を追加できます。両方とも追加し、何が起きるか確認しましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _JavaScript と CSSを追加する前にを追加する前に：_

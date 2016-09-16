@@ -24,7 +24,7 @@ JavaScript позволяет модифицировать контент веб
 JavaScript - это динамический язык, с помощью которого можно менять почти любые характеристики веб-страниц: модифицировать контент, добавляя элементы в модель DOM или удаляя их; менять CSSOM-свойства любых элементов; отвечать на действия пользователя и т. д. Рассмотрим эти возможности, дополнив прошлый пример Hello World встроенным кодом:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * JavaScript позволяет извлечь из DOM скрытый объект span, который может не отображаться в модели визуализации, а затем заменить текст внутри объекта (с помощью команды .textContext) и вычисляемое свойство стиля (с `none` на `inline`). Готово! На странице появится текст **Hello interactive students!**.
@@ -62,7 +62,7 @@ JavaScript - это динамический язык, с помощью кот�
 Но что если поместить скрипт не в HTML-код, а в отдельный файл, и сослаться на него с помощью script-тега? Например, вот так:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**
@@ -78,7 +78,7 @@ JavaScript - это динамический язык, с помощью кот�
 Для этого нужно просто добавить в тег скрипта ключевое слово _async_:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 По нему браузер определит, что блокировать создание DOM на время загрузки скрипта не нужно. Результат - высокая скорость визуализации!

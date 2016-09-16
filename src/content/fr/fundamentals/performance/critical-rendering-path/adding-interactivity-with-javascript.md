@@ -23,7 +23,7 @@ JavaScript nous permet de modifier pratiquement chaque aspect de la page : le co
 JavaScript est un langage dynamique exécuté dans le navigateur qui nous permet de modifier presque tous les aspects du comportement de la page. Nous pouvons modifier son contenu, en ajoutant ou en supprimant des éléments de l'arbre DOM, nous pouvons modifier les propriétés CSSOM d chaque élément, nous pouvons traiter les informations de l'internaute et bien plus encore. Pour illustrer concrètement ces propriétés, ajoutons un simple script intégré à notre exemple précédent 'Hello World' :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * JavaScript nous permet d'atteindre le DOM et de tirer la référence vers le nœud caché de la balise `span`. Le nœud n'est parfois pas visible dans l'arbre de rendu, mais il est toujours là, dans le DOM. Ensuite, une fois que nous avons la référence, nous pouvons en modifier le texte (via .textContent), et même remplacer sa propriété de style d'affichage `none` par `inline`. Une fois que nous avons effectué toutes ces opérations, la page affiche désormais l'expression `**Hello interactive students !**`.
@@ -61,7 +61,7 @@ Par défaut, l'exécution de JavaScript est bloquante pour l'analyseur. Lorsque 
 Qu'en est-il des scripts inclus via une balise de script ? Prenons l'exemple précédent et recopions le code dans un fichier séparé :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**
@@ -77,7 +77,7 @@ Ceci étant, heureusement, il existe une solution de secours. Par défaut, tout 
 Comment procéder pour parvenir à ce résultat ? C'est assez simple, il nous suffit de marquer le script comme _async_ :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 L'ajout du mot clé `async` à la balise de script indique au navigateur qu'il ne doit pas bloquer la construction du DOM pendant qu'il attend que le script soit disponible : le gain de performance est considérable.

@@ -59,7 +59,7 @@ description: Узнайте, как легко и просто добавить 
 Ниже приведен пример.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Когда браузер анализирует теги <source>, он использует дополнительный атрибут type для определения, какой файл загрузить и воспроизвести. Если браузер поддерживает формат WebM, он воспроизведет файл chrome.webm. Если нет, браузер попытается вопроизвести видеофайлы в формате MPEG-4.

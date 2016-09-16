@@ -21,7 +21,7 @@ Avant que le navigateur puisse afficher la page, les arborescences DOM et CSSOM 
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Commençons par un exemple le plus simple possible : une page en HTML brut avec du texte et une seule image. Que doit faire le navigateur pour traiter cette page simple ?

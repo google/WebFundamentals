@@ -28,7 +28,7 @@ description: 确定并解决关键呈现路径性能方面的瓶颈需要了解�
 ## Hello World experience
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 我们将从基本的 HTML 标记和单个无 CSS 或 JavaScript 的图片开始，这与获得图片一样简单。现在，我们在 Chrome DevTools 中打开网络时间轴，并检查生成的资源瀑布流：
@@ -49,7 +49,7 @@ HTML 内容准备就绪后，浏览器必须解析字节、将其转换为令牌
 我们的'Hello World experience'页面表面看起来可能非常简单，但我们需要做大量的工作才能使其呈现出这种效果！ 不过在实践中，我们还需要 HTML 之外的很多资源：我们可能需要 CSS 样式表以及一个或多个添加网页互动性的脚本。我们将两者组合起来，看看会发生什么：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _添加 JavaScript 和 CSS 之前：_
@@ -82,7 +82,7 @@ _内联 JavaScript：_
 首先回想一下，所有内联脚本均会阻止解析器，但是对于外部脚本来说，我们可以添加`async`关键字来取消阻止解析器。我们来取消内联，并尝试一下上述方法：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 阻止解析器的（外部）JavaScript：__
@@ -98,7 +98,7 @@ _内联 JavaScript：_
 或者，我们也可以尝试另外一种方法，即同时内联 CSS 和 JavaScript：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM、内联 CSS 和内联 JS" class="center">
@@ -115,7 +115,7 @@ _内联 JavaScript：_
 最简单的可用网页仅由 HTML 标记组成：无 CSS、JavaScript 或其他类型的资源。要呈现此网页，浏览器必须初始化请求、等待 HTML 文档准备就绪、对其进行解析、构建 DOM，最后使其呈现在屏幕上：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Hello world CRP" class="center">
@@ -125,7 +125,7 @@ _内联 JavaScript：_
 现在，我们看一下带有外部 CSS 文件的同一网页：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" class="center">
@@ -152,7 +152,7 @@ _内联 JavaScript：_
 现在我们再向组合中添加一个额外的 JavaScript 文件！
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 我们添加了 app.js（网页上的外部 JavaScript 资源），而且据我们目前所了解的，这是一种解析器阻止（即关键）资源。更糟的是，为了执行 JavaScript 文件，我们还必须阻止并等待 CSSOM；注意，在`style.css`下载和 CSSOM 构建完成之前，浏览器将会暂停。
@@ -170,7 +170,7 @@ _内联 JavaScript：_
 与网站开发者交流之后，我们意识到网页中添加的 JavaScript 不必是阻止脚本：我们的某些分析和其他代码不会阻止网页呈现。了解这些后，我们就可以向脚本代码中添加`async`属性，以取消对解析器的阻止：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="DOM、CSSOM 和异步 JavaScript CRP" class="center">
@@ -186,7 +186,7 @@ _内联 JavaScript：_
 最后，假设 CSS 样式表仅用于打印， 那会如何呢？
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM、非阻止性 CSS 和异步 JavaScript CRP" class="center">

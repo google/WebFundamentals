@@ -58,7 +58,7 @@ Nous vous proposons également une disposition et une architecture d'information
 Une conversion peut être effectuée facilement dans les sections rudimentaires d'une page schématique que nous utiliserons pour le reste de ce projet.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Ajouter du contenu à la page
@@ -74,7 +74,7 @@ Le titre et le formulaire de notification de demande sont les composants essenti
 Dans le titre, ajoutez simplement du texte pour décrire le cours :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 Vous devez également compléter le formulaire.
@@ -85,7 +85,7 @@ Des étiquettes et des espaces réservés doivent être associés à tous les fo
 Des types sémantiques seront ajoutés pour permettre aux utilisateurs de saisir, en un tournemain, du contenu sur un appareil mobile. Par exemple, lors de la saisie d'un numéro de téléphone, l'utilisateur doit simplement voir un clavier de numérotation.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -96,7 +96,7 @@ La section de contenu 'Vidéo et informations' sera un peu plus détaillée.
 Elle contiendra une liste à puces des caractéristiques de nos produits, ainsi qu'un espace vidéo réservé présentant le produit en action.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 La vidéo est souvent utilisée pour décrire le contenu de manière plus interactive et pour faire la démonstration d'un produit ou concept.
@@ -144,7 +144,7 @@ La dernière section est un simple tableau utilisé pour afficher des statistiqu
 Les tableaux ne doivent être utilisés que pour les données tabulaires, telles que des matrices d'information.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Ajouter un pied de page
@@ -154,7 +154,7 @@ Sur la plupart des sites, un pied de page est nécessaire pour afficher du conte
 Notre site comportera simplement des liens vers les conditions d'utilisation, une page 'Contact' et nos profils de médias sociaux.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Résumé
@@ -215,7 +215,7 @@ En l'absence de fenêtre d'affichage, votre site ne fonctionnera pas correctemen
 Cette fenêtre d'affichage indique au navigateur que la page doit être adaptée au format de l'écran. Vous pouvez spécifier de nombreuses configurations différentes pour que la fenêtre contrôle l'affichage de la page. Voici les configurations par défaut que nous recommandons :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 La fenêtre d'affichage réside dans l'en-tête du document et ne doit être déclarée qu'une seule fois.

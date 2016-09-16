@@ -24,7 +24,7 @@ JavaScript, sayfanin neredeyse her yönünü degistirmemize olanak tanir: içeri
 JavaScript, tarayicinin içinde çalisan dinamik bir dildir ve sayfa davranisiyla ilgili neredeyse her unsuru degistirmemize olanak tanir: DOM agacindan ögeler ekleyerek veya bu ögeleri kaldirarak sayfadaki içerigi degistirebiliriz, her bir ögenin CSSOM özelliklerini degistirebiliriz, kullanici girisini isleyebiliriz ve daha birçok islem yapabiliriz. Bunu çalisirken göstermek için önceki `Herkese Merhaba` örnegimizi basit bir satir içi komut dosyasiyla genisletelim:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * JavaScript, DOM'ye erismemize ve gizli span dügümüne referansi çikarmamiza olanak tanir. Dügüm, olusturma agacinda görünmeyebilir, ancak DOM'de bulunmaya devam eder! Daha sonra, referansi aldigimizda metnini (.textContent araciligiyla) degistirebilir, hatta hesaplanmis görüntü stili özelligini geçersiz kilip `none` yerine `inline` degerine ayarlayabiliriz. Her seyin sonunda, sayfamiz artik `**Merhaba etkilesimli ögrenciler!**` mesajini görüntüleyecek.
@@ -62,7 +62,7 @@ Varsayilan olarak, JavaScript yürütmesi `ayristirici engellemesi`dir: Tarayici
 Bir script etiketi araciligiyla eklenecek komut dosyalarina ne dersiniz? Önceki örnegimizi alalim ve kodumuzu ayri bir dosyaya çikartalim:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**
@@ -78,7 +78,7 @@ Ancak iyi bir haberimiz var, bunun için bir imdat çikisimiz bulunuyor! Varsayi
 Peki, bu hileyi nasil gerçeklestirecegiz? Oldukça basit, komut dosyamizi _async_ olarak isaretleyebiliriz:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 async (zaman uyumsuz) anahtar kelimesinin komut dosyasina eklenmesi tarayiciya, komut dosyasinin kullanilabilir hale gelmeyi beklerken DOM yapimini engellememesi gerektigini bildirir. Bu, büyük bir performans kazanci saglar!

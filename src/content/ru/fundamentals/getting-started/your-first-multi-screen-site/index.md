@@ -60,7 +60,7 @@ description: Пользоваться Интернетом можно с пом�
 Оба варианта легко преобразуются в разделы страницы, с которыми мы будем работать на протяжении всего проекта.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Добавление контента на страницу
@@ -76,7 +76,7 @@ Note: О стиле мы напишем позже
 В заголовок поместим простой текст, описывающий суть курса:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 Также нам необходимо создать форму.
@@ -87,7 +87,7 @@ Note: О стиле мы напишем позже
 Чтобы пользователю было удобно вводить информацию на мобильном устройстве, опишем семантические типы элемента ввода. Например, когда необходимо ввести номер телефона, клавиатура переключится в режим набора номера.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -98,7 +98,7 @@ Note: О стиле мы напишем позже
 в нем будет располагаться список функций наших продуктов и плейсхолдер для видеоролика о работе с ними.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Видео часто используют, чтобы рассказать о продукте или идее в более интерактивном стиле или показать его в действии.
@@ -146,7 +146,7 @@ Note: О стиле мы напишем позже
 Используйте таблицы только для предоставления табличных данных (например, для информационных матриц).
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Добавление `подвала страницы`
@@ -156,7 +156,7 @@ Note: О стиле мы напишем позже
 На нашем сайте такими разделами будут `Контакты`, `Условия использования` и `Социальные сети`.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Заключение
@@ -220,7 +220,7 @@ Note: О стиле мы напишем позже
 Тег viewport сообщает браузеру, что масштаб страницы необходимо изменить, чтобы она полностью помещалась на экране. Вы можете задать несколько параметров для этого тега. Мы рекомендуем следующие параметры по умолчанию:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 Помещать тег viewport нужно только один раз в раздел head.

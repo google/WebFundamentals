@@ -227,7 +227,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * При ширине браузера от <b>0 пикс.</b> до <b>640 пикс.</b> применяется max-640px.css.
@@ -308,7 +308,7 @@ Note: Разделяйте атрибуты запятыми, чтобы уст�
 Чтобы сделать 600 пикселей контрольной точкой, нужно создать две таблицы стилей: одну для меньших значений, другую для больших.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 В конце проведите рефакторинг CSS.  В этом примере мы поместили общие стили (шрифты, значки, цвета и базовое позиционирование) в weather.css.  Затем мы включили макет для маленьких экранов в weather-small.css, а для больших - в weather-large.css.

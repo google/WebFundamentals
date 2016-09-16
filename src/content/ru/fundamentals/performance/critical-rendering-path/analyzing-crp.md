@@ -27,7 +27,7 @@ description: В этой статье мы рассмотрим нескольк
 ## Страница Hello World
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Начнем с самой простой страницы без CSS и JavaScript, состоящей из HTML-разметки и картинки. Запустим инструменты разработчика в Chrome, откроем вкладку Network (Сеть) и проанализируем динамический список:
@@ -48,7 +48,7 @@ description: В этой статье мы рассмотрим нескольк
 Несмотря на простоту нашего примера, браузеру пришлось потрудиться. Однако обычно страницы содержат не только только HTML-разметку, но и таблицы стилей (CSS), и интерактивные функции (скрипты). Попробуем добавить их в код Hello World:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _Перед добавлением JavaScript и CSS:_
@@ -81,7 +81,7 @@ _Встроенный JavaScript:_
 Например, чтобы предотвратить остановку визуализации, можно перенести код JavaScript в отдельный файл и присвоить тегу script параметр async. Посмотрим, что получилось:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _Внешний файл JavaScript (блокирующий визуализацию):_
@@ -97,7 +97,7 @@ _Внешний файл JavaScript (асинхронный):_
 Другое возможное решение - встроить в HTML как скрипт, так и CSS:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, встроенный CSS и встроенный JavaScript" class="center">
@@ -114,7 +114,7 @@ _Внешний файл JavaScript (асинхронный):_
 Для начала вернемся к самой простой странице без CSS и JavaScript, состоящей только из HTML-разметки. Чтобы визуализировать эту страницу, браузер должен отправить запрос на сервер, скачать HTML-документ, проанализировать его, создать модель DOM и, наконец, вывести страницу на экран:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom.png" alt="Процесс визуализации: DOM" class="center">
@@ -124,7 +124,7 @@ _Внешний файл JavaScript (асинхронный):_
 Теперь усложним задачу и добавим внешний CSS-файл:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css.png" alt="Процесс визуализации: DOM и CSSOM" class="center">
@@ -151,7 +151,7 @@ _Внешний файл JavaScript (асинхронный):_
 А теперь дополним пример кодом JavaScript:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Мы привели в HTML-документе ссылку на внешний файл app.js. Как нам уже известно, это первоочередной ресурс, который задерживает визуализацию. К тому же скрипт может ссылаться на CSSOM, поэтому для его выполнения браузеру нужно скачать файл style.css и сформировать модель. На это время визуализация также будет приостановлена.
@@ -169,7 +169,7 @@ _Внешний файл JavaScript (асинхронный):_
 Как вы помните, мы можем избежать приостановки визуализации, сообщив браузеру, что JavaScript нужно обработать позже. Для этого мы присвоим скрипту параметр async:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-js-async.png" alt="Процесс визуализации: DOM, CSSOM и асинхронный JavaScript" class="center">
@@ -185,7 +185,7 @@ _Внешний файл JavaScript (асинхронный):_
 Но ещё лучшего результата можно добиться, если CSS необходим только для печати страницы:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="Процесс визуализации: DOM, CSS для печати и асинхронный JavaScript" class="center">

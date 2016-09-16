@@ -58,7 +58,7 @@ L'élément <source> vous permet d'indiquer plusieurs formats, dans le cas où l
 Par exemple :
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Lorsque le navigateur analyse les balises `<source>`, l'attribut facultatif `type` lui permet de sélectionner le fichier à télécharger et à lire. Si le navigateur est compatible avec WebM, le format de fichier chrome.webm est lu. Dans le cas contraire, une vérification est lancée, pour savoir si la lecture de vidéos au format MPEG-4 est possible.

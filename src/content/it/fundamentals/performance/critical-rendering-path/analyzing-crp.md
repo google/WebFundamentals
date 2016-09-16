@@ -26,7 +26,7 @@ Infine, un'ultima cosa prima di iniziare... finora ci siamo concentrati esclusiv
 ## L'esperienza Ciao mondo
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Inizieremo con un markup HTML di base e un'immagine singola, senza CSS o JavaScript, quindi il massimo della semplicità. Adesso dai Chrome DevTools apriamo la barra temporale dell'attività di rete e ispezioniamo la sequenza delle risorse:
@@ -96,7 +96,7 @@ Molto meglio. L'evento parte poco dopo l'analisi dell'HTML: il browser sa che no
 In alternativa, avremmo potuto provare un approccio differente e rendere inline sia CSS che JavaScript:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, CSS inline, JS inline" class="center">

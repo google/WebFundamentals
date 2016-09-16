@@ -72,7 +72,7 @@ Talvez você esteja se perguntando como isso pode ajudar a otimizar suas página
 A melhor maneira de compactar dados redundantes ou desnecessários é simplesmente os excluindo. Não podemos apagar dados aleatoriamente, mas em alguns contextos em que conhecemos o conteúdo específico do formato de dados e suas propriedades, é possível reduzir de maneira significativa o tamanho da carga sem afetar o significado.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Considere a simples página HTML acima e os três tipos diferentes de conteúdo que ela possui: marcações HTML, estilos CSS e JavaScript. Cada um desses tipos de conteúdo tem regras diferentes para definir quais marcações HTML, regras CSS ou conteúdo JavaScript são válidos, regras diferentes para indicar comentários etc. Como podemos reduzir o tamanho dessa página?
@@ -83,7 +83,7 @@ Considere a simples página HTML acima e os três tipos diferentes de conteúdo 
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Após executar as etapas acima, nossa página passou de 406 para 150 caracteres: uma compactação de 63%. A verdade é que não ficou muito legível, mas também não precisa ficar. É possível manter a página original como a `versão em desenvolvimento` e depois executar as etapas acima quando a página estiver pronta para ser ativada no site.

@@ -60,7 +60,7 @@ Tüm tarayicilar ayni video biçimlerini desteklemez.
 Örnegin:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Tarayici `<source>` etiketlerini ayristirdiginda, indirilip oynatilacak dosyaya karar vermesinde yardimci olmasi için istege bagli `type` özelligini kullanir. Tarayici WebM biçimini destekliyorsa chrome.webm dosyasini oynatir, aksi halde MPEG-4 videolarini oynatip oynatamayacagini kontrol eder.

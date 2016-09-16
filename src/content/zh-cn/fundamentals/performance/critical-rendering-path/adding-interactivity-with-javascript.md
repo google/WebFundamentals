@@ -29,7 +29,7 @@ JavaScript 允许我们修改页面的方方面面：内容、样式以及它如
 JavaScript 是一门运行在浏览器上的动态语言，它允许我们修改页面上的种种：我们可以向 DOM 树添加或移除元素来修改页面内容，我们可以修改任一个元素的 CSSOM 属性，我们可以处理用户输入，等等。为了实际演示，我们用内联脚本扩展下之前的 "Hello World" 示例：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * JavaScript 允许我们进入 DOM，取得隐藏的 span 节点的引用，该节点可能不在渲染树中出现，但它仍在 DOM 里。有了引用后，我们就可以修改它的文本（通过 .textContent），甚至可以将其计算的 display 样式属性从 'none' 改成 'inline'。完成上述后，我们的页面现在会显示 "**Hello interactive students!**"。
@@ -67,7 +67,7 @@ JavaScript 是一门运行在浏览器上的动态语言，它允许我们修改
 通过 script 标签引入的脚本又怎样？让我们拿前面的示例说，把代码提取到一个单独文件中：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**
@@ -83,7 +83,7 @@ JavaScript 是一门运行在浏览器上的动态语言，它允许我们修改
 那么，我们如何实现这种方法呢？很简单，我们可以将脚本标记为 _async_：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 将 async 关键字添加到 script 标签，告诉浏览器，在它等脚本准备就绪前不应阻塞 DOM 构建，这将是性能上的巨大提升！

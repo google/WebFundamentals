@@ -44,7 +44,7 @@ Bu noktaya kadar, hangi dügümlerin görünür olmasi gerektigini ve bunlarin h
 Her bir nesnenin kesin boyutunu ve konumunu belirlemek için tarayici, olusturma agacinin kökünden baslar ve sayfadaki her bir nesnenin geometrisini hesaplamak için üzerinden geçer. Basit bir uygulama örnegini degerlendirelim:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Yukaridaki sayfanin gövdesi iç içe yerlestirilmis iki div ögesi içerir: Ilk (üst) div ögesi, dügümün görüntü boyutunu görüntü alani genisliginin %50'sine ve üst ögenin içerdigi ikinci div ögesi, genisligini üst ögenin %50'sine (görüntü alani genisliginin %25'ine) ayarlar!

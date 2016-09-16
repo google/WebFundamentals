@@ -26,7 +26,7 @@ description: Перед тем как вывести страницу на эк�
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Возьмем самую простую веб-станицу с текстом без форматирования и одним изображением и посмотрим, как она обрабатывается в браузере.

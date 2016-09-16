@@ -20,7 +20,7 @@ Antes de que el navegador pueda publicar la página, tiene que crear los árbole
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Vamos a empezar con el caso más sencillo posible: una página HTML sencilla con algo de texto y una sola imagen. ¿Qué tiene que hacer el navegador para procesar esta sencilla página?

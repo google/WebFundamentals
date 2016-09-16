@@ -67,7 +67,7 @@ This is all great, but how does this help us optimize our web pages? We’re not
 The best way to compress redundant or unnecessary data is to eliminate it altogether. We can’t just delete arbitrary data, but in some contexts where we have content-specific knowledge of the data format and its properties, it's often possible to significantly reduce the size of the payload without affecting its actual meaning.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Consider the simple HTML page above and the three different content types that it contains: HTML markup, CSS styles, and JavaScript. Each of these content types has different rules for what constitutes valid content, different rules for indicating comments, and so on. How can we reduce the size of this page?
@@ -77,7 +77,7 @@ Consider the simple HTML page above and the three different content types that i
 * Whitespace (spaces and tabs) is a developer convenience in HTML, CSS, and JavaScript. An additional compressor could strip out all the tabs and spaces.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 After applying the above steps, the page goes from 406 to 150 characters, a 63% compression savings. Granted, it’s not very readable, but it also doesn’t have to be: you can keep the original page as your "development version" and then apply the steps above whenever you're ready to release the page on your website.

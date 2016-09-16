@@ -30,7 +30,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 让我们从最简单的可能情况开始说：一个普通 HTML 网页，包含一些文字，一张图片。浏览器需要做什么才能处理这个简单页面呢？

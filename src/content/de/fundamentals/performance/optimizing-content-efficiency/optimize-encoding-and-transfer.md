@@ -79,7 +79,7 @@ Betrachten Sie die einfache HTML-Seite oben und ihre drei unterschiedlichen Inha
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Mit der Anwendung der obigen Schritte können wir unsere Seite von 406 auf 150 Zeichen reduzieren - das ist eine Einsparung von 63 %! Zugegeben, man kann den Code nicht gut lesen, aber das ist auch nicht nötig: Wir können die ursprüngliche Seite als `Entwicklungsversion` behalten und immer dann die obigen Schritte anwenden, wenn wir die Seite auf unserer Website freigeben wollen.

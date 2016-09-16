@@ -26,7 +26,7 @@ Antes de o navegador renderizar a página, ele precisa criar as árvores DOM e C
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Comecemos com o caso mais simples possível: uma página HTML sem formatação com texto e uma única imagem. O que o navegador precisa fazer para processar esta simples página?

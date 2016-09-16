@@ -60,7 +60,7 @@ O elemento `<source>` permite especificar múltiplos formatos como opções de s
 Por exemplo:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Ao analisar as tags `<source>`, o navegador usa o atributo `type` opcional para decidir qual arquivo deve ser acessado por download e reproduzido. Se o navegador for compatível com WebM, ele reproduzirá chrome.webm. Caso contrário, ele verificará se é possível reproduzir vídeos em MPEG-4.

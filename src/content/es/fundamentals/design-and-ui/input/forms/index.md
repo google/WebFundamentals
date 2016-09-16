@@ -237,7 +237,7 @@ listas para encontrar el valor que buscan, y deben limitarse solo a esas
 listas, el elemento`datalist` proporciona sugerencias a medida que el usuario escribe.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
 Note: Los valores de <code>datalist</code> se proporcionan como sugerencias, y los usuarios no están limitados a las sugerencias ofrecidas.

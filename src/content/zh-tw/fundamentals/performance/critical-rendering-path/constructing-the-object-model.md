@@ -23,7 +23,7 @@ Warning: A tag here did NOT convert properly, please fix! ''
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 首先，我們從最簡單的情況開始講解：一個純 HTML 網頁，只包含一些文字和一張圖片。瀏覽器需要做什麼才能處理這個簡單的網頁呢？

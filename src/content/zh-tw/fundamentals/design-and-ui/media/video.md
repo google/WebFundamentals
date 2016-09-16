@@ -59,7 +59,7 @@ description: 瞭解如何以最簡便的方式為您的網站新增影片，並�
 舉例來說：
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 在剖析 `<source>` 標記時，瀏覽器會使用可選的 `type` 屬性來判定要下載及播放的檔案。如果瀏覽器支援 WebM，則會播放 chrome.webm。否則，瀏覽器會檢查是否可以播放 MPEG-4 影片。

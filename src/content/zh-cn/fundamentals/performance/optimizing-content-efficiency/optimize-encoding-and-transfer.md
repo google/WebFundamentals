@@ -72,7 +72,7 @@ description: 在我们消除了任何不必要的资源之后，下一步就是�
 压缩冗余或不必要的数据的最佳方式是全部消除它。当然，我们不能只是删除任意数据，但在某些情况下，我们可能会有数据格式及其属性的特定于内容的知识，这时经常有可能显著减小载荷的大小而不影响其实际含义。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minify.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 考虑以上的简单 HTML 网页和它所包含的三种不同的内容类型：HTML 标记、CSS 样式和 JavaScript。其中每种内容类型针对构成有效 HTML 标记、CSS 规则和 JavaScript 内容的元素都有不同的规则，有用于指示注释的不同规则，等等。我们如何可以减小此网页的大小？
@@ -83,7 +83,7 @@ description: 在我们消除了任何不必要的资源之后，下一步就是�
 
 ^
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 在应用上述步骤之后，我们的网页从 406 个字符变为 150 个字符 - 达到 63% 的压缩节省！ 确实，其可读性不是很好，但也并非必须这样：我们可以保留原始网页作为我们的'开发版本'，然后并在我们准备好在我们的网站上发布该网页时再应用上述步骤。

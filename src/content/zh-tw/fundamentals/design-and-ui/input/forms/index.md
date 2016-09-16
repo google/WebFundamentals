@@ -239,7 +239,7 @@ HTML5 導入了數種新輸入類型。 這些新的輸入類型可以提示瀏�
 `datalist` 元素會在使用者輸入時提供提示。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
+{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
 Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
