@@ -1,15 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: JavaScript часто используется для внесения визуальных изменений. Иногда это делается непосредственно путем переработки стилей, в других же случаях визуальные изменения являются результатом определенных вычислений, например поиска или сортировки тех или иных данных. Неправильно выбранные параметры времени и продолжительности выполнения JavaScript часто являются причиной проблем с производительностью, поэтому при любой возможности следует стараться свести влияние этого кода к минимуму
+description: JavaScript often triggers visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that result in visual changes, like searching or sorting data. Badly-timed or long-running JavaScript is a common cause of performance issues. You should look to minimize its impact where you can.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Оптимизация выполнения JavaScript {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
-
 
 JavaScript часто используется для внесения визуальных изменений. Иногда это делается непосредственно путем переработки стилей, в других же случаях визуальные изменения являются результатом определенных вычислений, например поиска или сортировки тех или иных данных. Неправильно выбранные параметры времени и продолжительности выполнения JavaScript часто являются причиной проблем с производительностью, поэтому при любой возможности следует стараться свести влияние этого кода к минимуму
 

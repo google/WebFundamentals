@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ресурс лучше всего оптимизирован, если его вообще не нужно скачивать. Когда вы в последний раз проверяли ваши ресурсы? Вы должны делать это регулярно, чтобы убедиться, что каждый из них необходим в работе сайта.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

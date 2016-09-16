@@ -1,8 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Макет ― это источник, из которого браузеры получают информацию о геометрии элементов: об их размере и расположении на странице. Для каждого элемента будет предоставлена явная или скрытая информация о размере, основанная на использовавшемся CSS, содержимом элемента или о родительском элементе. В браузерах Blink, WebKit и в Internet Explorer этот процесс называется Layout (Перерасчет макета). В браузерах на основе Gecko, например в Firefox, он называется Reflow (Перерасчет дерева отрисовки), но по сути это один и тот же процесс
+description: Layout is where the browser figures out the geometric information for elements: their size and location in the page. Each element will have explicit or implicit sizing information based on the CSS that was used, the contents of the element, or a parent element. The process is called Layout in Chrome.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
