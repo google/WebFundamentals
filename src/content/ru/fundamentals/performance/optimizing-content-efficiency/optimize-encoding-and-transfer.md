@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Удалив все ненужные ресурсы, перейдем к следующем шагу - уменьшению размера оставшихся скачиваемых данных, то есть к сжатию с помощью базовых и специфических алгоритмов GZip.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 

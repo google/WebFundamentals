@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Оптимизация невозможна без анализа данных. С помощью Navigation Timing API вы можете отследить каждый этап визуализации веб-страницы!
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

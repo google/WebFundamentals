@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Когда браузер находит в документе ссылку на CSS-файл, он приостанавливает процесс визуализации и начинает формировать модель CSSOM. Чтобы ускорить процесс, упрощайте CSS и используйте медиазапросы. Также убедитесь, что браузер может быстро скачать CSS-файлы.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -23,19 +22,20 @@ description: Когда браузер находит в документе сс
 - Браузер скачивает все CSS-файлы (как с медиазапросами, так и без них).
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>"Нью-Йорк таймс" с CSS</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="Нью-Йорк таймс с CSS">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>"Нью-Йорк таймс" без CSS</b>
-    <img src="images/nytimes-nocss-device.png" alt="Нью-Йорк таймс без CSS">
-
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/nytimes-css-device.png" alt="Нью-Йорк таймс с CSS">
+    <figcaption>"Нью-Йорк таймс" с CSS</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/nytimes-nocss-device.png" alt="Нью-Йорк таймс без CS">
+    <figcaption>"Нью-Йорк таймс" без CSS</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 {% comment %}
 <table>

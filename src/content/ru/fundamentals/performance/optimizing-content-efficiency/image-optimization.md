@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Изображения - те ресурсы, которые часто занимают много места на странице и весят больше всего. Благодаря их оптимизации мы можем значительно уменьшить количество скачиваемых данных и улучшить работу сайта. Чем больше сжато изображение, тем меньше пропускной способности канала занимает скачивание и тем быстрее браузер сможет показать страницу пользователю.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
@@ -48,17 +47,20 @@ description: Изображения - те ресурсы, которые час
 
 &nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Векторное изображение</b>
-    <img class="center" src="images/vector-zoom.png" alt="Увеличенное векторное изображение">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Растровое изображение</b>
-    <img src="images/raster-zoom.png" alt="Увеличенное растровое изображение">
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/vector-zoom.png" alt="Увеличенное растровое изображение">
+    <figcaption>Векторное изображение</figcaption>
+  </figure>
 </div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/raster-zoom.png" alt="Увеличенное растровое изображение">
+    <figcaption>Растровое изображение</figcaption>
+  </figure>
+</div>
+
+<div style="clear:both;"></div>
 
 * В [векторной графике](http://ru.wikipedia.org/wiki/Векторная_графика) для отображения картинки используются линии, точки и многоугольники.
 * В [растровой графике](http://ru.wikipedia.org/wiki/Растровая_графика) индивидуальные значения каждого пикселя в прямоугольной сетке кодируются, и на их основе показывается изображение.

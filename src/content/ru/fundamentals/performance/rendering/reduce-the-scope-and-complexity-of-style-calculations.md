@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Любые изменения DOM, будь то добавление или удаление элементов, изменение атрибутов, классов или использование средств анимации, ведут к тому, что браузер перерасчитывает стили элементов и во многих случаях макет всей страницы или ее частей. Этот процесс называется вычислением стилей
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -24,7 +23,7 @@ description: Любые изменения DOM, будь то добавлени
 
 <div class="quote" style="margin-top: 30px;">
   <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Приблизительно 50 % времени, которое тратится на вычисление стиля элемента, уходит на сопоставление селекторов, а вторую половину времени занимает построение RenderStyle (представления стиля) на основе сопоставленных правил.
+    <blockquote>Приблизительно 50 % времени, которое тратится на вычисление стиля элемента, уходит на сопоставление селекторов, а вторую половину времени занимает построение RenderStyle (представления стиля) на основе сопоставленных правил.
     <p>Руне Лиллесвеен (Rune Lillesveen), Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Аннулирование стилей в Blink</a></p>
     </blockquote>
   </div>

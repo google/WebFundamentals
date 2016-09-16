@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Перед тем как вывести страницу на экран, браузер создает модели DOM и CSSOM. Поэтому мы должны предоставить браузеру кратчайший путь к HTML и CSS.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Чтобы добиться скорейшей загрузки страницы, необходимо минимизировать число первоочередных ресурсов, число байтов и продолжительность обработки.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

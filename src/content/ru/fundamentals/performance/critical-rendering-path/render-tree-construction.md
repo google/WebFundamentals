@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: DOM и CSSOM образуют модель визуализации. С ее помощью браузер формирует из всех видимых объектов макет, а затем выводит пиксели на экран. Чтобы ускорить загрузку страницы, нужно оптимизировать каждый из этих этапов.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
