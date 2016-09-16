@@ -1,8 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Afbeeldingen nemen vaak het grootste aantal gedownloade bytes op een internetpagina voor hun rekening en nemen daarnaast een aanzienlijke hoeveelheid visuele ruimte in beslag. Door afbeeldingen te optimaliseren, kunt u een grote hoeveelheid bytes besparen en de gebruiksvriendelijkheid van uw website aanzienlijk verbeteren. Hoe minder bytes een browser hoeft te downloaden, des te minder concurrentie is er voor de bandbreedte van de client en des te sneller kan de browser inhoud downloaden en weergeven op het scherm.
+description: Afbeeldingen nemen vaak het grootste aantal gedownloade bytes op een internetpagina voor hun rekening en nemen daarnaast een aanzienlijke hoeveelheid visuele ruimte in beslag. Door afbeeldingen te optimaliseren, kunt u een grote hoeveelheid bytes besparen en de gebruiksvriendelijkheid van uw website aanzienlijk verbeteren. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
@@ -46,24 +45,20 @@ Als u ooit tekst moet coderen voor een afbeeldingitem, is het waarschijnlijk een
 
 Wanneer u de optimale bestandsindeling voor een afbeelding heeft gevonden waarmee het gewenste resultaat wordt bereikt, is de volgende stap om het type afbeelding te selecteren:
 
-&nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Vector</b>
-    <img class="center" src="images/vector-zoom.png" alt="Ingezoomde vectorafbeelding">
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Raster</b>
-    <img src="images/raster-zoom.png" alt="Ingezoomde rasterafbeelding">
-  </div>
-</div>
+<figure class="attempt-left">
+  <img class="center" src="images/vector-zoom.png" alt="Ingezoomde vectorafbeelding">
+  <figcaption>Vector</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/raster-zoom.png" alt="Ingezoomde rasterafbeelding">
+  <figcaption>Raster</figcaption>
+</figure>
 
 * [Vectorafbeeldingen](http://nl.wikipedia.org/wiki/Vectorafbeelding) maken gebruik van lijnen, punten en polygonen om een afbeelding weer te geven.
 * [Rasterafbeeldingen](http://nl.wikipedia.org/wiki/Rasterafbeelding) geven een afbeelding weer door de afzonderlijke waarden van elke pixel in een rechthoekig rooster te coderen.
 
-Beide typen afbeeldingen hebben hun eigen voor- en nadelen. Vectorafbeeldingen zijn ideaal voor de weergave van eenvoudige geometrische vormen (bijv. logo`s, tekst, pictogrammen, enzovoort) en leveren scherpe resultaten op in elke resolutie en zoomfactor. Hierdoor zijn vectorafbeeldingen bij uitstek geschikt voor schermen met hoge resolutie en voor items die in verschillende groottes moeten worden weergegeven.
+Beide typen afbeeldingen hebben hun eigen voor- en nadelen. Vectorafbeeldingen zijn ideaal voor de weergave van eenvoudige geometrische vormen (bijv. logo's, tekst, pictogrammen, enzovoort) en leveren scherpe resultaten op in elke resolutie en zoomfactor. Hierdoor zijn vectorafbeeldingen bij uitstek geschikt voor schermen met hoge resolutie en voor items die in verschillende groottes moeten worden weergegeven.
 
 Vectorafbeeldingen zijn echter niet geschikt voor de weergave van complexe scenes, zoals foto`s. De vereiste hoeveelheid SVG-opmaak voor alle vormen kan enorm zijn, zonder dat dit altijd tot realistische resultaten leidt. Als dit het geval is, kunt u beter kiezen voor een rasterafbeelding, zoals GIF, PNG, JPEG of een van de nieuwere bestandstypen als JPEG-XR en WebP.
 
@@ -151,7 +146,7 @@ In dit geval kan het SVG-bestand uit Illustrator met 58% worden verkleind en wor
 ## TL;DR {: .hide-from-toc }
 - Een rasterafbeelding is een raster met pixels
 - Elke pixel bevat informatie over kleur en transparantie
-- Programma`s voor beeldcompressie gebruiken verscheidene technieken om het aantal benodigde bits per pixel te verlagen en zo de omvang van de afbeelding te verkleinen
+- Programma's voor beeldcompressie gebruiken verscheidene technieken om het aantal benodigde bits per pixel te verlagen en zo de omvang van de afbeelding te verkleinen
 
 
 Een rasterafbeelding is een eenvoudig tweedimensionaal raster met afzonderlijke pixels. Een afbeelding van 100 x 100 pixels bestaat uit 10.000 pixels. In elke pixel zijn de [RGBA](http://en.wikipedia.org/wiki/RGBA_color_space) waarden opgeslagen: (R) rood kanaal, (G) groen kanaal, (B) blauw kanaal en (A) alfa (transparant) kanaal.
@@ -162,7 +157,7 @@ De browser kent aan elk kanaal 256 kleuren (tinten) toe. Dit zijn 8 bits per kan
 * 10.000 pixels x 4 bytes = 40.000 bytes
 * 40.000 bytes / 1024 = 39 KB
 
-^
+
 
 Note: Ongeacht de bestandsindeling van de afbeelding die van de server naar de client wordt gedownload, neemt elke pixel tijdens decodering door de browser altijd 4 bytes aan geheugen in beslag. Dit kan een belangrijke beperking zijn voor grote afbeeldingen of voor apparaten die niet veel geheugen hebben, bijv. eenvoudige mobiele telefoons.
 
@@ -219,7 +214,7 @@ We hoeven niet per se naar de directe buren van elke pixel te kijken, maar kunne
 
 Zoals u zich kunt voorstellen, kan beeldoptimalisatie al snel ingewikkeld worden (of interessant, hoe u het bekijkt). Dit is dan ook een actief onderwerp voor wetenschappelijk en commercieel onderzoek. Afbeeldingen nemen een hoop bytes in beslag en het is daarom belangrijk om betere beeldcompressietechnieken te ontwikkelen. Ga voor meer informatie naar de [Wikipedia-pagina](http://nl.wikipedia.org/wiki/Beeldcompressie), of lees het [WebP witboek over compressietechnieken](https://developers.google.com/speed/webp/docs/compression) voor een praktijkvoorbeeld.
 
-Dit is allemaal erg interessant, maar ook vrij wetenschappelijk: hoe kunnen we in de praktijk afbeeldingen op onze pagina`s optimaliseren? We zullen geen nieuwe compressietechnieken ontwikkelen, maar het is nuttig om te weten uit welke aspecten het probleem bestaat: RGBA-pixels, bitdiepte en verschillende optimalisatietechnieken. Dit zijn essentiële concepten die we moeten begrijpen en in gedachten moeten houden voordat we het gaan hebben over verschillende typen rasterafbeeldingen.
+Dit is allemaal erg interessant, maar ook vrij wetenschappelijk: hoe kunnen we in de praktijk afbeeldingen op onze pagina's optimaliseren? We zullen geen nieuwe compressietechnieken ontwikkelen, maar het is nuttig om te weten uit welke aspecten het probleem bestaat: RGBA-pixels, bitdiepte en verschillende optimalisatietechnieken. Dit zijn essentiële concepten die we moeten begrijpen en in gedachten moeten houden voordat we het gaan hebben over verschillende typen rasterafbeeldingen.
 
 
 ## Compressie met en zonder verlies
@@ -320,7 +315,7 @@ Wanneer u de optimale bestandsindeling voor elk van uw items heeft bepaald, kunt
 
 Aangezien WebP en JPEG XR niet algemeen worden ondersteund, moet u extra logaritmen aan uw applicatie of server toevoegen om afbeeldingen in deze indelingen aan te bieden:
 
-* Sommige CDN`s bieden beeldoptimalisatie aan, onder andere voor JPEG XR en WebP.
+* Sommige CDN's bieden beeldoptimalisatie aan, onder andere voor JPEG XR en WebP.
 * Sommige open source tools (bijv. PageSpeed voor Apache of Nginx) automatiseren de optimalisatie, conversie en levering van items.
 * U kunt extra logaritmen aan de applicatie toevoegen om de client te ontdekken, te controleren welke indelingen worden ondersteund en het best beschikbare afbeeldingitem te leveren.
 
@@ -364,14 +359,11 @@ Experimenteer naar wens met de parameters van elke compressor. Verlaag de kwalit
 
 ## Geschaalde afbeeldingitems leveren
 
-## TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
 
 
 Beeldoptimalisatie komt neer op twee criteria: het aantal bytes optimaliseren dat wordt gebruikt om elke pixel te coderen, en het totale aantal pixels optimaliseren. De bestandsgrootte van de afbeelding is het totale aantal pixels vermenigvuldigd met het aantal bytes dat gebruikt wordt om elk pixel te coderen. Niet meer en niets minder.
 
-Een van de eenvoudigste en meest effectieve optimalisatietechnieken is daarom ervoor te zorgen dat we niet meer pixels aanbieden dan nodig zijn om het item op de bedoelde grootte in de browser weer te geven. Klinkt simpel, toch? Veel afbeeldingen op de meeste pagina`s slagen niet voor deze test. Vaak worden grotere items aangeboden en wordt ervan uitgegaan dat de browser deze wel zal verkleinen en op een lagere resolutie zal weergeven, wat extra CPU-gebruik vergt.
+Een van de eenvoudigste en meest effectieve optimalisatietechnieken is daarom ervoor te zorgen dat we niet meer pixels aanbieden dan nodig zijn om het item op de bedoelde grootte in de browser weer te geven. Klinkt simpel, toch? Veel afbeeldingen op de meeste pagina's slagen niet voor deze test. Vaak worden grotere items aangeboden en wordt ervan uitgegaan dat de browser deze wel zal verkleinen en op een lagere resolutie zal weergeven, wat extra CPU-gebruik vergt.
 
 <img src="images/resized-image.png" class="center" alt="Verkleinde afbeelding">
 

@@ -2,15 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: De hoeveelheid gegevens die door elke app wordt gedownload, blijft gestaag toenemen. Om geweldige inhoud te kunnen blijven leveren, moeten we elke byte optimaliseren.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Inhoudsefficiëntie optimaliseren {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
 
 Onze internetapplicaties krijgen een steeds groter bereik, grotere ambitie en meer functies, en dat is goed. Met een steeds rijker internet ontstaat echter ook een andere trend: de hoeveelheid gegevens die door elke app wordt gedownload, wordt almaar groter. Om geweldige inhoud te kunnen blijven leveren, moeten we elke byte optimaliseren.
 

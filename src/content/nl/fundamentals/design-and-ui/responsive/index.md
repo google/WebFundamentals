@@ -2,25 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Veel websites zijn niet geoptimaliseerd voor ervaringen op meerdere apparaten. Ontdek de basisbeginselen zodat uw website werkt op mobiele apparaten, desktops of iets anders met een scherm.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Basisbeginselen voor responsive webdesign {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Het gebruik van mobiele apparaten om op internet te browsen neemt enorm snel toe. Veel websites zijn echter nog niet geoptimaliseerd voor die mobiele apparaten. Mobiele apparaten zijn vaak beperkt door de grootte van het scherm en vereisen een andere aanpak voor de manier waarop de inhoud op het scherm wordt weergegeven.
-
-
-{% comment %}
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="oK09n_PGhTo"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-{% endcomment %}
 
 
 ## Responsive Web Design Fundamentals
@@ -34,6 +24,7 @@ Explore what makes a site responsive and how some common responsive design patte
 
 [View Course](https://udacity.com/ud893){: .external }
 
+<div class="clearfix"></div>
 
 
 
@@ -72,21 +63,10 @@ In een poging om de beste ervaring te leveren geven mobiele browsers de pagina w
 
 Door het gebruik van de metawaarde voor viewport `width=device-width` krijgt de pagina de instructie om de breedte van het scherm af te stemmen in apparaatonafhankelijke pixels. Hierdoor kan de pagina de inhoud dynamisch aanpassen zodat deze in verschillende schermformaten past, zowel op een kleine mobiele telefoon als op een groot desktopscherm.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Pagina waarvoor geen viewport is ingesteld">
-      Voorbeeld bekijken
-    
-  </div>
+<img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Pagina waarvoor geen viewport is ingesteld">
+<img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Pagina waarvoor een viewport is ingesteld">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Pagina waarvoor een viewport is ingesteld">
-      Voorbeeld bekijken
-    
-  </div>
-</div>
 
 Wanneer naar de liggende modus wordt geschakeld, behouden sommige browsers de breedte van de pagina en zoomen ze in op de inhoud in plaats van deze dynamisch aan te passen om het scherm te vullen. Het kenmerk `initial-scale=1` geeft browsers de instructie om een 1:1-verhouding in te stellen tussen CSS-pixels en apparaatonafhankelijke pixels, ongeacht de apparaatoriëntatie. De pagina kan dan optimaal gebruikmaken van de volledige liggende breedte.
 
@@ -120,21 +100,10 @@ Omdat de afmetingen en breedte van het scherm in CSS-pixels sterk variëren per 
 
 Als u voor pagina-elementen grote absolute CSS-breedtes instelt (zoals het onderstaande voorbeeld), zal de `div` te breed zijn voor de viewport op een smaller scherm (bijv. een apparaat met een breedte van 320 CSS-pixels, zoals een iPhone). U kunt relatieve breedtewaarden gebruiken, zoals `width: 100%`.  Wees voorzichtig bij het gebruik van grote absolute positiewaarden die ervoor kunnen zorgen dat het element op kleine schermen buiten de viewport valt.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Pagina met een element met vaste breedte van 344 pixels op een iPhone.">
-      Voorbeeld bekijken
-    
-  </div>
+<img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Pagina met een element met vaste breedte van 344 pixels op een iPhone." class="attempt-left">
+<img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Pagina met een element met vaste breedte van 344 pixels op een Nexus 5." class="attempt-right">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Pagina met een element met vaste breedte van 344 pixels op een Nexus 5.">
-      Voorbeeld bekijken
-    
-  </div>
-</div>
 
 
 ## CSS-mediaquery's gebruiken voor responsiveness 
@@ -220,13 +189,11 @@ Er zijn verschillende items waarvoor een query kan worden uitgevoerd, maar de me
 Een voorbeeld:
 
 <figure>
-  
-    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Met behulp van mediaquery's een voorbeeld bekijken van een pagina om eigenschappen te kunnen wijzigen tijdens het aanpassen van de grootte.">
-  
+  <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Met behulp van mediaquery's een voorbeeld bekijken van een pagina om eigenschappen te kunnen wijzigen tijdens het aanpassen van de grootte.">
 </figure>
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
 * Als de browser tussen <b>0px</b> en <b>640px</b> breed is, wordt `max-640px.css` toegepast.
@@ -289,31 +256,25 @@ Laten we eens kijken naar het voorbeeld dat we in het begin hebben gezien, de [w
 In de eerste stap moeten we ervoor zorgen dat de weersvoorspelling er goed uitzien op een klein scherm.
 
 <figure>
-  
-    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Voorbeeld van de weersvoorspelling op een klein scherm.">
-  
+  <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Voorbeeld van de weersvoorspelling op een klein scherm.">
 </figure>
 
 Pas vervolgens de grootte van de browser aan tot er te veel witruimte is tussen de elementen en de weersvoorspelling er gewoon niet meer goed uitziet. Deze beslissing is enigszins subjectief, maar vanaf 600 pixels is echt te breed.
 
 <figure>
-  
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Voorbeeld van de weersvoorspelling terwijl de pagina breder wordt.">
-  
+  <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Voorbeeld van de weersvoorspelling terwijl de pagina breder wordt.">
 </figure>
 
 Als u op 600 pixels een breekpunt wilt invoegen, maakt u twee nieuwe stylesheets, één om te gebruiken wanneer de browser 600 pixels en kleiner is, en één wanneer de browser breder is dan 600 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-2.html" region_tag="mqweather2" adjust_indentation="auto" %}
 </pre>
 
 Ten slotte moet u de CSS herstructureren. In dit voorbeeld hebben we de meest gebruikte stijlen, zoals lettertypen, pictogrammen, basisplaatsing, kleuren in `weather.css` geplaatst. Specifieke lay-outs voor het kleine scherm worden dan in `weather-small.css` geplaatst en stijlen voor grote schermen worden in `weather-large.css` geplaatst.
 
 <figure>
-  
-    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
-  
+  <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
 </figure>
 
 ### Kies zo nodig voor kleinere breekpunten
@@ -323,18 +284,13 @@ Wanneer de lay-out aanzienlijk verandert, kunt u voor grote breekpunten kiezen. 
 Laten we beginnen met het optimaliseren van de lay-out voor het kleine scherm. In dit geval kunnen we het lettertype versterken wanneer de viewport breder is dan 360 pixels. Wanneer er genoeg ruimte is, kunnen we daarna de hoge en lage temperatuur van elkaar scheiden zodat ze zich op dezelfde regel bevinden, in plaats van boven elkaar. Bovendien kunnen we de weerspictogrammen een beetje groter maken.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm" adjust_indentation="auto" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
+<img src="imgs/weather-4-l.png" srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints." class="attempt-left">
+<img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints." class="attempt-right">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
-</div>
 
 Voor de grote schermen beperkt u de maximale breedte van het paneel met de voorspelling zodat dit niet de hele breedte van het scherm inneemt.
 
@@ -346,20 +302,14 @@ Voor de grote schermen beperkt u de maximale breedte van het paneel met de voors
 
 Volgens de klassieke theorie over leesbaarheid moet een ideale kolom 70 tot 80 tekens per regel bevatten (ongeveer 8 tot 10 woorden in het Engels). Telkens wanneer de breedte van een tekstvak langer wordt dan 10 woorden, is een breekpunt raadzaam.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Voordat u kleine breekpunten toevoegt.">
-  </div>
+<img src="imgs/reading-ph.png" srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Voordat u kleine breekpunten toevoegt." class="attempt-left">
+<img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Nadat u kleine breekpunten heeft toegevoegd." class="attempt-right">
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Nadat u kleine breekpunten heeft toegevoegd.">
-  </div>
-</div>
 
 Laten we het bovenstaande blogbericht nader bekijken. Op kleinere schermen werkt het lettertype Roboto perfect: we zien 10 woorden per regel. Op grotere schermen is er echter een breekpunt nodig. Als de browser breder is dan 575 pixels, is de ideale breedte voor de inhoud 550 pixels.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"  adjust_indentation="auto" %}
 </pre>
 
 ### Verberg inhoud nooit helemaal

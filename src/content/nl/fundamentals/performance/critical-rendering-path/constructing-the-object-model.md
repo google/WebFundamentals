@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Voordat de inhoud op het scherm kan worden weergegeven, moet de browser de DOM- en CSSOM-boomstructuren opbouwen. Daarom moeten we ervoor zorgen dat zowel de HTML als het CSS zo snel mogelijk aan de browser worden geleverd.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -17,7 +17,7 @@ Voordat de inhoud op het scherm kan worden weergegeven, moet de browser de DOM- 
 
 ## TL;DR {: .hide-from-toc }
 - Bytes → tekens → tokens → nodes → objectmodel.
-- 'HTML-opmaak wordt verwerkt in een Documentobjectmodel (DOM), CSS-opmaak wordt verwerkt in een CSS-objectmodel (CSSOM).'
+- HTML-opmaak wordt verwerkt in een Documentobjectmodel (DOM), CSS-opmaak wordt verwerkt in een CSS-objectmodel (CSSOM).
 - DOM en CSSOM zijn onafhankelijke gegevensstructuren.
 - De Timeline (Tijdlijn) in Chrome DevTools biedt ons de mogelijkheid om de opbouw en verwerking van het DOM en CCSOM vast te leggen en te controleren.
 
@@ -26,7 +26,7 @@ Voordat de inhoud op het scherm kan worden weergegeven, moet de browser de DOM- 
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 Laten we beginnen met het meest eenvoudige geval: een platte HTML-pagina met een beetje tekst en één afbeelding. Wat heeft de browser nodig om deze eenvoudige pagina te verwerken?
@@ -57,7 +57,7 @@ Hebben we genoeg informatie om de pagina op het scherm weer te geven wanneer de 
 Terwijl de browser de DOM-boomstructuur van onze eenvoudige pagina heeft opgebouwd, kwam deze een linktag in het hoofdgedeelte van het document tegen, die verwees naar een extern CSS-stijlblad: style.css. De browser ging ervan uit dat deze bron nodig was om de pagina weer te geven en heeft daarom gelijk een aanvraag voor dit document uitgezonden. Deze aanvraag kwam met de volgende inhoud terug:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/style.css" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 We hadden onze stijlen direct in de HTML-opmaak (inline) kunnen opgeven, maar door het CSS onafhankelijk van de HTML te houden, kunnen we de inhoud en het ontwerp als afzonderlijke taken behandelen: ontwerpers kunnen werken aan het CSS en ontwikkelaars kunnen zich richten op de HTML.

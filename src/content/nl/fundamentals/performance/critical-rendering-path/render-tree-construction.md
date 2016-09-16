@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: De CSSOM- en DOM-boomstructuren worden gecombineerd in een weergaveboomstructuur. Deze nieuwe structuur wordt vervolgens gebruikt om de opmaak van elk zichtbaar element te berekenen en biedt invoer voor het kleurproces waarbij pixels op het scherm worden weergegeven. Het is cruciaal om elk van deze stappen te optimaliseren voor een optimale weergaveprestatie.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -44,7 +43,7 @@ Tot nu toe hebben we berekend welke nodes en de bijbehorende berekende stijlen z
 De browser begint aan de root van de weergaveboomstructuur en loopt de hele structuur af om de geometrie van elk object op de pagina te berekenen om de precieze grootte en positie ervan uit te zoeken. Laten we een eenvoudig praktijkvoorbeeld bekijken:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/nested.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 De body van de pagina hierboven bevat twee geneste div-elementen: de eerste (ouder-)div stelt de weergavegrootte van de node in op 50% van de viewportbreedte en de tweede div die door de ouder wordt omvat, stelt de breedte in op 50% van de breedte van de ouder, dat wil zeggen 25% van de viewportbreedte.

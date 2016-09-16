@@ -2,15 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Er moeten drie variabelen worden geoptimaliseerd om de snelste initiële weergavetijd te leveren: minimaliseer het aantal kritieke bronnen, minimaliseer het aantal kritieke bytes en minimaliseer het kritieke weergavepad.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 
 # Het kritieke weergavepad optimaliseren {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
-
-
 
 Er moeten drie variabelen worden geoptimaliseerd om de snelste initiële weergavetijd te leveren:
 

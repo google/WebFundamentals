@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Iets via het netwerk ophalen kost tijd en geld: zoekopdrachten met veel resultaten leveren veel verkeer op tussen client en server, wat vertragingen kan veroorzaken tijdens verwerking in de browser en tevens tot datakosten kan leiden voor gebruikers. Om dit proces te optimaliseren, is het essentieel dat eerder opgehaalde hulpbronnen in het cachegeheugen worden opgeslagen en opnieuw worden gebruikt.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 

@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Als het niet meetbaar is, kan het ook niet geoptimaliseerd worden. Gelukkig geeft de Navigation Timing API ons alle nodige hulpmiddelen om elke stap van het kritieke weergavepad te meten.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -15,7 +14,7 @@ Als het niet meetbaar is, kan het ook niet geoptimaliseerd worden. Gelukkig geef
 
 
 ## TL;DR {: .hide-from-toc }
-- 'Navigation Timing biedt gedetailleerde tijdstempels voor het meten van het CRP (Critical Rendering Pad, kritieke weergavepad).'
+- Navigation Timing biedt gedetailleerde tijdstempels voor het meten van het CRP (Critical Rendering Pad, kritieke weergavepad).
 - De browser zendt een aantal bruikbare gebeurtenissen uit waarin de verschillende fasen van het CRP worden vastgelegd.
 
 
@@ -42,7 +41,7 @@ De HTML-specificatie geeft bepaalde voorwaarden voor elke gebeurtenis: wanneer d
     * Als er geen parserblokkerend JavaScript bestaat, wordt _DOMContentLoaded_ direct na _domInteractive_ gelanceerd.
 * **domComplete** markeert wanneer de pagina, inclusief alle subbronnen, klaar is.
 
-^
+
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp.html" region_tag="full"   adjust_indentation="auto" %}

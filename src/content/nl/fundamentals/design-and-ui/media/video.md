@@ -2,17 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Lees wat de eenvoudigste manieren zijn om video toe te toevoegen aan uw website en gebruikers op alle apparaten de meest optimale ervaring te bieden.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Video {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-Gebruikers houden van video's; ze kunnen leuk en informatief zijn. Op mobiele apparaten kunt u informatie soms gemakkelijker tot u nemen door middel van een video. Video's verbruiken echter wel bandbreedte en werken niet altijd op alle platforms hetzelfde. Gebruikers haken af als ze moeten wachten tot een video is geladen of er niets gebeurt als ze op 'afspelen' drukken.  Lees meer informatie over de eenvoudigste manieren om video toe te voegen aan uw website en gebruikers op alle apparaten de meest optimale ervaring te bieden.
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"
@@ -20,9 +15,12 @@ Gebruikers houden van video's; ze kunnen leuk en informatief zijn. Op mobiele ap
   </iframe>
 </div>
 
+Gebruikers houden van video's; ze kunnen leuk en informatief zijn. Op mobiele apparaten kunt u informatie soms gemakkelijker tot u nemen door middel van een video. Video's verbruiken echter wel bandbreedte en werken niet altijd op alle platforms hetzelfde. Gebruikers haken af als ze moeten wachten tot een video is geladen of er niets gebeurt als ze op 'afspelen' drukken.  Lees meer informatie over de eenvoudigste manieren om video toe te voegen aan uw website en gebruikers op alle apparaten de meest optimale ervaring te bieden.
+
+<div class="clearfix"></div>
+
+
 ## Een video toevoegen 
-
-
 
 
 Bekijk informatie over hoe u video aan uw site toevoegt en ervoor zorgt dat gebruikers op elk apparaat een optimale ervaring hebben.
@@ -59,7 +57,7 @@ Met het element `<source>` kunt u meerdere formaten opgeven als oplossing voor h
 Bijvoorbeeld:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
 Als de browser de `<source>` tags parseert, wordt via het optionele kenmerk `type` bepaald welk bestand moet worden gedownload en afgespeeld. Als de browser WebM ondersteunt, wordt chrome.webm afgespeeld. In het andere geval wordt er gecontroleerd of MPEG-4-video`s kunnen worden afgespeeld.
@@ -96,13 +94,12 @@ Als u een mediafragment wilt toevoegen, hoeft u slechts `#t=[start_time][,end_ti
 
 U kunt de Media Fragments API ook gebruiken voor het leveren van meerdere weergaven op dezelfde video &ndash; zoals cue points in een dvd &ndash; zonder meerdere bestanden te hoeven coderen en uitvoeren.
 
-Note: - 'De Media Fragments API wordt door de meeste platforms ondersteund, maar niet door iOS.'
-- 'Controleer of bereikaanvragen door uw server worden ondersteund. Bereikaanvragen worden op de meeste servers standaard ingeschakeld, maar ze kunnen door bepaalde hostingservices worden uitgeschakeld.'
+Note: - De Media Fragments API wordt door de meeste platforms ondersteund, maar niet door iOS. Controleer of bereikaanvragen door uw server worden ondersteund. Bereikaanvragen worden op de meeste servers standaard ingeschakeld, maar ze kunnen door bepaalde hostingservices worden uitgeschakeld.
 
 
 Controleer met uw browser-developertools `Accept-Ranges: bytes` in de reactieheaders:
 
-<img class="center" alt="Screenshot Chrome Dev Tools: Accept-Ranges: bytes" src="images/Accept-Ranges-Chrome-Dev-Tools.png">
+<img class="center" alt="Screenshot Chrome Dev Tools: Accept-Ranges: bytes" src="img/Accept-Ranges-Chrome-Dev-Tools.png">
 
 ### Een posterafbeelding toevoegen
 
@@ -118,15 +115,10 @@ Een poster kan ook een noodoplossing zijn als de video `src` defect is of als ge
 
 Hier volgt een vergelijking van video`s zonder en met een posterafbeelding &ndash; we geven de posterafbeelding in grijstinten weer om aan te geven dat het hier niet om de video gaat:
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Screenshot Android Chrome, staand: zonder poster" src="images/Chrome-Android-video-no-poster.png">
-  </div>
+<img class="center" alt="Screenshot Android Chrome, staand: zonder poster" src="img/Chrome-Android-video-no-poster.png" class="attempt-left">
+<img class="center" alt="Screenshot Android Chrome, staand: met poster" src="img/Chrome-Android-video-poster.png" class="attempt-right">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Screenshot Android Chrome, staand: met poster" src="images/Chrome-Android-video-poster.png">
-  </div>
-</div>
 
 
 ## Alternatieven voor verouderde platforms 
@@ -233,11 +225,6 @@ Bekijk <a href="https://googlesamples.github.io/web-fundamentals/samples/../fund
 Als u uw gebruikers tevreden wilt houden, is het formaat zeker belangrijk.
 
 
-### TL;DR {: .hide-from-toc }
-{# wf_TODO #}
-Warning: A tag here did NOT convert properly, please fix! ''
-
-
 
 ### Videoformaat controleren
 
@@ -250,31 +237,32 @@ Met de eigenschappen `videoWidth` en `videoHeight` van het video-element kunt u 
 Als een video-element te groot is voor de viewport, kan de videocontainer te vol raken. Hierdoor kan de gebruiker de inhoud niet meer bekijken of de bedieningselementen
 niet meer gebruiken.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome-screenshot, staand: viewport raakt te vol door unstyled video-element" src="images/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Android Chrome-screenshot, liggend: viewport raakt te vol door unstyled video-element" src="images/Chrome-Android-landscape-video-unstyled.png">
-</div>
+
+<img class="attempt-left" alt="Android Chrome-screenshot, staand: viewport raakt te vol door unstyled video-element" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Android Chrome-screenshot, liggend: viewport raakt te vol door unstyled video-element" src="img/Chrome-Android-landscape-video-unstyled.png">
+<div class="clearfix"></div>
+
 
 U kunt de afmetingen van uw video regelen met JavaScript of CSS. Met behulp van JavaScript-bibliotheken en plugins zoals [FitVids](//fitvidsjs.com/) kunt u de juiste beeldverhouding behouden, zelf voor Flash-video`s van YouTube of andere bronnen.
 
-Gebruik [CSS-mediaquery`s](../../layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness) om het formaat van elementen op te geven afhankelijk van de afmetingen van de viewport; `max-width: 100%` is uw vriend.
+Gebruik [CSS-mediaquery's](/web/fundamentals/design-and-ui/responsive/#use-css-media-queries-for-responsiveness) om het formaat van elementen op te geven afhankelijk van de afmetingen van de viewport; `max-width: 100%` is uw vriend.
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.media #}
 
-Probeer voor media-inhoud in iframes (zoals YouTube-video`s) een responsieve aanpak te hanteren (zoals de aanpak [van John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
+Probeer voor media-inhoud in iframes (zoals YouTube-video's) een responsieve aanpak te hanteren (zoals de aanpak [van John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
 
 Note: Forceer het aanpassen van de grootte van het element niet als dit resulteert in een beeldverhouding die afwijkt van de oorspronkelijke video. Samengeperste of uitgerekte beelden zien er slecht uit.
 
 **CSS:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="styling" adjust_indentation="auto" %}
 </pre>
 
 **HTML:**
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
 Vergelijk het <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">responsieve voorbeeld</a> met de <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">niet-responsieve versie</a>.
@@ -297,16 +285,16 @@ Apparaatoriëntatie is niet van toepassing voor desktopmonitors of laptops, maar
 
 Safari op iPhone kan uitstekend schakelen tussen de staande en liggende oriëntatie:
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Screenshot van video die wordt afgespeeld in Safari op de iPhone, in staande modus" src="images/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="" src="images/iPhone-video-playing-landscape.png">Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus
-</div>
+<img class="attempt-left" alt="Screenshot van video die wordt afgespeeld in Safari op de iPhone, in staande modus" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="" src="img/iPhone-video-playing-landscape.png">Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus
+<div class="clearfix"></div>
+
 
 De apparaatoriëntatie op een iPad en bij Chrome op Android kan lastig zijn.
 Zonder aanpassingen ziet bijvoorbeeld een video die op een iPad in liggende modus wordt afgespeeld er zo uit:
 
 <img class="center" alt="Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus"
-src="images/iPad-Retina-landscape-video-playing.png">
+src="img/iPad-Retina-landscape-video-playing.png">
 
 Door in CSS `width: 100%` of `max-width: 100%` voor een video in te stellen, kunnen veel lay-outproblemen met apparaatoriëntatie worden opgelost. U kunt ook beeldvullende alternatieven overwegen.
 
@@ -314,15 +302,15 @@ Door in CSS `width: 100%` of `max-width: 100%` voor een video in te stellen, kun
 
 Video wordt op elk platform anders weergegeven. Safari op de iPhone geeft een video-element inline weer op een webpagina, maar speelt video af in beeldvullende modus:
 
-<img class="center" alt="Screenshot of video-element op de iPhone, staande modus" src="images/iPhone-video-with-poster.png">
+<img class="center" alt="Screenshot of video-element op de iPhone, staande modus" src="img/iPhone-video-with-poster.png">
 
 Op Android kunnen gebruikers de beeldvullende modus opvragen door op het pictogram beeldvullend te klikken. Maar normaal gesproken wordt de video inline afgespeeld:
 
-<img class="center" alt="Screenshot van video die in Chrome op Android wordt afgespeeld, in staande modus" src="images/Chrome-Android-video-playing-portrait-3x5.png">
+<img class="center" alt="Screenshot van video die in Chrome op Android wordt afgespeeld, in staande modus" src="img/Chrome-Android-video-playing-portrait-3x5.png">
 
 Bij Safari op een iPad wordt video inline afgespeeld:
 
-<img class="center" alt="Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus" src="images/iPad-Retina-landscape-video-playing.png">
+<img class="center" alt="Screenshot van video die wordt afgespeeld in Safari op de iPad Retina, in liggende modus" src="img/iPad-Retina-landscape-video-playing.png">
 
 ### Beeldvullende weergave van inhoud instellen
 
@@ -360,8 +348,7 @@ Op apparaten die de Fullscreen API ondersteunen, kunt u miniatuurafbeeldingen ge
 
 Bekijk de demo <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html"></a> om te zien hoe dit in het echt werkt.
 
-Note: `requestFullScreen()` is currently vendor prefixed and may require
-extra code for full cross browser compatibility.
+Note: `requestFullScreen()` is currently vendor prefixed and may require extra code for full cross browser compatibility.
 
 
 ## Toegankelijkheid is belangrijk 
@@ -382,7 +369,7 @@ Note: Het track-element wordt ondersteund door Chrome voor Android, iOS Safari e
 
 Als u het track-element gebruikt, worden ondertitels als volgt weergegeven:
 
- <img class="center" alt="Screenshot toont ondertitels die worden weergegeven via het track-element in Chrome op Android" src="images/Chrome-Android-track-landscape-5x3.jpg">
+ <img class="center" alt="Screenshot toont ondertitels die worden weergegeven via het track-element in Chrome op Android" src="img/Chrome-Android-track-landscape-5x3.jpg">
 
 ### Track-element toevoegen
 

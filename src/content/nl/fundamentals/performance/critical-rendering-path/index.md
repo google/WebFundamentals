@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Het kritieke weergavepad optimaliseren door de weergave prioriteit te geven voor die inhoud die verband houdt met de primaire actie die een gebruiker op de pagina wil uitvoeren.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

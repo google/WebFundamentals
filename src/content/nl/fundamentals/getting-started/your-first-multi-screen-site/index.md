@@ -2,15 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Internet is toegankelijk op tal van apparaten, van telefoons met kleine schermen tot televisies met grote schermen. Ontdek hoe u een website maakt die op al deze apparaten goed werkt.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
 # Uw eerste website voor meerdere apparaten {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
-
-
 
 Het bouwen van websites voor meerdere apparaten is niet zo moeilijk als het lijkt. Met behulp van deze gids bouwen we een voorbeeld van een landingspagina voor een product voor onze cursus <a href='https://www.udacity.com/course/cs256'>CS256 Mobile Web Development</a> die goed werkt op alle verschillende apparaten.
 
@@ -51,15 +48,15 @@ We hebben bepaald dat we het volgende nodig hebben:
 
 We hebben ook een architectuur van onbewerkte informatie en lay-out verkregen voor zowel de smalle als brede viewports.
 
-<div class="demo clear" style="background-color: white;">
-  <img class="mdl-cell mdl-cell--6--col" src="images/narrowviewport.png" alt="Smalle viewport IA">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/wideviewport.png" alt="Brede viewport IA">
-</div>
+<img class="attempt-left" src="images/narrowviewport.png" alt="Smalle viewport IA">
+<img  class="attempt-right" src="images/wideviewport.png" alt="Brede viewport IA">
+<div class="clearfix"></div>
+
 
 U kunt dit gemakkelijk converteren naar de onbewerkte gedeelten van een geraamtepagina die we voor de rest van het project zullen gebruiken.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addstructure.html" region_tag="structure" adjust_indentation="auto" %}
 </pre>
 
 ### Inhoud aan de pagina toevoegen
@@ -75,7 +72,7 @@ De kop en het aanmeldingsformulier vormen de essentiële onderdelen van onze pag
 Voeg aan de kop eenvoudige tekst toe om de cursus te beschrijven:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addheadline.html" region_tag="headline" adjust_indentation="auto" %}
 </pre>
 
 We moeten ook het formulier invullen.
@@ -86,7 +83,7 @@ Alle formulieren moeten labels en placeholders bevatten zodat gebruikers zich ge
 We voegen semantische typen toe zodat gebruikers snel en eenvoudig inhoud kunnen invoeren op een mobiel apparaat. Wanneer de gebruiker bijvoorbeeld een telefoonnummer invoert, wordt alleen een toetsenblok weergegeven.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addform.html" region_tag="form" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.create-amazing-forms #}
@@ -97,7 +94,7 @@ Het gedeelte Video en informatie van inhoud is meer uitgebreid.
 Het bevat een lijst met opsommingstekens van kenmerken van onze producten en ook een placeholder voor video die weergeeft hoe ons product voor de gebruiker werkt.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section1" adjust_indentation="auto" %}
 </pre>
 
 Video`s worden vaak gebruikt om inhoud op een interactievere manier te beschrijven en om een product of een concept te demonstreren.
@@ -110,7 +107,7 @@ Door de best practices te volgen kunt u video gemakkelijk in uw website integrer
 *  Voeg `fall-back`-tekst toe zodat gebruikers de video kunnen downloaden als ze deze niet in het venster kunnen afspelen.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addvideo.html" region_tag="video" adjust_indentation="auto" %}
 </pre>
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.video #}
@@ -127,7 +124,7 @@ Het gedeelte Afbeeldingen in onze pagina is een verzameling van inhoudsafbeeldin
 Inhoudsafbeeldingen zijn heel belangrijk om de betekenis van de pagina weer te geven. Vergelijk ze met de afbeeldingen die in krantenartikelen worden gebruikt. De afbeeldingen die we gebruiken zijn foto`s van de lesgevers van het project: Chris Wilson, Peter Lubbers en Sean Bennet.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addimages.html" region_tag="images" adjust_indentation="auto" %}
 </pre>
 
 De afbeeldingen zijn ingesteld om aan te passen naar 100% van de breedte van het scherm. Dit werkt goed op apparaten met een smalle viewport, maar minder goed op apparaten met een brede viewport (bijvoorbeeld een desktop). We bespreken dit in het gedeelte over responsive design.
@@ -145,7 +142,7 @@ Het laatste gedeelte is een eenvoudige tabel die wordt gebruikt om specifieke st
 Tabellen mogen alleen worden gebruikt voor tabelgegevens, bijvoorbeeld matrices van informatie.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="section3" adjust_indentation="auto" %}
 </pre>
 
 #### Een voettekst toevoegen
@@ -155,17 +152,17 @@ De meeste websites hebben een voettekst nodig voor inhoud zoals Algemene voorwaa
 Op onze website maken we gewoon een koppeling naar Algemene voorwaarden, een pagina Contact en onze sociale mediaprofielen.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/addcontent.html" region_tag="footer" adjust_indentation="auto" %}
 </pre>
 
 ### Samenvatting
 
 We hebben overzicht van de website gemaakt en we hebben alle belangrijke structurele elementen bepaald. We hebben er ook voor gezorgd dat alle relevante inhoud klaar is en op de juiste plaats staat om aan onze zakelijke behoeften te voldoen.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" src="images/content.png" alt="inhoud">
-  <img  class="mdl-cell mdl-cell--6--col" src="images/narrowsite.png" alt="">
-</div>
+<img class="attempt-left" src="images/content.png" alt="inhoud">
+<img  class="attempt-right" src="images/narrowsite.png" alt="">
+<div class="clearfix"></div>
+
 
 Het is u misschien opgevallen dat de pagina helemaal niet mooi is. Dat is de bedoeling. 
 Inhoud is het belangrijkste aspect van een website en we moesten ervoor zorgen dat we een goede solide informatiearchitectuur en -dichtheid hebben. Dankzij deze gids hebben we een uitstekende basis waarop we kunnen bouwen. In de volgende gids zullen we onze inhoud vormgeven.
@@ -185,16 +182,18 @@ Internet is toegankelijk op tal van apparaten, van telefoons met kleine schermen
 We bouwen een website die werkt op verschillende schermformaten en uiteenlopende apparaten. In het [vorige artikel](#) vormden we de informatiearchitectuur van de pagina en maakten we een basisstructuur.
 In deze gids toveren we onze basisstructuur met inhoud om tot een mooie pagina die responsief is op een groot aantal schermformaten.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Inhoud">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Inhoud en structuur </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Uiteindelijke website </a> </figcaption>
-  </figure>
-</div>
+
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="Inhoud">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Inhoud en structuur </a>
+  </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Uiteindelijke website </a> </figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 Volgens de principes van Mobile First-webontwikkeling beginnen we met een smalle viewport (vergelijkbaar met een mobiele telefoon) en bouwen we eerst voor die ervaring.
 Daarna passen we de schaal aan grotere apparaten aan.
@@ -219,7 +218,7 @@ Zonder viewport werkt uw website niet goed op een mobiel apparaat.
 De viewport vertelt de browser dat de pagina moet worden aangepast om in het scherm te passen. Er zijn veel verschillende configuraties voor uw viewport die u kunt gebruiken zodat u de weergave van de pagina kunt beheren. Standaard raden we het volgende aan:
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" %}
+{% includecode content_path="web/fundamentals/getting-started/your-first-multi-screen-site/_code/viewport.html" region_tag="viewport" adjust_indentation="auto" %}
 </pre>
 
 De viewport bevindt zich in de kop van het document en moet slechts eenmaal worden gedeclareerd.
@@ -251,9 +250,9 @@ In de vorige gids voegden we `inhoudsafbeeldingen` toe. Deze afbeeldingen waren 
 
 Een goed voorbeeld hiervan is een kopafbeelding voor de `above the fold`-inhoud. Deze wordt vaak gebruikt om de gebruiker te overhalen om meer over het product te lezen.
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="Ontworpen website">
-</div>
+
+<img  src="images/narrowsite.png" alt="Ontworpen website">
+
 
 Het kan erg eenvoudig zijn om ze in te voegen. In ons voorbeeld wordt deze afbeelding de achtergrond van de kop en passen we deze toe via eenvoudige CSS.
 

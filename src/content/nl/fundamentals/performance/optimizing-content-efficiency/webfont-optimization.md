@@ -1,8 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Typografie is een fundamenteel onderdeel van goed design, merkbekendheid, leesbaarheid en toegankelijkheid. Met weblettertypen kunt u al deze criteria en meer realiseren: de tekst kan worden geselecteerd, er kan in de tekst worden gezocht, de tekst kan worden in- en uitgezoomd en is geschikt voor hoge resoluties waarbij de tekst consistent en scherp wordt weergegeven, ongeacht de schermomvang en -resolutie. Weblettertypen zijn essentieel voor goed design, gebruiksvriendelijkheid en een goed resultaat.
+description: Typografie is een fundamenteel onderdeel van goed design, merkbekendheid, leesbaarheid en toegankelijkheid. Met weblettertypen kunt u al deze criteria en meer realiseren: de tekst kan worden geselecteerd, er kan in de tekst worden gezocht, de tekst kan worden in- en uitgezoomd en is geschikt voor hoge resoluties waarbij de tekst consistent en scherp wordt weergegeven, ongeacht de schermomvang en -resolutie.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
@@ -73,29 +72,29 @@ Met de @font-face CSS-regel kunnen we de locatie van een bepaalde lettertype-hul
 
 Elke @font-face-regel bevat de naam van de lettertypefamilie, die fungeert als logische groep met meerdere regels [eigenschappen van het lettertype](http://www.w3.org/TR/css3-fonts/#font-prop-desc), zoals stijl, gewicht en stretch, en de [src-descriptor](http://www.w3.org/TR/css3-fonts/#src-desc) die een lijst met voorrangslocaties definieert voor de lettertype-hulpbron.
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
+
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 In bovenstaand voorbeeld wordt een enkele _Awesome Font-familie weergegeven met twee verschillende stijlen (normal en _italic_). Beide verwijzen naar een andere verzameling lettertype-hulpbronnen. Elke `src`-descriptor bevat een door een komma gescheiden lijst met voorrangsvarianten van hulpbronnen: 
 
@@ -179,13 +178,8 @@ Elke lettertypefamilie bestaat uit meerdere stilistische varianten (normaal, vet
 
 Bovenstaand diagram toont dat een lettertypefamilie drie verschillende gewichten voor vet kan hebben: 400 (normaal), 700 (vet) en 900 (extra vet). Alle andere varianten (in het grijs) worden door de browser automatisch aangepast aan de dichtstbijzijnde variant. 
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Wanneer een gewicht wordt opgegeven waarvoor geen lettertype bestaat, wordt het gewicht gebruikt dat het meest in de buurt komt. Grote gewichten corresponderen over het algemeen met lettertypen met grotere gewichten en lichte gewichten met lettertypen met lichtere gewichten.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algoritme voor corresponderende CSS3-lettertypen</a></p>
-    </blockquote>
-  </div>
-</div>
+> Wanneer een gewicht wordt opgegeven waarvoor geen lettertype bestaat, wordt het gewicht gebruikt dat het meest in de buurt komt. Grote gewichten corresponderen over het algemeen met lettertypen met grotere gewichten en lichte gewichten met lettertypen met lichtere gewichten.
+> > <a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algoritme voor corresponderende CSS3-lettertypen</a>
 
 Iets vergelijkbaars geldt voor varianten van _italic_. De ontwerper van het lettertype bepaalt welke varianten worden gemaakt, en wij bepalen welke varianten we op onze pagina gebruiken - elke variant moet apart worden gedownload, dus het is een goed idee om het aantal varianten beperkt te houden. We kunnen bijvoorbeeld twee varianten definiëren voor onze _Awesome Font-familie: 
 
@@ -222,13 +216,8 @@ Bovenstaand voorbeeld beschrijft de _Awesome Font-familie die is samengesteld ui
 
 <img src="images/font-synthesis.png" class="center" alt="Synthese van lettertypen">
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Auteurs dienen ook op te letten dat synthetische lettertypen mogelijk niet geschikt zijn voor het Cyrillische alfabet, waar cursieve tekens een heel andere vorm hebben. Het is altijd beter om een echt cursief lettertype te gebruiken dan een synthetische versie.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3-lettertype</a></p>
-    </blockquote>
-  </div>
-</div>
+> Auteurs dienen ook op te letten dat synthetische lettertypen mogelijk niet geschikt zijn voor het Cyrillische alfabet, waar cursieve tekens een heel andere vorm hebben. Het is altijd beter om een echt cursief lettertype te gebruiken dan een synthetische versie.
+> > <a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">CSS3-lettertype</a>
 
 Bovenstaand voorbeeld toont het verschil tussen het echte en synthetische lettertype Open-Sans. Alle synthetische varianten zijn gebaseerd op een enkel lettertype met een gewicht van 400. Zoals u ziet is er een groot verschil tussen de twee versies. Er is geen informatie gespecificeerd voor de vette en schuine varianten. De resultaten zullen daarom van de ene tot de andere browser verschillen, en hangen sterk af van het lettertype.
 

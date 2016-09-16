@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: CSS wordt standaard behandeld als een weergaveblokkerende bron. Dit betekent dat de browser wacht met het weergeven van de verwerkte inhoud totdat het CSSOM is opgebouwd. Zorg dat uw CSS bondig is, lever het zo snel mogelijk en gebruik mediatypen en -query's om de weergave te deblokkeren.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -23,32 +22,14 @@ In het vorige gedeelte zagen we dat het kritieke weergavepad zowel de DOM- als d
 - 'Alle CSS-bronnen, onafhankelijk van blokkerend of niet-blokkerend gedrag, worden gedownload door de browser.'
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>New York Times met CSS</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="New York Times met CSS">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>New York Times zonder CSS (FOUC, flash of unstyled content)</b>
-    <img src="images/nytimes-nocss-device.png" alt="New York Times zonder CSS">
-
-  </div>
-</div>
-
-{% comment %}
-<table>
-<tr>
-<td>New York Times met CSS</td>
-<td>New York Times zonder CSS (FOUC, flash of unstyled content)</td>
-</tr>
-<tr>
-<td><img src="images/nytimes-css-device.png" alt="New York Times met CSS" class="center"></td>
-<td><img src="images/nytimes-nocss-device.png" alt="New York Times zonder CSS" class="center"></td>
-</tr>
-</table>
-{% endcomment %}
+<figure class="attempt-left">
+  <img class="center" src="images/nytimes-css-device.png" alt="New York Times met CSS">
+  <figcaption>New York Times met CSS</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/nytimes-nocss-device.png" alt="New York Times zonder CSS">
+  <figcaption>New York Times zonder CSS (FOUC, flash of unstyled content)</figcaption>
+</figure>
 
 De bovenstaande voorbeelden van de New York Times met en zonder CSS demonstreren waarom de weergave wordt geblokkeerd totdat het CSS beschikbaar is: zonder CSS is de pagina in feite onbruikbaar. Het voorbeeld rechts wordt zelfs vaak `FOUC` of `Flash of Unstyled Content` (flits met niet-opgemaakte inhoud) genoemd. De browser blokkeert daarom de weergave totdat zowel het DOM als het CSSOM beschikbaar zijn.
 
