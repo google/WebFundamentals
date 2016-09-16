@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A Web pode ser acessada por uma grande variedade de dispositivos, de celulares com telas minúsculas a TVs com telas enormes. Saiba como criar um site que funcione de maneira eficaz em todos esses dispositivos.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-01-05 #}
 {# wf_published_on: 2013-12-31 #}
 
@@ -51,10 +50,10 @@ Identificamos o que é necessário:
 
 Também criamos uma arquitetura básica de informações e um layout para janelas de visualização largas e estreitas.
 
-<div class="demo clear" style="background-color: white;">
-  <img class="attempt-left" src="images/narrowviewport.png" alt="Janela estreita IA">
-  <img  class="attempt-right" src="images/wideviewport.png" alt="Janela larga IA">
-</div>
+<img class="attempt-left" src="images/narrowviewport.png" alt="Janela estreita IA">
+<img  class="attempt-right" src="images/wideviewport.png" alt="Janela larga IA">
+<div class="clearfix"></div>
+
 
 Isso pode ser facilmente convertido nas seções básicas da estrutura de uma página que usaremos em todo este projeto.
 
@@ -162,10 +161,10 @@ Em nosso site, incluiremos links para os Termos e Condições, uma página com i
 
 Criamos o esboço do site e identificamos todos os principais elementos estruturais.  Também verificamos se todo o conteúdo relevante está pronto e adequado para atender às nossas necessidades comerciais.
 
-<div class="mdl-grid">
-  <img class="attempt-left" src="images/content.png" alt="Content">
-  <img class="attempt-right" src="images/narrowsite.png" alt="">
-</div>
+
+<img class="attempt-left" src="images/content.png" alt="Content">
+<img class="attempt-right" src="images/narrowsite.png" alt="">
+
 
 Você perceberá que a página ainda não está visualmente agradável, mas isso é algo intencional. 
 O conteúdo é o aspecto mais importante de qualquer site, e precisamos garantir que a densidade e a arquitetura de informações estejam solidificadas. Este guia nos forneceu uma excelente base a partir da qual poderemos evoluir. No próximo guia, adicionaremos elementos de estilo ao conteúdo.
@@ -185,16 +184,17 @@ A Web pode ser acessada por uma grande variedade de dispositivos, de celulares c
 Desenvolveremos um site que funcione em todos os tamanhos de tela e tipos de dispositivos. No [artigo anterior](#), projetamos a arquitetura de informações da página e definimos a estrutura básica.
 Neste guia, aproveitaremos a estrutura básica e o conteúdo e os transformaremos em uma página incrível que será responsiva em um grande número de tamanhos de tela.
 
-<div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Conteúdo">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Conteúdo e estrutura </a> </figcaption>
-  </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
-    <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Versão final do site </a> </figcaption>
-  </figure>
-</div>
+
+<figure class="attempt-left">
+  <img  src="images/content.png" alt="Conteúdo">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Conteúdo e estrutura </a> </figcaption>
+</figure>
+<figure class="attempt-right">
+  <img  src="images/narrowsite.png" alt="Designed site">
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Versão final do site </a> </figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 Ao seguir os princípios de desenvolver um site primeiramente para celulares, começamos com uma janela de visualização estreita, similar à tela de um celular, e fazemos todos os ajustes iniciais voltados para essa experiência.
 Em um segundo momento, redimensionamos o projeto para dispositivos maiores.
@@ -251,9 +251,9 @@ No guia anterior, adicionamos imagens denominadas `imagens de conteúdo`.  Essas
 
 Um bom exemplo disso é uma imagem para a seção do título no conteúdo `acima da dobra`. Ela é geralmente usada para convencer o usuário a ler mais detalhes sobre o produto.
 
-<div class="mdl-cell mdl-cell--6--col">
+
   <img  src="images/narrowsite.png" alt="Site projetado">
-</div>
+
 
 É muito simples incluir essa imagem. No nosso caso, ela será colocada em segundo plano no cabeçalho e será aplicada por meio de um simples código CSS.
 

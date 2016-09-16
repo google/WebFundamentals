@@ -2,13 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Os padrões de design da Web responsivos estão evoluindo rapidamente, mas há muitos padrões estabelecidos que funcionam bem em dispositivos móveis e desktop
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Responsive Web Design Patterns {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -49,8 +49,8 @@ que geralmente exige apenas um ponto de interrupção entre telas pequenas e tel
 grandes.
 
 
-  <img src="imgs/mostly-fluid.svg">
-  Tente
+<img src="imgs/mostly-fluid.svg">
+
 
 
 Na exibição menor, cada conteúdo `div` é empilhado verticalmente.  Quando a largura da
@@ -66,7 +66,7 @@ Estes são alguns dos sites que usam esse padrão:
 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/mostly-fluid.html" region_tag="mfluid"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/mostly-fluid.html" region_tag="mfluid"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -85,8 +85,8 @@ pontos de interrupção para este padrão de layout depende do conteúdo e é mu
  o design.
 
 
-  <img src="imgs/column-drop.svg">
-  Tente
+<img src="imgs/column-drop.svg">
+
 
 
 
@@ -102,7 +102,7 @@ Estes são alguns dos sites que usam esse padrão:
  * [Wee Nudge](http://weenudge.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -121,8 +121,8 @@ ponto de interrupção principal, é mais complexo de se manter e provavelmente 
 dentro dos elementos, não apenas no layout de conteúdo geral.
 
 
-  <img src="imgs/layout-shifter.svg">
-  Tente
+<img src="imgs/layout-shifter.svg">
+
 
 
 Este exemplo simplificado mostra o padrão de mudança de layout, o conteúdo é empilhado verticalmente
@@ -137,7 +137,7 @@ Estes são alguns dos sites que usam esse padrão:
  * [Andersson-Wise Architects](http://www.anderssonwise.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -154,8 +154,8 @@ Funciona bem em layouts de coluna única como sites de uma página linear, artig
 de texto pesado.
 
 
-  <img src="imgs/tiny-tweaks.svg">
-  Tente
+<img src="imgs/tiny-tweaks.svg">
+
 
 
 Como o nome já diz, pequenas mudanças nesta amostra pois o tamanho da tela muda.
@@ -168,7 +168,7 @@ Estes são alguns dos sites que usam esse padrão:
  * [Future Friendly](http://futurefriendlyweb.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
 </pre>
 
 
@@ -182,8 +182,8 @@ Estes são alguns dos sites que usam esse padrão:
 Em vez de empilhar o conteúdo verticalmente, o padrão off canvas remove o conteúdo usado com menos frequência, como menus de navegação ou de aplicativo, mostrando-os apenas quando o tamanho da tela for suficiente. Em telas menores, o conteúdo pode ser visto com um clique apenas.
 
 
-  <img src="imgs/off-canvas.svg">
-  Tente
+<img src="imgs/off-canvas.svg">
+
 
 
 Em vez de empilhar conteúdo verticalmente, essa amostra oculta dois
@@ -204,7 +204,7 @@ Estes são alguns dos sites que usam esse padrão:
  * [Facebook's Mobile Site](https://m.facebook.com/)
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/patterns/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
 </pre>
 
 

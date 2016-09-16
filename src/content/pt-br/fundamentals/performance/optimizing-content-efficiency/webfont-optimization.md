@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A tipografia é fundamental para um bom design, branding, legibilidade e acessibilidade. As fontes da Web possibilitam os itens acima e muito mais: o texto é selecionável, pesquisável, ampliável e de alto DPI (pontos por polegada), o que fornece consistência e textos nítidos independentemente do tamanho e da resolução da tela. As fontes da Web são vitais para um design, desempenho e experiência de usuário de qualidade.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-29 #}
 {# wf_published_on: 2014-09-19 #}
 
@@ -73,29 +72,29 @@ A CSS @font-face na regra possibilita definir o local de um recurso de fonte esp
 
 Cada declaração @font-face fornece o nome da família da fonte, que atua como um grupo lógico de várias declarações, [propriedades de fonte](http://www.w3.org/TR/css3-fonts/#font-prop-desc), como estilo, peso e extensão, e o [descritor src](http://www.w3.org/TR/css3-fonts/#src-desc), que especifica uma lista de locais para o recurso de fontes.
 
-{% highlight css  %}
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Awesome Font'),
-       url('/fonts/awesome.woff2') format('woff2'), 
-       url('/fonts/awesome.woff') format('woff'),
-       url('/fonts/awesome.ttf') format('ttf'),
-       url('/fonts/awesome.eot') format('eot');
-}
 
-@font-face {
-  font-family: 'Awesome Font';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Awesome Font Italic'),
-       url('/fonts/awesome-i.woff2') format('woff2'), 
-       url('/fonts/awesome-i.woff') format('woff'),
-       url('/fonts/awesome-i.ttf') format('ttf'),
-       url('/fonts/awesome-i.eot') format('eot');
-}
-{% endhighlight %}
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Awesome Font'),
+           url('/fonts/awesome.woff2') format('woff2'), 
+           url('/fonts/awesome.woff') format('woff'),
+           url('/fonts/awesome.ttf') format('ttf'),
+           url('/fonts/awesome.eot') format('eot');
+    }
+
+    @font-face {
+      font-family: 'Awesome Font';
+      font-style: italic;
+      font-weight: 400;
+      src: local('Awesome Font Italic'),
+           url('/fonts/awesome-i.woff2') format('woff2'), 
+           url('/fonts/awesome-i.woff') format('woff'),
+           url('/fonts/awesome-i.ttf') format('ttf'),
+           url('/fonts/awesome-i.eot') format('eot');
+    }
+
 
 Os exemplos acima definem uma única família _Awesome Font_ com dois estilos (normal e _italic_), cada um apontando para um conjunto de recursos de fonte diferente. Por sua vez, cada descritor `src` contém uma lista de variantes de recursos priorizada e separada por vírgulas: 
 
@@ -164,11 +163,11 @@ Dito isso, há uma pequena pegadinha no alcance de Unicode: [nem todos os navega
 Como esses navegadores não conseguem selecionar apenas os subconjuntos necessários e criar uma fonte composta, temos de fornecer um recurso substituto de fonte única que contenha todos os subconjuntos necessários e oculte o resto do navegador. Por exemplo, se a página só usa caracteres do latim, podemos remover outros glifos e exibir esse conjunto particular como um recurso autônomo. 
 
 1. **Como determinamos quais subconjuntos são necessários?** 
-  - Se o agrupamento de alcance de unicode for compatível com o navegador, ele selecionará automaticamente o subconjunto adequado. A página só precisa fornecer os arquivos de subconjunto e especificar alcances de unicode adequados nas regras @font-face.
-  - Se o alcance de unicode não for compatível, a página precisa ocultar todos os subconjuntos desnecessários, ou seja, o desenvolvedor tem de especificar os subconjuntos exigidos.
+    - Se o agrupamento de alcance de unicode for compatível com o navegador, ele selecionará automaticamente o subconjunto adequado. A página só precisa fornecer os arquivos de subconjunto e especificar alcances de unicode adequados nas regras @font-face.
+    - Se o alcance de unicode não for compatível, a página precisa ocultar todos os subconjuntos desnecessários, ou seja, o desenvolvedor tem de especificar os subconjuntos exigidos.
 2. **Como geramos subconjuntos de fontes?**
-  - Use a [ferramenta pyftsubset] de código aberto (https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py#L16) para agrupar em conjuntos e otimizar suas fontes.
-  - Alguns serviços de fontes possibilitam o agrupamento manual de subconjuntos via parâmetros de consulta personalizada, que você pode usar para especificar manualmente o subconjunto exigido por sua página. Consulte a documentação de seu fornecedor de fontes.
+    - Use a [ferramenta pyftsubset de código aberto](https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py#L16) para agrupar em conjuntos e otimizar suas fontes.
+    - Alguns serviços de fontes possibilitam o agrupamento manual de subconjuntos via parâmetros de consulta personalizada, que você pode usar para especificar manualmente o subconjunto exigido por sua página. Consulte a documentação de seu fornecedor de fontes.
 
 
 ### Seleção e síntese de fontes
@@ -179,13 +178,8 @@ Cada família de fontes é composta por múltiplas variantes estilísticas (regu
 
 Por exemplo, o diagrama acima ilustra uma família de fontes que oferece três pesos diferentes para negrito: 400 (regular), 700 (bold) e 900 (extra bold). Todas as variantes entre eles (indicadas em cinza) são automaticamente mapeadas pelo navegador para a variante mais próxima. 
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Quando um peso que não tem uma face é especificado, a face com o peso mais aproximado é utilizada em seu lugar. Em geral, os pesos de negrito delineiam faces com pesos maiores, e os pesos leves delineiam faces com pesos menores.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algoritmo de combinação de fontes CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Quando um peso que não tem uma face é especificado, a face com o peso mais aproximado é utilizada em seu lugar. Em geral, os pesos de negrito delineiam faces com pesos maiores, e os pesos leves delineiam faces com pesos menores.
+> > <a href="http://www.w3.org/TR/css3-fonts/#font-matching-algorithm">Algoritmo de combinação de fontes CSS3</a>
 
 Uma lógica similar se aplica a variantes _italic_. O designer de fontes controla quais variantes serão produzidas, e nós controlamos quais variantes usaremos na página. Já que cada variante representa um download diferente, é indicado manter um pequeno número de variantes. Por exemplo, podemos definir duas variantes de negrito para nossa família _Awesome Font_: 
 
@@ -222,13 +216,8 @@ O exemplo acima declara a família _Awesome Font_, que é composta de dois recur
 
 <img src="images/font-synthesis.png" class="center" alt="Síntese de fontes">
 
-<div class="quote">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Os autores precisam estar cientes de que abordagens sintetizadas podem não ser adequadas para scripts como cirílico, em que as formas de itálico são muito diferentes. É sempre melhor usar uma fonte que esteja realmente em itálico do que confiar em uma versão sintética.
-    <p><a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">Estilo de fonte de CSS3</a></p>
-    </blockquote>
-  </div>
-</div>
+> Os autores precisam estar cientes de que abordagens sintetizadas podem não ser adequadas para scripts como cirílico, em que as formas de itálico são muito diferentes. É sempre melhor usar uma fonte que esteja realmente em itálico do que confiar em uma versão sintética.
+> > <a href="http://www.w3.org/TR/css3-fonts/#propdef-font-style">Estilo de fonte de CSS3</a>
 
 O exemplo acima ilustra a diferença entre os resultados de fonte reais vs. sintetizadas para Open-Sans. Todas as variantes sintéticas são geradas a partir de uma única fonte de peso 400. Como é possível observar, há uma diferença notável nos resultados. Os detalhes de como gerar as variantes bold e oblique não são especificados. Por isso, os resultados irão variar de navegador para navegador, e também dependerão muito da fonte.
 

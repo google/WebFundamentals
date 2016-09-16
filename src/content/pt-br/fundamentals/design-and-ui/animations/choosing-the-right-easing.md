@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Selecione o easing adequado para seu projeto, seja easing in, out ou ambos. Pode até mesmo ficar saltitante para obter manobras extras!
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -22,7 +22,7 @@ No geral, um **ease-out** será a escolha correta e certamente um bom padrão. D
 
 Há um grupo de equações de ease-out muito conhecidas além daquela especificada com a palavra-chave `ease-out` no CSS, que variam em ‘agressividade’. Para um efeito ease-out super rápido considere um [Quintic ease-out](http://easings.net/#easeOutQuint).
 
-<img src="imgs/quintic-ease-out-markers.png" alt="Uma curva de animação Quintic ease-out" style="max-width: 300px"/>
+<img src="images/quintic-ease-out-markers.png" alt="Uma curva de animação Quintic ease-out" style="max-width: 300px"/>
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Veja uma animação Quintic ease-out.</a>
 

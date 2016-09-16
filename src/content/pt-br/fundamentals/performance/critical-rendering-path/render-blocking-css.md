@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Por padrão, o CSS é tratado como um recurso bloqueador de renderização. Isso significa que o navegador contém a renderização de todo o conteúdo processado até que o CSSOM seja construído. Mantenha seu CSS enxuto, entregue-o o mais rápido possível e use tipos de mídia e consultas para desbloquear a renderização.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -22,32 +21,15 @@ Na seção anterior, vimos que o caminho de processamento essencial exige que te
 - Todos os recursos do CSS, independentemente do comportamento bloqueador ou não bloqueador, são transferidos pelo navegador.
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>NYTimes com CSS</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="NYTimes com CSS">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>NYTimes sem CSS (FOUC)</b>
-    <img src="images/nytimes-nocss-device.png" alt="NYTimes sem CSS">
-
-  </div>
-</div>
-
-{% comment %}
-<table>
-<tr>
-<td>NYTimes com CSS</td>
-<td>NYTimes sem CSS (FOUC)</td>
-</tr>
-<tr>
-<td><img src="images/nytimes-css-device.png" alt="NYTimes com CSS" class="center"></td>
-<td><img src="images/nytimes-nocss-device.png" alt="NYTimes sem CSS" class="center"></td>
-</tr>
-</table>
-{% endcomment %}
+<figure class="attempt-left">
+  <img class="center" src="images/nytimes-css-device.png" alt="NYTimes com CSS">
+  <figcaption>NYTimes com CSS</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/nytimes-nocss-device.png" alt="NYTimes sem CSS">
+  <figcaption>NYTimes sem CSS (FOUC)</figcaption>
+</figure>
+<div class="clearfix"></div>
 
 O exemplo acima, mostrando o site do NYTimes com e sem CSS, demonstra por que a renderização é bloqueada até que o CSS esteja disponível: sem o CSS a página é efetivamente inutilizável. Na verdade, a experiência da direita é chamada de `Flash of Unstyled Content` (FOUC). Como resultado, o navegador bloqueará a renderização até ter o DOM e o CSSOM.
 

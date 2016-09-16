@@ -1,8 +1,7 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: As imagens geralmente são responsáveis pela maior parte dos bytes transferidos em uma página da Web e muitas vezes ocupam uma parcela significativa do espaço visual. Como resultado, a otimização de imagens pode muitas vezes resultar em uma grande economia de bytes e melhor desempenho para seu site. Se menos bytes precisarem ser transferidos pelo navegador, haverá menor concorrência pela largura de banda do cliente e, consequentemente, o conteúdo relevante poderá ser transferido e exibido mais rapidamente na tela.
+description: As imagens geralmente são responsáveis pela maior parte dos bytes transferidos em uma página da Web e muitas vezes ocupam uma parcela significativa do espaço visual. Como resultado, a otimização de imagens pode muitas vezes resultar em uma grande economia de bytes e melhor desempenho para seu site. 
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-05-09 #}
 {# wf_published_on: 2014-05-06 #}
 
@@ -46,19 +45,18 @@ Pense duas vezes antes de incorporar texto por meio de código em uma imagem. A 
 
 Depois de decidir que o uso de uma imagem é a melhor maneira de alcançar o efeito desejado, você precisa selecionar o formato certo:
 
-&nbsp;
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Vetor</b>
-    <img class="center" src="images/vector-zoom.png" alt="Imagem vetorial ampliada">
-  </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>Varredura</b>
-    <img src="images/raster-zoom.png" alt="Imagem de varredura ampliada">
-  </div>
-</div>
+<figure class="attempt-left">
+  <img class="center" src="images/vector-zoom.png" alt="Imagem vetorial ampliada">
+  <figcaption>Vetor</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/raster-zoom.png" alt="Imagem de varredura ampliada">
+  <figcaption>Varredura</figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 * [Gráficos vetoriais](http://pt.wikipedia.org/wiki/Desenho_vetorial) usam linhas, pontos e polígonos para representar uma imagem.
 * [Gráficos de varredura](http://pt.wikipedia.org/wiki/Raster) representam uma imagem codificando valores individuais para cada pixel em uma grade retangular.
@@ -162,7 +160,7 @@ Internamente, o navegador aloca 256 valores (tons) para cada canal, que se conve
 * 10.000 pixels x 4 bytes = 40.000 bytes
 * 40.000 bytes / 1024 = 39 KB
 
-^
+
 
 Note: Além disso, independentemente do formato de imagem usado para transferir os dados do servidor para o cliente, quando a imagem é decodificada pelo navegador, cada pixel ocupa sempre 4 bytes de memória. Isso pode ser uma limitação importante para imagens grandes e dispositivos que não têm muita memória disponível, como dispositivos móveis mais antigos.
 
@@ -235,8 +233,8 @@ Para certos tipos de dados, como o código-fonte de uma página ou um arquivo ex
 
 Na verdade, devido ao funcionamento da nossa visão, geralmente não há problema em descartar algumas informações de cada pixel para reduzir o tamanho do arquivo. Por exemplo, como não temos a mesma sensibilidade para todas as cores, podemos usar menos bits para codificar algumas cores. Consequentemente, um fluxo típico de otimização de imagens consiste em duas etapas de alto nível:
 
-1. A imagem é processada usando um filtro `[com perdas](http://en.wikipedia.org/wiki/Lossy_compression)` que elimina alguns dados de pixel
-1. A imagem é processada usando um filtro `[sem perdas](http://en.wikipedia.org/wiki/Lossless_compression)` que compacta os dados de pixel
+1. A imagem é processada usando um filtro [com perdas](http://en.wikipedia.org/wiki/Lossy_compression) que elimina alguns dados de pixel
+1. A imagem é processada usando um filtro [sem perdas](http://en.wikipedia.org/wiki/Lossless_compression) que compacta os dados de pixel
 
 **A primeira etapa é opcional e o algoritmo exato dependerá do formato específico da imagem. No entanto, é preciso entender que qualquer imagem pode passar pelo processo de compactação com perdas para reduzir seu tamanho.** Na verdade, a diferença entre os vários formatos de imagens, como GIF, PNG, JPEG e outros, está na combinação entre os algoritmos usados (ou omitidos) ao aplicar as etapas de compactação com perdas e sem perdas.
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprenda a suavizar e dar peso às suas animações.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -40,7 +40,7 @@ Você também pode usar uma palavra-chave `steps`, que permite criar transiçõe
 
 Animações sem nenhum tipo de easing são chamadas de **linear**. Um gráfico de uma transição linear é assim:
 
-<img src="imgs/linear.png" style="max-width: 300px" alt="Curva de animação ease linear." />
+<img src="images/linear.png" style="max-width: 300px" alt="Curva de animação ease linear." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html">Veja uma animação linear.</a>
 
@@ -57,7 +57,7 @@ Se estiver codificando suas animações com CSS ou JavaScript, sempre há uma op
 
 O ease out faz com que a animação comece mais rapidamente do que na linear, e também tenha uma desaceleração no final.
 
-<img src="imgs/ease-out.png" style="max-width: 300px" alt="Curva de animação ease-out." />
+<img src="images/ease-out.png" style="max-width: 300px" alt="Curva de animação ease-out." />
 
 Há várias formas de se obter um efeito ease out, mas o mais simples é a palavra-chave `ease-out` no CSS:
 
@@ -73,7 +73,7 @@ Ease out é geralmente melhor para o trabalho da interface do usuário, porque o
 
 Animações ease-in começam de forma lenta e terminam rapidamente, diferente do ease-out.
 
-<img src="imgs/ease-in.png" style="max-width: 300px" alt="Curva de animação do ease-in." />
+<img src="images/ease-in.png" style="max-width: 300px" alt="Curva de animação do ease-in." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html">Veja uma animação ease-in.</a>
 
@@ -91,7 +91,7 @@ No entanto, de um ponto de vista da interação, os ease-ins podem parecer um po
 
 Ease in e out são semelhantes a um carro acelerando e desacelerando e, se usado com consciência, podem proporcionar um efeito mais dramático do que apenas o ease out.
 
-<img src="imgs/ease-in-out.png" style="max-width: 300px" alt="Curva de animação do ease-in-out." />
+<img src="images/ease-in-out.png" style="max-width: 300px" alt="Curva de animação do ease-in-out." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Veja uma animação ease-in-out.</a>
 

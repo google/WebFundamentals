@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Buscar alguma coisa na rede é um processo lento e caro: respostas amplas exigem muitas viagens de ida e volta entre o cliente e o servidor, o que atrasa sua disponibilidade para o processamento do navegador, além de gerar custos para o visitante. Como resultado, a capacidade de armazenar em cache e reutilizar recursos buscados anteriormente é um aspecto crítico da otimização do desempenho.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-01-04 #}
 {# wf_published_on: 2013-12-31 #}
 

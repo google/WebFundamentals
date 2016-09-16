@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Mudando o DOM, através da adição e remoção de elementos, mudando atributos, classes ou através da animação, fará com que o navegador recalcule estilos de elemento e, em vários casos, o layout (ou refluxo) da página ou partes dela. Esse processo é chamado de cálculo de estilo computado.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
@@ -22,13 +22,8 @@ A primeira parte dos estilos de computação é criar um conjunto de seletores c
 
 A segunda parte do processo envolve pegar todas as regras de estilo dos seletores correspondentes e descobrir qual o estilo final do elemento. No Blink (mecanismo de renderização do Chrome e Opera), esses processos são, ao menos hoje, basicamente equivalentes em custo:
 
-<div class="quote" style="margin-top: 30px;">
-  <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Basicamente 50% do tempo para calcular o estilo computador para um elemento é usado para corresponder seletores, e a outra metade do tempo é usada para construir o RenderStyle (representação de estilo computado) das regras correspondentes.
-    <p>Rune Lillesveen, Opera/ <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Invalidação de Estilo no Blink</a></p>
-    </blockquote>
-  </div>
-</div>
+> Basicamente 50% do tempo para calcular o estilo computador para um elemento é usado para corresponder seletores, e a outra metade do tempo é usada para construir o RenderStyle (representação de estilo computado) das regras correspondentes.
+> > Rune Lillesveen, Opera/ <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Invalidação de Estilo no Blink</a>
 
 
 ## Reduza a complexidade dos seus seletores

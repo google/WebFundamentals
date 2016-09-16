@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Como otimizar o caminho de processamento essencial ao priorizar a exibição de conteúdo relacionado à ação principal que o usuário deseja realizar em uma página.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

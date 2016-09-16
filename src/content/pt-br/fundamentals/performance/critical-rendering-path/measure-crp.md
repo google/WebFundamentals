@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Não é possível otimizar o que não é possível medir. Felizmente, a API de tempo de navegação oferece todas as ferramentas necessárias para medir cada etapa do caminho de processamento essencial.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

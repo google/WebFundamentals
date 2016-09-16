@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Para que a primeira renderização aconteça o mais rápido possível, precisamos otimizar três variáveis: minimizar o número de recursos essenciais, minimizar o número de bytes essenciais e minimizar a extensão do caminho essencial.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

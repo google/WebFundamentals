@@ -1,22 +1,17 @@
----
-title: "Como trabalhar com breakpoints"
-description: "Adicione breakpoints no Chrome DevTools para rapidamente e efetivamente debugar código problemático."
-updated_on: 2015-09-03
-translators:
-  - alansilva
-translation_priority: 0
-key-takeaways:
-  breakpoint:
-    - "Use breakpoints manuais para pausar a execução do script em uma determinada linha de código."
-    - "Use breakpoints condicionais para pausar quando uma determinada condição for valida."
-    - "Defina breakpoints condicionais para alterações do DOM, requisições XHR, event listeners, e exceções não tratadas."
----
-<p class="intro">
-  Usar breakpoints é uma das maneiras mais efetivas de debugar código. Breakpoints
-  permitem que você pause a execução de um script e então investigue o <i>call stack</i>
-  e os valores das variáveis em um determinado momento. Existem dois tipos de breakpoints
-  à sua disposição: manuais qe condicionais.
-</p>
+project_path: /web/_project.yaml
+book_path: /web/tools/_book.yaml
+description: Adicione breakpoints no Chrome DevTools para rapidamente e efetivamente debugar código problemático.
+
+{# wf_updated_on: 2015-09-02 #}
+{# wf_published_on: 2000-01-01 #}
+
+# Como trabalhar com breakpoints {: .page-title }
+
+
+Usar breakpoints é uma das maneiras mais efetivas de debugar código. Breakpoints
+permitem que você pause a execução de um script e então investigue o <i>call stack</i>
+e os valores das variáveis em um determinado momento. Existem dois tipos de breakpoints
+à sua disposição: manuais qe condicionais.
 
 * Breakpoints manuais são breakpoints individuais que você define em uma
   linha específica de código. Você pode defini-los usando a interface do Chrome DevTools, ou
@@ -27,9 +22,12 @@ key-takeaways:
   e então o DevTools automaticamente interrompe a execução sempre
   que a condição especificada for válida.
 
-{% include shared/toc.liquid %}
 
-{% include shared/takeaway.liquid list=page.key-takeaways.breakpoint %}
+### TL;DR {: .hide-from-toc }
+- Use breakpoints manuais para pausar a execução do script em uma determinada linha de código.
+- Use breakpoints condicionais para pausar quando uma determinada condição for valida.
+- 'Defina breakpoints condicionais para alterações do DOM, requisições XHR, event listeners, e exceções não tratadas.'
+
 
 ## Visualize os breakpoints
 
@@ -180,7 +178,8 @@ Na animação abaixo, o botão **Pause on Exceptions** é clicado, um
 botão na página é clicado, e uma exceção não tratada é disparada.
 O DevTools automaticamente pausa na linha onde a exceção é lançada.
 
-{% animation animations/pause-on-uncaught-exception.mp4 %}
+<video src="animations/pause-on-uncaught-exception.mp4">
+</video>
 
 You can also view the call stack leading up to an uncaught exception
 in the DevTools console. In the animation below, a button is clicked,
@@ -189,7 +188,8 @@ and then the carat next to the uncaught exception message (`Uncaught 0`) in the
 DevTools console is clicked. The call stack leading up to the exception
 is displayed in the console.
 
-{% animation animations/exception-in-console.mp4 %}
+<video src="animations/exception-in-console.mp4">
+</video>
 
 ## Nunca Pause Aqui {#never-pause-here}
 
@@ -203,3 +203,7 @@ para o debugger nunca pausar em uma linha específica.
 ![Never Pause Here](imgs/never-pause-here.png)
 
 Você também pode usar essa técnica para desabilitar as instruções `debugger`.
+
+
+Translated By: 
+{% include "_shared/contributors/alansilva.html" %}

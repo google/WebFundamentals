@@ -2,24 +2,16 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Segurança é uma parte importante da Web para proteger os usuários e para usar as novas e incríveis APIs no futuro será necessário avançar com o suporte TLS.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Security with HTTPS {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-{% comment %}
-O conteúdo da lista de orientação será emitido pelo layout da página inicial com base na page.id correspondente à coleção de artigos
-{% endcomment %}
+{% include "web/_shared/contributors/chrispalmer.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 ## Generating Keys and Certificate Signing Requests 
-
-
 
 
 Esta seção usa o programa da linha de comando openssl, que é fornecido com a maioria dos sistemas Linux, BSD e Mac OS X, para gerar chaves públicas/privadas e um CSR.
@@ -139,7 +131,7 @@ subdomínios; caso contrário, você pode comprar apenas 1 ou mais certificados 
 você tem mais do que 5 subdomínios, por exemplo, você pode encontrar um certificado curinga
 mais conveniente quando você habilitar HTTPS em seus servidores.)
 
-**OBSERVAÇÃO:** lembre-se de que nos certificados curinga, o curinga é aplicado a
+Note: lembre-se de que nos certificados curinga, o curinga é aplicado a
 apenas 1 etiqueta DNS. Um bom certificado para \*.exemplo.com funciona para
 foo.exemplo.com e bar.exemplo.com, mas _não_ para foo.bar.exemplo.com.
 
@@ -191,14 +183,9 @@ do Mozilla](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
 Se você tem muitos hostnames/subdomínios, cada um deles precisará usar o certificado
 correto.
 
-**OBSERVAÇÃO:** muitos operadores de site já concluíram as etapas que abordamos, mas estão
-usando HTTPS apenas para fins de redirecionamento de clientes de volta para HTTP. Se você
-estiver fazendo isso, pare agora mesmo. Veja a próxima seção para garantir que HTTPS e HTTP
-funcionem corretamente.
+Note: muitos operadores de site já concluíram as etapas que abordamos, mas estão usando HTTPS apenas para fins de redirecionamento de clientes de volta para HTTP. Se você estiver fazendo isso, pare agora mesmo. Veja a próxima seção para garantir que HTTPS e HTTP funcionem corretamente.
 
-**OBSERVAÇÃO:** por fim, você deve redirecionar solicitações HTTP para HTTPS e usar HSTS (Segurança de
-Transporte Restrita HTTP). Esta não é a etapa correta no processo de migração para fazer
-isso; veja “Redirecionar HTTP para HTTPS" e “Ativar a Segurança de Transporte Restrita e Cookies Seguros".
+Note: por fim, você deve redirecionar solicitações HTTP para HTTPS e usar HSTS (Segurança de Transporte Restrita HTTP). Esta não é a etapa correta no processo de migração para fazer isso; veja “Redirecionar HTTP para HTTPS" e “Ativar a Segurança de Transporte Restrita e Cookies Seguros".
 
 Agora, e durante o tempo de duração do seu site, verifique sua configuração HTTPS com o
 [prático Teste do Servidor SSL da Qualys](https://www.ssllabs.com/ssltest/). Seu site
@@ -229,7 +216,7 @@ De fato, no caso de conteúdo misto ativo (script, plug-ins, CSS, iframes),
 muitas vezes os navegadores simplesmente não carregam ou executam o conteúdo — resultando em uma
 página quebrada.
 
-**OBSERVAÇÃO:** é perfeitamente aceitável incluir recursos HTTPS em uma página HTTP.
+Note: é perfeitamente aceitável incluir recursos HTTPS em uma página HTTP.
 
 Além disso, quando você vincular para outras páginas em seu site, os usuários podem ser
 rebaixados de HTTPS para HTTP.
@@ -272,24 +259,11 @@ Isto é, torne as URLs entre sites o mais relacionadas possível: relacionadas p
 (em um protocolo, começando com //exemplo.com) ou relacionada ao host (começando
  apenas com o caminho, como /jquery.js).
 
-**OBSERVAÇÃO:** Use um script, não faça o procedimento manualmente. Se o conteúdo do seu site está em um
-banco de dados, é recomendável testar seu script em uma cópia de desenvolvimento do seu
-banco de dados. Se o seu site é composto por arquivos simples, teste seu script em uma
-cópia de desenvolvimento dos arquivos. Apenas envie as alterações para produção depois que
-elas passarem por um Controle de Qualidade, como sempre. Você pode usar [o script de Bram van
-Damme](https://github.com/bramus/mixed-content-scan) ou algo parecido para
-detectar o conteúdo misto em seu site.
+Note: Use um script, não faça o procedimento manualmente. Se o conteúdo do seu site está em um banco de dados, é recomendável testar seu script em uma cópia de desenvolvimento do seu banco de dados. Se o seu site é composto por arquivos simples, teste seu script em uma cópia de desenvolvimento dos arquivos. Apenas envie as alterações para produção depois que elas passarem por um Controle de Qualidade, como sempre. Você pode usar [o script de Bram van Damme](https://github.com/bramus/mixed-content-scan) ou algo parecido para detectar o conteúdo misto em seu site.
 
-**OBSERVAÇÃO:** ao vincular com outros sites (ao invés de incluir seus 
-recursos), não altere o protocolo, pois você não tem controle sobre o funcionamento 
-desses sites.
+Note: ao vincular com outros sites (ao invés de incluir seus  recursos), não altere o protocolo, pois você não tem controle sobre o funcionamento desses sites.
 
-**OBSERVAÇÃO:** Recomendo URLs relacionadas ao protocolo para fazer uma migração mais tranquila para
-grandes sites. Se você não tem certeza se pode implantar totalmente o HTTPS, forçar seu
-site a usar HTTPS para todos os subrrecursos pode não dar certo. Provavelmente por algum
-tempo você não estará completamente familiarizado com o HTTPS e o site HTTP ainda
-deverá estar funcionando normalmente. Com o tempo, você concluirá a migração e poderá
-bloquear o HTTPS (veja as duas próximas seções).
+Note: Recomendo URLs relacionadas ao protocolo para fazer uma migração mais tranquila para grandes sites. Se você não tem certeza se pode implantar totalmente o HTTPS, forçar seu site a usar HTTPS para todos os subrrecursos pode não dar certo. Provavelmente por algum tempo você não estará completamente familiarizado com o HTTPS e o site HTTP ainda deverá estar funcionando normalmente. Com o tempo, você concluirá a migração e poderá bloquear o HTTPS (veja as duas próximas seções).
 
 Se seu site depende de script, imagem ou de outros recursos disponibilizados por
 terceiros, como CDN, jquery.com ou similares, você tem 2 opções:
@@ -336,32 +310,18 @@ indicar aos mecanismos de pesquisa e navegadores que a versão HTTPS é canônic
 
 
 
-Neste ponto, você está pronto para “bloquear" o uso do HTTPS. Primeiro, use [Strict
-Transport
-Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) para avisar os
+Neste ponto, você está pronto para “bloquear" o uso do HTTPS. Primeiro, use [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) para avisar os
 clientes de que eles devem sempre se conectar ao seu servidor via HTTPS, mesmo ao
-seguir uma referência http://. Isso evita ataques como [Retirada
-SSL](http://www.thoughtcrime.org/software/sslstrip/) e também evita o
+seguir uma referência http://. Isso evita ataques como [Retirada SSL](http://www.thoughtcrime.org/software/sslstrip/) e também evita o
 custo da viagem de ida e volta do redirecionamento 301 que habilitamos em “Redirecionar HTTP para HTTPS".
 
-**OBSERVAÇÃO:** os clientes que tiverem marcado seu site como um Host HSTS conhecido provavelmente terão uma
-_[falha grave](https://tools.ietf.org/html/rfc6797#section-12.1)_[ se o seu
-](https://tools.ietf.org/html/rfc6797#section-12.1)[site tiver um erro em
-sua configuração TLS](https://tools.ietf.org/html/rfc6797#section-12.1) (como
-um certificado expirado). Essa é uma escolha de projeto expecífica do HSTS; ajuda
-a garantir que os invasores de rede não possam enganar os clientes para acessar o
-site sem HTTPS. Não habilite o HSTS até que você tenha certeza de que a operação do seu site
-esteja forte o suficiente para evitar a implantação do HTTPS com erros
-de validação do certificado.
+Note: os clientes que tiverem marcado seu site como um Host HSTS conhecido provavelmente terão uma [alha grave](https://tools.ietf.org/html/rfc6797#section-12.1) [se o seu](https://tools.ietf.org/html/rfc6797#section-12.1) [site tiver um erro em sua configuração TLS](https://tools.ietf.org/html/rfc6797#section-12.1) (como um certificado expirado). Essa é uma escolha de projeto expecífica do HSTS; ajuda a garantir que os invasores de rede não possam enganar os clientes para acessar o site sem HTTPS. Não habilite o HSTS até que você tenha certeza de que a operação do seu site esteja forte o suficiente para evitar a implantação do HTTPS com erros de validação do certificado.
 
-Ative o HSTS (HTTP Strict Transport Security) definindo o cabeçalho
-Strict-Transport-Security. [A página HSTS do OWASP tem links para
-instruções](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security)
-para vários softwares de servidor.
+Ative o HSTS (HTTP Strict Transport Security) definindo o cabeçalho Strict-Transport-Security. [A página HSTS do OWASP tem links para instruções](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security) para vários softwares de servidor.
 
 A maioria dos servidores da Web oferecem uma capacidade semelhante para adicionar cabeçalhos personalizados.
 
-**OBSERVAÇÃO:** a idade máxima é medida em segundos. Você pode começar com valores baixos e
+Note: a idade máxima é medida em segundos. Você pode começar com valores baixos e
 aumentar gradualmente a idade máxima conforme se familiariza com a operação de um
 site somente em HTTPS.
 
@@ -372,8 +332,7 @@ toda sessão seria destruída — mesmo se você tiver feito todo o resto
 corretamente!
 
 Portanto, altere seu aplicativo da Web para sempre definir o sinalizador Seguro nos cookies
-que ele define. [Esta página OWASP explica como definir o sinalizador
-Seguro](https://www.owasp.org/index.php/SecureFlag) em várias estruturas de
+que ele define. [Esta página OWASP explica como definir o sinalizador Seguro](https://www.owasp.org/index.php/SecureFlag) em várias estruturas de
 aplicativo. Cada estrutura de aplicativo tem uma forma de definir o sinalizador.
 
 
@@ -388,29 +347,18 @@ Esta seção discute preocupações que os operadores podem ter sobre a migraç�
 
 ### Classificação de Busca
 
-[O Google está usando HTTPS como um indicador positivo de qualidade de 
-pesquisa](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html).
-O Google também publica um guia sobre [como transferir, mover ou migrar seu
-site](https://support.google.com/webmasters/topic/6029673) enquanto mantém sua
-classificação de pesquisa. O Bing também publica [orientações para
-webmasters](http://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a).
+[O Google está usando HTTPS como um indicador positivo de qualidade de  pesquisa](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html). O Google também publica um guia sobre [como transferir, mover ou migrar seu site](https://support.google.com/webmasters/topic/6029673) enquanto mantém sua classificação de pesquisa. O Bing também publica [orientações para webmasters](http://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a).
 
 ### Desempenho
 
-Quando as camadas de conteúdo e aplicativo estão bem ajustadas (consulte os [livros de
-Steve Souders](https://stevesouders.com/) para obter ótimas dicas), as demais preocupações de desempenho do
-TLS são geralmente pequenas em relação ao custo geral do
-aplicativo. Além disso, você pode reduzir e amortizar os custos. (Para receber boas
-dicas sobre a otimização e generalização do TLS, consulte _[Rede
-do Navegador de Alto Desempenho](http://chimera.labs.oreilly.com/books/1230000000545)_[ por Ilya
+Quando as camadas de conteúdo e aplicativo estão bem ajustadas (consulte os [livros de Steve Souders](https://stevesouders.com/) para obter ótimas dicas), as demais preocupações de desempenho do
+TLS são geralmente pequenas em relação ao custo geral do aplicativo. Além disso, você pode reduzir e amortizar os custos. (Para receber boas dicas sobre a otimização e generalização do TLS, consulte _[Rede do Navegador de Alto Desempenho](http://chimera.labs.oreilly.com/books/1230000000545)_[ por Ilya
 Grigorik](http://chimera.labs.oreilly.com/books/1230000000545).) Veja também o
-_[OpenSSL
-Cookbook] de Ivan Ristic(https://www.feistyduck.com/books/openssl-cookbook/)_ e _[Bulletproof
-SSL e TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_.
+[OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/)  de Ivan Ristic e _[Bulletproof SSL e TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_.
 
 Em alguns casos, o TLS pode _melhorar_ o desempenho, principalmente como resultado da criação do
-HTTP/2 possível. Chris Palmer deu [uma palestra sobre o desempenho do HTTPS e HTTP/2 no Chrome Dev
-Summit 2014](/web/shows/cds/2014/tls-all-the-things).
+HTTP/2 possível. Chris Palmer deu 
+[uma palestra sobre o desempenho do HTTPS e HTTP/2 no Chrome Dev Summit 2014](/web/shows/cds/2014/tls-all-the-things).
 
 ### Cabeçalhos de Referência
 
@@ -429,7 +377,9 @@ resolver:
 Como os mecanismos de pesquisa estão migrando para HTTPS, você provavelmente verá _mais_ cabeçalhos
 de referência ao migrar para HTTPS do que vê agora.
 
-<blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">Os clientes NÃO DEVEM incluir um campo do cabeçalho de referência em uma solicitação HTTP (não segura) se a página de referência foi transferida com um protocolo seguro.<p><a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">De acordo com o RFC HTTP</a></p></blockquote>
+> Os clientes NÃO DEVEM incluir um campo do cabeçalho de referência em uma solicitação HTTP (não segura) se a página de referência foi transferida com um protocolo seguro.
+> > <a href="https://tools.ietf.org/html/rfc2616#section-15.1.3">De acordo com o RFC HTTP</a>
+
 
 ### Receita com Anúncios
 

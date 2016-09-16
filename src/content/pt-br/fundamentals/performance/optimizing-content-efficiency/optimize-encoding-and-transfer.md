@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Após eliminar todos os recursos desnecessários, a próxima etapa é minimizar o tamanho total dos recursos que dos quais o navegador precisa fazer o download. Isso significa compactá-los por meio de algoritmos de compactação genéricos (GZip) ou específicos para cada tipo de conteúdo.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 
@@ -81,7 +80,7 @@ Considere a simples página HTML acima e os três tipos diferentes de conteúdo 
 * Um compactador CSS `inteligente` pode detectar que estamos definindo regras para `.awesome-container` de maneira ineficiente e transformar as duas declarações em apenas uma sem afetar outros estilos e reduzindo ainda mais o número de bytes.
 * Os espaços em branco (espaços e tabulações) são uma comodidade para os desenvolvedores de HTML, CSS e JavaScript. Um compactador extra pode remover todas as tabulações e espaços.
 
-^
+
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/optimizing-content-efficiency/_code/minified.html" region_tag="full" adjust_indentation="auto" %}
 </pre>

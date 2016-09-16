@@ -1,24 +1,22 @@
----
-title: "Configure e customize o DevTools"
-description: "Altere a aparência do DevTools e acesse recursos escondidos."
-updated_on: 2016-03-29
-translation_priority: 0
-translators:
-  - alansilva
-key-takeaways:
-  tldr:
-    - "Abra os menus Principal e Settings."
-    - "Customize a aparência do DevTools."
-    - "Acesse recursos ocultos."
----
+project_path: /web/_project.yaml
+book_path: /web/tools/_book.yaml
+description: Altere a aparência do DevTools e acesse recursos escondidos.
 
-<p class="intro">Altere a aparência do DevTools e acesse recursos escondidos.</p>
+{# wf_updated_on: 2016-03-28 #}
+{# wf_published_on: 2016-03-28 #}
 
-{% include shared/toc.liquid %}
+# Configure e customize o DevTools {: .page-title }
 
-{% include shared/takeaway.liquid list=page.key-takeaways.tldr %}
+Altere a aparência do DevTools e acesse recursos escondidos.
 
-## Abra o menu principal {#main-menu}
+
+### TL;DR {: .hide-from-toc }
+- Abra os menus Principal e Settings.
+- Customize a aparência do DevTools.
+- Acesse recursos ocultos.
+
+
+## Abra o menu principal {: #main-menu}
 
 O **Menu Principal** do DevTools é um menu dropdown para configurar a aparência
 do DevTools, acessar ferramentas adicionais, abrir as configurações, e outras coisas.
@@ -28,12 +26,12 @@ da janela do DevTools.
 
 ![main menu](images/main-menu.png)
 
-## Abra o menu Settings {#settings}
+## Abra o menu Settings {: #settings}
 
 Para abrir as configurações do DevTools, pressione <kbd>F1</kbd> com o DevTools com foco,
 ou [abra o Menu Principal](#main-menu) e então selecione **Settings**.
 
-## Reordene as abas dos painéis {#panel-tabs}
+## Reordene as abas dos painéis {: #panel-tabs}
 
 Clique, segure, e arraste a aba de um painel para mudar a ordenação. Sua ordenação customizada
 persiste através das sessões do DevTools.
@@ -46,7 +44,7 @@ Você pode arrastá-lo para qualquer posição, podendo até deixá-lo como o pr
 
 ![depois de reordenar](images/after-reorder.png)
 
-## Customize o posicionamento do DevTools {#placement}
+## Customize o posicionamento do DevTools {: #placement}
 
 Você pode encaixar o DevTools na parte inferior da página, no canto direito da página, ou
 você pode abri-lo em uma nova janela.
@@ -67,7 +65,7 @@ selecione **Dark** do menu **Theme**.
 
 ![dark theme](images/dark-theme.png)
 
-## Abra e feche os Drawers {#drawer-tabs}
+## Abra e feche os Drawers {: #drawer-tabs}
 
 Pressione <kbd>Esc</kbd> para abrir e fechar as **Abas Inferiores** no DevTools. A imagem
 abaixo mostra um exemplo do painel **Elements** enquanto o painel **Console**
@@ -85,7 +83,7 @@ Enquanto ele estiver aberto, clique no ícone com três pontos
 
 ![drawer tabs menu](images/drawer-tabs.png)
 
-## Habilite os experimentos {#experiments}
+## Habilite os experimentos {: #experiments}
 
 Quando o DevTools Experiment estiver habilitado, uma nova página chamada **Experiments**
 vai aparecer nas configurações do DevTools. A partir dessa página você pode habilitar e desabilitar
@@ -98,10 +96,13 @@ Você deverá ver uma nova página chamada **Experiments** ao abrir as configura
 
 ![DevTools Experiments](images/experiments.png)
 
-## Emule mídia de impressão {#emulate-print-media}
+## Emule mídia de impressão {: #emulate-print-media}
 
 Para visualizar uma página no modo preview de impressão, [abra o menu principal do DevTools](#main-menu),
 selecione **More Tools** > **Rendering Settings**, e depois habilite
 o checkbox **emulate media** com o menu dropdown selecionado com **print**.
 
 ![enabling print preview mode](images/emulate-print-media.png)
+
+Translated By: 
+{% include "_shared/contributors/alansilva.html" %}

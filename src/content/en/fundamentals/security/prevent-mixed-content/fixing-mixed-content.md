@@ -13,7 +13,7 @@ Success: Supporting HTTPS for your website is an important step to protecting yo
 
 Finding and fixing mixed content is an important task, but it can be time-consuming. This guide discusses some tools and techniques that are available to help with the process. For more information on mixed content itself, see [What is Mixed Content](./what-is-mixed-content).
 
-### TL;DR {: .hide-from-toc } {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 
 * Always use https:// URLs when loading resources on your page.
 * Use the `Content-Security-Policy-Report-Only` header to monitor mixed content errors on your site.

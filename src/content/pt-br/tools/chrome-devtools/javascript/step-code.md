@@ -1,22 +1,16 @@
----
-title: "Como Percorrer Seu Código"
-description: "Executar uma linha de código ou uma função de cada vez, te permite observar alterações nos dados e na página para entender exatamente o que está acontecendo."
-updated_on: 2015-09-02
-translators:
-  - alansilva
-translation_priority: 0
-key-takeaways:
-  tldr:
-    - "Execute o código passo a passo para observar os problemas antes ou enquanto ocorrem e teste alterações através de alterações do código em tempo real."
-    - "Prefira dar passos ao invés de registrar coisas no console, pois dados logados já estão velhos no momento em que chegam no console."
-    - "Habilite o recurso 'Async call stack' para ganhar maior visibilidade dentro da pilha de chamadas de funções assíncronas."
-    - "Coloque scripts no Blackbox para esconder códigos de terceiros das suas pilhas de chamadas."
-    - "Use funções nomeadas ao invés de anônimas para melhorar a legibilidade da sua pilha de chamadas."
----
-<p class="intro">
-  Executar uma linha de código ou uma função de cada vez, te permite observar alterações nos dados e na página para entender exatamente o que está acontecendo.
-  Você pode também modificar os valores dos dados utilizados pelo script, e você pode também modificar o próprio script.
-</p>
+project_path: /web/_project.yaml
+book_path: /web/tools/_book.yaml
+description: Executar uma linha de código ou uma função de cada vez, te permite observar alterações nos dados e na página para entender exatamente o que está acontecendo.
+
+
+{# wf_updated_on: 2015-09-01 #}
+{# wf_published_on: 2000-01-01 #}
+
+# Como Percorrer Seu Código {: .page-title }
+
+
+Executar uma linha de código ou uma função de cada vez, te permite observar alterações nos dados e na página para entender exatamente o que está acontecendo.
+Você pode também modificar os valores dos dados utilizados pelo script, e você pode também modificar o próprio script.
 
 *Porque o valor desta variável é 20 ao invés de 30? Porque parece que aquela linha de código não funciona? Porque esta flag está com true quando deveria ser false?* Todo desenvolvedor encara essas perguntas, e percorre o código para solucioná-las.
 
@@ -24,16 +18,21 @@ Depois de [adicionar os breakpoints](/web/tools/chrome-devtools/debug/breakpoint
 que o breakpoint seja alcançado. Isto pausa todo o JavaScript na página, o foco muda para o painel Sources do DevTools, e a linha com breakpoint fica realçada.
 Você pode agora seletivamente executar o código e examinar seus dados, passo a passo.
 
-{% include shared/toc.liquid %}
 
-{% include shared/takeaway.liquid list=page.key-takeaways.tldr %}
+### TL;DR {: .hide-from-toc }
+- Execute o código passo a passo para observar os problemas antes ou enquanto ocorrem e teste alterações através de alterações do código em tempo real.
+- Prefira dar passos ao invés de registrar coisas no console, pois dados logados já estão velhos no momento em que chegam no console.
+- Habilite o recurso 'Async call stack' para ganhar maior visibilidade dentro da pilha de chamadas de funções assíncronas.
+- Coloque scripts no Blackbox para esconder códigos de terceiros das suas pilhas de chamadas.
+- Use funções nomeadas ao invés de anônimas para melhorar a legibilidade da sua pilha de chamadas.
+
 
 ## Passo a passo em ação
 
 Todas as opções de passo são representadas através de ícones clicáveis ![Breakpoints button bar](imgs/image_7.png){:.inline} no sidebar, mas pode também ser acionada via teclas de atalho.
 Aqui está o resumo:
 
-<table class="">
+<table >
   <thead>
     <tr>
       <th data-th="Icon/Button">Ícone/Botão</th>
@@ -96,15 +95,14 @@ dos passos que levaram o código até o breakpoint. Ele é útil para entender n
 
 ### Exemplo
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="imgs/image_15.png" alt="Call stack">
-  </div>
-  <div class="mdl-cell mdl-cell--8-col">
-    Um evento onclick inicial na linha 50 no arquivo <strong>index.html</strong> chamou a função <code>setone()</code> na linha 18 do arquivo de JavaScrip <strong>dgjs.js</strong>,
-    que então chamou a função <code>setall()</code> na linha 4 do mesmo arquivo, onde a execução está pausada no breakpoint atual.
-  </div>
-</div>
+
+<img src="imgs/image_15.png" class="attempt-left" alt="Call stack">
+
+Um evento onclick inicial na linha 50 no arquivo <strong>index.html</strong>
+chamou a função <code>setone()</code> na linha 18 do arquivo de JavaScript
+<strong>dgjs.js</strong>, que então chamou a função <code>setall()</code> na
+linha 4 do mesmo arquivo, onde a execução está pausada no breakpoint atual.
+
 
 ### Habilite a pilha de chamada assíncrona
 
@@ -121,7 +119,8 @@ Uma função chamada `onClick` é registrada como o manipulador do evento
 por sua vez ele chama uma função chamada `f`, da qual apenas força o script a
 pausar usando a palavra chave `debugger`.
 
-{% animation animations/async-call-stack-demo.mp4 %}
+<video src="animations/async-call-stack-demo.mp4">
+</video>
 
 No video, um breakpoint é acionado, e a pilha de chamada fica extendida.
 Existe apenas uma chamada na pilha: `f`. O recurso de pilha de chamada assíncrona fica então
@@ -166,28 +165,28 @@ Coloque scripts de terceiros no Blackbox para omitir esses arquivos nas suas pil
 
 Antes de omitir:
 
-![Pilha de chamada antes de omitir os arquivos](/web/tools/chrome-devtools/debug/breakpoints/imgs/before-blackbox.png)
+![Pilha de chamada antes de omitir os arquivos](imgs/before-blackbox.png)
 
 Depois de omitir:
 
-![Pilha de chamada depois de omitir os arquivos](/web/tools/chrome-devtools/debug/breakpoints/imgs/after-blackbox.png)
+![Pilha de chamada depois de omitir os arquivos](imgs/after-blackbox.png)
 
 Para esconder um arquivo:
 
 1. Abra as configurações do DevTools.
 
-   ![Abrindo as configurações do DevTools](/web/tools/chrome-devtools/debug/breakpoints/imgs/open-settings.png)
+   ![Abrindo as configurações do DevTools](imgs/open-settings.png)
 
 2. No menu de navegação á esquerda, clique em **Blackboxing**.
 
-   ![painel Blackboxing no Chrome DevTools](/web/tools/chrome-devtools/debug/breakpoints/imgs/blackbox-panel.png)
+   ![painel Blackboxing no Chrome DevTools](imgs/blackbox-panel.png)
 
 3. Clique em **Add pattern**.
 
 4. No campo **Pattern** informe o padrão de nome de arquivo que você deseja
    excluir da sua pilha de chamadas. O DevTools exclui quaisquer scripts que combinam com o padrão.
 
-   ![Adicionando o padrão no blackbox](/web/tools/chrome-devtools/debug/breakpoints/imgs/add-pattern.png)
+   ![Adicionando o padrão no blackbox](imgs/add-pattern.png)
 
 5. No menu á direita do campo, selecione **Blackbox** para executar os arquivos de script
    mas para excluir as chamadas das pilhas de chamadas, ou selecione
@@ -213,14 +212,14 @@ Experimente modificar os valores, e então continue a execução para ver como m
 
 #### Exemplo
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="imgs/image_17.png" alt="Console Drawer">
-  </div>
-  <div class="mdl-cell mdl-cell--8-col">
-    Revelamos que o valor do parâmetro `dow` é na verdade 2, mas manualmente altermos ele para 3 antes de retomar a execução.
-  </div>
-</div>
+
+<img src="imgs/image_17.png" class="attempt-left" alt="Console Drawer">
+
+Revelamos que o valor do parâmetro `dow` é na verdade 2, mas manualmente
+altermos ele para 3 antes de retomar a execução.
+
+<div class="clearfix"></div>
+
 
 ## Editando em tempo real
 
@@ -232,16 +231,17 @@ seu script modificado será executado no lugar do original, e você poderá obse
 
 #### Exemplo
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--4-col">
-    <img src="imgs/image_18.png" alt="Live Editing">
-  </div>
-  <div class="mdl-cell mdl-cell--8-col">
-    Suspeitamos que o parâmetro <code>dow</code> está, em cada caso, fora por +1 quando é passado para a função <code>setone()</code> – que é, o valor do <code>dow</code>,
-    quando recebida, é 1 quando deveria ser 0, 2 quando deveria ser 1, etc. Para testar rapidamente se diminuindo o valor passado confirma que este é o problema,
-    nós adicionamos a linha 17 no começo da função e retomamos a execução.
-  </div>
-</div>
+<img src="imgs/image_18.png" class="attempt-left" alt="Live Editing">
 
+Suspeitamos que o parâmetro <code>dow</code> está, em cada caso, fora por +1
+quando é passado para a função <code>setone()</code> – que é, o valor do
+<code>dow</code>, quando recebida, é 1 quando deveria ser 0, 2 quando deveria
+ser 1, etc. Para testar rapidamente se diminuindo o valor passado confirma
+que este é o problema, nós adicionamos a linha 17 no começo da função e
+retomamos a execução.
+
+
+Translated By: 
+{% include "_shared/contributors/alansilva.html" %}
 
 

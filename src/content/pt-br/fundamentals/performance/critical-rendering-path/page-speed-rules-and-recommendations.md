@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Regras do PageSpeed Insights em contexto: em que prestar atenção ao otimizar o caminho de processamento essencial e por quê.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

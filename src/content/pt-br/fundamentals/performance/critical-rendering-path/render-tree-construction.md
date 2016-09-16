@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A árvore do CSSOM e do DOM se combinam em uma árvore de renderização, que é usada para computar o layout de cada elemento visível e serve como entrada para o processo de pintura, que renderiza os pixels na tela. A otimização de cada uma dessas etapas é essencial para obter um ótimo desempenho de renderização.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 

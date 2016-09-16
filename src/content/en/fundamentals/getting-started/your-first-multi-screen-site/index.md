@@ -261,7 +261,7 @@ We do this by making a decision on where to place our breakpoints &mdash; a poin
 where the layout and styles change &mdash; based on how the content fits the
 screen-size.
 
-### TL;DR {: .hide-from-toc } {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Always use a viewport.
 - Always start with a narrow viewport first and scale out.
 - Base your breakpoints off when you need to adapt the content.

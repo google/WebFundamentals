@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprenda como animar visualizações modais em seus aplicativos.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -19,7 +19,7 @@ As visualizações modais são para mensagens importantes e, por isso, você tem
 - Certifique-se de remover a visualização modal rapidamente quando o usuário descartá-la, mas ela deve ser exibida na tela um pouco mais lentamente para não surpreender o usuário.
 
 
-<img src="imgs/gifs/dont-press.gif" alt="Animando uma visualização modal." />
+<img src="images/dont-press.gif" alt="Animando uma visualização modal." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">Veja a amostra.</a>
 

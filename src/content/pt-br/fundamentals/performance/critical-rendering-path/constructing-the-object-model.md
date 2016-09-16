@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Antes de o navegador renderizar conteúdo para a tela, ele precisa criar as árvores DOM e CSSOM. Para isso, precisamos garantir que o HTML e o CSS sejam entregues ao navegador o mais rápido possível.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-09-11 #}
 {# wf_published_on: 2014-03-31 #}
 

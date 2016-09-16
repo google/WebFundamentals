@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: O volume de dados transferidos por aplicativos continua a crescer. Para proporcionar um bom desempenho, é preciso otimizar a exibição de absolutamente todos os bytes.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

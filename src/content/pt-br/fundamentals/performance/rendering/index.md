@@ -2,19 +2,21 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: O usuário percebem se os sites e aplicativos não funcionam bem, portanto, otimizar o desempenho da renderização é fundamental.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Rendering Performance {: .page-title }
 
+<img src="images/intro/response.jpg" class="attempt-right" alt="Usuário interagindo com um site.">
 
 
 O usuário da Web de hoje <a href=\"http://paul.kinlan.me/what-news-readers-want\">espera que as páginas visitadas sejam interativas e simples</a> e é esse o ponto que você precisa enfatizar cada vez mais com seu tempo e esforço. As páginas devem não apenas carregar rapidamente, mas também funcionar bem; a rolagem deve ser rápida de acordo com o dedo e as animações e interações devem ser suaves.
 
-<img src="images/intro/response.jpg" class="center" alt="Usuário interagindo com um site.">
 
 Para criar sites e aplicativos de alto desempenho, você precisa saber como o HTML, JavaScript e CSS são tratado pelo navegador e certifique-se de que o código que escrever (e outro código de terceiros que incluir) funcione da forma mais eficaz possível.
+
+<div class="clearfix"></div>
+
 
 ## 60 fps e taxas de atualização do dispositivo
 

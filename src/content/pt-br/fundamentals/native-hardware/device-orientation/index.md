@@ -2,13 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Os eventos de orientação e movimento do dispositivo oferecem acesso ao acelerômetro integrado, giroscópio e compasso em dispositivos móveis.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Device Orientation {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 Os eventos de orientação e movimento do dispositivo oferecem acesso ao acelerômetro integrado, giroscópio e compasso em dispositivos móveis.
@@ -76,35 +76,33 @@ Os dados de rotação são retornados como [ângulo de Euler](http://en.wikipedi
 representando o número de graus de diferença entre o frame de coordenada
 do dispositivo e o frame de coordenada terrestre.
 
-<div>
-  <div class="g--third">
-    <img src="images/alpha.png"><br>
+<figure>
+  <img src="images/alpha.png">
+  <figcaption>
     <b>alpha:</b> A orientação ao redor do eixo z e é 0&deg; quando o topo do
     dispositivo está apontado diretamente para o norte.  Conforme o dispositivo é girado no sentido anti-horário
     o valor de`alpha` aumenta.
-  </div>
-  <div class="g--third">
-    <img src="images/beta.png"><br>
+  </figcaption>
+</figure>
+<figure>
+  <img src="images/beta.png">
+  <figcaption>
     <b>beta:</b> A orientação ao redor do eixo x e é 0&deg; quando o topo e 
     a parte inferior do dispositivo estão equidistantes da superfície terrestre. O valor
     aumenta conforme o topo do dispositivo é inclinado em direção à superfície terrestre.
-  </div>
-  <div class="g--third g--last">
-    <img src="images/gamma.png"><br>
+  </figcaption>
+</figure>
+<figure>
+  <img src="images/gamma.png">
+  <figcaption>
     <b>gamma:</b> A rotação ao redor do eixo y e é 0&deg; quando a parte direita e
     esquerda do dispositivo estão equidistantes da superfície terrestre.  O valor
     aumenta conforme o lado direito do dispositivo é inclinado em direção à superfície terrestre. 
-  </div>
-</div>
-
-<div style="clear:both;"></div>
-
-
-
+  </figcaption>
+</figure>
 
 
 ## Device orientation 
-
 
 
 
@@ -121,11 +119,10 @@ O evento de orientação do dispositivo retorna dados de rotação, que inclui q
 
 Há várias utilizações para eventos de orientação do dispositivo.  Por exemplo:
 
-<ul>
-  <li>Atualizar um mapa conforme o usuário se movimenta.</li>
-  <li>Pequenos ajustes da interface do usuário, como por exemplo, adicionar efeitos paralaxe.</li>
-  <li>Combinado com a geolocalização, pode ser usado para navegação por giro.</li>
-</ul>
+* Atualizar um mapa conforme o usuário se movimenta.
+* Pequenos ajustes da interface do usuário, como por exemplo, adicionar efeitos paralaxe.
+* Combinado com a geolocalização, pode ser usado para navegação por giro.
+
 
 ### Busque suporte e ouça os eventos
 
@@ -134,7 +131,7 @@ suportados pelo navegador.  Em seguida, anexe o escutador de eventos ao objeto `
 para ouvir os eventos `deviceorientation`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
 </pre>
 
 ### Lidar com eventos de orientação do dispositivo
@@ -145,9 +142,9 @@ sua posição atual em relação ao <a href="index.html#earth-coordinate-frame">
 Frame de coordenada terrestre</a>.
 
 O evento geralmente retorna três propriedades, 
-<a href="index.html#rotation-data">`alpha`</a>, 
-<a href="index.html#rotation-data">`beta`</a> e 
-<a href="index.html#rotation-data">`gamma`</a>.  No Mobile Safari e
+<a href="#rotation-data">`alpha`</a>, 
+<a href="#rotation-data">`beta`</a> e 
+<a href="#rotation-data">`gamma`</a>.  No Mobile Safari e
 parâmetro adicional<a href="https://developer.apple.com/library/safari/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/DeviceOrientationEvent/DeviceOrientationEvent.html">`webkitCompassHeading`</a> é retornado com o cabeçalho do
 compasso.
 
@@ -173,11 +170,10 @@ A movimentação do dispositivo fornece informações sobre a força de acelera�
 
 Há várias utilizações para eventos de movimentação do dispositivo.  Por exemplo:
 
-<ul>
-  <li>O gesto de balançar para atualizar dados.</li>
-  <li>Em jogos, para fazer com que as personagens pulem ou se movam.</li>
-  <li>Para aplicativos de saúde e bem-estar</li>
-</ul>
+* O gesto de balançar para atualizar dados.
+* Em jogos, para fazer com que as personagens pulem ou se movam.
+* Para aplicativos de saúde e bem-estar
+
 
 ### Busque suporte e ouça os eventos
 
@@ -186,7 +182,7 @@ suportados pelo navegador.  Em seguida, anexe o escutador de eventos ao objeto `
  para ouvir eventos `devicemotion`. 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
 </pre>
 
 ### Lide com eventos de movimentação do dispositivo
@@ -197,10 +193,10 @@ do dispositivo, em qualquer ponto no tempo.  Alguns dispositivos não têm o equ
 para excluir o efeito da gravidade.
 
 O evento retorna quatro propriedades, 
-<a href="index.html#device-frame-coordinate">`accelerationIncludingGravity`</a>, 
-<a href="index.html#device-frame-coordinate">`acceleration`</a>, 
+<a href="#device-frame-coordinate">`accelerationIncludingGravity`</a>, 
+<a href="#device-frame-coordinate">`acceleration`</a>, 
 que exclui os efeitos da gravidade, 
-<a href="index.html#rotation-data">`rotationRate`</a> e `interval`.
+<a href="#rotation-data">`rotationRate`</a> e `interval`.
 
 Por exemplo, vamos analisar um telefone deixado sobre uma mesa plana
 com a tela virada para cima.
@@ -289,7 +285,7 @@ de um objeto.  Por exemplo, qual é a aceleração máxima de uma pessoa
 pulando.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
 </pre>
 
 Depois de tocar no botão Go!, o usuário é solicitado a pular!  Nesse momento,

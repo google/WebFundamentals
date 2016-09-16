@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Vá além e crie animações totalmente personalizadas para os seus projetos.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -28,8 +28,8 @@ Mudar o valor de X e Y de cada ponto de controle trará uma curva muito distinta
 
 Para comparação, aqui estão duas curvas: uma curva ease-in-out comum e uma curva personalizada:
 
-<img src="imgs/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Curva de animação do ease-in-out." />
-<img src="imgs/custom.png" style="display: inline; max-width: 300px" alt="Curva de animação personalizada." />
+<img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Curva de animação do ease-in-out." />
+<img src="images/custom.png" style="display: inline; max-width: 300px" alt="Curva de animação personalizada." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-custom-curve.html">Veja uma animação com easing personalizado.</a>
 

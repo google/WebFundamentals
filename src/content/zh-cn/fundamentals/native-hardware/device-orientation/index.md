@@ -133,7 +133,7 @@ device orientation 事件有多种用途。  例如：
 对象，以侦听 `deviceorientation` 事件。 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/dev-orientation.html" region_tag="devori"   adjust_indentation="auto" %}
 </pre>
 
 ### 处理 device orientation 事件
@@ -185,7 +185,7 @@ device orientation 事件有多种用途。  例如：
 对象，以侦听 `devicemotion` 事件。 
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmot"   adjust_indentation="auto" %}
 </pre>
 
 ### 处理设备动作事件
@@ -288,7 +288,7 @@ device orientation 事件有多种用途。  例如：
 最大加速度是多少。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/capabilities/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/native-hardware/device-orientation/_code/jump-test.html" region_tag="devmothand"   adjust_indentation="auto" %}
 </pre>
 
 在点击 Go! 按钮之后，将告诉用户跳跃！在此时间中，

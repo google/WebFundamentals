@@ -2,25 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Grande parte da Web não está otimizada para experiências em múltiplos dispositivos. Conheça os princípios fundamentais para fazer seu site funcionar de maneira otimizada em dispositivos móveis, computadores ou qualquer aparelho com tela.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Princípios básicos de Web design responsivo {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 O uso de dispositivos móveis para navegar pela Web está aumentando em ritmo astronômico. No entanto, grande parte da Web não está otimizada para esses dispositivos. Os dispositivos móveis muitas vezes são limitados pelo tamanho da tela e exigem uma abordagem diferente em relação à forma como o conteúdo será disposto na tela.
-
-
-{% comment %}
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="oK09n_PGhTo"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-{% endcomment %}
 
 
 ### Responsive Web Design Fundamentals
@@ -40,10 +30,10 @@ Explore what makes a site responsive and how some common responsive design patte
 Existem inúmeros tamanhos de tela em diferentes celulares, `phablets`, tablets, computadores, consoles de videogame, TVs e até mesmo telas incorporadas em acessórios pessoais.  Os tamanhos das telas estão em constante evolução, por isso, é importante que seu site possa se adaptar a qualquer tamanho disponível hoje e no futuro.
 
 
-  <video autoplay loop controls class="responsiveVideo">
-    <source src="videos/resize.webm" type="video/webm">
-    <source src="videos/resize.mp4" type="video/mp4">
-  </video>
+<video autoplay loop controls class="responsiveVideo">
+  <source src="videos/resize.webm" type="video/webm">
+  <source src="videos/resize.mp4" type="video/mp4">
+</video>
 
 
 Web design responsivo, definido originalmente por [Ethan Marcotte in A List Apart](http://alistapart.com/article/responsive-web-design/), relaciona-se às necessidades dos usuários e aos dispositivos que eles usam.  O layout é alterado de acordo com o tamanho e os recursos do dispositivo.  Por exemplo, em um celular, os usuários veem o conteúdo disposto em uma única coluna. Um tablet possivelmente exibirá o mesmo conteúdo em duas colunas.
@@ -69,21 +59,10 @@ Para tentar fornecer a melhor experiência possível, os navegadores de disposit
 
 Ao usar o valor meta de janela de visualização `width=device-width`, você faz com que a página corresponda à largura da tela em um número de pixels independentes do dispositivo. Assim, a página poderá reorganizar o conteúdo para adequar-se a diferentes tamanhos de tela, sejam processados em um pequeno celular ou em um grande monitor de computador.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Página sem uma janela de segmentação definida">
-      Ver o exemplo
-    
-  </div>
+<img src="imgs/no-vp.png" class="attempt-left" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Página sem uma janela de segmentação definida">
+<img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Página com uma janela de segmentação definida">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp.png" class="attempt-right"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Página com uma janela de segmentação definida">
-      Ver o exemplo
-    
-  </div>
-</div>
 
 Alguns navegadores mantêm a largura da página constante, aumentando o zoom em vez de mudar a organização do conteúdo para preencher a tela no modo paisagem. O atributo `initial-scale=1` orienta os navegadores a estabelecer uma relação de 1:1 entre os pixels do código CSS e os pixels independentes do dispositivo, seja qual for a orientação da tela. Isso permite que a página aproveite a largura total do modo paisagem.
 
@@ -117,21 +96,10 @@ Como as dimensões e a largura da tela nos pixels do código CSS variam enormeme
 
 A definição de elementos com grandes larguras absolutas no código CSS (como no exemplo abaixo) fará com que o div seja largo demais para a janela de visualização em um dispositivo mais estreito (por exemplo, um dispositivo com uma largura de 320 pixels no CSS, como um iPhone). Em vez disso, considere usar valores de largura relativos, como `width: 100%`.  Da mesma forma, cuidado ao usar grandes valores absolutos para definir posicionamento, já que eles podem fazer com que o elemento fique fora da janela de visualização em dispositivos com telas pequenas.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Página com um elemento fixo de 344 px de largura em um iPhone.">
-      Ver o exemplo
-    
-  </div>
+<img src="imgs/vp-fixed-iph.png" class="attempt-left" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Página com um elemento fixo de 344 px de largura em um iPhone.">
+<img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Página com um elemento fixo de 344 px em um Nexus 5.">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-n5.png" class="attempt-right" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Página com um elemento fixo de 344 px em um Nexus 5.">
-      Ver o exemplo
-    
-  </div>
-</div>
 
 
 ## Use as consultas de mídia no código CSS para produzir um layout responsivo
@@ -217,9 +185,7 @@ Embora existam diversos itens sobre os quais podem ser criadas consultas, `min-w
 Vamos analisar um exemplo:
 
 <figure>
-  
-    <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Visualização de uma página com consultas de mídia para alterar suas propriedades à medida que for redimensionada.">
-  
+  <img src="imgs/mq.png" class="center" srcset="imgs/mq.png 1x, imgs/mq-2x.png 2x" alt="Visualização de uma página com consultas de mídia para alterar suas propriedades à medida que for redimensionada.">
 </figure>
 
 <pre class="prettyprint">
@@ -286,16 +252,14 @@ Vamos trabalhar no exemplo que vimos anteriormente, a [previsão do tempo](/web/
 O primeiro passo é fazer com que a previsão seja exibida de forma adequada em uma tela pequena.
 
 <figure>
-  
-    <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Visualização da previsão do tempo exibida em uma tela pequena.">
+  <img src="imgs/weather-1.png" class="center" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="Visualização da previsão do tempo exibida em uma tela pequena.">
   
 </figure>
 
 Em seguida, redimensione o navegador até que haja muitos espaços em branco entre os elementos e a previsão esteja desagradável visualmente.  A decisão é relativamente subjetiva, mas acima de 600 px a página fica excessivamente larga.
 
 <figure>
-  
-    <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Visualização da previsão do tempo à medida que a página fica mais larga.">
+  <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Visualização da previsão do tempo à medida que a página fica mais larga.">
   
 </figure>
 
@@ -308,8 +272,7 @@ Para inserir um ponto de quebra em 600 pixels, crie duas novas planilhas de esti
 Por fim, configure novamente o código CSS.  Neste exemplo, colocamos os estilos comuns como fontes, ícones, posicionamento básico e cores em `weather.css`.  Os layouts específicos para a tela pequena são colocados em `weather-small.css`, e os estilos definidos para a tela grande são inseridos em `weather-large.css`.
 
 <figure>
-  
-    <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
+  <img src="imgs/weather-3.png" class="center" srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
   
 </figure>
 
@@ -323,15 +286,10 @@ Começaremos otimizando o layout de tela pequena.  Neste caso, aumentaremos a fo
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"   adjust_indentation="auto" %}
 </pre>
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-l.png" class="attempt-left"  srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
-  </div>
+<img src="imgs/weather-4-l.png" class="attempt-left"  srcset="imgs/weather-4-l.png 1x, imgs/weather-4-l-2x.png 2x" alt="Before adding minor breakpoints.">
+<img src="imgs/weather-4-r.png" class="attempt-right"  srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/weather-4-r.png" class="attempt-right"  srcset="imgs/weather-4-r.png 1x, imgs/weather-4-r-2x.png 2x" alt="After adding minor breakpoints.">
-  </div>
-</div>
 
 Para telas grandes, é mais indicado definir a largura máxima do painel de previsão para que ele não ocupe toda a largura da tela.
 
@@ -343,15 +301,10 @@ Para telas grandes, é mais indicado definir a largura máxima do painel de prev
 
 A teoria clássica da legibilidade sugere que uma coluna ideal deve conter 70 a 80 caracteres por linha (cerca de 8 a 10 palavras em inglês), por isso, sempre que a largura de um bloco de texto contiver mais de 10 palavras, deve-se considerar a inclusão de um ponto de quebra.
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-ph.png" class="attempt-left"  srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Antes de adicionar pontos de quebra menores.">
-  </div>
+<img src="imgs/reading-ph.png" class="attempt-left"  srcset="imgs/reading-ph.png 1x, imgs/reading-ph-2x.png 2x" alt="Antes de adicionar pontos de quebra menores.">
+<img src="imgs/reading-de.png" class="attempt-right"  srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Depois de adicionar pontos de quebra menores.">
+<div class="clearfix"></div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img src="imgs/reading-de.png" class="attempt-right"  srcset="imgs/reading-de.png 1x, imgs/reading-de-2x.png 2x" alt="Depois de adicionar pontos de quebra menores.">
-  </div>
-</div>
 
 Vamos analisar em mais detalhes o exemplo de postagem de blog acima.  Em telas pequenas, a fonte Roboto com um em funciona de forma otimizada, formando dez palavras por linha, mas telas maiores exigem um ponto de quebra. Nesse caso, se a largura do navegador for superior a 575 px, a largura ideal para o conteúdo é 550 px.
 

@@ -25,7 +25,7 @@ Forms are hard to fill out on mobile. The best forms are the ones with the fewes
 Design efficient forms by avoiding repeated actions, asking for only the necessary information and guide users by showing them how far along they are in multi-part forms.
 
 
-### TL;DR {: .hide-from-toc } {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Use existing data to pre-populate fields and be sure to enable auto-fill.
 - Use clearly-labeled progress bars to help users get through multi-part forms.
 - Provide visual calendar so users don’t have to leave your site and jump to the calendar app on their smartphones.

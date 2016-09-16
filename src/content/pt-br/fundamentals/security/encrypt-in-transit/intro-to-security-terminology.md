@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Ao migrar para HTTPS, um dos obstáculos que os operadores de site enfrentam é conceitual: O que está acontecendo exatamente? O que toda terminologia de criptografia significa? Nesta seção, daremos uma breve visão geral.
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2015-03-27 #}
 

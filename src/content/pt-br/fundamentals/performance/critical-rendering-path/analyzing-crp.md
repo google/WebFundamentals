@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Identificar e resolver afunilamentos de desempenho do caminho de processamento essencial requer um bom conhecimento das ciladas comuns. Façamos um tour prático para extrair padrões comuns de desempenho que ajudarão a otimizar suas páginas.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-27 #}
 {# wf_published_on: 2014-03-31 #}
 

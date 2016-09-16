@@ -2,15 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A maioria dos navegadores e dispositivos tem acesso à localização geográfica do usuário. Saiba como trabalhar com a localização do usuário em seu site e aplicativos.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # User Location {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 O API de Geolocalização permite que você descubra onde o usuário está, sempre com a permissão do usuário. Essa funcionalidade pode ser usada como parte das consultas do usuário, por exemplo, para orientar alguém até um ponto de destino. Também pode ser usada para marcar  geograficamente algum conteúdo que o usuário tenha criado, como por exemplo,  para marcar onde uma foto foi tirada.
 
@@ -22,9 +20,6 @@ Há muitas coisas que você precisa estar atento ao usar a API de Geolocalizaç�
 
 
 ## Getting the user to consent to location sharing 
-
-
-
 
 Como desenvolvedor da Web, ter acesso à localização do usuário abre um grande número de possibilidades como filtragem avançada, indicação do usuário em um mapa e oferta de sugestões proativas sobre coisas que o usuário pode fazer com base na sua posição atual.
 
@@ -73,20 +68,17 @@ Certifique-se que o usuário compreenda o motivo de você estar solicitando sua 
 para ele.  Perguntar imediatamente na página inicial no carregamento
 do site resulta em uma experiência desagradável para o usuário.
 
-<div class="clear g-wide--pull-1">
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
-      <figcaption>Perguntar imediatamente na página inicial conforme o site carrega resulta em uma experiência desagradável para o usuário.</figcaption>
-    </figure>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
-      <figcaption>Sempre solicite acesso a uma localização por um gesto do usuário.</figcaption>
-      </figure>
-  </div>
-</div>
+
+<figure class="attempt-left">
+  <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
+  <figcaption>Perguntar imediatamente na página inicial conforme o site carrega resulta em uma experiência desagradável para o usuário.</figcaption>
+</figure>
+<figure class="attempt-right">
+  <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
+  <figcaption>Sempre solicite acesso a uma localização por um gesto do usuário.</figcaption>
+</figure>
+<div class="clearfix"></div>
+
 
 Em vez disso, forneça ao usuário uma ação de clique clara ou uma indicação de que
 uma operação exigirá o acesso à sua localização.  O usuário poderá
@@ -127,6 +119,8 @@ Recomendamos:
 4.  Se depois do tempo limite você ainda não recebeu uma resposta positiva, mostre uma notificação para o usuário.
 5.  Se a resposta for recebida posteriormente e a notificação ainda estiver presente, remova-a da tela.
 
+
+<div class="clearfix"></div>
 
     button.onclick = function() {
       var startPos;
@@ -427,6 +421,8 @@ posicionamento:
 1.  Obtém uma detecção mais precisa do usuário.
 2.  As mudanças de posição do usuário.
  
+<div class="clearfix"></div>
+
 
     var watchId = navigator.geolocation.watchPosition(function(position) {
       document.getElementById('currentLat').innerHTML = position.coords.latitude;

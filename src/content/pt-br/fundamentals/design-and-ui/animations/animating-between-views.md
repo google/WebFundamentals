@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Aprenda como animar entre duas visualizações em seus aplicativos.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-08-08 #}
 
@@ -28,11 +27,11 @@ Note: Você deve procurar manter 60 fps para todas as suas animações. Dessa fo
 
 Para tornar a vida um pouco mais fácil, vamos assumir que há duas visualizações: uma visualização de lista e uma visualização de detalhes. Conforme o usuário toca em um item da lista dentro da visualização de lista, a visualização de detalhes aparece e a visualização de lista desaparece.
 
-<img src="imgs/gifs/view-translate.gif" alt="Alternando entre duas visualizações" />
+<img src="images/view-translate.gif" alt="Alternando entre duas visualizações" />
 
 Para obter esse efeito, você precisará de um contêiner para ambas as visualizações com `overflow: hidden` definido. Dessa forma, as duas visualizações podem estar dentro, lado a lado, sem mostrar barras de rolagem horizontais e cada visualização pode rolar lado a lado dentro do contêiner, conforme necessário.
 
-<img src="imgs/container-two-views.svg" alt="Hierarquia de visualização." />
+<img src="images/container-two-views.svg" alt="Hierarquia de visualização." />
 
 O CSS para o contêiner é:
 
@@ -130,6 +129,6 @@ Além da transição entre visualizações, essa técnica também pode ser aplic
 
 Para uma tela maior, você deve manter a visualização de lista disponível a todo momento em vez de removê-la e deslizar a visualização de detalhes do lado direito. É muito parecido com lidar com uma visualização de navegação.
 
-<img src="imgs/container-two-views-ls.svg" alt="Hierarquia de visualização em uma tela grande." />
+<img src="images/container-two-views-ls.svg" alt="Hierarquia de visualização em uma tela grande." />
 
 

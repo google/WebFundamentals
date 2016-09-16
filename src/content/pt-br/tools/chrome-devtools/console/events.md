@@ -1,29 +1,26 @@
----
-title: "Monitore Eventos"
-description: "A API da Linha de Comandos do Chrome DevTools oferece várias maneiras de observar e inspecionar ouvintes de eventos"
-updated_on: 2015-08-03
-translation_priority: 0
-translators:
-  - alansilva
-key-takeaways:
-  command-line:
-    - "Ouça eventos de um certo tipo usando <code>monitorEvents()</code>."
-    - "Use <code>unmonitorEvents()</code> para parar de ouvir."
-    - "Pegue os ouvintes de um elemento do DOM usando <code>getEventListeners()</code>."
-    - "Use o painel Event Listeners para obter informações sobre os event listeners."
----
-<p class="intro">
-  A API da Linha de Comandos do Chrome DevTools oferece várias maneiras de observar e inspecionar ouvintes de eventos.
-  O JavaScript exerce um papel central nas páginas interativas, e o browser fornece algumas ferramentas úteis para debugar eventos e manipuladores de eventos.
-</p>
+project_path: /web/_project.yaml
+book_path: /web/tools/_book.yaml
+description: A API da Linha de Comandos do Chrome DevTools oferece várias maneiras de observar e inspecionar ouvintes de eventos
 
-{% include shared/toc.liquid %}
+{# wf_updated_on: 2015-08-02 #}
+{# wf_published_on: 2000-01-01 #}
 
-{% include shared/takeaway.liquid list=page.key-takeaways.command-line %}
+# Monitore Eventos {: .page-title }
+
+A API da Linha de Comandos do Chrome DevTools oferece várias maneiras de observar e inspecionar ouvintes de eventos.
+O JavaScript exerce um papel central nas páginas interativas, e o browser fornece algumas ferramentas úteis para debugar eventos e manipuladores de eventos.
+
+
+### TL;DR {: .hide-from-toc }
+- Ouça eventos de um certo tipo usando <code>monitorEvents()</code>.
+- Use <code>unmonitorEvents()</code> para parar de ouvir.
+- Pegue os ouvintes de um elemento do DOM usando <code>getEventListeners()</code>.
+- Use o painel Event Listeners para obter informações sobre os event listeners.
+
 
 ## Monitore eventos
 
-O método [monitorEvents()](/web/tools/chrome-devtools/debug/command-line/command-line-reference#monitoreventsobject-events)
+O método [`monitorEvents()`](/web/tools/chrome-devtools/debug/command-line/command-line-reference#monitoreventsobject-events)
 instrui o DevTools para fazer log de informações em alvos específicos.
 
 O primeiro parâmetro é o objeto a ser monitorado.
@@ -91,3 +88,5 @@ a página tem dois ouvintes de evento ligados via jQuery:
 
 ![Visão expandida dos ouvintes de eventos](images/events-eventlisteners_panel_details.png)
 
+Translated By: 
+{% include "_shared/contributors/alansilva.html" %}

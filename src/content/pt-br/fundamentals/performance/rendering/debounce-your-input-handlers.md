@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Manipuladores de entrada são uma possível causa de problemas em seus aplicativos, pois eles podem bloquear a conclusão de frames e causar trabalho extra (e desnecessário) com layout.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

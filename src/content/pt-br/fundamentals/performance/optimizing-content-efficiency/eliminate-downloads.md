@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: O recurso mais rápido e mais otimizado é um recurso não enviado. Você fez a auditoria de seus recursos recentemente? Você deveria fazer isso periodicamente para garantir que todos os recursos ajudem a oferecer uma experiência melhor para o usuário.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2014-03-31 #}
 

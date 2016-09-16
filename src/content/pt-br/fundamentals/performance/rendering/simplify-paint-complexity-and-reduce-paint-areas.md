@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A pintura é o processo de preenchimento em pixels que é composto nas telas dos usuários. Geralmente é a execução mais longa de todas as tarefas no pipeline e que deve ser evitada sempre que possível.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 

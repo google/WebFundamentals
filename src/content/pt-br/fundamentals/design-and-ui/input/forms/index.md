@@ -2,19 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-04-30 #}
 
 # Create Amazing Forms {: .page-title }
 
-{% include "web/_shared/contributors/petelepage.html" %}
-
-
-
-Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas. Bons formulários fornecem tipos de entrada semântica. As teclas de acesso devem ser adaptadas aos tipo de entrada do usuário; o usuário escolhe uma data em um calendário. Mantenha seu usuário informado. O usuário deve ser notificado pelas ferramentas de validação sobre o que fazer antes de enviar o formulário.
-
-Para obter uma visão geral dos guias sobre como criar formulários eficientes, veja o vídeo abaixo.
+{% include "_shared/contributors/petelepage.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="iYYHRwLqrKM"
@@ -22,12 +15,11 @@ Para obter uma visão geral dos guias sobre como criar formulários eficientes, 
   </iframe>
 </div>
 
+Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas. Bons formulários fornecem tipos de entrada semântica. As teclas de acesso devem ser adaptadas aos tipo de entrada do usuário; o usuário escolhe uma data em um calendário. Mantenha seu usuário informado. O usuário deve ser notificado pelas ferramentas de validação sobre o que fazer antes de enviar o formulário.
 
+Para obter uma visão geral dos guias sobre como criar formulários eficientes, veja o vídeo abaixo.
 
-## Design efficient forms 
-
-
-
+## Design efficient forms
 
 Crie formulários eficientes evitando ações repetidas, perguntando apenas o necessária e oriente o usuário mostrando o ponto em que se encontra em formulários de várias partes.
 
@@ -88,10 +80,7 @@ datas de início e término.
 </figure>
 
 
-
-
-## Choose the best input type 
-
+## Choose the best input type
 
 
 Agilize a entrada de informações usando o tipo de entrada correto. Os usuários gostam de sites que apresentem automaticamente teclados numéricos para inserir números de telefone ou quando os campos avançam automaticamente conforme são preenchidos. Procure por oportunidades de eliminar toques desnecessários em seus formulários.
@@ -240,44 +229,21 @@ listas para encontrar o valor que estão procurando e os limita apenas a essas
 listas, o elemento `datalist` fornece dicas conforme o usuário digita.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" %}
 </pre>
 
 Note: Os valores <code>datalist</code> são fornecidos como sugestões e o usuário não fica restrito às sugestões fornecidas.
 
+## Label and name inputs properly {: .page-title }
 
----
-title: "Label and name inputs properly"
-updated_on: 2015-03-27
-key-takeaways:
-  label-and-name:
-    - "Sempre use <code>label</code> em entradas de formulário e certifique-se de que estão visíveis quando o campo estiver em foco."
-    - "Use <code>placeholder</code> para fornecer orientações sobre o que é esperado."
-    - "Para ajudar o navegador a preencher automaticamente o formulário, use o <code>name</code> estabelecido para elementos e inclua o atributo <code>autocomplete</code>."
-notes:
-  use-placeholders:
-    - "Os espaços reservados desaparecem assim que o usuário começa a digitar em um elemento, portanto, eles não são uma substituição para etiquetas.  Eles devem ser usados como um auxílio para ajudar a orientar o usuário no formato e conteúdo exigidos."
-  recommend-input:
-    - "Use apenas <code>street-address</code> ou <code>address-line1</code> e <code>address-line2</code>"
-    - "<code>address-level1</code> e <code>address-level2</code> são necessários apenas se forem exigidos pelo seu formato de endereço."
-  use-datalist:
-    - "Os valores <code>datalist</code> são fornecidos como sugestões e o usuário não fica restrito às sugestões fornecidas."
-  provide-real-time-validation:
-    - "Mesmo com validação de entrada do lado do cliente, é importante validar dados no servidor para garantir consistência e segurança em seus dados."
-  show-all-errors:
-    - Mostre ao usuário todos os problemas no formulário de uma vez ao invés de mostrá-los um a um.
-  request-auto-complete-flow:
-    - "Ao solicitar qualquer tipo de informação pessoal ou dados de cartão de crédito, certifique-se de que a página é disponibilizada via SSL.  Caso contrário, o diálogo avisará o usuário que suas informações podem não estar seguras."
-comments:
-  # OBSERVAÇÃO: Se os títulos da seção ou URL mudarem, os seguintes shortlinks devem ser atualizados
-  - g.co/mobilesiteprinciple17a
----
-<p class="intro">
-  Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas. Bons formulários fornecem tipos de entrada semântica. As teclas de acesso devem ser adaptadas aos tipo de entrada do usuário; o usuário escolhe uma data em um calendário. Mantenha seu usuário informado. O usuário deve ser notificado pelas ferramentas de validação sobre o que fazer antes de enviar o formulário.
-</p>
+Preencher formulários em celulares não é fácil. Os melhores formulários são aqueles com menos entradas. Bons formulários fornecem tipos de entrada semântica. As teclas de acesso devem ser adaptadas aos tipo de entrada do usuário; o usuário escolhe uma data em um calendário. Mantenha seu usuário informado. O usuário deve ser notificado pelas ferramentas de validação sobre o que fazer antes de enviar o formulário.
 
 
-{% include shared/takeaway.liquid list=page.key-takeaways.label-and-name %}
+### TL;DR {: .hide-from-toc }
+- Sempre use <code>label</code> em entradas de formulário e certifique-se de que estão visíveis quando o campo estiver em foco.
+- Use <code>placeholder</code> para fornecer orientações sobre o que é esperado.
+- Para ajudar o navegador a preencher automaticamente o formulário, use o <code>name</code> estabelecido para elementos e inclua o atributo <code>autocomplete</code>.
+
 
 #### A importância das etiquetas
 
@@ -288,7 +254,9 @@ elemento de entrada colocando-o dentro do elemento `label` ou usando o atributo 
 alvo do toque: o usuário pode tocar na etiqueta ou entrada para colocar
 foco no elemento de entrada.
 
-{% include_code src=_code/order.html snippet=labels %}
+<pre class="prettyprint">
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" %}
+</pre>
 
 #### Posicionamento e dimensionamento da etiqueta
 
@@ -307,12 +275,12 @@ comece a digitar no elemento.
 
 <input type="text" placeholder="MM-YYYY">
 
-{% highlight html%}
-<input type="text" placeholder="MM-YYYY" ...>
-{% endhighlight %}
+
+    <input type="text" placeholder="MM-YYYY" ...>
 
 
-{% include shared/remember.liquid title="Remember" list=page.notes.use-placeholders %}
+
+Note: Os espaços reservados desaparecem assim que o usuário começa a digitar em um elemento, portanto, eles não são uma substituição para etiquetas.  Eles devem ser usados como um auxílio para ajudar a orientar o usuário no formato e conteúdo exigidos.
 
 #### Use metadados para habilitar o preenchimento automático
 
@@ -331,7 +299,9 @@ em cada elemento de entrada.
 Por exemplo, para avisar o navegador que ele deve preencher automaticamente o formulário com
 o nome do usuário, endereço de email e telefone, você deve usar:
 
-{% include_code src=_code/order.html snippet=autocomplete %}
+<pre class="prettyprint">
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" %}
+</pre>
 
 
 #### Valores de atributo `name` e `autocomplete` de entrada recomendados
@@ -444,7 +414,8 @@ Os atributos `autocomplete` podem vir acompanhados de um nome de seção, como *
   </tbody>
 </table>
 
-{% include shared/remember.liquid title="Remember" list=page.remember.recommend-input %}
+Note: Use apenas <code>street-address</code> ou <code>address-line1</code> e <code>address-line2</code>. <code>address-level1</code> e <code>address-level2</code> são necessários apenas se forem exigidos pelo seu formato de endereço.
+
 
 #### O atributo `autofocus`
 
@@ -459,45 +430,22 @@ Tenha cuidado ao usar o atributo autofocus porque roubará o foco do teclado
 e possivelmente evitará que o caractere backspace seja usado para
 navegação.
 
-{% highlight html %}
-<input type="text" autofocus ...>
-{% endhighlight %}
+
+    <input type="text" autofocus ...>
+    
+
+## Provide real-time validation
+
+A validação de dados em tempo real não apenas ajuda a manter seus dados limpos, mas também ajuda a melhorar a experiência do usuário.  Os navegadores modernos têm várias ferramentas integradas para ajudar a fornecer validação de dados em tempo real e podem evitar que o usuário envie um formulário inválido.  Use dicas visuais para indicar se um formulário foi preenchido corretamente.
 
 
----
-title: "Provide real-time validation"
-updated_on: 2014-10-21
-key-takeaways:
-  provide-real-time-validation:
-    - "Tire partido de atributos de validação integrados do navegador como <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc."
-    - "Use JavaScript e a API do Constraints Validation para requisitos de validação mais complexos."
-    - "Mostre erros de validação em tempo real e se o usuário tentar enviar um formulário inválido, mostre todos os campos que precisam ser corrigidos."
-notes:
-  use-placeholders:
-    - "Os espaços reservados desaparecem assim que o foco é colocado em um elemento, portanto não substituem etiquetas.  Eles devem ser usados como um auxílio para ajudar a orientar o usuário no formato e conteúdo exigidos."
-  recommend-input:
-    - "O preenchimento automático funciona apenas quando o método de formulário é mensagem."
-  use-datalist:
-    - "Os valores <code>datalist</code> são fornecidos como sugestões e o usuário não fica restrito às sugestões fornecidas."
-  provide-real-time-validation:
-    - "Mesmo com validação de entrada do lado do cliente, é importante validar dados no servidor para garantir consistência e segurança em seus dados."
-  show-all-errors:
-    - "Mostre ao usuário todos os problemas no formulário de uma vez ao invés de mostrá-los um a um."
-  request-auto-complete-flow:
-    - "Ao solicitar qualquer tipo de informação pessoal ou dados de cartão de crédito, certifique-se de que a página é disponibilizada via SSL.  Caso contrário, o diálogo avisará o usuário que suas informações podem não estar seguras."
-comments:
-  # OBSERVAÇÃO: Se os títulos da seção ou URL mudarem, os seguintes shortlinks devem ser atualizados
-  - g.co/mobilesiteprinciple17b
----
-
-<p class="intro">
-  A validação de dados em tempo real não apenas ajuda a manter seus dados limpos, mas também ajuda a melhorar a experiência do usuário.  Os navegadores modernos têm várias ferramentas integradas para ajudar a fornecer validação de dados em tempo real e podem evitar que o usuário envie um formulário inválido.  Use dicas visuais para indicar se um formulário foi preenchido corretamente.
-</p>
+### TL;DR {: .hide-from-toc }
+- Tire partido de atributos de validação integrados do navegador como <code>pattern</code>, <code>required</code>, <code>min</code>, <code>max</code>, etc.
+- Use JavaScript e a API do Constraints Validation para requisitos de validação mais complexos.
+- Mostre erros de validação em tempo real e se o usuário tentar enviar um formulário inválido, mostre todos os campos que precisam ser corrigidos.
 
 
-{% include shared/takeaway.liquid list=page.key-takeaways.provide-real-time-validation %}
-
-#### Use esses atributos para validar a entrada
+### Use esses atributos para validar a entrada
 
 ##### O atributo `pattern`
 
@@ -507,11 +455,11 @@ campo de entrada. Por exemplo, para validar um código postal dos EUA (5 dígito
 seguido por um traço e mais 4 dígitos), precisaríamos definir o `pattern` como 
 a seguir:
 
-{% highlight html %}
-<input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-{% endhighlight %}
 
-###### Padrões de expressão regular comum
+    <input type="text" pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
+    
+
+##### Padrões de expressão regular comum
 
 <table>
   <thead>
@@ -565,9 +513,9 @@ Se o atributo `required` estiver presente, o campo deve conter um valor antes
 que o formulário seja enviado. Por exemplo, para criar o código postal necessário, apenas
 adicionamos o atributo necessário:
 
-{% highlight html %}
-<input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
-{% endhighlight %}
+
+    <input type="text" required pattern="^\d{5,6}(?:[-\s]\d{4})?$" ...>
+    
 
 ##### Os atributos `min`, `max` e `step`
 
@@ -577,9 +525,9 @@ aumentar/diminuir quando ajustado pelo controle deslizante ou giratório.  Por e
 entrada de tamanho de sapato define um tamanho mínimo de 1 e um tamanho máximo de 13, com uma diferença
 de 0,5
 
-{% highlight html %}
-<input type="number" min="1" max="13" step="0.5" ...>
-{% endhighlight %}
+
+    <input type="number" min="1" max="13" step="0.5" ...>
+    
 
 ##### O atributo `maxlength`
 
@@ -588,9 +536,9 @@ caixa de texto e é útil para se limitar o comprimento da informação que o
 usuário pode fornecer. Por exemplo, se deseja limitar um nome de arquivo para 12 caracteres,
 é possível usar o seguinte.
 
-{% highlight html %}
-<input type="text" id="83filename" maxlength="12" ...>
-{% endhighlight %}
+
+    <input type="text" id="83filename" maxlength="12" ...>
+    
 
 ##### O atributo `minlength`
 
@@ -599,9 +547,9 @@ caixa de texto e é útil para se especificar o comprimento mínimo que o usuár
 fornecer. Por exemplo, se deseja especificar que um nome de arquivo exige pelo menos 
 8 caracteres, é possível usar o seguinte.
 
-{% highlight html %}
-<input type="text" id="83filename" minlength="8" ...>
-{% endhighlight %}
+
+    <input type="text" id="83filename" minlength="8" ...>
+    
 
 ##### O atributo `novalidate`
 
@@ -610,14 +558,14 @@ Em alguns casos, pode permitir que o usuário envie o formulário mesmo contendo
 formulário ou campos de entrada individuais. Nesse caso, todas as pseudo classes e
 APIs do JavaScript ainda permitirão que você verifique se o formulário é válido.
 
-{% highlight html %}
-<form role="form" novalidate>
-  <label for="inpEmail">Email address</label>
-  <input type="email" ...>
-</form>
-{% endhighlight %}
 
-{% include shared/remember.liquid title="Remember" list=page.notes.provide-real-time-validation %}
+    <form role="form" novalidate>
+      <label for="inpEmail">Email address</label>
+      <input type="email" ...>
+    </form>
+    
+
+Note: Mesmo com validação de entrada do lado do cliente, é importante validar dados no servidor para garantir consistência e segurança em seus dados.
 
 #### Use JavaScript para validação em tempo real mais complexa
 
@@ -666,7 +614,9 @@ pedir que o usuário confirme seu endereço de email inserindo-o duas vezes.  Us
 na segunda entrada para validar as duas entradas e defina a resposta
 adequada.  Por exemplo:
 
-{% include_code src=_code/order.html snippet=customvalidation lang=javascript %}
+<pre class="prettyprint">
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" %}
+</pre>
 
 ##### Evite o envio de formulários inválidos
 
@@ -674,7 +624,9 @@ Como nem todos os navegadores evitam que o usuário envie o formulário se houve
 dados inválidos, você deve verificar o evento de envio e usar `checkValidity()`
 no elemento form para determinar se o formulário é válido.  Por exemplo:
 
-{% include_code src=_code/order.html snippet=preventsubmission lang=javascript %}
+<pre class="prettyprint">
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" %}
+</pre>
 
 #### Mostre comentários em tempo real
 
@@ -724,71 +676,11 @@ podem ser marcados como inválidos, mesmo se o usuário ainda não tiver termina
 estilo inválido ao digitar. Para evitar esse problema, combine o CSS com
 JavaScript para mostrar o estilo inválido apenas quando o usuário já tiver visitado o campo.
 
-{% include_code src=_code/order.html snippet=invalidstyle lang=css %}
-{% include_code src=_code/order.html snippet=initinputs lang=javascript %}
-
-{% include shared/remember.liquid title="Important" list=page.remember.show-all-errors %}
-
-
-
-
-## Simplify checkout with requestAutocomplete API 
-
-
-
-
-Embora o <code>requestAutocomplete</code> tenha sido criado para ajudar o usuário a preencher qualquer formulário, seu uso mais comum nos dias de hoje é no eCommerce, onde o abandono do carrinho de compras na Web móvel <a href='http://seewhy.com/97-shopping-cart-abandonment-rate-mobile-devices-concern-you/'>pode ser de até 97%</a>. Imagine 97% das pessoas em um supermercado, com um carrinho cheio de coisas, deixando-o e indo embora.
-
-
-### TL;DR {: .hide-from-toc }
-- O <code>requestAutocomplete</code> pode simplificar muito o processo de finalização da compra e melhorar a experiência do usuário.
-- Se <code>requestAutocomplete</code> estiver disponível, oculte o formulário de finalização da compra e direcione o usuário diretamente para a página de confirmação.
-- Certifique-se de que os campos de entrada incluem o atributo autocomplete adequado.
-
-
-Em vez confiar em um determinado provedor de pagamentos,
-o `requestAutocomplete` solicita detalhes de pagamento (como nome, endereço e informação do cartão de
-crédito) a partir do navegador, onde são opcionalmente armazenados
-assim como outros campos de preenchimento automático.
-
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="ljYeHwGgzQk"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-
-#### fluxo do `requestAutocomplete`
-
-A experiência ideal mostra a caixa de diálogo `requestAutocomplete` em vez de carregar a
-página que exibe o formulário de finalização da compra. Se tudo correr bem, o usuário não vê
-o formulário.  Pode-se adicionar facilmente `requestAutocomplete` aos formulários existentes
-sem alteração alguma nos nomes de campos.  Basta adicionar o atributo `autocomplete`
-a cada elemento do formulário com o valor adequado e adicionar a função
-`requestAutocomplete()` no elemento do formulário. O navegador fará
-o resto.
-
-<img src="imgs/rac_flow.png" class="center" alt="Fluxo da solicitação de preenchimento automático">
-
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="rac"   adjust_indentation="auto" %}
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="invalidstyle" %}
+</pre>
+<pre class="prettyprint">
+{% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" %}
 </pre>
 
-A função `requestAutocomplete` no elemento `form` indica que o
-navegador deve preencher o formulário.  Como um recurso de segurança, a função
-deve ser chamada através de um gesto do usuário, como um toque ou um clique do mouse. Uma caixa de diálogo é
-mostrada pedindo a permissão do usuário para preencher os campos e quais detalhes
-ele deseja utilizar.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/rac.html" region_tag="handlerac"   adjust_indentation="auto" %}
-</pre>
-
-Depois da conclusão do `requestAutocomplete`, a função acionará o evento
-`autocomplete` se tiver concluído com êxito ou `autocompleteerror` se
-não foi possível preencher o formulário.  Se for concluído com êxito e o formulário
-estiver de acordo com as suas necessidades, basta enviá-lo e continuar com a confirmação
-final.
-
-Note: Ao solicitar qualquer tipo de informação pessoal ou dados de cartão de crédito, certifique-se de que a página é disponibilizada via SSL.  Caso contrário, o diálogo avisará o usuário que suas informações podem não estar seguras.
-
-
+Note: Mostre ao usuário todos os problemas no formulário de uma vez ao invés de mostrá-los um a um.

@@ -22,7 +22,7 @@ It does all this through the simple mechanism of metadata in a text file. That's
 
 Note: Though you can use a web app manifest on any site, they are required for [progressive web apps](/web/progressive-web-apps/).
 
-### TL;DR {: .hide-from-toc } {: .hide-from-toc }
+### TL;DR {: .hide-from-toc }
 - Creating a manifest and linking it to your page are simple.
 - Control what the user sees when launching from the homescreen.
 - This includes things like a splashscreen, theme colors, and even the URL that's opened. 

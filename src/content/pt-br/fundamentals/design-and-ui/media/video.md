@@ -2,23 +2,23 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Conheça as maneiras mais simples de adicionar vídeos ao seu site e garantir que os usuários tenham a melhor experiência possível em qualquer dispositivo.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-04-28 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Vídeo {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
-
-Os usuários gostam de vídeos porque eles são divertidos e informativos. Nos dispositivos móveis, os vídeos podem ser uma maneira fácil de adquirir informações. Mas os vídeos consomem largura de banda e nem sempre funcionam da mesma forma em todas as plataformas. Os usuários não gostam de esperar o carregamento dos vídeos, nem quando eles reproduzem o vídeo e nada acontece. Leia mais para conhecer a maneira mais simples de adicionar vídeos ao seu site e garantir que os usuários tenham a melhor experiência possível em qualquer dispositivo.
+{% include "web/_shared/contributors/sumdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+Os usuários gostam de vídeos porque eles são divertidos e informativos. Nos dispositivos móveis, os vídeos podem ser uma maneira fácil de adquirir informações. Mas os vídeos consomem largura de banda e nem sempre funcionam da mesma forma em todas as plataformas. Os usuários não gostam de esperar o carregamento dos vídeos, nem quando eles reproduzem o vídeo e nada acontece. Leia mais para conhecer a maneira mais simples de adicionar vídeos ao seu site e garantir que os usuários tenham a melhor experiência possível em qualquer dispositivo.
+
+<div class="clearfix"></div>
+
 
 
 ## Adicione um vídeo 
@@ -119,15 +119,11 @@ Um pôster também pode ser usado como substituto se o `src` do vídeo estiver q
 
 Veja uma comparação de vídeos sem e com uma imagem de pôster. A imagem está em escala de cinza para provar que não é o vídeo:
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Captura de tela do Google Chrome para Android, orientação retrato: sem imagem de pôster" src="img/Chrome-Android-video-no-poster.png">
-  </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
-    <img class="center" alt="Captura de tela do Google Chrome para Android, orientação retrato: com imagem de pôster" src="img/Chrome-Android-video-poster.png">
-  </div>
-</div>
+<img class="attempt-left" alt="Captura de tela do Google Chrome para Android, orientação retrato: sem imagem de pôster" src="img/Chrome-Android-video-no-poster.png">
+<img class="attempt-right" alt="Captura de tela do Google Chrome para Android, orientação retrato: com imagem de pôster" src="img/Chrome-Android-video-poster.png">
+<div class="clearfix"></div>
+
 
 
 ## Forneça alternativas para plataformas legadas 
@@ -252,10 +248,11 @@ Para verificar o tamanho codificado de um vídeo, use as propriedades do element
 Quando os elementos de vídeos são muito grandes para a janela de visualização, eles podem se expandir demasiadamente, impossibilitando que os usuários vejam seu conteúdo ou usem
 os controles.
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela do Google Chrome para Android, retrato. O elemento de vídeo não estilizado ultrapassa o tamanho da janela de visualização" src="img/Chrome-Android-portrait-video-unstyled.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela do Google Chrome para Android, paisagem. O elemento de vídeo não estilizado ultrapassa o tamanho da janela de visualização" src="img/Chrome-Android-landscape-video-unstyled.png">
-</div>
+
+<img class="attempt-left" alt="Captura de tela do Google Chrome para Android, retrato. O elemento de vídeo não estilizado ultrapassa o tamanho da janela de visualização" src="img/Chrome-Android-portrait-video-unstyled.png">
+<img class="attempt-right" alt="Captura de tela do Google Chrome para Android, paisagem. O elemento de vídeo não estilizado ultrapassa o tamanho da janela de visualização" src="img/Chrome-Android-landscape-video-unstyled.png">
+<div class="clearfix"></div>
+
 
 Controle as dimensões do vídeo usando o JavaScript e CSS. As bibliotecas e os plug-ins do JavaScript como [FitVids](//fitvidsjs.com/) possibilitam manter o tamanho e a proporção adequados, até mesmo para vídeos em Flash do YouTube e outras fontes.
 
@@ -299,10 +296,11 @@ A orientação dos dispositivos não é um problema relacionado a laptops e a mo
 
 O Safari do iPhone executa com eficiência a alternância entre as orientações de retrato e paisagem:
 
-<div class="mdl-grid">
-  <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela de um vídeo reproduzido no Safari do iPhone em modo retrato" src="img/iPhone-video-playing-portrait.png">
-    <img class="mdl-cell mdl-cell--6--col" alt="Captura de tela de um vídeo reproduzido no Safari do iPhone em modo paisagem" src="img/iPhone-video-playing-landscape.png">
-</div>
+
+<img class="attempt-left" alt="Captura de tela de um vídeo reproduzido no Safari do iPhone em modo retrato" src="img/iPhone-video-playing-portrait.png">
+<img class="attempt-right" alt="Captura de tela de um vídeo reproduzido no Safari do iPhone em modo paisagem" src="img/iPhone-video-playing-landscape.png">
+<div class="clearfix"></div>
+
 
 A orientação no iPad e no Google Chrome para Android pode ser problemática.
 Por exemplo, sem qualquer personalização, um vídeo reproduzido no iPad em modo paisagem tem esta aparência:

@@ -2,15 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Em dispositivos com a função telefone, facilita que usuários liguem diretamente para você apenas tocando em um número de telefone, comumente conhecido como clique para chamar.
 
-{# wf_review_required #}
+
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2000-01-01 #}
 
 # Click to call {: .page-title }
 
-{% include "web/_shared/contributors/TODO.html" %}
-
-
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Em dispositivos com a função telefone, facilita que usuários liguem diretamente para você apenas tocando em um número de telefone, comumente conhecido como clique para chamar.
 
@@ -38,7 +36,7 @@ Resulta em:
 
 NIST Telephone Time-of-Day Service <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
 
-<img src="images/click-to-call_framed.jpg" class="center" alt="Click to call example.">
+<img src="images/click-to-call_framed.jpg" class="attempt-left" alt="Click to call example.">
 
 Na maioria dos dispositivos com funções telefônicas, o usuário receberá uma
 confirmação antes que o número seja discado para garantir que os usuários não estejam sendo

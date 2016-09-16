@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Às vezes, a parte mais difícil de um novo projeto é começar. O Web Starter Kit oferece uma base sólida com uma ampla variedade de ferramentas para ajudar você durante o processo de desenvolvimento.
 
-{# wf_review_required #}
 {# wf_updated_on: 2014-10-20 #}
 {# wf_published_on: 2014-07-16 #}
 
@@ -48,6 +47,9 @@ imediatamente em qualquer navegador, com seu site aberto.
   </iframe>
 </div>
 
+<div class="clearfix"></div>
+
+
 #### Testes Entre Dispositivos
 
 O Browser Sync ajuda você a testar seu site em vários dispositivos. Qualquer rolagem,
@@ -62,6 +64,8 @@ toque ou pressão do teclado será compartilhado por qualquer navegador conectad
 Isso funciona apenas quando você executa seu site com `gulp serve`. Faça o teste executando 
 `gulp serve`, abra a URL em duas janelas do navegador lado a lado e role
 uma das páginas.
+
+<div class="clearfix"></div>
 
 #### Prefixação Automática
 
