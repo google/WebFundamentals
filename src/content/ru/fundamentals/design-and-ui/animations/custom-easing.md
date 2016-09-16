@@ -28,8 +28,8 @@ description: Сойдите с наезженной дороги и создай
 
 Для сравнения, вот две кривые: стандартная кривая с ускорением и замедлением и нестандартная кривая:
 
-<img src="imgs/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Кривая анимации с ускорением и замедлением." />
-<img src="imgs/custom.png" style="display: inline; max-width: 300px" alt="Нестандартная кривая анимации." />
+<img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Кривая анимации с ускорением и замедлением." />
+<img src="images/custom.png" style="display: inline; max-width: 300px" alt="Нестандартная кривая анимации." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-custom-curve.html">См. описание анимации с нестандартным изменением скорости.</a>
 

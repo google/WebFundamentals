@@ -22,7 +22,7 @@ description: Выбирайте подходящее изменение скор
 
 Есть группа хорошо известных формул замедления, помимо указанной в ключевом слове `ease-out` в CSS, которые отличаются своей "агрессивностью". Для реализации сверхбыстрого эффекта замедления рассмотрите возможность использования [замедления Quintic](http://easings.net/#easeOutQuint).
 
-<img src="imgs/quintic-ease-out-markers.png" alt="Кривая анимации с замедлением Quintic" style="max-width: 300px"/>
+<img src="images/quintic-ease-out-markers.png" alt="Кривая анимации с замедлением Quintic" style="max-width: 300px"/>
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">См. анимацию с замедлением Quintic.</a>
 

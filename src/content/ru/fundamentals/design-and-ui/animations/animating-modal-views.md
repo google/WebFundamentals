@@ -19,7 +19,7 @@ description: Узнайте, как добиться анимационного 
 - Когда пользователь закрывает модальное представление, оно должно исчезать с экрана быстро. А вот выводить его на экран следует немного медленнее, чтобы это было не так неожиданно для пользователя.
 
 
-<img src="imgs/gifs/dont-press.gif" alt="Создание анимации модального представления." />
+<img src="images/dont-press.gif" alt="Создание анимации модального представления." />
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">См. образец.</a>
 
