@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: JavaScript is often the trigger for visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that will result in visual changes, like searching or sorting some data. Badly-timed or long-running JavaScript can be a common cause of performance issues, and you should look to minimize its impact where you can.
+description: JavaScript often triggers visual changes. Sometimes that's directly through style manipulations, and sometimes it's calculations that result in visual changes, like searching or sorting data. Badly-timed or long-running JavaScript is a common cause of performance issues. You should look to minimize its impact where you can.
 
 {# wf_updated_on: 2015-03-20 #}
 {# wf_published_on: 2015-03-20 #}
@@ -9,11 +9,11 @@ description: JavaScript is often the trigger for visual changes. Sometimes that'
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-JavaScript is often the trigger for visual changes. Sometimes that's 
-directly through style manipulations, and sometimes it's calculations that 
-will result in visual changes, like searching or sorting some data. 
-Badly-timed or long-running JavaScript can be a common cause of performance 
-issues, and you should look to minimize its impact where you can.
+JavaScript often triggers visual changes. Sometimes that's directly
+through style manipulations, and sometimes it's calculations that
+result in visual changes, like searching or sorting data. Badly-timed
+or long-running JavaScript is a common cause of performance issues.
+You should look to minimize its impact where you can.
 
 JavaScript performance profiling can be something of an art, because the JavaScript you write is nothing like the code that is actually executed. Modern browsers use JIT compilers and all manner of optimizations and tricks to try and give you the fastest possible execution, and this substantially changes the dynamics of the code.
 
