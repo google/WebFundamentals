@@ -75,21 +75,23 @@ Explore what makes a site responsive and how some common responsive design patte
 
 使用中繼檢視區值 `width=device-width` 即可運用裝置獨立像素配合螢幕寬度。採用這項做法後，無論網頁是在小型行動裝置或大型桌上型電腦顯示器顯示，都可隨著不同的螢幕大小靈活編排內容。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
+<div>
+  <div class="attempt-left">
     
       <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="未設定檢視區的網頁">
       查看示例
     
   </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
+  <div class="attempt-right">
     
       <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="設定檢視區的網頁">
       查看示例
     
   </div>
 </div>
+
+<div style="clear:both;"></div>
 
 當裝置變為橫向模式時，部分瀏覽器不會將內容重新編排以符合螢幕大小，而是維持網頁寬度並進行縮放。新增 `initial-scale=1` 屬性可指示瀏覽器在 CSS 像素和裝置獨立像素之間建立 1:1 的關係 (無論裝置方向為何)，並允許網頁充分運用橫向寬度。
 
@@ -123,21 +125,23 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 如果針對網頁元素設定大型絕對 CSS 寬度 (例如下方示例)，將會導致 `div` 過寬而無法在較窄的裝置正確顯示 (例如 iPhone 這類 CSS 像素寬度為 320 的裝置)。因此，建議您不妨考慮使用相對寬度值，例如 `width: 100%`。相同地，使用大型絕對定位值時也請留意，因為這類值會導致元素超過小螢幕上的檢視區。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
+<div>
+  <div class="attempt-left">
     
       <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone 上顯示包含 344px 固定寬度元素的網頁。">
       查看示例
     
   </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
+    <div class="attempt-right">
     
       <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5 上顯示包含 344px 固定寬度元素的網頁。">
       查看示例
     
   </div>
 </div>
+
+<div style="clear:both;"></div>
 
 ## 使用 CSS 媒體查詢提升回應成效 
 
@@ -255,8 +259,8 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 此外，使用相對單位也可讓瀏覽器依據使用者的縮放比例顯示內容，不需在網頁上新增水平捲動軸。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
+<div>
+  <div class="attempt-right">
     <h2 class="text-danger text-center">NO</h2>
     div.fullWidth {
       width: 320px;
@@ -265,7 +269,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
     }
   </div>
 
-  <div class="mdl-cell mdl-cell--6--col">
+  <div class="attempt-left">
     <h2 class="text-success text-center">YES</h2>
     div.fullWidth {
       width: 100%;
@@ -273,6 +277,7 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
   </div>
 </div>
 
+<div style="clear:both;"></div>
 
 
 

@@ -72,19 +72,21 @@ GeoLocation API  還可讓您觀看使用者所在地點，並在他們移動時
 以及對他們有什麼好處。  在網站載入結果時立即在首頁上要求此資訊，
 會形成差勁的使用者經驗。
 
-<div class="clear g-wide--pull-1">
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-bad.png" srcset="images/sw-navigation-bad.png 1x, images/sw-navigation-bad-2x.png 2x" alt="">
-      <figcaption>在網站載入結果時立即在首頁上要求此資訊，會形成差勁的使用者經驗。</figcaption>
-    </figure>
-  </div>
-  <div class="mdl-cell mdl-cell--6--col">
-    <figure class="fluid">
-      <img src="images/sw-navigation-good.png" srcset="images/sw-navigation-good.png 1x, images/sw-navigation-good-2x.png 2x" alt="">
-      <figcaption>請一律在使用者示意的情況下，才要求存取位置。</figcaption>
-      </figure>
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/sw-navigation-good.png">
+    <figcaption class="success">
+      <b>DO</b>: Always request access to location on a user gesture.
+     </figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure id="fig1">
+    <img src="images/sw-navigation-bad.png">
+    <figcaption class="warning">
+      <b>DON'T</b>: Ask for it immediately on the homepage as the site loads; it results in a poor user experience.
+    </figcaption>
+  </figure>
 </div>
 
 反之，您應該給使用者明確的動作請求或指示，

@@ -22,18 +22,17 @@ description: 在預設情況下，CSS 會被視為禁止轉譯的資源，只要
 - 無論禁止與否，瀏覽器都會下載所有 CSS 資源。
 
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>具備 CSS 的 NYTimes</b>
-    <img class="center" src="images/nytimes-css-device.png" alt="具備 CSS 的 NYTimes">
-
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    <b>不具備 CSS 的 NYTimes (FOUC)</b>
-    <img src="images/nytimes-nocss-device.png" alt="不具備 CSS 的 NYTimes">
-
-  </div>
+<div class="attempt-left">
+  <figure>
+    <img src="images/nytimes-css-device.png" alt="NYTimes with CSS">
+    <figcaption>The New York Times with CSS</figcaption>
+  </figure>
+</div>
+<div class="attempt-right">
+  <figure>
+    <img src="images/nytimes-nocss-device.png" alt="NYTimes without CSS">
+    <figcaption>The New York Times without CSS (FOUC)</figcaption>
+  </figure>
 </div>
 
 {% comment %}

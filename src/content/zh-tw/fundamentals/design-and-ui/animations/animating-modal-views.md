@@ -39,7 +39,7 @@ description: 學習如何在您應用程式中動畫處理強制回應檢視。
     }
     
 
-它的初始 `opacity` 為 0，所以它會隱藏而無法看到，但然而它還需要 `pointer-events` 設定為 `none`，讓點擊和輕觸能穿越。 如果不這樣，它會封鎖所有互動，讓整個頁面無法回應。 最後，因為它將會動畫處理其 `opacity` 、 `transform` 以及那些必須以 `will-change` 標記為變動的項目 (也請參閱 [使用 will-change 屬性]({{site.fundamentals}}/look-and-feel/animations/animations-and-performance.html#using-the-will-change-property))。
+它的初始 `opacity` 為 0，所以它會隱藏而無法看到，但然而它還需要 `pointer-events` 設定為 `none`，讓點擊和輕觸能穿越。 如果不這樣，它會封鎖所有互動，讓整個頁面無法回應。 最後，因為它將會動畫處理其 `opacity` 、 `transform` 以及那些必須以 `will-change` 標記為變動的項目 (也請參閱 [使用 will-change 屬性](animations-and-performance#using-the-will-change-property))。
 
 當檢視可見時，它將需要接受互動，並具有值為 1 的 `opacity`：
 
@@ -57,7 +57,7 @@ description: 學習如何在您應用程式中動畫處理強制回應檢視。
     
 
 在此時，強制回應檢視將不帶任何動畫出現，所以它現在可以新增於
- (也請參閱 [自訂緩動]({{site.fundamentals}}/look-and-feel/animations/custom-easing.html))：
+ (也請參閱 [自訂緩動](custom-easing))：
 
 
     .modal {

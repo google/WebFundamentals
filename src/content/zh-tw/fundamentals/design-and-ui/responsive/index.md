@@ -71,20 +71,25 @@ Explore what makes a site responsive and how some common responsive design patte
 
 使用中繼檢視區值 `width=device-width` 即可運用裝置獨立像素配合螢幕寬度。採用這項做法後，無論網頁是在小型行動裝置或大型桌上型電腦顯示器顯示，都可隨著不同的螢幕大小靈活編排內容。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/no-vp.png" class="smaller-img" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="未設定檢視區的網頁">
-      查看示例
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp.png" class="smaller-img"  srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="設定檢視區的網頁">
-      查看示例
-    
-  </div>
+<div class="attempt-left">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-no.html">
+  <figure>
+    <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Page without a viewport set">
+    <figcaption>
+      Page without a viewport set
+     </figcaption>
+  </figure>
+  </a>
+</div>
+<div class="attempt-right">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp.html">
+  <figure>
+    <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Page with a viewport set">
+    <figcaption>
+      Page with a viewport set
+     </figcaption>
+  </figure>
+  </a>
 </div>
 
 當裝置變為橫向模式時，部分瀏覽器不會將內容重新編排以符合螢幕大小，而是維持網頁寬度並進行縮放。新增 `initial-scale=1` 屬性可指示瀏覽器在 CSS 像素和裝置獨立像素之間建立 1:1 的關係 (無論裝置方向為何)，並允許網頁充分運用橫向寬度。
@@ -119,20 +124,25 @@ Note: 使用半形逗號 (,) 分隔屬性，確保舊版瀏覽器可以正確剖
 
 如果針對網頁元素設定大型絕對 CSS 寬度 (例如下方示例)，將會導致 `div` 過寬而無法在較窄的裝置正確顯示 (例如 iPhone 這類 CSS 像素寬度為 320 的裝置)。因此，建議您不妨考慮使用相對寬度值，例如 `width: 100%`。相同地，使用大型絕對定位值時也請留意，因為這類值會導致元素超過小螢幕上的檢視區。
 
-<div class="mdl-grid">
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone 上顯示包含 344px 固定寬度元素的網頁。">
-      查看示例
-    
-  </div>
-
-  <div class="mdl-cell mdl-cell--6--col">
-    
-      <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5 上顯示包含 344px 固定寬度元素的網頁。">
-      查看示例
-    
-  </div>
+<div class="attempt-left">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <figure>
+    <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone.">
+    <figcaption>
+      Page with a 344px fixed width element on an iPhone.
+     </figcaption>
+  </figure>
+  </a>
+</div>
+<div class="attempt-right">
+  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <figure>
+    <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5.">
+    <figcaption>
+      Page with a 344px fixed width element on a Nexus 5.
+     </figcaption>
+  </figure>
+  </a>
 </div>
 
 

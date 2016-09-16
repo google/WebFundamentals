@@ -23,7 +23,7 @@ description: 透過新增和移除元素、變更屬性、類別，或透過動�
 
 <div class="quote" style="margin-top: 30px;">
   <div class="container">
-    <blockquote class="quote__content g-wide--push-1 g-wide--pull-1 g-medium--push-1">用於計算元素的已運算樣式的大約 50% 時間，會用來比對選取器，而另一半的時間則用於從符合的規則，建構 RenderStyle (已運算樣式的呈現)。
+    <blockquote>用於計算元素的已運算樣式的大約 50% 時間，會用來比對選取器，而另一半的時間則用於從符合的規則，建構 RenderStyle (已運算樣式的呈現)。
     <p>Rune Lillesveen, Opera / <a href="https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit">Blink 中的樣式無效判定</a></p>
     </blockquote>
   </div>

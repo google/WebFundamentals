@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: 當移轉至 HTTPS 時，網站營運者經常面臨的障礙之一是概念問題：這究竟是在做什麼？這些加密術語有什麼意義？在本節中，我們會提供一個簡短的總覽。
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2015-03-27 #}
 
