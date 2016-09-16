@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: При переходе к протоколу HTTPS на лице любого оператора сайта написаны одни и те же вопросы: Что тут вообще происходит? Что означают все эти слова о шифровании? В этом разделе мы коротко об этом расскажем
 
-{# wf_review_required #}
 {# wf_updated_on: 2015-03-26 #}
 {# wf_published_on: 2015-03-27 #}
 
