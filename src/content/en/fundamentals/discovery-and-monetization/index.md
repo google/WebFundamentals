@@ -48,7 +48,7 @@ confirm and pay, all with a single click.
     <img src="/web/images/md-icons/whats-hot-short.png">
   </a>
   <p>
-    A few lines of code on each page an bring more people to your site by
+    A few lines of code on each page can bring more people to your site by
     providing previews with rich information.<br>
     <a href="social-discovery/">Learn More</a>
   </p>

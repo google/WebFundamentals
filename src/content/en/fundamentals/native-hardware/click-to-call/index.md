@@ -32,7 +32,7 @@ simple:
     NIST Telephone Time-of-Day Service 
     <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
 
-Results in:
+Your browser displays this syntax as follows:
 
 NIST Telephone Time-of-Day Service <a href="tel:+1-303-499-7111">+1 (303) 499-7111</a>
 
@@ -44,13 +44,13 @@ NIST Telephone Time-of-Day Service <a href="tel:+1-303-499-7111">+1 (303) 499-71
 </div>
 
 On most devices with telephone capabilities, the user receives a
-confirmation before the number is dialed, to ensure that users are not being
-tricked into calling expensive long distance or premium phone numbers. 
+confirmation before the number is dialed, to ensure that the user isn't being
+tricked into calling an expensive long distance or premium phone number. 
 When the device doesn’t support phone calls, users may be presented with a
 menu allowing them to choose how the browser should handle the number.
 
 Desktop browsers that don’t support voice calls open the default
-telephony app on the computer, for example Google Voice or Microsoft
+telephony app on the computer; for example Google Voice or Microsoft
 Communicator.
 
 ## Use the international dialing format
