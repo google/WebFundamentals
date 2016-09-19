@@ -984,8 +984,11 @@ function loadScript(src) {
 
 // Lazy load the polyfill if necessary.
 if (!supportsShadowDOMV1) {
-  loadScript('/bower_components/shadydom/shadydom.min.js');
-  loadScript('/bower_components/shadycss/shadycss.min.js');
+  loadScript('/bower_components/shadydom/shadydom.min.js')
+    .then(loadScript('/bower_components/shadycss/shadycss.min.js'))
+    .then(e => {
+      // Polyfills loaded.
+    });
 } else {
   // Native shadow dom v1 support. Go to go!
 }

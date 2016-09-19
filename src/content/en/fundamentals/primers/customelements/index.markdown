@@ -889,7 +889,9 @@ function loadScript(src) {
 
 // Lazy load the polyfill if necessary.
 if (!supportsCustomElementsV1) {
-  loadScript('/bower_components/custom-elements/custom-elements.min.js');
+  loadScript('/bower_components/custom-elements/custom-elements.min.js').then(e => {
+    // Polyfill loaded.
+  });
 } else {
   // Native support. Good to go.
 }
