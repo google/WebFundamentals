@@ -867,7 +867,9 @@ const supportsCustomElementsV1 = 'customElements' in window;
 
 #### Polyfill {#polyfill}
 
-Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js) available. **Note**: the `:defined` CSS pseudo-class cannot be polyfilled.
+Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js) available. 
+
+**Note**: the `:defined` CSS pseudo-class cannot be polyfilled.
 
 Install it:
 
