@@ -3,7 +3,7 @@ layout: updates/post
 title: "BroadcastChannel API: A Message Bus for the Web"
 description: "BroadcastChannel API can be used for simple pub/sub between windows, tabs, iframes, or workers."
 published_on: 2016-09-07
-updated_on: 2016-09-07
+updated_on: 2016-09-19
 authors:
   - ericbidelman
 tags:
@@ -106,13 +106,21 @@ reuse that code! Without the Broadcast Channel API, you'd have to loop over the 
 // In index.html
 
 const channel = new BroadcastChannel('app-channel');
-channel.postMessage({action: 'clearcache'});
-
 channel.onmessage = function(e) {
   if (e.data.action === 'clearcache') {
     console.log('Cache removed:', e.data.removed);
   }
 };
+
+const messageChannel = new MessageChannel();
+
+// Send the service worker a message to clear the cache.
+// We can't use a BroadcastChannel for this because the
+// service worker may need to be woken up. MessageChannels do that.
+navigator.serviceWorker.controller.postMessage({
+  action: 'clearcache',
+  cacheName: 'v1-cache'
+}, [messageChannel.port2]);
 {% endhighlight %}
 
 {% highlight javascript %}
@@ -125,14 +133,17 @@ function nukeCache(cacheName) {
   });
 }
 
-const channel = new BroadcastChannel('app-channel');
-
-channel.onmessage = function(e) {
+self.onmessage = function(e) {
   const action = e.data.action;
   const cacheName = e.data.cacheName;
 
   if (action === 'clearcache') {
     nukeCache(cacheName).then(removed => {
+      // Send the main page a response via the BroadcastChannel API.
+      // We could also use e.ports[0].postMessage(), but the benefit
+      // of responding with the BroadcastChannel API is that other
+      // subscribers may be listening.
+      const channel = new BroadcastChannel('app-channel');
       channel.postMessage({action, removed});
     });
   }
