@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Device motion and orientation events provide access to the built in accelerometer, gyroscope, and compass in mobile devices.
+description: Device motion and orientation events provide access to the built-in accelerometer, gyroscope, and compass in mobile devices.
 
 {# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2014-06-17 #}
@@ -96,7 +96,7 @@ considered in relation to the keyboard.
 ### Rotation data
 
 Rotation data is returned as a [Euler angle](https://en.wikipedia.org/wiki/Euler_angles),
-representing the number of degrees of difference between the device's coordinate
+representing the number of degrees of difference between the device coordinate
 frame and the Earth coordinate frame.
 
 #### Alpha
@@ -170,9 +170,7 @@ There are several uses for device orientation events. Examples include the follo
 
 ### Check for support and listen for events
 
-To listen for `DeviceOrientationEvent`, first, check to see if the events are
-supported in the browser. Then, attach an event listener to the `window` 
-object listening for `deviceorientation` events. 
+To listen for `DeviceOrientationEvent`, first check to see if the browser supports the  events. Then, attach an event listener to the `window` object listening for `deviceorientation` events. 
 
     if (window.DeviceOrientationEvent) {
       window.addEventListener('deviceorientation', deviceOrientationHandler, false);
@@ -213,8 +211,8 @@ There are several uses for device motion events. Examples include the following:
 
 ### Check for support and listen for events
 
-To listen for `DeviceMotionEvent`s, first, check to see if the events are
-supported in the browser.  Then, attach an event listener to the `window` 
+To listen for `DeviceMotionEvent`, first check to see if the events are
+supported in the browser.  Then attach an event listener to the `window` 
 object listening for `devicemotion` events. 
 
     if (window.DeviceMotionEvent) {

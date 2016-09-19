@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Give your website access to native hardware like geolocation, device orientation, click to call and more.
+description: Give your website access to native hardware like geolocation, device orientation, click to call, and more.
 
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
@@ -8,11 +8,11 @@ description: Give your website access to native hardware like geolocation, devic
 # Accessing Native Hardware {: .page-title }
 
 Give your website access to native hardware like geolocation, device
-orientation, click to call and more.
+orientation, click to call, and more.
 
 
 <div class="attempt-left">
-  <h2>User Location</h2>
+  <h2>User location</h2>
   <a href="user-location/">
     <img src="images/geoloc.png">
   </a>
@@ -24,12 +24,12 @@ orientation, click to call and more.
 </div>
 
 <div class="attempt-right">
-  <h2>Device Orientation &amp; Motion</h2>
+  <h2>Device orientation &amp; motion</h2>
   <a href="device-orientation/">
     <img src="images/device-orientation.png">
   </a>
   <p>
-    Use a mobile devince's accelerometer, gyroscope, and compass. In gaming
+    Use a mobile device's accelerometer, gyroscope, and compass. In gaming,
     control the direction or action of a character. With geolocation, create
     more accurate turn-by-turn navigation or provide information about a
     specific location.<br>
@@ -40,7 +40,7 @@ orientation, click to call and more.
 <div style="clear:both;"></div>
 
 <div class="attempt-left">
-  <h2>Click to Call</h2>
+  <h2>Click to call</h2>
   <a href="click-to-call/">
     <img src="images/click-to-call.png">
   </a>
@@ -53,7 +53,7 @@ orientation, click to call and more.
 
 <div style="clear:both;"></div>
 
-## Related Resources
+## Related resources
 
 ### Chrome DevTools
 
