@@ -5,7 +5,7 @@ description: You can influence the way your site appears when shared via social 
 {# wf_updated_on: 2014-11-08 #}
 {# wf_published_on: 2014-10-07 #}
 
-# Social discovery {: .page-title }
+# Social Discovery {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
@@ -16,9 +16,9 @@ be available.
 
 
 ### TL;DR {: .hide-from-toc }
-- Use schema.org microdata to provide page title, description and an image for Google+.
-- Use Open Graph Protocol (OGP) to provide page title, description and an image for Facebook.
-- Use Twitter Cards to provide page title, description, an image and a Twitter id for Twitter.
+- Use schema.org microdata to provide page title, description, and an image for Google+.
+- Use Open Graph Protocol (OGP) to provide page title, description, and an image for Facebook.
+- Use Twitter Cards to provide page title, description, an image, and a Twitter id for Twitter.
 
 You can influence the way your site appears when shared via social media by
 adding a few lines of code to each page. This can help increase engagement by
@@ -35,8 +35,8 @@ preview.
     <img src="imgs/gplus-snippet-2.png" srcset="imgs/gplus-snippet-2.png 1x,
       imgs/gplus-snippet-2-2x.png 2x" />
     <figcaption class="success">
-      With the appropriate markup, the correct title, a short
-      description and an image are included. Adding these items can help
+      With the appropriate markup: the correct title, a short
+      description, and an image are included. Adding these items can help
       increase engagement.
      </figcaption>
   </figure>
@@ -54,14 +54,14 @@ preview.
 
 <div style="clear:both;"></div>
 
-When someone on a social network wants to share your website with his friends,
-he would probably add some notes explaining how awesome it is, and share it.
-But describing your website tends be cumbersome and can miss the point from the
-page owners aspect. Some services restrict the number of characters users can
+When someone on a social network wants to share your website with their friends,
+they would probably add some notes explaining how awesome it is, and share it.
+But describing a website tends be cumbersome and can miss the point from the
+page owner's point of view. Some services restrict the number of characters users can
 put in the note.
 
 By adding the appropriate metadata to your pages, you can simplify the sharing
-process for users by providing the title, a description and an attractive
+process for users by providing the title, a description, and an attractive
 image. This means they don't have to spend valuable time (or characters)
 describing the link.
 
@@ -78,7 +78,7 @@ Here's an example:
 {% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="microdata" adjust_indentation="auto" %}
 </pre>
 
-While most metadata are embedded in the head section of a webpage, microdata
+While most metadata are embedded in the head section of a web page, microdata
 lives where the context exists.
 
 ### Add `itemscope` to define microdata scope
@@ -86,18 +86,18 @@ By adding `itemscope`, you can specify the tag as a block of contents about a
 particular item.
 
 ### Add `itemtype` to define type of your website
-The type of item can be specified using the `itemtype` attribute along with the
+You can specify the type of item by using the `itemtype` attribute along with the
 `itemscope`. The value of an `itemtype` can be determined according to the type
-of the content on your webpage. You should be able to find one that is relevant
+of content on your web page. You should be able to find one that is relevant
 in [this page](https://schema.org/docs/full.html).
 
 ### Add `itemprop` to describe each item using schema.org vocaburary
-`itemprop`s define properties for `itemtype`s in the scope. For providing
-metadata to social sites, typical `itemprop` values are `name`, `description`
+`itemprop` defines properties for `itemtype` in the scope. For providing
+metadata to social sites, typical `itemprop` values are `name`, `description`,
 and `image`.
 
 ### Learn more
-These microdata provides semantic information to crawlers, typically for
+These microdata provide semantic information to crawlers, typically for
 [Google+](https://plus.google.com/) and Google Search. To learn more about
 snippets and rendering on Google+, read the following documents:
 
@@ -121,7 +121,7 @@ Facebook objects.
 {% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
 </pre>
 
-When included in the head section of your page, this metadata is used for rich
+When included in the head section of your page, this metadata provides rich
 snippet information when the page is shared.
 
 ### Use `og:` namespaced `meta` tags to describe metadata
@@ -138,15 +138,15 @@ Properties and contents may take the following values:
   <tbody>
     <tr>
       <td data-th="Property"><code>og:title</code></td>
-      <td data-th="Content">The title of the webpage.</td>
+      <td data-th="Content">The title of the web page.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>og:description</code></td>
-      <td data-th="Content">The description of the webpage.</td>
+      <td data-th="Content">The description of the web page.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>og:url</code></td>
-      <td data-th="Content">The canonical url of the webpage.</td>
+      <td data-th="Content">The canonical url of the web page.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>og:image</code></td>
@@ -154,7 +154,7 @@ Properties and contents may take the following values:
     </tr>
     <tr>
       <td data-th="Property"><code>og:type</code></td>
-      <td data-th="Content">A string that indicates the type of the webpage. You can find one that is suitable for your webpage <a href="https://developers.facebook.com/docs/reference/opengraph/">here</a>.</td>
+      <td data-th="Content">A string that indicates the type of the web page. You can find one that is suitable for your web page <a href="https://developers.facebook.com/docs/reference/opengraph/">here</a>.</td>
     </tr>
   </tbody>
 </table>
@@ -178,7 +178,7 @@ In order to validate your markup on Facebook, you can use tools such as:
 [Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to the
 Open [Graph Protocol applicable for Twitter](https://twitter.com/). They allow
 you to add media attachments like images and video to Tweets with a link to
-your webpage. By adding the appropriate metadata, Tweets with links to your
+your web page. By adding the appropriate metadata, Tweets with links to your
 page will have a card added that includes the rich detail you've added.
 
 ### Use `twitter:` namespaced meta tags to describe metadata
@@ -211,7 +211,7 @@ In order to validate your markup, Twitter provides:
 
 ## The Best Practice
 Given all three options, the best thing you can do is to include them all in
-your webpage. Here's an example:
+your web page. Here's an example:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites2.html" region_tag="best_practice" adjust_indentation="auto" %}
@@ -224,6 +224,6 @@ Notice that microdata and OGP share some markup:
 * `itemprop="image"` is using `link` tag with `href` attribute instead of
 reusing `meta` tag with `property="og:image"`
   
-Lastly, make sure to validate that your webpage appears as expected on each
-social sites before publishing.
+Lastly, make sure to validate that your web page appears as expected on each
+social site before publishing.
 
