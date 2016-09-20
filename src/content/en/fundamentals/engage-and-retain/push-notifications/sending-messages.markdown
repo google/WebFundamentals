@@ -24,9 +24,9 @@ endpoints on the messaging server. The messaging server handles the routing.
 
 We've seen how to subscribe to push within a web application. That process included capturing a public key, called the `applicationServerKey` in the subscription API.  
 
-The following diagram shows the order of 
+The following diagram shows the order of operations.
 
-![Sending a message](images/sending-a-message.gif)
+![Sending a message](images/push-flow.gif)
 
 1. A device downloads your web app containing an already created publicKey. This page installs a service worker.
 1. During the subscription flow the browser posts a request to the messaging server to create a new subscription. 
