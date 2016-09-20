@@ -38,7 +38,7 @@ You need to use a minifier that's capable of creating source maps. For the most 
 The following types of preprocessors are commonly used in combination with Source Maps:
 
 * Transpilers ([Babel](https://babeljs.io/), [Traceur](https://github.com/google/traceur-compiler/wiki/Getting-Started))
-* Compilers ([CoffeeScript](http://coffeescript.org), [Dart](https://www.dartlang.org), [TypeScript](http://www.typescriptlang.org/))
+* Compilers ([Closure Compiler](https://github.com/google/closure-compiler), [TypeScript](http://www.typescriptlang.org/), [CoffeeScript](http://coffeescript.org), [Dart](https://www.dartlang.org))
 * Minifiers ([UglifyJS](https://github.com/mishoo/UglifyJS))
 
 ## Source Maps in DevTools Sources panel
