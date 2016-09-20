@@ -5,7 +5,7 @@ description: Much of the web isn't optimized for those multi-device experiences.
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2014-04-29 #}
 
-# Responsive web design basics {: .page-title }
+# Responsive Web Design Basics {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 

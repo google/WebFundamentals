@@ -3,9 +3,9 @@ toc:
     section:
     - title: Overview
       path: /web/fundamentals/design-and-ui/
-    - title: Responsive Design
+    - title: Responsive Web Design
       section:
-      - title: The Fundamentals
+      - title: Responsive Web Design Basics
         path: /web/fundamentals/design-and-ui/responsive/
       - title: Design Patterns
         path: /web/fundamentals/design-and-ui/responsive/patterns

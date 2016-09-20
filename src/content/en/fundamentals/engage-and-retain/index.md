@@ -5,7 +5,7 @@ description: Connect with your users and keep them coming back. Use any to impro
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
-# Enage and Retain Users {: .page-title }
+# Engage and Retain Users {: .page-title }
 
 Connect with your users and keep them coming back. Use any to improve your
 site. Use **all** if you're working towards a
@@ -13,12 +13,15 @@ site. Use **all** if you're working towards a
 
 Foundational to many of these features is the [web app manifest](web-app-manifest/),
 if your site doesn't have one, consider adding it. It's a simple file that let's
-you control how your app appears to the user in areas where they would expect
-to see apps (for example the mobile home screen), direct what the user can 
-launch, and define its appearance at launch.
+you:   
+
+* Control how your app appears to the user in areas where they would expect
+to see apps (for example the mobile home screen)  
+* Direct what the user can launch  
+* Define its appearance at launch  
 
 <div class="attempt-left">
-  <h2>Add to Home Screen</h2>
+  <h2>Add to home screen</h2>
   <a href="app-install-banners/">
     <img src="/web/images/common/add-to-hs-16x9.png">
   </a>
@@ -30,7 +33,7 @@ launch, and define its appearance at launch.
   </p>
 </div>
 <div class="attempt-right">
-  <h2>Web Push Notifications</h2>
+  <h2>Web push notifications</h2>
   <a href="push-notifications/">
     <img src="/web/images/common/push-notification-16x9.png">
   </a>
@@ -44,9 +47,9 @@ launch, and define its appearance at launch.
 
 <div style="clear:both;"></div>
 
-## Related Resources
+## Related resources
 
-### Code Labs
+### Codelabs
 
 [Your First Progressive Web App](/web/fundamentals/getting-started/codelabs/your-first-pwapp/)<br>
 This codelab will walk you through creating your own Progressive Web App,
@@ -63,7 +66,7 @@ information about new content. You'll also learn the basics of Service Workers.
 * [Debug Progressive Web Apps](/web/tools/chrome-devtools/progressive-web-apps/)
 
 
-### Udacity Courses
+### Udacity courses
 
 [Progressive Web App Fundamentals](https://udacity.com/ud811)<br>
 In this course you’ll get started working on your very first Progressive Web
