@@ -1,11 +1,11 @@
 # A collection of all the people who have kindly contributed content for us.
 
 ##
-## Please add new contributors in alphabetical order by family name.
+## Please add new contributors in **alphabetical** order by family name.
 ##
 
 # EXAMPLE
-# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors 
+# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors
 #   name:
 #     given: First # Required
 #     family: Last # Required
@@ -508,6 +508,19 @@ captainpangyo:
   description:
     en: Josh is a Singing Computer Scientist
 
+kazukikanamori:
+  name:
+    given: Kazuki
+    family: Kanamori
+  country: JP
+  role:
+    - translator
+  twitter: yogurito
+  google: 113987163927119714999
+  email: kazuki.kanamori@gmail.com
+  description:
+    en: Digital Marketing Engineer
+
 megginkearney:
   name:
     given: Meggin
@@ -895,6 +908,20 @@ glenshires:
   google: 110477083701772760000
   email: gshires@google.com
 
+sieke:
+  name:
+    given: Alex
+    family: Sieke
+  org:
+    name: Google
+    unit: Android
+  country: US
+  role:
+    - author
+  email: sieke@google.com
+  description:
+    en: Payments Product Manager
+
 alansilva:
   name:
     given: Alan
@@ -1093,3 +1120,17 @@ maciejzasada:
     - author
   google: 104812516714503133849
   email: maciej@unit9.com
+
+
+wangyu:
+  name:
+    given: Yu
+    family: Wang
+  country: CN
+  role:
+    - translator
+  homepage: 'http://wangyu.name'
+  twitter: wangyu_it
+  email: nameiswangyu@gmail.com
+  description:
+    en: WangYu is Front End Developer

@@ -1,6 +1,6 @@
 ---
-title: "使之响应"
-description: "web 可以被各种设备访问，从小屏幕手机到大屏幕电视。学习怎样构建一个在所有这些设备上均运行良好的站点。"
+title: "让页面响应"
+description: "在很多设备上都能够访问 web，从小屏幕手机到大屏幕电视。web 页面在每个设备上都呈现不同的样式和结构。作为一个 web 开发者，你期望你的 web 页面能够支持所有的设备。"
 key-takeaways:
   make-responsive:
     - 始终使用 viewport。
@@ -9,82 +9,83 @@ key-takeaways:
     - 给所有主要断点创建一个布局的高阶构想。
 translators:
   - samchen
+  - wangyu
 related-guides:
   responsive:
     -
       title: 设置 viewport
-      href: fundamentals/layouts/rwd-fundamentals/set-the-viewport
+      href: fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport
       section:
         title: "响应式 web 设计"
-        href: fundamentals/layouts/rwd-fundamentals/set-the-viewport
+        href: fundamentals/design-and-ui/responsive/fundamentals/set-the-viewport
     -
       title: 内容适应 viewport 大小
-      href: fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport
+      href: fundamentals/design-and-ui/responsive/fundamentals/size-content-to-the-viewport
       section:
         id: rwd-fundamentals
         title: "响应式 web 设计"
-        href: fundamentals/layouts/rwd-fundamentals/size-content-to-the-viewport
+        href: fundamentals/design-and-ui/responsive/fundamentals/size-content-to-the-viewport
   first-break-point:
     -
       title: 使用媒体查询
-      href: fundamentals/layouts/rwd-fundamentals/use-media-queries
+      href: fundamentals/design-and-ui/responsive/fundamentals/use-media-queries
       section:
         id: rwd-fundamentals
         title: "响应式 web 设计"
-        href: fundamentals/layouts/rwd-fundamentals/use-media-queries
+        href: fundamentals/design-and-ui/responsive/fundamentals/use-media-queries
     -
       title: 布局模式
-      href: fundamentals/layouts/rwd-patterns/
+      href: fundamentals/design-and-ui/responsive/patterns/
       section:
         id: rwd-patterns
         title: "布局模式"
-        href: fundamentals/layouts/rwd-patterns/
+        href: fundamentals/design-and-ui/responsive/patterns/
     -
       title: 多数流动式布局
-      href: fundamentals/layouts/rwd-patterns/mostly-fluid
+      href: fundamentals/design-and-ui/responsive/patterns/mostly-fluid
       section:
         id: rwd-patterns
         title: "响应式 web 设计"
-        href: fundamentals/layouts/rwd-patterns/mostly-fluid
+        href: fundamentals/design-and-ui/responsive/patterns/mostly-fluid
   images:
     -
-      title: "为高分辨率设备使用 srcset，增强图片"
-      href: media/images/images-in-markup.html#enhance-imgs-with-srcset-for-high-dpi-devices
+      title: "为高分辨率设备使用 srcset 来增强图片"
+      href: fundamentals/design-and-ui/media/images/images-in-markup.html#enhance-imgs-with-srcset-for-high-dpi-devices
       section:
         id: images
         title: "图片"
-        href: media/images/
-    - 
+        href: fundamentals/design-and-ui/media/images
+    -
       title: "使用媒体查询提供高清图片或艺术指导"
-      href: media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
+      href: fundamentals/design-and-ui/media/images/images-in-css.html#use-media-queries-for-conditional-image-loading-or-art-direction
       section:
         id: images
         title: "图片"
-        href: media/images/
+        href: fundamentals/design-and-ui/media/images
 
 notes:
   styling:
     - 我们已经拟定了一套与我们品牌准则相称的样式，包含颜色，内边距和字体格式。
   not-all-at-once:
     - 你不需要一次移动所有元素，可以按需要做小的调整。  
-updated_on: 2014-04-23
+updated_on: 2016-09-10
 ---
 
 <p class="intro">
-  web 可以被各种设备访问，从小屏幕手机到大屏幕电视。每个设备都有它独有的优势，约束亦然。作为一个 web 开发者，人们期望你能支持各类设备。
+在很多设备上都能够访问 web，从小屏幕手机到大屏幕电视。web 页面在每个设备上都呈现不同的样式和结构。作为一个 web 开发者，你期望你的 web 页面能够支持所有的设备。
 </p>
 
 {% include shared/toc.liquid %}
 
-我们正在创建一个多种设备屏幕大小、多种屏幕类型上均可运行良好的站点。在[上一节]({{page.previousPage.relative_url}})，我们制订了页面信息架构，并创建一个基本结构。在这个手册里，我们将带着结构和内容，将其变成一个漂亮的页面，在各种屏幕大小上均能自在适应。
+我们正在创建一个在多种设备屏幕大小、多种屏幕类型上均可运行良好的站点。在[上一节]({{page.previousPage.relative_url}})，我们制订了页面信息架构，并创建一个基本结构。在这个手册里，我们将带着结构和内容，将其变成一个漂亮的页面，在各种屏幕大小上均能自在适应。
 
 <div class="mdl-grid">
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/content.png" alt="Content">
+  <figure class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+    <img  src="images/content.png" alt="Content" style="max-width: 100%;">
     <figcaption>{% link_sample _code/content-without-styles.html %} 内容和结构 {% endlink_sample %} </figcaption>
   </figure>
-  <figure class="mdl-cell mdl-cell--6--col">
-    <img  src="images/narrowsite.png" alt="Designed site">
+  <figure class="mdl-cell mdl-cell--4-col mdl-cell--6-col-desktop">
+    <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
     <figcaption>{% link_sample _code/content-with-styles.html %} 最终站点 {% endlink_sample %} </figcaption>
   </figure>
 </div>
@@ -132,8 +133,8 @@ viewport 放在文档的头部，只需要声明一次。
 
 一个较好的例子是“第一屏”内容的标题图片。通常用来诱惑用户更多地注意到产品。
 
-<div class="mdl-cell mdl-cell--6--col">
-  <img  src="images/narrowsite.png" alt="设计的站点">
+<div class="center">
+  <img  src="images/narrowsite.png" alt="设计的站点" />
 </div>
 
 要使用它们非常简单。在我们的案例中，它是个标题背景，我们通过简单的 CSS 就可以应用。
@@ -159,12 +160,12 @@ viewport 放在文档的头部，只需要声明一次。
 <video controls poster="images/firstbreakpoint.png" style="width: 100%;">
   <source src="videos/firstbreakpoint.mov" type="video/mov"></source>
   <source src="videos/firstbreakpoint.webm" type="video/webm"></source>
-  <p>抱歉你的浏览器不支持 video
-     <a href="videos/firstbreakpoint.mov">下载视频</a>。
+  <p>抱歉你的浏览器不支持播放视频
+     <a href="videos/firstbreakpoint.mov">下载视频</a>.
   </p>
 </video>
 
-600px 看起来是创建我们第一个断点的好地方，它给了我们空间，来重新定位元素，使它们更好地适应屏幕。我们通过[媒体查询]({{site.fundamentals}}/layouts/rwd-fundamentals/#use-css-media-queries-for-responsiveness)技术来达到目的：
+600px 看起来是创建我们第一个断点的好地方，它给了我们空间，来重新定位元素，使它们更好地适应屏幕。我们通过[媒体查询 ](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries).技术来达到目的：
 
 {% highlight css %}
 @media (min-width: 600px) {
@@ -198,9 +199,9 @@ viewport 放在文档的头部，只需要声明一次。
 
 {% highlight html %}<div class="container">...</div>{% endhighlight %}
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=containerhtml lang=html %}
+{% include_code src=_code/constrainwidth.html snippet=containerhtml lang=html %}
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=container lang=css %}
+{% include_code src=_code/constrainwidth.html snippet=container lang=css %}
 
 ## 修改元素的内边距，减小文字大小
 
@@ -210,7 +211,7 @@ viewport 放在文档的头部，只需要声明一次。
 
 在我们的产品页中，我们将增加 section 元素的内边距，让它保持在宽度的 5%。我们同时也增加各分块头部的字体大小。
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=padding lang=css %}
+{% include_code src=_code/alterpadding.html snippet=padding lang=css %}
 
 ## 调整元素，适应宽视口
 
@@ -229,15 +230,13 @@ viewport 放在文档的头部，只需要声明一次。
 
 为了更有效地利用水平方向的屏幕空间，我们需要打破页头的线性流，移动表单，让它与列表并排。
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=formfloat lang=css %}
-
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=padding lang=css %}
+{% include_code src=_code/floattheform.html snippet=formfloat lang=css %}
 
 <video controls poster="images/floatingform.png" style="width: 100%;">
   <source src="videos/floatingform.mov" type="video/mov"></source>
   <source src="videos/floatingform.webm" type="video/webm"></source>
-  <p>抱歉你的浏览器不支持 video。
-     <a href="videos/floatingform.mov">下载视频</a>。
+  <p>抱歉你的浏览器不支持播放视频，
+     <a href="videos/floatingform.mov">下载视频</a>.
   </p>
 </video>
 
@@ -247,7 +246,8 @@ viewport 放在文档的头部，只需要声明一次。
 
 video 元素需要从窄视口的竖直流中移出，与列表内容并排显示。
 
-{% include_code src=_code/fixingfirstbreakpoint.html snippet=floatvideo lang=css %}
+{% include_code src=_code/floatthevideo.html snippet=floatvideo lang=css %}
+
 
 ### 拼贴图片
 
@@ -259,7 +259,7 @@ video 元素需要从窄视口的竖直流中移出，与列表内容并排显�
 
 {% include_code src=_code/fixingfirstbreakpoint.html snippet=tileimages lang=css %}
 
-### 让图片响应 DPI 
+### 让图片响应 DPI
 
 使用图片时，请同时考虑视口的大小以及显示的分辨率。
 
@@ -277,15 +277,19 @@ web 为 96dpi 的屏幕而建。但是随着移动设备的引入，我们看到
 
 在窄视口设备上，表格很难弄，需要特别注意。
 
-我们推荐在窄视口上，把你的表格变成两行，将一行里的行头跟单元格都变换成列。
+我能推荐在窄视口上将你的表格的每一行都转换为键值对（键就是之前每一列的标题，值还是表格中的值）。幸运的是，这不难实现。首先给每个 `td` 元素添加一个 `data-th` 属性来记录下它响应的表头的值。（这在未添加 CSS 之前不会有任何视觉效果）。
+
+{% include_code src=_code/updatingtablehtml.html snippet=table-tbody lang=html %}
+
 
 <video controls poster="images/responsivetable.png" style="width: 100%;">
   <source src="videos/responsivetable.mov" type="video/mov"></source>
   <source src="videos/responsivetable.webm" type="video/webm"></source>
-  <p>抱歉你的浏览器不支持 video。
-     <a href="videos/responsivetable.mov">下载视频</a>。
+  <p>抱歉你的浏览器不支持
+     <a href="videos/responsivetable.mov">下载视频</a>.
   </p>
 </video>
+
 
 在我们的站点中，我们为表格内容额外创建了一个断点。在移动先行的构建中，很难取消已经应用的样式。所以我们需要把窄视口的表格样式与宽视口的样式区分开来。这使得断点更为清晰，也更一致。
 
@@ -302,5 +306,3 @@ web 为 96dpi 的屏幕而建。但是随着移动设备的引入，我们看到
 3.  本着移动先行的原则构建你的基本体验。
 4.  一旦构建好移动版，不断增加显示宽度，直到页面显示糟糕，在那里设置断点。
 5.  保持迭代。
-
-

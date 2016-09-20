@@ -7,7 +7,8 @@ updated_on: 2016-09-06
 authors:
   - paulkinlan
 tags:
-  - intervention
+  - interventions
+  - chrome53
 featured_image: /web/updates/images/misc/deps-rems.png
 ---
 
@@ -122,7 +123,7 @@ send a heads-up to your analytic or Real User Metrics (RUM) systems.
 {% highlight javascript %}
 if(navigator.connection &&
    navigator.connection.type === 'cellular' &&
-   navigator.connection.downlinkMax <= 0.115)
+   navigator.connection.downlinkMax <= 0.115) {
   // Notify your service to indicate that you might be affected by this restriction.
 }
 {% endhighlight %}

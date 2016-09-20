@@ -9,7 +9,7 @@ authors:
   - dgash
   - zkoch
 translation_priority: 0
-order: 5
+order: 1
 notes:
   may_change:
     - PaymentRequest is still in development. While we think it's stable enough to implement, it may continue to change. We'll keep this page updated to always reflect the current status of the API.<br>Meanwhile, to protect yourself from API changes that may be backwards incompatible, we're offering <a href="https://storage.googleapis.com/prshim/v1/payment-shim.js" target="_blank">a shim</a> that can be embedded on your site. The shim will paper over any API differences for two major Chrome versions.
@@ -72,7 +72,7 @@ The beauty of the new process is threefold: from the user's perspective, all the
 ## Using the Payment Request API {#using}
 
 ### Load Payment Request API shim
-To mitigate pains of catching up with this living standard API, we strongly recommend you to add this shim in `<head>` section of your code. This shim will be updated as API changes and will do its best to keep your code working at least 2 major releases of Chrome.
+To mitigate pains of catching up with this living standard API, we strongly recommend adding this shim in the `<head>` section of your code. This shim will be updated as the API changes and will do its best to keep your code working for at least two major releases of Chrome.
 
 {% highlight html %}
 <script src="https://storage.googleapis.com/prshim/v1/payment-shim.js">

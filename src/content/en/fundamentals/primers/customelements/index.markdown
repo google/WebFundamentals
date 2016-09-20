@@ -857,22 +857,45 @@ If you happen to be interested in the old v0 spec, check out the [html5rocks art
 
 ### Browser support
 
-Chrome ([status](https://www.chromestatus.com/features/4696261944934400)) has an implementation of
-the Custom Elements v1 under a runtime flag: `--enable-blink-features=CustomElementsV1`. Safari has [begun prototyping](https://bugs.webkit.org/show_bug.cgi?id=150225). Edge has [begun prototyping](https://twitter.com/AaronGustafson/status/717028669948977153). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=889230) to implement.
-
-Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/webcomponentsjs/blob/v1/src/CustomElements/v1/README.md) for Custom Elements v1. **Note**: the `:defined` CSS pseudo-class is not polyfilled.
+Chrome 54 ([status](https://www.chromestatus.com/features/4696261944934400)) has Custom Elements v1. Safari has [begun prototyping](https://bugs.webkit.org/show_bug.cgi?id=150225) and you can test the API in WebKit nightly. Edge has [begun prototyping](https://twitter.com/AaronGustafson/status/717028669948977153). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=889230) to implement.
 
 To feature detect custom elements, check for the existence of `window.customElements`:
 
 {% highlight javascript %}
-function supportsCustomElements() {
-  return 'customElements' in window;
+const supportsCustomElementsV1 = 'customElements' in window;
+{% endhighlight %}
+
+#### Polyfill {#polyfill}
+
+Until browser support is widely available, there's a [polyfill](https://github.com/webcomponents/custom-elements/blob/master/custom-elements.min.js) available. 
+
+**Note**: the `:defined` CSS pseudo-class cannot be polyfilled.
+
+Install it:
+
+    bower install --save webcomponents/custom-elements
+
+Usage:
+
+{% highlight javascript %}
+function loadScript(src) {
+ return new Promise(function(resolve, reject) {
+   const script = document.createElement('script');
+   script.async = true;
+   script.src = src;
+   script.onload = resolve;
+   script.onerror = reject;
+   document.head.appendChild(script);
+ });
 }
 
-if (supportsCustomElements()) {
-  // Good to go!
+// Lazy load the polyfill if necessary.
+if (!supportsCustomElementsV1) {
+  loadScript('/bower_components/custom-elements/custom-elements.min.js').then(e => {
+    // Polyfill loaded.
+  });
 } else {
-  // Use polyfills
+  // Native support. Good to go.
 }
 {% endhighlight %}
 

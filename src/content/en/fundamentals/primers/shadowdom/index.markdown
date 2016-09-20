@@ -956,18 +956,45 @@ Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)), Op
 To feature detect shadow DOM, check for the existence of `attachShadow`:
 
 {% highlight javascript %}
-function supportsShadowDOM() {
-  return !!HTMLElement.prototype.attachShadow;
+const supportsShadowDOMV1 = !!HTMLElement.prototype.attachShadow;
+{% endhighlight %}
+
+#### Polyfill {#polyfill}
+
+Until browser support is widely available, the [shadydom](https://github.com/webcomponents/shadydom) and [shadycss](https://github.com/webcomponents/shadycss) polyfills give you v1 feature. Shady DOM mimics the DOM scoping of Shadow DOM and shadycss polyfills CSS custom properties and the style scoping the native API provides.
+
+Install the polyfills:
+
+    bower install --save webcomponents/shadydom
+    bower install --save webcomponents/shadycss
+
+Use the polyfills:
+
+{% highlight javascript %}
+function loadScript(src) {
+ return new Promise(function(resolve, reject) {
+   const script = document.createElement('script');
+   script.async = true;
+   script.src = src;
+   script.onload = resolve;
+   script.onerror = reject;
+   document.head.appendChild(script);
+ });
 }
 
-if (supportsShadowDOM()) {
-  // Good to go!
+// Lazy load the polyfill if necessary.
+if (!supportsShadowDOMV1) {
+  loadScript('/bower_components/shadydom/shadydom.min.js')
+    .then(e => loadScript('/bower_components/shadycss/shadycss.min.js'))
+    .then(e => {
+      // Polyfills loaded.
+    });
 } else {
-  // Use polyfills
+  // Native shadow dom v1 support. Go to go!
 }
 {% endhighlight %}
 
-Until browser support is widely available, the [webcomponents.js polyfill](https://github.com/webcomponents/webcomponentsjs/tree/v1) is being updated to support v1.
+See the [https://github.com/webcomponents/shadycss#usage](https://github.com/webcomponents/shadycss) for instructions on how to shim/scope your styles.
 
 ## Conclusion
 
