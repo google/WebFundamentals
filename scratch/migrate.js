@@ -52,7 +52,7 @@ function replaceNote(markdown, yaml) {
   var items = markdown.match(/{% include shared\/(remember|note).liquid(.*?)%}/g);
   if (items) {
     items.forEach(function(item) {
-      var result = '<!-- TODO: Verify note type! -->\n';
+      var result = '';
       result += 'Note: ';
       var re = /list=['"]?(.*?)['" ]/g;
       var tldrObj = re.exec(item);
@@ -81,6 +81,7 @@ function replaceIncludeCode(markdown, lang, dir) {
   if (!relPath.endsWith('/')) {
     relPath += '/';
   }
+  relPath = relPath.replace('web..//fundamentals', 'web/fundamentals');
   var items = markdown.match(/{% include_code(.*?)%}/g);
   if (items) {
     items.forEach(function(item) {
@@ -248,6 +249,12 @@ function getMetaFromEnglish(sourcePath) {
   return result;
 }
 
+function stripOldClasses(markdown) {
+
+  markdown = markdown.replace('class=""', '');
+  return markdown;
+}
+
 function migrateFile(lang, section, directory, file) {
   var dirPath = path.join(SOURCE_ROOT, lang, section, directory);
   var fileName = path.join(SOURCE_ROOT, lang, section, directory, file);
@@ -331,6 +338,7 @@ function migrateFile(lang, section, directory, file) {
   markdown = replaceYTVideo(markdown);
   markdown = replaceUdacity(markdown, yaml);
   markdown = hideTLDRsFromTOC(markdown);
+  markdown = stripOldClasses(markdown);
 
   if (yaml.layout === 'updates/post') {
     markdown += '\n\n';
@@ -368,9 +376,9 @@ function migrate(lang, section, directory, recursive) {
   });
 }
 
-var lang = 'ko';
+var lang = 'ru';
 var section = 'fundamentals';
-var directory = 'performance/critical-rendering-path';
+var directory = 'design-and-ui/media/images';
 var recursive = false;
 migrate(lang, section, directory, recursive);
 
