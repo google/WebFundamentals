@@ -3,7 +3,7 @@ layout: shared/narrow
 title: "Integrating Android Pay into Payment Request"
 description: "Android Pay enables simple and secure purchases online and eliminates the need for users to remember and manually enter their payment information. Integrate Android Pay to reach millions of Android users, drive higher conversion, and give users a true one-touch checkout experience."
 published_on: 2016-09-08
-updated_on: 2016-09-08
+updated_on: 2016-09-20
 translation_priority: 0
 order: 2
 authors:
@@ -62,18 +62,18 @@ Android Pay enables simple and secure purchases online and eliminates the need f
 ### Required knowledge
 
 * Because Android Pay in Chrome uses the PaymentRequest API, it is essential to familiarize yourself with the [integration guide](https://developers.google.com/web/fundamentals/primers/payment-request/?hl=en) before continuing.
-* Even if you are not an Android: developer, it will be useful to acquaint yourself with the [Android Pay in-app APIs](https://developers.google.com/android-pay/android/tutorial). Because the responses returned by Android Pay are the same on Android and Chrome, the information on response handling is useful.
+* Even if you are not an Android developer, it will be useful to acquaint yourself with the [Android Pay in-app APIs](https://developers.google.com/android-pay/android/tutorial). Because the responses returned by Android Pay are the same on Android and Chrome, the information on response handling is useful.
 * Review the Android Pay detailed [content policies](https://support.google.com/payments/merchant/answer/75724?payments_to_biz=&rd=1) to make sure your specific goods or services are supported.
 
 ### Setting up the environment
 
-* Make sure you have the Android Pay app installed on your device. You need to be in one of the supported countries (United States, United Kingdom, Australia or Singapore as of September 2016) to install it.
+* Make sure you have the Android Pay app installed on your device. You need to be in one of the supported countries to install it. Check on [android.com/pay](https://www.android.com/pay/) to see if your country is supported.
 * For testing, you need to [add a credit card](https://support.google.com/androidpay/answer/6289372) to Android Pay on your device.
 * Sign up for a merchant ID from Android Pay
     * Add your company, site origin, and a company email using [this form.](https://goo.gl/forms/SiKd7GAESCPNg9H83)
-    * Google will provide a merchant ID within 24 hours.
+    * Google will provide a merchant ID within 1 business day.
 * Ensure that [your payment gateway / processor supports Android Pay tokens](https://developers.google.com/android-pay/#processors).
-* Acquire a key-pair used to encrypt the response from Android Pay if you are using the network token approach.
+* Acquire a key-pair used to encrypt the response from Android Pay if you are using [the network token approach](#integration-using-network-token).
     * Google recommends that you work with your payment processor to obtain a public key. This simplifies the process as your processor will be able to handle decryption of the Android Pay Payload. Find more information at your payment processor documentation.
     * If you want to handle encryption yourself, please refer to [Payment Token Cryptography](https://developers.google.com/android-pay/integration/payment-token-cryptography) for generating a base64 encoded Elliptic Curve Integrated Encryption key.
 
