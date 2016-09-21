@@ -141,87 +141,7 @@ for (i = 0; i < 10; i++) {
 
 Click to copy is automatically enabled for all code blocks.
 
-### Including code from the local project
 
-Use `includecode` with a `content_path` argument to refer to a path to
-a file in the content area, typically in a hidden subdirectory. The path is
-relative to the locale root. If the file is not found in the page's locale, it
-also checks for the file in the en locale before failing.
-
-<pre class="prettyprint">
-&lt;pre class="prettyprint">
-&#123;% includecode content_path="web/fundamentals/resources/_code/file.js" %}
-&lt;/pre>
-</pre>
-
-Includes can be limited by using `region_tag="region"` and including a 
-`[START region]` and `[END region]` within the code file.
-
-By default `includecode` returns the specified section of the source code,
-including whitespace, without modification. This may be undesired if the
-specified region is deeply indented in the source file as it may appear out of
-line with the rest of the documentation. You can adjust the indentation of the
-included code with the `adjust_indentation="auto"` option.
-
-<pre class="prettyprint">
-&lt;pre class="prettyprint">
-&#123;% includecode content_path="path/file.js" adjust_indentation="auto" %}
-&lt;/pre>
-</pre>
-
-### Including JavaScript in your documents
-
-The `framebox` tag lets you embed a live demo of JavaScript functionality in
-a page, running the demo in a domain-sandboxed environment. The contents of the
-`framebox` tag are moved to a separate file served from a non-google.com
-domain, and automatically included in the documentation page using an `iframe`.
-Frameboxes can contain HTML, CSS, and JavaScript. Text in frameboxes is
-automatically submitted for translation with the rest of the document, and
-served in the same locale as the page.
-
-{% framebox height="80px" %}
-<style>
-.borderdemo { border: 1px solid red; }
-</style>
-<p id="demopara">Click the button to toggle the border.
-  <button id="demobutton">Click Me</button>
-</p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-  $('#demobutton').click(function(event) {
-    if ($('#demopara').hasClass('borderdemo')) {
-      $('#demopara').removeClass('borderdemo');
-    } else {
-      $('#demopara').addClass('borderdemo');
-    }
-  });
-});
-</script>
-{% endframebox %}
-
-The code for this example:
-
-<pre class="prettyprint lang-html">&#123;% framebox height="80px" %}{% htmlescape %}
-<style>
-.borderdemo { border: 1px solid red; }
-</style>
-<p id="demopara">Click the button to toggle the border.
-  <button id="demobutton">Click Me</button>
-</p>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-  $('#demobutton').click(function(event) {
-    if ($('#demopara').hasClass('borderdemo')) {
-      $('#demopara').removeClass('borderdemo');
-    } else {
-      $('#demopara').addClass('borderdemo');
-    }
-  });
-});
-</script>
-{% endhtmlescape %}&#123;% endframebox %}</pre>
 
 ### Special Case: Templates -  &#123;&#123;}}
 
@@ -536,50 +456,7 @@ Markdown.
 
 <a href="http://www.google.com/" class="external">External Link</a>
 
-## Videos
 
-<div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="yQhFmPExcbs"
-          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-  </iframe>
-</div>
-
-Wrap all YouTube videos in `<div class="video-wrapper">` or 
-`<div class="video-wrapper-full-width">`. `class="video-wrapper"`
-automatically floats the video right on larger screens, keeping it at 50% of 
-the column width but forcing the video into vertical layout on smaller screens,
-with the video at 100% of the column width. As the video's size changes, it
-automatically maintains a 16:9 ratio. `class="video-wrapper-full-width"` keeps
-the video at 100% of the column width at all sizes, and still scales it to
-automatically maintain a 16:9 ratio.
-
-    <div class="video-wrapper">
-      <iframe class="devsite-embedded-youtube-video" data-video-id="yQhFmPExcbs"
-              data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
-      </iframe>
-    </div>
-
-{% include "web/_shared/sample.html" %}
-
-<pre class="prettyprint">
-&#123;% include "web/_shared/sample.html" %}
-</pre>
-
-## Reusable related guides includes
-
-Web**Fundamentals** made it easy to include related guides, unfortunately
-DevSite doesn't have an equivalent. To make life easier and allow for simple
-reuse, you can use a set of pre-created related guides.
-
-<pre class="prettyprint">
-&#123;% include "_shared/related-guides/heading.html" %}
-&#123;% include "_shared/related-guides/service-workers.html" %}
-</pre>
-
-Will render as:
-
-{% include "web/_shared/related-guides/heading.html" %}
-{% include "web/_shared/related-guides/service-workers.html" %}
 
 ## Custom attributes and named anchors 
 
@@ -618,16 +495,6 @@ Generates:
 
 
 
-## User comments
-
-To allow users to comment on your documentation, add a comment widget to the
-bottom of the page. For example:
-
-<pre class="prettyprint">
-&#123;% include "comment-widget.html" %}
-</pre>
-
-Note: the comment widget does **not** render in the staging or development environment, and will only be visible when the page is published on DevSite.
 
 ## Tooltips
 

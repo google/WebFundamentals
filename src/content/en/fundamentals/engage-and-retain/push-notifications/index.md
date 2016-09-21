@@ -28,7 +28,7 @@ you to re-engage with your users.
 ## Are service workers involved? {: #service-worker-involved }
 
 Yes! If you're not familiar with them, check out the 
-[service worker introduction](/web/fundamentals/getting-started/primers/service-workers).
+[service worker introduction][service-worker-primer].
 We will use service worker code in later sections when we show you how to
 implement pushes and notifications.
 
@@ -72,3 +72,5 @@ In the next few sections we'll provide tips to help you build better
 notifications. We'll go on to describe the mechanics of implementing them,
 including handling permissions and subscriptions, sending messages, and
 responding to them.
+
+<<../../../_common-links.md>>

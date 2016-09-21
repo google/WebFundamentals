@@ -19,6 +19,8 @@ upper_tabs:
           path: /web/resources/writing-an-update
         - title: Style Guide
           path: /web/resources/style-guide
+        - title: Widgets
+          path: /web/resources/widgets
         - title: Contributors
           path: /web/resources/contributors
         - title: Translation Guideance

@@ -15,7 +15,7 @@ description: Detecting if a web app is launched from the home screen
 
 During the past year we have focused on enabling users to build app like 
 experiences on the web by making it possible for apps to work offline using 
-[service worker](/web/fundamentals/primers/service-workers) and to get a 
+[service worker][service-worker-primer] and to get a 
 presence on the home screen using the 
 [Web App Manifest](/web/fundamentals/engage-and-retain/simplified-app-installs).
 
