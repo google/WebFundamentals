@@ -14,23 +14,24 @@ Web**Fundamental** provides a wide variety of widgets to use in documentation.
 ## Common Links
 
 Maintaining links can be a pain, to simplify this, you can
-add common links to the `_common-links.md` file, add it as in include to your
+add common links to the [`_common-links.md`][common-links] file, add it as in include to your
 markdown document then use the reference link syntax to reference it in your
 document.
 
-First, define the link, in `_common-links.md`, using the standard reference
-link markdown syntax:
+First, define the link, in [`_common-links.md`][common-links], using the
+standard reference link markdown syntax:
 
     [id]: http://example.com/  "Optional Title Here"
 
 Be sure to add links sorted alphabetically by id, check to ensure the link
 you're adding doesn't already exist yet.
 
-Next, include the `_common-links.md` file in your document. 
+Next, include the [`_common-links.md`][common-links] file in your document. 
 
     <<../_common-links.md>>
 
-Note: The path to the `_common-links.md` file must be relative from the current directory.
+Note: The path to the [`_common-links.md`][common-links] file must be relative
+from the current directory.
 
 Finally, use the reference link in your document:
 
@@ -187,3 +188,4 @@ automatically maintain a 16:9 ratio.
     </div>
 
 
+[common-links]: https://github.com/google/WebFundamentals/blob/next-version/src/content/en/_common-links.md
