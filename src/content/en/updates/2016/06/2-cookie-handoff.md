@@ -16,7 +16,7 @@ description: Introducing a proof of concept design to persist sessions using the
 
 We all love how native apps will ask you to login only once and then remember you until you tell them you want to log out. Unfortunately the web doesn't always work that way.
 
-Now that devices, especially mobile devices, are more personal, and with more sites sending all traffic over HTTPS reducing the risk of token theft, web sites should reconsider their short-lived cookie policies and adopt more user-friendly longer lived sessions.
+Now that devices, especially mobile devices, are more personal, and with more sites sending all traffic over HTTPS reducing the risk of token theft, websites should reconsider their short-lived cookie policies and adopt more user-friendly longer lived sessions.
 
 However, even if you *want* to make the session last longer, some websites don't verify the user's authentication on each request (i.e. there is no way to revoke the session cookie once issued). This normally leads to short sessions, with the user being forced to sign in frequently so their authentication can be re-validated, allowing for things like a password change to invalidate existing sessions in a known amount of time.
 

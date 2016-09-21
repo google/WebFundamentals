@@ -60,7 +60,7 @@ The browser then presents the payments UI to the user, who selects a payment met
 PaymentRequest can also be extended to return additional information, such as shipping addresses and options, payer email, and payer phone. This allows you to get all the information you need to finalize a payment without ever showing the user a checkout form.
 
 
-The beauty of the new process is threefold: from the user's perspective, all the previously tedious interaction&mdash;request, authorization, payment, and result&mdash;now takes place in a single step; from the web site's perspective, it requires only a single JavaScript API call; from the payment method's perspective, there is no process change whatsoever.
+The beauty of the new process is threefold: from the user's perspective, all the previously tedious interaction&mdash;request, authorization, payment, and result&mdash;now takes place in a single step; from the website's perspective, it requires only a single JavaScript API call; from the payment method's perspective, there is no process change whatsoever.
 
 <div style="clear:both;"></div>
 

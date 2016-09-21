@@ -16,7 +16,7 @@ book_path: /web/updates/_book.yaml
 
 Paraphrasing from Edward O’Connor's original [proposal](http://lists.w3.org/Archives/Public/www-style/2012Jun/0627.html) of this feature:
 
-> Many web sites have elements that alternate between being in-flow and having `position: fixed`, depending on the user's scroll position. This is
+> Many websites have elements that alternate between being in-flow and having `position: fixed`, depending on the user's scroll position. This is
 often done for elements in a sidebar that the page author wants to be
 always visible as the user scrolls, but which slot into a space on the
 page when scrolled to the top. Good examples are [news.google.com](https://news.google.com/) (the "Top Stories" sidebar) and yelp.com ([search results map](http://www.yelp.com/search?find_desc=restaurants&find_loc=San+Francisco%2C+CA&ns=1)).

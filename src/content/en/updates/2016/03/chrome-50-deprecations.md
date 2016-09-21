@@ -131,7 +131,7 @@ Transport layer security (TLS) supports a mechanism for negotiating versions,
 allowing for the introduction of new TLS versions without breaking
 compatibility. Some servers implemented this in such a way that browsers were
 required to use insecure endpoints as a fallback. Because of this, attackers
-could force _any_ web site, not just those that are incorrectly configured, to
+could force _any_ website, not just those that are incorrectly configured, to
 negotiate for weaker versions of TLS.
 
 Affected sites will fail to connect with `ERR_SSL_FALLBACK_BEYOND_MINIMUM_VERSION`. Administrators 

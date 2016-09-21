@@ -15,7 +15,7 @@ book_path: /web/shows/_book.yaml
 </div>
 
 Jake Archibald introduces how making simple changes to service worker can vastly improve 
-the startup and load performance of your web site.  In this video Jake shows how he has 
+the startup and load performance of your website.  In this video Jake shows how he has 
 made his Wikipedia application not only work offline but amazingly performant too. 
 
 [Demo](https://wiki-offline.jakearchibald.com)
