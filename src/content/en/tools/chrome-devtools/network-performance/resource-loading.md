@@ -434,21 +434,23 @@ that resource's row. The list below describes each of the options.
 
 [nc]: /web/tools/chrome-devtools/profile/network-performance/network-conditions#network-conditions
 
-### Copy requests as cURL commands
+### Copy one or all requests as cURL commands {: #curl }
 
 [cURL](http://curl.haxx.se/) is a command line tool for making HTTP 
-transactions. When you right-click on a resource in the **Requests Table** and
-then select **Copy as cURL**, DevTools recreates an HTTP request (including
-HTTP headers, SSL certificates, and query string parameters) and copies it 
-as a cURL command string to the clipboard. You can then paste the string 
-into a terminal window (on a system with cURL) to execute the same request.
+transactions. 
 
-Below is an example cURL command line string taken from a XHR request on 
-the Google News home page.
+Right-click on a resource within the Requests Table, hover over 
+**Copy** and then select **Copy as cURL** to copy a string of cURL 
+requests for all resources that have been detected by the Network panel.
 
+![Copy single request as cURL command](imgs/copy-as-curl.png)
 
-    curl 'http://news.google.com/news/xhrd=us' -H 'Accept-Encoding: gzip,deflate,:sdch' -H 'Host: news.google.com' -H 'Accept-Language: en-US,en;q=0.8' -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1510.0 Safari/537.36' -H 'Accept: */*' -H 'Referer: http://news.google.com/nwshp?hl=en&tab=wn' -H 'Cookie: NID=67=eruHSUtoIQA-HldQn7U7G5meGuvZOcY32ixQktdgU1qSz7StUDIjC_Knit2xEcWRa-e8CuvmADminmn6h2_IRpk9rWgWMdRj4np3-DM_ssgfeshItriiKsiEXJVfra4n; PREF=ID=a38f960566524d92:U=af866b8c07132db6:FF=0:TM=1369068317:LM=1369068321:S=vVkfXySFmOcAom1K' -H 'Connection: keep-alive' --compressed 
-    
+Select **Copy All as cURL** to copy a string of cURL requests for all
+resources that have been detected by the Network panel.
+
+When you copy all, filtering is ignored (e.g. if you filter the Network panel
+to only display CSS resources and then press **Copy All as cURL**, you'll get
+all the detected resources, not just the CSS).
 
 ## Customize the Network panel
 
