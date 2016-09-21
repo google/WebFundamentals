@@ -20,12 +20,5 @@ toc:
       - title: "Video: Web Push Notifications (I/O 2016)"
         path: /web/fundamentals/engage-and-retain/push-notifications/video
     - title: App Install Banners
-      section:
-      - title: Web App Install Banners
-        path: /web/fundamentals/engage-and-retain/app-install-banners/
-      - title: App Install Banner Events
-        path: /web/fundamentals/engage-and-retain/app-install-banners/events
-      - title: Native App Install Banners
-        path: /web/fundamentals/engage-and-retain/app-install-banners/native-app-install
-      
+      path: /web/fundamentals/engage-and-retain/app-install-banners/
 

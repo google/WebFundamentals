@@ -5,7 +5,7 @@ description: Custom elements allow web developers to define new HTML tags, exten
 {# wf_published_on: 2016-06-29 #}
 {# wf_updated_on: 2016-08-02 #}
 
-# Custom Elements v1: reusable web components {: .page-title }
+# Custom Elements v1: Reusable Web Components {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
