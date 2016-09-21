@@ -5,7 +5,7 @@ description: Push notifications are one of the most valuable capabilities of nat
 {# wf_updated_on: 2016-06-30 #}
 {# wf_published_on: 2016-06-30 #}
 
-# Push Notifications: Timely, Relevant, and Precise {: .page-title }
+# Web Push Notifications {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
@@ -69,6 +69,6 @@ A typical options object looks something like this:
 
 
 In the next few sections we'll provide tips to help you build better
-notifications. We'll go on to describe the mechanincs of implementing them,
-including handling permissions and subscriptions, sending messages and
+notifications. We'll go on to describe the mechanics of implementing them,
+including handling permissions and subscriptions, sending messages, and
 responding to them.
