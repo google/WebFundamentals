@@ -69,6 +69,6 @@ A typical options object looks something like this:
 
 
 In the next few sections we'll provide tips to help you build better
-notifications. We'll go on to describe the mechanincs of implementing them,
-including handling permissions and subscriptions, sending messages and
+notifications. We'll go on to describe the mechanics of implementing them,
+including handling permissions and subscriptions, sending messages, and
 responding to them.

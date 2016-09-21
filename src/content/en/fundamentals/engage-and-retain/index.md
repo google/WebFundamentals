@@ -16,9 +16,9 @@ if your site doesn't have one, consider adding it. It's a simple file that let's
 you:   
 
 * Control how your app appears to the user in areas where they would expect
-to see apps (for example the mobile home screen)  
-* Direct what the user can launch  
-* Define its appearance at launch  
+to see apps (for example, the mobile home screen).  
+* Direct what the user can launch.  
+* Define its appearance at launch.  
 
 <div class="attempt-left">
   <h2>Add to home screen</h2>
@@ -52,13 +52,13 @@ to see apps (for example the mobile home screen)
 ### Codelabs
 
 [Your First Progressive Web App](/web/fundamentals/getting-started/codelabs/your-first-pwapp/)<br>
-This codelab will walk you through creating your own Progressive Web App,
-including the design considerations, as well as implementation details to
+This codelab walks you through creating your own Progressive Web App,
+including the design considerations. It includes implementation details to
 ensure that your app meets the key principles of a Progressive Web App.
 
 [Your First Web Push Notification](/web/fundamentals/getting-started/codelabs/push-notifications/)<br>
-In this codelab, you'll learn how to add Push Notifications to web
-applications. This will enable you to re-engage users with breaking news and
+In this codelab, you learn how to add Push Notifications to web
+applications. This enables you to re-engage users with breaking news and
 information about new content. You'll also learn the basics of Service Workers.
 
 ### Chrome DevTools
@@ -70,8 +70,8 @@ information about new content. You'll also learn the basics of Service Workers.
 
 [Progressive Web App Fundamentals](https://udacity.com/ud811)<br>
 In this course you’ll get started working on your very first Progressive Web
-App - a web app that can take advantage of many of the features native
-applications have enjoyed. You’ll also get more experience in creating a web
+App&mdash;a web app that takes advantage of many features that native
+applications enjoy. You’ll also get more experience in creating a web
 app that works offline using Service Workers. Finally, you’ll make your app
 installable to the user’s home screen with the Web App Manifest file.
 
