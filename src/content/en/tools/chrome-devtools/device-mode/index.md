@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Use virtual devices in Chrome's Device Mode to build mobile-first web sites.
+description: Use virtual devices in Chrome's Device Mode to build mobile-first websites.
 
 {# wf_updated_on: 2016-03-07 #}
 {# wf_published_on: 2015-04-13 #}
@@ -9,7 +9,7 @@ description: Use virtual devices in Chrome's Device Mode to build mobile-first w
 
 {% include "web/_shared/contributors/pbakaus.html" %}
 
-Use Chrome DevTools' Device Mode to build mobile-first, fully responsive web sites. Learn how to use it to simulate a wide range of devices and their capabilities.
+Use Chrome DevTools' Device Mode to build mobile-first, fully responsive websites. Learn how to use it to simulate a wide range of devices and their capabilities.
 
 ![Initial start for device mode](imgs/device-mode-initial-view.png)
 

@@ -66,7 +66,7 @@ order—all while offline.
 Tracking data usage to initial load and to complete first transaction were two
 key measurements for Konga. Compared with their native app, their Progressive
 Web App uses 92% less data for initial load and 82% less data to complete the
-first transaction. Also, when compared to their previous mobile web site, the
+first transaction. Also, when compared to their previous mobile website, the
 new experience uses 63% less data for initial load and 84% less data to
 complete first transaction.
 

@@ -32,7 +32,7 @@ The behavior differences between the browsers break down into four models.
 
 1. **Asynchronous touchmove processing**
 
-    Touchmove events are sent during scrolling, but scrolling can proceed asynchronously (the touchmove event is ignored after scrolling has begun). This can result in "double handling" of events, for example, continuing to  scroll after the web site does something with the touchmove and calls [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault) on the event, telling the browser not to handle it.
+    Touchmove events are sent during scrolling, but scrolling can proceed asynchronously (the touchmove event is ignored after scrolling has begun). This can result in "double handling" of events, for example, continuing to  scroll after the website does something with the touchmove and calls [preventDefault](https://developer.mozilla.org/en-US/docs/Web/API/event.preventDefault) on the event, telling the browser not to handle it.
 
     > Browsers: Mobile Safari (when scrolling Document), Firefox
 
@@ -53,7 +53,7 @@ The behavior differences between the browsers break down into four models.
 Chrome for Android currently uses Chrome's Old Model: touchcancel on scroll
 start, which enhances scrolling performance, but leads to developer confusion.
 In particular, some developers aren't aware of the touchcancel event or how to
-deal with it, and this has caused some web sites to break. More importantly, an
+deal with it, and this has caused some websites to break. More importantly, an
 entire class of UI scrolling effects and behaviors, such as **pull-to-refresh**,
 **hidey bars**, and **snap points** are difficult or impossible to implement
 well.

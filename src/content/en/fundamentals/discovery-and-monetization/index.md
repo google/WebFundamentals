@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Learn how to bring more readers to your web site and increase revenue.
+description: Learn how to bring more readers to your website and increase revenue.
 
 {# wf_updated_on: 2016-09-09 #}
 {# wf_published_on: 2015-09-08 #}
 
 # Discovery and Monetization {: .page-title }
 
-Broaden your web site's audience and increase revenue.
+Broaden your website's audience and increase revenue.
 
 Online advertisements are one way to monetize your site or app. 
 [Google's AdSense site](https://www.google.com/adsense) has resources and
