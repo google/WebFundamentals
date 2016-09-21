@@ -50,7 +50,7 @@ The API is straightforward, which I'll demonstrate using code from the [WebRTC s
 First up, instantiate a MediaRecorder with a MediaStream. Optionally, use an `options` parameter to specify the desired output format:
 
 {% highlight javascript %}
-var options = {mimeType: 'video/webm, codecs=vp9'};
+var options = {mimeType: 'video/webm;codecs=vp9'};
 mediaRecorder = new MediaRecorder(stream, options);
 {% endhighlight %}
 
@@ -75,9 +75,9 @@ Use the static method `MediaRecoder.isTypeSupported()` to check if a MIME type i
 {% highlight javascript %}
 var options;
 if (MediaRecorder.isTypeSupported('video/webm;codecs=vp9')) {
-  options = {mimeType: 'video/webm, codecs=vp9'};
+  options = {mimeType: 'video/webm;codecs=vp9'};
 } else if (MediaRecorder.isTypeSupported('video/webm;codecs=vp8')) {
-   options = {mimeType: 'video/webm, codecs=vp8'};
+   options = {mimeType: 'video/webm;codecs=vp8'};
 } else {
   // ...
 }
@@ -92,7 +92,7 @@ Next, add a data handler and call the `start()` method to begin recording:
 {% highlight javascript %}
 var recordedChunks = [];
 
-var options = {mimeType: 'video/webm,codecs=vp9'};
+var options = {mimeType: 'video/webm;codecs=vp9'};
 mediaRecorder = new MediaRecorder(stream, options);
 mediaRecorder.ondataavailable = handleDataAvailable;
 mediaRecorder.start();
