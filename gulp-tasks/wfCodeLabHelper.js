@@ -11,6 +11,8 @@ var moment = require('moment');
 var gutil = require('gulp-util');
 
 function updateCodeLab(fileName) {
+  gutil.log(' ', 'Processing', fileName);
+  var authorId;
   var metadataFile = fileName.replace('index.md', 'codelab.json');
   var metadata = fs.readFileSync(metadataFile);
   metadata = JSON.parse(metadata);
@@ -18,7 +20,13 @@ function updateCodeLab(fileName) {
     gutil.log(' ', 'Skipping', fileName);
     return;
   }
-  gutil.log(' ', 'Processing', fileName);
+  try {
+    var authorJSON = fs.readFileSync(fileName.replace('index.md', 'author.json'));
+    authorJSON = JSON.parse(authorJSON);
+    authorId = authorJSON.author;
+  } catch (ex) {
+    gutil.log('  ', 'No author.json file found.');
+  }
   metadata.wfProcessed = true;
   var result = [];
   var markdown = fs.readFileSync(fileName, 'utf8');
@@ -36,6 +44,11 @@ function updateCodeLab(fileName) {
   result.push('');
   result.push('');
   result.push('# ' + metadata.title + ' {: page-title }');
+  if (authorId) {
+    var authorInfo = '{% include "web/_shared/contributors/{{id}}.html" %}';
+    result.push('');
+    result.push(authorInfo.replace('{{id}}', authorId));
+  }
   markdown = markdown.replace(/^# (.*)\n/, '');
   var feedbackLink = markdown.match(/\[Codelab Feedback\](.*)\n/);
   if (feedbackLink && feedbackLink[0]) {

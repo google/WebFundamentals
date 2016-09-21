@@ -7,6 +7,8 @@ description: Learn how to integrate a service worker into an existing applicatio
 
 # Adding a Service Worker and Offline into your Web App {: page-title }
 
+{% include "web/_shared/contributors/paulkinlan.html" %}
+
 
 
 ## Overview

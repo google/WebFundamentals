@@ -7,6 +7,8 @@ description: In this codelab, you will learn how to enable push messaging and no
 
 # Enable Push Notifications for your Web App {: page-title }
 
+{% include "web/_shared/contributors/samdutton.html" %}
+
 
 
 ## Overview

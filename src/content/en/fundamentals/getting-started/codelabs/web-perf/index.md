@@ -7,6 +7,8 @@ description: This codelab will help you learn to identify and fix web app perfor
 
 # Find and Fix Web App Performance Issues {: page-title }
 
+{% include "web/_shared/contributors/kaycebasques.html" %}
+
 
 
 ## Introduction
