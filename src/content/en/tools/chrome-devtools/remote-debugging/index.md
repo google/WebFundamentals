@@ -58,7 +58,7 @@ following screenshot. Make sure that **Discover USB devices** is enabled.
 ![empty inspect devices dialog](imgs/empty-inspect-devices.png)
 
 Connect your Android device to your development machine using a USB cable. You 
-should connect your Android device directly to your developmen machine, not
+should connect your Android device directly to your development machine, not
 through any intermediate hubs. 
 
 If this is your first time connecting this Android device to this development

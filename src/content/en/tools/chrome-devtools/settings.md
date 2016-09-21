@@ -119,3 +119,9 @@ menu](#main-menu), select **More Tools** > **Rendering Settings**, and then
 enable the **emulate media** checkbox with the dropdown menu set to **print**.
 
 ![enabling print preview mode](images/emulate-print-media.png)
+
+## Show HTML comments {: #show-html-comments }
+
+To show or hide HTML comments in the **Elements** panel, [open
+**Settings**](#settings), go to the **Preferences** panel, find the
+**Elements** section, and then toggle the **Show HTML comments** checkbox.
