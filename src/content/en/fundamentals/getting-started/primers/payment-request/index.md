@@ -389,7 +389,6 @@ Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/pay
         dict.languageCode      = addr.languageCode;
         dict.organization      = addr.organization;
         dict.recipient         = addr.recipient;
-        dict.careOf            = addr.careOf;
         dict.phone             = addr.phone;
       }
       return dict;
@@ -703,7 +702,6 @@ As PaymentRequest API is an emerging feature, many browsers don't yet support it
         dict.languageCode      = addr.languageCode;
         dict.organization      = addr.organization;
         dict.recipient         = addr.recipient;
-        dict.careOf            = addr.careOf;
         dict.phone             = addr.phone;
       }
       return dict;
