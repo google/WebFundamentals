@@ -220,6 +220,16 @@ def getInclude(includeTag, lang='en'):
     return 'Warning: Unable to find include <code>' + fileName + '</code>'
   return result
 
+def getIncludeMD(includeTag, lang='en'):
+  # Returns the contents of a markdown include file. If the file is not found,
+  # it returns a warning into the doc. Otherwise it returns the file.
+  fileName = includeTag.replace('<<', '')
+  fileName = fileName.replace('>>', '')
+  result = readFile(fileName, lang)
+  if result is None:
+    result = 'Warning: Unable to find markdown file: ' + fileName
+  return result
+
 
 def getIncludeCode(includeTag, lang='en'):
   # Returns the contents of an includecode file. If the file is not found,

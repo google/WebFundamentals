@@ -17,7 +17,7 @@ authenticate themselves to your website. Authenticated users can interact with
 each other using a dedicated profile, sync data across devices, or process data
 while offline; the list goes on and on. But creating, remembering and typing
 passwords tends to be cumbersome for end users, especially on mobile screens
-which leads them to re-using same passwords on different sites. This of course
+which leads them to re-using the same passwords on different sites. This of course
 is a security risk.
 
 The latest version of Chrome (51) supports the **[Credential Management
@@ -71,7 +71,7 @@ typical single page app.
 * Both the registration and sign-in forms have the typical options of id/password
   credentials and federation, e.g. with Google Sign-In and Facebook Sign-In.
 
-By using Credential Management API, you will be able to add following
+By using Credential Management API, you will be able to add the following
 features to the site, for example:
 
 * **Show an account chooser when signing in:** Shows a native account chooser UI

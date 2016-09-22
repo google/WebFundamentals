@@ -7,8 +7,7 @@ description: CSS Containment という新しい仕様によって、ブラウザ
 
 # Chrome 52 に CSS Containment が導入 {: .page-title }
 
-
-
+{% include "web/_shared/contributors/paullewis.html" %}
 
 
 <style>

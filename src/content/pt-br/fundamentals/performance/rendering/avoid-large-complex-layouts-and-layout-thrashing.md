@@ -5,7 +5,7 @@ description: Layout é onde o navegador descobre a informação geométrica para
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
-# Avoid large, complex layouts and layout thrashing {: .page-title }
+# Evitar grandes layouts complexos e layout desnecessário {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 

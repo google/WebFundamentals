@@ -65,11 +65,11 @@ gulp.task('clean', function() {
 });
 
 gulp.task('deploy', function(cb) {
-  runSequence('clean',['build'], cb);
+  runSequence('clean','build', 'test', cb);
 });
 
 gulp.task('presubmit', function(cb) {
-  runSequence('test', cb);
+  runSequence('clean', 'test', cb);
 });
 
 gulp.task('default', function() {
@@ -79,6 +79,6 @@ gulp.task('default', function() {
   gutil.log(' ', gutil.colors.cyan('codelabs'), 'Updates the Code Labs to the latest from Docs');
   gutil.log(' ', gutil.colors.cyan('deploy'), '[clean, build, test]');
   gutil.log(' ', gutil.colors.cyan('presubmit'), 'See test');
-  guilt.log(' ', gutil.colors.cyan('test'), 'Checks the files for any issues');
+  gutil.log(' ', gutil.colors.cyan('test'), 'Checks the files for any issues');
   gutil.log('');
 });

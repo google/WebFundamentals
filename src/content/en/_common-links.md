@@ -1,0 +1,10 @@
+{% comment %}
+Common Links File - Do NOT add anything except link references to the file!
+
+Links must be added in alphebetical order, using fully qualified paths
+For example:
+[linkId]: /path/to/link "title of link"
+{% endcomment %}
+
+[service-worker-primer]: /web/fundamentals/getting-started/primers/service-workers "Service Workers: An Introduction"
+

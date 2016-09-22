@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop or anything else with a screen.
+description: Much of the web isn't optimized for those multi-device experiences. Learn the fundamentals to get your site working on mobile, desktop, or anything else with a screen.
 
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2014-04-29 #}
@@ -15,8 +15,8 @@ Mobile devices are often constrained by display size and require a different
 approach to how content is laid out on screen.
 
 There is a multitude of different screen sizes across phones, "phablets",
-tablets, desktops, game consoles, TVs, even wearables.  Screen sizes will always
-be changing, so it's important that your site can adapt to any screen size,
+tablets, desktops, game consoles, TVs, and even wearables.  Screen sizes are always
+changing, so it's important that your site can adapt to any screen size,
 today or in the future.
 
 <video autoplay muted loop controls>
@@ -40,13 +40,13 @@ in two columns.
 
 Explore what makes a site responsive and how some common responsive design
 patterns work across different devices. Learn how to create your own
-responsive layouts and experiment with breakpoints, and optimizing text and more.
+responsive layouts and experiment with breakpoints, optimizing text, and more.
 
 [View Course](https://udacity.com/ud893){: .external }
 
 ## Set the viewport {: #set-the-viewport }
 
-Pages optimized for a variety of devices must include a meta viewport element in the head of the document.  A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling.
+Pages optimized for a variety of devices must include a meta viewport tag in the head of the document.  A meta viewport tag gives the browser instructions on how to control the page's dimensions and scaling.
 
 ### TL;DR {: .hide-from-toc }
 - Use the meta viewport tag to control the width and scaling of the browser's viewport.
@@ -55,11 +55,10 @@ Pages optimized for a variety of devices must include a meta viewport element in
 - Ensure your page is accessible by not disabling user scaling.
 
 
-To attempt to provide the best experience, mobile browsers will render
+To attempt to provide the best experience, mobile browsers render
 the page at a desktop screen width (usually about 980px, though this varies
 across devices), and then try to make the content look better by increasing
-font sizes and scaling the content to fit the screen.  For users, this means
-that font sizes may appear inconsistently and they have to double-tap or
+font sizes and scaling the content to fit the screen.  This means that font sizes may appear inconsistent to users, who may have to double-tap or
 pinch-to-zoom in order to see and interact with the content.
 
 
@@ -93,14 +92,14 @@ phone or a large desktop monitor.
   </a>
 </div>
 
-Some browsers will keep the page's width constant when rotating to landscape
+Some browsers keep the page's width constant when rotating to landscape
 mode, and zoom rather than reflow to fill the screen. Adding the attribute
 `initial-scale=1` instructs browsers to establish a 1:1 relationship between CSS
 pixels and device-independent pixels regardless of device orientation, and
 allows the page to take advantage of the full landscape width.
 
 
-Note: Use a comma to separate attributes to ensure older browsers can properly parse the attributes.
+Note: To ensure that older browsers can properly parse the attributes, use a comma to separate attributes.
 
 ### Ensure an accessible viewport
 
@@ -115,7 +114,7 @@ When set, these can disable the user's ability to zoom the viewport, potentially
 
 ## Size content to the viewport
 
-On both desktop and mobile devices, users are used to scrolling websites vertically but not horizontally, and forcing the user to scroll horizontally or to zoom out in order to see the whole page results in a poor user experience.
+On both desktop and mobile devices, users are used to scrolling websites vertically but not horizontally; forcing the user to scroll horizontally or to zoom out in order to see the whole page results in a poor user experience.
 
 ### TL;DR {: .hide-from-toc }
 - Do not use large fixed width elements.
@@ -160,6 +159,7 @@ viewport on small screens.
   </figure>
   </a>
 </div>
+<div class="clearfix"></div>
 
 
 

@@ -6,7 +6,7 @@ description: Mudando o DOM, através da adição e remoção de elementos, mudan
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
-# Reduce the scope and complexity of style calculations {: .page-title }
+# Reduzir o escopo e complexidade dos calculos de estilo {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 

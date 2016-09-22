@@ -908,6 +908,21 @@ glenshires:
   google: 110477083701772760000
   email: gshires@google.com
 
+abdshomad:
+  name:
+    given: Abd
+    family: Shomad
+  country: ID
+  role:
+    - translator
+  homepage: 'http://abdshomad.github.io'
+  google: +abdshomad
+  twitter: abdshomad
+  github: abdshomad
+  email: abd.shomad@gmail.com
+  description:
+    en: "Abd Shomad is Web Technology Enthusiast"
+
 sieke:
   name:
     given: Alex
@@ -1055,6 +1070,19 @@ johyphenel:
   google: +Jo-elvanBergen
   twitter: johyphenel
   email: jo-el@google.com
+
+wangyu:
+  name:
+    given: Yu
+    family: Wang
+  country: CN
+  role:
+    - translator
+  homepage: 'http://wangyu.name'
+  twitter: wangyu_it
+  email: nameiswangyu@gmail.com
+  description:
+    en: WangYu is Front End Developer
 
 mikewest:
   name:

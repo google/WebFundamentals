@@ -40,6 +40,16 @@ def getPage(requestPath, lang):
       else:
         dateUpdated = dateUpdated.group(1)
 
+      ## Injects markdown includes into the markdown as appropriate
+      includes = re.findall(r'^<<.+?\.md>>(?m)', content)
+      for includeTag in includes:
+        fileName = includeTag.replace('<<', '').replace('>>', '')
+        fileName = os.path.join(os.path.dirname(fileLocation), fileName)
+        include = devsiteHelper.readFile(fileName, lang)
+        if include is None:
+          include = 'Warning: Unable to find included markdown file.\n\n'
+        content = content.replace(includeTag, include)
+
       # Remove any comments {# something #} from the markdown
       content = re.sub(r'{#.+?#}', '', content)
       content = re.sub(r'{% comment %}.*?{% endcomment %}(?ms)', '', content)

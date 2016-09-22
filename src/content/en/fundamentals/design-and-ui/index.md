@@ -39,12 +39,12 @@ and devices?
 <div style="clear:both;"></div>
 
 <div class="attempt-left">
-  <h2>Icons &amp; Browser Colors</h2>
+  <h2>Icons &amp; browser colors</h2>
   <a href="tbd">
     <img src="/web/images/md-icons/image-short.png">
   </a>
   <p>
-    Modern browsers make it easy to customize components like icons, address
+    Modern browsers make it easy to customize components like icons and address
     bar color, and even add things like custom tiles. Simple tweaks can
     increase engagement and bring users back to your site.<br>
     <a href="browser-customization/">Learn more</a>

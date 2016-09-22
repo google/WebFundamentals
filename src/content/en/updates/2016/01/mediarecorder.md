@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The MediaRecorder API enables you to record audio and video from a web app. It's available now in Firefox and in Chrome for Android and desktop.
 
-{# wf_updated_on: 2016-01-30 #}
+{# wf_updated_on: 2016-09-21 #}
 {# wf_published_on: 2016-01-30 #}
 {# wf_tags: audio,codecs,media,news,recording,video,webrtc,chrome49 #}
 {# wf_featured_image: /web/updates/images/2016/01/mediarecorder/featured.jpg #}
@@ -43,7 +43,7 @@ The API is straightforward, which I'll demonstrate using code from the [WebRTC s
 First up, instantiate a MediaRecorder with a MediaStream. Optionally, use an `options` parameter to specify the desired output format:
 
 
-    var options = {mimeType: 'video/webm, codecs=vp9'};
+    var options = {mimeType: 'video/webm; codecs=vp9'};
     mediaRecorder = new MediaRecorder(stream, options);
     
 
@@ -68,9 +68,9 @@ Use the static method `MediaRecoder.isTypeSupported()` to check if a MIME type i
 
     var options;
     if (MediaRecorder.isTypeSupported('video/webm;codecs=vp9')) {
-      options = {mimeType: 'video/webm, codecs=vp9'};
+      options = {mimeType: 'video/webm; codecs=vp9'};
     } else if (MediaRecorder.isTypeSupported('video/webm;codecs=vp8')) {
-       options = {mimeType: 'video/webm, codecs=vp8'};
+       options = {mimeType: 'video/webm; codecs=vp8'};
     } else {
       // ...
     }
@@ -85,7 +85,7 @@ Next, add a data handler and call the `start()` method to begin recording:
 
     var recordedChunks = [];
     
-    var options = {mimeType: 'video/webm,codecs=vp9'};
+    var options = {mimeType: 'video/webm;codecs=vp9'};
     mediaRecorder = new MediaRecorder(stream, options);
     mediaRecorder.ondataavailable = handleDataAvailable;
     mediaRecorder.start();

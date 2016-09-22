@@ -6,7 +6,7 @@ description: Manipuladores de entrada são uma possível causa de problemas em s
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
-# Debounce your input handlers {: .page-title }
+# Atrase seus manipuladores de entrada {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 

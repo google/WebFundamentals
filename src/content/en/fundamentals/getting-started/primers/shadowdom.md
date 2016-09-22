@@ -21,7 +21,7 @@ function supportsShadowDOM() {
 Note: **Already familiar with Shadow DOM?** This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
 
 
-### TL;DR {: .hide-from-toc } {: #tldr .hide-from-toc}
+### TL;DR {: #tldr .hide-from-toc}
 
 Shadow DOM removes the brittleness of building web apps. The brittleness comes from the global nature of HTML, CSS, and JS. Over the years we've invented an exorbitant [number](http://getbem.com/introduction/) [of](https://github.com/css-modules/css-modules) [tools](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/) to circumvent the issues. For example, when you use a new HTML id/class, there's no telling if it will conflict with an existing name used by the page. [Subtle bugs](http://www.2ality.com/2012/08/ids-are-global.html) creep up, CSS specificity becomes a huge issue (`!important` all the things!), style selectors grow out of control, and [performance can suffer](https://developers.google.com/web/updates/2016/06/css-containment). The list goes on.
 
@@ -42,10 +42,10 @@ Shadow DOM is designed as a tool for building component-based apps. Therefore, i
 - **Simplifies CSS** - Scoped DOM means you can use simple CSS selectors, more generic id/class names, and not worry about naming conflicts.
 - **Productivity** - Think of apps in chunks of DOM rather than one large (global) page.
 
-Although you can use the shadow DOM API and its benefits outside of web components, I'm only going to focus on examples that build on custom elements. I'll be using the custom elements v1 API in all examples.
-{: .wf-talkinghead }
+Note: Although you can use the shadow DOM API and its benefits outside of web components, I'm only going to focus on examples that build on custom elements. I'll be using the custom elements v1 API in all examples.
 
-#### &lt;fancy-tabs&gt; demo {: #demo}
+
+#### `fancy-tabs` demo {: #demo}
 
 Throughout this article, I'll be referring to a demo component (`<fancy-tabs>`) and referencing code snippets from it. If your browser supports the APIs, you should see a live demo of it just below. Otherwise, check out the <a href="https://gist.github.com/ebidel/2d2bb0cdec3f2a16cf519dbaa791ce1b" target="_blank">full source on Github</a>.
 
@@ -138,8 +138,8 @@ Shadow DOM is particularly useful when creating [custom elements](/web/fundament
 
 There are a couple of interesting things going on here. The first is that the custom element **creates its own shadow DOM** when an instance of `<fancy-tabs>` is created. That's done in the `constructor()`. Secondly, because we're creating a shadow root, the CSS rules inside the `<style>` will be scoped to `<fancy-tabs>`.
 
-When you try to run this example, you'll probably notice that nothing renders. The user's markup seemingly disappears! That's because the **element's shadow DOM is rendered in place of its children**. If you want to display the children, you need to tell the browser where to render them by placing a [`<slot>` element](#slots) in your shadow DOM. More on that [later](#composition_slot).
-{: .wf-talkinghead }
+Note: When you try to run this example, you'll probably notice that nothing renders. The user's markup seemingly disappears! That's because the **element's shadow DOM is rendered in place of its children**. If you want to display the children, you need to tell the browser where to render them by placing a [`<slot>` element](#slots) in your shadow DOM. More on that [later](#composition_slot).
+
 
 ## Composition and slots {: #composition_slot}
 
@@ -197,8 +197,8 @@ The result of the browser distributing the user's light DOM into your shadow DOM
 
 Shadow DOM composes different DOM trees together using the `<slot>` element. **Slots are placeholders inside your component that users _can_ fill with their own markup**. By defining one or more slots, you invite outside markup to render in your component's shadow DOM. Essentially, you're saying _"Render the user's markup over here"_.
 
-> Slots are a way of creating a "declarative API" for a web component. They mix-in the user's DOM to help render the overall component, thus, **composing different DOM trees together**.
-{: .wf-talkinghead }
+Note: Slots are a way of creating a "declarative API" for a web component. They mix-in the user's DOM to help render the overall component, thus, **composing different DOM trees together**.
+
 
 Elements are allowed to "cross" the shadow DOM boundary when a `<slot>` invites them in. These elements are called **distributed nodes**. Conceptually, distributed nodes can seem a bit bizarre. Slots don't physically move DOM; they render it at another location inside the shadow DOM.
 
@@ -532,8 +532,8 @@ Inside its shadow DOM:
 
 In this case, the component will use `black` as the background value since the user provided it. Otherwise, it would default to `#9E9E9E`.
 
-As the component author, you're responsible for letting developers know about CSS custom properties they can use. Consider it part of your component's public interface. Make sure to document styling hooks!
-{: .wf-talkinghead }
+Note: As the component author, you're responsible for letting developers know about CSS custom properties they can use. Consider it part of your component's public interface. Make sure to document styling hooks!
+
 
 ## Advanced topics {: #advanced}
 
@@ -555,8 +555,8 @@ Other APIs are also affected by closed-mode:
 - `Element.assignedSlot` / `TextNode.assignedSlot` returns `null`
 - `Event.composedPath()` for events associated with elements inside the shadow DOM, returns []
 
-Closed shadow roots are not very useful. Some developers will see closed mode as an artificial security feature. But let's be clear, it's **not** a security feature. Closed mode simply prevents outside JS from drilling into an element's internal DOM.
-{: .wf-talkinghead }
+Note: Closed shadow roots are not very useful. Some developers will see closed mode as an artificial security feature. But let's be clear, it's **not** a security feature. Closed mode simply prevents outside JS from drilling into an element's internal DOM.
+
 
 Here's my summary of why you should never create web components with `{mode: 'closed'}`:
 
@@ -922,18 +922,47 @@ Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)), Op
 To feature detect shadow DOM, check for the existence of `attachShadow`:
 
 
-    function supportsShadowDOM() {
-      return !!HTMLElement.prototype.attachShadow;
-    }
-    
-    if (supportsShadowDOM()) {
-      // Good to go!
-    } else {
-      // Use polyfills
-    }
+    const supportsShadowDOMV1 = !!HTMLElement.prototype.attachShadow;
     
 
-Until browser support is widely available, the [webcomponents.js polyfill](https://github.com/webcomponents/webcomponentsjs/tree/v1) is being updated to support v1.
+    
+#### Polyfill {: #polyfill}
+
+Until browser support is widely available, the [shadydom](https://github.com/webcomponents/shadydom) and [shadycss](https://github.com/webcomponents/shadycss) polyfills give you v1 feature. Shady DOM mimics the DOM scoping of Shadow DOM and shadycss polyfills CSS custom properties and the style scoping the native API provides.
+
+Install the polyfills:
+
+    bower install --save webcomponents/shadydom
+    bower install --save webcomponents/shadycss
+
+Use the polyfills:
+
+
+    function loadScript(src) {
+     return new Promise(function(resolve, reject) {
+       const script = document.createElement('script');
+       script.async = true;
+       script.src = src;
+       script.onload = resolve;
+       script.onerror = reject;
+       document.head.appendChild(script);
+     });
+    }
+
+    // Lazy load the polyfill if necessary.
+    if (!supportsShadowDOMV1) {
+      loadScript('/bower_components/shadydom/shadydom.min.js')
+        .then(e => loadScript('/bower_components/shadycss/shadycss.min.js'))
+        .then(e => {
+          // Polyfills loaded.
+        });
+    } else {
+      // Native shadow dom v1 support. Go to go!
+    }
+
+
+See the [https://github.com/webcomponents/shadycss#usage](https://github.com/webcomponents/shadycss) for instructions on how to shim/scope your styles.
+
 
 ## Conclusion
 

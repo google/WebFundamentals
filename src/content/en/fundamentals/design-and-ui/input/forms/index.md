@@ -5,7 +5,7 @@ description: Forms are hard to fill out on mobile. The best forms are the ones w
 {# wf_updated_on: 2014-10-21 #}
 {# wf_published_on: 2014-04-30 #}
 
-# Create amazing forms {: .page-title }
+# Create Amazing Forms {: .page-title }
 
 {% include "web/_shared/contributors/petelepage.html" %}
 

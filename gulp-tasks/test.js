@@ -6,10 +6,15 @@ var path = require('path');
 var glob = require('globule');
 var gutil = require('gulp-util');
 var wfHelper = require('./wfHelper');
-var runSequence = require('run-sequence');
 
 var TEST_ROOT = 'src/content/';
-var STD_EXCLUDES = ['!**/_generated.md', '!**/_template.md', '!**/tags/*', '!**/codelabs/*/*'];
+var STD_EXCLUDES = [
+  '!**/_common-links.md',
+  '!**/_generated.md',
+  '!**/_template.md',
+  '!**/tags/*',
+  '!**/en/fundamentals/getting-started/codelabs/*/*.md'
+];
 var MAX_DESCRIPTION_LENGTH = 485;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
 
@@ -28,7 +33,7 @@ var ERROR_STRINGS = [
   {label: 'Old style highlight {% highlight', regEx: /{%[ ]?highlight/},
   {label: 'Contributor is TODO', regEx: /{%[ ]?include.*web\/_shared\/contributors\/TODO.html/},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
-  {label: 'Old style animation tag {% animtion', regEx: /{% animation/}
+  {label: 'Old style animation tag {% animtion', regEx: /{% animation/},
 ];
 
 function testMarkdownFile(fileName) {

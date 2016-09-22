@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: URLSearchParams trivial access and manipulation of the URL's query string
 
-{# wf_updated_on: 2016-01-21 #}
+{# wf_updated_on: 2016-09-07 #}
 {# wf_published_on: 2016-01-21 #}
 {# wf_tags: url,chrome49 #}
 {# wf_featured_image: /web/updates/images/2016/01/urlsearchparams/overview.png #}
@@ -36,7 +36,7 @@ So what can you do with it? Given a URL string, you can easily extract parameter
 
 
     // Can also constructor from another URLSearchParams
-    let params = new URLSearchParams('q=search+string&version=1&person=Eric');
+    const params = new URLSearchParams('q=search+string&version=1&person=Eric');
     
     params.get('q') === "search string"
     params.get('version') === "1"
@@ -58,7 +58,7 @@ Note: If there are several values for a param, `get` returns the first value.
     params.set('version', 2);
     
 
-Note: If there are several values, `set` removes all other parameters with the same name. 
+Note: If there are several values, `set` removes all other parameters with the same name.
 
 **append** another value for an existing parameter:
 
@@ -82,8 +82,8 @@ Most of the time, you'll probably be working with full URLs or modifying your
 app's URL. The `URL` constructor can be particularly handy for these cases:
 
 
-    let url = new URL('https://example.com?foo=1&bar=2');
-    let params = new URLSearchParams(url.search.slice(1));
+    const url = new URL('https://example.com?foo=1&bar=2');
+    const params = new URLSearchParams(url.search);
     params.set('baz', 3);
     
     params.has('baz') === true
@@ -95,7 +95,7 @@ then use `history.replaceState` to update the URL.
 
 
     // URL: https://example.com?version=1.0
-    let params = new URLSearchParams(location.search.slice(1));
+    const params = new URLSearchParams(location.search);
     params.set('version', 2.0);
     
     window.history.replaceState({}, '', `${location.pathname}?${params}`);
@@ -112,7 +112,7 @@ If you need it, `URLSearchParams` provides an alternative mechanism to POST data
 that's urlencoded rather than mime multipart.
 
 
-    let params = new URLSearchParams();
+    const params = new URLSearchParams();
     params.append('api_key', '1234567890');
     
     fetch('https://example.com/api', {
@@ -126,18 +126,14 @@ with the `URL` constructor and `a` tags. Both support our new buddy by providing
 a read-only property, `.searchParams` for accessing query params:
 
 
-    // Note: .searchParams on URL is not implemented in Chrome 49.
-    
-    let url = new URL(location);
-    let foo = url.searchParams.get('foo') || 'somedefault';
+    const url = new URL(location);
+    const foo = url.searchParams.get('foo') || 'somedefault';
     
 
 Links also get a `.searchParams` property:
 
 
-    // Note: .searchParams on links is not implemented in Chrome 49.
-    
-    let a = document.createElement('a');
+    const a = document.createElement('a');
     a.href = 'https://example.com?filter=api';
     
     // a.searchParams.get('filter') === 'api';

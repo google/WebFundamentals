@@ -6,7 +6,7 @@ description: Composição é onde as partes pintadas da página são agrupadas p
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
-# Stick to compositor-only properties and manage layer count {: .page-title }
+# Atenha-se a propriedades de compositor-unico e gerencia a contagem de camada {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
