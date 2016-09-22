@@ -18,7 +18,7 @@ authenticate themselves to your website. Authenticated users can interact with
 each other using a dedicated profile, sync data across devices, or process data
 while offline; the list goes on and on. But creating, remembering and typing
 passwords tends to be cumbersome for end users, especially on mobile screens
-which leads them to re-using same passwords on different sites. This of course
+which leads them to re-using the same passwords on different sites. This of course
 is a security risk.
 
 The latest version of Chrome (51) supports the **[Credential Management
@@ -68,7 +68,7 @@ typical single page app.
 * Both the registration and sign-in forms have the typical options of id/password
   credentials and federation, e.g. with Google Sign-In and Facebook Sign-In.
 
-By using Credential Management API, you will be able to add following
+By using Credential Management API, you will be able to add the following
 features to the site, for example:
 
 * **Show an account chooser when signing in:** Shows a native account chooser UI
@@ -105,7 +105,7 @@ To show password credentials as account options, use `password: true`.
 {% highlight javascript %}
 navigator.credentials.get({  
   password: true, // `true` to obtain password credentials  
-}).then(function(cred) {  
+}).then(function (cred) {  
   // continuation  
   ...
 
@@ -118,7 +118,7 @@ password credential. You can send it to the server using `fetch()`:
 
 {% highlight javascript %}
   // continued from previous example  
-}).then(function(cred) {  
+}).then(function (cred) {  
   if (cred) {  
     if (cred.type == 'password') {  
       // Construct FormData object  
@@ -137,7 +137,7 @@ password credential. You can send it to the server using `fetch()`:
       fetch(url, {           // Make sure the URL is HTTPS  
         method: 'POST',      // Use POST  
         credentials: cred    // Add the password credential object  
-      }).then(function() {  
+      }).then(function () {  
         // continuation  
       });  
     } else if (cred.type == 'federated') {  
@@ -162,7 +162,7 @@ navigator.credentials.get({
       'https://www.facebook.com'  
     ]  
   }  
-}).then(function(cred) {  
+}).then(function (cred) {  
   // continuation  
   ...
 {% endhighlight %}
@@ -187,7 +187,7 @@ you can call the appropriate API using information it contains.
           // Attempt to sign in with by using `login_hint`.
           return auth2.signIn({  
             login_hint: cred.id || ''  
-          }).then(function(profile) {  
+          }).then(function (profile) {  
             // continuation  
           });  
           break;
@@ -243,11 +243,11 @@ HTML
 JavaScript
 
 {% highlight javascript %}  
-var form = document.querySelector('\#form');  
+var form = document.querySelector('#form');  
 var cred = new PasswordCredential(form);  
 // Store it  
 navigator.credentials.store(cred)  
-.then(function() {  
+.then(function () {  
   // continuation  
 });
 {% endhighlight %}
@@ -267,7 +267,7 @@ var cred = new FederatedCredential({
 });  
 // Store it  
 navigator.credentials.store(cred)  
-.then(function() {  
+.then(function () {  
   // continuation  
 });
 {% endhighlight %}  
@@ -295,7 +295,7 @@ navigator.credentials.get({
     ]  
   },  
   unmediated: true // `unmediated: true` lets the user automatically sign in  
-}).then(function(cred) {  
+}).then(function (cred) {  
   if (cred) {  
     // auto sign-in possible  
     ...  
