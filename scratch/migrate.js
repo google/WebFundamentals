@@ -250,8 +250,22 @@ function getMetaFromEnglish(sourcePath) {
 }
 
 function stripOldClasses(markdown) {
+  markdown = markdown.replace(/mdl-grid/g, '');
+  markdown = markdown.replace(/mdl-cell/g, '');
+  markdown = markdown.replace(/mdl-cell--\d-col/g, '');
+  markdown = markdown.replace(/wf-caption-good/g, 'success');
+  markdown = markdown.replace(/wf-caption-bad/g, 'warning');
+  markdown = markdown.replace(/wf-blockquote/g, '');
+  markdown = markdown.replace(/class="[ ]*"/g, '');
+  return markdown;
+}
 
-  markdown = markdown.replace('class=""', '');
+function pushDownOne(markdown) {
+  markdown = markdown.replace(/^##### (.*)/gm, '###### $1');
+  markdown = markdown.replace(/^#### (.*)/gm, '##### $1');
+  markdown = markdown.replace(/^### (.*)/gm, '#### $1');
+  markdown = markdown.replace(/^## (.*)/gm, '### $1');
+  markdown = markdown.replace(/^# (.*)/gm, '## $1');
   return markdown;
 }
 
@@ -326,6 +340,9 @@ function migrateFile(lang, section, directory, file) {
   if (yaml.youtubeID) {
     topOfDoc += getYoutubeMarkup(yaml.youtubeID) + '\n\n';
   }
+  if (pdo) {
+    markdown = pushDownOne(markdown);
+  }
   markdown = markdown.replace(/{{site.WFBaseUrl}}/g, '/web');
   markdown = markdown.replace('{% include shared/toc.liquid %}\n', '');
   markdown = markdown.replace(/{{ ?page.description ?}}/g, yaml.description);
@@ -342,7 +359,7 @@ function migrateFile(lang, section, directory, file) {
 
   if (yaml.layout === 'updates/post') {
     markdown += '\n\n';
-    markdown += '{# wf_add_comment_widget #}\n';
+    markdown += '{% include "comment-widget.html" %}\n';
   }
 
   markdown = replaceFailedTags(markdown);
@@ -376,10 +393,11 @@ function migrate(lang, section, directory, recursive) {
   });
 }
 
-var lang = 'ru';
+var lang = 'id';
 var section = 'fundamentals';
-var directory = 'design-and-ui/media/images';
-var recursive = false;
+var directory = 'getting-started';
+var recursive = true;
+var pdo = true;
 migrate(lang, section, directory, recursive);
 
 
