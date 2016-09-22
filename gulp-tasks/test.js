@@ -6,7 +6,6 @@ var path = require('path');
 var glob = require('globule');
 var gutil = require('gulp-util');
 var wfHelper = require('./wfHelper');
-var runSequence = require('run-sequence');
 
 var TEST_ROOT = 'src/content/';
 var STD_EXCLUDES = [
@@ -35,7 +34,6 @@ var ERROR_STRINGS = [
   {label: 'Contributor is TODO', regEx: /{%[ ]?include.*web\/_shared\/contributors\/TODO.html/},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
   {label: 'Old style animation tag {% animtion', regEx: /{% animation/},
-
 ];
 
 function testMarkdownFile(fileName) {

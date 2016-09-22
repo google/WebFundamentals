@@ -65,11 +65,11 @@ gulp.task('clean', function() {
 });
 
 gulp.task('deploy', function(cb) {
-  runSequence('clean',['build'], cb);
+  runSequence('clean','build', 'test', cb);
 });
 
 gulp.task('presubmit', function(cb) {
-  runSequence('test', cb);
+  runSequence('clean', 'test', cb);
 });
 
 gulp.task('default', function() {
