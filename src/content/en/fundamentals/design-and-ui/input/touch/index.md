@@ -5,7 +5,7 @@ description: Touchscreens are available on more and more devices,  from phones u
 {# wf_updated_on: 2014-01-06 #}
 {# wf_published_on: 2014-01-01 #}
 
-# Add touch to your site {: .page-title }
+# Add Touch to Your Site {: .page-title }
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
