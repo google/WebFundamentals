@@ -203,7 +203,7 @@ Web Starter Kit relies on NodeJS, NPM, and Sass to work. Once these are installe
 ### Install These One Time Dependencies
 
 There are two tool sets you need to install on your machine before you can build
-sites with Web Starter Kit: NodeJS, NPM, & Sass.
+sites with Web Starter Kit: NodeJS and NPM, & Sass.
 
 #### NodeJS & NPM
 
