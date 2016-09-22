@@ -159,6 +159,7 @@ viewport on small screens.
   </figure>
   </a>
 </div>
+<div class="clearfix"></div>
 
 
 
