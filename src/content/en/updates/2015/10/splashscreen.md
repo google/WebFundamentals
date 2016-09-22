@@ -14,7 +14,8 @@ description: Chrome 47 introduces a splash screen to web apps added to the home 
 
 
 Over the past year we have focused on letting developers build sites and apps 
-that feel like they are installed on the user's system: [service worker](/web/fundamentals/primers/service-worker) for 
+that feel like they are installed on the user's system:
+[service worker](/web/fundamentals/primers/service-worker) for 
 letting you easily build offline first experiences and Add to Homescreen to give 
 your site the presence on the user's device.
 

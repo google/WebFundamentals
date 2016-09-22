@@ -1,8 +1,8 @@
 # Web Fundamentals on DevSite 
 
 ## Getting Set Up
-1. Get [App Engine Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
-2. Install dependencies: `pip install markdown -t ./gae/lib`
+1. Get [App Engine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
+2. Install Python dependencies: `pip install markdown -t ./gae/lib`
 2. If you haven't already, install gulp globally: `npm install -g gulp`
 3. Run `npm install` (needed for the build process)
 

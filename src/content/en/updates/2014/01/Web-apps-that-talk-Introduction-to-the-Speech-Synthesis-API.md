@@ -59,7 +59,7 @@ Then set a different voice, by setting `.voice` on the utterance object:
     speechSynthesis.speak(msg);
     
 
-Note that depending on the platform, Chrome might have to be online for the speech synthesis to work. Examine the `localService` flag of the `voice` object to tell.
+Note: Depending on the platform, Chrome might have to be online for the speech synthesis to work. Examine the `localService` flag of the `voice` object to tell.
 
 ## Demo
 
