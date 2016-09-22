@@ -1,7 +1,5 @@
 # Web Fundamentals on DevSite 
 
-## What's new?
-
 Welcome to the new Web**Fundamentals**! 
 
 ### What's changed?
