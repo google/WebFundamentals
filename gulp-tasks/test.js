@@ -14,7 +14,7 @@ var STD_EXCLUDES = [
   '!**/_generated.md',
   '!**/_template.md',
   '!**/tags/*',
-  '!**/codelabs/*/*'
+  '!**/en/fundamentals/getting-started/codelabs/*/*.md'
 ];
 var MAX_DESCRIPTION_LENGTH = 485;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));

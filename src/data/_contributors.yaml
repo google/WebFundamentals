@@ -1056,6 +1056,19 @@ johyphenel:
   twitter: johyphenel
   email: jo-el@google.com
 
+wangyu:
+  name:
+    given: Yu
+    family: Wang
+  country: CN
+  role:
+    - translator
+  homepage: 'http://wangyu.name'
+  twitter: wangyu_it
+  email: nameiswangyu@gmail.com
+  description:
+    en: WangYu is Front End Developer
+
 mikewest:
   name:
     given: Mike
