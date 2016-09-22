@@ -57,8 +57,8 @@ WFStyleguideLocation: resources/styleguide/
 WFarray: []
 
 # Custom Promo across the entire site, use with care.
-# Image is optional, 
-WFPromo: 
+# Image is optional,
+WFPromo:
   title: "Progressive Web App Road Show 2016"
   image: "https://www.gstatic.com/images/branding/product/1x/chrome_512dp.png"
   text: "Stopping in New York, Chicago, Austin, Toronto, Mountain View and Seattle. Learn more and <a href='https://events.withgoogle.com/pwa-roadshow-north-america/'>sign up now.</a>"
@@ -70,6 +70,6 @@ github:
   root: https://github.com/Google/WebFundamentals
   content: tree/master/src
 custom:
-langs_available: ['ar', 'de', 'es', 'fr', 'it', 'iw', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
+langs_available: ['ar', 'de', 'es', 'fr', 'id', 'it', 'iw', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw']
 # primary language, source of translations.
 primary_lang: en

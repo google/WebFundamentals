@@ -1,0 +1,241 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
+landing_page:
+  custom_css_path: /web/styles/wf-root.css
+
+  rows:
+
+  - heading: Pelajari Cara Mengembangkan Aplikasi Web Generasi Berikutnya
+    classname: devsite-landing-row-67
+    items:
+    - description: >
+        <p>
+           Pengguna rata-rata mengunjungi lebih dari 100 situs web di perangkat ponsel mereka
+           setiap bulan, dan berharap untuk mendapatkan kecepatan dan kualitas yang lebih tinggi
+           dari sebelumnya. Sumber daya di sini dapat membantu proyek Anda
+           yang baru maupun yang sudah ada dengan generasi berikutnya dari teknologi web
+           agar bisa memberikan konten yang cepat dan aman ke layar bagaimanapun.
+         </p>
+         <h3>Mulai dengan...</h3>
+      image_path: images/hero-2x.png
+      buttons:
+      - label: Best Practice
+        path: "#follow-best-practices"
+        classname: button button-primary
+      - label: Aplikasi Web Progresif (Progressive Web Apps)
+        path: "#progressive-web-apps"
+        classname: button button-primary
+      - label: Halaman Mobile Dipercepat (Accelerated Mobile Pages)
+        path: "#accelerated-mobile-pages"
+        classname: button button-primary
+
+  - items:
+    - custom_html: <hr>
+
+  - heading: Ikuti best practice
+    classname: devsite-landing-row-no-image-background
+    items:
+    - heading: Pindah ke HTTPS
+      description: >
+        HTTPS memungkinkan pengguna untuk terhubung ke situs web atau aplikasi secara aman. Persiapkan
+        HTTPS untuk melindungi integritas dari situs Anda, dan keamanan pengguna situs web Anda.
+
+      image_path: images/content-https-2x.jpg
+      buttons:
+      - label: Belajar lebih lanjut
+        path: /web/fundamentals/security/
+      - label: Enkripsi data saat Transit
+        path: /web/fundamentals/security/encrypt-in-transit/
+        classname: wf-small-link
+      - label: Kebijakan Keamanan konten (Content Security Policy)
+        path: /web/fundamentals/security/csp/
+        classname: wf-small-link
+        label: Mencegah Konten Tercampur
+        path: /web/fundamentals/security/prevent-mixed-content/
+        classname: wf-small-link
+
+    - heading: Optimalkan kinerja
+      description: >
+        Pengguna tidak memiliki kesabaran untuk menunggu situs yang tidak dapat memberikan konten dengan cepat.
+	Pelajari teknik pengujian dan praktik terbaik untuk memastikan bahwa situs web dan aplikasi
+	Anda bisa dioptimalkan dan cepat.
+      image_path: images/content-performance-2x.jpg
+      buttons:
+      - label: Belajar lebih  lanjut
+        path: /web/fundamentals/performance/
+      - label: Mengoptimalkan Efisiensi Konten
+        path: /web/fundamentals/performance/optimizing-content-efficiency/
+        classname: wf-small-link
+      - label: Mengoptimalkan Rendering Critical Path
+        path: /web/fundamentals/performance/critical-rendering-path/
+        classname: wf-small-link
+      - label: Kinerja Rendering
+        path: /web/fundamentals/performance/rendering/
+        classname: wf-small-link
+      - label: Kode Lab Kinerja
+        path: /web/fundamentals/performance/performance-codelab/
+        classname: wf-small-link
+
+    - heading: Menjadikan responsif
+      description: >
+        Pengguna modern hidup di atas ponsel, tablet dan laptop;
+	aplikasi dan situs web harus disesuaikan.
+	Pelajari bagaimana kode dan struktur konten Anda agar terlihat bagus pada layar dari berbagai ukuran.
+      image_path: images/content-responsive-2x.jpg
+      buttons:
+      - label: Belajar lebih lanjut
+        path: /web/fundamentals/design-and-ui/responsive/
+
+
+  - items:
+    - custom_html: <hr>
+
+  - heading: Aplikasi Web Progresif (Progressive Web Apps)
+    classname: devsite-landing-row-67
+    items:
+    - description: >
+        <p> TODO: Translate
+          Progressive Web Applications take advantage of new technologies to
+          bring the best of mobile sites and native applications to users.
+        </p>
+        <p>Progressive Web Apps are:</p>
+        <ul class="checkmarks">
+          <li>
+            <b>Reliable</b> -
+            <a href="/web/fundamentals/getting-started/your-first-offline-web-app/">
+            Service workers</a> allow for offline caching and instant loading.
+          </li>
+          <li>
+            <b>Fast</b> -
+            <a href="/web/fundamentals/performance/rendering/">
+            Smooth animations, scrolling and navigations</a> keep the
+            experience silky smooth.
+          </li>
+          <li>
+            <b>Engaging</b> -
+            <a href="/web/fundamentals/engage-and-retain/push-notifications/">
+            Push notifications</a> and
+            <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
+            add to homescreen</a> help users re-engage.
+          </li>
+          <li>
+            <b>Secure</b> -
+            <a href="/web/fundamentals/security/encrypt-in-transit/why-https">
+            HTTPS</a> secures the connection between you and your users.
+          </li>
+        </ul>
+      image_path: /web/images/pwa-gif-flipkart-250.gif
+      image_left: true
+      buttons:
+      - label: Get Started
+        path: /web/progressive-web-apps/
+        classname: button button-primary
+
+  - items:
+    - heading: Flipkart triples time-on-site with Progressive Web App
+      description: >
+        <p>
+          Flipkart, India’s largest e-commerce site, decided to combine their
+          web presence and native app into a Progressive Web Application that
+          has resulted in a 70% increase in conversions.
+        </p>
+        <blockquote>
+          We know that everyone needs to build mobile-first experiences. With
+          Flipkart Lite, we’ve developed a powerful, technically-advanced web
+          app that performs as well as our native app. We now feel we have the
+          best of both worlds.
+          <br>
+          - Amar Nagaram, an Engineering Director at Flipkart.
+        </blockquote>
+      buttons:
+      - label: Learn more
+        path: showcase/2016/flipkart
+    - heading: AliExpress increases conversion by 104% with Progressive Web App
+      description: >
+        <p>
+          AliExpress, part of the Alibaba Group was looking for a way to provide
+          their web users with the benefits of their app, such as performance,
+          the ability to work offline and re-engage users. Their solution,
+          a Progressive Web App.
+        </p>
+        <p>
+          After implementing their Progressive Web App, AliExpress saw their
+          conversion rate rise by 45%. For new users, the increase was even
+          higher, 104%. The new strategy delivered a much better experience.
+          Users now visit twice as many pages per session, and time spent
+          per session increased by 74%.
+        </p>
+      buttons:
+      - label: Learn more
+        path: /web/showcase/2016/aliexpress
+
+  - items:
+    - custom_html: <hr>
+
+  - heading: Accelerated Mobile Pages
+    classname: devsite-landing-row-67
+    items:
+    - description: >
+        <p>
+          The Accelerated Mobile Pages project provides a new standard, built
+          on top of existing web technologies, to enable blazing-fast page
+          rendering and content delivery.
+        </a>
+        <p>AMP pages are all about:</p>
+        <ul class="checkmarks">
+          <li>
+            <b>Speed</b> - Pages load instantly which means more engagement.
+          </li>
+          <li>
+            <b>Openness</b> - It works everywhere, cross platform.
+          </li>
+          <li>
+            <b>Control</b> - It’s just HTML - you control how your content
+            looks and feels.
+          </li>
+        </ul>
+      image_path: images/AMP-GIF-2x.gif
+      buttons:
+      - label: Get Started
+        path: https://www.ampproject.org/docs/get_started/create.html
+        classname: button button-primary
+
+  - items:
+    - heading: AMP helps the Washington Post
+      description: >
+        <p>
+          AMP helps the Washington Post increase returning users from mobile
+          search by 23%. The Post is focused on making their mobile content
+          load as quickly as possible, because data shows that people abandon
+          websites after just three seconds if the content doesn’t load quickly.
+        </p>
+        <blockquote>
+          We are committed to improving speed across the board. If our site
+          takes a long time to load, it doesn’t matter how great our journalism
+          is, some people will leave the page before they see what’s there
+          <br>
+          - David Merrell, Senior Product Manager, The Washington Post
+        </blockquote>
+      buttons:
+      - label: Learn more
+        path: /web/showcase/2016/wapo
+    - heading: Pinterest loads 4x faster and uses 8x less data with AMP
+      description: >
+        <p>
+          Pinterest works best when content is relevant, fast and easy to
+          access. With more than 80 percent of Pinners using Pinterest on mobile
+          devices, they're servering a speedier version of their mobile web
+          pages using Accelerated Mobile Pages (AMP).
+        </p>
+        <blockquote>
+          In early tests, we found that AMP pages load four times faster and
+          use eight times less data than traditional mobile-optimized pages.
+          A better, faster mobile web is better for everyone, including users,
+          platforms like Pinterest and publishers.
+          <br>
+          - Jon Parise, software engineer, Pinterest
+        </blockquote>
+      buttons:
+      - label: Learn more
+        path: https://amphtml.wordpress.com/2015/12/14/building-a-faster-mobile-web-experience-with-amp/

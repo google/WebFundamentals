@@ -1134,3 +1134,19 @@ wangyu:
   email: nameiswangyu@gmail.com
   description:
     en: WangYu is Front End Developer
+
+
+abdshomad:
+  name:
+    given: Abd
+    family: Shomad
+  country: ID
+  role:
+    - translator
+  homepage: 'http://abdshomad.github.io'
+  google: +abdshomad
+  twitter: abdshomad
+  github: abdshomad
+  email: abd.shomad@gmail.com
+  description:
+    en: "Abd Shomad is Web Technology Enthusiast"
