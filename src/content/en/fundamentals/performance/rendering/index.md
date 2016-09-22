@@ -7,6 +7,8 @@ description: Users notice if sites and apps don't run well, so optimizing render
 
 # Rendering Performance {: .page-title }
 
+{% include "web/_shared/contributors/paullewis.html" %}
+
 Users of today’s web
 [expect that the pages they visit will be interactive and smooth](https://paul.kinlan.me/what-news-readers-want/)
 and that’s where you need to increasingly focus your time and effort. Pages

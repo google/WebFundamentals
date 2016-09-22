@@ -42,7 +42,7 @@ access to the original Doc files. This will likely only work for Googlers.
 
 ## Serve the files
 1. If you haven't already, build the auto-generated files
-1. Run `start-appengine.sh`
+1. Run `./start-appengine.sh`
 
 ## Test your changes before submitting a PR
 To test your changes before submitting a pull request, run:
