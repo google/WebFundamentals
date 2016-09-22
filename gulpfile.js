@@ -79,6 +79,6 @@ gulp.task('default', function() {
   gutil.log(' ', gutil.colors.cyan('codelabs'), 'Updates the Code Labs to the latest from Docs');
   gutil.log(' ', gutil.colors.cyan('deploy'), '[clean, build, test]');
   gutil.log(' ', gutil.colors.cyan('presubmit'), 'See test');
-  guilt.log(' ', gutil.colors.cyan('test'), 'Checks the files for any issues');
+  gutil.log(' ', gutil.colors.cyan('test'), 'Checks the files for any issues');
   gutil.log('');
 });
