@@ -27,8 +27,9 @@ Use **gulp** to build the auto-generated files, such as the RSS & ATOM feeds,
 index pages for updates, shows, showcases, etc.
 
 To use, run:
-    gulp build
-
+```
+gulp build
+```
 
 ## Update the code labs
 To update the Code Labs, you'll need the
