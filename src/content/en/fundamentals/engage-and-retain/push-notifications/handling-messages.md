@@ -5,7 +5,7 @@ description: You've seen what makes a good notification. Now let's see how to im
 {# wf_updated_on: 2016-09-12 #}
 {# wf_published_on: 2016-06-30 #}
 
-# Handling messages {: .page-title }
+# Handling Messages {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 
@@ -24,7 +24,7 @@ you enough information for it to be useful. That's what this section is about.
 ## More notification anatomy {: #more-anatomy }
 
 When a notification is received from the server, it's intercepted by a service
-worker using the push event. It's basic structure is this.
+worker using the push event. Its basic structure is this:
 
 
     self.addEventListener('push', event => {
@@ -71,7 +71,7 @@ Everything else is just an elaboration of these basic ideas.
 
 ## Preparing message content {: #preparing-messages }
 
-As we said earlier, your server sends two kinds of messages. 
+As we said earlier, your server sends two kinds of messages: 
 
 * Messages with a data payload.
 * Messages without a data payload, often called a tickle.
@@ -81,7 +81,7 @@ want to provide a good user experience by getting the data before you tell the
 user it's available.
 
 Let's start with our basic push event handler with a call to
-`event.waitUntil()`.  This method can only take a Promise or something that
+`event.waitUntil()`.  This method can only take a promise or something that
 resolves to a promise.
 
 
@@ -157,13 +157,13 @@ post from a particular person, and instead combine them.
 Combining similar notifications comes down to three things.
 
 * A call to `getNotifications()`.
-* reusing an existing `tag` value.
+* Reusing an existing `tag` value.
 * Setting the `renotify` flag in the call to `showNotification()`.
 
 Let's look at an example that shows all three.
 
-The following examples, we're going to assume that you've already received or
-retrieved message data  as described in the last section. Now let's look at what
+In the following example, we assume that you've already received or
+retrieved message data, as described in the last section. Now let's look at what
 to do with it. Start with a basic push event handler.
 
 
@@ -193,9 +193,9 @@ self.addEventListener('push', function(event) {
 });
 </pre>
 
-In other examples, we've instantiated our `options` object right in the call  to
+In other examples, we've instantiated our `options` object right in the call to
 `showNotification()`. For this scenario, the `options` object needs to change
-based on the results of `getNotifications()`.  So instantiate a notification
+based on the results of `getNotifications()`, so we instantiate a notification
 `options` object.
 
 Notice that we've also attached the notification data to the notification
@@ -227,10 +227,10 @@ self.addEventListener('push', function(event) {
 });
 </pre>
 
-When we fill out the remaining properties for the new notifications we're also
-going to add two action buttons to the notification. One
-will open the application. The other will dismiss the notification without
-taking action. Neither of those actions is handled by the push event. We'll look
+When we fill out the remaining properties for the new notifications we'll also
+add two action buttons to the notification. One
+opens the application; the other dismisses the notification without
+taking action. Neither of these actions is handled by the push event. We'll look
 at that in the next section. Finally, show the notification (line 26).
 
 <pre class="prettyprint">
@@ -292,7 +292,7 @@ optional actions.
 The notification says that Stacy has
 confirmed an appointment for 3:00 PM. The recipient can either respond with
 their own confirmation or ask for the appointment to be rescheduled. For the
-former we will send a message directly to the server. For the later we will open
+former, we send a message directly to the server. For the latter, we open
 the application to an appropriate interface.
 
 <div style="clear:both;"></div>
@@ -308,7 +308,7 @@ close the notification.
     
 
 Next, we need some logic to figure out where the notification was clicked. Did
-the user click Confirm, Reschedule, or neither?
+the user click Confirm, Ask for Reschedule, or neither?
 
 <pre class="prettyprint">
 self.addEventListener('notificationclick', function(event) {
@@ -323,7 +323,7 @@ self.addEventListener('notificationclick', function(event) {
 });
 </pre>
 
-If the user clicked confirm, we can send that straight back to the server
+If the user clicked Confirm, we can send that straight back to the server
 without opening the application (lines 3 through 13). Notice that we're
 returning from the `notificationclick` event immediately after sending the
 confirmation to the server. This prevents the app from opening.
@@ -350,9 +350,8 @@ self.addEventListener('notificationclick', function(event) {
 });
 </pre>
 
-If the recipient clicked change, we want to open to a confirmation page. If the
-user clicks somewhere other than an action button, we just want to open the app.
-In both cases, we'll create an appropriate URL.
+If the recipient clicked Ask for Reschedule, we want to open to a confirmation page. If the user clicks somewhere other than an action button, we just want to open the app.
+In both cases, we create an appropriate URL.
 
 <pre class="prettyprint">
 self.addEventListener('notificationclick', function(event) {
