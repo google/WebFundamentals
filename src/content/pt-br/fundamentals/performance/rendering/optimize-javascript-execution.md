@@ -6,7 +6,7 @@ description: JavaScript é geralmente o acionador de mudanças visuais. Algumas 
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
-# Optimize JavaScript Execution {: .page-title }
+# Otimizar a execuçao do Javascript {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 

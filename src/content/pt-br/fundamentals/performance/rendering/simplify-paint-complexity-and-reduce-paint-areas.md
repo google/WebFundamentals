@@ -6,7 +6,7 @@ description: A pintura é o processo de preenchimento em pixels que é composto 
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
-# Simplify paint complexity and reduce paint areas {: .page-title }
+# Simplificar a complexidade de pintura e reduzir áreas de pintura {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
