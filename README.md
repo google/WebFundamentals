@@ -1,6 +1,24 @@
 # Web Fundamentals on DevSite 
 
-## Getting Set Up
+## What's new?
+
+Welcome to the new Web**Fundamentals**! 
+
+### What's changed?
+
+* We're now using the [DevSite](https://developers.google.com/) infrastructure
+  * New [style guide](https://petele-scratch.appspot.com/web/resources/style-guide)
+  * New [widgets](https://petele-scratch.appspot.com/web/resources/widgets) allow inline JavaScript, common links, related guide and more 
+* Jekyll has been eliminated, instead pages are rendered at request time
+* Front-matter has been eliminated from the markdown, but files now require a [simple set of tags](https://petele-scratch.appspot.com/web/resources/writing-an-article#yaml-front-matter)
+
+### What stays the same?
+
+* GitHub is still our source of truth for content, 
+* We want your contributions, either PR's, issues, whatever!
+* The latest will be staged at [https://web-central.appspot.com/web/] (coming soon)
+
+## Getting set up
 1. Get [App Engine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 2. Install Python dependencies: `pip install markdown -t ./gae/lib`
 2. If you haven't already, install gulp globally: `npm install -g gulp`
@@ -27,11 +45,8 @@ access to the original Doc files. This will likely only work for Googlers.
 1. If you haven't already, build the auto-generated files
 1. Run `start-appengine.sh`
 
-## Test Your Changes Before Submitting a PR
+## Test your changes before submitting a PR
 To test your changes before submitting a pull request, run:
 
     gulp test
 
-Note: As we migrate files over there are still many files that fail, so for the
-time being, you can skip this step. In the future, this will be part of the
-pull request verification, and PRs will not be merged if there are any failures.
