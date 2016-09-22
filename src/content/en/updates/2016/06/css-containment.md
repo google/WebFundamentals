@@ -12,12 +12,6 @@ description: The new CSS Containment property lets developers limit the scope of
 {% include "web/_shared/contributors/paullewis.html" %}
 
 
-<style>
-img.screenshot {
-  max-width: 100%;
-}
-</style>
-
 ### TL;DR {: .hide-from-toc }
 The new CSS Containment property lets developers limit the scope of the browser's styles, layout and paint work.
 

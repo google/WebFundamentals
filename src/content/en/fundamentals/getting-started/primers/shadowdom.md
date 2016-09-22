@@ -42,8 +42,8 @@ Shadow DOM is designed as a tool for building component-based apps. Therefore, i
 - **Simplifies CSS** - Scoped DOM means you can use simple CSS selectors, more generic id/class names, and not worry about naming conflicts.
 - **Productivity** - Think of apps in chunks of DOM rather than one large (global) page.
 
-Although you can use the shadow DOM API and its benefits outside of web components, I'm only going to focus on examples that build on custom elements. I'll be using the custom elements v1 API in all examples.
-{: .wf-talkinghead }
+Note: Although you can use the shadow DOM API and its benefits outside of web components, I'm only going to focus on examples that build on custom elements. I'll be using the custom elements v1 API in all examples.
+
 
 #### `fancy-tabs` demo {: #demo}
 
@@ -138,8 +138,8 @@ Shadow DOM is particularly useful when creating [custom elements](/web/fundament
 
 There are a couple of interesting things going on here. The first is that the custom element **creates its own shadow DOM** when an instance of `<fancy-tabs>` is created. That's done in the `constructor()`. Secondly, because we're creating a shadow root, the CSS rules inside the `<style>` will be scoped to `<fancy-tabs>`.
 
-When you try to run this example, you'll probably notice that nothing renders. The user's markup seemingly disappears! That's because the **element's shadow DOM is rendered in place of its children**. If you want to display the children, you need to tell the browser where to render them by placing a [`<slot>` element](#slots) in your shadow DOM. More on that [later](#composition_slot).
-{: .wf-talkinghead }
+Note: When you try to run this example, you'll probably notice that nothing renders. The user's markup seemingly disappears! That's because the **element's shadow DOM is rendered in place of its children**. If you want to display the children, you need to tell the browser where to render them by placing a [`<slot>` element](#slots) in your shadow DOM. More on that [later](#composition_slot).
+
 
 ## Composition and slots {: #composition_slot}
 
@@ -197,8 +197,8 @@ The result of the browser distributing the user's light DOM into your shadow DOM
 
 Shadow DOM composes different DOM trees together using the `<slot>` element. **Slots are placeholders inside your component that users _can_ fill with their own markup**. By defining one or more slots, you invite outside markup to render in your component's shadow DOM. Essentially, you're saying _"Render the user's markup over here"_.
 
-> Slots are a way of creating a "declarative API" for a web component. They mix-in the user's DOM to help render the overall component, thus, **composing different DOM trees together**.
-{: .wf-talkinghead }
+Note: Slots are a way of creating a "declarative API" for a web component. They mix-in the user's DOM to help render the overall component, thus, **composing different DOM trees together**.
+
 
 Elements are allowed to "cross" the shadow DOM boundary when a `<slot>` invites them in. These elements are called **distributed nodes**. Conceptually, distributed nodes can seem a bit bizarre. Slots don't physically move DOM; they render it at another location inside the shadow DOM.
 
@@ -532,8 +532,8 @@ Inside its shadow DOM:
 
 In this case, the component will use `black` as the background value since the user provided it. Otherwise, it would default to `#9E9E9E`.
 
-As the component author, you're responsible for letting developers know about CSS custom properties they can use. Consider it part of your component's public interface. Make sure to document styling hooks!
-{: .wf-talkinghead }
+Note: As the component author, you're responsible for letting developers know about CSS custom properties they can use. Consider it part of your component's public interface. Make sure to document styling hooks!
+
 
 ## Advanced topics {: #advanced}
 
@@ -555,8 +555,8 @@ Other APIs are also affected by closed-mode:
 - `Element.assignedSlot` / `TextNode.assignedSlot` returns `null`
 - `Event.composedPath()` for events associated with elements inside the shadow DOM, returns []
 
-Closed shadow roots are not very useful. Some developers will see closed mode as an artificial security feature. But let's be clear, it's **not** a security feature. Closed mode simply prevents outside JS from drilling into an element's internal DOM.
-{: .wf-talkinghead }
+Note: Closed shadow roots are not very useful. Some developers will see closed mode as an artificial security feature. But let's be clear, it's **not** a security feature. Closed mode simply prevents outside JS from drilling into an element's internal DOM.
+
 
 Here's my summary of why you should never create web components with `{mode: 'closed'}`:
 

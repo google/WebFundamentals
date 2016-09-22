@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: O usuário percebem se os sites e aplicativos não funcionam bem, portanto, otimizar o desempenho da renderização é fundamental.
+description: O usuários percebem se os sites e aplicativos não funcionam bem, portanto, otimizar o desempenho da renderização é fundamental.
 
 {# wf_updated_on: 2015-03-19 #}
 {# wf_published_on: 2000-01-01 #}
 
-# Rendering Performance {: .page-title }
+# Desempenho da renderização {: .page-title }
 
 <img src="images/intro/response.jpg" class="attempt-right" alt="Usuário interagindo com um site.">
 
