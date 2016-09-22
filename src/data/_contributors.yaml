@@ -908,6 +908,21 @@ glenshires:
   google: 110477083701772760000
   email: gshires@google.com
 
+abdshomad:
+  name:
+    given: Abd
+    family: Shomad
+  country: ID
+  role:
+    - translator
+  homepage: 'http://abdshomad.github.io'
+  google: +abdshomad
+  twitter: abdshomad
+  github: abdshomad
+  email: abd.shomad@gmail.com
+  description:
+    en: "Abd Shomad is Web Technology Enthusiast"
+
 sieke:
   name:
     given: Alex
