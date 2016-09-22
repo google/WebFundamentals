@@ -1,6 +1,9 @@
 # ATTENTION - changes made to this file not in GitHub will be over written!
 redirects:
 
+- from: /web/fundamentals/documentation/...
+  to: /web/fundamentals/...
+
 - from: /web/fundamentals/engage-and-retain/simplified-app-installs/...
   to: /web/fundamentals/engage-and-retain/app-install-banners/
 
@@ -106,3 +109,5 @@ redirects:
 - from: /web/fundamentals/performance/optimizing-networking/
   to: /web/fundamentals/performance/
 
+- from: /web/fundamentals/security/prevent-mixed-content/
+  to: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
