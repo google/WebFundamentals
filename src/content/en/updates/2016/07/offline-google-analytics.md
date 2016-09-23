@@ -5,7 +5,7 @@ description: The sw-offline-google-analytics library gives you everything you ne
 {# wf_updated_on: 2016-07-26 #}
 {# wf_published_on: 2016-07-20 #}
 {# wf_tags: serviceworker,analytics,offline,indexeddb #}
-{# wf_featured_image: /web/updates/images/2016/07/ic_timeline_black.png #}
+{# wf_featured_image: /web/updates/images/generic/timeline.png #}
 
 # Offline Google Analytics Made Easy {: .page-title }
 

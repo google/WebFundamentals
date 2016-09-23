@@ -5,7 +5,9 @@ description: Chrome 50 adds support for rel='preload', and deprecates rel='subre
 {# wf_updated_on: 2016-03-13 #}
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: link,preload,performance,chrome50 #}
-{# wf_featured_image: /web/updates/images/2016/03/link-rel-preload/preload.png #}
+{# wf_featured_image: /web/updates/images/generic/warning.png #}
+{# wf_featured_snippet: Chrome 50 adds support for <code>rel='preload'</code>, and deprecates <code>rel='subresource'</code> #}
+
 
 # Prioritizing Your Resources with <link rel='preload'> {: .page-title }
 

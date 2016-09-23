@@ -5,6 +5,7 @@ description: With Chrome 52, we’re introducing the ability to make storage per
 {# wf_updated_on: 2016-06-23 #}
 {# wf_published_on: 2016-06-23 #}
 {# wf_tags: chrome52,storage,persistentstorage,localstorage,indexeddb,origintrials #}
+{# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 
 # Persistent Storage {: .page-title }
 

@@ -5,7 +5,7 @@ description: Infinite scrollers are a common UI pattern. Here we explore how to 
 {# wf_updated_on: 2016-07-01 #}
 {# wf_published_on: 2016-07-01 #}
 {# wf_tags: javascript,css #}
-{# wf_featured_image: /web/updates/images/2016/07/infinite-scroller/screenshot.png #}
+{# wf_featured_image: /web/updates/images/2016/07/infinite-scroller/featured.png #}
 
 # Complexities of an infinite scroller {: .page-title }
 

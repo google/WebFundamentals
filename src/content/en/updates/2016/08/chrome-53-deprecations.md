@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: An round up of the deprecations and removals in Chrome to help you plan.
+description: A round up of the deprecations and removals in Chrome to help you plan.
 
 {# wf_updated_on: 2016-08-08 #}
 {# wf_published_on: 2016-08-08 #}
 {# wf_tags: deprecations,removals,chrome53 #}
-{# wf_featured_image: /web/updates/images/misc/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/warning.png #}
 
 # API Deprecations and Removals in Chrome 53 {: .page-title }
 

@@ -1,10 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: 
+description: will-change: transform means please animate it fast
 
 {# wf_updated_on: 2016-09-22 #}
 {# wf_published_on: 2016-09-22 #}
 {# wf_tags: css,webanimations,chrome53 #}
+{# wf_featured_snippet: Starting in Chrome 53, all content is re-rastered when its transform scale changes, if it does not have the <code>will-change: transform</code> CSS property. In other words, <code>will-change: transform</code> means "please animate it fast". #}
+{# wf_featured_image: /web/updates/images/generic/animations.png #}
 
 # Re-rastering Composited Layers on Scale Change {: .page-title }
 

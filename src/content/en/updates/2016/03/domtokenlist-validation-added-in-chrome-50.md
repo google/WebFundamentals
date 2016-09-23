@@ -5,6 +5,7 @@ description: Check support for various features directly in code, coming in Chro
 {# wf_updated_on: 2016-03-14 #}
 {# wf_published_on: 2016-03-14 #}
 {# wf_tags: domtokenlist,validation,chrome50 #}
+{# wf_featured_image: /web/updates/images/2016/03/dom-validation.png #}
 
 # DOMTokenList Validation Added in Chrome 50 {: .page-title }
 

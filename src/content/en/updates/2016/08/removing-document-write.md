@@ -5,7 +5,8 @@ description: Chrome is blocking some scripts that are added using document.write
 {# wf_updated_on: 2016-09-05 #}
 {# wf_published_on: 2016-08-29 #}
 {# wf_tags: interventions,chrome53 #}
-{# wf_featured_image: /web/updates/images/misc/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/warning.png #}
+{# wf_featured_snippet: Chrome is blocking some scripts that are added using <code>document.write()</code>. #}
 
 # Intervening against document.write() {: .page-title }
 

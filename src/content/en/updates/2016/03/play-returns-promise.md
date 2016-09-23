@@ -5,7 +5,8 @@ description: Say goodbye to automatic playback uncertainty! play() now returns a
 {# wf_updated_on: 2016-03-11 #}
 {# wf_published_on: 2016-03-11 #}
 {# wf_tags: promises,play,video,audio,chrome50 #}
-{# wf_featured_image: /web/updates/images/2016/03/play-returns-promise/ic_play_circle_outline_black.png #}
+{# wf_featured_image: /web/updates/images/generic/play-outline.png #}
+{# wf_featured_snippet: Say goodbye to automatic playback uncertainty! <code>play()</code> now returns a Promise. #}
 
 # HTMLMediaElement.play() Returns a Promise {: .page-title }
 

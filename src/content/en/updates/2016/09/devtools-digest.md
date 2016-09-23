@@ -5,7 +5,7 @@ description: Perf tooling improvements in DevTools over the last few Chrome rele
 {# wf_updated_on: 2016-09-07 #}
 {# wf_published_on: 2016-09-07 #}
 {# wf_tags: devtools #}
-{# wf_featured_image: /web/updates/images/2016/06/devtools.png #}
+{# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 
 # DevTools Digest, September 2016: Perf Roundup {: .page-title }
 

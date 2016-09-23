@@ -5,7 +5,7 @@ description: Introducing a proof of concept design to persist sessions using the
 {# wf_updated_on: 2016-06-19 #}
 {# wf_published_on: 2016-06-19 #}
 {# wf_tags: identity,sessions,cookie,serviceworker #}
-{# wf_featured_image: /web/updates/images/2016/06/2-cookie-handoff/sequence_diagram.png #}
+{# wf_featured_image: /web/updates/images/generic/info.png #}
 
 # Goodbye Short Sessions: a proposal for using service-workers to improve cookie management on the web {: .page-title }
 

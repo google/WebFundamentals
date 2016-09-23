@@ -5,7 +5,7 @@ description: Big themes and trends for DevTools in 2016 and beyond.
 {# wf_updated_on: 2016-06-06 #}
 {# wf_published_on: 2016-06-06 #}
 {# wf_tags: devtools #}
-{# wf_featured_image: /web/updates/images/2016/06/devtools.png #}
+{# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 
 # DevTools Digest: DevTools in 2016 and Beyond {: .page-title }
 

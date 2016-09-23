@@ -5,7 +5,7 @@ description: What happened to the Resources panel, new features, and community a
 {# wf_updated_on: 2016-08-05 #}
 {# wf_published_on: 2016-08-05 #}
 {# wf_tags: devtools #}
-{# wf_featured_image: /web/updates/images/2016/06/devtools.png #}
+{# wf_featured_image: /web/updates/images/generic/chrome-devtools.png #}
 
 # DevTools Digest, August 2016 {: .page-title }
 

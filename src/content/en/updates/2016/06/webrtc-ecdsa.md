@@ -5,7 +5,7 @@ description: From version 52, Chrome uses ECDSA by default — a much more effic
 {# wf_updated_on: 2016-06-16 #}
 {# wf_published_on: 2016-06-16 #}
 {# wf_tags: chrome52,media,security,webrtc #}
-{# wf_featured_image: /web/updates/images/2016/06/webrtc-ecdsa/featured.png #}
+{# wf_featured_image: /web/updates/images/generic/security.png #}
 
 # ECDSA for WebRTC: better security, better privacy and better performance {: .page-title }
 

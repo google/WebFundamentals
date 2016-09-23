@@ -5,7 +5,7 @@ description: An round up of the deprecations and removals in Chrome to help you 
 {# wf_updated_on: 2016-06-09 #}
 {# wf_published_on: 2016-06-09 #}
 {# wf_tags: deprecations,removals,chrome52 #}
-{# wf_featured_image: /web/updates/images/2016/06/chrome-52-deprecations/deps-rems.png #}
+{# wf_featured_image: /web/updates/images/generic/warning.png #}
 
 # API Deprecations and Removals in Chrome 52 {: .page-title }
 

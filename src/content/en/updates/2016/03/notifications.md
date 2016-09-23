@@ -5,6 +5,7 @@ description: There are lots of great new features in Chrome 50 for Notifications
 {# wf_updated_on: 2016-03-13 #}
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: notifications,chrome50 #}
+{# wf_featured_image: /web/updates/images/generic/notifications.png #}
 
 # Web Notification Improvements in Chrome 50: Icons, Close Events, Renotify Preferences and Timestamps {: .page-title }
 

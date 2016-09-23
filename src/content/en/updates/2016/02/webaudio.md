@@ -5,6 +5,7 @@ description: A round up of some of the latest editions to the Web Audio API in C
 {# wf_updated_on: 2016-02-04 #}
 {# wf_published_on: 2016-02-04 #}
 {# wf_tags: webaudio,media,chrome49 #}
+{# wf_featured_image: /web/updates/images/generic/audio.png #}
 
 # Web Audio Updates in Chrome 49 {: .page-title }
 

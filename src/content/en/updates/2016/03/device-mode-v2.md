@@ -5,7 +5,7 @@ description: Learn all about Chrome DevTools' new, refreshed Device Mode introdu
 {# wf_updated_on: 2016-03-20 #}
 {# wf_published_on: 2016-03-20 #}
 {# wf_tags: devtools,update,chrome49 #}
-{# wf_featured_image: /web/updates/images/2016/03/device-mode-v2/device-mode-initial-view.png #}
+{# wf_featured_image: /web/updates/images/generic/devices.png #}
 
 # A new Device Mode for a mobile-first generation {: .page-title }
 

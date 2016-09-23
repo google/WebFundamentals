@@ -5,7 +5,7 @@ description: Two new attributes bring consistent keyboard event handling to the 
 {# wf_updated_on: 2016-04-18 #}
 {# wf_published_on: 2016-04-18 #}
 {# wf_tags: uievents,input,chrome51 #}
-{# wf_featured_image: /web/updates/images/2016/04/keyboardevent-keys-codes/ic_keyboard_black.png #}
+{# wf_featured_image: /web/updates/images/generic/keyboard.png #}
 
 # What’s New with KeyboardEvents? Keys and Codes! {: .page-title }
 

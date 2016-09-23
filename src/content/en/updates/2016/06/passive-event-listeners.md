@@ -5,6 +5,7 @@ description: New to Chrome 51, passive event listeners provide a major potential
 {# wf_updated_on: 2016-06-05 #}
 {# wf_published_on: 2016-06-05 #}
 {# wf_tags: performance,events,chrome51,javascript,scroll,touch #}
+{# wf_featured_image: /web/updates/images/generic/timer.png #}
 
 # Improving scroll performance with passive event listeners {: .page-title }
 

@@ -4,6 +4,8 @@ book_path: /web/updates/_book.yaml
 {# wf_updated_on: 2016-06-16 #}
 {# wf_published_on: 2016-06-16 #}
 {# wf_tags: css,flexbox,chrome52,absolute-positioned #}
+{# wf_featured_snippet: A previous version of the CSS Flexible Box Layout specification set the static position of absolute-positioned children as though they were a 0x0 flex item. The latest version of the spec takes them fully out of flow and sets the static position based on align and justify properties. #}
+{# wf_featured_image: /web/updates/images/generic/quilt.png #}
 
 # Flexbox gets new behavior for absolute-positioned children {: .page-title }
 

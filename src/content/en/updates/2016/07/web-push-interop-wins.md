@@ -5,7 +5,7 @@ description: Web push has had a few updates in recent versions of Chrome. GCM no
 {# wf_updated_on: 2016-07-27 #}
 {# wf_published_on: 2016-07-27 #}
 {# wf_tags: webpush,notifications #}
-{# wf_featured_image: /web/updates/images/2016/07/web-push-interop-wins/featured-image.png #}
+{# wf_featured_image: /web/updates/images/generic/notifications.png #}
 
 # Web Push Interoperability Wins {: .page-title }
 

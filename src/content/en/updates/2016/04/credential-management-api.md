@@ -5,7 +5,7 @@ description: To provide a sophisticated user experience, it's important to help 
 {# wf_updated_on: 2016-04-18 #}
 {# wf_published_on: 2016-04-18 #}
 {# wf_tags: credentials,sign-in,chrome51 #}
-{# wf_featured_image: /web/updates/images/2016/04/credential-management-api/image00.png #}
+{# wf_featured_image: /web/updates/images/generic/security.png #}
 
 # Streamlining the Sign-in Flow Using Credential Management API {: .page-title }
 

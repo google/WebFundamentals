@@ -5,6 +5,7 @@ description: IntersectionObservers let you know when an observed element enters 
 {# wf_updated_on: 2016-04-20 #}
 {# wf_published_on: 2016-04-20 #}
 {# wf_tags: intersectionobserver,chrome51 #}
+{# wf_featured_image: /web/updates/images/generic/visibility.png #}
 
 # IntersectionObserver’s Coming into View {: .page-title }
 

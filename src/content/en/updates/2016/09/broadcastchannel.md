@@ -5,15 +5,15 @@ description: BroadcastChannel API can be used for simple pub/sub between windows
 {# wf_updated_on: 2016-09-19 #}
 {# wf_published_on: 2016-09-06 #}
 {# wf_tags: broadcast,messaging,chrome54 #}
+{# wf_featured_image: /web/updates/images/2016/09/broadcast.png #}
+{# wf_featured_snippet: The BroadcastChannel API allows same-origin scripts to send messages to other browsing contexts. It can be thought of as a simple message bus that allows pub/sub semantics between windows/tabs, iframes, web workers, and service workers. #}
 
 # BroadcastChannel API: A Message Bus for the Web {: .page-title }
 
 {% include "_shared/contributors/ericbidelman.html" %}
 
 
-
 The [BroadcastChannel API][spec] allows same-origin scripts to send messages to other browsing contexts. It can be thought of as a simple message bus that allows pub/sub semantics between windows/tabs, iframes, web workers, and service workers.
-{: .intro }
 
 ## API basics
 

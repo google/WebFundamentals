@@ -5,7 +5,7 @@ description: The 'sequential focus navigation starting point' feature defines wh
 {# wf_updated_on: 2016-03-14 #}
 {# wf_published_on: 2016-03-14 #}
 {# wf_tags: accessibility,focus,chrome50 #}
-{# wf_featured_image: /web/updates/images/2016/03/focus-start-point/focus-start-thumb.jpg #}
+{# wf_featured_image: /web/updates/images/generic/focus.png #}
 
 # Removing Headaches from Focus Management {: .page-title }
 

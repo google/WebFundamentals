@@ -5,7 +5,7 @@ description: Find out when events occur with microsecond precision, thanks to DO
 {# wf_updated_on: 2016-01-28 #}
 {# wf_published_on: 2016-01-28 #}
 {# wf_tags: events,performance,chrome49 #}
-{# wf_featured_image: /web/updates/images/2016/01/high-res-timestamps/ic_timer_black.png #}
+{# wf_featured_image: /web/updates/images/generic/timer.png #}
 
 # High Resolution Timestamps for Events {: .page-title }
 

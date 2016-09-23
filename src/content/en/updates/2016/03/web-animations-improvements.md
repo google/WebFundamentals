@@ -5,6 +5,7 @@ description: Better specification compliance and new features coming in Chrome 5
 {# wf_updated_on: 2016-04-17 #}
 {# wf_published_on: 2016-03-14 #}
 {# wf_tags: webanimations,chrome50,chrome51 #}
+{# wf_featured_image: /web/updates/images/generic/animations.png #}
 
 # Web Animations Improvements in Chrome 50 {: .page-title }
 

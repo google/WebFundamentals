@@ -5,7 +5,7 @@ description: DeviceOrientationEvent uses relative degrees, and there's a new Dev
 {# wf_updated_on: 2016-03-14 #}
 {# wf_published_on: 2016-03-13 #}
 {# wf_tags: orientation,chrome50 #}
-{# wf_featured_image: /web/updates/images/2016/03/device-orientation-changes/ic_3d_rotation_black.png #}
+{# wf_featured_image: /web/updates/images/generic/screen-rotation.png #}
 
 # Device Orientation Changes Are Coming to Chrome 50 {: .page-title }
 

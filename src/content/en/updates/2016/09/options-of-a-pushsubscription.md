@@ -5,7 +5,7 @@ description: You can now access the options used when subscribing a user to push
 {# wf_updated_on: 2016-09-05 #}
 {# wf_published_on: 2016-09-07 #}
 {# wf_tags: webpush #}
-{# wf_featured_image: /web/updates/images/2015/10/web-animations-resources.png #}
+{# wf_featured_image: /web/updates/images/generic/notifications.png #}
 
 # Options of a PushSubscription {: .page-title }
 

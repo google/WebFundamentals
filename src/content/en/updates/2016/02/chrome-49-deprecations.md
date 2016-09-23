@@ -5,6 +5,7 @@ description: An round up of the deprecations and API removals in Chrome to help 
 {# wf_updated_on: 2016-07-28 #}
 {# wf_published_on: 2016-02-01 #}
 {# wf_tags: deprecations,removals,chrome49 #}
+{# wf_featured_image: /web/updates/images/generic/warning.png #}
 
 # API Deprecations and Removals in Chrome 49  {: .page-title }
 
