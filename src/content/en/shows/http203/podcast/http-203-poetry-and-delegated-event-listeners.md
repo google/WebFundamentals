@@ -4,15 +4,17 @@ description: Jake brings his A+ poetry game, and Paul muses over the performance
 
 {# wf_updated_on: 2015-10-24 #}
 {# wf_published_on: 2015-10-24 #}
-{# wf_audio_url: https://storage.googleapis.com/http-203-podcast/episode-3.mp3 #}
-{# wf_audio_url: /web/shows/http203/podcast/images/http203-episode-3-art.jpg #}
-{# wf_audio_url: http://feeds.feedburner.com/Http203Podcast #}
+{# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-3.mp3 #}
+{# wf_podcast_duration: 00:32:30 #}
+{# wf_podcast_fileSize: 29840530 #}
+{# wf_podcast_subtitle: Paul and Jake talk about poetry, event listeners, and content that jumps around your screen. #}
+{# wf_featured_image: /web/shows/http203/podcast/images/http203-episode-3-art.jpg #}
 
 # Poetry and Delegated Event Listeners {: .page-title }
 
-
-
 Jake brings his A+ poetry game, and Paul muses over the performance implications of event delegation.
+
+<img src="/web/shows/http203/podcast/images/http203-episode-3-art.jpg" class="attempt-right">
 
 In this episode:
 
@@ -23,3 +25,9 @@ In this episode:
  * Event delegation
  * Insecure content in Chrome
 
+<a href="http://feeds.feedburner.com/Http203Podcast">
+  <span class="material-icons">rss_feed</span>
+  Subscribe
+</a>
+
+<audio src="https://storage.googleapis.com/http-203-podcast/episode-3.mp3" controls preload="none">

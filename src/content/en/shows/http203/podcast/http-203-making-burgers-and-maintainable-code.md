@@ -4,15 +4,17 @@ description: How can writing code be like making a burger? Turns out, by the pow
 
 {# wf_updated_on: 2015-09-20 #}
 {# wf_published_on: 2015-09-20 #}
-{# wf_audio_url: https://storage.googleapis.com/http-203-podcast/episode-1.mp3 #}
-{# wf_audio_url: /web/shows/http203/podcast/images/http203-episode-1-art.jpg #}
-{# wf_audio_url: http://feeds.feedburner.com/Http203Podcast #}
+{# wf_podcast_audio: https://storage.googleapis.com/http-203-podcast/episode-1.mp3 #}
+{# wf_podcast_duration: 00:30:13 #}
+{# wf_podcast_fileSize: 31517231 #}
+{# wf_podcast_subtitle: Paul and Jake talk about making burgers and maintainable code. #}
+{# wf_featured_image: /web/shows/http203/podcast/images/http203-episode-1-art.jpg #}
 
 # Making Burgers and Maintainable Code {: .page-title }
 
-
-
 How can writing code be like making a burger? Turns out, by the power of weird segues, it can!
+
+<img src="/web/shows/http203/podcast/images/http203-episode-1-art.jpg" class="attempt-right">
 
 In this episode:
 
@@ -22,3 +24,10 @@ In this episode:
 * Libraries vs frameworks
 * Camels
 * Intl
+
+<a href="http://feeds.feedburner.com/Http203Podcast">
+  <span class="material-icons">rss_feed</span>
+  Subscribe
+</a>
+
+<audio src="https://storage.googleapis.com/http-203-podcast/episode-1.mp3" controls preload="none">

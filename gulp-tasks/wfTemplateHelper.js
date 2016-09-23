@@ -91,7 +91,7 @@ function generateFeeds(files, options) {
     context.baseUrl += options.section + '/';
     context.analyticsQS = context.analyticsQS.replace('root_feed', options.section + '_feed');
   }
-  context.rssPubDate = moment(lastUpdated).format('MM MMM YYYY HH:mm:ss [GMT]');
+  context.rssPubDate = moment(lastUpdated).format('DD MMM YYYY HH:mm:ss [GMT]');
   context.atomPubDate = moment(lastUpdated).format('YYYY-MM-DDTHH:mm:ss[Z]');
 
   var template = path.join(GLOBAL.WF.src.templates, 'atom.xml');
@@ -100,6 +100,28 @@ function generateFeeds(files, options) {
 
   template = path.join(GLOBAL.WF.src.templates, 'rss.xml');
   outputFile = path.join(options.outputPath, 'rss.xml');
+  renderTemplate(template, context, outputFile);
+}
+
+function generatePodcastFeed(files, options) {
+  gutil.log(' ', 'Generating podcast feed for', options.title);
+  var lastUpdated = files[0].datePublished;
+  var context = {
+    title: options.title,
+    subtitle: options.subtitle,
+    summary: options.summary,
+    author: options.author,
+    image: options.image,
+    articles: files,
+    host: 'https://developers.google.com',
+    baseUrl: 'https://developers.google.com/web/'
+  };
+  if (options.baseUrl) {
+    context.baseUrl = options.baseUrl;
+  }
+  context.rssPubDate = moment(lastUpdated).format('DD MMM YYYY HH:mm:ss [GMT]');
+  var template = path.join(GLOBAL.WF.src.templates, 'shows', 'podcast.xml');
+  var outputFile = path.join(options.outputPath, 'feed.xml');
   renderTemplate(template, context, outputFile);
 }
 
@@ -186,6 +208,7 @@ function generateTagPages(files, options) {
 
 exports.generateIndex = generateIndex;
 exports.generateFeeds = generateFeeds;
+exports.generatePodcastFeed = generatePodcastFeed;
 exports.generateListPage = generateListPage;
 exports.generateTOCbyMonth = generateTOCbyMonth;
 exports.generateTagPages = generateTagPages;

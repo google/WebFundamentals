@@ -19,6 +19,10 @@ var RE_TAGS = /{# wf_tags: (.*?) #}/;
 var RE_IMAGE = /{# wf_featured_image: (.*?) #}/;
 var RE_SNIPPET = /{# wf_featured_snippet: (.*?) #}/;
 var RE_AUTHOR = /{%[ ]?include "web\/_shared\/contributors\/(.*?)\.html"[ ]?%}/;
+var RE_PODCAST = /{# wf_podcast_audio: (.*?) #}/;
+var RE_PODCAST_DURATION = /{# wf_podcast_duration: (.*?) #}/;
+var RE_PODCAST_SUBTITLE = /{# wf_podcast_subtitle: (.*?) #}/;
+var RE_PODCAST_SIZE = /{# wf_podcast_fileSize: (.*?) #}/;
 
 if (!String.prototype.endsWith) {
   Object.defineProperty(String.prototype, 'endsWith', {
@@ -90,6 +94,16 @@ function readMetadataForFile(file) {
   var tags = getRegEx(RE_TAGS, content);
   if (tags) {
     result.tags = tags.split(',');
+  }
+  var podcast = getRegEx(RE_PODCAST, content);
+  if (podcast) {
+    result.podcast = {
+      audioUrl: podcast,
+      duration: getRegEx(RE_PODCAST_DURATION, content),
+      subtitle: getRegEx(RE_PODCAST_SUBTITLE, content),
+      fileSize: getRegEx(RE_PODCAST_SIZE, content),
+      pubDate: published.format('DD MMM YYYY HH:mm:ss [GMT]')
+    };
   }
   return result;
 }
