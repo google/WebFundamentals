@@ -26,6 +26,7 @@ src/content/*/updates/*/_toc.yaml
 src/content/*/updates/*/index.md
 src/content/*/updates/tags/*
 src/content/*/shows/_index.yaml
+src/content/*/shows/http203/podcast/index.md
 src/content/*/showcase/_index.yaml
 src/content/*/showcase/*/_toc.yaml
 src/content/*/showcase/*/index.md
