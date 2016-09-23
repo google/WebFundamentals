@@ -13,7 +13,7 @@ book_path: /web/{{section}}/_book.yaml
   {{#if image}}
     <img src="{{image}}">
   {{else}}
-    <img src="https://placehold.it/350x150">
+    <img src="/web/updates/images/generic/star.png">
   {{/if}}
 </div>
 {{{description}}}
