@@ -1,7 +1,7 @@
 ---
 layout: updates/post
 title: "Re-rastering Composited Layers on Scale Change"
-description: "ll content will be re-rastered when its transform scale changes, if it does not
+description: "All content will be re-rastered when its transform scale changes, if it does not
 have the <code>will-change: transform</code> CSS property. In other words, <code>will-change:
 transform</code> means 'please animate it fast'."
 published_on: 2016-09-22
