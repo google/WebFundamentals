@@ -178,7 +178,7 @@
               <a href="https://www.google.com/intl/en/privacy/">Privacy</a>
             </span>
             <form class="devsite-utility-footer-language">
-              <select id="select" class="kd-select">
+              <select id="langSelector" class="kd-select">
                 <option value="ar">العربية‬</option>
                 <option value="de">Deutsch</option>
                 <option value="en">English</option>
