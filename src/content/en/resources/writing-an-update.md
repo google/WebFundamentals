@@ -36,6 +36,8 @@ To get started quickly, copy the template and start there.
 Refer to the [YAML Front Matter](style-guide#yaml-front-matter) section for
 full details on the required YAML front matter.
 
+Note: You cannot include HTML in the description attribute. If you'd like to include HTML in the snippet, also provide a `wf_featured_snippet`.
+
 ### Tags
 
 To make it easier to find or group posts, [/web/updates/](/web/updates/)
@@ -58,7 +60,9 @@ be an absolute page on DevSite.
 &#123;# wf_featured_image: /web/updates/images/weird.jpg #}
 </pre>
 
-Images should be 16x9 and no taller than 400px.
+Images should be 2x1, ideally 1000px by 500px.
+
+**Looing for a generic image?** Check out the [generic images](https://github.com/google/WebFundamentals/tree/next-version/src/content/en/updates/images/generic) folder.
 
 ### Featured Snippet
 
