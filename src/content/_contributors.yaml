@@ -1134,3 +1134,15 @@ wangyu:
   email: nameiswangyu@gmail.com
   description:
     en: WangYu is Front End Developer
+    
+chrishtr:
+  name:
+    given: Chris
+    family: Harrelson
+  org:
+    name: Google
+    unit: Software engineering
+  country: US
+  role:
+    - author
+  email: chrishtr@google.com
