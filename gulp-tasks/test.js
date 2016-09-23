@@ -18,6 +18,12 @@ var STD_EXCLUDES = [
 var MAX_DESCRIPTION_LENGTH = 485;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
 
+var DO_EXPERIMENTAL = false;
+var EXPERIMENTAL_STRINGS = [
+  {label: 'Links (HTML) within DevSite should be relative', regEx: /href=['"]?https:\/\/developers.google.com/},
+  {label: 'Links (MD) within DevSite should be relative', regEx: /]\(https:\/\/developers.google.com/}
+];
+
 var WARNING_STRINGS = [
   {label: 'mdl-* class', regEx: /mdl-(grid|cell|data-table|js-data-table)/},
   {label: 'TODO: Verify note type!', regEx: /<!-- TODO: Verify note type! -->/},
@@ -105,6 +111,15 @@ function testMarkdownFile(fileName) {
       errors.push({msg: 'Bad string found', param: str.label});
     }
   });
+  // Look for experimental strings
+  if (DO_EXPERIMENTAL) {
+    EXPERIMENTAL_STRINGS.forEach(function(str) {
+      if (fileContent.search(str.regEx) >= 0) {
+        warnings.push({msg: 'Experimental string found', param: str.label});
+      }
+    });
+  }
+
   // Look for invalid tags in includecode
   tags = fileContent.match(/{% includecode (.*?) %}/g);
   if (tags) {
