@@ -1,9 +1,7 @@
 ---
 layout: updates/post
 title: "Re-rastering Composited Layers on Scale Change"
-description: "All content will be re-rastered when its transform scale changes, if it does not
-have the <code>will-change: transform</code> CSS property. In other words, <code>will-change:
-transform</code> means 'please animate it fast'."
+description: "Starting in Chrome 53, all content is re-rastered when its transform scale changes, if it does not have the <code>will-change: transform</code> CSS property. In other words, <code>will-change: transform</code> means 'please animate it fast'."
 published_on: 2016-09-22
 updated_on: 2016-09-22
 authors:
@@ -11,15 +9,16 @@ authors:
 tags:
   - css
   - webanimations
+  - chrome53
 notes:
   scale: We do not distinguish between scale and translation transforms.
 ---
 
 ## TL;DR
 
-All content will be re-rastered when its transform scale changes, if it does not
-have the `will-change: transform` CSS property. In other words, `will-change:
-transform` means "please animate it fast".
+Starting in Chrome 53, all content is re-rastered when its transform scale
+changes, if it does not have the `will-change: transform` CSS property. In
+other words, `will-change: transform` means "please animate it fast".
 
 This only applies to transforms scales that happen via script manipulation, and
 **does not apply to CSS animations or Web Animations**.
