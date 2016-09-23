@@ -12,7 +12,7 @@ description: Responsive web design patterns are quickly evolving, but there are 
 Responsive web design patterns are quickly evolving, but there are a handful of established patterns that work well across the desktop and mobile devices.
 
 Most layouts used by responsive web pages can be categorized into one of five
-patterns: mostly fluid, column drop, layout shifter, tiny tweaks and off canvas.
+patterns: mostly fluid, column drop, layout shifter, tiny tweaks, and off canvas.
 In some cases, a page may use a combination of patterns, for example column drop
 and off canvas.  These patterns, originally identified by [Luke
 Wroblewski](http://www.lukew.com/ff/entry.asp?1514), provide a solid starting
@@ -20,11 +20,10 @@ point for any responsive page.
 
 ### The patterns
 
-To create simple, easy-to-understand samples, each the samples
-below were created with real markup using
+For simplicity and ease of understanding, each the samples below were created with real markup using
 [`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes),
 typically with three content `div`'s contained within a primary container `div`.
- Each sample was written starting with the smallest view first and breakpoints
+ Each sample was written starting with the smallest view first, and breakpoints
 were added when necessary.  The [flexbox layout mode is well
 supported](http://caniuse.com/#search=flexbox) for modern browsers, though may
 still require vendor prefixing for optimal support.
@@ -43,7 +42,7 @@ screens.
 <img src="imgs/mostly-fluid.svg">
 <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/patterns/mostly-fluid.html" class="button button-primary">Try it</a>
 
-In the smallest view, each content `div` is stacked vertically.  Once the screen
+In the smallest view, each content `div` is stacked vertically.  When the screen
 width hits 600px, the primary content `div` remains at `width: 100%`, while the
 secondary `div`'s are shown as two columns below the primary `div`.  Beyond
 800px, the container `div` becomes fixed width and is centered on the screen.
@@ -66,7 +65,7 @@ For full-width multi-column layouts, column drop simply stacks the columns
 vertically as the window width becomes too narrow for the content.
 
 Eventually this results in all of the columns being stacked vertically.  Choosing
-breakpoints for this layout pattern is dependent on the content and will change
+breakpoints for this layout pattern is dependent on the content and changes
 for each design.
 
 <img src="imgs/column-drop.svg">
@@ -122,15 +121,14 @@ Sites using this pattern include:
 ## Tiny tweaks
 
 Tiny tweaks simply makes small changes to the layout, such as adjusting font
-size, resizing images or moving content around in very minor ways.
+size, resizing images, or moving content around in very minor ways.
 
-It works well on single column layouts such as one page linear websites, text
-heavy articles.
+It works well on single column layouts such as one page linear websites and text-heavy articles.
 
 <img src="imgs/tiny-tweaks.svg">
 <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/tiny-tweaks.html" class="button button-primary">Try it</a>
 
-As its name implies, little changes with this sample as the screen size changes.
+As its name implies, not much changes with this sample as the screen size changes.
 As the screen width gets larger, so do the font size and padding.
 
 Sites using this pattern include:
@@ -147,21 +145,20 @@ Sites using this pattern include:
 ## Off canvas
 
 Rather than stacking content vertically, the off canvas pattern places less
-frequently used content, perhaps navigation or app menus off screen, only
+frequently used content&mdash;perhaps navigation or app menus&mdash;off screen, only
 showing it when the screen size is large enough, and on smaller screens,
 content is only a click away.
 
 <img src="imgs/off-canvas.svg">
 <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/off-canvas.html" class="button button-primary">Try it</a>
 
-Rather than stacking content vertically, this sample hides two of the content
-`div`s off screen by using a `transform: translate(-250px, 0)`.  JavaScript is used
+Rather than stacking content vertically, this sample uses a `transform: translate(-250px, 0)` declaration to hide two of the content `div`s off screen.  JavaScript is used
 to show the divs by adding an open class to the element to make visible.  As the
 screen gets wider, the off-screen positioning is removed from the elements and
 they're shown within the visible viewport.
 
 Note in this sample, Safari for iOS 6 and Android Browser do not support the
-`flex-flow: row nowrap` feature of `flexbox`, so we’ve had to fallback to
+`flex-flow: row nowrap` feature of `flexbox`, so we’ve had to fall back to
 absolute positioning.
 
 Sites using this pattern include:

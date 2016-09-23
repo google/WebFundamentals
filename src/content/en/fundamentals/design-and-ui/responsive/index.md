@@ -129,50 +129,48 @@ content to fit within the width of the viewport, so that the user does not need
 to scroll horizontally.
 
 Since screen dimensions and width in CSS pixels vary widely between devices
-(e.g. between phones and tablets, and even between different phones), content
+(for example, between phones and tablets, and even between different phones), content
 should not rely on a particular viewport width to render well.
 
 Setting large absolute CSS widths for page elements (such as the example below),
-will cause the `div` to be too wide for the viewport on a narrower device (e.g.
+cause the `div` to be too wide for the viewport on a narrower device (for example,
 a device with a width of 320 CSS pixels, such as an iPhone). Instead, consider
 using relative width values, such as `width: 100%`.  Similarly, beware of using
 large absolute positioning values that may cause the element to fall outside the
-viewport on small screens.
+viewport on small screens.  
 
 <div class="attempt-left">
   <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
   <figure>
-    <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="Page with a 344px fixed width element on an iPhone.">
+    <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x" alt="Page with a 344px fixed width element on an iPhone.">
     <figcaption>
       Page with a 344px fixed width element on an iPhone.
-     </figcaption>
+    </figcaption>
   </figure>
   </a>
 </div>
 <div class="attempt-right">
   <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
   <figure>
-    <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Page with a 344px fixed width element on a Nexus 5.">
+    <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x" alt="Page with a 344px fixed width element on a Nexus 5.">
     <figcaption>
       Page with a 344px fixed width element on a Nexus 5.
-     </figcaption>
+    </figcaption>
   </figure>
   </a>
 </div>
 <div class="clearfix"></div>
+         
+## Use CSS media queries for responsiveness  
 
-
-
-## Use CSS media queries for responsiveness
-
-Media queries are simple filters that can be applied to CSS styles.  They make 
+Media queries are simple filters that can be applied to CSS styles. They make 
 it easy to change styles based on the characteristics of the device rendering
-the content, including the display type, width, height, orientation and even
+the content, including the display type, width, height, orientation, and even
 resolution.
 
 
 ### TL;DR {: .hide-from-toc }
-- Media queries can be used to apply styles based on device characteristics.
+- Use media queries to apply styles based on device characteristics.
 - Use `min-width` over `min-device-width` to ensure the broadest experience.
 - Use relative sizes for elements to avoid breaking layout.
 
@@ -183,11 +181,11 @@ inside a print media query:
     <link rel="stylesheet" href="print.css" media="print">
     
 
-In addition to using the `media` attribute in the stylesheet link, there are two
+In addition to using the `media` attribute in the style sheet link, there are two
 other ways to apply media queries that can be embedded in a CSS file: `@media`
 and `@import`.  For performance reasons, either of the first two methods are
 recommended over the `@import` syntax
-(see [Avoid CSS imports](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations.html)).
+(see [Avoid CSS imports](/web/fundamentals/performance/critical-rendering-path/page-speed-rules-and-recommendations)).
 
 
     @media print {
@@ -197,14 +195,14 @@ recommended over the `@import` syntax
     @import url(print.css) print;
     
 
-The logic that applies to media queries is not mutually exclusive and any filter
-that meets that criteria the resulting CSS block will be applied using the
+The logic that applies to media queries is not mutually exclusive, and for any filter
+that meets that criteria the resulting CSS block is applied using the
 standard rules of precedence in CSS.
 
 ### Apply media queries based on viewport size
 
-Media queries enable us to create a responsive experience, where specific styles
-are applied to small screens, large screens and anywhere in between.  The media
+Media queries enable us to create a responsive experience where specific styles
+are applied to small screens, large screens, and anywhere in between.  The media
 query syntax allows for the creation of rules that can be applied depending on
 device characteristics.
 
@@ -228,19 +226,19 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
   <tbody>
     <tr>
       <td data-th="attribute"><code>min-width</code></td>
-      <td data-th="Result">Rules applied for any browser width over the value defined in the query.</td>
+      <td data-th="Result">Rules applied for any browser width greater than the value defined in the query.</td>
     </tr>
     <tr>
       <td data-th="attribute"><code>max-width</code></td>
-      <td data-th="Result">Rules applied for any browser width below the value defined in the query.</td>
+      <td data-th="Result">Rules applied for any browser width less than the value defined in the query.</td>
     </tr>
     <tr>
       <td data-th="attribute"><code>min-height</code></td>
-      <td data-th="Result">Rules applied for any browser height over the value defined in the query.</td>
+      <td data-th="Result">Rules applied for any browser height greater than the value defined in the query.</td>
     </tr>
     <tr>
       <td data-th="attribute"><code>max-height</code></td>
-      <td data-th="Result">Rules applied for any browser height below the value defined in the query.</td>
+      <td data-th="Result">Rules applied for any browser height less than the value defined in the query.</td>
     </tr>
     <tr>
       <td data-th="attribute"><code>orientation=portrait</code></td>
@@ -268,11 +266,11 @@ Let's take a look an example:
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/media-queries.html" region_tag="mqueries" adjust_indentation="auto" %}
 </pre>
 
-* When the browser is between <b>0px</b> and <b>640px</b> wide, `max-640px.css` will be applied.
-* When the browser is between <b>500px</b> and <b>600px</b> wide, styles within the `@media` will be applied.
-* When the browser is <b>640px or wider</b>, `min-640px.css` will be applied.
-* When the browser <b>width is greater than the height</b>, `landscape.css` will be applied.
-* When the browser <b>height is greater than the width</b>, `portrait.css` will be applied.
+* When the browser is between <b>0px</b> and <b>640px</b> wide, `max-640px.css` is applied.
+* When the browser is between <b>500px</b> and <b>600px</b> wide, styles within the `@media` is applied.
+* When the browser is <b>640px or wider</b>, `min-640px.css` is applied.
+* When the browser <b>width is greater than the height</b>, `landscape.css` is applied.
+* When the browser <b>height is greater than the width</b>, `portrait.css` is applied.
 
 
 ### A note on `min-device-width`
@@ -281,10 +279,9 @@ It is also possible to create queries based on
 `*-device-width`; though this practice is **strongly discouraged**.
 
 The difference is subtle but very important: `min-width` is based on the
-size of the browser window, whereas `min-device-width` is based on
+size of the browser window whereas `min-device-width` is based on
 the size of the screen.  Unfortunately some browsers, including the legacy
-Android browser may not report the device width properly and instead
-report the screen size in device pixels instead of the expected viewport width.
+Android browser, don't report the device width properly; they report the screen size in device pixels instead of the expected viewport width.
 
 In addition, using `*-device-width` can prevent content from adapting on
 desktops or other devices that allow windows to be resized because the query
@@ -294,28 +291,28 @@ is based on the actual device size, not the size of the browser window.
 
 Starting with Chrome 39, your style sheets can write selectors that cover
 multiple pointer types and hover behaviors. The `any-pointer` and `any-hover`
-media features are similar to `pointer` and `hover` in allowing you to query the
-capabilities of the user's pointer. Unlike the later, `any-pointer` and
-`any-hover` operate on the union of all pointer devices rather than the just the
+media features are similar to `pointer` and `hover` in that they allow you to query the
+capabilities of the user's pointer. However, unlike the latter, `any-pointer` and
+`any-hover` operate on the union of all pointer devices rather than just the
 primary pointer device.
 
 ### Use relative units
 
 A key concept behind responsive design is fluidity and proportionality as
 opposed to fixed width layouts.  Using relative units for measurements can help
-simplify layouts and prevent accidentally creating components that are too big
+simplify layouts and prevent accidental creation of components that are too big
 for the viewport.
 
 For example, setting width: 100% on a top level div, ensures that it spans the
 width of the viewport and is never too big or too small for the viewport.  The
-div will fit, no matter if it's a 320px wide iPhone, 342px wide Blackberry Z10
+div fits, no matter if it's a 320px wide iPhone, 342px wide Blackberry Z10,
 or a 360px wide Nexus 5.
 
 In addition, using relative units allows browsers to render the content based on
 the users zoom level without the need for adding horizontal scroll bars to the
 page.
 
-<span class="compare-worse">Not recommended</span> — fixed width
+<span class="compare-worse">Not recommended</span>&mdash;fixed width
 
     div.fullWidth {
       width: 320px;
@@ -324,7 +321,7 @@ page.
     }
 
 
-<span class="compare-better">Recommended</span> — responsive width
+<span class="compare-better">Recommended</span>&mdash;responsive width
 
     div.fullWidth {
       width: 100%;
@@ -333,16 +330,15 @@ page.
 
 ## How to choose breakpoints 
 
-While it may be helpful to think about defining breakpoints based on device
-classes, use caution.  Defining breakpoints based on specific devices,
-products,brand names, or operating systems that are in use today can result
+Don't define breakpoints based on device classes. Defining breakpoints based on specific devices,
+products, brand names, or operating systems that are in use today can result
 in a maintenance nightmare. Instead, the content itself should determine how
 the layout adjusts to its container.
 
 
 ### TL;DR {: .hide-from-toc }
 - Create breakpoints based on content, never on specific devices, products, or brands.
-- Design for the smallest mobile device first, then progressively enhance the experience as more screen real estate becomes available.
+- Design for the smallest mobile device first; then progressively enhance the experience as more screen real estate becomes available.
 - Keep lines of text to a maximum of around 70 or 80 characters.
 
 
@@ -378,12 +374,12 @@ small screen.
 </figure>
 
 Next, resize the browser until there is too much white space between the
-elements and the forecast simply doesn't look as good.  The decision is somewhat
+elements, and the forecast simply doesn't look as good.  The decision is somewhat
 subjective, but above 600px is certainly too wide.
 
 <div style="clear:both;"></div>
 
-To insert a breakpoint at 600px, create two new stylesheets, one to use when the
+To insert a breakpoint at 600px, create two new style sheets, one to use when the
 browser is 600px and below, and one for when it is wider than 600px.
 
 <pre class="prettyprint">
@@ -400,8 +396,8 @@ browser is 600px and below, and one for when it is wider than 600px.
 </figure>
 
 Finally, refactor the CSS.  In this example, we've placed the common styles such
-as fonts, icons, basic positioning, colors in `weather.css`.  Specific layouts
-for the small screen are then placed in `weather-small.css` and large screen
+as fonts, icons, basic positioning, and colors in `weather.css`.  Specific layouts
+for the small screen are then placed in `weather-small.css`, and large screen
 styles are placed in `weather-large.css`.
 
 <div style="clear:both"></div>
@@ -410,14 +406,14 @@ styles are placed in `weather-large.css`.
 ### Pick minor breakpoints when necessary
 
 In addition to choosing major breakpoints when layout changes significantly, it
-is also helpful to adjust for minor changes.  For example between major
-breakpoints, it may be helpful to adjust the margins or padding on an element,
+is also helpful to adjust for minor changes.  For example, between major
+breakpoints it may be helpful to adjust the margins or padding on an element,
 or increase the font size to make it feel more natural in the layout.
 
 Let's start by optimizing the small screen layout.  In this case, let's boost
 the font when the viewport width is greater than 360px.  Second, when there is
 enough space, we can separate the high and low temperature so they're on the
-same line, instead of on top of each other.  And let's also make the weather
+same line instead of on top of each other.  And let's also make the weather
 icons a bit larger.
 
 <pre class="prettyprint">
@@ -455,8 +451,8 @@ forecast panel so it doesn't consume the whole screen width.
 ### Optimize text for reading
 
 Classic readability theory suggests that an ideal column should contain 70 to 80
-characters per line (about  8 to 10 words in English). Thus each time the width
-of a text block grows past about 10 words, a breakpoint should be considered.
+characters per line (about  8 to 10 words in English). Thus, each time the width
+of a text block grows past about 10 words, consider adding a breakpoint.
 
 <div class="attempt-left">
   <figure>
@@ -475,7 +471,7 @@ of a text block grows past about 10 words, a breakpoint should be considered.
 
 Let's take a deeper look at the above blog post example.  On smaller screens,
 the Roboto font at 1em works perfectly giving 10 words per line, but larger
-screens will require a breakpoint. In this case, if the browser width is greater
+screens require a breakpoint. In this case, if the browser width is greater
 than 575px, the ideal content width is 550px.
 
 <pre class="prettyprint">
@@ -485,9 +481,9 @@ than 575px, the ideal content width is 550px.
 ### Never completely hide content
 
 Be careful when choosing what content to hide or show depending on screen size.
-Don't simply hide content just because you can't fit it on screen.  Screen size
+Don't simply hide content just because you can't fit it on the screen.  Screen size
 is not a definitive indication of what a user may want.  For example,
 eliminating the pollen count from the weather forecast could be a serious issue
-for spring time allergy sufferers who need the information to determine if they
+for spring-time allergy sufferers who need the information to determine if they
 can go outside or not.
 

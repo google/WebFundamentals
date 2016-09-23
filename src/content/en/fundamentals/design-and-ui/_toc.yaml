@@ -7,13 +7,13 @@ toc:
       section:
       - title: Responsive Web Design Basics
         path: /web/fundamentals/design-and-ui/responsive/
-      - title: Design Patterns
+      - title: Responsive Web Design Patterns
         path: /web/fundamentals/design-and-ui/responsive/patterns
       - title: Images
         path: /web/fundamentals/design-and-ui/media/images
       - title: Video
         path: /web/fundamentals/design-and-ui/media/video
-      - title: Content
+      - title: Multi-Device Content
         path: /web/fundamentals/design-and-ui/responsive/content
     - title: User Input
       section:
