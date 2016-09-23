@@ -16,17 +16,31 @@ Welcome to the new Web**Fundamentals**!
 * We want your contributions, either PR's, issues, whatever!
 * The latest will be staged at [https://web-central.appspot.com/web/] (coming soon)
 
+## Cloning the repo
+I recommend starting with a fresh clone of the repo. To save yourself some
+time, use the command below, it'll do a shallow clone of only the
+`next-version` branch into the WFNext directory
+
+```
+git clone --depth 1 https://github.com/google/WebFundamentals.git --branch next-version --single-branch WFNext
+```
+
 ## Getting set up
-1. Get [App Engine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
-2. Install Python dependencies: `pip install markdown -t ./gae/lib`
-2. If you haven't already, install gulp globally: `npm install -g gulp`
-3. Run `npm install` (needed for the build process)
+The new DevSite infrastructure simplifies the dependencies a lot. Ensure
+you have a recent version of [Node](https://nodejs.org/en/), 
+[Gulp](http://gulpjs.com/) and the 
+[AppEngine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
+already installed.
+
+1. Install Python dependencies: `pip install markdown -t ./gae/lib`
+2. Run `npm install` (needed for the build process)
 
 ## Build the auto-generated files
-Use **gulp** to build the auto-generated files, such as the RSS & ATOM feeds,
-index pages for updates, shows, showcases, etc.
+Some files (contributors includes, some pages for updates, showcases, etc) are
+automatically generated. You'll need to do that the first time you clone the
+repo, then any time you add a case study, update, etc. To build those
+files, run:
 
-To use, run:
 ```
 gulp build
 ```
@@ -40,12 +54,15 @@ access to the original Doc files. This will likely only work for Googlers.
 1. Run `tools/update-codelabs.sh`
 1. Check the latest changes into GitHub
 
-## Serve the files
-1. If you haven't already, build the auto-generated files
+## Start the development server
 1. Run `./start-appengine.sh`
 
 ## Test your changes before submitting a PR
-To test your changes before submitting a pull request, run:
+Please run your changes through gulp test before submitting a PR. The test
+looks for things that may cause issues with DevSite and tries to keep our
+content consistent. It's part of the deployment process, so PRs will fail
+if there are any errors! To run:
 
-    gulp test
-
+```
+gulp test
+```
