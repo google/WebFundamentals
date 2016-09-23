@@ -28,7 +28,7 @@ The following diagram shows the order of operations.
 ![Sending a message](images/push-flow.gif)
 
 1. A device downloads your web app containing an already created publicKey, referred to in scripts as the `applicationServerKey`. Your web app installs a service worker.
-1. During the subscription flow the browser contacts the messaging server to create a new subscription and returns it.
+1. During the subscription flow the browser contacts the messaging server to create a new subscription and returns it to the app.
 
    Note: You don't need to know the URL of the message server. Each browser vender manages it's own message server for its browser.
 
