@@ -5,7 +5,7 @@ description: Consider content as well as layout and graphic design when building
 {# wf_updated_on: 2016-05-10 #}
 {# wf_published_on: 2016-05-10 #}
 
-# Multi-device content {: .page-title }
+# Multi-Device Content {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
