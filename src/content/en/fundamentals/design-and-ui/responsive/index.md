@@ -12,9 +12,9 @@ description: Much of the web isn't optimized for those multi-device experiences.
 The use of mobile devices to surf the web is growing at an astronomical pace, 
 but unfortunately much of the web isn't optimized for those mobile devices. 
 Mobile devices are often constrained by display size and require a different 
-approach to how content is laid out on screen.
+approach to how content is laid out on the screen.
 
-There is a multitude of different screen sizes across phones, "phablets",
+A multitude of different screen sizes exist across phones, "phablets,"
 tablets, desktops, game consoles, TVs, and even wearables.  Screen sizes are always
 changing, so it's important that your site can adapt to any screen size,
 today or in the future.
@@ -25,9 +25,9 @@ today or in the future.
 </video>
 
 Responsive web design, originally defined by [Ethan Marcotte in A List
-Apart](http://alistapart.com/article/responsive-web-design/) responds to the
+Apart](http://alistapart.com/article/responsive-web-design/), responds to the
 needs of the users and the devices they're using.  The layout changes based on
-the size and capabilities of the device.  For example, on a phone, users would
+the size and capabilities of the device.  For example, on a phone users would
 see content shown in a single column view; a tablet might show the same content
 in two columns.
 
@@ -144,7 +144,7 @@ viewport on small screens.
   <figure>
     <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x" alt="Page with a 344px fixed width element on an iPhone.">
     <figcaption>
-      Page with a 344px fixed width element on an iPhone.
+      Page with a 344px fixed width element on an iPhone
     </figcaption>
   </figure>
   </a>
@@ -154,14 +154,14 @@ viewport on small screens.
   <figure>
     <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x" alt="Page with a 344px fixed width element on a Nexus 5.">
     <figcaption>
-      Page with a 344px fixed width element on a Nexus 5.
+      Page with a 344px fixed width element on a Nexus 5
     </figcaption>
   </figure>
   </a>
 </div>
 <div class="clearfix"></div>
          
-## Use CSS media queries for responsiveness  
+## Use CSS media queries for responsiveness {: #css-media-queries }  
 
 Media queries are simple filters that can be applied to CSS styles. They make 
 it easy to change styles based on the characteristics of the device rendering
@@ -196,7 +196,7 @@ recommended over the `@import` syntax
     
 
 The logic that applies to media queries is not mutually exclusive, and for any filter
-that meets that criteria the resulting CSS block is applied using the
+meeting that criteria the resulting CSS block is applied using the
 standard rules of precedence in CSS.
 
 ### Apply media queries based on viewport size
@@ -213,7 +213,7 @@ device characteristics.
     
 
 While there are several different items we can query on, the ones used most
-often for responsive web design are `min-width`, `max-width`, `min-height` and
+often for responsive web design are `min-width`, `max-width`, `min-height`, and
 `max-height`.
 
 
@@ -251,7 +251,7 @@ often for responsive web design are `min-width`, `max-width`, `min-height` and
   </tbody>
 </table>
 
-Let's take a look an example:
+Let's take a look at an example:
 
 <figure>
   <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/media-queries.html">
@@ -276,14 +276,14 @@ Let's take a look an example:
 ### A note on `min-device-width`
 
 It is also possible to create queries based on
-`*-device-width`; though this practice is **strongly discouraged**.
+`min-device-width`, though this practice is **strongly discouraged**.
 
 The difference is subtle but very important: `min-width` is based on the
 size of the browser window whereas `min-device-width` is based on
 the size of the screen.  Unfortunately some browsers, including the legacy
 Android browser, don't report the device width properly; they report the screen size in device pixels instead of the expected viewport width.
 
-In addition, using `*-device-width` can prevent content from adapting on
+In addition, using `min-device-width` can prevent content from adapting on
 desktops or other devices that allow windows to be resized because the query
 is based on the actual device size, not the size of the browser window.
 
@@ -303,13 +303,13 @@ opposed to fixed width layouts.  Using relative units for measurements can help
 simplify layouts and prevent accidental creation of components that are too big
 for the viewport.
 
-For example, setting width: 100% on a top level div, ensures that it spans the
+For example, setting width: 100% on a top level `div`, ensures that it spans the
 width of the viewport and is never too big or too small for the viewport.  The
-div fits, no matter if it's a 320px wide iPhone, 342px wide Blackberry Z10,
+`div` fits, no matter if it's a 320px wide iPhone, 342px wide Blackberry Z10,
 or a 360px wide Nexus 5.
 
 In addition, using relative units allows browsers to render the content based on
-the users zoom level without the need for adding horizontal scroll bars to the
+the user's zoom level without the need for adding horizontal scroll bars to the
 page.
 
 <span class="compare-worse">Not recommended</span>&mdash;fixed width
@@ -355,10 +355,10 @@ the layout adjusts to its container.
 
 Design the content to fit on a small screen size first, then expand the screen
 until a breakpoint becomes necessary.  This allows you to optimize
-breakpoints based on content and maintain the fewest number of breakpoints
+breakpoints based on content and maintain the least number of breakpoints
 possible.
 
-Let's work through the example we saw at the beginning,
+Let's work through the example we saw at the beginning:
 the weather forecast. The first step is to make the forecast look good on a
 small screen.
 
@@ -412,7 +412,7 @@ or increase the font size to make it feel more natural in the layout.
 
 Let's start by optimizing the small screen layout.  In this case, let's boost
 the font when the viewport width is greater than 360px.  Second, when there is
-enough space, we can separate the high and low temperature so they're on the
+enough space, we can separate the high and low temperatures so that they're on the
 same line instead of on top of each other.  And let's also make the weather
 icons a bit larger.
 
@@ -441,7 +441,7 @@ icons a bit larger.
 <div style="clear:both;"></div>
 
 
-Similarly, for the large screens, it's best to limit to maximum width of the
+Similarly, for the large screens it's best to limit to maximum width of the
 forecast panel so it doesn't consume the whole screen width.
 
 <pre class="prettyprint">

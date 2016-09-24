@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With Responsive web design not only can our layouts change based on device characteristics, but images as well.
+description: A picture is worth 1000 words, and images play an integral part of every page. But they also often account for most of the downloaded bytes.  With responsive web design not only can our layouts change based on device characteristics, but images as well.
 
 {# wf_updated_on: 2014-04-29 #}
 {# wf_published_on: 2014-04-29 #}
@@ -13,9 +13,9 @@ description: A picture is worth 1000 words, and images play an integral part of 
 Responsive web design means that not only can our layouts change based on device
 characteristics, but content can change as well.  For example, on high resolution (2x)
 displays, high resolution graphics ensure sharpness. An image
-that  is 50% width may work just fine when the browser is 800px wide, but will
-use too much real estate on a narrow phone, and still comes at the same
-bandwidth overhead when scaled down to fit on a smaller screen.
+that  is 50% width may work just fine when the browser is 800px wide, but
+uses too much real estate on a narrow phone, and requires the same
+bandwidth overhead when scaled down to fit a smaller screen.
 
 ## Art direction
 
@@ -23,7 +23,7 @@ bandwidth overhead when scaled down to fit on a smaller screen.
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
 Other times the image may need to be changed more drastically: changing the
-proportions, cropping and even replacing the entire image.  In this case,
+proportions, cropping, and even replacing the entire image.  In this case,
 changing the image is usually referred to as art direction.  See
 [responsiveimages.org/demos/](https://responsiveimages.org/demos/) for more
 examples.
@@ -36,7 +36,7 @@ examples.
   </figure>
 </div>
 
-Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
+Learn how to work with images on the modern web&mdash;so that your images look great and load quickly on any device&mdash;and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
 
 [View Course](https://udacity.com/ud882){: .external }
 
@@ -64,8 +64,7 @@ Learn how to work with images on the modern web, so that your images look great 
   }
 </style>
 
-The `img` element is powerful – it downloads, decodes and renders content –
-and modern browsers support a range of image  formats.  Including images that
+The `img` element is powerful&mdash;it downloads, decodes, and renders content&mdash;and modern browsers support a range of image  formats.  Including images that
 work across devices is no different than for desktop, and only requires a few
 minor tweaks to create a good experience.
 
@@ -75,17 +74,17 @@ minor tweaks to create a good experience.
 - Use relative sizes for images to prevent them from accidentally overflowing the container.
 - Use the `picture` element when you want to specify different images depending on device characteristics (a.k.a. art direction).
 - Use `srcset` and the `x` descriptor in the  `img` element to give hints to the browser about the best  image to use when choosing from different densities.
-- Consider using inline images to reduce file requests if your page only has one or two images and these are not used elsewhere on your site.
+- If your page only has one or two images and these are not used elsewhere on your site, consider using inline images to reduce file requests.
 
 
 ### Use relative sizes for images
 
 Remember to use relative units when specifying widths for images to prevent them
-from accidentally overflowing the viewport.  For example, `width: 50%;` will
-cause the image width to be 50% of the containing element (not the viewport or
-actual pixel size).
+from accidentally overflowing the viewport.  For example, `width: 50%;` 
+causes the image width to be 50% of the containing element (not 50% of the viewport or
+50% of actual pixel size).
 
-Because CSS allows content to overflow its container, it may be necessary use
+Because CSS allows content to overflow its container, you may need to use
 max-width: 100% to prevent images and other content from overflowing.  For
 example:
 
@@ -96,11 +95,11 @@ example:
     
 
 Be sure to provide meaningful descriptions via the `alt` attribute on `img`
-elements; these help make your site more accessible by providing context to
+elements; these help make your site more accessible by giving context to
 screen readers and other assistive technologies.
 
 
-### Enhance `img`'s with `srcset` for high DPI devices
+### Enhance `img`s with `srcset` for high DPI devices
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Pzc5Dly_jEM"
@@ -132,7 +131,7 @@ image/conditions is parsed prior to making any requests, and only the most
 appropriate image is downloaded and displayed.
 
 While the conditions can include everything from pixel density to width and
-height, only pixel density is well supported today.  To balance current
+height, only pixel density is well-supported today.  To balance current
 behavior with future features, stick with simply providing the 2x image in
 the attribute.
 
@@ -141,8 +140,8 @@ the attribute.
 <img class="attempt-right" src="img/art-direction.png" alt="Art direction example"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Changing images based on device characteristics, also known as art
-direction, can be accomplished using the `picture` element.  The
+To change images based on device characteristics, also known as art
+direction, use the `picture` element.  The
 `picture` element defines a declarative solution for
 providing multiple versions of an image based on different
 characteristics, like device size, device resolution, orientation,
@@ -150,12 +149,7 @@ and more.
 
 <div style="clear:both;"></div>
 
-Dogfood: The `picture` element is beginning to land in browsers. Although it's
-not available in every browser yet, we recommend its use because of the
-strong backward compatibility and potential use of the 
-[Picturefill polyfill](http://picturefill.responsiveimages.org/). See the 
-[ResponsiveImages.org](http://responsiveimages.org/#implementation) site for
-further details.
+Dogfood: The `picture` element is beginning to land in browsers. Although it's not available in every browser yet, we recommend its use because of the strong backward compatibility and potential use of the [Picturefill polyfill](http://picturefill.responsiveimages.org/). See the [ResponsiveImages.org](http://responsiveimages.org/#implementation) site forfurther details.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -163,7 +157,7 @@ further details.
   </iframe>
 </div>
 
-The <code>picture</code> element should be used when an image source
+Use the <code>picture</code> element when an image source
 exists in multiple densities, or when a responsive design dictates a
 somewhat different image on some types of screens.  Similar to the
 <code>video</code> element, multiple <code>source</code> elements can
@@ -176,12 +170,12 @@ depending on media queries or image format.
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/media.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-In the above example, if the browser width is at least 800px, then either
-`head.jpg` or `head-2x.jpg` will be used, depending on the device resolution.
+In the above example, if the browser width is at least 800px then either
+`head.jpg` or `head-2x.jpg` is used, depending on the device resolution.
 If the browser is between 450px and 800px, then either `head-small.jpg` or
-`head-small-2x.jpg` will be used, again, depending on the device resolution.
-For screen widths less than 450px and backwards compatibility where the
-`picture` element isn’t supported, the browser will render the `img` element
+`head-small-2x.jpg` is used, again, depending on the device resolution.
+For screen widths less than 450px and backward compatibility where the
+`picture` element isn’t supported, the browser renders the `img` element
 instead, and should always be included.
 
 #### Relative sized images
@@ -191,8 +185,8 @@ a density descriptor for the image sources.  This is especially true for
 images that span a proportional width of the browser and are fluid, depending
 on the size of the browser.
 
-Instead of supplying fixed image sizes and densities, the size of each
-supplied image can be specified by adding a width descriptor along with the
+Instead of supplying fixed image sizes and densities, you can specify the size of each
+supplied image by adding a width descriptor along with the
 size of the image element, allowing the browser to automatically calculate
 the effective pixel density and choose the best image to download.
 
@@ -200,10 +194,10 @@ the effective pixel density and choose the best image to download.
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/sizes.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-The above example renders an image that is half of the viewport width
+The above example renders an image that is half the viewport width
 (`sizes="50vw"`), and depending on the width of the browser and its device
-pixel ratio, allowing the browser to choose the correct image regardless of
-how large the browser window is.  For example, the table below shows which
+pixel ratio, allows the browser to choose the correct image regardless of
+how large the browser window is. For example, the table below shows which
 image the browser would choose:
 
 <table class="">
@@ -258,7 +252,7 @@ image the browser would choose:
 
 #### Account for breakpoints in responsive images
 
-In many cases, the size or image may change depending on the site’s layout
+In many cases, the image size may change depending on the site’s layout
 breakpoints.  For example, on a small screen, you might want the image to
 span the full width of the viewport, while on larger screens, it should only
 take a small proportion.
@@ -267,11 +261,11 @@ take a small proportion.
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/breakpoints.html" region_tag="picture" adjust_indentation="auto" %}
 </pre>
 
-The `sizes` attribute in the above example uses several media queries to
+The `sizes` attribute, in the above example, uses several media queries to
 specify the size of the image. When the browser width is greater than
-600px, the image will be 25% of the viewport width, when it is between 500px
-and 600px, the image will be 50% of the viewport width, and below 500px, it
-will be full width.
+600px, the image is 25% of the viewport width; when it is between 500px
+and 600px, the image is 50% of the viewport width; and below 500px, it
+is full width.
 
 
 ### Make product images expandable
@@ -285,7 +279,7 @@ will be full width.
 
 Customers want to see what they're buying.  On retail sites, users expect to be
 able to view high resolution closeups of products to get a better look at
-details, and [study participants](/web/fundamentals/principles/research-study.html) got frustrated if they weren't able to.
+details, and [study participants](/web/fundamentals/getting-started/principles/#make-product-images-expandable) got frustrated if they weren't able to.
 
 A good example of tappable, expandable images is provided by the J. Crew site.
 A disappearing overlay indicates that an image is tappable, providing a zoomed
@@ -310,10 +304,10 @@ Caution: Use caution with the compressive technique because of the increased mem
 #### JavaScript image replacement
 
 JavaScript image replacement checks the capabilities of the device and "does the
-right thing". You can determine device pixel ratio via
+right thing." You can determine device pixel ratio via
 `window.devicePixelRatio`, get screen width and height, and even potentially do
 some network connection sniffing via `navigator.connection` or issuing a fake
-request. Once you've collected all of this information, you can decide which
+request. When you've collected all of this information, you can decide which
 image to load.
 
 One big drawback to this approach is that using JavaScript means that you will
@@ -325,22 +319,22 @@ images, resulting in increased page weight.
 
 #### Inlining images: raster and vector
 
-There are two fundamentally different ways to create and store images – and this affects how you deploy images responsively.
+There are two fundamentally different ways to create and store images&mdash;and this affects how you deploy images responsively.
 
-**Raster images** such as photographs and other images represented as a grid of individual dots of color. Raster images might come from a camera or scanner, or be created with the HTML canvas element. Formats like PNG, JPEG and WebP are used to store raster images.
+**Raster images**&mdash;such as photographs and other images&mdash;are represented as a grid of individual dots of color. Raster images might come from a camera or scanner, or be created with the HTML canvas element. Formats like PNG, JPEG, and WebP are used to store raster images.
 
-**Vector images** such as logos and line art are defined as a set of curves, lines, shapes, fill colors and gradients. Vector images can be created with programs like Adobe Illustrator or Inkscape, or handwritten in code using a vector format such as SVG.
+**Vector images**&mdash;such as logos and line art&mdash;are defined as a set of curves, lines, shapes, fill colors and gradients. Vector images can be created with programs like Adobe Illustrator or Inkscape, or handwritten in code using a vector format such as SVG.
 
 ##### SVG
 
-SVG makes it possible to include responsive vector graphics in a web page. The advantage of vector file formats over raster file formats is that the browser can render a vector image at any size. Vector formats describe the geometry of the image – how it's constructed from lines, curves and colors and so on. Raster formats, on the other hand, only have information about individual dots of color, so the browser has to guess how to fill in the blanks when scaling.
+SVG makes it possible to include responsive vector graphics in a web page. The advantage of vector file formats over raster file formats is that the browser can render a vector image at any size. Vector formats describe the geometry of the image&mdash;how it's constructed from lines, curves, and colors and so on. Raster formats, on the other hand, only have information about individual dots of color, so the browser has to guess how to fill in the blanks when scaling.
 
 Below are two versions of the same image: a PNG image on the left and an SVG on the right. The SVG looks great at any size, whereas the PNG next to it starts to look blurry at larger display sizes.
 
 <img class="side-by-side" src="img/html5.png" alt="HTML5 logo, PNG format" />
 <img class="side-by-side" src="img/html5.svg" alt="HTML5 logo, SVG format" />
 
-If you want to reduce the number of file requests your page makes, you can code images inline using SVG or Data URI format. If you view the source of this page, you'll see that both logos below are declared inline: a Data URI and and SVG.
+If you want to reduce the number of file requests your page makes, you can code images inline using SVG or Data URI format. If you view the source of this page, you'll see that both logos below are declared inline: a Data URI and an SVG.
 
 <img class="side-by-side" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiB
       BZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW
@@ -425,14 +419,14 @@ Drag 'n' drop tool such as [jpillora.com/base64-encoder](https://jpillora.com/ba
 
 ##### Inlining in CSS
 
-Data URIs and SVGs can also be inlined in CSS — and this is supported on both mobile and desktop. Here are two identical-looking images implemented as background images in CSS. One Data URI, one SVG:
+Data URIs and SVGs can also be inlined in CSS&mdash;and this is supported on both mobile and desktop. Here are two identical-looking images implemented as background images in CSS; one Data URI, one SVG:
 
 <span class="side-by-side" id="data_uri"></span>
 <span class="side-by-side" id="svg"></span>
 
 ##### Inlining pros & cons
 
-Inline code for images can be verbose — especially Data URIs – so why would you want to use it? To reduce HTTP requests! SVGs and Data URIs can enable an entire web page, including images, CSS and JavaScript, to be retrieved with one single request.
+Inline code for images can be verbose&mdash;especially Data URIs&mdash;so why would you want to use it? To reduce HTTP requests! SVGs and Data URIs can enable an entire web page, including images, CSS and JavaScript, to be retrieved with one single request.
 
 On the downside:
 
@@ -444,21 +438,21 @@ On the downside:
 * They're not supported in IE 6 and 7, incomplete support in IE8.
 * With HTTP/2, reducing the number of asset requests will become less of a priority.
 
-As with all things responsive, you'll need to test what works best. Use developer tools to measure download file size, the number of requests and the total latency. Data URIs can sometimes be useful for raster images – for example, on a homepage that only has one or two photos which aren't used elsewhere. If you need to inline vector images, SVG is a much better option.
+As with all things responsive, you need to test what works best. Use developer tools to measure download file size, the number of requests, and the total latency. Data URIs can sometimes be useful for raster images&mdash;for example, on a homepage that only has one or two photos that aren't used elsewhere. If you need to inline vector images, SVG is a much better option.
 
 
 
 ## Images in CSS
 
 The CSS `background` property is a powerful tool for adding complex images
-to elements, making it easy to add multiple images, cause them to repeat,
+to elements, making it easy to add multiple images, and causing them to repeat,
 and more.  When combined with media queries, the background property becomes
 even more powerful, enabling conditional image loading based on screen
-resolution, viewport size and more.
+resolution, viewport size, and more.
 
 
 ### TL;DR {: .hide-from-toc }
-- Use the best image for the characteristics of the display, consider screen size, device resolution and page layout.
+- Use the best image for the characteristics of the display, consider screen size, device resolution, and page layout.
 - Change the `background-image` property in CSS for high DPI displays using media queries with `min-resolution` and `-webkit-min-device-pixel-ratio`.
 - Use srcset to provide high resolution images in addition to the 1x image in markup.
 - Consider the performance costs when using JavaScript image replacement techniques or when serving highly compressed high resolution images to lower resolution devices.
@@ -466,12 +460,12 @@ resolution, viewport size and more.
 
 ### Use media queries for conditional image loading or art direction
 
-Media queries not only affect the page layout, but can also be used to
+Media queries not only affect the page layout; you can also use them to
 conditionally load images or to provide art direction depending on the viewport
 width.
 
-For example in the sample below, on smaller screens, only `small.png` is
-downloaded and applied to the content `div`, while on larger screens,
+For example, in the sample below, on smaller screens only `small.png` is
+downloaded and applied to the content `div`, while on larger screens
 `background-image: url(body.png)` is applied to the body and `background-image:
 url(large.png)` is applied to the content `div`.
 
@@ -494,28 +488,28 @@ or a 1x image on a 2x device when on a limited bandwidth network.
     );
     
 
-In addition to loading the correct image, the browser will also scale it
+In addition to loading the correct image, the browser also scales it
 accordingly. In other words, the browser assumes that 2x images are twice as
-large as 1x images, and so will scale the 2x image down by a factor of 2, so
+large as 1x images, and so scales the 2x image down by a factor of 2, so
 that the image appears to be the same size on the page.
 
 Support for `image-set()` is still new and is only supported in Chrome and
-Safari with the `-webkit` vendor prefix.  Care must also be taken to include a
-fallback image for when `image-set()` is not supported, for example:
+Safari with the `-webkit` vendor prefix.  Take care to include a
+fallback image for when `image-set()` is not supported; for example:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-set.html" region_tag="imageset" adjust_indentation="auto" %}
 </pre>
 
-The above will load the appropriate asset in browsers that support image-set,
-and fall back to the 1x asset otherwise. The obvious caveat is that while
-`image-set()` browser support is low, most browsers will get the 1x asset.
+The above loads the appropriate asset in browsers that support image-set; otherwise it
+falls back to the 1x asset. The obvious caveat is that while
+`image-set()` browser support is low, most browsers get the 1x asset.
 
 ### Use media queries to provide high res images or art direction
 
 Media queries can create rules based on the 
 [device pixel ratio](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg), 
-making it possible to specify different images for 2x vs 1x displays.
+making it possible to specify different images for 2x versus 1x displays.
 
 
     @media (min-resolution: 2dppx),
@@ -525,12 +519,12 @@ making it possible to specify different images for 2x vs 1x displays.
     }
     
 
-Chrome, Firefox and Opera all support the standard `(min-resolution: 2dppx)`,
-while Safari and Android Browser both require the older vendor prefixed syntax
+Chrome, Firefox, and Opera all support the standard `(min-resolution: 2dppx)`,
+while the Safari and Android browsers both require the older vendor prefixed syntax
 without the `dppx` unit.  Remember, these styles are only loaded if the device
 matches the media query, and you must specify styles for the base case.  This
-also provides the benefit of ensuring something will be rendered if the browser
-doesn't support resolution specific media queries.
+also provides the benefit of ensuring something is rendered if the browser
+doesn't support resolution-specific media queries.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/media-query-dppx.html" region_tag="mqdppx" adjust_indentation="auto" %}
@@ -538,7 +532,7 @@ doesn't support resolution specific media queries.
 
 You can also use the min-width syntax to display alternative images depending on
 the viewport size.  This technique has the advantage that the image is not
-downloaded if media query doesn't match.  For example, `bg.png` is only
+downloaded if the media query doesn't match.  For example, `bg.png` is only
 downloaded and applied to the `body` if the browser width is 500px or greater:
 
 
@@ -563,7 +557,7 @@ cases, unicode characters.
 ### Replace simple icons with unicode
 
 Many fonts include support for the myriad of unicode glyphs, which can be used
-instead of images. Unlike images, unicode fonts scale well, and look good no
+instead of images. Unlike images, unicode fonts scale well and look good no
 matter how small or large they appear on screen.
 
 Beyond the normal character set, unicode may include symbols for number forms
@@ -583,15 +577,15 @@ You're a super &#9733;
 ### Replace complex icons with SVG
 
 For more complex icon requirements, SVG icons are generally lightweight, 
-easy to use and can be styled with CSS. SVG have a number of advantages over
+easy to use, and can be styled with CSS. SVG have a number of advantages over
 raster images:
 
 * They're vector graphics that can be infinitely scaled.
-* CSS effects such as color, shadowing, transparency and animations are 
+* CSS effects such as color, shadowing, transparency, and animations are 
   straightforward.
 * SVG images can be inlined right in the document.
 * They are semantic.
-* Provide better accessibility with the appropriate attributes.
+* They provide better accessibility with the appropriate attributes.
 
 
 
@@ -611,16 +605,16 @@ raster images:
 </figure>
 
 Icon fonts are popular, and can be easy to use, but have some drawbacks 
-compared to SVG icons.
+compared to SVG icons:
 
 * They're vector graphics that can be infinitely scaled, but may be 
   anti-aliased resulting in icons that aren’t as sharp as expected.
 * Limited styling with CSS.
 * Pixel perfect positioning can be difficult, depending on line-height, 
   letter spacing, etc.
-* Are not semantic, and can be difficult to use with screen readers or 
+* They aren't semantic, and can be difficult to use with screen readers or 
   other assistive technology.
-* Unless properly scoped, can result in a large file size for only using a 
+* Unless properly scoped, they can result in a large file size for only using a 
   small subset of the icons available. 
 
 <div style="clear:both;"></div>
@@ -631,7 +625,7 @@ compared to SVG icons.
 
 There are hundreds of free and paid icon fonts available including [Font
 Awesome](https://fortawesome.github.io/Font-Awesome/),
-[Pictos](http://pictos.cc/) and [Glyphicons](https://glyphicons.com/).
+[Pictos](http://pictos.cc/), and [Glyphicons](https://glyphicons.com/).
 
 Be sure to balance the weight of the additional HTTP request and file size with
 the need for the icons. For example, if you only need a handful of icons, it
@@ -649,10 +643,10 @@ browser can download and display all the assets.
 
 
 ### TL;DR {: .hide-from-toc }
-- Don't just randomly choose an image format, understand the different formats available, and use the format best suited.
+- Don't just randomly choose an image format&mdash;understand the different formats available and use the format best suited.
 - Include image optimization and compression tools into your workflow to reduce file sizes.
 - Reduce the number of http requests by placing frequently used images into image sprites.
-- Consider loading images only after they’ve scrolled into view to improve the initial page load time and reduce the initial page weight.
+- To improve the initial page load time and reduce the initial page weight, consider loading images only after they’ve scrolled into view.
 
 
 ### Choose the right format
@@ -662,44 +656,44 @@ and [raster images](https://en.wikipedia.org/wiki/Raster_graphics).
 For raster images, you also need to choose the right compression format,
 for example: `GIF`, `PNG`, `JPG`.
 
-**Raster images**, like photographs and other images which are represented as a
+**Raster images**, like photographs and other images, are represented as a
 grid of individual dots or pixels. Raster images typically come from a camera or
 scanner, or can be created in the browser with the `canvas` element.  As the
-image size gets larger, the file size grows as well.  When scaled larger than
-their original size, raster images get blurry as the browser needs to guess how
+image size gets larger, so does the file size.  When scaled larger than
+their original size, raster images become blurry because the browser needs to guess how
 to fill in the missing pixels.
 
-**Vector images**, such as logos and line art are be defined by a set of curves,
-lines, shapes and fill colors. Vector images are created with programs like
+**Vector images**, such as logos and line art, are defined by a set of curves,
+lines, shapes, and fill colors. Vector images are created with programs like
 Adobe Illustrator or Inkscape and saved to a vector format like
 [`SVG`](https://css-tricks.com/using-svg/).  Because vector images are built on
-simple primitives, they can be scaled without any loss in quality without a
+simple primitives, they can be scaled without any loss in quality or
 change in file size.
 
-When choosing the right format, it is important to consider both the origin of
+When choosing the appropriate format, it is important to consider both the origin of
 the image (raster or vector), and the content (colors, animation, text, etc).
-No one format will fit all image types and each has its own strengths and
+No one format fits all image types, and each has its own strengths and
 weaknesses.
 
-Start with these guidelines when choosing the right format:
+Start with these guidelines when choosing the appropriate format:
 
 * Use `JPG` for photographic images.
 * Use `SVG` for vector art and solid color graphics such as logos and line art.
-  If vector art is unavailable, try WebP or PNG.
+  If vector art is unavailable, try `WebP` or `PNG`.
 * Use `PNG` rather than `GIF` as it allows for more colors and offers better
   compression ratios.
-* For longer animations, consider using `<video>` which provide better image
+* For longer animations consider using `<video>`, which provides better image
   quality and gives the user control over playback.
 
 ### Reduce the file size
 
-Image file size can be considerably reduced by 'post-processing' them after
-saving. There are a number of tools for image compression – lossy and lossless,
+You can reduce image file size considerably by "post-processing" the images after
+saving. There are a number of tools for image compression&mdash;lossy and lossless,
 online, GUI, command line.  Where possible, it's best to try automating image
 optimization so that it's a first-class citizen in your workflow.
 
 Several tools are available that perform further, lossless compression on `JPG`
-and `PNG` files, with no effect on image quality. For `JPG`, try
+and `PNG` files with no effect on image quality. For `JPG`, try
 [jpegtran](http://jpegclub.org/) or
 [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (available on Linux only;
 run with the --strip-all option). For `PNG`, try
@@ -710,8 +704,8 @@ run with the --strip-all option). For `PNG`, try
 
 <img src="img/sprite-sheet.png" class="attempt-right" alt="Image sprite sheet used in example">
 
-CSS spriting is a technique whereby a number of images are combined in a single
-'sprite sheet' image. Individual images can then be used by specifying the
+CSS spriting is a technique whereby a number of images are combined into a single
+"sprite sheet" image. You can then use individual images by specifying the
 background image for an element (the sprite sheet) plus an offset to display the
 correct part.
 
@@ -727,41 +721,40 @@ multiple images, while still enabling caching.
 ### Consider lazy loading
 
 Lazy loading can significantly speed up loading on long pages that include many
-images below the fold by loading them either as needed or once the primary
+images below the fold by loading them either as needed or when the primary
 content has finished loading and rendering.  In addition to performance
 improvements, using lazy loading can create infinite scrolling experiences.
 
-Be careful when creating infinite scrolling pages, because content is loaded as
+Be careful when creating infinite scrolling pages&mdash;because content is loaded as
 it becomes visible, search engines may never see that content.  In addition,
-users who are looking for information they expect to see in the footer will
+users who are looking for information they expect to see in the footer, 
 never see the footer because new content is always loaded.
 
 
 
 ## Avoid images completely
 
-Sometimes, the best image isn't actually an image at all. Whenever possible,
+Sometimes the best image isn't actually an image at all. Whenever possible,
 use the native capabilities of the browser to provide the same or similar
 functionality.  Browsers generate visuals that would have previously
 required images.   This means that browsers no longer need to download
-separate image files and prevents awkwardly scaled images.  Icons can be
-rendered using unicode or special icon fonts.
+separate image files thus preventing awkwardly scaled images.  You can use unicode or special icon fonts to render icons.
 
-### Place text in markup, instead of embedded in images
+### Place text in markup instead of embedded in images
 
-Wherever possible, text should be text, and not embedded into images, for
-example using images for headlines, or placing contact information like phone
-numbers or addresses directly into images.  This prevents people from being able
-to copy and paste the information, makes it inaccessible for screen readers, and
+Wherever possible, text should be text and not embedded into images. For
+example, using images for headlines or placing contact information&mdash;like phone
+numbers or addresses&mdash;directly into images prevents users from 
+copying and pasting the information; it makes the information inaccessible for screen readers, and it
 isn't responsive.  Instead, place the text in your markup and if necessary use
 webfonts to achieve the style you need.
 
 ### Use CSS to replace images
 
-Modern browsers can use CSS features to create styles that would previously
-required images.  For examples, complex gradients can be created using the
-`background` property, shadows can be created using `box-shadow` and rounded 
-corners can be added with the `border-radius property.
+Modern browsers can use CSS features to create styles that would previously have
+required images.  For example: complex gradients can be created using the
+`background` property, shadows can be created using `box-shadow`, and rounded 
+corners can be added with the `border-radius` property.
 
 <style>
   p#noImage {
@@ -801,4 +794,4 @@ ipsum lectus, hendrerit malesuada sapien eget, venenatis tempus purus.
 
 Keep in mind that using these techniques does require rendering cycles, which
 can be significant on mobile.  If over-used, you'll lose any benefit you may
-have gained and may hinder performance.
+have gained and it may hinder performance.
