@@ -11,19 +11,19 @@ description: Most browsers can get access to the user's microphone.
 
 Many browsers now have the ability to access video and audio input from the user. However,
 depending on the browser it might be a full dynamic and inline experience, or it could 
-be delegated out to another app on the user's device.
+be delegated to another app on the user's device.
 
 ## Start simple and progressively
 
-The easiest thing that we can do is simply ask the user for a pre-recorded file. This can be 
-done by creating a simple file input element and adding an `accept` filter that indicates
+The easiest thing to do is simply ask the user for a pre-recorded file. Do this 
+by creating a simple file input element and adding an `accept` filter that indicates
 we can only accept audio files and ideally we will get them directly from the microphone.
 
 ```
 <input type="file" accept="audio/*;capture=microphone">
 ```
 
-This method will work on all platforms. On desktop it will prompt the user to upload a file from
+This method works on all platforms. On desktop it will prompt the user to upload a file from
 the file system (ignoring `capture=microphone`). In Safari on iOS it will open up the microphone 
 app, allowing you to record audio and then send it back to the web page; on Android it will 
 give the user of which app to use record the audio in before sending it back to the web page.
