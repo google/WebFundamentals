@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A Web API has been added to Chrome that makes it possible for websites to discover and communicate with devices over the Bluetooth 4 wireless standard using GATT.
 
-{# wf_updated_on: 2016-07-26 #}
+{# wf_updated_on: 2016-09-26 #}
 {# wf_published_on: 2015-07-21 #}
 {# wf_tags: news,iot,webbluetooth,physicalweb,origintrials #}
 {# wf_featured_image: /web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/featured.png #}
@@ -74,6 +74,11 @@ Trials.
 
 ## Security Requirements
 
+To understand the security tradeoffs, I recommend the [Web Bluetooth Security
+Model](https://medium.com/@jyasskin/the-web-bluetooth-security-model-666b4e7eed2)
+post from Jeffrey Yasskin, a software engineer on the Chrome team, working on
+the Web Bluetooth API specification.
+
 ### HTTPS Only
 
 Because this experimental API is a powerful new feature added to the Web,
@@ -81,9 +86,7 @@ Google Chrome aims to make it available only to [secure
 contexts](https://w3c.github.io/webappsec-secure-contexts/#intro). This
 means you'll need to build with TLS in mind.
 
-> We care deeply about security, so you will notice that new Web capabilities
-require HTTPS. The Web Bluetooth API is no different, and is yet another good
-reason to get HTTPS up and running on your site.
+Note: We care deeply about security, so you will notice that new Web capabilities require HTTPS. The Web Bluetooth API is no different, and is yet another good reason to get HTTPS up and running on your site.
 
 During development you'll be able to interact with Web Bluetooth through
 http://localhost by using tools like the [Chrome Dev
@@ -184,8 +187,6 @@ remote GATT Server which holds the service and characteristic definitions.
     .then(device => {
       // Human-readable name of the device.
       console.log(device.name);
-      // Filtered UUIDs of GATT services the website origin has access to.
-      console.log(device.uuids);
     
       // Attempts to connect to remote GATT Server.
       return device.gatt.connect();
