@@ -66,7 +66,7 @@ browser.
 ### Acquire access to the microphone
 
 We can directly access the Microphone by using an API in the WebRTC specification
-called `getUserMedia`.  getUserMedia will prompt the user for access tp their connected
+called `getUserMedia()`.  `getUserMedia()` will prompt the user for access to their connected
 microphones and cameras.
 
 If successful the API will return a `Stream` that will contain the data from either
@@ -74,7 +74,7 @@ the camera or the microphone, and we can then either attach it to an `<audio>` e
 attach it to a `WebAudio` context, or save it using the `MediaRecorder` API.
 
 To get data from the microphone we just set `audio: true` in the constraints object that
-is passed to the getUserMedia API
+is passed to the `getUserMedia()` API.
 
 <pre class="prettyprint">
 &lt;audio id="player" controls>&lt;/audio>
@@ -94,11 +94,11 @@ is passed to the getUserMedia API
 &lt;/script>
 </pre>
 
-By itself, this isn't that useful. All we can do is take the audio data and play it back at us.
+By itself, this isn't that useful. All we can do is take the audio data and play it back.
 
 ### Access the raw data from the microphone
 
-To access the raw data from the microphone we have to take the stream created by `getUserMedia` and
+To access the raw data from the microphone we have to take the stream created by `getUserMedia()` and
 then use the Web Audio API to process the data. The WebAudio API is a simple API that takes input sources
 and connects those sources to nodes which can process the audio data (adjust Gain etc) and ultimately to a speaker
 so that the user can hear it.
