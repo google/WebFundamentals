@@ -2,24 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2016-08-22 #}
+{# wf_updated_on: 2016-09-26 #}
 {# wf_published_on: 2016-08-01 #}
 
 # Shadow DOM v1: Self-Contained Web Components {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
-
-{% comment %}
-<script>
-function supportsShadowDOM() {
-  return !!HTMLElement.prototype.attachShadow;
-}
-</script>
-{% endcomment %}
-
-
-Note: **Already familiar with Shadow DOM?** This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
-
 
 ### TL;DR {: #tldr .hide-from-toc}
 
@@ -27,8 +15,9 @@ Shadow DOM removes the brittleness of building web apps. The brittleness comes f
 
 **Shadow DOM fixes CSS and DOM**. It introduces **scoped styles** to the web platform. Without tools or naming conventions, you can **bundle CSS with markup**, hide implementation details, and **author self-contained components** in vanilla JavaScript.
 
-
 ## Introduction {: #intro}
+
+Note: **Already familiar with Shadow DOM?** This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
 
 Shadow DOM is one of the four Web Component standards: [HTML Templates](http://www.html5rocks.com/en/tutorials/webcomponents/template/), [Shadow DOM][sd_spec_whatwg], [Custom elements](/web/fundamentals/getting-started/primers/customelements) and [HTML Imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/).
 
@@ -80,7 +69,7 @@ produces the following HTML markup:
     </body>
     
 
-All that is well and good. Then what the heck is _shadow DOM_?
+All that is well and good. Then [what the heck is _shadow DOM_](https://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/)?
 
 #### DOM...in the shadows {: #sddom}
 
@@ -821,9 +810,8 @@ Inheritable styles (`background`, `color`, `font`, `line-height`, etc.) continue
       <slot></slot>
     `;
     </script>
-    
 
-{% comment %}
+{% framebox height="195px" %}
 <div class="demoarea">
   <style>
     #initialdemo {
@@ -843,6 +831,10 @@ Inheritable styles (`background`, `color`, `font`, `line-height`, etc.) continue
 </div>
 
 <script>
+function supportsShadowDOM() {
+  return !!HTMLElement.prototype.attachShadow;
+}
+
 if (supportsShadowDOM()) {
   const el = document.querySelector('#initialdemo my-element');
   el.attachShadow({mode: 'open'}).innerHTML = `
@@ -857,9 +849,13 @@ if (supportsShadowDOM()) {
        initial value using <code>all: initial</code>.</p>
     <slot></slot>
   `;
+} else {
+  if (self.frameElement) {
+    self.frameElement.style.display = 'none';
+  }
 }
 </script>
-{% endcomment %}
+{% endframebox %}
 
 ### Finding all the custom elements used by a page {: #findall}
 
@@ -997,18 +993,6 @@ Nope! You don't have to create web components that use shadow DOM. However, auth
 **What's the difference between open and closed shadow roots?**
 
 See [Closed shadow roots](#closed).
-
-
-{% comment %}
-<script>
-if (!supportsShadowDOM()) {
-  const demos = document.querySelectorAll('.demoarea');
-  Array.from(demos).forEach(function(demo) {
-    demo.hidden = true;
-  });
-}
-</script>
-{% endcomment %}
 
 [ce_spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [ce_article]: (/web/fundamentals/getting-started/primers/customelements)
