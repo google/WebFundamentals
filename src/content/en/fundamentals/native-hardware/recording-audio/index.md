@@ -28,8 +28,8 @@ the file system (ignoring `capture=microphone`). In Safari on iOS it will open u
 app, allowing you to record audio and then send it back to the web page; on Android it will 
 give the user of which app to use record the audio in before sending it back to the web page.
 
-Once the user has finished recording and they are back in the web site. You need to somehow get
-ahold of the file data. You can get quick access to this data by attaching an `onchange` event 
+Once the user has finished recording and they are back in the web site, you need to somehow get
+ahold of the file data. You can get quick access by attaching an `onchange` event 
 to the input element and then reading the `files` property of the event object.
 
 <pre class="prettyprint">
