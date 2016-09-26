@@ -65,17 +65,4 @@ El rendimiento es el arte de evitar trabajo y de realizar el trabajo lo más efi
 
 Analicemos las diferentes partes del proceso. Hablaremos sobre los problemas comunes, y cómo diagnosticarlos y solucionarlos.
 
-
-## Optimización de la representación del navegador
-<div class="attempt-right">
-  <figure>
-    <img src="images/rp-udacity.jpg">
-  </figure>
-</div>
-
-¿Le interesa profundizar sus conocimientos sobre el rendimiento de la representación? Consulte el curso complementario y conozca cómo el navegador convierte HTML, CSS y JavaScript en píxeles en la pantalla, cómo utilizar DevTools para medir el rendimiento y cómo optimizar la representación de sus páginas.
-
-[View Course](https://udacity.com/ud860){: .external }
-
-
-
+{% include "web/_shared/udacity/ud860.html" %}

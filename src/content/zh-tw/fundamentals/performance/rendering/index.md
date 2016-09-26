@@ -65,16 +65,7 @@ Note: 如果您想要瞭解以上三個版本中的哪個版本在變更任何�
 讓我們深入探究管道的不同部分。 我們來看看常見的問題，以及如何診斷和解決這些問題。
 
 
-## 瀏覽器轉譯最佳化
-<div class="attempt-right">
-  <figure>
-    <img src="images/rp-udacity.jpg">
-  </figure>
-</div>
-
-有興趣深入探究轉譯效能嗎？查閱手冊課程並深入了解瀏覽器如何轉換 HTML、CSS 和 JavaScript 為螢幕上的像素、如何使用 DevTools 來測量效能，以及如何最佳化您網頁的轉譯。
-
-[View Course](https://udacity.com/ud860){: .external }
+{% include "web/_shared/udacity/ud860.html" %}
 
 
 

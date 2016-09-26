@@ -28,19 +28,7 @@ changing the image is usually referred to as art direction.  See
 [responsiveimages.org/demos/](https://responsiveimages.org/demos/) for more
 examples.
 
-## Learn with Udacity: Responsive Images
-
-<div class="attempt-right">
-  <figure>
-    <img src="img/udacity-ri.jpg">
-  </figure>
-</div>
-
-Learn how to work with images on the modern web&mdash;so that your images look great and load quickly on any device&mdash;and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
-
-[View Course](https://udacity.com/ud882){: .external }
-
-<div style="clear:both;"></div>
+{% include "web/_shared/udacity/ud882.html" %}
 
 ## Images in markup
 

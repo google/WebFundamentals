@@ -71,16 +71,7 @@ Note: 如果你想对哪些属性会触发<a href="http://csstriggers.com">CSS T
 接下来，让我们深入到这个流水线中的每一步去看看。我们会以一些常见问题为例，阐述如何发现和分析这些问题，并尝试去解决它们。
 
 
-## 浏览器渲染优化
-<div class="attempt-right">
-  <figure>
-    <img src="images/rp-udacity.jpg">
-  </figure>
-</div>
-
-想深入了解渲染性能吗？快看看这堂课程吧！它能帮助你了解浏览器是如何把HTML/CSS/JavaScript代码转换成屏幕上你看到的一个个像素的、如何使用DevTools来测量页面性能、以及如何优化你的页面渲染速度。
-
-[View Course](https://udacity.com/ud860){: .external }
+{% include "web/_shared/udacity/ud860.html" %}
 
 
 
