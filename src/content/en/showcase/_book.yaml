@@ -23,6 +23,8 @@ upper_tabs:
         contents:
         - title: "2016"
           section:
+          - title: Housing.com increases conversions and lowers bounce rate with new PWA
+            path: /web/showcase/2016/housing
           - title: Measuring the Real-world Performance Impact of Service Workers
             path: /web/showcase/2016/service-worker-perf
           - title: The Washington Post
