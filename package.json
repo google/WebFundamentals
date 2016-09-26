@@ -33,5 +33,7 @@
     "require-dir": "^0.3.0",
     "run-sequence": "^1.2.2"
   },
-  "scripts": {}
+  "scripts": {
+    "postinstall": "gulp build"
+  }
 }
