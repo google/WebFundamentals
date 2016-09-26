@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: The WebUSB API makes USB safer and easier to use by bringing it to the Web.
 
-{# wf_updated_on: 2016-08-11 #}
+{# wf_updated_on: 2016-09-26 #}
 {# wf_published_on: 2016-03-30 #}
 {# wf_tags: news,webusb,iot,arduino,origintrials #}
 {# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero.jpg #}
@@ -87,6 +87,11 @@ Trials.
 
 ## Privacy & Security
 
+To understand what WebUSB is and isn't, I recommend the [WebUSB Security
+Model](https://medium.com/dev-channel/the-webusb-security-model-f48ee04de0ab)
+post from Reilly Grant, a software engineer on the Chrome team, working on
+the WebUSB API specification.
+
 ### Attacks against USB devices
 
 The WebUSB API does not even try to provide a way for a web page to connect to
@@ -113,9 +118,7 @@ Chrome aims to make it available only to [secure
 contexts](https://w3c.github.io/webappsec/specs/powerfulfeatures/#intro). This
 means you'll need to build with TLS in mind.
 
-> We care deeply about security, so you will notice that new Web capabilities
-require HTTPS. The WebUSB API is no different, and is yet another good reason
-to get HTTPS up and running on your site.
+Note: We care deeply about security, so you will notice that new Web capabilities require HTTPS. The WebUSB API is no different, and is yet another good reason to get HTTPS up and running on your site.
 
 During development you'll be able to interact with WebUSB through
 http://localhost by using tools like the [Chrome Dev
@@ -352,6 +355,11 @@ where `[yourdevicevendor]` is `2341` if your device is an Arduino for instance.
 `user` is a member of the `plugdev` group.  Then, just reconnect your device.
 
 ## What's next
+
+At the time of writing, Chrome implementation of WebUSB works already on Chrome
+OS, Android L, Linux, Mac OSX and Windows 7.
+
+Note: Microsoft OS 2.0 Descriptors used by the Arduino examples only work on Windows 8.1 and later. Without that Windows support still requires manual installation of an INF file.
 
 A second iteration of the WebUSB API will look at [Shared Worker](https://developer.mozilla.org/en-US/docs/Web/API/SharedWorker)
 and [Service Worker](https://jakearchibald.github.io/isserviceworkerready/resources.html)
