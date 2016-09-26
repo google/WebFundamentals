@@ -42,8 +42,8 @@ many consumers hesitated to use data or space to download the native app.
 
 ## Solution
 Relying on technological advancements and the improved capabilities of modern
-web browsers and web applications such as Service Workers, IndexedDB, Add to
-Home Screen, and Push Notifications, Housing.com set out to create a PWA that
+web browsers and web applications such as service workers, IndexedDB, add to
+home screen, and push notifications, Housing.com set out to create a PWA that
 was fast, efficient, and reliable. The result was a mobile web experience
 that is fast, uses less data, and re-engages users in multiple ways. With the
 new PWA, Housing.com saw conversion rates rise 38% and the bounce rate fall
