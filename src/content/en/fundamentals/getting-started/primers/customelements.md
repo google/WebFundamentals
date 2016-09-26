@@ -2,14 +2,12 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Custom elements allow web developers to define new HTML tags, extend existing ones, and create reusable web components.
 
-{# wf_updated_on: 2016-09-20 #}
+{# wf_updated_on: 2016-09-26 #}
 {# wf_published_on: 2016-06-28 #}
 
 # Custom Elements v1: Reusable Web Components {: .page-title }
 
 {% include "_shared/contributors/ericbidelman.html" %}
-
-Note: This article describes the new <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">Custom Elements v1 spec</a>. If you've been using custom elements, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4642138092470272">v0 version shipped in Chrome 33</a>. The concepts are the same, but the v1 spec has important API differences. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
 
 ### TL;DR {: #tldr .hide-from-toc }
 
@@ -21,9 +19,10 @@ vanilla JS/HTML/CSS. The result is less code, modular code, and more reuse in ou
 
 ## Introduction {: #intro}
 
+Note: This article describes the new <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">Custom Elements v1 spec</a>. If you've been using custom elements, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4642138092470272">v0 version shipped in Chrome 33</a>. The concepts are the same, but the v1 spec has important API differences. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
+
 The browser gives us an excellent tool for structuring web applications.
 It's called HTML.  You may have heard of it! It's declarative, portable, well supported, and easy to work with. Great as HTML may be, its vocabulary and extensibility are limited. The [HTML living standard](https://html.spec.whatwg.org/multipage/) lacks a way to automatically associate JS behavior with your markup... until now.
-
 
 Custom elements are the answer to modernizing HTML; filling in the missing pieces,
 and bundling structure with behavior. If HTML doesn't provide the solution to a problem,
@@ -525,7 +524,6 @@ Custom elements can manage their own content by using the DOM APIs inside elemen
 
 **Example** - create an element with some default HTML:
 
-
     customElements.define('x-foo-with-markup', class extends HTMLElement {
       connectedCallback() {
         this.innerHTML = "<b>I'm an x-foo-with-markup!</b>";
@@ -533,30 +531,44 @@ Custom elements can manage their own content by using the DOM APIs inside elemen
       ...
     });
     
-
 Declaring this tag will produce:
-
 
     <x-foo-with-markup>
      <b>I'm an x-foo-with-markup!</b>
     </x-foo-with-markup>
-    
 
-{% comment %}
-<!-- <div class="demoarea">
+{% framebox height="70px" %}
+<style>
+.demoarea {
+  padding: 8px;
+  border: 1px dashed #ccc;
+}
+.demoarea::before {
+  display: block;
+  content: 'DEMO';
+}
+</style>
+
+<div class="demoarea">
   <x-foo-with-markup></x-foo-with-markup>
 </div>
 
 <script>
-if (supportsCustomElements()) {
+const supportsCustomElementsV1 = 'customElements' in window;
+
+if (supportsCustomElementsV1) {
   customElements.define('x-foo-with-markup', class extends HTMLElement {
     connectedCallback() {
       this.innerHTML = "<b>I'm an x-foo-with-markup!</b>";
     }
   });
+} else {
+  if (self.frameElement) {
+    self.frameElement.style.display = 'none';
+  }
 }
-</script> -->
-{% endcomment %}
+</script>
+{% endframebox %}
 
 Note: Overwriting an element's children with new content is generally not a good idea because it's unexpected. Users would be surprised to have their markup thrown out. A better way to add element-defined content is to use shadow DOM, which we'll talk about next.
 
@@ -595,7 +607,6 @@ To use Shadow DOM in a custom element, call `this.attachShadow` inside your `con
 
 Example usage:
 
-
     <x-foo-shadowdom>
       <p><b>User's</b> custom text</p>
     </x-foo-shadowdom>
@@ -603,13 +614,22 @@ Example usage:
     <!-- renders as -->
     <x-foo-shadowdom>
       <b>I'm in shadow dom!</b>
-      <p><b>User's</b> custom text</p>
+      <slot></slot>
     </x-foo-shadowdom>
-    
-    
 
-{% comment %}
-<!--
+{% framebox height="130px" %}
+<style>
+.demoarea {
+  padding: 8px;
+  border: 1px dashed #ccc;
+}
+
+.demoarea::before {
+  content: 'DEMO';
+  display: block;
+}
+</style>
+
 <div class="demoarea">
   <x-foo-shadowdom>
     <p><b>User's</b> custom text</p>
@@ -617,7 +637,9 @@ Example usage:
 </div>
 
 <script>
-if (supportsCustomElements()) {
+const supportsCustomElementsV1 = 'customElements' in window;
+
+if (supportsCustomElementsV1) {
   customElements.define('x-foo-shadowdom', class extends HTMLElement {
     constructor() {
       super(); // always call super() first in the ctor.
@@ -628,16 +650,19 @@ if (supportsCustomElements()) {
       `;
     }
   });
+} else {
+  if (self.frameElement) {
+    self.frameElement.style.display = 'none';
+  }
 }
-</script> -->
-{% endcomment %}
+</script>
+{% endframebox %}
 
 ### Creating elements from a `<template>` {: #fromtemplate}
 
 For those unfamiliar, the [`<template>` element](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element) allows you to declare fragments of DOM which are parsed, inert at page load, and can be activated later at runtime. It's another API primitive in the web components family. **Templates are an ideal placeholder for declaring the structure of a custom element**.
 
 **Example:** registering an element with Shadow DOM content created from a `<template>`:
-
 
     <template id="x-foo-from-template">
       <style>
@@ -667,8 +692,20 @@ These few lines of code pack a punch. Let's understanding the key things going o
 3. The element's DOM is local to the element thanks to Shadow DOM
 4. The element's internal CSS is scoped to the element thanks to Shadow DOM
 
-{% comment %}
-<!-- <div class="demoarea">
+{% framebox height="100px" %}
+<style>
+.demoarea {
+  padding: 8px;
+  border: 1px dashed #ccc;
+}
+
+.demoarea::before {
+  content: 'DEMO';
+  display: block;
+}
+</style>
+
+<div class="demoarea">
   <x-foo-from-template></x-foo-from-template>
 </div>
 
@@ -678,7 +715,9 @@ These few lines of code pack a punch. Let's understanding the key things going o
 </template>
 
 <script>
-if (supportsCustomElements()) {
+const supportsCustomElementsV1 = 'customElements' in window;
+
+if (supportsCustomElementsV1) {
   customElements.define('x-foo-from-template', class extends HTMLElement {
     constructor() {
       super();
@@ -687,10 +726,13 @@ if (supportsCustomElements()) {
       shadowRoot.appendChild(t.content.cloneNode(true));
     }
   });
+} else {
+  if (self.frameElement) {
+    self.frameElement.style.display = 'none';
+  }
 }
-</script> -->
-{% endcomment %}
-
+</script>
+{% endframebox %}
 
 ## Styling a custom element {: #styling}
 
@@ -879,20 +921,6 @@ components. Combine them with the other new platform primitives like Shadow DOM 
 - Works well with other new web platform features (Shadow DOM, `<template>`, CSS custom properties, etc.)
 - Tightly integrated with the browser's DevTools.
 - Leverage existing accessibility features.
-
-
-
-{% comment %}
-<!--
-<script>
-if (!supportsCustomElements()) {
-  let demos = document.querySelectorAll('.demoarea');
-  Array.from(demos).forEach(function(demo) {
-    demo.hidden = true;
-  });
-}
-</script>-->
-{% endcomment %}
 
 [spec]: https://html.spec.whatwg.org/multipage/scripting.html#custom-elements
 [sd_spec]: http://w3c.github.io/webcomponents/spec/shadow/
