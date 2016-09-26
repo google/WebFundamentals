@@ -190,10 +190,17 @@ which can be then used to save to our Web Server or directly in storage on the u
 
 ## Ask permission to use microphone responsibly
 
+If the user has not previously granted your site access to the microphone then the instant that 
+you call `getUserMedia` the browser will prompt the user to grant your site
+permission to the microphone. 
+
 User's hate getting prompted for access to powerful devices on their machine and they will
-frequently block the request, or they will ignore it. It is best practice to only ask to access
+frequently block the request, or they will ignore it if they don't understand the context of which
+the prompt has been created. It is best practice to only ask to access
 the microphone when first needed. Once the user has granted access they won't be asked again, however,
 if they reject access, you can't get access again to ask the user for permission.
+
+Warning: Asking for access to the microphone on page load will result in most of your users rejecting access to the mic.
 
 ### Use the permissions API to check if you already have access
 
