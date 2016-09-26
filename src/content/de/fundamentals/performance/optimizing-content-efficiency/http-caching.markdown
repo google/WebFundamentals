@@ -100,7 +100,7 @@ Gehen Sie nach dem obigen Entscheidungsbaum vor, um die optimale Caching-Richtli
   <td data-th="Erläuterung">Die Antwort kann vom Browser und intermediären Cachespeichern zwischengespeichert werden, d. h., sie ist bis zu einem Tag (60 Sekunden x 60 Minuten x 24 Stunden) `öffentlich`.</td>
 </tr>
 <tr>
-  <td data-th="Cache-Control">privat, max-age=600</td>
+  <td data-th="Cache-Control">private, max-age=600</td>
   <td data-th="Erläuterung">Die Antwort kann vom Browser des Clients nur maximal 10 Minuten (60 Sekunden x 10 Minuten) zwischengespeichert werden.</td>
 </tr>
 <tr>
