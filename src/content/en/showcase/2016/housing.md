@@ -3,7 +3,7 @@ book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2016-09-26 #}
 {# wf_updated_on: 2016-09-26 #}
-{# wf_featured_image: /web/showcase/2016/housing/card.png #}
+{# wf_featured_image: /web/showcase/2016/images/housing/card.png #}
 {# wf_featured_snippet: Most Indian users reach the Internet via 2G and 3G networks, so a fast user experience is essential. To decrease load times, Housing.com added Service Workers and streamlined their site to help consumers quickly find what they’re looking for. Users can continue browsing properties and reviewing previous searches, all while offline. #}
 
 # Housing.com increases conversions and lowers bounce rate by 40% with new PWA {: .page-title }
