@@ -100,7 +100,7 @@ By itself, this isn't that useful. All we can do is take the audio data and play
 
 To access the raw data from the microphone we have to take the stream created by `getUserMedia()` and
 then use the Web Audio API to process the data. The WebAudio API is a simple API that takes input sources
-and connects those sources to nodes which can process the audio data (adjust Gain etc) and ultimately to a speaker
+and connects those sources to nodes which can process the audio data (adjust Gain etc.) and ultimately to a speaker
 so that the user can hear it.
 
 One of the nodes that you can connect is a `ScriptProcessorNode`. This node will emit an event every time
