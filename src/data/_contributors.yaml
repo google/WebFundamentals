@@ -466,6 +466,18 @@ umarhansa:
   description:
     en: Umar is a front-end web developer
 
+chrishtr:
+  name:
+    given: Chris
+    family: Harrelson
+  org:
+    name: Google
+    unit: Software engineering
+  country: US
+  role:
+    - author
+  email: chrishtr@google.com
+
 ilmariheikkinen:
   name:
     given: Ilmari
