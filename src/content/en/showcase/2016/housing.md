@@ -20,6 +20,10 @@ book_path: /web/showcase/_book.yaml
 
 <span class="compare-yes"></span> 30% faster page load
 
+<a class="button button-primary" href="pdfs/housing.pdf">
+  Download PDF Case study
+</a>
+
 ## Company
 Housing.com is one of India’s top startups. On track to receive 50 million
 visits this year, it has become one of the leading online real estate
