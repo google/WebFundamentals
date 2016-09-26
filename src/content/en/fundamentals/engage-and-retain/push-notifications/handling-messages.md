@@ -51,7 +51,9 @@ service worker registration object.
     
 
 Technically, the only required parameter for `showNotification()` is the title.
-Practically speaking, you should include a body and an icon.
+Practically speaking, you should include at least a body and an icon. As you can
+see notifications have quite a few options. You can find a complete
+[list of them at MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification).
 
 Finally, we'll process the user's response using the `notificationclick` and
 `notificationclose` methods.
@@ -68,6 +70,8 @@ Finally, we'll process the user's response using the `notificationclick` and
     
 
 Everything else is just an elaboration of these basic ideas.
+
+Note: A `notificationclose` event is _not_ raised when a user dismisses all notifications on a device.
 
 ## Preparing message content {: #preparing-messages }
 
