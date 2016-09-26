@@ -17,14 +17,14 @@ book_path: /web/resources/_book.yaml
 <table class="columns responsive">
   <tr>
     {{#each contributors}}
-    <td class="wf-byline" id="{{@key}}">
+    <td class="wf-byline" id="{{@key}}" itemscope itemtype="http://schema.org/Person">
       <div class="attempt-left">
         <figure>
-          <img src="/web/images/contributors/{{photo}}.jpg" alt="{{name.given}} {{name.family}}">
+          <img itemprop="image" src="/web/images/contributors/{{photo}}.jpg" alt="{{name.given}} {{name.family}}">
         </figure>
       </div>
       <section class="wf-byline-meta">
-        <h3>{{name.given}} {{name.family}}</h3>
+        <h3 itemprop="name"><span itemprop="givenName">{{name.given}}</span> <span itemprop="familyName">{{name.family}}</span></h3>
         <div class="wf-byline-desc">
           {{#if description.en}}
             {{description.en}}
@@ -42,10 +42,10 @@ book_path: /web/resources/_book.yaml
         </div>
         -->
         <div class="wf-byline-social">
-          {{#if homepage}}<a href="{{homepage}}" class="wf-homepage">{{homepage}}</a>{{/if}}
+          {{#if homepage}}<a itemprop="url" href="{{homepage}}" class="wf-homepage">{{homepage}}</a>{{/if}}
           {{#if github}}<a href="https://github.com/{{github}}" class="wf-homepage">https://github.com/{{github}}</a>{{/if}}
-          {{#if twitter}}<a href="https://twitter.com/{{twitter}}" class="wf-twitter">@{{twitter}}</a>{{/if}}
-          {{#if google}}<a href="https://plus.google.com/{{google}}" class="wf-googleplus">Google+</a>{{/if}}
+          {{#if twitter}}<a itemprop="sameAs" href="https://twitter.com/{{twitter}}" class="wf-twitter">@{{twitter}}</a>{{/if}}
+          {{#if google}}<a itemprop="sameAs" href="https://plus.google.com/{{google}}" class="wf-googleplus">Google+</a>{{/if}}
         </div>
       </section>
     </td>
