@@ -37,9 +37,9 @@ already installed.
 
 ## Build the auto-generated files
 Some files (contributors includes, some pages for updates, showcases, etc) are
-automatically generated. You'll need to do that the first time you clone the
-repo, then any time you add a case study, update, etc. To build those
-files, run:
+automatically generated. The first time you clone the repo and run `npm install`,
+this is done for you. However, when you add a case study, update, etc., you'll
+need to re-build those files using:
 
 ```
 gulp build
