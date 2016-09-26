@@ -11,26 +11,26 @@ description: Most browsers can get access to the user's microphone.
 
 Many browsers now have the ability to access video and audio input from the 
 user. However, depending on the browser it might be a full dynamic and inline 
-experience, or it could be delegated out to another app on the user's device.
+experience, or it could be delegated to another app on the user's device.
 
 ## Start simple and progressively
 
-The easiest thing that we can do is simply ask the user for a pre-recorded
-file. This can be done by creating a simple file input element and adding 
+The easiest thing to do is simply ask the user for a pre-recorded
+file. Do this by creating a simple file input element and adding 
 an `accept` filter that indicates we can only accept audio files and ideally we 
 will get them directly from the microphone.
 
     <input type="file" accept="audio/*;capture=microphone">
 
-This method will work on all platforms. On desktop it will prompt the user to 
+This method works on all platforms. On desktop it will prompt the user to 
 upload a file from the file system (ignoring `capture=microphone`). In Safari
 on iOS it will open up the microphone app, allowing you to record audio and 
 then send it back to the web page; on Android it will give the user of which
 app to use record the audio in before sending it back to the web page.
 
-Once the user has finished recording and they are back in the web site. You 
-need to somehow get ahold of the file data. You can get quick access to this 
-data by attaching an `onchange` event to the input element and then reading 
+Once the user has finished recording and they are back in the web site, you 
+need to somehow get ahold of the file data. You can get quick access by 
+attaching an `onchange` event to the input element and then reading 
 the `files` property of the event object.
 
 <pre class="prettyprint">
@@ -69,7 +69,7 @@ leave the browser.
 ### Acquire access to the microphone
 
 We can directly access the Microphone by using an API in the WebRTC 
-specification called `getUserMedia`. getUserMedia will prompt the user for 
+specification called `getUserMedia()`. `getUserMedia()` will prompt the user for 
 access to their connected microphones and cameras.
 
 If successful the API will return a `Stream` that will contain the data from
@@ -78,7 +78,8 @@ an `<audio>` element, attach it to a `WebAudio` context, or save it using
 the `MediaRecorder` API.
 
 To get data from the microphone we just set `audio: true` in the constraints 
-object that is passed to the getUserMedia API
+object that is passed to the `getUserMedia()` API
+
 
     <audio id="player" controls></audio>
     <script>  
@@ -97,15 +98,15 @@ object that is passed to the getUserMedia API
     </script>
 
 By itself, this isn't that useful. All we can do is take the audio data and play
-it back at us.
+it back.
 
 ### Access the raw data from the microphone
 
 To access the raw data from the microphone we have to take the stream created by
-`getUserMedia` and then use the Web Audio API to process the data. The WebAudio 
-API is a simple API that takes input sources and connects those sources to nodes
-which can process the audio data (adjust Gain etc) and ultimately to a speaker 
-so that the user can hear it.
+`getUserMedia()` and then use the Web Audio API to process the data. The
+WebAudio API is a simple API that takes input sources and connects those sources
+to nodes which can process the audio data (adjust Gain etc) and ultimately to a 
+speaker so that the user can hear it.
 
 One of the nodes that you can connect is a `ScriptProcessorNode`. This node will
 emit an event every time the audio buffer is filled and you need to process it.
