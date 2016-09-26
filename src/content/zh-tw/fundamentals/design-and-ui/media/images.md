@@ -32,16 +32,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 有時候，我們需要對圖片做出大幅變動，例如變更比例、進行裁剪，甚至是替換整個圖片。在這種情況下，變更圖片的動作一般稱為美學指導。如要查看更多示例，請前往 [responsiveimages.org/demos/](http://responsiveimages.org/demos/)。
 
 
-## Responsive Images
-<div class="attempt-right">
-  <figure>
-    <img src="img/udacity-ri.jpg">
-  </figure>
-</div>
-
-Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
-
-[View Course](https://udacity.com/ud882){: .external }
+{% include "_shared/udacity/ud882.html" %}
 
 
 

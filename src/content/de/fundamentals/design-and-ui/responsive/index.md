@@ -14,16 +14,7 @@ description: Ein großer Teil des Webs ist nicht für Erfahrungen auf verschiede
 Die Nutzung von Mobilgeräten für das Internet steigt auch weiterhin mit ungeheuerlicher Geschwindigkeit, leider ist jedoch ein Großteil des Webs nicht für diese Geräte optimiert. Die Funktionalität von Mobilgeräten ist häufig durch eine geringe Displaygröße eingeschränkt, sodass ein neuer Ansatz bei der Bereitstellung von Inhalten am Bildschirm gefragt ist.
 
 
-## Responsive Web Design Fundamentals
-<div class="attempt-right">
-  <figure>
-    <img src="imgs/udacity-rwd.png">
-  </figure>
-</div>
-
-Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more.
-
-[View Course](https://udacity.com/ud893){: .external }
+{% include "_shared/udacity/ud893.html" %}
 
 
 Telefone, Phablets, Tablets, Desktopcomputer, Spielekonsolen, Fernseher und sogar Wearables weisen eine extreme Vielfalt an verschiedenen Bildschirmgrößen auf. Bildschirmgrößen verändern sich ständig, weshalb es besonders wichtig ist, dass sich Ihre Website an diese anpassen kann, ob heute oder in der Zukunft.

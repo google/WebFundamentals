@@ -25,18 +25,8 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Soms moeten afbeeldingen misschien wat drastischer worden gewijzigd: de proporties wijzigen, bijsnijden of zelfs de afbeelding geheel vervangen. Het wijzigen van afbeeldingen wordt dan meestal `art direction` genoemd.  Zie [responsiveimages.org/demos/](http://responsiveimages.org/demos/) voor meer voorbeelden.
 
 
-## Responsive Images
-<div class="attempt-right">
-  <figure>
-    <img src="img/udacity-ri.jpg">
-  </figure>
-</div>
+{% include "_shared/udacity/ud882.html" %}
 
-Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
-
-[View Course](https://udacity.com/ud882){: .external }
-
-<div class="clearfix"></div>
 
 ## Afbeeldingen in opmaak
 

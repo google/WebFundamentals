@@ -21,16 +21,7 @@ description: 透過優先顯示與使用者要在網頁上執行的主要操作�
 透過將關鍵轉譯路徑最佳化，我們可以大幅縮短初次轉譯網頁的時間。另外，瞭解關鍵轉譯路徑之後，還可以為您要建構的高成效互動式應用程式打下基礎。其實，處理互動式更新的過程是相同的，只是在連續迴圈中完成，理想情況下每秒播放 60 個畫面！ 但是，我們還是按部就班來學習吧。首先，我們從頭開始快速介紹一下瀏覽器如何顯示簡單網頁。
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 

@@ -21,16 +21,7 @@ Performans için optimize etme; HTML, CSS ve JavaScript baytlarinin alinmasindan
 Kritik olusturma yolunu optimize ederek, sayfalarimizin ilk olusturma süresini önemli ölçüde iyilestirebiliriz. Bunun öteside, kritik olusturma yolunun anlasilmasi, iyi performans gösteren etkilesimli uygulamalarin olusturulmasi için bir temel görevi de görür. Etkilesimli güncellemelerin islenmesine iliskin sürecin, sürekli bir döngü içinde ve ideal olarak saniyede 60 kare hizda yapildigi anlasilmistir! Ancak, simdilik aceleci davranip hata yapmayalim. Ilk olarak, basit bir sayfayi görüntülerken tarayicinin nasil ilerledigine dair hizli, en bastan baslayan bir genel bakisa göz atalim.
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 

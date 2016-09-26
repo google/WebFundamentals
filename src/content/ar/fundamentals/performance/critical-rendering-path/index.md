@@ -20,16 +20,7 @@ description: تحسين مسار العرض الحرج من خلال وضع عر
 من خلال تحسين مسار العرض الحرج، يمكننا تحسين وقت العرض الأول على الصفحات إلى حد كبير. علاوة على ذلك يساعد استيعاب مسار العرض الحرج أيضًا في توفير أساس لتصميم تطبيقات تفاعلية بأداء جيد. وقد اتضح لنا أن عملية معالجة التحديثات التفاعلية تتم على نحو مماثل، وأنها تتم في حلقة متواصلة وبشكل مثالي على 60 إطارًا في الثانية. ولكن يجب ألا نستبق الأحداث. أولاً، دعونا نلق نظرة سريعة وعامة على كيفية عرض المتصفح لصفحة بسيطة.
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 

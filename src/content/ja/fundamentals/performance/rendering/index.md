@@ -65,16 +65,7 @@ Note: 任意の CSS プロパティを変更すると上記の 3 つのバージ
 パイプラインのさまざまな部分について更に見ていきましょう。 一般的な問題と、それらの診断方法と修正方法についても見てみましょう。
 
 
-## ブラウザのレンダリングの最適化"
-<div class="attempt-right">
-  <figure>
-    <img src="images/rp-udacity.jpg">
-  </figure>
-</div>
-
-レンダリングのパフォーマンスについて深く考えてみましょう。コンパニオン コースをチェックアウトし、ブラウザが画面上のピクセルに HTML、CSS、および JavaScript に変換する方法し、パフォーマンスを測定する DevTools を使用する方法、およびページのレンダリングの最適化について学習します。」
-
-[View Course](https://udacity.com/ud860){: .external }
+{% include "_shared/udacity/ud860.html" %}
 
 
 

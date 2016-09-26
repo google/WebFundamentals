@@ -27,16 +27,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 В некоторых случаях вам может понадобится радикально оптимизировать изображение: изменить его пропорции, обрезать по краям или даже заменить целиком.  Здесь вам поможет техника art direction.  Больше примеров вы найдете на этом сайте: [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
 
 
-## Responsive Images
-<div class="attempt-right">
-  <figure>
-    <img src="img/udacity-ri.jpg">
-  </figure>
-</div>
-
-Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
-
-[View Course](https://udacity.com/ud882){: .external }
+{% include "_shared/udacity/ud882.html" %}
 
 
 <div class="clearfix"></div>

@@ -21,16 +21,7 @@ description: ユーザーがページ上で行う中核的操作に関係する�
 クリティカル レンダリング パスを最適化することで、最初にページがレンダリングされる時間を大幅に改善することができます。また、クリティカル レンダリング パスに対する理解は、優れたインタラクティブ アプリケーションを構築する基盤にもなります。インタラクティブ アップデートの処理プロセスも結局同じことであり、連続的なループの中で、理想的には 60 fps で実行されます。ただし、まだ先を急ぐのはやめておきましょう。まず、ブラウザがシンプルなページを表示する仕組みについて、ごく基本的な概要を確認します。
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 

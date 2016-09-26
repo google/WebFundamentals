@@ -21,16 +21,7 @@ Podstawą optymalizacji wydajności jest zrozumienie zdarzeń występujących na
 Optymalizując krytyczną ścieżkę renderowania, możemy znacznie skrócić czas potrzebny na pierwsze zrenderowanie naszych stron. Ponadto zrozumienie krytycznej ścieżki renderowania będzie stanowić solidną podstawę przy tworzeniu dobrze działających aplikacji interaktywnych. Okazuje się, że proces przetwarzania aktualizacji interaktywnych przebiega identycznie, tylko wykonywany jest w pętli ciągłej. Najlepiej, gdy częstotliwość odświeżania wynosi 60 klatek na sekundę. Ale na razie nie wyprzedzajmy faktów. Najpierw poznajmy podstawy sposobu wyświetlania prostej strony w przeglądarce.
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 

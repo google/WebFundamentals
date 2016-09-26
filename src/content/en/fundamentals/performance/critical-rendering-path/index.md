@@ -31,17 +31,4 @@ rendering path also serves as a foundation for building well-performing
 interactive applications. The interactive updates process is the same, just done in a continuous loop and ideally at 60 frames per second! But first, an overview of how the browser displays a simple page.
 
 
-## Website performance optimization course
-
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in learning more about the critical rendering path? Check out
-our companion course and learn how the browser converts HTML, CSS, and
-JavaScript to pixels on the screen, how to use DevTools to measure performance,
-and how to optimize the critical rendering path for your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}

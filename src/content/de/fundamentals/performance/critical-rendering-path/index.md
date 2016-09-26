@@ -21,16 +21,7 @@ Die Leistungsoptimierung setzt das Verstehen der Vorgänge zwischen dem Empfang 
 Über die Optimierung des kritischen Rendering-Pfads können wir die benötigte Zeit für das erste Rendering unserer Seiten erheblich verkürzen. Darüber hinaus ist das Verständnis des Rendering-Pfads auch eine Voraussetzung für die Erstellung leistungsfähiger interaktiver Anwendungen. Der Prozess für die Verarbeitung interaktiver Updates ist tatsächlich identisch, er wird nur in einer Dauerschleife und idealerweise mit 60 Frames pro Sekunde durchgeführt! Aber wir wollen hier nicht vorgreifen. Zunächst wollen wir uns einen grundsätzlichen Überblick darüber verschaffen, wie im Browser eine einfache Seite dargestellt wird.
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 

@@ -31,18 +31,7 @@ the size and capabilities of the device.  For example, on a phone users would
 see content shown in a single column view; a tablet might show the same content
 in two columns.
 
-## Learn with Udacity: Responsive Web Design Fundamentals
-<div class="attempt-right">
-  <figure>
-    <img src="imgs/udacity-rwd.png">
-  </figure>
-</div>
-
-Explore what makes a site responsive and how some common responsive design
-patterns work across different devices. Learn how to create your own
-responsive layouts and experiment with breakpoints, optimizing text, and more.
-
-[View Course](https://udacity.com/ud893){: .external }
+{% include "_shared/udacity/ud893.html" %}
 
 ## Set the viewport {: #set-the-viewport }
 

@@ -26,16 +26,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Resmin önemli ölçüde degistirilmesinin gerekebilecegi diger zamanlar sunlardir: Oranlarin degismesi, resmin kirpilmasi ve tüm resmin degistirilmesi.  Bu durumda, resmin degistirilmesine genellikle sanat yönetimi adi verilir.  Daha fazla örnek için [responsiveimages.org/demos/](http://responsiveimages.org/demos/) adresine bakin.
 
 
-## Responsive Images
-<div class="attempt-right">
-  <figure>
-    <img src="img/udacity-ri.jpg">
-  </figure>
-</div>
-
-Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
-
-[View Course](https://udacity.com/ud882){: .external }
+{% include "_shared/udacity/ud882.html" %}
 
 
 

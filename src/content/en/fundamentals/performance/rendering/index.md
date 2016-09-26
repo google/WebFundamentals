@@ -106,14 +106,4 @@ than others!
 Let’s take a dive into the different parts of the pipeline. We’ll take a look
 at the common issues, as well how to diagnose and fix them.
 
-## Browser Rendering Optimization Course
-
-<div class="attempt-right">
-  <figure>
-    <img src="images/rp-udacity.jpg">
-  </figure>
-</div>
-
-Interested in taking a deep dive into Rendering Performance? Check out the companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the rendering of your pages.
-
-[View Course](https://udacity.com/ud860){: .external }
+{% include "_shared/udacity/ud860.html" %}

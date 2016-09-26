@@ -13,17 +13,7 @@ description: 사용자가 페이지에서 행하는 주요 동작과 관련있�
 
 빠른 웹 경험을 사용자에게 제공하기 위해서 브라우저는 많은 작업을 합니다. 하지만 이 작업의 대부분은 웹 개발자인 우리가 볼 수 없는 곳에서 이루어집니다. 그냥 마크업을 작성하면 멋진 페이지가 스크린에 나올 뿐이죠. 그렇다면 브라우저는 어떻게 정확히 HTML, CSS, JavaScript를 스크린에 픽셀로 그리는 걸까요?
   
-## Website Performance Optimization
-
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 성능을 최적화 한다는 말은 HTML, CSS, Javascript 코드를 받아 이를 모두 픽셀로 화면에 그리는 과정 중간 중간을 이해하는 것입니다. 이게 바로 **크리티컬 렌더링 패스** 입니다.

@@ -13,18 +13,7 @@ description: Veel websites zijn niet geoptimaliseerd voor ervaringen op meerdere
 Het gebruik van mobiele apparaten om op internet te browsen neemt enorm snel toe. Veel websites zijn echter nog niet geoptimaliseerd voor die mobiele apparaten. Mobiele apparaten zijn vaak beperkt door de grootte van het scherm en vereisen een andere aanpak voor de manier waarop de inhoud op het scherm wordt weergegeven.
 
 
-## Responsive Web Design Fundamentals
-<div class="attempt-right">
-  <figure>
-    <img src="imgs/udacity-rwd.png">
-  </figure>
-</div>
-
-Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more.
-
-[View Course](https://udacity.com/ud893){: .external }
-
-<div class="clearfix"></div>
+{% include "_shared/udacity/ud893.html" %}
 
 
 

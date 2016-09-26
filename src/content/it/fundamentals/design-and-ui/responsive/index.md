@@ -13,16 +13,7 @@ description: Gran parte del Web non è ottimizzata per l'utilizzo di dispositivi
 L'impiego di dispositivi mobili per la navigazione sul Web è in forte aumento, ma gran parte del Web non è ancora ottimizzata in tal senso. Spesso i dispositivi mobili soffrono di limitazioni in termini di formato dello schermo e richiedono un nuovo approccio per la disposizione dei contenuti.
 
 
-### Responsive Web Design Fundamentals
-<div class="attempt-right">
-  <figure>
-    <img src="imgs/udacity-rwd.png">
-  </figure>
-</div>
-
-Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more.
-
-[View Course](https://udacity.com/ud893){: .external }
+{% include "_shared/udacity/ud893.html" %}
 
 
 

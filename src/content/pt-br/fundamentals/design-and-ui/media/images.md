@@ -25,18 +25,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Outras vezes, talvez seja necessário alterar a imagem de forma mais drástica: mudando as proporções, fazendo cortes e até mesmo substituindo toda a imagem.  Nesse caso, a alteração da imagem geralmente é denominada direção de arte.  Acesse [responsiveimages.org/demos/](http://responsiveimages.org/demos/) para ver mais exemplos.
 
 
-## Responsive Images
-<div class="attempt-right">
-  <figure>
-    <img src="img/udacity-ri.jpg">
-  </figure>
-</div>
-
-Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
-
-[View Course](https://udacity.com/ud882){: .external }
-
-<div class="clearfix"></div>
+{% include "_shared/udacity/ud882.html" %}
 
 ## Imagens na marcação
 

@@ -21,16 +21,7 @@ Het belangrijkste voor het optimaliseren van prestaties is dat u begrijpt wat er
 Door het kritieke weergavepad te optimaliseren kunnen we de tijd om onze pagina`s voor het eerst weer te geven aanzienlijk verbeteren. Daarnaast helpt een goede kennis van het kritieke weergavepad ook als een basis voor het maken van goed presterende, interactieve apps. En het blijkt dat het proces voor het verwerken van interactieve updates hetzelfde is, alleen wordt dit in een continue cirkel en het liefst met 60 frames per seconde gedaan. Maar laten we nog niet op de zaken vooruit lopen. Eerst zullen we een opbouwend overzicht bekijken van hoe een browser een eenvoudige pagina weergeeft.
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 

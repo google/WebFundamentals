@@ -24,16 +24,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 サイズの変更、トリミング、画像全体の置き換えなど、画像の大幅な変更が必要となる場合もあります。このような画像の変更は通常、アート ディレクションと呼ばれます。詳しい例は、[responsiveimages.org/demos/](http://responsiveimages.org/demos/)（英語）をご覧ください。
 
 
-## Responsive Images
-<div class="attempt-right">
-  <figure>
-    <img src="img/udacity-ri.jpg">
-  </figure>
-</div>
-
-Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
-
-[View Course](https://udacity.com/ud882){: .external }
+{% include "_shared/udacity/ud882.html" %}
 
 <div class="clearfix"></div>
 

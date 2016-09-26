@@ -13,16 +13,7 @@ description: لم تتم تهيئة معظم محتوى الويب للعمل ع
 تتزايد نسبة استخدام أجهزة الجوّال في تصفح الويب بقدر هائل، ولكن للأسف لم يتم تحسين قدر كبير من محتوى الويب بحيث يعمل على أجهزة الجوّال. وتواجه أجهزة الجوّال في بعض الأحيان قيودًا بسبب حجم الشاشة وتتطلب منهجًا مختلفًا لكيفية ظهور المحتوى على الشاشة.
 
 
-### Responsive Web Design Fundamentals
-<div class="attempt-right">
-  <figure>
-    <img src="imgs/udacity-rwd.png">
-  </figure>
-</div>
-
-Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more.
-
-[View Course](https://udacity.com/ud893){: .external }
+{% include "_shared/udacity/ud893.html" %}
 
 
 

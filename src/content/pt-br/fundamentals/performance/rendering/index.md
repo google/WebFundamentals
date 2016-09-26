@@ -69,16 +69,7 @@ O desempenho é a arte de evitar trabalho e fazer com que qualquer trabalho real
 Vamos detalhar as diferentes partes do pipeline. Olharemos os problemas comuns e também como diagnosticar e corrigi-los.
 
 
-## Otimização da Renderização do Navegador
-<div class="attempt-right">
-  <figure>
-    <img src="images/rp-udacity.jpg">
-  </figure>
-</div>
-
-Deseja se aprofundar em Desempenho da Renderização? Veja o curso que acompanha e saiba como o navegador converte HTML, CSS e JavaScript em pixels na tela, como usar as DevTools para medir o desempenho e como otimizar a renderização das suas páginas.
-
-[View Course](https://udacity.com/ud860){: .external }
+{% include "_shared/udacity/ud860.html" %}
 
 
 

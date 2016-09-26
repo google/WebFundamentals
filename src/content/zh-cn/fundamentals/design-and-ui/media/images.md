@@ -32,16 +32,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 其余时候，图片也许需要更大幅度的修改：更改比例，裁剪甚至更换整张图片。这种情况里，改变图片通常称作艺术指导 (art direction)。请访问 [responsiveimages.org/demos/](http://responsiveimages.org/demos/) 查看更多例子。
 
 
-## Responsive Images
-<div class="attempt-right">
-  <figure>
-    <img src="img/udacity-ri.jpg">
-  </figure>
-</div>
-
-Learn how to work with images on the modern web, so that your images look great and load quickly on any device and pick up a range of skills and techniques to smoothly integrate responsive images into your development workflow.
-
-[View Course](https://udacity.com/ud882){: .external }
+{% include "_shared/udacity/ud882.html" %}
 
 
 

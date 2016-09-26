@@ -21,16 +21,7 @@ description: 通过优先显示与用户要在网页上执行的主要操作有�
 通过优化关键呈现路径，可以大大缩短首次呈现网页的时间. 另外，了解关键呈现路径还可以为构建高性能交互式应用程序打下基础。其实，处理交互式更新的过程是相同的，只是在连续循环中完成，理想情况下每秒可以处理 60 个帧！ 但是，我们还是按部就班来学习吧。首先，我们从头开始快速介绍一下浏览器如何显示简单网页。
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 

@@ -19,19 +19,9 @@ Translated By:
 <div>
   <div class="attempt-right">
     创建灵活设计，而不是固定的设计,布局。并且能够在任何尺寸的屏幕正常运行。
-
   </div>
-  
-## Responsive Web Design Fundamentals
-<div class="attempt-right">
-  <figure>
-    <img src="fundamentals/imgs/udacity-rwd.png">
-  </figure>
-</div>
-
-Explore what makes a site responsive and how some common responsive design patterns work across different devices. Learn how to create your own responsive layouts and experiment with breakpoints, and optimizing text and more.
-
-[View Course](https://udacity.com/ud893){: .external }
+ 
+{% include "_shared/udacity/ud893.html" %}
 
 
 </div>

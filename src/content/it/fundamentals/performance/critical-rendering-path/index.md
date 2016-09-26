@@ -21,16 +21,7 @@ L'ottimizzazione delle prestazioni ruota intorno alla comprensione di ciò che a
 Ottimizzando il percorso di rendering critico, possiamo migliorare in modo significativo il momento in cui eseguiamo il primo rendering delle nostre pagine. Inoltre, la comprensione del nostro percorso di rendering critico fungerà anche da base per la costruzione di applicazioni interattive ben performanti. Da questo emerge che il processo per l'elaborazione degli aggiornamenti interattivi è lo stesso, solo eseguito in un loop continuo e idealmente a 60 frame al secondo. Ad ogni modo, non corriamo troppo. Innanzitutto, facciamo una panoramica rapida e completa di come il browser esegue la visualizzazione di una pagina semplice.
 
 
-## Website Performance Optimization
-<div class="attempt-right">
-  <figure>
-    <img src="images/crp-udacity.png">
-  </figure>
-</div>
-
-Interested in taking a deep dive into the Critical Rendering Path? Check out or companion course and learn how the browser converts HTML, CSS, and JavaScript to pixels on the screen, how to use DevTools to measure performance, and how to optimize the Critical Rendering Path of your pages.
-
-[View Course](https://udacity.com/ud884){: .external }
+{% include "_shared/udacity/ud884.html" %}
 
 
 
