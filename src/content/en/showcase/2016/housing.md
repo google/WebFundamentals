@@ -50,8 +50,8 @@ new PWA, Housing.com saw conversion rates rise 38% and the bounce rate fall
 by over 40%.
  
 Most Indian users reach the Internet via 2G and 3G networks, so a fast user
-experience is essential. To decrease load times, Housing.com added Service
-Workers and streamlined their site to help consumers quickly find what
+experience is essential. To decrease load times, Housing.com added service
+workers and streamlined their site to help consumers quickly find what
 they’re looking for. Users can continue browsing properties and reviewing
 previous searches, all while offline. “High-end smartphones are not that
 prevalent in our target user base,” says Vivek Jain, Housing.com CPTO.
