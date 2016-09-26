@@ -53,7 +53,7 @@ example, you can:
 
 * Attach it directly to an `<audio>` element so that you can play it
 * Download it to the user's device
-* Upload it to a server by attaching to an XMLHTTPRequest
+* Upload it to a server by attaching to an `XMLHttpRequest`
 * Pass it through the Web Audio API and apply filters on to it  
 
 Whilst this method of getting access to audio data is ubiquitous, it is the
