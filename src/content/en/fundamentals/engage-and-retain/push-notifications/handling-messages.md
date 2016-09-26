@@ -13,13 +13,21 @@ description: You've seen what makes a good notification. Now let's see how to im
   <img src="images/joe-asked.png" alt="The example notification.">
 </figure>
 
-Way back at the [beginning of this section](.), we
-showed a notification that looks like this and the code that goes with it.
+Way back at the [beginning of this article](.#anatomy), we
+showed a notification that looks like the image and the code that goes with it.
 
 While we showed you a little bit about how this is coded, we really didn't give
 you enough information for it to be useful. That's what this section is about.
 
 <div style="clear:both;"></div>
+
+## Service workers, again
+
+Let's talk about service workers again. Handling message involves code that
+lives exclusively in a service worker. If you need a little background,
+[here's the introduction again](service-worker-primer). We've also got some
+handy instructions for [debugging service workers](../../../tools/chrome-devtools/debug/progressive-web-apps/#service-workers)
+using DevTools.
 
 ## More notification anatomy {: #more-anatomy }
 
@@ -51,10 +59,11 @@ service worker registration object.
     
 
 Technically, the only required parameter for `showNotification()` is the title.
-Practically speaking, you should include a body and an icon.
+Practically speaking, you should include at least a body and an icon. As you can
+see notifications have quite a few options. You can find a complete
+[list of them at MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification).
 
-Finally, we'll process the user's response using the `notificationclick` and
-`notificationclose` methods.
+Finally, we'll process the user's response using the `notificationclick` method.
 
 
     self.addEventListener('notificationclick', event => {  
@@ -62,12 +71,10 @@ Finally, we'll process the user's response using the `notificationclick` and
       event.notification.close();  
     });
     
-    self.addEventListener('notificationclose', event => {  
-      // Do something with the event  
-    });
-    
 
 Everything else is just an elaboration of these basic ideas.
+
+Note: Earlier versions of the [Notification API spec](https://notifications.spec.whatwg.org/) contained a `notificationclose`. You should avoid this even though it may be supported on some browsers.
 
 ## Preparing message content {: #preparing-messages }
 
@@ -82,7 +89,9 @@ user it's available.
 
 Let's start with our basic push event handler with a call to
 `event.waitUntil()`.  This method can only take a promise or something that
-resolves to a promise.
+resolves to a promise. This method extends the lifetime of the `push` event
+until certain tasks are accomplished. As you'll see shortly, we'll be holding
+the `push` event until after we've shown a notification.
 
 
     self.addEventListener('push', event => {

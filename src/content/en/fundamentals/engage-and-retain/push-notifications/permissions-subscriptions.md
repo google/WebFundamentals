@@ -11,6 +11,13 @@ description: Requesting permission for and subscribing users to notifications re
 
 Requesting permission for and subscribing users to notifications requires as light a touch as showing them notifications.
 
+In this section and the remaining section I'm going to show you actual code.
+It's important to be clear about where these bits of code are implemented. This
+is where understanding service workers becomes important. The code for
+requesting permission and subscribing users in done in your app's code, rather
+than the service worker code. The service worker will be used later when we
+process push messages and display them to the user.
+
 ## Check permissions {: #check-permissions }
 
 Always check for an existing permission when the page loads. If the permission
@@ -19,15 +26,24 @@ immediately. Either way, use this information to set the state of permission
 settings. An example of this is shown below. To be clear, we're not asking for
 anything yet.
 
-Note: For the sake of clarity, this example excludes a number of feature checks that you should always perform. You can view the original code in it's entirety in our <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>GitHub samples repo</a>.
+Note: For the sake of clarity, this example excludes a number of feature checks
+that you should always perform. You can view the original code in it's entirety
+in our <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>
+GitHub samples repo</a>.
 
 
     function initialiseState() {
       if (Notification.permission !== 'granted') {
         console.log('The user has not granted the notification permission.');
         return;
+      } else if (Notification.permission === “blocked”) {
+       /* the user has previously denied push. Can't reprompt. */ 
+      } else {
+        /* show a prompt to the user */
       }
       
+      // Use serviceWorker.ready so this is only invoked
+      // when the service worker is available.
       navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
         serviceWorkerRegistration.pushManager.getSubscription()
           .then(function(subscription) {
@@ -62,10 +78,13 @@ First, ask whether your application can send notifications, using a message that
 explains exactly why you want to send them notifications.
 
 If the user approves, we need to send a subscription request to the push
-manager. Do this by calling `PushManager.subscribe()` (emphasized in the
-example below). In this example, we're passing it an object with
-`userVisibleOnly` set to `true` so that all push messages sent to the client appear to the user as a notification. We're also  including an
+manager. Do this by calling `PushManager.subscribe()` (emphasized in the example
+below). In this example, we're passing it an object with `userVisibleOnly` set
+to `true` so that all push messages sent to the client appear to the user as a
+notification. In practice, this means that even if a user doesn't have your site
+visible, a notification is still created. We're also including an
 `applicationServerKey` converted to an integer array.
+
 
 <div style="clear:both;"></div>
 
