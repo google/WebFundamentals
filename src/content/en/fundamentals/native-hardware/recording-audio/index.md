@@ -43,7 +43,7 @@ the `files` property of the event object.
       recorder.addEventListener('change', function(e) {
         var file = e.target.files[0]; 
         // Do something with the audio file.
-        player.src = file;
+        player.src =  URL.createObjectURL(file);
       });
     </script>
 
