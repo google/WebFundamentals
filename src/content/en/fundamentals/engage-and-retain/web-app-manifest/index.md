@@ -250,3 +250,10 @@ to the web app manifest is available on the Mozilla Developer Network.
 
 * If you want feature descriptions from the engineers who created web app
 manifests, you can read the [actual W3C specification](http://www.w3.org/TR/appmanifest/).
+
+Note: If you update your `manifest.json` file in the future, those changes won't
+be automatically picked up by the user unless the re-add your app to their
+home screen.
+
+
+
