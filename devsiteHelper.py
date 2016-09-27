@@ -25,9 +25,13 @@ def checkForRedirect(requestedPath, lang, useMemcache):
   redirects = []
   requestDir = requestedPath
   requestDir = re.sub(r'^/?web/', '', requestDir)
-  if os.path.isdir(os.path.join(SOURCE_PATH, lang, requestDir)):
-    return '/web/' + requestDir + '/'
 
+  # Check if the requested path is actually a directory
+  if not requestDir.endswith('/'):
+    if os.path.isdir(os.path.join(SOURCE_PATH, lang, requestDir)):
+      return '/web/' + requestDir + '/'
+
+  # Get the directory the file was requested from
   if not requestDir.endswith('/'):
     requestDir = requestDir[:requestDir.rindex('/') + 1]
   requestDir = os.path.join(SOURCE_PATH, lang, requestDir)
