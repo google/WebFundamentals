@@ -51,7 +51,7 @@ service worker registration object.
     
 
 Technically, the only required parameter for `showNotification()` is the title.
-Practically speaking, you should include a body and an icon.
+Practically speaking, you should include a body and an icon (ideally 192x192 px).
 
 Finally, we'll process the user's response using the `notificationclick` and
 `notificationclose` methods.
