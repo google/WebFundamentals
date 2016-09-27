@@ -112,7 +112,7 @@ So now that you've identified the problem, you can try to fix it directly
 in DevTools.
 
 [layout]: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime#layout
-[zoom]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-toolzoom
+[zoom]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#zoom
 
 ## Apply fix within DevTools
 
