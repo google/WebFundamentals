@@ -33,7 +33,7 @@ Als Nächstes sollten Sie alternative Technologien in Betracht ziehen, mit denen
 Fall Sie sich dabei ertappen, dass Sie Text in einem Bildobjekt codieren, halten Sie inne und überlegen Sie noch einmal. Ein gutes Schriftbild ist für eine gute Gestaltung, gutes Branding und gute Lesbarkeit wichtig, aber Text im Bild liefert eine schlechte Nutzererfahrung: Es ist nicht möglich, den Text auszuwählen, zu durchsuchen, zu vergrößern/zu verkleinern oder anderweitig darauf zuzugreifen und er eignet sich nicht für Geräte mit hohen DPI-Werten. Die Nutzung von Webschriftarten erfordert zwar eine [Reihe eigener Optimierungen](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/), ermöglicht jedoch alle diese Vorgänge und ist deshalb stets eine bessere Wahl für die Darstellung von Text.
 
 
-## Vektor- und Rastergrafiken im Vergleich
+## Vektor - und Rastergrafiken im Vergleich
 
 ### TL;DR {: .hide-from-toc }
 - Vektorgrafiken eignen sich ideal für Bilder, die aus geometrischen Formen bestehen.
@@ -60,7 +60,7 @@ Wenn Sie festgestellt haben, dass Sie die gewünschte Wirkung am besten mit eine
 
 Jedes Format hat eigene Vor- und Nachteile. Vektorformate eignen sich ideal für Bilder, die aus einfachen geometrischen Formen, z. B. Logos, Text, Symbole usw., bestehen und liefern bei jeder Auflösung und Zoomeinstellung scharfe Bilder. Diese Formate sind somit optimal für hochauflösende Bildschirme und Objekte geeignet, die in verschiedenen Größen angezeigt werden sollen.
 
-Allerdings sind Vektorformate für komplexen Darstellungen, z. B. Fotos, unzureichend: Die Menge des SVG-Markups zur Beschreibung aller Formen kann untragbar hoch werden und das Ergebnis sieht dennoch nicht `fotorealistisch` aus. In einem solchen Fall sollten Sie ein Rastergrafikformat wie GIF, PND, JPEG oder eines der neueren Formate wie JPEG-XR und WebP verwenden.
+Allerdings sind Vektorformate für komplexen Darstellungen, z. B. Fotos, unzureichend: Die Menge des SVG-Markups zur Beschreibung aller Formen kann untragbar hoch werden und das Ergebnis sieht dennoch nicht `fotorealistisch` aus. In einem solchen Fall sollten Sie ein Rastergrafikformat wie GIF, PNG, JPEG oder eines der neueren Formate wie JPEG-XR und WebP verwenden.
 
 Rastergrafiken haben den Nachteil, dass sie nicht auflösungs- oder zoomunabhängig sind: Wenn Sie eine Rastergrafik hochskalieren, entstehen gezackte und verschwommene Elemente. Deshalb ist es ggf. erforderlich, mehrere Versionen einer Rastergrafik in verschiedenen Auflösungen zu speichern, um die optimale Nutzererfahrung bereitzustellen.
 
