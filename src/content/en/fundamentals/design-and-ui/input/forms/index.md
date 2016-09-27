@@ -304,12 +304,18 @@ Browsers use many heuristics to determine which fields they can
 and you can give hints to the browser by providing both the `name` attribute 
 and the `autocomplete` attribute on each input element.
 
+Note: Chrome requires `input` elements to be wrapped in a `<form>` tag to enable
+auto-complete. If they're not wrapped in a `form` tag, Chrome will offer
+suggestions, but will **not** complete the form.
+
 For example, to hint to the browser that it should auto-complete the form with
 the users name, email address and phone number, you should use:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
+
+
 
 
 ### Recommended input `name` and `autocomplete` attribute values
