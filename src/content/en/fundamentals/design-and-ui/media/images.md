@@ -548,10 +548,10 @@ Many fonts include support for the myriad of unicode glyphs, which can be used
 instead of images. Unlike images, unicode fonts scale well and look good no
 matter how small or large they appear on screen.
 
-Beyond the normal character set, unicode may include symbols for number forms
-(&#8528;), arrows (&#8592;), math operators (&#8730;), geometric shapes
-(&#9733;), control pictures (&#9654;), braille patterns (&#10255;), music
-notation (&#9836;), Greek letters (&#937;), even chess pieces (&#9822;).
+Beyond the normal character set, unicode may include symbols for 
+arrows (&#8592;), math operators (&#8730;), geometric shapes
+(&#9733;), control pictures (&#9654;), music notation (&#9836;),
+Greek letters (&#937;), even chess pieces (&#9822;).
 
 Including a unicode character is done in the same way named entities are:
 `&#XXXX`, where `XXXX` represents the unicode character number. For example:
