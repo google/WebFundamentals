@@ -55,7 +55,7 @@ redirects:
   to: /web/tools/setup/
 
 - from: /web/tools/devtools
-  to: /web/tools/chrome-devtools
+  to: /web/tools/chrome-devtools/
 
 - from: /web/tools/chrome-devtools/iterate/...
   to: /web/tools/chrome-devtools/...
