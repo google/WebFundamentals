@@ -13,6 +13,8 @@ redirects:
   to: /web/shows/
 - from: /web/tools
   to: /web/tools/
+- from: /web/tools/chrome-devtools
+  to: /web/tools/chrome-devtools/
 - from: /web/updates
   to: /web/updates/
 

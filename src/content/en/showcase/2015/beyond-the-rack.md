@@ -83,5 +83,5 @@ compelling content.
 
 For more information on Push Notifications on the web check out our resources:
 
-* [Getting Started with your first Push Notifications](/web/fundamentals/getting-started/push-notifications/)
+* [Getting Started with your first Push Notifications](/web/fundamentals/getting-started/codelabs/push-notifications/)
 * [Push and Notifications guide](/web/fundamentals/engage-and-retain/push-notifications/)

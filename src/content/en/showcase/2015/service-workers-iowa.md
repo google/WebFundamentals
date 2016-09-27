@@ -181,7 +181,7 @@ chaining `sw-toolbox`’s
 </figure>
 
 <figure>
-  <img src="/web/showcase/case-study/images/service-workers-iowa/profile-images.png">
+  <img src="/web/showcase/2015/images/service-workers-iowa/profile-images.png">
   <figcaption>
     Profile images from a <a href="https://events.google.com/io2015/schedule?filters=Develop%20%26%20Design%2CChrome%20%2F%20Web&sid=1b718f8b-b6d4-e411-b87f-00155d5066d7#day1/1b718f8b-b6d4-e411-b87f-00155d5066d7">session page</a>.
   </figcaption>
@@ -412,7 +412,7 @@ newest content.
 </figure>
 
 <figure>
-  <img src="/web/showcase/case-study/images/service-workers-iowa/update-toast.png">
+  <img src="/web/showcase/2015/images/service-workers-iowa/update-toast.png">
   <figcaption>The "latest content" toast.</figcaption>
 </figure>
 

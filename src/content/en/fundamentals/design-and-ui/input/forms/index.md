@@ -42,7 +42,7 @@ Design efficient forms by avoiding repeated actions, asking for only the necessa
 
 Make sure your forms have no repeated actions, only as many fields as 
 necessary, and take advantage of 
-[autofill](/web/fundamentals/design-and-ui/input/forms/label-and-name-inputs.html#use-metadata-to-enable-auto-complete),
+[autofill](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete),
 so that users can easily complete forms with pre-populated data.
 
 Look for opportunities to pre-fill information you already know, or may 

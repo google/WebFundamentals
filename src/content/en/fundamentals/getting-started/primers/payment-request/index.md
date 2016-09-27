@@ -15,7 +15,7 @@ Dogfood: `PaymentRequest` is still in development. While we think it's stable en
 
 Buying goods online is a convenient but often frustrating experience, particularly on mobile devices. Although mobile traffic continues to increase, mobile conversions account for only about a third of all completed purchases. In other words, users abandon mobile purchases twice as often as desktop purchases. Why?
 
-![](imgs/1_why_users_abandon.png)
+![](images/1_why_users_abandon.png)
 
 *Why users abandon mobile purchase forms*
 
@@ -41,7 +41,7 @@ Best of all, with the browser acting as an intermediary, all the information nec
 ### Payment transaction process {: #transaction-process }
 Using the Payment Request API, the transaction process is made as seamless as possible for both users and merchants.
 
-![](imgs/4_the_payment_transaction_process.png)
+![](images/4_the_payment_transaction_process.png)
 
 *The payment transaction process*
 
@@ -49,7 +49,7 @@ The process begins when the merchant site creates a new `PaymentRequest` and pas
 
 <div class="attempt-right">
   <figure>
-    <img src="imgs/5_9_payment_request_ui.png" >
+    <img src="images/5_9_payment_request_ui.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>
@@ -111,7 +111,7 @@ The `details` parameter contains information about the transaction. There are tw
 
 <div class="attempt-right">
   <figure>
-    <img src="imgs/6_order_summary.png" >
+    <img src="images/6_order_summary.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>
@@ -159,7 +159,7 @@ Repeated or calculated values used in the `details` can be specified either as s
 
 <div class="attempt-left">
   <figure>
-    <img src="imgs/7_display_payment_request.png" >
+    <img src="images/7_display_payment_request.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>
@@ -267,7 +267,7 @@ After payment information is received, the app should submit the payment informa
 
 <div class="attempt-left">
   <figure>
-    <img src="imgs/8_card_verified.png" >
+    <img src="images/8_card_verified.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>
@@ -291,7 +291,7 @@ The [`complete`](https://www.w3.org/TR/payment-request/#complete) method tells t
 
 <div class="attempt-left">
   <figure>
-    <img src="imgs/5_9_payment_request_ui.png" >
+    <img src="images/5_9_payment_request_ui.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>
@@ -314,7 +314,7 @@ Note: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dicti
 
 <div class="attempt-right">
   <figure>
-    <img src="imgs/9.5_address_rejected.png" >
+    <img src="images/9.5_address_rejected.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>
@@ -365,7 +365,7 @@ Note: Resolving <code>shippingaddresschange</code> event and leaving <code>detai
 
 <div class="attempt-right">
   <figure>
-    <img src="imgs/10_shipping_address.png" >
+    <img src="images/10_shipping_address.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>
@@ -473,7 +473,7 @@ Changing shipping options may have different prices. In order to add the shippin
 
 <div class="attempt-right">
   <figure>
-    <img src="imgs/11_shipping_options.png" >
+    <img src="images/11_shipping_options.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>
@@ -512,7 +512,7 @@ You can also collect a user's email address or phone number by adding `requestPa
 
 <div class="attempt-right">
   <figure>
-    <img src="imgs/12_contact_details.png" >
+    <img src="images/12_contact_details.png" >
     <figcaption>Payment Request Interface</figcaption>
   </figure>
 </div>

@@ -42,7 +42,7 @@ Every time the browser processes HTML markup, it goes through all of the steps a
 
 <img src="images/dom-timeline.png"  alt="Tracing DOM construction in DevTools">
 
-Note: We're assuming that you have basic familiarity with Chrome DevTools - that is, you know how to capture a network waterfall or record a timeline. If you need a quick refresher, check out the <a href='/web/tools/chrome-devtools'>Chrome DevTools documentation</a>; if you're new to DevTools, we recommend that you take the Codeschool <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> course.
+Note: We're assuming that you have basic familiarity with Chrome DevTools - that is, you know how to capture a network waterfall or record a timeline. If you need a quick refresher, check out the <a href='/web/tools/chrome-devtools/'>Chrome DevTools documentation</a>; if you're new to DevTools, we recommend that you take the Codeschool <a href='http://discover-devtools.codeschool.com/'>Discover DevTools</a> course.
 
 If you open up Chrome DevTools and record a timeline while the page is loaded, you can see the actual time taken to perform this step&mdash;in the example above, it took us ~5ms to convert a chunk of HTML into a DOM tree. For a larger page, this process could take significantly longer. When creating smooth animations, this can easily become a bottleneck if the browser has to process large amounts of HTML.
 
