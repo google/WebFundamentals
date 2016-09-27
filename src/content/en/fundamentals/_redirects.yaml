@@ -118,5 +118,8 @@ redirects:
 - from: /web/fundamentals/getting-started/your-first-offline-web-app/
   to: /web/fundamentals/getting-started/codelabs/offline/
 
+- from: /web/fundamentals/primers/service-worker
+  to: /web/fundamentals/getting-started/primers/service-workers
+
 - from: /web/fundamentals/primers/service-worker/
   to: /web/fundamentals/getting-started/primers/service-workers

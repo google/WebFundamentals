@@ -142,7 +142,7 @@ Use `undebug(fn)` to stop breaking on the function,
 or use the UI to disable all breakpoints.
 
 For more information on breakpoints,
-see [Debug with Breakpoints](/web/tools/chrome-devtools/debug/breakpoints).
+see [Debug with Breakpoints](/web/tools/chrome-devtools/javascript/add-breakpoints).
 
 ## dir(object)
 

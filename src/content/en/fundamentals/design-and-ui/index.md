@@ -24,7 +24,7 @@ and devices?
 
 <div class="attempt-right">
   <h2>User input</h2>
-  <a href="imput/forms/">
+  <a href="input/forms/">
     <img src="/web/images/md-icons/touch-short.png">
   </a>
   <p>
@@ -40,7 +40,7 @@ and devices?
 
 <div class="attempt-left">
   <h2>Icons &amp; browser colors</h2>
-  <a href="tbd">
+  <a href="/web/fundamentals/design-and-ui/browser-customization/">
     <img src="/web/images/md-icons/image-short.png">
   </a>
   <p>

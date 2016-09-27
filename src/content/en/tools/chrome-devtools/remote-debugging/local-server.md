@@ -33,7 +33,7 @@ the connection doesn't depend on your network configuration.
 
 To enable port forwarding:
 
-1. Set up [remote debugging](remote-debugging) between your development machine
+1. Set up [remote debugging](.) between your development machine
    and your Android device. When you're finished, you should see your Android
    device in the left-hand menu of the **Inspect Devices** dialog and a 
    **Connected** status indicator. 

@@ -12,3 +12,6 @@ redirects:
 
 - from: /web/fundamentals/design-and-ui/media/images/images-in-markup
   to: /web/fundamentals/design-and-ui/media/images#images-in-markup
+
+- from: /web/fundamentals/design-and-ui/browser-customization/...
+  to: /web/fundamentals/design-and-ui/browser-customization/

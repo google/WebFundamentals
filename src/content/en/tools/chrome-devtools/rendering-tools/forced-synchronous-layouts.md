@@ -20,9 +20,9 @@ frame-based animation. However, there's a considerable amount of jank in the
 animation. Your goal is to identify the cause of the jank and fix the issue so 
 that the demo runs at a silky-smooth 60 FPS. 
 
-[fsl]: fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid-forced-synchronous-layouts
+[fsl]: /web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing#avoid-forced-synchronous-layouts
 
-[raf]: fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes
+[raf]: /web/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes
 
 
 ## Gather data
@@ -111,8 +111,8 @@ animations on the page.
 So now that you've identified the problem, you can try to fix it directly
 in DevTools.
 
-[layout]: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime?hl=en#layout
-[zoom]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool?hl=en#zoom
+[layout]: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime#layout
+[zoom]: /web/tools/chrome-devtools/profile/evaluate-performance/timeline-toolzoom
 
 ## Apply fix within DevTools
 
