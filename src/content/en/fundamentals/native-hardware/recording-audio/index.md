@@ -41,7 +41,7 @@ the `files` property of the event object.
       var player = document.getElementById('player')'
 
       recorder.addEventListener('change', function(e) {
-        var file = e.files[0]; 
+        var file = e.target.files[0]; 
         // Do something with the audio file.
         player.src = file;
       });
