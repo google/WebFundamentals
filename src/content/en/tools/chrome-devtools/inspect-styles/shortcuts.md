@@ -641,11 +641,6 @@ Here are some additional Chrome shortcuts which are useful for general use withi
       <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">J</kbd></td>
     </tr>
     <tr>
-      <td data-th="More Chrome Shortcuts">View the Task Manager</td>
-      <td data-th="Windows"><kbd class="kbd">Shift</kbd> + <kbd class="kbd">ESC</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Shift</kbd> + <kbd class="kbd">ESC</kbd></td>
-    </tr>
-    <tr>
       <td data-th="More Chrome Shortcuts">Next page in a tabs browsing history</td>
       <td data-th="Windows"><kbd class="kbd">Alt</kbd> + <kbd class="kbd">Right</kbd></td>
       <td data-th="Mac"><kbd class="kbd">Opt</kbd> + <kbd class="kbd">Right</kbd></td>
