@@ -25,28 +25,27 @@ will get them directly from the microphone.
 This method works on all platforms. On desktop it will prompt the user to 
 upload a file from the file system (ignoring `capture=microphone`). In Safari
 on iOS it will open up the microphone app, allowing you to record audio and 
-then send it back to the web page; on Android it will give the user of which
-app to use record the audio in before sending it back to the web page.
+then send it back to the web page; on Android it will give the user the 
+choice of which app to use record the audio in before sending it back to the web
+page.
 
 Once the user has finished recording and they are back in the web site, you 
 need to somehow get ahold of the file data. You can get quick access by 
 attaching an `onchange` event to the input element and then reading 
 the `files` property of the event object.
 
-<pre class="prettyprint">
-&lt;input type="file" accept="audio/*;capture=microphone" id="recorder">
-&lt;audio id="player">&lt;/audio>
-&lt;script>
-  var recorder = document.getElementById('recorder');
-  var player = document.getElementById('player')'
+    <input type="file" accept="audio/*;capture=microphone" id="recorder">
+    <audio id="player" controls></audio>
+    <script>
+      var recorder = document.getElementById('recorder');
+      var player = document.getElementById('player')'
 
-  recorder.addEventListener('change', function(e) {
-    var file = e.files[0]; 
-    // Do something with the audio file.
-    player.src = file;
-  });
-&lt;/script>
-</pre>
+      recorder.addEventListener('change', function(e) {
+        var file = e.files[0]; 
+        // Do something with the audio file.
+        player.src = file;
+      });
+    </script>
 
 Once you have access to the file you can do anything you want with it. For 
 example, you can:
@@ -56,9 +55,9 @@ example, you can:
 * Upload it to a server by attaching to an `XMLHttpRequest`
 * Pass it through the Web Audio API and apply filters on to it  
 
-Whilst this method of getting access to audio data is ubiquitous, it is the
-least appealing option. We really want to get access to the microphone and 
-provide a nice experience directly in the page.
+Whilst using the input element method of getting access to audio data is 
+ubiquitous, it is the least appealing option. We really want to get access to
+the microphone and provide a nice experience directly in the page.
 
 ## Access the microphone interactively
 
@@ -74,7 +73,7 @@ access to their connected microphones and cameras.
 
 If successful the API will return a `Stream` that will contain the data from
 either the camera or the microphone, and we can then either attach it to 
-an `<audio>` element, attach it to a `WebAudio` context, or save it using 
+an `<audio>` element, attach it to an Web Audio `AudioContext`, or save it using 
 the `MediaRecorder` API.
 
 To get data from the microphone we just set `audio: true` in the constraints 
@@ -104,14 +103,14 @@ it back.
 
 To access the raw data from the microphone we have to take the stream created by
 `getUserMedia()` and then use the Web Audio API to process the data. The
-WebAudio API is a simple API that takes input sources and connects those sources
-to nodes which can process the audio data (adjust Gain etc) and ultimately to a 
-speaker so that the user can hear it.
+Web Audio API is a simple API that takes input sources and connects those 
+sources to nodes which can process the audio data (adjust Gain etc) and 
+ultimately to a speaker so that the user can hear it.
 
 One of the nodes that you can connect is a `ScriptProcessorNode`. This node will
-emit an event every time the audio buffer is filled and you need to process it.
-At this point you could save the data into your own buffer and save it for later
-use.
+emit an `onaudioprocess` event every time the audio buffer is filled and you 
+need to process it. At this point you could save the data into your own buffer
+and save it for later use.
 
 <pre class="prettyprint">
 &lt;script>  
