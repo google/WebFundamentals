@@ -85,7 +85,7 @@ Use the Timeline to improve the run time performance of your page by recording a
 Use the Profiles panel if you need more information than the Timeline provide, for instance to track down memory leaks.
 
 * [JavaScript CPU Profiler](/web/tools/chrome-devtools/profile/rendering-tools/js-execution)
-* [Heap Profiler](/web/tools/chrome-devtools/profile/memory-problems)
+* [Heap Profiler](/web/tools/chrome-devtools/memory-problems/)
 
 <div style="clear:both;"></div>
 

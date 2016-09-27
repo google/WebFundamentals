@@ -19,7 +19,7 @@ You should always protect all of your websites with HTTPS, even if they don’t
 handle sensitive communications. Aside from providing critical security and data
 integrity for both your websites and your users' personal information, HTTPS is
 a requirement for many new browser features, particularly those required for
-[progressive web apps](../progressive-web-apps/).
+[progressive web apps](/web/progressive-web-apps/).
 
 ### TL;DR {: .hide-from-toc }
 

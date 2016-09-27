@@ -41,7 +41,7 @@ landing_page:
     - heading: Instant Loading
       icon:
         icon_name: schedule
-      path: /web/fundamentals/getting-started/your-first-offline-web-app/
+      path: /web/fundamentals/getting-started/codelabs/offline/
       description: >
         Service workers allow your apps to load nearly instantly and reliably,
         no matter what kind of network connection your user is on.
@@ -99,7 +99,7 @@ landing_page:
         path: /web/updates/2015/11/app-shell
       - heading: Service Workers
         description: Service workers are a key technology needed for your app.
-        path: /web/fundamentals/primers/service-worker/
+        path: /web/fundamentals/getting-started/primers/service-workers
       - heading: Get support
         description: Get your questions answered on Stack Overflow
         path: http://stackoverflow.com/questions/tagged/progressive-web-apps
@@ -109,10 +109,10 @@ landing_page:
         path: https://g.co/codelabs/pwa
       - heading: "Guide: Your first offline web app"
         description: A step-by-step guide to making your web app work offline.
-        path: /web/fundamentals/getting-started/your-first-offline-web-app/
+        path: /web/fundamentals/getting-started/codelabs/offline/
       - heading: "Guide: Your first push notification"
         description: A step-by-step guide to adding push notifications to your web app.
-        path: /web/fundamentals/getting-started/push-notifications/
+        path: /web/fundamentals/getting-started/codelabs/push-notifications/
 
 
   - items:
@@ -123,13 +123,13 @@ landing_page:
     classname: devsite-landing-row-no-image-background wf-pwa-in-action
     items:
     - heading: Air Horner
-      image_path: /web/imgs/pwa-airhorner.png
+      image_path: images/pwa-airhorner.png
       path: https://airhorner.com
     - heading: Voice Memos
-      image_path: /web/imgs/pwa-voice-memos.png
+      image_path: images/pwa-voice-memos.png
       path: https://voice-memos.appspot.com/
     - heading: Weather
-      image_path: /web/imgs/pwa-weather.png
+      image_path: images/pwa-weather.png
       path: https://weather-pwa-sample.firebaseapp.com/final/
 
   - classname: devsite-landing-row-cta

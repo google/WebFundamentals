@@ -90,7 +90,7 @@ landing_page:
       image_path: /web/fundamentals/images/ic_https_black_48dp.png
       buttons:
       - label: Learn more
-        path: /web/fundamentals/encrypt-in-transit/why-https
+        path: /web/fundamentals/security/encrypt-in-transit/why-https
 
 
   - heading: Ready, Set, Code

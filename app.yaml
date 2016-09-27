@@ -15,10 +15,10 @@ handlers:
 - url: /wf-local/styles/
   static_dir: gae/styles/
 
-- url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3))
+- url: /web/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3|mov))
   static_files: src/content/en/\1
   expiration: 1d
-  upload: src/content/en/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3))
+  upload: src/content/en/(.*\.(png|gif|jpg|svg|xml|mp4|webm|pdf|mp3|mov))
 
 - url: /(.*\.ico)
   static_files: src/content/en/images/\1

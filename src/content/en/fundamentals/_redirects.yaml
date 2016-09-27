@@ -111,3 +111,12 @@ redirects:
 
 - from: /web/fundamentals/security/prevent-mixed-content/
   to: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
+
+- from: /web/fundamentals/security/encrypt-in-transit/
+  to: /web/fundamentals/security/encrypt-in-transit/enable-https
+
+- from: /web/fundamentals/getting-started/your-first-offline-web-app/
+  to: /web/fundamentals/getting-started/codelabs/offline/
+
+- from: /web/fundamentals/primers/service-worker/
+  to: /web/fundamentals/getting-started/primers/service-workers
