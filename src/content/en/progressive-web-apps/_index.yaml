@@ -132,6 +132,10 @@ landing_page:
       image_path: images/pwa-weather.png
       path: https://weather-pwa-sample.firebaseapp.com/final/
 
+  - items:
+    - custom_html: Find more on <a href="https://pwa.rocks">pwa.rocks</a>
+
+
   - classname: devsite-landing-row-cta
     items:
     - heading: Start developing today
