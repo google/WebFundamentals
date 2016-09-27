@@ -87,7 +87,10 @@ start and end dates.
 
 ## Choose the best input type
 
-Streamline information entry by using the right input type. Users appreciate websites that automatically present number pads for entering phone numbers, or automatically advance fields as they entered them. Look for opportunities to eliminate wasted taps in your forms.
+Streamline information entry by using the right input type. Users appreciate
+websites that automatically present number pads for entering phone numbers, or
+automatically advance fields as they entered them. Look for opportunities to
+eliminate wasted taps in your forms.
 
 
 ### TL;DR {: .hide-from-toc }
@@ -222,6 +225,9 @@ type.
     </tr>
   </tbody>
 </table>
+
+Caution: Remember to keep localization in mind when choosing an input type,
+some locales use a dot (.) as a separator instead of a comma (,)
 
 ### Offer suggestions during input with datalist
 
