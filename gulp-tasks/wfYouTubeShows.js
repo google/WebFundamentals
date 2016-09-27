@@ -17,7 +17,7 @@ function buildFeeds() {
   try {
     apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
   } catch (ex) {
-    gutil.log(' ', 'Error, unable to read YouTube API key.', ex);
+    gutil.log(' ', 'YouTube feed build skipped, youtubeAPIKey.txt not found.');
     return;
   }
   var youtube = google.youtube({version: 'v3', auth: apiKey});
