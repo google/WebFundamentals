@@ -96,7 +96,7 @@ device:
   Chrome heading. 
 * Underneath the **Chrome** heading, each open tab gets its own heading. 
   You can interact with that tab from this section. 
-* If there are any running apps using [WebView][webview], you'll see a heading 
+* If there are any running apps using [WebView](webviews), you'll see a heading 
   for each app. 
 
 To open a new Chrome tab, enter a URL in the textfield under the Chrome heading
@@ -131,8 +131,6 @@ Android device screen. The element is selected in the **Elements** panel of
 DevTools. Note that the **select element** button is automatically disabled
 after the first touch, so you need to re-enable it every time that you want 
 to use this feature. 
-
-[webview]: http://developer.android.com/reference/android/webkit/WebView.html
 
 ## Screencast from Android device to development machine
 
