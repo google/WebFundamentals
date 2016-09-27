@@ -259,7 +259,7 @@ self.addEventListener('push', function(event) {
         {action: 'notNow', title: 'Not now'}
       ]
     }
-    self.registration.showNotification(data.title, noteOptions);</strong>
+    return self.registration.showNotification(data.title, noteOptions);</strong>
   })  
 });
 </pre>
