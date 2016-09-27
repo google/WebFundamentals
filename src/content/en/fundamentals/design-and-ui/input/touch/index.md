@@ -15,45 +15,30 @@ description: Touchscreens are available on more and more devices,  from phones u
   </iframe>
 </div>
 
-Touchscreens are available on more and more devices, ranging from phones up to desktop screens. When your users choose to interact with your UI, your app should respond to their touch in intuitive and beautiful ways.
+Touchscreens are available on more and more devices, ranging from phones up to
+desktop screens. When your users choose to interact with your UI, your app
+should respond to their touch in intuitive and beautiful ways.
 
 <div class="clearfix"></div>
 
-## Stateful elements respond to touch 
-
-Touchscreens are available on more and more devices, ranging from phones up to desktop screens. When your users choose to interact with your UI, your app should respond to their touch in intuitive and beautiful ways.
-
-### Add Touch States
+## Respond to Element States
 
 Have you ever touched or clicked an element on a web page and questioned
 whether the site actually detected it?
 
-Simply altering the color of elements as users touch parts of your UI gives a basic reassurance that your site is working. Not only does this alleviate frustation, but can also give a snappy and responsive feel to your site.
+Simply altering the color of an element as users touch or interact with parts
+of your UI gives a basic reassurance that your site is working. Not only does
+this alleviate frustration, but can also give a snappy and responsive feel.
 
-#### Use Pseudo Classes to Change UI for each Touch State
-
-The fastest way to support touch is to change the UI in response to a DOM
-element’s change in state.
-
-### TL;DR {: .hide-from-toc }
-- Make your site feel snappy and responsive: change the UI for each state <code>:hover</code>, <code>:active</code> and <code>:focus</code>.
-- Don’t override a browser’s default responses to touch and focus unless you are implementing your own UI changes.
-- Disable text selection on elements users will touch, unless there’s a good reason why users might need to copy / select the text.
-
-
-DOM elements can be in one of the following states, default, focus, hover, and active. To change
-our UI for each of these states, we need to apply styles to the following
-pseudo classes `:hover`, `:focus` and `:active` as shown below:
+DOM elements can inherit any of the following states, default, focus, hover
+and active. To change our UI for each of these states, we need to apply styles
+to the following pseudo classes `:hover`, `:focus` and `:active` as shown below:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
-See [Pseudo classes for touch states](#pseudo-classes-for-touch-states):
-
 ![Image illustrating the different colors for button states](images/button-states.png)
-
-#### Hover and Focus Stickiness
 
 On most mobile browsers *hover* and/or *focus* states will apply to an element
 after it's been tapped.
@@ -61,57 +46,24 @@ after it's been tapped.
 Consider carefully what styles you set and how they will look to the user after
 they finish their touch.
 
-Bear in mind that anchor tags and buttons may have different behaviour in
-different browsers, so assume in some cases *hover* will remain and in others
-**focus** will remain.
+Note: Anchor tags and buttons may have different behavior in different browsers, so assume in some cases **hover** will remain and in others **focus** will remain.
 
-#### Enabling Active State Support on iOS
-
-Unfortunately, Safari on iOS does not apply the *active* state by default, to
-get it working you need to add a `touchstart` event listener to the *document
-body* or to each element.
-
-You should do this behind a user agent test so it's only run on iOS devices.
-
-Adding a touch start to the body has the advantage of applying to all elements
-in the DOM, however this may have performance issues when scrolling the page.
-
-
-    window.onload = function() {
-      if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
-        document.body.addEventListener('touchstart', function() {}, false);
-      }
-    };
-    
-
-The alternative is to add the touch start listeners to all the interactable
-elements in the page, alleviating some of the performance concerns.
-
-
-    window.onload = function() {
-      if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
-        var elements = document.querySelectorAll('button');
-        var emptyFunction = function() {};
-        for(var i = 0; i < elements.length; i++) {
-          elements[i].addEventListener('touchstart', emptyFunction, false);
-        }
-      }
-    };
-    
-
-#### Override Default Browser Styles for Touch States
+### Suppressing Default Browser Styles
 
 Once you add styles for the different states, you'll notice that most browsers
-implement their own styles to respond to a user’s touch, you should override
-these defaults when you've added your own styles.
+implement their own styles in response to a user’s touch. This is largely due
+to the fact that when mobile devices first launched, a number of sites didn’t
+have styling for the `:active` state. As a result, many browsers add additional
+highlight color or style to give the user feedback.
 
-Caution: Only override browser styles if you are implementing your own!
+Most browsers will use the `outline` CSS property to display a ring around an
+element when an element is focused which you suppress with:
 
+    .btn:focus {
+      outline: 0;
 
-##### Override Tap Highlight Styles
-
-When mobile devices first launched, a number of sites didn’t have styling for
-the active state. As a result, many browsers add a highlight color or style to elements when a user touches them.
+      // Add replacement focus styling here (i.e. border)
+    }
 
 Safari and Chrome add a tap highlight color which can be prevented with the
 `-webkit-tap-highlight-color` CSS property:
@@ -123,53 +75,334 @@ Safari and Chrome add a tap highlight color which can be prevented with the
 Internet Explorer on Windows Phone has a similar behavior, but is suppressed
 via a meta tag:
 
-
     <meta name="msapplication-tap-highlight" content="no">
-    
 
-##### Override FirefoxOS Button State Styles
+Firefox has two side effects to handle.
 
-The Firefox `-moz-focus-inner` pseudo class includes an outline on touchable elements.
-You can remove this outline by setting the `border: 0`.
+The `-moz-focus-inner` pseudo class which adds an outline on
+touchable elements, which you can remove by setting `border: 0`.
 
-If you are using a `<button>` element, you get a gradient applied to your
-button which you can remove by setting `background-image: none`.
+If you are using a `<button>` element on Firefox, you get a gradient
+applied, which you can remove by setting `background-image: none`.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
-##### Override Element Outline in Focus State
+Caution: Only suppress the default styles mentioned above if you have pseudo classes for `:hover`, `:active` and `:focus`!
 
-Suppress the outline color when an element is focused using `outline: 0`.
+### Disabling user-select
 
+If you are crafting an experience for touch you may want to make parts of
+your UI which can't have text select, elements like buttons or form input.
+You can do this by setting  the `user-select` CSS property, but beware that
+doing this on content users want to select can be *extremely* infuriating
+for users.
 
-    .btn:focus {
-      outline: 0;
-    
-      // Add replacement focus styling here (i.e. border)
-    }
-    
-
-#### Disable user-select on UI which Responds to Touch
-
-Some mobile browsers will select text if the user long presses on the screen.
-This can result in a bad user experience if the user accidentally presses down
-on a button for too long. You can prevent this from happening using the
-`user-select` CSS property.
-
-
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
-    
 
-Caution: You should be cautious not to disable user selection if the information on the element may be useful to the user (phone number, e-mail address, and so on).
+## Implement custom gestures
 
-### Reference
+If you have an idea for custom interactions and gestures for your site, there
+are two topics to keep in mind:
 
-#### Pseudo Classes for Touch States
+1. How to support the all browsers.
+1. How to keep your frame rate high.
+
+In this article, we'll look at exactly these topics covering the API's we need
+to support to hit all browsers and then cover how we use these events
+efficiently.
+
+Depending on what you would like your gesture to do, you’re likely want the
+user to interact with one element at a time *or* you'll want them to be able
+to interact with multiple elements at the same time.
+
+We are going to look at two examples in this article, both demonstrating
+support for all browsers and how to keep frame rate high.
+
+![Example GIF of touch on document](images/touch-document-level.gif){: .attempt-right }
+
+The first example will allow the user to interact with one element. In this
+case you might want all touch events to be given to that one element, as long
+as the gesture initially started on the element itself. For example, moving a finger off
+the swipe-able element can still control the element.
+
+This is useful at it's allows a great deal of flexibility for the user, but
+does enforce a restriction on how the user can interact with your UI.
+
+<div class="clearfix"></div>
+
+![Example GIF of touch on element](images/touch-element-level.gif){: .attempt-right }
+
+If, however, you expect users to interact with multiple elements at the same
+time (using multi-touch), you should restrict the touch to the specific
+element.
+
+This is more flexible for users, but does complicate the logic for manipulating
+the UI and is less resilient to user error.
+
+<div class="clearfix"></div>
+
+### Add Event Listeners
+
+In Chrome (version 55+) and Internet Explorer + Edge `PointerEvents` are
+the recommended approach for implementing custom gestures.
+
+In other browsers `TouchEvents` and `MouseEvents` are the approach to take..
+
+The great feature of `PointerEvents` is that it merges multiple types of input,
+including mouse, touch and pen events, into one set of
+callbacks. The events to list for are `pointerdown`, `pointermove` and
+`pointerup`.
+
+The equivalent in other browsers are `touchstart`, `touchmove`,
+`touchend` and `touchcancel` for touch events and if you wanted to implement
+the same gesture for mouse input you'd need to implement `mousedown`,
+`mousemove`, and `mouseup`.
+
+If you ever get lost with want events to use, just check out this table of
+[Touch, mouse and pointer events](#touch-mouse-and-pointer-events)).
+
+Using these events requires calling the `addEventListener()` method on a DOM
+element, along with the name of an event, a callback function and a boolean.
+The boolean determines whether you should catch the event before or after
+other elements have had the opportunity to catch and interpret the
+events (`true` means we want the event before other elements).
+
+Here's an example of listening for the start of an interaction.
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
+</pre>
+
+Note: PointerEvents only need a single pointerdown event to handle both mouse and touch events. This is due to the design of the API.
+
+#### Handle Single-Element Interaction
+
+In the short snippet of code above we only added the starting event listener,
+this wasn't just to show you how to add the event listeners. for single
+element gestures, this is the only event listener we add at first.
+
+By adding the "move" and "end" event listeners *after* a gesture has
+started, the browser can quickly check if the touch occurred in a
+region with an event listener and if not, it can skips calling
+any JavaScript, which can be a slow process.
+
+The steps taken to implement this are:
+
+1. Add the start events listener to an element.
+1. Inside your start gesture callback, bind the move and end elements to the
+   document. The reason for binding the move and end events to the
+   document is so that we receive all events regardless of whether they
+   occur on the original element or not.
+1. Handle the move events.
+1. On the end event, remove the move and end listeners from the document and
+   end the gesture.
+
+Below is a snippet of our `handleGestureStart` method which adds the move
+and end events to the document:
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+</pre>
+
+The end callback we add is `handleGestureEnd`, which removes the move
+and end event listeners from the document when the gesture has finished like so:
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
+</pre>
+
+<div class="attempt-left">
+  <p>By following this pattern of adding the move event to the document, if the
+  user starts interacting with an element and moves their gesture outside of
+  the element, we'll continue to get mouse movements regardless of where they
+  are on the page, because the events are being received from the document.</p>
+
+  <p>This diagram demonstrates what the touch events are doing as we add the
+  *move* and *end* events to the document once a gesture begins.</p>
+</div>
+
+![Illustrating Binding Touch Events to Document in touchstart](images/scroll-bottleneck.gif)
+
+<div class="clearfix"></div>
+
+
+#### Handle Multi-Element Interaction
+
+If you expect your users to use multiple elements at once, you can add the
+move and end events listeners directly to the elements themselves. This
+applies to touch only, for mouse interactions you should continue to apply
+the `mousemove` and `mouseup` listeners to the document.
+
+Since we only wish to track touches on a particular element, we can add the
+move and end listeners for touch and pointer events to the element straight away:
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="addlisteners" adjust_indentation="auto" %}
+</pre>
+
+In our `handleGestureStart` and `handleGestureEnd` function, we add and
+remove the mouse event listeners to the document.
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="handle-gestures" adjust_indentation="auto" %}
+</pre>
+
+### Responding to Touch Efficiently
+
+Now that we have the start and end events taken care of we can actually respond to the touch events.
+
+For any of the start and move events, you can easily extract `x` and `y`
+from an event.
+
+The following code snippet checks whether the event is from a `TouchEvent` by checking if `targetTouches` exists, if it does, then it extracts the `clientX` and `clientY` from the first touch.
+If the event is a `PointerEvent` or `MouseEvent` we extract `clientX` and `clientY` directly from the event itself.
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
+</pre>
+
+A TouchEvent has three lists containing touch data:
+
+* `touches`: list of all current touches on the screen, regardless of DOM element they are on.
+* `targetTouches`: list of touches currently on the DOM element the event is bound to.
+* `changedTouches`: list of touches which changed resulting in the event being fired.
+
+In most cases, `targetTouches` gives you everything you need and want. (For
+more info on these lists see [Touch lists](#touch-lists)).
+
+#### Use requestAnimationFrame
+
+Since the event callbacks are fired on the main thread, we want to run as
+little code as possible in the callbacks for our events, keeping our frame
+rate high and preventing jank.
+
+Using `requestAnimationFrame` we have an opportunity to update the UI when
+the browser is intending to draw a frame and will help us move some work out
+of our event callbacks.
+
+If you are unfamiliar with request animation frames, you
+can [learn more here](/web/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes),
+but one way to think of `requestAnimationFrame` is that it is a way of changing
+UI in a way that "works with the browser" rather than against.
+
+A typical implementation is to save the `x` and `y` coordinates from the
+start and move events and request an animation frame inside the move event
+callback.
+
+In our demo, we store the initial touch position in `handleGestureStart` (look for `initialTouchPos`):
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
+</pre>
+
+The `handleGestureMove` method stores the position before requesting an
+animation frame if we need to, passing in our `onAnimFrame` function as the
+callback:
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
+</pre>
+
+The `onAnimFrame` value is a function that when called, we change our UI
+to move our UI around. By passing it into `requestAnimationFrame`, we are
+telling the browser to call it just before it's about to update the page
+(i.e. paint any changes to the page).
+
+In the `handleGestureMove` callback we initially check if `rafPending` is false,
+which indicates if `onAnimFrame` has been called by `requestAnimationFrame`
+since the last move event. Since means we only have one `requestAnimationFrame`
+waiting to run at any one time.
+
+When our `onAnimFrame` callback is executed, we set the transform on any
+elements we want to move before updating `rafPending` to `false`, allowing the
+the next touch event to request a new animation frame.
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
+</pre>
+
+### Control Gestures using Touch Actions
+
+The CSS property `touch-action` allows you to control the default touch
+behavior of an element. In our examples, we use `touch-action: none` to
+prevent the browser from doing anything with a users' touch, allowing us
+to intercept all of the touch events.
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
+</pre>
+
+`touch-action` allows you to disable gestures implemented by a browser.
+For example, IE10+ supports a double-tap to zoom gesture. By setting a touch-action
+of `pan-x | pan-y | manipulation` you prevent the default double-tap
+behavior.
+
+This allows you to implement a double-tap gesture yourself.
+
+Below is a list of the available parameters for *touch-action*.
+
+<table class="responsive">
+  <thead>
+    <tr>
+      <th colspan="2">Touch Action Parameters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-th="Property"><code>touch-action: auto</code></td>
+      <td data-th="Description">
+        The browser will add the normal touch interactions which it supports. For example, scrolling in the x-axis, scrolling in the y-axis, pinch zoom and double tap.
+      </td>
+    </tr>
+    <tr>
+      <td data-th="Property"><code>touch-action: none</code></td>
+      <td data-th="Description">No touch interactions will be handled by the browser.</td>
+    </tr>
+    <tr>
+      <td data-th="Property"><code>touch-action: pan-x</code></td>
+      <td data-th="Description">Only horizontal scrolling will be handled by the browser; vertical scrolling and gestures will be disabled.</td>
+    </tr>
+    <tr>
+      <td data-th="Property"><code>touch-action: pan-y</code></td>
+      <td data-th="Description">Only vertical scrolling will be handled by the browser; horizontal scrolling and gestures will be disabled.</td>
+    </tr>
+    <tr>
+      <td data-th="Property"><code>touch-action: manipulation</code></td>
+      <td data-th="Description">Scrolling in both directions and pinch zooming will be handled by the browser; all other gesture will be ignored by the browser.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+Note: Using <code>touch-action&colon; pan-x</code> or <code>touch-action&colon; pan-y</code> are great for being explicit in your intention that a user should only ever scroll vertically or horizontally on an element.
+
+## Supporting for Older Versions of IE
+
+If you want to support IE10, you'll need to handle vendor prefixed versions of
+`PointerEvents`.
+
+
+To check for support of `PointerEvents` you'd typically look for
+`window.PointerEvent`, but in IE10, you'd look
+`window.navigator.msPointerEnabled`.
+
+The event names with vendor prefixes are: 'MSPointerDown', 'MSPointerUp' and
+'MSPointerMove'.
+
+Below is a snippet that demonstrates how to check for support and switch
+the event names.
+
+<pre class="prettyprint">
+{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
+</pre>
+
+For more information, checkout this [updates article from Microsoft](https://msdn.microsoft.com/en-us/library/dn304886(v=vs.85).aspx).
+
+## Reference
+
+### Pseudo Classes for Touch States
 
 <table>
   <thead>
@@ -214,294 +447,11 @@ Caution: You should be cautious not to disable user selection if the information
   </tbody>
 </table>
 
-## Implement custom gestures
-
-If you have an idea for custom interactions and gestures for your site, there
-are two topics to keep in mind: how to support the range of mobile browsers
-and how to keep your frame rate high. In this article, we'll look at exactly
-these topics.
-
-
-### Respond to Touch Input Using Events
-
-Depending on what you would like to do with touch, you’re likely to fall into
-one of two camps:
-
-- I want the user to interact with one particular element.
-- I want the user to interact with multiple elements at the same time.
-
-There are trade offs to be had with both.
-
-![Example GIF of touch on document](images/touch-document-level.gif){: .attempt-right }
-
-If the user will only be able to interact with one element, you might want
-all touch events to be given to that one element, as long as the gesture
-initially started on the element itself. For example, moving a finger off
-the swipable element can still control the element.
-
-<div class="clearfix"></div>
-
-![Example GIF of touch on element](images/touch-element-level.gif){: .attempt-right }
-
-If, however, you expect users to interact with multiple elements at the same
-time (using multi-touch), you should restrict the touch to the specific
-element.
-
-<div class="clearfix"></div>
-
-
-### TL;DR {: .hide-from-toc }
-- For full device support, handle touch, mouse and Pointer Events.
-- Always bind start event listeners to the element itself.
-- If you want the user to interact with one particular element, bind your move and end listeners to the document in the touchstart method; ensure you unbind them from the document in the end listener.
-- If you want to support multi-touch, either restrict move and end touch events to the element itself or handle all the touches on an element.
-
-
-### Add Event Listeners
-
-Touch events and mouse events are implemented on most mobile browsers.
-
-The event names you need to implement are `touchstart`, `touchmove`,
-`touchend` and `touchcancel`.
-
-For some situations, you may find that you would like to support mouse
-interaction as well; which you can do with the mouse events:
-`mousedown`, `mousemove`, and `mouseup`.
-
-For Windows Touch devices, you need to support Pointer Events which are a
-new set of events. Pointer Events merge mouse and touch events into one set of
-callbacks. This is currently only supported in Internet Explorer 10+ with
-the prefixed events `MSPointerDown`, `MSPointerMove`, and `MSPointerUp` and
-in IE 11+ the unprefixed events `pointerdown`, `pointermove`, and `pointerup`.
-
-Touch, mouse and Pointer Events are the building blocks for adding new
-gestures into your application (see 
-[Touch, mouse and Pointer events](#touch-mouse-and-pointer-events)).
-
-Include these event names in the `addEventListener()` method, along with the
-event’s callback function and a boolean. The boolean determines whether you
-should catch the event before or after other elements have had the
-opportunity to catch and interpret the events (`true` means we want the event
-before other elements).
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
-</pre>
-
-This code first checks to see if Pointer Events are supported by testing for
-`window.PointerEventsSupport`, if Pointer Events aren’t supported, we add listeners for
-touch and mouse events instead.
-
-The value `window.PointerEventSupport` is determined by looking for the
-existence of `window.PointerEvent` or the now deprecated
-`window.navigator.msPointerEnabled` objects. If they are supported we use
-varibles for event names, which use the prefixed or unprefixed versions depending
-on the existence of `window.PointerEvent`.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
-</pre>
-
-### Handle Single-Element Interaction
-
-In the short snippet of code above you may have noticed that we only add the starting event listener, this is a conscious decision.
-
-By adding the move and end event listeners once the gesture has
-started on the element itself, the browser can check if the touch occured in a
-region with a touch event listener and if it’s not, can handle it faster
-by not having to run any additional javascript.
-
-The steps taken to implement this are:
-
-1. Add the start events listener to an element.
-1. Inside your touch start method, bind the move and end elements to the
-   document. The reason for binding the move and end events to the
-   document is so that we receive all events regardless of whether they
-   occur on the original element or not.
-1. Handle the move events.
-1. On the end event, remove the move and end listeners from the document.
-
-Below is a snippet of our `handleGestureStart` method which adds the move
-and end events to the document:
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
-</pre>
-
-The end callback we add is `handleGestureEnd` which removes the move
-and end events from the document when the gesture has finished:
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
-</pre>
-
-Mouse events follow this same pattern since it’s easy for a user to
-accidentally move the mouse outside of the element, which results in the move
-events no longer firing. By adding the move event to the document, we'll continue to get mouse movements regardless of where they are on the page.
-
-You can use the
-[Show potential scroll bottlenecks](https://developer.chrome.com/devtools/docs/rendering-settings#show-potential scroll bottlenecks)
-feature in Chrome DevTools to show how the touch events behave:
-
-<img src="images/scroll-bottleneck-devtool.png" alt="Enable Scroll Bottleneck in DevTools">
-
-![Illustrating Binding Touch Events to Document in touchstart](images/scroll-bottleneck.gif){: .attempt-right }
-
-With this enabled you can see where touch events are bound and ensure your logic for adding
-and removing listeners is working as you'd expect.
-
-<div class="clearfix"></div>
-
-
-### Handle Multi-Element Interaction
-
-If you expect your users to use multiple elements at once, you can add the
-move and end events listeners directly to the elements themselves. This
-applies to touch only, for mouse interactions you should continue to apply
-the `mousemove` and `mouseup` listeners to the document.
-
-Since we only wish to track touches on a particular element, we can add the
-move and end listeners for touch and pointer events to the element straight away:
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="addlisteners" adjust_indentation="auto" %}
-</pre>
-
-In our `handleGestureStart` and `handleGestureEnd` function, we add and
-remove the mouse event listeners to the document.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="handle-gestures" adjust_indentation="auto" %}
-</pre>
-
-### Responding to Touch Efficiently
-
-Now that we have the start and end events taken care of we can actually respond to the touch events.
-
-#### Get and Store Touch Event Coordinates
-
-For any of the start and move events, you can easily extract `x` and `y`
-from an event.
-
-The following code snippet checks whether the event is from a touch event by looking for `targetTouches`, if it is then it extracts the `clientX` and `clientY` from the first touch. If the event is a mouse or pointer event then we extract `clientX` and `clientY` directly from the event itself.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
-</pre>
-
-Each touch event has three lists containing touch data
-(see also [Touch lists](#touch-lists)):
-
-* `touches`: list of all current touches on the screen, regardless of DOM element they are on.
-* `targetTouches`: list of touches currently on the DOM element the event is bound to.
-* `changedTouches`: list of touches which changed resulting in the event being fired.
-
-In most cases, `targetTouches` gives you everything you need.
-
-#### requestAnimationFrame
-
-Since the event callbacks are fired on the main thread, we want to run as
-little code as possible in the callback to keep our frame rate high,
-preventing jank.
-
-Use `requestAnimationFrame` to change the UI in response to
-an event. This gives you an opportunity to update the UI when the browser is intending to draw a frame and will help you move some work out of your callback.
-
-If you are unfamiliar with request animation frames, you can [learn more here](/web/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes).
-
-A typical implementation is to save the `x` and `y` coordinates from the
-start and move events and request an animation frame in the move event
-callback.
-
-In our demo, we store the initial touch position in `handleGestureStart`:
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
-</pre>
-
-The `handleGestureMove` method stores the `y` position before requesting an
-animation frame if we need to, passing in our `onAnimFrame` function as the
-callback:
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="handle-move" adjust_indentation="auto" %}
-</pre>
-
-It’s in the `onAnimFrame` function that we change our UI to move the
-elements around. Initially we check to see if the gesture is still
-on-going to determine whether we should still animate or not, if so we use
-our initial and last y positions to calculate the new transform for our
-element.
-
-Once we’ve set the transform, we set the `isAnimating` variable to `false` so
-the next touch event will request a new animation frame.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
-</pre>
-
-### Control Gestures using Touch Actions
-
-The CSS property `touch-action` allows you to control the default touch
-behavior of an element. In our examples, we use `touch-action: none` to
-prevent the browser from doing anything with a users' touch, allowing us
-to intercept all of the touch events.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
-</pre>
-
-`touch-action` allows you to disable gestures implemented by a browser.
-For example, IE10+ supports a double-tap to zoom gesture. By setting a touch-action
-of `pan-x | pan-y | manipulation` you prevent the default double-tap
-behavior.
-
-This allows you to implement a double-tap gesture yourself.
-In the case of IE10+, it also eliminates the 300ms click delay.
-
-Below is a list of the available parameters for *touch-action*.
-
-<table class="responsive">
-  <thead>
-    <tr>
-      <th colspan="2">Touch Action Parameters</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="Property"><code>touch-action: auto</code></td>
-      <td data-th="Description">
-        The browser will add the normal touch interactions which it supports. For example, scrolling in the x-axis, scrolling in the y-axis, pinch zoom and double tap.
-      </td>
-    </tr>
-    <tr>
-      <td data-th="Property"><code>touch-action: none</code></td>
-      <td data-th="Description">No touch interactions will be handled by the browser.</td>
-    </tr>
-    <tr>
-      <td data-th="Property"><code>touch-action: pan-x</code></td>
-      <td data-th="Description">Only horizontal scrolling will be handled by the browser; vertical scrolling and gestures will be disabled.</td>
-    </tr>
-    <tr>
-      <td data-th="Property"><code>touch-action: pan-y</code></td>
-      <td data-th="Description">Only vertical scrolling will be handled by the browser; horizontal scrolling and gestures will be disabled.</td>
-    </tr>
-    <tr>
-      <td data-th="Property"><code>touch-action: manipulation</code></td>
-      <td data-th="Description">Scrolling in both directions and pinch zooming will be handled by the browser; all other gesture will be ignored by the browser.</td>
-    </tr>
-  </tbody>
-</table>
-
-
-Note: Using <code>touch-action&colon; pan-x</code> or <code>touch-action&colon; pan-y</code> are great for being explicit in your intention that a user should only ever scroll vertically or horizontally on an element.
-
-### Reference
 
 The definitive touch events reference can be found here:
 [w3 Touch Events](http://www.w3.org/TR/touch-events/).
 
-#### Touch, Mouse, and Pointer events
+### Touch, Mouse, and Pointer events
 
 These events are the building blocks for adding new gestures into your
 application:
@@ -557,7 +507,7 @@ application:
   </tbody>
 </table>
 
-#### Touch Lists
+### Touch Lists
 
 Each touch event includes three list attributes:
 
@@ -611,3 +561,35 @@ Each touch event includes three list attributes:
   </tbody>
 </table>
 
+### Enabling Active State Support on iOS
+
+Unfortunately, Safari on iOS does not apply the *active* state by default, to
+get it working you need to add a `touchstart` event listener to the *document
+body* or to each element.
+
+You should do this behind a user agent test so it's only run on iOS devices.
+
+Adding a touch start to the body has the advantage of applying to all elements
+in the DOM, however this may have performance issues when scrolling the page.
+
+
+    window.onload = function() {
+      if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+        document.body.addEventListener('touchstart', function() {}, false);
+      }
+    };
+
+
+The alternative is to add the touch start listeners to all the interactable
+elements in the page, alleviating some of the performance concerns.
+
+
+    window.onload = function() {
+      if(/iP(hone|ad)/.test(window.navigator.userAgent)) {
+        var elements = document.querySelectorAll('button');
+        var emptyFunction = function() {};
+        for(var i = 0; i < elements.length; i++) {
+          elements[i].addEventListener('touchstart', emptyFunction, false);
+        }
+      }
+    };
