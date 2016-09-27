@@ -3,12 +3,3 @@ redirects:
 
 - from: /web/fundamentals/engage-and-retain/simplified-app-installs
   to: /web/fundamentals/engage-and-retain/app-install-banners/
-
-- from: /web/fundamentals/engage-and-retain/web-app-manifest
-  to: /web/fundamentals/engage-and-retain/web-app-manifest/
-
-- from: /web/fundamentals/engage-and-retain/app-install-banners
-  to: /web/fundamentals/engage-and-retain/app-install-banners/
-
-- from: /web/fundamentals/engage-and-retain/push-notifications
-  to: /web/fundamentals/engage-and-retain/push-notifications/

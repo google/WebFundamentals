@@ -24,9 +24,12 @@ def checkForRedirect(requestedPath, lang, useMemcache):
   # tree then checks to see if a redirect exists for the current URL.
   redirects = []
   requestDir = requestedPath
+  requestDir = re.sub(r'^/?web/', '', requestDir)
+  if os.path.isdir(os.path.join(SOURCE_PATH, lang, requestDir)):
+    return '/web/' + requestDir + '/'
+
   if not requestDir.endswith('/'):
     requestDir = requestDir[:requestDir.rindex('/') + 1]
-  requestDir = re.sub(r'^/?web/', '', requestDir)
   requestDir = os.path.join(SOURCE_PATH, lang, requestDir)
 
   while requestDir.startswith(SOURCE_PATH):
