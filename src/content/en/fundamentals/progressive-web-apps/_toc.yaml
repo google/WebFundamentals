@@ -3,6 +3,8 @@ toc:
   section:
   - title: Overview
     path: /web/fundamentals/progressive-web-apps/
-  - title: Ways to Architect Your PWA
-    path: /web/fundamentals/progressive-web-apps/architecture
+  - title: Migrating To A PWA
+    path: /web/fundamentals/progressive-web-apps/migrating
+  - title: Architecting a PWA with the App Shell Model
+    path: /web/fundamentals/progressive-web-apps/app-shell
     
