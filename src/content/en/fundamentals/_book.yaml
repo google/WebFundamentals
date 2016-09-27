@@ -8,6 +8,7 @@ upper_tabs:
       - name: Fundamentals
         contents:
         - include: /web/fundamentals/getting-started/_toc.yaml
+        - include: /web/fundamentals/progressive-web-apps/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/instant-and-offline/_toc.yaml
         - include: /web/fundamentals/security/_toc.yaml

@@ -1,0 +1,8 @@
+toc:
+- title: Progressive Web Apps
+  section:
+  - title: Overview
+    path: /web/fundamentals/progressive-web-apps/
+  - title: Ways to Architect Your PWA
+    path: /web/fundamentals/progressive-web-apps/architecture
+    
