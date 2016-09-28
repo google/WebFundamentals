@@ -9,6 +9,7 @@ description: Payment Request API is for fast, easy payments on the web.
 
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/zkoch.html" %}
 
 Dogfood: `PaymentRequest` is still in development. While we think it's stable enough to implement, it may continue to change. We'll keep this page updated to always reflect the current status of the API. Meanwhile, to protect yourself from API changes that may be backwards incompatible, we're offering [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that can be embedded on your site. The shim will paper over any API differences for two major Chrome versions.
 
