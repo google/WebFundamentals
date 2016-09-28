@@ -144,7 +144,7 @@ This combination satisfies the basic storage needs for many mobile web apps. Loo
 
 Now that we’ve reviewed some of the relevant ways to think about storage mechanisms and compared the most popular APIs and services available today, we'll be adadding more content soon to dive more deeply into one or more topics of interest:
 
-* Offline Storage Recommendations for Progressive Web Apps (devsite version of Addy’s medium post)
+* Offline Storage Recommendations for Progressive Web Apps
 
 * Common Storage Patterns
 
