@@ -83,7 +83,7 @@ Support</td>
     <td>Session Storage</td>
     <td>key/value</td>
     <td>session</td>
-    <td></td>
+    <td>93%</td>
     <td>No</td>
     <td>Sync</td>
   </tr>
