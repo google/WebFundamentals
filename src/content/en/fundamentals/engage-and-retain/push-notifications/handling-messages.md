@@ -63,7 +63,8 @@ Practically speaking, you should include at least a body and an icon. As you can
 see notifications have quite a few options. You can find a complete
 [list of them at MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification).
 
-Finally, we'll process the user's response using the `notificationclick` method.
+Finally, we'll process the user's response using the `notificationclick` and
+`notificationclose` methods.
 
 
     self.addEventListener('notificationclick', event => {  
@@ -71,6 +72,10 @@ Finally, we'll process the user's response using the `notificationclick` method.
       event.notification.close();  
     });
     
+    self.addEventListener('notificationclose', event => {  
+      // Do something with the event  
+    });
+     
 
 Everything else is just an elaboration of these basic ideas.
 
