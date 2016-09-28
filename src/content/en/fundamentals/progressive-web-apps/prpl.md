@@ -13,8 +13,6 @@ Dogfood: PRPL is a pattern we believe makes sense for applications that can
 be granularly served. It is currently considered experimental, however we plan on publishing 
 more data on where it works well in the future. 
 
-## Introduction
-
 The web was not initially designed to build modern, highly-interactive applications.
 
 Over the years, we've used JavaScript to try filling this gap. We've invented clever models for structuring
@@ -186,6 +184,7 @@ For an example of how HTTP/2 server push speeds up downloads, consider how the b
 HTML file with a linked stylesheet.
 
 In HTTP/1:
+
 *   The browser requests the HTML file.
 *   The server returns the HTML file and the browser starts parsing it.
 *   The browser encounters the `<link rel="stylesheet">` tag, and starts a new request for the
@@ -193,6 +192,7 @@ In HTTP/1:
 *   The browser receives the stylesheet.
 
 With HTTP/2 push:
+
 *   The browser requests the HTML file.
 *   The server returns the HTML file, and pushes the stylesheet at the same time.
 *   The browser starts parsing the HTML. By the time it encounters the `<link rel="stylesheet">`,
