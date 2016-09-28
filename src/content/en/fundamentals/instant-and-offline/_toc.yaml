@@ -3,4 +3,5 @@ toc:
     section:
     - title: The Offline Cookbook
       path: /web/fundamentals/instant-and-offline/offline-cookbook/
-
+    - title: Web Storage
+      path: /web/fundamentals/instant-and-offline/web-storage/
