@@ -32,14 +32,14 @@ which impacts ease of use, cost and performance of storage and retrieval
 requests. 
 
 * **Structured: **Data stored in tables with predefined fields, as is typical
-of SQL based Database Management Systems, lends itself well to flexible and
+of SQL based database management systems, lends itself well to flexible and
 dynamic queries, where the full range of query types may not be be known a
 priori. A prominent example of a structured datastore is IndexedDB in the
 browser.
 
 * **Key/Value:** Key/Value datastores, and related NoSQL databases, offer the
 ability to store and retrieve unstructured data indexed by a unique key.
-Key/Value datastores are like hash tables in that they allow constant time
+Key/Value datastores are like hash tables in that they allow constant-time
 access to indexed, opaque data. Prominent examples of key/value datastores are
 the Cache API in the browser and Apache Cassandra on the server.
 
@@ -76,8 +76,8 @@ broader knowledge base and a richer developer ecosystem.
 
 ### Transactions
 
-Oftentime, it is important for a collection of related storage operations to
-succeed or fail atomically. Database Management Systems have traditionally
+Often, it is important for a collection of related storage operations to
+succeed or fail atomically. Database management systems have traditionally
 supported this feature using the transaction model, where related updates may be
 grouped into arbitrary units. While not always necessary, this is a convenient,
 and sometimes essential, feature in some problem domains.
