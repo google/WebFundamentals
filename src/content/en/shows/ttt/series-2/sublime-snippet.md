@@ -30,7 +30,7 @@ The only gotcha to bare in mind is that snippets may only work when the file you
 are editing has a specific extension (i.e. JavaScript snippets would only work
 when editing a file ending with .js).
 
-# JS and NodeJS Snippets
+## JS and NodeJS Snippets
 
 [Sublime](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets)
 | [Atom](https://atom.io/packages/javascript-snippets)
@@ -88,7 +88,7 @@ Zeno has a full list of the commands you can use on the [github
 repo](https://github.com/zenorocha/sublime-javascript-snippets) (and package
 pages).
 
-# ES2015 Toolkit
+## ES2015 Toolkit
 
 [Sublime](https://packagecontrol.io/packages/ES6-Toolkit)
 
@@ -143,7 +143,7 @@ Unfortunately this package isn't available for Atom. The closest equivalent
 seems to be [this package titled
 'es6-javascript'](https://atom.io/packages/es6-javascript).
 
-# Polymer and Web Component Package
+## Polymer and Web Component Package
 
 [Sublime](https://packagecontrol.io/packages/Polymer%20%26%20Web%20Component%20Snippets)
 | [Atom](https://atom.io/packages/polymer-snippets)
@@ -179,7 +179,7 @@ Dodsons](http://robdodson.me/)  awesome Polymer and Web Component snippets.
     </dom-module>
     
 
-# React Snippets
+## React Snippets
 
 [Sublime](https://github.com/babel/babel-sublime-snippets) |
 [Atom](https://atom.io/packages/react)
@@ -228,7 +228,7 @@ out components and commonly written code with these snippets.
     this.state.
     
 
-# MOAR Packages
+## MOAR Packages
 
 There are a tonne of other packages which offer snippets for different
 frameworks, so if you find yourself writing the same pieces of code over and

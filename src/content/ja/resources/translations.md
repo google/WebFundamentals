@@ -8,7 +8,7 @@ description: Web Fundamentals を日本語化したい人は、誰でも Contrib
 # 翻訳手順 {: .page-title }
 
 
-# Web Fundamentals の日本語翻訳手順
+## Web Fundamentals の日本語翻訳手順
 すべての記事のソースコードは `src/content` にあります。 ベースとなるコンテンツは英語で、 `src/content/en` ディレクトリにあります。翻訳は `src/content/ja` 以下に同じ構造で配置して下さい。
 
 ## 翻訳記事の追加と Pull Request の送信

@@ -23,7 +23,7 @@ Web and Web Bluetooth to make IoT devices more intuitive and less intrusive.
 
 ![Client application](/web/updates/images/2016/03/web-enabled-internet-of-things/tablet-ux.png)
 
-# Web and IoT, a match to be
+## Web and IoT, a match to be
 
 There are still a lot of hurdles to overcome before Internet
 of Things can be a huge success. One obstacle is companies and products
@@ -105,7 +105,7 @@ The `package.json` file for the project looks like this:
     }
     
 
-## Announcing the website
+### Announcing the website
 
 Beginning with version 49, Chrome on Android supports Physical Web, which
 allows Chrome to see URLs being broadcasted by devices around it.
@@ -145,7 +145,7 @@ first time you launch Chrome beta.
 <img alt="The web app URL is listed" src="/web/updates/images/2016/03/web-enabled-internet-of-things/physicalweb.png" style="width: 50%; float: left"/>
 <br/>
 
-## Communicating with the sensor/actuator
+### Communicating with the sensor/actuator
 
 We use [Johnny-Five](http://johnny-five.io/)&#42; to talk to our board
 enhancements. Johnny-Five has a nice abstraction for talking to the TMP36
@@ -198,7 +198,7 @@ board.
 
 ![Edison board](/web/updates/images/2016/03/web-enabled-internet-of-things/board.jpg)
 
-## Talking to Bluetooth
+### Talking to Bluetooth
 
 Talking to Bluetooth couldn't be much easier than it is with `noble`.
 
@@ -411,7 +411,7 @@ characteristics (other UUIDs)
     });
     
 
-# Creating the client web app
+## Creating the client web app
 
 Without getting into too many defails about how the non-bluetooth
 parts of the client app work, we can demonstrate a responsive user
@@ -520,7 +520,7 @@ sensor is also quite easy:
     },
     
 
-# Summary
+## Summary
 
 That was it folks! As you can see, communicating with Bluetooth Low
 Energy using Web Bluetooth on the client side and Node.js on the
@@ -531,18 +531,18 @@ device and allows the user to easily connect to it without installing
 seldom-used applications that the user may not want, and which may update
 from time to time.
 
-## Demo
+### Demo
 
 You can try the [client](https://edison-webbt.appspot.com) to get
 inspired about how can you create your own web apps to connect to
 your custom Internet of Things devices.
 
-## Source code
+### Source code
 
 The source code is available [here](https://github.com/01org/webbluetooth-edison-demo).
 Feel free to report issues or send patches.
 
-## Sketch
+### Sketch
 
 If you are really adventurous and want to reproduce what I have done,
 refer to the Edison and breadboard sketch below:

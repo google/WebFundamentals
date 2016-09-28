@@ -16,11 +16,11 @@ description: Chrome 42 lands with Push notifications, Jacob Kaplan-Moss debunks 
 </div>
 
 
-# In this week's episode
+## In this week's episode
 
 Chrome 42 lands with Push notifications, Jacob Kaplan-Moss debunks myths about programmers, protocol relative URLs are now anti-patterns, the mobile friendly badge hits Google, git tips with First Aid Git, and optimizing your app with RAIL.
 
-## CHROME 42 IS HERE
+### CHROME 42 IS HERE
 
 Chrome 42 hit stable this week and with it comes a number of new features. Push notifications let users opt-in to timely updates, install banners prompt users to save pages to their home screen, permissions let you know if you can use an API, fetch acts as a replacement for XHR, and it even includes support for ES6 classes.
 
@@ -34,13 +34,13 @@ Chrome 42 hit stable this week and with it comes a number of new features. Push 
 
 [http://updates.html5rocks.com/2015/03/introduction-to-fetch](http://updates.html5rocks.com/2015/03/introduction-to-fetch)
 
-## MYTH BUSTER
+### MYTH BUSTER
 
 Jacob Kaplan-Moss keynote from this year’s PyCon breaks down the dichotomy that developers are either 10x badasses or completely terrible. Removing these assumptions helps us better address problems like imposter syndrome and work to improve potentially toxic work environments.
 
 [https://www.youtube.com/watch?t=772&v=hIJdFxYlEKE](https://www.youtube.com/watch?t=772&v=hIJdFxYlEKE)
 
-## TLS ALL THE THINGS!
+### TLS ALL THE THINGS!
 
 Protocol relative URLs are now an anti-pattern. Tweeted by Paul Irish this week, the practice of leaving off the protocol from a URL is now discouraged as it can possibly lead to Man-on-the-side attacks, similar to the one that hit GitHub. The new recommendation is to always request an asset over https if it is available on SSL.
 
@@ -50,7 +50,7 @@ Protocol relative URLs are now an anti-pattern. Tweeted by Paul Irish this week,
 
 [http://www.netresec.com/?page=Blog&month=2015-03&post=China%27s-Man-on-the-Side-Attack-on-GitHub](http://www.netresec.com/?page=Blog&month=2015-03&post=China%27s-Man-on-the-Side-Attack-on-GitHub)
 
-## R U MOBILE FRIENDLY?
+### R U MOBILE FRIENDLY?
 
 Check to see if your site is mobile friendly. A recent article on the Google Webmasters blog indicates that starting immediately, Google Search will add labels next to sites that it considers mobile friendly. The criteria includes such things as making sure that users don’t have to zoom to read the page, and links are spaced far enough apart. You can use the mobile friendly test to ensure your site meets the bar. And skill up at Web Fundamentals.
 
@@ -58,28 +58,28 @@ Check to see if your site is mobile friendly. A recent article on the Google Web
 
 [https://www.google.com/webmasters/tools/mobile-friendly/](https://www.google.com/webmasters/tools/mobile-friendly/)
 
-## GITTING UP TO SPEED
+### GITTING UP TO SPEED
 
 Learning git can be tough. A look at StackOverflow reveals over 53000 git related questions, but help is on the way. First Aid Git is a searchable index of the most commonly asked git questions. Curious how to undo a change that you’ve just pushed to master? You can find the answer and more, or submit a pull request to add to the index.
 
 [http://ricardofilipe.com/projects/firstaidgit/#/](http://ricardofilipe.com/projects/firstaidgit/#/)
 
-## OPTIMIZING RAIL
+### OPTIMIZING RAIL
 
 60 frames per second is the target for a smooth web experience, but it’s easy to fall off the fast path. Paul Lewis and Cameron Pittman show you how to optimize the 4 major areas of your app Response, Animate, Idle, and Load aka RAIL in this FREE 6 part Udacity course. Blast jank invaders and master DevTools all while learning the secrets to a faster web app.
 
 [https://www.udacity.com/course/ud860](https://www.udacity.com/course/ud860)
 
-## ScreenSavers With JavaScript by Yash Bhardwaj
+### ScreenSavers With JavaScript by Yash Bhardwaj
 [http://codepen.io/yashbhardwaj/full/hHgtE/](http://codepen.io/yashbhardwaj/full/hHgtE/)
 
-## Sweet chaos in the space of tulle By Bailh
+### Sweet chaos in the space of tulle By Bailh
 [http://codepen.io/cathbailh/full/KpPjPg/](http://codepen.io/cathbailh/full/KpPjPg/)
 
-## CSS Animation 101 - Hero image by Donovan Hutchinson
+### CSS Animation 101 - Hero image by Donovan Hutchinson
 [http://codepen.io/donovanh/full/EjYeLa/](http://codepen.io/donovanh/full/EjYeLa/)
 
-## Linjer by Hakim El Hattab
+### Linjer by Hakim El Hattab
 [http://codepen.io/hakimel/full/zwxba/](http://codepen.io/hakimel/full/zwxba/)
 
 Let us know what you think on Twitter #LazyWebShow
