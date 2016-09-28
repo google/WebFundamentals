@@ -28,9 +28,9 @@ and devices?
     <img src="/web/images/md-icons/assignment-short.png">
   </a>
   <p>
-    Designing a great user experience can be difficult to attain but is achievable
-    if the design process is broken down into smaller chunks. This article will give you a run through
-    of the typical basics of UX design, based on Google's Design Sprint methodology.
+    A great user experience can be difficult to attain but is achievable
+    if the design process is broken into smaller chunks. This article runs through
+    the basics of UX design, based on Google's Design Sprint methodology.
     <a href="ux-basics/">Learn more</a>
   </p>
 </div>
