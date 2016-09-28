@@ -81,6 +81,34 @@ Use **step into** as your typical "one line at a time" action, as it ensures tha
 
 Use [Pause on exceptions](add-breakpoints#break-on-uncaught-exception) when you suspect an uncaught exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs.
 
+## View properties by scope {: #scope }
+
+When you pause a script, the **Scope** pane shows you all of the
+currently-defined properties at that moment in time.
+
+The pane is highlighted in blue in the screenshot below.
+
+![The Scope pane of the Sources panel](imgs/scope-pane.png)
+
+The Scope pane is only populated when a script is paused.
+While your page is running, the Scope pane is empty.
+
+The Scope pane shows you properties defined at the local, closure, and
+global levels.
+
+If a property has a carat icon next to it, it means that it's an object. Click
+on the carat icon to expand the object and view its properties.
+
+Sometimes properties are dimmed down. For example, the property `constructor`
+is dimmer than the `confirm` property in the screenshot below.
+
+![Dimmed down properties](imgs/enumerables.png)
+
+The darker properties are enumerable. The lighter, dimmed down properties are
+not. See the following Stack Overflow thread for more information:
+[What do the colors mean in Chrome Developer Tools Scope
+panel?](What do the colors mean in Chrome Developer Tools Scope panel?)
+
 ## The call stack
 
 Near the top of the sidebar is the **Call Stack** section. When the code is paused at a breakpoint, the call stack shows the execution path, in reverse chronological order, that brought the code to that breakpoint. This is helpful in understanding not just where the execution is *now*, but how it got there, an important factor in debugging.
