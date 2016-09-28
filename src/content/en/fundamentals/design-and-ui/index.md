@@ -7,8 +7,8 @@ description: Web design and UI encompasses a few broad areas. What does it look 
 
 # Design & UI {: .page-title }
 
-Web design and UI encompasses a few broad areas. What does it look like? How 
-does it behave? How does it respond to different screen sizes, input types, 
+Web design and UI encompasses a few broad areas. What does it look like? How
+does it behave? How does it respond to different screen sizes, input types,
 and devices?
 
 <div class="attempt-left">
@@ -23,6 +23,19 @@ and devices?
 </div>
 
 <div class="attempt-right">
+  <h2>Basics of UX</h2>
+  <a href="ux-basics/">
+    <img src="/web/images/md-icons/assignment-short.png">
+  </a>
+  <p>
+    Designing a great user experience can be difficult to attain but is achievable
+    if the design process is broken down into smaller chunks. This article will give you a run through
+    of the typical basics of UX design, based on Google's Design Sprint methodology.
+    <a href="ux-basics/">Learn more</a>
+  </p>
+</div>
+
+<div class="attempt-left">
   <h2>User input</h2>
   <a href="input/forms/">
     <img src="/web/images/md-icons/touch-short.png">
@@ -36,9 +49,9 @@ and devices?
   </p>
 </div>
 
-<div style="clear:both;"></div>
 
-<div class="attempt-left">
+
+<div class="attempt-right">
   <h2>Icons &amp; browser colors</h2>
   <a href="/web/fundamentals/design-and-ui/browser-customization/">
     <img src="/web/images/md-icons/image-short.png">
@@ -50,8 +63,8 @@ and devices?
     <a href="browser-customization/">Learn more</a>
   </p>
 </div>
-
-<div class="attempt-right">
+<div style="clear:both;"></div>
+<div class="attempt-left">
   <h2>Animations</h2>
   <a href="animations/">
     <img src="/web/images/md-icons/movie-short.png">

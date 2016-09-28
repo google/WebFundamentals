@@ -642,6 +642,23 @@ zkoch:
   description:
     en: Google Chrome Product Manager
 
+mustafa:
+  name:
+    given: Mustafa
+    family: Kurtuldu
+  org:
+    name: Google
+    unit: Design Relations
+  country: UK
+  role:
+    - author
+  homepage: 'http://www.designtoday.info'
+  google: +MustafaKurtuldu
+  twitter: mustafa_x
+  email: mkurtuldu@google.com
+  description:
+    en: 'Design Advocate at Google, supporting designers and developers world wide create wonderful user experiences using Googles creative principles such as the Design Sprint Process, Material Design and Progressive Web Apps.'
+
 sethladd:
   name:
     given: Seth
