@@ -83,8 +83,6 @@ toc:
         path: /web/tools/chrome-devtools/console/command-line-reference
     - title: How to Look at Performance
       section:
-      - title: The RAIL Performance Model
-        path: /web/tools/chrome-devtools/evaluate-performance/rail
       - title: How to Use the Timeline Tool
         path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
       - title: Timeline Event Reference

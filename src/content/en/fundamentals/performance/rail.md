@@ -1,17 +1,17 @@
 project_path: /web/_project.yaml
-book_path: /web/tools/_book.yaml
+book_path: /web/fundamentals/_book.yaml
 description: RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways: Response, Animation, Idle, Load.
 
 {# wf_updated_on: 2015-06-07 #}
 {# wf_published_on: 2015-06-07 #}
 
-# The RAIL Performance Model {: .page-title }
+# Measure Performance with the RAIL Model {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 
 RAIL is a user-centric performance model. Every web app has these four distinct aspects to its life cycle, and performance fits into them in very different ways:
 
-![RAIL performance model](imgs/rail.png)
+![RAIL performance model](images/rail.png)
 
 
 ### TL;DR {: .hide-from-toc }
@@ -85,7 +85,7 @@ For example, scrolling and touchmoves are types of animation.
 Your users will really notice if the animation frame rate varies.
 Your goal is to produce 60 frames per second, and every frame has to go through all of these steps:
 
-![Steps to render a frame](imgs/render-frame.png)
+![Steps to render a frame](images/render-frame.png)
 
 From a purely mathematical point of view, every frame has a budget of 16.66ms (divide 1 second by 60) but, because browsers have housekeeping to do, the reality is that there is a window of 10ms for your code during animations.
 
