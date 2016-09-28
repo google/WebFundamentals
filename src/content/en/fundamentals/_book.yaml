@@ -3,6 +3,7 @@ upper_tabs:
   - name: Fundamentals
     heading: Web Fundamentals
     path: /web/fundamentals/
+    is_default: True
     lower_tabs:
       other:
       - name: Fundamentals
