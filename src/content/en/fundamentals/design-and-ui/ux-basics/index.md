@@ -2,7 +2,6 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: A step by step guide of the basics of UX design
 
-
 {# wf_updated_on: 2016-10-1 #}
 {# wf_published_on: 2016-10-1 #}
 
@@ -14,7 +13,7 @@ This article introduces a workflow that can help teams, products, startups and c
 
 ### Double Diamond
 
-This flow work is based on what we in UX circles call the double diamond, made popular by the [British Design Council](http://webarchive.nationalarchives.gov.uk/20080821115409/designcouncil.org.uk/en/about-design/managingdesign/the-study-of-the-design-process/ "British Design Council"){:target="_blank" .external}, where your team diverges to understand an idea through research and then converges to define on the challenge, diverges to sketch it individually,  share the ideas, decide on what the best way forward, test and validate.
+This flow work is based on what we in UX circles call the double diamond, made popular by the [British Design Council](https://www.designcouncil.org.uk/ "British Design Council"){:target="_blank" .external}, where your team diverges to understand an idea through research and then converges to define on the challenge, diverges to sketch it individually,  share the ideas, decide on what the best way forward, test and validate.
 
 <figure>
   <img src="images/double-diamond.png" alt="Phases of a project include; Understand, Define, Diverge, Decide, Prototype and Validate">
@@ -29,19 +28,19 @@ This challenge could be for an existing product feature that needs to be refined
 
 These are some real life examples of products that I have worked with in the past;
 
-* “To design a system to manage the treatment and followup care of patients with clubfoot”
+* To design a system to manage the treatment and followup care of patients with clubfoot.
 
-* “Create an app that simplifies complex financial systems and pare them down to the essentials”
+* Create an app that simplifies complex financial systems and pare them down to the essentials.
 
-* “Create an app that simplifies complex financial systems and pare them down to the essentials”
+* To design consistent mobile app across different platforms without sacrificing the brand.
 
 ### Updating your challenge statement
 
 Once you have written out several variations of the goal, present it to your team to get an agreed consensus. You may want to include a deadline in their too as this will help the team focus on the problem. So with the added an adjustments to the above could be;
 
-* “To design a system to manage the treatment and follow up care of children under the age of 2 with clubfoot for launch Q1 this year”
-* “Create a simple and easy to use financial app that allows you to buy and sell shares at the tap of the button without prior knowledge of the financial world, initial launch July 2017”  
-* “Produce a design guide that will be flexible across multiple platforms and positions the company's brand effectively on each platform by the end of this year”
+* To design a system to manage the treatment and follow up care of children under the age of 2 with clubfoot for launch Q1 this year.
+* Create a simple and easy to use financial app that allows you to buy and sell shares at the tap of the button without prior knowledge of the financial world, initial launch July 2017.
+* Produce a design guide that will be flexible across multiple platforms and positions the company's brand effectively on each platform by the end of this year.
 
 When you have finalized your challenge statement you want it displayed in a place where it is prominent so that it can be seen while you work. You will need to refer back to it constantly, perhaps even updating or modifying it throughout your project.
 
@@ -50,14 +49,6 @@ The next thing is to research the challenge and learn about the problem. What yo
 ## Validating the problem
 
 There are various methods to collecting data to validate the challenge, each one depends on your team and if you have access to users. The objective here is to have a better understanding of the problem at hand.
-
-
-
-## Write Your Content
-
-Next, it's time to add your content. Refer to the [style guide](style-guide)
-for full details on the styles you can use and how to go about making stuff
-look pretty.
 
 ### Internal interviews with stakeholders
 
@@ -164,7 +155,7 @@ From here present your ideas to your team and get them to present their ideas as
   <figcaption>Now you need to do a detailed design based on what you have learned.</figcaption>
 </figure>
 
-<div class="clearfix" style="height:0;"></div>
+<div class="clearfix"></div>
 
 ### Refine your design
 
@@ -181,7 +172,7 @@ Now you take the idea that got the most traction and sketch out a final idea, yo
 
 Taking the concept that you have now developed its time to storyboard the different phases the design engages with a user. By this point you should have already thought about the different steps a user takes and it is quite common to incorporate one of your colleagues designs into the flow as well. You want to have a clear step by step process with some points that the user might diverge. Reference back to the Project Map to check that your design is actually fulfilling the correct goal.
 
-<div class="clearfix" style="height:0;"></div>
+<div class="clearfix"></div>
 
 ## Creating a prototype
 

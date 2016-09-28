@@ -3,6 +3,8 @@ toc:
     section:
     - title: Overview
       path: /web/fundamentals/design-and-ui/
+    - title: Basics of UX
+      path: /web/fundamentals/design-and-ui/ux-basics/
     - title: Responsive Web Design
       section:
       - title: Responsive Web Design Basics
@@ -15,8 +17,6 @@ toc:
         path: /web/fundamentals/design-and-ui/media/video
       - title: Multi-Device Content
         path: /web/fundamentals/design-and-ui/responsive/content
-    - title: Basics of UX
-      path: /web/fundamentals/design-and-ui/ux-basics
     - title: User Input
       section:
       - title: Create Amazing Forms
