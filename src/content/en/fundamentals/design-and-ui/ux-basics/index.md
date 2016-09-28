@@ -9,7 +9,9 @@ description: A step by step guide of the basics of UX design
 
 {% include "web/_shared/contributors/mustafa.html" %}
 
-This article introduces a workflow that can help teams, products, startups and companies create a robust and meaningful process for developing a better user experience for their customers. You could use different parts of the process separately but they ideally work best as a series of steps. This guide borrows heavily from the Design Sprint methodology that multiple teams across Google have used to troubleshoot and solve challenges such as the [Self Driving Car](https://www.google.com/selfdrivingcar/ "Self Driving Car"){:target="_blank" .external}  and [Project Loon](https://www.solveforx.com/loon/ "Project Loon"){:target="_blank" .external}.
+This article introduces a workflow that can help teams, products, startups and companies create a robust and meaningful process for developing a better user experience for their customers. You could use different parts of the process separately but they ideally work best as a series of steps.
+
+This guide borrows heavily from the Design Sprint methodology that multiple teams across Google have used to troubleshoot and solve challenges such as the [Self Driving Car](https://www.google.com/selfdrivingcar/ "Self Driving Car"){:target="_blank" .external}  and [Project Loon](https://www.solveforx.com/loon/ "Project Loon"){:target="_blank" .external}.
 
 ### Double Diamond
 
