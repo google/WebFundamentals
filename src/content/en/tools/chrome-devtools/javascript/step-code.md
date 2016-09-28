@@ -129,7 +129,7 @@ the full call stack of asynchronous functions.
 Anonymous functions make the call stack difficult to read. Name your functions
 to improve readability.
 
-The code in the two screenshots below is functionally equivalent. The
+The code snippets in the two screenshots below are functionally equivalent. The
 exact functioning of the code is not important, what is important is
 that the code in the first screenshot uses anonymous functions, while
 the second uses named functions.
@@ -213,7 +213,7 @@ change it to 3 before resuming execution.
 
 ## Live editing
 
-Observing and pausing the executing code helps you locate errors, and live editing allows you to quickly preview changes without the need for reloading.
+Observing and pausing the executing code helps you locate errors, and live editing allows you to quickly preview changes without the need to reload.
 
 To live edit a script, simply click into the editor part of the Sources panel while stepping. Make your changes as you would do in your editor, then commit the change with <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> (or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">S</kbd> on Mac). At this point, the entire JS file will be patched into the VM and all function definitions will be updated. 
 
