@@ -7,8 +7,8 @@ description: Web design and UI encompasses a few broad areas. What does it look 
 
 # Design & UI {: .page-title }
 
-Web design and UI encompasses a few broad areas. What does it look like? How
-does it behave? How does it respond to different screen sizes, input types,
+Web design and UI encompasses a few broad areas. What does a page look like?
+How does it behave? How does it respond to different screen sizes, input types,
 and devices?
 
 <div class="attempt-left">
