@@ -19,10 +19,9 @@ deploy:
       branch: next-version
     image: crhym3/drone-plugin-bash-node
     env:
-      - CI_BRANCH=$CI_BRANCH
       - ROBOT_PASSPHRASE=$$ROBOT_PASSPHRASE
     script:
       - gpg --no-use-agent --output tools/builder-key.json --passphrase $ROBOT_PASSPHRASE tools/builder-key.json.enc
       - gcloud config set project web-central
       - gcloud auth activate-service-account --key-file=tools/builder-key.json
-      - gcloud preview app deploy app.yaml -q --no-promote --version $CI_BRANCH
+      - gcloud preview app deploy app.yaml -q --no-promote --version next-version
