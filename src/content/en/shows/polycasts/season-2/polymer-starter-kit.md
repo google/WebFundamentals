@@ -16,24 +16,24 @@ description: Polymer Starter Kit is full of amazing tricks! Let’s do a quick i
 </div>
 
 
-# In this Week's Episode
+## In this Week's Episode
 
-## Demo source code
+### Demo source code
 [https://github.com/Polymer/polycasts/tree/master/ep18-starter-kit/polymer-starter-kit](https://github.com/Polymer/polycasts/tree/master/ep18-starter-kit/polymer-starter-kit)
 
-## Polymer Starter Kit
+### Polymer Starter Kit
 [https://developers.google.com/web/tools/polymer-starter-kit/](/web/tools/polymer-starter-kit/)
 
-## Polymer Yeoman Generator
+### Polymer Yeoman Generator
 [https://github.com/yeoman/generator-polymer](https://github.com/yeoman/generator-polymer)
 
-## Theming Elements -- Polycasts #17
+### Theming Elements -- Polycasts #17
 [https://www.youtube.com/watch?v=omASiF85JzI&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN](https://www.youtube.com/watch?v=omASiF85JzI&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 
-## Give your element an API -- Polycasts #16
+### Give your element an API -- Polycasts #16
 [https://www.youtube.com/watch?v=7jolqbtIdiY&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN](https://www.youtube.com/watch?v=7jolqbtIdiY&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 
-## Extending native elements -- Polycasts #15
+### Extending native elements -- Polycasts #15
 [https://www.youtube.com/watch?v=OV8BvxpNQOs&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN](https://www.youtube.com/watch?v=OV8BvxpNQOs&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 
 Polymer Slack: [http://bit.ly/polymerslack](http://bit.ly/polymerslack)

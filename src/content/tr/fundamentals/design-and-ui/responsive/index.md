@@ -39,7 +39,7 @@ Telefonlarda, `tablet-telefonlarda`, tabletlerde, masaüstü bilgisayarlarda, oy
 Ilk olarak [A List Apart baslikli makalede Ethan Marcotte](http://alistapart.com/article/responsive-web-design/) tarafindan tanimlanan duyarli web tasarimi, kullanicilarin ve kullanmakta olduklarin cihazlarin gereksinimlerine yanit verir.  Yerlesim, cihazin boyutuna ve yeteneklerine göre degisir.  Örnegin, bir telefonda, kullanicilar tek sütunlu bir görünümde gösterilen içerigi görürken bir tablet, ayni içerigi iki sütunda gösterebilir.
 
 
-# Görüntü alanini ayarlama
+## Görüntü alanini ayarlama
 
 Çesitli cihazlar için optimize edilmis sayfalar, dokümanin basinda bir meta görüntü alani ögesi içermelidir.  Meta görüntü alani etiketi, tarayiciya sayfanin boyutlarini ve ölçeklemesini nasil kontrol edecegine iliskin talimatlar verir.
 

@@ -16,30 +16,30 @@ description: Take your Polymer app offline, without writing a single line of Jav
 </div>
 
 
-# In this Week's Episode
+## In this Week's Episode
 
-## Demo source code
+### Demo source code
 [https://github.com/Polymer/polycasts/tree/master/ep19-go-offline]
 
-## Polymer Starter Kit
+### Polymer Starter Kit
 [/web/tools/polymer-starter-kit/]
 
-## The Offline Cookbook
+### The Offline Cookbook
 [http://jakearchibald.com/2014/offline-cookbook/]
 
-## Introduction to Service Workers
+### Introduction to Service Workers
 [http://www.html5rocks.com/en/tutorials/service-worker/introduction/]
 
-## Polymer Starter Kit -- Polycasts #18
+### Polymer Starter Kit -- Polycasts #18
 [https://www.youtube.com/watch?v=xz-yixRxZN8&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN]
 
-## Theming Elements -- Polycasts #17
+### Theming Elements -- Polycasts #17
 [https://www.youtube.com/watch?v=omASiF85JzI&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN](https://www.youtube.com/watch?v=omASiF85JzI&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 
-## Give your element an API -- Polycasts #16
+### Give your element an API -- Polycasts #16
 [https://www.youtube.com/watch?v=7jolqbtIdiY&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN](https://www.youtube.com/watch?v=7jolqbtIdiY&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 
-## Extending native elements -- Polycasts #15
+### Extending native elements -- Polycasts #15
 [https://www.youtube.com/watch?v=OV8BvxpNQOs&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN](https://www.youtube.com/watch?v=OV8BvxpNQOs&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 
 Polymer Slack: [http://bit.ly/polymerslack](http://bit.ly/polymerslack)

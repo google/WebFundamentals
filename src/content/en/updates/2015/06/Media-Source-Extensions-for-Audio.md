@@ -10,7 +10,7 @@ description: Media Source Extensions (MSE) provide extended buffering and playba
 
 {% include "web/_shared/contributors/dalecurtis.html" %}
 
-# Introduction
+## Introduction
 
 [Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/about/) based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
 

@@ -156,7 +156,7 @@ I've included a recorded version of a presentation I recently delivered to Londo
 
 <p>Custom Filters are great fun to play with, and the amazing effects you can create are difficult (and in some cases impossible) without them. It is still early days, and things are changing quite a bit, but adding them will add a little bit of showbiz to your projects, so why not give them a go?</p>
 
-<h1>Additional Resources</h1>
+## Additional Resources
 
 <ul>
 <li><a href="https://github.com/WebGLTools/GL-Shader-Validator">GL Shader Validator</a></li>

@@ -100,6 +100,19 @@ function testMarkdownFile(fileName) {
   } else {
     errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title}'});
   }
+  // Verify there is only ONE H1 tag
+  var numH1s = 0;
+  title = fileContent.match(/^# (.*)/gm);
+  if (title) {
+    numH1s += title.length;
+  }
+  title = fileContent.match(/^<h1.*?>/gmi);
+  if (title) {
+    numH1s += title.length;
+  }
+  if (numH1s > 1) {
+    errors.push({msg: 'Multiple h1 tags not permitted.', param: 'Too many # or <h1>\'s, found: ' + numH1s});
+  }
   // Look for bad strings
   WARNING_STRINGS.forEach(function(str) {
     if (fileContent.search(str.regEx) >= 0) {
