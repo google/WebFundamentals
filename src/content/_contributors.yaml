@@ -993,6 +993,7 @@ surma:
     - author
     - engineer
   twitter: DasSurma
+  homepage: 'https://twitter.com/DasSurma'
 
 yoichiro:
   name:
@@ -1134,7 +1135,7 @@ wangyu:
   email: nameiswangyu@gmail.com
   description:
     en: WangYu is Front End Developer
-    
+
 chrishtr:
   name:
     given: Chris
