@@ -8,7 +8,7 @@ book_path: /web/showcase/_book.yaml
 
 # Smart Lock for the Guardian {: .page-title }
 
-<img src="/web/showcase/2016/images/guardian-smart-lock/featured.jpg" class="attempt-right">
+<img src="/web/showcase/2016/images/guardian-smart-lock/featured.png" class="attempt-right">
 
 ### Results
 
