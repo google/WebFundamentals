@@ -213,7 +213,7 @@ formerly known as Google Cloud Messaging (GCM).
 
 ### Make a Project on the Firebase Developer Console
 
-Chrome uses FCM to handle the sending and delivery of push messages, however, to
+Chrome uses FCM to handle the sending and delivery of push messages; however, to
 use the FCM API, you need to set up a project on the Firebase Developer Console.
 
 The following steps are specific to Chrome, Opera for Android and Samsung
@@ -227,16 +227,16 @@ by clicking on the 'Create New Project'.
 ![New Firebase Project Screenshot](/web/updates/images/2015/03/push/new-project.png)
 
 Add a project name, create the project and you'll be taken to the project
-dashboard...
+dashboard:
 
 ![Firebase Project Home](/web/updates/images/2015/03/push/project-home.png)
 
-From this dashboard, click on the cog next to your project name in the top
+From this dashboard, click the cog next to your project name in the top
 left corner and click 'Project Settings'.
 
 ![Firebase Project Settings Menu](/web/updates/images/2015/03/push/project-settings-menu.png)
 
-In the settings page, click on 'Cloud Messaging' tab.
+In the settings page, click the 'Cloud Messaging' tab.
 
 ![Firebase Project Cloud Messaging Menu](/web/updates/images/2015/03/push/project-cloud-messaging.png)
 
@@ -251,7 +251,7 @@ to get the push subscription to succeed. This parameter is only required by
 Chrome, Opera for Android and Samsung Browser so that they can use FCM / GCM.
 
 The **gcm\_sender\_id** is used by these browsers when it subscribes a users
-device with FCM. This means that FCM can identify the users device and make
+device with FCM. This means that FCM can identify the user's device and make
 sure your sender ID matches the corresponding API key and that the user has
 permitted your server to send them push messages.
 
@@ -441,7 +441,7 @@ could do something like:
         endpoint = 'https://android.googleapis.com/gcm/send'
 
 Once you've got the registration ID, you can make a call to the FCM API. You
-can find some [reference docs on the FCM API here](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream-http-messages-json).
+can find [reference docs on the FCM API here](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream-http-messages-json).
 
 The key aspects to remember when calling FCM are:
 
@@ -803,7 +803,7 @@ each approach has pro's and con's.
 ### Why do I need a gcm\_sender\_id?
 
 This is required so that Chrome, Opera for Android and the Samsung Browser can
-make use of the Firebase Cloud Messaging (FCM) API. The goal is to use the
+use the Firebase Cloud Messaging (FCM) API. The goal is to use the
 Web Push Protocol when the standard is finalised and FCM can support it.
 
 ### Why not use Web Sockets or [Server-Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (EventSource)?
