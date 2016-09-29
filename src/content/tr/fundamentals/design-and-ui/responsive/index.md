@@ -22,7 +22,7 @@ Web'de sörf yapmak için mobil cihazlarin kullanilmasi çok büyük bir hizla a
 {% endcomment %}
 
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 
 

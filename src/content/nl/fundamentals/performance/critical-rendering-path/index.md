@@ -21,7 +21,7 @@ Het belangrijkste voor het optimaliseren van prestaties is dat u begrijpt wat er
 Door het kritieke weergavepad te optimaliseren kunnen we de tijd om onze pagina`s voor het eerst weer te geven aanzienlijk verbeteren. Daarnaast helpt een goede kennis van het kritieke weergavepad ook als een basis voor het maken van goed presterende, interactieve apps. En het blijkt dat het proces voor het verwerken van interactieve updates hetzelfde is, alleen wordt dit in een continue cirkel en het liefst met 60 frames per seconde gedaan. Maar laten we nog niet op de zaken vooruit lopen. Eerst zullen we een opbouwend overzicht bekijken van hoe een browser een eenvoudige pagina weergeeft.
 
 
-{% include "_shared/udacity/ud884.html" %}
+{% include "web/_shared/udacity/ud884.html" %}
 
 
 

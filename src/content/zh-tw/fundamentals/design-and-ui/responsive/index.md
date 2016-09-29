@@ -22,7 +22,7 @@ description: 大多數的網站並未針對多裝置體驗進行最佳化。快�
 {% endcomment %}
 
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 
 

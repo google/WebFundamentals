@@ -9,8 +9,8 @@ description: An round up of the deprecations and removals in Chrome to help you 
 
 # API Deprecations and Removals in Chrome 54 {: .page-title }
 
-{% include "_shared/contributors/josephmedley.html" %}
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/josephmedley.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

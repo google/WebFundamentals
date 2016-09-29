@@ -67,4 +67,4 @@ CSS "미디어 타입"과 "미디어 쿼리"가 이러한 경우에 우리에게
 마지막으로, "렌더링을 블록 하는것"은 브라우저가 페이지 자원들을 처음 렌더링 할 때 중지시켜야 할 지에 대해서만 관련이 있습니다. 어느 경우에나, CSS 자원들이 블록 하지 않는 자원들에 비해 비록 낮은 우선순위를 가지게 되더라도, 브라우저에 의해 여전히 다운로드 됩니다.
 
 Translated By: 
-{% include "_shared/contributors/swengineer.html" %}
+{% include "web/_shared/contributors/swengineer.html" %}

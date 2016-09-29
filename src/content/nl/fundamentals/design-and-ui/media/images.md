@@ -7,7 +7,7 @@ description: Een foto is evenveel waard als 1000 woorden. Afbeeldingen vormen da
 
 # Afbeeldingen {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Een foto is evenveel waard als 1000 woorden. Afbeeldingen vormen dan ook een integraal onderdeel van elke pagina. Maar het downloaden ervan kost veel bytes.  Met responsive webdesign kunnen niet alleen onze lay-outs veranderen op basis van apparaatkenmerken, maar ook afbeeldingen.
 
@@ -25,7 +25,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Soms moeten afbeeldingen misschien wat drastischer worden gewijzigd: de proporties wijzigen, bijsnijden of zelfs de afbeelding geheel vervangen. Het wijzigen van afbeeldingen wordt dan meestal `art direction` genoemd.  Zie [responsiveimages.org/demos/](http://responsiveimages.org/demos/) voor meer voorbeelden.
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 
 ## Afbeeldingen in opmaak

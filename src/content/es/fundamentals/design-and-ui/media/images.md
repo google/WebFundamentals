@@ -24,7 +24,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Otras veces, la imagen puede necesitar cambios más drásticos: modificar las proporciones, recortarla e incluso sustituirla por otra.  En este caso, el cambio en la imagen suele denominarse `dirección artística`.  Consulta [responsiveimages.org/demos/](http://responsiveimages.org/demos/) para ver más ejemplos.
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 
 

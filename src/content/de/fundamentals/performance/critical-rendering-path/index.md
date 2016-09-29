@@ -21,7 +21,7 @@ Die Leistungsoptimierung setzt das Verstehen der Vorgänge zwischen dem Empfang 
 Über die Optimierung des kritischen Rendering-Pfads können wir die benötigte Zeit für das erste Rendering unserer Seiten erheblich verkürzen. Darüber hinaus ist das Verständnis des Rendering-Pfads auch eine Voraussetzung für die Erstellung leistungsfähiger interaktiver Anwendungen. Der Prozess für die Verarbeitung interaktiver Updates ist tatsächlich identisch, er wird nur in einer Dauerschleife und idealerweise mit 60 Frames pro Sekunde durchgeführt! Aber wir wollen hier nicht vorgreifen. Zunächst wollen wir uns einen grundsätzlichen Überblick darüber verschaffen, wie im Browser eine einfache Seite dargestellt wird.
 
 
-{% include "_shared/udacity/ud884.html" %}
+{% include "web/_shared/udacity/ud884.html" %}
 
 
 

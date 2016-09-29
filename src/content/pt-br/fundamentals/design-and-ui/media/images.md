@@ -7,7 +7,7 @@ description: Uma imagem vale por mil palavras, e as imagens desempenham uma fun�
 
 # Imagens {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 Uma imagem vale por mil palavras, e as imagens desempenham uma função importante em todas as páginas. Mas elas muitas vezes também representam quase todos os bytes no carregamento da página.  Com o Web design responsivo, não só os layouts podem ser modificados com base nas características do dispositivo, como também as imagens.
 
@@ -25,7 +25,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Outras vezes, talvez seja necessário alterar a imagem de forma mais drástica: mudando as proporções, fazendo cortes e até mesmo substituindo toda a imagem.  Nesse caso, a alteração da imagem geralmente é denominada direção de arte.  Acesse [responsiveimages.org/demos/](http://responsiveimages.org/demos/) para ver mais exemplos.
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 ## Imagens na marcação
 

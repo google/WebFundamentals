@@ -10,7 +10,7 @@ description: Chrome is blocking some scripts that are added using document.write
 
 # Intervening against document.write() {: .page-title }
 
-{% include "_shared/contributors/paulkinlan.html" %}
+{% include "web/_shared/contributors/paulkinlan.html" %}
 
 
 

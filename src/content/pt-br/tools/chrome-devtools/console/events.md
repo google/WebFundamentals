@@ -89,4 +89,4 @@ a página tem dois ouvintes de evento ligados via jQuery:
 ![Visão expandida dos ouvintes de eventos](images/events-eventlisteners_panel_details.png)
 
 Translated By: 
-{% include "_shared/contributors/alansilva.html" %}
+{% include "web/_shared/contributors/alansilva.html" %}

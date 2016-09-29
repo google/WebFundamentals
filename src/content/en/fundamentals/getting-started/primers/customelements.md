@@ -7,7 +7,7 @@ description: Custom elements allow web developers to define new HTML tags, exten
 
 # Custom Elements v1: Reusable Web Components {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 ### TL;DR {: #tldr .hide-from-toc }
 

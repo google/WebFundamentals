@@ -7,7 +7,7 @@ description: 在这个codelab,你将会学到如何在web app里加入推送通�
 
 # 你的首个推送通知 web app {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <img src="images/image00.png" width="373" height="93" alt="Screenshot of push notification" />
 
@@ -662,4 +662,4 @@ key和你的API密钥吻合。最重要的是，你实在参阅正确的项目�
 
 
 Translated By: 
-{% include "_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}

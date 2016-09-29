@@ -21,7 +21,7 @@ La optimización del rendimiento consiste básicamente en entender qué sucede e
 Al optimizar la ruta de renderización importante, podemos mejorar significativamente el tiempo que se tarda en mostrar nuestras páginas. Es más, entender la ruta de renderización importante también nos servirá como base para crear aplicaciones interactivas con un buen rendimiento. Pues resulta que los pasos para procesar las actualizaciones interactivas son los mismos, salvo que tienen lugar en bucle continuo e, idealmente, a 60 fotogramas por segundo. Pero aún no nos adelantemos. Primero, veremos de forma general cómo el navegador muestra una página simple.
 
 
-{% include "_shared/udacity/ud884.html" %}
+{% include "web/_shared/udacity/ud884.html" %}
 
 
 

@@ -13,7 +13,7 @@ description: Veel websites zijn niet geoptimaliseerd voor ervaringen op meerdere
 Het gebruik van mobiele apparaten om op internet te browsen neemt enorm snel toe. Veel websites zijn echter nog niet geoptimaliseerd voor die mobiele apparaten. Mobiele apparaten zijn vaak beperkt door de grootte van het scherm en vereisen een andere aanpak voor de manier waarop de inhoud op het scherm wordt weergegeven.
 
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 
 
