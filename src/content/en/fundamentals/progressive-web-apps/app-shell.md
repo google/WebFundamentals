@@ -1,11 +1,11 @@
-project_path: /web/_project.yaml book_path: /web/fundamentals/_book.yaml
+project_path: /web/_project.yaml 
+book_path: /web/fundamentals/_book.yaml
 
 {# wf_updated_on: 2016-09-26 #} {# wf_published_on: 2016-09-27 #}
 
 # Architecting a PWA with the App Shell Model {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
-
 
 An **application shell** (or app shell) architecture is one way to build a
 Progressive Web App that reliably and instantly loads on your users's screens,
