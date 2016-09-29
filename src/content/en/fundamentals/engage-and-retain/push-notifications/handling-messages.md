@@ -40,7 +40,7 @@ worker using the push event. Its basic structure is this:
         // Process the event and display a notification.
       );
     });
-    
+
 
 Somewhere inside `waitUntil()`, we're going to call `showNotification()` on a
 service worker registration object.
@@ -56,7 +56,7 @@ service worker registration object.
           { action: 'no', title: 'No', icon: 'images/thumb-down.png' }
         ]
       })
-    
+
 
 Technically, the only required parameter for `showNotification()` is the title.
 Practically speaking, you should include at least a body and an icon. As you can
@@ -71,11 +71,11 @@ Finally, we'll process the user's response using the `notificationclick` and
       // Do something with the event  
       event.notification.close();  
     });
-    
+
     self.addEventListener('notificationclose', event => {  
       // Do something with the event  
     });
-     
+
 
 Everything else is just an elaboration of these basic ideas.
 
@@ -96,29 +96,42 @@ show a notification. Otherwise do something else.
 
 <pre class="prettyprint">
 self.addEventListener('push', event => {
-  clients.matchAll().then( client => {
-    <strong>if (client.length == 0) {
+  const promiseChain = clients.matchAll()
+  .then(clients => {
+    <strong>let mustShowNotification = true;
+    if (clients.length > 0) {
+      for (let i = 0; i < clients.length; i++) {
+        if (clients[i].visibilityState === 'visible') {
+          mustShowNotification = false;
+          return;
+        }
+      }
+    }
+
+    if (mustShowNotification) {
       // Show the notification.
       event.waitUntil(
         self.registration.showNotification('Push notification')
       );
     } else {
       // Send a message to the page to update the UI.
-      console.log('The application is already open.');</strong>
-    }
+      console.log('The application is already open.');
+    }</strong>
   });
+
+  event.waitUntil(promiseChain);
 });
 </pre>
 
 ## Preparing message content {: #preparing-messages }
 
-As we said earlier, your server sends two kinds of messages: 
+As we said earlier, your server sends two kinds of messages:
 
 * Messages with a data payload.
 * Messages without a data payload, often called a tickle.
 
-Your push handler needs to account for both. For messages without a payload you 
-want to provide a good user experience by getting the data before you tell the 
+Your push handler needs to account for both. For messages without a payload you
+want to provide a good user experience by getting the data before you tell the
 user it's available.
 
 Let's start with our basic push event handler with a call to
@@ -127,40 +140,45 @@ resolves to a promise. This method extends the lifetime of the `push` event
 until certain tasks are accomplished. As you'll see shortly, we'll be holding
 the `push` event until after we've shown a notification.
 
-
     self.addEventListener('push', event => {
-      event.waitUntil(() => {
-        // Do something with the event.
-      });
+      const promiseChain = someFunction();
+      event.waitUntil(promiseChain);
     });
-    
 
 Next, if you find data in the event object, get it.
 
 <pre class="prettyprint">
 self.addEventListener('push', event => {
-  <strong>event.waitUntil(() => {
-    if (event.data) {
-      return Promise.resolve(event.data);
-    }
-    // No data, so do something else.</strong>
-  });  
+  <strong>
+  let data = null;
+  if (event.data) {
+    // We have data - lets use it
+    data = event.data.json();
+  }</strong>
+  let promiseChain = someFunction(data);
+  event.waitUntil(promiseChain);
 });
 </pre>
-    
 
-If there's no data in the object, call `fetch()` to get it from the server. 
+
+If there's no data in the object, call `fetch()` to get it from the server.
 Otherwise, just return the data.
 
 <pre class="prettyprint">
 self.addEventListener('push', event => {
-  event.waitUntil(() => {
-    if (event.data) {
-      return Promise.resolve(event.data);
-    }
-    <strong>return fetch('some/data/endpoint.json')
-      .then(response => response.json());</strong>
-  });
+  <strong>let promiseChain;
+  if (event.data) {
+    // We have data - lets use it
+    promiseChain = Promise.resolve(event.data.json());
+  } else {
+    promiseChain = fetch('/some/data/endpoint.json')
+      .then(response => response.json());
+  }</strong>
+
+  promiseChain = promiseChain.then(data => {
+      // Now we have data we can show a notification.
+    });
+  event.waitUntil(promiseChain);
 });
 </pre>
 
@@ -169,21 +187,24 @@ notification to the user.
 
 <pre class="prettyprint">
 self.addEventListener('push', event => {
-  event.waitUntil(() => {
-    if (event.data) {
-      return Promise.resolve(event.data);
-    }
-    return fetch('some/data/endpoint.json')
-        .then(response => response.json());
-    })
-    <strong>.then(data => {
+  <strong>let promiseChain;
+  if (event.data) {
+    // We have data - lets use it
+    promiseChain = Promise.resolve(event.data.json());
+  } else {
+    promiseChain = fetch('/some/data/endpoint.json')
+      .then(response => response.json());
+  }</strong>
+
+  promiseChain = promiseChain.then(data => {
       return self.registration.showNotification(data.title, {
         body: data.body,
         icon: (data.icon ? data.icon : '/images/icon-192x192.png'),
         vibrate: [200, 100, 200, 100, 200, 100, 400],
         tag: data.tag
-       })
-    }))</strong>
+      });
+    });
+  event.waitUntil(promiseChain);
 });
 </pre>
 
@@ -210,19 +231,18 @@ of it as elaborations on the following steps.
 
 Look for these things as we go through another example. We're going to assume
 that you've already received or retrieved message data as described in the last
-section. Now let's look at what to do with it. 
+section. Now let's look at what to do with it.
 
 Start with a basic push event handler. The `waitUntil()` method returns a
 Promise that resolves to the notification data.
 
 
     self.addEventListener('push', function(event) {
-      event.waitUntil(
-        // Get the message data somehow and return a Promise.
-      )
+      const promiseChain = getData(event.data)
       .then(data => {
-        // Do something with the data.
-      })
+        // Do something with the data
+      });
+      event.waitUntil(promiseChain);
     });
 
 
@@ -230,15 +250,14 @@ Once we have the message data, call `getNotifications()` using `data.tag`.
 
 <pre class="prettyprint">
 self.addEventListener('push', function(event) {
-  event.waitUntil(
-    // Get the message data somehow and return a Promise.
-  )
+  const promiseChain = getData(event.data)
   .then(data => {
     <strong>return self.registration.getNotifications({tag: data.tag});
   })
   .then(notifications => {
     //Do something with the notifications.
-  })</strong>
+  })</strong>;
+  event.waitUntil(promiseChain);
 });
 </pre>
 
@@ -254,25 +273,25 @@ notifications, we need to reuse the `tag` and set `renotify` to `true`. Both are
 
 <pre class="prettyprint">
 self.addEventListener('push', function(event) {
-  event.waitUntil(
-    // Get the message data somehow and return a Promise.
-  )
+  const promiseChain = getData(event.data)
   .then(data => {
-    return self.registration.getNotifications({tag: data.tag})
-  })
-  .then( notifications => {
-  	var noteOptions = {
-      body: data.body,
-      icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
-      vibrate: [200, 100, 200, 100, 200, 100, 400],
-      <strong>tag: data.tag,</strong>
-      data: data
-  	}
-    if (notifications.length > 0) {
-      <strong>noteOptions.renotify = true;</strong>
-      // Configure other options for combined notifications.
-    }
-  })  
+    <strong>return self.registration.getNotifications({tag: data.tag})
+    .then(notifications => {
+      var noteOptions = {
+        body: data.body,
+        icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
+        vibrate: [200, 100, 200, 100, 200, 100, 400],
+        <strong>tag: data.tag,</strong>
+        data: data
+    	};
+
+      if (notifications.length > 0) {
+        <strong>noteOptions.renotify = true;</strong>
+        // Configure other options for combined notifications.
+      }
+    })</strong>;
+  });
+  event.waitUntil(promiseChain);
 });
 </pre>
 
@@ -284,41 +303,41 @@ at that in the next section. Finally, show the notification (line 26).
 
 <pre class="prettyprint">
 self.addEventListener('push', function(event) {
-  event.waitUntil(
-    // Get the message data somehow and return a Promise.
-  )
+  const promiseChain = getData(event.data)
   .then(data => {
-    return self.registration.getNotifications({tag: data.tag})
-  })
-  .then( notifications => {
-    var noteOptions = {
-      body: data.body,
-      icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
-      vibrate: [200, 100, 200, 100, 200, 100, 400],
-      tag: data.tag,
-      data: data
-    };
+    <strong>return self.registration.getNotifications({tag: data.tag})
+    .then(notifications => {
+      var noteOptions = {
+        body: data.body,
+        icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
+        vibrate: [200, 100, 200, 100, 200, 100, 400],
+        <strong>tag: data.tag,</strong>
+        data: data
+    	};
 
-    if (notifications.length > 0) {
-      data.title = "Flight Updates";
-      noteOptions.body = "There are several updates regarding your flight, 5212 to Kansas City.";
-      noteOptions.renotify = true;
-      <strong>noteOptions.actions = [
-        {action: 'view', title: 'View updates'},
-        {action: 'notNow', title: 'Not now'}
-      ]
-    }
-    self.registration.showNotification(data.title, noteOptions);</strong>
-  })  
+      if (notifications.length > 0) {
+        data.title = "Flight Updates";
+        noteOptions.body = "There are several updates regarding your flight, 5212 to Kansas City.";
+        noteOptions.renotify = true;
+        <strong>noteOptions.actions = [
+          {action: 'view', title: 'View updates'},
+          {action: 'notNow', title: 'Not now'}
+        ];
+      }
+
+      return self.registration.showNotification(data.title, noteOptions);
+    })</strong>;
+  });
+  event.waitUntil(promiseChain);
 });
 </pre>
 
 ## Put actions on the notification {: #notification-actions }
 
-We've already seen examples of notifications with actions built into them. Let's 
+We've already seen examples of notifications with actions built into them. Let's
 look at how they're implemented and how to respond to them.
 
-Recall that `showNotification()` takes an options argument with one or more 
+Recall that `showNotification()` takes an options argument with one or more
 optional actions.
 
 
@@ -333,7 +352,7 @@ optional actions.
       ],  
       data: data  
     })
-    
+
 <figure class="attempt-right">
   <img src="images/confirmation.png" alt="A notification with actions.">
 </figure>
@@ -346,7 +365,7 @@ the application to an appropriate interface.
 
 <div style="clear:both;"></div>
 
-First, let's add a `notificationclick` event handler to the service worker. Also, 
+First, let's add a `notificationclick` event handler to the service worker. Also,
 close the notification.
 
 
@@ -354,7 +373,7 @@ close the notification.
       event.notification.close();  
       // Process the user action.  
     });
-    
+
 
 Next, we need some logic to figure out where the notification was clicked. Did
 the user click Confirm, Ask for Reschedule, or neither?
@@ -434,14 +453,14 @@ navigate with.
 
     self.addEventListener('notificationclick', function(event) {
       // Content excerpted
-      
+
       event.waitUntil(clients.matchAll({
         includeUncontrolled: true,
         type: 'window'
         })
       );
     });
-    
+
 
 Finally, we need to take different navigation paths depending on whether a
 client is open.
@@ -464,7 +483,7 @@ self.addEventListener('notificationclick', function(event) {
   );
 });
 </pre>
-    
+
 
 Here's the entire `notificationclick` handler from end to end.
 
@@ -488,7 +507,7 @@ Here's the entire `notificationclick` handler from end to end.
       } else {
         var appUrl = '/';
       }
-      
+
       event.waitUntil(clients.matchAll({
         includeUncontrolled: true,
         type: 'window'
@@ -502,4 +521,3 @@ Here's the entire `notificationclick` handler from end to end.
         })
       );
     });
-    
