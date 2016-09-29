@@ -16,34 +16,34 @@ description: JavaScript.com teaches beginners the basics of programming for the 
 </div>
 
 
-# In this Week's Episode
+## In this Week's Episode
 
 JavaScript.com teaches beginners the basics of programming for the web, Progressive Apps may be the next evolution of the mobile web, find the dominant colors in any image with Vibrant.js, Paul Lewis builds a snappy guitar tuner with ES6, Polymer, Web Audio, and Service worker, and Ido Green shows you how to autocomplete checkout forms.
 
-## LEARN U A JAVASCRIPT
+### LEARN U A JAVASCRIPT
 <https://www.javascript.com>
 <https://www.codeschool.com>
 
-## ESCAPING TABS
+### ESCAPING TABS
 <https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/>
 
-## COLOR ME EXCITED
+### COLOR ME EXCITED
 <https://github.com/jariz/vibrant.js>
 <https://github.com/akfish/node-vibrant>
 
-## GUITAR TUNER
+### GUITAR TUNER
 <https://aerotwist.com/blog/guitar-tuner/>
 
-## CHECKOUT FASTER
+### CHECKOUT FASTER
 <http://updates.html5rocks.com/2015/06/checkout-faster-with-Autofill>
 
-## Creative Gooey Effects by Lucas Bebber
+### Creative Gooey Effects by Lucas Bebber
 <http://tympanus.net/Development/CreativeGooeyEffects/index.html>
 
-## Understanding npm by nodesource
+### Understanding npm by nodesource
 <https://unpm.nodesource.com/>
 
-## Affine Transform by Paul Mealy
+### Affine Transform by Paul Mealy
 <http://codepen.io/InsideDown/full/pJPLMR>
 
 FLYING V!!!!!! by Daniel

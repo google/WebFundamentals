@@ -7,7 +7,7 @@ description: Conheça as maneiras mais simples de adicionar vídeos ao seu site 
 
 # Vídeo {: .page-title }
 
-{% include "web/_shared/contributors/sumdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="j5fYOYrsocs"

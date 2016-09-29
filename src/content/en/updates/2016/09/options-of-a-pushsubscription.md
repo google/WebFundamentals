@@ -9,7 +9,7 @@ description: You can now access the options used when subscribing a user to push
 
 # Options of a PushSubscription {: .page-title }
 
-{% include "_shared/contributors/mattgaunt.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 When a `pushsubscriptionchange` event occurs, it's an opportunity for a developer
 to re-subscribe the user for push. One of the pain points of this is that to

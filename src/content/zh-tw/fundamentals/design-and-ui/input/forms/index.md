@@ -245,35 +245,10 @@ HTML5 導入了數種新輸入類型。 這些新的輸入類型可以提示瀏�
 Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
 
 
----
-title: "正確標記和命名輸入"
-updated_on: 2015-03-27
-key-takeaways:
-  label-and-name:
-    - 一律在表單輸入使用 <code>label</code>，並確定當欄位處於焦點狀態時，可看見標籤。
-    - 使用 <code>placeholder</code>，為您所期望的事提供引導。
-    - 要協助瀏覽器自動完成表單，針對元素使用已建立的 <code>name</code>，並納入 <code>autocomplete</code> 屬性。
-notes:
-  use-placeholders:
-    - 一旦使用者在元素中開始輸入時，預留位置就會消失，因此預留位置不可取代標籤。  預留位置應該當做輔助工具，協助指導使用者使用所需的格式和內容。
-  recommend-input:
-    - 僅使用 <code>street-address</code> 或同時使用 <code>address-line1</code>  和 <code>address-line2</code>
-    - <code>address-level1</code> 和 <code>address-level2</code> 只有在您的地址格式需要時，才會成為必填項。
-  use-datalist:
-    - <code>datalist</code> 值是以建議項目的方式提供，而使用者並不侷限於所提供的建議。
-  provide-real-time-validation:
-    - 即使以用戶端輸入驗證，需記得一件非常重要的事，請驗證伺服器上的資料，以確保您資料的一致性和安全性。
-  show-all-errors:
-    - 您應該向使用者一次性顯示表單上的所有問題，而非一次展示一個問題。
-  request-auto-complete-flow:
-    - 如果您要求任何種類的個人資訊或信用卡資料，確保是透過 SSL 提供頁面。  否則對話方塊中將警告使用者，他們的資訊可能不安全。
----
-<p class="intro">
-  手機上很難填寫表單。 最好的表單是輸入量最少的表單。 好的表單應該提供語意式輸入類型。 按鍵應該可以變更以符合使用者的輸入類型；使用者可在日曆中選擇日期。 讓您的使用者瞭若指掌。 驗證工具應該在提交表單之前就告知使用者應該做什麼。
-</p>
+
+手機上很難填寫表單。 最好的表單是輸入量最少的表單。 好的表單應該提供語意式輸入類型。 按鍵應該可以變更以符合使用者的輸入類型；使用者可在日曆中選擇日期。 讓您的使用者瞭若指掌。 驗證工具應該在提交表單之前就告知使用者應該做什麼。
 
 
-{% include shared/takeaway.liquid list=page.key-takeaways.label-and-name %}
 
 #### 標籤的重要性
 

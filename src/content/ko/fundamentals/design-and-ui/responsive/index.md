@@ -305,7 +305,7 @@ same line, instead of on top of each other.  And let's also make the weather
 icons a bit larger.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm"  adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-small.css" region_tag="mqsmallbpsm" adjust_indentation="auto" %}
 </pre>
 
 <div class="attempt-left">
@@ -332,7 +332,7 @@ Similarly, for the large screens, it's best to limit to maximum width of the
 forecast panel so it doesn't consume the whole screen width.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg"  adjust_indentation="auto"  adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/weather-large.css" region_tag="mqsmallbplg" adjust_indentation="auto" %}
 </pre>
 
 ### Optimize text for reading
@@ -362,7 +362,7 @@ screens will require a breakpoint. In this case, if the browser width is greater
 than 575px, the ideal content width is 550px.
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"  adjust_indentation="auto"  adjust_indentation="auto" %}
+{% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/reading.html" region_tag="mqreading"  adjust_indentation="auto" %}
 </pre>
 
 ### Never completely hide content

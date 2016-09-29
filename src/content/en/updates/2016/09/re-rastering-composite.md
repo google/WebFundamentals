@@ -10,7 +10,7 @@ description: will-change: transform means please animate it fast
 
 # Re-rastering Composited Layers on Scale Change {: .page-title }
 
-{% include "_shared/contributors/chrishtr.html" %}
+{% include "web/_shared/contributors/chrishtr.html" %}
 
 ### TL;DR {: .hide-from-toc }
 

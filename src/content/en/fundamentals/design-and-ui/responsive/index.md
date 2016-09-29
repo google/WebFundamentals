@@ -31,7 +31,7 @@ the size and capabilities of the device.  For example, on a phone users would
 see content shown in a single column view; a tablet might show the same content
 in two columns.
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 ## Set the viewport {: #set-the-viewport }
 

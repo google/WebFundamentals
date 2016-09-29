@@ -7,8 +7,8 @@ description: Android Pay enables simple and secure purchases online and eliminat
 
 # Integrating Android Pay into Payment Request {: .page-title }
 
-{% include "_shared/contributors/agektmr.html" %}
-{% include "_shared/contributors/sieke.html" %}
+{% include "web/_shared/contributors/agektmr.html" %}
+{% include "web/_shared/contributors/sieke.html" %}
 
 Android Pay enables simple and secure purchases online and eliminates the
 need for users to remember and manually enter their payment information.

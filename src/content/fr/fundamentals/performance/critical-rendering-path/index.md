@@ -21,7 +21,7 @@ Pour optimiser les performances, il est essentiel de comprendre ce qui se passe 
 En optimisant le chemin critique du rendu, nous pouvons améliorer de façon significative le temps nécessaire pour afficher nos pages pour la première fois. En outre, le fait de comprendre le chemin critique du rendu permet d'avoir de bonnes bases pour créer des applications interactives qui offrent de bonnes performances. En fait, le processus de traitement des mises à jours interactives est identique, mais il s'effectue en boucle et sans interruption, et idéalement à 60 images par seconde ! Mais n'allons pas trop vite. Observons d'abord rapidement le processus d'affichage complet d'une page simple par le navigateur.
 
 
-{% include "_shared/udacity/ud884.html" %}
+{% include "web/_shared/udacity/ud884.html" %}
 
 
 

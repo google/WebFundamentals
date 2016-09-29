@@ -69,7 +69,7 @@ O desempenho é a arte de evitar trabalho e fazer com que qualquer trabalho real
 Vamos detalhar as diferentes partes do pipeline. Olharemos os problemas comuns e também como diagnosticar e corrigi-los.
 
 
-{% include "_shared/udacity/ud860.html" %}
+{% include "web/_shared/udacity/ud860.html" %}
 
 
 

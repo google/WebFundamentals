@@ -11,7 +11,7 @@ description: Platforms
 {% include "web/_shared/contributors/sethladd.html" %}
 
 
-# Dart
+## Dart
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="FqsU3TbUw_s"
@@ -25,7 +25,7 @@ Dart compiles to JavaScript, sometimes generating code that's faster than hand-w
 
 <div style="clear:both;"></div>
 
-# Chrome Apps
+## Chrome Apps
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="f3NctLbtsNE"
@@ -39,7 +39,7 @@ Chrome Apps provide the power and user experience of native apps with the develo
 
 <div style="clear:both;"></div>
 
-# PNaCl
+## PNaCl
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="hfs5p1BKpxQ"

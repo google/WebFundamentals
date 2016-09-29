@@ -26,7 +26,7 @@ For most of us, though, there's a disconnect between what we can reasonably test
   </iframe>
 </div>
 
-# Uses of the Frame Timing API
+## Uses of the Frame Timing API
 
 There are undoubtedly a bunch of things you could do with the Frame Timing API, and, crucially, you get to measure what's important to you and for your project. Even so, here are a few ideas:
 
@@ -35,7 +35,7 @@ There are undoubtedly a bunch of things you could do with the Frame Timing API, 
 * Automatically scaling back your showbiz effects based on the device's current load.
 * Regression testing on runtime performance metrics.
 
-# The elevator pitch
+## The elevator pitch
 
 Here's what the API currently looks like in the spec: with it you would get to pull data on renderer thread timing, where JavaScript, styles and layout run. (You may have heard the renderer thread called the main thread; it's the same thing by another name.)
 
@@ -74,7 +74,7 @@ Each of these also come back with a source frame number, which you can use to ti
 
 Because of the way compositing often works in browsers, there may be several of these records per renderer thread record, so you can use the `sourceFrameNumber` to tie those back to together. There’s also some discussion as to whether there should be CPU time in these records as well, so if you feel strongly speak up on the [GitHub issues](https://github.com/w3c/frame-timing/issues).
 
-# More information
+## More information
 
 This API isn't shipping yet, but hopefully it will do soon. In the meantime here are some things you can read and do:
 

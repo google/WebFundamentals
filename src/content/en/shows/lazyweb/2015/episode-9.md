@@ -16,36 +16,36 @@ description: Jake Archibald takes on Lie-Fi: first render before JavaScript, off
 </div>
 
 
-# In this Week's Episode
+## In this Week's Episode
 
 Jake Archibald takes on Lie-Fi: first render before JavaScript, offline-first with service worker, Streams API, server-side rendering. Paul Lewis bemoans tooling complexity: NPM, Grunt, Gulp, Bower, Browserify, Git.... fallen.io counts the cost of conflict with stunning interactive infographics. Chris Lowis explains 808 drum synthesis with the Web Audio API. Plus: good form design and BASIC programming for the Commodore 64.
 
-## SUPERCHARGING PAGE LOAD
+### SUPERCHARGING PAGE LOAD
 <https://youtu.be/d5_6yHixpsQ?t=10m07s>
 <https://youtu.be/d5_6yHixpsQ?t=6m42s>
 <https://youtu.be/d5_6yHixpsQ?t=8m26s>
 <https://youtu.be/d5_6yHixpsQ?t=10m38s>
 
-## HTTP 203: BUILD TOOLS 
+### HTTP 203: BUILD TOOLS 
 <http://youtu.be/3i9WFgMuKHs?t=1m37s>
 
-## THE FALLEN OF WORLD WAR II 
+### THE FALLEN OF WORLD WAR II 
 <http://fallen.io/ww2>
 <http://www.fallen.io/>
 
-## SYNTHESISING DRUM SOUNDS WITH THE WEB AUDIO API
+### SYNTHESISING DRUM SOUNDS WITH THE WEB AUDIO API
 <https://dev.opera.com/articles/drum-sounds-webaudio>
 <http://upload.wikimedia.org/wikipedia/commons/b/be/Roland_TR-808_drum_machine.jpg>
 
-## THE 10 COMMANDMENTS OF GOOD FORM DESIGN ON THE WEB
+### THE 10 COMMANDMENTS OF GOOD FORM DESIGN ON THE WEB
 <http://mono.company/journal/design-practice/the-10-commandments-of-good-form-design-on-the-web/>
 
-## PROGRAMMING THE COMMODORE 64
+### PROGRAMMING THE COMMODORE 64
 <http://64bites.com/episodes/002-basics-basics/>
 <http://64bites.com/>
 <http://en.wikipedia.org/wiki/Commodore_64#/media/File:Commodore-64-Computer.png>
 
-## Demos
+### Demos
 3FLUID WEBGL by haxiomic
 <http://haxiomic.github.io/projects/webgl-fluid-and-particles/>
 

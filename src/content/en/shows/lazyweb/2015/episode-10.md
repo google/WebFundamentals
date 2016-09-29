@@ -16,7 +16,7 @@ description: Bruce Lawson illustrates that everyone wants the same web, but not 
 </div>
 
 
-# In this Week's Episode
+## In this Week's Episode
 
 Bruce Lawson illustrates that everyone wants the same web, but not all networks
 are created equal, the a11y cheat sheet makes it easier to build accessible
@@ -25,21 +25,21 @@ the next generation web, Firefox Developer Edition launches new performance
 tools, and Ilya Grigorik explains how old best practices are obsolete in HTTP/2.
 
 
-## THE NEXT BILLIONS
+### THE NEXT BILLIONS
 <https://www.youtube.com/watch?v=BHO70H9tvqo>
 
-## A11Y CHEAT SHEET
+### A11Y CHEAT SHEET
 <http://bitsofco.de/2015/the-accessibility-cheatsheet/>
 <http://www.w3.org/WAI/intro/wcag.php>
 <http://leaverou.github.io/contrast-ratio/>
 
-## NEXT GEN WEB
+### NEXT GEN WEB
 <https://www.youtube.com/watch?v=iZZdhTUP5qg>
 
-## NEW PERF TOOLS
+### NEW PERF TOOLS
 <https://www.youtube.com/watch?v=WBmttwfA_k8>
 
-## HTTP2 EXPLAINED
+### HTTP2 EXPLAINED
 <https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/present?slide=id.gfd0e3427_015>
 
 ## Demos

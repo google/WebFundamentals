@@ -7,7 +7,7 @@ description: 이 코드 랩에서 어떻게 웹 어플리케이션에 푸쉬 서
 
 # 당신의 첫 번째 푸쉬 노티피케이션 웹 앱 {: .page-title }
 
-{% include "_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/samdutton.html" %}
 
 
 <img src="images/image00.png" width="373" height="93" alt="Screenshot of push notification" />
@@ -679,4 +679,4 @@ once for each service worker session.
 
 
 Translated By: 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}

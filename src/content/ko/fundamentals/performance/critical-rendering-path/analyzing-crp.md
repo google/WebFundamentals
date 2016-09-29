@@ -215,4 +215,4 @@ style.css 리소스는 프린트 시에만 사용되기 때문에, 브라우저�
 고로, DOM이 생성되자마자, 브라우저는 페이지를 렌더하기 위한 필요 리소스들을 다 갖게 됩니다. 결론적으로, 페이지는 오직 HTML 한 개의 크리티컬 리소스, 1번의 네트워크 왕복 크리티컬 패스 길이를 갖게됩니다.
 
 Translated By: 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}

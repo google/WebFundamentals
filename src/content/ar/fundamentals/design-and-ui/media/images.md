@@ -24,7 +24,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 المرات الأخرى التي قد تحتاج الصورة فيها إلى تغيير جذري: تغيير النسب والاقتصاص واستبدال الصورة بالكامل.  وفي هذه الحالة، يُشار إلى تغيير الصورة عادة باسم الإخراج الفني.  يمكنك الاطلاع على  [responsiveimages.org/demos/](http://responsiveimages.org/demos/) للحصول على مزيد من الأمثلة.
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 
 ## الصور في الترميز 

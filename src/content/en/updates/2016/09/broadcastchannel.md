@@ -10,7 +10,7 @@ description: BroadcastChannel API can be used for simple pub/sub between windows
 
 # BroadcastChannel API: A Message Bus for the Web {: .page-title }
 
-{% include "_shared/contributors/ericbidelman.html" %}
+{% include "web/_shared/contributors/ericbidelman.html" %}
 
 
 The [BroadcastChannel API][spec] allows same-origin scripts to send messages to other browsing contexts. It can be thought of as a simple message bus that allows pub/sub semantics between windows/tabs, iframes, web workers, and service workers.

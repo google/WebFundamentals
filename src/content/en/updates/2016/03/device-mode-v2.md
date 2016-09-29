@@ -13,7 +13,7 @@ description: Learn all about Chrome DevTools' new, refreshed Device Mode introdu
 
 
 
-# A new Device Mode for a mobile-first generation
+## A new Device Mode for a mobile-first generation
 
 We introduced Device Mode, a way to emulate devices and work with responsive designs,
 a bit more than a year ago. Now it's time for its first major upgrade, starting
@@ -24,7 +24,7 @@ ways to emulate mobile in the past, the development default was desktop. Mobile
 emulation always had to be turned on. Now that consumption of mobile sites has
 overtaken desktop in many places, we're switching our position in DevTools as well.
 
-## What's new?
+### What's new?
 
 ![New Device Mode](/web/updates/images/2016/03/device-mode-v2/device-mode-initial-view.png)
 
@@ -44,7 +44,7 @@ whenever possible. These new composite options make it a lot easier to switch
 between modes. To toggle certain controls or customize your experience of the 
 toolbar, hit up the little three dot menu icon.
 
-## Responsive by default
+### Responsive by default
 
 <img src="/web/updates/images/2016/03/device-mode-v2/select-device.png" alt="Device Mode dropdown" style="float: right;max-width: 33%;margin: 0 0 10px 10px;">
 
@@ -72,7 +72,7 @@ currently most popular ones. If you select one, we do our best to make it behave
 as closely as the real deal: Touch events, user agent, viewport and device 
 chrome and UI (if available) are all emulated.
 
-## Integrated Remote Debugging
+### Integrated Remote Debugging
 
 Emulations, even the best ones available, can only get you so far. There are 
 simply things that emulations can't do today, like:
@@ -94,7 +94,7 @@ access **Inspect Devices** as a dialog directly within the new main menu. This
 makes it much easier to include physical debugging into your workflow – just 
 plug in your phone, no need to exit your DevTools!
 
-## New homes for the rest of the former emulation controls
+### New homes for the rest of the former emulation controls
 
 Since mobile is now the default across DevTools, features like network 
 throttling moved to their proper home, in this case the Network Panel.

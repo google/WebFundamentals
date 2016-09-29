@@ -25,7 +25,7 @@ API](https://developer.mozilla.org/en-US/docs/Web/API/Selection) to
 programmatically select text to determine what is copied to the clipboard, which
 we'll be looking at in more detail later on in this article.
 
-# Simple Example
+## Simple Example
 
 For example's sake, let's add a button which copies an email address to the
 user's clipboard.
@@ -111,7 +111,7 @@ We can do the following to cut the content:
     });
     
 
-# queryCommandSupported and queryCommandEnabled
+## queryCommandSupported and queryCommandEnabled
 
 Ahead of calling document.execCommand(), you should ensure that this API is
 supported using the
@@ -131,13 +131,13 @@ is that cut and copy could be supported by a browser, but if no text is currentl
 setting the selection of text programmatically and want to ensure the command
 will do as expected, otherwise present a message to the user.
 
-# Browser Support
+## Browser Support
 
 IE 10+, Chrome 43+, Firefox 41+, and Opera 29+ support these commands.
 
 Safari does not support these commands.
 
-# Known Bugs
+## Known Bugs
 
 * ~~Calling queryCommandSupported() for cut or copy [always returns false until after a user interaction](//crbug.com/476508). This prevents you from disabling your UI for browsers which don't actually support it.~~ Fixed on Chrome 48.
 * [Calling queryCommandSupported() from devtools will always return

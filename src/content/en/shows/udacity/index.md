@@ -7,20 +7,20 @@ description: Get started or build your web design and development skills with th
 
 # Udacity Courses {: .page-title }
 
-{% include "_shared/udacity/ud811.html" %}
+{% include "web/_shared/udacity/ud811.html" %}
 
-{% include "_shared/udacity/ud891.html" %}
+{% include "web/_shared/udacity/ud891.html" %}
 
-{% include "_shared/udacity/ud860.html" %}
+{% include "web/_shared/udacity/ud860.html" %}
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
-{% include "_shared/udacity/ud884.html" %}
+{% include "web/_shared/udacity/ud884.html" %}
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
-{% include "_shared/udacity/ud899.html" %}
+{% include "web/_shared/udacity/ud899.html" %}
 
-{% include "_shared/udacity/ud892.html" %}
+{% include "web/_shared/udacity/ud892.html" %}
 
-{% include "_shared/udacity/ud890.html" %}
+{% include "web/_shared/udacity/ud890.html" %}

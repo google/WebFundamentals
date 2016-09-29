@@ -22,7 +22,7 @@ L'utilisation d'appareils mobiles pour naviguer sur le Web connaît un développ
 {% endcomment %}
 
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 
 
