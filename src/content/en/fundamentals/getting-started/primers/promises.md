@@ -187,7 +187,7 @@ Although, as I mentioned, jQuery's Deferreds are a bit … unhelpful. Thankfully
     var jsPromise = Promise.resolve($.ajax('/whatever.json'))
 
 
-Here, jQuery's `$.ajax` returns a Deferred. Since it has a "then" method, `Promise.resolve` can turn it into a JavaScript promise. However, sometimes deferreds pass multiple arguments to their callbacks, for example:
+Here, jQuery's `$.ajax` returns a Deferred. Since it has a "then" method, `Promise.resolve()` can turn it into a JavaScript promise. However, sometimes deferreds pass multiple arguments to their callbacks, for example:
 
     var jqDeferred = $.ajax('/whatever.json');
 
@@ -597,7 +597,7 @@ We want to turn our `chapterUrls` array into a sequence of promises. We can do t
 
 
 
-This is the first time we've seen `Promise.resolve`, which creates a promise that resolves to whatever value you give it. If you pass it an instance of `Promise` it'll simply return it (**note:** this is a change to the spec that some implementations don't yet follow). If you pass it something promise-like (has a 'then' method), it creates a genuine `Promise` that fulfills/rejects in the same way. If you pass in any other value, e.g., `Promise.resolve('Hello')`, it creates a promise that fulfills with that value. If you call it with no value, as above, it fulfills with "undefined".
+This is the first time we've seen `Promise.resolve()`, which creates a promise that resolves to whatever value you give it. If you pass it an instance of `Promise` it'll simply return it (**note:** this is a change to the spec that some implementations don't yet follow). If you pass it something promise-like (has a 'then' method), it creates a genuine `Promise` that fulfills/rejects in the same way. If you pass in any other value, e.g., `Promise.resolve('Hello')`, it creates a promise that fulfills with that value. If you call it with no value, as above, it fulfills with "undefined".
 
 
 There's also `Promise.reject(val)`, which creates a promise that rejects with the value you give it (or undefined).
