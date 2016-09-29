@@ -4,6 +4,7 @@ var fs = require('fs');
 var gulp = require('gulp');
 var path = require('path');
 var glob = require('globule');
+var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var wfHelper = require('./wfHelper');
 
@@ -17,7 +18,7 @@ var STD_EXCLUDES = [
 ];
 var MAX_DESCRIPTION_LENGTH = 485;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
-
+var CONTRIBUTORS_FILE = './src/data/_contributors.yaml';
 var DO_EXPERIMENTAL = false;
 var EXPERIMENTAL_STRINGS = [
   {label: 'Links (HTML) within DevSite should be relative', regEx: /href=['"]?https:\/\/developers.google.com/},
@@ -42,7 +43,7 @@ var ERROR_STRINGS = [
   {label: 'Old style animation tag {% animtion', regEx: /{% animation/},
 ];
 
-function testMarkdownFile(fileName) {
+function testMarkdownFile(fileName, contribJson) {
   var tags;
   var errors = [];
   var warnings = [];
@@ -86,6 +87,18 @@ function testMarkdownFile(fileName) {
     tags.split(',').forEach(function(tag) {
       if (VALID_TAGS.indexOf(tag.trim()) === -1) {
         warnings.push({msg: 'Uncommon tag found', param: tag.trim()});
+      }
+    });
+  }
+  // Verify authors/translators are in contribJson
+  var reContrib = /{%[ ]?include "web\/_shared\/contributors\/(.*)"[ ]?%}/gm;
+  var contributors = fileContent.match(reContrib);
+  if (contributors) {
+    contributors.forEach(function(contributor) {
+      var key = wfHelper.getRegEx(/\/contributors\/(.*)\.html"/, fileContent);
+      var contrib = contribJson[key];
+      if (!contrib) {
+        errors.push({msg: 'Unable to find contributor in contributors file.', param: key});
       }
     });
   }
@@ -166,6 +179,10 @@ function testMarkdownFile(fileName) {
 }
 
 gulp.task('test', function(callback) {
+  var warnings = 0;
+  var errors = 0;
+  var errorList = [];
+  var filesWithIssues = 0;
   var opts = {
     srcBase: TEST_ROOT,
     prefixBase: true
@@ -176,14 +193,26 @@ gulp.task('test', function(callback) {
   gutil.log('Base directory:', gutil.colors.cyan(opts.srcBase));
   gutil.log('Skipping wf_review_required tags:', gutil.colors.cyan(GLOBAL.WF.options.skipReviewRequired));
   gutil.log('Warn only:', gutil.colors.cyan(GLOBAL.WF.options.testWarnOnly));
+  gutil.log('');
+
+  var contribJson;
+  try {
+    gutil.log('Validating _contributors.yaml...');
+    var contribYaml = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
+    contribJson = jsYaml.safeLoad(contribYaml);
+  } catch (ex) {
+    contribJson = {};
+    errors++;
+    var msg = 'Unable to read or parse _contributors.yaml';
+    gutil.log(' ', gutil.colors.red('ERROR'), msg, gutil.colors.cyan(ex.message));
+    errorList.push(CONTRIBUTORS_FILE + ': ' + msg + ' -- ' + ex.message);
+  }
+
+  gutil.log('Validating markdown (.md) files...');
   var files = glob.find(['**/*.md'], STD_EXCLUDES, opts);
   files.sort();
-  var warnings = 0;
-  var errors = 0;
-  var errorList = ['The following errors were found:'];
-  var filesWithIssues = 0;
   files.forEach(function(fileObj) {
-    var r = testMarkdownFile(fileObj);
+    var r = testMarkdownFile(fileObj, contribJson);
     if (r.warnings.length > 0 || r.errors.length > 0) {
       filesWithIssues++;
       gutil.log(r.file);
@@ -203,11 +232,11 @@ gulp.task('test', function(callback) {
   gutil.log('Files checked: ', gutil.colors.blue(files.length));
   gutil.log(' - with issues:', gutil.colors.yellow(filesWithIssues));
   gutil.log(' - warnings:   ', gutil.colors.yellow(warnings));
-  gutil.log(' - errors:     ', gutil.colors.red(errors));
+  gutil.log(' - errors:     ', gutil.colors.red(errorList.length));
   if (GLOBAL.WF.options.testWarnOnly === true) {
     callback();
-  } else if (errors > 0) {
-    var err = new gutil.PluginError('Tests failed', errorList.join('\n'));
+  } else if (errorList.length > 0) {
+    var err = new gutil.PluginError('test-suite', errorList.join('\n'));
     callback(err);
   }
 });
