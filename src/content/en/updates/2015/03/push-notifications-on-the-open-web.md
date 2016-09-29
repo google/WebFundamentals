@@ -408,7 +408,7 @@ this notification.
 We've subscribed to push messages and our service worker is ready to show a
 notification, so it's time to send a push message through FCM.  
 
-There is only applicable to the browsers using FCM.
+This is only applicable to the browsers using FCM.
 
 When you send the `PushSubscription.endpoint` variable to your server, the
 endpoint for FCM is special. It has a parameter on the end of the URL which
