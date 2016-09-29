@@ -23,8 +23,8 @@ toc:
         path: /web/fundamentals/accessibility/01-focus/experiencing-focus
       - title: DOM Order Matters
         path: /web/fundamentals/accessibility/01-focus/dom-order-matters
-      - title: Focus in Complex Components
-        path: /web/fundamentals/accessibility/01-focus/focus-six
+      - title: Using tabindex
+        path: /web/fundamentals/accessibility/01-focus/using-tabindex
       - title: Off screen Content
         path: /web/fundamentals/accessibility/01-focus/focus-seven
       - title: Modals and Keyboard Traps
