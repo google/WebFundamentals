@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A deep-dive into the service worker lifecycle
+description: A deep-dive into the service worker lifecycle.
 
 {# wf_updated_on: 2016-09-29 #}
 {# wf_published_on: 2016-09-29 #}
@@ -11,9 +11,8 @@ description: A deep-dive into the service worker lifecycle
 
 The lifecycle of the service worker is its most complicated part. If you don't
 know what it's trying to do and what the benefits are, it can feel like it's
-fighting against you. But once you know how it works, you can deliver seemless,
-unobtrusive updates to users, mixing together the best of web and native
-patterns.
+fighting you. But once you know how it works, you can deliver seemless,
+unobtrusive updates to users, mixing the best of web and native patterns.
 
 This is a deep dive, but the bullets at the start of each section cover most of
 what you need to know.
@@ -42,11 +41,11 @@ Caution: Users actively dislike data loss. It causes them great sadness.
 
 In brief:
 
-* The install event is the first event a service worker gets, and it only
+* The `install` event is the first event a service worker gets, and it only
   happens once.
-* A promise passed to `installEvent.waitUntil()` signals the duration &
-  success/failure of your install
-* A service worker won't receive events like "fetch" & "push" until it
+* A promise passed to `installEvent.waitUntil()` signals the duration and
+  success or failure of your install.
+* A service worker won't receive events like `fetch` and `push` until it
   successfully finishes installing and becomes "active".
 * By default, a page's fetches won't go through a service worker unless the page
   request itself went through a service worker. So you'll need to refresh the
@@ -265,52 +264,52 @@ you'll see the cat.
 
 Note: Cats are better than dogs. They just *are*.
 
-### Scope & control
+### Scope and control
 
 The default scope of a service worker registration is `./` relative to the
 script URL. This means if you register a service worker at
 `//example.com/foo/bar.js` it has a default scope of `//example.com/foo/`.
 
-We call pages, workers, and shared workers "clients". Your service worker can
+We call pages, workers, and shared workers `clients`. Your service worker can
 only control clients that are in-scope. Once a client is "controlled", its
 fetches go through the in-scope service worker. You can detect if a client is
 controlled via `navigator.serviceWorker.controller` which will be null or a
 service worker instance.
 
-### Download, parse, & execute
+### Download, parse, and execute
 
-Your very first service worker will download when you call `.register`. If your
+Your very first service worker downloads when you call `.register()`. If your
 script fails to download, parse, or throws an error in its initial execution,
-the register promise will reject, and the service worker will be discarded.
+the register promise rejects, and the service worker is discarded.
 
-Chrome's devtools will show the error in the console, and in the service worker
+Chrome's DevTools shows the error in the console, and in the service worker
 section of the application tab:
 
 <figure>
-  <img src="images/register-fail.png" class="browser-screenshot" alt="Error displayed in service worker devtools tab">
+  <img src="images/register-fail.png" class="browser-screenshot" alt="Error displayed in service worker DevTools tab">
 </figure>
 
 ### Install
 
-The first event a service worker gets is "install". It's triggered as soon as
-the worker initially executes, and it's only called once per service worker. If
-you alter your service worker script it's considered to be a different service
-worker, and it'll get its own "install" event - I'll cover [updates in detail
+The first event a service worker gets is `install`. It's triggered as soon as
+the worker executes, and it's only called once per service worker. If
+you alter your service worker script the browser considers it a different service
+worker, and it'll get its own `install` event. I'll cover [updates in detail
 later](#updates).
 
-"install" is your chance to cache everything you need before being able to
+The `install` event is your chance to cache everything you need before being able to
 control clients. The promise you pass to `event.waitUntil()` lets the browser
 know when your install completes, and if it was successful.
 
 If your promise rejects, this signals the install failed, and the browser throws
-the service worker away - it'll never control clients. This means we can rely on
-"cat.svg" being present in the cache in our "fetch" events - it's a dependency.
+the service worker away. It'll never control clients. This means we can rely on
+"cat.svg" being present in the cache in our `fetch` events. It's a dependency.
 
 ### Activate
 
 Once your service worker is ready to control clients and handle functional
-events like "push" and "sync", you'll get an "activate" event. But that doesn't
-mean the page that called `.register()` will become controlled.
+events like `push` and `sync`, you'll get an `activate` event. But that doesn't
+mean the page that called `.register()` will be controlled.
 
 The first time you load [the
 demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
@@ -319,8 +318,9 @@ activates, it doesn't handle the request, and you still see the image of the
 dog. The default is *consistency*, if your page loads without a service worker,
 neither will its subresources. If you load [the
 demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/){:
-.external} a second time (eg refresh the page), it'll be controlled, both the
-page and the image will go through "fetch" events, and you'll see a cat instead.
+.external} a second time (in other words, refresh the page), it'll be controlled.
+Both the page and the image will go through `fetch` events, and you'll see a cat
+instead.
 
 ### clients.claim
 
@@ -329,8 +329,8 @@ your service worker once it's activated.
 
 Here's [a variation of the demo
 above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/df4cae41fa658c4ec1fa7b0d2de05f8ba6d43c94/){:
-.external} which calls `clients.claim()` in its activate event. You *should* see
-a cat first time. I say "should", because this is timing sensitive. You'll only
+.external} which calls `clients.claim()` in its `activate` event. You *should* see
+a cat the first time. I say "should", because this is timing sensitive. You'll only
 see a cat if the service worker activates and `clients.claim()` takes effect
 before the image tries to load.
 
@@ -349,24 +349,24 @@ In brief:
 
 * An update is triggered:
     * On navigation to an in-scope page.
-    * On functional events such as "push" & "sync", unless there's been an
+    * On functional events such as `push` and `sync`, unless there's been an
       update check within the previous 24 hours.
-    * On calling `.register` *only if* the service worker URL has changed.
+    * On calling `.register()` *only if* the service worker URL has changed.
 * The caching headers on the service worker script are respected (up to 24
   hours) when fetching updates. We're going to make this opt-in behaviour, as it
   catches people out. You probably want a `max-age` of 0 on your service worker
   script.
 * Your service worker is considered updated if it's byte-different to the one
-  the browser already has (we're extending this to include imported
-  scripts/modules too).
+  the browser already has. (We're extending this to include imported
+  scripts/modules too.)
 * The updated service worker is launched alongside the existing one, and gets
-  its own "install" event.
-* If your new worker has a non-ok status code (eg 404), fails to parse, throws
+  its own `install` event.
+* If your new worker has a non-ok status code (for example, 404), fails to parse, throws
   an error during execution, or rejects during install, the new worker is thrown
-  away, but the current one will remain active.
-* Once successfully installed, the updated worker will "wait" until the existing
-  worker is controlling zero clients (note that clients overlap during a
-  refresh).
+  away, but the current one remains active.
+* Once successfully installed, the updated worker will `wait` until the existing
+  worker is controlling zero clients. (Note that clients overlap during a
+  refresh.)
 * `self.skipWaiting()` prevents the waiting, meaning the service worker
   activates as soon as it's finished installing.
 
@@ -539,7 +539,7 @@ In brief:
 </div>
 </div>
 
-Let's say we changed our service worker script so we responded with a picture of
+Let's say we changed our service worker script to responded with a picture of
 a horse rather than a cat:
 
     const expectedCaches = ['static-v2'];
@@ -583,7 +583,7 @@ Note: I have no strong opinions on horses.
 
 [Check out a demo of the
 above](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
-.external}, you should still see an image of a cat. Here's why…
+.external}. You should still see an image of a cat. Here's why…
 
 ### Install
 
@@ -597,29 +597,29 @@ specific, such as `avatars`.
 
 ### Waiting
 
-Once successfully installed, the updated worker will delay activating until the
-existing worker is no longer controlling clients. This state is called
-"waiting", and it's how the service worker ensures only one version of your
-service worker is running at once.
+After it's successfully installed, the updated service worker delays activating
+until the existing service worker is no longer controlling clients. This state
+is called "waiting", and it's how the browser ensures that only one version of
+your service worker is running at a time.
 
 If you ran [the updated
 demo](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
 .external}, you should still see a picture of a cat, because the V2 worker
 hasn't yet activated. You can see the new service worker waiting in the
-"Application" tab of devtools:
+"Application" tab of DevTools:
 
 <figure>
-  <img src="images/waiting.png" class="browser-screenshot" alt="Dev tools showing new service worker waiting">
+  <img src="images/waiting.png" class="browser-screenshot" alt="DevTools showing new service worker waiting">
 </figure>
 
 Even if you only have one tab open to the demo, refreshing the page isn't enough
 to let the new version take over. This is due to how browser navigations work.
 When you navigate, the current page doesn't go away until the response headers
 have been received, and even then the current page may stay if the response has
-a `Content-Disposition` header. Due to this overlap, the current service worker
+a `Content-Disposition` header. Because of this overlap, the current service worker
 is always controlling a client during a refresh.
 
-To get the update, close or navigate-away all tabs using the current service
+To get the update, close or navigate away from all tabs using the current service
 worker. Then, when you [navigate to the demo
 again](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v2.html){:
 .external}, you should see the horse.
@@ -627,7 +627,7 @@ again](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw
 This pattern is similar to how Chrome updates. Updates to Chrome download in the
 background, but don't apply until Chrome restarts. In the mean time, you can
 continue to use the current version without disruption. However, this is a pain
-during development, but devtools has ways to make it easier, which I'll cover
+during development, but DevTools has ways to make it easier, which I'll cover
 [later in this article](#devtools).
 
 ### Activate
@@ -638,20 +638,19 @@ while the old worker was still in use, such as migrating databases and clearing
 caches.
 
 In the demo above, I maintain a list of caches that I expect to be there, and in
-the "activate" event I get rid of any others, which will remove the old
+the `activate` event I get rid of any others, which removes the old
 `static-v1` cache.
 
-Bear in mind you may not be updating from the previous version, it may be a
-service worker many versions old.
+Caution: You may not be updating from the previous version. It may be a service worker many versions old.
 
 If you pass a promise to `event.waitUntil()` it'll buffer functional events
-("fetch", "push", "sync" etc) until the promise resolves, so when your "fetch"
+(`fetch`, `push`, `sync` etc.) until the promise resolves. So when your `fetch`
 event fires, the activation is fully complete.
 
 Caution: The cache storage API is "origin storage" (like localStorage, and
-IndexedDB). If you run many sites on the same origin (eg
-`yourname.github.io/myapp`), careful you don't delete caches for your other
-sites! To avoid this, give your cache names a prefix unique to the current site,
+IndexedDB). If you run many sites on the same origin (for example,
+`yourname.github.io/myapp`), be careful that you don't delete caches for your other
+sites. To avoid this, give your cache names a prefix unique to the current site,
 eg `myapp-static-v1`, and don't touch caches unless they begin `myapp-`.
 
 ### Skip the waiting phase
@@ -660,12 +659,12 @@ The waiting phase means you're only running one version of your site at once,
 but if you don't need that feature, you can make your new service worker
 activate sooner by calling `self.skipWaiting()`.
 
-This causes your service worker to kick out the current active worker & activate
-itself once it enters the waiting phase (or immediately if it's already in the
+This causes your service worker to kick out the current active worker and activate
+itself as soon as it enters the waiting phase (or immediately if it's already in the
 waiting phase). It *doesn't* cause your worker to skip installing, just waiting.
 
-It doesn't really matter when you call `skipWaiting`, as long as it's during or
-before waiting. It's pretty common to call it in the "install" event:
+It doesn't really matter when you call `skipWaiting()`, as long as it's during or
+before waiting. It's pretty common to call it in the `install` event:
 
     self.addEventListener('install', event => {
       self.skipWaiting();
@@ -675,24 +674,24 @@ before waiting. It's pretty common to call it in the "install" event:
       );
     });
 
-…but you may want to call it as a results of a `postMessage` to the service
-worker. As in, you want to `skipWaiting` following a user interaction.
+But you may want to call it as a results of a `postMessage()` to the service
+worker. As in, you want to `skipWaiting()` following a user interaction.
 
 [Here's a demo that uses
-`skipWaiting`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){:
-.external}, you should see a picture of a cow without having to navigate away.
-Like `clients.claim` it's a race, so you'll only see the cow if the new service
+`skipWaiting()`](https://cdn.rawgit.com/jakearchibald/80368b84ac1ae8e229fc90b3fe826301/raw/ad55049bee9b11d47f1f7d19a73bf3306d156f43/index-v3.html){:
+.external}. You should see a picture of a cow without having to navigate away.
+Like `clients.claim()` it's a race, so you'll only see the cow if the new service
 worker fetches, installs and activates before the page tries to load the image.
 
-Caution: `skipWaiting` means that your new service worker is likely controlling
-pages that were loaded with some older version. This means some of your page's
+Caution: `skipWaiting()` means that your new service worker is likely controlling
+pages that were loaded with an older version. This means some of your page's
 fetches will have been handled by your old service worker, but your new service
-worker will be handling subsiquent fetches. If this might break things, don't
+worker will be handling subsequent fetches. If this might break things, don't
 use `skipWaiting()`.
 
 ### Manual updates
 
-As I mentioned earlier, the browser will check for updates automatically after
+As I mentioned earlier, the browser checks for updates automatically after
 navigations and functional events, but you can also trigger them manually:
 
     navigator.serviceWorker.register('/sw.js').then(reg => {
@@ -701,7 +700,7 @@ navigations and functional events, but you can also trigger them manually:
     });
 
 If you expect the user to be using your site for a long time without reloading,
-you may want to call update on an interval (such as hourly).
+you may want to call `update()` on an interval (such as hourly).
 
 ### Avoid changing the URL of your service worker script
 
@@ -735,20 +734,19 @@ development it's a bit of a pain. Thankfully there are a few tools to help out:
 
 ### Update on reload
 
-This one's my favourite…
+This one's my favourite.
 
 <figure>
-  <img src="images/update-on-reload.png" class="browser-screenshot" alt="Dev tools showing 'update on reload'">
+  <img src="images/update-on-reload.png" class="browser-screenshot" alt="DevTools showing 'update on reload'">
 </figure>
 
-This changes the lifecycle to be developer-friendly. Each navigation will…
+This changes the lifecycle to be developer-friendly. Each navigation will:
 
 1. Refetch the service worker.
-1. Install it as a new version even if it's byte-identical, meaning your install
-   event runs & your caches update.
-1. Once that's complete, skip the waiting phase so the new service worker
-   activates.
-1. Now navigate the page.
+1. Install it as a new version even if it's byte-identical, meaning your `install`
+   event runs and your caches update.
+1. Skip the waiting phase so the new service worker activates.
+1. Navigate the page.
 
 This means you'll get your updates on each navigation (including refresh)
 without having to reload twice or close the tab.
@@ -756,17 +754,17 @@ without having to reload twice or close the tab.
 ### Skip waiting
 
 <figure>
-  <img src="images/skip-waiting.png" class="browser-screenshot" alt="Dev tools showing 'skip waiting'">
+  <img src="images/skip-waiting.png" class="browser-screenshot" alt="DevTools showing 'skip waiting'">
 </figure>
 
-If you have a worker waiting, you can hit "skip waiting" in devtools to
+If you have a worker waiting, you can hit "skip waiting" in DevTools to
 immediately promote it to "active".
 
 ### Shift-reload
 
-If you force-reload the page (shift-reload) it will bypass the service worker
-entirely - it'll be uncontrolled. This feature is in the spec, so it works in
-other service-worker-supporting browsers too.
+If you force-reload the page (shift-reload) it bypasses the service worker
+entirely. It'll be uncontrolled. This feature is in the spec, so it works in
+other service-worker-supporting browsers.
 
 ## Handling updates
 
