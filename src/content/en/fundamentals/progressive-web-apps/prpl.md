@@ -39,7 +39,7 @@ PRPL is one such pattern.
 PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs), with
 an emphasis on the performance of app delivery and launch. It stands for:
 
-*  **Push** critical resources for the initial route.
+*  **Push** critical resources for the initial URL route.
 *  **Render** initial route.
 *  **Pre-cache** remaining routes.
 *  **Lazy-load** and create remaining routes on demand.
@@ -225,7 +225,7 @@ means they can be cached efficiently and be shared between pages.
 ## Conclusion
 
 Loading the code for routes more granularly and allowing browsers to schedule
-work better has the potential to be a holy grail for reaching interactivity in
+work better has the potential to greatly aid reaching interactivity in
 our applications sooner. We need **better architectures that enable
 interactivity quickly** and the PRPL pattern is an interesting example of how
 to accomplish this goal on real mobile devices.
