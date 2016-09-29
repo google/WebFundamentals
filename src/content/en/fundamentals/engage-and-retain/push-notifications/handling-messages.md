@@ -13,7 +13,7 @@ description: You've seen what makes a good notification. Now let's see how to im
   <img src="images/joe-asked.png" alt="The example notification.">
 </figure>
 
-Way back at the [beginning of this article](.#anatomy), we
+Way back at the [beginning of this article](#anatomy), we
 showed a notification that looks like the image and the code that goes with it.
 
 While we showed you a little bit about how this is coded, we really didn't give
@@ -26,7 +26,7 @@ you enough information for it to be useful. That's what this section is about.
 Let's talk about service workers again. Handling message involves code that
 lives exclusively in a service worker. If you need a little background,
 [here's the introduction again](service-worker-primer). We've also got some
-handy instructions for [debugging service workers](../../../tools/chrome-devtools/debug/progressive-web-apps/#service-workers)
+handy instructions for [debugging service workers](/web/tools/chrome-devtools/debug/progressive-web-apps/#service-workers)
 using DevTools.
 
 ## More notification anatomy {: #more-anatomy }
