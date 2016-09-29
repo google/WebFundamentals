@@ -3,97 +3,69 @@ toc:
     section:
     - title: Overview
       path: /web/fundamentals/accessibility/
-    - title: Introduction
-      section:
-      - title: Get Started
-        path: /web/fundamentals/accessibility/00-intro/
-      - title: Understanding Users' Diversity
-        path: /web/fundamentals/accessibility/00-intro/understanding-users-diversity
-      - title: Screen Readers
-        path: /web/fundamentals/accessibility/00-intro/screen-readers
-      - title: Web Content Accessibility Guidelines
-        path: /web/fundamentals/accessibility/00-intro/web-content-accessibility-guidelines
-      - title: Next Steps
-        path: /web/fundamentals/accessibility/00-intro/next-steps
     - title: Focus
       section:
       - title: Introduction to Focus
-        path: /web/fundamentals/accessibility/01-focus/
-      - title: Experiencing Focus
-        path: /web/fundamentals/accessibility/01-focus/experiencing-focus
+        path: /web/fundamentals/accessibility/focus/
       - title: DOM Order Matters
-        path: /web/fundamentals/accessibility/01-focus/dom-order-matters
+        path: /web/fundamentals/accessibility/focus/dom-order-matters
       - title: Using tabindex
-        path: /web/fundamentals/accessibility/01-focus/using-tabindex
-      - title: Off screen Content
-        path: /web/fundamentals/accessibility/01-focus/focus-seven
-      - title: Modals and Keyboard Traps
-        path: /web/fundamentals/accessibility/01-focus/focus-eight
-      - title: Focus Wrap-up
-        path: /web/fundamentals/accessibility/01-focus/focus-nine
+        path: /web/fundamentals/accessibility/focus/using-tabindex
     - title: Semantics Built-in
       section:
       - title: Introduction to Semantics
-        path: /web/fundamentals/accessibility/02-semantics-builtin/
-      - title: Assistive Technology
-        path: /web/fundamentals/accessibility/02-semantics-builtin/sembuiltin-two
-      - title: Affordances
-        path: /web/fundamentals/accessibility/02-semantics-builtin/sembuiltin-three
+        path: /web/fundamentals/accessibility/semantics-builtin/
       - title: The Accessibility Tree
-        path: /web/fundamentals/accessibility/02-semantics-builtin/sembuiltin-four
-      - title: Semantics in Native HTML
-        path: /web/fundamentals/accessibility/02-semantics-builtin/sembuiltin-five
+        path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
       - title: Text Alternatives for Images
-        path: /web/fundamentals/accessibility/02-semantics-builtin/sembuiltin-six
-      - title: Built-in Semantics Wrap-up
-        path: /web/fundamentals/accessibility/02-semantics-builtin/sembuiltin-seven
+        path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
     - title: Semantics Navigation
       section:
       - title: Semantics and Navigating Content
-        path: /web/fundamentals/accessibility/03-semantics-navigation/
+        path: /web/fundamentals/accessibility/semantics-navigation/
       - title: Using Headings Effectively
-        path: /web/fundamentals/accessibility/03-semantics-navigation/semnav-two
+        path: /web/fundamentals/accessibility/semantics-navigation/semnav-two
       - title: Other Navigation Options
-        path: /web/fundamentals/accessibility/03-semantics-navigation/semnav-three
+        path: /web/fundamentals/accessibility/semantics-navigation/semnav-three
       - title: Semantics and Navigation Wrap-up
-        path: /web/fundamentals/accessibility/03-semantics-navigation/semnav-four
+        path: /web/fundamentals/accessibility/semantics-navigation/semnav-four
     - title: Semantics and ARIA
       section:
       - title: Introduction to ARIA
-        path: /web/fundamentals/accessibility/04-semantics-aria/
+        path: /web/fundamentals/accessibility/semantics-aria/
       - title: What Can ARIA Do?
-        path: /web/fundamentals/accessibility/04-semantics-aria/semaria-two
+        path: /web/fundamentals/accessibility/semantics-aria/semaria-two
       - title: ARIA Labels
-        path: /web/fundamentals/accessibility/04-semantics-aria/semaria-three
+        path: /web/fundamentals/accessibility/semantics-aria/semaria-three
       - title: NVDA Screen Reader
-        path: /web/fundamentals/accessibility/04-semantics-aria/semaria-four
+        path: /web/fundamentals/accessibility/semantics-aria/semaria-four
       - title: ARIA Relationships
-        path: /web/fundamentals/accessibility/04-semantics-aria/semaria-five
+        path: /web/fundamentals/accessibility/semantics-aria/semaria-five
       - title: Hidden in Plain Sight
-        path: /web/fundamentals/accessibility/04-semantics-aria/semaria-six
+        path: /web/fundamentals/accessibility/semantics-aria/semaria-six
       - title: Introducing aria-live
-        path: /web/fundamentals/accessibility/04-semantics-aria/semaria-seven
+        path: /web/fundamentals/accessibility/semantics-aria/semaria-seven
       - title: Implicit Semantics
-        path: /web/fundamentals/accessibility/04-semantics-aria/semaria-eight
+        path: /web/fundamentals/accessibility/semantics-aria/semaria-eight
       - title: Semantics and ARIA Wrap-up
-        path: /web/fundamentals/accessibility/04-semantics-aria/semaria-nine
+        path: /web/fundamentals/accessibility/semantics-aria/semaria-nine
     - title: Styling
       section:
       - title: Accessible Styles
-        path: /web/fundamentals/accessibility/05-styling/
+        path: /web/fundamentals/accessibility/styling/
       - title: Input Modality
-        path: /web/fundamentals/accessibility/05-styling/styling-two
+        path: /web/fundamentals/accessibility/styling/styling-two
       - title: Multi-Device Responsive Design
-        path: /web/fundamentals/accessibility/05-styling/styling-three
+        path: /web/fundamentals/accessibility/styling/styling-three
       - title: Mobile Screen Readers
-        path: /web/fundamentals/accessibility/05-styling/styling-four
+        path: /web/fundamentals/accessibility/styling/styling-four
       - title: Color and Contrast
-        path: /web/fundamentals/accessibility/05-styling/styling-five
+        path: /web/fundamentals/accessibility/styling/styling-five
       - title: Color Deficiency and Accessibility
-        path: /web/fundamentals/accessibility/05-styling/styling-six
+        path: /web/fundamentals/accessibility/styling/styling-six
       - title: High-contrast Mode
-        path: /web/fundamentals/accessibility/05-styling/styling-seven
+        path: /web/fundamentals/accessibility/styling/styling-seven
       - title: Accessibility Styling Wrap-up
-        path: /web/fundamentals/accessibility/05-styling/styling-eight
+        path: /web/fundamentals/accessibility/styling/styling-eight
     - title: Wrap-up
-      path: /web/fundamentals/accessibility/06-outro/
+      path: /web/fundamentals/accessibility/outro/
