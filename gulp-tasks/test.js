@@ -4,6 +4,7 @@ var fs = require('fs');
 var gulp = require('gulp');
 var path = require('path');
 var glob = require('globule');
+var moment = require('moment');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var wfHelper = require('./wfHelper');
@@ -75,11 +76,13 @@ function testMarkdownFile(fileName, contribJson) {
     }
   }
   // Validate wf_updated and wf_published
-  if (wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, fileContent, null) === null) {
-    warnings.push({msg: 'Missing wf_updated_on tag', param: ''});
+  var updatedOn = wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, fileContent, 'NOT_FOUND');
+  if (!moment(updatedOn, 'YYYY-MM-DD').isValid()) {
+    errors.push({msg: 'Missing wf_updated_on tag or invalid format YYYY-MM-DD', param: updatedOn});
   }
-  if (wfHelper.getRegEx(/{# wf_published_on: (.*?) #}/, fileContent, null) === null) {
-    warnings.push({msg: 'Missing wf_published_on tag', param: ''});
+  var publishedOn = wfHelper.getRegEx(/{# wf_published_on: (.*?) #}/, fileContent, 'NOT_FOUND');
+  if (!moment(publishedOn, 'YYYY-MM-DD').isValid()) {
+    errors.push({msg: 'Missing wf_published_on tag or invalid format YYYY-MM-DD', param: publishedOn});
   }
   // Check for uncommon tags
   tags = wfHelper.getRegEx(/{# wf_tags: (.*?) #}/, fileContent);
