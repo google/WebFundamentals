@@ -39,7 +39,6 @@ var ERROR_STRINGS = [
   {label: 'Old style include {% include_code', regEx: /{%[ ]?include_code/},
   {label: 'Old style link_sample {% link_sample', regEx: /{%[ ]?link_sample/},
   {label: 'Old style highlight {% highlight', regEx: /{%[ ]?highlight/},
-  {label: 'Contributor is TODO', regEx: /{%[ ]?include.*web\/_shared\/contributors\/TODO.html/},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
   {label: 'Old style animation tag {% animtion', regEx: /{% animation/},
 ];
