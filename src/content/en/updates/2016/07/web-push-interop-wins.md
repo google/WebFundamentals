@@ -61,14 +61,14 @@ actually allowed to send messages to the receiving user.
     headers.append('TTL', 12 * 60 * 60);  
     // Assuming no data is going to be sent  
     headers.append(Content-Length, 0);
-    
+
     // Assuming you're not using VAPID (read on), this
     // proprietary header is needed  
     if(subscription.endpoint
       .indexOf('https://android.googleapis.com/gcm/send/') === 0) {  
       headers.append('Authorization', 'GCM_API_KEY');  
     }
-    
+
     fetch(subscription.endpoint, {  
       method: 'POST',  
       headers: headers  
@@ -78,7 +78,7 @@ actually allowed to send messages to the receiving user.
         throw new Error('Unable to send push message'');  
       }  
     });
-    
+
 
 Remember, this is a change to GCM's API, so you don't need to update your
 subscriptions, just change your server code to define the headers as shown
@@ -122,13 +122,13 @@ library](https://github.com/web-push-libs/web-push/):
     function generateVAPIDKeys() {  
       var curve = crypto.createECDH('prime256v1');  
       curve.generateKeys();
-    
+
       return {  
         publicKey: curve.getPublicKey(),  
         privateKey: curve.getPrivateKey(),  
       };  
     }
-    
+
 
 ### Subscribing with the Public Key
 
@@ -144,7 +144,7 @@ the subscribe() method.
         applicationServerKey: publicKey  
       }  
     );
-    
+
 
 You'll know if it has worked by examining the endpoint in the resulting
 subscription object, if the origin is `fcm.googleapis.com`, it's working.
