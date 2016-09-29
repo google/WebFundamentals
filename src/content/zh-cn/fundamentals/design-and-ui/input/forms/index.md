@@ -245,38 +245,8 @@ HTML5 引入了大量新的输入类型。 这些新输入类型可以提示
 Note: <code>datalist</code> 值是提供的建议值，并不意味着用户 只能选择所提供的建议值。
 
 
----
-title: "正确地为输入设置标签和命名"
-updated_on: 2015-03-27
-key-takeaways:
-  label-and-name:
-    - 务必对表单输入使用 <code>label</code>，并确保字段处于焦点时 标签可见。
-    - 使用 <code>placeholder</code> 来提供有关预期输入内容的指导。
-    - 为帮助浏览器自动完成表单，为各元素提供既定的 <code>name</code> 并包括 <code>autocomplete</code> 属性。
-notes:
-  use-placeholders:
-    - 当用户开始输入元素时，占位符立即消失，因此 它们不能代替标签。  应使用占位符 作为辅助，引导用户注意所需的格式和内容。
-  recommend-input:
-    - 只使用 <code>street-address</code> 或同时使用 <code>address-line1</code> 和 <code>address-line2</code>
-    - 仅在您的地址格式需要时，才需要使用 <code>address-level1</code> 和 <code>address-level2</code> 。
-  use-datalist:
-    - <code>datalist</code> 值是提供的建议值，并不意味着用户 只能选择所提供的建议值。
-  provide-real-time-validation:
-    - 即使客户端有输入验证，也务必 在服务器上验证数据，以确保数据的一致性和安全。
-  show-all-errors:
-    - 应一次性向用户显示表单上的所有问题，而不是一次显示一个问题。
-  request-auto-complete-flow:
-    - 如果要求输入任何类型的个人信息或信用卡 数据，请确保通过 SSL 提供页面。  否则对话框将 警告用户，他们的信息可能不安全。
-comments:
-  # 注：如果分区标题或 URL 有更改，则必须更新以下短链接
-  - g.co/mobilesiteprinciple17a
----
-<p class="intro">
-  在移动设备上填写表单很困难。 输入操作最少的表单就是最好的表单。 好的表单提供有语义的输入类型。 按键应变为与用户的输入类型匹配；用户在日历中选取日期。 让用户了解情况。 验证工具应告诉用户，在提交表单之前他们需要做什么。
-</p>
+在移动设备上填写表单很困难。 输入操作最少的表单就是最好的表单。 好的表单提供有语义的输入类型。 按键应变为与用户的输入类型匹配；用户在日历中选取日期。 让用户了解情况。 验证工具应告诉用户，在提交表单之前他们需要做什么。
 
-
-{% include shared/takeaway.liquid list=page.key-takeaways.label-and-name %}
 
 #### 标签的重要性
 
@@ -445,7 +415,6 @@ comments:
   </tbody>
 </table>
 
-{% include shared/remember.liquid title="Remember" list=page.remember.recommend-input %}
 
 #### `autofocus` 属性
 
@@ -463,37 +432,10 @@ comments:
     <input type="text" autofocus ...>
 
 
----
-title: "提供实时验证"
-updated_on: 2014-10-21
-key-takeaways:
-  provide-real-time-validation:
-    - 利用浏览器的内置验证属性，例如 <code>pattern</code>、<code>required</code>、<code>min</code>、<code>max</code>等。
-    - 使用 JavaScript 和约束验证 API 来满足更复杂的 验证要求。
-    - 实时显示验证错误，如果用户尝试提交 无效的表单，则显示他们需要修正的所有字段。
-notes:
-  use-placeholders:
-    - 当焦点处于元素中时，占位符立即消失，因此 它们不能代替标签。  应使用占位符 作为辅助，引导用户注意所需的格式和内容。
-  recommend-input:
-    - 自动完成仅在表单方法为 post 时才起作用。
-  use-datalist:
-    - <code>datalist</code> 值是提供的建议值，并不意味着用户 只能选择所提供的建议值。
-  provide-real-time-validation:
-    - 即使客户端有输入验证，也务必 在服务器上验证数据，以确保数据的一致性和安全。
-  show-all-errors:
-    - 应一次性向用户显示表单上的所有问题，而不是一次显示一个问题。 
-  request-auto-complete-flow:
-    - 如果要求输入任何类型的个人信息或信用卡 数据，请确保通过 SSL 提供页面。  否则对话框将 警告用户，他们的信息可能不安全。
-comments:
-  # 注：如果分区标题或 URL 有更改，则必须更新以下短链接
-  - g.co/mobilesiteprinciple17b
----
-<p class="intro">
-  实时数据验证不仅有助于保持数据清洁，还能改善用户体验。现代浏览器有多种内置工具可提供实时验证，并且能防止用户提交无效的表单。 应使用可视化线索来指示表单是否已正确填写。
-</p>
+
+实时数据验证不仅有助于保持数据清洁，还能改善用户体验。现代浏览器有多种内置工具可提供实时验证，并且能防止用户提交无效的表单。 应使用可视化线索来指示表单是否已正确填写。
 
 
-{% include shared/takeaway.liquid list=page.key-takeaways.provide-real-time-validation %}
 
 #### 使用以下属性来验证输入值
 
@@ -602,8 +544,6 @@ JavaScript API 仍将允许您检查表单是否通过验证。
       <label for="inpEmail">Email address</label>
       <input type="email" ...>
     </form>
-
-{% include shared/remember.liquid title="Remember" list=page.notes.provide-real-time-validation %}
 
 #### 使用 JavaScript 实现更复杂的实时验证
 
@@ -720,10 +660,6 @@ JavaScript 结合，只在用户已访问此字段时才显示无效的样式。
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
-
-{% include shared/remember.liquid title="Important" list=page.remember.show-all-errors %}
-
-
 
 
 ## 使用 requestAutocomplete API 来简化结账 

@@ -9,7 +9,7 @@ description: Perf tooling improvements in DevTools over the last few Chrome rele
 
 # DevTools Digest, September 2016: Perf Roundup {: .page-title }
 
-{% include "_shared/contributors/kaycebasques.html" %}
+{% include "web/_shared/contributors/kaycebasques.html" %}
 
 
 Hallo! It's [Kayce](https://twitter.com/kaycebasques) again, tech writer for DevTools. For this DevTools Digest I thought I'd switch it up a little and do a roundup of some perf tooling improvements in DevTools over the last few Chrome releases.

@@ -41,6 +41,7 @@ var ERROR_STRINGS = [
   {label: 'Old style highlight {% highlight', regEx: /{%[ ]?highlight/},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
   {label: 'Old style animation tag {% animtion', regEx: /{% animation/},
+  {label: 'Old style include (shared/takeaway.liquid)', regEx: /shared\/takeaway\.liquid/}
 ];
 
 function testMarkdownFile(fileName, contribJson) {
@@ -128,6 +129,22 @@ function testMarkdownFile(fileName, contribJson) {
   if (numH1s > 1) {
     errors.push({msg: 'Multiple h1 tags not permitted.', param: 'Too many # or <h1>\'s, found: ' + numH1s});
   }
+  // Verify all includes start with web/
+  var reInclude = /{%[ ]?include .*?[ ]?%}/g;
+  var includes = fileContent.match(reInclude)
+  if (includes) {
+    includes.forEach(function(include) {
+      var inclFile = wfHelper.getRegEx(/"(.*)"/, include, '');
+      if (inclFile === 'comment-widget.html') {
+        return;
+      }
+      if (inclFile.indexOf('web/') !== 0) {
+        errors.push({msg: 'Include path must start with web/', param: include});
+        // console.log('EEP', fileName, include, inclFile);
+      }
+    });
+  }
+
   // Look for bad strings
   WARNING_STRINGS.forEach(function(str) {
     if (fileContent.search(str.regEx) >= 0) {

@@ -19,7 +19,7 @@ El uso de los dispositivos móviles para navegar por la Web está creciendo de f
 
 <div class="clearfix"></div>
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 
 

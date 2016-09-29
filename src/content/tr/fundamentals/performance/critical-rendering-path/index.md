@@ -21,7 +21,7 @@ Performans için optimize etme; HTML, CSS ve JavaScript baytlarinin alinmasindan
 Kritik olusturma yolunu optimize ederek, sayfalarimizin ilk olusturma süresini önemli ölçüde iyilestirebiliriz. Bunun öteside, kritik olusturma yolunun anlasilmasi, iyi performans gösteren etkilesimli uygulamalarin olusturulmasi için bir temel görevi de görür. Etkilesimli güncellemelerin islenmesine iliskin sürecin, sürekli bir döngü içinde ve ideal olarak saniyede 60 kare hizda yapildigi anlasilmistir! Ancak, simdilik aceleci davranip hata yapmayalim. Ilk olarak, basit bir sayfayi görüntülerken tarayicinin nasil ilerledigine dair hizli, en bastan baslayan bir genel bakisa göz atalim.
 
 
-{% include "_shared/udacity/ud884.html" %}
+{% include "web/_shared/udacity/ud884.html" %}
 
 
 

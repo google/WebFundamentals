@@ -26,7 +26,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 In anderen Fällen sind möglicherweise noch drastischere Änderungen erforderlich: Änderung der Proportionen, Zuschneiden und sogar der Austausch des gesamten Bilds. In solchen Fällen wir der Prozess zur Änderung des Bilds in der Regel als Art Direction bezeichnet. Weitere Beispiele finden Sie unter [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 
 

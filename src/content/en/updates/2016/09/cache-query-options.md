@@ -10,7 +10,7 @@ description: The full set of CacheQueryOptions are supported, making it easier t
 
 # CacheQueryOptions arrive in Chrome 54 {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 If you use the [Cache Storage API](https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage), either within a service worker or directly from web apps via [`window.caches`](https://developer.mozilla.org/en-US/docs/Web/API/Window/caches), there's some good news: starting in Chrome 54, the full set of [`CacheQueryOptions`](https://w3c.github.io/ServiceWorker/spec/service_worker/#dictdef-cache-cachequeryoptions) is supported, making it easier to find the cached responses you're looking for.

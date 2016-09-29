@@ -106,4 +106,4 @@ than others!
 Let’s take a dive into the different parts of the pipeline. We’ll take a look
 at the common issues, as well how to diagnose and fix them.
 
-{% include "_shared/udacity/ud860.html" %}
+{% include "web/_shared/udacity/ud860.html" %}

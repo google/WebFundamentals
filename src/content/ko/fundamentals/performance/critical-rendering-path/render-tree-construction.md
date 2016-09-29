@@ -81,4 +81,4 @@ Note: 여기서 잠깐, 'visibility: hidden'과 'display: none'이 다르다는 
 
 
 Translated By: 
-{% include "_shared/contributors/jeokrang.html" %}
+{% include "web/_shared/contributors/jeokrang.html" %}

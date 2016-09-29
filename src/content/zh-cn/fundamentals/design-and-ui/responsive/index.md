@@ -21,7 +21,7 @@ Translated By:
     创建灵活设计，而不是固定的设计,布局。并且能够在任何尺寸的屏幕正常运行。
   </div>
  
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 
 </div>

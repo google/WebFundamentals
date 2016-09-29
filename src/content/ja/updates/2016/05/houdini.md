@@ -278,4 +278,4 @@ Houdini のドラフトのリストには、まだ多くの仕様があります
 
 
 Translated By: 
-{% include "_shared/contributors/myakura.html" %}
+{% include "web/_shared/contributors/myakura.html" %}

@@ -9,7 +9,7 @@ description: The WebUSB API makes USB safer and easier to use by bringing it to 
 
 # Access USB devices on the Web {: .page-title }
 
-{% include "_shared/contributors/beaufortfrancois.html" %}
+{% include "web/_shared/contributors/beaufortfrancois.html" %}
 
 
 
