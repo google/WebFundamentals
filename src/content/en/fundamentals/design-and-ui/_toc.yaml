@@ -3,6 +3,8 @@ toc:
     section:
     - title: Overview
       path: /web/fundamentals/design-and-ui/
+    - title: Basics of UX
+      path: /web/fundamentals/design-and-ui/ux-basics/
     - title: Responsive Web Design
       section:
       - title: Responsive Web Design Basics
@@ -43,4 +45,3 @@ toc:
         path: /web/fundamentals/design-and-ui/animations/asymmetric-animation-timing
       - title: Animations and Performance
         path: /web/fundamentals/design-and-ui/animations/animations-and-performance
-
