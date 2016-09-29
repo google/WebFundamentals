@@ -372,7 +372,7 @@ You need to set three headers.
 encryption, encoded as URL-safe Base64.
 
 When using the Web Push protocol, the body of the POST is then just the raw
-bytes of the encrypted message. However, until Chrome and Google Cloud
+bytes of the encrypted message. However, until Chrome and Firebase Cloud
 Messaging support the protocol, you can easily include the data in your
 existing JSON payload as follows.
 
