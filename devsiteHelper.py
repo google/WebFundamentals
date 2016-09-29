@@ -273,9 +273,14 @@ def getIncludeCode(include_tag, lang='en'):
   dedent_regex = re.search(r"adjust_indentation=\"(.+?)\"", include_tag)
   github_regex = re.search(r"github_path=\"(.+?)\"", include_tag)
 
-  # TODO: support as_downloadable="myproject/tutorial/hello.cc" argument.
-  # TODO: support github_link="True" argument.
-  # TODO: support git_revision="refs/tags/v1.2.23 argument.
+  # TODO: support these arguments
+  as_downloadable_regex = re.search(r"as_downloadable=\"(.+?)\"", include_tag)
+  github_link_regex = re.search(r"github_link=\"(.+?)\"", include_tag)
+  git_revision_regex = re.search(r"git_revision=\"(.+?)\"", include_tag)
+  if as_downloadable_regex or github_link_regex or git_revision_regex:
+    msg = 'Error: as_downloadable, github_link, and git_revision args are not supported'
+    logging.error(' - ' + msg)
+    return msg
 
   if file_regex and not github_regex:
     msg = 'Error: No <code>content_path</code> specified for ' + include_tag
@@ -289,6 +294,7 @@ def getIncludeCode(include_tag, lang='en'):
     if result is None:
       return 'Warning: Unable to find includecode <code>%s</code>' % file_name
   elif github_regex:
+
     file_url = github_regex.group(1)
     result = fetchGithubFile(file_url)
     if result is None:
