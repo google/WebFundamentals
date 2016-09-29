@@ -109,7 +109,7 @@ function testMarkdownFile(fileName) {
   ERROR_STRINGS.forEach(function(str) {
     var result = str.regEx.exec(fileContent);
     if (result) {
-      errors.push({msg: `Bad string found "${result[0]}" `, param: str.label});
+      errors.push({msg: 'Bad string found "' + result[0] + '"', param: str.label});
     }
   });
   // Look for experimental strings
