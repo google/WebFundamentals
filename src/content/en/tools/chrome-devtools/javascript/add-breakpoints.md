@@ -54,6 +54,13 @@ add a breakpoint on that line of code.
 
 ![line number breakpoint][lnb]
 
+If an expression is spaced across multiple lines, and you put a line
+breakpoint in the middle of the expression, DevTools sets the breakpoint
+on the next expression. For example, if you try to set a breakpoint on line
+4 in the screenshot below, DevTools puts the breakpoint on line 6.
+
+![mid-expression breakpoint](imgs/mid-expression-breakpoint.png)
+
 [pp]: imgs/pretty-print.png
 [fn]: imgs/file-navigator.png
 [lnb]: imgs/line-number-breakpoint.png

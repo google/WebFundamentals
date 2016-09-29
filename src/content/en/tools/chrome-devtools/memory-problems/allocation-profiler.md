@@ -49,7 +49,7 @@ but have since been garbage collected:
 
 ![Allocation profiler snapshot](imgs/collected.png)
 
-In the snapshot above, an action was performed 10 times.
+In the snapshot below, an action was performed 10 times.
 The sample program caches five objects, so the last five blue bars are expected.
 But the leftmost blue bar indicates a potential problem.
 
@@ -60,4 +60,8 @@ and see the objects that were recently allocated at that point:
 
 Clicking on a specific object in the heap will show its retaining tree in the bottom portion of the heap snapshot. Examining the retaining path to the object should give you enough information to understand why the object was not collected, and you can make the necessary code changes to remove the unnecessary reference.
 
+## View memory allocation by function {: #allocation-profiler }
 
+You can also view memory allocation by JavaScript function. See
+[Investigate memory allocation by function](index#allocation-profile) for
+more information.

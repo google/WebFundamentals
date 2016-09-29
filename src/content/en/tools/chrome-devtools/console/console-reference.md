@@ -37,13 +37,13 @@ Clears the console.
     console.clear();
     
 
-If the [**Preserve log**](console-ui#preserve-log) checkbox is enabled, 
+If the [**Preserve log**](index#preserve-log) checkbox is enabled, 
 `console.clear()` is disabled. However, pressing the **clear console** button 
 (![clear console button](images/clear-console-button.png){:.inline})
 or typing the shortcut <kbd>Ctrl</kbd>+<kbd>L</kbd> while the Console is in
 focus still works. 
 
-See [Clearing the console](console-ui#clearing) for more information.
+See [Clearing the console](index#clearing) for more information.
 
 ## console.count(label) {:#count}
 

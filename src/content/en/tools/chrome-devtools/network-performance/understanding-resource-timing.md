@@ -22,6 +22,9 @@ All network requests are considered resources.
 As they are retrieved over the network, resources have distinct lifecycles expressed in terms of resource timing.
 The Network Panel uses the same [Resource Timing API](http://www.w3.org/TR/resource-timing) that is available to application developers.
 
+Note: when using the Resource Timing API with cross origin resources, make
+sure that all of the resources have CORS headers.
+
 The Resource Timing API provides a rich level of detail about each individual asset's time to be received.
 The primary phases of the request lifecycle are:
 

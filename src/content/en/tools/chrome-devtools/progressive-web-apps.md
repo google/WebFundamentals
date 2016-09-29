@@ -136,9 +136,12 @@ DevTools to inspect and debug service workers.
   worker has been updated. If you enable the **update on reload** checkbox
   you'll notice that the number increments on every page load. Next to the
   status you'll see a **start** button (if the service worker is stopped) or a
-  **stop** button (if the service worker is running). Sometimes it's useful to
-  stop a service worker to test how a page performs when the service
-  worker is not available.
+  **stop** button (if the service worker is running). Service workers are
+  designed to be stopped and started by the browser at any time. Explicitly
+  stopping your service worker using the **stop** button can simulate that.
+  Stopping your service worker is a great way to test how your
+  code behaves when the service worker starts back up again. It frequently
+  reveals bugs due to faulty assumptions about persistent global state.
 * The **Clients** line tells you the origin that the service worker is scoped
   to. The **focus** button is mostly useful when you've enabled the
   **show all** checkbox. When that checkbox is enabled, all registered service
