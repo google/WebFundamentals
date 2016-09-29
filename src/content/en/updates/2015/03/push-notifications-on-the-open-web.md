@@ -3,7 +3,7 @@ book_path: /web/updates/_book.yaml
 description: Push Messaging and Notifications are Landing in Chrome 42.
 
 
-{# wf_updated_on: 2015-10-15 #}
+{# wf_updated_on: 2016-06-29 #}
 {# wf_published_on: 2015-03-11 #}
 {# wf_tags: news,webpush,notifications,serviceworker #}
 
@@ -55,9 +55,9 @@ we'll cover shortly.
 
 
     var isPushEnabled = false;
-    
+
     …
-    
+
     window.addEventListener('load', function() {  
       var pushButton = document.querySelector('.js-push-button');  
       pushButton.addEventListener('click', function() {  
@@ -67,7 +67,7 @@ we'll cover shortly.
           subscribe();  
         }  
       });
-    
+
       // Check that service workers are supported, if so, progressively  
       // enhance and add push messaging support, otherwise continue without it.  
       if ('serviceWorker' in navigator) {  
@@ -77,7 +77,7 @@ we'll cover shortly.
         console.warn('Service workers aren\'t supported in this browser.');  
       }  
     });
-    
+
 
 The button click handler subscribes or unsubscribes the user to push messages.
 **isPushEnabled** is a global variable which simply tracks whether push
@@ -126,7 +126,7 @@ downloaded or the user has disabled JavaScript.
     <button class="js-push-button" disabled>
       Enable Push Messages  
     </button>
-    
+
 
 With this initial state, we can perform the checks outlined above in the
 **initialiseState()** method, i.e. after our service worker is registered.
@@ -139,7 +139,7 @@ With this initial state, we can perform the checks outlined above in the
         console.warn('Notifications aren\'t supported.');  
         return;  
       }
-    
+
       // Check the current Notification permission.  
       // If its denied, it's a permanent block until the  
       // user changes the permission  
@@ -147,13 +147,13 @@ With this initial state, we can perform the checks outlined above in the
         console.warn('The user has blocked notifications.');  
         return;  
       }
-    
+
       // Check if push messaging is supported  
       if (!('PushManager' in window)) {  
         console.warn('Push messaging isn\'t supported.');  
         return;  
       }
-    
+
       // We need the service worker registration to check for a subscription  
       navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {  
         // Do we already have a push message subscription?  
@@ -163,16 +163,16 @@ With this initial state, we can perform the checks outlined above in the
             // push messages.  
             var pushButton = document.querySelector('.js-push-button');  
             pushButton.disabled = false;
-    
+
             if (!subscription) {  
               // We aren't subscribed to push, so set UI  
               // to allow the user to enable push  
               return;  
             }
-    
+
             // Keep your server in sync with the latest subscriptionId
             sendSubscriptionToServer(subscription);
-    
+
             // Set your UI to show they have subscribed for  
             // push messages  
             pushButton.textContent = 'Disable Push Messages';  
@@ -183,7 +183,7 @@ With this initial state, we can perform the checks outlined above in the
           });  
       });  
     }
-    
+
 
 A brief overview of these steps:
 
@@ -208,86 +208,52 @@ worker is active that you can actually subscribe to push messages.
 The next step is to handle when the user wants to enable push messages, but
 before we can do this, we need to set up a Google Developer Console project
 and add some parameters to our manifest to
-use [Google Cloud Messaging (GCM)](https://developers.google.com/cloud-messaging/).
+use [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging/),
+formerly known as Google Cloud Messaging (GCM).
 
-### Make a Project on the Google Developer Console
+### Make a Project on the Firebase Developer Console
 
-Chrome uses GCM to handle the sending and delivery of push messages, however, to
-use the GCM API, you need to set up a project on the Google Developer Console.
+Chrome uses FCM to handle the sending and delivery of push messages; however, to
+use the FCM API, you need to set up a project on the Firebase Developer Console.
 
-The following steps are specific to Chrome because of its use of GCM. We'll
-discuss how this would work in other browsers later on in the article.
+The following steps are specific to Chrome, Opera for Android and Samsung
+Browser they use FCM. We'll discuss how this would work in other browsers later on in the article.
 
-#### Create a new Google Developer Project
+#### Create a new Firebase Developer Project
 
-To start off with you need to create a new project on [https://console.developers.google.com]()
-by clicking on the 'Create Project' button on the top right.
+To start off with you need to create a new project on [https://console.firebase.google.com/]()
+by clicking on the 'Create New Project'.
 
-![New Google Developer Project Screenshot](/web/updates/images/2015/03/push/new-dev-project.png)
+![New Firebase Project Screenshot](/web/updates/images/2015/03/push/new-project.png)
 
-Add a project name, and you'll be faced with something like this...
+Add a project name, create the project and you'll be taken to the project
+dashboard:
 
-![Google Developer Project Home](/web/updates/images/2015/03/push/project-home.png)
+![Firebase Project Home](/web/updates/images/2015/03/push/project-home.png)
 
-To enabled GCM for the project, you need navigate the following in the left hand
-navigation:
+From this dashboard, click the cog next to your project name in the top
+left corner and click 'Project Settings'.
 
-    APIs & auth > APIs
+![Firebase Project Settings Menu](/web/updates/images/2015/03/push/project-settings-menu.png)
 
-Under the API Library do a search for `Google Cloud Messaging`.
+In the settings page, click the 'Cloud Messaging' tab.
 
-![Google Developer Project API Library](/web/updates/images/2015/03/push/api-library.png)
+![Firebase Project Cloud Messaging Menu](/web/updates/images/2015/03/push/project-cloud-messaging.png)
 
-<p class="center" style="color: red"><strong>DO NOT ENABLE "GOOGLE CLOUD MESSAGING FOR CHROME"</strong>.</p>
-
-Yes that does sound like a silly statement to make in this article. Unfortunately the
-labels for these API's aren't right. "Google Cloud Messaging for Android" will
-give you access to the normal GCM API. "Google Cloud Messaging for Chrome" won't
- (it's used for Chrome Apps in the Chrome Web Store).
-
-You need to **click on and enable "Google Cloud Messaging for Android"**.
-
-![Google Developer Project GCM for Android Enabled](/web/updates/images/2015/03/push/gcm-android-enabled.png)
-
-Then click on 'Credentials' under 'APIs & auth' in the left side bar.
-
-![Google Developer Project API Credentials](/web/updates/images/2015/03/push/credentials.png)
-
-From here you need to click on:
-
-    Add Credentials > API Key > Server Key
-
-![Google Developer Project API Server Key](/web/updates/images/2015/03/push/server-key.png)
-
-From here you can define a specfic IP address or range of IP's so only your servers
-can send a push message to your users. For development it may be easiest to leave
-this blank which allows any IP to trigger a push message with the correct
-credentials.
-
-This will give you an API Key, which is used by your server when sending a push
-message.
-
-![Google Developer Project final API Key](/web/updates/images/2015/03/push/api-key.png)
-
-The final thing you'll need is the `project number` which you can find on the home
-page of your project here. You don't need the brackets or hash, just the number.
-
-![Google Developer Project final API Key](/web/updates/images/2015/03/push/project-number.png)
-
-The project number will be used in the web app manifest
-as the **gcm\_sender\_id** parameter (see the next section).
+This page contains the API key for push messaging, which we'll use later on,
+and the sender ID which we need to put in the web app manifest in the next
+section.
 
 ### Add a Web App Manifest
 
 For push, we need to add a manifest file with a **gcm\_sender\_id** field,
 to get the push subscription to succeed. This parameter is only required by
-Chrome to use GCM.
+Chrome, Opera for Android and Samsung Browser so that they can use FCM / GCM.
 
-The **gcm\_sender\_id** (i.e. the project number from the previous steps)
-is used by Chrome when it subscribes a users device with GCM. This means that
-GCM can identify the users device and make sure your project number matches the
-corresponding API key on your server and that the user has permitted receiving
-push messages.
+The **gcm\_sender\_id** is used by these browsers when it subscribes a users
+device with FCM. This means that FCM can identify the user's device and make
+sure your sender ID matches the corresponding API key and that the user has
+permitted your server to send them push messages.
 
 Below is a super-simple manifest file:
 
@@ -302,12 +268,12 @@ Below is a super-simple manifest file:
           }],  
       "start_url": "/index.html?homescreen=1",  
       "display": "standalone",  
-      "gcm_sender_id": "<Your Project ID Without the Hash>"
+      "gcm_sender_id": "<Your Sender ID Here>"
     }
-    
 
-You'll need to set the **gcm\_sender\_id** value to your **project number**
-from the Google Developer Console.
+
+You'll need to set the **gcm\_sender\_id** value to the sender ID from
+ your Firebase Project.
 
 Once you have saved your manifest file in your project (manifest.json is a good
 name), reference it from your HTML with the following tag in the head of your
@@ -315,7 +281,7 @@ page.
 
 
     <link rel="manifest" href="/manifest.json">
-    
+
 
 If you don't add a web manifest with these parameters you'll get an exception
 when you attempt to subscribe the user to push messages, with the error
@@ -351,7 +317,7 @@ The following code subscribes the user for push messaging:
       // we process the permission request  
       var pushButton = document.querySelector('.js-push-button');  
       pushButton.disabled = true;
-    
+
       navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {  
         serviceWorkerRegistration.pushManager.subscribe()  
           .then(function(subscription) {  
@@ -359,7 +325,7 @@ The following code subscribes the user for push messaging:
             isPushEnabled = true;  
             pushButton.textContent = 'Disable Push Messages';  
             pushButton.disabled = false;
-    
+
             // TODO: Send the subscription.endpoint to your server  
             // and save it to send a push message at a later date
             return sendSubscriptionToServer(subscription);  
@@ -383,7 +349,7 @@ The following code subscribes the user for push messaging:
           });  
       });  
     }
-    
+
 
 At this point your web app is ready to receive a push message, although nothing
 will happen until we add a push event listener to our service worker file.
@@ -398,12 +364,12 @@ to display a [notification](https://notifications.spec.whatwg.org/).
 
     self.addEventListener('push', function(event) {  
       console.log('Received a push message', event);
-    
+
       var title = 'Yay a message.';  
       var body = 'We have received a push message.';  
       var icon = '/images/icon-192x192.png';  
       var tag = 'simple-push-demo-notification-tag';
-    
+
       event.waitUntil(  
         self.registration.showNotification(title, {  
           body: body,  
@@ -412,7 +378,7 @@ to display a [notification](https://notifications.spec.whatwg.org/).
         })  
       );  
     });
-    
+
 
 This code registers a **push** event listener and displays a notification with a
 predefined title, body text, icon and a notification tag.
@@ -440,19 +406,19 @@ this notification.
 ### Sending a Push Message
 
 We've subscribed to push messages and our service worker is ready to show a
-notification, so it's time to send a push message through GCM.  
+notification, so it's time to send a push message through FCM.  
 
-There is one last thing that is only applicable to Chrome.
+This is only applicable to the browsers using FCM.
 
 When you send the `PushSubscription.endpoint` variable to your server, the
-endpoint in Chrome is special. It has a parameter on the end of the URL which
+endpoint for FCM is special. It has a parameter on the end of the URL which
 is a `registration\_id`.
 
 An example endpoint would be:
 
     https://android.googleapis.com/gcm/send/APA91bHPffi8zclbIBDcToXN_LEpT6iA87pgR-J-MuuVVycM0SmptG-rXdCPKTM5pvKiHk2Ts-ukL1KV8exGOnurOAKdbvH9jcvg8h2gSi-zZJyToiiydjAJW6Fa9mE3_7vsNIgzF28KGspVmLUpMgYLBd1rxaVh-L4NDzD7HyTkhFOfwWiyVdKh__rEt15W9n2o6cZ8nxrP
 
-The GCM URL is:
+The FCM URL is:
 
     https://android.googleapis.com/gcm/send
 
@@ -460,12 +426,12 @@ The `registration_id` would be:
 
     APA91bHPffi8zclbIBDcToXN_LEpT6iA87pgR-J-MuuVVycM0SmptG-rXdCPKTM5pvKiHk2Ts-ukL1KV8exGOnurOAKdbvH9jcvg8h2gSi-zZJyToiiydjAJW6Fa9mE3_7vsNIgzF28KGspVmLUpMgYLBd1rxaVh-L4NDzD7HyTkhFOfwWiyVdKh__rEt15W9n2o6cZ8nxrP
 
-This is specific to Chrome and it's use of GCM. In a normal browser you would
+This is specific to browsers using FCM. In a normal browser you would
 simply get an endpoint and you would call that endpoint in a standard way and
 it would work regardless of the URL.
 
 What this means is that on your server you'll need to check if the endpoint
-is for GCM and if it is, extract the registration_id. To do this in Python you
+is for FCM and if it is, extract the registration_id. To do this in Python you
 could do something like:
 
     if endpoint.startswith('https://android.googleapis.com/gcm/send'):
@@ -474,15 +440,15 @@ could do something like:
 
         endpoint = 'https://android.googleapis.com/gcm/send'
 
-Once you've got the registration ID, you can make a call to the GCM API. You
-can find some [reference docs on the GCM API here](https://developers.google.com/cloud-messaging/http-server-ref#downstream-http-messages-json).
+Once you've got the registration ID, you can make a call to the FCM API. You
+can find [reference docs on the FCM API here](https://firebase.google.com/docs/cloud-messaging/http-server-ref#downstream-http-messages-json).
 
-The key aspects to remember when calling GCM are:
+The key aspects to remember when calling FCM are:
 
 * An **Authorization** header with a value of **key=&lt;YOUR\_API\_KEY&gt;**
   must be set when you call the API, where **&lt;YOUR\_API\_KEY&gt;** is the
-  API key from the Google Developer Console.
-    * The API key is used by GCM to find the appropriate project number, ensure
+  API key from Firebase project.
+    * The API key is used by FCM to find the appropriate sender ID, ensure
       the user has given permission for your project and finally
       ensuring that the server's IP address is whitelisted for that project.
 * An appropriate **Content-Type** header of **application/json** or
@@ -491,12 +457,11 @@ The key aspects to remember when calling GCM are:
 * An array of **registration\_ids** - these are the registration ID's you'd
   extract from the endpoints from your users.
 
-Please do [check out the docs](https://developers.google.com/cloud-messaging/http)
+Please do [check out the docs](https://firebase.google.com/docs/cloud-messaging/server)
 about how to send push messages from your server,
 but for a quick sanity check of your service worker you can use
 [cURL](http://www.google.com/url?q=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FCURL&sa=D&sntz=1&usg=AFQjCNHRhFnXmOaG9ZHmto3zw6T_7B15Ng)
-to send a push message to your browser (as long as you left the whitelisted IP
-address blank or set it up for your IP on the Google Developer Console).
+to send a push message to your browser.
 
 Swap out the **&lt;YOUR\_API\_KEY&gt;** and **&lt;YOUR\_REGISTRATION\_ID&gt;**
 in this cURL command with your own and run it from a terminal.
@@ -512,8 +477,8 @@ You should see a glorious notification:
 </p>
 
 When developing your backend logic, remember that the Authorization header and
-format of the POST body are specific to the GCM endpoint, so detect when the
-endpoint is for GCM and conditionally add the header and format the POST body.
+format of the POST body are specific to the FCM endpoint, so detect when the
+endpoint is for FCM and conditionally add the header and format the POST body.
 For other browsers (and hopefully Chrome in the future) you'll need to implement
 the [Web Push Protocol](https://datatracker.ietf.org/doc/draft-thomson-webpush-protocol/).
 
@@ -557,19 +522,19 @@ object and use it to populate our notification.
             console.log('Looks like there was a problem. Status Code: ' + response.status);  
             throw new Error();  
           }
-    
+
           // Examine the text in the response  
           return response.json().then(function(data) {  
             if (data.error || !data.notification) {  
               console.error('The API returned an error.', data.error);  
               throw new Error();  
             }  
-    
+
             var title = data.notification.title;  
             var message = data.notification.message;  
             var icon = data.notification.icon;  
             var notificationTag = data.notification.tag;
-    
+
             return self.registration.showNotification(title, {  
               body: message,  
               icon: icon,  
@@ -578,7 +543,7 @@ object and use it to populate our notification.
           });  
         }).catch(function(err) {  
           console.error('Unable to retrieve data', err);
-    
+
           var title = 'An error occurred';
           var message = 'We were unable to get the information for this push message';  
           var icon = URL_TO_DEFAULT_ICON;  
@@ -591,7 +556,7 @@ object and use it to populate our notification.
         })  
       );  
     });
-      
+
 
 It's worth, once again, highlighting that the **event.waitUntil()** takes a promise
 which results in the promise returned by **showNotification()**, meaning
@@ -613,7 +578,7 @@ like focusing a tab or opening a window with a particular URL:
       // Android doesn't close the notification when you click on it  
       // See: http://crbug.com/463146  
       event.notification.close();
-    
+
       // This looks to see if the current is already open and  
       // focuses if it is  
       event.waitUntil(
@@ -632,7 +597,7 @@ like focusing a tab or opening a window with a particular URL:
         })
       );
     });
-    
+
 
 This example opens the browser to the root of the site's origin, by focusing an
 existing same-origin tab if one exists, and otherwise opening a new one.
@@ -656,7 +621,7 @@ exactly this:
     function unsubscribe() {  
       var pushButton = document.querySelector('.js-push-button');  
       pushButton.disabled = true;
-    
+
       navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {  
         // To unsubscribe from push messaging, you need get the  
         // subscription object, which you can call unsubscribe() on.  
@@ -671,12 +636,12 @@ exactly this:
               pushButton.textContent = 'Enable Push Messages';  
               return;  
             }  
-    
+
             var subscriptionId = pushSubscription.subscriptionId;  
             // TODO: Make a request to your server to remove  
             // the subscriptionId from your data store so you
             // don't attempt to send them push messages anymore
-    
+
             // We have a subscription, so call unsubscribe on it  
             pushSubscription.unsubscribe().then(function(successful) {  
               pushButton.disabled = false;  
@@ -687,7 +652,7 @@ exactly this:
               // an unusual state, so may be best to remove
               // the users data from your data store and
               // inform the user that you have done so
-    
+
               console.log('Unsubscription error: ', e);  
               pushButton.disabled = false;
               pushButton.textContent = 'Enable Push Messages';
@@ -697,13 +662,13 @@ exactly this:
           });  
       });  
     }
-    
+
 
 ### Keeping the Subscription Up to Date
 
-Subscriptions may get out of sync between GCM and your server. Make sure
-your server parses the response body of the GCM API's send POST, looking for
-**error:NotRegistered** and **canonical_id** results, as explained in the [GCM
+Subscriptions may get out of sync between FCM and your server. Make sure
+your server parses the response body of the FCM API's send POST, looking for
+**error:NotRegistered** and **canonical_id** results, as explained in the [FCM
 documentation](https://developers.google.com/cloud-messaging/http).
 
 Subscriptions may also get out of sync between the service worker and your
@@ -752,16 +717,16 @@ problems.
   <img style="max-width: 100%; height: auto;" src="/web/updates/images/2015-03-04-push-on-the-open-web/sw-internals-pause-checkbox.png" alt="Screenshot showing where the pause execution checkbox is on serviceworker-internals" />
 </p>
 
-If there seems to be an issue between GCM and your service worker's push event,
+If there seems to be an issue between FCM and your service worker's push event,
 then there isn't much you can do to debug the problem since there is no way for
 you to see whether Chrome received anything. The key thing to ensure is that the
-response from GCM is successful when your server makes an API call. It'll look
+response from FCM is successful when your server makes an API call. It'll look
 something like:
 
     {"multicast_id":1234567890,"success":1,"failure":0,"canonical_ids":0,"results":[{"message_id":"0:1234567890"}]}
 
 Notice the `"success": 1` response. If you see a failure instead, then that
-suggests that something isn't right with the GCM registration ID and the push
+suggests that something isn't right with the FCM registration ID and the push
 message isn't getting sent to Chrome.
 
 ### Debugging Service Workers on Chrome for Android
@@ -799,13 +764,13 @@ messages by implementing the [Web Push Protocol](https://www.google.com/url?q=ht
 The Web Push Protocol is a new standard which push providers can implement,
 allowing developers to not have to worry about who the push provider is. The
 idea is that this avoids the need to sign up for API keys and send specially
-formatted data, like you have to with GCM.
+formatted data, like you have to with FCM.
 
-Chrome was the first browser to implement the Push API and GCM does not
+Chrome was the first browser to implement the Push API and FCM does not
 support the Web Push Protocol, which is the reason why Chrome requires the
-**gcm\_sender\_id** and you need to use the restful API for GCM.
+**gcm\_sender\_id** and you need to use the restful API for FCM.
 
-The end goal for Chrome is to move towards using the Web Push Protocol with Chrome and GCM.
+The end goal for Chrome is to move towards using the Web Push Protocol with Chrome and FCM.
 
 Until then, you need to detect the endpoint
 "https://android.googleapis.com/gcm/send"
@@ -837,9 +802,9 @@ each approach has pro's and con's.
 
 ### Why do I need a gcm\_sender\_id?
 
-This is required so that Chrome can make use of the Google Cloud Messaging (GCM)
-API. The goal is to use the Web Push Protocol when the standard is finalised and
-GCM can support it.
+This is required so that Chrome, Opera for Android and the Samsung Browser can
+use the Firebase Cloud Messaging (FCM) API. The goal is to use the
+Web Push Protocol when the standard is finalised and FCM can support it.
 
 ### Why not use Web Sockets or [Server-Sent Events](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events) (EventSource)?
 
@@ -880,14 +845,14 @@ what that is, so please add a comment and we'll pass it back to the Chrome team.
 
 If you only need to stop a push notification from being sent to the user
 after a certain time period, and don't care how long the notification stays
-visible, then you can use GCM's time to live (ttl) parameter,
-[learn more here](https://developer.android.com/google/gcm/server.html#ttl).
+visible, then you can use FCM's time to live (ttl) parameter,
+[learn more here](https://firebase.google.com/docs/cloud-messaging/concept-options#ttl).
 
 ### What are the limitations of push messaging in Chrome?
 
 There are a few limitations outlined in this post:
 
-* Chrome's usage of GCM as a push service creates a number of proprietary
+* Chrome's usage of CCM as a push service creates a number of proprietary
   requirements. We're working together to see if some of these can be lifted in
   the future.
 * You have to show a notification when you receive a push message.
@@ -911,17 +876,17 @@ worker. You can [learn more here](https://code.google.com/p/chromium/issues/deta
 
 You always have to show a notification when you receive a push message.
 In the scenario where you want to send a notification but it's only useful
-for a certain period time, you can use the 'time_to_live' parameter on GCM
-so that GCM won't send the push message if it passes the expiry time.
+for a certain period time, you can use the 'time_to_live' parameter on CCM
+so that FCM won't send the push message if it passes the expiry time.
 
-[More details can be found here](https://developer.android.com/google/gcm/server.html#ttl).
+[More details can be found here](https://firebase.google.com/docs/cloud-messaging/concept-options#ttl).
 
 ### What happens if I send 10 push messages but only want the device to receive one?
 
-GCM has a 'collapse_key' parameter you can use to tell GCM to replace any pending
+FCM has a 'collapse_key' parameter you can use to tell FCM to replace any pending
 message which has the same 'collapse_key', with the new message.
 
-[More details can be found here](https://developer.android.com/google/gcm/server.html#lifetime).
+[More details can be found here](https://firebase.google.com/docs/cloud-messaging/concept-options#collapsible_and_non-collapsible_messages).
 
 
 {% include "comment-widget.html" %}
