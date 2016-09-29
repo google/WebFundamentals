@@ -5,6 +5,8 @@ import yaml
 import hashlib
 import logging
 import textwrap
+import urllib2
+
 from datetime import date, datetime
 from google.appengine.api import memcache
 from google.appengine.ext.webapp.template import render
@@ -93,11 +95,35 @@ def readFile(requestedFile, lang='en'):
     logging.error(result)
     return None
 
+def fetchGithubFile(path):
+  """Fetchs a file in a repository hosted on github.com.
+
+  Retrieves rows pertaining to the given keys from the Table instance
+  represented by big_table.  Silly things may happen if
+  other_silly_variable is not None.
+
+  Args:
+      path: The path to a file on Github in the form
+          github-user/repository/path/to/file.
+
+  Returns:
+      A string from the HTTP response.
+  """
+  path = path.replace('/blob', '')
+  url = 'https://raw.githubusercontent.com/%s' % path
+  try:
+    response = urllib2.urlopen(url)
+    content = response.read()
+  except urllib2.HTTPError as e:
+    logging.error('Unable to fetch Github file: %s' % e.code)
+    return None
+
+  return content
 
 def getLeftNav(requestPath, pathToBook, lang='en'):
   # Returns the left nav. If it's already been generated and stored in
-  # memcache, return that, otherwise, read the file then recursively 
-  # build the tree using buildLeftNav. 
+  # memcache, return that, otherwise, read the file then recursively
+  # build the tree using buildLeftNav.
   whoops = '<h2>Whoops!</h2>'
   whoops += '<p>An error occured while trying to parse and build the'
   whoops += ' left hand navigation. Check the error logs.'
@@ -135,7 +161,7 @@ def buildLeftNav(bookYaml, lang='en'):
           if 'toc' in include and len(include['toc']) == 1:
             item = include['toc'][0]
         except Exception as e:
-          msg = ' - Unable to parsing embedded toc file: ' + item['include'] 
+          msg = ' - Unable to parsing embedded toc file: ' + item['include']
           logging.exception(msg)
     if 'path' in item:
       result += '<li class="devsite-nav-item">\n'
@@ -164,12 +190,12 @@ def buildLeftNav(bookYaml, lang='en'):
 
 def renderDevSiteContent(content, lang='en'):
   # Injects includecode into the markdown as appropriate
-  includes = re.findall(r'^{%[ ]?includecode .+%}(?m)', content)
+  includes = re.findall(r'{%[ ]?includecode .+%}(?m)', content)
   for include in includes:
     content = content.replace(include, getIncludeCode(include, lang))
 
   # Injects includes into the markdown as appropriate
-  includes = re.findall(r'^{%[ ]?include .+%}(?m)', content)
+  includes = re.findall(r'{%[ ]?include .+%}(?m)', content)
   for include in includes:
     content = content.replace(include, getInclude(include, lang))
 
@@ -238,31 +264,48 @@ def getIncludeMD(includeTag, lang='en'):
   return result
 
 
-def getIncludeCode(includeTag, lang='en'):
+def getIncludeCode(include_tag, lang='en'):
   # Returns the contents of an includecode file. If the file is not found,
   # it returns a warning into the doc. Otherwise it returns the file.
   # It also handles start and end regions and can unindent code as requested
-  fileRegEx = re.search(r"content_path=\"(.+?)\"", includeTag)
-  regionRegEx = re.search(r"region_tag=\"(.+?)\"", includeTag)
-  dedentRegEx = re.search(r"adjust_indentation=\"(.+?)\"", includeTag)
-  if fileRegEx is None:
-    msg = 'Error: No <code>content_path</code> specified for ' + includeTag
+  file_regex = re.search(r"content_path=\"(.+?)\"", include_tag)
+  region_regex = re.search(r"region_tag=\"(.+?)\"", include_tag)
+  dedent_regex = re.search(r"adjust_indentation=\"(.+?)\"", include_tag)
+  github_regex = re.search(r"github_path=\"(.+?)\"", include_tag)
+
+  # TODO: support as_downloadable="myproject/tutorial/hello.cc" argument.
+  # TODO: support github_link="True" argument.
+  # TODO: support git_revision="refs/tags/v1.2.23 argument.
+
+  if file_regex and not github_regex:
+    msg = 'Error: No <code>content_path</code> specified for ' + include_tag
     logging.error(' - ' + msg)
     return msg
-  fileName = fileRegEx.group(1)
-  result = readFile(fileName, lang)
-  if result is None:
-    return 'Warning: Unable to find includecode <code>' + fileName + '</code>'
-  if regionRegEx is not None:
-    regionName = regionRegEx.group(1)
-    startAt = result.find('[START ' + regionName + ']')
-    if startAt >= 0:
-      startAt = result.find('\n', startAt) + 1
-      endAt = result.find('[END ' + regionName + ']')
-      endAt = result.rfind('\n', startAt, endAt)
-      result = result[startAt:endAt]
-  if dedentRegEx and dedentRegEx.group(1) == 'auto':
+
+  result = None
+  if file_regex:
+    file_name = file_regex.group(1)
+    result = readFile(file_name, lang)
+    if result is None:
+      return 'Warning: Unable to find includecode <code>%s</code>' % file_name
+  elif github_regex:
+    file_url = github_regex.group(1)
+    result = fetchGithubFile(file_url)
+    if result is None:
+      return 'Warning: Unable to includecode from github_path="<code>%s</code>"' % file_url
+
+  if region_regex:
+    region_name = region_regex.group(1)
+    start_at = result.find('[START %s]' % region_name)
+    if start_at >= 0:
+      start_at = result.find('\n', start_at) + 1
+      end_at = result.find('[END %s]' % region_name)
+      end_at = result.rfind('\n', start_at, end_at)
+      result = result[start_at:end_at]
+
+  if dedent_regex and dedent_regex.group(1) == 'auto':
     result = textwrap.dedent(result)
+
   return cgi.escape(result)
 
 
