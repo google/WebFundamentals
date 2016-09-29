@@ -17,7 +17,7 @@ description: Touchscreens are available on more and more devices,  from phones u
 
 Touchscreens are available on more and more devices, ranging from phones to
 desktop screens. When your users choose to interact with your UI, your app
-should respond to their touch in intuitive and beautiful ways.
+should respond to their touch in intuitive ways.
 
 <div class="clearfix"></div>
 
@@ -106,16 +106,18 @@ for users.
 If you have an idea for custom interactions and gestures for your site, there
 are two topics to keep in mind:
 
-1. How to support the all browsers.
+1. How to support all browsers.
 1. How to keep your frame rate high.
 
 In this article, we'll look at exactly these topics covering the API's we need
 to support to hit all browsers and then cover how we use these events
 efficiently.
 
-Depending on what you would like your gesture to do, you’re likely want the
+Depending on what you would like your gesture to do, you likely want the
 user to interact with one element at a time *or* you'll want them to be able
 to interact with multiple elements at the same time.
+
+Caution: Don't forget that some users will want keyboard input and users running assistive technology on a touchscreen device may not be able to perform gestures because they're intercepted / consumed by the assistive technology.
 
 We are going to look at two examples in this article, both demonstrating
 support for all browsers and how to keep the frame rate high.
@@ -152,8 +154,8 @@ In other browsers `TouchEvents` and `MouseEvents` are the correct approach.
 
 The great feature of `PointerEvents` is that it merges multiple types of input,
 including mouse, touch and pen events, into one set of
-callbacks. The events to listen for are `pointerdown`, `pointermove` and
-`pointerup`.
+callbacks. The events to listen for are `pointerdown`, `pointermove`,
+`pointerup` and `pointercancel`.
 
 The equivalents in other browsers are `touchstart`, `touchmove`,
 `touchend` and `touchcancel` for touch events and if you wanted to implement
@@ -283,7 +285,7 @@ the browser is intending to draw a frame and will help us move some work out
 of our event callbacks.
 
 If you are unfamiliar with `requestAnimationFrame()`, you
-can [learn more here](/web/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes). 
+can [learn more here](/web/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes).
 One way to think of `requestAnimationFrame()` is changes the
 UI in a way that "works with the browser" rather than against.
 
@@ -498,9 +500,11 @@ application:
     <tr>
       <td data-th="Event Names">
         <code>touchcancel</code>
+        <code>pointercancel</code>
       </td>
       <td data-th="Description">
-        This is called when the browser cancels the touch gestures.
+        This is called when the browser cancels the touch gestures. For example,
+        a user touch a web app and then change tabs.
       </td>
     </tr>
   </tbody>
