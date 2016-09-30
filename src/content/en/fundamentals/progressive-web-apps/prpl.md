@@ -9,9 +9,9 @@ description:
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Dogfood: PRPL is a pattern we believe makes sense for applications that can be
-granularly served. It is currently considered **experimental**; however, we plan
-to publish more data on where it works well in the future.
+Dogfood: PRPL is a new pattern we feel has great potential. At this stage, 
+we welcome experimentation with it while we iterate on the ideas in the 
+pattern and collect more data on where it offers the greatest benefits.
 
 The mobile web is too slow. Over the years the web has evolved from a
 document-centric platform to a first-class application platform. Thanks to
