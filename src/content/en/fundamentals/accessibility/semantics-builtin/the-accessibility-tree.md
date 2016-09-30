@@ -23,7 +23,7 @@ to the DOM API, but you can get away with less information and fewer nodes,
 because a lot of that information is only useful for visual presentation. It
 might look something like this.
 
-![screen reader DOM API mockup](imgs/treestructure.png)
+![screen reader DOM API mockup](imgs/treestructure.jpg)
 
 This is basically what the browser actually presents to the screen reader. The
 browser takes the DOM tree and modifies it into a form that is useful to
@@ -91,9 +91,6 @@ For example, this "button" isn't a button at all.
         border-radius: 8px;
         padding: 10px;
         font-weight: bold;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
         user-select: none;
         cursor: pointer;
     }

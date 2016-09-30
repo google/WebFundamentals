@@ -31,23 +31,5 @@ toc:
         path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
       - title: Implicit Semantics
         path: /web/fundamentals/accessibility/semantics-aria/implicit-semantics
-    - title: Styling
-      section:
-      - title: Accessible Styles
-        path: /web/fundamentals/accessibility/styling/
-      - title: Input Modality
-        path: /web/fundamentals/accessibility/styling/styling-two
-      - title: Multi-Device Responsive Design
-        path: /web/fundamentals/accessibility/styling/styling-three
-      - title: Mobile Screen Readers
-        path: /web/fundamentals/accessibility/styling/styling-four
-      - title: Color and Contrast
-        path: /web/fundamentals/accessibility/styling/styling-five
-      - title: Color Deficiency and Accessibility
-        path: /web/fundamentals/accessibility/styling/styling-six
-      - title: High-contrast Mode
-        path: /web/fundamentals/accessibility/styling/styling-seven
-      - title: Accessibility Styling Wrap-up
-        path: /web/fundamentals/accessibility/styling/styling-eight
-    - title: Wrap-up
-      path: /web/fundamentals/accessibility/outro/
+    - title: Accessible Styles
+      path: /web/fundamentals/accessibility/accessible-styles
