@@ -1,5 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
+description: Learn how to store data locally for improved response time and offline support.
 
 {# wf_updated_on: 2016-09-29 #}
 {# wf_published_on: 2016-09-29 #}
@@ -9,17 +10,19 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/addyosmani.html" %}
 {% include "web/_shared/contributors/mco.html" %}
 
+<caption align="bottom">
 ![PWA in devtools](images/image_0.jpg)
-
-The [Pokedex](https://pokedex.org) Progressive Web App uses IndexedDB for application state and
-the Pokemon data set while the Cache API is used for URL addressable resources.
+The [Pokedex](https://pokedex.org) Progressive Web App uses IndexedDB for
+application state and the Pokemon data set while the Cache API is used for URL
+addressable resources.
+</caption>
 
 Internet connections can be flakey or non-existent on the go, which is why
 offline support and reliable performance are common features in [Progressive
 Web Apps](/web/progressive-web-apps/). Even in
 perfect wireless environments, judicious use of caching and other storage
 techniques can substantially improve the user experience. In this post, we’ll
-summarize some ideas around offline data storage* *for PWAs — think JSON
+summarize some ideas around offline data storage for PWAs — think JSON
 payloads, images and general static data required to provide a *meaningful*
 experience offline.
 
@@ -46,7 +49,7 @@ available](https://jakearchibald.github.io/isserviceworkerready/) in Chrome,
 Firefox, Opera and are in development for Edge.
 
 * Promise wrappers for IDB hide some of the powerful but also complex
-machinery (e.g. transactions, schema versioning) that comes the IDB library.
+machinery (e.g. transactions, schema versioning) that comes with the IDB library.
 
 * IDB will support [observers](https://github.com/WICG/indexed-db-observers),
 which allow easy synchronization between tabs.
@@ -54,11 +57,11 @@ which allow easy synchronization between tabs.
 * Safari 10 has [fixed many long-standing IDB
 bugs](https://gist.github.com/nolanlawson/08eb857c6b17a30c1b26) in their latest
 Tech Previews. (NOTE:  Some folks have run into stability issues with Safari
-10’s IDB and PouchDB have found it to be a little slow. Until more research has
+10’s IDB and PouchDB and have found it to be a little slow. Until more research has
 been done here, YMMV. Please do test and file browser bugs so the folks @webkit
 and related OSS library authors can take a look. LocalForage, PouchDB, YDN and
-Lovefield use WebSQL in Safari by default due to UA sniffing (there wasn’t an
-efficient way to feature-test for broken IDB at the time). This means these
+Lovefield use WebSQL in Safari by default (due to lack of an
+efficient way to feature-test for broken IDB). This means these
 libraries will work in Safari 10 without extra effort (just not using IDB
 directly).)
 
@@ -75,7 +78,7 @@ IndexedDB.
 ## **What about other storage mechanisms?**
 
 * Web Storage (e.g LocalStorage and SessionStorage) is synchronous, has no Web
-Worker support and is size-limited (only strings).
+Worker support and is size and type (strings only) limited.
 
 * Cookies [have their
 uses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) but are
@@ -128,18 +131,19 @@ In Chrome and Opera, your storage is per origin (rather than per API). Both
 storage mechanisms will store data until the browser
 [quota](http://www.html5rocks.com/en/tutorials/offline/quota-research/) is
 reached. Apps can check how much quota they’re using with the [Quota Management
-API](https://www.w3.org/TR/quota-api/). In Firefox, apps can use up to 10% of
-free disk space, but will prompt after 50MB data stored. In mobile Safari, apps
-can use up to 50MB max, whereas desktop Safari allows unlimited storage (and
-prompts after 5MB). IE10+ maxes out at 250MB and prompts at 10MB. PouchDB
-[tracks](https://pouchdb.com/faq.html#data_limits) IDB storage behavior.
+API](https://www.w3.org/TR/quota-api/). In Chrome, apps can use up to 6% of free
+disk space. In Firefox, apps can use up to 10% of free disk space, but will
+prompt the user for further storage requests after 50MB data stored. In mobile
+Safari, apps can use up to 50MB max, whereas desktop Safari allows unlimited
+storage (and prompts after 5MB). IE10+ maxes out at 250MB and prompts the user
+at 10MB. PouchDB [tracks](https://pouchdb.com/faq.html#data_limits) IDB storage
+behavior.
 
 ## **How can I tell how much storage space my app is using?**
 
-The [Quota Management API](https://www.w3.org/TR/quota-api/) lets you query for
-the size of storage space currently used and how much is available to the
-application. It also enables requesting for more storage if needed.  A newer
-[Storage Quota Estimate
+In Chrome, the [Quota Management API](https://www.w3.org/TR/quota-api/) lets
+you query for the size of storage space currently used and how much is
+available to the application. A newer [Storage Quota Estimate
 API](https://www.chromestatus.com/features/5630353511284736) tries to make it
 even easier to discover how much quota an origin is using with support for
 Promises.
@@ -173,9 +177,11 @@ If offline storage interests you, the below efforts are worth keeping an eye
 on. One particularly exciting development in progress is native Promises
 support in IndexedDB without the need for a separate library.
 
+<caption align="bottom">
 ![Promise-ized IDB](images/image_1.jpg)
-
 IDB with some await goodness.
+</caption>
+
 
 Other developments to keep an eye on:
 
@@ -217,7 +223,7 @@ debug the underlying JetDB) — vote
 for built in support.
 
 * Although [ideas](https://github.com/slightlyoff/async-local-storage) for
-async LS have been kicked around in the past, current focus is on getting
+async LocalStorage have been kicked around in the past, current focus is on getting
 [IndexedDB 2.0](https://w3c.github.io/IndexedDB/) in a good state.
 
 * The [writable-files](https://github.com/WICG/writable-files) proposal may
