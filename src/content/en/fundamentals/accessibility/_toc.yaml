@@ -19,36 +19,18 @@ toc:
         path: /web/fundamentals/accessibility/semantics-builtin/the-accessibility-tree
       - title: Text Alternatives for Images
         path: /web/fundamentals/accessibility/semantics-builtin/text-alternatives-for-images
-    - title: Semantics Navigation
-      section:
-      - title: Semantics and Navigating Content
-        path: /web/fundamentals/accessibility/semantics-navigation/
-      - title: Using Headings Effectively
-        path: /web/fundamentals/accessibility/semantics-navigation/semnav-two
-      - title: Other Navigation Options
-        path: /web/fundamentals/accessibility/semantics-navigation/semnav-three
-      - title: Semantics and Navigation Wrap-up
-        path: /web/fundamentals/accessibility/semantics-navigation/semnav-four
+      - title: Navigating Content
+        path: /web/fundamentals/accessibility/semantics-builtin/navigating-content
     - title: Semantics and ARIA
       section:
       - title: Introduction to ARIA
         path: /web/fundamentals/accessibility/semantics-aria/
-      - title: What Can ARIA Do?
-        path: /web/fundamentals/accessibility/semantics-aria/semaria-two
-      - title: ARIA Labels
-        path: /web/fundamentals/accessibility/semantics-aria/semaria-three
-      - title: NVDA Screen Reader
-        path: /web/fundamentals/accessibility/semantics-aria/semaria-four
-      - title: ARIA Relationships
-        path: /web/fundamentals/accessibility/semantics-aria/semaria-five
-      - title: Hidden in Plain Sight
-        path: /web/fundamentals/accessibility/semantics-aria/semaria-six
-      - title: Introducing aria-live
-        path: /web/fundamentals/accessibility/semantics-aria/semaria-seven
+      - title: ARIA Labels and Relationships
+        path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
+      - title: Hiding and Updating Content
+        path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
       - title: Implicit Semantics
-        path: /web/fundamentals/accessibility/semantics-aria/semaria-eight
-      - title: Semantics and ARIA Wrap-up
-        path: /web/fundamentals/accessibility/semantics-aria/semaria-nine
+        path: /web/fundamentals/accessibility/semantics-aria/implicit-semantics
     - title: Styling
       section:
       - title: Accessible Styles
