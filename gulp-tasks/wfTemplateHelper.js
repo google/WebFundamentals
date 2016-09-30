@@ -68,7 +68,7 @@ function getFullFeedEntries(articles) {
       article.atomAuthor = atomAuthorName.trim();
     }
     var rssPubDate = moment(article.datePublished);
-    article.rssPubDate = rssPubDate.format('MM MMM YYYY HH:mm:ss [GMT]');
+    article.rssPubDate = rssPubDate.format('DD MMM YYYY HH:mm:ss [GMT]');
   });
   return articles;
 }
