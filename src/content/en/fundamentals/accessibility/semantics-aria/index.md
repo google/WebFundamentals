@@ -146,7 +146,7 @@ best source of definitive information about how the ARIA roles and attributes
 work together and how they can be used in a way that is supported by browsers
 and assistive technologies.
 
-![a list of all the availabe ARIA roles](imgs/aria-roles.png)
+![a list of all the availabe ARIA roles](imgs/aria-roles.jpg)
 
 However, the spec is very dense; a more approachable place to start is the <a
 href="https://www.w3.org/TR/wai-aria-practices-1.1/" target="_blank">ARIA
