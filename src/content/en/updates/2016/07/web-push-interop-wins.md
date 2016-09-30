@@ -12,47 +12,48 @@ description: Web push has had a few updates in recent versions of Chrome. GCM no
 {% include "web/_shared/contributors/mattgaunt.html" %}
 {% include "web/_shared/contributors/josephmedley.html" %}
 
-When Chrome first supported the Web Push API, it relied on the non-standard
-Google Cloud Messaging (GCM) sender ID and it's protocol. Although it was
-proprietary it allowed the  Web Push API to be made available to developers at a
+When Chrome first supported the Web Push API, it relied on the
+Firebase Cloud Messaging (FCM),formerly known as Google Cloud Messaging (GCM),
+push service. This required using it's proprietary API. This allowed the Chrome
+to make the Web Push API available to developers at a
 time when the Web Push Protocol spec was still being written and later provided
 authentication (meaning the message sender is who they say they are) at a time
 when the Web Push Protocol lacked it. Good news: neither of these are true
 anymore.
 
-GCM and Chrome now support the standard [Web Push
+FCM / GCM and Chrome now support the standard [Web Push
 Protocol](https://tools.ietf.org/html/draft-ietf-webpush-protocol), while sender
 authentication can be achieved by implementing
-[VAPID](https://tools.ietf.org/html/draft-thomson-webpush-vapid-02), meaning
-your web app no longer needs a gcm_sender_id.
+[VAPID](https://tools.ietf.org/html/draft-thomson-webpush-vapid), meaning
+your web app no longer needs a 'gcm_sender_id'.
 
 In this article, I'm going to first describe how to convert your existing server
-code to use the Web Push Protocol with GCM. Next, I'll show you how to implement
+code to use the Web Push Protocol with FCM. Next, I'll show you how to implement
 VAPID in both your client and server code.
 
-### GCM Supports Web Push Protocol
+### FCM Supports Web Push Protocol
 
 Let's start with a little context. When your web application registers for a
 push subscription it's  given the URL of a push service. Your server will use
 this endpoint to send data to your user via your web app. In Chrome you'll be
-given a GCM endpoint if you subscribe a user without VAPID. (We'll cover VAPID
-later). Before GCM supported Web Push Protocol you had to extract the GCM
+given a FCM endpoint if you subscribe a user without VAPID. (We'll cover VAPID
+later). Before FCM supported Web Push Protocol you had to extract the FCM
 registration ID from the end of the URL and and put it in the header before
-making  a GCM API request. For example, a GCM endpoint of
+making  a FCM API request. For example, an FCM endpoint of
 `https://android.googleapis.com/gcm/send/ABCD1234`, would have a registration
 ID of 'ABCD1234'.
 
-Now that GCM supports Web Push Protocol you can leave the endpoint intact and
+Now that FCM supports Web Push Protocol you can leave the endpoint intact and
 use the URL as a Web Push Protocol endpoint. (This brings it in line with
 Firefox and hopefully every other future browser.)
 
 Before we dive into VAPID, we need to make sure our server code correctly
-handles the GCM endpoint. Below is an example of making a request to a push
-service in Node. Notice that for GCM we're adding the API key to the request
+handles the FCM endpoint. Below is an example of making a request to a push
+service in Node. Notice that for FCM we're adding the API key to the request
 headers. For other push service endpoints this won't be needed. For Chrome prior
 to version 52, Opera Android and the Samsung Browser, you're also still required
-to include a gcm_sender_id in your web app's manifest.json. The API key and
-gcm_sender_id are used to check whether the server making the requests is
+to include a 'gcm_sender_id' in your web app's manifest.json. The API key and
+sender ID are used to check whether the server making the requests is
 actually allowed to send messages to the receiving user.
 
 
@@ -61,14 +62,14 @@ actually allowed to send messages to the receiving user.
     headers.append('TTL', 12 * 60 * 60);  
     // Assuming no data is going to be sent  
     headers.append(Content-Length, 0);
-    
+
     // Assuming you're not using VAPID (read on), this
     // proprietary header is needed  
     if(subscription.endpoint
       .indexOf('https://android.googleapis.com/gcm/send/') === 0) {  
       headers.append('Authorization', 'GCM_API_KEY');  
     }
-    
+
     fetch(subscription.endpoint, {  
       method: 'POST',  
       headers: headers  
@@ -78,9 +79,9 @@ actually allowed to send messages to the receiving user.
         throw new Error('Unable to send push message'');  
       }  
     });
-    
 
-Remember, this is a change to GCM's API, so you don't need to update your
+
+Remember, this is a change to FCM / GCM's API, so you don't need to update your
 subscriptions, just change your server code to define the headers as shown
 above.
 
@@ -91,8 +92,8 @@ VAPID is the cool new short name for
 Identification](https://tools.ietf.org/html/draft-thomson-webpush-vapid)". This
 new spec essentially defines a handshake between your app server and the push
 service and allows the push service to confirm which site is sending messages.
-With VAPID you can avoid the GCM-specific steps for sending a push message. You
-no longer need a Google Developer project, a `gcm_sender_id`, or an
+With VAPID you can avoid the FCM-specific steps for sending a push message. You
+no longer need a Firebase project, a `gcm_sender_id`, or an
 `Authorization` header.
 
 The process is pretty simple:
@@ -122,13 +123,13 @@ library](https://github.com/web-push-libs/web-push/):
     function generateVAPIDKeys() {  
       var curve = crypto.createECDH('prime256v1');  
       curve.generateKeys();
-    
+
       return {  
         publicKey: curve.getPublicKey(),  
         privateKey: curve.getPrivateKey(),  
       };  
     }
-    
+
 
 ### Subscribing with the Public Key
 
@@ -144,17 +145,14 @@ the subscribe() method.
         applicationServerKey: publicKey  
       }  
     );
-    
+
 
 You'll know if it has worked by examining the endpoint in the resulting
 subscription object, if the origin is `fcm.googleapis.com`, it's working.
 
     https://fcm.googleapis.com/fcm/send/ABCD1234
 
-**Note: Even though this is an FCM URL, use the [Web Push
-Protocol](https://tools.ietf.org/html/draft-ietf-webpush-protocol-06)
-not** the FCM protocol, this way your server side code will work for any
-push service.
+Note: Even though this is an FCM URL, use the [Web Push Protocol](https://tools.ietf.org/html/draft-ietf-webpush-protocol) **not** the FCM protocol, this way your server side code will work for any push service.
 
 ### Sending a Push Message
 
@@ -165,8 +163,7 @@ Crypto-Key header.
 #### Authorization Header
 
 The `Authorization` header is a signed [JSON Web Token
-(JWT)](https://jwt.io/) with 'Bearer ' in front of it, to indicate
-that the JWT is a bearer token.
+(JWT)](https://jwt.io/) with 'WebPush ' in front of it.
 
 A JWT is a way of sharing a JSON object with a second party in such a way that
 the sending party can sign it and the receiving party can verify the signature
@@ -206,8 +203,7 @@ The Payload is another JSON object containing the following:
 An example payload could look like the following:  
 
     {  
-        "aud":
-"http://push-service.example.com",  
+        "aud": "http://push-service.example.com",  
         "exp": Math.floor((Date.now() / 1000) + (12 * 60 * 60)),  
         "sub": "mailto: my-email@some-url.com"  
     }  
@@ -224,13 +220,13 @@ I'm not going to show a code sample for this as there are a [number of
 libraries](https://jwt.io/#libraries-io) that will take the header and payload
 JSON objects and generate this signature for you.
 
-The signed JWT is used as the Authorization header with 'Bearer ' prepended to
+The signed JWT is used as the Authorization header with 'WebPush ' prepended to
 it and will look something like the following:
 
-    Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2ZjbS5nb29nbGVhcGlzLmNvbSIsImV4cCI6MTQ2NjY2ODU5NCwic3ViIjoibWFpbHRvOnNpbXBsZS1wdXNoLWRlbW9AZ2F1bnRmYWNlLmNvLnVrIn0.Ec0VR8dtf5qb8Fb5Wk91br-evfho9sZT6jBRuQwxVMFyK5S8bhOjk8kuxvilLqTBmDXJM5l3uVrVOQirSsjq0A
+    WebPush eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJhdWQiOiJodHRwczovL2ZjbS5nb29nbGVhcGlzLmNvbSIsImV4cCI6MTQ2NjY2ODU5NCwic3ViIjoibWFpbHRvOnNpbXBsZS1wdXNoLWRlbW9AZ2F1bnRmYWNlLmNvLnVrIn0.Ec0VR8dtf5qb8Fb5Wk91br-evfho9sZT6jBRuQwxVMFyK5S8bhOjk8kuxvilLqTBmDXJM5l3uVrVOQirSsjq0A
 
 Notice a few things about this. First, the Authorization header literally
-contains the word 'Bearer' and should be followed by a space then the JWT. Also
+contains the word 'WebPush' and should be followed by a space then the JWT. Also
 notice the dots separating the JWT header, payload, and signature.
 
 #### Crypto-Key Header
@@ -246,8 +242,10 @@ already be using the `Crypto-Key` header, so to add the application server
 key, you just need to add a semicolon before adding the above content, resulting
 in:  
 
-**dh=**BGEw2wsHgLwzerjvnMTkbKrFRxdmwJ5S_k7zi7A1coR_sVjHmGrlvzYpAT1n4NPbioFlQkIrTNL8EH4V3ZZ4vJE**;**
-**p256ecdsa=**BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1rRPF3foIiBHXRdJI2Qhumhf6_LFTeZaN
+<pre class="prettyprint">
+<strong>dh=</strong>BGEw2wsHgLwzerjvnMTkbKrFRxdmwJ5S_k7zi7A1coR_sVjHmGrlvzYpAT1n4NPbioFlQkIrTNL8EH4V3ZZ4vJE<strong>;</strong>
+<strong>p256ecdsa=</strong>BDd3_hVL9fZi9Ybo2UUzA284WG5FZR30_95YeZJsiApwXKpNcF1rRPF3foIiBHXRdJI2Qhumhf6_LFTeZaN
+</pre>
 
 Note: The separating semicolon should actually be a comma but there is a bug
 in Chrome prior to version 52 which prevents push from working if a comma is
@@ -263,7 +261,7 @@ message to a user in both Chrome and Firefox. Both are following the standards.
 What you need to bear in mind is that in Chrome version 51 and before, Opera for
 Android and Samsung browser you'll still need to define the `gcm_sender_id`
 in your web app manifest and you'll need to add the Authorization header to the
-GCM endpoint that will be returned.
+FCM endpoint that will be returned.
 
 VAPID provides an off ramp from these proprietary requirements. If you implement
 VAPID it'll work in all browsers that support web push.  As more browsers

@@ -104,14 +104,14 @@ use more power than do on-screen notifications.
 A precise notification is one that has specific information that can be acted on
 immediately. Consider the image from the anatomy lesson again.
 
-![A precise notification has specific information.](images/joe-asked.png){:width="316px"}
+![A precise notification has specific information.](images/flight-delayed-good){:width="316px"}
 
-It tells you:
+It tells you everything you need to know in one glance:
 
-* Who sent the message.
-* An image so that you don't confuse the sender with any old average Joe.
-* Since the notification is a question, you can turn him down with as little
-  effort as is humanly possible.
+* Who sent the message - the airline.
+* What's happened - your new flight is delayed.
+* What else - your new flight time.
+
 
 ### Offer enough information that the user doesn't need to visit your site {: #offer-enough }
 
@@ -186,14 +186,14 @@ such as technology used to send the message.
 
 <div class="attempt-left">
   <figure>
-    <img src="images/joe-asked.png">
+    <img src="images/flight-delayed-good.png">
     <figcaption class="success"><b>Do:</b> Make the title include
     something specific from the message.</figcaption>
   </figure>
 </div>
 <div class="attempt-right">
   <figure>
-    <img src="images/sms-call.png">
+    <img src="images/cc-bad.png">
     <figcaption class="warning"><b>Don’t:</b> Don't include
     information that users already know or don't understand.</figcaption>
   </figure>

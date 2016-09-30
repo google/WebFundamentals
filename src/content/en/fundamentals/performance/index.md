@@ -11,7 +11,7 @@ Improving performance is a process that starts with minimizing, or at lease, opt
 
 ## Optimizing Content Efficiency
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+<img src="images/oce.png" class="attempt-right" style="max-height: 200px;">
 
 To deliver great performance you need to optimize delivery of each and every byte of your site.
 
@@ -21,7 +21,7 @@ To deliver great performance you need to optimize delivery of each and every byt
 
 ## Critical Rendering Path
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+<img src="images/crp.png" class="attempt-right">
 
 Do you understanding what happens in the intermediate steps between receiving HTML, CSS, and JavaScript and the processing to turn them into rendered pixels?
 
@@ -31,7 +31,7 @@ Do you understanding what happens in the intermediate steps between receiving HT
 
 ## Rendering Performance
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+<img src="images/rend.png" class="attempt-right">
 
 To write performant sites and apps you need to understand how HTML, JavaScript and CSS are handled by the browser, and ensure that the code you write (and third-party code you include) runs as efficiently as possible.
 
@@ -41,7 +41,7 @@ To write performant sites and apps you need to understand how HTML, JavaScript a
 
 ## Understanding Low Bandwidth and High Latency
 
-<img src="https://placehold.it/300x200" class="attempt-right">
+<img src="images/low.png" class="attempt-right">
 
 It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help.
 

@@ -68,11 +68,11 @@ While you're free to use your own web server, this codelab is designed to work w
 
 [](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
 
-After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
 ![9efdf0d1258b78e4.png](img/9efdf0d1258b78e4.png)
 
-In the ensuing window, click on the Web Server icon: 
+In the ensuing window, click on the Web Server icon:
 
 ![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
@@ -94,7 +94,7 @@ Now visit your work site in your web browser (by clicking on the highlighted Web
 
 ![693305d127d9fe80.png](img/693305d127d9fe80.png)
 
-Obviously, this app is not yet doing anything interesting. We'll add functionality so we can verify it works offline in subsequent steps. 
+Obviously, this app is not yet doing anything interesting. We'll add functionality so we can verify it works offline in subsequent steps.
 
 
 ## Introducing the Application tab
@@ -142,7 +142,7 @@ The code for the current Service Worker is quite simple, just a couple of consol
     self.addEventListener('install', function(event) {
       console.log('Service Worker installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
       console.log('Service Worker activating.');  
     });
@@ -158,7 +158,7 @@ Let's update the code for the `service-worker.js` to watch it go through a lifec
     self.addEventListener('install', function(event) {
       console.log('A *new* Service Worker is installing.');
     });
-    
+
     self.addEventListener('activate', function(event) {
       console.log('Finally active. Ready to start serving content!');  
     });
@@ -442,7 +442,7 @@ After a moment, execution will pause on the same breakpoint. Check the `event.re
 
 
 
-Push notifications are an important part of creating an engaging experience. Because notifications require coordination between an application server, a messaging service (like Google Cloud Messaging), and your Service Worker, it can be useful to test the Service Worker in isolation first to verify it is setup properly.
+Push notifications are an important part of creating an engaging experience. Because notifications require coordination between an application server, a messaging service (like Firebase Cloud Messaging), and your Service Worker, it can be useful to test the Service Worker in isolation first to verify it is setup properly.
 
 ### Adding Push support
 
@@ -496,5 +496,5 @@ Now that you have some debugging tools in your toolbox, you should be well equip
 
 
 ## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an 
+Help us make our code labs better by submitting an
 [issue](https://github.com/googlecodelabs/debugging-service-workers/issues) today. And thanks!
