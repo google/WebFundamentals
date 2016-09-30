@@ -22,22 +22,25 @@ relevant content.
 The Push API and Notification API open a whole new set of possibilities for
 you to re-engage with your users.
 
-
-<div style="clear:both;"></div>
-
 ## Are service workers involved? {: #service-worker-involved }
 
-Yes! If you're not familiar with them, check out the 
-[service worker introduction][service-worker-primer].
-We will use service worker code in later sections when we show you how to
-implement pushes and notifications.
+Yes. Push is based on service workers because service workers operate in the
+background. This means the only time code is run for a push notification (in
+other words, the only time the battery is used) is when the user interacts with
+
+a notification by clicking it or closing it.   If you're not familiar with them,
+check out the  [service worker introduction][service-worker-primer]. We will use
+service worker code in later sections when we show you how to implement pushes
+and notifications.
 
 ## Two technologies {: #two-technologies }
 
-Push and notification are different, but complementary, features: a **push** is
-the action of the server supplying information to a service worker; a
-**notification** is the action of a service worker or web page showing the
-information to a user.
+Push and notification use different, but complementary, APIs:
+[**push**](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) is
+invoked when a server supplies information to a service worker; a
+[**notification**](https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API)
+is the action of a service worker or web page script showing information
+to a user.
 
 ## A little notification anatomy {: #anatomy }
 
@@ -67,10 +70,17 @@ A typical options object looks something like this:
     
 <img src="images/joe-asked-contextual.png" alt="Example Notification" class="attempt-right">
 
+This code produces a notification like the one in the image. It generally
+provides the same capabilities as a native application. Before diving into the
+specifics of implementing those capabilities, I'll show you how to use those
+capabilities effectively.   We'll go on to describe the mechanics of
+implementing push notifications, including handling permissions and
+subscriptions, sending messages, and responding to them.
 
-In the next few sections we'll provide tips to help you build better
-notifications. We'll go on to describe the mechanics of implementing them,
-including handling permissions and subscriptions, sending messages, and
-responding to them.
+## How can I try it?
+
+There are several ways you can play with the features before you completely understand how they work, or have to implement them. First, check out [our own sample](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications). Also available are Peter Beverloo's [Notification Generator](https://tests.peter.sh/notification-generator/) and Chris Mills' [push-api-demo](https://github.com/chrisdavidmills/push-api-demo).
+
+Note: Unless you're using localhost, the Push API requires HTTPS.
 
 <<../../../_common-links.md>>

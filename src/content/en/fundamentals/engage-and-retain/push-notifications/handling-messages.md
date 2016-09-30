@@ -13,13 +13,21 @@ description: You've seen what makes a good notification. Now let's see how to im
   <img src="images/joe-asked.png" alt="The example notification.">
 </figure>
 
-Way back at the [beginning of this section](.), we
-showed a notification that looks like this and the code that goes with it.
+Way back at the [beginning of this article](#anatomy), we
+showed a notification that looks like the image and the code that goes with it.
 
 While we showed you a little bit about how this is coded, we really didn't give
 you enough information for it to be useful. That's what this section is about.
 
 <div style="clear:both;"></div>
+
+## Service workers, again
+
+Let's talk about service workers again. Handling message involves code that
+lives exclusively in a service worker. If you need a little background,
+[here's the introduction again](service-worker-primer). We've also got some
+handy instructions for [debugging service workers](/web/tools/chrome-devtools/debug/progressive-web-apps/#service-workers)
+using DevTools.
 
 ## More notification anatomy {: #more-anatomy }
 
@@ -32,7 +40,7 @@ worker using the push event. Its basic structure is this:
         // Process the event and display a notification.
       );
     });
-    
+
 
 Somewhere inside `waitUntil()`, we're going to call `showNotification()` on a
 service worker registration object.
@@ -48,10 +56,12 @@ service worker registration object.
           { action: 'no', title: 'No', icon: 'images/thumb-down.png' }
         ]
       })
-    
+
 
 Technically, the only required parameter for `showNotification()` is the title.
-Practically speaking, you should include a body and an icon (ideally 192x192 px).
+Practically speaking, you should include at least a body and an icon. As you can
+see notifications have quite a few options. You can find a complete
+[list of them at MDN](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification).
 
 Finally, we'll process the user's response using the `notificationclick` and
 `notificationclose` methods.
@@ -61,63 +71,114 @@ Finally, we'll process the user's response using the `notificationclick` and
       // Do something with the event  
       event.notification.close();  
     });
-    
+
     self.addEventListener('notificationclose', event => {  
       // Do something with the event  
     });
-    
+
 
 Everything else is just an elaboration of these basic ideas.
 
+Note: Earlier versions of the [Notification API spec](https://notifications.spec.whatwg.org/) contained a `notificationclose`. You should avoid this even though it may be supported on some browsers.
+
+## Choosing not to show a notification {: #choosing-not-to-show }
+
+There may be times when it's not necessary to show a notification when a push
+message is received. For example, if the app is already open and the push's
+content is already visible to the user.
+
+Fortunately, service workers have a way to test whether the application is open.
+Service workers support an interface called
+[`clients`](https://developer.mozilla.org/en-US/docs/Web/API/Clients) is a list
+of all active clients controlled by the current service worker. To find out if
+any clients are active, call `clients.length`. If this property returns `0`
+show a notification. Otherwise do something else.
+
+<pre class="prettyprint">
+self.addEventListener('push', event => {
+  const promiseChain = clients.matchAll()
+  .then(clients => {
+    <strong>let mustShowNotification = true;
+    if (clients.length > 0) {
+      for (let i = 0; i < clients.length; i++) {
+        if (clients[i].visibilityState === 'visible') {
+          mustShowNotification = false;
+          return;
+        }
+      }
+    }
+
+    if (mustShowNotification) {
+      // Show the notification.
+      event.waitUntil(
+        self.registration.showNotification('Push notification')
+      );
+    } else {
+      // Send a message to the page to update the UI.
+      console.log('The application is already open.');
+    }</strong>
+  });
+
+  event.waitUntil(promiseChain);
+});
+</pre>
+
 ## Preparing message content {: #preparing-messages }
 
-As we said earlier, your server sends two kinds of messages: 
+As we said earlier, your server sends two kinds of messages:
 
 * Messages with a data payload.
 * Messages without a data payload, often called a tickle.
 
-Your push handler needs to account for both. For messages without a payload you 
-want to provide a good user experience by getting the data before you tell the 
+Your push handler needs to account for both. For messages without a payload you
+want to provide a good user experience by getting the data before you tell the
 user it's available.
 
 Let's start with our basic push event handler with a call to
 `event.waitUntil()`.  This method can only take a promise or something that
-resolves to a promise.
-
+resolves to a promise. This method extends the lifetime of the `push` event
+until certain tasks are accomplished. As you'll see shortly, we'll be holding
+the `push` event until after we've shown a notification.
 
     self.addEventListener('push', event => {
-      event.waitUntil(() => {
-        // Do something with the event.
-      });
+      const promiseChain = someFunction();
+      event.waitUntil(promiseChain);
     });
-    
 
 Next, if you find data in the event object, get it.
 
 <pre class="prettyprint">
 self.addEventListener('push', event => {
-  <strong>event.waitUntil(() => {
-    if (event.data) {
-      return Promise.resolve(event.data);
-    }
-    // No data, so do something else.</strong>
-  });  
+  <strong>
+  let data = null;
+  if (event.data) {
+    // We have data - lets use it
+    data = event.data.json();
+  }</strong>
+  let promiseChain = someFunction(data);
+  event.waitUntil(promiseChain);
 });
 </pre>
-    
 
-If there's no data in the object, call `fetch()` to get it from the server. 
+
+If there's no data in the object, call `fetch()` to get it from the server.
 Otherwise, just return the data.
 
 <pre class="prettyprint">
 self.addEventListener('push', event => {
-  event.waitUntil(() => {
-    if (event.data) {
-      return Promise.resolve(event.data);
-    }
-    <strong>return fetch('some/data/endpoint.json')
-      .then(response => response.json());</strong>
-  });
+  <strong>let promiseChain;
+  if (event.data) {
+    // We have data - lets use it
+    promiseChain = Promise.resolve(event.data.json());
+  } else {
+    promiseChain = fetch('/some/data/endpoint.json')
+      .then(response => response.json());
+  }</strong>
+
+  promiseChain = promiseChain.then(data => {
+      // Now we have data we can show a notification.
+    });
+  event.waitUntil(promiseChain);
 });
 </pre>
 
@@ -126,21 +187,24 @@ notification to the user.
 
 <pre class="prettyprint">
 self.addEventListener('push', event => {
-  event.waitUntil(() => {
-    if (event.data) {
-      return Promise.resolve(event.data);
-    }
-    return fetch('some/data/endpoint.json')
-        .then(response => response.json());
-    })
-    <strong>.then(data => {
+  <strong>let promiseChain;
+  if (event.data) {
+    // We have data - lets use it
+    promiseChain = Promise.resolve(event.data.json());
+  } else {
+    promiseChain = fetch('/some/data/endpoint.json')
+      .then(response => response.json());
+  }</strong>
+
+  promiseChain = promiseChain.then(data => {
       return self.registration.showNotification(data.title, {
         body: data.body,
         icon: (data.icon ? data.icon : '/images/icon-192x192.png'),
         vibrate: [200, 100, 200, 100, 200, 100, 400],
         tag: data.tag
-       })
-    }))</strong>
+      });
+    });
+  event.waitUntil(promiseChain);
 });
 </pre>
 
@@ -154,42 +218,46 @@ Sometimes it's useful to combine multiple notifications into a single one. For
 example, a social networking app might want to avoid messaging users for every
 post from a particular person, and instead combine them.
 
-Combining similar notifications comes down to three things.
+Combining similar notifications has a lot of moving parts. But I like to think
+of it as elaborations on the following steps.
 
-* A call to `getNotifications()`.
-* Reusing an existing `tag` value.
-* Setting the `renotify` flag in the call to `showNotification()`.
+1. A message arrives in the `push` event handler.
+2. You call `self.registration.getNotifications()` to see if there are any
+   notifications you want to combine. This is commonly done by checking the tag
+   of the nofication.
+3. Finally show your new notification by calling `self.registration.showNotification()`
+   making sure you set the renotify parameter to true in the options (See below
+   for an example).
 
-Let's look at an example that shows all three.
+Look for these things as we go through another example. We're going to assume
+that you've already received or retrieved message data as described in the last
+section. Now let's look at what to do with it.
 
-In the following example, we assume that you've already received or
-retrieved message data, as described in the last section. Now let's look at what
-to do with it. Start with a basic push event handler.
+Start with a basic push event handler. The `waitUntil()` method returns a
+Promise that resolves to the notification data.
 
 
     self.addEventListener('push', function(event) {
-      event.waitUntil(
-        // Get the message data somehow and return a Promise.
-      )
+      const promiseChain = getData(event.data)
       .then(data => {
-        // Do something with the data.
-      })
+        // Do something with the data
+      });
+      event.waitUntil(promiseChain);
     });
-    
 
-Check for notifications that match `data.tag` with a call to `getNotifications()`.
+
+Once we have the message data, call `getNotifications()` using `data.tag`.
 
 <pre class="prettyprint">
 self.addEventListener('push', function(event) {
-  event.waitUntil(
-    // Get the message data somehow and return a Promise.
-  )
+  const promiseChain = getData(event.data)
   .then(data => {
     <strong>return self.registration.getNotifications({tag: data.tag});
   })
   .then(notifications => {
     //Do something with the notifications.
-  })</strong>
+  })</strong>;
+  event.waitUntil(promiseChain);
 });
 </pre>
 
@@ -205,25 +273,25 @@ notifications, we need to reuse the `tag` and set `renotify` to `true`. Both are
 
 <pre class="prettyprint">
 self.addEventListener('push', function(event) {
-  event.waitUntil(
-    // Get the message data somehow and return a Promise.
-  )
+  const promiseChain = getData(event.data)
   .then(data => {
-    return self.registration.getNotifications({tag: data.tag})
-  })
-  .then( notifications => {
-  	var noteOptions = {
-      body: data.body,
-      icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
-      vibrate: [200, 100, 200, 100, 200, 100, 400],
-      <strong>tag: data.tag,</strong>
-      data: data
-  	}
-    if (notifications.length > 0) {
-      <strong>noteOptions.renotify = true;</strong>
-      // Configure other options for combined notifications.
-    }
-  })  
+    <strong>return self.registration.getNotifications({tag: data.tag})
+    .then(notifications => {
+      var noteOptions = {
+        body: data.body,
+        icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
+        vibrate: [200, 100, 200, 100, 200, 100, 400],
+        <strong>tag: data.tag,</strong>
+        data: data
+    	};
+
+      if (notifications.length > 0) {
+        <strong>noteOptions.renotify = true;</strong>
+        // Configure other options for combined notifications.
+      }
+    })</strong>;
+  });
+  event.waitUntil(promiseChain);
 });
 </pre>
 
@@ -235,41 +303,41 @@ at that in the next section. Finally, show the notification (line 26).
 
 <pre class="prettyprint">
 self.addEventListener('push', function(event) {
-  event.waitUntil(
-    // Get the message data somehow and return a Promise.
-  )
+  const promiseChain = getData(event.data)
   .then(data => {
-    return self.registration.getNotifications({tag: data.tag})
-  })
-  .then( notifications => {
-    var noteOptions = {
-      body: data.body,
-      icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
-      vibrate: [200, 100, 200, 100, 200, 100, 400],
-      tag: data.tag,
-      data: data
-    };
+    <strong>return self.registration.getNotifications({tag: data.tag})
+    .then(notifications => {
+      var noteOptions = {
+        body: data.body,
+        icon: (data.icon ? data.icon : '/images/ic_flight_takeoff_black_24dp_2x.png'),
+        vibrate: [200, 100, 200, 100, 200, 100, 400],
+        <strong>tag: data.tag,</strong>
+        data: data
+    	};
 
-    if (notifications.length > 0) {
-      data.title = "Flight Updates";
-      noteOptions.body = "There are several updates regarding your flight, 5212 to Kansas City.";
-      noteOptions.renotify = true;
-      <strong>noteOptions.actions = [
-        {action: 'view', title: 'View updates'},
-        {action: 'notNow', title: 'Not now'}
-      ]
-    }
-    return self.registration.showNotification(data.title, noteOptions);</strong>
-  })  
+      if (notifications.length > 0) {
+        data.title = "Flight Updates";
+        noteOptions.body = "There are several updates regarding your flight, 5212 to Kansas City.";
+        noteOptions.renotify = true;
+        <strong>noteOptions.actions = [
+          {action: 'view', title: 'View updates'},
+          {action: 'notNow', title: 'Not now'}
+        ];
+      }
+
+      return self.registration.showNotification(data.title, noteOptions);
+    })</strong>;
+  });
+  event.waitUntil(promiseChain);
 });
 </pre>
 
 ## Put actions on the notification {: #notification-actions }
 
-We've already seen examples of notifications with actions built into them. Let's 
+We've already seen examples of notifications with actions built into them. Let's
 look at how they're implemented and how to respond to them.
 
-Recall that `showNotification()` takes an options argument with one or more 
+Recall that `showNotification()` takes an options argument with one or more
 optional actions.
 
 
@@ -284,7 +352,7 @@ optional actions.
       ],  
       data: data  
     })
-    
+
 <figure class="attempt-right">
   <img src="images/confirmation.png" alt="A notification with actions.">
 </figure>
@@ -297,7 +365,7 @@ the application to an appropriate interface.
 
 <div style="clear:both;"></div>
 
-First, let's add a `notificationclick` event handler to the service worker. Also, 
+First, let's add a `notificationclick` event handler to the service worker. Also,
 close the notification.
 
 
@@ -305,7 +373,7 @@ close the notification.
       event.notification.close();  
       // Process the user action.  
     });
-    
+
 
 Next, we need some logic to figure out where the notification was clicked. Did
 the user click Confirm, Ask for Reschedule, or neither?
@@ -385,14 +453,14 @@ navigate with.
 
     self.addEventListener('notificationclick', function(event) {
       // Content excerpted
-      
+
       event.waitUntil(clients.matchAll({
         includeUncontrolled: true,
         type: 'window'
         })
       );
     });
-    
+
 
 Finally, we need to take different navigation paths depending on whether a
 client is open.
@@ -415,7 +483,7 @@ self.addEventListener('notificationclick', function(event) {
   );
 });
 </pre>
-    
+
 
 Here's the entire `notificationclick` handler from end to end.
 
@@ -439,7 +507,7 @@ Here's the entire `notificationclick` handler from end to end.
       } else {
         var appUrl = '/';
       }
-      
+
       event.waitUntil(clients.matchAll({
         includeUncontrolled: true,
         type: 'window'
@@ -453,4 +521,3 @@ Here's the entire `notificationclick` handler from end to end.
         })
       );
     });
-    
