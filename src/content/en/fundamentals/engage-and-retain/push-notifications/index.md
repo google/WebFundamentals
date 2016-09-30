@@ -10,7 +10,7 @@ description: Push notifications are one of the most valuable capabilities of nat
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 
-<img src="images/joe-asked-contextual.png" alt="Example Notification" class="attempt-right">
+<img src="images/cc-good.png" alt="Example Notification" class="attempt-right">
 
 If you ask a room of developers what mobile device features are missing from
 the web, push notifications are always high on the list.
@@ -58,17 +58,17 @@ A typical options object looks something like this:
 
 
     {
-      "body": "Are you free tonight?",
-      "icon": "images/joe.png",
+      "body": "Did you make a $1,000,000 purchase at Dr. Evil...",
+      "icon": "images/ccard.png",
       "vibrate": [200, 100, 200, 100, 200, 100, 400],
       "tag": "request",
       "actions": [
-        { "action": "yes", "title": "Yes!", "icon": "images/thumb-up.png" },
-        { "action": "no", "title": "No", "icon": "images/thumb-down.png" }
+        { "action": "yes", "title": "Yes", "icon": "images/yes.png" },
+        { "action": "no", "title": "No", "icon": "images/no.png" }
       ]
     }
     
-<img src="images/joe-asked-contextual.png" alt="Example Notification" class="attempt-right">
+<img src="images/cc-good.png" alt="Example Notification" class="attempt-right">
 
 This code produces a notification like the one in the image. It generally
 provides the same capabilities as a native application. Before diving into the

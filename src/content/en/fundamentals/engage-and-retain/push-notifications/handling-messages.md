@@ -10,7 +10,7 @@ description: You've seen what makes a good notification. Now let's see how to im
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 <figure class="attempt-right">
-  <img src="images/joe-asked.png" alt="The example notification.">
+  <img src="images/cc-good.png" alt="The example notification.">
 </figure>
 
 Way back at the [beginning of this article](#anatomy), we
