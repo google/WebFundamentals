@@ -27,7 +27,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 In altre circostanze potrebbe essere necessario modificare drasticamente l'immagine, come ad esempio ridimensionarla, ritagliarla o persino sostituirla. In questi casi, le modifiche all'immagine vengono definite 'direzione artistica'. Consulta [responsiveimages.org/demos/](http://responsiveimages.org/demos/) per ulteriori esempi.
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 
 

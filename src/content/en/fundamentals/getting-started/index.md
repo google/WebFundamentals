@@ -125,7 +125,7 @@ to know to get started quickly and easily.
 <div style="clear:both"></div>
 
 <div class="attempt-left">
-  <a href="primers/paymentrequest">
+  <a href="primers/payment-request/">
     Payment Request API: An Integration Guide
   </a>
   <p>

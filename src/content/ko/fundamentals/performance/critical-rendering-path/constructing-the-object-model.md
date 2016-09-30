@@ -81,4 +81,4 @@ CSS 처리 시간은 얼마나 걸릴까요? 크롬 개발자 도구의 타임�
 
 
 Translated By: 
-{% include "_shared/contributors/jeokrang.html" %}
+{% include "web/_shared/contributors/jeokrang.html" %}

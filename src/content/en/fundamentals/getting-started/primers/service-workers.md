@@ -91,7 +91,7 @@ first installation.
 
 ### Browser support
 
-Browser options are growing. Service workers are suppported by Firefox and
+Browser options are growing. Service workers are supported by Firefox and
 Opera. Microsoft Edge is now 
 [showing public support](https://dev.windows.com/en-us/microsoft-edge/platform/status/serviceworker). 
 Even Safari has dropped [hints of future development](https://trac.webkit.org/wiki/FiveYearPlanFall2015). 

@@ -16,28 +16,28 @@ description: Today I'm going to show you how to add public properties and method
 </div>
 
 
-# In this Week's Episode
+## In this Week's Episode
 
-## Demo source code
+### Demo source code
 
 [https://github.com/robdodson/polycasts/tree/master/ep16-public-api/name-tag](https://github.com/robdodson/polycasts/tree/master/ep16-public-api/name-tag)
 
-## Polymer 0.9 documentation on properties
+### Polymer 0.9 documentation on properties
 
 [https://www.polymer-project.org/0.9/docs/devguide/properties.html](https://www.polymer-project.org/0.9/docs/devguide/properties.html)
 
-## Polyserve
+### Polyserve
 
 [https://github.com/polymerlabs/polyserve](https://github.com/polymerlabs/polyserve)
 
-## New Styling System
+### New Styling System
 
 [https://www.polymer-project.org/0.9/docs/devguide/styling.html](https://www.polymer-project.org/0.9/docs/devguide/styling.html)
 
-## Extending native elements -- Polycasts #15
+### Extending native elements -- Polycasts #15
 [https://www.youtube.com/watch?v=OV8BvxpNQOs&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN](https://www.youtube.com/watch?v=OV8BvxpNQOs&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN)
 
-## Create reusable elements with ease -- Polycasts #14
+### Create reusable elements with ease -- Polycasts #14
 [https://www.youtube.com/watch?v=p7Q1mQtFGM8&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN&index=2](https://www.youtube.com/watch?v=p7Q1mQtFGM8&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN&index=2)
 
 Polymer 0.8: First Look -- Polycasts #13

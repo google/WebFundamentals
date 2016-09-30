@@ -15,9 +15,10 @@ description: In this episode, Addy and Matt walk through how to debug ES6 Promis
   </iframe>
 </div>
 
-
 In this episode, Addy and Matt walk through how to debug ES6 Promises using the
 brand new Promises debugger in Chrome DevTools.
+
+Warning: Support for the Promise inspector has been removed.
 
 Depending on your version of Chrome, you may need to enable the Promises
 inspector. Open DevTools settings - Experiments, check the Promise

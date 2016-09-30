@@ -8,7 +8,7 @@ description: Изображение - важный элемент любой в�
 
 # Изображения {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -27,7 +27,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 В некоторых случаях вам может понадобится радикально оптимизировать изображение: изменить его пропорции, обрезать по краям или даже заменить целиком.  Здесь вам поможет техника art direction.  Больше примеров вы найдете на этом сайте: [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 
 <div class="clearfix"></div>

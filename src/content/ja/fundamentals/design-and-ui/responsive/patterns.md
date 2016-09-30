@@ -8,7 +8,7 @@ description: レスポンシブ ウェブ デザイン パターンは急速に�
 
 # Responsive Web Design Patterns {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 レスポンシブ ウェブ デザイン パターンは急速に進化していますが、 デスクトップとモバイル端末間でうまく動作する 確立されたパターンは限られています。
 

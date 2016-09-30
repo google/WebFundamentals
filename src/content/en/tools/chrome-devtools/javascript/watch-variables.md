@@ -35,7 +35,7 @@ If the variable is not set or can't be found it will show <samp>&lt;Not Availabl
 
 Variable values may change as an application continues to operate.
 The watch list is not a live view of the variables unless you are stepping through execution.
-When you are stepping through execution using [breakpoints](/web/tools/chrome-devtools/debug/breakpoints), the watched values will update automatically.
+When you are stepping through execution using [breakpoints](add-breakpoints), the watched values will update automatically.
 To manually recheck the variables in the list press the refresh button to the right of the section heading.
 
 ![Refresh watch variables button](imgs/refresh-variables-being-watched.png)

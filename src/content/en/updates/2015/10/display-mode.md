@@ -11,13 +11,11 @@ description: Detecting if a web app is launched from the home screen
 
 {% include "web/_shared/contributors/kenchris.html" %}
 
-
-
 During the past year we have focused on enabling users to build app like 
 experiences on the web by making it possible for apps to work offline using 
-[service worker][service-worker-primer] and to get a 
+[service worker](/web/fundamentals/getting-started/primers/service-workers) and to get a 
 presence on the home screen using the 
-[Web App Manifest](/web/fundamentals/engage-and-retain/simplified-app-installs).
+[Web App Manifest](/web/fundamentals/engage-and-retain/app-install-banners/).
 
 Now apps tend to offer different experiences as sites, and developers might want to
 offer different experiences depending on whether the site is viewed in the browser
@@ -77,7 +75,7 @@ is available, as `(display-mode)` returns `false` in M46. This issue has since b
 fixed and should ship in M48.
 
 
-##Best practices
+## Best practices
 As a general note, it is recommended to not use the media query to hide or show
 so-called manual "install banners", telling people to add the app to the home
 screen manually. This is better done by using the rules set out in "Increasing
@@ -87,7 +85,7 @@ It is also recommended to not add back-buttons which are visible in the standard
 Chrome UI. If a back-button is needed, the `"display": "browser"` mode can be used
 in the web app manifest instead.
 
-###FAQ
+### FAQ
 * Will this work on Chrome for iOS or on Desktop?
   * This feature works on any platform where web apps can be added to the home screen,
     meaning it works for Android as well as for desktop "Add to desktop" apps. It

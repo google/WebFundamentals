@@ -26,7 +26,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Dans d'autres cas, il se peut que l'image doive subir des modifications plus importantes : changement des proportions, recadrage, voire remplacement de toute l'image. On parle alors d''art direction'. Pour consulter d'autres exemples, rendez-vous sur [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 
 

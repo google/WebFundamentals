@@ -23,7 +23,7 @@ JavaScript を利用すると、コンテンツやスタイル、ユーザー操
 JavaScript は、ブラウザ内で実行される動的言語で、ページの挙動に関する大部分の要素を変更可能にします。DOM ツリーに対して要素の追加や削除を行うことでページのコンテンツを変更したり、各要素の CSSOM プロパティを変更したり、ユーザー入力を処理したり、さまざまなことが可能になります。実践的に理解するため、以前使用した「Hello World」サンプルにシンプルなインライン スクリプトを追加してみましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 * JavaScript により、DOM に到達し、隠れた span ノードへの参照を引き出すことができます。このノードはレンダリング ツリーでは見えませんが、確かに DOM の中に存在しています。参照を取得したら、そのテキストを変更できます（.textContent 経由）。さらに、計算処理済みの表示スタイル プロパティを「none」から「inline」にオーバーライドすることもできます。すべての記述と作業が完了すると、サンプルページには「**Hello interactive students!**」と表示されます。
@@ -61,7 +61,7 @@ JavaScript は、ブラウザ内で実行される動的言語で、ページの
 script タグを通じて組み込まれたスクリプトの場合は、どうなるでしょうか。上記のサンプルを利用して、コードを個別ファイルに抽出してみましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/split_script.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 **app.js**

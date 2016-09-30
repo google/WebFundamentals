@@ -16,11 +16,11 @@ description: Alex Sexton extolls the virtues of building your own components, Da
 </div>
 
 
-# In this Week's Episode
+## In this Week's Episode
 
 Alex Sexton extolls the virtues of building your own components, David DeSandro teaches physics in 5 minutes, a crash course in Angular 2 forms, Notifications get an update, and inline JS debugging hits the Chrome DevTools.
 
-## YOUR OWN BOOTSTRAP
+### YOUR OWN BOOTSTRAP
 <http://rizzo.lonelyplanet.com/styleguide/ui-components/buttons>
 <https://www.youtube.com/watch?v=Cs0n4YdMGac>
 <https://www.youtube.com/watch?v=zSYo7m5kGHQ>
@@ -28,20 +28,20 @@ Alex Sexton extolls the virtues of building your own components, David DeSandro 
 <https://github.com/reworkcss/rework>
 <https://suitcss.github.io/>
 
-## 5 MINUTE PHYSICS
+### 5 MINUTE PHYSICS
 <https://www.youtube.com/watch?v=n6FKT-KafRk>
 
 ## ANGULAR 2 FORMS
 <https://www.youtube.com/watch?v=fRJIJU-K6o8>
 
-## UPDATES TO NOTIFICATIONS
+### UPDATES TO NOTIFICATIONS
 <http://updates.html5rocks.com/2015/05/Notifying-you-of-notificiation-changes>
 
-## INLINE JS DEBUGGING
+### INLINE JS DEBUGGING
 <https://umaar.com/dev-tips/41-inline-js-values/>
 <https://umaar.com/dev-tips/>
 
-## Demos 
+### Demos 
 Silk
 <http://weavesilk.com/>
 

@@ -57,7 +57,7 @@ The bottom line:
 
 In terms of byte size, web pages are [big and getting bigger](http://httparchive.org/trends.php#bytesTotal&reqTotal).
 
-[Responsive design techniques](/web/fundamentals/design-and-ui/responsive/fundamentals/) make it possible to serve different content for smaller viewports, but it's always sensible to start by streamlining text, images and other content.
+[Responsive design techniques](/web/fundamentals/design-and-ui/responsive/) make it possible to serve different content for smaller viewports, but it's always sensible to start by streamlining text, images and other content.
 
 > Web users are often action oriented, "leaning forward" in the hunt for answers to their current question, rather than leaning back to absorb a good book.
 >
@@ -169,8 +169,8 @@ When building for a range of viewports, consider content as well as layout and g
 
 Success: Whatever you do — **test**!
 
-* Check readability on smaller viewports using Chrome DevTools and other [emulation tools](/web/fundamentals/performance/poor-connectivity/testing).
-* [Test your content under conditions of low bandwidth and high latency](/web/fundamentals/performance/poor-connectivity/testing); try out content in a variety of connectivity scenarios.
+* Check readability on smaller viewports using Chrome DevTools and other [emulation tools](/web/fundamentals/performance/poor-connectivity/).
+* [Test your content under conditions of low bandwidth and high latency](/web/fundamentals/performance/poor-connectivity/); try out content in a variety of connectivity scenarios.
 * Try reading and interacting with your content on a low-cost phone.
 * Ask friends and colleagues to try out your app or site.
 * Build a simple device test lab. The [GitHub repo](https://github.com/GoogleChrome/MiniMobileDeviceLab) for Google's Mini Mobile Device Lab has instructions on how to build your own. [OpenSTF](https://github.com/openstf/stf) is a simple web application for testing websites on multiple Android devices.

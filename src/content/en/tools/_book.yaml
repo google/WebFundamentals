@@ -10,6 +10,8 @@ upper_tabs:
         contents:
         - include: /web/tools/setup/_toc.yaml
         - include: /web/tools/chrome-devtools/_toc.yaml
+        - title: Lighthouse
+          path: /web/tools/lighthouse/
         - title: Service Worker Libraries
           path: /web/tools/service-worker-libraries/
         - title: Web Starter Kit

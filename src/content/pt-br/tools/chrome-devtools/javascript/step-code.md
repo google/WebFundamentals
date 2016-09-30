@@ -242,6 +242,6 @@ retomamos a execução.
 
 
 Translated By: 
-{% include "_shared/contributors/alansilva.html" %}
+{% include "web/_shared/contributors/alansilva.html" %}
 
 

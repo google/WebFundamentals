@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you will learn how to enable push messaging and notifications for web apps and sites.
 
-{# wf_updated_on: 2016-08-08T21:16:46Z #}
+{# wf_updated_on: 2016-09-28T18:24:28Z #}
 
 
 # Enable Push Notifications for your Web App {: page-title }
@@ -26,9 +26,9 @@ You'll also learn the basics of Service Workers.
 ### What you'll learn
 
 * Service Worker basics: installation and event handling
-* How to set up a Google Cloud Messaging (GCM) account
+* How to set up a Firebase Cloud Messaging (FCM) account
 * How to add a web manifest
-* Techniques for requesting GCM to send a notification to a web client
+* Techniques for requesting FCM to send a notification to a web client
 * Notification display
 * Notification click handling
 
@@ -176,54 +176,26 @@ Click the __Inspect__ button on the chrome://serviceworker-internals page. You s
 
 
 
-Push notifications from a web app need a backend service to handle messaging. Chrome currently uses  [Google Cloud Messaging](https://developers.google.com/cloud-messaging/) (GCM)  for this, though the eventual goal is for Chrome and GCM to support the  [Web Push Protocol](https://datatracker.ietf.org/doc/draft-thomson-webpush-protocol/). Other browsers are free to use other services.
+Push notifications from a web app need a backend service to handle messaging. Chrome currently uses  [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM, formerly known as Google Cloud Messaging)  for this. Other browsers are free to use other services.
 
-For this step, you need to set up a project on the Google Developer Console. 
+For this step, you need to set up a project on the Firebase Developer Console. 
 
 1. Create a project
 
-From the  [Google Developers Console](https://console.developers.google.com) create a new project:
+From the  [Firebase Developers Console](https://firebase.google.com/console/) create a new project:
 
-![74beacf37587067b.png](img/74beacf37587067b.png)
+![a4eac9ab79130343.png](img/a4eac9ab79130343.png)
+2. Once you've created your new project you need to go to the __Project Settings __page.
 
-2. Select APIs for the project
+![fe4510ccb62ff70.png](img/fe4510ccb62ff70.png)
+3. From the settings page, you need to click the __Cloud Messaging__ tab to view your FCM details, you'll need the Sender ID and Server Key later in this code lab.
 
-From the __API Manager__ menu, select __Overview__:
-
-![9cd2f9c87422d88e.png](img/9cd2f9c87422d88e.png)
-
-From the __Google APIs__ list, select __Google Cloud Messaging. __
-
-If the API was added successfully you will see a page like this:
-
-![f0fa7c9dbf2a8087.png](img/f0fa7c9dbf2a8087.png)
-
-3. Get credentials
-
-From the __APIs & auth__ menu, select __Credentials__, click the __Add credentials__ dropdown button, and select __API key__:
-
-![24dd5b142ab45ea7.png](img/24dd5b142ab45ea7.png)
-
-Click the __Browser Key__ button:
-
-![37e2cca43ea62946.png](img/37e2cca43ea62946.png)
-
-Leave the HTTP referrers field blank and click the __Create__ button:
-
-![fd4a0e87fa97e027.png](img/fd4a0e87fa97e027.png)
-Get the __API key __— you'll need this later: 
-
-![a984cd535ff6a162.png](img/a984cd535ff6a162.png)
-
-
-From the IAM and Admin Settings page, get the __Project number __— you'll need this later: 
-
-![e9f9f41b836e06eb.png](img/e9f9f41b836e06eb.png)
+![3d271ced94f821ea.png](img/3d271ced94f821ea.png)
 
 
 Congratulations!
 
-You've now created a Google Cloud Messaging project. 
+You've now created a Firebase Cloud Messaging project. 
 
 
 ## Add a manifest
@@ -237,11 +209,11 @@ A manifest is a JSON file that provides information about your web app, includin
 
 At the top level of your __app __directory, create a file named __manifest.json __(you can give it any name you like). 
 
-Include the following code.The `gcm_sender_id`__ __value should be the Project Number you saved in the previous step:
+Include the following code.The `gcm_sender_id`__ __value should be the Sender ID you for the project you created in the previous step:
 
     {
       "name": "Push Notifications codelab",
-      "gcm_sender_id": "593836075156"
+      "gcm_sender_id": "447755010661"
     }
 
 2. Tell the browser where to find the manifest for your web app 
@@ -294,34 +266,34 @@ __https://android.googleapis.com/gcm/send/____ *APA91bGdUldXgd4Eu9MD0qNmGd0K6fu0
 
 * __Make a note of the subscription ID, which is the last part of the URL, highlighted here in bold.
 
-You'll use that value in a later step to tell Google Cloud Messaging where to send messages. 
+You'll use that value in a later step to tell Firebase Cloud Messaging where to send messages. 
 
 ![8472902e4c6b5faa.png](img/8472902e4c6b5faa.png)
 
 
-## Send a request from the command line for GCM to push a message
+## Send a request from the command line for FCM to push a message
 
 
 
-As you saw previously, Chrome uses Google Cloud Messaging (GCM) for push messaging.
+As you saw previously, Chrome uses Firebase Cloud Messaging (FCM, formerly known as GCM) for push messaging.
 
-To get GCM to push a notification to your web client, you need to send GCM a request that includes the following:
+To get FCM to push a notification to your web client, you need to send FCM a request that includes the following:
 
-* The __public API key__ that you created, which looks like this:
+* The __Server key__ for the Firebase project you created, which looks like this:
 
 __AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c
 
-__GCM will match this with the Project Number you got from the Google Developer Console to use as the `gcm_sender_id` value in the manifest.
+__FCM will match this with the Sender ID you got from the Firebase Developer Console, which matches the `gcm_sender_id` value in the manifest.
 * An appropriate __Content-Type header__, such as `application/json`.
 * An array of __subscription IDs__, each of which corresponds to an individual client app. That's the last part of the subscription endpoint URL, and looks like this: 
 
 __APA91bHMaA-R0eZrPisZCGfwwd7z1EzL7P7Q7cyocVkxBU3nXWed1cQYCYvFglMHIJ40kn-jZENQ62UFgg5QnEcqwB5dFZ-AmNZjATO8QObGp0p1S6Rq2tcCuUibjnyaS0UF1gIM1mPeM25MdZdNVLG3dM6ZSfxV8itpihroEN5ANj9A26RU2Uw__
 
-For a production site or app, you would normally set up a service to interact with GCM from your server. (There is some sample code for doing just that in  [Push Notifications on the Open Web](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en).) For this codelab, you can send requests from your terminal or from an app running in the browser.
+For a production site or app, you would normally set up a service to interact with FCM from your server. (There is some sample code for doing just that in  [Push Notifications on the Open Web](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en).) For this codelab, you can send requests from your terminal or from an app running in the browser.
 
-You can send a request to GCM using the cURL utility.
+You can send a request to FCM using the cURL utility.
 
-The cURL command to send a request to GCM to issue a push message looks like this:
+The cURL command to send a request to FCM to issue a push message looks like this:
 
 `curl --header "Authorization: key=`__`<PUBLIC_API_KEY>`__`" 
 --header "Content-Type: application/json"
@@ -350,7 +322,7 @@ Let's see that in action...
 
 
 
-Another way to make a request to GCM to send a notification is via XHR.
+Another way to make a request to FCM to send a notification is via XHR.
 
 
 ## Show a notification
@@ -394,7 +366,7 @@ The `event.waitUntil()` method takes a promise and extends the lifetime of the e
 
 One notification will be shown for each `tag` value; if a new push message is received, the old notification will be replaced. To show multiple notifications, use a different `tag` value for each `showNotification()` call, or no `tag` at all.
 
-2. Make a request to GCM to send a notification
+2. Make a request to FCM to send a notification
 
 Run the cURL command or the XHR request you created previously.
 
@@ -541,7 +513,7 @@ In this code, you set the value of the `ServiceWorkerRegistration` object `reg` 
 
 The `subscribe()` function creates the `PushSubscription` object `sub` which can be used by the `unsubscribe()` function.
 
-Remember, the client gets a new registration ID every time it re-subscribes, so you will need to adjust requests to GCM accordingly.
+Remember, the client gets a new registration ID every time it re-subscribes, so you will need to adjust requests to FCM accordingly.
 
 
 ## Frequently Asked Questions
@@ -557,11 +529,11 @@ __I tried everything, but my Service Worker's still not updating__
 
 Did you check and validate your code? If your Service Worker code can't be parsed, it won't install. 
 
-__My request to GCM is failing__
+__My request to FCM is failing__
 
 Check the project on  [console.developers.google.com](https://console.developers.google.com/). Make sure that the `gcm_sender_id` matches the Project Number and the Authorization key value matches the API key. Make sure you're looking at the right project!
 
-__The request to GCM is working, but no push event is fired__
+__The request to FCM is working, but no push event is fired__
 
 Check the subscription ID from the console for __main.js__. Is the subscription ID in the array of IDs for your request correctly? Make sure you you have the messaging API enabled on  [console.developers.google.com](https://console.developers.google.com/).
 
@@ -584,10 +556,10 @@ __What about Firefox?__
 
 
 * Install a Service Worker and handle events
-* Set up a Google Cloud Messaging (GCM) account
+* Set up a Firebase Cloud Messaging (FCM) account
 * Add a web manifest
 * Enable a Service Worker to handle push message events
-* Send a request to GCM via cURL or XHR
+* Send a request to FCM via cURL or XHR
 * Display notifications
 * Handle notification clicks
 
@@ -606,7 +578,7 @@ __What about Firefox?__
 
 
 *  [Push Notifications on the Open Web](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en)
-*  [Google Cloud Messaging](https://developers.google.com/cloud-messaging/)
+*  [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
 *  [Best Practices for Push Notifications Permission UX](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/edit)
 *  [Do's and Don'ts for Notifications](http://android-developers.blogspot.co.uk/2015/08/get-dos-and-donts-for-notifications.html)
 *  [Notifications guidelines](https://www.google.com/design/spec/patterns/notifications.html)

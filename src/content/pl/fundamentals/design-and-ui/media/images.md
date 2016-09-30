@@ -7,7 +7,7 @@ description: Obraz jest wart tysiąc słów, a grafiki są nieodłączną częś
 
 # Obrazy {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 
@@ -26,7 +26,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Czasami obraz trzeba zmienić w większym stopniu &ndash; dopasować proporcje, przyciąć, a nawet zastąpić innym. W takiej sytuacji zmianę obrazu określa się zwykle jako dostosowywanie grafiki. Więcej przykładów znajdziesz na [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 
 ## Obrazy w znacznikach

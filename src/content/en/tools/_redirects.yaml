@@ -1,10 +1,13 @@
 redirects:
 
+- from: /web/tools/chrome-devtools/evaluate-performance/rail
+  to: /web/fundamentals/performance/rail
+
 - from: /web/tools/chrome-devtools/network-performance/
   to: /web/tools/chrome-devtools/network-performance/resource-loading
 
 - from: /web/tools/chrome-devtools/evaluate-performance/
-  to: /web/tools/chrome-devtools/evaluate-performance/rail
+  to: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
 
 - from: /web/tools/chrome-devtools/javascript/
   to: /web/tools/chrome-devtools/javascript/add-breakpoints
@@ -55,7 +58,7 @@ redirects:
   to: /web/tools/setup/
 
 - from: /web/tools/devtools
-  to: /web/tools/chrome-devtools
+  to: /web/tools/chrome-devtools/
 
 - from: /web/tools/chrome-devtools/iterate/...
   to: /web/tools/chrome-devtools/...

@@ -7,7 +7,7 @@ description: Progressive Web Apps 是结合了 web 和 原生应用中最好功�
 
 # 你的首个 Progressive Web App {: .page-title }
 
-{% include "_shared/contributors/petelepage.html" %}
+{% include "web/_shared/contributors/petelepage.html" %}
 
 
 <a href="/web/progressive-web-apps">Progressive Web Apps </a>是结合了 web 和 原生应用中最好功能的一种体验。对于首次访问的用户它是非常有利的, 用户可以直接在浏览器中进行访问，不需要安装应用。随着时间的推移当用户渐渐地和应用建立了联系，它将变得越来越强大。它能够快速地加载，即使在比较糟糕的网络环境下，能够推送相关消息, 也可以像原生应用那样添加至主屏，能够有全屏浏览的体验。
@@ -854,5 +854,5 @@ Guide](https://firebase.google.com/docs/hosting/)
 
 
 Translated By: 
-{% include "_shared/contributors/henrylim.html" %}
-{% include "_shared/contributors/wangyu.html" %}
+{% include "web/_shared/contributors/henrylim.html" %}
+{% include "web/_shared/contributors/wangyu.html" %}

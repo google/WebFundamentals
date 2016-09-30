@@ -2,12 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
-{# wf_updated_on: 2016-06-16T18:31:26Z #}
+{# wf_updated_on: 2016-09-21T18:11:44Z #}
 
 
 # Find and Fix Web App Performance Issues {: page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
 
 
 
@@ -526,9 +527,3 @@ We recommend that you examine the completed project code, available in this  [Gi
 Thanks for working through this codelab. We're always striving to improve; if you found a bug of problem, or just have any suggestions, problems, or comments, please contact us at the feedback link below. Happy coding!
 
 
-
-
-
-## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an 
-[issue](https://github.com/google/SAMPLE-REPO/issues ??? TBD) today. And thanks!

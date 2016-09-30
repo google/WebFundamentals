@@ -20,7 +20,7 @@ In the Console you can track exceptions and trace the execution path that led to
 - Turn on Pause on Exceptions to debug the code context when the exception triggered.
 - Print current JavaScript call stack using <code>console.trace</code>.
 - Place assertions in your code and throw exceptions using <code>console.assert()</code>.
-- Log errors happening in the browser using <code>window.oneerror</code>.
+- Log errors happening in the browser using <code>window.onerror</code>.
 
 
 ## Track exceptions

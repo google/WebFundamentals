@@ -31,4 +31,4 @@ rendering path also serves as a foundation for building well-performing
 interactive applications. The interactive updates process is the same, just done in a continuous loop and ideally at 60 frames per second! But first, an overview of how the browser displays a simple page.
 
 
-{% include "_shared/udacity/ud884.html" %}
+{% include "web/_shared/udacity/ud884.html" %}

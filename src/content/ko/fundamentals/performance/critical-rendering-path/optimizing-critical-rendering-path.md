@@ -33,4 +33,4 @@ description: 크리티컬 렌더링 패스 최적화의 주요 요소를 배운�
 1. 다운로드 시간 (왕복시간 포함)을 줄이기 위해 크리티컬 바이트 숫자를 최적화 한다.
 
 Translated By: 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}

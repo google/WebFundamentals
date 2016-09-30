@@ -7,7 +7,16 @@ description: Security is a big topic, learn about HTTPS, why it's important and 
 
 # Security and Identity {: .page-title }
 
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="pgBQn_z3zRE"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
+
 Security is a big topic, here are a few things to get you started. 
+
+<div class="clearfix"></div>
+
 
 ## Encrypting Data in Transit
 

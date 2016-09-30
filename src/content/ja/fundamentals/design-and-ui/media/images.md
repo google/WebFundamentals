@@ -24,7 +24,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 サイズの変更、トリミング、画像全体の置き換えなど、画像の大幅な変更が必要となる場合もあります。このような画像の変更は通常、アート ディレクションと呼ばれます。詳しい例は、[responsiveimages.org/demos/](http://responsiveimages.org/demos/)（英語）をご覧ください。
 
 
-{% include "_shared/udacity/ud882.html" %}
+{% include "web/_shared/udacity/ud882.html" %}
 
 <div class="clearfix"></div>
 

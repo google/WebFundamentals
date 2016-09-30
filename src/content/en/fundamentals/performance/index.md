@@ -54,7 +54,7 @@ It's important to understand what your app or site feels like when connectivity 
 
 ### Code Labs
 
-[Find and Fix Web App Performance Issues](/web/fundamentals/codelabs/web-perf/) <br>
+[Find and Fix Web App Performance Issues](/web/fundamentals/getting-started/codelabs/web-perf/) <br>
 This codelab will help you learn to identify and fix web app performance bottlenecks.
 
 ### Chrome DevTools

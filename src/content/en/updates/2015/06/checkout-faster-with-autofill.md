@@ -17,7 +17,7 @@ slow and frustrating to complete and often contain multi-page steps and
 validation issues. This leads to high user drop-off and frustration. To help
 make things easier for users, browsers have long been able to autocomplete
 fields on behalf of the user. Chrome took this a step further in 2011 by
-introducing [Autofill](https://support.google.com/chrome/answer/142893?hl=en),
+introducing [Autofill](https://support.google.com/chrome/answer/142893),
 which fills in entire forms based on a user's Autofill profile.
 
 Starting in the next major version of Chrome (M43), we're taking yet another
@@ -35,8 +35,9 @@ street address you can hint to the browser that you are expecting it by using
 guessing form fields on your website which can result in a poor user experience.
 
 We've found that by correctly using autocomplete attributes on your forms, users
-complete them up to 30% faster. And since _autocomplete_ is part of the [WHATWG
-](https://html.spec.whatwg.org/multipage/forms.html#autofill)[HTML](https://html.spec.whatwg.org/multipage/forms.html#autofill)
+complete them up to 30% faster. And since _autocomplete_ is part of the
+[WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill)
+[HTML](https://html.spec.whatwg.org/multipage/forms.html#autofill)
 standard, we hope that other browsers will support it in the near future.  
 
 
@@ -50,7 +51,7 @@ kinds of information where it would not be useful to have the browser remember
 what was submitted previously.
 
 The most common _autocomplete_ attributes are shown in the table below and are
-documented in [Web Fundamentals](/web/fundamentals/design-and-ui/input/).
+documented in [Web Fundamentals](/web/fundamentals/design-and-ui/input/forms/).
 
 ## Common Attributes
 

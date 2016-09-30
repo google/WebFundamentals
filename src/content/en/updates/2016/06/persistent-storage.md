@@ -11,10 +11,6 @@ description: With Chrome 52, we’re introducing the ability to make storage per
 
 {% include "web/_shared/contributors/chriswilson.html" %}
 
-
-
-# Persistent Storage
-
 With Chrome 52, we’re introducing the ability to make storage 
 [persistent](https://storage.spec.whatwg.org/#persistence).  Storage for web
 applications is a complex topic, and persistence for data on the

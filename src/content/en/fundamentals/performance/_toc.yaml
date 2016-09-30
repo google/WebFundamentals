@@ -3,6 +3,8 @@ toc:
     section:
     - title: Overview
       path: /web/fundamentals/performance/
+    - title: Measure Performance with the RAIL Model
+      path: /web/fundamentals/performance/rail
     - title: Optimizing Content Efficiency
       section:
       - title: Overview

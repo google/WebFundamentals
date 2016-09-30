@@ -105,4 +105,4 @@ o checkbox **emulate media** com o menu dropdown selecionado com **print**.
 ![enabling print preview mode](images/emulate-print-media.png)
 
 Translated By: 
-{% include "_shared/contributors/alansilva.html" %}
+{% include "web/_shared/contributors/alansilva.html" %}

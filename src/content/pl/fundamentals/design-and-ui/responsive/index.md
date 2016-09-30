@@ -21,7 +21,7 @@ Liczba urządzeń mobilnych używanych do surfowania po sieci rośnie w astronom
 <div class="clearfix"></div>
 
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 
 

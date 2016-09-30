@@ -65,7 +65,7 @@ Note: 任意の CSS プロパティを変更すると上記の 3 つのバージ
 パイプラインのさまざまな部分について更に見ていきましょう。 一般的な問題と、それらの診断方法と修正方法についても見てみましょう。
 
 
-{% include "_shared/udacity/ud860.html" %}
+{% include "web/_shared/udacity/ud860.html" %}
 
 
 

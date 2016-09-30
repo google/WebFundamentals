@@ -284,6 +284,26 @@ allocated to the `x` variable in the `Window` scope.
 
 [od]: imgs/object-details.png
 
+## Investigate memory allocation by function {: #allocation-profile }
+
+Use the **Record Allocation Profiler** type to view memory allocation by
+JavaScript function.
+
+![Record Allocation Profiler](imgs/record-allocation-profile.png)
+
+1. Select the **Record Allocation Profiler** radio button. If there is a
+   worker on the page, you can select that as the profiling target using
+   the dropdown menu next to the **Start** button.
+1. Press the **Start** button.
+1. Perform the actions on the page which you want to investigate.
+1. Press the **Stop** button when you have finished all of your actions.
+
+DevTools shows you a breakdown of memory allocation by function. The default
+view is **Heavy (Bottom Up)**, which displays the functions that allocated the
+most memory at the top.
+
+![Allocation profile](imgs/allocation-profile.png)
+
 ## Spot frequent garbage collections
 
 If your page appears to pause frequently, then you may have garbage collection

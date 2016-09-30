@@ -162,7 +162,7 @@ Just about any compiled to JavaScript language has an option to generate Source 
       <td data-th="Instructions">Alternatively you can add `sourcemap: true` to your config.rb file.</td>
     </tr>
     <tr>
-      <td data-th="Compiler"><a href="https://github.com/ai/autoprefixer#source-map">Autoprefixer</a></td>
+      <td data-th="Compiler"><a href="https://github.com/postcss/autoprefixer">Autoprefixer</a></td>
       <td data-th="Command"><code></code></td>
       <td data-th="Instructions">Follow the link to see how to use it and absorb an input sourcemap.</td>
     </tr>

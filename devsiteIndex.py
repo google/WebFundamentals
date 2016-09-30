@@ -38,7 +38,7 @@ def getPage(requestPath, lang):
         requestPath = os.path.join(requestPath, 'index')
         response = devsitePage.getPage(requestPath, lang)
         break
-  
+
   return response
 
 
@@ -49,8 +49,10 @@ def parseIndexYamlItems(yamlItems):
     itemClasses = ['devsite-landing-row-item']
     descriptionClasses = ['devsite-landing-row-item-description']
     link = None
+
     if 'path' in yamlItem:
       link = '<a href="' + yamlItem['path'] + '">'
+
     if 'icon' in yamlItem:
       if link:
         item += link
@@ -65,18 +67,20 @@ def parseIndexYamlItems(yamlItems):
         item += '">'
         descriptionClasses.append('devsite-landing-row-item-icon-description')
       if link:
-        item += '</a>' 
+        item += '</a>'
+
     if 'image_path' in yamlItem:
       item += '<img src="' + yamlItem['image_path'] + '" '
-      item += 'class="devsite-landing-row-item-image">' 
-    else:
+      item += 'class="devsite-landing-row-item-image">'
+    elif not 'youtube_id' in yamlItem:
       itemClasses.append('devsite-landing-row-item-no-image')
+
     if 'description' in yamlItem:
       item += '<div class="[[DESCRIPTION_CLASSES]]">'
       if 'heading' in yamlItem:
         if link:
           item += link
-        item += '<h3 id="' + devsiteHelper.slugify(yamlItem['heading']) +'">' 
+        item += '<h3 id="' + devsiteHelper.slugify(yamlItem['heading']) +'">'
         item += yamlItem['heading'] + '</h3>'
         # item += '<h3>' + yamlItem['heading'] + '</h3>'
         if link:
@@ -93,20 +97,25 @@ def parseIndexYamlItems(yamlItems):
           item += '>' + button['label'] + '</a>'
         item += '</div>'
       item += '</div>'
-    if 'youtube_id' in yamlItem:
-      result += '<div class="devsite-landing-row-item-youtube">'
-      result += '<iframe class="devsite-embedded-youtube-video" '
-      result += 'frameborder="0" allowfullscreen '
-      result += 'src="//www.youtube.com/embed/' + yamlItem['youtube_id']
-      result += '?autohide=1&showinfo=0&enablejsapi=1">'
-      result += '</iframe>'
-      result += '</div>'
+
     if 'custom_html' in yamlItem:
       item += devsiteHelper.renderDevSiteContent(yamlItem['custom_html'])
+
+    if 'youtube_id' in yamlItem:
+      item += '<div class="devsite-landing-row-item-youtube">'
+      item += '<iframe class="devsite-embedded-youtube-video" '
+      item += 'frameborder="0" allowfullscreen '
+      item += 'src="//www.youtube.com/embed/' + yamlItem['youtube_id']
+      item += '?autohide=1&showinfo=0&enablejsapi=1">'
+      item += '</iframe>'
+      item += '</div>'
+
     item += '</div>'
     item = item.replace('[[ITEM_CLASSES]]', ' '.join(itemClasses))
     item = item.replace('[[DESCRIPTION_CLASSES]]', ' '.join(descriptionClasses))
+
     result += item
+
   return result
 
 def generateYaml(lang, requestPath, rawYaml):
@@ -140,7 +149,7 @@ def generateYaml(lang, requestPath, rawYaml):
     if numItems:
       sectionClass.append('devsite-landing-row-' + str(numItems) + '-up')
     if 'heading' in row:
-      section += '<h2 id="' + devsiteHelper.slugify(row['heading']) +'">' 
+      section += '<h2 id="' + devsiteHelper.slugify(row['heading']) +'">'
       section += row['heading'] + '</h2>'
     if 'items' in row:
       section += parseIndexYamlItems(row['items'])

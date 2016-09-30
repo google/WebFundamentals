@@ -80,7 +80,7 @@ _インライン JavaScript:_
 まず、インライン スクリプトは常にパーサー ブロックですが、外部スクリプトは、async キーワードを追加することで、パーサーをブロックしないように設定できます。インライン化を元に戻し、試してみましょう。
 
 <pre class="prettyprint">
-{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto %}
+{% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
 _パーサー ブロック（外部）JavaScript:_

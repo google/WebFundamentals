@@ -14,7 +14,7 @@ description: Большинство интернет-ресурсов не оп�
 
 
 
-{% include "_shared/udacity/ud893.html" %}
+{% include "web/_shared/udacity/ud893.html" %}
 
 
 <div class="clearfix"></div>

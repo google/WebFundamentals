@@ -37,7 +37,7 @@ maliciously altering it to something else. To protect against this we use
 encryption to ensure that push services can't read or tamper with the payloads
 in transit.
 
-# Client-side changes
+## Client-side changes
 
 If you have already
 [implemented push notifications without payloads](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
@@ -90,7 +90,7 @@ parsing the received data, such as `.text()`, `.json()`, `.arrayBuffer()` and
     });
 
 
-# Server-side changes
+## Server-side changes
 
 On the server side, things change a bit more. The basic process is that you use
 the encryption key information you got from the client to encrypt the payload
@@ -111,7 +111,7 @@ implement this for yourself, here are the details.
 I'll be illustrating the algorithms using Node-flavored JavaScript, but the
 basic principles should be the same in any language.
 
-## Inputs
+### Inputs
 
 In order to encrypt a message, we first need to get two things from the
 subscription object that we received from the client. If you used
@@ -143,7 +143,7 @@ keys. The particular curve used by the push encryption spec is called P-256,
 or `prime256v1`. For the best security the key pair should be generated from
 scratch every time you encrypt a message, and you should never reuse a salt.
 
-## ECDH
+### ECDH
 
 Let's take a little aside to talk about a neat property of elliptic curve
 cryptography. There is relatively simple process which combines
@@ -169,7 +169,7 @@ this shared secret as the basis for our actual encryption key.
     const sharedSecret = serverECDH.computeSecret(clientPublicKey);
 
 
-## HKDF
+### HKDF
 
 Already time for another aside. Let's say that you have some secret data that
 you want to use as an encryption key, but it isn't cryptographically secure
@@ -216,7 +216,7 @@ in bytes of the desired output key.
     }
 
 
-## Deriving the encryption parameters
+### Deriving the encryption parameters
 
 We now use HKDF to turn the data we have into the parameters for the actual
 encryption.
@@ -292,7 +292,7 @@ cipher used for push encryption.
     const nonce = hkdf(salt, prk, nonceInfo, 12);
 
 
-## Padding
+### Padding
 
 Another aside, and time for a silly and contrived example. Let's say that your
 boss has a server that sends her a push message every few minutes with the
@@ -329,7 +329,7 @@ When your push message arrives at the client, the browser will be able to
 automatically strip out any padding, so your client code only receives the
 unpadded message.
 
-## Encryption
+### Encryption
 
 Now we finally have all of the things to do the encryption. The cipher required
 for Web Push is [AES128](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
@@ -354,7 +354,7 @@ send payloads up to a size of 4078 bytes - 4096 bytes maximum per post, with
     return Buffer.concat([result, cipher.getAuthTag()]);
 
 
-## Web Push
+### Web Push
 
 Phew! Now that you have an encrypted payload, you just need to make a
 relatively simple HTTP POST request to the endpoint specified by the user's
@@ -386,7 +386,7 @@ existing JSON payload as follows.
 The value of the `rawData` property must be the base64 encoded
 representation of the encrypted message.
 
-## Debugging / Verifier
+### Debugging / Verifier
 
 Peter Beverloo, one of the Chrome engineers who implemented the feature (as
 well as being one of the people who worked on the spec), has

@@ -42,7 +42,7 @@ Design efficient forms by avoiding repeated actions, asking for only the necessa
 
 Make sure your forms have no repeated actions, only as many fields as 
 necessary, and take advantage of 
-[autofill](/web/fundamentals/design-and-ui/input/forms/label-and-name-inputs.html#use-metadata-to-enable-auto-complete),
+[autofill](/web/fundamentals/design-and-ui/input/forms/#use-metadata-to-enable-auto-complete),
 so that users can easily complete forms with pre-populated data.
 
 Look for opportunities to pre-fill information you already know, or may 
@@ -87,7 +87,10 @@ start and end dates.
 
 ## Choose the best input type
 
-Streamline information entry by using the right input type. Users appreciate websites that automatically present number pads for entering phone numbers, or automatically advance fields as they entered them. Look for opportunities to eliminate wasted taps in your forms.
+Streamline information entry by using the right input type. Users appreciate
+websites that automatically present number pads for entering phone numbers, or
+automatically advance fields as they entered them. Look for opportunities to
+eliminate wasted taps in your forms.
 
 
 ### TL;DR {: .hide-from-toc }
@@ -223,6 +226,9 @@ type.
   </tbody>
 </table>
 
+Caution: Remember to keep localization in mind when choosing an input type,
+some locales use a dot (.) as a separator instead of a comma (,)
+
 ### Offer suggestions during input with datalist
 
 The `datalist` element isn't an input type, but a list of suggested input values
@@ -298,12 +304,18 @@ Browsers use many heuristics to determine which fields they can
 and you can give hints to the browser by providing both the `name` attribute 
 and the `autocomplete` attribute on each input element.
 
+Note: Chrome requires `input` elements to be wrapped in a `<form>` tag to enable
+auto-complete. If they're not wrapped in a `form` tag, Chrome will offer
+suggestions, but will **not** complete the form.
+
 For example, to hint to the browser that it should auto-complete the form with
 the users name, email address and phone number, you should use:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
+
+
 
 
 ### Recommended input `name` and `autocomplete` attribute values

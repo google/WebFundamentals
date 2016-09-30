@@ -9,7 +9,7 @@ description: Third-party services can start deploying their own network request 
 
 # Cross-origin Service Workers: Experimenting with Foreign Fetch {: .page-title }
 
-{% include "_shared/contributors/jeffposnick.html" %}
+{% include "web/_shared/contributors/jeffposnick.html" %}
 
 
 

@@ -10,7 +10,6 @@ description: There are two types of app install banners: web app install banners
 {% include "web/_shared/contributors/mattgaunt.html" %}
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-
 <div class="attempt-right">
   <figure>
     <img src="images/add-to-home-screen.gif" alt="Web app install banner">
@@ -26,8 +25,6 @@ with details about your app.
 
 Chrome then uses a set of criteria and visit-frequency heuristics to determine
 when to show the banner. Read on for more details.
-
-<div class="clearfix"></div>
 
 ### What are the criteria?
 
@@ -55,9 +52,6 @@ Then, as long as you have a manifest (configured correctly), are on HTTPS (or `l
 and have a service worker, you should see the install prompt.
 
 ## App install banner events
-
-{% include "web/_shared/contributors/mattgaunt.html" %}
-{% include "web/_shared/contributors/paulkinlan.html" %}
 
 Chrome provides an easy mechanism to determine how the user responded to the
 app install banner and even cancel or defer it until a more convenient time.
@@ -153,9 +147,6 @@ Alternatively, you can cancel the prompt by preventing the default.
     });
     
 ## Native app install banners
-
-{% include "web/_shared/contributors/mattgaunt.html" %}
-{% include "web/_shared/contributors/paulkinlan.html" %}
 
 <div class="attempt-right">
   <figure>

@@ -104,5 +104,5 @@ CSS import (`@import`) 디렉티브는 다른 스타일시트 파일에서 특�
 최고 성능을 위해서는 크리티컬 CSS를 HTML 다큐멘트 안에 직접 포함해야 합니다. 이렇게 하면 크리티컬 패스의 추가적인 왕복비용을 줄일 수 있고, 만약 올바르게 사용되었다면 오직 HTML만 페이지 렌더링을 저해하는 "one roundtrip" 크리티컬 패스 길이가 됩니다.
 
 Translated By: 
-{% include "_shared/contributors/captainpangyo.html" %}
+{% include "web/_shared/contributors/captainpangyo.html" %}
 

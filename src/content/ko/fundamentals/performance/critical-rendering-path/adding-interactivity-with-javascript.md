@@ -81,4 +81,4 @@ description: 자바스크립트는 컨텐츠, 스타일, 그리고 유저와의 
 비동기 키워드를 스크립트에 추가하는 것은 스크립트를 다운로드 받고 이용가능할 때 까지 기다리는 동안 DOM 생성을 막지 말라고 브라우저에게 말해주는것 입니다. 이것이 성능의 커다란 개선을 가져다 줍니다.
 
 Translated By: 
-{% include "_shared/contributors/swengineer.html" %}
+{% include "web/_shared/contributors/swengineer.html" %}
