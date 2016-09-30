@@ -282,7 +282,7 @@ def getIncludeCode(include_tag, lang='en'):
     logging.error(' - ' + msg)
     return msg
 
-  if file_regex and not github_regex:
+  if not file_regex and not github_regex:
     msg = 'Error: No <code>content_path</code> specified for ' + include_tag
     logging.error(' - ' + msg)
     return msg
