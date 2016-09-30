@@ -184,11 +184,11 @@ the most efficient way.
 
 ## Background: HTTP/2 and HTTP/2 server push
 
-HTTP/2 allows _multiplexed_ downloads over a single connection, so that multiple
-small files can be downloaded more efficiently.
+[HTTP/2](/web/fundamentals/performance/http2/) allows _multiplexed_ downloads over a single
+connection, so that multiple small files can be downloaded more efficiently.
 
-HTTP/2 server push allows the server to preemptively send resources to the
-browser.
+[HTTP/2 server push](/web/fundamentals/performance/http2/#server-push) allows the server
+to preemptively send resources to the browser.
 
 For an example of how HTTP/2 server push speeds up downloads, consider how the
 browser retrieves an HTML file with a linked stylesheet.
