@@ -253,8 +253,8 @@ research)](https://nolanlawson.com/2016/02/08/how-to-think-about-databases/)
 * [Which APIs are supported in Web Workers and Service
 Workers?](https://nolanlawson.github.io/html5workertest/)
 
-* **Thanks to Nolan Lawson, Joshua Bell (whose work on Open Web Storage and
-[BlinkOn talk](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit)*
+**Thanks to Nolan Lawson, Joshua Bell (whose work on Open Web Storage and
+[BlinkOn talk](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit)
 heavily inspired this article), Jake Archibald, Dru Knox and others for their
-previous work in the web storage space.*
+previous work in the web storage space.**
 
