@@ -36,7 +36,7 @@ landing_page:
     - items:
       - custom_html: >
           <div class="feed hfeed" data-limit="2">
-            <a href="https://developers.google.com/web/updates/rss.xml"></a>
+            <a href="https://google-developers.appspot.com/web/updates/rss.xml"></a>
             <article class="hentry">
               <a class="link"><header></header></a>
               <article class="entry-content" data-truncate="50w"></article>
