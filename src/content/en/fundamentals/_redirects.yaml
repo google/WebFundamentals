@@ -123,3 +123,6 @@ redirects:
 
 - from: /web/fundamentals/primers/service-worker/
   to: /web/fundamentals/getting-started/primers/service-workers
+
+- from: /web/fundamentals/primers/customelements/
+  to: /web/fundamentals/getting-started/primers/customelements
