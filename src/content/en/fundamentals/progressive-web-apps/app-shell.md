@@ -1,7 +1,8 @@
 project_path: /web/_project.yaml 
 book_path: /web/fundamentals/_book.yaml
 
-{# wf_updated_on: 2016-09-26 #} {# wf_published_on: 2016-09-27 #}
+{# wf_updated_on: 2016-09-26 #} 
+{# wf_published_on: 2016-09-27 #}
 
 # Architecting a PWA with the App Shell Model {: .page-title }
 
@@ -33,12 +34,14 @@ publish to an app store when building a native app. It is the skeleton of your
 UI and the core components necessary to get your app off the ground, but likely
 does not contain the data.
 
-Note: Our [First Progressive Web
+Note: Try the [First Progressive Web
 App](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
-codelab walks through building a Weather PWA that involves architecturing and
-implementing your first application shell.
+codelab to learn how to architectect and
+implement your first application shell for a weather app. The [Instant Loading with the App
+Shell model](https://www.youtube.com/watch?v=QhUzmR8eZAo) video also walks
+through this pattern.
 
-### When should you use the app shell architecture?
+### When to use the app shell model
 
 Building a PWA does not mean starting from scratch. If you are building a modern
 single-page app, then you are probably using something similar to an app shell
@@ -53,7 +56,7 @@ logic from the content, making this architecture more straightforward to apply.
 For a certain class of websites that only have static content you can still
 follow the same model but the site is 100% app shell.
 
-Note: To see how Google built an app shell architecture, take a look at
+To see how Google built an app shell architecture, take a look at
 [Building the Google I/O 2016 Progressive Web App](/web/showcase/2016/iowa2016).
 This real- world app started with a SPA to create a PWA that precaches content
 using a service worker, dynamically loads new pages, gracefully transitions
@@ -81,7 +84,7 @@ data than is strictly necessary. Even though data is relatively cheap in western
 countries, this is not the case in emerging markets where connectivity is
 expensive and data is costly.
 
-## Requirements
+## Requirements {: #app-shell-requirements }
 
 The app shell should ideally:
 
@@ -114,7 +117,7 @@ sources.
 <figure>
   <img src="images/wikipedia.jpg"
     alt="Offline Wikipedia app using an application shell with content caching" class="screenshot">
-  <figcaption>Jake Archibald’s <a href="https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty">offline Wikipedia application</a> is a good example of a PWA that uses an app shell model that loads instantly on repeat visits, but dynamically fetches content using JavaScript. This content is then cached offline for future visits.
+  <figcaption>Jake Archibald’s <a href="https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty">offline Wikipedia application</a> is a good example of a PWA that uses an app shell model. It loads instantly on repeat visits, but dynamically fetches content using JS. This content is then cached offline for future visits.
 </figcaption>
 </figure>
 
@@ -177,10 +180,17 @@ index file:
 
 Note: See [https://app-shell.appspot.com/](https://app-shell.appspot.com/) for a
 real-life look at a very simple PWA using an application shell and server-side
-rendering for content. It is available on
-[GitHub](https://github.com/googlechrome/app-shell).
+rendering for content. An app shell can be implemented using any library or
+framework as covered in our <a
+href="https://www.youtube.com/watch?v=srdKq0DckXQ">Progressive Web Apps across
+all frameworks</a> talk. Samples are available using Polymer (<a
+href="https://shop.polymer-project.org">Shop</a>) and React (<a
+href="https://github.com/insin/react-hn">ReactHN</a>,
+<a
+href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>).
+ 
 
-### Caching the Application Shell
+### Caching the Application Shell {: #app-shell-caching }
 
 An app shell can be cached using a manually written Service Worker or a
 generated Service Worker using a static asset precaching tool like
@@ -238,7 +248,9 @@ Here us a basic example of using sw-precache as part of a
       }, callback);
     });
 
-To learn more about static asset caching, see the [Adding a Service Worker with sw-precache](https://codelabs.developers.google.com/codelabs/sw-precache/index.html?index=..%2F..%2Findex#0) codelab.
+To learn more about static asset caching, see the [Adding a Service Worker with
+sw-precache](https://codelabs.developers.google.com/codelabs/sw-precache/index.html?index=..%2F..%2Findex#0)
+codelab.
 
 Note: sw-precache is useful for offline caching your static resources. For
 runtime/ dynamic resources, we recommend using our complimentary library
@@ -246,11 +258,11 @@ runtime/ dynamic resources, we recommend using our complimentary library
 
 ## Conclusion {: #conclusion }
 
-An app shell using Service worker is powerful pattern for  offline caching but it
- also offers significant
-performance wins in the form of instant loading for repeat visits to your PWA. 
-You can cache your application shell so it works offline and
-populate its content using JavaScript.
+An app shell using Service worker is powerful pattern for  offline caching but
+it also offers significant performance wins in the form of instant loading for
+repeat visits to your PWA. You can cache your application shell so it works
+offline and populate its content using JavaScript.
 
 On repeat visits, this allows you to get meaningful pixels on the screen without
 the network, even if your content eventually comes from there.
+
