@@ -10,6 +10,11 @@ description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 {% include "web/_shared/contributors/surma.html" %}
 
+Note: The following content is an excerpt from [High Performance Browser
+Networking](http://shop.oreilly.com/product/0636920028048.do) (O'Reilly, Ilya
+Grigorik). For full version and related content, see
+[hpbn.co](https://hpbn.co/).
+
 HTTP/2 will make our applications faster, simpler, and more robust — a rare
 combination — by allowing us to undo many of the HTTP/1.1 workarounds previously
 done within our applications and address these concerns within the transport
