@@ -134,7 +134,7 @@ of implementation: HTTP/0.9 was a one-line protocol to bootstrap the World Wide
 Web; HTTP/1.0 documented the popular extensions to HTTP/0.9 in an informational
 standard; HTTP/1.1 introduced an official IETF standard; see [Brief History of
 HTTP](https://hpbn.co/brief-history-of-http/){: .external}. As such, HTTP/0.9-1.x
-delivered exactly what it set out to do: HTTP is one of the most ubiquitous and
+delivered exactly what it set out to do: HTTP is one of the most
 widely adopted application protocols on the Internet.
 
 Unfortunately, implementation simplicity also came at a cost of application
@@ -181,7 +181,7 @@ At the core of all performance enhancements of HTTP/2 is the new binary framing
 layer, which dictates how the HTTP messages are encapsulated and transferred
 between the client and server.
 
-![](images/binary_framing_layer01.svg)
+![HTTP/2 binary framing layer](images/binary_framing_layer01.svg)
 
 The "layer" refers to a design choice to introduce a new optimized encoding
 mechanism between the socket interface and the higher HTTP API exposed to our
@@ -205,22 +205,23 @@ familiarize ourselves with the HTTP/2 terminology:
 
 * *Stream*: A bidirectional flow of bytes within an established connection,
   which may carry one or more messages.
-
 * *Message*: A complete sequence of frames that map to a logical request or response message.
 * *Frame*: The smallest unit of communication in HTTP/2, each containing a frame header, which
   at a minimum identifies the stream to which the frame belongs.
 
-  * All communication is performed over a single TCP connection that can carry any number of 
-    bidirectional streams.
-  * Each stream has a unique identifier and optional priority information that is used to carry
-    bidirectional messages.
-  * Each message is a logical HTTP message, such as a request, or response, which consists of 
-    one or more frames.
-  * The frame is the smallest unit of communication that carries a specific type of data—e.g.,
-    HTTP headers, message payload, and so on. Frames from different streams may be interleaved
-    and then reassembled via the embedded stream identifier in the header of each frame.
+The relation of these terms can be summarized as follows:
 
-![](images/stream_messages_frames01.svg)
+* All communication is performed over a single TCP connection that can carry any number of 
+  bidirectional streams.
+* Each stream has a unique identifier and optional priority information that is used to carry
+  bidirectional messages.
+* Each message is a logical HTTP message, such as a request, or response, which consists of 
+  one or more frames.
+* The frame is the smallest unit of communication that carries a specific type of data—e.g.,
+  HTTP headers, message payload, and so on. Frames from different streams may be interleaved
+  and then reassembled via the embedded stream identifier in the header of each frame.
+
+![HTTP/2 streams, messages, and frames](images/streams_messages_frames01.svg)
 
 In short, HTTP/2 breaks down the HTTP protocol communication into an exchange of
 binary-encoded frames, which are then mapped to messages that belong to a
@@ -243,7 +244,7 @@ full request and response multiplexing, by allowing the client and server to
 break down an HTTP message into independent frames, interleave them, and then
 reassemble them on the other end.
 
-![](images/multiplexing01.svg)
+![HTTP/2 request and response multiplexing within a shared connection](images/multiplexing01.svg)
 
 The snapshot captures multiple streams in flight within the same connection. The
 client is transmitting a DATA frame (stream 5) to the server, while the server
@@ -289,7 +290,7 @@ prioritize stream processing by controlling the allocation of CPU, memory, and
 other resources, and once the response data is available, allocation of
 bandwidth to ensure optimal delivery of high-priority responses to the client.
 
-![](images/stream_prioritization01.svg)
+![HTTP/2 stream dependencies and weights](images/stream_prioritization01.svg)
 
 A stream dependency within HTTP/2 is declared by referencing the unique
 identifier of another stream as its parent; if the identifier is omitted the
@@ -435,7 +436,8 @@ response to the original request, the server can push additional resources to
 the client (Figure 12-5), without the client having to request each one
 explicitly.
 
-![](images/push01.svg)
+![Server initiates new streams (promises) for push resources
+](images/push01.svg)
 
 Note: HTTP/2 breaks away from the strict request-response semantics and enables
 one-to-many and server-initiated push workflows that open up a world of new
@@ -469,7 +471,7 @@ All server push streams are initiated via PUSH_PROMISE frames, which signal the
 server’s intent to push the described resources to the client and need to be
 delivered ahead of the response data that requests the pushed resources. This
 delivery order is critical: the client needs to know which resources the server
-intends to push to avoid creating own and duplicate requests for these
+intends to push to avoid creating duplicate requests for these
 resources. The simplest strategy to satisfy this requirement is to send all
 PUSH_PROMISE frames, which contain just the HTTP headers of the promised
 resource, ahead of the parent’s response (i.e., DATA frames).
@@ -517,10 +519,10 @@ and the indexed list of previously transferred values allows us to encode
 duplicate values by transferring index values that can be used to efficiently
 look up and reconstruct the full header keys and values.
 
-![](images/header_compression01.svg)
+![HPACK: Header Compression for HTTP/2](images/header_compression01.svg)
 
 As one further optimization, the HPACK compression context consists of a static
-and dynamic tables: the static table is defined in the specification and
+and dynamic table: the static table is defined in the specification and
 provides a list of common HTTP header fields that all connections are likely to
 use (e.g., valid header names); the dynamic table is initially empty and is
 updated based on exchanged values within a particular connection. As a result,
