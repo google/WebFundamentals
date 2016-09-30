@@ -7,15 +7,16 @@ book_path: /web/fundamentals/_book.yaml
 # **Offline Storage for Progressive Web Apps** {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
+{% include "web/_shared/contributors/mco.html" %}
 
-![image alt text](images/image_0.jpg)
+![PWA in devtools](images/image_0.jpg)
 
-The Pokedex.org Progressive Web App uses IndexedDB for application state and
+The [Pokedex](https://pokedex.org) Progressive Web App uses IndexedDB for application state and
 the Pokemon data set while the Cache API is used for URL addressable resources.
 
 Internet connections can be flakey or non-existent on the go, which is why
 offline support and reliable performance are common features in [Progressive
-Web Apps](https://developers.google.com/web/progressive-web-apps/). Even in
+Web Apps](/web/progressive-web-apps/). Even in
 perfect wireless environments, judicious use of caching and other storage
 techniques can substantially improve the user experience. In this post, we’ll
 summarize some ideas around offline data storage* *for PWAs — think JSON
@@ -27,7 +28,7 @@ offline:
 
 For URL addressable resources, use the [Cache
 API](https://davidwalsh.name/cache) (part of [Service
-Worker](https://developers.google.com/web/fundamentals/primers/service-worker/)).
+Worker](/web/fundamentals/primers/service-worker/)).
 For all other data, use
 [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 (with a [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
@@ -66,7 +67,7 @@ directly).)
 IndexedDB.
 
 * Debugging support for IndexedDB is now available in
-[Chrome](https://developers.google.com/web/tools/chrome-devtools/iterate/manage-data/local-storage)
+[Chrome](/web/tools/chrome-devtools/iterate/manage-data/local-storage)
 (Application tab), Opera,
 [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector)
 (Storage Inspector) and Safari (see the Storage tab).
@@ -161,7 +162,7 @@ fall into the “best effort” category today.
 "persistent" storage is not automatically cleared when storage is low - the
 user needs to manually clear this storage (via browser settings). Chrome has
 been experimenting with support for [Persistent
-Storage](https://developers.google.com/web/updates/2016/06/persistent-storage?hl=en)
+Storage](/web/updates/2016/06/persistent-storage?hl=en)
 under an origin trial, and the latest news suggests it will be shipping in
 [Chrome
 55](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5Sihi1iAXYc/wnvNDFIPAQAJ).
@@ -172,7 +173,7 @@ If offline storage interests you, the below efforts are worth keeping an eye
 on. One particularly exciting development in progress is native Promises
 support in IndexedDB without the need for a separate library.
 
-![image alt text](images/image_1.jpg)
+![Promise-ized IDB](images/image_1.jpg)
 
 IDB with some await goodness.
 
@@ -252,9 +253,8 @@ research)](https://nolanlawson.com/2016/02/08/how-to-think-about-databases/)
 * [Which APIs are supported in Web Workers and Service
 Workers?](https://nolanlawson.github.io/html5workertest/)
 
-*T**hanks to Nolan Lawson, Joshua Bell (whose work on Open Web Storage and
-**[BlinkOn
-tal*k](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit)*
+* **Thanks to Nolan Lawson, Joshua Bell (whose work on Open Web Storage and
+[BlinkOn talk](https://docs.google.com/presentation/d/11CJnf77N45qPFAhASwnfRNeEMJfR-E_x05v1Z6Rh5HA/edit)*
 heavily inspired this article), Jake Archibald, Dru Knox and others for their
 previous work in the web storage space.*
 
