@@ -9,7 +9,7 @@ description:
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Caution: PRPL is a pattern we believe makes sense for applications that can be
+Dogfood: PRPL is a pattern we believe makes sense for applications that can be
 granularly served. It is currently considered **experimental**; however, we plan
 to publish more data on where it works well in the future.
 
