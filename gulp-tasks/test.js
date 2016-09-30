@@ -149,6 +149,17 @@ function testMarkdownFile(fileName, contribJson) {
     });
   }
 
+  // Verify external links have an external tag
+  var reLinks = /https?:\/\/[\S\n]+\)({: \.external })?/g;
+  var links = fileContent.match(reLinks);
+  if (links) {
+    links.forEach(function(link){
+      if (link.indexOf('external') < 0) {
+        warnings.push({msg: 'External links should be followed by "{: external }"', param: link});
+      }
+    });
+  }
+
   // Look for bad strings
   WARNING_STRINGS.forEach(function(str) {
     if (fileContent.search(str.regEx) >= 0) {
