@@ -73,10 +73,10 @@ relationship is "this element is labelled by that element".
 The ARIA specification lists <a
 href="https://www.w3.org/TR/wai-aria/states_and_properties#attrs_relationships"
 target="_blank">eight relationship attributes</a>. Six of these,
-`aria-activedescendant`, `aria-controls`, `aria-describedby`, `aria-flowto`,
-`aria-labelledby`, and `aria-owns`, take a reference to one or more elements to
-create a new link between elements on the page. The difference in each case is
-what that link means and how it is presented to users.
+`aria-activedescendant`, `aria-controls`, `aria-describedby`, `aria-labelledby`,
+and `aria-owns`, take a reference to one or more elements to create a new link
+between elements on the page. The difference in each case is what that link
+means and how it is presented to users.
 
 ### aria-owns
 
@@ -103,15 +103,6 @@ currently selected list item. This makes the currently selected item appear to
 assistive technology as if it is the focused item.
 
 ![using aria-activedescendant to establish a relationship in a listbox](imgs/aria-activedescendant.jpg)
-
-### aria-controls & aria-flowto
-
-`aria-controls` and `aria-flowto` provide more "advisory only" relationships.
-`aria-controls` can provide a hint to the user that a particular element
-controls another part of the page, such as a sorting button on a column of data.
-And `aria-flowto` provides a user with one or more alternate "next elements"
-that they can optionally navigate to and from, such as a footnote or a selection
-of options in a flow chart.
 
 ### aria-describedby
 
