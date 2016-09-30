@@ -131,7 +131,7 @@ function testMarkdownFile(fileName, contribJson) {
   }
   // Verify all includes start with web/
   var reInclude = /{%[ ]?include .*?[ ]?%}/g;
-  var includes = fileContent.match(reInclude)
+  var includes = fileContent.match(reInclude);
   if (includes) {
     includes.forEach(function(include) {
       var inclFile = wfHelper.getRegEx(/"(.*)"/, include, '');
