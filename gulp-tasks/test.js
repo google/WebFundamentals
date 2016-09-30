@@ -68,6 +68,10 @@ function testMarkdownFile(fileName, contribJson) {
     if (description.indexOf('<') >= 0 || description.indexOf('`') >= 0) {
       warnings.push({msg: 'description should not contain HTML tags', param: description});
     }
+    description = description.trimRight();
+    if (description.endsWith('.') === false) {
+      warnings.push({msg: 'description should end with a period', param: description}); 
+    }
   }
   // Check if it has review required
   if (GLOBAL.WF.options.skipReviewRequired === false) {
