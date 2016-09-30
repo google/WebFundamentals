@@ -1,5 +1,6 @@
 project_path: /web/_project.yaml 
 book_path: /web/fundamentals/_book.yaml
+description: Application shell architecture keeps your UI local and loads content dynamically without sacrificing the linkability and discoverability of the web. 
 
 {# wf_updated_on: 2016-09-26 #} 
 {# wf_published_on: 2016-09-27 #}
@@ -9,20 +10,20 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/addyosmani.html" %}
 
 An **application shell** (or app shell) architecture is one way to build a
-Progressive Web App that reliably and instantly loads on your users's screens,
+Progressive Web App that reliably and instantly loads on your users' screens,
 similar to what you see in native applications.
 
 The app "shell" is the minimal HTML, CSS and JavaScript required to power the
 user interface and when cached offline can ensure **instant, reliably good
-performance** to users on repeat visits. This means the application shell does
-not need to be loaded each time, but instead only gets the necessary content it
-needs from the network.
+performance** to users on repeat visits. This means the application shell is
+not loaded from the network every time the user visits. Only the necessary
+content is needed from the networi.
 
 For [single-page
 applications](https://en.wikipedia.org/wiki/Single-page_application) with
 JavaScript-heavy architectures, an application shell is a go-to approach. This
-approach relies on aggressively caching the shell (using [Service
-Worker](/web/fundamentals/primers/service-worker/)) to get the application
+approach relies on aggressively caching the shell (using a [service
+worker](/web/fundamentals/primers/service-worker/)) to get the application
 running. Next, the dynamic content loads for each page using JavaScript. An app
 shell is useful for getting some initial HTML to the screen fast without a
 network.
@@ -52,13 +53,13 @@ framework agnostic.
 An application shell architecture makes the most sense for apps and sites with
 relatively unchanging navigation but changing content. A number of modern
 JavaScript frameworks and libraries already encourage splitting your application
-logic from the content, making this architecture more straightforward to apply.
+logic from its content, making this architecture more straightforward to apply.
 For a certain class of websites that only have static content you can still
 follow the same model but the site is 100% app shell.
 
 To see how Google built an app shell architecture, take a look at
 [Building the Google I/O 2016 Progressive Web App](/web/showcase/2016/iowa2016).
-This real- world app started with a SPA to create a PWA that precaches content
+This real-world app started with a SPA to create a PWA that precaches content
 using a service worker, dynamically loads new pages, gracefully transitions
 between views, and reuses content after the first load.
 
@@ -68,12 +69,12 @@ between views, and reuses content after the first load.
 The benefits of an app shell architecture with a service worker include:
 
 * **Reliable performance that is consistently fast**. Repeat visits are
-extremely quick.  Static assets (e.g. HTML, JavaScript, images and CSS) are
-immediately cached locally so there is no need to re-fetch the shell (and
-optionally the content if that is cached too). The UI is cached locally and
-content is updated dynamically as required.
+extremely quick.  Static assets and the UI (e.g. HTML, JavaScript, images
+and CSS) are cached on the first visit so that they load instantly on
+repeat visits. Content _may_ be cached on the first visit, but is
+typically loaded when it is needed.
 
-* **Native-Application-like interactions**. By adopting the app-shell model, you
+* **Native-like interactions**. By adopting the app shell model, you
 can create experiences with instant, native-application-like navigation and
 interactions, complete with offline support.
 
@@ -106,7 +107,7 @@ for performance. [To the
 Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E) is a talk that walks
 through optimising a PWA using this tool.
 
-## Building Your App Shell {: #building-your-app-shell }
+## Building your app shell {: #building-your-app-shell }
 
 Structure your app for a clear distinction between the page shell and the
 dynamic content. In general, your app should load the simplest shell possible
@@ -121,7 +122,7 @@ sources.
 </figcaption>
 </figure>
 
-### Example HTML for an App Shell {: #example-html-for-appshell }
+### Example HTML for an app shell {: #example-html-for-appshell }
 
 This example separates the core application infrastructure and UI from the data.
 It is important to keep the initial load as simple as possible to display just
@@ -133,17 +134,16 @@ All of the UI and infrastructure is cached locally using a service worker so
 that on subsequent loads, only new or changed data is retrieved, instead of
 having to load everything.
 
-Assume you are building a simple blog reader. The components of a simple app
-shell include:
-
-* HTML/CSS/JavaScript for the "skeleton" of your user interface
-* Navigation UI and logic
-* The code to display posts after they are retrieved from the server (and store
-  them locally using a storage mechanism like IndexedDB)
-
 Your `index.html` file in your work directory should look something like the
 following code. This is a subset of the actual contents and is not a complete
-index file:
+index file. Let's look at what it contains.
+
+* HTML and CSS for the "skeleton" of your user interface complete with navigation
+  and content placeholders.
+* An external JavaScript file (app.js) for handling navigation and UI logic as
+  well as the code to display posts retrieved from the server and store them
+  locally using a storage mechanism like IndexedDB.
+* A web app manifest and service worker loader to enable off-line capabilities.
 
     <!DOCTYPE html>
     <html>
@@ -161,12 +161,17 @@ index file:
       <header class="header">
         <h1 class="header__title">App Shell</h1>
       </header>
+      
+      <nav class="nav">
+      ...
+      </nav>
+      
       <main class="main">
       ...
       </main>
 
       <div class="dialog-container">
-      . . .
+      ...
       </div>
 
       <div class="loader">
@@ -174,6 +179,17 @@ index file:
       </div>
 
       <script src="app.js" async></script>
+      <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      }
+      </script>
     </body>
     </html>
 
@@ -190,21 +206,21 @@ href="https://github.com/insin/react-hn">ReactHN</a>,
 href="https://github.com/GoogleChrome/sw-precache/tree/master/app-shell-demo">iFixit</a>).
  
 
-### Caching the Application Shell {: #app-shell-caching }
+### Caching the application shell {: #app-shell-caching }
 
-An app shell can be cached using a manually written Service Worker or a
-generated Service Worker using a static asset precaching tool like
+An app shell can be cached using a manually written service worker or a
+generated service worker using a static asset precaching tool like
 [sw-precache](https://github.com/googlechrome/sw-precache).
 
 Note: The examples are provided for general information and illustrative
 purposes only. The actual resources used will likely be different for your
 application.
 
-#### Caching the App Shell Manually
+#### Caching the app shell manually
 
-Below, we cache static resources from our app shell into the [Cache
-API](https://developer.mozilla.org/en-US/docs/Web/API/Cache) using Service
-Worker's `install` event:
+Below is example service worker code that caches static resources from the
+app shell into the [Cache API](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
+using service worker's `install` event:
 
     var cacheName = 'shell-content';
     var filesToCache = [
@@ -227,7 +243,7 @@ Worker's `install` event:
       );
     });
 
-#### Using sw-precache to Cache the App Shell
+#### Using sw-precache to cache the app shell
 
 The service worker generated by sw-precache will cache and serve the resources
 that you configure as part of your build process. You can have it precache every
@@ -253,12 +269,12 @@ sw-precache](https://codelabs.developers.google.com/codelabs/sw-precache/index.h
 codelab.
 
 Note: sw-precache is useful for offline caching your static resources. For
-runtime/ dynamic resources, we recommend using our complimentary library
+runtime/dynamic resources, we recommend using our complimentary library
 [sw-toolbox](https://github.com/googlechrome/sw-toolbox).
 
 ## Conclusion {: #conclusion }
 
-An app shell using Service worker is powerful pattern for  offline caching but
+An app shell using Service worker is powerful pattern for offline caching but
 it also offers significant performance wins in the form of instant loading for
 repeat visits to your PWA. You can cache your application shell so it works
 offline and populate its content using JavaScript.
