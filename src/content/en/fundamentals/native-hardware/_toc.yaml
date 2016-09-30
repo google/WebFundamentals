@@ -9,5 +9,7 @@ toc:
       path: /web/fundamentals/native-hardware/device-orientation/
     - title: Recording Audio from the User
       path: /web/fundamentals/native-hardware/recording-audio/
+    - title: Capturing an image from the User
+      path: /web/fundamentals/native-hardware/capturing-images/
     - title: Click to Call
       path: /web/fundamentals/native-hardware/click-to-call/
