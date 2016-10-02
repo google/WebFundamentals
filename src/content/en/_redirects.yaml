@@ -322,10 +322,7 @@ redirects:
 - from: /web/shows/http203/series-3/
   to: https://www.youtube.com/playlist?list=PLNYkxOF6rcIAKIQFsNbV0JDws_G_bnNo9
 
-- from: /web/updates/devtools/
-  to: /web/updates/devtools/
-
-- from: /web/updates/devtools/pages/...
+- from: /web/updates/devtools/...
   to: /web/updates/
 
 - from: /web/updates/tags/bluetooth
