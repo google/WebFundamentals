@@ -228,7 +228,7 @@ will probably want the game to always use the landscape orientation.
     "display": "fullscreen",
     "orientation": "landscape"
 
-#### News Sites
+##### News Sites
 
 News sites in most cases are pure content-based experiences. Most developers
 naturally wouldn't think of adding a manifest to a news site.
