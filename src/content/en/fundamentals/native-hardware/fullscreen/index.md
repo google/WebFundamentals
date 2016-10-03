@@ -142,40 +142,98 @@ the home screen and have them launch as full-screen web apps.
 > using the window.navigator.standalone read-only Boolean JavaScript property.
 > <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">Apple</a>
 
-#### Chrome for Android
-The Chrome team has recently implemented a feature that tells the browser to launch the page fullscreen when the user has added it to the home screen.  It is similar to the iOS Safari model.
+### Chrome for Android
+
+The Chrome team has recently implemented a feature that tells the browser to
+launch the page fullscreen when the user has added it to the home screen.  It is
+similar to the iOS Safari model.
 
     <meta name="mobile-web-app-capable" content="yes">
 
-> You can set up your web app to have an application shortcut icon added to a device's homescreen, and have the app launch in full-screen "app mode" using Chrome for Android's "Add to homescreen" menu item.
-> <cite>
+> You can set up your web app to have an application shortcut icon added to a 
+> device's homescreen, and have the app launch in full-screen "app mode" using
+> Chrome for Android's "Add to homescreen" menu item.
 >  <a href="https://developers.google.com/chrome/mobile/docs/installtohomescreen">Google Chrome</a>
-> </cite>
 
+A better option is to use the Web App Manifest.
 
-### Firefox OS
+### Web App Manifest
 
-Firefox OS has implemented a installable web app and packaged app model for
-developers to create apps for the user's phone.  This model is a little more
-complex, but it fits in to a wider strategy of installable apps.  The developer
-has to define a manifest for the app that Firefox OS will parse at install time.
+The Manifest for Web applications is a simple JSON file that gives you, the
+developer, the ability to control how your app appears to the user in the areas
+that they would expect to see apps (for example the mobile home screen), direct
+what the user can launch and, more importantly, how they can launch it. In the
+future the manifest will give you even more control over your app, but right now
+we are just focusing on how your app can be launched.
 
-<a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest#fullscreen">From Mozilla</a>:
+1. Telling the browser about your manifest
+2. Describe how to launch
+
+Once you have the manifest created and it is hosted on your site, all you need
+to do is add a link tag from all your pages that encompass your app, as follows:
+
+    <link rel="manifest" href="/manifest.json">
+
+Chrome has had support for Manifests since version 38 for Android (October 2014)
+and it gives you the control over how your web app appears when it is installed
+to the home screen (via the short_name, name and icons properties) and how it
+should be launched when the user clicks on the launch icon (via start_url,
+display and orientation). Check out our sample to see this in action.
+
+An example manifest is shown below. It doesn't show everything that can be in a
+manifest.
 
     {
-      "name": "My App",
-      "description": "My elevator pitch goes here",
-      "launch_path": "/",
-      "icons": {
-        "128": "/img/icon-128.png"
-      },
-      "fullscreen": true
+      "short_name": "Kinlan's Amaze App",
+      "name": "Kinlan's Amazing Application ++",
+      "icons": [
+        {
+          "src": "launcher-icon-4x.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ],
+      "start_url": "/index.html",
+      "display": "standalone",
+      "orientation": "landscape"
     }
 
-> If you want to have an "installed app" feel, the "install" API's are the 
-> methods you should use, they will integrate far more tightly with the OS than 
-> just pure web content for the time being and you will get a seamless 
-> fullscreen transiton.
+This feature is entirely progressive and allows you create better, more
+integrated experiences for users of a browser that supports the feature. As of
+Jan 2016, Chrome, Firefox and Opera have implemented the manifest, and Edge is
+exploring the area.
+
+When a user adds your site or app to the home screen, there is an intent by the
+user to treat it like an app. This means you should aim to direct the user to
+the functionality of your app rather than a product landing page. For example,
+if the user is required to sign-in to your app, then that is a good page to
+launch.
+
+#### Utility Apps
+
+The majority of utility apps will benefit from this immediately. You'll more
+than likely want to launch as a standalone experience, much like every other app
+on a mobile platform. Tell it to launch standalone:
+
+    "display": "standalone"
+
+#### Games
+
+The majority of games will benefit from a manifest immediately. The vast
+majority of games will want to launch full-screen straight away and be forced
+into a specific orientation.
+
+If you are developing a vertical scroller or a game like Flappy Birds then you
+will most likely want your game to always be in portrait mode.
+
+    "display": "fullscreen",
+    "orientation": "portrait"
+
+If on the other hand you are building a puzzler or a game like X-Com, then you
+will probably want the game to always use the landscape orientation.
+
+    "display": "fullscreen",
+    "orientation": "landscape"
 
 ## API Tips
 
@@ -224,8 +282,8 @@ the controls that you want the user to see.
     <div id="container">
       <video></video>
       <div>
-        <button>Play&lt;button>
-        <button>Stop&lt;button>
+        <button>Play</button>
+        <button>Stop</button>
         <button id="goFS">Go fullscreen</button>
       </div>
     </div>
@@ -278,12 +336,11 @@ easily on all the major platforms.
       // My app is installed and therefore fullscreen
     }
 
-#### Chrome for Android
+#### Web App Manifest (Chrome, Opera, Samsung)
 
 When launching as an installed app, Chrome is not running in true fullscreen
-experience so `document.fullscreenElement` returns null
-and the CSS selectors don't work.  Chrome also does not have an API comparable
-to iOS's navigator.standalone property.
+experience so `document.fullscreenElement` returns null and the CSS selectors 
+don't work. 
 
 When the user requests fullscreen via a gesture on your site, the standard
 fullscreen API's are available including the CSS pseudo selector that lets you
@@ -296,6 +353,22 @@ adapt your UI to react to the fullscreen state like the following
     selector {
       display: none; // hides the element when not in fullscreen mode
     }
+
+If the users launches your site from the homescreen the display-mode media
+query will be set to what was defined in the Web App Manifest. In the case of
+pure fullscreen it will be:
+
+    @media (display-mode: fullscreen) {
+
+    }
+
+And if the user launches the applicaiton in standalone mode, the display-mode
+media query will be `standalone`:
+
+    @media (display-mode: standalone) {
+
+    }
+
 
 #### Firefox
 
