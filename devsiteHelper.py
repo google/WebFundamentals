@@ -211,6 +211,8 @@ def renderDevSiteContent(content, lang='en'):
     replaceWith += 'style="width: 100%;'
     if fbHeight:
       replaceWith += 'height:' + fbHeight.group(1) + ';'
+    else:
+      replaceWith += 'height: 100px;'
     replaceWith += '" '
     replaceWith += 'src="' + fbMemcacheKey + '"></iframe>'
     content = content.replace(framebox, replaceWith)
