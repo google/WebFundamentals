@@ -165,9 +165,9 @@ The DOM a component author writes. Shadow DOM is local to the component and defi
       </span>
     
 
-**Composed DOM**
+**Flattened DOM tree**
 
-The result of the browser distributing the user's light DOM into your shadow DOM, rendering the final product. The composed tree is what you ultimately see in the DevTools and what's rendered on the page.
+The result of the browser distributing the user's light DOM into your shadow DOM, rendering the final product. The flattened tree is what you ultimately see in the DevTools and what's rendered on the page.
 
 
     <button is="better-button">
@@ -242,7 +242,7 @@ Component users declare `<fancy-tabs>` like so:
     </fancy-tabs>
     
 
-And if you're wondering, the composed tree looks something like this:
+And if you're wondering, the flattened tree looks something like this:
 
 
     <fancy-tabs>
@@ -264,7 +264,7 @@ And if you're wondering, the composed tree looks something like this:
     </fancy-tabs>
     
 
-Notice our component is able to handle different configurations, but the composed DOM remains the same. We can also switch from `<button>` to `<h2>`. This component was authored to handle different types of children...just like `<select>` does!
+Notice our component is able to handle different configurations, but the flattened DOM tree remains the same. We can also switch from `<button>` to `<h2>`. This component was authored to handle different types of children...just like `<select>` does!
 
 ## Styling  {: #styling}
 
@@ -619,7 +619,7 @@ As an example, let's say your shadow DOM looks like this:
 
 Answering the reverse question is also possible. `element.assignedSlot` tells you which of the component slots your element is assigned to.
 
-#### The Shadow DOM event model {: #events}
+### The Shadow DOM event model {: #events}
 
 When an event bubbles up from shadow DOM it's target is adjusted to maintain the encapsulation that shadow DOM provides. That is, events are re-targeted to look like they've come from the component rather than internal elements within your shadow DOM. Some events do not even propagate out of shadow DOM.
 
@@ -637,7 +637,7 @@ The events that **do** cross the shadow boundary are:
 
 If the shadow tree is open, calling `event.composedPath()` will return an array of nodes that the event traveled through.
 
-### Using custom events {: #customevents}
+#### Using custom events {: #customevents}
 
 Custom DOM events which are fired on internal nodes in a shadow tree do not bubble
 out of the shadow boundary unless the event is created using the `composed: true` flag:
