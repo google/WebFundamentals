@@ -74,7 +74,7 @@ In brief:
 </style>
 <div class="framebox-container-container">
 <div class="framebox-container">
-{% framebox %}
+{% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
@@ -372,7 +372,7 @@ In brief:
 
 <div class="framebox-container-container">
 <div class="framebox-container">
-{% framebox %}
+{% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
