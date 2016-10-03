@@ -161,6 +161,7 @@ complex, but it fits in to a wider strategy of installable apps.  The developer
 has to define a manifest for the app that Firefox OS will parse at install time.
 
 <a href="https://developer.mozilla.org/en-US/Apps/Developing/Manifest#fullscreen">From Mozilla</a>:
+
     {
       "name": "My App",
       "description": "My elevator pitch goes here",
@@ -185,8 +186,8 @@ on a WebKit or Blink based rendering engine you will see it has an odd effect of
 shrinking the body width to the smallest possible size that will contain all the
 content (Mozilla Gecko is fine).
 
-<figure>
-<img src="/static/images/mobile/fullscreen/body.png">
+<figure style="width: 100%; max-width: 320px;">
+<img src="images/body.png">
 <figcaption>Figure 1: Fullscreen on the body element.</figcaption>
 </figure>
 
@@ -194,8 +195,8 @@ To fix this, use the document element instead of the body element:
 
     document.documentElement.requestFullscreen();
 
-<figure>
-<img src="/static/images/mobile/fullscreen/document.png" >
+<figure style="width: 100%; max-width: 320px;">
+<img src="images/document.png" >
 <figcaption>Figure 2: Fullscreen on the document element.</figcaption>
 </figure>
 
