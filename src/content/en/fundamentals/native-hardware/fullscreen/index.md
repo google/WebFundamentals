@@ -7,14 +7,6 @@ description: Going fullscreen.
 
 # Making Fullscreen experiences {: .page-title }
 
-> "One of the best things about native apps is that they are full-screen"
-> <cite>lots of people, all the time.</cite>
-
-> It irks me somewhat that this common perception stands. Yes, web pages aren't
-> fullscreen: they have an address bar, usually some other navigational controls.
-> But a lot of modern browsers are pretty good at getting all their junk out of
-> the way pretty quickly.
-
 We have the ability to easily make immersive fullscreen web sites and 
 applications, but like anything on the web there are a couple of ways to do it.
 This is especially important now that more browsers are supporting an "installed
@@ -33,24 +25,26 @@ There are several ways that a user or developer can get an web app fullscreen.
 * Request the browser to go fullscreen in response to a user gesture.
 * Install the app to the home screen
 
-## Fake it: auto-hide the address bar
+### Fake it: auto-hide the address bar
 
 You can "fake fullscreen" by auto-hiding the address bar as follows:
 
     window.scrollTo(0,1);
 
-> I am telling you this as a friend. It exists, it is a thing, but it is a hack. Please don't use it.
+Note: I am telling you this as a friend. It exists, it is a thing, but it 
+      is a hack. Please don't use it. &mdash; Paul
 
 This is a pretty simple method, the page loads and the browser bar is told to
 get out of the way. Unfortunately it is not standardised and not well
 supported. You also have to work around a bunch of quirks. For example browsers
-often restore the position on the page when the user navigates back to it.  
+often restore the position on the page when the user navigates back to it.
+
 Using `window.scrollTo` overrides this, which annoys the user. To work around
 this you have to store the last position in localStorage, and deal with the 
 edge cases (for example, if the user has the page open in
 multiple windows).
 
-## Request the browser to go fullscreen in response to a user gesture
+### Request the browser to go fullscreen in response to a user gesture
 
 <a href="http://caniuse.com/#feat=fullscreen">Not all platforms are equal</a>.
 iOS Safari doesn't have a fullscreen API, but we do on Chrome on Android,
@@ -65,9 +59,9 @@ JS API's that you need to care about when building a fullscreen experience are:
 * `document.fullscreenElement` (currently prefixed in Chrome, Firefox, and IE)
   returns true if any of the elements are in fullscreen mode.
 
-> You will notice that in the prefixed versions there is a lot of inconsitency
-> between the casing of the 'S' in screen. This is awkward, but this is the 
-> problem with specs that are inflight.
+Note: You will notice that in the prefixed versions there is a lot of 
+      inconsitency between the casing of the 'S' in screen. This is awkward, but
+      this is the problem with specs that are inflight.
 
 When your app is fullscreen you no longer have the browser's UI controls chrome
 available to you. This changes the way that users interact with your
@@ -85,9 +79,10 @@ fullscreen mode.
       }, false);
     </script>
 
-The above example is a little contrived; I've hidden all the complexity around the use of vendor prefixes.
+The above example is a little contrived; I've hidden all the complexity around
+the use of vendor prefixes.
 
-> Damn you vendor prefixes!
+Warning: Damn you vendor prefixes!
 
 The actual code is a lot more complex. <a
 href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Mozilla
@@ -117,7 +112,7 @@ href="https://github.com/sindresorhus/screenfull.js">Screenfull.js</a> module
 which unifies the two slightly different JS API's and vendor prefixes into one
 consistent API.
 
-## Launching a page fullscreen
+### Launching a page fullscreen
 
 Launching a fullscreen web page when the user navigates to it is not possible.  
 Browser vendors are very aware that a fullscreen experience on every page load
@@ -129,7 +124,7 @@ platform.
 Across the major Mobile platforms it is pretty easy to implement using either
 meta tags, or manifest files as follows.
 
-### iOS
+#### iOS
 
 Ever since the launch of the iPhone, users have been able to install Web Apps to
 the home screen and have them launch as full-screen web apps.
@@ -142,7 +137,7 @@ the home screen and have them launch as full-screen web apps.
 > using the window.navigator.standalone read-only Boolean JavaScript property.
 > <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html">Apple</a>
 
-### Chrome for Android
+#### Chrome for Android
 
 The Chrome team has recently implemented a feature that tells the browser to
 launch the page fullscreen when the user has added it to the home screen.  It is
@@ -157,7 +152,7 @@ similar to the iOS Safari model.
 
 A better option is to use the Web App Manifest.
 
-### Web App Manifest
+#### Web App Manifest (Chrome, Opera, Firefox, Samsung)
 
 The Manifest for Web applications is a simple JSON file that gives you, the
 developer, the ability to control how your app appears to the user in the areas
@@ -178,7 +173,7 @@ Chrome has had support for Manifests since version 38 for Android (October 2014)
 and it gives you the control over how your web app appears when it is installed
 to the home screen (via the short_name, name and icons properties) and how it
 should be launched when the user clicks on the launch icon (via start_url,
-display and orientation). Check out our sample to see this in action.
+display and orientation).
 
 An example manifest is shown below. It doesn't show everything that can be in a
 manifest.
@@ -199,9 +194,7 @@ manifest.
     }
 
 This feature is entirely progressive and allows you create better, more
-integrated experiences for users of a browser that supports the feature. As of
-Jan 2016, Chrome, Firefox and Opera have implemented the manifest, and Edge is
-exploring the area.
+integrated experiences for users of a browser that supports the feature.
 
 When a user adds your site or app to the home screen, there is an intent by the
 user to treat it like an app. This means you should aim to direct the user to
@@ -209,7 +202,7 @@ the functionality of your app rather than a product landing page. For example,
 if the user is required to sign-in to your app, then that is a good page to
 launch.
 
-#### Utility Apps
+##### Utility Apps
 
 The majority of utility apps will benefit from this immediately. You'll more
 than likely want to launch as a standalone experience, much like every other app
@@ -217,7 +210,7 @@ on a mobile platform. Tell it to launch standalone:
 
     "display": "standalone"
 
-#### Games
+##### Games
 
 The majority of games will benefit from a manifest immediately. The vast
 majority of games will want to launch full-screen straight away and be forced
@@ -234,6 +227,22 @@ will probably want the game to always use the landscape orientation.
 
     "display": "fullscreen",
     "orientation": "landscape"
+
+#### News Sites
+
+News sites in most cases are pure content-based experiences. Most developers
+naturally wouldn't think of adding a manifest to a news site.
+
+However, if you want your site to have all the browser chrome that you would
+expect a content site to have, you can set the display to browser.
+
+    "display": "browser" 
+
+Taking a look at native apps, the majority of news-centric apps treat their
+experiences as apps and remove all web-like chrome from the UI. This is easy to
+do by setting display to standalone.
+
+    "display": "standalone"
 
 ## API Tips
 
