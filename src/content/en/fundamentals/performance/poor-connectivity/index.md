@@ -23,7 +23,7 @@ When building or updating a site, you must ensure adequate performance in a vari
 
 #### Browser tools
 
-The [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions?hl=en) enable you to test your site with a variety of upload/download speeds and [round-trip times](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/), using presets or custom settings from the Chrome DevTools Network panel:
+The [Chrome DevTools](/web/tools/chrome-devtools/profile/network-performance/network-conditions) enable you to test your site with a variety of upload/download speeds and [round-trip times](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/), using presets or custom settings from the Chrome DevTools Network panel:
 
 ![Chrome DevTools throttling](images/chrome-devtools-throttling.png)
 

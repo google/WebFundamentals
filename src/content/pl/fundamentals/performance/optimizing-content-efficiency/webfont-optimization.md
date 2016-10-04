@@ -239,7 +239,7 @@ Uwzględniając te deklaracje, przeglądarka wyznacza wymagane podzbiory i waria
 
 ### Czcionki sieci web i krytyczna ścieżka renderowania
 
-Leniwe wczytywanie czcionek niesie ze sobą pewną ukrytą konsekwencję, która może prowadzić do opóźnienia renderowania tekstu: przeglądarka musi na podstawie drzew DOM i CSSOM [utworzyć drzewo renderowania](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), zanim ustali, których zasobów będzie potrzebować do renderowania tekstu. Z tej przyczyny żądania pobierania czcionek są odkładane na moment po pobraniu innych krytycznych zasobów, a przeglądarka może zostać zablokowana i nie być zdolna do renderowania tekstu do chwili pobrania tych zasobów.
+Leniwe wczytywanie czcionek niesie ze sobą pewną ukrytą konsekwencję, która może prowadzić do opóźnienia renderowania tekstu: przeglądarka musi na podstawie drzew DOM i CSSOM [utworzyć drzewo renderowania](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), zanim ustali, których zasobów będzie potrzebować do renderowania tekstu. Z tej przyczyny żądania pobierania czcionek są odkładane na moment po pobraniu innych krytycznych zasobów, a przeglądarka może zostać zablokowana i nie być zdolna do renderowania tekstu do chwili pobrania tych zasobów.
 
 <img src="images/font-crp.png" class="center" alt="Krytyczna ścieżka renderowania czcionek">
 

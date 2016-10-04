@@ -190,7 +190,7 @@ This gets rid of the six connection limit of HTTP 1 and multiple resources can b
 ![High TTFB Indicator](imgs/indicator-of-high-ttfb.png)
 
 A slow time to first byte (TTFB) is recognized by a high waiting time.
-It is recommended that you have this [under 200ms](https://developers.google.com/speed/docs/insights/Server).
+It is recommended that you have this [under 200ms](/speed/docs/insights/Server).
 A high TTFB reveals one of two primary issues. Either:
 
 1. Bad network conditions between client and server, or

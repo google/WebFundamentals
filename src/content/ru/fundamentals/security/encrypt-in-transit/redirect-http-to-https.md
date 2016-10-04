@@ -15,7 +15,7 @@ book_path: /web/fundamentals/_book.yaml
 
 
 Вставьте на свои страницы теги &lt;link rel="canonical" href="https://…"/&gt;. [Это 
-позволит поисковым системам](https://support.google.com/webmasters/answer/139066?hl=en) 
+позволит поисковым системам](https://support.google.com/webmasters/answer/139066) 
 определить наилучший способ перейти на ваш сайт.
 
 Большинство веб-серверов оснащены простой функцией перенаправления. Воспользуйтесь кодом состояния 301 (окончательно перемещено), 

@@ -317,7 +317,7 @@ HTTPS 的全部能力。
 
 
 在网页中设置 &lt;link rel="canonical" href="https://…"/&gt; 标签。 [这样
-可帮助搜索引擎](https://support.google.com/webmasters/answer/139066?hl=en)
+可帮助搜索引擎](https://support.google.com/webmasters/answer/139066)
 了解访问您网站的最佳方法。
 
 大多数 Web 服务器都提供一种简单的重定向功能。 使用 301（永久移动）

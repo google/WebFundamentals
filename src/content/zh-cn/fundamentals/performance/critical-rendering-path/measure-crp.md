@@ -51,7 +51,7 @@ HTML 规范中指明了每一个事件的具体条件：什么时候触发，什
 上面的例子乍一看可能有点晕，但是它确实已经很简单了。Navigation Timing API 捕获所有相关的时间戳，而我们的代码只是等待 `onload` 事件触发 - 回忆一下，onLoad 事件在 domInteractive、domContentLoaded 和 domComplete 之后触发 - 然后计算各个时间戳之间的间隔。
 <img src="images/device-navtiming-small.png" class="center" alt="NavTiming 演示">
 
-通过上面的介绍和示例，我们现在知道了要跟踪哪些具体的里程碑以及用于输出这些评估结果的简单功能。注意，除了直接将评估结果显示在网页上，还可以修改代码，将这些评估结果发送到分析服务器上。（[Google Analytics 可以自动完成这些功能](https://support.google.com/analytics/answer/1205784?hl=en)），这是一种很有效的监控网页性能的方法，可以由此找出哪些网页还需要进一步优化性能。</cf>
+通过上面的介绍和示例，我们现在知道了要跟踪哪些具体的里程碑以及用于输出这些评估结果的简单功能。注意，除了直接将评估结果显示在网页上，还可以修改代码，将这些评估结果发送到分析服务器上。（[Google Analytics 可以自动完成这些功能](https://support.google.com/analytics/answer/1205784)），这是一种很有效的监控网页性能的方法，可以由此找出哪些网页还需要进一步优化性能。</cf>
 
 
 

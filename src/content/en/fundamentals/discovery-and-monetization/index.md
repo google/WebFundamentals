@@ -61,8 +61,8 @@ confirm and pay, all with a single click.
 
 ## Related Resources
 
-* [Google Webmasters](https://developers.google.com/webmasters/){: .external }
-* [Google Webmaster EDU](https://developers.google.com/webmasters/googleforwebmasters/){: .external }
+* [Google Webmasters](/webmasters/){: .external }
+* [Google Webmaster EDU](/webmasters/googleforwebmasters/){: .external }
 * [Learn How Search Works](https://support.google.com/webmasters/answer/70897/){: .external }
 
 <div style="clear:both;"></div>

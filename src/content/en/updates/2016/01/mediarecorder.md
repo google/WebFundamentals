@@ -117,7 +117,7 @@ Play the recorded Blobs in a video element by creating a 'super-Blob' from the a
     }
     
 
-Alternatively, you could upload to a server via XHR, or use an API like [YouTube](https://developers.google.com/youtube/v3/code_samples/javascript#upload_video) (see [the experimental demo](https://jeffy.info/google-youtube-upload/components/google-youtube-upload/demo/) below).
+Alternatively, you could upload to a server via XHR, or use an API like [YouTube](/youtube/v3/code_samples/javascript#upload_video) (see [the experimental demo](https://jeffy.info/google-youtube-upload/components/google-youtube-upload/demo/) below).
 
 Download can be achieved with some link hacking:
 

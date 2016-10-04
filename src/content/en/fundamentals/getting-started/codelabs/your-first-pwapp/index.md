@@ -16,7 +16,7 @@ description: In this codelab, you'll build a Progressive Web App, which loads qu
 
 
 
-[Progressive Web Apps](https://developers.google.com/web/progressive-web-apps) are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required. As the user progressively builds a relationship with the app over time, it becomes more and more powerful. It loads quickly, even on flaky networks, sends relevant push notifications, has an icon on the home screen, and loads as a top-level, full screen experience.
+[Progressive Web Apps](/web/progressive-web-apps) are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required. As the user progressively builds a relationship with the app over time, it becomes more and more powerful. It loads quickly, even on flaky networks, sends relevant push notifications, has an icon on the home screen, and loads as a top-level, full screen experience.
 
 ### What is a Progressive Web App?
 
@@ -73,7 +73,7 @@ The `step-NN` folders contain the desired end state of each step of this codelab
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
 
@@ -147,7 +147,7 @@ There are multiple ways to get started with any project, and we generally recomm
 
 ### Create the HTML for the App Shell
 
-Now we'll add the core components we discussed in  [Architect the App Shell](https://developers.google.com/web/fundamentals/getting-started/your-first-progressive-web-app/step-01).
+Now we'll add the core components we discussed in  [Architect the App Shell](/web/fundamentals/getting-started/your-first-progressive-web-app/step-01).
 
 Remember, the key components will consist of:
 
@@ -353,7 +353,7 @@ The new additions are the initialization of `app.selectedCities` if it doesn't e
 
 Progressive Web Apps have to be fast, and installable, which means that they work online, offline, and on intermittent, slow connections. To achieve this, we need to cache our app shell using service worker, so that it's always available quickly and reliably.
 
-If you're unfamiliar with service workers, you can get a basic understanding by reading  [Introduction To Service Workers](https://developers.google.com/web/fundamentals/primers/service-worker/) about what they can do, how their lifecycle works and more. Once you've completed this code lab, be sure to check out the  [Debugging Service Workers code lab](http://goo.gl/jhXCBy) for a more indepth look at how to work with service workers.
+If you're unfamiliar with service workers, you can get a basic understanding by reading  [Introduction To Service Workers](/web/fundamentals/primers/service-worker/) about what they can do, how their lifecycle works and more. Once you've completed this code lab, be sure to check out the  [Debugging Service Workers code lab](http://goo.gl/jhXCBy) for a more indepth look at how to work with service workers.
 
 Features provided via service workers should be considered a progressive enhancement, and added only if supported by the browser. For example, with service workers you can cache the app shell and data for your app, so that it's available even when the network isn't. When service workers aren't supported, the offline code isn't called, and the user gets a basic experience. Using feature detection to provide progressive enhancement has little overhead and it won't break in older browsers that don't support that feature.
 
@@ -799,7 +799,7 @@ Now add the following line to the bottom of the `<head>` element in your `index.
 
 Further Reading:
 
-[Using app install banners](https://developers.google.com/web/fundamentals/engage-and-retain/simplified-app-installs/)
+[Using app install banners](/web/fundamentals/engage-and-retain/simplified-app-installs/)
 
 ### Add to Homescreen elements for Safari on iOS
 
@@ -862,11 +862,11 @@ The final step is to deploy our weather app to a server that supports HTTPS. If 
 
 ### Extra credit: minify and inline CSS
 
-There's one more thing that you should consider, minifying the key styles and inlining them directly into `index.html`.  [Page Speed Insights](https://developers.google.com/speed) recommends serving the above the fold content in the first 15k bytes of the request.
+There's one more thing that you should consider, minifying the key styles and inlining them directly into `index.html`.  [Page Speed Insights](/speed) recommends serving the above the fold content in the first 15k bytes of the request.
 
 See how small you can get the initial request with everything inlined.
 
-Further Reading:  [PageSpeed Insight Rules](https://developers.google.com/speed/docs/insights/rules)
+Further Reading:  [PageSpeed Insight Rules](/speed/docs/insights/rules)
 
 ### Deploy to Firebase
 

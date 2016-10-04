@@ -229,7 +229,7 @@ automaticamente.
 
 ### Configure seu projeto do Web Starter Kit
 
-A primeira etapa é ir para [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
+A primeira etapa é ir para [https://developers.google.com/web/starter-kit/](/web/starter-kit/)
 , baixar e extrair o zip. Essa será a base para o seu projeto. Portanto, renomeie a pasta e coloque-a em algum local relevante em seu computador. No resto deste guia, chamaremos a pasta de `my-project`.
 
 Em seguida, você precisará instalar as dependências locais para o Web Starter Kit. Abra um

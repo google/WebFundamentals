@@ -60,7 +60,7 @@ An example manifest is shown below. It doesn't show everything that can be in a 
 Some interesting points in Chrome's implementation:
 
 *  The `short_name` is preferred over `name` and if provided will be used.
-   * Note: [as of Chrome 42](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en), you
+   * Note: [as of Chrome 42](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android), you
      should also provide a `name` which will be used for the App Install Banner.
 *  If you don't supply a `start_url` it will use the current page's URL.
 *  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/webapps/add_to_homescreen_data_fetcher.cc&l=115) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42). If none are found it will search for the icon that closest matches the device characteristics. **Please note**, there used to be a dedicated "density" field in the manifest spec, this has been removed from the Spec and the implementation in Chrome.  If it is defined in your manifest it will be ignored.
@@ -133,7 +133,7 @@ Taking a look at native apps, the majority of news-centric apps treat their expe
 
 A question that keeps popping up about Chrome's implementation of "mobile-web-app-capable" is: How can I tell if
 I am running as launched from the home screen?  On iOS you can use `navigator.standalone` to see if it is running
-like a native app, but we don't have this on Chrome for Android. [Instead](https://code.google.com/p/chromium/issues/detail?id=289113), you should [use the `display-mode`](https://developers.google.com/web/updates/2015/10/display-mode) media query feature.
+like a native app, but we don't have this on Chrome for Android. [Instead](https://code.google.com/p/chromium/issues/detail?id=289113), you should [use the `display-mode`](/web/updates/2015/10/display-mode) media query feature.
 
 
 

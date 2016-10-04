@@ -484,20 +484,20 @@ scenarios. New records are appended to the bottom of the **Requests Table**.
 To learn more optimizing the network performance of your application, see the following resources:
 
 * Use [PageSpeed 
-  Insights](https://developers.google.com/speed/pagespeed/insights) to identify 
+  Insights](/speed/pagespeed/insights) to identify 
   performance best practices that can be applied to your site, and 
   [PageSpeed optimization 
-  tools](https://developers.google.com/speed/pagespeed/optimization) to 
+  tools](/speed/pagespeed/optimization) to 
   automate the process of applying those best practices.
 * [High Performance Networking in Google
   Chrome](https://www.igvita.com/posa/high-performance-networking-in-google-chrome/) 
   discusses Chrome network internals and how you can take advantage of them 
   to make your site faster.
 * [How gzip compression 
-  works](https://developers.google.com/speed/articles/gzip) provides a 
+  works](/speed/articles/gzip) provides a 
   high-level overview gzip compression and why it's a good idea.
 * [Web Performance Best 
-  Practices](https://developers.google.com/speed/docs/best-practices/rules_intro) 
+  Practices](/speed/docs/best-practices/rules_intro) 
   provides additional tips for optimizing the network performance of your web 
   page or application.
 

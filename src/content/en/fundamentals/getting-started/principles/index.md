@@ -171,7 +171,7 @@ wheel, consider robust products like [Google Custom Search](https://cse.google.c
 
 ### Implement filters to narrow results
 
-Study participants rely on [filters](https://developers.google.com/custom-search/docs/structured_search)
+Study participants rely on [filters](/custom-search/docs/structured_search)
 to find what they’re looking for, and abandon sites that do not have effective
 filters. Place filters above search results, and help users by displaying how
 many results will be returned when a specific filter is applied.

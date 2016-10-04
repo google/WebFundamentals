@@ -50,7 +50,7 @@ HTML 規格中指明了每一個事件的具體條件：該在什麼時候觸發
 上述示例乍看之下可能會令人頭昏眼花，但實際上它確實很簡單。Navigation Timing API 會捕捉所有相關的時間戳記，而我們的程式碼只是等待`onload` 事件觸發，然後計算各個時間戳記之間的間隔。請記得，onLoad 事件會在 domInteractive、domContentLoaded 和 domComplete 之後觸發。
 <img src="images/device-navtiming-small.png" class="center" alt="NavTiming 示範">
 
-透過上面的介紹和示例，我們現在知道要追蹤哪些具體的里程碑，以及可用來輸出這些評估結果的簡單功能。注意，除了直接將指標顯示在網頁上，您還可以修改程式碼，將這些指標傳送到分析伺服器上 ([Google Analytics (分析) 可自動完成這項功能](https://support.google.com/analytics/answer/1205784?hl=zh-TW))。這是一種有效監控網頁效能的方法，您可以藉此找出哪些網頁的效能還需要進一步最佳化。
+透過上面的介紹和示例，我們現在知道要追蹤哪些具體的里程碑，以及可用來輸出這些評估結果的簡單功能。注意，除了直接將指標顯示在網頁上，您還可以修改程式碼，將這些指標傳送到分析伺服器上 ([Google Analytics (分析) 可自動完成這項功能](https://support.google.com/analytics/answer/1205784))。這是一種有效監控網頁效能的方法，您可以藉此找出哪些網頁的效能還需要進一步最佳化。
 
 
 

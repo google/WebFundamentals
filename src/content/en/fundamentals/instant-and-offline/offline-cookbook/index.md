@@ -310,7 +310,7 @@ This code updates caches before showing a notification:
 
 Dogfood: Background sync hasn't yet landed in Chrome stable.
 
-[Background sync](https://developers.google.com/web/updates/2015/12/background-sync)
+[Background sync](/web/updates/2015/12/background-sync)
 is another feature built on top of
 ServiceWorker. It allows you to request background data synchronisation
 as a one-off, or on an (extremely heuristic) interval. This happens even

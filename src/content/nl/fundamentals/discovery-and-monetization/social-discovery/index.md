@@ -64,8 +64,8 @@ De type van een item kan worden gespecificeerd met het `itemtype` attribuut same
 ### Leer meer
 Deze microdata levert semantische data aan crawlers, voornamelijk [Google+](https://plus.google.com/) en Google Search. Om meer te leren over snippets en rendering op Google+ lees de volgende documenten:
 
-* [Article Rendering - Google+ Platform](https://developers.google.com/+/web/snippet/article-rendering)
-* [Snippet - Google+ Platform](https://developers.google.com/+/web/snippet/)
+* [Article Rendering - Google+ Platform](/+/web/snippet/article-rendering)
+* [Snippet - Google+ Platform](/+/web/snippet/)
 
 ### Valideer rich snippets
 Om rich snippets te valideren op Google+ kan je deze tools gebruiken:

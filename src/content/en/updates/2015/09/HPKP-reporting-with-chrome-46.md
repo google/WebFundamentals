@@ -24,7 +24,7 @@ called HPKP reporting.
 
 Security on the web today relies on SSL certificates: cryptographic signatures 
 proving that a website is who it says who it is. When your browser sends a 
-request to a URL such as [https://developers.google.com](https://developers.google.com), the server 
+request to a URL such as [https://developers.google.com](), the server 
 provides an SSL certificate, and if the certificate is valid, the browser allows 
 the request to proceed and shows the website URL with a green padlock in the 
 address bar.

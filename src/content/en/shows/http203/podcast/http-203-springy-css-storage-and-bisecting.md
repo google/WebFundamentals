@@ -21,7 +21,7 @@ In this episode:
 * [CSS containment](https://drafts.csswg.org/css-containment/)
 * [spring()](https://webkit.org/demos/spring/)
 * [Paint worklets](https://twitter.com/DasSurma/status/747417421938470912)
-* [Persistent storage](https://developers.google.com/web/updates/2016/06/persistent-storage?hl=en)
+* [Persistent storage](/web/updates/2016/06/persistent-storage)
 * [Bisecting Chrome](https://www.chromium.org/developers/bisect-builds-py)
 * [Scots and Canada](http://www.educationscotland.gov.uk/scotsandcanada/survivingthewild/winterincanada.asp)
 

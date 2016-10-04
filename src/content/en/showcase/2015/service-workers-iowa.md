@@ -267,11 +267,11 @@ queued updates had been applied.
 In a similar vein, we implemented a handler to queue any failed Google
 Analytics requests and attempt to replay them later, when the network was
 hopefully available. With this approach, being offline doesn’t mean sacrificing
-the insights Google Analytics offers. We added the [`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
+the insights Google Analytics offers. We added the [`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 parameter to each queued request, set to the amount of time that had passed
 since the request was first attempted, to ensure that a proper event
 attribution time made it to the Google Analytics backend. Google Analytics
-[officially supports](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
+[officially supports](/analytics/devguides/collection/protocol/v1/parameters#qt)
 values for `qt` of up to only 4 hours, so we made a best-effort attempt to replay those
 requests as soon as possible, each time the service worker started up.
 

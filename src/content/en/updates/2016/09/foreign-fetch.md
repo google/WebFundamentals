@@ -16,7 +16,7 @@ description: Third-party services can start deploying their own network request 
 
 ## Background
 
-[Service workers](https://developers.google.com/web/fundamentals/primers/service-worker/) give web developers the ability to respond to network requests made by their web applications, allowing them to continue working even while offline, [fight lie-fi](https://developers.google.com/web/fundamentals/performance/poor-connectivity/lie-fi?hl=en), and implement complex cache interactions like [stale-while-revalidate](https://jakearchibald.com/2014/offline-cookbook/#stale-while-revalidate). But service workers have historically been tied to a specific origin—as the owner of a web app, it's your responsibility to write and deploy a service worker to intercept all the network requests your web app makes. In that model, each service worker is responsible for handling even cross-origin requests, for example to a third-party API or for web fonts.
+[Service workers](/web/fundamentals/primers/service-worker/) give web developers the ability to respond to network requests made by their web applications, allowing them to continue working even while offline, [fight lie-fi](/web/fundamentals/performance/poor-connectivity/lie-fi), and implement complex cache interactions like [stale-while-revalidate](https://jakearchibald.com/2014/offline-cookbook/#stale-while-revalidate). But service workers have historically been tied to a specific origin—as the owner of a web app, it's your responsibility to write and deploy a service worker to intercept all the network requests your web app makes. In that model, each service worker is responsible for handling even cross-origin requests, for example to a third-party API or for web fonts.
 
 What if a third-party provider of an API, or web fonts, or other commonly used service had the power to deploy their own service worker that got a chance to handle requests made by *other* origins to their origin? Providers could implement their own custom networking logic, and take advantage of a single, authoritative [cache instance](https://developer.mozilla.org/en-US/docs/Web/API/Cache) for storing their responses. Now, thanks to [foreign fetch](https://github.com/w3c/ServiceWorker/blob/master/foreign_fetch_explainer.md), that type of third-party service worker deployment is a reality.
 
@@ -28,7 +28,7 @@ Deploying a service worker that implements foreign fetch makes sense for any pro
 *   Image hosting providers
 *   Generic content delivery networks
 
-Imagine, for instance, that you're an analytics provider. By deploying a foreign fetch service worker, you can ensure that all requests to your service that fail while a user is offline are queued and replayed once connectivity returns. While it's been possible for a service's clients to [implement similar behavior](https://developers.google.com/web/updates/2016/07/offline-google-analytics) via first-party service workers, requiring each and every client to write bespoke logic for your service is not as scalable as relying on a shared foreign fetch service worker that you deploy.
+Imagine, for instance, that you're an analytics provider. By deploying a foreign fetch service worker, you can ensure that all requests to your service that fail while a user is offline are queued and replayed once connectivity returns. While it's been possible for a service's clients to [implement similar behavior](/web/updates/2016/07/offline-google-analytics) via first-party service workers, requiring each and every client to write bespoke logic for your service is not as scalable as relying on a shared foreign fetch service worker that you deploy.
 
 ## Prerequisites
 
@@ -94,13 +94,13 @@ During development, you'll probably want to confirm that your foreign fetch serv
 
 #### Are the proper response headers being sent?
 
-In order to register the foreign fetch service worker, you need to set a Link header on a response to a resource hosted on your domain, as described earlier in this post. During the Origin Trial period, and assuming you don't have `chrome://flags/#enable-experimental-web-platform-features` set, you also need to set a `Origin-Trial` response header. You can confirm that your web server is setting those headers by looking at the entry in the [Network panel](https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/resource-loading) of DevTools:
+In order to register the foreign fetch service worker, you need to set a Link header on a response to a resource hosted on your domain, as described earlier in this post. During the Origin Trial period, and assuming you don't have `chrome://flags/#enable-experimental-web-platform-features` set, you also need to set a `Origin-Trial` response header. You can confirm that your web server is setting those headers by looking at the entry in the [Network panel](/web/tools/chrome-devtools/profile/network-performance/resource-loading) of DevTools:
 
 ![Headers displayed in the Network panel](/web/updates/images/2016/09/foreign-fetch/headers.png "Headers displayed in the Network panel")
 
 #### Is the foreign fetch service worker properly registered?
 
-You can also confirm the underlying service worker registration, including its scope, by looking at the full list of service workers in the [Application panel](https://developers.google.com/web/tools/chrome-devtools/iterate/manage-data/?hl=en) of DevTools. Make sure to select the "Show all" option, since by default, you'll only see service workers for the current origin.
+You can also confirm the underlying service worker registration, including its scope, by looking at the full list of service workers in the [Application panel](/web/tools/chrome-devtools/iterate/manage-data/) of DevTools. Make sure to select the "Show all" option, since by default, you'll only see service workers for the current origin.
 
 ![The foreign fetch service worker in the Applications panel](/web/updates/images/2016/09/foreign-fetch/show-all-service-workers.png "The foreign fetch service worker in the Applications panel")
 

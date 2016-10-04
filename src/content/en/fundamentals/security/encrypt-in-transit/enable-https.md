@@ -260,7 +260,7 @@ Note: Keep in mind that you also need to change intrasite URLs in your styleshee
 
 ## Redirect HTTP to HTTPS
 
-You need to put a [canonical link](https://support.google.com/webmasters/answer/139066?hl=en) at the head of your page to tell search engines that HTTPS is the best way to get to your site.
+You need to put a [canonical link](https://support.google.com/webmasters/answer/139066) at the head of your page to tell search engines that HTTPS is the best way to get to your site.
 
 Set `<link rel="canonical" href="https://…"/>` tags in your pages. This
 helps search engines determine the best way to get to your site.

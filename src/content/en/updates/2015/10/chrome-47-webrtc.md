@@ -21,7 +21,7 @@ The `MediaStreamRecorder` API has long been the top chromium.org request, with o
 
 ### Audio output device selection
 
-`MediaDevices.enumerateDevices()` has been released. More details are available from [Chromium issue 504280](https://crbug.com/504280). You can now enumerate audio output devices in addition to the audio input and video input devices that `MediaStreamTrack.getSources()` already provides. You can find out more about how to use it in [this update](https://developers.google.com/web/updates/2015/10/media-devices).
+`MediaDevices.enumerateDevices()` has been released. More details are available from [Chromium issue 504280](https://crbug.com/504280). You can now enumerate audio output devices in addition to the audio input and video input devices that `MediaStreamTrack.getSources()` already provides. You can find out more about how to use it in [this update](/web/updates/2015/10/media-devices).
 
 ### Device support on Windows
 
