@@ -34,7 +34,7 @@ Pages](https://pages.github.com/), are secure by default.
 If you're running your own servers and need a cheap and easy way to generate
 certficates, check out [Let's Encrypt](https://letsencrypt.org/). For more help
 on enabling HTTPS on your servers, see the following set of docs: [Encrypting
-data in transit](/web/fundamentals/security/encrypt-in-transit/?hl=en).
+data in transit](/web/fundamentals/security/encrypt-in-transit/).
 
 If you're page is already running on HTTPS but you're failing this audit, then
 you may have problems with mixed content. Mixed content is when a secure site
