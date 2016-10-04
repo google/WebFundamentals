@@ -216,7 +216,7 @@ Oko ludzkie cechuje się różnymi poziomami czułości na różne kolory: podcz
 Sąsiedztwo pikseli określa się w dwuwymiarowej matrycy, a więc każdy piksel ma wielu sąsiadów. Również ten fakt można wykorzystać do dalszego ulepszenia kodowania delta.
 Zamiast rozpatrywać tylko bezpośrednich sąsiadów każdego piksela, możemy zająć się większymi blokami sąsiednich pikseli i kodować różne bloki z różnymi ustawieniami. I tak dalej...
 
-Jak widać, optymalizacja obrazów szybko się komplikuje (lub, zależnie od punktu widzenia, staje się jeszcze ciekawsza), dlatego jest obszarem aktywnych badań akademickich i komercyjnych. Obrazy zajmują wiele miejsca, tak więc rozwijanie lepszych technik kompresji ma duże znaczenie. Dalsze informacje znajdziesz w [Wikipedii](http://en.wikipedia.org/wiki/Image_compression) i [opracowaniu na temat kompresji WebP](https://developers.google.com/speed/webp/docs/compression), w którym został podany praktyczny przykład.
+Jak widać, optymalizacja obrazów szybko się komplikuje (lub, zależnie od punktu widzenia, staje się jeszcze ciekawsza), dlatego jest obszarem aktywnych badań akademickich i komercyjnych. Obrazy zajmują wiele miejsca, tak więc rozwijanie lepszych technik kompresji ma duże znaczenie. Dalsze informacje znajdziesz w [Wikipedii](http://en.wikipedia.org/wiki/Image_compression) i [opracowaniu na temat kompresji WebP](/speed/webp/docs/compression), w którym został podany praktyczny przykład.
 
 Nasza dyskusja przybrała charakter akademicki, ale jak to przekłada się na możliwości optymalizacji obrazów na naszych stronach? Zdecydowanie nie będziemy się koncentrować na rozwijaniu nowych technik kompresji, jednak ważne jest zrozumienie zarysu problemu: pikseli RGBA, głębokości bitowej i różnych technik optymalizacji. O wszystkich tych koncepcjach trzeba pamiętać przy rozpatrywaniu różnych formatów obrazów rastrowych, ale tym zajmiemy się później.
 
@@ -318,7 +318,7 @@ Powszechnie obsługiwane są trzy formaty: GIF, PNG i JPEG. Oprócz nich niektó
 1. **Optymalizujesz zdjęcie, zrzut ekranu lub podobny obraz? Zastosuj format JPEG.**
   * Format JPEG wykorzystuje połączenie optymalizacji stratnej i bezstratnej, co pozwala znacznie zredukować rozmiar pliku obrazu. Wypróbuj kilka poziomów jakości formatu JPEG, by osiągnąć najlepszy kompromis między jakością i rozmiarem pliku danego zasobu.
 
-Po ustaleniu optymalnego formatu obrazu i ustawień dla każdego z zasobów rozważ dodanie dodatkowej wersji z kodowaniem WebP i JPEG XR. Formaty te są nowe, ale niestety (jeszcze) nieobsługiwane powszechnie przez wszystkie przeglądarki. Ich zaletą jest znaczna redukcja rozmiaru w przypadku nowszych klientów &ndash; np. format WebP pozwala uzyskać średnio [30%-tową redukcję rozmiaru pliku](https://developers.google.com/speed/webp/docs/webp_study) w stosunku do obrazu w formacie JPEG o porównywalnej jakości.
+Po ustaleniu optymalnego formatu obrazu i ustawień dla każdego z zasobów rozważ dodanie dodatkowej wersji z kodowaniem WebP i JPEG XR. Formaty te są nowe, ale niestety (jeszcze) nieobsługiwane powszechnie przez wszystkie przeglądarki. Ich zaletą jest znaczna redukcja rozmiaru w przypadku nowszych klientów &ndash; np. format WebP pozwala uzyskać średnio [30%-tową redukcję rozmiaru pliku](/speed/webp/docs/webp_study) w stosunku do obrazu w formacie JPEG o porównywalnej jakości.
 
 Ponieważ format WebP i JPEG XR nie są powszechnie obsługiwane, konieczne będzie zaimplementowanie dodatkowych procedur w aplikacji lub na serwerze, dzięki czemu przesłany zostanie odpowiedni zasób:
 

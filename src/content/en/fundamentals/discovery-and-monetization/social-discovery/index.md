@@ -101,8 +101,8 @@ These microdata provide semantic information to crawlers, typically for
 [Google+](https://plus.google.com/) and Google Search. To learn more about
 snippets and rendering on Google+, read the following documents:
 
-* [Article Rendering - Google+ Platform](https://developers.google.com/+/web/snippet/article-rendering)
-* [Snippet - Google+ Platform](https://developers.google.com/+/web/snippet/)
+* [Article Rendering - Google+ Platform](/+/web/snippet/article-rendering)
+* [Snippet - Google+ Platform](/+/web/snippet/)
 
 ### Validate rich snippets
 In order to validate rich snippets on Google+, you can use tools such as:

@@ -32,7 +32,7 @@ At [chromestatus.com](https://chromestatus.com) you can see the [features](https
 
 Another big change is that we're removing WebKit prefixes. The intent is not to use Blink prefixes, but to have run-time flags (and not just compile-time flags).
 
-[Android WebView](https://developers.google.com/chrome/mobile/docs/webview/overview) has been a big challenge – but [HTML5Test](http://html5test.com) shows that things are getting better. We're much closer to desktop in terms of having one set of web platform APIs everywhere (Web Audio is a great example of this!)
+[Android WebView](/chrome/mobile/docs/webview/overview) has been a big challenge – but [HTML5Test](http://html5test.com) shows that things are getting better. We're much closer to desktop in terms of having one set of web platform APIs everywhere (Web Audio is a great example of this!)
 
 But how does the sausage machine work? Every single change we make to Blink is immediately run through over 30,000 tests, not to mention all the Chromium tests that run additionally later. We use 24 hour sheriffing, with thousands of bots, thousands of benchmarks, and systems that throw millions of broken web pages at our engine to make sure it doesn't fall over. We know that mobile is significantly slower, and this is something we're working hard to improve.
 

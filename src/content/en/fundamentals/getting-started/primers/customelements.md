@@ -170,7 +170,7 @@ functionality of `<button>`, a better option is to progressively enhance the exi
 
 A **customized built-in element** is a custom element that extends one of the browser's
 built-in HTML tags. The primary benefit of extending an existing element is to
-gain all of its features (DOM properties, methods, accessibility). There's no better way to write a [progressive web app](https://developers.google.com/web/progressive-web-apps/) than to **progressively enhance existing HTML elements**.
+gain all of its features (DOM properties, methods, accessibility). There's no better way to write a [progressive web app](/web/progressive-web-apps/) than to **progressively enhance existing HTML elements**.
 
 To extend an element, you'll need to create a class definition that inherits from
 the correct DOM interface. For example, a custom element that extends `<button>`

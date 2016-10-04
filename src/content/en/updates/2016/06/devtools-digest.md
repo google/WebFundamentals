@@ -74,7 +74,7 @@ When editing a value that was compiled from a Sass variable, your edit updates t
 
 ## Progressive Web Apps
 
-Look at the list of [web and Chrome talks at Google I/O 2016](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP) and you'll see a huge theme emerging in the world of web development: [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/).
+Look at the list of [web and Chrome talks at Google I/O 2016](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP) and you'll see a huge theme emerging in the world of web development: [Progressive Web Apps](/web/progressive-web-apps/).
 
 As the Progressive Web App model emerges, DevTools is iterating rapidly to provide the tools developers need to create great progressive web apps. We realized that building and debugging these modern applications often comes with unique requirements, so DevTools has dedicated an entire panel to Progressive Web Application development. Open up Chrome Canary and you'll see that the Resources panel has been replaced with the Application panel. All of the previous functionality from the Resources panel is still there. There's just a few new panes designed specifically for Progressive Web App development:
 

@@ -248,7 +248,7 @@ Note: 為獲得最好的一致性和視覺效果，請勿依賴字型合成。�
 
 ### 網頁字型和關鍵轉譯路徑
 
-字型的延遲載入蘊藏可能會延遲文字轉譯的重要隱藏含義：瀏覽器必須 [建構轉譯樹狀結構](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction)，而這有賴於 DOM 和 CSSOM 樹狀結構，在此之後，它將知道需要哪些字型資源來呈現文字。因此，字型請求會延遲到其他關鍵資源之後，並且在取回資源之前可能會禁止瀏覽器轉譯文字。
+字型的延遲載入蘊藏可能會延遲文字轉譯的重要隱藏含義：瀏覽器必須 [建構轉譯樹狀結構](/web/fundamentals/performance/critical-rendering-path/render-tree-construction)，而這有賴於 DOM 和 CSSOM 樹狀結構，在此之後，它將知道需要哪些字型資源來呈現文字。因此，字型請求會延遲到其他關鍵資源之後，並且在取回資源之前可能會禁止瀏覽器轉譯文字。
 
 <img src="images/font-crp.png" class="center" alt="字型關鍵轉譯路徑">
 

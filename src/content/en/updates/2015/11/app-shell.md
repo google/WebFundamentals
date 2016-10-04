@@ -96,7 +96,7 @@ The application shell architecture makes the most sense for apps and sites that 
 
 ## Are There any Production Apps Using this Pattern Yet?
 
-The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](https://developers.google.com/web/showcase/case-study/service-workers-iowa) and Google’s Inbox.
+The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](/web/showcase/case-study/service-workers-iowa) and Google’s Inbox.
 
 ![Image of Google Inbox loading. Illustrates Inbox using service worker.](/web/updates/images/2015/11/appshell/image_7.png)
 
@@ -194,7 +194,7 @@ Note: The application shell sample does not (at the time of writing) use file ve
 
 ### Tooling
 
-We maintain a number of different [service worker helper libraries](https://developers.google.com/web/tools/service-worker-libraries/?hl=en) that make the process of precaching your application’s shell or handling common caching patterns easier to setup.
+We maintain a number of different [service worker helper libraries](/web/tools/service-worker-libraries/?hl=en) that make the process of precaching your application’s shell or handling common caching patterns easier to setup.
 
 ![Screenshot of the Service Worker Library Site on Web Fundamentals](/web/updates/images/2015/11/appshell/image_10.png)
 

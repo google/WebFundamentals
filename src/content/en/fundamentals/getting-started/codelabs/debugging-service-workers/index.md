@@ -44,7 +44,7 @@ Because this code lab is focused on teaching you tools, feel free to stop at var
 * A text editor
 * Basic knowledge of HTML, CSS and JavaScript
 
-This codelab is focused on debugging Service Workers and assumes some prior knowledge of working with Service Workers. Some concepts are glossed over or code blocks (for example styles or non-relevant JavaScript) are provided for you to simply copy and paste. If you are new to Service Workers be sure to  [read through the API Primer](https://developers.google.com/web/fundamentals/primers/service-worker/?hl=en) before proceeding.
+This codelab is focused on debugging Service Workers and assumes some prior knowledge of working with Service Workers. Some concepts are glossed over or code blocks (for example styles or non-relevant JavaScript) are provided for you to simply copy and paste. If you are new to Service Workers be sure to  [read through the API Primer](/web/fundamentals/primers/service-worker/) before proceeding.
 
 
 ## Getting set up

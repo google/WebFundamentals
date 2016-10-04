@@ -246,7 +246,7 @@ Bu bildirimler saglandiginda, tarayici gereken alt kümeleri ve çesitleri belir
 
 ### Web Yazi Tipleri ve Kritik Olusturma Yolu
 
-Yazi tiplerinin geç yüklenmesi, metin olusturmayi geciktirebilecek önemli bir gizli etki tasir: Tarayicinin, metni olusturmak için ihtiyaç duyacagi yazi tipi kaynaklarini ögrenmeden önce DOM ve CSSOM agaçlarina bagimli olan [olusturma agacini olusturmasi gerekir](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction). Sonuç olarak, yazi tipi istekleri diger kritik kaynaklarin sonrasina ertelenir ve kaynak getirilinceye kadar tarayicinin metni olusturmasi engellenebilir.
+Yazi tiplerinin geç yüklenmesi, metin olusturmayi geciktirebilecek önemli bir gizli etki tasir: Tarayicinin, metni olusturmak için ihtiyaç duyacagi yazi tipi kaynaklarini ögrenmeden önce DOM ve CSSOM agaçlarina bagimli olan [olusturma agacini olusturmasi gerekir](/web/fundamentals/performance/critical-rendering-path/render-tree-construction). Sonuç olarak, yazi tipi istekleri diger kritik kaynaklarin sonrasina ertelenir ve kaynak getirilinceye kadar tarayicinin metni olusturmasi engellenebilir.
 
 <img src="images/font-crp.png" class="center" alt="Yazi tipi kritik olusturma yolu">
 

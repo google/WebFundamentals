@@ -25,7 +25,7 @@ Welcome back to the latest edition of the digest for all you Canary users out th
   </iframe>
 </div>
 
-The (currently outdated) [Remote Debugging](https://developers.google.com/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging) documentation for DevTools has been our most popular guide for many years in a row, which could only mean one thing: nobody had a frickin clue how to use it!
+The (currently outdated) [Remote Debugging](/web/tools/chrome-devtools/debug/remote-debugging/remote-debugging) documentation for DevTools has been our most popular guide for many years in a row, which could only mean one thing: nobody had a frickin clue how to use it!
 
 So we went ahead and revamped the UX. Instead of having to open an entirely different page (“chrome://inspect”), all of “Inspect Devices” is now conveniently embedded into DevTools itself for quick access and less context switches.
 

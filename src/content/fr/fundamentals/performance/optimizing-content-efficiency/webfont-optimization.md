@@ -237,7 +237,7 @@ Avec ces déclarations, le navigateur détermine les sous-ensembles et variantes
 
 ### Polices Web et le chemin critique du rendu
 
-Le chargement inactif de polices comporte une importante implication cachée qui peut retarder l'affichage du texte : le navigateur doit [construire l'arborescence d'affichage](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), qui dépend des arborescences des modèles DOM et CSSOM, avant de savoir quelles ressources de police sont nécessaires pour afficher le texte. Résultat, les requêtes de police sont retardées beaucoup plus longtemps que les autres ressources critiques, et le navigateur peut être empêché d'afficher le texte jusqu'à ce que la ressource soit récupérée.
+Le chargement inactif de polices comporte une importante implication cachée qui peut retarder l'affichage du texte : le navigateur doit [construire l'arborescence d'affichage](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), qui dépend des arborescences des modèles DOM et CSSOM, avant de savoir quelles ressources de police sont nécessaires pour afficher le texte. Résultat, les requêtes de police sont retardées beaucoup plus longtemps que les autres ressources critiques, et le navigateur peut être empêché d'afficher le texte jusqu'à ce que la ressource soit récupérée.
 
 <img src="images/font-crp.png" class="center" alt="Chemin critique du rendu pour les polices">
 

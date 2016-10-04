@@ -82,9 +82,9 @@ other user preferences.
 
 ![Save-Data header in DevTools](/web/updates/images/2016/02/save-data/data-saver-chrome.png)
 
-In turn, if your application is [using a service worker](https://developers.google.com/web/fundamentals/getting-started/push-notifications/step-03?hl=en), it can inspect the request headers and apply relevant logic to optimize the experience. Alternatively, the server can look for the advertised preferences in the `Save-Data` request header and return an alternate response&mdash;e.g. different markup, smaller images and video, and so on.
+In turn, if your application is [using a service worker](/web/fundamentals/getting-started/push-notifications/step-03?hl=en), it can inspect the request headers and apply relevant logic to optimize the experience. Alternatively, the server can look for the advertised preferences in the `Save-Data` request header and return an alternate response&mdash;e.g. different markup, smaller images and video, and so on.
 
-> _Tip: Are you using [PageSpeed for Apache or Nginx](https://developers.google.com/speed/pagespeed/module/) to optimize your pages? If so, [see  this discussion](https://github.com/pagespeed/mod_pagespeed/issues/1258) to learn how to enable Save-Data savings for your users._
+> _Tip: Are you using [PageSpeed for Apache or Nginx](/speed/pagespeed/module/) to optimize your pages? If so, [see  this discussion](https://github.com/pagespeed/mod_pagespeed/issues/1258) to learn how to enable Save-Data savings for your users._
 
 ## Browser Support
 

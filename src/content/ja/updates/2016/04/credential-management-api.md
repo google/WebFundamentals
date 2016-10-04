@@ -47,8 +47,8 @@ Credential Management API は、パスワードクレデンシャルやフェデ
 Chrome の実装では、クレデンシャルは Chrome のパスワードマネージャの中に格納されます。もしユーザが
 Chrome にサインインした場合、それらはデバイスを横断してユーザのパスワードを同期できます。
 それらの同期されたパスワードは、
-[シームレスなクロスプラットフォーム体験のために](https://developers.google.com/identity/smartlock-passwords/android/)
-[Smart Lock for Passwords API for Android](https://developers.google.com/identity/smartlock-passwords/android/)
+[シームレスなクロスプラットフォーム体験のために](/identity/smartlock-passwords/android/)
+[Smart Lock for Passwords API for Android](/identity/smartlock-passwords/android/)
 を統合した Android アプリで共有もされることが可能です。
 
 ## あなたのサイトへの Credential Management API の組み込み

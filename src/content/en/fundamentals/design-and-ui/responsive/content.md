@@ -205,7 +205,7 @@ There are a number of tools for calculating page weight. The Chrome DevTools Net
 
 Firefox and other browsers offer similar tools.
 
-[WebPagetest](http://webpagetest.org) provides the ability to test first and subsequent page loads. You can automate testing with [scripts](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting) (for example, to log in to a site) or by using their [RESTful APIs](https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis). The following example (loading [developers.google.com/web](https://developers.google.com/web/)) shows that caching was successful and that subsequent page loads required no additional resources.
+[WebPagetest](http://webpagetest.org) provides the ability to test first and subsequent page loads. You can automate testing with [scripts](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting) (for example, to log in to a site) or by using their [RESTful APIs](https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis). The following example (loading [developers.google.com/web](/web/)) shows that caching was successful and that subsequent page loads required no additional resources.
 
 ![WebPagetest results showing total byte size for first and repeat page visits](imgs/webpagetest-first-and-repeat.png)
 
@@ -253,4 +253,4 @@ Bear in mind that this doesn't take into account affordability relative to incom
 
 Page weight isn't just a problem for emerging markets. In many countries, people use mobile plans with limited data, and will avoid your site or app if they perceive it to be heavy and expensive. Even "unlimited" cell and wifi data plans generally have a data limit beyond which they are blocked or throttled.
 
-The bottom line: page weight affects performance and costs money. [Optimizing content efficiency](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/?hl=en]) shows how to reduce that cost.
+The bottom line: page weight affects performance and costs money. [Optimizing content efficiency](/web/fundamentals/performance/optimizing-content-efficiency/]) shows how to reduce that cost.

@@ -50,9 +50,9 @@ In Chrome's implementation, credentials will be stored in Chrome's password
 manager. If users are signed into Chrome, they can sync the user's passwords
 across devices. Those synced passwords can also be shared with Android apps
 which have integrated the [Smart Lock for Passwords API for
-Android](https://developers.google.com/identity/smartlock-passwords/android/)
+Android](/identity/smartlock-passwords/android/)
 [for a seamless cross-platform
-experience](https://developers.google.com/identity/smartlock-passwords/android/).
+experience](/identity/smartlock-passwords/android/).
 
 ## Integrating Credential Management API to Your Site
 

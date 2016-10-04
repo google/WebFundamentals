@@ -49,7 +49,7 @@ description: Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TC
 
 [http://www.webpagetest.org/video/compare.php?tests=150506_2G_ANE-r:1-c:1](http://www.webpagetest.org/video/compare.php?tests=150506_2G_ANE-r:1-c:1)
 
-[https://developers.google.com/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F](https://developers.google.com/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F) 
+[https://developers.google.com/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F](/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F) 
 
 ### CUTTING IN LINE
 

@@ -232,7 +232,7 @@ Web Starter Kit 的构建工具需要 Node 和 NPM。 Node 用于运行 Gulp，�
 
 ### 设置 Web Starter Kit 项目
 
-第一步是访问[https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
+第一步是访问[https://developers.google.com/web/starter-kit/](/web/starter-kit/)
 并且下载和解压 zip。 这将是您的项目的基础，因此将文件夹重命名，并将其放在计算机上的相关位置。 在本指南的其余部分，我们将此文件夹称为 `my-project`
 
 下一步，需要为 Web Starter Kit 安装本地依赖组件。 打开

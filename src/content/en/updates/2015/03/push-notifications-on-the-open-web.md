@@ -669,7 +669,7 @@ exactly this:
 Subscriptions may get out of sync between FCM and your server. Make sure
 your server parses the response body of the FCM API's send POST, looking for
 **error:NotRegistered** and **canonical_id** results, as explained in the [FCM
-documentation](https://developers.google.com/cloud-messaging/http).
+documentation](/cloud-messaging/http).
 
 Subscriptions may also get out of sync between the service worker and your
 server. For example, after subscribing/unsubscribing successfully, a flaky

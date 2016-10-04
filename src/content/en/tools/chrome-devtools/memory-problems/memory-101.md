@@ -137,7 +137,7 @@ A typical JavaScript object can be one of two array types used for storing:
 
 In cases where there is a very small number of properties, they can be stored internally in the JavaScript object itself.
 
-**Map** - an object that describes the kind of object and its layout. For example, maps are used to describe implicit object hierarchies for [fast property access](https://developers.google.com/v8/design.html#prop_access).
+**Map** - an object that describes the kind of object and its layout. For example, maps are used to describe implicit object hierarchies for [fast property access](/v8/design.html#prop_access).
 
 ### Object groups
 
