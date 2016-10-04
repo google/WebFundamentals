@@ -539,7 +539,7 @@ In brief:
 </div>
 </div>
 
-Let's say we changed our service worker script to responded with a picture of
+Let's say we changed our service worker script to respond with a picture of
 a horse rather than a cat:
 
     const expectedCaches = ['static-v2'];
