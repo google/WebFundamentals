@@ -40,7 +40,7 @@ in transit.
 ## Client-side changes
 
 If you have already
-[implemented push notifications without payloads](/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
+[implemented push notifications without payloads](/web/fundamentals/engage-and-retain/push-notifications/)
 then there are only two small changes that you need to make on the client-side.
 
 This first is that when you send the subscription information to your backend

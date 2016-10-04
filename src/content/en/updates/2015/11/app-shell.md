@@ -194,7 +194,7 @@ Note: The application shell sample does not (at the time of writing) use file ve
 
 ### Tooling
 
-We maintain a number of different [service worker helper libraries](/web/tools/service-worker-libraries/?hl=en) that make the process of precaching your application’s shell or handling common caching patterns easier to setup.
+We maintain a number of different [service worker helper libraries](/web/tools/service-worker-libraries/) that make the process of precaching your application’s shell or handling common caching patterns easier to setup.
 
 ![Screenshot of the Service Worker Library Site on Web Fundamentals](/web/updates/images/2015/11/appshell/image_10.png)
 

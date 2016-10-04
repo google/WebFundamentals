@@ -50,7 +50,7 @@ HTML belirtimi, her olay için belirli kosullar getirir: Olayin ne zaman etkinle
 Yukaridaki örnek ilk bakista biraz ürkütücü görünebilir, ancak gerçekte oldukça basittir. Gezinme Zamanlamasi API'si, ilgili tüm zaman damgalarini yakalar ve bizim kodumuz yalnizca `onload` olayinin etkinlesmesini bekler. Onload olayinin domInteractive, domContentLoaded ve domComplete olaylarindan sonra etkinlestigini hatirlayin. Kodumuz, daha sonra çesitli zaman damgalari arasindaki farki hesaplar.
 <img src="images/device-navtiming-small.png" class="center" alt="NavTiming demosu">
 
-Nihayetinde, artik izlenecek bazi belirli asamalara ve bu ölçümleri yapmak için basit bir isleve sahibiz. Bu ölçümleri sayfaya yazdirmak yerine kodu, bu ölçümleri bir analiz sunucusuna ([Google Analytics bunu otomatik olarak yapar](https://support.google.com/analytics/answer/1205784?hl=tr)) gönderecek sekilde de degistirebilirsiniz. Bu, sayfalarinizin performansiyla ilgili kayitlar tutmak ve bir miktar optimizasyon çalismasi yapabileceginiz aday sayfalari tanimlamak için harika bir yoldur.
+Nihayetinde, artik izlenecek bazi belirli asamalara ve bu ölçümleri yapmak için basit bir isleve sahibiz. Bu ölçümleri sayfaya yazdirmak yerine kodu, bu ölçümleri bir analiz sunucusuna ([Google Analytics bunu otomatik olarak yapar](https://support.google.com/analytics/answer/1205784)) gönderecek sekilde de degistirebilirsiniz. Bu, sayfalarinizin performansiyla ilgili kayitlar tutmak ve bir miktar optimizasyon çalismasi yapabileceginiz aday sayfalari tanimlamak için harika bir yoldur.
 
 
 

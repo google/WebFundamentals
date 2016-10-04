@@ -47,7 +47,7 @@ In this demo we are using [LocalBusiness](/webmasters/business-location-pages/) 
 The best way to check how Google is reading and indexing this page is though the new improved [Structured Data Testing Tool](/structured-data/testing-tool/). Submit the demo’s URL in the *Fetch URL* section and click *Fetch and validate*. The section on the right will show you parsed data retrieved from the page along with any errors that may occur. It is a very convenient way to check if your JSON-LD markup is correct and processable by Google.
 
 <p style="text-align: center;">
-  <a href="https://developers.google.com/structured-data/testing-tool/?url=http://polymerlabs.github.io/structured-data-web-components/demo/combined-demo.html">
+  <a href="/structured-data/testing-tool/?url=http://polymerlabs.github.io/structured-data-web-components/demo/combined-demo.html">
     <img style="max-width: 100%; height: auto;" src="/web/updates/images/2015-03-03-creating-semantic-sites/tool.png" alt="Structured Data Testing Tool UI" />
   </a>
 </p>

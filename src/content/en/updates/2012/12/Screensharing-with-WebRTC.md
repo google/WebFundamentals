@@ -79,7 +79,7 @@ book_path: /web/updates/_book.yaml
     }
     
 
-<li><p>Once the live stream is available (in other words, a live 'video' of the current tab), <em>background.js</em> kicks off the peer connection process, and signalling is done via <a href="http://www.rtcshare.appspot.com">rtcshare.appspot.com</a> using XHR and Google's <a href="https://developers.google.com/appengine/docs/python/channel/overview">Channel API</a>. All in all, it works like the <a href="http://www.apprtc.appspot.com">apprtc</a> demo, except that the video stream communicated to the remote peer is from <code>chrome.tabCapture</code> and not <code>getUserMedia()</code>.</p></li>
+<li><p>Once the live stream is available (in other words, a live 'video' of the current tab), <em>background.js</em> kicks off the peer connection process, and signalling is done via <a href="http://www.rtcshare.appspot.com">rtcshare.appspot.com</a> using XHR and Google's <a href="/appengine/docs/python/channel/overview">Channel API</a>. All in all, it works like the <a href="http://www.apprtc.appspot.com">apprtc</a> demo, except that the video stream communicated to the remote peer is from <code>chrome.tabCapture</code> and not <code>getUserMedia()</code>.</p></li>
 
 
     function handleCapture(stream){

@@ -38,7 +38,7 @@ tracker](https://github.com/whatwg/notifications/issues).
 ## Create Compelling Action Buttons with Custom Icons
 
 In a recent [post about notification action buttons in Chrome
-49](/web/updates/2016/01/notification-actions?hl=en),
+49](/web/updates/2016/01/notification-actions),
 I mentioned that you can't attach images to notification buttons to make them
 snazzy and appealing, but you could use Unicode characters to inline emojis
 etc.. Now you don't have to worry: with [this

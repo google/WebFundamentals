@@ -69,7 +69,7 @@ This will create a __push-notifications__ directory containing:
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 ![7f4505211b238ae9.png](img/7f4505211b238ae9.png)
 
@@ -577,7 +577,7 @@ __What about Firefox?__
 
 
 
-*  [Push Notifications on the Open Web](/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en)
+*  [Push Notifications on the Open Web](/web/updates/2015/03/push-notificatons-on-the-open-web)
 *  [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
 *  [Best Practices for Push Notifications Permission UX](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/edit)
 *  [Do's and Don'ts for Notifications](http://android-developers.blogspot.co.uk/2015/08/get-dos-and-donts-for-notifications.html)

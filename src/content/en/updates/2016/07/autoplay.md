@@ -51,7 +51,7 @@ It's possible to unmute a video programmatically in response to a user gesture s
 
 The `muted autoplay` change will also make it possible to use `play()` with a `video` element not created in the DOM, for example [to drive WebGL playback](https://groups.google.com/a/chromium.org/d/msg/blink-dev/Q1cnzNI2GpI/-T5luh_xAwAJ).
 
-The `play()` method also [returns a promise](/web/updates/2016/03/play-returns-promise?hl=en), which can be used to check whether muted programmatic playback is enabled. There is an example of this at [simpl.info/video/scripted](https://simpl.info/video/scripted).
+The `play()` method also [returns a promise](/web/updates/2016/03/play-returns-promise), which can be used to check whether muted programmatic playback is enabled. There is an example of this at [simpl.info/video/scripted](https://simpl.info/video/scripted).
 
 ## Why the change?
 

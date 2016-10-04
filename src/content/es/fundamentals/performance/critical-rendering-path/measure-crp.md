@@ -49,7 +49,7 @@ La especificación HTML requiere condiciones específicas para cada evento: cuá
 El ejemplo anterior puede resultar algo complejo a primera vista, pero en realidad es muy simple. El API de Navigation Timing detecta todas las marcas de tiempo relevantes, y nuestro código tan solo espera a que se active el evento `onload` (que se activa después de `domInteractive`, `domContentLoaded` y `domComplete`) y calcula la diferencia entre las distintas marcas de tiempo.
 <img src="images/device-navtiming-small.png" class="center" alt="Demostración de NavTiming">
 
-Ahora ya tenemos unas metas específicas de las que realizar un seguimiento, y una función simple para dar salida a estas mediciones. Ten en cuenta que, en lugar de imprimir estas métricas en la página, también puedes modificar el código para enviarlas a un servidor de analítica web ([Google Analytics lo hace automáticamente](https://support.google.com/analytics/answer/1205784?hl=es)), que es lo ideal para estar al tanto del rendimiento de tus páginas e identificar cuáles deberían optimizarse.
+Ahora ya tenemos unas metas específicas de las que realizar un seguimiento, y una función simple para dar salida a estas mediciones. Ten en cuenta que, en lugar de imprimir estas métricas en la página, también puedes modificar el código para enviarlas a un servidor de analítica web ([Google Analytics lo hace automáticamente](https://support.google.com/analytics/answer/1205784)), que es lo ideal para estar al tanto del rendimiento de tus páginas e identificar cuáles deberían optimizarse.
 
 
 

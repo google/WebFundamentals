@@ -51,7 +51,7 @@ A especificação de HTML determina as condições específicas de cada evento: 
 O exemplo acima pode parecer intimidante à primeira vista, mas na verdade ele é bastante simples. A API de tempo de navegação captura todos os carimbos de data e hora relevantes, e nosso código simplesmente espera que o evento `onload` seja acionado &mdash; lembre que o evento onload é acionado depois de domInteractive, domContentLoaded e domComplete &mdash; e computa a diferença entre os diferentes carimbos de data e hora.
 <img src="images/device-navtiming-small.png" class="center" alt="Demonstração do tempo de navegação">
 
-Depois de tudo isso, temos algumas etapas específicas para acompanhar e uma função simples para produzir essas medidas. Em vez de imprimir essas medidas na página, também é possível modificar o código para enviá-las a um servidor de análises lógicas ([O Google Analytics faz isso automaticamente](https://support.google.com/analytics/answer/1205784?hl=pt-BR)), uma ótima maneira de acompanhar o desempenho das suas páginas e identificar páginas que podem se beneficiar com um pouco de otimização.
+Depois de tudo isso, temos algumas etapas específicas para acompanhar e uma função simples para produzir essas medidas. Em vez de imprimir essas medidas na página, também é possível modificar o código para enviá-las a um servidor de análises lógicas ([O Google Analytics faz isso automaticamente](https://support.google.com/analytics/answer/1205784)), uma ótima maneira de acompanhar o desempenho das suas páginas e identificar páginas que podem se beneficiar com um pouco de otimização.
 
 
 

@@ -48,7 +48,7 @@ La spécification du modèle HTML dicte les conditions spécifiques pour chaque 
 L'exemple ci-dessus peut semble un peu intimidant de prime abord, mais il est en réalité assez simple. L'API Navigation Timing capture tous les horodatages concernés, et notre code attend simplement le déclenchement de l'événement `onload`. N'oubliez pas que l'événement `onload` est déclenché après domInteractive, domContentLoaded et domComplete. L'API calcule alors la différence entre les différents horodatages.
 <img src="images/device-navtiming-small.png" class="center" alt="Démo NavTiming">
 
-Cela étant dit, nous disposons maintenant d'étapes spécifiques pour effectuer le suivi et d'une fonction simple pour produire ces mesures. Notez qu'au lieu d'imprimer ces statistiques sur la page, vous pouvez également modifier le code pour les envoyer à un serveur d'analyse ([Google Analytics le fait automatiquement](https://support.google.com/analytics/answer/1205784?hl=fr)). C'est un excellent moyen de garder un œil sur les performances de vos pages et d'identifier les pages candidates qui pourraient bénéficier d'un travail d'optimisation.
+Cela étant dit, nous disposons maintenant d'étapes spécifiques pour effectuer le suivi et d'une fonction simple pour produire ces mesures. Notez qu'au lieu d'imprimer ces statistiques sur la page, vous pouvez également modifier le code pour les envoyer à un serveur d'analyse ([Google Analytics le fait automatiquement](https://support.google.com/analytics/answer/1205784)). C'est un excellent moyen de garder un œil sur les performances de vos pages et d'identifier les pages candidates qui pourraient bénéficier d'un travail d'optimisation.
 
 
 

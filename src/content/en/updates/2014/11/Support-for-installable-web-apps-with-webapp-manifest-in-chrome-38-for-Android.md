@@ -60,7 +60,7 @@ An example manifest is shown below. It doesn't show everything that can be in a 
 Some interesting points in Chrome's implementation:
 
 *  The `short_name` is preferred over `name` and if provided will be used.
-   * Note: [as of Chrome 42](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en), you
+   * Note: [as of Chrome 42](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android), you
      should also provide a `name` which will be used for the App Install Banner.
 *  If you don't supply a `start_url` it will use the current page's URL.
 *  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/webapps/add_to_homescreen_data_fetcher.cc&l=115) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42). If none are found it will search for the icon that closest matches the device characteristics. **Please note**, there used to be a dedicated "density" field in the manifest spec, this has been removed from the Spec and the implementation in Chrome.  If it is defined in your manifest it will be ignored.

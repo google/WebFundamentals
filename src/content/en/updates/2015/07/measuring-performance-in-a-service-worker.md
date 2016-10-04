@@ -137,7 +137,7 @@ the performance of your install based on real in the wild user usage.
 
 Today many sites use [RUM](https://en.wikipedia.org/wiki/Real_user_monitoring) for understanding
 how the majority of their users experience their site.  Tools like Google Analytics
-already [report site speed data](https://support.google.com/analytics/answer/1205784?hl=en) using the Navigation
+already [report site speed data](https://support.google.com/analytics/answer/1205784) using the Navigation
 Timing API but will need to be updated to include performance analysis from a Worker context.
 
 ## Will the Navigation Timing API arrive to Service Workers
