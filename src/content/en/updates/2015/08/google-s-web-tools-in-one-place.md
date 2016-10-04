@@ -32,13 +32,13 @@ Head over to the [Setup section](/web/tools/setup/) to get started.
 
 [![Tips](/web/updates/images/2015-08-07-google-web-tools/tips.png)](/web/updates/tools)
 
-Inspired by the fantastic [devtoolstips.com](http://devtoolstips.com/) and [Umar's DevTips](https://umaar.com/dev-tips/), and with the help and support of Umar, we've launched a new [updates section](/web/updates/tools) that features the latest DevTools news, tips, and useful advice – as well as news from all of our other tooling projects.
+Inspired by the fantastic [devtoolstips.com](http://devtoolstips.com/){: .external } and [Umar's DevTips](https://umaar.com/dev-tips/), and with the help and support of Umar, we've launched a new [updates section](/web/updates/tools) that features the latest DevTools news, tips, and useful advice – as well as news from all of our other tooling projects.
 
 ## All you can tool
 
 [![The new tools homepage](/web/updates/images/2015-08-07-google-web-tools/featured.png)](/web/tools)
 
-[/web/tools](/web/tools) is now our main destination for everything web tooling related at Google. Come by for an [overview of all projects](/web/tools), [action oriented documentation](/web/tools/chrome-devtools#docs) and the [latest tooling news](/web/updates/tools). [Polymer](https://www.polymer-project.org) and [Material Design Lite](http://www.getmdl.io/) are linking to their own respective pages for now, but we'll include them in the tips and updates.
+[/web/tools](/web/tools) is now our main destination for everything web tooling related at Google. Come by for an [overview of all projects](/web/tools), [action oriented documentation](/web/tools/chrome-devtools#docs) and the [latest tooling news](/web/updates/tools). [Polymer](https://www.polymer-project.org) and [Material Design Lite](http://www.getmdl.io/){: .external } are linking to their own respective pages for now, but we'll include them in the tips and updates.
 
 Let us know what you think and come by often!
 

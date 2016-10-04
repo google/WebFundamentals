@@ -192,7 +192,7 @@ Great question.  Most issues with sites will be based on the fact a site has cho
 ## I am generally interested in following this change
 
 * Original bug from 2010: [https://code.google.com/p/chromium/issues/detail?id=43394](https://code.google.com/p/chromium/issues/detail?id=43394) - note: has most of the work on it.
-* [Code Review](https://codereview.chromium.org/984523003/) for commit
+* [Code Review](https://codereview.chromium.org/984523003/){: .external } for commit
 
 
 {% include "comment-widget.html" %}

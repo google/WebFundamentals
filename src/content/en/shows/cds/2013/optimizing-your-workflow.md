@@ -23,7 +23,7 @@ If we have to develop for Desktop, Mobile, Tablet, wearables and other form fact
 ## Key points
 
 +  The number of devices that we are going to have to cater for is only going to increase
-+  Getting your workflow with the right with [Grunt](http://gruntjs.com/) and [Yeoman](http://yeoman.io/)
++  Getting your workflow with the right with [Grunt](http://gruntjs.com/){: .external } and [Yeoman](http://yeoman.io/)
 +  Simplify cross browser and cross device testing with [Mini Mobile Device Lab](https://github.com/GoogleChrome/MiniMobileDeviceLab)
-+  Be smart with your emulation choice using Chrome DevTools Emulation, Stock Emulators, Cloud Based Emulators like [Saucelabs](https://saucelabs.com/), [Browserstack](https://www.browserstack.com/) and [Device Anywhere](http://www.deviceanywhere.com/) and third party emulator [Genymotion](https://www.genymotion.com/)
++  Be smart with your emulation choice using Chrome DevTools Emulation, Stock Emulators, Cloud Based Emulators like [Saucelabs](https://saucelabs.com/){: .external }, [Browserstack](https://www.browserstack.com/) and [Device Anywhere](http://www.deviceanywhere.com/) and third party emulator [Genymotion](https://www.genymotion.com/)
 + Mobile testing means more than just testing on your wifi connection, use a proxy to simulate slower network speeds

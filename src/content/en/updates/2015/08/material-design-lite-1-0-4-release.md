@@ -52,20 +52,20 @@ After you’ve reviewed the changelog, update your CDN paths to the following:
 
 It's been exciting to hear users share sites they've seen using MDL in the wild. Some of the newer ones using MDL this month include:
 
-[Hits e Beats](http://www.hitsebeats.info/):
+[Hits e Beats](http://www.hitsebeats.info/){: .external }:
 
 ![](/web/updates/images/2015-08-21-new-mdl-release/hits-e-beats-1.jpg)
 ![](/web/updates/images/2015-08-21-new-mdl-release/hits-e-beats-2.jpg)
 
-[TryColors](http://trycolors.com/):
+[TryColors](http://trycolors.com/){: .external }:
 
 ![](/web/updates/images/2015-08-21-new-mdl-release/trycolors.jpg)
 
-[ABC.es](http://www.abc.es/gasolineras/)
+[ABC.es](http://www.abc.es/gasolineras/){: .external }
 ![](/web/updates/images/2015-08-21-new-mdl-release/abc-es-1.jpg)
 ![](/web/updates/images/2015-08-21-new-mdl-release/abc-es-2.jpg)
 
-[London RIB Voyages Mobile](http://www.londonribvoyages.com/mobile/)
+[London RIB Voyages Mobile](http://www.londonribvoyages.com/mobile/){: .external }
 
 ![](/web/updates/images/2015-08-21-new-mdl-release/rib.jpg)
 

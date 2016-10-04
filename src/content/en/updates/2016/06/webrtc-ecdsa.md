@@ -82,7 +82,7 @@ RTCCertificate IndexedDB storage has already shipped in Firefox and is in Opera 
 * [WebRTC certificate management](https://w3c.github.io/webrtc-pc/#sec.cert-mgmt)
 * [RTCCertificate interface](https://w3c.github.io/webrtc-pc/#rtccertificate-interface)
 * [Discussion of RTCCertificates and storage](https://bugs.chromium.org/p/chromium/issues/detail?id=581354)
-* [Getting started with WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
+* [Getting started with WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/){: .external }
 
 
 {% include "comment-widget.html" %}

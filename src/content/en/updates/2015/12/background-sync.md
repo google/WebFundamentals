@@ -59,7 +59,7 @@ Being able to send in the background like this also yields a perceived performan
 
 ## How to request a background sync
 
-In true [extensible web](https://extensiblewebmanifesto.org/) style, this is a low level feature that gives you the freedom to do what you need. You ask for an event to be fired when the user has connectivity, which is immediate if the user already has connectivity. Then, you listen for that event and do whatever you need to do.
+In true [extensible web](https://extensiblewebmanifesto.org/){: .external } style, this is a low level feature that gives you the freedom to do what you need. You ask for an event to be fired when the user has connectivity, which is immediate if the user already has connectivity. Then, you listen for that event and do whatever you need to do.
 
 Like push messaging, it uses a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) as the event target, which enables it to work when the page isn’t open. To begin, register for a sync from a page:
 
@@ -87,7 +87,7 @@ And that's it! In the above, `doSomeStuff()` should return a promise indicating 
 
 The tag name of the sync ('myFirstSync' in the above example) should be unique for a given sync. If you register for a sync using the same tag as a pending sync, it coalesces with the existing sync. That means you can register for an "clear-outbox" sync every time the user sends a message, but if they send 5 messages while offline, you'll only get one sync when they become online. If you want 5 separate sync events, just use unique tags!
 
-[Here’s a simple demo](https://jakearchibald.github.io/isserviceworkerready/demos/sync/) that does the bare minimum; it uses the sync event to show a notification.
+[Here’s a simple demo](https://jakearchibald.github.io/isserviceworkerready/demos/sync/){: .external } that does the bare minimum; it uses the sync event to show a notification.
 
 ## What could I use background sync for?
 
@@ -120,7 +120,7 @@ Using this pattern, the user can put their phone in their pocket and get on with
 
 ## Permissions
 
-The demos I’ve shown use [web notifications](https://notifications.spec.whatwg.org/), which require permission, but background sync itself does not.
+The demos I’ve shown use [web notifications](https://notifications.spec.whatwg.org/){: .external }, which require permission, but background sync itself does not.
 
 Sync events will often complete while the user has a page open to the site, so requiring user permission would be a poor experience. Instead, we’re limiting when syncs can be registered and triggered to prevent abuse. E.g.:
 

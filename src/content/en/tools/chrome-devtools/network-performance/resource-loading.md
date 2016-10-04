@@ -402,12 +402,12 @@ that resource's row. The list below describes each of the options.
 * **Copy Response**. Copies the HTTP response of the selected resource to 
   the system clipboard.
 * **Copy as cURL**. Copies the network request of the selected resource as a
-  [cURL](http://curl.haxx.se/) command string to the system clipboard. 
+  [cURL](http://curl.haxx.se/){: .external } command string to the system clipboard. 
   See [Copying requests as cURL commands](#copy-requests-as-curl-commands).
 * **Copy All as HAR**. Copies all resources to the system clipboard as HAR data.
   A HAR file contains a JSON data structure that describes the network 
-  "waterfall". Several [third-party](https://ericduran.github.io/chromeHAR/) 
-  [tools](https://code.google.com/p/harviewer/) can reconstruct the network 
+  "waterfall". Several [third-party](https://ericduran.github.io/chromeHAR/){: .external } 
+  [tools](https://code.google.com/p/harviewer/){: .external } can reconstruct the network 
   waterfall from the data in the HAR file. See 
   [Web Performance Power Tool: HTTP Archive 
   (HAR)](https://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/)
@@ -436,7 +436,7 @@ that resource's row. The list below describes each of the options.
 
 ### Copy one or all requests as cURL commands {: #curl }
 
-[cURL](http://curl.haxx.se/) is a command line tool for making HTTP 
+[cURL](http://curl.haxx.se/){: .external } is a command line tool for making HTTP 
 transactions. 
 
 Right-click on a resource within the Requests Table, hover over 

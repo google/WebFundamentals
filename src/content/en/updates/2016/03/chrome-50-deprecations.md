@@ -155,7 +155,7 @@ distinguish between the two `Enter` keys on an extended keyboard.
 
 ## Error and Success Handlers Required in RTCPeerConnection Methods
 
-**TL;DR**: The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/)
+**TL;DR**: The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/){: .external }
 RTCPeerConnection methods [`createOffer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createOffer-Promise-RTCSessionDescription--RTCOfferOptions-options)
 and [`createAnswer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createAnswer-Promise-RTCSessionDescription--RTCAnswerOptions-options)
 now require an error handler as well as a success handler. Previously it had
@@ -175,7 +175,7 @@ This is part of clearing the way for introducing promises on these methods,
 as required by the [WebRTC spec](https://w3c.github.io/webrtc-pc/).
 
 Here's an example from the WebRTC
-[RTCPeerConnection demo](https://webrtc.github.io/samples/src/content/peerconnection/pc1/)
+[RTCPeerConnection demo](https://webrtc.github.io/samples/src/content/peerconnection/pc1/){: .external }
 ([main.js, line 126](https://github.com/webrtc/samples/blob/gh-pages/src/content/peerconnection/pc1/js/main.js#L126)):
 
 

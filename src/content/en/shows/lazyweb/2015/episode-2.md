@@ -72,18 +72,18 @@ Callbacks may be a thing of the past because the IE team has announced that gene
 
 ### 3D Sketcher by Jason
 
-[http://codepen.io/loktar00/full/DphFg/](http://codepen.io/loktar00/full/DphFg/)
+[http://codepen.io/loktar00/full/DphFg/](http://codepen.io/loktar00/full/DphFg/){: .external }
 
 ### day 18/100 phase rings by sixsided
 
-[http://codepen.io/sixsided/full/qEeEYm/](http://codepen.io/sixsided/full/qEeEYm/)
+[http://codepen.io/sixsided/full/qEeEYm/](http://codepen.io/sixsided/full/qEeEYm/){: .external }
 
 ### Gaussian Distribution with Physics by Frank Dumont
 
-[http://codepen.io/fdumont/full/CvdDI/](http://codepen.io/fdumont/full/CvdDI/)
+[http://codepen.io/fdumont/full/CvdDI/](http://codepen.io/fdumont/full/CvdDI/){: .external }
 
 ### Unify like PARTICLES OF MATTER by Abhijit Hota
 
-[http://codepen.io/XDBoy018/full/JodWKN/](http://codepen.io/XDBoy018/full/JodWKN/)
+[http://codepen.io/XDBoy018/full/JodWKN/](http://codepen.io/XDBoy018/full/JodWKN/){: .external }
 
 Let us know what you think on Twitter #LazyWebShow

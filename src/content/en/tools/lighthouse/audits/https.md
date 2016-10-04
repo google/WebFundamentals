@@ -28,11 +28,11 @@ For more information on why all sites should be protected with HTTPS, see
 Migrate your site to HTTPS.
 
 Many hosting platforms, such as
-[Firebase](https://firebase.google.com/docs/hosting/) or [GitHub
-Pages](https://pages.github.com/), are secure by default.
+[Firebase](https://firebase.google.com/docs/hosting/){: .external } or [GitHub
+Pages](https://pages.github.com/){: .external }, are secure by default.
 
 If you're running your own servers and need a cheap and easy way to generate
-certficates, check out [Let's Encrypt](https://letsencrypt.org/). For more help
+certficates, check out [Let's Encrypt](https://letsencrypt.org/){: .external }. For more help
 on enabling HTTPS on your servers, see the following set of docs: [Encrypting
 data in transit](/web/fundamentals/security/encrypt-in-transit/).
 

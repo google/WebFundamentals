@@ -149,7 +149,7 @@ The ability to record audio and video without plugins is relatively new to web a
 We'd also like to know what usage scenarios are most important to you, and what features you would like us to prioritize. Comment on this article or track progress at [crbug.com/262211](https://crbug.com/262211).
 
 ## Demos
-* [webrtc.github.io/samples/src/content/getusermedia/record](https://webrtc.github.io/samples/src/content/getusermedia/record/)
+* [webrtc.github.io/samples/src/content/getusermedia/record](https://webrtc.github.io/samples/src/content/getusermedia/record/){: .external }
 * [simpl.info/mr](https://simpl.info/mediarecorder) (same code, easier URL for mobile!)
 * [Record a video and upload it to YouTube](https://jeffy.info/google-youtube-upload/components/google-youtube-upload/demo/) with an experimental custom &lt;google-youtube-upload&gt; element
 

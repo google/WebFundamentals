@@ -82,7 +82,7 @@ When serving the desktop version, indicate that there's a mobile version on
 another URL by adding a `link` tag with a `rel="alternate" attribute that points
 to the mobile version in the `href` attribute.
 
-[http://www.example.com/](http://www.example.com/) HTML
+[http://www.example.com/](http://www.example.com/){: .external } HTML
 
 
     <title>...</title>
@@ -96,7 +96,7 @@ version on another URL by adding a `link` tag with a `rel="canonical"` attribute
 that points to the desktop version in the `href` attribute. Help search engines
 understand that the mobile version is explicitly for small screens by adding a `media` attribute with a value of `"only screen and (max-width: 640px)"`.
 
-[http://m.example.com/](http://m.example.com/) HTML
+[http://m.example.com/](http://m.example.com/){: .external } HTML
 
 
     <title>...</title>
@@ -126,7 +126,7 @@ To indicate that the URL serves different HTML depending on user agent, provide 
 desktop and mobile versions separately, and intermediate proxies to cache those
 contents gracefully.
 
-[http://www.example.com/](http://www.example.com/) HTTP Header
+[http://www.example.com/](http://www.example.com/){: .external } HTTP Header
 
 
     HTTP/1.1 200 OK

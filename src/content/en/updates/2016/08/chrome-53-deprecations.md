@@ -69,7 +69,7 @@ DHE-based ciphers have been deprecated since Chrome 51. Support is being removed
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6687420359639040) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=496901)
 
-The current version of the [File API](https://w3c.github.io/FileAPI/) standard does not contain the `FileError` interface and it's support was deprecated some time in 2013. In Chrome 53, this deprecation warning will be printed to the Dev Tools console:
+The current version of the [File API](https://w3c.github.io/FileAPI/){: .external } standard does not contain the `FileError` interface and it's support was deprecated some time in 2013. In Chrome 53, this deprecation warning will be printed to the Dev Tools console:
 
 'FileError' is deprecated and will be removed in 54. Please use the 'name' or 'message' attributes of the error rather than 'code'.
 

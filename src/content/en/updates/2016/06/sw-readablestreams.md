@@ -17,7 +17,7 @@ Anyone who's used [service workers](http://www.html5rocks.com/en/tutorials/servi
 could tell you that they’re asynchronous all the way down. They rely exclusively
 on event-based interfaces, like 
 [`FetchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent),
-and use [promises](http://www.html5rocks.com/en/tutorials/es6/promises/) to
+and use [promises](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external } to
 signal when asynchronous operations are complete.
 
 Asynchronicity is equally important, albeit less visible to the developer, when
@@ -37,7 +37,7 @@ and call it a day. The good news is that the `Response`s created by both of
 those methods are already streamable! The bad news is that "manually"
 [constructed](https://developer.mozilla.org/en-US/docs/Web/API/Response/Response)
 `Response`s aren't streamable, at least until now. That's where the
-[Streams API](https://streams.spec.whatwg.org/) enters the picture.
+[Streams API](https://streams.spec.whatwg.org/){: .external } enters the picture.
 
 ## Streams?
 
@@ -86,7 +86,7 @@ So what would a real-world example look like?
 [great example](https://gist.github.com/jakearchibald/64e26e7a1d9b06b3fa3ec0383f2b1f91)
 of using streams to stitch together an HTML response from multiple cached HTML
 snippets, along with "live" data streamed via `fetch()`—in this case, content
-for his [blog](https://jakearchibald.com/).
+for his [blog](https://jakearchibald.com/){: .external }.
 
 The advantage using a streaming response, as
 [Jake explains](https://jakearchibald.com/2016/streams-ftw/#creating-one-stream-from-multiple-sources-to-supercharge-page-render-times),

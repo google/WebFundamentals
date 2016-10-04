@@ -71,22 +71,22 @@ Learning git can be tough. A look at StackOverflow reveals over 53000 git relate
 [https://www.udacity.com/course/ud860](https://www.udacity.com/course/ud860)
 
 ### ScreenSavers With JavaScript by Yash Bhardwaj
-[http://codepen.io/yashbhardwaj/full/hHgtE/](http://codepen.io/yashbhardwaj/full/hHgtE/)
+[http://codepen.io/yashbhardwaj/full/hHgtE/](http://codepen.io/yashbhardwaj/full/hHgtE/){: .external }
 
 ### Sweet chaos in the space of tulle By Bailh
-[http://codepen.io/cathbailh/full/KpPjPg/](http://codepen.io/cathbailh/full/KpPjPg/)
+[http://codepen.io/cathbailh/full/KpPjPg/](http://codepen.io/cathbailh/full/KpPjPg/){: .external }
 
 ### CSS Animation 101 - Hero image by Donovan Hutchinson
-[http://codepen.io/donovanh/full/EjYeLa/](http://codepen.io/donovanh/full/EjYeLa/)
+[http://codepen.io/donovanh/full/EjYeLa/](http://codepen.io/donovanh/full/EjYeLa/){: .external }
 
 ### Linjer by Hakim El Hattab
-[http://codepen.io/hakimel/full/zwxba/](http://codepen.io/hakimel/full/zwxba/)
+[http://codepen.io/hakimel/full/zwxba/](http://codepen.io/hakimel/full/zwxba/){: .external }
 
 Let us know what you think on Twitter #LazyWebShow
 
 For more news on the Web, check out these resources:
-JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/)
-Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/)
-HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/)
+JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/){: .external }
+Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/){: .external }
+HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/){: .external }
 
 Subscribe to the Google Developers channel at: [https://goo.gl/mQyv5L](https://goo.gl/mQyv5L)

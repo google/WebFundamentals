@@ -25,7 +25,7 @@ The answer is: absolutely.
 
 ## Introducing PSI for Node
 
-Today we’re happy to introduce [PSI](https://github.com/addyosmani/psi/) for Node - a new module that works great with [Gulp](http://gulpjs.com/), [Grunt](http://gruntjs.com/) and other build systems and can connect up to the PageSpeed Insights service and return a detailed report of your web performance. Let’s look at a preview of the type of reporting it enables:
+Today we’re happy to introduce [PSI](https://github.com/addyosmani/psi/){: .external } for Node - a new module that works great with [Gulp](http://gulpjs.com/), [Grunt](http://gruntjs.com/) and other build systems and can connect up to the PageSpeed Insights service and return a detailed report of your web performance. Let’s look at a preview of the type of reporting it enables:
 
 <img src="/web/updates/images/2014/06/webperf/1ub50lI.png"/>
 

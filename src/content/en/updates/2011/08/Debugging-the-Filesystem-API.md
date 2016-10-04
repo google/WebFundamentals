@@ -10,7 +10,7 @@ book_path: /web/updates/_book.yaml
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
 
-The [HTML5 Filesystem](http://www.html5rocks.com/tutorials/file/filesystem/) is a powerful API. With power, comes complexity. With complexity, comes more debugging frustrations. It's an unfortunate fact that the Chrome [DevTools](/web/tools/chrome-devtools) currently do not have support for the Filesystem API. It makes debugging it more difficult than it should be. By difficult, I mean being required to write code to list/remove files in the filesystem.
+The [HTML5 Filesystem](http://www.html5rocks.com/tutorials/file/filesystem/){: .external } is a powerful API. With power, comes complexity. With complexity, comes more debugging frustrations. It's an unfortunate fact that the Chrome [DevTools](/web/tools/chrome-devtools) currently do not have support for the Filesystem API. It makes debugging it more difficult than it should be. By difficult, I mean being required to write code to list/remove files in the filesystem.
 
 During my [endeavors](http://oreilly.com/catalog/0636920021360) with the Filesystem API, I picked up a couple of tips along the way that I thought I'd pass along. Each tip has its own set of limitations, but using a combination of these will get you 90% of the way. Here are the top 5:
 

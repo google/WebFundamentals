@@ -89,7 +89,7 @@ Aside from the above example, there are many other scenarios where this feature 
 There may be times when a user will be focused on an item that needs to be set to `visibility: hidden` or `display: none`. An example of this would be clickable items within a carousel. In prior versions of Chrome, hiding the currently focused item in this manner would reset focus back to the default starting point, turning the aforementioned carousel into a nasty trap for motor impaired users. With sequential focus starting point, this is no longer the case. If an element is hidden through either of the above methods, pressing the \[Tab\] key will simply move to the next focusable item.
 
 #### Skip Links
-Skip links are invisible anchors which can only be reached via the keyboard. They allow users to “skip" navigation elements in order to jump straight into the content of a page and they can be extremely beneficial for keyboard and switch device users. As explained [on the WebAIM site](http://webaim.org/techniques/skipnav/):
+Skip links are invisible anchors which can only be reached via the keyboard. They allow users to “skip" navigation elements in order to jump straight into the content of a page and they can be extremely beneficial for keyboard and switch device users. As explained [on the WebAIM site](http://webaim.org/techniques/skipnav/){: .external }:
 
 > Without some sort of system for bypassing the long list of links, some users are at a huge disadvantage. Consider users with no arm movement, who use computers by tapping their heads on a switch or that use a stick in their mouth to press keyboard keys. Requiring users to perform any action perhaps 100s of times before reaching the main content is simply unacceptable.
 

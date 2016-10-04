@@ -71,7 +71,7 @@ Facebook's [Augmented Traffic Control](http://facebook.github.io/augmented-traff
 
 > Facebook even instituted [2G Tuesdays](https://code.facebook.com/posts/1556407321275493/building-for-emerging-markets-the-story-behind-2g-tuesdays/) to help understand how people on 2G use their product. On Tuesdays, employees get a pop-up that gives them the option to simulate a 2G connection.
 
-The [Charles](https://www.charlesproxy.com/) HTTP/HTTPS proxy can be used to [adjust bandwidth and latency](http://www.charlesproxy.com/documentation/proxying/throttling/). Charles is commercial software, but a free trial is available.
+The [Charles](https://www.charlesproxy.com/){: .external } HTTP/HTTPS proxy can be used to [adjust bandwidth and latency](http://www.charlesproxy.com/documentation/proxying/throttling/). Charles is commercial software, but a free trial is available.
 
 ![Charles proxy bandwidth and latency settings](images/charles.png)
 

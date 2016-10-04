@@ -14,7 +14,7 @@ languages, they've helped to make [/web](/web/) and the web better!
 ## Found an issue or something need to be updated?
 
 You can [file an issue](https://github.com/Google/WebFundamentals/issues) on
-our [GitHub repository](https://github.com/Google/WebFundamentals/) and
+our [GitHub repository](https://github.com/Google/WebFundamentals/){: .external } and
 someone will take a look, or you can fix it yourself by submiting a
 [pull request](#submitting-a-pull-request)!
 

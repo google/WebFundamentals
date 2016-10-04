@@ -16,7 +16,7 @@ The Chrome implementation lets a full-screen webpage ask your permission to capt
 
 To enable the Pointer Lock API in current Chrome builds, the easiest way is to go to `about:flags` and turn on the "Enable Pointer Lock"-flag. You can also turn it on by starting Chrome using the `--enable-pointer-lock` command line flag.
 
-There are already a couple cool demos out taking advantage of this feature. Check out the [Quake 3 WebGL demo](http://media.tojicode.com/q3bsp/) by Brandon Jones to see how Pointer Lock API makes WebGL FPS games a viable prospect. Another cool demo is the [Webgl Street Viewer](http://www.clicktorelease.com/code/street/)
+There are already a couple cool demos out taking advantage of this feature. Check out the [Quake 3 WebGL demo](http://media.tojicode.com/q3bsp/){: .external } by Brandon Jones to see how Pointer Lock API makes WebGL FPS games a viable prospect. Another cool demo is the [Webgl Street Viewer](http://www.clicktorelease.com/code/street/)
 
 To get started with the Pointer Lock API, here's a small snippet cribbed from MDN:
 

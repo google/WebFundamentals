@@ -27,7 +27,7 @@ td[align="right"] {
 
 One of the most significant benefits of [service workers](/web/fundamentals/primers/service-worker/) (from a performance perspective, at least) is their ability to proactively control the caching of assets. A web application that can cache all of its necessary resources should load substantially faster for returning visitors. But what do these gains actually look like to real users? And how do you even measure this?
 
-The [Google I/O web app](https://events.google.com/io2016/) (IOWA for short) is a [progressive web app](/web/progressive-web-apps/) that leveraged most of the new capabilities offered by service workers to deliver a rich, app-like experience to its users. It also used Google Analytics to capture key performance data and usage patterns from its large and diverse user audience.
+The [Google I/O web app](https://events.google.com/io2016/){: .external } (IOWA for short) is a [progressive web app](/web/progressive-web-apps/) that leveraged most of the new capabilities offered by service workers to deliver a rich, app-like experience to its users. It also used Google Analytics to capture key performance data and usage patterns from its large and diverse user audience.
 
 This case study explores how IOWA used Google Analytics to answer key performance questions and report on the real-world impact of service workers.
 
@@ -266,7 +266,7 @@ As I mentioned, sending the *Service Worker Status* dimension with every hit all
 
 <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/15qxUkT8j8FY9ECQilKKPvw3BDSgF4QtplpFAiQUSyZg/pubchart?oid=537990599&amp;format=interactive"></iframe>
 
-As you can see almost 85% of all pageviews for IOWA were from browsers that [support service worker](https://jakearchibald.github.io/isserviceworkerready/).
+As you can see almost 85% of all pageviews for IOWA were from browsers that [support service worker](https://jakearchibald.github.io/isserviceworkerready/){: .external }.
 
 ## The results: answering our questions
 

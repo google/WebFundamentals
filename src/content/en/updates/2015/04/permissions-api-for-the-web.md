@@ -22,7 +22,7 @@ you to check the current permission state via
 As the web platform grows in API's, there needs to be a single, standard way for
 developers to check the status of a permission rather than having to remember
 how each and every API works. The [Permission
-API](https://w3c.github.io/permissions/), available in [Chrome version 43](https://www.chromestatus.com/feature/6376494003650560), is
+API](https://w3c.github.io/permissions/){: .external }, available in [Chrome version 43](https://www.chromestatus.com/feature/6376494003650560), is
 intended to be this single, standard way to check the permission status of an API.
 
 ## permissions.query()
@@ -121,7 +121,7 @@ privileges and taking full advantage of these APIs when you know you have been
 granted permission.
 
 [You can find a full set of examples
-here](https://googlechrome.github.io/samples/permissions/).
+here](https://googlechrome.github.io/samples/permissions/){: .external }.
 
 ## Browser Support
 

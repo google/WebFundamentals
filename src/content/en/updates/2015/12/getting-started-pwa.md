@@ -100,9 +100,9 @@ The manifest enables your web app to have a more native-like presence on the use
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-1-@1x.jpg" alt="Add to home screen, launch from home screen and full-screen app-like experiences."/>
 
-A sample manifest file can be found in [Web Starter Kit](https://github.com/google/web-starter-kit/blob/master/app/manifest.json) and over in the [Google Chrome samples](https://github.com/GoogleChrome/samples/tree/0768ee71e4548f779219798d8c83fdcc67b469e8/web-application-manifest). Bruce Lawson wrote a [Manifest Generator](http://brucelawson.github.io/manifest/) and Mounir Lamouri has also written a handy [Web Manifest validator](https://mounirlamouri.github.io/manifest-validator/) worth checking out.
+A sample manifest file can be found in [Web Starter Kit](https://github.com/google/web-starter-kit/blob/master/app/manifest.json) and over in the [Google Chrome samples](https://github.com/GoogleChrome/samples/tree/0768ee71e4548f779219798d8c83fdcc67b469e8/web-application-manifest). Bruce Lawson wrote a [Manifest Generator](http://brucelawson.github.io/manifest/){: .external } and Mounir Lamouri has also written a handy [Web Manifest validator](https://mounirlamouri.github.io/manifest-validator/) worth checking out.
 
-In my personal projects, I rely on [realfavicongenerator](http://realfavicongenerator.net/) to generate the correctly sized icons for both the web app manifest and for use across iOS, desktop and so on. The [favicons](https://github.com/haydenbleasel/favicons) Node module is also able to achieve a similar output as part of your build process.
+In my personal projects, I rely on [realfavicongenerator](http://realfavicongenerator.net/){: .external } to generate the correctly sized icons for both the web app manifest and for use across iOS, desktop and so on. The [favicons](https://github.com/haydenbleasel/favicons) Node module is also able to achieve a similar output as part of your build process.
 
 Chromium-based browsers (Chrome, Opera etc.) [support](https://www.chromestatus.com/feature/6488656873259008) web app manifests today with Firefox actively developing support and Edge listing them as [under consideration](https://dev.windows.com/en-us/microsoft-edge/platform/status/webapplicationmanifest). WebKit/Safari have not yet posted public signals about their intents to implement the feature just yet.
 
@@ -118,7 +118,7 @@ src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-2-@1x.jpg" alt=
 In order for the app install prompts to display your app must:
 
 * Have a valid web app manifest
-* Be served over HTTPS (see [letsencrypt](https://letsencrypt.org/) for a free certificate)
+* Be served over HTTPS (see [letsencrypt](https://letsencrypt.org/){: .external } for a free certificate)
 * Have a valid service worker registered
 * Be visited twice, with at least 5 minutes between visits
 
@@ -166,7 +166,7 @@ Michael van Ouwerkerk from the Chrome team also has a [6 min intro](/web/shows/g
 
 Additional features coming to the web platform such as [Background Syncronisation](https://github.com/WICG/BackgroundSync/blob/master/explainer.md) (for data sync with a server even when your web app is closed) and [Web Bluetooth](https://webbluetoothcg.github.io/web-bluetooth/) (for talking to Bluetooth devices from your web app) can also be layered into your Progressive Web App in this manner.
 
-One-shot Background Sync has been [enabled](https://codereview.chromium.org/1514383002/) in Chrome and Jake Archibald has a [video](https://www.youtube.com/watch?v=wjUCXgM70c0) of his [Offline wikipedia app](https://github.com/jakearchibald/offline-wikipedia) and [article](/web/updates/2015/12/background-sync) demonstrating it in action. Francois Beaufort also has a number of [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/) available if interested in trying out that API.
+One-shot Background Sync has been [enabled](https://codereview.chromium.org/1514383002/){: .external } in Chrome and Jake Archibald has a [video](https://www.youtube.com/watch?v=wjUCXgM70c0) of his [Offline wikipedia app](https://github.com/jakearchibald/offline-wikipedia) and [article](/web/updates/2015/12/background-sync) demonstrating it in action. Francois Beaufort also has a number of [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/) available if interested in trying out that API.
 
 ### Framework-friendly
 

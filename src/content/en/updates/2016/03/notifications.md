@@ -32,7 +32,7 @@ ability to:
 Chrome 50 has also added [Payloads for Push
 notifications](/web/updates). To stay up to date
 with the Notifications API as it's implemented in Chrome, follow the
-[spec](https://notifications.spec.whatwg.org/) and the [spec issue
+[spec](https://notifications.spec.whatwg.org/){: .external } and the [spec issue
 tracker](https://github.com/whatwg/notifications/issues).
 
 ## Create Compelling Action Buttons with Custom Icons

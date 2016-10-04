@@ -13,7 +13,7 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-[AirHorner](https://airhorner.com/) is a simple air horn.
+[AirHorner](https://airhorner.com/){: .external } is a simple air horn.
 
 ### What we like?
 
