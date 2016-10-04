@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Hiding content from assistive technology
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # Hiding and Updating Content {: .page-title }
 
@@ -42,10 +42,9 @@ Also, as we have seen, it's possible to provide screen reader only text via an
 `aria-label`, `aria-labelledby`, or `aria-describedby` attribute referencing an
 element that is otherwise hidden.
 
-See this WebAIM article on <a
-href="http://webaim.org/techniques/css/invisiblecontent/#techniques"
-target="_blank">Techniques for hiding text</a> for more information on creating
-"screen reader only" text.
+See this WebAIM article on [Techniques for hiding
+text](http://webaim.org/techniques/css/invisiblecontent/#techniques){: .external }
+for more information on creating "screen reader only" text.
 
 Finally, ARIA provides a mechanism for excluding content from assistive
 technology that is not visually hidden, using the `aria-hidden` attribute.

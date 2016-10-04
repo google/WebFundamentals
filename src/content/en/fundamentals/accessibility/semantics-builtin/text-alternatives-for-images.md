@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Using the alt attribute to provide text alternatives for images
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # Text Alternatives for Images {: .page-title }
 

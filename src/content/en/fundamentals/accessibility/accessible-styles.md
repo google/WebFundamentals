@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Using proper styling to improve accessibility
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # Accessible Styles {: .page-title }
 
@@ -30,10 +30,11 @@ three sections.
 Generally, any time we focus an element, we rely on the built-in browser focus
 ring (the CSS `outline` property) to style the element. The focus ring is handy
 because, without it, it's impossible for a keyboard user to tell which element
-has the focus. The <a href="http://webaim.org/standards/wcag/checklist"
-target="_blank">WebAIM checklist</a> makes a point of this, requiring that "It
-is visually apparent which page element has the current keyboard focus (i.e., as
-you tab through the page, you can see where you are)."
+has the focus. The [WebAIM
+checklist](http://webaim.org/standards/wcag/checklist){: .external } makes a
+point of this, requiring that "It is visually apparent which page element has
+the current keyboard focus (i.e., as you tab through the page, you can see where
+you are)."
 
 ![form elements with a focus ring](imgs/focus-ring.png)
 
@@ -42,9 +43,7 @@ with your page design. Some developers remove this style altogether by setting
 the element's `outline` to `0` or `none`. But without a focus indicator, how is
 a keyboard user supposed to know which item they're interacting with?
 
-<aside class="warning">
-  Never set outline to 0 or none without providing a focus alternative!
-</aside>
+Warning: Never set outline to 0 or none without providing a focus alternative!
 
 You might be familiar with adding hover states to your controls using the CSS
 `:hover` *pseudo-class*. For example, you might use `:hover` on a link element
@@ -63,6 +62,8 @@ your element the same hover and focus styles, which solves the
 accessibility experience improves everyone's experience.
 
 ### Input modality
+
+![a native HTML button with a focus ring](imgs/sign-up.png){: .attempt-right }
 
 For native elements like `button`, browsers can detect whether user interaction
 occurred via the mouse or the keyboard press, and typically only display the
@@ -119,14 +120,14 @@ In Firefox, the `:-moz-focusring` CSS pseudo-class allows you to write a focus
 style that is only applied if the element is focused via the keyboard, quite a
 handy feature. While this pseudo-class is currently only supported in Firefox,
 [there is currently work going on to turn it into a
-standard](https://github.com/wicg/modality).
+standard](https://github.com/wicg/modality){: .external }.
 
-There is also <a
-href="http://radar.oreilly.com/2015/08/proposing-css-input-modailty.html"
-target="_blank">this great article by Alice Boxhall and Brian Kardell</a> that
-explores the topic of modality and contains prototype code for differentiating
-between mouse and keyboard input. You can use their solution today, and then
-include the focus ring pseudo-class later when it has more widespread support.
+There is also [this great article by Alice Boxhall and Brian
+Kardell](http://radar.oreilly.com/2015/08/proposing-css-input-modailty.html){: .external }
+that explores the topic of modality and contains prototype code for
+differentiating between mouse and keyboard input. You can use their solution
+today, and then include the focus ring pseudo-class later when it has more
+widespread support.
 
 ## Styling states with ARIA
 
@@ -162,18 +163,23 @@ We know that it's a good idea to design responsively to provide the best
 multi-device experience, but responsive design also yields a win for
 accessibility.
 
-Consider a site like <a href="https://www.udacity.com/"
-target="_blank">Udacity</a>. A low-vision user who has difficulty reading small
-print might zoom in the page, perhaps as much as 400%, whereupon they are now
-essentially viewing the mobile version of the site on their desktop.
+Consider a site like [Udacity.com](https://www.udacity.com/courses/all):
 
-Because the site is designed responsively, the UI will rearrange itself for the
-"smaller viewport" (actually for the larger page), which is great for desktop
-users who require screen magnification and for mobile screen reader users as
-well. It's a win-win. In fact, just by designing responsively, we're meeting <a
-href="http://webaim.org/standards/wcag/checklist#sc1.4.4" target="_blank">rule
-1.4.4 of the WebAIM checklist</a>, which states that a page "...should be
-readable and functional when the text size is doubled."
+![Udacity.com at 100% magnification](imgs/udacity.jpg)
+
+A low-vision user who has difficulty reading small print might zoom in the page,
+perhaps as much as 400%. Because the site is designed responsively, the UI will
+rearrange itself for the "smaller viewport" (actually for the larger page),
+which is great for desktop users who require screen magnification and for mobile
+screen reader users as well. It's a win-win. Here's the same page magnified to
+400%:
+
+![Udacity.com at 400% magnification](imgs/udacity-zoomed.jpg)
+
+In fact, just by designing responsively, we're meeting [rule 1.4.4 of the WebAIM
+checklist](http://webaim.org/standards/wcag/checklist#sc1.4.4){: .external },
+which states that a page "...should be readable and functional when the text
+size is doubled."
 
 Going over all of responsive design is outside the scope of this guide, but
 here are a few important takeaways that will benefit your responsive experience
@@ -194,10 +200,8 @@ and give your users better access to your content.
 
 ![a phone display without and with the viewport meta tag](imgs/scrunched-up.jpg)
 
-<aside class="warning">
-  When using the viewport meta tag, make sure you don't set maximum-scale=1 or
-  set user-scaleable=no. Let users zoom if they need to!
-</aside>
+Warning: When using the viewport meta tag, make sure you don't set
+maximum-scale=1 or set user-scaleable=no. Let users zoom if they need to!
 
  - Another technique to keep in mind is designing with a responsive grid. As you
    saw with the Udacity site, designing with a grid means your content will
@@ -246,11 +250,11 @@ contrast*, the relationship between the foreground and background colors'
 *luminance*. When the colors are similar, the contrast ratio is low; when they
 are different, the contrast ratio is high.
 
-The <a href="http://webaim.org/standards/wcag/" target="_blank">WebAIM
-guidelines</a> recommend an AA (minimum) contrast ratio of 4.5:1 for all text.
-An exception is made for very large text (120-150% larger than the default body
-text), for which the ratio can go down to 3:1. Notice the difference in the
-contrast ratios shown below.
+The [WebAIM guidelines](http://webaim.org/standards/wcag/){: .external }
+recommend an AA (minimum) contrast ratio of 4.5:1 for all text. An exception is
+made for very large text (120-150% larger than the default body text), for which
+the ratio can go down to 3:1. Notice the difference in the contrast ratios shown
+below.
 
 ![comparison of various contrast ratios](imgs/contrast-ratios.jpg)
 
@@ -260,12 +264,11 @@ equivalent to approximately 20/40 vision. 20/40 is commonly reported as typical
 visual acuity of people at about age 80. For users with low vision impairments
 or color deficiencies, we can increase the contrast up to 7:1 for body text.
 
-You can use the <a
-href="https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en"
-target="_blank">Accessibility DevTools extension</a> for Chrome to identify
-contrast ratios. One benefit of using the Chrome Devtools is that they will
-suggest AA and AAA (enhanced) alternatives to your current colors, and you can
-click the values to preview them in your app.
+You can use the [Accessibility DevTools
+extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb){: .external }
+for Chrome to identify contrast ratios. One benefit of using the Chrome Devtools
+is that they will suggest AA and AAA (enhanced) alternatives to your current
+colors, and you can click the values to preview them in your app.
 
 To run a color/contrast audit, follow these basic steps.
 
@@ -276,9 +279,9 @@ To run a color/contrast audit, follow these basic steps.
 
 ![the devtools contrast audit dialog](imgs/contrast-audit.png)
 
-WebAIM itself provides a handy <a
-href="http://webaim.org/resources/contrastchecker/" target="_blank">color
-contrast checker</a> you can use to examine the contrast of any color pair.
+WebAIM itself provides a handy [color contrast
+checker](http://webaim.org/resources/contrastchecker/){: .external } you can use
+to examine the contrast of any color pair.
 
 ### Don't convey information with color alone
 
@@ -288,13 +291,11 @@ men and 1 in 200 women have some form of "color blindness"; that means about
 When we rely on color to convey information, we push that number to unacceptable
 levels.
 
-<aside class="note">
-  The term "color blindness" is often used to describe a visual condition where a
-  person has trouble distinguishing colors, but in fact very few people are truly
-  color blind. Most people with color deficiencies can see some or most colors,
-  but have difficulty differentiating between certain colors such as reds and
-  greens (most common), browns and oranges, and blues and purples.
-</aside>
+Note: The term "color blindness" is often used to describe a visual condition
+where a person has trouble distinguishing colors, but in fact very few people
+are truly color blind. Most people with color deficiencies can see some or most
+colors, but have difficulty differentiating between certain colors such as reds
+and greens (most common), browns and oranges, and blues and purples.
 
 For example, in an input form, a telephone number might be underlined in red to
 show that it is invalid. But to a color deficient or screen reader user, that
@@ -303,14 +304,14 @@ provide multiple avenues for the user to access critical information.
 
 ![an input form with an error underlined in red](imgs/input-form1.png)
 
-The <a href="http://webaim.org/standards/wcag/checklist#sc1.4.1"
-target="_blank">WebAIM checklist states in section 1.4.1</a> that "color should
-not be used as the sole method of conveying content or distinguishing visual
-elements." It also notes that "color alone should not be used to distinguish
-links from surrounding text" unless they meet certain contrast requirements.
-Instead, the checklist recommends adding an additional indicator such as an
-underscore (using the CSS `text-decoration` property) to indicate when the link
-is active.
+The [WebAIM checklist states in section
+1.4.1](http://webaim.org/standards/wcag/checklist#sc1.4.1){: .external } that
+"color should not be used as the sole method of conveying content or
+distinguishing visual elements." It also notes that "color alone should not be
+used to distinguish links from surrounding text" unless they meet certain
+contrast requirements. Instead, the checklist recommends adding an additional
+indicator such as an underscore (using the CSS `text-decoration` property) to
+indicate when the link is active.
 
 An easy way to fix the previous example is to add an additional message to the
 field, announcing that it is invalid and why.
@@ -322,10 +323,10 @@ for areas where you may be relying too heavily on color to convey important
 information.
 
 If you're curious about how your site looks to different people, or if you rely
-heavily on the use of color in your UI, you can use the <a
-href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl?hl=en-US"
-target="_blank">NoCoffee Chrome extension</a> to simulate various forms of
-visual impairment, including different types of color blindness.
+heavily on the use of color in your UI, you can use the [NoCoffee Chrome
+extension](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl){: .external }
+to simulate various forms of visual impairment, including different types of
+color blindness.
 
 ### High contrast mode
 
@@ -336,10 +337,9 @@ on the page. There are a few ways to get a high-contrast setup on your machine.
 
 Operating systems like Mac OSX and Windows offer high-contrast modes that can be
 enabled for everything at the system level. Or users can install an extension,
-like the <a
-href="https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph?hl=en-US"
-target="_blank">Chrome High Contrast extension</a> to enable high-contrast only
-in that specific app.
+like the [Chrome High Contrast
+extension](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph){: .external }
+to enable high-contrast only in that specific app.
 
 A useful exercise is to turn on high-contrast settings and verify that all of
 the UI in your application is still visible and usable.

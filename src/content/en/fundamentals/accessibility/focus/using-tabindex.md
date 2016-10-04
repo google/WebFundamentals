@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Modifying the DOM order with tabindex
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # Using tabindex {: .page-title }
 
@@ -33,7 +33,12 @@ its `focus()` method
     <custom-button tabindex="0">Press Tab to Focus Me!</custom-button>
 
 {% framebox height="60px" %}
-&nbsp;&nbsp;<custom-button tabindex="0">Press Tab to Focus Me!</custom-button>
+<style>
+  custom-button {
+    margin: 10px;
+  }
+</style>
+<custom-button tabindex="0">Press Tab to Focus Me!</custom-button>
 {% endframebox %}
 
 `tabindex="-1"`: Removes an element from the natural tab order, but the element
@@ -107,25 +112,23 @@ the keyboard could still interact with your control.
       <option>No preference</option>
     </select>
 
-{% framebox height="80px" %}
 <select>
   <option>Aisle seat</option>
   <option>Window seat</option>
   <option>No preference</option>
 </select>
-{% endframebox %}
 
 Knowing which keyboard behaviors to implement can be difficult, but there is a
-helpful document you can refer to. The <a
-href="https://www.w3.org/TR/wai-aria-practices/" target="_blank">Accessible Rich
-Internet Applications (ARIA) Authoring Practices</a> guide lists types of
-components and what kinds of keyboard actions they support. We will cover ARIA
-in more detail later, but for now let's use the guide to help us add keyboard
-support to a new component.
+helpful document you can refer to. The [Accessible Rich Internet Applications
+(ARIA) Authoring Practices](https://www.w3.org/TR/wai-aria-practices/){: .external } 
+guide lists types of components and what kinds of keyboard actions they support.
+We will cover ARIA in more detail later, but for now let's use the guide to help
+us add keyboard support to a new component.
 
 Perhaps you're working on some new [Custom
-Elements](/web/fundamentals/primers/customelements/) that resemble a set of
-radio buttons, but with your unique take on appearance and behavior.
+Elements](/web/fundamentals/getting-started/primers/customelements) that
+resemble a set of radio buttons, but with your unique take on appearance and
+behavior.
 
     <radio-group>
       <radio-button>Water</radio-button>
@@ -135,11 +138,12 @@ radio buttons, but with your unique take on appearance and behavior.
       <radio-button>Ginger Ale</radio-button>
     </radio-group>
 
-To determine what kind of keyboard support they need, you would check the ARIA
-Authoring Practices guide. Section 2 contains a list of design patterns, and in
-that list is a <a href="https://www.w3.org/TR/wai-aria-practices/#radiobutton"
-target="_blank">characteristics table for radio groups</a>, the existing
-component that most closely matches your new element.
+To determine what kind of keyboard support they need, you would check the [ARIA
+Authoring Practices guide](https://www.w3.org/TR/wai-aria-practices/){: .external }. 
+Section 2 contains a list of design patterns, and in that list is a
+[characteristics table for radio
+groups](https://www.w3.org/TR/wai-aria-practices/#radiobutton){: .external },
+the existing component that most closely matches your new element.
 
 As you can see in the table, one of the common keyboard behaviors that should be
 supported is the up/down/left/right arrow keys. To add this behavior to the new
@@ -347,8 +351,8 @@ DevTools to observe the tabindex moving from one radio to the next.
 </script>
 {% endframebox %}
 
-You can view <a href="//TODO">the complete source for this element</a> over on
-GitHub
+You can view [the complete source for this element](https://gist.github.com/robdodson/85deb2f821f9beb2ed1ce049f6a6ed47){: .external }
+over on GitHub.
 
 ## Modals and keyboard traps
 
@@ -356,11 +360,11 @@ Sometimes when you're managing focus you can get into a situation you can't get
 out of. Consider an autocomplete widget that tries to manage focus and captures
 the tab behavior, but prevents the user from leaving it until it's complete.
 This is called a *keyboard trap*, and it can be very frustrating for the user.
-Section 2.1.2 of the Web AIM checklist addresses this issue, stating that <a
-href="http://webaim.org/standards/wcag/checklist#sc2.1.2"
-target="_blank">keyboard focus should never be locked or trapped at one
-particular page element</a>. The user should be able to navigate to and from all
-page elements using only the keyboard.
+Section 2.1.2 of the Web AIM checklist addresses this issue, stating that
+[keyboard focus should never be locked or trapped at one particular page
+element](http://webaim.org/standards/wcag/checklist#sc2.1.2){: .external }. The
+user should be able to navigate to and from all page elements using only the
+keyboard.
 
 Oddly, there are times when this behavior is actually desirable, like in a modal
 window. Normally, when the modal is displayed, you don't want the user to access
@@ -376,12 +380,12 @@ the previously-focused item when the modal is closed.
 >There are some proposals on how to make this easier for developers, including
 the `<dialog>` element, but they don't yet have widespread browser support.
 >
->See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"
-target="_blank">this MDN article</a> for more information on `<dialog>`, and
-this <a
-href="https://accessibility.oit.ncsu.edu/training/aria/modal-window/version-3/"
-target="_blank">North Carolina State University accessibility blog</a> for more
-information on modal windows.
+>See [this MDN
+article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog){: .external } 
+for more information on `<dialog>`, and this [North Carolina State University
+accessibility
+blog](https://accessibility.oit.ncsu.edu/training/aria/modal-window/version-3/){: .external }
+for more information on modal windows.
 
 Consider a modal dialog represented by a `div` that contains a few elements, and
 another `div` that represents a background overlay. Let's walk through the basic
@@ -409,9 +413,8 @@ steps needed to implement a temporary keyboard trap in this situation.
 This procedure gives you a usable, non-frustrating modal window that everyone
 can use effectively.
 
-For more details, you can examine this <a
-href="https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution"
-target="_blank">sample code</a>, and view a live example from a <a
-href="http://udacity.github.io/ud891/lesson2-focus/07-modals-and-keyboard-traps/solution/index.html"
-target="_blank">completed page</a>.
+For more details, you can examine this [sample
+code](https://github.com/udacity/ud891/blob/gh-pages/lesson2-focus/07-modals-and-keyboard-traps/solution){: .external },
+and view a live example from a [completed
+page](http://udacity.github.io/ud891/lesson2-focus/07-modals-and-keyboard-traps/solution/index.html){: .external }.
 

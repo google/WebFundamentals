@@ -29,7 +29,5 @@ toc:
         path: /web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships
       - title: Hiding and Updating Content
         path: /web/fundamentals/accessibility/semantics-aria/hiding-and-updating-content
-      - title: Implicit Semantics
-        path: /web/fundamentals/accessibility/semantics-aria/implicit-semantics
     - title: Accessible Styles
       path: /web/fundamentals/accessibility/accessible-styles

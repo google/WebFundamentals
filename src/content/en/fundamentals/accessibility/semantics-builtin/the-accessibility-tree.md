@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Introduction to the Accessibility Tree
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # The Accessibility Tree {: .page-title }
 
@@ -132,9 +132,8 @@ Broadly, there are two types of names:
 For text-level elements, we don't need to do anything, because by definition it
 will have some text content. However, for input or control elements, and visual
 content like images, we need to make sure that we specify a name. In fact,
-providing text alternatives for any non-text content is <a
-href="http://webaim.org/standards/wcag/checklist#g1.1" target="_blank">the very
-first item on the WebAIM checklist</a>.
+providing text alternatives for any non-text content is [the very
+first item on the WebAIM checklist](http://webaim.org/standards/wcag/checklist#g1.1).
 
 One way to do that is to follow their recommendation that "Form inputs have
 associated text labels." There are two ways to associate a label with a form

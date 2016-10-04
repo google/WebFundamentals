@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Introduction to ARIA and non-native HTML semantics
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # Introduction to ARIA {: .page-title }
 
@@ -24,12 +24,12 @@ user needs to know about this as soon as possible".
 In this lesson, then, we'll explore how to express semantics that HTML can't
 express on its own.
 
-The <a href="https://www.w3.org/TR/wai-aria/" target="_blank">Web Accessibility
-Initiative's Accessible Rich Internet Applications specification</a> (WAI-ARIA,
-or just ARIA) is good for bridging areas with accessibility issues that can't be
-managed with native HTML. It works by allowing you to specify attributes that
-modify the way an element is translated into the accessibility tree. Let's look
-at an example.
+The [Web Accessibility Initiative's Accessible Rich Internet Applications
+specification](https://www.w3.org/TR/wai-aria/){: .external } (WAI-ARIA, or just
+ARIA) is good for bridging areas with accessibility issues that can't be managed
+with native HTML. It works by allowing you to specify attributes that modify the
+way an element is translated into the accessibility tree. Let's look at an
+example.
 
 In the following snippet, we use a list item as a kind of custom checkbox. The
 CSS "checkbox" class gives the element the required visual characteristics.
@@ -56,13 +56,13 @@ accessibility tree and a screen reader will correctly report it as a checkbox.
     </li>
     
 
->Later, we will cover the list of ARIA attributes and when to use them.
+Note: We'll cover the list of ARIA attributes and when to use them [later](#what-can-aria-do).
 
 ARIA works by changing and augmenting the standard DOM accessibility tree.
 
-![the standard DOM accessibility tree](imgs/acctree1.jpg)
+![the standard DOM accessibility tree](imgs/acctree1.jpg){: .attempt-right }
 
-![the ARIA augmented accessibility tree](imgs/acctree2.jpg)
+![the ARIA augmented accessibility tree](imgs/acctree2.jpg){: .attempt-right }
 
 Although ARIA allows us to subtly (or even radically) modify the accessibility
 tree for any element on the page, that is the only thing it changes. **ARIA
@@ -79,8 +79,8 @@ It's also worth noting that certain HTML elements have restrictions on what ARIA
 roles and attributes can be used on them. For example, a standard `<input
 type="text">` element may not have any additional role/attribute applied to it.
 
->See the <a href="https://www.w3.org/TR/html-aria/#sec-strong-native-semantics"
-target="_blank">ARIA in HTML spec</a> for more information.
+>See the [ARIA in HTML spec](https://www.w3.org/TR/html-aria/#sec-strong-native-semantics){: .external }
+for more information.
 
 Let's see what other capabilities ARIA has to offer.
 
@@ -121,7 +121,6 @@ with plain HTML.
 </div>
 ```
     
-
 One of the core aspects of the ARIA system is its collection of *roles*. A role
 in accessibility terms amounts to a shorthand indicator for a particular UI
 pattern. ARIA provides a vocabulary of patterns we can use via the `role`
@@ -139,22 +138,22 @@ usage, it's very important to make sure that, when creating a custom widget, the
 attribute; this ensures that keyboard events go to the right place and that when
 focus lands on an element its role is conveyed accurately.
 
-The <a href="https://www.w3.org/TR/wai-aria/" target="_blank">ARIA spec</a>
-describes a taxonomy of possible values for the `role` attribute and associated
-ARIA attributes that may be used in conjunction with those roles. This is the
-best source of definitive information about how the ARIA roles and attributes
-work together and how they can be used in a way that is supported by browsers
-and assistive technologies.
+The [ARIA spec](https://www.w3.org/TR/wai-aria/){: .external } describes a
+taxonomy of possible values for the `role` attribute and associated ARIA
+attributes that may be used in conjunction with those roles. This is the best
+source of definitive information about how the ARIA roles and attributes work
+together and how they can be used in a way that is supported by browsers and
+assistive technologies.
 
 ![a list of all the availabe ARIA roles](imgs/aria-roles.jpg)
 
-However, the spec is very dense; a more approachable place to start is the <a
-href="https://www.w3.org/TR/wai-aria-practices-1.1/" target="_blank">ARIA
-Authoring Practices document</a>, which explores best practices for using the
-available ARIA roles and properties.
+However, the spec is very dense; a more approachable place to start is the [ARIA
+Authoring Practices document](https://www.w3.org/TR/wai-aria-practices-1.1/){: .external }
+, which explores best practices for using the available ARIA roles and
+properties.
 
 ARIA also offers landmark roles that extend the options available in HTML5. See
-the <a
-href="https://www.w3.org/TR/wai-aria-practices-1.1#kbd_layout_landmark_XHTML"
-target="_blank">Landmark Roles Design Patterns</a> spec for more information.
+the [Landmark Roles Design
+Patterns](https://www.w3.org/TR/wai-aria-practices-1.1#kbd_layout_landmark_XHTML){: .external }
+spec for more information.
 

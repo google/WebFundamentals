@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The role of semantics in page navigation
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # Semantics and Navigating Content {: .page-title }
 
@@ -50,15 +50,19 @@ order a screen reader perceives is thus directly based on the DOM order. This
 means that an appropriate heading structure is more important than ever.
 
 In most well-structured pages, the heading levels are nested to indicate
-parent-child relationships among content blocks. The <a
-href="http://webaim.org/standards/wcag/checklist" target="_blank">WebAIM
-checklist</a> repeatedly refers to this technique.
+parent-child relationships among content blocks. The [WebAIM
+checklist](http://webaim.org/standards/wcag/checklist) repeatedly refers to this
+technique.
 
- - 1.3.1 mentions "Semantic markup is used to designate headings"
- - 2.4.1 mentions heading structure as a technique for bypassing blocks of
+ - [1.3.1](http://webaim.org/standards/wcag/checklist#sc1.3.1){: .external }
+   mentions "Semantic markup is used to designate headings"
+ - [2.4.1](http://webaim.org/standards/wcag/checklist#sc2.4.1){: .external }
+   mentions heading structure as a technique for bypassing blocks of
    content
- - 2.4.6 discusses some details for writing useful headings
- - 2.4.10 states "individual sections of content are designated using headings,
+ - [2.4.6](http://webaim.org/standards/wcag/checklist#sc2.4.6){: .external }
+   discusses some details for writing useful headings
+ - [2.4.10](http://webaim.org/standards/wcag/checklist#sc2.4.10){: .external }
+   states "individual sections of content are designated using headings,
    where appropriate"
 
 Not all headings have to be visible on-screen.
@@ -79,22 +83,17 @@ accessible *only* to screen readers and other assistive technology.
 
     <h2 class="sr-only">This heading is offscreen.</h2>
 
-<aside class="note">
-The WebAIM site discusses this technique at length in <a
-href="http://webaim.org/techniques/css/invisiblecontent/" target="_blank">this
-article on offscreen content</a>.
-</aside>
+Note: The WebAIM site discusses this technique at length in [this
+article on offscreen content](http://webaim.org/techniques/css/invisiblecontent/).
 
 For complex applications, this can be a good way to accommodate headings when
 the visual design doesn't require or have room for a visible heading.
 
-<aside class="caution">
-It's important not to go overboard with this technique. Remember that
+Caution: It's important not to go overboard with this technique. Remember that
 assistive technology users may also be able to see the screen for themselves, so
 going too far down the path of creating "screen reader only" content may
 actually degrade the user experience for some users. It can also create a
 maintenance headache for you later.
-</aside>
 
 ## Other navigation options
 
@@ -114,9 +113,7 @@ hard to find.
 
  - Anchor tags without `href` attributes. Often used in single-page
    applications, these link targets cause problems for screen readers. You can
-   read more in <a
-   href="http://neugierig.org/software/blog/2014/02/single-page-app-links.html"
-   target="_blank">this article on single-page apps</a>.
+   read more in [this article on single-page apps](http://neugierig.org/software/blog/2014/02/single-page-app-links.html).
  - Buttons that are implemented with links. These cause the screen reader to
    interpret the content as a link, and the button functionality is lost. For
    these cases, replace the anchor tag with a real button and style it

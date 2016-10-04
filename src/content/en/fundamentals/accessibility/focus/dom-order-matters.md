@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: The importance of the default DOM order
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # DOM Order Matters {: .page-title }
 
@@ -55,9 +55,9 @@ move focus through the buttons.
 Be careful when changing the visual position of elements on screen using CSS.
 This can cause the tab order to jump around, seemingly at random, confusing
 users who rely on the keyboard. For this reason, the Web AIM checklist states
-[in section 1.3.2](http://webaim.org/standards/wcag/checklist#sc1.3.2) that the
-reading and navigation order, as determined by code order, should be logical and
-intuitive.
+[in section 1.3.2](http://webaim.org/standards/wcag/checklist#sc1.3.2){: .external }
+that the reading and navigation order, as determined by code order, should be
+logical and intuitive.
 
 As a rule, try tabbing through your pages every so often just to make sure you
 haven't accidentally messed up the tab order. It's a good habit to adopt, and

@@ -2,9 +2,9 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Using ARIA labels to create accessible element descriptions
 
-{# wf_review_required #}
-{# wf_updated_on: 2016-02-29 #}
-{# wf_published_on: 2016-02-29 #}
+
+{# wf_updated_on: 2016-10-04 #}
+{# wf_published_on: 2016-10-04 #}
 
 # ARIA Labels and Relationships {: .page-title }
 
@@ -70,13 +70,12 @@ attribute creates a semantic relationship between elements on the page
 regardless of their DOM relationship. In the case of `aria-labelledby`, that
 relationship is "this element is labelled by that element".
 
-The ARIA specification lists <a
-href="https://www.w3.org/TR/wai-aria/states_and_properties#attrs_relationships"
-target="_blank">eight relationship attributes</a>. Six of these,
-`aria-activedescendant`, `aria-controls`, `aria-describedby`, `aria-labelledby`,
-and `aria-owns`, take a reference to one or more elements to create a new link
-between elements on the page. The difference in each case is what that link
-means and how it is presented to users.
+The ARIA specification lists [eight relationship
+attributes](https://www.w3.org/TR/wai-aria/states_and_properties#attrs_relationships){: .external }.
+Six of these, `aria-activedescendant`, `aria-controls`, `aria-describedby`,
+`aria-labelledby`, and `aria-owns`, take a reference to one or more elements to
+create a new link between elements on the page. The difference in each case is
+what that link means and how it is presented to users.
 
 ### aria-owns
 
