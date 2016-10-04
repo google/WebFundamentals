@@ -5,16 +5,22 @@ description: Learn how to store data locally for improved response time and offl
 {# wf_updated_on: 2016-09-29 #}
 {# wf_published_on: 2016-09-29 #}
 
-# Offline Storage for Progressive Web Apps {: .page-title }
+# Choosing a Storage Mechanism {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 {% include "web/_shared/contributors/mco.html" %}
 
-<caption align="bottom">
-![PWA in devtools](images/image_0.jpg)
-The [Pokedex](https://pokedex.org){: external } Progressive Web App uses
-IndexedDB for application state and the Pokemon data set while the Cache
-API is used for URL addressable resources.
+<div class="clearfix"></div>
+
+<figure class="attempt-right">
+  <img src="images/image_0.jpg">
+  <figcaption>
+    The <a href="https://pokedex.org" class="external">Pokedex</a>
+    Progressive Web App uses IndexedDB for application state and the 
+    Pokemon data set while the Cache API is used for URL addressable 
+    resources.
+  </figcaption>
+</figure>
 
 Internet connections can be flakey or non-existent on the go, which is why
 offline support and reliable performance are common features in [progressive
@@ -25,16 +31,22 @@ summarize some ideas around offline data storage for PWAs — think JSON
 payloads, images and general static data required to provide a *meaningful*
 experience offline.
 
+<div class="clearfix"></div>
+
+### TL;DR {: .hide-from-toc }
+
 Let’s get right to the point with a general recommendation for storing data
 offline:
 
-For URL addressable resources, use the [Cache
-API](https://davidwalsh.name/cache) (part of [service
-worker](/web/fundamentals/primers/service-worker/)).
-For all other data, use
+* For **URL addressable resources**, use the 
+[Cache API](https://davidwalsh.name/cache) (part of 
+[service worker](/web/fundamentals/primers/service-worker/)).
+* For **all other data**, use
 [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
 (with a [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
 wrapper).
+
+## The rationale
 
 Here’s the rationale:
 
@@ -42,10 +54,10 @@ Here’s the rationale:
 Promise based). They also work with [web workers, window and service
 workers](https://nolanlawson.github.io/html5workertest/).
 
-* IndexedDB is available [everywhere](http://caniuse.com/#feat=indexeddb). Service
-Workers (and the Cache API) are [now
-available](https://jakearchibald.github.io/isserviceworkerready/) in Chrome,
-Firefox, Opera and are in development for Edge.
+* IndexedDB is available [everywhere](http://caniuse.com/#feat=indexeddb).
+Service Workers (and the Cache API) are
+[now available](https://jakearchibald.github.io/isserviceworkerready/) in
+Chrome, Firefox, Opera and are in development for Edge.
 
 * Promise wrappers for IndexedDB hide some of the powerful but also complex
 machinery (e.g. transactions, schema versioning) that comes with the IndexedDB
@@ -54,12 +66,14 @@ library.
 * IndexedDB will support [observers](https://github.com/WICG/indexed-db-observers),
 which allow easy synchronization between tabs.
 
-* Safari 10 has [fixed many long-standing IndexedDB
-bugs](https://gist.github.com/nolanlawson/08eb857c6b17a30c1b26) in their latest
-Tech Previews. NOTE:  Some folks have run into stability issues with Safari
+* Safari 10 has fixed many of the 
+[IndexedDB bugs](https://gist.github.com/nolanlawson/08eb857c6b17a30c1b26)
+in their latest Tech Previews. 
+
+Note:  Some folks have run into stability issues with Safari
 10’s IndexedDB and PouchDB and have found it to be a little slow. Until more
 research has been done here, your mileage may vary. Please do test and file
-browser bugs so the folks @webkit and related OSS library authors can take a
+browser bugs so the folks `@webkit` and related OSS library authors can take a
 look. LocalForage, PouchDB, YDN and Lovefield use WebSQL in Safari by default
 (due to lack of an efficient way to feature-test for broken IndexedDB). This
 means these libraries will work in Safari 10 without extra effort (just not
@@ -173,14 +187,16 @@ under an origin trial, and the latest news suggests it will be shipping in
 
 ## Current and future offline storage work
 
+<figure class="attempt-right">
+  <img src="images/image_1.jpg">
+  <figcaption>
+    IndexedDB with some await goodness.
+  </figcaption>
+</figure>
+
 If offline storage interests you, the efforts below are worth keeping an eye
 on. One particularly exciting development in progress is native Promises
 support in IndexedDB which will eliminate the need for a separate library.
-
-<caption align="bottom">
-![Promise-ized IDB](images/image_1.jpg)
-IndexedDB with some await goodness.
-</caption>
 
 Other developments to keep an eye on:
 
