@@ -8,9 +8,9 @@ description: Improving accessibility for web pages
 
 # Accessibility {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/dgash.html" %}
-{% include "_shared/contributors/robdodson.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/robdodson.html" %}
 
 
 This document set is a text-based version of part of the content covered in the

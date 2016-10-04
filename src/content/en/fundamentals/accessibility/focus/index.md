@@ -8,9 +8,9 @@ description: Overview of screen focus in accessibility
 
 # Introduction to Focus {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/dgash.html" %}
-{% include "_shared/contributors/robdodson.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/robdodson.html" %}
 
 
 

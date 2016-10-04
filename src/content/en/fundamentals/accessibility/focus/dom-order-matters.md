@@ -8,9 +8,9 @@ description: The importance of the default DOM order
 
 # DOM Order Matters {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/dgash.html" %}
-{% include "_shared/contributors/robdodson.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/robdodson.html" %}
 
 
 

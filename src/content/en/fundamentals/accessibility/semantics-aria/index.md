@@ -8,9 +8,9 @@ description: Introduction to ARIA and non-native HTML semantics
 
 # Introduction to ARIA {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/dgash.html" %}
-{% include "_shared/contributors/aliceboxhall.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/aliceboxhall.html" %}
 
 
 

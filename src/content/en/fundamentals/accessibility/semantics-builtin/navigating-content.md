@@ -8,9 +8,9 @@ description: The role of semantics in page navigation
 
 # Semantics and Navigating Content {: .page-title }
 
-{% include "_shared/contributors/megginkearney.html" %}
-{% include "_shared/contributors/dgash.html" %}
-{% include "_shared/contributors/aliceboxhall.html" %}
+{% include "web/_shared/contributors/megginkearney.html" %}
+{% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/aliceboxhall.html" %}
 
 
 
