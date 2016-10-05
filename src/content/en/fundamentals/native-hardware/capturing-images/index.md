@@ -20,10 +20,10 @@ file. Do this by creating a simple file input element and adding
 an `accept` filter that indicates we can only accept audio files and ideally we 
 will get them directly from the camera.
 
-    <input type="file" accept="image/*;capture=camera">
+    <input type="file" accept="image/*" capture="camera">
 
 This method works on all platforms. On desktop it will prompt the user to 
-upload an image file from the file system (ignoring `capture=camera`). In Safari
+upload an image file from the file system (ignoring `capture="camera"`). In Safari
 on iOS it will open up the camera app, allowing you to capture an image and 
 then send it back to the web page; on Android it will give the user the 
 choice of which app to use to capture the image before sending it back to the
@@ -37,7 +37,7 @@ the `files` property of the event object.
 
 Getting access to the image file is simple.
 
-    <input type="file" accept="image/*;capture=camera" id="camera">
+    <input type="file" accept="image/*" capture="camera" id="camera">
     <img id="frame">
     <script>
       var camera = document.getElementById('camera');
