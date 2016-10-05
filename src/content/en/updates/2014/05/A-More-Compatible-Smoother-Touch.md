@@ -44,7 +44,7 @@ The behavior differences between the browsers break down into four models.
 
 1. **Touchcancel on scroll start**
 
-    You can't have it both ways -- scroll smoothness and developer control -- and this model makes clear the trade-off between smooth scrolling and event handling, similar to the semantics of the [Pointer Events](http://www.w3.org/TR/pointerevents/) specification. Some experiences that may need to track the finger, like pull-to-refresh, are not possible.
+    You can't have it both ways -- scroll smoothness and developer control -- and this model makes clear the trade-off between smooth scrolling and event handling, similar to the semantics of the [Pointer Events](http://www.w3.org/TR/pointerevents/){: .external } specification. Some experiences that may need to track the finger, like pull-to-refresh, are not possible.
 
     > Browsers: Chrome Desktop M32+, Chrome Android
 

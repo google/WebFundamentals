@@ -24,9 +24,9 @@ Head over to the [Setup section](/web/tools/setup/) to get started.
 
 ## Updates, news and useful tips
 
-Inspired by the fantastic [devtoolstips.com](http://devtoolstips.com/) and [Umar's on Twitter](https://twitter.com/umaar), and with the help of both, we've launched a new updates section that features the latest DevTools news, extensions and useful advice.
+Inspired by the fantastic [devtoolstips.com](http://devtoolstips.com/){: .external } and [Umar's on Twitter](https://twitter.com/umaar), and with the help of both, we've launched a new updates section that features the latest DevTools news, extensions and useful advice.
 
-We will still do occasional blogs on the [Chromium blog](http://blog.chromium.org/), but they'll be abbreviated and link out to our very own blog here.
+We will still do occasional blogs on the [Chromium blog](http://blog.chromium.org/){: .external }, but they'll be abbreviated and link out to our very own blog here.
 
 Let us know what you think and come by often!
 

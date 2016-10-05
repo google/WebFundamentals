@@ -28,7 +28,7 @@ The `dialog` element now supports:
 * `autofocus` attribute: The first form control in a modal dialog that has the `autofocus` attribute, if any, will be focused when the dialog is shown. If there is no such element, the first focusable element is focused.
 * `form[method="dialog"]`: Only valid inside a dialog. Upon form submission, it closes the dialog and sets `dialog.returnValue` to the value of the submit button that was used.
 
-[Check out details with a live demo and polyfill](http://demo.agektmr.com/dialog/).
+[Check out details with a live demo and polyfill](http://demo.agektmr.com/dialog/){: .external }.
 
 Turn it on by enabling "Enable experimental Web Platform features" in about://flags.
 

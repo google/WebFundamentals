@@ -52,7 +52,7 @@ Another great thing is the ability to combine units with different measurements 
     }
     
 
-You can find some great examples of combining values [here](http://thecssninja.com/demo/css_calc/) and [here](http://peter.sh/files/calc.html).
+You can find some great examples of combining values [here](http://thecssninja.com/demo/css_calc/){: .external } and [here](http://peter.sh/files/calc.html).
 
 ## Try it out
 

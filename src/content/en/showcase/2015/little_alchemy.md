@@ -12,7 +12,7 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-[Little Alchem](http://littlealchemy.com/): A fun, mobile-friendly combination
+[Little Alchem](http://littlealchemy.com/){: .external }: A fun, mobile-friendly combination
 game inspired by its bigger brother Alchemy.
 
 ### What we like?

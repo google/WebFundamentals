@@ -69,7 +69,7 @@ These are a few commands that you may find useful.
 Store your shortcuts and dot files on Github. The major gain with this is
 your shortcuts can be shared across devices and they are always backed up.
 
-Github even created a [dedicated page for dotfiles](https://dotfiles.github.io/)
+Github even created a [dedicated page for dotfiles](https://dotfiles.github.io/){: .external }
 and quite a few of the Chrome Team have forked
 [Mathias Bynens' dotfiles](https://github.com/mathiasbynens/dotfiles).
 

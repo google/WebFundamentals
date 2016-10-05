@@ -89,7 +89,7 @@ samples, and a
 [script](https://github.com/jeffposnick/sw-precache/blob/master/demo/app/js/service-worker-registration.js)
 you can use to register the generated service worker. If you’d like to see it
 in action, just check out the recently launched
-[Google I/O 2015 web app](https://events.google.com/io2015/)—thanks (in part) to
+[Google I/O 2015 web app](https://events.google.com/io2015/){: .external }—thanks (in part) to
 <code>sw-precache</code>, you can browse it at your leisure, online or off.
 
 

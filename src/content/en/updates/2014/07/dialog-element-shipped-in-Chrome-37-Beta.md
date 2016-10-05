@@ -13,7 +13,7 @@ description: Chrome Beta has landed its native support for &lt;dialog&gt; elemen
 
 Chrome Beta has landed its native support for &lt;dialog&gt; element without needing "Enable experimental Web Platform features." flag turned on.
 
-Check out more sample codes and how it works in detail with [a live demo](http://demo.agektmr.com/dialog/).
+Check out more sample codes and how it works in detail with [a live demo](http://demo.agektmr.com/dialog/){: .external }.
 
 There are a few changes applied to the implementation since [the last announcement](http://updates.html5rocks.com/2013/09/dialog-element-Modals-made-easy) but notable one is:
 

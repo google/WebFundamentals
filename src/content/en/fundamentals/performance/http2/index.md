@@ -13,7 +13,7 @@ description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing 
 Note: The following content is an excerpt from [High Performance Browser
 Networking](http://shop.oreilly.com/product/0636920028048.do) (O'Reilly, Ilya
 Grigorik). For full version and related content, see
-[hpbn.co](https://hpbn.co/).
+[hpbn.co](https://hpbn.co/){: .external }.
 
 HTTP/2 will make our applications faster, simpler, and more robust — a rare
 combination — by allowing us to undo many of the HTTP/1.1 workarounds previously
@@ -567,9 +567,9 @@ For full details of the HPACK compression algorithm, see
 
 ## Further reading:
 
-* [“HTTP/2”](https://hpbn.co/http2/) 
+* [“HTTP/2”](https://hpbn.co/http2/){: .external } 
     – The full article by Ilya Grigorik
-* [“Setting up HTTP/2”](https://surma.link/things/h2setup/) 
+* [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external } 
     – How to set up HTTP/2 in different backends by Surma
 * [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
     – Presentation by Ilya Grigorik from Velocity 2015

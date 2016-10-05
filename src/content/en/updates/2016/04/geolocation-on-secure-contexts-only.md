@@ -76,7 +76,7 @@ It is _not_ a requirement that the whole app be served via HTTPS to use
 Geolocation. Only pages that use Geolocation need to be served over a secure 
 context.  A secure context currently is anything hosted at the top level on 
 HTTPS or localhost. For example, an iframe that points to a secure origin but is 
-hosted on unsecured origin (**[http](http://paul.kinlan.me/)**[://paul.kinlan.me/](http://paul.kinlan.me/)) 
+hosted on unsecured origin (**[http](http://paul.kinlan.me/){: .external }**[://paul.kinlan.me/](http://paul.kinlan.me/)) 
 would not be allowed to call the geolocation API.
 
 We strongly suggest that you migrate to HTTPS as powerful new and existing 

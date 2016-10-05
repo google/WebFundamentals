@@ -163,7 +163,7 @@ Crypto-Key header.
 #### Authorization Header
 
 The `Authorization` header is a signed [JSON Web Token
-(JWT)](https://jwt.io/) with 'WebPush ' in front of it.
+(JWT)](https://jwt.io/){: .external } with 'WebPush ' in front of it.
 
 A JWT is a way of sharing a JSON object with a second party in such a way that
 the sending party can sign it and the receiving party can verify the signature

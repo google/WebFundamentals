@@ -18,7 +18,7 @@ Over the past few years browsers have made huge strides in terms of rendering pe
 
 For most of us, though, there's a disconnect between what we can reasonably test on our own devices and what our users experience. If they don't get a silky smooth 60fps then their experience is impaired, and ultimately they'll go elsewhere and we'll suffer. Just as well, then, that the W3C is discussing a new API that could help us see what our users see: the [Frame Timing API](https://github.com/w3c/frame-timing).
 
-[Jake Archibald](http://jakearchibald.com/) and I recently recorded a video overview of the API, so if you prefer watching over reading take a look:
+[Jake Archibald](http://jakearchibald.com/){: .external } and I recently recorded a video overview of the API, so if you prefer watching over reading take a look:
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="4zoC3eaa9z0"

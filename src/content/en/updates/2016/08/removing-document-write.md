@@ -115,7 +115,7 @@ so how do you know if you are affected?
 
 To understand the potential impact of this change you first need to understand 
 how many of your users will be on 2G. You can detect the user's current network type
-and speed by using the [Network Information API](https://wicg.github.io/netinfo/) that is available in Chrome and then
+and speed by using the [Network Information API](https://wicg.github.io/netinfo/){: .external } that is available in Chrome and then
 send a heads-up to your analytic or Real User Metrics (RUM) systems.
 
 

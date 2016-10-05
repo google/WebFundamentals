@@ -22,7 +22,7 @@ to be synchronous, because most browsers typically ignore asynchronous XMLHttpRe
 This approach slows down navigation, as the user needs
 to wait for the request to come back before a new page could be rendered.
 
-The [*Beacon API*](http://www.w3.org/TR/beacon/) solves this problem by letting you asynchronously
+The [*Beacon API*](http://www.w3.org/TR/beacon/){: .external } solves this problem by letting you asynchronously
 send HTTP requests with small data payloads from a browser to a web server,
 without delaying other code in the page's unload event or
 affecting the performance of the next page navigation.

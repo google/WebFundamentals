@@ -39,7 +39,7 @@ when editing a file ending with .js).
 
 The [JavaScript and NodeJS Snippets
 package](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets)
-by [Zeno Rocha](http://zenorocha.com/) is a great package of simple snippets
+by [Zeno Rocha](http://zenorocha.com/){: .external } is a great package of simple snippets
 that allow you to quickly write out common JavaScript.
 
 Below are some examples of shorthand codes and the code they produce:
@@ -149,7 +149,7 @@ seems to be [this package titled
 | [Atom](https://atom.io/packages/polymer-snippets)
 
 Cut down your effort writing out boilerplate for Polymer with [Mr
-Dodsons](http://robdodson.me/)  awesome Polymer and Web Component snippets.
+Dodsons](http://robdodson.me/){: .external }  awesome Polymer and Web Component snippets.
 
 <img src="images/sublime-snippets/image03.png" width="601" height="338" />
 
@@ -234,4 +234,4 @@ There are a tonne of other packages which offer snippets for different
 frameworks, so if you find yourself writing the same pieces of code over and
 over, chances are someone has written a package to help make that a thing of the
 past, just do a search in the package manage for your editor
-([Sublime](https://packagecontrol.io/) | [Atom](https://atom.io/packages)).
+([Sublime](https://packagecontrol.io/){: .external } | [Atom](https://atom.io/packages)).

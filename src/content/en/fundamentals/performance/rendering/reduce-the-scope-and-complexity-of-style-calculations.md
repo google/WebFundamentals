@@ -87,7 +87,7 @@ If you click on the event itself you are given a call stack, which pinpoints the
 
 ## Use Block, Element, Modifier
 
-Approaches to coding like [BEM (Block, Element, Modifier)](https://bem.info/) actually bake in the selector matching performance benefits above, because it recommends that everything has a single class, and, where you need hierarchy, that gets baked into the name of the class as well:
+Approaches to coding like [BEM (Block, Element, Modifier)](https://bem.info/){: .external } actually bake in the selector matching performance benefits above, because it recommends that everything has a single class, and, where you need hierarchy, that gets baked into the name of the class as well:
 
 
     .list { }
@@ -107,4 +107,4 @@ If you don’t like BEM, there are other ways to approach your CSS, but the perf
 ## Resources
 
 * [Style invalidation in Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
-* [BEM (Block, Element, Modifier)](https://bem.info/)
+* [BEM (Block, Element, Modifier)](https://bem.info/){: .external }

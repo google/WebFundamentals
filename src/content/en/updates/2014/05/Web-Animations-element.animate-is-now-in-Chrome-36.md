@@ -35,7 +35,7 @@ The syntax is simple, and its parts should be familiar to you if you've ever wri
 
 The biggest advantage of this new function is the elimination of a lot of awkward hoops we formerly had to jump through to get a smooth, jank-free animation.
 
-As an example, for [Santa Tracker](http://www.google.co.uk/santatracker/) last year, we wanted to have snow falling continuously, and we decided to animate it via CSS so that it could be [done so efficiently](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
+As an example, for [Santa Tracker](http://www.google.co.uk/santatracker/){: .external } last year, we wanted to have snow falling continuously, and we decided to animate it via CSS so that it could be [done so efficiently](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/).
 
 However, we wanted to pick the snow's horizontal position dynamically based on screen and events going on in the scene itself, and of course the height of the snow's fall (the height of the user's browser window) wouldn't be known until we were actually running. This meant we really had to use CSS Transitions, as authoring a CSS Animation at runtime gets complex quickly (and hundreds of snowflakes means hundreds of new styling rules).
 

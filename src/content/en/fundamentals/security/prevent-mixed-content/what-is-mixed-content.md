@@ -244,7 +244,7 @@ of users rely on every day. The current compromise is to block the most
 dangerous types of mixed content and allow the less dangerous types to still be 
 requested. 
 
-Modern browsers follow [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/), which defines [**optionally blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable) and [**blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable) categories. 
+Modern browsers follow [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external }, which defines [**optionally blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable) and [**blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable) categories. 
 
 From the spec, a resource qualifies as optionally blockable content "when the risk 
 of allowing its usage as mixed content is outweighed by the risk of breaking 

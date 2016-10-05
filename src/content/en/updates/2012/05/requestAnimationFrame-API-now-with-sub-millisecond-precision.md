@@ -94,7 +94,7 @@ If you're not using the pattern above and just want to identify which sort of ca
       // ...
     
 
-Checking `if (timestamp < 1e12)` is a quick duck test to see how big of a number we're dealing with. Technically it could false positive but only if a webpage is open continuously for 30 years. But we're not able to test if it's a floating point number (rather than floored to an integer). Ask for enough high resolution timers and you're [bound to get integer values](http://jsfiddle.net/xYKW6/3/) at some point.
+Checking `if (timestamp < 1e12)` is a quick duck test to see how big of a number we're dealing with. Technically it could false positive but only if a webpage is open continuously for 30 years. But we're not able to test if it's a floating point number (rather than floored to an integer). Ask for enough high resolution timers and you're [bound to get integer values](http://jsfiddle.net/xYKW6/3/){: .external } at some point.
 
 
 <hr>

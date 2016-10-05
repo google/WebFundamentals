@@ -18,9 +18,9 @@ fast, and offline-first.
 
 ## Overview
 
-This year’s [Google I/O 2015 web app](https://events.google.com/io2015/) was
+This year’s [Google I/O 2015 web app](https://events.google.com/io2015/){: .external } was
 written by Google’s Developer Relations team, based on designs by our friends
-at [Instrument](http://www.instrument.com/), who wrote the nifty
+at [Instrument](http://www.instrument.com/){: .external }, who wrote the nifty
 [audio/visual experiment](http://www.instrument.com/news/google-io-2015). Our
 team’s mission was to ensure that the I/O web app (which I’ll refer to by
 its codename, IOWA) showcased everything the modern web could do. A full
@@ -52,7 +52,7 @@ requirements in mind.
 
 ### Build-time Integration
 
-`sw-precache` with IOWA’s [`gulp`](http://gulpjs.com/)-based build process,
+`sw-precache` with IOWA’s [`gulp`](http://gulpjs.com/){: .external }-based build process,
 and we rely on a series of [glob](https://github.com/isaacs/node-glob) patterns
 to ensure that we generate a complete list of all the static resources IOWA uses.
 

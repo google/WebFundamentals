@@ -12,7 +12,7 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-[Hacker News Reader](http://hn.premii.com/): An amazing optimized reader
+[Hacker News Reader](http://hn.premii.com/){: .external }: An amazing optimized reader
 for Hacker News.
 
 ### What we like?

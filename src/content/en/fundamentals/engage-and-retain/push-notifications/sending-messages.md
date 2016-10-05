@@ -265,7 +265,7 @@ with a dot.
 
 We're not going to show you how to do the signature encryption, but there
 are a number of libraries available. A good place to look is the libraries section of
-[jwt.io](https://jwt.io/).
+[jwt.io](https://jwt.io/){: .external }.
 
 Finally, prepend the word 'WebPush' followed by a space. The result will look
 something like the following:

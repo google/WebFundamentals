@@ -27,7 +27,7 @@ We’ll talk more about this soon, but for now here’s this month’s round-up 
 
 [What's New In The Backbone Generator](http://yeoman.io/blog/whats-new-in-backbone-generator.html)
 
-Sindre Sorhus also created [envcheck](https://github.com/sindresorhus/envcheck/) - a useful environment checker that will double-check you have everything needed to run Yeoman smoothly.
+Sindre Sorhus also created [envcheck](https://github.com/sindresorhus/envcheck/){: .external } - a useful environment checker that will double-check you have everything needed to run Yeoman smoothly.
 
 <img src="/web/updates/images/2014/02/yeoman-digest/jyAbtYg.png"/>
 
@@ -59,13 +59,13 @@ This month the community have been building full-stack web apps, Hybrid apps and
 
 [Using Yeoman to scaffold out new websites](http://blog.parkji.co.uk/2014/01/17/using-yeoman-to-scaffold-out-new-websites.html)
 
-[Announcing generator-angular-require](http://www.aaronallport.com/index.php/category/yeoman/)
+[Announcing generator-angular-require](http://www.aaronallport.com/index.php/category/yeoman/){: .external }
 
 [Web App with dream team; AngularJS, Cordova, Yeoman & Topcoat](http://www.numediaweb.com/web-app-with-dream-team/)
 
 [Using the European npm mirror](http://shapeshed.com/using-the-european-npm-mirror/)
 
-[Scaffold your projects with Yeoman…](http://theenlighteneddeveloper.com/category/javascript/yeoman/)
+[Scaffold your projects with Yeoman…](http://theenlighteneddeveloper.com/category/javascript/yeoman/){: .external }
 
 [Why use Yeoman?](http://js.jidesoft.com/guide/00-installation/03-with-yeoman.html)
 
@@ -96,7 +96,7 @@ This month also saw new generators released for KrakenJS, Meteor, ChaplinJS and 
 
 [Scaffold KendoUI apps](http://a.shinynew.me/post/76648348188/kendo-ui-yeoman-generator-v1-is-fresh-out-the-kitchen#.Uv5hF_J6vkc.twitter)
 
-[Radian ~ A scalable AngularJS framework with a Yeoman generator](http://radian.io/)
+[Radian ~ A scalable AngularJS framework with a Yeoman generator](http://radian.io/){: .external }
 
 [Scaffolding for Android](https://github.com/groupsky/generator-android)
 

@@ -37,7 +37,7 @@ project, which allows devices to broadcast a URL to an online
 website, in a *non-intrusive way*. In combinations with emerging
 web technologies such as
 [Web Bluetooth](https://webbluetoothcg.github.io/web-bluetooth/),
-[Web USB](https://wicg.github.io/webusb/) and
+[Web USB](https://wicg.github.io/webusb/){: .external } and
 [Web NFC](https://w3c.github.io/web-nfc/), the sites can
 connect directly to the device or at least explain the proper
 way of doing so.

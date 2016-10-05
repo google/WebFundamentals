@@ -80,7 +80,7 @@ figure {
 
 ### Setting up the environment
 
-* Make sure you have the Android Pay app installed on your device. You need to be in one of the supported countries to install it. Check on [android.com/pay](https://www.android.com/pay/) to see if your country is supported.
+* Make sure you have the Android Pay app installed on your device. You need to be in one of the supported countries to install it. Check on [android.com/pay](https://www.android.com/pay/){: .external } to see if your country is supported.
 * For testing, you need to [add a credit card](https://support.google.com/androidpay/answer/6289372) to Android Pay on your device.
 * Sign up for a merchant ID from Android Pay
     * Add your company, site origin, and a company email using [this form.](https://goo.gl/forms/SiKd7GAESCPNg9H83)

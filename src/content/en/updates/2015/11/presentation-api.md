@@ -165,7 +165,7 @@ In the meantime, please let us know if you find bugs or have feature requests: [
 * [Get Started with Google Cast SDK](/cast/)
 * [Presentation API spec](http://www.w3.org/TR/presentation-api)
 * [Use cases and requirements](https://github.com/w3c/presentation-api/blob/gh-pages/uc-req.md)
-* [The Second Screen Working Group](http://www.w3.org/2014/secondscreen/)
+* [The Second Screen Working Group](http://www.w3.org/2014/secondscreen/){: .external }
 * [Remote Playback API](https://w3c.github.io/remote-playback)
 
 
