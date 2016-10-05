@@ -67,7 +67,7 @@ The **Add to homescreen** button on the **App Manifest** pane lets you
 simulate Add to Homescreen events whenever you want.
 
 You can test out this feature with the [Google I/O 2016 progressive web
-app](https://events.google.com/io2016/), which has proper support for Add to
+app](https://events.google.com/io2016/){: .external }, which has proper support for Add to
 Homescreen. Clicking on **Add to Homescreen** while the app is open prompts
 Chrome to display the "add this site to your shelf" banner, which is the
 desktop equivalent of the "add to homescreen" banner for mobile devices.
@@ -155,7 +155,7 @@ up.
 
 [sw]: images/sw.png
 [cm]: /web/tools/chrome-devtools/settings#command-menu
-[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages?hl=en#ways-to-send
+[tickle]: /web/fundamentals/engage-and-retain/push-notifications/sending-messages#ways-to-send
 [errors]: images/sw-error.png
 
 ## Service worker caches {:#caches}

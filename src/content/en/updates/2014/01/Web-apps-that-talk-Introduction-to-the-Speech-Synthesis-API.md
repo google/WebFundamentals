@@ -69,7 +69,7 @@ Note: Depending on the platform, Chrome might have to be online for the speech s
   </iframe>
 </div>
 
-In my Google I/O 2013 talk, "[More Awesome Web: features you've always wanted](http://www.moreawesomeweb.com/)" ([www.moreawesomeweb.com](http://www.moreawesomeweb.com/)), I showed a Google Now/Siri-like demo of using the Web Speech API's `SpeechRecognition` service with the Google Translate API to auto-translate microphone input into another language:
+In my Google I/O 2013 talk, "[More Awesome Web: features you've always wanted](http://www.moreawesomeweb.com/){: .external }" ([www.moreawesomeweb.com](http://www.moreawesomeweb.com/)), I showed a Google Now/Siri-like demo of using the Web Speech API's `SpeechRecognition` service with the Google Translate API to auto-translate microphone input into another language:
 
 
 DEMO: [http://www.moreawesomeweb.com/demos/speech_translate.html](http://www.moreawesomeweb.com/demos/speech_translate.html)

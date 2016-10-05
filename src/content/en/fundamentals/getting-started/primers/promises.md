@@ -934,4 +934,4 @@ Note: I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposit
 
 Many thanks to Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp, Addy Osmani, Arthur Evans, and Yutaka Hirano who proofread this and made corrections/recommendations.
 
-Also, thanks to [Mathias Bynens](https://mathiasbynens.be/) for [updating various parts](https://github.com/html5rocks/www.html5rocks.com/pull/921/files) of the article.
+Also, thanks to [Mathias Bynens](https://mathiasbynens.be/){: .external } for [updating various parts](https://github.com/html5rocks/www.html5rocks.com/pull/921/files) of the article.

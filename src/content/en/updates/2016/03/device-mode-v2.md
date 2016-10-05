@@ -106,7 +106,7 @@ emulating print media have been moved to a consistent place in the Drawer. You c
 
 We know this is a significant change to which we'll all have to get used to.
 You'll find full coverage about everything that's in it in the
-[just-updated Device Mode docs](https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode).
+[just-updated Device Mode docs](/web/tools/chrome-devtools/iterate/device-mode).
 We'd love to hear from you on Twitter or if you need more than 140 characters,
 on our [bug tracker](https://crbug.com/new) (yes, even for feature requests).
 

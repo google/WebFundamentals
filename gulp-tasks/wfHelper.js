@@ -6,7 +6,6 @@
  */
 
 var fs = require('fs');
-var path = require('path');
 var glob = require('globule');
 var moment = require('moment');
 
@@ -118,8 +117,8 @@ function getFileList(base, patterns) {
   files.forEach(function(file) {
     results.push(readMetadataForFile(file));
   });
-  var filename = path.join(base, '_files.json');
-  fs.writeFileSync(filename, JSON.stringify(results, null, 2));
+  // var filename = path.join(base, '_files.json');
+  // fs.writeFileSync(filename, JSON.stringify(results, null, 2));
   return results;
 }
 

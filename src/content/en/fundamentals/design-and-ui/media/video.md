@@ -483,7 +483,7 @@ A track file consists of timed "cues" in WebVTT format:
 
     ...
 
-Dogfood: The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see [caniuse.com/track](http://caniuse.com/track)). There are several polyfills available too. We recommend [Captionator](https://captionatorjs.com/).
+Dogfood: The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see [caniuse.com/track](http://caniuse.com/track)). There are several polyfills available too. We recommend [Captionator](https://captionatorjs.com/){: .external }.
 
 
 

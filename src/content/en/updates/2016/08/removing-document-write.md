@@ -84,14 +84,14 @@ Chrome will not execute the `<script>` elements injected via `document.write()` 
 
 Third party snippets sometimes use `document.write()` to load scripts. 
 Fortunately, most third parties provide [asynchronous loading 
-alternatives](https://developers.google.com/speed/docs/insights/UseAsync), which 
+alternatives](/speed/docs/insights/UseAsync), which 
 allow third party scripts to load without blocking the display of the rest of 
 the content on the page.
 
 ## How do I fix this?
 
 This simple answer is don't inject scripts using `document.write()`. We are 
-[maintaining a set of known services that provide asynchronous loader support](https://developers.google.com/speed/docs/insights/UseAsync) that we 
+[maintaining a set of known services that provide asynchronous loader support](/speed/docs/insights/UseAsync) that we 
 encourage you to keep checking.
 
 If your provider is not on the list and does support asynchronous script loading 
@@ -103,7 +103,7 @@ will be affected.
 
 If your provider gives you a snippet that includes the `document.write()`, it 
 might be possible for you to add an `async` attribute to the script element, or 
-for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics does](https://developers.google.com/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
+for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics does](/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
 
 
 ## How to detect when your site is affected
@@ -115,7 +115,7 @@ so how do you know if you are affected?
 
 To understand the potential impact of this change you first need to understand 
 how many of your users will be on 2G. You can detect the user's current network type
-and speed by using the [Network Information API](https://wicg.github.io/netinfo/) that is available in Chrome and then
+and speed by using the [Network Information API](https://wicg.github.io/netinfo/){: .external } that is available in Chrome and then
 send a heads-up to your analytic or Real User Metrics (RUM) systems.
 
 

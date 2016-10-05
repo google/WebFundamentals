@@ -462,7 +462,7 @@ to ensure that the snippet of JavaScript that Google provides is pulled out into
 an external JavaScript file. If you have an existing policy using `child-src`,
 you need to change it to `child-src`.
 
-* Facebook's [Like button](http://developers.facebook.com/docs/reference/plugins/like/)
+* Facebook's [Like button](http://developers.facebook.com/docs/reference/plugins/like/){: .external }
 
 has a number of implementation options. We recommend sticking with the
 `<iframe>` version as it's safely sandboxed from the rest of your site. It
@@ -525,7 +525,7 @@ overwrites the default for that specific type of resource.
 Content Security Policy Level 2 is a <a href="http://www.w3.org/TR/CSP2/">
 Candidate Recommendation</a>. The W3C's Web Application Security Working Group
 has already begun work on the specification's next iteration,
-[Content Security Policy Level 3](https://www.w3.org/TR/CSP3/). 
+[Content Security Policy Level 3](https://www.w3.org/TR/CSP3/){: .external }. 
 
 
 If you're interested in the discussion around these upcoming features,

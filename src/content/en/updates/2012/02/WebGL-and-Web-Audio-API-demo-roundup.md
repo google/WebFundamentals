@@ -12,12 +12,12 @@ book_path: /web/updates/_book.yaml
 
 Here's a look at some cool WebGL and Web Audio API demos that I've seen over the past couple weeks.
 
-[EVE Online ship viewer](http://www.eveonline.com/universe/spaceships/magnate/) is a great-looking online ship viewer app built with WebGL. Very nice way to showcase the artwork in the game universe.
+[EVE Online ship viewer](http://www.eveonline.com/universe/spaceships/magnate/){: .external } is a great-looking online ship viewer app built with WebGL. Very nice way to showcase the artwork in the game universe.
 
 [Web Audio API](http://chromium.googlecode.com/svn/trunk/samples/audio/index.html)
  samples page has several compelling examples on how to do audio processing using it.  [WebGL City](http://alteredqualia.com/three/examples/webgl_city.html) is one of the demos linked from the samples page. It's a small demo of a helicopter flying around a night cityscape. The helicopter (disable music by pressing 'm', enable helicopter sound by pressing 'n') uses Web Audio APIs spatial audio features to pan the helicopter audio from one speaker to the other.
 
-Some enterprising soul implemented a [snake game using nothing but a WebGL fragment shader](http://glsl.heroku.com/e#1544.13) on the [GLSL Sandbox](http://glsl.heroku.com/). I'm flabbergasted.
+Some enterprising soul implemented a [snake game using nothing but a WebGL fragment shader](http://glsl.heroku.com/e#1544.13) on the [GLSL Sandbox](http://glsl.heroku.com/){: .external }. I'm flabbergasted.
 
 The [Big Bang](http://www.chromeexperiments.com/detail/big-bang/) may look like any other WebGL particle animation, but the particle simulation is actually run on the GPU. The simulator is a fragment shader that reads the previous particle positions from a texture and writes the new particle positions into a FBO texture.
 

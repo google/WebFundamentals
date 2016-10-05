@@ -25,7 +25,7 @@ You can install [EME Logger extension](https://chrome.google.com/webstore/detail
 
 The code for EME Logger is available at [github.com/google/eme_logger](https://github.com/google/eme_logger). Patches, bug reports and feature requests welcome.
 
-More information about EME is available from the HTML5 Rocks article [EME WTF](http://www.html5rocks.com/en/tutorials/eme/basics/)?
+More information about EME is available from the HTML5 Rocks article [EME WTF](http://www.html5rocks.com/en/tutorials/eme/basics/){: .external }?
 
 As an alternative to 'roll your own' EME, we recommend Shaka Player: an easy-to-use JavaScript library developed by Google that enables adaptive delivery of protected (and unprotected) media. Shaka Player implements [Dynamic Adaptive Streaming over HTTP](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-MPEG-DASH-79041.aspx) with [Media Source Extensions](http://www.html5rocks.com/en/tutorials/eme/basics/#related-technology-1) to deliver the best possible video performance at any bandwidth. Shaka also supports multilingual content for audio tracks and subtitles. Find out more about Shaka Player at [g.co/shakainfo](http://g.co/shakainfo).
 

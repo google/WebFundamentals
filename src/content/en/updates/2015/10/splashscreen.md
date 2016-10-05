@@ -38,7 +38,7 @@ Now in Chrome 47 on Android (Beta in October 2015) we are introducing the concep
 <img src="/web/updates/images/2015/10/splashscreen.gif" style="max-width=100%" />
 
 Try it out on [Voice Memos](https://voice-memos.appspot.com/), 
-[Air Horner](https://airhorner.com) or [SVG OMG](https://jakearchibald.github.io/svgomg/).
+[Air Horner](https://airhorner.com) or [SVG OMG](https://jakearchibald.github.io/svgomg/){: .external }.
 
 The splash screen is generated dynamically from information held in the Web App 
 Manifest and is a combination of the `name` and `background_color` properties, 

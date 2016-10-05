@@ -18,12 +18,12 @@ to deprecate powerful features like geolocation on non-secure origins, and we
 hope that others will follow.
 
 Starting with Chrome 50, Chrome no longer supports [obtaining the user's 
-location](https://developers.google.com/web/fundamentals/native-hardware/user-location/obtain-location?hl=en) 
+location](/web/fundamentals/native-hardware/user-location/obtain-location) 
 using [the HTML5 Geolocation 
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
 from pages delivered by non-secure connections. This means that the page that's 
 making the Geolocation API call must be served from a [secure context](https://w3c.github.io/webappsec-secure-contexts/) such as 
-[HTTPS](https://developers.google.com/web/fundamentals/security/encrypt-in-transit/?hl=en). 
+[HTTPS](/web/fundamentals/security/encrypt-in-transit/). 
 
 It is an important issue as it will directly impact any site that requires use 
 of the geolocation API and is not served over https, but it is a change that we do 
@@ -76,7 +76,7 @@ It is _not_ a requirement that the whole app be served via HTTPS to use
 Geolocation. Only pages that use Geolocation need to be served over a secure 
 context.  A secure context currently is anything hosted at the top level on 
 HTTPS or localhost. For example, an iframe that points to a secure origin but is 
-hosted on unsecured origin (**[http](http://paul.kinlan.me/)**[://paul.kinlan.me/](http://paul.kinlan.me/)) 
+hosted on unsecured origin (**[http](http://paul.kinlan.me/){: .external }**[://paul.kinlan.me/](http://paul.kinlan.me/)) 
 would not be allowed to call the geolocation API.
 
 We strongly suggest that you migrate to HTTPS as powerful new and existing 
@@ -124,7 +124,7 @@ ensuring that they're used in a secure context.
 
 There are a number of fallback options available to get a user's location that 
 are not affected by this change, such as [Google Maps Geolocation 
-API](https://developers.google.com/maps/documentation/geolocation/intro#overview), 
+API](/maps/documentation/geolocation/intro#overview), 
 [GeoIP](https://www.maxmind.com/en/geoip2-precision-services) (as an example, 
 there are other geo based solutions), and a user-entered zip code. However, we 
 _strongly recommend_ that the best path to ensure ongoing access to geolocation 

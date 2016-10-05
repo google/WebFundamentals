@@ -246,7 +246,7 @@ Note: 为获得最好的一致性和视觉效果，您不应该依赖字体合�
 
 ### 网页字体和关键呈现路径
 
-字体的延迟加载带有一个可能会延迟文本呈现的重要隐藏含义：浏览器必须 [构造呈现树](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction)，这依赖于 DOM 和 CSSOM 树，在此之后，它将知道它将需要哪些字体资源来呈现文本。因此，会将字体请求很好地延迟到其他关键资源之后，并且在取回资源之前可能会阻止浏览器呈现文本。
+字体的延迟加载带有一个可能会延迟文本呈现的重要隐藏含义：浏览器必须 [构造呈现树](/web/fundamentals/performance/critical-rendering-path/render-tree-construction)，这依赖于 DOM 和 CSSOM 树，在此之后，它将知道它将需要哪些字体资源来呈现文本。因此，会将字体请求很好地延迟到其他关键资源之后，并且在取回资源之前可能会阻止浏览器呈现文本。
 
 <img src="images/font-crp.png" class="center" alt="字体关键呈现路径">
 

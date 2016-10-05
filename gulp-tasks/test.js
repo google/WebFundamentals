@@ -41,7 +41,10 @@ var ERROR_STRINGS = [
   {label: 'Old style highlight {% highlight', regEx: /{%[ ]?highlight/},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
   {label: 'Old style animation tag {% animtion', regEx: /{% animation/},
-  {label: 'Old style include (shared/takeaway.liquid)', regEx: /shared\/takeaway\.liquid/}
+  {label: 'Old style include (shared/takeaway.liquid)', regEx: /shared\/takeaway\.liquid/},
+  {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w(-\w\w)?/},
+  {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com\//},
+  {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com\//}
 ];
 
 function testMarkdownFile(fileName, contribJson) {
@@ -135,7 +138,7 @@ function testMarkdownFile(fileName, contribJson) {
   }
   // Verify all includes start with web/
   var reInclude = /{%[ ]?include .*?[ ]?%}/g;
-  var includes = fileContent.match(reInclude)
+  var includes = fileContent.match(reInclude);
   if (includes) {
     includes.forEach(function(include) {
       var inclFile = wfHelper.getRegEx(/"(.*)"/, include, '');

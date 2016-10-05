@@ -11,7 +11,7 @@ description: Shadow DOM allows web developers to create compartmentalized DOM an
 
 ### TL;DR {: #tldr .hide-from-toc}
 
-Shadow DOM removes the brittleness of building web apps. The brittleness comes from the global nature of HTML, CSS, and JS. Over the years we've invented an exorbitant [number](http://getbem.com/introduction/) [of](https://github.com/css-modules/css-modules) [tools](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/) to circumvent the issues. For example, when you use a new HTML id/class, there's no telling if it will conflict with an existing name used by the page. [Subtle bugs](http://www.2ality.com/2012/08/ids-are-global.html) creep up, CSS specificity becomes a huge issue (`!important` all the things!), style selectors grow out of control, and [performance can suffer](https://developers.google.com/web/updates/2016/06/css-containment). The list goes on.
+Shadow DOM removes the brittleness of building web apps. The brittleness comes from the global nature of HTML, CSS, and JS. Over the years we've invented an exorbitant [number](http://getbem.com/introduction/){: .external } [of](https://github.com/css-modules/css-modules) [tools](https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/) to circumvent the issues. For example, when you use a new HTML id/class, there's no telling if it will conflict with an existing name used by the page. [Subtle bugs](http://www.2ality.com/2012/08/ids-are-global.html) creep up, CSS specificity becomes a huge issue (`!important` all the things!), style selectors grow out of control, and [performance can suffer](/web/updates/2016/06/css-containment). The list goes on.
 
 **Shadow DOM fixes CSS and DOM**. It introduces **scoped styles** to the web platform. Without tools or naming conventions, you can **bundle CSS with markup**, hide implementation details, and **author self-contained components** in vanilla JavaScript.
 
@@ -19,7 +19,7 @@ Shadow DOM removes the brittleness of building web apps. The brittleness comes f
 
 Note: **Already familiar with Shadow DOM?** This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
 
-Shadow DOM is one of the four Web Component standards: [HTML Templates](http://www.html5rocks.com/en/tutorials/webcomponents/template/), [Shadow DOM][sd_spec_whatwg], [Custom elements](/web/fundamentals/getting-started/primers/customelements) and [HTML Imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/).
+Shadow DOM is one of the four Web Component standards: [HTML Templates](http://www.html5rocks.com/en/tutorials/webcomponents/template/){: .external }, [Shadow DOM][sd_spec_whatwg], [Custom elements](/web/fundamentals/getting-started/primers/customelements) and [HTML Imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/).
 
 You don't have to author web components that use shadow DOM. But when you do, you take advantage of its benefits (CSS scoping, DOM encapsulation, composition) and build reusable [custom elements](/web/fundamentals/getting-started/primers/customelements), which are resilient, highly configurable, and extremely reusable. If custom elements are the way to create a new HTML (with a JS API), shadow DOM is the way you provide its HTML and CSS. The two APIs combine to make a component with self-contained HTML, CSS, and JavaScript.
 
@@ -165,9 +165,9 @@ The DOM a component author writes. Shadow DOM is local to the component and defi
       </span>
     
 
-**Composed DOM**
+**Flattened DOM tree**
 
-The result of the browser distributing the user's light DOM into your shadow DOM, rendering the final product. The composed tree is what you ultimately see in the DevTools and what's rendered on the page.
+The result of the browser distributing the user's light DOM into your shadow DOM, rendering the final product. The flattened tree is what you ultimately see in the DevTools and what's rendered on the page.
 
 
     <button is="better-button">
@@ -242,7 +242,7 @@ Component users declare `<fancy-tabs>` like so:
     </fancy-tabs>
     
 
-And if you're wondering, the composed tree looks something like this:
+And if you're wondering, the flattened tree looks something like this:
 
 
     <fancy-tabs>
@@ -264,7 +264,7 @@ And if you're wondering, the composed tree looks something like this:
     </fancy-tabs>
     
 
-Notice our component is able to handle different configurations, but the composed DOM remains the same. We can also switch from `<button>` to `<h2>`. This component was authored to handle different types of children...just like `<select>` does!
+Notice our component is able to handle different configurations, but the flattened DOM tree remains the same. We can also switch from `<button>` to `<h2>`. This component was authored to handle different types of children...just like `<select>` does!
 
 ## Styling  {: #styling}
 
@@ -619,7 +619,7 @@ As an example, let's say your shadow DOM looks like this:
 
 Answering the reverse question is also possible. `element.assignedSlot` tells you which of the component slots your element is assigned to.
 
-#### The Shadow DOM event model {: #events}
+### The Shadow DOM event model {: #events}
 
 When an event bubbles up from shadow DOM it's target is adjusted to maintain the encapsulation that shadow DOM provides. That is, events are re-targeted to look like they've come from the component rather than internal elements within your shadow DOM. Some events do not even propagate out of shadow DOM.
 
@@ -637,7 +637,7 @@ The events that **do** cross the shadow boundary are:
 
 If the shadow tree is open, calling `event.composedPath()` will return an array of nodes that the event traveled through.
 
-### Using custom events {: #customevents}
+#### Using custom events {: #customevents}
 
 Custom DOM events which are fired on internal nodes in a shadow tree do not bubble
 out of the shadow boundary unless the event is created using the `composed: true` flag:
@@ -763,7 +763,7 @@ Over the years I've learned a thing or two about authoring web components. I thi
 
 ### Use CSS containment {: #containment}
 
-Typically, a web component's layout/style/paint is fairly self-contained. Use [CSS containment](https://developers.google.com/web/updates/2016/06/css-containment) in `:host` for a perf win:
+Typically, a web component's layout/style/paint is fairly self-contained. Use [CSS containment](/web/updates/2016/06/css-containment) in `:host` for a perf win:
 
 
     <style>
@@ -909,7 +909,7 @@ See the example in "[Custom elements: building reusable web components](/web/fun
 If you've been following web components for the last couple of years, you'll know that
 Chrome 35+/Opera have been shipping an older version of shadow DOM for some time. Blink will continue to support both versions in parallel for some time. The v0 spec provided a different method to create a shadow root (`element.createShadowRoot` instead of v1's `element.attachShadow`). Calling the older method continues to create a shadow root with v0 semantics, so existing v0 code won't break.
 
-If you happen to be interested in the old v0 spec, check out the html5rocks articles: [1](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/), [2](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/), [3](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/). There's also a great comparison of the [differences between shadow DOM v0 and v1][differences].
+If you happen to be interested in the old v0 spec, check out the html5rocks articles: [1](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/){: .external }, [2](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/), [3](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/). There's also a great comparison of the [differences between shadow DOM v0 and v1][differences].
 
 ### Browser support {: #support}
 

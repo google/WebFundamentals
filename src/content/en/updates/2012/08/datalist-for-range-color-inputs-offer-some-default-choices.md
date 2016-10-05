@@ -52,7 +52,7 @@ By adding `datalist` to `input[type=color]`, users can now pick a color from dev
 
 Note that `datalist` for `input[type=color]` only accepts the hex color values (ex. `#ff0000`) and values such as `#f00` or `red` won’t work.
 
-To see these new features in action, visit [a demo page](http://demo.agektmr.com/datalist/).
+To see these new features in action, visit [a demo page](http://demo.agektmr.com/datalist/){: .external }.
 
 
 {% include "comment-widget.html" %}

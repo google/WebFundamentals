@@ -52,21 +52,21 @@ Service workers are powerful for offline caching but they also offer significant
 
 On repeat visits, this allows you to get **meaningful pixels** on the screen without the network, even if your content eventually comes from there. Think of it as displaying toolbars and cards **immediately**, then loading the rest of your content **progressively**.
 
-To test this architecture on real devices, we’ve run our [application shell sample](https://github.com/GoogleChrome/application-shell/) on [WebPageTest.org](http://www.webpagetest.org/) and shown the results below.
+To test this architecture on real devices, we’ve run our [application shell sample](https://github.com/GoogleChrome/application-shell/) on [WebPageTest.org](http://www.webpagetest.org/){: .external } and shown the results below.
 
-**Test 1:** [Testing on Cable with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151113_8S_G68/)
+**Test 1:** [Testing on Cable with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151113_8S_G68/){: .external }
 
 The first view of the app has to fetch all the resources from the network and doesn’t achieve a meaningful paint until **1.2 seconds** in. Thanks to service worker caching, our repeat visit achieves meaningful paint and fully finishes loading in **0.5 seconds**.
 
 [![Web Page Test Paint Diagram for Cable Connection](/web/updates/images/2015/11/appshell/image_2.png)](https://youtu.be/bsAefxnSRZU)
 
-**Test 2:** [Testing on 3G with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151112_8R_YQN/)
+**Test 2:** [Testing on 3G with a Nexus 5 using Chrome Dev](http://www.webpagetest.org/result/151112_8R_YQN/){: .external }
 
 We can also test our sample with a slightly slower 3G connection. This time it takes **2.5 seconds** on first visit for our first meaningful paint. It takes [**7.1 seconds**](http://www.webpagetest.org/video/view.php?id=151112_8R_YQN.3.0) to fully load the page. With service worker caching, our repeat visit achieves meaningful paint and fully finishes loading in [**0.8 seconds**](http://www.webpagetest.org/video/view.php?id=151112_8R_YQN.3.1).
 
 [![Web Page Test Paint Diagram for 3G Connection](/web/updates/images/2015/11/appshell/image_3.png)](https://youtu.be/488XbwCKf5g)
 
-[Other views](http://www.webpagetest.org/result/151112_HH_11D0/) tell a similar story. Compare the **3 seconds** it takes to achieve first meaningful paint in the application shell:
+[Other views](http://www.webpagetest.org/result/151112_HH_11D0/){: .external } tell a similar story. Compare the **3 seconds** it takes to achieve first meaningful paint in the application shell:
 
 ![Paint timeline for first view from Web Page Test](/web/updates/images/2015/11/appshell/image_4.png)
 
@@ -96,7 +96,7 @@ The application shell architecture makes the most sense for apps and sites that 
 
 ## Are There any Production Apps Using this Pattern Yet?
 
-The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](https://developers.google.com/web/showcase/case-study/service-workers-iowa) and Google’s Inbox.
+The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](/web/showcase/case-study/service-workers-iowa) and Google’s Inbox.
 
 ![Image of Google Inbox loading. Illustrates Inbox using service worker.](/web/updates/images/2015/11/appshell/image_7.png)
 
@@ -194,7 +194,7 @@ Note: The application shell sample does not (at the time of writing) use file ve
 
 ### Tooling
 
-We maintain a number of different [service worker helper libraries](https://developers.google.com/web/tools/service-worker-libraries/?hl=en) that make the process of precaching your application’s shell or handling common caching patterns easier to setup.
+We maintain a number of different [service worker helper libraries](/web/tools/service-worker-libraries/) that make the process of precaching your application’s shell or handling common caching patterns easier to setup.
 
 ![Screenshot of the Service Worker Library Site on Web Fundamentals](/web/updates/images/2015/11/appshell/image_10.png)
 

@@ -15,13 +15,13 @@ Chrome 47 includes several significant WebRTC enhancements and updates.
 
 ### Record video from your web apps
 
-The `MediaStreamRecorder` API has long been the top chromium.org request, with over 2500 stars. Media recording has now been added to Chrome behind the experimental Web Platform features flag &mdash; though it's desktop only for the moment. This allows you to record and play back or download video. There is a simple demo on [the WebRTC samples repo](https://webrtc.github.io/samples/src/content/getusermedia/record/) and you can find out more from the [discuss-webrtc announcement](https://groups.google.com/forum/?#!msg/discuss-webrtc/n11m846oV4I/0b3ycjmjCAAJ). A sample Chrome App for recording video from screen capture is available at [github.com/niklasenbom/RecordingApp](https://github.com/niklasenbom/RecordingApp). These are brand-new implementations and there may still be bugs to iron out: please file issues on the repos if you encounter problems.
+The `MediaStreamRecorder` API has long been the top chromium.org request, with over 2500 stars. Media recording has now been added to Chrome behind the experimental Web Platform features flag &mdash; though it's desktop only for the moment. This allows you to record and play back or download video. There is a simple demo on [the WebRTC samples repo](https://webrtc.github.io/samples/src/content/getusermedia/record/){: .external } and you can find out more from the [discuss-webrtc announcement](https://groups.google.com/forum/?#!msg/discuss-webrtc/n11m846oV4I/0b3ycjmjCAAJ). A sample Chrome App for recording video from screen capture is available at [github.com/niklasenbom/RecordingApp](https://github.com/niklasenbom/RecordingApp). These are brand-new implementations and there may still be bugs to iron out: please file issues on the repos if you encounter problems.
 
 <a href="https://webrtc.github.io/samples/src/content/getusermedia/record/" title="MediaRecorder demo"><img src="/web/updates/images/2015-10-28-chrome-47-webrtc/lp.jpg" alt="Screenshot of MediaRecorder demo on the WebRTC GitHub samples repo"></a>
 
 ### Audio output device selection
 
-`MediaDevices.enumerateDevices()` has been released. More details are available from [Chromium issue 504280](https://crbug.com/504280). You can now enumerate audio output devices in addition to the audio input and video input devices that `MediaStreamTrack.getSources()` already provides. You can find out more about how to use it in [this update](https://developers.google.com/web/updates/2015/10/media-devices).
+`MediaDevices.enumerateDevices()` has been released. More details are available from [Chromium issue 504280](https://crbug.com/504280). You can now enumerate audio output devices in addition to the audio input and video input devices that `MediaStreamTrack.getSources()` already provides. You can find out more about how to use it in [this update](/web/updates/2015/10/media-devices).
 
 ### Device support on Windows
 
@@ -62,12 +62,12 @@ As with all releases, we encourage developers to try Chrome on the Canary, Dev, 
 
 ### Demos
 
-* [MediaRecorder](https://webrtc.github.io/samples/src/content/getusermedia/record/)
+* [MediaRecorder](https://webrtc.github.io/samples/src/content/getusermedia/record/){: .external }
 * enumerateDevices():
 
     * [Select sources &amp; outputs](https://webrtc.github.io/samples/src/content/devices/input-output/)
     * [Output device
-      selection](https://webrtc.github.io/samples/src/content/devices/multi/)
+      selection](https://webrtc.github.io/samples/src/content/devices/multi/){: .external }
 * [MediaDevices shim](https://webrtc.github.io/samples/src/js/adapter.js)
 
 ### Find out more

@@ -17,7 +17,7 @@ conversion, and give users a true one-touch checkout experience.
 
 **Simple:** Accepting Android Pay is easy and requires no changes to your
 payment processing. Leading
-[payment gateways](https://developers.google.com/android-pay/) and
+[payment gateways](/android-pay/) and
 processing platforms are also adding support to make it even easier for
 developers to enable Android Pay.
 
@@ -75,20 +75,20 @@ figure {
 ### Required knowledge
 
 * Because Android Pay in Chrome uses the PaymentRequest API, it is essential to familiarize yourself with the [integration guide](.) before continuing.
-* Even if you are not an Android developer, it will be useful to acquaint yourself with the [Android Pay in-app APIs](https://developers.google.com/android-pay/android/tutorial). Because the responses returned by Android Pay are the same on Android and Chrome, the information on response handling is useful.
+* Even if you are not an Android developer, it will be useful to acquaint yourself with the [Android Pay in-app APIs](/android-pay/android/tutorial). Because the responses returned by Android Pay are the same on Android and Chrome, the information on response handling is useful.
 * Review the Android Pay detailed [content policies](https://support.google.com/payments/merchant/answer/75724?payments_to_biz=&rd=1) to make sure your specific goods or services are supported.
 
 ### Setting up the environment
 
-* Make sure you have the Android Pay app installed on your device. You need to be in one of the supported countries to install it. Check on [android.com/pay](https://www.android.com/pay/) to see if your country is supported.
+* Make sure you have the Android Pay app installed on your device. You need to be in one of the supported countries to install it. Check on [android.com/pay](https://www.android.com/pay/){: .external } to see if your country is supported.
 * For testing, you need to [add a credit card](https://support.google.com/androidpay/answer/6289372) to Android Pay on your device.
 * Sign up for a merchant ID from Android Pay
     * Add your company, site origin, and a company email using [this form.](https://goo.gl/forms/SiKd7GAESCPNg9H83)
     * Google will provide a merchant ID within 1 business day.
-* Ensure that [your payment gateway / processor supports Android Pay tokens](https://developers.google.com/android-pay/#processors).
+* Ensure that [your payment gateway / processor supports Android Pay tokens](/android-pay/#processors).
 * Acquire a key-pair used to encrypt the response from Android Pay if you are using [the network token approach](#integration-using-network-token).
     * Google recommends that you work with your payment processor to obtain a public key. This simplifies the process as your processor will be able to handle decryption of the Android Pay Payload. Find more information at your payment processor documentation.
-    * If you want to handle encryption yourself, please refer to [Payment Token Cryptography](https://developers.google.com/android-pay/integration/payment-token-cryptography) for generating a base64 encoded Elliptic Curve Integrated Encryption key.
+    * If you want to handle encryption yourself, please refer to [Payment Token Cryptography](/android-pay/integration/payment-token-cryptography) for generating a base64 encoded Elliptic Curve Integrated Encryption key.
 
 ## Integrating Android Pay into Payment Request
 With Android Pay for Payment Request API, you may request one of two payment token types: gateway or network. If you are using Braintree, Stripe, or Vantiv as your payment gateway, then you may request a gateway token from Android Pay. Otherwise, you may request an encrypted network token bundle. You may either handle the network token yourself or work with your processor to handle decrypting the token bundle.
@@ -394,7 +394,7 @@ In order to use Android Pay with the network token approach, add a JSON object t
     * `allowedCardNetworks`: Provide an array of credit card networks that constitute a valid Android Pay response.
     * `paymentMethodTokenizationParameters`:
         * `tokenizationType: 'NETWORK_TOKEN'`: Indicates you are taking the network token approach.
-        * `parameters`: Public key required to receive a network token. (See [How to generate encryption keys](https://developers.google.com/android-pay/integration/gateway-processor-integration#retrieving-the-encrypted-payload).)
+        * `parameters`: Public key required to receive a network token. (See [How to generate encryption keys](/android-pay/integration/gateway-processor-integration#retrieving-the-encrypted-payload).)
 
 #### Handling the Android Pay response
 After you add the Android Pay object, Chrome can request a chargeable network token.

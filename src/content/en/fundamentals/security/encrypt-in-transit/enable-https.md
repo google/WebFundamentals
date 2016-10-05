@@ -177,7 +177,7 @@ Warning: If you've already completed these steps, but are using HTTPS for the so
 Note: Ultimately you should redirect HTTP requests to HTTPS and use HTTP Strict Transport Security (HSTS). However, this is not the right stage in the migration process to do that; see “Redirect HTTP To HTTPS” and “Turn On Strict Transport Security And Secure Cookies.”
 
 Now, and throughout your site's lifetime, check your HTTPS configuration with
-[Qualys' handy SSL Server Test](https://www.ssllabs.com/ssltest/). Your site
+[Qualys' handy SSL Server Test](https://www.ssllabs.com/ssltest/){: .external }. Your site
 should score an A or A+; treat anything that causes a lower grade as a bug.
 (Today's A is tomorrow's B, because attacks against algorithms and protocols
 are always improving!)
@@ -260,7 +260,7 @@ Note: Keep in mind that you also need to change intrasite URLs in your styleshee
 
 ## Redirect HTTP to HTTPS
 
-You need to put a [canonical link](https://support.google.com/webmasters/answer/139066?hl=en) at the head of your page to tell search engines that HTTPS is the best way to get to your site.
+You need to put a [canonical link](https://support.google.com/webmasters/answer/139066) at the head of your page to tell search engines that HTTPS is the best way to get to your site.
 
 Set `<link rel="canonical" href="https://…"/>` tags in your pages. This
 helps search engines determine the best way to get to your site.
@@ -275,7 +275,7 @@ At this point, you are ready to "lock in" the use of HTTPS.
 First, use [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
 to tell clients that they should always connect to your server via HTTPS, even
 when following an `http://` reference. This defeats attacks such as
-[SSL Stripping](http://www.thoughtcrime.org/software/sslstrip/), and also
+[SSL Stripping](http://www.thoughtcrime.org/software/sslstrip/){: .external }, and also
 avoids the round-trip cost of the `301 redirect` that we enabled in 
 [Redirect HTTP to HTTPS](#redirect-http-to-https).
 
@@ -315,7 +315,7 @@ while maintaining its search rank. Bing also publishes
 ### Performance
 
 When the content and application layers are well-tuned (see
-[Steve Souders' books](https://stevesouders.com/) for great advice), the
+[Steve Souders' books](https://stevesouders.com/){: .external } for great advice), the
 remaining TLS performance concerns are generally small, relative to the
 overall cost of the application. Additionally, you can reduce and amortize
 those costs. (For great advice on TLS optimization and generally, see 

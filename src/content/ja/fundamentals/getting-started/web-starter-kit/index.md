@@ -222,7 +222,7 @@ NodeJS や NPM を所有しているかどうか分からない場合は、コ�
 
 ### Your Web Starter Kit プロジェクトの設定
 
-最初に [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
+最初に [https://developers.google.com/web/starter-kit/](/web/starter-kit/)
 に移動し、zip ファイルをダウンロードし、解凍します。 これはプロジェクトのための基礎となるため、フォルダ名を変更し、マシン上の関連する場所に置きます。 このガイドの残りの部分では、このフォルダを `my-project` と呼びます
 
 次に、Web Starter Kit のローカル依存関係をインストールする必要があります。 コマンド プロンプトを開き、

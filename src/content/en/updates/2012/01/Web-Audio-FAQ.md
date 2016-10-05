@@ -15,7 +15,7 @@ Over the past few months, the WebKit [Web Audio API](https://dvcs.w3.org/hg/audi
 
 ### Q: Halp, I can't make sounds!
 
-A: If you're new to the Web Audio API, take a look at the [getting started tutorial](http://www.html5rocks.com/en/tutorials/webaudio/intro/), or Eric's recipe for [playing audio based on user interaction](http://ericbidelman.tumblr.com/post/13471195250/web-audio-api-how-to-playing-audio-based-on-user).
+A: If you're new to the Web Audio API, take a look at the [getting started tutorial](http://www.html5rocks.com/en/tutorials/webaudio/intro/){: .external }, or Eric's recipe for [playing audio based on user interaction](http://ericbidelman.tumblr.com/post/13471195250/web-audio-api-how-to-playing-audio-based-on-user).
 
 
 ### Q. How many Audio Contexts should I have?
@@ -59,7 +59,7 @@ A: The audio input part of this will be implemented [as part of WebRTC](http://d
 
 ### Q: How can I check when an `AudioSourceNode` has finished playing?
 
-A: Currently you have to use a JavaScript timer since Web Audio API does not support this functionality. The following snippet from the [Getting Started with Web Audio API tutorial](http://www.html5rocks.com/en/tutorials/webaudio/intro/) is an example of this in action:
+A: Currently you have to use a JavaScript timer since Web Audio API does not support this functionality. The following snippet from the [Getting Started with Web Audio API tutorial](http://www.html5rocks.com/en/tutorials/webaudio/intro/){: .external } is an example of this in action:
 
 
     // Assume source and buffer are previously defined.

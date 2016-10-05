@@ -17,7 +17,7 @@ Allo’ Allo’. Welcome to the first issue of the [Yeoman](http://yeoman.io) mo
 
 <h2>Articles</h2>
 
-* [Building Web Apps With Yeoman And Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/) <span class="external-domain">[html5rocks.com]</span>
+* [Building Web Apps With Yeoman And Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/){: .external } <span class="external-domain">[html5rocks.com]</span>
 * [Introducing a Yeoman Generator For Full-stack Angular + Express Development](http://tylerhenkel.com/introducing-yeoman-angularjs-express-full-stack-generator/) <span class="external-domain">[tylerHenkel.com]</span>
 * [Column: A Yeoman Generator Built for Hackathons](http://movefastbreakthings.ca/column-a-yeoman-generator-built-for-hackathons/) <span class="external-domain">[movefastbreakthings.ca]</span>
 * [Working With Angular, Rails and Yeoman](http://rockyj.in/2013/10/24/angular_rails.html) <span class="external-domain">[rockyj.in]</span>
@@ -48,7 +48,7 @@ Allo’ Allo’. Welcome to the first issue of the [Yeoman](http://yeoman.io) mo
 * [Bones - a Yeoman generator for basic web projects](https://github.com/matt-bailey/generator-bones) <span class="external-domain">[github.com/matt-bailey]</span>
 * [Generator MEAN - scaffolding for Mongo, Express, Angular and Node](https://github.com/jrcryer/generator-mean) <span class="external-domain">[github.com/jrcryer]</span>
 * [Generator for Cordova](https://github.com/btholt/generator-cordova) <span class="external-domain">[github.com/btholt]</span>
-* [Genesis Wordpress - WordPress + Vagrant + Multi-env scaffolding](https://github.com/genesis/wordpress/) <span class="external-domain">[github.com/genesis]</span>
+* [Genesis Wordpress - WordPress + Vagrant + Multi-env scaffolding](https://github.com/genesis/wordpress/){: .external } <span class="external-domain">[github.com/genesis]</span>
 * [Generator for Bespoke.js](https://github.com/markdalgleish/generator-bespoke) <span class="external-domain">[github.com/markdagleish]</span>
 * [Generator for Reveal](https://github.com/slara/generator-reveal) <span class="external-domain">[github.com/slara]</span>
 * [(Official) Backbone generator 0.2.1 is now out](https://github.com/yeoman/generator-backbone/releases/tag/v0.2.1) <span class="external-domain">[github.com/yeoman]</span>

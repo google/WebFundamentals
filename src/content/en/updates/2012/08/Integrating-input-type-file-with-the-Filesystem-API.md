@@ -83,7 +83,7 @@ I've put together a photo gallery demo to demonstrate these different techniques
 
 <a href="http://html5-demos.appspot.com/static/dnd/all_types_of_import.html" target="_blank">Launch Demo</a>
 
-To learn more about the HTML5 Filesystem API, see [Exploring the Filesystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/).
+To learn more about the HTML5 Filesystem API, see [Exploring the Filesystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/){: .external }.
 
 
 {% include "comment-widget.html" %}

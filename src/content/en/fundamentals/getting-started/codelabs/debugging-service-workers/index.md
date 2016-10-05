@@ -44,7 +44,7 @@ Because this code lab is focused on teaching you tools, feel free to stop at var
 * A text editor
 * Basic knowledge of HTML, CSS and JavaScript
 
-This codelab is focused on debugging Service Workers and assumes some prior knowledge of working with Service Workers. Some concepts are glossed over or code blocks (for example styles or non-relevant JavaScript) are provided for you to simply copy and paste. If you are new to Service Workers be sure to  [read through the API Primer](https://developers.google.com/web/fundamentals/primers/service-worker/?hl=en) before proceeding.
+This codelab is focused on debugging Service Workers and assumes some prior knowledge of working with Service Workers. Some concepts are glossed over or code blocks (for example styles or non-relevant JavaScript) are provided for you to simply copy and paste. If you are new to Service Workers be sure to  [read through the API Primer](/web/fundamentals/primers/service-worker/) before proceeding.
 
 
 ## Getting set up
@@ -66,7 +66,7 @@ The `step-NN` folders contain the desired end state of each step of this codelab
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 

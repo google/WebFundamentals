@@ -151,11 +151,11 @@ stream. There is also a `MediaDevices` extension proposal for
 
 ### Demos
 
-* [getUserMedia()](https://webrtc.github.io/samples/src/content/getusermedia/gum/)
+* [getUserMedia()](https://webrtc.github.io/samples/src/content/getusermedia/gum/){: .external }
 * enumerateDevices():
     * [Select sources &amp; outputs](https://webrtc.github.io/samples/src/content/devices/input-output/)
     * [Output device
-      selection](https://webrtc.github.io/samples/src/content/devices/multi/)
+      selection](https://webrtc.github.io/samples/src/content/devices/multi/){: .external }
 * [MediaDevices shim](https://webrtc.github.io/samples/src/js/adapter.js)
 
 ### Find out more

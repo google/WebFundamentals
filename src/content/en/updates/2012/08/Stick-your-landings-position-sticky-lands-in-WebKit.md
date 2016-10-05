@@ -19,7 +19,7 @@ Paraphrasing from Edward O’Connor's original [proposal](http://lists.w3.org/Ar
 > Many websites have elements that alternate between being in-flow and having `position: fixed`, depending on the user's scroll position. This is
 often done for elements in a sidebar that the page author wants to be
 always visible as the user scrolls, but which slot into a space on the
-page when scrolled to the top. Good examples are [news.google.com](https://news.google.com/) (the "Top Stories" sidebar) and yelp.com ([search results map](http://www.yelp.com/search?find_desc=restaurants&find_loc=San+Francisco%2C+CA&ns=1)).
+page when scrolled to the top. Good examples are [news.google.com](https://news.google.com/){: .external } (the "Top Stories" sidebar) and yelp.com ([search results map](http://www.yelp.com/search?find_desc=restaurants&find_loc=San+Francisco%2C+CA&ns=1)).
 
 ###Introducing sticky positioning
 
@@ -67,7 +67,7 @@ Here's the (now old way) to have a header that sticks to the top of the viewport
     </script>
     
 
-Try it: [http://jsbin.com/omanut/2/](http://jsbin.com/omanut/2/)
+Try it: [http://jsbin.com/omanut/2/](http://jsbin.com/omanut/2/){: .external }
 
 This is easy enough, but this model quickly breaks down if you want to do
 this for a bunch of DOM nodes, say, every `<h1>` title of a blog as the user scrolls.

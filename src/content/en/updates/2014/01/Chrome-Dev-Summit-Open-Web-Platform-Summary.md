@@ -33,11 +33,11 @@ One big change we made when we forked from Blink was to add an intents system: e
 
 Then, on our [public mailing list](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/) we announce an [intent to ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/yujPcy889e4).
 
-At [chromestatus.com](http://chromestatus.com) you can see the [features](www.chromestatus.com/features) we've worked on, the features we've shipped, and those we're planning to deprecate. You can also check the [Chromium Releases blog](http://googlechromereleases.blogspot.co.uk/), which has links to bugs and to our tracker dashboard.
+At [chromestatus.com](http://chromestatus.com) you can see the [features](www.chromestatus.com/features) we've worked on, the features we've shipped, and those we're planning to deprecate. You can also check the [Chromium Releases blog](http://googlechromereleases.blogspot.co.uk/){: .external }, which has links to bugs and to our tracker dashboard.
 
 Another big change is that we're removing WebKit prefixes. The intent is not to use Blink prefixes, but to have run-time flags (and not just compile-time flags).
 
-[Android WebView](https://developers.google.com/chrome/mobile/docs/webview/overview) has been a big challenge – but [HTML5Test](http://html5test.com) shows that things are getting better. We're much closer to desktop in terms of having one set of web platform APIs everywhere (Web Audio is a great example of this!)
+[Android WebView](/chrome/mobile/docs/webview/overview) has been a big challenge – but [HTML5Test](http://html5test.com) shows that things are getting better. We're much closer to desktop in terms of having one set of web platform APIs everywhere (Web Audio is a great example of this!)
 
 But how does the sausage machine work? Every single change we make to Blink is immediately run through over 30,000 tests, not to mention all the Chromium tests that run additionally later. We use 24 hour sheriffing, with thousands of bots, thousands of benchmarks, and systems that throw millions of broken web pages at our engine to make sure it doesn't fall over. We know that mobile is significantly slower, and this is something we're working hard to improve.
 
@@ -88,7 +88,7 @@ Networking on the internet may feel safe, immediate and fast. It feels like we'r
 
 Trouble is, users rarely type in a full URL specifying HTTPS – or they click a link using HTTP. Worse, it's possible to mount a (wo)man-in-the-middle attack and replace HTTPS with HTTP. A tool called SSLstrip introduced in 2009 does just that. Firesheep, from 2010, just listened to opened wifi networks for cookies being sent in the clear: that meant you could listen in on chat, or log in to someone's Facebook account.
 
-But SSL is (relatively) cheap, fast and easy to deploy (check out [ssllabs.com](http://ssllabs.com/) and Ilya Grigorik's book High Performance Browser Networking). For non-commercial use, you can even get free certificates from [startssl.com](http://startssl.com/)! [Public Key Pinning](https://www.imperialviolet.org/2011/05/04/pinning.html) is designed to give website operators a means to restrict which certificate authorities can actually issue certificates for their sites.
+But SSL is (relatively) cheap, fast and easy to deploy (check out [ssllabs.com](http://ssllabs.com/){: .external } and Ilya Grigorik's book High Performance Browser Networking). For non-commercial use, you can even get free certificates from [startssl.com](http://startssl.com/)! [Public Key Pinning](https://www.imperialviolet.org/2011/05/04/pinning.html) is designed to give website operators a means to restrict which certificate authorities can actually issue certificates for their sites.
 
 "In January this year (2010), Gmail switched to using HTTPS for everything by default. .. In order to do this we had to deploy no additional machines and no special hardware. On our production frontend machines, SSL accounts for < 1% of the CPU load, < 10 KB of memory per connection, and < 2% of network overhead…
 
@@ -135,10 +135,10 @@ So what do we have for web developers? An ecosystem of media APIs for the open W
 + [WebRTC](http://bit.ly/webrtcwebaudio) provides realtime communication in the browser, and is now widely supported on mobile and desktop. In total there are already over 1.2 billion WebRTC endpoints.
 + [Web Audio](http://html5rocks.com/en/tutorials/webaudio/intro) provides sophisticated tools for audio synthesis and processing.
 + Web MIDI, integrated with Web Audio, allows interaction with MIDI devices.
-+ The audio and video elements are now supported on [more than 85% of mobile and desktop browsers](http://www.jwplayer.com/html5/).
++ The audio and video elements are now supported on [more than 85% of mobile and desktop browsers](http://www.jwplayer.com/html5/){: .external }.
 + [Media Source Extensions](http://updates.html5rocks.com/2011/11/Stream-video-using-the-MediaSource-API) can be used for adaptive streaming and time shifting.
 + EME enables playback of protected content.
-+ Transcripts, captions and the [track element](http://www.html5rocks.com/en/tutorials/track/basics/) enable subtitles, captions, timed metadata,  deep linking and deep search.
++ Transcripts, captions and the [track element](http://www.html5rocks.com/en/tutorials/track/basics/){: .external } enable subtitles, captions, timed metadata,  deep linking and deep search.
 
 **Slides:** [Media APIs for the multi-device Web](http://simpl.info/media/#1)
 

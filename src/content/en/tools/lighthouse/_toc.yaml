@@ -1,0 +1,19 @@
+toc:
+  - title: Lighthouse
+    section:
+    - title: Overview
+      path: /web/tools/lighthouse/
+    - title: Audit References
+      section:
+      - title: Cache Contains start_url From Manifest
+        path: /web/tools/lighthouse/audits/cache-contains-start_url
+      - title: URL Responds with a 200 When Offline
+        path: /web/tools/lighthouse/audits/http-200-when-offline
+      - title: Site Redirects HTTP Traffic to HTTPS
+        path: /web/tools/lighthouse/audits/http-redirects-to-https
+      - title: Site is on HTTPS
+        path: /web/tools/lighthouse/audits/https
+      - title: Page Contains Some Content When Its Scripts Are Not Available
+        path: /web/tools/lighthouse/audits/no-js
+      - title: Has a Registered Service Worker
+        path: /web/tools/lighthouse/audits/registered-service-worker

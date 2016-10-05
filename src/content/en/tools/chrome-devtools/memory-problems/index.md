@@ -150,7 +150,7 @@ than it began (the "beginning" here being the point after the forced
 garbage collection). In the real world, if you saw this pattern of increasing
 JS heap size or node size, it would potentially mean a memory leak.
 
-[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool?hl=en#make-a-recording
+[recording]: https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool#make-a-recording
 
 [cg]: imgs/collect-garbage.png
 

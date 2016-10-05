@@ -1,6 +1,6 @@
 # Web Fundamentals on DevSite 
 
-Welcome to the new Web**Fundamentals**! 
+Welcome to the new Web**Fundamentals**! <master> [![Build Status](https://ci.cloudware.io/api/badges/google/WebFundamentals/status.svg)](https://ci.cloudware.io/google/WebFundamentals)
 
 ### What's changed?
 

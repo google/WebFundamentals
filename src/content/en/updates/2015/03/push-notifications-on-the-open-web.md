@@ -301,7 +301,7 @@ This will ask the user to give your origin permission to send push
 notifications. Without this permission, you will not be able to successfully
 subscribe.
 
-If the [promise](http://www.html5rocks.com/en/tutorials/es6/promises/) returned
+If the [promise](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external } returned
 by the **subscribe()** method resolves, you'll be given a
 [PushSubscription](http://w3c.github.io/push-api/#idl-def-PushSubscription)
 object which will contain an **endpoint**.
@@ -359,7 +359,7 @@ will happen until we add a push event listener to our service worker file.
 When a push message is received (we'll talk about how to actually send a push
 message in the next section), a **push event**
 will be dispatched in your service worker, at which point you'll need
-to display a [notification](https://notifications.spec.whatwg.org/).
+to display a [notification](https://notifications.spec.whatwg.org/){: .external }.
 
 
     self.addEventListener('push', function(event) {  
@@ -384,7 +384,7 @@ This code registers a **push** event listener and displays a notification with a
 predefined title, body text, icon and a notification tag.
 One subtlety to highlight with this example is the **_event.waitUntil()_**
 method. This method takes in a
-[promise](http://www.html5rocks.com/en/tutorials/es6/promises/) and extends the
+[promise](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external } and extends the
 lifetime of an event handler (or can be thought of as keeping the service
   worker alive), until the promise is
 [settled](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md#states);
@@ -669,7 +669,7 @@ exactly this:
 Subscriptions may get out of sync between FCM and your server. Make sure
 your server parses the response body of the FCM API's send POST, looking for
 **error:NotRegistered** and **canonical_id** results, as explained in the [FCM
-documentation](https://developers.google.com/cloud-messaging/http).
+documentation](/cloud-messaging/http).
 
 Subscriptions may also get out of sync between the service worker and your
 server. For example, after subscribing/unsubscribing successfully, a flaky
@@ -786,9 +786,9 @@ to implement the Web Push Protocol.
 
 ### Where are the specs?
 
-[https://slightlyoff.github.io/ServiceWorker/spec/service\_worker/](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/)  
+[https://slightlyoff.github.io/ServiceWorker/spec/service\_worker/](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/){: .external }  
 [https://w3c.github.io/push-api/](https://w3c.github.io/push-api/)  
-[https://notifications.spec.whatwg.org/](https://notifications.spec.whatwg.org/)
+[https://notifications.spec.whatwg.org/](https://notifications.spec.whatwg.org/){: .external }
 
 ### Can I prevent duplicate notifications if my web presence has multiple origins, or if I have both a web and native presence?
 
@@ -863,7 +863,7 @@ There are a few limitations outlined in this post:
 ### Shouldn't we be using the Permissions API?
 
 The
-[Permission API](https://w3c.github.io/permissions/) is implemented in Chrome,
+[Permission API](https://w3c.github.io/permissions/){: .external } is implemented in Chrome,
 but it's not necessarily going to be available in all browsers. [You can
 learn more here](/web/updates/2015/04/permissions-api-for-the-web).
 

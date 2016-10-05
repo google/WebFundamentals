@@ -12,12 +12,12 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-[SVGOMG](https://jakearchibald.github.io/svgomg/): A beautiful, material,
+[SVGOMG](https://jakearchibald.github.io/svgomg/){: .external }: A beautiful, material,
 responsive frontend for SVGO.
 
 ### What we like?
 
-Built by our own [Jake Archibald](https://jakearchibald.com/), SVGOMG is an
+Built by our own [Jake Archibald](https://jakearchibald.com/){: .external }, SVGOMG is an
 almost perfect example of a fully responsive and capable tool written with web
 technologies. It features a beautiful Material Design look, ServiceWorker
 ensures that the app loads quickly and is available offline, and the

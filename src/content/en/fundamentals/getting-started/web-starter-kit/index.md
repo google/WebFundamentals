@@ -105,7 +105,7 @@ final output below:
 #### Check Your Javascript
 
 JSHint is a tool which scans your JavaScript code to check for possible problems
-with your JavaScript logic and [enforces coding best practices](http://www.jshint.com/docs/).
+with your JavaScript logic and [enforces coding best practices](http://www.jshint.com/docs/){: .external }.
 
 The tool runs whenever you build the project or, if you are running gulp server,
 whenever you make a change to a JavaScript file.
@@ -221,7 +221,7 @@ automatically.
 
 ### Set Up Your Web Starter Kit Project
 
-The first step is to go to [https://developers.google.com/web/tools/starter-kit/](/web/tools/starter-kit/)
+The first step is to go to [/web/tools/starter-kit/](/web/tools/starter-kit/)
 and download and extract the zip. This will be the basis for your project so rename the folder and put it somewhere relevant on your machine. For the rest of this guide we'll call the folder `my-project.`
 
 Next, you need to install the local dependencies for Web Starter Kit. Open a

@@ -24,9 +24,9 @@ CSS preprocessors such as Sass, as well as JS preprocessors and transpilers can 
 
 A preprocessor takes an arbitrary source file and converts it into something that the browser understands. 
 
-With CSS as output, they are used to add features that otherwise wouldn't exist (yet): CSS Variables, Nesting and much more. Notable examples in this category are [Sass](http://sass-lang.com/), [Less](http://lesscss.org/) and [Stylus](https://learnboost.github.io/stylus/).
+With CSS as output, they are used to add features that otherwise wouldn't exist (yet): CSS Variables, Nesting and much more. Notable examples in this category are [Sass](http://sass-lang.com/), [Less](http://lesscss.org/){: .external } and [Stylus](https://learnboost.github.io/stylus/).
 
-With JavaScript as output, they either convert (compile) from a completely different language, or convert (transpile) a superset or new language standard down to today's standard. Notable examples in this category are [CoffeeScript](http://coffeescript.org/) and ES6 (via [Babel](https://babeljs.io/)).
+With JavaScript as output, they either convert (compile) from a completely different language, or convert (transpile) a superset or new language standard down to today's standard. Notable examples in this category are [CoffeeScript](http://coffeescript.org/){: .external } and ES6 (via [Babel](https://babeljs.io/)).
 
 ## Debugging and editing preprocessed content
 

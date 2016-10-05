@@ -19,7 +19,7 @@ Yesterday at the office, we were coming up with strange and magical CSS tricks. 
       font-size: x-large;
     }
     
-Check out the [live example at jsFiddle](http://jsfiddle.net/VWYsk/)
+Check out the [live example at jsFiddle](http://jsfiddle.net/VWYsk/){: .external }
 
 You can also style absolute links differently from relative links:
 
@@ -87,7 +87,7 @@ Or that you can use the awesome power of CSS attr-function to fill in the :after
     }
     
 
-Check out the [live example at jsFiddle](http://jsfiddle.net/Wedjf/1/)
+Check out the [live example at jsFiddle](http://jsfiddle.net/Wedjf/1/){: .external }
 
 Note that attr() reads in the attribute values of the matching element, so if you use it for #foo:before, it reads the attributes from #foo.
 

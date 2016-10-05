@@ -34,8 +34,8 @@ When a user opens the Video Player Sample, they can choose to watch a single vid
 
 The Video Player Sample is written for the open web platform using HTML and JavaScript, broadly following the [Model View Controller](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) pattern and structure.
 
-* It is built using the open source [Google Closure JavaScript library](http://code.google.com/closure/)
-* Compiled with the [Closure Compiler](http://code.google.com/closure/compiler/)
+* It is built using the open source [Google Closure JavaScript library](http://code.google.com/closure/){: .external }
+* Compiled with the [Closure Compiler](http://code.google.com/closure/compiler/){: .external }
 * Distributed through the Chrome Web Store to take advantage of notifications
 
 ### Browser Support

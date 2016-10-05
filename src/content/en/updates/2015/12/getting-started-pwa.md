@@ -26,7 +26,7 @@ Aaron Gustafson likened [progressive enhancement](http://alistapart.com/article/
 
 Think of the candy shell as where many Progressive Web App features can live. They are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required.
 
-As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)), sending relevant [Push Notifications](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
+As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)), sending relevant [Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg" alt="Web app install banners for engagement, launch from the user's home screen, splash screen in Chrome for Android, works offline with service worker"/>
@@ -95,22 +95,22 @@ For diving deeper into Progressive Web Apps, read Alex Russell's original [blog 
 
 > The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the device home screen), direct what the user can launch and more importantly how they can launch it
 
-The manifest enables your web app to have a more native-like presence on the user's home screen. It allows the app to be launched in full-screen mode (without a URL bar being present), provides control over the screen orientation and in recent versions of Chrome on Android supports defining a [Splash Screen](https://developers.google.com/web/updates/2015/10/splashscreen?hl=en) and [theme color](https://developers.google.com/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android?hl=en) for the address bar. It is also used to define a set of icons by size and density used for the aforementioned Splash screen and home screen icon.
+The manifest enables your web app to have a more native-like presence on the user's home screen. It allows the app to be launched in full-screen mode (without a URL bar being present), provides control over the screen orientation and in recent versions of Chrome on Android supports defining a [Splash Screen](/web/updates/2015/10/splashscreen) and [theme color](/web/updates/2014/11/Support-for-theme-color-in-Chrome-39-for-Android) for the address bar. It is also used to define a set of icons by size and density used for the aforementioned Splash screen and home screen icon.
 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-1-@1x.jpg" alt="Add to home screen, launch from home screen and full-screen app-like experiences."/>
 
-A sample manifest file can be found in [Web Starter Kit](https://github.com/google/web-starter-kit/blob/master/app/manifest.json) and over in the [Google Chrome samples](https://github.com/GoogleChrome/samples/tree/0768ee71e4548f779219798d8c83fdcc67b469e8/web-application-manifest). Bruce Lawson wrote a [Manifest Generator](http://brucelawson.github.io/manifest/) and Mounir Lamouri has also written a handy [Web Manifest validator](https://mounirlamouri.github.io/manifest-validator/) worth checking out.
+A sample manifest file can be found in [Web Starter Kit](https://github.com/google/web-starter-kit/blob/master/app/manifest.json) and over in the [Google Chrome samples](https://github.com/GoogleChrome/samples/tree/0768ee71e4548f779219798d8c83fdcc67b469e8/web-application-manifest). Bruce Lawson wrote a [Manifest Generator](http://brucelawson.github.io/manifest/){: .external } and Mounir Lamouri has also written a handy [Web Manifest validator](https://mounirlamouri.github.io/manifest-validator/) worth checking out.
 
-In my personal projects, I rely on [realfavicongenerator](http://realfavicongenerator.net/) to generate the correctly sized icons for both the web app manifest and for use across iOS, desktop and so on. The [favicons](https://github.com/haydenbleasel/favicons) Node module is also able to achieve a similar output as part of your build process.
+In my personal projects, I rely on [realfavicongenerator](http://realfavicongenerator.net/){: .external } to generate the correctly sized icons for both the web app manifest and for use across iOS, desktop and so on. The [favicons](https://github.com/haydenbleasel/favicons) Node module is also able to achieve a similar output as part of your build process.
 
 Chromium-based browsers (Chrome, Opera etc.) [support](https://www.chromestatus.com/feature/6488656873259008) web app manifests today with Firefox actively developing support and Edge listing them as [under consideration](https://dev.windows.com/en-us/microsoft-edge/platform/status/webapplicationmanifest). WebKit/Safari have not yet posted public signals about their intents to implement the feature just yet.
 
-For more details, read [Installable Web Apps with the Web App Manifest in Chrome for Android](https://developers.google.com/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android?hl=en) on Web Fundamentals.
+For more details, read [Installable Web Apps with the Web App Manifest in Chrome for Android](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) on Web Fundamentals.
 
 ### Add to Home Screen Banner
 
-Chrome on Android has support adding in your site to the home screen for a while now, but recent versions also support proactively suggesting sites be added using native [Web App install banners](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en).
+Chrome on Android has support adding in your site to the home screen for a while now, but recent versions also support proactively suggesting sites be added using native [Web App install banners](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-2-@1x.jpg" alt="The voice memos demo application displaying a web app install banner prompt in Chrome for Android"/>
@@ -118,7 +118,7 @@ src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-2-@1x.jpg" alt=
 In order for the app install prompts to display your app must:
 
 * Have a valid web app manifest
-* Be served over HTTPS (see [letsencrypt](https://letsencrypt.org/) for a free certificate)
+* Be served over HTTPS (see [letsencrypt](https://letsencrypt.org/){: .external } for a free certificate)
 * Have a valid service worker registered
 * Be visited twice, with at least 5 minutes between visits
 
@@ -135,14 +135,14 @@ Service workers are powerful for offline caching but they also offer significant
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-3-@1x.jpg" alt="Service worker caching of the application shell, allowing it to load without the network"/>
 
-A comprehensive set of [service worker samples](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker) are available over on Google Chrome samples. Jake Archibald's [offline cookbook](https://jakearchibald.com/2014/offline-cookbook/) is a must-read and I highly recommend trying out Paul Kinlan's [your first offline web app](https://developers.google.com/web/fundamentals/getting-started/your-first-offline-web-app/) walkthrough if new to service worker.
+A comprehensive set of [service worker samples](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker) are available over on Google Chrome samples. Jake Archibald's [offline cookbook](https://jakearchibald.com/2014/offline-cookbook/) is a must-read and I highly recommend trying out Paul Kinlan's [your first offline web app](/web/fundamentals/getting-started/your-first-offline-web-app/) walkthrough if new to service worker.
 
-Our team also maintain a number of service worker helper utilities and build tools that we find useful for reducing the overhead in getting service worker setup. They're listed over on [Service Worker Libraries](https://developers.google.com/web/tools/service-worker-libraries/). The two main ones are:
+Our team also maintain a number of service worker helper utilities and build tools that we find useful for reducing the overhead in getting service worker setup. They're listed over on [Service Worker Libraries](/web/tools/service-worker-libraries/). The two main ones are:
 
 * [sw-precache](https://github.com/GoogleChrome/sw-precache/): a build-time tool that generates a service worker script useful for precaching your web app shell
 * [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox): a library providing runtime caching for infrequently used resources
 
-Jeff Posnick wrote a quick primer on sw-precache called [Offline-first, fast, with the sw-precache module](https://developers.google.com/web/updates/2015/02/offline-first-with-sw-precache?hl=en) and a [codelab](https://www.code-labs.io/codelabs/sw-precache/index.html) on the same tool that you might find useful.
+Jeff Posnick wrote a quick primer on sw-precache called [Offline-first, fast, with the sw-precache module](/web/updates/2015/02/offline-first-with-sw-precache) and a [codelab](https://www.code-labs.io/codelabs/sw-precache/index.html) on the same tool that you might find useful.
 
 Chrome, Opera and Firefox have all implemented support for service worker with Edge having positive public signals about interest in the feature. Safari briefly mentioned interest in it via one engineer's proposed [five year plan](https://trac.webkit.org/wiki/FiveYearPlanFall2015).
 
@@ -154,11 +154,11 @@ Effectively, you can build web apps that users can engage with outside of a tab.
 
 The Push API is [implemented](https://www.chromestatus.com/features/5416033485586432) in Chrome, in development in Firefox and [under consideration](https://dev.windows.com/en-us/microsoft-edge/platform/status/pushapi) in Edge. There are no public signals from Safari about their intent to implement this feature just yet.
 
-[Push Notifications on the Open Web](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web?hl=en) is a comprehensive intro to getting Push setup by Matt Gaunt and a [Push Notifications codelab](https://developers.google.com/web/fundamentals/getting-started/push-notifications/?hl=en) is also available on Web Fundamentals.
+[Push Notifications on the Open Web](/web/updates/2015/03/push-notifications-on-the-open-web) is a comprehensive intro to getting Push setup by Matt Gaunt and a [Push Notifications codelab](/web/fundamentals/getting-started/push-notifications/) is also available on Web Fundamentals.
 
 <img src="/web/updates/images/2015/12/getting-started-pwa/pwa-push.jpg" style="width:300px" alt="Web push notification on the Facebook mobile site"/>
 
-Michael van Ouwerkerk from the Chrome team also has a [6 min intro](https://developers.google.com/web/shows/google-io/2015/push-notifications?hl=en) to Push if you're more video inclined.
+Michael van Ouwerkerk from the Chrome team also has a [6 min intro](/web/shows/google-io/2015/push-notifications) to Push if you're more video inclined.
 
 ### Layering in advanced features
 
@@ -166,11 +166,11 @@ Michael van Ouwerkerk from the Chrome team also has a [6 min intro](https://deve
 
 Additional features coming to the web platform such as [Background Syncronisation](https://github.com/WICG/BackgroundSync/blob/master/explainer.md) (for data sync with a server even when your web app is closed) and [Web Bluetooth](https://webbluetoothcg.github.io/web-bluetooth/) (for talking to Bluetooth devices from your web app) can also be layered into your Progressive Web App in this manner.
 
-One-shot Background Sync has been [enabled](https://codereview.chromium.org/1514383002/) in Chrome and Jake Archibald has a [video](https://www.youtube.com/watch?v=wjUCXgM70c0) of his [Offline wikipedia app](https://github.com/jakearchibald/offline-wikipedia) and [article](https://developers.google.com/web/updates/2015/12/background-sync) demonstrating it in action. Francois Beaufort also has a number of [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/) available if interested in trying out that API.
+One-shot Background Sync has been [enabled](https://codereview.chromium.org/1514383002/){: .external } in Chrome and Jake Archibald has a [video](https://www.youtube.com/watch?v=wjUCXgM70c0) of his [Offline wikipedia app](https://github.com/jakearchibald/offline-wikipedia) and [article](/web/updates/2015/12/background-sync) demonstrating it in action. Francois Beaufort also has a number of [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/) available if interested in trying out that API.
 
 ### Framework-friendly
 
-There's really nothing stopping you from applying any of the above principles to an existing application or framework you're building with. A few other principles worth keeping in mind while building your Progressive Web App are the [RAIL](https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en) user-centric performance model and [FLIP](https://aerotwist.com/blog/flip-your-animations/) based animations.
+There's really nothing stopping you from applying any of the above principles to an existing application or framework you're building with. A few other principles worth keeping in mind while building your Progressive Web App are the [RAIL](/web/tools/chrome-devtools/profile/evaluate-performance/rail) user-centric performance model and [FLIP](https://aerotwist.com/blog/flip-your-animations/) based animations.
 
 I'm hopeful that during 2016, we'll see an increasing number of boilerplates and seed projects organically baking in support for Progressive Web Apps as a first-class citizen. Until then, the barrier to adding these features to your own apps isn't very high and are imo, quite worth the effort.
 
@@ -239,7 +239,7 @@ src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-5-@1x.jpg" alt=
 
 * [Voice Memos](https://github.com/GoogleChrome/voice-memos) by Paul Lewis is built using a similar architecture to `app-shell` ([write-up](https://aerotwist.com/blog/voice-memos/))
 * [Offline Wikipedia](https://github.com/jakearchibald/offline-wikipedia) by Jake Archibald ([video](https://www.youtube.com/watch?v=d5_6yHixpsQ))
-* [Air Horner](https://developers.google.com/web/showcase/spotlight/airhorner?hl=en) by Paul Kinlan
+* [Air Horner](/web/showcase/spotlight/airhorner) by Paul Kinlan
 * [Guitar Tuner](https://guitar-tuner.appspot.com/) by Paul Lewis ([write-up](https://aerotwist.com/blog/guitar-tuner/))
 
 ### Polymer

@@ -17,7 +17,7 @@ This feature wasn’t widely used by web developers but it presented a very conv
 
 Mutation Events are useful, but at the same time they create some performance issues. The Events are slow and they are fired too frequently in a synchronous way, which causes some undesired browser bugs.
 
-Introduced in the [DOM4 specification](http://www.w3.org/TR/dom/), [DOM Mutation Observers](http://www.w3.org/TR/dom/#mutation-observers) will replace Mutation Events. Whereas Mutation Events fired slow events for every single change, Mutation Observers are faster using callback functions that can be delivered after multiple changes in the DOM.
+Introduced in the [DOM4 specification](http://www.w3.org/TR/dom/){: .external }, [DOM Mutation Observers](http://www.w3.org/TR/dom/#mutation-observers) will replace Mutation Events. Whereas Mutation Events fired slow events for every single change, Mutation Observers are faster using callback functions that can be delivered after multiple changes in the DOM.
 
 You can [manually handle the list of changes](http://www.w3.org/TR/dom/#mutationrecord) the API offers, or use a library such as [Mutation Summary](https://code.google.com/p/mutation-summary/) which makes this task easier and adds a layer of reliability about the changes that took place in the DOM.
 

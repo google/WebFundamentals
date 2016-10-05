@@ -41,7 +41,7 @@ your site.  Your build process shouldn't be a set of tasks you run at the end of
 your development workflow.
 
 The most popular tools for implementing a build process are
-[Gulp](http://gulpjs.com/) and [Grunt](http://gruntjs.com/), both of which are
+[Gulp](http://gulpjs.com/){: .external } and [Grunt](http://gruntjs.com/), both of which are
 command line tools. If you have no experience of either, use Gulp, we use it for
 [Web Starter Kit](/web/tools/starter-kit/) and recommend
 you do the same.

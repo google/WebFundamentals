@@ -44,7 +44,7 @@ You cannot currently style the appearance of the date picker.  In WebKit, we hav
 
 If you have tried jQuery Datepicker on `input[type=date]` in Google Chrome, you might have noticed overlapping calendars of both the jQuery UI and the native calendar popup.
 If you'd like to apply jQuery Datepicker on all platforms, use `input[type=text]` instead of `input[type=date]`. Not only Google Chrome but also iOS Safari, the BlackBerry browser, and Opera have their own UI for `input[type=date]`, and there is currently no way to achieve a unified UI on all platforms using `input[type=date]`.
-If you'd like to apply jQuery Datepicker only on platforms without `input[type=date]` support, you may use [Modernizr](http://modernizr.com/), or the following code:
+If you'd like to apply jQuery Datepicker only on platforms without `input[type=date]` support, you may use [Modernizr](http://modernizr.com/){: .external }, or the following code:
 
 
     var isDateInputSupported = function(){

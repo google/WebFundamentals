@@ -69,7 +69,7 @@ This will create a __push-notifications__ directory containing:
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
 ![7f4505211b238ae9.png](img/7f4505211b238ae9.png)
 
@@ -289,7 +289,7 @@ __FCM will match this with the Sender ID you got from the Firebase Developer Con
 
 __APA91bHMaA-R0eZrPisZCGfwwd7z1EzL7P7Q7cyocVkxBU3nXWed1cQYCYvFglMHIJ40kn-jZENQ62UFgg5QnEcqwB5dFZ-AmNZjATO8QObGp0p1S6Rq2tcCuUibjnyaS0UF1gIM1mPeM25MdZdNVLG3dM6ZSfxV8itpihroEN5ANj9A26RU2Uw__
 
-For a production site or app, you would normally set up a service to interact with FCM from your server. (There is some sample code for doing just that in  [Push Notifications on the Open Web](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en).) For this codelab, you can send requests from your terminal or from an app running in the browser.
+For a production site or app, you would normally set up a service to interact with FCM from your server. (There is some sample code for doing just that in  [Push Notifications on the Open Web](/web/updates/2015/03/push-notificatons-on-the-open-web).) For this codelab, you can send requests from your terminal or from an app running in the browser.
 
 You can send a request to FCM using the cURL utility.
 
@@ -577,7 +577,7 @@ __What about Firefox?__
 
 
 
-*  [Push Notifications on the Open Web](https://developers.google.com/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en)
+*  [Push Notifications on the Open Web](/web/updates/2015/03/push-notificatons-on-the-open-web)
 *  [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
 *  [Best Practices for Push Notifications Permission UX](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/edit)
 *  [Do's and Don'ts for Notifications](http://android-developers.blogspot.co.uk/2015/08/get-dos-and-donts-for-notifications.html)

@@ -52,7 +52,7 @@ HTML 명세서는 각각의 모든 이벤트에 대해서 언제 발생되어야
 
 <img src="images/device-navtiming-small.png" class="center" alt="NavTiming demo">
 
-모든것이 말한대로 되었다면, 우리는 추적하기 위한 몇 가지 특정한 마일스톤과 그 결과를 출력하기 위한 간단한 함수가 생겼습니다. 페이지에 이러한 결과를 출력하는것 대신 여러분은 코드를 수정하여 분석 서버([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784?hl=en))로 보낼 수 있습니다. 이것은 여러분들의 페이지 성능 색인을 유지하여 몇 가지 최적화 작업으로 이득을 얻을 페이지들을 선정하는 데 좋은 방법입니다.
+모든것이 말한대로 되었다면, 우리는 추적하기 위한 몇 가지 특정한 마일스톤과 그 결과를 출력하기 위한 간단한 함수가 생겼습니다. 페이지에 이러한 결과를 출력하는것 대신 여러분은 코드를 수정하여 분석 서버([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784))로 보낼 수 있습니다. 이것은 여러분들의 페이지 성능 색인을 유지하여 몇 가지 최적화 작업으로 이득을 얻을 페이지들을 선정하는 데 좋은 방법입니다.
 
 Translated By: 
 {% include "web/_shared/contributors/swengineer.html" %}

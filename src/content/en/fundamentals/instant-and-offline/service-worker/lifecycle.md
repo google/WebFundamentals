@@ -74,7 +74,7 @@ In brief:
 </style>
 <div class="framebox-container-container">
 <div class="framebox-container">
-{% framebox %}
+{% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
@@ -372,7 +372,7 @@ In brief:
 
 <div class="framebox-container-container">
 <div class="framebox-container">
-{% framebox %}
+{% framebox height="100%" %}
 <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js" defer></script>
@@ -539,7 +539,7 @@ In brief:
 </div>
 </div>
 
-Let's say we changed our service worker script to responded with a picture of
+Let's say we changed our service worker script to respond with a picture of
 a horse rather than a cat:
 
     const expectedCaches = ['static-v2'];
@@ -769,7 +769,7 @@ other service-worker-supporting browsers.
 ## Handling updates
 
 The serivce worker was designed as part of the [extensible
-web](https://extensiblewebmanifesto.org/){: .external}. The idea is that we, as
+web](https://extensiblewebmanifesto.org/){: .external }. The idea is that we, as
 browser developers, acknoledge that we are not better at web development than
 web developers. And as such, we shouldn't provide narrow high-level APIs that
 solve a particular problem using patterns *we* like, and instead give you access

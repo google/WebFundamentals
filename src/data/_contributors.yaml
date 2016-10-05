@@ -5,7 +5,7 @@
 ##
 
 # EXAMPLE
-# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors 
+# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors
 #   name:
 #     given: First # Required
 #     family: Last # Required
@@ -657,7 +657,7 @@ mustafa:
   twitter: mustafa_x
   email: mkurtuldu@google.com
   description:
-    en: 'Design Advocate at Google, supporting designers and developers world wide create wonderful user experiences using Googles creative principles such as the Design Sprint Process, Material Design and Progressive Web Apps.'
+    en: 'Design Advocate at Google • Material Design, UX & Design Sprints'
 
 sethladd:
   name:
@@ -1178,4 +1178,16 @@ maciejzasada:
   google: 104812516714503133849
   email: maciej@unit9.com
 
-
+aliceboxhall:
+  name:
+    given: Alice
+    family: Boxhall
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  google: 111975973972817482025
+  twitter: sundress
+  email: aboxhall@google.com

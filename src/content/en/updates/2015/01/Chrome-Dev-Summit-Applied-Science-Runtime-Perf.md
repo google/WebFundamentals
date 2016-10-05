@@ -12,7 +12,7 @@ description: The story of building the Chrome Dev Summit site.
 
 <img src="/web/updates/images/2015-05-01/takeover.gif" alt="The card takeover effect" class="attempt-right" />
 
-Late last year I built the [Chrome Dev Summit](https://developer.chrome.com/devsummit/) site. I wanted it to have a [Material Design](http://www.google.com/design/spec/) look and feel, since it’s a great design language, and I felt it would be a great fit for the kind of site I wanted to create. But, as with any new design language, there are questions, challenges, and decisions to take, and especially so when dealing with the conventions of the web.
+Late last year I built the [Chrome Dev Summit](https://developer.chrome.com/devsummit/){: .external } site. I wanted it to have a [Material Design](http://www.google.com/design/spec/) look and feel, since it’s a great design language, and I felt it would be a great fit for the kind of site I wanted to create. But, as with any new design language, there are questions, challenges, and decisions to take, and especially so when dealing with the conventions of the web.
 
 One aspect of the site that was particularly challenging to create was the  “takeover” effect when you click on a card.
 
