@@ -7,7 +7,7 @@ description: Muted autoplay for video is supported on Android from Chrome 53. Pr
 {# wf_tags: canvas,chrome53,gif,media,security,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/07/autoplay/featured.jpg #}
 
-# Muted autoplay on mobile: say goodbye to <canvas> hacks and animated GIFs! {: .page-title }
+# Muted autoplay on mobile: say goodbye to Canvas hacks and animated GIFs! {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
