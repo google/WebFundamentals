@@ -10,6 +10,7 @@ description: Improving accessibility for web pages
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/dgash.html" %}
+{% include "web/_shared/contributors/aliceboxhall.html" %}
 {% include "web/_shared/contributors/robdodson.html" %}
 
 
