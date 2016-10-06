@@ -53,7 +53,9 @@ It's important to understand what your app or site feels like when connectivity 
 
 <img src="images/prpl.png" class="attempt-right">
 
-PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs), with an emphasis on the performance of app delivery and launch.
+PRPL (push, render, pre-cache and lazy-load) is a pattern for structuring
+and serving Progressive Web Apps (PWAs), with an emphasis on the performance
+of app delivery and launch.
 
 [Learn More](prpl-pattern/)
 
