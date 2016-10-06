@@ -11,19 +11,19 @@ description: Content Security Policy can significantly reduce the risk and impac
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 The web's security model is rooted in the
-[_same-origin policy_](http://en.wikipedia.org/wiki/Same-origin_policy). Code
+[_same-origin policy_](http://en.wikipedia.org/wiki/Same-origin_policy){: .external}. Code
 from `https://mybank.com` should only have access to `https://mybank.com`'s
 data, and `https://evil.example.com` should certainly never be allowed access.
 Each origin is kept isolated from the rest of the web, giving developers a safe
 sandbox in which to build and play. In theory, this is perfectly brilliant. In
 practice, attackers have found clever ways to subvert the system.
 
-[Cross-site scripting (XSS)](http://en.wikipedia.org/wiki/Cross-site_scripting)
+[Cross-site scripting (XSS)](http://en.wikipedia.org/wiki/Cross-site_scripting){: .external}
 attacks, for example, bypass the same origin policy by tricking a site into
 delivering malicious code along with the intended content. This is a huge
 problem, as browsers trust all of the code that shows up on a page as being
 legitimately part of that page's security origin. The
-[XSS Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet) is an old but representative cross-section of the methods an attacker might use to violate this trust by injecting malicious code. If an attacker successfully injects _any_ code at
+[XSS Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet){: .external} is an old but representative cross-section of the methods an attacker might use to violate this trust by injecting malicious code. If an attacker successfully injects _any_ code at
 all, it's pretty much game over: user session data is compromised and
 information that should be kept secret is exfiltrated to The Bad Guys. We'd
 obviously like to prevent that if possible.
@@ -204,7 +204,7 @@ inside of an `<iframe>` with a `sandbox` attribute. This can have a wide range o
 effects on the page: forcing the page into a unique origin, and preventing form
 submission, among others. It's a bit beyond the scope of this article, but you
 can find full details on valid sandboxing attributes in the
-["sandboxing flag set" section of the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#sandboxing-flag-set).
+["sandboxing flag set" section of the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#sandboxing-flag-set){: .external}.
 
 ### The meta tag
 
@@ -274,7 +274,7 @@ code if you do the work to move code into external resources.
 
 Inline style is treated in the same way: both the `style` attribute and `style`
 tags should be consolidated into external stylesheets to protect against a
-variety of [surprisingly clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html)
+variety of [surprisingly clever](http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html){: .external}
 data exfiltration methods that CSS enables.
 
 If you must have inline script and style, you can enable it
@@ -345,7 +345,7 @@ This has more than a few impacts on the way you build applications:
 
 *   You must parse JSON via the built-in `JSON.parse`, rather than relying on
     `eval`. Native JSON operations are available in
-    [every browser since IE8](http://caniuse.com/#feat=json), and they're
+    [every browser since IE8](http://caniuse.com/#feat=json){: .external}, and they're
     completely safe.
 *   Rewrite any `setTimeout` or `setInterval` calls you're currently making
     with inline functions rather than strings. For example:
@@ -368,10 +368,10 @@ would be better written as:
     nifty application of dynamic programming, but comes at the risk of
     evaluating malicious text. Some frameworks support CSP out of the box,
     falling back to a robust parser in the absence of `eval`.
-    [AngularJS's ng-csp directive](https://docs.angularjs.org/api/ng/directive/ngCsp) is a good example of this.
+    [AngularJS's ng-csp directive](https://docs.angularjs.org/api/ng/directive/ngCsp){: .external} is a good example of this.
 
 However, a better choice would be a templating language that offers
-precompilation ([Handlebars does](http://handlebarsjs.com/precompilation.html),
+precompilation ([Handlebars does](http://handlebarsjs.com/precompilation.html){: .external},
 for instance). Precompiling your templates can make the user experience even
 faster than the fastest runtime implementation, and it's safer too.  If eval and
 its text-to-JavaScript brethren are essential to your application, you can
@@ -453,7 +453,7 @@ best be able to support them within the protective confines of CSP.
 
 ### Use case #1: social media widgets
 
-* Google's [+1 button](http://www.google.com/intl/en/webmasters/+1/button/index.html)
+* Google's [+1 button](http://www.google.com/intl/en/webmasters/+1/button/index.html){: .external}
 includes a script from `https://apis.google.com`, and embeds an `<iframe>` from
 `https://plusone.google.com`. You need a policy that includes both these
 origins in order to embed the button. A minimal policy would be `script-src
