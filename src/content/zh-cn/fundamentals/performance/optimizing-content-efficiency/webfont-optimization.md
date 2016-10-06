@@ -28,13 +28,13 @@ description: 字体设计是良好的设计、品牌塑造、可读性和可访�
 
 <img src="images/glyphs.png" class="center" alt="字体字形表">
 
-选取一种字体之后，考虑哪些字符集受支持是很重要的。如果您需要将您的网页内容本地化为多种语言，那么您应使用一种可以向您的用户交付一致的外观和体验的字体。例如，[Google 的 Noto 字体系列](https://www.google.com/get/noto/) 旨在支持全世界的语言。但是，请注意 Noto 的总大小（包含所有语言在内）达到 130 MB 以上 ZIP 下载！ 
+选取一种字体之后，考虑哪些字符集受支持是很重要的。如果您需要将您的网页内容本地化为多种语言，那么您应使用一种可以向您的用户交付一致的外观和体验的字体。例如，[Google 的 Noto 字体系列](https://www.google.com/get/noto/){: .external } 旨在支持全世界的语言。但是，请注意 Noto 的总大小（包含所有语言在内）达到 130 MB 以上 ZIP 下载！ 
 
 很显然，在网络上使用字体需要某些细心的工程，以确保字体设计不会影响性能。幸运的是，网络平台提供所有必要的原型，在本指南的剩余部分中，我们将以实际操作让您看到如何两全其美。
 
 ### 网页字体格式
 
-现在网络上使用的字体容器格式有四种：[EOT](http://en.wikipedia.org/wiki/Embedded_OpenType)、[TTF](http://en.wikipedia.org/wiki/TrueType)、[WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) 和 [WOFF2](http://www.w3.org/TR/WOFF2/)。遗憾的是，无论选择的范围有多宽，都不会有在所有旧浏览器和新浏览器上都可以使用的单一通用格式：EOT [仅 IE 支持](http://caniuse.com/#feat=eot)，TTF 具有 [部分 IE 支持](http://caniuse.com/#search=ttf)，WOFF 的支持最广泛，但 [它在许多较旧的浏览器中不可用](http://caniuse.com/#feat=woff)，WOFF 2.0 支持 [对于许多浏览器来说还未实现](http://caniuse.com/#feat=woff2)。
+现在网络上使用的字体容器格式有四种：[EOT](http://en.wikipedia.org/wiki/Embedded_OpenType)、[TTF](http://en.wikipedia.org/wiki/TrueType)、[WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) 和 [WOFF2](http://www.w3.org/TR/WOFF2/){: .external }。遗憾的是，无论选择的范围有多宽，都不会有在所有旧浏览器和新浏览器上都可以使用的单一通用格式：EOT [仅 IE 支持](http://caniuse.com/#feat=eot)，TTF 具有 [部分 IE 支持](http://caniuse.com/#search=ttf)，WOFF 的支持最广泛，但 [它在许多较旧的浏览器中不可用](http://caniuse.com/#feat=woff)，WOFF 2.0 支持 [对于许多浏览器来说还未实现](http://caniuse.com/#feat=woff2)。
 
 那我们该怎么办？ 不存在在所有浏览器中都可以使用的单一格式，这意味着我们需要交付多种格式才能提供一致的体验：
 
@@ -52,7 +52,7 @@ Note: 从技术上讲，还有 <a href='http://caniuse.com/svg-fonts'>SVG 字体
 
 * EOT 和 TTF 格式默认情况下不会进行压缩：交付这些格式时，请确保您的服务器已配置为应用 [GZIP 压缩](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip)。
 * WOFF 具有内建压缩 - 确保您的 WOFF 压缩工具正在使用最佳压缩设置。
-* WOFF2 使用自定义预处理和压缩算法对其他格式交付 ~30% 的文件大小减小 - 请参阅 [报告](http://www.w3.org/TR/WOFF20ER/)。
+* WOFF2 使用自定义预处理和压缩算法对其他格式交付 ~30% 的文件大小减小 - 请参阅 [报告](http://www.w3.org/TR/WOFF20ER/){: .external }。
 
 最后，值得注意的是某些字体格式包含附加的元数据，比如 [字体提示](http://en.wikipedia.org/wiki/Font_hinting) 和 [字距调整](http://en.wikipedia.org/wiki/Kerning) 信息，这些信息在某些平台上可能不是必要的，这样就可以进一步优化文件大小。查询您的字体压缩工具是否有可用的优化选项，而如果您这样做了，请确保您有适合的基础架构来测试这些优化的字体并将其交付给每个特定浏览器 - 例如 Google 字体为每个字体维护 30 种以上的 优化变体，并自动检测、交付适合每种平台和浏览器的最佳变体。
 

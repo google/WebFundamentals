@@ -200,7 +200,7 @@ foo.example.com 和 bar.example.com 有效，但对于 foo.bar.example.com 无�
 的合适阶段；请参考“将 HTTP 重定向到 HTTPS”和“打开严格传输安全和安全 Cookie”。
 
 现在，以及您的网站整个生存期中，使用
-[Qualys 方便的 SSL 服务器测试](https://www.ssllabs.com/ssltest/)来检查您的 HTTPS 配置。 您的网站
+[Qualys 方便的 SSL 服务器测试](https://www.ssllabs.com/ssltest/){: .external }来检查您的 HTTPS 配置。 您的网站
 得分应为 A 或 A+；将导致降级的任何因素视为 Bug。
 (今天的 A 在明天会变成 B，因为针对算法和协议的攻击
 始终在改进！)
@@ -341,7 +341,7 @@ HTTPS 的全部能力。
 安全](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)来告诉
 客户端，它们始终应通过 HTTPS 来连接您的服务器，即使在
 访问 http:// 引用时也是如此。 这样可挫败 [SSL
-剥离](http://www.thoughtcrime.org/software/sslstrip/) 之类的攻击，还能避免
+剥离](http://www.thoughtcrime.org/software/sslstrip/){: .external } 之类的攻击，还能避免
 我们在“将 HTTP 重定向到 HTTPS”时启用的 301 重定向产生的来回费用。
 
 **注：** [如果您的
@@ -398,7 +398,7 @@ Google 还发布一个指南，说明在维护其搜索排名时 [如何传输�
 ### 性能
 
 当内容和应用程序层优化得当时（请参考 [Steve Souders 的
-书](https://stevesouders.com/)以获取很好的建议），相对于应用程序的总体成本而言，其余的 TLS
+书](https://stevesouders.com/){: .external }以获取很好的建议），相对于应用程序的总体成本而言，其余的 TLS
 性能问题一般
 都是小问题。 此外，您可以减少和分摊那些费用。 （如需
 TLS 优化建议和一般建议，请参考 _[高性能浏览器

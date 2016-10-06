@@ -5,7 +5,7 @@ description: Most browsers can get access to the user's camera.
 {# wf_updated_on: 2016-08-22 #}
 {# wf_published_on: 2016-08-23 #}
 
-# Capturing an image from the user {: .page-title }
+# Capturing an Image from the User {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 

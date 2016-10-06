@@ -108,7 +108,7 @@ Browser Sync 帮助您在多种设备上测试您的网站。 任何滚动、
 #### 检查 Javascript
 
 JSHint 工具可扫描您的 JavaScript 代码，以检查
-JavaScript 逻辑的潜在问题，并[实施代码最佳做法](http://www.jshint.com/docs/)。
+JavaScript 逻辑的潜在问题，并[实施代码最佳做法](http://www.jshint.com/docs/){: .external }。
 
 每当建立项目时，或如果正在运行 gulp 服务器，
 只要您对 JavaScript 文件进行更改，此工具就将运行。

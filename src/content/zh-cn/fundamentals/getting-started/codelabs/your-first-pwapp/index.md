@@ -806,13 +806,13 @@ web 应用程序清单是一个简单的 JSON 文件，它给你了控制你的�
 
 如果你首次使用 Firebase，那么你需要使用你的 Google 账号登录 Firebase 并安装一些工具。
 
-1. 使用你的 Google 账号登录 Firebase [https://firebase.google.com/](https://firebase.google.com/)
+1. 使用你的 Google 账号登录 Firebase [https://firebase.google.com/](https://firebase.google.com/){: .external }
 2. 通过 npm 安装 Firebase 工具 :<br/>
    `npm install -g firebase-tools`
 
 你的账号被创建且已经登录后，你就可以开始部署了！
 
-1. 创建一个新的应用，在这儿：[https://console.firebase.google.com/](https://console.firebase.google.com/)
+1. 创建一个新的应用，在这儿：[https://console.firebase.google.com/](https://console.firebase.google.com/){: .external }
 2. 如果你最近没有登录过 Firebase 工具，请更新你的证书:<br/>
    `firebase login`
 3. 初始化你的应用，并提供你完成了应用的目录位置：<br/>
@@ -823,7 +823,7 @@ web 应用程序清单是一个简单的 JSON 文件，它给你了控制你的�
    `https://YOUR-FIREBASE-APP.firebaseapp.com`
 
 **扩展阅读:** [Firebase Hosting
-Guide](https://firebase.google.com/docs/hosting/)
+Guide](https://firebase.google.com/docs/hosting/){: .external }
 
 ### 亲自尝试
 

@@ -768,9 +768,9 @@ other service-worker-supporting browsers.
 
 ## Handling updates
 
-The serivce worker was designed as part of the [extensible
+The service worker was designed as part of the [extensible
 web](https://extensiblewebmanifesto.org/){: .external }. The idea is that we, as
-browser developers, acknoledge that we are not better at web development than
+browser developers, acknowledge that we are not better at web development than
 web developers. And as such, we shouldn't provide narrow high-level APIs that
 solve a particular problem using patterns *we* like, and instead give you access
 to the guts of the browser and let you do it how you want, in a way that works
