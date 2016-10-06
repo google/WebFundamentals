@@ -9,18 +9,18 @@ description:
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
-Dogfood: PRPL is a pattern we believe makes sense for applications that can be
-granularly served. It is currently considered experimental, however we plan on
-publishing more data on where it works well in the future.
+Dogfood: PRPL is a new pattern we feel has great potential. At this stage, 
+we welcome experimentation with it while we iterate on the ideas in the 
+pattern and collect more data on where it offers the greatest benefits.
 
 The mobile web is too slow. Over the years the web has evolved from a
 document-centric platform to a first-class application platform. Thanks to
-advancements in the platform itself (such as [Service
-Workers](/web/fundamentals/primers/service-worker/)) and in the tools and
-techniques we use to build apps, users can do virtually anything on the web they
-can do in a native app.
+advancements in the platform itself (such as
+[Service Workers](/web/fundamentals/primers/service-workers)) and in the tools
+and techniques we use to build apps, users can do virtually anything on the web
+they can do in a native app.
 
-But at the same time, the bulk of our computing has moved from powerful desktop
+At the same time, the bulk of our computing has moved from powerful desktop
 machines with fast, reliable network connections to relatively underpowered
 mobile devices with connections that are often slow, flaky or both. This is
 especially true in parts of the world where the next billion users are coming
@@ -36,11 +36,10 @@ PRPL is one such pattern.
 
 ## The PRPL pattern
 
-
 PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs), with
 an emphasis on the performance of app delivery and launch. It stands for:
 
-*  **Push** critical resources for the initial route.
+*  **Push** critical resources for the initial URL route.
 *  **Render** initial route.
 *  **Pre-cache** remaining routes.
 *  **Lazy-load** and create remaining routes on demand.
@@ -84,9 +83,9 @@ structure:
 
 -   The main _entrypoint_ of the application which is served from every valid
     route. This file should be very small, since it will be served from
-    different URLs therefore be cached multiple times. All resource URLs in the
-    entrypoint need to be absolute, since it may be served from non-top-level
-    URLs.
+    different URLs and therefore be cached multiple times. All resource URLs
+    in the entrypoint need to be absolute, since it may be served from
+    non-top-level URLs.
 
 -   The _shell_ or app-shell, which includes the top-level app logic, router,
     and so on.
@@ -114,7 +113,7 @@ Note: although HTML Imports are Polymer's preferred bundling strategy, you can
 use code-splitting and route-based chunking to get a similar setup achieved with
 modern JavaScript module bundlers
 
-In this diagram, the solid lines represent _static dependencies_, external
+In this diagram, the solid lines represent _static dependencies_: external
 resources identified in the files using `<link>` and `<script>` tags. Dotted
 lines represent _dynamic_ or _demand-loaded dependencies_: files loaded as
 needed by the shell.
@@ -130,7 +129,7 @@ load any required polyfills.
 
 The main considerations for the entrypoint are:
 
--   Has minimal static dependencies—not much beyond the app-shell itself.
+-   Has minimal static dependencies, in other words, not much beyond the app-shell itself.
 -   Conditionally loads required polyfills.
 -   Uses absolute paths for all dependencies.
 
@@ -156,8 +155,9 @@ produce two builds:
     HTTP/2 and HTTP/2 server push to deliver the resources the browser needs for
     a fast first paint while optimizing caching.
 
--   A bundled build designed to minimize the number of round-trips required to get the application
-	running on server/browser combinations that don't support server push.
+-   A bundled build designed to minimize the number of round-trips required to
+    get the application running on server/browser combinations that don't support
+    server push.
 
 Your server logic should deliver the appropriate build for each browser.
 
@@ -168,10 +168,10 @@ of different bundles: one bundle for the shell, and one bundle for each
 fragment. The diagram below shows how a simple app would be bundled, again using
 Web Components:
 
-![diagram of the same app as before, where there are 3 bundled
+![diagram of the same app as before, where there are three bundled
 dependencies](images/app-build-bundles.png)
 
-Any dependency shared by two or more fragments is bundled in with the shell and
+Any dependency shared by two or more fragments is bundled with the shell and
 its static dependencies.
 
 Each fragment and its _unshared_ static dependencies are bundled into a single
@@ -184,11 +184,11 @@ the most efficient way.
 
 ## Background: HTTP/2 and HTTP/2 server push
 
-HTTP/2 allows _multiplexed_ downloads over a single connection, so that multiple
-small files can be downloaded more efficiently.
+[HTTP/2](/web/fundamentals/performance/http2/) allows _multiplexed_ downloads over a single
+connection, so that multiple small files can be downloaded more efficiently.
 
-HTTP/2 server push allows the server to preemptively send resources to the
-browser.
+[HTTP/2 server push](/web/fundamentals/performance/http2/#server-push) allows the server
+to preemptively send resources to the browser.
 
 For an example of how HTTP/2 server push speeds up downloads, consider how the
 browser retrieves an HTML file with a linked stylesheet.
@@ -207,28 +207,27 @@ With HTTP/2 push:
 *   The server returns the HTML file, and pushes the stylesheet at the same
     time.
 *   The browser starts parsing the HTML. By the time it encounters the `<link
-rel="stylesheet">`, the stylesheet is already in the cache.
+    rel="stylesheet">`, the stylesheet is already in the cache.
 
-In this simplest case, HTTP/2 server push eliminates a single HTTP
+In the simplest case, HTTP/2 server push eliminates a single HTTP
 request-response.
 
-With HTTP/1, developers bundle resources together to reduce the number of HTTP
+With HTTP/1, developers bundle resources to reduce the number of HTTP
 requests required to render a page. However, bundling can reduce the efficiency
 of the browser's cache. if resources for each page are combined into a single
 bundle, each page gets its own bundle, and the browser can't identify shared
 resources.
 
-The combination of HTTP/2 and HTTP/2 server push can provide the _benefits_ of
-bundling (reduced latency) without needing to bundle resources. Keeping
-resources separate means they can be cached efficiently and be shared between
-pages.
+The combination of HTTP/2 and HTTP/2 server push provides the _benefits_ of
+bundling (reduced latency) without actual bundling. Keeping resources separate
+means they can be cached efficiently and be shared between pages.
 
 ## Conclusion
 
 Loading the code for routes more granularly and allowing browsers to schedule
-work better has the potential to be a holy grail for reaching interactivity in
+work better has the potential to greatly aid reaching interactivity in
 our applications sooner. We need **better architectures that enable
-interactivity quickly** and the PRPL pattern is one interesting example of how
+interactivity quickly** and the PRPL pattern is an interesting example of how
 to accomplish this goal on real mobile devices.
 
 It’s all about headroom and giving yourself enough once you’re done loading your
@@ -238,6 +237,6 @@ done on performance. This is a common problem with applications built using
 larger JavaScript libraries today, where UI is rendered that looks like it
 should work but does not.
 
-PRPL can help deliver the minimal functional code needed to get the route your
+PRPL can help deliver the minimal functional code needed to make the route your
 users land on interactive, addressing this challenge.
 
