@@ -33,7 +33,7 @@ Apps](/web/tools/chrome-devtools/debug/progressive-web-apps)
 <img src="/web/updates/images/2016/08/chromelens.png"
      style="width: 50%">
 
-[ChromeLens](http://chromelens.xyz/) is an excellent new extension to help
+[ChromeLens](http://chromelens.xyz/){: .external } is an excellent new extension to help
 you make your website more accessible to the visually impaired.
 
 P.S. Rob Dodson just launched a new video series on accessibility,
@@ -48,7 +48,7 @@ The Color Picker is in the Sources panel.
 
 ![sources panel color picker](/web/updates/images/2016/08/colorpicker.jpg)
 
-Right-click on the Resources pane in the Network panel and you can copy
+Right-click the Resources pane in the Network panel and you can copy
 a string of cURL requests to download all of your resources.
 
 ![copy all as curl](/web/updates/images/2016/08/curl.png)

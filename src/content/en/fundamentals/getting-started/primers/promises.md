@@ -161,7 +161,7 @@ Here's how you use that promise:
     });
 
 
-`then` takes two arguments, a callback for a success case, and another for the failure case. Both are optional, so you can add a callback for the success or failure case only.
+`then()` takes two arguments, a callback for a success case, and another for the failure case. Both are optional, so you can add a callback for the success or failure case only.
 
 JavaScript promises started out in the DOM as "Futures", renamed to "Promises", and finally moved into JavaScript. Having them in JavaScript rather than the DOM is great because they'll be available in non-browser JS contexts such as Node.js (whether they make use of them in their core APIs is another question).
 
@@ -179,7 +179,7 @@ To bring browsers that lack a complete promises implementation up to spec compli
 
 ## Compatibility with other libraries
 
-The JavaScript promises API will treat anything with a `then` method as promise-like (or `thenable` in promise-speak _sigh_), so if you use a library that returns a Q promise, that's fine, it'll play nice with the new JavaScript promises.
+The JavaScript promises API will treat anything with a `then()` method as promise-like (or `thenable` in promise-speak _sigh_), so if you use a library that returns a Q promise, that's fine, it'll play nice with the new JavaScript promises.
 
 Although, as I mentioned, jQuery's Deferreds are a bit … unhelpful. Thankfully you can cast them to standard promises, which is worth doing as soon as possible:
 
@@ -187,7 +187,7 @@ Although, as I mentioned, jQuery's Deferreds are a bit … unhelpful. Thankfully
     var jsPromise = Promise.resolve($.ajax('/whatever.json'))
 
 
-Here, jQuery's `$.ajax` returns a Deferred. Since it has a "then" method, `Promise.resolve` can turn it into a JavaScript promise. However, sometimes deferreds pass multiple arguments to their callbacks, for example:
+Here, jQuery's `$.ajax` returns a Deferred. Since it has a `then()` method, `Promise.resolve()` can turn it into a JavaScript promise. However, sometimes deferreds pass multiple arguments to their callbacks, for example:
 
     var jqDeferred = $.ajax('/whatever.json');
 
@@ -283,7 +283,7 @@ Now let's use it:
 
 ## Chaining
 
-`then` isn't the end of the story, you can chain `then`s together to transform values or run additional async actions one after another.
+`then()` isn't the end of the story, you can chain `then`s together to transform values or run additional async actions one after another.
 
 
 ### Transforming values
@@ -319,28 +319,28 @@ The response is JSON, but we're currently receiving it as plain text. We could a
 
 
 
-Since `JSON.parse` takes a single argument and returns a transformed value, we can make a shortcut:
+Since `JSON.parse()` takes a single argument and returns a transformed value, we can make a shortcut:
 
     get('story.json').then(JSON.parse).then(function(response) {
       console.log("Yey JSON!", response);
     })
 
 
-[See that in action here](_code/story.json), check the console in DevTools to see the result. In fact, we could make a `getJSON` function really easily:
+[See that in action here](_code/story.json), check the console in DevTools to see the result. In fact, we could make a `getJSON()` function really easily:
 
 
     function getJSON(url) {
       return get(url).then(JSON.parse);
     }
 
-`getJSON` still returns a promise, one that fetches a url then parses the response as JSON.
+`getJSON()` still returns a promise, one that fetches a url then parses the response as JSON.
 
 
 ### Queuing asynchronous actions
 
-You can also chain "then"s to run async actions in sequence.
+You can also chain `then`s to run async actions in sequence.
 
-When you return something from a "then" callback, it's a bit magic. If you return a value, the next "then" is called with that value. However, if you return something promise-like, the next "then" waits on it, and is only called when that promise settles (succeeds/fails). For example:
+When you return something from a `then()` callback, it's a bit magic. If you return a value, the next `then()` is called with that value. However, if you return something promise-like, the next `then()` waits on it, and is only called when that promise settles (succeeds/fails). For example:
 
     getJSON('story.json').then(function(story) {
       return getJSON(story.chapterUrls[0]);
@@ -378,7 +378,7 @@ We don't download `story.json` until `getChapter` is called, but the next time(s
 
 ## Error handling
 
-As we saw earlier, "then" takes two arguments, one for success, one for failure (or fulfill and reject, in promises-speak):
+As we saw earlier, `then()` takes two arguments, one for success, one for failure (or fulfill and reject, in promises-speak):
 
     get('story.json').then(function(response) {
       console.log("Success!", response);
@@ -387,7 +387,7 @@ As we saw earlier, "then" takes two arguments, one for success, one for failure 
     })
 
 
-You can also use "catch":
+You can also use `catch()`:
 
 
     get('story.json').then(function(response) {
@@ -397,7 +397,7 @@ You can also use "catch":
     })
 
 
-There's nothing special about "catch", it's just sugar for `then(undefined, func)`, but it's more readable. Note that the two code examples above do not behave the same, the latter is equivalent to:
+There's nothing special about `catch()`, it's just sugar for `then(undefined, func)`, but it's more readable. Note that the two code examples above do not behave the same, the latter is equivalent to:
 
     get('story.json').then(function(response) {
       console.log("Success!", response);
@@ -406,7 +406,7 @@ There's nothing special about "catch", it's just sugar for `then(undefined, func
     })
 
 
-The difference is subtle, but extremely useful. Promise rejections skip forward to the next "then" with a rejection callback (or "catch", since it's equivalent). With `then(func1, func2)`, `func1` or `func2` will be called, never both. But with `then(func1).catch(func2)`, both will be called if `func1` rejects, as they're separate steps in the chain. Take the following:
+The difference is subtle, but extremely useful. Promise rejections skip forward to the next `then()` with a rejection callback (or `catch()`, since it's equivalent). With `then(func1, func2)`, `func1` or `func2` will be called, never both. But with `then(func1).catch(func2)`, both will be called if `func1` rejects, as they're separate steps in the chain. Take the following:
 
 
     asyncThing1().then(function() {
@@ -427,7 +427,7 @@ The difference is subtle, but extremely useful. Promise rejections skip forward 
 
 
 
-The flow above is very similar to normal JavaScript try/catch, errors that happen within a "try" go immediately to the "catch" block. Here's the above as a flowchart (because I love flowcharts):
+The flow above is very similar to normal JavaScript try/catch, errors that happen within a "try" go immediately to the `catch()` block. Here's the above as a flowchart (because I love flowcharts):
 
 
 <div style="position: relative; padding-top: 93%;">
@@ -457,7 +457,7 @@ Rejections happen when a promise is explicitly rejected, but also implicitly if 
 
 This means it's useful to do all your promise-related work inside the promise constructor callback, so errors are automatically caught and become rejections.
 
-The same goes for errors thrown in "then" callbacks.
+The same goes for errors thrown in `then()` callbacks.
 
     get('/').then(JSON.parse).then(function() {
       // This never happens, '/' is an HTML page, not JSON
@@ -488,7 +488,7 @@ With our story and chapters, we can use catch to display an error to the user:
 
 
 
-If fetching `story.chapterUrls[0]` fails (e.g., http 500 or user is offline), it'll skip all following success callbacks, which includes the one in `getJSON` which tries to parse the response as JSON, and also skips the callback that adds chapter1.html to the page. Instead it moves onto the catch callback. As a result, "Failed to show chapter" will be added to the page if any of the previous actions failed.
+If fetching `story.chapterUrls[0]` fails (e.g., http 500 or user is offline), it'll skip all following success callbacks, which includes the one in `getJSON()` which tries to parse the response as JSON, and also skips the callback that adds chapter1.html to the page. Instead it moves onto the catch callback. As a result, "Failed to show chapter" will be added to the page if any of the previous actions failed.
 
 Like JavaScript's try/catch, the error is caught and subsequent code continues, so the spinner is always hidden, which is what we want. The above becomes a non-blocking async version of:
 
@@ -503,7 +503,7 @@ Like JavaScript's try/catch, the error is caught and subsequent code continues, 
     document.querySelector('.spinner').style.display = 'none'
 
 
-You may want to "catch" simply for logging purposes, without recovering from the error. To do this, just rethrow the error. We could do this in our `getJSON` method:
+You may want to `catch()` simply for logging purposes, without recovering from the error. To do this, just rethrow the error. We could do this in our `getJSON()` method:
 
 
 
@@ -544,7 +544,7 @@ Thinking async isn't easy. If you're struggling to get off the mark, try writing
 
 
 That works ([see example](_code/sync-example.html))! But it's sync and locks
-up the browser while things download. To make this work async we use "then"
+up the browser while things download. To make this work async we use `then()`
 to make things happen one after another.
 
     getJSON('story.json').then(function(story) {
@@ -580,7 +580,7 @@ But how can we loop through the chapter urls and fetch them in order? This **doe
 
 
 ### Creating a sequence
-We want to turn our `chapterUrls` array into a sequence of promises. We can do that using "then":
+We want to turn our `chapterUrls` array into a sequence of promises. We can do that using `then()`:
 
     // Start off with a promise that always resolves
     var sequence = Promise.resolve();
@@ -596,8 +596,7 @@ We want to turn our `chapterUrls` array into a sequence of promises. We can do t
     })
 
 
-
-This is the first time we've seen `Promise.resolve`, which creates a promise that resolves to whatever value you give it. If you pass it an instance of `Promise` it'll simply return it (**note:** this is a change to the spec that some implementations don't yet follow). If you pass it something promise-like (has a 'then' method), it creates a genuine `Promise` that fulfills/rejects in the same way. If you pass in any other value, e.g., `Promise.resolve('Hello')`, it creates a promise that fulfills with that value. If you call it with no value, as above, it fulfills with "undefined".
+This is the first time we've seen `Promise.resolve()`, which creates a promise that resolves to whatever value you give it. If you pass it an instance of `Promise` it'll simply return it (**note:** this is a change to the spec that some implementations don't yet follow). If you pass it something promise-like (has a `then()` method), it creates a genuine `Promise` that fulfills/rejects in the same way. If you pass in any other value, e.g., `Promise.resolve('Hello')`, it creates a promise that fulfills with that value. If you call it with no value, as above, it fulfills with "undefined".
 
 
 There's also `Promise.reject(val)`, which creates a promise that rejects with the value you give it (or undefined).
@@ -773,7 +772,7 @@ Notice the star before the function name, this makes it a generator. The yield k
     adder.next(50).value; // 65
 
 
-But what does this mean for promises? Well, you can use this return/resume behaviour to write async code that looks like (and is as easy to follow as) synchronous code. Don't worry too much about understanding it line-for-line, but here's a helper function that lets us use "yield" to wait for promises to settle:
+But what does this mean for promises? Well, you can use this return/resume behaviour to write async code that looks like (and is as easy to follow as) synchronous code. Don't worry too much about understanding it line-for-line, but here's a helper function that lets us use `yield` to wait for promises to settle:
 
     function spawn(generatorFunc) {
       function continuer(verb, arg) {
@@ -853,7 +852,7 @@ All methods work in Chrome, Opera, Firefox, Microsoft Edge, and Safari unless ot
 </tr>
 <tr>
   <td><code>Promise.resolve(thenable);</code></td>
-  <td>Make a new promise from the thenable. A thenable is promise-like in as far as it has a "then" method.</td>
+  <td>Make a new promise from the thenable. A thenable is promise-like in as far as it has a `then()` method.</td>
 </tr>
 <tr>
   <td><code>Promise.resolve(obj);</code></td>
@@ -919,7 +918,7 @@ Note: I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposit
     optional, if either/both are omitted the next 
     <code>onFulfilled</code>/<code>onRejected</code> in the chain is called. 
     Both callbacks have a single parameter, the fulfillment value or 
-    rejection reason. <code>then</code> returns a new promise equivalent to 
+    rejection reason. <code>then()</code> returns a new promise equivalent to 
     the value you return from <code>onFulfilled</code>/<code>onRejected</code>
     after being passed through <code>Promise.resolve</code>. If an error is
     thrown in the callback, the returned promise rejects with that error.
@@ -935,4 +934,4 @@ Note: I'm unconvinced of `Promise.race`'s usefulness; I'd rather have an opposit
 
 Many thanks to Anne van Kesteren, Domenic Denicola, Tom Ashworth, Remy Sharp, Addy Osmani, Arthur Evans, and Yutaka Hirano who proofread this and made corrections/recommendations.
 
-Also, thanks to [Mathias Bynens](https://mathiasbynens.be/) for [updating various parts](https://github.com/html5rocks/www.html5rocks.com/pull/921/files) of the article.
+Also, thanks to [Mathias Bynens](https://mathiasbynens.be/){: .external } for [updating various parts](https://github.com/html5rocks/www.html5rocks.com/pull/921/files) of the article.

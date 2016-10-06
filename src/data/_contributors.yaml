@@ -5,7 +5,7 @@
 ##
 
 # EXAMPLE
-# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors 
+# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors
 #   name:
 #     given: First # Required
 #     family: Last # Required
@@ -55,6 +55,8 @@ jakearchibald:
   twitter: jaffathecake
   email: jakearchibald@google.com
   lanyrd: jaffathecake
+  description:
+    en: Human boy working on web standards at Google
 
 pbakaus:
   name:
@@ -657,7 +659,7 @@ mustafa:
   twitter: mustafa_x
   email: mkurtuldu@google.com
   description:
-    en: 'Design Advocate at Google, supporting designers and developers world wide create wonderful user experiences using Googles creative principles such as the Design Sprint Process, Material Design and Progressive Web Apps.'
+    en: 'Design Advocate at Google • Material Design, UX & Design Sprints'
 
 sethladd:
   name:
@@ -739,9 +741,9 @@ henrylim:
   twitter: henrylim96
   google: +henrylim96
   homepage: 'https://limhenry.xyz'
-  email: henrylim.everything@gmail.com
+  email: lets.email.henry@gmail.com
   description:
-    en: 'Web Developer, Volunteer @ GDG Kuala Lumpur'
+    en: 'Co-Organizer @ GDG Kuala Lumpur'
 
 heathermahan:
   name:
@@ -1178,4 +1180,16 @@ maciejzasada:
   google: 104812516714503133849
   email: maciej@unit9.com
 
-
+aliceboxhall:
+  name:
+    given: Alice
+    family: Boxhall
+  org:
+    name: Google
+    unit: Chrome
+  country: USA
+  role:
+    - author
+  google: 111975973972817482025
+  twitter: sundress
+  email: aboxhall@google.com

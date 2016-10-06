@@ -21,13 +21,13 @@ is a text editor, whether it's as simple as notepad or a full blown
 IDE.
 
 In this episode Addy & Matt look at their collection of plugins
-for [Sublime Text](http://www.sublimetext.com/) and discuss how
+for [Sublime Text](http://www.sublimetext.com/){: .external } and discuss how
 each one helps with their workflow.
 
 ## Package Control
 
 To get the packages (or plugins) referenced in the episode, you need to
-install [Package Control](https://packagecontrol.io/), it's nice and simple
+install [Package Control](https://packagecontrol.io/){: .external }, it's nice and simple
 to install and you can [find
 instructions on how to do so here](https://packagecontrol.io/installation).
 
@@ -35,7 +35,7 @@ instructions on how to do so here](https://packagecontrol.io/installation).
 
 ## JSHint
 
-[JSHint](http://jshint.com/) is a JavaScript linter which examines your JavaScript
+[JSHint](http://jshint.com/){: .external } is a JavaScript linter which examines your JavaScript
 and highlights any possible errors or bad practices in your code.
 
 For exmample, if you accidentally typed a variable name wrong, like
@@ -71,7 +71,7 @@ gutter of any line with a JSHint issue.
 
 ## JSCS
 
-[JSCS](http://jscs.info/) will highlight any places where
+[JSCS](http://jscs.info/){: .external } will highlight any places where
 your JavaScript isn't following a specific coding style.
 
 For example, JSCS can be used to define whether spaces should
@@ -184,13 +184,13 @@ for more info](https://packagecontrol.io/packages/Autoprefixer).
 ## More...
 
 There are a tonne of other plugins that exist for
-Sublime Text, so be sure to explore [Package Control](https://packagecontrol.io/).
+Sublime Text, so be sure to explore [Package Control](https://packagecontrol.io/){: .external }.
 
 For more advice and tips, you should
 checkout WesBos's [great slide deck on
 keyboard shortcuts and other plugins for Sublime Text](
 http://wesbos.github.io/Sublime-Text-Power-User-Talk/).
 
-[WesBos](http://wesbos.com/) has also written a book titled
-['Sublime Text for the Power User'](https://sublimetextbook.com/)
+[WesBos](http://wesbos.com/){: .external } has also written a book titled
+['Sublime Text for the Power User'](https://sublimetextbook.com/){: .external }
 which may be of interest to you wonderful people as well :)

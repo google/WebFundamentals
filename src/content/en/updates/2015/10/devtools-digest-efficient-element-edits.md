@@ -31,7 +31,7 @@ Not anymore! Now you can debug service workers for the current domain directly f
 
 ## All the colors: Material Design shades in the colorpicker
 
-[A few weeks ago](https://developers.google.com/web/updates/2015/08/devtools-digest-aggregated-timeline-details), we added the [Material Design palette](https://www.google.com/design/spec/style/color.html#color-color-palette) to the colorpicker to give you primary, bold colors out-of-the-box. To actually design a full page, you inevitably need full access to all of the Material Design shades, so we’ve baked them in.
+[A few weeks ago](/web/updates/2015/08/devtools-digest-aggregated-timeline-details), we added the [Material Design palette](https://www.google.com/design/spec/style/color.html#color-color-palette) to the colorpicker to give you primary, bold colors out-of-the-box. To actually design a full page, you inevitably need full access to all of the Material Design shades, so we’ve baked them in.
 
 <video src="/web/updates/videos/2015/10/devtools-md-shades.mp4" controls loop autoplay></video>
 

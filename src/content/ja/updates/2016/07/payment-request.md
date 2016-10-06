@@ -180,7 +180,7 @@ Payment Request API がどのように動作するのか、コードを追いな
 ### 商品配送の指定
 実物の商品を販売しているのであれば、おそらくユーザの配送先住所と、送料無料や速達配送などの配送方法の指定を取得する必要があるでしょう。
 Payment Request API はもちろんこのようなケースをサポートしています。
-詳細は [integration guide](https://developers.google.com/web/fundamentals/primers/payment-request/) を確認してください。
+詳細は [integration guide](/web/fundamentals/primers/payment-request/) を確認してください。
 
 ### 決済ソリューションの追加
 Payment Request API がサポートする支払い手段はクレジットカードだけではありません。
@@ -219,7 +219,7 @@ Payment Method Identifier は分散型拡張性をサポートしています。
 Payment Request API についてさらに知るために、いくつかのドキュメントとリソースが利用できます。
 
 * [Official specification](https://www.w3.org/TR/payment-request/)
-* [Payment Request API integration guide](https://developers.google.com/web/fundamentals/primers/payment-request/)
+* [Payment Request API integration guide](/web/fundamentals/primers/payment-request/)
 * [Demo](https://emerald-eon.appspot.com/)
 * [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/)
 

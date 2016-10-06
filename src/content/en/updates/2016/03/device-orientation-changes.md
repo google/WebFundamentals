@@ -15,7 +15,7 @@ description: DeviceOrientationEvent uses relative degrees, and there's a new Dev
 
 Developers working on virtual or augmented reality web apps are undoubtedly
 familiar with the [`DeviceOrientationEvent`](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent).
-For the uninitiated, “[This End Up: Using Device Orientation](http://www.html5rocks.com/en/tutorials/device/orientation/)”
+For the uninitiated, “[This End Up: Using Device Orientation](http://www.html5rocks.com/en/tutorials/device/orientation/){: .external }”
 provides a great overview of how a `deviceorientation` event listener can
 respond to a device twisting and turning.
 
@@ -87,7 +87,7 @@ As of this writing, Chrome 50 is the first browser to support the new
 
 ## Advanced Orientation Tracking with the DeviceMotionEvent
 
-[Boris Smus](http://smus.com/about/) has a
+[Boris Smus](http://smus.com/about/){: .external } has a
 [fantastically detailed article](http://smus.com/sensor-fusion-prediction-webvr/)
 detailing with some of the downsides of using the `DeviceOrientationEvent`, and
 how to implement a bespoke sensor fusion using

@@ -11,7 +11,13 @@ description: Payment Request API is for fast, easy payments on the web.
 {% include "web/_shared/contributors/dgash.html" %}
 {% include "web/_shared/contributors/zkoch.html" %}
 
-Dogfood: `PaymentRequest` is still in development. While we think it's stable enough to implement, it may continue to change. We'll keep this page updated to always reflect the current status of the API. Meanwhile, to protect yourself from API changes that may be backwards incompatible, we're offering [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that can be embedded on your site. The shim will paper over any API differences for two major Chrome versions.
+Dogfood: `PaymentRequest` is still in development. While we think it's stable
+enough to implement, it may continue to change. We'll keep this page updated to
+always reflect the current status of the API. Meanwhile, to protect yourself
+from API changes that may be backwards incompatible, we're offering
+[a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that can be
+embedded on your site. The shim will paper over any API differences for two
+major Chrome versions.
 
 
 Buying goods online is a convenient but often frustrating experience, particularly on mobile devices. Although mobile traffic continues to increase, mobile conversions account for only about a third of all completed purchases. In other words, users abandon mobile purchases twice as often as desktop purchases. Why?
@@ -24,7 +30,7 @@ Online purchase forms are user-intensive, difficult to use, slow to load and ref
 
 Most of the problems that lead to abandonment can be directly traced to purchase forms. Each app or site has its own data entry and validation process, and users often find they must enter the same information at every app's purchase point. Also, application developers struggle to create purchase flows that support multiple unique payment methods; even small differences in payment method requirements can complicate the form completion and submission process.
 
-Any system that improves or solves one or more of those problems is a welcome change. We started solving the problem already with [Autofill](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill), but now we'd like to talk about a more comprehensive solution.
+Any system that improves or solves one or more of those problems is a welcome change. We started solving the problem already with [Autofill](/web/updates/2015/06/checkout-faster-with-autofill), but now we'd like to talk about a more comprehensive solution.
 
 ## Introducing the Payment Request API {: #introducing }
 
@@ -105,9 +111,10 @@ Right now, `PaymentRequest` in Chrome only supports the following standard credi
     ]
 
 
-*Payment methods & data*
+*Payment methods and data*
 
 #### The details parameter {: #details-parameter }
+
 The `details` parameter contains information about the transaction. There are two major components: a total, which reflects the total amount and currency to be charged, and an optional set of `displayItems` that indicate how the final amount was calculated. This parameter is not intended to be a line-item list, but is rather a summary of the order's major components: subtotal, discounts, tax, shipping costs, etc.
 
 <div class="attempt-right">

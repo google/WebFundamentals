@@ -81,6 +81,34 @@ Use **step into** as your typical "one line at a time" action, as it ensures tha
 
 Use [Pause on exceptions](add-breakpoints#break-on-uncaught-exception) when you suspect an uncaught exception is causing a problem, but you don't know where it is. When this option is enabled, you can refine it by clicking the **Pause On Caught Exceptions** checkbox; in this case, execution is paused only when a specifically-handled exception occurs.
 
+## View properties by scope {: #scope }
+
+When you pause a script, the **Scope** pane shows you all of the
+currently-defined properties at that moment in time.
+
+The pane is highlighted in blue in the screenshot below.
+
+![The Scope pane of the Sources panel](imgs/scope-pane.png)
+
+The Scope pane is only populated when a script is paused.
+While your page is running, the Scope pane is empty.
+
+The Scope pane shows you properties defined at the local, closure, and
+global levels.
+
+If a property has a carat icon next to it, it means that it's an object. Click
+on the carat icon to expand the object and view its properties.
+
+Sometimes properties are dimmed down. For example, the property `constructor`
+is dimmer than the `confirm` property in the screenshot below.
+
+![Dimmed down properties](imgs/enumerables.png)
+
+The darker properties are enumerable. The lighter, dimmed down properties are
+not. See the following Stack Overflow thread for more information:
+[What do the colors mean in Chrome Developer Tools Scope
+panel?](What do the colors mean in Chrome Developer Tools Scope panel?)
+
 ## The call stack
 
 Near the top of the sidebar is the **Call Stack** section. When the code is paused at a breakpoint, the call stack shows the execution path, in reverse chronological order, that brought the code to that breakpoint. This is helpful in understanding not just where the execution is *now*, but how it got there, an important factor in debugging.
@@ -129,7 +157,7 @@ the full call stack of asynchronous functions.
 Anonymous functions make the call stack difficult to read. Name your functions
 to improve readability.
 
-The code in the two screenshots below is functionally equivalent. The
+The code snippets in the two screenshots below are functionally equivalent. The
 exact functioning of the code is not important, what is important is
 that the code in the first screenshot uses anonymous functions, while
 the second uses named functions.
@@ -213,7 +241,7 @@ change it to 3 before resuming execution.
 
 ## Live editing
 
-Observing and pausing the executing code helps you locate errors, and live editing allows you to quickly preview changes without the need for reloading.
+Observing and pausing the executing code helps you locate errors, and live editing allows you to quickly preview changes without the need to reload.
 
 To live edit a script, simply click into the editor part of the Sources panel while stepping. Make your changes as you would do in your editor, then commit the change with <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd> (or <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">S</kbd> on Mac). At this point, the entire JS file will be patched into the VM and all function definitions will be updated. 
 
@@ -221,7 +249,7 @@ Now, you can resume execution; your modified script will execute in place of the
 
 #### Example
 
-<img src="imgs/image_18.png" alt="Live Editing" class="attempt-left">
+![Live editing](imgs/image_18.png)
 
 We suspect that the parameter `dow` is, in every case, off by +1 when it is
 passed to the function `setone()` – that is, the value of `dow<`, as 
@@ -229,3 +257,62 @@ received, is 1 when it should be 0, 2 when it should be 1, etc. To quickly
 test whether decrementing the passed value confirms that this is the problem,
 we add line 17 at the beginning of the function, commit with 
 <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">S</kbd>  and resume.
+
+## Managing thread execution {: #threads }
+
+Use the **Threads** pane on the Sources panel to pause, step into, and
+inspect other threads, such as service worker or web worker threads.
+
+To demonstrate the Threads pane, this section uses the following demo:
+[Web Workers basic example](http://mdn.github.io/simple-web-worker/).
+
+If you open DevTools on the app, you can see that the main script is located
+in `main.js`:
+
+![Main script](imgs/main-script.png)
+
+And the web worker script is located in `worker.js`:
+
+![Worker script](imgs/worker-script.png)
+
+The main script listens to changes to the **Multiply number 1** or
+**Multiply number 2** input fields. Upon change the main script sends a
+message to the web worker with the values of the two numbers to multiply. The
+web worker does the multiplication and then passes the result back to the
+main script.
+
+Suppose that you set a breakpoint in `main.js` that's triggered when
+the first number is changed:
+
+![Main script breakpoint](imgs/main-script-breakpoint.png)
+
+And you also set a breakpoint in `worker.js` when the worker receives a
+message:
+
+![Worker script breakpoint](imgs/worker-script-breakpoint.png)
+
+Modifying the first number on the app's UI triggers both of the breakpoints.
+
+![Main and worker script breakpoints triggered](imgs/breakpoints-triggered.png)
+
+In the Threads pane the blue arrow indicates which thread is currently
+selected. For example, in the screenshot above the **Main** thread is selcted. 
+
+All of the
+DevTools controls for stepping through code (resume or pause script exection,
+step over next function call, step into next function call, etc.) pertain
+to that thread. In other words, if you pressed the **Resume script execution**
+button while your DevTools looked like the screenshot above, the Main 
+thread would resume executing, but the web worker thread
+would still be paused. The **Call Stack** and **Scope** sections are only 
+displaying information for the Main thread, too.
+
+When you want to step through the code for the web worker thread, or see its
+scope and call stack information, just click on its label in the Threads pane,
+so that the blue arrow is next to it. The screenshot below shows how the
+call stack and scope information changes after selecting the worker thread.
+Again, if you were to press any of the stepping through code buttons (resume
+script execution, step over next function call, etc.), that action would only
+pertain to the worker thread. The Main thread is not affected.
+
+![worker thread in focus](imgs/worker-thread.png)

@@ -14,13 +14,13 @@ description: In response to developer feedback, some upcoming features of Web An
 
 Native support for Web Animations first shipped [in Chrome 36](http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36), and was updated with playback control [in Chrome 39](http://updates.html5rocks.com/2014/12/web-animation-playback). The `Element.animate()` method can be used to trigger imperative animations directly from JavaScript, and its returned object can be leveraged to control the playback of these animations. These methods are detailed in the current draft of the [Web Animations W3C spec](https://w3c.github.io/web-animations/).
 
-There's a [shipped polyfill](https://github.com/web-animations/web-animations-js) under active development that tracks all Web Animations features implemented natively, and which is supported in all modern browsers. These core methods are ready for use right now, and deserve to be part of your toolbox for building rich experiences that benefit from animations (such as for the [Google I/O 2015 web app](https://events.google.com/io2015/)).
+There's a [shipped polyfill](https://github.com/web-animations/web-animations-js) under active development that tracks all Web Animations features implemented natively, and which is supported in all modern browsers. These core methods are ready for use right now, and deserve to be part of your toolbox for building rich experiences that benefit from animations (such as for the [Google I/O 2015 web app](https://events.google.com/io2015/){: .external }).
 
 ## Constructor and groups changes
 
 The Web Animations spec also describes _groups and sequences_, and constructors for animations and players. These have been available in the [web-animations-next](https://github.com/web-animations/web-animations-js#web-animations-nextminjs) polyfill, which has been designed to showcase features still undergoing discussion and yet to be implemented natively. In response to developer feedback, the team developing Web Animations are renaming these features to be more self-explanatory.
 
-The [FXTF](http://www.w3.org/Graphics/fx/) recently met in Sydney, Australia, and [discussed](https://www.mail-archive.com/public-fx@w3.org/msg00151.html) [naming](https://www.mail-archive.com/public-fx@w3.org/msg00158.html), as a number of developers raised valid points about some of the naming being confusing. As a result, the following naming changes were agreed on:
+The [FXTF](http://www.w3.org/Graphics/fx/){: .external } recently met in Sydney, Australia, and [discussed](https://www.mail-archive.com/public-fx@w3.org/msg00151.html) [naming](https://www.mail-archive.com/public-fx@w3.org/msg00158.html), as a number of developers raised valid points about some of the naming being confusing. As a result, the following naming changes were agreed on:
 
 * __Animation__ becomes __KeyframeEffect__
 * __AnimationSequence__ becomes __SequenceEffect__

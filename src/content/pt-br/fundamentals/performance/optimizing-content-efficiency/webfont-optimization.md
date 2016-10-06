@@ -238,7 +238,7 @@ Dadas essas declarações, o navegador detecta os subconjuntos e variantes exigi
 
 ### Fontes da Web e o caminho de processamento essencial
 
-O lazyload de fontes carrega uma importante implicação oculta que pode atrasar a renderização do texto: o navegador deve [criar a árvore de renderização](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), que é dependente das árvores de DOM e CSSOM, antes de saber quais recursos de fonte ele precisará para renderizar o texto. Como resultado, as solicitações de fontes são atrasadas logo depois de outros recursos essenciais, e o navegador pode sofrer um bloqueio de renderização do texto até que o recurso seja buscado.
+O lazyload de fontes carrega uma importante implicação oculta que pode atrasar a renderização do texto: o navegador deve [criar a árvore de renderização](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), que é dependente das árvores de DOM e CSSOM, antes de saber quais recursos de fonte ele precisará para renderizar o texto. Como resultado, as solicitações de fontes são atrasadas logo depois de outros recursos essenciais, e o navegador pode sofrer um bloqueio de renderização do texto até que o recurso seja buscado.
 
 <img src="images/font-crp.png" class="center" alt="Caminho de processamento essencial da fonte">
 

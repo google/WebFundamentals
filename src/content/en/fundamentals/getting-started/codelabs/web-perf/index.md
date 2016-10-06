@@ -2,12 +2,13 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
-{# wf_updated_on: 2016-06-16T18:31:26Z #}
+{# wf_updated_on: 2016-09-21T18:11:44Z #}
 
 
 # Find and Fix Web App Performance Issues {: page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
+
 
 
 
@@ -34,10 +35,10 @@ This codelab is about changing the way you approach app performance issues by he
 
 ### What you should know before you start
 
-*  *Critical rendering path:*  You should understand the rendering pipeline and how JavaScript and CSS affect it. Learn more here:  [https://developers.google.com/web/fundamentals/performance/critical-rendering-path/](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/) and here: Udacity course on  [Website Performance Optimization: The Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884)__.__
-*  *Frames and frame rate:*  You should know how the browser constructs frames and why the 60fps rate is important for a smooth display. Learn more here:  [https://developers.google.com/web/fundamentals/performance/rendering/](https://developers.google.com/web/fundamentals/performance/rendering/) and here: Udacity course on  [Browser Rendering Optimization: Building 60 FPS Web Apps](https://www.udacity.com/course/browser-rendering-optimization--ud860).
-*  *Application life cycle:*  You should understand the Response, Animation, Idle, and Load parts of a running app and recognize the windows of opportunity that each part presents. Learn more here:  [The RAIL Performance Model](https://developers.google.com/web/tools/profile-performance/evaluate-performance/rail)
-*  *Chrome DevTools:*  You should have a basic understanding of DevTools and how to use them to analyze a web app, especially the Timeline tool. Learn more here:  [Analyze Runtime Performance](https://developers.google.com/web/tools/profile-performance/rendering-tools/analyze-runtime).
+*  *Critical rendering path:*  You should understand the rendering pipeline and how JavaScript and CSS affect it. Learn more here:  [/web/fundamentals/performance/critical-rendering-path/](/web/fundamentals/performance/critical-rendering-path/) and here: Udacity course on  [Website Performance Optimization: The Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884)__.__
+*  *Frames and frame rate:*  You should know how the browser constructs frames and why the 60fps rate is important for a smooth display. Learn more here:  [/web/fundamentals/performance/rendering/](/web/fundamentals/performance/rendering/) and here: Udacity course on  [Browser Rendering Optimization: Building 60 FPS Web Apps](https://www.udacity.com/course/browser-rendering-optimization--ud860).
+*  *Application life cycle:*  You should understand the Response, Animation, Idle, and Load parts of a running app and recognize the windows of opportunity that each part presents. Learn more here:  [The RAIL Performance Model](/web/tools/profile-performance/evaluate-performance/rail)
+*  *Chrome DevTools:*  You should have a basic understanding of DevTools and how to use them to analyze a web app, especially the Timeline tool. Learn more here:  [Analyze Runtime Performance](/web/tools/profile-performance/rendering-tools/analyze-runtime).
 
 ### What you'll learn in this codelab
 
@@ -526,9 +527,3 @@ We recommend that you examine the completed project code, available in this  [Gi
 Thanks for working through this codelab. We're always striving to improve; if you found a bug of problem, or just have any suggestions, problems, or comments, please contact us at the feedback link below. Happy coding!
 
 
-
-
-
-## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an 
-[issue](https://github.com/google/SAMPLE-REPO/issues ??? TBD) today. And thanks!

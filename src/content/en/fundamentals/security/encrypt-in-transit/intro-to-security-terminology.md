@@ -21,7 +21,7 @@ description: Two of the hurdles developers face when migrating to HTTPS are conc
 A **public/private key pair** is a pair of very large numbers that are used
 as encryption and decryption keys, and that share a special mathematical
 relationship. A common system for key pairs is the **[RSA
-cryptosystem](https://en.wikipedia.org/wiki/RSA_(cryptosystem))**. The **public
+cryptosystem](https://en.wikipedia.org/wiki/RSA_(cryptosystem)){: .external}**. The **public
 key** is used to encrypt messages, and the messages can only be feasibly
 decrypted with the corresponding **private key**. Your web server advertises
 its public key to the world, and clients (such as web browsers) use that to
@@ -35,7 +35,7 @@ For example, how is a client to know if a particular public key is the _true_
 public key for www.foobar.com? A priori, there is no way to know. A CA vouches
 for a particular key as being the true one for a particular site by using its
 own private key to **[cryptographically
-sign](https://en.wikipedia.org/wiki/RSA_(cryptosystem)#Signing_messages)** the
+sign](https://en.wikipedia.org/wiki/RSA_(cryptosystem)#Signing_messages){: .external}** the
 website's public key. This signature is computationally infeasible to forge.
 Browsers (and other clients) maintain **trust anchor stores** containing the
 public keys owned by the well-known CAs, and they use those public keys to

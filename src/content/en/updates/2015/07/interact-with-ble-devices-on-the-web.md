@@ -99,7 +99,7 @@ To add HTTPS to your server you'll need to get a TLS certificate and set
 it up. Be sure to check out the [Security with HTTPS
 article](/web/fundamentals/security/)
 for best practices there. For info, you can now get free TLS certificates with
-the new Certificate Authority [Let's Encrypt](https://letsencrypt.org/).
+the new Certificate Authority [Let's Encrypt](https://letsencrypt.org/){: .external }.
 
 ### User Gesture Required
 
@@ -112,7 +112,7 @@ like a touch or mouse click.
 The Web Bluetooth API relies heavily on JavaScript
 [Promises](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 If you're not familiar with them, check out this great
-[Promises tutorial](http://www.html5rocks.com/en/tutorials/es6/promises/). One
+[Promises tutorial](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external }. One
 more thing, `() => {}` are simply ECMAScript 2015 [Arrow
 functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 -- they have a shorter syntax compared to function expressions and lexically

@@ -49,7 +49,7 @@ function buildFeeds() {
           analyticsUrl: '/web/videos/' + video.snippet.resourceId.videoId,
           content: content,
           atomAuthor: 'Google Developers',
-          rssPubDate: moment(video.snippet.publishedAt).format('MM MMM YYYY HH:mm:ss [GMT]')
+          rssPubDate: moment(video.snippet.publishedAt).format('DD MMM YYYY HH:mm:ss [GMT]')
         };
         articles.push(result);
         var shortDesc = video.snippet.description.replace(/\n/g, '<br>');

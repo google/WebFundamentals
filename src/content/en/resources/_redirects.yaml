@@ -6,11 +6,5 @@ redirects:
 - from: /web/resources/jekyll/...
   to: /web/resources/
 
-- from: /web/resources/styleguide/
-  to: /web/resources/sample-article
-
-- from: /web/resources/styleguide/sample-article
-  to: /web/resources/sample-article
-
 - from: /web/resources/translations/
   to: /web/resources/translations

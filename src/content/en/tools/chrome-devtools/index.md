@@ -109,4 +109,4 @@ Use the Security Panel to debug mixed content issues, problems with your certifi
 
 [Twitter](https://twitter.com/ChromeDevTools){: .button .button-white}
 [Stack Overflow](https://stackoverflow.com/questions/tagged/google-chrome-devtools){: .button .button-white}
-[Slack](https://chromiumdev.slack.com/messages/devtools/){: .button .button-white}
+[Slack](https://chromiumdev.slack.com/messages/devtools/){: .external }{: .button .button-white}

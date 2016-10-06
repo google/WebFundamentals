@@ -238,7 +238,7 @@ Con estas declaraciones, el navegador deduce cuáles son las variantes y los sub
 
 ### Fuentes web y la ruta de renderización importante
 
-La carga lenta de fuentes comporta una implicación oculta importante que puede retrasar la renderización del texto: el navegador debe [construir el árbol de visualización](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), que depende de los árboles DOM y CSSOM, antes de saber qué recursos de fuente necesitará para renderizar el texto. Por lo tanto, las solicitudes de fuentes se posponen a otros recursos importantes y puede ser que el navegador no pueda renderizar texto hasta recuperar el recurso.
+La carga lenta de fuentes comporta una implicación oculta importante que puede retrasar la renderización del texto: el navegador debe [construir el árbol de visualización](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), que depende de los árboles DOM y CSSOM, antes de saber qué recursos de fuente necesitará para renderizar el texto. Por lo tanto, las solicitudes de fuentes se posponen a otros recursos importantes y puede ser que el navegador no pueda renderizar texto hasta recuperar el recurso.
 
 <img src="images/font-crp.png" class="center" alt="Ruta de renderización importante de fuentes">
 

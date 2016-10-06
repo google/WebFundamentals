@@ -50,7 +50,7 @@ La specifica HTML detta condizioni precise per ogni evento: quando deve essere a
 L'esempio di cui sopra potrebbe sembrare leggermente scoraggiante a prima vista, ma in realtà è davvero abbastanza semplice. Navigation Timing API acquisisce tutte le informazioni temporali pertinenti e il nostro codice attende semplicemente che l'evento `onload` sia attivato &mdash; ricorda che l'evento onload si attiva dopo domInteractive, domContentLoaded e domComplete &mdash e calcola la differenza tra le varie informazioni cronologiche.
 <img src="images/device-navtiming-small.png" class="center" alt="Demo di NavTiming">
 
-Detto questo, adesso disponiamo di traguardi specifici da monitorare e una funzione semplice per l'output di queste misurazioni. Invece di stampare queste metriche sulla pagina, puoi anche modificare il codice così da inviarle a una server di analisi ([Google Analytics esegue l'operazione automaticamente](https://support.google.com/analytics/answer/1205784?hl=en)), che rappresenta un ottimo modo per controllare le performance delle tue pagine che possono trarre beneficio da un lavoro di ottimizzazione.
+Detto questo, adesso disponiamo di traguardi specifici da monitorare e una funzione semplice per l'output di queste misurazioni. Invece di stampare queste metriche sulla pagina, puoi anche modificare il codice così da inviarle a una server di analisi ([Google Analytics esegue l'operazione automaticamente](https://support.google.com/analytics/answer/1205784)), che rappresenta un ottimo modo per controllare le performance delle tue pagine che possono trarre beneficio da un lavoro di ottimizzazione.
 
 
 

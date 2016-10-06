@@ -5,7 +5,7 @@ description: Chrome DevTools has several built-in shortcut keys that developers 
 {# wf_updated_on: 2016-01-27 #}
 {# wf_published_on: 2015-04-29 #}
 
-# Keyboard & UI Shortcuts Reference {: .page-title }
+# Keyboard and UI Shortcuts Reference {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
@@ -139,17 +139,17 @@ The following keyboard shortcuts are available in all DevTools panels:
     <tr>
       <td data-th="Global Shortcuts">Zoom in (while focused in DevTools)</td>
       <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">+</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Shift</kbd> + <kbd class="kbd">+</kbd></td>
+      <td data-th="Mac"><kbd>Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">+</kbd></td>
     </tr>
     <tr>
       <td data-th="Global Shortcuts">Zoom out</td>
       <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">-</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Shift</kbd> + <kbd class="kbd">-</kbd></td>
+      <td data-th="Mac"><kbd>Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">-</kbd></td>
     </tr>
     <tr>
       <td data-th="Global Shortcuts">Restore default text size</td>
       <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">0</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Shift</kbd> + <kbd class="kbd">0</kbd></td>
+      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">0</kbd></td>
     </tr>
   </tbody>
 </table>

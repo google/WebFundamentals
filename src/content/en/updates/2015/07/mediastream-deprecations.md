@@ -21,7 +21,7 @@ microphone input has synchronized video and audio tracks. Each track is
 represented by a
 [MediaStreamTrack](http://www.w3.org/TR/mediacapture-streams/#mediastreamtrack).
 (Not to be confused with the [&lt;track&gt;
-element](http://www.html5rocks.com/en/tutorials/track/basics/)!)
+element](http://www.html5rocks.com/en/tutorials/track/basics/){: .external }!)
 
 There are three `MediaStream` deprecations in Chrome 45:
 
@@ -114,7 +114,7 @@ from [Mozilla Developer
 Network](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream), and
 HTML5 Rocks provides an excellent introduction to `getUserMedia()` in
 [Capturing Audio &
-Video](http://www.html5rocks.com/en/tutorials/getusermedia/intro/).
+Video](http://www.html5rocks.com/en/tutorials/getusermedia/intro/){: .external }.
 
 As ever, we appreciate your feedback on changes to Chrome. You can follow the bugs for these deprecations ([here](https://code.google.com/p/chromium/issues/detail?id=407039) and [here](https://code.google.com/p/chromium/issues/detail?id=338500)) and find more discussion and detail in the [Intent to
 Implement](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/m4jiqG67Mvo/j3W-jGLxmQgJ).

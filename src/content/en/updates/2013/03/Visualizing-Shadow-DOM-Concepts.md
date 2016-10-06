@@ -24,7 +24,7 @@ A few days ago, I released a tool I've been working on called [Shadow DOM Visual
 
 It allows you to visually see how Shadow DOM renders in the browser, something DevTools lacks today. Both black code blocks on the left are editable. Try changing the `<content>` insertion points, removing, or adding new ones to see how the composited (rendered) tree is affected on the right.
 
-Mouse over the nodes in the graph to highlight the relevant markup on the left. Yay for [d3.js](http://d3js.org/)! Blue nodes are coming from the host node. Yellow nodes come from the Shadow DOM. `<content>` insertion points are the bridge
+Mouse over the nodes in the graph to highlight the relevant markup on the left. Yay for [d3.js](http://d3js.org/){: .external }! Blue nodes are coming from the host node. Yellow nodes come from the Shadow DOM. `<content>` insertion points are the bridge
 between the two worlds. Because they're logically in the Shadow DOM, they're colored yellow. Their blue border indicates that they invite blue host nodes into the rendering party.
 
 

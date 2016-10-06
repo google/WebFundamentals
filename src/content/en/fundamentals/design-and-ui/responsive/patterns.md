@@ -49,9 +49,9 @@ secondary `div`'s are shown as two columns below the primary `div`.  Beyond
 
 Sites using this pattern include:
 
- * [A List Apart](http://mediaqueri.es/ala/)
- * [Media Queries](http://mediaqueri.es/)
- * [SimpleBits](http://simplebits.com/)
+ * [A List Apart](http://mediaqueri.es/ala/){: .external }
+ * [Media Queries](http://mediaqueri.es/){: .external }
+ * [SimpleBits](http://simplebits.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/mostly-fluid.html" region_tag="mfluid" adjust_indentation="auto" %}
@@ -79,8 +79,8 @@ full screen width.
 
 Sites using this pattern include:
 
- * [Modernizr](https://modernizr.com/)
- * [Wee Nudge](http://weenudge.com/)
+ * [Modernizr](https://modernizr.com/){: .external }
+ * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop" adjust_indentation="auto" %}
@@ -107,10 +107,10 @@ larger, with a left `div` and two stacked `div`'s on the right.
 
 Sites using this pattern include:
 
- * [Food Sense](http://foodsense.is/)
+ * [Food Sense](http://foodsense.is/){: .external }
  * [Seminal Responsive Design
   Example](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
- * [Andersson-Wise Architects](http://www.anderssonwise.com/)
+ * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter" adjust_indentation="auto" %}
@@ -133,9 +133,9 @@ As the screen width gets larger, so do the font size and padding.
 
 Sites using this pattern include:
 
- * [Opera's Shiny Demos](http://shinydemos.com/)
- * [Ginger Whale](http://gingerwhale.com/)
- * [Future Friendly](http://futurefriendlyweb.com/)
+ * [Opera's Shiny Demos](http://shinydemos.com/){: .external }
+ * [Ginger Whale](http://gingerwhale.com/){: .external }
+ * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks" adjust_indentation="auto" %}
@@ -164,8 +164,8 @@ absolute positioning.
 Sites using this pattern include:
 
  * [HTML5Rocks Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
- * [Google Nexus](https://www.google.com/nexus/)
- * [Facebook's Mobile Site](https://m.facebook.com/)
+ * [Google Nexus](https://www.google.com/nexus/){: .external }
+ * [Facebook's Mobile Site](https://m.facebook.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas" adjust_indentation="auto" %}

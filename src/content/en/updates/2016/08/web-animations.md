@@ -15,7 +15,7 @@ description: Firefox 48 joins Chrome in shipping a native implementation of the 
 
 The [Web Animations API](http://w3c.github.io/web-animations/) is part of a new web standard, currently under development by browser engineers from Mozilla and Google.
 
-Chrome 36 [implemented](https://developers.google.com/web/updates/2014/05/Web-Animations-element.animate-is-now-in-Chrome-36) the [element.animate()](http://w3c.github.io/web-animations/#the-animatable-interface) method from the [Web Animations API](http://w3c.github.io/web-animations/), empowering developers to build performant compositor threaded animations using JavaScript.
+Chrome 36 [implemented](/web/updates/2014/05/Web-Animations-element.animate-is-now-in-Chrome-36) the [element.animate()](http://w3c.github.io/web-animations/#the-animatable-interface) method from the [Web Animations API](http://w3c.github.io/web-animations/), empowering developers to build performant compositor threaded animations using JavaScript.
 
 We’re excited to see Mozilla have now [shipped](https://hacks.mozilla.org/2016/08/animating-like-you-just-dont-care-with-element-animate/) their implementation of [element.animate()](http://w3c.github.io/web-animations/#the-animatable-interface) in [Firefox 48](https://developer.mozilla.org/en-US/Firefox/Releases/48), enabling true cross-browser accelerated animations using this emerging JS API. Google and Mozilla have worked hard together to make sure our implementations are interoperable. This has truly been a collaborative effort!
 

@@ -66,7 +66,7 @@ Caching the video file and the video poster image is as simple as adding their p
       ];
     
 
-> There's some shim code in this demo to handle range requests, which are not yet implemented by Service Worker.
+> There's some shim code in this demo to handle range requests, which are not yet implemented by service worker.
 
 The inability to change `playbackRate` on Android has been a [long-standing bug](https://bugs.chromium.org/p/chromium/issues/detail?id=263654). UMP fixes this. For the demo at <a href="https://simpl.info/video/playbackrate">simpl.info/video/playbackrate</a>, `playbackRate` is set to 2. Try it out!
 

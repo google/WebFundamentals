@@ -97,7 +97,7 @@ In summary, Polymer is a JavaScript library that enables Web Components now in m
 
 A few other articles that are worth checking out on the subject:
 
-* [Building WebApps With Yeoman and Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/)
+* [Building WebApps With Yeoman and Polymer](http://www.html5rocks.com/en/tutorials/webcomponents/yeoman/){: .external }
 * [Concatenating Web Components With Vulcanize](http://www.polymer-project.org/articles/concatenating-web-components.html)
 * [Chrome Dev Summit: Polymer declarative, encapsulated, reusable components](http://updates.html5rocks.com/2014/01/Chrome-Dev-Summit-Polymer-declarative-encapsulated-reusable-components)
 * [The Landscape Of Development Automation](http://updates.html5rocks.com/2013/11/The-Landscape-Of-Front-end-Development-Automation-Slides)

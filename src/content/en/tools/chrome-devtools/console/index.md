@@ -97,15 +97,33 @@ of the console to a log file.
 
 ![Save Console to log file](images/console-save-as.png)
 
-## Selecting the right target
+## Selecting execution context {: #execution-context }
 
-By default, logging and error output from frames or extensions contained 
-within a page will not be output to the Console. You can access other frames' 
-Console output by using the dropdown at the top of the console. An `<iframe>` 
-element, for example, would create its own frame context, selectable from 
-this menu.
+The dropdown menu highlighted in blue in the screenshot below is called the
+**Execution Context Selector**.
 
-![Frame selection](images/frame-selection.png)
+![Execution Context Selector](images/execution-context-selector.png)
+
+You'll usually see the context set to `top` (the top frame of the page).
+
+Other frames and extensions operate in their own context. To work with these
+other contexts you need to select them from the dropdown menu. For example,
+if you wanted to see the logging output of an `<iframe>` element and modify
+a variable that exists within that context, you'd need to select it from
+the Execution Context Selector dropdown menu.
+
+The Console defaults to the `top` context, unless you access DevTools by
+inspecting an element within another context. For example, if you inspect
+a `<p>` element within an `<iframe>`, then DevTools sets the Execution Context
+Selector to the context of that `<iframe>`.
+
+When you're working in a context other than `top`, DevTools highlights the
+Execution Context Selector red, as in the screenshot below. This is because
+developers rarely need to work in any context other than `top`. It can
+be pretty confusing to type in a variable, expecting a value, only to see that
+it's `undefined` (because it's defined in a different context).
+
+![Execution Context Selector highlighted red](images/non-top-context.png)
 
 ## Filtering the Console output
 

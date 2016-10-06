@@ -118,7 +118,7 @@ Here are some suggestions:
 
 * Consider designs that avoid images altogether, or use images sparingly. [Text-only can be beautiful](https://onepagelove.com/tag/text-only)! Ask yourself, "What are visitors to my site trying to achieve? Do images help that process?"
 * In the old days, it was commonplace to save headings and other text as graphics. That approach does not respond well to viewport size changes, and adds to page weight and latency. Using text as a graphic also means the text can't be found by search engines, and isn't accessible by screenreaders and other assistive technologies. Use "real" text where possible — Web Fonts and CSS can enable beautiful typography.
-* Use CSS rather than images for gradients, shadows, rounded corners, and [background textures](http://lea.verou.me/css3patterns/), features [supported by all modern browsers](http://caniuse.com/#search=shadows). Bear in mind, however, that CSS may be better than images, but there can still be a [processing and rendering penalty](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/), especially significant on mobile.
+* Use CSS rather than images for gradients, shadows, rounded corners, and [background textures](http://lea.verou.me/css3patterns/){: .external }, features [supported by all modern browsers](http://caniuse.com/#search=shadows). Bear in mind, however, that CSS may be better than images, but there can still be a [processing and rendering penalty](http://www.smashingmagazine.com/2013/04/03/build-fast-loading-mobile-website/), especially significant on mobile.
 * Background images rarely work well on mobile. You can [use media queries](http://udacity.github.io/responsive-images/examples/2-06/backgroundImageConditional/) to avoid background images on small viewports.
 * Avoid splash screen images.
 * [Use CSS for UI animations](/web/fundamentals/design-and-ui/animations/).
@@ -205,7 +205,7 @@ There are a number of tools for calculating page weight. The Chrome DevTools Net
 
 Firefox and other browsers offer similar tools.
 
-[WebPagetest](http://webpagetest.org) provides the ability to test first and subsequent page loads. You can automate testing with [scripts](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting) (for example, to log in to a site) or by using their [RESTful APIs](https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis). The following example (loading [developers.google.com/web](https://developers.google.com/web/)) shows that caching was successful and that subsequent page loads required no additional resources.
+[WebPagetest](http://webpagetest.org) provides the ability to test first and subsequent page loads. You can automate testing with [scripts](https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/scripting) (for example, to log in to a site) or by using their [RESTful APIs](https://sites.google.com/a/webpagetest.org/docs/advanced-features/webpagetest-restful-apis). The following example (loading [developers.google.com/web](/web/)) shows that caching was successful and that subsequent page loads required no additional resources.
 
 ![WebPagetest results showing total byte size for first and repeat page visits](imgs/webpagetest-first-and-repeat.png)
 
@@ -217,7 +217,7 @@ WebPagetest also gives a size and request breakdown by MIME type.
 
 For many users, data doesn't just cost bytes and performance — it costs money.
 
-The site [What Does My Site Cost?](https://whatdoesmysitecost.com/) enables you to estimate the actual financial cost of loading your site. The histogram below shows how much it costs (using a prepaid data plan) to load [amazon.com](https://www.amazon.com/).
+The site [What Does My Site Cost?](https://whatdoesmysitecost.com/){: .external } enables you to estimate the actual financial cost of loading your site. The histogram below shows how much it costs (using a prepaid data plan) to load [amazon.com](https://www.amazon.com/).
 
 ![Estimated data cost in 12 countries) of loading the amazon.com homepage](imgs/what-does-my-site-cost.png)
 
@@ -253,4 +253,4 @@ Bear in mind that this doesn't take into account affordability relative to incom
 
 Page weight isn't just a problem for emerging markets. In many countries, people use mobile plans with limited data, and will avoid your site or app if they perceive it to be heavy and expensive. Even "unlimited" cell and wifi data plans generally have a data limit beyond which they are blocked or throttled.
 
-The bottom line: page weight affects performance and costs money. [Optimizing content efficiency](https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/?hl=en]) shows how to reduce that cost.
+The bottom line: page weight affects performance and costs money. [Optimizing content efficiency](/web/fundamentals/performance/optimizing-content-efficiency/]) shows how to reduce that cost.

@@ -63,8 +63,8 @@ Companion Cube Remix by ChristinaCoffin
 Let us know what you think on Twitter [#LazyWebShow](https://twitter.com/search?q=%23lazywebshow)
 
 For more news on the Web, check out these resources:
-- [JavaScript Weekly](http://javascriptweekly.com/)
-- [Open Web Platform Daily](http://webplatformdaily.org/)
-- [HTML5 Weekly](http://html5weekly.com/)
+- [JavaScript Weekly](http://javascriptweekly.com/){: .external }
+- [Open Web Platform Daily](http://webplatformdaily.org/){: .external }
+- [HTML5 Weekly](http://html5weekly.com/){: .external }
 
 Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)

@@ -291,7 +291,7 @@ CSP — não apenas nas páginas HTML!
 
 
 Defina tags &lt;link rel="canonical" href="https://…"/&gt; em suas páginas. [Isso
-ajuda os mecanismos de pesquisa](https://support.google.com/webmasters/answer/139066?hl=en)
+ajuda os mecanismos de pesquisa](https://support.google.com/webmasters/answer/139066)
 a conhecer a melhor forma de chegar ao seu site.
 
 A maioria dos servidores da Web oferecem um recurso de redirecionamento simples. Use 301 (Movido Permanentemente) para

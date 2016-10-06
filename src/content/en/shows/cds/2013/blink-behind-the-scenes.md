@@ -28,11 +28,11 @@ One big change we made when we forked from Blink was to add an intents system: e
 
 Then, on our [public mailing list](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/) we announce an [intent to ship](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/yujPcy889e4).
 
-At [chromestatus.com](https://chromestatus.com) you can see the [features](https://www.chromestatus.com/features) we've worked on, the features we've shipped, and those we're planning to deprecate. You can also check the [Chromium Releases blog](http://googlechromereleases.blogspot.co.uk/), which has links to bugs and to our tracker dashboard.
+At [chromestatus.com](https://chromestatus.com) you can see the [features](https://www.chromestatus.com/features) we've worked on, the features we've shipped, and those we're planning to deprecate. You can also check the [Chromium Releases blog](http://googlechromereleases.blogspot.co.uk/){: .external }, which has links to bugs and to our tracker dashboard.
 
 Another big change is that we're removing WebKit prefixes. The intent is not to use Blink prefixes, but to have run-time flags (and not just compile-time flags).
 
-[Android WebView](https://developers.google.com/chrome/mobile/docs/webview/overview) has been a big challenge – but [HTML5Test](http://html5test.com) shows that things are getting better. We're much closer to desktop in terms of having one set of web platform APIs everywhere (Web Audio is a great example of this!)
+[Android WebView](/chrome/mobile/docs/webview/overview) has been a big challenge – but [HTML5Test](http://html5test.com) shows that things are getting better. We're much closer to desktop in terms of having one set of web platform APIs everywhere (Web Audio is a great example of this!)
 
 But how does the sausage machine work? Every single change we make to Blink is immediately run through over 30,000 tests, not to mention all the Chromium tests that run additionally later. We use 24 hour sheriffing, with thousands of bots, thousands of benchmarks, and systems that throw millions of broken web pages at our engine to make sure it doesn't fall over. We know that mobile is significantly slower, and this is something we're working hard to improve.
 

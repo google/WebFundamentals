@@ -12,7 +12,7 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-[Adsy.me](http://adsy.me/) is a super quick and easy way to build mobile
+[Adsy.me](http://adsy.me/){: .external } is a super quick and easy way to build mobile
 micro sites.
 
 ### What we like?

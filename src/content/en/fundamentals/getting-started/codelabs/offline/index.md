@@ -236,7 +236,7 @@ You now have offline support. Reload your page while still online to update your
 
 #### Learn More
 
-*  [Introduction to service worker](https://developers.google.com/web/fundamentals/primers/service-worker/?hl=en)
+*  [Introduction to service worker](/web/fundamentals/primers/service-worker/)
 
 
 

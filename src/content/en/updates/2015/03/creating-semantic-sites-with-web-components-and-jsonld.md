@@ -12,13 +12,13 @@ description: Add schema.org markup to your components and make them search engin
 {% include "web/_shared/contributors/ewagasperowicz.html" %}
 
 
-With the rising popularity of [web components](http://webcomponents.org/) and supporting libraries like [Polymer](https://www.polymer-project.org/), [custom elements](http://w3c.github.io/webcomponents/spec/custom/) become an attractive way to build UI features. The default encapsulation of custom elements makes them especially useful for creating independent widgets.
+With the rising popularity of [web components](http://webcomponents.org/){: .external } and supporting libraries like [Polymer](https://www.polymer-project.org/), [custom elements](http://w3c.github.io/webcomponents/spec/custom/) become an attractive way to build UI features. The default encapsulation of custom elements makes them especially useful for creating independent widgets.
 
 While some of the widgets are self-contained, many of them rely on external data to present the content to the user - e.g., the current forecast for a weather widget or the address of a company for a map widget.
 
 In Polymer, custom elements are declarative, which means once they are imported into a project, it is very easy to include and configure them in HTML, e.g. by passing the data to populate the widget through an attribute.
 
-It would be great if we could avoid repetition and ensure data consistency, by reusing the same data snippets to populate different widgets as well as inform search engines and other consumers about the content of our page. We can achieve this by using the [schema.org](http://schema.org/) standard and the [JSON-LD](http://www.w3.org/TR/json-ld/) format for our data.
+It would be great if we could avoid repetition and ensure data consistency, by reusing the same data snippets to populate different widgets as well as inform search engines and other consumers about the content of our page. We can achieve this by using the [schema.org](http://schema.org/){: .external } standard and the [JSON-LD](http://www.w3.org/TR/json-ld/) format for our data.
 
 ## Populating the components with structured data
 
@@ -42,12 +42,12 @@ It contains two widgets: a map with a pin for every office and a dropdown with t
   </a>
 </p>
 
-In this demo we are using [LocalBusiness](https://developers.google.com/webmasters/business-location-pages/) entities to express the meaning of our data, which is the geographical location of some of the Google Offices.
+In this demo we are using [LocalBusiness](/webmasters/business-location-pages/) entities to express the meaning of our data, which is the geographical location of some of the Google Offices.
 
-The best way to check how Google is reading and indexing this page is though the new improved [Structured Data Testing Tool](https://developers.google.com/structured-data/testing-tool/). Submit the demo’s URL in the *Fetch URL* section and click *Fetch and validate*. The section on the right will show you parsed data retrieved from the page along with any errors that may occur. It is a very convenient way to check if your JSON-LD markup is correct and processable by Google.
+The best way to check how Google is reading and indexing this page is though the new improved [Structured Data Testing Tool](/structured-data/testing-tool/). Submit the demo’s URL in the *Fetch URL* section and click *Fetch and validate*. The section on the right will show you parsed data retrieved from the page along with any errors that may occur. It is a very convenient way to check if your JSON-LD markup is correct and processable by Google.
 
 <p style="text-align: center;">
-  <a href="https://developers.google.com/structured-data/testing-tool/?url=http://polymerlabs.github.io/structured-data-web-components/demo/combined-demo.html">
+  <a href="/structured-data/testing-tool/?url=http://polymerlabs.github.io/structured-data-web-components/demo/combined-demo.html">
     <img style="max-width: 100%; height: auto;" src="/web/updates/images/2015-03-03-creating-semantic-sites/tool.png" alt="Structured Data Testing Tool UI" />
   </a>
 </p>
@@ -101,7 +101,7 @@ Finally, we hook the JSON-LD data and the elements together. We do so in a [poly
 
 ## JSON-LD, the powerful brother of JSON
 
-As you probably noticed, this works very similarly to using plain, old JSON to pass data around.  JSON-LD has a few advantages though, that are directly derived from its [schema.org](http://schema.org/) compatibility:
+As you probably noticed, this works very similarly to using plain, old JSON to pass data around.  JSON-LD has a few advantages though, that are directly derived from its [schema.org](http://schema.org/){: .external } compatibility:
 
 * The data is structured in an unambiguous way using the schema.org standard. It is a non-trivial advantage, because it ensures you can provide a meaningful and consistent input to any JSON-LD enabled web component.
 * The data can be efficiently consumed by search engines, which improves indexing of the page, and may result in rich snippets to be shown in search results.
@@ -112,9 +112,9 @@ To sum up, JSON-LD and schema.org combined with the web components technology en
 ## Create your own components
 
 You can try out [the examples on Github](https://github.com/PolymerLabs/structured-data-web-components) or read the Polymer’s guide on [creating reusable components](https://www.polymer-project.org/docs/start/reusableelements.html) to start writing your own.
-Check the [Structured Data documentation](https://developers.google.com/structured-data/) on developers.google.com to get inspired about various entities you can mark up with JSON-LD.
+Check the [Structured Data documentation](/structured-data/) on developers.google.com to get inspired about various entities you can mark up with JSON-LD.
 
-Consider submitting your shiny new elements to [customelements.io](http://customelements.io/) for others to enjoy and give us a shout at [@polymer](https://twitter.com/intent/follow?screen_name=polymer) or [+Polymer community](https://plus.google.com/communities/115626364525706131031) to show off the awesomeness!
+Consider submitting your shiny new elements to [customelements.io](http://customelements.io/){: .external } for others to enjoy and give us a shout at [@polymer](https://twitter.com/intent/follow?screen_name=polymer) or [+Polymer community](https://plus.google.com/communities/115626364525706131031) to show off the awesomeness!
 
 
 {% include "comment-widget.html" %}

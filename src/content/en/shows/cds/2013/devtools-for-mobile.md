@@ -21,4 +21,4 @@ In 23 minutes, learn about zero-config remote debugging, screencasting device sc
 
 ## Read More
 
-- [Chrome DevTools for Mobile](http://www.html5rocks.com/en/tutorials/developertools/mobile/)
+- [Chrome DevTools for Mobile](http://www.html5rocks.com/en/tutorials/developertools/mobile/){: .external }

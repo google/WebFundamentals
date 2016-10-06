@@ -167,7 +167,7 @@ Note: 您可能會在網頁上看到針對動畫使用 setInterval 或 setTimeou
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">請見範例</a>
 
-當您嘗試將它擴大到包含更多情況時，程式碼開始變得非常複雜並難以管理，所以一般來說，從可供動畫使用的眾多 JavaScript 程式庫擇一個來使用，將有助於您。 如果您已經在專案中使用 jQuery，您將受益於堅守使用它以及使用 [`.animate()`](http://api.jquery.com/animate/) 功能。 在另一方面，如果您需要一個專用的程式庫，那麼就試一下 [Greensock 的 TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)，它的功能非常強大。 它也備有輕量級版本，叫 TweenLite，就檔案大小的角度而言，它耗用的資源較少。
+當您嘗試將它擴大到包含更多情況時，程式碼開始變得非常複雜並難以管理，所以一般來說，從可供動畫使用的眾多 JavaScript 程式庫擇一個來使用，將有助於您。 如果您已經在專案中使用 jQuery，您將受益於堅守使用它以及使用 [`.animate()`](http://api.jquery.com/animate/){: .external } 功能。 在另一方面，如果您需要一個專用的程式庫，那麼就試一下 [Greensock 的 TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)，它的功能非常強大。 它也備有輕量級版本，叫 TweenLite，就檔案大小的角度而言，它耗用的資源較少。
 
 由於在使用 JavaScript 動畫時，您可在每一步驟完全控制元素樣式，因此可以按您的想法減緩、暫停、停止、倒轉與操縱動畫。
 

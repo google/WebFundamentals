@@ -24,9 +24,9 @@ Building your first app in Angular 2, Addy Osmani and Matt Gaunt show off Subime
 
 [https://www.youtube.com/watch?v=HmWm21cCAXM](https://www.youtube.com/watch?v=HmWm21cCAXM)
 
-[https://www.firebase.com/](https://www.firebase.com/)
+[https://www.firebase.com/](https://www.firebase.com/){: .external }
 
-[https://code.visualstudio.com/](https://code.visualstudio.com/)
+[https://code.visualstudio.com/](https://code.visualstudio.com/){: .external }
 
 ### TOTALLY TOOLING
 
@@ -73,10 +73,10 @@ Mighty fish by Karim Maaloul
 Let us know what you think on Twitter #LazyWebShow
 
 For more news on the Web, check out these resources:
-JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/)
+JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/){: .external }
 
-Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/)
+Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/){: .external }
 
-HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/)
+HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/){: .external }
 
 Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)

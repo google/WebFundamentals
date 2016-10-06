@@ -10,6 +10,7 @@ node_modules/*
 .bundle/
 gae/lib/*
 src/data/youtubeAPIKey.txt
+gulp-tasks/deploy.js
 scratch/*
 tools/claat
 .editor-config

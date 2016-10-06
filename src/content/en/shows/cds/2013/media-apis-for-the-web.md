@@ -27,9 +27,9 @@ So what do we have for web developers? An ecosystem of media APIs for the open W
 + [WebRTC](https://bit.ly/webrtcwebaudio) provides realtime communication in the browser, and is now widely supported on mobile and desktop. In total there are already over 1.2 billion WebRTC endpoints.
 + [Web Audio](http://html5rocks.com/en/tutorials/webaudio/intro) provides sophisticated tools for audio synthesis and processing.
 + Web MIDI, integrated with Web Audio, allows interaction with MIDI devices.
-+ The audio and video elements are now supported on [more than 85% of mobile and desktop browsers](http://www.jwplayer.com/html5/).
++ The audio and video elements are now supported on [more than 85% of mobile and desktop browsers](http://www.jwplayer.com/html5/){: .external }.
 + [Media Source Extensions](http://updates.html5rocks.com/2011/11/Stream-video-using-the-MediaSource-API) can be used for adaptive streaming and time shifting.
 + EME enables playback of protected content.
-+ Transcripts, captions and the [track element](http://www.html5rocks.com/en/tutorials/track/basics/) enable subtitles, captions, timed metadata,  deep linking and deep search.
++ Transcripts, captions and the [track element](http://www.html5rocks.com/en/tutorials/track/basics/){: .external } enable subtitles, captions, timed metadata,  deep linking and deep search.
 
 **Slides:** [Media APIs for the multi-device Web](http://simpl.info/media/#1)

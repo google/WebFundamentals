@@ -31,7 +31,7 @@ experiences, giving developers complete control over the
 experience.
 
 Before service worker, there was one other API that gave users an offline
-experience on the web called [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/). 
+experience on the web called [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
 The major issues with AppCache are the [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag) 
 that exist as well as the fact that while the design works particularly well for single page web 
 apps, it's not so good with for multi-page sites. Service workers have been designed to 
@@ -39,7 +39,7 @@ avoid these common pain points.
 
 Things to note about a service worker:
 
-* It's a [JavaScript Worker](http://www.html5rocks.com/en/tutorials/workers/basics/),
+* It's a [JavaScript Worker](http://www.html5rocks.com/en/tutorials/workers/basics/){: .external },
   so it can't access the DOM directly. Instead, a service worker can 
   communicate with the pages it controls by responding to messages sent via 
   the [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) 
@@ -96,7 +96,7 @@ Opera. Microsoft Edge is now
 [showing public support](https://dev.windows.com/en-us/microsoft-edge/platform/status/serviceworker). 
 Even Safari has dropped [hints of future development](https://trac.webkit.org/wiki/FiveYearPlanFall2015). 
 You can follow the progress of all the browsers at Jake Archibald's 
-[is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/) 
+[is Serviceworker ready](https://jakearchibald.github.io/isserviceworkerready/){: .external } 
 site.
 
 ### You need HTTPS
@@ -110,7 +110,7 @@ man-in-the-middle might not. To avoid this, you can only register service
 workers on pages served over HTTPS, so we know the service worker the browser
 receives hasn't been tampered with during its journey through the network.
 
-[Github Pages](https://pages.github.com/) are served over HTTPS, so they're a
+[Github Pages](https://pages.github.com/){: .external } are served over HTTPS, so they're a
 great place to host demos.
 
 If you want to add HTTPS to your server then you'll need to get a TLS 
@@ -315,7 +315,7 @@ What we are doing is this:
       aren't cached as well.
 3. If we pass the checks, we [clone](https://fetch.spec.whatwg.org/#dom-response-clone) 
    the response. The reason for this is that because the response is a 
-   [Stream](https://streams.spec.whatwg.org/), the body can only be consumed 
+   [Stream](https://streams.spec.whatwg.org/){: .external }, the body can only be consumed 
    once. Since we want to return the response for the browser to use, as well 
    as pass it to the cache to use, we need to clone it so we can send one to 
    the browser and one to the cache.

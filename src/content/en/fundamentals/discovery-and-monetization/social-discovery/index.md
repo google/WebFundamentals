@@ -68,8 +68,8 @@ describing the link.
 ## Use schema.org + microdata to provide rich snippets on Google+
 
 Crawlers use many methods to parse a page and understand its content. By using
-[microdata](http://www.w3.org/TR/microdata/), and
-[schema.org](https://schema.org/) vocabulary, you help social sites and search
+[microdata](http://www.w3.org/TR/microdata/){: .external }, and
+[schema.org](https://schema.org/){: .external } vocabulary, you help social sites and search
 engines better understand the contents of the page.
 
 Here's an example:
@@ -98,11 +98,11 @@ and `image`.
 
 ### Learn more
 These microdata provide semantic information to crawlers, typically for
-[Google+](https://plus.google.com/) and Google Search. To learn more about
+[Google+](https://plus.google.com/){: .external } and Google Search. To learn more about
 snippets and rendering on Google+, read the following documents:
 
-* [Article Rendering - Google+ Platform](https://developers.google.com/+/web/snippet/article-rendering)
-* [Snippet - Google+ Platform](https://developers.google.com/+/web/snippet/)
+* [Article Rendering - Google+ Platform](/+/web/snippet/article-rendering)
+* [Snippet - Google+ Platform](/+/web/snippet/)
 
 ### Validate rich snippets
 In order to validate rich snippets on Google+, you can use tools such as:
@@ -113,7 +113,7 @@ In order to validate rich snippets on Google+, you can use tools such as:
 
 ## Use Open Graph Protocol (OGP) to provide rich snippets on Facebook
 
-The [Open Graph Protocol (OGP)](http://ogp.me/) provides Facebook with the
+The [Open Graph Protocol (OGP)](http://ogp.me/){: .external } provides Facebook with the
 metadata necessary to allow web pages to have the same functionality as other
 Facebook objects.
 
@@ -160,23 +160,23 @@ Properties and contents may take the following values:
 </table>
 
 These meta tags provide semantic information to crawlers from social sites,
-typically from [Google+](https://plus.google.com/) and
-[Facebook](https://www.facebook.com/).
+typically from [Google+](https://plus.google.com/){: .external } and
+[Facebook](https://www.facebook.com/){: .external }.
 
 ### Learn more
 To learn more about things you can attach to the post on Facebook, visit the
 official Open Graph Protocol site.
 
-* [ogp.me](http://ogp.me/)
+* [ogp.me](http://ogp.me/){: .external }
 
 ### Validate rich snippets
 In order to validate your markup on Facebook, you can use tools such as:
 
-* [Debugger](https://developers.facebook.com/tools/debug/)
+* [Debugger](https://developers.facebook.com/tools/debug/){: .external }
 
 ## Use Twitter Cards to provide rich snippets on Twitter
 [Twitter Cards](https://dev.twitter.com/docs/cards) are an extension to the
-Open [Graph Protocol applicable for Twitter](https://twitter.com/). They allow
+Open [Graph Protocol applicable for Twitter](https://twitter.com/){: .external }. They allow
 you to add media attachments like images and video to Tweets with a link to
 your web page. By adding the appropriate metadata, Tweets with links to your
 page will have a card added that includes the rich detail you've added.

@@ -28,7 +28,7 @@ iframe. This is a common problem for ads for example, that are frequently
 loaded using iframes.
 
 Making this visibility test more efficient is what
-[`IntersectionObserver`](https://wicg.github.io/IntersectionObserver/) was
+[`IntersectionObserver`](https://wicg.github.io/IntersectionObserver/){: .external } was
 [designed for](https://github.com/WICG/IntersectionObserver/blob/gh-pages/explainer.md),
 and it’s landed in Chrome 51 (which is, as of this writing, the
 [beta](https://www.google.com/chrome/browser/beta.html) release).

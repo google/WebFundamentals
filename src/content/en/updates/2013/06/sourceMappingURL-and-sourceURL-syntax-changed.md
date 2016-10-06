@@ -10,7 +10,7 @@ book_path: /web/updates/_book.yaml
 {% include "web/_shared/contributors/paulirish.html" %}
 
 
-If you use either sourcemaps or sourceURL (both covered in the [HTML5 Rocks Primer on Sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)), then you may see a warning in Chrome console like `"/*@ sourceMappingURL=" source mapping URL declaration is deprecated, "/*# sourceMappingURL=" declaration should be used instead.`
+If you use either sourcemaps or sourceURL (both covered in the [HTML5 Rocks Primer on Sourcemaps](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/){: .external }), then you may see a warning in Chrome console like `"/*@ sourceMappingURL=" source mapping URL declaration is deprecated, "/*# sourceMappingURL=" declaration should be used instead.`
 
 ![](/web/updates/images/2013/06/sourcemapping/37clIgB.png)
 

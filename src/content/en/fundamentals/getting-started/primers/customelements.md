@@ -13,7 +13,7 @@ description: Custom elements allow web developers to define new HTML tags, exten
 
 With [Custom Elements][spec], web developers can **create new HTML tags**,
 beef-up existing HTML tags, or extend the components other developers have authored.
-The API is the foundation of [web components](http://webcomponents.org/). It brings
+The API is the foundation of [web components](http://webcomponents.org/){: .external }. It brings
 a web standards-based way to create reusable components using nothing more than
 vanilla JS/HTML/CSS. The result is less code, modular code, and more reuse in our apps.
 
@@ -22,7 +22,7 @@ vanilla JS/HTML/CSS. The result is less code, modular code, and more reuse in ou
 Note: This article describes the new <a href="https://html.spec.whatwg.org/multipage/scripting.html#custom-elements" target="_blank">Custom Elements v1 spec</a>. If you've been using custom elements, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4642138092470272">v0 version shipped in Chrome 33</a>. The concepts are the same, but the v1 spec has important API differences. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
 
 The browser gives us an excellent tool for structuring web applications.
-It's called HTML.  You may have heard of it! It's declarative, portable, well supported, and easy to work with. Great as HTML may be, its vocabulary and extensibility are limited. The [HTML living standard](https://html.spec.whatwg.org/multipage/) lacks a way to automatically associate JS behavior with your markup... until now.
+It's called HTML.  You may have heard of it! It's declarative, portable, well supported, and easy to work with. Great as HTML may be, its vocabulary and extensibility are limited. The [HTML living standard](https://html.spec.whatwg.org/multipage/){: .external } lacks a way to automatically associate JS behavior with your markup... until now.
 
 Custom elements are the answer to modernizing HTML; filling in the missing pieces,
 and bundling structure with behavior. If HTML doesn't provide the solution to a problem,
@@ -170,7 +170,7 @@ functionality of `<button>`, a better option is to progressively enhance the exi
 
 A **customized built-in element** is a custom element that extends one of the browser's
 built-in HTML tags. The primary benefit of extending an existing element is to
-gain all of its features (DOM properties, methods, accessibility). There's no better way to write a [progressive web app](https://developers.google.com/web/progressive-web-apps/) than to **progressively enhance existing HTML elements**.
+gain all of its features (DOM properties, methods, accessibility). There's no better way to write a [progressive web app](/web/progressive-web-apps/) than to **progressively enhance existing HTML elements**.
 
 To extend an element, you'll need to create a class definition that inherits from
 the correct DOM interface. For example, a custom element that extends `<button>`
@@ -864,7 +864,7 @@ instead of `customElements.define()`. That's now considered a deprecated version
 the standard, called v0. `customElements.define()` is the new hotness and what
 browser vendors are starting to implement. It's called Custom Elements v1.
 
-If you happen to be interested in the old v0 spec, check out the [html5rocks article](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/).
+If you happen to be interested in the old v0 spec, check out the [html5rocks article](http://www.html5rocks.com/en/tutorials/webcomponents/customelements/){: .external }.
 
 ### Browser support
 

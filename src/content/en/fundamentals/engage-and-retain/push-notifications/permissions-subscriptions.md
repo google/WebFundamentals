@@ -11,6 +11,13 @@ description: Requesting permission for and subscribing users to notifications re
 
 Requesting permission for and subscribing users to notifications requires as light a touch as showing them notifications.
 
+In this section and the remaining section I'm going to show you actual code.
+It's important to be clear about where these bits of code are implemented. This
+is where understanding service workers becomes important. The code for
+requesting permission and subscribing users in done in your app's code, rather
+than the service worker code. The service worker will be used later when we
+process push messages and display them to the user.
+
 ## Check permissions {: #check-permissions }
 
 Always check for an existing permission when the page loads. If the permission
@@ -19,15 +26,24 @@ immediately. Either way, use this information to set the state of permission
 settings. An example of this is shown below. To be clear, we're not asking for
 anything yet.
 
-Note: For the sake of clarity, this example excludes a number of feature checks that you should always perform. You can view the original code in it's entirety in our <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>GitHub samples repo</a>.
+Note: For the sake of clarity, this example excludes a number of feature checks
+that you should always perform. You can view the original code in it's entirety
+in our <a href='https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications'>
+GitHub samples repo</a>.
 
 
     function initialiseState() {
       if (Notification.permission !== 'granted') {
         console.log('The user has not granted the notification permission.');
         return;
+      } else if (Notification.permission === “blocked”) {
+       /* the user has previously denied push. Can't reprompt. */
+      } else {
+        /* show a prompt to the user */
       }
-      
+
+      // Use serviceWorker.ready so this is only invoked
+      // when the service worker is available.
       navigator.serviceWorker.ready.then(function(serviceWorkerRegistration) {
         serviceWorkerRegistration.pushManager.getSubscription()
           .then(function(subscription) {
@@ -41,13 +57,13 @@ Note: For the sake of clarity, this example excludes a number of feature checks 
           });
       });
     }
-    
+
 
 ## Avoid page-load subscription requests {: #avoid-page-load-requests }
 
-Notice that the previous example does _not_ call 
+Notice that the previous example does _not_ call
 `pushManager.subscribe()`, though this would seem the logical response to
-finding that no existing subscription exists. Such requests may seem timely but, since you don't yet know anything about your users and they may not 
+finding that no existing subscription exists. Such requests may seem timely but, since you don't yet know anything about your users and they may not
 know anything about you, it's difficult to send them precise or relevant
 messages.
 
@@ -61,11 +77,12 @@ Regardless of when you do it, requesting permission is a two-step process.
 First, ask whether your application can send notifications, using a message that
 explains exactly why you want to send them notifications.
 
-If the user approves, we need to send a subscription request to the push
-manager. Do this by calling `PushManager.subscribe()` (emphasized in the
-example below). In this example, we're passing it an object with
-`userVisibleOnly` set to `true` so that all push messages sent to the client appear to the user as a notification. We're also  including an
-`applicationServerKey` converted to an integer array.
+If the user approves, we can get a subscription from the push
+manager. Do this by calling `PushManager.subscribe()` (emphasized in the example
+below). In this example, we're passing it an object with `userVisibleOnly` set
+to `true` to tell the browser that we will always show a notification to the
+user. We're also including an `applicationServerKey`.
+
 
 <div style="clear:both;"></div>
 
@@ -73,14 +90,10 @@ example below). In this example, we're passing it an object with
 if ('showNotification' in ServiceWorkerRegistration.prototype) {
   navigator.serviceworker.ready
   .then(registration => {
-    if (!subscription) {
-      <strong>return registration.pushManager.subscribe({
-          userVisibleOnly: true,
-          applicationServerKey: window.base64UrlToUint8Array(
-            '3xt3rm1n8_totallyFakePublicKey_a10nZ13'
-          );</strong>
-    }
-    return subscription;
+    <strong>return registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: new Uint8Array([...])
+    });</strong>
   })
   .then(subscription => {
     // Do something with the subscription.
@@ -94,6 +107,15 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
 This is the result in Chrome.
 
 ![Chrome prompts for permissions.](images/news-permissions.png){:width="296px"}
+
+### What is the applicationServerKey? {: #applicationserverkey }
+
+The `applicationServerKey` value should be generated by your server. We were saving
+all server side issue for the next section. For now, there's one thing you need
+to know about the `applicationServerKey`: when passing in the key to a
+`subscribe()` call, make sure it's a
+[Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+(an array of eight-bit-unsigned integers).
 
 ## Trigger from a specific action {: #trigger-from-action }
 
@@ -149,9 +171,9 @@ related controls, you need to send the subscription information (called the
 appropriate request object containing the subscription data, then passing it to
 the server.
 
-When you create the request (emphasized in the example below), use the  `POST`
-verb and a `Content-Type` header of  `application/json`. For the body you need
-to convert the subscription object to a  string. We'll look at what's in this
+When you create the request (emphasized in the example below), use the `POST`
+verb and a `Content-Type` header of `application/json`. For the body you need
+to convert the subscription object to a string. We'll look at what's in this
 object in the next section, [Sending  Messages](sending-messages). Use `fetch()`
 to send the subscription request to the server.
 
@@ -159,15 +181,10 @@ to send the subscription request to the server.
 if ('showNotification' in ServiceWorkerRegistration.prototype) {
   navigator.serviceworker.ready
   .then(registration => {
-    if (!subscription) {
-      return registration.pushManager.subscribe({
-        userVisibleOnly: true,
-        applicationServerKey: window.base64UrlToUint8Array(
-          '3xt3rm1n8_totallyFakePublicKey_a10nZ13'
-         );
-      })
-    }
-    return subscription;
+    return registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: new Uint8Array([...])
+    });
   })
   <strong>.then(subscription => {
     var fetchOptions = {
@@ -175,10 +192,10 @@ if ('showNotification' in ServiceWorkerRegistration.prototype) {
       headers: new Headers({
         'Content-Type': 'application/json'
       }),
-      body: JSON.stringify(subscription)</strong>
+      body: JSON.stringify(subscription)
     };
     return fetch('/your-web-server/api', fetchOptions);
-  })
+  })</strong>
   .catch(error => {
     // Do something with the error.
   });

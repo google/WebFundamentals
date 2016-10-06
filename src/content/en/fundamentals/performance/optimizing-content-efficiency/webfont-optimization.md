@@ -26,13 +26,13 @@ A *webfont* is a collection of glyphs, and each glyph is a vector shape that des
 
 <img src="images/glyphs.png"  alt="Font glyph table">
 
-When picking a font, it's important to consider which character sets are supported. If you need to localize your page content to multiple languages, you should use a font that can deliver a consistent look and experience to your users. For example, [Google's Noto font family](https://www.google.com/get/noto/) aims to support all the world's languages. Note, however, that the total size of Noto, with all languages included, results in a 130MB+ ZIP download.
+When picking a font, it's important to consider which character sets are supported. If you need to localize your page content to multiple languages, you should use a font that can deliver a consistent look and experience to your users. For example, [Google's Noto font family](https://www.google.com/get/noto/){: .external } aims to support all the world's languages. Note, however, that the total size of Noto, with all languages included, results in a 130MB+ ZIP download.
 
 Clearly, using fonts on the web requires careful engineering to ensure that the typography doesn't impede performance. Thankfully, the web platform provides all the necessary primitives, and the rest of this guide provides a hands-on look at how to get the best of both worlds.
 
 ### Webfont formats
 
-Today there are four font container formats in use on the web: [EOT](https://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](https://en.wikipedia.org/wiki/TrueType), [WOFF](https://en.wikipedia.org/wiki/Web_Open_Font_Format), and [WOFF2](https://www.w3.org/TR/WOFF2/). Unfortunately, despite the wide range of choices, there isn't a single universal format that works across all old and new browsers: EOT is [IE only](http://caniuse.com/#feat=eot), TTF has [partial IE support](http://caniuse.com/#search=ttf), WOFF enjoys the widest support but is [not available in some older browsers](http://caniuse.com/#feat=woff), and WOFF 2.0 support is a [work in progress for many browsers](http://caniuse.com/#feat=woff2).
+Today there are four font container formats in use on the web: [EOT](https://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](https://en.wikipedia.org/wiki/TrueType), [WOFF](https://en.wikipedia.org/wiki/Web_Open_Font_Format), and [WOFF2](https://www.w3.org/TR/WOFF2/){: .external }. Unfortunately, despite the wide range of choices, there isn't a single universal format that works across all old and new browsers: EOT is [IE only](http://caniuse.com/#feat=eot), TTF has [partial IE support](http://caniuse.com/#search=ttf), WOFF enjoys the widest support but is [not available in some older browsers](http://caniuse.com/#feat=woff), and WOFF 2.0 support is a [work in progress for many browsers](http://caniuse.com/#feat=woff2).
 
 So, where does that leave us? There isn't a single format that works in all browsers, which means that we need to deliver multiple formats to provide a consistent experience:
 
@@ -49,7 +49,7 @@ A font is a collection of glyphs, each of which is a set of paths describing the
 
 * EOT and TTF formats are not compressed by default. Ensure that your servers are configured to apply [GZIP compression](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip) when delivering these formats.
 * WOFF has built-in compression. Ensure that your WOFF compressor is using optimal compression settings. 
-* WOFF2 uses custom preprocessing and compression algorithms to deliver ~30% file-size reduction over other formats. For more information, see [the WOFF 2.0 evaluation report](http://www.w3.org/TR/WOFF20ER/).
+* WOFF2 uses custom preprocessing and compression algorithms to deliver ~30% file-size reduction over other formats. For more information, see [the WOFF 2.0 evaluation report](http://www.w3.org/TR/WOFF20ER/){: .external }.
 
 Finally, it's worth noting that some font formats contain additional metadata, such as [font hinting](https://en.wikipedia.org/wiki/Font_hinting) and [kerning](https://en.wikipedia.org/wiki/Kerning) information that may not be necessary on some platforms, which allows for further file-size optimization. Consult your font compressor for available optimization options, and if you take this route, ensure that you have the appropriate infrastructure to test and deliver these optimized fonts to each browser. For example, Google Fonts maintains 30+ optimized variants for each font and automatically detects and delivers the optimal variant for each platform and browser.
 
@@ -171,7 +171,7 @@ Because old browsers are not smart enough to select only the necessary subsets a
     * If the browser supports unicode-range subsetting, then it will automatically select the right subset. The page just needs to provide the subset files and specify appropriate unicode-ranges in the @font-face rules.
     * If the browser doesn't support unicode-range subsetting, then the page needs to hide all unnecessary subsets; that is, the developer must specify the required subsets.
 1. **How do you generate font subsets?**
-    - Use the open-source [pyftsubset tool](https://github.com/behdad/fonttools/) to subset and optimize your fonts.
+    - Use the open-source [pyftsubset tool](https://github.com/behdad/fonttools/){: .external } to subset and optimize your fonts.
     - Some font services allow manual subsetting via custom query parameters, which you can use to manually specify the required subset for your page. Consult the documentation from your font provider.
 
 

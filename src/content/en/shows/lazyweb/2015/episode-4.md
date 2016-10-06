@@ -48,28 +48,28 @@ Akamai gives an overview of HTTP/2, Kathy Sierra teachers metaskills to master n
 [https://youtu.be/8aGhZQkoFbQ?t=1m23s](https://youtu.be/8aGhZQkoFbQ?t=1m23s)
 
 ### GOING UP!
-[http://tholman.com/elevator.js/](http://tholman.com/elevator.js/)
+[http://tholman.com/elevator.js/](http://tholman.com/elevator.js/){: .external }
 
 ### 100 000 particles by thepheer
-[http://codepen.io/thepheer/full/tfLmv/](http://codepen.io/thepheer/full/tfLmv/)
+[http://codepen.io/thepheer/full/tfLmv/](http://codepen.io/thepheer/full/tfLmv/){: .external }
 
 ### Spiral Art Maker by David Storey
-[http://codepen.io/davidpanik/full/myMrLx/](http://codepen.io/davidpanik/full/myMrLx/)
+[http://codepen.io/davidpanik/full/myMrLx/](http://codepen.io/davidpanik/full/myMrLx/){: .external }
 
 ### Verlet By Tiffany Rayside
-[http://codepen.io/tmrDevelops/full/MYVzMe/](http://codepen.io/tmrDevelops/full/MYVzMe/)
+[http://codepen.io/tmrDevelops/full/MYVzMe/](http://codepen.io/tmrDevelops/full/MYVzMe/){: .external }
 
 ### Baby by parcon
-[http://codepen.io/parcon/full/OVPKqg/](http://codepen.io/parcon/full/OVPKqg/)
+[http://codepen.io/parcon/full/OVPKqg/](http://codepen.io/parcon/full/OVPKqg/){: .external }
 
 Let us know what you think on Twitter #LazyWebShow
 
 For more news on the Web, check out these resources:
-JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/)
+JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/){: .external }
 
-Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/)
+Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/){: .external }
 
-HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/)
+HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/){: .external }
 
 Subscribe to the Google Developers channel at: [https://goo.gl/mQyv5L](https://goo.gl/mQyv5L)
 

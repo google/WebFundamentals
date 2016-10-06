@@ -10,7 +10,7 @@ book_path: /web/updates/_book.yaml
 {% include "web/_shared/contributors/paulirish.html" %}
 
 
-The [High Resolution Timer](http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HighResolutionTime/Overview.html) was added by the [WebPerf Working Group](http://www.w3.org/2010/webperf/) to allow measurement in the Web Platform that's more precise than what we've had with `+new Date` and the newer `Date.now()`.
+The [High Resolution Timer](http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HighResolutionTime/Overview.html) was added by the [WebPerf Working Group](http://www.w3.org/2010/webperf/){: .external } to allow measurement in the Web Platform that's more precise than what we've had with `+new Date` and the newer `Date.now()`.
 
 So just to compare, here are the sorts of values you'd get back:
 

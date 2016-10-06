@@ -17,7 +17,7 @@ However, for large apps and sites, it can be cumbersome to add each and every fi
 Some options include:
 
 * [Manifested](http://dregsoft.com/blog/?p=79)
-* [ManifestR](http://westciv.com/tools/manifestR/)
+* [ManifestR](http://westciv.com/tools/manifestR/){: .external }
 * [H5BP build script](https://github.com/jamesgpearce/confess)
 
 Give them a shot, let us know in the comments how they work for you.

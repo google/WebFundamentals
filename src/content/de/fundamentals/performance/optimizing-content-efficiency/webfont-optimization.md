@@ -239,7 +239,7 @@ Anhand dieser Deklarationen bestimmt der Browser die erforderlichen Untergruppen
 
 ### Webschriftarten und kritischer Rendering-Pfad
 
-Das Lazy Loading von Schriftarten hat eine wichtige verborgene Auswirkung, die die Textwiedergabe verzögern kann: Der Browser muss [die Rendering-Baumstruktur erstellen](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), die von den DOM- und CSSOM-Baumstrukturen abhängt, bevor klar ist, welche Schriftartressourcen für das Rendern des Texts benötigt werden. Das hat zur Folge, dass Schriftarten wesentlich später als andere kritische Ressourcen angefordert werden und der Browser eventuell an der Textwiedergabe gehindert wird, bis die jeweilige Ressource abgerufen wurde.
+Das Lazy Loading von Schriftarten hat eine wichtige verborgene Auswirkung, die die Textwiedergabe verzögern kann: Der Browser muss [die Rendering-Baumstruktur erstellen](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), die von den DOM- und CSSOM-Baumstrukturen abhängt, bevor klar ist, welche Schriftartressourcen für das Rendern des Texts benötigt werden. Das hat zur Folge, dass Schriftarten wesentlich später als andere kritische Ressourcen angefordert werden und der Browser eventuell an der Textwiedergabe gehindert wird, bis die jeweilige Ressource abgerufen wurde.
 
 <img src="images/font-crp.png" class="center" alt="Kritischer Rendering-Pfad für Schriftarten">
 

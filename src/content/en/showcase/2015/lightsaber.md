@@ -268,7 +268,7 @@ each of them:
 
 It takes a bit of time each time you want to create a new element: generating 
 the folder and basic file structure with the correct names. So we use 
-[Slush](http://slushjs.github.io/) to write a simple element generator. 
+[Slush](http://slushjs.github.io/){: .external } to write a simple element generator. 
 
 You can call the script from command line:
 

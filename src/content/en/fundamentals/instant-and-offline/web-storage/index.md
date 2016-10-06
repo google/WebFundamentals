@@ -8,11 +8,11 @@ book_path: /web/fundamentals/_book.yaml
 
 {% include "web/_shared/contributors/mco.html" %}
 
-A good storage engine makes sure your information is saved reliably, reduces
-bandwidth, and improves responsiveness. The right storage caching strategy is a
-core building block for enabling offline mobile web experiences. It’s important
-to choose the right storage mechanisms, both for local device storage and for
-cloud based server storage. 
+It’s important to choose the right storage mechanisms, both for local device
+storage and for cloud based server storage.  A good storage engine makes sure
+your information is saved reliably, reduces bandwidth, and improves
+responsiveness. The right storage caching strategy is a core building block for
+enabling offline mobile web experiences. 
 
 This article provides a brief foundation for evaluating storage APIs and
 services, after which we’ll provide a comparison table and some general
@@ -108,31 +108,31 @@ Support</th>
   </thead>
   <tbody>
     <tr>
-      <td>File system</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/FileSystem">File system</a></td>
       <td>Byte stream</td>
       <td>device</td>
-      <td>52%</td>
+      <td><a href="http://caniuse.com/#feat=filesystem">52%</a></td>
       <td>No</td>
       <td>Async</td>
     </tr>
     <tr>
-      <td>Local Storage</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Local Storage</a></td>
       <td>key/value</td>
       <td>device</td>
-      <td>93%</td>
+      <td><a href="http://caniuse.com/#feat=namevalue-storage">93%</a></td>
       <td>No</td>
       <td>Sync</td>
     </tr>
     <tr>
-      <td>Session Storage</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">Session Storage</a></td>
       <td>key/value</td>
       <td>session</td>
-      <td>93%</td>
+      <td><a href="http://caniuse.com/#feat=namevalue-storage">93%</a></td>
       <td>No</td>
       <td>Sync</td>
     </tr>
     <tr>
-      <td>Cookies</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">Cookies</a></td>
       <td>structured</td>
       <td>device</td>
       <td>100%</td>
@@ -140,31 +140,31 @@ Support</th>
       <td>Sync</td>
     </tr>
     <tr>
-      <td>WebSQL</td>
+      <td><a href="https://www.w3.org/TR/webdatabase/">WebSQL</a></td>
       <td>structured</td>
       <td>device</td>
-      <td>77%</td>
+      <td><a href="http://caniuse.com/#feat=sql-storage">77%</a></td>
       <td>Yes</td>
       <td>Async</td>
     </tr>
     <tr>
-      <td>Cache</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/CacheStorage">Cache</a></td>
       <td>key/value</td>
       <td>device</td>
-      <td>92%</td>
+      <td><a href="http://caniuse.com/#feat=serviceworkers">60%</a></td>
       <td>No</td>
       <td>Async</td>
     </tr>
     <tr>
-      <td>IndexedDB</td>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a></td>
       <td>hybrid</td>
       <td>device</td>
-      <td>83%</td>
+      <td><a href="http://caniuse.com/#feat=indexeddb">83%</a></td>
       <td>Yes</td>
       <td>Async</td>
     </tr>
     <tr>
-      <td>Cloud storage service</td>
+      <td><a href="https://cloud.google.com/storage/">cloud storage</a></td>
       <td>byte stream</td>
       <td>global</td>
       <td>100%</td>

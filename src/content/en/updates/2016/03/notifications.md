@@ -30,15 +30,15 @@ ability to:
   displayed notification.
 
 Chrome 50 has also added [Payloads for Push
-notifications](https://developers.google.com/web/updates). To stay up to date
+notifications](/web/updates). To stay up to date
 with the Notifications API as it's implemented in Chrome, follow the
-[spec](https://notifications.spec.whatwg.org/) and the [spec issue
+[spec](https://notifications.spec.whatwg.org/){: .external } and the [spec issue
 tracker](https://github.com/whatwg/notifications/issues).
 
 ## Create Compelling Action Buttons with Custom Icons
 
 In a recent [post about notification action buttons in Chrome
-49](https://developers.google.com/web/updates/2016/01/notification-actions?hl=en),
+49](/web/updates/2016/01/notification-actions),
 I mentioned that you can't attach images to notification buttons to make them
 snazzy and appealing, but you could use Unicode characters to inline emojis
 etc.. Now you don't have to worry: with [this

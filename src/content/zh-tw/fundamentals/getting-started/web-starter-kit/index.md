@@ -104,7 +104,7 @@ description: 有時候一個新專案最難的部分是入門。  Web Starter Ki
 #### 請檢查您的 JAVAscript
 
 JSHint 是一套工具，它會掃描您的 JavaScript 程式碼，以檢查您 JavaScript 邏輯的可能問題，
-並 [強制程式碼編寫的最佳做法](http://www.jshint.com/docs/)。
+並 [強制程式碼編寫的最佳做法](http://www.jshint.com/docs/){: .external }。
 
 當您建置專案，或如果您執行 gulp 伺服器，
 每當您變更 JavaScript 時，該工具就會執行。
@@ -224,7 +224,7 @@ Web Starter Kit 建置工具需要 Node 和 NPM。 Node 用於執行任務執行
 
 ### 設定您的 Web Starter Kit 專案
 
-第一步是前往 [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)
+第一步是前往 [https://developers.google.com/web/starter-kit/](/web/starter-kit/)
  並下載並解壓該 zip 檔。 這將是您專案的基礎，因此請重命名資料夾，並將之它放在您電腦上的某個地方。 針對本指南的其餘部分，我們將稱此資料夾為 `my-project`
 
 接下來，您需要為 Web Starter Kit 安裝本機相依性。 開啟命令提示字元視窗、將目錄變更至您的專案資料夾，

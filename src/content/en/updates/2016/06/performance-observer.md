@@ -37,9 +37,9 @@ This new interface provides a number of critical advantages over previous
 methods to access the timeline:
 
 * Today, apps have to periodically poll and diff the stored measurements,
-which is costly. This interface offers them a callback (i.e. no need to
-poll). As a result apps using this API can be more responsive and more
-efficient.
+which is costly. This interface offers them a callback. (In other words,
+there is no need to poll). As a result apps using this API can be more
+responsive and more efficient.
 * It’s not subject to buffer limits (most buffers are set to 150 items
 by default), and avoids race conditions between different consumers that
 may want to modify the buffer.

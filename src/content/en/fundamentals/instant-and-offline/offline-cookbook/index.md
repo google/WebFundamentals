@@ -310,7 +310,7 @@ This code updates caches before showing a notification:
 
 Dogfood: Background sync hasn't yet landed in Chrome stable.
 
-[Background sync](https://developers.google.com/web/updates/2015/12/background-sync)
+[Background sync](/web/updates/2015/12/background-sync)
 is another feature built on top of
 ServiceWorker. It allows you to request background data synchronisation
 as a one-off, or on an (extremely heuristic) interval. This happens even
@@ -355,7 +355,7 @@ can't tell the different between those movies you want to keep at all
 costs, and the game you don't really care about.
 
 To work around this, there's a proposed API,
-[`requestPersistent`](https://storage.spec.whatwg.org/):
+[`requestPersistent`](https://storage.spec.whatwg.org/){: .external }:
 
     // From a page:
     navigator.storage.requestPersistent().then(function(granted) {
@@ -703,15 +703,15 @@ Just look at the request and decide what to do:
 ### Credits {: hide-from-toc }
 …for the lovely icons:
 
-* [Code](http://thenounproject.com/term/code/17547/) by buzzyrobot
-* [Calendar](http://thenounproject.com/term/calendar/4672/) by Scott Lewis
-* [Network by](http://thenounproject.com/term/network/12676/) Ben Rizzo
+* [Code](http://thenounproject.com/term/code/17547/){: .external } by buzzyrobot
+* [Calendar](http://thenounproject.com/term/calendar/4672/){: .external } by Scott Lewis
+* [Network by](http://thenounproject.com/term/network/12676/){: .external } Ben Rizzo
 * [SD](http://thenounproject.com/term/sd-card/6185/) by Thomas Le Bas
-* [CPU](http://thenounproject.com/term/cpu/72043/) by iconsmind.com
-* [Trash](http://thenounproject.com/term/trash/20538/) by trasnik
-* [Notification](http://thenounproject.com/term/notification/32514/) by @daosme
-* [Layout](http://thenounproject.com/term/layout/36872/) by Mister Pixel
-* [Cloud](http://thenounproject.com/term/cloud/2788/) by P.J. Onori
+* [CPU](http://thenounproject.com/term/cpu/72043/){: .external } by iconsmind.com
+* [Trash](http://thenounproject.com/term/trash/20538/){: .external } by trasnik
+* [Notification](http://thenounproject.com/term/notification/32514/){: .external } by @daosme
+* [Layout](http://thenounproject.com/term/layout/36872/){: .external } by Mister Pixel
+* [Cloud](http://thenounproject.com/term/cloud/2788/){: .external } by P.J. Onori
 
 And thanks to [Jeff Posnick](https://twitter.com/jeffposnick) for catching many howling errors
 before I hit "publish".

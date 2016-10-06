@@ -37,7 +37,7 @@ project, which allows devices to broadcast a URL to an online
 website, in a *non-intrusive way*. In combinations with emerging
 web technologies such as
 [Web Bluetooth](https://webbluetoothcg.github.io/web-bluetooth/),
-[Web USB](https://wicg.github.io/webusb/) and
+[Web USB](https://wicg.github.io/webusb/){: .external } and
 [Web NFC](https://w3c.github.io/web-nfc/), the sites can
 connect directly to the device or at least explain the proper
 way of doing so.
@@ -49,7 +49,7 @@ reasons.
 
 The website can also serve as a Progressive Web App (PWA).
 We encourage readers to check out
-[Google's explanation](https://developers.google.com/web/progressive-web-apps)
+[Google's explanation](/web/progressive-web-apps)
 of PWAs. PWAs are sites that have a responsive, app-like user
 experience, can work offline and can be added to the device home screen.
 
@@ -234,7 +234,7 @@ version of Node.js.
 
 > With the newly launched [Ostro Project](https://ostroproject.org)
 > which supports the Edison, that is no longer the case. If you
-> use Brillo as part of the [Brillo](https://developers.google.com/brillo/) 
+> use Brillo as part of the [Brillo](/brillo/) 
 > Early Access Program, then it is possible to compile and install a
 > recent version of Node.js.
 
@@ -428,7 +428,7 @@ log that I added to ease the development.
 Web Bluetooth makes it easy to communicate with Bluetooth Low Energy
 devices, so let's look at a simplified version of my connection code.
 If you don't know how promises work, check out
-[this resource](https://developers.google.com/web/fundamentals/primers/promises)
+[this resource](/web/fundamentals/primers/promises)
 before reading further.
 
 Connecting to a Bluetooth device involves a chain of promises.
