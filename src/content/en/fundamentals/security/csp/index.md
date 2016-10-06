@@ -204,7 +204,7 @@ inside of an `<iframe>` with a `sandbox` attribute. This can have a wide range o
 effects on the page: forcing the page into a unique origin, and preventing form
 submission, among others. It's a bit beyond the scope of this article, but you
 can find full details on valid sandboxing attributes in the
-["sandboxing flag set" section of the HTML5 spec](http://www.whatwg.org/specs/web-apps/current-work/multipage/origin-0.html#sandboxing-flag-set){: .external}.
+["Sandboxing" section of the HTML5 spec](https://developers.whatwg.org/origin-0.html#sandboxing){: .external}.{: .external}.
 
 ### The meta tag
 
