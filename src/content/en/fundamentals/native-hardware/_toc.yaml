@@ -11,5 +11,7 @@ toc:
       path: /web/fundamentals/native-hardware/recording-audio/
     - title: Capturing an image from the User
       path: /web/fundamentals/native-hardware/capturing-images/
+    - title: Making Fullscreen Experiences
+      path: /web/fundamentals/native-hardware/fullscreen/
     - title: Click to Call
       path: /web/fundamentals/native-hardware/click-to-call/
