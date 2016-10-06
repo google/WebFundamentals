@@ -24,18 +24,18 @@ should reconsider their short-lived cookie policies and adopt more user-friendly
 longer lived sessions.
 
 However, even if you *want* to make the session last longer, some websites don't
-verify the user's authentication on each request (i.e. there is no way to revoke
-the session cookie once issued). This normally leads to short sessions, with the
-user being forced to sign in frequently so their authentication can be re-
-validated, allowing for things like a password change to invalidate existing
-sessions in a known amount of time.
+verify the user's authentication on each request (in other words, there is no
+way to revoke the session cookie once issued). This normally leads to short
+sessions, with the user being forced to sign in frequently so their
+authentication can be re- validated, allowing for things like a password change
+to invalidate existing sessions in a known amount of time.
 
 If this is an approach that you use, we have a technical solution that may help
 you automatically re-validate the stateless authentication cookie. It works by
 having a secondary long-lived token that can be used to refresh your existing
-short-lived authentication cookie. Leveraging the new Service Worker pattern
+short-lived authentication cookie. Leveraging the new service worker pattern
 allows us to regularly "checkin" with the long lived token, verify the user's
-authentication (e.g. check to see if they have not recently changed their
+authentication (for example, check to see if they have not recently changed their
 passwords, or otherwise revoked the session) and re-issue a new short-lived
 authentication cookie.
 

@@ -48,7 +48,7 @@ The Color Picker is in the Sources panel.
 
 ![sources panel color picker](/web/updates/images/2016/08/colorpicker.jpg)
 
-Right-click on the Resources pane in the Network panel and you can copy
+Right-click the Resources pane in the Network panel and you can copy
 a string of cURL requests to download all of your resources.
 
 ![copy all as curl](/web/updates/images/2016/08/curl.png)
