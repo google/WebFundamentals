@@ -7,7 +7,7 @@ description: Going fullscreen.
 
 # Making Fullscreen Experiences {: .page-title }
 
-We have the ability to easily make immersive fullscreen websites and 
+We have the ability to easily make immersive fullscreen websites and
 applications, but like anything on the web there are a couple of ways to do it.
 This is especially important now that more browsers are supporting an "installed
 web app" experience which launch fullscreen.
@@ -21,28 +21,9 @@ web app" experience which launch fullscreen.
 
 There are several ways that a user or developer can get a web app fullscreen.
 
-* Fake it: auto-hide the address bar.
 * Request the browser go fullscreen in response to a user gesture.
 * Install the app to the home screen.
-
-### Fake it: auto-hide the address bar
-
-You can "fake fullscreen" by auto-hiding the address bar as follows:
-
-    window.scrollTo(0,1);
-
-Note: I am telling you this as a friend. It exists. It is a thing, but it 
-      is a hack. Please don't use it. &mdash; Paul
-
-This is a pretty simple method, the page loads and the browser bar is told to
-get out of the way. Unfortunately it is not standardised and not well
-supported. You also have to work around a bunch of quirks.
-
-For example browsers often restore the position on the page when the user
-navigates back to it. Using `window.scrollTo` overrides this, which annoys
-the user. To work around this you have to store the last position in
-localStorage, and deal with the edge cases (for example, if the user has the
-page open in multiple windows).
+* Fake it: auto-hide the address bar.
 
 ### Request the browser go fullscreen in response to a user gesture
 
@@ -59,7 +40,7 @@ JS API's that you need to care about when building a fullscreen experience are:
 * `document.fullscreenElement` (currently prefixed in Chrome, Firefox, and IE)
   returns true if any of the elements are in fullscreen mode.
 
-Note: You will notice that in the prefixed versions there is a lot of 
+Note: You will notice that in the prefixed versions there is a lot of
       inconsitency between the casing of the 'S' in screen. This is awkward, but
       this is the problem with specs that are in flight.
 
@@ -112,11 +93,96 @@ href="https://github.com/sindresorhus/screenfull.js">Screenfull.js</a> module
 which unifies the two slightly different JS API's and vendor prefixes into one
 consistent API.
 
-### Launching a page fullscreen
+#### Fullscreen API Tips
 
-Launching a fullscreen web page when the user navigates to it is not possible.  
+##### Making the document fullscreen
+
+It is natural to think that you take the body element fullscreen, but if you are
+on a WebKit or Blink based rendering engine you will see it has an odd effect of
+shrinking the body width to the smallest possible size that will contain all the
+content. (Mozilla Gecko is fine.)
+
+<figure style="width: 100%; max-width: 320px;">
+<img src="images/body.png">
+<figcaption>Figure 1: Fullscreen on the body element.</figcaption>
+</figure>
+
+To fix this, use the document element instead of the body element:
+
+    document.documentElement.requestFullscreen();
+
+<figure style="width: 100%; max-width: 320px;">
+<img src="images/document.png" >
+<figcaption>Figure 2: Fullscreen on the document element.</figcaption>
+</figure>
+
+##### Making a video element fullscreen
+
+To make a video element fullscreen is exactly the same as making any other
+element fullscreen. You call the `requestFullscreen` method on the video
+element.
+
+    <video id=videoElement></video>
+    <button id="goFS">Go Fullscreen</button>
+    <script>
+      var goFS = document.getElementById("goFS");
+      goFS.addEventListener("click", function() {
+          var videoElement = document.getElementById("videoElement");
+          videoElement.requestFullscreen();
+      }, false);
+    </script>
+
+If your `<video>` element doesn't have the controls attribute defined,
+there's no way for the user to control the video once they are fullscreen. The
+recommended way to do this is to have a basic container that wraps the video and
+the controls that you want the user to see.
+
+    <div id="container">
+      <video></video>
+      <div>
+        <button>Play</button>
+        <button>Stop</button>
+        <button id="goFS">Go fullscreen</button>
+      </div>
+    </div>
+    <script>
+      var goFS = document.getElementById("goFS");
+      goFS.addEventListener("click", function() {
+          var container = document.getElementById("container");
+          container.requestFullscreen();
+      }, false);
+    </script>
+
+This gives you a lot more flexibility because you can combine the container
+object with the CSS pseudo selector (for example to hide the "goFS" button.)
+
+    <style>
+      #goFS:-webkit-full-screen #goFS {
+        display: none;
+      }
+      #goFS:-moz-full-screen #goFS {
+        display: none;
+      }
+      #goFS:-ms-fullscreen #goFS {
+        display: none;
+      }
+      #goFS:fullscreen #goFS {
+        display: none;
+      }
+    </style>
+
+Using these patterns, you can detect when fullscreen is running and adapt your
+user interface appropriately, for example:
+
+* By providing a link back to the start page
+* By Providing a mechanism to close dialogs or travel backwards
+
+
+### Launching a page fullscreen from homescreen
+
+Launching a fullscreen web page when the user navigates to it is not possible.
 Browser vendors are very aware that a fullscreen experience on every page load
-is a huge annoyance, therefore a user gesture is required to enter fullscreen.  
+is a huge annoyance, therefore a user gesture is required to enter fullscreen.
 Vendors do allow users to "install" apps though, and the act of installing is a
 signal to the operating system that the user wants to launch as an app on the
 platform.
@@ -145,7 +211,7 @@ similar to the iOS Safari model.
 
     <meta name="mobile-web-app-capable" content="yes">
 
-> You can set up your web app to have an application shortcut icon added to a 
+> You can set up your web app to have an application shortcut icon added to a
 > device's homescreen, and have the app launch in full-screen "app mode" using
 > Chrome for Android's "Add to homescreen" menu item.
 >  <a href="https://developers.google.com/chrome/mobile/docs/installtohomescreen">Google Chrome</a>
@@ -233,125 +299,69 @@ will probably want the game to always use the landscape orientation.
 ##### News sites
 
 News sites in most cases are pure content-based experiences. Most developers
-naturally wouldn't think of adding a manifest to a news site.
+naturally wouldn't think of adding a manifest to a news site.  The manifest
+will let you define what to launch (the front page of your news site) and
+how to launch it (fullscreen or as a normal browser tab).
 
-However, if you want your site to have all the browser chrome that you would
-expect a content site to have, you can set the display to browser.
+The choice is up to you and how you think your users will like to access your
+experience. If you want your site to have all the browser chrome that you would
+expect a site to have, you can set the display to `browser`.
 
-    "display": "browser" 
+    "display": "browser"
 
-Taking a look at native apps, the majority of news-centric apps treat their
-experiences as apps and remove all web-like chrome from the UI. This is easy to
-do by setting display to standalone.
+If you want your news site to feel like the majority of news-centric apps treat
+their experiences as apps and remove all web-like chrome from the UI, you can
+do this by setting display to `standalone`.
 
     "display": "standalone"
 
-## API Tips
+### Fake it: auto-hide the address bar
 
-### Making the document fullscreen
+You can "fake fullscreen" by auto-hiding the address bar as follows:
 
-It is natural to think that you take the body element fullscreen, but if you are
-on a WebKit or Blink based rendering engine you will see it has an odd effect of
-shrinking the body width to the smallest possible size that will contain all the
-content. (Mozilla Gecko is fine.)
+    window.scrollTo(0,1);
 
-<figure style="width: 100%; max-width: 320px;">
-<img src="images/body.png">
-<figcaption>Figure 1: Fullscreen on the body element.</figcaption>
-</figure>
+Note: I am telling you this as a friend. It exists. It is a thing, but it
+      is a hack. Please don't use it. &mdash; Paul
 
-To fix this, use the document element instead of the body element:
+This is a pretty simple method, the page loads and the browser bar is told to
+get out of the way. Unfortunately it is not standardised and not well
+supported. You also have to work around a bunch of quirks.
 
-    document.documentElement.requestFullscreen();
-
-<figure style="width: 100%; max-width: 320px;">
-<img src="images/document.png" >
-<figcaption>Figure 2: Fullscreen on the document element.</figcaption>
-</figure>
-
-### Making a video element fullscreen
-
-To make a video element fullscreen is exactly the same as making any other
-element fullscreen. You call the `requestFullscreen` method on the video
-element.
-
-    <video id=videoElement></video>
-    <button id="goFS">Go Fullscreen</button>
-    <script>
-      var goFS = document.getElementById("goFS");
-      goFS.addEventListener("click", function() {
-          var videoElement = document.getElementById("videoElement");
-          videoElement.requestFullscreen();
-      }, false);
-    </script>
-
-If your `<video>` element doesn't have the controls attribute defined,
-there's no way for the user to control the video once they are fullscreen. The
-recommended way to do this is to have a basic container that wraps the video and
-the controls that you want the user to see.
-
-    <div id="container">
-      <video></video>
-      <div>
-        <button>Play</button>
-        <button>Stop</button>
-        <button id="goFS">Go fullscreen</button>
-      </div>
-    </div>
-    <script>
-      var goFS = document.getElementById("goFS");
-      goFS.addEventListener("click", function() {
-          var container = document.getElementById("container");
-          container.requestFullscreen();
-      }, false);
-    </script>
-
-This gives you a lot more flexibility because you can combine the container
-object with the CSS pseudo selector (for example to hide the "goFS" button.)
-
-    <style>
-      #goFS:-webkit-full-screen #goFS {
-        display: none;
-      }
-      #goFS:-moz-full-screen #goFS {
-        display: none;
-      }
-      #goFS:-ms-fullscreen #goFS {
-        display: none;
-      }
-      #goFS:fullscreen #goFS {
-        display: none;
-      }
-    </style>
-
-Using these patterns, you can detect when fullscreen is running and adapt your
-user interface appropriately, for example:
-
-* By providing a link back to the start page
-* By Providing a mechanism to close dialogs or travel backwards
+For example browsers often restore the position on the page when the user
+navigates back to it. Using `window.scrollTo` overrides this, which annoys
+the user. To work around this you have to store the last position in
+localStorage, and deal with the edge cases (for example, if the user has the
+page open in multiple windows).
 
 ## UX guidelines
 
+When you are building a site that takes advantage of full screen there are a
+number of potential user experience changes that you need to be aware of to
+be able to build a service your users will love.
+
 ### Don't rely on navigation controls
 
-iOS and Firefox OS don't have a hardware back button or refresh gesture.
-Therefore you must ensure that users can navigate throughout the app without
-getting locked in.
+iOS does not have a hardware back button or refresh gesture. Therefore you must
+ensure that users can navigate throughout the app without getting locked in.
 
 You can detect if you are running in a fullscreen mode or an installed mode
 easily on all the major platforms.
 
 #### iOS
 
-    if(window.navigator.standalone == true) {
+On iOS you can use the `navigator.standalone` boolean to see if the user has
+launched from the home screen or not.
+
+    if(navigator.standalone == true) {
       // My app is installed and therefore fullscreen
     }
 
 #### Web App Manifest (Chrome, Opera, Samsung)
 
 When launching as an installed app, Chrome is not running in true fullscreen
-experience so `document.fullscreenElement` returns null and the CSS selectors 
-don't work. 
+experience so `document.fullscreenElement` returns null and the CSS selectors
+don't work.
 
 When the user requests fullscreen via a gesture on your site, the standard
 fullscreen API's are available including the CSS pseudo selector that lets you
