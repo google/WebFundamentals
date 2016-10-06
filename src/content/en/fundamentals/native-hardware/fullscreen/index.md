@@ -223,7 +223,7 @@ similar to the iOS Safari model.
 > You can set up your web app to have an application shortcut icon added to a
 > device's homescreen, and have the app launch in full-screen "app mode" using
 > Chrome for Android's "Add to homescreen" menu item.
->  <a href="https://developers.google.com/chrome/mobile/docs/installtohomescreen">Google Chrome</a>
+>  <a href="/chrome/mobile/docs/installtohomescreen">Google Chrome</a>
 
 A better option is to use the Web App Manifest.
 
