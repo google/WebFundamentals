@@ -249,7 +249,7 @@ in:
 
 Note: The separating semicolon should actually be a comma but there is a bug
 in Chrome prior to version 52 which prevents push from working if a comma is
-sent. This is fixed in Chrome version 53, so you should be able to change to a
+sent. This is fixed in Chrome 53, so you should be able to change to a
 comma once this hits stable.
 
 ## Reality of these Changes
@@ -258,7 +258,7 @@ With VAPID you no longer need to sign up for an account with GCM to use push in
 Chrome and you can use the same code path for subscribing a user and sending a
 message to a user in both Chrome and Firefox. Both are following the standards.
 
-What you need to bear in mind is that in Chrome version 51 and before, Opera for
+What you need to bear in mind is that in Chrome 51 and before, Opera for
 Android and Samsung browser you'll still need to define the `gcm_sender_id`
 in your web app manifest and you'll need to add the Authorization header to the
 FCM endpoint that will be returned.

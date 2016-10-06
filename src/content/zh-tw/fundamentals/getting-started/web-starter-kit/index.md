@@ -104,7 +104,7 @@ description: 有時候一個新專案最難的部分是入門。  Web Starter Ki
 #### 請檢查您的 JAVAscript
 
 JSHint 是一套工具，它會掃描您的 JavaScript 程式碼，以檢查您 JavaScript 邏輯的可能問題，
-並 [強制程式碼編寫的最佳做法](http://www.jshint.com/docs/)。
+並 [強制程式碼編寫的最佳做法](http://www.jshint.com/docs/){: .external }。
 
 當您建置專案，或如果您執行 gulp 伺服器，
 每當您變更 JavaScript 時，該工具就會執行。

@@ -30,7 +30,7 @@ content as errors and warnings in the JavaScript console.
 
 To view these alerts, go to our passive mixed content or active mixed content sample page and open the Chrome JavaScript console. You can open the console either from the View menu: _View_ -&gt; _Developer_ -&gt; _JavaScript Console_, or by right-clicking the page, selecting _Inspect Element_, and then selecting _Console_.
 
-The [passive mixed content example](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html) on the [What Is Mixed Content](what-is-mixed-content#passive-mixed-content) page causes mixed content warnings to be displayed, like the ones below:
+The [passive mixed content example](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/passive-mixed-content.html){: .external} on the [What Is Mixed Content](what-is-mixed-content#passive-mixed-content){: .external} page causes mixed content warnings to be displayed, like the ones below:
 
 <figure>
   <img src="imgs/passive-mixed-content-warnings.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure video. This content should also be served over HTTPS.">
@@ -56,7 +56,7 @@ Note: Mixed content errors and warnings are only shown for the page your are cur
 
 You can search for mixed content directly in your source code. Search for 
 `http://` in your source and look for tags that include HTTP URL attributes. 
-Specifically, look for tags listed in the [mixed content types & security threats associated](what-is-mixed-content#mixed-content-types--security-threats-associated) section of our previous guide. 
+Specifically, look for tags listed in the [mixed content types & security threats associated](what-is-mixed-content#mixed-content-types--security-threats-associated){: .external} section of our previous guide. 
 Note that having `http://` in the href attribute of anchor tags (`<a>`)
 is often not a mixed content issue, with some notable exceptions discussed later. 
 
@@ -184,8 +184,8 @@ sections.
 
 CSP is useful for many things outside of its mixed content uses. Information about other CSP directives is available at the following resources:
 
-* [Mozilla's intro to CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy)
-* [HTML5 Rocks' intro to CSP](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
+* [Mozilla's intro to CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy){: .external}
+* [HTML5 Rocks' intro to CSP](http://www.html5rocks.com/en/tutorials/security/content-security-policy/){: .external}
 * [CSP playground](http://www.cspplayground.com/){: .external }
 * [CSP spec](http://www.w3.org/TR/CSP/){: .external }
 
@@ -224,16 +224,16 @@ The two caveats to this are:
   that don't get much traffic, it might be some time before you get reports for 
   your entire site.
 
-For more information on CSP header format, see the [Content Security Policy specification](https://w3c.github.io/webappsec/specs/content-security-policy/#violation-reports). 
+For more information on CSP header format, see the [Content Security Policy specification](https://w3c.github.io/webappsec/specs/content-security-policy/#violation-reports){: .external}. 
 
 If you don't want to configure a reporting endpoint yourself, 
-[https://report-uri.io/](https://report-uri.io/) is a reasonable 
+[https://report-uri.io/](https://report-uri.io/){: .external} is a reasonable 
 alternative.
 
 ### Upgrading insecure requests
 
 One of the newest and best tools to automatically fix mixed content is the 
-[**`upgrade-insecure-requests`**](http://www.w3.org/TR/upgrade-insecure-requests) 
+[**`upgrade-insecure-requests`**](http://www.w3.org/TR/upgrade-insecure-requests){: .external} 
 CSP directive. This directive instructs the browser to upgrade insecure URLs 
 before making network requests.
 
@@ -272,7 +272,7 @@ ensuring the entire page is protected.
 
 Not all browsers support the upgrade-insecure-requests directive, so an 
 alternative for protecting users is the 
-[**`block-all-mixed-content`**](http://www.w3.org/TR/mixed-content/#strict-checking)
+[**`block-all-mixed-content`**](http://www.w3.org/TR/mixed-content/#strict-checking){: .external}
 CSP directive. This directive instructs the browser to never load mixed content; 
 all mixed content resource requests are blocked, including both active and 
 passive mixed content. This option also cascades into `<iframe>` documents, 

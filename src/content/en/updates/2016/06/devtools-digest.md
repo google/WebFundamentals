@@ -56,7 +56,7 @@ You'll also be able to keep track of your changes in the new Quick Source drawer
 
 ![Quick source drawer tab](/web/updates/images/2016/06/quick-source.png)
 
-For the first time, the Quick Source tab lets you focus on your HTML or JavaScript source code at the same time as your CSS rules. Also, when you click on a CSS property in the Styles pane, the Quick Source tab automatically jumps to and highlights the definition in the source. 
+For the first time, the Quick Source tab lets you focus on your HTML or JavaScript source code at the same time as your CSS rules. Also, when you click a CSS property in the Styles pane, the Quick Source tab automatically jumps to and highlights the definition in the source. 
 
 Enable the **sources diff** experiment in Chrome Canary to try it out today.  
 
@@ -78,7 +78,7 @@ Look at the list of [web and Chrome talks at Google I/O 2016](https://www.youtub
 
 As the Progressive Web App model emerges, DevTools is iterating rapidly to provide the tools developers need to create great progressive web apps. We realized that building and debugging these modern applications often comes with unique requirements, so DevTools has dedicated an entire panel to Progressive Web Application development. Open up Chrome Canary and you'll see that the Resources panel has been replaced with the Application panel. All of the previous functionality from the Resources panel is still there. There's just a few new panes designed specifically for Progressive Web App development:
 
-The Manifest pane gives you a visual representation of the app manifest file. From here you can manually trigger the "Add to homescreen" workflow. 
+The Manifest pane gives you a visual representation of the app manifest file. From here you can manually trigger the "Add to home screen" workflow. 
 
 ![Manifest pane](/web/updates/images/2016/06/manifest.png)
 

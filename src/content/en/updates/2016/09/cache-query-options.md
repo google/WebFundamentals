@@ -21,7 +21,7 @@ The following options can be set in any call to [`CacheStorage.match()`](https:/
 
 ### `ignoreSearch`
 
-This instructs the matching algorithm to ignore the [search](https://url.spec.whatwg.org/#dom-url-search) portion of a URL, also known as the URL query parameters. This can come in handy when you have a source URL that contains query parameters that are used for, e.g., analytics tracking, but are not significant in terms of uniquely identifying a resource in the cache. For example, many folks have fallen prey to the following service worker "gotcha":
+This instructs the matching algorithm to ignore the [search](https://url.spec.whatwg.org/#dom-url-search) portion of a URL, also known as the URL query parameters. This can come in handy when you have a source URL that contains query parameters that are used for, for example, analytics tracking, but are not significant in terms of uniquely identifying a resource in the cache. For example, many folks have fallen prey to the following service worker "gotcha":
 
 
     self.addEventListener('install', event => {

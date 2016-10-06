@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Starting with Chrome version 50, Chrome no longer supports the HTML5  Geolocation API over non-secure connections.
+description: Starting with version 50, Chrome no longer supports the HTML5 Geolocation API over non-secure connections.
 
 {# wf_updated_on: 2016-04-21 #}
 {# wf_published_on: 2016-04-21 #}
@@ -32,7 +32,7 @@ understand the reasoning and how to proceed.
 
 **When is this changing?**
 
-This change is effective as of Chrome version 50 (12PM PST April 20 2016). 
+This change is effective as of Chrome 50 (12PM PST April 20 2016). 
 
 Chrome's developer tools console has been providing warnings since version 44 
 (released July 21 2015).    

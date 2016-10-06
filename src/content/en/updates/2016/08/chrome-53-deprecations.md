@@ -69,7 +69,7 @@ DHE-based ciphers have been deprecated since Chrome 51. Support is being removed
 [Chromestatus Tracker](https://www.chromestatus.com/feature/6687420359639040) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=496901)
 
-The current version of the [File API](https://w3c.github.io/FileAPI/){: .external } standard does not contain the `FileError` interface and it's support was deprecated some time in 2013. In Chrome 53, this deprecation warning will be printed to the Dev Tools console:
+The current version of the [File API](https://w3c.github.io/FileAPI/){: .external } standard does not contain the `FileError` interface and it's support was deprecated some time in 2013. In Chrome 53, this deprecation warning will be printed to the DevTools console:
 
 'FileError' is deprecated and will be removed in 54. Please use the 'name' or 'message' attributes of the error rather than 'code'.
 
@@ -81,7 +81,7 @@ This has different effects in different contexts.
 
 This change only impacts code that relies on comparing the error instance's code (`e.code`) directly against `FileError` enum values (`FileError.NOT_FOUND_ERR`, etc). Code that tests against hard coded constants (for example `e.code === 1`) could fail by reporting incorrect errors to the user. 
 
-Fortunately the `FileError`, `DOMError`, and `DOMException` error types all share `name` and `message` properties which give consistent names for error cases (e.g. `e.name === "NotFoundError"`). Code should use those properties instead, which will work across browsers and continue to work once the `FileError` interface itself has been removed.
+Fortunately the `FileError`, `DOMError`, and `DOMException` error types all share `name` and `message` properties which give consistent names for error cases (in other words, `e.name === "NotFoundError"`). Code should use those properties instead, which will work across browsers and continue to work once the `FileError` interface itself has been removed.
 
 The removal of `FileError` is anticipated Chrome 54.
 

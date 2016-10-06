@@ -154,7 +154,7 @@ easily support both HTTP and HTTPS for all clients.
 However, most site operators use name-based virtual hosting to conserve IP
 addresses and because it's more convenient in general. The problem with IE on
 Windows XP and Android earlier than 2.3 is that they do not understand [Server
-Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication) (SNI),
+Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication){: .external} (SNI),
 which is crucial for HTTPS name-based virtual hosting.
 
 Someday—hopefully soon—clients that don't support SNI will be replaced
@@ -166,7 +166,7 @@ If you don't already have HTTPS service available on your servers, enable it now
 (without redirecting HTTP to HTTPS; see below). Configure your web server to use
 the certificates you bought and installed. You might find [Mozilla's handy
 configuration
-generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/){: .external}
 useful.
 
 If you have many hostnames/subdomains, they each need to use the right
@@ -348,4 +348,4 @@ operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
 Advertisers should at least offer ad service via HTTPS (such as by completing
 the "Enable HTTPS on your servers" section on this page. Many already do. You 
 should ask advertisers that do not serve HTTPS at all to at least start. 
-You may wish to defer completing [Make IntraSite URLs relative](#make-intra-site-urls-relative) until enough advertisers interoperate properly.
+You may wish to defer completing [Make IntraSite URLs relative](#make-intrasite-urls-relative) until enough advertisers interoperate properly.

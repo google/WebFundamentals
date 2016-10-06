@@ -81,8 +81,8 @@ See the [referenced design doc](https://docs.google.com/document/d/1CsDfsMxZaM09
 ### Examples
 
 In [this example](http://output.jsbin.com/yadilojopa), the element with the
-`remainsBlurry` id will stay blurry after this change, but the element with the
-`noLongerBlurry` id will become crisp. That is because the former has a `will-
+`remainsBlurry` ID will stay blurry after this change, but the element with the
+`noLongerBlurry` ID will become crisp. That is because the former has a `will-
 change: transform` CSS property on it.
 
 Examples of transform scale animations from real applications

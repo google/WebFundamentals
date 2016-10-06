@@ -55,6 +55,8 @@ jakearchibald:
   twitter: jaffathecake
   email: jakearchibald@google.com
   lanyrd: jaffathecake
+  description:
+    en: Human boy working on web standards at Google
 
 pbakaus:
   name:
@@ -739,9 +741,9 @@ henrylim:
   twitter: henrylim96
   google: +henrylim96
   homepage: 'https://limhenry.xyz'
-  email: henrylim.everything@gmail.com
+  email: lets.email.henry@gmail.com
   description:
-    en: 'Web Developer, Volunteer @ GDG Kuala Lumpur'
+    en: 'Co-Organizer @ GDG Kuala Lumpur'
 
 heathermahan:
   name:
