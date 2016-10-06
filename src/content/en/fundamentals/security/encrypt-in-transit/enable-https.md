@@ -348,4 +348,4 @@ operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
 Advertisers should at least offer ad service via HTTPS (such as by completing
 the "Enable HTTPS on your servers" section on this page. Many already do. You 
 should ask advertisers that do not serve HTTPS at all to at least start. 
-You may wish to defer completing [Make IntraSite URLs relative](#make-intra-site-urls-relative) until enough advertisers interoperate properly.
+You may wish to defer completing [Make IntraSite URLs relative](#make-intrasite-urls-relative) until enough advertisers interoperate properly.
