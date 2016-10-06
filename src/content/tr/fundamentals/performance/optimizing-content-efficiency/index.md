@@ -14,7 +14,7 @@ description: Her bir uygulama tarafindan indirilen veri miktari artmaya devam et
 Web uygulamalarimiz kapsam, tutku ve islevsellik açisindan büyümeye devam eder. Bu iyi bir seydir. Ancak, daha zengin bir web'e dogru araliksiz yapilan bu yürüyüs baska bir trendi de beraberinde getirir: Her bir uygulama tarafindan indirilen veri miktari sabit bir hizla artmaya devam etmektedir. Harika bir performans saglamak için her bayt verinin teslimini optimize etmemiz gerekir!
 
 
-Modern bir web uygulamasi nasil görünür? [HTTP Archive](http://httparchive.org/), bu sorunun yanitini bulmamiza yardim edebilir. Proje, en popüler siteleri (Aleksa Ilk 1M listesindeki 300.000'den fazla site) periyodik bir sekilde tarayip kaydederek ve bagimsiz her bir hedefe iliskin kaynak sayisi, içerik türleri ve diger meta verilerle ilgili analizleri toplayarak web'in nasil olusturuldugunu izlemektedir.
+Modern bir web uygulamasi nasil görünür? [HTTP Archive](http://httparchive.org/){: .external }, bu sorunun yanitini bulmamiza yardim edebilir. Proje, en popüler siteleri (Aleksa Ilk 1M listesindeki 300.000'den fazla site) periyodik bir sekilde tarayip kaydederek ve bagimsiz her bir hedefe iliskin kaynak sayisi, içerik türleri ve diger meta verilerle ilgili analizleri toplayarak web'in nasil olusturuldugunu izlemektedir.
 
 <img src="images/http-archive-trends.png" class="center" alt="HTTP Archive trendleri">
 

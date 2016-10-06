@@ -28,13 +28,13 @@ Web yazi tipi, gliflerden olusan bir koleksiyondur ve her bir glif, bir harfi ve
 
 <img src="images/glyphs.png" class="center" alt="Yazi tipi glif tablosu">
 
-Bir yazi tipi seçerken hangi karakter kümelerinin desteklendigine dikkat edilmesi önem tasir. Sayfa içeriginizi birden çok dile yerellestirmeniz gerekiyorsa kullanicilariniza tutarli bir görünüm ve deneyim saglayabilecek bir yazi tipi kullanmaniz gerekir. Örnegin, [Google'in Noto yazi tipi ailesi](https://www.google.com/get/noto/) dünyadaki tüm dilleri desteklemeyi amaçlar. Ancak, Noto'nun toplam boyutunun tüm diller dahil oldugunda 130 MB üzerinde bir ZIP indirmesi oldugunu unutmayin! 
+Bir yazi tipi seçerken hangi karakter kümelerinin desteklendigine dikkat edilmesi önem tasir. Sayfa içeriginizi birden çok dile yerellestirmeniz gerekiyorsa kullanicilariniza tutarli bir görünüm ve deneyim saglayabilecek bir yazi tipi kullanmaniz gerekir. Örnegin, [Google'in Noto yazi tipi ailesi](https://www.google.com/get/noto/){: .external } dünyadaki tüm dilleri desteklemeyi amaçlar. Ancak, Noto'nun toplam boyutunun tüm diller dahil oldugunda 130 MB üzerinde bir ZIP indirmesi oldugunu unutmayin! 
 
 Açik bir biçimde, tipografinin performansi engellememesi için web'de yazi tiplerini kullanirken dikkatli bir mühendislik çalismasi gerekir. Neyse ki web platformu gerekli tüm temel ögeleri saglar ve bu kilavuzun geri kalaninda, her ikisinden de en iyi sekilde nasil yararlanacagimiza uygulamali bir sekilde bakacagiz.
 
 ### Web yazi tipi biçimleri
 
-Bugün web'de dört yazi tipi kapsayici biçimi kullanilmaktadir: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) ve [WOFF2](http://www.w3.org/TR/WOFF2/). Ne yazik ki çok çesitli seçenekler olmasina ragmen, tüm eski ve yeni tarayicilarda çalisan tek bir evrensel biçim yoktur: EOT [yalnizca IE'de çalisir](http://caniuse.com/#feat=eot), TTF [IE'de kismen desteklenir](http://caniuse.com/#search=ttf), WOFF en genis destegi alir, ancak [bazi eski tarayicilarda kullanilamaz](http://caniuse.com/#feat=woff) ve WOFF 2.0 destegi [üzerinde birçok tarayicinin çalismalari devam etmektedir](http://caniuse.com/#feat=woff2).
+Bugün web'de dört yazi tipi kapsayici biçimi kullanilmaktadir: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) ve [WOFF2](http://www.w3.org/TR/WOFF2/){: .external }. Ne yazik ki çok çesitli seçenekler olmasina ragmen, tüm eski ve yeni tarayicilarda çalisan tek bir evrensel biçim yoktur: EOT [yalnizca IE'de çalisir](http://caniuse.com/#feat=eot), TTF [IE'de kismen desteklenir](http://caniuse.com/#search=ttf), WOFF en genis destegi alir, ancak [bazi eski tarayicilarda kullanilamaz](http://caniuse.com/#feat=woff) ve WOFF 2.0 destegi [üzerinde birçok tarayicinin çalismalari devam etmektedir](http://caniuse.com/#feat=woff2).
 
 Peki bu bizim açimizdan ne anlama geliyor? Tüm tarayicilarda çalisan tek bir biçimin olmamasi, tutarli bir deneyim saglamak için birden çok biçim saglamamiz gerektigi anlamina gelir:
 
@@ -52,7 +52,7 @@ Yazi tipi, gliflerden olusan bir koleksiyondur. Gliflerin her biri, harf biçimi
 
 * Varsayilan olarak EOT ve TTF biçimleri sikistirilmaz: Sunucularinizin bu biçimleri saglarken [GZIP sikistirmasi](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip) uygulayacak sekilde yapilandirildigindan emin olun.
 * WOFF yerlesik sikistirmaya sahiptir. WOFF sikistiricinizin en uygun sikistirma ayarlarini kullanmakta oldugundan emin olun. 
-* WOFF2, diger biçimlere göre yaklasik %30 daha küçük dosya boyutu saglamak için özel ön isleme ve sikistirma algoritmalari kullanir. [Rapora](http://www.w3.org/TR/WOFF20ER/) bakabilirsiniz.
+* WOFF2, diger biçimlere göre yaklasik %30 daha küçük dosya boyutu saglamak için özel ön isleme ve sikistirma algoritmalari kullanir. [Rapora](http://www.w3.org/TR/WOFF20ER/){: .external } bakabilirsiniz.
 
 Son olarak, bazi yazi tiplerinin bazi platformlar için gerekli olmayabilecek [yazi tipi ipucu](http://en.wikipedia.org/wiki/Font_hinting) ve [aralik birakma](http://en.wikipedia.org/wiki/Kerning) bilgileri içerdigini unutmamakta fayda vardir. Bu, daha fazla dosya boyutu optimizasyonuna olanak tanir. Kullanabileceginiz optimizasyon seçenekleri için yazi tipi sikistiriciniza danisin ve bu yolu seçerseniz, optimize edilen bu yazi tiplerini test edecek ve her bir ilgili tarayiciya saglayacak uygun altyapiya sahip oldugunuzdan emin olun. Örnegin, Google Yazi Tipleri her bir yazi tipi için 30'un üzerinde optimize edilmis çesit saglar ve her bir platform ve tarayici için en uygun çesidi otomatik olarak algilayip teslim eder.
 

@@ -31,7 +31,7 @@ Mümkün olan en basit örnekle başlayalım: biraz metin ve tek bir resim içer
 <img src="images/full-process.png" alt="DOM yapım süreci">
 
 1. **Dönüştürme:** Tarayıcı, HTML'nin işlenmemiş baytlarını diskten veya ağdan okur ve bunları, dosyada belirtilen kodlamaya (ör. UTF-8) dayanarak bağımsız karakterlere çevirir.
-1. **Belirteçlere Çevirme:** Tarayıcı, karakter dizelerini [W3C HTML5 standardının](http://www.w3.org/TR/html5/) belirlediği ayrı belirteçlere dönüştürür; ör. "<html>", "<body>" ve "açılı parantezler" içindeki diğer dizeler. Her bir belirtecin özel bir anlamı ve bir kural kümesi vardır.
+1. **Belirteçlere Çevirme:** Tarayıcı, karakter dizelerini [W3C HTML5 standardının](http://www.w3.org/TR/html5/){: .external } belirlediği ayrı belirteçlere dönüştürür; ör. "<html>", "<body>" ve "açılı parantezler" içindeki diğer dizeler. Her bir belirtecin özel bir anlamı ve bir kural kümesi vardır.
 1. **Kuralları Belirleme:** Yayınlanan belirteçler, kendi özelliklerini ve kurallarını tanımlayan `nesnelere` dönüştürülür.
 1. **DOM yapımı:** Son olarak, HTML biçimlendirmesi farklı etiketler arasındaki ilişkileri tanımladığından (bazı etiketler, başka etiketlerin içinde yer alır), oluşturulan nesneler bir ağaç veri yapısında bağlanır. Bu yapı, orijinal biçimlendirmede tanımlanan üst-alt ilişkilerini de yakalar: Ör. _HTML_ nesnesi, _body_ nesnesinin bir üst öğesidir, _body_ nesnesi de _paragraph_ nesnesinin üst öğesidir.
 
@@ -71,7 +71,7 @@ CSSOM`nin neden bir ağaç yapısı var? Sayfadaki herhangi bir nesnenin son sti
 
 Bunu daha somutlaştırmak için yukarıdaki CSSOM ağacını düşünün. Gövde öğesinin içine yerleştirilmiş _span_ etiketinin içindeki metinlerin yazı tipi boyutu 16 piksel ve rengi kırmızı olur. Yazı tipi boyutu yönergesi, gövdeden span düğümüne aşağı doğru basamaklanır. Ancak, bir span etiketi bir paragraf (p) etiketinin alt öğesiyse içerikleri görüntülenmez.
 
-Ayrıca, yukarıdaki ağacın eksiksiz CSSOM ağacı olmadığını, yalnızca stil sayfamızda geçersiz kılmaya karar verdiğimiz stilleri gösterdiğini unutmayın. Her tarayıcı, `kullanıcı aracı stilleri` olarak bilinen bir varsayılan stiller kümesi sağlar. Kendi stil kümemizi sağlamadığımızda bunu görürüz. Bizim stillerimiz de bu varsayılanları geçersiz kılar (ör. [varsayılan IE stilleri](http://www.iecss.com/)). Chrome DevTools`ta daha önce `hesaplanan stilleri` incelediyseniz ve tüm stillerin nereden geldiğini merak ettiyseniz, artık biliyorsunuz!
+Ayrıca, yukarıdaki ağacın eksiksiz CSSOM ağacı olmadığını, yalnızca stil sayfamızda geçersiz kılmaya karar verdiğimiz stilleri gösterdiğini unutmayın. Her tarayıcı, `kullanıcı aracı stilleri` olarak bilinen bir varsayılan stiller kümesi sağlar. Kendi stil kümemizi sağlamadığımızda bunu görürüz. Bizim stillerimiz de bu varsayılanları geçersiz kılar (ör. [varsayılan IE stilleri](http://www.iecss.com/){: .external }). Chrome DevTools`ta daha önce `hesaplanan stilleri` incelediyseniz ve tüm stillerin nereden geldiğini merak ettiyseniz, artık biliyorsunuz!
 
 CSS işlemesinin ne kadar sürdüğünü mü merak ediyorsunuz? DevTools'ta bir zaman çizelgesi kaydedin ve `Stili Yeniden Hesapla` olayını arayın: DOM ayrıştırmasından farklı olarak, zaman çizelgesi ayrı bir `CSS Ayrıştırma` girişi göstermez. Bunun yerine, ayrıştırmayı ve CSSOM ağacı yapımını, ayrıca bu bir olay altında hesaplanan stillerin yinelemeli hesaplamasını yakalar.
 
