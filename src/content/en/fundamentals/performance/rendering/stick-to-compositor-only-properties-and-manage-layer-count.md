@@ -81,7 +81,7 @@ To get an understanding of the layers in your application, and why an element ha
 
 <div style="clear:both;"></div>
 
-With this switched on you should take a recording. When the recording has finished you will be able to click on individual frames, which is found between the frames-per-second bars and the details:
+With this switched on you should take a recording. When the recording has finished you will be able to click individual frames, which is found between the frames-per-second bars and the details:
 
 <img src="images/stick-to-compositor-only-properties-and-manage-layer-count/frame-of-interest.jpg"  alt="A frame the developer is interested in profiling.">
 

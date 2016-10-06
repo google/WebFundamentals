@@ -77,13 +77,13 @@ The strip at the top indicates frames per second, and if you see bars going abov
 
 If you have a long running frame during some interaction like scrolling, or some other interaction, then it bears further scrutiny.
 
-If you have a large purple block, as in the case the above, click on the record and you’ll get more details.
+If you have a large purple block, as in the case the above, click the record to get more details.
 
 <img src="images/reduce-the-scope-and-complexity-of-style-calculations/style-details.jpg"  alt="Getting the details of long-running style calculations.">
 
 In this grab there is a long-running Recalculate Style event that is taking just over 18ms, and it happens to be taking place during a scroll, causing a noticeable judder in the experience.
 
-If you click on the event itself you are given a call stack, which pinpoints the place in your JavaScript that is responsible for triggering the style change. In addition to that, you also get the number of elements that have been affected by the change (in this case just over 400 elements), and how long it took to perform the style calculations. You can use this information to start trying to find a fix in your code.
+If you click the event itself you are given a call stack, which pinpoints the place in your JavaScript that is responsible for triggering the style change. In addition to that, you also get the number of elements that have been affected by the change (in this case just over 400 elements), and how long it took to perform the style calculations. You can use this information to start trying to find a fix in your code.
 
 ## Use Block, Element, Modifier
 
