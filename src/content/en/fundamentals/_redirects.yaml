@@ -132,3 +132,6 @@ redirects:
 
 - from: /web/fundamentals/primers/payment-request/
   to: /web/fundamentals/getting-started/primers/payment-request/
+
+- from: /web/fundamentals/primers/payment-request/android-pay
+  to: /web/fundamentals/getting-started/primers/payment-request/android-pay
