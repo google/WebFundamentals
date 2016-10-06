@@ -94,7 +94,7 @@ Note: 如果你对Web Components很感兴趣，那这篇文章对你就没什么
 再点击一下JavaScript事件，你就会看到一个JavaScript事件调用栈。在这个栈中你能准确找到是哪个JavaScript事件触发了样式改动。另外，你还能看到这个样式改动影响到的元素个数（在本示例中这个数字超过400）、样式计算耗时多久。这些信息有助于你寻找改进代码的方法。
 
 ## 使用块、元素、修饰语
-以[BEM (Block, Element, Modifier)](https://bem.info/)的方式编写CSS代码，能达到最好的样式计算的性能，因为这种方式建议对每个DOM元素都只使用一个样式class。对于需要层级结构的情况，只需要把层级信息合并到class名里面：
+以[BEM (Block, Element, Modifier)](https://bem.info/){: .external }的方式编写CSS代码，能达到最好的样式计算的性能，因为这种方式建议对每个DOM元素都只使用一个样式class。对于需要层级结构的情况，只需要把层级信息合并到class名里面：
 
 
     .list { }
@@ -114,6 +114,6 @@ Note: 如果你对Web Components很感兴趣，那这篇文章对你就没什么
 ## 参考链接
 
 * [Style invalidation in Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
-* [BEM (Block, Element, Modifier)](https://bem.info/)
+* [BEM (Block, Element, Modifier)](https://bem.info/){: .external }
 
 
