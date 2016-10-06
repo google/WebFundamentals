@@ -17,14 +17,17 @@ GLOBAL.WF = {
     data: 'src/data/',
     templates: 'src/templates/',
   },
-  maxArticlesInFeed: 3
+  maxArticlesInFeed: 3,
+  langs: ['en', 'ar', 'de', 'es', 'fr', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw'],
 };
 var defaultOptions = {
-  string: ['lang', 'skipReviewRequired', 'testWarnOnly'],
+  string: ['lang', 'skipReviewRequired', 'testWarnOnly', 'cl', 'verbose'],
   default: {
     lang: null,
     skipReviewRequired: false,
-    testWarnOnly: false
+    testWarnOnly: false,
+    cl: null,
+    verbose: false
   }
 }
 GLOBAL.WF.options = minimist(process.argv.slice(2), defaultOptions);
@@ -32,8 +35,8 @@ GLOBAL.WF.options = minimist(process.argv.slice(2), defaultOptions);
 gutil.log('---------------------------------');
 gutil.log(gutil.colors.dim('Web') + gutil.colors.bold('Fundamentals'), 'Build Script');
 gutil.log('---------------------------------');
-if (GLOBAL.WF.options.lang !== null) {
-  gutil.log('Lang:', gutil.colors.cyan(GLOBAL.WF.options.lang));
+if (GLOBAL.WF.options.verbose !== false) {
+  GLOBAL.WF.options.verbose = true;
 }
 if (GLOBAL.WF.options.skipReviewRequired !== false) {
   GLOBAL.WF.options.skipReviewRequired = true;
