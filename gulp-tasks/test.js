@@ -214,8 +214,6 @@ gulp.task('test', function(callback) {
     opts.srcBase = path.join(TEST_ROOT, GLOBAL.WF.options.lang);
   }
   gutil.log('Base directory:', gutil.colors.cyan(opts.srcBase));
-  gutil.log('Skipping wf_review_required tags:', gutil.colors.cyan(GLOBAL.WF.options.skipReviewRequired));
-  gutil.log('Warn only:', gutil.colors.cyan(GLOBAL.WF.options.testWarnOnly));
   gutil.log('');
 
   var contribJson;
