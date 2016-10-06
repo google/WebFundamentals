@@ -14,7 +14,7 @@ Welcome to the new Web**Fundamentals**! <master> [![Build Status](https://ci.clo
 
 * GitHub is still our source of truth for content, 
 * We want your contributions, either PR's, issues, whatever!
-* The latest will be staged at [https://web-central.appspot.com/web/] (coming soon)
+* The latest will be staged at https://web-central.appspot.com/web/ (coming soon)
 
 ## Cloning the repo
 I recommend starting with a fresh clone of the repo. To save yourself some
