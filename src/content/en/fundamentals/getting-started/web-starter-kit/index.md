@@ -216,7 +216,7 @@ running `node -v`. If Node responds, check the version matches the current versi
 on NodeJS.org.
 
 If you don’t get a response or have an old version then go to NodeJS.org and
-click on the big green Install button. NPM will be installed with NodeJS
+click the big green Install button. NPM will be installed with NodeJS
 automatically.
 
 ### Set Up Your Web Starter Kit Project

@@ -333,7 +333,7 @@ In order to reject an address for reasons such as non-supported region, pass `de
 
 <div style="clear:both;"></div>
 
-Note: Resolving <code>shippingaddresschange</code> event and leaving <code>details.shippingOptions</code> as an empty array also means address rejection (i.e. you cannot ship to that location). Always make sure your shipping options are up-to-date and match whatever address the user provided.
+Note: Resolving <code>shippingaddresschange</code> event and leaving <code>details.shippingOptions</code> as an empty array also means address rejection (in other words you cannot ship to that location). Always make sure your shipping options are up-to-date and match whatever address the user provided.
 
 
     payment.addEventListener('shippingaddresschange', e => {
