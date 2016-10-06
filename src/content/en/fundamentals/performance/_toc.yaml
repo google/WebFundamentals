@@ -19,8 +19,6 @@ toc:
         path: /web/fundamentals/performance/optimizing-content-efficiency/webfont-optimization
       - title: HTTP Caching
         path: /web/fundamentals/performance/optimizing-content-efficiency/http-caching
-
-
     - title: Critical Rendering Path
       section:
       - title: Overview
@@ -61,8 +59,5 @@ toc:
       path: /web/fundamentals/performance/poor-connectivity/
     - title: Introduction to HTTP/2
       path: /web/fundamentals/performance/http2/
-
-
-
-
-
+    - title: The PRPL Pattern
+      path: /web/fundamentals/performance/prpl-pattern/
