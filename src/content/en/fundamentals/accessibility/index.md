@@ -366,7 +366,7 @@ areas:
    make sure that we express our user interface in a robust way that works with
    a variety of assistive technologies.
 
- - [**Styling**](/web/fundamentals/accessibility/styling): We'll consider visual
+ - [**Styling**](/web/fundamentals/accessibility/accessible-styles): We'll consider visual
    design and look at some techniques for making the visual elements of the
    interface as flexible and usable as possible.
 

@@ -188,17 +188,14 @@ DevTools to observe the tabindex moving from one radio to the next.
   .demo {
     margin-left: 80px;
   }
-
   radio-button {
     position: relative;
     display: block;
     font-size: 18px;
   }
-
   radio-button:focus {
     outline: none;
   }
-
   radio-button::before {
     content: '';
     display: block;
@@ -210,11 +207,9 @@ DevTools to observe the tabindex moving from one radio to the next.
     top: 7px;
     border-radius: 50%;
   }
-
   radio-button:focus::before {
     box-shadow: 0 0 3px 3px #83BEFF;
   }
-
   radio-button[aria-checked="true"]::before {
     content: '';
     display: block;
