@@ -72,10 +72,10 @@ provide encryption; **TLS** is sometimes referred to as SSL.
 Details of HTTPS, TLS, and SSL are beyond the scope of this article, but if 
 you want to learn more, the following resources are a good place to start:
 
-* [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS) 
-* [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)
-* [Khan Academy Cryptography course](https://www.khanacademy.org/computing/computer-science/cryptography) 
-* [TLS chapter](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html) in [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545) by Ilya Grigorik 
+* [Wikipedia HTTPS](https://en.wikipedia.org/wiki/HTTPS){: .external}
+* [Wikipedia TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security){: .external}
+* [Khan Academy Cryptography course](https://www.khanacademy.org/computing/computer-science/cryptography){: .external}
+* [TLS chapter](http://chimera.labs.oreilly.com/books/1230000000545/ch04.html){: .external} in [High Performance Browser Networking](http://chimera.labs.oreilly.com/books/1230000000545){: .external} by Ilya Grigorik 
 
 ## Mixed content weakens HTTPS
 
@@ -103,7 +103,7 @@ requests without restricting the functionality of many sites.
 
 Loading an insecure script from an HTTPS page.
 
-Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html)&mdash;includes an **HTTP** script tag which attempts to load mixed content. 
+Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../simple-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/simple-example.html){: .external}&mdash;includes an **HTTP** script tag which attempts to load mixed content. 
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/simple-example.html" adjust_indentation="auto" %}
@@ -113,7 +113,7 @@ In this example, the script `simple-example.js` is loaded with an **HTTP** URL. 
 and take control of the entire page. 
 
 Thankfully, most modern browsers block this type of dangerous content by 
-default. See [browser behavior with mixed content](#browser-behavior-with-mixed-content).
+default. See [browser behavior with mixed content](#browser-behavior-with-mixed-content){: .external}.
 
 <figure>
   <img src="imgs/simple-mixed-content-error.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure script. This request has been blocked; the content must be served over HTTPS.">
@@ -124,7 +124,7 @@ default. See [browser behavior with mixed content](#browser-behavior-with-mixed-
 
 Loading insecure data with XMLHttpRequest.
 
-Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html)&mdash;includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
+Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../xmlhttprequest-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/xmlhttprequest-example.html){: .external}&mdash;includes an `XMLHttpRequest` over **HTTP** to fetch mixed content `JSON` data.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html" adjust_indentation="auto" %}
@@ -147,7 +147,7 @@ Most modern browsers block these dangerous requests as well.
 
 Loading insecure images with jQuery lightbox.
 
-When viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html)&mdash;initially it does not have any mixed content problems; however, when the thumbnail image is clicked, a full size mixed content image is loaded over **HTTP**. 
+When viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.io/web-fundamentals/.../image-gallery-example.html](https://googlesamples.github.io/web-fundamentals/samples/discovery-and-distribution/avoid-mixed-content/image-gallery-example.html){: .external}&mdash;initially it does not have any mixed content problems; however, when the thumbnail image is clicked, a full size mixed content image is loaded over **HTTP**. 
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" adjust_indentation="auto" %}
@@ -244,7 +244,7 @@ of users rely on every day. The current compromise is to block the most
 dangerous types of mixed content and allow the less dangerous types to still be 
 requested. 
 
-Modern browsers follow [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external }, which defines [**optionally blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable) and [**blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable) categories. 
+Modern browsers follow [mixed content specification](https://w3c.github.io/webappsec/specs/mixedcontent/){: .external }, which defines [**optionally blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-optionally-blockable){: .external} and [**blockable content**](https://w3c.github.io/webappsec/specs/mixedcontent/#category-blockable){: .external} categories. 
 
 From the spec, a resource qualifies as optionally blockable content "when the risk 
 of allowing its usage as mixed content is outweighed by the risk of breaking 

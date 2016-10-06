@@ -154,7 +154,7 @@ easily support both HTTP and HTTPS for all clients.
 However, most site operators use name-based virtual hosting to conserve IP
 addresses and because it's more convenient in general. The problem with IE on
 Windows XP and Android earlier than 2.3 is that they do not understand [Server
-Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication) (SNI),
+Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication){: .external} (SNI),
 which is crucial for HTTPS name-based virtual hosting.
 
 Someday—hopefully soon—clients that don't support SNI will be replaced
@@ -166,7 +166,7 @@ If you don't already have HTTPS service available on your servers, enable it now
 (without redirecting HTTP to HTTPS; see below). Configure your web server to use
 the certificates you bought and installed. You might find [Mozilla's handy
 configuration
-generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/){: .external}
 useful.
 
 If you have many hostnames/subdomains, they each need to use the right
