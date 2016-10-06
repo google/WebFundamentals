@@ -7,15 +7,16 @@ description: Going fullscreen.
 
 # Making Fullscreen Experiences {: .page-title }
 
+<figure class="attempt-right">
+  <iframe width="324" height="576" src="//www.youtube.com/embed/ZRqr5x73-ng" frameborder="0" allowfullscreen></iframe>
+  <figcaption>Example of a site going fullscreen in Chrome for Android</figcaption>
+</figure>
+
 We have the ability to easily make immersive fullscreen websites and
 applications, but like anything on the web there are a couple of ways to do it.
 This is especially important now that more browsers are supporting an "installed
 web app" experience which launch fullscreen.
 
-<figure>
-<iframe width="324" height="576" src="//www.youtube.com/embed/ZRqr5x73-ng" frameborder="0" allowfullscreen></iframe>
-<figcaption>Example of a site going fullscreen in Chrome for Android</figcaption>
-</figure>
 
 ## Getting your app or site fullscreen
 
@@ -63,7 +64,7 @@ fullscreen mode.
 The above example is a little contrived; I've hidden all the complexity around
 the use of vendor prefixes.
 
-Warning: Damn you, vendor prefixes!
+Note: Damn you, vendor prefixes!
 
 The actual code is a lot more complex. <a
 href="https://developer.mozilla.org/en-US/docs/Web/Guide/API/DOM/Using_full_screen_mode">Mozilla
@@ -97,24 +98,32 @@ consistent API.
 
 ##### Making the document fullscreen
 
+<figure class="attempt-right" style="max-width: 320px;">
+  <img src="images/body.png">
+  <figcaption>Figure 1: Fullscreen on the body element.</figcaption>
+</figure>
+
+
 It is natural to think that you take the body element fullscreen, but if you are
 on a WebKit or Blink based rendering engine you will see it has an odd effect of
 shrinking the body width to the smallest possible size that will contain all the
 content. (Mozilla Gecko is fine.)
 
-<figure style="width: 100%; max-width: 320px;">
-<img src="images/body.png">
-<figcaption>Figure 1: Fullscreen on the body element.</figcaption>
+<div class="clearfix"></div>
+
+<figure class="attempt-right" style="max-width: 320px;">
+<img src="images/document.png" >
+<figcaption>Figure 2: Fullscreen on the document element.</figcaption>
 </figure>
 
 To fix this, use the document element instead of the body element:
 
     document.documentElement.requestFullscreen();
 
-<figure style="width: 100%; max-width: 320px;">
-<img src="images/document.png" >
-<figcaption>Figure 2: Fullscreen on the document element.</figcaption>
-</figure>
+
+
+<div class="clearfix"></div>
+
 
 ##### Making a video element fullscreen
 
@@ -321,8 +330,8 @@ You can "fake fullscreen" by auto-hiding the address bar as follows:
 
     window.scrollTo(0,1);
 
-Note: I am telling you this as a friend. It exists. It is a thing, but it
-      is a hack. Please don't use it. &mdash; Paul
+Caution: I am telling you this as a friend. It exists. It is a thing, but it
+         is a hack. Please don't use it. &mdash; Paul
 
 This is a pretty simple method, the page loads and the browser bar is told to
 get out of the way. Unfortunately it is not standardised and not well
