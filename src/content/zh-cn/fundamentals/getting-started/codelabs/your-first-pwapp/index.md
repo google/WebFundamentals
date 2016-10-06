@@ -143,43 +143,43 @@ App Shell是应用的用户界面所需的最基本的 HTML、CSS 和 JavaScript
 * 一个用来添加城市的对话框
 * 一个加载指示器
 
-```
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather PWA</title>
-  <link rel="stylesheet" type="text/css" href="styles/inline.css">
-</head>
-<body>
-  <header class="header">
-    <h1 class="header__title">Weather PWA</h1>
-    <button id="butRefresh" class="headerButton"></button>
-    <button id="butAdd" class="headerButton"></button>
-  </header>
+<div class="clearfix"></div>
 
-  <main class="main">
-    <div class="card cardTemplate weather-forecast" hidden>
-    . . .
-    </div>
-  </main>
+    <!DOCTYPE html>
+    <html>
 
-  <div class="dialog-container">
-  . . .
-  </div>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather PWA</title>
+        <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    </head>
 
-  <div class="loader">
-    <svg viewBox="0 0 32 32" width="32" height="32">
-      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
-    </svg>
-  </div>
+    <body>
+        <header class="header">
+            <h1 class="header__title">Weather PWA</h1>
+            <button id="butRefresh" class="headerButton"></button>
+            <button id="butAdd" class="headerButton"></button>
+        </header>
+        <main class="main">
+            <div class="card cardTemplate weather-forecast" hidden>
+                . . .
+            </div>
+        </main>
+        <div class="dialog-container">
+            . . .
+        </div>
+        <div class="loader">
+            <svg viewBox="0 0 32 32" width="32" height="32">
+                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+            </svg>
+        </div>
+        <!-- Insert link to app.js here -->
+    </body>
 
-  <!-- Insert link to app.js here -->
-</body>
-</html>
-```
+    </html>
+
 
 需要注意的是，在默认情况下加载指示器是显示出来的。这是为了保证
 用户能在页面加载后立刻看到加载器，给用户一个清晰的指示，表明页面正在加载。
@@ -207,7 +207,7 @@ App Shell是应用的用户界面所需的最基本的 HTML、CSS 和 JavaScript
 
 为了看看假的天气信息的渲染效果，从 `index.html`中取消注释以下的代码:
 
-<!--<script src="scripts/app.js" async></script>-->
+    <!--<script src="scripts/app.js" async></script>-->
 
 接下来，从 `app.js`中取消注释以下的代码:
 
@@ -240,30 +240,30 @@ Progressive Web Apps 应该能够快速启动并且立即可用。目前，我�
 
 首先，让我们添加用来存储用户首选项的代码。从代码中寻找以下的TODO注解：
 
-```
-  // TODO add saveSelectedCities function here
-```
+
+    // TODO add saveSelectedCities function here
+
 
 然后将以下的代码粘贴在TODO注解的下一行。
 
-```
-  //  将城市裂变存入 localStorage.
-  app.saveSelectedCities = function() {
-    var selectedCities = JSON.stringify(app.selectedCities);
-    localStorage.selectedCities = selectedCities;
-  };
-```
+
+    //  将城市裂变存入 localStorage.
+    app.saveSelectedCities = function() {
+        var selectedCities = JSON.stringify(app.selectedCities);
+        localStorage.selectedCities = selectedCities;
+    };
+
 
 
 接下来，添加一些启动代码来检查用户是否已经订阅了某些城市，并渲染它们，或者使用插入的天气数据来渲染。从代码中寻找以下的TODO注解：
 
-```
-  // TODO add startup code here
-```
+
+    // TODO add startup code here
+
 
 然后将以下的代码粘贴在TODO注解的下一行。
 
-```
+
     /****************************************************************************   
      *
      * 用来启动应用的代码
@@ -288,7 +288,7 @@ Progressive Web Apps 应该能够快速启动并且立即可用。目前，我�
       ];
       app.saveSelectedCities();
     }
-```
+
 
 ### 储存已被选择的城市
 
@@ -296,22 +296,22 @@ Progressive Web Apps 应该能够快速启动并且立即可用。目前，我�
 
 更新`butAddCity`中的代码:
 
-```
-document.getElementById('butAddCity').addEventListener('click', function() {
-    // Add the newly selected city
-    var select = document.getElementById('selectCityToAdd');
-    var selected = select.options[select.selectedIndex];
-    var key = selected.value;
-    var label = selected.textContent;
-    if (!app.selectedCities) {
-      app.selectedCities = [];
-    }
-    app.getForecast(key, label);
-    app.selectedCities.push({key: key, label: label});
-    app.saveSelectedCities();
-    app.toggleAddDialog(false);
-  });
-```
+
+    document.getElementById('butAddCity').addEventListener('click', function() {
+        // Add the newly selected city
+        var select = document.getElementById('selectCityToAdd');
+        var selected = select.options[select.selectedIndex];
+        var key = selected.value;
+        var label = selected.textContent;
+        if (!app.selectedCities) {
+          app.selectedCities = [];
+        }
+        app.getForecast(key, label);
+        app.selectedCities.push({key: key, label: label});
+        app.saveSelectedCities();
+        app.toggleAddDialog(false);
+      });
+
 
 ### 测试
 
@@ -346,13 +346,12 @@ service workers 提供的是一种应该被理解为渐进增强的特性，这�
 
 接下来，我们需要检查浏览器是否支持 service workers，如果支持，就注册 service worker，将下面代码添加至 `app.js`中。
 
-```
+    
     if('serviceWorker' in navigator) {  
-      navigator.serviceWorker  
-               .register('/service-worker.js')  
-               .then(function() { console.log('Service Worker Registered'); });  
+        navigator.serviceWorker  
+            .register('/service-worker.js')  
+            .then(function() { console.log('Service Worker Registered'); });  
     }
-```
 
 
 ### 缓存站点的资源
@@ -361,20 +360,20 @@ service workers 提供的是一种应该被理解为渐进增强的特性，这�
 
 当 service worker 被激活后，它应该打开缓存对象并将应用外壳需要的资源存储进去。将下面这些代码加入你的 `service-worker.js` (你可以在`your-first-pwapp-master/work`中找到) ：
 
-```
-var cacheName = 'weatherPWA-step-6-1';
-var filesToCache = [];
 
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
-    })
-  );
-});
-```
+    var cacheName = 'weatherPWA-step-6-1';
+    var filesToCache = [];
+
+    self.addEventListener('install', function(e) {
+      console.log('[ServiceWorker] Install');
+      e.waitUntil(
+        caches.open(cacheName).then(function(cache) {
+          console.log('[ServiceWorker] Caching app shell');
+          return cache.addAll(filesToCache);
+        })
+      );
+    });
+
 
 首先，我们需要提供一个缓存的名字并利用 `caches.open()`打开 cache 对象。提供的缓存名允许我们给
 缓存的文件添加版本，或者将数据分开，以至于我们能够轻松地升级数据而不影响其他的缓存。
@@ -417,7 +416,7 @@ __Note:__ 您可能会在应用程序面板里的Service Worker窗格中看到�
 
 Ok, 现在让我们来完成`activate` 的事件处理函数的代码以更新缓存。
 
-```
+
     self.addEventListener('activate', function(e) {  
       console.log('[ServiceWorker] Activate');  
       e.waitUntil(  
@@ -431,13 +430,13 @@ Ok, 现在让我们来完成`activate` 的事件处理函数的代码以更新�
         })  
       );  
     });
-```
+
 
 确保在每次修改了 service worker 后修改 `cacheName`，这能确保你永远能够从缓存中获得到最新版本的文件。过一段时间清理一下缓存删除掉没用的数据也是很重要的。
 
 最后，让我们更新一下 app shell 需要的缓存的文件列表。在这个数组中，我们需要包括所有我们的应用需要的文件，其中包括图片、JavaScript以及样式表等等。
 
-```
+
     var filesToCache = [  
       '/',  
       '/index.html',  
@@ -457,7 +456,7 @@ Ok, 现在让我们来完成`activate` 的事件处理函数的代码以更新�
       '/images/thunderstorm.png',  
       '/images/wind.png'  
     ];
-```
+
 
 我么的应用目前还不能离线工作。我们缓存了 app shell 的组件，但是我们仍然需要从本地缓存中加载它们。
 
@@ -468,17 +467,14 @@ Service workers 可以截获 Progressive Web App 发起的请求并从缓存中�
 
 比如：
 
-```
     self.addEventListener('fetch', function(event) {  
       // Do something interesting with the fetch here  
     });
-```
 
 
 让我们来从缓存中加载 app shell。将下面代码加入 `service-worker.js` 中：
 
 
-```
     self.addEventListener('fetch', function(e) {  
       console.log('[ServiceWorker] Fetch', e.request.url);  
       e.respondWith(  
@@ -487,7 +483,6 @@ Service workers 可以截获 Progressive Web App 发起的请求并从缓存中�
         })  
       );  
     });
-```
 
 
 从内至外，`caches.match()` 从网络请求触发的 `fetch` 事件中得到请求内容，并判断请求的资源是
@@ -582,19 +577,14 @@ service worker 不会接管控制权，知道该页面重新刷新后，除非�
 
 将下面代码添加至你的 `service-worker.js` 中：
 
-```
     var dataCacheName = 'weatherData-v1';
-```
 
 接下来，我么需要更新`activate`事件的回调函数，以它清理应用程序的外壳(app shell)缓存，并不会删除数据缓存。
 
-```
-if (key !== cacheName && key !== dataCacheName) {
-```
+    if (key !== cacheName && key !== dataCacheName) {
 
 最后，我么需要修改 `fetch` 事件的回调函数，添加一些代码来将请求数据 API 的请求和其他请求区分开来。
 
-```
     self.addEventListener('fetch', function(e) {  
       console.log('[ServiceWorker] Fetch', e.request.url);  
       var dataUrl = 'https://publicdata-weather.firebaseio.com/';  
@@ -608,14 +598,12 @@ if (key !== cacheName && key !== dataCacheName) {
         );  
       }  
     });
-```
 
 
 这段代码对请求进行拦截，判断请求的 URL 的开头是否为该天气 API，如果是，我们使用 `fetch` 来发起请求。一旦有响应返回，我们的代码就打开缓存并将响应存入缓存，然后将响应返回给原请求。
 
 接下来，使用下面代码替换 `// Put data handler code here`
 
-```
     e.respondWith(  
       fetch(e.request)  
         .then(function(response) {  
@@ -626,7 +614,6 @@ if (key !== cacheName && key !== dataCacheName) {
           });  
         })  
     );
-```
 
 
 我们的应用目前还不能离线工作。我们已经实现了从缓存中返回应用外壳，但即使我们缓存了数据，依旧需要依赖网络。
@@ -651,7 +638,6 @@ if (key !== cacheName && key !== dataCacheName) {
 
 接下来，我们需要检查 `caches` 对象是否存在，若存在，就向它请求最新的数据。将下面这段代码添加至 `app.getForecast()` 方法中。
 
-```
     if ('caches' in window) {
       /*
        * Check if the service worker has already cached this city's weather
@@ -670,14 +656,12 @@ if (key !== cacheName && key !== dataCacheName) {
         }
       });
     }
-```
 
 我们的天气应用现在发起了两个异步请求，一个从缓存中，另一个经由 XHR。如果有数据存在于缓存中，它将会很快地（几十毫秒）被返回并更新显示天气的卡片，通常这个时候 XHR 的请求还没有返回来。之后当 XHR 的请求响应了以后，显示天气的卡片将会使用直接从天气 API 中请求的最新数据来更新。
 
 如果因为某些原因，XHR 的响应快于 cache 的响应，`hasRequestPending` 标志位会阻止缓存中数据覆盖从网路上请求的数据。
 
 
-```
     var cardLastUpdatedElem = card.querySelector('.card-last-updated');
     var cardLastUpdated = cardLastUpdatedElem.textContent;
     if (cardLastUpdated) {
@@ -687,7 +671,6 @@ if (key !== cacheName && key !== dataCacheName) {
         return;
       }
     }
-```
 
 ### 亲自尝试
 
@@ -729,7 +712,8 @@ web 应用程序清单是一个简单的 JSON 文件，它给你了控制你的�
 * 定义启动画面，为你的站点定义主题
 * 追踪你的应用是从主屏幕还是 URL 启动的
 
-```
+<div class="clearfix"></div>
+
     {
       "name": "Weather",
       "short_name": "Weather",
@@ -759,7 +743,6 @@ web 应用程序清单是一个简单的 JSON 文件，它给你了控制你的�
       "background_color": "#3E4EB8",
       "theme_color": "#2F3BA2"
     }
-```
 
 追踪你的应用是从哪儿启动的最简单方式是在 `start_url` 参数后面添加一个查询字符串，然后使用工具来分析查询字段。如果你使用这个方法，记得要更新应用外壳缓存的文件，确保含有查询字段的文件被缓存。
 
@@ -767,9 +750,7 @@ web 应用程序清单是一个简单的 JSON 文件，它给你了控制你的�
 
 将这段代码添加至你的 `index.html` 的 `<head>` 部分：
 
-```
-<link rel="manifest" href="/manifest.json">
-```
+    <link rel="manifest" href="/manifest.json">
 
 #### 最佳实践
 
@@ -785,22 +766,18 @@ web 应用程序清单是一个简单的 JSON 文件，它给你了控制你的�
 
 在 `index.html` 中，将下面代码添加至 `<head>` 中：
 
-```
-  <!-- Add to home screen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Weather PWA">
-  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-```
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
 
 ### Windows 上的贴片图标
 
 在 `index.html` 中，将下面代码添加至 `<head>` 中：
 
-```
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2F3BA2">
-```
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
 
 ### 亲自尝试
 
