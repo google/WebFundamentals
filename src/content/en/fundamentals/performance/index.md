@@ -49,6 +49,16 @@ It's important to understand what your app or site feels like when connectivity 
 
 <div style="clear:both;"></div>
 
+## The PRPL Pattern
+
+<img src="images/prpl.png" class="attempt-right">
+
+PRPL is a pattern for structuring and serving Progressive Web Apps (PWAs), with an emphasis on the performance of app delivery and launch.
+
+[Learn More](prpl-pattern/)
+
+<div style="clear:both;"></div>
+
 
 ## Related Resources
 

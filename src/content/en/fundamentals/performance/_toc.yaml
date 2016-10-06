@@ -63,6 +63,8 @@ toc:
       path: /web/fundamentals/performance/http2/
 
 
-
-
+    - title: The PRPL Pattern
+      section:
+      - title: Overview
+        path: /web/fundamentals/performance/prpl-pattern
 
