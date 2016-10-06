@@ -200,7 +200,7 @@ Configuration
 請見「重新導向 HTTP 至 HTTPS」及「開啟 Strict Transport Security 與 Secure Cookies」。
 
 現在，以及在您網站的整個生命周期中，
-請以 [Qualys 方便的 SSL Server Test](https://www.ssllabs.com/ssltest/)檢查您的 HTTPS 設定。 您的網站應該獲得 A 或 A+ 的分數；
+請以 [Qualys 方便的 SSL Server Test](https://www.ssllabs.com/ssltest/){: .external }檢查您的 HTTPS 設定。 您的網站應該獲得 A 或 A+ 的分數；
 請視更低的分數為設計錯誤。
 (今天的 A 等於是明天的 B 水準，
 因為對演算法和通訊協定的攻擊只會更強！)
@@ -341,7 +341,7 @@ Configuration
 (https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)，
 以告知客戶應該一律透過 HTTPS 連線您的伺服器，
 即使參照為 http:// 開頭。 這可以打擊如
-(http://www.thoughtcrime.org/software/sslstrip/) [SSL Stripping] 的攻擊，
+(http://www.thoughtcrime.org/software/sslstrip/){: .external } [SSL Stripping] 的攻擊，
 也避免我們在「重新導向 HTTP 至 HTTPS」時啟用的 301 重新導向之來回成本。
 
 **注意：**
@@ -399,7 +399,7 @@ Google 也發行一份指南，教導
 ### 效能
 
 當內容和應用程式層時經過良好調校
- (參見 [Steve Souders 的書藉](https://stevesouders.com/)，以取得很好的建議)，
+ (參見 [Steve Souders 的書藉](https://stevesouders.com/){: .external }，以取得很好的建議)，
 相較於應用程式的整體成本，剩下的 TLS 效能考量一般而言並不大。
  此外，您還可以降低和攤還這些成本。 (要取得 TLS 最佳化和一般性的良好建議
 ，請見 _[高效能瀏覽器網路化]
