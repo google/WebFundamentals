@@ -9,6 +9,7 @@ upper_tabs:
         contents:
         - include: /web/fundamentals/getting-started/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
+        - include: /web/fundamentals/architecture/_toc.yaml
         - include: /web/fundamentals/instant-and-offline/_toc.yaml
         - include: /web/fundamentals/security/_toc.yaml
         - include: /web/fundamentals/design-and-ui/_toc.yaml

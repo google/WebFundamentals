@@ -5,7 +5,7 @@ description: Application shell architecture keeps your UI local and loads conten
 {# wf_updated_on: 2016-09-26 #} 
 {# wf_published_on: 2016-09-27 #}
 
-# Architecting a PWA with the App Shell Model {: .page-title }
+# The App Shell Model {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 
@@ -28,7 +28,7 @@ running. Next, the dynamic content loads for each page using JavaScript. An app
 shell is useful for getting some initial HTML to the screen fast without a
 network.
 
-<img src="images/appshell.png" alt="Application Shell architecture" class="screenshot"/>
+<img src="images/appshell.png" alt="Application Shell architecture" />
 
 Put another way, the app shell is similar to the bundle of code that you’d
 publish to an app store when building a native app. It is the skeleton of your
@@ -38,9 +38,9 @@ does not contain the data.
 Note: Try the [First Progressive Web
 App](https://codelabs.developers.google.com/codelabs/your-first-pwapp/#0)
 codelab to learn how to architectect and
-implement your first application shell for a weather app. The [Instant Loading with the App
-Shell model](https://www.youtube.com/watch?v=QhUzmR8eZAo) video also walks
-through this pattern.
+implement your first application shell for a weather app. The [Instant
+Loading with the App Shell model](https://www.youtube.com/watch?v=QhUzmR8eZAo)
+video also walks through this pattern.
 
 ### When to use the app shell model
 
@@ -103,9 +103,8 @@ There is no need to download new versions before using it.
 
 Note: The [Lighthouse](https://github.com/googlechrome/lighthouse) auditing
 extension can be used to verify if your PWA using an app shell hits a high-bar
-for performance. [To the
-Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E) is a talk that walks
-through optimising a PWA using this tool.
+for performance. [To the Lighthouse](https://www.youtube.com/watch?v=LZjQ25NRV-E)
+is a talk that walks through optimising a PWA using this tool.
 
 ## Building your app shell {: #building-your-app-shell }
 
@@ -117,7 +116,7 @@ sources.
 
 <figure>
   <img src="images/wikipedia.jpg"
-    alt="Offline Wikipedia app using an application shell with content caching" class="screenshot">
+    alt="Offline Wikipedia app using an application shell with content caching">
   <figcaption>Jake Archibald’s <a href="https://wiki-offline.jakearchibald.com/wiki/Rick_and_Morty">offline Wikipedia application</a> is a good example of a PWA that uses an app shell model. It loads instantly on repeat visits, but dynamically fetches content using JS. This content is then cached offline for future visits.
 </figcaption>
 </figure>
@@ -144,6 +143,8 @@ index file. Let's look at what it contains.
   well as the code to display posts retrieved from the server and store them
   locally using a storage mechanism like IndexedDB.
 * A web app manifest and service worker loader to enable off-line capabilities.
+
+<div class="clearfix"></div>
 
     <!DOCTYPE html>
     <html>
@@ -192,6 +193,8 @@ index file. Let's look at what it contains.
       </script>
     </body>
     </html>
+
+<div class="clearfix"></div>
 
 
 Note: See [https://app-shell.appspot.com/](https://app-shell.appspot.com/) for a
