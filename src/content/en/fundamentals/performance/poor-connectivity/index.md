@@ -91,7 +91,7 @@ Lie-fi is likely to become a bigger problem as more people move to mobile and aw
 
 ### Use timeouts to handle intermittent connectivity
 
-In the past, [hacky methods using XHR](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) have been used to test for intermittent connectivity, but Service Worker enables more reliable methods to set network timeouts. Jeff Posnick explains how to achieve this using [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) timeouts in his talk [Instant Loading with Service Workers](https://youtu.be/jCKZDTtUA2A?t=19m58s):
+In the past, [hacky methods using XHR](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) have been used to test for intermittent connectivity, but service worker enables more reliable methods to set network timeouts. Jeff Posnick explains how to achieve this using [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) timeouts in his talk [Instant Loading with Service Workers](https://youtu.be/jCKZDTtUA2A?t=19m58s):
 
 
     toolbox.router.get(
