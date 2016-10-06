@@ -59,9 +59,9 @@ Mostly fluid 模式主要由流动网格组成。  在较大和中等屏幕上 �
 
 使用此模式的网站包括：
 
- * [A List Apart](http://mediaqueri.es/ala/)
- * [Media Queries](http://mediaqueri.es/)
- * [SimpleBits](http://simplebits.com/)
+ * [A List Apart](http://mediaqueri.es/ala/){: .external }
+ * [Media Queries](http://mediaqueri.es/){: .external }
+ * [SimpleBits](http://simplebits.com/){: .external }
 
 
 <pre class="prettyprint">
@@ -97,8 +97,8 @@ Mostly fluid 模式主要由流动网格组成。  在较大和中等屏幕上 �
 
 使用此模式的网站包括：
 
- * [Modernizr](http://modernizr.com/)
- * [Wee Nudge](http://weenudge.com/)
+ * [Modernizr](http://modernizr.com/){: .external }
+ * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
@@ -130,10 +130,10 @@ Layout shifter 模式是响应最快的模式，在多种屏幕宽度上采用 �
 
 使用此模式的网站包括：
 
- * [Food Sense](http://foodsense.is/)
+ * [Food Sense](http://foodsense.is/){: .external }
  * [Seminal 响应式设计
 示例](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
- * [Andersson-Wise Architects](http://www.anderssonwise.com/)
+ * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
@@ -162,9 +162,9 @@ Tiny tweaks 只对布局进行小更改，例如调整字号 、调整图片大�
 
 使用此模式的网站包括：
 
- * [Opera 的闪亮演示](http://shinydemos.com/)
- * [Ginger Whale](http://gingerwhale.com/)
- * [Future Friendly](http://futurefriendlyweb.com/)
+ * [Opera 的闪亮演示](http://shinydemos.com/){: .external }
+ * [Ginger Whale](http://gingerwhale.com/){: .external }
+ * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
@@ -199,8 +199,8 @@ off canvas 模式不是垂直排列内容，而是将不 常用的内容（可�
 
  * [HTML5Rocks
  文章](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
- * [Google Nexus](http://www.google.com/nexus/)
- * [Facebook 移动网站](https://m.facebook.com/)
+ * [Google Nexus](http://www.google.com/nexus/){: .external }
+ * [Facebook 移动网站](https://m.facebook.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}

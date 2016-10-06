@@ -167,7 +167,7 @@ Note: 您可能看到网页上很多使用 setInterval 或 setTimeout 来实现�
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">查看示例</a>
 
-当您尝试进行扩展以包括更多用例时，此代码开始变得很复杂并且难以管理，因此，一般来说，从许多可用于动画的 JavaScript 库中选择一个会比较好。 如果您已在项目中使用 jQuery，继续使用它并使用[`.animate()`](http://api.jquery.com/animate/)函数也比较好。 另一方面，如果您需要专门的库，则可以看看[Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)，这个库非常强大。 它有一个轻量化版本，称为 TweenLite，从文件大小角度来看更加友好。
+当您尝试进行扩展以包括更多用例时，此代码开始变得很复杂并且难以管理，因此，一般来说，从许多可用于动画的 JavaScript 库中选择一个会比较好。 如果您已在项目中使用 jQuery，继续使用它并使用[`.animate()`](http://api.jquery.com/animate/){: .external }函数也比较好。 另一方面，如果您需要专门的库，则可以看看[Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)，这个库非常强大。 它有一个轻量化版本，称为 TweenLite，从文件大小角度来看更加友好。
 
 由于使用 JavaScript 动画您可以完全控制元素在每个步骤的样式，因此在您认为合适时可以减慢动画、暂停、停止、倒退以及操纵它。
 
