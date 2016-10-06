@@ -20,10 +20,10 @@ file. Do this by creating a simple file input element and adding
 an `accept` filter that indicates we can only accept audio files and ideally we 
 will get them directly from the microphone.
 
-    <input type="file" accept="audio/*;capture=microphone">
+    <input type="file" accept="audio/*" capture="microphone">
 
 This method works on all platforms. On desktop it will prompt the user to 
-upload a file from the file system (ignoring `capture=microphone`). In Safari
+upload a file from the file system (ignoring `capture="microphone"`). In Safari
 on iOS it will open up the microphone app, allowing you to record audio and 
 then send it back to the web page; on Android it will give the user the 
 choice of which app to use record the audio in before sending it back to the web
@@ -34,7 +34,7 @@ need to somehow get ahold of the file data. You can get quick access by
 attaching an `onchange` event to the input element and then reading 
 the `files` property of the event object.
 
-    <input type="file" accept="audio/*;capture=microphone" id="recorder">
+    <input type="file" accept="audio/*" capture="microphone" id="recorder">
     <audio id="player" controls></audio>
     <script>
       var recorder = document.getElementById('recorder');
