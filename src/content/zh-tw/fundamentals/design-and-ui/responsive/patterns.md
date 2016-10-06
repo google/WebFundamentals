@@ -59,9 +59,9 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 使用這種模式的網站包括：
 
- * [A List Apart](http://mediaqueri.es/ala/)
- * [Media Queries](http://mediaqueri.es/)
- * [SimpleBits](http://simplebits.com/)
+ * [A List Apart](http://mediaqueri.es/ala/){: .external }
+ * [Media Queries](http://mediaqueri.es/){: .external }
+ * [SimpleBits](http://simplebits.com/){: .external }
 
 
 <pre class="prettyprint">
@@ -97,8 +97,8 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 使用這種模式的網站包括：
 
- * [Modernizr](http://modernizr.com/)
- * [Wee Nudge](http://weenudge.com/)
+ * [Modernizr](http://modernizr.com/){: .external }
+ * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
@@ -130,10 +130,10 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 使用這種模式的網站包括：
 
- * [Food Sense](http://foodsense.is/)
+ * [Food Sense](http://foodsense.is/){: .external }
  * [基本回應式設計
 範例](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
- * [Andersson-Wise Architects](http://www.anderssonwise.com/)
+ * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
@@ -162,9 +162,9 @@ description: 回應式網頁設計模式正在快速演化，但已有一些能�
 
 使用這種模式的網站包括：
 
- * [Opera's Shiny Demos](http://shinydemos.com/)
- * [Ginger Whale](http://gingerwhale.com/)
- * [Future Friendly](http://futurefriendlyweb.com/)
+ * [Opera's Shiny Demos](http://shinydemos.com/){: .external }
+ * [Ginger Whale](http://gingerwhale.com/){: .external }
+ * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
@@ -199,8 +199,8 @@ iOS 6 版本 Safari 和 Android 瀏覽器不支援 `flexbox` 的 `flex-flow: row
 
  * [HTML5Rocks
  文章](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
- * [Google Nexus](http://www.google.com/nexus/)
- * [臉書行動版網站](https://m.facebook.com/)
+ * [Google Nexus](http://www.google.com/nexus/){: .external }
+ * [臉書行動版網站](https://m.facebook.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}

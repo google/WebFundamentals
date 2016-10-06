@@ -28,13 +28,13 @@ description: 如要打造出優異的設計、品牌宣傳、可讀性和無障�
 
 <img src="images/glyphs.png" class="center" alt="字型字符表">
 
-選取一種字型之後，千萬別忘了考慮哪些字元集受到支援。如果您需要將網頁內容當地語系化為多種語言，那麼您應使用可以向您的使用者提供一致的外觀和體驗的字型。例如，[Google 的 Noto 字型系列](https://www.google.com/get/noto/)就是為了支援全世界的語言所設計的。但是，請注意 Noto 的總大小 (包含所有語言在內) 達到 130 MB 以上 ZIP 下載！ 
+選取一種字型之後，千萬別忘了考慮哪些字元集受到支援。如果您需要將網頁內容當地語系化為多種語言，那麼您應使用可以向您的使用者提供一致的外觀和體驗的字型。例如，[Google 的 Noto 字型系列](https://www.google.com/get/noto/){: .external }就是為了支援全世界的語言所設計的。但是，請注意 Noto 的總大小 (包含所有語言在內) 達到 130 MB 以上 ZIP 下載！ 
 
 在網路上使用字型需要細心調教的工程，以確保字型設計不會影響效能。幸好，網路平台提供了所有必要的原型，在這份指南的剩餘部分中，我們將以實際操作讓您看到如何兩全其美。
 
 ### 網頁字型格式
 
-現在網路上使用的字型容器格式有四種：[EOT](http://en.wikipedia.org/wiki/Embedded_OpenType)、[TTF](http://en.wikipedia.org/wiki/TrueType)、[WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) 和 [WOFF2](http://www.w3.org/TR/WOFF2/)。不過，無論選擇的範圍多廣泛，都找不到在所有舊瀏覽器和新瀏覽器上都可以使用的單一通用格式：EOT [僅 IE 支援](http://caniuse.com/#feat=eot)，TTF 具有[部分 IE 支援](http://caniuse.com/#search=ttf)，WOFF 的支援最廣泛，但[它在許多較舊的瀏覽器中無法使用](http://caniuse.com/#feat=woff)，WOFF 2.0 支援 [對於許多瀏覽器來說還未實現](http://caniuse.com/#feat=woff2)。
+現在網路上使用的字型容器格式有四種：[EOT](http://en.wikipedia.org/wiki/Embedded_OpenType)、[TTF](http://en.wikipedia.org/wiki/TrueType)、[WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) 和 [WOFF2](http://www.w3.org/TR/WOFF2/){: .external }。不過，無論選擇的範圍多廣泛，都找不到在所有舊瀏覽器和新瀏覽器上都可以使用的單一通用格式：EOT [僅 IE 支援](http://caniuse.com/#feat=eot)，TTF 具有[部分 IE 支援](http://caniuse.com/#search=ttf)，WOFF 的支援最廣泛，但[它在許多較舊的瀏覽器中無法使用](http://caniuse.com/#feat=woff)，WOFF 2.0 支援 [對於許多瀏覽器來說還未實現](http://caniuse.com/#feat=woff2)。
 
 那我們該怎麼辦？ 沒有在所有瀏覽器中都可以使用的單一格式，這表示我們需要交付多種格式才能提供一致的體驗：
 
@@ -52,7 +52,7 @@ Note: 就技術方面來說，其實還有<a href='http://caniuse.com/svg-fonts'
 
 * EOT 和 TTF 格式在預設情況下不會進行壓縮：提供這些格式時，請確認您的伺服器已設定為套用 [GZIP 壓縮](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip)。
 * WOFF 具有內建壓縮，請確認您的 WOFF 壓縮工具正在使用最佳壓縮設定。
-* WOFF2 使用自訂預先處理和壓縮演算法，與其他格式相較可多縮減 ~30% 的檔案大小，詳情請參閱[報告](http://www.w3.org/TR/WOFF20ER/)。
+* WOFF2 使用自訂預先處理和壓縮演算法，與其他格式相較可多縮減 ~30% 的檔案大小，詳情請參閱[報告](http://www.w3.org/TR/WOFF20ER/){: .external }。
 
 最後，值得注意的是某些字型格式包含額外的中繼資料，例如 [字型提示](http://en.wikipedia.org/wiki/Font_hinting)和[字距調整](http://en.wikipedia.org/wiki/Kerning)資訊，這些資訊在某些平台上可能不是必要的，這樣就可以進一步最佳化檔案大小。查詢您的字型壓縮工具是否有可用的最佳化選項，而如果您這樣做了，請確保您有適合的基礎架構來測試這些最佳化的字型並提供給每個特定瀏覽器，例如 Google 字型為每個字型保留 30 種以上的 最佳化變體，並會自動偵測及提供適合每種平台和瀏覽器的最佳變體。
 
