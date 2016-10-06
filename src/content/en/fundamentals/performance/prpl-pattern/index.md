@@ -1,6 +1,5 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: 
 
 {# wf_updated_on: 2016-09-28 #}
 {# wf_published_on: 2016-09-28 #}
