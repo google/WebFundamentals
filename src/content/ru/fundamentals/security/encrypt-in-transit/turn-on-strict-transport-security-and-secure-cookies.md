@@ -21,7 +21,7 @@ Transport
 Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security), чтобы указать клиентам, 
 что для подключения к вашему серверу следует всегда использовать протокол HTTPS, даже при переходе по ссылке http://.
  Это позволит защититься от атак типа [SSL
-Strip](http://www.thoughtcrime.org/software/sslstrip/), а также избежать 
+Strip](http://www.thoughtcrime.org/software/sslstrip/){: .external }, а также избежать 
 затрат, связанных с кодом перенаправления 301, о чем мы рассказали в разделе "Перенаправление с HTTP на HTTPS".
 
 **ПРИМЕЧАНИЕ.** Существует высокая вероятность, что у клиентов, которые отметили ваш сайт как известный узел HSTS, 
