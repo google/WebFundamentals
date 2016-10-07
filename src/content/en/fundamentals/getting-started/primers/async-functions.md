@@ -196,7 +196,31 @@ Note: I'm sort-of in love with streams. If you're unfamiliar with streaming,
 guide](https://jakearchibald.com/2016/streams-ftw/#streams-the-fetch-api){:
 .external}.
 
-## Example: Avoid going too sequential
+## Careful! Avoid going too sequential
+
+Although you're writing code that looks synchronous, ensure you don't miss the
+opportunity to do things in parallel.
+
+    async function series() {
+      await wait(500);
+      await wait(500);
+      return "done!";
+    }
+
+The above takes 1000ms to complete, whereas:
+
+    async function parallel() {
+      const wait1 = wait(500);
+      const wait2 = wait(500);
+      await wait1;
+      await wait2;
+      return "done!";
+    }
+
+…the above takes 500ms to complete, because both waits happen at the same time.
+Let's look at a practical example…
+
+### Example: Outputting fetches in order
 
 Say we wanted to fetch a series URLs and log them as soon as possible, in the
 correct order.
@@ -312,6 +336,10 @@ code-bloat.
 
 ## Async all the things!
 
-Once async functions land across all browsers, use them on every promise-returning function! Not only do they make your code tider, but it makes sure that function will *always* return a promise.
+Once async functions land across all browsers, use them on every
+promise-returning function! Not only do they make your code tider, but it makes
+sure that function will *always* return a promise.
 
-I got really excited about async functions [back in 2014](https://jakearchibald.com/2014/es7-async-functions/){: .external}, and it's great to see them land, for real, in browsers. Whoop!
+I got really excited about async functions [back in
+2014](https://jakearchibald.com/2014/es7-async-functions/){: .external}, and
+it's great to see them land, for real, in browsers. Whoop!
