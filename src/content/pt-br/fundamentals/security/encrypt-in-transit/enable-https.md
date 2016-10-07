@@ -188,7 +188,7 @@ Note: muitos operadores de site já concluíram as etapas que abordamos, mas est
 Note: por fim, você deve redirecionar solicitações HTTP para HTTPS e usar HSTS (Segurança de Transporte Restrita HTTP). Esta não é a etapa correta no processo de migração para fazer isso; veja “Redirecionar HTTP para HTTPS" e “Ativar a Segurança de Transporte Restrita e Cookies Seguros".
 
 Agora, e durante o tempo de duração do seu site, verifique sua configuração HTTPS com o
-[prático Teste do Servidor SSL da Qualys](https://www.ssllabs.com/ssltest/). Seu site
+[prático Teste do Servidor SSL da Qualys](https://www.ssllabs.com/ssltest/){: .external }. Seu site
 deve obter A ou A+; trate tudo que causa notas menores como erro.
 (O A de hoje é o B de amanhã, porque os ataques contra algoritmos e protocolos
 sempre melhoram!)
@@ -312,7 +312,7 @@ indicar aos mecanismos de pesquisa e navegadores que a versão HTTPS é canônic
 
 Neste ponto, você está pronto para “bloquear" o uso do HTTPS. Primeiro, use [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security) para avisar os
 clientes de que eles devem sempre se conectar ao seu servidor via HTTPS, mesmo ao
-seguir uma referência http://. Isso evita ataques como [Retirada SSL](http://www.thoughtcrime.org/software/sslstrip/) e também evita o
+seguir uma referência http://. Isso evita ataques como [Retirada SSL](http://www.thoughtcrime.org/software/sslstrip/){: .external } e também evita o
 custo da viagem de ida e volta do redirecionamento 301 que habilitamos em “Redirecionar HTTP para HTTPS".
 
 Note: os clientes que tiverem marcado seu site como um Host HSTS conhecido provavelmente terão uma [alha grave](https://tools.ietf.org/html/rfc6797#section-12.1) [se o seu](https://tools.ietf.org/html/rfc6797#section-12.1) [site tiver um erro em sua configuração TLS](https://tools.ietf.org/html/rfc6797#section-12.1) (como um certificado expirado). Essa é uma escolha de projeto expecífica do HSTS; ajuda a garantir que os invasores de rede não possam enganar os clientes para acessar o site sem HTTPS. Não habilite o HSTS até que você tenha certeza de que a operação do seu site esteja forte o suficiente para evitar a implantação do HTTPS com erros de validação do certificado.
@@ -351,7 +351,7 @@ Esta seção discute preocupações que os operadores podem ter sobre a migraç�
 
 ### Desempenho
 
-Quando as camadas de conteúdo e aplicativo estão bem ajustadas (consulte os [livros de Steve Souders](https://stevesouders.com/) para obter ótimas dicas), as demais preocupações de desempenho do
+Quando as camadas de conteúdo e aplicativo estão bem ajustadas (consulte os [livros de Steve Souders](https://stevesouders.com/){: .external } para obter ótimas dicas), as demais preocupações de desempenho do
 TLS são geralmente pequenas em relação ao custo geral do aplicativo. Além disso, você pode reduzir e amortizar os custos. (Para receber boas dicas sobre a otimização e generalização do TLS, consulte _[Rede do Navegador de Alto Desempenho](http://chimera.labs.oreilly.com/books/1230000000545)_[ por Ilya
 Grigorik](http://chimera.labs.oreilly.com/books/1230000000545).) Veja também o
 [OpenSSL Cookbook](https://www.feistyduck.com/books/openssl-cookbook/)  de Ivan Ristic e _[Bulletproof SSL e TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_.
