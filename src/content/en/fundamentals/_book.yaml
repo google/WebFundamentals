@@ -3,11 +3,12 @@ upper_tabs:
   - name: Fundamentals
     heading: Web Fundamentals
     path: /web/fundamentals/
-    is_default: True
     lower_tabs:
       other:
       - name: Fundamentals
         contents:
+        - title: Home
+          path: /web/fundamentals/
         - include: /web/fundamentals/getting-started/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/instant-and-offline/_toc.yaml

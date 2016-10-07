@@ -4,7 +4,11 @@ book_path: /web/fundamentals/_book.yaml
 {# wf_updated_on: 2016-09-27 #}
 {# wf_published_on: 2016-09-27 #}
 
-# Web Fundamentals {: .page-title .hidden }
+<style>
+nav.devsite-page-nav, .devsite-rating-container {display:none;}
+</style>
+
+# Web Fundamentals {: .page-title .devsite-hidden }
 
 ## Web Push Notifications, a new way to engage users {: .hide-from-toc  }
 
@@ -48,7 +52,7 @@ possibilities for you to re-engage with your users.
 
 <div class="attempt-left">
   <h3 class="hide-from-toc">Build a Progressive Web App</h3>
-  <img src="/web/fundamentals/images/ic_important_devices_black_48dp.png">
+  <img src="/web/fundamentals/images/ic_important_devices_black_48dp.png" class="devsite-landing-row-item-image">
   <p>
     What is a Progressive Web App and what do you need to know to get
     started building one? In this step-by-step guide, you'll build your
@@ -59,7 +63,7 @@ possibilities for you to re-engage with your users.
 </div>
 <div class="attempt-right">
   <h3 class="hide-from-toc">Make Your Site Instant and Reliable</h3>
-  <img src="/web/fundamentals/images/ic_thumb_up_black_48dp.png">
+  <img src="/web/fundamentals/images/ic_thumb_up_black_48dp.png" class="devsite-landing-row-item-image">
   <p>
     Service workers are a programmable proxy sitting between the network
     and the browser. Using a service worker, you get to decide what gets
@@ -70,7 +74,7 @@ possibilities for you to re-engage with your users.
 <div class="clearfix"></div>
 <div class="attempt-left">
   <h3 class="hide-from-toc">Enable Add to Home Screen</h3>
-  <img src="/web/fundamentals/images/ic_home_black_48dp.png">
+  <img src="/web/fundamentals/images/ic_home_black_48dp.png" class="devsite-landing-row-item-image">
   <p>
     App install banners make it easy for users to add your app to their
     home screen with a single click, and is an indication to the user that
@@ -80,7 +84,7 @@ possibilities for you to re-engage with your users.
 </div>
 <div class="attempt-right">
   <h3 class="hide-from-toc">Move to HTTPS</h3>
-  <img src="/web/fundamentals/images/ic_https_black_48dp.png">
+  <img src="/web/fundamentals/images/ic_https_black_48dp.png" class="devsite-landing-row-item-image">
   <p>
     HTTPS allows users to securely connect to your website or app. Set up
     HTTPS to protect the integrity of your site, and the security of your
