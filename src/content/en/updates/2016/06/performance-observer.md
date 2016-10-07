@@ -5,8 +5,7 @@ description: New in Chrome 52, the Performance Observer interface provides more 
 {# wf_updated_on: 2016-06-08 #}
 {# wf_published_on: 2016-06-08 #}
 {# wf_tags: performance,events,chrome52,javascript #}
-{# wf_featured_snippet: The W3C Performance Timeline specification defines an interface for browsers to provide programmatic access to low level
-timing data. This opens the door to some interesting use cases like custom performance analysis, third party tools and more. #}
+{# wf_featured_snippet: The W3C Performance Timeline specification defines an interface for browsers to provide programmatic access to low level timing data. This opens the door to some interesting use cases like custom performance analysis, third party tools and more. #}
 {# wf_featured_image: /web/updates/images/generic/timer.png #}
 
 # Performance Observer - Efficient Access to Performance Data {: .page-title }
