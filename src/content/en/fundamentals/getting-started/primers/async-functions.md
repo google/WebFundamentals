@@ -189,7 +189,7 @@ replaced with a trusty, boring, while-loop. Much better. In future, we'll get
 [async iterators](https://github.com/tc39/proposal-async-iteration){:
 .external}, which would [replace the above `while`
 loop](https://gist.github.com/jakearchibald/0b37865637daf884943cf88c2cba1376){:
-.external}.
+.external}, making it even neater.
 
 Note: I'm sort-of in love with streams. If you're unfamiliar with streaming,
 [check out my
@@ -309,3 +309,9 @@ preset](http://babeljs.io/docs/plugins/preset-es2015/){: .external}.
 
 The [output is not as pretty](https://goo.gl/jlXboV), so watch out for
 code-bloat.
+
+## Async all the things!
+
+Once async functions land across all browsers, use them on every promise-returning function! Not only do they make your code tider, but it makes sure that function will *always* return a promise.
+
+I got really excited about async functions [back in 2014](https://jakearchibald.com/2014/es7-async-functions/){: .external}, and it's great to see them land, for real, in browsers. Whoop!
