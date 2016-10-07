@@ -27,7 +27,8 @@ var defaultOptions = {
     skipReviewRequired: false,
     testWarnOnly: false,
     cl: null,
-    verbose: false
+    verbose: false,
+    buildType: 'dev'
   }
 }
 GLOBAL.WF.options = minimist(process.argv.slice(2), defaultOptions);
