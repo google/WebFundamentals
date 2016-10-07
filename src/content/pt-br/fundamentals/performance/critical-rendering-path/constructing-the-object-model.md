@@ -33,7 +33,7 @@ Comecemos com o caso mais simples possível: uma página HTML sem formatação c
 <img src="images/full-process.png" alt="Processo de criação do DOM">
 
 1. **Conversão:** o navegador lê os bytes brutos do HTML do disco ou da rede e os traduz em caracteres individuais baseados na codificação determinada do arquivo (por exemplo, UTF-8).
-2. **Criação de tokens:** o navegador converte as strings de caracteres em tokens distintos especificados pelo [padrão W3C HTML5](http://www.w3.org/TR/html5/), por exemplo, `<html>`, `<body>` e outras strings nos `colchetes angulares`. Cada token tem um significado e conjunto de regras especiais.
+2. **Criação de tokens:** o navegador converte as strings de caracteres em tokens distintos especificados pelo [padrão W3C HTML5](http://www.w3.org/TR/html5/){: .external }, por exemplo, `<html>`, `<body>` e outras strings nos `colchetes angulares`. Cada token tem um significado e conjunto de regras especiais.
 3. **Lexicalização:** os tokens emitidos são convertidos em `objetos` que definem suas propriedades e regras.
 4. **Criação do DOM:** por último, como a marcação de HTML define as relações entre diferentes tags (algumas tags estão contidas em outras tags), os objetos criados são vinculados em uma estrutura de dados em forma de árvore que também captura as relações pai-filho definidas na marcação original: o objeto _HTML_ é pai do objeto _body_, _body_ é pai do objeto _paragraph_ e assim por diante.
 
@@ -73,7 +73,7 @@ Por que o CSSOM tem uma estrutura de árvore? Ao computar o conjunto final de es
 
 Para tornar isso mais palpável, considere a árvore CSSOM acima. Qualquer texto contido na tag _span_ que esteja posicionado no elemento de corpo terá um tamanho de fonte de 16 pixels e será vermelho. A diretiva font-size adota a forma de cascata para baixo do corpo para a dimensão. No entanto, se uma tag de dimensão for filha de uma tag de parágrafo (p), seus conteúdos não serão exibidos.
 
-Além disso, a árvore acima não é a árvore CSSOM completa e só mostra os estilos que decidimos substituir em nossa folha de estilos. Cada navegador fornece um conjunto padrão de estilos, também conhecidos como `estilos de user-agent`. Isso é o que vemos ao deixar de fornecer um conjunto próprio, e nossos estilos simplesmente substituem esses padrões (por exemplo, [estilos IE padrão](http://www.iecss.com/)). Se você já inspecionou seus `estilos computados` no Chrome DevTools e se perguntou de onde surgiram todos esses estilos, aí está a sua resposta.
+Além disso, a árvore acima não é a árvore CSSOM completa e só mostra os estilos que decidimos substituir em nossa folha de estilos. Cada navegador fornece um conjunto padrão de estilos, também conhecidos como `estilos de user-agent`. Isso é o que vemos ao deixar de fornecer um conjunto próprio, e nossos estilos simplesmente substituem esses padrões (por exemplo, [estilos IE padrão](http://www.iecss.com/){: .external }). Se você já inspecionou seus `estilos computados` no Chrome DevTools e se perguntou de onde surgiram todos esses estilos, aí está a sua resposta.
 
 Curioso para saber quanto tempo levou o processamento de CSS? Grave uma linha do tempo no DevTools e procure o evento `Recalculate Style` (Recalcular estilo): diferentemente da análise de DOM, a linha do tempo não exibe uma entrada `Parse CSS` (Analisar CSS) separada. Em vez disso, ela captura a análise e a criação da árvore CSSOM mais o cálculo repetido dos estilos computados nesse evento único.
 

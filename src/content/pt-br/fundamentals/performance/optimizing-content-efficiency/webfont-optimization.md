@@ -28,13 +28,13 @@ Uma fonte da Web é uma coleção de glifos, e cada glifo é uma forma vetorizad
 
 <img src="images/glyphs.png" class="center" alt="Tabela de glifos das fontes">
 
-Ao escolher uma fonte, é importante considerar quais conjuntos de caracteres têm suporte. Se você precisa localizar o conteúdo de sua página para vários idiomas, terá de usar uma fonte que forneça uma aparência e uma experiência consistentes a seus usuários. Por exemplo, a [família tipográfica Noto do Google](https://www.google.com/get/noto/) procura oferecer suporte a todos os idiomas do mundo. No entanto, o tamanho total da Noto, com todos os idiomas incluídos, resulta em um download ZIP de mais de 130 MB. 
+Ao escolher uma fonte, é importante considerar quais conjuntos de caracteres têm suporte. Se você precisa localizar o conteúdo de sua página para vários idiomas, terá de usar uma fonte que forneça uma aparência e uma experiência consistentes a seus usuários. Por exemplo, a [família tipográfica Noto do Google](https://www.google.com/get/noto/){: .external } procura oferecer suporte a todos os idiomas do mundo. No entanto, o tamanho total da Noto, com todos os idiomas incluídos, resulta em um download ZIP de mais de 130 MB. 
 
 Usar fontes na Web requer cuidado na engenharia para garantir que a tipografia não atrapalhe o desempenho. Felizmente, a plataforma da Web fornece todas as formas geométricas básicas necessárias, e no resto deste guia nós veremos, na prática, como aproveitar o melhor dos dois mundos.
 
 ### Formatos de fontes da Web
 
-Hoje, existem quatro formatos de contêiner de fontes em uso na Web: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) e [WOFF2](http://www.w3.org/TR/WOFF2/). Apesar da ampla gama de opções, não há um formato único e universal que funcione em todos os navegadores novos e antigos: EOT é [somente IE](http://caniuse.com/#feat=eot), TTF é [parcialmente compatível com IE](http://caniuse.com/#search=ttf), WOFF desfruta do suporte mais amplo possível, mas [não está disponível para alguns navegadores mais antigos](http://caniuse.com/#feat=woff), e o suporte a WOFF 2.0 está [em andamento para muitos navegadores](http://caniuse.com/#feat=woff2).
+Hoje, existem quatro formatos de contêiner de fontes em uso na Web: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) e [WOFF2](http://www.w3.org/TR/WOFF2/){: .external }. Apesar da ampla gama de opções, não há um formato único e universal que funcione em todos os navegadores novos e antigos: EOT é [somente IE](http://caniuse.com/#feat=eot), TTF é [parcialmente compatível com IE](http://caniuse.com/#search=ttf), WOFF desfruta do suporte mais amplo possível, mas [não está disponível para alguns navegadores mais antigos](http://caniuse.com/#feat=woff), e o suporte a WOFF 2.0 está [em andamento para muitos navegadores](http://caniuse.com/#feat=woff2).
 
 Então em que pé estamos? Não há um formato único que funcione em todos os navegadores, o que significa que precisamos fornecer vários formatos para gerar uma experiência consistente:
 
@@ -52,7 +52,7 @@ Uma fonte é uma coleção de glifos, os quais cada um é um conjunto de caminho
 
 * Os formatos EOT e TTF não são compactados por padrão: verifique se seus servidores estão configurados para aplicar [a compactação GZIP](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip) ao fornecer esses formatos.
 * WOFF tem compactação incorporada: verifique se seu compactador de WOFF usa configurações de compactação otimizadas. 
-* WOFF2 usa algoritmos de pré-processamento e compactação personalizados para fornecer redução de tamanho de arquivo de aproximadamente 30% em relação a outros formatos. Consulte [relatório](http://www.w3.org/TR/WOFF20ER/).
+* WOFF2 usa algoritmos de pré-processamento e compactação personalizados para fornecer redução de tamanho de arquivo de aproximadamente 30% em relação a outros formatos. Consulte [relatório](http://www.w3.org/TR/WOFF20ER/){: .external }.
 
 Por último, vale salientar que alguns formatos de fonte contêm metadados adicionais, como [font hinting](http://en.wikipedia.org/wiki/Font_hinting, em inglês) e informações de [kerning](http://en.wikipedia.org/wiki/Kerning, em inglês) que podem não ser necessárias em algumas plataformas, o que possibilita maior otimização de tamanho de arquivo. Consulte seu compactador de fontes para ver as opções de otimização e, se você escolher essa opção, verifique se possui a infraestrutura adequada para testar e fornecer essas fontes otimizadas a cada navegador específico. Por exemplo, o Google Fonts mantém mais de 30 variantes otimizadas para cada fonte e detecta e fornece automaticamente a variante otimizada para cada plataforma e navegador.
 
