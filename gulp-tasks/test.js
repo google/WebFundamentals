@@ -61,8 +61,9 @@ function testMarkdownFile(fileName, contribJson) {
     errors.push({msg: 'Missing project_path definition', param: ''});
   }
   // Validate description
-  var description = wfHelper.getRegEx(/^description: (.*)/m, fileContent, null);
+  var description = wfHelper.getRegEx(/^description:(.*)\n/m, fileContent, null);
   if (description) {
+    description = description.trim();
     if (description.length === 0) {
       errors.push({msg: 'description cannot be empty', param: ''});
     } else if (description.length > MAX_DESCRIPTION_LENGTH) {
