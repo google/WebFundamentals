@@ -5,10 +5,10 @@ book_path: /web/fundamentals/_book.yaml
 {# wf_published_on: 2016-09-27 #}
 
 <style>
-nav.devsite-page-nav, .devsite-rating-container {display:none;}
+nav.devsite-page-nav, .devsite-rating-container, .page-title {display:none;}
 </style>
 
-# Web Fundamentals {: .page-title .devsite-hidden }
+# Web Fundamentals {: .page-title }
 
 ## Web Push Notifications, a new way to engage users {: .hide-from-toc  }
 
@@ -36,7 +36,7 @@ possibilities for you to re-engage with your users.
 </div>
 
 <div class="feed hfeed" data-limit="2">
-  <a href="https://developers.google.com/web/updates/rss.xml"></a>
+  <a href="https://google-developers.appspot.com/web/updates/rss.xml"></a>
   <article class="hentry">
     <a class="link"><header></header></a>
     <article class="entry-content" data-truncate="50w"></article>
