@@ -123,9 +123,9 @@ subsets (for example, Latin, Cyrillic, and Greek subsets) and only download the 
 
 The [unicode-range descriptor](http://www.w3.org/TR/css3-fonts/#descdef-unicode-range) allows you to specify a comma-delimited list of range values, each of which can be in one of three different forms:
 
-* Single codepoint (e.g. U+416)
-* Interval range (e.g. U+400-4ff): indicates the start and end codepoints of a range
-* Wildcard range (e.g. U+4??): '?' characters indicate any hexadecimal digit
+* Single codepoint (for example, U+416)
+* Interval range (for example, U+400-4ff): indicates the start and end codepoints of a range
+* Wildcard range (for example, U+4??): '?' characters indicate any hexadecimal digit
 
 For example, you can split your _Awesome Font_ family into Latin and Japanese 
 subsets, each of which the browser downloads on an as-needed basis: 

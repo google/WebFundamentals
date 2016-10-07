@@ -63,9 +63,9 @@ Outputs the following:
     -----
     Country Name (2 letter code) [AU]:CA
     State or Province Name (full name) [Some-State]:California
-    Locality Name (eg, city) []:Mountain View
-    Organization Name (eg, company) [Internet Widgits Pty Ltd]:Example, Inc.
-    Organizational Unit Name (eg, section) []:Webmaster Help Center Example
+    Locality Name (for example, city) []:Mountain View
+    Organization Name (for example, company) [Internet Widgits Pty Ltd]:Example, Inc.
+    Organizational Unit Name (for example, section) []:Webmaster Help Center Example
     Team
     Common Name (e.g. server FQDN or YOUR name) []:www.example.com
     Email Address []:webmaster@example.com

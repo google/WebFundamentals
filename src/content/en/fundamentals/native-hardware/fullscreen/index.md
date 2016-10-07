@@ -187,7 +187,7 @@ user interface appropriately, for example:
 * By Providing a mechanism to close dialogs or travel backwards
 
 
-### Launching a page fullscreen from homescreen
+### Launching a page fullscreen from home screen
 
 Launching a fullscreen web page when the user navigates to it is not possible.
 Browser vendors are very aware that a fullscreen experience on every page load
@@ -221,8 +221,8 @@ similar to the iOS Safari model.
     <meta name="mobile-web-app-capable" content="yes">
 
 > You can set up your web app to have an application shortcut icon added to a
-> device's homescreen, and have the app launch in full-screen "app mode" using
-> Chrome for Android's "Add to homescreen" menu item.
+> device's home screen, and have the app launch in full-screen "app mode" using
+> Chrome for Android's "Add to Home screen" menu item.
 >  <a href="/chrome/mobile/docs/installtohomescreen">Google Chrome</a>
 
 A better option is to use the Web App Manifest.
@@ -384,7 +384,7 @@ adapt your UI to react to the fullscreen state like the following
       display: none; // hides the element when not in fullscreen mode
     }
 
-If the users launches your site from the homescreen the `display-mode` media
+If the users launches your site from the home screen the `display-mode` media
 query will be set to what was defined in the Web App Manifest. In the case of
 pure fullscreen it will be:
 
@@ -481,7 +481,7 @@ Don't intercept the first touch event and call `requestFullscreen()`.
 If you want to launch apps fullscreen think about using the install
 experiences for each platform.
 
-### Don't spam the user to install your app to a homescreen
+### Don't spam the user to install your app to a home screen
 
 If you plan on offering a fullscreen experience via the installed app mechanisms
 be considerate to the user.

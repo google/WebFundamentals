@@ -690,7 +690,7 @@ If there are multiple levels of shadow DOM at play (say a custom element within 
 
 Another option for focus is the `delegatesFocus: true` option, which expands the focus behavior of element's within a shadow tree:
 
-- If you click on a node inside shadow DOM and the node is not a focusable area, the first focusable area becomes focused.
+- If you click a node inside shadow DOM and the node is not a focusable area, the first focusable area becomes focused.
 - When a node inside shadow DOM gains focus, `:focus` applies to the host in addition to the focused element.
 
 **Example** - how `delegatesFocus: true` changes focus behavior

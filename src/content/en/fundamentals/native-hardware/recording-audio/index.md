@@ -29,7 +29,7 @@ then send it back to the web page; on Android it will give the user the
 choice of which app to use record the audio in before sending it back to the web
 page.
 
-Once the user has finished recording and they are back in the web site, you 
+Once the user has finished recording and they are back in the website, you 
 need to somehow get ahold of the file data. You can get quick access by 
 attaching an `onchange` event to the input element and then reading 
 the `files` property of the event object.
