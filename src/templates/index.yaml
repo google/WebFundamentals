@@ -96,6 +96,9 @@ landing_page:
         <p>{{{articles.11.description}}} <a href="{{articles.11.url}}">Read more</a></p>
         <h4>{{articles.12.title}}</h4>
         <p>{{{articles.12.description}}} <a href="{{articles.12.url}}">Read more</a></p>
-        <h4>More from the archives</h4>
-        <p>See more from the <a href="/web/{{section}}/{{articles.12.yearPublished}}/">archives</a></p>
+        <h4>Even more</h4>
+        <p>See more from the <a href="/web/{{section}}/{{articles.12.yearPublished}}/">archives</a>
+        and stay up to date with the latest updates by <a href="https://developers.google.com/web/{{section}}/rss.xml">subscribing</a> to our RSS feed.</p>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://developers.google.com/shows/rss.xml">
+        <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://developers.google.com/shows/atom.xml">
 
