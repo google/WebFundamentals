@@ -6,7 +6,7 @@ description: The native Encoding API offers a straightforward way to convert bet
 {# wf_published_on: 2014-08-27 #}
 {# wf_tags: news,arraybuffer,decoding,strings,unicode,encoding #}
 
-# Easier ArrayBuffer <-> String conversion with the Encoding API {: .page-title }
+# Easier ArrayBuffer to String conversion with the Encoding API {: .page-title }
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 

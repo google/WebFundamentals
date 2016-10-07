@@ -61,8 +61,9 @@ function testMarkdownFile(fileName, contribJson) {
     errors.push({msg: 'Missing project_path definition', param: ''});
   }
   // Validate description
-  var description = wfHelper.getRegEx(/^description: (.*)/m, fileContent, null);
+  var description = wfHelper.getRegEx(/^description:(.*)\n/m, fileContent, null);
   if (description) {
+    description = description.trim();
     if (description.length === 0) {
       errors.push({msg: 'description cannot be empty', param: ''});
     } else if (description.length > MAX_DESCRIPTION_LENGTH) {
@@ -113,9 +114,13 @@ function testMarkdownFile(fileName, contribJson) {
   if (title) {
     if (title.length > 1) {
       errors.push({msg: 'Page has multiple title tags', param: title.join(',')});
-    } else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
-      errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
     }
+    if (title[0].indexOf('<') >= 0 || title[0].indexOf('&gt;') >= 0 || title[0].indexOf('`') >= 0) {
+      errors.push({msg: 'Title should not contain markup', param: title[0]});
+    }
+    //  else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
+    //   errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
+    // }
   } else {
     errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title}'});
   }

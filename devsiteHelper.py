@@ -251,7 +251,7 @@ def getInclude(includeTag, lang='en'):
     result += '<div id="gplus-comments">'
     result += 'Comments aren\'t supported in the development or staging environment, sorry.'
     result += '</div></div>'
-  else:
+  elif fileName.startswith('web/'):
     result = readFile(fileName, lang)
   if result is None:
     return 'Warning: Unable to find include <code>' + fileName + '</code>'
