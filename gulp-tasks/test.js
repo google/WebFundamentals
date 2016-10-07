@@ -114,9 +114,13 @@ function testMarkdownFile(fileName, contribJson) {
   if (title) {
     if (title.length > 1) {
       errors.push({msg: 'Page has multiple title tags', param: title.join(',')});
-    } else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
-      errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
     }
+    if (title[0].indexOf('<') >= 0 || title[0].indexOf('&gt;') >= 0 || title[0].indexOf('`') >= 0) {
+      errors.push({msg: 'Title should not contain markup', param: title[0]});
+    }
+    //  else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
+    //   errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
+    // }
   } else {
     errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title}'});
   }
