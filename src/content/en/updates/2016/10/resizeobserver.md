@@ -42,7 +42,7 @@ straight into it!
 All the APIs with the “observer” suffix I mentioned above share a simple API
 design. `ResizeObserver` will fit in just fine. You create a `ResizeObserver`
 object and pass a callback to the constructor. The callback will be given an
-array of `ResizeOberverEntries` – one entry per observed element – which 
+array of `ResizeOberverEntries` – one entry per observed element – which
 containthe new dimensions for the element.
 
     var ro = new ResizeObserver( entries => {
@@ -161,7 +161,7 @@ polling or on adding sentinel elements to the DOM. The former will drain your
 battery on mobile by keeping the CPU busy while the latter modifies your DOM and
 might mess up styling and other DOM-reliant code.
 
-`ResizeObserver~ are in Canary right now, behind the Experimental Web Platform
+`ResizeObserver` are in Canary right now, behind the Experimental Web Platform
 flag. They are a small primitive that will allow you to write certain effects
 in a much more efficient way. Try them out and let us know what you think or if
 you have questions!
