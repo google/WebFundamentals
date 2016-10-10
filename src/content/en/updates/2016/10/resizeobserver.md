@@ -93,8 +93,8 @@ element processed in the previous iteration of `ResizeObserver` entries.
 One thing that `ResizeObserver` allow you to do is to implement per-element
 media queries. By observing elements, you can imperatively define your
 design breakpoints and change the element’s styles. In the following
-[example](https://googlechrome.github.io/samples/resizeobserver/), the green box
-will get a border whenever its `width` goes below 250px.
+[example](https://googlechrome.github.io/samples/resizeobserver/), the second box
+will change its background whenever its `width` goes below 250px.
 
 <video controls autoplay loop muted>
   <source src="https://storage.googleapis.com/webfundamentals-assets/resizeobserver/elem-mq_vp8.webm" type="video/webm; codecs=vp8">
@@ -103,15 +103,11 @@ will get a border whenever its `width` goes below 250px.
 
     const ro = new ResizeObserver(entries => {
       for (let entry of entries) {
-        if (entry.contentRect.width < 250) {
-          entry.target.style.border = '3px solid red';
-        } else {
-          entry.target.style.border = 'none';
-        }
+        entry.target.classList.toggle('stripes', entry.contentRect.width < 250);
       }
     });
-    // Only observe the green box (which is the third box).
-    ro.observe(document.querySelector('.box:nth-child(3)'));
+    // Only observe the second box
+    ro.observe(document.querySelector('.box:nth-child(2)'));
 
 Another interesting example to look at is a chat window. The problem that arises
 in a typical top-to-bottom conversation layout is scroll positioning. To avoid
