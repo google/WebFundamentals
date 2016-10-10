@@ -12,7 +12,7 @@ under the `en` directory. Add translations by following the same structure
 with either a two letter or composite language code: e.g. `es`, `pt-br`.
 
 Our supported languages include: Arabic (AR), German (DE), Spanish (ES),
-French (FR), Italian (IT), Japanese (JA), Korean (KO), Dutch (NL), Polish (PL),
+French (FR), Bahasa Indonesia (ID), Italian (IT), Japanese (JA), Korean (KO), Dutch (NL), Polish (PL),
 Portugese (PT-BR), Russian (RU), Turkish (TR), Chinese Traditional (ZH-CN) and
 Chinese Simplified (ZH-TW).
 

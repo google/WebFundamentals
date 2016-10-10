@@ -1178,4 +1178,17 @@ maciejzasada:
   google: 104812516714503133849
   email: maciej@unit9.com
 
-
+abdshomad:
+  name:
+    given: Abd
+    family: Shomad
+  country: ID
+  role:
+    - translator
+  homepage: 'http://abdshomad.github.io'
+  google: +abdshomad
+  twitter: abdshomad
+  github: abdshomad
+  email: abd.shomad@gmail.com
+  description:
+    en: "Abd Shomad is Web Technology Enthusiast"
