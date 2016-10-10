@@ -4,10 +4,11 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2016-08-15T18:03:59Z",
+  "updated": "2016-10-10T14:55:33Z",
   "id": "debugging-service-workers",
   "duration": 0,
   "title": "Debugging Service Workers",
+  "author": "robdodson",
   "summary": "In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.",
   "theme": "web",
   "status": [
