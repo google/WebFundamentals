@@ -65,9 +65,9 @@
 
         z-index: 2;
 
+        -ms-touch-action: none;
         /* // [START touch-action-example] */
         /* Pass all touches to javascript */
-        -ms-touch-action: none;
         touch-action: none;
         /* // [END touch-action-example] */
       }
@@ -172,14 +172,14 @@
       })();
 
       /* // [START pointereventsupport] */
-      var pointerDownName = 'MSPointerDown';
-      var pointerUpName = 'MSPointerUp';
-      var pointerMoveName = 'MSPointerMove';
+      var pointerDownName = 'pointerdown';
+      var pointerUpName = 'pointerup';
+      var pointerMoveName = 'pointermove';
 
-      if(window.PointerEvent) {
-        pointerDownName = 'pointerdown';
-        pointerUpName = 'pointerup';
-        pointerMoveName = 'pointermove';
+      if(window.navigator.msPointerEnabled) {
+        pointerDownName = 'MSPointerDown';
+        pointerUpName = 'MSPointerUp';
+        pointerMoveName = 'MSPointerMove';
       }
 
       // Simple way to check if some form of pointerevents is enabled or not
@@ -198,7 +198,7 @@
         var STATE_RIGHT_SIDE = 3;
 
         var swipeFrontElement = element.querySelector('.swipe-front');
-        var isAnimating = false;
+        var rafPending = false;
         var initialTouchPos = null;
         var lastTouchPos = null;
         var currentXPosition = 0;
@@ -226,10 +226,10 @@
           }
 
           // Add the move and end listeners
-          if (window.PointerEventsSupport) {
+          if (window.PointerEvent) {
             // Pointer events are supported.
-            document.addEventListener(pointerMoveName, this.handleGestureMove, true);
-            document.addEventListener(pointerUpName, this.handleGestureEnd, true);
+            document.addEventListener('pointermove', this.handleGestureMove, true);
+            document.addEventListener('pointerup', this.handleGestureEnd, true);
           } else {
             // Add Touch Listeners
             document.addEventListener('touchmove', this.handleGestureMove, true);
@@ -248,19 +248,22 @@
         /* // [END handle-start-gesture] */
 
         // Handle move gestures
+        //
+        /* // [START handle-move] */
         this.handleGestureMove = function (evt) {
           evt.preventDefault();
 
           lastTouchPos = getGesturePointFromEvent(evt);
 
-          if(isAnimating) {
+          if(rafPending) {
             return;
           }
 
-          isAnimating = true;
+          rafPending = true;
 
           window.requestAnimFrame(onAnimFrame);
         }.bind(this);
+        /* // [END handle-move] */
 
         /* // [START handle-end-gesture] */
         // Handle end gestures
@@ -271,13 +274,13 @@
             return;
           }
 
-          isAnimating = false;
+          rafPending = false;
 
           // Remove Event Listeners
-          if (window.PointerEventsSupport) {
+          if (window.PointerEvent) {
             // Remove Pointer Event Listeners
-            document.removeEventListener(pointerMoveName, this.handleGestureMove, true);
-            document.removeEventListener(pointerUpName, this.handleGestureEnd, true);
+            document.removeEventListener('pointermove', this.handleGestureMove, true);
+            document.removeEventListener('pointerup', this.handleGestureEnd, true);
           } else {
             // Remove Touch Listeners
             document.removeEventListener('touchmove', this.handleGestureMove, true);
@@ -364,8 +367,9 @@
           return point;
         }
 
+        /* // [START on-anim-frame] */
         function onAnimFrame() {
-          if(!isAnimating) {
+          if(!rafPending) {
             return;
           }
 
@@ -373,18 +377,20 @@
 
           var newXTransform = (currentXPosition - differenceInX)+'px';
           var transformStyle = 'translateX('+newXTransform+')';
-          swipeFrontElement.style['-webkit-transform'] = transformStyle;
-          swipeFrontElement.style['-moz-transform'] = transformStyle;
+          swipeFrontElement.style.webkitTransform = transformStyle;
+          swipeFrontElement.style.MozTransform = transformStyle;
+          swipeFrontElement.style.msTransform = transformStyle;
           swipeFrontElement.style.transform = transformStyle;
 
-          isAnimating = false;
+          rafPending = false;
         }
+        /* // [END on-anim-frame] */
 
         /* // [START addlisteners] */
         // Check if pointer events are supported.
-        if (window.PointerEventsSupport) {
+        if (window.PointerEvent) {
           // Add Pointer Event Listener
-          swipeFrontElement.addEventListener(pointerDownName, this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('pointerdown', this.handleGestureStart, true);
         } else {
           // Add Touch Listener
           swipeFrontElement.addEventListener('touchstart', this.handleGestureStart, true);

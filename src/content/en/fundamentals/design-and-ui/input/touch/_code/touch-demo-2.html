@@ -7,16 +7,16 @@
     <meta name="msapplication-tap-highlight" content="no">
 
     <title>Touch Example 2</title>
-    
+
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
     <style>
       body {
         width: 100%;
         height: 100%;
-        
+
         background-color: #d3e2fc;
-        
+
         font-family: 'Roboto', sans-serif;
         color: #ecf0f1;
 
@@ -27,17 +27,17 @@
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        
+
         width: 100%;
-        
+
         -ms-flex-direction: row;
         -webkit-flex-direction: row;
         flex-direction: row;
-        
+
         -ms-flex-pack: justify;
         -webkit-justify-content: space-around;
         justify-content: space-around;
-        
+
         -ms-flex-align: center;
         -webkit-align-items: center;
         align-items: center;
@@ -45,12 +45,12 @@
 
       .v-slider {
         position: relative;
-        
+
         width: 46px;
         height: 200px;
-        
+
         margin: 23px 0;
-        
+
         /* Pass all touches to javascript */
         -ms-touch-action: none;
         touch-action: none;
@@ -58,33 +58,33 @@
 
       .v-slider > .track {
         position: absolute;
-        
+
         width: 6px;
         height: 200px;
-        
+
         left: 50%;
-        
+
         margin-left: -3px;
-        
+
         border-radius: 6px;
-        
+
         background-color: rgba(0,0,0,0.2);
       }
 
       .v-slider > .hold {
         position: absolute;
-        
+
         width: 46px;
         height: 46px;
-        
+
         border-radius: 100%;
-        
+
         top: 0;
         left: 50%;
-        
+
         margin-top: -23px;
         margin-left: -23px;
-        
+
         background-color: #4285f4;
       }
 
@@ -111,7 +111,7 @@
 
     <script>
       // Shim for requestAnimationFrame from Paul Irishpaul ir
-      // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/ 
+      // http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
       window.requestAnimFrame = (function(){
         return  window.requestAnimationFrame       ||
                 window.webkitRequestAnimationFrame ||
@@ -121,14 +121,15 @@
                 };
       })();
 
-      var pointerDownName = 'MSPointerDown';
-      var pointerUpName = 'MSPointerUp';
-      var pointerMoveName = 'MSPointerMove';
+      var pointerDownName = 'pointerdown';
+      var pointerUpName = 'pointerup';
+      var pointerMoveName = 'pointermove';
 
-      if(window.PointerEvent) {
-        pointerDownName = 'pointerdown';
-        pointerUpName = 'pointerup';
-        pointerMoveName = 'pointermove';
+      if(window.navigator.msPointerEnabled) {
+        pointerDownName = 'MSPointerDown';
+        pointerUpName = 'MSPointerUp';
+        pointerMoveName = 'MSPointerMove';
+
       }
 
       // Simple way to check if some form of pointerevents is enabled or not
@@ -141,11 +142,11 @@
         var isAnimating = false;
         var lastYPos = 0;
         var initialYPos = 0;
-        var lastHolderPos = 0; 
+        var lastHolderPos = 0;
         var elementHold = element.querySelector('.hold');
-      
+
       /* // [START handle-gestures] */
-      // Handle the start of gestures 
+      // Handle the start of gestures
       this.handleGestureStart = function(evt) {
         evt.preventDefault();
 
@@ -154,8 +155,8 @@
         initialYPos = point.y;
         /* // [END stash-start] */
 
-        if (!window.PointerEventsSupport) {
-          // Add Mouse Listeners
+        if (!window.PointerEvent) {
+          // Add Mouse Listeners to document
           document.addEventListener('mousemove', this.handleGestureMove, true);
           document.addEventListener('mouseup', this.handleGestureEnd, true);
         }
@@ -163,13 +164,13 @@
 
       this.handleGestureEnd = function(evt) {
         evt.preventDefault();
-          
+
         if(evt.targetTouches && evt.targetTouches.length > 0) {
           return;
         }
-        
-        if (!window.PointerEventsSupport) {  
-          // Remove Mouse Listeners
+
+        if (!window.PointerEvent) {
+          // Remove Mouse Listeners from document
           document.removeEventListener('mousemove', this.handleGestureMove, true);
           document.removeEventListener('mouseup', this.handleGestureEnd, true);
         }
@@ -181,11 +182,11 @@
 
       this.handleGestureMove = function(evt) {
         evt.preventDefault();
-        
+
         /* // [START handle-move] */
         var point = getGesturePointFromEvent(evt);
         lastYPos = point.y;
-        
+
           if(isAnimating) {
             return;
           }
@@ -218,17 +219,17 @@
           if(!isAnimating) {
             return;
           }
-          
+
           var newYTransform = lastHolderPos + -(initialYPos - lastYPos);
-          
+
           newYTransform = limitValueToSlider(newYTransform);
-          
+
           var transformStyle = 'translateY('+newYTransform+'px)';
           elementHold.style.msTransform = transformStyle;
           elementHold.style.MozTransform = transformStyle;
           elementHold.style.webkitTransform = transformStyle;
           elementHold.style.transform = transformStyle;
-          
+
           isAnimating = false;
         }
         /* // [END on-anim-frame] */
@@ -244,11 +245,11 @@
 
         /* // [START addlisteners] */
         // Check if pointer events are supported.
-        if (window.PointerEventsSupport) {
+        if (window.PointerEvent) {
           // Add Pointer Event Listener
-          elementHold.addEventListener(pointerDownName, this.handleGestureStart, true);
-          elementHold.addEventListener(pointerMoveName, this.handleGestureMove, true);
-          elementHold.addEventListener(pointerUpName, this.handleGestureEnd, true);
+          elementHold.addEventListener('pointerdown', this.handleGestureStart, true);
+          elementHold.addEventListener('pointermove', this.handleGestureMove, true);
+          elementHold.addEventListener('pointerup', this.handleGestureEnd, true);
         } else {
           // Add Touch Listeners
           elementHold.addEventListener('touchstart', this.handleGestureStart, true);
