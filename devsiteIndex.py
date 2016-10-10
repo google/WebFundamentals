@@ -13,8 +13,7 @@ def getPage(requestPath, lang):
     os.path.join(SOURCE_PATH, lang, requestPath, '_index.yaml'),
     os.path.join(SOURCE_PATH, 'en', requestPath, '_index.yaml'),
     os.path.join(SOURCE_PATH, lang, requestPath, 'index.md'),
-    os.path.join(SOURCE_PATH, 'en', requestPath, 'index.md'),
-    os.path.join(SOURCE_PATH, 'en', requestPath, '_generated.md')
+    os.path.join(SOURCE_PATH, 'en', requestPath, 'index.md')
   ]
   for fileLocation in fileLocations:
     if os.path.isfile(fileLocation):
@@ -25,13 +24,6 @@ def getPage(requestPath, lang):
         response = generateYaml(lang, requestPath, fileContent)
         break
 
-      if fileLocation.endswith('_generated.md'):
-        # _generated.md are special cased and only used in the Dev and Staging
-        # environment, otherwise we'll ignore them.
-        requestPath = os.path.join(requestPath, '_generated')
-        response = devsitePage.getPage(requestPath, lang)
-        break
-
       if fileLocation.endswith('index.md'):
         # index.md are treated like other devsite pages, so just use the
         # devsitePage rendering template.
@@ -39,6 +31,11 @@ def getPage(requestPath, lang):
         response = devsitePage.getPage(requestPath, lang)
         break
 
+  if response is None:
+    if (requestPath.startswith('showcase/') or
+        requestPath.startswith('shows/') or requestPath.startswith('updates/')):
+      requestPath = os.path.join(requestPath, '_generated')
+      response = devsitePage.getPage(requestPath, lang)
   return response
 
 
