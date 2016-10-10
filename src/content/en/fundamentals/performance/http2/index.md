@@ -13,7 +13,7 @@ description: HTTP/2 (or h2) is a binary protocol that brings push, multiplexing 
 Note: The following content is an excerpt from [High Performance Browser
 Networking](http://shop.oreilly.com/product/0636920028048.do) (O'Reilly, Ilya
 Grigorik). For full version and related content, see
-[hpbn.co](https://hpbn.co/).
+[hpbn.co](https://hpbn.co/){: .external }.
 
 HTTP/2 will make our applications faster, simpler, and more robust — a rare
 combination — by allowing us to undo many of the HTTP/1.1 workarounds previously
@@ -305,7 +305,7 @@ dependency indicates that, if possible, the parent stream should be allocated
 resources ahead of its dependencies. In other words, "Please process and deliver
 response D before response C".
 
-Streams that share the same parent (i.e., sibling streams) should be allocated
+Streams that share the same parent (in other words, sibling streams) should be allocated
 resources in proportion to their weight. For example, if stream A has a weight
 of 12 and its one sibling B has a weight of 4, then to determine the proportion
 of the resources that each of these streams should receive:
@@ -371,7 +371,7 @@ lived, bulk data transfers. By reusing the same connection, HTTP/2 is able to
 both make more efficient use of each TCP connection, and also significantly
 reduce the overall protocol overhead. Further, the use of fewer connections
 reduces the memory and processing footprint along the full connection path
-(i.e., client, intermediaries, and origin servers). This reduces the overall
+(in other words, client, intermediaries, and origin servers). This reduces the overall
 operational costs and improves network utilization and capacity. As a result,
 the move to HTTP/2 should not only reduce network latency, but also help
 improve throughput and reduce the operational costs.
@@ -480,7 +480,7 @@ delivery order is critical: the client needs to know which resources the server
 intends to push to avoid creating duplicate requests for these
 resources. The simplest strategy to satisfy this requirement is to send all
 PUSH_PROMISE frames, which contain just the HTTP headers of the promised
-resource, ahead of the parent’s response (i.e., DATA frames).
+resource, ahead of the parent’s response (in other words, DATA frames).
 
 Once the client receives a PUSH_PROMISE frame it has the option to decline the
 stream (via a RST_STREAM frame) if it wants to. (This might occurr for example
@@ -550,7 +550,7 @@ latency:
 
 > On the lower-bandwidth DSL link, in which the upload link is only 375 Kbps,
 > request header compression in particular, led to significant page load time
-> improvements for certain sites (i.e., those that issued large number of
+> improvements for certain sites (in other words, those that issued large number of
 > resource requests). We found a reduction of 45–1142 ms in page load time
 > simply due to header compression. [*(SPDY whitepaper,
 > chromium.org)*](https://www.chromium.org/spdy/spdy-whitepaper)
@@ -567,9 +567,9 @@ For full details of the HPACK compression algorithm, see
 
 ## Further reading:
 
-* [“HTTP/2”](https://hpbn.co/http2/) 
+* [“HTTP/2”](https://hpbn.co/http2/){: .external } 
     – The full article by Ilya Grigorik
-* [“Setting up HTTP/2”](https://surma.link/things/h2setup/) 
+* [“Setting up HTTP/2”](https://surma.link/things/h2setup/){: .external } 
     – How to set up HTTP/2 in different backends by Surma
 * [“HTTP/2 is here, let’s optimize!”](https://docs.google.com/presentation/d/1r7QXGYOLCh4fcUq0jDdDwKJWNqWK1o4xMtYpKZCJYjM/edit#slide=id.p19) 
     – Presentation by Ilya Grigorik from Velocity 2015

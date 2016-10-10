@@ -40,7 +40,7 @@ Note: Use WASD to zoom and pan through the Flame Chart. Shift-drag to draw a sel
 
 ## Frame Viewer
 
-The art of [layer compositing](http://www.html5rocks.com/en/tutorials/speed/layers/) is another aspect of the browser that has been mostly hidden from developers. When used sparingly and with care, layers can help avoid costly re-paints and yield huge performance boosts. But it’s often not obvious to predict how the browser will composite your content. Using the Timeline’s new __Paint__ capture option, you can visualize composited layers at each frame of a recording.
+The art of [layer compositing](http://www.html5rocks.com/en/tutorials/speed/layers/){: .external } is another aspect of the browser that has been mostly hidden from developers. When used sparingly and with care, layers can help avoid costly re-paints and yield huge performance boosts. But it’s often not obvious to predict how the browser will composite your content. Using the Timeline’s new __Paint__ capture option, you can visualize composited layers at each frame of a recording.
 
 When you select a gray frame bar above the __Main Thread__, its __Layers__ panel provides a visual model of the layers that compose your app.
 

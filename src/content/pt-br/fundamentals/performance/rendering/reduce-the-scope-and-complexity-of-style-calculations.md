@@ -85,7 +85,7 @@ Neste ponto, há um evento Recalcular Estilo, de longa execução, que leva um p
 Se clicar no evento, você recebe uma pilha de chamadas, que indica o local em seu JavaScript responsável por acionar a mudança de estilo. Além disso, você recebe vários elementos que foram afetados pela mudança (nesse caso, um pouco mais de 400 elementos) e quanto tempo levou para realizar os cálculos de estilo. Você pode usar essa informação para tentar localizar uma correção em seu código.
 
 ## Use o Block, Element, Modifier
-Abordagens para codificação como [BEM (Block, Element, Modifier)](https://bem.info/) na realidade agrupam no seletor os benefícios de desempenho correspondentes acima porque recomenda uma única classe e, quando uma hierarquia for necessária, também é agrupada no nome da classe:
+Abordagens para codificação como [BEM (Block, Element, Modifier)](https://bem.info/){: .external } na realidade agrupam no seletor os benefícios de desempenho correspondentes acima porque recomenda uma única classe e, quando uma hierarquia for necessária, também é agrupada no nome da classe:
 
 
     .list { }
@@ -105,6 +105,6 @@ Se não gosta do BEM, há outras formas de abordar seu CSS, mas as consideraçõ
 ## Recursos
 
 * [Invalidação de estilo no Blink](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
-* [BEM (Block, Element, Modifier)](https://bem.info/)
+* [BEM (Block, Element, Modifier)](https://bem.info/){: .external }
 
 

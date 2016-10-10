@@ -15,7 +15,7 @@ book_path: /web/shows/_book.yaml
 </div>
 
 
-At [Chrome Dev Summit 2014](https://developer.chrome.com/devsummit/) there was a
+At [Chrome Dev Summit 2014](https://developer.chrome.com/devsummit/){: .external } there was a
 whole host of topics and brand spanking new API's covered, but its not all about
 the new and shiny.
 

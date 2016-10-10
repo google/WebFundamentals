@@ -234,11 +234,12 @@
             <form class="devsite-utility-footer-language">
               <select id="langSelector" class="kd-select">
                 <option value="ar">العربية‬</option>
+                <option value="id">Bahasa Indonesia</option>
                 <option value="de">Deutsch</option>
                 <option value="en">English</option>
                 <option value="es">Español</option>
                 <option value="fr">Français</option>
-                <option value="id">Bahasa Indonesia</option>
+                <option value="hi">Hindi</option>
                 <option value="it">Italiano</option>
                 <option value="iw">עִבְרִית</option>
                 <option value="ja">日本語</option>

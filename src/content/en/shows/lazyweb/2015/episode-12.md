@@ -25,7 +25,7 @@ Jafar Husain explains the power of ES6 Generators and async functions, Marcy Sut
 
 ### AWESOME AUTOMATED A11Y
 <https://www.youtube.com/watch?v=-XUmf_RPF8k&feature=youtu.be>
-<https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en>
+<https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb>
 <https://angular.github.io/protractor/#/>
 
 ### WONDERFUL WORLD OF SVG
@@ -58,9 +58,9 @@ Jafar Husain explains the power of ES6 Generators and async functions, Marcy Sut
 Let us know what you think on Twitter [#LazyWebShow](https://twitter.com/search?q=%23lazywebshow)
 
 For more news on the Web, check out these resources:
-- [JavaScript Weekly](http://javascriptweekly.com/)
-- [Open Web Platform Daily](http://webplatformdaily.org/)
-- [HTML5 Weekly](http://html5weekly.com/)
+- [JavaScript Weekly](http://javascriptweekly.com/){: .external }
+- [Open Web Platform Daily](http://webplatformdaily.org/){: .external }
+- [HTML5 Weekly](http://html5weekly.com/){: .external }
 
 Subscribe to the Google Developers channel at: [https://goo.gl/mQyv5L](https://goo.gl/mQyv5L)
 

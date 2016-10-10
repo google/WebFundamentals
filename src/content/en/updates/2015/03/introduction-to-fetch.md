@@ -18,8 +18,8 @@ description: The fetch() API is landing in the window object and is looking to r
 simpler and cleaner API, avoiding callback hell and having to remember the complex API of
 XMLHttpRequest.
 
-The [Fetch API](https://fetch.spec.whatwg.org/) has been available in the
-[Service Worker](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/) global
+The [Fetch API](https://fetch.spec.whatwg.org/){: .external } has been available in the
+[Service Worker](https://slightlyoff.github.io/ServiceWorker/spec/service_worker/){: .external } global
 scope since Chrome 40, but it'll be enabled in the window scope in Chrome 42.
 There is also a rather fetching [polyfill by GitHub](https://github.com/github/fetch) that you can use today.
 
@@ -84,7 +84,7 @@ We start by checking that the response status is 200 before parsing the response
 as JSON.
 
 The response of a `fetch()` request is a
-[Stream](https://streams.spec.whatwg.org/)
+[Stream](https://streams.spec.whatwg.org/){: .external }
 object, which means that when we call the `json()` method, a Promise is returned
 since the reading of the stream will happen asynchronously.
 

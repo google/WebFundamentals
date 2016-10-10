@@ -24,7 +24,7 @@ Users will be accessing your sites and services from a multitude of devices with
 
 + Ensure you have a good keyboard-only user experience
 + Express the semantics of your interface with correct element choice and ARIA
-+ Use [ChromeVox](http://www.chromevox.com/) on desktop and TalkBack on Android to test.
-+ Try the [Accessibility Developer Tools Chrome extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb?hl=en)
++ Use [ChromeVox](http://www.chromevox.com/){: .external } on desktop and TalkBack on Android to test.
++ Try the [Accessibility Developer Tools Chrome extension](https://chrome.google.com/webstore/detail/accessibility-developer-t/fpkknkljclfencbdbgkenhalefipecmb)
 +  A more diverse audience is getting online, which further amplifies the need of making your sites accessible
 

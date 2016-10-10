@@ -58,9 +58,9 @@ Wroblewski)](http://www.lukew.com/ff/entry.asp?1514), являются наде�
 
 Сайты, созданные с использованием этого шаблона:
 
- * [A List Apart](http://mediaqueri.es/ala/)
- * [Media Queries](http://mediaqueri.es/)
- * [SimpleBits](http://simplebits.com/)
+ * [A List Apart](http://mediaqueri.es/ala/){: .external }
+ * [Media Queries](http://mediaqueri.es/){: .external }
+ * [SimpleBits](http://simplebits.com/){: .external }
 
 
 <pre class="prettyprint">
@@ -92,8 +92,8 @@ CSS order.  На экране шириной более 800 пикселей о�
 
 Сайты, созданные с использованием этого шаблона:
 
- * [Modernizr](http://modernizr.com/)
- * [Wee Nudge](http://weenudge.com/)
+ * [Modernizr](http://modernizr.com/){: .external }
+ * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
@@ -120,10 +120,10 @@ CSS order.  На экране шириной более 800 пикселей о�
 
 Сайты, созданные с использованием этого шаблона:
 
- * [Food Sense](http://foodsense.is/)
+ * [Food Sense](http://foodsense.is/){: .external }
  * [Seminal Responsive Design
   Example](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
- * [Andersson-Wise Architects](http://www.anderssonwise.com/)
+ * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
@@ -149,9 +149,9 @@ CSS order.  На экране шириной более 800 пикселей о�
 
 Сайты, созданные с использованием этого шаблона:
 
- * [Opera's Shiny Demos](http://shinydemos.com/)
- * [Ginger Whale](http://gingerwhale.com/)
- * [Future Friendly](http://futurefriendlyweb.com/)
+ * [Opera's Shiny Demos](http://shinydemos.com/){: .external }
+ * [Ginger Whale](http://gingerwhale.com/){: .external }
+ * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
@@ -182,8 +182,8 @@ CSS order.  На экране шириной более 800 пикселей о�
 
  * [HTML5Rocks
   Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
- * [Google Nexus](http://www.google.com/nexus/)
- * [Сайт Facebook для мобильных устройств](https://m.facebook.com/)
+ * [Google Nexus](http://www.google.com/nexus/){: .external }
+ * [Сайт Facebook для мобильных устройств](https://m.facebook.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}

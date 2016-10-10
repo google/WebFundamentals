@@ -34,11 +34,11 @@ Let’s explore storytelling for the collective intelligence. Senongo Akpem, cre
 
 [https://www.youtube.com/watch?v=t7GGZwt5yVU](https://www.youtube.com/watch?v=t7GGZwt5yVU) 
 
-[http://www.pixelfable.com/](http://www.pixelfable.com/)
+[http://www.pixelfable.com/](http://www.pixelfable.com/){: .external }
 
 [http://anidealiveson.org/2014](http://anidealiveson.org/2014)
 
-[http://unahistoriaquedalavuelta.com/en/](http://unahistoriaquedalavuelta.com/en/)
+[http://unahistoriaquedalavuelta.com/en/](http://unahistoriaquedalavuelta.com/en/){: .external }
 
 [http://lostnigeria.com/air-travel/](http://lostnigeria.com/air-travel/)
 
@@ -90,11 +90,11 @@ Programmatic copy and paste is coming to Firefox. A recent intent to implement a
 Let us know what you think on Twitter #LazyWebShow
 
 For more news on the Web, check out these resources:
-JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/)
+JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/){: .external }
 
-Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/)
+Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/){: .external }
 
-HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/)
+HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/){: .external }
 
 Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
 

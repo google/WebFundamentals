@@ -211,7 +211,11 @@ def renderDevSiteContent(content, lang='en'):
     replaceWith += 'style="width: 100%;'
     if fbHeight:
       replaceWith += 'height:' + fbHeight.group(1) + ';'
+    else:
+      replaceWith += 'height: 100px;'
     replaceWith += '" '
+    # The sandbox attr will emulate being on a different origin
+    replaceWith += '" sandbox="allow-forms allow-orientation-lock allow-pointer-lock allow-popups allow-presentation allow-scripts allow-top-navigation" '
     replaceWith += 'src="' + fbMemcacheKey + '"></iframe>'
     content = content.replace(framebox, replaceWith)
     memcache.set(fbMemcacheKey, fbContent)
@@ -247,7 +251,7 @@ def getInclude(includeTag, lang='en'):
     result += '<div id="gplus-comments">'
     result += 'Comments aren\'t supported in the development or staging environment, sorry.'
     result += '</div></div>'
-  else:
+  elif fileName.startswith('web/'):
     result = readFile(fileName, lang)
   if result is None:
     return 'Warning: Unable to find include <code>' + fileName + '</code>'

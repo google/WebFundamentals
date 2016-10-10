@@ -24,7 +24,7 @@ Scrolling at 60fps doesn't have to be a feat of engineering! With core-list you 
 - [core-list docs](https://www.polymer-project.org/0.5/docs/elements/core-list.html)
 - [core-image docs](https://www.polymer-project.org/0.5/docs/elements/core-image.html)
 - [Layout attributes](https://www.polymer-project.org/0.5/docs/polymer/layout-attrs.html)
-- [Faker.js](https://github.com/marak/Faker.js/)
+- [Faker.js](https://github.com/marak/Faker.js/){: .external }
 - [core-list bug on GitHub](https://github.com/Polymer/core-list/issues/62)
 - [Moar routing with... more-routing](/web/shows/polycasts/season-2/more-routing-with-more-routing)
 - [Routing 101](/web/shows/polycasts/season-2/routing-101)

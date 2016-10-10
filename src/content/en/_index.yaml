@@ -45,14 +45,14 @@ landing_page:
       buttons:
       - label: Learn more
         path: /web/fundamentals/security/
-      - label: Encrypting Data in Transit
-        path: /web/fundamentals/security/encrypt-in-transit/
+      - label: Why HTTPS
+        path: /web/fundamentals/security/encrypt-in-transit/why-https
         classname: wf-small-link
       - label: Content Security Policy
         path: /web/fundamentals/security/csp/
         classname: wf-small-link
-        label: Prevent Mixed Content
-        path: /web/fundamentals/security/prevent-mixed-content/
+      - label: Prevent Mixed Content
+        path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
         classname: wf-small-link
 
     - heading: Optimize performance

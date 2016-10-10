@@ -30,7 +30,7 @@ Online purchase forms are user-intensive, difficult to use, slow to load and ref
 
 Most of the problems that lead to abandonment can be directly traced to purchase forms. Each app or site has its own data entry and validation process, and users often find they must enter the same information at every app's purchase point. Also, application developers struggle to create purchase flows that support multiple unique payment methods; even small differences in payment method requirements can complicate the form completion and submission process.
 
-Any system that improves or solves one or more of those problems is a welcome change. We started solving the problem already with [Autofill](https://developers.google.com/web/updates/2015/06/checkout-faster-with-autofill), but now we'd like to talk about a more comprehensive solution.
+Any system that improves or solves one or more of those problems is a welcome change. We started solving the problem already with [Autofill](/web/updates/2015/06/checkout-faster-with-autofill), but now we'd like to talk about a more comprehensive solution.
 
 ## Introducing the Payment Request API {: #introducing }
 
@@ -333,7 +333,7 @@ In order to reject an address for reasons such as non-supported region, pass `de
 
 <div style="clear:both;"></div>
 
-Note: Resolving <code>shippingaddresschange</code> event and leaving <code>details.shippingOptions</code> as an empty array also means address rejection (i.e. you cannot ship to that location). Always make sure your shipping options are up-to-date and match whatever address the user provided.
+Note: Resolving <code>shippingaddresschange</code> event and leaving <code>details.shippingOptions</code> as an empty array also means address rejection (in other words you cannot ship to that location). Always make sure your shipping options are up-to-date and match whatever address the user provided.
 
 
     payment.addEventListener('shippingaddresschange', e => {

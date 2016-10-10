@@ -169,7 +169,7 @@ Abaixo está o JavaScript que você precisará escrever para recriar a transiç�
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">Veja a amostra</a>
 
-Esse código se torna muito complexo e difícil de gerenciar conforme é expandido para abordar mais casos, portanto, de forma geral, o ideal é escolher uma das várias bibliotecas JavaScript disponíveis para animação. Se já estiver usando o jQuery em seu projeto, é recomendável continuar com ele e usar as funções [`.animate()`](http://api.jquery.com/animate/). Por outro lado, se precisar de uma biblioteca exclusiva, veja a [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), que é excelente. Há uma versão mais leve chamada TweenLite, mais simples do ponto de vista de tamanho de arquivo.
+Esse código se torna muito complexo e difícil de gerenciar conforme é expandido para abordar mais casos, portanto, de forma geral, o ideal é escolher uma das várias bibliotecas JavaScript disponíveis para animação. Se já estiver usando o jQuery em seu projeto, é recomendável continuar com ele e usar as funções [`.animate()`](http://api.jquery.com/animate/){: .external }. Por outro lado, se precisar de uma biblioteca exclusiva, veja a [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), que é excelente. Há uma versão mais leve chamada TweenLite, mais simples do ponto de vista de tamanho de arquivo.
 
 Com as animações JavaScript você tem total controle dos estilos dos elementos a cada etapa, e pode desacelerar a animação, pausar, parar, inverter e manipular conforme achar adequado.
 

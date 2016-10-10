@@ -29,7 +29,7 @@ Translated By:
 <img class="center" src="img/art-direction.png" alt="艺术指导示例"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-其余时候，图片也许需要更大幅度的修改：更改比例，裁剪甚至更换整张图片。这种情况里，改变图片通常称作艺术指导 (art direction)。请访问 [responsiveimages.org/demos/](http://responsiveimages.org/demos/) 查看更多例子。
+其余时候，图片也许需要更大幅度的修改：更改比例，裁剪甚至更换整张图片。这种情况里，改变图片通常称作艺术指导 (art direction)。请访问 [responsiveimages.org/demos/](http://responsiveimages.org/demos/){: .external } 查看更多例子。
 
 
 {% include "web/_shared/udacity/ud882.html" %}

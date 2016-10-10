@@ -18,9 +18,9 @@ fast, and offline-first.
 
 ## Overview
 
-This year’s [Google I/O 2015 web app](https://events.google.com/io2015/) was
+This year’s [Google I/O 2015 web app](https://events.google.com/io2015/){: .external } was
 written by Google’s Developer Relations team, based on designs by our friends
-at [Instrument](http://www.instrument.com/), who wrote the nifty
+at [Instrument](http://www.instrument.com/){: .external }, who wrote the nifty
 [audio/visual experiment](http://www.instrument.com/news/google-io-2015). Our
 team’s mission was to ensure that the I/O web app (which I’ll refer to by
 its codename, IOWA) showcased everything the modern web could do. A full
@@ -52,7 +52,7 @@ requirements in mind.
 
 ### Build-time Integration
 
-`sw-precache` with IOWA’s [`gulp`](http://gulpjs.com/)-based build process,
+`sw-precache` with IOWA’s [`gulp`](http://gulpjs.com/){: .external }-based build process,
 and we rely on a series of [glob](https://github.com/isaacs/node-glob) patterns
 to ensure that we generate a complete list of all the static resources IOWA uses.
 
@@ -267,11 +267,11 @@ queued updates had been applied.
 In a similar vein, we implemented a handler to queue any failed Google
 Analytics requests and attempt to replay them later, when the network was
 hopefully available. With this approach, being offline doesn’t mean sacrificing
-the insights Google Analytics offers. We added the [`qt`](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
+the insights Google Analytics offers. We added the [`qt`](/analytics/devguides/collection/protocol/v1/parameters#qt)
 parameter to each queued request, set to the amount of time that had passed
 since the request was first attempted, to ensure that a proper event
 attribution time made it to the Google Analytics backend. Google Analytics
-[officially supports](https://developers.google.com/analytics/devguides/collection/protocol/v1/parameters#qt)
+[officially supports](/analytics/devguides/collection/protocol/v1/parameters#qt)
 values for `qt` of up to only 4 hours, so we made a best-effort attempt to replay those
 requests as soon as possible, each time the service worker started up.
 

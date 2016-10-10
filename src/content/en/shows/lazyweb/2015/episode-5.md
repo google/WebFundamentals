@@ -24,8 +24,8 @@ description: Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TC
 [http://channel9.msdn.com/Events/Build/2015/3-680](http://channel9.msdn.com/Events/Build/2015/3-680)
 
 [https://code.visualstudio.com//](https://code.visualstudio.com//)
-[http://vorlonjs.com/](http://vorlonjs.com/)
-[http://manifoldjs.com/](http://manifoldjs.com/)
+[http://vorlonjs.com/](http://vorlonjs.com/){: .external }
+[http://manifoldjs.com/](http://manifoldjs.com/){: .external }
 
 ### WHAT’S UP TCP!
 [https://vimeo.com/125657469](https://vimeo.com/125657469)
@@ -36,20 +36,20 @@ description: Microsoft renames Spartan to Microsoft Edge, Paul Irish explains TC
 [http://dashboard.sitespeed.io/dashboard/db/metrics-for-one-page-american-airlines-home-page](http://dashboard.sitespeed.io/dashboard/db/metrics-for-one-page-american-airlines-home-page)
 [http://dashboard.sitespeed.io/dashboard/db/summary-of-a-site-america-airlines](http://dashboard.sitespeed.io/dashboard/db/summary-of-a-site-america-airlines)
 [http://dashboard.sitespeed.io/dashboard/db/using-webpagetest](http://dashboard.sitespeed.io/dashboard/db/using-webpagetest)
-[http://www.docker.com/](http://www.docker.com/)
+[http://www.docker.com/](http://www.docker.com/){: .external }
 
 ### DART FOR MOBILE
 [https://www.youtube.com/watch?v=PnIWl33YMwA&list=PLOU2XLYxmsIIQorIS8gagUiMau9S84vZV&index=18](https://www.youtube.com/watch?v=PnIWl33YMwA&list=PLOU2XLYxmsIIQorIS8gagUiMau9S84vZV&index=18)
 
 [https://github.com/domokit/sky_sdk](https://github.com/domokit/sky_sdk)
-[https://www.dartlang.org/events/2015/summit/](https://www.dartlang.org/events/2015/summit/)
+[https://www.dartlang.org/events/2015/summit/](https://www.dartlang.org/events/2015/summit/){: .external }
 
 ### WEIGHT DOESN’T MEAN WAIT
 [http://www.filamentgroup.com/lab/weight-wait.html](http://www.filamentgroup.com/lab/weight-wait.html)
 
 [http://www.webpagetest.org/video/compare.php?tests=150506_2G_ANE-r:1-c:1](http://www.webpagetest.org/video/compare.php?tests=150506_2G_ANE-r:1-c:1)
 
-[https://developers.google.com/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F](https://developers.google.com/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F) 
+[https://developers.google.com/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F](/speed/pagespeed/insights/?url=www.wired.com%2F2015%2F03%2Four-new-site%2F) 
 
 ### CUTTING IN LINE
 
@@ -74,10 +74,10 @@ Original music by Terra Monk ([terramonk.com](http://terramonk.com))
 Let us know what you think on Twitter #LazyWebShow
 
 For more news on the Web, check out these resources:
-JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/)
+JavaScript Weekly: [http://javascriptweekly.com/](http://javascriptweekly.com/){: .external }
 
-Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/)
+Open Web Platform Daily: [http://webplatformdaily.org/](http://webplatformdaily.org/){: .external }
 
-HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/)
+HTML5 Weekly: [http://html5weekly.com/](http://html5weekly.com/){: .external }
 
 Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)

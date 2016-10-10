@@ -312,7 +312,7 @@ HTML 페이지뿐만 아니라 스타일시트, JavaScript, 리디렉션 규칙,
 
 
 페이지에 &lt;link rel="canonical" href="https://…"/&gt; 태그를 설정합니다. [그러면
-검색 엔진](https://support.google.com/webmasters/answer/139066?hl=en)이
+검색 엔진](https://support.google.com/webmasters/answer/139066)이
 사이트에 액세스할 수 있는 가장 좋은 방법을 파악하는 데 도움이 됩니다.
 
 대부분의 웹 서버는 단순한 리디렉션 기능을 제공합니다. 301(영구적으로 이동됨)을 사용하여

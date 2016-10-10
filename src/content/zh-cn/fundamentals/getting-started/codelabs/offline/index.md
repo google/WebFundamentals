@@ -32,7 +32,7 @@ Horner](https://airhorner.com)。它是 Web Audio API 来播放并操作汽笛�
 ### 你需要什么
 
 * Chrome 44 或更高版本
-* 对 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/) 的基本理解
+* 对 [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external } 的基本理解
 * 简单的编码能力
 * 一个文本编辑器
 * Python 或者一个简单的本地 web 服务器

@@ -19,11 +19,11 @@ boilerplate service worker code.
 [Service Worker Precache](https://github.com/GoogleChrome/sw-precache/) (`sw-precache`) is a
 module for generating a service worker that
 precaches resources. The module can be used in JavaScript-based build scripts,
-like those written with [`gulp`](http://gulpjs.com/), and it also provides a
+like those written with [`gulp`](http://gulpjs.com/){: .external }, and it also provides a
 [command-line interface](https://github.com/GoogleChrome/sw-precache/#command-line-interface). You can use the module
 directly, or if you'd prefer, use of the [wrappers](https://github.com/GoogleChrome/sw-precache/#wrappers-and-starter-kits)
 around `sw-precache` for specific build environments, like
-[`webpack`](https://webpack.github.io/).
+[`webpack`](https://webpack.github.io/){: .external }.
 
 It can be [used alongside](https://github.com/GoogleChrome/sw-precache/sw-precache-and-sw-toolbox.md) the [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox)
 library, which works well when following the App Shell + dynamic content model.
@@ -87,4 +87,4 @@ work offline.
 The [Service Workers in Production](/web/showcase/case-study/service-workers-iowa)
 case study takes a close look at how the `sw-precache` and `sw-toolbox` 
 libraries were used together to power the
-[Google I/O 2015 web app](https://events.google.com/io2015/).
+[Google I/O 2015 web app](https://events.google.com/io2015/){: .external }.

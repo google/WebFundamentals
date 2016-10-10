@@ -26,11 +26,11 @@ Let's see an example, which animates the background color from red to green-
     
 
 This method is supported in all modern browsers, with a great polyfill fallback (more on that later).
-Native support for this method - and its player object - became widely available as part of [Chrome 39](https://developers.google.com/web/updates/2014/12/web-animation-playback).
-It's [also natively available](http://caniuse.com/#feat=web-animation) in Opera, and is under [active development](https://birtles.github.io/areweanimatedyet/) for Firefox.
+Native support for this method - and its player object - became widely available as part of [Chrome 39](/web/updates/2014/12/web-animation-playback).
+It's [also natively available](http://caniuse.com/#feat=web-animation) in Opera, and is under [active development](https://birtles.github.io/areweanimatedyet/){: .external } for Firefox.
 This is a powerful primitive that deserves a place in your toolbox.
 
-> Note! For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on Web Fundamentals](https://developers.google.com/web/fundamentals/look-and-feel/animations).
+> Note! For a primer on the different approaches to animation on the web, including Web Animations, check out [Modern Animation Fundamentals on YouTube](https://www.youtube.com/watch?v=WaNoqBAp8NI) and [Animations on Web Fundamentals](/web/fundamentals/look-and-feel/animations).
 
 ## Codelabs
 

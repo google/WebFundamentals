@@ -35,7 +35,7 @@ See below for some more notes on what these different pieces of machinery give y
 
 ## [PowerShell](https://technet.microsoft.com/en-us/scriptcenter/dd742419.aspx) (shell)
 
-* Significantly closer to a real 'shell' than cmd.exe, offering us a powerful scripting environment for task automation. It's fair to compare it to [Bash](http://www.gnu.org/software/bash/) or [zsh](http://www.zsh.org/). 
+* Significantly closer to a real 'shell' than cmd.exe, offering us a powerful scripting environment for task automation. It's fair to compare it to [Bash](http://www.gnu.org/software/bash/){: .external } or [zsh](http://www.zsh.org/). 
 * Autocompletes directory and filenames
 * Autocompletes application names
 * Has integrated aliases and commands (called cmdlets - e.g `Select-String` is like `grep`, `Invoke-Elevated` is like `sudo`, `Sort-Object` is like `sort`, `Get-Process` lists all active processes). If moving from another shell to PS, `Set-Alias` lets you map aliases you're used to to Windows equivalents. For example: `Set-Alias server python -m http.server 8000` launches a Python server when the `server` alias is used.
@@ -61,10 +61,10 @@ If you're interested in trivia, here's an answer to why MS created PowerShell fr
 
 ![](images/window-commandline/psreadline.jpg)
 
-Alternatively, you can use [Clink](http://mridgers.github.io/clink/), which has a similiar set of features but wasn't strictly written for PowerShell.
+Alternatively, you can use [Clink](http://mridgers.github.io/clink/){: .external }, which has a similiar set of features but wasn't strictly written for PowerShell.
 
 
-## [ConEmu](https://conemu.github.io/) (console host)
+## [ConEmu](https://conemu.github.io/){: .external } (console host)
 
 * An advanced console emulator where you can run your shell of choice.
 * Supports opening multiple terminals in different tabs. Makes it trivial to launch terminals as different users.
@@ -81,10 +81,10 @@ Alternatively, you can use [Clink](http://mridgers.github.io/clink/), which has 
 ![](images/window-commandline/conemu-settings.jpg
 )
 
-Some folks still enjoy using [Console2](http://sourceforge.net/projects/console/) and Scott Hanselman has a blog [post](http://www.hanselman.com/blog/Console2ABetterWindowsCommandPrompt.aspx) written about it.
+Some folks still enjoy using [Console2](http://sourceforge.net/projects/console/){: .external } and Scott Hanselman has a blog [post](http://www.hanselman.com/blog/Console2ABetterWindowsCommandPrompt.aspx) written about it.
 
 
-## [Cmder](http://cmder.net/)
+## [Cmder](http://cmder.net/){: .external }
 
 Worth a passing note is Cmder - a console emulation package that combines ConEmu, Clink and msysgit - giving you Git helpers. Cmder basically gives you a prettier experience to ConEmu by default via it's Monokai color scheme.
 

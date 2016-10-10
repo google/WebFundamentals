@@ -29,7 +29,7 @@ user demand for fast and light applications and pages. Let's fix that.
 
 ![Weblight stats](/web/updates/images/2016/02/save-data/google-weblight.png)
 
-> _"Google shows faster, lighter pages to people [searching on slow mobile connections in selected countries](https://support.google.com/webmasters/answer/6211428?hl=en)... **Our experiments show that optimized pages load four times faster than the original page and use 80% fewer bytes. Because these pages load so much faster, we also saw a 50% increase in traffic to these pages.**"_
+> _"Google shows faster, lighter pages to people [searching on slow mobile connections in selected countries](https://support.google.com/webmasters/answer/6211428)... **Our experiments show that optimized pages load four times faster than the original page and use 80% fewer bytes. Because these pages load so much faster, we also saw a 50% increase in traffic to these pages.**"_
 
 The number of 2G connections is [finally on the decline](http://www.gsmamobileeconomy.com/GSMA_Global_Mobile_Economy_Report_2015.pdf). However, [2G was still the dominant network technology](http://www.gsmamobileeconomy.com/GSMA_Global_Mobile_Economy_Report_2015.pdf) by number of connections in 2015. The penetration and availability of 3G and 4G networks is growing rapidly, but the associated ownership costs and network constraints are still a significant factor for hundreds of millions of users:
 
@@ -50,13 +50,13 @@ optimizations to reduce the amount of data required to render the page. For
 example, when enabled, some browsers may request lower resolution images, defer loading of some resources, or route requests through a proxy service that can apply other content-specific optimizations&mdash;e.g. recompress images, compress text resources, and so on.
 
 The savings from such optimizations vary, but as one data point, the [Chrome Data Saver](https://developer.chrome.com/multidevice/data-compression) feature
-can [reduce the size of pages by 50%](https://developer.chrome.com/multidevice/data-compression). Other popular proxy browsers such as [Opera browsers](http://www.opera.com/turbo) and [Yandex.Browser](https://play.google.com/store/apps/details?id=com.yandex.browser&hl=en) offer similar functionality. However, while these proxy browsers are popular with users, they have their own set of limitations:
+can [reduce the size of pages by 50%](https://developer.chrome.com/multidevice/data-compression). Other popular proxy browsers such as [Opera browsers](http://www.opera.com/turbo) and [Yandex.Browser](https://play.google.com/store/apps/details?id=com.yandex.browser) offer similar functionality. However, while these proxy browsers are popular with users, they have their own set of limitations:
 
 * Proxy browsers achieve most of their savings by recompressing images into more efficient formats and with lower quality, and applying text compression where it was omitted. In other words, they can only optimize what you give them; they can't build and deliver an alternate and better "lightweight" experience.
 
 * Most proxy browsers restrict themselves to resources delivered over HTTP. Secure connections (HTTPS) are routed directly from the client to the destination, bypassing the proxies.
 
-On the other hand, transcoding services, such as the ["web light" experience offered by Google search](https://support.google.com/webmasters/answer/6211428?hl=en), often take a more drastic approach and may reformat the site to make it accessible to users on very slow networks. This yields a different set of disadvantages and limitations:
+On the other hand, transcoding services, such as the ["web light" experience offered by Google search](https://support.google.com/webmasters/answer/6211428), often take a more drastic approach and may reformat the site to make it accessible to users on very slow networks. This yields a different set of disadvantages and limitations:
 
 * Our applications may look very different because we can't control how the
   information is presented to the user, and may omit or ignore important site
@@ -82,13 +82,13 @@ other user preferences.
 
 ![Save-Data header in DevTools](/web/updates/images/2016/02/save-data/data-saver-chrome.png)
 
-In turn, if your application is [using a service worker](https://developers.google.com/web/fundamentals/getting-started/push-notifications/step-03?hl=en), it can inspect the request headers and apply relevant logic to optimize the experience. Alternatively, the server can look for the advertised preferences in the `Save-Data` request header and return an alternate response&mdash;e.g. different markup, smaller images and video, and so on.
+In turn, if your application is [using a service worker](/web/fundamentals/getting-started/push-notifications/step-03), it can inspect the request headers and apply relevant logic to optimize the experience. Alternatively, the server can look for the advertised preferences in the `Save-Data` request header and return an alternate response&mdash;e.g. different markup, smaller images and video, and so on.
 
-> _Tip: Are you using [PageSpeed for Apache or Nginx](https://developers.google.com/speed/pagespeed/module/) to optimize your pages? If so, [see  this discussion](https://github.com/pagespeed/mod_pagespeed/issues/1258) to learn how to enable Save-Data savings for your users._
+> _Tip: Are you using [PageSpeed for Apache or Nginx](/speed/pagespeed/module/) to optimize your pages? If so, [see  this discussion](https://github.com/pagespeed/mod_pagespeed/issues/1258) to learn how to enable Save-Data savings for your users._
 
 ## Browser Support
 
-* **Chrome 49+ will advertise `Save-Data`** [whenever the user enables](https://support.google.com/chrome/answer/2392284?hl=en) the "Data Saver" option on mobile, or the "Data Saver" extension on desktop browsers.
+* **Chrome 49+ will advertise `Save-Data`** [whenever the user enables](https://support.google.com/chrome/answer/2392284) the "Data Saver" option on mobile, or the "Data Saver" extension on desktop browsers.
 
 * **Opera 35+ will advertise `Save-Data`** whenever the user enables "[Opera Turbo](http://www.opera.com/computer/features/fast-browser)" mode on desktop, or the "[Data savings](http://www.opera.com/help/mobile/android#turbo)" option on Android browsers.
 

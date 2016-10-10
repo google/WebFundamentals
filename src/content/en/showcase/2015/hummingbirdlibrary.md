@@ -12,7 +12,7 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-[Hummingbird Library](http://hummingbirdlibrary.com/): A refreshingly new
+[Hummingbird Library](http://hummingbirdlibrary.com/){: .external }: A refreshingly new
 frontend to Hummingbird, a popular anime watch-tracker and discovery site.
 
 ### What we like?
@@ -22,7 +22,7 @@ been obsessed with keeping track of what they watched. Popular sites in this
 space include AniDB and MyAnimeList, but [Hummingbird](https://hummingbird.me)
 is the by far best-looking of them all.
 
-Yet, [Hummingbird Library](http://hummingbirdlibrary.com/), which sits on top
+Yet, [Hummingbird Library](http://hummingbirdlibrary.com/){: .external }, which sits on top
 of the existing Hummingbird API, goes one step further, built from scratch
 with Angular and Material Design.
 [Theme color](/web/fundamentals/design-and-ui/browser-customization/)

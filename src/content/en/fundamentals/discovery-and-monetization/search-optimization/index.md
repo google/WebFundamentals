@@ -82,7 +82,7 @@ When serving the desktop version, indicate that there's a mobile version on
 another URL by adding a `link` tag with a `rel="alternate" attribute that points
 to the mobile version in the `href` attribute.
 
-[http://www.example.com/](http://www.example.com/) HTML
+[http://www.example.com/](http://www.example.com/){: .external } HTML
 
 
     <title>...</title>
@@ -96,7 +96,7 @@ version on another URL by adding a `link` tag with a `rel="canonical"` attribute
 that points to the desktop version in the `href` attribute. Help search engines
 understand that the mobile version is explicitly for small screens by adding a `media` attribute with a value of `"only screen and (max-width: 640px)"`.
 
-[http://m.example.com/](http://m.example.com/) HTML
+[http://m.example.com/](http://m.example.com/){: .external } HTML
 
 
     <title>...</title>
@@ -126,7 +126,7 @@ To indicate that the URL serves different HTML depending on user agent, provide 
 desktop and mobile versions separately, and intermediate proxies to cache those
 contents gracefully.
 
-[http://www.example.com/](http://www.example.com/) HTTP Header
+[http://www.example.com/](http://www.example.com/){: .external } HTTP Header
 
 
     HTTP/1.1 200 OK
@@ -137,7 +137,7 @@ contents gracefully.
 
 <img src="imgs/same_url-2x.png" srcset="imgs/same_url.png 1x, imgs/same_url-2x.png 2x" >
 
-To learn more about building URL structure across desktop and mobile, read [about building smartphone-optimized websites](https://developers.google.com/webmasters/smartphone-sites/).
+To learn more about building URL structure across desktop and mobile, read [about building smartphone-optimized websites](/webmasters/smartphone-sites/).
 
 
 ## Control crawling and indexing from search engines
@@ -207,7 +207,7 @@ from crawling `/nogooglebot/` and all contents below this directory.
 
 Learn more about each search engine's bots on their help pages:
 
-* [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_txt)
+* [Google](/webmasters/control-crawl-index/docs/robots_txt)
 * [Bing](http://www.bing.com/webmaster/help/how-to-create-a-robots-txt-file-cb7c31ec)
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/robots-txt.xml)
 
@@ -249,7 +249,7 @@ By changing the value of the `name` attribute to a specific user agent name, you
 
 Other options for the robots meta tag include:  
 
-* [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag)
+* [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/which-robots-metatags-does-bing-support-5198d240)
 * [Yandex](https://help.yandex.com/webmaster/controlling-robot/html.xml)
 
@@ -274,7 +274,7 @@ If you want to narrow the scope to a specific user agent, insert the user agent 
 
 To learn more about X-Robots-Tag:  
 
-* [Google](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag)
+* [Google](/webmasters/control-crawl-index/docs/robots_meta_tag)
 * [Bing](http://www.bing.com/webmaster/help/how-can-i-remove-a-url-or-page-from-the-bing-index-37c07477)
 
 Note: If you disallow crawls using `robots.txt`,  search bots still may index those pages without knowing that you don't want those pages to be indexed. This can happen because:<ul><li>Search bots may find your web pages by following links from other websites.</li><li>Search engines that can't crawl can't detect <code>noindex</code>.</li></ul>

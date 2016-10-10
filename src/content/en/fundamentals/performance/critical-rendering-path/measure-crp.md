@@ -35,7 +35,7 @@ So, what do these timestamps mean?
     * Many JavaScript frameworks wait for this event before they start executing their own logic. For this reason the browser captures the `EventStart` and `EventEnd` timestamps to allow us to track how long this execution took.
 * `domComplete`: as the name implies, all of the processing is complete and
   all of the resources on the page (images, etc.) have finished downloading -
-  i.e. the loading spinner has stopped spinning.
+  in other words, the loading spinner has stopped spinning.
 * `loadEvent`: as a final step in every page load the browser fires an
   `onload` event which can trigger additional application logic.
 
@@ -57,5 +57,5 @@ The above example may seem a little daunting on first sight, but in reality it i
 
 <img src="images/device-navtiming-small.png"  alt="NavTiming demo">
 
-All said and done, we now have some specific milestones to track and a simple function to output these measurements. Note that instead of printing these metrics on the page you can also modify the code to send these metrics to an analytics server ([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784?hl=en)), which is a great way to keep tabs on performance of your pages and identify candidate pages that can benefit from some optimization work.
+All said and done, we now have some specific milestones to track and a simple function to output these measurements. Note that instead of printing these metrics on the page you can also modify the code to send these metrics to an analytics server ([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784)), which is a great way to keep tabs on performance of your pages and identify candidate pages that can benefit from some optimization work.
 

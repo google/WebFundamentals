@@ -21,7 +21,7 @@ Your code editor is your main development tool; you use it to write and save lin
 
 ## Install Sublime text editor
 
-[Sublime](http://www.sublimetext.com/) is a great editor with a solid base level
+[Sublime](http://www.sublimetext.com/){: .external } is a great editor with a solid base level
 of functionality which makes writing code a pleasure. You can install a package
 manager that makes it easy to install plugins and add new functionality.
 
@@ -86,7 +86,7 @@ Pick any color from the palette and add it to your CSS with `ctrl+shift+c`.
 ### Emmet
 
 Add some useful keyboard shortcuts and snippets to your text editor. Check out
-the video on [Emmet.io](http://emmet.io/) for an intro into what it can do (a
+the video on [Emmet.io](http://emmet.io/){: .external } for an intro into what it can do (a
 personal favorite is the 'Toggle Comment' command).
 
 <img src="imgs/emmet-io-example.gif" alt="Demo of the Emmet.io Plugin" />
@@ -113,7 +113,7 @@ Gutter Color shows you a small color sample next to your CSS.
 <img src="imgs/sublime-gutter-color.png" alt="Sublime Gutter Color Screenshot" />
 
 The plugin requires ImageMagick. If you are on Mac OS X, we recommend trying the
-installer from [CactusLabs](http://cactuslab.com/imagemagick/) (you may need to
+installer from [CactusLabs](http://cactuslab.com/imagemagick/){: .external } (you may need to
 restart your machine to get it working).
 
 

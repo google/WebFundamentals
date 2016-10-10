@@ -290,7 +290,7 @@ management capabilities on the client. This is the extensible web in action.
 1. **Where are client hints available?** <br/>
    Shipped in [Chrome 46](https://www.chromestatus.com/feature/5504430086553600). Under 
    consideration in [Firefox](https://bugzilla.mozilla.org/show_bug.cgi?id=935216) and 
-   [Edge](https://dev.modern.ie/platform/status/httpclienthints/). 
+   [Edge](https://dev.modern.ie/platform/status/httpclienthints/){: .external }. 
 
 1. **Why are the client hints opt-in?** <br/>
    We want to minimize overhead for sites that won't use client hints. To enable 
@@ -325,7 +325,7 @@ management capabilities on the client. This is the extensible web in action.
 1. **What about _&lt;insert my favorite hint&gt;_?**<br/>
    ServiceWorker enables developers to intercept and modify (e.g. add new 
    headers) all outgoing requests. As an example, it is easy to add 
-   [NetInfo](https://w3c.github.io/netinfo/)-based information to indicate current connection type -- see 
+   [NetInfo](https://w3c.github.io/netinfo/){: .external }-based information to indicate current connection type -- see 
    "[Capability reporting with ServiceWorker](https://www.igvita.com/2014/12/15/capability-reporting-with-service-worker/)". 
    The "native" hints shipped in Chrome (DPR, Width, Resource-Width) are 
    implemented in the browser because a pure SW-based implementation would delay 

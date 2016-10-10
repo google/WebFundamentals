@@ -12,7 +12,7 @@ description: Web Push now supports payloads! Find out how to take advantage of t
 {% include "web/_shared/contributors/mscales.html" %}
 
 
-Prior to Chrome 50, [push messages](https://developers.google.com/web/updates/2015/03/push-notifications-on-the-open-web)
+Prior to Chrome 50, [push messages](/web/updates/2015/03/push-notifications-on-the-open-web)
 could not contain any payload data. When the ['push' event](https://developer.mozilla.org/en-US/docs/Web/API/PushEvent)
 fired in your service worker, all you knew was that the server was trying to
 tell you something, but not what it might be. You then had to make a follow up
@@ -40,7 +40,7 @@ in transit.
 ## Client-side changes
 
 If you have already
-[implemented push notifications without payloads](https://developers.google.com/web/fundamentals/engage-and-retain/push-notifications/?hl=en)
+[implemented push notifications without payloads](/web/fundamentals/engage-and-retain/push-notifications/)
 then there are only two small changes that you need to make on the client-side.
 
 This first is that when you send the subscription information to your backend

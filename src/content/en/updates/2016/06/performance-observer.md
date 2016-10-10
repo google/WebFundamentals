@@ -5,8 +5,7 @@ description: New in Chrome 52, the Performance Observer interface provides more 
 {# wf_updated_on: 2016-06-08 #}
 {# wf_published_on: 2016-06-08 #}
 {# wf_tags: performance,events,chrome52,javascript #}
-{# wf_featured_snippet: The W3C Performance Timeline specification defines an interface for browsers to provide programmatic access to low level
-timing data. This opens the door to some interesting use cases like custom performance analysis, third party tools and more. #}
+{# wf_featured_snippet: The W3C Performance Timeline specification defines an interface for browsers to provide programmatic access to low level timing data. This opens the door to some interesting use cases like custom performance analysis, third party tools and more. #}
 {# wf_featured_image: /web/updates/images/generic/timer.png #}
 
 # Performance Observer - Efficient Access to Performance Data {: .page-title }
@@ -37,9 +36,9 @@ This new interface provides a number of critical advantages over previous
 methods to access the timeline:
 
 * Today, apps have to periodically poll and diff the stored measurements,
-which is costly. This interface offers them a callback (i.e. no need to
-poll). As a result apps using this API can be more responsive and more
-efficient.
+which is costly. This interface offers them a callback. (In other words,
+there is no need to poll). As a result apps using this API can be more
+responsive and more efficient.
 * It’s not subject to buffer limits (most buffers are set to 150 items
 by default), and avoids race conditions between different consumers that
 may want to modify the buffer.

@@ -238,7 +238,7 @@ Aan de hand van deze regels bepaalt de browser welke deelverzamelingen en varian
 
 ### Weblettertypen en het kritieke render-pad
 
-Wanneer we lettertypen `lazyloaden`, is er een belangrijk verborgen aspect dat de tekstweergave kan vertragen: de browser moet [de render-boom samenstellen](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), die afhankelijk is van de DOM- en CSSOM-bomen. Pas dan weet de browser welke lettertype-hulpbronnen nodig zijn om de tekst weer te geven. Verzoeken om lettertypen worden dus pas na andere kritieke hulpbronnen behandeld, en de browser wordt mogelijk verhinderd om de tekst weer te geven tot de benodigde hulpbron is opgehaald.
+Wanneer we lettertypen `lazyloaden`, is er een belangrijk verborgen aspect dat de tekstweergave kan vertragen: de browser moet [de render-boom samenstellen](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), die afhankelijk is van de DOM- en CSSOM-bomen. Pas dan weet de browser welke lettertype-hulpbronnen nodig zijn om de tekst weer te geven. Verzoeken om lettertypen worden dus pas na andere kritieke hulpbronnen behandeld, en de browser wordt mogelijk verhinderd om de tekst weer te geven tot de benodigde hulpbron is opgehaald.
 
 <img src="images/font-crp.png" class="center" alt="Kritiek render-pad lettertypen">
 

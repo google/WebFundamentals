@@ -20,7 +20,7 @@ of the query string (that stuff after "<code>?</code>").
 Traditionally, developers use regexs and string splitting to pull out query
 parameters from the URL. If we're all honest with ourselves, that's no fun.
 It can be tedious and error prone to get right. One of my dark secrets is that I've reused the same
-`get|set|removeURLParameter` [helper methods](https://github.com/GoogleChrome/ioweb2015/blob/21d7a80aefd6a76474fcdb700ac9965cd4c7800f/app/scripts/helper/util.js#L142-L200) in several large Google.com app, including [Google Santa Tracker](https://santatracker.google.com/) and the [Google I/O 2015 web](https://events.google.com/io2015).
+`get|set|removeURLParameter` [helper methods](https://github.com/GoogleChrome/ioweb2015/blob/21d7a80aefd6a76474fcdb700ac9965cd4c7800f/app/scripts/helper/util.js#L142-L200) in several large Google.com app, including [Google Santa Tracker](https://santatracker.google.com/){: .external } and the [Google I/O 2015 web](https://events.google.com/io2015).
 
 It's time for a proper API that does this stuff for us!
 

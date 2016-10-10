@@ -132,12 +132,12 @@ To evaluate your site against RAIL metrics, use the Chrome DevTools [Timeline to
     <tr>
       <td data-th="RAIL Step"><strong>Response</strong></td>
       <td data-th="Key Metric">Input latency (from tap to paint) < 100ms.</td>
-      <td data-th="User Test">User taps on an icon or button (e.g., opening the nav menu, tapping Compose).</td>
+      <td data-th="User Test">User taps on an icon or button (for example, opening the nav menu, tapping Compose).</td>
     </tr>
     <tr>
       <td data-th="RAIL Step"><strong>Response</strong></td>
       <td data-th="Key Metric">Input latency (from tap to paint) < 16ms.</td>
-      <td data-th="User Test">User drags their finger and the app's response is bound to the finger position (e.g., pull to refresh, swiping a carousel).</td>
+      <td data-th="User Test">User drags their finger and the app's response is bound to the finger position (for example, pull to refresh, swiping a carousel).</td>
     </tr>
     <tr>
       <td data-th="RAIL Step"><strong>Animation</strong></td>
@@ -162,7 +162,7 @@ To evaluate your site against RAIL metrics, use the Chrome DevTools [Timeline to
     <tr>
       <td data-th="RAIL Step"><strong>Load</strong></td>
       <td data-th="Key Metric">Satisfy the Response goals during the full page load process.</td>
-      <td data-th="User Test">User loads the page and starts interacting (e.g., scrolls or opens navigation).</td>
+      <td data-th="User Test">User loads the page and starts interacting (for example, scrolls or opens navigation).</td>
     </tr>
   </tbody>
 </table> 

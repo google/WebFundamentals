@@ -6,7 +6,6 @@
  */
 
 var fs = require('fs');
-var path = require('path');
 var glob = require('globule');
 var moment = require('moment');
 
@@ -38,26 +37,33 @@ if (!String.prototype.endsWith) {
   });
 }
 
-function publishedComparator(a, b) {
-  var aPublished = moment(a.datePublished).unix();
-  var bPublished = moment(b.datePublished).unix();
-  if (aPublished < bPublished) {
+function genericComparator(a, b) {
+  if (a < b) {
     return 1;
-  } else if (aPublished > bPublished) {
+  } else if (a > b) {
     return -1;
   }
   return 0;
 }
 
+function publishedComparator(a, b) {
+  var aPublished = moment(a.datePublished).unix();
+  var bPublished = moment(b.datePublished).unix();
+  if (aPublished === bPublished) {
+    aPublished = a.title;
+    bPublished = b.title;
+  }
+  return genericComparator(aPublished, bPublished);
+}
+
 function updatedComparator(a, b) {
   var aPublished = moment(a.dateUpdated).unix();
   var bPublished = moment(b.dateUpdated).unix();
-  if (aPublished < bPublished) {
-    return 1;
-  } else if (aPublished > bPublished) {
-    return -1;
+  if (aPublished === bPublished) {
+    aPublished = a.title;
+    bPublished = b.title;
   }
-  return 0;
+  return genericComparator(aPublished, bPublished);
 }
 
 function getRegEx(regEx, content, defaultResponse) {
@@ -118,8 +124,8 @@ function getFileList(base, patterns) {
   files.forEach(function(file) {
     results.push(readMetadataForFile(file));
   });
-  var filename = path.join(base, '_files.json');
-  fs.writeFileSync(filename, JSON.stringify(results, null, 2));
+  // var filename = path.join(base, '_files.json');
+  // fs.writeFileSync(filename, JSON.stringify(results, null, 2));
   return results;
 }
 

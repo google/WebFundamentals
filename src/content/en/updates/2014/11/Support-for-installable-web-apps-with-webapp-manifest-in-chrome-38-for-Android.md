@@ -13,7 +13,7 @@ description: Use the web app manifest to control how your web app launches
 
 For Web Apps to be successful, they need to work how the user would expect a native application to work. The ability for the developer to control how their web app is launched is just one part of UX that needs to be solved.
 
-The [Manifest for Web applications](https://w3c.github.io/manifest/) is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and, more importantly, *how* they can launch it.  In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched.
+The [Manifest for Web applications](https://w3c.github.io/manifest/){: .external } is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and, more importantly, *how* they can launch it.  In the future the manifest will give you even more control over your app, but right now we are just focusing on how your app can be launched.
 
 Chrome has had support for Manifests since version 38 for Android (October 2014) and it gives you the control over how your web app appears when it is installed to the home screen (via the `short_name`, `name` and `icons` properties) and how it should be launched when the user clicks on the launch icon (via `start_url`, `display` and `orientation`).  Check out [our sample](https://github.com/GoogleChrome/samples/tree/gh-pages/web-application-manifest) to see this in action.
 
@@ -60,7 +60,7 @@ An example manifest is shown below. It doesn't show everything that can be in a 
 Some interesting points in Chrome's implementation:
 
 *  The `short_name` is preferred over `name` and if provided will be used.
-   * Note: [as of Chrome 42](https://developers.google.com/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android?hl=en), you
+   * Note: [as of Chrome 42](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android), you
      should also provide a `name` which will be used for the App Install Banner.
 *  If you don't supply a `start_url` it will use the current page's URL.
 *  Chrome will [first look for icons](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/webapps/add_to_homescreen_data_fetcher.cc&l=115) that match the density of the display and are sized to [48dp * screen density](https://code.google.com/p/chromium/codesearch#chromium/src/chrome/browser/android/shortcut_helper.cc&l=42). If none are found it will search for the icon that closest matches the device characteristics. **Please note**, there used to be a dedicated "density" field in the manifest spec, this has been removed from the Spec and the implementation in Chrome.  If it is defined in your manifest it will be ignored.
@@ -133,7 +133,7 @@ Taking a look at native apps, the majority of news-centric apps treat their expe
 
 A question that keeps popping up about Chrome's implementation of "mobile-web-app-capable" is: How can I tell if
 I am running as launched from the home screen?  On iOS you can use `navigator.standalone` to see if it is running
-like a native app, but we don't have this on Chrome for Android. [Instead](https://code.google.com/p/chromium/issues/detail?id=289113), you should [use the `display-mode`](https://developers.google.com/web/updates/2015/10/display-mode) media query feature.
+like a native app, but we don't have this on Chrome for Android. [Instead](https://code.google.com/p/chromium/issues/detail?id=289113), you should [use the `display-mode`](/web/updates/2015/10/display-mode) media query feature.
 
 
 
@@ -158,7 +158,7 @@ This spec is a critical part in bringing Web Apps to all users and we need your 
 
 *  Add it to your site and tell us what needs work and what works well (adding comments here is a good start).
 *  Let us know of good practices you have discovered
-*  [Contribute to the specification](https://w3c.github.io/manifest/) and give the team feedback.
+*  [Contribute to the specification](https://w3c.github.io/manifest/){: .external } and give the team feedback.
 
 
 {% include "comment-widget.html" %}

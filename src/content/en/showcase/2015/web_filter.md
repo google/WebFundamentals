@@ -12,7 +12,7 @@ book_path: /web/showcase/_book.yaml
 
 ### TL;DR {: .hide-from-toc }
 
-[Web Filters](http://exp.bartekdrozdz.com/app/webfilter/): Fast, quick and
+[Web Filters](http://exp.bartekdrozdz.com/app/webfilter/){: .external }: Fast, quick and
 dirty camera filters.
 
 Warning: This app is not currently working, `getUserMedia` requires a secure

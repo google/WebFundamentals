@@ -166,7 +166,7 @@ If the payment verification was successful, call `.complete('success')` to compl
 ## Payment Request API can do more
 
 ### Shipping items
-If you are selling physical goods, you'll probably need to collect the user's shipping address and a shipping preference such as "Free shipping" or "Express shipping". Payment Request API certainly supports those use cases. See [the integration guide](https://developers.google.com/web/fundamentals/primers/payment-request/) to learn more.
+If you are selling physical goods, you'll probably need to collect the user's shipping address and a shipping preference such as "Free shipping" or "Express shipping". Payment Request API certainly supports those use cases. See [the integration guide](/web/fundamentals/primers/payment-request/) to learn more.
 
 ### Adding more payment solutions
 Credit card is not the only supported payment solution for Payment Request. There are a number of other payment services and solutions in the wild and the Payment Request API is designed to support as many of those as possible. Google is working to bring Android Pay to Chrome. Other third party solutions will be supported in the near future as well. Stay tuned for updates.
@@ -197,8 +197,8 @@ It could change. We provide [a shim](https://storage.googleapis.com/prshim/v1/pa
 To learn more about Payment Request API, a few documents and resources are available:
 
 * [Official specification](https://www.w3.org/TR/payment-request/)
-* [Payment Request API integration guide](https://developers.google.com/web/fundamentals/primers/payment-request/)
+* [Payment Request API integration guide](/web/fundamentals/primers/payment-request/)
 * [Demo](https://emerald-eon.appspot.com/)
-* [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/)
+* [Simple demos and sample code](https://googlechrome.github.io/samples/paymentrequest/){: .external }
 
 {% include "comment-widget.html" %}

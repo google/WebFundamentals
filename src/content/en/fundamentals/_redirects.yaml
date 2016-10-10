@@ -127,5 +127,11 @@ redirects:
 - from: /web/fundamentals/primers/customelements/
   to: /web/fundamentals/getting-started/primers/customelements
 
+- from: /web/fundamentals/primers/shadowdom/
+  to: /web/fundamentals/getting-started/primers/shadowdom
+
 - from: /web/fundamentals/primers/payment-request/
   to: /web/fundamentals/getting-started/primers/payment-request/
+
+- from: /web/fundamentals/primers/payment-request/android-pay
+  to: /web/fundamentals/getting-started/primers/payment-request/android-pay

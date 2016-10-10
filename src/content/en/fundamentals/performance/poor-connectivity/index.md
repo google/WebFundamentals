@@ -23,7 +23,7 @@ When building or updating a site, you must ensure adequate performance in a vari
 
 #### Browser tools
 
-The [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools/profile/network-performance/network-conditions?hl=en) enable you to test your site with a variety of upload/download speeds and [round-trip times](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/), using presets or custom settings from the Chrome DevTools Network panel:
+The [Chrome DevTools](/web/tools/chrome-devtools/profile/network-performance/network-conditions) enable you to test your site with a variety of upload/download speeds and [round-trip times](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/), using presets or custom settings from the Chrome DevTools Network panel:
 
 ![Chrome DevTools throttling](images/chrome-devtools-throttling.png)
 
@@ -71,7 +71,7 @@ Facebook's [Augmented Traffic Control](http://facebook.github.io/augmented-traff
 
 > Facebook even instituted [2G Tuesdays](https://code.facebook.com/posts/1556407321275493/building-for-emerging-markets-the-story-behind-2g-tuesdays/) to help understand how people on 2G use their product. On Tuesdays, employees get a pop-up that gives them the option to simulate a 2G connection.
 
-The [Charles](https://www.charlesproxy.com/) HTTP/HTTPS proxy can be used to [adjust bandwidth and latency](http://www.charlesproxy.com/documentation/proxying/throttling/). Charles is commercial software, but a free trial is available.
+The [Charles](https://www.charlesproxy.com/){: .external } HTTP/HTTPS proxy can be used to [adjust bandwidth and latency](http://www.charlesproxy.com/documentation/proxying/throttling/). Charles is commercial software, but a free trial is available.
 
 ![Charles proxy bandwidth and latency settings](images/charles.png)
 
@@ -91,7 +91,7 @@ Lie-fi is likely to become a bigger problem as more people move to mobile and aw
 
 ### Use timeouts to handle intermittent connectivity
 
-In the past, [hacky methods using XHR](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) have been used to test for intermittent connectivity, but Service Worker enables more reliable methods to set network timeouts. Jeff Posnick explains how to achieve this using [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) timeouts in his talk [Instant Loading with Service Workers](https://youtu.be/jCKZDTtUA2A?t=19m58s):
+In the past, [hacky methods using XHR](http://stackoverflow.com/questions/189430/detect-that-the-internet-connection-is-offline) have been used to test for intermittent connectivity, but service worker enables more reliable methods to set network timeouts. Jeff Posnick explains how to achieve this using [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) timeouts in his talk [Instant Loading with Service Workers](https://youtu.be/jCKZDTtUA2A?t=19m58s):
 
 
     toolbox.router.get(

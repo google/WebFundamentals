@@ -34,7 +34,7 @@ The codec for a WebRTC call, along with other media settings such as bitrate, is
 
 This handshaking process — exchanging media capabilities — is known as offer/answer.  For example, a caller might  send an offer (an SDP message) stating a preference for VP9, with VP8 as a fallback. If the answer confirms that the callee can handle VP9, the video call can proceed using VP9. If the callee responds with an answer that it can only use VP8, the call will proceed with VP8.
 
-To see this in action, take a look at the code for the canonical WebRTC video chat application [appr.tc](https://appr.tc/).
+To see this in action, take a look at the code for the canonical WebRTC video chat application [appr.tc](https://appr.tc/){: .external }.
 
 > <strong>Top tip: </strong> In <a href="https://appr.tc" title="appr.tc WebRTC video chat app">appr.tc</a>, you can press <strong>I</strong> to get information about call state including signaling and codec details:
 >
@@ -65,7 +65,7 @@ In [sdputils.js](https://github.com/webrtc/apprtc/blob/9eed9e0f2c98bc84ea5bb75ba
     }
     
 
-The [maybePreferCodec()](https://github.com/webrtc/apprtc/blob/9eed9e0f2c98bc84ea5bb75ba15c8f304f8485e4/src/web_app/js/sdputils.js#L226) function used here sets values for the requested codec in the text of the SDP metadata. SDP is verbose and not designed to be human readable, but you can view the SDP used by [appr.tc](https://appr.tc/) from the DevTools console once a call has been made. The important part with regard to codecs is the _m line_:
+The [maybePreferCodec()](https://github.com/webrtc/apprtc/blob/9eed9e0f2c98bc84ea5bb75ba15c8f304f8485e4/src/web_app/js/sdputils.js#L226) function used here sets values for the requested codec in the text of the SDP metadata. SDP is verbose and not designed to be human readable, but you can view the SDP used by [appr.tc](https://appr.tc/){: .external } from the DevTools console once a call has been made. The important part with regard to codecs is the _m line_:
 
 
     {
@@ -74,12 +74,12 @@ The [maybePreferCodec()](https://github.com/webrtc/apprtc/blob/9eed9e0f2c98bc84e
     }
     
 
-Using [appr.tc](https://appr.tc/) with its default settings in a recent version of Chrome, you will see that VP9 is the first codec listed in the SDP _m line_ — followed by VP8, which Chrome can also use. If you set VP8 as the preferred codec (via URL parameters in [appr.tc](https://appr.tc), for example) VP8 will be listed first instead.
+Using [appr.tc](https://appr.tc/){: .external } with its default settings in a recent version of Chrome, you will see that VP9 is the first codec listed in the SDP _m line_ — followed by VP8, which Chrome can also use. If you set VP8 as the preferred codec (via URL parameters in [appr.tc](https://appr.tc), for example) VP8 will be listed first instead.
 
 ### Find out more
 
-* [The WebM Project](http://www.webmproject.org/vp9/): VP9 resources
-* [webrtc.org](http://www.webrtc.org/): home of the WebRTC project
+* [The WebM Project](http://www.webmproject.org/vp9/){: .external }: VP9 resources
+* [webrtc.org](http://www.webrtc.org/){: .external }: home of the WebRTC project
 * [g.co/webrtc](http://g.co/webrtc): links to other WebRTC resources
 * [webrtc.github.io/samples](http://webrtc.github.io/samples): WebRTC samples
 live

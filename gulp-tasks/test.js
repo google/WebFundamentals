@@ -41,7 +41,10 @@ var ERROR_STRINGS = [
   {label: 'Old style highlight {% highlight', regEx: /{%[ ]?highlight/},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
   {label: 'Old style animation tag {% animtion', regEx: /{% animation/},
-  {label: 'Old style include (shared/takeaway.liquid)', regEx: /shared\/takeaway\.liquid/}
+  {label: 'Old style include (shared/takeaway.liquid)', regEx: /shared\/takeaway\.liquid/},
+  {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w(-\w\w)?/},
+  {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com\//},
+  {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com\//}
 ];
 
 function testMarkdownFile(fileName, contribJson) {
@@ -58,8 +61,9 @@ function testMarkdownFile(fileName, contribJson) {
     errors.push({msg: 'Missing project_path definition', param: ''});
   }
   // Validate description
-  var description = wfHelper.getRegEx(/^description: (.*)/m, fileContent, null);
+  var description = wfHelper.getRegEx(/^description:(.*)\n/m, fileContent, null);
   if (description) {
+    description = description.trim();
     if (description.length === 0) {
       errors.push({msg: 'description cannot be empty', param: ''});
     } else if (description.length > MAX_DESCRIPTION_LENGTH) {
@@ -110,9 +114,13 @@ function testMarkdownFile(fileName, contribJson) {
   if (title) {
     if (title.length > 1) {
       errors.push({msg: 'Page has multiple title tags', param: title.join(',')});
-    } else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
-      errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
     }
+    if (title[0].indexOf('<') >= 0 || title[0].indexOf('&gt;') >= 0 || title[0].indexOf('`') >= 0) {
+      errors.push({msg: 'Title should not contain markup', param: title[0]});
+    }
+    //  else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
+    //   errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
+    // }
   } else {
     errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title}'});
   }
@@ -211,8 +219,6 @@ gulp.task('test', function(callback) {
     opts.srcBase = path.join(TEST_ROOT, GLOBAL.WF.options.lang);
   }
   gutil.log('Base directory:', gutil.colors.cyan(opts.srcBase));
-  gutil.log('Skipping wf_review_required tags:', gutil.colors.cyan(GLOBAL.WF.options.skipReviewRequired));
-  gutil.log('Warn only:', gutil.colors.cyan(GLOBAL.WF.options.testWarnOnly));
   gutil.log('');
 
   var contribJson;

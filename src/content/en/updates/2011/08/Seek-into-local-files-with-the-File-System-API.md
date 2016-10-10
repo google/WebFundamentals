@@ -10,7 +10,7 @@ book_path: /web/updates/_book.yaml
 {% include "web/_shared/contributors/sethladd.html" %}
 
 
-If you have a `File` object (say, one stored using the [FileSystem API](http://www.html5rocks.com/en/tutorials/file/filesystem/)), it's possible to seek into it and read chunks without reading the entire file into memory:
+If you have a `File` object (say, one stored using the [FileSystem API](http://www.html5rocks.com/en/tutorials/file/filesystem/){: .external }), it's possible to seek into it and read chunks without reading the entire file into memory:
 
 
     var url = "filesystem:http://example.com/temporary/myfile.zip";

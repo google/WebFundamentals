@@ -49,7 +49,7 @@ Die HTML-Spezifikation gibt die Bedingungen für jedes einzelne Ereignis vor: wa
 Das obige Beispiel erscheint vielleicht ein wenig einschüchternd, ist in Wirklichkeit jedoch ziemlich einfach.  Die Navigation Timing API erfasst alle relevanten Zeitstempel und unser Code wartet einfach auf den Start des `onload`-Ereignisses und berechnet die Differenz zwischen den verschiedenen Zeitstempeln. Beachten Sie, dass das onload-Ereignis nach domInteractive, domContentLoaded und domComplete ausgelöst wird.
 <img src="images/device-navtiming-small.png" class="center" alt="NavTiming-Demo">
 
-Wir verfügen nun über einige spezifische zu verfolgende Wegmarken und eine einfache Funktion zur Ausgabe dieser Messungen. Beachten Sie, dass Sie den Code so modifizieren können, dass anstatt der Anzeige dieser Messdaten auf der Seite diese an einen Analyse-Server gesendet werden ([Google Analytics tut dies automatisch](https://support.google.com/analytics/answer/1205784?hl=de)). Das ist eine großartige Möglichkeit, die Leistung auf Ihren Seiten zu überwachen und Seiten zu identifizieren, die von einer Optimierung profitieren würden.
+Wir verfügen nun über einige spezifische zu verfolgende Wegmarken und eine einfache Funktion zur Ausgabe dieser Messungen. Beachten Sie, dass Sie den Code so modifizieren können, dass anstatt der Anzeige dieser Messdaten auf der Seite diese an einen Analyse-Server gesendet werden ([Google Analytics tut dies automatisch](https://support.google.com/analytics/answer/1205784)). Das ist eine großartige Möglichkeit, die Leistung auf Ihren Seiten zu überwachen und Seiten zu identifizieren, die von einer Optimierung profitieren würden.
 
 
 

@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
-{# wf_updated_on: 2016-09-21T18:11:44Z #}
+{# wf_updated_on: 2016-10-10T14:58:57Z #}
 
 
 # Find and Fix Web App Performance Issues {: page-title }

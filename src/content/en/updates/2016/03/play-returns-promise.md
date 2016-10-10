@@ -37,7 +37,7 @@ with an initial implementation in
 [Chrome 50](https://www.chromestatus.com/feature/5920584248590336).
 
 A `play()` call on an a `<video>` or `<audio>` element now returns a
-[Promise](http://www.html5rocks.com/en/tutorials/es6/promises/). If playback succeeds,
+[Promise](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external }. If playback succeeds,
 the Promise is fulfilled, and if playback fails, the Promise is rejected along with an
 error message explaining the failure. This lets you write intuitive code like the following:
 

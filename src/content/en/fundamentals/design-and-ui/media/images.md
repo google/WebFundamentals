@@ -25,7 +25,7 @@ srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 Other times the image may need to be changed more drastically: changing the
 proportions, cropping, and even replacing the entire image.  In this case,
 changing the image is usually referred to as art direction.  See
-[responsiveimages.org/demos/](https://responsiveimages.org/demos/) for more
+[responsiveimages.org/demos/](https://responsiveimages.org/demos/){: .external } for more
 examples.
 
 {% include "web/_shared/udacity/ud882.html" %}
@@ -137,7 +137,7 @@ and more.
 
 <div style="clear:both;"></div>
 
-Dogfood: The `picture` element is beginning to land in browsers. Although it's not available in every browser yet, we recommend its use because of the strong backward compatibility and potential use of the [Picturefill polyfill](http://picturefill.responsiveimages.org/). See the [ResponsiveImages.org](http://responsiveimages.org/#implementation) site forfurther details.
+Dogfood: The `picture` element is beginning to land in browsers. Although it's not available in every browser yet, we recommend its use because of the strong backward compatibility and potential use of the [Picturefill polyfill](http://picturefill.responsiveimages.org/){: .external }. See the [ResponsiveImages.org](http://responsiveimages.org/#implementation) site forfurther details.
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="QINlm3vjnaY"
@@ -613,7 +613,7 @@ compared to SVG icons:
 
 There are hundreds of free and paid icon fonts available including [Font
 Awesome](https://fortawesome.github.io/Font-Awesome/),
-[Pictos](http://pictos.cc/), and [Glyphicons](https://glyphicons.com/).
+[Pictos](http://pictos.cc/){: .external }, and [Glyphicons](https://glyphicons.com/).
 
 Be sure to balance the weight of the additional HTTP request and file size with
 the need for the icons. For example, if you only need a handful of icons, it
@@ -682,10 +682,10 @@ optimization so that it's a first-class citizen in your workflow.
 
 Several tools are available that perform further, lossless compression on `JPG`
 and `PNG` files with no effect on image quality. For `JPG`, try
-[jpegtran](http://jpegclub.org/) or
-[jpegoptim](http://freshmeat.net/projects/jpegoptim/) (available on Linux only;
+[jpegtran](http://jpegclub.org/){: .external } or
+[jpegoptim](http://freshmeat.net/projects/jpegoptim/){: .external } (available on Linux only;
 run with the --strip-all option). For `PNG`, try
-[OptiPNG](http://optipng.sourceforge.net/) or
+[OptiPNG](http://optipng.sourceforge.net/){: .external } or
 [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
 
 ### Use image sprites

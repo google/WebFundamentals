@@ -9,7 +9,7 @@ description: Chrome 50 adds support for rel='preload', and deprecates rel='subre
 {# wf_featured_snippet: Chrome 50 adds support for <code>rel='preload'</code>, and deprecates <code>rel='subresource'</code> #}
 
 
-# Prioritizing Your Resources with <link rel='preload'> {: .page-title }
+# Prioritizing Your Resources with link rel='preload' {: .page-title }
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 
@@ -18,7 +18,7 @@ other resource that will be needed by the page, without delaying the page's
 `onload` event? `<link rel="preload">` gives web developers to power to do just
 that, using a familiar HTML element syntax with a few key attributes to
 determine the exact behavior. It’s a
-[draft standard](http://w3c.github.io/preload/) that’s shipping as part of the
+[draft standard](http://w3c.github.io/preload/){: .external } that’s shipping as part of the
 [Chrome 50 release](https://www.chromestatus.com/feature/5757468554559488).
 
 Resources loaded via `<link rel="preload">` are stored locally in the browser,

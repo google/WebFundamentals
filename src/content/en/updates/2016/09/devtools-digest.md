@@ -47,7 +47,7 @@ The **Initiator** field in the summary is particularly useful. This field tells 
 
 Passive event listeners are an emerging standard to improve scroll performance. Check out this article by yours truly to learn more:
 
-[Improving scroll performance with passive event listeners](https://developers.google.com/web/updates/2016/06/passive-event-listeners?hl=en)
+[Improving scroll performance with passive event listeners](/web/updates/2016/06/passive-event-listeners)
 
 DevTools has shipped a couple features to help you find listeners that could benefit from a little `{passive: true}` love.
 

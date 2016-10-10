@@ -57,7 +57,7 @@ behaviors and identities of your users. Although a single visit to one of
 your unprotected websites may seem benign, some intruders look at the 
 aggregate browsing activities of your users to make inferences about their 
 behaviors and intentions, and to 
-[de-anonymize](https://en.wikipedia.org/wiki/De-anonymization)
+[de-anonymize](https://en.wikipedia.org/wiki/De-anonymization){: .external}
 their identities. For example, 
 employees might inadvertently disclose sensitive health conditions to their 
 employers just by reading unprotected medical articles.
@@ -69,7 +69,7 @@ with `getUserMedia()`, enabling offline app experiences with service workers,
 or building progressive web apps, require explicit permission from the user
 before executing. Many older APIs are also being updated to require permission
 to execute, such as  the
-[geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)
+[geolocation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation){: .external}
 API. HTTPS is a key component to the permission workflows for both these new
 features and updated APIs.
 

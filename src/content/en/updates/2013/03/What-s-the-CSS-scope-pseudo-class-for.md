@@ -106,7 +106,7 @@ Using `:scope` makes the semantics of the `querySelector()` methods a little mor
 
 Not yet :(
 
-I was curious if using `:scope` in qS/qSA gives a performance boost. So...like a good engineer I threw together a [test](http://jsbin.com/icahoc/1/). My rationale: less surface area for the browser to do selector matching means speedier lookups.
+I was curious if using `:scope` in qS/qSA gives a performance boost. So...like a good engineer I threw together a [test](http://jsbin.com/icahoc/1/){: .external }. My rationale: less surface area for the browser to do selector matching means speedier lookups.
 
 In my experiment, WebKit currently takes ~1.5-2x longer than not using `:scope`. Drats! When [crbug.com/222028](http://crbug.com/222028) gets fixed, **using it should theoretically give you a slight performance boost** over not using it.
 

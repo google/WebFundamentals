@@ -63,9 +63,9 @@ Outputs the following:
     -----
     Country Name (2 letter code) [AU]:CA
     State or Province Name (full name) [Some-State]:California
-    Locality Name (eg, city) []:Mountain View
-    Organization Name (eg, company) [Internet Widgits Pty Ltd]:Example, Inc.
-    Organizational Unit Name (eg, section) []:Webmaster Help Center Example
+    Locality Name (for example, city) []:Mountain View
+    Organization Name (for example, company) [Internet Widgits Pty Ltd]:Example, Inc.
+    Organizational Unit Name (for example, section) []:Webmaster Help Center Example
     Team
     Common Name (e.g. server FQDN or YOUR name) []:www.example.com
     Email Address []:webmaster@example.com
@@ -154,7 +154,7 @@ easily support both HTTP and HTTPS for all clients.
 However, most site operators use name-based virtual hosting to conserve IP
 addresses and because it's more convenient in general. The problem with IE on
 Windows XP and Android earlier than 2.3 is that they do not understand [Server
-Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication) (SNI),
+Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication){: .external} (SNI),
 which is crucial for HTTPS name-based virtual hosting.
 
 Someday—hopefully soon—clients that don't support SNI will be replaced
@@ -166,7 +166,7 @@ If you don't already have HTTPS service available on your servers, enable it now
 (without redirecting HTTP to HTTPS; see below). Configure your web server to use
 the certificates you bought and installed. You might find [Mozilla's handy
 configuration
-generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/){: .external}
 useful.
 
 If you have many hostnames/subdomains, they each need to use the right
@@ -177,7 +177,7 @@ Warning: If you've already completed these steps, but are using HTTPS for the so
 Note: Ultimately you should redirect HTTP requests to HTTPS and use HTTP Strict Transport Security (HSTS). However, this is not the right stage in the migration process to do that; see “Redirect HTTP To HTTPS” and “Turn On Strict Transport Security And Secure Cookies.”
 
 Now, and throughout your site's lifetime, check your HTTPS configuration with
-[Qualys' handy SSL Server Test](https://www.ssllabs.com/ssltest/). Your site
+[Qualys' handy SSL Server Test](https://www.ssllabs.com/ssltest/){: .external }. Your site
 should score an A or A+; treat anything that causes a lower grade as a bug.
 (Today's A is tomorrow's B, because attacks against algorithms and protocols
 are always improving!)
@@ -260,7 +260,7 @@ Note: Keep in mind that you also need to change intrasite URLs in your styleshee
 
 ## Redirect HTTP to HTTPS
 
-You need to put a [canonical link](https://support.google.com/webmasters/answer/139066?hl=en) at the head of your page to tell search engines that HTTPS is the best way to get to your site.
+You need to put a [canonical link](https://support.google.com/webmasters/answer/139066) at the head of your page to tell search engines that HTTPS is the best way to get to your site.
 
 Set `<link rel="canonical" href="https://…"/>` tags in your pages. This
 helps search engines determine the best way to get to your site.
@@ -275,7 +275,7 @@ At this point, you are ready to "lock in" the use of HTTPS.
 First, use [Strict Transport Security](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)
 to tell clients that they should always connect to your server via HTTPS, even
 when following an `http://` reference. This defeats attacks such as
-[SSL Stripping](http://www.thoughtcrime.org/software/sslstrip/), and also
+[SSL Stripping](http://www.thoughtcrime.org/software/sslstrip/){: .external }, and also
 avoids the round-trip cost of the `301 redirect` that we enabled in 
 [Redirect HTTP to HTTPS](#redirect-http-to-https).
 
@@ -315,7 +315,7 @@ while maintaining its search rank. Bing also publishes
 ### Performance
 
 When the content and application layers are well-tuned (see
-[Steve Souders' books](https://stevesouders.com/) for great advice), the
+[Steve Souders' books](https://stevesouders.com/){: .external } for great advice), the
 remaining TLS performance concerns are generally small, relative to the
 overall cost of the application. Additionally, you can reduce and amortize
 those costs. (For great advice on TLS optimization and generally, see 
@@ -348,4 +348,4 @@ operators migrate to HTTPS, advertisers have little motivation to publish HTTPS.
 Advertisers should at least offer ad service via HTTPS (such as by completing
 the "Enable HTTPS on your servers" section on this page. Many already do. You 
 should ask advertisers that do not serve HTTPS at all to at least start. 
-You may wish to defer completing [Make IntraSite URLs relative](#make-intra-site-urls-relative) until enough advertisers interoperate properly.
+You may wish to defer completing [Make IntraSite URLs relative](#make-intrasite-urls-relative) until enough advertisers interoperate properly.

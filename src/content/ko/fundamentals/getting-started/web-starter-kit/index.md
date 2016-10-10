@@ -228,7 +228,7 @@ NodeJS와 NPM이 구축되어 있는지 확실하지 않은 경우 명령 프롬
 
 ### Web Starter Kit 프로젝트 설정하기
 
-먼저 [https://developers.google.com/web/starter-kit/](https://developers.google.com/web/starter-kit/)로 이동하여
+먼저 [https://developers.google.com/web/starter-kit/](/web/starter-kit/)로 이동하여
 zip 파일을 다운로드한 후 압축을 풉니다. 이 폴더가 프로젝트의 기본입니다. 따라서, 해당 폴더의 이름을 바꾼 후 컴퓨터의 적절한 위치에 저장합니다. 이 가이드에서는 이 폴더를 `my-project`라고 하겠습니다.
 
 그런 다음, Web Starter Kit의 로컬 종속 항목을 설치해야 합니다. 명령 프롬프트를

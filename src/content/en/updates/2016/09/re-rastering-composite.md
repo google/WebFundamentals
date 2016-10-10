@@ -81,13 +81,16 @@ See the [referenced design doc](https://docs.google.com/document/d/1CsDfsMxZaM09
 ### Examples
 
 In [this example](http://output.jsbin.com/yadilojopa), the element with the
-`remainsBlurry` id will stay blurry after this change, but the element with the
-`noLongerBlurry` id will become crisp. That is because the former has a `will-
+`remainsBlurry` ID will stay blurry after this change, but the element with the
+`noLongerBlurry` ID will become crisp. That is because the former has a `will-
 change: transform` CSS property on it.
 
 Examples of transform scale animations from real applications
 
-+  From [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=600482): [Zooming tiger](https://jsfiddle.net/s9rqa2t8/2/)
++  From [this bug](https://bugs.chromium.org/p/chromium/issues/detail?id=600482): [Zooming tiger](https://jsfiddle.net/s9rqa2t8/2/){: .external }
 +  [Google Maps on mobile](http://maps.google.com) (maps.google.com) - zoom the map
 +  [Google Maps Lite on desktop](https://www.google.com/maps/@37.794656,-122.3908455,16z?force=lite) 
 +  [Ticketmaster seat map](http://www1.ticketmaster.com/nba-finals-game-4-warriors-watch-oakland-california-06-10-2016/event/1C0050C2D72071FD?artistid=805946&majorcatid=10004&minorcatid=7)
+
+
+{% include "comment-widget.html" %}

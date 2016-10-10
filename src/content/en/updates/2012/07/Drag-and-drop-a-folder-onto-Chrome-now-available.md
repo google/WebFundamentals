@@ -57,7 +57,7 @@ Chrome 21 allows you to drop a folder or multiple folders into the browser windo
 Notice that a big difference here is that you can treat a dropped object as `Entry` (`FileEntry` or `DirectoryEntry`) by using new function called `getAsEntry` (`webkitGetAsEntry`).
 After obtaining access to the `Entry` object, you can use standard file handling methods that were introduced in the FileSystem API specification. For example, this example shows how you can detect if a dropped object is a file or a directory by examining the `.isFile` (or the `.isDirectory`) field.
 
-For further information regarding the FileSystem API, read [Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/), regarding new drag and drop capability, read [this document](http://wiki.whatwg.org/wiki/DragAndDropEntries). Of course, these features are open standards or are waiting to become one soon.
+For further information regarding the FileSystem API, read [Exploring the FileSystem APIs](http://www.html5rocks.com/en/tutorials/file/filesystem/){: .external }, regarding new drag and drop capability, read [this document](http://wiki.whatwg.org/wiki/DragAndDropEntries). Of course, these features are open standards or are waiting to become one soon.
 
 
 {% include "comment-widget.html" %}

@@ -32,7 +32,7 @@ quite a bit.
 
 ### Why the web?
 
-At [Tokyo](https://tokyo.uk/), we’ve long been advocates of the responsive
+At [Tokyo](https://tokyo.uk/){: .external }, we’ve long been advocates of the responsive
 and mobile web, rather than native for the sake of it. Pixmas was a result of
 HTML5 & CSS3 experimentation during down time in-between projects. We are
 always trying out new things to keep our knowledge current; so naturally,

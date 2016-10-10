@@ -33,7 +33,7 @@ Child elements of a [shadow root](http://www.w3.org/TR/shadow-dom/) can now have
 
 ### Console's copy() works for objects
 
-The [copy()](https://developers.google.com/chrome-developer-tools/docs/commandline-api#copyobject) method from the [Command Line API](https://developers.google.com/chrome-developer-tools/docs/commandline-api) now works for objects. Go ahead and try `copy({foo:'bar'})` into the Console panel and notice how a [stringified](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) & formatted version of the object is now in your clipboard. [[crbug.com/289348](http://crbug.com/289348)] 
+The [copy()](/chrome-developer-tools/docs/commandline-api#copyobject) method from the [Command Line API](/chrome-developer-tools/docs/commandline-api) now works for objects. Go ahead and try `copy({foo:'bar'})` into the Console panel and notice how a [stringified](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) & formatted version of the object is now in your clipboard. [[crbug.com/289348](http://crbug.com/289348)] 
 
 ### Regex filter for console
 
@@ -99,7 +99,7 @@ User stylesheets are now available through DevTools Experiments (checkbox: "Allo
 
 <hr>
 
-That’s it for this edition of the DevTools digest, if you haven’t already, check out the [November](http://www.html5rocks.com/en/tutorials/developertools/novdigest/) edition.
+That’s it for this edition of the DevTools digest, if you haven’t already, check out the [November](http://www.html5rocks.com/en/tutorials/developertools/novdigest/){: .external } edition.
 
 
 {% include "comment-widget.html" %}

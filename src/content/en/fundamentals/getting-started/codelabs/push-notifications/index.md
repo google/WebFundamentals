@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you will learn how to enable push messaging and notifications for web apps and sites.
 
-{# wf_updated_on: 2016-09-28T18:24:28Z #}
+{# wf_updated_on: 2016-10-10T14:58:32Z #}
 
 
 # Enable Push Notifications for your Web App {: page-title }
@@ -172,7 +172,7 @@ Click the __Inspect__ button on the chrome://serviceworker-internals page. You s
 ![3c32ddccce1cc6cd.png](img/3c32ddccce1cc6cd.png)
 
 
-## Make a project on the Google Developer Console
+## Make a project on the Firebase Developer Console
 
 
 
@@ -295,7 +295,7 @@ You can send a request to FCM using the cURL utility.
 
 The cURL command to send a request to FCM to issue a push message looks like this:
 
-`curl --header "Authorization: key=`__`<PUBLIC_API_KEY>`__`" 
+`curl --header "Authorization: key=`__`<SERVER_API_KEY>`__`" 
 --header "Content-Type: application/json"
 https://android.googleapis.com/gcm/send -d
 "{\"registration_ids\":[\"`__`<SUBSCRIPTION_ID>`__`\"]}"`

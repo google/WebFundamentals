@@ -239,9 +239,9 @@ All the code can be found in our [repository][Infscroller Code]. We have done ou
 
 [Infscroller Demo]: http://googlechrome.github.io/ui-element-samples/infinite-scroller/
 [Infscroller Code]: https://github.com/GoogleChrome/ui-element-samples/tree/gh-pages/infinite-scroller
-[Containment]: https://developers.google.com/web/updates/2016/06/css-containment?hl=en
-[IntersectionObserver]: https://developers.google.com/web/updates/2016/04/intersectionobserver?hl=en
-[Compositor Worklet]: https://developers.google.com/web/updates/2016/05/houdini?hl=en
+[Containment]: https://developers.google.com/web/updates/2016/06/css-containment
+[IntersectionObserver]: https://developers.google.com/web/updates/2016/04/intersectionobserver
+[Compositor Worklet]: https://developers.google.com/web/updates/2016/05/houdini
 
 
 {% include "comment-widget.html" %}

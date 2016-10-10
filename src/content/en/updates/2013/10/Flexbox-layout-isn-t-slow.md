@@ -21,7 +21,7 @@ A bit ago, Wilson Page wrote a [great article for Smashing Magazine](http://codi
 
 Wilson's comments were about the original (legacy) flexbox that used `display: box;`. Unfortunately they never got a chance to answer if the newer flexbox (`display: flex;`) was faster, but over on CSS Tricks, Chris Coyier [opened that question](http://css-tricks.com/does-flexbox-have-a-performance-problem/).
 
-We asked [Ojan Vafai](http://ojanvafai.com/), who wrote much of the implementation in WebKit & Blink, about the newer flexbox model and implementation.
+We asked [Ojan Vafai](http://ojanvafai.com/){: .external }, who wrote much of the implementation in WebKit & Blink, about the newer flexbox model and implementation.
 
 > The new flexbox code has a lot fewer multi-pass layout codepaths. You can still hit multi-pass codepaths pretty easily though (e.g. `flex-align: stretch` is often 2-pass). In general, it should be much faster in the common case, but you can construct a case where it's equally as slow.
 
@@ -65,7 +65,7 @@ To see the difference in numbers, I made a head-to-head comparison of old v new 
 
 What’s more important is optimizing what matters. Always use the timeline to identify your bottlenecks before spending time optimizing one sort of operation.
 
-In fact, we've connected with Wilson and the Financial Times Labs team and, as a result, improved the Chrome DevTools coverage of layout performance tooling. We'll soon be adding the ability to [view the relayout boundary](https://codereview.chromium.org/23201018/) of an element, and Layout events in the timeline are loaded with details of the scope, root, and cost of each layout:
+In fact, we've connected with Wilson and the Financial Times Labs team and, as a result, improved the Chrome DevTools coverage of layout performance tooling. We'll soon be adding the ability to [view the relayout boundary](https://codereview.chromium.org/23201018/){: .external } of an element, and Layout events in the timeline are loaded with details of the scope, root, and cost of each layout:
 
 ![](/web/updates/images/2013/10/flexbox/forced-sync-layout-popup.png)
 

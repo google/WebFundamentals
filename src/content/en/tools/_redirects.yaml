@@ -1,5 +1,8 @@
 redirects:
 
+- from: /web/tools/lighthouse/audits/
+  to: /web/tools/lighthouse/
+
 - from: /web/tools/chrome-devtools/evaluate-performance/rail
   to: /web/fundamentals/performance/rail
 

@@ -12,11 +12,11 @@ description: Media Source Extensions (MSE) provide extended buffering and playba
 
 ## Introduction
 
-[Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/about/) based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
+[Media Source Extensions (MSE)](http://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) provide extended buffering and playback control for the HTML5 `<audio>` and `<video>` elements. While originally developed to facilitate [Dynamic Adaptive Streaming over HTTP (DASH)](http://dashif.org/about/){: .external } based video players, below we'll see how they can be used for audio; specifically for [gapless playback](http://en.wikipedia.org/wiki/Gapless_playback).
 
 You've likely listened to a music album where songs flowed seamlessly across tracks; you may even be listening to one right now. Artists create these [gapless playback](https://en.wikipedia.org/wiki/Gapless_playback) experiences both as an artistic choice as well as an artifact of [vinyl records](https://en.wikipedia.org/wiki/Gramophone_record) and [CDs](https://en.wikipedia.org/wiki/Compact_disc) where audio was written as one continuous stream. Unfortunately, due to the way modern audio codecs like [MP3](https://en.wikipedia.org/wiki/MP3) and [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) work, this seamless aural experience is often lost today.
 
-We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/) chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
+We'll get into the details of why below, but for now let's start with a demonstration. Below is the first thirty seconds of the excellent [Sintel](http://www.sintel.org/){: .external } chopped into five separate MP3 files and reassembled using MSE. The red lines indicate gaps introduced during the creation (encoding) of each MP3; you'll hear glitches at these points.
 
 <p style="text-align: center;">
   <video controls poster="/web/updates/videos/2015-06-12-media-source-extensions-for-audio/poster.jpg">
@@ -74,7 +74,7 @@ We'll come back to the code in a moment, but let's now look more closely at the 
 </p>
 
 
-What's with all that those zero (silent) samples!? They're actually due to [compression artifacts](https://en.wikipedia.org/wiki/Gapless_playback#Compression_artifacts) introduced during encoding. Almost every encoder introduces some type of padding. In this case [LAME](http://lame.sourceforge.net/) added exactly 576 padding samples to the end of the file.
+What's with all that those zero (silent) samples!? They're actually due to [compression artifacts](https://en.wikipedia.org/wiki/Gapless_playback#Compression_artifacts) introduced during encoding. Almost every encoder introduces some type of padding. In this case [LAME](http://lame.sourceforge.net/){: .external } added exactly 576 padding samples to the end of the file.
 
 In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [`metadata`](#appendix-b-parsing-gapless-metadata) included within each file.
 
@@ -172,7 +172,7 @@ Thanks for reading!
 
 ## Appendix A: Creating Gapless Content
 
-Creating gapless content can be hard to get right. Below we'll walk through how the [Sintel](http://www.sintel.org/) media used in this demo were created. To start you'll need a copy of the [lossless FLAC soundtrack](http://media.xiph.org/sintel/Jan_Morgenstern-Sintel-FLAC.zip) for Sintel; for posterity, the SHA1 is included below. For tools, you'll need [FFmpeg](http://ffmpeg.org/), [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/), [LAME](http://lame.sourceforge.net/), and an OSX installation with [afconvert](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/afconvert.1.html).
+Creating gapless content can be hard to get right. Below we'll walk through how the [Sintel](http://www.sintel.org/){: .external } media used in this demo were created. To start you'll need a copy of the [lossless FLAC soundtrack](http://media.xiph.org/sintel/Jan_Morgenstern-Sintel-FLAC.zip) for Sintel; for posterity, the SHA1 is included below. For tools, you'll need [FFmpeg](http://ffmpeg.org/), [MP4Box](http://gpac.wp.mines-telecom.fr/mp4box/), [LAME](http://lame.sourceforge.net/), and an OSX installation with [afconvert](https://developer.apple.com/library/mac/documentation/Darwin/Reference/Manpages/man1/afconvert.1.html).
 
 
     unzip Jan_Morgenstern-Sintel-FLAC.zip
@@ -361,7 +361,7 @@ On desktop Chrome, you can keep approximately 12 megabytes of audio content and 
 
 Garbage collection only impacts data added to SourceBuffers; there are no limits on how much data you can keep buffered in JavaScript variables. You may also reappend the same data in the same position if necessary.
 
-Powered by [gnuplot](http://www.gnuplot.info/) and [wavesurfer.fm](http://www.wavesurfer.fm/).
+Powered by [gnuplot](http://www.gnuplot.info/){: .external } and [wavesurfer.fm](http://www.wavesurfer.fm/).
 
 
 {% include "comment-widget.html" %}

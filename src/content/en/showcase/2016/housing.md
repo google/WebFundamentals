@@ -27,7 +27,7 @@ book_path: /web/showcase/_book.yaml
 ## Company
 Housing.com is one of India’s top startups. On track to receive 50 million
 visits this year, it has become one of the leading online real estate
-platforms in India. After building [Housing Go](https://housing.com/), a
+platforms in India. After building [Housing Go](https://housing.com/){: .external }, a
 Progressive Web App (PWA), they saw a 38% increase in total conversions
 across browsers. The new PWA also delivered higher-value users, with
 visitors spending 10% longer per session and returning more often.

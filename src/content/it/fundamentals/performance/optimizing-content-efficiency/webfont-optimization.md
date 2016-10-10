@@ -237,7 +237,7 @@ Stabilito ciò il browser definisce i subset e le varianti necessarie e scarica 
 
 ### Font web e percorso di rendering critico
 
-Il lazy load di un font implica un aspetto importante che può ritardare il rendering del testo: il browser deve [costruire il render tree](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction), che dipende a sua volta dagli alberi DOM e CSSOM, per poter capire quali risorse saranno necessarie per il rendering. Di conseguenza, le richieste di font sono ritardate dopo altre risorse critiche, e il browser può bloccare il rendering del testo fino al recupero della risorsa.
+Il lazy load di un font implica un aspetto importante che può ritardare il rendering del testo: il browser deve [costruire il render tree](/web/fundamentals/performance/critical-rendering-path/render-tree-construction), che dipende a sua volta dagli alberi DOM e CSSOM, per poter capire quali risorse saranno necessarie per il rendering. Di conseguenza, le richieste di font sono ritardate dopo altre risorse critiche, e il browser può bloccare il rendering del testo fino al recupero della risorsa.
 
 <img src="images/font-crp.png" class="center" alt="Percorso di rendering critico dei font">
 

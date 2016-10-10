@@ -186,7 +186,7 @@ its current position in relation to the
 
 The event typically returns three properties: [`alpha`](#alpha), 
 [`beta`](#beta), and [`gamma`](#gamma). On Mobile Safari, an additional parameter
-[`webkitCompassHeading`](https://developer.apple.com/library/ios/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/)
+[`webkitCompassHeading`](https://developer.apple.com/library/ios/documentation/SafariDOMAdditions/Reference/DeviceOrientationEventClassRef/){: .external }
 is returned with the compass heading.
 
 ## Device motion 

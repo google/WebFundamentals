@@ -43,7 +43,7 @@ Example time! Here's a small code snippet with a benchmarking `tick` function. T
     requestAnimationFrame(tick);
     
 ​
-See [the live example at jsFiddle](http://jsfiddle.net/tbhZs/)
+See [the live example at jsFiddle](http://jsfiddle.net/tbhZs/){: .external }
 
 You can see how the benchmark keeps drawing more and more until it hits the point where it slows down. This is a nice and simple way to figure out how much you can draw at a smooth frame rate. You can also plug in your own draw function to the example and do some custom benchmarking, yay!
 

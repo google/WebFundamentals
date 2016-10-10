@@ -5,7 +5,7 @@ book_path: /web/updates/_book.yaml
 {# wf_published_on: 2012-02-02 #}
 {# wf_tags: news,webaudio,multimedia,audio #}
 
-# HTML5 <audio> and the Web Audio API are BFFs! {: .page-title }
+# HTML5 audio and the Web Audio API are BFFs! {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 

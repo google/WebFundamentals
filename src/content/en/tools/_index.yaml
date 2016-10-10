@@ -62,11 +62,12 @@ landing_page:
       - label: Learn more
         path: https://www.polymer-project.org/
     - description: >
-        AngularJS lets you write client-side web applications as if you had a
-        smarter browser. It lets you use good old HTML (or HAML, Jade and
-        friends!) as your template language and lets you extend HTML’s syntax
-        to express your application’s components clearly and succinctly.
-      image_path: images/angularjs.png
+        Angular is a development platform for building applications across web,
+        mobile, and desktop. With simple, declarative templates, reusable
+        components, and support for all parts of the development experience,
+        Angular makes it easy to write, test, and deploy high performing
+        applications at any scale.
+      image_path: images/angular.png
       buttons:
       - label: Learn more
         path: https://angularjs.org/

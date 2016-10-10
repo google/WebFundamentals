@@ -10,7 +10,7 @@ description: A quick look at some of the efforts the Chrome team are doing to he
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-At [Chrome Dev Summit 2014](https://developer.chrome.com/devsummit/) there was a
+At [Chrome Dev Summit 2014](https://developer.chrome.com/devsummit/){: .external } there was a
 whole host of topics and brand spanking new API's covered, but its not all about
 the new and shiny.
 
