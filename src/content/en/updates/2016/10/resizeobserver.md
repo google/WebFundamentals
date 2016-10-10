@@ -94,7 +94,7 @@ One thing that `ResizeObserver` allow you to do is to implement per-element
 media queries. By observing elements, you can imperatively define your
 design breakpoints and change the element’s styles. In the following
 [example](https://googlechrome.github.io/samples/resizeobserver/), the second box
-will change its background whenever its `width` goes below 250px.
+will change its border radius according to its width.
 
 <video controls autoplay loop muted>
   <source src="https://storage.googleapis.com/webfundamentals-assets/resizeobserver/elem-mq_vp8.webm" type="video/webm; codecs=vp8">
@@ -103,7 +103,7 @@ will change its background whenever its `width` goes below 250px.
 
     const ro = new ResizeObserver(entries => {
       for (let entry of entries) {
-        entry.target.classList.toggle('stripes', entry.contentRect.width < 250);
+        entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
       }
     });
     // Only observe the second box
