@@ -140,7 +140,7 @@ Nie istnieje jedna najlepsza polityka konfiguracji pamięci podręcznej. Zależn
 
 Niektóre wskazówki i techniki, o których trzeba pamiętać przy określaniu strategii buforowania:
 
-1. **Używaj spójnej metody tworzenia adresów URL:** przy przesyłaniu tej samej treści pod różnymi adresami URL będzie ona pobierana i przechowywana wiele razy. Wskazówka: pamiętaj, że w przypadku adresów URL [rozróżniana jest wielkość liter](http://www.w3.org/TR/WD-html40-970708/htmlweb.html).
+1. **Używaj spójnej metody tworzenia adresów URL:** przy przesyłaniu tej samej treści pod różnymi adresami URL będzie ona pobierana i przechowywana wiele razy. Wskazówka: pamiętaj, że w przypadku adresów URL [rozróżniana jest wielkość liter](http://www.w3.org/TR/WD-html40-970708/htmlweb.html){: .external }.
 2. **Upewnij się, że serwer udostępnia token walidacji (ETag):** tokeny eliminują potrzebę transferu tych samych danych przy braku zmian zasobu na serwerze.
 3. **Określ, które zasoby mogą być buforowane przez pośredników:** dobrymi kandydatami do buforowania przez sieci CDN i innych pośredników są odpowiedzi identyczne dla wszystkich użytkowników.
 4. **Określ optymalny okres ważności pamięci podręcznej dla każdego zasobu:** różne zasoby mogą wymagać różnych okresów ważności. Przeprowadź audyt i ustal odpowiednią wartość max-age dla każdego zasobu.

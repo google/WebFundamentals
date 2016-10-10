@@ -33,7 +33,7 @@ Zastanów się, czy dostępna jest technologia alternatywna pozwalająca uzyska�
 * Zastosowanie **efektów CSS** (gradientów, cieni itp.) i animacji CSS pozwala uzyskać ostrość wyświetlania niezależnie od rozdzielczości i stopnia powiększenia. Rozmiar takiego pliku to często ułamek rozmiaru pliku graficznego.
 * **Czcionki sieci web** umożliwiają wyświetlanie tekstów w wyrafinowany sposób przy zachowaniu zdolności do zaznaczania, wyszukiwania i zmiany rozmiaru tekstu, co skutkuje znacznym polepszeniem funkcjonalności.
 
-Jeśli kiedykolwiek zaczniesz kodować tekst na obrazie, wstrzymaj się i poświęć chwilę czasu na zastanowienie. Doskonale wyglądające czcionki to podstawa dobrego projektowania, budowania marki i czytelności. Jednak tekst na obrazach nie zapewnia wygody użytkownikom: takiego tekstu nie można zaznaczać, wyszukiwać ani dowolnie powiększać. Nie odczytują go aplikacje ułatwiające dostęp niepełnosprawnym. Nie jest poprawnie wyświetlany na urządzeniach o dużej rozdzielczości. Użycie czcionek sieci web wymaga zastosowania osobnych [reguł optymalizacji](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/), ale stanowi odpowiedź na wszystkie powyższe zastrzeżenia. Zawsze stanowi lepsze rozwiązanie w przypadku wyświetlania tekstu.
+Jeśli kiedykolwiek zaczniesz kodować tekst na obrazie, wstrzymaj się i poświęć chwilę czasu na zastanowienie. Doskonale wyglądające czcionki to podstawa dobrego projektowania, budowania marki i czytelności. Jednak tekst na obrazach nie zapewnia wygody użytkownikom: takiego tekstu nie można zaznaczać, wyszukiwać ani dowolnie powiększać. Nie odczytują go aplikacje ułatwiające dostęp niepełnosprawnym. Nie jest poprawnie wyświetlany na urządzeniach o dużej rozdzielczości. Użycie czcionek sieci web wymaga zastosowania osobnych [reguł optymalizacji](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/){: .external }, ale stanowi odpowiedź na wszystkie powyższe zastrzeżenia. Zawsze stanowi lepsze rozwiązanie w przypadku wyświetlania tekstu.
 
 
 ## Grafika wektorowa a rastrowa
@@ -59,8 +59,8 @@ Po ustaleniu, że to właśnie obraz pozwoli osiągnąć zamierzony efekt, nast�
 <div class="clearfix"></div>
 
 
-* W przypadku [grafiki wektorowej](http://pl.wikipedia.org/wiki/Grafika_wektorowa) obraz jest reprezentowany przez linie, punkty i wielokąty.
-* W przypadku [grafiki rastrowej](http://pl.wikipedia.org/wiki/Grafika_rastrowa) wartości każdego z pikseli są kodowane w prostokątnej matrycy.
+* W przypadku [grafiki wektorowej](http://pl.wikipedia.org/wiki/Grafika_wektorowa){: .external } obraz jest reprezentowany przez linie, punkty i wielokąty.
+* W przypadku [grafiki rastrowej](http://pl.wikipedia.org/wiki/Grafika_rastrowa){: .external } wartości każdego z pikseli są kodowane w prostokątnej matrycy.
 
 Każdy format ma swoje zalety i wady. Formaty wektorowe nadają się idealnie do reprezentacji obrazów zawierających proste kształty geometryczne (np. logotypy, tekst, ikony), jeśli wymagane jest zachowanie ostrości przy każdej rozdzielczości i przy każdym stopniu powiększenia. Czyni to je idealnymi formatami dla ekranów o wysokiej rozdzielczości i wyświetlania zasobów w różnych rozmiarach.
 
@@ -140,7 +140,7 @@ Wszystkie nowoczesne przeglądarki obsługują format SVG (Scalable Vector Graph
     </svg>
     
 
-W powyższym przykładzie renderowany jest prosty kształt w postaci koła z czarnym obramowaniem na czerwonym tle. Przykład ten wyeksportowano z programu Adobe Illustrator. Jak widać, zawiera on dużo metadanych &ndash; informacje o warstwach, komentarze i przestrzenie nazw XML &ndash; często zbędnych przy renderowaniu zasobu w przeglądarce. Z tego względu zawsze dobrze jest przeprowadzić kompaktowanie plików SVG za pomocą takiego narzędzia jak [svgo](https://github.com/svg/svgo).
+W powyższym przykładzie renderowany jest prosty kształt w postaci koła z czarnym obramowaniem na czerwonym tle. Przykład ten wyeksportowano z programu Adobe Illustrator. Jak widać, zawiera on dużo metadanych &ndash; informacje o warstwach, komentarze i przestrzenie nazw XML &ndash; często zbędnych przy renderowaniu zasobu w przeglądarce. Z tego względu zawsze dobrze jest przeprowadzić kompaktowanie plików SVG za pomocą takiego narzędzia jak [svgo](https://github.com/svg/svgo){: .external }.
 
 Rzeczywiście, narzędzie svgo redukuje rozmiar powyższego pliku SVG z programu Illustrator o 58% &ndash; z 470 bajtów do 199 bajtów. Ponieważ format SVG jest oparty na XML, można również skompresować go do formatu GZIP, co zmniejszy jego rozmiar podczas transmisji &ndash; upewnij się, że serwer jest skonfigurowany pod kątem kompresowania zasobów SVG.
 
@@ -153,7 +153,7 @@ Rzeczywiście, narzędzie svgo redukuje rozmiar powyższego pliku SVG z programu
 - W algorytmach kompresji obrazów stosuje się wiele różnych technik umożliwiających redukcję liczby bitów na piksel, co pozwala zmniejszyć rozmiar pliku obrazu
 
 
-Obraz rastrowy stanowi po prostu 2-wymiarową matrycę poszczególnych pikseli &ndash; np. obraz o rozdzielczości 100x100 pikseli zawiera sekwencję 10 000 pikseli. Z kolei w każdym pikselu zapisywane są wartości `[RGBA](http://pl.wikipedia.org/wiki/RGBA)`: (R) dla kanału koloru czerwonego, (G) dla kanału koloru zielonego, (B) dla kanału koloru niebieskiego i (A) dla kanału alfa (przezroczystości).
+Obraz rastrowy stanowi po prostu 2-wymiarową matrycę poszczególnych pikseli &ndash; np. obraz o rozdzielczości 100x100 pikseli zawiera sekwencję 10 000 pikseli. Z kolei w każdym pikselu zapisywane są wartości `[RGBA](http://pl.wikipedia.org/wiki/RGBA){: .external }`: (R) dla kanału koloru czerwonego, (G) dla kanału koloru zielonego, (B) dla kanału koloru niebieskiego i (A) dla kanału alfa (przezroczystości).
 
 Wewnętrznie przeglądarka przydziela do każdego kanału 256 wartości (odcieni), co przekłada się na 8 bitów na kanał (2 ^ 8 = 256) lub 4 bajty na piksel (4 kanały x 8 bitów = 32 bity = 4 bajty). Dzięki temu przy znajomości rozmiarów matrycy można łatwo określić rozmiar pliku:
 
@@ -210,13 +210,13 @@ Jednym z prostszych sposobów jest zredukowanie `głębokości bitowej` obrazu z
 
 Note: Od lewej do prawej (format PNG): 32-bitowy (16 milionów kolorów), 7-bitowy (128 kolorów), 5-bitowy (32 kolory). Złożone sceny ze stopniowymi gradacjami kolorów (przejścia tonalne, niebo itp.) wymagają bardziej licznych palet kolorów, co pozwala uniknąć artefaktów wizualnych, takich jak pikselizacja nieba (obecna przy 5-bitowej palecie kolorów). Z drugiej strony, jeśli obraz zawiera tylko kilka kolorów, liczna paleta to po prostu marnotrawstwo cennych bitów.
 
-Po zoptymalizowaniu danych zapisanych w poszczególnych pikselach możemy przyjrzeć się dokładniej sąsiednim pikselom: okazuje się, że na wielu obrazach, a szczególnie na zdjęciach, piksele mają zbliżone kolory &ndash; w przypadku nieba, powtarzających się wzorów i tak dalej. Wykorzystanie tego spostrzeżenia w algorytmie kompresji może polegać na zastosowaniu `[kodowania delta](http://en.wikipedia.org/wiki/Delta_encoding)`. Zamiast przechowywać wartości każdego z pikseli, przechowuje się wartości różnic pomiędzy sąsiednimi pikselami: jeśli sąsiednie piksele są identyczne, różnica wynosi zero i trzeba przechować tylko jeden bit. Ale czemu nie pójść dalej...
+Po zoptymalizowaniu danych zapisanych w poszczególnych pikselach możemy przyjrzeć się dokładniej sąsiednim pikselom: okazuje się, że na wielu obrazach, a szczególnie na zdjęciach, piksele mają zbliżone kolory &ndash; w przypadku nieba, powtarzających się wzorów i tak dalej. Wykorzystanie tego spostrzeżenia w algorytmie kompresji może polegać na zastosowaniu `[kodowania delta](http://en.wikipedia.org/wiki/Delta_encoding){: .external }`. Zamiast przechowywać wartości każdego z pikseli, przechowuje się wartości różnic pomiędzy sąsiednimi pikselami: jeśli sąsiednie piksele są identyczne, różnica wynosi zero i trzeba przechować tylko jeden bit. Ale czemu nie pójść dalej...
 
 Oko ludzkie cechuje się różnymi poziomami czułości na różne kolory: podczas kodowania można to uwzględnić, odpowiednio zmniejszając lub zwiększając liczność palety dla tych kolorów.
 Sąsiedztwo pikseli określa się w dwuwymiarowej matrycy, a więc każdy piksel ma wielu sąsiadów. Również ten fakt można wykorzystać do dalszego ulepszenia kodowania delta.
 Zamiast rozpatrywać tylko bezpośrednich sąsiadów każdego piksela, możemy zająć się większymi blokami sąsiednich pikseli i kodować różne bloki z różnymi ustawieniami. I tak dalej...
 
-Jak widać, optymalizacja obrazów szybko się komplikuje (lub, zależnie od punktu widzenia, staje się jeszcze ciekawsza), dlatego jest obszarem aktywnych badań akademickich i komercyjnych. Obrazy zajmują wiele miejsca, tak więc rozwijanie lepszych technik kompresji ma duże znaczenie. Dalsze informacje znajdziesz w [Wikipedii](http://en.wikipedia.org/wiki/Image_compression) i [opracowaniu na temat kompresji WebP](/speed/webp/docs/compression), w którym został podany praktyczny przykład.
+Jak widać, optymalizacja obrazów szybko się komplikuje (lub, zależnie od punktu widzenia, staje się jeszcze ciekawsza), dlatego jest obszarem aktywnych badań akademickich i komercyjnych. Obrazy zajmują wiele miejsca, tak więc rozwijanie lepszych technik kompresji ma duże znaczenie. Dalsze informacje znajdziesz w [Wikipedii](http://en.wikipedia.org/wiki/Image_compression){: .external } i [opracowaniu na temat kompresji WebP](/speed/webp/docs/compression), w którym został podany praktyczny przykład.
 
 Nasza dyskusja przybrała charakter akademicki, ale jak to przekłada się na możliwości optymalizacji obrazów na naszych stronach? Zdecydowanie nie będziemy się koncentrować na rozwijaniu nowych technik kompresji, jednak ważne jest zrozumienie zarysu problemu: pikseli RGBA, głębokości bitowej i różnych technik optymalizacji. O wszystkich tych koncepcjach trzeba pamiętać przy rozpatrywaniu różnych formatów obrazów rastrowych, ale tym zajmiemy się później.
 
@@ -234,8 +234,8 @@ Dla pewnych rodzajów danych, takich jak kod źródłowy strony lub plik wykonyw
 
 Z powodu sposobu działania oka często można pominąć pewne informacje o pikselach i zredukować rozmiar pliku obrazu &ndash; np. oko cechuje różny poziom czułości na różne kolory, dlatego niektóre kolory można zakodować z wykorzystaniem mniejszej liczby bitów. Z tego powodu typowa procedura optymalizacji składa się z dwóch kroków wysokiego poziomu:
 
-1. Przetworzenie obrazu przez filtr `[stratny](http://pl.wikipedia.org/wiki/Kompresja_stratna)` eliminujący niektóre dane pikseli
-1. Przetworzenie obrazu przez filtr `[bezstratny](http://pl.wikipedia.org/wiki/Kompresja_bezstratna)` kompresujący dane pikseli
+1. Przetworzenie obrazu przez filtr `[stratny](http://pl.wikipedia.org/wiki/Kompresja_stratna){: .external }` eliminujący niektóre dane pikseli
+1. Przetworzenie obrazu przez filtr `[bezstratny](http://pl.wikipedia.org/wiki/Kompresja_bezstratna){: .external }` kompresujący dane pikseli
 
 **Pierwszy krok jest opcjonalny. Jednak warto zapamiętać, że każdy obraz można poddać kompresji stratnej w celu redukcji rozmiaru, a dokładny algorytm tej kompresji zależy od konkretnego formatu obrazu.** Różnica pomiędzy różnymi formatami obrazów, takimi jak GIF, PNG, JPEG, polega na różnym połączeniu algorytmów wykorzystywanych (lub nie) w kroku kompresji stratnej i bezstratnej.
 

@@ -27,7 +27,7 @@ Zacznijmy od najprostszego możliwego przypadku: zwykłej strony HTML z tekstem 
 <img src="images/full-process.png" alt="Proces tworzenia modelu DOM">
 
 1. **Konwersja:** przeglądarka odczytuje nieprzetworzone bajty znaczników HTML z dysku lub przez sieć i zamienia je na znaki, uwzględniając podane kodowanie pliku (np. UTF-8).
-1. **Tokenizacja:** przeglądarka zamienia łańcuchy znaków na odrębne tokeny określone [standardem HTML5 organizacji W3C](http://www.w3.org/TR/html5/) &ndash; np. "<html>", "<body>", jak również inne łańcuchy obecne w nawiasach trójkątnych. Każdy token ma specjalne znaczenie i opisuje go pewien zestaw reguł.
+1. **Tokenizacja:** przeglądarka zamienia łańcuchy znaków na odrębne tokeny określone [standardem HTML5 organizacji W3C](http://www.w3.org/TR/html5/){: .external } &ndash; np. "<html>", "<body>", jak również inne łańcuchy obecne w nawiasach trójkątnych. Każdy token ma specjalne znaczenie i opisuje go pewien zestaw reguł.
 1. **Analiza leksykalna:** wyznaczone tokeny są przekształcane w obiekty z określonymi właściwościami i regułami.
 1. **Tworzenie modelu DOM:** ponieważ znaczniki HTML określa związki pomiędzy różnymi tagami (niektóre tagi obejmują inne tagi), utworzone obiekty są łączone w drzewiastą strukturę danych odzwierciedlającą zależności pomiędzy elementami nadrzędnymi i podrzędnymi określonymi w pierwotnym kodzie: obiekt _HTML_ jest elementem nadrzędnym obiektu _body_, obiekt _body_ jest elementem nadrzędnym obiektu _paragraph_ i tak dalej.
 
@@ -67,7 +67,7 @@ Dlaczego model CSSOM ma strukturę drzewiastą? Przy wyznaczaniu końcowego zest
 
 Rozważmy to na konkretnym przykładzie &ndash; drzewie CSSOM powyżej. Wszelki tekst pomiędzy tagami _span_ i obecny w obrębie sekcji body będzie miał rozmiar czcionki równy 16 pikseli i kolor czerwony &ndash; dyrektywa rozmiaru czcionki jest dziedziczona w dół przez element span po elemencie body. Jeśli jednak tag span jest elementem podrzędnym tagu paragrafu (p), jego zawartość nie zostanie wyświetlona.
 
-Zwróć uwagę, że powyższe drzewo nie jest kompletnym drzewem CSSOM i zawiera tylko style, które postanowiliśmy nadpisać w naszym arkuszu stylów. Każda przeglądarka zapewnia domyślny zestaw stylów znany jako `style agenta użytkownika` (widoczne jeśli nie wprowadzamy własnych stylów). Nasze style po prostu zastępują te style domyślne (np. [domyślne style przeglądarki IE](http://www.iecss.com/)). Jeśli przy przeglądaniu za pomocą Narzędzi Chrome dla programistów `wyznaczonych stylów` zastanawiałeś się, skąd się one biorą, teraz już wiesz!
+Zwróć uwagę, że powyższe drzewo nie jest kompletnym drzewem CSSOM i zawiera tylko style, które postanowiliśmy nadpisać w naszym arkuszu stylów. Każda przeglądarka zapewnia domyślny zestaw stylów znany jako `style agenta użytkownika` (widoczne jeśli nie wprowadzamy własnych stylów). Nasze style po prostu zastępują te style domyślne (np. [domyślne style przeglądarki IE](http://www.iecss.com/){: .external }). Jeśli przy przeglądaniu za pomocą Narzędzi Chrome dla programistów `wyznaczonych stylów` zastanawiałeś się, skąd się one biorą, teraz już wiesz!
 
 Chcesz wiedzieć, jak długo trwało przetwarzanie CSS? Zapisz oś czasu w narzędziach DevTools i poszukaj zdarzania `Recalculate Style`: inaczej niż w przypadku parsowania DOM oś czasu nie zawiera osobnej pozycji `Parse CSS`, a zamiast tego to jedno zdarzenie obejmuje parsowanie drzewa CSSOM i rekursywne wyznaczanie stylów.
 
