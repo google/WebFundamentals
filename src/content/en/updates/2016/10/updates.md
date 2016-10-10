@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: "The new Web Fundamentals, better navigation, new content and more!"
+description: "The new Web Fundamentals: better navigation, new content and more!"
 
 {# wf_updated_on: 2016-10-07 #}
 {# wf_published_on: 2016-10-07 #}
 {# wf_featured_image: /web/updates/images/2016/09/broadcast.png #}
-{# wf_featured_snippet: We recently made some big changes to Web<b>Fundamentals</b>, improving navigation, adding lots of new content, and made it easier for you to contribute. #}
+{# wf_featured_snippet: We recently made some big changes to Web<b>Fundamentals</b>, improving navigation, adding lots of new content, and making it easier for you to contribute. #}
 
 # Updates to developers.google.com/web {: .page-title }
 
@@ -13,7 +13,7 @@ description: "The new Web Fundamentals, better navigation, new content and more!
 
 We launched [Web**Fundamentals**](/web/fundamentals/) two years ago to help
 ensure that developers had the latest guidance on how to build great sites and 
-apps that worked well desktop, but more importantly, on
+apps that worked well on desktop, but more importantly, on
 [mobile](https://webmasters.googleblog.com/2014/11/helping-users-find-mobile-friendly-pages.html). 
 
 A lot has chanced since then, the mobile web experience
@@ -52,7 +52,7 @@ Some of the new content includes:
 
 Of course, we still have lots of work to do, there's new guidance that needs
 to be developed, new content that needs to be written, and issues that need
-to be fixed. But, we're working on it!
+to be fixed. But, we're working on it.
 
 One of the goals for this update was to make it easier for **you** to
 contribute. We've majorly simplified the development process, removing many
@@ -67,15 +67,15 @@ we also have to think about the future of our other resources. Many of you will
 know that our team created and, through the community, supported the growth of
 HTML5Rocks but over the last two years it has seen no updates. We've already 
 migrated [updates.html5rocks.com](https://updates.html5rocks.com) to 
-[Web **Updates**](/web/updates/) and we are working to move addition content
-from HTML5Rocks here. We've added support for HTTPS to HTML5Rocks, and will
+[Web **Updates**](/web/updates/) and we are working to move additional content
+from HTML5Rocks to here. We've added support for HTTPS to HTML5Rocks, and
 are commited to ensuring that the great content that's there, won't
 disappear.
 
 I personally want to thank our 
 [contributors](https://github.com/html5rocks/www.html5rocks.com/graphs/contributors),
 the [developers](/web/resources/contributors) who have helped translate
-content, and you. Your feedback, but reports, translations, new content,
+content, and you. Your feedback, bug reports, translations, new content,
 questions, and the content you've contributed to HTML5Rocks and
 Web**Fundamentals** has been invaluable. We couldn't have done it without
 your help! Thank you!
