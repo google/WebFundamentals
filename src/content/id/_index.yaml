@@ -22,13 +22,13 @@ landing_page:
       image_path: images/hero-2x.png
       buttons:
       - label: Cara Terbaik (Best Practice)
-        path: "#follow-best-practices"
+        path: "#ikuti-best-practice"
         classname: button button-primary
       - label: Aplikasi Web Progresif (Progressive Web Apps)
-        path: "#progressive-web-apps"
+        path: "#aplikasi-web-progresif-progressive-web-apps"
         classname: button button-primary
       - label: Halaman Mobile Dipercepat (Accelerated Mobile Pages)
-        path: "#accelerated-mobile-pages"
+        path: "#halaman-mobile-dipercepat-accelerated-mobile-pages"
         classname: button button-primary
 
   - items:
