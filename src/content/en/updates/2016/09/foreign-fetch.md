@@ -88,7 +88,7 @@ Remember that foreign fetch is currently implemented as an [Origin Trial](https:
 
 **Note:** Astute readers of the service worker specification may have [noticed](https://w3c.github.io/ServiceWorker/spec/service_worker/index.html#example-00a7acb9) another means of performing service worker registration, via a `<link rel="serviceworker">` DOM element. Support for `<link>`-based registration in Chrome is currently controlled by the same Origin Trial as the `Link` header, so it is not yet enabled by default. `<link>`-based registration has the same limitations as JavaScript-based registration when it comes to foreign fetch registration, so for the purposes of this article, the `Link` header is what you should be using.
 
-### Debugging Registration
+### Debugging registration
 
 During development, you'll probably want to confirm that your foreign fetch service worker is properly installed and processing requests. There are a few things you can check in Chrome's [Developer Tools](https://developer.chrome.com/devtools) to confirm that things are working as expected.
 
@@ -98,7 +98,7 @@ In order to register the foreign fetch service worker, you need to set a Link he
 
 ![Headers displayed in the Network panel](/web/updates/images/2016/09/foreign-fetch/headers.png "Headers displayed in the Network panel")
 
-#### Is the foreign fetch service worker properly registered?
+#### Is the Foreign Fetch service worker properly registered?
 
 You can also confirm the underlying service worker registration, including its scope, by looking at the full list of service workers in the [Application panel](/web/tools/chrome-devtools/iterate/manage-data/) of DevTools. Make sure to select the "Show all" option, since by default, you'll only see service workers for the current origin.
 
