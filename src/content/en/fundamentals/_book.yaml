@@ -7,6 +7,8 @@ upper_tabs:
       other:
       - name: Fundamentals
         contents:
+        - title: Home
+          path: /web/fundamentals/
         - include: /web/fundamentals/getting-started/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/architecture/_toc.yaml

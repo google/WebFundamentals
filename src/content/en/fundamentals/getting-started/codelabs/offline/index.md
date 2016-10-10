@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
-{# wf_updated_on: 2016-07-18T20:46:36Z #}
+{# wf_updated_on: 2016-10-10T14:57:55Z #}
 
 
 # Adding a Service Worker and Offline into your Web App {: page-title }
@@ -236,7 +236,7 @@ You now have offline support. Reload your page while still online to update your
 
 #### Learn More
 
-*  [Introduction to service worker](/web/fundamentals/primers/service-worker/)
+*  [Introduction to service worker](https://developers.google.com/web/fundamentals/primers/service-worker/?hl=en)
 
 
 

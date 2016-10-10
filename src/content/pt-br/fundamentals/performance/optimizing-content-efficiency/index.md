@@ -14,7 +14,7 @@ description: O volume de dados transferidos por aplicativos continua a crescer. 
 A funcionalidade, as pretensões e o escopo dos aplicativos da Web continuam a crescer e isso é bom. No entanto, a incessante caminhada em direção a uma Web mais avançada leva a outra tendência: o volume de dados transferidos por cada aplicativo continua a crescer em ritmo constante. Para proporcionar um bom desempenho, é preciso otimizar a exibição de absolutamente todos os bytes.
 
 
-Como são os atuais aplicativos da Web? O site [HTTP Archive](http://httparchive.org/) pode ajudar a responder a essa pergunta. Trata-se de um projeto que monitora como a Web está organizada fazendo o rastreamento periódico dos sites mais populares (mais de 300.000 sites da lista dos 1 milhão de sites mais acessados do ranking Alexa), registrando e agregando dados analíticos sobre recursos, tipos de conteúdo e outros metadados de cada destino individual.
+Como são os atuais aplicativos da Web? O site [HTTP Archive](http://httparchive.org/){: .external } pode ajudar a responder a essa pergunta. Trata-se de um projeto que monitora como a Web está organizada fazendo o rastreamento periódico dos sites mais populares (mais de 300.000 sites da lista dos 1 milhão de sites mais acessados do ranking Alexa), registrando e agregando dados analíticos sobre recursos, tipos de conteúdo e outros metadados de cada destino individual.
 
 <img src="images/http-archive-trends.png" class="center" alt="Tendências do HTTP Archive">
 

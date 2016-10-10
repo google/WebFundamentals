@@ -104,7 +104,7 @@ use more power than do on-screen notifications.
 A precise notification is one that has specific information that can be acted on
 immediately. Consider the image from the anatomy lesson again.
 
-![A precise notification has specific information.](images/flight-delayed-good){:width="316px"}
+![A precise notification has specific information.](images/flight-delayed-good.png){:width="316px"}
 
 It tells you everything you need to know in one glance:
 

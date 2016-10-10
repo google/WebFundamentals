@@ -22,7 +22,7 @@ O Web design responsivo significa que não somente os layouts podem ser modifica
 <img class="center" src="img/art-direction.png" alt="Exemplo de direção de arte"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Outras vezes, talvez seja necessário alterar a imagem de forma mais drástica: mudando as proporções, fazendo cortes e até mesmo substituindo toda a imagem.  Nesse caso, a alteração da imagem geralmente é denominada direção de arte.  Acesse [responsiveimages.org/demos/](http://responsiveimages.org/demos/) para ver mais exemplos.
+Outras vezes, talvez seja necessário alterar a imagem de forma mais drástica: mudando as proporções, fazendo cortes e até mesmo substituindo toda a imagem.  Nesse caso, a alteração da imagem geralmente é denominada direção de arte.  Acesse [responsiveimages.org/demos/](http://responsiveimages.org/demos/){: .external } para ver mais exemplos.
 
 
 {% include "web/_shared/udacity/ud882.html" %}
@@ -332,7 +332,7 @@ alt="Exemplo de página que usa FontAwesome para os ícones de fontes.">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" %}
 </pre>
 
-Existem centenas de fontes de ícones disponíveis, tanto gratuitos quanto pagos, incluindo [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) e [Glyphicons](http://glyphicons.com/).
+Existem centenas de fontes de ícones disponíveis, tanto gratuitos quanto pagos, incluindo [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/){: .external } e [Glyphicons](http://glyphicons.com/).
 
 Não se esqueça de equilibrar a necessidade de usar os ícones com o peso da solicitação adicional de HTTP e o tamanho do arquivo.  Por exemplo, se você precisar apenas de alguns ícones, pode ser mais indicado usar uma imagem ou um painel de imagens.
 
@@ -371,7 +371,7 @@ Siga estas diretrizes ao escolher o formato mais apropriado:
 
 O tamanho do arquivo de imagem pode ser reduzido consideravelmente. Para isso, é necessário realizar um processo de `pós-processamento` após salvar o arquivo. Existem inúmeras ferramentas que comprimem imagens: compactação com e sem perdas, on-line, GUI, linha de comando etc.  Sempre que possível, é mais indicado tentar automatizar a otimização de imagens para garantir a qualidade desse processo no fluxo de trabalho.
 
-Diversas ferramentas estão disponíveis para realizar uma compactação mais detalhada e sem perdas em arquivos JPG e PNG que não prejudicará a qualidade da imagem. Para imagens JPG, use [jpegtran](http://jpegclub.org/) ou [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (disponível somente para Linux, deve ser executado com a opção `strip-all`). Para arquivos PNG, use [OptiPNG](http://optipng.sourceforge.net/) ou [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
+Diversas ferramentas estão disponíveis para realizar uma compactação mais detalhada e sem perdas em arquivos JPG e PNG que não prejudicará a qualidade da imagem. Para imagens JPG, use [jpegtran](http://jpegclub.org/){: .external } ou [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (disponível somente para Linux, deve ser executado com a opção `strip-all`). Para arquivos PNG, use [OptiPNG](http://optipng.sourceforge.net/) ou [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
 
 ### Use painéis de imagens (sprites)
 

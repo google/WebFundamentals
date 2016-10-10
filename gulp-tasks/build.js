@@ -54,8 +54,8 @@ gulp.task('build:showcase', function() {
   });
 });
 
-gulp.task('build:shows', function() {
-  wfYouTubeShows.buildFeeds();
+gulp.task('build:shows', function(cb) {
+  wfYouTubeShows.buildFeeds(GLOBAL.WF.options.buildType, cb);
 });
 
 gulp.task('build:http203Podcast', function() {

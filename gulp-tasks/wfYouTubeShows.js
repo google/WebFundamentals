@@ -12,12 +12,16 @@ var google = require('googleapis');
 var moment = require('moment');
 var wfTemplateHelper = require('./wfTemplateHelper');
 
-function buildFeeds() {
+function buildFeeds(buildType, callback) {
   var apiKey;
   try {
     apiKey = fs.readFileSync('./src/data/youtubeAPIKey.txt', 'utf8');
   } catch (ex) {
     gutil.log(' ', 'YouTube feed build skipped, youtubeAPIKey.txt not found.');
+    if (buildType === 'production') {
+      return callback('youtubeAPIKey.txt not found.');
+    }
+    callback();
     return;
   }
   var youtube = google.youtube({version: 'v3', auth: apiKey});
@@ -29,6 +33,7 @@ function buildFeeds() {
   youtube.playlistItems.list(opts, function(err, response) {
     if (err) {
       gutil.log(' ', 'Error, unable to retreive playlist', err);
+      callback(err);
     } else {
       var articles = [];
       response.items.forEach(function(video) {
@@ -83,6 +88,7 @@ function buildFeeds() {
       template = path.join(GLOBAL.WF.src.templates, 'rss.xml');
       outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'rss.xml');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
+      callback();
     }
   });
 }

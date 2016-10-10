@@ -238,8 +238,9 @@
                 <option value="en">English</option>
                 <option value="es">Español</option>
                 <option value="fr">Français</option>
+                <option value="he">עִבְרִית</option>
+                <option value="hi">Hindi</option>
                 <option value="it">Italiano</option>
-                <option value="iw">עִבְרִית</option>
                 <option value="ja">日本語</option>
                 <option value="ko">한국어</option>
                 <option value="nl">Nederlands</option>

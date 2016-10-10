@@ -61,8 +61,9 @@ function testMarkdownFile(fileName, contribJson) {
     errors.push({msg: 'Missing project_path definition', param: ''});
   }
   // Validate description
-  var description = wfHelper.getRegEx(/^description: (.*)/m, fileContent, null);
+  var description = wfHelper.getRegEx(/^description:(.*)\n/m, fileContent, null);
   if (description) {
+    description = description.trim();
     if (description.length === 0) {
       errors.push({msg: 'description cannot be empty', param: ''});
     } else if (description.length > MAX_DESCRIPTION_LENGTH) {
@@ -113,9 +114,13 @@ function testMarkdownFile(fileName, contribJson) {
   if (title) {
     if (title.length > 1) {
       errors.push({msg: 'Page has multiple title tags', param: title.join(',')});
-    } else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
-      errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
     }
+    if (title[0].indexOf('<') >= 0 || title[0].indexOf('&gt;') >= 0 || title[0].indexOf('`') >= 0) {
+      errors.push({msg: 'Title should not contain markup', param: title[0]});
+    }
+    //  else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
+    //   errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
+    // }
   } else {
     errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title}'});
   }
@@ -201,6 +206,22 @@ function testMarkdownFile(fileName, contribJson) {
   return {file: fileName, errors: errors, warnings: warnings};
 }
 
+function validateYamlFiles(fileName) {
+  var yamlDoc;
+  var jsonDoc;
+  try {
+    yamlDoc = fs.readFileSync(fileName, 'utf8');
+  } catch (ex) {
+    return {file: fileName, error: 'Unable to read yaml file.', ex: ex};
+  }
+  try {
+    jsonDoc = jsYaml.safeLoad(yamlDoc);
+  } catch (ex) {
+    return {file: fileName, error: 'Unable to parse yaml file.', ex: ex};
+  }
+  return {file: fileName, ok: true};
+}
+
 gulp.task('test', function(callback) {
   var warnings = 0;
   var errors = 0;
@@ -229,8 +250,22 @@ gulp.task('test', function(callback) {
     errorList.push(CONTRIBUTORS_FILE + ': ' + msg + ' -- ' + ex.message);
   }
 
+  gutil.log('Validating yaml files...');
+  var files = glob.find(['**/*.yaml'], STD_EXCLUDES, opts);
+  files.sort();
+  files.forEach(function(file) {
+    var r = validateYamlFiles(file);
+    if (r.error) {
+      filesWithIssues++;
+      gutil.log(r.file);
+      gutil.log(' ', gutil.colors.red('ERROR'), r.error);
+      errorList.push(r.file + ': ' + r.error + ' -- ' + r.ex.message);
+    }
+  });
+  var yamlFileCount = files.length;
+
   gutil.log('Validating markdown (.md) files...');
-  var files = glob.find(['**/*.md'], STD_EXCLUDES, opts);
+  files = glob.find(['**/*.md'], STD_EXCLUDES, opts);
   files.sort();
   files.forEach(function(fileObj) {
     var r = testMarkdownFile(fileObj, contribJson);
@@ -250,7 +285,7 @@ gulp.task('test', function(callback) {
   });
   gutil.log('');
   gutil.log('Test Completed.');
-  gutil.log('Files checked: ', gutil.colors.blue(files.length));
+  gutil.log('Files checked: ', gutil.colors.blue(files.length + yamlFileCount));
   gutil.log(' - with issues:', gutil.colors.yellow(filesWithIssues));
   gutil.log(' - warnings:   ', gutil.colors.yellow(warnings));
   gutil.log(' - errors:     ', gutil.colors.red(errorList.length));

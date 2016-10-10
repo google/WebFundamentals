@@ -109,7 +109,7 @@ saída final abaixo:
 #### Verifique seu Javascript
 
 JSHint é uma ferramenta que analisa seu código JavaScript para verificar possíveis problemas
-com sua lógica JavaScript e [aplica as práticas recomendadas de codificação](http://www.jshint.com/docs/).
+com sua lógica JavaScript e [aplica as práticas recomendadas de codificação](http://www.jshint.com/docs/){: .external }.
 
 A ferramenta é executada sempre que você compila o projeto ou, se estiver executando o gulp server,
 sempre que realiza uma alteração em um arquivo JavaScript.

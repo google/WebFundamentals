@@ -4,10 +4,11 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2016-09-21T18:11:44Z",
+  "updated": "2016-10-10T14:58:57Z",
   "id": "web-perf",
   "duration": 0,
   "title": "Find and Fix Web App Performance Issues",
+  "author": "kaycebasque",
   "summary": "This codelab will help you learn to identify and fix web app performance bottlenecks.",
   "theme": "web",
   "status": [

@@ -16,11 +16,23 @@ landing_page:
         </div>
         <h2>{{videos.0.snippet.title}}</h2>
         <p>{{{videos.0.shortDesc}}}</p>
-        <b>Want more?</b><br>
-        Check out the videos below, and subscribe to our YouTube channel.<br>
+        
+  
+  - items:
+    - custom_html: >
+        <h3>Want more?</h3>
         <script async defer src="https://apis.google.com/js/platform.js"></script>
-        <div class="g-ytsubscribe" data-channel="ChromeDevelopers" data-layout="full" data-count="default"></div>
-      
+        <div class="attempt-right">
+          <div class="g-ytsubscribe" data-channel="ChromeDevelopers" data-layout="full" data-count="default"></div>
+        </div>
+        <p>
+          Check out the videos below, and subscribe to our YouTube channel or
+          <a href="https://developers.google.com/shows/rss.xml">
+          subscribe</a> to our RSS feed.
+        </p>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://developers.google.com/shows/rss.xml">
+        <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://developers.google.com/shows/atom.xml">
+
   - items:
     - heading: "{{videos.1.snippet.title}}"
       youtube_id: {{videos.1.snippet.resourceId.videoId}}

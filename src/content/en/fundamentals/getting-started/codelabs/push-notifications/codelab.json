@@ -4,10 +4,11 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2016-09-28T18:24:28Z",
+  "updated": "2016-10-10T14:58:32Z",
   "id": "push-notifications",
   "duration": 32,
   "title": "Enable Push Notifications for your Web App",
+  "author": "samdutton",
   "summary": "In this codelab, you will learn how to enable push messaging and notifications for web apps and sites.",
   "theme": "web",
   "status": [

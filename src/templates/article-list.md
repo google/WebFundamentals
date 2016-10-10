@@ -32,3 +32,10 @@ Tags: {{#each tags}}[{{this}}](/web/updates/tags/{{this}}) {{/each}}
 <div style="clear:both"></div>
 
 {{/each}}
+
+<a href="https://developers.google.com/{{section}}/rss.xml">
+  <img src="/web/images/md-icons/ic_rss_feed_black_48dp.svg" style="height:36px;">
+  <span style="position:relative;top:-6px;">Subscribe</span>
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="https://developers.google.com/{{section}}/rss.xml">
+  <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://developers.google.com/{{section}}/atom.xml">
+</a>
