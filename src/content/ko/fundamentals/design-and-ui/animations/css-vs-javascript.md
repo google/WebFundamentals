@@ -168,7 +168,7 @@ Note: 웹에서 애니메이션에 setInterval 또는 setTimeout을 사용하는
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">샘플 보기</a>
 
-이 코드는 더 많은 경우를 포함하도록 확장해야 하기 때문에 매우 복잡하고 관리하기 어렵습니다. 따라서 애니메이션에 사용할 수 있는 많은 JavaScript 라이브러리 중 하나를 선택하면 도움이 됩니다. 프로젝트에서 이미 jQuery를 사용 중인 경우, 이를 활용하고 [`.animate()`](http://api.jquery.com/animate/) 함수를 사용할 수 있습니다. 반면에 전용 라이브러리가 필요한 경우 매우 강력한 [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)를 참조하십시오. 파일 크기 면에서 더욱 친숙한 TweenLite라는 라이트 버전이 있습니다.
+이 코드는 더 많은 경우를 포함하도록 확장해야 하기 때문에 매우 복잡하고 관리하기 어렵습니다. 따라서 애니메이션에 사용할 수 있는 많은 JavaScript 라이브러리 중 하나를 선택하면 도움이 됩니다. 프로젝트에서 이미 jQuery를 사용 중인 경우, 이를 활용하고 [`.animate()`](http://api.jquery.com/animate/){: .external } 함수를 사용할 수 있습니다. 반면에 전용 라이브러리가 필요한 경우 매우 강력한 [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)를 참조하십시오. 파일 크기 면에서 더욱 친숙한 TweenLite라는 라이트 버전이 있습니다.
 
 JavaScript 애니메이션을 사용하면 모든 단계에서 요소 스타일을 완벽히 제어할 수 있기 때문에, 애니메이션을 감속, 일시 중지, 중지 또는 거꾸로 재생하거나 적절히 조작할 수 있습니다.
 

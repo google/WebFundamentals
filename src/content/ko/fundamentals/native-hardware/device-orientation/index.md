@@ -49,7 +49,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 기준으로 정렬됩니다.
 
 <img src="images/axes.png" alt="장치 좌표계 그림">
-<!-- Special thanks to Sheppy (https://developer.mozilla.org/en-US/profiles/Sheppy) 
+<!-- Special thanks to Sheppy (https://developer.mozilla.org/en-US/profiles/Sheppy){: .external } 
   for his images which are in the public domain. -->
 
 <ul>
@@ -73,7 +73,7 @@ Note: 장치 모션이나 장치 방향 이벤트를 사용하기로 결정할 �
 ### 회전 데이터
 
 회전 데이터는 장치 좌표계와 지구 좌표계
-사이의 각도 차이를 나타내는 [오일러각](http://en.wikipedia.org/wiki/Euler_angles)으로
+사이의 각도 차이를 나타내는 [오일러각](http://en.wikipedia.org/wiki/Euler_angles){: .external }으로
 반환됩니다.
 
 <figure>

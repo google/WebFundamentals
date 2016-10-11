@@ -20,7 +20,7 @@ CSS에 포함된 easing 키워드를 사용하지 않거나 JavaScript 기반 �
 - 탄성 또는 바운스 애니메이션 등 애니메이션 타이밍과 동작을 더욱 세밀하게 제어해야 하는 경우 JavaScript를 사용합니다.
 
 
-CSS로 애니메이션을 만드는 경우, 3차원 베지어 곡선을 정의하여 타이밍을 정의할 수 있다는 것을 알게 될 것입니다. 실제로, `ease`, `ease-in`, `ease-out` 및 `linear` 키워드는 사전 정의된 베지어 곡선에 매핑됩니다. 이에 대한 자세한 내용은 [CSS 전환 사양](http://www.w3.org/TR/css3-transitions/)을 참조하십시오.
+CSS로 애니메이션을 만드는 경우, 3차원 베지어 곡선을 정의하여 타이밍을 정의할 수 있다는 것을 알게 될 것입니다. 실제로, `ease`, `ease-in`, `ease-out` 및 `linear` 키워드는 사전 정의된 베지어 곡선에 매핑됩니다. 이에 대한 자세한 내용은 [CSS 전환 사양](http://www.w3.org/TR/css3-transitions/){: .external }을 참조하십시오.
 
 CSS에서 이러한 베지어 곡선은 4개의 값, 즉 2쌍의 숫자를 취하며, 각 쌍은 3차원 베지어 곡선 제어점의 X 및 Y 좌표를 나타냅니다.  베지어 곡선의 시작 좌표는 (0, 0)이고 끝 좌표는 (1, 1)입니다. 두 제어점의 X 및 Y 값을 설정합니다. 두 제어점의 X 값은 0과 1 사이여야 하고, 각 제어점의 Y 값은 [0, 1] 제한을 초과할 수 있습니다(사양은 명확하지 않음)!
 
@@ -47,7 +47,7 @@ CSS에서 이러한 베지어 곡선은 4개의 값, 즉 2쌍의 숫자를 취�
 
 ## 세밀한 제어를 하려면 JavaScript 사용
 
-3차원 베지어 곡선이 제공하는 것보다 더욱 세밀한 제어가 필요한 경우가 있습니다. 탄성 바운스 느낌을 원하거나 중간에 애니메이션 일부의 실행을 멈추기를 원할 수도 있는데, 두 가지 모두 CSS로는 어렵습니다. 이러한 경우에 JavaScript 애니메이션 라이브러리를 사용해야 합니다. 최고의 라이브러리 중 하나는 [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)로 (또는 초경량으로 유지하기를 원할 경우 TweenLite), 작은 JavaScript 라이브러리로 많은 부분을 제어할 수 있고 매우 풍성한 코드베이스를 제공합니다.
+3차원 베지어 곡선이 제공하는 것보다 더욱 세밀한 제어가 필요한 경우가 있습니다. 탄성 바운스 느낌을 원하거나 중간에 애니메이션 일부의 실행을 멈추기를 원할 수도 있는데, 두 가지 모두 CSS로는 어렵습니다. 이러한 경우에 JavaScript 애니메이션 라이브러리를 사용해야 합니다. 최고의 라이브러리 중 하나는 [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified){: .external }로 (또는 초경량으로 유지하기를 원할 경우 TweenLite), 작은 JavaScript 라이브러리로 많은 부분을 제어할 수 있고 매우 풍성한 코드베이스를 제공합니다.
 
 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-elastic.html">elastic ease 애니메이션을 참조하십시오.</a>
 

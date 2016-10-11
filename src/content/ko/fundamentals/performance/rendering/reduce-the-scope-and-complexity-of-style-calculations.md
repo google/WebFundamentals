@@ -84,7 +84,7 @@ Note: 웹 구성요소를 들여다보면 기본적으로 스타일은 Shadow DO
 이벤트를 클릭하면 JavaScript에서 스타일 변경 트리거를 담당하는 장소를 가리키는 호출 스택이 제공됩니다. 또한 변경의 영향을 받은 요소 수와(이 경우 400여 개 요소) 스타일 계산을 수행하는 데 걸린 시간도 제공됩니다. 이 정보를 사용하여 코드에서 수정할 부분을 찾기 시작할 수 있습니다.
 
 ## 블록, 요소, 한정자 사용
-[BEM(블록, 요소, 한정자)](https://bem.info/)과 같은 코딩 접근방식은 실제로 위의 선택기 매칭 성능 이점에서 구현됩니다. 모두 단일 클래스를 갖고 계층이 필요한 경우 클래스의 이름으로 구현되기 때문입니다.
+[BEM(블록, 요소, 한정자)](https://bem.info/){: .external }과 같은 코딩 접근방식은 실제로 위의 선택기 매칭 성능 이점에서 구현됩니다. 모두 단일 클래스를 갖고 계층이 필요한 경우 클래스의 이름으로 구현되기 때문입니다.
 
 
     .list { }
@@ -103,7 +103,7 @@ BEM 외에도 CSS에 대한 다른 접근방식이 있지만, 인간공학과 �
 
 ## 리소스
 
-* [Blink에서 스타일 무효화](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit)
-* [BEM(블록, 요소, 한정자)](https://bem.info/)
+* [Blink에서 스타일 무효화](https://docs.google.com/document/d/1vEW86DaeVs4uQzNFI5R-_xS9TcS1Cs_EUsHRSgCHGu8/edit){: .external }
+* [BEM(블록, 요소, 한정자)](https://bem.info/){: .external }
 
 

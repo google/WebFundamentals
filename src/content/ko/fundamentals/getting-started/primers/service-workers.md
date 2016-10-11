@@ -21,15 +21,15 @@ description: 풍부한 오프라인 경험, 주기적 백그라운드 동기화,
 
 서비스워커가 흥미로운 API인 이유는 개발자가 완벽히 통제할 수 있는 오프라인 경험을 지원한다는 사실입니다.
 
-서비스워커 전에는 오프라인 경험을 지원하는 [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/) 라는 API가 있었습니다.
-앱 캐쉬의 주된 문제점은 [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag)인데 이게 멀티 페이지 사이트가 아닌 싱글 페이지 웹앱에서만 잘 동작합니다. 서비스워커는 이러한 문제점들을 피하기 위해 만들어졌습니다.
+서비스워커 전에는 오프라인 경험을 지원하는 [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/){: .external } 라는 API가 있었습니다.
+앱 캐쉬의 주된 문제점은 [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag){: .external }인데 이게 멀티 페이지 사이트가 아닌 싱글 페이지 웹앱에서만 잘 동작합니다. 서비스워커는 이러한 문제점들을 피하기 위해 만들어졌습니다.
 
 서비스워커에 대해 알아둘 점:
 
-* [JavaScript Worker](http://www.html5rocks.com/en/tutorials/workers/basics/) 입니다,
+* [JavaScript Worker](http://www.html5rocks.com/en/tutorials/workers/basics/){: .external } 입니다,
   그렇기 때문에 DOM을 직접적으로 접근할 수 없습니다. 대신, 서비스워커는 페이지와 [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) 인터페이스를 통해 커뮤니케이션이 가능하고, 필요하면 페이지들이 DOM을 조작할 수 있습니다.
 * 프로그래밍이 가능한 네트워크 프록시 입니다. 페이지의 네트워크 요청 처리를 제어할 수 있습니다.
-* 사용하지 않을 때는 종료되고, 다음번에 필요하면 재시작됩니다. 서비스워커의 `onfetch`와 `onmessage` 핸들러의 전역 상태에 의존할 수 없습니다. 만약 유지해야 하는 정보가 있고 재시작시 다시 사용해야 한다면, [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)를 이용합니다.
+* 사용하지 않을 때는 종료되고, 다음번에 필요하면 재시작됩니다. 서비스워커의 `onfetch`와 `onmessage` 핸들러의 전역 상태에 의존할 수 없습니다. 만약 유지해야 하는 정보가 있고 재시작시 다시 사용해야 한다면, [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API){: .external }를 이용합니다.
 * 자바스크립트 프로미스를 확장하여 사용할 수 있습니다. 만약 프로미스를 모르면 더 읽기 전에 이 링크를 먼저 확인합니다. [Jake Archibald's article](/web/fundamentals/primers/promises/)
 
 
@@ -67,16 +67,16 @@ fetch나 message event를 처리하는 형태의 2가지 상태 중 하나가 �
 ### 알맞은 브라우저 사용하기
 
 브라우저는 점점 다양해 지고 있습니다. 서비스워커는 FireFox와 Opera 등이 지원하고,
-마이크로소프트의 Edge의 [상태](https://dev.windows.com/en-us/microsoft-edge/platform/status/serviceworker)는 이러합니다.
-Safari는 향후 서비스워커를 [지원할 계획](https://trac.webkit.org/wiki/FiveYearPlanFall2015)입니다.
-[이 사이트](https://trac.webkit.org/wiki/FiveYearPlanFall2015)에서 브라우저 지원의 진행상황을 확인할 수 있습니다.
+마이크로소프트의 Edge의 [상태](https://dev.windows.com/en-us/microsoft-edge/platform/status/serviceworker){: .external }는 이러합니다.
+Safari는 향후 서비스워커를 [지원할 계획](https://trac.webkit.org/wiki/FiveYearPlanFall2015){: .external }입니다.
+[이 사이트](https://trac.webkit.org/wiki/FiveYearPlanFall2015){: .external }에서 브라우저 지원의 진행상황을 확인할 수 있습니다.
 
 #### 크롬은 몇 버전을 지원할까요?
 
-크롬 46 버전 또는 그 이상이 아니면, [please upgrade now](https://support.google.com/chrome/answer/95414) 를 참조합니다.
+크롬 46 버전 또는 그 이상이 아니면, [please upgrade now](https://support.google.com/chrome/answer/95414){: .external } 를 참조합니다.
 그 이하 버전의 경우에는 `Cache.addAll()` 를 포함한 서비스워커 기능들을 지원하지 않습니다.
 
-만약 이전 버전을 사용해야만 하는 상황이라면, [a polyfill](https://github.com/coonsta/cache-polyfill) 를 이용하여
+만약 이전 버전을 사용해야만 하는 상황이라면, [a polyfill](https://github.com/coonsta/cache-polyfill){: .external } 를 이용하여
 기능을 추가할 수 있습니다. `dist/serviceworker-cache-polyfill.js`을 사이트에 추가하고 `importScripts()` 메서드를 이용하여
 서비스워커에서 사용합니다. 임포트된 스크립트는 서비스워커가 자동으로 캐쉬합니다.
 
@@ -94,10 +94,10 @@ Safari는 향후 서비스워커를 [지원할 계획](https://trac.webkit.org/w
 이를 피하기 위해 HTTPS 통신으로 제공되는 페이지들에만 서비스워커를 등록할 수 있습니다.
 그렇게 해서 브라우저가 받은 서비스워커가 네트워크 통신중에 조작되지 않는 것을 확인할 수 있습니다.
 
-[Github Pages](https://pages.github.com/) 는 HTTPS를 통해 제공되기 때문에 데모를 올리기 좋은 장소입니다.
+[Github Pages](https://pages.github.com/){: .external } 는 HTTPS를 통해 제공되기 때문에 데모를 올리기 좋은 장소입니다.
 
 만약 서버에 HTTPS를 추가하고 싶으면 TLS 증명서를 구해서 서버에 세팅해야 합니다.
-서버에 따라 설정이 다양하기 때문에 해당 서버의 문서나 이 링크를 확인하세요. [Mozilla's SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)
+서버에 따라 설정이 다양하기 때문에 해당 서버의 문서나 이 링크를 확인하세요. [Mozilla's SSL config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/){: .external }
 
 
 ## 서비스워커 등록하기 
@@ -271,7 +271,7 @@ Incognito 윈도우에서는 이전 서비스워커가 새로운 윈도우에 �
    3. 응답 유형이 오리진에서 보낸 요청인 **basic** 인가 (3rd party 자원에 대한 요청은 캐쉬가 되지 않는다는 것을 의미)
 
 3. 체크를 통과하면 응답을 [복제](https://fetch.spec.whatwg.org/#dom-response-clone) 합니다.
-   응답의 타입이 [스트림](https://streams.spec.whatwg.org/) 방식이기 때문에 바디는 오직 한번만 사용될 수 있습니다.
+   응답의 타입이 [스트림](https://streams.spec.whatwg.org/){: .external } 방식이기 때문에 바디는 오직 한번만 사용될 수 있습니다.
    만약 브라우저로 응답을 보내거나 캐쉬에서 사용하려면 응답을 복제 해서 한개는 브라우저에 한개는 캐쉬에 보낼 수 있습니다.
 
 
@@ -410,11 +410,11 @@ Fetch 동작은 `<img crossorigin="use-credentials">`을 추가하지 않는 이
 
 ### 더 알아보기
 
-서비스워커에 관련 문서는 여기서 확인하세요.[https://jakearchibald.github.io/isserviceworkerready/resources](https://jakearchibald.github.io/isserviceworkerready/resources.html)
+서비스워커에 관련 문서는 여기서 확인하세요.[https://jakearchibald.github.io/isserviceworkerready/resources](https://jakearchibald.github.io/isserviceworkerready/resources.html){: .external }
 
 ### 도움 얻기
 
-만약 하다가 막히는 부분이 있다면 Stackoverflow 에 질문을 올리고 '[service-worker](http://stackoverflow.com/questions/tagged/service-worker)' 태그를 달아주세요. 이 태그가 달린 이슈들을 최대한 모니터링해서 도움을 드리도록 하겠습니다.
+만약 하다가 막히는 부분이 있다면 Stackoverflow 에 질문을 올리고 '[service-worker](http://stackoverflow.com/questions/tagged/service-worker){: .external }' 태그를 달아주세요. 이 태그가 달린 이슈들을 최대한 모니터링해서 도움을 드리도록 하겠습니다.
 
 
 Translated By:
