@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- // [TEMPLATE header] -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="layouts-common.css">
     <style>
 
@@ -59,7 +61,21 @@
       <div class="c2"></div>
       <div class="c3"></div>
     </div>
-    <!-- // [TEMPLATE footer] -->
+    <script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-24532603-1');ga('send','pageview');
+  var isCompleted = {};
+  function sampleCompleted(sampleName){
+    if (ga && !isCompleted.hasOwnProperty(sampleName)) {
+      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
+      isCompleted[sampleName] = true;
+    }
+  }
+</script>
     <script type="text/javascript">
       function init() {
         window.matchMedia("(min-width: 800px)").addListener(hitMQ);
