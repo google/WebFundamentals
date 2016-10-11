@@ -26,7 +26,7 @@ description: 크롬 버전 46 에서 캐쉬 관리에 대한 새로운 메서드
 
 예 맞습니다! 캐쉬! 점 add all! 이 크롬 46버전에 추가되었어요.
 
-자 풍자를 뒤로하고, 이건 정말 엄청난 겁니다 왜냐면 `cache.addAll`이 [cache “essentials” polyfill](https://github.com/coonsta/cache-polyfill/blob/master/index.js)의 마지막 남은 부분이었거든요.
+자 풍자를 뒤로하고, 이건 정말 엄청난 겁니다 왜냐면 `cache.addAll`이 [cache “essentials” polyfill](https://github.com/coonsta/cache-polyfill/blob/master/index.js){: .external }의 마지막 남은 부분이었거든요.
 이제 더이상 필요 없게 되었습니다.
 
 `cache.addAll`가 어떻게 동작하는지 확인하시죠:
@@ -55,12 +55,12 @@ description: 크롬 버전 46 에서 캐쉬 관리에 대한 새로운 메서드
 그리고 실패한 캐쉬는 이전 상태로 돌아갑니다. 이건 위와 같이 일부분이라도 실패하면 전체가 실패해야 하는 특정한 설치 상황에서만 유용합니다.
 
 **업데이트**: 크롬 50 경우에는, `cache.addAll()`과 `cache.add()` 동작이 [조금 바뀌었습니다](https://github.com/dstockwell/chromium/commit/d8a95558a04b5734bc5568546097799d942aaec5#diff-c0babf201659e01414abe4a511fb8c7cR218).
-현재는 캐쉬에 추가된 모든 응답들은 2.xx 응답 코드를 [갖고 있어야만 합니다.](https://github.com/slightlyoff/ServiceWorker/issues/823)
+현재는 캐쉬에 추가된 모든 응답들은 2.xx 응답 코드를 [갖고 있어야만 합니다.](https://github.com/slightlyoff/ServiceWorker/issues/823){: .external }
 non-CORS 요청에서 비롯된 [opaque](https://fetch.spec.whatwg.org/#concept-filtered-response-opaque)를 포함한 2xx 응답 코드가 아닌 응답들은 `cache.addAll()`를 거절합니다.
 
 위 예제는 서비스워커 안에 있지만, 캐쉬 API 는 페이지에서 완전히 접근이 가능합니다.
 
-Firefox는 [developer edition](https://www.mozilla.org/en-GB/firefox/developer/)에서 이 API를 이미 지원하고 있습니다. 곧 서비스워커 구현에 관련된 나머지 내용들에 대해서도 지원을 하겠죠.
+Firefox는 [developer edition](https://www.mozilla.org/en-GB/firefox/developer/){: .external }에서 이 API를 이미 지원하고 있습니다. 곧 서비스워커 구현에 관련된 나머지 내용들에 대해서도 지원을 하겠죠.
 
 여기서 잠깐, 이게 전부가 아닙니다. 이 과정안에 캐쉬의 개선된 부분이 더 있습니다.
 
@@ -80,7 +80,7 @@ Firefox는 [developer edition](https://www.mozilla.org/en-GB/firefox/developer/)
 캐쉬는 각 URL 마다 여러 개의 엔트리 파일들을 얻게 합니다. 다만, 각 파일들은 독립적으로 캐쉬가 가능해야합니다.
 예) 각각 다른 `Vary` 헤더가 필요합니다.
 
-Firefox는 [developer edition](https://www.mozilla.org/en-GB/firefox/developer/)에서 이 API를 이미 지원하고 있습니다. 곧 서비스워커 구현에 관련된 나머지 내용들에 대해서도 지원을 하겠죠.
+Firefox는 [developer edition](https://www.mozilla.org/en-GB/firefox/developer/){: .external }에서 이 API를 이미 지원하고 있습니다. 곧 서비스워커 구현에 관련된 나머지 내용들에 대해서도 지원을 하겠죠.
 
 ## 크롬에 곧.. 추가될 캐쉬 쿼리 옵션
 
@@ -117,7 +117,7 @@ Firefox는 [developer edition](https://www.mozilla.org/en-GB/firefox/developer/)
 * `ignoreMethod` - 요청 메서드를 무시하여, 캐쉬에서 POST 요청도 GET 엔트리에 접근할 수 있다.
 * 'ignoreVary' - 캐쉬된 응답에서 vary 헤더를 무시한다.
 
-Firefox 는 이미 이들을 지원합니다. [Ben Kelly](https://twitter.com/wanderview)에 한테 가서 얼마나 그가 대단한지 말해주세요.
+Firefox 는 이미 이들을 지원합니다. [Ben Kelly](https://twitter.com/wanderview){: .external }에 한테 가서 얼마나 그가 대단한지 말해주세요.
 
 만약 캐쉬 쿼리 옵션을 어떻게 크롬이 구현하는지 알고 싶으시다면, [crbug.com/426309](https://code.google.com/p/chromium/issues/detail?id=426309)를 확인하세요.
 

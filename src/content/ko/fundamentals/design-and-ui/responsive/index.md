@@ -21,7 +21,7 @@ description: 상당히 많은 웹들이 여러 디바이스 사용성을 고려�
 
 
 원래 [Ethan Marcotte in A List
-Apart](http://alistapart.com/article/responsive-web-design/) 에 정의된 반응형 웹 디자인은 그들이 사용하는 기기와 사용자의 니즈에 맞춰졌습니다. 레이아웃은 기기의 특징과 크기에 따라 변합니다. 예를 들어, 핸드폰에서 사용자들이 컨텐츠를 1줄 뷰로 본다면, 태블릿에서는 2줄 뷰로 컨텐츠를 보는 것처럼 말이죠.
+Apart](http://alistapart.com/article/responsive-web-design/){: .external } 에 정의된 반응형 웹 디자인은 그들이 사용하는 기기와 사용자의 니즈에 맞춰졌습니다. 레이아웃은 기기의 특징과 크기에 따라 변합니다. 예를 들어, 핸드폰에서 사용자들이 컨텐츠를 1줄 뷰로 본다면, 태블릿에서는 2줄 뷰로 컨텐츠를 보는 것처럼 말이죠.
 
 
 ## viewport 세팅하기
