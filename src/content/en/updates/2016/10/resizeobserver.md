@@ -61,14 +61,18 @@ contain the new dimensions for the element.
 
 ### What is being reported?
 
-It's important to note that `ResizeObserver` *reports* both the dimensions of
-the `contentRect` and the padding, while it only *watches* the `contentRect`.
-*Don't* confuse `contentRect` with the bounding box of the element.
-Consequently, the top and left attribute of the `contentRect` are the offset
-from the border box. SVGs are an exception to the rule, where the dimensions of
-the bounding box will be reported.
+Generally, `ResizeObserver` reports the content rectangle of an element. The
+content rectangle is the box in which content can be placed. It is the border
+box minus the padding.
 
 <img src="/web/updates/images/2016/10/resizeobserver/contentbox.png">
+
+It's important to note that while `ResizeObserver` *reports* both the dimensions
+of the `contentRect` and the padding, it only *watches* the `contentRect`.
+*Don't* confuse `contentRect` with the bounding box of the element. The bounding
+box, as reported by `getBoundingClientRect`, is the box that contains the entire
+element and its decendants. SVGs are an exception to the rule, where
+`ResizeObserver` will report the dimensions of the bounding box.
 
 ### When is it being reported?
 
@@ -83,10 +87,10 @@ layout, not paint.
 You might be asking yourself: What happens if I change the size of an observed
 element inside the `ResizeObserver`’s callback? The answer is: You will trigger
 another call to the callback right away. However, `ResizeObserver` has a
-mechanism to avoid infinite callback loops and cyclic dependencies. Changes that
-cause additional `ResizeObserver` calls will only be processed in the same frame
-if the affected elements are deeper in the DOM tree than the *shallowest*
-element processed in the previous iteration of `ResizeObserver` entries.
+mechanism to avoid infinite callback loops and cyclic dependencies. Changes will
+only be processed in the same frame if the resized element is deeper in the DOM
+tree than the *shallowest* element processed in the previous callback. Otherwise,
+they’ll get deferred to the next frame.
 
 ## Application
 
