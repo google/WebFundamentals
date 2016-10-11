@@ -31,7 +31,7 @@ In this article, I'm going to first describe how to convert your existing server
 code to use the Web Push Protocol with FCM. Next, I'll show you how to implement
 VAPID in both your client and server code.
 
-### FCM Supports Web Push Protocol
+### FCM supports Web Push Protocol
 
 Let's start with a little context. When your web application registers for a
 push subscription it's  given the URL of a push service. Your server will use
@@ -85,7 +85,7 @@ Remember, this is a change to FCM / GCM's API, so you don't need to update your
 subscriptions, just change your server code to define the headers as shown
 above.
 
-## Introducing VAPID for Server Identification
+## Introducing VAPID for server identification
 
 VAPID is the cool new short name for
 "[Voluntary Application Server
@@ -107,7 +107,7 @@ The process is pretty simple:
 
 Let's look at these steps in detail.
 
-### Create a Public/Private Key Pair
+### Create a public/private key pair
 
 I'm terrible at encryption, so here's the relevant section from the spec
 regarding the format of the VAPID public/private keys:
@@ -131,7 +131,7 @@ library](https://github.com/web-push-libs/web-push/):
     }
 
 
-### Subscribing with the Public Key
+### Subscribing with the public key
 
 To subscribe a Chrome user for push with the VAPID public key, you need to pass
 the public key as a Uint8Array using the `applicationServerKey` parameter of
@@ -154,13 +154,13 @@ subscription object, if the origin is `fcm.googleapis.com`, it's working.
 
 Note: Even though this is an FCM URL, use the [Web Push Protocol](https://tools.ietf.org/html/draft-ietf-webpush-protocol) **not** the FCM protocol, this way your server side code will work for any push service.
 
-### Sending a Push Message
+### Sending a push message
 
 To send a message using VAPID, you need to make a normal Web Push Protocol
 request with two additional HTTP headers: an Authorization header and a
 Crypto-Key header.
 
-#### Authorization Header
+#### Authorization header
 
 The `Authorization` header is a signed [JSON Web Token
 (JWT)](https://jwt.io/){: .external } with 'WebPush ' in front of it.
@@ -172,7 +172,7 @@ joined with a single dot between them.
 
     <JWTHeader>.<Payload>.<Signature>
 
-#### **JWT Header**
+#### JWT header
 
 The JWT Header contains the algorithm name used for signing and the type of
 token. For VAPID this must be:
@@ -184,7 +184,7 @@ token. For VAPID this must be:
 
 This is then base64 url encoded and forms the first part of the JWT.
 
-#### **Payload**
+#### Payload
 
 The Payload is another JSON object containing the following:
 
@@ -210,7 +210,7 @@ An example payload could look like the following:
 
 This JSON object is base64 url encoded and forms the second part of the JWT.
 
-#### **Signature**
+#### Signature
 
 The Signature is the result of joining the encoded header and payload with a
 dot then encrypting the result using the VAPID private key you created earlier.
@@ -229,7 +229,7 @@ Notice a few things about this. First, the Authorization header literally
 contains the word 'WebPush' and should be followed by a space then the JWT. Also
 notice the dots separating the JWT header, payload, and signature.
 
-#### Crypto-Key Header
+#### Crypto-Key header
 
 As well as the Authorization header, you must add your VAPID public key to the
 `Crypto-Key` header as a base64 url encoded string with `p256ecdsa=`
@@ -252,7 +252,7 @@ in Chrome prior to version 52 which prevents push from working if a comma is
 sent. This is fixed in Chrome 53, so you should be able to change to a
 comma once this hits stable.
 
-## Reality of these Changes
+## Reality of these changes
 
 With VAPID you no longer need to sign up for an account with GCM to use push in
 Chrome and you can use the same code path for subscribing a user and sending a

@@ -37,7 +37,7 @@ exits the browser’s viewport.
 
 <img src="/web/updates/images/2016/04/intersectionobserver/iframe.gif">
 
-## How to Create an IntersectionObserver
+## How to create an IntersectionObserver
 
 The API is rather small, and best described using an example:
 
@@ -126,7 +126,7 @@ option that lets you define an alternative to the viewport as your root. It is
 important to keep in mind that `root` needs to be an ancestor of all the
 observed elements.
 
-## Intersect all the Things!
+## Intersect all the things!
 No! Bad developer! That’s not mindful usage of your user’s CPU cycles. Let’s
 think about an infinite scroller as an example: In that scenario, it is
 definitely advisable to add [sentinels](https://en.wikipedia.org/wiki/Sentinel_value)
@@ -139,7 +139,7 @@ sentinel, no additional call to `observe()` is needed. The
 
 <img src="/web/updates/images/2016/04/intersectionobserver/infinitescroller.png">
 
-### Moar Updates, Please
+### More updates, please
 As mentioned earlier, the callback will be triggered a single time when the
 observed element comes partially into view and another time when it has left
 the viewport. This way `IntersectionObserver` gives you an answer to the
@@ -157,7 +157,7 @@ quarter of the element becomes visible:
 
 <img src="/web/updates/images/2016/04/intersectionobserver/threshold.gif">
 
-### Any Other Options?
+### Any other options?
 As of now, there’s only one additional option to the ones listed above.
 [`rootMargin`](https://wicg.github.io/IntersectionObserver/#dom-intersectionobserverinit-rootmargin)
 allows you to specify the margins for the root, effectively allowing you to
@@ -184,7 +184,7 @@ top, right, bottom and left margin respectively. To summarize, the
     });
     
 
-### iframe Magic
+### iframe magic
 `IntersectionObservers` were designed specifically with ads services and
 social network widgets in mind, which frequently use iframes and could
 benefit from knowing whether they are in view. If an iframe observes one of
@@ -193,7 +193,7 @@ its elements, both scrolling the iframe as well as scrolling the window
 For the latter case, however, `rootBounds` will be set to `null` to avoid
 leaking data across origins.
 
-## What is IntersectionObserver *Not* About?
+## What is IntersectionObserver *Not* about?
 Something to keep in mind is that `IntersectionObservers` are intentionally
 neither pixel perfect nor low latency. Using them to implement endeavours
 like scroll-dependent animations are bound to fail, as the data will be
@@ -201,11 +201,11 @@ like scroll-dependent animations are bound to fail, as the data will be
 The [explainer](https://github.com/WICG/IntersectionObserver/blob/gh-pages/explainer.md)
 has more details about the original use cases for `IntersectionObserver`.
 
-### How Much Work Can I Do in the Callback?
+### How much work can I do in the callback?
 Short’n’Sweet: Spending too much time in the callback will make your app lag –
 all the common practices apply.
 
-### Go Forth and Intersect thy Elements
+### Go forth and intersect thy elements
 The browser support for `IntersectionObservers` is still fairly slim, so it
 won’t work everywhere right off the bat just yet. In the meantime, a polyfill
 is being worked on in the [WICG’s repository](https://github.com/WICG/IntersectionObserver).

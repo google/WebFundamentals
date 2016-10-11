@@ -8,7 +8,7 @@ description: The full set of CacheQueryOptions are supported, making it easier t
 {# wf_featured_image: /web/updates/images/2016/09/cache-query-options.png #}
 {# wf_featured_snippet: The full set of <code>CacheQueryOptions</code> are supported, making it easier to find the cached responses you're looking for. #}
 
-# CacheQueryOptions arrive in Chrome 54 {: .page-title }
+# CacheQueryOptions Arrive in Chrome 54 {: .page-title }
 
 {% include "web/_shared/contributors/jeffposnick.html" %}
 

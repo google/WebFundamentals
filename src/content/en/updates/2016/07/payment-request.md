@@ -7,7 +7,7 @@ description: Payment Request is a new API for the open web that makes checkout f
 {# wf_tags: javascript,payment #}
 {# wf_featured_image: /web/updates/images/2016/07/payment-request/0.png #}
 
-# Bringing easy and fast checkout with Payment Request API {: .page-title }
+# Bringing Easy and Fast Checkout with Payment Request API {: .page-title }
 
 {% include "web/_shared/contributors/agektmr.html" %}
 
@@ -30,7 +30,7 @@ Payment Request is a new API for the open web that makes checkout flows easier, 
 * Provides standardized imperative APIs for developers to obtain user's payment preferences in a consistent format.
 
 
-## How Payment Request API works
+## How the Payment Request API works
 Let's peek at how Payment Request API works in some code. Here's a minimal example that collects a user's credit card information and submits it to a server.
 
 
@@ -160,7 +160,7 @@ Upon user tapping on "PAY" button, a promise will be resolved and payment inform
  <img src="/web/updates/images/2016/07/payment-request/4.png" style="max-width:340px">
  <img src="/web/updates/images/2016/07/payment-request/5.png" style="max-width:340px">
 
-### 4. Display payment result
+### 4. Display payment results
 If the payment verification was successful, call `.complete('success')` to complete the purchase, otherwise `.complete('fail')`. Success / failure status will be displayed using a native UI. Upon resolving the `.complete()`, you can proceed to the next step.
 
 ## Payment Request API can do more
@@ -173,7 +173,7 @@ Credit card is not the only supported payment solution for Payment Request. Ther
 
 ## FAQ
 
-### Any restrictions to use the API?
+### Are there any restrictions to using the API?
 Use Chrome for Android with version 53 or later. Requires secure origin - HTTPS, localhost or file:///.
 
 ### Is it possible to query the available payment methods?
@@ -190,7 +190,7 @@ Currently not allowed. But planned to be allowed in the future.
 ### Are there any polyfills available to support incompatible browsers for this API?
 Not currently.
 
-### Can I assume current API is final?
+### Can I assume the current API is final?
 It could change. We provide [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that protects you from API changes that may be backwards incompatible. By embedding the shim in your website, it will paper over any API differences for two major Chrome versions.
 
 ## Resources

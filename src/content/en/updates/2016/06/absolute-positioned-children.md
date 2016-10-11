@@ -7,7 +7,7 @@ book_path: /web/updates/_book.yaml
 {# wf_featured_snippet: A previous version of the CSS Flexible Box Layout specification set the static position of absolute-positioned children as though they were a 0x0 flex item. The latest version of the spec takes them fully out of flow and sets the static position based on align and justify properties. #}
 {# wf_featured_image: /web/updates/images/generic/quilt.png #}
 
-# Flexbox gets new behavior for absolute-positioned children {: .page-title }
+# Flexbox Gets New Behavior for absolute-positioned Children {: .page-title }
 
 {% include "web/_shared/contributors/josephmedley.html" %}
 

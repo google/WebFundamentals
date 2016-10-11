@@ -7,7 +7,7 @@ description: Read about DevTools' new command menu and its over 60 actions that 
 {# wf_tags: devtools,digest,update #}
 {# wf_featured_image: /web/updates/images/2016/04/devtools-digest/command-menu.png #}
 
-# DevTools Digest: More power with the new Command Menu {: .page-title }
+# DevTools Digest: More Power with the New Command Menu {: .page-title }
 
 {% include "web/_shared/contributors/pbakaus.html" %}
 

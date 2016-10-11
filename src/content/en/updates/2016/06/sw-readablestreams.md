@@ -76,7 +76,7 @@ that stream as long as the service worker continues `enqueue()`ing additional
 data. The response flowing from the service worker to the page is truly
 asynchronous, and we have complete control over filling the stream!
 
-## Real-world Uses
+## Real-world uses
 
 You've probably noticed that the previous example had some placeholder
 `/* your data here */` comments, and was light on actual implementation details.
@@ -97,7 +97,7 @@ browser's progressive HTML rendering capabilities. Other resources that can also
 be progressively rendered, like some image and video formats, can also benefit
 from this approach.
 
-## Streams? Or App Shells?
+## Streams? or app shells?
 
 The existing best practices around using service workers to power your web apps
 focus on an [App Shell + dynamic content](/web/updates/2015/11/app-shell)
@@ -146,7 +146,7 @@ We're still in the very early days of service worker-powered streaming
 responses, and we look forward to seeing the different models mature and
 especially to seeing more tooling developed to automate common use cases.
 
-## Diving Deeper into Streams
+## Diving deeper into streams
 
 If you're constructing your own readable streams, simply calling
 `controller.enqueue()` indiscriminately might not be either sufficient or
