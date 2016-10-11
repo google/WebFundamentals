@@ -23,7 +23,7 @@ Google I/O 2016 is a wrap. DevTools had a strong presence at I/O, including a ta
 
 DevTools aims to make every stage of the web development lifecycle easier. You probably know that DevTools can help you debug or profile a website, but you may not know how to use it to help you author a site. By "authoring" we mean the act of creating a site. One of the goals in the foreseeable future is to make it easier for you to iterate, experiment, and emulate your site across multiple devices. 
 
-### Device Mode
+### Device mode
 
 The DevTools team continues to iterate on the Device Mode experience, which received its first major upgrade in Chrome 49. Check out the post from March ([A new Device Mode for a mobile-first world](/web/updates/2016/03/device-mode-v2)) for an overview of the updates. The overarching goal is to provide a seamless workflow for viewing and emulating your site across all form factors. 
 
@@ -72,7 +72,7 @@ When editing a value that was compiled from a Sass variable, your edit updates t
 
 ![Editing a Sass variable](/web/updates/images/2016/06/sass-edit.gif)
 
-## Progressive Web Apps
+## Progressive web apps
 
 Look at the list of [web and Chrome talks at Google I/O 2016](https://www.youtube.com/playlist?list=PLNYkxOF6rcIDz1TzmmMRBC-kd8zPRTQIP) and you'll see a huge theme emerging in the world of web development: [Progressive Web Apps](/web/progressive-web-apps/).
 

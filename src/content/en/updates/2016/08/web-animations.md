@@ -7,7 +7,7 @@ description: Firefox 48 joins Chrome in shipping a native implementation of the 
 {# wf_tags: webanimations #}
 {# wf_featured_image: /web/updates/images/generic/animations.png #}
 
-# Web Animations API hits cross-browser milestone {: .page-title }
+# Web Animations API Hits Cross-browser Milestone {: .page-title }
 
 {% include "web/_shared/contributors/alexdanilo.html" %}
 

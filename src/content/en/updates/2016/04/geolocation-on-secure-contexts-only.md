@@ -7,7 +7,7 @@ description: Starting with version 50, Chrome no longer supports the HTML5 Geolo
 {# wf_tags: geolocation,removals,chrome50 #}
 {# wf_featured_image: /web/updates/images/2016/04/chrome-51-deprecations/deps-rems.png #}
 
-# Geolocation API removed from unsecured origins in Chrome 50 {: .page-title }
+# Geolocation API Removed from Unsecured Origins in Chrome 50 {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
@@ -30,7 +30,7 @@ of the geolocation API and is not served over https, but it is a change that we 
 believe is beneficial to all users on the web. This post should help you 
 understand the reasoning and how to proceed. 
 
-**When is this changing?**
+## When is this changing?
 
 This change is effective as of Chrome 50 (12PM PST April 20 2016). 
 
@@ -55,14 +55,14 @@ There have been a number of other sources that have highlighted this:
 [VentureBeat](http://venturebeat.com/2016/04/13/chrome-50-arrives-with-push-notification-improvements-and-declarative-preload/) 
 (April 13, 2016).
 
-**Why are we making this change?**
+## Why are we making this change?
 
 Location is sensitive data! Requiring HTTPS is required to protect the privacy 
 of your users' location data. If the user's location is available from a 
 non-secure context, attackers on the network will be able to know where that 
 user is. This seriously compromises user privacy.
 
-**Who does this affect?**
+## Who does this affect?
 
 This affects any page currently using the [Geolocation 
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
@@ -70,7 +70,7 @@ from pages served over HTTP (non-secure). It also affects HTTPS iframes that use
 the Geolocation API if they are embedded in HTTP pages. (You won't be able to 
 polyfill using a shared HTTPS-delivered frame.)
 
-**Does my whole web app need HTTPS?**
+## Does my whole web app need HTTPS?
 
 It is _not_ a requirement that the whole app be served via HTTPS to use 
 Geolocation. Only pages that use Geolocation need to be served over a secure 
@@ -83,13 +83,13 @@ We strongly suggest that you migrate to HTTPS as powerful new and existing
 browser features [require secure 
 origins](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features).
 
-**Does this affect local development?**
+## Does this affect local development?
 
 It should not, localhost has been declared as "potentially secure" in the spec 
 and in our case geolocation requests served at the top level over localhost will 
 still work.
 
-**Can I detect at runtime if the geolocation was blocked because of not being on a secure context**
+## Can I detect at runtime if the geolocation was blocked because of not being on a secure context
 
 Yes. The geolocation spec defines a [PositionError](https://dev.w3.org/geo/api/spec-source.html#position_error_interface)
 object that is passed in to the failure callback of the Geolocation APIs.  The object
@@ -115,7 +115,7 @@ a non-secure content issue is to look for the string "Only secure origins are al
 Remember, you can't just check for the origin of the page because your page could be on https but inside
 an iframe that is hosted from an unsecure context.
 
-**I really need to use Geolocation. What should I do?**
+## I really need to use Geolocation; What should I do?
 
 If you would like to use the HTML5 Geolocation API, or if your site already uses 
 the Geolocation API, [please migrate the pages making Geolocation API calls to 

@@ -7,7 +7,7 @@ description: Infinite scrollers are a common UI pattern. Here we explore how to 
 {# wf_tags: javascript,css #}
 {# wf_featured_image: /web/updates/images/2016/07/infinite-scroller/featured.png #}
 
-# Complexities of an infinite scroller {: .page-title }
+# Complexities of an Infinite Scroller {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
@@ -25,7 +25,7 @@ Infinite scrollers pop up all over the internet. Google Music’s artist list is
 
 The technical challenge behind an infinite scroller, however, is harder than it seems. The range of problems you encounter when you want to do The Right Thing™ is vast. It starts with simple things like the links in the footer becoming practically unreachable because content keeps pushing the footer away. But the problems get harder. How do you handle a resize event when someone turns their phone from portrait to landscape or how do you prevent your phone from grinding to a painful halt when the list gets too long?
 
-## The Right Thing™
+## The right thing™
 We thought that was reason enough to come up with a reference implementation that shows a way to tackle all these problems in a reusable way while maintaining performance standards.
 
 We are going to use 3 techniques to achieve our goal: DOM recycling, tombstones and scroll anchoring.
@@ -207,7 +207,7 @@ As we mentioned earlier, we try to make our data source behave like something in
 
 An interesting challenge here is that real items can have a bigger height than the tombstone item because of differing amounts of text per item or an attached image. To resolve this, we will adjust the current scroll position every time data comes in and a tombstone is being replaced above the viewport, *anchoring* the scroll position to an element rather than a pixel value. This concept is called scroll anchoring.
 
-## Scroll Anchoring
+## Scroll anchoring
 Our scroll anchoring will be invoked both when tombstones are being replaced as well as when the window gets resized (which also happens when the devices is being flipped!). We will have to figure out what the top-most visible element in the viewport is. As that element could only be partially visible, we will also store the offset from the top of the element where the viewport begins.
 
 <img src="/web/updates/images/2016/07/infinite-scroller/anchoring.png">
