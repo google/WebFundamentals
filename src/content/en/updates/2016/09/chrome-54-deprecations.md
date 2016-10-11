@@ -177,6 +177,7 @@ constructor that takes an argument) you should use that.
 
 
 ## KeyboardEvent.keyIdentifier attribute removed
+
 **TL;DR:** The little-supported `keyboardEvent.keyIdentifier` property is being removed in favor the standards-based `KeyboardEvent.key` property. 
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/fqnFyoDCOaA/discussion) &#124;

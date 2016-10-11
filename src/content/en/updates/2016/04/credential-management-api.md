@@ -54,7 +54,7 @@ Android](/identity/smartlock-passwords/android/)
 [for a seamless cross-platform
 experience](/identity/smartlock-passwords/android/).
 
-## Integrating Credential Management API to Your Site
+## Integrating the Credential Management API with your site
 
 The way you use the Credential Management API with your website can vary
 depending on its architecture. Is it a single page app? Is it a legacy
@@ -90,7 +90,7 @@ code](https://github.com/GoogleChrome/credential-management-sample).
 **Note that this API needs to be used on secure origins such as HTTPS domains
 or localhost.**
 
-### Show Account Chooser when Signing In
+### Show the Account Chooser when signing in
 
 Between a user tap of a "Sign In" button and navigation to a sign-in form, you
 can use
@@ -101,7 +101,7 @@ the user can pick an account.
 <img src="/web/updates/images/2016/04/credential-management-api/image00.png" style="max-width:540px; width:100%;" />  
 _An account chooser UI pops up for user to select an account to sign-in_
 
-#### Getting a Password Credential Object:
+#### Getting a password credential object:
 
 To show password credentials as account options, use `password: true`.
 
@@ -114,7 +114,7 @@ To show password credentials as account options, use `password: true`.
     
     
 
-#### Using a Password Credential to Sign In
+#### Using a password credential to sign in
 
 Once the user makes an account selection, the resolving function will receive a
 password credential. You can send it to the server using `fetch()`:
@@ -148,7 +148,7 @@ password credential. You can send it to the server using `fetch()`:
     
     
 
-#### Using a Federated Credential to Sign In
+#### Using a federated credential to sign in
 
 To show federated accounts to a user, add `federated`, which takes an array
 of identity providers, to the `get()` options.
@@ -212,7 +212,7 @@ you can call the appropriate API using information it contains.
 
 <img src="/web/updates/images/2016/04/credential-management-api/image02.png" />
 
-### Store Credentials
+### Store credentials
 
 When a user signs in to your website using a form, you can use
 [navigator.credentials.store()](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/store)
@@ -227,7 +227,7 @@ to create a credential object you'd like to store.
 _Chrome asks users if they want to store the credential (or a federation
 provider)_
 
-#### Creating and Storing a Password Credential from a Form Element
+#### Creating and storing a password credential from a form element
 
 The following code uses `autocomplete` attributes to automatically
 [map](http://w3c.github.io/webappsec-credential-management/#passwordcredential-form-constructor)
@@ -257,7 +257,7 @@ JavaScript
 
 
 
-#### Creating and Storing a Federated Credential
+#### Creating and storing a federated credential
  
     // After a federation, create a FederatedCredential object using   
     // information you have obtained  
@@ -276,7 +276,7 @@ JavaScript
 
 <img src="/web/updates/images/2016/04/credential-management-api/image04.png" />
 
-### Let the User Automatically Sign Back In
+### Let the user automatically sign back in
 
 When a user leaves your website and comes back later, it's possible that the
 session is expired. Don't bother the user to type their password every time they
@@ -285,7 +285,7 @@ come back. Let the user automatically sign back in.
 <img src="/web/updates/images/2016/04/credential-management-api/image05.png" style="max-width:540px; width:100%;" />  
 _When a user is automatically signed in, a notification will pop up._
 
-#### Getting a Credential Object
+#### Getting a credential object
 
  
     navigator.credentials.get({  
@@ -324,7 +324,7 @@ If any of these conditions are not met, the function will be rejected.
 
 <img src="/web/updates/images/2016/04/credential-management-api/image06.png" />
 
-### Mediate Auto Sign-in
+### Mediate auto sign-in
 
 When a user signs out from your website, **it's your responsibility to ensure
 that the user will not be automatically signed back in**. To ensure
@@ -335,7 +335,7 @@ As long as the user's mediation status for the origin is turned on, using
 `unmediated: true` with `navigator.credentials.get()`, that function will
 resolve with `undefined`.
 
-#### Mediating Auto Sign-in
+#### Mediating auto sign-in
  
     navigator.credentials.requireUserMediation();
 

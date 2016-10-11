@@ -7,7 +7,7 @@ description: ResizeObserver lets you know when an element has changed its size.
 {# wf_tags: chrome54 #}
 {# wf_featured_image: /web/updates/images/generic/visibility.png #}
 
-# ResizeObserver – It’s like document.onresize for elements {: .page-title }
+# ResizeObserver: It’s Like document.onresize for Elements {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 

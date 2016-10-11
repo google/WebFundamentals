@@ -49,7 +49,7 @@ these posts.
 
 In Chrome 51 (April, 2016) there are a number of changes to Chrome. 
 
-## Remove Support for SPDY/3.1
+## Remove support for SPDY/3.1
 
 **TL;DR**: Support for HTTP/2 is widespread enough that SPDY/3.1 support can be
 dropped.
@@ -64,7 +64,7 @@ multiplexing and server push. Many of its features were incorporated into
 HTTP/2, which was published as an RFC last May. Since HTTP/2 is supported by
 major servers and clients, it's time to remove SPDY/3.1 from Chrome.
 
-## Remove TLS Next Protocol Negotiation (NPN)
+## Remove TLS next protocol negotiation (NPN)
 
 **TL;DR**: As part of deprecation of SPDY, NPN is removed, having previously been
 replaced with ALPN.
@@ -77,7 +77,7 @@ NPN was the TLS extension used to negotiate SPDY (and, in transition, HTTP/2).
 During the standardization process, NPN was replaced with ALPN, published as RFC
 7301 in July 2014. We intend to remove NPN at the same time as the SPDY removal.
 
-## Remove Custom Messages in onbeforeload Dialogs
+## Remove custom messages in onbeforeload dialogs
 
 **TL;DR:** A window's `onbeforeload` property no longer supports a custom string.
 
