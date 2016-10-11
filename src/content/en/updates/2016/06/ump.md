@@ -7,7 +7,7 @@ description: From version 52, Android Chrome uses the same media stack as deskto
 {# wf_tags: audio,chrome52,media,recording,video,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/06/ump/featured.jpg #}
 
-# Service worker caching, playbackRate and blob URLs for audio and video on Chrome for Android {: .page-title }
+# Service Worker Caching, PlaybackRate and Blob URLs for Audio and Video on Chrome for Android {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 

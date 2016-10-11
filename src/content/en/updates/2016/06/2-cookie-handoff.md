@@ -7,7 +7,7 @@ description: Introducing a proof of concept design to persist sessions using the
 {# wf_tags: identity,sessions,cookie,serviceworker #}
 {# wf_featured_image: /web/updates/images/generic/info.png #}
 
-# Goodbye Short Sessions: a proposal for using service-workers to improve cookie management on the web {: .page-title }
+# Goodbye Short Sessions: A Proposal for Using Service Workers to Improve Cookie Management on the Web {: .page-title }
 
 {% include "web/_shared/contributors/wdenniss.html" %}
 {% include "web/_shared/contributors/owencm.html" %}

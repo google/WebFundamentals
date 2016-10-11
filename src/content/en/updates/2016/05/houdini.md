@@ -7,7 +7,7 @@ description: Houdini is a collection of APIs that expose the CSS engine’s inte
 {# wf_tags: houdini,css #}
 {# wf_featured_image: /web/updates/images/2016/05/houdini/compworklet_small.png #}
 
-# Houdini – Demystifying CSS {: .page-title }
+# Houdini: Demystifying CSS {: .page-title }
 
 {% include "web/_shared/contributors/surma.html" %}
 
@@ -43,7 +43,8 @@ that any of these drafts become reality.
 
 ## The specifications
 
-### Worklets ([spec][Worklets spec])
+### Worklets
+([spec][Worklets spec])
 
 Worklets by themselves are not really useful. They are a concept introduced to
 make many of the later drafts possible. If you thought of Web Workers when you
@@ -63,7 +64,8 @@ Therefore, worklets were invented. Worklets make use of ES2015 classes to define
 a collection of methods, the signatures of which are predefined by
 the type of the worklet. They are light-weight and short-lived.
 
-### Paint Worklet ([spec][Paint Worklet spec])
+### Paint worklet
+([spec][Paint Worklet spec])
 
 **Status update:** First incomplete implementation landed in Chrome Canary behind the
 “Experimental Web Platform features” flag.
@@ -157,7 +159,7 @@ the Paint Worklet API ([Demo][Paint Worklet demo]).
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/BX_qv2yKSUk" frameborder="0" allowfullscreen></iframe>
 
-### Compositor Worklet
+### Compositor worklet
 
 Dogfood: Chrome is working on compositor worker, which is a Chrome-proprietary
 API on top of which compositor worklet (and other things) will be implemented.
@@ -224,7 +226,8 @@ My colleague Robert Flack has written a [polyfill][CompWorklet polyfill] for the
 compositor worklet so you can give it a try – obviously with a much
 higher performance impact.
 
-### Layout Worklet ([spec][Layout Worklet spec])
+### Layout worklet
+([spec][Layout Worklet spec])
 
 Dogfood: First real spec draft has been been proposed. Implementation
 is a good while away.
@@ -276,7 +279,8 @@ performance gain.
     });
     
 
-### Typed CSSOM ([spec][Typed CSSOM spec])
+### Typed CSSOM
+([spec][Typed CSSOM spec])
 
 Dogfood: An “almost complete” implementation has landed in Chrome Canary
 behind the “Experimental Web Platform features” flag.
@@ -321,7 +325,8 @@ at runtime.
       // => {em: 5, percent: 50}
     
 
-### Properties and Values ([spec][Properties and Values spec])
+### Properties and values 
+([spec][Properties and Values spec])
 
 Dogfood: Spec is pretty stable. No accesible implementation as of yet.
 
@@ -344,7 +349,7 @@ and animations, which is also being considered.
     });
     
 
-### Font Metrics
+### Font metrics
 
 Font metrics is exactly what it sounds like. What is the bounding box (or the
 bounding boxes when we are wrapping) when I render string X with font Y at size

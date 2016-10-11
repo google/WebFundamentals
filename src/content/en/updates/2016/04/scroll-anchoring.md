@@ -45,7 +45,7 @@ Send us feedback / examples where you’ve seen unexpected behaviour by filling 
 
 ## FAQ
 
-### How Does This Change Affect JavaScript Scrolling?
+### How does this change affect JavaScript scrolling?
 
 In short - it doesn't.
 
