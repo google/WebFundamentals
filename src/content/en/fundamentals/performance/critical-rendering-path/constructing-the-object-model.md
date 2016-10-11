@@ -25,6 +25,8 @@ Before the browser can render the page, it needs to construct the DOM and CSSOM 
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom.html){: target="_blank" .external }
+
 Let’s start with the simplest possible case: a plain HTML page with some text and a single image. How does the browser process this page?
 
 <img src="images/full-process.png" alt="DOM construction process">

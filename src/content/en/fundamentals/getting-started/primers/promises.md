@@ -277,8 +277,7 @@ Now let's use it:
     })
 
 
-
-[Click here to see that in action](_code/story.json), check the console in DevTools to see the result. Now we can make HTTP requests without manually typing `XMLHttpRequest`, which is great, because the less I have to see the infuriating camel-casing of `XMLHttpRequest`, the happier my life will be.
+[Click here to see that in action](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json){: target="_blank" .external }, check the console in DevTools to see the result. Now we can make HTTP requests without manually typing `XMLHttpRequest`, which is great, because the less I have to see the infuriating camel-casing of `XMLHttpRequest`, the happier my life will be.
 
 
 ## Chaining
@@ -326,7 +325,7 @@ Since `JSON.parse()` takes a single argument and returns a transformed value, we
     })
 
 
-[See that in action here](_code/story.json), check the console in DevTools to see the result. In fact, we could make a `getJSON()` function really easily:
+[See that in action here](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/story.json){: target="_blank" .external }, check the console in DevTools to see the result. In fact, we could make a `getJSON()` function really easily:
 
 
     function getJSON(url) {
@@ -540,12 +539,12 @@ Thinking async isn't easy. If you're struggling to get off the mark, try writing
 
     document.querySelector('.spinner').style.display = 'none'
 
-[see example](#TODO)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/sync-example.html){: target="_blank" .external }
 
 
-That works ([see example](_code/sync-example.html))! But it's sync and locks
-up the browser while things download. To make this work async we use `then()`
-to make things happen one after another.
+That works (see [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/sync-example.html){: target="_blank" .external })! 
+But it's sync and locks up the browser while things download. To make this
+work async we use `then()` to make things happen one after another.
 
     getJSON('story.json').then(function(story) {
       addHtmlToPage(story.heading);
@@ -645,9 +644,9 @@ Let's put it all together:
       document.querySelector('.spinner').style.display = 'none';
     })
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-example.html){: target="_blank" .external }
 
-
-And there we have it ([see example](_code/async-example.html)), a fully async version of the sync version. But we can do better. At the moment our page is downloading like this:
+And there we have it (see [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-example.html){: target="_blank" .external }), a fully async version of the sync version. But we can do better. At the moment our page is downloading like this:
 
 
 <figure>
@@ -690,9 +689,9 @@ Browsers are pretty good at downloading multiple things at once, so we're losing
       document.querySelector('.spinner').style.display = 'none';
     })
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-all-example.html){: target="_blank" .external }
 
-
-Depending on connection, this can be seconds faster than loading one-by-one ([see example](_code/async-all-example.html)), and it's less code than our first try. The chapters can download in whatever order, but they appear on screen in the right order.
+Depending on connection, this can be seconds faster than loading one-by-one (see [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-all-example.html){: target="_blank" .external }), and it's less code than our first try. The chapters can download in whatever order, but they appear on screen in the right order.
 
 
 <figure>
@@ -730,9 +729,9 @@ To do this, we fetch JSON for all our chapters at the same time, then create a s
       document.querySelector('.spinner').style.display = 'none';
     })
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-best-example.html){: target="_blank" .external }
 
-
-And there we go ([see example](_code/async-best-example.html)), the best of both! It takes the same amount of time to deliver all the content, but the user gets the first bit of content sooner.
+And there we go (see [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-best-example.html){: target="_blank" .external }), the best of both! It takes the same amount of time to deliver all the content, but the user gets the first bit of content sooner.
 
 
 <figure>
@@ -824,9 +823,9 @@ But what does this mean for promises? Well, you can use this return/resume behav
       document.querySelector('.spinner').style.display = 'none';
     })
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/gettings-started/primers/async-generators-example.html){: target="_blank" .external }
 
-
-This works exactly as before but is so much easier to read. This works in Chrome and Opera today ([see example](_code/async-generators-example.html)), and works in Microsoft Edge by going to `about:flags` and turning on the **Enable experimental Javascript features** setting. This will be enabled by default in an upcoming version.
+This works exactly as before but is so much easier to read. This works in Chrome and Opera today (see [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }), and works in Microsoft Edge by going to `about:flags` and turning on the **Enable experimental Javascript features** setting. This will be enabled by default in an upcoming version.
 
 
 This throws together a lot of new ES6 stuff: promises, generators, let, for-of. When we yield a promise, the spawn helper waits for the promise to resolve and returns the final value. If the promise rejects, spawn causes our yield statement to throw an exception, which we can catch with normal JavaScript try/catch. Amazingly simple async coding!

@@ -60,6 +60,8 @@ For example:
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/video-main.html" region_tag="sourcetypes" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video-main.html){: target="_blank" .external }
+
 When the browser parses the `<source>` tags, it uses the optional `type`
 attribute to help decide which file to download and play. If the browser
 supports `WebM`, it play chrome.webm; if not, it checks whether it can
@@ -84,7 +86,7 @@ and latency are at a premium and the user's patience is likely to be limited.
 Not including a type attribute can affect performance when there are
 multiple sources with unsupported types.
 
-Using your mobile browser developer tools, compare network activity <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/video-main.html">with type attributes</a> and <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/notype.html">without type attributes</a>.
+Using your mobile browser developer tools, compare network activity [with type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/video-main.html){: target="_blank" .external } and [without type attributes](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/notype.html){: target="_blank" .external }.
 
 Also check the response headers in your browser developer tools to 
 [ensure your server reports the right MIME type](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types);
@@ -328,10 +330,10 @@ Caution: Don't force element sizing that results in an aspect ratio different fr
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-Compare the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/responsive_embed.html">responsive sample</a> to the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/unyt.html">unresponsive version</a>.
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
 
-
-
+Compare the [responsive sample](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/responsive_embed.html){: target="_blank" .external }
+to the [unresponsive version](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/unyt.html){: target="_blank" .external }.
 
 
 ## Customize the video player
@@ -435,7 +437,7 @@ elements are displayed in fullscreen mode.
 On devices that support the Fullscreen API, consider using thumbnail
 images as placeholders for video:
 
-To see this in action, check out the <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/fullscreen.html">demo</a>.
+To see this in action, check out the [demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/fullscreen.html){: target="_blank" .external }.
 
 Dogfood: `requestFullScreen()` may be vendor prefixed and may require extra code for full cross browser compatibility.
 
@@ -466,6 +468,8 @@ element as a child of the video element:
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/track.html" region_tag="track" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media//track.html){: target="_blank" .external }
 
 The track element `src` attribute gives the location of the track file.
 
@@ -638,7 +642,7 @@ updating it with mobile-specific concerns where relevant.
   </tbody>
 </table>
 
-Neither `playbackRate` (<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/scripted.html">see demo</a>) nor `volume` are supported on mobile.
+Neither `playbackRate` ([see demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/scripted.html){: target="_blank" .external }) nor `volume` are supported on mobile.
 
 #### Methods
 
@@ -670,7 +674,7 @@ Neither `playbackRate` (<a href="https://googlesamples.github.io/web-fundamental
 
 On mobile (apart from Opera on Android) `play()` and `pause()` don't work
 unless called in response to user action such as clicking a button: see 
-the [demo](https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/media/video/scripted.html).
+the [demo](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/scripted.html){: target="_blank" .external }.
 (Likewise, you can't initiate playback for content such as embedded
 YouTube videos.)
 

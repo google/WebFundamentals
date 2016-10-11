@@ -36,7 +36,7 @@ The [passive mixed content example](https://googlesamples.github.io/web-fundamen
   <img src="imgs/passive-mixed-content-warnings.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure video. This content should also be served over HTTPS.">
 </figure>
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/security/prevent-mixed-content/passive-mixed-content.html" class="external">Try Sample</a>
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html){: target="_blank" .external }
 
 While the active mixed content example causes mixed content errors to be 
 displayed:
@@ -45,7 +45,7 @@ displayed:
   <img src="imgs/active-mixed-content-errors.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure resource. This request has been blocked; the content must be served over HTTPS.">
 </figure>
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/security/prevent-mixed-content/active-mixed-content.html" class="external">Try Sample</a>
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/active-mixed-content.html){: target="_blank" .external }
 
 
 You need to fix the http:// URLs listed in these errors and warnings, in your site's source. It's helpful to make a list of these URLs, along with the page you found them on, for use when you fix them. 
@@ -154,6 +154,8 @@ on the page, causing a mixed content problem.
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" region_tag="snippet1" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html){: target="_blank" .external }
 
 In the code above, it may seem safe to leave the `<a>` tags href as `http://`; 
 however if you view the sample and click the image, you'll see that it loads 

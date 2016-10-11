@@ -30,6 +30,8 @@ So far we've focused exclusively on what happens in the browser after the resour
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom_nostyle.html){: target="_blank" .external }
+
 We'll start with basic HTML markup and a single image; no CSS or JavaScript. Let's open up our Network timeline in Chrome DevTools and inspect the resulting resource waterfall:
 
 <img src="images/waterfall-dom.png" alt=""  alt="CRP">
@@ -50,6 +52,8 @@ Our "Hello World experience" page seems simple but a lot goes on under the hood.
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_timing.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_timing.html){: target="_blank" .external }
 
 _Before adding JavaScript and CSS:_
 
@@ -86,6 +90,8 @@ First, recall that all inline scripts are parser blocking, but for external scri
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_async.html){: target="_blank" .external }
+
 _Parser-blocking (external) JavaScript:_
 
 <img src="images/waterfall-dom-css-js.png" alt="DOM, CSSOM, JS" >
@@ -101,6 +107,8 @@ Alternatively, we could have inlined both the CSS and JavaScript:
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/measure_crp_inlined.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/measure_crp_inlined.html){: target="_blank" .external }
 
 <img src="images/waterfall-dom-css-inline-js-inline.png" alt="DOM, inline CSS, inline JS" >
 
@@ -118,6 +126,8 @@ The simplest possible page consists of just the HTML markup; no CSS, no JavaScri
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/basic_dom_nostyle.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/basic_dom_nostyle.html){: target="_blank" .external }
+
 <img src="images/analysis-dom.png" alt="Hello world CRP" >
 
 **The time between T<sub>0</sub> and T<sub>1</sub> captures the network and server processing times.** In the best case (if the HTML file is small), just one network roundtrip fetches the entire document. Due to how the TCP transports protocols work, larger files may require more roundtrips. **As a result, in the best case the above page has a one roundtrip (minimum) critical rendering path.**
@@ -127,6 +137,8 @@ Now, let's consider the same page but with an external CSS file:
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css.html){: target="_blank" .external }
 
 <img src="images/analysis-dom-css.png" alt="DOM + CSSOM CRP" >
 
@@ -155,6 +167,8 @@ Now let's add an extra JavaScript file into the mix.
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_js.html){: target="_blank" .external }
+
 We added `app.js`, which is both an external JavaScript asset on the page and a parser blocking (that is, critical) resource. Worse, in order to execute the JavaScript file we have to block and wait for CSSOM; recall that JavaScript can query the CSSOM and hence the browser pauses until `style.css` is downloaded and CSSOM is constructed.
 
 <img src="images/analysis-dom-css-js.png" alt="DOM, CSSOM, JavaScript CRP" >
@@ -173,6 +187,8 @@ After chatting with our site developers, we realize that the JavaScript we inclu
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_js_async.html){: target="_blank" .external }
+
 <img src="images/analysis-dom-css-js-async.png" alt="DOM, CSSOM, async JavaScript CRP" >
 
 An asynchronous script has several advantages:
@@ -188,6 +204,8 @@ Finally, if the CSS stylesheet were only needed for print, how would that look?
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/performance/critical-rendering-path/_code/analysis_with_css_nb_js_async.html" region_tag="full" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critical-rendering-path/analysis_with_css_nb_js_async.html){: target="_blank" .external }
 
 <img src="images/analysis-dom-css-nb-js-async.png" alt="DOM, non-blocking CSS, and async JavaScript CRP" >
 

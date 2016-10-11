@@ -54,8 +54,7 @@ Below is some CSS that moves an element 100px in both the X and Y axes. It's don
       transform: translate(100px, 100px);
     }
     
-
-<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/animations/box-move-simple.html">See sample</a>
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html){: target="_blank" .external }
 
 Besides the transition's duration, there are options for the *easing*, which is essentially how the animation feels. For more information about easing, see [The Basics of Easing](the-basics-of-easing) guide.
 
@@ -129,7 +128,7 @@ You can, for example, animate the box in the same way with transitions, but have
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/animations/box-move-keyframes.html">See sample</a>
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html){: target="_blank" .external }
 
 With CSS animations you define the animation itself independently of the target element, and use the animation-name property to choose the required animation.
 
@@ -154,7 +153,7 @@ JavaScript animations are *imperative*, as you write them inline as part of your
 
 By default, Web Animations only modify the presentation of an element. If you'd like to have your object remain at the location it has moved to, then you should modify its underlying styles when the animation has finished, as per our sample.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/animations/box-move-wa.html">See sample</a>
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-wa.html){: target="_blank" .external }
 
 The Web Animations API is a new standard from the W3C. It is supported natively in Chrome and Opera, and is in [active development for Firefox](https://birtles.github.io/areweanimatedyet/){: .external }. For other modern browsers, [a polyfill is available](https://github.com/web-animations/web-animations-js).
 
