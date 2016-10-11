@@ -241,6 +241,7 @@ lists, `datalist` element provides hints as the user types.
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="datalist" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
 Note: The <code>datalist</code> values are provided as suggestions, and users are not restricted to the suggestions provided.
 
@@ -267,6 +268,8 @@ focus on the input element.
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="labels" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
 ### Label sizing and placement
 
@@ -315,6 +318,7 @@ the users name, email address and phone number, you should use:
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
 
 
@@ -653,7 +657,7 @@ response.  For example:
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="customvalidation" adjust_indentation="auto" %}
 </pre>
 
-
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
 ### Prevent form submission on invalid forms
 
@@ -664,6 +668,8 @@ on the form element to determine if the form is valid.  For example:
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="preventsubmission" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
 ### Show feedback in real-time
 
@@ -718,6 +724,8 @@ JavaScript to only show invalid styling when the user has visited the field.
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="initinputs" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/forms/order.html){: target="_blank" .external }
 
 
 Success: You should show the user all of the issues on the form at once, rather than showing them one at a time.

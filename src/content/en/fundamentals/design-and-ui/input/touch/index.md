@@ -49,6 +49,8 @@ pseudo classes `:hover`, `:focus` and `:active` as shown below:
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+
 See [Pseudo classes for touch states](#pseudo-classes-for-touch-states):
 
 ![Image illustrating the different colors for button states](images/button-states.png)
@@ -120,6 +122,8 @@ Safari and Chrome add a tap highlight color which can be prevented with the
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+
 Internet Explorer on Windows Phone has a similar behavior, but is suppressed
 via a meta tag:
 
@@ -138,6 +142,8 @@ button which you can remove by setting `background-image: none`.
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
 
 ##### Override Element Outline in Focus State
 
@@ -288,6 +294,8 @@ before other elements).
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+
 This code first checks to see if Pointer Events are supported by testing for
 `window.PointerEventsSupport`, if Pointer Events aren’t supported, we add listeners for
 touch and mouse events instead.
@@ -301,6 +309,8 @@ on the existence of `window.PointerEvent`.
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 ### Handle Single-Element Interaction
 
@@ -328,12 +338,16 @@ and end events to the document:
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+
 The end callback we add is `handleGestureEnd` which removes the move
 and end events from the document when the gesture has finished:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 Mouse events follow this same pattern since it’s easy for a user to
 accidentally move the mouse outside of the element, which results in the move
@@ -367,12 +381,16 @@ move and end listeners for touch and pointer events to the element straight away
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
+
 In our `handleGestureStart` and `handleGestureEnd` function, we add and
 remove the mouse event listeners to the document.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="handle-gestures" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
 
 ### Responding to Touch Efficiently
 
@@ -388,6 +406,8 @@ The following code snippet checks whether the event is from a touch event by loo
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
 
 Each touch event has three lists containing touch data
 (see also [Touch lists](#touch-lists)):
@@ -419,6 +439,8 @@ In our demo, we store the initial touch position in `handleGestureStart`:
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+
 The `handleGestureMove` method stores the `y` position before requesting an
 animation frame if we need to, passing in our `onAnimFrame` function as the
 callback:
@@ -426,6 +448,8 @@ callback:
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="handle-move" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
 
 It’s in the `onAnimFrame` function that we change our UI to move the
 elements around. Initially we check to see if the gesture is still
@@ -440,6 +464,8 @@ the next touch event will request a new animation frame.
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="on-anim-frame" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
+
 ### Control Gestures using Touch Actions
 
 The CSS property `touch-action` allows you to control the default touch
@@ -450,6 +476,8 @@ to intercept all of the touch events.
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 `touch-action` allows you to disable gestures implemented by a browser.
 For example, IE10+ supports a double-tap to zoom gesture. By setting a touch-action

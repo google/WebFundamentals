@@ -125,8 +125,7 @@ Finally, we add the CSS declarations for those classes.
       transform: translateX(0);
     }
     
-
-<a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/animations/inter-view-animation.html">See sample.</a>
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html){: target="_blank" .external }
 
 You could expand this to cover multiple views, and the basic concept should remain the same; each non-visible view should be offscreen and brought on as needed, and the currently onscreen view should be moved off.
 

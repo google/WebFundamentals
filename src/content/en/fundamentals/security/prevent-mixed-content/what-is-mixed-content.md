@@ -109,6 +109,8 @@ Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/simple-example.html" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/simple-example.html){: target="_blank" .external }
+
 In this example, the script `simple-example.js` is loaded with an **HTTP** URL. This is the simplest case of mixed content. When the browser requests the `simple-example.js` file, an attacker can inject code into the returned content 
 and take control of the entire page. 
 
@@ -129,6 +131,8 @@ Viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.github.
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/xmlhttprequest-example.html" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/xmlhttprequest-example.html){: target="_blank" .external }
 
 Here the **HTTP** URL is constructed dynamically in JavaScript, and is eventually 
 used  by `XMLHttpRequest` to load an insecure resource. Like the simple example 
@@ -152,6 +156,8 @@ When viewing this sample page over **HTTPS**&mdash;[**https**://googlesamples.gi
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/image-gallery-example.html" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/image-gallery-example.html){: target="_blank" .external }
 
 Image galleries often rely on the `<img>` tag `src` attribute to display 
 thumbnail images on the page, the anchor (`<a>`) tag `href` attribute is 
@@ -203,6 +209,8 @@ The following is an example of passive mixed content:
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/passive-mixed-content.html" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/passive-mixed-content.html){: target="_blank" .external }
+
 Most browsers still render this type of mixed content to the user, however a 
 warning is also displayed as this poses a security and privacy risk to your site 
 and users. 
@@ -230,6 +238,8 @@ The following contains examples of active mixed content:
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/security/prevent-mixed-content/_code/active-mixed-content.html" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/security/prevent-mixed-content/active-mixed-content.html){: target="_blank" .external }
 
 <figure>
   <img src="imgs/active-mixed-content-errors.png" alt="Mixed Content: The page was loaded over HTTPS, but requested an insecure resource. This request has been blocked; the content must be served over HTTPS.">
