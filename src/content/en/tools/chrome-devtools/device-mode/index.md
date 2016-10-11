@@ -11,7 +11,11 @@ description: Use virtual devices in Chrome's Device Mode to build mobile-first w
 
 Use Chrome DevTools' Device Mode to build mobile-first, fully responsive websites. Learn how to use it to simulate a wide range of devices and their capabilities.
 
-![Initial start for device mode](imgs/device-mode-initial-view.png)
+Warning: Device Mode gives you a close approximation as to how your site
+will look on a mobile device, but to get the full picture you should always
+test your site on real devices. DevTools can't emulate the performance
+characteristics of mobile devices, for example.
+
 
 ## In a nutshell
 
@@ -20,15 +24,26 @@ Use Chrome DevTools' Device Mode to build mobile-first, fully responsive website
 * Evaluate your site's performance using the [network emulator](/web/tools/chrome-devtools/profile/network-performance/network-conditions), without affecting traffic to other tabs.
 * Accurately [simulate device input](/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors) for touch events, geolocation, and device orientation
 
-## How to disable Device Mode
+## Toggle Device Mode {: #toggle }
 
-Device Mode is enabled by default. If you're building a Desktop-only site, you may turn it off by pressing the **Toggle device mode** (![toggle device mode icon on](imgs/device-mode-on.png){:.inline.wf-devtools-icon}) icon. When Device Mode is disabled, the icon turns grey and the viewport controls are hidden.
+Toggle the **Device Mode** button to turn Device Mode on or off.
 
-You can also toggle device mode on and off using the keyboard shortcut:
-<kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> (or <kbd class="kbd">Cmd</kbd>+<kbd class="kbd">Shift</kbd>+<kbd class="kbd">M</kbd> on Mac).
+![Initial start for device mode](imgs/device-mode-initial-view.png)
+
+When Device Mode is on, the icon is blue
+(![device mode on](imgs/device-mode-on.png)).
+
+When it's off, the icon is grey
+(![device mode off](imgs/device-mode-off.png)).
+
+Device Mode is enabled by default. 
+
+You can also toggle Device Mode by pressing
+<kbd>Command</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> (Mac) or
+<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> (Windows, Linux).
 To use this shortcut your mouse needs to be focused on your DevTools window.
 If it's focused on your viewport, you'll trigger [Chrome's switch user
 shortcut](https://support.google.com/chrome/answer/157179).
 
 
-Note: Device Mode does a whole lot to give you an experience as close as possible compared to the real deal, but keep in mind that you'll still need to test on real devices to get the full picture (we can't yet emulate the performance characteristics of a real device).
+

@@ -20,7 +20,7 @@ The updated Device Mode (since Chrome 49) is an integral part of the now-mobile-
 - Device mode isn't a replacement for real device testing. Be aware of  its limitations.
 
 
-## Using the viewport controls
+## Using the viewport controls {: #viewport-controls }
 
 ![device mode enabled](imgs/device-mode.png)
 
@@ -186,12 +186,14 @@ this effect on a standard display, set the DPR to 2 and scale the viewport
 by zooming. A 2x asset will continue to look sharp, while a 1x one will look 
 pixelated.
 
-### Media queries
+### Media queries {: #media-queries }
 
 [Media queries](/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries)
 are an essential part of responsive web design.To view the media query inspector,
 click **Show Media queries** in the three dot menu. The DevTools detect media
 queries in your stylesheets and display them as colored bars in the top ruler.
+
+![show media queries](imgs/show-media-queries.png)
 
 ![media query inspector](imgs/media-query-inspector-ruler.png)
 

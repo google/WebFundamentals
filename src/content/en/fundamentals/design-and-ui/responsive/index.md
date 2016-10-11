@@ -482,3 +482,31 @@ eliminating the pollen count from the weather forecast could be a serious issue
 for spring-time allergy sufferers who need the information to determine if they
 can go outside or not.
 
+## View media query breakpoints in Chrome DevTools {: #devtools }
+
+Once you've got your media query breakpoints set up, you'll want to see how
+your site looks with them. You *could* resize your browser window to trigger
+the breakpoints, but there's a better way: Chrome DevTools. The two
+screenshots below demonstrate using DevTools to view how a page looks under
+different breakpoints.
+
+![Example of DevTools' media queries feature](imgs/devtools-media-queries-example.png)
+
+To view your page under different breakpoints:
+
+[Open DevTools](/web/tools/chrome-devtools/#open) and then turn on [Device
+Mode](/web/tools/chrome-devtools/device-mode/#toggle).
+
+Use the
+[viewport controls](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports#viewport-controls)
+to select **Responsive**, which puts DevTools into responsive mode.
+
+Last, open the Device Mode menu and select
+[**Show media queries**](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports#media-queries)
+to display your breakpoints as colored bars above your page.
+
+Click on one of the bars to view your page while that media
+query is active. Right-click on a bar to jump to the media query's
+definition. See 
+[Media queries](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports#media-queries)
+for more help.
