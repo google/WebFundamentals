@@ -395,20 +395,27 @@ to resolve and uses more battery.
     };
 
 
-## Testing geolocation with your site
+## Emulate geolocation with Chrome DevTools {: #devtools }
 
 <div class="attempt-right">
   <figure id="fig1">
-    <img src="images/emulategeolocation.png" class="screenshot">
+    <img src="images/sensors-drawer.png" class="screenshot">
   </figure>
 </div>
 
-When working with HTML5 geolocation support in an application and using different values for longitude and latitude, it can be useful to debug the output.
+Once you've got geolocation set up, you'll want to:
 
-DevTools supports both (a) overriding position values for navigator.geolocation
-and (b) simulating geolocation not being available via the overrides menu.
+* Test out how your app works in different geolocations.
+* Verify that your app degrades gracefully when geolocation is not available.
 
-1. In DevTools, open the overrides menu.
-2. Check the “Override Geolocation” box.
-3. Enter Lat = 41.4949819 and Lon = -0.1461206.
-4. Refresh the page; it now uses your overridden positions for geolocation.
+You can do both from Chrome DevTools.
+
+[Open Chrome DevTools](/web/tools/chrome-devtools/#open) and then
+[open the Console Drawer](/web/tools/chrome-devtools/console/#open_as_drawer).
+
+[Open the Console Drawer menu](/web/tools/chrome-devtools/settings#drawer-tabs)
+and click the **Sensors** option to show the Sensors Drawer.
+
+From here you can override the location to a preset major city,
+enter a custom location, or disable geolocation by setting the override
+to **Location unavailable**.
