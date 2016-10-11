@@ -35,6 +35,7 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "postinstall": "gulp build"
+    "postinstall": "gulp build",
+    "start": "./start-appengine.sh"
   }
 }

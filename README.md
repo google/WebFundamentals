@@ -55,7 +55,7 @@ access to the original Doc files. This will likely only work for Googlers.
 1. Check the latest changes into GitHub
 
 ## Start the development server
-1. Run `./start-appengine.sh`
+1. Run `npm start`
 
 ## Test your changes before submitting a PR
 Please run your changes through gulp test before submitting a PR. The test
