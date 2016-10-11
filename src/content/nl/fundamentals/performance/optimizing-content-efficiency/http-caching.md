@@ -140,7 +140,7 @@ Er bestaat geen cachebeleid dat in alle gevallen het beste is. U moet voor elke 
 
 Enkele tips en technieken waarmee u rekening kunt houden wanneer u uw cachestrategie bepaalt:
 
-1. **Gebruik consistente URL`s:** als u op verschillende URL`s dezelfde inhoud beheert, wordt deze inhoud meermaals opgehaald en opgeslagen. Tip: [URL`s zijn hoofdlettergevoelig](http://www.w3.org/TR/WD-html40-970708/htmlweb.html).
+1. **Gebruik consistente URL`s:** als u op verschillende URL`s dezelfde inhoud beheert, wordt deze inhoud meermaals opgehaald en opgeslagen. Tip: [URL`s zijn hoofdlettergevoelig](http://www.w3.org/TR/WD-html40-970708/htmlweb.html){: .external }.
 2. **Zorg ervoor dat de server een validatietoken (ETag) vertrekt:** dankzij validatietokens hoeven dezelfde bytes niet opnieuw te worden verstuurd indien een hulpbron niet is gewijzigd op de server.
 3. **Bepaal welke hulpbronnen door tussenopslag kunnen worden opgeslagen:** hulpbronnen met antwoorden die hetzelfde zijn voor alle gebruikers kunnen worden opgeslagen door een CDN of andere tussenopslag.
 4. **Bepaal de optimale cacheperiode voor elke hulpbron:** deze kan voor elke hulpbron anders zijn. Controleer en bepaal de juiste `max-age` voor elke hulpbron.

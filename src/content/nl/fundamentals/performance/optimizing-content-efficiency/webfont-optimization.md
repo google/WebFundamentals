@@ -28,13 +28,13 @@ Een weblettertype is een verzameling gliefen, en elke glief is een vectorvorm di
 
 <img src="images/glyphs.png" class="center" alt="Tabel lettertypegliefen">
 
-Wanneer u een lettertype uitkiest, moet u er rekening mee houden welke verzamelingen tekens worden ondersteund. Voor de vertaling van uw pagina in meerdere talen, kiest u een lettertype met een consistente look en gebruiksvriendelijkheid voor uw gebruikers. [De lettertypefamilie Noto van Google](https://www.google.com/get/noto/) ondersteunt alle talen ter wereld. De totale omvang van Noto, met alle talen, is dan ook meer dan 130 MB als ZIP-bestand. 
+Wanneer u een lettertype uitkiest, moet u er rekening mee houden welke verzamelingen tekens worden ondersteund. Voor de vertaling van uw pagina in meerdere talen, kiest u een lettertype met een consistente look en gebruiksvriendelijkheid voor uw gebruikers. [De lettertypefamilie Noto van Google](https://www.google.com/get/noto/){: .external } ondersteunt alle talen ter wereld. De totale omvang van Noto, met alle talen, is dan ook meer dan 130 MB als ZIP-bestand. 
 
 Lettertypen op internet moeten dus zorgvuldig worden ontwikkeld om ervoor te zorgen dat de typografie geen belemmering vormt voor de weergave van pagina`s. Internet biedt gelukkig alle noodzakelijke standaardbenodigdheden en later in deze leidraad zullen we bespreken hoe we het beste van beide kanten kunnen combineren.
 
 ### Bestandsindelingen voor lettertypen
 
-Er bestaan tegenwoordig vier containerindelingen op internet: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://nl.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) en [WOFF2](http://www.w3.org/TR/WOFF2/). Ondanks de uitgebreide keuzemogelijkheid, bestaat er geen enkele universele indeling die werkt voor alle oude en nieuwe browsers: EOT is [alleen IE](http://caniuse.com/#feat=eot), TTF heeft [gedeeltelijke IE-ondersteuning](http://caniuse.com/#search=ttf), WOFF heeft de breedste ondersteuning, maar is [niet beschikbaar in sommige oudere browsers](http://caniuse.com/#feat=woff), en ondersteuning voor WOFF 2.0 is [voor de meeste browsers nog in ontwikkeling](http://caniuse.com/#feat=woff2).
+Er bestaan tegenwoordig vier containerindelingen op internet: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType){: .external }, [TTF](http://nl.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format) en [WOFF2](http://www.w3.org/TR/WOFF2/). Ondanks de uitgebreide keuzemogelijkheid, bestaat er geen enkele universele indeling die werkt voor alle oude en nieuwe browsers: EOT is [alleen IE](http://caniuse.com/#feat=eot), TTF heeft [gedeeltelijke IE-ondersteuning](http://caniuse.com/#search=ttf), WOFF heeft de breedste ondersteuning, maar is [niet beschikbaar in sommige oudere browsers](http://caniuse.com/#feat=woff), en ondersteuning voor WOFF 2.0 is [voor de meeste browsers nog in ontwikkeling](http://caniuse.com/#feat=woff2).
 
 Wat houdt dit voor ons in? Er is geen enkele indeling die in alle browsers werkt, wat betekent dat we meerdere indelingen moeten aanbieden voor een consistent resultaat:
 
@@ -52,9 +52,9 @@ Een lettertype is een verzameling gliefen, die elk bestaan uit paden die de vorm
 
 * De indelingen EOT en TTF worden standaard niet gecomprimeerd. Zorg ervoor dat uw servers zijn geconfigureerd voor toepassen van [GZIP-compressie](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip) wanneer deze bestandsindelingen worden aangeboden.
 * WOFF heeft ingebouwde compressie - controleer of uw WOFF-compressor optimaal is ingesteld. 
-* WOFF2 maakt gebruik van aangepaste voorverwerkings- en compressie-algoritmen waarmee een ongeveer 30% grotere reductie wordt behaald in vergelijking tot andere bestandsindelingen - zie [rapport](http://www.w3.org/TR/WOFF20ER/).
+* WOFF2 maakt gebruik van aangepaste voorverwerkings- en compressie-algoritmen waarmee een ongeveer 30% grotere reductie wordt behaald in vergelijking tot andere bestandsindelingen - zie [rapport](http://www.w3.org/TR/WOFF20ER/){: .external }.
 
-Sommige lettertype-indelingen bevatten extra metadata, zoals informatie voor [hinten](http://nl.wikipedia.org/wiki/Hinten) en [overhang](http://nl.wikipedia.org/wiki/Overhang_(typografie)) die niet noodzakelijk is op sommige platformen, waardoor de bestandsgrootte verder kan worden geoptimaliseerd. Controleer uw lettertypecompressor op beschikbare optimalisatie-opties en zorg dat u over de juiste infrastructuur beschikt om deze geoptimaliseerde lettertypen aan elke afzonderlijke browser te leveren. Google Fonts bevat bijvoorbeeld meer dan 30 geoptimaliseerde varianten voor elk lettertype en ontdekt en levert automatisch de optimale variant voor elk platform en elke browser.
+Sommige lettertype-indelingen bevatten extra metadata, zoals informatie voor [hinten](http://nl.wikipedia.org/wiki/Hinten){: .external } en [overhang](http://nl.wikipedia.org/wiki/Overhang_(typografie)) die niet noodzakelijk is op sommige platformen, waardoor de bestandsgrootte verder kan worden geoptimaliseerd. Controleer uw lettertypecompressor op beschikbare optimalisatie-opties en zorg dat u over de juiste infrastructuur beschikt om deze geoptimaliseerde lettertypen aan elke afzonderlijke browser te leveren. Google Fonts bevat bijvoorbeeld meer dan 30 geoptimaliseerde varianten voor elk lettertype en ontdekt en levert automatisch de optimale variant voor elk platform en elke browser.
 
 Note: Gebruik <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli-compressie</a> voor de bestandsindelingen EOT, TTF en WOFF. Zopfli is een compressor die geschikt is voor zlib en biedt een ongeveer 5% grotere reductie in bestandsgrootte dan Gzip.
 
@@ -261,7 +261,7 @@ Al deze strategieën hebben hun voor- en nadelen: sommige mensen vinden het hout
 
 ### Tekstweergave optimaliseren met Font Loading API
 
-[Font Loading API](http://dev.w3.org/csswg/css-font-loading/) biedt een script-interface waarin CSS-lettertypen kunnen worden gedefinieerd en aangepast, de downloadvoortgang kan worden bijgehouden en het standaard "lazyload"-gedrag kan worden gewijzigd. Als we bijvoorbeeld zeker weten dat een bepaalde lettertypevariant nodig is, kunnen we deze definiëren en de browser instrueren om de lettertype-hulpbron onmiddellijk op te halen:
+[Font Loading API](http://dev.w3.org/csswg/css-font-loading/){: .external } biedt een script-interface waarin CSS-lettertypen kunnen worden gedefinieerd en aangepast, de downloadvoortgang kan worden bijgehouden en het standaard "lazyload"-gedrag kan worden gewijzigd. Als we bijvoorbeeld zeker weten dat een bepaalde lettertypevariant nodig is, kunnen we deze definiëren en de browser instrueren om de lettertype-hulpbron onmiddellijk op te halen:
 
 
     var font = new FontFace("Awesome Font", "url(/fonts/awesome.woff2)", {

@@ -12,7 +12,7 @@ description: De hoeveelheid gegevens die door elke app wordt gedownload, blijft 
 Onze internetapplicaties krijgen een steeds groter bereik, grotere ambitie en meer functies, en dat is goed. Met een steeds rijker internet ontstaat echter ook een andere trend: de hoeveelheid gegevens die door elke app wordt gedownload, wordt almaar groter. Om geweldige inhoud te kunnen blijven leveren, moeten we elke byte optimaliseren.
 
 
-Hoe ziet een moderne internetapplicatie eruit? [HTTP Archive](http://httparchive.org/) kan ons hierbij helpen. Dit project monitort internet door regelmatig de populairste websites (meer dan 300.000 sites uit de lijst van Alexa Top 1M) te crawlen en analysegegevens te verzamelen over het aantal hulpbronnen, inhoudstypen en andere metadata voor elke pagina.
+Hoe ziet een moderne internetapplicatie eruit? [HTTP Archive](http://httparchive.org/){: .external } kan ons hierbij helpen. Dit project monitort internet door regelmatig de populairste websites (meer dan 300.000 sites uit de lijst van Alexa Top 1M) te crawlen en analysegegevens te verzamelen over het aantal hulpbronnen, inhoudstypen en andere metadata voor elke pagina.
 
 <img src="images/http-archive-trends.png" class="center" alt="Trends opgesteld door HTTP Archive">
 

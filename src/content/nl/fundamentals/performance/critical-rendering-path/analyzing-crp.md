@@ -15,7 +15,7 @@ Het identificeren en oplossen van knelpunten in de prestatie van het kritieke we
 
 
 
-Het doel van het kritieke weergavepad optimaliseren is om de browser de mogelijkheid te bieden de pagina zo snel mogelijk te kleuren: snellere pagina's zorgen voor grotere betrokkenheid, meer bekeken pagina's en [verbeterde conversie] (http://www.google.com/think/multiscreen/success.html). Daarom willen we de tijd die een bezoeker naar een blanco scherm moet staren minimaliseren door een optimalisatie van welke bronnen worden geladen en in welke volgorde.
+Het doel van het kritieke weergavepad optimaliseren is om de browser de mogelijkheid te bieden de pagina zo snel mogelijk te kleuren: snellere pagina's zorgen voor grotere betrokkenheid, meer bekeken pagina's en [verbeterde conversie] (http://www.google.com/think/multiscreen/success.html){: .external }. Daarom willen we de tijd die een bezoeker naar een blanco scherm moet staren minimaliseren door een optimalisatie van welke bronnen worden geladen en in welke volgorde.
 
 Ter illustratie van dit proces zullen we beginnen met het meest eenvoudige voorbeeld en zullen we onze pagina`s incrementeel opbouwen en extra bronnen, stijlen en app-structuur toevoegen. We zullen in dit proces ook zien waar het verkeerd kan gaan en hoe we elk van deze gevallen kunnen optimaliseren.
 

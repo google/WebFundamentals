@@ -41,8 +41,8 @@ Wanneer iemand op een sociaal netwerk jouw website wilt delen met zijn vrienden,
 Door geschikte metadata toe te voegen aan jouw pagina's, maak je het delen makkelijker: de titel, omschrijving en een relevante afbeelding zijn dan voorgeselecteerd. Dat betekent dat gebruikers geen waardevolle tijd (en karakters) hoeven te besteden om de link te omschrijven.
 
 ## Gebruik schema.org + microdata voor rich snippets op Google+
-Crawlers gebruiken meerdere methoden om een pagina te kunnen lezen en begrijpen. Door [microdata](http://www.w3.org/TR/microdata/) en
-[schema.org](https://schema.org/) vocabulaire te gebruiken help je de sociale media sites en zoekmachines beter de inhoud te begrijpen.
+Crawlers gebruiken meerdere methoden om een pagina te kunnen lezen en begrijpen. Door [microdata](http://www.w3.org/TR/microdata/){: .external } en
+[schema.org](https://schema.org/){: .external } vocabulaire te gebruiken help je de sociale media sites en zoekmachines beter de inhoud te begrijpen.
 
 Hier is een voorbeeld:
 
@@ -56,13 +56,13 @@ De meeste metadata wordt geplaatst in de head van een pagina, maar microdata zit
 Door de`itemscope` toe te voegen kan je de tag specificeren als een blok content over een bepaald item.
 
 ### Voeg `itemtype` toe om de soort website te definiëren
-De type van een item kan worden gespecificeerd met het `itemtype` attribuut samen met de `itemscope`. De waarde van `itemtype` wordt bepaald door het soort content op de pagina. Je kan de relevante informatie vinden op [deze pagina](http://schema.org/docs/full.html).
+De type van een item kan worden gespecificeerd met het `itemtype` attribuut samen met de `itemscope`. De waarde van `itemtype` wordt bepaald door het soort content op de pagina. Je kan de relevante informatie vinden op [deze pagina](http://schema.org/docs/full.html){: .external }.
 
 ### Voeg `itemprop` toe om ieder item te beschrijven volgens het schema.org vocabulaire
 `itemprop`s defineren eigenschappen voor `itemtype`s in de scope. Voor sociale media metadata is voornamelijk de `itemprop` waardes van `name`, `description` and `image` het meest relevant.
 
 ### Leer meer
-Deze microdata levert semantische data aan crawlers, voornamelijk [Google+](https://plus.google.com/) en Google Search. Om meer te leren over snippets en rendering op Google+ lees de volgende documenten:
+Deze microdata levert semantische data aan crawlers, voornamelijk [Google+](https://plus.google.com/){: .external } en Google Search. Om meer te leren over snippets en rendering op Google+ lees de volgende documenten:
 
 * [Article Rendering - Google+ Platform](/+/web/snippet/article-rendering)
 * [Snippet - Google+ Platform](/+/web/snippet/)
@@ -70,16 +70,16 @@ Deze microdata levert semantische data aan crawlers, voornamelijk [Google+](http
 ### Valideer rich snippets
 Om rich snippets te valideren op Google+ kan je deze tools gebruiken:
 
-* [Structured Data Testing Tool](http://www.google.com/webmasters/tools/richsnippets) - Webmaster Tools  
+* [Structured Data Testing Tool](http://www.google.com/webmasters/tools/richsnippets){: .external } - Webmaster Tools  
 
 <img src="imgs/webmaster-tools.png" srcset="imgs/webmaster-tools.png 1x, imgs/webmaster-tools-2x.png 2x" />
 
-* [Semantic inspector](https://chrome.google.com/webstore/detail/semantic-inspector/jobakbebljifplmcapcooffdbdmfdbjh/reviews) - Chrome Extension  
+* [Semantic inspector](https://chrome.google.com/webstore/detail/semantic-inspector/jobakbebljifplmcapcooffdbdmfdbjh/reviews){: .external } - Chrome Extension  
 
 <img src="imgs/semantic-inspector.png" srcset="imgs/semantic-inspector.png 1x, imgs/semantic-inspector-2x.png 2x" />
 
 ## Gebruik Open Graph Protocol (OGP) voor rich snippets op Facebook
-De [Open Graph Protocol (OGP)](http://ogp.me/) levert Facebook de nodige metadata om web pagina's dezelfde functionaliteit te geven als andere Facebook objecten.
+De [Open Graph Protocol (OGP)](http://ogp.me/){: .external } levert Facebook de nodige metadata om web pagina's dezelfde functionaliteit te geven als andere Facebook objecten.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/discovery-and-monetization/social-discovery/_code/social-sites.html" region_tag="ogp" adjust_indentation="auto" %}
@@ -121,23 +121,23 @@ Een `meta` tag bevat een `property` attribuut en een `content` attribuut.
   </tbody>
 </table>
 
-Deze meta tags bevatten semantische informatie voor sociale media crawlers, voornamelijk van Google+](https://plus.google.com/) en [Facebook](https://www.facebook.com/).
+Deze meta tags bevatten semantische informatie voor sociale media crawlers, voornamelijk van Google+](https://plus.google.com/){: .external } en [Facebook](https://www.facebook.com/).
 
 ### Leer meer
 Om meer te leren over wat je kan toevoegen aan een Facebook post, bezoek de officieele Open Graph Protocol site:
 
-* [ogp.me](http://ogp.me/)
+* [ogp.me](http://ogp.me/){: .external }
 
 ### Valideer rich snippets
 Om de markup te valideren kan je deze tool van Facebook gebruiken:
 
-* [Debugger](https://developers.facebook.com/tools/debug/)
+* [Debugger](https://developers.facebook.com/tools/debug/){: .external }
 
 ## Gebruik Twitter Cards voor rich snippets op Twitter
-[Twitter Cards](https://dev.twitter.com/docs/cards) zijn een uitbreiding op het [Open Graph Protocol toegespitst voor Twitter](https://twitter.com/). Het geeft de mogelijkheid om media zoals afbeeldingen en video's toe te voegen aan een tweet met een link naar jouw site. Door de passende metadata toe te voegen, zullen tweets met een link naar jouw site een zogenaamde card hebben met deze rich media.
+[Twitter Cards](https://dev.twitter.com/docs/cards){: .external } zijn een uitbreiding op het [Open Graph Protocol toegespitst voor Twitter](https://twitter.com/). Het geeft de mogelijkheid om media zoals afbeeldingen en video's toe te voegen aan een tweet met een link naar jouw site. Door de passende metadata toe te voegen, zullen tweets met een link naar jouw site een zogenaamde card hebben met deze rich media.
 
 ### Gebruik `twitter:` namespaced meta tags om metadata te omschrijven
-Om Twitter Card werkend te krijgen [moet je domein zijn goedgekeurd](https://dev.twitter.com/docs/cards/validation/validator) en moet de meta tag `twitter:card` met een `name` attribuut hebben.
+Om Twitter Card werkend te krijgen [moet je domein zijn goedgekeurd](https://dev.twitter.com/docs/cards/validation/validator){: .external } en moet de meta tag `twitter:card` met een `name` attribuut hebben.
 
 Hier is een kort voorbeeld:
 
@@ -152,12 +152,12 @@ Door het toevoegen van de Twitter id aan twitter:site, zal Twitter deze informat
 ### Leer meer
 Om meer te leren over Twitter Cards bezoek:
 
-* [Twitter's developer site](https://dev.twitter.com/docs/cards)
+* [Twitter's developer site](https://dev.twitter.com/docs/cards){: .external }
 
 ### Valideer rich snippets
 Om je opmaak te valideren levert Twitter:
 
-* [Card Validator](https://dev.twitter.com/docs/cards/validation/validator)
+* [Card Validator](https://dev.twitter.com/docs/cards/validation/validator){: .external }
 
 ## In de praktijk
 Gegeven deze drie opties wordt in de praktijk meestal alle drie tegelijk geintegreerd in de webpagina. Hier is een voorbeeld:

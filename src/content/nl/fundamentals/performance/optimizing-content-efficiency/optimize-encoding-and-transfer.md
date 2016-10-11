@@ -103,7 +103,7 @@ Inventariseer daarom als eerste stap voor de optimalisatie van de efficiëntie v
 - Voor sommige CDN's zijn speciale stappen nodig om GZIP in te schakelen
 
 
-[GZIP](http://nl.wikipedia.org/wiki/Gzip) is een universele compressor die op elke verzameling bytes kan worden toegepast. Deze compressor onthoudt bekende inhoud en probeert op efficiënte manier dubbele gegevens te vinden en te vervangen. Bekijk voor een [goede basisuitleg van GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). In de praktijk werkt GZIP het beste met tekstinhoud, waarbij voor grotere bestanden compressiepercentages van 70-90% worden behaald. Als u GZIP toepast op items die al gecomprimeerd zijn met andere algoritmen (bijv. de meeste afbeeldingen) levert dit weinig tot geen verbetering op.
+[GZIP](http://nl.wikipedia.org/wiki/Gzip){: .external } is een universele compressor die op elke verzameling bytes kan worden toegepast. Deze compressor onthoudt bekende inhoud en probeert op efficiënte manier dubbele gegevens te vinden en te vervangen. Bekijk voor een [goede basisuitleg van GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). In de praktijk werkt GZIP het beste met tekstinhoud, waarbij voor grotere bestanden compressiepercentages van 70-90% worden behaald. Als u GZIP toepast op items die al gecomprimeerd zijn met andere algoritmen (bijv. de meeste afbeeldingen) levert dit weinig tot geen verbetering op.
 
 Alle moderne browser ondersteunen GZIP en gebruiken deze compressor standaard voor alle HTTP-verzoeken: het is aan ons om ervoor te zorgen dat de server juist is geconfigureerd, zodat de gecomprimeerde hulpbron aangeboden kan worden wanneer de client erom vraagt.
 
@@ -176,7 +176,7 @@ Bovenstaande tabel toont voor enkele van de populairste JavaScript-bibliotheken 
 
 GZIP is een van de eenvoudigste en effectiefste optimalisatiemiddelen, maar er zijn nog steeds veel mensen die dit vergeten te implementeren. De meeste servers comprimeren inhoud voor u, en u hoeft er meestal alleen voor te zorgen dat de server zo is configureerd dat deze alle inhoudstypen comprimeert die geschikt zijn voor compressie met GZIP.
 
-Wat is de beste configuratie voor uw server? Het project HTML5 Boilerplate bevat [voorbeelden van configuratiebestanden](https://github.com/h5bp/server-configs) voor de meest gebruikte servers met gedetailleerde beschrijvingen voor elke configuratiestap. Zoek de gewenste server op in de lijst, zoek naar de sectie over GZIP en neem de vermelde instellingen over op uw server, zodat deze is geconfigureerd met de aanbevolen instellingen.
+Wat is de beste configuratie voor uw server? Het project HTML5 Boilerplate bevat [voorbeelden van configuratiebestanden](https://github.com/h5bp/server-configs){: .external } voor de meest gebruikte servers met gedetailleerde beschrijvingen voor elke configuratiestap. Zoek de gewenste server op in de lijst, zoek naar de sectie over GZIP en neem de vermelde instellingen over op uw server, zodat deze is geconfigureerd met de aanbevolen instellingen.
 
 <img src="images/transfer-vs-actual-size.png" class="center" alt="DevTools-demo van daadwerkelijke grootte tegenover overdrachtsgrootte">
 
@@ -184,7 +184,7 @@ Een snelle en eenvoudige manier om GZIP in actie te zien, is door Chrome DevTool
 
 Note: Er zijn gevallen waar GZIP de omvang van het item kan doen toenemen. Dit komt meestal voor wanneer het item erg klein is en het overschot aan informatie in het GZIP-woordenboek groter is dan het aantal bytes dat wordt bespaard door compressie, of als de hulpbron al goed is gecomprimeerd. Op sommige servers kunt u een `minimum gegevensomvang` instellen om dit probleem te vermijden.
 
-Ten slotte een waarschuwing: de meeste servers comprimeren de items automatisch voor u wanneer deze aan gebruikers worden aangeboden, maar voor sommige CDN's moeten handmatige stappen worden uitgevoerd om te garanderen dat items met GZIP als set worden aangeboden. Controleer uw site en zorg ervoor dat uw items daadwerkelijk [worden gecomprimeerd](http://www.whatsmyip.org/http-compression-test/).
+Ten slotte een waarschuwing: de meeste servers comprimeren de items automatisch voor u wanneer deze aan gebruikers worden aangeboden, maar voor sommige CDN's moeten handmatige stappen worden uitgevoerd om te garanderen dat items met GZIP als set worden aangeboden. Controleer uw site en zorg ervoor dat uw items daadwerkelijk [worden gecomprimeerd](http://www.whatsmyip.org/http-compression-test/){: .external }.
 
 
 
