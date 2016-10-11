@@ -105,7 +105,7 @@ W skrócie: pierwszym krokiem do optymalizacji wydajności zasobów jest utworze
 - W przypadku niektórych sieci CDN włączenie kompresji GZIP wymaga wykonania specjalnych czynności
 
 
-[GZIP](http://pl.wikipedia.org/wiki/Gzip) jest programem kompresji ogólnego przeznaczenia, który można stosować do kompresji dowolnego strumienia danych: jego działanie polega na zapamiętywaniu poprzednio przetworzonych danych i próbie znalezienia zduplikowanych fragmentów danych w efektywny sposób &ndash; zainteresowani szczegółami mogą zapoznać się ze [świetnym wyjaśnieniem niskopoziomowego sposobu działania programu kompresji GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). W praktyce kompresja GZIP wypada najlepiej w przypadku tekstu. Współczynniki kompresji często osiągają wartości nawet 70-90% dla większych plików. Jednak kompresja GZIP zasobów już skompresowanych z użyciem algorytmów alternatywnych (tak jak w przypadku większości formatów obrazów) przynosi niewiele korzyści.
+[GZIP](http://pl.wikipedia.org/wiki/Gzip){: .external } jest programem kompresji ogólnego przeznaczenia, który można stosować do kompresji dowolnego strumienia danych: jego działanie polega na zapamiętywaniu poprzednio przetworzonych danych i próbie znalezienia zduplikowanych fragmentów danych w efektywny sposób &ndash; zainteresowani szczegółami mogą zapoznać się ze [świetnym wyjaśnieniem niskopoziomowego sposobu działania programu kompresji GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). W praktyce kompresja GZIP wypada najlepiej w przypadku tekstu. Współczynniki kompresji często osiągają wartości nawet 70-90% dla większych plików. Jednak kompresja GZIP zasobów już skompresowanych z użyciem algorytmów alternatywnych (tak jak w przypadku większości formatów obrazów) przynosi niewiele korzyści.
 
 Wszystkie nowoczesne przeglądarki obsługują i automatycznie negocjują kompresję GZIP dla wszystkich żądań HTTP: naszym zadaniem jest zapewnienie poprawnej konfiguracji serwera tak, by po otrzymaniu żądania klienta był przesyłany skompresowany zasób.
 
@@ -178,7 +178,7 @@ Powyższa tabela ilustruje oszczędności uzyskane dzięki kompresji GZIP dla ki
 
 Włączenie kompresji GZIP jest jednym z najprostszych i najbardziej opłacalnych środków optymalizacji, które można zastosować &ndash; niestety wiele osób o tym nadal zapomina. Większość serwerów WWW kompresuje treść bez udziału użytkownika. Użytkownik musi się jedynie upewnić, że konfiguracja serwera zezwala na kompresję GZIP treści wszystkich typów, dla których jest to korzystne.
 
-Jaka konfiguracja jest najlepsza dla Twojego serwera? Projekt HTML5 Boilerplate zawiera [przykładowe pliki konfiguracyjne](https://github.com/h5bp/server-configs) dla wszystkich najpopularniejszych serwerów. Zawierają one szczegółowe komentarze odnośnie do każdego znacznika i ustawienia konfiguracji: znajdź stosowny serwer na liście, wyszukaj odpowiednie ustawienia i upewnij się, że serwer jest skonfigurowany z użyciem zalecanych ustawień.
+Jaka konfiguracja jest najlepsza dla Twojego serwera? Projekt HTML5 Boilerplate zawiera [przykładowe pliki konfiguracyjne](https://github.com/h5bp/server-configs){: .external } dla wszystkich najpopularniejszych serwerów. Zawierają one szczegółowe komentarze odnośnie do każdego znacznika i ustawienia konfiguracji: znajdź stosowny serwer na liście, wyszukaj odpowiednie ustawienia i upewnij się, że serwer jest skonfigurowany z użyciem zalecanych ustawień.
 
 <img src="images/transfer-vs-actual-size.png" class="center" alt="Demonstracja wyświetlania rozmiaru rzeczywistego i rozmiaru przesyłania w narzędziach DevTools">
 
@@ -186,7 +186,7 @@ Wyniki działania kompresji GZIP można łatwo i szybko ocenić, otwierając Nar
 
 Note: Może to się wydawać niewiarygodne, ale są przypadki, w których kompresja GZIP powoduje zwiększenie rozmiaru zasobu. Dzieje się tak zazwyczaj, gdy zasób jest bardzo mały i narzut związany z dodaniem słownika GZIP jest większy niż redukcja rozmiaru albo zasób jest już dobrze skompresowany. Możliwość określenia 'minimalnego rozmiaru pliku' w niektórych serwerach pozwala uniknąć tego problemu.
 
-Na koniec ostrzeżenie: większość serwerów udostępnia zasoby użytkownikowi po ich automatycznym skompresowaniu, jednak niektóre sieci CDN wymagają dodatkowych czynności i ręcznej zmiany ustawień, by kompresja GZIP byłastosowana zgodnie z założeniami. Audyt Twojej witryny pozwoli sprawdzić, czy zasoby są rzeczywiście [kompresowane](http://www.whatsmyip.org/http-compression-test/).
+Na koniec ostrzeżenie: większość serwerów udostępnia zasoby użytkownikowi po ich automatycznym skompresowaniu, jednak niektóre sieci CDN wymagają dodatkowych czynności i ręcznej zmiany ustawień, by kompresja GZIP byłastosowana zgodnie z założeniami. Audyt Twojej witryny pozwoli sprawdzić, czy zasoby są rzeczywiście [kompresowane](http://www.whatsmyip.org/http-compression-test/){: .external }.
 
 
 

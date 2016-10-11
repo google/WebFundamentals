@@ -15,7 +15,7 @@ description: Ilość danych pobieranych przez każdą aplikację cały czas roś
 Nasze aplikacje internetowe stają się coraz bardziej wyrafinowane, ambitne i funkcjonalne &ndash; to dobry kierunek. Jednak niepowstrzymane dążenie ku coraz bogatszym wrażeniom w Internecie powoduje powstanie kolejnego trendu: ilość danych pobieranych przez aplikacje rośnie w stałym tempie. Aby zagwarantować najwyższą wydajność, musimy zoptymalizować transfer każdego bajtu.
 
 
-Jak wygląda nowoczesna aplikacja internetowa? Projekt [HTTP Archive](http://httparchive.org/) pozwoli nam uzyskać odpowiedź na to pytanie. Projekt ten śledzi sposób budowy stron internetowych, regularnie indeksując najbardziej popularne witryny (ponad 300 000 pozycji z listy Alexa Top 1M), w każdej z lokalizacji rejestrując i agregując analizy liczby zasobów, rodzaju treści i innych metadanych.
+Jak wygląda nowoczesna aplikacja internetowa? Projekt [HTTP Archive](http://httparchive.org/){: .external } pozwoli nam uzyskać odpowiedź na to pytanie. Projekt ten śledzi sposób budowy stron internetowych, regularnie indeksując najbardziej popularne witryny (ponad 300 000 pozycji z listy Alexa Top 1M), w każdej z lokalizacji rejestrując i agregując analizy liczby zasobów, rodzaju treści i innych metadanych.
 
 <img src="images/http-archive-trends.png" class="center" alt="Trendy zarejestrowane w projekcie HTTP Archive">
 

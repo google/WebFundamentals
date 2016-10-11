@@ -38,7 +38,7 @@ Co oznaczają te sygnatury czasowe?
 Specyfikacja HTML określa szczegóły odnośnie do występowania każdego ze zdarzeń: kiedy należy je wygenerować, jakie warunki powinny być spełnione i tak dalej. W naszym przypadku skupimy się na kilku kluczowych zdarzeniach związanych z krytyczną ścieżką renderowania:
 
 * **domInteractive** sygnalizuje, kiedy gotowy jest model DOM.
-* **domContentLoaded** zazwyczaj sygnalizuje, kiedy [zarówno model DOM, jak i model CSSOM są gotowe](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
+* **domContentLoaded** zazwyczaj sygnalizuje, kiedy [zarówno model DOM, jak i model CSSOM są gotowe](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/){: .external }.
     * Jeśli nie występują skrypty JavaScript blokujące parsowanie, zdarzenie _DOMContentLoaded_ jest wyzwalane bezpośrednio po zdarzeniu _domInteractive_.
 * Zdarzenie **domComplete** informuje o gotowości strony i wszystkich skojarzonych z nią zasobów.
 
@@ -51,7 +51,7 @@ Specyfikacja HTML określa szczegóły odnośnie do występowania każdego ze zd
 Na pierwszy rzut oka powyższy przykład może wydawać się nieco zniechęcający, ale w rzeczywistości jest całkiem prosty. Interfejs API Navigation Timing przechwytuje wszystkie odpowiednie sygnatury czasowe, a nasz kod po prostu czeka na wyzwolenie zdarzenia `onload` &ndash; przypominamy, że zdarzenie onload jest generowane po zdarzeniu domInteractive, domContentLoaded i domComplete &ndash; następnie obliczana jest różnica czasu między różnymi sygnaturami czasowymi.
 <img src="images/device-navtiming-small.png" class="center" alt="Demonstracja interfejsu NavTiming">
 
-Na razie powiedzieliśmy już wszystko. Umiemy już śledzić pewne konkretne zdarzenia i tworzyć proste funkcje umożliwiające pomiar czasu. Zwróć uwagę, że kod można zmodyfikować również tak, by zamiast wyświetlać wartości tych pomiarów na stronie wysyłał je do serwera do analizy witryn ([Google Analytics wykonuje to automatycznie](https://support.google.com/analytics/answer/1205784)), co jest świetnym sposobem monitorowania wydajności i znajdowania stron, które skorzystałyby na optymalizacji.
+Na razie powiedzieliśmy już wszystko. Umiemy już śledzić pewne konkretne zdarzenia i tworzyć proste funkcje umożliwiające pomiar czasu. Zwróć uwagę, że kod można zmodyfikować również tak, by zamiast wyświetlać wartości tych pomiarów na stronie wysyłał je do serwera do analizy witryn ([Google Analytics wykonuje to automatycznie](https://support.google.com/analytics/answer/1205784){: .external }), co jest świetnym sposobem monitorowania wydajności i znajdowania stron, które skorzystałyby na optymalizacji.
 
 
 

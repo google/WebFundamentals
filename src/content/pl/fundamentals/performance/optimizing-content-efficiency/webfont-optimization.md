@@ -28,13 +28,13 @@ Czcionka sieci web to zbiór glifów, z których każdy jest określonym wektoro
 
 <img src="images/glyphs.png" class="center" alt="Tabela glifów czcionki">
 
-Przy wyborze czcionki ważne jest, by uwzględnić, które zestawy znaków będą obsługiwane. Jeśli treść strony będzie lokalizowana w wielu językach, wybierz czcionkę zapewniającą spójny wygląd i wrażenia wszystkim użytkownikom. Na przykład [rodzina czcionek Noto firmy Google](https://www.google.com/get/noto/) ma w zamierzeniu obsługiwać wszystkie języki świata. Jednak należy pamiętać, że łączny rozmiar czcionki Noto, przy załączonych wszystkich językach, wynosi ponad 130 MB i to już po zastosowaniu kompresji ZIP! 
+Przy wyborze czcionki ważne jest, by uwzględnić, które zestawy znaków będą obsługiwane. Jeśli treść strony będzie lokalizowana w wielu językach, wybierz czcionkę zapewniającą spójny wygląd i wrażenia wszystkim użytkownikom. Na przykład [rodzina czcionek Noto firmy Google](https://www.google.com/get/noto/){: .external } ma w zamierzeniu obsługiwać wszystkie języki świata. Jednak należy pamiętać, że łączny rozmiar czcionki Noto, przy załączonych wszystkich językach, wynosi ponad 130 MB i to już po zastosowaniu kompresji ZIP! 
 
 Jest oczywiste, że korzystanie z czcionek sieci web wymaga zastosowania dobrze przemyślanych zabiegów, by doskonała typografia nie kolidowała z wydajnością. Na szczęście platforma WWW dostarcza wszystkich potrzebnych funkcji podstawowych. W pozostałej części tego przewodnika zajmiemy się praktycznym wykorzystaniem najlepszych cech wszystkich rozwiązań.
 
 ### Formaty czcionek sieci web
 
-Obecnie w Internecie korzysta się z czterech formatów kontenerów czcionek: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://pl.wikipedia.org/wiki/TrueType), [WOFF](http://pl.wikipedia.org/wiki/Web_Open_Font_Format) i [WOFF2](http://www.w3.org/TR/WOFF2/). Niestety, mimo wielu możliwości wyboru, nie istnieje jeden uniwersalny format obsługiwany przez wszystkie starsze i nowsze przeglądarki: format EOT obsługuje [tylko przeglądarka IE](http://caniuse.com/#feat=eot), w przeglądarce IE obecna jest [częściowa obsługa formatu TTF](http://caniuse.com/#search=ttf), format WOFF jest najlepiej obsługiwany, ale [niedostępny w niektórych starszych przeglądarkach](http://caniuse.com/#feat=woff), a wdrażanie obsługi formatu WOFF 2.0 w wielu przeglądarkach [ciągle trwa](http://caniuse.com/#feat=woff2).
+Obecnie w Internecie korzysta się z czterech formatów kontenerów czcionek: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType){: .external }, [TTF](http://pl.wikipedia.org/wiki/TrueType), [WOFF](http://pl.wikipedia.org/wiki/Web_Open_Font_Format) i [WOFF2](http://www.w3.org/TR/WOFF2/). Niestety, mimo wielu możliwości wyboru, nie istnieje jeden uniwersalny format obsługiwany przez wszystkie starsze i nowsze przeglądarki: format EOT obsługuje [tylko przeglądarka IE](http://caniuse.com/#feat=eot), w przeglądarce IE obecna jest [częściowa obsługa formatu TTF](http://caniuse.com/#search=ttf), format WOFF jest najlepiej obsługiwany, ale [niedostępny w niektórych starszych przeglądarkach](http://caniuse.com/#feat=woff), a wdrażanie obsługi formatu WOFF 2.0 w wielu przeglądarkach [ciągle trwa](http://caniuse.com/#feat=woff2).
 
 Co to dla nas oznacza? Nie istnieje jeden format obsługiwany przez wszystkie przeglądarki, co oznacza konieczność stosowania wielu formatów, jeśli wrażenia użytkowników mają pozostać spójne:
 
@@ -52,9 +52,9 @@ Czcionka to zbiór glifów, z których każdy stanowi kolekcję ścieżek opisuj
 
 * Domyślnie pliki formatów EOT i TTF nie są kompresowane: upewnij się, że konfiguracja serwerów wymusza stosowanie [kompresji GZIP](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip) przy przesyłaniu plików w tych formatach.
 * Format WOFF posiada wbudowaną kompresję &ndash; upewnij się, że algorytm kompresji formatu WOFF stosuje optymalne ustawienia kompresji. 
-* Format WOFF2 obejmuje niestandardowe przetwarzanie wstępne i algorytmy kompresji umożliwiające redukcję rozmiaru pliku o ok. 30% w stosunku do innych formatów &ndash; patrz [raport](http://www.w3.org/TR/WOFF20ER/).
+* Format WOFF2 obejmuje niestandardowe przetwarzanie wstępne i algorytmy kompresji umożliwiające redukcję rozmiaru pliku o ok. 30% w stosunku do innych formatów &ndash; patrz [raport](http://www.w3.org/TR/WOFF20ER/){: .external }.
 
-Warto również wspomnieć, że niektóre formaty czcionek zawierają dodatkowe metadane, np. odnoszące się do [hintingu](http://pl.wikipedia.org/wiki/Hinting) i [kerningu](http://pl.wikipedia.org/wiki/Kerning), które mogą być zbędne na niektórych platformach, co umożliwia dalszą optymalizację. Sprawdź w dokumentacji algorytmu kompresji czcionek, jakie opcje optymalizacji są dostępne, i upewnij się, że dysponujesz odpowiednią infrastrukturą do testowania i dostarczania takich zoptymalizowanych czcionek dla każdej przeglądarki &ndash; np. Google Fonts utrzymuje ponad 30 zoptymalizowanych wariantów dla każdej czcionki i automatycznie wykrywa i dostarcza optymalny wariant dla każdej platformy i przeglądarki.
+Warto również wspomnieć, że niektóre formaty czcionek zawierają dodatkowe metadane, np. odnoszące się do [hintingu](http://pl.wikipedia.org/wiki/Hinting){: .external } i [kerningu](http://pl.wikipedia.org/wiki/Kerning), które mogą być zbędne na niektórych platformach, co umożliwia dalszą optymalizację. Sprawdź w dokumentacji algorytmu kompresji czcionek, jakie opcje optymalizacji są dostępne, i upewnij się, że dysponujesz odpowiednią infrastrukturą do testowania i dostarczania takich zoptymalizowanych czcionek dla każdej przeglądarki &ndash; np. Google Fonts utrzymuje ponad 30 zoptymalizowanych wariantów dla każdej czcionki i automatycznie wykrywa i dostarcza optymalny wariant dla każdej platformy i przeglądarki.
 
 Note: Zastanów się nad wykorzystaniem <a href='http://en.wikipedia.org/wiki/Zopfli'>kompresji Zopfli</a> do optymalizacji czcionek w formatach EOT, TTF i WOFF. Zopfli to kompresor zgodny z formatem zlib, zapewniający redukcję rozmiaru pliku o ok. 5% w stosunku do kompresji gzip.
 
@@ -262,7 +262,7 @@ Istnieją dobre argumenty za i przeciw różnym strategiom renderowania: niektó
 
 ### Optymalizacja renderowania czcionek z użyciem interfejsu API Font Loading
 
-[Interfejs API Font Loading](http://dev.w3.org/csswg/css-font-loading/) to interfejs do wczytywania skryptów umożliwiających określanie i manipulację czcionkami w kodzie CSS, śledzenie postępu ich pobierania i zastępowanie domyślnego sposobu leniwego wczytywania. Na przykład, jeśli mamy pewność, że pewien wariant czcionki będzie wymagany, możemy określić ten wariant i polecić przeglądarce niezwłoczne pobranie zasobu czcionki:
+[Interfejs API Font Loading](http://dev.w3.org/csswg/css-font-loading/){: .external } to interfejs do wczytywania skryptów umożliwiających określanie i manipulację czcionkami w kodzie CSS, śledzenie postępu ich pobierania i zastępowanie domyślnego sposobu leniwego wczytywania. Na przykład, jeśli mamy pewność, że pewien wariant czcionki będzie wymagany, możemy określić ten wariant i polecić przeglądarce niezwłoczne pobranie zasobu czcionki:
 
 
     var font = new FontFace("Awesome Font", "url(/fonts/awesome.woff2)", {

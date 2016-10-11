@@ -15,7 +15,7 @@ Wykrywanie i usuwanie wąskich gardeł ograniczających wydajność krytycznej �
 
 
 
-Celem optymalizacji krytycznej ścieżki renderowania jest umożliwienie przeglądarce jak najszybszego wyświetlenia strony &ndash; sprawne działanie oznacza większą liczbę zaangażowanych użytkowników, odwiedzonych stron i [uzyskanych konwersji](http://www.google.com/think/multiscreen/success.html). Dlatego chcemy zoptymalizować zakres i kolejność wczytywania zasobów, by użytkownik jak najkrótszy czas spędzał na wpatrywaniu się w pusty ekran.
+Celem optymalizacji krytycznej ścieżki renderowania jest umożliwienie przeglądarce jak najszybszego wyświetlenia strony &ndash; sprawne działanie oznacza większą liczbę zaangażowanych użytkowników, odwiedzonych stron i [uzyskanych konwersji](http://www.google.com/think/multiscreen/success.html){: .external }. Dlatego chcemy zoptymalizować zakres i kolejność wczytywania zasobów, by użytkownik jak najkrótszy czas spędzał na wpatrywaniu się w pusty ekran.
 
 Aby zilustrować ten proces, zaczniemy od najprostszego możliwego przypadku i będziemy stopniowo rozbudowywać stronę, dodając kolejne zasoby, style i procedury aplikacji. W ten sposób określimy miejsca, w których coś może pójść nie tak, i każde z nich zoptymalizujemy.
 

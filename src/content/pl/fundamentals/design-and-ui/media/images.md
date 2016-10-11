@@ -23,7 +23,7 @@ Elastyczne projektowanie witryn oznacza, że na podstawie cech urządzenia może
 <img class="center" src="img/art-direction.png" alt="Przykład dostosowywania grafiki"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Czasami obraz trzeba zmienić w większym stopniu &ndash; dopasować proporcje, przyciąć, a nawet zastąpić innym. W takiej sytuacji zmianę obrazu określa się zwykle jako dostosowywanie grafiki. Więcej przykładów znajdziesz na [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
+Czasami obraz trzeba zmienić w większym stopniu &ndash; dopasować proporcje, przyciąć, a nawet zastąpić innym. W takiej sytuacji zmianę obrazu określa się zwykle jako dostosowywanie grafiki. Więcej przykładów znajdziesz na [responsiveimages.org/demos/](http://responsiveimages.org/demos/){: .external }.
 
 
 {% include "web/_shared/udacity/ud882.html" %}
@@ -335,7 +335,7 @@ alt="Przykład strony z czcionką z ikonami Font Awesome">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" %}
 </pre>
 
-Istnieją setki darmowych i płatnych czcionek z ikonami, np. [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) czy [Glyphicons](http://glyphicons.com/).
+Istnieją setki darmowych i płatnych czcionek z ikonami, np. [Font Awesome](http://fortawesome.github.io/Font-Awesome/){: .external }, [Pictos](http://pictos.cc/) czy [Glyphicons](http://glyphicons.com/).
 
 Pamiętaj, by podczas wybierania ikon wziąć pod uwagę dodatkowe żądania HTTP i ilość pobieranych danych. Jeśli np. potrzebujesz tylko kilku ikon, lepiej użyć obrazu lub sprite`a graficznego.
 
@@ -356,11 +356,11 @@ Obrazy często stanowią większość pobranych danych i zajmują znaczną czę�
 
 ### Wybór właściwego formatu
 
-Należy wziąć pod uwagę dwa typy obrazów: [wektorowe](http://pl.wikipedia.org/wiki/Grafika_wektorowa) i [rastrowe](http://pl.wikipedia.org/wiki/Grafika_rastrowa). W przypadku obrazów rastrowych trzeba jeszcze wybrać właściwy format kompresji &ndash; np. GIF, PNG lub JPG.
+Należy wziąć pod uwagę dwa typy obrazów: [wektorowe](http://pl.wikipedia.org/wiki/Grafika_wektorowa){: .external } i [rastrowe](http://pl.wikipedia.org/wiki/Grafika_rastrowa). W przypadku obrazów rastrowych trzeba jeszcze wybrać właściwy format kompresji &ndash; np. GIF, PNG lub JPG.
 
 **Obrazy rastrowe**, do których należą fotografie i inne grafiki, mają postać siatki osobnych kropek (pikseli). Zwykle pochodzą z aparatu lub skanera. Można też utworzyć je w przeglądarce, korzystając z elementu `canvas`. Wraz z powiększaniem się obrazu wzrasta wielkość pliku. Obraz przeskalowany do większego rozmiaru niż pierwotny staje się rozmazany, bo przeglądarka musi zgadywać, jak wypełnić brakujące piksele.
 
-**Obrazy wektorowe**, do których należą logo i rysunki kreskowe, składają się z zestawu linii, krzywych, kształtów i kolorów wypełnienia. Powstają w takich programach jak Adobe Illustrator lub Inkscape i są zapisywane w formacie wektorowym, np. [SVG](http://css-tricks.com/using-svg/). Obrazy wektorowe tworzy się z prostych elementów, dlatego można je skalować bez straty jakości i zmiany rozmiaru pliku.
+**Obrazy wektorowe**, do których należą logo i rysunki kreskowe, składają się z zestawu linii, krzywych, kształtów i kolorów wypełnienia. Powstają w takich programach jak Adobe Illustrator lub Inkscape i są zapisywane w formacie wektorowym, np. [SVG](http://css-tricks.com/using-svg/){: .external }. Obrazy wektorowe tworzy się z prostych elementów, dlatego można je skalować bez straty jakości i zmiany rozmiaru pliku.
 
 Przy wyborze właściwego formatu musisz rozważyć zarówno rodzaj obrazu (rastrowy lub wektorowy), jak i jego treść (kolory, animacja, tekst itp.). Każdy format pasuje tylko do niektórych rodzajów obrazów oraz ma swoje zalety i wady.
 
@@ -376,7 +376,7 @@ Podczas wybierania formatu postępuj zgodnie z tymi wskazówkami:
 
 Plik można znacznie zmniejszyć, przetwarzając go po zapisaniu. Jest wiele narzędzi do kompresji obrazów &ndash; stratnej lub bezstratnej, online, z interfejsem graficznym, wierszem polecenia itp. W miarę możliwości najlepiej zautomatyzować optymalizację obrazów, by stała się uniwersalnym etapem procesu tworzenia.
 
-Niektóre dostępne narzędzia wykonują dodatkową, bezstratną kompresję plików JPG i PNG, bez wpływu na jakość obrazu. W przypadku JPG wypróbuj [jpegtran](http://jpegclub.org/) lub [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (dostępny tylko na Linuksa, uruchamiany z opcją --strip-all). W przypadku PNG wypróbuj [OptiPNG](http://optipng.sourceforge.net/) lub [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
+Niektóre dostępne narzędzia wykonują dodatkową, bezstratną kompresję plików JPG i PNG, bez wpływu na jakość obrazu. W przypadku JPG wypróbuj [jpegtran](http://jpegclub.org/){: .external } lub [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (dostępny tylko na Linuksa, uruchamiany z opcją --strip-all). W przypadku PNG wypróbuj [OptiPNG](http://optipng.sourceforge.net/) lub [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
 
 ### Korzystanie ze sprite`ów graficznych
 
