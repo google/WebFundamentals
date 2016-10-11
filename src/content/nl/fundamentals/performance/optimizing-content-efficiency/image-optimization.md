@@ -32,7 +32,7 @@ Vervolgens dient u zich af te vragen of er een alternatieve technologie is waarm
 * **CSS-effecten** (overgangen, schaduwen, enzovoort) en CSS-animaties kunnen worden gebruikt om items te maken die er altijd scherp uitzien, ongeacht resolutie of zoomfactor, en vaak met een fractie van het aantal bytes dat voor een afbeelding nodig is.
 * **Weblettertypen** zijn er in fraaie varianten en bieden de mogelijkheid om tekst te selecteren, op te zoeken en te verkleinen - een aanzienlijke verbetering van de gebruiksvriendelijkheid.
 
-Als u ooit tekst moet coderen voor een afbeeldingitem, is het waarschijnlijk eenvoudiger om weblettertypen te gebruiken. Het is belangrijk om een gepast lettertype te kiezen voor goed design, merkbekendheid en leesbaarheid, maar tekst in een afbeelding is vaak weinig gebruiksvriendelijk. De tekst kan niet worden geselecteerd, er kan niet in de tekst worden gezocht, niet gezoomd en de tekst is niet toegankelijk voor apparaten met hoge DPI-capaciteit. Weblettertypen hebben hun [eigen instellingen voor optimalisatie](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/) voor alle bovenstaande aspecten. Weblettertypes zijn altijd de betere keuze voor tekstweergave.
+Als u ooit tekst moet coderen voor een afbeeldingitem, is het waarschijnlijk eenvoudiger om weblettertypen te gebruiken. Het is belangrijk om een gepast lettertype te kiezen voor goed design, merkbekendheid en leesbaarheid, maar tekst in een afbeelding is vaak weinig gebruiksvriendelijk. De tekst kan niet worden geselecteerd, er kan niet in de tekst worden gezocht, niet gezoomd en de tekst is niet toegankelijk voor apparaten met hoge DPI-capaciteit. Weblettertypen hebben hun [eigen instellingen voor optimalisatie](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/){: .external } voor alle bovenstaande aspecten. Weblettertypes zijn altijd de betere keuze voor tekstweergave.
 
 
 ## Vector- en rasterafbeeldingen
@@ -55,8 +55,8 @@ Wanneer u de optimale bestandsindeling voor een afbeelding heeft gevonden waarme
   <figcaption>Raster</figcaption>
 </figure>
 
-* [Vectorafbeeldingen](http://nl.wikipedia.org/wiki/Vectorafbeelding) maken gebruik van lijnen, punten en polygonen om een afbeelding weer te geven.
-* [Rasterafbeeldingen](http://nl.wikipedia.org/wiki/Rasterafbeelding) geven een afbeelding weer door de afzonderlijke waarden van elke pixel in een rechthoekig rooster te coderen.
+* [Vectorafbeeldingen](http://nl.wikipedia.org/wiki/Vectorafbeelding){: .external } maken gebruik van lijnen, punten en polygonen om een afbeelding weer te geven.
+* [Rasterafbeeldingen](http://nl.wikipedia.org/wiki/Rasterafbeelding){: .external } geven een afbeelding weer door de afzonderlijke waarden van elke pixel in een rechthoekig rooster te coderen.
 
 Beide typen afbeeldingen hebben hun eigen voor- en nadelen. Vectorafbeeldingen zijn ideaal voor de weergave van eenvoudige geometrische vormen (bijv. logo's, tekst, pictogrammen, enzovoort) en leveren scherpe resultaten op in elke resolutie en zoomfactor. Hierdoor zijn vectorafbeeldingen bij uitstek geschikt voor schermen met hoge resolutie en voor items die in verschillende groottes moeten worden weergegeven.
 
@@ -136,7 +136,7 @@ Alle moderne browsers ondersteunen Scalable Vector Graphics (SVG), een XML-besta
     </svg>
     
 
-Bovenstaand voorbeeld is een eenvoudige zwarte cirkel met zwarte contour en rode achtergrond. De afbeelding werd geëxporteerd uit Adobe Illustrator. Zoals u kunt zien, bevat het item veel metadata, zoals layer-informatie , commentaar en XML-namen die vaak niet nodig zijn om de afbeelding in de browser weer te geven. Het is daarom altijd een goed idee om uw SVG-bestanden te verkleinen met behulp van een tool als [svgo](https://github.com/svg/svgo).
+Bovenstaand voorbeeld is een eenvoudige zwarte cirkel met zwarte contour en rode achtergrond. De afbeelding werd geëxporteerd uit Adobe Illustrator. Zoals u kunt zien, bevat het item veel metadata, zoals layer-informatie , commentaar en XML-namen die vaak niet nodig zijn om de afbeelding in de browser weer te geven. Het is daarom altijd een goed idee om uw SVG-bestanden te verkleinen met behulp van een tool als [svgo](https://github.com/svg/svgo){: .external }.
 
 In dit geval kan het SVG-bestand uit Illustrator met 58% worden verkleind en wordt de omvang van 470 bytes teruggebracht naar 199 bytes. Omdat SVG een XML-indeling is, kunnen we de overdrachtsgrootte ook met GZIP terugbrengen - zorg ervoor dat uw server is geconfigureerd voor compressie van SVG-items.
 
@@ -149,7 +149,7 @@ In dit geval kan het SVG-bestand uit Illustrator met 58% worden verkleind en wor
 - Programma's voor beeldcompressie gebruiken verscheidene technieken om het aantal benodigde bits per pixel te verlagen en zo de omvang van de afbeelding te verkleinen
 
 
-Een rasterafbeelding is een eenvoudig tweedimensionaal raster met afzonderlijke pixels. Een afbeelding van 100 x 100 pixels bestaat uit 10.000 pixels. In elke pixel zijn de [RGBA](http://en.wikipedia.org/wiki/RGBA_color_space) waarden opgeslagen: (R) rood kanaal, (G) groen kanaal, (B) blauw kanaal en (A) alfa (transparant) kanaal.
+Een rasterafbeelding is een eenvoudig tweedimensionaal raster met afzonderlijke pixels. Een afbeelding van 100 x 100 pixels bestaat uit 10.000 pixels. In elke pixel zijn de [RGBA](http://en.wikipedia.org/wiki/RGBA_color_space){: .external } waarden opgeslagen: (R) rood kanaal, (G) groen kanaal, (B) blauw kanaal en (A) alfa (transparant) kanaal.
 
 De browser kent aan elk kanaal 256 kleuren (tinten) toe. Dit zijn 8 bits per kanaal (2 ^ 8 = 256) en 4 bytes per pixel (4 kanalen x 8 bits = 32 bits = 4 bytes). Als we de afmetingen van het raster weten, kunnen we eenvoudig de bestandsgrootte berekenen:
 
@@ -206,13 +206,13 @@ Een eenvoudige strategie is om de bitdiepte van de afbeelding van 8-bits per kan
 
 Note: Links naar rechts (PNG): 32-bits (16 M kleuren), 7-bits (128 kleuren), 5-bits (32 kleuren). Voor complexe scenes met geleidelijk kleurverloop (overgangen, lucht, enzovoort) is een groter kleurenspectrum vereist om vervorming zoals de geblokte lucht in het 5-bits item te voorkomen. Als in de afbeelding echter slechts een paar kleuren aanwezig zijn, is het zonde van de extra bits om een groot kleurenspectrum te gebruiken.
 
-Wanneer we de opgeslagen gegevens in afzonderlijke pixels hebben geoptimaliseerd, dienen we ook naar naburige pixels te kijken: veel afbeeldingen, inclusief foto`s, hebben veel naburige pixels met vergelijkbare kleuren, zoals afbeeldingen van de lucht, herhaalde texturen, enzovoort. We kunnen hiervan profiteren door de compressor `[delta-coderen](http://en.wikipedia.org/wiki/Delta_encoding)` toe te laten passen, waarbij niet de individuele waarden voor elke pixel worden opgeslagen, maar het verschil tussen naburige pixels. Als de naburige pixels hetzelfde zijn, is de delta `nul` en hoeven we slechts een enkele bit op te slaan. Maar er is meer...
+Wanneer we de opgeslagen gegevens in afzonderlijke pixels hebben geoptimaliseerd, dienen we ook naar naburige pixels te kijken: veel afbeeldingen, inclusief foto`s, hebben veel naburige pixels met vergelijkbare kleuren, zoals afbeeldingen van de lucht, herhaalde texturen, enzovoort. We kunnen hiervan profiteren door de compressor `[delta-coderen](http://en.wikipedia.org/wiki/Delta_encoding){: .external }` toe te laten passen, waarbij niet de individuele waarden voor elke pixel worden opgeslagen, maar het verschil tussen naburige pixels. Als de naburige pixels hetzelfde zijn, is de delta `nul` en hoeven we slechts een enkele bit op te slaan. Maar er is meer...
 
 Het menselijk oog is niet voor elke kleur even gevoelig: we kunnen het spectrum voor de betreffende kleuren vergroten of verkleinen om onze kleurcodering te optimaliseren.
 Naburige pixels vormen een tweedimensionaal raster. Dit betekent dat pixels meerdere buren hebben. We kunnen dit feit gebruiken om deltacodering verder te verbeteren.
 We hoeven niet per se naar de directe buren van elke pixel te kijken, maar kunnen ons concentreren op grotere blokken naburige pixels en verschillende blokken verschillend coderen. Enzovoorts...
 
-Zoals u zich kunt voorstellen, kan beeldoptimalisatie al snel ingewikkeld worden (of interessant, hoe u het bekijkt). Dit is dan ook een actief onderwerp voor wetenschappelijk en commercieel onderzoek. Afbeeldingen nemen een hoop bytes in beslag en het is daarom belangrijk om betere beeldcompressietechnieken te ontwikkelen. Ga voor meer informatie naar de [Wikipedia-pagina](http://nl.wikipedia.org/wiki/Beeldcompressie), of lees het [WebP witboek over compressietechnieken](/speed/webp/docs/compression) voor een praktijkvoorbeeld.
+Zoals u zich kunt voorstellen, kan beeldoptimalisatie al snel ingewikkeld worden (of interessant, hoe u het bekijkt). Dit is dan ook een actief onderwerp voor wetenschappelijk en commercieel onderzoek. Afbeeldingen nemen een hoop bytes in beslag en het is daarom belangrijk om betere beeldcompressietechnieken te ontwikkelen. Ga voor meer informatie naar de [Wikipedia-pagina](http://nl.wikipedia.org/wiki/Beeldcompressie){: .external }, of lees het [WebP witboek over compressietechnieken](/speed/webp/docs/compression) voor een praktijkvoorbeeld.
 
 Dit is allemaal erg interessant, maar ook vrij wetenschappelijk: hoe kunnen we in de praktijk afbeeldingen op onze pagina's optimaliseren? We zullen geen nieuwe compressietechnieken ontwikkelen, maar het is nuttig om te weten uit welke aspecten het probleem bestaat: RGBA-pixels, bitdiepte en verschillende optimalisatietechnieken. Dit zijn essentiële concepten die we moeten begrijpen en in gedachten moeten houden voordat we het gaan hebben over verschillende typen rasterafbeeldingen.
 
@@ -227,8 +227,8 @@ Voor bepaalde gegevenstypen, zoals broncode voor een pagina of een uitvoerbaar b
 
 Onze ogen vullen sommige deeltjes van de informatie over elke pixel van nature op, zodat we de bestandsgrootte van een afbeelding kunnen reduceren. Onze ogen zijn bijvoorbeeld niet voor alle kleuren even gevoelig. Dit houdt in dat we minder bits hoeven te gebruiken om sommige kleuren te coderen. Een typisch beeldoptimalisatieproces bestaat daarom uit twee stappen:
 
-1. De afbeelding wordt `[met verlies](http://en.wikipedia.org/wiki/Lossy_compression)` verwerkt door een filter dat sommige pixelgegevens verwijdert
-2. De afbeelding wordt `[zonder verlies](http://en.wikipedia.org/wiki/Lossless_compression)` verwerkt door een filter dat de pixelgegevens comprimeert
+1. De afbeelding wordt `[met verlies](http://en.wikipedia.org/wiki/Lossy_compression){: .external }` verwerkt door een filter dat sommige pixelgegevens verwijdert
+2. De afbeelding wordt `[zonder verlies](http://en.wikipedia.org/wiki/Lossless_compression){: .external }` verwerkt door een filter dat de pixelgegevens comprimeert
 
 **De eerste stap is optioneel en het exacte algoritme is afhankelijk van de bestandsindeling. Wat belangrijk is om te weten, is dat elke afbeelding met verlies kan worden gecomprimeerd om de bestandsgrootte te reduceren.**Het verschil tussen verschillende bestandsindelingen zoals GIF, PNG, JPEG en andere zit hem in de combinatie van de specifieke algoritmen die worden gebruikt (of weggelaten) tijdens de verwerkingsstappen met of zonder verlies.
 

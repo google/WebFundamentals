@@ -37,7 +37,7 @@ Dus, wat betekenen deze tijdstempels?
 De HTML-specificatie geeft bepaalde voorwaarden voor elke gebeurtenis: wanneer de gebeurtenis moet worden gelanceerd, aan welke voorwaarden moet worden voldaan, enzovoort. Voor ons doeleinde zullen we ons richten op een paar belangrijke punten in verband met het kritieke weergavepad:
 
 * **domInteractive** markeert wanneer de DOM-opbouw klaar is.
-* **domContentLoaded** markeert gewoonlijk wanneer [zowel de DOM- als de CSSOM-opbouw klaar zijn](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
+* **domContentLoaded** markeert gewoonlijk wanneer [zowel de DOM- als de CSSOM-opbouw klaar zijn](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/){: .external }.
     * Als er geen parserblokkerend JavaScript bestaat, wordt _DOMContentLoaded_ direct na _domInteractive_ gelanceerd.
 * **domComplete** markeert wanneer de pagina, inclusief alle subbronnen, klaar is.
 
@@ -50,7 +50,7 @@ De HTML-specificatie geeft bepaalde voorwaarden voor elke gebeurtenis: wanneer d
 Het bovenstaande voorbeeld lijkt op het eerste gezicht een behoorlijke uitdaging, maar in werkelijkheid is het vrij simpel. De Navigation Timing API legt alle relevante tijdstempels vast en onze code wacht gewoon tot de gebeurtenis `onload` wordt gelanceerd (onthoud dat de gebeurtenis `onload` na domInteractive, domContentLoaded en domComplete wordt gelanceerd). Daarnaast berekent de Navigation Timing API het verschil tussen de verschillende tijdstempels.
 <img src="images/device-navtiming-small.png" class="center" alt="Demonstratie van NavTiming">
 
-We beschikken nu over een aantal specifieke punten om te volgen en over een eenvoudige functie om deze berekeningen uit te voeren. Onthoud dat u in plaats van de code af te drukken deze ook kunt aanpassen zodat de metingen naar een analyseserver worden gestuurd ([Google Analytics doet dit automatisch](https://support.google.com/analytics/answer/1205784)). Dit is een goede manier om de prestaties van uw pagina's bij te houden en mogelijke pagina's te identificeren waarvoor optimalisatie voordelig zou kunnen zijn.
+We beschikken nu over een aantal specifieke punten om te volgen en over een eenvoudige functie om deze berekeningen uit te voeren. Onthoud dat u in plaats van de code af te drukken deze ook kunt aanpassen zodat de metingen naar een analyseserver worden gestuurd ([Google Analytics doet dit automatisch](https://support.google.com/analytics/answer/1205784){: .external }). Dit is een goede manier om de prestaties van uw pagina's bij te houden en mogelijke pagina's te identificeren waarvoor optimalisatie voordelig zou kunnen zijn.
 
 
 

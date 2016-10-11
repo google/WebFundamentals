@@ -22,7 +22,7 @@ Responsive webdesign houdt in dat niet alleen lay-outs kunnen veranderen op basi
 <img class="center" src="img/art-direction.png" alt="Voorbeeld art direction"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Soms moeten afbeeldingen misschien wat drastischer worden gewijzigd: de proporties wijzigen, bijsnijden of zelfs de afbeelding geheel vervangen. Het wijzigen van afbeeldingen wordt dan meestal `art direction` genoemd.  Zie [responsiveimages.org/demos/](http://responsiveimages.org/demos/) voor meer voorbeelden.
+Soms moeten afbeeldingen misschien wat drastischer worden gewijzigd: de proporties wijzigen, bijsnijden of zelfs de afbeelding geheel vervangen. Het wijzigen van afbeeldingen wordt dan meestal `art direction` genoemd.  Zie [responsiveimages.org/demos/](http://responsiveimages.org/demos/){: .external } voor meer voorbeelden.
 
 
 {% include "web/_shared/udacity/ud882.html" %}
@@ -336,7 +336,7 @@ alt="Voorbeeld van een pagina waar FontAwesome is gebruikt voor de lettertypepic
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont" %}
 </pre>
 
-Er bestaand honderden gratis en betaalde pictogramlettertypen, zoals [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) en [Glyphicons](http://glyphicons.com/).
+Er bestaand honderden gratis en betaalde pictogramlettertypen, zoals [Font Awesome](http://fortawesome.github.io/Font-Awesome/){: .external }, [Pictos](http://pictos.cc/) en [Glyphicons](http://glyphicons.com/).
 
 Weeg de zwaarte van het extra HTTP-verzoek en de bestandsgrootte af tegen de noodzaak van pictogrammen. Als u bijvoorbeeld maar een paar pictogrammen nodig heeft, kunt u beter gewoon een afbeelding of afbeeldingssprite gebruiken.
 
@@ -356,11 +356,11 @@ Afbeeldingen zijn meestal verantwoordelijk voor de meeste gedownloade bytes en n
 
 ### De juiste indeling kiezen
 
-Er zijn twee typen afbeeldingen waarmee u rekening moet houden: [vectorafbeeldingen](http://en.wikipedia.org/wiki/Vector_graphics) en [rasterafbeeldingen](http://en.wikipedia.org/wiki/Raster_graphics). Voor rasterafbeeldingen moet u bovendien de juiste compressie-indeling kiezen, bijvoorbeeld: `GIF`, `PNG`, `JPG`.
+Er zijn twee typen afbeeldingen waarmee u rekening moet houden: [vectorafbeeldingen](http://en.wikipedia.org/wiki/Vector_graphics){: .external } en [rasterafbeeldingen](http://en.wikipedia.org/wiki/Raster_graphics). Voor rasterafbeeldingen moet u bovendien de juiste compressie-indeling kiezen, bijvoorbeeld: `GIF`, `PNG`, `JPG`.
 
 **Rasterafbeeldingen**, zoals foto`s en andere afbeeldingen die worden voorgesteld als een raster met afzonderlijke puntjes of pixels. Rasterafbeeldingen zijn meestal afkomstig van een camera of scanner, of kunnen in de browser worden gemaakt met het element `canvas`. Naarmate de afbeelding groter wordt, neemt ook het bestand in grootte toe. Als rasterafbeeldingen groter worden geschaald dan hun oorspronkelijke formaat, worden ze vaag omdat de browser moet gissen hoe de ontbrekende pixels moeten worden ingevuld.
 
-**Vectorafbeeldingen**, zoals logo`s en tekeningen worden gedefinieerd door een reeks van curven, strepen, vormen en vulkleuren. Vectorafbeeldingen worden gemaakt met programma`s zoals Adobe Illustrator of Inkscape en opgeslagen in een vectorindeling zoals [`SVG`](http://css-tricks.com/using-svg/). Omdat vectorafbeeldingen gebouwd zijn op eenvoudige primitieven, kunnen ze worden geschaald zonder enig kwaliteitsverlies en zonder een wijziging in bestandsgrootte.
+**Vectorafbeeldingen**, zoals logo`s en tekeningen worden gedefinieerd door een reeks van curven, strepen, vormen en vulkleuren. Vectorafbeeldingen worden gemaakt met programma`s zoals Adobe Illustrator of Inkscape en opgeslagen in een vectorindeling zoals [`SVG`](http://css-tricks.com/using-svg/){: .external }. Omdat vectorafbeeldingen gebouwd zijn op eenvoudige primitieven, kunnen ze worden geschaald zonder enig kwaliteitsverlies en zonder een wijziging in bestandsgrootte.
 
 Als u de juiste indeling kiest, is het belangrijk om rekening te houden met de oorsprong van de afbeelding (raster of vector), en de inhoud (kleuren, animatie, tekst, enzovoort). Geen enkele indeling is geschikt voor alle afdelingstypen en elke indeling biedt voor- en nadelen.
 
@@ -376,7 +376,7 @@ Start met de volgende richtlijnen om de juiste indeling te kiezen:
 
 De bestandsgrootte van afbeeldingen kan aanzienlijk worden teruggebracht door ze `na te bewerken` na het opslaan. Er bestaan diverse tools voor afbeeldingscompressie  - lossy en lossless, online, GUI, opdrachtregel. Waar mogelijk raden we u aan afbeeldingsoptimalisatie te automatiseren zodat dit een grote rol speelt in uw workflow.
 
-Er zijn verschillende tools beschikbaar die verdere, lossless compressie op `JPG`- en `PNG`-bestanden uitvoeren, zonder de afbeeldingskwaliteit aan te tasten. Probeer voor `JPG` [jpegtran](http://jpegclub.org/) of [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (alleen beschikbaar op Linux; uitvoeren met de optie --strip-all). Probeer voor `PNG` [OptiPNG](http://optipng.sourceforge.net/) of [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
+Er zijn verschillende tools beschikbaar die verdere, lossless compressie op `JPG`- en `PNG`-bestanden uitvoeren, zonder de afbeeldingskwaliteit aan te tasten. Probeer voor `JPG` [jpegtran](http://jpegclub.org/){: .external } of [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (alleen beschikbaar op Linux; uitvoeren met de optie --strip-all). Probeer voor `PNG` [OptiPNG](http://optipng.sourceforge.net/) of [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
 
 ### Afbeeldingssprites gebruiken
 
