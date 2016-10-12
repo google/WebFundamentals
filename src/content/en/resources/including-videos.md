@@ -49,11 +49,11 @@ Video assets are not stored in the repository. Any kind of external hosting shou
 
 ## Including
 
-Include the video in your article using the following markup. The `autoplay` attribute can be removed if autoplay is not desired. I recommend keeping `controls` in for as long as iOS 9 is around, as it ignores `autoplay` and the user needs a way to start the video.
+Include the video in your article using the following markup. The `autoplay` attribute can be removed if autoplay is not desired. I recommend keeping `controls` in for as long as iOS 9 is around, as it ignores `autoplay` and the user needs a way to start the video. I’d also recommend to [add a poster image](/web/fundamentals/design-and-ui/media/video#include_a_poster_image), especially when autoplay is not enabled.
 
 ```
-<video controls autoplay loop muted>
-  <source src="<url to .webm file>" type="video/webm; codecs=vp8">
-  <source src="<url to .mp4 file>" type="video/mp4; codecs=h264">
+<video controls autoplay loop muted poster="[url to poster image]">
+  <source src="[url to .webm file]" type="video/webm; codecs=vp8">
+  <source src="[url to .mp4 file]" type="video/mp4; codecs=h264">
 </video>
 ```
