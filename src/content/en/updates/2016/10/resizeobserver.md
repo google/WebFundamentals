@@ -28,7 +28,7 @@ dimensions of an element after a resize, you need to call
 if you don’t take care of batching *all* your reads and *all* your writes.
 
 And then you realize that this doesn’t even cover the cases where elements
-change their size without the main window having been resized. For example, 
+change their size without the main window having been resized. For example,
 appending new children, setting an element’s `display` style to `none`, or
 similar actions can change the size of an element, its siblings or ancestors.
 
@@ -100,7 +100,7 @@ design breakpoints and change the element’s styles. In the following
 [example](https://googlechrome.github.io/samples/resizeobserver/), the second box
 will change its border radius according to its width.
 
-<video controls autoplay loop muted>
+<video controls autoplay loop muted style="max-width: 100%">
   <source src="https://storage.googleapis.com/webfundamentals-assets/resizeobserver/elem-mq_vp8.webm" type="video/webm; codecs=vp8">
   <source src="https://storage.googleapis.com/webfundamentals-assets/resizeobserver/elem-mq_x264.mp4" type="video/mp4; codecs=h264">
 </video>
@@ -127,7 +127,7 @@ resize that element (except if `overflow: hidden` is set), because it needs to
 make space for the new elements. With this in mind, you can get away with a
 couple of lines to achieve the desired effect:
 
-<video controls autoplay loop muted>
+<video controls autoplay loop muted style="max-width: 100%">
   <source src="https://storage.googleapis.com/webfundamentals-assets/resizeobserver/chat_vp8.webm" type="video/webm; codecs=vp8">
   <source src="https://storage.googleapis.com/webfundamentals-assets/resizeobserver/chat_x264.mp4" type="video/mp4; codecs=h264">
 </video>
@@ -154,7 +154,7 @@ dimensions change so you ca re-layout your own children.
 
 ## Out now!
 
-As with a lot of the observer APIs, `ResizeObserver` is not 100% polyfillable, 
+As with a lot of the observer APIs, `ResizeObserver` is not 100% polyfillable,
 which is why native implementations are needed. [Current polyfill
 implementations](https://github.com/WICG/ResizeObserver/issues/3) either rely on
 polling or on adding sentinel elements to the DOM. The former will drain your
