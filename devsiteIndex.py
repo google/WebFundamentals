@@ -34,8 +34,30 @@ def getPage(requestPath, lang):
   if response is None:
     if (requestPath.startswith('showcase/') or
         requestPath.startswith('shows/') or requestPath.startswith('updates/')):
-      requestPath = os.path.join(requestPath, '_generated')
-      response = devsitePage.getPage(requestPath, lang)
+      content = ''
+      content += '<h1>Generated Listing Page</h1>\n'
+      content += '<aside class="warning" markdown="1"><strong>Oops</strong> '
+      content += '<span>Looks like you forgot to build the index files. Try '
+      content += 'running <code>gulp build</code> from the command line.'
+      content += '</span></aside>'
+      fileList = os.listdir(os.path.join(SOURCE_PATH, 'en', requestPath))
+      for f in fileList:
+        if not f.startswith('_'):
+          p = '/web/' + requestPath + f.replace('.md', '')
+          line = '<li>'
+          line += '<a href="' + p + '">' + p + '</a>'
+          line += '</li>'
+          content += line
+
+      response = render('gae/article.tpl', {
+        'title': 'Whoops! Missing index page!',
+        'requestPath': requestPath,
+        'leftNav': '',
+        'content': content,
+        'toc': '',
+        'dateUpdated': 'now',
+        'lang': 'en'}
+      )
   return response
 
 
@@ -169,5 +191,3 @@ def generateYaml(lang, requestPath, rawYaml):
                 'lang': lang}
               )
   return text
-
-
