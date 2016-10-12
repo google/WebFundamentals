@@ -7,9 +7,6 @@
     <meta name="robots" content="noindex">
     <link rel="canonical" href="https://developers.google.com/web/{{requestPath}}">
     <style>
-      video {
-        max-width: 100%;
-      }
       .wf-stage-warning { 
         color: white !important;
         font-weight: bold !important;
