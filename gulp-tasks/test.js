@@ -72,6 +72,10 @@ function testMarkdownFile(fileName, contribJson) {
     if (description.indexOf('<') >= 0 || description.indexOf('`') >= 0) {
       warnings.push({msg: 'description should not contain HTML tags', param: description});
     }
+    description = description.trimRight();
+    if (description.endsWith('.') === false) {
+      warnings.push({msg: 'description should end with a period', param: description}); 
+    }
   }
   // Check if it has review required
   if (GLOBAL.WF.options.skipReviewRequired === false) {
@@ -149,6 +153,17 @@ function testMarkdownFile(fileName, contribJson) {
       if (inclFile.indexOf('web/') !== 0) {
         errors.push({msg: 'Include path must start with web/', param: include});
         // console.log('EEP', fileName, include, inclFile);
+      }
+    });
+  }
+
+  // Verify external links have an external tag
+  var reLinks = /https?:\/\/[\S\n]+\)({: \.external })?/g;
+  var links = fileContent.match(reLinks);
+  if (links) {
+    links.forEach(function(link){
+      if (link.indexOf('external') < 0) {
+        warnings.push({msg: 'External links should be followed by "{: external }"', param: link});
       }
     });
   }
