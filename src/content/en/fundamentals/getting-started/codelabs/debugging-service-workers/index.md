@@ -3,9 +3,10 @@ book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
 {# wf_updated_on: 2016-10-10T14:55:33Z #}
+{# wf_published_on: 2016-01-01 #}
 
 
-# Debugging Service Workers {: page-title }
+# Debugging Service Workers {: .page-title }
 
 {% include "web/_shared/contributors/robdodson.html" %}
 
@@ -44,7 +45,7 @@ Because this code lab is focused on teaching you tools, feel free to stop at var
 * A text editor
 * Basic knowledge of HTML, CSS and JavaScript
 
-This codelab is focused on debugging Service Workers and assumes some prior knowledge of working with Service Workers. Some concepts are glossed over or code blocks (for example styles or non-relevant JavaScript) are provided for you to simply copy and paste. If you are new to Service Workers be sure to  [read through the API Primer](https://developers.google.com/web/fundamentals/primers/service-worker/?hl=en) before proceeding.
+This codelab is focused on debugging Service Workers and assumes some prior knowledge of working with Service Workers. Some concepts are glossed over or code blocks (for example styles or non-relevant JavaScript) are provided for you to simply copy and paste. If you are new to Service Workers be sure to  [read through the API Primer](/web/fundamentals/primers/service-worker/?hl=en) before proceeding.
 
 
 ## Getting set up
