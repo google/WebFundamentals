@@ -18,7 +18,10 @@ GLOBAL.WF = {
     templates: 'src/templates/',
   },
   maxArticlesInFeed: 10,
-  langs: ['en', 'ar', 'de', 'es', 'fr', 'he', 'id', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw'],
+  langs: [
+    'en', 'ar', 'de', 'es', 'fr', 'he', 'hi', 'id', 'it', 'ja',
+    'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw'
+  ],
 };
 var defaultOptions = {
   string: ['lang', 'skipReviewRequired', 'testWarnOnly', 'cl', 'verbose'],
