@@ -180,6 +180,7 @@
             <form class="devsite-utility-footer-language">
               <select id="langSelector" class="kd-select">
                 <option value="ar">العربية‬</option>
+                <option value="id">Bahasa Indonesia</option>
                 <option value="de">Deutsch</option>
                 <option value="en">English</option>
                 <option value="es">Español</option>
