@@ -41,3 +41,7 @@ h2.wf-header-title {
   margin-left:auto;
   margin-right:auto;
 }
+
+video {
+  width: 100%;
+}
