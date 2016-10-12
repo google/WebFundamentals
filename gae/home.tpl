@@ -186,6 +186,7 @@
                 <option value="fr">Français</option>
                 <option value="he">עִבְרִית</option>
                 <option value="hi">Hindi</option>
+                <option value="id">Bahasa Indonesia</option>
                 <option value="it">Italiano</option>
                 <option value="ja">日本語</option>
                 <option value="ko">한국어</option>
