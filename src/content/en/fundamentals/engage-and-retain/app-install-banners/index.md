@@ -26,6 +26,8 @@ with details about your app.
 Chrome then uses a set of criteria and visit-frequency heuristics to determine
 when to show the banner. Read on for more details.
 
+Note: Add to Homescreen (sometimes abbreviated as A2HS) is another name for Web App Install Banners. The two terms are equivalent.
+
 ### What are the criteria?
 
 Chrome automatically displays the banner when your app meets the following
@@ -42,14 +44,40 @@ criteria:
   (a requirement for using service worker).
 * Is visited at least twice, with at least five minutes between visits.
 
-### Testing the app install banner
+Note: Web App Install Banners are an emerging technology. The criteria for displaying app install banners may change in the future. See [What, Exactly, Makes Something a Progressive Web App?](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) for a canonical reference (that will be updated over time) on the latest web app install banner criteria.
 
-The app install banner is only shown after the user visits the page at least
-twice within five minutes. You can disable the visit-frequency check by enabling
-the Chrome flag `#bypass-app-banner-engagement-checks`. To test on desktop Chrome, you need to enable the Chrome flag `#enable-add-to-shelf`.  
+### Testing the app install banner {: #test }
 
-Then, as long as you have a manifest (configured correctly), are on HTTPS (or `localhost`)
-and have a service worker, you should see the install prompt.
+Once you've got your web app manifest set up, you'll want to validate
+that it's defined correctly. You've got two approaches at your disposal. One
+is manual, and the other is automated.
+
+To manually trigger the app install banner:
+
+1. Open Chrome DevTools.
+2. Go to the **Application** panel.
+3. Go to the **Manifest** tab.
+4. Click **Add to homescreen**, highlighted in red in the screenshot below.
+
+![Add to homescreen button on DevTools](images/devtools-a2hs.png)
+
+See [Simulate Add to Homescreen
+events](/web/tools/chrome-devtools/progressive-web-apps#add-to-homescreen)
+for more help.
+
+For automated testing of your app install banner, use Lighthouse. Lighthouse
+is a web app auditing tool. You can run it as a Chrome Extension or as a
+NPM module. To test your app, you provide Lighthouse with a specific page
+to audit. Lighthouse runs a suite of audits against the page and then
+provides the page's results in a report.
+
+The two suites of Lighthouse audits in the screenshot below represent all
+of the tests that your page needs to pass to display an app install banner.
+
+![Lighthouse's app install audits](images/lighthouse-a2hs.png)
+
+See [Audit Web Apps with Lighthouse](/web/tools/lighthouse) to get started
+with Lighthouse.
 
 ## App install banner events
 
