@@ -3,14 +3,14 @@ book_path: /web/showcase/_book.yaml
 
 {# wf_published_on: 2016-03-28 #}
 {# wf_updated_on: 2016-03-28 #}
-{# wf_featured_image: /web/showcase/2016/images/flipkart/featured.png #}
+{# wf_featured_image: /web/showcase/2016/images/flipkart/card.jpg #}
 {# wf_featured_snippet: In 2015, Flipkart, India’s largest e-commerce site, adopted an app-only strategy and temporarily shut down their mobile website. The company found it harder and harder to provide a user experience that was as fast and engaging as that of their mobile app. But then, Flipkart decided to rethink their development approach. They were drawn back to the mobile web by the introduction of features that made the mobile web run instantly, work offline, and re-engage users. #}
 
 # Flipkart triples time-on-site with Progressive Web App {: .page-title }
 
 <img src="images/flipkart/flipkart.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Flipkart, India’s largest e-commerce site, decided to combine their web
 presence and native app into a Progressive Web Application that has resulted

@@ -4,15 +4,15 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-03-24 #}
 {# wf_updated_on: 2015-03-24 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/web_filter/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/web_filter/card.jpg #}
 
 # Web Filter {: .page-title }
 
 <img src="images/web_filter/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
-[Web Filters](http://exp.bartekdrozdz.com/app/webfilter/): Fast, quick and
+[Web Filters](http://exp.bartekdrozdz.com/app/webfilter/){: .external }: Fast, quick and
 dirty camera filters.
 
 Warning: This app is not currently working, `getUserMedia` requires a secure

@@ -1,5 +1,11 @@
 redirects:
 
+  - from: /web/updates/news/...
+    to: /web/updates/
+
+  - from: /web/updates/pages/...
+    to: /web/updates/
+
   - from: /web/updates/2011/06/HTML5-Libraries---Late-June
     to: /web/updates/2011/06/HTML5-Libraries-Late-June
 
@@ -269,3 +275,6 @@ redirects:
 
   - from: /web/updates/tools/...
     to: /web/updates/devtools/
+
+  - from: /web/updates/tools
+    to: /web/updates/tags/devtools

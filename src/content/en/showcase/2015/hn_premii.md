@@ -4,15 +4,15 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-04-01 #}
 {# wf_updated_on: 2015-04-01 #}
 {# wf_author: paulkinlan #}
-{# wf_featured_image: /web/showcase/2015/images/hn_premii/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/hn_premii/card.jpg #}
 
 # Hacker News Reader {: .page-title }
 
 <img src="images/hn_premii/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
-[Hacker News Reader](http://hn.premii.com/): An amazing optimized reader
+[Hacker News Reader](http://hn.premii.com/){: .external }: An amazing optimized reader
 for Hacker News.
 
 ### What we like?

@@ -55,7 +55,7 @@ landing_page:
       image_path: /web/events/images/pwa-roadshow-item.jpg
       buttons:
       - label: Learn More About Progressive Web App Events
-        path: /web/events/pwaroadshow
+        path: /web/events/pwaroadshow/
     - heading: Polymer Polytechnics
       description: >
         Polytechnics are a series of in-person, community-run events to help
@@ -65,4 +65,4 @@ landing_page:
       image_path: /web/events/images/polytechnic-item.jpg
       buttons:
       - label: Learn More About Polytechnic Events
-        path: /web/events/polytechnic
+        path: /web/events/polytechnic/

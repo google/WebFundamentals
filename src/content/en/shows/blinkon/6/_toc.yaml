@@ -1,0 +1,31 @@
+toc:
+  - title: BlinkOn 6
+    section:
+    - title: 'State of Web Platform (Day 1 Talk 1)'
+      path: /web/shows/blinkon/6/blinkon-6-day-1-talk-1-state-of-web-platform
+    - title: 'Ignition - an interpreter for V8 (Day 1 Talk 2)'
+      path: /web/shows/blinkon/6/blinkon-6-day-1-talk-2-ignition-an-interpreter-for-v8
+    - title: '3rd party content (Day 1 Talk 3)'
+      path: /web/shows/blinkon/6/blinkon-6-day-1-talk-3-3rd-party-content
+    - title: 'Houdini and the Future of Web (Day 1 Talk 4)'
+      path: /web/shows/blinkon/6/blinkon-6-day-1-talk-4-houdini-and-the-future-of-web
+    - title: 'Web Platform Predictability (Day 1 Talk 5)'
+      path: /web/shows/blinkon/6/blinkon-6-day-1-talk-5-web-platform-predictability
+    - title: 'Feeling Fast for our Users: Building a Smarter Engine (Day 1 Talk 6)'
+      path: /web/shows/blinkon/6/blinkon-6-day-1-talk-6-feeling-fast-for-our-users-building-a-smarter-engine
+    - title: 'Lightning Talks (Day 1 Talk 7)'
+      path: /web/shows/blinkon/6/blinkon-6-day-1-talk-7-lightning-talks
+    - title: 'Headless Chrome (Day 2 Talk 1)'
+      path: /web/shows/blinkon/6/blinkon-6-day-2-talk-1-headless-chrome
+    - title: 'Client side performance from the perspective of a developer (Day 2 Talk 2)'
+      path: /web/shows/blinkon/6/blinkon-6-day-2-talk-2-client-side-performance-from-the-perspective-of-a-developer
+    - title: 'Blink Onion Soup (Day 2 Talk 3)'
+      path: /web/shows/blinkon/6/blinkon-6-day-2-talk-3-blink-onion-soup
+    - title: 'Real-world JavaScript Performance (Day 2 Talk 4)'
+      path: /web/shows/blinkon/6/blinkon-6-day-2-talk-4-real-world-javascript-performance
+    - title: 'V8: ECMAScript 2015 and Beyond (Day 2 Talk 5)'
+      path: /web/shows/blinkon/6/blinkon-6-day-2-talk-5-v8-ecmascript-2015-and-beyond
+    - title: 'How we measure and optimize for RAIL in V8’s GC (Day 2 Talk 6)'
+      path: /web/shows/blinkon/6/blinkon-6-day-2-talk-6-how-we-measure-and-optimize-for-rail-in-v8s-gc
+    - title: 'Q&A / Panel (Day 2 Talk 7)'
+      path: /web/shows/blinkon/6/blinkon-6-day-2-talk-7-qa-panel

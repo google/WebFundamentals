@@ -1,0 +1,41 @@
+toc:
+  - title: '2013'
+    section:
+    - title: Keynote
+      path: /web/shows/cds/2013/keynote
+    - title: 60fps Layout and Rendering
+      path: /web/shows/cds/2013/60fps-layout-and-rendering
+    - title: Best UX patterns for Mobile Web Apps
+      path: /web/shows/cds/2013/best-ux-patterns-for-mobile-web-apps
+    - title: 'Blink: Behind the Scenes'
+      path: /web/shows/cds/2013/blink-behind-the-scenes
+    - title: Build Mobile Apps with the Chrome WebView
+      path: /web/shows/cds/2013/build-mobile-apps-with-chrome-webview
+    - title: Dart for the Modern Web Developer
+      path: /web/shows/cds/2013/dart-for-the-modern-web-developer
+    - title: 'Develop Chrome Apps on Desktop/Mobile, Distribute and Profit'
+      path: /web/shows/cds/2013/develop-chrome-apps
+    - title: DevTools for Mobile
+      path: /web/shows/cds/2013/devtools-for-mobile
+    - title: Got SSL?
+      path: /web/shows/cds/2013/got-ssl
+    - title: Instant Mobile Web Apps
+      path: /web/shows/cds/2013/instant-mobile-web-apps
+    - title: Chrome Leadership Panel Q&A
+      path: /web/shows/cds/2013/leadership-panel
+    - title: Media APIs for the Multi-Platform Web
+      path: /web/shows/cds/2013/media-apis-for-the-web
+    - title: Multi-Device Accessibility
+      path: /web/shows/cds/2013/multi-device-accessibility
+    - title: 'Network Connectivity: Optional'
+      path: /web/shows/cds/2013/network-connectivity-optional
+    - title: Optimizing Network Performance
+      path: /web/shows/cds/2013/optimizing-network-performance
+    - title: Optimizing your Workflow for a Cross-Device World
+      path: /web/shows/cds/2013/optimizing-your-workflow
+    - title: 'Polymer declarative, encapsulated, reusable components'
+      path: /web/shows/cds/2013/polymer
+    - title: Portable Native Client
+      path: /web/shows/cds/2013/portable-native-client
+    - title: Tooling Techniques for the Performance Ninja
+      path: /web/shows/cds/2013/tooling-techniques-for-perf-ninja

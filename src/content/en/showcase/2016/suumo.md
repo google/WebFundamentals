@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/suumo/suumo_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Japan's top real estate site supercharges new listings with web Push
 Notifications and sees a 31% open rate for notifications.

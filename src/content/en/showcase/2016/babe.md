@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/babe/babe_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 BaBe’s cross-browser Progressive Web App rivals performance of native app.
 

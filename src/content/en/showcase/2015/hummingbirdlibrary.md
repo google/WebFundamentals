@@ -4,15 +4,15 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-08-14 #}
 {# wf_updated_on: 2015-08-14 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/hummingbirdlibrary/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/hummingbirdlibrary/card.jpg #}
 
 # Hummingbird Library {: .page-title }
 
 <img src="images/hummingbirdlibrary/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
-[Hummingbird Library](http://hummingbirdlibrary.com/): A refreshingly new
+[Hummingbird Library](http://hummingbirdlibrary.com/){: .external }: A refreshingly new
 frontend to Hummingbird, a popular anime watch-tracker and discovery site.
 
 ### What we like?
@@ -22,11 +22,11 @@ been obsessed with keeping track of what they watched. Popular sites in this
 space include AniDB and MyAnimeList, but [Hummingbird](https://hummingbird.me)
 is the by far best-looking of them all.
 
-Yet, [Hummingbird Library](http://hummingbirdlibrary.com/), which sits on top
+Yet, [Hummingbird Library](http://hummingbirdlibrary.com/){: .external }, which sits on top
 of the existing Hummingbird API, goes one step further, built from scratch
 with Angular and Material Design.
-[Theme color](/web/fundamentals/design-and-ui/browser-customization/theme-color)
-and [manifest](/web/fundamentals/engage-and-retain/simplified-app-installs) make
+[Theme color](/web/fundamentals/design-and-ui/browser-customization/)
+and [manifest](/web/fundamentals/engage-and-retain/app-install-banners/) make
 it look super integrated and installable on the home screen, and the whole
 experience feels very snappy, focussing on the core functionality of the main
 site.
@@ -49,7 +49,7 @@ tighter version of the tiles would work much better on mobile devices.
 Developing for the web allows you to reach virtually every platform with a
 single codebase, which is a huge advantage when you're the sole developer. And
 thanks to great features like
-[Add to Homescreen](/web/fundamentals/engage-and-retain/simplified-app-installs),
+[Add to Homescreen](/web/fundamentals/engage-and-retain/app-install-banners/),
 it's easy to give users an experience that is nearly identical to what they
 would get in a native application.
 

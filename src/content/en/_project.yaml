@@ -7,10 +7,9 @@ buganizer_id: 60575
 color: google-blue
 content_license: cc3-apache2
 footer_path: /web/_footer.yaml
-hide_from_products_list: True
 
 icon:
-  path: https://www.gstatic.com/images/branding/product/2x/google_developers_64dp.png
+  path: /web/images/web-fundamentals-icon192x192.png
 
 tags:
 - html5
@@ -22,6 +21,6 @@ google_analytics_ids:
 - UA-52746336-1
 
 announcement:
-  description: Join the Progressive Web App Road Show<br><span style="font-weight:400;">Stopping in New York, Chicago, Austin, Toronto, Mountain View and Seattle. Learn more and <a href="https://events.withgoogle.com/pwa-roadshow-north-america/">sign up now.</a><span>
-  start: '2016-08-01T08:00:00Z'
-  end: '2016-10-05T08:00:00Z'
+  description: Don't miss out on the action at this years <a href="https://developer.chrome.com/devsummit/">Chrome Dev Summit</a>, happening on Nov 10th & 11th. <a href="https://services.google.com/fb/forms/cds2016/">Register for livestream updates</a>.
+  start: '2016-10-09T08:00:00Z'
+  end: '2016-11-11T08:00:00Z'
