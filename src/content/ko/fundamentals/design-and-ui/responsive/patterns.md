@@ -22,7 +22,7 @@ description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만
 
 ## 패턴
 
-간단하고 이해하기 쉬운 패턴을 생성하기 위해, [`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes)을 사용하여 아래의 각 샘플을 생성했습니다. 이때 일반적으로 기본 컨테이너 `div`에 3개의 콘텐츠 `div`가 포함됩니다.
+간단하고 이해하기 쉬운 패턴을 생성하기 위해, [`flexbox`](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes){: .external }을 사용하여 아래의 각 샘플을 생성했습니다. 이때 일반적으로 기본 컨테이너 `div`에 3개의 콘텐츠 `div`가 포함됩니다.
 
 
 
@@ -57,9 +57,9 @@ description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만
 
 다음은 이 패턴을 사용하는 사이트의 예입니다.
 
- * [A List Apart](http://mediaqueri.es/ala/)
- * [Media Queries](http://mediaqueri.es/)
- * [SimpleBits](http://simplebits.com/)
+ * [A List Apart](http://mediaqueri.es/ala/){: .external }
+ * [Media Queries](http://mediaqueri.es/){: .external }
+ * [SimpleBits](http://simplebits.com/){: .external }
 
 
 <pre class="prettyprint">
@@ -95,8 +95,8 @@ description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만
 
 다음은 이 패턴을 사용하는 사이트의 예입니다.
 
- * [Modernizr](http://modernizr.com/)
- * [Wee Nudge](http://weenudge.com/)
+ * [Modernizr](http://modernizr.com/){: .external }
+ * [Wee Nudge](http://weenudge.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/column-drop.html" region_tag="cdrop"   adjust_indentation="auto" %}
@@ -128,10 +128,10 @@ description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만
 
 다음은 이 패턴을 사용하는 사이트의 예입니다.
 
- * [Food Sense](http://foodsense.is/)
+ * [Food Sense](http://foodsense.is/){: .external }
  * [Seminal Responsive Design
-  Example](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html)
- * [Andersson-Wise Architects](http://www.anderssonwise.com/)
+  Example](http://alistapart.com/d/responsive-web-design/ex/ex-site-FINAL.html){: .external }
+ * [Andersson-Wise Architects](http://www.anderssonwise.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/layout-shifter.html" region_tag="lshifter"   adjust_indentation="auto" %}
@@ -160,9 +160,9 @@ description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만
 
 다음은 이 패턴을 사용하는 사이트의 예입니다.
 
- * [Opera's Shiny Demos](http://shinydemos.com/)
- * [Ginger Whale](http://gingerwhale.com/)
- * [Future Friendly](http://futurefriendlyweb.com/)
+ * [Opera's Shiny Demos](http://shinydemos.com/){: .external }
+ * [Ginger Whale](http://gingerwhale.com/){: .external }
+ * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/tiny-tweaks.html" region_tag="ttweaks"   adjust_indentation="auto" %}
@@ -196,9 +196,9 @@ description:  반응형 웹 디자인 패턴은 빠르게 진화하고 있지만
 다음은 이 패턴을 사용하는 사이트의 예입니다.
 
  * [HTML5Rocks
-  Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/)
- * [Google Nexus](http://www.google.com/nexus/)
- * [Facebook's Mobile Site](https://m.facebook.com/)
+  Articles](http://www.html5rocks.com/en/tutorials/developertools/async-call-stack/){: .external }
+ * [Google Nexus](http://www.google.com/nexus/){: .external }
+ * [Facebook's Mobile Site](https://m.facebook.com/){: .external }
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/responsive/_code/off-canvas.html" region_tag="ocanvas"   adjust_indentation="auto" %}
