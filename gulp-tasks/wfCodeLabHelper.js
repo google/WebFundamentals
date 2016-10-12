@@ -41,9 +41,10 @@ function updateCodeLab(fileName) {
     dateUpdated = moment().format('YYYY-MM-DD');
   }
   result.push('{# wf_updated_on: ' + dateUpdated + ' #}');
+  result.push('{# wf_published_on: 2016-01-01 #}');
   result.push('');
   result.push('');
-  result.push('# ' + metadata.title + ' {: page-title }');
+  result.push('# ' + metadata.title + ' {: .page-title }');
   if (authorId) {
     var authorInfo = '{% include "web/_shared/contributors/{{id}}.html" %}';
     result.push('');
@@ -55,6 +56,7 @@ function updateCodeLab(fileName) {
     markdown = markdown.replace(feedbackLink[0], '');
   }
   markdown = markdown.replace(/^\*Duration is \d+ min\*\n/gm, '');
+  markdown = markdown.replace(/\(https:\/\/developers.google.com\//g, '(\/');
   result.push(markdown);
   if (metadata.feedback) {
     result.push('');
