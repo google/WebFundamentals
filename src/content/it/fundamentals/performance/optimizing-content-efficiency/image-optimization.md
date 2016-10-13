@@ -32,7 +32,7 @@ Dovrai poi valutare se vi sia una tecnologia alternativa in grado di raggiungere
 * **Effetti CSS** (gradienti, ombreggiature, ecc... ) e animazioni CSS possono essere utilizzati per produrre risorse indipendenti dalla risoluzione, che appaiano sempre nitide a qualsiasi risoluzione e livello di ingrandimento, spesso a una frazione dei byte necessari per un file immagine.
 I * **font web** consentono di utilizzare caratteri splendidi mantenendo al contempo la possibilità di selezionare, cercare e ridimensionare il testo, con un miglioramento significativo nella fruibilità.
 
-Ogni volta che ti trovi a codificare del testo in immagine, fermati e rifletti. Una tipografia qualitativamente alta è fondamentale per un design, un branding e una leggibilità idonei, ma il text-in-images rende l'esperienza dell'utente un'esperienza negativa: il testo non è selezionabile, non ricercabile, non ingrandibile, non accessibile e non idoneo a dispositivi high-DPI. L'utilizzo di font web richiede un [insieme di ottimizzazioni proprio](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/), ma risolve tutte le problematiche suddette e rappresenta sempre una scelta migliore per la visualizzazione del testo.
+Ogni volta che ti trovi a codificare del testo in immagine, fermati e rifletti. Una tipografia qualitativamente alta è fondamentale per un design, un branding e una leggibilità idonei, ma il text-in-images rende l'esperienza dell'utente un'esperienza negativa: il testo non è selezionabile, non ricercabile, non ingrandibile, non accessibile e non idoneo a dispositivi high-DPI. L'utilizzo di font web richiede un [insieme di ottimizzazioni proprio](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/){: .external }, ma risolve tutte le problematiche suddette e rappresenta sempre una scelta migliore per la visualizzazione del testo.
 
 
 ## Immagini vettoriali vs. immagini raster
@@ -55,8 +55,8 @@ Una volta stabilito che il formato ottimale per ottenere l'effetto desiderato è
 </figure>
 <div class="clearfix"></div>
 
-* La [grafica vettoriale](http://en.wikipedia.org/wiki/Vector_graphics) utilizza linee, punti e poligoni per creare un'immagine.
-* La [grafica raster](http://en.wikipedia.org/wiki/Raster_graphics) crea un'immagine codificando i singoli valori di ogni pixel entro una griglia rettangolare.
+* La [grafica vettoriale](http://en.wikipedia.org/wiki/Vector_graphics){: .external } utilizza linee, punti e poligoni per creare un'immagine.
+* La [grafica raster](http://en.wikipedia.org/wiki/Raster_graphics){: .external } crea un'immagine codificando i singoli valori di ogni pixel entro una griglia rettangolare.
 
 Ciascun formato presenta vantaggi e svantaggi. I formati vettoriali sono ideali per immagini composte da forme geometriche semplici (ad es. loghi, testi, icone e così via), e garantiscono risultati nitidi con qualsiasi risoluzione e impostazione di zoom; ciò li rende ideali per i monitor ad alta risoluzione e le risorse che devono essere visualizzate con dimensioni variabili.
 
@@ -136,7 +136,7 @@ Tutti i moderni browser supportano la Scalable Vector Graphics (SVG), ovvero un 
     </svg>
     
 
-L'esempio precedente mostra la creazione di una forma circolare semplice con una linea nera di contorni e sfondo rosso, esportata da Adobe illustrator. Come puoi vedere, essa contiene molti metadati, quali informazioni sul layer, commenti e namespace XML, spesso non necessari per il rendering della risorsa nel browser. Di conseguenza, è sempre buona norma minimizzare i file SVG con uno strumento come [svgo](https://github.com/svg/svgo).
+L'esempio precedente mostra la creazione di una forma circolare semplice con una linea nera di contorni e sfondo rosso, esportata da Adobe illustrator. Come puoi vedere, essa contiene molti metadati, quali informazioni sul layer, commenti e namespace XML, spesso non necessari per il rendering della risorsa nel browser. Di conseguenza, è sempre buona norma minimizzare i file SVG con uno strumento come [svgo](https://github.com/svg/svgo){: .external }.
 
 Nel caso illustrato, svgo riduce le dimensioni del file SVG generato con Illustrator del 58%, portandolo da 470 a 199 byte. Inoltre, dato che SVG è un formato basato su XML, possiamo applicare anche una compressione GZIP per ridurne le dimensioni per il trasferimento - assicurati che il server sia configurato per comprimere risorse SVG!
 
@@ -149,7 +149,7 @@ Nel caso illustrato, svgo riduce le dimensioni del file SVG generato con Illustr
 - I compressori di immagini si avvalgono di diverse tecniche per ridurre il numero di bit necessari per pixel, riducendo quindi le dimensioni del file immagine
 
 
-Un'immagine raster consiste semplicemente in una griglia bidimensionale di singoli 'pixel'; ad es., un'immagine di 100x100 pixel è una sequenza di 10.000 pixel. Ogni pixel contiene a sua volta i valori '[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space)': (R) canale rosso (red channel), (G) canale verde (green channel), (B) canale blu (blue channel e (A) canale alfa (della trasparenza - alpha channel).
+Un'immagine raster consiste semplicemente in una griglia bidimensionale di singoli 'pixel'; ad es., un'immagine di 100x100 pixel è una sequenza di 10.000 pixel. Ogni pixel contiene a sua volta i valori '[RGBA](http://en.wikipedia.org/wiki/RGBA_color_space){: .external }': (R) canale rosso (red channel), (G) canale verde (green channel), (B) canale blu (blue channel e (A) canale alfa (della trasparenza - alpha channel).
 
 Internamente, il browser attribuisce 256 valori (colori) a ogni canale, che si traducono in 8 bit per canale (2 ^ 8 = 256) e 4 byte per pixel (4 canali x 8 bit = 32 bit = 4 byte). Di conseguenza, conoscendo le dimensioni della griglia, possiamo facilmente calcolare le dimensioni del file.
 
@@ -205,13 +205,13 @@ Una strategia semplice consiste nel ridurre la profondità di bit (bit depth) de
 
 Note: Da sinistra a destra (PNG): 32-bit (16M di colori), 7-bit (128 colori), 5-bit (32 colori). Immagini complesse con transizioni di colore graduali (gradienti, cielo, ecc... ) richiedono palette di colori più ampie per evitare artefatti visivi come l'effetto pixel del cielo nella visualizzazione a 5 bit. Al contrario, se l'immagine utilizza soltanto alcuni colori, una palette ampia spreca soltanto bit preziosi!
 
-Una volta ottimizzati i dati memorizzati nei singoli pixel, possiamo farci ancora più furbi e osservare anche i pixel vicini: scopriremo così che molte immagini, in particolare le foto, hanno molti pixel vicini con colori simili, ad esempio per il cielo, per trame ripetitive, e così via. Utilizzando queste informazioni a nostro vantaggio, il compressore può applicare una '[codifica delta](http://en.wikipedia.org/wiki/Delta_encoding)', grazie alla quale, invece di immagazzinare i singoli valori per ogni pixel, possiamo immagazzinare la differenza tra pixel vicini: se i pixel adiacenti sono uguali, delta sarà 'zero', e dovremo immagazzinare un solo bit! Ma perché fermarsi qui?
+Una volta ottimizzati i dati memorizzati nei singoli pixel, possiamo farci ancora più furbi e osservare anche i pixel vicini: scopriremo così che molte immagini, in particolare le foto, hanno molti pixel vicini con colori simili, ad esempio per il cielo, per trame ripetitive, e così via. Utilizzando queste informazioni a nostro vantaggio, il compressore può applicare una '[codifica delta](http://en.wikipedia.org/wiki/Delta_encoding){: .external }', grazie alla quale, invece di immagazzinare i singoli valori per ogni pixel, possiamo immagazzinare la differenza tra pixel vicini: se i pixel adiacenti sono uguali, delta sarà 'zero', e dovremo immagazzinare un solo bit! Ma perché fermarsi qui?
 
 L'occhio umano ha diversi livelli di sensibilità a colori diversi: possiamo ottimizzare i nostri colori tenendo conto di ciò e riducendo o aumentando la relativa palette.
 I pixel 'adiacenti' formano una griglia bidimensionale, il che significa che ogni pixel ha più vicini: questo ci consente di migliorare ulteriormente la codifica delta.
 Invece di guardare soltanto ai vicini diretti di ogni pixel, possiamo considerare interi blocchi di pixel vicini e codificare blocchi diversi con impostazioni diverse. E così via...
 
-Come vedi, l'ottimizzazione delle immagini si fa rapidamente complessa (o divertente, a seconda della tua prospettiva) e rappresenta un'area attiva di ricerca accademica e commerciale. Le immagini occupano molti byte e si può ottenere molto sviluppando tecniche di compressione migliori! Se sei curioso di saperne di più, visita la [pagina Wikipedia](http://en.wikipedia.org/wiki/Image_compression) o consulta il [WebP compression techniques whitepaper](/speed/webp/docs/compression) per un esempio pratico.
+Come vedi, l'ottimizzazione delle immagini si fa rapidamente complessa (o divertente, a seconda della tua prospettiva) e rappresenta un'area attiva di ricerca accademica e commerciale. Le immagini occupano molti byte e si può ottenere molto sviluppando tecniche di compressione migliori! Se sei curioso di saperne di più, visita la [pagina Wikipedia](http://en.wikipedia.org/wiki/Image_compression){: .external } o consulta il [WebP compression techniques whitepaper](/speed/webp/docs/compression) per un esempio pratico.
 
 In conclusione, ci troviamo di nuovo davanti ad argomenti molto interessanti ma prettamente accademici: in che modo tutto ciò può aiutarci ad ottimizzare le immagini sulle nostre pagine? Non siamo certamente in grado di poter inventare nuove tecniche di compressione, ma è importante capire le dimensioni del problema: pixel RGBA, profondità di bit e diverse tecniche di ottimizzazione. Tali concetti sono tutti fondamentali da comprendere e tenere a mente prima di discutere dei diversi formati di immagni raster.
 
@@ -229,8 +229,8 @@ Per alcuni tipi di dati, quali il codice sorgente di una pagina o un file esegui
 
 Di fatto, per la modalità di funzionamento della vista, spesso possiamo cavarcela eliminando alcune informazioni su ogni pixel per poter ridurre le dimensioni file di un'immagine; ad es., i nostri occhi hanno una sensibilità diversa ai diversi colori, per cui possiamo utilizzare meno bit per codificarne alcuni. Di conseguenza, una tipica pipeline di ottimizzazione delle immagini è composta da due fasi:
 
-1. L'immagine viene elaborata con un filtro '[lossy](http://en.wikipedia.org/wiki/Lossy_compression)' che elimina alcuni dati dei pixel
-1. L'immagine viene elaborata con un filtro '[lossless](http://en.wikipedia.org/wiki/Lossless_compression)' che comprime i dati dei pixel
+1. L'immagine viene elaborata con un filtro '[lossy](http://en.wikipedia.org/wiki/Lossy_compression){: .external }' che elimina alcuni dati dei pixel
+1. L'immagine viene elaborata con un filtro '[lossless](http://en.wikipedia.org/wiki/Lossless_compression){: .external }' che comprime i dati dei pixel
 
 **La prima fase è facoltativa, e l'algoritmo esatto dipende dal particolare formato immagine, ma è importante capire che qualsiasi immagine può essere sottoposta a compressione lossy per ridurne le dimensioni.** Di fatto, la differenza tra i diversi formati immagine, quali GIF, PNG, JPEG e altri, risiede nella combinazione degli algoritmi specifici che utilizzano (o omettono) nell'applicazione delle fasi lossy e lossless.
 

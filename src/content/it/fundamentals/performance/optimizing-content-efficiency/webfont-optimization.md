@@ -27,13 +27,13 @@ Un font web è una raccolta di glifi, ciascuno dei quali rappresenta una forma v
 
 <img src="images/glyphs.png" class="center" alt="Tabella dei glifi font">
 
-Nella scelta di un font, è importante considerare i set di caratteri supportati. Per localizzare i contenuti di una pagina in più lingue, dovrai utilizzare un font che sia in grado di garantire un aspetto e un'esperienza coerenti agli utenti. Ad esempio, la [famiglia di font Noto di Google](https://www.google.com/get/noto/) mira a supportare tutte le lingue del mondo. Tuttavia, ricorda che le dimensioni totali di Noto, incluse tutte le lingue, ammontano a più di 130 MB. Scarica ZIP! 
+Nella scelta di un font, è importante considerare i set di caratteri supportati. Per localizzare i contenuti di una pagina in più lingue, dovrai utilizzare un font che sia in grado di garantire un aspetto e un'esperienza coerenti agli utenti. Ad esempio, la [famiglia di font Noto di Google](https://www.google.com/get/noto/){: .external } mira a supportare tutte le lingue del mondo. Tuttavia, ricorda che le dimensioni totali di Noto, incluse tutte le lingue, ammontano a più di 130 MB. Scarica ZIP! 
 
 Naturalmente, l'utilizzo di font web richiede una progettazione attenta per garantire che la tipografia non intralci le prestazioni. Per fortuna, la piattaforma web offre tutte le primitive necessarie, mentre nella presente guida daremo un'occhiata pratica a come ottenere il meglio da entrambi i lati.
 
 ### Formati dei font web
 
-Oggigiorno, sul web sono disponibili quattro famiglie di font: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType), [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format), e [WOFF2](http://www.w3.org/TR/WOFF2/). Sfortunatamente, nonostante l'ampia scelta, non esiste un unico formato universale che funzioni in tutti i browser, più o meno recenti: EOT funziona [solo su IE](http://caniuse.com/#feat=eot), TTF è [parzialmente supportato in IE](http://caniuse.com/#search=ttf), WOFF è maggiormente supportato [non disponibile in alcuni browser precedenti](http://caniuse.com/#feat=woff), mentre il supporto di WOFF 2.0 è ancora [in progress in molti browser](http://caniuse.com/#feat=woff2).
+Oggigiorno, sul web sono disponibili quattro famiglie di font: [EOT](http://en.wikipedia.org/wiki/Embedded_OpenType){: .external }, [TTF](http://en.wikipedia.org/wiki/TrueType), [WOFF](http://en.wikipedia.org/wiki/Web_Open_Font_Format), e [WOFF2](http://www.w3.org/TR/WOFF2/). Sfortunatamente, nonostante l'ampia scelta, non esiste un unico formato universale che funzioni in tutti i browser, più o meno recenti: EOT funziona [solo su IE](http://caniuse.com/#feat=eot), TTF è [parzialmente supportato in IE](http://caniuse.com/#search=ttf), WOFF è maggiormente supportato [non disponibile in alcuni browser precedenti](http://caniuse.com/#feat=woff), mentre il supporto di WOFF 2.0 è ancora [in progress in molti browser](http://caniuse.com/#feat=woff2).
 
 Dunque, come dobbiamo muoverci? Non esiste un unico formato che funzioni in tutti i browser, il che significa che dobbiamo utilizzare più formati per offrire un'esperienza coerente:
 
@@ -51,9 +51,9 @@ Un font è una raccolta di glifi, ciascuno dei quali è composto da un insieme d
 
 * I formati EOT e TTF non sono compressi per default: assicurati che i server siano configurati per applicare la [compressione GZIP](/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer#text-compression-with-gzip) quando utilizzi tali formati.
 * WOFF ha una compressione integrata - assicurati che il tuo compressore WOFF utilizzi impostazioni ottimali. 
-* WOFF2 utilizza algoritmi di pre-elaborazione e compressione personalizzati per garantire una riduzione di ~30% delle dimensioni file rispetto ad altri formati - vedi [report](http://www.w3.org/TR/WOFF20ER/).
+* WOFF2 utilizza algoritmi di pre-elaborazione e compressione personalizzati per garantire una riduzione di ~30% delle dimensioni file rispetto ad altri formati - vedi [report](http://www.w3.org/TR/WOFF20ER/){: .external }.
 
-Vale infine la pena notare che alcuni formati font contengono metadati aggiuntivi, quali informazioni di  [font hinting](http://en.wikipedia.org/wiki/Font_hinting) e [kerning](http://en.wikipedia.org/wiki/Kerning) che possono non essere necessarie su alcune piattaforme, ma che consentono un'ulteriore ottimizzazione delle dimensioni file. Consulta le opzioni di ottimizzazione messe a disposizione dal tuo compressore font e, se scegli questo percorso, assicurati di disporre delle infrastrutture adatte per testare e utilizzare tali font ottimizzati in ogni browser. Ad es., Google Fonts offre più di 30 varianti ottimizzate per ogni font, individuando e fornendo automaticamente la variabile ottimale per ogni piattaforma e browser.
+Vale infine la pena notare che alcuni formati font contengono metadati aggiuntivi, quali informazioni di  [font hinting](http://en.wikipedia.org/wiki/Font_hinting){: .external } e [kerning](http://en.wikipedia.org/wiki/Kerning) che possono non essere necessarie su alcune piattaforme, ma che consentono un'ulteriore ottimizzazione delle dimensioni file. Consulta le opzioni di ottimizzazione messe a disposizione dal tuo compressore font e, se scegli questo percorso, assicurati di disporre delle infrastrutture adatte per testare e utilizzare tali font ottimizzati in ogni browser. Ad es., Google Fonts offre più di 30 varianti ottimizzate per ogni font, individuando e fornendo automaticamente la variabile ottimale per ogni piattaforma e browser.
 
 Note: Valuta l'utilizzo della <a href='http://en.wikipedia.org/wiki/Zopfli'>compressione Zopfli</a> per i formati EOT, TTF e WOFF. Zopfli è un compressore compatibile con zlib che offre una riduzione delle dimensioni file ~5% superiore a gzip.
 
@@ -260,7 +260,7 @@ Vi sono vantaggi e svantaggi in ogni strategia di rendering: alcuni trovano fast
 
 ### Ottimizzazione del rendering del font con Font Loading API
 
-[Font Loading API](http://dev.w3.org/csswg/css-font-loading/) offre un'interfaccia di scripting per definire e manipolare le font face CSS, tracciarne il download e sostituire il loro comportamento lazy load. Ad esempio, se siamo sicuri che sarà necessaria una specifica variante del font, possiamo definirla e comunicare al browser di iniziare immediatamente a recuperare la risorsa:
+[Font Loading API](http://dev.w3.org/csswg/css-font-loading/){: .external } offre un'interfaccia di scripting per definire e manipolare le font face CSS, tracciarne il download e sostituire il loro comportamento lazy load. Ad esempio, se siamo sicuri che sarà necessaria una specifica variante del font, possiamo definirla e comunicare al browser di iniziare immediatamente a recuperare la risorsa:
 
 
     var font = new FontFace("Awesome Font", "url(/fonts/awesome.woff2)", {
