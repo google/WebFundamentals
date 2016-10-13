@@ -36,6 +36,10 @@ We'll start with basic HTML markup and a single image; no CSS or JavaScript. Let
 
 <img src="images/waterfall-dom.png" alt=""  alt="CRP">
 
+Note: Although this doc uses DevTools to illustrate CRP concepts, DevTools is
+currently not well-suited for CRP analysis. See [What about
+DevTools?](measure-crp#devtools) for more information.
+
 As expected, the HTML file took approximately 200ms to download. Note that the transparent portion of the blue line represents the length of time that the browser waits on the network without receiving any response bytes whereas the solid portion shows the time to finish the download after the first response bytes have been received. The HTML download is tiny (<4K), so all we need is a single roundtrip to fetch the full file. As a result, the HTML document takes approximately 200ms to fetch, with half the time spent waiting on the network and the other half waiting on the server response.
 
 When the HTML content becomes available, the browser parses the bytes, converts them into tokens, and builds the DOM tree. Notice that DevTools conveniently reports the time for the DOMContentLoaded event at the bottom (216ms), which also corresponds to the blue vertical line. The gap between the end of the HTML download and the blue vertical line (DOMContentLoaded) is the time it takes the browser to build the DOM tree&mdash;in this case, just a few milliseconds.
