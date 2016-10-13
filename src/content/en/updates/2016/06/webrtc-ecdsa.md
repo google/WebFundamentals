@@ -78,6 +78,7 @@ Another improvement in Chrome 52: the RTCCertificates used by WebRTC can be save
 RTCCertificate IndexedDB storage has already shipped in Firefox and is in Opera 39.
 
 ## Find out more
+
 * [ECDSA: The digital signature algorithm of a better internet](https://blog.cloudflare.com/ecdsa-the-digital-signature-algorithm-of-a-better-internet/)
 * [WebRTC certificate management](https://w3c.github.io/webrtc-pc/#sec.cert-mgmt)
 * [RTCCertificate interface](https://w3c.github.io/webrtc-pc/#rtccertificate-interface)

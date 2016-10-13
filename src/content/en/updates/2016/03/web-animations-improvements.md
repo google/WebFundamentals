@@ -29,7 +29,7 @@ In Chrome 51, some of these changes are finalized:
 
   * Removing dashed names as keys in keyframes
 
-### Cancel Events
+### Cancel events
 
 The [Animation](http://w3c.github.io/web-animations/#the-animation-interface) 
 interface includes a method to cancel an animation, funnily enough called 
@@ -61,7 +61,7 @@ with. Here’s an example of how you’d specify an `id` for an animation you in
     element.animate([{opacity: 1}, {opacity: 0}], {duration: 500, id: "foo"});
     
 
-### State Change for the pause() Method
+### State change for the pause() method
 
 The [`pause()`](http://w3c.github.io/web-animations/#dom-animation-pause)
 method is used to pause an animation that’s in progress. If you check the state
@@ -73,7 +73,7 @@ attribute would indicate `idle` if the animation hadn’t started yet, however
 now it reflects the correct state which is 
 [`paused`](http://w3c.github.io/web-animations/#paused-play-state).
 
-### Removing Dashed Names as Keys in Keyframes
+### Removing dashed names as keys in keyframes
 
 To further comply with the spec. and other implementations, Chrome 50 sends a
 warning to the console if dashed names are used for keys in keyframe

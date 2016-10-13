@@ -94,7 +94,7 @@ We just looked at proxying plain objects, but we can just as easily proxy a func
     // 3
     
 
-## Identifying Proxies
+## Identifying proxies
 
 The identity of a proxy can be observed using the JavaScript equality operators (`==` and `===`). As we know, when applied to two objects these operators compare object identities. The next example demonstrates this behavior. Comparing two distinct proxies returns false despite the underlying targets being the same. In a similar vein, the target object is different from any of its proxies:
 
@@ -197,7 +197,7 @@ Another common use case for proxies is extending or redefining the semantics of 
 
 Access control is another good use case for Proxies. Rather than passing a target object to a piece of untrusted code, one could pass its proxy wrapped in a sort of protective membrane. Once the app deems that the untrusted code has completed a particular task, it can revoke the reference which detaches the proxy from its target. The membrane would extend this detachment recursively to all objects reachable from the original target that was defined.
 
-## Using Reflection with Proxies
+## Using reflection with proxies
 
 [Reflect](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect) is a new built-in object that provides methods for interceptable JavaScript operations, very much useful for working with Proxies. In fact, Reflect methods are the the same as those of [proxy handlers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler).
 
@@ -280,17 +280,17 @@ Another example is where one might want to:
   For more Reflect API examples, see [ES6 Proxies](http://tagtree.tv/es6-proxies) by Tagtree.
 
 
-## Polyfilling `Object.observe()`
+## Polyfilling Object.observe()
 
 Although we're saying [goodbye](https://esdiscuss.org/topic/an-update-on-object-observe) to `Object.observe()`, it's now possible to polyfill them using ES2015 Proxies. Simon Blackwell wrote a Proxy-based Object.observe() [shim](https://github.com/anywhichway/proxy-observe) recently that's worth checking out. Erik Arvidsson also wrote a fairly [spec complete](https://mail.mozilla.org/pipermail/es-discuss/2012-July/024111.html) version all the way back in 2012.
 
-## Browser Support
+## Browser support
 
 ES2015 Proxies are supported in Chrome 49, Opera, Microsoft Edge and Firefox. Safari have had mixed public signals towards the feature but we remain optimistic. Reflect is in Chrome, Opera, and Firefox and is in-development for Microsoft Edge.
 
 Google has released a [limited polyfill for Proxy](https://github.com/GoogleChrome/proxy-polyfill). This can only be used for **generic wrappers**, as it can only proxy properties known at the time a Proxy is created.
 
-## Further Reading
+## Further reading
 
 * [ES6 in depth: Proxies and Reflect](https://hacks.mozilla.org/2015/07/es6-in-depth-proxies-and-reflect/)
 * [MDN: ES6 Proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)

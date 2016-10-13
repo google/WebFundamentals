@@ -35,7 +35,7 @@ with the Notifications API as it's implemented in Chrome, follow the
 [spec](https://notifications.spec.whatwg.org/){: .external } and the [spec issue
 tracker](https://github.com/whatwg/notifications/issues).
 
-## Create Compelling Action Buttons with Custom Icons
+## Create compelling action buttons with custom icons
 
 In a recent [post about notification action buttons in Chrome
 49](/web/updates/2016/01/notification-actions),
@@ -69,7 +69,7 @@ keep the icons as small as possible and to precache them in your install event.
 Chrome](https://bugs.chromium.org/p/chromium/issues/detail?id=592188) are not
 yet routed through the service worker.)
 
-## Notification Close Events
+## Notification close events
 
 A frequently requested feature of notifications is the ability to know when the
 user has dismissed a notification. We had no way to do that until a [recent set
@@ -109,7 +109,7 @@ logic.
 You can test this in the [Notification Generator](https://tests.peter.sh/notification-generator/#notificationCloseEvent=true);
 you will get an alert when you close the notification.
 
-## Don't Annoy Your Users When You Replace an Existing Notification
+## Don't annoy your users when you replace an existing notification
 
 I am pretty sure [Uncle Ben](https://en.wikipedia.org/wiki/Uncle_Ben) was
 talking about the notification system and not the powers of Peter Parker when he

@@ -354,7 +354,7 @@ send payloads up to a size of 4078 bytes - 4096 bytes maximum per post, with
     return Buffer.concat([result, cipher.getAuthTag()]);
 
 
-### Web Push
+### Web push
 
 Phew! Now that you have an encrypted payload, you just need to make a
 relatively simple HTTP POST request to the endpoint specified by the user's
@@ -386,7 +386,7 @@ existing JSON payload as follows.
 The value of the `rawData` property must be the base64 encoded
 representation of the encrypted message.
 
-### Debugging / Verifier
+### Debugging / verifier
 
 Peter Beverloo, one of the Chrome engineers who implemented the feature (as
 well as being one of the people who worked on the spec), has

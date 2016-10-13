@@ -7,7 +7,7 @@ description: The WebUSB API makes USB safer and easier to use by bringing it to 
 {# wf_tags: news,webusb,iot,arduino,origintrials #}
 {# wf_featured_image: /web/updates/images/2016-03-02-access-usb-devices-on-the-web/web-usb-hero.jpg #}
 
-# Access USB devices on the Web {: .page-title }
+# Access USB Devices on the Web {: .page-title }
 
 {% include "web/_shared/contributors/beaufortfrancois.html" %}
 
@@ -85,7 +85,7 @@ The trial will end in March 2017. By that point, we expect to have figured
 out any changes necessary to stabilize the feature and move it out from Origin
 Trials.
 
-## Privacy & Security
+## Privacy and security
 
 To understand what WebUSB is and isn't, I recommend the [WebUSB Security
 Model](https://medium.com/dev-channel/the-webusb-security-model-f48ee04de0ab)
@@ -111,7 +111,7 @@ Later a [Public Device Registry](https://wicg.github.io/webusb/#public-device-re
 will be created so that hardware manufacturers can support WebUSB on existing
 devices.
 
-### HTTPS Only
+### HTTPS only
 
 Because this experimental API is a powerful new feature added to the Web,
 Chrome aims to make it available only to [secure
@@ -133,7 +133,7 @@ article](/web/fundamentals/security/)
 for best practices there. For info, you can now get free TLS certificates with
 the new Certificate Authority [Let's Encrypt](https://letsencrypt.org/){: .external }.
 
-### User Gesture Required
+### User gesture required
 
 As a security feature, getting access to connected USB devices with
 `navigator.usb.requestDevice` must be called via a user gesture
@@ -150,7 +150,7 @@ functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions
 -- they have a shorter syntax compared to function expressions and lexically
 bind the value of `this`.
 
-### Get Access to USB devices
+### Get access to USB devices
 
 You can either prompt the user to select a single connected USB device using
 `navigator.usb.requestDevice` or call `navigator.usb.getDevices` to get a list
