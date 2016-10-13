@@ -174,8 +174,8 @@
         <footer class="devsite-utility-footer">
           <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
             <span class="devsite-utility-footer-links">
-              <a href="https://developers.google.com/site-terms/">Terms</a> |
-              <a href="https://www.google.com/intl/en/privacy/">Privacy</a>
+              <a href="https://developers.google.com/site-terms">Terms</a> |
+              <a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a>
             </span>
             <form class="devsite-utility-footer-language">
               <select id="langSelector" class="kd-select">

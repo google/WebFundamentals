@@ -30,8 +30,8 @@ landing_page:
           <a href="https://developers.google.com/shows/rss.xml">
           subscribe</a> to our RSS feed.
         </p>
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="https://developers.google.com/shows/rss.xml">
-        <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://developers.google.com/shows/atom.xml">
+        <link rel="alternate" type="application/rss+xml" title="Web Shows from Google Developers (RSS)" href="https://developers.google.com/web/shows/rss.xml">
+        <link rel="alternate" type="application/atom+xml" title="Web Shows from Google Developers (ATOM)" href="https://developers.google.com/web/shows/atom.xml">
 
   - items:
     - heading: "{{videos.1.snippet.title}}"
