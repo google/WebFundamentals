@@ -231,8 +231,12 @@ gulp.task('test', function(callback) {
     srcBase: TEST_ROOT,
     prefixBase: true
   };
-  if (GLOBAL.WF.options.lang !== null) {
-    opts.srcBase = path.join(TEST_ROOT, GLOBAL.WF.options.lang);
+  if (GLOBAL.WF.options.lang.length === 1) {
+    opts.srcBase = path.join(TEST_ROOT, GLOBAL.WF.options.lang[0]);
+  } else if (GLOBAL.WF.options.lang.length !== GLOBAL.WF.langs.length) {
+    gutil.log(' ', gutil.colors.red('ERROR:'), 'Language options not supported.');
+    gutil.log(' ', 'You can only provide ZERO (all) or ONE language to test');
+    throw new Error('Language options not supported');
   }
   gutil.log('Base directory:', gutil.colors.cyan(opts.srcBase));
   gutil.log('');

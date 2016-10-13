@@ -17,8 +17,8 @@ GLOBAL.WF = {
     data: 'src/data/',
     templates: 'src/templates/',
   },
-  maxArticlesInFeed: 3,
-  langs: ['en', 'ar', 'de', 'es', 'fr', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw'],
+  maxArticlesInFeed: 10,
+  langs: ['en', 'ar', 'de', 'es', 'fr', 'he', 'it', 'ja', 'ko', 'nl', 'pl', 'pt-br', 'ru', 'tr', 'zh-cn', 'zh-tw'],
 };
 var defaultOptions = {
   string: ['lang', 'skipReviewRequired', 'testWarnOnly', 'cl', 'verbose'],
@@ -33,12 +33,24 @@ var defaultOptions = {
 }
 GLOBAL.WF.options = minimist(process.argv.slice(2), defaultOptions);
 
+var optionsOK = true;
 gutil.log('---------------------------------');
 gutil.log(gutil.colors.dim('Web') + gutil.colors.bold('Fundamentals'), 'Build Script');
 gutil.log('---------------------------------');
 if (GLOBAL.WF.options.lang) {
-  gutil.log('Language: ', gutil.colors.cyan(GLOBAL.WF.options.lang));
+  var langs = GLOBAL.WF.options.lang.split(',');
+  langs.forEach(function(lang) {
+    if (GLOBAL.WF.langs.indexOf(lang) === -1) {
+      gutil.log(' ', 'ERROR: Language ', chalk.red(lang), 'not supported.');
+      optionsOK = false;
+    }
+  });
+  GLOBAL.WF.options.lang = langs;
+  
+} else {
+  GLOBAL.WF.options.lang = GLOBAL.WF.langs;
 }
+gutil.log('Language: ', gutil.colors.cyan(GLOBAL.WF.options.lang));
 if (GLOBAL.WF.options.cl) {
   gutil.log('Change list: ', gutil.colors.cyan(GLOBAL.WF.options.cl));
 }
@@ -54,8 +66,10 @@ if (GLOBAL.WF.options.testWarnOnly !== false) {
   gutil.log('testWarnOnly: ', gutil.colors.cyan('true'));
   GLOBAL.WF.options.testWarnOnly = true;
 }
+if (optionsOK === false) {
+  throw new Error('Invalid options were provided.');
+}
 gutil.log('');
-
 
 gulp.task('clean', function() {
   var filesToDelete = [
@@ -78,10 +92,6 @@ gulp.task('clean', function() {
   var opts = {dryRun: false, dot: true};
   var deletedFiles = del.sync(filesToDelete, opts);
   gutil.log(' ', 'Deleted', gutil.colors.magenta(deletedFiles.length + ' files'));
-});
-
-gulp.task('deploy', function(cb) {
-  runSequence('clean','build', 'test', cb);
 });
 
 gulp.task('presubmit', function(cb) {
