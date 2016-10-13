@@ -7,7 +7,7 @@ description: Support for canvas.toBlob set to land in Chrome 50.
 {# wf_tags: images,performance,workers,chrome50 #}
 {# wf_featured_image: /web/updates/images/generic/photo.png #}
 
-# Canvas toBlob() support added in Chrome 50 {: .page-title }
+# Canvas toBlob() Support Added in Chrome 50 {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 

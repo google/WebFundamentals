@@ -80,6 +80,7 @@ CSS Containment is a new property, with the keyword contain, which supports four
 Each of these values allows you to limit how much rendering work the browser needs to do. Let’s take a look at each in a little more detail.
 
 ### Layout (contain: layout)
+
 > This value turns on layout containment for the element. This ensures that the containing element is totally opaque for layout purposes; nothing outside can affect its internal layout, and vice versa.
 > [Containment spec](https://drafts.csswg.org/css-containment/#valdef-contain-layout)
 

@@ -20,7 +20,7 @@ important performance tuning technique. The new font-display descriptor for
 depending on how long it takes for them to load.
 
 
-## Differences in Font Rendering Today
+## Differences in font rendering today
 
 Web Fonts give developers the ability to incorporate rich typography into
 their projects with the tradeoff that if the user does not already posses a
@@ -139,7 +139,7 @@ To help remedy this situation the CSS Working Group has proposed a new
 `@font-face` descriptor, `font-display`, and a corresponding property for
 controlling how a downloadable font renders before it is fully loaded.
 
-## Font Download Timelines
+## Font download timelines
 
 Similar to the existing font timeout behaviors that some browsers implement
 today, `font-display` segments the lifetime of a font download into three major
@@ -161,7 +161,7 @@ face is used normally.
 Understanding these periods means you can use `font-display` to decide how your
 font should render depending on whether or when it was downloaded.
 
-## Which font-display is Right for You?
+## Which font-display is right for you?
 
 To work with the `font-display` descriptor, add it your `@font-face` at-rules:
 
@@ -191,6 +191,7 @@ This value should only be used if rendering text in a particular typeface
 is required for the page to be useable.
 
 ### swap
+
 **swap** gives the font face a zero second block period and an infinite swap period.
 This means the browser draws text immediately with a fallback if the font face
 isn’t loaded, but swaps the font face in as soon as it loads. Similar to **block**,
@@ -222,7 +223,7 @@ to do or it may do it as a low priority depending on what it thinks would be
 best for the user. This can be beneficial in situations where the user is on a
 weak connection and pulling down a font may not be the best use of resources.
 
-## Browser Support
+## Browser support
 
 `font-display` is currently behind the Experimental Web Platform Features flag
 in desktop Chrome 49, and is shipping in Opera and Opera for Android.

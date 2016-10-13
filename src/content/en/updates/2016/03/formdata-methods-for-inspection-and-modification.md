@@ -7,7 +7,7 @@ description: In Chrome 50, you can now interact with your FormData instances bef
 {# wf_tags: forms,formdata,input,chrome50 #}
 {# wf_featured_image: /web/updates/images/2016/03/formdata-methods-for-inspection-and-modification/form.png #}
 
-# FormData methods for inspection and modification {: .page-title }
+# FormData Methods for Inspection and Modification {: .page-title }
 
 {% include "web/_shared/contributors/samthorogood.html" %}
 
@@ -21,7 +21,7 @@ If you're not already using FormData, it's a simple, [well-supported](http://can
 
 For some examples, read on!
 
-## Parse Real Forms Like a Pro
+## Parse real forms like a pro
 
 `FormData` can be constructed from a real HTML form, taking a snapshot of all its current values.
 However, the object used to be entirely opaque. All you could do was send it on, unchanged, to a server.

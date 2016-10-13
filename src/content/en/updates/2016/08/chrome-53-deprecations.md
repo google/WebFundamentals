@@ -63,6 +63,7 @@ DHE-based ciphers have been deprecated since Chrome 51. Support is being removed
 
 
 ## FileError deprecation warning
+
 **TL;DR:** Removal of the deprecated `FileError` interface is expected in Chrome 54. Replace references to **`err`**`.code` with **`err`**`.name` and **`err`**`.message`. 
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/kJMa2rpAYqI/discussion) &#124;

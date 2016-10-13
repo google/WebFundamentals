@@ -7,7 +7,7 @@ description: URLSearchParams trivial access and manipulation of the URL's query 
 {# wf_tags: url,chrome49 #}
 {# wf_featured_image: /web/updates/images/2016/01/urlsearchparams/overview.png #}
 
-# Easy URL manipulation with URLSearchParams {: .page-title }
+# Easy URL Manipulation with URLSearchParams {: .page-title }
 
 {% include "web/_shared/contributors/ericbidelman.html" %}
 
@@ -139,7 +139,7 @@ Links also get a `.searchParams` property:
     // a.searchParams.get('filter') === 'api';
     
 
-## Feature detection & browser support
+## Feature detection and browser support
 
 Currently, Chrome 49, Firefox 44, and Opera 36 support `URLSearchParams`.
 
