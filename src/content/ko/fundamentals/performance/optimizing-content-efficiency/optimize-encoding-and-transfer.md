@@ -101,7 +101,7 @@ Note: 압축이 안된 JQuery 라이브러리는 현재 300KB 정도 크기다. 
 - 몇몇의 CDNs는 GZIP 사용을 위한 추가적인 관리가 필요하다.
 
 
-[GZIP](https://en.wikipedia.org/wiki/Gzip) 는 어떤 바이트 스트림에도 적용될 수 있는 일반적인 압축기 입니다: 기본 구현 방식은, 이전에 본 컨텐츠를 기억하여 중복 데이터 프레그먼트를 찾아 효율적으로 교체하는 것입니다 - 궁금하다면 이 링크를 참조하세요, [great low-level explanation of GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). 그러나, 실제로 GZIP은 텍스트 기반 컨텐츠에서 가장 잘 수행합니다, 종종 더 큰 파일들에 대해 70-90% 의 압축비율을 보입니다. 반면에 이미 다른 알고리즘을 이용하여 압축된 리소스(예. 대부분의 이미지 형식)들에 대해 GZIP을 수행하면, 결과가 개선되지 않을 수 있습니다.
+[GZIP](https://en.wikipedia.org/wiki/Gzip){: .external } 는 어떤 바이트 스트림에도 적용될 수 있는 일반적인 압축기 입니다: 기본 구현 방식은, 이전에 본 컨텐츠를 기억하여 중복 데이터 프레그먼트를 찾아 효율적으로 교체하는 것입니다 - 궁금하다면 이 링크를 참조하세요, [great low-level explanation of GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). 그러나, 실제로 GZIP은 텍스트 기반 컨텐츠에서 가장 잘 수행합니다, 종종 더 큰 파일들에 대해 70-90% 의 압축비율을 보입니다. 반면에 이미 다른 알고리즘을 이용하여 압축된 리소스(예. 대부분의 이미지 형식)들에 대해 GZIP을 수행하면, 결과가 개선되지 않을 수 있습니다.
 
 모든 최신 브라우저들은 모든 HTTP 요청에 대한 GZIP 압축을 지원합니다: 우리의 할 일은 클라이언트의 요청을 받았을 때, 서버가 압축된 리소스을 다룰 수 있도록 적절하게 서버를 구성하는 것 입니다.
 

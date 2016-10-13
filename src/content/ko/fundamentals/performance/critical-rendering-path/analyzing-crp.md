@@ -15,7 +15,7 @@ description: 크리티컬 렌더링 패스 성능의 병목 현상을 식별하�
 
 
 크리티컬 렌더링 패스를 최적화 하는 목적은 브라우저가 페이지를 최대한 빨리 그리게 하기 위해서 입니다:
-빠른 페이지는 높은 사용율과, 페이지 조회수, [improved conversion](https://www.google.com/think/multiscreen/success.html) 를 이끕니다.
+빠른 페이지는 높은 사용율과, 페이지 조회수, [improved conversion](https://www.google.com/think/multiscreen/success.html){: .external } 를 이끕니다.
 결과적으로, 우리는 페이지 방문자가 빈 스크린을 멍하게 쳐다보고 있는 시간을 최소하 하기 위해 리소스들의 로딩 순서들을 최적화 해야합니다.
 
 이 과정을 상세히 설명하기 위해서, 가장 간단한 케이스 부터 시작하여 페이지에 리소스, 스타일, 어플리케이션 로직들을 차근차근 추가하겠습니다 - 또한 과정 중에 잘못될 수 있는 부분과 그 점들을 어떻게 바로 잡아 최적화 할 수 있는지 살펴봅니다.

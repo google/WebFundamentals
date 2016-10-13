@@ -24,13 +24,13 @@ description: 애니메이션은 성능이 우수해야 합니다. 그렇지 않�
 
 레이아웃 또는 그림 그리기를 트리거하는 애니메이션 속성은 가급적 피해야 합니다. 최신 브라우저의 경우 이는 애니메이션을 `opacity` 또는 `transform`으로 제한하는 것을 의미하며 이 둘은 브라우저에서 효과적으로 최적화될 수 있습니다. 애니메이션이 JavaScript 또는 CSS에 의해 처리되는지 여부는 상관이 없습니다.
 
-개별 CSS 속성에 의해 트리거되는 작업의 전체 목록은 [CSS 트리거](http://csstriggers.com)을 참조하십시오. [HTML5 Rocks에서 고성능 애니메이션](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) 생성에 대한 전체 가이드도 참조하십시오.
+개별 CSS 속성에 의해 트리거되는 작업의 전체 목록은 [CSS 트리거](http://csstriggers.com){: .external }을 참조하십시오. [HTML5 Rocks에서 고성능 애니메이션](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/) 생성에 대한 전체 가이드도 참조하십시오.
 
 {# include shared/related_guides.liquid inline=true list=page.related-guides.blocking-css #}
 
 ### will-change 속성 사용
 
-[`will-change`](http://dev.w3.org/csswg/css-will-change/)를 사용하여 브라우저가 요소의 속성 변경 계획을 알 수 있도록 하는 것이 좋습니다. 그러면 개발자가 변경하기 전에 브라우저가 최적화할 수 있습니다. 하지만 브라우저가 리소스를 낭비하여 더 많은 성능 문제를 야기할 수 있으므로 `will-change`를 남용하지 않도록 주의하십시오.
+[`will-change`](http://dev.w3.org/csswg/css-will-change/){: .external }를 사용하여 브라우저가 요소의 속성 변경 계획을 알 수 있도록 하는 것이 좋습니다. 그러면 개발자가 변경하기 전에 브라우저가 최적화할 수 있습니다. 하지만 브라우저가 리소스를 낭비하여 더 많은 성능 문제를 야기할 수 있으므로 `will-change`를 남용하지 않도록 주의하십시오.
 
 일반적으로 사용자의 상호작용으로 또는 애플리케이션의 상태로 인해 다음 200ms 이내에 애니메이션이 트리거될 수 있는 경우 애니메이션 요소에 will-change를 적용하는 것이 좋습니다. 대부분의 경우 앱의 현재 보기에서 애니메이션할 요소는 변경할 속성에 대해 `will-change`를 활성화해야 합니다. 이전 가이드에서 사용한 상자 샘플의 경우, 변형 및 불투명도에 `will-change`를 추가하면 다음과 같게 됩니다.
 
@@ -49,6 +49,6 @@ description: 애니메이션은 성능이 우수해야 합니다. 그렇지 않�
 * CSS 기반 애니메이션은 일반적으로 브라우저의 '기본 스레드'가 아닌 별도의 스레드에서 처리되며, 거기에서 스타일 지정, 레이아웃, 그림 그리기, JavaScript가 실행됩니다. 즉, 브라우저가 기본 스레드에서 비용이 많이 드는 작업을 실행 중인 경우 CSS 기반 애니메이션은 중단되지 않고 잠재적으로 계속 실행될 수 있습니다. 대부분의 경우 변형 및 불투명도 변경은 "컴포지터 스레드"라는 CSS 기반 애니메이션과 동일한 스레드가 처리할 수 있으므로, 애니메이션에서 이들을 사용하는 것이 좋습니다.
 * 애니메이션이 그림 그리기 및/또는 레이아웃을 트리거하는 경우, 작업을 수행하기 위해 "기본 스레드"가 필요합니다. 이는 CSS 및 JavaScript 기반 애니메이션에 모두 적용되며, 레이아웃 또는 그림 그리기의 오버헤드는 CSS 또는 JavaScript 실행과 연관된 모든 작업에 악영향을 미치고 해결 불가능한 문제를 유발할 수 있습니다.
 
-주어진 속성 애니메이션에 의해 어떤 작업이 트리거되는지 정확히 알고 싶은 경우 [CSS 트리거](http://csstriggers.com)를 참조하십시오.
+주어진 속성 애니메이션에 의해 어떤 작업이 트리거되는지 정확히 알고 싶은 경우 [CSS 트리거](http://csstriggers.com){: .external }를 참조하십시오.
 
 

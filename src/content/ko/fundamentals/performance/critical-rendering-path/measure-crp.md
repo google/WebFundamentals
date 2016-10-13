@@ -37,7 +37,7 @@ description: 크리티컹 렌더링 패스를 측정하는 방법을 배워봅�
 HTML 명세서는 각각의 모든 이벤트에 대해서 언제 발생되어야 하는 지, 어떤 조건이 충족되어야 하는 지 등의 상세한 조건을 지시합니다. 우리의 목적상, 크리티컬 렌더링 패스에 관련된 중요한 몇가지 마일스톤에 대해서 집중하겠습니다.
 
 * `domInteractive` DOM이 준비 되었을 때 입니다.
-* `domContentLoaded` [DOM과 CSSOM이 모두 준비되었을 때](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/)만 표시 됩니다.
+* `domContentLoaded` [DOM과 CSSOM이 모두 준비되었을 때](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/){: .external }만 표시 됩니다.
     * 파서를 블록하는 자바스크립트가 없을 때 `DOMContentLoaded`는 `domInteractive` 바로 다음에 발생합니다.
 * `domComplete` 페이지와 그 페이지에 속한 모든 자원들이 준비 되었을 때 표시됩니다.
 
@@ -52,7 +52,7 @@ HTML 명세서는 각각의 모든 이벤트에 대해서 언제 발생되어야
 
 <img src="images/device-navtiming-small.png" class="center" alt="NavTiming demo">
 
-모든것이 말한대로 되었다면, 우리는 추적하기 위한 몇 가지 특정한 마일스톤과 그 결과를 출력하기 위한 간단한 함수가 생겼습니다. 페이지에 이러한 결과를 출력하는것 대신 여러분은 코드를 수정하여 분석 서버([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784))로 보낼 수 있습니다. 이것은 여러분들의 페이지 성능 색인을 유지하여 몇 가지 최적화 작업으로 이득을 얻을 페이지들을 선정하는 데 좋은 방법입니다.
+모든것이 말한대로 되었다면, 우리는 추적하기 위한 몇 가지 특정한 마일스톤과 그 결과를 출력하기 위한 간단한 함수가 생겼습니다. 페이지에 이러한 결과를 출력하는것 대신 여러분은 코드를 수정하여 분석 서버([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784){: .external })로 보낼 수 있습니다. 이것은 여러분들의 페이지 성능 색인을 유지하여 몇 가지 최적화 작업으로 이득을 얻을 페이지들을 선정하는 데 좋은 방법입니다.
 
 Translated By: 
 {% include "web/_shared/contributors/swengineer.html" %}

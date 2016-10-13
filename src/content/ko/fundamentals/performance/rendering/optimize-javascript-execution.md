@@ -45,7 +45,7 @@ Note: 실행 중인 JIT를 보려면 <a href='http://mrale.ph/irhydra/2/'>Vyache
 
 <img src="images/optimize-javascript-execution/settimeout.jpg"  alt="브라우저에서 프레임 누락을 일으키는 setTimeout">
 
-실제로 jQuery의 기본 `animate` 동작은 현재 `setTimeout`을 사용하는 것입니다! [이를 패치하여 `requestAnimationFrame`을 사용](https://github.com/gnarf/jquery-requestAnimationFrame)할 수 있는데, 이 방법을 강력히 권장합니다.
+실제로 jQuery의 기본 `animate` 동작은 현재 `setTimeout`을 사용하는 것입니다! [이를 패치하여 `requestAnimationFrame`을 사용](https://github.com/gnarf/jquery-requestAnimationFrame){: .external }할 수 있는데, 이 방법을 강력히 권장합니다.
 
 ## 복잡성 감소 또는 Web Workers 사용
 
@@ -53,7 +53,7 @@ JavaScript는 브라우저의 기본 스레드에서 스타일 계산, 레이아
 
 JavaScript를 언제 얼마나 오래 실행할지 전략을 수립해야 합니다. 예를 들어, 스크롤과 같은 애니메이션의 경우, 이상적으로 **3-4ms**의 영역에서 JavaScript를 유지해야 합니다. 이보다 길면 너무 많은 시간이 걸릴 위험이 있습니다. 유휴 상태에서는 소요 시간에 대한 걱정을 덜 수 있습니다.
 
-예를 들어 DOM 액세스가 필요하지 않은 경우 등 많은 경우에 순수한 계산 작업을 [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/basic_usage)로 이전할 수 있습니다. 정렬 또는 검색과 같은 데이터 조작 또는 순회(traversal)는 대개 이 모델에 적합하며 로드 및 모델 생성도 마찬가지입니다.
+예를 들어 DOM 액세스가 필요하지 않은 경우 등 많은 경우에 순수한 계산 작업을 [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/basic_usage){: .external }로 이전할 수 있습니다. 정렬 또는 검색과 같은 데이터 조작 또는 순회(traversal)는 대개 이 모델에 적합하며 로드 및 모델 생성도 마찬가지입니다.
 
 
     var dataSortWorker = new Worker("sort-worker.js");
@@ -94,7 +94,7 @@ JavaScript를 언제 얼마나 오래 실행할지 전략을 수립해야 합니
     }
     
 
-이 접근방식은 UX 및 UI가 중요하며, [진행률 또는 작업 표시기를 사용](http://www.google.com/design/spec/components/progress-activity.html)하여 작업이 처리 중임을 사용자가 알 수 있도록 해야 합니다. 어떤 경우이든 이 접근방식은 앱의 기본 스레드를 사용 가능한 상태로 유지하여 사용자 상호작용에 계속 반응할 수 있도록 합니다.
+이 접근방식은 UX 및 UI가 중요하며, [진행률 또는 작업 표시기를 사용](http://www.google.com/design/spec/components/progress-activity.html){: .external }하여 작업이 처리 중임을 사용자가 알 수 있도록 해야 합니다. 어떤 경우이든 이 접근방식은 앱의 기본 스레드를 사용 가능한 상태로 유지하여 사용자 상호작용에 계속 반응할 수 있도록 합니다.
 
 ## JavaScript의 "프레임 비용" 살펴보기
 
