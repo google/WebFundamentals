@@ -1,9 +1,11 @@
 'use strict';
 
+var fs = require('fs');
 var gulp = require('gulp');
 var path = require('path');
 var chalk = require('chalk');
 var glob = require('globule');
+var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var exec = require('child_process').exec;
 
@@ -39,15 +41,17 @@ function promisedExec(cmd, cwd) {
 }
 
 gulp.task('stage', function(cb) {
-  console.log('aa');
   var patterns = ['**/index.yaml', '**/*.md'];
   var opts = {srcBase: SRC_BASE};
   var dirs = glob.find(patterns, opts);
-  return Promise.all(dirs.map(function(file) {
-    var url = path.join(SRC_BASE, file);
-    url = url.replace('src/content/en/', '');
-    url = url.replace('.md', '');
-    var cmd = 'python test.py en ' + url + ' build';
-    return promisedExec(cmd, '.');
-  }));
+  fs.writeFileSync('_build-me.yaml', jsYaml.safeDump(dirs));
+  var cmd = 'python build-static.py';
+  return promisedExec(cmd, '.');
+  // return Promise.all(dirs.map(function(file) {
+  //   var url = path.join(SRC_BASE, file);
+  //   url = url.replace('src/content/en/', '');
+  //   url = url.replace('.md', '');
+  //   var cmd = 'python test.py en ' + url + ' build';
+  //   return promisedExec(cmd, '.');
+  // }));
 });
