@@ -21,6 +21,8 @@ upper_tabs:
           path: /web/resources/style-guide
         - title: Widgets
           path: /web/resources/widgets
+        - title: Including Videos
+          path: /web/resources/including-videos
         - title: Contributors
           path: /web/resources/contributors
         - title: Translation Guideance
