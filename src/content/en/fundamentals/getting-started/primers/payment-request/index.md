@@ -234,7 +234,7 @@ Upon a user approval for a payment request, the [`show`](https://www.w3.org/TR/p
 For credit card payments, the response is standardized. For non-credit card payments (e.g., Android Pay), the response will be documented by the provider. A credit card response contains the following dictionary:  
 
 `cardholderName`  
-`cardholderNumber`  
+`cardNumber`  
 `expiryMonth`  
 `expiryYear`  
 `cardSecurityCode`  
