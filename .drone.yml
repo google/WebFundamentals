@@ -16,7 +16,7 @@ deploy:
   bash:
     when:
       repo: google/WebFundamentals
-      branch: next-version
+      branch: master
     image: crhym3/drone-plugin-bash-node
     env:
       - ROBOT_PASSPHRASE=$$ROBOT_PASSPHRASE
@@ -24,4 +24,4 @@ deploy:
       - gpg --no-use-agent --output tools/builder-key.json --passphrase $ROBOT_PASSPHRASE tools/builder-key.json.enc
       - gcloud config set project web-central
       - gcloud auth activate-service-account --key-file=tools/builder-key.json
-      - gcloud preview app deploy app.yaml -q --no-promote --version next-version
+      - gcloud preview app deploy app.yaml -q --no-promote --version master
