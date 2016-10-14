@@ -28,7 +28,7 @@ the Chrome DevTools Elements panel.
 To live-edit a DOM node, simply double-click a 
 [selected element](#inspect-an-element) and make changes:
 
-<video src="animations/edit-element-name.mp4"
+<video src="animations/edit-element-name.mp4" style="max-width:100%;"
        loop muted autoplay controls></video>
 
 The DOM tree view shows the current state of the tree; it may not match 
@@ -81,7 +81,7 @@ positioning specifics.
 
 ## View local changes
 
-<video src="animations/revisions.mp4"
+<video src="animations/revisions.mp4" style="max-width:100%;"
        autoplay loop muted controls></video>
 
 To view a history of live-edits made to your page:
