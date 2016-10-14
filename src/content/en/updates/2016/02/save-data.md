@@ -25,7 +25,7 @@ user demand for fast and light applications and pages. Let's fix that.
 
 **The new [`Save-Data` client hint request header](https://httpwg.github.io/http-extensions/client-hints.html#the-save-data-hint) available in Chrome, Opera, and Yandex browsers enables developers to deliver fast and light applications to users who have opted-in to "data savings" mode in their browser.** By identifying this request header, the application can customize and deliver an optimized user experience to cost- and performance-constrained users.
 
-## The Need for Lightweight Apps and Pages
+## The need for lightweight apps and pages
 
 ![Weblight stats](/web/updates/images/2016/02/save-data/google-weblight.png)
 
@@ -43,7 +43,7 @@ subscribers can often find themselves with poor and expensive connectivity.
 
 Note: as a corollary to the above, the need for lightweight experiences is not a problem that will "go away" in any foreseeable future.
 
-## Limits of Proxy Browsers and Transcoding Services
+## Limits of proxy browsers and transcoding services
 
 Many popular browsers, both desktop and mobile, allow the user to enable a "data saving" mode, which gives permission to the browser to apply some set of
 optimizations to reduce the amount of data required to render the page. For
@@ -68,7 +68,7 @@ On the other hand, transcoding services, such as the ["web light" experience off
 
 In short, counting on third-party services is both suboptimal and unreliable. **We&mdash;the site owners and web developers&mdash;need to take the responsibility and control over the user experience for data- and cost-constrained users**&mdash;e.g. respond with an alternative "lighter" application template, reduce the number of image bytes (fewer images, higher compression ratios, smaller display size, and so on), switch to on-demand loading of expensive content, and so on.
 
-## Detecting the **Save-Data** User Preference
+## Detecting the **Save-Data** user preference
 
 How do you know when to deliver the "light" experience to your users? Your application should check for the new `Save-Data` client hint request header:
 
@@ -86,7 +86,7 @@ In turn, if your application is [using a service worker](/web/fundamentals/getti
 
 > _Tip: Are you using [PageSpeed for Apache or Nginx](/speed/pagespeed/module/) to optimize your pages? If so, [see  this discussion](https://github.com/pagespeed/mod_pagespeed/issues/1258) to learn how to enable Save-Data savings for your users._
 
-## Browser Support
+## Browser support
 
 * **Chrome 49+ will advertise `Save-Data`** [whenever the user enables](https://support.google.com/chrome/answer/2392284) the "Data Saver" option on mobile, or the "Data Saver" extension on desktop browsers.
 
@@ -94,7 +94,7 @@ In turn, if your application is [using a service worker](/web/fundamentals/getti
 
 * **Yandex 16.2+ will advertise `Save-Data`** whenever [Turbo mode](https://yandex.com/support/newbrowser/search-and-browse/turbo.xml) is enabled on desktop, or [mobile browsers](https://yandex.com/support/browser-mobile-android-phone/navigation_turbo-mode.xml#navigation_turbo-mode).
 
-## Implementation Tips and Best Practices
+## Implementation tips and best practices
 
 1. Lightweight applications are not lesser applications. They don't omit
    important functionality or data that is critical to help the user find and

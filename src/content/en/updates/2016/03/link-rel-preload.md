@@ -52,7 +52,7 @@ browser will set appropriate request headers, request priority, as well as apply
 any relevant [Content Security Policy](http://www.html5rocks.com/en/tutorials/security/content-security-policy/)
 directives that might be in place for the correct resource context.
 
-## Learn (a Lot) More
+## Learn (a lot) more
 
 [Yoav Weiss](https://twitter.com/yoavweiss) wrote
 [the definitive guide](https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/)

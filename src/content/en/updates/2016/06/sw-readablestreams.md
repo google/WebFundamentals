@@ -97,7 +97,7 @@ browser's progressive HTML rendering capabilities. Other resources that can also
 be progressively rendered, like some image and video formats, can also benefit
 from this approach.
 
-## Streams? or app shells?
+## Streams? Or app shells?
 
 The existing best practices around using service workers to power your web apps
 focus on an [App Shell + dynamic content](/web/updates/2015/11/app-shell)

@@ -37,7 +37,7 @@ The benefits of additional time stamp accuracy can be seen in these examples:
   * [Calculating mouse velocity](https://googlechrome.github.io/samples/event-timestamp/index.html)
   * [Measuring scroll “jank”](http://rbyers.github.io/scroll-latency.html)
 
-### Cross-browser & Legacy Considerations
+### Cross-browser and legacy considerations
 
 If you have existing code that compares <code>Event.timeStamp</code> values from
 two events, you should not have to adjust your code on account of the shift to
