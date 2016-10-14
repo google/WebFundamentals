@@ -7,13 +7,29 @@ toc:
       section:
       - title: Cache Contains start_url From Manifest
         path: /web/tools/lighthouse/audits/cache-contains-start_url
-      - title: URL Responds with a 200 When Offline
-        path: /web/tools/lighthouse/audits/http-200-when-offline
+      - title: Content Size Correctly for Viewport
+        path: /web/tools/lighthouse/audits/content-sized-correctly-for-viewport
+      - title: Critical Request Chains
+        path: /web/tools/lighthouse/audits/critical-request-chains
+      - title: Estimated Input Latency
+        path: /web/tools/lighthouse/audits/estimated-input-latency
+      - title: First Meaningful Paint
+        path: /web/tools/lighthouse/audits/first-meaningful-paint
+      - title: Has a Registered Service Worker
+        path: /web/tools/lighthouse/audits/registered-service-worker
+      - title: HTML Has Viewport Meta Tag
+        path: /web/tools/lighthouse/audits/has-viewport-meta-tag
+      - title: Page Contains Some Content When Its Scripts Are Not Available
+        path: /web/tools/lighthouse/audits/no-js
       - title: Site Redirects HTTP Traffic to HTTPS
         path: /web/tools/lighthouse/audits/http-redirects-to-https
       - title: Site is on HTTPS
         path: /web/tools/lighthouse/audits/https
-      - title: Page Contains Some Content When Its Scripts Are Not Available
-        path: /web/tools/lighthouse/audits/no-js
-      - title: Has a Registered Service Worker
-        path: /web/tools/lighthouse/audits/registered-service-worker
+      - title: Speed Index
+        path: /web/tools/lighthouse/audits/speed-index
+      - title: Time to Interactive
+        path: /web/tools/lighthouse/audits/time-to-interactive
+      - title: URL Responds with a 200 When Offline
+        path: /web/tools/lighthouse/audits/http-200-when-offline
+      - title: User Timing Marks and Measures
+        path: /web/tools/lighthouse/audits/user-timing
