@@ -7,7 +7,7 @@ description: È possibile accedere al Web con numerosi dispositivi che spaziano 
 
 # Il tuo primo sito per dispositivi multipli {: .page-title }
 
-Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893){: .external } course on Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
