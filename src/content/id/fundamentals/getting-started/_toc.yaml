@@ -1,0 +1,37 @@
+toc:
+  - title: Memulai
+    section:
+    - title: Selamat Datang
+      path: /web/fundamentals/getting-started/
+    - title: Code Labs
+      section:
+      - title: Aplikasi Web Progresif (Progressive Web App) Anda yang Pertama
+        path: /web/fundamentals/getting-started/codelabs/your-first-pwapp/
+      - title: Men-debug Service Worker
+        path: /web/fundamentals/getting-started/codelabs/debugging-service-workers/
+      - title: Aplikasi Web Offline Anda yang Pertama
+        path: /web/fundamentals/getting-started/codelabs/offline/
+      - title: Web Push Notification Anda yang Pertama
+        path: /web/fundamentals/getting-started/codelabs/push-notifications/
+      - title: Temukan dan Perbaiki Masalah Kinerja Aplikasi Web
+        path: /web/fundamentals/getting-started/codelabs/web-perf/
+      - title: Mulai Situs Anda dengan Web Starter Kit
+        path: /web/fundamentals/getting-started/web-starter-kit/
+      - title: Situs Multi-Device Site Anda yang Pertama
+        path: /web/fundamentals/getting-started/your-first-multi-screen-site/
+    - title: Apa yang Membuat Situs Mobile Menarik?
+      path: /web/fundamentals/getting-started/principles/
+    - title: "Service Worker: Sebuah Pengenalan"
+      path: /web/fundamentals/getting-started/primers/service-workers
+    - title: "JavaScript Promises: Sebuah Pengenalan"
+      path: /web/fundamentals/getting-started/primers/promises
+    - title: "Shadow DOM v1: Web Component yang Dapat Berdiri Sendiri"
+      path: /web/fundamentals/getting-started/primers/shadowdom
+    - title: "Custom Elements v1: Web Component yang bisa Digunakan Ulang"
+      path: /web/fundamentals/getting-started/primers/customelements
+    - title: "Payment Request API"
+      section:
+      - title: Panduan Integrasi
+        path: /web/fundamentals/getting-started/primers/payment-request/
+      - title: Mengintegrasikan Android Pay ke Payment Request
+        path: /web/fundamentals/getting-started/primers/payment-request/android-pay
