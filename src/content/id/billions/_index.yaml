@@ -1,0 +1,177 @@
+project_path: /web/_project.yaml
+book_path: /web/_book.yaml
+landing_page:
+  custom_css_path: /web/styles/wf-root.css
+
+  header:
+    description: >
+      <h2 class="wf-header-title">Building for Billions</h2>
+      <p>
+        Miliaran pengguna online memiliki beragam keunikan tersendiri:
+        lokasi mereka, pengalaman budaya, keahlian komputer,
+        konektifitas, dan jenis perangkat yang mereka gunakan.
+      </p>
+
+  rows:
+
+  - classname: devsite-landing-row-50
+    items:
+    - description: >
+        <h4>Miliaran pengguna berikutnya hampir semuanya menggunakan ponsel</h4>
+        <p>
+          Ini merupakan tantangan unik bagi pengembang web karena harus meninggalkan
+          strategi-terbatas ponsel dulu (mobile first) untuk mendukung strategi
+          ponsel yang lebih komprehensif.
+        </p>
+        <p>
+          Anda bisa mengatasi tantangan ini dengan cara memfokuskan pada beberapa
+          area utama seperti di bawah ini.
+        </p>
+      youtube_id: E6hGubMkNfM
+
+  # TWO
+  - classname: devsite-landing-row-no-image-background
+    items:
+    - heading: Desain untuk sambungan tanpa jeda
+      description: >
+        Bandwidth rendah dan sambungan yang terputus-putus sudah biasa bagi banyak
+        pengguna internet. Kebanyakan orang yang online masih memiliki koneksi 2G,
+        atau "3G" yang sering menurun ke 2G. Bahkan pada 2020, lebih dari 10% dari pengguna
+        internet masih berada di jaringan 2G. Banyak ponsel yang masih digunakan secara offline, dan pengguna
+        mengaktifkan mode pesawat (airplane mode) untuk menghindari konsumsi data berlebihan.
+      image_path: images/connectivity.png
+      buttons:
+      - label: Pengujian dengan menirukan bandwidth rendah dan latensi tinggi
+        path: /web/fundamentals/performance/poor-connectivity/testing/
+        classname: wf-small-link
+      - label: Menangani sambungan yang tidak bisa diandalkan dan "lie-fi"
+        path: /web/fundamentals/performance/poor-connectivity/lie-fi/
+        classname: wf-small-link
+      - label: Desain untuk offline
+        path: /web/fundamentals/getting-started/your-first-offline-web-app/
+        classname: wf-small-link
+      - label: Mengurangi besarnya pengunduhan data
+        path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads/
+        classname: wf-small-link
+      - label: Menjadikan instalasi dan pembaruan (update) sekecil dan secepat mungkin
+        path: /web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer/
+        classname: wf-small-link
+    - heading: Menghemat Penggunaan Data
+      description: >
+        Biaya data yang tinggi sering menjadi penghalang besar untuk mengakses
+        koneksi yang buruk. Pengguna ponsel yang ingin hemat; bahkan yang berlangganan data "tak terbatas"
+        bisa berubah menjadi mahal ketika menjelajah ke luar kota (roaming) dan bisa mengeluarkan biaya tak terduga.
+        Banyak pengguna ponsel yang sangat sadar biaya.
+        Contohnya: Langganan data 500MB di India nilainya sama dengan
+        bekerja 17 jam dengan upah minimum di sana.
+      image_path: images/cost.png
+      buttons:
+      - label: Memahami biaya pemuatan halaman dan komponen aplikasi
+        path: /web/fundamentals/design-and-ui/content/weight/
+        classname: wf-small-link
+      - label: Mengurangi penggunaan data yang dibutuhkan untuk berinteraksi
+        path: /web/fundamentals/performance/optimizing-content-efficiency/
+        classname: wf-small-link
+      - label: "Merampingkan navigasi: membantu pengguna mendapatkan apa yang mereka inginkan"
+        path: /web/fundamentals/getting-started/principles/site-and-page-navigation/
+        classname: wf-small-link
+      - label: Memprioritaskan penampilan konten
+        path: /web/fundamentals/performance/critical-rendering-path/
+        classname: wf-small-link
+
+  # DUA
+  - classname: devsite-landing-row-no-image-background
+    items:
+    - heading: Mengurangi pemakaian baterai
+      description: >
+        Banyak orang, bahkan di daerah perkotaan, yang tidak memiliki akses sumber daya yang handal dan terjangkau.
+        Hal ini membuat konservasi daya menjadi faktor yang sangat penting
+        dalam semua aplikasi dan desain konten.
+      image_path: images/consumption.png
+      buttons:
+      - label: Menghindari *repaints*, *reflows*, dan penyesuaian orientasi layar
+        path: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime/
+        classname: wf-small-link
+      - label: Hindari animasi layar yang boros tenaga
+        path: /web/fundamentals/design-and-ui/animations/#avoid-animating-expensive-properties/
+        classname: wf-small-link
+      - label: "Hindari penggunaan gelombang radio: Kurangi pengunduhan yang tidak diperlukan"
+        path: /web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads/
+        classname: wf-small-link
+      - label: Kurangi interaksi yang tidak diperlukan
+        path: /web/fundamentals/getting-started/principles/
+        classname: wf-small-link
+      - label: Hindari animasi yang boros tenaga
+        path: /web/fundamentals/design-and-ui/animations/animations-and-performance/
+        classname: wf-small-link
+
+    - heading: Optimalkan sesuai kemampuan perangkat
+      description: >
+        Spesifikasi yang rendah ada di mana-mana. Secara global, sebagian besar pengguna internet baru memiliki perangkat berbiaya rendah
+        dengan kemampuan perangkat keras yang standar: prosesor satu inti, layar 4",
+        memori terbatas, dan media penyimpanan terbatas.
+      image_path: images/capability.png
+      buttons:
+      - label: Melayani berbagai macam layar pada beberapa perangkat
+        path: /web/fundamentals/getting-started/your-first-multi-screen-site/
+        classname: wf-small-link
+      - label: "Desain untuk memori dan CPU yang terbatas: Kurangi dan Optimalkan"
+        path: /web/fundamentals/performance/
+        classname: wf-small-link
+
+
+
+  # TIGA
+  - classname: devsite-landing-row-no-image-background
+    items:
+    - heading: Membangun konten multi-perangkat
+      description: >
+        Konten untuk layar-besar, dan grafis-berat membuat frustrasi para pengguna dan menghambat
+        mereka untuk menggunakan aplikasi atau situs Anda. Konten yang terlalu tinggi atau terlalu lebar
+        akan diabaikan oleh pengguna. 
+        Konten yang berlebihan akan menambah berat halaman dan biaya transfer data.
+      image_path: images/content.png
+      buttons:
+      - label: Desain konten agar bekerja baik di ukuran layar yang berbeda
+        path: /web/fundamentals/design-and-ui/content/viewport/
+        classname: wf-small-link
+      - label: Hilangkan konten yang berlebihan
+        path: /web/fundamentals/design-and-ui/content/redundant/
+        classname: wf-small-link
+      - label: Tulis untuk ponsel
+        path: /web/fundamentals/design-and-ui/content/write/
+        classname: wf-small-link
+      - label: Pertimbangkan AMP HTML
+        path: https://ampproject.org
+        classname: wf-small-link
+    - heading: "Transaksi & Monetisasi: Berpikir global"
+      description: >
+        Sistem pembayaran tidak bisa diakses oleh kebanyakan orang di web. Banyak
+        pengguna internet yang belum memiliki rekening bank dan tidak menggunakan kartu kredit
+        — termasuk 8% warga negara Amerika Serikat. 
+        Banyak sistem pembayaran belum bekerja dengan baik
+        pada layar kecil atau dengan konektivitas yang tidak bisa diandalkan.
+      image_path: images/monetization.png
+      buttons:
+      - label: Merampingkan transaksi
+        path: /web/fundamentals/getting-started/principles/commerce-and-conversion/
+        classname: wf-small-link
+      - label: Merampingkan formulir
+        path: /web/fundamentals/design-and-ui/input/forms/
+        classname: wf-small-link
+      - label: Mendesain layout yang ramah-orientasi untuk layar kecil
+        path: /web/fundamentals/getting-started/principles/usability-and-form-factor/
+        classname: wf-small-link
+    - heading: Rencanakan alih bahasa
+      description: >
+        Lokalisasi dapat membantu Anda mengakses pasar baru. Banyak situs yang hanya
+        diterbitkan dalam bahasa Inggris, sedangkan bahasa Inggris bukanlah bahasa pertama sebagian
+        pengguna internet. Hanya 5,52% dari populasi dunia yang mampu berbahasa Inggris.
+        Budaya Amerika Serikat atau Eropa mungkin tidak terasa lazim 
+        atau intuitif. Instruksi atau perintah yang ringkas dan padat
+        dalam bahasa Inggris mungkin terlalu bertele-tele dan membosankan dalam bahasa lain.
+      image_path: images/localization.png
+      buttons:
+      - label: Arsitektur situs yang memungkinkan lokalisasi ke bahasa lain
+        path: https://support.google.com/webmasters/answer/182192/
+        classname: wf-small-link
