@@ -14,15 +14,14 @@ Welcome to the new Web**Fundamentals**! <master> [![Build Status](https://ci.clo
 
 * GitHub is still our source of truth for content, 
 * We want your contributions, either PR's, issues, whatever!
-* The latest will be staged at https://web-central.appspot.com/web/ (coming soon)
+* The latest will be staged at https://web-central.appspot.com/web/
 
 ## Cloning the repo
-I recommend starting with a fresh clone of the repo. To save yourself some
-time, use the command below, it'll do a shallow clone of only the
-`next-version` branch into the WFNext directory
+If you have a high bandwidth connection, I recommend starting with a fresh clone
+of the repo.
 
 ```
-git clone --depth 1 https://github.com/google/WebFundamentals.git --branch next-version --single-branch WFNext
+git clone https://github.com/google/WebFundamentals.git
 ```
 
 ## Getting set up
@@ -32,8 +31,7 @@ you have a recent version of [Node](https://nodejs.org/en/),
 [AppEngine SDK for Python](https://cloud.google.com/appengine/downloads#Google_App_Engine_SDK_for_Python)
 already installed.
 
-1. Install Python dependencies: `pip install markdown -t ./gae/lib`
-2. Run `npm install` (needed for the build process)
+1. Run `npm install` (needed for the build process)
 
 ## Build the auto-generated files
 Some files (contributors includes, some pages for updates, showcases, etc) are
