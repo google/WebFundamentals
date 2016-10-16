@@ -1,6 +1,8 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Dalam codelab ini, Anda akan membangun sebuah Aplikasi Web Progresif (Progressive Web App), yang bisa dimuat dengan cepat, meskipun pada jaringan yang terputus-putus, memiliki ikon di halaman utama, dan termuat sebagai aplikasi layar penuh.
+translators:
+  - abdsomad
 
 {# wf_updated_on: 2016-10-10T14:59:33Z #}
 {# wf_published_on: 2016-01-01 #}
@@ -1273,3 +1275,6 @@ jaringan dan check apakah aplikasi bisa bekerja secara offline seperti yang diha
 Bantu kami melakukan laboratorium kode kita lebih baik dengan mengirimkan
 [issue](https://github.com/googlecodelabs/your-first-pwapp/issues) hari ini. 
 Dan terima kasih!
+
+Translated By: 
+{% include "web/_shared/contributors/abdshomad.html" %}
