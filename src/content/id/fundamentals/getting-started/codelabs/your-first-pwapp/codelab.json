@@ -1,0 +1,30 @@
+{
+  "environment": "web",
+  "source": "1rpHleSSeY-MJZ8JvncvYA8CFqlnlcrW8-a4uEaqizPY",
+  "format": "md",
+  "prefix": "../../",
+  "mainga": "UA-49880327-14",
+  "updated": "2016-10-10T14:59:33Z",
+  "id": "your-first-pwapp",
+  "duration": 0,
+  "title": "Progressive Web App Anda yang Pertama",
+  "author": "petele",
+  "summary": "Di codelab ini, Anda akan membangun sebuah Progressive Web App, yang termuat dengan cepat, meski pun pada jaringan yang terputus-putus, memiliki ikon di halaman utama, dan termuat sebagai aplikasi layar penuh.",
+  "theme": "web",
+  "status": [
+    "draft"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "io2016",
+    "kiosk",
+    "pwa-dev-summit",
+    "pwa-roadshow",
+    "web"
+  ],
+  "feedback": "https://github.com/googlecodelabs/your-first-pwapp/issues",
+  "url": "your-first-pwapp",
+  "wfProcessed": true
+}
