@@ -351,7 +351,7 @@ To make a table responsive, add the `responsive` class to the table.
       <td><code>value</code></td><td><code>String</code><br>the choice's value, which respondents see as a label when viewing the form</td>
     </tr>
     <tr>
-      <td><code>navigationType</code></td><td><code><a href="page-navigation-type.html">PageNavigationType</a></code><br>the choice's navigation type</td>
+      <td><code>navigationType</code></td><td><code><a href="#">PageNavigationType</a></code><br>the choice's navigation type</td>
     </tr>
   </tbody>
 </table>
@@ -384,7 +384,7 @@ To make a table responsive, add the `responsive` class to the table.
           </td>
           <td>
             <code>
-              <a href="page-navigation-type.html">PageNavigationType</a>
+              <a href="#">PageNavigationType</a>
             </code>
             <br>the choice's navigation type
           </td>
@@ -450,11 +450,11 @@ long narrow lists.
 ## External links
 
 To mark a link as external, use
-`<a href="http://www.google.com/" class="external">External Link</a>` when
+`<a href="https://www.google.com/" class="external">External Link</a>` when
 authoring in HTML, or append `{: .external}` to links when authoring in
 Markdown.
 
-<a href="http://www.google.com/" class="external">External Link</a>
+<a href="https://www.google.com/" class="external">External Link</a>
 
 
 

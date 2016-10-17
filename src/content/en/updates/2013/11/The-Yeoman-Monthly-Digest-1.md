@@ -36,12 +36,12 @@ Allo’ Allo’. Welcome to the first issue of the [Yeoman](http://yeoman.io) mo
 
 <h2>Videos</h2>
 
-* [Introduction to the MEAN Stack](http://www.youtube.com/watch?v=1Sy3vWJ1N2U with Yeoman, Grunt and Bower) <span class="external-domain">[youtube.com]</span>
-* ['yo dude' a talk on Yeoman and Cordova from IBM](http://www.youtube.com/watch?v=RPMIz0id7eE) <span class="external-domain">[youtube.com]</span>
-* IBM Worklight generators for Yeoman "Part 1](http://www.youtube.com/watch?v=x9I9dKC2BGU, "Part 2](http://www.youtube.com/watch?v=hRXmcnukIz8, "Part 3](http://www.youtube.com/watch?v=-qmB69gefIc) <span class="external-domain">[youtube.com]</span>
-* [Intro to Yeoman sub-generators](http://www.youtube.com/watch?v=rYwJ5-esSYE) <span class="external-domain">[youtube.com]</span>
-* [Getting started with Yeoman and generator-webapp](http://www.youtube.com/watch?v=zBt2g9ekiug) <span class="external-domain">[youtube.com]</span>
-* [Yeoman generator for Twitter Bootstrap](http://www.youtube.com/watch?v=RO8TdD5EuNs) <span class="external-domain">[youtube.com]</span>
+* [Introduction to the MEAN Stack](https://www.youtube.com/watch?v=1Sy3vWJ1N2U) with Yeoman, Grunt and Bower <span class="external-domain">[youtube.com]</span>
+* ['yo dude' a talk on Yeoman and Cordova from IBM](https://www.youtube.com/watch?v=RPMIz0id7eE) <span class="external-domain">[youtube.com]</span>
+* IBM Worklight generators for Yeoman [Part 1](https://www.youtube.com/watch?v=x9I9dKC2BGU) [Part 2](https://www.youtube.com/watch?v=hRXmcnukIz8), [Part 3](https://www.youtube.com/watch?v=-qmB69gefIc) <span class="external-domain">[youtube.com]</span>
+* [Intro to Yeoman sub-generators](https://www.youtube.com/watch?v=rYwJ5-esSYE) <span class="external-domain">[youtube.com]</span>
+* [Getting started with Yeoman and generator-webapp](https://www.youtube.com/watch?v=zBt2g9ekiug) <span class="external-domain">[youtube.com]</span>
+* [Yeoman generator for Twitter Bootstrap](https://www.youtube.com/watch?v=RO8TdD5EuNs) <span class="external-domain">[youtube.com]</span>
 
 <h2>Generator updates</h2>
 

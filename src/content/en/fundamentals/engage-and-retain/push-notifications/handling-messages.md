@@ -24,9 +24,10 @@ you enough information for it to be useful. That's what this section is about.
 ## Service workers, again
 
 Let's talk about service workers again. Handling message involves code that
-lives exclusively in a service worker. If you need a little background,
-[here's the introduction again](service-worker-primer). We've also got some
-handy instructions for [debugging service workers](/web/tools/chrome-devtools/debug/progressive-web-apps/#service-workers)
+lives exclusively in a service worker. If you need a little background, here's the
+[introduction](/web/fundamentals/getting-started/primers/service-workers)
+again. We've also got some handy instructions for
+[debugging service workers](/web/tools/chrome-devtools/debug/progressive-web-apps/#service-workers)
 using DevTools.
 
 ## More notification anatomy {: #more-anatomy }

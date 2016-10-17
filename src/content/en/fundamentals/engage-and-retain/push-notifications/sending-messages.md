@@ -256,7 +256,7 @@ a dot. For example:
 <pre class="prettyprint">&lt;JWTHeader&gt;.&lt;Payload&gt;</pre>
 
 Encrypt this using the private key you created in
-[Generating the applicationServerKey](generating-the-applicationserverkey).
+[Generating the applicationServerKey](#generating-the-key).
 
 You now have all three pieces that form the JWT which you join to together
 with a dot.

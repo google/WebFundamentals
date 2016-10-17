@@ -934,7 +934,7 @@ moinshaikh:
   role:
     - translator
   homepage: 'https://moingshaikh.wordpress.com/'
-  google: MoinShaikhMS
+  google: +MoinShaikhMS
   twitter: moingshaikh
   email: montugshaikh@gmail.com
   description:
@@ -1098,7 +1098,7 @@ fouadvaladbeigi:
   country: UK
   role:
     - author
-  google: 'https://plus.google.com/115771375659957547634/posts'
+  google: 115771375659957547634
   email: fouad.valadbeigi@unit9.com
 
 johyphenel:

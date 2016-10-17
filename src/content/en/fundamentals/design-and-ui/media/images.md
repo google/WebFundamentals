@@ -292,7 +292,7 @@ capabilities of the device.  Depending on the type of image and level of
 compression, image quality may not appear to change, but the file size drops
 significantly.
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html){: target="_blank" .external }
 
 Caution: Use caution with the compressive technique because of the increased memory and decoding costs it requires. Resizing large images to fit on smaller screens is expensive and can be particularly painful on low-end devices where both memory and processing is limited.
 

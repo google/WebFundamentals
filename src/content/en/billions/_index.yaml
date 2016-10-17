@@ -92,7 +92,7 @@ landing_page:
       image_path: images/consumption.png
       buttons:
       - label: Avoid repaints, reflows, and required reorientations
-        path: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime/
+        path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
         classname: wf-small-link
       - label: Avoid expensive UI animations
         path: /web/fundamentals/design-and-ui/animations/#avoid-animating-expensive-properties/
