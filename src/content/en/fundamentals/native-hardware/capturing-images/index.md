@@ -201,3 +201,9 @@ settings.
 
 Warning: Asking for access to the camera on page load will result in most of 
 your users rejecting access to it.
+
+## Compatibility
+
+More information about mobile and desktop browser implementation:
+* [srcObject](https://www.chromestatus.com/feature/5989005896187904)
+* [navigator.mediaDevices.getUserMedia()](https://www.chromestatus.com/features/5755699816562688)
