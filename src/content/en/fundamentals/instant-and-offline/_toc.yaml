@@ -4,6 +4,10 @@ toc:
     - title: The Offline Cookbook
       path: /web/fundamentals/instant-and-offline/offline-cookbook/
     - title: Web Storage
-      path: /web/fundamentals/instant-and-offline/web-storage/
+      section:
+      - title: Overview
+        path: /web/fundamentals/instant-and-offline/web-storage/
+      - title: Choosing a Storage Mechanism 
+        path: /web/fundamentals/instant-and-offline/web-storage/choosing-a-storage-mechanism
     - title: The Service Worker Lifecycle
       path: /web/fundamentals/instant-and-offline/service-worker/lifecycle
