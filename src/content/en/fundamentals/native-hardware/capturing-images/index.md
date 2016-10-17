@@ -207,3 +207,5 @@ your users rejecting access to it.
 More information about mobile and desktop browser implementation:
 * [srcObject](https://www.chromestatus.com/feature/5989005896187904)
 * [navigator.mediaDevices.getUserMedia()](https://www.chromestatus.com/features/5755699816562688)
+
+We also recommend using the [adapter.js](https://github.com/webrtc/adapter) shim to protect apps from WebRTC spec changes and prefix differences.
