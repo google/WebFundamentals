@@ -16,7 +16,7 @@ Audio API](https://webaudio.github.io/web-audio-api/).  In Chrome 49 (Beta as of
 and expect to be Stable in March 2016) we've updated several features to track the
 specification, and also added one new node.
 
-### decodeAudioData() now returns a Promise.
+### decodeAudioData() now returns a promise.
 
 The
 [decodeAudioData](https://webaudio.github.io/web-audio-api/#widl-BaseAudioContext-decodeAudioData-Promise-AudioBuffer--ArrayBuffer-audioData-DecodeSuccessCallback-successCallback-DecodeErrorCallback-errorCallback)()

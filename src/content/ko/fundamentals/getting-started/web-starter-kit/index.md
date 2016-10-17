@@ -7,7 +7,7 @@ description: 새 프로젝트는 시작하는 것이 가장 어려울 수 있습
 
 # Web Starter Kit를 사용하여 사이트 시작 {: .page-title }
 
-Caution: This article has not been updated in a while and may not reflect reality. Be sure to check the Web Starter Kit [documentation](https://github.com/google/web-starter-kit/) for the latest details.
+Caution: This article has not been updated in a while and may not reflect reality. Be sure to check the Web Starter Kit [documentation](https://github.com/google/web-starter-kit/){: .external } for the latest details.
 
 {% include "web/_shared/contributors/mattgaunt.html" %}
 
@@ -107,7 +107,7 @@ URL을 두 개의 브라우저 창에 나란히 연 후 페이지 중 하나를
 #### Javascript 확인하기
 
 JSHint는 작성한 JavaScript 코드를 검사하여 JavaScript 논리와 관련하여 발생할 수 있는
-문제를 확인하고 [코딩 모범 사례를 적용](http://www.jshint.com/docs/)하는 도구입니다.
+문제를 확인하고 [코딩 모범 사례를 적용](http://www.jshint.com/docs/){: .external }하는 도구입니다.
 
 프로젝트를 빌드할 때마다 또는 gulp 서버를 실행하는 경우 JavaScript
 파일을 변경할 때마다 이 도구가 실행됩니다.

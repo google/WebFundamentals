@@ -3,7 +3,6 @@
 .DS_Store
 node_modules/*
 .drone.sec.yml
-gae/lib/*
 src/data/youtubeAPIKey.txt
 gulp-tasks/deploy.js
 scratch/*

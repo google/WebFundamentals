@@ -21,7 +21,7 @@ also for powerful runtime effects like theme switching and potentially
 extending/polyfilling future CSS features.
 
 
-## CSS Clutter
+## CSS clutter
 
 When designing an application it’s a common practice to set aside a set of brand
 colors that will be reused to keep the look of the app consistent.
@@ -340,7 +340,7 @@ Because custom properties can refer to other custom properties in your
 stylesheets, you could imagine how this could lead to all sorts of interesting
 runtime effects.
 
-## Browser Support
+## Browser support
 
 Currently Chrome 49, Firefox 42, Safari 9.1, and iOS Safari 9.3 support custom
 properties.
@@ -352,7 +352,7 @@ Try out the
 for a glimpse at all of the interesting techniques you can now leverage thanks
 to custom properties.
 
-## Further Reading
+## Further reading
 
 If you’re interested to learn more about custom properties, Philip Walton from
 the Google Analytics team has written a primer on [why he’s excited for custom

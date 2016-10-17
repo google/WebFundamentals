@@ -7,7 +7,7 @@ description: The MediaRecorder API enables you to record audio and video from a 
 {# wf_tags: audio,codecs,media,news,recording,video,webrtc,chrome49 #}
 {# wf_featured_image: /web/updates/images/2016/01/mediarecorder/featured.jpg #}
 
-# Record audio and video with MediaRecorder {: .page-title }
+# Record Audio and Video with MediaRecorder {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
@@ -149,27 +149,33 @@ The ability to record audio and video without plugins is relatively new to web a
 We'd also like to know what usage scenarios are most important to you, and what features you would like us to prioritize. Comment on this article or track progress at [crbug.com/262211](https://crbug.com/262211).
 
 ## Demos
+
 * [webrtc.github.io/samples/src/content/getusermedia/record](https://webrtc.github.io/samples/src/content/getusermedia/record/){: .external }
 * [simpl.info/mr](https://simpl.info/mediarecorder) (same code, easier URL for mobile!)
 * [Record a video and upload it to YouTube](https://jeffy.info/google-youtube-upload/components/google-youtube-upload/demo/) with an experimental custom &lt;google-youtube-upload&gt; element
 
 ## Apps
+
 * Paul Lewis's [Voice Memos](https://voice-memos.appspot.com/) app now has MediaRecorder support, polyfilled for browsers that don't support MediaRecorder audio.
 
 ## Polyfills
+
 * Muaz Khan's [MediaStreamRecorder](https://www.webrtc-experiment.com/msr/) is a JavaScript library for recording audio and video, compatible with MediaRecorder.
 * [Recorderjs](https://github.com/mattdiamond/Recorderjs) enables recording from a Web Audio API node. You can see this in action in Paul Lewis's [Voice Memos](https://voice-memos.appspot.com/) app.
 
 ## Browser support
+
 * Chrome 49 and above by default
 * Chrome desktop 47 and 48 with Experimental Web Platform features enabled from chrome://flags
 * Firefox from version 25
 * [Edge](https://dev.windows.com/en-us/microsoft-edge/platform/status/mediarecorder): 'Under Consideration'
 
 ## Spec
+
 [w3c.github.io/mediacapture-record/MediaRecorder.html](https://w3c.github.io/mediacapture-record/MediaRecorder.html)
 
 ## API information
+
 [developer.mozilla.org/en/docs/Web/API/MediaRecorder_API](https://developer.mozilla.org/en/docs/Web/API/MediaRecorder_API)
 
 

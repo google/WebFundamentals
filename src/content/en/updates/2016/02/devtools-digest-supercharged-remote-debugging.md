@@ -17,7 +17,7 @@ Learn all about the revamped <strong>Inspect Devices</strong> UI, toggle classes
 
 Welcome back to the latest edition of the digest for all you Canary users out there! Turns out I missed a few updates in December. (I’ve been a little preoccupied with my newborn daughter.) So here they come, along a few super fresh ones.
 
-## The New “Inspect Devices” Dialog
+## The new “Inspect Devices” dialog
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Rp4HO7G0xJI"
@@ -29,7 +29,7 @@ The (currently outdated) [Remote Debugging](/web/tools/chrome-devtools/debug/rem
 
 So we went ahead and revamped the UX. Instead of having to open an entirely different page (“chrome://inspect”), all of “Inspect Devices” is now conveniently embedded into DevTools itself for quick access and less context switches.
 
-## Class Toggles in the Style Panel
+## Class toggles in the Style Panel
 
 ![cls toggles in Style Panel](/web/updates/images/2016/02/devtools-digest/cls-toggles.png)
 
@@ -47,7 +47,7 @@ It is with great pleasure that I can announce yet another way to keep up with wh
 
 In the new show that’ll be serialized on a bi-weekly schedule, I’ll focus on bigger features coming to stable Chrome (instead of Canary) and will go a little more in-depth on each. Be sure to subscribe to the [Chrome Developers](https://www.youtube.com/user/ChromeDevelopers) channel to get notified when #1 ships, and let me know what you think in the YouTube comments!
 
-## The Best of the Rest
+## The best of the rest
 
   * We’ve added a setting to [auto-open DevTools for popups](https://twitter.com/ChromeDevTools/status/697993811696291842) (newly created windows). When enabled, a new instance of DevTools opens automatically with any newly created window.
   * The action bar on top of the Style panel [is now fixed in place](https://twitter.com/ChromeDevTools/status/676839096405221376), so you can always access it even if you scroll down to edit more styles.

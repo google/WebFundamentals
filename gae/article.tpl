@@ -119,9 +119,9 @@
               <div class="devsite-content-footer nocontent">
                 <p>
                   Except as otherwise noted, the content of this page is licensed under the
-                  <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons
+                  <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons
                   Attribution 3.0 License</a>, and code samples are licensed under the
-                  <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>.
+                  <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>.
                   For details, see our <a href="https://developers.google.com/site-policies">
                   Site Policies</a>. Java is a registered trademark of Oracle and/or its
                   affiliates.
@@ -225,8 +225,8 @@
         <footer class="devsite-utility-footer">
           <nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width">
             <span class="devsite-utility-footer-links">
-              <a href="https://developers.google.com/site-terms/">Terms</a> |
-              <a href="https://www.google.com/intl/en/privacy/">Privacy</a>
+              <a href="https://developers.google.com/site-terms">Terms</a> |
+              <a href="https://www.google.com/intl/en/policies/privacy/">Privacy</a>
             </span>
             <form class="devsite-utility-footer-language">
               <select id="langSelector" class="kd-select">

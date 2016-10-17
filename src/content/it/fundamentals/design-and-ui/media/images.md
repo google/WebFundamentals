@@ -24,7 +24,7 @@ Il Web design reattivo consente di modificare disposizione e contenuti in base a
 <img class="center" src="img/art-direction.png" alt="Esempio di direzione artistica"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-In altre circostanze potrebbe essere necessario modificare drasticamente l'immagine, come ad esempio ridimensionarla, ritagliarla o persino sostituirla. In questi casi, le modifiche all'immagine vengono definite 'direzione artistica'. Consulta [responsiveimages.org/demos/](http://responsiveimages.org/demos/) per ulteriori esempi.
+In altre circostanze potrebbe essere necessario modificare drasticamente l'immagine, come ad esempio ridimensionarla, ritagliarla o persino sostituirla. In questi casi, le modifiche all'immagine vengono definite 'direzione artistica'. Consulta [responsiveimages.org/demos/](http://responsiveimages.org/demos/){: .external } per ulteriori esempi.
 
 
 {% include "web/_shared/udacity/ud882.html" %}
@@ -359,7 +359,7 @@ alt="Esempio di pagina che utilizza FontAwesome come icone dei caratteri.">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont"   adjust_indentation="auto" %}
 </pre>
 
-Esistono diversi caratteri per icone gratuiti e a pagamento come [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) e [Glyphicons](http://glyphicons.com/).
+Esistono diversi caratteri per icone gratuiti e a pagamento come [Font Awesome](http://fortawesome.github.io/Font-Awesome/){: .external }, [Pictos](http://pictos.cc/) e [Glyphicons](http://glyphicons.com/).
 
 Equilibra il peso delle richieste HTTP aggiuntive e le dimensioni del file con le esigenze in termini di icone. Ad esempio, se occorrono poche icone è consigliabile l'utilizzo di un'immagine o di uno sprite di immagine.
 
@@ -384,11 +384,11 @@ Spesso le immagini richiedono il download di molti dati e occupano una parte ril
 
 ### Scelta del formato corretto
 
-Esistono due tipi di immagini da prendere in considerazione: [immagini vettoriali](http://it.wikipedia.org/wiki/Grafica_vettoriale) e [immagini raster](http://it.wikipedia.org/wiki/Grafica_raster). Per le immagini raster occorre selezionare il formato di compressione appropriato, come ad esempio GIF, PNG e JPG.
+Esistono due tipi di immagini da prendere in considerazione: [immagini vettoriali](http://it.wikipedia.org/wiki/Grafica_vettoriale){: .external } e [immagini raster](http://it.wikipedia.org/wiki/Grafica_raster). Per le immagini raster occorre selezionare il formato di compressione appropriato, come ad esempio GIF, PNG e JPG.
 
 Le **immagini raster** sono simili alle fotografie e alle altre immagini costituite da una griglia di pixel o punti singoli. Di solito, le immagini raster vengono prodotte da fotocamere o scanner ed è possibile crearle nel browser con l'elemento `canvas`. La dimensione del file è direttamente proporzionale alla dimensione dell'immagine. Aumentando le dimensioni delle immagini raster rispetto a quelle originali si ottiene un effetto sfocato poiché il browser deve riempire in qualche modo i pixel mancanti.
 
-Le **immagini vettoriali**, come logo e line art, vengono definite da un insieme di curve, linee, forme e colori di riempimento, create con programmi come Adobe Illustrator o Inkscape e salvate in un formato vettoriale come ad esempio [SVG](http://css-tricks.com/using-svg/). Le immagini vettoriali vengono realizzate con semplici primitive ed è possibile ridimensionarle senza perdite di qualità o modifiche della dimensione del file.
+Le **immagini vettoriali**, come logo e line art, vengono definite da un insieme di curve, linee, forme e colori di riempimento, create con programmi come Adobe Illustrator o Inkscape e salvate in un formato vettoriale come ad esempio [SVG](http://css-tricks.com/using-svg/){: .external }. Le immagini vettoriali vengono realizzate con semplici primitive ed è possibile ridimensionarle senza perdite di qualità o modifiche della dimensione del file.
 
 Per la scelta del formato corretto è importante prendere in considerazione l'origine dell'immagine (raster o vettoriale) e i contenuti (colori, animazioni, testo e così via). Non esiste un formato adatto a tutti i tipi di immagini: ciascun formato presenta vantaggi e svantaggi.
 
@@ -404,7 +404,7 @@ Per scegliere il formato corretto attieniti alle linee guida seguenti:
 
 È possibile ridurre le dimensioni del file utilizzando il 'post-processing' una volta concluso il salvataggio. Esistono diversi strumenti per la compressione delle immagini: con o senza perdita di informazioni, online, GUI e con riga di comando. È consigliabile eseguire un'ottimizzazione automatizzata dell'immagine come elemento principale del flusso di lavoro in uso.
 
-Esistono diversi strumenti per eseguire un'ulteriore compressione senza perdita di informazioni dei file JPG e PNG senza compromettere la qualità dell'immagine. Per il formato JPG, prova [jpegtran](http://jpegclub.org/) o [jpegoptim](http://freshmeat.net/projects/jpegoptim/), disponibile solo su Linux e da eseguire con l'opzione `strip-all`. Per il formato PNG, prova [OptiPNG](http://optipng.sourceforge.net/) o [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
+Esistono diversi strumenti per eseguire un'ulteriore compressione senza perdita di informazioni dei file JPG e PNG senza compromettere la qualità dell'immagine. Per il formato JPG, prova [jpegtran](http://jpegclub.org/){: .external } o [jpegoptim](http://freshmeat.net/projects/jpegoptim/), disponibile solo su Linux e da eseguire con l'opzione `strip-all`. Per il formato PNG, prova [OptiPNG](http://optipng.sourceforge.net/) o [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
 
 ##Utilizzo degli sprite immagine
 

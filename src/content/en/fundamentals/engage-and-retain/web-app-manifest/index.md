@@ -237,6 +237,33 @@ from the home screen every page in the domain will automatically get the theme c
   <figcaption>Sitewide theme color</figcaption>
 </figure>
 
+## Test your manifest {: #test }
+
+If you want to manually verify that your web app manifest is set up correctly,
+use the **Manifest** tab on the **Application** panel of Chrome DevTools.
+
+![The Manifest tab of Chrome DevTools](images/devtools-manifest.png)
+
+This tab provides a human-readable version of many of your manifest's
+properties. See [Web app
+manifest](/web/tools/chrome-devtools/progressive-web-apps#manifest) over
+at the Chrome DevTools docs for more information on this tab. You can
+also simulate Add to Homescreen events from here. See [Testing the app install
+banner](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app-install-banner)
+for more on this topic.
+
+If you want an automated approach towards validating your web app manifest,
+check out [Lighthouse](/web/tools/lighthouse). Lighthouse is a web app auditing
+tool that you run as a Chrome Extension or as an NPM module. You provide
+Lighthouse with a URL, it runs a suite of audits against that page, and then
+displays the results in a report. Lighthouse audits related to web app manifests
+include checking that:
+
+* The app can be added to the homescreen.
+* After being added, the app launches with a custom splash screen.
+* The color of the browser's address bar is customized.
+* The app is on HTTPS (a prerequisite for Add to Homescreen).
+
 ## More information
 
 This article has given you a quick introduction to web app manifests, but

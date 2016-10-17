@@ -7,7 +7,7 @@ description: Learn all about Chrome DevTools' new, refreshed Device Mode introdu
 {# wf_tags: devtools,update,chrome49 #}
 {# wf_featured_image: /web/updates/images/generic/devices.png #}
 
-# A new Device Mode for a mobile-first generation {: .page-title }
+# A New Device Mode for a Mobile-First Generation {: .page-title }
 
 {% include "web/_shared/contributors/pbakaus.html" %}
 

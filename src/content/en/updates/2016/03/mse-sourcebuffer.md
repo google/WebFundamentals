@@ -64,7 +64,7 @@ Media segments are 'streamed' to an audio or video element by adding each segmen
     };
     
 
-## Setting Playback Order
+## Setting playback order
 
 Chrome 50 adds additional support to the `SourceBuffer` `mode` attribute, allowing you to specify that media segments are played back continuously, in the order that they were appended, no matter whether the media segments initially had discontinuous timestamps.
 
@@ -85,20 +85,24 @@ For all stream types, you can change the value from _segments_ to _sequence_. Th
 
 Being able to set the `mode` value to _sequence_ ensures continuous media playback, no matter if the media segment timestamps were discontinuous — for example, if there were problems with video [muxing](https://en.wikipedia.org/wiki/Multiplexing), or if (for whatever reason) discontinuous segments are appended. It is possible for an app to polyfill with [`timestampOffset`](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/timestampOffset) to ensure continuous playback, if correct stream metadata is available, but _sequence_ mode makes the process simpler and less error prone.
 
-## MSE Apps and Demos
+## MSE apps and demos
+
 These show MSE in action, though without `SourceBuffer.mode` manipulation:
 
 * [Media Source API](https://simpl.info/mse)
 * [Shaka Player](https://shaka-player-demo.appspot.com): video player demo that uses MSE to implement [DASH](http://www.streamingmedia.com/Articles/Editorial/What-Is-.../What-is-MPEG-DASH-79041.aspx) with the [Shaka](https://g.co/shakainfo) JavaScript library
 
-## Browser Support
+## Browser support
+
 * Chrome 50 and above by default
 * For Firefox, see [MDN](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer#Browser_compatibility) for details
 
 ## Specification
+
 * [Media Source Extensions `appendMode()` method](https://www.w3.org/TR/media-source/#idl-def-AppendMode)
 
-## API Information
+## API information
+
 * [MDN: SourceBuffer.mode](https://developer.mozilla.org/en-US/docs/Web/API/SourceBuffer/mode)
 
 

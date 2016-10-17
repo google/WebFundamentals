@@ -289,7 +289,7 @@ Note: 자리 표시자는 사용자가 요소를 입력하기 시작하면 즉�
 
 
 
-브라우저는 다양한 추론을 사용하여 [사용자가 이전에 지정한 데이터를 기반으로](https://support.google.com/chrome/answer/142893) [자동으로 채울](https://support.google.com/chrome/answer/142893) 수 있는 필드를 결정합니다. 각 입력 요소에 name 특성과 autocomplete 특성을 모두 제공하는 방식으로 브라우저에 힌트를 제공할 수 있습니다.
+브라우저는 다양한 추론을 사용하여 [사용자가 이전에 지정한 데이터를 기반으로](https://support.google.com/chrome/answer/142893){: .external } [자동으로 채울](https://support.google.com/chrome/answer/142893) 수 있는 필드를 결정합니다. 각 입력 요소에 name 특성과 autocomplete 특성을 모두 제공하는 방식으로 브라우저에 힌트를 제공할 수 있습니다.
 
 
 
@@ -449,7 +449,7 @@ autofocus 특성은 키보드 포커스를 가로채서 잠재적으로 백스�
 
 #### `pattern` 특성
 
-`pattern` 특성은 입력 필드의 유효성을 검사하는 데 사용되는 [정규식](http://en.wikipedia.org/wiki/Regular_expression)을 지정합니다.
+`pattern` 특성은 입력 필드의 유효성을 검사하는 데 사용되는 [정규식](http://en.wikipedia.org/wiki/Regular_expression){: .external }을 지정합니다.
 
  예를 들어, 미국 우편 번호(5자리 숫자, 뒤에 추가로 대시와 4자리 숫자가 나오는 경우도 있음)의 유효성을 검사하려면 다음과 같이 `pattern`을 설정합니다.
 

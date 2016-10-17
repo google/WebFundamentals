@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Shadow DOM allows web developers to create compartmentalized DOM and CSS for web components
 
-{# wf_updated_on: 2016-09-26 #}
+{# wf_updated_on: 2016-10-13 #}
 {# wf_published_on: 2016-08-01 #}
 
 # Shadow DOM v1: Self-Contained Web Components {: .page-title }
@@ -342,7 +342,7 @@ Ever wonder how the `<select>` element renders a multi-select widget (instead of
 
 One gotcha with `:host` is that rules in the parent page have higher specificity than `:host` rules defined in the element. That is, outside styles win. This allows users to override your top-level styling from the outside. Also, `:host` only works in the context of a shadow root, so you can't use it outside of shadow DOM.
 
-The functional form of `:host(<selector>)` allows you to target the host if it matches a `<selector>`. This is a great way to for your component to encapsulate behaviors that react to user interaction or state or style internal nodes based on the host.
+The functional form of `:host(<selector>)` allows you to target the host if it matches a `<selector>`. This is a great way for your component to encapsulate behaviors that react to user interaction or state or style internal nodes based on the host.
 
 
     <style>

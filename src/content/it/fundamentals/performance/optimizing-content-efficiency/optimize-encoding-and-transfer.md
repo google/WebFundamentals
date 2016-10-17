@@ -104,7 +104,7 @@ In breve, come primo passo nell'ottimizzazione dell'efficienza delle nostre riso
 - Alcuni CDN richiedono particolare attenzione per assicurarsi che GZIP sia abilitato
 
 
-[GZIP](http://en.wikipedia.org/wiki/Gzip) è un compressore generico applicabile a qualsiasi stream di byte: in pratica, ricorda alcuni contenuti visti in precedenza e cerca di individuare e sostituire i frammenti di dati duplicati in maniera efficace; se sei curioso, ecco una [spiegazione perfetta di GZIP per chi è alle prime armi](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). In pratica, tuttavia, GZIP funziona meglio su risorse di testo, raggiungendo spesso un tasso di compressione del 70-90% per i file più grossi, mentre su risorse già compresse tramite algoritmi alternativi (ad es. la maggior parte dei formati immagine) non consente di ottenere grossi miglioramenti.
+[GZIP](http://en.wikipedia.org/wiki/Gzip){: .external } è un compressore generico applicabile a qualsiasi stream di byte: in pratica, ricorda alcuni contenuti visti in precedenza e cerca di individuare e sostituire i frammenti di dati duplicati in maniera efficace; se sei curioso, ecco una [spiegazione perfetta di GZIP per chi è alle prime armi](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). In pratica, tuttavia, GZIP funziona meglio su risorse di testo, raggiungendo spesso un tasso di compressione del 70-90% per i file più grossi, mentre su risorse già compresse tramite algoritmi alternativi (ad es. la maggior parte dei formati immagine) non consente di ottenere grossi miglioramenti.
 
 Tutti gli attuali browser supportano ed eseguono automaticamente la compressione GZIP per ogni richiesta HTTP: il nostro lavoro consiste nel garantire che il server sia configurato correttamente per fornire la risorsa compressa quando viene richiesta dal client.
 
@@ -177,7 +177,7 @@ La tabella precedente illustra il risparmio consentito dalla compressione con GZ
 
 L'aspetto migliore è che l'attivazione di GZIP rappresenta una delle ottimizzazioni più semplici ed efficaci da applicare; sfortunatamente, molte persone si dimenticano ancora di farlo. La maggior parte dei server web comprime i contenuti per nostro conto, e resta solo da verificare che il server sia configurato correttamente per comprimere qualsiasi tipo di contenuto che possa beneficiare della compressione con GZIP.
 
-Qual è la configurazione migliore per il tuo server? Il progetto HTML5 Boilerplate contiene alcuni [file di configurazione semplificativi](https://github.com/h5bp/server-configs) per tutti i principali server, con commenti dettagliati per ogni flag e impostazione di configurazione: cerca il tuo server preferito nell'elenco, vai alla sezione GZIP e assicurati di avervi configurato le impostazioni raccomandate.
+Qual è la configurazione migliore per il tuo server? Il progetto HTML5 Boilerplate contiene alcuni [file di configurazione semplificativi](https://github.com/h5bp/server-configs){: .external } per tutti i principali server, con commenti dettagliati per ogni flag e impostazione di configurazione: cerca il tuo server preferito nell'elenco, vai alla sezione GZIP e assicurati di avervi configurato le impostazioni raccomandate.
 
 <img src="images/transfer-vs-actual-size.png" class="center" alt="Demo DevTools demo per dimensioni reali vs. di trasferimento">
 
@@ -185,7 +185,7 @@ Un modo semplice e rapido di vedere GZIP in azione consiste nell'aprire Chrome D
 
 Note: Che tu ci creda o meno, in alcuni casi GZIP può aumentare le dimensioni di una risorsa. Di norma, ciò accade quando la risorsa è molto piccola e l'overhead del dizionario GZIP è maggiore del risparmio consentito dalla compressione, o se la risorsa è già compressa al massimo. Alcuni server consentono di specificare una 'dimensione minima' per evitare tale problema.
 
-Infine, ti invitiamo a fare attenzione: mentre la maggior parte dei server comprime automaticamente le risorse al posto tuo prima di presentarle all'utente, alcuni CDN richiedono particolare attenzione e un'azione manuale per garantire che GZIP mantengale impostazioni predefinite. Verifica che le risorse presenti sul tuo sito vengano effettivamente [compresse](http://www.whatsmyip.org/http-compression-test/)!
+Infine, ti invitiamo a fare attenzione: mentre la maggior parte dei server comprime automaticamente le risorse al posto tuo prima di presentarle all'utente, alcuni CDN richiedono particolare attenzione e un'azione manuale per garantire che GZIP mantengale impostazioni predefinite. Verifica che le risorse presenti sul tuo sito vengano effettivamente [compresse](http://www.whatsmyip.org/http-compression-test/){: .external }!
 
 
 

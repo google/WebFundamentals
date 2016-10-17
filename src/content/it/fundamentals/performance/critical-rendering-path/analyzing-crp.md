@@ -14,7 +14,7 @@ L'identificazione e la risoluzione dei colli di bottiglia della performance del 
 
 
 
-L'obiettivo di ottimizzare il percorso di rendering critico è quello di consentire al browser di disegnare la pagina il più rapidamente possibile: pagine più veloci offrono un impegno superiore, un maggior numero di pagine visualizzate e [conversione migliore](http://www.google.com/think/multiscreen/success.html). Di conseguenza, vogliamo ridurre il tempo che il visitatore deve trascorrere fissando una pagina vuota attraverso l'ottimizzazione delle risorse che sono caricate e nel relativo ordine.
+L'obiettivo di ottimizzare il percorso di rendering critico è quello di consentire al browser di disegnare la pagina il più rapidamente possibile: pagine più veloci offrono un impegno superiore, un maggior numero di pagine visualizzate e [conversione migliore](http://www.google.com/think/multiscreen/success.html){: .external }. Di conseguenza, vogliamo ridurre il tempo che il visitatore deve trascorrere fissando una pagina vuota attraverso l'ottimizzazione delle risorse che sono caricate e nel relativo ordine.
 
 Per facilitare l'illustrazione di questo processo, iniziamo con il caso più semplice possibile e costruiamo in modo incrementale la nostra pagina affinché includa risorse aggiuntive, stili e logica di applicazione. Durante questo processo, vedremo in che modo le cose possono andare storte e come poter ottimizzare ciascuno di questi casi.
 

@@ -139,7 +139,7 @@ Non esiste un metodo di caching migliore di altri. A seconda del tuo schema di t
 
 Alcuni suggerimenti e tecniche da tenere a mente nel definire la strategia di caching:
 
-1. **Utilizza URL coerenti:** se offri il medesimo contenuto su URL diversi, tale contenuto verrà recuperato e memorizzato più volte. Suggerimento: ricorda che [gli URL sono case sensitive](http://www.w3.org/TR/WD-html40-970708/htmlweb.html)!
+1. **Utilizza URL coerenti:** se offri il medesimo contenuto su URL diversi, tale contenuto verrà recuperato e memorizzato più volte. Suggerimento: ricorda che [gli URL sono case sensitive](http://www.w3.org/TR/WD-html40-970708/htmlweb.html){: .external }!
 2. **Assicurati che il server fornisca un token di convalida (ETag):** con i token di convalida non è più necessario trasferire gli stessi byte se la risorsa sul server non è cambiata.
 3. **Individua le risorse che possono essere messe in cache da intermediari:** quelle con risposte identiche per tutti gli utenti sono perfette per essere messe in cache da un CDN e altri intermediari.
 4. **Stabilisci la durata ottimale della cache per ogni risorsa:**risorse diverse possono avere esigenze di refresh diverse. Verifica e stabilisci il valore max-age idoneo per ciascuna.

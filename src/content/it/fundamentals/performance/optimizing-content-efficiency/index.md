@@ -14,7 +14,7 @@ description: La quantità di dati scaricati da ogni app cresce costantemente. Pe
 La nostra applicazione web continua a crescere in termini di ambito di applicazione, ambizioni e funzionalità, ed è un bene. Tuttavia, la marcia inarrestabile verso un web sempre più ricco porta con sé un'altra tendenza: la quantità di dati scaricati da ogni applicazione continua a crescere incessantemente. Per garantire prestazioni ottimali dobbiamo ottimizzare l'utilizzo di ogni singolo byte di dati!
 
 
-Come appare una moderna applicazione web? [HTTP Archive](http://httparchive.org/) può aiutarci a rispondere a questa domanda. Il progetto traccia il modo in cui il web è costruito, infiltrandosi periodicamente nei siti più popolari (300.00+ in base all'elenco Alexa Top 1M), registrando e mettendo a confronto i dati relativi a risorse, tipi di contenuti e altri metadati per ogni singola destinazione.
+Come appare una moderna applicazione web? [HTTP Archive](http://httparchive.org/){: .external } può aiutarci a rispondere a questa domanda. Il progetto traccia il modo in cui il web è costruito, infiltrandosi periodicamente nei siti più popolari (300.00+ in base all'elenco Alexa Top 1M), registrando e mettendo a confronto i dati relativi a risorse, tipi di contenuti e altri metadati per ogni singola destinazione.
 
 <img src="images/http-archive-trends.png" class="center" alt="Trend HTTP Archive">
 

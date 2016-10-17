@@ -167,7 +167,7 @@ HTTP와 HTTPS 모두를 손쉽게 지원할 수 있습니다.
 하지만, 이름 기반 가상 호스팅이 일반적으로 더 편리하므로 대부분의 사이트 운영자는 이를 사용하여 IP
 주소를 유지합니다. Windows XP 및 Android 2.3 이전
 버전 기반의 IE 관련 문제는 HTTPS 이름 기반 가상 호스팅에 중요한 SNI([Server
-Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication))를
+Name Indication](https://en.wikipedia.org/wiki/Server_Name_Indication){: .external })를
 인식하지 않는다는 점입니다.
 
 SNI를 지원하지 않는 클라이언트는 모두 최신 소프트웨어로
@@ -179,7 +179,7 @@ SNI를 지원하지 않는 클라이언트는 모두 최신 소프트웨어로
 (HTTP에서 HTTPS로 리디렉션하지 않음. 아래 참조). 구입하고 설치한 인증서를 사용하도록
 웹 서버를 구성합니다. [Mozilla의 편리한
 Configuration
-Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)가
+Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/){: .external }가
 유용하다는 것을 확인할 수 있을 것입니다.
 
 호스트 이름/하위 도메인이 많은 경우 각각 올바른
@@ -194,7 +194,7 @@ Generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/)가
 Transport Security)를 사용해야 합니다. 이는 이 작업을 수행하기 위한 마이그레이션 프로세스에서
 적절한 단계가 아니며 "HTTP를 HTTPS로 리디렉션" 및 "STS(Strict Transport Security) 및 보안 쿠키 설정"을 참조하십시오.
 
-지금뿐만 아니라 사이트 수명 전체에 걸쳐 [Qualys의 편리한 SSL Server Test](https://www.ssllabs.com/ssltest/)를 사용하여
+지금뿐만 아니라 사이트 수명 전체에 걸쳐 [Qualys의 편리한 SSL Server Test](https://www.ssllabs.com/ssltest/){: .external }를 사용하여
 HTTPS 구성을 확인하십시오. 운영하는 사이트는
 A 또는 A+ 등급을 받아야 하며, 이보다 낮은 등급을 초래하는 모든 원인은 버그로 처리해야 합니다.
 (알고리즘과 프로토콜을 상대로 한 공격은 항상 발전하므로
@@ -216,7 +216,7 @@ HTTP뿐만 아니라 HTTPS로도 사이트를 제공하므로 프로토콜에 �
 
 하지만, HTTPS를 통해 HTTP 리소스를 포함하는
 페이지를 제공하는 경우([혼합
-콘텐츠](http://www.w3.org/TR/mixed-content/)) 문제가 발생합니다. 이 경우 브라우저는 사용자에게 HTTPS의 모든 기능이
+콘텐츠](http://www.w3.org/TR/mixed-content/){: .external }) 문제가 발생합니다. 이 경우 브라우저는 사용자에게 HTTPS의 모든 기능이
 손실되었다는 내용의 경고를 표시합니다.
 
 실제로, 활성 상태의 혼합 콘텐츠(스크립트, 플러그인, CSS, iframe)의
@@ -271,7 +271,7 @@ HTTP뿐만 아니라 HTTPS로도 사이트를 제공하므로 프로토콜에 �
 수 있습니다. 사이트 콘텐츠가 단순한 파일인 경우 파일의 개발 복사본에서
 스크립트를 테스트합니다. 변경 사항이 QA를 통과하면 평상시와 같이
 운영 환경에 적용하기만 하면 됩니다. [Bram van Damme의
-스크립트](https://github.com/bramus/mixed-content-scan)나 이와 유사한
+스크립트](https://github.com/bramus/mixed-content-scan){: .external }나 이와 유사한
 스크립트를 사용하여 사이트의 혼합 콘텐츠를 검색할 수 있습니다.
 
 **참고:** 다른 사이트의 리소스를 포함하는 것과 달리
@@ -312,7 +312,7 @@ HTML 페이지뿐만 아니라 스타일시트, JavaScript, 리디렉션 규칙,
 
 
 페이지에 &lt;link rel="canonical" href="https://…"/&gt; 태그를 설정합니다. [그러면
-검색 엔진](https://support.google.com/webmasters/answer/139066)이
+검색 엔진](https://support.google.com/webmasters/answer/139066){: .external }이
 사이트에 액세스할 수 있는 가장 좋은 방법을 파악하는 데 도움이 됩니다.
 
 대부분의 웹 서버는 단순한 리디렉션 기능을 제공합니다. 301(영구적으로 이동됨)을 사용하여
@@ -332,10 +332,10 @@ HTML 페이지뿐만 아니라 스타일시트, JavaScript, 리디렉션 규칙,
 
 
 이제 HTTPS 사용을 "락인(lock in)"할 준비가 되었습니다. 먼저,
-[STS(Strict Transport Security)](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security)를 사용하여
+[STS(Strict Transport Security)](https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security){: .external }를 사용하여
 http:// 참조를 따르는 경우에도 항상 HTTPS를 통해 서버에
 연결해야 함을 클라이언트에 지시합니다. 이를 통해 [SSL
-스트라이핑](http://www.thoughtcrime.org/software/sslstrip/)과 같은 공격이 차단되고,
+스트라이핑](http://www.thoughtcrime.org/software/sslstrip/){: .external }과 같은 공격이 차단되고,
 "HTTP를 HTTPS로 리디렉션"에서 활성화한 301 리디렉션의 라운드 트립 비용도 방지됩니다.
 
 **참고:** [사이트의 ](https://tools.ietf.org/html/rfc6797#section-12.1)[TLS 구성에
@@ -349,7 +349,7 @@ _[하드 실패](https://tools.ietf.org/html/rfc6797#section-12.1)_할
 HSTS를 활성화하지 마십시오.
 
 Strict-Transport-Security 헤더를 설정하여 HSTS(HTTP Strict Transport Security)를
-설정하십시오. [OWASP의 HSTS 페이지에 다양한 서버 소프트웨어에 대한 지침 링크가 나와 있습니다](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security).
+설정하십시오. [OWASP의 HSTS 페이지에 다양한 서버 소프트웨어에 대한 지침 링크가 나와 있습니다](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security){: .external }.
 
 대부분의 웹 서버는 사용자 지정 헤더를 추가하기 위한 유사한 기능을 제공합니다.
 
@@ -366,7 +366,7 @@ max-age를 점차 높이십시오.
 따라서, 웹 애플리케이션을 변경하여 항상 이 애플리케이션에서 설정하는
 쿠키에 보안 플래그를 설정하도록 하십시오. [이 OWASP 페이지에서는 여러 애플리케이션
 프레임워크에서 보안 플래그를 설정하는 방법에 대해
-설명합니다](https://www.owasp.org/index.php/SecureFlag). 모든 애플리케이션 프레임워크에는 플래그를 설정하기 위한 방법이 있습니다.
+설명합니다](https://www.owasp.org/index.php/SecureFlag){: .external }. 모든 애플리케이션 프레임워크에는 플래그를 설정하기 위한 방법이 있습니다.
 
 
 
@@ -381,24 +381,24 @@ max-age를 점차 높이십시오.
 ### 검색 순위
 
 [Google은 HTTPS를 긍정적인 검색 품질
-지표로 사용하고 있습니다](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html).
+지표로 사용하고 있습니다](https://googlewebmastercentral.blogspot.com/2014/08/https-as-ranking-signal.html){: .external }.
 또한 이 검색 순위를 유지하면서 [사이트 이전, 이동 또는 마이그레이션
-방법](https://support.google.com/webmasters/topic/6029673)에 대한 가이드를
+방법](https://support.google.com/webmasters/topic/6029673){: .external }에 대한 가이드를
 게시하고 있습니다. Bing도 [웹 마스터에 대한
-지침](http://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a)을 게시하고 있습니다.
+지침](http://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a){: .external }을 게시하고 있습니다.
 
 ### 성능
 
 콘텐츠 및 애플리케이션 레이어가 잘 조율된 경우([Steve Souders의
-서적](https://stevesouders.com/) 참조) 나머지 TLS
+서적](https://stevesouders.com/){: .external } 참조) 나머지 TLS
 성능 우려 사항은 일반적으로 애플리케이션의 전반적인 비용에 상대적으로 매우
 작은 수준입니다. 또한, 이러한 비용은 절감하고 상각할 수 있습니다. (TLS 최적화를
 비롯한 유용한 정보는 _[High Performance Browser
-Networking](http://chimera.labs.oreilly.com/books/1230000000545)_[- Ilya
-Grigorik 저](http://chimera.labs.oreilly.com/books/1230000000545)를 참조하십시오.) Ivan
+Networking](http://chimera.labs.oreilly.com/books/1230000000545){: .external }_[- Ilya
+Grigorik 저](http://chimera.labs.oreilly.com/books/1230000000545){: .external }를 참조하십시오.) Ivan
 Ristic의 _[OpenSSL
-Cookbook](https://www.feistyduck.com/books/openssl-cookbook/)_ 및 _[Bulletproof
-SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/)_도 참조하십시오.
+Cookbook](https://www.feistyduck.com/books/openssl-cookbook/){: .external }_ 및 _[Bulletproof
+SSL And TLS](https://www.feistyduck.com/books/bulletproof-ssl-and-tls/){: .external }_도 참조하십시오.
 
 경우에 따라 TLS는 성능을 _향상_시킬 수 있습니다. 이는 주로 HTTP/2가 실현
 가능해졌기 때문입니다. Chris Palmer는 [Chrome Dev Summit 2014에서 HTTPS 및 HTTP/2 성능

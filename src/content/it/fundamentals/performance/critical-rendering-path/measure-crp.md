@@ -37,7 +37,7 @@ Quindi cosa significano queste informazioni cronologiche?
 La specifica HTML detta condizioni precise per ogni evento: quando deve essere attivato, quali condizioni devono essere soddisfatte e così via. Per i nostri scopi, ci concentreremo solo su alcuni traguardi relativi al percorso di rendering critico:
 
 * **domInteractive** segna quando DOM è pronto.
-* **domContentLoaded** solitamente segna quando [sia DOM che CSSOM sono pronti](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/).
+* **domContentLoaded** solitamente segna quando [sia DOM che CSSOM sono pronti](http://calendar.perfplanet.com/2012/deciphering-the-critical-rendering-path/){: .external }.
     * In assenza di JavaScript con blocco parser, _DOMContentLoaded_ verrà attivato immediatamente dopo _domInteractive_.
 * **domComplete** segna quando la pagina e tutte le relative sottorisorse sono pronte.
 
@@ -50,7 +50,7 @@ La specifica HTML detta condizioni precise per ogni evento: quando deve essere a
 L'esempio di cui sopra potrebbe sembrare leggermente scoraggiante a prima vista, ma in realtà è davvero abbastanza semplice. Navigation Timing API acquisisce tutte le informazioni temporali pertinenti e il nostro codice attende semplicemente che l'evento `onload` sia attivato &mdash; ricorda che l'evento onload si attiva dopo domInteractive, domContentLoaded e domComplete &mdash e calcola la differenza tra le varie informazioni cronologiche.
 <img src="images/device-navtiming-small.png" class="center" alt="Demo di NavTiming">
 
-Detto questo, adesso disponiamo di traguardi specifici da monitorare e una funzione semplice per l'output di queste misurazioni. Invece di stampare queste metriche sulla pagina, puoi anche modificare il codice così da inviarle a una server di analisi ([Google Analytics esegue l'operazione automaticamente](https://support.google.com/analytics/answer/1205784)), che rappresenta un ottimo modo per controllare le performance delle tue pagine che possono trarre beneficio da un lavoro di ottimizzazione.
+Detto questo, adesso disponiamo di traguardi specifici da monitorare e una funzione semplice per l'output di queste misurazioni. Invece di stampare queste metriche sulla pagina, puoi anche modificare il codice così da inviarle a una server di analisi ([Google Analytics esegue l'operazione automaticamente](https://support.google.com/analytics/answer/1205784){: .external }), che rappresenta un ottimo modo per controllare le performance delle tue pagine che possono trarre beneficio da un lavoro di ottimizzazione.
 
 
 

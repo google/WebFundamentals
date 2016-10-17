@@ -51,7 +51,7 @@ these posts.
 In Chrome 50 (Estimated beta date: March 10 to 17) there are a number of changes to Chrome.
 This list is subject to change at any time.
 
-## AppCache Deprecated on Insecure Contexts
+## AppCache deprecated on insecure contexts
 
 **TL;DR**: To hinder cross-site scripting, we're deprecating AppCache on insecure
 origins. We expect that in Chrome 52 it will only work on origins serving
@@ -69,7 +69,7 @@ Chrome is removing this attack vector by only allowing it over HTTPS. We're
 deprecating HTTP support in Chrome 50 and expect to remove it entirely in Chrome
 52.
 
-## Document.defaultCharset is Removed
+## Document.defaultCharset is removed
 
 **TL;DR**: [`document.defaultCharset`](https://github.com/whatwg/dom/issues/58) has
 been removed to improve spec compliance.
@@ -93,7 +93,7 @@ charset="utf-8">`). Finally if none of those are available the
 You can read more discussion of the reasoning not to spec this out
 [in this github issue](https://github.com/whatwg/dom/issues/58)
 
-## subresource Attribute Removed from link Element
+## Subresource attribute removed from link element
 
 **TL;DR**: Remove support for the `subresource` value for the `rel` attribute of
 `HTMLLinkElement`.
@@ -119,7 +119,7 @@ include [other values for the `rel` attribute](https://developer.mozilla.org/en-
 including `preconnect`, `prefetch`, `preload`, `prerender`. Some of these
 options are experimental and may not be widely supported.
 
-## Remove Insecure TLS Version Fallback
+## Remove insecure TLS version fallback
 
 **TL;DR**: Remove a mechanism for forcing servers to return data using less- or
 non-secure versions of TLS.
@@ -153,7 +153,7 @@ attribute, which allows disambiguation between keys that are located multiple
 places on a keyboard. For example, both attributes allow developers to
 distinguish between the two `Enter` keys on an extended keyboard.
 
-## Error and Success Handlers Required in RTCPeerConnection Methods
+## Error and success handlers required in RTCPeerConnection methods
 
 **TL;DR**: The [WebRTC](http://www.html5rocks.com/en/tutorials/webrtc/basics/){: .external }
 RTCPeerConnection methods [`createOffer()`](https://w3c.github.io/webrtc-pc/#widl-RTCPeerConnection-createOffer-Promise-RTCSessionDescription--RTCOfferOptions-options)
@@ -199,7 +199,7 @@ In general, for production WebRTC applications we recommend that you use
 [`adapter.js`](https://github.com/webrtc/adapter), a shim, maintained by the
 WebRTC project, to insulate apps from spec changes and prefix differences.
 
-## The XMLHttpRequestProgressEvent is No Longer Supported
+## The XMLHttpRequestProgressEvent is no longer supported
 
 **TL;DR**: The `XMLHttpRequestProgressEvent` interface will be removed, together
 with the attributes `position` and `totalSize`.
@@ -225,7 +225,7 @@ functionality has long been superceded by the
       }
     
 
-## Remove Prefixed Encrypted Media Extensions
+## Remove prefixed Encrypted Media Extensions
 
 **TL;DR**: Prefixed encrypted media extensions have been removed in favor of a
 spec-based, unprefixed replacement.
@@ -243,7 +243,7 @@ That was nearly a year ago. And since the unprefixed version has more
 capabilities than the prefixed version, it's time to remove the prefixed version
 of the API.
 
-## Remove Support for SVGElement.offset Properties
+## Remove support for SVGElement.offset properties
 
 **TL;DR**: Offset properties for SVGElement have been dropped in favor of the more
 widely-supported properties on `HTMLElement`.
