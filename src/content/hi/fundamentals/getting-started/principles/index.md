@@ -9,7 +9,7 @@ description: Google and AnswerLab undertook a study examining how users interact
 
 {% include "web/_shared/contributors/petelepage.html" %}
 
-इस प्रश्न का उत्तर पाने के लिए एक [शोध अध्ययन](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals) किया. महत्वपूर्ण तथ्य: 
+इस प्रश्न का उत्तर पाने के लिए एक [शोध अध्ययन](https://www.google.com/think/multiscreen/whitepaper-sitedesign.html?utm_source=web-fundamentals&utm_term=chrome&utm_content=ux-landing&utm_campaign=web-fundamentals){: .external } किया. महत्वपूर्ण तथ्य: 
 
 
 <blockquote class="wf-blockquote">
@@ -89,7 +89,7 @@ Large app install interstitials (e.g., full-page promotions that hide content
 and prompt users to install an app) annoy users and make it difficult to
 perform tasks. On top of annoying users, sites that use app install interstitials
 fail the
-[Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/),
+[Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/){: .external },
 which may negatively impact their search rankings.
 
 <div class="attempt-left">
@@ -145,7 +145,7 @@ box in a menu.
 Users don’t scan through multiple pages of results to find what they’re looking
 for. Make life easier on users by auto-completing queries, correcting
 misspellings, and suggesting related queries. Rather than reinventing the
-wheel, consider robust products like [Google Custom Search](https://cse.google.com/cse/){: .external }.
+wheel, consider robust products like [Google Custom Search](https://cse.google.com/cse/){: .external }{: .external }.
 
 <div class="attempt-left">
   <figure id="fig1">
@@ -369,7 +369,7 @@ to apply different stylings for different screens. Don’t create content that
 only displays well at a particular
 [viewport width](/web/fundamentals/design-and-ui/responsive/#set-the-viewport).
 Sites that force users to horizontally scroll fail the
-[Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/),
+[Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/){: .external },
 which may negatively impact their search rankings.
 
 ### Make product images expandable
