@@ -129,7 +129,7 @@ Sync events will often complete while the user has a page open to the site, so r
 
 Of course, these restrictions may loosen/tighten based on real-world usage.
 
-## Progressive Enhancement
+## Progressive enhancement
 
 It’ll be a while before all browsers support background sync, especially as Safari and Edge don’t yet support service workers. But progressive enhancement helps here:
 
