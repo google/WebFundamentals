@@ -21,7 +21,7 @@ description: アプリ内のモーダル ビューにアニメーションを付
 
 <img src="images/dont-press.gif" alt="モーダルビューをアニメーション化。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">サンプルを参照してください。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">サンプルを参照してください。</a>
 
 モーダル オーバーレイはビューポートに配列する必要があり、`position` を `fixed` に設定しなければなりません。
 

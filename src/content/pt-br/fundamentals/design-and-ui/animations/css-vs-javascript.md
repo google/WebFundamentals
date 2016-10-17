@@ -49,7 +49,7 @@ Abaixo está um exemplo de CSS que moverá um elemento de 100px nos eixos X e Y.
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-simple.html">Veja a amostra</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html">Veja a amostra</a>
 
 Além da duração da transição, há opções para easing, que é basicamente o resultado da animação. Para saber mais sobre o tema, veja o guia [Os fundamentos do easing”](the-basics-of-easing.html).
 
@@ -123,7 +123,7 @@ Por exemplo, você pode animar a caixa da mesma forma que anima transições, ma
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-keyframes.html">Veja a amostra</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html">Veja a amostra</a>
 
 Com animações CSS você define a própria animação independentemente do elemento alvo e usa a propriedade animation-name par selecionar a animação necessária.
 
@@ -167,7 +167,7 @@ Abaixo está o JavaScript que você precisará escrever para recriar a transiç�
     box.startAnimation();
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">Veja a amostra</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-js.html">Veja a amostra</a>
 
 Esse código se torna muito complexo e difícil de gerenciar conforme é expandido para abordar mais casos, portanto, de forma geral, o ideal é escolher uma das várias bibliotecas JavaScript disponíveis para animação. Se já estiver usando o jQuery em seu projeto, é recomendável continuar com ele e usar as funções [`.animate()`](http://api.jquery.com/animate/){: .external }. Por outro lado, se precisar de uma biblioteca exclusiva, veja a [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), que é excelente. Há uma versão mais leve chamada TweenLite, mais simples do ponto de vista de tamanho de arquivo.
 

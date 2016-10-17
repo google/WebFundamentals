@@ -195,7 +195,7 @@ Note: <code>picture</code> 要素はブラウザへの実装が開始された�
 [圧縮画像
 技術](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview)（リンク先は英語）を使用すると、実際のデバイスの能力に関係なく、高圧縮の 2x 画像をあらゆるデバイスに配信できます。画像の種類や圧縮レベルによっては、画像の品質に変化がないように見える場合もありますが、ファイルサイズは大幅に削減されます。
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">      例を表示する</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">      例を表示する</a>
 
 
 Note: 圧縮を使用する場合は、必要なメモリ容量やデコード処理が増加することに注意する。大きい画像をサイズ変更して小さい画面に収める処理は負荷が大きく、メモリと処理能力の両方が限られているローエンドのデバイスでは特にパフォーマンスが大きく低下する場合があります。
@@ -381,7 +381,7 @@ JPG および PNG ファイルで画質を損なわずに、さらに可逆の�
 
 CSS スプライトは、複数の画像を 1 つの「スプライト シート」画像にまとめる手法です。個々の画像を使用するには、要素（スプライト シート）の背景画像とオフセットを指定して目的のパーツを表示します。
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="例で使用されている画像スプライト シート"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="例で使用されている画像スプライト シート"></a>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}

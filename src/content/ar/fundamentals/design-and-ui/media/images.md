@@ -191,7 +191,7 @@ Note: يبدأ العنصر  <code>picture</code> الوصول إلى المتص
 يوفر [أسلوب الصور
 المضغوطة](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) صورة 2x مضغوطة بنسبة كبيرة على جميع الأجهزة، بغض النظر عن إمكانيات الجهاز الفعلية.  وبناءً على نوع الصورة ومستوى الضغط، قد لا يظهر تغير على جودة الصورة، إلا أن حجم الملف يقل بشكل ملحوظ.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">      انظر المثال</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">      انظر المثال</a>
 
 Note: توخ الحذر بشأن الأسلوب المضغوط نظرًا للتكاليف الزائدة التي يتسبب فيها بسبب الذاكرة وإلغاء الترميز.  يعد تغيير حجم الصور الكبيرة لتناسب الشاشات الصغيرة أمرًا مكلفًا وقد يتسبب في إزعاج خاصة على الأجهزة محدودة التكلفة حيث يكون كل من الذاكرة والمعالج محدودين.
 
@@ -378,7 +378,7 @@ You're a super &#9733;
 
 يمكن من خلال أسلوب النقوش المتحركة في CSS الجمع بين عدة صور في صورة تُعرف باسم `ورقة نقوش متحركة`. وبعد ذلك يمكن استخدام الصور الفردية من خلال تحديد صورة الخلفية للعنصر (ورقة النقوش المتحركة) بالإضافة إلى تعويض لعرض الجزء المناسب.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="استخدام ورقة النقوش المتحركة في المثال"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="استخدام ورقة النقوش المتحركة في المثال"></a>
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}
 </pre>

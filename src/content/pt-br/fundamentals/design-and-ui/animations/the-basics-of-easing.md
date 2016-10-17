@@ -42,7 +42,7 @@ Animações sem nenhum tipo de easing são chamadas de **linear**. Um gráfico d
 
 <img src="images/linear.png" style="max-width: 300px" alt="Curva de animação ease linear." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html">Veja uma animação linear.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html">Veja uma animação linear.</a>
 
 Conforme o tempo passa, o valor aumenta na mesma proporção. Com o movimento linear, obtém-se um aspecto robótico e não natural. Isso é algo que choca o usuário. Em linhas gerais, evite movimentos lineares.
 
@@ -65,7 +65,7 @@ Há várias formas de se obter um efeito ease out, mas o mais simples é a palav
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-out.html">Veja uma animação ease-out.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html">Veja uma animação ease-out.</a>
 
 Ease out é geralmente melhor para o trabalho da interface do usuário, porque o início rápido dá uma sensação de resposta à sua animação, enquanto permite uma pequena desaceleração natural no final.
 
@@ -75,7 +75,7 @@ Animações ease-in começam de forma lenta e terminam rapidamente, diferente do
 
 <img src="images/ease-in.png" style="max-width: 300px" alt="Curva de animação do ease-in." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html">Veja uma animação ease-in.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html">Veja uma animação ease-in.</a>
 
 Esse tipo de animação é como uma pedra pesada caindo, onde começa lentamente e atinge o chão rapidamente com uma batida mortal.
 
@@ -93,7 +93,7 @@ Ease in e out são semelhantes a um carro acelerando e desacelerando e, se usado
 
 <img src="images/ease-in-out.png" style="max-width: 300px" alt="Curva de animação do ease-in-out." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Veja uma animação ease-in-out.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Veja uma animação ease-in-out.</a>
 
 Deve-se ter cuidado para não criar animação longa demais, devido à lentidão do início do ease-in na animação. Geralmente, algo entre 300 e 500 ms é indicado, mas o valor exato depende muito do objetivo do seu projeto. Desta forma, início lento, meio rápido e término lento resultarão em maior contraste da animação, o que pode ser bastante satisfatório para o usuário.
 

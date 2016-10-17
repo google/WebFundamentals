@@ -80,7 +80,7 @@ Translated By:
 所有这些在移动环境中尤为重要，因为其中的带宽和延迟性影响最大，因此用户的耐心可能十分有限。
 当多个来源具有不支持的类型时，不添加类型属性可能会影响性能。
 
-使用移动浏览器开发者工具比较<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/video-main.html">具有类型属性</a>的网络活动和<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/notype.html">没有类型属性</a>的网络活动。
+使用移动浏览器开发者工具比较<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/video-main.html">具有类型属性</a>的网络活动和<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/notype.html">没有类型属性</a>的网络活动。
 同时，请检查浏览器开发者工具中的响应标头以[确保服务器报告正确的 MIME 类型](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types)；否则，视频来源类型检查将不起作用。
 
 ### 指定开始时间和结束时间
@@ -236,7 +236,7 @@ Note: - 多数移动平台（iOS 除外）都支持 Media Fragments API。
 
 在 JavaScript 中，使用视频的 currentSrc 属性即可返回所用的来源。
 
-要实际了解此操作，请观看<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/video-main.html">此演示</a>：Chrome 和 Firefox 会选择 chrome.webm（因为这是这些浏览器可能支持的来源列表中的首个选项），而 Safari 则会选择 chrome.mp4。
+要实际了解此操作，请观看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/video-main.html">此演示</a>：Chrome 和 Firefox 会选择 chrome.webm（因为这是这些浏览器可能支持的来源列表中的首个选项），而 Safari 则会选择 chrome.mp4。
 
 
 ## 正确设置视频大小 
@@ -306,7 +306,7 @@ Note: 请勿强制调整元素尺寸，否则会使宽高比异于原始视频�
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
-对比<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">自适应示例</a>和<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">非自适应版本</a>。
+对比<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/responsive_embed.html">自适应示例</a>和<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/unyt.html">非自适应版本</a>。
 
 
 ## 自定义视频播放器 
@@ -397,7 +397,7 @@ iPad 版 Safari 以内联模式播放视频：
      <p>此浏览器不支持视频元素。</p>
 </video>
 
-要实际了解此操作，请观看<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">演示</a>。
+要实际了解此操作，请观看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/fullscreen.html">演示</a>。
 
 Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
@@ -591,7 +591,7 @@ preload 属性在不同平台中的效果不同。
   </tbody>
 </table>
 
-移动设备既不支持 playbackRate（<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/scripted.html">观看演示</a>），也不支持音量。
+移动设备既不支持 playbackRate（<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/scripted.html">观看演示</a>），也不支持音量。
 
 #### 方法
 
@@ -621,7 +621,7 @@ preload 属性在不同平台中的效果不同。
 </table>
 
 除非以响应用户操作（例如点击按钮）的方式调用 play() 和 pause()，
-否则这两种方法无法在移动设备（Android 版 Opera 除外）上起作用：观看<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/scripted.html">演示</a> （同样，您也无法对嵌入式 YouTube 视频等内容执行开始播放的操作）。
+否则这两种方法无法在移动设备（Android 版 Opera 除外）上起作用：观看<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/scripted.html">演示</a> （同样，您也无法对嵌入式 YouTube 视频等内容执行开始播放的操作）。
 
 #### 事件
 

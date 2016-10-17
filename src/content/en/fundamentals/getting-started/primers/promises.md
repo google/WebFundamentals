@@ -823,7 +823,7 @@ But what does this mean for promises? Well, you can use this return/resume behav
       document.querySelector('.spinner').style.display = 'none';
     })
 
-[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/gettings-started/primers/async-generators-example.html){: target="_blank" .external }
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }
 
 This works exactly as before but is so much easier to read. This works in Chrome and Opera today (see [code](https://github.com/googlesamples/web-fundamentals/blob/gh-pages/fundamentals/getting-started/primers/async-generators-example.html){: target="_blank" .external }), and works in Microsoft Edge by going to `about:flags` and turning on the **Enable experimental Javascript features** setting. This will be enabled by default in an upcoming version.
 

@@ -21,7 +21,7 @@ description: Узнайте, как добиться анимационного 
 
 <img src="images/dont-press.gif" alt="Создание анимации модального представления." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">См. образец.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">См. образец.</a>
 
 Модальное наложение должно быть выровнено по viewport, поэтому его свойству `position` следует задать значение `fixed`:
 

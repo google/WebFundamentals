@@ -47,7 +47,7 @@ X 軸と Y 軸の両方向に要素を 100px 移動させる CSS を下記に示
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-simple.html">サンプルを参照してください。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html">サンプルを参照してください。</a>
 
 遷移の持続時間のほかに、軽減化のためのオプションがあります。それは本質的にアニメーションの感じ方です。 詳細については、[“The Basics of Easing”](the-basics-of-easing.html) ガイドを参照してください。
 
@@ -121,7 +121,7 @@ Note: アニメーションという用語に慣れていない場合、手書�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-keyframes.html">サンプルを参照してください。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html">サンプルを参照してください。</a>
 
 CSS アニメーションでは、ターゲット要素とは別個にアニメーション自身を定義し、アニメーション名プロパティを使用して必要なアニメーションを選択します。
 
@@ -165,7 +165,7 @@ Note: アニメーション用に setInterval または setTimeout を使用す�
     box.startAnimation();
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">サンプルを参照してください。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-js.html">サンプルを参照してください。</a>
 
 より多くのケースに適用できるよう拡張しようとすると、このコードは非常に複雑で管理が難しくなるように思われます。したがって、一般的に、アニメーション用に使用できる数多くの JavaScript ライブラリのいずれかを選択するのが適切です。 プロジェクトで jQuery をすでに使用している場合は、既存の機能を維持して、[`.animate()`](http://api.jquery.com/animate/) 関数を使用するほうが適切です。 一方、専用のライブラリが必要な場合は、非常に強力な [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) を使用してください。 TweenLite と呼ばれる簡易版の TweenMax があります。TweenLite はファイルサイズの観点から使いやすく設計されています。
 

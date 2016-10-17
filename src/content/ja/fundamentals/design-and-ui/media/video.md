@@ -75,7 +75,7 @@ description: 動画をサイトに追加して、どのデバイスでも最高�
 ここに挙げたポイントはすべて、帯域幅と待ち時間が重視され、ユーザーの忍耐に限界があるモバイル コンテキストでは特に重要です。
 type 属性を指定しないと、複数のソースの中にサポートされていないタイプが存在する場合に、パフォーマンスに影響する可能性があります。
 
-モバイル ブラウザ デベロッパー ツールを使用して、<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/video-main.html">type 属性がある場合</a>と <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/notype.html">type 属性がない場合</a>でネットワークのアクティビティを比較してください。
+モバイル ブラウザ デベロッパー ツールを使用して、<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/video-main.html">type 属性がある場合</a>と <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/notype.html">type 属性がない場合</a>でネットワークのアクティビティを比較してください。
 また、ブラウザ デベロッパー ツールでレスポンス ハンドラを確認し、[サーバーが適切な MIME タイプを報告することを確認してください](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types)。そうしないと、動画のソースタイプのチェックが機能しません。
 
 ### 開始時刻と終了時刻を指定する
@@ -217,7 +217,7 @@ Chrome で実行する場合の canPlayType() の引数と戻り値の例は次�
 
 JavaScript では、動画の currentSrc プロパティを使用して、使用されているソースを取得できます。
 
-実際の動作を確認するには、<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/video-main.html">こちらのデモ</a>をご覧ください。Chrome と Firefox は chrome.webm を選択し（ブラウザがサポートしているソースのリストで先頭に指定されているため）、Safari は「chrome.mp4」を選択しています。
+実際の動作を確認するには、<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/video-main.html">こちらのデモ</a>をご覧ください。Chrome と Firefox は chrome.webm を選択し（ブラウザがサポートしているソースのリストで先頭に指定されているため）、Safari は「chrome.mp4」を選択しています。
 
 
 ## 動画のサイズを正しく設定する 
@@ -269,7 +269,7 @@ Note: 要素のサイズ設定で、元の動画と異なるアスペクト比�
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup"   adjust_indentation="auto" %}
 </pre>
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">レスポンシブなサンプル</a>と<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">レスポンシブではないサンプル</a>を比較してみましょう。
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/responsive_embed.html">レスポンシブなサンプル</a>と<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/unyt.html">レスポンシブではないサンプル</a>を比較してみましょう。
 
 
 ## 動画プレーヤーをカスタマイズする 
@@ -350,7 +350,7 @@ Fullscreen API をサポートしているデバイスでは、動画のプレ�
      <p>このブラウザは、動画要素をサポートしていません。</p>
 </video>
 
-実際の動作を確認するには、こちらの<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">デモ</a>をご覧ください。
+実際の動作を確認するには、こちらの<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/fullscreen.html">デモ</a>をご覧ください。
 
 Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
@@ -544,7 +544,7 @@ preload 属性の効果は、プラットフォームによって異なります
   </tbody>
 </table>
 
-playbackRate（<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/scripted.html">デモをご覧ください</a>）と volume は、携帯端末ではサポートされていません。
+playbackRate（<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/scripted.html">デモをご覧ください</a>）と volume は、携帯端末ではサポートされていません。
 
 #### メソッド
 
@@ -574,7 +574,7 @@ playbackRate（<a href="https://googlesamples.github.io/web-fundamentals/samples
 </table>
 
 携帯端末では（Android の Opera を除き）、ボタンをクリックするといったユーザーの操作に対するレスポンスとして呼び出されない限り、play() と pause() は
-機能しません。<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/scripted.html">デモ</a>をご覧ください（同様に、埋め込みの YouTube 動画など、コンテンツの再生を開始することはできません）。
+機能しません。<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/scripted.html">デモ</a>をご覧ください（同様に、埋め込みの YouTube 動画など、コンテンツの再生を開始することはできません）。
 
 #### イベント
 

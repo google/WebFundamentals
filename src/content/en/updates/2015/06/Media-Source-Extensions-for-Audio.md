@@ -67,7 +67,7 @@ Once the `MediaSource` object is connected, it will perform some initialization 
 
 ## Anomalous Waveforms
 
-We'll come back to the code in a moment, but let's now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](https://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
+We'll come back to the code in a moment, but let's now look more closely at the file we've just appended, specifically at the end of it. Below, is a graph of the last 3000 samples averaged across both channels from the [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/updates/sintel_0.mp3) track. Each pixel on the red line is a [floating point sample](https://en.wikipedia.org/wiki/Audio_bit_depth) in the range of `[-1.0, 1.0]`.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap_end.png" alt="End of sintel_0.mp3">
@@ -76,7 +76,7 @@ We'll come back to the code in a moment, but let's now look more closely at the 
 
 What's with all that those zero (silent) samples!? They're actually due to [compression artifacts](https://en.wikipedia.org/wiki/Gapless_playback#Compression_artifacts) introduced during encoding. Almost every encoder introduces some type of padding. In this case [LAME](http://lame.sourceforge.net/){: .external } added exactly 576 padding samples to the end of the file.
 
-In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [`metadata`](#appendix-b-parsing-gapless-metadata) included within each file.
+In addition to the padding at the end, each file also had padding added to the beginning. If we peek ahead at the [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/updates/sintel_1.mp3) track we'll see another 576 samples of padding exists at the front. The amount of padding varies by encoder and content, but we know the exact values based on [`metadata`](#appendix-b-parsing-gapless-metadata) included within each file.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_gap.png" alt="Beginning of sintel_1.mp3">
@@ -149,7 +149,7 @@ The sections of silence at the beginning and end of each file are what causes th
 
 ## A Seamless Waveform
 
-Let's see what our shiny new code has accomplished by taking another look at the waveform after we've applied our append windows. Below, you can see that the silent section at the end of [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_0.mp3) (in red) and the silent section at the beginning of [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/samples/updates/sintel_1.mp3) (in blue) have been removed; leaving us with a seamless transition between segments.
+Let's see what our shiny new code has accomplished by taking another look at the waveform after we've applied our append windows. Below, you can see that the silent section at the end of [`sintel_0.mp3`](https://googlesamples.github.io/web-fundamentals/updates/sintel_0.mp3) (in red) and the silent section at the beginning of [`sintel_1.mp3`](https://googlesamples.github.io/web-fundamentals/updates/sintel_1.mp3) (in blue) have been removed; leaving us with a seamless transition between segments.
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-06-12-media-source-extensions-for-audio/mp3_mid.png" alt="Joining of sintel_0.mp3 and sintel_1.mp3">
@@ -166,7 +166,7 @@ With that we've stitched all five segments seamlessly into one and have subseque
   </video>
 </p>
 
-If you'd like to know more check the appendices below for a deeper look at gapless content creation and metadata parsing. You can also explore [`mse-main.js`](https://googlesamples.github.io/web-fundamentals/samples/updates/mse-main.js) for a closer look at the code powering this demo.
+If you'd like to know more check the appendices below for a deeper look at gapless content creation and metadata parsing. You can also explore [`mse-main.js`](https://googlesamples.github.io/web-fundamentals/updates/mse-main.js) for a closer look at the code powering this demo.
 
 Thanks for reading!
 

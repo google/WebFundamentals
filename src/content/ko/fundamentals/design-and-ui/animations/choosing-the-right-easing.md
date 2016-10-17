@@ -23,7 +23,7 @@ CSS에서`ease-out` 키워드로 지정된 것을 넘어 '공격성'의 범위�
 
 <img src="images/quintic-ease-out-markers.png" alt="Quintic ease-out 애니메이션 곡선" style="max-width: 300px"/>
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Quintic ease-out 애니메이션을 참조하십시오.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Quintic ease-out 애니메이션을 참조하십시오.</a>
 
 다른 easing 방정식, 특히 바운스 또는 elastic ease는 프로젝트에 적합한 경우에만 드물게 사용해야 합니다. 불편한 애니메이션만큼 거슬리는 것도 없습니다. 프로젝트가 유쾌하고 재미있지 않으면 주변을 바운드하는 UI 요소를 갖지 마십시오! 반대로, 경쾌하고 재미있는 사이트를 만드는 중이면 바운스를 제공하십시오!
 

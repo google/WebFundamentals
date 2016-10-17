@@ -189,7 +189,7 @@ Um bom exemplo de imagens que podem ser tocadas e expandidas é fornecido pelo s
 A [técnica de compactação
 de imagens](http://www.html5rocks.com/pt-BR/mobile/high-dpi/#toc-tech-overview) veicula uma imagem 2x altamente compactada em todos os dispositivos, independentemente dos recursos que eles oferecem.  Dependendo do tipo de imagem e nível de compactação, a qualidade da imagem pode não mudar, mas o tamanho do arquivo diminui sensivelmente.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">Ver o exemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Ver o exemplo</a>
 
 Note: Tenha cuidado com a técnica de compactação por causa dos altos custos associados de memória e decodificação.  O redimensionamento de grandes imagens para adequação a telas menores custa caro e pode se tornar uma tarefa difícil em dispositivos mais antigos, cuja memória e capacidade de processamento são reduzidas.
 
@@ -377,7 +377,7 @@ Diversas ferramentas estão disponíveis para realizar uma compactação mais de
 
 O código CSS oferece uma técnica pela qual diversas imagens são combinadas em uma única imagem, formando um `painel de imagens`, também chamado de `sprite sheet`. Em seguida, as imagens individuais podem ser usadas. Para isso, é especificada a imagem de segundo plano de um elemento (o painel de imagens) e um ajuste é feito para exibir a parte correta da imagem.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Painel de imagens usado no exemplo"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Painel de imagens usado no exemplo"></a>
 
 <pre class="prettyprint">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" %}

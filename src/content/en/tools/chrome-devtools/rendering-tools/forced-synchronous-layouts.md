@@ -30,7 +30,7 @@ that the demo runs at a silky-smooth 60 FPS.
 First, you need to capture data so that you can understand exactly what happens
 as your page runs. 
 
-1. Open the <a href="https://googlesamples.github.io/web-fundamentals/samples/tools/chrome-devtools/profile/rendering-tools/forcedsync.html">demo</a>.
+1. Open the [demo](https://googlesamples.github.io/web-fundamentals/tools/chrome-devtools/profile/rendering-tools/forcedsync.html).
 1. Open the **Timeline** panel of DevTools.
 1. Enable the **JS Profile** option. When analyzing the flame chart later, this
    option will let you see exactly which functions were called. 

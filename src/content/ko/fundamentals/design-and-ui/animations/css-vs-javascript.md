@@ -48,7 +48,7 @@ CSS로 애니메이션을 만드는 것이 화면에서 움직임을 표현하�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-simple.html">샘플 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html">샘플 보기</a>
 
 전환 기간 이외에도 애니메이션에 느낌을 적용하는 easing 옵션이 있습니다. 자세한 내용은 [“Easing의 기본 사항”](the-basics-of-easing.html) 가이드를 참조하십시오.
 
@@ -122,7 +122,7 @@ Note: 애니메이션 초보자를 위해 설명하자면 키프레임은 손으
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-keyframes.html">샘플 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html">샘플 보기</a>
 
 CSS 애니메이션으로 애니메이션 자체를 대상 요소와 독립적으로 정의하고, animation-name 속성을 사용하여 필요한 애니메이션을 선택합니다.
 
@@ -166,7 +166,7 @@ Note: 웹에서 애니메이션에 setInterval 또는 setTimeout을 사용하는
     box.startAnimation();
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">샘플 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-js.html">샘플 보기</a>
 
 이 코드는 더 많은 경우를 포함하도록 확장해야 하기 때문에 매우 복잡하고 관리하기 어렵습니다. 따라서 애니메이션에 사용할 수 있는 많은 JavaScript 라이브러리 중 하나를 선택하면 도움이 됩니다. 프로젝트에서 이미 jQuery를 사용 중인 경우, 이를 활용하고 [`.animate()`](http://api.jquery.com/animate/){: .external } 함수를 사용할 수 있습니다. 반면에 전용 라이브러리가 필요한 경우 매우 강력한 [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)를 참조하십시오. 파일 크기 면에서 더욱 친숙한 TweenLite라는 라이트 버전이 있습니다.
 

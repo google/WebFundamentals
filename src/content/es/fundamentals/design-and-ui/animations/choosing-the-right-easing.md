@@ -23,7 +23,7 @@ Existe un grupo de ecuaciones de salida lenta reconocidas que van más allá de 
 
 <img src="images/quintic-ease-out-markers.png" alt="A Quintic ease-out animation curve" style="max-width: 300px"/>
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Ver una animación de salida lenta Quintic</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Ver una animación de salida lenta Quintic</a>
 
 El resto de las ecuaciones de aceleración, especialmente los rebotes y las aceleraciones elásticas, se deben utilizar con moderación y solo cuando sean adecuadas para su proyecto. Algunos efectos hacen que el usuario interrumpa la experiencia, como las animaciones estridentes. Si su proyecto no es alegre y divertido, no incluya elementos de IU que reboten por toda la página. Por el contrario, si realiza un sitio que debe ser alegre y divertido, entonces no dude en colocar el efecto de rebote.
 

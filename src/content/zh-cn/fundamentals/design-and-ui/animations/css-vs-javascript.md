@@ -47,7 +47,7 @@ description: 您可以通过 CSS 或 JavaScript 编写动画。 应使用哪种�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-simple.html">查看示例</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html">查看示例</a>
 
 除了转换的持续时间之外，还有针对缓动的选项，缓动基本上是动画表现的方式。 您可以在[“缓动的基础知识”](the-basics-of-easing.html)指南上了解更多信息。
 
@@ -121,7 +121,7 @@ Note: 如果您是动画初学者，那么说明一下，关键帧是来自手�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-keyframes.html">查看示例</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html">查看示例</a>
 
 借助 CSS 动画，可独立于目标元素来定义动画本身，并且使用 animation-name 属性来选择所需的动画。
 
@@ -165,7 +165,7 @@ Note: 您可能看到网页上很多使用 setInterval 或 setTimeout 来实现�
     box.startAnimation();
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">查看示例</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-js.html">查看示例</a>
 
 当您尝试进行扩展以包括更多用例时，此代码开始变得很复杂并且难以管理，因此，一般来说，从许多可用于动画的 JavaScript 库中选择一个会比较好。 如果您已在项目中使用 jQuery，继续使用它并使用[`.animate()`](http://api.jquery.com/animate/){: .external }函数也比较好。 另一方面，如果您需要专门的库，则可以看看[Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified)，这个库非常强大。 它有一个轻量化版本，称为 TweenLite，从文件大小角度来看更加友好。
 

@@ -71,7 +71,7 @@ Easing out causes the animation to start more quickly than linear ones, and it a
 
 Easing out is typically the best for user interface work, because the fast start gives your animations a feeling of responsiveness, while still allowing for a natural slowdown at the end.
 
-[See an ease-out animation](https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
+[See an ease-out animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 
@@ -96,7 +96,7 @@ This kind of animation is like a heavy stone falling, where it starts slowly and
 
 From an interaction point of view, however, ease-ins can feel a little unusual because of their abrupt end; things that move in the real world tend to decelerate rather than simply stopping suddenly. Ease-ins also have the detrimental effect of feeling sluggish when starting, which negatively impacts the perception of responsiveness in your site or app.
 
-[See an ease-in animation](https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
+[See an ease-in animation](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html){: target="_blank" .external }
 
 <div style="clear:both;"></div>
 

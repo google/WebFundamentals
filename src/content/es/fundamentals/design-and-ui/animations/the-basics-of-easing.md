@@ -41,7 +41,7 @@ Las animaciones sin ningún tipo de aceleración se conocen como **lineales**. L
 
 <img src="images/linear.png" style="max-width: 300px" alt="Linear ease animation curve." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html">Ver una animación lineal</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html">Ver una animación lineal</a>
 
 A medida que pasa el tiempo, el valor aumenta en cantidades iguales. Con el movimiento lineal, las animaciones se ven robóticas y poco naturales, y esto es algo irritante para los usuarios. En términos generales, debe evitar el movimiento lineal.
 
@@ -64,7 +64,7 @@ Existen muchas maneras diferentes de lograr un efecto de salida lenta, pero la m
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-out.html">Ver una animación de salida lenta</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html">Ver una animación de salida lenta</a>
 
 Por lo general, la salida lenta es la mejor opción para el trabajo de las interfaces de usuario, ya que el inicio rápido les proporciona a las animaciones un aire de receptividad y, a su vez, sigue permitiendo el uso de un poco de desaceleración natural al final.
 
@@ -74,7 +74,7 @@ Las animaciones de entrada lenta comienzan lentamente y finalizan rápidamente, 
 
 <img src="images/ease-in.png" style="max-width: 300px" alt="Ease-in animation curve." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html">Ver una animación de entrada lenta</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html">Ver una animación de entrada lenta</a>
 
 Este tipo de animaciones son como una roca pesada que se cae, ya que baja lentamente y golpea contra el suelo rápidamente, con un ruido estrepitoso.
 
@@ -92,7 +92,7 @@ El hecho de incluir tanto entradas como salidas lentas es similar a un auto que 
 
 <img src="images/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out animation curve." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Ver una animación de entrada y salida lentas</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Ver una animación de entrada y salida lentas</a>
 
 Aquí se debe tener precaución para que la duración de la animación no sea demasiado prolongada, con el fin de evitar la lentitud del inicio con entrada lenta de la animación. Comúnmente, las animaciones que se encuentran entre los 300 y los 500 ms serán correctas, pero el número exacto dependerá, en gran medida, de las características del proyecto. Dicho esto, si realiza un inicio lento, una sección intermedia rápida y un final lento, logrará un mayor contraste en la animación, lo que podría resultar bastante satisfactorio para los usuarios.
 

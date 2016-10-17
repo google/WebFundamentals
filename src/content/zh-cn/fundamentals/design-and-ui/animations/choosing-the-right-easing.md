@@ -23,7 +23,7 @@ description: 为项目选择合适的缓动，无论是缓入、缓出还是缓�
 
 <img src="imgs/quintic-ease-out-markers.png" alt="Quintic 缓出动画的曲线。" style="max-width: 300px"/>
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">查看 Quintic 缓出动画。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">查看 Quintic 缓出动画。</a>
 
 其他缓动公式应谨慎使用，特别是弹跳或弹性缓动，并且仅在适合于项目时才使用。 很少有东西会像不协调的动画那样让用户体验很差。 如果项目不是欢乐有趣的类型，则不要让 UI 元素到处蹦！反过来，如果是制作一个理应欢乐有趣的网站，则想尽办法让它蹦蹦跳！
 
