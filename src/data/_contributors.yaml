@@ -398,6 +398,21 @@ mattgaunt:
   google: +MattGuant
   twitter: gauntface
 
+mychaelgo:
+  name:
+    given: Mychael
+    family: Go
+  country: ID
+  role:
+    - translator
+  twitter: mychaelgo
+  github: mychaelgo
+  google: 113952063964933941833
+  homepage: 'http://mychaelgo.com'
+  email: admin@mychaelgo.com
+  description:
+    en: Mychael Go is Fullstack Software Engineer
+
 simongong:
   name:
     given: Simon
@@ -1193,18 +1208,3 @@ maciejzasada:
     - author
   google: 104812516714503133849
   email: maciej@unit9.com
-
-mychaelgo:
-  name:
-    given: Mychael
-    family: Go
-  country: ID
-  role:
-    - translator
-  twitter: mychaelgo
-  github: mychaelgo
-  google: 113952063964933941833
-  homepage: 'http://mychaelgo.com'
-  email: admin@mychaelgo.com
-  description:
-    en: Mychael Go is Fullstack Software Engineer
