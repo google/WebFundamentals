@@ -19,10 +19,12 @@ other helpful links. Leave your thoughts in the comments and let me know
 if this is useful to you!
 
 <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="yQhFmPExcbs"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="qPD2yc8BoDk"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
+
+[Watch on YouTube](https://www.youtube.com/watch?v=qPD2yc8BoDk)
 
 * You can now create your own custom HTML tag with and make re-usable web
 components with [Custom Elements v1](#custom-elements).
@@ -103,5 +105,12 @@ that [Subscribe](https://goo.gl/6FP1a5) button up there.
 
 I’m Pete LePage, and as soon as Chrome 55 is released, I’ll be
 right here to tell you -- what’s new in Chrome!
+
+## Subscribe to Chrome Developers on YouTube {: .hide-from-toc }
+Subscribe to our [YouTube channel]() or our 
+[RSS feed](/web/shows/rss.xml)
+
+<link rel="alternate" type="application/rss+xml" title="Web Shows from Google Developers (RSS)" href="https://developers.google.com/web/shows/rss.xml">
+<link rel="alternate" type="application/atom+xml" title="Web Shows from Google Developers (ATOM)" href="https://developers.google.com/web/shows/atom.xml">
 
 {% include "comment-widget.html" %}
