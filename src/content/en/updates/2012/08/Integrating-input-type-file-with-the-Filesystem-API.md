@@ -17,7 +17,7 @@ Let's say you have a photo editing app and you'd like users to be able to drag i
 <figcaption><a href="http://html5-demos.appspot.com/static/dnd/all_types_of_import.html" target="_blank">Launch Demo</a></figcaption>
 </figure>
 
-In a [recent post](/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available), [Eiji Kitamura](http://www.html5rocks.com/profiles/#agektmr) highlighted a subtle, yet powerful new feature in the drag and drop APIs; the ability to drag in folders *and* retrieve them as HTML5 Filesystem API `FileEntry` and `DirectoryEntry` objects (done by accessing a new method on the [DataTransferItem](http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#datatransferitem), `.webkitGetAsEntry()`).
+In a [recent post](/web/updates/2012/07/Drag-and-drop-a-folder-onto-Chrome-now-available), [Eiji Kitamura](/web/resources/contributors#agektmr) highlighted a subtle, yet powerful new feature in the drag and drop APIs; the ability to drag in folders *and* retrieve them as HTML5 Filesystem API `FileEntry` and `DirectoryEntry` objects (done by accessing a new method on the [DataTransferItem](http://www.whatwg.org/specs/web-apps/current-work/multipage/dnd.html#datatransferitem), `.webkitGetAsEntry()`).
 
 What's remarkably cool about the `.webkitGetAsEntry()` extension is how elegant it makes importing files and entire folders. Once you have a `FileEntry` or `DirectoryEntry` from a drop event, it's a matter of using the Filesystem API's `copyTo()` to get it imported into your app.
 

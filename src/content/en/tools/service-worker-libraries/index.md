@@ -25,11 +25,11 @@ directly, or if you'd prefer, use of the [wrappers](https://github.com/GoogleChr
 around `sw-precache` for specific build environments, like
 [`webpack`](https://webpack.github.io/){: .external }.
 
-It can be [used alongside](https://github.com/GoogleChrome/sw-precache/sw-precache-and-sw-toolbox.md) the [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox)
+It can be [used alongside](https://github.com/GoogleChrome/sw-precache/blob/master/sw-precache-and-sw-toolbox.md) the [`sw-toolbox`](https://github.com/GoogleChrome/sw-toolbox)
 library, which works well when following the App Shell + dynamic content model.
 
-The full documentation is in the [read me](https://github.com/GoogleChrome/sw-precache/README.md),
-and the [getting started guide](https://github.com/GoogleChrome/sw-precache/GettingStarted.md) 
+The full documentation is in the [read me](https://github.com/GoogleChrome/sw-precache/blob/master/README.md),
+and the [getting started guide](https://github.com/GoogleChrome/sw-precache/blob/master/GettingStarted.md) 
 provides a quicker jumping off point.
 
 [Get sw-precache](https://github.com/GoogleChrome/sw-precache/){: .button .button-primary }

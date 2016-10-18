@@ -19,7 +19,7 @@ Yesterday at the office, we were coming up with strange and magical CSS tricks. 
       font-size: x-large;
     }
     
-Check out the [live example at jsFiddle](http://jsfiddle.net/VWYsk/){: .external }
+Check out the [live example at jsFiddle](https://jsfiddle.net/VWYsk/){: .external }
 
 You can also style absolute links differently from relative links:
 
@@ -30,7 +30,7 @@ You can also style absolute links differently from relative links:
       transform: rotate(180deg);
     }
     
-Check out the [live example at jsFiddle](:http://jsfiddle.net/RShhf/1/)
+Check out the [live example at jsFiddle](https://jsfiddle.net/RShhf/1/)
 
 If you want to have a different style for links pointing out of your domain, you can use the :not() selector. This is actually how we do the little arrows next to external links at HTML5Rocks.
 
@@ -40,7 +40,7 @@ If you want to have a different style for links pointing out of your domain, you
       padding-right: 16px;
     }
     
-Check out the [live example at jsFiddle](:http://jsfiddle.net/Sts9H/1/)
+Check out the [live example at jsFiddle](http://jsfiddle.net/Sts9H/1/)
 
 Just to remind you that you're not limited to styling links, here's how to make all PNG images inverted:
 
