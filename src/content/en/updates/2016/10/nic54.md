@@ -107,10 +107,11 @@ I’m Pete LePage, and as soon as Chrome 55 is released, I’ll be
 right here to tell you -- what’s new in Chrome!
 
 ## Subscribe to Chrome Developers on YouTube {: .hide-from-toc }
-Subscribe to our [YouTube channel]() or our 
+Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our 
 [RSS feed](/web/shows/rss.xml)
 
-<link rel="alternate" type="application/rss+xml" title="Web Shows from Google Developers (RSS)" href="https://developers.google.com/web/shows/rss.xml">
-<link rel="alternate" type="application/atom+xml" title="Web Shows from Google Developers (ATOM)" href="https://developers.google.com/web/shows/atom.xml">
+<link rel="alternate" type="application/rss+xml" title="Web Shows from Google Developers (RSS)" href="/web/shows/rss.xml">
+<link rel="alternate" type="application/atom+xml" title="Web Shows from Google Developers (ATOM)" href="/web/shows/atom.xml">
+
 
 {% include "comment-widget.html" %}
