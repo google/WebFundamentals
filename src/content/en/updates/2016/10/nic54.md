@@ -100,6 +100,10 @@ These are just a few of the changes in Chrome 54 for developers.
 Check the description for more details and links the documentation and
 specifications.
 
+Oh, and don't forget to check out the
+[Chrome Dev Summit](https://developer.chrome.com/devsummit/), we'll be streaming
+it on YouTube on November 10th and 11th.
+
 If you want to stay up to date with Chrome and know what’s coming, click
 that [Subscribe](https://goo.gl/6FP1a5) button up there.
 
