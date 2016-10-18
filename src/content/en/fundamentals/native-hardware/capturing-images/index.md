@@ -45,7 +45,7 @@ Getting access to the image file is simple.
 
       camera.addEventListener('change', function(e) {
         var file = e.target.files[0]; 
-        // Do something with the audio file.
+        // Do something with the image file.
         frame.src = URL.createObjectURL(file);
       });
     </script>
@@ -92,7 +92,7 @@ object that is passed to the `getUserMedia()` API.
         player.srcObject = stream;
       };
 
-      navigator.mediaDevices.getUserMedia({audio: false, video: true})
+      navigator.mediaDevices.getUserMedia({video: true})
           .then(handleSuccess);
     </script>
 
@@ -136,7 +136,7 @@ Done.
             snapshotCanvas.height);
       });
 
-      navigator.mediaDevices.getUserMedia({audio: false, video: true})
+      navigator.mediaDevices.getUserMedia({video: true})
           .then(handleSuccess);
     </script>
 
@@ -164,7 +164,7 @@ for the stream returned by `getUserMedia()`.
   var player = document.getElementById('player'); 
   var snapshotCanvas = document.getElementById('snapshot');
   var captureButton = document.getElementById('capture');
-  var videoTracks;
+  <strong>var videoTracks;</strong>
 
   var handleSuccess = function(stream) {
     // Attach the video stream to the video element and autoplay.
@@ -180,7 +180,7 @@ for the stream returned by `getUserMedia()`.
     videoTracks.forEach(function(track) {track.stop()});</strong>
   });
 
-  navigator.mediaDevices.getUserMedia({audio: false, video: true})
+  navigator.mediaDevices.getUserMedia({video: true})
       .then(handleSuccess);
 &lt;/script>
 </pre>
