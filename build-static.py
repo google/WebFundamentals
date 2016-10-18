@@ -15,32 +15,52 @@ import yaml
 import devsitePage
 import devsiteIndex
 
-lang = 'en'
-buildDir = 'build'
+build_dir = './build'
+file_count_good = 0
+file_count_total = 0
+file_count_expected = len(files)
+
 raw = open('_build-me.yaml', 'r').read().decode('utf8')
 files = yaml.load(raw)
 
-for f in files:
-  response = 'whoops'
-  print(f)
-  try:
-    if f.endswith('.yaml'):
-      response = devsiteIndex(f.replace('_index.yaml'), lang)
-      f = f.replace('_index.yaml', 'index.html')
-    elif f.endswith('.md'):
-      response = devsitePage.getPage(f.replace('.md', ''), lang)
-      f = f.replace('.md', '.html')
-  except:
-    response = 'exception'
+for source_file in files:
+  file_count_total += 1
+  first_forward = source_file.index('/')
+  lang = source_file[0:first_forward]
+  kind = 'md'
+  if source_file.endswith('_index.yaml'):
+    kind = 'yaml'
+  source_file = source_file[first_forward + 1:]
+  source_file = source_file[0:source_file.rindex('.')]
+  dest_file = os.path.join(build_dir, lang, source_file + '.html')
+
+  response = None
+  if (kind == 'yaml'):
+    response = devsiteIndex.getPage(source_file.replace('_index', ''), lang)
+    dest_file = dest_file.replace('_index', 'index')
+  else:
+    response = devsitePage.getPage(source_file, lang)
 
   if response:
-    destFile = os.path.join('.', buildDir, lang, f)
-    destDir = os.path.dirname(destFile)
+    try:
+      dest_dir = os.path.dirname(dest_file)
+      if not os.path.exists(dest_dir):
+        os.makedirs(dest_dir)
+      with io.open(dest_file, 'w', encoding='utf8') as rendered_file:
+        rendered_file.write(response)
+        rendered_file.close()
+      msg = 'OK ' + dest_file + ' (' + str(file_count_total) + ' of '
+      msg += str(file_count_expected) + ')'
+      print(msg)
+      file_count_good += 1
+    except:
+      print('!! ' + dest_file)
+  else:
+    print('NO ' + dest_file)
 
-    if not os.path.exists(destDir):
-      os.makedirs(destDir)
-
-    print(f)
-    with io.open(destFile, 'w', encoding='utf8') as f:
-      f.write(response)
-      f.close()
+if file_count_good == file_count_expected:
+  print('Completed: ' + str(file_count_good) + ' generated.')
+  sys.exit(0)
+else:
+  print('An error occured, only ' + str(file_count_good) + ' were generated')
+  sys.exit(1)

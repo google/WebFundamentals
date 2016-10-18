@@ -76,6 +76,7 @@ gutil.log('');
 
 gulp.task('clean', function() {
   var filesToDelete = [
+    'build/*',
     'src/content/en/_shared/contributors/*',
     'src/content/**/rss.xml',
     'src/content/**/atom.xml',
