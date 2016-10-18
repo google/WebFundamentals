@@ -25,8 +25,8 @@ landing_page:
       - label: Reporting bugs
         path: "#reporting-bugs"
         classname: button button-primary
-      - label: Discuss solutions
-        path: "#discuss-solutions"
+      - label: Discussing solutions
+        path: "#discussing-solutions"
         classname: button button-primary
 
   - items:
@@ -103,7 +103,7 @@ landing_page:
         path: https://bugs.webkit.org/
         classname: wf-small-link
 
-  - heading: Developer discussions
+  - heading: Discussing solutions
     classname: devsite-landing-row-no-image-background
     items:
     - description: >
