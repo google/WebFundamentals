@@ -145,7 +145,7 @@ box in a menu.
 Users don’t scan through multiple pages of results to find what they’re looking
 for. Make life easier on users by auto-completing queries, correcting
 misspellings, and suggesting related queries. Rather than reinventing the
-wheel, consider robust products like [Google Custom Search](https://cse.google.com/cse/){: .external }{: .external }.
+wheel, consider robust products like [Google Custom Search](https://cse.google.com/cse/){: .external }.
 
 <div class="attempt-left">
   <figure id="fig1">
