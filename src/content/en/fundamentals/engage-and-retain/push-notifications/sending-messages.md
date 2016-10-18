@@ -181,7 +181,7 @@ under Requesting permission and subscribing users. The second part
 (`p256ecdsa=applicationServerKey`) is the public key created by your app server. 
 Both must be base64 url encoded. Notice the  comma separating the two parts of the Crypto-Key.
 
-Note: A bug in Chrome 52 requires that a semicolor be used to separate the parts of the Cyrpto-Key, instead of a comma.
+Note: A bug in Chrome 52 requires that a semicolon be used to separate the parts of the Cyrpto-Key, instead of a comma.
 
 ### Authorization header {: #authorization-header }
 
