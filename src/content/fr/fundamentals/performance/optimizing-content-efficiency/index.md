@@ -14,7 +14,7 @@ description: La quantité de données téléchargée par chaque application ne c
 Nos applications Web continuent de se développer en termes de portée, d'ambition et de fonctionnalité. Et c'est une bonne chose. Cependant, la course incessante vers un Web plus riche provoque une autre tendance : la quantité de données téléchargée par chaque application augmente sens cesse, rapidement. Pour offrir d'excellentes performances, nous devons optimiser la livraison de chaque octet de données !
 
 
-À quoi ressemble une application Web moderne ? [HTTP Archive](http://httparchive.org/) peut nous aider à répondre à cette question. Ce projet suit la façon dont le Web se construit en arpentant régulièrement les sites les plus populaires (plus de 300 000, tirés de la liste Alexa Top 1M), et en enregistrant et en agrégeant des statistiques sur le nombre de ressources, les types de contenus et autres métadonnées pour chaque destination.
+À quoi ressemble une application Web moderne ? [HTTP Archive](http://httparchive.org/){: .external } peut nous aider à répondre à cette question. Ce projet suit la façon dont le Web se construit en arpentant régulièrement les sites les plus populaires (plus de 300 000, tirés de la liste Alexa Top 1M), et en enregistrant et en agrégeant des statistiques sur le nombre de ressources, les types de contenus et autres métadonnées pour chaque destination.
 
 <img src="images/http-archive-trends.png" class="center" alt="Tendances HTTP Archive">
 
