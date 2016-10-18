@@ -9,7 +9,7 @@ description: Sangat penting untuk memahami seperti apa aplikasi atau situs kita 
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-Sangat penting untuk memahami seperti apa aplikasi atau situs kita ketika memiliki konektivitas yang tidak dapat diandalkan. Berikut beberapa alat yang dapat membantu Anda.
+Sangat penting untuk memahami bagaimana rasanya aplikasi atau situs kita memiliki konektivitas yang tidak dapat diandalkan. Berikut beberapa alat yang dapat membantu Anda.
 
 ## Uji dengan bandwith yang rendah dan respons tinggi
 
@@ -17,7 +17,7 @@ Sangat penting untuk memahami seperti apa aplikasi atau situs kita ketika memili
 
 Dalam konteks ini, sangat penting untuk memahami seperti apa aplikasi atau situs kita ketika memiliki konektivitas yang tidak dapat diandalkan. Berikut beberapa alat yang dapat membantu Anda [meniru dan mensimulasikan](https://stackoverflow.com/questions/1584617/simulator-or-emulator-what-is-the-difference) bandwidth rendah dan [respons](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/) tinggi.
 
-### Simulasi pada jaringan lambat
+### Simulasi network throttling
 
 Ketika membangun atau memperbarui situs web, Anda harus memastikan kinerja yang memadai dalam berbagai kondisi konektivitas. Beberapa alat berikut dapat membantu
 
@@ -83,7 +83,7 @@ Informasi lebih lanjut tentang Charles dapat dilihat di [codewithchris.com](http
 
 ### Apa itu lie-fi?
 
-Istilah <a href="http://www.urbandictionary.com/define.php?term=lie-fi">lie-fi</a> dates back to at least 2008 (ketika ponsel tampak seperti <a href="https://www.mobilegazette.com/2008-phones-wallchart.htm" title="Images of phones from 2008">ini</a>). Browser anda browser seolah-olah memiliki konektivitas, tapi ternyata tidak.
+Istilah <a href="http://www.urbandictionary.com/define.php?term=lie-fi">lie-fi</a> muncul sekitar tahun 2008 (ketika ponsel tampak seperti <a href="https://www.mobilegazette.com/2008-phones-wallchart.htm" title="Images of phones from 2008">ini</a>). Browser anda seolah-olah memiliki konektivitas, tapi ternyata tidak.
 
 Konektivitas yang disalahartikan dapat menimbulkan pengalaman buruk karena browser (atau JavaScript) berusaha untuk mengambil sumber daya ke situs web daripada berhenti. Lie-fi sebenarnya bisa lebih buruk daripada offline; setidaknya jika perangkat pasti offline JavaScript anda dapat mengambil tindakan yang tepat untuk mengatasinya.
 
