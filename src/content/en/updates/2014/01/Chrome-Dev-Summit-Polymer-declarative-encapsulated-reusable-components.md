@@ -83,7 +83,7 @@ We're on the cusp of a very exciting time in web development. Unlike other new f
 - [HTML Imports](http://www.polymer-project.org/platform/html-imports.html) is the distribution model for a package of CSS, JS, and HTML.
 - [Templates](http://www.polymer-project.org/platform/template.html) - proper DOM templating for defining inert chunks of markup to be stamped out later
 
-If you want to learn more about the fundamentals of the APIs, check out [ebidel.github.com/webcomponents](ebidel.github.com/webcomponents).
+If you want to learn more about the fundamentals of the APIs, check out [ebidel.github.com/webcomponents](//ebidel.github.com/webcomponents).
 
 
 {% include "comment-widget.html" %}

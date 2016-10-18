@@ -79,7 +79,7 @@ As seen in the demo, we can reuse `requestAnimationFrame()` to drive an animatio
 
 *Demo not animated in Chrome?*
 
-The current stable channel of Chrome (version 23) has [crbug.com/161699](http://crbug.com/161699), which prevents a `requestAnimationFrame()` animation from updating the background properly. This has been fixed in Chrome 25 (currently Canary). The [demo](<a href="http://html5-demos.appspot.com/static/css/webkit-canvas.html">) also should work well in the current Safari.
+The current stable channel of Chrome (version 23) has [crbug.com/161699](http://crbug.com/161699), which prevents a `requestAnimationFrame()` animation from updating the background properly. This has been fixed in Chrome 25 (currently Canary). The [demo](http://html5-demos.appspot.com/static/css/webkit-canvas.html) also should work well in the current Safari.
 
 **Performance benefits**
 

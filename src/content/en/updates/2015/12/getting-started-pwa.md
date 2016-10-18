@@ -202,7 +202,7 @@ Given that it covers both client and server-side portions of the model and there
 
 [View on GitHub](https://github.com/polymerelements/polymer-starter-kit)
 
-The official starting point for [Polymer](https://polymer-project.org) web apps supports the following Progressive Web App features:
+The official starting point for [Polymer](https://www.polymer-project.org) web apps supports the following Progressive Web App features:
 
 * Web Application manifest
 * Chrome for Android Splashscreen

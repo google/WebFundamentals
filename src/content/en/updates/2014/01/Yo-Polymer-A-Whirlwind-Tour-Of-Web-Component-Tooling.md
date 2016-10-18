@@ -30,7 +30,7 @@ In my talk from [DotJS](http://dotjs.eu), I walk through what Web Components hav
 * About the four different specs composing Web Components: [Custom Elements](http://www.polymer-project.org/platform/custom-elements.html), [Templates](http://www.polymer-project.org/platform/template.html), [Shadow DOM](http://www.polymer-project.org/platform/shadow-dom.html) and [HTML imports](http://www.polymer-project.org/platform/html-imports.html).
 * How to define your own custom elements and install elements created by others using [Bower](http://bower.io)
 * Spend less time writing JavaScript and more time constructing pages
-* Use modern front-end tooling ([Yeoman](http://yeoman.io)) to scaffold an application using Polymer with [generator-polymer](github.com/yeoman/generator-polymer)
+* Use modern front-end tooling ([Yeoman](http://yeoman.io)) to scaffold an application using Polymer with [generator-polymer](//github.com/yeoman/generator-polymer)
 * How Polymer super changes creating web components.
 
 For example, to install Polymer's Web Component polyfills and the library itself, you can run this one liner:
