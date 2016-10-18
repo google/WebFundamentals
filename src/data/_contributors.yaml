@@ -195,7 +195,7 @@ samchen:
   role:
     - translator
   homepage: 'http://www.zfanw.com/blog/'
-  google: +samchen
+  google: 104787680206754797134
   twitter: chenxsan
   email: chenxsan@google.com
   description:
@@ -395,7 +395,7 @@ mattgaunt:
     - author
     - engineer
   homepage: 'http://blog.gauntface.com'
-  google: +MattGuant
+  google: +MattGaunt
   twitter: gauntface
 
 simongong:
@@ -426,7 +426,7 @@ greenido:
     - author
     - engineer
   homepage: 'http://greenido.wordpress.com'
-  google: +IdoGreen
+  google: +GreenIdo
   twitter: greenido
   email: idog@google.com
   description:
@@ -531,7 +531,7 @@ captainpangyo:
   role:
     - translator
   homepage: 'https://joshuajangblog.wordpress.com/'
-  google: +GihyoJoshuaJang
+  google: 112235341337838764023
   email: jangkeehyo@gmail.com
   description:
     en: Josh is a Singing Computer Scientist
@@ -737,7 +737,7 @@ paullewis:
   role:
     - author
   homepage: 'http://aerotwist.com/'
-  google: +PaulLewis
+  google: +aerotwist
   twitter: aerotwist
   description:
     en: Paul is a Design and Perf Advocate
