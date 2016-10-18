@@ -20,7 +20,7 @@ description: 앱에서 모달 보기 애니메이션 방법을 알아봅니다.
 
 <img src="images/dont-press.gif" alt="모달 보기 애니메이션" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">샘플 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">샘플 보기</a>
 
 모달 오버레이는 뷰포트에 정렬해야 하므로 `position`을 `fixed`로 설정해야 합니다.
 

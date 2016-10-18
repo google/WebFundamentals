@@ -218,8 +218,9 @@ Note: `robots.txt` is only required **if** you want to control the way your site
 
 Depending on which crawlers your robots.txt is targeting, search engine
 providers may provide a tool to test `robots.txt`. For example, for Google 
-there's a validator in [Webmaster Tools](https://www.google.com/webmasters/tools
-/robots-testing-tool) that you can use to test your robots.txt.
+there's a validator in
+[Webmaster Tools](https://www.google.com/webmasters/tools/robots-testing-tool)
+that you can use to test your robots.txt.
 
 <img src="imgs/robots-txt-validator.png" srcset="imgs/robots-txt-validator-2x.png 2x, imgs/robots-txt-validator.png 1x">
 

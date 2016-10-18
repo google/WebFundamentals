@@ -24,7 +24,7 @@ Há um grupo de equações de ease-out muito conhecidas além daquela especifica
 
 <img src="images/quintic-ease-out-markers.png" alt="Uma curva de animação Quintic ease-out" style="max-width: 300px"/>
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Veja uma animação Quintic ease-out.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Veja uma animação Quintic ease-out.</a>
 
 Outras equações de easing, particularmente eases bounces ou elastic, devem ser usadas com moderação e apenas quando for adequado para o projeto. Uma animação desagradável pode fazer com que o usuário desista da experiência. Se seu projeto não for alegre e divertido, não tenha elementos da interface do usuário pulando pelo local! Por outro lado, se você estiver criando um site que deve ser leve e divertido, utilize os pulos!
 

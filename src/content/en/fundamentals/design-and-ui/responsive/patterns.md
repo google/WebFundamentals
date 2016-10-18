@@ -40,7 +40,7 @@ that it usually only requires one breakpoint between small screens and large
 screens.
 
 <img src="imgs/mostly-fluid.svg">
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/patterns/mostly-fluid.html" class="button button-primary">Try it</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/mostly-fluid.html" class="button button-primary">Try it</a>
 
 In the smallest view, each content `div` is stacked vertically.  When the screen
 width hits 600px, the primary content `div` remains at `width: 100%`, while the

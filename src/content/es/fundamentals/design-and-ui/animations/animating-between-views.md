@@ -116,7 +116,7 @@ Finalmente, agregamos las declaraciones de CSS para esas clases.
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/inter-view-animation.html">Ver el ejemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html">Ver el ejemplo</a>
 
 Podría expandir esto para que abarcara múltiples vistas, y el concepto básico seguiría siendo el mismo: cada vista no visible debe estar fuera de la pantalla y debe aparecer cuando sea necesario, y la pantalla que se muestra actualmente debe dejar de mostrarse.
 

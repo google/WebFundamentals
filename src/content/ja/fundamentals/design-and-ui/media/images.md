@@ -64,7 +64,7 @@ img 要素の alt 属性を使用して、画像についてのわかりやす�
   </iframe>
 </div>
 
-<code>img</code> 要素で <code>srcset</code> 属性を使用して動作を拡張することで、特性の異なる各デバイスに複数の画像ファイルを簡単に配信できます。CSS ネイティブの <code>image-set</code> <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS 関数</a>と同様に、<code>srcset</code> を使用して、ブラウザでデバイスの特性に応じて最適な画像を選択できます。たとえば、ディスプレイが 2x の場合は 2x の画像を使用したり、将来的には、デバイスが 2x でもネットワークが低速の場合は 1x の画像を使用する、といったことが可能になります。
+<code>img</code> 要素で <code>srcset</code> 属性を使用して動作を拡張することで、特性の異なる各デバイスに複数の画像ファイルを簡単に配信できます。CSS ネイティブの <code>image-set</code> <a href="#use-image-set-to-provide-high-res-images">CSS 関数</a>と同様に、<code>srcset</code> を使用して、ブラウザでデバイスの特性に応じて最適な画像を選択できます。たとえば、ディスプレイが 2x の場合は 2x の画像を使用したり、将来的には、デバイスが 2x でもネットワークが低速の場合は 1x の画像を使用する、といったことが可能になります。
 
 <div class="clearfix"></div>
 
@@ -178,7 +178,7 @@ Note: <code>picture</code> 要素はブラウザへの実装が開始された�
 
 ### 商品画像を拡大できるようにする
 
-ユーザーは購入しようとしている商品を確認したいと求めます。ユーザーはショッピング サイトにおいて、商品画像を高解像度で拡大して詳細を確認できることを期待します。これを行えない場合、[調査の参加者](/web/fundamentals/principles/research-study)は不満を感じたとの研究結果が出ています。
+ユーザーは購入しようとしている商品を確認したいと求めます。ユーザーはショッピング サイトにおいて、商品画像を高解像度で拡大して詳細を確認できることを期待します。これを行えない場合、[調査の参加者](/web/fundamentals/getting-started/principles/)は不満を感じたとの研究結果が出ています。
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="商品画像を拡大できる J. Crew のウェブサイト">
@@ -195,7 +195,7 @@ Note: <code>picture</code> 要素はブラウザへの実装が開始された�
 [圧縮画像
 技術](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview)（リンク先は英語）を使用すると、実際のデバイスの能力に関係なく、高圧縮の 2x 画像をあらゆるデバイスに配信できます。画像の種類や圧縮レベルによっては、画像の品質に変化がないように見える場合もありますが、ファイルサイズは大幅に削減されます。
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">      例を表示する</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">      例を表示する</a>
 
 
 Note: 圧縮を使用する場合は、必要なメモリ容量やデコード処理が増加することに注意する。大きい画像をサイズ変更して小さい画面に収める処理は負荷が大きく、メモリと処理能力の両方が限られているローエンドのデバイスでは特にパフォーマンスが大きく低下する場合があります。
@@ -231,7 +231,7 @@ CSS の background プロパティを使用して、要素に複雑な画像を�
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/conditional-mq.html" region_tag="conditional" adjust_indentation="auto" %}
 </pre>
 
-### image-set を使用して高解像度の画像を表示する
+### image-set を使用して高解像度の画像を表示する {: #use-image-set-to-provide-high-res-images }
 
 CSS の image-set() 関数を使用して background プロパティの動作を拡張することで、特性の異なる各デバイス向けに複数の画像ファイルを簡単に配信できます。これを利用して、ブラウザでデバイスの特性に応じて最適な画像を選択できます。たとえば、ディスプレイが 2x の場合は 2x の画像を使用する、デバイスが 2x でもネットワークが低速の場合は 1x の画像を使用する、といったことが可能です。
 
@@ -381,7 +381,7 @@ JPG および PNG ファイルで画質を損なわずに、さらに可逆の�
 
 CSS スプライトは、複数の画像を 1 つの「スプライト シート」画像にまとめる手法です。個々の画像を使用するには、要素（スプライト シート）の背景画像とオフセットを指定して目的のパーツを表示します。
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="例で使用されている画像スプライト シート"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="例で使用されている画像スプライト シート"></a>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}

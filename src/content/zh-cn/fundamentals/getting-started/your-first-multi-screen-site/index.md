@@ -166,7 +166,7 @@ Note: 样式很快就能看到
   <figure>
     <img src="images/content.png" alt="Content">
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
     </figcaption>
   </figure>
 </div>
@@ -174,7 +174,7 @@ Note: 样式很快就能看到
   <figure>
     <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
     </figcaption>
   </figure>
 </div>
@@ -200,7 +200,7 @@ web 可以被各种设备访问，从小屏幕手机到大屏幕电视。每个�
   <figure>
     <img src="images/content.png" alt="Content">
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html">Content and structure</a>
     </figcaption>
   </figure>
 </div>
@@ -208,7 +208,7 @@ web 可以被各种设备访问，从小屏幕手机到大屏幕电视。每个�
   <figure>
     <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html">Final site</a>
     </figcaption>
   </figure>
 </div>

@@ -187,11 +187,11 @@ In questa guida trasformeremo la struttura di base in una pagina gradevole e rea
 
 <figure class="attempt-left">
   <img  src="images/content.png" alt="Contenuti">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenuti e struttura </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenuti e struttura </a> </figcaption>
 </figure>
 <figure class="attempt-right">
   <img  src="images/narrowsite.png" alt="Designed site">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Sito definitivo </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Sito definitivo </a> </figcaption>
 </figure>
 <div class="clearfix"></div>
 

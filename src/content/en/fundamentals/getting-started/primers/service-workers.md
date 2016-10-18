@@ -320,7 +320,7 @@ What we are doing is this:
    as pass it to the cache to use, we need to clone it so we can send one to 
    the browser and one to the cache.
 
-## Update a service worker
+## Update a service worker {: #update-a-service-worker }
 
 There will be a point in time where your service worker will 
 need updating. When that time comes, you'll need to follow these steps:

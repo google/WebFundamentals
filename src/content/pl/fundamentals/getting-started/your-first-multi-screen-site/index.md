@@ -187,11 +187,11 @@ W tym przewodniku przekształcimy naszą podstawową strukturę i treść w atra
 
 <figure class="attempt-left">
   <img  src="images/content.png" alt="Treść">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Treść i struktura </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Treść i struktura </a> </figcaption>
 </figure>
 <figure class="attempt-right">
   <img  src="images/narrowsite.png" alt="Designed site">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Gotowa strona </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Gotowa strona </a> </figcaption>
 </figure>
 <div class="clearfix"></div>
 

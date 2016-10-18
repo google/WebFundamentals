@@ -76,7 +76,7 @@ A diferencia de la publicación de HTML diferente o de las secuencias de comando
 Todas estas ventajas son importantes especialmente en dispositivos móviles, donde el ancho de banda y la latencia son algo fundamental y la paciencia del usuario es probablemente limitada. 
 Si no se incluye un atributo de tipo, el rendimiento podría verse afectado negativamente cuando haya varias fuentes con tipos no admitidos.
 
-Con las herramientas de desarrollo de navegador para móviles, compara la actividad de la red <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/video-main.html">con los atributos de tipo</a> y <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/notype.html">con los atributos sin tipo</a>.
+Con las herramientas de desarrollo de navegador para móviles, compara la actividad de la red <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/video-main.html">con los atributos de tipo</a> y <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/notype.html">con los atributos sin tipo</a>.
 Además, comprueba las cabeceras de respuesta en tus herramientas para [asegurarte de que el servidor indique el tipo MIME adecuado](//developer.mozilla.org/en/docs/Properly_Configuring_Server_MIME_Types). De lo contrario, las comprobaciones de tipo de la fuente de vídeo no funcionarán.
 
 ### Especificar una hora de inicio y de fin
@@ -218,7 +218,7 @@ Hay muchas herramientas que te permiten guardar el mismo vídeo en distintos for
 
 En JavaScript, usa la propiedad `currentSrc` del vídeo para ver la fuente utilizada.
 
-Para ver cómo funciona, échale un vistazo a <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/video-main.html">esta demostración</a>: Chrome y Firefox seleccionan `chrome.webm` (porque es la primera en la lista de fuentes posibles que admiten estos navegadores), y Safari selecciona `chrome.mp4`.
+Para ver cómo funciona, échale un vistazo a <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/video-main.html">esta demostración</a>: Chrome y Firefox seleccionan `chrome.webm` (porque es la primera en la lista de fuentes posibles que admiten estos navegadores), y Safari selecciona `chrome.mp4`.
 
 
 ## Dar un tamaño adecuado a los vídeos 
@@ -274,7 +274,7 @@ Note: No fuerces el tamaño de los elementos cuando este resulte en una relació
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/responsive_embed.html" region_tag="markup" adjust_indentation="auto" %}
 </pre>
 
-Compara el <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/responsive_embed.html">ejemplo adaptable</a> con la <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/unyt.html">versión no adaptable</a>.
+Compara el <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/responsive_embed.html">ejemplo adaptable</a> con la <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/unyt.html">versión no adaptable</a>.
 
 
 ## Personalizar el reproductor de vídeo 
@@ -356,7 +356,7 @@ En los dispositivos que son compatibles con el API de Fullscreen, recomendamos u
      <p>Este navegador no es compatible con el elemento de vídeo.</p>
 </video>
 
-Para ver cómo funciona, echa un vistazo a la <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/fullscreen.html">demostración</a>.
+Para ver cómo funciona, echa un vistazo a la <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/fullscreen.html">demostración</a>.
 
 Note: `requestFullScreen()` is currently vendor prefixed and may require
 extra code for full cross browser compatibility.
@@ -550,7 +550,7 @@ Por ejemplo, Chrome almacena en el búfer 25 segundos de vídeo en ordenadores, 
   </tbody>
 </table>
 
-`playbackRate` (<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/scripted.html">ver demostración</a>) y `volume` no son compatibles con dispositivos móviles.
+`playbackRate` (<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/scripted.html">ver demostración</a>) y `volume` no son compatibles con dispositivos móviles.
 
 #### Métodos
 
@@ -580,7 +580,7 @@ Por ejemplo, Chrome almacena en el búfer 25 segundos de vídeo en ordenadores, 
 </table>
 
 En móvil (a excepción de Opera en Android), `play()` y `pause()` no funcionan salvo que
-se llamen en respuesta de una acción del usuario, como hacer clic en un botón. Mira esta <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/video/scripted.html">demostración</a>. Del mismo modo, la reproducción no se puede iniciar si el contenido no está insertado en los vídeos de YouTube.
+se llamen en respuesta de una acción del usuario, como hacer clic en un botón. Mira esta <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/video/scripted.html">demostración</a>. Del mismo modo, la reproducción no se puede iniciar si el contenido no está insertado en los vídeos de YouTube.
 
 #### Eventos
 
