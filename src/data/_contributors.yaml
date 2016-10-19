@@ -5,12 +5,12 @@
 ##
 
 # EXAMPLE
-# givenfamily:  # REQUIRED - place JPG image file with same name in /images/contributors
+# givenfamily:  # REQUIRED - place a 512x512 px JPG image file with same name in /images/contributors
 #   name:
 #     given: First # Required
 #     family: Last # Required
 #   homepage: https://developers.google.com/web/ # Optional
-#   google: +PeteLePage                          # Optional - id or +Name
+#   google: "123456789012345678901"              # Optional - id (must be quoted) or +Name
 #   twitter: petele                              # Recommended - handle only (no @)
 #   github: petele                               # Recommended - handle only
 #   lanyrd: petele                               # Optional - handle only
