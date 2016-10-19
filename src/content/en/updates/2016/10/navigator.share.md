@@ -5,7 +5,7 @@ description: Sharing is caring. Chrome is running an Origin Trial to enable nati
 {# wf_published_on: 2016-10-19 #}
 {# wf_updated_on: 2016-10-19 #}
 
-# Sharing is Caring {: .page-title}
+# Introducing the Web Share API {: .page-title}
 
 Good news, everybody! [Matt Giuca](https://twitter.com/mgiuca){: .external } on the Chrome
 team has been working on a [simple
@@ -87,7 +87,7 @@ the scenarios where you don't have the ability to call. I try to progressively
 enhance as much as possible, and the process that I follow on my
 [blog](https://paul.kinlan.me/){: .external } is to:
 
-1. Use my prefered sharing service via a simple `<a>` ([intent: URL with
+1. Use my preferred sharing service via a simple `<a>` ([intent: URL with
    Twitter fallback](https://paul.kinlan.me/sharing-natively-on-android-from-the-web/){: .external }).
 2. Check the availability of the API `(navigator.share !== undefined)`.
 3. Wait for the content to be available and then find the sharing element.
@@ -120,7 +120,7 @@ save you a click, here are the important links:
 * [Share explainer](https://github.com/WICG/web-share/blob/master/docs/explainer.md){: .external }
 * [Share target explainer](https://github.com/WICG/web-share/blob/master/docs/interface.md){: .external }
 * [Web Share in WICG](https://github.com/WICG/web-share){: .external }
-* [Discourse Discussion](https://discourse.wicg.io/t/web-share-api-for-sharing-content-to-arbitrary-destination/1561/3){: .external }
+* [Discussion on Discourse](https://discourse.wicg.io/t/web-share-api-for-sharing-content-to-arbitrary-destination/1561/3){: .external }
 
 Future work will also level the playing field for web apps, by allowing them to
 register to be a "[share reciever](https://github.com/WICG/web-share-target){: .external }",
