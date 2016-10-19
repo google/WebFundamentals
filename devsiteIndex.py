@@ -31,7 +31,7 @@ def getPage(requestPath, lang):
         response = devsitePage.getPage(requestPath, lang)
         break
 
-  if response is None:
+  if response is None and os.environ['SERVER_SOFTWARE'].startswith('Dev'):
     if (requestPath.startswith('showcase/') or
         requestPath.startswith('shows/') or requestPath.startswith('updates/')):
       content = ''
