@@ -139,7 +139,7 @@ Il n'existe pas de règles de mise en cache meilleures que les autres. Selon vos
 
 Voici quelques conseils et techniques à garder à l'esprit lorsque vous travaillez sur la stratégie de cache :
 
-1. **Utilisez des URL cohérentes** : si vous affichez le même contenu sur des URL différentes, ce contenu sera récupéré et stocké plusieurs fois. Conseil : Notez que les [URL sont sensibles à la casse](http://www.w3.org/TR/WD-html40-970708/htmlweb.html) !
+1. **Utilisez des URL cohérentes** : si vous affichez le même contenu sur des URL différentes, ce contenu sera récupéré et stocké plusieurs fois. Conseil : Notez que les [URL sont sensibles à la casse](http://www.w3.org/TR/WD-html40-970708/htmlweb.html){: .external } !
 2. **Assurez-vous que le serveur fournit un jeton de validation (ETag)** : les jetons de validation éliminent la nécessité de transférer les mêmes octets lorsqu'une ressource n'a pas changé sur le serveur.
 3. **Identifiez quelles ressources peuvent être mises en cache par des intermédiaires** : celles dont les réponses sont identiques pour tous les utilisateurs sont d'excellentes candidates pour la mise en cache par un CDN et d'autres intermédiaires.
 4. **Déterminez la durée de mise en cache optimale pour chaque ressource** : différentes ressources peuvent avoir différentes exigences en matière d'actualisation. Auditez et déterminez l'élément `max-age` adapté à chacune.
