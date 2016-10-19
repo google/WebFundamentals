@@ -7,8 +7,8 @@ description: Sharing is caring.
 
 Good news, everybody! [Matt Giuca](https://twitter.com/mgiuca) on the Chrome
 team has been working on a [simple
-API](https://github.com/mgiuca/web-share/blob/master/docs/interface.md) called
-[Web Share](https://github.com/mgiuca/web-share/blob/master/docs/explainer.md)
+API](https://github.com/WICG/web-share/blob/master/docs/interface.md) called
+[Web Share](https://github.com/WICG/web-share/blob/master/docs/explainer.md)
 that allows websites to invoke the native sharing capabilities of the host
 platform.
 
@@ -61,7 +61,7 @@ There are a number of constraints that affect the usage of this API
 The process is pretty simple.
 
 1. Get [Chrome Beta Channel on
-   Android](https://play.google.com/store/apps/details?id=com.chrome.dev&hl=en)
+   Android](https://play.google.com/store/apps/details?id=com.chrome.beta&hl=en)
    (as of October 2016)
 2. [Sign
    up](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform)
@@ -106,16 +106,13 @@ You can get all the relevant information at
 [ChromeStatus](https://www.chromestatus.com/features/5668769141620736), but to
 save you a click here are the important links:
 
-* [Launch Tracking bug](https://crbug.com/620973)
-* [Intent to
-  implement](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/1BOhy5av8MQ/8LqNvS5TAQAJ)
-* [Sample](https://github.com/mgiuca/web-share/blob/master/docs/explainer.md)
-* [Share
-  explainer](https://github.com/mgiuca/web-share/blob/master/docs/explainer.md)
-* [Share target
-  explainer](https://github.com/mgiuca/web-share/blob/master/docs/interface.md)
-* [Discourse
-  Discussion](https://discourse.wicg.io/t/web-share-api-for-sharing-content-to-arbitrary-destination/1561/3)
+* [Launch Tracking bug in Chrome](https://crbug.com/620973)
+* [Intent to implement](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/1BOhy5av8MQ/8LqNvS5TAQAJ)
+* [Sample](https://github.com/mgiuca/web-share/blob/master/demos/share.html)
+* [Share explainer](https://github.com/WICG/web-share/blob/master/docs/explainer.md)
+* [Share target explainer](https://github.com/WICG/web-share/blob/master/docs/interface.md)
+* [Web Share in WICG](https://github.com/WICG/web-share)
+* [Discourse Discussion](https://discourse.wicg.io/t/web-share-api-for-sharing-content-to-arbitrary-destination/1561/3)
 
 Future work will also level the playing field for web apps, by allowing them to
 register to be a "[share reciever](https://github.com/mgiuca/web-share-target)",
