@@ -14,7 +14,7 @@ marvelous. They allow you to write promise-based code as if it were synchronous,
 but without blocking the main thread. They make your asynchronous code less
 "clever" and more readable.
 
-Async functions look like this:
+Async functions work like this:
 
     async function myFirstAsyncFunction() {
       try {
@@ -32,32 +32,6 @@ the promise rejects, the rejected value is thrown.
 
 Note: If you're unfamiliar with promises & promise terminology, check out [our
 promises guide](/web/fundamentals/getting-started/primers/promises).
-
-Calling an async function returns a promise for whatever the function returns or
-throws. So with:
-
-    // wait ms milliseconds
-    function wait(ms) {
-      return new Promise(r => setTimeout(r, ms));
-    }
-
-    async function hello() {
-      await wait(500);
-      return 'world';
-    }
-
-…calling `hello()` returns a promise that *fulfills* with `"world"`.
-
-    async function foo() {
-      await wait(500);
-      throw Error('bar');
-    }
-
-…calling `foo()` returns a promise that *rejects* with `Error('bar')`.
-
-Note: You can only use `await` directly inside an async function. There's some
-discussion to allow top-level `await` in modules, but it's [somewhat
-controversial](https://gist.github.com/Rich-Harris/0b6f317657f5167663b493c722647221).
 
 ## Example: Logging a fetch
 
@@ -88,6 +62,30 @@ And here's the same thing using async functions:
 
 It's the same number of lines, but all the callbacks are gone. This makes it way
 easier to read, especially for those less familiar with promises.
+
+## Return values
+
+Calling an async function returns a promise for whatever the function returns or
+throws. So with:
+
+    // wait ms milliseconds
+    function wait(ms) {
+      return new Promise(r => setTimeout(r, ms));
+    }
+
+    async function hello() {
+      await wait(500);
+      return 'world';
+    }
+
+…calling `hello()` returns a promise that *fulfills* with `"world"`.
+
+    async function foo() {
+      await wait(500);
+      throw Error('bar');
+    }
+
+…calling `foo()` returns a promise that *rejects* with `Error('bar')`.
 
 ## Other async function syntax
 
@@ -133,7 +131,7 @@ function to complete before calling the second.
     const storage = new Storage();
     storage.getAvatar('jaffathecake').then(…);
 
-Note: Class constructors cannot be async.
+Note: Class constructors and getters/settings cannot be async.
 
 ## Example: Streaming a response
 
@@ -187,8 +185,8 @@ Let's try that again with async functions:
 All the "smart" is gone. The asynchronous loop that made me feel so smug is
 replaced with a trusty, boring, while-loop. Much better. In future, we'll get
 [async iterators](https://github.com/tc39/proposal-async-iteration){:
-.external}, which would [replace the above `while`
-loop](https://gist.github.com/jakearchibald/0b37865637daf884943cf88c2cba1376){:
+.external}, which would [replace the `while`
+loop with a for-of loop](https://gist.github.com/jakearchibald/0b37865637daf884943cf88c2cba1376){:
 .external}, making it even neater.
 
 Note: I'm sort-of in love with streams. If you're unfamiliar with streaming,
