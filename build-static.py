@@ -15,13 +15,13 @@ import yaml
 import devsitePage
 import devsiteIndex
 
+raw = open('_build-me.yaml', 'r').read().decode('utf8')
+files = yaml.load(raw)
+
 build_dir = './build'
 file_count_good = 0
 file_count_total = 0
 file_count_expected = len(files)
-
-raw = open('_build-me.yaml', 'r').read().decode('utf8')
-files = yaml.load(raw)
 
 for source_file in files:
   file_count_total += 1
