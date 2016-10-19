@@ -104,7 +104,7 @@ En résumé, la première étape de l'optimisation de l'efficacité de vos élé
 - Certains CDN nécessitent une attention particulière pour s'assurer que GZIP est activé.
 
 
-[GZIP](http://fr.wikipedia.org/wiki/Gzip) est un logiciel de compression générique qui peut être appliqué à n'importe quel flux d'octets : il se souvient du contenu déjà rencontré et tenter d'identifier et de remplacer les données en double de façon efficace. Pour les curieux, voici [une excellente explication de bas niveau de GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s). Cependant en pratique, GZIP est surtout efficace sur le contenu à base de texte, et obtient souvent des taux de compression de 70 à 90 % pour les fichiers volumineux, alors que son exécution sur des éléments déjà compressés par des algorithmes alternatifs (notamment la plupart des formats d'image) donne des résultats minimes voire nuls.
+[GZIP](http://fr.wikipedia.org/wiki/Gzip){: .external } est un logiciel de compression générique qui peut être appliqué à n'importe quel flux d'octets : il se souvient du contenu déjà rencontré et tenter d'identifier et de remplacer les données en double de façon efficace. Pour les curieux, voici [une excellente explication de bas niveau de GZIP](https://www.youtube.com/watch?v=whGwm0Lky2s&feature=youtu.be&t=14m11s){: .external }. Cependant en pratique, GZIP est surtout efficace sur le contenu à base de texte, et obtient souvent des taux de compression de 70 à 90 % pour les fichiers volumineux, alors que son exécution sur des éléments déjà compressés par des algorithmes alternatifs (notamment la plupart des formats d'image) donne des résultats minimes voire nuls.
 
 Tous les navigateurs modernes sont compatibles avec la compression GZIP et l'effectue de façon automatique pour toutes les requêtes HTTP : notre travail consiste à nous assurer que le serveur est correctement configuré pour diffuser la ressource compressée lorsque le client la demande.
 
@@ -177,7 +177,7 @@ Le tableau ci-dessus illustre les économies réalisées par la compression GZIP
 
 Le meilleur dans tout cela, c'est que l'activation de GZIP est l'une des optimisations les plus simples et les plus rentables à mettre en œuvre. Malheureusement, beaucoup oublient encore de le faire. La plupart des serveurs Web compressent le contenu à votre place, et il vous suffit de vérifier que le serveur est correctement configuré pour compresser tous les types de contenu qui peuvent profiter de la compression GZIP.
 
-Quelle est la meilleure configuration pour votre serveur ? Le projet HTML5 Boilerplate contient des [exemples de fichiers de configuration](https://github.com/h5bp/server-configs) pour tous les serveurs les plus populaires, ainsi que des commentaires détaillés pour chaque indicateur et paramètre de configuration : recherchez votre serveur de prédilection dans la liste, recherchez la section GZIP, et vérifiez que paramètres recommandés sont configurés pour votre serveur.
+Quelle est la meilleure configuration pour votre serveur ? Le projet HTML5 Boilerplate contient des [exemples de fichiers de configuration](https://github.com/h5bp/server-configs){: .external } pour tous les serveurs les plus populaires, ainsi que des commentaires détaillés pour chaque indicateur et paramètre de configuration : recherchez votre serveur de prédilection dans la liste, recherchez la section GZIP, et vérifiez que paramètres recommandés sont configurés pour votre serveur.
 
 <img src="images/transfer-vs-actual-size.png" class="center" alt="Démo DevTools de la taille réelle ou de transfert">
 
@@ -185,7 +185,7 @@ Un moyen simple et rapide de voir GZIP en action consiste à ouvrir Chrome DevTo
 
 Note: Croyez-le ou non, dans certains cas la compression GZIP peut augmenter la taille de l'élément. Cela se produit généralement lorsque l'élément est très petit et que le temps système du dictionnaire GZIP est supérieur à l'économie réalisée par la compression, ou lorsque la ressource est déjà bien compressée. Certains serveurs vous permettent de définir un 'seuil de taille de fichier minimal' afin d'éviter ce problème.
 
-Pour finir, un mot d'avertissement : si la plupart des serveurs compressent automatiquement les éléments pour vous lorsque vous les mettez à la disposition des utilisateurs, certains CDN nécessitent une attention particulière et une action manuelle pour s'assurer que l'élément GZIP est diffusé. Auditez votre site et assurez-vous que vos éléments sont bien [compressés](http://www.whatsmyip.org/http-compression-test/) !
+Pour finir, un mot d'avertissement : si la plupart des serveurs compressent automatiquement les éléments pour vous lorsque vous les mettez à la disposition des utilisateurs, certains CDN nécessitent une attention particulière et une action manuelle pour s'assurer que l'élément GZIP est diffusé. Auditez votre site et assurez-vous que vos éléments sont bien [compressés](http://www.whatsmyip.org/http-compression-test/){: .external } !
 
 
 

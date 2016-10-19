@@ -51,7 +51,7 @@ Note: Conseil : le projet HTML5 Boilerplate contient des <a href='https://github
 - Les directives Cache-Control contrôlent qui peut mettre en cache la réponse, à quelles conditions et pour combien de temps
 
 
-La meilleure requête est une requête qui n'a pas besoin de communiquer avec le serveur : une copie locale de la réponse nous permet d'éliminer toute latence sur le réseau et d'éviter les frais de données pour le transfert de données. Pour y parvenir, la spécification HTTP autorise le serveur à renvoyer [plusieurs directives Cache-Control différentes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9) qui contrôlent comment et pendant combien de temps la réponse individuelle peut être mise en cache par le navigateur et autres caches intermédiaires.
+La meilleure requête est une requête qui n'a pas besoin de communiquer avec le serveur : une copie locale de la réponse nous permet d'éliminer toute latence sur le réseau et d'éviter les frais de données pour le transfert de données. Pour y parvenir, la spécification HTTP autorise le serveur à renvoyer [plusieurs directives Cache-Control différentes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9){: .external} qui contrôlent comment et pendant combien de temps la réponse individuelle peut être mise en cache par le navigateur et autres caches intermédiaires.
 
 Note: L'en-tête Cache-Control a été défini dans le cadre de la spécification HTTP/1.1 et remplace les en-têtes précédents (par exemple Expires) utilisés pour définir les règles de mise en cache de la réponse. Tous les navigateurs modernes sont compatibles avec Cache-Control. Nous n'avons donc besoin de rien d'autre.
 
@@ -101,7 +101,7 @@ Suivez l'arborescence de décision ci-dessus pour déterminer les règles de mis
 </tr>
 </table>
 
-Selon HTTP Archive, parmi les 300 000 premiers sites (classement Alexa rank), [près de la moitié de l'ensemble des réponses téléchargées peut être mise en cache](http://httparchive.org/trends.php#maxage0) par le navigateur, ce qui représente une économie colossale pour les affichages de pages et visites répétées ! Bien sûr, cela ne signifie pas que pour votre application spécifique 50 % des ressources pourront être mises en cache. Certains sites peuvent mettre en cache plus de 90 % de leurs ressources, alors que d'autres contiennent un grand nombre de données confidentielles ou temporaires qui ne peuvent absolument pas être mises en cache.
+Selon HTTP Archive, parmi les 300 000 premiers sites (classement Alexa rank), [près de la moitié de l'ensemble des réponses téléchargées peut être mise en cache](http://httparchive.org/trends.php#maxage0){: .external} par le navigateur, ce qui représente une économie colossale pour les affichages de pages et visites répétées ! Bien sûr, cela ne signifie pas que pour votre application spécifique 50 % des ressources pourront être mises en cache. Certains sites peuvent mettre en cache plus de 90 % de leurs ressources, alors que d'autres contiennent un grand nombre de données confidentielles ou temporaires qui ne peuvent absolument pas être mises en cache.
 
 **Auditez vos pages pour identifier quelles ressources peuvent être mises en cache, et assurez-vous qu'elles renvoient des en-têtes Cache-Control et ETag adaptés.**
 
@@ -139,7 +139,7 @@ Il n'existe pas de règles de mise en cache meilleures que les autres. Selon vos
 
 Voici quelques conseils et techniques à garder à l'esprit lorsque vous travaillez sur la stratégie de cache :
 
-1. **Utilisez des URL cohérentes** : si vous affichez le même contenu sur des URL différentes, ce contenu sera récupéré et stocké plusieurs fois. Conseil : Notez que les [URL sont sensibles à la casse](http://www.w3.org/TR/WD-html40-970708/htmlweb.html) !
+1. **Utilisez des URL cohérentes** : si vous affichez le même contenu sur des URL différentes, ce contenu sera récupéré et stocké plusieurs fois. Conseil : Notez que les [URL sont sensibles à la casse](http://www.w3.org/TR/WD-html40-970708/htmlweb.html){: .external } !
 2. **Assurez-vous que le serveur fournit un jeton de validation (ETag)** : les jetons de validation éliminent la nécessité de transférer les mêmes octets lorsqu'une ressource n'a pas changé sur le serveur.
 3. **Identifiez quelles ressources peuvent être mises en cache par des intermédiaires** : celles dont les réponses sont identiques pour tous les utilisateurs sont d'excellentes candidates pour la mise en cache par un CDN et d'autres intermédiaires.
 4. **Déterminez la durée de mise en cache optimale pour chaque ressource** : différentes ressources peuvent avoir différentes exigences en matière d'actualisation. Auditez et déterminez l'élément `max-age` adapté à chacune.

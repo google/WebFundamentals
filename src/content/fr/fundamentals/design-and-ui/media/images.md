@@ -23,7 +23,7 @@ Grâce à la conception de sites Web adaptatifs, il est possible d'adapter non s
 <img class="center" src="img/art-direction.png" alt="Exemple d'art direction"
 srcset="img/art-direction.png 1x, img/art-direction-2x.png 2x">
 
-Dans d'autres cas, il se peut que l'image doive subir des modifications plus importantes : changement des proportions, recadrage, voire remplacement de toute l'image. On parle alors d''art direction'. Pour consulter d'autres exemples, rendez-vous sur [responsiveimages.org/demos/](http://responsiveimages.org/demos/).
+Dans d'autres cas, il se peut que l'image doive subir des modifications plus importantes : changement des proportions, recadrage, voire remplacement de toute l'image. On parle alors d''art direction'. Pour consulter d'autres exemples, rendez-vous sur [responsiveimages.org/demos/](http://responsiveimages.org/demos/){: .external }.
 
 
 {% include "web/_shared/udacity/ud882.html" %}
@@ -199,7 +199,7 @@ Le site J. Crew constitue un excellent exemple de source d'images extensibles su
 #### Images compressibles
 
 La [technique d'image
-compressible](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) diffuse des images 2x fortement compressées vers tous les appareils, quelles qu'en soient les capacités réelles. En fonction du type d'image et du niveau de compression, la qualité d'image peut paraître inchangée, mais la taille du fichier diminue de manière significative.
+compressible](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview){: .external} diffuse des images 2x fortement compressées vers tous les appareils, quelles qu'en soient les capacités réelles. En fonction du type d'image et du niveau de compression, la qualité d'image peut paraître inchangée, mais la taille du fichier diminue de manière significative.
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Voir l'exemple</a>
 
@@ -265,7 +265,7 @@ Dans l'exemple ci-dessus, l'élément approprié est chargé dans les navigateur
 
 ## Utiliser des requêtes média pour fournir des images haute résolution ou changer les images en fonction des caractéristiques de l'appareil ('art direction')
 
-Les requêtes média peuvent créer des règles sur la base du [rapport de pixel de l'appareil](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg), ce qui permet de spécifier des images différentes pour les écrans 2x et 1x.
+Les requêtes média peuvent créer des règles sur la base du [rapport de pixel de l'appareil](http://www.html5rocks.com/en/mobile/high-dpi/#toc-bg){: .external}, ce qui permet de spécifier des images différentes pour les écrans 2x et 1x.
 
 
     @media (min-resolution: 2dppx),
@@ -358,7 +358,7 @@ alt="Exemple de page dans laquelle FontAwesome a été utilisé pour les icônes
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/icon-font.html" region_tag="iconfont"   adjust_indentation="auto" %}
 </pre>
 
-Des centaines de polices d'icônes gratuites et payantes existent, notamment [Font Awesome](http://fortawesome.github.io/Font-Awesome/), [Pictos](http://pictos.cc/) et [Glyphicons](http://glyphicons.com/).
+Des centaines de polices d'icônes gratuites et payantes existent, notamment [Font Awesome](http://fortawesome.github.io/Font-Awesome/){: .external }, [Pictos](http://pictos.cc/){: .external} et [Glyphicons](http://glyphicons.com/){: .external}.
 
 Veillez à comparer le poids de la demande HTTP et de la taille de fichier supplémentaires avec le besoin en icônes. Par exemple, si vous n'avez besoin que de quelques icônes, il peut s'avérer plus judicieux d'utiliser une image ou un sprite d'images.
 
@@ -383,11 +383,11 @@ Les images comptent souvent pour la majorité des octets téléchargés. De plus
 
 ### Choisir le bon format
 
-Vous devez prendre en compte deux types d'images : les [images vectorielles](http://fr.wikipedia.org/wiki/Image_vectorielle) et les [images matricielles](http://fr.wikipedia.org/wiki/Image_matricielle). Dans le cas des images matricielles, vous devez également choisir le format de compression adéquat ; "GIF", "PNG" ou "JPG", par exemple.
+Vous devez prendre en compte deux types d'images : les [images vectorielles](http://fr.wikipedia.org/wiki/Image_vectorielle){: .external } et les [images matricielles](http://fr.wikipedia.org/wiki/Image_matricielle){: .external }. Dans le cas des images matricielles, vous devez également choisir le format de compression adéquat ; "GIF", "PNG" ou "JPG", par exemple.
 
 Les **images matricielles**, telles que les photos et d'autres images, sont représentées sous la forme d'une grille de points individuels ou pixels. Elles proviennent généralement d'un appareil photo ou d'un scanner, ou elles peuvent être créées dans le navigateur à l'aide de l'élément `canvas`. Plus ces images sont grandes, plus la taille du fichier est importante. Lorsque ces images sont redimensionnées au-delà de leur taille initiale, elles deviennent floues, car le navigateur doit 'deviner' comment remplir les pixels manquants.
 
-Les **images vectorielles**, telles que les logos et les illustrations au trait, sont définies par un ensemble de courbes, de lignes, de formes et de couleurs de remplissage. Elles sont créées à l'aide de programmes comme Adobe Illustrator et Inkscape, et enregistrées dans un format vectoriel tel que ['SVG'](http://css-tricks.com/using-svg/). Les images vectorielles étant basées sur des primitives simples, leur dimensionnement n'entraîne aucune perte de qualité, ni modification de la taille du fichier.
+Les **images vectorielles**, telles que les logos et les illustrations au trait, sont définies par un ensemble de courbes, de lignes, de formes et de couleurs de remplissage. Elles sont créées à l'aide de programmes comme Adobe Illustrator et Inkscape, et enregistrées dans un format vectoriel tel que ['SVG'](http://css-tricks.com/using-svg/){: .external }. Les images vectorielles étant basées sur des primitives simples, leur dimensionnement n'entraîne aucune perte de qualité, ni modification de la taille du fichier.
 
 Pour déterminer le format adéquat, il importe de tenir compte de l'origine de l'image (matricielle ou vectorielle), ainsi que du contenu (couleurs, animation, texte, etc.). Il n'existe pas de format idéal pour tous les types d'image, et chaque format présente des avantages et des inconvénients.
 
@@ -403,7 +403,7 @@ Pour prendre la bonne décision, commencez par appliquer ces quelques directives
 
 Il est possible de réduire sensiblement la taille du fichier image en le soumettant à un post-traitement après l'avoir enregistré. Il existe tout un éventail d'outils destinés à la compression d'images : avec et sans perte, en ligne, avec interface graphique, par ligne de commande, etc. Lorsque cela s'avère possible, il est conseillé d'automatiser l'optimisation des images, de sorte qu'elle soit considérée comme un objet de première classe dans votre flux de travail.
 
-Plusieurs outils permettent d'effectuer une compression sans perte plus poussée sur les fichiers `JPG` et `PNG`, sans nuire à la qualité d'image. Pour le format `JPG`, essayez [jpegtran](http://jpegclub.org/) ou [jpegoptim](http://freshmeat.net/projects/jpegoptim/) (disponible seulement sur Linux ; à exécuter avec l'option --strip-all). Pour le format `PNG`, essayez [OptiPNG](http://optipng.sourceforge.net/) ou [PNGOUT](http://www.advsys.net/ken/util/pngout.htm).
+Plusieurs outils permettent d'effectuer une compression sans perte plus poussée sur les fichiers `JPG` et `PNG`, sans nuire à la qualité d'image. Pour le format `JPG`, essayez [jpegtran](http://jpegclub.org/){: .external } ou [jpegoptim](http://freshmeat.net/projects/jpegoptim/){: .external} (disponible seulement sur Linux ; à exécuter avec l'option --strip-all). Pour le format `PNG`, essayez [OptiPNG](http://optipng.sourceforge.net/){: .external} ou [PNGOUT](http://www.advsys.net/ken/util/pngout.htm){: .external}.
 
 ### Utiliser des sprites d'image
 

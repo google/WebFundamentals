@@ -31,7 +31,7 @@ Ensuite, vous devez vous demander s'il existe une autre technologie capable de f
 * **Effets CSS** (dégradés, ombres, etc.) et animations CSS peuvent être utilisés pour produire des éléments à la résolution indépendante qui semblent toujours nets, quels que soient la résolution et le niveau de zoom, souvent pour une fraction du nombre d'octets nécessaires pour un fichier image.
 * Les **polices Web** permettent d'utiliser de superbes types de caractères tout en préservant la possibilité de sélectionner, rechercher et redimensionner le texte, ce qui représente une amélioration importante en termes de facilité d'utilisation.
 
-Si vous devez encoder du texte dans une image, réfléchissez-y à deux fois. Une bonne typographie est essentielle pour la qualité du design, de la marque et de la lisibilité. Mais le texte dans les images n'est pas très agréable pour les utilisateurs : le texte ne peut pas être sélectionné, recherché, agrandi, il n'est pas accessible et n'est pas adapté aux appareils avec un ppp élevé. L'utilisation de polices Web nécessite son [propre ensemble d'optimisations](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/), mais elle permet de résoudre tous ces problèmes et constitue toujours un meilleur choix pour afficher du texte.
+Si vous devez encoder du texte dans une image, réfléchissez-y à deux fois. Une bonne typographie est essentielle pour la qualité du design, de la marque et de la lisibilité. Mais le texte dans les images n'est pas très agréable pour les utilisateurs : le texte ne peut pas être sélectionné, recherché, agrandi, il n'est pas accessible et n'est pas adapté aux appareils avec un ppp élevé. L'utilisation de polices Web nécessite son [propre ensemble d'optimisations](https://www.igvita.com/2014/01/31/optimizing-web-font-rendering-performance/){: .external }, mais elle permet de résoudre tous ces problèmes et constitue toujours un meilleur choix pour afficher du texte.
 
 
 ## Images vectorielles ou matricielles
@@ -54,8 +54,8 @@ Une fois que vous avez déterminé qu'une image est bien le format optimal pour 
 </figure>
 <div class="clearfix"></div>
 
-* Les [images vectorielles](http://fr.wikipedia.org/wiki/Image_vectorielle) utilisent des lignes, des points et des polygones pour représenter une image.
-* Les [images matricielles](http://fr.wikipedia.org/wiki/Image_matricielle) représentent une image en encodant les valeurs individuelles de chaque pixel dans une grille rectangulaire.
+* Les [images vectorielles](http://fr.wikipedia.org/wiki/Image_vectorielle){: .external } utilisent des lignes, des points et des polygones pour représenter une image.
+* Les [images matricielles](http://fr.wikipedia.org/wiki/Image_matricielle){: .external } représentent une image en encodant les valeurs individuelles de chaque pixel dans une grille rectangulaire.
 
 Chaque format offre des avantages et des inconvénients. Les formats vectoriels sont mieux adaptés aux images composées de formes géométriques simples (logos, texte, icône, etc.), et offrent un résultat net à chaque résolution et niveau de zoom. Cela en fait le format idéal pour les écrans haute résolution et les éléments qui doivent être affichés dans plusieurs tailles.
 
@@ -135,7 +135,7 @@ Tous les navigateurs modernes sont compatibles avec le format SVG (Scalable Vect
     </svg>
     
 
-L'exemple ci-dessus montre un cercle simple avec un contour noir et un fond rouge. Il a été exporté depuis Adobe Illustrator. Comme vous le voyez, il contient un grand nombre de métadonnées, telles que des informations de couche, des commentaires et des espaces de nom souvent inutiles pour afficher l'élément dans le navigateur. Par conséquent, il est toujours bon de réduire la taille de vos fichiers SVG en utilisant un outil tel que [svgo](https://github.com/svg/svgo).
+L'exemple ci-dessus montre un cercle simple avec un contour noir et un fond rouge. Il a été exporté depuis Adobe Illustrator. Comme vous le voyez, il contient un grand nombre de métadonnées, telles que des informations de couche, des commentaires et des espaces de nom souvent inutiles pour afficher l'élément dans le navigateur. Par conséquent, il est toujours bon de réduire la taille de vos fichiers SVG en utilisant un outil tel que [svgo](https://github.com/svg/svgo){: .external }.
 
 Dans ce cas, svgo réduit la taille du fichier ci-dessus généré par Illustrator de 58 %, le faisant passer de 470 à 199 octets. De plus, puisque le format SVG est basé sur XML, nous pouvons également appliquer la compression GZIP pour réduire sa taille de transfert. Assurez-vous cependant que votre serveur est configuré pour compresser les éléments SVG !
 
@@ -148,7 +148,7 @@ Dans ce cas, svgo réduit la taille du fichier ci-dessus généré par Illustrat
 - Les logiciels de compression d'image utilisent différentes techniques pour réduire le nombre de bits requis pas pixel afin de réduire la taille de fichier de l'image.
 
 
-Une image matricielle est simplement une grille de 'pixels' individuels en deux dimensions. Par exemple une image de 100 x 100 pixels est une séquence de 10 000 pixels. À son tour, chaque pixel stocke les valeurs '[RVBA](http://fr.le cachepedia.org/le cache/RVBA)' : (R) canal rouge, (V) canal vert, (B) canal bleu et (A) canal alpha (transparent).
+Une image matricielle est simplement une grille de 'pixels' individuels en deux dimensions. Par exemple une image de 100 x 100 pixels est une séquence de 10 000 pixels. À son tour, chaque pixel stocke les valeurs '[RVBA](http://fr.le cachepedia.org/le cache/RVBA){: .external }' : (R) canal rouge, (V) canal vert, (B) canal bleu et (A) canal alpha (transparent).
 
 En interne, le navigateur attribue 256 valeurs (nuances) à chaque canal, ce qui se traduit par 8 bits par canal (2 ^ 8 = 256), et 4 octets par pixel (4 canaux x 8 bits = 32 bits = 4 octets). Par conséquent, si nous connaissons les dimensions de la grille, il est facile de calculer la taille du fichier :
 
@@ -203,13 +203,13 @@ Une simple stratégie consiste à réduire la 'profondeur de bit' de l'image de 
 
 Note: De gauche à droite (PNG) : 32 bits (16 000 couleurs), 7 bits (128 couleurs), 5 bits (32 couleurs). Les scènes complexes avec des transitions de couleur graduelles (dégradés, ciel, etc.) nécessitent des palettes de couleurs plus larges pour éviter les artéfacts visuels tels que le ciel pixellisé dans l'élément à 5 bits. D'un autre côté, si l'image n'utilise que quelques couleurs, une large palette est un gaspillage de bits précieux !
 
-Ensuite, maintenant que nous avons optimisé les données stockées dans les pixels individuels, nous pourrions être encore plus malins et nous intéresser aux pixels à proximité : on s'aperçoit alors que dans de nombreuses images, en particulier les photos, beaucoup de pixels proches les uns des autres ont des couleurs similaires, par exemple le ciel, les textures répétitives, etc. Utilisant cette information à notre avantage, le logiciel de compression peut appliquer un '[codage différentiel](http://fr.wikipedia.org/wiki/Codage_différentiel)', avec lequel au lieu de stocker les valeurs individuelles de chaque pixel, nous pouvons stocker la différence entre les pixels proches les uns des autres : si les pixels adjacents sont identiques, la différence est de 'zéro' et il n'est alors nécessaire de stocker qu'un seul bit ! Mais ne nous arrêtons pas en si bon chemin...
+Ensuite, maintenant que nous avons optimisé les données stockées dans les pixels individuels, nous pourrions être encore plus malins et nous intéresser aux pixels à proximité : on s'aperçoit alors que dans de nombreuses images, en particulier les photos, beaucoup de pixels proches les uns des autres ont des couleurs similaires, par exemple le ciel, les textures répétitives, etc. Utilisant cette information à notre avantage, le logiciel de compression peut appliquer un '[codage différentiel](http://fr.wikipedia.org/wiki/Codage_différentiel){: .external }', avec lequel au lieu de stocker les valeurs individuelles de chaque pixel, nous pouvons stocker la différence entre les pixels proches les uns des autres : si les pixels adjacents sont identiques, la différence est de 'zéro' et il n'est alors nécessaire de stocker qu'un seul bit ! Mais ne nous arrêtons pas en si bon chemin...
 
 L'œil humain a différents niveaux de sensibilité en fonction des différentes couleurs : nous pouvons optimiser notre codage des couleurs pour en tenir compte, en réduisant ou en augmentant la palette pour ces couleurs.
 Les pixels 'à proximité' forment une grille en deux dimensions, ce qui signifie que chaque pixel a de nombreux voisins : nous pouvons utiliser ce fait pour améliorer encore davantage le codage différentiel.
 Au lieu de ne regarder que les voisins immédiats de chaque pixel, nous pouvons regarder des groupes plus étendus de pixels voisins et encoder différents blocs avec différents paramètres. Et ainsi de suite...
 
-Comme vous pouvez le voir, l'optimisation d'image devient vite compliquée (ou amusante, selon votre point de vue), et c'est un domaine de recherche universitaire et commerciale très actif. Les images occupent un grand nombre d'octets, et la valeur du développement de meilleures techniques de compression des images est inestimable ! Si vous souhaitez en apprendre davantage, consultez la [page Wikipédia](http://fr.wikipedia.org/wiki/Compression_d'image), ou le [document de présentation des techniques de compression WebP](/speed/webp/docs/compression) pour avoir un exemple concret.
+Comme vous pouvez le voir, l'optimisation d'image devient vite compliquée (ou amusante, selon votre point de vue), et c'est un domaine de recherche universitaire et commerciale très actif. Les images occupent un grand nombre d'octets, et la valeur du développement de meilleures techniques de compression des images est inestimable ! Si vous souhaitez en apprendre davantage, consultez la [page Wikipédia](http://fr.wikipedia.org/wiki/Compression_d'image){: .external }, ou le [document de présentation des techniques de compression WebP](/speed/webp/docs/compression){: .external } pour avoir un exemple concret.
 
 Mais une fois encore, tout ceci est très intéressant, mais très théorique : en quoi cela nous aide-t-il à optimiser les images sur nos pages ? Nous ne sommes évidemment pas capables d'inventer de nouvelles techniques de compression, mais il est important de comprendre la forme du problème : pixels RVBA, profondeur de bit, et les diverses techniques d'optimisation. Il est essentiel de comprendre tous ces concepts et de les garder à l'esprit avant d'aborder le sujet des différents formats d'image matricielle.
 
@@ -227,8 +227,8 @@ Pour certains types de données, tels que le code source d'une page ou un fichie
 
 En fait, étant donnée la façon dont fonctionne l'œil, nous pouvons souvent nous permettre de nous débarrasser de certaines informations pour chaque pixel afin de réduire la taille de fichier d'une image. Par exemple, nos yeux ont une sensibilité différente en fonction des couleurs, ce qui signifie que nous pouvons utiliser moins de bits pour encoder certaines couleurs. En conséquence, le déroulement d'une optimisation d'image classique se compose de deux étapes principales :
 
-1. L'image est traitée par un filtre '[avec perte](http://fr.wikipedia.org/wiki/Compression_de_données#Compression_avec_pertes)' qui élimine certaines données des pixels.
-1. L'image est traitée par un filtre '[sans perte](http://en.wikipedia.org/wiki/Lossless_compression)' qui comprime les données des pixels.
+1. L'image est traitée par un filtre '[avec perte](http://fr.wikipedia.org/wiki/Compression_de_données#Compression_avec_pertes){: .external }' qui élimine certaines données des pixels.
+1. L'image est traitée par un filtre '[sans perte](http://en.wikipedia.org/wiki/Lossless_compression){: .external }' qui comprime les données des pixels.
 
 ** La première étape est facultative, et l'algorithme exact dépend du format d'image spécifique. Mais il est important de comprendre que n'importe quelle image peut subir une compression avec perte pour réduire sa taille.** En fait, la différence entre les différents formats d'image, tels que GIF, PNG, JPEG, etc., réside dans la combinaison d'algorithmes spécifiques qu'ils utilisent (ou omettent) lorsqu'ils appliquent les étapes avec et sans perte.
 
@@ -316,7 +316,7 @@ Puisque ni WebP, ni JPEG XR n'est compatible au niveau universel, vous devrez aj
 * Certains outils Open Source, par exemple PageSpeed pour Apache ou Nginx, automatisent l'optimisation, la conversion et la diffusion d'éléments adaptés.
 * Vous pouvez ajouter une logique d'application supplémentaire pour détecter le client, contrôler les formats avec lesquels il est compatible et diffuser l'image au meilleur format disponible.
 
-Enfin, notez que si vous utilisez un affichage Web pour afficher le contenu dans votre application native, vous avez un contrôle total du client, et pouvez utiliser WebP de façon exclusive ! Facebook, Google+ et bien d'autres utilisent WebP pour afficher toutes leurs images dans leurs applications. Les économies réalisées en valent la peine. Pour en savoir plus sur WebP, consultez la présentation [WebP : Deploying Faster, Smaller, and More Beautiful Images](https://www.youtube.com/watch?v=pS8udLMOOaE) sur Google I/O 2013.
+Enfin, notez que si vous utilisez un affichage Web pour afficher le contenu dans votre application native, vous avez un contrôle total du client, et pouvez utiliser WebP de façon exclusive ! Facebook, Google+ et bien d'autres utilisent WebP pour afficher toutes leurs images dans leurs applications. Les économies réalisées en valent la peine. Pour en savoir plus sur WebP, consultez la présentation [WebP : Deploying Faster, Smaller, and More Beautiful Images](https://www.youtube.com/watch?v=pS8udLMOOaE){: .external } sur Google I/O 2013.
 
 
 ## Outils et réglage des paramètres

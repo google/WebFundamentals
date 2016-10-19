@@ -7,7 +7,7 @@ description: האינטרנט נגיש במגוון עצום של מכשירים
 
 # האתר הראשון שלך שמותאם למגוון מכשירים {: .page-title }
 
-Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893) course on Udacity.
+Caution: This article has not been updated in a while and may not reflect reality. Instead, check out the free [Responsive Web Design](https://udacity.com/ud893){: .external } course on Udacity.
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
