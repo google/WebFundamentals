@@ -25,11 +25,13 @@ toc:
       path: /web/fundamentals/getting-started/primers/service-workers
     - title: "JavaScript Promises: an Introduction"
       path: /web/fundamentals/getting-started/primers/promises
+    - title: JavaScript Async Functions
+      path: /web/fundamentals/getting-started/primers/async-functions
     - title: "Shadow DOM v1: Self-Contained Web Components"
       path: /web/fundamentals/getting-started/primers/shadowdom
     - title: "Custom Elements v1: Reusable Web Components"
       path: /web/fundamentals/getting-started/primers/customelements
-    - title: "Payment Request API"
+    - title: Payment Request API
       section:
       - title: Integration Guide
         path: /web/fundamentals/getting-started/primers/payment-request/
