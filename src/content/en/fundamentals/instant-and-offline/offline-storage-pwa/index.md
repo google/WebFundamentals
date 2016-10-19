@@ -125,7 +125,7 @@ fall into the “best effort” category today.
 "Persistent" storage is not automatically cleared when storage is low. The
 user needs to manually clear this storage (via browser settings). Chrome has
 been experimenting with support for [Persistent
-Storage](/web/updates/2016/06/persistent-storage?hl=en)
+Storage](/web/updates/2016/06/persistent-storage)
 under an origin trial, and the latest news suggests it will be shipping in
 [Chrome
 55](https://groups.google.com/a/chromium.org/d/msg/blink-dev/5Sihi1iAXYc/wnvNDFIPAQAJ).
