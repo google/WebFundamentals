@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Async functions allow you to write promise-based code as if it were synchronous
 
-{# wf_published_on: 2016-10-07 #}
-{# wf_updated_on: 2016-10-07 #}
+{# wf_published_on: 2016-10-20 #}
+{# wf_updated_on: 2016-10-20 #}
 
 # Async functions - making promises friendly {: .page-title }
 
