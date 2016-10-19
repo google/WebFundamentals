@@ -196,15 +196,15 @@ mechanisms and compared the most popular APIs and services available today,
 we'll be adadding more content soon to dive more deeply into one or more topics
 of interest:
 
-* Offline Storage Recommendations for Progressive Web Apps
+* [Offline Storage Recommendations for Progressive Web Apps](offline-for-pwa)
 
-* Common Storage Patterns
+* Common Storage Patterns (coming soon)
 
-* Recommended Back End Storage Methods
+* Recommended Back End Storage Methods (coming soon)
 
-* Deep Dive: IndexedDB
+* Deep Dive: IndexedDB (coming soon)
 
-* Deep Dive: Cache API
+* Deep Dive: Cache API (coming soon)
 
-* Analysis of Popular Storage Frameworks
+* Analysis of Popular Storage Frameworks (coming soon)
 

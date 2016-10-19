@@ -10,11 +10,14 @@ description: Learn how to store data locally for improved response time and offl
 {% include "web/_shared/contributors/addyosmani.html" %}
 {% include "web/_shared/contributors/mco.html" %}
 
-<caption align="bottom">
-![PWA in devtools](images/image_0.jpg)
-The [Pokedex](https://pokedex.org){: external } Progressive Web App uses
-IndexedDB for application state and the Pokemon data set while the Cache
-API is used for URL addressable resources.
+<figure class="attempt-right">
+  <img src="images/pwa-in-devtools.jpg" alt="PWA in DevTools">
+  <figcaption>
+    The <a href="https://pokedex.org" class="external">Pokedex</a>
+    Progressive Web App uses IndexedDB for application state and the Pokemon
+    data set while the Cache API is used for URL addressable resources.
+  </figcaption>
+</figure>
 
 Internet connections can be flakey or non-existent on the go, which is why
 offline support and reliable performance are common features in [progressive
@@ -25,16 +28,17 @@ summarize some ideas around offline data storage for PWAs — think JSON
 payloads, images and general static data required to provide a *meaningful*
 experience offline.
 
+<div class="clearfix"></div>
+
+## Recommendation
+
 Let’s get right to the point with a general recommendation for storing data
 offline:
 
-**For URL addressable resources, use the [Cache
-API](https://davidwalsh.name/cache) (part of [service
-worker](/web/fundamentals/primers/service-worker/)).
-For all other data, use
-[IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
-(with a [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/)
-wrapper).**
+* For URL addressable resources, use the [**Cache API**](https://davidwalsh.name/cache)
+  (part of [service workers](/web/fundamentals/primers/service-worker/)).
+* For all other data, use [**IndexedDB**](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+  (with a [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/) wrapper).
 
 Here’s the rationale:
 
