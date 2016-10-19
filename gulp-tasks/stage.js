@@ -8,6 +8,7 @@ var chalk = require('chalk');
 var glob = require('globule');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
+var rename = require('gulp-rename')
 var runSequence = require('run-sequence');
 var spawn = require('child_process').spawn;
 
@@ -81,6 +82,12 @@ gulp.task('stage:copy-robots', function(cb) {
     .pipe(gulp.dest('./build/en/'));
 });
 
+gulp.task('stage:copy-404', function(cb) {
+  return gulp.src('./gae/404.tpl')
+    .pipe(rename('404.html'))
+    .pipe(gulp.dest('./build/en/'));
+});
+
 gulp.task('stage:copy-scripts', function(cb) {
   return gulp.src('./gae/scripts/*')
     .pipe(gulp.dest('./build/en/wf-local/scripts/'));
@@ -99,6 +106,7 @@ gulp.task('stage', function(callback) {
       'stage:build-static',
       'stage:copy-assets',
       'stage:copy-robots',
+      'stage:copy-404',
       'stage:copy-scripts',
       'stage:copy-styles',
     ],
