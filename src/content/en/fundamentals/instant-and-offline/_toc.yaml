@@ -5,5 +5,7 @@ toc:
       path: /web/fundamentals/instant-and-offline/offline-cookbook/
     - title: Web Storage
       path: /web/fundamentals/instant-and-offline/web-storage/
+    - title: Offline Storage for PWAs
+      path: /web/fundamentals/instant-and-offline/offline-storage-pwa/
     - title: The Service Worker Lifecycle
       path: /web/fundamentals/instant-and-offline/service-worker/lifecycle
