@@ -1,9 +1,10 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Sharing is caring.
+description: Sharing is caring. Chrome is running an Origin Trial to enable
+             native sharing on the web.
 
-{# wf_published_on: 2016-10-18 #}
-{# wf_updated_on: 2016-10-18 #}
+{# wf_published_on: 2016-10-19 #}
+{# wf_updated_on: 2016-10-19 #}
 
 Good news, everybody! [Matt Giuca](https://twitter.com/mgiuca) on the Chrome
 team has been working on a [simple
@@ -35,17 +36,21 @@ The Web Share API is
 [promise](https://developers.google.com/web/fundamentals/getting-started/primers/promises)-based
 single method API that takes an object with properties title, text and url.
 
-navigator.share({
-  title: document.title,
- text: window.location.href,
- url: window.location.href
-}).then(() =&gt; console.log('Successful share'))
-  .catch(() =&gt; console.log('Error sharing:', error));
+    navigator.share({
+        title: document.title,
+        text: window.location.href,
+        url: window.location.href
+    }).then(() => console.log('Successful share'))
+    .catch(() => console.log('Error sharing:', error));
 
 Once invoked it will bring up the native picker (see video) and allow you to
 share the data with the app that the user prefers.
 
-{{video}}
+<div class="video-wrapper">
+  <iframe class="devsite-embedded-youtube-video" data-video-id="lhUzYxCvWew"
+          data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 There are a number of constraints that affect the usage of this API
 
@@ -78,13 +83,12 @@ the scenarios where you don't have the ability to call. I try to progressively
 enhance as much as possible, and the process that I follow on my
 [blog](https://paul.kinlan.me/) is to:
 
-1. Use my prefered sharing service via a simple &lt;a&gt; ([intent: URL with
-   Twitter
-   fallback](https://paul.kinlan.me/sharing-natively-on-android-from-the-web/))
-1. Check to see the availability of the API (navigator.share !== undefined)
-1. Wait for the content to be available and then find the sharing element
-1. Intercept and prevent the default behavior of the click
-1. Call navigator.share()
+1. Use my prefered sharing service via a simple `<a>` ([intent: URL with
+   Twitter fallback](https://paul.kinlan.me/sharing-natively-on-android-from-the-web/))
+2. Check to see the availability of the API (navigator.share !== undefined)
+3. Wait for the content to be available and then find the sharing element
+4. Intercept and prevent the default behavior of the click
+5. Call navigator.share()
 
 ### Share the correct URL
 
@@ -94,11 +98,11 @@ that is custom to context of the user.  You can use the fact that there might be
 a canonical URL on your page to provide a better experience to the user.  For
 example, you might do:
 
-var url = document.location;
-var canonicalElement = document.querySelector('link[rel=canonical]');
-if(canonicalElement !== undefined) {
-  url = canonicalElement.href;
-}
+    var url = document.location;
+    var canonicalElement = document.querySelector('link[rel=canonical]');
+    if(canonicalElement !== undefined) {
+        url = canonicalElement.href;
+    }
 
 ### Where can I get more information
 
@@ -115,7 +119,7 @@ save you a click here are the important links:
 * [Discourse Discussion](https://discourse.wicg.io/t/web-share-api-for-sharing-content-to-arbitrary-destination/1561/3)
 
 Future work will also level the playing field for web apps, by allowing them to
-register to be a "[share reciever](https://github.com/mgiuca/web-share-target)",
+register to be a "[share reciever](https://github.com/WICG/web-share-target)",
 enabling web to app sharing, app to web sharing and web to web sharing.
 Personally, I am incredibly excited about this.
 
