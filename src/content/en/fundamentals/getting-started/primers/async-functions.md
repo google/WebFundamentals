@@ -30,7 +30,7 @@ If you use the `async` keyword before a function definition, you can then use
 until the promise settles. If the promise fulfills, you get the value back. If
 the promise rejects, the rejected value is thrown.
 
-Note: If you're unfamiliar with promises & promise terminology, check out [our
+Note: If you're unfamiliar with promises, check out [our
 promises guide](/web/fundamentals/getting-started/primers/promises).
 
 ## Example: Logging a fetch
@@ -63,7 +63,7 @@ And here's the same thing using async functions:
 It's the same number of lines, but all the callbacks are gone. This makes it way
 easier to read, especially for those less familiar with promises.
 
-## Return values
+## Async return values
 
 Calling an async function returns a promise for whatever the function returns or
 throws. So with:
@@ -86,6 +86,69 @@ throws. So with:
     }
 
 …calling `foo()` returns a promise that *rejects* with `Error('bar')`.
+
+## Example: Streaming a response
+
+The benefit of async functions increases in more complex examples. Say we wanted
+to stream a response while logging out the chunks, and return the final size.
+
+Note: The phrase "logging out the chunks" made me sick in my mouth.
+
+Here it is with promises:
+
+    function getResponseSize(url) {
+      return fetch(url).then(response => {
+        const reader = response.body.getReader();
+        let total = 0;
+
+        return reader.read().then(function processResult(result) {
+          if (result.done) return total;
+
+          const value = result.value;
+          total += value.length;
+          console.log('Received chunk', value);
+
+          return reader.read().then(processResult);
+        })
+      });
+    }
+
+Check me out, Jake "wielder of promises" Archibald. See how I'm calling
+`processResult` inside itself to set up an asynchronous loop? Writing that made
+me feel *very smart*. But like most "smart" code, you have to stare at it for
+ages to figure out what it's doing, like one of those magic-eye pictures from
+the 90's.
+
+Let's try that again with async functions:
+
+    async function getResponseSize(url) {
+      const response = await fetch(url);
+      const reader = response.body.getReader();
+      let result = await reader.read();
+      let total = 0;
+
+      while (!result.done) {
+        const value = result.value;
+        total += value.length;
+        console.log('Received chunk', value);
+        // get the next result
+        result = await reader.read();
+      }
+
+      return total;
+    }
+
+All the "smart" is gone. The asynchronous loop that made me feel so smug is
+replaced with a trusty, boring, while-loop. Much better. In future, we'll get
+[async iterators](https://github.com/tc39/proposal-async-iteration){:
+.external}, which would [replace the `while`
+loop with a for-of loop](https://gist.github.com/jakearchibald/0b37865637daf884943cf88c2cba1376){:
+.external}, making it even neater.
+
+Note: I'm sort-of in love with streams. If you're unfamiliar with streaming,
+[check out my
+guide](https://jakearchibald.com/2016/streams-ftw/#streams-the-fetch-api){:
+.external}.
 
 ## Other async function syntax
 
@@ -132,67 +195,6 @@ function to complete before calling the second.
     storage.getAvatar('jaffathecake').then(…);
 
 Note: Class constructors and getters/settings cannot be async.
-
-## Example: Streaming a response
-
-The benefit of async functions increases in more complex examples. Say we wanted
-to stream a response while logging out the chunks and returning the final size.
-
-Note: The phrase "logging out the chunks" made me sick in my mouth.
-
-Here it is with promises:
-
-    function getResponseSize(url) {
-      return fetch(url).then(response => {
-        const reader = response.body.getReader();
-        let total = 0;
-
-        return reader.read().then(function processResult(result) {
-          if (result.done) return total;
-
-          const value = result.value;
-          total += value.length;
-          console.log('Received chunk', value);
-
-          return reader.read().then(processResult);
-        })
-      });
-    }
-
-Check me out, Jake "wielder of promises" Archibald. See how I'm calling
-`processResult` inside itself to set up an asynchronous loop? Writing that made
-me feel *very smart*. But like most "smart" code, you have to stare at it for
-ages to figure out what it's doing, like one of those magic-eye pictures from
-the 90's.
-
-Let's try that again with async functions:
-
-    async function getResponseSize(url) {
-      const response = await fetch(url);
-      const reader = response.body.getReader();
-      let result;
-      let total = 0;
-
-      while ((result = await reader.read()) && !result.done) {
-        const value = result.value;
-        total += value.length;
-        console.log('Received chunk', value);
-      }
-
-      return total;
-    }
-
-All the "smart" is gone. The asynchronous loop that made me feel so smug is
-replaced with a trusty, boring, while-loop. Much better. In future, we'll get
-[async iterators](https://github.com/tc39/proposal-async-iteration){:
-.external}, which would [replace the `while`
-loop with a for-of loop](https://gist.github.com/jakearchibald/0b37865637daf884943cf88c2cba1376){:
-.external}, making it even neater.
-
-Note: I'm sort-of in love with streams. If you're unfamiliar with streaming,
-[check out my
-guide](https://jakearchibald.com/2016/streams-ftw/#streams-the-fetch-api){:
-.external}.
 
 ## Careful! Avoid going too sequential
 
