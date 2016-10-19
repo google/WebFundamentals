@@ -67,7 +67,7 @@ browsing contexts of the same origin.
 
 ### Other `BroadcastChannel` resources {: .hide-from-toc }
 * [Spec](https://goo.gl/Lek3U0)
-* [Polyfill](https://goo.gl/9P6QHu)
+* [Polyfill](/web/updates/2016/09/broadcastchannel#feature_detection_and_browser_support)
 
 ## `requestFullScreen` {: #request-full-screen }
 
