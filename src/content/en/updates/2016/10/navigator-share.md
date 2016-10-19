@@ -2,8 +2,11 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Sharing is caring. Chrome is running an Origin Trial to enable native sharing on the web.
 
-{# wf_published_on: 2016-10-19 #}
-{# wf_updated_on: 2016-10-19 #}
+{# wf_published_on: 2016-10-20 #}
+{# wf_updated_on: 2016-10-20 #}
+{# wf_featured_image: /web/updates/images/generic/share.png #}
+{# wf_tags: chrome55,sharing,android,origintrials #}
+{# wf_featured_snippet: Sharing is caring. Chrome is running an Origin Trial to enable native sharing on the web called <code>Web Share</code> that allows websites to invoke the native sharing capabilities of the host platform. #}
 
 # Introducing the Web Share API {: .page-title }
 
