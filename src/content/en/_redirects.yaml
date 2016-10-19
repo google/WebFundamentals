@@ -7,6 +7,8 @@ redirects:
   to: /web/resources/styleguide/sample-article
 - from: /web/fundamentals/resources/...
   to: /web/resources/
+- from: /web/chrome-devtools
+  to: /web/tools/chrome-devtools
 
 
 # REDIRECTS from Pre-DevSite

@@ -902,7 +902,7 @@ For now, `/deep/` [continues to work in `querySelectorAll()` calls](https://bugs
 
 Instead of populating a shadow root using `.innerHTML`, we can use a declarative `<template>`. Templates are an ideal placeholder for declaring the structure of a web component.
 
-See the example in "[Custom elements: building reusable web components](/web/fundamentals//getting-started/primers/customelements)".
+See the example in "[Custom elements: building reusable web components](/web/fundamentals/getting-started/primers/customelements)".
 
 ## History & browser support {: #historysupport}
 

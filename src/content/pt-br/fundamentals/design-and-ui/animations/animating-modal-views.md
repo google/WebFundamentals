@@ -21,7 +21,7 @@ As visualizações modais são para mensagens importantes e, por isso, você tem
 
 <img src="images/dont-press.gif" alt="Animando uma visualização modal." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">Veja a amostra.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">Veja a amostra.</a>
 
 A sobreposição modal deve ser alinhada com a porta de visualização, portanto, precisa de seu `position` definido para `fixed`:
 

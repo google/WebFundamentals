@@ -20,7 +20,7 @@ description: 了解如何给应用的模态视图设置动画。
 
 <img src="imgs/gifs/dont-press.gif" alt="给模态视图设置动画。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">参考示例。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">参考示例。</a>
 
 模态叠层应与视口对齐，因此需要将其`position`设置为`fixed`：
 

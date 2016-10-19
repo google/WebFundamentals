@@ -184,11 +184,11 @@ In diesem Leitfaden nehmen wir unsere Grundstruktur mit Inhalten und verwandeln 
 
 <figure class="attempt-left">
   <img  src="images/content.png" alt="Inhalt">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Inhalte und Struktur </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Inhalte und Struktur </a> </figcaption>
 </figure>
 <figure class="attempt-right">
   <img  src="images/narrowsite.png" alt="Designed site">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Fertige Website </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Fertige Website </a> </figcaption>
 </figure>
 
 <div class="clearfix"></div>

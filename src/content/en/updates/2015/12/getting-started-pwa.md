@@ -91,7 +91,7 @@ For diving deeper into Progressive Web Apps, read Alex Russell's original [blog 
 
 ## Principles
 
-### Web App Manifest
+### Web app manifest
 
 > The Manifest for Web applications is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the device home screen), direct what the user can launch and more importantly how they can launch it
 
@@ -108,7 +108,7 @@ Chromium-based browsers (Chrome, Opera etc.) [support](https://www.chromestatus.
 
 For more details, read [Installable Web Apps with the Web App Manifest in Chrome for Android](/web/updates/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android) on Web Fundamentals.
 
-### Add to Home Screen Banner
+### "Add to Home Screen" banner
 
 Chrome on Android has support adding in your site to the home screen for a while now, but recent versions also support proactively suggesting sites be added using native [Web App install banners](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
@@ -124,7 +124,7 @@ In order for the app install prompts to display your app must:
 
 A number of [App Install banner samples](https://github.com/GoogleChrome/samples/tree/gh-pages/app-install-banner) are available, covering [basic banners](https://github.com/GoogleChrome/samples/tree/gh-pages/app-install-banner/basic-banner) through to more complex use-cases like displaying [related applications](https://github.com/GoogleChrome/samples/tree/gh-pages/app-install-banner/related-applications).
 
-### Service Worker for offline caching
+### Service worker for offline caching
 
 A [service worker](http://www.w3.org/TR/service-workers/) is a script that runs in the background, separate from your web page. It responds to events, including network requests made from pages it serves. A service worker has an intentionally short lifetime.
 
@@ -146,7 +146,7 @@ Jeff Posnick wrote a quick primer on sw-precache called [Offline-first, fast, wi
 
 Chrome, Opera and Firefox have all implemented support for service worker with Edge having positive public signals about interest in the feature. Safari briefly mentioned interest in it via one engineer's proposed [five year plan](https://trac.webkit.org/wiki/FiveYearPlanFall2015).
 
-### Push Notifications for re-engagement
+### Push notifications for re-engagement
 
 > Push notifications allow your users to opt-in to timely updates from sites they love and allow you to effectively re-engage them with customized, engaging content.
 
@@ -188,9 +188,9 @@ Jeremy Keith recently [commented](https://adactio.com/journal/9963) that in this
 
 My recommendation is reading our write-up on the architecture and evaluating how similar principles could be best applied to your own application and stack.
 
-## Getting Started Boilerplates
+## Getting started boilerplates
 
-### Application Shell
+### Application shell
 
 [View on GitHub](https://github.com/addyosmani/app-shell)
 
@@ -198,11 +198,11 @@ The `app-shell` repository contains a near-complete implementation of the [Appli
 
 Given that it covers both client and server-side portions of the model and there's quite a lot going on there, it will take some time to familiarise yourself with the codebase. It's otherwise our most comprehensive Progressive Web App starting point right now. Docs will be our next focus for this project.
 
-### Polymer Starter Kit
+### Polymer starter kit
 
 [View on GitHub](https://github.com/polymerelements/polymer-starter-kit)
 
-The official starting point for [Polymer](https://polymer-project.org) web apps supports the following Progressive Web App features:
+The official starting point for [Polymer](https://www.polymer-project.org) web apps supports the following Progressive Web App features:
 
 * Web Application manifest
 * Chrome for Android Splashscreen
@@ -235,7 +235,7 @@ A number of open-source Progressive Web Apps have already been built by members 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-5-@1x.jpg" alt="Progressive web apps implemented using React, Polymer, Virtual DOM and AngularJS"/>
 
-### Vanilla JS
+### Vanilla JavaScript
 
 * [Voice Memos](https://github.com/GoogleChrome/voice-memos) by Paul Lewis is built using a similar architecture to `app-shell` ([write-up](https://aerotwist.com/blog/voice-memos/))
 * [Offline Wikipedia](https://github.com/jakearchibald/offline-wikipedia) by Jake Archibald ([video](https://www.youtube.com/watch?v=d5_6yHixpsQ))

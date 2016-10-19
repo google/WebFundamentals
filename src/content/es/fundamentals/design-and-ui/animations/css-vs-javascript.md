@@ -47,7 +47,7 @@ A continuación, se muestran algunas CSS en las que se moverá un elemento de 10
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-simple.html">Ver el ejemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-simple.html">Ver el ejemplo</a>
 
 Además de la duración de la transición, existen opciones para la aceleración, que es, básicamente, cómo se ve la animación. Podrá obtener más información sobre esto en la guía de [“Principios básicos de la aceleración”](the-basics-of-easing.html).
 
@@ -121,7 +121,7 @@ Por ejemplo, puede animar el cuadro del mismo modo con las transiciones, pero pu
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-keyframes.html">Ver el ejemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-keyframes.html">Ver el ejemplo</a>
 
 En las animaciones de CSS, usted define la animación independientemente del elemento de destino y utiliza la propiedad animation-name para elegir la animación necesaria.
 
@@ -165,7 +165,7 @@ A continuación, se muestra la versión de JavaScript que debería escribir para
     box.startAnimation();
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-js.html">Ver el ejemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-js.html">Ver el ejemplo</a>
 
 Este código se torna muy complejo y difícil de administrar a medida que intenta expandirlo para abarcar más casos, por lo que, en general, se beneficiará si elige una de las tantas bibliotecas de JavaScript disponibles para animación. Si ya está utilizando jQuery en su proyecto, es probable que se beneficie usándolo y ejecutando las funciones de [`.animate()`](http://api.jquery.com/animate/). Si, por otro lado, necesita una biblioteca especializada, consulte [TweenMax de Greensock](https://github.com/greensock/GreenSock-JS/tree/master/src/minified), que es una herramienta muy eficiente. Existe una versión liviana de esta herramienta, denominada TweenLite, que es más fácil de utilizar desde el punto de vista del tamaño.
 

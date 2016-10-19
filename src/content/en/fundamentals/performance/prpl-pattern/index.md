@@ -15,7 +15,7 @@ pattern and collect more data on where it offers the greatest benefits.
 The mobile web is too slow. Over the years the web has evolved from a
 document-centric platform to a first-class application platform. Thanks to
 advancements in the platform itself (such as
-[Service Workers](/web/fundamentals/primers/service-workers)) and in the tools
+[Service Workers](/web/fundamentals/getting-started/primers/service-workers)) and in the tools
 and techniques we use to build apps, users can do virtually anything on the web
 they can do in a native app.
 

@@ -26,7 +26,7 @@ book_path: /web/{{section}}/_book.yaml
 {{published}}
 
 {{#if tags}}
-Tags: {{#each tags}}[{{this}}](/web/{{section}}/tags/{{this}}) {{/each}}
+Tags: {{#each tags}}[{{this}}](/web/{{../../section}}/tags/{{this}}) {{/each}}
 {{/if}}
 
 <div style="clear:both"></div>

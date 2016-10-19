@@ -31,7 +31,7 @@ CSS에서 이러한 베지어 곡선은 4개의 값, 즉 2쌍의 숫자를 취�
 <img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Ease-in-out 애니메이션 곡선" />
 <img src="images/custom.png" style="display: inline; max-width: 300px" alt="사용자 지정 애니메이션 곡선" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-custom-curve.html">사용자 지정 easing 애니메이션을 참조하십시오.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html">사용자 지정 easing 애니메이션을 참조하십시오.</a>
 
 다음은 사용자 지정 곡선용 CSS입니다.
 
@@ -43,13 +43,13 @@ CSS에서 이러한 베지어 곡선은 4개의 값, 즉 2쌍의 숫자를 취�
 
 사용자 지정 곡선을 만드는 것은 매우 재미있고, 사용자 지정 곡선으로 애니메이션의 느낌을 세밀하게 제어할 수 있습니다. 예를 들어, 위의 곡선은 전통적인 ease-in-out 곡선과 닮았지만 ease-in(가속) 부분이 짧고 끝의 감속 부분이 긴 것을 확인할 수 있습니다.
 
-이 <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/curve-playground.html">애니메이션 곡선 도구</a>를 체험해 보고 곡선이 애니메이션의 느낌에 어떤 영향을 주는지 확인하십시오.
+이 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html">애니메이션 곡선 도구</a>를 체험해 보고 곡선이 애니메이션의 느낌에 어떤 영향을 주는지 확인하십시오.
 
 ## 세밀한 제어를 하려면 JavaScript 사용
 
 3차원 베지어 곡선이 제공하는 것보다 더욱 세밀한 제어가 필요한 경우가 있습니다. 탄성 바운스 느낌을 원하거나 중간에 애니메이션 일부의 실행을 멈추기를 원할 수도 있는데, 두 가지 모두 CSS로는 어렵습니다. 이러한 경우에 JavaScript 애니메이션 라이브러리를 사용해야 합니다. 최고의 라이브러리 중 하나는 [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified){: .external }로 (또는 초경량으로 유지하기를 원할 경우 TweenLite), 작은 JavaScript 라이브러리로 많은 부분을 제어할 수 있고 매우 풍성한 코드베이스를 제공합니다.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-elastic.html">elastic ease 애니메이션을 참조하십시오.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html">elastic ease 애니메이션을 참조하십시오.</a>
 
 TweenMax와 같은 라이브러리를 사용하려면 페이지에 다음 스크립트를 포함해야 합니다.
 

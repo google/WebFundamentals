@@ -41,7 +41,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fu
 
 <img src="imgs/linear.png" style="max-width: 300px" alt="线性动画的曲线。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html">查看线性动画</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html">查看线性动画</a>
 
 随着时间推移，其值以等量增加。 采用线性运动时，事物常常让人觉得像机器人，不自然，这也是用户会觉得不协调的东西。 一般来说，应避免线性运动。
 
@@ -64,7 +64,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fu
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-out.html">查看缓出动画。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html">查看缓出动画。</a>
 
 缓出一般最适合用户界面，因为开头时快速使动画有反应快的感觉，同时在结尾仍允许有一点自然的减速。
 
@@ -74,7 +74,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fu
 
  <img src="imgs/ease-in.png" style="max-width: 300px" alt="缓入动画的曲线。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html">查看缓入动画。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html">查看缓入动画。</a>
 
 这种动画像沉重的石头掉落一样，开始时很慢，然后快速地重重撞击地面，突然沉寂下来。
 
@@ -92,7 +92,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fu
 
 <img src="imgs/ease-in-out.png" style="max-width: 300px" alt="缓入缓出动画的曲线。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">查看缓入缓出动画。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">查看缓入缓出动画。</a>
 
 必须注意，由于缓入开头让动画有迟钝感，动画时间不要过长。 一般 300 - 500 毫秒的范围比较合适，但很大程度上要根据项目的感觉来使用准确的数字。 也就是说，由于开头慢、中间快和结尾慢，最终动画将有更强的对比，可能让用户感到非常满意。
 

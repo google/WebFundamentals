@@ -184,7 +184,7 @@ You can interact with the **Color Picker** in multiple ways:
 
 ![annotated color picker](imgs/annotated-color-picker.jpg)
 
-[md]: https://www.google.com/design/spec/style/color.html)
+[md]: https://www.google.com/design/spec/style/color.html
 
 ### Eyedropper {:#eyedropper}
 

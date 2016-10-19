@@ -65,7 +65,7 @@ book_path: /web/updates/_book.yaml
 
 ## How do the tests work?
 
-<p>They measure the time of property accesses. In case of <code>innerHTML</code> (the performance test in <a title="Link to WebKit bug and tests" href="bugs.webkit.org/show_bug.cgi?id=81214" target="_blank">bugs.webkit.org/show_bug.cgi?id=81214</a>), the test just measures the time to run the following code:</p>
+<p>They measure the time of property accesses. In case of <code>innerHTML</code> (the performance test in <a title="Link to WebKit bug and tests" href="//bugs.webkit.org/show_bug.cgi?id=81214" target="_blank">bugs.webkit.org/show_bug.cgi?id=81214</a>), the test just measures the time to run the following code:</p>
 
 
     for (var i = 0; i < 1000000; i++)

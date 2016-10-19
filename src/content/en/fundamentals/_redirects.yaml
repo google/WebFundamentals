@@ -1,6 +1,9 @@
 # ATTENTION - changes made to this file not in GitHub will be over written!
 redirects:
 
+- from: /web/fundamentals/principles/
+  to: /web/fundamentals/getting-started/principles/
+
 - from: /web/fundamentals/documentation/...
   to: /web/fundamentals/...
 

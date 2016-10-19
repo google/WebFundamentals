@@ -27,7 +27,7 @@ landing_page:
         </div>
         <p>
           Check out the videos below, and subscribe to our YouTube channel or
-          <a href="https://developers.google.com/shows/rss.xml">
+          <a href="https://developers.google.com/web/shows/rss.xml">
           subscribe</a> to our RSS feed.
         </p>
         <link rel="alternate" type="application/rss+xml" title="Web Shows from Google Developers (RSS)" href="https://developers.google.com/web/shows/rss.xml">

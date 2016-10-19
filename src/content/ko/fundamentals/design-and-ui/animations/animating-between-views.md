@@ -116,7 +116,7 @@ Note: 모든 애니메이션에서 60fps를 유지하도록 해야 합니다. �
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/inter-view-animation.html">샘플 보기</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html">샘플 보기</a>
 
 이를 확장하여 여러 보기에 적용할 수 있으며, 기본 개념은 동일하게 유지됩니다. 즉, 보이지 않는 각 보기는 화면에서 벗어나 있고 필요에 따라 가져오며 현재 화면 속 보기는 화면 밖으로 이동되어야 합니다.
 

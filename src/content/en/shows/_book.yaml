@@ -11,23 +11,24 @@ upper_tabs:
       other:
       - name: Shows
         contents:
-        - include: /web/shows/ttt/_toc.yaml
         - title: New in Chrome
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
           status: external
+        - include: /web/shows/ttt/_toc.yaml
         - title: A11ycasts with Rob Dodson
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g
           status: external
         - include: /web/shows/http203/_toc.yaml
         - include: /web/shows/supercharged/_toc.yaml
+        - title: Developer Diary with Paul Lewis
+          path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIBykcJ7bvTpqU7vt-oey72J
+          status: external
         - title: Summits
           section:
-          - include: /web/shows/pwa-devsummit/_toc.yaml
-          - include: /web/shows/blinkon/_toc.yaml
           - include: /web/shows/cds/_toc.yaml
-          - title: Polymer Summit 2015
-            path: https://www.youtube.com/playlist?list=PLNYkxOF6rcICdISJclfQhj2S8QZGjXV8J
-            status: external
+          - include: /web/shows/pwa-devsummit/_toc.yaml
+          - include: /web/shows/polymer-devsummit/_toc.yaml
+          - include: /web/shows/blinkon/_toc.yaml
         - include: /web/shows/google-io/_toc.yaml
         - include: /web/shows/lazyweb/_toc.yaml
         - include: /web/shows/polycasts/_toc.yaml

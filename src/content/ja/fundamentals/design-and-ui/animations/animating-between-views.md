@@ -117,7 +117,7 @@ Note: すべてのアニメーションについて 60fps を維持するよう�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/inter-view-animation.html">サンプルを参照してください。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html">サンプルを参照してください。</a>
 
 この手法を拡張して複数のビューをカバーすることもできます。基本的な概念は同じです。個々の非可視ビューを画面外に移動し、必要に応じて戻します。現在画面内のビューは画面外に移動する必要があります。
 

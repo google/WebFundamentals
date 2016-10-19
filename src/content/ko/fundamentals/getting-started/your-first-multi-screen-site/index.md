@@ -185,11 +185,11 @@ Note: 스타일링은 이후에 진행할 것입니다.
 
 <figure class="attempt-left">
   <img  src="images/content.png" alt="Content">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Content and structure </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Content and structure </a> </figcaption>
 </figure>
 <figure class="attempt-right">
   <img  src="images/narrowsite.png" alt="Designed site">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Final site </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Final site </a> </figcaption>
 </figure>
 
 <div class="clearfix"></div>

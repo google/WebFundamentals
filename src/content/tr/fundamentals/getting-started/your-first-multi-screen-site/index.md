@@ -165,7 +165,7 @@ Sitenin ana hatlarini olusturduk ve ana yapisal ögelerin tümünü tanimladik. 
   <figure>
     <img src="images/content.png" alt="Içerik">
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Içerik ve yapi</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Içerik ve yapi</a>
     </figcaption>
   </figure>
 </div>
@@ -173,7 +173,7 @@ Sitenin ana hatlarini olusturduk ve ana yapisal ögelerin tümünü tanimladik. 
   <figure>
     <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Son site </a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Son site </a>
     </figcaption>
   </figure>
 </div>
@@ -200,7 +200,7 @@ Bu kilavuzda, içerikle temel yapimizi alip çok sayida ekran boyutuna duyarli g
   <figure>
     <img src="images/content.png" alt="Içerik">
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Içerik ve yapi</a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Içerik ve yapi</a>
     </figcaption>
   </figure>
 </div>
@@ -208,7 +208,7 @@ Bu kilavuzda, içerikle temel yapimizi alip çok sayida ekran boyutuna duyarli g
   <figure>
     <img  src="images/narrowsite.png" alt="Designed site" style="max-width: 100%;">
     <figcaption>
-      <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Son site </a>
+      <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Son site </a>
     </figcaption>
   </figure>
 </div>

@@ -41,7 +41,7 @@ easing을 사용하지 않은 애니메이션을 **선형(linear)**이라고 합
 
 <img src="images/linear.png" style="max-width: 300px" alt="선형 ease 애니메이션 곡선" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html"> 선형 애니메이션을 참조하십시오.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html"> 선형 애니메이션을 참조하십시오.</a>
 
 시간 경과에 따라 값이 균일하게 증가합니다. 선형 모션을 사용할 경우 로봇처럼 부자연스러운 느낌을 주므로 사용자가 불편함을 느낄 수 있습니다. 일반적으로 선형 모션을 피해야 합니다.
 
@@ -64,7 +64,7 @@ ease out 효과를 달성하는 많은 방법이 있지만 가장 간단한 방�
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-out.html">ease-out 애니메이션을 참조하십시오.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html">ease-out 애니메이션을 참조하십시오.</a>
 
 Easing out은 빠른 시작으로 애니메이션에 반응 효과를 주면서도 마지막에 어느 정도 자연스러운 감속 효과를 나타내기 때문에 일반적으로 사용자 인터페이스 작업에 가장 적합합니다.
 
@@ -74,7 +74,7 @@ Ease-in 애니메이션은 ease-out과 반대로 느리게 시작했다가 빠�
 
 <img src="images/ease-in.png" style="max-width: 300px" alt="Ease-in 애니메이션 곡선" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html">ease-in 애니메이션을 참조하십시오.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html">ease-in 애니메이션을 참조하십시오.</a>
 
 이러한 종류의 애니메이션은 무거운 돌이 떨어지는 것처럼 느리게 시작하고 낮은 쿵 소리와 함께 빠르게 지면을 때립니다.
 
@@ -92,7 +92,7 @@ Easing in과 easing out은 차량의 가속 및 감속과 유사하며, 적절�
 
 <img src="images/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out 애니메이션 곡선" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Ease-in-out 애니메이션을 참조하십시오.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">Ease-in-out 애니메이션을 참조하십시오.</a>
 
 ease-in은 애니메이션을 더디게 시작하기 때문에 애니메이션 기간을 지나치게 오래 설정하지 않도록 주의해야 합니다. 일반적으로 300 - 500ms의 범위가 적당하지만 정확한 수치는 프로젝트의 느낌에 따라 상당히 좌우됩니다. 그러나 느린 시작, 빠른 중간, 느린 종료로 인해 애니메이션의 대비가 뚜렷하여 사용자에게 만족감을 줄 수 있습니다.
 

@@ -235,7 +235,7 @@ the layout adjusts to its container.
 <figure class="attempt-right">
   <img src="imgs/weather-1.png" srcset="imgs/weather-1.png 1x, imgs/weather-1-2x.png 2x" alt="">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
       Preview of the weather forecast displayed on a small screen.
     </a>
   </figcaption>
@@ -255,7 +255,7 @@ small screen.
 <figure class="attempt-right">
   <img src="imgs/weather-2.png" class="center" srcset="imgs/weather-2.png 1x, imgs/weather-2-2x.png 2x" alt="Preview of the weather forecast as the page gets wider.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/weather-1.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-1.html">
       Preview of the weather forecast as the page gets wider.
     </a>
   </figcaption>
@@ -277,7 +277,7 @@ browser is 600px and below, and one for when it is wider than 600px.
 <figure class="attempt-right">
   <img src="imgs/weather-3.png"  srcset="imgs/weather-3.png 1x, imgs/weather-3-2x.png 2x" alt="Preview of the weather forecast designed for a wider screen.">
   <figcaption>
-    <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/weather-2.html">
+    <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/weather-2.html">
       Preview of the weather forecast designed for a wider screen.
     </a>
   </figcaption>

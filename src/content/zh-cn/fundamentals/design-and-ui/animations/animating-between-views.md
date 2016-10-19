@@ -116,7 +116,7 @@ Note: 应当力求使所有动画保持 60fps。 这样用户不会觉得动画�
     }
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/inter-view-animation.html">参考示例。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/inter-view-animation.html">参考示例。</a>
 
 您可以扩展此示例以包括多个视图，基本概念仍是一样；每个不可见视图应在屏幕之外，并按需进入屏幕，同时当前屏幕视图应移走。
 

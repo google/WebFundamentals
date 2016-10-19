@@ -20,7 +20,7 @@ Las vistas modales se utilizan para mensajes importantes, y se pueden utilizar p
 
 <img src="images/dont-press.gif" alt="Animating a modal view." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/modal-view-animation.html">Ver el ejemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">Ver el ejemplo</a>
 
 La superposición modal debe estar alineada con la ventanilla, por lo que el atributo `position` debe configurarse en `fixed`:
 

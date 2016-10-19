@@ -31,7 +31,7 @@ For Chrome Dev Summit, I tried to answer these questions by building a small con
 
 ## Structure
 
-Breaking an application into modular pieces that can be combined and reused is a central tenant of Web Components. Polymer's core-\* and paper-\* elements make it easy to start with small pieces, like [core-toolbar](https://www.polymer-project.org/docs/elements/core-elements.html#core-toolbar) and [paper-icon-button](https://www.polymer-project.org/docs/elements/paper-elements.html#paper-icon-button)...
+Breaking an application into modular pieces that can be combined and reused is a central tenant of Web Components. Polymer's core-\* and paper-\* elements make it easy to start with small pieces, like [paper-toolbar](https://elements.polymer-project.org/elements/paper-toolbar) and [paper-icon-button](https://elements.polymer-project.org/elements/paper-icon-button)...
 
 <p style="text-align: center;">
   <img src="/web/updates/images/2015-01-20-lets-build-some-apps-with-polymer/core-toolbar.jpg" alt="Polymer helps developers build applications faster" width="800" />
@@ -118,7 +118,7 @@ Vulcanize will concatenate your imports into a single bundle, *significantly* re
 
 But just building a performant app doesn't solve the dilemma of a user with little or no connectivity. In other words, if your app doesn't work offline, then it's not really a mobile app. Today you can use [the much maligned application cache](http://alistapart.com/article/application-cache-is-a-douchebag) to offline your resources, but looking to the future, [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) should soon make the offline development experience much nicer.
 
-Jake Archibald has recently published [an amazing cookbook of service worker patterns](http://jakearchibald.com/2014/offline-cookbook/) but I'll give you the quick start to get you going:
+Jake Archibald has recently published an amazing [cookbook of service worker patterns](/web/fundamentals/instant-and-offline/offline-cookbook/) but I'll give you the quick start to get you going:
 
 Installing a service worker is quit easy. Create a `worker.js` file, and register it when your application boots up.
 

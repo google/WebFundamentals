@@ -187,11 +187,11 @@ Neste guia, aproveitaremos a estrutura básica e o conteúdo e os transformaremo
 
 <figure class="attempt-left">
   <img  src="images/content.png" alt="Conteúdo">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Conteúdo e estrutura </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Conteúdo e estrutura </a> </figcaption>
 </figure>
 <figure class="attempt-right">
   <img  src="images/narrowsite.png" alt="Designed site">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Versão final do site </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Versão final do site </a> </figcaption>
 </figure>
 <div class="clearfix"></div>
 

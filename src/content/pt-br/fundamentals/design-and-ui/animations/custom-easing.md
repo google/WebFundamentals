@@ -31,7 +31,7 @@ Para comparação, aqui estão duas curvas: uma curva ease-in-out comum e uma cu
 <img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Curva de animação do ease-in-out." />
 <img src="images/custom.png" style="display: inline; max-width: 300px" alt="Curva de animação personalizada." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-custom-curve.html">Veja uma animação com easing personalizado.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html">Veja uma animação com easing personalizado.</a>
 
 O CSS para a curva personalizada é:
 
@@ -43,13 +43,13 @@ Os primeiros dois números são as coordenadas X e Y do primeiro ponto de contro
 
 Criar uma curva personalizada é muito divertido e oferece um maior controle sobre o resultado da animação. A curva acima, por exemplo. Pode-se observar que ela se assemelha a uma curva ease-in-out clássica, mas com uma parte ease-in menor, ou “inicial”, e desaceleração alongada no final.
 
-Experimente esta <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/curve-playground.html">ferramenta de curva de animação</a> e veja como a curva afeta seu resultado.
+Experimente esta <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html">ferramenta de curva de animação</a> e veja como a curva afeta seu resultado.
 
 ## Use JavaScript para ter mais controle
 
 Algumas vezes você precisa de ainda mais controle do que uma curva de bézier cúbica pode proporcionar. Se deseja um efeito de elástico ou se quiser parar a execução da animação no meio, ambos são muito mais difíceis de fazer com o CSS. Nesses casos, você deve usar bibliotecas de animação JavaScript. Uma das melhores bibliotecas é a [Greensock’s TweenMax](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (ou TweenLite se você deseja uma versão leve), pois você tem maior controle em uma pequena biblioteca JavaScript, que é também uma base de código muito madura.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-elastic.html">Veja uma animação de elastic ease.</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html">Veja uma animação de elastic ease.</a>
 
 Para usar algo como o TweenMax, inclua o script na sua página:
 

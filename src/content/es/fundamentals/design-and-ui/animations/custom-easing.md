@@ -29,7 +29,7 @@ A modo de comparación, presentamos dos curvas: una curva típica de entrada y s
 <img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="Ease-in-out animation curve." />
 <img src="images/custom.png" style="display: inline; max-width: 300px" alt="Custom animation curve." />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-custom-curve.html">Ver una animación con aceleración personalizada</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html">Ver una animación con aceleración personalizada</a>
 
 La CSS para la curva personalizada es la siguiente:
 
@@ -41,13 +41,13 @@ Los dos primeros números son las coordenadas X e Y del primer punto de control;
 
 La creación de una curva personalizada es una tarea divertida, y le proporciona mucho control sobre la apariencia de la animación. Por ejemplo, si analiza la curva que se muestra arriba, podrá ver que es similar a una curva clásica de entrada y salida lentas, pero con una entrada lenta abreviada, o una porción de ‘ingreso-egreso’, y una reducción de la velocidad elongada al final.
 
-Experimente con esta <a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/curve-playground.html">herramienta de curvas de animación</a> y vea cómo la curva afecta la apariencia de la animación.
+Experimente con esta <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/curve-playground.html">herramienta de curvas de animación</a> y vea cómo la curva afecta la apariencia de la animación.
 
 ## Uso de JavaScript para tener más control
 
 En algunos casos, necesitará tener incluso más control que el que le puede proporcionar una curva Bézier cúbica. Tal vez desee lograr una apariencia de rebote elástica o desee detener la ejecución de una parte animada a lo largo de la animación, dos efectos que son mucho más difíciles de lograr con las CSS. En estos casos, debe utilizar las bibliotecas de animaciones de JavaScript. Una de las mejores bibliotecas es [TweenMax de Greensock](https://github.com/greensock/GreenSock-JS/tree/master/src/minified) (o TweenLite si desea que todo sea más liviano), ya que de este modo puede tener mucho control en una pequeña biblioteca de JavaScript, y este es un código base muy maduro.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-elastic.html">Ver una animación de aceleración elástica</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-elastic.html">Ver una animación de aceleración elástica</a>
 
 Para utilizar una herramienta como TweenMax, incluya el siguiente script en su página:
 

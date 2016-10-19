@@ -23,7 +23,7 @@ CSS の `ease-out` キーワードで指定されたものを超える周知の 
 
 <img src="images/quintic-ease-out-markers.png" alt="Quintic ease-out のアニメーション曲線" style="max-width: 300px"/>
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Quintic ease-out のアニメーションをご覧ください。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">Quintic ease-out のアニメーションをご覧ください。</a>
 
 他のイージングの方程式、特に bounce または elastic ease は、プロジェクトで適切な場合にのみ、慎重に使用する必要があります。 不快なアニメーションがユーザーの目に触れないようにするために、いくつかのポイントがあります。 プロジェクトが陽気で楽しいものでない場合は、UI 要素に bounce を用いないでください!逆に、気軽で楽しいサイトを作る場合は、是非 bounce を用いてください!
 

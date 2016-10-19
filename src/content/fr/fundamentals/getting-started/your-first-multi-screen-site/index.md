@@ -185,11 +185,11 @@ Dans ce guide, nous allons utiliser notre structure de base avec du contenu et l
 
 <figure class="attempt-left">
   <img  src="images/content.png" alt="Contenu">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenu et structure </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-without-styles.html"> Contenu et structure </a> </figcaption>
 </figure>
 <figure class="attempt-left">
   <img  src="images/narrowsite.png" alt="Designed site">
-  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Site définitif </a> </figcaption>
+  <figcaption><a href="https://googlesamples.github.io/web-fundamentals/fundamentals/getting-started/your-first-multi-screen-site/content-with-styles.html"> Site définitif </a> </figcaption>
 </figure>
 
 Conformément au principe de développement Web Mobile First, nous allons commencer par une fenêtre d'affichage étroite (semblable à celle d'un téléphone mobile) et nous concentrer sur ce format.

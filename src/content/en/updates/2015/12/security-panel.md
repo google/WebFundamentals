@@ -7,7 +7,7 @@ description: Learn all about the new Security Panel in Chrome DevTools.
 {# wf_tags: devtools,update #}
 {# wf_featured_image: /web/updates/images/2015/12/security-panel/security-panel.png #}
 
-# Security Panel debuts in Chrome DevTools {: .page-title }
+# Security Panel Debuts in Chrome DevTools {: .page-title }
 
 {% include "web/_shared/contributors/pbakaus.html" %}
 
@@ -33,7 +33,7 @@ Unfortunately, this tab had several problems:
  - ...but too basic for most developers
  - and makes it unclear what causes a lock icon “downgrade”
 
-## Overview: Explain lock icon and surface mixed content
+## Overview: explain lock icon and surface mixed content
 
 ![Overview tab](/web/updates/images/2015/12/security-panel/overview.png)
 
@@ -49,7 +49,7 @@ Have **mixed content** appear out of nowhere? No worries. We show it directly on
 
 ![Mixed Content](/web/updates/images/2015/12/security-panel/mixed.png)
 
-## Origin View: Connection Type and Certificate Details
+## Origin view: connection type and certificate details
 
 ![Connection tab](/web/updates/images/2015/12/security-panel/connection.png)
 

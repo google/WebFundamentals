@@ -41,7 +41,7 @@ Source: [CSS Transitions, W3C](http://www.w3.org/TR/css3-transitions/#transition
 
 <img src="images/linear.png" style="max-width: 300px" alt="リニア イーズのアニメーション曲線。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-linear.html"> リニア アニメーションを参照。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html"> リニア アニメーションを参照。</a>
 
 時間に伴って値が等しい量で移動します。 直線運動ではロボットのように不自然に感じる傾向があり、ユーザーの目障りになります。 一般的には、直線運動を避ける必要があります。
 
@@ -64,7 +64,7 @@ Ease out 効果を使う多くの方法がありますが、最も単純なの�
     transition: transform 500ms ease-out;
     
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-out.html"> Ease-out アニメーションを参照。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-out.html"> Ease-out アニメーションを参照。</a>
 
 Easing out は一般的に、ユーザー·インターフェースの作業に最適です。高速起動はアニメーションの応答性を感じさせ、最後に自然に減速します。
 
@@ -74,7 +74,7 @@ Ease-in アニメーションは、ゆっくり始まり、最後に高速にな
 
 <img src="images/ease-in.png" style="max-width: 300px" alt="Ease-in のアニメーション曲線。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in.html"> Ease-in アニメーションを参照。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html"> Ease-in アニメーションを参照。</a>
 
 この種のアニメーションのは、ゆっくりと開始し、防音強打で素早く地面を打つ落下重い石のようなものです。
 
@@ -92,7 +92,7 @@ ease-in アニメーションを使用するには、ease-out やリニア ア�
 
 <img src="images/ease-in-out.png" style="max-width: 300px" alt="Ease-in-out のアニメーション曲線。" />
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/animations/box-move-ease-in-out.html">ease-in-out アニメーションを参照。</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">ease-in-out アニメーションを参照。</a>
 
 アニメーションの再生時間を長くしないでください。ease-in によりアニメーションの使い勝手が低下します。 300 - 500 ミリ秒の範囲が適切です。正確な数が何であるかに関して、プロジェクトの感触に大きく依存することになります。 つまり、開始が遅く、中盤が早く、終わりが遅いために、アニメーションのコントラストが増加し、ユーザーの満足につながります。
 

@@ -206,7 +206,7 @@ El sitio de J. Crew nos proporciona un buen ejemplo de imágenes ampliables que 
 La [técnica
 de imagen de compresión](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) muestra una imagen 2x muy comprimida en todos los dispositivos, sin importar las funciones del dispositivo.  En función del tipo de imagen y del nivel de compresión, puede que no se perciba cambio alguno en la calidad de la imagen, pero el tamaño del archivo se reduce en gran medida.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/compressive.html">Mostrar ejemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Mostrar ejemplo</a>
 
 
 Note: Ten cuidado con la técnica de compresión, porque aumenta el uso de memoria y supone costes adicionales de descodificación.  La adaptación de imágenes grandes para que quepan en pantallas más pequeñas es cara y puede ser una tarea especialmente ardua en los dispositivos de gama baja en los que la memoria y la capacidad de procesamiento son limitadas.
@@ -412,7 +412,7 @@ Hay varias herramientas disponibles que comprimen aun más las imágenes, sin p�
 
 El uso de sprites en CSS es una técnica en la que varias imágenes se combinan en una sola imagen `sprite sheet`. Con esta técnica, cada imagen puede usarse para especificar la imagen de fondo de un elemento (la hoja de sprites) y un desplazamiento para mostrar la parte correcta.
 
-<a href="https://googlesamples.github.io/web-fundamentals/samples/../fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Hoja de sprites de imágenes usada en el ejemplo"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Hoja de sprites de imágenes usada en el ejemplo"></a>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}

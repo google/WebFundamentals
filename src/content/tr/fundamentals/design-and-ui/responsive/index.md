@@ -63,7 +63,7 @@ En iyi deneyimi saglama çabasiyla mobil tarayicilar, sayfayi bir masaüstü ekr
 `width=device-width` meta görüntü alani degeri kullanildiginda, cihazdan bagimsiz piksel sayisi kullanilarak sayfanin ekranin genisligiyle eslestirilmesi talimati verilir. Bu, ister küçük bir cep telefonunda isterse de genis bir masaüstü monitöründe olusturulmus olsun, sayfanin içerigi yeniden düzenleyerek farkli ekran boyutlariyla eslestirmesine olanak tanir.
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-no.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-no.html">
   <figure>
     <img src="imgs/no-vp.png" srcset="imgs/no-vp.png 1x, imgs/no-vp-2x.png 2x" alt="Görüntü alani ayari olmayan sayfa">
     <figcaption>
@@ -73,7 +73,7 @@ En iyi deneyimi saglama çabasiyla mobil tarayicilar, sayfayi bir masaüstü ekr
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp.html">
   <figure>
     <img src="imgs/vp.png" srcset="imgs/vp.png 1x, imgs/vp-2x.png 2x" alt="Görüntü alani ayari olan sayfa">
     <figcaption>
@@ -116,7 +116,7 @@ Ekran boyutlari ve CSS piksellerindeki genislik, cihazlar arasinda (ör. telefon
 Sayfa ögeleri için genis mutlak CSS genisliklerinin ayarlanmasi (asagidaki örnekte oldugu gibi), dar bir cihazda (ör. iPhone gibi 320 CSS pikseli genisligi olan bir cihazda) `div` ögesinin görüntü alani için çok genis olmasina neden olur. Bunun yerine, `width: 100%` gibi göreli genislik degerleri kullanmayi düsünebilirsiniz.  Benzer bir sekilde, ögenin küçük ekranlarda görüntü alaninin disinda kalmasina neden olabilecek genis mutlak konumlandirma degerleri kullanmaktan kaçinin.
 
 <div class="attempt-left">
-  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-iph.png" srcset="imgs/vp-fixed-iph.png 1x, imgs/vp-fixed-iph-2x.png 2x"  alt="iPhone'da 344 piksel sabit genislikli bir öge içeren sayfa.">
     <figcaption>
@@ -126,7 +126,7 @@ Sayfa ögeleri için genis mutlak CSS genisliklerinin ayarlanmasi (asagidaki ör
   </a>
 </div>
 <div class="attempt-right">
-  <a href="https://googlesamples.github.io/web-fundamentals/samples/fundamentals/design-and-ui/responsive/vp-fixed.html">
+  <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/responsive/vp-fixed.html">
   <figure>
     <img src="imgs/vp-fixed-n5.png" srcset="imgs/vp-fixed-n5.png 1x, imgs/vp-fixed-n5-2x.png 2x"  alt="Nexus 5'te 344 piksel sabit genislikli bir öge içeren sayfa.">
     <figcaption>

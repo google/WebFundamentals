@@ -37,7 +37,7 @@ description: フォームをモバイルに記入するのは困難です。 最
 
 フォームに繰り返しのアクションがないことを確認してください。
 必要なだけのフィールドに留め、
-[autofill](/web/fundamentals/input/form/label-and-name-inputs.html#use-metadata-to-enable-auto-complete)を活用するようにしてください。
+[autofill](/web/fundamentals/input/forms/#use-metadata-to-enable-auto-complete)を活用するようにしてください。
 これによって、ユーザーは事前設定されたデータで簡単にフォームを完了できます。
 
 <figure>
@@ -300,7 +300,7 @@ Note: プレースホルダーは、ユーザーが要素内に入力を開始�
 {% includecode content_path="web/fundamentals/design-and-ui/input/forms/_code/order.html" region_tag="autocomplete" adjust_indentation="auto" %}
 </pre>
 
-#### 推奨入力`name` および `autocomplete` 属性値
+#### 推奨入力`name` および `autocomplete` 属性値 {: #use-metadata-to-enable-auto-complete }
 
 
 `autocomplete` 属性値は現在の [WHATWG HTML Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) の一部です。 一般に使用される `autocomplete` 属性は以下のとおりです。

@@ -66,8 +66,8 @@ Specifically, the outlined project goals were set as follows:
 Note: To achieve the 50% PLT improvement, SPDY aimed to make more efficient use
 of the underlying TCP connection by introducing a new binary framing layer to
 enable request and response multiplexing, prioritization, and header
-compression; see [Latency as a Performance Bottleneck](https://hpbn.co/primer-
-on-web-performance/#latency-as-a-performance-bottleneck){: .external}.
+compression; see
+[Latency as a Performance Bottleneck](https://hpbn.co/primer-on-web-performance/#latency-as-a-performance-bottleneck){: .external}.
 
 Not long after the initial announcement, Mike Belshe and Roberto Peon, both
 software engineers at Google, shared their first results, documentation, and
@@ -138,10 +138,10 @@ sites) deployed full HTTP/2 support.
 Earlier versions of the HTTP protocol were intentionally designed for simplicity
 of implementation: HTTP/0.9 was a one-line protocol to bootstrap the World Wide
 Web; HTTP/1.0 documented the popular extensions to HTTP/0.9 in an informational
-standard; HTTP/1.1 introduced an official IETF standard; see [Brief History of
-HTTP](https://hpbn.co/brief-history-of-http/){: .external}. As such, HTTP/0.9-1.x
-delivered exactly what it set out to do: HTTP is one of the most
-widely adopted application protocols on the Internet.
+standard; HTTP/1.1 introduced an official IETF standard; see
+[Brief History of HTTP](https://hpbn.co/brief-history-of-http/){: .external}.
+As such, HTTP/0.9-1.x delivered exactly what it set out to do: HTTP is one of
+the most widely adopted application protocols on the Internet.
 
 Unfortunately, implementation simplicity also came at a cost of application
 performance: HTTP/1.x clients need to use multiple connections to achieve
@@ -238,10 +238,10 @@ performance optimizations provided by the HTTP/2 protocol.
 ## Request and response multiplexing
 
 With HTTP/1.x, if the client wants to make multiple parallel requests to improve
-performance, then multiple TCP connections must be used (see [Using Multiple TCP
-Connections](https://hpbn.co/http1x/#using-multiple-tcp-connections)). This
-behavior is a direct consequence of the HTTP/1.x delivery model, which ensures
-that only one response can be delivered at a time (response queuing) per
+performance, then multiple TCP connections must be used (see
+[Using Multiple TCP Connections](https://hpbn.co/http1x/#using-multiple-tcp-connections)
+). This behavior is a direct consequence of the HTTP/1.x delivery model, which
+ensures that only one response can be delivered at a time (response queuing) per
 connection. Worse, this also results in head-of-line blocking and inefficient
 use of the underlying TCP connection.
 
@@ -266,9 +266,9 @@ us to:
 * Interleave multiple requests in parallel without blocking on any one.
 * Interleave multiple responses in parallel without blocking on any one.
 * Use a single connection to deliver multiple requests and responses in parallel.
-* Remove unnecessary HTTP/1.x workarounds (see [Optimizing for HTTP/1.x
-  ](https://hpbn.co/optimizing-application-delivery/#optimizing-for-http1x), such 
-  as concatenated files, image sprites, and domain sharding.
+* Remove unnecessary HTTP/1.x workarounds (see
+  [Optimizing for HTTP/1.x](https://hpbn.co/optimizing-application-delivery/#optimizing-for-http1x),
+  such as concatenated files, image sprites, and domain sharding.
 * Deliver lower page load times by eliminating unnecessary latency and improving
   utilization of available network capacity.
 * *And much more…*
@@ -395,13 +395,14 @@ quickly the downstream delivers data to match the speed of upstream to control
 its resource usage; and so on.
 
 Do the above requirements remind you of TCP flow control? They should, as the
-problem is effectively identical (see [Flow Control](https://hpbn.co/building-
-blocks-of-tcp/#flow-control)). However, because the HTTP/2 streams are
-multiplexed within a single TCP connection, TCP flow control is both not
-granular enough, and does not provide the necessary application-level APIs to
-regulate the delivery of individual streams. To address this, HTTP/2 provides a
-set of simple building blocks that allow the client and server to implement
-their own stream- and connection-level flow control:
+problem is effectively identical (see 
+[Flow Control](https://hpbn.co/building-blocks-of-tcp/#flow-control)). However,
+because the HTTP/2 streams are multiplexed within a single TCP connection, TCP
+flow control is both not granular enough, and does not provide the necessary
+application-level APIs to regulate the delivery of individual streams. To
+address this, HTTP/2 provides a set of simple building blocks that allow the
+client and server to implement their own stream- and connection-level flow
+control:
 
 * Flow control is directional. Each receiver may choose to set any window size 
   that it desires for each stream and the entire connection.
@@ -424,8 +425,8 @@ Instead, it provides the simple building blocks and defers the implementation to
 the client and server, which can use it to implement custom strategies to
 regulate resource use and allocation, as well as implement new delivery
 capabilities that may help improve both the real and perceived performance (see
-[Speed, Performance, and Human Perception](https://hpbn.co/primer-on-web-
-performance/#speed-performance-and-human-perception)) of our web applications.
+[Speed, Performance, and Human Perception](https://hpbn.co/primer-on-web-performance/#speed-performance-and-human-perception))
+of our web applications.
 
 For example, application-layer flow control allows the browser to fetch only a
 part of a particular resource, put the fetch on hold by reducing the stream flow
@@ -507,11 +508,11 @@ content.
 Each HTTP transfer carries a set of headers that describe the transferred
 resource and its properties. In HTTP/1.x, this metadata is always sent as plain
 text and adds anywhere from 500–800 bytes of overhead per transfer, and
-sometimes kilobytes more if HTTP cookies are being used. (See [Measuring and
-Controlling Protocol Overhead](https://hpbn.co/http1x/#measuring-and-
-controlling-protocol-overhead).) To reduce this overhead and improve performance,
-HTTP/2 compresses request and response header metadata using the HPACK
-compression format that uses two simple but powerful techniques:
+sometimes kilobytes more if HTTP cookies are being used. (See 
+[Measuring and Controlling Protocol Overhead](https://hpbn.co/http1x/#measuring-and-controlling-protocol-overhead)
+.) To reduce this overhead and improve performance, HTTP/2 compresses request
+and response header metadata using the HPACK compression format that uses two
+simple but powerful techniques:
 
 1. It allows the transmitted header fields to be encoded via a static Huffman 
    code, which reduces their individual transfer size.
