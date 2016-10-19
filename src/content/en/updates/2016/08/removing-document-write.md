@@ -12,15 +12,12 @@ description: Chrome is blocking some scripts that are added using document.write
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-
-
 Have you recently seen a warning like the following in your Developer Console in 
 Chrome and wondered what it was?
 
     (index):34 A Parser-blocking, cross-origin script, 
     https://paul.kinlan.me/ad-inject.js, is invoked via document.write(). 
     This may be blocked by the browser if the device has poor network connectivity.
-
 
 Composability is one of the great powers of the web, allowing us to easily 
 integrate with services built by third parties to build great new products! One 
@@ -32,9 +29,7 @@ One known cause of poor performance is the use of `document.write()` inside page
 specifically those uses that inject scripts. As innocuous as the following looks, it 
 can cause real issues for users.
 
-
-    document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>');  
-    
+    document.write('<script src="https://paul.kinlan.me/ad-inject.js"></script>');
 
 Before the browser can render a page, it has to build the DOM tree by parsing the HTML markup. 
 Whenever the parser encounters a script it has to stop and execute it before it can continue 
@@ -105,7 +100,6 @@ If your provider gives you a snippet that includes the `document.write()`, it
 might be possible for you to add an `async` attribute to the script element, or 
 for you to add the script elements with DOM API's like `document.appendChild()` or `parentNode.insertBefore()` much like [Google Analytics does](/analytics/devguides/collection/analyticsjs/#the_javascript_tracking_snippet).
 
-
 ## How to detect when your site is affected
 
 There are a large number of criteria that determine whether the restriction is enforced,
@@ -118,14 +112,12 @@ how many of your users will be on 2G. You can detect the user's current network 
 and speed by using the [Network Information API](https://wicg.github.io/netinfo/){: .external } that is available in Chrome and then
 send a heads-up to your analytic or Real User Metrics (RUM) systems.
 
-
     if(navigator.connection &&
        navigator.connection.type === 'cellular' &&
        navigator.connection.downlinkMax <= 0.115) {
       // Notify your service to indicate that you might be affected by this restriction.
     }
     
-
 ### Catch warnings in Chrome DevTools
 
 Since Chrome 53, DevTools issues warnings for problematic `document.write()` 
@@ -138,6 +130,15 @@ look something like:
 Seeing warnings in Chrome DevTools is great, but how do you detect this at 
 scale? You can check for HTTP headers that are sent to your server when the 
 intervention happens.
+
+Note: You can enable "2G" mode in Chrome DevTools, however in Chrome 55 it doesn't properly
+      trigger the intervention. The best option is to enable this intervention
+      using `chrome://flags/#disallow-doc-written-script-loads`.
+
+Note: One of the heuristics for this intervention to detect if the file is not already in the user's
+      Cache. DevTools allows you to disable the Cache, however you will not see the `onerror` event 
+      on the script element being triggered, but you will see it when not using DevTools. This is 
+      already fixed in Chrome 56.
 
 ### Check your HTTP headers on the script resource
 
