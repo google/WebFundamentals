@@ -5,7 +5,7 @@ description: Sharing is caring. Chrome is running an Origin Trial to enable nati
 {# wf_published_on: 2016-10-19 #}
 {# wf_updated_on: 2016-10-19 #}
 
-# Introducing the Web Share API {: .page-title}
+# Introducing the Web Share API {: .page-title }
 
 Good news, everybody! [Matt Giuca](https://twitter.com/mgiuca){: .external } on the Chrome
 team has been working on a [simple
