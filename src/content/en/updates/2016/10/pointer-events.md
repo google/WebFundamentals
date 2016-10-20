@@ -8,7 +8,7 @@ description: Pointer events unify the pointer input model for the browser, bring
 {# wf_tags: chrome55,input #}
 {# wf_featured_snippet: Pointer events unify the pointer input model for the browser, bringing touch, pens, and mice together into a single set of events. #}
 
-# Pointing the way forward {: .page-title }
+# Pointing the Way Forward {: .page-title }
 
 {% include "web/_shared/contributors/sgomes.html" %}
 
