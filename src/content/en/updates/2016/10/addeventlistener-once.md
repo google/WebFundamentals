@@ -64,14 +64,14 @@ callback that must only execute once. Hygienic developers have always had the
 option of using `removeEventListener()` to explicitly clean things up, following
 patterns like:
 
-    element.addEventListener('click', function(event) {
+    element.addEventListener('click', function cb(event) {
       // ...one-time handling of the click event...
-      event.target.removeEventListener(event.type, arguments.callee);
+      event.target.removeEventListener(event.type, cb);
     });
 
 The equivalent code, making use of the new `once` parameter, is cleaner, and
 doesn't force you to keep track of the name of the event (`event.type`, in the
-previous example) or a reference to the callback function (`arguments.callee`):
+previous example) or a reference to the callback function (`cb`):
 
     element.addEventListener('click', function(event) {
       // ...one-time handling of the click event...
@@ -97,8 +97,8 @@ By default, the `load` event listener callback will remain in scope when it
 finishes running, even though it's never used again. Because the `data` variable
 is used inside the callback, it will also remain in scope, and never get garbage
 collected. If the callback were removed via the `once` parameter, though, both
-the function itself and anything that's kept alive via its scope will be
-candidates for garbage collection.
+the function itself and anything that's kept alive via its scope will
+potentially be candidates for garbage collection.
 
 ## Browser support
 
@@ -110,5 +110,11 @@ have native [support](http://caniuse.com/#feat=once-event-listener) for the
 Many JavaScript UI libraries provide convenience methods for creating event
 listeners, and some have shortcuts for defining one-time events—the most notable
 of which is jQuery's [`one()` method](http://api.jquery.com/one/).
+
+## Thanks
+
+Thanks to [Ingvar Stepanyan](https://twitter.com/RReverser) for
+[feedback](https://twitter.com/RReverser/status/789160090624557056) about the
+sample code in this post.
 
 {% include "comment-widget.html" %}
