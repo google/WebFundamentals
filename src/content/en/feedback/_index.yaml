@@ -54,9 +54,6 @@ landing_page:
       buttons:
       - label: BrowserStack
         path: https://www.browserstack.com/
-      - label: Why HTTPS
-        path: /web/fundamentals/security/encrypt-in-transit/why-https
-        classname: wf-small-link
 
     - heading: How to file a good bug
       description: >
