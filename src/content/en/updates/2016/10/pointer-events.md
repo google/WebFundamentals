@@ -178,7 +178,7 @@ compared to touch events, where you would need to use
 to achieve the same level of responsiveness.
 
 You can stop the browser from taking control with the
-[`touch-action`](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action)
+[`touch-action`](https://w3c.github.io/pointerevents/#the-touch-action-css-property)
 CSS property. Setting it to `none` on an element will disable all
 browser-defined actions started over that element. But there are a number of
 other values for finer-grained control, such as `pan-x`, for allowing
