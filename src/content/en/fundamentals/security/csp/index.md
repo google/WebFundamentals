@@ -11,14 +11,14 @@ description: Content Security Policy can significantly reduce the risk and impac
 {% include "web/_shared/contributors/josephmedley.html" %}
 
 The web's security model is rooted in the
-[_same-origin policy_](http://en.wikipedia.org/wiki/Same-origin_policy){: .external}. Code
+[_same-origin policy_](//en.wikipedia.org/wiki/Same-origin_policy){: .external}. Code
 from `https://mybank.com` should only have access to `https://mybank.com`'s
 data, and `https://evil.example.com` should certainly never be allowed access.
 Each origin is kept isolated from the rest of the web, giving developers a safe
 sandbox in which to build and play. In theory, this is perfectly brilliant. In
 practice, attackers have found clever ways to subvert the system.
 
-[Cross-site scripting (XSS)](http://en.wikipedia.org/wiki/Cross-site_scripting){: .external}
+[Cross-site scripting (XSS)](//en.wikipedia.org/wiki/Cross-site_scripting){: .external}
 attacks, for example, bypass the same origin policy by tricking a site into
 delivering malicious code along with the intended content. This is a huge
 problem, as browsers trust all of the code that shows up on a page as being
@@ -453,7 +453,7 @@ best be able to support them within the protective confines of CSP.
 
 ### Use case #1: social media widgets
 
-* Google's [+1 button](http://www.google.com/intl/en/webmasters/+1/button/index.html){: .external}
+* Google's [+1 button](/+/web/+1button/){: .external}
 includes a script from `https://apis.google.com`, and embeds an `<iframe>` from
 `https://plusone.google.com`. You need a policy that includes both these
 origins in order to embed the button. A minimal policy would be `script-src
@@ -462,7 +462,7 @@ to ensure that the snippet of JavaScript that Google provides is pulled out into
 an external JavaScript file. If you have an existing policy using `child-src`,
 you need to change it to `child-src`.
 
-* Facebook's [Like button](http://developers.facebook.com/docs/reference/plugins/like/){: .external }
+* Facebook's [Like button](//developers.facebook.com/docs/plugins/like-button){: .external }
 
 has a number of implementation options. We recommend sticking with the
 `<iframe>` version as it's safely sandboxed from the rest of your site. It
