@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: addEventListener now supports a once option, making it easier to define events that clean up after themselves.
 
-{# wf_published_on: 2016-10-14 #}
-{# wf_updated_on: 2016-10-15 #}
+{# wf_published_on: 2016-10-20 #}
+{# wf_updated_on: 2016-10-20 #}
 {# wf_featured_image: /web/updates/images/2016/10/addeventlistener-once.png #}
 {# wf_tags: chrome55,events #}
 {# wf_featured_snippet: Using <code>{once: true}</code>, available in Chrome 55, gives you an easy way to define "one and done" event listeners. #}
