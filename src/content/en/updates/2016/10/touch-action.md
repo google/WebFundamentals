@@ -73,7 +73,7 @@ The CSS for this demo is:
 The last thing that's happening in the world of touch-action is the
 `pinch-zoom` property. This is a new property in Chrome 55, behind a flag,
 that can be used with any of the pan options
-(i.e. pan-x, pan-y, pan-left, pan-right, pan-down, pan-up).
+(i.e. `pan-x`, `pan-y`, `pan-left`, `pan-right`, `pan-down`, `pan-up`).
 
 If you pinch on a website it'll generally zoom in on the pages content.
 Defining a `touch-action` will prevent this behavior, but adding pinch-zoom
