@@ -2,8 +2,8 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: A round up of the deprecations and removals in Chrome to help you plan.
 
-{# wf_updated_on: 2016-09-14 #}
-{# wf_published_on: 2016-09-14 #}
+{# wf_updated_on: 2016-10-20 #}
+{# wf_published_on: 2016-10-20 #}
 {# wf_tags: deprecations,removals,chrome55 #}
 {# wf_featured_image: /web/updates/images/generic/warning.png #}
 {# wf_featured_snippet: A round up of the deprecations and removals in Chrome to help you plan. #}
