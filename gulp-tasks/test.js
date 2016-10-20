@@ -14,8 +14,11 @@ var STD_EXCLUDES = [
   '!**/_common-links.md',
   '!**/_generated.md',
   '!**/_template.md',
-  '!**/tags/*',
-  '!**/fundamentals/getting-started/codelabs/*/*.md'
+  '!**/updates/tags/*',
+  '!**/fundamentals/getting-started/codelabs/*/*.md',
+  '!**/updates/201?/index.md',
+  '!**/showcase/201?/index.md',
+  '!**/shows/http203/podcast/index.md'
 ];
 var MAX_DESCRIPTION_LENGTH = 485;
 var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
@@ -110,7 +113,7 @@ function testMarkdownFile(fileName, contribJson) {
     });
   }
   // Verify page has a title
-  var title = fileContent.match(/^# (.*) {: .page-title }/gm);
+  var title = fileContent.match(/^# (.*) {: \.page-title[ ]*}/gm);
   if (title) {
     if (title.length > 1) {
       errors.push({msg: 'Page has multiple title tags', param: title.join(',')});
@@ -118,11 +121,8 @@ function testMarkdownFile(fileName, contribJson) {
     if (title[0].indexOf('<') >= 0 || title[0].indexOf('&gt;') >= 0 || title[0].indexOf('`') >= 0) {
       errors.push({msg: 'Title should not contain markup', param: title[0]});
     }
-    //  else if (title[0].indexOf('<code>') >= 0 || title[0].indexOf('`') >= 0) {
-    //   errors.push({msg: 'Title should not contain content wrapped in <code> tags', param: title[1]});
-    // }
   } else {
-    errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title}'});
+    errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title }'});
   }
   // Verify there is only ONE H1 tag
   var numH1s = 0;
