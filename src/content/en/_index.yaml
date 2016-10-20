@@ -74,7 +74,7 @@ landing_page:
         path: /web/fundamentals/performance/rendering/
         classname: wf-small-link
       - label: Performance Code Lab
-        path: /web/fundamentals/performance/performance-codelab/
+        path: /web/fundamentals/getting-started/codelabs/web-perf/
         classname: wf-small-link
 
     - heading: Make it responsive
@@ -103,7 +103,7 @@ landing_page:
         <ul class="checkmarks">
           <li>
             <b>Reliable</b> -
-            <a href="/web/fundamentals/getting-started/your-first-offline-web-app/">
+            <a href="/web/fundamentals/getting-started/codelabs/offline/">
             Service workers</a> allow for offline caching and instant loading.
           </li>
           <li>
@@ -198,7 +198,7 @@ landing_page:
       image_path: images/AMP-GIF-2x.gif
       buttons:
       - label: Get Started
-        path: https://www.ampproject.org/docs/get_started/create.html
+        path: https://www.ampproject.org/docs/get_started/create
         classname: button button-primary
 
   - items:

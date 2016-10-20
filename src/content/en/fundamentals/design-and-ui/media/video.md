@@ -244,7 +244,7 @@ run in Chrome:
 There are lots of tools to help save the same video in different formats:
 
 * Desktop tools: [FFmpeg](//ffmpeg.org/)
-* GUI applications: [Miro](//www.mirovideoconverter.com/),
+* GUI applications: [Miro](http://www.mirovideoconverter.com/),
   [HandBrake](//handbrake.fr/), [VLC](//www.videolan.org/)
 * Online encoding/transcoding services:
   [Zencoder](//en.wikipedia.org/wiki/Zencoder),
@@ -306,14 +306,14 @@ the controls.
 <div style="clear:both;"></div>
 
 You can control video dimensions using JavaScript or CSS. JavaScript libraries
-and plugins such as [FitVids](//fitvidsjs.com/) make it possible to maintain
+and plugins such as [FitVids](http://fitvidsjs.com/) make it possible to maintain
 appropriate size and aspect ratio, even for Flash videos from YouTube and
 other sources.
 
 Use [CSS media queries](/web/fundamentals/design-and-ui/responsive/#css-media-queries) to specify the size of elements depending on the viewport dimensions; `max-width: 100%` is your friend.
 
 For media content in iframes (such as YouTube videos), try a responsive
-approach (like the one [proposed by John Surdakowski](//avexdesigns.com/responsive-youtube-embed/)).
+approach (like the one [proposed by John Surdakowski](http://avexdesigns.com/responsive-youtube-embed/)).
 
 
 Caution: Don't force element sizing that results in an aspect ratio different from the original video. Squashed or stretched looks bad.
@@ -402,7 +402,7 @@ Safari on an iPad plays video inline:
 ### Control fullscreening of content
 
 For platforms that do not force fullscreen video playback, the Fullscreen API
-is [widely supported](//caniuse.com/fullscreen). Use this API to control
+is [widely supported](http://caniuse.com/#feat=fullscreen). Use this API to control
 fullscreening of content, or the page.
 
 To full screen an element, like a video:
@@ -487,7 +487,7 @@ A track file consists of timed "cues" in WebVTT format:
 
     ...
 
-Dogfood: The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see [caniuse.com/track](http://caniuse.com/track)). There are several polyfills available too. We recommend [Captionator](https://captionatorjs.com/){: .external }.
+Dogfood: The track element is supported on Chrome for Android, iOS Safari, and all current browsers on desktop except Firefox (see [caniuse.com/track](http://caniuse.com/track)). There are several polyfills available too. We recommend [Captionator](http://captionatorjs.com/){: .external }.
 
 
 

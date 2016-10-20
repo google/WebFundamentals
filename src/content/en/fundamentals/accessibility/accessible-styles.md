@@ -123,7 +123,7 @@ handy feature. While this pseudo-class is currently only supported in Firefox,
 standard](https://github.com/wicg/modality){: .external }.
 
 There is also [this great article by Alice Boxhall and Brian
-Kardell](http://radar.oreilly.com/2015/08/proposing-css-input-modailty.html){: .external }
+Kardell](https://www.oreilly.com/ideas/proposing-css-input-modality){: .external }
 that explores the topic of modality and contains prototype code for
 differentiating between mouse and keyboard input. You can use their solution
 today, and then include the focus ring pseudo-class later when it has more
