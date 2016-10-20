@@ -322,8 +322,8 @@ and use `yield` instead of `await`. Other than that it works the same.
 
 If you're targeting older browsers, Babel can also transpile generators,
 allowing you to use async functions all the way down to IE8. To do this you need
-[Babel's stage 3 preset](http://babeljs.io/docs/plugins/preset-stage-3/){: .external}
-*and* the [ES2015 preset](http://babeljs.io/docs/plugins/preset-es2015/){: .external}.
+[Babel's es2017 preset](http://babeljs.io/docs/plugins/preset-es2017/){: .external}
+*and* the [es2015 preset](http://babeljs.io/docs/plugins/preset-es2015/){: .external}.
 
 The [output is not as pretty](https://goo.gl/jlXboV), so watch out for
 code-bloat.
