@@ -7,7 +7,7 @@ description: Notifications on desktop will be automatically dismissed after a sh
 {# wf_tags: notifications #}
 {# wf_featured_image: /web/updates/images/2015/10/notification.png #}
 
-# Notification requireInteraction - A smoother notification UX on desktop {: .page-title }
+# Notification requireInteraction - A Smoother Notification UX on Desktop {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 

@@ -7,7 +7,7 @@ description: Re-order DevTools tabs which ever way suits you best and see exactl
 {# wf_tags: devtools,digest,update #}
 {# wf_featured_image: /web/updates/images/2015-08-24-devtools-digest/featured.jpg #}
 
-# DevTools Digest: Tab reordering, Console is #2 and framework event listeners {: .page-title }
+# DevTools Digest: Tab Reordering, Console is #2 and Framework Event Listeners {: .page-title }
 
 {% include "web/_shared/contributors/pbakaus.html" %}
 
@@ -15,7 +15,7 @@ description: Re-order DevTools tabs which ever way suits you best and see exactl
 
 Re-order DevTools tabs which ever way suits you best; see exactly where framework events were bound and block network requests to see which third party scripts slow you down.
 
-## Better Panel Navigation: Console on #2, Tab Reordering and Nifty Underlines
+## Better panel navigation: console on #2, tab reordering and nifty underlines
 
 After investigating which areas of DevTools are used the most, it became clear that the full-screen Console panel didn’t deserve the last position in the main tab bar. As second-most used panel, *it’s now the second tab*. This especially matters on lower resolutions when we can’t show all tabs at once.
 
@@ -26,7 +26,7 @@ But look, we get it. The classic order is part of your muscle memory and you’l
 The changes you make to the tab bar persist, and it works with both native tabs and extension-provided tabs. And as a bonus, we’ve thrown in smooth, animated underlines. Because we’re nice like that.
 
 
-## Support for Framework Event Listeners
+## Support for framework event listeners
 
 Events created by JS Frameworks such as jQuery have sometimes been a pain when working with DevTools. That’s because most frameworks wrap the native DOM events into their custom event API, so looking at the event listener doesn’t really reveal much about what’s happening:
 
@@ -36,7 +36,7 @@ But with the new “Framework Listeners” option in the Event Listener tab, Dev
 
 ![Framework Listeners On](/web/updates/images/2015-10-05/listeners_on.png)
 
-## The Best of the Rest
+## The best of the rest
 
   * [Custom Object Formatters](https://docs.google.com/document/d/1FTascZXT9cxfetuPRT2eXPQKXui4nWFivUnS_335T3U/preview?usp=sharing) allow transpiled languages such as CoffeeScript [to better format their objects](https://github.com/binaryage/cljs-devtools) in the DevTools Console.
   * The Timeline has a new better looking dialog during recording that shows you status, time and buffer usage at a glance. <br>![Timeline Hint](/web/updates/images/2015-10-05/timeline_hint.png)

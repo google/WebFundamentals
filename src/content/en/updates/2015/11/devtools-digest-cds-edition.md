@@ -7,7 +7,7 @@ description: Learn how DevTools is going mobile first with a new, streamlined De
 {# wf_tags: devtools,digest,update #}
 {# wf_featured_image: /web/updates/images/2015/11/devtools-digest/animations.png #}
 
-# DevTools Digest (CDS Edition): A glimpse into the future + RAIL Profiling {: .page-title }
+# DevTools Digest (CDS Edition): A Glimpse into the Future and RAIL Profiling {: .page-title }
 
 {% include "web/_shared/contributors/pbakaus.html" %}
 
@@ -25,7 +25,7 @@ Learn how DevTools is going mobile first with a new, streamlined Device Mode tha
 
 We’re just coming back from the Chrome Dev Summit where I showed you what working with DevTools looks like today and in the future. I usually don’t mention any features that are still experiments or heavy works of progress in this digest but I’m making an exception this time. If you don’t have time to watch the whole talk, here’s the gist:
 
-### Device Mode v2
+### Device Mode version 2
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="r-uc-fENa7w"
@@ -35,7 +35,7 @@ We’re just coming back from the Chrome Dev Summit where I showed you what work
 
 We’re still heavily working on this new, bold iteration of the **Device Mode** but wanted to give everyone an opportunity to try it out, so we’ve enabled it in your Canary today. With the changes, we are pushing DevTools into a mobile-first future where mobile development is the default, and Desktop development is the “add-on”. Expect more iteration over the next few weeks with an extended blog post when we’re done.
 
-### Powerful Animation Inspection
+### Powerful animation inspection
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="MjaYjUram14"
@@ -45,7 +45,7 @@ We’re still heavily working on this new, bold iteration of the **Device Mode**
 
 The work-in-progress **Animation Inspection** gives you a full, detailed picture over what’s happening on anything moving. Instead of showing you a transition on one element at a time, we added heuristics that group complex animations so you can focus on all you’re seeing. Have a look at the video. We’ll offer a bigger, standalone blog post when we’re fully launched.
 
-### Layout Mode (Sneak Peek)
+### Layout Mode (sneak peek)
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="fL1KjPMnEuI"
@@ -77,7 +77,7 @@ We thought we could simplify this. We added two nifty buttons that appear when h
   </iframe>
 </div>
 
-## The Best of the Rest
+## The best of the rest
 
   * We’ve wasted a lot of previous real estate in the Style panel by showing **generic media types**. We now hide that stuff before your selectors if it’s not unusual!
   * You can now **long hover over a CSS selector** in the Style panel to see how many elements on the page it applies to.

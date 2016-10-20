@@ -7,7 +7,7 @@ description: The MediaDevices interface gives access to input and output devices
 {# wf_tags: news,audio,video,media,webrtc,getusermedia #}
 {# wf_featured_image: /web/updates/images/2015-10-13-media-devices/featured.jpg #}
 
-# Choose cameras, microphones & speakers from your web app {: .page-title }
+# Choose Cameras, Microphones and Speakers from Your Web App {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 

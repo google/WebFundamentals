@@ -7,7 +7,7 @@ description: Application shell architecture is a method of building progressive 
 {# wf_tags: app-shell,serviceworker #}
 {# wf_featured_image: /web/updates/images/2015/11/appshell/app-shell-browsers.jpg #}
 
-# Instant Loading Web Apps with An Application Shell Architecture {: .page-title }
+# Instant Loading Web Apps with an Application Shell Architecture {: .page-title }
 
 {% include "web/_shared/contributors/addyosmani.html" %}
 {% include "web/_shared/contributors/mattgaunt.html" %}
@@ -36,7 +36,7 @@ To emphasize the point, the example below shows the first load of an app using t
 
 ![Image of service worker running in DevTools for the application shell](/web/updates/images/2015/11/appshell/image_1.png)
 
-### What are Service Workers, Again?
+### What are service workers, again?
 
 A service worker is a script that runs in the background, separate from your web page. It responds to events, including network requests made from pages it serves and push notices from your server. A service worker has an intentionally short lifetime. It wakes up when it gets an event and runs only as long as it needs to process it.
 
@@ -46,7 +46,7 @@ A service worker can intercept network requests made from a page (which triggers
 
 To learn more about service workers in depth, read an [Introduction to Service Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/).
 
-## Performance Benefits
+## Performance benefits
 
 Service workers are powerful for offline caching but they also offer significant  performance wins in the form of instant loading for repeat visits to your site or web app.  You can cache your application shell so it works offline and populate its content using JavaScript.
 
@@ -76,13 +76,13 @@ to the **0.9 seconds** it takes when the same page is loaded from our service wo
 
 Similar and reliable performance wins are possible for your own applications using the application shell architecture.
 
-## Does Service Worker Require us to Rethink How We Structure Apps?
+## Does service worker require us to rethink how we structure apps?
 
 Service workers imply some subtle changes in application architecture. Rather than squashing all of your application into an HTML string, it can be beneficial to do things AJAX-style. This is where you have a shell (that is always cached and can always boot up without the network) and content that is refreshed regularly and managed separately.
 
 The implications of this split are large. On the first visit you can render content on the server and install the service worker on the client. On subsequent visits you need only request data.
 
-## What about Progressive Enhancement?
+## What about progressive enhancement?
 
 While service worker isn’t currently supported by all browsers, the application content shell architecture uses [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_enhancement) to ensure everyone can access the content. For example, take our sample project.
 
@@ -90,11 +90,11 @@ Below you can see the full version rendered in Chrome, Firefox Nightly and Safar
 
 ![Image of Application Shell loaded in Safari, Chrome and Firefox](/web/updates/images/2015/11/appshell/app-shell-browsers.jpg)
 
-## When Does it Make Sense to Use This Architecture?
+## When does it make sense to use this architecture?
 
 The application shell architecture makes the most sense for apps and sites that are dynamic. If your site is small and static, you probably don't need an application shell and can simply cache the whole site in a service worker `oninstall` step. Use the approach that makes the most sense for your project. A number of JavaScript frameworks already encourage splitting your application logic from the content, making this pattern more straight-forward to apply.
 
-## Are There any Production Apps Using this Pattern Yet?
+## Are there any production apps using this pattern yet?
 
 The application shell architecture is possible with just a few changes to your overall application’s UI and has worked well for large-scale sites such as Google’s [I/O 2015 Progressive Web App](/web/showcase/case-study/service-workers-iowa) and Google’s Inbox.
 
@@ -104,11 +104,11 @@ Offline application shells are a major performance win and are also demonstrated
 
 ![Screenshots of Jake Archibald's Wikipedia Demo.](/web/updates/images/2015/11/appshell/wikipedia.jpg)
 
-## Explaining the Architecture
+## Explaining the architecture
 
 During the first load experience, your goal is to get meaningful content to the user’s screen as quickly as possible.
 
-### First Load and Loading Other Pages
+### First load and loading other pages
 
 ![Diagram of the First Load with the App Shell](/web/updates/images/2015/11/appshell/first-load.png)
 
@@ -130,11 +130,11 @@ During the first load experience, your goal is to get meaningful content to the 
 
 ![App Shell for Content](/web/updates/images/2015/11/appshell/inline.jpg)
 
-## A Practical Implementation
+## A practical implementation
 
 We’ve written a fully working [sample](https://github.com/GoogleChrome/application-shell) using the application shell architecture, vanilla ES2015 JavaScript for the client, and Express.js for the server. There is of course nothing stopping you from using your own stack for either the client or the server portions (e.g PHP, Ruby, Python). 
 
-### Service Worker Lifecycle
+### Service worker lifecycle
 
 For our application shell project, we use [sw-precache](https://github.com/GoogleChrome/sw-precache/) which offers the following service worker lifecycle:
 
@@ -158,7 +158,7 @@ For our application shell project, we use [sw-precache](https://github.com/Googl
 </table>
 
 
-### Server Bits
+### Server bits
 
 In this architecture, a server side component (in our case, written in Express) should be able to treat content and presentation separately. Content could be added to an HTML layout that results in a static render of the page, or it could be served separately and dynamically loaded.
 
@@ -178,7 +178,7 @@ Note: There are many ways to approach this and XHR is just one of them. Some app
 
 * Browsers **without** service worker support should always be served a fall-back experience. In our demo, we fall back to basic static server-side rendering, but this is only one of many options. The service worker aspect provides you with new opportunities for enhancing the performance of your Single-page Application style app using the cached application shell.
 
-### File Versioning
+### File versioning
 
 One question that arises is how to handle file versioning and updating. This is application specific and the options are:
 
@@ -198,13 +198,13 @@ We maintain a number of different [service worker helper libraries](/web/tools/s
 
 ![Screenshot of the Service Worker Library Site on Web Fundamentals](/web/updates/images/2015/11/appshell/image_10.png)
 
-#### Use sw-precache for Your Application Shell
+#### Use sw-precache for your application shell
 
 Using [sw-precache](https://github.com/GoogleChrome/sw-precache) to cache the application shell should handle the concerns around file revisions, the install/activate questions, and the fetch scenario for the app shell.  Drop sw-precache into your application’s build process and use configurable wildcards to pick up your static resources. Rather than manually hand-crafting your service worker script, let sw-precache generate one that manages your cache in a safe and efficient, using a cache-first fetch handler.
 
 Initial visits to your app trigger precaching of the complete set of needed resources. This is similar to the experience of installing a native app from an app store. When users return to your app, only updated resources are downloaded. In our demo, we inform users when a new shell is available with  the message, "App updates. Refresh for the new version." This pattern is a low-friction way of letting users know they can refresh for the latest version.
 
-#### Use sw-toolbox for Runtime Caching
+#### Use sw-toolbox for runtime caching
 
 Use [sw-toolbox](https://github.com/GoogleChrome/sw-toolbox) for runtime caching with varying strategies depending on the resource:
 

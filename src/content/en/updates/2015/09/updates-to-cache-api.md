@@ -6,7 +6,7 @@ description: Chrome 46 brought new methods to caches, as does Chrome 47, and pro
 {# wf_published_on: 2015-09-02 #}
 {# wf_tags: news,serviceworker,cache #}
 
-# Updates to the service worker cache API {: .page-title }
+# Updates to the Service Worker Cache API {: .page-title }
 
 {% include "web/_shared/contributors/jakearchibald.html" %}
 
