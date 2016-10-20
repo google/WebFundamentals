@@ -161,13 +161,9 @@ have the following logic on your `pointermove` event:
 
 ## Default actions
 
-Touch-enabled browsers often make special allowances for certain types of input,
-overriding certain gestures to make the page scroll, zoom, or refresh. With
-touch events, this happens more or less transparently, with browser actions
-happening after the touch events, unless cancelled. This leads to some
-potentially confusing behaviour for the end user, with both browser- and
-developer-defined actions taking place sequentially, based off of a single
-input.
+In touch-enabled browsers, certain gestures are used to make the page scroll, zoom, or refresh.
+In the case of touch events, you will still receive events while these default
+actions are taking place – for instance, `touchmove` will still be fired while the user is scrolling.
 
 With pointer events, whenever a default action like scroll or zoom is triggered,
 you’ll get a `pointercancel` event, to let you know that the browser has taken
