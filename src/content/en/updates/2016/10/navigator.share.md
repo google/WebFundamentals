@@ -2,40 +2,44 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: Sharing is caring. Chrome is running an Origin Trial to enable native sharing on the web.
 
-{# wf_published_on: 2016-10-19 #}
-{# wf_updated_on: 2016-10-19 #}
+{# wf_published_on: 2016-10-20 #}
+{# wf_updated_on: 2016-10-20 #}
+{# wf_featured_image: /web/updates/images/generic/share.png #}
+{# wf_tags: chrome55,sharing,android,origintrials #}
+{# wf_featured_snippet: Sharing is caring. Chrome is running an Origin Trial to enable native sharing on the web called <code>Web Share</code> that allows websites to invoke the native sharing capabilities of the host platform. #}
 
 # Introducing the Web Share API {: .page-title }
 
-Good news, everybody! [Matt Giuca](https://twitter.com/mgiuca){: .external } on the Chrome
-team has been working on a [simple
-API](https://github.com/WICG/web-share/blob/master/docs/interface.md){: .external } called
+Good news, everybody! [Matt Giuca](https://twitter.com/mgiuca){: .external } 
+on the Chrome team has been working on a
+[simple API](https://github.com/WICG/web-share/blob/master/docs/interface.md){: .external }
+called
 [Web Share](https://github.com/WICG/web-share/blob/master/docs/explainer.md){: .external }
 that allows websites to invoke the native sharing capabilities of the host
 platform.
 
 There have been a number of ways to invoke native sharing capabilities on the
-platform, but they all have significant drawbacks.  There was [Web
-Intents](https://en.wikipedia.org/wiki/Paul_Kinlan){: .external } (dead), there
+platform, but they all have significant drawbacks.  There was
+[Web Intents](https://en.wikipedia.org/wiki/Paul_Kinlan){: .external } (dead), there
 is protocol handling via `registerProtocolHandler` but this has zero support on
 mobile, there is direct sharing to a well-known service URL such as Twitter's,
-and there is also the [Android intent: URL syntax](https://paul.kinlan.me/sharing-natively-on-android-from-the-web/) {:
-.external } (which was, unfortunately, Android-only, and required apps to opt-
-in).
+and there is also the
+[Android intent: URL syntax](https://paul.kinlan.me/sharing-natively-on-android-from-the-web/){: .external }
+(which was, unfortunately, Android-only, and required apps to opt-in).
 
 The Web Share API is important because it gives the user control of how and
 where the data is shared.
 
-In Chrome 55 (Beta as of October 2016), we've enabled an [Origin
-Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-
-guide.md){: .external } that lets you integrate the Web Share API into your
+In Chrome 55 (Beta as of October 2016), we've enabled an 
+[Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md){: .external }
+that lets you integrate the Web Share API into your
 site. The origin trial means this API is not generally available to all sites;
 instead you need to register to get access during the trial phase. Over this
 time, the API will likely change and break in unexpected ways, which is why we
 are looking for as much feedback as possible.
 
 The Web Share API is a
-[promise](/web/fundamentals/getting-started/primers/promises){: .external }-based,
+[promise](/web/fundamentals/getting-started/primers/promises){: .external } -based,
  single method API that takes an object with properties named title, text and url.
 
     navigator.share({
@@ -58,8 +62,7 @@ share the data with the app chosen by the user.
 
 This API has a few constraints:
 
-* You need to host your site in a [secure
-  context](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features){: .external }
+* You need to host your site in a [secure context](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features){: .external }
   (typically https).
 *  You only need to supply one of text or url, not both.
 * You can only invoke the API as a result of a user gesture. (For example, you can't call
@@ -70,11 +73,9 @@ This API has a few constraints:
 
 The process is pretty simple:
 
-1. Get the [Chrome Beta Channel on
-   Android](https://play.google.com/store/apps/details?id=com.chrome.beta){: .external }
+1. Get the [Chrome Beta Channel onAndroid](https://play.google.com/store/apps/details?id=com.chrome.beta){: .external }
    (as of October 2016).
-2. [Sign
-   up](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform){: .external }
+2. [Sign up](https://docs.google.com/forms/d/e/1FAIpQLSfO0_ptFl8r8G0UFhT0xhV17eabG-erUWBDiKSRDTqEZ_9ULQ/viewform){: .external }
    for the Origin Trial.
 3. [Integrate](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin){: .external }
    the Origin Trial tokens into your site (as long as it is on https).
