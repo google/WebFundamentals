@@ -4,8 +4,9 @@ description: A new auxclick event will be fired for non-primary mouse button cli
 
 {# wf_published_on: 2016-10-19 #}
 {# wf_updated_on: 2016-10-19 #}
-{# wf_featured_image: /web/updates/images/2016/10/ic_mouse_black.png #}
+{# wf_featured_image: /web/updates/images/generic/mouse.png #}
 {# wf_tags: chrome55,input #}
+{# wf_featured_snippet: <code>auxclick</code> takes the place of the <code>click</code> event for non-primary mouse buttons, starting in Chrome 55. #}
 
 # auxclick is Coming to Chrome 55 {: .page-title }
 
@@ -22,14 +23,14 @@ click would be expected to trigger a response from the UI.
 
 It's possible, if a bit cumbersome, to model these nuanced interactions via a
 single `click` event listener. You would have to explicitly check the
-<code>[button](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button)</code>
+[`button`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/button)
 property of the
-<code>[MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent)</code>,
-to see whether it was set to <code>0</code>, representing the primary button,
-versus anything else, with <code>1</code> usually representing the middle
+[`MouseEvent`](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent),
+to see whether it was set to `0`, representing the primary button,
+versus anything else, with `1` usually representing the middle
 button, and so on. But not many developers go as far as explicitly checking the
-<code>button</code> property, leading to code that handles all
-<code>click</code>s identically, regardless of which button was pressed.
+`button` property, leading to code that handles all
+`click`s identically, regardless of which button was pressed.
 
 Starting with Chrome 55, a new type of `MouseEvent`, called `auxclick`, is fired
 in response to any clicks made with a non-primary button. Accompanying this new
@@ -48,12 +49,10 @@ uses the [History API](https://developer.mozilla.org/en-US/docs/Web/API/History)
 to rewrite the location bar, and implement custom single-page navigations. It
 might look something like:
 
-```
-document.querySelector('#my-link').addEventListener('click', event => {
-  event.preventDefault();
-  // ...call history.pushState(), use client-side rendering, etc....
-});
-```
+    document.querySelector('#my-link').addEventListener('click', event => {
+      event.preventDefault();
+      // ...call history.pushState(), use client-side rendering, etc....
+    });
 
 Your custom logic might work as intended when triggered by a mouse's primary
 button, but if that code runs when a middle button is clicked, it's effectively
@@ -89,27 +88,25 @@ your `click` event handler, you can ensure that you take appropriate action. The
 following pattern will handle primary and auxiliary clicks differently, whether
 or not there's native support for `auxclick`:
 
-```
-function handlePrimaryClick(event) {
-  // ...code to handle the primary button click...
-}
-
-function handleAuxClick(event) {
-  // ...code to handle the auxiliary button click….
-}
-
-document.querySelector('#my-link').addEventListener('click', event => {
-  if (event.button === 0) {
-    return handlePrimaryClick(event);
-  }
-
-
-  // This provides fallback behavior in browsers without auxclick.
-  return handleAuxClick(event);
-});
-
-// Explicitly listen for auxclick in browsers that support it.
-document.querySelector('#my-link').addEventListener('auxclick', handleAuxClick);
-```
+    function handlePrimaryClick(event) {
+      // ...code to handle the primary button click...
+    }
+    
+    function handleAuxClick(event) {
+      // ...code to handle the auxiliary button click….
+    }
+    
+    document.querySelector('#my-link').addEventListener('click', event => {
+      if (event.button === 0) {
+        return handlePrimaryClick(event);
+      }
+    
+    
+      // This provides fallback behavior in browsers without auxclick.
+      return handleAuxClick(event);
+    });
+    
+    // Explicitly listen for auxclick in browsers that support it.
+    document.querySelector('#my-link').addEventListener('auxclick', handleAuxClick);
 
 {% include "comment-widget.html" %}
