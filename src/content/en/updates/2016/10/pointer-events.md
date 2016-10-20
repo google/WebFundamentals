@@ -22,17 +22,17 @@ pressure-sensitive and tilt-aware pens, for amazing creative freedom; you could
 use your fingers, so all you needed was the device and your hand; and hey, why
 not use more than one finger while you’re at it?
 
-We’ve had [touch events](https://w3c.github.io/touch-events/) for a while to
-help us with that, but they’re an entirely separate API specifically for touch,
-forcing you to code two separate event models if you want to support both mouse
-and touch. Chrome 55 ships with a newer standard that unifies both models:
-pointer events.
+We’ve had [touch events](https://w3c.github.io/touch-events/)
+for a while to help us with that, but they’re an entirely separate API
+specifically for touch, forcing you to code two separate event models if you
+want to support both mouse and touch. Chrome 55 ships with a newer standard
+that unifies both models: pointer events.
 
 ## A single event model
 
-[Pointer events](https://w3c.github.io/pointerevents/) unify the pointer input
-model for the browser, bringing touch, pens, and mice together into a single set
-of events.
+[Pointer events](https://w3c.github.io/pointerevents/) unify the
+pointer input model for the browser, bringing touch, pens, and mice together
+into a single set of events. For example:
 
     document.addEventListener('pointermove',
       ev => console.log('The pointer moved.'));
@@ -131,7 +131,7 @@ Note: Pointer events are confusingly unrelated to the [`pointer-events CSS
 property`](https://developer.mozilla.org/en/docs/Web/CSS/pointer-events).
 Even worse, the two can be used together! The behaviour of
 `pointer-events` (the CSS property) with pointer events (the event
-model) is no different than with mouse events or touch events, though, so if
+model) is no different than with mouse events or touch events, so if
 you’ve used that CSS property before, you know what to expect.
 
 ## Different input types
@@ -171,19 +171,20 @@ input.
 
 With pointer events, whenever a default action like scroll or zoom is triggered,
 you’ll get a `pointercancel` event, to let you know that the browser has taken
-control of the pointer.
+control of the pointer. For example:
 
     document.addEventListener('pointercancel',
       ev => console.log('Go home, the browser is in charge now.'));
 
 **Built-in speed**: This model allows for better performance by default,
-compared to touch events, where you would need to use [passive event listeners](/web/updates/2016/06/passive-event-listeners)
+compared to touch events, where you would need to use
+[passive event listeners](/web/updates/2016/06/passive-event-listeners)
 to achieve the same level of responsiveness.
 
 You can stop the browser from taking control with the
 [`touch-action`](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action)
 CSS property. Setting it to `none` on an element will disable all
-browser-defined actions started over that element, but there are a number of
+browser-defined actions started over that element. But there are a number of
 other values for finer-grained control, such as `pan-x`, for allowing
 the browser to react to movement on the x axis but not the y axis. Chrome 55
 supports the following values:
@@ -261,7 +262,7 @@ supports the following values:
 
 ## Pointer capture
 
-Ever spent a frustrating hour debugging why you’re not getting a `mouseup`
+Ever spent a frustrating hour debugging a broken `mouseup`
 event, until you realised that it’s because the user is letting go of the button
 outside your click target? No? Okay, maybe it’s just me, then.
 
@@ -289,11 +290,11 @@ friends).
 ## Browser support
 
 At the time of writing, Pointer Events are supported in Internet Explorer 11,
-Microsoft Edge, Chrome and Opera, and partially supported in Firefox. You can
+Microsoft Edge, Chrome, and Opera, and partially supported in Firefox. You can
 find an [up-to-date list at caniuse.com](http://caniuse.com/#feat=pointer).
 
 You can use the [Pointer Events polyfill](https://github.com/jquery/PEP) for
-filling in the gaps. Alternatively, checking for browser support in runtime is
+filling in the gaps. Alternatively, checking for browser support at runtime is
 straightforward:
 
     if (window.PointerEvent) {

@@ -2,16 +2,16 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: With Chrome 52, we’re introducing the ability to make storage persistent.  Storage for web applications is a complex topic, and persistence for data on the frequently - ephemeral web doubly so!
 
-{# wf_updated_on: 2016-06-23 #}
+{# wf_updated_on: 2016-10-20 #}
 {# wf_published_on: 2016-06-23 #}
-{# wf_tags: chrome52,storage,persistentstorage,localstorage,indexeddb,origintrials #}
+{# wf_tags: chrome52,chrome55,storage,persistentstorage,localstorage,indexeddb,origintrials #}
 {# wf_featured_image: /web/updates/images/generic/sd-card.png #}
 
 # Persistent Storage {: .page-title }
 
 {% include "web/_shared/contributors/chriswilson.html" %}
 
-With Chrome 52, we’re introducing the ability to make storage 
+With Chrome 52, we introduced the ability to make storage 
 [persistent](https://storage.spec.whatwg.org/#persistence).  Storage for web
 applications is a complex topic, and persistence for data on the
 frequently-ephemeral web doubly so, so I should explain.
@@ -50,25 +50,29 @@ explicitly:
       });
     
 
-This feature is still somewhat experimental. So in order to keep from
-prematurely baking this design in before it’s fully specified and agreed upon,
-we’ve implemented this feature in Chrome Stable as an
-[Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).
-To use this API in Chrome Stable, you’ll need to
+This feature was initially still somewhat experimental. So in order to 
+keep from prematurely baking this design in before it was fully specified 
+and agreed upon, we initially implemented this feature in Chrome 52 as an
+[Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md).  To use this API in Chrome 52, you needed to
 [request a token](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md#how-do-i-enable-an-experimental-feature-on-my-origin)
 and insert it in your application.
 
-The trial will end in October 2016. 
-(By that point, we expect to have figured out any changes necessary to
-stabilize the feature and move it out from Origin Trials.)  Or, of course,
-your users can use Chrome Canary, or enable experimental web features in
-`chrome://flags`.
+The trial ended in Chrome 55, when we shipped on-by-default support for this 
+feature.
 
-Today the permission will be automatically granted to any sites that the user
-has bookmarked, and automatically denied otherwise.  We plan to change this
-very soon to be a usage-based heuristic that takes into account user actions
-like add to home screen.  The goal is to ensure that users can rely on their
-favorite web apps and not find they have suddenly been cleared.
+Initially, the permission was automatically granted to any sites that the user
+has bookmarked, and automatically denied otherwise.  Beginning with Chrome 55, 
+Chrome will automatically grant the persistence permission if any of the 
+following are true:
+
+- The site is bookmarked (and the user has 5 or less bookmarks)
+- The site has high site engagement
+- The site has been added to home screen
+- The site has push notifications enabled
+
+The permission is automatically denied in all other cases. The goal is to 
+ensure that users can rely on their favorite web apps and not find they have 
+suddenly been cleared.
 
 You can also use the Javascript API to tell if persistence has been granted
 already:
