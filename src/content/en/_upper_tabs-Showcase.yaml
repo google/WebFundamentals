@@ -1,0 +1,7 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+toc:
+  - name: Case Studies
+    lower_tabs:
+      guides:
+      - title: Home
+        path: /web/showcase/

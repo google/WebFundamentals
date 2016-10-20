@@ -4,14 +4,14 @@ description: We hit our goal of never downloading more than 60k of HTML, 60k of 
 
 {# wf_published_on: 2015-11-17 #}
 {# wf_updated_on: 2015-11-17 #}
-{# wf_featured_image: /web/showcase/2015/images/gplus/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/gplus/card.jpg #}
 {# wf_featured_snippet: We hit our goal of never downloading more than 60k of HTML, 60k of JavaScript and 60k of CSS at any one time! #}
 
 # Google+ {: .page-title }
 
 <img src="images/gplus/main.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 [Google+](https://plus.google.com) goes completely responsive.
 
@@ -120,7 +120,7 @@ with rich UI. The site is now faster and leaner than ever before.
 > We hit our goal of never downloading more than 60k of HTML, 60k of 
 > JavaScript and 60k of CSS at any one time!
 
-<table class="mdl-data-table mdl-js-data-table">
+<table class="">
   <thead>
     <tr>
       <th></th>

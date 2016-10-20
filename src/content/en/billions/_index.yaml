@@ -1,3 +1,5 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
@@ -39,7 +41,7 @@ landing_page:
         or "3G" that downgrades to 2G. Even by 2020, more than 10% of users
         will still be on 2G. Many smartphones are used offline, and users
         regularly turn on airplane mode to avoid data consumption.
-      image_path: /web/imgs/billions/connectivity.png
+      image_path: images/connectivity.png
       buttons:
       - label: Test with emulated low bandwidth and high latency
         path: /web/fundamentals/performance/poor-connectivity/testing/
@@ -64,7 +66,7 @@ landing_page:
         applied. Many mobile users are extremely cost conscious, with good
         reason: for example, a 500MB data plan in India costs the same as 17
         hours of minimum wage work.
-      image_path: /web/imgs/billions/cost.png
+      image_path: images/cost.png
       buttons:
       - label: Understand the cost of loading page and app components
         path: /web/fundamentals/design-and-ui/content/weight/
@@ -87,10 +89,10 @@ landing_page:
         Many people, even in urban areas, don't have access to a reliable and
         affordable power supply. This makes power conservation a critical
         factor in all app and content design.
-      image_path: /web/imgs/billions/consumption.png
+      image_path: images/consumption.png
       buttons:
       - label: Avoid repaints, reflows, and required reorientations
-        path: /web/tools/chrome-devtools/profile/rendering-tools/analyze-runtime/
+        path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
         classname: wf-small-link
       - label: Avoid expensive UI animations
         path: /web/fundamentals/design-and-ui/animations/#avoid-animating-expensive-properties/
@@ -110,7 +112,7 @@ landing_page:
         Low spec is the norm. Globally, most new internet users have low-cost
         devices with basic hardware: single-core processors, 4" screens,
         limited memory, and limited storage.
-      image_path: /web/imgs/billions/capability.png
+      image_path: images/capability.png
       buttons:
       - label: Cater for a range of viewports and devices
         path: /web/fundamentals/getting-started/your-first-multi-screen-site/
@@ -130,7 +132,7 @@ landing_page:
         them from using your app or site. Content that is too wide or too tall
         is overlooked by some users and deliberately avoided by others — and
         excess content adds page weight and data cost.
-      image_path: /web/imgs/billions/content.png
+      image_path: images/content.png
       buttons:
       - label: Design content to work well across different viewport sizes
         path: /web/fundamentals/design-and-ui/content/viewport/
@@ -150,7 +152,7 @@ landing_page:
         users globally don't have bank accounts and don't use credit
         cards — including 8% of US households. Many payment systems don't work
         well on small viewports or with unreliable connectivity.
-      image_path: /web/imgs/billions/monetization.png
+      image_path: images/monetization.png
       buttons:
       - label: Streamline transactions
         path: /web/fundamentals/getting-started/principles/commerce-and-conversion/
@@ -169,7 +171,7 @@ landing_page:
         speakers and US or European cultural conventions may not be familiar
         or intuitive. Instructions or prompts that are succinct and compact
         in English may be verbose and obtrusive in other languages.
-      image_path: /web/imgs/billions/localization.png
+      image_path: images/localization.png
       buttons:
       - label: Architect your site to enable localization
         path: https://support.google.com/webmasters/answer/182192/

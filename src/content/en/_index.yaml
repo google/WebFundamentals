@@ -45,14 +45,14 @@ landing_page:
       buttons:
       - label: Learn more
         path: /web/fundamentals/security/
-      - label: Encrypting Data in Transit
-        path: /web/fundamentals/security/encrypt-in-transit/
+      - label: Why HTTPS
+        path: /web/fundamentals/security/encrypt-in-transit/why-https
         classname: wf-small-link
       - label: Content Security Policy
         path: /web/fundamentals/security/csp/
         classname: wf-small-link
-        label: Prevent Mixed Content
-        path: /web/fundamentals/security/prevent-mixed-content/
+      - label: Prevent Mixed Content
+        path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
         classname: wf-small-link
 
     - heading: Optimize performance
@@ -114,7 +114,7 @@ landing_page:
           </li>
           <li>
             <b>Engaging</b> -
-            <a href="/web/fundamentals/getting-started/push-notifications/">
+            <a href="/web/fundamentals/engage-and-retain/push-notifications/">
             Push notifications</a> and
             <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
             add to homescreen</a> help users re-engage.

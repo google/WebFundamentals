@@ -1,0 +1,65 @@
+toc:
+  - title: '2014'
+    section:
+    - title: Building a NaCl app
+      path: /web/shows/google-io/2014/building-a-nacl-app
+    - title: Building sites for the multi-device web
+      path: /web/shows/google-io/2014/building-sites-for-the-multi-device-web
+    - title: Chrome Apps on Android and iOS
+      path: /web/shows/google-io/2014/chrome-apps-on-android-and-ios
+    - title: 'Chrome Apps: State of the Union 2014'
+      path: /web/shows/google-io/2014/chrome-apps-state-of-the-union-2014
+    - title: Componentize the Web
+      path: /web/shows/google-io/2014/componentize-the-web
+    - title: Dart in Google Cloud
+      path: /web/shows/google-io/2014/dart-in-google-cloud
+    - title: 'Deep dive: Google Cloud Messaging for Chrome'
+      path: /web/shows/google-io/2014/deep-dive-google-cloud-messaging-for-chrome
+    - title: Demystifying encodes and decodes of WebM
+      path: /web/shows/google-io/2014/demystifying-encodes-and-decodes-of-webm
+    - title: Easy International Checkout with Chrome
+      path: /web/shows/google-io/2014/easy-international-checkout-with-chrome
+    - title: Fabulous Forms for the multi-device web
+      path: /web/shows/google-io/2014/fabulous-forms-for-the-multi-device-web
+    - title: Faster Loading Images with WebP
+      path: /web/shows/google-io/2014/faster-loading-images-with-webp
+    - title: Getting Your PageSpeed Score Up
+      path: /web/shows/google-io/2014/getting-your-pagespeed-score-up
+    - title: Low Latency Mobile Web Apps
+      path: /web/shows/google-io/2014/low-latency-mobile-web-apps
+    - title: Making Music with the Web Platform
+      path: /web/shows/google-io/2014/making-music-with-the-web-platform
+    - title: Mobile web lessons learned from analyzing websites at scale
+      path: /web/shows/google-io/2014/mobile-web-lessons-learned-from-analyzing-websites-at-scale
+    - title: Optimizing Dart Applications
+      path: /web/shows/google-io/2014/optimizing-dart-applications
+    - title: 'Polymer: Creating responsive UIs'
+      path: /web/shows/google-io/2014/polymer-creating-responsive-uis
+    - title: 'Polymer: Interacting with Google Services using nothing but HTML'
+      path: /web/shows/google-io/2014/polymer-interacting-with-google-services-using-nothing-but-html
+    - title: 'Polymer: making Web Components accessible'
+      path: /web/shows/google-io/2014/polymer-making-web-components-accessible
+    - title: Responsive images today
+      path: /web/shows/google-io/2014/responsive-images-today
+    - title: Silky smooth Web Animations
+      path: /web/shows/google-io/2014/silky-smooth-web-animations
+    - title: Testing multi-screen web pages
+      path: /web/shows/google-io/2014/testing-multi-screen-web-pages
+    - title: 'The ServiceWorker: The network layer is yours to own'
+      path: /web/shows/google-io/2014/the-serviceworker-the-network-layer-is-yours-to-own
+    - title: Touch in a Web App? No Problem
+      path: /web/shows/google-io/2014/touch-in-a-web-app-no-problem
+    - title: Unleash the power of Kiosk Apps
+      path: /web/shows/google-io/2014/unleash-the-power-of-kiosk-apps
+    - title: Update on WebM/VP9
+      path: /web/shows/google-io/2014/update-on-webmvp9
+    - title: Using the PageSpeed API
+      path: /web/shows/google-io/2014/using-the-pagespeed-api
+    - title: Video on mobile
+      path: /web/shows/google-io/2014/video-on-mobile
+    - title: Web Performance Testing at YouTube
+      path: /web/shows/google-io/2014/web-performance-testing-at-youtube
+    - title: WebP at YouTube
+      path: /web/shows/google-io/2014/webp-at-youtube
+    - title: What's new in WebView
+      path: /web/shows/google-io/2014/whats-new-in-webview

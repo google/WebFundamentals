@@ -1,0 +1,126 @@
+toc:
+  - title: Chrome DevTools
+    section:
+    - title: Overview
+      path: /web/tools/chrome-devtools/
+    - title: Configure and Customize DevTools
+      path: /web/tools/chrome-devtools/settings
+    - title: Debug Progressive Web Apps
+      path: /web/tools/chrome-devtools/progressive-web-apps
+    - title: Understand Security Issues
+      path: /web/tools/chrome-devtools/security
+    - title: Inspect and Edit Pages and Styles
+      section:
+      - title: Overview
+        path: /web/tools/chrome-devtools/inspect-styles/
+      - title: Edit Styles
+        path: /web/tools/chrome-devtools/inspect-styles/edit-styles
+      - title: Inspect Animations
+        path: /web/tools/chrome-devtools/inspect-styles/animations
+      - title: Edit the DOM
+        path: /web/tools/chrome-devtools/inspect-styles/edit-dom
+      - title: Keyboard and UI Shortcuts Reference
+        path: /web/tools/chrome-devtools/inspect-styles/shortcuts
+    - title: Inspect and Manage Storage, Caches, and Resources
+      section:
+      - title: Inspect and Manage Storage, Databases, and Caches
+        path: /web/tools/chrome-devtools/manage-data/local-storage
+      - title: Inspect and Delete Cookies
+        path: /web/tools/chrome-devtools/manage-data/cookies
+      - title: Inspect Resources
+        path: /web/tools/chrome-devtools/manage-data/page-resources
+    - title: Simulate Mobile Devices with Device Mode
+      section:
+      - title: Overview
+        path: /web/tools/chrome-devtools/device-mode/
+      - title: Test Responsive and Device-Specific Viewports
+        path: /web/tools/chrome-devtools/device-mode/emulate-mobile-viewports
+      - title: Emulate Geolocation and Accelerometer Sensors
+        path: /web/tools/chrome-devtools/device-mode/device-input-and-sensors
+      - title: Emulate and Test Other Browsers
+        path: /web/tools/chrome-devtools/device-mode/testing-other-browsers
+    - title: Remote Debugging Android Devices
+      section:
+      - title: Overview
+        path: /web/tools/chrome-devtools/remote-debugging/
+      - title: Access Local Servers
+        path: /web/tools/chrome-devtools/remote-debugging/local-server
+      - title: Remote Debugging WebViews
+        path: /web/tools/chrome-devtools/remote-debugging/webviews
+    - title: Inspect and Debug JavaScript
+      section:
+      - title: Set Breakpoints
+        path: /web/tools/chrome-devtools/javascript/add-breakpoints
+      - title: Step Through Code
+        path: /web/tools/chrome-devtools/javascript/step-code
+      - title: Run Snippets of Code From Any Page
+        path: /web/tools/chrome-devtools/javascript/snippets
+      - title: Pretty-Print Minified JavaScript
+        path: /web/tools/chrome-devtools/javascript/pretty-print
+      - title: Watch Variables in Sources
+        path: /web/tools/chrome-devtools/javascript/watch-variables
+      - title: Map Preprocessed Code to Source Code
+        path: /web/tools/chrome-devtools/javascript/source-maps
+    - title: Using the Console
+      section:
+      - title: Overview
+        path: /web/tools/chrome-devtools/console/
+      - title: Diagnose and Log to the Console
+        path: /web/tools/chrome-devtools/console/console-write
+      - title: Compare Similar Data Objects
+        path: /web/tools/chrome-devtools/console/structured-data
+      - title: Measure and Count Executions
+        path: /web/tools/chrome-devtools/console/track-executions
+      - title: Handle Exceptions and Errors
+        path: /web/tools/chrome-devtools/console/track-exceptions
+      - title: Console API Reference
+        path: /web/tools/chrome-devtools/console/console-reference
+      - title: Evaluate Expressions
+        path: /web/tools/chrome-devtools/console/expressions
+      - title: Monitor Events
+        path: /web/tools/chrome-devtools/console/events
+      - title: Command Line Reference
+        path: /web/tools/chrome-devtools/console/command-line-reference
+    - title: How to Look at Performance
+      section:
+      - title: How to Use the Timeline Tool
+        path: /web/tools/chrome-devtools/evaluate-performance/timeline-tool
+      - title: Timeline Event Reference
+        path: /web/tools/chrome-devtools/evaluate-performance/performance-reference
+    - title: Analyze Runtime Performance
+      section:
+      - title: Overview
+        path: /web/tools/chrome-devtools/rendering-tools/
+      - title: Speed Up JavaScript Execution
+        path: /web/tools/chrome-devtools/rendering-tools/js-execution
+      - title: Diagnose Forced Synchronous Layouts
+        path: /web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts
+    - title: Measure Network Performance
+      section:
+      - title: Measure Resource Loading Times
+        path: /web/tools/chrome-devtools/network-performance/resource-loading
+      - title: Understand Resource Timing
+        path: /web/tools/chrome-devtools/network-performance/understanding-resource-timing
+      - title: Optimize Performance Under Varying Network Conditions
+        path: /web/tools/chrome-devtools/network-performance/network-conditions
+    - title: Fix Memory Problems
+      section:
+      - title: Overview
+        path: /web/tools/chrome-devtools/memory-problems/
+      - title: Understand Memory Terminology
+        path: /web/tools/chrome-devtools/memory-problems/memory-101
+      - title: Record Heap Snapshots
+        path: /web/tools/chrome-devtools/memory-problems/heap-snapshots
+      - title: Use the Allocation Profiler
+        path: /web/tools/chrome-devtools/memory-problems/allocation-profiler
+    - title: Extend the Chrome DevTools
+      section:
+      - title: Integrating with DevTools and Chrome
+        path: https://developer.chrome.com/devtools/docs/integrating
+        status: external
+      - title: DevTools Extensions API
+        path: https://developer.chrome.com/extensions/devtools
+        status: external
+      - title: Debugger Protocol
+        path: https://developer.chrome.com/devtools/docs/debugger-protocol
+        status: external

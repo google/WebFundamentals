@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/jumia/jumia_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Push Notifications help Jumia reverse cart abandonment and increase
 conversions by 9X

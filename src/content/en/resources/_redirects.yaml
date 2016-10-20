@@ -1,0 +1,10 @@
+redirects:
+
+- from: /web/resources/contributors/
+  to: /web/resources/contributors
+
+- from: /web/resources/jekyll/...
+  to: /web/resources/
+
+- from: /web/resources/translations/
+  to: /web/resources/translations
