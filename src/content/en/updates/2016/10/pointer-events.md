@@ -138,16 +138,16 @@ you’ve used that CSS property before, you know what to expect.
 
 You’ll still have to handle the differences between input types, such as whether
 the concept of hover applies, but you can do so from within the same event
-handlers. You can tell device types apart with the `deviceType` property of the
-[`PointerEvent`](https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent)
+handlers. You can tell device types apart with the `pointerType` property of the
+[`PointerEvent`](https://w3c.github.io/pointerevents/#pointerevent-interface)
 interface. For example, if you were coding a side navigation drawer, you could
 have the following logic on your `pointermove` event:
 
-    switch(ev.deviceType) {
+    switch(ev.pointerType) {
       case 'mouse':
         // Do nothing.
         break;
-      case 'finger':
+      case 'touch':
         // Allow drag gesture.
         break;
       case 'pen':
