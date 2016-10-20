@@ -11,6 +11,8 @@ upper_tabs:
       other:
       - name: Shows
         contents:
+        - title: Home
+          path: /web/shows/
         - title: New in Chrome
           path: https://www.youtube.com/playlist?list=PLNYkxOF6rcIDfz8XEA3loxY32tYh7CI3m
           status: external

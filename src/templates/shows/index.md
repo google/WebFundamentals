@@ -8,7 +8,6 @@ book_path: /web/shows/_book.yaml
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="m2XaN7x7y0o"
-          data-autoplay="1"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
