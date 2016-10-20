@@ -39,7 +39,7 @@ landing_page:
           Here you can directly search through all major web browser bug trackers to find
           a bug you're looking for, and also compare features across browser engines.
 
-          <iframe id="browser-issue-tracker" src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="280" scrolling="no"></iframe>
+          <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="280" scrolling="no"></iframe>
 
 
   - heading: Reporting bugs
@@ -105,7 +105,7 @@ landing_page:
 
   - heading: Discussing solutions
     items:
-    - image_path: images/content-developer-discussions-responsive-2x.png      
+    - image_path: images/content-developer-discussions-responsive-2x.png
     - description: >
         Discussing challenges you are facing with other developers,
         how to overcome them, best ways to use APIs and much more
