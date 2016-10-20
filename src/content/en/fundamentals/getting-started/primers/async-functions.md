@@ -292,7 +292,7 @@ If you're targeting browsers that support generators (which includes
 [Babel](https://babeljs.io/){: .external} will do this for you,
 [here's an example via the Babel REPL](https://goo.gl/0Cg1Sq){: .external}
 - note how similar the transpiled code is. This transformation is part of 
-[Babel's stage 3 preset](http://babeljs.io/docs/plugins/preset-stage-3/){: .external}.
+[Babel's es2017 preset](http://babeljs.io/docs/plugins/preset-es2017/){: .external}.
 
 Note: Babel REPL is fun to say. Try it.
 
