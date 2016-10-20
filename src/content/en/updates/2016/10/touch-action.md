@@ -19,11 +19,11 @@ The `touch-action` CSS property allows a developer to restrict how a user
 can interact with an element which is especially helpful to prevent events
 being dispatched when it's not necessary.
 
-Before Chrome 55, Chrome supported `pan-x` and `pan-y` which restricts elements
+Before version 55, Chrome supported `pan-x` and `pan-y` which restrict elements
 to scrolling in one direction.
 
-Below is an example of an element without a touch-action defined (left), as well
-as pan-x and pan-y (middle and right).
+The video below shows an example of an element without a touch-action defined
+(left), as well as pan-x and pan-y (middle and right).
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="bOtLdlFQAo0"
@@ -48,14 +48,14 @@ These properties force the user to start gestures in one direction before
 the element will respond. This is similar to the "pull-to-refresh" gesture
 which only responds when the user gestures downwards on the screen.
 
-The following video demonstrates pan-right and pan-down which
-requires gestures to start from right to left and bottom to top respectively.
+The following video demonstrates `pan-right` and `pan-down` which
+require gestures to start from right to left and bottom to top respectively.
 Once the gesture has started, you can actually
-pan back and forth - it's only the initial direction that is affected.
+pan back and forth. It's only the initial direction that is affected.
 
-while the video demonstrates this behavior, you might find it easier to try
+While the video demonstrates this behavior, you might find it easier to try
 yourself which you can by [checking out the
-sample for yourself](http://output.jsbin.com/batijohode).
+sample](http://output.jsbin.com/batijohode).
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="nYcGT4zNihE"
