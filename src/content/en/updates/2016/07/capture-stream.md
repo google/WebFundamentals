@@ -9,8 +9,8 @@ description: The captureStream() method enables a MediaStream to be captured fro
 
 <style>
 video {
-  border: 1px solid #ccc;
- max-width: 80%;
+  border: 1px solid #444;
+  max-width: 80%;
 }
 @media max-width: 500px {
   video {
@@ -64,7 +64,7 @@ Note that `captureStream()` can only be called after the video element is able t
 
 ## But why?
 
-The `captureStream()` method makes it possible to [record](https://developers.google.com/web/updates/2016/01/mediarecorder) or [live stream](http://www.html5rocks.com/en/tutorials/webrtc/basics/) from canvas and media elements:
+The `captureStream()` method makes it possible to [record](/web/updates/2016/01/mediarecorder) or [live stream](http://www.html5rocks.com/en/tutorials/webrtc/basics/) from canvas and media elements:
 
 * Record and stream game play from a `<canvas>`
 * Capture video from a camera, then add additional content or effects
