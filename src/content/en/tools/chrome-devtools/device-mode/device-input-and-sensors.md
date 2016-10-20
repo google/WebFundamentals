@@ -74,6 +74,6 @@ You can manipulate the following orientation parameters:
 
 You can also click and drag the model accelerometer to the desired orientation.
 
-Try out the accelerometer emulator using this [device orientation demo](http://www.html5rocks.com/en/tutorials/device/orientation/deviceorientationsample.html).
+Try out the accelerometer emulator using this [device orientation demo](http://googlesamples.github.io/web-fundamentals/fundamentals/native-hardware/device-orientation/dev-orientation.html).
 
 

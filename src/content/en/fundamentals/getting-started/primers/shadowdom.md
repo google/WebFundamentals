@@ -913,7 +913,7 @@ If you happen to be interested in the old v0 spec, check out the html5rocks arti
 
 ### Browser support {: #support}
 
-Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)), Opera 40, and Safari 10 are shipping shadow DOM v1. Edge is under consideration [with high priority](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=811542) to implement.
+Chrome 53 ([status](https://www.chromestatus.com/features/4667415417847808)), Opera 40, and Safari 10 are shipping shadow DOM v1. Edge is under consideration [with high priority](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/shadowdom/). Mozilla has an [open bug](https://bugzilla.mozilla.org/show_bug.cgi?id=811542) to implement.
 
 To feature detect shadow DOM, check for the existence of `attachShadow`:
 

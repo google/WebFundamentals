@@ -471,7 +471,7 @@ that, by default, the `<iframe>` code that Facebook provides loads a relative
 URL, `//facebook.com`. Change that to explicitly specify HTTPS:
 `https://facebook.com`. There's no reason to use HTTP if you don't have to.
 
-* Twitter's [Tweet button](https://twitter.com/about/resources/buttons)
+* Twitter's [Tweet button](https://publish.twitter.com/)
 relies on access to a script and a frame, both hosted at
 `https://platform.twitter.com`. (Twitter likewise provides a relative URL by
 default; edit the code to specify HTTPS when copy/pasting it locally.)

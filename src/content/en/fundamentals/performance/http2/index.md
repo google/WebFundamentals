@@ -76,8 +76,8 @@ source code for the experimental implementation of the new SPDY protocol:
 > So far we have only tested SPDY in lab conditions. The initial results are
 > very encouraging: when we download the top 25 websites over simulated home
 > network connections, we see a significant improvement in performance—pages
-> loaded up to 55% faster. [*(Chromium Blog)*](https://blog.chromium.org/2009/11
-> /2x-faster-web.html)
+> loaded up to 55% faster. 
+> [*(Chromium Blog)*](https://blog.chromium.org/2009/11/2x-faster-web.html)
 
 Fast-forward to 2012 and the new experimental protocol was supported in Chrome,
 Firefox, and Opera, and a rapidly growing number of sites, both large (for exampole,
