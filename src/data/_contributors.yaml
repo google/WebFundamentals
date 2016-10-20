@@ -398,6 +398,20 @@ mattgaunt:
   google: +MattGaunt
   twitter: gauntface
 
+sgomes:
+  name:
+    given: Sérgio
+    family: Gomes
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  twitter: sergiomdgomes
+  description:
+    en: Web DevRel @ Google
+
 simongong:
   name:
     given: Simon
@@ -1193,17 +1207,3 @@ maciejzasada:
     - author
   google: "104812516714503133849"
   email: maciej@unit9.com
-
-sgomes:
-  name:
-    given: Sérgio
-    family: Gomes
-  org:
-    name: Google
-    unit: Developer Relations
-  country: UK
-  role:
-    - author
-  twitter: sergiomdgomes
-  description:
-    en: Web DevRel @ Google
