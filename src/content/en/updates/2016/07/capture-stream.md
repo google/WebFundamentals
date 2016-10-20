@@ -10,13 +10,7 @@ description: The captureStream() method enables a MediaStream to be captured fro
 
 <style>
 video {
-  border: 1px solid #ccc;
-  max-width: 80%;
-}
-@media max-width: 500px {
-  video {
-    max-width: 100%;
-  }
+  max-width: 100%;
 }
 </style>
 
