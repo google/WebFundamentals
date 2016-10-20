@@ -19,12 +19,12 @@ which is in beta as of October 21. This list is subject to change at any time.
 
 ## Resources with non-script MIME types can no longer be executed
 
-Previous versions of Chrome allowed content to with several non-script [MIME
-types](https://developer.mozilla.org/en-
-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types){: .external} to be executed as
-script. In addition to the obvious security vulnerability, this problem also
-reduces the value of [content security policy](https://developer.mozilla.org/en-
-US/docs/Web/Security/CSP){: .external} settings like `script-src 'self'`.
+Previous versions of Chrome allowed content to with several non-script 
+[MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types){: .external}
+to be executed as script. In addition to the obvious security vulnerability,
+this problem also reduces the value of
+[content security policy](https://developer.mozilla.org/en-US/docs/Web/Security/CSP){: .external}
+settings like `script-src 'self'`.
 
 For example, a site might lock down same-origin JavaScript, yet still allow
 users to upload images that are served from that origin. Malicious users might
@@ -66,9 +66,9 @@ Some of these changes will have an effect on a very small number of sites. To
 mitigate issues ahead of time, we try to give developers advanced notice so that
 if needed, they can make the required changes to keep their sites running.
 
-Chrome currently has a [process for deprecations and removals of
-API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation){#
-.external} and the TL;DR is:
+Chrome currently has a
+[process for deprecations and removals of API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation){#.external}
+and the TL;DR is:
 
 * Announce on the
   [blink-dev](https://groups.google.com/a/chromium.org/forum/#!forum/blink-dev){# .external}
@@ -77,10 +77,9 @@ API's](http://www.chromium.org/blink#TOC-Launch-Process:-Deprecation){#
   is detected on a page.
 * Wait, monitor, and then remove feature as usage drops.
 
-You can find a list of all deprecated features in [chromestatus.com using the
-deprecated filter](https://www.chromestatus.com/features#deprecated){#
-.external} and removed features by applying the [removed
-filter](https://www.chromestatus.com/features#removed){# .external}. We will
-also  try to summarize some of the changes, reasoning, and migration paths in
-these posts. We will also try to summarize some of the changes, reasoning, and
-migration paths in these posts.
+You can find a list of all deprecated features in
+[chromestatus.com using the deprecated filter](https://www.chromestatus.com/features#deprecated){# .external}
+and removed features by applying the [removed filter](https://www.chromestatus.com/features#removed){# .external}.
+We will also  try to summarize some of the changes, reasoning, and migration
+paths in these posts. We will also try to summarize some of the changes,
+reasoning, and migration paths in these posts.
