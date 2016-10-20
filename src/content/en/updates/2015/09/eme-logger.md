@@ -7,7 +7,7 @@ description: EME Logger is a Chrome extension that logs Encrypted Media Extensio
 {# wf_tags: news,audio,video,media,eme #}
 {# wf_featured_image: /web/updates/images/2015-09-17-eme-logger/featured.png #}
 
-# The EME Logger extension {: .page-title }
+# The EME Logger Extension {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 

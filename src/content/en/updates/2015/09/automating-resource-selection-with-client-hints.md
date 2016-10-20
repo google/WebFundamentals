@@ -7,7 +7,7 @@ description: Image optimization is hard and automation is the key to success.
 {# wf_tags: news,performance,clienthints #}
 {# wf_featured_image: /web/updates/images/2015-09-01-automating-resource-selection-with-client-hints/ch-negotiation.png #}
 
-# Automating resource selection with Client Hints {: .page-title }
+# Automating Resource Selection with Client Hints {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
@@ -240,7 +240,7 @@ third party service or a CDN do this on her behalf.
 
 Also, remember this guy above? **With client hints the humble image tag is now DPR-, viewport-, and width-aware without any additional markup.** If you need to add art-direction you can use the `picture` tag, as we illustrated above, and otherwise all of your existing image tags just became a lot smarter. **Client hints enhance existing `img` and `picture` elements.**
 
-### Taking control over resource selection with ServiceWorker
+### Taking control over resource selection with service worker
 
 ServiceWorker is, in effect, a client-side proxy running in your browser. It 
 intercepts all outgoing requests and allows you to inspect, rewrite, cache, and 
@@ -285,7 +285,7 @@ Client hints provide annotations on resulting image requests that enable
 resource selection automation. ServiceWorker provides request and response 
 management capabilities on the client. This is the extensible web in action.
 
-### The Client Hints FAQ
+### The client hints FAQ
 
 1. **Where are client hints available?** <br/>
    Shipped in [Chrome 46](https://www.chromestatus.com/feature/5504430086553600). Under 
