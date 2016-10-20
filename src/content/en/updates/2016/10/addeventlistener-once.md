@@ -27,7 +27,7 @@ mode](http://stackoverflow.com/a/4616720/385997).
 
 ## A more configurable addEventListener()
 
-The `addEventListener()`method has come a long way since the early days of the
+The `addEventListener()` method has come a long way since the early days of the
 web, and its new functionality is configured via a supercharged version of that
 third parameter. Recent changes to the [method's
 definition](https://dom.spec.whatwg.org/#dom-eventtarget-addeventlistener) allow
@@ -38,7 +38,7 @@ option is not specified.
 
 We're happy to announce that Chrome 55 adds support for the `once` option in
 that configuration object, alongside the `passive` ([implemented in Chrome
-51](https://developers.google.com/web/updates/2016/06/passive-event-listeners))
+51](/web/updates/2016/06/passive-event-listeners))
 and `capture` options ([implemented in Chrome
 49](https://www.chromestatus.com/feature/5718574840676352)). For example:
 
@@ -93,7 +93,7 @@ difference:
       });
     }
 
-By default, the `'load'` event listener callback will remain in scope when it
+By default, the `load` event listener callback will remain in scope when it
 finishes running, even though it's never used again. Because the `data` variable
 is used inside the callback, it will also remain in scope, and never get garbage
 collected. If the callback were removed via the `once` parameter, though, both
