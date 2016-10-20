@@ -10,13 +10,12 @@ description: Sharing is caring. Chrome is running an Origin Trial to enable nati
 
 # Introducing the Web Share API {: .page-title }
 
-Good news, everybody! [Matt Giuca](https://twitter.com/mgiuca){: .external } 
+Good news, everybody! [Matt Giuca](https://twitter.com/mgiuca){: .external }
 on the Chrome team has been working on a
-[simple API](https://github.com/WICG/web-share/blob/master/docs/interface.md){: .external }
+[simple API](https://github.com/WICG/web-share/blob/master/docs/interface.md)
 called
-[Web Share](https://github.com/WICG/web-share/blob/master/docs/explainer.md){: .external }
-that allows websites to invoke the native sharing capabilities of the host
-platform.
+[Web Share](https://github.com/WICG/web-share/blob/master/docs/explainer.md)
+that allows websites to invoke the native sharing capabilities of the host platform.
 
 There have been a number of ways to invoke native sharing capabilities on the
 platform, but they all have significant drawbacks.  There was
