@@ -58,7 +58,7 @@ landing_page:
         path: /web/fundamentals/security/encrypt-in-transit/why-https
         classname: wf-small-link
 
-    - heading: How to file a bug
+    - heading: How to file a good bug
       description: >
         When filing bugs, the more information the better, and if you have
         a reproducable test with a limited scope there's a much bigger chance
@@ -70,8 +70,8 @@ landing_page:
       - label: How to create a minimized reproducable test case
         path: https://crbug.com
         classname: wf-small-link
-      - label: How to file a bug
-        path: https://crbug.com
+      - label: How to file a good bug
+        path: /web/feedback/file-a-bug/
         classname: wf-small-link
       - label: JSFiddle
         path: https://jsfiddle.net/
