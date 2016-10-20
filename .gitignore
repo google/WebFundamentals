@@ -4,7 +4,7 @@
 node_modules/*
 .drone.sec.yml
 src/data/youtubeAPIKey.txt
-gulp-tasks/deploy.js
+gulp-tasks/devsite.js
 scratch/*
 tools/claat
 
