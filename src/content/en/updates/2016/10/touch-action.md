@@ -1,15 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: Touch actions allow a developer to define how a user can interact
-with an element and Chrome now has wider support for touch-action options in
-Chrome 55.
+description: Touch actions allow a developer to define how a user can interact with an element and Chrome now has wider support for touch-action options in Chrome 55.
 
 {# wf_published_on: 2016-10-20 #}
 {# wf_updated_on: 2016-10-20 #}
 {# wf_featured_image: /web/updates/images/generic/focus.png #}
 {# wf_tags: chrome55,input #}
-{# wf_featured_snippet: Touch action is a simple way to define how a user can
-  interact with an element. #}
+{# wf_featured_snippet: Touch action is a simple way to define how a user can interact with an element. #}
 
 # Touch Action Options {: .page-title }
 
@@ -93,3 +90,5 @@ This video shows the difference between `touch-action: pan-x` and
 
 All of these properties should simplify some of the logic that would
 otherwise need to implemented by developers using `pointer-events`.
+
+{% include "comment-widget.html" %}
