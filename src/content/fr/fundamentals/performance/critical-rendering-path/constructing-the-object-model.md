@@ -29,7 +29,7 @@ Commençons par un exemple le plus simple possible : une page en HTML brut avec 
 <img src="images/full-process.png" alt="Processus de construction du DOM">
 
 1. **Conversion** : le navigateur lit les octets bruts du HTML sur le disque ou le réseau, et les traduit en caractères individuels en fonction de l'encodage spécifique du fichier (UTF-8, par exemple).
-1. **Création de jetons** : le navigateur convertit les chaînes de caractères en différents jetons spécifiés par la [norme HTML5 du W3C](http://www.w3.org/TR/html5/), telles que `<html>`, `<body>` et d'autres chaînes entre chevrons. Chaque jeton possède une signification particulière et un ensemble de règles.
+1. **Création de jetons** : le navigateur convertit les chaînes de caractères en différents jetons spécifiés par la [norme HTML5 du W3C](http://www.w3.org/TR/html5/){: .external }, telles que `<html>`, `<body>` et d'autres chaînes entre chevrons. Chaque jeton possède une signification particulière et un ensemble de règles.
 1. **Analyse lexicale** : les jetons émis sont convertis en 'objets' qui définissent leurs propriétés et leurs règles.
 1. **Construction du DOM** : enfin, puisque le balisage HTML définit les relations entre les différentes balises (certaines balises sont contenues dans d'autres), les objets créés sont associés selon une arborescence, qui capture également la relation parent-enfant définie dans le balisage d'origine : l'objet _HTML_ est un parent de l'objet _body_, _body_ est un parent de l'objet _paragraph_, etc.
 

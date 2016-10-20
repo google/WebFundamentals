@@ -18,7 +18,7 @@ It's worth going incognito when debugging (nice clean slate, no extensions).
 
 DevTools will now persist your appearance preferences (docking position, size, pane layout, etc) and devtools settings (disable cache, etc) into the incognito window.
 
-More information: <a href="https://code.google.com/p/chromium/issues/detail?id=376788#c58">https://code.google.com/p/chromium/issues/detail?id=376788#c58
+More information: <a href="https://code.google.com/p/chromium/issues/detail?id=376788#c58">https://code.google.com/p/chromium/issues/detail?id=376788#c58</a>
 
 <em>Now in Chrome Canary</em>
 

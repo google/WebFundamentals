@@ -21,6 +21,15 @@ function buildFeeds(buildType, callback) {
     if (buildType === 'production') {
       return callback('youtubeAPIKey.txt not found.');
     }
+    var videoPlaceholder = {snippet: 
+      {title: 'Lorem Ipsum - placeholder title', resourceId: {videoId: 'dQw4w9WgXcQ'}}
+    };
+    var context = {
+      videos: [videoPlaceholder, videoPlaceholder, videoPlaceholder, videoPlaceholder]
+    };
+    var template = path.join(GLOBAL.WF.src.templates, 'shows', 'index.md');
+    var outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'index.md');
+    wfTemplateHelper.renderTemplate(template, context, outputFile);
     callback();
     return;
   }
@@ -67,8 +76,8 @@ function buildFeeds(buildType, callback) {
       var context = {
         videos: response.items
       };
-      var template = path.join(GLOBAL.WF.src.templates, 'shows', 'index.yaml');
-      var outputFile = path.join(GLOBAL.WF.src.content, 'shows', '_index.yaml');
+      var template = path.join(GLOBAL.WF.src.templates, 'shows', 'index.md');
+      var outputFile = path.join(GLOBAL.WF.src.content, 'shows', 'index.md');
       wfTemplateHelper.renderTemplate(template, context, outputFile);
 
       context = {

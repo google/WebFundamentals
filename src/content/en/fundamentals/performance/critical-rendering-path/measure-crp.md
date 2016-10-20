@@ -5,20 +5,54 @@ description: Learn to measure the critical rendering path.
 {# wf_updated_on: 2014-09-17 #}
 {# wf_published_on: 2014-03-31 #}
 
-# Measuring the Critical Rendering Path with Navigation Timing {: .page-title }
+# Measuring the Critical Rendering Path {: .page-title }
 
 {% include "web/_shared/contributors/ilyagrigorik.html" %}
 
-You can't optimize what you can't measure. Thankfully, the Navigation 
-Timing API gives us all the necessary tools to measure each step of the 
-critical rendering path!
+The foundation of every solid performance strategy is good measurement and
+instrumentation. You can't optimize what you can't measure. This doc
+explains different approaches for measuring CRP performance.
 
-### TL;DR {: .hide-from-toc }
-- Navigation Timing provides high resolution timestamps for measuring CRP.
-- Browser emits series of consumable events which capture various stages of the CRP.
+* The Lighthouse approach runs a series of automated tests against a page,
+  and then generates a report on the page's CRP performance. This approach
+  provides a quick and easy high-level overview of CRP performance of a
+  particular page loaded in your browser, allowing you to rapidly test,
+  iterate, and improve its performance.
+* The Navigation Timing API approach captures [Real User
+  Monitoring (RUM)](https://en.wikipedia.org/wiki/Real_user_monitoring)
+  metrics. As the name implies, these metrics are captured from real user
+  interactions with your site and provide an accurate view into
+  real-world CRP performance, as experienced by your users across a variety
+  of devices and network conditions.
 
+In general, a good approach is to use Lighthouse to identify obvious CRP
+optimization opportunities, and then to instrument your code with the
+Navigation Timing API to monitor how your app performs out in the wild.
 
-The foundation of every solid performance strategy is good measurement and instrumentation. Turns out, that is exactly what the Navigation Timing API provides.
+## Auditing a page with Lighthouse {: #lighthouse }
+
+Lighthouse is a web app auditing tool that runs a series of tests against a
+given page, and then displays the page's results in a consolidated report. You
+can run Lighthouse as a Chrome Extension or NPM module, which is
+useful for integrating Lighthouse with continuous integration systems.
+
+See [Auditing Web Apps With Lighthouse](/web/tools/lighthouse) to get started.
+
+When you run Lighthouse as a Chrome Extension, your page's CRP results look
+like the screenshot below.
+
+![Lighthouse's CRP audits](images/lighthouse-crp.png)
+
+See [Critical Request Chains][crc] for more information on this audit's
+results.
+
+[crc]: /web/tools/lighthouse/audits/critical-request-chains
+
+## Instrumenting your code with the Navigation Timing API {: #navigation-timing }
+
+The combination of the Navigation Timing API and other browser events emitted
+as the page loads allows you to capture and record the real-world CRP
+performance of any page.
 
 <img src="images/dom-navtiming.png"  alt="Navigation Timing">
 
@@ -61,3 +95,10 @@ The above example may seem a little daunting on first sight, but in reality it i
 
 All said and done, we now have some specific milestones to track and a simple function to output these measurements. Note that instead of printing these metrics on the page you can also modify the code to send these metrics to an analytics server ([Google Analytics does this automatically](https://support.google.com/analytics/answer/1205784)), which is a great way to keep tabs on performance of your pages and identify candidate pages that can benefit from some optimization work.
 
+## What about DevTools? {: #devtools }
+
+Although these docs sometimes use the Chrome DevTools Network panel to
+illustrate CRP concepts, DevTools is currently not well-suited for CRP
+measurements because it does not have a built-in mechanism for isolating
+critical resources. Run a [Lighthouse](#lighthouse) audit to help
+identify such resources.
