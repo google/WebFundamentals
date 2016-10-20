@@ -189,22 +189,40 @@ This combination satisfies the basic storage needs for many mobile web apps.
 Look for a coming article in which we’ll cover how to address common storage
 patterns in detail, with accompanying code examples.
 
+## Debugging storage in Chrome DevTools {: #devtools }
+
+Check out the following docs to learn more about using Chrome DevTools to
+inspect and debug your web storage API of choice. APIs not mentioned
+here are either not supported in DevTools or are not applicable.
+
+* [Local Storage](/web/tools/chrome-devtools/manage-data/local-storage#local-storage)
+* [Session Storage](/web/tools/chrome-devtools/manage-data/local-storage#session-storage)
+* [Cookies](/web/tools/chrome-devtools/manage-data/cookies)
+* [Web SQL](/web/tools/chrome-devtools/manage-data/local-storage#web-sql)
+* [Cache](/web/tools/chrome-devtools/progressive-web-apps#caches)
+* [IndexedDB](/web/tools/chrome-devtools/manage-data/local-storage#indexeddb)
+
+If you're using multiple storage APIs, check out the Clear Storage feature of
+DevTools. This feature lets you clear multiple storages with a single button
+click. See [Clear service workers, storage, databases, and
+caches](/web/tools/chrome-devtools/manage-data/local-storage#clear-storage) for
+more information.
+
 ## Where to go next…
 
 Now that we’ve reviewed some of the relevant ways to think about storage
 mechanisms and compared the most popular APIs and services available today,
-we'll be adadding more content soon to dive more deeply into one or more topics
+we'll be adding more content soon to dive more deeply into one or more topics
 of interest:
 
-* Offline Storage Recommendations for Progressive Web Apps
+* [Offline Storage Recommendations for Progressive Web Apps](offline-for-pwa)
 
-* Common Storage Patterns
+* Common Storage Patterns (coming soon)
 
-* Recommended Back End Storage Methods
+* Recommended Back End Storage Methods (coming soon)
 
-* Deep Dive: IndexedDB
+* Deep Dive: IndexedDB (coming soon)
 
-* Deep Dive: Cache API
+* Deep Dive: Cache API (coming soon)
 
-* Analysis of Popular Storage Frameworks
-
+* Analysis of Popular Storage Frameworks (coming soon)

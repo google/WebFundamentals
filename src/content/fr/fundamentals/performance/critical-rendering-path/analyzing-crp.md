@@ -14,7 +14,7 @@ Identifier et résoudre les problèmes de chemin critique du rendu nécessite un
 
 
 
-L'objectif de l'optimisation du chemin critique du rendu est de permettre au navigateur d'afficher la page aussi vite que possible. Des pages plus rapides se traduisent par une hausse de l'engagement et du nombre de pages vues, et par une [amélioration des conversions](http://www.google.com/think/multiscreen/success.html). Par conséquent, pour minimiser le temps passé par l'internaute à scruter un écran vide, nous allons optimiser le choix et l'ordre dans lequel charger les ressources.
+L'objectif de l'optimisation du chemin critique du rendu est de permettre au navigateur d'afficher la page aussi vite que possible. Des pages plus rapides se traduisent par une hausse de l'engagement et du nombre de pages vues, et par une [amélioration des conversions](http://www.google.com/think/multiscreen/success.html){: .external }. Par conséquent, pour minimiser le temps passé par l'internaute à scruter un écran vide, nous allons optimiser le choix et l'ordre dans lequel charger les ressources.
 
 Afin d'illustrer ce processus, nous allons commencer par le cas le plus simple possible, puis construire progressivement une page pour y inclure des ressources, des styles et une logique applicative supplémentaires. En même temps, nous verrons les cas qui peuvent poser problème et comment optimiser chacun d'entre eux.
 
