@@ -32,7 +32,7 @@ description: 네이티브 앱 설치 배너는 웹 앱 설치 배너와 비슷�
   - 배너 실행창에서 사용될 `name`
   - 144x144 png 형식의 아이콘 (아이콘 정의에 mime type의 `image/png`를 꼭 지정)
   - 앱 정보를 포함하는 `related_applications`
-* [HTTPS](/web/fundamentals/security/encrypt-in-transit/) 통신
+* [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https) 통신
 * 이틀 동안 이주 동안 두 번 방문
 
 ## 매니페스트 요건 Manifest Requirements
