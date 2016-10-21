@@ -120,3 +120,5 @@ div.none {
   Google ipsum dolor sit amet, consectetur adipiscing elit.
 </div>
 {% endframebox %}
+
++{% include "comment-widget.html" %}
