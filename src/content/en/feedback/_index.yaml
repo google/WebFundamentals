@@ -11,10 +11,10 @@ landing_page:
     items:
     - description: >
         <p>
-          Making sure that your web apps and sites work across platforms and browsers is crucial,
-          one of the corner stones of the web and key to reaching and serving all your users.
-          Therefore, we want to give you options both for reporting bugs and inconsistencies as
-          well as help when you are building something.
+          We’re committed to making your site work across platforms
+          and browsers so you can be successful. We want to make it
+          easy to find and report bugs in any browser, as well as
+          help you find resources while you’re building your site.
          </p>
          <p>&nbsp;</p>
       image_path: images/hero-2x.png
@@ -36,9 +36,8 @@ landing_page:
     items:
     - image_path: images/content-search-for-bugs-responsive-2x.png
     - description: >
-          Here you can directly search through all major web browser bug trackers to find
-          a bug you're looking for, and also compare features across browser engines.
-
+          Here you can search through all major browser bug trackers to find a bug you're looking for.
+          <p>&nbsp;</p>
           <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="250" scrolling="no"></iframe>
 
   - items:
@@ -49,9 +48,9 @@ landing_page:
     items:
     - heading: Cross-browser testing
       description: >
-        We strongly recommend that you test in multiple web browsers
-        on multiple platforms. Preferably on real machines and devices,
-        but another option for doing that is using BrowserStack.
+        We recommend that you test in multiple web browsers on
+        multiple platforms. Real machines and devices are best,
+        but another great option is using BrowserStack.
       image_path: images/content-node-responsive-2x.png
       buttons:
       - label: BrowserStack
@@ -59,9 +58,9 @@ landing_page:
 
     - heading: How to file a good bug
       description: >
-        When filing bugs, the more information the better, and if you have
-        a reproducable test with a limited scope there's a much bigger chance
-        your bug will be solved.
+        When filing bugs, the more information the better.
+        If you have a reproducible test with a limited scope
+        there's a better chance your bug will be solved.
       image_path: images/content-file-responsive-2x.png
       buttons:
       - label: Learn more
@@ -81,10 +80,9 @@ landing_page:
 
     - heading: Reporting bugs
       description: >
-        If you encounter issues, inconsistencies, regressions
-        or interoperability problems, contributing to existing
-        bugs or report new ones helps a lot in making the web
-        platform better and more predictable for developers.
+        If you encounter browser issues, adding support to
+        existing bugs or reporting new ones helps make the
+        web platform better.
       image_path: images/content-spotlight-responsive-2x.png
       buttons:
       - label: Learn more
@@ -109,9 +107,8 @@ landing_page:
     items:
     - image_path: images/content-developer-discussions-responsive-2x.png
     - description: >
-        Discussing challenges you are facing with other developers,
-        how to overcome them, best ways to use APIs and much more
-        is a great way for both learning and sharing.
+        Discussing challenges you are facing with other developers is a
+        great way for both learning and share best practices.
       buttons:
       - label: progressive-web-apps tag on Stack Overflow
         path: http://stackoverflow.com/questions/tagged/progressive-web-apps
