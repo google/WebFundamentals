@@ -32,7 +32,7 @@ Use the Device Mode to build fully responsive, mobile-first web experiences.</p>
 <div style="clear:both;"></div>
 
 ### Elements
-<img src="/web/tools/chrome-devtools/images/elements.png" alt="Elements Panel" class="attempt-right">
+<img src="images/elements-panel.png" alt="Elements Panel" class="attempt-right">
 Use the Elements panel to iterate on the layout and design of your site by freely manipulating the DOM and CSS.
 
 * [Inspect and Tweak Your Pages](/web/tools/chrome-devtools/inspect-styles/)
@@ -42,7 +42,7 @@ Use the Elements panel to iterate on the layout and design of your site by freel
 <div style="clear:both;"></div>
 
 ### Console
-<img src="/web/tools/chrome-devtools/images/console.png" alt="Console Panel" class="attempt-right">
+<img src="images/console-panel.png" alt="Console Panel" class="attempt-right">
 Use the Console to log diagnostic information during development or use it as a shell to interact with the JavaScript on the page.
 
 * [Using the Console](/web/tools/chrome-devtools/console/)
@@ -51,7 +51,7 @@ Use the Console to log diagnostic information during development or use it as a 
 <div style="clear:both;"></div>
 
 ### Sources
-<img src="/web/tools/chrome-devtools/images/sources.png" alt="Sources Panel" class="attempt-right">
+<img src="images/sources-panel.png" alt="Sources Panel" class="attempt-right">
 Debug your JavaScript using breakpoints in the Sources Panel or connect your local files via Workspaces to use DevTools live editor.
 
 * [Debugging with Breakpoints](/web/tools/chrome-devtools/javascript/add-breakpoints)
@@ -61,7 +61,7 @@ Debug your JavaScript using breakpoints in the Sources Panel or connect your loc
 <div style="clear:both;"></div>
 
 ### Network
-<img src="/web/tools/chrome-devtools/images/network.png" alt="Network Panel" class="attempt-right">
+<img src="images/network-panel.png" alt="Network Panel" class="attempt-right">
 Use the Network panel to get insights into requested and downloaded resources and optimize your page load performance.
 
 * [Network Panel Basics](/web/tools/chrome-devtools/network-performance/resource-loading)
@@ -71,7 +71,7 @@ Use the Network panel to get insights into requested and downloaded resources an
 <div style="clear:both;"></div>
 
 ### Timeline
-<img src="/web/tools/chrome-devtools/images/timeline.png" alt="Timeline Panel" class="attempt-right">
+<img src="images/timeline-panel.png" alt="Timeline Panel" class="attempt-right">
 Use the Timeline to improve the run time performance of your page by recording and exploring the various events that happen during the lifecycle of a site.
 
 * [How to look at performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
@@ -81,7 +81,7 @@ Use the Timeline to improve the run time performance of your page by recording a
 <div style="clear:both;"></div>
 
 ### Profiles
-<img src="/web/tools/chrome-devtools/images/profiles.png" alt="Profiles Panel" class="attempt-right">
+<img src="images/profiles-panel.png" alt="Profiles Panel" class="attempt-right">
 Use the Profiles panel if you need more information than the Timeline provide, for instance to track down memory leaks.
 
 * [JavaScript CPU Profiler](/web/tools/chrome-devtools/rendering-tools/js-execution)
@@ -90,7 +90,7 @@ Use the Profiles panel if you need more information than the Timeline provide, f
 <div style="clear:both;"></div>
 
 ### Application
-<img src="/web/tools/chrome-devtools/images/resources.png" alt="Application Panel" class="attempt-right">
+<img src="images/application-panel.png" alt="Application Panel" class="attempt-right">
 Use the Resources panel to inspect all resources that are loaded, including IndexedDB or Web SQL databases, local and session storage, cookies, Application Cache, images, fonts, and stylesheets.
 
 * [Manage data](/web/tools/chrome-devtools/manage-data/local-storage)
@@ -98,7 +98,7 @@ Use the Resources panel to inspect all resources that are loaded, including Inde
 <div style="clear:both;"></div>
 
 ### Security
-<img src="/web/tools/chrome-devtools/images/security.png" alt="Security Panel" class="attempt-right">
+<img src="images/security-panel.png" alt="Security Panel" class="attempt-right">
 Use the Security Panel to debug mixed content issues, problems with your certificate and more.
 
 * [Security](/web/tools/chrome-devtools/security)
