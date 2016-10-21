@@ -105,7 +105,7 @@ final output below:
 #### Check Your Javascript
 
 JSHint is a tool which scans your JavaScript code to check for possible problems
-with your JavaScript logic and [enforces coding best practices](http://www.jshint.com/docs/){: .external }.
+with your JavaScript logic and [enforces coding best practices](//www.jshint.com/docs/){: .external }.
 
 The tool runs whenever you build the project or, if you are running gulp server,
 whenever you make a change to a JavaScript file.

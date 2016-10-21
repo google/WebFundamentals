@@ -13,7 +13,7 @@ description: The sw-offline-google-analytics library gives you everything you ne
 
 
 
-So you've got a [progressive web app](/web/progressive-web-apps/), complete with a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) that allows it to work offline. Great! You've also got existing Google Analytics set up for your web app, and you don't want to miss out on any analytical insights coming from usage that occurs while offline. But if you try to send data to Google Analytics while offline, those requests will fail and the data will be lost.
+So you've got a [progressive web app](/web/progressive-web-apps/), complete with a [service worker](/web/fundamentals/getting-started/primers/service-workers) that allows it to work offline. Great! You've also got existing Google Analytics set up for your web app, and you don't want to miss out on any analytical insights coming from usage that occurs while offline. But if you try to send data to Google Analytics while offline, those requests will fail and the data will be lost.
 
 The solution, it shouldn't surprise you to learn, is service workers! Specifically, it's adding code to your service worker to store Google Analytics requests (using [`IndexedDB`](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)) and retry them later when there's hopefully a network available. We [shared code](/web/showcase/2015/service-workers-iowa#offline_google_analytics) to handle this logic as part of the [open source](https://github.com/GoogleChrome/ioweb2016) [Google I/O web app](https://events.google.com/io2016/){: .external }, but realized this was a useful pattern, and copying and pasting code can be fragile. 
 

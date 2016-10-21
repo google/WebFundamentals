@@ -36,7 +36,7 @@ given page, and then displays the page's results in a consolidated report. You
 can run Lighthouse as a Chrome Extension or NPM module, which is
 useful for integrating Lighthouse with continuous integration systems.
 
-See [Auditing Web Apps With Lighthouse](/web/tools/lighthouse) to get started.
+See [Auditing Web Apps With Lighthouse](/web/tools/lighthouse/) to get started.
 
 When you run Lighthouse as a Chrome Extension, your page's CRP results look
 like the screenshot below.

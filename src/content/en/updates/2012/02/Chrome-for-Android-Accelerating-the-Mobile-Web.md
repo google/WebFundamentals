@@ -79,7 +79,7 @@ web development question, please post it on Stack Overflow, tagged with the
 [codesite]: http://code.google.com/chrome/mobile/
 [cdt]: http://code.google.com/chrome/devtools/docs/overview.html
 [IndexedDB]: http://www.html5rocks.com/en/tutorials/indexeddb/todo/
-[Web Workers]: http://www.html5rocks.com/en/tutorials/workers/basics/
+[Web Workers]: //www.html5rocks.com/en/tutorials/workers/basics/
 [Web Sockets]: http://www.html5rocks.com/en/tutorials/websockets/basics/
 [mcrbug]: http://mcrbug.com
 [new-mcrbug]: http://new.mcrbug.com

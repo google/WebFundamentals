@@ -27,7 +27,7 @@ The Push API in Chrome relies on a few different pieces of technology, including
 [Web App
 Manifests](http://updates.html5rocks.com/2014/11/Support-for-installable-web-apps-with-webapp-manifest-in-chrome-38-for-Android)
 and [Service
-Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/).
+Workers](/web/fundamentals/getting-started/primers/service-workers).
 In this post we'll look at each of these technologies, but only the bare minimum
 to get push messaging up and running. To get a better understanding of some of
 the other features of manifests and the offline capabilities of service workers,
@@ -301,7 +301,7 @@ This will ask the user to give your origin permission to send push
 notifications. Without this permission, you will not be able to successfully
 subscribe.
 
-If the [promise](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external } returned
+If the [promise](/web/fundamentals/getting-started/primers/promises) returned
 by the **subscribe()** method resolves, you'll be given a
 [PushSubscription](http://w3c.github.io/push-api/#idl-def-PushSubscription)
 object which will contain an **endpoint**.
@@ -384,9 +384,9 @@ This code registers a **push** event listener and displays a notification with a
 predefined title, body text, icon and a notification tag.
 One subtlety to highlight with this example is the **_event.waitUntil()_**
 method. This method takes in a
-[promise](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external } and extends the
+[promise](/web/fundamentals/getting-started/primers/promises) and extends the
 lifetime of an event handler (or can be thought of as keeping the service
-  worker alive), until the promise is
+worker alive), until the promise is
 [settled](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md#states);
 In this case, the promise passed to `event.waitUntil` is the returned Promise
 from **showNotification()**.  

@@ -27,7 +27,7 @@ its codename, IOWA) showcased everything the modern web could do. A full
 offline-first experience was at the top of our list of must-have features.
 
 If you’ve read any of the other articles on this site recently, you’ve
-undoubtedly encountered [service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/),
+undoubtedly encountered [service workers](/web/fundamentals/getting-started/primers/service-workers),
 and you won’t be surprised to hear that IOWA’s offline support is heavily
 reliant on them. Motivated by the real-world needs of IOWA, we developed two
 libraries to handle two different offline use cases:
@@ -84,7 +84,7 @@ changes to existing files and add new files without having those worries.
 that includes a unique [MD5 hash](https://en.wikipedia.org/wiki/MD5) for each
 resource that gets precached. Each time an existing resource changes,
 or a new resource is added, the service worker script is regenerated. This
-automatically triggers the [service worker update flow](http://www.html5rocks.com/en/tutorials/service-worker/introduction/#lifecycle),
+automatically triggers the [service worker update flow](/web/fundamentals/getting-started/primers/service-workers#lifecycle),
 in which the new resources are cached and out of date resources are purged.
 Any existing resources that have identical MD5 hashes are left as-is. That
 means users who have visited the site before only end up downloading the
@@ -384,7 +384,7 @@ resources. Via `sw-precache`, we implemented an aggressive cache-first
 strategy for our application’s shell, meaning our service worker would not check the
 network for updates before returning the HTML, JavaScript, and CSS on the page.
 
-Fortunately, we were able to take advantage of [service worker lifecycle events](http://www.html5rocks.com/en/tutorials/service-worker/introduction/#lifecycle)
+Fortunately, we were able to take advantage of [service worker lifecycle events](/web/fundamentals/getting-started/primers/service-workers#lifecycle)
 to detect when new content was available after the page had already loaded.
 When an updated service worker is detected, we display a
 [toast message](https://www.google.com/design/spec/components/snackbars-toasts.html#snackbars-toasts-usage)

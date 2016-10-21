@@ -37,7 +37,7 @@ You'll also learn the basics of Service Workers.
 
 * Chrome 42 or above
 * A basic understanding of  [git](http://git-scm.com/), and  [Chrome DevTools](https://developer.chrome.com/devtools)
-* Experience of  [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/) and  [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) would also be useful, but is not crucial 
+* Experience of  [Promises](/web/fundamentals/getting-started/primers/promises) and  [Service Worker](/web/fundamentals/getting-started/primers/service-workers) would also be useful, but is not crucial 
 * The sample code
 * A text editor
 * A terminal window to run command line tools
@@ -582,7 +582,7 @@ __What about Firefox?__
 *  [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
 *  [Best Practices for Push Notifications Permission UX](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/edit)
 *  [Do's and Don'ts for Notifications](http://android-developers.blogspot.co.uk/2015/08/get-dos-and-donts-for-notifications.html)
-*  [Notifications guidelines](https://www.google.com/design/spec/patterns/notifications.html)
+*  [Notifications guidelines](https://material.google.com/patterns/notifications.html)
 *  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
 

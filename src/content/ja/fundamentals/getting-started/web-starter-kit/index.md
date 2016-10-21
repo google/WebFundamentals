@@ -102,7 +102,7 @@ Browser Sync は、複数の端末間でサイトをテストするのに役立�
 #### Javascript を確認する
 
 JSHint は、JavaScript コードをスキャンするツールです。これを使用して、JavaScript のロジックで発生する可能性のある
-問題および [enforces coding best practices](http://www.jshint.com/docs/) をチェックします。
+問題および [enforces coding best practices](//www.jshint.com/docs/) をチェックします。
 
 プロジェクトをビルドするたびにツールが実行されます。また、gulp サーバーを実行している場合は、
 JavaScript ファイルに変更を加える度に実行されます。

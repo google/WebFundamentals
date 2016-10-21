@@ -25,7 +25,7 @@ An application shell is the secret to reliably good performance. Think of your a
 
 ## Background
 
-Alex Russell's [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) article describes how a web app can *progressively* change through use and user consent to provide a more native-app-like experience complete with offline support, push notifications and the ability to be added to the home screen. It depends very much on the functionality and performance benefits of [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) and their caching abilities. This allows you to focus on **speed**, giving your web apps the same **instant loading** and regular updates you're used to seeing in native applications.
+Alex Russell's [Progressive Web Apps](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/) article describes how a web app can *progressively* change through use and user consent to provide a more native-app-like experience complete with offline support, push notifications and the ability to be added to the home screen. It depends very much on the functionality and performance benefits of [service worker](/web/fundamentals/getting-started/primers/service-workers) and their caching abilities. This allows you to focus on **speed**, giving your web apps the same **instant loading** and regular updates you're used to seeing in native applications.
 
 To take full advantage of these capabilities we need a new way of thinking about websites: the **application shell architecture**.
 
@@ -44,7 +44,7 @@ Service workers also have a limited set of APIs when compared to JavaScript in a
 
 A service worker can intercept network requests made from a page (which triggers a fetch event on the service worker) and return a response retrieved from the network, or retrieved from a local cache, or even constructed programmatically. Effectively, it's a programmable proxy in the browser.  The neat part is that, regardless of where the response comes from, it looks to the web page as though there were no service worker involvement.
 
-To learn more about service workers in depth, read an [Introduction to Service Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/).
+To learn more about service workers in depth, read an [Introduction to Service Workers](/web/fundamentals/getting-started/primers/service-workers).
 
 ## Performance benefits
 

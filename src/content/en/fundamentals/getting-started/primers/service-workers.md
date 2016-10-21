@@ -31,7 +31,7 @@ experiences, giving developers complete control over the
 experience.
 
 Before service worker, there was one other API that gave users an offline
-experience on the web called [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
+experience on the web called [AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/){: .external }. 
 The major issues with AppCache are the [number of gotcha's](http://alistapart.com/article/application-cache-is-a-douchebag) 
 that exist as well as the fact that while the design works particularly well for single page web 
 apps, it's not so good with for multi-page sites. Service workers have been designed to 
@@ -39,7 +39,7 @@ avoid these common pain points.
 
 Things to note about a service worker:
 
-* It's a [JavaScript Worker](http://www.html5rocks.com/en/tutorials/workers/basics/){: .external },
+* It's a [JavaScript Worker](//www.html5rocks.com/en/tutorials/workers/basics/){: .external },
   so it can't access the DOM directly. Instead, a service worker can 
   communicate with the pages it controls by responding to messages sent via 
   the [postMessage](https://html.spec.whatwg.org/multipage/workers.html#dom-worker-postmessage) 
@@ -389,7 +389,7 @@ install due to an error being thrown, or a rejected promise being passed to
 To work around this, go to `chrome://serviceworker-internals` and check "Open
 DevTools window and pause JavaScript execution on service worker startup for
 debugging", and put a debugger statement at the start of your install event. 
-This, along with <a href="https://developer.chrome.com/devtools/docs/javascript-debugging#pause-on-uncaught-exceptions">Pause on uncaught exceptions</a>,
+This, along with <a href="/web/tools/chrome-devtools/javascript/add-breakpoints#exceptions">Pause on uncaught exceptions</a>,
 should reveal the issue.
 
 

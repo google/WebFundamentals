@@ -20,7 +20,7 @@ book_path: /web/updates/_book.yaml
 
 <p>...and here's the code: <a href="https://www.github.com/samdutton/rtcshare" title="Github code repository for WebRTC screensharing extension">github.com/samdutton/rtcshare</a></p>
 
-<p>In essence, we've built an experimental Chrome extension that uses <code>RTCPeerConnection</code> and <a href="http://developer.chrome.com/dev/extensions/tabCapture.html" title="chrome.tabCapture API documentation"><code>chrome.tabCapture</code></a> to share a live 'video' of a browser tab. If you want to try it out, you'll need <a href="https://tools.google.com/dlpage/chromesxs/">Chrome Canary</a>, and you'll need to enable Experimental Extension APIs on the <em>about:flags</em> page.</p>
+<p>In essence, we've built an experimental Chrome extension that uses <code>RTCPeerConnection</code> and <a href="http://developer.chrome.com/dev/extensions/tabCapture.html" title="chrome.tabCapture API documentation"><code>chrome.tabCapture</code></a> to share a live 'video' of a browser tab. If you want to try it out, you'll need <a href="https://www.google.com/intl/en/chrome/browser/canary.html/">Chrome Canary</a>, and you'll need to enable Experimental Extension APIs on the <em>about:flags</em> page.</p>
 
 <p>Our prototype relies heavily on the mighty <a href="http://apprtc.appspot.com">apprtc.appspot.com</a> demo and, to be frank, it's a bit of a hack! But... it's a proof of concept, and it works.</p>
 

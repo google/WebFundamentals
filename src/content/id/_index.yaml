@@ -107,7 +107,7 @@ landing_page:
         <ul class="checkmarks">
           <li>
             <b>Handal</b> -
-            <a href="/web/fundamentals/getting-started/your-first-offline-web-app/">
+            <a href="/web/fundamentals/getting-started/codelabs/offline/">
             Service workers</a> memungkinkan Anda untuk menerapkan caching secara 
             offline dan pemuatan halaman secara instan.
           </li>

@@ -19,7 +19,7 @@ Shadow DOM removes the brittleness of building web apps. The brittleness comes f
 
 Note: **Already familiar with Shadow DOM?** This article describes the new <a href="http://w3c.github.io/webcomponents/spec/shadow/" target="_blank">Shadow DOM v1 spec</a>. If you've been using Shadow DOM, chances are you're familiar with the <a href="https://www.chromestatus.com/features/4507242028072960">v0 version that shipped in Chrome 35</a>, and the webcomponents.js polyfills. The concepts are the same, but the v1 spec has important API differences. It's also the version that all major browsers have agreed to implement, with implementations already in Safari Tech Preview and Chrome Canary. Keep reading to see what's new or check out the section on <a href="#historysupport">History and browser support</a> for more info.
 
-Shadow DOM is one of the four Web Component standards: [HTML Templates](http://www.html5rocks.com/en/tutorials/webcomponents/template/){: .external }, [Shadow DOM][sd_spec_whatwg], [Custom elements](/web/fundamentals/getting-started/primers/customelements) and [HTML Imports](http://www.html5rocks.com/en/tutorials/webcomponents/imports/).
+Shadow DOM is one of the four Web Component standards: [HTML Templates](https://www.html5rocks.com/en/tutorials/webcomponents/template/){: .external }, [Shadow DOM][sd_spec_whatwg], [Custom elements](/web/fundamentals/getting-started/primers/customelements) and [HTML Imports](https://www.html5rocks.com/en/tutorials/webcomponents/imports/).
 
 You don't have to author web components that use shadow DOM. But when you do, you take advantage of its benefits (CSS scoping, DOM encapsulation, composition) and build reusable [custom elements](/web/fundamentals/getting-started/primers/customelements), which are resilient, highly configurable, and extremely reusable. If custom elements are the way to create a new HTML (with a JS API), shadow DOM is the way you provide its HTML and CSS. The two APIs combine to make a component with self-contained HTML, CSS, and JavaScript.
 
@@ -909,7 +909,7 @@ See the example in "[Custom elements: building reusable web components](/web/fun
 If you've been following web components for the last couple of years, you'll know that
 Chrome 35+/Opera have been shipping an older version of shadow DOM for some time. Blink will continue to support both versions in parallel for some time. The v0 spec provided a different method to create a shadow root (`element.createShadowRoot` instead of v1's `element.attachShadow`). Calling the older method continues to create a shadow root with v0 semantics, so existing v0 code won't break.
 
-If you happen to be interested in the old v0 spec, check out the html5rocks articles: [1](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/){: .external }, [2](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/), [3](http://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/). There's also a great comparison of the [differences between shadow DOM v0 and v1][differences].
+If you happen to be interested in the old v0 spec, check out the html5rocks articles: [1](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom/){: .external }, [2](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-201/), [3](https://www.html5rocks.com/en/tutorials/webcomponents/shadowdom-301/). There's also a great comparison of the [differences between shadow DOM v0 and v1][differences].
 
 ### Browser support {: #support}
 

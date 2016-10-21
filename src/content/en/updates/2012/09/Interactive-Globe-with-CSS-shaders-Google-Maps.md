@@ -71,7 +71,7 @@ Here, we're applying a vertex shader (<code>spherify.vs</code>) which will opera
 <p><small>If you just see a flat google maps above, you can enable it with the instructions below</small></p>
 
 ### Browsers support: CSS shaders
-<p>This is currently cutting-edge, so it's only available in the latest <a href="https://tools.google.com/dlpage/chromesxs" title="Download Google Chrome Canary" target="_blank">Google Chrome Canary</a> and WebKit nightly. To enjoy the full experience you'll need to turn a few knobs.
+<p>This is currently cutting-edge, so it's only available in the latest <a href="https://www.google.com/intl/en/chrome/browser/canary.html" title="Download Google Chrome Canary" target="_blank">Google Chrome Canary</a> and WebKit nightly. To enjoy the full experience you'll need to turn a few knobs.
 </p>
 #### Chrome Canary steps:
 <ul>

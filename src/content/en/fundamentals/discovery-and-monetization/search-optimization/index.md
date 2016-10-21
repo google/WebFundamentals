@@ -224,7 +224,7 @@ that you can use to test your robots.txt.
 
 <img src="imgs/robots-txt-validator.png" srcset="imgs/robots-txt-validator-2x.png 2x, imgs/robots-txt-validator.png 1x">
 
-Yandex provides [a similar tool](https://webmaster.yandex.com/robots.xml).  
+Yandex provides [a similar tool](https://webmaster.yandex.com/tools/robotstxt/).  
 
 ### Control search indexing with meta tags
 

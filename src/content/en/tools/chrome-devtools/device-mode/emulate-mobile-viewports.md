@@ -241,7 +241,7 @@ network related behaviours:
 
   1. **Disk Cache**: Disable Disk Cache stops pages and their assets from being
      cached by the browser while the DevTools are open.
-  2. **Network Throttling**: Read more about [Network Throttling here](/web/tools/chrome-devtools/profile/network-performance/network-conditions).
+  2. **Network Throttling**: Read more about [Network Throttling here](/web/web/tools/chrome-devtools/network-performance/network-conditions).
   3. **User Agent**: Allows you to set a specific UA (User Agent) string
      override.
 

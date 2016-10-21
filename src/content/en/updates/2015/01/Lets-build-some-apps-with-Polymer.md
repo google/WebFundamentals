@@ -116,7 +116,7 @@ Vulcanize will concatenate your imports into a single bundle, *significantly* re
 
 ## Offline
 
-But just building a performant app doesn't solve the dilemma of a user with little or no connectivity. In other words, if your app doesn't work offline, then it's not really a mobile app. Today you can use [the much maligned application cache](http://alistapart.com/article/application-cache-is-a-douchebag) to offline your resources, but looking to the future, [Service Worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) should soon make the offline development experience much nicer.
+But just building a performant app doesn't solve the dilemma of a user with little or no connectivity. In other words, if your app doesn't work offline, then it's not really a mobile app. Today you can use [the much maligned application cache](http://alistapart.com/article/application-cache-is-a-douchebag) to offline your resources, but looking to the future, [Service Worker](/web/fundamentals/getting-started/primers/service-workers) should soon make the offline development experience much nicer.
 
 Jake Archibald has recently published an amazing [cookbook of service worker patterns](/web/fundamentals/instant-and-offline/offline-cookbook/) but I'll give you the quick start to get you going:
 
