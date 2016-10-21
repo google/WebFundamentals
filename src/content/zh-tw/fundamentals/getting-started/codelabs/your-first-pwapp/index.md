@@ -326,7 +326,7 @@ Progressive Web Apps 應該能夠快速啟動並且立即可用。目前，我�
 Progressive Web Apps 是快速且可安裝的，這意味著它能在在線、離線、斷斷續續或者緩慢的網絡環境下使用。為了實現這個目標，我們需要使用一個 service worker 來緩存應用外殼，以保證它能始終迅速可用且可靠。
 
 如果你對 service workers 不熟悉，你可以通過閱讀 [介紹 Service
-Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) 來了解關於它能做什麽，它的生命周期是如何工作的等等知識。
+Workers](/web/fundamentals/getting-started/primers/service-workers) 來了解關於它能做什麽，它的生命周期是如何工作的等等知識。
 
 service workers 提供的是一種應該被理解為漸進增強的特性，這些特性僅僅作用於支持service workers 的瀏覽器。比如，使用 service workers 你可以緩存應用外殼和你的應用所需的數據，所以這些數據在離線的環境下依然可以獲得。如果瀏覽器不支持 service workers ，支持離線的
 代碼沒有工作，用戶也能得到一個基本的用戶體驗。使用特性檢測來漸漸增強有一些小的開銷，它不會在老舊的不支持 service workers 的瀏覽器中產生破壞性影響。

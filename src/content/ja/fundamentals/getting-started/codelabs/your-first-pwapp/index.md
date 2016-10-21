@@ -410,7 +410,7 @@ Note: 補習: <code>localstorage</code> の実装を <a href='https://www.npmjs.
 キャッシュし、常にすばやく利用できる状態を維持する必要があります。
 
 
-Service Worker をよくご存知ない場合は、[Service Worker の概要記事](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)をご覧ください。
+Service Worker をよくご存知ない場合は、[Service Worker の概要記事](/web/fundamentals/getting-started/primers/service-workers)をご覧ください。
 この記事では、Service Worker でできることや、Service Worker のライフサイクルなど、
 基本事項を説明しています。
 

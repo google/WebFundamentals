@@ -19,10 +19,10 @@ characteristics of mobile devices, for example.
 
 ## In a nutshell
 
-* Emulate your site across [different screen sizes and resolutions](/web/tools/chrome-devtools/iterate/device-mode/emulate-mobile-viewports), including Retina displays.
+* Emulate your site across [different screen sizes and resolutions](/web/tools/chrome-devtools/device-mode/emulate-mobile-viewports), including Retina displays.
 * Responsively design by visualizing and [inspecting CSS media queries](/web/tools/chrome-devtools/iterate/device-mode/media-queries).
-* Evaluate your site's performance using the [network emulator](/web/tools/chrome-devtools/profile/network-performance/network-conditions), without affecting traffic to other tabs.
-* Accurately [simulate device input](/web/tools/chrome-devtools/iterate/device-mode/device-input-and-sensors) for touch events, geolocation, and device orientation
+* Evaluate your site's performance using the [network emulator](/web/web/tools/chrome-devtools/network-performance/network-conditions), without affecting traffic to other tabs.
+* Accurately [simulate device input](/web/tools/chrome-devtools/device-mode/device-input-and-sensors) for touch events, geolocation, and device orientation
 
 ## Toggle Device Mode {: #toggle }
 

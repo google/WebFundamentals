@@ -24,7 +24,7 @@ description: 앱 설치 배너를 지연시키거나 취소할 수 있습니다.
       // beforeinstallprompt Event fired
     
       // e.userChoice will return a Promise.
-      // For more details read: http://www.html5rocks.com/en/tutorials/es6/promises/
+      // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
       e.userChoice.then(function(choiceResult) {
     
         console.log(choiceResult.outcome);

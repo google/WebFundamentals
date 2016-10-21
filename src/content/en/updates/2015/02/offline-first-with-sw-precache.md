@@ -12,7 +12,7 @@ description: Add service worker-powered offline capabilities to your site with t
 {% include "web/_shared/contributors/jeffposnick.html" %}
 
 
-You can’t [read about service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
+You can’t [read about service workers](/web/fundamentals/getting-started/primers/service-workers)
 without getting excited—they’re the behind-the-scenes infrastructure that make
 it possible for web <em>pages</em> to act more like web <em>applications</em>. Upcoming web platform features
 like [background sync](https://www.chromestatus.com/feature/6170807885627392)

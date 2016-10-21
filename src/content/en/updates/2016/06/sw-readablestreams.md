@@ -13,11 +13,11 @@ description: Start processing your service worker responses ASAP, thanks to Read
 
 
 
-Anyone who's used [service workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)
+Anyone who's used [service workers](/web/fundamentals/getting-started/primers/service-workers)
 could tell you that they’re asynchronous all the way down. They rely exclusively
 on event-based interfaces, like 
 [`FetchEvent`](https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent),
-and use [promises](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external } to
+and use [promises](/web/fundamentals/getting-started/primers/promises) to
 signal when asynchronous operations are complete.
 
 Asynchronicity is equally important, albeit less visible to the developer, when

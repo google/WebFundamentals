@@ -144,7 +144,7 @@ like a touch or mouse click.
 The WebUSB API relies heavily on JavaScript
 [Promises](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 If you're not familiar with them, check out this great
-[Promises tutorial](http://www.html5rocks.com/en/tutorials/es6/promises/){: .external }. One
+[Promises tutorial](/web/fundamentals/getting-started/primers/promises). One
 more thing, `() => {}` are simply ECMAScript 2015 [Arrow
 functions](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
 -- they have a shorter syntax compared to function expressions and lexically

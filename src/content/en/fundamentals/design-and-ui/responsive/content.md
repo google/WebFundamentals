@@ -131,7 +131,7 @@ Here are some suggestions:
 For more information see [Image Optimization](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization) and [Eliminating and replacing images](/web/fundamentals/performance/optimizing-content-efficiency/image-optimization#eliminating-and-replacing-images).
 
 
-## Design content to work well across different viewport sizes
+## Design content to work well across different viewport sizes {: #viewport }
 
 > "Create a product, don't re-imagine one for small screens. Great mobile
 > products are created, never ported."
@@ -197,7 +197,7 @@ Reducing page weight can also be profitable. [Chris Zacharias from YouTube](http
 
 In other words, reducing page weight **can open up whole new markets**.
 
-### Calculate page weight
+### Calculate page weight {: #weight }
 
 There are a number of tools for calculating page weight. The Chrome DevTools Network panel shows the total byte size for all resources, and can be used to ascertain weights for individual asset types. You can also check which items have been retrieved from the browser cache.
 

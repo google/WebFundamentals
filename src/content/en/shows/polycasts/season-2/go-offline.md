@@ -28,7 +28,7 @@ description: Take your Polymer app offline, without writing a single line of Jav
 [http://jakearchibald.com/2014/offline-cookbook/]
 
 ### Introduction to Service Workers
-[http://www.html5rocks.com/en/tutorials/service-worker/introduction/]
+[/web/fundamentals/getting-started/primers/service-workers]
 
 ### Polymer Starter Kit -- Polycasts #18
 [https://www.youtube.com/watch?v=xz-yixRxZN8&index=1&list=PLOU2XLYxmsII5c3Mgw6fNYCzaWrsM3sMN]

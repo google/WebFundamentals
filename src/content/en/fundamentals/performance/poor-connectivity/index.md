@@ -11,7 +11,7 @@ description: It's important to understand what your app or site feels like when 
 
 It's important to understand what your app or site feels like when connectivity is poor or unreliable, and build accordingly. A range of tools can help you.
 
-## Test with low bandwidth and high latency
+## Test with low bandwidth and high latency {: #testing }
 
 An <a href="http://adwords.blogspot.co.uk/2015/05/building-for-next-moment.html">increasing proportion</a> of people experience the web on mobile devices. Even at home, <a href="https://www.washingtonpost.com/news/the-switch/wp/2016/04/18/new-data-americans-are-abandoning-wired-home-internet/">many people are abandoning fixed broadband for mobile</a>.
 
@@ -23,7 +23,7 @@ When building or updating a site, you must ensure adequate performance in a vari
 
 #### Browser tools
 
-The [Chrome DevTools](/web/tools/chrome-devtools/profile/network-performance/network-conditions) enable you to test your site with a variety of upload/download speeds and [round-trip times](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/), using presets or custom settings from the Chrome DevTools Network panel:
+The [Chrome DevTools](/web/web/tools/chrome-devtools/network-performance/network-conditions) enable you to test your site with a variety of upload/download speeds and [round-trip times](https://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/), using presets or custom settings from the Chrome DevTools Network panel:
 
 ![Chrome DevTools throttling](images/chrome-devtools-throttling.png)
 
@@ -77,7 +77,7 @@ The [Charles](https://www.charlesproxy.com/){: .external } HTTP/HTTPS proxy can 
 
 More information about Charles is available from [codewithchris.com](http://codewithchris.com/tutorial-using-charles-proxy-with-your-ios-development-and-http-debugging/).
 
-## Handle unreliable connectivity and "lie-fi"
+## Handle unreliable connectivity and "lie-fi" {: #lie-fi }
 
 ### What is lie-fi?
 

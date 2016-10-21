@@ -38,7 +38,7 @@ offline:
 * For URL addressable resources, use the [**Cache API**](https://davidwalsh.name/cache)
   (part of [service workers](/web/fundamentals/primers/service-worker/)).
 * For all other data, use [**IndexedDB**](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
-  (with a [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/) wrapper).
+  (with a [Promises](/web/fundamentals/getting-started/primers/promises) wrapper).
 
 Here’s the rationale:
 

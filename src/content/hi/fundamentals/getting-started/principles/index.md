@@ -262,7 +262,7 @@ unclear.
 ### Use existing information to maximize convenience
 
 Remember and
-[pre-fill preferences](/web/fundamentals/design-and-ui/input/forms/label-and-name-inputs)
+[pre-fill preferences](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly)
 for registered users. Offer familiar, third-party checkout services for new users.
 
 ### Use click-to-call buttons for complex tasks
@@ -342,7 +342,7 @@ Label inputs properly and validate input in real-time.
 
 ### Design efficient forms
 
-Take advantage of [autofill](/web/fundamentals/design-and-ui/input/forms/label-and-name-inputs#use-metadata-to-enable-auto-complete)
+Take advantage of [autofill](/web/fundamentals/design-and-ui/input/forms/#label-and-name-inputs-properly#use-metadata-to-enable-auto-complete)
 so that users can easily complete forms with pre-populated data. Pre-fill
 fields with information you already know. For example, when retrieving shipping
 and billing addresses, try to use

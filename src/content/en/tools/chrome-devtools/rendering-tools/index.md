@@ -162,7 +162,7 @@ Related Guides:
 * [Avoid Layout
   Thrashing](/web/fundamentals/performance/rendering/avoid-large-complex-layouts-and-layout-thrashing)
 * [Diagnose Forced Synchronous
-  Layouts](/web/tools/chrome-devtools/profile/rendering-tools/forced-synchronous-layouts)
+  Layouts](/web/tools/chrome-devtools/rendering-tools/forced-synchronous-layouts)
 
 
 ### Tools

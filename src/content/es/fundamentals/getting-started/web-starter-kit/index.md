@@ -106,7 +106,7 @@ siguiente resultado final:
 #### Revisión de su Javascript
 
 JSHint es una herramienta que examina su código de JavaScript para verificar si hay posibles problemas
-con su lógica de JavaScript y [ejecuta las mejores prácticas de codificación](http://www.jshint.com/docs/).
+con su lógica de JavaScript y [ejecuta las mejores prácticas de codificación](//www.jshint.com/docs/).
 
 La herramienta se ejecuta cada vez que compila el proyecto o, si está ejecutando el servidor gulp,
 cada vez que realiza un cambio en un archivo de JavaScript.

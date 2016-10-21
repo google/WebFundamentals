@@ -18,7 +18,7 @@ In order to improve the performance of web applications, a new method called [Ob
 
 Object.observe() lets you add a listener to any JavaScript object that gets called whenever that object, or its properties, change.
 
-You can try it out now in [Chrome Canary](https://tools.google.com/dlpage/chromesxs) version 25.
+You can try it out now in [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html) version 25.
 
 To experiment with this feature, you need to enable the *Enable Experimental JavaScript* flag in Chrome Canary and restart the browser. The flag can be found under 'about:flags' as shown in the image below:
 
