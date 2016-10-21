@@ -6,6 +6,7 @@ description: "Chrome 55 impelements the hyphens property to control when soft hy
 {# wf_published_on: 2016-10-21 #}
 {# wf_tags: chrome55,css, #}
 {# wf_featured_snippet: Chrome 55 impelements the hyphens property to control when soft hyphens appear and how they behave. #}
+{# wf_featured_image: web/updates/images/generic/info.png #}
 
 # Manage Hyphens with CSS {: .page-title }
 
@@ -35,7 +36,7 @@ the CSS `hypens` property.
     
 Combining these gives a result like this:
 
-<img src="/web/updates/images/2016/10/css-hyphen/single-line.png" width="">
+<img src="/web/updates/images/2016/10/css-hyphen/single-line.png">
 
 Notice that the soft hyphen isn't visible. In all cases, when a word containing
 the soft hyphen fits on a single line, the hypen will be invisible. Now, let's
@@ -83,12 +84,12 @@ div {
   background-color: #e1f5fe;
 }
 
-div.none {
+div.manual {
    -webkit-hyphens: manual;
    hyphens: manual;
 }
 </style>
-<div class="none">
+<div class="manual">
   Google ipsum dolor sit amet, consectetur adipiscing e&shy;lit.
 </div>
 {% endframebox %}
@@ -111,14 +112,14 @@ div {
   background-color: #e1f5fe;
 }
 
-div.none {
+div.auto {
    -webkit-hyphens: auto;
    hyphens: auto;
 }
 </style>
-<div class="none">
+<div class="auto">
   Google ipsum dolor sit amet, consectetur adipiscing elit.
 </div>
 {% endframebox %}
 
-+{% include "comment-widget.html" %}
+{% include "comment-widget.html" %}
