@@ -39,8 +39,10 @@ landing_page:
           Here you can directly search through all major web browser bug trackers to find
           a bug you're looking for, and also compare features across browser engines.
 
-          <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="280" scrolling="no"></iframe>
+          <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="250" scrolling="no"></iframe>
 
+  - items:
+    - custom_html: <hr>
 
   - heading: Reporting bugs
     classname: devsite-landing-row-no-image-background
@@ -99,6 +101,9 @@ landing_page:
       - label: WebKit bugs
         path: https://bugs.webkit.org/
         classname: wf-small-link
+
+  - items:
+      - custom_html: <hr>
 
   - heading: Discussing solutions
     items:
