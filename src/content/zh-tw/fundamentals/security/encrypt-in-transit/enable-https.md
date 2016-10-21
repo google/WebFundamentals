@@ -221,7 +221,7 @@ Configuration
 
 但當您透過包含 HTTP 資源：
 [混合
-內容](http://www.w3.org/TR/mixed-content/)的 HTTPS 供應頁面時，會出現一個問題，  瀏覽器的會警告使用者，HTTPS 的完整優點已經喪失。
+內容](http://www.w3.org/TR/mixed-content/){: .external}的 HTTPS 供應頁面時，會出現一個問題，  瀏覽器的會警告使用者，HTTPS 的完整優點已經喪失。
 
 
 事實上，就主動混合內容的情況 (指令碼、外掛程式、CSS、iframe)，
@@ -276,7 +276,7 @@ Configuration
  如果您的網站內容是在簡單的純檔案中，
 在這些檔案的開發副本上測試您的指令碼。 像平常一樣，只有在變更通過 QA 時，
 才將變更推送至生產線。 您可以使用 [Bram van Damme 
-的指令碼](https://github.com/bramus/mixed-content-scan) 或類似的東西，以偵測您網站中的混合內容。
+的指令碼](https://github.com/bramus/mixed-content-scan){: .external} 或類似的東西，以偵測您網站中的混合內容。
 
 
 **注意：** 當連結至其他網站時 (而非包含其資源)，請不要改變通訊協定，
@@ -317,7 +317,7 @@ Configuration
 
 
 在您頁面中設定 &lt; link rel="canonical" href="https://…"/&gt; 標籤。 [這有助於搜尋引擎]
-(https://support.google.com/webmasters/answer/139066)知道前往您網站的最佳方法。
+(https://support.google.com/webmasters/answer/139066){: .external}知道前往您網站的最佳方法。
 
 
 大多數網頁伺服器提供了一個簡單的重新導向功能。 使用 301 (永久移動) 是向搜尋引擎和瀏覽器表示，HTTPS 版本為標準，並將您的使用者從 HTTP 重新導向至您的 HTTPS 版本。

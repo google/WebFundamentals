@@ -129,7 +129,7 @@ For minification, use the following:
     </tr>
     <tr>
       <td data-th="Type of File">HTML</td>
-      <td data-th="Gulp"><a href="https://github.com/jonathanepollack/gulp-minify-html">gulp-minify-html</a></td>
+      <td data-th="Gulp"><a href="https://www.npmjs.com/package/gulp-minify-html">gulp-minify-html</a></td>
       <td data-th="Grunt"><a href="https://github.com/gruntjs/grunt-contrib-htmlmin">grunt-contrib-htmlmin</a></td>
     </tr>
   </tbody>

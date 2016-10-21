@@ -293,9 +293,9 @@ Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者�
 
 
 瀏覽器使用許多啟發法來判斷它們可以
-(https://support.google.com/chrome/answer/142893)
+(https://support.google.com/chrome/answer/142893){: .external}
 [根據使用者先前指定的資料]
-(https://support.google.com/chrome/answer/142893)[自動填入]哪些欄位 ，您可以提供提示給瀏覽器，
+(https://support.google.com/chrome/answer/142893){: .external}[自動填入]哪些欄位 ，您可以提供提示給瀏覽器，
 方法是在每一項輸入元素上提供 name 與 autocomplete 屬性。
 
 
@@ -309,7 +309,7 @@ Note: <code>datalist</code> 值是以建議項目的方式提供，而使用者�
 #### 建議輸入 `name` 和 `autocomplete` 屬性值
 
 
-`autocomplete` 屬性值是目前 [WHATWG HTML 標準](https://html.spec.whatwg.org/multipage/forms.html#autofill)的一部分。 最常用的 `autocomplete` 屬性如下所示：
+`autocomplete` 屬性值是目前 [WHATWG HTML 標準](https://html.spec.whatwg.org/multipage/forms.html#autofill){: .external}的一部分。 最常用的 `autocomplete` 屬性如下所示：
 
 `autocomplete` 屬性可以伴隨區段名稱，如 **`shipping `**`given-name` 或 **`billing `**`street-address`。 瀏覽器將個別自動完成不同的區段，而非視為連續的表單。
 
@@ -467,7 +467,7 @@ notes:
 ##### `pattern` 屬性
 
 `pattern` 屬性會指定
- [規則運算式](http://en.wikipedia.org/wiki/Regular_expression)，
+ [規則運算式](http://en.wikipedia.org/wiki/Regular_expression){: .external}，
 以用來驗證輸入欄位。 例如，若要驗證美國郵遞區號
  (5 位數，有時候是再加一個短破折號與額外的 4 位數字)，我們會設定 `pattern` 如下：
 
@@ -575,7 +575,7 @@ notes:
 #### 針對更複雜的即時驗證，請使用 JavaScript
 
 當內建的驗證再加上規則運算式還不夠用的時候，
-您可以用 [Constraints Validation API] (http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation)這項強大的工具，以處理自訂驗證。
+您可以用 [Constraints Validation API] (http://dev.w3.org/html5/spec-preview/constraints.html#constraint-validation){: .external}這項強大的工具，以處理自訂驗證。
   此 API 可讓您執行如設定自訂錯誤、
 檢查元素是否有效，
 並判斷元素無效的原因等動作：

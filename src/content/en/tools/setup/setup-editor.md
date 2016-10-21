@@ -37,7 +37,7 @@ up-to-date.
 <img src="imgs/package_control.png" class="center" alt="Screenshot of Sublime Text Editors Package Control"/>
 
 You can install a Package Manager for Sublime  by following these instructions
-[https://sublime.wbond.net/installation](https://sublime.wbond.net/installation).
+[https://packagecontrol.io/installation](https://packagecontrol.io/installation).
 
 You only need to do this once, after which see below for our recommended list of
 plugins.
@@ -59,7 +59,7 @@ Package managers make it very easy to find, install, and update plugins:
    plugins).
 
 Check out these [trending lists of Sublime Text
-plugins](https://sublime.wbond.net/browse). Here are the plugins we love and
+plugins](https://packagecontrol.io/browse). Here are the plugins we love and
 recommend you install because they help you speed up your development:
 
 ### Autoprefixer

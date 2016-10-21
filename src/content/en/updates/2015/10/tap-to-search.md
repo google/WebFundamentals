@@ -7,7 +7,7 @@ description: Understanding when and how Touch to Search is triggered
 {# wf_tags: news,touch,search #}
 {# wf_featured_image: /web/updates/images/2015/10/touchtosearch.jpg #}
 
-# Manage the triggering of Touch to Search {: .page-title }
+# Manage the Triggering of Touch to Search {: .page-title }
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 

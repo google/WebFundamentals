@@ -127,7 +127,6 @@ As the screen width gets larger, so do the font size and padding.
 
 Sites using this pattern include:
 
- * [Opera's Shiny Demos](http://shinydemos.com/){: .external }
  * [Ginger Whale](http://gingerwhale.com/){: .external }
  * [Future Friendly](http://futurefriendlyweb.com/){: .external }
 

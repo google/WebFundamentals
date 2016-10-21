@@ -51,7 +51,7 @@ One of the most critical security features, one that is required for many modern
 
 ### Chrome DevTools
 
-* [Understand Security Issues](/web/tools/chrome-devtools/security/)
+* [Understand Security Issues](/web/tools/chrome-devtools/security)
 
 
 

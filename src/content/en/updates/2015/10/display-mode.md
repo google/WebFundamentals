@@ -7,7 +7,7 @@ description: Detecting if a web app is launched from the home screen
 {# wf_tags: news,addtohomescreen #}
 {# wf_featured_image: /web/updates/images/2015/10/splashscreen.png #}
 
-# Detecting if a Web App is Launched from the Home Screen {: .page-title }
+# Detecting If a Web App Is Launched from the Home Screen {: .page-title }
 
 {% include "web/_shared/contributors/kenchris.html" %}
 

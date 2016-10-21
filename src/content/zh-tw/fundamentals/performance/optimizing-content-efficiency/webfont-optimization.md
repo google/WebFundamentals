@@ -54,7 +54,7 @@ Note: 就技術方面來說，其實還有<a href='http://caniuse.com/svg-fonts'
 * WOFF 具有內建壓縮，請確認您的 WOFF 壓縮工具正在使用最佳壓縮設定。
 * WOFF2 使用自訂預先處理和壓縮演算法，與其他格式相較可多縮減 ~30% 的檔案大小，詳情請參閱[報告](http://www.w3.org/TR/WOFF20ER/){: .external }。
 
-最後，值得注意的是某些字型格式包含額外的中繼資料，例如 [字型提示](http://en.wikipedia.org/wiki/Font_hinting)和[字距調整](http://en.wikipedia.org/wiki/Kerning)資訊，這些資訊在某些平台上可能不是必要的，這樣就可以進一步最佳化檔案大小。查詢您的字型壓縮工具是否有可用的最佳化選項，而如果您這樣做了，請確保您有適合的基礎架構來測試這些最佳化的字型並提供給每個特定瀏覽器，例如 Google 字型為每個字型保留 30 種以上的 最佳化變體，並會自動偵測及提供適合每種平台和瀏覽器的最佳變體。
+最後，值得注意的是某些字型格式包含額外的中繼資料，例如 [字型提示](http://en.wikipedia.org/wiki/Font_hinting){: .external}和[字距調整](http://en.wikipedia.org/wiki/Kerning){: .external}資訊，這些資訊在某些平台上可能不是必要的，這樣就可以進一步最佳化檔案大小。查詢您的字型壓縮工具是否有可用的最佳化選項，而如果您這樣做了，請確保您有適合的基礎架構來測試這些最佳化的字型並提供給每個特定瀏覽器，例如 Google 字型為每個字型保留 30 種以上的 最佳化變體，並會自動偵測及提供適合每種平台和瀏覽器的最佳變體。
 
 Note: 請考慮使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 壓縮</a>處理 EOT、TTF 和 WOFF 格式。Zopfli 是與 zlib 相容的壓縮工具，可透過 gzip 提供 ~5% 的檔案大小縮減。
 
@@ -70,7 +70,7 @@ Note: 請考慮使用 <a href='http://en.wikipedia.org/wiki/Zopfli'>Zopfli 壓�
 
 ### 格式選擇
 
-每個 @font-face 聲明提供了字型系列的名稱，可當做多個聲明、[字型屬性](http://www.w3.org/TR/css3-fonts/#font-prop-desc) (例如樣式、粗細和延伸)，以及為字型資源指定位置優先順序清單的 [src 描述元](http://www.w3.org/TR/css3-fonts/#src-desc)的邏輯群組。
+每個 @font-face 聲明提供了字型系列的名稱，可當做多個聲明、[字型屬性](http://www.w3.org/TR/css3-fonts/#font-prop-desc){: .external} (例如樣式、粗細和延伸)，以及為字型資源指定位置優先順序清單的 [src 描述元](http://www.w3.org/TR/css3-fonts/#src-desc){: .external}的邏輯群組。
 
 
     @font-face {
@@ -120,7 +120,7 @@ Note: 指定的字型變體的順序很重要。瀏覽器將選取支援的第�
 
 除了樣式、粗細和延伸等字型屬性之外，我們可以使用 @font-face 規則，定義每個資源支援的一組 Unicode 代碼點。這使我們能夠將一個大型 Unicode 字型劃分為較小的子集 (例如，拉丁文、西里爾文、希臘文子集)，並且僅下載在特定網頁上呈現文字所需的字符。
 
-使用 [unicode-range 描述元](http://www.w3.org/TR/css3-fonts/#descdef-unicode-range)，我們可以指定一個範圍值的逗號分隔清單，每個值可以採用以下其中一種不同的形式：
+使用 [unicode-range 描述元](http://www.w3.org/TR/css3-fonts/#descdef-unicode-range){: .external}，我們可以指定一個範圍值的逗號分隔清單，每個值可以採用以下其中一種不同的形式：
 
 * 單一代碼點 (例如 U+416)
 * 間隔範圍 (例如 U+400-4ff)：指示範圍的開始代碼點和結束代碼點
@@ -166,7 +166,7 @@ Note: Unicode-range 子集內嵌對於亞洲語言特別重要，在亞洲語言
   - 如果瀏覽器支援 unicode-range 子集擷取，那麼瀏覽器將自動選擇正確的子集。該網頁僅需要提供子集檔並在 @font-face 規則中指定相應的 unicode-range。
   - 如果不支援 unicode-range，那麼網頁需要隱藏所有不必要的子集，這表示開發人員必須指定需要的子集。
 2. **我們如何產生字型子集？**
-  - 使用 open-source [pyftsubset 工具] (https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py#L16)  對您的字型進行子集擷取和最佳化。
+  - 使用 open-source [pyftsubset 工具] (https://github.com/behdad/fonttools/blob/master/Lib/fontTools/subset.py#L16){: .external}  對您的字型進行子集擷取和最佳化。
   - 某些字型服務允許透過自訂查詢參數進行手動子集擷取，您可以使用這些參數手動指定您的網頁需要的子集。詳情請參閱字型供應商的文件。
 
 

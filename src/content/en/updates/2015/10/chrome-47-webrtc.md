@@ -7,7 +7,7 @@ description: Chrome 47 has several significant WebRTC enhancements and updates i
 {# wf_tags: news,audio,video,media,webrtc,getusermedia #}
 {# wf_featured_image: /web/updates/images/2015-10-28-chrome-47-webrtc/featured.jpg #}
 
-# Chrome 47 WebRTC: media recording, secure origins & proxy handling {: .page-title }
+# Chrome 47 WebRTC: Media Recording, Secure Origins and Proxy Handling {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
@@ -43,7 +43,7 @@ Chrome 47 adds a new preference to force WebRTC traffic to be sent through a loc
 
 <a href="https://chrome.google.com/webstore/detail/webrtc-network-limiter/npeicpdbkakmehahjeeohfdhnlpdklia" title="WebRTC Network Limiter extension on the Chrome Web Store"><img src="/web/updates/images/2015-10-28-chrome-47-webrtc/network-limiter.png" alt="WebRTC Network Limiter Chrome extension"></a>
 
-### ...and more
+### ...And more
 
 Data channel throughput has been greatly improved for high latency connections.
 
@@ -52,7 +52,7 @@ We will gradually roll out support for DTLS 1.2 in the Chrome 47 timeframe.
 Though neither VP9 nor H.264 are supported in this release, work on these
 continues, and we hope to implement support for VP9 and an initial version of H.264 (behind a flag) in Chrome 48.
 
-### Public Service Announcements
+### Public service announcements
 
 * Starting with Chrome 47, `getUserMedia()` requests are only allowed from secure origins: HTTPS or localhost.
 * RTP data channel support has been removed. Any remaining applications still

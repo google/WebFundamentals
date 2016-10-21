@@ -48,7 +48,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 是根據裝置中心對準。
 
 <img src="images/axes.png" alt="裝置座標框架的圖例">
-<!-- 特別感謝 Sheppy (https://developer.mozilla.org/en-US/profiles/Sheppy) 
+<!-- 特別感謝 Sheppy (https://developer.mozilla.org/en-US/profiles/Sheppy){: .external} 
 提供其公共版權的影像。 -->
 
 <ul>
@@ -71,7 +71,7 @@ Note: 決定要使裝置動作或裝置定向事件時，請<b>極為</b>謹慎�
 
 ### 旋轉資料
 
-旋轉資料會被傳回為 [尤拉角] (http://en.wikipedia.org/wiki/Euler_angles)，
+旋轉資料會被傳回為 [尤拉角] (http://en.wikipedia.org/wiki/Euler_angles){: .external}，
 代表裝置的座標框架與地球座標框架之間差異的角度數字。
 
 
