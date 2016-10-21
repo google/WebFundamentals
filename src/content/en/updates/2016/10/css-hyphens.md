@@ -95,6 +95,7 @@ div.none {
 
 ## Using auto
 
+
 In the third example, the hyphens property is set to `auto`. In this case, no
 soft hyphen is needed since the user agent will determine hyphen locations
 automatically. If you resize the window, you'll see that the browser hyphenates
