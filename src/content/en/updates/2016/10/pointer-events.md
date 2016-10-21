@@ -136,18 +136,21 @@ you’ve used that CSS property before, you know what to expect.
 
 ## Different input types
 
-You’ll still have to handle the differences between input types, such as whether
-the concept of hover applies, but you can do so from within the same event
-handlers. You can tell device types apart with the `deviceType` property of the
-[`PointerEvent`](https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent)
+Generally, Pointer Events allow you to write code in an input-agnostic way,
+without the need to register separate event handlers for different input devices.
+Of course, you’ll still need to be mindful of the differences between input types, such as whether
+the concept of hover applies. If you do want to tell different input device types apart – perhaps to provide
+separate code/functionality for different inputs – you can however do so from
+within the same event handlers using the `pointerType` property of the
+[`PointerEvent`](https://w3c.github.io/pointerevents/#pointerevent-interface)
 interface. For example, if you were coding a side navigation drawer, you could
 have the following logic on your `pointermove` event:
 
-    switch(ev.deviceType) {
+    switch(ev.pointerType) {
       case 'mouse':
         // Do nothing.
         break;
-      case 'finger':
+      case 'touch':
         // Allow drag gesture.
         break;
       case 'pen':
@@ -161,13 +164,9 @@ have the following logic on your `pointermove` event:
 
 ## Default actions
 
-Touch-enabled browsers often make special allowances for certain types of input,
-overriding certain gestures to make the page scroll, zoom, or refresh. With
-touch events, this happens more or less transparently, with browser actions
-happening after the touch events, unless cancelled. This leads to some
-potentially confusing behaviour for the end user, with both browser- and
-developer-defined actions taking place sequentially, based off of a single
-input.
+In touch-enabled browsers, certain gestures are used to make the page scroll, zoom, or refresh.
+In the case of touch events, you will still receive events while these default
+actions are taking place – for instance, `touchmove` will still be fired while the user is scrolling.
 
 With pointer events, whenever a default action like scroll or zoom is triggered,
 you’ll get a `pointercancel` event, to let you know that the browser has taken
@@ -182,7 +181,7 @@ compared to touch events, where you would need to use
 to achieve the same level of responsiveness.
 
 You can stop the browser from taking control with the
-[`touch-action`](https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action)
+[`touch-action`](https://w3c.github.io/pointerevents/#the-touch-action-css-property)
 CSS property. Setting it to `none` on an element will disable all
 browser-defined actions started over that element. But there are a number of
 other values for finer-grained control, such as `pan-x`, for allowing
