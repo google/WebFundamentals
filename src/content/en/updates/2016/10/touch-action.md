@@ -55,7 +55,7 @@ yourself which you can by [checking out the
 sample](http://output.jsbin.com/batijohode).
 
 <div class="video-wrapper">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="nYcGT4zNihE"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="jgSKgf32-5Y"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
