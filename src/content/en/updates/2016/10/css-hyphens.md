@@ -4,7 +4,7 @@ description: "Chrome 55 impelements the hyphens property to control when soft hy
 
 {# wf_updated_on: 2016-10-21 #}
 {# wf_published_on: 2016-10-21 #}
-{# wf_tags: chrome55,css, #}
+{# wf_tags: chrome55,css #}
 {# wf_featured_snippet: Chrome 55 impelements the hyphens property to control when soft hyphens appear and how they behave. #}
 {# wf_featured_image: web/updates/images/generic/info.png #}
 
