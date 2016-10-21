@@ -76,7 +76,7 @@ of the tests that your page needs to pass to display an app install banner.
 
 ![Lighthouse's app install audits](images/lighthouse-a2hs.png)
 
-See [Audit Web Apps with Lighthouse](/web/tools/lighthouse) to get started
+See [Audit Web Apps with Lighthouse](/web/tools/lighthouse/) to get started
 with Lighthouse.
 
 ## App install banner events
