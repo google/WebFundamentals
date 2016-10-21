@@ -41,7 +41,7 @@ To minimize a test case, there are a few common tips:
 * Remove code (starting with things you know to be unnecessary) until the bug goes away
 * Use version control so that you can back up if things go wrong
 
-Once you’ve got your minimized test case, you’re ready to file that bug! Head over to our feedback page to find the right browser issue tracker.
+Once you’ve got your minimized test case, you’re ready to file that bug! Head over to [our feedback page](/web/feedback/) to find the right browser issue tracker.
 
 ## Include details of the environment
 
@@ -52,3 +52,9 @@ Some bugs reproduce only on certain operating systems, or only on a low-dpi or h
 If you’re experiencing problems, there’s a good chance other developers are too. Try searching for the bug on Stack Overflow. This might help you translate an abstract problem into a specific broken API. It might also give you a workaround for the short term.
 
 Once you have a concrete idea of what the bug is, search for it on the [browser bug tracker](https://developer-feedback.appspot.com/web/feedback/). If you find an existing bug that describes the problem, it’s much more useful to add your support by starring, favoriting, or commenting on that bug. Filing duplicate bugs wastes time and effort for all parties.
+
+<p>&nbsp;</p>
+
+<a hidden class="button button-primary" href="/web/feedback">
+  Back to the Developer Feedback page
+</a>
