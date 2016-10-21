@@ -66,7 +66,7 @@ patterns like:
 
     element.addEventListener('click', function cb(event) {
       // ...one-time handling of the click event...
-      event.target.removeEventListener(event.type, cb);
+      event.currentTarget.removeEventListener(event.type, cb);
     });
 
 The equivalent code, making use of the new `once` parameter, is cleaner, and
@@ -109,7 +109,10 @@ have native [support](http://caniuse.com/#feat=once-event-listener) for the
 
 Many JavaScript UI libraries provide convenience methods for creating event
 listeners, and some have shortcuts for defining one-time events—the most notable
-of which is jQuery's [`one()` method](http://api.jquery.com/one/).
+of which is jQuery's [`one()` method](http://api.jquery.com/one/).  A polyfill
+is also available, as part of
+[Andrea Giammarchi](https://twitter.com/WebReflection)'s
+[`dom4` library](https://github.com/WebReflection/dom4).
 
 ## Thanks
 
