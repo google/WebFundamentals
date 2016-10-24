@@ -38,7 +38,7 @@ For more information, see [https://goo.gl/zmWq3m](https://goo.gl/zmWq3m).`
 To ensure that the Not Secure warning is not displayed for your pages, you must
 ensure that all forms containing `<input type=password>` elements and any inputs
 detected as [credit card
-fields](https://developers.google.com/web/updates/2015/06/checkout-faster-with-
+fields](/web/updates/2015/06/checkout-faster-with-
 autofill) are present _only_ on secure origins. This means that the top-level
 page must be HTTPS and, if the `input` is in an iframe, that iframe must also be
 served over HTTPS.
