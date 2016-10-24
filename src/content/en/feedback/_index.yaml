@@ -35,10 +35,14 @@ landing_page:
   - heading: Search bugs in all web browsers
     items:
     - image_path: images/content-search-for-bugs-responsive-2x.png
-    - description: >
-          Here you can search through all major browser bug trackers to find a bug you're looking for.
-          <p>&nbsp;</p>
-          <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="250" scrolling="no"></iframe>
+    # Using framebox doesn't work, i.e. the search widget doesn't get any results
+    # {% framebox height="300px" %}
+    # <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="250px" scrolling="no"></iframe>
+    # {% endframebox %}
+    - custom_html: >
+        Here you can search through all major browser bug trackers to find a bug you're looking for.
+        <p>&nbsp;</p>
+        <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="250" scrolling="no"></iframe>
 
   - items:
     - custom_html: <hr>
