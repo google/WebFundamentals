@@ -16,7 +16,7 @@ find that you need to create a new style that will apply to more than a
 single page, please file an issue on GitHub so that other pages can use it 
 as well. This ensures site-wide consistency.
 
-## Headings
+## Headings 
 
 The top-most heading of the page is the page's title. The page body must not
 contain another `<h1>`, to avoid confusing non-visual browsers.
@@ -26,13 +26,20 @@ contain another `<h1>`, to avoid confusing non-visual browsers.
 Page Titles (`h1`)
 : Use Title Case for All Major Words
 
-Page Headings (`h2`-`h6`)
+Section headings (`h2`-`h6`)
 : Use sentence case for all headings
 
 Yes, we're inconsistent about this, but we're trying to fix it, please do your
 best to ahear to these guideslines.
 
-## Heading 2
+## Heading 2 {: #heading-what-what }
+
+Caution: If you plan to link to specific headings
+[`<a href="#heading-what-what">`](#heading-what-what) within your document, it
+is **strongly** recommended you define them yourself with the 
+`{: #anchor-name }` syntax. This ensures that when documents are localized,
+the anchor will still work, but also ensures that any difference between 
+Markdown processors are a non-issue.
 
 ### Heading 3
 
@@ -267,10 +274,10 @@ Caution: This type of callout suggests proceeding with caution.
 Warning: This type of callout is stronger than a Caution; it means "Don't do this."
 
 
-Success: This type of callout describes a successful action or an error-free status. Used only in interactive or dynamic content; don't use in ordinary static pages.
+Success: This type of callout describes a successful action or an error-free status.
 
 
-Dogfood: This type of callout is for notes that apply temporarily during internal dogfood testing. Remove all Dogfood callouts before making a document publicly visible.
+Dogfood: This type of callout is for notes that apply temporarily during internal dogfood testing.
 
 
 ## Comparisons
