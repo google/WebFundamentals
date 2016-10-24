@@ -26,7 +26,7 @@ Aaron Gustafson likened [progressive enhancement](http://alistapart.com/article/
 
 Think of the candy shell as where many Progressive Web App features can live. They are experiences that combine the best of the web and the best of apps. They are useful to users from the very first visit in a browser tab, no install required.
 
-As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/)), sending relevant [Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
+As the user builds a relationship with these apps through repeat use, they make the candy shell even sweeter - loading very fast on slow network connections (thanks to [service worker](/web/fundamentals/getting-started/primers/service-workers)), sending relevant [Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/) and having a first-class icon on the user's home screen that can load them as fullscreen app experiences. They can also take advantage of smart [web app install banners](/web/updates/2015/03/increasing-engagement-with-app-install-banners-in-chrome-for-android).
 
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-0-@1x.jpg" alt="Web app install banners for engagement, launch from the user's home screen, splash screen in Chrome for Android, works offline with service worker"/>
@@ -135,7 +135,7 @@ Service workers are powerful for offline caching but they also offer significant
 <img
 src="/web/updates/images/2015/12/getting-started-pwa/pwa-general-3-@1x.jpg" alt="Service worker caching of the application shell, allowing it to load without the network"/>
 
-A comprehensive set of [service worker samples](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker) are available over on Google Chrome samples. Jake Archibald's [offline cookbook](https://jakearchibald.com/2014/offline-cookbook/) is a must-read and I highly recommend trying out Paul Kinlan's [your first offline web app](/web/fundamentals/getting-started/your-first-offline-web-app/) walkthrough if new to service worker.
+A comprehensive set of [service worker samples](https://github.com/GoogleChrome/samples/tree/gh-pages/service-worker) are available over on Google Chrome samples. Jake Archibald's [offline cookbook](https://jakearchibald.com/2014/offline-cookbook/) is a must-read and I highly recommend trying out Paul Kinlan's [your first offline web app](/web/fundamentals/getting-started/codelabs/offline/) walkthrough if new to service worker.
 
 Our team also maintain a number of service worker helper utilities and build tools that we find useful for reducing the overhead in getting service worker setup. They're listed over on [Service Worker Libraries](/web/tools/service-worker-libraries/). The two main ones are:
 

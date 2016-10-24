@@ -61,7 +61,7 @@ Being able to send in the background like this also yields a perceived performan
 
 In true [extensible web](https://extensiblewebmanifesto.org/){: .external } style, this is a low level feature that gives you the freedom to do what you need. You ask for an event to be fired when the user has connectivity, which is immediate if the user already has connectivity. Then, you listen for that event and do whatever you need to do.
 
-Like push messaging, it uses a [service worker](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) as the event target, which enables it to work when the page isn’t open. To begin, register for a sync from a page:
+Like push messaging, it uses a [service worker](/web/fundamentals/getting-started/primers/service-workers) as the event target, which enables it to work when the page isn’t open. To begin, register for a sync from a page:
 
 
     // Register your service worker:

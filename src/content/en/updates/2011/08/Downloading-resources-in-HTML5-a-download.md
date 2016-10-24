@@ -24,7 +24,7 @@ For example, clicking the following link downloads the .png as "MyGoogleLogo.png
     <a href="http://www.google.com/.../logo2w.png" download="MyGoogleLogo">download me</a>
     
 
-The real benefit of `a[download]` will be when working with [blob: URLs](http://www.html5rocks.com/en/tutorials/workers/basics/#toc-inlineworkers-bloburis) and [filesystem: URLs](http://html5-demos.appspot.com/static/filesystem/generatingResourceURIs.html) URLs.
+The real benefit of `a[download]` will be when working with [blob: URLs](//www.html5rocks.com/en/tutorials/workers/basics/#toc-inlineworkers-bloburis) and [filesystem: URLs](http://html5-demos.appspot.com/static/filesystem/generatingResourceURIs.html) URLs.
 It'll give users a way to download content created/modified within your app.
 
 [Full Demo](http://html5-demos.appspot.com/static/a.download.html)

@@ -309,7 +309,7 @@ Below is sample output after typing a characters in the text field:
 with an optional name.
 `profileEnd()` completes the profile and displays the results
 in the Profile panel.
-(See also [Speed Up JavaScript Execution](/web/tools/chrome-devtools/profile/rendering-tools/js-execution).)
+(See also [Speed Up JavaScript Execution](/web/tools/chrome-devtools/rendering-tools/js-execution).)
 
 To start profiling:
 

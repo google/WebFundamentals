@@ -29,7 +29,7 @@ In this codelab, you learn how to integrate a service worker into an existing ap
 #### What you'll need
 
 * Chrome 52 or above.
-* A basic understanding of  [Promises](http://www.html5rocks.com/en/tutorials/es6/promises/), Git, and Chrome DevTools.
+* A basic understanding of  [Promises](/web/fundamentals/getting-started/primers/promises), Git, and Chrome DevTools.
 * The sample code.
 * A text editor.
 * A local web server. If you want to use the web server described in this codelab, you need Python installed on your command line.

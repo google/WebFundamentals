@@ -35,7 +35,7 @@ description: 앱 인스톨 배너에는 web과 native 두가지 종류가 있습
   - 144x144 png 형식의 아이콘 (아이콘 정의에 mime type의 `image/png`를 꼭 지정)
   - 로드할 `start_url`
 * 사이트 정보가 등록된 [service worker](/web/fundamentals/primers/service-worker/)
-* [HTTPS](/web/fundamentals/security/encrypt-in-transit/) 통신으로 사이트가 제공되어야 합니다. (서비스워커 사용하려면 필요)
+* [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https) 통신으로 사이트가 제공되어야 합니다. (서비스워커 사용하려면 필요)
 * 최소 두번 방문해야 하고, 방문 간에 최소 5분의 간격이 있어야 합니다.
 
 ## 앱 인스톨 배너 설치하기

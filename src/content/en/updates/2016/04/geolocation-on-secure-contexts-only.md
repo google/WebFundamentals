@@ -23,7 +23,7 @@ using [the HTML5 Geolocation
 API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) 
 from pages delivered by non-secure connections. This means that the page that's 
 making the Geolocation API call must be served from a [secure context](https://w3c.github.io/webappsec-secure-contexts/) such as 
-[HTTPS](/web/fundamentals/security/encrypt-in-transit/). 
+[HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https). 
 
 It is an important issue as it will directly impact any site that requires use 
 of the geolocation API and is not served over https, but it is a change that we do 

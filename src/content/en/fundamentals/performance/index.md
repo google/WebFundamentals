@@ -71,9 +71,9 @@ This codelab will help you learn to identify and fix web app performance bottlen
 
 ### Chrome DevTools
 
-* [How to Look at Performance](/web/tools/chrome-devtools/evaluate-performance/)
+* [How to Look at Performance](/web/tools/chrome-devtools/evaluate-performance/timeline-tool)
 * [Runtime Performance](/web/tools/chrome-devtools/rendering-tools/)
-* [Page Load Performance](/web/tools/chrome-devtools/network-performance/)
+* [Page Load Performance](/web/tools/chrome-devtools/network-performance/resource-loading)
 
 
 ### Udacity Courses

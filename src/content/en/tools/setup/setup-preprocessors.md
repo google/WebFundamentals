@@ -30,7 +30,7 @@ With JavaScript as output, they either convert (compile) from a completely diffe
 
 ## Debugging and editing preprocessed content
 
-As soon as you are in the browser and use DevTools to [edit your CSS](/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles) or debug your JavaScript, one issue becomes very apparent: what you are looking at does not reflect your source, and doesn't really help you fix your problem.
+As soon as you are in the browser and use DevTools to [edit your CSS](/web/tools/chrome-devtools/inspect-styles/edit-styles) or debug your JavaScript, one issue becomes very apparent: what you are looking at does not reflect your source, and doesn't really help you fix your problem.
 
 In order to work around, most modern preprocessors support a feature called <b>Source Maps</b>.
 
@@ -175,7 +175,7 @@ Now that you've got Source Maps properly set up, you might be happy to learn tha
 
 ### Editing preprocessed CSS
 
-Head over to [Edit Sass, Less or Stylus](/web/tools/chrome-devtools/iterate/inspect-styles/edit-styles) to learn more about how to edit and refresh styles linked to a source map directly within DevTools.
+Head over to [Edit Sass, Less or Stylus](/web/tools/chrome-devtools/inspect-styles/edit-styles) to learn more about how to edit and refresh styles linked to a source map directly within DevTools.
 
 ### Editing and debugging preprocessed JavaScript
 

@@ -76,7 +76,7 @@ of the tests that your page needs to pass to display an app install banner.
 
 ![Lighthouse's app install audits](images/lighthouse-a2hs.png)
 
-See [Audit Web Apps with Lighthouse](/web/tools/lighthouse) to get started
+See [Audit Web Apps with Lighthouse](/web/tools/lighthouse/) to get started
 with Lighthouse.
 
 ## App install banner events
@@ -95,7 +95,7 @@ attribute or `accepted` if the user added the web page to the home screen.
       // beforeinstallprompt Event fired
       
       // e.userChoice will return a Promise. 
-      // For more details read: http://www.html5rocks.com/en/tutorials/es6/promises/
+      // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
       e.userChoice.then(function(choiceResult) {
         
         console.log(choiceResult.outcome);
@@ -196,7 +196,7 @@ a service worker. Your site must:
   - a `name` (used in the banner prompt)
   - a 144x144 png icon, your icon declaration's should include a mime type of `image/png`
   - a `related_applications` object with information about the app
-* Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/)
+* Be served over [HTTPS](/web/fundamentals/security/encrypt-in-transit/enable-https)
 * Be visited by the user twice, over two separate days during the course
   of two weeks.
 

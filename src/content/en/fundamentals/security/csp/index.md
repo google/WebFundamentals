@@ -441,7 +441,7 @@ CSP 1 is quite usable in Chrome, Safari, and Firefox, but has very limited
 support in IE 10. You can <a href="http://caniuse.com/#feat=contentsecuritypolicy">
 view specifics at canisue.com</a>. CSP Level 2 has been available in Chrome since
 version 40. Massive sites like Twitter and Facebook have deployed the header
-(<a href="https://blog.twitter.com/2011/improving-browser-security-csp">Twitter's
+(<a href="https://blog.twitter.com/2011/improving-browser-security-with-csp">Twitter's
 case study</a> is worth a read), and the standard is very much ready
 for you to start deploying on your own sites.
 
@@ -471,7 +471,7 @@ that, by default, the `<iframe>` code that Facebook provides loads a relative
 URL, `//facebook.com`. Change that to explicitly specify HTTPS:
 `https://facebook.com`. There's no reason to use HTTP if you don't have to.
 
-* Twitter's [Tweet button](https://publish.twitter.com/)
+* Twitter's [Tweet button](https://publish.twitter.com/#)
 relies on access to a script and a frame, both hosted at
 `https://platform.twitter.com`. (Twitter likewise provides a relative URL by
 default; edit the code to specify HTTPS when copy/pasting it locally.)

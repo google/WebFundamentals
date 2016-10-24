@@ -95,7 +95,7 @@ O DevTools fornece quatro tipos de breakpoints condicionais:
 Use o breakpoint do evento de mutação do DOM quando o script estiver prestes a inserir, alterar,
 ou deletar um nó do DOM e você quiser isolar e observar a mudança enquanto ela ocorre.
 A execução pausa pausa quando um nó específico do DOM estiver prestes a ser modificado, antes que a modificação
-seja aplicada (veja também [Edite o DOM](/web/tools/chrome-devtools/iterate/inspect-styles/edit-dom)).
+seja aplicada (veja também [Edite o DOM](/web/tools/chrome-devtools/inspect-styles/edit-dom)).
 
 Para adicionar um breakpoint de mutação do DOM, abra o painel Elements e clique com o botão direito em algum elemento.
 A partir do menu de contexto, clique **Break on…**, e então escolha uma das opções:

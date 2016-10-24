@@ -17,7 +17,7 @@ Service Worker はブラウザが Web ページとは別にバックグラウン
 
 この API にとてもわくわくするのは、それがオフライン体験をサポートし、そして開発者がその体験を完全にコントロールできるからです。
 
-Service Worker 以前にも、オフライン体験を Web にもたらすものとして [AppCache](http://www.html5rocks.com/en/tutorials/appcache/beginner/) というものがありました。しかし AppCache の重大な問題として、[たくさんの意図しない挙動](http://alistapart.com/article/application-cache-is-a-douchebag)があったこと、シングルページ Web アプリにはうまく動いてくれたものの、複数のページにまたがるサイトではうまく動いてくれないという設計がありました。Service Worker はこれらの弱点を避けるように設計されています。
+Service Worker 以前にも、オフライン体験を Web にもたらすものとして [AppCache](//www.html5rocks.com/en/tutorials/appcache/beginner/) というものがありました。しかし AppCache の重大な問題として、[たくさんの意図しない挙動](http://alistapart.com/article/application-cache-is-a-douchebag)があったこと、シングルページ Web アプリにはうまく動いてくれたものの、複数のページにまたがるサイトではうまく動いてくれないという設計がありました。Service Worker はこれらの弱点を避けるように設計されています。
 
 Service Worker について、知っておきたいことは次のとおりです。
 

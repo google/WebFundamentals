@@ -11,7 +11,7 @@ description: How to convert ArrayBuffer to and from String
 {% include "web/_shared/contributors/renatomangini.html" %}
 
 
-ArrayBuffers are used to transport raw data and several new APIs rely on them, including [WebSockets](http://www.html5rocks.com/en/tutorials/websockets/basics/){: .external }, [Web Intents](http://webintents.org), [XMLHttpRequest version 2](http://www.html5rocks.com/en/tutorials/file/xhr2/) and [WebWorkers](http://www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted-workercomm). However, because they recently landed in the JavaScript world, sometimes they are misinterpreted or misused.
+ArrayBuffers are used to transport raw data and several new APIs rely on them, including [WebSockets](http://www.html5rocks.com/en/tutorials/websockets/basics/){: .external }, [Web Intents](http://webintents.org), [XMLHttpRequest version 2](http://www.html5rocks.com/en/tutorials/file/xhr2/) and [WebWorkers](//www.html5rocks.com/en/tutorials/workers/basics/#toc-gettingstarted-workercomm). However, because they recently landed in the JavaScript world, sometimes they are misinterpreted or misused.
 
 Semantically, an [ArrayBuffer](https://developer.mozilla.org/en/JavaScript_typed_arrays/ArrayBuffer) is simply an array of bytes viewed through a specific mask. This mask, an instance of [ArrayBufferView](https://developer.mozilla.org/en/JavaScript_typed_arrays/ArrayBufferView), defines how bytes are aligned to match the expected structure of the content. For example, if you know that the bytes in an ArrayBuffer represent an array of 16-bit unsigned integers, you just wrap the ArrayBuffer in a `Uint16Array` view and you can manipulate its elements using the brackets syntax as if the `Uint16Array` was an integer array:
 

@@ -326,7 +326,7 @@ Progressive Web Apps 应该能够快速启动并且立即可用。目前，我�
 Progressive Web Apps 是快速且可安装的，这意味着它能在在线、离线、断断续续或者缓慢的网络环境下使用。为了实现这个目标，我们需要使用一个 service worker 来缓存应用外壳，以保证它能始终迅速可用且可靠。
 
 如果你对 service workers 不熟悉，你可以通过阅读 [介绍 Service
-Workers](http://www.html5rocks.com/en/tutorials/service-worker/introduction/) 来了解关于它能做什么，它的生命周期是如何工作的等等知识。
+Workers](/web/fundamentals/getting-started/primers/service-workers) 来了解关于它能做什么，它的生命周期是如何工作的等等知识。
 
 service workers 提供的是一种应该被理解为渐进增强的特性，这些特性仅仅作用于支持service workers 的浏览器。比如，使用 service workers 你可以缓存应用外壳和你的应用所需的数据，所以这些数据在离线的环境下依然可以获得。如果浏览器不支持 service workers ，支持离线的
 代码没有工作，用户也能得到一个基本的用户体验。使用特性检测来渐渐增强有一些小的开销，它不会在老旧的不支持 service workers 的浏览器中产生破坏性影响。

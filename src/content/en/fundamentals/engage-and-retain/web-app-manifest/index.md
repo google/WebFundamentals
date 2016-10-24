@@ -253,7 +253,7 @@ banner](/web/fundamentals/engage-and-retain/app-install-banners/#testing-the-app
 for more on this topic.
 
 If you want an automated approach towards validating your web app manifest,
-check out [Lighthouse](/web/tools/lighthouse). Lighthouse is a web app auditing
+check out [Lighthouse](/web/tools/lighthouse/). Lighthouse is a web app auditing
 tool that you run as a Chrome Extension or as an NPM module. You provide
 Lighthouse with a URL, it runs a suite of audits against that page, and then
 displays the results in a report. Lighthouse audits related to web app manifests

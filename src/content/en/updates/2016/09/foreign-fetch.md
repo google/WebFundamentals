@@ -94,13 +94,13 @@ During development, you'll probably want to confirm that your foreign fetch serv
 
 #### Are the proper response headers being sent?
 
-In order to register the foreign fetch service worker, you need to set a Link header on a response to a resource hosted on your domain, as described earlier in this post. During the Origin Trial period, and assuming you don't have `chrome://flags/#enable-experimental-web-platform-features` set, you also need to set a `Origin-Trial` response header. You can confirm that your web server is setting those headers by looking at the entry in the [Network panel](/web/tools/chrome-devtools/profile/network-performance/resource-loading) of DevTools:
+In order to register the foreign fetch service worker, you need to set a Link header on a response to a resource hosted on your domain, as described earlier in this post. During the Origin Trial period, and assuming you don't have `chrome://flags/#enable-experimental-web-platform-features` set, you also need to set a `Origin-Trial` response header. You can confirm that your web server is setting those headers by looking at the entry in the [Network panel](/web/tools/chrome-devtools/network-performance/resource-loading) of DevTools:
 
 ![Headers displayed in the Network panel](/web/updates/images/2016/09/foreign-fetch/headers.png "Headers displayed in the Network panel")
 
 #### Is the Foreign Fetch service worker properly registered?
 
-You can also confirm the underlying service worker registration, including its scope, by looking at the full list of service workers in the [Application panel](/web/tools/chrome-devtools/iterate/manage-data/) of DevTools. Make sure to select the "Show all" option, since by default, you'll only see service workers for the current origin.
+You can also confirm the underlying service worker registration, including its scope, by looking at the full list of service workers in the [Application panel](/web/tools/chrome-devtools/manage-data/local-storage) of DevTools. Make sure to select the "Show all" option, since by default, you'll only see service workers for the current origin.
 
 ![The foreign fetch service worker in the Applications panel](/web/updates/images/2016/09/foreign-fetch/show-all-service-workers.png "The foreign fetch service worker in the Applications panel")
 
