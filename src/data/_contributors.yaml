@@ -702,6 +702,21 @@ sethladd:
   role:
     - author
 
+ericlawrence
+  name:
+    given: Eric
+    family: Lawrence
+  org:
+    name: Google
+    unit: Chrome
+  country: US
+  role:
+    - author
+  github: ericlaw1979
+  homepage: 'https://textslashplain.com/'
+  twitter: ericlaw
+  email: elawrence@chromium.org
+  
 nurinamu:
   name:
     given: Wonjae
