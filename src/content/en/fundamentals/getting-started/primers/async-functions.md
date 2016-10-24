@@ -65,8 +65,9 @@ easier to read, especially for those less familiar with promises.
 
 ## Async return values
 
-Calling an async function returns a promise for whatever the function returns or
-throws. So with:
+An async function's return value gets automatically wrapped in a Promise, thus,
+calling such async function returns a Promise for whatever the function returns
+or throws. So with:
 
     // wait ms milliseconds
     function wait(ms) {
