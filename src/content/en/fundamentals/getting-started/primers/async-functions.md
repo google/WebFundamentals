@@ -27,8 +27,8 @@ Async functions work like this:
 
 If you use the `async` keyword before a function definition, you can then use
 `await` within the function. When you `await` a promise, the function is paused
-until the promise settles. If the promise fulfills, you get the value back. If
-the promise rejects, the rejected value is thrown.
+in a non-blocking way until the promise settles. If the promise fulfills, you
+get the value back. If the promise rejects, the rejected value is thrown.
 
 Note: If you're unfamiliar with promises, check out [our
 promises guide](/web/fundamentals/getting-started/primers/promises).
