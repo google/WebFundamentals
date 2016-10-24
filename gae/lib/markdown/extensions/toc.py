@@ -285,7 +285,7 @@ class TocExtension(Extension):
             "slugify": [slugify,
                         "Function to generate anchors based on header text - "
                         "Defaults to the headerid ext's slugify function."],
-            'separator': ['-', 'Word separator. Defaults to "-".']
+            'separator': ['_', 'Word separator. Defaults to "-".']
         }
 
         super(TocExtension, self).__init__(*args, **kwargs)
