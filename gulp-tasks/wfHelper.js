@@ -99,7 +99,13 @@ function readMetadataForFile(file) {
   };
   var tags = getRegEx(RE_TAGS, content);
   if (tags) {
-    result.tags = tags.split(',');
+    result.tags = [];
+    tags.split(',').forEach(function(tag) {
+      tag = tag.trim();
+      if (tag.length > 0) {
+        result.tags.push(tag.trim());
+      }
+    });
   }
   var podcast = getRegEx(RE_PODCAST, content);
   if (podcast) {
