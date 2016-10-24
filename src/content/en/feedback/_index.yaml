@@ -16,7 +16,7 @@ landing_page:
           easy to find and report bugs in any browser, as well as
           help you find resources while you’re building your site.
          </p>
-         <p>&nbsp;</p>
+         <h3>Get started with...</h3>
       image_path: images/hero-2x.png
       buttons:
       - label: Search bugs in all web browsers
@@ -55,6 +55,7 @@ landing_page:
       buttons:
       - label: BrowserStack
         path: https://www.browserstack.com/
+        classname: wf-small-link
 
     - heading: How to file a good bug
       description: >
@@ -63,13 +64,11 @@ landing_page:
         there's a better chance your bug will be solved.
       image_path: images/content-file-responsive-2x.png
       buttons:
-      - label: Learn more
-        path: https://crbug.com
       - label: How to create a minimized reproducable test case
-        path: https://crbug.com
+        path: https://developer.mozilla.org/en-US/docs/Mozilla/QA/Reducing_testcases
         classname: wf-small-link
       - label: How to file a good bug
-        path: /web/feedback/file-a-bug/
+        path: /web/feedback/file-a-bug
         classname: wf-small-link
       - label: JSFiddle
         path: https://jsfiddle.net/
@@ -85,8 +84,6 @@ landing_page:
         web platform better.
       image_path: images/content-spotlight-responsive-2x.png
       buttons:
-      - label: Learn more
-        path: https://crbug.com
       - label: Chromium bugs
         path: https://crbug.com
         classname: wf-small-link
@@ -111,10 +108,10 @@ landing_page:
         great way for both learning and share best practices.
       buttons:
       - label: progressive-web-apps tag on Stack Overflow
-        path: http://stackoverflow.com/questions/tagged/progressive-web-apps
+        path: https://stackoverflow.com/questions/tagged/progressive-web-apps
         classname: wf-small-link
       - label: google-chrome tag on Stack Overflow
-        path: http://stackoverflow.com/questions/tagged/google-chrome
+        path: https://stackoverflow.com/questions/tagged/google-chrome
         classname: wf-small-link
       - label: Chromiumdev Slack channel
         path: https://goo.gl/jCWx5m
