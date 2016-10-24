@@ -24,7 +24,7 @@ At this point you fall into one of these categories:
 * You punch the air! About time right? You've used these Promise things before but it bothers you that all implementations have a slightly different API. What's the API for the official JavaScript version? You probably want to begin with the [terminology](#promise-terminology).
 * You knew about this already and you scoff at those who are jumping up and down like it's news to them. Take a moment to bask in your own superiority, then head straight to the [API reference](#promise-api-reference).
 
-## What's all the fuss about?
+## What's all the fuss about? {: #whats-all-the-fuss-about}
 
 JavaScript is single threaded, meaning that two bits of script cannot run at the same time; they have to run one after another. In browsers, JavaScript shares a thread with a load of other stuff that differs from browser to browser. But typically JavaScript is in the same queue as painting, updating styles, and handling user actions (such as highlighting text and interacting with form controls). Activity in one of these things delays the others.
 
@@ -108,7 +108,7 @@ At their most basic, promises are a bit like event listeners except:
 This is extremely useful for async success/failure, because you're less interested in the exact time something became available, and more interested in reacting to the outcome.
 
 
-## Promise terminology
+## Promise terminology {: #promise-terminology}
 
 [Domenic Denicola](https://twitter.com/domenic) proof read the first draft of this article and graded me "F" for terminology. He put me in detention, forced me to copy out [States and Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md) 100 times, and wrote a worried letter to my parents. Despite that, I still get a lot of the terminology mixed up, but here are the basics:
 
@@ -834,7 +834,7 @@ This throws together a lot of new ES6 stuff: promises, generators, let, for-of. 
 This pattern is so useful, it's coming to ES7 in the form of [async functions](https://jakearchibald.com/2014/es7-async-functions/). It's pretty much the same as above, but no need for a `spawn` method.
 
 
-## Promise API reference
+## Promise API reference {: #promise-api-reference}
 
 All methods work in Chrome, Opera, Firefox, Microsoft Edge, and Safari unless otherwise noted. [The polyfill](https://github.com/jakearchibald/ES6-Promises#readme) provides the below for all browers.
 
