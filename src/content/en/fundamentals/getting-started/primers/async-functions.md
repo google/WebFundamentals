@@ -27,8 +27,8 @@ Async functions work like this:
 
 If you use the `async` keyword before a function definition, you can then use
 `await` within the function. When you `await` a promise, the function is paused
-until the promise settles. If the promise fulfills, you get the value back. If
-the promise rejects, the rejected value is thrown.
+in a non-blocking way until the promise settles. If the promise fulfills, you
+get the value back. If the promise rejects, the rejected value is thrown.
 
 Note: If you're unfamiliar with promises, check out [our
 promises guide](/web/fundamentals/getting-started/primers/promises).
@@ -63,10 +63,14 @@ And here's the same thing using async functions:
 It's the same number of lines, but all the callbacks are gone. This makes it way
 easier to read, especially for those less familiar with promises.
 
+Note: Anything you `await` is passed through `Promise.resolve()`, so you can
+safely `await` non-native promises.
+
 ## Async return values
 
-Calling an async function returns a promise for whatever the function returns or
-throws. So with:
+Async functions *always* return a promise, whether you use `await` or not. That
+promise resolves with whatever the async function returns, or rejects with
+whatever the async function throws. So with:
 
     // wait ms milliseconds
     function wait(ms) {
