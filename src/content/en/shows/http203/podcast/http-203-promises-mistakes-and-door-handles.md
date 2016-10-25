@@ -21,7 +21,7 @@ In this episode:
 * [display: contents](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 * [ES2015 Benchmarks](https://kpdecker.github.io/six-speed/)
 * [Promisifying Node](https://github.com/nodejs/node/pull/5020)
-* [Cancellable Promises](https://github.com/domenic/cancelable-promise/blob/master/Third%20State.md)
+* [Cancellable Promises](https://github.com/tc39/proposal-cancelable-promises/)
 * [CSS Mistakes](https://wiki.csswg.org/ideas/mistakes)
 
 <a href="http://feeds.feedburner.com/Http203Podcast">

@@ -72,7 +72,7 @@ Veillez à fournir des descriptions explicites au moyen de l'attribut `alt` sur 
   </iframe>
 </div>
 
-L'attribut <code>srcset</code> améliore le comportement de l'élément <code>img</code>, facilitant ainsi la diffusion de plusieurs fichiers image pour différentes caractéristiques d'appareil. À l'instar de la <code>image-set</code> <a href="images-in-css.html#use-image-set-to-provide-high-res-images">fonction CSS</a> native de CSS, l'attribut <code>srcset</code> permet au navigateur de choisir l'image idéale en fonction des caractéristiques de l'appareil ; par exemple, une image 2x sur un écran 2x et, à l'avenir, une image 1x sur un appareil 2x sur un réseau à faible débit.
+L'attribut <code>srcset</code> améliore le comportement de l'élément <code>img</code>, facilitant ainsi la diffusion de plusieurs fichiers image pour différentes caractéristiques d'appareil. À l'instar de la <code>image-set</code> <a href="#use_image-set_to_provide_high_res_images">fonction CSS</a> native de CSS, l'attribut <code>srcset</code> permet au navigateur de choisir l'image idéale en fonction des caractéristiques de l'appareil ; par exemple, une image 2x sur un écran 2x et, à l'avenir, une image 1x sur un appareil 2x sur un réseau à faible débit.
 
 <div class="clearfix"></div>
 
@@ -184,7 +184,7 @@ L'attribut `sizes` dans l'exemple ci-dessus utilise plusieurs requêtes média p
 
 ### Rendre extensibles les images de produit
 
-Les clients veulent voir ce qu'ils achètent. Les personnes qui visitent les sites de vente au détail veulent être en mesure d'afficher des gros-plans en haute résolution des produits qu'ils consultent afin d'en visualiser les moindres détails, comme l'a démontré cette [étude menée par Google et AnswerLab](/web/fundamentals/principles/research-study.html).
+Les clients veulent voir ce qu'ils achètent. Les personnes qui visitent les sites de vente au détail veulent être en mesure d'afficher des gros-plans en haute résolution des produits qu'ils consultent afin d'en visualiser les moindres détails, comme l'a démontré cette [étude menée par Google et AnswerLab](/web/fundamentals/getting-started/principles/).
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="Site Web J. Crew avec une image de produit extensible">
@@ -201,7 +201,7 @@ Le site J. Crew constitue un excellent exemple de source d'images extensibles su
 La [technique d'image
 compressible](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview){: .external} diffuse des images 2x fortement compressées vers tous les appareils, quelles qu'en soient les capacités réelles. En fonction du type d'image et du niveau de compression, la qualité d'image peut paraître inchangée, mais la taille du fichier diminue de manière significative.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Voir l'exemple</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Voir l'exemple</a>
 
 Note: Soyez prudent lorsque vous utilisez la technique de compression, en raison des exigences supplémentaires sur le plan de la mémoire et du décodage. Le redimensionnement d'images sur des écrans de petite taille est une opération exigeante qui peut se révéler particulièrement laborieuse sur des appareils d'entrée de gamme disposant d'une mémoire et d'une puissance de traitement limitées.
 
@@ -409,7 +409,7 @@ Plusieurs outils permettent d'effectuer une compression sans perte plus poussée
 
 La création de sprites CSS est une technique par laquelle plusieurs images sont regroupées dans un seul fichier appelé `sprite sheet`. Les images individuelles peuvent ensuite être utilisées en indiquant l'image d'arrière-plan d'un élément (la `sprite sheet`), plus un décalage pour afficher la partie appropriée.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=""Sprite sheet" utilisée comme exemple"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=""Sprite sheet" utilisée comme exemple"></a>
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite"   adjust_indentation="auto" %}
 </pre>
