@@ -70,7 +70,7 @@ Asegúrate de proporcionar descripciones pertinentes con el atributo `alt` de lo
   </iframe>
 </div>
 
-El atributo <code>srcset</code> mejora el comportamiento del elemento <code>img</code>, de modo que es más fácil proporcionar varios archivos de imagen para diferentes características de los dispositivos. De modo similar a la <a href="images-in-css.html#use-image-set-to-provide-high-res-images">función CSS</a> <code>image-set</code> que pertenece a CSS, el atributo <code>srcset</code> permite que el navegador elija la mejor imagen en función de las características del dispositivo. Por ejemplo, utiliza una imagen 2x en una pantalla 2x y quizás, en el futuro, una imagen 1x en un dispositivo 2x con una red de ancho de banda limitado.
+El atributo <code>srcset</code> mejora el comportamiento del elemento <code>img</code>, de modo que es más fácil proporcionar varios archivos de imagen para diferentes características de los dispositivos. De modo similar a la <a href="#use_image-set_to_provide_high_res_images">función CSS</a> <code>image-set</code> que pertenece a CSS, el atributo <code>srcset</code> permite que el navegador elija la mejor imagen en función de las características del dispositivo. Por ejemplo, utiliza una imagen 2x en una pantalla 2x y quizás, en el futuro, una imagen 1x en un dispositivo 2x con una red de ancho de banda limitado.
 
 
 <div class="clearfix"></div>
@@ -189,7 +189,7 @@ El atributo `sizes` del ejemplo anterior utiliza varias consultas multimedia par
 
 ### Definir que las imágenes del producto se puedan ampliar
 
-Puede que los clientes quieran ver lo que van a comprar.  En los sitios de compras, los usuarios esperan poder ver primeros planos de los productos en alta resolución para poder examinar mejor los detalles. Además, los [participantes del estudio](/web/fundamentals/principles/research-study.html) se sintieron frustrados si no se les daba esta opción.
+Puede que los clientes quieran ver lo que van a comprar.  En los sitios de compras, los usuarios esperan poder ver primeros planos de los productos en alta resolución para poder examinar mejor los detalles. Además, los [participantes del estudio](/web/fundamentals/getting-started/principles/) se sintieron frustrados si no se les daba esta opción.
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="Sitio web de J. Crew con imagen del producto ampliable">
@@ -206,7 +206,7 @@ El sitio de J. Crew nos proporciona un buen ejemplo de imágenes ampliables que 
 La [técnica
 de imagen de compresión](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) muestra una imagen 2x muy comprimida en todos los dispositivos, sin importar las funciones del dispositivo.  En función del tipo de imagen y del nivel de compresión, puede que no se perciba cambio alguno en la calidad de la imagen, pero el tamaño del archivo se reduce en gran medida.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Mostrar ejemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Mostrar ejemplo</a>
 
 
 Note: Ten cuidado con la técnica de compresión, porque aumenta el uso de memoria y supone costes adicionales de descodificación.  La adaptación de imágenes grandes para que quepan en pantallas más pequeñas es cara y puede ser una tarea especialmente ardua en los dispositivos de gama baja en los que la memoria y la capacidad de procesamiento son limitadas.
@@ -412,7 +412,7 @@ Hay varias herramientas disponibles que comprimen aun más las imágenes, sin p�
 
 El uso de sprites en CSS es una técnica en la que varias imágenes se combinan en una sola imagen `sprite sheet`. Con esta técnica, cada imagen puede usarse para especificar la imagen de fondo de un elemento (la hoja de sprites) y un desplazamiento para mostrar la parte correcta.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Hoja de sprites de imágenes usada en el ejemplo"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Hoja de sprites de imágenes usada en el ejemplo"></a>
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" adjust_indentation="auto" %}

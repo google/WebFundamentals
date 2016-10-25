@@ -65,7 +65,7 @@ Achten Sie darauf, dem `alt`-Attribut des `img`-Elements aussagekräftige Beschr
   </iframe>
 </div>
 
-Das <code>srcset</code>-Attribut erweitert das <code>img</code>-Element, indem es dafür sorgt, dass auf einfache Weise mehrere Bilddateien für verschiedene Gerätecharakteristiken bereitgestellt werden können. Ähnlich wie die native <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS-Funktion</a> <code>image-set</code> erlaubt <code>srcset</code> Browsern, abhängig von den Charakteristiken des jeweiligen Geräts das beste Bild auszuwählen, zum Beispiel ein 2x-Bild für ein 2x-Display, und in Zukunft möglicherweise auch ein 1x-Bild für ein 2x-Gerät, wenn nur eine geringe Bandbreite zur Verfügung steht.
+Das <code>srcset</code>-Attribut erweitert das <code>img</code>-Element, indem es dafür sorgt, dass auf einfache Weise mehrere Bilddateien für verschiedene Gerätecharakteristiken bereitgestellt werden können. Ähnlich wie die native <a href="#use_image-set_to_provide_high_res_images">CSS-Funktion</a> <code>image-set</code> erlaubt <code>srcset</code> Browsern, abhängig von den Charakteristiken des jeweiligen Geräts das beste Bild auszuwählen, zum Beispiel ein 2x-Bild für ein 2x-Display, und in Zukunft möglicherweise auch ein 1x-Bild für ein 2x-Gerät, wenn nur eine geringe Bandbreite zur Verfügung steht.
 
 <div class="clearfix"></div>
 
@@ -179,7 +179,7 @@ Das `sizes`-Attribut im vorherigen Beispiel nutzt mehrere Medienabfragen, um die
 
 ### Produktbilder maximierbar machen
 
-Kunden möchten sehen, was sie kaufen. Auf Einzelhändler-Websites erwarten Nutzer, sich Nahaufnahmen von Produkten in hoher Auflösung ansehen zu können, um einen besseren Eindruck von Einzelheiten zu bekommen. [Studienteilnehmer](/web/fundamentals/principles/research-study.html) wurden frustriert, wenn sie dazu keine Gelegenheit erhielten.
+Kunden möchten sehen, was sie kaufen. Auf Einzelhändler-Websites erwarten Nutzer, sich Nahaufnahmen von Produkten in hoher Auflösung ansehen zu können, um einen besseren Eindruck von Einzelheiten zu bekommen. [Studienteilnehmer](/web/fundamentals/getting-started/principles/) wurden frustriert, wenn sie dazu keine Gelegenheit erhielten.
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="Website von J. Crews mit maximierbarem Produktbild">

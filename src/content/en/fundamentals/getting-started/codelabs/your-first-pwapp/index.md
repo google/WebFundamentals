@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll build a Progressive Web App, which loads quickly, even on flaky networks, has an icon on the homescreen, and loads as a top-level, full screen experience.
 
-{# wf_updated_on: 2016-10-10T14:59:33Z #}
+{# wf_updated_on: 2016-10-20T21:02:36Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -873,12 +873,12 @@ Further Reading:  [PageSpeed Insight Rules](/speed/docs/insights/rules)
 
 If you're new to Firebase, you'll need to create your account and install some tools first.
 
-1. Create a Firebase account at  [https://www.firebase.com/signup/](https://www.firebase.com/signup/)
+1. Create a Firebase account at  [https://firebase.google.com/console/](https://firebase.google.com/console/)
 2. Install the Firebase tools via npm: `npm install -g firebase-tools`
 
 Once your account has been created and you've signed in, you're ready to deploy!
 
-1. Create a new app at  [https://www.firebase.com/account/](https://www.firebase.com/account/)
+1. Create a new app at  [https://firebase.google.com/console/](https://firebase.google.com/console/)
 2. If you haven't recently signed in to the Firebase tools, update your credentials: `firebase login`
 3. Initialize your app, and provide the directory (likely `work`) where your completed app lives: `firebase init`
 4. Finally, deploy the app to Firebase: `firebase deploy`
