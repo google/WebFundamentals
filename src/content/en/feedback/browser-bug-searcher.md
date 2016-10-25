@@ -19,23 +19,21 @@ Note: The red box is temporary only to indicate the iframe.
       height: 100%;
     }
   </style>
+  <iframe></iframe>
   <script>
     devsite.framebox.AutoSizeClient.initAutoSize();
     document.querySelector('html').style.height = '100%';
     document.querySelector('body').style.height = '100%';
-    setTimeout(fakeSearch, 250);
-    function populateSearch() {
-      devsite.framebox.AutoSizeClient.requestQueryAndFragment(function(query) {
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://browser-issue-tracker-search.appspot.com/' + query;
-        document.querySelector('body').appendChild(iframe);
-      });
-    }
-    function fakeSearch() {
-      var query = '?q=flexbox';
-      var iframe = document.createElement('iframe');
-      iframe.src = 'https://browser-issue-tracker-search.appspot.com/' + query;
-      document.querySelector('body').appendChild(iframe);
+    var iframe = document.querySelector('iframe');
+    if (document.querySelector('body.staging-framebox')) {
+      iframe.src = 'https://browser-issue-tracker-search.appspot.com/?q=flexbox';
+    } else {
+      setTimeout(function() {
+        devsite.framebox.AutoSizeClient.requestQueryAndFragment(function(query) {
+          console.log('requestQueryAndFragment', query);
+          iframe.src = 'https://browser-issue-tracker-search.appspot.com/' + query;
+        });
+      }, 100);
     }
   </script>
 {% endframebox %}
