@@ -102,13 +102,16 @@ gulp.task('presubmit', function(cb) {
   runSequence('clean', 'test', cb);
 });
 
-gulp.task('default', function() {
-  gutil.log('Options:');
-  gutil.log(' ', gutil.colors.cyan('build'), 'Builds all auto-generated files...');
-  gutil.log(' ', gutil.colors.cyan('clean'), 'Removes all auto-generated files from src/content/...');
-  gutil.log(' ', gutil.colors.cyan('codelabs'), 'Updates the Code Labs to the latest from Docs');
-  gutil.log(' ', gutil.colors.cyan('deploy'), '[clean, build, test]');
-  gutil.log(' ', gutil.colors.cyan('presubmit'), 'See test');
-  gutil.log(' ', gutil.colors.cyan('test'), 'Checks the files for any issues');
-  gutil.log('');
+gulp.task('default', function(cb) {
+  console.log(chalk.red('ERROR:'), 'no command specified.');
+  console.log('Usage: gulp <command> [arguments]');
+  console.log(' ', 'Commands');
+  console.log('  ', gutil.colors.cyan('build'), 'Builds all auto-generated files...');
+  console.log('  ', gutil.colors.cyan('clean'), 'Removes all auto-generated files from src/content/...');
+  console.log('  ', gutil.colors.cyan('presubmit'), 'Clean & test');
+  console.log('  ', gutil.colors.cyan('test'), 'Checks the files for any issues');
+  console.log(' ', 'Optional Arguments');
+  console.log('  ', chalk.cyan('--lang'), 'Comma separated list of languages to use', chalk.gray('eg: --lang=en,fr'));
+  console.log('  ', chalk.cyan('--verbose'), 'Log with verbose output');
+  console.log('');
 });
