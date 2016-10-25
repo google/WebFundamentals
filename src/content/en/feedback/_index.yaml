@@ -10,96 +10,71 @@ landing_page:
     classname: devsite-landing-row-67
     items:
     - description: >
-        <p>
-          We’re committed to making your site work across platforms
-          and browsers so you can be successful. We want to make it
-          easy to find and report bugs in any browser, as well as
-          help you find resources while you’re building your site.
-         </p>
-         <h3>Get started with...</h3>
+        We’re committed to helping you make your site work across platforms
+        and browsers, so you can be successful. We want to make it
+        easy to find and report bugs in any browser, as well as
+        help you find resources while you’re building your site.
       image_path: images/hero-2x.png
-      buttons:
-      - label: Search bugs in all web browsers
-        path: "#search-bugs-in-all-web-browsers"
-        classname: button button-primary
-      - label: Reporting bugs
-        path: "#reporting-bugs"
-        classname: button button-primary
-      - label: Discussing solutions
-        path: "#discussing-solutions"
-        classname: button button-primary
 
   - items:
     - custom_html: <hr>
 
   - heading: Search bugs in all web browsers
+    classname: wf-feedback-embedded-search devsite-landing-row-50
     items:
-    - image_path: images/content-search-for-bugs-responsive-2x.png
-    # Using framebox doesn't work, i.e. the search widget doesn't get any results
-    # {% framebox height="300px" %}
-    # <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="250px" scrolling="no"></iframe>
-    # {% endframebox %}
     - custom_html: >
-        Here you can search through all major browser bug trackers to find a bug you're looking for.
-        <p>&nbsp;</p>
-        <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" width="100%" height="250" scrolling="no"></iframe>
+        <img src="images/content-search-for-bugs-responsive-2x.png" class="devsite-landing-row-item-image">
+        <p>
+          Here you can search through all major browser bug trackers to
+          find a bug you're looking for.
+        </p>
+        <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" scrolling="no"></iframe>
 
   - items:
     - custom_html: <hr>
 
   - heading: Reporting bugs
-    classname: devsite-landing-row-no-image-background
     items:
-    - heading: Cross-browser testing
-      description: >
-        We recommend that you test in multiple web browsers on
-        multiple platforms. Real machines and devices are best,
-        but another great option is using BrowserStack.
-      image_path: images/content-node-responsive-2x.png
-      buttons:
-      - label: BrowserStack
-        path: https://www.browserstack.com/
-        classname: wf-small-link
+      - description: >
+            Telling browser vendors about issues you find in their browser,
+            on a specific device or platform is an integral part of making
+            the web platform better!<br><br>
+            Adding your support to existing bugs helps developers to 
+            prioritize which issues are effecting users.
+        image_path: images/content-spotlight-responsive-2x.png  
 
+
+  - classname: devsite-landing-row-67
+    items:
     - heading: How to file a good bug
       description: >
-        When filing bugs, the more information the better.
-        If you have a reproducible test with a limited scope
-        there's a better chance your bug will be solved.
+        Does it happen in other browsers? Is it a regression? Do you have
+        a reduced test case? The more information you can provide, the better
+        chance your bug can be fixed!
       image_path: images/content-file-responsive-2x.png
       buttons:
-      - label: How to create a minimized reproducable test case
-        path: https://developer.mozilla.org/en-US/docs/Mozilla/QA/Reducing_testcases
-        classname: wf-small-link
       - label: How to file a good bug
         path: /web/feedback/file-a-bug
-        classname: wf-small-link
-      - label: JSFiddle
-        path: https://jsfiddle.net/
-        classname: wf-small-link
-      - label: Codepen
-        path: https://codepen.io/
-        classname: wf-small-link
 
-    - heading: Reporting bugs
+
+  - classname: devsite-landing-row-67
+    items:
+    - heading: Report a bug
       description: >
-        If you encounter browser issues, adding support to
-        existing bugs or reporting new ones helps make the
-        web platform better.
-      image_path: images/content-spotlight-responsive-2x.png
+        To ensure your bug is fixed promptly, it's important to tell the right
+        people about it. All of the major browser vendors provide a way to 
+        report bugs.
+      image_path: images/content-node-responsive-2x.png
       buttons:
-      - label: Chromium bugs
+      - label: Chromium
         path: https://crbug.com
-        classname: wf-small-link
-      - label: Edge bugs
+      - label: Edge
         path: https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/
-        classname: wf-small-link
-      - label: Mozilla bugs
+      - label: Mozilla
         path: https://bugzilla.mozilla.org/
-        classname: wf-small-link
-      - label: WebKit bugs
+      - label: WebKit
         path: https://bugs.webkit.org/
-        classname: wf-small-link
+
 
   - items:
       - custom_html: <hr>
@@ -118,5 +93,5 @@ landing_page:
         path: https://stackoverflow.com/questions/tagged/google-chrome
         classname: wf-small-link
       - label: Chromiumdev Slack channel
-        path: https://goo.gl/jCWx5m
+        path: https://chromiumdev-slack.herokuapp.com/?linkId=18742368
         classname: wf-small-link
