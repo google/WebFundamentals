@@ -41,7 +41,7 @@ description: 手機上很難填寫表單。 最好的表單是輸入量最少的
 
 請確保您的表單沒有重複行為、
 只加入必要的欄位數目，
-並善用 [自動填寫](/web/fundamentals/input/form/label-and-name-inputs.html#use-metadata-to-enable-auto-complete)，以便使用者可以利用預先填入資料，
+並善用 [自動填寫](/web/fundamentals/input/form/#use_metadata_to_enable_auto-complete)，以便使用者可以利用預先填入資料，
 輕鬆完成表單。
 
 <figure>

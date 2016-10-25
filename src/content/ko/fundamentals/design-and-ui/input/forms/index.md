@@ -33,7 +33,7 @@ description: 모바일에서는 양식을 작성하기 힘듭니다. 가장 좋�
 
 ### 반복되는 작업 및 필드 최소화
 
-양식을 반복되는 작업 없이 필요한 필드만으로 구성하고 [자동 채우기](/web/fundamentals/input/form/label-and-name-inputs.html#use-metadata-to-enable-auto-complete)를 활용하여 사용자가 미리 채워진 데이터로 쉽게 양식을 완성할 수 있도록 합니다.
+양식을 반복되는 작업 없이 필요한 필드만으로 구성하고 [자동 채우기](/web/fundamentals/input/form/#use_metadata_to_enable_auto-complete)를 활용하여 사용자가 미리 채워진 데이터로 쉽게 양식을 완성할 수 있도록 합니다.
 
 
 

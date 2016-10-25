@@ -41,7 +41,7 @@ description: 在移动设备上填写表单很困难。 输入操作最少的表
 
 确保表单没有重复操作，只设置必要的字段
 数量，并利用
-[自动填充](/web/fundamentals/input/form/label-and-name-inputs.html#use-metadata-to-enable-auto-complete)，
+[自动填充](/web/fundamentals/input/form/#use_metadata_to_enable_auto-complete)，
 使用户能借助预填充的数据轻松填写表单。
 
 <figure>
