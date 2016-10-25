@@ -27,8 +27,8 @@ description: 不走寻常路，为项目创建完全自定义的动画。
 
 为了对比，以下有两条曲线：一条典型的缓入缓出曲线和一条自定义曲线：
 
-<img src="imgs/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="缓入缓出动画的曲线。" />
-<img src="imgs/custom.png" style="display: inline; max-width: 300px" alt="定制动画的曲线。" />
+<img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="缓入缓出动画的曲线。" />
+<img src="images/custom.png" style="display: inline; max-width: 300px" alt="定制动画的曲线。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html">查看自定义缓动的动画。</a>
 

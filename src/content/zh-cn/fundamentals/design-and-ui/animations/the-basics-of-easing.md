@@ -39,7 +39,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fu
 
 没有任何缓动的动画被称为**线性**动画。 线性变换的图形看起来像这样：
 
-<img src="imgs/linear.png" style="max-width: 300px" alt="线性动画的曲线。" />
+<img src="images/linear.png" style="max-width: 300px" alt="线性动画的曲线。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html">查看线性动画</a>
 
@@ -56,7 +56,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fu
 
 缓出使动画在开头处比线性动画更快，并且还会在结尾处减速。
 
-<img src="imgs/ease-out.png" style="max-width: 300px" alt="缓出动画的曲线。" />
+<img src="images/ease-out.png" style="max-width: 300px" alt="缓出动画的曲线。" />
 
 有很多方法来实现缓出效果，但最简单的方法是 CSS 中的`ease-out`关键字:
 
@@ -72,7 +72,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fu
 
 缓入动画开头慢结尾快；与缓出正好相反。
 
- <img src="imgs/ease-in.png" style="max-width: 300px" alt="缓入动画的曲线。" />
+ <img src="images/ease-in.png" style="max-width: 300px" alt="缓入动画的曲线。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html">查看缓入动画。</a>
 
@@ -90,7 +90,7 @@ CSS 变换和动画都允许您[选择要为动画使用的缓动类型](/web/fu
 
 缓入并缓出与汽车加速和减速相似，使用得当时，可以实现比单纯缓出更生动的效果。
 
-<img src="imgs/ease-in-out.png" style="max-width: 300px" alt="缓入缓出动画的曲线。" />
+<img src="images/ease-in-out.png" style="max-width: 300px" alt="缓入缓出动画的曲线。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">查看缓入缓出动画。</a>
 

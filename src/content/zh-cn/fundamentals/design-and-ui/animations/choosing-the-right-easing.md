@@ -21,7 +21,7 @@ description: 为项目选择合适的缓动，无论是缓入、缓出还是缓�
 
 除了在 CSS 中通过`ease-out`关键字指定的公式之外，还有一组知名的缓出公式，它们按其“攻击性”排列。 如需超活泼的缓出效果，可考虑[Quintic 缓出](http://easings.net/#easeOutQuint)。
 
-<img src="imgs/quintic-ease-out-markers.png" alt="Quintic 缓出动画的曲线。" style="max-width: 300px"/>
+<img src="images/quintic-ease-out-markers.png" alt="Quintic 缓出动画的曲线。" style="max-width: 300px"/>
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">查看 Quintic 缓出动画。</a>
 

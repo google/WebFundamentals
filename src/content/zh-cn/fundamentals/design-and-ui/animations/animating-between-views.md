@@ -26,11 +26,11 @@ Note: 应当力求使所有动画保持 60fps。 这样用户不会觉得动画�
 
 为简单起见，我们假定有两个视图：一个列表视图和一个详情视图。 当用户点击列表视图内的列表项时，详情视图将滑入屏幕，并且列表视图滑出。
 
-<img src="imgs/gifs/view-translate.gif" alt="在两个视图之间变换" />
+<img src="images/view-translate.gif" alt="在两个视图之间变换" />
 
 要实现此效果，您需要一个容纳这两个视图的容器，并为容器设置`overflow: hidden`。 这样两个视图可以并排放在容器内，而不显示水平滚动条，并且每个视图可以按需在容器内侧向滑动。
 
-<img src="imgs/container-two-views.svg" alt="视图层次。" />
+<img src="images/container-two-views.svg" alt="视图层次。" />
 
 此容器的 CSS 代码为：
 
@@ -128,6 +128,6 @@ Note: 以跨浏览器的方式设计此类层次结构可能很难。 例如，i
 
 对于较大屏幕，始终应让列表视图留在周围，而不是将其移除，并且从右侧滑入详情视图。 它与处理导航视图几乎一样。
 
-<img src="imgs/container-two-views-ls.svg" alt="较大屏幕上的视图层次。" />
+<img src="images/container-two-views-ls.svg" alt="较大屏幕上的视图层次。" />
 
 

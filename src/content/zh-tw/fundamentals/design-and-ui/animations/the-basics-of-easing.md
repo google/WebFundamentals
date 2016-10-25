@@ -39,7 +39,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 不帶任何緩動的動畫被稱為 **線性**。 線性轉換的圖形看似這樣：
 
-<img src="imgs/linear.png" style="max-width: 300px" alt="線性緩動動畫曲線。" />
+<img src="images/linear.png" style="max-width: 300px" alt="線性緩動動畫曲線。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-linear.html">請參閱線性動畫。</a>
 
@@ -56,7 +56,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 緩出會使動畫比直線動畫更快速地開始，但結尾會減速。
 
-<img src="imgs/ease-out.png" style="max-width: 300px" alt="緩出動畫曲線。" />
+<img src="images/ease-out.png" style="max-width: 300px" alt="緩出動畫曲線。" />
 
 有多種途徑可以達成緩出效果，但最簡單的是 CSS 中的 `ease-out` 關鍵字：
 
@@ -72,7 +72,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 緩入動畫是慢慢開始，快速結束；緩出則相反。
 
-<img src="imgs/ease-in.png" style="max-width: 300px" alt="緩入動畫曲線。" />
+<img src="images/ease-in.png" style="max-width: 300px" alt="緩入動畫曲線。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in.html">請參閱段緩入動畫。</a>
 
@@ -90,7 +90,7 @@ CSS 轉換和動畫均可讓您 [針對您的動畫選擇想要的緩動種類](
 
 緩入緩出類似一輛汽車加速和減速，若是明智使用，可以提供比純緩出更戲劇性的效果。
 
-<img src="imgs/ease-in-out.png" style="max-width: 300px" alt="緩入緩出動畫曲線。" />
+<img src="images/ease-in-out.png" style="max-width: 300px" alt="緩入緩出動畫曲線。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-ease-in-out.html">請參閱段緩入緩出動畫。</a>
 
