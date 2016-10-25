@@ -2,12 +2,15 @@ project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
 description: "Chrome will soon mark non-secure pages containing password and credit card input fields as Not Secure in the URL bar."
 
-{# wf_updated_on: 2016-10-24 #}
-{# wf_published_on: 2016-10-24 #}
-{# wf_featured_image: /web/updates/images/generic/images/warning.png #}
+{# wf_updated_on: 2016-10-25 #}
+{# wf_published_on: 2016-10-25 #}
+{# wf_tags: chrome56,security,autofill #}
+{# wf_featured_image: /web/updates/images/generic/security.png #}
 {# wf_featured_snippet: Chrome will soon mark non-secure pages containing password and credit card input fields as Not Secure in the URL bar. This document is intended to aid Web Developers in updating their sites to avoid this warning. #}
 
 # Avoiding the Not Secure Warning in Chrome {: .page-title }
+
+{% include "web/_shared/contributors/ericlawrence.html" %}
 
 As [announced in September](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html),
 Chrome will soon mark non-secure pages containing **password** and **credit
