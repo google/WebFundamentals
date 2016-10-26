@@ -34,7 +34,7 @@ En resumen, debe asegurarse de que los controladores de entrada que utilice se e
 
 Los controladores de entrada, al igual que los que se utilizan para las funciones táctil y de desplazamiento, se programan para ejecutarse junto antes de las llamadas de retorno `requestAnimationFrame`.
 
-Si realiza un cambio visual dentro de alguno de estos controladores, al inicio de`requestAnimationFrame`, habrá cambios de estilo pendientes. Si _luego_ se leen las propiedades visuales al inicio de la llamada de retorno requestAnimationFrame, como se sugiere en la sección [“Evite los diseños grandes y complejos, y la hiperpaginación de diseños](void-large-complex-layouts-and-layout-thrashing)”, se desencadenará un diseño sincrónico forzado.
+Si realiza un cambio visual dentro de alguno de estos controladores, al inicio de`requestAnimationFrame`, habrá cambios de estilo pendientes. Si _luego_ se leen las propiedades visuales al inicio de la llamada de retorno requestAnimationFrame, como se sugiere en la sección [“Evite los diseños grandes y complejos, y la hiperpaginación de diseños](avoid-large-complex-layouts-and-layout-thrashing)”, se desencadenará un diseño sincrónico forzado.
 
 <img src="images/debounce-your-input-handlers/frame-with-input.jpg" class="center" alt="Heavy scrolling; compositor is blocked on JavaScript.">
 

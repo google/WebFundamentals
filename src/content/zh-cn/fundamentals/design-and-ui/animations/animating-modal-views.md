@@ -18,7 +18,7 @@ description: 了解如何给应用的模态视图设置动画。
 - 在用户取消模态视图时，一定要快速去除它，但是应慢一点放入屏幕，使其不会让用户吃惊。
 
 
-<img src="imgs/gifs/dont-press.gif" alt="给模态视图设置动画。" />
+<img src="images/dont-press.gif" alt="给模态视图设置动画。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">参考示例。</a>
 

@@ -73,7 +73,7 @@ Inserisci descrizioni dettagliate con l'attributo `alt` degli elementi `img` per
   </iframe>
 </div>
 
-L'attributo <code>srcset</code> ottimizza l'azione dell'elemento <code>img</code> semplificando la fornitura di diversi file di immagine in base alle caratteristiche dei dispositivi. In maniera analoga alla funzione nativa CSS <code>image-set</code> <a href='images-in-css.html#use-image-set-to-provide-high-res-images'> </a>, <code>srcset</code> indica al browser l'immagine ottimale in base alle caratteristiche del dispositivo, ad esempio un'immagine 2x su un display 2x e un'immagine 1x su dispositivi 2x con limiti di larghezza di banda.
+L'attributo <code>srcset</code> ottimizza l'azione dell'elemento <code>img</code> semplificando la fornitura di diversi file di immagine in base alle caratteristiche dei dispositivi. In maniera analoga alla funzione nativa CSS <code>image-set</code> <a href='#use_image-set_to_provide_high_res_images'> </a>, <code>srcset</code> indica al browser l'immagine ottimale in base alle caratteristiche del dispositivo, ad esempio un'immagine 2x su un display 2x e un'immagine 1x su dispositivi 2x con limiti di larghezza di banda.
 
 <div class="clearfix"></div>
 
@@ -187,7 +187,7 @@ L'attributo `size` dell'esempio precedente utilizza diverse media query per indi
 
 ### Possibilità di ingrandire le immagini dei prodotti
 
-I clienti desiderano visualizzare al meglio gli articoli da acquistare. Nei siti di vendita al dettaglio, gli utenti devono poter visualizzare ingrandimenti ad alta risoluzione dei prodotti per analizzarne i dettagli e i [partecipanti allo studio](/web/fundamentals/principles/research-study.html) non gradirebbero certo l'impossibilità di utilizzare questa funzione.
+I clienti desiderano visualizzare al meglio gli articoli da acquistare. Nei siti di vendita al dettaglio, gli utenti devono poter visualizzare ingrandimenti ad alta risoluzione dei prodotti per analizzarne i dettagli e i [partecipanti allo studio](/web/fundamentals/getting-started/principles/) non gradirebbero certo l'impossibilità di utilizzare questa funzione.
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="Sito web di J. Crews con immagini dei prodotti dotate di funzione di zoom">
@@ -204,7 +204,7 @@ Il sito di J. Crews è un buon esempio di immagini interattive e dotate di funzi
 La [tecnica di compressione
 delle immagini](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) invia un'immagine 2x a elevata compressione a tutti i dispositivi, indipendentemente dalle funzionalità. In base al tipo d'immagine e al livello di compressione, la qualità dell'immagine potrebbe restare inalterata anche con una significativa riduzione delle dimensioni del file.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Vedi esempio</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Vedi esempio</a>
 
 Note: Utilizza con parsimonia le tecniche di compressione, poiché aumentano i costi in termini di decodifica e memoria. Il ridimensionamento delle immagini di grandi dimensioni per gli schermi di dimensioni ridotte è un'attività costosa che riduce le prestazioni dei dispositivi di fascia bassa con limiti di memoria e di capacità di calcolo.
 
@@ -410,7 +410,7 @@ Esistono diversi strumenti per eseguire un'ulteriore compressione senza perdita 
 
 Lo spriting CSS è una tecnica che unisce diverse immagini in una singola immagine di 'foglio di sprite'. Quindi è possibile utilizzare singole immagini specificando l'immagine di sfondo di un elemento (foglio di sprite) e un offset per la visualizzazione della parte corretta.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Foglio di sprite immagine utilizzato nell'esempio"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Foglio di sprite immagine utilizzato nell'esempio"></a>
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite"   adjust_indentation="auto" %}
 </pre>

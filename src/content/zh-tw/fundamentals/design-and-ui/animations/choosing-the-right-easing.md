@@ -21,7 +21,7 @@ description: 為您的專案選擇適當的緩動，無論是緩入、緩出或�
 
 除了 CSS 中以 `ease-out` 關鍵字指定的那一個，目前已有一組知名的緩出方程式，以其「侵略性」分類在同一組。 至於超級敏捷的緩出效果，請考慮 [Quintic 緩出](http://easings.net/#easeOutQuint)。
 
-<img src="imgs/quintic-ease-out-markers.png" alt=" Quintic 緩出動畫曲線" style="max-width: 300px"/>
+<img src="images/quintic-ease-out-markers.png" alt=" Quintic 緩出動畫曲線" style="max-width: 300px"/>
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-quintic-ease-out.html">參閱 Quintic 緩出動畫。</a>
 

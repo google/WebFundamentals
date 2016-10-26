@@ -34,7 +34,7 @@ Crie formulários eficientes evitando ações repetidas, perguntando apenas o ne
 
 Certifique-se de que seus formulários não têm ações repetidas, e apenas a quantidade de campos 
 necessária e tire proveito do 
-[preenchimento automático](/web/fundamentals/input/form/label-and-name-inputs.html#use-metadata-to-enable-auto-complete),
+[preenchimento automático](/web/fundamentals/input/form/#use_metadata_to_enable_auto-complete),
 para que o usuário possa facilmente preencher os formulários com dados sugeridos.
 
 <figure>

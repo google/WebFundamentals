@@ -61,7 +61,7 @@ Forneça descrições relevantes usando o atributo `alt` em elementos `img`, já
   </iframe>
 </div>
 
-O atributo <code>srcset</code> melhora o comportamento do elemento <code>img</code>, facilitando o fornecimento de diversos arquivos de imagem para dispositivos com características diferentes. Assim como a função <code>image-set</code> nativa do <a href="images-in-css.html#use-image-set-to-provide-high-res-images">código CSS</a>, o <code>srcset</code> permite ao navegador escolher a melhor imagem conforme as características do dispositivo, por exemplo, usando uma imagem 2x em uma tela 2x e, possivelmente no futuro, uma imagem 1x em um dispositivo 2x quando estiver em uma rede com largura de banda limitada.
+O atributo <code>srcset</code> melhora o comportamento do elemento <code>img</code>, facilitando o fornecimento de diversos arquivos de imagem para dispositivos com características diferentes. Assim como a função <code>image-set</code> nativa do <a href="#use_image-set_to_provide_high_res_images">código CSS</a>, o <code>srcset</code> permite ao navegador escolher a melhor imagem conforme as características do dispositivo, por exemplo, usando uma imagem 2x em uma tela 2x e, possivelmente no futuro, uma imagem 1x em um dispositivo 2x quando estiver em uma rede com largura de banda limitada.
 
 <div class="clearfix"></div>
 
@@ -172,7 +172,7 @@ O atributo `sizes` no exemplo acima usa diversas consultas de mídia para especi
 
 ### Torne as imagens de produtos expansíveis
 
-Os clientes querem ver o que estão comprando.  Nos sites de varejo, os usuários esperam ver imagens em alta resolução dos produtos para poder analisar os detalhes. Quando isso não foi possível, os [participantes de um estudo](/web/fundamentals/principles/research-study.html) ficaram frustrados.
+Os clientes querem ver o que estão comprando.  Nos sites de varejo, os usuários esperam ver imagens em alta resolução dos produtos para poder analisar os detalhes. Quando isso não foi possível, os [participantes de um estudo](/web/fundamentals/getting-started/principles/) ficaram frustrados.
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="Site da J. Crew com imagem expansível de produto">
@@ -189,7 +189,7 @@ Um bom exemplo de imagens que podem ser tocadas e expandidas é fornecido pelo s
 A [técnica de compactação
 de imagens](http://www.html5rocks.com/pt-BR/mobile/high-dpi/#toc-tech-overview) veicula uma imagem 2x altamente compactada em todos os dispositivos, independentemente dos recursos que eles oferecem.  Dependendo do tipo de imagem e nível de compactação, a qualidade da imagem pode não mudar, mas o tamanho do arquivo diminui sensivelmente.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Ver o exemplo</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Ver o exemplo</a>
 
 Note: Tenha cuidado com a técnica de compactação por causa dos altos custos associados de memória e decodificação.  O redimensionamento de grandes imagens para adequação a telas menores custa caro e pode se tornar uma tarefa difícil em dispositivos mais antigos, cuja memória e capacidade de processamento são reduzidas.
 
@@ -377,7 +377,7 @@ Diversas ferramentas estão disponíveis para realizar uma compactação mais de
 
 O código CSS oferece uma técnica pela qual diversas imagens são combinadas em uma única imagem, formando um `painel de imagens`, também chamado de `sprite sheet`. Em seguida, as imagens individuais podem ser usadas. Para isso, é especificada a imagem de segundo plano de um elemento (o painel de imagens) e um ajuste é feito para exibir a parte correta da imagem.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Painel de imagens usado no exemplo"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt=" Painel de imagens usado no exemplo"></a>
 
 <pre class="prettyprint">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" %}

@@ -64,7 +64,7 @@ Pamiętaj, by w atrybucie `alt` elementów `img` podać treściwe opisy. Zwięks
   </iframe>
 </div>
 
-Atrybut <code>srcset</code> rozszerza działanie elementu <code>img</code>, ułatwiając wyświetlanie różnych plików graficznych w zależności od cech urządzenia. Podobnie jak natywna <a href="images-in-css.html#use-image-set-to-provide-high-res-images">funkcja CSS</a> <code>image-set</code>, atrybut <code>srcset</code> pozwala przeglądarce wybrać obraz, który najlepiej pasuje do możliwości urządzenia. Na przykład pokazać obraz 2x na ekranie 2x, a w przyszłości być może obraz 1x na urządzeniu 2x przy ograniczonej przepustowości sieci.
+Atrybut <code>srcset</code> rozszerza działanie elementu <code>img</code>, ułatwiając wyświetlanie różnych plików graficznych w zależności od cech urządzenia. Podobnie jak natywna <a href="#use_image-set_to_provide_high_res_images">funkcja CSS</a> <code>image-set</code>, atrybut <code>srcset</code> pozwala przeglądarce wybrać obraz, który najlepiej pasuje do możliwości urządzenia. Na przykład pokazać obraz 2x na ekranie 2x, a w przyszłości być może obraz 1x na urządzeniu 2x przy ograniczonej przepustowości sieci.
 
 <div class="clearfix"></div>
 
@@ -176,7 +176,7 @@ Atrybut `sizes` w przykładowym kodzie powyżej zawiera kilka zapytań o media, 
 
 ### Ustawianie obrazów produktów jako rozwijanych
 
-Klienci chcą zobaczyć, co kupują. Spodziewają się, że na stronie sklepu będą mogli wyświetlić zbliżenia produktu w wysokiej rozdzielczości, by lepiej przyjrzeć się szczegółom. [Uczestników naszego badania](/web/fundamentals/principles/research-study.html) irytował brak takiej możliwości.
+Klienci chcą zobaczyć, co kupują. Spodziewają się, że na stronie sklepu będą mogli wyświetlić zbliżenia produktu w wysokiej rozdzielczości, by lepiej przyjrzeć się szczegółom. [Uczestników naszego badania](/web/fundamentals/getting-started/principles/) irytował brak takiej możliwości.
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="Witryna J. Crew z rozwijanym zdjęciem produktu">
@@ -192,7 +192,7 @@ Dobry przykład obrazów, które można kliknąć i rozwinąć, znajdziemy w wit
 
 [Technika obrazów kompresowanych](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) pozwala wyświetlać bardzo skompresowane obrazy 2x na wszystkich urządzeniach, bez względu na ich faktyczne możliwości. W zależności od typu obrazu i poziomu kompresji zmiana jakości może być niezauważalna, ale rozmiar pliku znacznie się zmniejsza.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Zobacz przykład</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Zobacz przykład</a>
 
 Note: Zachowaj ostrożność przy korzystaniu z technik kompresji, bo dekodowanie wymaga większej ilości pamięci i obciąża procesor. Zmiana rozmiaru dużych obrazów, by zmieściły się na mniejszym ekranie, wymaga znacznych zasobów i jest szczególnie uciążliwa na słabszych urządzeniach z niewielką pamięcią i mocą procesora.
 
@@ -382,7 +382,7 @@ Niektóre dostępne narzędzia wykonują dodatkową, bezstratną kompresję plik
 
 Spriting CSS to technika, w której wiele obrazów łączy się w jeden obraz `arkusza sprite`ów`. Aby następnie wybrać konkretną grafikę, trzeba określić obraz tła elementu (arkusz sprite`ów) i przesunięcie wskazujące właściwą część.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Arkusz sprite'ów graficznych użyty jako przykład"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Arkusz sprite'ów graficznych użyty jako przykład"></a>
 
 <pre class="prettyprint">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" %}

@@ -26,11 +26,11 @@ Note: 您應該針對所有動畫，旨在維持至少 60 fps。 這樣您的使
 
 要讓過程更容易些，讓我們假設有兩個檢視： 一個清單檢視和一個詳細資訊檢視。 當使用者在清單檢視內點選一個清單項目，詳細資訊檢視將滑入，而清單檢視將滑出。
 
-<img src="imgs/gifs/view-translate.gif" alt="在兩個檢視之間轉換" />
+<img src="images/view-translate.gif" alt="在兩個檢視之間轉換" />
 
 要達到這個效果，您需要針對兩種檢視使用容器，並將之設定 `overflow: hidden`。 以這種方式，兩個檢視都可以在容器裡並排，而不會顯示任何水平捲軸，而每一檢視也也可視需要在容器內並排滑動。
 
-<img src="imgs/container-two-views.svg" alt="視圖層次。" />
+<img src="images/container-two-views.svg" alt="視圖層次。" />
 
 該容器的 CSS 為：
 
@@ -128,6 +128,6 @@ Note: 要跨瀏覽器設計這種階層，可能頗具挑戰性。 例如，iOS 
 
 針對較大的螢幕，您應該隨時保持清單檢視 (而非移除它)，並從右手邊滑入詳細資訊檢視。 大概就和處理導覽檢視相同。
 
-<img src="imgs/container-two-views-ls.svg" alt="在較大螢幕上的視圖層次。" />
+<img src="images/container-two-views-ls.svg" alt="在較大螢幕上的視圖層次。" />
 
 
