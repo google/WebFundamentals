@@ -1,7 +1,3 @@
-.devsite-collapsible-section {
-  background:url(/web/scratch/images/background-1x.png) 100%/600px repeat-x;
-}
-
 ul.checkmarks {
   list-style-type:none;
   padding:0;
@@ -40,4 +36,12 @@ h2.wf-header-title {
   max-width: 300px;
   margin-left:auto;
   margin-right:auto;
+}
+
+.peteFix {
+  padding-top: 40px;
+}
+
+#dive-deeper {
+  margin-top: 16px;
 }
