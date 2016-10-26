@@ -249,7 +249,7 @@ Here's its service worker, `sw.js`:
     self.addEventListener('fetch', event => {
       const url = new URL(event.request.url);
 
-      // serve the cat SVG from the cache if the request is
+      // serve the horse SVG from the cache if the request is
       // same-origin and the path is '/dog.svg'
       if (url.origin == location.origin && url.pathname == '/dog.svg') {
         event.respondWith(caches.match('/cat.svg'));
