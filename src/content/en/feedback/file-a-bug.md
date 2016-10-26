@@ -6,12 +6,12 @@ book_path: /web/feedback/_book.yaml
 
 # How to File a Good Bug {: .page-title }
 
-Filing a good bug is easy, but does take a little work. The goal is to make
+Filing a good bug is easy, but takes a little work. The goal is to make
 it as easy as possible for someone to see what's broken, figure out what
 broke, and most importantly, how to fix it.
 
-Bugs that get traction tend to be easy to reproduce and easy to understand
-the expected outcome.
+Bugs that get traction tend to be easy to reproduce and expected outcomes
+that are easy to understand.
 
 ## Are others seeing the same problem?
 
@@ -30,14 +30,14 @@ If not, it's time to file a bug.
 
 The first step is to figure out what the "correct" behavior should be. 
 
-Check the relevant APIs doc on [MDN](https://developer.mozilla.org/en-US/) or
-try to find related specs. This information can help to decide which API is
+Check the relevant API docs on [MDN](https://developer.mozilla.org/en-US/) or
+try to find related specs. This information can help you decide which API is
 actually broken, where it’s broken, and what the correct behavior should be.
 
 ### Is the behavior different in other browsers?
 
 Behavior that differs between browsers is generally prioritized higher as an
-interoperability issue, especially when the browser where the bug is being filed
+interoperability issue, especially when the browser containing the bug
 is the odd one out. Try to test on the latest versions of Chrome, Firefox,
 Safari and Edge, possibly using a tool like
 [BrowserStack](http://browserstack.com).  
@@ -62,29 +62,28 @@ found and fixed quickly.
 
 Mozilla has a great article on how to create a 
 [minimized test case](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Reducing_testcases).
-Long story short, while a description of the problem is a great start, nothing beats
-providing a link (eg. to jsbin.com) in the bug that demonstrates the problem. To
-maximize the chance of fast progress it should be the minimum possible amount
+To make a long story short, while a description of the problem is a great start, nothing beats
+providing a link (for example, to jsbin.com) in the bug that demonstrates the problem. To
+maximize the chance of fast progress the example should contain the minimum possible code
 needed to demonstrate the problem. For issues that aren't regressions, a
 minimal code sample is the number one thing you can do to increase the odds of
 your bug getting fixed.  For regressions, a minimized test case may still be
 helpful but isn't necessary.
 
-To minimize a test case, there are a few common tips:
+Here are a few tips for minimizing a test case:
 
 * Download the web page, add `<base href="http://original.url">` and verify the
 bug exists locally. This may require a live HTTPS server if the URL uses HTTPS.
-* Test the local files on the latest builds of as many browsers as you can
-* Try to condense everything into 1 file
+* Test the local files on the latest builds of as many browsers as you can.
+* Try to condense everything into 1 file.
 * Remove code (starting with things you know to be unnecessary) until the bug
-goes away
-* Use version control so that you can back up if things go wrong
-
+goes away.
+* Use version control so that you can save your work and undo things that go wrong.
 
 ### Hosting a minified test case
 
 If you're looking for a good place to host your minified test case, there are
-several good places available. Check out:
+several good places available:
 
 * [JSBin](//jsbin.com)
 * [JSFiddle](//jsfiddle.net)
@@ -92,13 +91,14 @@ several good places available. Check out:
 
 ### Include details of the environment
 
-Some bugs reproduce only on certain operating systems, or only on a low-dpi or
-high-dpi display.  Be sure to include such details of any test environments.
+Some bugs are reproduceable only on certain operating systems, or only on 
+specific kinds of dispays (for example, low-dpi or high-dpi).  Be sure to
+include the details of any test environments you used.
 
 ## Filing your issue
 
-Once you’ve got your minimized test case, you’re ready to file that bug!
-Head over to right bug tracking site, and file that bug.
+Once you’ve got your minimized test case, you’re ready to file that bug.
+Head over to right bug tracking site.
 
 * [Chromium](https://crbug.com)
 * [Edge bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
