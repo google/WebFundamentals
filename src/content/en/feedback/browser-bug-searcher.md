@@ -7,7 +7,7 @@ full_width: True
 
 # Browser Bug Searcher {: .page-title }
 
-Note: The red box is temporary only to indicate the iframe.
+Note: The red box is temporary and is only used to indicate the iframe.
 
 <style>iframe {border: 1px solid red;}</style>
 
