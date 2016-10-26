@@ -376,11 +376,10 @@ the previously-focused item when the modal is closed.
 the `<dialog>` element, but they don't yet have widespread browser support.
 >
 >See [this MDN
-article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog){: .external } 
-for more information on `<dialog>`, and this [North Carolina State University
-accessibility
-blog](https://accessibility.oit.ncsu.edu/training/aria/modal-window/version-3/){: .external }
-for more information on modal windows.
+article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog){:
+.external } for more information on `<dialog>`, and this [modal
+example](https://github.com/gdkraus/accessible-modal-dialog){: .external } for
+more information on modal windows.
 
 Consider a modal dialog represented by a `div` that contains a few elements, and
 another `div` that represents a background overlay. Let's walk through the basic
