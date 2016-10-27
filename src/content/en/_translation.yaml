@@ -8,5 +8,7 @@ ignore_paths:
 - /showcase/...
 - /shows/...
 - /updates/...
-# - atom.xml
-# - rss.xml
+- /fundamentals/atom.xml
+- /fundamentals/rss.xml
+- /tools/atom.xml
+- /tools/rss.xml

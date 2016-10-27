@@ -120,10 +120,22 @@ def getPage(requestPath, lang):
       if titleRO:
         title = titleRO.group(1)
 
+      gitHubEditUrl = 'https://github.com/google/WebFundamentals/blob/'
+      gitHubEditUrl += 'master/src/content/'
+      gitHubEditUrl += fileLocation.replace(SOURCE_PATH, '')
+
+      gitHubIssueUrl = 'https://github.com/google/WebFundamentals/issues/'
+      gitHubIssueUrl += 'new?title=Feedback for: ' + title + ' ['
+      gitHubIssueUrl += lang + ']&body='
+      gitHubIssueUrl += gitHubEditUrl
+
+
       # Renders the content into the template
       response = render(template, {
         'title': title,
         'announcementBanner': banner,
+        'gitHubIssueUrl': gitHubIssueUrl,
+        'gitHubEditUrl': gitHubEditUrl,
         'requestPath': requestPath.replace('index', ''),
         'leftNav': leftNav,
         'content': content,

@@ -150,4 +150,4 @@ semua yang Anda ingin ketahui untuk memulai dengan cepat dan mudah.
 
 <div style="clear:both"></div>
 
-<<../../_common-links.md>>
+[service-worker-primer]: /web/fundamentals/getting-started/primers/service-workers "Service Workers: An Introduction"
