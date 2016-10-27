@@ -26,8 +26,6 @@ release in January 2017.
 
 To test the upcoming user experience before that time, install the latest 
 [Google Chrome Canary](https://www.google.com/chrome/browser/canary.html) build.
-Chrome Canary version 56.0.2895.0 is the first version to include detection of
-sensitive fields.
 
 To configure Chrome to show the warning as it will appear in January 2017, open
 `chrome://flags/#mark-non-secure-as` and set the `Mark non-secure origins as
@@ -40,7 +38,7 @@ You can see an example of the browser’s warning behavior on
 
 When the Not Secure state is shown, the DevTools console shows the message `This
 page includes a password or credit card input in a non-secure context. A warning
-has been added to the URL bar. For more information, see [https://goo.gl/zmWq3m](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html).`
+has been added to the URL bar.`
 
 ![An example console warning](/web/updates/images/2016/10/avoid-not-secure-warn/not-secure-warning.png)
 
