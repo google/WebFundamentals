@@ -64,7 +64,7 @@ This codelab is focused on Progressive Web Apps. Non-relevant concepts and code 
 
 Click the following button to download all the code for this codelab:
 
-[](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
+[Link](https://github.com/googlecodelabs/your-first-pwapp/archive/master.zip)
 
 Unpack the downloaded zip file. This will unpack a root folder (`your-first-pwapp-master`), which contains one folder for each step of this codelab, along with all of the resources you will need.
 
@@ -74,7 +74,7 @@ The `step-NN` folders contain the desired end state of each step of this codelab
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
 
@@ -231,7 +231,7 @@ Reload your app. The result should be a nicely formatted (though fake, as you ca
 
 ![166c3b4982e4a0ad.png](img/166c3b4982e4a0ad.png)
 
-[](https://weather-pwa-sample.firebaseapp.com/step-04/)
+[Link](https://weather-pwa-sample.firebaseapp.com/step-04/)
 
 Once you've tried it and verified it works as expected, you can remove the call to  `app.updateForecastCard` with the fake data again. We only needed it to ensure that everything worked as expected.
 
@@ -344,7 +344,7 @@ The new additions are the initialization of `app.selectedCities` if it doesn't e
 * Add a new city (by clicking the + icon on the upper right) and verify that two cards are shown.
 * Refresh the browser and verify that the app loads both forecasts and shows the latest information.
 
-[](https://weather-pwa-sample.firebaseapp.com/step-05/)
+[Link](https://weather-pwa-sample.firebaseapp.com/step-05/)
 
 
 ## Use service workers to pre-cache the App Shell
@@ -536,7 +536,7 @@ The next step is to modify the app and service worker logic to be able to cache 
 
 __Tip:__ To start fresh and clear all saved data (localStoarge, indexedDB data, cached files) and remove any service workers, use the Clear storage pane in the Application tab.
 
-[](https://weather-pwa-sample.firebaseapp.com/step-06/)
+[Link](https://weather-pwa-sample.firebaseapp.com/step-06/)
 
 ### Beware of the edge cases
 
@@ -717,7 +717,7 @@ Then go to the __Cache Storage__ pane on the __Application__ panel of DevTools. 
 
 ![cf095c2153306fa7.png](img/cf095c2153306fa7.png)
 
-[](https://weather-pwa-sample.firebaseapp.com/step-07/)
+[Link](https://weather-pwa-sample.firebaseapp.com/step-07/)
 
 
 ## Support native integration
@@ -851,7 +851,7 @@ Using Chrome from an Android device, try adding the app to the homescreen and ve
 
 On Safari and Internet Explorer, you can also manually add the app to your homescreen.
 
-[](https://weather-pwa-sample.firebaseapp.com/step-08/)
+[Link](https://weather-pwa-sample.firebaseapp.com/step-08/)
 
 
 ## Deploy to a secure host and celebrate
@@ -890,7 +890,7 @@ Further reading:  [Firebase Hosting Guide](https://www.firebase.com/docs/hosting
 
 * Try adding the app to your home screen then disconnect the network and verify the app works offline as expected.
 
-[](https://weather-pwa-sample.firebaseapp.com/final/)
+[Link](https://weather-pwa-sample.firebaseapp.com/final/)
 
 
 
