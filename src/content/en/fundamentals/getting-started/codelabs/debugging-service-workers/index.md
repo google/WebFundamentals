@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you'll learn how to debug a service worker using the new DevTools Application panel. You'll also learn how to simulate a Push notification to verify your subscription is properly setup.
 
-{# wf_updated_on: 2016-10-10T14:55:33Z #}
+{# wf_updated_on: 2016-10-19T18:28:32Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -57,7 +57,7 @@ This codelab is focused on debugging Service Workers and assumes some prior know
 
 You can download all of the code for this codelab, by clicking the following button:
 
-[](https://github.com/googlecodelabs/debugging-service-workers/archive/master.zip)
+[Link](https://github.com/googlecodelabs/debugging-service-workers/archive/master.zip)
 
 Unpack the downloaded zip file. This will unpack a root folder (`debugging-service-workers-master`), which contains one folder for each step of this codelab, along with all of the resources you will need.
 
@@ -67,7 +67,7 @@ The `step-NN` folders contain the desired end state of each step of this codelab
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
 
 After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar: 
 
