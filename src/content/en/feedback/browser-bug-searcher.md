@@ -14,7 +14,7 @@ book_path: /web/feedback/_book.yaml
       height: 100%;
     }
   </style>
-  <iframe scrolling="no"></iframe>
+  <iframe src="https://browser-issue-tracker-search.appspot.com/devsite" scrolling="no"></iframe>
   <script>
     devsite.framebox.AutoSizeClient.initAutoSize();
     document.querySelector('html').style.height = '100%';

@@ -28,7 +28,7 @@ landing_page:
           Here you can search through all major browser bug trackers to
           find a bug you're looking for.
         </p>
-        <iframe src="https://browser-issue-tracker-search.appspot.com/devsite?embed" scrolling="no"></iframe>
+        <iframe src="https://browser-issue-tracker-search.appspot.com/devsite?embed&client=devsite" scrolling="no"></iframe>
 
   - items:
     - custom_html: <hr>
