@@ -28,7 +28,7 @@ landing_page:
           Here you can search through all major browser bug trackers to
           find a bug you're looking for.
         </p>
-        <iframe src="https://browser-issue-tracker-search.appspot.com/?embed=1" scrolling="no"></iframe>
+        <iframe src="https://browser-issue-tracker-search.appspot.com/devsite?embed" scrolling="no"></iframe>
 
   - items:
     - custom_html: <hr>
@@ -39,9 +39,9 @@ landing_page:
             Telling browser vendors about issues you find in their browser,
             on a specific device or platform is an integral part of making
             the web platform better!<br><br>
-            Adding your support to existing bugs helps developers to 
+            Adding your support to existing bugs helps developers to
             prioritize which issues are effecting users.
-        image_path: images/content-spotlight-responsive-2x.png  
+        image_path: images/content-spotlight-responsive-2x.png
 
 
   - classname: devsite-landing-row-67
@@ -62,7 +62,7 @@ landing_page:
     - heading: Report a bug
       description: >
         To ensure your bug is fixed promptly, it's important to tell the right
-        people about it. All of the major browser vendors provide a way to 
+        people about it. All of the major browser vendors provide a way to
         report bugs.
       image_path: images/content-node-responsive-2x.png
       buttons:

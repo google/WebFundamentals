@@ -26,12 +26,12 @@ Note: The red box is temporary and is only used to indicate the iframe.
     document.querySelector('body').style.height = '100%';
     var iframe = document.querySelector('iframe');
     if (document.querySelector('body.staging-framebox')) {
-      iframe.src = 'https://browser-issue-tracker-search.appspot.com/?q=flexbox';
+      iframe.src = 'https://browser-issue-tracker-search.appspot.com/devsite?q=flexbox';
     } else {
       setTimeout(function() {
         devsite.framebox.AutoSizeClient.requestQueryAndFragment(function(query) {
           console.log('requestQueryAndFragment', query);
-          iframe.src = 'https://browser-issue-tracker-search.appspot.com/' + query;
+          iframe.src = 'https://browser-issue-tracker-search.appspot.com/devsite' + query;
         });
       }, 100);
     }
