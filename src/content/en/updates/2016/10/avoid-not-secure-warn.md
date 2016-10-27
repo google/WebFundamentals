@@ -24,17 +24,20 @@ this warning.
 Warnings will be enabled by default for everyone in Chrome 56, slated for
 release in January 2017.
 
-To test the upcoming user experience before then, install the latest [Google
-Chrome Canary](https://www.google.com/chrome/browser/canary.html) build. At the
-time of this writing, Chrome Canary is version 56. Version 56.0.2895.0 is the
-first version to include detection of sensitive fields. You can see an
-example of the browser’s warning behavior on 
-[this page](http://http-password.badssl.com/) if you open it in Chrome
-56.0.2895.0 or later, then view the console in DevTools.
+To test the upcoming user experience before that time, install the latest 
+[Google Chrome Canary](https://www.google.com/chrome/browser/canary.html) build.
 
-When the Not Secure state is shown, the DevTools console shows the message `In
-Chrome M56 (Jan 2017), this page will be marked as “not secure” in the URL bar.
-For more information, see [https://goo.gl/zmWq3m](https://security.googleblog.com/2016/09/moving-towards-more-secure-web.html).`
+To configure Chrome to show the warning as it will appear in January 2017, open
+`chrome://flags/#mark-non-secure-as` and set the `Mark non-secure origins as
+non-secure` option to `Display a verbose state when password or credit card
+fields are detected on an HTTP page`. Then relaunch your browser.
+
+You can see an example of the browser’s warning behavior on
+[this page](http://http-password.badssl.com/).
+
+When the Not Secure state is shown, the DevTools console shows the message `This
+page includes a password or credit card input in a non-secure context. A warning
+has been added to the URL bar.`
 
 ![An example console warning](/web/updates/images/2016/10/avoid-not-secure-warn/not-secure-warning.png)
 
