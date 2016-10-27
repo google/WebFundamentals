@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: This codelab will help you learn to identify and fix web app performance bottlenecks.
 
-{# wf_updated_on: 2016-10-10T14:58:57Z #}
+{# wf_updated_on: 2016-10-20T18:16:09Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -38,8 +38,8 @@ This codelab is about changing the way you approach app performance issues by he
 
 *  *Critical rendering path:*  You should understand the rendering pipeline and how JavaScript and CSS affect it. Learn more here:  [https://developers.google.com/web/fundamentals/performance/critical-rendering-path/](/web/fundamentals/performance/critical-rendering-path/) and here: Udacity course on  [Website Performance Optimization: The Critical Rendering Path](https://www.udacity.com/course/website-performance-optimization--ud884)__.__
 *  *Frames and frame rate:*  You should know how the browser constructs frames and why the 60fps rate is important for a smooth display. Learn more here:  [https://developers.google.com/web/fundamentals/performance/rendering/](/web/fundamentals/performance/rendering/) and here: Udacity course on  [Browser Rendering Optimization: Building 60 FPS Web Apps](https://www.udacity.com/course/browser-rendering-optimization--ud860).
-*  *Application life cycle:*  You should understand the Response, Animation, Idle, and Load parts of a running app and recognize the windows of opportunity that each part presents. Learn more here:  [The RAIL Performance Model](/web/tools/profile-performance/evaluate-performance/rail)
-*  *Chrome DevTools:*  You should have a basic understanding of DevTools and how to use them to analyze a web app, especially the Timeline tool. Learn more here:  [Analyze Runtime Performance](/web/tools/profile-performance/rendering-tools/analyze-runtime).
+*  *Application life cycle:*  You should understand the Response, Animation, Idle, and Load parts of a running app and recognize the windows of opportunity that each part presents. Learn more here:  [The RAIL Performance Model](/web/fundamentals/performance/rail)
+*  *Chrome DevTools:*  You should have a basic understanding of DevTools and how to use them to analyze a web app, especially the Timeline tool. Learn more here:  [Analyze Runtime Performance](/web/tools/chrome-devtools/rendering-tools/).
 
 ### What you'll learn in this codelab
 

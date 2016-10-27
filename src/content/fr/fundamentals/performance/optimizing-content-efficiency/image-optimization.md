@@ -148,7 +148,7 @@ Dans ce cas, svgo réduit la taille du fichier ci-dessus généré par Illustrat
 - Les logiciels de compression d'image utilisent différentes techniques pour réduire le nombre de bits requis pas pixel afin de réduire la taille de fichier de l'image.
 
 
-Une image matricielle est simplement une grille de 'pixels' individuels en deux dimensions. Par exemple une image de 100 x 100 pixels est une séquence de 10 000 pixels. À son tour, chaque pixel stocke les valeurs '[RVBA](http://fr.le cachepedia.org/le cache/RVBA){: .external }' : (R) canal rouge, (V) canal vert, (B) canal bleu et (A) canal alpha (transparent).
+Une image matricielle est simplement une grille de 'pixels' individuels en deux dimensions. Par exemple une image de 100 x 100 pixels est une séquence de 10 000 pixels. À son tour, chaque pixel stocke les valeurs '[RVBA](hhttps://en.wikipedia.org/wiki/RGBA_color_space){: .external }' : (R) canal rouge, (V) canal vert, (B) canal bleu et (A) canal alpha (transparent).
 
 En interne, le navigateur attribue 256 valeurs (nuances) à chaque canal, ce qui se traduit par 8 bits par canal (2 ^ 8 = 256), et 4 octets par pixel (4 canaux x 8 bits = 32 bits = 4 octets). Par conséquent, si nous connaissons les dimensions de la grille, il est facile de calculer la taille du fichier :
 

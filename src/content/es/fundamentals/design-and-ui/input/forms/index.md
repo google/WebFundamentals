@@ -38,7 +38,7 @@ Para diseñar formularios eficientes, evite las acciones repetidas, solicite sol
 
 Asegúrese de que sus formularios no contengan acciones repetidas; solo incluya tantos campos como sea
 necesario y aproveche la función 
-[compleción automática](/web/fundamentals/input/form/label-and-name-inputs.html#use-metadata-to-enable-auto-complete),
+[compleción automática](/web/fundamentals/input/form/#use_metadata_to_enable_auto-complete),
 de modo que los usuarios puedan completar fácilmente los formularios con los datos completados previamente.
 
 <figure>

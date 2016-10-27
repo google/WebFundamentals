@@ -18,7 +18,7 @@ description: 學習如何在您應用程式中動畫處理強制回應檢視。
 - 要記得在使用者關閉強制回應檢視時，快速清除它，但是您應該用慢一點的速度把它帶進螢幕，以免嚇到使用者。
 
 
-<img src="imgs/gifs/dont-press.gif" alt="動畫處理強制回應檢視。" />
+<img src="images/dont-press.gif" alt="動畫處理強制回應檢視。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/modal-view-animation.html">請參閱範例。</a>
 

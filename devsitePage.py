@@ -18,6 +18,7 @@ def getPage(requestPath, lang):
   leftNav = '- No Left Nav Found - '
   toc = '- No TOC Found - '
   banner = devsiteHelper.getAnnouncementBanner(lang)
+  template = 'gae/article.tpl'
   fileLocations = [
     os.path.join(SOURCE_PATH, lang, requestPath) + '.md',
     os.path.join(SOURCE_PATH, 'en', requestPath) + '.md',
@@ -94,6 +95,12 @@ def getPage(requestPath, lang):
           bookPath = md.Meta['book_path'][0]
           leftNav = devsiteHelper.getLeftNav(requestPath, bookPath, lang)
 
+        # Checks if the page should be displayed in full width mode
+        if 'full_width' in md.Meta and len(md.Meta['full_width']) == 1:
+          fullWidth = md.Meta['full_width'][0]
+          if fullWidth.lower().strip() == 'true':
+            template = 'gae/home.tpl'
+
         # Build the table of contents & transform so it fits within DevSite
         toc = md.toc
         toc = toc.strip()
@@ -113,10 +120,22 @@ def getPage(requestPath, lang):
       if titleRO:
         title = titleRO.group(1)
 
+      gitHubEditUrl = 'https://github.com/google/WebFundamentals/blob/'
+      gitHubEditUrl += 'master/src/content/'
+      gitHubEditUrl += fileLocation.replace(SOURCE_PATH, '')
+
+      gitHubIssueUrl = 'https://github.com/google/WebFundamentals/issues/'
+      gitHubIssueUrl += 'new?title=Feedback for: ' + title + ' ['
+      gitHubIssueUrl += lang + ']&body='
+      gitHubIssueUrl += gitHubEditUrl
+
+
       # Renders the content into the template
-      response = render('gae/article.tpl', {
+      response = render(template, {
         'title': title,
         'announcementBanner': banner,
+        'gitHubIssueUrl': gitHubIssueUrl,
+        'gitHubEditUrl': gitHubEditUrl,
         'requestPath': requestPath.replace('index', ''),
         'leftNav': leftNav,
         'content': content,

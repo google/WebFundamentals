@@ -12,6 +12,16 @@
         font-weight: bold !important;
       }
       .wf-stage-warning .material-icons { vertical-align: middle; }
+      .wf-edit-button {
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        color: white;
+        background-color: #3367d6;
+        padding: 8px;
+        box-shadow: 0 1px 4px rgba(0,0,0,.37);
+      }
+      .devsite-rating-stars { text-align:right; }
     </style>
     <title>{{ title }}</title>
   </head>
@@ -100,12 +110,12 @@
             <article class="devsite-article-inner">
               <div class="devsite-rating-container">
                 <div class="devsite-rating-stars">
-                  <div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
-                  </div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
-                  </div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
-                  </div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
-                  </div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons">
-                  </div>
+                  <a href="{{gitHubIssueUrl}}" class="material-icons wf-edit-button" title="Report Issue" target="_blank">
+                    bug_report
+                  </a>
+                  <a href="{{gitHubEditUrl}}" class="material-icons wf-edit-button" title="Fix It" target="_blank">
+                    mode_edit
+                  </a>
                 </div>
                 <div class="devsite-rating-description">
                 </div>

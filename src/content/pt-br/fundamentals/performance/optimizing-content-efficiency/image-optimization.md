@@ -152,7 +152,7 @@ Nesse contexto, o svgo diminui em 58% o tamanho do arquivo SVG gerado pelo Illus
 - Os compactadores de imagem usam várias técnicas para diminuir o número de bits por pixel necessários e, consequentemente, reduzir o tamanho do arquivo de imagem
 
 
-Uma imagem vetorial é somente uma grade bidimensional de `pixels` individuais, ou seja, uma imagem de 100 x 100 pixels é uma sequência de 10.000 pixels. Cada pixel, por sua vez, armazena os valores `[ÓRGÃO](http://en.wikipedia.org/wiki/RGBA_color_espaço): (R) canal vermelho, (G) canal verde, (B) canal azul e (A) canal alfa (transparência).
+Uma imagem vetorial é somente uma grade bidimensional de `pixels` individuais, ou seja, uma imagem de 100 x 100 pixels é uma sequência de 10.000 pixels. Cada pixel, por sua vez, armazena os valores `[ÓRGÃO](https://wikipedia.org/wiki/RGBA_color_space): (R) canal vermelho, (G) canal verde, (B) canal azul e (A) canal alfa (transparência).
 
 Internamente, o navegador aloca 256 valores (tons) para cada canal, que se convertem em 8 bits por canal (2 ^ 8 = 256) e 4 bytes por pixel (4 canais x 8 bits = 32 bits = 4 bytes). Como resultado, o tamanho do arquivo é facilmente calculado quando conhecemos as dimensões da grade:
 
@@ -215,7 +215,7 @@ O olho humano tem níveis de sensibilidade diferentes para cores diferentes. Sen
 Os pixels `adjacentes` formam uma grade em duas dimensões, indicando que cada pixel tem vários vizinhos. Podemos usar esse fato para melhorar ainda mais a codificação delta.
 Em vez de olhar somente para os vizinhos diretos de cada pixel, podemos incluir blocos maiores de pixels adjacentes e codificar diferentes blocos com diferentes configurações. E assim por diante...
 
-Como você deve saber, a otimização de imagens pode se tornar bastante complexa (ou divertida, dependendo do seu ponto de vista) e é uma importante área de pesquisa acadêmica e comercial. As imagens consomem muitos bytes e o desenvolvimento de técnicas de compactação mais eficientes é muito benéfico. Para mais informações, acesse a [página da Wikipédia](http://pt.wikipedia.org/wiki/Compactação_de_imagens) ou o [documento sobre técnicas de compactação WebP] (/speed/webp/docs/compression) e veja alguns exemplos práticos.
+Como você deve saber, a otimização de imagens pode se tornar bastante complexa (ou divertida, dependendo do seu ponto de vista) e é uma importante área de pesquisa acadêmica e comercial. As imagens consomem muitos bytes e o desenvolvimento de técnicas de compactação mais eficientes é muito benéfico. Para mais informações, acesse a [página da Wikipédia](https://wikipedia.org/wiki/Image_compression) ou o [documento sobre técnicas de compactação WebP] (/speed/webp/docs/compression) e veja alguns exemplos práticos.
 
 Tudo isso é ótimo, porém muito acadêmico: como isso ajuda a otimizar imagens em nossas páginas? Nosso papel aqui não é inventar novas técnicas de compactação, mas é importante entender o problema: pixels RGBA, profundidade de pixels e várias técnicas de otimização. É fundamental entender e ter em mente todos esses problemas antes de começarmos a falar sobre os vários formatos de imagens de varredura.
 

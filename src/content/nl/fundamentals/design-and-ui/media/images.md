@@ -65,7 +65,7 @@ Zorg voor zinvolle beschrijvingen via het kenmerk `alt` in `img`-elementen. Zo m
 </div>
 
 
-Het kenmerk <code>srcset</code> verbetert het gedrag van het element <code>img</code>, waardoor het eenvoudiger wordt om meerdere afbeeldingsbestanden te leveren voor verschillende apparaatkenmerken. Net zoals de bij CSS behorende <code>image-set</code> <a href="images-in-css.html#use-image-set-to-provide-high-res-images">CSS-functie</a>, stelt <code>srcset</code> de browser in staat de beste afbeelding te kiezen afhankelijk van de kenmerken van het apparaat, bijvoorbeeld een 2x afbeelding gebruiken op een 2x-scherm en in de toekomst wellicht een 1x afbeelding op een 2x-apparaat in een netwerk met beperkte bandbreedte.
+Het kenmerk <code>srcset</code> verbetert het gedrag van het element <code>img</code>, waardoor het eenvoudiger wordt om meerdere afbeeldingsbestanden te leveren voor verschillende apparaatkenmerken. Net zoals de bij CSS behorende <code>image-set</code> <a href="#use_image-set_to_provide_high_res_images">CSS-functie</a>, stelt <code>srcset</code> de browser in staat de beste afbeelding te kiezen afhankelijk van de kenmerken van het apparaat, bijvoorbeeld een 2x afbeelding gebruiken op een 2x-scherm en in de toekomst wellicht een 1x afbeelding op een 2x-apparaat in een netwerk met beperkte bandbreedte.
 
 <div class="clearfix"></div>
 
@@ -178,7 +178,7 @@ Het kenmerk `sizes` in het bovenstaande voorbeeld maakt gebruik van diverse medi
 
 ### Productafbeeldingen uitbreidbaar maken
 
-Klanten willen zien wat ze kopen. Op sites van online winkels verwachten gebruikers dat ze close-ups in hoge resolutie van producten kunnen bekijken om de details beter te kunnen zien en [deelnemers aan het onderzoek](/web/fundamentals/principles/research-study.html) raakten geïrriteerd als ze dat niet konden doen.
+Klanten willen zien wat ze kopen. Op sites van online winkels verwachten gebruikers dat ze close-ups in hoge resolutie van producten kunnen bekijken om de details beter te kunnen zien en [deelnemers aan het onderzoek](/web/fundamentals/getting-started/principles/) raakten geïrriteerd als ze dat niet konden doen.
 
 <figure>
   <img src="img/sw-make-images-expandable-good.png" srcset="img/sw-make-images-expandable-good.png 1x, img/sw-make-images-expandable-good-2x.png 2x" alt="Website van J. Crew met uitbreidbare productafbeelding">
@@ -194,7 +194,7 @@ Een goed voorbeeld van uitbreidbare afbeeldingen waarop gebruikers kunnen tikken
 
 De [techniek voor afbeeldingscompressie](http://www.html5rocks.com/en/mobile/high-dpi/#toc-tech-overview) zorgt voor sterk gecomprimeerde 2x afbeeldingen op alle apparaten, ongeacht de feitelijke mogelijkheden van het apparaat. Afhankelijk van het type afbeelding en het compressieniveau, lijkt de afbeeldingskwaliteit misschien niet te veranderen, maar de bestandsgrootte wordt wel veel kleiner.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/compressive.html">Voorbeeld bekijken</a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/compressive.html">Voorbeeld bekijken</a>
 
 
 Note: Ga verstandig om met de compressietechniek omdat deze hogere geheugen- en decoderingskosten met zich meebrengt. Het aanpassen van het formaat van grote afbeeldingen zodat ze op een kleiner scherm passen is duur en kan vooral op low-end apparaten lastig zijn omdat zowel het geheugen als de verwerkingsmogelijkheden hierop beperkt zijn.
@@ -382,7 +382,7 @@ Er zijn verschillende tools beschikbaar die verdere, lossless compressie op `JPG
 
 CSS spriting is een techniek waarbij een aantal afbeeldingen wordt gecombineerd in een enkele `sprite sheet`-afbeelding. Afzonderlijke afbeeldingen kunnen vervolgens worden gebruikt door de achtergrondafbeelding op te geven voor een element (het spritesheet) plus een offset om het juiste onderdeel weer te geven.
 
-<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/images/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Afbeeldingsspritesheet gebruikt in voorbeeld"></a>
+<a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/media/image-sprite.html"><img src="img/sprite-sheet.png" class="center" alt="Afbeeldingsspritesheet gebruikt in voorbeeld"></a>
 
 <pre class="prettyprint">
 {% includecode adjust_indentation="auto"  content_path="web/fundamentals/design-and-ui/media/_code/image-sprite.html" region_tag="sprite" %}

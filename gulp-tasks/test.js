@@ -222,6 +222,32 @@ function validateYamlFiles(fileName) {
   return {file: fileName, ok: true};
 }
 
+function getAndValidateContributors() {
+  var msg;
+  var result;
+  try {
+    gutil.log('Validating _contributors.yaml...');
+    var contribYaml = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
+    result = jsYaml.safeLoad(contribYaml);
+    result.hasErrors = [];
+  } catch (ex) {
+    msg = 'Unable to read or parse _contributors.yaml';
+    gutil.log(' ', gutil.colors.red('ERROR'), msg, gutil.colors.cyan(ex.message));
+    return {
+      hasErrors: [msg + ' -- ' + ex.message]
+    };
+  }
+  Object.keys(result).forEach(function(key) {
+    var c = result[key];
+    if (c.google && typeof c.google !== 'string') {
+      msg = 'Google+ ID for ' + key + ' must be a string';
+    gutil.log(' ', gutil.colors.red('ERROR'), msg, c.google);
+    result.hasErrors.push(msg);
+    }
+  });
+  return result;
+}
+
 gulp.task('test', function(callback) {
   var warnings = 0;
   var errors = 0;
@@ -241,18 +267,23 @@ gulp.task('test', function(callback) {
   gutil.log('Base directory:', gutil.colors.cyan(opts.srcBase));
   gutil.log('');
 
-  var contribJson;
-  try {
-    gutil.log('Validating _contributors.yaml...');
-    var contribYaml = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
-    contribJson = jsYaml.safeLoad(contribYaml);
-  } catch (ex) {
-    contribJson = {};
-    errors++;
-    var msg = 'Unable to read or parse _contributors.yaml';
-    gutil.log(' ', gutil.colors.red('ERROR'), msg, gutil.colors.cyan(ex.message));
-    errorList.push(CONTRIBUTORS_FILE + ': ' + msg + ' -- ' + ex.message);
+  var contribJson = getAndValidateContributors();
+  if (contribJson.hasErrors) {
+    contribJson.hasErrors.forEach(function(err) {
+      errorList.push(CONTRIBUTORS_FILE + ': ' + err);
+    });
   }
+  // try {
+  //   gutil.log('Validating _contributors.yaml...');
+  //   var contribYaml = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
+  //   contribJson = jsYaml.safeLoad(contribYaml);
+  // } catch (ex) {
+  //   contribJson = {};
+  //   errors++;
+  //   var msg = 'Unable to read or parse _contributors.yaml';
+  //   gutil.log(' ', gutil.colors.red('ERROR'), msg, gutil.colors.cyan(ex.message));
+  //   errorList.push(CONTRIBUTORS_FILE + ': ' + msg + ' -- ' + ex.message);
+  // }
 
   gutil.log('Validating yaml files...');
   var files = glob.find(['**/*.yaml'], STD_EXCLUDES, opts);

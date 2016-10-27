@@ -66,7 +66,7 @@ Use the Network panel to get insights into requested and downloaded resources an
 
 * [Network Panel Basics](/web/tools/chrome-devtools/network-performance/resource-loading)
 * [Understanding Resource Timing](/web/tools/chrome-devtools/network-performance/understanding-resource-timing)
-* [Network Throttling](/web/web/tools/chrome-devtools/network-performance/network-conditions)
+* [Network Throttling](/web/tools/chrome-devtools/network-performance/network-conditions)
 
 <div style="clear:both;"></div>
 

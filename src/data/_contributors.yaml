@@ -412,6 +412,21 @@ sgomes:
   description:
     en: Web DevRel @ Google
 
+mychaelgo:
+  name:
+    given: Mychael
+    family: Go
+  country: ID
+  role:
+    - translator
+  twitter: mychaelgo
+  github: mychaelgo
+  google: "113952063964933941833"
+  homepage: 'http://mychaelgo.com'
+  email: admin@mychaelgo.com
+  description:
+    en: Mychael Go is Fullstack Software Engineer
+
 simongong:
   name:
     given: Simon
@@ -422,7 +437,6 @@ simongong:
   country: JP
   role:
     - translator
-  homepage: 'http://allmyverse.com'
   google: +%E9%BE%9A%E6%8C%AF%E5%8D%8Esimon
   email: simon.gong64@gmail.com
   description:

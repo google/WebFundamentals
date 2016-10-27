@@ -27,8 +27,8 @@ description: 另闢蹊徑，為您的專案建立完全自訂的動畫。
 
 做為對照，這裡有兩條曲線：一般的緩入緩出動畫曲線和自訂曲線：
 
-<img src="imgs/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="緩入緩出動畫曲線。" />
-<img src="imgs/custom.png" style="display: inline; max-width: 300px" alt="自訂動畫曲線。" />
+<img src="images/ease-in-out-markers.png" style="display: inline; max-width: 300px" alt="緩入緩出動畫曲線。" />
+<img src="images/custom.png" style="display: inline; max-width: 300px" alt="自訂動畫曲線。" />
 
 <a href="https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/animations/box-move-custom-curve.html">請見帶自訂緩動的動畫。</a>
 
