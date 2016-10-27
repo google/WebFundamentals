@@ -30,8 +30,7 @@ To test the upcoming user experience before that time, install the latest
 To configure Chrome to show the warning as it will appear in January 2017, open
 `chrome://flags/#mark-non-secure-as` and set the `Mark non-secure origins as
 non-secure` option to `Display a verbose state when password or credit card
-fields are detected on an HTTP page`. Also set the `Security Chip` option at
-`chrome://flags/#security-chip` to `Show all`. Then relaunch your browser.
+fields are detected on an HTTP page`. Then relaunch your browser.
 
 You can see an example of the browser’s warning behavior on
 [this page](http://http-password.badssl.com/).
