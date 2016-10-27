@@ -965,6 +965,22 @@ mscales:
   twitter: wibblymat
   email: mscales@google.com
 
+yvoschaap:
+  name:
+    given: Yvo
+    family: Schaap
+  org:
+    name: DirectLyrics
+  country: NL
+  role:
+    - translator
+    - engineer
+  homepage: http://www.directlyrics.com
+  google: +yvo
+  twitter: yvoschaap
+  email: yvo@yvoschaap.com
+  description: "Loves to code and build great things."
+
 moinshaikh:
   name:
     given: Moin
