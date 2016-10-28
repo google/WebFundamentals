@@ -76,7 +76,7 @@ experience no difference and continue to experience short sessions.
 
 We have published [a sample client and backend](https://github.com/GoogleChrome/two-token-sw).
 We hope you will [try it for yourself](https://ws-codelab.appspot.com/) and 
-[answer a survey about session management](http://goo.gl/forms/djaMEOgBUb4WEhCz2).
+[answer a survey about session management](//goo.gl/forms/djaMEOgBUb4WEhCz2).
 
 
 {% include "comment-widget.html" %}

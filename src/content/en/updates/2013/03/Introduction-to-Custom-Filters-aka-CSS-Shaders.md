@@ -17,7 +17,7 @@ book_path: /web/updates/_book.yaml
 
 Custom Filters, or CSS Shaders as they used to be called, allow you to use the power of WebGL's shaders with your DOM content. Since in the current implementation the shaders used are virtually the same as those in WebGL, you need to take a step back and understand some 3D terminology and a little bit of the graphics pipeline.
 
-I've included a recorded version of a presentation I recently delivered to LondonJS. In the video I step through an overview of the 3D terminology you need to understand, what the different variable types are that you'll encounter, and how you can start playing with Custom Filters today. You should also <a href="http://goo.gl/e3KMp">grab the slides</a> so you can play with the demos yourself.
+I've included a recorded version of a presentation I recently delivered to LondonJS. In the video I step through an overview of the 3D terminology you need to understand, what the different variable types are that you'll encounter, and how you can start playing with Custom Filters today. You should also <a href="//goo.gl/e3KMp">grab the slides</a> so you can play with the demos yourself.
 
 ## Introduction to Shaders
 
@@ -91,7 +91,7 @@ I've included a recorded version of a presentation I recently delivered to Londo
 
 <p>The <code>css_MixColor</code> is mainly used as a base color that you want to, well, mix in with your DOM content. The mixing is done through the blend modes that you'll be familiar with from art packages: overlay, screen, color dodge, hard light and so on.</p>
 
-<p>There are plenty of ways that these two variables can manipulate the pixels, and included in <a href="http://goo.gl/e3KMp">my presentation</a> is a <a href="http://aerotwist.com/presentations/custom-filters/demos/demo2.html">demo that you can play around with</a>. You should check out the <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html#shader-processing-model">Custom Filters specification</a> to get a better handle on how the blend and composite modes interact.</p>
+<p>There are plenty of ways that these two variables can manipulate the pixels, and included in <a href="//goo.gl/e3KMp">my presentation</a> is a <a href="http://aerotwist.com/presentations/custom-filters/demos/demo2.html">demo that you can play around with</a>. You should check out the <a href="https://dvcs.w3.org/hg/FXTF/raw-file/tip/filters/index.html#shader-processing-model">Custom Filters specification</a> to get a better handle on how the blend and composite modes interact.</p>
 
 ## Vertex Creation
 
