@@ -174,3 +174,5 @@ Merk op dat microdata en OGP bepaalde opmaak delen:
 
 Als laatste, valideer dat je pagina eruit ziet zoals verwacht op ieder sociale media website voordat je publiceert.
 
+Translated By:
+{% include "web/_shared/contributors/yvoschaap.html" %}

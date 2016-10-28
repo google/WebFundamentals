@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab, you will learn how to enable push messaging and notifications for web apps and sites.
 
-{# wf_updated_on: 2016-10-25T18:02:35Z #}
+{# wf_updated_on: 2016-10-25T18:02:54Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -50,7 +50,7 @@ You'll also learn the basics of Service Workers.
 
 You can either download all the sample code to your computer: 
 
-[](https://github.com/GoogleChrome/push-notifications/archive/master.zip)
+[Link](https://github.com/GoogleChrome/push-notifications/archive/master.zip)
 
 ...or clone the GitHub repository from the command line:
 
@@ -70,7 +70,7 @@ This will create a __push-notifications__ directory containing:
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
 
 ![7f4505211b238ae9.png](img/7f4505211b238ae9.png)
 
