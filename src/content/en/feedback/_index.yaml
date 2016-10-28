@@ -13,7 +13,12 @@ landing_page:
         We’re committed to helping you make your site work across platforms
         and browsers, so you can be successful. We want to make it
         easy to find and report bugs in any browser, as well as
-        help you find resources while you’re building your site.
+        help you find resources while you’re building your site.<br><br>
+        Telling browser vendors about issues you find in their browser,
+        on a specific device or platform is an integral part of making
+        the web platform better!
+        Adding your support to existing bugs helps developers to
+        prioritize which issues are effecting users.
       image_path: images/hero-2x.png
 
   - items:
@@ -34,16 +39,7 @@ landing_page:
     - custom_html: <hr>
 
   - heading: Reporting bugs
-    items:
-      - description: >
-            Telling browser vendors about issues you find in their browser,
-            on a specific device or platform is an integral part of making
-            the web platform better!<br><br>
-            Adding your support to existing bugs helps developers to
-            prioritize which issues are effecting users.
-        image_path: images/content-spotlight-responsive-2x.png
-
-
+    
   - classname: devsite-landing-row-67
     items:
     - heading: How to file a good bug
