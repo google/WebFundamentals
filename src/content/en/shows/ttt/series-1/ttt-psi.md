@@ -20,4 +20,4 @@ A quick tip looking at Page Speed Insights and how it can improve your site's pe
 
 Matt made a video on improving your page speed score last year which is worth checking out as well: https://www.youtube.com/watch?v=pNKnhBIVj4w
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel

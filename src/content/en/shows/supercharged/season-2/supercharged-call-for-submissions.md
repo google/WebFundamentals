@@ -19,4 +19,4 @@ Supercharged needs you and your sites. Submit your sites using the link below.
 
 https://services.google.com/fb/forms/web
 
-Subscribe to the Google Chrome Developers Channel! http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
