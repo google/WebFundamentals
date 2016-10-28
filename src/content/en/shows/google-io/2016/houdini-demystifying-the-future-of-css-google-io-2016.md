@@ -19,8 +19,8 @@ The Surma and Houdini: Demystifying the Future of CSS
 
 The engine that drives CSS is mostly working in the background, consuming the stylesheets we write. Houdini is a collaboration between browser vendors to specify and implement new JavaScript APIs that expose these internals of the engine to developers.
 
-Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
-See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf 
+* Watch more Chrome talks at I/O 2016 here: <https://goo.gl/JoMLpB> 
+* See all the talks from Google I/O 2016 here: <https://goo.gl/olw6kV>
+* Subscribe to the Chrome Developers channel at <https://goo.gl/LLLNvf>
 
-#io16 #GoogleIO #GoogleIO2016
+`#io16` `#GoogleIO` `#GoogleIO2016`
