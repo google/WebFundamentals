@@ -46,7 +46,7 @@ load than other pages on 2G.
 
 We collected data from a 28 day field trial on 1% of Chrome 
 stable users, restricted to users on 2G connections. We saw that 7.6% of all page loads 
-on 2G included at least one cross-origin, parser-blocking script that was 
+on 2G included at least one cross-site, parser-blocking script that was 
 inserted via `document.write()` in the top level document. As a result of blocking 
 the load of these scripts, we saw the following improvements on those loads:
 
@@ -72,9 +72,10 @@ Chrome will not execute the `<script>` elements injected via `document.write()` 
    rendering of the main page.
 3. The script in the `document.write()` is parser-blocking. Scripts with the '[`async`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-async)' 
    or '[`defer`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script#attr-defer)' attributes will still execute.
-4. The script is not already in the browser HTTP cache. Scripts in the cache 
+4. The script is not hosted on the same site. In other words, Chrome will not intervene for scripts with a matching eTLD+1 (e.g. a script hosted on js.example.org inserted on www.example.org).
+5. The script is not already in the browser HTTP cache. Scripts in the cache 
    will not incur a network delay and will still execute. 
-5. The request for the page is not a reload. Chrome will not intervene if the user triggered 
+6. The request for the page is not a reload. Chrome will not intervene if the user triggered 
    a reload and will execute the page as normal.
 
 Third party snippets sometimes use `document.write()` to load scripts. 
