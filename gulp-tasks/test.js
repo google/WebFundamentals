@@ -2,14 +2,12 @@
 
 var fs = require('fs');
 var gulp = require('gulp');
-var path = require('path');
 var chalk = require('chalk');
 var glob = require('globule');
 var moment = require('moment');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var wfHelper = require('./wfHelper');
-var runSequence = require('run-sequence');
 
 var STD_EXCLUDES = [
   '!**/_common-links.md',
