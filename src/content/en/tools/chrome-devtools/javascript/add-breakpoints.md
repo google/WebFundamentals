@@ -5,6 +5,13 @@ description: Use breakpoints to pause your JavaScript code and investigate the v
 {# wf_updated_on: 2016-07-17 #}
 {# wf_published_on: 2015-04-13 #}
 
+<style>
+.devtools-inline {
+  max-height: 1em;
+  vertical-align: middle;
+}
+</style>
+
 # How to set breakpoints {: .page-title }
 
 {% include "web/_shared/contributors/kaycebasques.html" %}
@@ -40,12 +47,12 @@ To set a breakpoint on a particular line of code, first open the **Sources**
 panel, and select the script from the **File Navigator** pane on the lefthand
 side. If you can't see the **File Navigator**, press the **Toggle file
 navigator** button
-(![hide / show file navigator button][fn]{:.inline})
+(![hide / show file navigator button][fn]{:.devtools-inline})
 .
 
 **Tip**: If you're working with minified code, press the **pretty print**
 button 
-(![pretty print button][pp]{:.inline})
+(![pretty print button][pp]{:.devtools-inline})
 to make it readable. 
 
 Along the left side of your source code you can see line numbers. This region
@@ -114,7 +121,7 @@ Breakpoints** option.
 
 You can also disable all breakpoints by pressing the **deactivate
 breakpoints** button
-(![deactivate breakpoints button][dbb]{:.inline}), also on the 
+(![deactivate breakpoints button][dbb]{:.devtools-inline}), also on the 
 **Sources** panel.
 
 [db]: imgs/disable-breakpoint.png
@@ -123,25 +130,95 @@ breakpoints** button
 
 ## Set a breakpoint on DOM change {:#dom}
 
-Setting a breakpoint on DOM changes is useful when a DOM node is being added,
-deleted, or modified in an unexpected way, and you don't know what script is
-causing the change.
+There's a bug somewhere in your code that's incorrectly changing, deleting,
+or adding a DOM node. DevTools provides a fast way to root cause this issue:
+DOM change breakpoints.
 
-This section shows you how to set a breakpoint on a particular node. If you
-want to trigger a breakpoint when *any* node is deleted, changed, etc., check
-out the **DOM Mutation** category in the [event listeners breakpoints 
-pane](#events).
+Rather than manually searching around for the code that's causing the change,
+DevTools enables you to set a breakpoint on the node. Whenever the node, or
+in some cases one of its children, is added, deleted, or changed,
+DevTools pauses the page and takes you to the exact line of code that's
+causing it.
 
-Go to the **Elements** panel to set DOM change breakpoints.
+Below is a live demo for learning how to set DOM change breakpoints.
+Clicking on **Increment** increments **Count** by one. Try it now.
 
-Right-click on a node, hover over **Break on**, and select one of the options.
+Your goal in this interactive tutorial is to set a DOM change breakpoint
+that is triggered when **Count** increases, so that you can inspect the
+code that is modifying **Count**.
 
-![DOM change breakpoint][dcb]
+{% framebox height="auto" %}
+<p><b>DOM Change Breakpoints Demo</b></p>
+<button>Increment</button>
+<p>Count: <span>0</span></p>
+<script>
+var buttons = document.querySelectorAll('button');
+var increment = buttons[0];
+var toggle = buttons[1];
+var count = document.querySelector('span');
+increment.addEventListener('click', function() {
+  count.textContent = parseInt(count.textContent) + 1;
+});
+</script>
+{% endframebox %}
 
-**Tip**: These are not exclusive options. You can have two or more of the
-options enabled on any given node.
+To **add the DOM change breakpoint**:
 
-Here's more information about each type of breakpoint:
+1. Right-click on **Count** and select **Inspect**. DevTools highlights
+   the node blue. It should be a `<p>` node. You can verify that you're on
+   the right node by double-clicking it, which expands the node so that you
+   can see its contents.
+
+1. Right-click on the highlighted node and select **Break on** >
+   **Subtree Modifications**. The blue icon ![DOM breakpoint 
+   icon][icon]{:.devtools-inline} to the left of the node indicates that a DOM
+   breakpoint is set on the node. It's a little hard to see the icon while
+   the node is highlighted, since it's a blue icon against a blue
+   background.
+
+1. Back on the demo, click **Increment**. DevTools pauses the page, goes
+   to **Sources**, and highlights the line of code in the script that is
+   causing the change.
+
+1. Press **Resume script execution** ![resume script execution
+   button](imgs/resume-script-execution.png){:.devtools-inline} twice to resume
+   script execution. You need to press it twice because the breakpoint is
+   triggered once when the count text is deleted, and then again when the
+   text is updated with the new count.
+
+To break when an attribute of the selected node is changed, or when the 
+selected node is deleted, just select **Attributes modifications** or
+**Node Removal** instead of **Subtree Modifications** in step 2 above.
+
+Tip: These breakpoints are not exclusive. You can have two or all three of these breakpoints enabled on a single node at the same time.
+
+To **temporarily turn off the breakpoint**:
+
+1. In DevTools go back to **Elements**.
+1. Click **DOM Breakpoints**. If your DevTools window is small, **DOM
+   Breakpoints** may be hidden behind the overflow menu ![overflow
+   menu][overflow]{:.devtools-inline}. You should see a checkbox with the text `p`
+   next to it, and **Subtree Modified** below the `p`.
+1. Disable the checkbox next to **Subtree Modified**.
+1. Try clicking **Increment** again. The counter increments and DevTools no
+   longer pauses the page.
+
+Tip: Hover over `p` to highlight the node in the viewport. Click on `p` to
+select the node in **Elements**.
+
+To **delete the breakpoint**:
+
+1. Go to **DOM Breakpoints**.
+1. Right-click on the breakpoint that you want to delete and select
+   **Remove breakpoint**.
+
+[icon]: imgs/dom-breakpoint-icon.png
+[overflow]: imgs/overflow.png
+
+### More on DOM change breakpoint types
+
+Here's more detailed information about exactly when and how each type of DOM
+change breakpoint is triggered:
 
 * **Subtree modifications**. Triggered when a child of the currently-selected
   node is removed, added, or the contents of a child are changed. Not
@@ -152,30 +229,6 @@ Here's more information about each type of breakpoint:
   on the currently selected node, or when an attribute value changes.
 
 * **Node Removal**: Triggered when the currently-selected node is removed.
-
-When you set a DOM change breakpoint, a blue circle is displayed next to
-the node where the breakpoint is set. 
-
-![DOM change breakpoint indicator][dbi]
-
-You can manage all of your DOM change breakpoints from the **DOM Breakpoints**
-pane on the **Elements** panel.
-
-Toggle the checkbox next to a breakpoint to disable or enable that breakpoint.
-Right-click on a breakpoint and select **Remove Breakpoint** to delete that
-breakpoint. You can also remove all breakpoints by right-clicking anywhere
-within the **DOM Breakpoints** pane and selecting **Remove all breakpoints**.
-
-![DOM Breakpoints pane][dbp]
-
-You can also access the **DOM Breakpoints** pane from the **Sources** panel.
-
-![DOM Breakpoints pane on Sources panel][dbps]
-
-[dcb]: imgs/dom-change-breakpoint.png
-[dbi]: imgs/dom-breakpoint-indicator.png
-[dbp]: imgs/dom-breakpoints-pane.png
-[dbps]: imgs/dom-breakpoints-pane-sources.png
 
 ## Break on XHR
 
@@ -224,7 +277,7 @@ event belongs to, and then enable the checkbox next to your target event.
 
 If your code is throwing exceptions, and you don't know where they're coming
 from, press the **pause on exception** button 
-(![pause on exception button][poeb]{:.inline})
+(![pause on exception button][poeb]{:.devtools-inline})
 on the **Sources** panel.
 
 DevTools automatically breaks at the line where the exception is thrown.
