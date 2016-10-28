@@ -2,18 +2,15 @@
 
 var fs = require('fs');
 var gulp = require('gulp');
-var path = require('path');
+var chalk = require('chalk');
 var glob = require('globule');
 var moment = require('moment');
 var jsYaml = require('js-yaml');
 var gutil = require('gulp-util');
 var wfHelper = require('./wfHelper');
 
-var TEST_ROOT = 'src/content/';
 var STD_EXCLUDES = [
   '!**/_common-links.md',
-  '!**/_generated.md',
-  '!**/_template.md',
   '!**/updates/tags/*',
   '!**/fundamentals/getting-started/codelabs/*/*.md',
   '!**/updates/201?/index.md',
@@ -21,313 +18,501 @@ var STD_EXCLUDES = [
   '!**/shows/http203/podcast/index.md'
 ];
 var MAX_DESCRIPTION_LENGTH = 485;
-var VALID_TAGS = JSON.parse(fs.readFileSync('gulp-tasks/commonTags.json', 'utf8'));
-var CONTRIBUTORS_FILE = './src/data/_contributors.yaml';
-var DO_EXPERIMENTAL = false;
-var EXPERIMENTAL_STRINGS = [
-  {label: 'Links (HTML) within DevSite should be relative', regEx: /href=['"]?https:\/\/developers.google.com/},
-  {label: 'Links (MD) within DevSite should be relative', regEx: /]\(https:\/\/developers.google.com/}
-];
-
-var WARNING_STRINGS = [
-  {label: 'mdl-* class', regEx: /mdl-(grid|cell|data-table|js-data-table)/},
-  {label: 'TODO: Verify note type!', regEx: /<!-- TODO: Verify note type! -->/},
-  {label: 'TODO: Verify Udacity', regEx: /<!-- TODO: Verify Udacity course fits here -->/},
-  {label: 'quote__content', regEx: /quote__content/},
-  {label: 'g-(wide|medium)--(push|pull)-x', regEx: /g-(wide|medium)--(push|pull)-\d/},
-  {label: 'g--', regEx: /g--/}
-];
 var ERROR_STRINGS = [
-  {label: 'Possible template tag ({{)', regEx: /{{/},
-  {label: 'Old style include {% include_code', regEx: /{%[ ]?include_code/},
-  {label: 'Old style link_sample {% link_sample', regEx: /{%[ ]?link_sample/},
-  {label: 'Old style highlight {% highlight', regEx: /{%[ ]?highlight/},
+  {label: 'Possible template tag ({{)', regEx: /{{/g},
   {label: 'Invalid named anchor', regEx: /{#\w+}/m},
-  {label: 'Old style animation tag {% animtion', regEx: /{% animation/},
-  {label: 'Old style include (shared/takeaway.liquid)', regEx: /shared\/takeaway\.liquid/},
-  {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w(-\w\w)?/},
-  {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com\//},
-  {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com\//}
+  {label: 'Hard coded language URL in link (hl=xx)', regEx: /[\?|&]hl=\w\w/g},
+  {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com/},
+  {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com/},
 ];
 
-function testMarkdownFile(fileName, contribJson) {
-  var tags;
-  var errors = [];
-  var warnings = [];
-  var fileContent = fs.readFileSync(fileName, 'utf8');
+var contributorList;
+var summary = {
+  files: 0,
+  filesWithErrors: {},
+  errors: 0,
+  warnings: 0
+};
 
-  // Has book.yaml and project.yaml
-  if (wfHelper.getRegEx(/^book_path: (.*)\n/m, fileContent, null) === null) {
-    errors.push({msg: 'Missing book_path definition', param: ''});
+/**
+ * Logs a message to the console
+ *
+ * @param {string} level ERROR or WARNING, the level of the error
+ * @param {string} filename The file the issue occured in
+ * @param {string} message The message to be displayed
+ */
+function logMessage(level, filename, message) {
+  var msgLevel;
+  level = level.toUpperCase();
+  if (level === 'ERROR') {
+    summary.errors++;
+    msgLevel = chalk.red('ERROR:');
+  } else {
+    summary.warnings++;
+    msgLevel = chalk.yellow('WARNING:');
   }
-  if (wfHelper.getRegEx(/^project_path: (.*)\n/m, fileContent, null) === null) {
-    errors.push({msg: 'Missing project_path definition', param: ''});
-  }
-  // Validate description
-  var description = wfHelper.getRegEx(/^description:(.*)\n/m, fileContent, null);
-  if (description) {
-    description = description.trim();
-    if (description.length === 0) {
-      errors.push({msg: 'description cannot be empty', param: ''});
-    } else if (description.length > MAX_DESCRIPTION_LENGTH) {
-      errors.push({msg: 'description exceeds maximum length', param: description.length});
-    }
-    if (description.indexOf('<') >= 0 || description.indexOf('`') >= 0) {
-      warnings.push({msg: 'description should not contain HTML tags', param: description});
-    }
-  }
-  // Check if it has review required
-  if (GLOBAL.WF.options.skipReviewRequired === false) {
-    if (wfHelper.getRegEx(/{# (wf_review_required) #}/, fileContent)) {
-      warnings.push({msg: 'Has wf_review_required tag', param: ''});
-    }
-  }
-  // Validate wf_updated and wf_published
-  var updatedOn = wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, fileContent, 'NOT_FOUND');
-  if (!moment(updatedOn, 'YYYY-MM-DD').isValid()) {
-    errors.push({msg: 'Missing wf_updated_on tag or invalid format YYYY-MM-DD', param: updatedOn});
-  }
-  var publishedOn = wfHelper.getRegEx(/{# wf_published_on: (.*?) #}/, fileContent, 'NOT_FOUND');
-  if (!moment(publishedOn, 'YYYY-MM-DD').isValid()) {
-    errors.push({msg: 'Missing wf_published_on tag or invalid format YYYY-MM-DD', param: publishedOn});
-  }
-  // Check for uncommon tags
-  tags = wfHelper.getRegEx(/{# wf_tags: (.*?) #}/, fileContent);
-  if (tags) {
-    tags.split(',').forEach(function(tag) {
-      if (VALID_TAGS.indexOf(tag.trim()) === -1) {
-        warnings.push({msg: 'Uncommon tag found', param: tag.trim()});
-      }
-    });
-  }
-  // Verify authors/translators are in contribJson
-  var reContrib = /{%[ ]?include "web\/_shared\/contributors\/(.*)"[ ]?%}/gm;
-  var contributors = fileContent.match(reContrib);
-  if (contributors) {
-    contributors.forEach(function(contributor) {
-      var key = wfHelper.getRegEx(/\/contributors\/(.*)\.html"/, fileContent);
-      var contrib = contribJson[key];
-      if (!contrib) {
-        errors.push({msg: 'Unable to find contributor in contributors file.', param: key});
-      }
-    });
-  }
-  // Verify page has a title
-  var title = fileContent.match(/^# (.*) {: \.page-title[ ]*}/gm);
-  if (title) {
-    if (title.length > 1) {
-      errors.push({msg: 'Page has multiple title tags', param: title.join(',')});
-    }
-    if (title[0].indexOf('<') >= 0 || title[0].indexOf('&gt;') >= 0 || title[0].indexOf('`') >= 0) {
-      errors.push({msg: 'Title should not contain markup', param: title[0]});
+  gutil.log(msgLevel, chalk.cyan(filename), message);
+  summary.filesWithErrors[filename] = true; 
+}
+
+/**
+ * Logs an ERROR message to the console
+ *
+ * @param {string} filename The file the issue occured in
+ * @param {string} message The message to be displayed
+ */
+function logError(filename, message) {
+  logMessage('ERROR', filename, message);
+}
+
+/**
+ * Logs a WARNING message to the console
+ *
+ * @param {string} filename The file the issue occured in
+ * @param {string} message The message to be displayed
+ */
+function logWarning(filename, message, extra) {
+  logMessage('WARNING', filename, message, extra);
+}
+
+/**
+ * Gets a list of all files with that extension for the languages
+ * specified in the options or the test root.
+ *
+ * @param {string} extension The extension of files to search for
+ * @param {string} extension2 A second extension of files to search for
+ * @return {Array} A list of files matching the patterns
+ */
+function getFilelist(extension, extension2) {
+  var opts = {prefixBase: true};
+  var globs = [];
+  if (GLOBAL.WF.options.testPath) {
+    opts.srcBase = GLOBAL.WF.options.testPath;
+    globs.push('**/*.' + extension);
+    if (extension2) {
+      globs.push('**/*.' + extension2);
     }
   } else {
-    errors.push({msg: 'Missing page title', param: '# TITLE {: .page-title }'});
+    opts.srcBase = './src/content';
+    GLOBAL.WF.options.lang.forEach(function(lang) {
+      globs.push(lang + '/**/*.' + extension);
+      if (extension2) {
+        globs.push(lang + '/**/*.' + extension2);
+      }
+    });    
   }
-  // Verify there is only ONE H1 tag
-  var numH1s = 0;
-  title = fileContent.match(/^# (.*)/gm);
-  if (title) {
-    numH1s += title.length;
-  }
-  title = fileContent.match(/^<h1.*?>/gmi);
-  if (title) {
-    numH1s += title.length;
-  }
-  if (numH1s > 1) {
-    errors.push({msg: 'Multiple h1 tags not permitted.', param: 'Too many # or <h1>\'s, found: ' + numH1s});
-  }
-  // Verify all includes start with web/
-  var reInclude = /{%[ ]?include .*?[ ]?%}/g;
-  var includes = fileContent.match(reInclude);
-  if (includes) {
-    includes.forEach(function(include) {
-      var inclFile = wfHelper.getRegEx(/"(.*)"/, include, '');
-      if (inclFile === 'comment-widget.html') {
+  return glob.find(globs, STD_EXCLUDES, opts);
+}
+
+/**
+ * Reads a file from the file system
+ *
+ * @param {string} filename The file to read
+ * @return {Promise} A promise with the file contents
+ */
+function readFile(filename) {
+  return new Promise(function(resolve, reject) {
+    fs.readFile(filename, 'utf8', function(err, data) {
+      summary.files++;
+      if (err) {
+        summary.filesWithErrors++;
+        logError(filename, 'Unable to read file', err);
+        reject(err);
         return;
       }
-      if (inclFile.indexOf('web/') !== 0) {
-        errors.push({msg: 'Include path must start with web/', param: include});
-        // console.log('EEP', fileName, include, inclFile);
-      }
+      resolve(data);
     });
-  }
-
-  // Look for bad strings
-  WARNING_STRINGS.forEach(function(str) {
-    if (fileContent.search(str.regEx) >= 0) {
-      warnings.push({msg: 'Potentially bad string found', param: str.label});
-    }
   });
-  ERROR_STRINGS.forEach(function(str) {
-    var result = str.regEx.exec(fileContent);
-    if (result) {
-      errors.push({msg: 'Bad string found "' + result[0] + '"', param: str.label});
-    }
-  });
-  // Look for experimental strings
-  if (DO_EXPERIMENTAL) {
-    EXPERIMENTAL_STRINGS.forEach(function(str) {
-      if (fileContent.search(str.regEx) >= 0) {
-        warnings.push({msg: 'Experimental string found', param: str.label});
-      }
-    });
-  }
-
-  // Look for invalid tags in includecode
-  tags = fileContent.match(/{% includecode (.*?) %}/g);
-  if (tags) {
-    tags.forEach(function(tag) {
-      if (tag.indexOf('lang=') >= 0) {
-        errors.push({msg: 'lang=xx attribute in includecode', param: tag});
-      }
-      if (tag.indexOf('adjust_indentation') === -1) {
-        warnings.push({msg: 'Missing \'adjust_indentation="auto"\'', param: tag});
-      }
-    });
-  }
-  tags = fileContent.match(/{% include (.*?) %}/g);
-  if (tags) {
-    tags.forEach(function(tag) {
-      if (tag.indexOf('inline=') >= 0) {
-        errors.push({msg: 'inline=xx attribute in include', param: tag});
-      }
-    });
-  }
-  tags = fileContent.match(/^#+ TL;DR.*\n/gm);
-  if (tags) {
-    tags.forEach(function(tag) {
-      if (tag.indexOf('### ') === -1 || tag.indexOf('.hide-from-toc') === -1) {
-        tag = tag.replace('\n', '');
-        warnings.push({msg: 'TL;DRs should be H3 and inclue {: .hide-from-toc }', param: tag});
-      }
-    });
-  }
-  return {file: fileName, errors: errors, warnings: warnings};
 }
 
-function validateYamlFiles(fileName) {
-  var yamlDoc;
-  var jsonDoc;
-  try {
-    yamlDoc = fs.readFileSync(fileName, 'utf8');
-  } catch (ex) {
-    return {file: fileName, error: 'Unable to read yaml file.', ex: ex};
-  }
-  try {
-    jsonDoc = jsYaml.safeLoad(yamlDoc);
-  } catch (ex) {
-    return {file: fileName, error: 'Unable to parse yaml file.', ex: ex};
-  }
-  return {file: fileName, ok: true};
+/**
+ * Reads a file and parses it from YAML into JSON
+ *
+ * @param {string} filename The file to read
+ * @return {Promise} A promise with the file contents
+ */
+function parseYaml(filename) {
+  return new Promise(function(resolve, reject) {
+    readFile(filename)
+      .then(function(fileContents) {
+        try {
+          var parsed = jsYaml.safeLoad(fileContents);
+          resolve(parsed);
+        } catch(ex) {
+          summary.filesWithIssues++;
+          reject(logError(filename, 'Unable to parse YAML', ex));
+        }
+      })
+      .catch(function(err) {
+        reject(err);
+      });
+  });
 }
 
-function getAndValidateContributors() {
-  var msg;
-  var result;
-  try {
-    gutil.log('Validating _contributors.yaml...');
-    var contribYaml = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
-    result = jsYaml.safeLoad(contribYaml);
-    result.hasErrors = [];
-  } catch (ex) {
-    msg = 'Unable to read or parse _contributors.yaml';
-    gutil.log(' ', gutil.colors.red('ERROR'), msg, gutil.colors.cyan(ex.message));
-    return {
-      hasErrors: [msg + ' -- ' + ex.message]
-    };
+/**
+ * Reads & validates the _contributors.yaml file checking for:
+ *  * Proper YAML format
+ *  * Entries are sorted by family name
+ *  * Google+ IDs are strings, not integers
+ *
+ * Note: the promise will always be fulfilled, even if it fails.
+ * 
+ * @return {Promise} An empty promise
+ */
+function readAndValidateContributors() {
+  if (GLOBAL.WF.options.verbose) { 
+    gutil.log(' ', 'Validating _contributors.yaml');
   }
-  Object.keys(result).forEach(function(key) {
-    var c = result[key];
-    if (c.google && typeof c.google !== 'string') {
-      msg = 'Google+ ID for ' + key + ' must be a string';
-    gutil.log(' ', gutil.colors.red('ERROR'), msg, c.google);
-    result.hasErrors.push(msg);
-    }
+  return new Promise(function(resolve, reject) {
+    parseYaml('./src/data/_contributors.yaml')
+    .then(function(contributors) {
+      var errors = 0;
+      var prevFamilyName = '';
+      Object.keys(contributors).forEach(function(key) {
+        var errMsg;
+        var contributor = contributors[key];
+        var familyName = contributor.name.family || contributor.name.given;
+        if (prevFamilyName.toLowerCase() > familyName.toLowerCase()) {
+          errMsg = 'Contributors must be sorted by family name. ';
+          errMsg += prevFamilyName + ' came before ' + familyName;
+          logError('_contributors.yaml', errMsg)
+          errors++;
+        }
+        if (contributor.google && typeof contributor.google !== 'string') {
+          errMsg = 'Google+ ID for ' + key + ' must be a string';
+          logError('_contributors.yaml', errMsg);
+          errors++;
+        }
+        prevFamilyName = familyName;
+      });
+      contributorList = contributors;
+      resolve();
+    });
   });
-  return result;
+}
+
+/**
+ * Reads & validates all YAML files in the project checking for:
+ *  * Proper YAML format
+ *
+ * Note: the promise will always be fulfilled, even if it fails.
+ * 
+ * @return {Promise} An empty promise
+ */
+function testAllYaml() {
+  if (GLOBAL.WF.options.verbose) { 
+    gutil.log(' ', 'Validating YAML files...');
+  }
+  var files = getFilelist('yaml');
+  return new Promise(function(resolve, reject) {
+    var filesCompleted = 0;
+    var filesRejected = 0;
+    files.forEach(function(filename) {
+      return parseYaml(filename)
+        .catch(function() {
+          filesRejected++;
+        })
+        .then(function() {
+          if (++filesCompleted === files.length) {
+            resolve();
+          }
+        });
+    });
+  });
+}
+
+/**
+ * Checks to ensure there are no .markdown or .mdown files in the project
+ *
+ * Note: the promise will always be fulfilled, even if it fails.
+ * 
+ * @return {Promise} An empty promise
+ */
+function findBadMDExtensions() {
+  return new Promise(function(resolve, reject) {
+    var files = getFilelist('markdown', 'mdown');
+    files.forEach(function(filename) {
+      summary.files++;
+      logError(filename, 'File extension must be .md');
+    });
+    resolve();
+  });
+}
+
+/**
+ * Tests all .MD files
+ * 
+ * Note: the promise will only be fulfilled, when all of the files have been
+ * tested and their promises have been returned. It will be fulfilled even if
+ * there are any failures.
+ *  
+ * @return {Promise} An empty promise
+ */
+function testAllMarkdown() {
+  return readFile('./src/data/commonTags.json')
+  .then(function(tags) {
+    var files = getFilelist('md');
+    return new Promise(function(resolve, reject) {
+      var filesCompleted = 0;
+      var filesRejected = 0;
+      files.forEach(function(filename) {
+        return validateMarkdown(filename, tags)
+          .catch(function() {
+            filesRejected++;
+          })
+          .then(function() {
+            if (++filesCompleted === files.length) {
+              resolve();
+            }
+          });
+      });
+    });
+  });
+}
+
+/**
+ * Reads & validates the an individual markdown file
+ *
+ * Note: the promise will always be fulfilled, even if it fails.
+ * 
+ * @return {Promise} An empty promise
+ */
+function validateMarkdown(filename, commonTags) {
+  return new Promise(function(resolve, reject) {
+    readFile(filename)
+    .then(function(content) {
+      var errMsg;
+      var matched;
+      var errors = 0;
+      var warnings = 0;
+
+      // Validate book_path and project_path
+      if (wfHelper.getRegEx(/^book_path: (.*)\n/m, content, null) === null) {
+        errMsg = 'Attribute `book_path` missing from top of document';
+        logError(filename, errMsg)
+        errors++;
+      }
+      if (wfHelper.getRegEx(/^project_path: (.*)\n/m, content, null) === null) {
+        errMsg = 'Attribute `project_path` missing from top of document';
+        logError(filename, errMsg)
+        errors++;
+      }
+
+      // Validate description
+      matched = wfHelper.getRegEx(/^description:(.*)\n/m, content, null);
+      if (matched) {
+        matched = matched.trim();
+        if (matched.length === 0) {
+          errMsg = 'Attribute `description` cannot be empty';
+          errors.push(logError(filename, errMsg));
+        } else if (matched.length > MAX_DESCRIPTION_LENGTH) {
+          errMsg = 'Attribute `description` cannot exceed ' + MAX_DESCRIPTION_LENGTH
+          errMsg += ' characters, was: ' + matched.length;
+          logError(filename, errMsg)
+          errors++;
+        }
+        if (matched.indexOf('<') >= 0 || matched.indexOf('`') >= 0) {
+          errMsg = 'Attribute `description` cannot contain HTML or markdown, ';
+          errMsg += 'found: ' + matched;
+          logError(filename, errMsg)
+          errors++;
+        }
+      }
+
+      // Validate wf_updated and wf_published
+      matched = wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, content, 'NOT_FOUND');
+      if (!moment(matched, 'YYYY-MM-DD').isValid()) {
+        errMsg = 'WF Tag `wf_updated_on` missing or invalid format (YYYY-MM-DD)';
+        errMsg += ', found: ' + matched;
+        logError(filename, errMsg)
+        errors++;
+      }
+      matched = wfHelper.getRegEx(/{# wf_published_on: (.*?) #}/, content, 'NOT_FOUND');
+      if (!moment(matched, 'YYYY-MM-DD').isValid()) {
+        errMsg = 'WF Tag `wf_published_on` missing or invalid format (YYYY-MM-DD)';
+        errMsg += ', found: ' + matched;
+        logError(filename, errMsg)
+        errors++;
+      }
+
+      // Validate featured image path
+      matched = wfHelper.getRegEx(/{# wf_featured_image: (.*?) #}/, content, null);
+      var bp = './src/content/en';
+      if (matched) {
+        var imgPath = matched;
+        if (imgPath.indexOf('/web') === 0) {
+          imgPath = imgPath.replace('/web', '');
+        }
+        imgPath = './src/content/en' + imgPath;
+        try {
+          fs.accessSync(imgPath, fs.R_OK);
+        } catch (ex) {
+          errMsg = 'WF Tag `wf_featured_image` found, but couldn\'t find ';
+          errMsg += 'image - ' + matched;
+          logError(filename, errMsg);
+          errors++;
+        }
+      }
+
+      // Check for uncommon tags
+      matched = wfHelper.getRegEx(/{# wf_tags: (.*?) #}/, content);
+      if (matched) {
+        matched.split(',').forEach(function(tag) {
+          if (commonTags.indexOf(tag.trim()) === -1) {
+            errMsg = 'Uncommon tag (' + tag.trim() + ') found.';
+            logWarning(filename, errMsg)
+            warnings++;
+          }
+        });
+      } 
+
+      // Validate page title, and H1's
+      var numH1 = 0;
+      matched = content.match(/^# (.*) {: \.page-title[ ]*}/gm);
+      if (matched) {
+        if (matched.length > 1) {
+          errMsg = 'Page must only have one title tag: ' + matched.join(',');
+          logError(filename, errMsg)
+          errors++;
+        }
+        if (matched[0].indexOf('<') >= 0 || matched[0].indexOf('&gt;') >= 0 || matched[0].indexOf('`') >= 0) {
+          errMsg = 'Page title must not contain HTML or markdown ' + matched[0];
+          logError(filename, errMsg)
+          errors++;
+        }
+      } else {
+        errMsg = 'Page is missing page title eg: # TITLE {: .page-title }';
+        logError(filename, errMsg)
+        errors++;
+      }
+      matched = content.match(/^#[^#].*/gm);
+      if (matched) {
+        numH1 += matched.length;
+      }
+      matched = content.match(/^<h1.*?>/gmi);
+      if (matched) {
+        numH1 += matched.length;
+      } 
+      if (numH1 > 1) {
+        errMsg = 'Page should only have ONE H1 tag, found ' + numH1;
+        warnings.push(logWarning(filename, errMsg));
+      }
+
+      // Verify authors/translators are in the contributors file
+      var reContrib = /{%[ ]?include "web\/_shared\/contributors\/(.*)"[ ]?%}/gm;
+      matched = content.match(reContrib);
+      if (matched) {
+        matched.forEach(function(contributor) {
+          var key = wfHelper.getRegEx(/\/contributors\/(.*)\.html"/, contributor);
+          if (!contributorList[key]) {
+            errMsg = 'Unable to find contributor (' + key + ') in contributors file.'
+            logError(filename, errMsg)
+            errors++;
+          }
+        });
+      }
+
+      // Verify all includes start with web/
+      var reInclude = /{%[ ]?include .*?[ ]?%}/g;
+      matched = content.match(reInclude);
+      if (matched) {
+        matched.forEach(function(include) {
+          var inclFile = wfHelper.getRegEx(/"(.*)"/, include, '');
+          if (inclFile === 'comment-widget.html') {
+            return;
+          }
+          if (inclFile.indexOf('web/') !== 0) {
+            errMsg = 'Include path MUST start with web/ - ' + include;
+            logError(filename, errMsg)
+            errors++;
+          }
+        });
+      }
+
+      // Verify all TL;DRs are H3 and include hide-from-toc   
+      matched = content.match(/^#+ TL;DR.*\n/gm);
+      if (matched) {
+        matched.forEach(function(tag) {
+          if (tag.indexOf('### ') === -1 || tag.indexOf('.hide-from-toc') === -1) {
+            errMsg = 'TL;DRs should be H3 and inclue {: .hide-from-toc }';
+            errMsg += ' Found: ' + tag.replace('\n', '');
+            logWarning(filename, errMsg)
+            warnings++;
+          }
+        });
+      }
+
+      // Verify all TL;DRs are H3 and include hide-from-toc   
+      matched = content.match(/http:\/\/goo.gl\//g);
+      if (matched) {
+        errMsg = 'Found ' + matched.length + ' non-secure goo.gl shortlinks.';
+        errMsg += ' Preferred style: //goo.gl/XXXXXX (without protocol).';
+        logWarning(filename, errMsg);
+        warnings++;
+      }
+
+      // Look for bad strings
+      ERROR_STRINGS.forEach(function(reObj) {
+        matched = content.match(reObj.regEx);
+        if (matched) {
+          matched.forEach(function(m) {
+            errMsg = reObj.label + ' -- ' + m;
+            logError(filename, errMsg)
+            errors++;
+          });
+        }
+      });
+      if (errors === 0) {
+        resolve();
+        return;
+      }
+      reject('failed.');
+    });
+  });
+}
+
+/**
+ * Prints a summary of the test results
+ *
+ * @return {Promise} An empty promise.
+ */
+function printSummary() {
+  return new Promise(function(resolve, reject) {
+    var filesWithErrors = Object.keys(summary.filesWithErrors).length;
+    gutil.log('');
+    gutil.log('Test Completed.');
+    gutil.log('Files checked: ', gutil.colors.blue(summary.files));
+    gutil.log(' - with issues:', gutil.colors.yellow(filesWithErrors));
+    gutil.log(' - warnings:   ', gutil.colors.yellow(summary.warnings));
+    gutil.log(' - errors:     ', gutil.colors.red(summary.errors));
+    if (summary.errors === 0) {
+      resolve();
+      return;
+    }
+    reject(new Error('There were ' + summary.errors + ' errors.'));
+  });
 }
 
 gulp.task('test', function(callback) {
-  var warnings = 0;
-  var errors = 0;
-  var errorList = [];
-  var filesWithIssues = 0;
-  var opts = {
-    srcBase: TEST_ROOT,
-    prefixBase: true
-  };
-  if (GLOBAL.WF.options.lang.length === 1) {
-    opts.srcBase = path.join(TEST_ROOT, GLOBAL.WF.options.lang[0]);
-  } else if (GLOBAL.WF.options.lang.length !== GLOBAL.WF.langs.length) {
-    gutil.log(' ', gutil.colors.red('ERROR:'), 'Language options not supported.');
-    gutil.log(' ', 'You can only provide ZERO (all) or ONE language to test');
-    throw new Error('Language options not supported');
+  if (GLOBAL.WF.options.testPath) {
+    gutil.log('Test Base Dir:', chalk.cyan(GLOBAL.WF.options.testPath));
+    gutil.log('');
   }
-  gutil.log('Base directory:', gutil.colors.cyan(opts.srcBase));
-  gutil.log('');
-
-  var contribJson = getAndValidateContributors();
-  if (contribJson.hasErrors) {
-    contribJson.hasErrors.forEach(function(err) {
-      errorList.push(CONTRIBUTORS_FILE + ': ' + err);
-    });
-  }
-  // try {
-  //   gutil.log('Validating _contributors.yaml...');
-  //   var contribYaml = fs.readFileSync(CONTRIBUTORS_FILE, 'utf8');
-  //   contribJson = jsYaml.safeLoad(contribYaml);
-  // } catch (ex) {
-  //   contribJson = {};
-  //   errors++;
-  //   var msg = 'Unable to read or parse _contributors.yaml';
-  //   gutil.log(' ', gutil.colors.red('ERROR'), msg, gutil.colors.cyan(ex.message));
-  //   errorList.push(CONTRIBUTORS_FILE + ': ' + msg + ' -- ' + ex.message);
-  // }
-
-  gutil.log('Validating yaml files...');
-  var files = glob.find(['**/*.yaml'], STD_EXCLUDES, opts);
-  files.sort();
-  files.forEach(function(file) {
-    var r = validateYamlFiles(file);
-    if (r.error) {
-      filesWithIssues++;
-      gutil.log(r.file);
-      gutil.log(' ', gutil.colors.red('ERROR'), r.error);
-      errorList.push(r.file + ': ' + r.error + ' -- ' + r.ex.message);
-    }
-  });
-  var yamlFileCount = files.length;
-
-  gutil.log('Validating markdown (.md) files...');
-  files = glob.find(['**/*.md'], STD_EXCLUDES, opts);
-  files.sort();
-  files.forEach(function(fileObj) {
-    var r = testMarkdownFile(fileObj, contribJson);
-    if (r.warnings.length > 0 || r.errors.length > 0) {
-      filesWithIssues++;
-      gutil.log(r.file);
-      r.warnings.forEach(function(warning) {
-        warnings++;
-        gutil.log(' ', gutil.colors.yellow('WARNING'), warning.msg, gutil.colors.cyan(warning.param));
-      });
-      r.errors.forEach(function(error) {
-        errors++;
-        gutil.log(' ', gutil.colors.red('ERROR'), error.msg, gutil.colors.cyan(error.param));
-        errorList.push(r.file + ': ' + error.msg + ' -- ' + error.param);
-      });
-    }
-  });
-  gutil.log('');
-  gutil.log('Test Completed.');
-  gutil.log('Files checked: ', gutil.colors.blue(files.length + yamlFileCount));
-  gutil.log(' - with issues:', gutil.colors.yellow(filesWithIssues));
-  gutil.log(' - warnings:   ', gutil.colors.yellow(warnings));
-  gutil.log(' - errors:     ', gutil.colors.red(errorList.length));
-  if (GLOBAL.WF.options.testWarnOnly === true) {
-    callback();
-  } else if (errorList.length > 0) {
-    var err = new gutil.PluginError('test-suite', errorList.join('\n'));
-    callback(err);
-  }
+  return readAndValidateContributors()
+    .catch(function(err) {
+      gutil.log('');
+      gutil.log(chalk.red('ABORT:'), 'Exception:', err);
+    })
+    .then(function() {
+      return Promise.all([
+        testAllYaml(),
+        testAllMarkdown(),
+        findBadMDExtensions()
+      ]);
+    })
+    .catch(function(err) {
+      gutil.log('');
+      gutil.log(chalk.red('ABORT:'), 'Exception:', err);
+    })
+    .then(printSummary);
 });
