@@ -21,6 +21,6 @@ Performance and offline support are both absolutely necessary to creating a viab
 
 This talk will highlight how you can leverage what's already built into the platform to assure the largest audience possible has access to your content, while also exploring techniques you can use to extend the platform when you need to go off-road.
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016

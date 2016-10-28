@@ -18,4 +18,4 @@ description: In this cheeky little mini tip Addy and Matt look at keyboard short
 
 In this cheeky little mini tip Addy and Matt look at keyboard shortcuts that help you navigate the command line with ease.
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel

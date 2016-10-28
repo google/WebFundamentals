@@ -19,8 +19,8 @@ Does the “Forgot password” link on your site receive more clicks than you'd 
 
 Learn about best practices on how to make your auth system more convenient and secure for your users - from the bare minimum (e.g., form annotation), to the more advanced (e.g., making your users immune to phishing).
 
-Watch more Chrome talks at I/O 2016 here: https://goo.gl/JoMLpB 
-See all the talks from Google I/O 2016 here: https://goo.gl/olw6kV
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf 
+* Watch more Chrome talks at I/O 2016 here: <https://goo.gl/JoMLpB> 
+* See all the talks from Google I/O 2016 here: <https://goo.gl/olw6kV>
+* Subscribe to the Chrome Developers channel at <https://goo.gl/LLLNvf>
 
-#io16 #GoogleIO #GoogleIO2016
+`#io16` `#GoogleIO` `#GoogleIO2016`

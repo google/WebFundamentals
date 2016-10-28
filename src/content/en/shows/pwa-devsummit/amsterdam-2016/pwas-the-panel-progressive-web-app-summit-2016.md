@@ -19,4 +19,4 @@ A collection of browser vendors and experts across the Progressive Web App platf
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

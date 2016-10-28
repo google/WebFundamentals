@@ -21,6 +21,6 @@ Check out the Lighthouse Audit Tool: https://goo.gl/AZwxqL
 
 Watch Alex’s Progressive Web App Summit 2016 talk here https://goo.gl/F3qdsg
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016

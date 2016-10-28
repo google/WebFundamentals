@@ -16,4 +16,4 @@ description: It turns out that people love themes and whatever Addy is using for
 </div>
 
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel

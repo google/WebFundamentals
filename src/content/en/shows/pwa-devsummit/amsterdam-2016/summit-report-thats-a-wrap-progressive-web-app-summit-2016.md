@@ -33,6 +33,6 @@ Google Plus: Follow GoogleChromeDevelopers
 
 Download the PWA codelabs here: https://goo.gl/qKJKIa
 
-And don't forget to subscribe! http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
 
 Music by Terra Monk: https://soundcloud.com/terramonk/pwa-amsterdam-2016

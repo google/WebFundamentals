@@ -18,4 +18,4 @@ description: High-performance sites need to feel instant and deliver the goods i
 
 High-performance sites need to feel instant and deliver the goods in less than 1000ms. In this episode, Matt and Addy talk about tools for keeping your images lean; covering image optimisation, web performance auditing and more.
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel
