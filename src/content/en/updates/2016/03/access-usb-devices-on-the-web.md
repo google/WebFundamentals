@@ -61,7 +61,7 @@ actively looking for eager developers to try it and give
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EUSB).
 
 In the very near future we plan for you to be able to enable WebUSB on your
-origin via [Origin Trials](#available-for-origin-trials). Until then you can
+origin via [Origin Trials](#available_for_origin_trials). Until then you can
 enable it on your local computer for development purposes by flipping an
 experimental flag. The implementation is partially complete and currently
 available on Chrome OS, Linux, Mac, and Windows. Go to
