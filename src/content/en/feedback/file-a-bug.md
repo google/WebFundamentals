@@ -6,69 +6,65 @@ book_path: /web/feedback/_book.yaml
 
 # How to File a Good Bug {: .page-title }
 
-Filing a good bug is easy, but takes a little work. The goal is to make
-it as easy as possible for someone to see what's broken, figure out what
-broke, and most importantly, how to fix it.
+Filing a good bug isn’t hard, but takes a little work. The goal is to make it
+easy to find what's broken, reach the root cause and, most importantly, find a
+way to fix it. Bugs that make fast progress tend to be easy to reproduce with a
+clear expected behavior.
 
-Bugs that get traction tend to be easy to reproduce and expected outcomes
-that are easy to understand.
 
 ## Are others seeing the same problem?
 
 If you’re experiencing problems, there’s a good chance other developers are too.
-Try searching for the bug on Stack Overflow. This might help you translate an
-abstract problem into a specific broken API. It might also give you a
-workaround for the short term.
+Try searching for the bug on [Stack Overflow](http://stackoverflow.com/). This
+might help you translate an abstract problem into a specific broken API. It
+might also give you a workaround for the short term.
 
 Once you have an idea of what the bug is, search for it on the
-[browser bug searcher](https://developer-feedback.appspot.com/web/feedback/).
+[browser bug searcher](/web/feedback/).
 If you find an existing bug that describes the problem, it’s much more useful
 to add your support by starring, favoriting, or commenting on that bug.
 If not, it's time to file a bug.
 
 ## What's the correct behavior?
 
-The first step is to figure out what the "correct" behavior should be. 
+The first step is to figure out what the "correct" behavior should be.
 
-Check the relevant API docs on [MDN](https://developer.mozilla.org/en-US/) or
-try to find related specs. This information can help you decide which API is
-actually broken, where it’s broken, and what the correct behavior should be.
+Check the relevant API docs on [MDN](https://developer.mozilla.org/) or try to
+find related specs. This information can help you decide which API is actually
+broken, where it’s broken, and what the expected behavior is.
 
 ### Is the behavior different in other browsers?
 
 Behavior that differs between browsers is generally prioritized higher as an
-interoperability issue, especially when the browser containing the bug
-is the odd one out. Try to test on the latest versions of Chrome, Firefox,
-Safari and Edge, possibly using a tool like
-[BrowserStack](http://browserstack.com).  
+interoperability issue, especially when the browser containing the bug is the
+odd one out. Try to test on the latest versions of Chrome, Firefox, Safari and
+Edge, possibly using a tool like [BrowserStack](https://www.browserstack.com/).
 
-If possible, check that the page isn't intentionally behaving differently due
-to user agent sniffing. Try setting the user agent string to another browser
-in Dev Tools > Menu > More Tools > Network conditions.
+If possible, check that the page isn't intentionally behaving differently due to
+ user agent sniffing. Try setting the user agent string to another browser in
+ Dev Tools > Menu > More Tools > Network conditions. Note: don’t forget to set
+ it back to Select automatically.
+
 
 ### Is it a regression?
 
-Did it used to work properly, but broke in a recent browser release?
-
-Such "regressions" can be acted upon much quicker, especially if you supply
-a version number where it worked and a version where it failed. Tools
-like [BrowserStack](http://browserstack.com) can make it easy to check old
-browser versions.
+Did this work as expected in the past, but broke in a recent browser release?
+Such "regressions" can be acted upon much quicker, especially if you supply a
+version number where it worked and a version where it failed. Tools like
+[BrowserStack](https://www.browserstack.com/) can make it easy to check old browser versions.
 
 If an issue is a regression and can be reproduced, the root cause can usually be
-found and fixed quickly.
+ found and fixed quickly.
 
 ## Create a minimized test case
 
-Mozilla has a great article on how to create a 
-[minimized test case](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Reducing_testcases).
-To make a long story short, while a description of the problem is a great start, nothing beats
-providing a link (for example, to jsbin.com) in the bug that demonstrates the problem. To
-maximize the chance of fast progress the example should contain the minimum possible code
-needed to demonstrate the problem. For issues that aren't regressions, a
-minimal code sample is the number one thing you can do to increase the odds of
-your bug getting fixed.  For regressions, a minimized test case may still be
-helpful but isn't necessary.
+Mozilla has a great article on how to create a minimized test case. To make a
+long story short, while a description of the problem is a great start, nothing
+beats providing a link (for example, to [jsbin.com](https://jsbin.com/)) in the
+bug that demonstrates the problem. To maximize the chance of fast progress the
+example should contain the minimum possible code needed to demonstrate the
+problem. A minimal code sample is the number one thing you can do to increase
+the odds of your bug getting fixed.
 
 Here are a few tips for minimizing a test case:
 
@@ -78,12 +74,13 @@ bug exists locally. This may require a live HTTPS server if the URL uses HTTPS.
 * Try to condense everything into 1 file.
 * Remove code (starting with things you know to be unnecessary) until the bug
 goes away.
-* Use version control so that you can save your work and undo things that go wrong.
+* Use version control so that you can save your work and undo things that go
+wrong.
+
 
 ### Hosting a minified test case
 
-If you're looking for a good place to host your minified test case, there are
-several good places available:
+If you're looking for a good place to host your minified test case, there are several good places available:
 
 * [JSBin](//jsbin.com)
 * [JSFiddle](//jsfiddle.net)
@@ -91,17 +88,16 @@ several good places available:
 
 ### Include details of the environment
 
-Some bugs are reproduceable only on certain operating systems, or only on 
-specific kinds of dispays (for example, low-dpi or high-dpi).  Be sure to
+Some bugs are reproducible only on certain operating systems, or only on
+specific kinds of displays (for example, low-dpi or high-dpi). Be sure to
 include the details of any test environments you used.
 
 ## Filing your issue
 
 Once you’ve got your minimized test case, you’re ready to file that bug.
-Head over to right bug tracking site.
+Head over to the right bug tracking site.
 
 * [Chromium](https://crbug.com)
 * [Edge bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
 * [Mozilla bugs](https://bugzilla.mozilla.org/)
 * [WebKit bugs](https://bugs.webkit.org/)
-
