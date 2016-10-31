@@ -55,8 +55,7 @@ The Web Share API is a
 </div>
 
 Once invoked it will bring up the native picker (see video) and allow you to
-share the data with the app chosen by the user. You need to supply at least one of 
-'text' or 'url' but may supply both if you like.
+share the data with the app chosen by the user.
 
 <div class="clearfix"></div>
 
@@ -64,7 +63,7 @@ This API has a few constraints:
 
 * You need to host your site in a [secure context](https://www.chromium.org/Home/chromium-security/prefer-secure-origins-for-powerful-new-features)
   (typically HTTPS).
-* You only need to supply one of text or url, not both.
+*  You need to supply at least one of `text` or `url` but may supply both if you like.
 * You can only invoke the API as a result of a user gesture. (For example, you can't call
   `navigator.share()` in an onload handler.)
 * The property values that you pass into the API must all be strings.
