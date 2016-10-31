@@ -13,9 +13,14 @@
     </figure>
   </div>
   <section class="wf-byline-meta">
-    <div class="wf-byline-name" itemprop="name">
+    <div class="wf-byline-name">
       <strong>By</strong>
-      <a href="/web/resources/contributors#{{id}}"><span itemprop="givenName">{{name.given}}</span> <span itemprop="familyName">{{name.family}}</span></a>
+      <span itemprop="name">
+        <a href="/web/resources/contributors#{{id}}">
+          <span itemprop="givenName">{{name.given}}</span>
+          <span itemprop="familyName">{{name.family}}</span>
+        </a>
+      </span>
     </div>
     <div class="wf-byline-desc">
       {{#if description.en}}

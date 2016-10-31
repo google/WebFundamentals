@@ -23,4 +23,4 @@ Find the code on Github here: https://goo.gl/SNOyUP
 
 Watch more episodes of Supercharged here: https://goo.gl/WFD8py
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel

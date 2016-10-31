@@ -398,20 +398,6 @@ mattgaunt:
   google: +MattGaunt
   twitter: gauntface
 
-sgomes:
-  name:
-    given: Sérgio
-    family: Gomes
-  org:
-    name: Google
-    unit: Developer Relations
-  country: UK
-  role:
-    - author
-  twitter: sergiomdgomes
-  description:
-    en: Web DevRel @ Google
-
 mychaelgo:
   name:
     given: Mychael
@@ -426,6 +412,20 @@ mychaelgo:
   email: admin@mychaelgo.com
   description:
     en: Mychael Go is Fullstack Software Engineer
+
+sgomes:
+  name:
+    given: Sérgio
+    family: Gomes
+  org:
+    name: Google
+    unit: Developer Relations
+  country: UK
+  role:
+    - author
+  twitter: sergiomdgomes
+  description:
+    en: Web DevRel @ Google
 
 simongong:
   name:

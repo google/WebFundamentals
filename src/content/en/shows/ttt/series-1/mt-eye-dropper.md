@@ -16,4 +16,4 @@ description: Addy and Matt walk through how to pick colours from a page using th
 </div>
 
 
-Subscribe to the Google Developers channel at: [http://goo.gl/mQyv5L](http://goo.gl/mQyv5L)
+[Subscribe](https://goo.gl/mQyv5L) to the Google Developers Channel

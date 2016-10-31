@@ -17,4 +17,4 @@ book_path: /web/shows/_book.yaml
 
 Paul recaps what goes into building a router, and he covers Custom Elements as well!
 
-Subscribe to the Chrome Developers channel at http://goo.gl/LLLNvf
+[Subscribe](https://goo.gl/LLLNvf) to the Google Developers Channel
