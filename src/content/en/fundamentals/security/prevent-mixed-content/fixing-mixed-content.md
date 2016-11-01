@@ -301,6 +301,10 @@ content that your users expect to be available.
 
 ### Alternatives to CSP
 
-If your site is hosted for you by a platform such as Blogger, you may not have access to modify headers & add a CSP. 
-Instead a viable alternative could be to use a website crawler to find issues across your site for you, such as 
-[HTTPSChecker](https://httpschecker.net/how-it-works#httpsChecker){: .external } or [Mixed Content Scan CLI](https://github.com/bramus/mixed-content-scan){: .external }
+If your site is hosted for you by a platform such as Blogger, you may not have 
+access to modify headers & add a CSP.
+Instead a viable alternative could be to use a website crawler to find issues 
+across your site for you, such as 
+[HTTPSChecker](https://httpschecker.net/how-it-works#httpsChecker){: .external } 
+or 
+[Mixed Content Scan](https://github.com/bramus/mixed-content-scan){: .external }
