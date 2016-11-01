@@ -224,9 +224,9 @@ means they can be cached efficiently and be shared between pages.
 
 HTTP/2 Push needs to be utilized with care, as it forces data to the browser,
 even if the file is already in the browser’s local cache or bandwidth is
-already saturated. If done wrong, performance can suffer. [Resource hints]
-might be a good alternative to allow the browser to make smart decisions about
-the prioritization of these requests.  
+already saturated. If done wrong, performance can suffer. 
+[`<link rel="preload">`][Resource hints] might be a good alternative to allow 
+the browser to make smart decisions about the prioritization of these requests.  
 
 ## Conclusion
 
