@@ -46,7 +46,7 @@ The Web Share API is a
         text: "Hello World",
         url: window.location.href
     }).then(() => console.log('Successful share'))
-    .catch(() => console.log('Error sharing:', error));
+    .catch(error => console.log('Error sharing:', error));
 
 <div class="video-wrapper">
   <iframe class="devsite-embedded-youtube-video" data-video-id="lhUzYxCvWew"
