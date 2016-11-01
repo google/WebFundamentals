@@ -67,7 +67,7 @@ Install [Node](https://nodejs.org), version 5 or greater.
 
 Install Lighthouse as a global Node module.
 
-    npm install -g GoogleChrome/lighthouse
+    npm install -g lighthouse
 
 Run a Lighthouse audit against a page.
 
