@@ -225,7 +225,7 @@ of it as elaborations on the following steps.
 1. A message arrives in the `push` event handler.
 2. You call `self.registration.getNotifications()` to see if there are any
    notifications you want to combine. This is commonly done by checking the tag
-   of the nofication.
+   of the notification.
 3. Finally show your new notification by calling `self.registration.showNotification()`
    making sure you set the renotify parameter to true in the options (See below
    for an example).
