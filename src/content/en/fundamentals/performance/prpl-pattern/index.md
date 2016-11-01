@@ -119,7 +119,7 @@ needed by the shell.
 
 The build process builds a graph of all of these dependencies, and the server
 uses this information to serve the files efficiently. It also builds a set of
-vulcanized bundles, for browsers that don't support HTTP2.
+vulcanized bundles, for browsers that don't support HTTP/2.
 
 ### App entrypoint
 
@@ -163,7 +163,7 @@ Your server logic should deliver the appropriate build for each browser.
 
 ### Bundled build
 
-For browsers that don't handle HTTP2, the build process could produce a set
+For browsers that don't handle HTTP/2, the build process could produce a set
 of different bundles: one bundle for the shell, and one bundle for each
 fragment. The diagram below shows how a simple app would be bundled, again using
 Web Components:
