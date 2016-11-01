@@ -57,7 +57,7 @@ landing_page:
         HTML and componentizing your apps, allowing you to build cutting-edge
         Progressive Web Apps that load quickly, respond instantly and work
         from anywhere.
-      image_path: images/polymer.svg
+      image_path: images/polymer-lockup-2016.png
       buttons:
       - label: Learn more
         path: https://www.polymer-project.org/
