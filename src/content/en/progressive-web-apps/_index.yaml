@@ -1,13 +1,13 @@
 project_path: /web/_project.yaml
 book_path: /web/_book.yaml
 landing_page:
-  custom_css_path: /web/styles/wf-root.css
+  custom_css_path: /web/progressive-web-apps/wf-pwa.css
 
   header:
     description: >
       <h2 class="wf-header-title">Progressive Web Apps</h2>
       <p>
-        A new level of caring about the quality of your user experience.
+        A new way to deliver amazing user experiences on the web.
       </p>
 
   rows:
@@ -16,13 +16,22 @@ landing_page:
     items:
     - description: >
         <p>
-          Progressive Web Apps combine the capabilities of native platforms
-          with the reach of the web to create web experiences that are:
+          Progressive Web Apps are user experiences that have the reach of
+          the web, and are:
         </p>
         <ul>
-          <li><b>Reliable</b> - Load instantly and never show the downasaur</li>
-          <li><b>Fast</b> - Are buttery smooth</li>
-          <li><b>Engaging</b> - Something this that the other thing, what?</li>
+          <li>
+            <b>Reliable</b> - Load instantly and never show the downasaur,
+            even in uncertain network conditions.
+          </li>
+          <li>
+            <b>Fast</b> - Respond quickly to user interactions with silky
+            smooth animations and no janky scrolling.
+          </li>
+          <li>
+            <b>Engaging</b> - Feel like a natural app on the device, with an
+            immersive user experience.
+          </li>
         </ul>
         <p>
           This new level of of quality allows Progressive Web Apps to earn a
@@ -35,15 +44,15 @@ landing_page:
     - heading: Reliable
       description: >
         <p>
-          When launched from the users home screen, service workers enable
-          a Progressive Web App to <b>load instantly</b>, regardless of the
-          network state.
+          When launched from the user’s home screen, service workers enable a
+          Progressive Web App to load instantly, regardless of the network
+          state.
         </p>
         <p>
           A service worker is like a client-side proxy, written in JavaScript
           and puts you in control of the cache and how to respond to resource
           requests. By pre-caching key resources you can eliminate the
-          dependancy on the network, ensuring an instant and reliable
+          dependence on the network, ensuring an instant and reliable
           experience for your users.
         </p>
       image_path: images/fpo-1.png
@@ -53,7 +62,7 @@ landing_page:
         path: /web/fundamentals/getting-started/primers/service-workers
         classname: button button-white
 
-  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background peteFix
+  - classname: devsite-landing-row-50 devsite-landing-row-no-image-background pwaMarginHack
     items:
     - heading: Fast
       description: >
@@ -94,35 +103,67 @@ landing_page:
         path: /web/fundamentals/engage-and-retain/push-notifications/
         classname: button button-white
 
-  - classname: devsite-landing-row-100 peteFix
+  - heading: Why build a Progressive Web App?
+    classname: devsite-landing-row-100
     items:
     - description: >
-        <p>
-          When a <a href="/web/fundamentals/engage-and-retain/app-install-banners/">
-          set of criteria</a> is met, Chrome will prompt the user to add
-          the Progressive Web App to their home screen. When users see this add
-          to home screen prompt, they know that the app meets a quality bar
-          and is <b>worthy</b> of being added to their home screen.
-        </p>
-        <p>
+        Building a high-quality Progressive Web App has 
+        incredible benefits, making it easy to delight your users,
+        grow engagement and increase conversions.
+
+  - columns:
+    - items:
+      - description: >
+          <ul class="checkmarks">
+            <li>
+              <a href="#">Worthy of being on the home screen</a><br>
+              When the Progressive Web App criteria are met, Chrome prompts
+              users to add the Progressive Web Apps to their home screen.
+            </li>
+            <li>
+              <a href="/web/showcase/2016/konga">Work reliably, no matter the network conditions</a><br>
+              Service workers enabled Konga to send 63% less data for
+              initial page loads, and 84% less data to complete the first
+              transaction!
+            </li>
+          </ul>
+    - items:
+      - description: >
+          <ul class="checkmarks">
+            <li>
+              <a href="/web/showcase/2016/extra">Increased engagement</a><br>
+              Web push notifications helped eXtra Electronics increase
+              engagement by 4X. And those users spend twice as much time on
+              the site.
+            </li>
+            <li>
+              <a href="/web/showcase/2016/aliexpress">Improved conversions</a><br>
+              The ability to deliver an amazing user experience helped AliExpress
+              improve conversions for new users across all browsers by 104%
+              and an 82% increase for iOS conversions.
+            </li>
+          </ul>
+
+
+  - classname: devsite-landing-row-67 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
+    items:
+    - heading: Lighthouse 
+      description: >
           Verifying that your Progressive Web App meets previously required a
-          great deal of manual testing. Thanks to the new 
-          <a href="/web/tools/lighthouse/">Lighthouse project</a>, it’s
-          possible to automate checks for many of these properties. You can
-          even integrate Lighthouse into continuous integration systems to
+          great deal of manual testing. Thanks to the new Lighthouse project,
+          it’s possible to automate checks for many of these properties. You 
+          can even integrate Lighthouse into continuous integration systems to
           catch regressions.
-        </p>
-        <p>
-          Building a high-quality Progressive Web App has 
-          <a href="/web/showcase/">incredible benefits</a>. A great
-          experience can delight users and improve business outcomes. A
-          bit of up-front planning, on-device testing, and iteration with
-          Lighthouse can make it easier to realise them.
-        </p>
+      image_path: images/lh-fpo.png
+
+      buttons:
+      - label: Learn More
+        path: /web/tools/lighthouse/
+
 
 
   - heading: Dive Deeper
-    classname: devsite-landing-row-grey devsite-landing-row-colored
+    classname: pwaMarginHack
     columns:
     - items:
       - description: >
