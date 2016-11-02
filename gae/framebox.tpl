@@ -11,7 +11,7 @@
     <script src="//www.google.com/jsapi?key=AIzaSyCZfHRnq7tigC-COeQRmoa9Cxr0vbrK6xw"></script>
     <script src="/wf-local/scripts/framebox.js"></script>
   </head>
-  <body class="devsite-layout-docs devsite-framebox">
+  <body class="devsite-layout-docs devsite-framebox staging-framebox">
     {% autoescape off %}
     {{ content }}
     {% endautoescape %}
