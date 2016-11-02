@@ -68,8 +68,9 @@ the odds of your bug getting fixed.
 
 Here are a few tips for minimizing a test case:
 
-* Download the web page, add `<base href="http://original.url">` and verify the
-bug exists locally. This may require a live HTTPS server if the URL uses HTTPS.
+* Download the web page, add `<base href="http://original.url">` and verify that
+the bug exists locally. This may require a live HTTPS server if the URL uses
+HTTPS.
 * Test the local files on the latest builds of as many browsers as you can.
 * Try to condense everything into 1 file.
 * Remove code (starting with things you know to be unnecessary) until the bug
@@ -97,7 +98,7 @@ include the details of any test environments you used.
 Once you’ve got your minimized test case, you’re ready to file that bug.
 Head over to the right bug tracking site.
 
-* [Chromium](https://crbug.com)
+* [Chromium bugs](https://crbug.com)
 * [Edge bugs](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
 * [Mozilla bugs](https://bugzilla.mozilla.org/)
 * [WebKit bugs](https://bugs.webkit.org/)
