@@ -153,7 +153,7 @@ produce two builds:
 -   An unbundled build designed for server/browser combinations that support
     HTTP/2 to deliver the resources the browser needs for a fast first paint 
     while optimizing caching. The delivery of these resources can be triggered
-    efficiently using [Resource Hints] or [HTTP/2 Push].
+    efficiently using [`<link rel="preload">`][Resource hints] or [HTTP/2 Push].
 
 -   A bundled build designed to minimize the number of round-trips required to
     get the application running on server/browser combinations that don't support
@@ -247,5 +247,5 @@ PRPL can help deliver the minimal functional code needed to make the route your
 users land on interactive, addressing this challenge.
 
 [HTTP/2]: /web/fundamentals/performance/http2/
-[Resource Hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[Resource hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
 [HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
