@@ -90,6 +90,31 @@ sufficiently mature or standardized to encourage widespread adoption yet.
 
 ## How much can I store?
 
+<table>
+  <thead>
+    <th>Browser</th>
+    <th>Limit</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td><6% of free space</td>
+    </tr>
+    <tr>
+      <td>Firebox</td>
+      <td><10% of free space</td>
+    </tr>
+    <tr>
+      <td>Safari</td>
+      <td><50MB</td>
+    </tr>
+    <tr>
+      <td>IE10</td>
+      <td><250MB</td>
+    </tr>
+  <tbody>
+</table>
+
 In Chrome and Opera, your storage is per origin (rather than per API). Both
 storage mechanisms will store data until the browser
 [quota](http://www.html5rocks.com/en/tutorials/offline/quota-research/) is
@@ -112,6 +137,31 @@ even easier to discover how much quota an origin is using with support for
 Promises.
 
 ## How does cache eviction work?
+
+<table>
+  <thead>
+    <th>Browser</th>
+    <th>Eviction Policy</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chrome</td>
+      <td>LRU once Chrome runs out of space</td>
+    </tr>
+    <tr>
+      <td>Firebox</td>
+      <td>LRU if the whole disk gets full</td>
+    </tr>
+    <tr>
+      <td>Safari</td>
+      <td>No eviction</td>
+    </tr>
+    <tr>
+      <td>Edge</td>
+      <td>No eviction</td>
+    </tr>
+  <tbody>
+</table>
 
 An origin is given an amount of space to do with as it pleases. This free space
 is shared across all forms of origin storage (IndexedDB, Cache API,
