@@ -119,7 +119,7 @@ needed by the shell.
 
 The build process builds a graph of all of these dependencies, and the server
 uses this information to serve the files efficiently. It also builds a set of
-vulcanized bundles, for browsers that don't support HTTP2 push.
+vulcanized bundles, for browsers that don't support HTTP/2.
 
 ### App entrypoint
 
@@ -151,8 +151,9 @@ Although it isn't a hard requirement for using PRPL, your build process could
 produce two builds:
 
 -   An unbundled build designed for server/browser combinations that support
-    HTTP/2 and HTTP/2 server push to deliver the resources the browser needs for
-    a fast first paint while optimizing caching.
+    HTTP/2 to deliver the resources the browser needs for a fast first paint 
+    while optimizing caching. The delivery of these resources can be triggered
+    efficiently using [Resource Hints] or [HTTP/2 Push].
 
 -   A bundled build designed to minimize the number of round-trips required to
     get the application running on server/browser combinations that don't support
@@ -162,7 +163,7 @@ Your server logic should deliver the appropriate build for each browser.
 
 ### Bundled build
 
-For browsers that don't handle HTTP2 Push, the build process could produce a set
+For browsers that don't handle HTTP/2, the build process could produce a set
 of different bundles: one bundle for the shell, and one bundle for each
 fragment. The diagram below shows how a simple app would be bundled, again using
 Web Components:
@@ -183,10 +184,10 @@ the most efficient way.
 
 ## Background: HTTP/2 and HTTP/2 server push
 
-[HTTP/2](/web/fundamentals/performance/http2/) allows _multiplexed_ downloads over a single
+[HTTP/2] allows _multiplexed_ downloads over a single
 connection, so that multiple small files can be downloaded more efficiently.
 
-[HTTP/2 server push](/web/fundamentals/performance/http2/#server-push) allows the server
+[HTTP/2 server push][HTTP/2 Push] allows the server
 to preemptively send resources to the browser.
 
 For an example of how HTTP/2 server push speeds up downloads, consider how the
@@ -221,6 +222,12 @@ The combination of HTTP/2 and HTTP/2 server push provides the _benefits_ of
 bundling (reduced latency) without actual bundling. Keeping resources separate
 means they can be cached efficiently and be shared between pages.
 
+HTTP/2 Push needs to be utilized with care, as it forces data to the browser,
+even if the file is already in the browser’s local cache or bandwidth is
+already saturated. If done wrong, performance can suffer. 
+[`<link rel="preload">`][Resource hints] might be a good alternative to allow 
+the browser to make smart decisions about the prioritization of these requests.  
+
 ## Conclusion
 
 Loading the code for routes more granularly and allowing browsers to schedule
@@ -239,3 +246,6 @@ should work but does not.
 PRPL can help deliver the minimal functional code needed to make the route your
 users land on interactive, addressing this challenge.
 
+[HTTP/2]: /web/fundamentals/performance/http2/
+[Resource Hints]: https://developers.google.com/web/updates/2016/03/link-rel-preload
+[HTTP/2 Push]: /web/fundamentals/performance/http2/#server-push
