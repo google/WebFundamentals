@@ -73,16 +73,26 @@ landing_page:
         path: https://angularjs.org/
 
   - heading: Other Tools
-    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+    classname: devsite-landing-row-no-image-background
     items:
+    - heading: Lighthouse
+      icon:
+        path: lighthouse/images/lighthouse-icon-128.png
+      description: >
+        Lighthouse is an open-source, automated tool for improving the quality
+        of your web apps. Run it as a Chrome Extension or from the command line.
+      buttons:
+      - label: Learn more
+        path: /web/tools/lighthouse/
     - heading: PageSpeed Module
       description: >
         The PageSpeed modules are open-source server modules that optimize
         your site automatically.
-      image_path: images/pagespeed.png
+      icon:
+        path: images/pagespeed.svg
       buttons:
       - label: Learn more
         path: https://developers.google.com/speed/pagespeed/module/
-    
+
 
 
