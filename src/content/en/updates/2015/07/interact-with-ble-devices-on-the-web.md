@@ -42,7 +42,7 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
 A subset of the Web Bluetooth API is aiming to [ship on Chrome OS, Chrome for Android M, and Mac](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Ono3RWkejAA/2skvuBhSCQAJ) 
-in Chrome 56. In Chrome 55 or earlier, it is available to be enabled experimentally 
+in Chrome 56. In Chrome 55 or earlier, it can be enabled experimentally 
 on your origin in Origin Trials, or locally on your machine using an experimental flag.
 The implementation is partially complete and currently available on Chrome OS, 
 Chrome for Android M, Linux, and Mac.
