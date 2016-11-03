@@ -83,3 +83,5 @@ and removed features by applying the [removed filter](https://www.chromestatus.c
 We will also  try to summarize some of the changes, reasoning, and migration
 paths in these posts. We will also try to summarize some of the changes,
 reasoning, and migration paths in these posts.
+
+{% include "comment-widget.html" %}
