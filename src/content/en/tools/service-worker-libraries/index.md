@@ -3,7 +3,7 @@ book_path: /web/tools/_book.yaml
 description: Service Worker Libraries.
 
 {# wf_published_on: 2015-01-01 #}
-{# wf_updated_on: 2016-09-12 #}
+{# wf_updated_on: 2016-11-03 #}
 
 # Service Worker Libraries {: .page-title }
 
@@ -14,22 +14,34 @@ description: Service Worker Libraries.
 	</figure>
 </div>
 
-Use our [service worker](https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md) libraries to simplify your development by eliminating service worker boilerplate code.
+Use our [service worker](https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md)
+libraries to simplify your development by eliminating service worker boilerplate
+code.
 
-**sw-precache&mdash;**Integrates with your build process to generate a service worker that precaches static assets such as, for example, an Application Shell.
+**sw-precache&mdash;**Integrates with your build process to generate a service
+worker that precaches static assets such as, for example, an Application
+Shell.
 
-**sw-toolbox&mdash;**Implement common runtime caching patterns such as dynamic content, API calls and third-party resources as easily as writing a README.
+**sw-toolbox&mdash;**Implement common runtime caching patterns such as dynamic
+content, API calls and third-party resources as easily as writing a README.
 
-**sw-offline-google-analytics&mdash;**Temporarily hold and retry analytics requests to avoid losing them to network disconnections.
+**sw-offline-google-analytics&mdash;**Temporarily hold and retry analytics
+requests to avoid losing them to network disconnections.
 
 ## Why use service worker libraries?
 
-You're sold on the advantages of adding a service worker to your web app—swapping the uncertainty of the network for the promise of a fast, offline-first, service worker-powered experience. But to write your own service worker from scratch, you have to clear some hurdles: 
+You're sold on the advantages of adding a service worker to your web
+app—swapping the uncertainty of the network for the promise of a fast, offline-
+first, service worker-powered experience. But to write your own service worker
+from scratch, you have to clear some hurdles:
 
 * Precaching URLs easily and reliably. 
-* Incrementing a cache version string to ensure that precached resources are updated.
-* Implementing a cache expiration strategy to account for cache size or entry age.
-* Building common patterns such as [lie-fi](http://www.urbandictionary.com/define.php?term=lie-fi) network timeouts and boilerplate code.
+* Incrementing a cache version string to ensure that precached resources are
+  updated.
+* Implementing a cache expiration strategy to account for cache size or entry
+  age.
+* Building common patterns such as [lie-fi](http://www.urbandictionary.com/define.php?term=lie-fi)
+  network timeouts and boilerplate code.
 * Capturing and reporting Google analytics data during offline usage.
 
 
@@ -61,7 +73,7 @@ provides a quicker jumping off point.
 | Feature | Summary |
 |---------|---------|
 | Precache Your App Shell | Your web app's shell—its core HTML, JavaScript, and CSS—can be precached when a user visits your page. |
-| Build-time Integration | Drop it into your existing build process: [Gulp](https://github.com/GoogleChrome/sw-precache/blob/master/demo/gulpfile.js), [Grunt](https://github.com/GoogleChrome/sw-precache/blob/master/demo/Gruntfile.js), or [command line](https://github.com/GoogleChrome/sw-precache#command-line-interface) |
+| Build-time Integration | Drop it into your existing build process: [Gulp](https://github.com/GoogleChrome/sw-precache/blob/master/demo/gulpfile.js), [Grunt](https://github.com/GoogleChrome/sw-precache/blob/master/demo/Gruntfile.js), or [command line](https://github.com/GoogleChrome/sw-precache#command-line-interface). |
 | Stay Fresh | Changes in your build update the service worker script. Users get updates, but you don't have to manually version your content or caches. |
 | No Network, No Problem | Your static resources are served [cache-first](/web/fundamentals/instant-and-offline/offline-cookbook/#cache-falling-back-to-network), quickly, whether or not there's a network available. |
 
@@ -86,7 +98,11 @@ to using those strategies for runtime requests.
 
 ## Offline Google Analytics
 
-[Offline Google Analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/projects/sw-offline-google-analytics) temporarily holds and retries analytics requests to avoid losing them to network disconnections. This tool easily installs to your build system using npm and is easily imported into your service worker script. Configure it using a parameterized function call.
+[Offline Google Analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/projects/sw-offline-google-analytics) 
+temporarily holds and retries analytics requests to avoid losing them to network
+disconnections. This tool easily installs to your build system using npm and is
+easily imported into your service worker script. Configure it using a
+parameterized function call.
 
 [Get sw-offline-google-analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/projects/sw-offline-google-analytics){: .button .button-primary }
 
@@ -141,7 +157,7 @@ work offline.
 
 Matt Gaunt and Addy Osmani explain how our service worker libraries can help
 your web apps work offline in next to no time. This video describes both 
-sw-precache and sw-toolbox.
+`sw-precache` and `sw-toolbox`.
 
 <div style="clear:both;"></div>
 
@@ -152,7 +168,7 @@ sw-precache and sw-toolbox.
 </div>
 
 In this episode of Totally Tooling Mini-Tips, Matt and Addy step through
-sw-toolbox, a library that helps make use of service workers in your web app.
+`sw-toolbox`.
 
 <div style="clear:both;"></div>
 
