@@ -54,5 +54,8 @@ top center of the red box.
 
 <img src="/web/updates/images/2016/06/absolute-positioned-children/legacy-behavior.png"/>
 
+If you want to try this for yourself in Chrome or any other browser,
+[download our sample](https://github.com/GoogleChrome/samples/tree/gh-pages/css-flexbox-abspos)
+or visit the [live demo](https://googlechrome.github.io/samples/css-flexbox-abspos/index.html).
 
 {% include "comment-widget.html" %}
