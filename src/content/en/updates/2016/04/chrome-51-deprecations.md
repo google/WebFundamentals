@@ -77,9 +77,9 @@ NPN was the TLS extension used to negotiate SPDY (and, in transition, HTTP/2).
 During the standardization process, NPN was replaced with ALPN, published as RFC
 7301 in July 2014. We intend to remove NPN at the same time as the SPDY removal.
 
-## Remove custom messages in onbeforeload dialogs
+## Remove custom messages in onbeforeunload dialogs
 
-**TL;DR:** A window's `onbeforeload` property no longer supports a custom string.
+**TL;DR:** A window's `onbeforeunload` property no longer supports a custom string.
 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/YIH8CoYVGSg/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5349061406228480) &#124;
