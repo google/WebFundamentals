@@ -9,12 +9,12 @@ description: Service Worker Libraries.
 
 <div class="attempt-right">
   <figure>
-    <img src="../images/tools-landing-page.gif" max-width="50%">
+    <img src="/web/tools/images/tools-landing-page.gif" width="80%">
     <figcaption>Overview of Service Worker Libraries</figcaption>
   </figure>
 </div>
 
-Use our [service worker](https://github.com/slightlyoff/ServiceWorker/blob/master/explainer.md)
+Use our [service worker](/web/fundamentals/getting-started/primers/service-workers)
 libraries to simplify your development by eliminating service worker boilerplate
 code.
 
