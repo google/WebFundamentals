@@ -1,8 +1,8 @@
 runtime: python27
 api_version: 1
 threadsafe: true
-application: google.com:greenies
-version: wf-devsite
+# application: petele-scratch
+# version: wf-devsite
 
 handlers:
 - url: /robots.txt
