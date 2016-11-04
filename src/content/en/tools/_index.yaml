@@ -33,8 +33,10 @@ landing_page:
         development experience, that free your app from the network, without
         having to write any boilerplate service worker code!
       buttons:
-      - label: Learn more
-        path: service-worker-libraries
+      - label: Service Worker Toolbox
+        path: service-worker-libraries/#service-worker-toolbox
+      - label: Service Worker Precache
+        path: service-worker-libraries/#service-worker-precache
     - heading: Material Design Lite
       description: >
         Material Design Lite lets you add a Material Design look and feel to
