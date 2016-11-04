@@ -41,20 +41,20 @@ finalized yet, the Chrome Team is actively looking for enthusiastic developers
 [feedback on the spec](https://github.com/WebBluetoothCG/web-bluetooth/issues) and
 [feedback on the implementation](https://bugs.chromium.org/p/chromium/issues/entry?components=Blink%3EBluetooth).
 
-Web Bluetooth API is currently available to be enabled experimentally on your
-origin in Origin Trials, or locally on your machine using an experimental flag.
-The implementation is partially complete and currently available on Chrome OS,
+A subset of the Web Bluetooth API is aiming to [ship on Chrome OS, Chrome for Android M, and Mac](https://groups.google.com/a/chromium.org/forum/#!msg/blink-dev/Ono3RWkejAA/2skvuBhSCQAJ) 
+in Chrome 56. In Chrome 55 or earlier, it can be enabled experimentally 
+on your origin in Origin Trials, or locally on your machine using an experimental flag.
+The implementation is partially complete and currently available on Chrome OS, 
 Chrome for Android M, Linux, and Mac.
 
-Go to `chrome://flags/#enable-web-bluetooth`, enable the highlighted flag,
+In Chrome 56 or later, go to `chrome://flags/#enable-experimental-web-platform-features` 
+otherwise go to `chrome://flags/#enable-web-bluetooth`, enable the highlighted flag,
 restart Chrome and you should be able to
 [scan for](#scan-for-bluetooth-devices) and [connect to](#connect-to-a-bluetooth-device)
 nearby Bluetooth devices,
 [read](#read-a-bluetooth-characteristic)/[write](#write-to-a-bluetooth-characteristic)
 Bluetooth characteristics, [receive GATT Notifications](#receive-gatt-notifications) and know when a [Bluetooth device gets
 disconnected](#get-disconnected-from-a-bluetooth-device).
-
-<img style="width:723px; max-height:250px" src="/web/updates/images/2015-07-22-interact-with-ble-devices-on-the-web/web-bluetooth-flag.png" alt="Web Bluetooth Flag highlighted in chrome://flags"/>
 
 ### Available for Origin Trials
 
