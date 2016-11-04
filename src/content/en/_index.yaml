@@ -7,69 +7,142 @@ landing_page:
     content: gfXglzZkMnMmYyTURrVdYisraxO03w5_twQ-DO6QXC8
   custom_css_path: /web/styles/wf-root.css
 
-  header:
-    description: >
-      <h2 class="wf-header-title">Progressive Web Apps</h2>
-      <p>
-        Progressive Web Applications take advantage of new technologies to
-        bring the best of mobile sites and native applications to users.
-        They're reliable, fast, and engaging.
-      </p>
-
-
   rows:
+
+  - heading: Learn How to Develop the Next Generation of Applications for the Web
+    classname: devsite-landing-row-67
+    items:
+    - description: >
+        <p>
+          The average user visits more than 100 websites on their mobile
+          device every month, and expectations for speed and quality higher
+          than ever. These resources can help you supercharge your new or
+          existing project with the next generation of web technologies in
+          order to deliver fast, secure, and performant content to any screen.
+         </p>
+      image_path: images/hero-2x.png
+
   - classname: devsite-landing-row-no-image-background
     items:
-    - heading: Fundamentals
+    - heading: Web Fundamentals
       description: >
-        TODO
-      image_path: images/content-https-2x.jpg
-      buttons:
-      - label: Learn more
-        path: /web/fundamentals/
-
+        The fundamental knowledge you need to build delightful, modern,
+        responsive web experiences. 
+      icon:
+        path: /web/images/web-fundamentals-icon192x192.png
+      path: /web/events/
     - heading: Tools
       description: >
-        TODO
-      image_path: images/content-performance-2x.jpg
-      buttons:
-      - label: Learn more
-        path: /web/tools/
-
+        Discover tools that can help you kickstart your development and 
+        improve your workflow.
+      icon:
+        icon_name: build
+      path: /web/feedback/
     - heading: Updates
       description: >
-        TODO
-      image_path: images/content-responsive-2x.jpg
-      buttons:
-      - label: Learn more
-        path: /web/updates/
+        Stay up to date on new web platform features, changes to Chrome
+        and more.
+      icon:
+        icon_name: whatshot
+      path: /web/shows/
+
+
 
   - heading: A solution for everyone
     classname: devsite-landing-row-no-image-background
     items:
     - heading: Progressive Web Apps
       description: >
-        TODO
+        <p>
+          Progressive Web Applications take advantage of new technologies to
+          bring the best of mobile sites and native applications to users.
+          They are:
+        </p>
+        <ul class="checkmarks">
+          <li>
+            <b>Reliable</b> - Load instantly and never show the downasaur,
+            even in uncertain network conditions.
+          </li>
+          <li>
+            <b>Fast</b> - Respond quickly to user interactions with silky
+            smooth animations and no janky scrolling.
+          </li>
+          <li>
+            <b>Engaging</b> - Feel like a natural app on the device, with an
+            immersive user experience.
+          </li>
+        </ul>
+      icon:
+        icon_name: devices_other
+      path: /web/progressive-web-apps/
+    - heading: Accelerated Mobile Pages
+      description: >
+        <p>
+          The Accelerated Mobile Pages project provides a new standard,
+          built on top of existing web technologies, to enable blazing-fast
+          page rendering and content delivery.
+        </p>
+        <ul class="checkmarks">
+          <li>
+            <b>Speed</b> - Pages load instantly which means more engagement.
+          </li>
+          <li>
+            <b>Openness</b> - It works everywhere, cross platform.
+          </li>
+          <li>
+            <b>Control</b> - It’s just HTML - you control how your content
+            looks and feels.
+          </li>
+        </ul>
+      icon:
+        icon_name: offline_bolt
+      path: https://www.ampproject.org/docs/get_started/create
+
+
+  - heading: Latest updates for Web Developers
+    items:
+    - description: >
+        <div class="feed hfeed" data-limit="2">
+          <a href="https://google-developers.appspot.com/web/updates/rss.xml"></a>
+          <article class="hentry">
+            <a class="link"><header></header></a>
+            <article class="entry-content" data-truncate="50w"></article>
+            <div>
+              <a class="link"><time class="updated published"></time></a>
+            </div>
+          </article>
+        </div>
+    - youtube_id: tntOCGkgt98
+
+  - heading: Follow best practices
+    classname: devsite-landing-row-no-image-background
+    items:
+    - heading: Move to HTTPS
+      description: >
+        HTTPS allows users to securely connect to your website or app. Set up
+        HTTPS to protect the integrity of your site, and the security of your
+        users.
       image_path: images/content-https-2x.jpg
       buttons:
       - label: Learn more
-        path: /web/progressive-web-apps/
+        path: /web/fundamentals/security/
 
-    - heading: Accelerated Mobile Pages
+    - heading: Optimize performance
       description: >
-        TODO
+        Users don’t have the patience to wait for sites that can’t deliver
+        content quickly. Learn testing techniques and best practices to ensure
+        that your sites and apps are optimized and performant.
       image_path: images/content-performance-2x.jpg
       buttons:
       - label: Learn more
-        path: https://www.ampproject.org/docs/get_started/create
+        path: /web/fundamentals/performance/
 
-    - heading: Build for Billions
+    - heading: Make it responsive
       description: >
-        TODO
-      image_path: images/content-performance-2x.jpg
+        Modern users live on phones, tablets and laptops; your apps and
+        websites should do the same. Learn how to structure and code your
+        content to look great on screens of any size.
+      image_path: images/content-responsive-2x.jpg
       buttons:
       - label: Learn more
-        path: /web/billions/
-
-  - heading: Get involved
-    classname: devsite-landing-row-no-image-background
+        path: /web/fundamentals/design-and-ui/responsive/
