@@ -89,7 +89,7 @@ Large app install interstitials (e.g., full-page promotions that hide content
 and prompt users to install an app) annoy users and make it difficult to
 perform tasks. On top of annoying users, sites that use app install interstitials
 fail the
-[Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/){: .external },
+[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly){: .external },
 which may negatively impact their search rankings.
 
 <div class="attempt-left">
@@ -369,7 +369,7 @@ to apply different stylings for different screens. Don’t create content that
 only displays well at a particular
 [viewport width](/web/fundamentals/design-and-ui/responsive/#set-the-viewport).
 Sites that force users to horizontally scroll fail the
-[Google Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/){: .external },
+[Google Mobile-Friendly Test](https://search.google.com/search-console/mobile-friendly){: .external },
 which may negatively impact their search rankings.
 
 ### Make product images expandable
