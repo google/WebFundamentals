@@ -89,8 +89,11 @@ def parseIndexYamlItems(yamlItems):
         item += '</a>'
 
     if 'image_path' in yamlItem:
+      imgClass = 'devsite-landing-row-item-image'
+      if 'image_left' in yamlItem:
+        imgClass += ' devsite-landing-row-item-image-left'
       item += '<img src="' + yamlItem['image_path'] + '" '
-      item += 'class="devsite-landing-row-item-image">'
+      item += 'class="' + imgClass + '">'
     elif not 'youtube_id' in yamlItem:
       itemClasses.append('devsite-landing-row-item-no-image')
 
@@ -151,8 +154,22 @@ def generateYaml(lang, requestPath, rawYaml):
     customCss += page['custom_css_path']
     customCss += '">'
   if 'header' in page:
+    header = '<div class="devsite-collapsible-section">'
+    header += '<div class="devsite-header-background devsite-full-site-width">'
+    header += '<div class="devsite-product-id-row devsite-full-site-width">'
+    
     if 'description' in page['header']:
-      header = page['header']['description']
+      header += '<div class="devsite-product-description-row">'
+      header += '<div class="devsite-product-description">'
+      header += page['header']['description']
+      header += '</div></div>'
+    if 'buttons' in page['header']:
+      header += '<div class="devsite-product-button-row">'
+      for button in page['header']['buttons']:
+        header += '<a class="button" href="'
+        header += button['path'] + '">' + button['label'] + '</a>'
+      header += '</div>'
+    header += '</div></div></div>'
     if 'name' in page['header']:
       title = page['header']['name']
   for row in rows:

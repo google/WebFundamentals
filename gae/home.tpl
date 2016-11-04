@@ -74,7 +74,7 @@
             </div>
           </div>
         </div>
-          {{ header }}
+        {% autoescape off %}{{ header }}{% endautoescape %}
       </header>
       <div id="gc-wrapper">
         <div class="devsite-main-content clearfix">
