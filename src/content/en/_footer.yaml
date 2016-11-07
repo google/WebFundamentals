@@ -21,32 +21,36 @@ footer:
     description: Attend a developer event and get hacking
     icon_name: event
     path: /web/events/
+
 - linkboxes:
-  - name: Related Resources
+  - name: Contribute to WebFundamentals
+    icon_name: track_changes
+    contents:
+    - label: Submit Feedback
+      path: https://github.com/google/WebFundamentals/issues
+    - label: View Page Source
+      path: https://github.com/google/WebFundamentals
+
+  - name: Learn
     icon_name: link
     contents:
+    - label: Progressive Web Apps
+      path: /web/progressive-web-apps/
+    - label: Building for Billions
+      path: /web/billions/
+    - label: Code Labs
+      path: https://codelabs.developers.google.com/?cat=Web
+    - label: Learn with Udacity
+      path: /web/shows/udacity/
+
+  - name: Related Links
+    icon_name: code
+    contents:
+    - label: Developer Feedback
+      path: /web/feedback/
+    - label: Chrome Extension Docs
+      path: https://developers.chrome.com/extensions/api_index
     - title: Chrome DevTools
       path: /web/tools/chrome-devtools/
-    - title: Chrome Extension Docs
-      path: https://developers.chrome.com/extensions/api_index
-    - title: Chromium Issue Tracker
-      path: https://crbug.com/
-    - title: Code Labs
-      path: https://codelabs.developers.google.com/?cat=Web
-    - title: Building for Billions
-      path: /web/billions/
-    - title: Physical Web
+    - label: Physical Web
       path: https://google.github.io/physical-web/
-  - name: Learn with Udacity
-    icon_name: school
-    contents:
-    - title: Offline web applications
-      path: https://www.udacity.com/courses/ud899
-    - title: Web Tooling and Automation
-      path: https://www.udacity.com/courses/ud892
-    - title: Browser Rendering Optimization
-      path: https://www.udacity.com/courses/ud860
-    - title: Website Performance Optimization
-      path: https://www.udacity.com/courses/ud884
-    - title: Responsive Web Design Fundamentals
-      path: https://www.udacity.com/courses/ud893
