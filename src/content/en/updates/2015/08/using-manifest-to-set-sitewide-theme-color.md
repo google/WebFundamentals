@@ -53,7 +53,7 @@ and add it to your home screen. Or look at the <a href="https://airhorner.com/ma
 ### FAQ
 
 * **Does this apply if my site is not launched from the home screen?** <br>
-  No.
+  Yes.
 * **Will it ever apply to my entire site, say when they user is just browsing?** <br>
   Unlikely at the moment, to do that it would mean that the browser would have to download the manifest
   a lot more frequently and currently it is low priority asset.  This is intended to be parsed when 
