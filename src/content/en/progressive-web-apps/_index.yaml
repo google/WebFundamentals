@@ -169,6 +169,11 @@ landing_page:
       - description: >
           <ul>
             <li>
+              <a href="checklist">Progressive Web App Checklist</a><br>
+              This checklist breaks down all the things we think it takes to
+              be a Progressive Web App.
+            </li>
+            <li>
               <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcIAWWNR_Q6eLPhsyx6VvYjVb">
                 Progressive Web App Dev Summit Videos
               </a><br>Videos and behind the scenes insight from the first ever PWA summit.
