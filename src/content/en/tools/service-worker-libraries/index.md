@@ -11,6 +11,11 @@ Use our [service worker](/web/fundamentals/getting-started/primers/service-worke
 libraries to simplify your development by eliminating service worker boilerplate
 code.
 
+<figure class="attempt-right">
+  <img src="/web/tools/images/tools-landing-page.gif">
+  <figcaption>Overview of Service Worker Libraries</figcaption>
+</figure>
+
 **sw-precache&mdash;**Integrates with your build process to generate a service
 worker that precaches static assets such as, for example, an Application
 Shell.
@@ -21,12 +26,7 @@ content, API calls and third-party resources as easily as writing a README.
 **sw-offline-google-analytics&mdash;**Temporarily hold and retry analytics
 requests to avoid losing them to network disconnections.
 
-<div>
-  <figure>
-    <img src="/web/tools/images/tools-landing-page.gif">
-    <figcaption>Overview of Service Worker Libraries</figcaption>
-  </figure>
-</div>
+<div class="clearfix"></div>
 
 ## Why use service worker libraries?
 
