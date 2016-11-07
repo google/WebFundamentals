@@ -3,16 +3,9 @@ book_path: /web/tools/_book.yaml
 description: Service Worker Libraries.
 
 {# wf_published_on: 2015-01-01 #}
-{# wf_updated_on: 2016-11-03 #}
+{# wf_updated_on: 2016-11-07 #}
 
 # Service Worker Libraries {: .page-title }
-
-<div class="attempt-right">
-  <figure>
-    <img src="/web/tools/images/tools-landing-page.gif" width="80%">
-    <figcaption>Overview of Service Worker Libraries</figcaption>
-  </figure>
-</div>
 
 Use our [service worker](/web/fundamentals/getting-started/primers/service-workers)
 libraries to simplify your development by eliminating service worker boilerplate
@@ -27,6 +20,13 @@ content, API calls and third-party resources as easily as writing a README.
 
 **sw-offline-google-analytics&mdash;**Temporarily hold and retry analytics
 requests to avoid losing them to network disconnections.
+
+<div>
+  <figure>
+    <img src="/web/tools/images/tools-landing-page.gif">
+    <figcaption>Overview of Service Worker Libraries</figcaption>
+  </figure>
+</div>
 
 ## Why use service worker libraries?
 
