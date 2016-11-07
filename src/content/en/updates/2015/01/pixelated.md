@@ -64,13 +64,13 @@ A great use-case is games, you frequently have to scale up the canvas to make it
 If you are building an airline ticketing tool, or an app that displays [QR codes](https://twitter.com/andreasbovens/status/556696829421953024) then frequently the user will want it to be full screen so that it is easier to scan, so controlling the image-rendering is critical.
 
 <figure style="text-align: center;">
-<img src="https://goo.gl/nWBBg.qr"
+<img src="https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=https://goo.gl/nWBBg"
     width="280" height="280">
     <figcaption>Default Smoothing</figcaption>
 </figure>
 
 <figure style="text-align: center;">
-<img src="https://goo.gl/nWBBg.qr"
+<img src="https://chart.googleapis.com/chart?cht=qr&chs=150x150&choe=UTF-8&chld=H&chl=https://goo.gl/nWBBg"
     style="image-rendering: pixelated;"
     width="280" height="280">
     <figcaption>Preserving pixelation (only visible in Chrome M41+ or Opera 26+)</figcaption>
