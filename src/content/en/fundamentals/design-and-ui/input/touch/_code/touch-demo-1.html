@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
-    <style>
-      body {
-        margin: 2em;
-      }
-    </style>
+    <!-- // [TEMPLATE header_full] -->
 
     <!-- IE Specific to remove tap highlight -->
     <meta name="msapplication-tap-highlight" content="no">
@@ -75,9 +65,9 @@
 
         z-index: 2;
 
+        -ms-touch-action: none;
         /* // [START touch-action-example] */
         /* Pass all touches to javascript */
-        -ms-touch-action: none;
         touch-action: none;
         /* // [END touch-action-example] */
       }
@@ -182,14 +172,14 @@
       })();
 
       /* // [START pointereventsupport] */
-      var pointerDownName = 'MSPointerDown';
-      var pointerUpName = 'MSPointerUp';
-      var pointerMoveName = 'MSPointerMove';
+      var pointerDownName = 'pointerdown';
+      var pointerUpName = 'pointerup';
+      var pointerMoveName = 'pointermove';
 
-      if(window.PointerEvent) {
-        pointerDownName = 'pointerdown';
-        pointerUpName = 'pointerup';
-        pointerMoveName = 'pointermove';
+      if(window.navigator.msPointerEnabled) {
+        pointerDownName = 'MSPointerDown';
+        pointerUpName = 'MSPointerUp';
+        pointerMoveName = 'MSPointerMove';
       }
 
       // Simple way to check if some form of pointerevents is enabled or not
@@ -208,7 +198,7 @@
         var STATE_RIGHT_SIDE = 3;
 
         var swipeFrontElement = element.querySelector('.swipe-front');
-        var isAnimating = false;
+        var rafPending = false;
         var initialTouchPos = null;
         var lastTouchPos = null;
         var currentXPosition = 0;
@@ -236,16 +226,9 @@
           }
 
           // Add the move and end listeners
-          if (window.PointerEventsSupport) {
-            // Pointer events are supported.
-            document.addEventListener(pointerMoveName, this.handleGestureMove, true);
-            document.addEventListener(pointerUpName, this.handleGestureEnd, true);
+          if (window.PointerEvent) {
+            evt.target.setPointerCapture(evt.pointerId);
           } else {
-            // Add Touch Listeners
-            document.addEventListener('touchmove', this.handleGestureMove, true);
-            document.addEventListener('touchend', this.handleGestureEnd, true);
-            document.addEventListener('touchcancel', this.handleGestureEnd, true);
-
             // Add Mouse Listeners
             document.addEventListener('mousemove', this.handleGestureMove, true);
             document.addEventListener('mouseup', this.handleGestureEnd, true);
@@ -258,19 +241,26 @@
         /* // [END handle-start-gesture] */
 
         // Handle move gestures
+        //
+        /* // [START handle-move] */
         this.handleGestureMove = function (evt) {
           evt.preventDefault();
 
-          lastTouchPos = getGesturePointFromEvent(evt);
-
-          if(isAnimating) {
+          if(!initialTouchPos) {
             return;
           }
 
-          isAnimating = true;
+          lastTouchPos = getGesturePointFromEvent(evt);
+
+          if(rafPending) {
+            return;
+          }
+
+          rafPending = true;
 
           window.requestAnimFrame(onAnimFrame);
         }.bind(this);
+        /* // [END handle-move] */
 
         /* // [START handle-end-gesture] */
         // Handle end gestures
@@ -281,25 +271,20 @@
             return;
           }
 
-          isAnimating = false;
+          rafPending = false;
 
           // Remove Event Listeners
-          if (window.PointerEventsSupport) {
-            // Remove Pointer Event Listeners
-            document.removeEventListener(pointerMoveName, this.handleGestureMove, true);
-            document.removeEventListener(pointerUpName, this.handleGestureEnd, true);
+          if (window.PointerEvent) {
+            evt.target.releasePointerCapture(evt.pointerId);
           } else {
-            // Remove Touch Listeners
-            document.removeEventListener('touchmove', this.handleGestureMove, true);
-            document.removeEventListener('touchend', this.handleGestureEnd, true);
-            document.removeEventListener('touchcancel', this.handleGestureEnd, true);
-
             // Remove Mouse Listeners
             document.removeEventListener('mousemove', this.handleGestureMove, true);
             document.removeEventListener('mouseup', this.handleGestureEnd, true);
           }
 
           updateSwipeRestPosition();
+
+          initialTouchPos = null;
         }.bind(this);
         /* // [END handle-end-gesture] */
 
@@ -362,7 +347,6 @@
           var point = {};
 
           if(evt.targetTouches) {
-            console.log(evt.targetTouches[0]);
             point.x = evt.targetTouches[0].clientX;
             point.y = evt.targetTouches[0].clientY;
           } else {
@@ -374,8 +358,9 @@
           return point;
         }
 
+        /* // [START on-anim-frame] */
         function onAnimFrame() {
-          if(!isAnimating) {
+          if(!rafPending) {
             return;
           }
 
@@ -383,21 +368,29 @@
 
           var newXTransform = (currentXPosition - differenceInX)+'px';
           var transformStyle = 'translateX('+newXTransform+')';
-          swipeFrontElement.style['-webkit-transform'] = transformStyle;
-          swipeFrontElement.style['-moz-transform'] = transformStyle;
+          swipeFrontElement.style.webkitTransform = transformStyle;
+          swipeFrontElement.style.MozTransform = transformStyle;
+          swipeFrontElement.style.msTransform = transformStyle;
           swipeFrontElement.style.transform = transformStyle;
 
-          isAnimating = false;
+          rafPending = false;
         }
+        /* // [END on-anim-frame] */
 
         /* // [START addlisteners] */
         // Check if pointer events are supported.
-        if (window.PointerEventsSupport) {
+        if (window.PointerEvent) {
           // Add Pointer Event Listener
-          swipeFrontElement.addEventListener(pointerDownName, this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('pointerdown', this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('pointermove', this.handleGestureMove, true);
+          swipeFrontElement.addEventListener('pointerup', this.handleGestureEnd, true);
+          swipeFrontElement.addEventListener('pointercancel', this.handleGestureEnd, true);
         } else {
           // Add Touch Listener
           swipeFrontElement.addEventListener('touchstart', this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('touchmove', this.handleGestureMove, true);
+          swipeFrontElement.addEventListener('touchup', this.handleGestureEnd, true);
+          swipeFrontElement.addEventListener('touchcancel', this.handleGestureEnd, true);
 
           // Add Mouse Listener
           swipeFrontElement.addEventListener('mousedown', this.handleGestureStart, true);
@@ -442,20 +435,6 @@
       }
     </script>
 
-    <script>
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.google-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-52746336-1');ga('send','pageview');
-  var isCompleted = {};
-  function sampleCompleted(sampleName){
-    if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
-      isCompleted[sampleName] = true;
-    }
-  }
-</script>
+    <!-- // [TEMPLATE footer] -->
   </body>
 </html>
