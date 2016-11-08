@@ -20,6 +20,18 @@ def slugify(str):
   slug = re.sub(r'[-]+', '-', slug)
   return slug
 
+def getFromMemCache(memcacheKey):
+  try:
+    result = memcache.get(memcacheKey)
+  except Exception as e:
+    result = None
+  return result
+
+def setMemCache(memcacheKey, value):
+  try:
+    memcache.set(memcacheKey, value)
+  except Exception as e:
+    pass
 
 def checkForRedirect(requestedPath, lang, useMemcache):
   # Reads the redirect files from the current directory and up the directory
@@ -321,72 +333,90 @@ def getIncludeCode(include_tag, lang='en'):
 
 def getAnnouncementBanner(lang='en'):
   # Returns the announcement banner
-  result = ''
-  projectFile = os.path.join(SOURCE_PATH, lang, '_project.yaml')
-  if not os.path.isfile(projectFile):
-    projectFile = os.path.join(SOURCE_PATH, 'en', '_project.yaml')
-  raw = open(projectFile, 'r').read().decode('utf8')
-  project = yaml.load(raw)
-  if 'announcement' in project:
-    startBanner = project['announcement']['start']
-    startBanner = datetime.strptime(startBanner, '%Y-%m-%dT%H:%M:%SZ')
-    endBanner = project['announcement']['end']
-    endBanner = datetime.strptime(endBanner, '%Y-%m-%dT%H:%M:%SZ')
-    if startBanner < datetime.now() < endBanner:
-      result = '<div class="devsite-banner devsite-banner-announcement">\n'
-      result += '<div class="devsite-banner-inner">\n'
-      result += project['announcement']['description']
-      result += '\n</div>\n'
-      result += '</div>'
-    else:
-      logging.warn('Announcement in _project.yaml expired: not shown')
+  memcacheKey = 'header-Announcement-' + lang
+  result = getFromMemCache(memcacheKey)
+  if result is None:
+    result = ''
+    projectFile = os.path.join(SOURCE_PATH, lang, '_project.yaml')
+    if not os.path.isfile(projectFile):
+      projectFile = os.path.join(SOURCE_PATH, 'en', '_project.yaml')
+    raw = open(projectFile, 'r').read().decode('utf8')
+    project = yaml.load(raw)
+    if 'announcement' in project:
+      startBanner = project['announcement']['start']
+      startBanner = datetime.strptime(startBanner, '%Y-%m-%dT%H:%M:%SZ')
+      endBanner = project['announcement']['end']
+      endBanner = datetime.strptime(endBanner, '%Y-%m-%dT%H:%M:%SZ')
+      if startBanner < datetime.now() < endBanner:
+        result = '<div class="devsite-banner devsite-banner-announcement">\n'
+        result += '<div class="devsite-banner-inner">\n'
+        result += project['announcement']['description']
+        result += '\n</div>\n'
+        result += '</div>'
+      else:
+        logging.warn('Announcement in _project.yaml expired: not shown')
+      setMemCache(memcacheKey, result)
   return result
 
 
 def getFooterPromo(lang='en'):
-  # Returns the announcement banner
-  result = ''
-  footerFile = os.path.join(SOURCE_PATH, lang, '_footer.yaml')
-  if not os.path.isfile(footerFile):
-    footerFile = os.path.join(SOURCE_PATH, 'en', '_footer.yaml')
-  raw = open(footerFile, 'r').read().decode('utf8')
-  footer = yaml.load(raw)
-  if 'promos' in footer['footer'][0]:
-    for promo in footer['footer'][0]['promos']:
-      result += '<li class="devsite-footer-promo">'
-      result += '<a href="'
-      result += promo['path']
-      result += '" class="devsite-footer-promo-title">'
-      if 'icon' in promo:
-        result += '<img class="devsite-footer-promo-icon" '
-        result += 'src="' + promo['icon'] + '">'
-      if 'icon_name' in promo:
-        result +='<div class="devsite-footer-promo-icon material-icons">'
-        result += promo['icon_name'] + '</div>'
-      result += promo['title']
-      result += '</a><div class="devsite-footer-promo-description">'
-      result += promo['description']
-      result += '</div></li>\n'
+  """Gets the promo footer. 
+
+  Args:
+      lang: The language to pick from.
+
+  Returns:
+      An HTML string with the appropriate footer.
+  """
+  memcacheKey = 'footerLinkPromo-' + lang
+  result = getFromMemCache(memcacheKey)
+  if result is None:
+    result = ''
+    footer = yaml.load(readFile('_footer.yaml', lang))
+    if 'promos' in footer['footer'][0]:
+      for promo in footer['footer'][0]['promos']:
+        result += '<li class="devsite-footer-promo">'
+        result += '<a href="' + promo['path']
+        result += '" class="devsite-footer-promo-title">'
+        if 'icon' in promo:
+          result += '<img class="devsite-footer-promo-icon" '
+          result += 'src="' + promo['icon'] + '">'
+        if 'icon_name' in promo:
+          result +='<div class="devsite-footer-promo-icon material-icons">'
+          result += promo['icon_name'] + '</div>'
+        result += promo['title']
+        result += '</a><div class="devsite-footer-promo-description">'
+        result += promo['description']
+        result += '</div></li>\n'
+      setMemCache(memcacheKey, result)
   return result
 
 
 def getFooterLinkBox(lang='en'):
-  result = ''
-  footerFile = os.path.join(SOURCE_PATH, lang, '_footer.yaml')
-  if not os.path.isfile(footerFile):
-    footerFile = os.path.join(SOURCE_PATH, 'en', '_footer.yaml')
-  raw = open(footerFile, 'r').read().decode('utf8')
-  footer = yaml.load(raw)
-  if 'linkboxes' in footer['footer'][1]:
-    for linkBox in footer['footer'][1]['linkboxes']:
-      result += '<li class="devsite-footer-linkbox">'
-      result += '<h3 class="devsite-footer-linkbox-heading">'
-      result += linkBox['name'] + '</h3>'
-      result += '<ul class="devsite-footer-linkbox-list">'
-      for linkItem in linkBox['contents']:
-        result += '<li class="devsite-footer-linkbox-item">'
-        result += '<a href="' + linkItem['path'] + '">'
-        result += linkItem['title'] + '</a></li>'
-      result += '</ul>'
-      result += '</li>'
+  """Gets the promo boxes. 
+
+  Args:
+      lang: The language to pick from.
+
+  Returns:
+      An HTML string with the appropriate footer.
+  """
+  memcacheKey = 'footerLinkBoxes-' + lang
+  result = getFromMemCache(memcacheKey)
+  if result is None:
+    result = ''
+    footer = yaml.load(readFile('_footer.yaml', lang))
+    if 'linkboxes' in footer['footer'][1]:
+      for linkBox in footer['footer'][1]['linkboxes']:
+        result += '<li class="devsite-footer-linkbox">'
+        result += '<h3 class="devsite-footer-linkbox-heading">'
+        result += linkBox['name'] + '</h3>'
+        result += '<ul class="devsite-footer-linkbox-list">'
+        for linkItem in linkBox['contents']:
+          result += '<li class="devsite-footer-linkbox-item">'
+          result += '<a href="' + linkItem['path'] + '">'
+          result += linkItem['title'] + '</a></li>'
+        result += '</ul>'
+        result += '</li>'
+      setMemCache(memcacheKey, result)
   return result

@@ -118,7 +118,6 @@
       elem.querySelector('article.hentry').style.display = 'block';
       elem.querySelector('header').textContent = placeholderTitle;
       elem.querySelector('.entry-content').innerHTML = placeholderText;
-      elem.querySelector('.vcard').innerHTML = 'Jane Doe';
       elem.querySelector('.published').textContent = 'January 1st, 2016';
     });
   }
