@@ -1,14 +1,14 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: In this codelab, you will learn how to enable push messaging and notifications for web apps and sites.
+description: In this codelab you'll how to add push notifications to your web app.
 
-{# wf_updated_on: 2016-10-25T18:02:54Z #}
+{# wf_updated_on: 2016-11-08T16:08:06Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
-# Enable Push Notifications for your Web App {: .page-title }
+# Adding Push Notifications to a Web App {: .page-title }
 
-{% include "web/_shared/contributors/samdutton.html" %}
+{% include "web/_shared/contributors/mattgaunt.html" %}
 
 
 
@@ -16,579 +16,646 @@ description: In this codelab, you will learn how to enable push messaging and no
 
 
 
-![68c4c0bef9c548cd.png](img/68c4c0bef9c548cd.png)
 
-In this codelab, you'll learn how to add Push Notifications to web applications.
-
-This will enable you to re-engage users with breaking news and information about new content. 
-
-You'll also learn the basics of Service Workers.
+Push messaging provides a simple and effective way to re-engage with your users and in this code lab you'll learn how to add push notifications to your web app.
 
 ### What you'll learn
 
-* Service Worker basics: installation and event handling
-* How to set up a Firebase Cloud Messaging (FCM) account
-* How to add a web manifest
-* Techniques for requesting FCM to send a notification to a web client
-* Notification display
-* Notification click handling
+* How to subscribe and unsubscribe a user for push messaging
+* How to handle incoming push messages
+* How to display a notification
+* How to respond to notification clicks
 
 ### What you'll need
 
-* Chrome 42 or above
-* A basic understanding of  [git](http://git-scm.com/), and  [Chrome DevTools](https://developer.chrome.com/devtools)
-* Experience of  [Promises](/web/fundamentals/getting-started/primers/promises) and  [Service Worker](/web/fundamentals/getting-started/primers/service-workers) would also be useful, but is not crucial 
-* The sample code
+* Chrome 52 or above
+*  [Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb), or your own web server of choice
 * A text editor
-* A terminal window to run command line tools
-* Python or a local web server stack (see below)
+* Basic knowledge of HTML, CSS, JavaScript, and Chrome DevTools
+* The sample code, see Get setup
 
 
-## Get the sample code
+## Get Setup
 
 
 
-You can either download all the sample code to your computer: 
 
-[Link](https://github.com/GoogleChrome/push-notifications/archive/master.zip)
+### Download the sample code
 
-...or clone the GitHub repository from the command line:
+You can get the sample code for this code by either downloading the zip here:
 
-    $ git clone https://github.com/GoogleChrome/push-notifications.git
+[Download source code](https://github.com/googlechrome/push-notifications/archive/master.zip)
 
-This will create a __push-notifications__ directory containing:
+or by cloning this git repo:
 
-* A __completed __directory containing completed code for each step.
-* An __app__ directory where you will do your work.
+`git clone https://github.com/GoogleChrome/push-notifications.git`
 
-
-## Get started
-
-
+If you downloaded the source as a zip, unpacking it should give you a root folder `push-notifications-master`.
 
 ### Install and verify web server
 
 While you're free to use your own web server, this codelab is designed to work well with the Chrome Web Server. If you don't have that app installed yet, you can install it from the Chrome Web Store.
 
-[Link](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en)
+[Install Web Server for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)
 
-![7f4505211b238ae9.png](img/7f4505211b238ae9.png)
+After installing the Web Server for Chrome app, click on the Apps shortcut on the bookmarks bar:
 
-After installing the __Web Server for Chrome__ app, click on the Chrome Apps shortcut from the bookmarks bar, a New Tab page, or from the App Launcher: 
+![a80b29d5e878df22.png](img/a80b29d5e878df22.png)
 
-![bab91398f0bf59f5.png](img/bab91398f0bf59f5.png)
+In the ensuing window, click on the Web Server icon:
 
-Click on the Web Server icon: 
+![dc07bbc9fcfe7c5b.png](img/dc07bbc9fcfe7c5b.png)
 
-![60da10ee57cbb190.png](img/60da10ee57cbb190.png)
-
-Next, you'll see this dialog, which allows you to configure your local web server:
+You'll see this dialog next, which allows you to configure your local web server:
 
 ![433870360ad308d4.png](img/433870360ad308d4.png)
 
-Click the __CHOOSE FOLDER__ button, and select the __app__ folder you just downloaded. This will enable you to view your work in progress in Chrome via the URL highlighted in the Web Server dialog in the __Web Server URL(s)__ section.
+Click the __choose folder__ button, and select the __`app`__ folder. This will enable you to serve your work in progress via the URL highlighted in the web server dialog (in the __Web Server URL(s)__ section).
 
-Under __Options__, check the box next to __Automatically show index.html__ as shown below:
+Under Options, check the box next to "__Automatically show index.html__", as shown below:
 
-![8937a38abc57e3.png](img/8937a38abc57e3.png)
+![39b4e0371e9703e6.png](img/39b4e0371e9703e6.png)
 
-Then stop and restart the server by sliding the toggle labeled __Web Server: STARTED__ to the left and then back to the right.
+Then stop and restart the server by sliding the toggle labeled "Web Server: STARTED" to the left and then back to the right.
 
 ![daefd30e8a290df5.png](img/daefd30e8a290df5.png)
 
-Now visit your app site in your web browser by clicking on the highlighted Web Server URL. You should see a page that looks like this, which corresponds to __app/index.html__:
+Now visit your site in your web browser (by clicking on the highlighted Web Server URL) and you should see a page that looks like this:
 
-![eb3d06482c41fd25.png](img/eb3d06482c41fd25.png)
+![49b343a07e2c92d.png](img/49b343a07e2c92d.png)
+
+### Always update the service worker
+
+During development it's helpful to ensure your service worker is always up to date and has the latest changes.
+
+To set this up in Chrome, open DevTools (Right Click > Inspect) and go to the __Application__ panel, click the __Service Workers__ tab and check the __Update on Reload__ checkbox. When this checkbox enabled the service worker is forcibly updated every time the page reloads.
+
+![d670cb813f3a7575.png](img/d670cb813f3a7575.png)
 
 
-## Get started with Service Worker
+## Register a Service Worker
 
 
 
-### Add a Service Worker
 
-In your __app__ directory, notice that you have an empty file named __sw.js.__ You'll add code to this later. 
+In your __app__ directory, notice that you have an empty file named __sw.js__. This file will be your service worker, for now it can stay empty and we'll be adding code to it later.
 
-### Register and install a Service Worker
+First we need to register this file as our Service Worker.
 
-In this step you add code to the __js/main.js__ JavaScript file linked to in __app/index.html__. This in turn gives access to the Service Worker script. 
+Our __app/index.html__ page loads __scripts/main.js__ and it's in this JavaScript file that we'll register our service worker.
 
-Add the following code to __js/main.js__:
+Add the following code to __scripts/main.js__:
 
-    if ('serviceWorker' in navigator) {
-      console.log('Service Worker is supported');
-      navigator.serviceWorker.register('sw.js').then(function() {
-        return navigator.serviceWorker.ready;
-      }).then(function(reg) {
-        console.log('Service Worker is ready :^)', reg);
-          // TODO
-      }).catch(function(error) {
-        console.log('Service Worker error :^(', error);
-      });
+```
+if ('serviceWorker' in navigator && 'PushManager' in window) {
+  console.log('Service Worker and Push is supported');
+
+  navigator.serviceWorker.register('sw.js')
+  .then(function(swReg) {
+    console.log('Service Worker is registered', swReg);
+
+    swRegistration = swReg;
+  })
+  .catch(function(error) {
+    console.error('Service Worker Error', error);
+  });
+} else {
+  console.warn('Push messaging is not supported');
+  pushButton.textContent = 'Push Not Supported';
+}
+```
+
+This code checks if service workers and push messaging is supported by the current browser and if it is, it registers our sw.js file.
+
+#### Try it out
+
+Check your changes by opening the URL __127.0.0.1:8887__ in the browser.
+
+Open Chrome DevTools to check the console for ‘Service Worker is registered', like so:
+
+![d712c8726928ca4.png](img/d712c8726928ca4.png)
+
+### Get Application Server Keys
+
+To work with this code lab you need to generate some application server keys which we can do with this companion site:  [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)
+
+Here you can generate a Public and Private key pair.
+
+![a1304b99e7b981dd.png](img/a1304b99e7b981dd.png)
+
+Copy your public key into __scripts/main.js__ replacing the ‘<Your Public Key>' value:
+
+```
+const applicationServerPublicKey = '<Your Public Key>';
+```
+
+__Note:__ You should never put your private key in your web app!
+
+
+## Initialise State
+
+
+
+
+At the moment the web app's button is disabled and can't be clicked. This is because it's good practice to disable the push button by default and enable it once you know push is supported and can know if the user is currently subscribed or not.
+
+Let's create two functions in __scripts/main.js__, one called __initialiseUI__, which will check if the user is currently subscribed, and one called __updateBtn__ which will enable our button and change the text if the user is subscribed or not.
+
+We want our __initialiseUI()__ function to look like this:
+
+```
+function initialiseUI() {
+  // Set the initial subscription value
+  swRegistration.pushManager.getSubscription()
+  .then(function(subscription) {
+    isSubscribed = !(subscription === null);
+
+    if (isSubscribed) {
+      console.log('User IS subscribed.');
+    } else {
+      console.log('User is NOT subscribed.');
     }
 
-This code checks if Service Worker is supported by your browser, then registers and installs the Service Worker defined in __sw.js. __— which is currently empty!
+    updateBtn();
+  });
+}
+```
 
-### Try it out
+Our new method uses the swRegistration from the previous step and calls __getSubscription()__ on it's pushManager. __getSubscription()__ is a method that returns a promise that resolves with the current subscription if there is one, otherwise it'll return null. With this we can check if the user is already subscribed or not, set some state and then call __updateBtn()__ so the button can be enabled with some helpful text.
 
-Check your changes by opening the URL __127.0.0.1:8887__ in the browser.  
+Add the following code to implement the __updateBtn()__ function.
 
-Open Chrome DevTools to check the console. The page should look like this:
+```
+function updateBtn() {
+  if (isSubscribed) {
+    pushButton.textContent = 'Disable Push Messaging';
+  } else {
+    pushButton.textContent = 'Enable Push Messaging';
+  }
 
-![d180bb63d3057b35.png](img/d180bb63d3057b35.png)
+  pushButton.disabled = false;
+}
+```
 
-### Try out serviceworker-internals
+This function simply changes the text depending on the whether the user is subscribed or not and then enables the button.
 
-The diagnostic page __chrome://serviceworker-internals__ is a good place to check that your Service Workers are working:
+The last thing to do is call __initialiseUI()__ when our service worker is registered.
 
-![fb7c89320959f9fd.png](img/fb7c89320959f9fd.png) 
+```
+navigator.serviceWorker.register('sw.js')
+.then(function(swReg) {
+  console.log('Service Worker is registered', swReg);
 
-5. Add event listeners to your Service Worker
+  swRegistration = swReg;
+  initialiseUI();
+})
+```
 
-Add the following code to __sw.js__:
+#### Try it out
 
-    console.log('Started', self);
-    
-    self.addEventListener('install', function(event) {
-      self.skipWaiting();
-      console.log('Installed', event);
-    });
-    
-    self.addEventListener('activate', function(event) {
-      console.log('Activated', event);
-    });
-    
-    self.addEventListener('push', function(event) {
-      console.log('Push message received', event);
-      // TODO
-    });
+Open up your web app and you should see the ‘Enable Push Messaging' button is now enabled (you can click it) and you should see ‘User is NOT subscribed.' in the console.
 
+![b9787463acb7e3fb.png](img/b9787463acb7e3fb.png)
 
-
-In a Service Worker, `self`__ __refers to the `ServiceWorkerGlobalScope` object: the Service Worker itself.
-
-
-Click the __Inspect__ button on the chrome://serviceworker-internals page. You should see the following:
-
-![3c32ddccce1cc6cd.png](img/3c32ddccce1cc6cd.png)
+When we progress through the rest of the code lab you should see the button text change when the user subscribed / un-subscribed.
 
 
-## Make a project on the Firebase Developer Console
-
-
-
-Push notifications from a web app need a backend service to handle messaging. Chrome currently uses  [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM, formerly known as Google Cloud Messaging)  for this. Other browsers are free to use other services.
-
-For this step, you need to set up a project on the Firebase Developer Console. 
-
-1. Create a project
-
-From the  [Firebase Developers Console](https://console.firebase.google.com/) create a new project:
-
-![a4eac9ab79130343.png](img/a4eac9ab79130343.png)
-2. Once you've created your new project you need to go to the __Project Settings __page.
-
-![fe4510ccb62ff70.png](img/fe4510ccb62ff70.png)
-3. From the settings page, you need to click the __Cloud Messaging__ tab to view your FCM details, you'll need the Sender ID and Server Key later in this code lab.
-
-![3d271ced94f821ea.png](img/3d271ced94f821ea.png)
-
-
-Congratulations!
-
-You've now created a Firebase Cloud Messaging project. 
-
-
-## Add a manifest
+## Subscribe the user
 
 
 
 
-A manifest is a JSON file that provides information about your web app, including Push Notifications configuration.
+At the moment our ‘Enable Push Messaging' button doesn't do too much, so let's fix that.
 
-1. Create a manifest file
+Add a click listener to our button in the __initialiseUI()__ function, like so:
 
-At the top level of your __app __directory, create a file named __manifest.json __(you can give it any name you like). 
+```
+function initialiseUI() {
+  pushButton.addEventListener('click', function() {
+    pushButton.disabled = true;
+    if (isSubscribed) {
+      // TODO: Unsubscribe user
+    } else {
+      subscribeUser();
+    }
+  });
 
-Include the following code.The `gcm_sender_id`__ __value should be the Sender ID you for the project you created in the previous step:
+  // Set the initial subscription value
+  swRegistration.pushManager.getSubscription()
+  .then(function(subscription) {
+    isSubscribed = !(subscription === null);
 
-    {
-      "name": "Push Notifications codelab",
-      "gcm_sender_id": "447755010661"
+    updateSubscriptionOnServer(subscription);
+
+    if (isSubscribed) {
+      console.log('User IS subscribed.');
+    } else {
+      console.log('User is NOT subscribed.');
     }
 
-2. Tell the browser where to find the manifest for your web app 
+    updateBtn();
+  });
+}
+```
 
-Add the following to the head element in the __index.html __file you created previously:
+When the user clicks the push button, we first disable the button just to make sure the user can't click it a second time while we're subscribing to push as it can take some time.
 
-    <link rel="manifest" href="manifest.json">
+Then we call __subscribeUser()__ when we know the user isn't currently subscribed, so copy and paste the following code into __scripts/main.js__.
+
+```
+function subscribeUser() {
+  const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+  swRegistration.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey: applicationServerKey
+  })
+  .then(function(subscription) {
+    console.log('User is subscribed:', subscription);
+
+    updateSubscriptionOnServer(subscription);
+
+    isSubscribed = true;
+
+    updateBtn();
+  })
+  .catch(function(err) {
+    console.log('Failed to subscribe the user: ', err);
+    updateBtn();
+  });
+}
+```
+
+Lets step through what this code is doing and how it's subscribing the user for push messaging.
+
+First we take the application server's public key, which is base 64 URL safe encoded, and we convert it to a UInt8Array as this is the expected input of the subscribe call. We've already given you the function __urlB64ToUint8Array__ at the top of __scripts/main.js__.
+
+Once we've converted the value, we call the __subscribe()__ method on our service worker's pushManager, passing in our application server's public key and the value ‘userVisibleOnly: true'.
+
+```
+const applicationServerKey = urlB64ToUint8Array(applicationServerPublicKey);
+swRegistration.pushManager.subscribe({
+  userVisibleOnly: true,
+  applicationServerKey: applicationServerKey
+})
+```
+
+The __userVisibleOnly__ parameter is basically an admission that you will show a notification every time a push is sent. At the time of writing this value is required and must be true.
+
+Calling __subscribe()__ returns a promise which will resolve after the following steps:
+
+1. The user has granted permission to display notifications.
+2. The browser has sent a network request to a push service to get the details to generate a PushSubscription.
+
+The subscribe() promise will resolve with a PushSubscription if these steps were successful. If the user doesn't grant permission or if there is any problem subscribing the user, the promise will reject with an error. This gives us the following promise chain in our codelab:
+
+```
+swRegistration.pushManager.subscribe({
+  userVisibleOnly: true,
+  applicationServerKey: applicationServerKey
+})
+.then(function(subscription) {
+  console.log('User is subscribed:', subscription);
+
+  updateSubscriptionOnServer(subscription);
+
+  isSubscribed = true;
+
+  updateBtn();
+
+})
+.catch(function(err) {
+  console.log('Failed to subscribe the user: ', err);
+  updateBtn();
+});
+```
+
+With this, we get a subscription and treat the user as subscribed or we catch the error and print it to the console. In both scenarios we call updateBtn() to ensure the button is re-enabled and has the appropriate text.
+
+The method updateSubscriptionOnServer is a method where in a real application we would send our application to a backend, but for our codelab we are going to print the subscription in our UI which will help use later on. Add this method to __scripts/main.js__:
+
+```
+function updateSubscriptionOnServer(subscription) {
+  // TODO: Send subscription to application server
+
+  const subscriptionJson = document.querySelector('.js-subscription-json');
+  const subscriptionDetails =
+    document.querySelector('.js-subscription-details');
+
+  if (subscription) {
+    subscriptionJson.textContent = JSON.stringify(subscription);
+    subscriptionDetails.classList.remove('is-invisible');
+  } else {
+    subscriptionDetails.classList.add('is-invisible');
+  }
+}
+```
+
+#### Try it out
+
+If you go back to your web app and try clicking the button you should see a permission prompt like this:
+
+![5b8a7e9905f2237b.png](img/5b8a7e9905f2237b.png)
+
+If you grant the permission you should see the console print ‘User is subscribed: ‘ with the PushSubscription, the button's text will change to ‘Disable Push Messaging'  and you'll be able to view the subscription as JSON at the bottom of the page.
+
+![bfdc9f92e001934a.png](img/bfdc9f92e001934a.png)
 
 
-## Subscribe to Push Notifications
+## Handle Permission Denied
 
 
 
-1. Replace the TODO comment in __main.js__ so that it looks like this:
 
-    if ('serviceWorker' in navigator) {
-      console.log('Service Worker is supported');
-      navigator.serviceWorker.register('sw.js').then(function() {
-        return navigator.serviceWorker.ready;
-      }).then(function(reg) {
-        console.log('Service Worker is ready :^)', reg);
-        reg.pushManager.subscribe({userVisibleOnly: true}).then(function(sub) {
-          console.log('endpoint:', sub.endpoint);
-        });
-      }).catch(function(error) {
-        console.log('Service Worker error :^(', error);
-      });
+One thing that we haven't handled yet is what happens if the user blocks the permission request. This needs some unique consideration because if the user blocks the permission, our web app will not be able to re-show the permission prompt and will not be able to subscribe the user, so we need to at least disable a push button so the user knows it can't be used.
+
+The obvious place for us to handle this scenario is in the __updateBtn()__ function. All we need to do is check the Notification.permission value, like so:
+
+```
+function updateBtn() {
+  if (Notification.permission === 'denied') {
+    pushButton.textContent = 'Push Messaging Blocked.';
+    pushButton.disabled = true;
+    updateSubscriptionOnServer(null);
+    return;
+  }
+
+  if (isSubscribed) {
+    pushButton.textContent = 'Disable Push Messaging';
+  } else {
+    pushButton.textContent = 'Enable Push Messaging';
+  }
+
+  pushButton.disabled = false;
+}
+```
+
+We know that if the permission is ‘denied', then the user can't be subscribed and there is nothing more we can do, so disabling the button for good is the best approach.
+
+#### Try it out
+
+Since we've already granted permission for our web app from the previous step we need to click the ‘i' in a circle in the URL bar and change the notifications permission to ‘Use global default (Ask)'.
+
+![c69f7428408c5bbc.png](img/c69f7428408c5bbc.png)
+
+After you've changed this setting, refresh the page and click the ‘Enable Push Messaging' button and this time select ‘Block' on the permission dialog. The button text will now be ‘Push Messaging Blocked' and be disabled.
+
+![e36f921fa7598419.png](img/e36f921fa7598419.png)
+
+With this change we can now subscribe the user and we're taking care of the possible permission scenarios.
+
+
+## Handle a Push Event
+
+
+
+
+Before we cover how to send a push message from your backend, we need to consider what will actually happen when a subscribed user receives a push message.
+
+When we trigger a push message, the browser receives the push message, figures out what service worker the push is for before waking up that service worker and dispatching a push event. We need to listen for this event and show a notification as a result.
+
+Add the following code to your `sw.js` file:
+
+```
+self.addEventListener('push', function(event) {
+  console.log('[Service Worker] Push Received.');
+  console.log(`[Service Worker] Push had this data: "${event.data.text()}"`);
+
+  const title = 'Push Codelab';
+  const options = {
+    body: 'Yay it works.',
+    icon: 'images/icon.png',
+    badge: 'images/badge.png'
+  };
+
+  event.waitUntil(self.registration.showNotification(title, options));
+});
+```
+
+Let's step through this code. We are listening for push events in our service worker by adding an event listener to our service worker, which is this piece of code:
+
+```
+self.addEventListener(‘push', ...... );
+```
+
+Unless you've played with Web Workers before, ‘self' is probably new. ‘self' is referencing the service worker itself, so we are adding an event listener to our service worker.
+
+When a push message is received, our event listener will be fired, and we create a notification by calling showNotification() on our registration. showNotification() expects a title and we can given an options object. Here we are going to set a body message, icon and a badge  in the options (the badge is only used on Android at the time of writing).
+
+```
+const title = 'Push Codelab';
+const options = {
+  body: 'Yay it works.',
+  icon: 'images/icon.png',
+  badge: 'images/badge.png'
+};
+self.registration.showNotification(title, options);
+```
+
+The last thing to cover in our push event is event.waitUntil(). This method takes a promise and the browser will keep your service worker alive and running until the promise passed in has resolved.
+
+To make the code above a little easier to understand we can re-write it like so:
+
+```
+const notificationPromise = self.registration.showNotification(title, options);
+event.waitUntil(notificationPromise);
+```
+
+Now that we've stepped through the push event, let's test out a push event.
+
+#### Try it out
+
+With our push event in the service worker we can test what happens when a message is received by triggering a "fake push event" using DevTools.
+
+In your web app, subscribe to push messaging, making sure you have ‘User IS subscribed.' in your console, then go to the __Application__ panel in DevTools and under the "Service Workers" tab click on the __'Push'__ link under your service worker.
+
+![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
+
+Once you've clicked it you should see a notification like this:
+
+![eee7f9133a97c1c4.png](img/eee7f9133a97c1c4.png)
+
+
+## Notification click
+
+
+
+
+If you click on one these notifications you'll notice nothing happens. We can handle notification clicks by listening for `notificationclick` events in your service worker.
+
+Start by adding a `notificationclick` listener  in sw.js like so:
+
+```
+self.addEventListener('notificationclick', function(event) {
+  console.log('[Service Worker] Notification click Received.');
+
+  event.notification.close();
+
+  event.waitUntil(
+    clients.openWindow('https://developers.google.com/web/')
+  );
+});
+```
+
+When the user clicks on the notification, the `notificationclick` event listener will be called.
+
+In this code lab we first close the notification that was clicked with:
+
+```
+event.notification.close();
+```
+
+Then we open a new window / tab loading the url ‘https://developers.google.com/web/' , feel free to change this :)
+
+```
+clients.openWindow('https://developers.google.com/web/')
+```
+
+We are calling event.waitUntil() again to ensure the browser doesn't terminate our service worker before our new window has been displayed.
+
+#### Try it out
+
+Try triggering a push message in DevTools again and this click on the notification. You'll now see the notification close and open a new tab.
+
+
+## Sending push messages
+
+
+
+
+We've seen that our web app is capable of showing a notification using DevTools and looked at how to close the notification of a click, the next step is to send an actual push message.
+
+Normally the process for this would be sending a subscription from a web page to a backend and the backend would then trigger a push message by making an API call to the endpoint in the subscription.
+
+This is out of scope for this codelab, but you can use the companion site ( [https://web-push-codelab.appspot.com/](https://web-push-codelab.appspot.com/)) for this code lab to trigger an actual push message. Copy and paste the subscription at the bottom of your page:
+
+![cb84e05044ad029f.png](img/cb84e05044ad029f.png)
+
+Then paste this into the companion site in the ‘Subscription to Send To' text area:
+
+![e320ddd1b66682e6.png](img/e320ddd1b66682e6.png)
+
+Then under ‘Text to Send' you can add any string you want to send with the push message and finally click the ‘Send Push Message' button.
+
+![3c5c0d5d1c3deda4.png](img/3c5c0d5d1c3deda4.png)
+
+You should then receive a push message and the text you included will be printed to the console.
+
+![fdedaa6d10e2f43e.png](img/fdedaa6d10e2f43e.png)
+
+This should give you a chance to test out sending and receiving data and manipulate notifications as a result.
+
+The companion app is actually just a node server that is using the  [web-push library](https://github.com/web-push-libs/web-push) to send messages. It's worthwhile checking out the  [web-push-libs org on Github](https://github.com/web-push-libs/) to see what libraries are available to send push messages for you (this handles a lot of the nitty gritty details to trigger push messages).
+
+
+## Unsubscribe the user
+
+
+
+
+The one thing we are missing is the ability to unsubscribe the user from push. To do this we need to call `unsubscribe()` on a `PushSubscription`.
+
+Back in our scripts/main.js file, change the `pushButton`'s click listener in `initialiseUI`() to the following:
+
+```
+pushButton.addEventListener('click', function() {
+  pushButton.disabled = true;
+  if (isSubscribed) {
+    unsubscribeUser();
+  } else {
+    subscribeUser();
+  }
+});
+```
+
+Notice we are now going to call a new function `unsubscribeUser()`. In this method we'll get the current subscription and called unsubscribe on it. Add the following code to __scripts/main.js__:
+
+```
+function unsubscribeUser() {
+  swRegistration.pushManager.getSubscription()
+  .then(function(subscription) {
+    if (subscription) {
+      return subscription.unsubscribe();
     }
+  })
+  .catch(function(error) {
+    console.log('Error unsubscribing', error);
+  })
+  .then(function() {
+    updateSubscriptionOnServer(null);
 
+    console.log('User is unsubscribed.');
+    isSubscribed = false;
 
-This code uses the `ServiceWorkerRegistration` object's `pushManager` to subscribe to  messages for the `gcm_sender_id` you added to the manifest previously.
+    updateBtn();
+  });
+}
+```
 
-You must pass a `{userVisibleOnly: true}` argument to the `subscribe()` method. This tells the browser that a notification will always be shown when a push message is received. Currently it's mandatory to show a notification.
+Let's step through this function.
 
-2. Try it out from localhost
+First we get the current subscription by calling `getSubscription()`:
 
-Open __index.html__ from localhost and open Chrome DevTools to check the console. 
+```
+swRegistration.pushManager.getSubscription()
+```
 
-You should see something like this:
+This returns a promise that resolves with a `PushSubscription` if one exists, otherwise it returns null. If there is a subscription, we call `unsubscribe()` on it, which makes the `PushSubscription` invalid.
 
-![40001a5567ff0f8f.png](img/40001a5567ff0f8f.png)
+```
+swRegistration.pushManager.getSubscription()
+.then(function(subscription) {
+  if (subscription) {
+    // TODO: Tell application server to delete subscription
+    return subscription.unsubscribe();
+  }
+})
+.catch(function(error) {
+  console.log('Error unsubscribing', error);
+})
+```
 
-If you want to reset push notification permissions preferences at any time, click the page icon to the left of the URL.  You should get a dialog that looks something like this: 
+Calling `unsubscribe()` returns a promise as it can take some time to complete, so we return that promise so the next `then()` in the chain waits for `unsubscribe()` to finish. We also add a catch handler in case calling `unsubscribe()` results in an error. After this we can update our UI.
 
-![78ff6c799af1a2cf.png](img/78ff6c799af1a2cf.png)
+```
+.then(function() {
+  updateSubscriptionOnServer(null);
 
-5. From Chrome DevTools, right-click the `endpoint` value and select Copy Link Address to copy the value, which should look like this: 
+  console.log('User is unsubscribed.');
+  isSubscribed = false;
 
-__https://android.googleapis.com/gcm/send/____ *APA91bGdUldXgd4Eu9MD0qNmGd0K6fu0UvhhNGL9FipYzisrRWbc-qsXpKbxocgSXm7lQuaEOwsJcEWWadNYTyqN8OTMrvNA94shns_BfgFH14wmYw67KZGHsAg74sm1_H7MF2qoyRCwr6AsbTf5n7Cgp7ZqsBZwl8IXGovAuknubr5gaJWBnDc
+  updateBtn();
+})
+```
 
-* __Make a note of the subscription ID, which is the last part of the URL, highlighted here in bold.
+#### Try it out
 
-You'll use that value in a later step to tell Firebase Cloud Messaging where to send messages. 
+You should be able to press the ‘Enable Push Messaging' / ‘Disable Push Messaging'  in your web app and the logs will show the user being subscribed and unsubscribed.
 
-![8472902e4c6b5faa.png](img/8472902e4c6b5faa.png)
+![32acb7ec17ef75a8.png](img/32acb7ec17ef75a8.png)
 
 
-## Send a request from the command line for FCM to push a message
+## Finished
 
 
 
-As you saw previously, Chrome uses Firebase Cloud Messaging (FCM, formerly known as GCM) for push messaging.
 
-To get FCM to push a notification to your web client, you need to send FCM a request that includes the following:
+Congratulations on completing this codelab!
 
-* The __Server key__ for the Firebase project you created, which looks like this:
+This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/).
 
-__AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c
+If you are looking to deploy push on your site, you may be interested in adding support for older / non-standards compliant browsers which use GCM,  [learn more here](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
-__FCM will match this with the Sender ID you got from the Firebase Developer Console, which matches the `gcm_sender_id` value in the manifest.
-* An appropriate __Content-Type header__, such as `application/json`.
-* An array of __subscription IDs__, each of which corresponds to an individual client app. That's the last part of the subscription endpoint URL, and looks like this: 
+### Further Reading
 
-__APA91bHMaA-R0eZrPisZCGfwwd7z1EzL7P7Q7cyocVkxBU3nXWed1cQYCYvFglMHIJ40kn-jZENQ62UFgg5QnEcqwB5dFZ-AmNZjATO8QObGp0p1S6Rq2tcCuUibjnyaS0UF1gIM1mPeM25MdZdNVLG3dM6ZSfxV8itpihroEN5ANj9A26RU2Uw__
-
-For a production site or app, you would normally set up a service to interact with FCM from your server. (There is some sample code for doing just that in  [Push Notifications on the Open Web](/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en).) For this codelab, you can send requests from your terminal or from an app running in the browser.
-
-You can send a request to FCM using the cURL utility.
-
-The cURL command to send a request to FCM to issue a push message looks like this:
-
-`curl --header "Authorization: key=`__`<SERVER_API_KEY>`__`" 
---header "Content-Type: application/json"
-https://android.googleapis.com/gcm/send -d
-"{\"registration_ids\":[\"`__`<SUBSCRIPTION_ID>`__`\"]}"`
-
-Let's see that in action...
-
-1. From your terminal, run the cURL command below — but __make sure to use your own API key and the subscription you created__: 
-
-    curl --header "Authorization: key=AIzaSyAc2e8MeZHA5NfhPANea01wnyeQD7uVY0c" --header "Content-Type: application/json" https://android.googleapis.com/gcm/send -d "{\"registration_ids\":[\"APA91bE9DAy6_p9bZ9I58rixOv-ya6PsNMi9Nh5VfV4lpXGw1wS6kxrkQbowwBu17ryjGO0ExDlp-S-mCiwKc5HmVNbyVfylhgwITXBYsmSszpK0LpCxr9Cc3RgxqZD7614SqDokwsc3vIEXkaT8OPIM-mnGMRYG1-hsarEU4coJWNjdFP16gWs\"]}"
-
-2. If it all worked out, you will see a response like this in your terminal: ![6af8d97d9cdd5b20.png](img/6af8d97d9cdd5b20.png)If there are authorisation errors, check the Authorization key value. If the response shows an invalid registration error, check the subscription ID you used.
-3. Take a look at chrome://serviceworker-internals. You should see something like this:
-
-![e7da861dbe28ff02.png](img/e7da861dbe28ff02.png)
-
-(If you want, you can try opening your app in Chrome Canary as well as Chrome and requesting a notification for two different endpoints. Make sure to put escaped quotes around each subscription ID.)
-
-4. Try closing or moving focus away from the browser tab that's running your app. You should see a notification like this:
-
-![b573392d75d7bd77.png](img/b573392d75d7bd77.png)
-
-
-## Send a request using XHR (Ajax)
-
-
-
-Another way to make a request to FCM to send a notification is via XHR.
-
-
-## Show a notification
-
-
-
-In this step you will add code to your Service Worker's push handler to show a notification.
-
-1. Add __showNotification()__ code
-
-Update __sw.js __to look like this, replacing the __TODO__ comment from the previous step:
-
-    console.log('Started', self);
-    
-    self.addEventListener('install', function(event) {
-      self.skipWaiting();
-      console.log('Installed', event);
-    });
-    
-    self.addEventListener('activate', function(event) {
-      console.log('Activated', event);
-    });
-    
-    self.addEventListener('push', function(event) {
-      console.log('Push message', event);
-    
-      var title = 'Push message';
-    
-      event.waitUntil(
-        self.registration.showNotification(title, {
-         body: 'The Message',
-         icon: 'images/icon.png',
-         tag: 'my-tag'
-       }));
-    });
-    
-    // TODO
-
-
-The `event.waitUntil()` method takes a promise and extends the lifetime of the event handler until, in this case, the promise returned by `showNotification()` is resolved.
-
-One notification will be shown for each `tag` value; if a new push message is received, the old notification will be replaced. To show multiple notifications, use a different `tag` value for each `showNotification()` call, or no `tag` at all.
-
-2. Make a request to FCM to send a notification
-
-Run the cURL command or the XHR request you created previously.
-
-You should see a notification like this:
-
-![9c6a8b6b4164824b.png](img/9c6a8b6b4164824b.png)
-
-
-## Handle notification clicks
-
-
-
-In this step you will add code to enable an action (such as navigating to a web page) when a user clicks a notification.
-
-1. Listen for a notification click
-
-Add the following code to __sw.js__, replacing the __TODO__ comment from the previous step:
-
-    self.addEventListener('notificationclick', function(event) {
-      console.log('Notification click: tag', event.notification.tag);
-      // Android doesn't close the notification when you click it
-      // See http://crbug.com/463146
-      event.notification.close();
-      var url = 'https://youtu.be/gYMkEMCHtJ4';
-      // Check if there's already a tab open with this URL.
-      // If yes: focus on the tab.
-      // If no: open a tab with the URL.
-      event.waitUntil(
-        clients.matchAll({
-          type: 'window'
-        })
-        .then(function(windowClients) {
-          console.log('WindowClients', windowClients);
-          for (var i = 0; i < windowClients.length; i++) {
-            var client = windowClients[i];
-            console.log('WindowClient', client);
-            if (client.url === url && 'focus' in client) {
-              return client.focus();
-            }
-          }
-          if (clients.openWindow) {
-            return clients.openWindow(url);
-          }
-        })
-      );
-    });
-
-
-This code listens for a notification click, then opens a web page — in this example, a YouTube video.
-
-This code checks all window clients for this Service Worker; if the requested URL is already open in a tab, focus on it — otherwise open a new tab for it. 
-
-
-## Unsubscribe from notifications
-
-
-
-ENOUGH WITH THE MESSAGES ALREADY! How can you enable your users to unsubscribe — and resubscribe?
-
-Simple: a client unsubscribes from notifications by calling the `unsubscribe()` method of the `PushSubscription` object. 
-
-In a production implementation you will also need to to remove subscription data for an unsubscribed client from your server, to avoid sending notifications that won't be received.
-
-1. Add a Subscribe/Unsubscribe button to your app
-
-In the __index.html__ file you created at the start of the codelab, add a button so the code looks like this:
-
-    <!DOCTYPE html>
-    <html>
-    <head>
-    
-      <title>Push Notification codelab</title>
-    
-      <link rel="manifest" href="manifest.json">
-    
-    </head>
-    
-    <body>
-    
-      <h1>Push Notification codelab</h1>
-    
-      <p>This page must be accessed using HTTPS or via localhost.</p>
-    
-      <button disabled>Subscribe</button>
-    
-      <script src="js/main.js"></script>
-    
-    </body>
-    </html>
-
-2. Add subscribe/unsubscribe functionality to __main.js
-
-__Adjust __main.js__ so the code looks like this:
-
-    var reg;
-    var sub;
-    var isSubscribed = false;
-    var subscribeButton = document.querySelector('button');
-    
-    if ('serviceWorker' in navigator) {
-      console.log('Service Worker is supported');
-      navigator.serviceWorker.register('sw.js').then(function() {
-        return navigator.serviceWorker.ready;
-      }).then(function(serviceWorkerRegistration) {
-        reg = serviceWorkerRegistration;
-        subscribeButton.disabled = false;
-        console.log('Service Worker is ready :^)', reg);
-      }).catch(function(error) {
-        console.log('Service Worker Error :^(', error);
-      });
-    }
-    
-    subscribeButton.addEventListener('click', function() {
-      if (isSubscribed) {
-        unsubscribe();
-      } else {
-        subscribe();
-      }
-    });
-    
-    function subscribe() {
-      reg.pushManager.subscribe({userVisibleOnly: true}).
-      then(function(pushSubscription){
-        sub = pushSubscription;
-        console.log('Subscribed! Endpoint:', sub.endpoint);
-        subscribeButton.textContent = 'Unsubscribe';
-        isSubscribed = true;
-      });
-    }
-    
-    function unsubscribe() {
-      sub.unsubscribe().then(function(event) {
-        subscribeButton.textContent = 'Subscribe';
-        console.log('Unsubscribed!', event);
-        isSubscribed = false;
-      }).catch(function(error) {
-        console.log('Error unsubscribing', error);
-        subscribeButton.textContent = 'Subscribe';
-      });
-    }
-
-
-In this code, you set the value of the `ServiceWorkerRegistration` object `reg` when the Service Worker installs, which is then used in the `subscribe()` function to subscribe to push messaging. 
-
-The `subscribe()` function creates the `PushSubscription` object `sub` which can be used by the `unsubscribe()` function.
-
-Remember, the client gets a new registration ID every time it re-subscribes, so you will need to adjust requests to FCM accordingly.
-
-
-## Frequently Asked Questions
-
-
-
-
-__My Service Worker didn't update! __
-
-Are you sure? Check the source tab in chrome://serviceworker-internals. If it really didn't update, restart Chrome.
-
-__I tried everything, but my Service Worker's still not updating__
-
-Did you check and validate your code? If your Service Worker code can't be parsed, it won't install. 
-
-__My request to FCM is failing__
-
-Check the project on  [console.firebase.google.com](https://console.firebase.google.com/). Make sure that the `gcm_sender_id` matches the Project Number and the Authorization key value matches the API key. Make sure you're looking at the right project!
-
-__The request to FCM is working, but no push event is fired__
-
-Check the subscription ID from the console for __main.js__. Is the subscription ID in the array of IDs for your request correctly? Make sure you you have the messaging API enabled on  [console.firebase.google.com](https://console.firebase.google.com/).
-
-__I'm getting strange errors__
-
-Try using Chrome Canary — this often gives more informative error messages about Service Worker woes.
-
-__I'm not seeing console logs for events in my Service Worker__
-
-You'll only get `installed` and `activated` events the first time you use the Service Worker or when the code is changed. The `started` event will only be fired once for each Service Worker session.
-
-__What about Firefox?__
-
-[As of Firefox 42](https://groups.google.com/forum/#!topic/mozilla.dev.platform/BL6TrHN73dY), the Push API will be turned on by default. 
-
-
-## What we've covered
-
-
-
-
-* Install a Service Worker and handle events
-* Set up a Firebase Cloud Messaging (FCM) account
-* Add a web manifest
-* Enable a Service Worker to handle push message events
-* Send a request to FCM via cURL or XHR
-* Display notifications
-* Handle notification clicks
-
-
-## Next Steps
-
-
-
-
-* Service Worker codelab (if you haven't already done it!)
-
-
-## Learn More
-
-
-
-
-*  [Push Notifications on the Open Web](/web/updates/2015/03/push-notificatons-on-the-open-web?hl=en)
-*  [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
-*  [Best Practices for Push Notifications Permission UX](https://docs.google.com/document/d/1WNPIS_2F0eyDm5SS2E6LZ_75tk6XtBSnR1xNjWJ_DPE/edit)
-*  [Do's and Don'ts for Notifications](http://android-developers.blogspot.co.uk/2015/08/get-dos-and-donts-for-notifications.html)
-*  [Notifications guidelines](https://www.google.com/design/spec/patterns/notifications.html)
-*  [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
-
-
-
-
+*  [Web Push Notification](/web/fundamentals/engage-and-retain/push-notifications/) documentation on WebFundamentals
+* Relevant blog posts
+*  [Web Push Payload Encryption](/web/updates/2016/03/web-push-encryption)
+*  [Notification Actions](/web/updates/2016/01/notification-actions)
+*  [Icons, Close Events, Renotify Preferences and Timestamps](/web/updates/2016/03/notifications)
+*  [Sending encrypted payloads](/web/updates/2016/03/web-push-encryption)
+*  [Guidelines for Push Notifications](http://developer.android.com/design/patterns/notifications.html#guidelines) from Android
+*  [Web Push Libraries](https://github.com/web-push-libs/) - Web Push libraries including Node.js, PHP, Java and Python.
 
 ## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an 
-[issue](https://github.com/GoogleChrome/push-notifications/issues) today. And thanks!
+Help us make our code labs better by submitting an
+[issue](https://github.com/googlechrome/push-notifications/issues) today. And thanks!
