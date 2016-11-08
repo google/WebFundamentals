@@ -17,6 +17,8 @@ toc:
         path: /web/fundamentals/design-and-ui/media/video
       - title: Multi-Device Content
         path: /web/fundamentals/design-and-ui/responsive/content
+    - title: A guide to designing UX for slow networks and offline
+      path: /web/fundamentals/design-and-ui/offline-guide/
     - title: User Input
       section:
       - title: Create Amazing Forms
