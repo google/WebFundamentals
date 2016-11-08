@@ -5,11 +5,11 @@ description: A guide to designing UX for slow networks and offline.
 {# wf_updated_on: 2016-11-10 #}
 {# wf_published_on: 2016-11-10 #}
 
-# From lie-fi to wi-fi: A guide to designing UX for slow networks and offline {: .page-title }
+# From Lie-fi To WI-FI: A Guide To Designing UX For Slow Networks and Offline {: .page-title }
 
 {% include "web/_shared/contributors/mustafa.html" %}
 
-This article will take a look at multiple design considerations needed to create a great experience for users who have either a slow network connection or are completely offline. 
+This article will take a look at multiple design considerations needed to create a great experience on both slow networks and offline. 
 
 The quality of a network connection can be affected by a number of factors such as:
 
@@ -57,6 +57,8 @@ Inform the user of both the actions they can still take when they have a network
   <img src="images/io-toast-message.png" alt="The I/O 2016 app informing the user when a change in state occurs.">
   <figcaption>The Google I/O app used a material design "toast" to let the user know when app was offline.</figcaption>
 </figure>
+
+<div class="clearfix"></div>
 
 ### Network connection improves or is restored
 
