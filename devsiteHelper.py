@@ -343,3 +343,58 @@ def getAnnouncementBanner(lang='en'):
   return result
 
 
+def getFooterPromo(lang='en'):
+  # Returns the announcement banner
+  result = ''
+  footerFile = os.path.join(SOURCE_PATH, lang, '_footer.yaml')
+  if not os.path.isfile(footerFile):
+    footerFile = os.path.join(SOURCE_PATH, 'en', '_footer.yaml')
+  raw = open(footerFile, 'r').read().decode('utf8')
+  footer = yaml.load(raw)
+  if 'promos' in footer['footer'][0]:
+    for promo in footer['footer'][0]['promos']:
+      result += '<li class="devsite-footer-promo">'
+      result += '<a href="'
+      result += promo['path']
+      result += '" class="devsite-footer-promo-title">'
+      if 'icon' in promo:
+        result += '<img class="devsite-footer-promo-icon" '
+        result += 'src="' + promo['icon'] + '">'
+      if 'icon_name' in promo:
+        result +='<div class="devsite-footer-promo-icon material-icons">'
+        result += promo['icon_name'] + '</div>'
+      result += promo['title']
+      result += '</a><div class="devsite-footer-promo-description">'
+      result += promo['description']
+      result += '</div></li>\n'
+  return result
+
+def getFooterLinkBox(lang='en'):
+  result = ''
+  footerFile = os.path.join(SOURCE_PATH, lang, '_footer.yaml')
+  if not os.path.isfile(footerFile):
+    footerFile = os.path.join(SOURCE_PATH, 'en', '_footer.yaml')
+  raw = open(footerFile, 'r').read().decode('utf8')
+  footer = yaml.load(raw)
+  if 'linkboxes' in footer['footer'][1]:
+    for linkBox in footer['footer'][1]['linkboxes']:
+      result += '<li class="devsite-footer-linkbox">'
+      result += '<h3 class="devsite-footer-linkbox-heading">'
+      result += linkBox['name'] + '</h3>'
+      result += '<ul class="devsite-footer-linkbox-list">'
+      result += '</ul>'
+      result += '</li>'
+
+  logging.info(result)
+  return result
+
+
+# <li class="devsite-footer-linkbox">
+#   <h3 class="devsite-footer-linkbox-heading">Heading</h3>
+#   <ul class="devsite-footer-linkbox-list">
+#     <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+#     <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+#     <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+#     <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
+#   </ul>
+# </li>
