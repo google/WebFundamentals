@@ -72,12 +72,15 @@ def getPage(requestPath, lang):
 
       # If it's a markdown file, parse it to HTML
       if fileLocation.endswith('.md'):
-        content = re.sub(r'^Success: (.*?)\n^\n(?ms)', r'<aside class="success" markdown="1"><strong>Success:</strong> <span>\1</span></aside>', content)
-        content = re.sub(r'^Dogfood: (.*?)\n^\n(?ms)', r'<aside class="dogfood" markdown="1"><strong>Dogfood:</strong> <span>\1</span></aside>', content)
         content = re.sub(r'^Note: (.*?)\n^\n(?ms)', r'<aside class="note" markdown="1"><strong>Note:</strong> <span>\1</span></aside>', content)
         content = re.sub(r'^Caution: (.*?)\n^\n(?ms)', r'<aside class="caution" markdown="1"><strong>Caution:</strong> <span>\1</span></aside>', content)
         content = re.sub(r'^Warning: (.*?)\n^\n(?ms)', r'<aside class="warning" markdown="1"><strong>Warning:</strong> <span>\1</span></aside>', content)
-
+        content = re.sub(r'^Key Point: (.*?)\n^\n(?ms)', r'<aside class="key-point" markdown="1"><strong>Key Point:</strong> <span>\1</span></aside>', content)
+        content = re.sub(r'^Key Term: (.*?)\n^\n(?ms)', r'<aside class="key-term" markdown="1"><strong>Key Term:</strong> <span>\1</span></aside>', content)
+        content = re.sub(r'^Objective: (.*?)\n^\n(?ms)', r'<aside class="objective" markdown="1"><strong>Objective:</strong> <span>\1</span></aside>', content)
+        content = re.sub(r'^Success: (.*?)\n^\n(?ms)', r'<aside class="success" markdown="1"><strong>Success:</strong> <span>\1</span></aside>', content)
+        content = re.sub(r'^Dogfood: (.*?)\n^\n(?ms)', r'<aside class="dogfood" markdown="1"><strong>Dogfood:</strong> <span>\1</span></aside>', content)
+        
         # Adds a set of markdown extensions available to us on DevSite
         ext = [
           'markdown.extensions.attr_list', # Adds support for {: #someid }
