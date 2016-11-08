@@ -249,6 +249,176 @@ The following tests are verifiable with the Lighthouse tool.
 Note: All of these checks currently must be performed manually as they
 are not yet implemented in Lighthouse
 
+### Indexability & social {: .hide-from-toc }
+
+Note: for general tips see our guide to
+[social optimization](/web/fundamentals/discovery-and-monetization/search-optimization/) 
+and [social discovery](/web/fundamentals/discovery-and-monetization/social-discovery/).
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>Site's content is indexed by Google</h3></th>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        Use the <a href="https://support.google.com/webmasters/answer/6066468">
+        Fetch as Google<a/> tool to preview how Google will see your site when
+        it is crawled.
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        <a href="https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html">
+        Google's indexing system does run JavaScript</a> but some issues 
+        may need to be fixed to make content accessible, for example ensure
+        if you are using new browser features like the Fetch API that they are
+        polyfilled in browsers without support.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>Schema.org metadata is provided where appropriate</h3></th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <a href="https://schema.org">Scheme.org</a> metadata can help improve
+        the appearance of your site in search engines.
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        Use the <a href="https://search.google.com/structured-data/testing-tool">
+        testing tool</a> to ensure title, image, description etc are available.
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        Markup the content. For example:
+        <ul>
+          <li>
+            A recipe app should have the <a href="/search/docs/data-types/recipes">
+            Recipe type markup</a> for Rich Cards.
+          </li>
+          <li>
+            A news app you should have the <a href="/search/docs/data-types/articles">
+            NewsArticle type markup</a> for Rich Cards and/or 
+            <a href="https://www.ampproject.org/docs/reference/spec.html">
+            AMP support</a>.
+          </li>
+          <li>
+            An ecommerce app should have the
+            <a href="/search/docs/data-types/products">Product type markup</a>
+            for Rich Cards.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>Social metadata is provided where appropriate</h3></th>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        <ul>
+          <li>
+            Open a representative page in
+            <a href="https://developers.facebook.com/tools/debug/">Facebook's crawler</a>
+            and ensure the looks reasonable.
+          </li>
+          <li>
+            Check that <a href="https://dev.twitter.com/cards/overview">Twitter
+            Cards meta data</a> is present (for example <code>&lt;meta 
+            name="twitter:card" content="summary" /&gt;</code>) if you feel
+            it would be appropriate.
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        Mark up content with <a href="http://ogp.me/">Open Graph</a> and as
+        advised by <a href="https://dev.twitter.com/cards/overview">Twitter</a>.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>Canonical URLs are provided when necessary</h3></th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        This is only necessary if your content is available at multiple URLs.
+      </td>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        <ul>
+          <li>
+            Determine whether any piece of content is available at two
+            different URLs.
+          </li>
+          <li>
+            Open both of these pages and ensure they use <code>&lt;link
+            rel=canonical&gt;</code> tags in the head to indicate the 
+            canonical version
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        Mark up content with <a href="http://ogp.me/">Open Graph</a>
+        and as advised by <a href="https://dev.twitter.com/cards/overview">
+        Twitter</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>Pages use the History API</h3></th>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        For single page apps, ensure the site doesn't use fragment
+        identifiers. For example everything after the <code>#!</code>
+        in <code>https://example.com/#!user/26601</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        Use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">
+        History API</a> instead of page fragments.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
 ### User Experience {: .hide-from-toc }
 
 <table class="responsive">
@@ -500,176 +670,6 @@ are not yet implemented in Lighthouse
       <td>
         Use the Network Information API to show the user an indication 
         when they're offline.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-### Indexability & social {: .hide-from-toc }
-
-Note: for general tips see our guide to
-[social optimization](/web/fundamentals/discovery-and-monetization/search-optimization/) 
-and [social discovery](/web/fundamentals/discovery-and-monetization/social-discovery/).
-
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan=2><h3>Site's content is indexed by Google</h3></th>
-    </tr>
-    <tr>
-      <td><b>To Test</b></td>
-      <td>
-        Use the <a href="https://support.google.com/webmasters/answer/6066468">
-        Fetch as Google<a/> tool to preview how Google will see your site when
-        it is crawled.
-      </td>
-    </tr>
-    <tr>
-      <td><b>To Fix</b></td>
-      <td>
-        <a href="https://webmasters.googleblog.com/2014/05/understanding-web-pages-better.html">
-        Google's indexing system does run JavaScript</a> but some issues 
-        may need to be fixed to make content accessible, for example ensure
-        if you are using new browser features like the Fetch API that they are
-        polyfilled in browsers without support.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan=2><h3>Schema.org metadata is provided where appropriate</h3></th>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <a href="https://schema.org">Scheme.org</a> metadata can help improve
-        the appearance of your site in search engines.
-      </td>
-    </tr>
-    <tr>
-      <td><b>To Test</b></td>
-      <td>
-        Use the <a href="https://search.google.com/structured-data/testing-tool">
-        testing tool</a> to ensure title, image, description etc are available.
-      </td>
-    </tr>
-    <tr>
-      <td><b>To Fix</b></td>
-      <td>
-        Markup the content. For example:
-        <ul>
-          <li>
-            A recipe app should have the <a href="/search/docs/data-types/recipes">
-            Recipe type markup</a> for Rich Cards.
-          </li>
-          <li>
-            A news app you should have the <a href="/search/docs/data-types/articles">
-            NewsArticle type markup</a> for Rich Cards and/or 
-            <a href="https://www.ampproject.org/docs/reference/spec.html">
-            AMP support</a>.
-          </li>
-          <li>
-            An ecommerce app should have the
-            <a href="/search/docs/data-types/products">Product type markup</a>
-            for Rich Cards.
-          </li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan=2><h3>Social metadata is provided where appropriate</h3></th>
-    </tr>
-    <tr>
-      <td><b>To Test</b></td>
-      <td>
-        <ul>
-          <li>
-            Open a representative page in
-            <a href="https://developers.facebook.com/tools/debug/">Facebook's crawler</a>
-            and ensure the looks reasonable.
-          </li>
-          <li>
-            Check that <a href="https://dev.twitter.com/cards/overview">Twitter
-            Cards meta data</a> is present (for example <code>&lt;meta 
-            name="twitter:card" content="summary" /&gt;</code>) if you feel
-            it would be appropriate.
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><b>To Fix</b></td>
-      <td>
-        Mark up content with <a href="http://ogp.me/">Open Graph</a> and as
-        advised by <a href="https://dev.twitter.com/cards/overview">Twitter</a>.
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan=2><h3>Canonical URLs are provided when necessary</h3></th>
-    </tr>
-    <tr>
-      <td colspan="2">
-        This is only necessary if your content is available at multiple URLs.
-      </td>
-    <tr>
-      <td><b>To Test</b></td>
-      <td>
-        <ul>
-          <li>
-            Determine whether any piece of content is available at two
-            different URLs.
-          </li>
-          <li>
-            Open both of these pages and ensure they use <code>&lt;link
-            rel=canonical&gt;</code> tags in the head to indicate the 
-            canonical version
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td><b>To Fix</b></td>
-      <td>
-        Mark up content with <a href="http://ogp.me/">Open Graph</a>
-        and as advised by <a href="https://dev.twitter.com/cards/overview">
-        Twitter</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="responsive">
-  <tbody>
-    <tr>
-      <th colspan=2><h3>Pages use the History API</h3></th>
-    </tr>
-    <tr>
-      <td><b>To Test</b></td>
-      <td>
-        For single page apps, ensure the site doesn't use fragment
-        identifiers. For example everything after the <code>#!</code>
-        in <code>https://example.com/#!user/26601</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><b>To Fix</b></td>
-      <td>
-        Use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/History_API">
-        History API</a> instead of page fragments.
       </td>
     </tr>
   </tbody>
