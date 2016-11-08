@@ -30,6 +30,8 @@ footer:
       path: https://github.com/google/WebFundamentals/issues
     - label: View Page Source
       path: https://github.com/google/WebFundamentals
+    - label: Style Guide & More for WebFundamentals
+      path: /web/resources/
 
   - name: Learn
     icon_name: link
