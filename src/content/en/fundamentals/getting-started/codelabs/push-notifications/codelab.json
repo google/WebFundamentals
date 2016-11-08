@@ -1,32 +1,25 @@
 {
   "environment": "web",
-  "source": "1T2wnuojyxOL9bgWkFrtB8t9rWcTa2f0UckrCrnrqc08",
+  "source": "14VtrIgYkrJwwl4rB-EtMs9cTNONEI20pcT9g10hXuAs",
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2016-10-25T18:02:54Z",
+  "updated": "2016-11-08T16:08:06Z",
   "id": "push-notifications",
-  "duration": 32,
-  "title": "Enable Push Notifications for your Web App",
-  "author": "samdutton",
-  "summary": "In this codelab, you will learn how to enable push messaging and notifications for web apps and sites.",
+  "duration": 0,
+  "title": "Adding Push Notifications to a Web App",
+  "summary": "In this codelab you'll how to add push notifications to your web app.",
   "theme": "web",
   "status": [
-    "draft"
+    "published"
   ],
   "category": [
-    "Web"
-  ],
-  "tags": [
-    "chrome-dev-summit",
-    "io2016",
-    "kiosk",
-    "pwa-dev-summit",
-    "pwa-roadshow",
     "web"
   ],
-  "feedback": "https://github.com/GoogleChrome/push-notifications/issues",
-  "ga": "UA-56283364-1",
+  "tags": [
+    "chrome-dev-summit-2016"
+  ],
+  "feedback": "https://github.com/googlechrome/push-notifications/issues",
   "url": "push-notifications",
   "wfProcessed": true
 }

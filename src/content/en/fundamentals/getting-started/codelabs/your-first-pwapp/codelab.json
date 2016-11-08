@@ -4,7 +4,7 @@
   "format": "md",
   "prefix": "../../",
   "mainga": "UA-49880327-14",
-  "updated": "2016-10-20T21:02:36Z",
+  "updated": "2016-11-02T10:11:19Z",
   "id": "your-first-pwapp",
   "duration": 0,
   "title": "Your First Progressive Web App",
@@ -18,6 +18,7 @@
     "Web"
   ],
   "tags": [
+    "chrome-dev-summit-2016",
     "io2016",
     "kiosk",
     "pwa-dev-summit",

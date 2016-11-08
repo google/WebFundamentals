@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
-{# wf_updated_on: 2016-10-10T14:57:55Z #}
+{# wf_updated_on: 2016-10-25T18:01:24Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
