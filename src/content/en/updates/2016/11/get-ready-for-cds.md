@@ -11,8 +11,8 @@ book_path: /web/updates/_book.yaml
 
 {% include "web/_shared/contributors/paulkinlan.html" %}
 
-<aside class="note" markdown="1">
-  Cross-posted from [Google Developers Blog](https://developers.googleblog.com/)
+<aside class="note">
+  Cross-posted from <a href="https://developers.googleblog.com/2016/11/get-ready-for-the-chrome-dev-summit-2016.html">Google Developers Blog</a>
 </aside>
 
 
@@ -40,7 +40,7 @@ schedule whether you're in person or tuning in via the livestream.
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="1ovVrj69L5w"
           data-autoplay="1" data-autohide="1" data-showinfo="0" frameborder="0"
-          allowfullscreen>
+          data-loop="1" allowfullscreen>
   </iframe>
 </div>
 
@@ -49,7 +49,7 @@ schedule whether you're in person or tuning in via the livestream.
 <div class="video-wrapper-full-width">
   <iframe class="devsite-embedded-youtube-video" data-video-id="Xjc64Iv0Yks"
           data-autoplay="1" data-autohide="1" data-showinfo="0" frameborder="0"
-          allowfullscreen>
+          data-loop="1" allowfullscreen>
   </iframe>
 </div>
 
