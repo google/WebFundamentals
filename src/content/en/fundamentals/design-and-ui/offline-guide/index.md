@@ -19,7 +19,7 @@ The quality of a network connection can be affected by a number of factors such 
 
 * Power outages.
 
-* Users travelling into a “dead zones” such as buildings that block their network connections. 
+* Users travelling into “dead zones” such as buildings that block their network connections. 
 
 * Travelling on a train and going through a tunnel.
 
@@ -29,9 +29,9 @@ The quality of a network connection can be affected by a number of factors such 
 
 Your goal is to provide a good experience that lessens the impact of changes in connectivity. 
 
-## What to show your users when when they have a bad network connection?
+## What to show your users when they have a bad network connection?
 
-The first question that must be asked is: what does success and failure of a network connection look like? A successful connection is your apps normal online experience. The failure of a connection however can be both the offline state of your app as well how the app behaves when there is a laggy network. 
+The first question that must be asked is: what does success and failure of a network connection look like? A successful connection is your app's normal online experience. The failure of a connection however can be both the offline state of your app as well how the app behaves when there is a laggy network. 
 
 When thinking about the success or failure of a network connection you need to ask yourself these important UX questions: 
 
@@ -43,9 +43,9 @@ When thinking about the success or failure of a network connection you need to a
 
 * How do you inform the user of the above?
 
-### Informing users of their current state and change of state
+### Inform users of their current state and change of state
 
-Inform the user of both the actions they can still take when they have a network failure and the  current state of the application. For example, a notification could say: 
+Inform the user of both the actions they can still take when they have a network failure and the current state of the application. For example, a notification could say: 
 
 > “You seem to have a bad network connection. [Not to worry!] Messages will be sent when the network is restored.”
 
@@ -55,7 +55,7 @@ Inform the user of both the actions they can still take when they have a network
 </figure>
 <figure class="attempt-right">
   <img src="images/io-toast-message.png" alt="The I/O 2016 app informing the user when a change in state occurs.">
-  <figcaption>The Google I/O app used a material design "toast" to let the user know when app was offline.</figcaption>
+  <figcaption>The Google I/O app used a material design "toast" to let the user know when it was offline.</figcaption>
 </figure>
 
 <div class="clearfix"></div>
@@ -66,11 +66,11 @@ How you deal with informing the user once their network connection has improved 
 
 <figure >
   <img src="images/weather-app.png" alt="An example of a weather app.">
-  <figcaption>Some apps, like this weather app, will need to auto update as old data is not of use to the user.
+  <figcaption>Some apps, like this weather app, need to auto update as old data is not of use to the user.
 </figcaption>
 </figure>
 
-You may also show the last time the app was updated at all times in a prominent space. This would also be useful for a currency convertor app as well. 
+You may also show the last time the app was updated at all times in a prominent space. This would also be useful for a currency convertor app, for example. 
 
 <figure>
   <img class="attempt-left" src="images/material-money-rates-out-of-date.png" alt="Material money app that is out-of-date">
@@ -79,7 +79,7 @@ You may also show the last time the app was updated at all times in a prominent 
 </figcaption>
 </figure>
 
-Other applications such as a news app could show a simple notification informing the user that their is newer content, with a tap to update function. The reason for doing that here is if a user is currently reading an article an auto-update would refresh the page and they would lose where they were reading last. 
+Other applications such as a news app could show a simple notification informing the user that there is newer content, with a tap-to-update function. The reason for doing that is if a user is currently reading an article an auto-update would refresh the page and they would lose where they were reading last. 
 
 
 <figure>
@@ -98,11 +98,11 @@ Other forms of contextual states could include data. For example, the financial 
 
 ### Educate the user so they understand what the offline model is
 
-Offline is a new mental model for everyone. You need to educate your users about what changes will occur when they don’t have a connection, inform them of where large data is saved and give them settings to change the default behavior. Make sure you use multiple UI design components such as informative language, icons, notifications, color and imagery to convey these ideas collectively rather than relying on one design device, such as an icon on its own, to tell the whole story.
+Offline is a new mental model for everyone. You need to educate your users about what changes will occur when they don’t have a connection. Inform them of where large data is saved and give them settings to change the default behavior. Make sure you use multiple UI design components such as informative language, icons, notifications, color and imagery to convey these ideas collectively rather than relying on one design device, such as an icon on its own, to tell the whole story.
 
 ## Providing an offline experience by default 
 
-If your app doesn't require much data, then cache that data by default. Users can become increasingly frustrated if they can only access their data with a network connection. Try to make the experience as stable as possible. An unstable connection will make your app feel untrustworthy as a tool, where an app that lessens the impact of a network failure will feel magical to the user. 
+If your app doesn't require much data, then cache that data by default. Users can become increasingly frustrated if they can only access their data with a network connection. Try to make the experience as stable as possible. An unstable connection will make your app feel untrustworthy, where an app that lessens the impact of a network failure will feel magical to the user. 
 
 
 News sites could benefit from auto downloading and saving the latest news content of the day so a user could read today's news without a connection, perhaps downloading the text without the article images. Also adapt with the user's behaviour so if the sports section is what they typically view, perhaps make this the priority data that is downloaded. 
@@ -115,9 +115,9 @@ News sites could benefit from auto downloading and saving the latest news conten
 </figure>
 
 ## Inform the user when the app is ready for offline consumption 
-When a web app first loads you need to indicate to the user if it is ready for offline use. This can be done with a [widget that provides brief feedback](https://material.google.com/components/snackbars-toasts.html "widget that provides brief feedback"){:target="_blank" .external} about an operation through a message at the bottom of the screen, for example when a section has been synced or a data file has downloaded.
+When a web app first loads you need to indicate to the user if it is ready for offline use. Do this with a [widget that provides brief feedback](https://material.google.com/components/snackbars-toasts.html "widget that provides brief feedback"){:target="_blank" .external} about an operation through a message at the bottom of the screen, for example when a section has been synced or a data file has downloaded.
 
-Again think of the language you are using to make sure it is fit for your audience. Ensure the messaging is given the same in all instances where it’s used. The term offline is generally misunderstood to a non-techie audience so use action based language that your audience can relate to. 
+Again think of the language you are using to make sure it is fit for your audience. Ensure the messaging is given the same in all instances where it’s used. The term offline is generally misunderstood by a non-techie audience so use action based language that your audience can relate to. 
 
 
 <figure>
@@ -126,12 +126,12 @@ Again think of the language you are using to make sure it is fit for your audien
   <figcaption class="clearfix">Both the Google I/O 2016 app and Chrome Status site notify the user when the app is ready for offline use.</figcaption>
 </figure>
 
-### Make save for offline an obvious part of the interface for data heavy apps
+### Make 'save for offline' an obvious part of the interface for data heavy apps
 
-If an application uses large amounts of data, make sure that there is switch or pin to add an item for offline use rather than auto downloading, unless a user has specifically asked for this behavior via a settings menu. Make sure that pin or download UI  is not obscured by other UI elements and that the feature is obvious to the user. 
+If an application uses large amounts of data, make sure that there is a switch or pin to add an item for offline use rather than auto downloading, unless a user has specifically asked for this behavior via a settings menu. Make sure that the pin or download UI is not obscured by other UI elements and that the feature is obvious to the user. 
 
 
-One example would be a music player that requires large data files. The user is aware of the associated data cost, but is also aware that they may want to use the player when they they are offline. Downloading music  for later use requires the user to plan ahead, so education of this may be required during onboarding. 
+One example would be a music player that requires large data files. The user is aware of the associated data cost, but is also aware that they may want to use the player when they they are offline. Downloading music for later use requires the user to plan ahead, so education about this may be required during onboarding. 
 
 ### Clarify what is accessible offline 
 
