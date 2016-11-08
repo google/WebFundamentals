@@ -227,15 +227,8 @@
 
           // Add the move and end listeners
           if (window.PointerEvent) {
-            // Pointer events are supported.
-            document.addEventListener('pointermove', this.handleGestureMove, true);
-            document.addEventListener('pointerup', this.handleGestureEnd, true);
+            evt.target.setPointerCapture(evt.pointerId);
           } else {
-            // Add Touch Listeners
-            document.addEventListener('touchmove', this.handleGestureMove, true);
-            document.addEventListener('touchend', this.handleGestureEnd, true);
-            document.addEventListener('touchcancel', this.handleGestureEnd, true);
-
             // Add Mouse Listeners
             document.addEventListener('mousemove', this.handleGestureMove, true);
             document.addEventListener('mouseup', this.handleGestureEnd, true);
@@ -252,6 +245,10 @@
         /* // [START handle-move] */
         this.handleGestureMove = function (evt) {
           evt.preventDefault();
+
+          if(!initialTouchPos) {
+            return;
+          }
 
           lastTouchPos = getGesturePointFromEvent(evt);
 
@@ -278,21 +275,16 @@
 
           // Remove Event Listeners
           if (window.PointerEvent) {
-            // Remove Pointer Event Listeners
-            document.removeEventListener('pointermove', this.handleGestureMove, true);
-            document.removeEventListener('pointerup', this.handleGestureEnd, true);
+            evt.target.releasePointerCapture(evt.pointerId);
           } else {
-            // Remove Touch Listeners
-            document.removeEventListener('touchmove', this.handleGestureMove, true);
-            document.removeEventListener('touchend', this.handleGestureEnd, true);
-            document.removeEventListener('touchcancel', this.handleGestureEnd, true);
-
             // Remove Mouse Listeners
             document.removeEventListener('mousemove', this.handleGestureMove, true);
             document.removeEventListener('mouseup', this.handleGestureEnd, true);
           }
 
           updateSwipeRestPosition();
+
+          initialTouchPos = null;
         }.bind(this);
         /* // [END handle-end-gesture] */
 
@@ -355,7 +347,6 @@
           var point = {};
 
           if(evt.targetTouches) {
-            console.log(evt.targetTouches[0]);
             point.x = evt.targetTouches[0].clientX;
             point.y = evt.targetTouches[0].clientY;
           } else {
@@ -391,9 +382,15 @@
         if (window.PointerEvent) {
           // Add Pointer Event Listener
           swipeFrontElement.addEventListener('pointerdown', this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('pointermove', this.handleGestureMove, true);
+          swipeFrontElement.addEventListener('pointerup', this.handleGestureEnd, true);
+          swipeFrontElement.addEventListener('pointercancel', this.handleGestureEnd, true);
         } else {
           // Add Touch Listener
           swipeFrontElement.addEventListener('touchstart', this.handleGestureStart, true);
+          swipeFrontElement.addEventListener('touchmove', this.handleGestureMove, true);
+          swipeFrontElement.addEventListener('touchup', this.handleGestureEnd, true);
+          swipeFrontElement.addEventListener('touchcancel', this.handleGestureEnd, true);
 
           // Add Mouse Listener
           swipeFrontElement.addEventListener('mousedown', this.handleGestureStart, true);

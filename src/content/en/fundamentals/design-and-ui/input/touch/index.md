@@ -181,25 +181,30 @@ Note: Because of the design of the API, PointerEvents only need a single `pointe
 
 #### Handle single-element interaction
 
-In the short snippet of code above we only added the starting event listener,
-this wasn't just to show you how to add the event listeners. for single
-element gestures, this is the only event listener we add at first.
+In the short snippet of code above we only added the starting event listener
+for mouse events. The reason for this is that mouse events will only trigger
+when the cursor is hovering *over* the element the event listener is added to.
 
-By adding the move and end event listeners *after* a gesture has
-started, the browser can quickly check if the touch occurred in a
-region with an event listener and if not, it can skip calling
-any JavaScript, which can be a slow process.
+TouchEvents will track a gesture after it's started regardless of where the
+touch occurs and PointerEvents will track events regardless of where the touch
+occurs we call `setPointerCapture` on a DOM element.
+
+For mouse move and end events we add the event listeners *in* the
+gesture start method and add the listeners to the document, meaning it can
+track the cursor until the gesture is complete.
 
 The steps taken to implement this are:
 
-1. Add the start events listener to an element.
-1. Inside your start gesture callback, bind the move and end elements to the
-   document. The reason for binding the move and end events to the
-   document is so that we receive all events regardless of whether they
-   occur on the original element or not.
+1. Add all TouchEvent and PointerEvent listeners. For MouseEvents add **only**
+   the start event.
+1. Inside the start gesture callback, bind the mouse move and end events to
+   the document. This way all mouse events and received regardless of whether
+   the event occurs on the original element or not. For PointerEvents we
+   need to call `setPointerCapture()` on our original element to receive
+   all further events. Then handle the start of the gesture.
 1. Handle the move events.
-1. On the end event, remove the move and end listeners from the document and
-   end the gesture.
+1. On the end event, remove the mouse move and end listeners from the document
+   and end the gesture.
 
 Below is a snippet of our `handleGestureStart()` method which adds the move
 and end events to the document:
@@ -209,7 +214,8 @@ and end events to the document:
 </pre>
 
 The end callback we add is `handleGestureEnd()`, which removes the move
-and end event listeners from the document when the gesture has finished like so:
+and end event listeners from the document and releases the pointer capture
+when the gesture has finished like so:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
@@ -228,28 +234,6 @@ and end event listeners from the document when the gesture has finished like so:
 ![Illustrating binding touch events to document in `touchstart`](images/scroll-bottleneck.gif)
 
 <div class="clearfix"></div>
-
-
-#### Handle multi-element interaction
-
-If you expect your users to use multiple elements at once, you can add the
-move and end events listeners directly to the elements themselves. This
-applies to touch only, for mouse interactions you should continue to apply
-the `mousemove` and `mouseup` listeners to the document.
-
-Since we only wish to track touches on a particular element, we can add the
-move and end listeners for touch and pointer events to the element straight away:
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="addlisteners" adjust_indentation="auto" %}
-</pre>
-
-In our `handleGestureStart()` and `handleGestureEnd()` functions, we add and
-remove the mouse event listeners to the document.
-
-<pre class="prettyprint">
-{% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="handle-gestures" adjust_indentation="auto" %}
-</pre>
 
 ### Responding to touch efficiently
 
@@ -280,14 +264,12 @@ Since the event callbacks are fired on the main thread, we want to run as
 little code as possible in the callbacks for our events, keeping our frame
 rate high and preventing jank.
 
-Using `requestAnimationFrame()` we have an opportunity to update the UI when
-the browser is intending to draw a frame and will help us move some work out
-of our event callbacks.
+Using `requestAnimationFrame()` we have an opportunity to update the UI just
+before the browser is intending to draw a frame and will help us move some
+work out of our event callbacks.
 
 If you are unfamiliar with `requestAnimationFrame()`, you
 can [learn more here](/web/fundamentals/performance/rendering/optimize-javascript-execution#use-requestanimationframe-for-visual-changes).
-One way to think of `requestAnimationFrame()` is changes the
-UI in a way that "works with the browser" rather than against.
 
 A typical implementation is to save the `x` and `y` coordinates from the
 start and move events and request an animation frame inside the move event
@@ -299,9 +281,9 @@ In our demo, we store the initial touch position in `handleGestureStart()` (look
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
-The `handleGestureMove()` method stores the position before requesting an
-animation frame if we need to, passing in our `onAnimFrame()` function as the
-callback:
+The `handleGestureMove()` method stores the position of it's event
+before requesting an animation frame if we need to, passing in our
+`onAnimFrame()` function as the callback:
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-move" adjust_indentation="auto" %}
@@ -314,7 +296,7 @@ tell the browser to call it just before it's about to update the page
 
 In the `handleGestureMove()` callback we initially check if `rafPending` is false,
 which indicates if `onAnimFrame()` has been called by `requestAnimationFrame()`
-since the last move event. Since means we only have one `requestAnimationFrame()`
+since the last move event. This means we only have one `requestAnimationFrame()`
 waiting to run at any one time.
 
 When our `onAnimFrame()` callback is executed, we set the transform on any
@@ -336,14 +318,18 @@ to intercept all of the touch events.
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="touch-action-example" adjust_indentation="auto" %}
 </pre>
 
+Using `touch-action: none` is somewhat a nuclear option as it prevents all
+the default browser behaviors. In many cases one of the options
+belows is a better solution.
+
 `touch-action` allows you to disable gestures implemented by a browser.
 For example, IE10+ supports a double-tap to zoom gesture. By setting a touch-action
-of `pan-x | pan-y | manipulation` you prevent the default double-tap
+of `manipulation` you prevent the default double-tap
 behavior.
 
 This allows you to implement a double-tap gesture yourself.
 
-Below is a list of the available parameters for *touch-action*.
+Below is a list of commonly used touch-action values:
 
 <table class="responsive">
   <thead>
@@ -353,32 +339,27 @@ Below is a list of the available parameters for *touch-action*.
   </thead>
   <tbody>
     <tr>
-      <td data-th="Property"><code>touch-action: auto</code></td>
-      <td data-th="Description">
-        The browser will add the normal touch interactions which it supports. For example, scrolling in the x-axis, scrolling in the y-axis, pinch zoom and double tap.
-      </td>
-    </tr>
-    <tr>
       <td data-th="Property"><code>touch-action: none</code></td>
       <td data-th="Description">No touch interactions will be handled by the browser.</td>
     </tr>
     <tr>
-      <td data-th="Property"><code>touch-action: pan-x</code></td>
-      <td data-th="Description">Only horizontal scrolling will be handled by the browser; vertical scrolling and gestures will be disabled.</td>
+      <td data-th="Property"><code>touch-action: pinch-zoom</code></td>
+      <td data-th="Description">Disables all browser interactions like
+      `touch-action: none` apart from pinch-zoom, which is still handled by the
+      browser.</td>
     </tr>
     <tr>
-      <td data-th="Property"><code>touch-action: pan-y</code></td>
-      <td data-th="Description">Only vertical scrolling will be handled by the browser; horizontal scrolling and gestures will be disabled.</td>
+      <td data-th="Property"><code>touch-action: pan-y pinch-zoom</code></td>
+      <td data-th="Description">Handle horizontal scrolls in JavaScript without disabling vertical scrolling or pinch-zooming (eg. image carousels).</td>
     </tr>
     <tr>
       <td data-th="Property"><code>touch-action: manipulation</code></td>
-      <td data-th="Description">Scrolling in both directions and pinch zooming will be handled by the browser; all other gesture will be ignored by the browser.</td>
+      <td data-th="Description">Disables double-tap gesture which avoids any
+      click delay by the browser. Leaves scrolling and pinch-zoom up to the
+      browser.</td>
     </tr>
   </tbody>
 </table>
-
-
-Note: Using <code>touch-action&colon; pan-x</code> or <code>touch-action&colon; pan-y</code> are great for being explicit in your intention that a user should only ever scroll vertically or horizontally on an element.
 
 ## Supporting older versions of IE
 

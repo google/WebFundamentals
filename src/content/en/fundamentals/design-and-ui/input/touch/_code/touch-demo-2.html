@@ -177,11 +177,20 @@
 
         isAnimating = false;
         lastHolderPos = lastHolderPos + -(initialYPos - lastYPos);
+        initialYPos = null;
       }.bind(this);
       /* // [END handle-gestures] */
 
       this.handleGestureMove = function(evt) {
         evt.preventDefault();
+
+        if(evt.targetTouches && evt.targetTouches.length > 0) {
+          return;
+        }
+
+        if (!initialYPos) {
+          return;
+        }
 
         /* // [START handle-move] */
         var point = getGesturePointFromEvent(evt);
@@ -250,6 +259,7 @@
           elementHold.addEventListener('pointerdown', this.handleGestureStart, true);
           elementHold.addEventListener('pointermove', this.handleGestureMove, true);
           elementHold.addEventListener('pointerup', this.handleGestureEnd, true);
+          elementHold.addEventListener('pointercancel', this.handleGestureEnd, true);
         } else {
           // Add Touch Listeners
           elementHold.addEventListener('touchstart', this.handleGestureStart, true);
