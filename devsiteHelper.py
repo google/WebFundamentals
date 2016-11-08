@@ -369,6 +369,7 @@ def getFooterPromo(lang='en'):
       result += '</div></li>\n'
   return result
 
+
 def getFooterLinkBox(lang='en'):
   result = ''
   footerFile = os.path.join(SOURCE_PATH, lang, '_footer.yaml')
@@ -382,19 +383,10 @@ def getFooterLinkBox(lang='en'):
       result += '<h3 class="devsite-footer-linkbox-heading">'
       result += linkBox['name'] + '</h3>'
       result += '<ul class="devsite-footer-linkbox-list">'
+      for linkItem in linkBox['contents']:
+        result += '<li class="devsite-footer-linkbox-item">'
+        result += '<a href="' + linkItem['path'] + '">'
+        result += linkItem['title'] + '</a></li>'
       result += '</ul>'
       result += '</li>'
-
-  logging.info(result)
   return result
-
-
-# <li class="devsite-footer-linkbox">
-#   <h3 class="devsite-footer-linkbox-heading">Heading</h3>
-#   <ul class="devsite-footer-linkbox-list">
-#     <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-#     <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-#     <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-#     <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-#   </ul>
-# </li>

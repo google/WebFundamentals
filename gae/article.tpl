@@ -159,7 +159,6 @@
           <nav class="devsite-full-site-width">
             <ul class="devsite-footer-linkboxes-list">
               {% autoescape off %}{{footerLinks}}{% endautoescape %}
-
             </ul>
           </nav>
         </footer>

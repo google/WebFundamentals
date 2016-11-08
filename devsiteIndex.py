@@ -205,6 +205,9 @@ def generateYaml(lang, requestPath, rawYaml):
                 'customcss': customCss,
                 'header': header,
                 'content': content,
-                'lang': lang}
+                'lang': lang,
+                'footerPromo': devsiteHelper.getFooterPromo(),
+                'footerLinks': devsiteHelper.getFooterLinkBox()
+                }
               )
   return text
