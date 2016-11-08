@@ -37,7 +37,7 @@ landing_page:
           This new level of of quality allows Progressive Web Apps to earn a
           place on the users home screen.
         </p>
-      image_path: images/fpo-4.png
+      image_path: images/pwa-intro.png
 
   - classname: devsite-landing-row-50 devsite-landing-row-no-image-background devsite-landing-row-grey devsite-landing-row-colored
     items:
@@ -55,7 +55,7 @@ landing_page:
           dependence on the network, ensuring an instant and reliable
           experience for your users.
         </p>
-      image_path: images/fpo-1.png
+      image_path: images/pwa-reliable.png
       image_left: True
       buttons:
       - label: Learn More
@@ -69,7 +69,7 @@ landing_page:
         53% of users will abandon a site if it takes longer than 3 seconds to
         load! And once loaded, they expect them to be fast, no janky scrolling
         or slow to respond interfaces.
-      image_path: images/fpo-3.png
+      image_path: images/pwa-fast.png
       buttons:
       - label: Learn More
         path: /web/fundamentals/performance/
@@ -93,7 +93,7 @@ landing_page:
           is loaded when the app is launched, screen orientation, even
           whether to show the browser chrome or not.
         </p>
-      image_path: images/fpo-2.png
+      image_path: images/pwa-engaging.png
       image_left: True
       buttons:
       - label: Web App Manifest
@@ -154,7 +154,7 @@ landing_page:
           it’s possible to automate checks for many of these properties. You 
           can even integrate Lighthouse into continuous integration systems to
           catch regressions.
-      image_path: images/lh-fpo.png
+      image_path: images/pwa-lighthouse.png
 
       buttons:
       - label: Learn More
