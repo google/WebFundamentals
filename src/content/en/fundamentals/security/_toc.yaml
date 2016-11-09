@@ -21,9 +21,9 @@ toc:
         path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
     - title: Credential Management
       section:
-      - title: About Credential Management
+      - title: About Credential Management API
         path: /web/fundamentals/security/credential-management/about-credential-management-api
-      - title: Retrieve User Credentials
+      - title: Retrieve Credentials
         path: /web/fundamentals/security/credential-management/retrieve-credentials
-      - title: Store User Credentials
+      - title: Store Credentials
         path: /web/fundamentals/security/credential-management/store-credentials        
