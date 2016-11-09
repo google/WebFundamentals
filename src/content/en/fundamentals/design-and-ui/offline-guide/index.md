@@ -135,31 +135,31 @@ One example would be a music player that requires large data files. The user is 
 
 ### Clarify what is accessible offline 
 
-Be clear as to the option you are providing. You may need to show a tab or setting that allows them to see their “offline library”, so the user can easily see what they have stored on their phone, and what needs to be saved. Make sure the settings are concise and be clear where the data will be stored and who has access to it.  
+Be clear as to the option you are providing. You may need to show a tab or setting that shows an “offline library”, so the user can easily see what they have stored on their phone and what needs to be saved. Make sure the settings are concise and be clear where the data will be stored and who has access to it.  
 
 ### Show the actual cost of an action
 
-Many users equate offline capability with 'downloading'.. Users in countries where network connections regularly fail or aren't available often share content with other users, or save content for offline use when they have connectivity.
+Many users equate offline capability with 'downloading'. Users in countries where network connections regularly fail or aren't available often share content with other users, or save content for offline use when they have connectivity.
 
 Users on data plans may avoid downloading large files for fear of cost, so you may also want to display an associated cost so users can make an active comparison for a specific file or task.  For example if the music app above could detect if the user is on a data plan and show the file size so that users can see the true cost of a file. 
 
 ### Help prevent hacked experiences 
 
-Often users hack an experience without realising they are doing it. For example before cloud sharing apps like Google Drive, it was common to see users save large files and attach them to their email clients so they could carry on editing a file from a different device. It is important not to be pulled into their hacked experience but rather look at what they are trying to achieve, in other words instead of thinking of how you can make attaching a large attachment more user friendly, solve the problem of sharing large files across multiple devices. 
+Often users hack an experience without realising they are doing it. For example before cloud sharing apps like Google Drive, it was common for users save large files and attach them to emails so they could carry on editing from a different device. It is important not to be pulled into their hacked experience but rather look at what they are trying to achieve. In other words instead of thinking of how you can make attaching a large attachment more user friendly, solve the problem of sharing large files across multiple devices. 
 
 ## Transferable experience from one device to another
 
-When making an experience with a flaky network connection, seek for it to sync correctly once the connection improves so that the experience is transferable. For example a travel app loses a network connection mid-way through a booking, then the connection is reestablished, it syncs with the user's account and then they can continue their booking on their desktop device. Not being able to transfer experiences is incredibly jarring to users.
+When making an experience with a flaky network connection, seek for it to sync correctly once the connection improves so that the experience is transferable. For example, imagine a travel app losing a network connection mid-way through a booking. When the connection is reestablished, the app syncs with the user's account and then they can continue their booking on their desktop device. Not being able to transfer experiences is incredibly jarring to users.
 
 Inform the user of the current state of their data, for example if the app has managed to sync or not. Educate them where possible but try not to overburden them with messaging.  
 
 ## Create inclusive design experiences 
 
-When designing seek to be inclusive by providing meaningful design devices, simple language, standard iconography and meaningful imagery that will guide the user to complete the action or task rather than hinder their progress. 
+When designing seek to be inclusive by providing meaningful design devices, simple language, standard iconography, and meaningful imagery that will guide the user to complete the action or task rather than hinder their progress. 
 
 ### Let simple concise language be a guide
 
-Good UX is not just about a well designed interface, but it includes the flow a user takes as well as the language used in the app. One thing you must avoid is using tech jargon when explaining the state of the app or individual UI components. Consider that the phrase “app offline” might not convey to the user the current state of the app.
+Good UX is not just about a well designed interface. It includes the flow a user takes as well as the language used in the app. Avoid using tech jargon when explaining the state of the app or individual UI components. Consider that the phrase “app offline” might not convey to the user the current state of the app.
 
 <div class="attempt-left">
   <figure>
@@ -207,19 +207,20 @@ To prevent misunderstandings, express different states to the user in multiple w
 
 ### Use icons that convey meaning 
 
-Make sure that information is conveyed correctly with meaningful text labels as well as icons. Icons alone can be problematic, since the concept of offline on the web is relatively new. Users may misunderstand icons used on their own. For example, using a floppy disc for save makes sense to an older generation but young users who have never seen a floppy disc may be confused by the metaphor. Likewise, the 'hamburger' menu icon has been known to confuse  users when presented without a label.
+Make sure that information is conveyed correctly with meaningful text labels as well as icons. Icons alone can be problematic, since the concept of offline on the web is relatively new. Users may misunderstand icons used on their own. For example, using a floppy disc for save makes sense to an older generation but young users who have never seen a floppy disc may be confused by the metaphor. Likewise, the 'hamburger' menu icon has been known to confuse users when presented without a label.
 
 
-When introducing an offline icon try to remain consistent with the industry the standard visual (if one exists) as well as providing a text label and description. For example, saving for offline might be a typical download icon or perhaps if the action involves syncing it could be a syncing icon. Some actions may be interpreted as saving for offline rather than demonstrating a network's status. Think of the action you are trying to convey rather than presenting the user with an abstract concept, for example save or download data would be action based.  
+When introducing an offline icon try to remain consistent with the industry standard visual (if one exists) as well as providing a text label and description. For example, saving for offline might be a typical download icon or perhaps if the action involves syncing it could be a syncing icon. Some actions may be interpreted as saving for offline rather than demonstrating a network's status. Think of the action you are trying to convey rather than presenting the user with an abstract concept. For example save or download data would be action based.  
 
 <figure>
   <img src="images/download-icons-exampels.png" alt="Various icon examples that convey offline">
 </figure>
-Offline can mean a number of things depending on the context, such as download, export, pin etc. For more inspiration checkout the [material design icon set](https://material.io/icons/ "material design icon set"){:target="_blank" .external}.
+
+Offline can mean a number of things depending on the context, such as download, export, pin etc.. For more inspiration checkout the [material design icon set](https://material.io/icons/ "material design icon set"){:target="_blank" .external}.
 
 ### Use skeleton layouts with other feedback mechanism 
 
-Skeleton layouts are essentially a wireframe version of your app that is displayed while content is being loaded. This helps demonstrate to the user that content is about to be loaded. Consider also using a preloader UI as well, with a text label informing the user that the app is loading. One example would be to pulsate the wireframe content giving the app the feeling  that it is alive and loading. This reassures the user that something is happening and helps prevent resubmissions or refreshes of your app. 
+A skeleton layout is essentially a wireframe version of your app that displays while content is being loaded. This helps demonstrate to the user that content is about to be loaded. Consider also using a preloader UI as well, with a text label informing the user that the app is loading. One example would be to pulsate the wireframe content giving the app the feeling  that it is alive and loading. This reassures the user that something is happening and helps prevent resubmissions or refreshes of your app. 
 
 <figure>
   <img class="attempt-left" src="images/tailpiece-skel-article.png" alt="Skeleton layout example">
@@ -229,38 +230,38 @@ Skeleton layouts are essentially a wireframe version of your app that is display
 
 ### Don’t block content
 
-In some applications a user might trigger an action such as creating a new document. Some apps will try to connect to a server in order to sync this action and to demonstrate this process they display an intrusive loading modal dialog that covers the entire screen. This may work fine if the user has a stable network connection, but if the network is unstable they won’t be able to escape from this action and the UI effectively blocks them from doing anything else. Network requests that block content should be avoided. Allow the user to continue to browse your app and queue tasks that will be performed and synced once the connection has improved. 
+In some applications a user might trigger an action such as creating a new document. Some apps will try to connect to a server in order to sync the new document and to demonstrate this they display an intrusive loading modal dialog that covers the entire screen. This may work fine if the user has a stable network connection, but if the network is unstable they won’t be able to escape from this action and the UI effectively blocks them from doing anything else. Network requests that block content should be avoided. Allow the user to continue to browse your app and queue tasks that will be performed and synced once the connection has improved. 
 
-Demonstrate the state of an action by providing your users with feedback. For example, if a user is editing a doc, consider changing the feedback design so it is visibly different from the when they are online but still shows that their file has“saved” and will sync when they have a network connection. This will educate the user about the different states available and reassure them that their task or action has been stored. This has the added benefit of the user growing more confident using your application.
+Demonstrate the state of an action by providing your users with feedback. For example, if a user is editing a doc, consider changing the feedback design so it is visibly different from when they are online but still shows that their file was “saved” and will sync when they have a network connection. This will educate the user about the different states available and reassure them that their task or action has been stored. This has the added benefit of the user growing more confident using your application.
 
 ## Designing for the next billion
 
-In many regions, low end devices are commonplace, connectivity is unreliable and, for many users, data is unaffordable.  You will need to earn user trust by being transparent and frugal with data. Think about ways to help users on poor connections and simplify the interface to help speed up tasks. Always try to ask users before downloading data-heavy content. 
+In many regions, low end devices are commonplace, connectivity is unreliable and, for many users, data is unaffordable. You will need to earn user trust by being transparent and frugal with data. Think about ways to help users on poor connections and simplify the interface to help speed up tasks. Always try to ask users before downloading data-heavy content. 
 
 Offer low bandwidth options for users on laggy connections. So if the network connection is slow provide small assets. Offer an option to choose high or low quality assets.
 
-## Conclusion to Guide
+## Conclusion
 
-Education is key to this as users are unfamiliar with these concepts so try to create associations with things that are familiar, e.g downloading for later use is the same as offlining data. 
+Education is key to this as users are unfamiliar with these concepts. Try to create associations with things that are familiar, e.g downloading for later use is the same as offlining data. 
 
 
-As a final checklist of design considerations when designing for unstable network connections, follow this list of principles; 
+When designing for unstable network connections, use these: 
 
-* Think how you design for the success, failure and instability of a network connection
+* Think how you design for the success, failure and instability of a network connection.
 
 * Data may be expensive, so be considerate to the user.
 
-* For most users globally,  the tech environment is almost exclusively mobile.
+* For most users globally, the tech environment is almost exclusively mobile.
 
 * Low end devices are commonplace, with limited storage, memory and processing power and, small displays and lower touchscreen quality. Make sure performance is a part of your design process. 
 
 * Allow users to browser your application when they are offline.
 
-* Inform users of their current state and changes in states.
+* Inform users of their current state and of changes in states.
 
 * Try to provide offline by default if your app doesn't require much data.
 
-* If the app is data-heavy, educate users how they can download for offline use.
+* If the app is data-heavy, educate users about how they can download for offline use.
 
 * Make experiences transferable between devices.
 
