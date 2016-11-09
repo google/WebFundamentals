@@ -19,3 +19,11 @@ toc:
         path: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
       - title: Preventing Mixed Content
         path: /web/fundamentals/security/prevent-mixed-content/fixing-mixed-content
+    - title: Credential Management
+      section:
+      - title: About Credential Management
+        path: /web/fundamentals/security/credential-management/about-credential-management-api
+      - title: Retrieve User Credentials
+        path: /web/fundamentals/security/credential-management/retrieve-credentials
+      - title: Store User Credentials
+        path: /web/fundamentals/security/credential-management/store-credentials        
