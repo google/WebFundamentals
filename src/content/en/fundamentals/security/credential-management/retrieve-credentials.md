@@ -12,8 +12,7 @@ book_path: /web/fundamentals/_book.yaml
 When a user lands on your site,
 retrieve the user's credentials.
 Use these credentials to authenticate and sign in the user.
-
-Make it as easy a possible for returning users to sign-in,
+Make it as easy a possible for returning users to sign in,
 but once a user signs out, disable auto sign-in.
 
 ### TL;DR {: .hide-from-toc }
@@ -50,8 +49,8 @@ navigator.credentials.get({
 `navigator.credentials.get()` returns a promise that resolves
 with a credential object as an argument.
 The obtained credential object can be either
-[PasswordCredential](#authenticate-with-a-server) or
-[FederatedCredential](#authenticate-with-an-identity-provider).
+[PasswordCredential](#authenticate_with_a_server) or
+[FederatedCredential](#authenticate_with_an_identity_provider).
 If no credential information exists, `null` gets returned.
 
 ### Parameters
@@ -69,8 +68,8 @@ A credential includes the following parameters:
       </td>
       <td>
         <code>Boolean</code><br>
-        Value is `true` if you want to retrieve `PasswordCredentials`.
-        Defaults to `false`.
+        Set value to <code>true</code> to retrieve <code>PasswordCredentials</code>.
+        Defaults to <code>false</code>.
       </td>
     </tr>
     <tr>
@@ -79,10 +78,10 @@ A credential includes the following parameters:
       </td>
       <td>
         <code>Object</code><br>
-        Object that accepts `provider` or `protocol` as keys
+        Object that accepts <code>provider</code> or <code>protocol</code> as keys
         which has array of params.
-        Object `provider` accepts an array of strings that identify providers.
-        Currently, no browsers implement `protocol`.
+        Object <code>provider</code> accepts an array of strings that identify providers.
+        Currently, no browsers implement <code>protocol</code>.
       </td>
     </tr>
     <tr>
@@ -91,7 +90,7 @@ A credential includes the following parameters:
       </td>
       <td>
         <code>Boolean</code><br>
-        Value is `true` if you want to avoid showing account chooser UI.
+        Set value to <code>true</code> to avoid showing account chooser UI.
       </td>
     </tr>
   </tbody>
@@ -100,7 +99,7 @@ A credential includes the following parameters:
 ## Determine credential type
 
 Examine the `.type` property,
-to determine wheter to authenticate via your server,
+to determine whether to authenticate via your server,
 or through an identity provider.
 
 If the `.type` is federated,
@@ -134,19 +133,15 @@ if (cred) {
 }
 </pre>
 
-## Authenticate user
+## Authenticate with a server
 
-Once a credential is retrieved,
-authenticate the user either with a server or with an identity provider.
-
-### Authenticate with a server
-
-If a `PasswordCredential` is obtained,
-POST it to your server using `fetch()`, verify the credential,
+To authenticate the user with a server,
+obtain and POST the `PasswordCredential`
+to your server using `fetch()`, verify the credential,
 then let the user sign in.
 
 POST it directly as if it is a `FormData` object using `fetch()`,
-including `id` and `password` (XMLHttpRequest cannot be used).
+including `id` and `password` (`XMLHttpRequest` cannot be used).
 The payload is `multipart/form-data` encoding by default and looks something like this:
 
 <pre class="prettyprint">
@@ -251,10 +246,11 @@ to `.additionalData`.
 In this case,
 the whole credential object is encoded using `application/x-www-form-urlencoded`.
 
-### Authenticate with an identity provider
+## Authenticate with an identity provider
 
-If a `FederatedCredential` is obtained,
-run an identity provider specific authentication flow to authenticate the user.
+To authenticate the user with an identity provider,
+obtain the `FederatedCredential` and
+run an identity provider specific authentication flow.
 For example, if the provider is Google, use the
 [Google Sign-In JavaScript library](https://developers.google.com/identity/sign-in/web/).
 
@@ -278,7 +274,7 @@ return auth2.signIn({
 });
 </pre>
 
-Google Sign-In results in an id token as a proof of authentication
+Google Sign-In results in an `id` token as a proof of authentication
 which you send to the server to create a session,
 but it depends on how you want to manage sessions.
 
@@ -316,7 +312,7 @@ a notification pops up:
 
 <figure>
   <img src="imgs/auto-sign-in.png">
-  <figcaption>Notification pop-up for automatically signed-in user.</figcaption>
+  <figcaption><b>Notification for auto signed-in user</b></figcaption>
 </figure>
 
 In the case of a `null` value,
@@ -341,7 +337,7 @@ The user can select an account to sign-in, for example:
 
 <figure>
   <img src="imgs/account-chooser.png">
-  <figcaption>Account chooser UI, allowing user to select an account to sign-in.</figcaption>
+  <figcaption><b>Account chooser UI</b></figcaption>
 </figure>
 
 To enable the account chooser,
@@ -393,5 +389,5 @@ call `navigator.credentials.get()` with `unmediated: false`.
 
 Moving forward,
 unless signing out again,
-the user is always signed back in whenever coming back to the same website.
+the user is always signed back in whenever they return to the same website.
 
