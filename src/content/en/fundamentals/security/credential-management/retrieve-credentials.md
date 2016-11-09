@@ -68,18 +68,18 @@ A credential includes the following parameters:
       </td>
       <td>
         <code>Boolean</code><br>
-        Set value to <code>true</code> to retrieve <code>PasswordCredentials</code>.
+        Set to <code>true</code> to retrieve <code>PasswordCredentials</code>.
         Defaults to <code>false</code>.
       </td>
     </tr>
     <tr>
       <td>
-        <code>federated/code>
+        <code>federated</code>
       </td>
       <td>
         <code>Object</code><br>
-        Object that accepts <code>provider</code> or <code>protocol</code> as keys
-        which has array of params.
+        Object that accepts <code>provider</code> or <code>protocol</code> as keys,
+        which has an array of params.
         Object <code>provider</code> accepts an array of strings that identify providers.
         Currently, no browsers implement <code>protocol</code>.
       </td>
@@ -90,7 +90,7 @@ A credential includes the following parameters:
       </td>
       <td>
         <code>Boolean</code><br>
-        Set value to <code>true</code> to avoid showing account chooser UI.
+        Set to <code>true</code> to avoid showing account chooser UI.
       </td>
     </tr>
   </tbody>
@@ -141,7 +141,7 @@ to your server using `fetch()`, verify the credential,
 then let the user sign in.
 
 POST it directly as if it is a `FormData` object using `fetch()`,
-including `id` and `password` (`XMLHttpRequest` cannot be used).
+including `id` and `password`. (`XMLHttpRequest` cannot be used.)
 The payload is `multipart/form-data` encoding by default and looks something like this:
 
 <pre class="prettyprint">
@@ -176,11 +176,11 @@ An obtained `PasswordCredential` object includes following parameters:
     </tr>
     <tr>
       <td>
-        <code>password/code>
+        <code>password</code>
       </td>
       <td>
         <code>String</code><br>
-        Opaque password you can't obtain using JavaScript.
+        Opaque password which you can't obtain using JavaScript.
       </td>
     </tr>
     <tr>
@@ -312,7 +312,7 @@ a notification pops up:
 
 <figure>
   <img src="imgs/auto-sign-in.png">
-  <figcaption><b>Notification for auto signed-in user</b></figcaption>
+  <figcaption>Notification for auto signed-in user</figcaption>
 </figure>
 
 In the case of a `null` value,
@@ -322,7 +322,7 @@ A `null` value is passed when:
 
 * The user has not acknowledged the automatic sign-in feature
 (once per browser instance).
-* The user has none or more than two credential objects stored to the origin.
+* The user has either no credentials or more than two credential objects stored on the origin.
 * The user has requested to require user mediation to the origin.
 
 ## Sign in a user via account chooser
@@ -332,12 +332,12 @@ use the account chooser to let the user sign-in,
 skipping the ordinary sign-in form.
 
 The account chooser typically gets invoked
-when the user indicates to sign-in by tapping on the "Sign-In" button.
+when the user taps the "Sign-In" button.
 The user can select an account to sign-in, for example:
 
 <figure>
   <img src="imgs/account-chooser.png">
-  <figcaption><b>Account chooser UI</b></figcaption>
+  <figcaption>Account chooser UI</figcaption>
 </figure>
 
 To enable the account chooser,
@@ -367,7 +367,7 @@ proceed to a sign-in form so that the user can sign in using a different account
 
 ## Disable auto sign-in
 
-When a user signs out from your website,
+When a user signs out of your website,
 it's your responsibility to ensure that the user does not automatically get signed back in.
 To disable auto sign-in,
 call [`navigator.credentials.requireUserMediation()`](https://developer.mozilla.org/en-US/docs/Web/API/CredentialsContainer/requireUserMediation):
@@ -383,7 +383,7 @@ The status is for the same origin and is stored to the browser instance.
 
 To resume auto sign-in, 
 a user can choose to intentionally sign-in,
-for example, by tapping on the "Sign-In" button.
+for example, by tapping the "Sign-In" button.
 In this case,
 call `navigator.credentials.get()` with `unmediated: false`.
 
