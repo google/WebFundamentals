@@ -54,7 +54,7 @@ a notification pops up asking to store a credential
 
 <figure>
   <img src="imgs/store-credential.png">
-  <figcaption><b>Notification for auto signed-in user</b></figcaption>
+  <figcaption>Notification for auto signed-in user</figcaption>
 </figure>
 
 ## Store a credential from a form element
@@ -91,9 +91,7 @@ navigator.credentials.store(cred)
 });
 </pre>
 
-<aside class="note">
-<p><strong>Note:</strong> <span>`.additionalData` also gets added automatically.</span></p>
-</aside>
+<aside class="note"><b>Note:</b>`.additionalData` also gets added automatically.</aside>
 
 ## Store a credential for a federated account
 
@@ -126,7 +124,7 @@ navigator.credentials.store(cred)
 </pre>
 
 Use the `id` string as a user identifer
-when invoking identity provider specific authentication flow,
+when invoking the identity provider specific authentication flow,
 typically as a value for `login_hint` in OAuth.
 
 The `provider` string must be identified by the ASCII serialization of the origin
