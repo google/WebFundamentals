@@ -9,9 +9,8 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Keep users' credential information always sane
-and up-to-date in the password manage
-so users stay engaged.
+Keep credential information always sane and up-to-date
+in the password manager so your users stay engaged.
 
 ### TL;DR {: .hide-from-toc }
 
@@ -19,12 +18,12 @@ so users stay engaged.
 * To store user credentials from a log-in form, use `autocomplete`
 in your input fields and then instatiate the `PasswordCredential` object.
 * To store credentials from a user's federated account,
-use the `FederatedCrendial` object instead of the `PasswordCredential` object.
+use the `FederatedCredential` object instead of the `PasswordCredential` object.
 
 ## Store a user's password credential
 
 After a user successfully signs up,
-signs in, or changes a password on your website,
+signs in, or changes a password,
 store or update the user's credential.
 
 To do so,
@@ -55,12 +54,12 @@ a notification pops up asking to store a credential
 
 <figure>
   <img src="imgs/store-credential.png">
-  <figcaption>Notification pop-up for automatically signed-in user.</figcaption>
+  <figcaption><b>Notification for auto signed-in user</b></figcaption>
 </figure>
 
 ## Store a credential from a form element
 
-Mapping input values in a form into a `PasswordCredential` is non-trivial.
+Mapping form input values into a `PasswordCredential` is non-trivial.
 
 In order to do so,
 you must explicitly annotate input fields in a form and
@@ -72,13 +71,11 @@ using [autocomplete](https://html.spec.whatwg.org/multipage/forms.html#autofill)
 
 Example HTML:
 
-<pre class="prettyprint">
-<form id="form" method="post">
-  <input type="text" name="id" autocomplete="username" />
-  <input type="password" name="password" autocomplete="current-password" />
-  <input type="hidden" name="csrf_token" value="*****" />
-</form>
-</pre>
+    <form id="form" method="post">
+      <input type="text" name="id" autocomplete="username" />
+      <input type="password" name="password" autocomplete="current-password" />
+      <input type="hidden" name="csrf_token" value="*****" />
+    </form>
 
 Then instantial the `PasswordCredential` object to auto-assign values.
 
