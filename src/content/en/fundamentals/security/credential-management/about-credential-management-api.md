@@ -21,10 +21,8 @@ Let the user sign back in if a session has expired.
 * <strong>Disable auto sign-in:</strong>
 Once a user signs out, disable automatic sign-in for the user's next visit.
 
-<aside class="note">
-<p><strong>Note:</strong> <span>This API must be used on secure origins
-on top level context.</span></p>
-</aside>
+<aside class="note"><b>Note:</b>This API must be used on secure origins
+on top level context.</aside>
 
 ## User sign-in flow
 
