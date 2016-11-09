@@ -39,7 +39,7 @@ register a new account, or sign-in using a previously registered account.
 <div class="attempt-right">
   <figure>
     <video src="animations/credential-management-smaller.mov" autoplay muted loop controls></video>
-    <figcaption><b>User Sign-in Flow</b></figcaption>
+    <figcaption>User Sign-in Flow</figcaption>
   </figure>
 </div>
 
