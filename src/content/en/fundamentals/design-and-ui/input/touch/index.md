@@ -38,7 +38,10 @@ to the following pseudo classes `:hover`, `:focus` and `:active` as shown below:
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="btnstates" adjust_indentation="auto" %}
 </pre>
 
-![Image illustrating different colors for button states](images/button-states.png)
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+
+![Image illustrating different colors for button
+states](images/button-states.png)
 
 On most mobile browsers *hover* and/or *focus* states will apply to an element
 after it's been tapped.
@@ -46,15 +49,17 @@ after it's been tapped.
 Consider carefully what styles you set and how they will look to the user after
 they finish their touch.
 
-Note: Anchor tags and buttons may have different behavior in different browsers, so assume in some cases **hover** will remain and in others **focus** will remain.
+Note: Anchor tags and buttons may have different behavior
+in different browsers, so assume in some cases **hover**
+will remain and in others **focus** will remain.
 
 ### Suppressing default browser styles
 
 Once you add styles for the different states, you'll notice that most browsers
 implement their own styles in response to a user’s touch. This is largely
 because when mobile devices first launched, a number of sites didn’t
-have styling for the `:active` state. As a result, many browsers added additional
-highlight color or style to give the user feedback.
+have styling for the `:active` state. As a result, many browsers added
+additional highlight color or style to give the user feedback.
 
 Most browsers use the `outline` CSS property to display a ring around an
 element when an element is focused. You can suppress it with:
@@ -71,6 +76,8 @@ Safari and Chrome add a tap highlight color which can be prevented with the
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="webkit-specific" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
 
 Internet Explorer on Windows Phone has a similar behavior, but is suppressed
 via a meta tag:
@@ -89,15 +96,21 @@ applied, which you can remove by setting `background-image: none`.
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/states-example.html" region_tag="ff-specific" adjust_indentation="auto" %}
 </pre>
 
-Caution: Only suppress the default styles mentioned above if you have pseudo classes for `:hover`, `:active` and `:focus`!
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/states-example.html){: target="_blank" .external }
+
+Caution: Only suppress the default styles mentioned above if you have pseudo
+classes for `:hover`, `:active` and `:focus`!
 
 ### Disabling user-select
 
-If you are crafting an experience for touch you may want to make parts of
-your UI which can't have text select, elements like buttons or form input.
-You can do this by setting  the `user-select` CSS property, but beware that
-doing this on content users want to select can be *extremely* infuriating
-for users.
+When you're creating your UI there may be scenarios where you want users
+to interact with your elements but you want to suppress the default behavior
+of selecting text on long press or dragging a mouse over your UI.
+
+You can do this with the `user-select` CSS property, but beware that
+doing this on content can be **extremely** infuriating
+for users if they *want* to select the text in the element.
+So make sure you use it with caution and sparingly.
 
     user-select: none;
 
@@ -117,7 +130,10 @@ Depending on what you would like your gesture to do, you likely want the
 user to interact with one element at a time *or* you'll want them to be able
 to interact with multiple elements at the same time.
 
-Caution: Don't forget that some users will want keyboard input and users running assistive technology on a touchscreen device may not be able to perform gestures because they're intercepted / consumed by the assistive technology.
+Caution: Don't forget that some users will want keyboard input and users
+running assistive technology on a touchscreen device may not be able to
+perform gestures because they're intercepted / consumed by the assistive
+technology.
 
 We are going to look at two examples in this article, both demonstrating
 support for all browsers and how to keep the frame rate high.
@@ -147,8 +163,8 @@ the UI and is less resilient to user error.
 
 ### Add event listeners
 
-In Chrome (version 55 and later) and Internet Explorer + Edge `PointerEvents` are
-the recommended approach for implementing custom gestures.
+In Chrome (version 55 and later), Internet Explorer & Edge,
+`PointerEvents` are the recommended approach for implementing custom gestures.
 
 In other browsers `TouchEvents` and `MouseEvents` are the correct approach.
 
@@ -177,7 +193,10 @@ Here's an example of listening for the start of an interaction.
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="addlisteners" adjust_indentation="auto" %}
 </pre>
 
-Note: Because of the design of the API, PointerEvents only need a single `pointerdown` event to handle both mouse and touch events.
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+
+Note: Because of the design of the API, PointerEvents only need a single
+`pointerdown` event to handle both mouse and touch events.
 
 #### Handle single-element interaction
 
@@ -198,7 +217,7 @@ The steps taken to implement this are:
 1. Add all TouchEvent and PointerEvent listeners. For MouseEvents add **only**
    the start event.
 1. Inside the start gesture callback, bind the mouse move and end events to
-   the document. This way all mouse events and received regardless of whether
+   the document. This way all mouse events are received regardless of whether
    the event occurs on the original element or not. For PointerEvents we
    need to call `setPointerCapture()` on our original element to receive
    all further events. Then handle the start of the gesture.
@@ -213,6 +232,8 @@ and end events to the document:
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-start-gesture" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
+
 The end callback we add is `handleGestureEnd()`, which removes the move
 and end event listeners from the document and releases the pointer capture
 when the gesture has finished like so:
@@ -220,6 +241,8 @@ when the gesture has finished like so:
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="handle-end-gesture" adjust_indentation="auto" %}
 </pre>
+
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-1.html){: target="_blank" .external }
 
 <div class="attempt-left">
   <p>By following this pattern of adding the move event to the document, if the
@@ -231,29 +254,39 @@ when the gesture has finished like so:
   move and end events to the document once a gesture begins.</p>
 </div>
 
-![Illustrating binding touch events to document in `touchstart`](images/scroll-bottleneck.gif)
+![Illustrating binding touch events to document in
+`touchstart`](images/scroll-bottleneck.gif)
 
 <div class="clearfix"></div>
 
 ### Responding to touch efficiently
 
-Now that we have the start and end events taken care of we can actually respond to the touch events.
+Now that we have the start and end events taken care of we can actually
+respond to the touch events.
 
 For any of the start and move events, you can easily extract `x` and `y`
 from an event.
 
-The following example checks whether the event is from a `TouchEvent` by checking if `targetTouches` exists. If it does, then it extracts the `clientX` and `clientY` from the first touch.
-If the event is a `PointerEvent` or `MouseEvent` it extracts `clientX` and `clientY` directly from the event itself.
+The following example checks whether the event is from a `TouchEvent` by
+checking if `targetTouches` exists. If it does, then it extracts the
+`clientX` and `clientY` from the first touch.
+If the event is a `PointerEvent` or `MouseEvent` it extracts `clientX` and
+`clientY` directly from the event itself.
 
 <pre class="prettyprint">
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-2.html" region_tag="extract-xy" adjust_indentation="auto" %}
 </pre>
 
+[Try it](https://googlesamples.github.io/web-fundamentals/fundamentals/design-and-ui/input/touch/touch-demo-2.html){: target="_blank" .external }
+
 A `TouchEvent` has three lists containing touch data:
 
-* `touches`: list of all current touches on the screen, regardless of DOM element they are on.
-* `targetTouches`: list of touches currently on the DOM element the event is bound to.
-* `changedTouches`: list of touches which changed resulting in the event being fired.
+* `touches`: list of all current touches on the screen, regardless of
+DOM element they are on.
+* `targetTouches`: list of touches currently on the DOM element the event
+is bound to.
+* `changedTouches`: list of touches which changed resulting in the event
+being fired.
 
 In most cases, `targetTouches` gives you everything you need and want. (For
 more info on these lists see [Touch lists](#touch-lists)).
@@ -320,11 +353,11 @@ to intercept all of the touch events.
 
 Using `touch-action: none` is somewhat a nuclear option as it prevents all
 the default browser behaviors. In many cases one of the options
-belows is a better solution.
+below is a better solution.
 
 `touch-action` allows you to disable gestures implemented by a browser.
-For example, IE10+ supports a double-tap to zoom gesture. By setting a touch-action
-of `manipulation` you prevent the default double-tap
+For example, IE10+ supports a double-tap to zoom gesture. By setting a
+touch-action of `manipulation` you prevent the default double-tap
 behavior.
 
 This allows you to implement a double-tap gesture yourself.
@@ -340,17 +373,19 @@ Below is a list of commonly used touch-action values:
   <tbody>
     <tr>
       <td data-th="Property"><code>touch-action: none</code></td>
-      <td data-th="Description">No touch interactions will be handled by the browser.</td>
+      <td data-th="Description">No touch interactions will be handled by
+      the browser.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>touch-action: pinch-zoom</code></td>
       <td data-th="Description">Disables all browser interactions like
-      `touch-action: none` apart from pinch-zoom, which is still handled by the
-      browser.</td>
+      `touch-action: none` apart from `pinch-zoom`, which is still handled by
+      the browser.</td>
     </tr>
     <tr>
       <td data-th="Property"><code>touch-action: pan-y pinch-zoom</code></td>
-      <td data-th="Description">Handle horizontal scrolls in JavaScript without disabling vertical scrolling or pinch-zooming (eg. image carousels).</td>
+      <td data-th="Description">Handle horizontal scrolls in JavaScript without
+      disabling vertical scrolling or pinch-zooming (eg. image carousels).</td>
     </tr>
     <tr>
       <td data-th="Property"><code>touch-action: manipulation</code></td>
@@ -381,7 +416,8 @@ the event names.
 {% includecode content_path="web/fundamentals/design-and-ui/input/touch/_code/touch-demo-1.html" region_tag="pointereventsupport" adjust_indentation="auto" %}
 </pre>
 
-For more information, checkout this [updates article from Microsoft](https://msdn.microsoft.com/en-us/library/dn304886(v=vs.85).aspx).
+For more information, checkout this [updates article from
+Microsoft](https://msdn.microsoft.com/en-us/library/dn304886(v=vs.85).aspx).
 
 ## Reference
 
@@ -524,18 +560,26 @@ Each touch event includes three list attributes:
         List of touches which changed resulting in the event being fired:
         <ul>
           <li>
-            For the <code><a href="http://www.w3.org/TR/touch-events/#dfn-touchstart">touchstart</a></code>
+            For the <code>
+            <a href="http://www.w3.org/TR/touch-events/#dfn-touchstart">
+            touchstart</a></code>
             event-- list of the touch points that just became active with the
             current event.
           </li>
           <li>
-            For the <code><a href="http://www.w3.org/TR/touch-events/#dfn-touchmove">touchmove</a></code>
+            For the <code>
+            <a href="http://www.w3.org/TR/touch-events/#dfn-touchmove">
+            touchmove</a></code>
             event-- list of the touch points that have moved since the last
             event.
           </li>
           <li>
-            For the <code><a href="http://www.w3.org/TR/touch-events/#dfn-touchend">touchend</a></code>
-            and <code><a href="http://www.w3.org/TR/touch-events/#dfn-touchcancel">touchcancel</a></code>
+            For the <code>
+            <a href="http://www.w3.org/TR/touch-events/#dfn-touchend">
+            touchend</a></code>
+            and <code>
+            <a href="http://www.w3.org/TR/touch-events/#dfn-touchcancel">
+            touchcancel</a></code>
             events-- list of the touch points that have just been removed
             from the surface.
           </li>
