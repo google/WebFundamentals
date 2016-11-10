@@ -1,11 +1,11 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A guide to designing UX for slow networks and offline.
+description: A guide to designing for slow networks and offline.
 
 {# wf_updated_on: 2016-11-10 #}
 {# wf_published_on: 2016-11-10 #}
 
-# From Lie-fi To WI-FI: A Guide To Designing UX For Slow Networks and Offline {: .page-title }
+# From Lie-fi To WI-FI: A Guide To Designing For Slow Networks and Offline {: .page-title }
 
 {% include "web/_shared/contributors/mustafa.html" %}
 
