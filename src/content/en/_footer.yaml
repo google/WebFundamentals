@@ -26,11 +26,11 @@ footer:
   - name: Contribute to WebFundamentals
     icon_name: track_changes
     contents:
-    - label: Submit Feedback
+    - label: File Issue
       path: https://github.com/google/WebFundamentals/issues
     - label: View Page Source
       path: https://github.com/google/WebFundamentals
-    - label: Style Guide & More for WebFundamentals
+    - label: WebFundamentals Resources
       path: /web/resources/
 
   - name: Learn
@@ -52,7 +52,7 @@ footer:
       path: /web/feedback/
     - label: Chrome Extension Docs
       path: https://developers.chrome.com/extensions/api_index
-    - title: Chrome DevTools
+    - label: Chrome DevTools
       path: /web/tools/chrome-devtools/
     - label: Physical Web
       path: https://google.github.io/physical-web/
