@@ -82,8 +82,8 @@ To retrieve user credentials:
 2. If auto sign-in didn't happen, try sign-in upon user tapping on "Sign-In" 
    button by calling `navigator.credential.get()` with `unmediated: false`.
 3. Once a credential is retrieved, authenticate depending on the credential
-   type: [PasswordCredential](/web/fundamentals/security/credential-management/retrieve-credentials#authenticate_with_a_server)
-   or [FederatedCredential](/web/fundamentals/security/credential-management/retrieve-credentials#authenticate_with_an_identity_provider).
+   type: [`PasswordCredential`](/web/fundamentals/security/credential-management/retrieve-credentials#authenticate_with_a_server)
+   or [`FederatedCredential`](/web/fundamentals/security/credential-management/retrieve-credentials#authenticate_with_an_identity_provider).
 
 Learn more in
 [Retrieve Credentials](/web/fundamentals/security/credential-management/retrieve-credentials).
