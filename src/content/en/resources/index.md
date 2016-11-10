@@ -6,10 +6,10 @@ book_path: /web/resources/_book.yaml
 
 # Resources {: .page-title }
 
-Want to get involved in [/web](/web/)? We'd love our
+Want to get involved in [/web](/web/)? We **love** our
 [contributors](contributors). By submitting bug reports, pull requests and
 helping to [translate](translations) content into more than 15 different
-languages, they've helped to make [/web](/web/) and the web better!
+languages, **you've** helped to make [/web](/web/) and the web better!
 
 ## Found an issue or something need to be updated?
 

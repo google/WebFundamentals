@@ -21,6 +21,6 @@ google_analytics_ids:
 - UA-52746336-1
 
 announcement:
-  description: Don't miss out on the action at this year's <a href="https://developer.chrome.com/devsummit/">Chrome Dev Summit</a>, happening on Nov 10th & 11th. <a href="https://services.google.com/fb/forms/cds2016/">Register for livestream updates</a>.
-  start: '2016-10-09T08:00:00Z'
-  end: '2016-11-11T08:00:00Z'
+  description: Don't miss out on the action at this year's Chrome Dev Summit, <a href="https://developer.chrome.com/devsummit/">watch live now</a>!
+  start: '2016-11-10T09:00:00Z'
+  end: '2016-11-12T02:00:00Z'
