@@ -8,12 +8,12 @@ book_path: /web/showcase/_book.yaml
 
 # Alibaba {: .page-title }
 
-<img src="images/alibaba/featured.gif" class="attempt-right">
+<img src="images/alibaba/featured.png" class="attempt-right">
 
 ### TL;DR {: .hide-from-toc }
 
-Alibaba.com increases conversions on the mobile web by 76% with
-Progressive Web App
+**Alibaba.com increases conversions on the mobile web by 76% with
+Progressive Web App.**
 
 ### Results
 
@@ -23,6 +23,9 @@ Progressive Web App
 
 <span class="compare-yes"></span> 4X higher interaction rate from Add to Homescreen
 
+<a class="button button-primary" href="pdfs/alibaba.pdf">
+  Download PDF Case study
+</a>
 
 ## About Alibaba
 

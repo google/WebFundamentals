@@ -4,18 +4,16 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2016-11-09T20:00:00.000Z #}
 {# wf_updated_on: 2016-11-09T20:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2016/images/weather-channel/card.png #}
-{# wf_featured_snippet: The Weather Company, an IBM Business, serves an average of 40 billion forecast
-requests every day, helping people plan their daily lives and make better
-decisions based on weather. #}
+{# wf_featured_snippet: The Weather Company, an IBM Business, serves an average of 40 billion forecast requests every day, helping people plan their daily lives and make better decisions based on weather. #}
 
 # The Weather Channel {: .page-title }
 
-<img src="images/weather-channel/featured.gif" class="attempt-right">
+<img src="images/weather-channel/featured.png" class="attempt-right">
 
 ### TL;DR {: .hide-from-toc }
 
-The Weather Channel sees mobile web success with Progressive Web App,
-launching in 62 languages to 178 countries
+**The Weather Channel sees mobile web success with Progressive Web App,
+launching in 62 languages to 178 countries.**
 
 ### Results
 
@@ -26,6 +24,10 @@ languages and 178 countries
 
 <span class="compare-yes"></span> Based on this successful global test, the
 team will expand the PWA to its U.S. site in 2017
+
+<a class="button button-primary" href="pdfs/weather-channel.pdf">
+  Download PDF Case study
+</a>
 
 ## About The Weather Channel
 

@@ -4,20 +4,16 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2016-11-09T21:00:00.000Z #}
 {# wf_updated_on: 2016-11-09T21:00:00.000Z #}
 {# wf_featured_image: /web/showcase/2016/images/carnival/card.png #}
-{# wf_featured_snippet: Carnival Cruise Line, one of the world’s largest leisure-travel companies,
-wanted to enhance how it re-engaged its customers. Working with
-Mobify, Carnival implemented push notifications for mobile web users on Android
-and for desktop users on Chrome. The new strategy delivered a 42% engagement
-rate from customers who receive notifications. #}
+{# wf_featured_snippet: Carnival Cruise Line, one of the world’s largest leisure-travel companies, wanted to enhance how it re-engaged its customers. Working with Mobify, Carnival implemented push notifications for mobile web users on Android and for desktop users on Chrome. The new strategy delivered a 42% engagement rate from customers who receive notifications. #}
 
 # Carnival Cruise Line {: .page-title }
 
-<img src="images/carnival/featured.gif" class="attempt-right">
+<img src="images/carnival/card.png" class="attempt-right">
 
 ### TL;DR {: .hide-from-toc }
 
-Carnival Cruise Line provides personalized, engaging communication service for
-its customers with push notifications
+**Carnival Cruise Line provides personalized, engaging communication service for
+its customers with push notifications.**
 
 ### Results
 
@@ -25,6 +21,10 @@ its customers with push notifications
 desktop, 32% on mobile)
 
 <span class="compare-yes"></span> 42% open rate
+
+<a class="button button-primary" href="pdfs/carnival.pdf">
+  Download PDF Case study
+</a>
 
 ## About Carnival Cruise Line
 
