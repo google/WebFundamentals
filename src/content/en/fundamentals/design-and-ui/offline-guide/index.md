@@ -9,7 +9,8 @@ description: A guide to designing UX for slow networks and offline.
 
 {% include "web/_shared/contributors/mustafa.html" %}
 
-This article will take a look at multiple design considerations needed to create a great experience on both slow networks and offline. 
+This article will take a look at multiple design considerations needed to 
+create a great experience on both slow networks and offline. 
 
 The quality of a network connection can be affected by a number of factors such as:
 
@@ -19,11 +20,13 @@ The quality of a network connection can be affected by a number of factors such 
 
 * Power outages.
 
-* Users travelling into “dead zones” such as buildings that block their network connections. 
+* Users travelling into “dead zones” such as buildings that block their network 
+  connections. 
 
 * Travelling on a train and going through a tunnel.
 
-* Internet connection is managed by a third party and time boxed when it will be active or inactive like in an airport or hotel.
+* Internet connection is managed by a third party and time boxed when it will be 
+  active or inactive like in an airport or hotel.
 
 * Cultural practises that require limited or no internet access at specific times or days.
 
@@ -31,7 +34,10 @@ Your goal is to provide a good experience that lessens the impact of changes in 
 
 ## What to show your users when they have a bad network connection?
 
-The first question that must be asked is: what does success and failure of a network connection look like? A successful connection is your app's normal online experience. The failure of a connection however can be both the offline state of your app as well how the app behaves when there is a laggy network. 
+The first question that must be asked is: what does success and failure of a
+network connection look like? A successful connection is your app's normal
+online experience. The failure of a connection however can be both the offline
+state of your app as well how the app behaves when there is a laggy network. 
 
 When thinking about the success or failure of a network connection you need to ask yourself these important UX questions: 
 
