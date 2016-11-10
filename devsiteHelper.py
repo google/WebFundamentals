@@ -415,7 +415,7 @@ def getFooterLinkBox(lang='en'):
         for linkItem in linkBox['contents']:
           result += '<li class="devsite-footer-linkbox-item">'
           result += '<a href="' + linkItem['path'] + '">'
-          result += linkItem['title'] + '</a></li>'
+          result += linkItem['label'] + '</a></li>'
         result += '</ul>'
         result += '</li>'
       setMemCache(memcacheKey, result)
