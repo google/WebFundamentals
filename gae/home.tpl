@@ -90,84 +90,14 @@
         <footer class="devsite-footer-promos nocontent">
           <nav class="devsite-full-site-width">
             <ul class="devsite-footer-promos-list">
-              <li class="devsite-footer-promo">
-                <a href="#" class="devsite-footer-promo-title">
-                  <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/system/2x/stars_black_48dp.png">
-                  Title
-                </a>
-                <div class="devsite-footer-promo-description">
-                  Lorem ipsum something this that or the other thing.
-                </div>
-              </li>
-              <li class="devsite-footer-promo">
-                <a href="#" class="devsite-footer-promo-title">
-                  <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/system/2x/thumb_up_black_48dp.png">
-                  Title
-                </a>
-                <div class="devsite-footer-promo-description">
-                  Lorem ipsum something this that or the other thing.
-                </div>
-              </li>
-              <li class="devsite-footer-promo">
-                <a href="#" class="devsite-footer-promo-title">
-                  <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/system/2x/pets_black_48dp.png">
-                  Title
-                </a>
-                <div class="devsite-footer-promo-description">
-                  Lorem ipsum something this that or the other thing.
-                </div>
-              </li>
-              <li class="devsite-footer-promo">
-                <a href="#" class="devsite-footer-promo-title">
-                  <img class="devsite-footer-promo-icon" src="https://www.gstatic.com/images/icons/material/system/2x/favorite_black_48dp.png">
-                  Title
-                </a>
-                <div class="devsite-footer-promo-description">
-                  Lorem ipsum something this that or the other thing.
-                </div>
-              </li>
+              {% autoescape off %}{{footerPromo}}{% endautoescape %}
             </ul>
           </nav>
         </footer>
         <footer class="devsite-footer-linkboxes nocontent">
           <nav class="devsite-full-site-width">
             <ul class="devsite-footer-linkboxes-list">
-              <li class="devsite-footer-linkbox">
-                <h3 class="devsite-footer-linkbox-heading">Heading</h3>
-                <ul class="devsite-footer-linkbox-list">
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                </ul>
-              </li>
-              <li class="devsite-footer-linkbox">
-                <h3 class="devsite-footer-linkbox-heading">Heading</h3>
-                <ul class="devsite-footer-linkbox-list">
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                </ul>
-              </li>
-              <li class="devsite-footer-linkbox">
-                <h3 class="devsite-footer-linkbox-heading">Heading</h3>
-                <ul class="devsite-footer-linkbox-list">
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                </ul>
-              </li>
-              <li class="devsite-footer-linkbox">
-                <h3 class="devsite-footer-linkbox-heading">Heading</h3>
-                <ul class="devsite-footer-linkbox-list">
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                  <li class="devsite-footer-linkbox-item"><a href="#">Lorem Ipsum</a></li>
-                </ul>
-              </li>
+              {% autoescape off %}{{footerLinks}}{% endautoescape %}
             </ul>
           </nav>
         </footer>

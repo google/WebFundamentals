@@ -17,7 +17,6 @@ def getPage(requestPath, lang):
   title = 'Web Fundamentals'
   leftNav = '- No Left Nav Found - '
   toc = '- No TOC Found - '
-  banner = devsiteHelper.getAnnouncementBanner(lang)
   template = 'gae/article.tpl'
   fileLocations = [
     os.path.join(SOURCE_PATH, lang, requestPath) + '.md',
@@ -132,11 +131,12 @@ def getPage(requestPath, lang):
       gitHubIssueUrl += lang + ']&body='
       gitHubIssueUrl += gitHubEditUrl
 
+      x = devsiteHelper.getFooterPromo()
 
       # Renders the content into the template
       response = render(template, {
         'title': title,
-        'announcementBanner': banner,
+        'announcementBanner': devsiteHelper.getAnnouncementBanner(lang),
         'gitHubIssueUrl': gitHubIssueUrl,
         'gitHubEditUrl': gitHubEditUrl,
         'requestPath': requestPath.replace('index', ''),
@@ -144,7 +144,10 @@ def getPage(requestPath, lang):
         'content': content,
         'toc': toc,
         'dateUpdated': dateUpdated,
-        'lang': lang}
+        'lang': lang,
+        'footerPromo': devsiteHelper.getFooterPromo(),
+        'footerLinks': devsiteHelper.getFooterLinkBox()
+        }
       )
       break
 
