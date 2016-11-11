@@ -30,7 +30,7 @@ landing_page:
         responsive web experiences. 
       icon:
         path: /web/images/web-fundamentals-icon192x192.png
-      path: /web/events/
+      path: /web/fundamentals/
     - heading: Tools
       description: >
         Discover tools that can help you kickstart your development and 
@@ -44,7 +44,7 @@ landing_page:
         and more.
       icon:
         icon_name: whatshot
-      path: /web/shows/
+      path: /web/updates/
 
 
 
