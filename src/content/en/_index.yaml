@@ -37,7 +37,7 @@ landing_page:
         improve your workflow.
       icon:
         icon_name: build
-      path: /web/feedback/
+      path: /web/tools/
     - heading: Updates
       description: >
         Stay up to date on new web platform features, changes to Chrome
