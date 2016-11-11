@@ -353,9 +353,12 @@ mediation モードを有効にすることができます。
 それをあなたの Chrome 拡張機能にフックすることはできるかもしれません。
 
 ## リソース
+より深く Credential Management API を学ぶには、[Integration Guide](https://developers.google.com/web/fundamentals/security/credential-management/) をご覧下さい。
+
 * [API 仕様](https://www.w3.org/TR/credential-management/)
 * [仕様のディスカッションとフィードバック](https://github.com/w3c/webappsec-credential-management)
 * [MDN API リファレンス](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
+* [Credential Management API インテグレーションガイド](https://developers.google.com/web/fundamentals/security/credential-management/)
 * [デモ](https://credential-management-sample.appspot.com)
 * [デモのソースコード](https://github.com/GoogleChrome/credential-management-sample)
 * [コードラボ "Enabling auto sign-in with Credential Management API"](https://g.co/codelabs/cmapi)
