@@ -365,12 +365,12 @@ You may override `navigator.credentials` and hook it to your Chrome Extension to
 `get()` or  `store()` credentials.
 
 ## Resources
-To learn more about the Credential Management API, checkout [Integration Guide](https://developers.google.com/web/fundamentals/security/credential-management/).
+To learn more about the Credential Management API, checkout [Integration Guide](/web/fundamentals/security/credential-management/).
 
 * [API Specification](https://www.w3.org/TR/credential-management/)
 * [Spec discussions & feedback](https://github.com/w3c/webappsec-credential-management)
 * [MDN API Reference](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
-* [Credential Management API Integration Guide](https://developers.google.com/web/fundamentals/security/credential-management/)
+* [Credential Management API Integration Guide](/web/fundamentals/security/credential-management/)
 * [Demo](https://credential-management-sample.appspot.com)
 * [Demo source code](https://github.com/GoogleChrome/credential-management-sample)
 * [Codelab "Enabling auto sign-in with Credential Management API"](https://g.co/codelabs/cmapi)
