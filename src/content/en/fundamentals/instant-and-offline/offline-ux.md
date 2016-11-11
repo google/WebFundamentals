@@ -1,34 +1,33 @@
 project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
-description: A guide to designing for slow networks and offline.
+description: A guide to designing web experiences for slow networks and offline.
 
 {# wf_updated_on: 2016-11-10 #}
 {# wf_published_on: 2016-11-10 #}
 
-# From Lie-fi To WI-FI: A Guide To Designing User Experiences For Slow Networks and Offline {: .page-title }
+# Offline UX Considerations {: .page-title }
 
 {% include "web/_shared/contributors/mustafa.html" %}
 
 This article will take a look at multiple design considerations needed to create
 a great experience on both slow networks and offline.
 
-The quality of a network connection can be affected by a number of factors such as:
+The quality of a network connection can be affected by a number of factors
+such as:
 
 * Poor coverage of a provider. 
-
 * Extreme weather conditions.
-
 * Power outages.
-
-* Users travelling into “dead zones” such as buildings that block their network connections. 
-
+* Users travelling into “dead zones” such as buildings that block their
+  network connections. 
 * Travelling on a train and going through a tunnel.
+* Internet connection is managed by a third party and time boxed when it
+  will be active or inactive like in an airport or hotel.
+* Cultural practises that require limited or no internet access at specific
+  times or days.
 
-* Internet connection is managed by a third party and time boxed when it will be active or inactive like in an airport or hotel.
-
-* Cultural practises that require limited or no internet access at specific times or days.
-
-Your goal is to provide a good experience that lessens the impact of changes in connectivity. 
+Your goal is to provide a good experience that lessens the impact of changes
+in connectivity. 
 
 ## What to show your users when they have a bad network connection?
 
@@ -41,11 +40,8 @@ When thinking about the success or failure of a network connection you need to
 ask yourself these important UX questions:
 
 * How long do you wait to determine success or failure of a connection? 
-
 * What can you do while success or failure is being determined? 
-
 * What should you do in the event of failure?
-
 * How do you inform the user of the above?
 
 ### Inform users of their current state and change of state
@@ -59,27 +55,34 @@ could say:
 
 <figure class="attempt-left">
   <img src="images/emojoy-toast-message.png" alt="Emojoy, the emoji messaging app informing the user when a change in state occurs.">
-  <figcaption>Clearly inform the user when a change in state occurs as soon as possible. </figcaption>
+  <figcaption>
+    Clearly inform the user when a change in state occurs as soon as possible.
+  </figcaption>
 </figure>
 <figure class="attempt-right">
   <img src="images/io-toast-message.png" alt="The I/O 2016 app informing the user when a change in state occurs.">
-  <figcaption>The Google I/O app used a material design "toast" to let the user know when it was offline.</figcaption>
+  <figcaption>
+    The Google I/O app used a material design "toast" to let the user know when it was offline.
+  </figcaption>
 </figure>
 
 <div class="clearfix"></div>
 
 ### Network connection improves or is restored
 
+<figure class="attempt-right">
+  <img src="images/weather-app.png" alt="An example of a weather app.">
+  <figcaption>
+    Some apps, like this weather app, need to auto update as old data is not of use to the user.
+  </figcaption>
+</figure>
+
 How you deal with informing the user once their network connection has improved
 will depend largely on your application. For apps that require update
 information displayed as a priority such as a stock market app, auto-updating
 and notifying the user as soon as possible is crucial.
 
-<figure >
-  <img src="images/weather-app.png" alt="An example of a weather app.">
-  <figcaption>Some apps, like this weather app, need to auto update as old data is not of use to the user.
-</figcaption>
-</figure>
+<div class="clearfix"></div>
 
 You may also show the last time the app was updated at all times in a prominent
 space. This would also be useful for a currency convertor app, for example.
@@ -87,8 +90,10 @@ space. This would also be useful for a currency convertor app, for example.
 <figure>
   <img class="attempt-left" src="images/material-money-rates-out-of-date.png" alt="Material money app that is out-of-date">
   <img class="attempt-right" src="images/material-money-rates-updated.png" alt="Material money has been updated">
-  <figcaption class="clearfix">Material Money shows the latest currency where possible and notifies the user when the app hasn’t been updated.
-</figcaption>
+  <figcaption class="clearfix">
+    Material Money shows the latest currency where possible and notifies the
+    user when the app hasn’t been updated.
+  </figcaption>
 </figure>
 
 Other applications such as a news app could show a simple notification informing
@@ -100,8 +105,10 @@ refresh the page and they would lose where they were reading last.
 <figure>
   <img class="attempt-left" src="images/tailpiece-normal.png" alt="Example news app, Tailpiece in its normal state">
   <img class="attempt-right" src="images/tailpiece-tap-to-update.png" alt="Example news app, Tailpiece when its ready to be updated">
-  <figcaption class="clearfix">Tailpiece, an online newspaper will auto download the latest news but allow the users to refresh manually so they do not lose their place in the article.
-</figcaption>
+  <figcaption class="clearfix">
+    Tailpiece, an online newspaper will auto download the latest news but
+    allow the users to refresh manually so they do not lose their place in the article.
+  </figcaption>
 </figure>
 
 ### Contextual states and browse mode
@@ -145,15 +152,18 @@ make this the priority data that is downloaded.
 <figure>
   <img class="attempt-left" src="images/tailpiece-offline.png" alt="Tailpiece informs the user that they are offline with various design widgets">
   <img class="attempt-right" src="images/tailpiece-offline-sidebar.png" alt="Tailpiece has a navigational draw that shows what sections are ready for offline use.">
-  <figcaption class="clearfix">If the device is offline Tailpiece will notify 
-    the user with a status message letting them know that they can still use the app.
-</figcaption>
+  <figcaption class="clearfix">
+    If the device is offline Tailpiece will notify the user with a status
+    message letting them know that they can still use the app.
+  </figcaption>
 </figure>
 
 ## Inform the user when the app is ready for offline consumption 
 
 When a web app first loads you need to indicate to the user if it is ready
-for offline use. Do this with a [widget that provides brief feedback](https://material.google.com/components/snackbars-toasts.html "widget that provides brief feedback"){:target="_blank" .external} about an operation through a message at the bottom of the screen, 
+for offline use. Do this with a
+[widget that provides brief feedback](https://material.google.com/components/snackbars-toasts.html "widget that provides brief feedback")
+about an operation through a message at the bottom of the screen, 
 for example when a section has been synced or a data file has downloaded.
 
 Again think of the language you are using to make sure it is fit for your
@@ -165,7 +175,10 @@ use action based language that your audience can relate to.
 <figure>
   <img class="attempt-left" src="images/io-offline-ready.png" alt="I/O app offline">
   <img class="attempt-right" src="images/chome-offline.png" alt="Chrome Status site is offline">
-  <figcaption class="clearfix">Both the Google I/O 2016 app and Chrome Status site notify the user when the app is ready for offline use.</figcaption>
+  <figcaption class="clearfix">
+    Both the Google I/O 2016 app and Chrome Status site notify the user when
+    the app is ready for offline use.
+  </figcaption>
 </figure>
 
 ### Make 'save for offline' an obvious part of the interface for data heavy apps
@@ -309,12 +322,11 @@ status. Think of the action you are trying to convey rather than presenting the
 user with an abstract concept. For example save or download data would be action
 based.
 
-<figure>
-  <img src="images/download-icons-exampels.png" alt="Various icon examples that convey offline">
-</figure>
+<img src="images/download-icons-exampels.png" alt="Various icon examples that convey offline">
 
 Offline can mean a number of things depending on the context, such as download, 
-export, pin etc.. For more inspiration checkout the [material design icon set](https://material.io/icons/ "material design icon set"){:target="_blank" .external}.
+export, pin etc.. For more inspiration checkout the
+[material design icon set](https://material.io/icons/ "material design icon set")
 
 ### Use skeleton layouts with other feedback mechanism 
 
@@ -329,7 +341,9 @@ resubmissions or refreshes of your app.
 <figure>
   <img class="attempt-left" src="images/tailpiece-skel-article.png" alt="Skeleton layout example">
   <img class="attempt-right" src="images/tailpiece-normal.png" alt="loaded article example">
-  <figcaption class="clearfix">Before and after of a skeleton layout.</figcaption>
+  <figcaption class="clearfix">
+    Before and after of a skeleton layout.
+  </figcaption>
 </figure>
 
 ### Don’t block content
@@ -373,27 +387,19 @@ is the same as offlining data.
 
 When designing for unstable network connections, use these: 
 
-* Think how you design for the success, failure and instability of a network connection.
-
+* Think how you design for the success, failure and instability of a
+  network connection.
 * Data may be expensive, so be considerate to the user.
-
 * For most users globally, the tech environment is almost exclusively mobile.
-
 * Low end devices are commonplace, with limited storage, memory and processing 
-power and, small displays and lower touchscreen quality. Make sure performance 
-is a part of your design process. 
-
+  power and, small displays and lower touchscreen quality. Make sure performance 
+  is a part of your design process. 
 * Allow users to browser your application when they are offline.
-
 * Inform users of their current state and of changes in states.
-
 * Try to provide offline by default if your app doesn't require much data.
-
-* If the app is data-heavy, educate users about how they can download for offline use.
-
+* If the app is data-heavy, educate users about how they can download for
+  offline use.
 * Make experiences transferable between devices.
-
 * Utilise language, icons, imagery, typography and color to express ideas to the 
-user collectively.
-
+  user collectively.
 * Provide reassurance and feedback to help the user.
