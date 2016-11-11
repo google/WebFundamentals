@@ -9,45 +9,36 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Add the following features to your site using the
-[Credential Management API](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API):
-
-* **Show an account chooser when signing in:** Show a native account chooser
-  UI when a user taps "Sign In".
-* **Store and update credentials:** Upon successful sign-in, offer to store
-  credential information to the browser's password manager for later use.
-  Also check for changes to existing credentials, and store updates.
-* **Let the user automatically sign back in:** Let the user sign back in if a
-  session has expired.
-* **Disable auto sign-in:** Once a user signs out, disable automatic sign-in
-  for the user's next visit.
-
-Note: This API must be used on secure origins on top level context.
-
-## User sign-in flow
-
-{% comment %}
-Watch the user sign-in flow for a
-[demo website](https://credential-management-sample.appspot.com) 
-that uses the Credential Management API
-(see also the
-[sample code](https://github.com/GoogleChrome/credential-management-sample)).
-{% endcomment %}
-
-With the Credential Management API, users can sign-in using a third-party
-credential (for example, Google or Facebook account), register a new account,
-or sign-in using a previously registered account.
+The [Credential Management API](https://www.w3.org/TR/credential-management/)
+is a standards-based browser API that provides a programmatic interface
+between the site and the browser for seamless sign-in, across devices, and
+removes friction from your sign-in flows.
 
 <div class="attempt-right">
   <figure>
-    <video src="animations/credential-management-smaller.mov" autoplay muted loop controls></video>
+    <video src="animations/credential-management-smaller.mov" style="max-height: 400px;" autoplay muted loop controls></video>
     <figcaption>User Sign-in Flow</figcaption>
   </figure>
 </div>
 
-Existing user credentials are saved to the browser, so users are immediately
-signed-in. Users that have multiple credentials saved or that have disabled
-automatic-sign in, will need to sign back in.
+The Credential Management API:
+
+* **Makes sign-in flow simple** - Users can automatically signed back into a 
+  site, even if their session has expired.
+* **Allows one tap sign in with account chooser** - A native account chooser is shown
+  eliminating the sign in form.
+* **Stores credentials** - Can store either a username & password combination
+  or even federated account details.
+
+Want to see it in action? Try the
+[Credential Management API Demo](https://credential-management-sample.appspot.com)
+and take a look at the
+[code](https://github.com/GoogleChrome/credential-management-sample).
+
+<div class="clearfix"></div>
+
+
+## Steps to implement Credential Management
 
 While there are many ways to successfully integrate the Credential Management
 API, and the specifics of an integration depend on the structure and user
@@ -63,55 +54,58 @@ advantages:
 * When users sign out, the website ensures they are not automatically
   signed back in.
 
-<div class="clearfix"></div>
+Key Point: Using the Credential Management API requires the page be served
+from a secure origin.
 
-## Steps to implement Credential Management
+### Retrieve user credentials and sign in
 
-The three main steps to implement credential management are:
+To sign the user in, retrieve the credentials from the browser's password
+manager and use those to log the user in.
 
-1. Retrieve user credentials.
-2. Save user credentials.
-3. Disable auto sign-in when user signs out.
+For example:
 
-### Retrieve user credentials
-
-To retrieve user credentials:
-
-1. When a user lands on your site and no signed in sessions are available, 
-   call `navigator.credential.get()` with `unmediated: true`.
-2. If auto sign-in didn't happen, try sign-in upon user tapping on "Sign-In" 
-   button by calling `navigator.credential.get()` with `unmediated: false`.
-3. Once a credential is retrieved, authenticate depending on the credential
-   type: [`PasswordCredential`](/web/fundamentals/security/credential-management/retrieve-credentials#authenticate_with_a_server)
-   or [`FederatedCredential`](/web/fundamentals/security/credential-management/retrieve-credentials#authenticate_with_an_identity_provider).
+1. When a user lands on your site and they are not signed in, 
+   call `navigator.credential.get()`
+2. Use the retrieved credentials to sign the user in.
+3. Update the UI to indicate the user has been signed in.
 
 Learn more in
 [Retrieve Credentials](/web/fundamentals/security/credential-management/retrieve-credentials).
 
-### Save user credentials
+### Save or update user credentials
 
-To save user credentials:
+If the user signed in with a username and password:
 
 1. After the user successfully signs in, creates an account or changes a
-   password via AJAX, create the `PasswordCredential` with the user ID and
+   password, create the `PasswordCredential` with the user ID and
    the password.
 2. Save the credential object using `navigator.credentials.store()`.
-3. If the user signed in with a federated identity provider such as Google
-   Sign-In, create the `FederatedCredential` with the user's email address as
-   the ID and specify the identity provider with `.provider` and store the
-   object instead.
+
+
+If the user signed in with a federated identity provider such as Google
+Sign-In, Facebook, GitHub, etc:
+
+1. After the user successfully signs in, creates an account or changes a
+   password, create the `FederatedCredential` with the user's email address as
+   the ID and specify the identity provider with `.provider` 
+2. Save the credential object using `navigator.credentials.store()`.
 
 Learn more in
 [Store Credentials](/web/fundamentals/security/credential-management/store-credentials).
 
-### Disable auto sign-in
+### Sign out
 
 When the user signs out, call `navigator.credentials.requireUserMediation()`
-to prevent the user from automatically signing back in.
+to prevent the user from being automatically signed back in.
 
 Disabling auto-sign-in also enables users to switch between accounts easily,
 for example, between work and personal accounts, or between accounts on
 shared devices, without having to re-enter their sign-in information.
 
 Learn more in
-[Disable auto sign-in](/web/fundamentals/security/credential-management/retrieve-credentials#disable_auto_sign-in).
+[Sign out](/web/fundamentals/security/credential-management/retrieve-credentials#sign-out).
+
+
+## Additional References
+
+[Credential Management API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)

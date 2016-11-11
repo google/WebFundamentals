@@ -9,27 +9,23 @@ book_path: /web/fundamentals/_book.yaml
 {% include "web/_shared/contributors/agektmr.html" %}
 {% include "web/_shared/contributors/megginkearney.html" %}
 
-Keep credential information always sane and up-to-date in the password
-manager so your users stay engaged.
+Store and update user credentials is easy with the 
+`navigator.credentials.store()` API.
 
-### TL;DR {: .hide-from-toc }
 
-* Call `navigator.credentials.store()` to store user credentials.
-* To store user credentials from a log-in form, use `autocomplete`
-  in your input fields and then instatiate the `PasswordCredential` object.
-* To store credentials from a user's federated account,
-  use the `FederatedCredential` object instead of the `PasswordCredential`
-  object.
-
-## Store a user's password credential
+## Store a user's credential
 
 After a user successfully signs up, signs in, or changes a password, store
 or update the user's credential.
 
-To do so, instantiate a `PasswordCredential` based on submitted
-information and call `navigator.credentials.store()` to store the
-credential:
+### Store username and password details
 
+Key Point: Create a new `PasswordCredential` object and save it with 
+`navigator.credentials.store()`.
+
+Once the user has signed in, and you've verified their credentials, create
+a new [`PasswordCredential`](https://developer.mozilla.org/en-US/docs/Web/API/PasswordCredential)
+object and pass it to `navigator.credentials.store()` to save it.
 
     // After a successful sign-in, sign-up or password change,
     // Instantiate a `PasswordCredential` object
@@ -58,19 +54,16 @@ a notification pops up asking to store a credential
 
 <div class="clearfix"></div>
 
-## Store a credential from a form element
+### Store username and password from a form
 
-Mapping form input values into a `PasswordCredential` is non-trivial.
+Key Point: Use a well annotated form to easily create a new `PasswordCredential`
+object and save it with `navigator.credentials.store()`.
 
-In order to do so, you must explicitly annotate input fields in a form and
-then instantiate one directly from the form element.
+In addition to manually creating the `PasswordCredential`, you can simply
+pass a [well annotated](https://html.spec.whatwg.org/multipage/forms.html#autofill)
+`form` element, to `PasswordCredential`.
 
-Anotate the input fields, `id` and `password`, using
-[autocomplete](https://html.spec.whatwg.org/multipage/forms.html#autofill)
-attributes (`username` for `id`, `current-password` or `new-password` for
-`password`).
-
-Example HTML:
+For example:
 
     <form id="form" method="post">
       <input type="text" name="id" autocomplete="username" />
@@ -78,9 +71,8 @@ Example HTML:
       <input type="hidden" name="csrf_token" value="*****" />
     </form>
 
-Then instantial the `PasswordCredential` object to auto-assign values.
-
-Example JavaScript:
+Then create a new `PasswordCredential` object by passing a reference to the
+form element:
 
     var form = document.querySelector('#form');
     var cred = new PasswordCredential(form);
@@ -90,18 +82,20 @@ Example JavaScript:
       // continuation
     });
 
+Any additional form fields will be automatically added to the
+`PasswordCredential` as part of the `.additionalData` parameter.
 
-Note: `.additionalData` also gets added automatically.
 
 ## Store a credential for a federated account
 
-Once a user successfully authenticates with an identity provider, store
-the account information in the password manager.
+Key Point: Create a new `FederatedCredential` object and save it with 
+`navigator.credentials.store()`.
 
-Instead of a `PasswordCredential`, instantiate a `FederatedCredential`
-and store both the user's identifier and the provider's identifier.
 
-Then call `navigator.credentials.store()` to store the credential.
+To store federated account details, instantiate a new 
+[`FederatedCredential`](https://developer.mozilla.org/en-US/docs/Web/API/FederatedCredential),
+object with the user's identifier and the provider's identifier. Then call 
+`navigator.credentials.store()` to store the credential.
 
 For example:
 
@@ -119,13 +113,52 @@ For example:
       // continuation
     });
 
-Use the `id` string as a user identifer when invoking the identity provider
-specific authentication flow, typically as a value for `login_hint` in OAuth.
+<table class="responsive properties">
+  <tbody>
+    <tr>
+      <th colspan=2>Parameters</th>
+    </tr>
+    <tr>
+      <td>
+        <code>id</code>
+      </td>
+      <td>
+        <code>string</code><br>
+        User identifer when invoking the identity provider specific
+        authentication flow, typically as a value for <code>login_hint</code>
+        in OAuth.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>provider</code>
+      </td>
+      <td>
+        <code>string</code><br>
+        ASCII serialization of the origin the provider uses for sign in. 
+        For example, Facebook would be represented by 
+        <code>https://www.facebook.com</code> and Google by 
+        <code>https://accounts.google.com</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>name</code>
+      </td>
+      <td>
+        <code>string</code> (optional)<br>
+        Obtained from the identity provider.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>iconURL</code>
+      </td>
+      <td>
+        <code>string</code> (optional)<br>
+        Obtained from the identity provider.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-The `provider` string must be identified by the ASCII serialization of the
-origin the provider uses for sign in. For example, Facebook would be
-represented by `https://www.facebook.com` and Google by 
-`https://accounts.google.com`.
-
-The `name` and `iconURL` are optional, but it's highly likely you can obtain
-them from the identity provider, so you should use them.
