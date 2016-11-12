@@ -1,6 +1,6 @@
 project_path: /web/_project.yaml
 book_path: /web/progressive-web-apps/_book.yaml
-description: TODO
+description: A checklist which breaks down all the things we think it takes to be a Baseline PWA, and how to take that a step further with an Exemplary PWA. 
 
 {# wf_updated_on: 2016-11-07 #}
 {# wf_published_on: 2016-11-07 #}
