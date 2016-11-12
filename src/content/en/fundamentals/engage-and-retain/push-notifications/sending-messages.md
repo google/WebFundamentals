@@ -31,7 +31,7 @@ The following diagram shows the order of operations.
 1. During the subscription flow the browser contacts the messaging server to
    create a new subscription and returns it to the app.
 
-    <aside class="note"><b>Note:</b> You don't need to know the URL of the message server. Each browser vender manages it's own message server for its browser.</aside>
+    <aside class="note"><b>Note:</b> You don't need to know the URL of the message server. Each browser vendor manages it's own message server for its browser.</aside>
 
 1. After the subscription flow, your app passes a subscription object back to
    your app server.
