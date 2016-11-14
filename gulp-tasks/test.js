@@ -25,6 +25,7 @@ var ERROR_STRINGS = [
   {label: 'Hard coded https://developers.google.com in link (MD)', regEx: /\(https:\/\/developers.google.com/},
   {label: 'Hard coded https://developers.google.com in link (HTML)', regEx: /href="https:\/\/developers.google.com/},
 ];
+var VALID_DATE_FORMATS = ['YYYY-MM-DD', 'YYYY-MM-DDTHH:mm:ss.sssZ'];
 
 var contributorList;
 var summary = {
@@ -319,16 +320,18 @@ function validateMarkdown(filename, commonTags) {
         }
       }
 
+
+
       // Validate wf_updated and wf_published
       matched = wfHelper.getRegEx(/{# wf_updated_on: (.*?) #}/, content, 'NOT_FOUND');
-      if (!moment(matched, 'YYYY-MM-DD').isValid()) {
+      if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
         errMsg = 'WF Tag `wf_updated_on` missing or invalid format (YYYY-MM-DD)';
         errMsg += ', found: ' + matched;
         logError(filename, errMsg)
         errors++;
       }
       matched = wfHelper.getRegEx(/{# wf_published_on: (.*?) #}/, content, 'NOT_FOUND');
-      if (!moment(matched, 'YYYY-MM-DD').isValid()) {
+      if (!moment(matched, VALID_DATE_FORMATS, true).isValid()) {
         errMsg = 'WF Tag `wf_published_on` missing or invalid format (YYYY-MM-DD)';
         errMsg += ', found: ' + matched;
         logError(filename, errMsg)
