@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: Learn how to integrate a service worker into an existing application to make the application work offline.
 
-{# wf_updated_on: 2016-10-25T18:01:24Z #}
+{# wf_updated_on: 2016-11-09T18:31:19Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -169,6 +169,27 @@ If you ever want to inspect the currently-installed service worker for a page, c
 With the service worker registered, the first time a user hits the page an `install` event is triggered. This event is where you want to cache your page assets.
 
 Add the following code to sw.js.
+
+```
+importScripts('/cache-polyfill.js');
+
+
+self.addEventListener('install', function(e) {
+ e.waitUntil(
+   caches.open('airhorner').then(function(cache) {
+     return cache.addAll([
+       '/',
+       '/index.html',
+       '/index.html?homescreen=1',
+       '/?homescreen=1',
+       '/styles/main.css',
+       '/scripts/main.min.js',
+       '/sounds/airhorn.mp3'
+     ]);
+   })
+ );
+});
+```
 
 The first line adds the Cache polyfill. This polyfill is already included in the repository. We need to use the polyfill because the Cache API is not yet fully supported in all browsers. Next comes the `install` event listener. The `install` event listener opens the `caches` object and then populates it with the list of resources that we want to cache. One important thing about the `addAll` operation is that it's all or nothing. If one of the files is not present or fails to be fetched, the entire `addAll` operation fails. A good application will handle this scenario.
 

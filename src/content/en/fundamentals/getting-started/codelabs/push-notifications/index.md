@@ -2,7 +2,7 @@ project_path: /web/_project.yaml
 book_path: /web/fundamentals/_book.yaml
 description: In this codelab you'll how to add push notifications to your web app.
 
-{# wf_updated_on: 2016-11-08T16:08:06Z #}
+{# wf_updated_on: 2016-11-11T22:46:27Z #}
 {# wf_published_on: 2016-01-01 #}
 
 
@@ -331,7 +331,7 @@ swRegistration.pushManager.subscribe({
 
 With this, we get a subscription and treat the user as subscribed or we catch the error and print it to the console. In both scenarios we call updateBtn() to ensure the button is re-enabled and has the appropriate text.
 
-The method updateSubscriptionOnServer is a method where in a real application we would send our application to a backend, but for our codelab we are going to print the subscription in our UI which will help use later on. Add this method to __scripts/main.js__:
+The method updateSubscriptionOnServer is a method where in a real application we would send our subscription to a backend, but for our codelab we are going to print the subscription in our UI which will help use later on. Add this method to __scripts/main.js__:
 
 ```
 function updateSubscriptionOnServer(subscription) {
@@ -434,7 +434,7 @@ self.addEventListener('push', function(event) {
 Let's step through this code. We are listening for push events in our service worker by adding an event listener to our service worker, which is this piece of code:
 
 ```
-self.addEventListener(‘push', ...... );
+self.addEventListener('push', ...... );
 ```
 
 Unless you've played with Web Workers before, ‘self' is probably new. ‘self' is referencing the service worker itself, so we are adding an event listener to our service worker.
@@ -470,7 +470,7 @@ In your web app, subscribe to push messaging, making sure you have ‘User IS su
 
 ![c0fab1022906d01f.png](img/c0fab1022906d01f.png)
 
-Once you've clicked it you should see a notification like this:
+Once you've clicked it you should see a notification like this (__NOTE:__ If this step doesn't work, try unregistering your service work, via the "Unregister" link in the Devtools Application panel, wait for the service worker to be stopped, and then reload the page):
 
 ![eee7f9133a97c1c4.png](img/eee7f9133a97c1c4.png)
 
@@ -641,21 +641,26 @@ You should be able to press the ‘Enable Push Messaging' / ‘Disable Push Mess
 
 Congratulations on completing this codelab!
 
-This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/).
+This code lab has shown you how to get up and running with adding push to your web app. If you want to learn more about what web notifications can do,  [check out theses docs](/web/fundamentals/engage-and-retain/push-notifications/). 
 
 If you are looking to deploy push on your site, you may be interested in adding support for older / non-standards compliant browsers which use GCM,  [learn more here](https://web-push-book.gauntface.com/chapter-06/01-non-standards-browsers/).
 
 ### Further Reading
 
-*  [Web Push Notification](/web/fundamentals/engage-and-retain/push-notifications/) documentation on WebFundamentals
-* Relevant blog posts
-*  [Web Push Payload Encryption](/web/updates/2016/03/web-push-encryption)
-*  [Notification Actions](/web/updates/2016/01/notification-actions)
-*  [Icons, Close Events, Renotify Preferences and Timestamps](/web/updates/2016/03/notifications)
-*  [Sending encrypted payloads](/web/updates/2016/03/web-push-encryption)
-*  [Guidelines for Push Notifications](http://developer.android.com/design/patterns/notifications.html#guidelines) from Android
+*  [Web Push Notification](/web/fundamentals/engage-and-retain/push-notifications/) documentation on Web__Fundamentals__
 *  [Web Push Libraries](https://github.com/web-push-libs/) - Web Push libraries including Node.js, PHP, Java and Python.
 
+#### Relevant blog posts
+
+*  [Web Push Payload Encryption](/web/updates/2016/03/web-push-encryption)
+*  [Application Server Keys and Web Push](/web/updates/2016/07/web-push-interop-wins)
+*  [Notification Actions](/web/updates/2016/01/notification-actions)
+*  [Icons, Close Events, Renotify Preferences and Timestamps](/web/updates/2016/03/notifications)
+
+
+
+
+
 ## Found an issue, or have feedback? {: .hide-from-toc }
-Help us make our code labs better by submitting an
+Help us make our code labs better by submitting an 
 [issue](https://github.com/googlechrome/push-notifications/issues) today. And thanks!
