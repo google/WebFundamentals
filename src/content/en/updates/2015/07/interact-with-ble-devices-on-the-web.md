@@ -343,6 +343,11 @@ Disconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/device-d
 and the [Automatic Reconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html)
 to dive deeper.
 
+Warning: Bluetooth GATT Services and Characteristics are invalidated when
+device gets disconnected. This means your code should always handle device
+disconnection and revalidate GATT attributes upon disconnect
+([Example](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html)).
+
 ## Samples, Demos and Codelabs
 
 All [Web Bluetooth samples](https://googlechrome.github.io/samples/web-bluetooth/index.html) below
