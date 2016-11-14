@@ -34,7 +34,7 @@ If this is an approach that you use, we have a technical solution that may help
 you automatically re-validate the stateless authentication cookie. It works by
 having a secondary long-lived token that can be used to refresh your existing
 short-lived authentication cookie. Leveraging the new service worker pattern
-allows us to regularly "checkin" with the long lived token, verify the user's
+allows us to regularly "check in" with the long lived token, verify the user's
 authentication (for example, check to see if they have not recently changed their
 passwords, or otherwise revoked the session) and re-issue a new short-lived
 authentication cookie.
@@ -48,10 +48,10 @@ industry on documenting best practices for using 2CH.
 
 Service workers are a new technology supported by multiple browsers such as
 Chrome, Firefox, Opera and coming soon to 
-[Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker).  
+[Edge](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/serviceworker).
 They allow you to intercept all network requests from your site through a
 common point of code on the client, without modifying the existing pages. This
-allows you to set up an "2CH worker" for logged in users that can intercept
+allows you to set up a "2CH worker" for logged in users that can intercept
 all of the network requests your page is making and perform the token swapping
 just like mobile apps do.
 
@@ -64,7 +64,7 @@ formatted in a way that other pages on the site already expect.
 If your server doesn't already have such an endpoint, it can create one just for
 browser session management.
 
-![](/web/updates/images/2016/06/2-cookie-handoff/sequence_diagram.png)
+![The 2-cookie-handoff sequence](/web/updates/images/2016/06/2-cookie-handoff/sequence_diagram.png)
 
 The two-token pattern with service workers follows the OAuth 2.0 pattern fairly
 closely, if you already run an OAuth token endpoint, then you can likely re-use
