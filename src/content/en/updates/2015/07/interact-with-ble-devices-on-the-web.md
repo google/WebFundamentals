@@ -247,7 +247,7 @@ to see how to optionally handle upcoming GATT notifications as well.
     
     function handleBatteryLevelChanged(event) {
       let batteryLevel = event.target.value.getUint8(0);
-      console.log('Battery percentage is ' + batteryLevel + '%');
+      console.log('Battery percentage is ' + batteryLevel);
     }
     
 
@@ -343,10 +343,10 @@ Disconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/device-d
 and the [Automatic Reconnect Sample](https://googlechrome.github.io/samples/web-bluetooth/automatic-reconnect.html)
 to dive deeper.
 
-Warning: Bluetooth GATT Services and Characteristics are invalidated when
-device gets disconnected. This means your code should always handle device
-disconnection and revalidate GATT attributes upon disconnect
-([Example](https://googlechrome.github.io/samples/web-bluetooth/read-characteristic-value-changed.html)).
+Warning: Bluetooth GATT Attributes, services, characteristics, etc. are
+invalidated when a device disconnects. This means your code should always
+retrieve (through `getPrimaryService(s)`, `getCharacteristic(s)`, etc.) these
+attributes after reconnecting.
 
 ## Samples, Demos and Codelabs
 
@@ -380,8 +380,29 @@ Check out our [curated Web Bluetooth Demos](https://github.com/WebBluetoothCG/de
 
 ## Libraries
 
-- [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API.
 - [web-bluetooth-utils](https://www.npmjs.com/package/web-bluetooth-utils) is a npm module that adds some convenience functions to the API.
+- [&lt;platinum-bluetooth>](https://elements.polymer-project.org/elements/platinum-bluetooth?active=platinum-bluetooth-device) is a new set of [Polymer](https://www.polymer-project.org/) elements to discover and communicate with nearby Bluetooth devices based on the Web Bluetooth API. For instance, here's how to read battery level from a nearby bluetooth device advertising Battery service:
+
+```html
+<platinum-bluetooth-device services-filter='["battery_service"]'>
+  <platinum-bluetooth-service service='battery_service'>
+    <platinum-bluetooth-characteristic characteristic='battery_level'>
+    </platinum-bluetooth-characteristic>
+  </platinum-bluetooth-service>
+</platinum-bluetooth-device>
+```
+
+```js
+var bluetoothDevice = document.querySelector('platinum-bluetooth-device');
+var batteryLevel = document.querySelector('platinum-bluetooth-characteristic');
+
+bluetoothDevice.request()
+.then(_ => batteryLevel.read())
+.then(value => {
+  console.log('Battery percentage is ' + value.getUint8(0));
+})
+.catch(error => { console.log(error); });
+```
 
 ## Tools
 
