@@ -93,33 +93,35 @@ panel. Often, ARIA lets us create widget-type elements that wouldn't be possible
 with plain HTML.
 
  - For example, ARIA can add extra label and description text that is only
-   exposed to assistive technology APIs.
+   exposed to assistive technology APIs.<br>
 
-```
-<button aria-label="screen reader only label"></button>
-```
-    
+<div class="clearfix"></div>
+      
+    <button aria-label="screen reader only label"></button>
+
 
  - ARIA can express semantic relationships between elements that extend the
    standard parent/child connection, such as a custom scrollbar that controls a
    specific region.
 
-```
-<div role="scrollbar" aria-controls="main"></div>
-<div id="main">
-. . .
-</div>
-```
+<div class="clearfix"></div>
+
+    <div role="scrollbar" aria-controls="main"></div>
+    <div id="main">
+    . . .
+    </div>
+
     
 
  - And ARIA can make parts of the page "live", so they immediately inform
    assistive technology when they change.
 
-```
-<div aria-live="true">
-  <span>GOOG: $400</span>
-</div>
-```
+<div class="clearfix"></div>
+
+    <div aria-live="true">
+      <span>GOOG: $400</span>
+    </div>
+
     
 One of the core aspects of the ARIA system is its collection of *roles*. A role
 in accessibility terms amounts to a shorthand indicator for a particular UI

@@ -346,9 +346,9 @@ default. To allow Chrome to open a USB device, you will need to add a new [udev 
 Create a file at `/etc/udev/rules.d/50-yourdevicename.rules` with the following
 content:
 
-```
-SUBSYSTEM=="usb", ATTR{idVendor}=="[yourdevicevendor]", MODE="0664", GROUP="plugdev"
-```
+
+    SUBSYSTEM=="usb", ATTR{idVendor}=="[yourdevicevendor]", MODE="0664", GROUP="plugdev"
+
 
 where `[yourdevicevendor]` is `2341` if your device is an Arduino for instance.
 `ATTR{idProduct}` can also be added for a more specific rule. Make sure your
