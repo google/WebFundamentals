@@ -41,7 +41,7 @@ The Payment Request API is a system that is meant to *eliminate checkout forms*.
 * To seamlessly support different secure payment methods
 * To work on any browser, device, or platform&mdash;mobile or otherwise
 
-The Payment Request API is an open and cross-browser standard that replaces traditional checkout flows by allowing merchants to request and accept any payment in a single API call. The PaymentRequest API allows the web page to exchange information with the user agent while the user is providing input, before approving or denying a payment request.
+The Payment Request API is an open and cross-browser standard that replaces traditional checkout flows by allowing merchants to request and accept any payment in a single API call. The Payment Request API allows the web page to exchange information with the user agent while the user is providing input, before approving or denying a payment request.
 
 Best of all, with the browser acting as an intermediary, all the information necessary for a fast checkout can be stored in the browser, so users can just confirm and pay, all with a single click.
 
@@ -64,7 +64,7 @@ The process begins when the merchant site creates a new `PaymentRequest` and pas
 
 The browser then presents the payments UI to the user, who selects a payment method and authorizes the transaction. A payment method can be as straightforward as a credit card that is already stored by the browser, or as esoteric as third-party application written specifically to deliver payments to the site (this functionality is coming soon). After the user authorizes the transaction, all the necessary payment details are sent directly back to the site. For example, for a credit card payment, the site will get back a card number, a cardholder name, an expiration date, and a CVC.
 
-PaymentRequest can also be extended to return additional information, such as shipping addresses and options, payer email, and payer phone. This allows you to get all the information you need to finalize a payment without ever showing the user a checkout form.
+Payment Request can also be extended to return additional information, such as shipping addresses and options, payer email, and payer phone. This allows you to get all the information you need to finalize a payment without ever showing the user a checkout form.
 
 
 The beauty of the new process is threefold: from the user's perspective, all the previously tedious interaction&mdash;request, authorization, payment, and result&mdash;now takes place in a single step; from the website's perspective, it requires only a single JavaScript API call; from the payment method's perspective, there is no process change whatsoever.
@@ -186,7 +186,7 @@ Activate the `PaymentRequest` interface by calling its [`show`](https://www.w3.o
 
 *PaymentRequest show method*
 
-### Abort a PaymentRequest {: #abort-paymentrequest }
+### Abort a Payment Request {: #abort-paymentrequest }
 You can intentionally abort a `PaymentRequest` by calling its [`abort`](https://www.w3.org/TR/payment-request/#abort) method. Use this method if the app needs to cancel the payment request after the `show` method has been called but before the promise has been resolved&mdash;for example, if an item is no longer available, or the user fails to confirm the purchase within an allotted amount of time.
 
 If you abort a request, you'll need to create a new instance of `PaymentRequest` before you can call `show` again.
@@ -304,7 +304,7 @@ The [`complete`](https://www.w3.org/TR/payment-request/#complete) method tells t
   </figure>
 </div>
 
-If you are a merchant selling physical goods, you may want to collect the user's shipping address using the PaymentRequest API. This is accomplished by adding `requestShipping: true` to the `options` parameter. With this parameter set, "Shipping" will be added to the UI, and users can select from a list of stored addresses or add a new shipping address.
+If you are a merchant selling physical goods, you may want to collect the user's shipping address using the Payment Request API. This is accomplished by adding `requestShipping: true` to the `options` parameter. With this parameter set, "Shipping" will be added to the UI, and users can select from a list of stored addresses or add a new shipping address.
 
 <div style="clear:both;"></div>
 
@@ -550,7 +550,7 @@ Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/pay
 
 
 ## Making PaymentRequest a progressive enhancement {: #request-progressive}
-As PaymentRequest API is an emerging feature, many browsers don't yet support it. To determine whether the feature is available, query `window.PaymentRequest`.
+As Payment Request API is an emerging feature, many browsers don't yet support it. To determine whether the feature is available, query `window.PaymentRequest`.
 
 
     if (window.PaymentRequest) {
