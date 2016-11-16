@@ -276,7 +276,7 @@ precaching for static assets/application shells)
 
 ### IndexedDB libraries worth checking out
 
-* [localForage](https://mozilla.github.io/localForage/)(~8KB, Promises, good
+* [localForage](https://github.com/localForage/localForage)(~8KB, Promises, good
 legacy browser support)
 
 * [Dexie](http://dexie.org/) (~16KB, Promises, complex queries, secondary
