@@ -75,7 +75,7 @@ experience is something that defines state-of-the-art applications.”
 * [Add to Home Screen](/web/fundamentals/engage-and-retain/app-install-banners/)
 * [Push Notifications](/web/fundamentals/engage-and-retain/push-notifications/)
 
-### Code labs
+### Codelabs
 
 [Your First Progressive Web App](/web/fundamentals/getting-started/codelabs/your-first-pwapp/) <br>
 Learn how to use the app shell model, service workers and more to build a Progressive Web App.
