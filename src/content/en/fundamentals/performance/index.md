@@ -64,7 +64,7 @@ of app delivery and launch.
 
 ## Related Resources
 
-### Code Labs
+### Codelabs
 
 [Find and Fix Web App Performance Issues](/web/fundamentals/getting-started/codelabs/web-perf/) <br>
 This codelab will help you learn to identify and fix web app performance bottlenecks.
