@@ -43,7 +43,7 @@ There have been a number of public announcements that describe the rationale
    (Feb 2015)
 * [Intent to deprecate Geolocation API over HTTP](https://groups.google.com/a/chromium.org/forum/#!topic/blink-dev/ylz0Zoph76A) 
   (Nov 2015)
-* [Chrome Dev Summit](https://www.youtube.com/watch?v=iP75a1Y9saY&t=27m14s) (Nov 
+* [Chrome Dev Summit](https://www.youtube.com/watch?v=iP75a1Y9saY) (Nov 
   2016)
 * [Chrome Beta Channel](http://blog.chromium.org/2016/03/chrome-50-beta-push-notification.html) 
   release blog (March 17, 2016)
