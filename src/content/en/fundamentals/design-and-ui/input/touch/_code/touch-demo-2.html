@@ -155,8 +155,11 @@
         initialYPos = point.y;
         /* // [END stash-start] */
 
-        if (!window.PointerEvent) {
-          // Add Mouse Listeners to document
+        // Add the move and end listeners
+        if (window.PointerEvent) {
+          evt.target.setPointerCapture(evt.pointerId);
+        } else {
+          // Add Mouse Listeners
           document.addEventListener('mousemove', this.handleGestureMove, true);
           document.addEventListener('mouseup', this.handleGestureEnd, true);
         }
@@ -169,8 +172,11 @@
           return;
         }
 
-        if (!window.PointerEvent) {
-          // Remove Mouse Listeners from document
+        // Remove Event Listeners
+        if (window.PointerEvent) {
+          evt.target.releasePointerCapture(evt.pointerId);
+        } else {
+          // Remove Mouse Listeners
           document.removeEventListener('mousemove', this.handleGestureMove, true);
           document.removeEventListener('mouseup', this.handleGestureEnd, true);
         }
@@ -184,7 +190,7 @@
       this.handleGestureMove = function(evt) {
         evt.preventDefault();
 
-        if(evt.targetTouches && evt.targetTouches.length > 0) {
+        if(evt.targetTouches && evt.targetTouches.length > 1) {
           return;
         }
 
