@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: what's new in Chrome 55 for developers? Async and Await, Pointer Events and Persistent Storage.
+description: What's new in Chrome 55 for developers? Async and Await, Pointer Events and Persistent Storage.
 
 {# wf_published_on: 2016-11-30 #}
 {# wf_updated_on: 2016-11-30 #}
 {# wf_featured_image: /web/updates/images/generic/new-in-chrome.png #}
 {# wf_tags: chrome55,new-in-chrome,pointerevents,async,await,persistentstorage #}
-{# wf_featured_snippet: With Chrome 55, you to write promise-based code as if it were synchronous, using <code>async</code> and <code>await</code>. <b>PointerEvents</b> provide a unified way of handling all input events. And <b>persistent storage</b> graduates from it’s origin trial. #}
+{# wf_featured_snippet: With Chrome 55, you can write promise-based code as if it were synchronous, using <code>async</code> and <code>await</code>. <b>PointerEvents</b> provide a unified way of handling all input events. And <b>persistent storage</b> graduates from it’s origin trial. #}
 
 # New In Chrome 55 {: .page-title }
 
@@ -164,7 +164,7 @@ If you want to stay up to date with Chrome and know what’s coming, be sure to
 for a deeper dive into some of the awesome things the Chrome team is working on.
 
 I’m Pete LePage, and as soon as Chrome 56 is released, I’ll be right here
-to tell you -- what’s new in Chrome!
+to tell you what’s new in Chrome!
 
 ## Subscribe to Chrome Developers on YouTube {: .hide-from-toc }
 Subscribe to our [YouTube channel](https://goo.gl/6FP1a5) or our 
