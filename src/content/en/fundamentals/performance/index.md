@@ -86,4 +86,9 @@ web apps that maintain 60 frames per second performance.
 Learn about the Critical Rendering Path, or the set of steps browsers must take
 to convert HTML, CSS and JavaScript into living, breathing websites.
 
+[HTTP/1 to HTTP/2](https://udacity.com/ud897)<br>
+Surma starts with the basics of HTTP/1 and goes all the way to HTTP/2, how to
+load assets efficiently and also covers security aspects of these protocols. 
 <div style="clear:both;"></div>
+
+
