@@ -57,3 +57,7 @@ assumes that your app needs 50ms to completely respond to the user's input
 (from performing any JavaScript executions to physically painting the new
 pixels to the screen). If your main thread is unavailable for 50ms or more,
 that does not leave enough time for your app to complete the response.
+
+There is a 90% probabililty a user would encounter input latency of the
+amount that Lighthouse reports, or less. 10% of users can expect additional
+latency.
