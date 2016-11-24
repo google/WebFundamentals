@@ -10,6 +10,7 @@ upper_tabs:
         - title: Home
           path: /web/fundamentals/
         - include: /web/fundamentals/getting-started/_toc.yaml
+        - include: /web/fundamentals/progressive-web-apps/_toc.yaml
         - include: /web/fundamentals/performance/_toc.yaml
         - include: /web/fundamentals/architecture/_toc.yaml
         - include: /web/fundamentals/instant-and-offline/_toc.yaml

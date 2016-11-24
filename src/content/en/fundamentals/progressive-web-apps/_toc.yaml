@@ -1,0 +1,10 @@
+toc:
+- title: Progressive Web Apps
+  section:
+  - title: Overview
+    path: /web/fundamentals/progressive-web-apps/
+  - title: Migrating To A PWA
+    path: /web/fundamentals/progressive-web-apps/migrating
+  - title: Architecting a PWA with the App Shell Model
+    path: /web/fundamentals/progressive-web-apps/app-shell
+    
