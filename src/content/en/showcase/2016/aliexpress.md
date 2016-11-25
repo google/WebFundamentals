@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/aliexpress/aliexpress_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 AliExpress increases conversion rate for new users by 104% with new
 Progressive Web App

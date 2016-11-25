@@ -4,15 +4,15 @@ book_path: /web/showcase/_book.yaml
 {# wf_published_on: 2015-04-08 #}
 {# wf_updated_on: 2015-04-08 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/little_alchemy/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/little_alchemy/card.jpg #}
 
 # Little Alchemy {: .page-title }
 
 <img src="images/little_alchemy/screenshot.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
-[Little Alchem](http://littlealchemy.com/): A fun, mobile-friendly combination
+[Little Alchem](http://littlealchemy.com/){: .external }: A fun, mobile-friendly combination
 game inspired by its bigger brother Alchemy.
 
 ### What we like?

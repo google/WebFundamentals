@@ -1,20 +1,20 @@
 project_path: /web/_project.yaml
 book_path: /web/showcase/_book.yaml
 description: >
-  The Chrome Dev Summit 2014 web site was built in-house by our own Paul Lewis,
+  The Chrome Dev Summit 2014 website was built in-house by our own Paul Lewis,
   the CDS website showed how to build a great mobile web experience for conference
   visitors.
 
 {# wf_published_on: 2015-03-27 #}
 {# wf_updated_on: 2015-03-27 #}
 {# wf_author: pbakaus #}
-{# wf_featured_image: /web/showcase/2015/images/chrome-dev-summit/featured.png #}
+{# wf_featured_image: /web/showcase/2015/images/chrome-dev-summit/card.jpg #}
 
 # Chrome Dev Summit 2014 {: .page-title }
 
 <img src="images/chrome-dev-summit/screenshot-portrait.png" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 Built in-house by our own Paul Lewis, the CDS website showed how to build a
 great mobile web experience for conference visitors.

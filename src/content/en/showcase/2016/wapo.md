@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/wapo/wapo_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 AMP helps the Washington Post increase returning users from mobile search by 23%
 

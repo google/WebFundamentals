@@ -1,0 +1,19 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+upper_tabs:
+- include: /web/_upper_tabs-Fundamentals.yaml
+- include: /web/_upper_tabs-Tools.yaml
+- name: Updates
+  heading: Updates
+  path: /web/updates/
+  lower_tabs:
+    other:
+    - name: Updates
+      contents:
+      - include: /web/updates/2016/_toc.yaml
+      - include: /web/updates/2015/_toc.yaml
+      - include: /web/updates/2014/_toc.yaml
+      - include: /web/updates/2013/_toc.yaml
+      - include: /web/updates/2012/_toc.yaml
+      - include: /web/updates/2011/_toc.yaml
+      - include: /web/updates/tags/_toc.yaml
+- include: /web/_upper_tabs-Showcase.yaml

@@ -1,0 +1,96 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
+
+project_path: /web/_project.yaml
+book_path: /web/tools/_book.yaml
+
+landing_page:
+  custom_css_path: /web/styles/wf-root.css
+
+  header:
+    description: >
+      Discover our tools that can help you kickstart your development.
+
+  rows:
+
+  - heading: Chrome DevTools
+    classname: devsite-landing-row-67 devsite-landing-row-no-image-background
+    items:
+    - description: >
+        The Chrome DevTools are a set of web authoring and debugging tools
+        built into Google Chrome. Use the DevTools to iterate, debug and
+        profile your site.
+      image_path: images/chrome-devtools.png
+      buttons:
+      - label: Get Started
+        path: /web/tools/chrome-devtools/
+        classname: button button-primary
+
+  - heading: Libraries
+    items:
+    - heading: Service Worker Libraries
+      description: >
+        Our Service Worker Libraries are provided to help simplify your
+        development experience, that free your app from the network, without
+        having to write any boilerplate service worker code!
+      buttons:
+      - label: Learn more
+        path: service-worker-libraries
+    - heading: Material Design Lite
+      description: >
+        Material Design Lite lets you add a Material Design look and feel to
+        your websites. It doesn’t rely on any JavaScript frameworks and aims
+        to optimize for cross-device use, gracefully degrade in older browsers,
+        and offer an experience that is immediately accessible.
+      buttons:
+      - label: Learn more
+        path: https://getmdl.io/
+
+  - heading: Frameworks
+    classname: devsite-landing-row-no-image-background wf-small-logos
+    items:
+    - description: >
+        The Polymer Project helps you deliver amazing user experiences by
+        unlocking the full potential of the web platform. Polymer makes the
+        most of Web Components, a powerful new platform feature for extending
+        HTML and componentizing your apps, allowing you to build cutting-edge
+        Progressive Web Apps that load quickly, respond instantly and work
+        from anywhere.
+      image_path: images/polymer-lockup-2016.png
+      buttons:
+      - label: Learn more
+        path: https://www.polymer-project.org/
+    - description: >
+        Angular is a development platform for building applications across web,
+        mobile, and desktop. With simple, declarative templates, reusable
+        components, and support for all parts of the development experience,
+        Angular makes it easy to write, test, and deploy high performing
+        applications at any scale.
+      image_path: images/angular.png
+      buttons:
+      - label: Learn more
+        path: https://angularjs.org/
+
+  - heading: Other Tools
+    classname: devsite-landing-row-no-image-background
+    items:
+    - heading: Lighthouse
+      icon:
+        path: lighthouse/images/lighthouse-icon-128.png
+      description: >
+        Lighthouse is an open-source, automated tool for improving the quality
+        of your web apps. Run it as a Chrome Extension or from the command line.
+      buttons:
+      - label: Learn more
+        path: /web/tools/lighthouse/
+    - heading: PageSpeed Module
+      description: >
+        The PageSpeed modules are open-source server modules that optimize
+        your site automatically.
+      icon:
+        path: images/pagespeed.svg
+      buttons:
+      - label: Learn more
+        path: https://developers.google.com/speed/pagespeed/module/
+
+
+

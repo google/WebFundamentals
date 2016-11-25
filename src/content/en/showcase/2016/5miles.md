@@ -10,7 +10,7 @@ book_path: /web/showcase/_book.yaml
 
 <img src="images/5miles/5miles_framed.gif" class="attempt-right">
 
-## TL;DR
+### TL;DR {: .hide-from-toc }
 
 5miles decreases bounce rate by 50% and increases conversions by 60% with new
 Progressive Web App

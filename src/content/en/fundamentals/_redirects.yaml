@@ -1,4 +1,14 @@
+# ATTENTION - changes made to this file not in GitHub will be over written!
 redirects:
+
+- from: /web/fundamentals/principles/
+  to: /web/fundamentals/getting-started/principles/
+
+- from: /web/fundamentals/documentation/...
+  to: /web/fundamentals/...
+
+- from: /web/fundamentals/engage-and-retain/simplified-app-installs/...
+  to: /web/fundamentals/engage-and-retain/app-install-banners/
 
 - from: /web/fundamentals/device-access/click-to-call/...
   to: /web/fundamentals/native-hardware/click-to-call/
@@ -57,9 +67,6 @@ redirects:
 - from: /web/fundamentals/layouts/navigation-patterns/...
   to: /web/fundamentals/design-and-ui/responsive/
 
-- from: /web/fundamentals/layouts/principles/...
-  to: /web/fundamentals/getting-started/principles/
-
 - from: /web/fundamentals/layouts/rwd-fundamentals/...
   to: /web/fundamentals/design-and-ui/responsive/fundamentals/...
 
@@ -105,17 +112,29 @@ redirects:
 - from: /web/fundamentals/performance/optimizing-networking/
   to: /web/fundamentals/performance/
 
-- from: /web/fundamentals/principles/...
-  to: /web/fundamentals/getting-started/principles/
+- from: /web/fundamentals/security/prevent-mixed-content/
+  to: /web/fundamentals/security/prevent-mixed-content/what-is-mixed-content
 
-- from: /web/fundamentals/primers/push-notifications/push-messages
-  to: /web/fundamentals/engage-and-retain/push-notifications/permissions-subscriptions
+- from: /web/fundamentals/security/encrypt-in-transit/
+  to: /web/fundamentals/security/encrypt-in-transit/enable-https
 
-- from: /web/fundamentals/primers/push-notifications/notifications
-  to: /web/fundamentals/engage-and-retain/push-notifications/handling-messages
+- from: /web/fundamentals/getting-started/your-first-offline-web-app/
+  to: /web/fundamentals/getting-started/codelabs/offline/
 
-- from: /web/fundamentals/primers/push-notifications/on-the-server
-  to: /web/fundamentals/engage-and-retain/push-notifications/sending-messages
+- from: /web/fundamentals/primers/service-worker
+  to: /web/fundamentals/getting-started/primers/service-workers
 
-- from: /web/fundamentals/primers/push-notifications/...
-  to: /web/fundamentals/engage-and-retain/push-notifications/
+- from: /web/fundamentals/primers/service-worker/
+  to: /web/fundamentals/getting-started/primers/service-workers
+
+- from: /web/fundamentals/primers/customelements/
+  to: /web/fundamentals/getting-started/primers/customelements
+
+- from: /web/fundamentals/primers/shadowdom/
+  to: /web/fundamentals/getting-started/primers/shadowdom
+
+- from: /web/fundamentals/primers/payment-request/
+  to: /web/fundamentals/getting-started/primers/payment-request/
+
+- from: /web/fundamentals/primers/payment-request/android-pay
+  to: /web/fundamentals/getting-started/primers/payment-request/android-pay

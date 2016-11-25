@@ -1,0 +1,33 @@
+toc:
+  - title: '2015'
+    section:
+    - title: Welcome
+      path: /web/shows/webrtc/2015/krankygeek-01-welcome
+    - title: A closer look at WebRTC UX/UI
+      path: /web/shows/webrtc/2015/krankygeek-02-ux
+    - title: 'Application Chats: Skedans'
+      path: /web/shows/webrtc/2015/krankygeek-03-skedans
+    - title: 'Application Chats: Freshdesk'
+      path: /web/shows/webrtc/2015/krankygeek-04-freshdesk
+    - title: 'Application Chats: wix.com'
+      path: /web/shows/webrtc/2015/krankygeek-05-wix
+    - title: 'IBM Bluemix: Mixing voice &amp; data'
+      path: /web/shows/webrtc/2015/krankygeek-06-bluemix
+    - title: What is Mozilla doing with Firefox?
+      path: /web/shows/webrtc/2015/krankygeek-07-mozilla
+    - title: Optimizing the customer experience
+      path: /web/shows/webrtc/2015/krankygeek-08-customer
+    - title: 'Beyond P2P: video routing in WebRTC'
+      path: /web/shows/webrtc/2015/krankygeek-09-routing
+    - title: Best practices from billions of calls
+      path: /web/shows/webrtc/2015/krankygeek-10-billions
+    - title: Decisions and considerations in building a WebRTC app
+      path: /web/shows/webrtc/2015/krankygeek-11-decisions
+    - title: 'Google: What''s next for WebRTC?'
+      path: /web/shows/webrtc/2015/krankygeek-12-google
+    - title: The Future of ORTC with WebRTC
+      path: /web/shows/webrtc/2015/krankygeek-13-ortc
+    - title: 'Live on stage: building a WebRTC app'
+      path: /web/shows/webrtc/2015/krankygeek-14-building
+
+    
