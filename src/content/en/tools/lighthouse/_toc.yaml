@@ -19,6 +19,24 @@ toc:
         path: /web/tools/lighthouse/audits/registered-service-worker
       - title: HTML Has Viewport Meta Tag
         path: /web/tools/lighthouse/audits/has-viewport-meta-tag
+      - title: Manifest Contains Icons at Least 192px
+        path:  /web/tools/lighthouse/audits/manifest-contains-192px-icon
+      - title: Manifest Contains Background Color
+        path: /web/tools/lighthouse/audits/manifest-contains-background_color
+      - title: Manifest Contains Name
+        path: /web/tools/lighthouse/audits/manifest-contains-name
+      - title: Manifest Contains Short Name
+        path: /web/tools/lighthouse/audits/manifest-contains-short_name
+      - title: Manifest Contains Start URL
+        path: /web/tools/lighthouse/audits/manifest-contains-start_url
+      - title: Manifest Contains Theme Color
+        path: /web/tools/lighthouse/audits/manifest-contains-theme_color
+      - title: Manifest Exists
+        path: /web/tools/lighthouse/audits/manifest-exists
+      - title: Manifest's Display Property Is Set
+        path: /web/tools/lighthouse/audits/manifest-has-display-set
+      - title: Manifest's Short Name Won't Be Truncated
+        path: /web/tools/lighthouse/audits/manifest-short_name-is-not-truncated
       - title: Page Contains Some Content When Its Scripts Are Not Available
         path: /web/tools/lighthouse/audits/no-js
       - title: Site Redirects HTTP Traffic to HTTPS

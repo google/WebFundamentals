@@ -432,6 +432,15 @@ function validateMarkdown(filename, commonTags) {
         });
       }
 
+      // Search for ``` wrapped code blocks
+      matched = content.match(/```/g);
+      if (matched) {
+        errMsg = 'Found sample code block(s) wrapped in ```.';
+        errMsg += ' Required style is indented by 4 spaces.';
+        logError(filename, errMsg);
+        errors++;
+      }
+
       // Verify all TL;DRs are H3 and include hide-from-toc   
       matched = content.match(/^#+ TL;DR.*\n/gm);
       if (matched) {
