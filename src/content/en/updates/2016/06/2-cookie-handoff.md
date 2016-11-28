@@ -55,7 +55,7 @@ allows you to set up a "2CH worker" for logged in users that can intercept
 all of the network requests your page is making and perform the token swapping
 just like mobile apps do.
 
-Much of the time your server will already have an endpoint used by mobile apps
+Much of the time your server already has an endpoint used by mobile apps
 to obtain a new short-lived token, typically using the OAuth protocol. To
 enable the above pattern on the web, that endpoint just needs to be updated to
 understand when it is being called by a service worker, and then return a new
