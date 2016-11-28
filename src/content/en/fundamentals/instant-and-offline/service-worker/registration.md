@@ -25,11 +25,9 @@ users, especially those on mobile devices with slower network connections.
 If you've ever read about service workers, you've probably come across
 boilerplate substantially similar to the following:
 
-```
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js');
-}
-```
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
 
 This might sometimes be accompanied by a few `console.log()` statements, or
 [code](https://github.com/GoogleChrome/sw-precache/blob/master/demo/app/js/service-worker-registration.js#L20)
@@ -80,13 +78,11 @@ registration until after the <code>[load
 event](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload)</code>
 fires on <code>window</code>, like so:
 
-```
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
-}
-```
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
 
 But the right time to kick off the service worker registration can also depend
 on what your web app is doing right after it loads. For example, the [Google I/O
@@ -145,7 +141,7 @@ resources that fight for bandwidth with the main page's requests.
 
 A great way to simulate a first visit is to open your web app in a [Chrome
 Incognito
-window](https://support.google.com/chromebook/answer/95464?co=GENIE.Platform%3DDesktop&hl=en),
+window](https://support.google.com/chromebook/answer/95464?co=GENIE.Platform%3DDesktop),
 and look at the network traffic in [Chrome's
 DevTools](/web/tools/chrome-devtools/). As a web
 developer, you probably reload a local instance of your web app dozens and
@@ -197,10 +193,8 @@ all the benefits of having a service worker for your repeat visits.
 A straightforward way to ensure to delay your service worker's initial
 registration until after the first page has loaded is to use the following:
 
-```
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/service-worker.js');
-  });
-}
-```
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
