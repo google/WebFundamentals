@@ -30,10 +30,7 @@ You can emulate and test A2HS events in Chrome DevTools. See the following
 section for more help: [Web App
 Manifest](/web/tools/chrome-devtools/debug/progressive-web-apps/#manifest).
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse fetches the manifest and verifies that it has data. The manifest that
 Lighthouse fetches is separate from the one that Chrome is using on the page, which

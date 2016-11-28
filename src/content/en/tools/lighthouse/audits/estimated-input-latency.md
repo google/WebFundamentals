@@ -43,13 +43,10 @@ to ensure that all stages of [the pixel
 pipeline](/web/fundamentals/performance/rendering/#the_pixel_pipeline) are
 complete within 50ms.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 The RAIL performance model recommends that apps respond to user input within
-100ms, whereas Lighthouse's target score is 50ms. Why? 
+100ms, whereas Lighthouse's target score is 50ms. Why?
 
 The reason is that Lighthouse uses a proxy metric to measure how well your
 app responds to user input: availability of the main thread. Lighthouse

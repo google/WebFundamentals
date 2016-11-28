@@ -13,7 +13,7 @@ Page load is a key aspect of how a user perceives the performance of your
 page. See [Measure Performance with the RAIL Method](/web/fundamentals/performance/rail) for more information.
 
 This audit identifies the time at which the user feels that the primary
-content of the page is visible. 
+content of the page is visible.
 
 ## How to pass the audit {: #how }
 
@@ -23,10 +23,7 @@ appears to display its primary content.
 [Optimizing the Critical Rendering Path](/web/fundamentals/performance/critical-rendering-path/)
 is particularly helpful towards achieving a faster First Meaningful Paint.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 First Meaningful Paint is essentially the paint after which the biggest
 above-the-fold layout change has happened, and web fonts have loaded. See the

@@ -36,10 +36,7 @@ Check out [Manifest Exists](manifest-exists#how)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 This audit can only guarantee that your icon displays well on Android devices.
 Other operating systems may require a different icon size for optimal

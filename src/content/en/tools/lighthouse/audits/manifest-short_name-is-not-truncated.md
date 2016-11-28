@@ -33,10 +33,7 @@ Check out [Manifest Exists](manifest-exists#how)
 for a list of guides that teach you how to properly
 implement and test "Add to Homescreen" support in your app.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse fetches the manifest and verifies that the `short_name` property is
 less than 12 characters. Note that since the `name` property can be used as a
