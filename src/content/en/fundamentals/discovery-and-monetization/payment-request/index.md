@@ -75,7 +75,7 @@ The beauty of the new process is threefold: from the user's perspective, all the
 
 ### Load Payment Request API shim
 
-To mitigate pains of catching up with this living standard API, we strongly 
+To mitigate pains of catching up with this living standard API, we strongly
 recommend you to add this shim in `<head>` section of your code. This shim
 will be updated as API changes and will do its best to keep your code working
 at least 2 major releases of Chrome.
@@ -134,11 +134,16 @@ The browser will render the labels as you define them and automatically render t
       displayItems: [
         {
           label: "Original donation amount",
-          amount: { currency: "USD", value : "65.00" }, // US$65.00
+          amount: {
+            currency: "USD",
+            value : "65.00",
+            currencySystem: "urn:iso:std:iso:4217" // Can be omitted
+          }, // US$65.00
         },
         {
           label: "Friends and family discount",
           amount: { currency: "USD", value : "-10.00" }, // -US$10.00
+          pending: true // The price is not determined yet
         }
       ],
       total:  {
@@ -150,7 +155,9 @@ The browser will render the labels as you define them and automatically render t
 
 *Transaction details*
 
-Currency identifiers used in the `details` are specified in the [Currency Codes - ISO 4217](http://www.iso.org/iso/home/standards/currency_codes.htm) documentation.
+You can specify a currency identifer to use in the `amount` by specifying [URN (Uniform Resource Name)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) in `currencySystem`. This defaults to `urn:iso:std:iso:4217` which is [ISO 4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
+
+`pending` is commonly used to show items such as shipping or tax amounts that depend upon selection of shipping address or shipping option. Chrome indicates pending fields in the UI for the payment request.
 
 Repeated or calculated values used in the `details` can be specified either as string literals or as individual string variables.
 
@@ -187,12 +194,21 @@ Activate the `PaymentRequest` interface by calling its [`show`](https://www.w3.o
 *PaymentRequest show method*
 
 ### Abort a Payment Request {: #abort-paymentrequest }
-You can intentionally abort a `PaymentRequest` by calling its [`abort`](https://www.w3.org/TR/payment-request/#abort) method. Use this method if the app needs to cancel the payment request after the `show` method has been called but before the promise has been resolved&mdash;for example, if an item is no longer available, or the user fails to confirm the purchase within an allotted amount of time.
+You can intentionally abort a `PaymentRequest` by calling its [`abort`](https://www.w3.org/TR/payment-request/#abort) method. This is particulary useful when the shopping session is timed out or the goods is sold out in between a user's transaction.
+
+Use this method if the app needs to cancel the payment request after the `show` method has been called but before the promise has been resolved&mdash;for example, if an item is no longer available, or the user fails to confirm the purchase within an allotted amount of time.
 
 If you abort a request, you'll need to create a new instance of `PaymentRequest` before you can call `show` again.
 
 
-    payment.abort();
+    var paymentTimeout = window.setTimeout(function() {
+      window.clearTimeout(paymentTimeout);
+      payment.abort().then(function() {
+        console.log('Payment timed out after 20 minutes.');
+      }).catch(function() {
+        console.log('Unable to abort.');
+      });
+    }, 20 * 60 * 1000);  /* 20 minutes */
 
 
 *PaymentRequest abort method*
@@ -228,16 +244,20 @@ Upon a user approval for a payment request, the [`show`](https://www.w3.org/TR/p
   <td><code>payerPhone</code></td>
   <td>The phone number of the payer, if requested</td>
 </tr>
+<tr>
+  <td><code>payerName</code></td>
+  <td>The name of the payer, if requested</td>
+</tr>
 </table>
 
 
-For credit card payments, the response is standardized. For non-credit card payments (e.g., Android Pay), the response will be documented by the provider. A credit card response contains the following dictionary:  
+For credit card payments, the response is standardized. For non-credit card payments (e.g., Android Pay), the response will be documented by the provider. A credit card response contains the following dictionary:
 
-`cardholderName`  
-`cardNumber`  
-`expiryMonth`  
-`expiryYear`  
-`cardSecurityCode`  
+`cardholderName`
+`cardNumber`
+`expiryMonth`
+`expiryYear`
+`cardSecurityCode`
 `billingAddress`
 
 After payment information is received, the app should submit the payment information to your payment processor for processing. The UI will show a spinner while the request takes place. When a response has come back, the app should call `complete` to close the UI.
@@ -306,13 +326,16 @@ The [`complete`](https://www.w3.org/TR/payment-request/#complete) method tells t
 
 If you are a merchant selling physical goods, you may want to collect the user's shipping address using the Payment Request API. This is accomplished by adding `requestShipping: true` to the `options` parameter. With this parameter set, "Shipping" will be added to the UI, and users can select from a list of stored addresses or add a new shipping address.
 
+You can alternatively use "Delivery" or "Pickup" instead of "Shipping" in the UI by specifying `shippingType`. This is solely display purpose.
+
 <div style="clear:both;"></div>
 
 Note: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dictionary" target="_blank">details</a>.shippingOptions</code> need to be <code>undefined</code> or an empty array upon initialization in order to receive <code>shippingaddresschange</code> event. Otherwise, the event won't be fired.
 
 
     var options = {
-      requestShipping: true
+      requestShipping: true,
+      shippingType: "delivery" // or "pickup" or "shipping" (default)
     };
 
     var request = new PaymentRequest(methodData, details, options);
@@ -383,33 +406,14 @@ Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/pay
 <div style="clear:both;"></div>
 
 
-    // convert `addr` into a dictionary
-    var toDict = function(addr) {
-      var dict = {};
-      if (addr) {
-        dict.country           = addr.country;
-        dict.region            = addr.region;
-        dict.city              = addr.city;
-        dict.dependentLocality = addr.dependentLocality;
-        dict.addressLine       = addr.addressLine;
-        dict.postalCode        = addr.postalCode;
-        dict.sortingCode       = addr.sortingCode;
-        dict.languageCode      = addr.languageCode;
-        dict.organization      = addr.organization;
-        dict.recipient         = addr.recipient;
-        dict.phone             = addr.phone;
-      }
-      return dict;
-    };
-
     payment.show().then(paymentResponse => {
       var paymentData = {
         // payment method string
         method: paymentResponse.methodName,
         // payment details as you requested
-        details: paymentResponse.details,
+        details: paymentResponse.details.toJSON(),
         // shipping address information
-        address: toDict(paymentResponse.shippingAddress)
+        address: paymentResponse.shippingAddress.toJSON()
       };
       // Send information to the server
     });
@@ -495,9 +499,9 @@ Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/pay
         // payment method string
         method: paymentResponse.methodName,
         // payment details as you requested
-        details: paymentResponse.details,
+        details: paymentResponse.details.toJSON(),
         // shipping address information
-        address: toDict(paymentResponse.shippingAddress),
+        address: paymentResponse.shippingAddress.toJSON(),
         // shipping option
         shippingOption: paymentResponse.shippingOption
       };
@@ -507,12 +511,13 @@ Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/pay
 
 
 ## Adding optional contact information {: #contact-information}
-You can also collect a user's email address or phone number by adding `requestPayerEmail: true` and/or `requestPayerPhone: true` to the `options` object.
+You can also collect a user's email address, phone number or name by configuring the `options` object.
 
 
     var options = {
-      requestPayerPhone: true,
-      requestPayerEmail: true
+      requestPayerPhone: true,  // Request user's phone number
+      requestPayerEmail: true,  // Request user's email address
+      requestPayerName:  true   // Request user's name
     };
 
     var request = new PaymentRequest(methodData, details, options);
@@ -534,15 +539,17 @@ Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/pay
         // payment method string
         method: paymentResponse.methodName,
         // payment details as you requested
-        details: paymentResponse.details,
+        details: paymentResponse.details.toJSON(),
         // shipping address information
-        address: toDict(paymentResponse.shippingAddress),
+        address: paymentResponse.shippingAddress.toJSON(),
         // shipping option string
         shippingOption: paymentResponse.shippingOption,
-        // buyer's phone number string
+        // payer's phone number string
         phone: paymentResponse.payerPhone,
-        // buyer's email address string
-        email: paymentResponse.payerEmail
+        // payer's email address string
+        email: paymentResponse.payerEmail,
+        // payer's name string
+        name: paymentResponse.payerName
       };
       // Send information to the server
     });
@@ -597,7 +604,8 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
       var options = {
         requestShipping: true,
         requestPayerEmail: true,
-        requestPayerPhone: true
+        requestPayerPhone: true,
+        requestPayerName: true
       };
 
       // Initialization
@@ -655,10 +663,11 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
         // Manually clone the resulting object
         var data = {};
         data.methodName = result.methodName;
-        data.details    = result.details;
+        data.details    = result.details.toJSON();
         data.payerEmail = result.payerEmail;
         data.payerPhone = result.payerPhone;
-        data.address    = toDict(result.shippingAddress);
+        data.payerName  = result.payerName;
+        data.address    = result.shippingAddress.toJSON();
         data.shipping   = result.shippingOption;
 
         // POST the object to the server
@@ -695,25 +704,6 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
         console.error('Uh oh, something bad happened: ' + err.message);
       });
     }
-
-    // convert `addr` into a dictionary
-    var toDict = function(addr) {
-      var dict = {};
-      if (addr) {
-        dict.country           = addr.country;
-        dict.region            = addr.region;
-        dict.city              = addr.city;
-        dict.dependentLocality = addr.dependentLocality;
-        dict.addressLine       = addr.addressLine;
-        dict.postalCode        = addr.postalCode;
-        dict.sortingCode       = addr.sortingCode;
-        dict.languageCode      = addr.languageCode;
-        dict.organization      = addr.organization;
-        dict.recipient         = addr.recipient;
-        dict.phone             = addr.phone;
-      }
-      return dict;
-    };
 
     document.querySelector('#start').addEventListener('click', onBuyClicked);
 
