@@ -60,8 +60,8 @@ and the TL;DR is:
 * Wait, monitor, and then remove feature as usage drops.
 
 You can find a list of all deprecated features in
-[chromestatus.com using the deprecated filter](https://www.chromestatus.com/features#deprecated){: .external}
-and removed features by applying the [removed filter](https://www.chromestatus.com/features#removed){: .external}.
+[chromestatus.com using the deprecated filter](https://www.chromestatus.com/features#deprecated)
+and removed features by applying the [removed filter](https://www.chromestatus.com/features#removed).
 We will also  try to summarize some of the changes, reasoning, and migration
 paths in these posts. We will also try to summarize some of the changes,
 reasoning, and migration paths in these posts.
