@@ -15,9 +15,7 @@ description: A round up of the deprecations and removals in Chrome to help you p
 In nearly every version of Chrome, we see a significant number of updates and
 improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
-which is in beta as of October 21. This list is subject to change at any time.
-
-
+which is in beta as of December xx. This list is subject to change at any time.
 
 ## Remove PaymentAddress.careOf field
 
