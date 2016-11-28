@@ -37,6 +37,17 @@ The `SVGViewElement.viewTarget` attribute is not part of the SVG2.0 specificatio
 [Chromestatus Tracker](https://www.chromestatus.com/features/5665473114931200) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=633908)
 
+## Remove BluetoothDevice.uuids attribute
+
+The `BluetoothDevice.uuids` attribute is being removed to bring the
+[Bluetooth API](https://www.chromestatus.com/features/5264933985976320) in
+line with the current specification. Anyone who participated in the API's
+[Origin Trial](https://developers.google.com/web/updates/2015/07/interact-with-ble-devices-on-the-web)
+should verify that their code does not use this attribute. You can retrieve
+a UUID by calling [device.watchAdvertisements()](https://webbluetoothcg.github.io/web-bluetooth/#dom-bluetoothdevice-watchadvertisements).
+
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=653317&desc=2)
+
 ## Deprecation policy
 
 To keep the platform healthy, we sometimes remove APIs from the Web Platform
