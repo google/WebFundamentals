@@ -20,7 +20,7 @@ Generally, deferring service worker
 until after the initial page has loaded will provide the best experience for
 users, especially those on mobile devices with slower network connections.
 
-## Common Registration Boilerplate
+## Common registration boilerplate
 
 If you've ever read about service workers, you've probably come across
 boilerplate substantially similar to the following:
@@ -39,7 +39,7 @@ So, is there any nuance to `navigator.serviceWorker.register`? Are there any
 best practices to follow? Not surprisingly (given that this article doesn't end
 right here), the answer to both is "yes!"
 
-## A User's First Visit
+## A user's first visit
 
 Let's consider a user's first visit to a web app. There's no service worker yet,
 and the browser has no way of knowing in advance whether there will be a service
@@ -70,7 +70,7 @@ and cache resources in the background can work against your goal of providing
 the shortest time-to-interactive experience the first time a user visits your
 site.
 
-## Improving the Boilerplate
+## Improving the boilerplate
 
 The solution is to control start of the service worker by choosing when to call
 `navigator.serviceWorker.register()`. A simple rule of thumb would be to delay
@@ -99,7 +99,7 @@ Similarly, if your web app uses a framework that performs additional setup after
 the page has loaded, look for a framework-specific event that signals when that
 work is done.
 
-## Subsequent Visits
+## Subsequent visits
 
 We've been focusing on the first visit experience up until now, but what impact
 does delayed service worker registration have on repeat visits to your site?
@@ -122,7 +122,7 @@ Unless you change the URL of the service worker script,
 [no-op](https://en.wikipedia.org/wiki/NOP) during subsequent visits. When it's
 called is irrelevant.
 
-## Reasons to Register Early
+## Reasons to register early
 
 Are there any scenarios in which registering your service worker as early as
 possible makes sense? One that comes to mind is when your service worker uses
@@ -137,7 +137,7 @@ your web app falls into this category, it's worth taking a step back to make
 sure that your service worker's <code>install</code> handler doesn't request
 resources that fight for bandwidth with the main page's requests.
 
-## Testing Things Out
+## Testing things out
 
 A great way to simulate a first visit is to open your web app in a [Chrome
 Incognito
