@@ -27,9 +27,6 @@ You can ignore this audit if:
 * The content width of your page is intentionally smaller or larger than the
   viewport width.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 The audit passes if `window.innerWidth === window.outerWidth`.

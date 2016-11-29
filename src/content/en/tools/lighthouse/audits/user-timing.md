@@ -30,9 +30,6 @@ Check out [User Timing API](https://www.html5rocks.com/en/tutorials/webperforman
 for an introduction on using the User Timing API to measure your app's
 JavaScript performance.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse extracts User Timing data from Chrome's Trace Event Profiling Tool.

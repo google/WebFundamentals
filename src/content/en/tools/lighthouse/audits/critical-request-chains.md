@@ -60,10 +60,7 @@ You can use this diagram to improve your CRP by:
 
 Optimizing any of these factors results in a faster page load.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Lighthouse uses network priority as a proxy for identifying render-blocking
 critical resources. See [Chrome Resource Priorities and

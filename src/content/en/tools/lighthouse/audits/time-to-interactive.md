@@ -21,13 +21,10 @@ Check out the resources in the [How to pass the audit](speed-index#how) section
 of the Speed Index audit for more help on improving page load performance.
 The lower your Time to Interactive score, the better.
 
-## What the audit tests for {: #what }
-
-*Use this information to determine if the audit is relevant to your needs
-or is returning incorrect results.*
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
 
 Time to Interactive is defined as the point at which layout has stabilized,
 key webfonts are visible, and the main thread is available enough to handle
-user input. 
+user input.
 
 Note that this metric is in early phases and is subject to change.
