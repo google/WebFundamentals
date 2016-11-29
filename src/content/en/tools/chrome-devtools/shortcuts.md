@@ -1,34 +1,23 @@
 project_path: /web/_project.yaml
 book_path: /web/tools/_book.yaml
-description: Chrome DevTools has several built-in shortcut keys that developers can use to save time in their day to day workflow. 
+description: A reference of all of the keyboard shortcuts in Chrome DevTools.
 
-{# wf_updated_on: 2016-01-27 #}
+{# wf_updated_on: 2016-11-28 #}
 {# wf_published_on: 2015-04-29 #}
 
-# Keyboard and UI Shortcuts Reference {: .page-title }
+# Keyboard Shortcuts Reference {: .page-title }
 
 {% include "web/_shared/contributors/megginkearney.html" %}
 {% include "web/_shared/contributors/kaycebasques.html" %}
 
-Chrome DevTools has several built-in shortcut keys that
-can save you time in your daily workflows.
+This page is a reference of the keyboard shortcuts in Chrome DevTools.
+While some shortcuts are available globally, others are specific
+to a single panel.
 
-This guide provides a quick reference to each shortcut available in Chrome
-DevTools. While some shortcuts are available globally, others are specific
-to a single panel, and are broken up based on where it can be used.
-
-You can also find shortcuts in tooltips. Hover over an element to display its
-tooltip. If the element has a shortcut, the tooltip will include it.
-
+You can also find shortcuts in tooltips. Hover over a UI element of DevTools
+to display its tooltip. If the element has a shortcut, the tooltip includes it.
 
 ## Accessing DevTools
-
-To access the DevTools, on any web page or app in Google Chrome:
-
-* Open the **Chrome menu** ![Chrome menu](imgs/chrome-menu.png){:.inline} at the top-right of your browser window, then select **Tools > Developer Tools**.
-* Right-click on any page element and select **Inspect Element**.
-
-On the keyboard:
 
 <table>
   <thead>
@@ -153,44 +142,6 @@ The following keyboard shortcuts are available in all DevTools panels:
     </tr>
   </tbody>
 </table>
-
-## Mouse shortcuts by Panel
-
-### Elements
-
-By right-clicking an element you can:
-
-* Force element pseudo states: (`:active`, `:hover`, `:focus`, `:visited`).
-* Set breakpoints on the elements: (Subtree modifications, Attribute modification, Node removal).
-* Clear console.
-
-#### In the styles sidebar
-
-![Element Pseudostates](imgs/attributes-icon.png)
-Emulate an element's pseudo state (`:active`, `:hover`, `:focus`, `:visited`).
-
-![Adding style selectors](imgs/plus.png)
-Add new style selectors.
-
-### Sources
-
-![Pause on Exception Button](imgs/pause-gray.png)
-Don't pause on exceptions.
-
-![Pause on All Exceptions](imgs/pause-blue.png)
-Pause on all exceptions (including those caught within try/catch blocks).
-
-![Pause on Uncaught Exceptions](imgs/pause-purple.png)
-Pause on uncaught exceptions (usually the one you want).
-
-### Console
-
-Right-clicking on console:
-
-* XMLHttpRequest logging: Turn on to view the XHR log.
-* Preserve log upon navigation.
-* Filter: Hide and unhide messages from script files.
-* Clear console: Clear all console messages.
 
 ## Keyboard shortcuts by panel
 
@@ -595,70 +546,6 @@ Shortcuts available in the Styles sidebar:
       <td data-th="Screencasting Shortcuts">Inspect element tool</td>
       <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">C</kbd></td>
       <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">C</kbd></td>
-    </tr>
-  </tbody>
-</table>
-
-## Bonus: useful Chrome shortcuts
-
-Here are some additional Chrome shortcuts which are useful for general use within the browser not specific to the DevTools. [View all Chrome shortcuts](https://goo.gl/PsTNm) for Windows, Mac, and Linux:
-
-<table>
-  <thead>
-      <th>More Chrome Shortcuts</th>
-      <th>Windows</th>
-      <th>Mac</th>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-th="More Chrome Shortcuts">Find next</td>
-      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">G</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">G</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">Find previous</td>
-      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">G</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">G</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">Open a new window in Incognito mode</td>
-      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">N</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">N</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">Toggle Bookmarks bar on and off</td>
-      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">B</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">B</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">View the History page</td>
-      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">H</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Y</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">View the Downloads page</td>
-      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">J</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">Shift</kbd> + <kbd class="kbd">J</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">Next page in a tabs browsing history</td>
-      <td data-th="Windows"><kbd class="kbd">Alt</kbd> + <kbd class="kbd">Right</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Opt</kbd> + <kbd class="kbd">Right</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">Previous page in a tabs browsing history</td>
-      <td data-th="Windows"><kbd class="kbd">Backspace</kbd>, <kbd class="kbd">Alt</kbd> + <kbd class="kbd">Left</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Backspace</kbd>, <kbd class="kbd">Opt</kbd> + <kbd class="kbd">Left</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">Highlight content in the web address area</td>
-      <td data-th="Windows"><kbd class="kbd">F6</kbd>, <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">L</kbd>, <kbd class="kbd">Alt</kbd> + <kbd class="kbd">D</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">L</kbd>, <kbd class="kbd">Opt</kbd> + <kbd class="kbd">D</kbd></td>
-    </tr>
-    <tr>
-      <td data-th="More Chrome Shortcuts">Places a ? in the address bar for performing a keyword search using your default search engine</td>
-      <td data-th="Windows"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">K</kbd>, <kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">E</kbd></td>
-      <td data-th="Mac"><kbd class="kbd">Cmd</kbd> + <kbd class="kbd">K</kbd>, <kbd class="kbd">Cmd</kbd> + <kbd class="kbd">E</kbd></td>
     </tr>
   </tbody>
 </table>
