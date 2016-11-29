@@ -9,7 +9,7 @@ toc:
       path: /web/fundamentals/discovery-and-monetization/social-discovery/
     - title: Monetization with Ads
       path: https://www.google.com/adsense
-    - title: Payment Request API
+    - title: Handling Payments
       section:
       - title: Integration Guide
         path: /web/fundamentals/discovery-and-monetization/payment-request/
