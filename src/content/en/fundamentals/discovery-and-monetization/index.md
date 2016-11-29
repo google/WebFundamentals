@@ -9,7 +9,7 @@ description: Learn how to bring more readers to your website and increase revenu
 
 Broaden your website's audience and increase revenue.
 
-Online advertisements are one way to monetize your site or app. 
+Online advertisements are one way to monetize your site or app.
 [Google's AdSense site](https://www.google.com/adsense) has resources and
 instructions to help you through that. To earn those revenues you need to
 bring more people to your site.
@@ -28,7 +28,7 @@ Best of all, with the browser acting as an intermediary, all the information
 necessary for a fast checkout can be stored in the browser, so users can just
 confirm and pay, all with a single click.
 
-[Payment Request Integration Guide](/web/fundamentals/getting-started/primers/payment-request)
+[Payment Request Integration Guide](/web/fundamentals/discovery-and-monetization/payment-request/)
 
 <div class="attempt-left">
   <h2>Search Optimization</h2>
