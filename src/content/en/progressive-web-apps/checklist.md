@@ -289,7 +289,7 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
     </tr>
     <tr>
       <td colspan="2">
-        <a href="https://schema.org">Scheme.org</a> metadata can help improve
+        <a href="https://schema.org">Schema.org</a> metadata can help improve
         the appearance of your site in search engines.
       </td>
     </tr>
