@@ -11,4 +11,4 @@ description: Reference documentation for the "AUDIT_NAME" Lighthouse audit.
 
 ## How to pass the audit {: #how }
 
-{% include "web/tools/lighthouse/audits/implementation-heading.md" %}
+{% include "web/tools/lighthouse/audits/implementation-heading.html" %}
