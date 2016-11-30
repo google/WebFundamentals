@@ -77,8 +77,8 @@ Each @font-face declaration provides the name of the font family, which acts as 
       src: local('Awesome Font'),
            url('/fonts/awesome.woff2') format('woff2'), 
            url('/fonts/awesome.woff') format('woff'),
-           url('/fonts/awesome.ttf') format('ttf'),
-           url('/fonts/awesome.eot') format('eot');
+           url('/fonts/awesome.ttf') format('truetype'),
+           url('/fonts/awesome.eot') format('embedded-opentype');
     }
 
     @font-face {
@@ -88,8 +88,8 @@ Each @font-face declaration provides the name of the font family, which acts as 
       src: local('Awesome Font Italic'),
            url('/fonts/awesome-i.woff2') format('woff2'), 
            url('/fonts/awesome-i.woff') format('woff'),
-           url('/fonts/awesome-i.ttf') format('ttf'),
-           url('/fonts/awesome-i.eot') format('eot');
+           url('/fonts/awesome-i.ttf') format('truetype'),
+           url('/fonts/awesome-i.eot') format('embedded-opentype');
     }
 
 
@@ -138,8 +138,8 @@ subsets, each of which the browser downloads on an as-needed basis:
       src: local('Awesome Font'),
            url('/fonts/awesome-l.woff2') format('woff2'), 
            url('/fonts/awesome-l.woff') format('woff'),
-           url('/fonts/awesome-l.ttf') format('ttf'),
-           url('/fonts/awesome-l.eot') format('eot');
+           url('/fonts/awesome-l.ttf') format('truetype'),
+           url('/fonts/awesome-l.eot') format('embedded-opentype');
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
     
@@ -150,8 +150,8 @@ subsets, each of which the browser downloads on an as-needed basis:
       src: local('Awesome Font'),
            url('/fonts/awesome-jp.woff2') format('woff2'), 
            url('/fonts/awesome-jp.woff') format('woff'),
-           url('/fonts/awesome-jp.ttf') format('ttf'),
-           url('/fonts/awesome-jp.eot') format('eot');
+           url('/fonts/awesome-jp.ttf') format('truetype'),
+           url('/fonts/awesome-jp.eot') format('embedded-opentype');
       unicode-range: U+3000-9FFF, U+ff??; /* Japanese glyphs */
     }
     
@@ -207,8 +207,8 @@ _Awesome Font_ family:
       src: local('Awesome Font'),
            url('/fonts/awesome-l.woff2') format('woff2'), 
            url('/fonts/awesome-l.woff') format('woff'),
-           url('/fonts/awesome-l.ttf') format('ttf'),
-           url('/fonts/awesome-l.eot') format('eot');
+           url('/fonts/awesome-l.ttf') format('truetype'),
+           url('/fonts/awesome-l.eot') format('embedded-opentype');
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
     
@@ -219,8 +219,8 @@ _Awesome Font_ family:
       src: local('Awesome Font'),
            url('/fonts/awesome-l-700.woff2') format('woff2'), 
            url('/fonts/awesome-l-700.woff') format('woff'),
-           url('/fonts/awesome-l-700.ttf') format('ttf'),
-           url('/fonts/awesome-l-700.eot') format('eot');
+           url('/fonts/awesome-l-700.ttf') format('truetype'),
+           url('/fonts/awesome-l-700.eot') format('embedded-opentype');
       unicode-range: U+000-5FF; /* Latin glyphs */
     }
     
