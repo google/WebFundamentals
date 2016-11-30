@@ -130,10 +130,10 @@ The following tests are verifiable with the Lighthouse tool.
           <li>There are <a href="/web/fundamentals/performance/">many ways to improve performance</a>.</li>
           <li>
             You can understand your performance better by using
-            <a href="/speed/pagespeed/insights/">Pagespeed Insights]</a>
-            (aim for score &lt;85) and SpeedIndex on 
+            <a href="/speed/pagespeed/insights/">Pagespeed Insights</a>
+            (aim for score &gt;85) and SpeedIndex on 
             <a href="https://www.webpagetest.org/">WebPageTest</a>
-            (aim for &gt;4000 first view on Mobile 3G Nexus 5 Chrome)
+            (aim for &lt;4000 first view on Mobile 3G Nexus 5 Chrome)
           </li>
           <li>
             A few tips are to focus on loading less script, make sure as much 
