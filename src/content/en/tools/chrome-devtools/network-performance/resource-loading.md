@@ -23,7 +23,7 @@ headers, cookies, and more.
 ### TL;DR {: .hide-from-toc }
 - Use the Network panel to record and analyze network activity.
 - View load information in aggregate or for individual resources.
-- Filter and sort how resources are dispalyed.
+- Filter and sort how resources are displayed.
 - Save, copy, and clear network recordings.
 - Customize the Network panel to your needs.
 
