@@ -57,7 +57,7 @@ max-width: 100%;
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-`ImageCapture` is an API for taking photos and controlling camera settings.
+`ImageCapture` is an API for capturing still images and controlling camera settings.
 
 The API enables control over camera hardware features such as zoom, focus mode,
 contrast, ISO and white balance, as well as enabling access to the maximum resolution capabilities of the camera. Previous techniques for
