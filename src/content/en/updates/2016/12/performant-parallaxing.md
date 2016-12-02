@@ -6,12 +6,14 @@ description: With a little mathematical wriggling, it's possible to have paralla
 {# wf_published_on: 2016-12-02 #}
 {# wf_tags: performance,parallax,sticky,3d,style #}
 {# wf_featured_image: /web/updates/images/2016/12/performant-parallaxing/featured-image.jpg #}
+{# wf_featured_snippet: When used judiciously paralaxing can add of depth and subtlety to a web app. #}
+
 
 # Performant Parallaxing {: .page-title }
 
 {% include "web/_shared/contributors/paullewis.html" %}
 
-Love it or hate it, parallaxing is here to stay. When used judiciously it can add of depth and subtlety to a web app. The problem, however, is that implementing parallaxing in a performant way can be challenging. In this article we’ll discuss a solution that is both performant and, just as importantly, works cross-browser.
+Love it or hate it, parallaxing is here to stay. When used judiciously it can add depth and subtlety to a web app. The problem, however, is that implementing parallaxing in a performant way can be challenging. In this article we’ll discuss a solution that is both performant and, just as importantly, works cross-browser.
 
 <img src="/web/updates/images/2016/12/performant-parallaxing/parallax.jpg">
 
@@ -19,19 +21,19 @@ Love it or hate it, parallaxing is here to stay. When used judiciously it can ad
 
 * Don’t use scroll events or background-position to create parallax animations.
 * Use CSS 3D transforms to create a more accurate parallax effect.
-* For Mobile Safari you can use position: sticky to ensure that the parallax effect gets propagated.
+* For Mobile Safari use `position: sticky` to ensure that the parallax effect gets propagated.
 
 If you want the drop-in solution head over to the [UI Element Samples GitHub repo](https://github.com/GoogleChrome/ui-element-samples) and grab the [Parallax helper JS](https://github.com/GoogleChrome/ui-element-samples/blob/gh-pages/parallax/scripts/parallax.js)!
 
-## Problem Parallaxers
+## Problem parallaxers
 
 To begin with let’s take a look at two common ways of achieving a parallax effect, and in particular why they are unsuitable for our purposes.
 
 ### Bad: using scroll events
 
-The key requirement of parallaxing is that it should be scroll-coupled: for every single change in the page’s scroll position the parallaxing elements’ position should update. While that sounds simple, an important mechanism of modern browsers is their ability to work asynchronously. This applies, in our particular case, to scroll events. In most browsers scroll events are delivered as "best-effort" and are not guaranteed to be delivered on every frame of the scroll animation!
+The key requirement of parallaxing is that it should be scroll-coupled; for every single change in the page’s scroll position the parallaxing element's position should update. While that sounds simple, an important mechanism of modern browsers is their ability to work asynchronously. This applies, in our particular case, to scroll events. In most browsers scroll events are delivered as "best-effort" and are not guaranteed to be delivered on every frame of the scroll animation!
 
-This important piece of information tells us why we need to avoid a JavaScript-based solution that moves elements based on scroll events: **it simply doesn’t guarantee that the parallaxing will keep in step with the page’s scroll position**. In older versions of Mobile Safari scroll events were actually delivered at the end of the scroll, which made it impossible to make a JavaScript-based scroll effect. More recent versions *do* deliver scroll events during the animation, but, similarly to Chrome, on a "best-effort" basis. If the main thread is busy with any other work scroll events will not get delivered immediately, meaning the parallax effect will be lost.
+This important piece of information tells us why we need to avoid a JavaScript-based solution that moves elements based on scroll events: **JavaScript doesn’t guarantee that parallaxing will keep in step with the page’s scroll position**. In older versions of Mobile Safari scroll events were actually delivered at the end of the scroll, which made it impossible to make a JavaScript-based scroll effect. More recent versions *do* deliver scroll events during the animation, but, similarly to Chrome, on a "best-effort" basis. If the main thread is busy with any other work, scroll events will not get delivered immediately, meaning the parallax effect will be lost.
 
 ### Bad: updating background-position
 
@@ -83,7 +85,7 @@ It’s important to be clear why this works, since we’re going to need to make
 
 However, applying a perspective value to the scrolling element messes around with this process: it changes the matrices that underpin the scroll transform. Now a scroll of 300px may only move the children by 150px, depending on the `perspective` and `translateZ` values you chose. If an element has a `translateZ` value of 0 it will be scrolled at 1:1 (as it used to), but a child pushed in Z away from the perspective origin will be scrolled at a different rate! Net result: parallax motion. And, very importantly, this is handled as part of the browser’s internal scroll machinery automatically, meaning there’s no need to listen to `scroll` events or change `background-position`.
 
-## A Fly In the Ointment: Mobile Safari
+## A fly in the ointment: Mobile Safari
 
 There are caveats to every effect, and one important one in the case of transforms is about the preservation of 3D effects to child elements. If there are elements in the hierarchy between the element with a perspective and its parallaxing children, the 3D perspective is "flattened", meaning the effect is lost.
 
