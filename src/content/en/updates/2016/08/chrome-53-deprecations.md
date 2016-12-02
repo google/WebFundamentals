@@ -86,7 +86,7 @@ Fortunately the `FileError`, `DOMError`, and `DOMException` error types all shar
 
 The removal of `FileError` is anticipated Chrome 54.
 
-## Remove results attribute for `<input type=search>`
+## Remove results attribute for &lt;input type=search&gt;
 
 **TL;DR:** The `results` attribute is being removed because it's not part of any standard and is inconsistently implemented across browsers.
 
