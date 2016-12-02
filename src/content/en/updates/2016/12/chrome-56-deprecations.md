@@ -17,6 +17,14 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
 which is in beta as of December xx. This list is subject to change at any time.
 
+## Remove user gestures from touch scroll
+
+We've seen multiple [examples](http://crbug.com/572319) of poorly written or malicious ads that trigger navigation for touch scrolls either on `touchstart` or all `touchend` events.  If a 'wheel' event can't open a pop-up, then touch scrolling shouldn't either. This may break some scenarios, for example, media not playing on touch, or pop-ups not opening on touch.  Safari already silently fails to open pop-ups in all of these scenarios.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/TO_x7FRkdmw/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6131337345892352) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=611981)
+
 ## Remove PaymentAddress.careOf field
 
 The `PaymentAddress` interface has a `careOf` field which is non-standard (no well-known address
