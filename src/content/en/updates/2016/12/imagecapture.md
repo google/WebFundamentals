@@ -57,11 +57,10 @@ max-width: 100%;
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-`ImageCapture` is an API for taking photos and controlling cameras.
+`ImageCapture` is an API for taking photos and controlling camera settings.
 
 The API enables control over camera hardware features such as zoom, focus mode,
-contrast, ISO and white balance, as well as enabling access to the maximum
-still-image resolution capabilities of the camera. Previous techniques for
+contrast, ISO and white balance, as well as enabling access to the maximum resolution capabilities of the camera. Previous techniques for
 taking photos on the Web have used snapshots from a video stream, which are
 lower resolution than those available for still images.
 
@@ -96,13 +95,13 @@ zoom, white balance or focus mode.
 
 Note: To choose between different cameras, such as the front and back camera on
 a phone, get a list of available devices via the
-`MediaDevices.enumerateDevicesMethod()`, then set `deviceId` in `getUserMedia()`
-constraints as per the demo [here](https://webrtc.github.io/samples/src/content/devices/input-output/).
+`MediaDevices.enumerateDevices()` method, then set `deviceId` in `getUserMedia()`
+constraints — as per the demo [here](https://webrtc.github.io/samples/src/content/devices/input-output/).
 
 You can use `takePhoto()` to get a still image and then set it as the `src` of
 an `<img>`:
 
-    imageCapture.<strong>takePhoto()</strong>
+    imageCapture.takePhoto()
       .then(blob => {
         image.src = URL.createObjectURL(blob);
       })
@@ -111,7 +110,7 @@ an `<img>`:
 Use `grabFrame()` to get data for a frame of video and then draw
 it on a `<canvas>`:
 
-    imageCapture.<strong>grabFrame()</strong>
+    imageCapture.grabFrame()
       .then(imageBitmap => {
         canvas.width = imageBitmap.width;
         canvas.height = imageBitmap.height;
@@ -129,7 +128,7 @@ You can try this out in the demo below — if you're using a browser that suppor
 `<canvas>`.
 
 * Tap or click the **TAKE PHOTO** button to call `takePhoto()` and display the
-result in an `img` element.
+result in an `<img>`.
 
 * If the camera you are using supports zoom, a zoom slider will be displayed.
 
@@ -185,7 +184,7 @@ out more from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
 `[FillLightMode](https://w3c.github.io/mediacapture-image/#FillLightMode)`.
 
 ## Demos &amp; Code Samples
-* [Chrome samples demo](https://github.com/GoogleChrome/samples/tree/gh-pages/image-capture)
+* [Chrome Samples demo](https://github.com/GoogleChrome/samples/tree/gh-pages/image-capture)
 * [simpl.info/ic](https://simpl.info/ic)
 * [WebRTC samples](https://webrtc.github.io/samples)
 
