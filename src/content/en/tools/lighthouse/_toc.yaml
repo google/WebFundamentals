@@ -43,6 +43,8 @@ toc:
         path: /web/tools/lighthouse/audits/http-redirects-to-https
       - title: Site is on HTTPS
         path: /web/tools/lighthouse/audits/https
+      - title: Site Uses Passive Event Listeners
+        path: /web/tools/lighthouse/audits/passive-event-listeners
       - title: Speed Index
         path: /web/tools/lighthouse/audits/speed-index
       - title: Time to Interactive
