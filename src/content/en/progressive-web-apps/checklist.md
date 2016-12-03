@@ -574,6 +574,38 @@ and [social discovery](/web/fundamentals/discovery-and-monetization/social-disco
 </table>
 
 
+<table class="responsive">
+  <tbody>
+    <tr>
+      <th colspan=2><h3>The Add to Home Screen prompt is intercepted</h3></th>
+    </tr>
+    <tr>
+      <td><b>To Test</b></td>
+      <td>
+        Check the browser doesn't display the A2HS at an inopportune moment,
+        such as when the user is in the middle of a flow that shouldn't be
+        interrupted, or when another prompt is already displayed on the screen.
+      </td>
+    </tr>
+    <tr>
+      <td><b>To Fix</b></td>
+      <td>
+        <ul>
+          <li>Intercept the `beforeinstallprompt` event and prompt later</li>
+          <li>
+            Chrome manages when to trigger the prompt but for situations this
+            might not be ideal. You can [defer the prompt](https://developers.google.com/web/fundamentals/engage-and-retain/app-install-banners/#deferring_or_cancelling_the_prompt)
+            to a later time in the app's usage. It may also help to dim the screen,
+            as advised for requesting permissions below.
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
 
 ### Performance {: .hide-from-toc }
 
