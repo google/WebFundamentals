@@ -98,13 +98,13 @@ to using those strategies for runtime requests.
 
 ## Offline Google Analytics
 
-[Offline Google Analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/projects/sw-offline-google-analytics) 
+[Offline Google Analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/packages/sw-offline-google-analytics) 
 temporarily holds and retries analytics requests to avoid losing them to network
 disconnections. This tool easily installs to your build system using npm and is
 easily imported into your service worker script. Configure it using a
 parameterized function call.
 
-[Get sw-offline-google-analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/projects/sw-offline-google-analytics){: .button .button-primary }
+[Get sw-offline-google-analytics](https://github.com/GoogleChrome/sw-helpers/tree/master/packages/sw-offline-google-analytics){: .button .button-primary }
 
 ### Features
 
