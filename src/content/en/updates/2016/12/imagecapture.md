@@ -80,7 +80,7 @@ access to available camera options and their current values.
 [camera settings](http://www.w3.org/TR/image-capture/#photosettings) such as
 zoom, white balance or focus mode.
 
-`ImageCapture` gets access to media streams from cameras via `getUserMedia()`:
+`ImageCapture` gets access to a camera via a `MediaStream` from `getUserMedia()`:
 
     navigator.mediaDevices.getUserMedia({video: true})
       .then(gotMedia)
@@ -91,6 +91,8 @@ zoom, white balance or focus mode.
       const imageCapture = new ImageCapture(mediaStreamTrack);
       console.log(imageCapture);
     }
+
+You can try out this code from the DevTools console.
 
 Note: To choose between different cameras, such as the front and back camera on
 a phone, get a list of available devices via the
