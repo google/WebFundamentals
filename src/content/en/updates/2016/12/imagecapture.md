@@ -60,7 +60,7 @@ max-width: 100%;
 `ImageCapture` is an API to capture still images and control camera settings.
 
 The API enables control over camera hardware features such as zoom, focus mode,
-contrast, ISO and white balance. Best of all, `ImageCapture` enables access to the full resolution capabilities of the camera. Previous techniques for
+contrast, ISO and white balance. Best of all, `ImageCapture` enables access to the full resolution capabilities. Previous techniques for
 taking photos on the Web have used snapshots from a video stream, which are
 lower resolution than those available for still images.
 
