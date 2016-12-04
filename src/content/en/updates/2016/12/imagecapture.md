@@ -53,7 +53,7 @@ max-width: 100%;
 
 </style>
 
-# Take Photos &amp; Control Camera Settings {: .page-title }
+# Take Photos & Control Camera Settings {: .page-title }
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
@@ -71,10 +71,9 @@ features enabled.
 
 The API has four methods:
 
-* `takePhoto()` returns a `Blob` which can be downloaded, stored by the browser
+* `takePhoto()` returns a `Blob`, [the result of a single photographic exposure](https://www.w3.org/TR/image-capture/#dom-imagecapture-takephoto), which can be downloaded, stored by the browser
 or displayed in an `img` element.
-* `grabFrame()` returns an `ImageBitmap` object which can be post-processed — 
-for example, to selectively change color values.
+* `grabFrame()` returns an `ImageBitmap` object, [a snapshot of live video](https://www.w3.org/TR/image-capture/#dom-imagecapture-grabframe), which could (for example) be drawn on a canvas and then post-processed to selectively change color values.
 * `getPhotoCapabilities()` returns a `PhotoCapabilities` object that provides
 access to available camera options and their current values.
 * `setOptions()` is used to configure
@@ -144,7 +143,7 @@ result in an `<img>`.
   <img class="hidden">
 </div>
 
-## Camera capabilities
+## Camera Capabilities
 
 In the demo above, you'll notice a difference in dimensions between the
 `grabFrame()` and `takePhoto()` results.
@@ -176,12 +175,12 @@ shows how to set `getUserMedia()` constraints for resolution.
 
 ## Anything Else?
 
-* The **Shape Detection API** works well with `ImageCapture`: call `grabFrame()`
+* The [**Shape Detection API**](https://www.chromestatus.com/feature/4757990523535360) works well with `ImageCapture`: call `grabFrame()`
 repeatedly to feed `ImageBitmap`s to a `FaceDetector` or `BarcodeDetector`. Find
-out more from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
+out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
 
-* **Camera flash** (torch) can be accessed via
-`[FillLightMode](https://w3c.github.io/mediacapture-image/#FillLightMode)`.
+* The **Camera flash** (torch) can be accessed via
+[`FillLightMode`](https://w3c.github.io/mediacapture-image/#FillLightMode).
 
 ## Demos &amp; Code Samples
 * [Chrome Samples demo](https://github.com/GoogleChrome/samples/tree/gh-pages/image-capture)
@@ -194,6 +193,7 @@ out more from Paul Kinlan's [blog post](https://paul.kinlan.me/face-detection/).
 
 ## Find Out More
 * [ImageCapture spec](https://www.w3.org/TR/image-capture/)
+* [ImageCapture implementation status](https://github.com/w3c/mediacapture-image/blob/gh-pages/implementation-status.md)
 * [Shape Detection API](https://wicg.github.io/shape-detection-api/#introduction)
 * [Shape Detection explainer and readme](https://github.com/WICG/shape-detection-api)
 * [Face detection demo](https://codepen.io/miguelao/pen/VKOPdX)
