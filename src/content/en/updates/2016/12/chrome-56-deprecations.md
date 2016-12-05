@@ -17,6 +17,14 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
 which is in beta as of December xx. This list is subject to change at any time.
 
+## Remove reflected-xss CSP directive
+
+Early drafts of the [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/) spec contained a `reflected-xss` directive which offered nothing more than the `X-XSS-Protection` header other than a different syntax. This directive was removed from the spec in 2015, but not before it was implemented in Chrome. Support for this directive is now being removed.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/gjB93RpF6JY/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5769374145183744) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=657737)
+
 ## Replace CSP 'referrer' directive
 
 The CSP `referrer` directive allowed site owners to set a referrer policy from an HTTP header. Not only does this feature have [very low usage](https://www.chromestatus.com/metrics/feature/popularity#CSPReferrerDirective), it has also no longer part of any W3C spec.
