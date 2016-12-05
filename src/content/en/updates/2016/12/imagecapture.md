@@ -85,7 +85,7 @@ The Image Capture API gets access to a camera via a `MediaStream` from `getUserM
       .then(gotMedia)
       .catch(error => console.error('getUserMedia() error:', error));
 
-    function gotMedia(mediaStream){
+    function gotMedia(mediaStream) {
       const mediaStreamTrack = mediaStream.getVideoTracks()[0];
       const imageCapture = new ImageCapture(mediaStreamTrack);
       console.log(imageCapture);
@@ -184,7 +184,7 @@ out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/fac
 [`FillLightMode`](https://w3c.github.io/mediacapture-image/#FillLightMode).
 
 ## Demos &amp; Code Samples
-* [Chrome Samples demo](https://github.com/GoogleChrome/samples/tree/gh-pages/image-capture)
+* [Chrome Samples demo]( https://googlechrome.github.io/samples/image-capture/index.html)
 * [simpl.info/ic](https://simpl.info/ic)
 * [WebRTC samples](https://webrtc.github.io/samples)
 
