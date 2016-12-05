@@ -134,8 +134,6 @@ Ask yourself:
 * What other UI components are key to our app?
 * What supporting resources are needed for the app shell? For example images, JavaScript, styles, etc.
 
-We're going to create a Weather app as our first Progressive Web App. The key components will consist of:
-
 When designing a more complex app, content that isn't needed for the initial load can be requested later and then cached for future use. For example, we could defer the loading of the New City dialog until after we've rendered the first run experience and have some idle cycles available.
 
 
