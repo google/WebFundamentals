@@ -434,7 +434,7 @@ The flow above is very similar to normal JavaScript try/catch, errors that happe
 </div>
 
 
-Follow the green lines for promises that fulfill, or the red for ones that reject.
+Follow the blue lines for promises that fulfill, or the red for ones that reject.
 
 ### JavaScript exceptions and promises
 Rejections happen when a promise is explicitly rejected, but also implicitly if an error is thrown in the constructor callback:
