@@ -17,6 +17,18 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
 which is in beta as of December xx. This list is subject to change at any time.
 
+## Disallow all fetches for scripts with invalid type/language attributes
+
+Currently, Chrome's preload scanner fetches items in `<scripts>` elements regardless of the value of the `type` or `language` attribute, though the script will not be executed when parsed. By deprecating the fetch, the preload scanner and the parser will have the same semantics, and we will not be initiating fetches for scripts we will not use. This is intended to save data for users who navigate to sites with a lot of custom script tags that are post-processed (like `type=”text/template”`, for example).
+
+The use case of using invalid scripts to ping servers is adequately covered by the [sendBeacon API](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon).
+
+This change alligns Chrome with Safari, though Firebox still requests scripts regardless of type or language.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/eu57SCNltls/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5760718284521472) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=626321&desc=2)
+
 ## Remove MediaStreamTrack.getSources()
 
 This method is no longer part of the spec and is not supported by any other major browser. It has been replaced by `MediaDevices.enumerateDevices()`, which Blink has supported without flags since version 47 and which is also supported by other browsers.
