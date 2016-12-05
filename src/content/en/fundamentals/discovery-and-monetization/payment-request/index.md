@@ -13,11 +13,11 @@ description: Payment Request API is for fast, easy payments on the web.
 
 Dogfood: `PaymentRequest` is still in development. While we think it's stable
 enough to implement, it may continue to change. We'll keep this page updated to
-always reflect the current status of the API. Meanwhile, to protect yourself
-from API changes that may be backwards incompatible, we're offering
-[a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js) that can be
-embedded on your site. The shim will paper over any API differences for two
-major Chrome versions.
+always reflect the current status of the API([M56 changes](https://docs.google.com/document/d/1I8ha1ySrPWhx80EB4CVPmThkD4ILFM017AfOA5gEFg4/edit#)).
+Meanwhile, to protect yourself from API changes that may be backwards
+incompatible, we're offering [a shim](https://storage.googleapis.com/prshim/v1/payment-shim.js)
+that can be embedded on your site. The shim will paper over any API
+differences for two major Chrome versions.
 
 
 Buying goods online is a convenient but often frustrating experience, particularly on mobile devices. Although mobile traffic continues to increase, mobile conversions account for only about a third of all completed purchases. In other words, users abandon mobile purchases twice as often as desktop purchases. Why?
@@ -137,8 +137,9 @@ The browser will render the labels as you define them and automatically render t
           amount: {
             currency: "USD",
             value : "65.00",
-            currencySystem: "urn:iso:std:iso:4217" // Can be omitted
-          }, // US$65.00
+            // ISO4217 is default. You can ommit.
+            currencySystem: "urn:iso:std:iso:4217"
+          },
         },
         {
           label: "Friends and family discount",
@@ -154,8 +155,6 @@ The browser will render the labels as you define them and automatically render t
 
 
 *Transaction details*
-
-You can specify a currency identifer to use in the `amount` by specifying [URN (Uniform Resource Name)](https://en.wikipedia.org/wiki/Uniform_Resource_Name) in `currencySystem`. This defaults to `urn:iso:std:iso:4217` which is [ISO 4217](http://www.iso.org/iso/home/standards/currency_codes.htm).
 
 `pending` is commonly used to show items such as shipping or tax amounts that depend upon selection of shipping address or shipping option. Chrome indicates pending fields in the UI for the payment request.
 
@@ -335,7 +334,7 @@ Note: <code><a href="https://www.w3.org/TR/payment-request/#paymentdetails-dicti
 
     var options = {
       requestShipping: true,
-      shippingType: "delivery" // or "pickup" or "shipping" (default)
+      shippingType: "shipping" // "shipping"(default), "delivery" or "pickup"
     };
 
     var request = new PaymentRequest(methodData, details, options);
@@ -530,7 +529,7 @@ You can also collect a user's email address, phone number or name by configuring
   </figure>
 </div>
 
-Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.payerPhone` and/or `.payerEmail` properties of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the user choice, along with other properties.
+Upon user approval for a payment request, the [`show`](https://www.w3.org/TR/payment-request/#show) method's promise resolves. The app may use the `.payerPhone`, `.payerEmail` and/or `.payerName` properties of the [`PaymentResponse`](https://www.w3.org/TR/payment-request/#paymentresponse-interface) object to inform the payment processor of the user choice, along with other properties.
 
 <div style="clear:both;"></div>
 
@@ -660,24 +659,14 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
 
       // Show UI then continue with user payment info
       request.show().then(result => {
-        // Manually clone the resulting object
-        var data = {};
-        data.methodName = result.methodName;
-        data.details    = result.details.toJSON();
-        data.payerEmail = result.payerEmail;
-        data.payerPhone = result.payerPhone;
-        data.payerName  = result.payerName;
-        data.address    = result.shippingAddress.toJSON();
-        data.shipping   = result.shippingOption;
-
-        // POST the object to the server
+        // POST the result to the server
         return fetch('/pay', {
           method: 'POST',
           credentials: 'include',
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
+          body: result.toJSON()
         }).then(res => {
           // Only if successful
           if (res.status === 200) {
@@ -694,9 +683,9 @@ As Payment Request API is an emerging feature, many browsers don't yet support i
           }
         }).then(() => {
           console.log('Thank you!',
-              result.shippingAddress,
+              result.shippingAddress.toJSON(),
               result.methodName,
-              result.details);
+              result.details.toJSON());
         }).catch(() => {
           return result.complete('fail');
         });
