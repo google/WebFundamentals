@@ -1,12 +1,12 @@
 project_path: /web/_project.yaml
 book_path: /web/updates/_book.yaml
-description: ImageCapture is an API for controlling camera settings and taking photos.
+description: Image Capture is an API for controlling camera settings and taking photos.
 
 {# wf_updated_on: 2016-12-05 #}
 {# wf_published_on: 2016-12-05 #}
 {# wf_tags: canvas,chrome56,media,webrtc #}
 {# wf_featured_image: /web/updates/images/2016/12/imagecapture/featured.jpg #}
-{# wf_featured_snippet: ImageCapture is an API for controlling camera settings and taking photos. #}
+{# wf_featured_snippet: Image Capture is an API for controlling camera settings and taking photos. #}
 
 <style>
 #ic-demo .hidden {
@@ -57,14 +57,14 @@ max-width: 100%;
 
 {% include "web/_shared/contributors/samdutton.html" %}
 
-`ImageCapture` is an API to capture still images and control camera settings.
+Image Capture is an API to capture still images and control camera settings.
 
 The API enables control over camera hardware features such as zoom, focus mode,
-contrast, ISO and white balance. Best of all, `ImageCapture` enables access to the full resolution capabilities. Previous techniques for
+contrast, ISO and white balance. Best of all, Image Capture enables access to the full resolution capabilities. Previous techniques for
 taking photos on the Web have used snapshots from a video stream, which are
 lower resolution than those available for still images.
 
-`ImageCapture` is available in Chrome 56 on desktop and Android as an
+Image Capture is available in Chrome 56 on desktop and Android as an
 [Origin Trial](https://github.com/jpchase/OriginTrials/blob/gh-pages/developer-guide.md),
 or in Chrome Canary on desktop and Android with **Experimental Web Platform**
 features enabled.
@@ -80,7 +80,7 @@ access to available camera options and their current values.
 [camera settings](http://www.w3.org/TR/image-capture/#photosettings) such as
 zoom, white balance or focus mode.
 
-`ImageCapture` gets access to a camera via a `MediaStream` from `getUserMedia()`:
+The Image Capture API gets access to a camera via a `MediaStream` from `getUserMedia()`:
 
     navigator.mediaDevices.getUserMedia({video: true})
       .then(gotMedia)
@@ -194,8 +194,8 @@ out more about the API from Paul Kinlan's [blog post](https://paul.kinlan.me/fac
 * Chrome Canary on desktop and Android with **Experimental Web Platform** features enabled.
 
 ## Find Out More
-* [ImageCapture spec](https://www.w3.org/TR/image-capture/)
-* [ImageCapture implementation status](https://github.com/w3c/mediacapture-image/blob/gh-pages/implementation-status.md)
+* [Image Capture spec](https://www.w3.org/TR/image-capture/)
+* [Image Capture implementation status](https://github.com/w3c/mediacapture-image/blob/gh-pages/implementation-status.md)
 * [Shape Detection API](https://wicg.github.io/shape-detection-api/#introduction)
 * [Shape Detection explainer and readme](https://github.com/WICG/shape-detection-api)
 * [Face detection demo](https://codepen.io/miguelao/pen/VKOPdX)
