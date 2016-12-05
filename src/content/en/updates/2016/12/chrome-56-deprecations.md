@@ -17,6 +17,39 @@ improvements to the product, its performance, and also capabilities of the Web
 Platform. This article describes the deprecations and removals in Chrome 56,
 which is in beta as of December xx. This list is subject to change at any time.
 
+## Remove CBC-mode ECDSA ciphers in TLS
+
+TLS's CBC-mode construction is flawed, making it fragile and very difficult to implement securely. Although CBC-mode ciphers are still widely used with RSA, they are virtually nonexistent with ECDSA. Other browsers still support these ciphers,  we believe the risk is low. Additionally, ECDSA in TLS is used by few organizations and usually with a more complex setup (some older clients only support RSA), so we expect ECDSA sites to be better maintained and more responsive in case of problems.
+
+TLS 1.2 added new ciphers based on [AEADs](https://en.wikipedia.org/wiki/Authenticated_encryption) which avoids these problems, specifically AES_128_GCM, AES_256_GCM, or CHACHA20_POLY1305. Although we are only requiring this for ECDSA-based sites at this time, it is recommended for all administrators. AEAD-based ciphers not only improve security but also performance. AES-GCM has hardware support on recent CPUs and ChaCha20-Poly1305 admits fast software implementations. Meanwhile, CBC ciphers require slow complex mitigations and PRNG access on each outgoing record. AEAD-based ciphers are also a prerequisite for HTTP/2 and False Start optimizations.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/1eKb8bqT1Ds/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5740978103123968) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=658341)
+
+## Mouse on Android stops firing TouchEvents
+
+Until version 55, Android low-level mouse events in Chrome primarily followed an event path designed for touch interactions. For example, mouse drag motion while a mouse button is pressed generates `MotionEvents` delivered through `View.onTouchEvent`. 
+
+However, since touch events cannot support hover, hovering mousemoves followed a separate path. The whole design had quite a few side-effects including mouse interactions firing `TouchEvents`, all moue buttons appearing as *left* mouse buttons, and `MouseEvents` being suppressed by `TouchEvents`.
+
+Starting with Chrome 56, a mouse on Android M Or later will:
+
+* No longer fire `TouchEvents`.
+* Fire a cosistent sequence of `MouseEvents` with appropriate buttons and other properties. 
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=468806)
+
+## Remove user gestures from touch scroll
+
+We've seen multiple [examples](http://crbug.com/572319) of poorly written or malicious ads that trigger navigation for touch scrolls either on `touchstart` or all `touchend` events.  If a 'wheel' event can't open a pop-up, then touch scrolling shouldn't either. This may break some scenarios, for example, media not playing on touch, or pop-ups not opening on touch.  Safari already silently fails to open pop-ups in all of these scenarios.
+
+[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/TO_x7FRkdmw/discussion) &#124;
+[Chromestatus Tracker](https://www.chromestatus.com/feature/6131337345892352) &#124;
+[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=611981)
+
 ## Disallow all fetches for scripts with invalid type/language attributes
 
 Currently, Chrome's preload scanner fetches items in `<scripts>` elements regardless of the value of the `type` or `language` attribute, though the script will not be executed when parsed. By deprecating the fetch, the preload scanner and the parser will have the same semantics, and we will not be initiating fetches for scripts we will not use. This is intended to save data for users who navigate to sites with a lot of custom script tags that are post-processed (like `type=”text/template”`, for example).
@@ -54,39 +87,6 @@ Sites that still need this functionality should use `<meta name="referrer">` or 
 [Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/JqUlPA-HFfU/discussion) &#124;
 [Chromestatus Tracker](https://www.chromestatus.com/feature/5680800376815616) &#124;
 [Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=658761)
-
-## Remove CBC-mode ECDSA ciphers in TLS
-
-TLS's CBC-mode construction is flawed, making it fragile and very difficult to implement securely. Although CBC-mode ciphers are still widely used with RSA, they are virtually nonexistent with ECDSA. Other browsers still support these ciphers,  we believe the risk is low. Additionally, ECDSA in TLS is used by few organizations and usually with a more complex setup (some older clients only support RSA), so we expect ECDSA sites to be better maintained and more responsive in case of problems.
-
-TLS 1.2 added new ciphers based on [AEADs](https://en.wikipedia.org/wiki/Authenticated_encryption) which avoids these problems, specifically AES_128_GCM, AES_256_GCM, or CHACHA20_POLY1305. Although we are only requiring this for ECDSA-based sites at this time, it is recommended for all administrators. AEAD-based ciphers not only improve security but also performance. AES-GCM has hardware support on recent CPUs and ChaCha20-Poly1305 admits fast software implementations. Meanwhile, CBC ciphers require slow complex mitigations and PRNG access on each outgoing record. AEAD-based ciphers are also a prerequisite for HTTP/2 and False Start optimizations.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/1eKb8bqT1Ds/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5740978103123968) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=658341)
-
-## Mouse on Android stops firing TouchEvents
-
-Until version 55, Android low-level mouse events in Chrome primarily followed an event path designed for touch interactions. For example, mouse drag motion while a mouse button is pressed generates `MotionEvents` delivered through `View.onTouchEvent`. 
-
-However, since touch events cannot support hover, hovering mousemoves followed a separate path. The whole design had quite a few side-effects including mouse interactions firing `TouchEvents`, all moue buttons appearing as *left* mouse buttons, and `MouseEvents` being suppressed by `TouchEvents`.
-
-Starting with Chrome 56, a mouse on Android M Or later will:
-
-* No longer fire `TouchEvents`.
-* Fire a cosistent sequence of `MouseEvents` with appropriate buttons and other properties. 
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/cNaFvMaYtNA/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/5642080642662400) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=468806)
-
-## Remove user gestures from touch scroll
-
-We've seen multiple [examples](http://crbug.com/572319) of poorly written or malicious ads that trigger navigation for touch scrolls either on `touchstart` or all `touchend` events.  If a 'wheel' event can't open a pop-up, then touch scrolling shouldn't either. This may break some scenarios, for example, media not playing on touch, or pop-ups not opening on touch.  Safari already silently fails to open pop-ups in all of these scenarios.
-
-[Intent to Remove](https://groups.google.com/a/chromium.org/d/topic/blink-dev/TO_x7FRkdmw/discussion) &#124;
-[Chromestatus Tracker](https://www.chromestatus.com/feature/6131337345892352) &#124;
-[Chromium Bug](https://bugs.chromium.org/p/chromium/issues/detail?id=611981)
 
 ## Remove PaymentAddress.careOf field
 
