@@ -14,12 +14,12 @@ description: What's new in Chrome 55 for developers? Async and Await, Pointer Ev
 
 
 <div class="video-wrapper-full-width">
-  <iframe class="devsite-embedded-youtube-video" data-video-id="dQw4w9WgXcQ"
+  <iframe class="devsite-embedded-youtube-video" data-video-id="OC7tgJP1D4s"
           data-autohide="1" data-showinfo="0" frameborder="0" allowfullscreen>
   </iframe>
 </div>
 
-[Watch on YouTube](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+[Watch on YouTube](https://www.youtube.com/watch?v=OC7tgJP1D4s)
 
 * [`async` and `await`](#async-and-await) allows you to write promise-based
   code as if it were synchronous, but without blocking the main thread.
